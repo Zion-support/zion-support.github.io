@@ -1,3 +1,4 @@
+import React from 'react';
 import {ArrowRight, Calendar, BarChart3, CheckCircle, Star, Users, Target, TrendingUp, Shield, Globe, Clock, Play, Star, Star} from 'lucide-react';import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 ;
@@ -38,7 +39,7 @@ export default function ZionAiProjectManagerPro() {";"
       description: "Proactive risk identification and mitigation using AI algorithms that analyze project patterns, team performance, and external factors to prevent issues before they occur.",";"
       icon: <Shield className="w-6 h-6" />,";"
       benefits: ["Risk prediction", "Mitigation strategies", "Early warning system", "Contingency planning"]
-    };
+    }
   ];
 ;
   const pricingPlans = [";"
@@ -91,7 +92,7 @@ export default function ZionAiProjectManagerPro() {";"
         "Dedicated account manager";
       ],";"
       popular: false";"
-    };
+    }
   ];
 ;
   const testimonials = [";"
@@ -118,14 +119,14 @@ export default function ZionAiProjectManagerPro() {";"
       content: "The intelligent resource allocation is a game-changer. It automatically assigns the right people to the right tasks, saving us hours of manual planning every week.",";"
       rating: 5,";"
       avatar: "LM";
-    };
+    }
   ];
 ;
   const stats = [";"
     { number: "12,000+", label: "Project Teams", icon: <Users className="w-6 h-6" /> },";"
     { number: "55%", label: "Productivity Increase", icon: <TrendingUp className="w-6 h-6" /> },";"
     { number: "92%", label: "Forecast Accuracy", icon: <Target className="w-6 h-6" /> },";"
-    { number: "70%", label: "Reduced Delays", icon: <Clock className="w-6 h-6" /> };
+    { number: "70%", label: "Reduced Delays", icon: <Clock className="w-6 h-6" /> }
   ];
 ;
 const ZionAiProjectManagerProPage: React.FC = () => {";"
@@ -143,10 +144,10 @@ const ZionAiProjectManagerProPage: React.FC = () => {";"
         />";"
       </Helmet>";"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 relative overflow-hidden">";"
-        {/* Animated Background */};
+        {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-cyan-500/10 animate-pulse"></div>";"
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.3),transparent_50%)]"></div>";"
-        {/* Hero Section */};
+        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">";"
           <div className="max-w-7xl mx-auto">";"
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">";"
@@ -181,17 +182,17 @@ const ZionAiProjectManagerProPage: React.FC = () => {";"
                     <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />";"
                   </Link>";"
                 </div>";"
-                {/* Stats */};
+                {/* Stats */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">";"
                   {stats.map((stat, index) => (";"
                     <div key={index} className="text-center group">";"
                       <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">";"
-                        {stat.icon};
+                        {stat.icon}
                       </div>";"
                       <div className="text-xl font-bold text-white mb-1">{stat.number}</div>";"
                       <div className="text-gray-300 text-sm">{stat.label}</div>";"
                     </div>";"
-                  ))};
+                  ))}
                 </div>";"
               </div>";"
               <div className="relative">";"
@@ -200,7 +201,7 @@ const ZionAiProjectManagerProPage: React.FC = () => {";"
                     <h3 className="text-2xl font-bold text-white mb-2">Project Dashboard</h3>";"
                     <p className="text-gray-300">See your projects in action</p>";"
                   </div>";"
-                  {/* Mock Project Dashboard */};
+                  {/* Mock Project Dashboard */}
                   <div className="space-y-4">";"
                     <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-lg p-4">";"
                       <div className="flex items-center justify-between mb-2">";"
@@ -232,7 +233,7 @@ const ZionAiProjectManagerProPage: React.FC = () => {";"
             </div>";"
           </div>";"
         </section>";"
-        {/* Features Section */};
+        {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">";"
           <div className="max-w-7xl mx-auto">";"
             <div className="text-center mb-16">";"
@@ -247,17 +248,17 @@ const ZionAiProjectManagerProPage: React.FC = () => {";"
             </div>";"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";"
               {features.map((feature, index) => (<div";"
-                  key={index};
+                  key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/10";
                 >";"
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">";"
-                    {feature.icon};
+                    {feature.icon}
                   </div>";"
                   <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-emerald-300 transition-colors">";"
-                    {feature.title};
+                    {feature.title}
                   </h3>";"
                   <p className="text-gray-300 text-center mb-4 leading-relaxed">";"
-                    {feature.description};
+                    {feature.description}
                   </p>";"
                   <div className="space-y-2">";"
                     {feature.benefits.map((benefit, idx) => (";"
@@ -265,14 +266,14 @@ const ZionAiProjectManagerProPage: React.FC = () => {";"
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />";"
                         <span>{benefit}</span>";"
                       </div>";"
-                    ))};
+                    ))}
                   </div>";"
                 </div>";"
-              ))};
+              ))}
             </div>";"
           </div>";"
         </section>";"
-        {/* Pricing Section */};
+        {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-emerald-800/50">";"
           <div className="max-w-7xl mx-auto">";"
             <div className="text-center mb-16">";"
@@ -286,12 +287,12 @@ const ZionAiProjectManagerProPage: React.FC = () => {";"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";"
               {pricingPlans.map((plan, index) => (";"
                 <div";"
-                  key={index};
+                  key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${";"
                     plan.popular";"
                       ? 'border-emerald-500/50 shadow-2xl shadow-emerald-500/25' ";"
                       : 'border-white/20 hover:border-emerald-500/30';
-                  }`};
+                  }`}
                 >";"
                   {plan.popular && (";"
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">";"
@@ -299,8 +300,7 @@ const ZionAiProjectManagerProPage: React.FC = () => {";"
                         Most Popular";"
                       </span>";"
                     </div>";"
-                  )};
-;
+                  )}
                   <div className="text-center mb-6">";"
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>";"
                     <p className="text-gray-300 mb-4">{plan.description}</p>";"
@@ -315,7 +315,7 @@ const ZionAiProjectManagerProPage: React.FC = () => {";"
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />";"
                         <span>{feature}</span>";"
                       </div>";"
-                    ))};
+                    ))}
                   </div>";"
                   <Link";"
                     to="/contact";
@@ -323,17 +323,17 @@ const ZionAiProjectManagerProPage: React.FC = () => {";"
                       plan.popular";"
                         ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:from-emerald-600 hover:to-teal-700 shadow-lg hover:shadow-emerald-500/25';
                         : 'border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900';
-                    }`};
+                    }`}
                   >";"
                     Get Started";"
                     <ArrowRight className="w-4 h-4 ml-2" />";"
                   </Link>";"
                 </div>";"
-              ))};
+              ))}
             </div>";"
           </div>";"
         </section>";"
-        {/* Testimonials Section */};
+        {/* Testimonials Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">";"
           <div className="max-w-7xl mx-auto">";"
             <div className="text-center mb-16">";"
@@ -347,18 +347,18 @@ const ZionAiProjectManagerProPage: React.FC = () => {";"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";"
               {testimonials.map((testimonial, index) => (";"
                 <div";"
-                  key={index};
+                  key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105";
                 >";"
                   <div className="flex items-center mb-4">";"
                     {[...Array(testimonial.rating)].map(( i) => (";"
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />";"
-                    ))};
+                    ))}
                   </div>";"
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>";"
                   <div className="flex items-center">";"
                     <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">";"
-                      {testimonial.avatar};
+                      {testimonial.avatar}
                     </div>";"
                     <div>";"
                       <div className="font-semibold text-white">{testimonial.name}</div>";"
@@ -366,11 +366,11 @@ const ZionAiProjectManagerProPage: React.FC = () => {";"
                     </div>";"
                   </div>";"
                 </div>";"
-              ))};
+              ))}
             </div>";"
           </div>";"
         </section>";"
-        {/* Contact Information Section */};
+        {/* Contact Information Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">";"
           <div className="max-w-4xl mx-auto text-center">";"
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">";"
@@ -380,7 +380,7 @@ const ZionAiProjectManagerProPage: React.FC = () => {";"
               <p className="text-xl text-gray-300 mb-8">";"
                 Contact us today to start your free trial or schedule a personalized demo.";"
               </p>";"
-              {/* Contact Details */};
+              {/* Contact Details */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">";"
                 <div className="text-center">";"
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3">";"
@@ -425,7 +425,6 @@ const ZionAiProjectManagerProPage: React.FC = () => {";"
       </div>";"
     </>";"
   );
-};
-;
+}
 export default ZionAiProjectManagerProPage;
 ;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from "react-helmet-async";
 import {Book, Code, Shield, Zap, Search, ChevronDown, ChevronRight, ExternalLink} from "lucide-react";
 ;
@@ -17,7 +18,7 @@ const DocsPage: React.FC = () => {";"
         { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', readTime: '5 min' },";"
         { title: 'Account Setup', description: 'Create and configure your account', readTime: '3 min' },";"
         { title: 'First Project', description: 'Create your first AI project', readTime: '10 min' },";"
-        { title: 'API Keys', description: 'Generate and manage your API keys', readTime: '2 min' };
+        { title: 'API Keys', description: 'Generate and manage your API keys', readTime: '2 min' }
       ]
     },";"
     {";"
@@ -29,7 +30,7 @@ const DocsPage: React.FC = () => {";"
         { title: 'Machine Learning API', description: 'Complete ML API reference', readTime: '15 min' },";"
         { title: 'Computer Vision', description: 'Image and video processing guides', readTime: '12 min' },";"
         { title: 'Natural Language Processing', description: 'Text analysis and generation', readTime: '8 min' },";"
-        { title: 'Predictive Analytics', description: 'Building predictive models', readTime: '20 min' };
+        { title: 'Predictive Analytics', description: 'Building predictive models', readTime: '20 min' }
       ]
     },";"
     {";"
@@ -41,7 +42,7 @@ const DocsPage: React.FC = () => {";"
         { title: 'Cloud Infrastructure', description: 'Setting up cloud environments', readTime: '25 min' },";"
         { title: 'Cybersecurity Setup', description: 'Security best practices', readTime: '18 min' },";"
         { title: 'Web Development', description: 'Building modern web applications', readTime: '30 min' },";"
-        { title: 'Mobile Development', description: 'iOS and Android app development', readTime: '35 min' };
+        { title: 'Mobile Development', description: 'iOS and Android app development', readTime: '35 min' }
       ]
     },";"
     {";"
@@ -54,9 +55,9 @@ const DocsPage: React.FC = () => {";"
         { title: 'Authentication', description: 'API authentication methods', readTime: '5 min' },";"
         { title: 'Endpoints', description: 'Complete endpoint reference', readTime: '45 min' },";"
         { title: 'SDKs', description: 'Software development kits', readTime: '10 min' },";"
-        { title: 'Webhooks', description: 'Real-time event notifications', readTime: '8 min' };
+        { title: 'Webhooks', description: 'Real-time event notifications', readTime: '8 min' }
       ]
-    };
+    }
   ];
 ;
   const popularArticles = [";"
@@ -64,7 +65,7 @@ const DocsPage: React.FC = () => {";"
     { title: 'Machine Learning API', category: 'AI Services', readTime: '15 min', views: '8.2k' },";"
     { title: 'Authentication Guide', category: 'API Reference', readTime: '5 min', views: '6.8k' },";"
     { title: 'Cloud Infrastructure Setup', category: 'IT Services', readTime: '25 min', views: '5.1k' },";"
-    { title: 'Computer Vision Tutorial', category: 'AI Services', readTime: '12 min', views: '4.7k' };
+    { title: 'Computer Vision Tutorial', category: 'AI Services', readTime: '12 min', views: '4.7k' }
   ];
 ;
   const filteredSections = documentationSections.map(section => ({";"
@@ -81,7 +82,7 @@ const DocsPage: React.FC = () => {";"
         <title>Docs - Zion Tech Group</title>";"
       </Helmet>";"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";"
-        {/* Hero Section */};
+        {/* Hero Section */}
         <section className="py-20">";"
           <div className="container mx-auto px-4">";"
             <div className="text-center max-w-4xl mx-auto">";"
@@ -92,15 +93,15 @@ const DocsPage: React.FC = () => {";"
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">";"
                 Complete guides, tutorials, and API references to help you build amazing solutions with our platform.";"
               </p>";"
-              {/* Search Bar */};
+              {/* Search Bar */}
               <div className="max-w-2xl mx-auto">";"
                 <div className="relative">";"
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />";"
                   <input";"
                     type="text";
                     placeholder="Search documentation...";
-                    value={searchQuery};
-                    onChange={(e) => setSearchQuery(e.target.value)};
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
                   />";"
                 </div>";"
@@ -108,7 +109,7 @@ const DocsPage: React.FC = () => {";"
             </div>";"
           </div>";"
         </section>";"
-        {/* Popular Articles */};
+        {/* Popular Articles */}
         <section className="py-16">";"
           <div className="container mx-auto px-4">";"
             <div className="text-center mb-16">";"
@@ -122,23 +123,23 @@ const DocsPage: React.FC = () => {";"
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 group">";"
                   <div className="flex items-center justify-between mb-4">";"
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">";"
-                      {article.category};
+                      {article.category}
                     </span>";"
                     <span className="text-gray-400 text-sm">{article.readTime}</span>";"
                   </div>";"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">";"
-                    {article.title};
+                    {article.title}
                   </h3>";"
                   <div className="flex items-center justify-between text-sm text-gray-400">";"
                     <span>{article.views} views</span>";"
                     <ExternalLink className="w-4 h-4" />";"
                   </div>";"
                 </div>";"
-              ))};
+              ))}
             </div>";"
           </div>";"
         </section>";"
-        {/* Documentation Sections */};
+        {/* Documentation Sections */}
         <section className="py-16 bg-white/5">";"
           <div className="container mx-auto px-4">";"
             <div className="text-center mb-16">";"
@@ -151,12 +152,12 @@ const DocsPage: React.FC = () => {";"
               {filteredSections.map((section) => (";"
                 <div key={section.id} className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">";"
                   <button";"
-                    onClick={() => setExpandedSection(expandedSection === section.id ? null : section.id)};
+                    onClick={() => setExpandedSection(expandedSection === section.id ? null : section.id)}
                     className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors";
                   >";"
                     <div className="flex items-center">";"
                       <div className="text-cyan-400 mr-4">";"
-                        {section.icon || <Book className="w-6 h-6" />};
+                        {section.icon || <Book className="w-6 h-6" />}
                       </div>";"
                       <div>";"
                         <h3 className="text-2xl font-bold text-white">{section.title}</h3>";"
@@ -167,7 +168,7 @@ const DocsPage: React.FC = () => {";"
                       <ChevronDown className="w-6 h-6 text-cyan-400" />";"
                     ) : (";"
                       <ChevronRight className="w-6 h-6 text-cyan-400" />";"
-                    )};
+                    )}
                   </button>";"
                   {expandedSection === section.id && (";"
                     <div className="px-8 pb-6">";"
@@ -176,7 +177,7 @@ const DocsPage: React.FC = () => {";"
                           <div key={articleIndex} className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors cursor-pointer group">";"
                             <div className="flex items-center justify-between mb-2">";"
                               <h4 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">";"
-                                {article.title};
+                                {article.title}
                               </h4>";"
                               <span className="text-gray-400 text-sm">{article.readTime}</span>";"
                             </div>";"
@@ -186,16 +187,16 @@ const DocsPage: React.FC = () => {";"
                               <ExternalLink className="w-3 h-3 ml-1" />";"
                             </div>";"
                           </div>";"
-                        ))};
+                        ))}
                       </div>";"
                     </div>";"
-                  )};
+                  )}
                 </div>";"
-              ))};
+              ))}
             </div>";"
           </div>";"
         </section>";"
-        {/* Quick Start */};
+        {/* Quick Start */}
         <section className="py-16">";"
           <div className="container mx-auto px-4">";"
             <div className="max-w-4xl mx-auto">";"
@@ -216,7 +217,7 @@ const DocsPage: React.FC = () => {";"
             </div>";"
           </div>";"
         </section>";"
-        {/* Additional Resources */};
+        {/* Additional Resources */}
         <section className="py-16 bg-white/5">";"
           <div className="container mx-auto px-4">";"
             <div className="max-w-6xl mx-auto">";"
@@ -258,6 +259,5 @@ const DocsPage: React.FC = () => {";"
       </div>";"
     </>";"
   );
-};
-;
+}
 export default DocsPage;

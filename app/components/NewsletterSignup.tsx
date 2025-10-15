@@ -1,17 +1,26 @@
 import React, { useState } from 'react';
 import React, { useState } from "react";
+import React from 'react';
 import { Helmet } from "react-helmet-async";
 
-export default function NewsletterSignup() {};
+export default function NewsletterSignup() {}
   const [email, setEmail] = useState("");
 
-  const handleSubmit = (_e: React.FormEvent) => {};
+  const handleSubmit = (_e: React.FormEvent) => {}
     e.preventDefault();
     // Handle newsletter signup
-    };
-
+    }
   return (<>
-      <Helmet></Helmet>
+      <Helmet >
+        Content
+      </Helmet>
+        Content
+      </Helmet>
+    </>
+      </Helmet>
+    </>
+      </Helmet>
+    </>
         <title>Newsletter Signup - Zion Tech Group</title>
       </Helmet>
       <div className="newsletter-signup-container"></div>
@@ -21,10 +30,14 @@ export default function NewsletterSignup() {};
           <form onSubmit={handleSubmit} className="newsletter-form"></form>
             <div className="input-group"></div>
               <Mail className="w-5 h-5" />
+        Content
+      </Mail>
+        Content
+      </Mail>
               <input
                 type="email"
-                value={email};
-                onChange={(e) => setEmail(e.target.value)};
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 required
               />
@@ -39,8 +52,12 @@ export default function NewsletterSignup() {};
 >
           Contact Us
           <ArrowRight className="w-5 h-5 ml-2" />
+        Content
+      </ArrowRight>
+        Content
+      </ArrowRight>
         </Link>
       </div>
 </div>
   )
-};
+}

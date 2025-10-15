@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { ArrowRight, CheckCircle, Star, Users, Brain, TrendingUp, Target, MessageSquare, Heart, Award, Globe, Monitor, Map, Phone, Star as StarIcon } from 'lucide-react';import { Link } from "react-router-dom";
 import SEOOptimizer from "../../components/SEOOptimizer";
@@ -81,7 +82,7 @@ export default function ZionAiCustomerInsights() {";"
         "Dedicated account manager";
       ],";"
       popular: false";"
-    };
+    }
   ];
 ;
   const testimonials = [";"
@@ -108,7 +109,7 @@ export default function ZionAiCustomerInsights() {";"
       content: "The AI insights help us personalize every customer interaction. Our satisfaction scores have improved dramatically and customer lifetime value is up 45%.",";"
       rating: 5,";"
       avatar: "LT";
-    };
+    }
   ];
 ;
   const insights = [";"
@@ -135,7 +136,7 @@ export default function ZionAiCustomerInsights() {";"
       description: "Map and optimize customer journeys for maximum engagement and conversion",";"
       icon: <Map className="w-8 h-8" />,";"
       color: "from-orange-500 to-red-500";
-    };
+    }
   ];
 ;
 const ZionAiCustomerInsightsPage: React.FC = () => {";"
@@ -146,7 +147,7 @@ const ZionAiCustomerInsightsPage: React.FC = () => {";"
         description="Zion Tech Group zion-ai-customer-insights service page";
       />";"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";"
-        {/* Hero Section */};
+        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">";"
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>";"
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>";"
@@ -181,7 +182,7 @@ const ZionAiCustomerInsightsPage: React.FC = () => {";"
                 <Monitor className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />";"
               </Link>";"
             </div>";"
-            {/* Stats */};
+            {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">";"
               <div className="text-center group">";"
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">";"
@@ -214,7 +215,7 @@ const ZionAiCustomerInsightsPage: React.FC = () => {";"
             </div>";"
           </div>";"
         </section>";"
-        {/* Features Section */};
+        {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">";"
           <div className="max-w-7xl mx-auto">";"
             <div className="text-center mb-16">";"
@@ -229,7 +230,7 @@ const ZionAiCustomerInsightsPage: React.FC = () => {";"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";"
               {features.map((feature, index) => (";"
                 <div";"
-                  key={index};
+                  key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10";
                 >";"
                   <div className="flex items-center mb-4">";"
@@ -237,11 +238,11 @@ const ZionAiCustomerInsightsPage: React.FC = () => {";"
                     <span className="text-white font-medium">{feature}</span>";"
                   </div>";"
                 </div>";"
-              ))};
+              ))}
             </div>";"
           </div>";"
         </section>";"
-        {/* Insights Types */};
+        {/* Insights Types */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">";"
           <div className="max-w-7xl mx-auto">";"
             <div className="text-center mb-16">";"
@@ -255,26 +256,26 @@ const ZionAiCustomerInsightsPage: React.FC = () => {";"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";"
               {insights.map((insight, index) => (";"
                 <div";"
-                  key={index};
+                  key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center";
                 >";"
                   <div";"
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${insight.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`};
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${insight.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                   >";"
-                    {insight.icon};
+                    {insight.icon}
                   </div>";"
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">";"
-                    {insight.title};
+                    {insight.title}
                   </h3>";"
                   <p className="text-gray-300 leading-relaxed">";"
-                    {insight.description};
+                    {insight.description}
                   </p>";"
                 </div>";"
-              ))};
+              ))}
             </div>";"
           </div>";"
         </section>";"
-        {/* Pricing Section */};
+        {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">";"
           <div className="max-w-7xl mx-auto">";"
             <div className="text-center mb-16">";"
@@ -288,10 +289,10 @@ const ZionAiCustomerInsightsPage: React.FC = () => {";"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";"
               {pricingPlans.map((plan, index) => (";"
                 <div";"
-                  key={index};
+                  key={index}
                   className={`group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative ${";"
                     plan.popular ? 'ring-2 ring-cyan-400' : '';
-                  }`};
+                  }`}
                 >";"
                   {plan.popular && (";"
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">";"
@@ -299,8 +300,7 @@ const ZionAiCustomerInsightsPage: React.FC = () => {";"
                         Most Popular";"
                       </span>";"
                     </div>";"
-                  )};
-;
+                  )}
                   <div className="text-center mb-6">";"
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>";"
                     <p className="text-gray-300 mb-4">{plan.description}</p>";"
@@ -315,7 +315,7 @@ const ZionAiCustomerInsightsPage: React.FC = () => {";"
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />";"
                         <span>{feature}</span>";"
                       </li>";"
-                    ))};
+                    ))}
                   </ul>";"
                   <Link";"
                     to="/contact";
@@ -323,17 +323,17 @@ const ZionAiCustomerInsightsPage: React.FC = () => {";"
                       plan.popular";"
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700';
                         : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900';
-                    }`};
+                    }`}
                   >";"
                     Get Started";"
                     <ArrowRight className="w-4 h-4 ml-2" />";"
                   </Link>";"
                 </div>";"
-              ))};
+              ))}
             </div>";"
           </div>";"
         </section>";"
-        {/* Testimonials */};
+        {/* Testimonials */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">";"
           <div className="max-w-7xl mx-auto">";"
             <div className="text-center mb-16">";"
@@ -347,18 +347,18 @@ const ZionAiCustomerInsightsPage: React.FC = () => {";"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";"
               {testimonials.map((testimonial, index) => (";"
                 <div";"
-                  key={index};
+                  key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10";
                 >";"
                   <div className="flex items-center mb-4">";"
                     {[...Array(testimonial.rating)].map(( i) => (";"
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />";"
-                    ))};
+                    ))}
                   </div>";"
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>";"
                   <div className="flex items-center">";"
                     <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">";"
-                      {testimonial.avatar};
+                      {testimonial.avatar}
                     </div>";"
                     <div>";"
                       <div className="font-semibold text-white">{testimonial.name}</div>";"
@@ -366,11 +366,11 @@ const ZionAiCustomerInsightsPage: React.FC = () => {";"
                     </div>";"
                   </div>";"
                 </div>";"
-              ))};
+              ))}
             </div>";"
           </div>";"
         </section>";"
-        {/* CTA Section */};
+        {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">";"
           <div className="max-w-4xl mx-auto text-center">";"
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">";"
@@ -380,7 +380,7 @@ const ZionAiCustomerInsightsPage: React.FC = () => {";"
               Start your free trial today and discover the power of AI-driven customer intelligence.";"
               No credit card required. Cancel anytime.";"
             </p>";"
-            {/* Contact Information */};
+            {/* Contact Information */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">";"
               <div className="text-center">";"
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">";"
@@ -425,7 +425,6 @@ const ZionAiCustomerInsightsPage: React.FC = () => {";"
       </div>";"
     </>";"
   );
-};
-;
+}
 export default ZionAiCustomerInsightsPage;
 ;

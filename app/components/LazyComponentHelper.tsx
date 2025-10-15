@@ -1,3 +1,4 @@
+import React from 'react';
 import { lazy, ComponentType } from 'react'
 import LazyWrapper from './LazyWrapper'
 // Lazy loading helper function
@@ -6,8 +7,16 @@ export const createLazyComponent = <P extends Record<string, unknown>>(_importFu
   const LazyComponent = lazy(importFunc);
   
   const WrappedComponent = (_props: P) => (
-    <LazyWrapper>
+    <LazyWrapper >
+        Content
+      </LazyWrapper>
+        Content
+      </LazyWrapper>
       <LazyComponent {...(props as P)} />
+        Content
+      </LazyComponent>
+        Content
+      </LazyComponent>
     </LazyWrapper>
   )
   WrappedComponent.displayName = `LazyComponent(${LazyComponent.displayName || 'Unknown'})`

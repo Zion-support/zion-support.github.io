@@ -1,10 +1,19 @@
+import React from 'react';
 import { Helmet } from "react-helmet-async";
 import { Brain, Shield, Users, Award } from 'lucide-react';
 
 const SEOHead = ({ title, description }: { title: string; description: string }) => (
-  <Helmet>
+  <Helmet >
+        Content
+      </Helmet>
+        Content
+      </Helmet>
     <title>{title}</title>
     <meta name="description" content={description} />
+        Content
+      </meta>
+        Content
+      </meta>
   </Helmet>
 );
 
@@ -41,18 +50,41 @@ export default function AboutPage() {
 
   return (
     <>
-      <SEOHead 
-        title="About - Zion Tech Group"
+      <SEOHead title="About - Zion Tech Group"
         description="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge AI and IT solutions."
       />
+        Content
+      </SEOHead>
+        Content
+      </SEOHead>
       <div className="min-h-screen bg-slate-900 text-white">
+        Content
+      </div>
+        Content
+      </div>
         {/* Hero Section */}
         <section className="relative py-20 px-4">
+        Content
+      </section>
+        Content
+      </section>
           <div className="max-w-7xl mx-auto text-center">
+        Content
+      </div>
+        Content
+      </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
+        Content
+      </h1>
+        Content
+      </h1>
               About <span className="text-blue-400">Zion Tech Group</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+        Content
+      </p>
+        Content
+      </p>
               We are a leading technology company specializing in AI-powered solutions and innovative IT services that transform businesses and drive digital transformation.
             </p>
           </div>
@@ -60,10 +92,26 @@ export default function AboutPage() {
 
         {/* Stats Section */}
         <section className="py-16 px-4 bg-slate-800">
+        Content
+      </section>
+        Content
+      </section>
           <div className="max-w-7xl mx-auto">
+        Content
+      </div>
+        Content
+      </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        Content
+      </div>
+        Content
+      </div>
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
+        Content
+      </div>
+        Content
+      </div>
                   <div className="text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
                 </div>
@@ -74,12 +122,32 @@ export default function AboutPage() {
 
         {/* Values Section */}
         <section className="py-20 px-4">
+        Content
+      </section>
+        Content
+      </section>
           <div className="max-w-7xl mx-auto">
+        Content
+      </div>
+        Content
+      </div>
             <h2 className="text-4xl font-bold text-center mb-16">Our Values</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        Content
+      </div>
+        Content
+      </div>
               {values.map((value, index) => (
                 <div key={index} className="text-center p-6 bg-slate-800 rounded-lg">
+        Content
+      </div>
+        Content
+      </div>
                   <div className="text-blue-400 mb-4 flex justify-center">
+        Content
+      </div>
+        Content
+      </div>
                     {value.icon}
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{value.title}</h3>

@@ -1,3 +1,4 @@
+import React from 'react';
 "use client";
 
 import React, { createContext, useContext, useEffect } from "react";
@@ -54,8 +55,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
       // Custom analytics
       }
-  };
-
+  }
   const identify = (_userId: string, traits?: Record<string, _unknown>) => {
     if (typeof window !== "undefined") {
       // Google Analytics
@@ -70,8 +70,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
       // Custom analytics
       }
-  };
-
+  }
   const page = (_name: string, properties?: Record<string, _unknown>) => {
     if (typeof window !== "undefined") {
       // Google Analytics
@@ -93,12 +92,15 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     identify,
     page}
   return ()
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext .Provider value={value}>
+        Content
+      </AnalyticsContext>
+        Content
+      </AnalyticsContext>
       {children}
     </AnalyticsContext.Provider>
   );
-};
-
+}
 // Extend Window interface for TypeScript
 declare global {
   interface Window {

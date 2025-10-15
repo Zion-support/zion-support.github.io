@@ -1,13 +1,17 @@
+import React from 'react';
 import { Helmet } from "react-helmet-async"
-const Pagebroken2Page = () => {};
+const Pagebroken2Page = () => {}
 }return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>Page Broken2 | Zion Tech Group</title>
-        <meta
-          name="description"
+        <meta name="description"
           content="Professional page broken2 services by Zion Tech Group"
         />
+        Content
+      </meta>
+        Content
+      </meta>
       </Helmet>
       <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></div>
         <div className="max-w-7xl mx-auto text-center"></div>
@@ -27,6 +31,10 @@ const Pagebroken2Page = () => {};
 >
               Get Started
               <ArrowRight className="w-5 h-5 ml-2" />
+        Content
+      </ArrowRight>
+        Content
+      </ArrowRight>
             </Link>
             <Link
               to="/contact"
@@ -40,5 +48,5 @@ const Pagebroken2Page = () => {};
       </div>
     </div>
   )
-};
+}
 export default Pagebroken2Page

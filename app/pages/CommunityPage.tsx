@@ -1,3 +1,4 @@
+import React from 'react';
 
 import {MessageSquare, BookOpen} from "lucide-react";
 ;
@@ -22,7 +23,7 @@ const CommunityPage: React.FC = () => {";"
       icon: <Award className="w-8 h-8 text-yellow-400" />,";"
       title: 'Recognition',";"
       description: 'Get recognized for your contributions and expertise';
-    };
+    }
   ];
 ;
   return (";"
@@ -73,21 +74,20 @@ const CommunityPage: React.FC = () => {";"
             {communityFeatures.map((feature) => (";"
               <div key={index} className="text-center group">";"
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">";"
-                  {feature.icon};
+                  {feature.icon}
                 </div>";"
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors">";"
-                  {feature.title};
+                  {feature.title}
                 </h3>";"
                 <p className="text-gray-300 group-hover:text-gray-200 transition-colors">";"
-                  {feature.description};
+                  {feature.description}
                 </p>";"
               </div>";"
-            ))};
+            ))}
           </div>";"
         </div>";"
       </section>";"
     </>";"
   );
-};
-;
+}
 export default CommunityPage;

@@ -1,4 +1,5 @@
 import React from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, CheckCircle, ArrowRight, Stethoscope, Activity, Zap } from 'lucide-react';
 
@@ -53,42 +54,106 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+        Content
+      </div>
+        Content
+      </div>
+      <Helmet >
+        Content
+      </Helmet>
+        Content
+      </Helmet>
         <title>AI Healthcare Diagnostics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered healthcare diagnostics solutions for accurate medical diagnosis and treatment." />
+        Content
+      </meta>
+        Content
+      </meta>
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
+        Content
+      </div>
+        Content
+      </div>
         {/* Hero Section */}
         <div className="text-center mb-16">
+        Content
+      </div>
+        Content
+      </div>
           <h1 className="text-5xl font-bold text-white mb-6">
+        Content
+      </h1>
+        Content
+      </h1>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+        Content
+      </span>
+        Content
+      </span>
               AI Healthcare Diagnostics
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+        Content
+      </p>
+        Content
+      </p>
             Revolutionize healthcare with our advanced AI-powered diagnostic solutions. 
             Improve accuracy, speed, and patient outcomes with cutting-edge machine learning technology.
           </p>
           <div className="flex items-center justify-center space-x-4 text-cyan-400">
+        Content
+      </div>
+        Content
+      </div>
             <Stethoscope className="w-6 h-6" />
+        Content
+      </Stethoscope>
+        Content
+      </Stethoscope>
             <span className="text-lg font-semibold">Trusted by 500+ Healthcare Providers</span>
           </div>
         </div>
 
         {/* Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        Content
+      </div>
+        Content
+      </div>
           {features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+        Content
+      </div>
+        Content
+      </div>
               <div className="text-cyan-400 mb-4">
+        Content
+      </div>
+        Content
+      </div>
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300 mb-4">{feature.description}</p>
               <ul className="space-y-2">
+        Content
+      </ul>
+        Content
+      </ul>
                 {feature.benefits.map((benefit, idx) => (
                   <li key={idx} className="flex items-center text-sm text-gray-300">
+        Content
+      </li>
+        Content
+      </li>
                     <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+        Content
+      </CheckCircle>
+        Content
+      </CheckCircle>
                     {benefit}
                   </li>
                 ))}
@@ -99,32 +164,68 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {
 
         {/* Pricing Section */}
         <div className="text-center mb-16">
+        Content
+      </div>
+        Content
+      </div>
           <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        Content
+      </div>
+        Content
+      </div>
             {pricing.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 ${
                 plan.popular 
                   ? 'border-cyan-400/50 scale-105' 
                   : 'border-white/20 hover:border-cyan-400/50'
               }`}>
+        Content
+      </div>
+        Content
+      </div>
                 {plan.popular && (
                   <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4 inline-block">
+        Content
+      </div>
+        Content
+      </div>
                     Most Popular
                   </div>
                 )}
                 <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
                 <div className="text-4xl font-bold text-cyan-400 mb-6">{plan.price}</div>
                 <ul className="space-y-3 mb-8">
+        Content
+      </ul>
+        Content
+      </ul>
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
+        Content
+      </li>
+        Content
+      </li>
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+        Content
+      </CheckCircle>
+        Content
+      </CheckCircle>
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center">
+        Content
+      </button>
+        Content
+      </button>
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
+        Content
+      </ArrowRight>
+        Content
+      </ArrowRight>
                 </button>
               </div>
             ))}
@@ -133,20 +234,39 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {
 
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
+        Content
+      </div>
+        Content
+      </div>
           <h2 className="text-3xl font-bold text-white mb-4">
+        Content
+      </h2>
+        Content
+      </h2>
             Ready to Transform Healthcare?
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+        Content
+      </p>
+        Content
+      </p>
             Join hundreds of healthcare providers who trust our AI solutions for better patient care.
           </p>
           <button className="bg-white text-cyan-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center mx-auto">
+        Content
+      </button>
+        Content
+      </button>
             Schedule a Demo
             <ArrowRight className="w-5 h-5 ml-2" />
+        Content
+      </ArrowRight>
+        Content
+      </ArrowRight>
           </button>
         </div>
       </div>
     </div>
   );
-};
-
+}
 export default AiHealthcareDiagnosticsPage;

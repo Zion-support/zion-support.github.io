@@ -1,51 +1,52 @@
+import React from 'react';
 
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const CustomerRelationshipManagerPage = () => {};
+const CustomerRelationshipManagerPage = () => {}
   const features = [
-    {};
+    {}
       title: "Contact Management";
       description: "Centralized contact database with detailed customer profiles and interaction history";
       icon: <Users className="w-8 h-8" />;
       benefits: ["Unified contact view", "Interaction tracking", "Custom fields", "Import/Export"]
-    };
-    {};
+    }
+    {}
       title: "Sales Pipeline";
       description: "Visual sales pipeline to track deals from lead to close";
       icon: <Target className="w-8 h-8" />;
       benefits: ["Deal tracking", "Stage management", "Forecasting", "Sales analytics"]
-    };
-    {};
+    }
+    {}
       title: "Lead Management";
       description: "Capture, qualify, and nurture leads with automated workflows";
       icon: <Zap className="w-8 h-8" />;
       benefits: ["Lead scoring", "Automated follow-up", "Lead assignment", "Conversion tracking"]
-    };
-    {};
+    }
+    {}
       title: "Communication Hub";
       description: "Unified communication center for emails, calls, and meetings";
       icon: <Phone className="w-8 h-8" />;
       benefits: ["Email integration", "Call logging", "Meeting scheduler", "Activity timeline"]
-    };
-    {};
+    }
+    {}
       title: "Analytics & Reporting";
       description: "Comprehensive analytics to track sales performance and customer insights";
       icon: <BarChart3 className="w-8 h-8" />;
       benefits: ["Sales reports", "Customer analytics", "Performance metrics", "Custom dashboards"]
-    };
-    {};
+    }
+    {}
       title: "Task Management";
       description: "Organize and track tasks, follow-ups, and appointments";
       icon: <Calendar className="w-8 h-8" />;
       benefits: ["Task automation", "Reminder system", "Team collaboration", "Progress tracking"]
-    };
+    }
   ];
 
   const pricing = [
-    {};
+    {}
       name: "Starter";
       price: "$39";
       period: "per month";
@@ -58,8 +59,8 @@ const CustomerRelationshipManagerPage = () => {};
         "Email support"
       ];
       popular: false
-    };
-    {};
+    }
+    {}
       name: "Professional";
       price: "$79";
       period: "per month";
@@ -73,8 +74,8 @@ const CustomerRelationshipManagerPage = () => {};
         "Custom fields"
       ];
       popular: true
-    };
-    {};
+    }
+    {}
       name: "Enterprise";
       price: "$149";
       period: "per month";
@@ -88,42 +89,60 @@ const CustomerRelationshipManagerPage = () => {};
         "Custom reporting"
       ];
       popular: false
-    };
+    }
   ];
 
   const benefits = [
-    {};
+    {}
       title: "Increase Sales";
       description: "Boost sales productivity by up to 35% with better lead management";
       icon: <Target className="w-6 h-6" />
-    };
-    {};
+        Content
+      </Target>
+        Content
+      </Target>
+    }
+    {}
       title: "Better Customer Service";
       description: "Provide personalized service with complete customer history";
       icon: <Users className="w-6 h-6" />
-    };
-    {};
+        Content
+      </Users>
+        Content
+      </Users>
+    }
+    {}
       title: "Data-Driven Decisions";
       description: "Make informed decisions with comprehensive analytics and reporting";
       icon: <BarChart3 className="w-6 h-6" />
-    };
-    {};
+        Content
+      </BarChart3>
+        Content
+      </BarChart3>
+    }
+    {}
       title: "Team Collaboration";
       description: "Improve team coordination with shared customer information";
       icon: <Globe className="w-6 h-6" />
-    };
+        Content
+      </Globe>
+        Content
+      </Globe>
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <EnhancedSEO
-        title="Customer Relationship Manager - Zion Tech Group | CRM Software for Sales Teams"
+      <EnhancedSEO title="Customer Relationship Manager - Zion Tech Group | CRM Software for Sales Teams"
         description="Powerful CRM software with contact management, sales pipeline, lead management, and analytics. Boost sales productivity and improve customer relationships."
         keywords="CRM software, customer relationship management, sales pipeline, lead management, contact management, sales analytics"
         canonical="https://ziontechgroup.com/customer-relationship-manager"
       />
-
-      {/* Hero Section */};
+        Content
+      </EnhancedSEO>
+        Content
+      </EnhancedSEO>
+      {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
         <ResponsiveContainer className="text-center"></ResponsiveContainer>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
@@ -140,7 +159,7 @@ const CustomerRelationshipManagerPage = () => {};
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />};
+              icon={<ArrowRight className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -148,7 +167,7 @@ const CustomerRelationshipManagerPage = () => {};
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />};
+              icon={<Globe className="w-5 h-5" />}
             >
               Watch Demo
             </FuturisticButton>
@@ -156,7 +175,7 @@ const CustomerRelationshipManagerPage = () => {};
         </ResponsiveContainer>
       </section>
 
-      {/* Features Section */};
+      {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center mb-16"></div>
@@ -172,7 +191,7 @@ const CustomerRelationshipManagerPage = () => {};
               <FuturisticCard key={index} className="h-full"></FuturisticCard>
                 <div className="text-center mb-6"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                    {feature.icon};
+                    {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -181,17 +200,21 @@ const CustomerRelationshipManagerPage = () => {};
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit};
+        Content
+      </CheckCircle>
+        Content
+      </CheckCircle>
+                      {benefit}
                     </li>
-                  ))};
+                  ))}
                 </ul>
               </FuturisticCard>
-            ))};
+            ))}
           </div>
         </ResponsiveContainer>
       </section>
 
-      {/* Pricing Section */};
+      {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
         <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center mb-16"></div>
@@ -211,11 +234,11 @@ const CustomerRelationshipManagerPage = () => {};
                       Most Popular
                     </span>
                   </div>
-                )};
+                )}
                 <div className="text-center mb-6"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-cyan-400 mb-2"></div>
-                    {plan.price};
+                    {plan.price}
                     <span className="text-lg text-gray-400">{plan.period}</span>
                   </div>
                   <p className="text-gray-300 text-sm">{plan.description}</p>
@@ -224,13 +247,17 @@ const CustomerRelationshipManagerPage = () => {};
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                      {feature};
+        Content
+      </CheckCircle>
+        Content
+      </CheckCircle>
+                      {feature}
                     </li>
-                  ))};
+                  ))}
                 </ul>
                 <FuturisticButton
                   href="/contact"
-                  variant={plan.popular ? "primary" : "outline"};
+                  variant={plan.popular ? "primary" : "outline"}
                   size="sm"
                   className="w-full"
                 ></FuturisticButton
@@ -238,12 +265,12 @@ const CustomerRelationshipManagerPage = () => {};
                   Get Started
                 </FuturisticButton>
               </FuturisticCard>
-            ))};
+            ))}
           </div>
         </ResponsiveContainer>
       </section>
 
-      {/* Benefits Section */};
+      {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center mb-16"></div>
@@ -258,17 +285,17 @@ const CustomerRelationshipManagerPage = () => {};
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                  {benefit.icon};
+                  {benefit.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
               </div>
-            ))};
+            ))}
           </div>
         </ResponsiveContainer>
       </section>
 
-      {/* CTA Section */};
+      {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30"></section>
         <ResponsiveContainer className="text-center"></ResponsiveContainer>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
@@ -282,7 +309,7 @@ const CustomerRelationshipManagerPage = () => {};
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />};
+              icon={<ArrowRight className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -290,7 +317,7 @@ const CustomerRelationshipManagerPage = () => {};
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />};
+              icon={<Globe className="w-5 h-5" />}
             >
               Watch Demo
             </FuturisticButton>
@@ -299,6 +326,5 @@ const CustomerRelationshipManagerPage = () => {};
       </section>
     </div>
   );
-};
-
+}
 export default CustomerRelationshipManagerPage;

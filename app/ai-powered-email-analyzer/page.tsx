@@ -1,4 +1,5 @@
 import React from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, CheckCircle, ArrowRight, BarChart3 } from 'lucide-react';
 
@@ -32,35 +33,91 @@ const AiPoweredEmailAnalyzerPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+        Content
+      </div>
+        Content
+      </div>
+      <Helmet >
+        Content
+      </Helmet>
+        Content
+      </Helmet>
         <title>AI-Powered Email Analyzer - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered email analysis and management solutions for businesses." />
+        Content
+      </meta>
+        Content
+      </meta>
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
+        Content
+      </div>
+        Content
+      </div>
         <div className="text-center mb-16">
+        Content
+      </div>
+        Content
+      </div>
           <h1 className="text-5xl font-bold text-white mb-6">
+        Content
+      </h1>
+        Content
+      </h1>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+        Content
+      </span>
+        Content
+      </span>
               AI-Powered Email Analyzer
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+        Content
+      </p>
+        Content
+      </p>
             Transform your email management with AI-powered analysis, spam detection, and performance insights.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        Content
+      </div>
+        Content
+      </div>
           {features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+        Content
+      </div>
+        Content
+      </div>
               <div className="text-cyan-400 mb-4">
+        Content
+      </div>
+        Content
+      </div>
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300 mb-4">{feature.description}</p>
               <ul className="space-y-2">
+        Content
+      </ul>
+        Content
+      </ul>
                 {feature.benefits.map((benefit, idx) => (
                   <li key={idx} className="flex items-center text-sm text-gray-300">
+        Content
+      </li>
+        Content
+      </li>
                     <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+        Content
+      </CheckCircle>
+        Content
+      </CheckCircle>
                     {benefit}
                   </li>
                 ))}
@@ -70,20 +127,39 @@ const AiPoweredEmailAnalyzerPage: React.FC = () => {
         </div>
 
         <div className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
+        Content
+      </div>
+        Content
+      </div>
           <h2 className="text-3xl font-bold text-white mb-4">
+        Content
+      </h2>
+        Content
+      </h2>
             Ready to Analyze Your Emails?
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+        Content
+      </p>
+        Content
+      </p>
             Get started with our AI-powered email analysis solutions today.
           </p>
           <button className="bg-white text-cyan-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center mx-auto">
+        Content
+      </button>
+        Content
+      </button>
             Get Started
             <ArrowRight className="w-5 h-5 ml-2" />
+        Content
+      </ArrowRight>
+        Content
+      </ArrowRight>
           </button>
         </div>
       </div>
     </div>
   );
-};
-
+}
 export default AiPoweredEmailAnalyzerPage;

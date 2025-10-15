@@ -1,3 +1,4 @@
+import React from 'react';
 "use client"
 import { Suspense, lazy } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
@@ -51,11 +52,27 @@ const FaqPage = lazy(() => import("./faq/page"))
 
 function App() {
   return (
-    <HelmetProvider>
-      <BrowserRouter>
-        <ErrorBoundary>
+    <HelmetProvider >
+        Content
+      </HelmetProvider>
+        Content
+      </HelmetProvider>
+      <BrowserRouter >
+        Content
+      </BrowserRouter>
+        Content
+      </BrowserRouter>
+        <ErrorBoundary >
+        Content
+      </ErrorBoundary>
+        Content
+      </ErrorBoundary>
           <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
+            <Routes >
+        Content
+      </Routes>
+        Content
+      </Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />

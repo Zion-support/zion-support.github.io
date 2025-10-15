@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 
 interface ImageOptimizerProps {
   src: string;
@@ -20,12 +21,10 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
 
   const handleLoad = () => {
     setIsLoaded(true);
-  };
-
+  }
   const handleError = () => {
     setHasError(true);
-  };
-
+  }
   // Generate optimized src with WebP support
   const getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.startsWith('http') || originalSrc.startsWith('/')) {
@@ -39,8 +38,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     }
     
     return originalSrc;
-  };
-
+  }
   // Intersection Observer for lazy loading
   useEffect(() => {
     if (priority) return;
@@ -65,6 +63,10 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   if (hasError) {
     return (
       <div className={`flex items-center justify-center bg-gray-200 ${className}`} style={{ width, height }}>
+        Content
+      </div>
+        Content
+      </div>
         <span className="text-gray-500">Failed to load image</span>
       </div>
     );
@@ -72,17 +74,19 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
 
   if (!isInView && !priority) {
     return (
-      <div 
-        ref={imgRef}
+      <div ref={imgRef}
         className={`bg-gray-200 animate-pulse ${className}`} 
         style={{ width, height }}
       />
+        Content
+      </div>
+        Content
+      </div>
     );
   }
 
   return (
-    <img
-      ref={imgRef}
+    <img ref={imgRef}
       src={getOptimizedSrc(src)}
       alt={alt}
       width={width}
@@ -93,7 +97,10 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       onLoad={handleLoad}
       onError={handleError}
     />
+        Content
+      </img>
+        Content
+      </img>
   );
-};
-
+}
 export default ImageOptimizer;

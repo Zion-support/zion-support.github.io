@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import React from 'react';
 import {Brain, Server, Layers} from "lucide-react";
 ;
 const PricingPage: React.FC = () => {";"
@@ -85,7 +86,7 @@ const PricingPage: React.FC = () => {";"
       ],";"
       popular: false,";"
       category: 'micro-saas';
-    };
+    }
   ];
 ;
   const aiServicesPricing = [";"
@@ -168,7 +169,7 @@ const PricingPage: React.FC = () => {";"
       ],";"
       popular: false,";"
       category: 'ai-services';
-    };
+    }
   ];
 ;
   const itServicesPricing = [";"
@@ -251,14 +252,14 @@ const PricingPage: React.FC = () => {";"
       ],";"
       popular: false,";"
       category: 'it-services';
-    };
+    }
   ];
 ;
   const categories = [";"
     { id: 'all', name: 'All Services', icon: <Layers className="w-5 h-5" /> },";"
     { id: 'micro-saas', name: 'Micro SAAS', icon: <Zap className="w-5 h-5" /> },";"
     { id: 'ai-services', name: 'AI Services', icon: <Brain className="w-5 h-5" /> },";"
-    { id: 'it-services', name: 'IT Services', icon: <Server className="w-5 h-5" /> };
+    { id: 'it-services', name: 'IT Services', icon: <Server className="w-5 h-5" /> }
   ];
 ;
   const allPricing = [...microSaasPricing, ...aiServicesPricing, ...itServicesPricing];
@@ -277,7 +278,7 @@ const PricingPage: React.FC = () => {";"
         <meta property="og:url" content="https://ziontechgroup.com/pricing" />";"
         <link rel="canonical" href="https://ziontechgroup.com/pricing" />";"
       </Helmet>";"
-      {/* Hero Section */};
+      {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">";"
         <div className="absolute inset-0 overflow-hidden">";"
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>";"
@@ -294,19 +295,19 @@ const PricingPage: React.FC = () => {";"
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">";"
               Choose the perfect plan for your business. All plans include 14-day free trial and no setup fees.";"
             </p>";"
-            {/* Billing Toggle */};
+            {/* Billing Toggle */}
             <div className="flex items-center justify-center mb-8">";"
               <span className={`mr-3 ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>";"
                 Monthly";"
               </span>";"
               <button";"
-                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')};
+                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
                 className="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2";
               >";"
                 <span";"
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${";"
                     billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1';
-                  }`};
+                  }`}
                 />";"
               </button>";"
               <span className={`ml-3 ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>";"
@@ -319,28 +320,28 @@ const PricingPage: React.FC = () => {";"
           </div>";"
         </div>";"
       </section>";"
-      {/* Category Filter */};
+      {/* Category Filter */}
       <section className="py-8 bg-slate-800">";"
         <div className="container mx-auto px-4">";"
           <div className="flex flex-wrap justify-center gap-4">";"
             {categories.map((category) => (";"
               <button";"
-                key={category.id};
-                onClick={() => setSelectedCategory(category.id)};
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${";"
                   selectedCategory === category.id";"
                     ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white shadow-lg';
                     : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white';
-                }`};
+                }`}
               >";"
-                {category.icon};
+                {category.icon}
                 <span>{category.name}</span>";"
               </button>";"
-            ))};
+            ))}
           </div>";"
         </div>";"
       </section>";"
-      {/* Pricing Grid */};
+      {/* Pricing Grid */}
       <section className="py-20 bg-slate-900">";"
         <div className="container mx-auto px-4">";"
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">";"
@@ -354,36 +355,35 @@ const PricingPage: React.FC = () => {";"
                       Most Popular";"
                     </span>";"
                   </div>";"
-                )};
-;
+                )}
                 <div className="mb-6">";"
                   <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">";"
-                    {service.name};
+                    {service.name}
                   </h3>";"
                   <div className="flex items-baseline mb-3">";"
                     <span className="text-4xl font-bold text-purple-400">";"
-                      {billingCycle === 'monthly' ? service.monthlyPrice : service.yearlyPrice};
+                      {billingCycle === 'monthly' ? service.monthlyPrice : service.yearlyPrice}
                     </span>";"
                     <span className="text-gray-400 ml-2">";"
-                      /{billingCycle === 'monthly' ? 'mo' : 'yr'};
+                      /{billingCycle === 'monthly' ? 'mo' : 'yr'}
                     </span>";"
                   </div>";"
                   <p className="text-gray-300 text-sm">";"
-                    {service.description};
+                    {service.description}
                   </p>";"
                 </div>";"
                 <ul className="space-y-3 mb-8">";"
                   {service.features.slice(0, 6).map((feature, featureIndex) => (";"
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">";"
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />";"
-                      {feature};
+                      {feature}
                     </li>";"
-                  ))};
+                  ))}
                   {service.features.length > 6 && (";"
                     <li className="text-sm text-purple-400 font-medium">";"
                       +{service.features.length - 6} more features";"
                     </li>";"
-                  )};
+                  )}
                 </ul>";"
                 <div className="space-y-3">";"
                   <Link";"
@@ -393,18 +393,18 @@ const PricingPage: React.FC = () => {";"
                     Get Started";"
                   </Link>";"
                   <Link";"
-                    to={`/${service.name.toLowerCase().replace(/\s+/g, '-')}`};
+                    to={`/${service.name.toLowerCase().replace(/\s+/g, '-')}`}
                     className="block w-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white text-center py-3 rounded-lg font-semibold transition-all duration-300";
                   >";"
                     Learn More";"
                   </Link>";"
                 </div>";"
               </div>";"
-            ))};
+            ))}
           </div>";"
         </div>";"
       </section>";"
-      {/* Enterprise Section */};
+      {/* Enterprise Section */}
       <section className="py-20 bg-slate-800">";"
         <div className="container mx-auto px-4">";"
           <div className="max-w-4xl mx-auto text-center">";"
@@ -471,7 +471,7 @@ const PricingPage: React.FC = () => {";"
           </div>";"
         </div>";"
       </section>";"
-      {/* FAQ Section */};
+      {/* FAQ Section */}
       <section className="py-20 bg-slate-900">";"
         <div className="container mx-auto px-4">";"
           <div className="text-center mb-16">";"
@@ -526,7 +526,7 @@ const PricingPage: React.FC = () => {";"
           </div>";"
         </div>";"
       </section>";"
-      {/* CTA Section */};
+      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600">";"
         <div className="container mx-auto px-4 text-center">";"
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">";"
@@ -554,7 +554,6 @@ const PricingPage: React.FC = () => {";"
       </section>";"
     </>";"
   );
-};
-;
+}
 export default PricingPage;
 ;

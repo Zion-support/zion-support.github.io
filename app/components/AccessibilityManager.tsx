@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
+import React from 'react';
 
 interface AccessibilitySettings {
   highContrast: boolean;
@@ -110,25 +111,51 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
       {children}
       
       {/* Accessibility Panel Toggle Button */}
-      <button
-        onClick={togglePanel}
+      <button onClick={togglePanel}
         className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
-        aria-label="Toggle accessibility settings"
-      >
+        aria-label="Toggle accessibility settings">
+        Content
+      </button>
+        Content
+      </button>
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        Content
+      </svg>
+        Content
+      </svg>
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
+        Content
+      </path>
+        Content
+      </path>
         </svg>
       </button>
 
       {/* Accessibility Settings Panel */}
       {isVisible && (
         <div className="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl max-w-sm">
+        Content
+      </div>
+        Content
+      </div>
           <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
+        Content
+      </h3>
+        Content
+      </h3>
             Accessibility Settings
           </h3>
           
           <div className="space-y-4">
+        Content
+      </div>
+        Content
+      </div>
             <label className="flex items-center space-x-3">
+        Content
+      </label>
+        Content
+      </label>
               <input
                 type="checkbox"
                 checked={settings.highContrast}
@@ -139,6 +166,10 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
             </label>
 
             <label className="flex items-center space-x-3">
+        Content
+      </label>
+        Content
+      </label>
               <input
                 type="checkbox"
                 checked={settings.largeText}
@@ -149,6 +180,10 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
             </label>
 
             <label className="flex items-center space-x-3">
+        Content
+      </label>
+        Content
+      </label>
               <input
                 type="checkbox"
                 checked={settings.reducedMotion}
@@ -159,6 +194,10 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
             </label>
 
             <label className="flex items-center space-x-3">
+        Content
+      </label>
+        Content
+      </label>
               <input
                 type="checkbox"
                 checked={settings.screenReader}
@@ -169,6 +208,10 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
             </label>
 
             <label className="flex items-center space-x-3">
+        Content
+      </label>
+        Content
+      </label>
               <input
                 type="checkbox"
                 checked={settings.focusVisible}
@@ -179,6 +222,10 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
             </label>
 
             <label className="flex items-center space-x-3">
+        Content
+      </label>
+        Content
+      </label>
               <input
                 type="checkbox"
                 checked={settings.keyboardNavigation}
@@ -190,16 +237,24 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
           </div>
 
           <div className="mt-6 flex space-x-3">
-            <button
-              onClick={resetSettings}
-              className="px-4 py-2 text-sm bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition-colors"
-            >
+        Content
+      </div>
+        Content
+      </div>
+            <button onClick={resetSettings}
+              className="px-4 py-2 text-sm bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition-colors">
+        Content
+      </button>
+        Content
+      </button>
               Reset
             </button>
-            <button
-              onClick={togglePanel}
-              className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
-            >
+            <button onClick={togglePanel}
+              className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+        Content
+      </button>
+        Content
+      </button>
               Close
             </button>
           </div>
@@ -207,6 +262,5 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
       )}
     </>
   );
-};
-
+}
 export default AccessibilityManager;

@@ -1,14 +1,15 @@
+import React from 'react';
 
 import { cn } from '../lib/utils'
-interface ResponsiveContainerProps {};
+interface ResponsiveContainerProps {}
   children: React.ReactNode
   className?: string
   maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | 'full'
-};
-const ResponsiveContainer = (_{};
+}
+const ResponsiveContainer = (_{}
   children, className, maxWidth = '7xl'
-}: ResponsiveContainerProps) => {};
-  const maxWidthClasses = {};
+}: ResponsiveContainerProps) => {}
+  const maxWidthClasses = {}
     sm: 'max-w-sm';
     md: 'max-w-md';
     lg: 'max-w-lg';
@@ -20,15 +21,15 @@ const ResponsiveContainer = (_{};
     '6xl': 'max-w-6xl';
     '7xl': 'max-w-7xl';
     full: 'max-w-full'
-  };
+  }
   return ()
     <div className={cn()
       'mx-auto px-4 sm:px-6 lg:px-8';
       maxWidthClasses[maxWidth];
       className
     )}></div>
-      {children};
+      {children}
     </div>
   )
-};
+}
 export default ResponsiveContainer

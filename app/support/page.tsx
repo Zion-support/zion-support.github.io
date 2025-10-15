@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import React, { useState } from 'react';
+import React from 'react';
 const SupportPage: React.FC = () => {";"
   const [formData, setFormData] = useState({";"
     name: '',";"
@@ -46,14 +47,14 @@ const SupportPage: React.FC = () => {";"
       description: 'Browse our comprehensive guides',";"
       action: 'View Docs',";"
       color: 'from-orange-500 to-red-500';
-    };
+    }
   ];
 ;
   const priorityLevels = [";"
     { value: 'low', label: 'Low', description: 'General questions, feature requests' },";"
     { value: 'medium', label: 'Medium', description: 'Minor issues, configuration help' },";"
     { value: 'high', label: 'High', description: 'Service degradation, performance issues' },";"
-    { value: 'critical', label: 'Critical', description: 'Service down, security issues' };
+    { value: 'critical', label: 'Critical', description: 'Service down, security issues' }
   ];
 ;
   const categories = [";"
@@ -86,7 +87,7 @@ const SupportPage: React.FC = () => {";"
     {";"
       question: 'Is there a cost for support?',";"
       answer: 'Basic support is included with all plans. Premium support features and dedicated account management are available for Professional and Enterprise plans.';
-    };
+    }
   ];
 ;
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {";"
@@ -95,8 +96,7 @@ const SupportPage: React.FC = () => {";"
       ...prev,";"
       [name]: value";"
     }));
-  };
-;
+  }
   const handleSubmit = async (e: React.FormEvent) => {";"
     e.preventDefault();
     setIsSubmitting(true);
@@ -119,8 +119,7 @@ const SupportPage: React.FC = () => {";"
         description: '';
       });
     }, 3000);
-  };
-;
+  }
 export default function Support() {";"
   return (";"
     <>";"
@@ -136,7 +135,6 @@ export default function Support() {";"
       </div>";"
     </>";"
   );
-};
-;
+}
 export default SupportPage;
 ;

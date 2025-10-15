@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -64,18 +65,46 @@ const CaseStudiesPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet >
+        Content
+      </Helmet>
+        Content
+      </Helmet>
         <title>Case Studies - Zion Tech Group | Success Stories</title>
         <meta name="description" content="Explore our successful projects and case studies showcasing our expertise in AI, cloud, and cybersecurity solutions." />
+        Content
+      </meta>
+        Content
+      </meta>
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+        Content
+      </div>
+        Content
+      </div>
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20">
+        Content
+      </section>
+        Content
+      </section>
           <div className="max-w-7xl mx-auto px-4">
+        Content
+      </div>
+        Content
+      </div>
             <div className="text-center">
+        Content
+      </div>
+        Content
+      </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Case Studies</h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+        Content
+      </p>
+        Content
+      </p>
                 Real success stories from our clients across various industries
               </p>
             </div>
@@ -84,11 +113,31 @@ const CaseStudiesPage: React.FC = () => {
 
         {/* Stats Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
+        Content
+      </section>
+        Content
+      </section>
           <div className="max-w-7xl mx-auto">
+        Content
+      </div>
+        Content
+      </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        Content
+      </div>
+        Content
+      </div>
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
+        Content
+      </div>
+        Content
+      </div>
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+        Content
+      </div>
+        Content
+      </div>
                     <div className="text-white">{stat.icon}</div>
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
@@ -101,35 +150,54 @@ const CaseStudiesPage: React.FC = () => {
 
         {/* Case Studies Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
+        Content
+      </section>
+        Content
+      </section>
           <div className="max-w-7xl mx-auto">
+        Content
+      </div>
+        Content
+      </div>
             <div className="text-center mb-16">
+        Content
+      </div>
+        Content
+      </div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Success Stories</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        Content
+      </p>
+        Content
+      </p>
                 Discover how we've helped businesses transform and achieve their goals
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {caseStudies.map((study) => (
                 <div key={study.id} className="bg-white/10 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-white/20 hover:border-cyan-400/50 transition-all duration-300"></div>
-                  <img
-                    src={study.image};
-                    alt={study.title};
+                  <img src={study.image}
+                    alt={study.title}
                     className="w-full h-48 object-cover"
                   />
+        Content
+      </img>
+        Content
+      </img>
                   <div className="p-6"></div>
                     <div className="flex items-center gap-2 mb-3"></div>
                       <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium"></span>
-                        {study.industry};
+                        {study.industry}
                       </span>
                       <span className="text-gray-400 text-sm"></span>
-                        {study.duration};
+                        {study.duration}
                       </span>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3"></h3>
-                      {study.title};
+                      {study.title}
                     </h3>
                     <p className="text-gray-300 mb-4"></p>
-                      <strong>Client:</strong> {study.client};
+                      <strong>Client:</strong> {study.client}
                     </p>
                     <div className="mb-4"></div>
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge:</h4>
@@ -145,32 +213,40 @@ const CaseStudiesPage: React.FC = () => {
                         {study.results.map((result, index) => (
                           <li key={index} className="flex items-center text-sm text-gray-300"></li>
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                            {result};
+        Content
+      </CheckCircle>
+        Content
+      </CheckCircle>
+                            {result}
                           </li>
-                        ))};
+                        ))}
                       </ul>
                     </div>
                     <div className="flex items-center justify-between"></div>
                       <span className="text-sm text-gray-400"></span>
-                        Team: {study.team};
+                        Team: {study.team}
                       </span>
                       <Link
-                        to={`/case-studies/${study.id}`};
+                        to={`/case-studies/${study.id}`}
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm"
                       ></Link
 >
                         Read More
                         <ArrowRight className="ml-1 w-4 h-4" />
+        Content
+      </ArrowRight>
+        Content
+      </ArrowRight>
                       </Link>
                     </div>
                   </div>
                 </div>
-              ))};
+              ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */};
+        {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
@@ -187,6 +263,10 @@ const CaseStudiesPage: React.FC = () => {
 >
                 Start Your Project
                 <ArrowRight className="w-5 h-5 ml-2" />
+        Content
+      </ArrowRight>
+        Content
+      </ArrowRight>
               </Link>
               <Link
                 to="/consultation"
@@ -201,6 +281,5 @@ const CaseStudiesPage: React.FC = () => {
       </div>
     </>
   );
-};
-
+}
 export default CaseStudiesPage;

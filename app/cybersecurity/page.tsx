@@ -1,3 +1,4 @@
+import React from 'react';
 
 import SEOHead from '../components/SEOHead';
 import { Link } from 'react-router-dom';
@@ -11,7 +12,7 @@ const CybersecurityPage: React.FC = () => {";"
         description="Advanced cybersecurity solutions including threat detection, vulnerability assessment, and security consulting services.";
         keywords="cybersecurity, security solutions, threat detection, vulnerability assessment, security consulting";
       />";"
-      {/* Hero Section */};
+      {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center">";"
         <div className="absolute inset-0 bg-black/50"></div>";"
         <div className="container mx-auto px-4 relative z-10">";"
@@ -46,7 +47,7 @@ const CybersecurityPage: React.FC = () => {";"
           </div>";"
         </div>";"
       </section>";"
-      {/* Services Section */};
+      {/* Services Section */}
       <section className="py-20 bg-slate-800">";"
         <div className="container mx-auto px-4">";"
           <div className="text-center mb-16">";"
@@ -128,7 +129,7 @@ const CybersecurityPage: React.FC = () => {";"
           </div>";"
         </div>";"
       </section>";"
-      {/* CTA Section */};
+      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-red-600 to-purple-600">";"
         <div className="container mx-auto px-4 text-center">";"
           <h2 className="text-4xl font-bold text-white mb-6">";"
@@ -155,6 +156,5 @@ const CybersecurityPage: React.FC = () => {";"
       </section>";"
     </>";"
   );
-};
-;
+}
 export default CybersecurityPage;

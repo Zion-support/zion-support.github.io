@@ -1,8 +1,20 @@
+import React from 'react';
 import { Helmet } from "react-helmet-async"
-export default function MobileOptimizer() {};
+export default function MobileOptimizer() {}
 }return ()
-    <div></div>
-      <Helmet></Helmet>
+    <div >
+        Content
+      </div>
+        Content
+      </div>
+      <Helmet >
+        Content
+      </Helmet>
+        Content
+      </Helmet>
+        Content
+      </Helmet>
+    </div>
         <title>Mobile Optimizer - Zion Tech Group</title>
       </Helmet>
       <div className="mobile-optimizer-container"></div>
@@ -17,8 +29,12 @@ export default function MobileOptimizer() {};
 >
           Contact Us
           <ArrowRight className="w-5 h-5 ml-2" />
+        Content
+      </ArrowRight>
+        Content
+      </ArrowRight>
         </Link>
       </div>
 </div>
   )
-};
+}

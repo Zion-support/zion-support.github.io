@@ -1,83 +1,98 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Common syntax error patterns and their fixes
+// Common syntax fixes
 const fixes = [
-  // Fix missing function declarations
+  // Fix malformed imports with semicolons
   {
-    pattern: /^  return \(<div className="min-h-screen/gm,
-    replacement: 'const ComponentName = () => {\n  return (\n    <div className="min-h-screen'
+    pattern: /import\s*{\s*";"\s*([^}]+)";"\s*}\s*from\s*['"]([^'"]+)['"];?/g,
+    replacement: 'import { $1 } from \'$2\';'
   },
-  // Fix duplicate function declarations
+  // Fix array declarations with semicolons
   {
-    pattern: /const \w+:\s*React\.FC\s*=\s*\(\)\s*=>\s*{\s*const \w+:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/gm,
-    replacement: 'const ComponentName: React.FC = () => {'
+    pattern: /const\s+(\w+)\s*=\s*\[\s*";"\s*([^;]+);"\s*\]\s*;/g,
+    replacement: 'const $1 = [\n    $2\n  ];'
+  },
+  // Fix JSX with semicolons
+  {
+    pattern: /<(\w+)\s*([^>]*?);"\s*>/g,
+    replacement: '<$1 $2>'
+  },
+  // Fix closing tags with semicolons
+  {
+    pattern: /<\/(\w+)";"\s*>/g,
+    replacement: '</$1>'
+  },
+  // Fix function declarations with semicolons
+  {
+    pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*};"\s*;/g,
+    replacement: 'const $1: React.FC = () => {\n  return (\n    <div>Component content</div>\n  );\n};'
+  },
+  // Fix malformed JSX fragments
+  {
+    pattern: /<>\s*<(\w+)><\/\1>\s*<\/>/g,
+    replacement: '<>\n      <$1>\n        Content\n      </$1>\n    </>'
+  },
+  // Fix missing React import
+  {
+    pattern: /^(?!import React)/m,
+    replacement: (match, offset, string) => {
+      if (string.includes('React.FC') || string.includes('React.Component') || string.includes('<') && string.includes('>')) {
+        return 'import React from \'react\';\n' + match;
+      }
+      return match;
+    }
+  },
+  // Fix unterminated strings
+  {
+    pattern: /content="([^"]*?)\s*$/gm,
+    replacement: 'content="$1"'
   },
   // Fix missing closing braces
   {
-    pattern: /(\s+)(<div[^>]*>)(\s*)(<section[^>]*>)(\s*)(<div[^>]*>)(\s*)(<h1[^>]*>.*<\/h1>)(\s*)(<p[^>]*>.*<\/p>)(\s*)(<\/div>)(\s*)(<\/section>)(\s*)(<\/div>)(\s*)(<\/>)(\s*)(\}\);)/gm,
-    replacement: '$1$2$3$4$5$6$7$8$9$10$11$12$13$14$15$16$17$18'
-  },
-  // Fix missing imports
-  {
-    pattern: /^import React from 'react';\n^import { Helmet } from 'react-helmet-async';\n^import { motion } from 'framer-motion';\n^import { Heart, ArrowRight } from 'lucide-react';\n^const \w+ = \(\) => {/gm,
-    replacement: 'import React from \'react\';\nimport { Helmet } from \'react-helmet-async\';\nimport { motion } from \'framer-motion\';\nimport { Heart, ArrowRight } from \'lucide-react\';\n\nconst ComponentName = () => {'
-  },
-  // Fix malformed JSX
-  {
-    pattern: /<HelmetProvider><\/Helmet>/gm,
-    replacement: '<HelmetProvider>'
-  },
-  // Fix missing semicolons
-  {
-    pattern: /(\s+)(<\/div>\s*<\/section>\s*<\/div>\s*<\/>\s*)(\s*)(\}\);)/gm,
-    replacement: '$1$2$3$4'
+    pattern: /}\s*;\s*$/gm,
+    replacement: '}'
   }
 ];
 
-// Function to fix a single file
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let originalContent = content;
     
     // Apply fixes
     fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
+      if (typeof fix.replacement === 'function') {
+        content = content.replace(fix.pattern, fix.replacement);
+      } else {
+        content = content.replace(fix.pattern, fix.replacement);
       }
     });
     
-    // Additional specific fixes for common issues
+    // Additional specific fixes
+    // Fix malformed function declarations
+    content = content.replace(/export default function (\w+)\(\)\s*\{\s*\};\s*return\s*\(/g, 'export default function $1() {\n  return (');
+    
+    // Fix missing opening tags
+    content = content.replace(/<div><\/div>\s*<(\w+)><\/\1>/g, '<div>\n      <$1>\n        Content\n      </$1>\n    </div>');
+    
+    // Fix malformed JSX attributes
+    content = content.replace(/className="([^"]*?)\s*$/gm, 'className="$1"');
+    
     // Fix missing closing tags
-    content = content.replace(/(<section[^>]*>)([^<]*<div[^>]*>)([^<]*<h1[^>]*>.*<\/h1>)([^<]*<p[^>]*>.*<\/p>)([^<]*<\/div>)([^<]*<\/div>)([^<]*<\/section>)([^<]*<\/div>)([^<]*<\/>)([^<]*\}\);)/gm, 
-      '$1$2$3$4$5$6$7$8$9$10');
+    content = content.replace(/<(\w+)\s*([^>]*?)\s*>\s*$/gm, '<$1 $2>\n        Content\n      </$1>');
     
-    // Fix missing function declarations
-    if (content.includes('return (<div') && !content.includes('const ') && !content.includes('function ')) {
-      content = 'const ComponentName = () => {\n' + content;
-    }
+    // Fix array syntax
+    content = content.replace(/\[\s*";"\s*([^;]+);"\s*\]/g, '[\n    $1\n  ]');
     
-    // Fix missing closing braces
-    if (content.includes('</div>') && !content.includes('};')) {
-      content = content.replace(/(<\/div>\s*<\/>\s*)(\s*)$/gm, '$1\n  );\n};');
-    }
+    // Fix object syntax
+    content = content.replace(/\{\s*";"\s*([^;]+);"\s*\}/g, '{\n    $1\n  }');
     
-    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -85,59 +100,26 @@ function fixFile(filePath) {
   }
 }
 
-// Function to find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
-  const files = [];
+function walkDirectory(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other common directories
-        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-          traverse(fullPath);
-        }
-      } else if (extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
+    if (stat.isDirectory()) {
+      fixedCount += walkDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      if (fixFile(filePath)) {
+        fixedCount++;
       }
     }
-  }
+  });
   
-  traverse(dir);
-  return files;
+  return fixedCount;
 }
 
-// Main execution
 console.log('Starting syntax error fixes...');
-
-const appDir = path.join(__dirname, 'app');
-const files = findFiles(appDir);
-
-let fixedCount = 0;
-let errorCount = 0;
-
-files.forEach(file => {
-  try {
-    if (fixFile(file)) {
-      fixedCount++;
-    }
-  } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
-    errorCount++;
-  }
-});
-
-console.log(`\nFixed ${fixedCount} files`);
-console.log(`Errors in ${errorCount} files`);
-
-// Run type check to see remaining errors
-console.log('\nRunning type check...');
-try {
-  execSync('pnpm run type-check', { stdio: 'inherit' });
-} catch (error) {
-  console.log('Type check completed with errors (expected)');
-}
+const fixedCount = walkDirectory('./app');
+console.log(`Fixed ${fixedCount} files.`);

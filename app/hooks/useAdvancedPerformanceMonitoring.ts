@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useCallback, useRef } from 'react'
 interface PerformanceMetrics {}
 
@@ -99,9 +100,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
               value?: number;
               responseStart?: number;
               requestStart?: number;
-            };
-
-            
+            }
             switch (entry.entryType) {
               case 'paint':
                 if (entry.name === 'first-contentful-paint') {}
@@ -158,8 +157,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 
 
       }
-    };
-
+    }
     const setupMemoryMonitoring = () => {
       if (!enableMemoryMonitoring || !('memory' in performance)) return;
 
@@ -186,8 +184,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       const interval = setInterval(checkMemory, 10000); // Check every 10 seconds
       
       return () => clearInterval(interval);
-    };
-
+    }
     const setupLayoutShiftMonitoring = () => {
       if (!enableLayoutShiftMonitoring) return;
 
@@ -211,8 +208,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       }
 
       return () => clsObserver.disconnect();
-    };
-
+    }
     // Setup all monitoring
     setupPerformanceObserver()
     const memoryCleanup = setupMemoryMonitoring()

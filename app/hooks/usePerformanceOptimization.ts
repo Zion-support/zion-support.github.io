@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useCallback, useRef } from 'react';
 import { logger } from '../utils/logger';
 
@@ -103,7 +104,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
                 largestContentfulPaint: 0,
                 cumulativeLayoutShift: 0,
                 firstInputDelay: 0,
-              };
+              }
             } else if (entry.entryType === 'paint') {
               const paintEntry = entry as PerformancePaintTiming;
               if (paintEntry.name === 'first-contentful-paint' && metricsRef.current) {
@@ -178,8 +179,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
       scripts: scripts.length,
       stylesheets: stylesheets.length,
       totalSize: 0,
-    };
-
+    }
     // Calculate total size (approximate)
     scripts.forEach((script) => {
       const src = (script as HTMLScriptElement).src;
@@ -203,7 +203,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     return () => {
       observerRef.current?.disconnect();
       lazyCleanup?.();
-    };
+    }
   }, [
     preloadCriticalResources,
     optimizeImages,
@@ -220,5 +220,5 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     preloadCriticalResources,
     optimizeImages,
     analyzeBundle,
-  };
-};
+  }
+}

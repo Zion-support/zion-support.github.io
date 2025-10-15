@@ -1,4 +1,5 @@
 import React from "react";
+import React from 'react';
 import { BarChart3, FileText, MessageSquare } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
@@ -74,34 +75,76 @@ export default function AIServices() {
 
   return (
     <>
-      <Helmet>
+      <Helmet >
+        Content
+      </Helmet>
+        Content
+      </Helmet>
         <title>AI Services - Zion Tech Group | Advanced AI Solutions</title>
-        <meta
-          name="description"
+        <meta name="description"
           content="Transform your business with our comprehensive AI services. From machine learning to natural language processing, we deliver cutting-edge AI solutions."
         />
-        <meta
-          name="keywords"
+        Content
+      </meta>
+        Content
+      </meta>
+        <meta name="keywords"
           content="AI services, artificial intelligence, machine learning, NLP, computer vision, AI consulting, AI development"
         />
+        Content
+      </meta>
+        Content
+      </meta>
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+        Content
+      </div>
+        Content
+      </div>
         <div className="container mx-auto px-4 py-16">
+        Content
+      </div>
+        Content
+      </div>
           <div className="text-center mb-16">
+        Content
+      </div>
+        Content
+      </div>
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+        Content
+      </h1>
+        Content
+      </h1>
               AI Services
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        Content
+      </p>
+        Content
+      </p>
               Transform your business with our comprehensive AI services. From machine learning to 
               natural language processing, we deliver cutting-edge AI solutions.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        Content
+      </div>
+        Content
+      </div>
             {aiServices.map((service) => (
               <div key={service.id} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+        Content
+      </div>
+        Content
+      </div>
                 <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-4`}>
+        Content
+      </div>
+        Content
+      </div>
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-cyan-400">{service.name}</h3>
@@ -109,8 +152,16 @@ export default function AIServices() {
                 <p className="text-lg font-semibold text-green-400 mb-4">{service.price}</p>
                 
                 <div className="mb-4">
+        Content
+      </div>
+        Content
+      </div>
                   <h4 className="text-sm font-semibold text-gray-300 mb-2">Features:</h4>
                   <ul className="text-sm text-gray-400 space-y-1">
+        Content
+      </ul>
+        Content
+      </ul>
                     {service.features.map((feature, index) => (
                       <li key={index}>• {feature}</li>
                     ))}
@@ -118,8 +169,16 @@ export default function AIServices() {
                 </div>
 
                 <div className="mb-6">
+        Content
+      </div>
+        Content
+      </div>
                   <h4 className="text-sm font-semibold text-gray-300 mb-2">Benefits:</h4>
                   <ul className="text-sm text-gray-400 space-y-1">
+        Content
+      </ul>
+        Content
+      </ul>
                     {service.benefits.map((benefit, index) => (
                       <li key={index}>• {benefit}</li>
                     ))}
@@ -127,6 +186,10 @@ export default function AIServices() {
                 </div>
 
                 <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+        Content
+      </button>
+        Content
+      </button>
                   Learn More
                 </button>
               </div>
@@ -134,7 +197,15 @@ export default function AIServices() {
           </div>
 
           <div className="text-center">
+        Content
+      </div>
+        Content
+      </div>
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+        Content
+      </button>
+        Content
+      </button>
               Get Started with AI Services
             </button>
           </div>

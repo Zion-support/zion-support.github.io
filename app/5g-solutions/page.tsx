@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 import { Wifi, CheckCircle, ArrowRight, Network, Cpu } from 'lucide-react';
@@ -38,32 +39,84 @@ const FiveGSolutionsPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+        Content
+      </div>
+        Content
+      </div>
+      <Helmet >
+        Content
+      </Helmet>
+        Content
+      </Helmet>
         <title>5G Solutions - Zion Tech Group</title>
         <meta name="description" content="Advanced 5G network implementation, infrastructure, and IoT solutions for modern businesses." />
+        Content
+      </meta>
+        Content
+      </meta>
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
+        Content
+      </div>
+        Content
+      </div>
         <div className="text-center mb-16">
+        Content
+      </div>
+        Content
+      </div>
           <h1 className="text-5xl font-bold text-white mb-6">
+        Content
+      </h1>
+        Content
+      </h1>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+        Content
+      </span>
+        Content
+      </span>
               5G Solutions
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        Content
+      </p>
+        Content
+      </p>
             Transform your business with cutting-edge 5G technology. Our comprehensive solutions deliver ultra-fast connectivity, low latency, and massive device connectivity.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        Content
+      </div>
+        Content
+      </div>
           {solutions.map((solution, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+        Content
+      </div>
+        Content
+      </div>
               <div className="flex items-center justify-between mb-6">
+        Content
+      </div>
+        Content
+      </div>
                 <div className="text-cyan-400">
+        Content
+      </div>
+        Content
+      </div>
                   {solution.icon}
                 </div>
                 {solution.popular && (
                   <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+        Content
+      </span>
+        Content
+      </span>
                     Popular
                   </span>
                 )}
@@ -73,11 +126,27 @@ const FiveGSolutionsPage: React.FC = () => {
               <p className="text-gray-300 mb-6">{solution.description}</p>
               
               <div className="mb-6">
+        Content
+      </div>
+        Content
+      </div>
                 <h4 className="text-lg font-semibold text-white mb-3">Features:</h4>
                 <ul className="space-y-2">
+        Content
+      </ul>
+        Content
+      </ul>
                   {solution.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
+        Content
+      </li>
+        Content
+      </li>
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+        Content
+      </CheckCircle>
+        Content
+      </CheckCircle>
                       {feature}
                     </li>
                   ))}
@@ -85,7 +154,15 @@ const FiveGSolutionsPage: React.FC = () => {
               </div>
               
               <div className="mb-6">
+        Content
+      </div>
+        Content
+      </div>
                 <div className="flex items-center justify-between mb-2">
+        Content
+      </div>
+        Content
+      </div>
                   <span className="text-3xl font-bold text-white">{solution.price}</span>
                   <span className="text-gray-400 line-through">{solution.marketPrice}</span>
                 </div>
@@ -93,8 +170,16 @@ const FiveGSolutionsPage: React.FC = () => {
               </div>
               
               <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center">
+        Content
+      </button>
+        Content
+      </button>
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2" />
+        Content
+      </ArrowRight>
+        Content
+      </ArrowRight>
               </button>
             </div>
           ))}
@@ -102,6 +187,5 @@ const FiveGSolutionsPage: React.FC = () => {
       </div>
     </div>
   );
-};
-
+}
 export default FiveGSolutionsPage;

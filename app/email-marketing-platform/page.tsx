@@ -1,51 +1,52 @@
+import React from 'react';
 
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const EmailMarketingPlatformPage = () => {};
+const EmailMarketingPlatformPage = () => {}
   const features = [
-    {};
+    {}
       title: "Drag & Drop Email Builder";
       description: "Create stunning emails with our intuitive drag-and-drop email builder";
       icon: <Mail className="w-8 h-8" />;
       benefits: ["Pre-built templates", "Custom designs", "Mobile responsive", "A/B testing"]
-    };
-    {};
+    }
+    {}
       title: "Advanced Segmentation";
       description: "Target the right audience with powerful segmentation and personalization";
       icon: <Target className="w-8 h-8" />;
       benefits: ["Behavioral targeting", "Demographic filters", "Custom segments", "Dynamic content"]
-    };
-    {};
+    }
+    {}
       title: "Automation Workflows";
       description: "Create sophisticated email automation workflows to nurture leads";
       icon: <Zap className="w-8 h-8" />;
       benefits: ["Welcome series", "Drip campaigns", "Abandoned cart", "Birthday emails"]
-    };
-    {};
+    }
+    {}
       title: "Analytics & Reporting";
       description: "Track performance with detailed analytics and actionable insights";
       icon: <BarChart3 className="w-8 h-8" />;
       benefits: ["Open rates", "Click tracking", "Revenue attribution", "ROI analysis"]
-    };
-    {};
+    }
+    {}
       title: "List Management";
       description: "Manage your subscriber lists with advanced tools and compliance features";
       icon: <Users className="w-8 h-8" />;
       benefits: ["Import/Export", "List cleaning", "GDPR compliance", "Unsubscribe management"]
-    };
-    {};
+    }
+    {}
       title: "Integration Hub";
       description: "Connect with your favorite tools for seamless data flow and automation";
       icon: <Database className="w-8 h-8" />;
       benefits: ["CRM integration", "E-commerce platforms", "Analytics tools", "API access"]
-    };
+    }
   ];
 
   const pricing = [
-    {};
+    {}
       name: "Starter";
       price: "$39";
       period: "per month";
@@ -58,8 +59,8 @@ const EmailMarketingPlatformPage = () => {};
         "Mobile app access"
       ];
       popular: false
-    };
-    {};
+    }
+    {}
       name: "Professional";
       price: "$79";
       period: "per month";
@@ -73,8 +74,8 @@ const EmailMarketingPlatformPage = () => {};
         "Advanced analytics"
       ];
       popular: true
-    };
-    {};
+    }
+    {}
       name: "Enterprise";
       price: "$199";
       period: "per month";
@@ -88,42 +89,60 @@ const EmailMarketingPlatformPage = () => {};
         "Custom development"
       ];
       popular: false
-    };
+    }
   ];
 
   const benefits = [
-    {};
+    {}
       title: "Increase Engagement";
       description: "Boost email engagement rates by up to 50% with personalization";
       icon: <Target className="w-6 h-6" />
-    };
-    {};
+        Content
+      </Target>
+        Content
+      </Target>
+    }
+    {}
       title: "Save Time";
       description: "Automate your email marketing and save hours every week";
       icon: <Zap className="w-6 h-6" />
-    };
-    {};
+        Content
+      </Zap>
+        Content
+      </Zap>
+    }
+    {}
       title: "Better ROI";
       description: "Track and optimize your email marketing ROI with detailed analytics";
       icon: <BarChart3 className="w-6 h-6" />
-    };
-    {};
+        Content
+      </BarChart3>
+        Content
+      </BarChart3>
+    }
+    {}
       title: "Easy to Use";
       description: "Intuitive interface that makes email marketing accessible to everyone";
       icon: <Shield className="w-6 h-6" />
-    };
+        Content
+      </Shield>
+        Content
+      </Shield>
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <EnhancedSEO
-        title="Email Marketing Platform - Zion Tech Group | Advanced Email Marketing & Automation"
+      <EnhancedSEO title="Email Marketing Platform - Zion Tech Group | Advanced Email Marketing & Automation"
         description="Powerful email marketing platform with drag-and-drop builder, automation workflows, advanced segmentation, and analytics. Boost your email marketing ROI."
         keywords="email marketing platform, email automation, email builder, email segmentation, email analytics, marketing automation"
         canonical="https://ziontechgroup.com/email-marketing-platform"
       />
-
-      {/* Hero Section */};
+        Content
+      </EnhancedSEO>
+        Content
+      </EnhancedSEO>
+      {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
         <ResponsiveContainer className="text-center"></ResponsiveContainer>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
@@ -140,7 +159,7 @@ const EmailMarketingPlatformPage = () => {};
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />};
+              icon={<ArrowRight className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -148,7 +167,7 @@ const EmailMarketingPlatformPage = () => {};
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />};
+              icon={<Globe className="w-5 h-5" />}
             >
               Watch Demo
             </FuturisticButton>
@@ -156,7 +175,7 @@ const EmailMarketingPlatformPage = () => {};
         </ResponsiveContainer>
       </section>
 
-      {/* Features Section */};
+      {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center mb-16"></div>
@@ -172,7 +191,7 @@ const EmailMarketingPlatformPage = () => {};
               <FuturisticCard key={index} className="h-full"></FuturisticCard>
                 <div className="text-center mb-6"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                    {feature.icon};
+                    {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -181,17 +200,21 @@ const EmailMarketingPlatformPage = () => {};
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit};
+        Content
+      </CheckCircle>
+        Content
+      </CheckCircle>
+                      {benefit}
                     </li>
-                  ))};
+                  ))}
                 </ul>
               </FuturisticCard>
-            ))};
+            ))}
           </div>
         </ResponsiveContainer>
       </section>
 
-      {/* Pricing Section */};
+      {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
         <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center mb-16"></div>
@@ -211,11 +234,11 @@ const EmailMarketingPlatformPage = () => {};
                       Most Popular
                     </span>
                   </div>
-                )};
+                )}
                 <div className="text-center mb-6"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-cyan-400 mb-2"></div>
-                    {plan.price};
+                    {plan.price}
                     <span className="text-lg text-gray-400">{plan.period}</span>
                   </div>
                   <p className="text-gray-300 text-sm">{plan.description}</p>
@@ -224,13 +247,17 @@ const EmailMarketingPlatformPage = () => {};
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                      {feature};
+        Content
+      </CheckCircle>
+        Content
+      </CheckCircle>
+                      {feature}
                     </li>
-                  ))};
+                  ))}
                 </ul>
                 <FuturisticButton
                   href="/contact"
-                  variant={plan.popular ? "primary" : "outline"};
+                  variant={plan.popular ? "primary" : "outline"}
                   size="sm"
                   className="w-full"
                 ></FuturisticButton
@@ -238,12 +265,12 @@ const EmailMarketingPlatformPage = () => {};
                   Get Started
                 </FuturisticButton>
               </FuturisticCard>
-            ))};
+            ))}
           </div>
         </ResponsiveContainer>
       </section>
 
-      {/* Benefits Section */};
+      {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center mb-16"></div>
@@ -258,17 +285,17 @@ const EmailMarketingPlatformPage = () => {};
             {benefits.map((benefit) => (
               <div key={index} className="text-center"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                  {benefit.icon};
+                  {benefit.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
               </div>
-            ))};
+            ))}
           </div>
         </ResponsiveContainer>
       </section>
 
-      {/* CTA Section */};
+      {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30"></section>
         <ResponsiveContainer className="text-center"></ResponsiveContainer>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
@@ -282,7 +309,7 @@ const EmailMarketingPlatformPage = () => {};
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />};
+              icon={<ArrowRight className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -290,7 +317,7 @@ const EmailMarketingPlatformPage = () => {};
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />};
+              icon={<Globe className="w-5 h-5" />}
             >
               Watch Demo
             </FuturisticButton>
@@ -299,6 +326,5 @@ const EmailMarketingPlatformPage = () => {};
       </section>
     </div>
   );
-};
-
+}
 export default EmailMarketingPlatformPage;

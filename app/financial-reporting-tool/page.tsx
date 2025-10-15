@@ -1,51 +1,52 @@
+import React from 'react';
 
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const FinancialReportingToolPage = () => {};
+const FinancialReportingToolPage = () => {}
   const features = [
-    {};
+    {}
       title: "Real-time Financial Dashboards";
       description: "Interactive dashboards with real-time financial data and key performance indicators";
       icon: <BarChart3 className="w-8 h-8" />;
       benefits: ["Live data updates", "Custom KPIs", "Interactive charts", "Mobile responsive"]
-    };
-    {};
+    }
+    {}
       title: "Automated Report Generation";
       description: "Generate comprehensive financial reports automatically with customizable templates";
       icon: <Zap className="w-8 h-8" />;
       benefits: ["Scheduled reports", "Custom templates", "PDF/Excel export", "Email delivery"]
-    };
-    {};
+    }
+    {}
       title: "Cash Flow Analysis";
       description: "Track and analyze cash flow patterns to optimize financial planning";
       icon: <TrendingUp className="w-8 h-8" />;
       benefits: ["Cash flow forecasting", "Trend analysis", "Variance reporting", "Scenario planning"]
-    };
-    {};
+    }
+    {}
       title: "Budget vs Actual Analysis";
       description: "Compare actual performance against budgets with detailed variance analysis";
       icon: <Target className="w-8 h-8" />;
       benefits: ["Variance analysis", "Budget tracking", "Performance metrics", "Alert system"]
-    };
-    {};
+    }
+    {}
       title: "Multi-entity Consolidation";
       description: "Consolidate financial data from multiple entities and subsidiaries";
       icon: <Database className="w-8 h-8" />;
       benefits: ["Entity management", "Intercompany elimination", "Currency conversion", "Consolidation rules"]
-    };
-    {};
+    }
+    {}
       title: "Compliance & Audit Support";
       description: "Ensure compliance with accounting standards and support audit processes";
       icon: <Shield className="w-8 h-8" />;
       benefits: ["GAAP compliance", "Audit trails", "Documentation", "Regulatory reporting"]
-    };
+    }
   ];
 
   const pricing = [
-    {};
+    {}
       name: "Starter";
       price: "$59";
       period: "per month";
@@ -58,8 +59,8 @@ const FinancialReportingToolPage = () => {};
         "Monthly data refresh"
       ];
       popular: false
-    };
-    {};
+    }
+    {}
       name: "Professional";
       price: "$129";
       period: "per month";
@@ -73,8 +74,8 @@ const FinancialReportingToolPage = () => {};
         "Real-time data"
       ];
       popular: true
-    };
-    {};
+    }
+    {}
       name: "Enterprise";
       price: "$299";
       period: "per month";
@@ -88,42 +89,60 @@ const FinancialReportingToolPage = () => {};
         "Custom development"
       ];
       popular: false
-    };
+    }
   ];
 
   const benefits = [
-    {};
+    {}
       title: "Save Time";
       description: "Reduce report generation time by up to 80% with automation";
       icon: <Zap className="w-6 h-6" />
-    };
-    {};
+        Content
+      </Zap>
+        Content
+      </Zap>
+    }
+    {}
       title: "Improve Accuracy";
       description: "Eliminate manual errors with automated data processing";
       icon: <Shield className="w-6 h-6" />
-    };
-    {};
+        Content
+      </Shield>
+        Content
+      </Shield>
+    }
+    {}
       title: "Better Insights";
       description: "Make informed decisions with comprehensive financial analytics";
       icon: <BarChart3 className="w-6 h-6" />
-    };
-    {};
+        Content
+      </BarChart3>
+        Content
+      </BarChart3>
+    }
+    {}
       title: "Ensure Compliance";
       description: "Stay compliant with automated regulatory reporting";
       icon: <Target className="w-6 h-6" />
-    };
+        Content
+      </Target>
+        Content
+      </Target>
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <EnhancedSEO
-        title="Financial Reporting Tool - Zion Tech Group | Automated Financial Reports & Analytics"
+      <EnhancedSEO title="Financial Reporting Tool - Zion Tech Group | Automated Financial Reports & Analytics"
         description="Advanced financial reporting tool with automated report generation, real-time dashboards, cash flow analysis, and compliance support. Streamline your financial reporting."
         keywords="financial reporting tool, automated reports, financial dashboards, cash flow analysis, budget analysis, compliance reporting"
         canonical="https://ziontechgroup.com/financial-reporting-tool"
       />
-
-      {/* Hero Section */};
+        Content
+      </EnhancedSEO>
+        Content
+      </EnhancedSEO>
+      {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
         <ResponsiveContainer className="text-center"></ResponsiveContainer>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
@@ -140,7 +159,7 @@ const FinancialReportingToolPage = () => {};
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />};
+              icon={<ArrowRight className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -148,7 +167,7 @@ const FinancialReportingToolPage = () => {};
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />};
+              icon={<Globe className="w-5 h-5" />}
             >
               Watch Demo
             </FuturisticButton>
@@ -156,7 +175,7 @@ const FinancialReportingToolPage = () => {};
         </ResponsiveContainer>
       </section>
 
-      {/* Features Section */};
+      {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center mb-16"></div>
@@ -172,7 +191,7 @@ const FinancialReportingToolPage = () => {};
               <FuturisticCard key={index} className="h-full"></FuturisticCard>
                 <div className="text-center mb-6"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                    {feature.icon};
+                    {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -181,17 +200,21 @@ const FinancialReportingToolPage = () => {};
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit};
+        Content
+      </CheckCircle>
+        Content
+      </CheckCircle>
+                      {benefit}
                     </li>
-                  ))};
+                  ))}
                 </ul>
               </FuturisticCard>
-            ))};
+            ))}
           </div>
         </ResponsiveContainer>
       </section>
 
-      {/* Pricing Section */};
+      {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
         <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center mb-16"></div>
@@ -211,11 +234,11 @@ const FinancialReportingToolPage = () => {};
                       Most Popular
                     </span>
                   </div>
-                )};
+                )}
                 <div className="text-center mb-6"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-cyan-400 mb-2"></div>
-                    {plan.price};
+                    {plan.price}
                     <span className="text-lg text-gray-400">{plan.period}</span>
                   </div>
                   <p className="text-gray-300 text-sm">{plan.description}</p>
@@ -224,13 +247,17 @@ const FinancialReportingToolPage = () => {};
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                      {feature};
+        Content
+      </CheckCircle>
+        Content
+      </CheckCircle>
+                      {feature}
                     </li>
-                  ))};
+                  ))}
                 </ul>
                 <FuturisticButton
                   href="/contact"
-                  variant={plan.popular ? "primary" : "outline"};
+                  variant={plan.popular ? "primary" : "outline"}
                   size="sm"
                   className="w-full"
                 ></FuturisticButton
@@ -238,12 +265,12 @@ const FinancialReportingToolPage = () => {};
                   Get Started
                 </FuturisticButton>
               </FuturisticCard>
-            ))};
+            ))}
           </div>
         </ResponsiveContainer>
       </section>
 
-      {/* Benefits Section */};
+      {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center mb-16"></div>
@@ -258,17 +285,17 @@ const FinancialReportingToolPage = () => {};
             {benefits.map((benefit) => (
               <div key={index} className="text-center"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                  {benefit.icon};
+                  {benefit.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
               </div>
-            ))};
+            ))}
           </div>
         </ResponsiveContainer>
       </section>
 
-      {/* CTA Section */};
+      {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30"></section>
         <ResponsiveContainer className="text-center"></ResponsiveContainer>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
@@ -282,7 +309,7 @@ const FinancialReportingToolPage = () => {};
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />};
+              icon={<ArrowRight className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -290,7 +317,7 @@ const FinancialReportingToolPage = () => {};
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />};
+              icon={<Globe className="w-5 h-5" />}
             >
               Watch Demo
             </FuturisticButton>
@@ -299,6 +326,5 @@ const FinancialReportingToolPage = () => {};
       </section>
     </div>
   );
-};
-
+}
 export default FinancialReportingToolPage;

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { DollarSign } from "lucide-react";
 
-export default function Consultation() {};
-  const [formData, setFormData] = useState({};
+export default function Consultation() {}
+  const [formData, setFormData] = useState({}
     name: '';
     email: '';
     company: '';
@@ -14,20 +15,18 @@ export default function Consultation() {};
     message: ''
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
     const { name, value } = e.target;
-    setFormData(prev => ({};
+    setFormData(prev => ({}
       ...prev;
       [name]: value
     }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {};
+  }
+  const handleSubmit = (e: React.FormEvent) => {}
     e.preventDefault();
     // Handle form submission
     console.log('Form submitted:', formData);
-  };
-
+  }
   const services = [
     'AI Solutions';
     'Cloud Services';
@@ -45,37 +44,66 @@ export default function Consultation() {};
   ];
 
   const benefits = [
-    {};
+    {}
       title: "Free Consultation";
       description: "No cost initial consultation to understand your needs";
       icon: <DollarSign className="w-8 h-8" />
-    };
-    {};
+        Content
+      </DollarSign>
+        Content
+      </DollarSign>
+    }
+    {}
       title: "Expert Team";
       description: "Certified professionals with years of experience";
       icon: <Users className="w-8 h-8" />
-    };
-    {};
+        Content
+      </Users>
+        Content
+      </Users>
+    }
+    {}
       title: "Quick Response";
       description: "Get back to you within 24 hours";
       icon: <Clock className="w-8 h-8" />
-    };
-    {};
+        Content
+      </Clock>
+        Content
+      </Clock>
+    }
+    {}
       title: "Secure & Confidential";
       description: "Your information is protected and confidential";
       icon: <Shield className="w-8 h-8" />
-    };
+        Content
+      </Shield>
+        Content
+      </Shield>
+    }
   ];
 
   return (
     <>
-      <Helmet></Helmet>
+      <Helmet >
+        Content
+      </Helmet>
+        Content
+      </Helmet>
+    </>
+      </Helmet>
+    </>
+      </Helmet>
+    </>
         <title>Free Consultation - Zion Tech Group | Get Expert Advice</title>
         <meta name="description" content="Get a free consultation with our experts to discuss your AI, cloud, and cybersecurity needs. No obligation, expert advice." />
+        Content
+      </meta>
+        Content
+      </meta>
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white"></div>
-        {/* Hero Section */};
+        {/* Hero Section */}
         <section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20"></section>
           <div className="max-w-7xl mx-auto px-4"></div>
             <div className="text-center"></div>
@@ -87,7 +115,7 @@ export default function Consultation() {};
           </div>
         </section>
 
-        {/* Benefits Section */};
+        {/* Benefits Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
@@ -105,12 +133,12 @@ export default function Consultation() {};
                   <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
                 </div>
-              ))};
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Consultation Form */};
+        {/* Consultation Form */}
         <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
           <div className="max-w-4xl mx-auto"></div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"></div>
@@ -127,31 +155,37 @@ export default function Consultation() {};
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Full Name *
                     </label>
-                    <input
-                      type="text"
+                    <input type="text"
                       id="name"
                       name="name"
-                      value={formData.name};
-                      onChange={handleInputChange};
+                      value={formData.name}
+                      onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white placeholder-gray-400"
                       placeholder="Your full name"
                     />
+        Content
+      </input>
+        Content
+      </input>
                   </div>
                   <div></div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Email Address *
                     </label>
-                    <input
-                      type="email"
+                    <input type="email"
                       id="email"
                       name="email"
-                      value={formData.email};
-                      onChange={handleInputChange};
+                      value={formData.email}
+                      onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white placeholder-gray-400"
                       placeholder="your.email@company.com"
                     />
+        Content
+      </input>
+        Content
+      </input>
                   </div>
                 </div>
 
@@ -160,29 +194,35 @@ export default function Consultation() {};
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Company Name
                     </label>
-                    <input
-                      type="text"
+                    <input type="text"
                       id="company"
                       name="company"
-                      value={formData.company};
-                      onChange={handleInputChange};
+                      value={formData.company}
+                      onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white placeholder-gray-400"
                       placeholder="Your company name"
                     />
+        Content
+      </input>
+        Content
+      </input>
                   </div>
                   <div></div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Phone Number
                     </label>
-                    <input
-                      type="tel"
+                    <input type="tel"
                       id="phone"
                       name="phone"
-                      value={formData.phone};
-                      onChange={handleInputChange};
+                      value={formData.phone}
+                      onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white placeholder-gray-400"
                       placeholder="+1 (555) 123-4567"
                     />
+        Content
+      </input>
+        Content
+      </input>
                   </div>
                 </div>
 
@@ -194,8 +234,8 @@ export default function Consultation() {};
                     <select
                       id="service"
                       name="service"
-                      value={formData.service};
-                      onChange={handleInputChange};
+                      value={formData.service}
+                      onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white"
                     ></select
@@ -203,9 +243,9 @@ export default function Consultation() {};
                       <option value="">Select a service</option>
                       {services.map((service, index) => (
                         <option key={index} value={service} className="bg-gray-800"></option>
-                          {service};
+                          {service}
                         </option>
-                      ))};
+                      ))}
                     </select>
                   </div>
                   <div></div>
@@ -215,17 +255,17 @@ export default function Consultation() {};
                     <select
                       id="timeline"
                       name="timeline"
-                      value={formData.timeline};
-                      onChange={handleInputChange};
+                      value={formData.timeline}
+                      onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white"
                     ></select
 >
                       <option value="">Select timeline</option>
                       {timelines.map((timeline, index) => (
                         <option key={index} value={timeline} className="bg-gray-800"></option>
-                          {timeline};
+                          {timeline}
                         </option>
-                      ))};
+                      ))}
                     </select>
                   </div>
                 </div>
@@ -237,8 +277,8 @@ export default function Consultation() {};
                   <select
                     id="budget"
                     name="budget"
-                    value={formData.budget};
-                    onChange={handleInputChange};
+                    value={formData.budget}
+                    onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white"
                   ></select
 >
@@ -254,16 +294,19 @@ export default function Consultation() {};
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2"></label>
                     Project Details *
                   </label>
-                  <textarea
-                    id="message"
+                  <textarea id="message"
                     name="message"
-                    value={formData.message};
-                    onChange={handleInputChange};
+                    value={formData.message}
+                    onChange={handleInputChange}
                     required
-                    rows={4};
+                    rows={4}
                     className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white placeholder-gray-400"
                     placeholder="Tell us about your project, challenges, and goals..."
                   />
+        Content
+      </textarea>
+        Content
+      </textarea>
                 </div>
 
                 <div className="text-center"></div>
@@ -274,6 +317,10 @@ export default function Consultation() {};
 >
                     Schedule Consultation
                     <ArrowRight className="w-5 h-5 ml-2" />
+        Content
+      </ArrowRight>
+        Content
+      </ArrowRight>
                   </button>
                 </div>
               </form>
@@ -283,6 +330,5 @@ export default function Consultation() {};
       </div>
     </>
   );
-};
-
+}
 export default ConsultationPage;

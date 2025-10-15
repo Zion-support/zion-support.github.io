@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 const TermsPage: React.FC = () => {";"
@@ -59,7 +60,7 @@ const TermsPage: React.FC = () => {";"
     {";"
       title: 'Contact Information',";"
       content: 'If you have any questions about these Terms of Service, please contact us at legal@ziontechgroup.com or call us at +1 302 464 0950.';
-    };
+    }
   ];
 ;
   const keyPoints = [";"
@@ -82,7 +83,7 @@ const TermsPage: React.FC = () => {";"
       icon: FileText,";"
       title: 'Payment Terms',";"
       description: 'Fees are non-refundable unless otherwise specified in writing';
-    };
+    }
   ];
 ;
   const prohibitedUses = [";"
@@ -98,6 +99,5 @@ const TermsPage: React.FC = () => {";"
     </>
 >>>>>>> cursor/fix-errors-and-merge-to-main-13a9
   );
-};
-;
+}
 export default TermsPage;

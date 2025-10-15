@@ -1,3 +1,4 @@
+import React from 'react';
 
 import SEOHead from '../components/SEOHead';
 ;
@@ -12,9 +13,8 @@ const structuredData = {";"
       "@type": "SearchAction",";"
       "target": "https://ziontechgroup.com/search?q={search_term_string}",";"
       "query-input": "required name=search_term_string";
-    };
-  };
-;
+    }
+  }
 const HomePage: React.FC = () => {";"
   return (";"
     <>";"
@@ -30,7 +30,6 @@ const HomePage: React.FC = () => {";"
       </div>";"
     </>";"
   );
-};
-;
+}
 export default HomePage;
 ;

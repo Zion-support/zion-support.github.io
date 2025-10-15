@@ -1,116 +1,135 @@
+import React from 'react';
 
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const DevOpsServicesPage = () => {};
+const DevOpsServicesPage = () => {}
   const services = [
-    {};
+    {}
       title: "CI/CD Pipeline Setup";
       description: "Automated continuous integration and deployment pipelines for faster, more reliable software delivery";
       icon: <Zap className="w-8 h-8" />;
       features: ["Automated testing", "Deployment automation", "Rollback capabilities", "Multi-environment support"];
       price: "From $2,500/month"
-    };
-    {};
+    }
+    {}
       title: "Infrastructure as Code";
       description: "Manage and provision infrastructure using code for consistency and scalability";
       icon: <Code className="w-8 h-8" />;
       features: ["Terraform/CloudFormation", "Version control", "Environment consistency", "Cost optimization"];
       price: "From $1,800/month"
-    };
-    {};
+    }
+    {}
       title: "Container Orchestration";
       description: "Kubernetes and Docker container management for scalable applications";
       icon: <Cloud className="w-8 h-8" />;
       features: ["Kubernetes setup", "Docker optimization", "Auto-scaling", "Service mesh"];
       price: "From $3,200/month"
-    };
-    {};
+    }
+    {}
       title: "Monitoring & Observability";
       description: "Comprehensive monitoring solutions for application and infrastructure health";
       icon: <BarChart3 className="w-8 h-8" />;
       features: ["Real-time monitoring", "Alerting systems", "Performance metrics", "Log aggregation"];
       price: "From $1,500/month"
-    };
-    {};
+    }
+    {}
       title: "Security Automation";
       description: "Automated security scanning and compliance checks in your CI/CD pipeline";
       icon: <Shield className="w-8 h-8" />;
       features: ["Vulnerability scanning", "Compliance checks", "Security testing", "Policy enforcement"];
       price: "From $2,000/month"
-    };
-    {};
+    }
+    {}
       title: "Cloud Migration";
       description: "Seamless migration to cloud platforms with zero downtime";
       icon: <Globe className="w-8 h-8" />;
       features: ["AWS/Azure/GCP migration", "Data migration", "Application modernization", "Cost optimization"];
       price: "From $5,000/month"
-    };
+    }
   ];
 
   const benefits = [
-    {};
+    {}
       title: "Faster Deployments";
       description: "Reduce deployment time from hours to minutes";
       icon: <Clock className="w-6 h-6" />
-    };
-    {};
+        Content
+      </Clock>
+        Content
+      </Clock>
+    }
+    {}
       title: "Improved Reliability";
       description: "99.9% uptime with automated failover and recovery";
       icon: <Shield className="w-6 h-6" />
-    };
-    {};
+        Content
+      </Shield>
+        Content
+      </Shield>
+    }
+    {}
       title: "Cost Optimization";
       description: "Reduce infrastructure costs by up to 40%";
       icon: <BarChart3 className="w-6 h-6" />
-    };
-    {};
+        Content
+      </BarChart3>
+        Content
+      </BarChart3>
+    }
+    {}
       title: "Team Productivity";
       description: "Focus on development, not infrastructure management";
       icon: <Users className="w-6 h-6" />
-    };
+        Content
+      </Users>
+        Content
+      </Users>
+    }
   ];
 
   const process = [
-    {};
+    {}
       step: "1";
       title: "Assessment";
       description: "Analyze current infrastructure and identify improvement opportunities"
-    };
-    {};
+    }
+    {}
       step: "2";
       title: "Strategy";
       description: "Develop a comprehensive DevOps strategy tailored to your needs"
-    };
-    {};
+    }
+    {}
       step: "3";
       title: "Implementation";
       description: "Set up tools, processes, and automation workflows"
-    };
-    {};
+    }
+    {}
       step: "4";
       title: "Training";
       description: "Train your team on new processes and best practices"
-    };
-    {};
+    }
+    {}
       step: "5";
       title: "Support";
       description: "Ongoing monitoring, optimization, and support"
-    };
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <EnhancedSEO
-        title="DevOps Services - Zion Tech Group | CI/CD, Infrastructure as Code, Cloud Migration"
+      <EnhancedSEO title="DevOps Services - Zion Tech Group | CI/CD, Infrastructure as Code, Cloud Migration"
         description="Professional DevOps services including CI/CD pipeline setup, infrastructure as code, container orchestration, and cloud migration. Accelerate your software delivery."
         keywords="DevOps services, CI/CD pipeline, infrastructure as code, Kubernetes, Docker, cloud migration, monitoring, automation"
         canonical="https://ziontechgroup.com/devops-services"
       />
-
-      {/* Hero Section */};
+        Content
+      </EnhancedSEO>
+        Content
+      </EnhancedSEO>
+      {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
         <ResponsiveContainer className="text-center"></ResponsiveContainer>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
@@ -127,7 +146,7 @@ const DevOpsServicesPage = () => {};
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />};
+              icon={<ArrowRight className="w-5 h-5" />}
             >
               Get Started
             </FuturisticButton>
@@ -135,7 +154,7 @@ const DevOpsServicesPage = () => {};
               href="/consultation"
               variant="outline"
               size="lg"
-              icon={<Users className="w-5 h-5" />};
+              icon={<Users className="w-5 h-5" />}
             >
               Free Consultation
             </FuturisticButton>
@@ -143,7 +162,7 @@ const DevOpsServicesPage = () => {};
         </ResponsiveContainer>
       </section>
 
-      {/* Services Section */};
+      {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center mb-16"></div>
@@ -160,7 +179,7 @@ const DevOpsServicesPage = () => {};
               <FuturisticCard key={index} className="h-full"></FuturisticCard>
                 <div className="text-center mb-6"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                    {service.icon};
+                    {service.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
@@ -170,9 +189,13 @@ const DevOpsServicesPage = () => {};
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature};
+        Content
+      </CheckCircle>
+        Content
+      </CheckCircle>
+                      {feature}
                     </li>
-                  ))};
+                  ))}
                 </ul>
                 <FuturisticButton
                   href="/contact"
@@ -184,12 +207,12 @@ const DevOpsServicesPage = () => {};
                   Learn More
                 </FuturisticButton>
               </FuturisticCard>
-            ))};
+            ))}
           </div>
         </ResponsiveContainer>
       </section>
 
-      {/* Benefits Section */};
+      {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
         <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center mb-16"></div>
@@ -204,17 +227,17 @@ const DevOpsServicesPage = () => {};
             {benefits.map((benefit) => (
               <div key={index} className="text-center"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                  {benefit.icon};
+                  {benefit.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
               </div>
-            ))};
+            ))}
           </div>
         </ResponsiveContainer>
       </section>
 
-      {/* Process Section */};
+      {/* Process Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center mb-16"></div>
@@ -229,17 +252,17 @@ const DevOpsServicesPage = () => {};
             {process.map((step) => (
               <div key={index} className="text-center"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg"></div>
-                  {step.step};
+                  {step.step}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
                 <p className="text-gray-300 text-sm">{step.description}</p>
               </div>
-            ))};
+            ))}
           </div>
         </ResponsiveContainer>
       </section>
 
-      {/* CTA Section */};
+      {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30"></section>
         <ResponsiveContainer className="text-center"></ResponsiveContainer>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
@@ -253,7 +276,7 @@ const DevOpsServicesPage = () => {};
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />};
+              icon={<ArrowRight className="w-5 h-5" />}
             >
               Start Your DevOps Journey
             </FuturisticButton>
@@ -261,7 +284,7 @@ const DevOpsServicesPage = () => {};
               href="/consultation"
               variant="outline"
               size="lg"
-              icon={<Users className="w-5 h-5" />};
+              icon={<Users className="w-5 h-5" />}
             >
               Schedule Consultation
             </FuturisticButton>
@@ -270,6 +293,5 @@ const DevOpsServicesPage = () => {};
       </section>
     </div>
   );
-};
-
+}
 export default DevopsServicesPage;

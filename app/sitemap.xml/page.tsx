@@ -1,11 +1,15 @@
+import React from 'react';
 
-const Sitemap.xmlPage: React.FC = () => {};
+const Sitemap.xmlPage: React.FC = () => {}
   return (
     <>
-      <SEOHead 
-        title="sitemap.xml - Zion Tech Group"
+      <SEOHead title="sitemap.xml - Zion Tech Group"
         description="Zion Tech Group sitemap.xml service page"
       />
+        Content
+      </SEOHead>
+        Content
+      </SEOHead>
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
         <div className="text-center"></div>
           <h1 className="text-4xl font-bold mb-4">sitemap.xml</h1>
@@ -14,6 +18,5 @@ const Sitemap.xmlPage: React.FC = () => {};
       </div>
     </>
   );
-};
-
+}
 export default Sitemap.xmlPage;

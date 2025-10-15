@@ -1,4 +1,5 @@
-export default function EnhancedSkipLink() {};
+import React from 'react';
+export default function EnhancedSkipLink() {}
 }return ()
     <div className="skip-link-container"></div>
       <Link
@@ -8,7 +9,11 @@ export default function EnhancedSkipLink() {};
 >
         Contact Us
         <ArrowRight className="w-5 h-5 ml-2" />
+        Content
+      </ArrowRight>
+        Content
+      </ArrowRight>
       </Link>
     </div>
   )
-};
+}

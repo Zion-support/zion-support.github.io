@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Database } from 'lucide-react';const StatusPage: React.FC = () => {";"
@@ -6,7 +7,7 @@ import { CheckCircle, Database } from 'lucide-react';const StatusPage: React.FC 
     { name: 'Web Application', status: 'operational', uptime: '99.8%' },";"
     { name: 'Database', status: 'operational', uptime: '99.9%' },";"
     { name: 'CDN', status: 'operational', uptime: '99.9%' },";"
-    { name: 'Authentication', status: 'operational', uptime: '99.9%' };
+    { name: 'Authentication', status: 'operational', uptime: '99.9%' }
   ];
 ;
   return (<>";"
@@ -58,13 +59,12 @@ import { CheckCircle, Database } from 'lucide-react';const StatusPage: React.FC 
                     </div>";"
                   </div>";"
                 </div>";"
-              ))};
+              ))}
             </div>";"
           </div>";"
         </div>";"
       </section>";"
     </>";"
   );
-};
-;
+}
 export default StatusPage;

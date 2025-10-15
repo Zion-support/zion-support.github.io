@@ -1,11 +1,11 @@
 // Securitymanager utility functions
 
-export const Securitymanager = {};
-  init: () => {};
-    };
-  process: (data: unknown) => {};
+export const Securitymanager = {}
+  init: () => {}
+    }
+  process: (data: unknown) => {}
     return data;
-  };
-  cleanup: () => {};
-} }};
+  }
+  cleanup: () => {}
+} }}
 export default Securitymanager

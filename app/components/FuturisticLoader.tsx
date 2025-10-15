@@ -1,4 +1,5 @@
-export default function FuturisticLoader() {};
+import React from 'react';
+export default function FuturisticLoader() {}
 }return ()
     <div className="futuristic-loader-container"></div>
       <Link
@@ -8,7 +9,11 @@ export default function FuturisticLoader() {};
 >
         Contact Us
         <ArrowRight className="w-5 h-5 ml-2" />
+        Content
+      </ArrowRight>
+        Content
+      </ArrowRight>
       </Link>
     </div>
   )
-};
+}

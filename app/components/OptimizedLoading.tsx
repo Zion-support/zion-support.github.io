@@ -1,4 +1,5 @@
-export default function OptimizedLoading() {};
+import React from 'react';
+export default function OptimizedLoading() {}
 }return ()
     <div className="optimized-loading-container"></div>
       <div className="loading-content"></div>
@@ -12,7 +13,11 @@ export default function OptimizedLoading() {};
 >
         Contact Us
         <ArrowRight className="w-5 h-5 ml-2" />
+        Content
+      </ArrowRight>
+        Content
+      </ArrowRight>
       </Link>
     </div>
   )
-};
+}

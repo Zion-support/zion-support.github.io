@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from "react-helmet-async"
 
 interface LoadingProps {
@@ -6,16 +7,40 @@ interface LoadingProps {
 
 export default function Loading({ message = "Loading..." }: LoadingProps) {
   return (
-    <div>
-      <Helmet>
+    <div >
+        Content
+      </div>
+        Content
+      </div>
+      <Helmet >
+        Content
+      </Helmet>
+        Content
+      </Helmet>
         <title>Loading - Zion Tech Group</title>
         <meta name="description" content="Loading page" />
+        Content
+      </meta>
+        Content
+      </meta>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        Content
+      </div>
+        Content
+      </div>
         <div className="text-center">
+        Content
+      </div>
+        Content
+      </div>
           <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-500 mx-auto mb-8"></div>
           <h2 className="text-2xl font-semibold text-white mb-4">{message}</h2>
           <p className="text-gray-300">
+        Content
+      </p>
+        Content
+      </p>
             Please wait while we load your content...
           </p>
         </div>

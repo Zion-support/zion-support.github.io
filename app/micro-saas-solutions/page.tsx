@@ -1,3 +1,4 @@
+import React from 'react';
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -378,7 +379,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {";"
       icon: <Code className="w-8 h-8 text-red-400" />,";"
       popular: false,";"
       link: 'https://ziontechgroup.com/api-management';
-    };
+    }
   ];
 ;
   const categories = ['All', 'AI Tools', 'Marketing', 'Productivity', 'Sales', 'E-commerce', 'Support', 'Analytics', 'Storage', 'Web Development', 'Development'];
@@ -400,7 +401,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {";"
     { number: '100+', label: 'Micro SaaS Solutions' },";"
     { number: '500+', label: 'Happy Customers' },";"
     { number: '99.9%', label: 'Uptime' },";"
-    { number: '24/7', label: 'Support' };
+    { number: '24/7', label: 'Support' }
   ];
 ;
   const pricingTiers = [";"
@@ -447,7 +448,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {";"
         'On-premise deployment';
       ],";"
       popular: false";"
-    };
+    }
   ];
 ;
   const filteredServices = selectedCategory === 'All' ";"
@@ -465,7 +466,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {";"
         <meta property="og:url" content="https://ziontechgroup.com/micro-saas-solutions" />";"
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas-solutions" />";"
       </Helmet>";"
-      {/* Hero Section */};
+      {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">";"
         <div className="absolute inset-0 overflow-hidden">";"
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>";"
@@ -502,44 +503,44 @@ const MicroSaaSSolutionsPage: React.FC = () => {";"
           </div>";"
         </div>";"
       </section>";"
-      {/* Stats Section */};
+      {/* Stats Section */}
       <section className="py-16 bg-slate-800">";"
         <div className="container mx-auto px-4">";"
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">";"
             {stats.map((stat, index) => (";"
               <div key={index} className="text-center">";"
                 <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">";"
-                  {stat.number};
+                  {stat.number}
                 </div>";"
                 <div className="text-gray-300 text-sm md:text-base">";"
-                  {stat.label};
+                  {stat.label}
                 </div>";"
               </div>";"
-            ))};
+            ))}
           </div>";"
         </div>";"
       </section>";"
-      {/* Category Filter */};
+      {/* Category Filter */}
       <section className="py-8 bg-slate-900">";"
         <div className="container mx-auto px-4">";"
           <div className="flex flex-wrap justify-center gap-4">";"
             {categories.map((category) => (";"
               <button";"
-                key={category};
-                onClick={() => setSelectedCategory(category)};
+                key={category}
+                onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${";"
                   selectedCategory === category";"
                     ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white shadow-lg';
                     : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-white';
-                }`};
+                }`}
               >";"
-                {category};
+                {category}
               </button>";"
-            ))};
+            ))}
           </div>";"
         </div>";"
       </section>";"
-      {/* Services Grid */};
+      {/* Services Grid */}
       <section className="py-20 bg-slate-900">";"
         <div className="container mx-auto px-4">";"
           <div className="text-center mb-16">";"
@@ -561,42 +562,41 @@ const MicroSaaSSolutionsPage: React.FC = () => {";"
                       Popular";"
                     </span>";"
                   </div>";"
-                )};
-;
+                )}
                 <div className="mb-6">";"
                   <div className="flex items-center justify-between mb-4">";"
                     <div className="group-hover:scale-110 transition-transform">";"
-                      {service.icon};
+                      {service.icon}
                     </div>";"
                     <span className="text-sm text-purple-400 font-medium">{service.category}</span>";"
                   </div>";"
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">";"
-                    {service.name};
+                    {service.name}
                   </h3>";"
                   <div className="flex items-center space-x-2 mb-3">";"
                     <span className="text-2xl font-bold text-purple-400">{service.price}</span>";"
                     <span className="text-sm text-gray-400 line-through">{service.originalPrice}</span>";"
                   </div>";"
                   <p className="text-gray-300 mb-4 text-sm">";"
-                    {service.description};
+                    {service.description}
                   </p>";"
                 </div>";"
                 <ul className="space-y-2 mb-6">";"
                   {service.features.slice(0, 4).map((feature, featureIndex) => (";"
                     <li key={featureIndex} className="flex items-center text-xs text-gray-300">";"
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />";"
-                      {feature};
+                      {feature}
                     </li>";"
-                  ))};
+                  ))}
                   {service.features.length > 4 && (";"
                     <li className="text-xs text-purple-400 font-medium">";"
                       +{service.features.length - 4} more features";"
                     </li>";"
-                  )};
+                  )}
                 </ul>";"
                 <div className="space-y-3">";"
                   <a";"
-                    href={service.link};
+                    href={service.link}
                     target="_blank";
                     rel="noopener noreferrer";
                     className="block w-full bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white text-center py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-sm";
@@ -611,11 +611,11 @@ const MicroSaaSSolutionsPage: React.FC = () => {";"
                   </Link>";"
                 </div>";"
               </div>";"
-            ))};
+            ))}
           </div>";"
         </div>";"
       </section>";"
-      {/* Features Section */};
+      {/* Features Section */}
       <section className="py-20 bg-slate-800">";"
         <div className="container mx-auto px-4">";"
           <div className="text-center mb-16">";"
@@ -632,11 +632,11 @@ const MicroSaaSSolutionsPage: React.FC = () => {";"
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 group-hover:scale-110 transition-transform" />";"
                 <span className="text-gray-300 font-medium group-hover:text-white transition-colors">{feature}</span>";"
               </div>";"
-            ))};
+            ))}
           </div>";"
         </div>";"
       </section>";"
-      {/* Pricing Section */};
+      {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-slate-900">";"
         <div className="container mx-auto px-4">";"
           <div className="text-center mb-16">";"
@@ -658,8 +658,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {";"
                       Most Popular";"
                     </span>";"
                   </div>";"
-                )};
-;
+                )}
                 <div className="text-center mb-8">";"
                   <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>";"
                   <div className="text-4xl font-bold text-purple-400 mb-2">{tier.price}</div>";"
@@ -669,9 +668,9 @@ const MicroSaaSSolutionsPage: React.FC = () => {";"
                   {tier.features.map((feature, featureIndex) => (";"
                     <li key={featureIndex} className="flex items-center text-gray-300">";"
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />";"
-                      {feature};
+                      {feature}
                     </li>";"
-                  ))};
+                  ))}
                 </ul>";"
                 <Link";"
                   to="/contact";
@@ -679,16 +678,16 @@ const MicroSaaSSolutionsPage: React.FC = () => {";"
                     tier.popular";"
                       ? 'bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white';
                       : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white';
-                  }`};
+                  }`}
                 >";"
                   Get Started";"
                 </Link>";"
               </div>";"
-            ))};
+            ))}
           </div>";"
         </div>";"
       </section>";"
-      {/* CTA Section */};
+      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600">";"
         <div className="container mx-auto px-4 text-center">";"
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">";"
@@ -715,6 +714,5 @@ const MicroSaaSSolutionsPage: React.FC = () => {";"
       </section>";"
     </>";"
   );
-};
-;
+}
 export default MicroSaaSSolutionsPage;

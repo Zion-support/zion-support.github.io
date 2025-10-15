@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
+import React from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
@@ -79,7 +80,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
 
     return () => {
       document.head.removeChild(style);
-    };
+    }
   }, [isEnabled, settings]);
 
   const updateSetting = useCallback((key: string, value: boolean) => {
@@ -95,10 +96,18 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
 
   return (
     <div className="accessibility-enhanced">
+        Content
+      </div>
+        Content
+      </div>
       {children}
       
       {/* Accessibility Controls */}
       <div className="fixed bottom-4 left-4 z-50">
+        Content
+      </div>
+        Content
+      </div>
         <button
           onClick={() => setIsEnabled(!isEnabled)}
           className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
@@ -111,13 +120,29 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
       {/* Settings Panel */}
       {isEnabled && (
         <div className="fixed bottom-20 left-4 z-50 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl max-w-sm">
+        Content
+      </div>
+        Content
+      </div>
           <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
+        Content
+      </h3>
+        Content
+      </h3>
             Accessibility Settings
           </h3>
           
           <div className="space-y-4">
+        Content
+      </div>
+        Content
+      </div>
             {Object.entries(settings).map(([key, value]) => (
               <label key={key} className="flex items-center space-x-3">
+        Content
+      </label>
+        Content
+      </label>
                 <input
                   type="checkbox"
                   checked={value}
@@ -125,6 +150,10 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
                   className="rounded"
                 />
                 <span className="text-gray-700 dark:text-gray-300 capitalize">
+        Content
+      </span>
+        Content
+      </span>
                   {key.replace(/([A-Z])/g, ' $1').trim()}
                 </span>
               </label>
@@ -134,6 +163,5 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
       )}
     </div>
   );
-};
-
+}
 export default AdvancedAccessibilityEnhancer;

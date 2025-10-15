@@ -1,3 +1,4 @@
+import React from 'react';
 
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
@@ -18,51 +19,129 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
-      <HelmetProvider>
-        <BrowserRouter>
-          <AnalyticsProvider>
+        Content
+      </ErrorBoundary>
+        Content
+      </ErrorBoundary>
+      <HelmetProvider >
+        Content
+      </HelmetProvider>
+        Content
+      </HelmetProvider>
+        <BrowserRouter >
+        Content
+      </BrowserRouter>
+        Content
+      </BrowserRouter>
+          <AnalyticsProvider >
+        Content
+      </AnalyticsProvider>
+        Content
+      </AnalyticsProvider>
             <EnhancedPerformanceMonitor showInProduction={false} />
-            <Helmet>
+        Content
+      </EnhancedPerformanceMonitor>
+        Content
+      </EnhancedPerformanceMonitor>
+            <Helmet >
+        Content
+      </Helmet>
+        Content
+      </Helmet>
               <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-              <meta
-                name="description"
+              <meta name="description"
                 content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses."
               />
-              <meta
-                name="keywords"
+        Content
+      </meta>
+        Content
+      </meta>
+              <meta name="keywords"
                 content="AI solutions, IT services, digital transformation, business automation, technology consulting"
               />
+        Content
+      </meta>
+        Content
+      </meta>
             </Helmet>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        Content
+      </div>
+        Content
+      </div>
               {/* Animated Background */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
               <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
               <EnhancedNavigation />
+        Content
+      </EnhancedNavigation>
+        Content
+      </EnhancedNavigation>
               <main>{children}</main>
               <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 py-16 relative z-10">
+        Content
+      </footer>
+        Content
+      </footer>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        Content
+      </div>
+        Content
+      </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        Content
+      </div>
+        Content
+      </div>
                     {/* Company Info */}
                     <div className="lg:col-span-2 space-y-6">
+        Content
+      </div>
+        Content
+      </div>
                       <h3 className="text-2xl font-bold text-white">
+        Content
+      </h3>
+        Content
+      </h3>
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+        Content
+      </span>
+        Content
+      </span>
                           Zion Tech Group
                         </span>
                       </h3>
                       <p className="text-gray-300 text-sm leading-relaxed max-w-md">
+        Content
+      </p>
+        Content
+      </p>
                         Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology at <span className="text-cyan-400">ziontechgroup.com</span>.
                       </p>
                       <div className="flex space-x-4">
+        Content
+      </div>
+        Content
+      </div>
                         <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+        Content
+      </div>
+        Content
+      </div>
                           <span className="text-white text-sm font-bold">Z</span>
                         </div>
                         <div className="flex flex-col justify-center">
+        Content
+      </div>
+        Content
+      </div>
                           <span className="text-white text-sm font-semibold">Trusted by 10,000+</span>
                           <span className="text-gray-400 text-xs">Businesses Worldwide</span>
                         </div>
                       </div>
                     </div>
-                    {/* AI Services */};
+                    {/* AI Services */}
                     <div className="space-y-4">";"
                       <h4 className="text-lg font-semibold text-white">AI Services</h4>";"
                       <div className="space-y-3">";"
@@ -92,7 +171,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         </Link>";"
                       </div>";"
                     </div>";"
-                    {/* IT Services */};
+                    {/* IT Services */}
                     <div className="space-y-4">";"
                       <h4 className="text-lg font-semibold text-white">IT Services</h4>";"
                       <div className="space-y-2">";"
@@ -119,7 +198,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         </Link>";"
                       </div>";"
                     </div>";"
-                    {/* Micro SAAS */};
+                    {/* Micro SAAS */}
                     <div className="space-y-4">";"
                       <h4 className="text-lg font-semibold text-white">Micro SAAS</h4>";"
                       <div className="space-y-3">";"
@@ -146,7 +225,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         </Link>";"
                       </div>";"
                     </div>";"
-                    {/* Company & Resources */};
+                    {/* Company & Resources */}
                     <div className="space-y-4">";"
                       <h4 className="text-lg font-semibold text-white">Company</h4>";"
                       <div className="space-y-3">";"
@@ -171,7 +250,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                       </div>";"
                     </div>";"
                   </div>";"
-                  {/* Contact Information */};
+                  {/* Contact Information */}
                   <div className="border-t border-white/10 pt-8 mb-8">";"
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">";"
                       <div className="flex items-center space-x-3">";"
@@ -203,7 +282,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                       </div>";"
                     </div>";"
                   </div>";"
-                  {/* Bottom Bar */};
+                  {/* Bottom Bar */}
                   <div className="border-t border-white/10 pt-8">";"
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">";"
                       <p className="text-gray-300 text-sm">";"
@@ -233,5 +312,5 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </HelmetProvider>";"
     </ErrorBoundary>";"
   )
-};
+}
 export default Layout";"

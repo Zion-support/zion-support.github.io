@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -12,12 +13,11 @@ interface ServicePageProps {";"
   pricing: {";"
     starting: string;
     market: string;
-  };
+  }
   technologies: string[];
   icon: React.ReactNode;
   popular?: boolean;
-};
-;
+}
 const ServicePageTemplate: React.FC<ServicePageProps> = ({";"
   title,";"
   description,";"
@@ -37,20 +37,20 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({";"
         <meta name="keywords" content={technologies.join(', ')} />";"
       </Helmet>";"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";"
-        {/* Hero Section */};
+        {/* Hero Section */}
         <section className="py-20">";"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";"
             <div className="text-center">";"
               <div className="flex justify-center mb-8">";"
                 <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">";"
-                  {icon};
+                  {icon}
                 </div>";"
               </div>";"
               <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">";"
-                {title};
+                {title}
               </h1>";"
               <p className="text-xl lg:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">";"
-                {description};
+                {description}
               </p>";"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";"
                 <Link";"
@@ -69,7 +69,7 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({";"
             </div>";"
           </div>";"
         </section>";"
-        {/* Features Section */};
+        {/* Features Section */}
         <section className="py-20 bg-slate-800/30">";"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";"
             <div className="text-center mb-16">";"
@@ -77,7 +77,7 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({";"
                 Key <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Features</span>";"
               </h2>";"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">";"
-                {shortDescription};
+                {shortDescription}
               </p>";"
             </div>";"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";"
@@ -86,11 +86,11 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({";"
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";"
                   <span className="text-gray-300 font-medium">{feature}</span>";"
                 </div>";"
-              ))};
+              ))}
             </div>";"
           </div>";"
         </section>";"
-        {/* Benefits Section */};
+        {/* Benefits Section */}
         <section className="py-20">";"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";"
             <div className="text-center mb-16">";"
@@ -107,11 +107,11 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({";"
                   <h3 className="text-xl font-semibold text-white mb-2">Benefit {index + 1}</h3>";"
                   <p className="text-gray-300">{benefit}</p>";"
                 </div>";"
-              ))};
+              ))}
             </div>";"
           </div>";"
         </section>";"
-        {/* Technologies Section */};
+        {/* Technologies Section */}
         <section className="py-20 bg-slate-800/30">";"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";"
             <div className="text-center mb-16">";"
@@ -124,11 +124,11 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({";"
                 <div key={index} className="bg-slate-800/50 px-6 py-3 rounded-full border border-slate-700 hover:border-cyan-500 transition-colors">";"
                   <span className="text-gray-300 font-medium">{tech}</span>";"
                 </div>";"
-              ))};
+              ))}
             </div>";"
           </div>";"
         </section>";"
-        {/* Pricing Section */};
+        {/* Pricing Section */}
         <section className="py-20">";"
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">";"
             <div className="text-center mb-16">";"
@@ -152,7 +152,7 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({";"
             </div>";"
           </div>";"
         </section>";"
-        {/* CTA Section */};
+        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">";"
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">";"
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">";"
@@ -180,7 +180,6 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({";"
       </div>";"
     </>";"
   );
-};
-;
+}
 export default ServicePageTemplate;
 ;

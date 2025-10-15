@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import {";"
-  Bars3Icon,";"
+import React from 'react';
+import { Bars3Icon,";"
   XMarkIcon,";"
   HomeIcon,";"
   InformationCircleIcon,";"
@@ -30,13 +30,11 @@ import {";"
   UserPlusIcon,";"
   CheckCircleIcon,";"
   RocketLaunchIcon,";"
-  ServerIcon";"
-} from '@heroicons/react/24/outline';
+  ServerIcon } from '@heroicons/react/24/outline';
 ;
-interface NavigationProps {";"
-  onSidebarToggle?: () => void";"
-};
-;
+interface NavigationProps {
+    onSidebarToggle?: () => void"
+  }
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
@@ -61,7 +59,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
         { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', icon: ChartBarIcon },";"
         { name: 'AI Content Generation', href: '/ai-content-generation-pro', icon: DocumentTextIcon },";"
         { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: EyeIcon },";"
-        { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon };
+        { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon }
       ]
     },";"
     {";"
@@ -75,7 +73,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
         { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },";"
         { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },";"
         { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },";"
-        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon };
+        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon }
       ]
     },";"
     {";"
@@ -90,7 +88,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
         { name: 'Mobile App Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },";"
         { name: 'Database Management', href: '/database-management', icon: CircleStackIcon },";"
         { name: 'Network Infrastructure', href: '/network-infrastructure', icon: SignalIcon },";"
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon };
+        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
       ]
     },";"
     {";"
@@ -103,7 +101,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
         { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },";"
         { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },";"
         { name: 'API Documentation', href: '/api-docs', icon: CodeBracketIcon },";"
-        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon };
+        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }
       ]
     },";"
     {";"
@@ -115,11 +113,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
         { name: 'Our Team', href: '/team', icon: UserGroupIcon },";"
         { name: 'Careers', href: '/careers', icon: UserGroupIcon },";"
         { name: 'Partnerships', href: '/partnerships', icon: UserPlusIcon },";"
-        { name: 'Contact', href: '/contact', icon: PhoneIcon };
+        { name: 'Contact', href: '/contact', icon: PhoneIcon }
       ]
     },";"
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },";"
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon };
+    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
   ]
 
   const mobileNavigation = [";"
@@ -131,24 +129,21 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
     { name: 'IT Solutions', href: '/it-solutions', icon: ServerIcon },";"
   ]
 
-  const isActive = (path: string) => {";"
-    return location.pathname === path";"
-  };
-;
+  const isActive = (path: string) => {
+    return location.pathname === path"
+  }
   const toggleServicesMenu = () => {";"
     setIsServicesOpen(!isServicesOpen)
     setIsSolutionsOpen(false)
     setIsResourcesOpen(false)
     setIsCompanyOpen(false)
-  };
-;
+  }
   const toggleSolutionsMenu = () => {";"
     setIsSolutionsOpen(!isSolutionsOpen)
     setIsServicesOpen(false)
     setIsResourcesOpen(false)
     setIsCompanyOpen(false)
-  };
-;
+  }
   const toggleResourcesMenu = () => {";"
     setIsResourcesOpen(!isResourcesOpen)
     setIsServicesOpen(false)
@@ -157,13 +152,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
                       isActive(item.href)
                         ? 'border-blue-500 text-white';
                         : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white';
-                    }`};
+                    }`}
                   >";"
                     <item.icon className="w-4 h-4" />";"
                     <span>{item.name}</span>";"
-                    {item.submenu && <ChevronDownIcon className="w-4 h-4" />};
+                    {item.submenu && <ChevronDownIcon className="w-4 h-4" />}
                   </Link>";"
-                  {/* Dropdown Menu */};
+                  {/* Dropdown Menu */}
                   {item.submenu && (";"
                     <div className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${";"
                       (item.name === 'AI Services' && isServicesOpen) ||";"
@@ -176,24 +171,24 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
                       {item.submenu.map((subItem) => (";"
                         <div key={subItem.name}>";"
                           <Link";"
-                            to={subItem.href};
+                            to={subItem.href}
                             className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white";
                           >";"
                             <subItem.icon className="w-4 h-4 mr-3" />";"
                             <span>{subItem.name}</span>";"
                           </Link>";"
                         </div>";"
-                      ))};
+                      ))}
                     </div>";"
-                  )};
+                  )}
                 </div>";"
-              ))};
+              ))}
             </div>";"
           </div>";"
-          {/* Mobile menu button */};
+          {/* Mobile menu button */}
           <div className="lg:hidden flex items-center">";"
             <button";"
-              onClick={() => setIsOpen(!isOpen)};
+              onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white";
             >";"
               <span className="sr-only">Open main menu</span>";"
@@ -201,11 +196,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
                 <XMarkIcon className="h-6 w-6" />";"
               ) : (";"
                 <Bars3Icon className="h-6 w-6" />";"
-              )};
+              )}
             </button>";"
           </div>";"
         </div>";"
-        {/* Mobile Navigation */};
+        {/* Mobile Navigation */}
         <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>";"
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700 max-h-96 overflow-y-auto">";"
             {navigation.map((item) => (";"
@@ -219,14 +214,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
                         else if (item.name === 'IT Solutions') toggleResourcesMenu();
                         else if (item.name === 'Resources') toggleResourcesMenu();
                         else if (item.name === 'Company') toggleCompanyMenu();
-                      }};
+                      }}
                       className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-300 hover:text-white hover:bg-slate-700";
                     >";"
                       <item.icon className="w-5 h-5 mr-3" />";"
                       <span>{item.name}</span>";"
                       <ChevronDownIcon className="w-4 h-4 ml-auto" />";"
                     </button>";"
-                    {/* Mobile Submenu */};
+                    {/* Mobile Submenu */}
                     <div className={`pl-6 ${";"
                       (item.name === 'AI Services' && isServicesOpen) ||";"
                       (item.name === 'Micro SaaS' && isSolutionsOpen) ||";"
@@ -234,6 +229,5 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
                       (item.name === 'Resources' && isResourcesOpen) ||";"
                       (item.name === 'Company' && isCompanyOpen)
   )
-};
-;
+}
 export default Navigation";"

@@ -1,9 +1,10 @@
 import React, { Suspense } from 'react'
+import React from 'react';
 
-interface LazyWrapperProps {};
+interface LazyWrapperProps {}
   fallback?: React.ReactNode
   children: React.ReactNode
-};
+}
 const DefaultFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-slate-900"></div>
     <div className="flex flex-col items-center space-y-4"></div>
@@ -13,34 +14,37 @@ const DefaultFallback = () => (
   </div>
 )
 
-export const LazyWrapper: React.FC<LazyWrapperProps> = ({};
+export const LazyWrapper: React.FC<LazyWrapperProps> = ({}
   fallback = <DefaultFallback />;
   children
-}) => {};
+}) => {}
   return (
     <Suspense fallback={fallback}></Suspense>
-      {children};
+      {children}
     </Suspense>
   );
-};
-
+}
 LazyWrapper.displayName = 'LazyWrapper';
 
 // Lazy loading helper function
 export const createLazyComponent = <P extends Record<string, unknown>>(
   importFunc: () => Promise<{ default: ComponentType<P> }>
-) => {};
+) => {}
   const LazyComponent = lazy(importFunc);
   
   const WrappedComponent = (props: P) => (
     <LazyWrapper></LazyWrapper>
       <LazyComponent {...props} />
+        Content
+      </LazyComponent>
+        Content
+      </LazyComponent>
     </LazyWrapper>
   );
   
   WrappedComponent.displayName = 'LazyComponent';
   return WrappedComponent;
-};
+}
 // Re-export from utils
 export { createLazyComponent } from '../utils/lazyLoading';
 // Re-export the utility function

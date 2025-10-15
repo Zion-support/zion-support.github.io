@@ -1,13 +1,17 @@
+import React from 'react';
 import { Helmet } from "react-helmet-async"
-const NotFoundPage = () => {};
+const NotFoundPage = () => {}
 }return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>Page Not Found | Zion Tech Group</title>
-        <meta
-          name="description"
+        <meta name="description"
           content="The page you are looking for could not be found"
         />
+        Content
+      </meta>
+        Content
+      </meta>
       </Helmet>
       <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></div>
         <div className="max-w-7xl mx-auto text-center"></div>
@@ -27,6 +31,10 @@ const NotFoundPage = () => {};
 >
               Get Started
               <ArrowRight className="w-5 h-5 ml-2" />
+        Content
+      </ArrowRight>
+        Content
+      </ArrowRight>
             </Link>
             <Link
               to="/contact"
@@ -40,5 +48,5 @@ const NotFoundPage = () => {};
       </div>
     </div>
   )
-};
+}
 export default NotFoundPage

@@ -1,3 +1,4 @@
+import React from 'react';
 
       </Helmet>
 
@@ -18,9 +19,13 @@
                   <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20"></div>
                     <div className="flex items-center gap-3 mb-3"></div>
                       <Calendar className="w-5 h-5 text-cyan-400" />
+        Content
+      </Calendar>
+        Content
+      </Calendar>
                       <span className="text-sm text-gray-400">{release.date}</span>
                       <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full"></span>
-                        {release.category};
+                        {release.category}
                       </span>
                     </div>
                     <h3 className="text-xl font-semibold mb-3 text-white">{release.title}</h3>
@@ -32,9 +37,13 @@
 >
                       Read More
                       <ArrowRight className="w-4 h-4 ml-1" />
+        Content
+      </ArrowRight>
+        Content
+      </ArrowRight>
                     </Link>
                   </div>
-                ))};
+                ))}
               </div>
             </div>
 
@@ -45,23 +54,31 @@
                   <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20"></div>
                     <div className="flex items-center gap-3 mb-3"></div>
                       <Globe className="w-5 h-5 text-cyan-400" />
+        Content
+      </Globe>
+        Content
+      </Globe>
                       <span className="text-sm text-gray-400">{article.date}</span>
                       <span className="px-2 py-1 bg-green-600/20 text-green-300 text-xs rounded-full"></span>
-                        {article.source};
+                        {article.source}
                       </span>
                     </div>
                     <h3 className="text-xl font-semibold mb-3 text-white">{article.title}</h3>
                     <p className="text-gray-300 mb-4">{article.summary}</p>
                     <Link
-                      to={article.url};
+                      to={article.url}
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                     ></Link
 >
                       Read Article
                       <ArrowRight className="w-4 h-4 ml-1" />
+        Content
+      </ArrowRight>
+        Content
+      </ArrowRight>
                     </Link>
                   </div>
-                ))};
+                ))}
               </div>
             </div>
           </div>
@@ -84,4 +101,4 @@
       </div>
     </>
   );
-};
+}

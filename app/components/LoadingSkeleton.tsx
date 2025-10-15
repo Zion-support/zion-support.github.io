@@ -1,8 +1,20 @@
+import React from 'react';
 import { Helmet } from "react-helmet-async"
-export default function LoadingSkeleton() {};
+export default function LoadingSkeleton() {}
 }return ()
-    <div></div>
-      <Helmet></Helmet>
+    <div >
+        Content
+      </div>
+        Content
+      </div>
+      <Helmet >
+        Content
+      </Helmet>
+        Content
+      </Helmet>
+        Content
+      </Helmet>
+    </div>
         <title>Loading Skeleton - Zion Tech Group</title>
       </Helmet>
       <div className="loading-skeleton-container"></div>
@@ -18,8 +30,12 @@ export default function LoadingSkeleton() {};
 >
           Contact Us
           <ArrowRight className="w-5 h-5 ml-2" />
+        Content
+      </ArrowRight>
+        Content
+      </ArrowRight>
         </Link>
       </div>
 </div>
   )
-};
+}

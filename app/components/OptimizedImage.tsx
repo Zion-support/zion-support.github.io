@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 
-interface OptimizedImageProps {};
+interface OptimizedImageProps {}
   src: string;
   alt: string;
   className?: string;
@@ -11,69 +12,72 @@ interface OptimizedImageProps {};
   placeholder?: string;
   onLoad?: () => void;
   onError?: () => void;
-};
-const OptimizedImage: React.FC<OptimizedImageProps> = ({};
-  src, alt, className = '', _width, _height, priority = false, placeholder = 'data:image/svg+xml;base64, _PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+', _onLoad, _onError, _}) => {};
+}
+const OptimizedImage: React.FC<OptimizedImageProps> = ({}
+  src, alt, className = '', _width, _height, priority = false, placeholder = 'data:image/svg+xml;base64, _PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+', _onLoad, _onError, _}) => {}
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
-  useEffect(() => {};
+  useEffect(() => {}
     if (priority) return;
 
-    const observer = new IntersectionObserver(([entry]) => {};
-        if (entry.isIntersecting) {};
+    const observer = new IntersectionObserver(([entry]) => {}
+        if (entry.isIntersecting) {}
           setIsInView(true);
           observer.disconnect();
-        };
-      };
-      { threshold: 0.1 };
+        }
+      }
+      { threshold: 0.1 }
     )
-    if (imgRef.current) {};
+    if (imgRef.current) {}
       observer.observe(imgRef.current)
-    };
+    }
     return () => observer.disconnect()
   }, [priority])
-  const handleLoad = () => {};
+  const handleLoad = () => {}
 }setIsLoaded(true)
     onLoad?.()
-  };
-  const handleError = () => {};
+  }
+  const handleError = () => {}
 }setHasError(true)
     onError?.()
-  };
+  }
   const imageSrc = isInView ? src : placeholder
   return ()
     <div
-      ref={imgRef};
-      className={`relative overflow-hidden ${className}`};
-      style={{ width, height }};
+      ref={imgRef}
+      className={`relative overflow-hidden ${className}`}
+      style={{ width, height }}
     ></div
 >
       {!isLoaded && !hasError && ()
         <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"></div>
           <div className="w-8 h-8 border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin"></div>
         </div>
-      )};
+      )}
       {hasError ? ()
         <div className="absolute inset-0 bg-gray-100 flex items-center justify-center"></div>
           <div className="text-gray-400 text-sm">Failed to load image</div>
         </div>
       ) : ()
-        <img
-          src={imageSrc};
-          alt={alt};
-          className={`transition-opacity duration-300 ${};
+        <img src={imageSrc}
+          alt={alt}
+          className={`transition-opacity duration-300 ${}
             isLoaded ? 'opacity-100' : 'opacity-0'
-          }`};
-          onLoad={handleLoad};
-          onError={handleError};
-          loading={priority ? 'eager' : 'lazy'};
+          }`}
+          onLoad={handleLoad}
+          onError={handleError}
+          loading={priority ? 'eager' : 'lazy'}
           decoding="async"
         />
-      )};
+        Content
+      </img>
+        Content
+      </img>
+      )}
     </div>
   )
-};
+}
 export default OptimizedImage

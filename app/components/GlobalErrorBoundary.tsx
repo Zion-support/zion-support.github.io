@@ -1,3 +1,4 @@
+import React from 'react';
 const ComponentName = () => {
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import {RefreshCw, Home, Bug} from 'lucide-react';
@@ -6,40 +7,34 @@ import { Link } from 'react-router-dom';
 interface Props {";"
   children: ReactNode;
   fallback?: ReactNode;
-};
-;
+}
 interface State {";"
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
   errorId?: string;
-};
-;
+}
 class GlobalErrorBoundary extends Component<Props, State> {";"
   constructor(props: Props) {";"
     super(props);
-    this.state = { hasError: false };
-  };
-;
+    this.state = { hasError: false }
+  }
   static getDerivedStateFromError(error: Error): State {";"
     return {";"
       hasError: true,";"
       error,";"
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`";"
-    };
-  };
-;
+    }
+  }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {";"
     // Log error to console in development";"
     if (process.env.NODE_ENV === 'development') {";"
-      };
-;
+      }
     // Log error to external service in production";"
-    if (process.env.NODE_ENV === 'production') {";"
-      // Here you would typically send the error to a logging service";"
-      };
-  };
-;
+    if (process.env.NODE_ENV === 'production') {
+    // Here you would typically send the error to a logging service"
+  }
+  }
   render() {";"
     if (this.state.hasError) {";"
       return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">";"
@@ -60,8 +55,7 @@ class GlobalErrorBoundary extends Component<Props, State> {";"
                 <p className="text-sm text-gray-400 mb-2">Error ID:</p>";"
                 <code className="text-purple-400 font-mono text-sm">{this.state.errorId}</code>";"
               </div>";"
-            )};
-;
+            )}
             {process.env.NODE_ENV === 'development' && this.state.error && (";"
               <div className="mb-6 p-4 bg-slate-700 rounded-lg text-left">";"
                 <h3 className="text-sm font-semibold text-red-400 mb-2 flex items-center">";"
@@ -69,26 +63,25 @@ class GlobalErrorBoundary extends Component<Props, State> {";"
                   Error Details (Development Only):";"
                 </h3>";"
                 <pre className="text-xs text-gray-300 whitespace-pre-wrap overflow-auto max-h-40">";"
-                  {this.state.error.toString()};
+                  {this.state.error.toString()}
                 </pre>";"
                 {this.state.errorInfo && (";"
                   <pre className="text-xs text-gray-400 mt-2 whitespace-pre-wrap overflow-auto max-h-40">";"
-                    {this.state.errorInfo.componentStack};
+                    {this.state.errorInfo.componentStack}
                   </pre>";"
-                )};
+                )}
               </div>";"
-            )};
-;
+            )}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";"
               <button";"
-                onClick={this.handleRetry};
+                onClick={this.handleRetry}
                 className="flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors font-medium";
               >";"
                 <RefreshCw className="w-5 h-5 mr-2" />";"
                 Try Again";"
               </button>";"
               <button";"
-                onClick={this.handleReload};
+                onClick={this.handleReload}
                 className="flex items-center justify-center px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors font-medium";
               >";"
                 <RefreshCw className="w-5 h-5 mr-2" />";"
@@ -104,7 +97,7 @@ class GlobalErrorBoundary extends Component<Props, State> {";"
             </div>";"
             <div className="mt-8 pt-6 border-t border-slate-700">";"
               <p className="text-sm text-gray-400">";"
-                If this problem persists, please contact our support team at{' '};
+                If this problem persists, please contact our support team at{' '}
                 <a";"
                   href="mailto:support@ziontechgroup.com" ";"
                   className="text-purple-400 hover:text-purple-300 transition-colors";
@@ -116,10 +109,8 @@ class GlobalErrorBoundary extends Component<Props, State> {";"
           </div>";"
         </div>";"
       );
-    };
-;
+    }
     return this.props.children;
-  };
-};
-;
+  }
+}
 export default GlobalErrorBoundary;
