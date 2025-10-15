@@ -44,23 +44,53 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Home', href: '/', icon: Home },
         { name: 'About', href: '/about', icon: Users },
         { name: 'Contact', href: '/contact', icon: Phone },
-        { name: 'Pricing', href: '/pricing', icon: Star }
+        { name: 'Pricing', href: '/pricing', icon: Star },
+        { name: 'Team', href: '/team', icon: Users },
+        { name: 'Careers', href: '/careers', icon: Users }
       ]
     },
     {
       title: 'AI Services',
       items: [
         { name: 'AI Solutions', href: '/ai-solutions', icon: Settings },
-        { name: 'AI Analytics', href: '/ai-analytics', icon: Code },
-        { name: 'AI Automation', href: '/ai-automation', icon: Settings }
+        { name: 'AI Services', href: '/ai-services', icon: Settings },
+        { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Settings },
+        { name: 'AI Document Processor', href: '/ai-document-processor', icon: Settings },
+        { name: 'AI Voice Assistant', href: '/ai-voice-assistant', icon: Settings },
+        { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Settings },
+        { name: 'AI Image Recognition', href: '/ai-image-recognition', icon: Settings },
+        { name: 'AI Lead Scoring', href: '/ai-lead-scoring', icon: Settings },
+        { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: Settings },
+        { name: 'AI Price Optimizer', href: '/ai-price-optimizer', icon: Settings }
       ]
     },
     {
       title: 'IT Solutions',
       items: [
+        { name: 'IT Services', href: '/it-services', icon: Settings },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud },
         { name: 'Web Development', href: '/web-development', icon: Code },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: Settings }
+        { name: 'Mobile Development', href: '/mobile-development', icon: Code },
+        { name: 'Database Management', href: '/database-management', icon: Settings },
+        { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Settings },
+        { name: '5G Solutions', href: '/5g-solutions', icon: Settings },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: Settings },
+        { name: 'Blockchain Solutions', href: '/blockchain-solutions', icon: Settings },
+        { name: 'IoT Solutions', href: '/iot-solutions', icon: Settings },
+        { name: 'DevOps Automation', href: '/devops-automation', icon: Settings },
+        { name: 'Data Engineering', href: '/data-engineering', icon: Settings },
+        { name: 'API Development', href: '/api-development', icon: Code },
+        { name: 'Security Audit', href: '/security-audit', icon: Settings }
+      ]
+    },
+    {
+      title: 'Micro SaaS',
+      items: [
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: Settings },
+        { name: 'Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard', icon: Settings },
+        { name: 'Smart CRM Automation', href: '/zion-smart-crm-automation', icon: Settings },
+        { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager', icon: Settings },
+        { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker', icon: Settings }
       ]
     },
     {
@@ -68,7 +98,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'Blog', href: '/blog', icon: Code },
         { name: 'Case Studies', href: '/case-studies', icon: Star },
-        { name: 'Documentation', href: '/docs', icon: Code }
+        { name: 'API Documentation', href: '/api-docs', icon: Code },
+        { name: 'Help Center', href: '/help', icon: Settings },
+        { name: 'Accessibility', href: '/accessibility', icon: Settings },
+        { name: 'Privacy Policy', href: '/privacy', icon: Settings },
+        { name: 'Terms of Service', href: '/terms', icon: Settings },
+        { name: 'Cookie Policy', href: '/cookies', icon: Settings }
       ]
     }
   ], []);
