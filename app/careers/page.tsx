@@ -16,14 +16,16 @@ const CareersPage: React.FC = () => {
         'PhD in Computer Science or related field',
         '5+ years experience in AI/ML',
         'Expertise in Python, TensorFlow, PyTorch',
-        'Experience with cloud platforms (AWS, GCP, Azure)']
-        'Strong problem-solving and communication skills'],
+        'Experience with cloud platforms (AWS, GCP, Azure)',
+        'Strong problem-solving and communication skills'
+      ],
       benefits: [
         'Competitive salary and equity',
         'Health, dental, and vision insurance',
         'Flexible work arrangements',
-        'Professional development budget']
-        '401(k) with company matching']
+        'Professional development budget',
+        '401(k) with company matching'
+      ]
     },
     {
       title: 'Full-Stack Developer',
@@ -36,14 +38,16 @@ const CareersPage: React.FC = () => {
         'Bachelor\'s degree in Computer Science',
         '3+ years full-stack development experience',
         'Proficiency in React, Node.js, TypeScript',
-        'Experience with databases (PostgreSQL, MongoDB)']
-        'Knowledge of cloud services and DevOps'],
+        'Experience with databases (PostgreSQL, MongoDB)',
+        'Knowledge of cloud services and DevOps'
+      ],
       benefits: [
         'Competitive salary',
         'Comprehensive health benefits',
         'Remote work flexibility',
-        'Learning and development opportunities']
-        'Team building events']
+        'Learning and development opportunities',
+        'Team building events'
+      ]
     },
     {
       title: 'AI Product Manager',
@@ -56,14 +60,16 @@ const CareersPage: React.FC = () => {
         'Bachelor\'s degree in Business or Technical field',
         '4+ years product management experience',
         'Experience with AI/ML products',
-        'Strong analytical and communication skills']
-        'MBA preferred'],
+        'Strong analytical and communication skills',
+        'MBA preferred'
+      ],
       benefits: [
         'Competitive salary and bonus',
         'Health and wellness benefits',
         'Flexible PTO policy',
-        'Professional development opportunities']
-        'Stock options']
+        'Professional development opportunities',
+        'Stock options'
+      ]
     },
     {
       title: 'DevOps Engineer',
@@ -76,14 +82,16 @@ const CareersPage: React.FC = () => {
         '3+ years DevOps experience',
         'Expertise in AWS, Docker, Kubernetes',
         'Experience with CI/CD pipelines',
-        'Knowledge of monitoring and logging tools']
-        'Scripting skills (Python, Bash)'],
+        'Knowledge of monitoring and logging tools',
+        'Scripting skills (Python, Bash)'
+      ],
       benefits: [
         'Competitive salary',
         'Health insurance',
         'Remote work options',
-        'Certification reimbursement']
-        'Performance bonuses']
+        'Certification reimbursement',
+        'Performance bonuses'
+      ]
     }
   ];
 
@@ -128,51 +136,45 @@ const CareersPage: React.FC = () => {
         <meta property="og:type" content="website" />
       </Helmet>
       
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20">
-          
-        <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4">
             
-        <div className="text-center max-w-4xl mx-auto">
-              
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Team</span>
               </h1>
               
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                 Help us build the future of AI and technology. Join a team of passionate innovators who are transforming how businesses operate.
               </p>
               
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-    href="#open-positions"
+                  href="#open-positions"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
                   View Open Positions
                 </a>
                 <a
-    href="/contact"
+                  href="/contact"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   Contact Us
                 </a>
               </div>
-            ))}
+            </div>
           </div>
         </section>
         {/* Stats Section */}
         <section className="py-16 bg-white/5 backdrop-blur-sm">
-          
-        <div className="container mx-auto px-4">
-            
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  
-        <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
-                  
-        <div className="text-gray-300">{stat.label}</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
+                  <div className="text-gray-300">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -180,28 +182,23 @@ const CareersPage: React.FC = () => {
         </section>
         {/* Benefits Section */}
         <section className="py-20">
-          
-        <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4">
             
-        <div className="text-center mb-16">
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Why Work With Us?</h2>
-              
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We offer competitive benefits and a culture that values innovation, collaboration, and personal growth.
               </p>
             </div>
             
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center group">
-                  
-        <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    
-        <div className="text-white">{benefit.icon}</div>
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-white">{benefit.icon}</div>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
-                  
-          <p className="text-gray-300">{benefit.description}</p>
+                  <p className="text-gray-300">{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -209,18 +206,16 @@ const CareersPage: React.FC = () => {
         </section>
         {/* Open Positions */}
         <section id="open-positions" className="py-20 bg-white/5 backdrop-blur-sm">
-          
-        <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4">
             
-        <div className="text-center mb-16">
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Open Positions</h2>
-              
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our current openings and find the perfect role for you.
               </p>
             </div>
             
-        <div className="space-y-8 max-w-4xl mx-auto">
+            <div className="space-y-8 max-w-4xl mx-auto">
               {openPositions.map((position, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   
@@ -351,6 +346,7 @@ const CareersPage: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 export default CareersPage;

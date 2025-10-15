@@ -12,8 +12,9 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', readTime: '5 min' },
         { title: 'Installation Guide', description: 'Step-by-step installation instructions', readTime: '10 min' },
-        { title: 'Configuration', description: 'Configure your services and settings', readTime: '15 min' }]
-        { title: 'First Steps', description: 'Your first project with our platform', readTime: '20 min' }]
+        { title: 'Configuration', description: 'Configure your services and settings', readTime: '15 min' },
+        { title: 'First Steps', description: 'Your first project with our platform', readTime: '20 min' }
+      ]
     },
     {
       title: 'API Documentation',
@@ -22,8 +23,9 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'API Overview', description: 'Introduction to our REST API', readTime: '10 min' },
         { title: 'Authentication', description: 'API keys and authentication methods', readTime: '8 min' },
-        { title: 'Rate Limits', description: 'Understanding API rate limits', readTime: '5 min' }]
-        { title: 'Error Handling', description: 'Common errors and how to handle them', readTime: '12 min' }]
+        { title: 'Rate Limits', description: 'Understanding API rate limits', readTime: '5 min' },
+        { title: 'Error Handling', description: 'Common errors and how to handle them', readTime: '12 min' }
+      ]
     },
     {
       title: 'AI Services',
@@ -32,8 +34,9 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'AI Analytics', description: 'Using our AI analytics platform', readTime: '25 min' },
         { title: 'Content Generation', description: 'AI-powered content creation tools', readTime: '20 min' },
-        { title: 'Machine Learning', description: 'ML model training and deployment', readTime: '30 min' }]
-        { title: 'Natural Language Processing', description: 'NLP services and capabilities', readTime: '18 min' }]
+        { title: 'Machine Learning', description: 'ML model training and deployment', readTime: '30 min' },
+        { title: 'Natural Language Processing', description: 'NLP services and capabilities', readTime: '18 min' }
+      ]
     },
     {
       title: 'Cloud Services',
@@ -42,8 +45,9 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'Cloud Migration', description: 'Migrating to our cloud platform', readTime: '45 min' },
         { title: 'Container Services', description: 'Docker and Kubernetes deployment', readTime: '35 min' },
-        { title: 'Database Management', description: 'Managing databases in the cloud', readTime: '25 min' }]
-        { title: 'Monitoring & Logging', description: 'System monitoring and log analysis', readTime: '20 min' }]
+        { title: 'Database Management', description: 'Managing databases in the cloud', readTime: '25 min' },
+        { title: 'Monitoring & Logging', description: 'System monitoring and log analysis', readTime: '20 min' }
+      ]
     },
     {
       title: 'Security',
@@ -52,8 +56,9 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'Security Overview', description: 'Our security measures and protocols', readTime: '15 min' },
         { title: 'Data Protection', description: 'Protecting sensitive data and privacy', readTime: '20 min' },
-        { title: 'Compliance', description: 'SOC 2, GDPR, and other compliance standards', readTime: '30 min' }]
-        { title: 'Access Control', description: 'User permissions and access management', readTime: '12 min' }]
+        { title: 'Compliance', description: 'SOC 2, GDPR, and other compliance standards', readTime: '30 min' },
+        { title: 'Access Control', description: 'User permissions and access management', readTime: '12 min' }
+      ]
     },
     {
       title: 'Tutorials',
@@ -62,8 +67,9 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'Building Your First App', description: 'Complete tutorial for beginners', readTime: '60 min' },
         { title: 'Advanced Features', description: 'Exploring advanced platform features', readTime: '45 min' },
-        { title: 'Integration Examples', description: 'Real-world integration examples', readTime: '40 min' }]
-        { title: 'Best Practices', description: 'Industry best practices and tips', readTime: '25 min' }]
+        { title: 'Integration Examples', description: 'Real-world integration examples', readTime: '40 min' },
+        { title: 'Best Practices', description: 'Industry best practices and tips', readTime: '25 min' }
+      ]
     }
   ];
 
@@ -278,30 +284,29 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
         </section>
         {/* Support Section */}
         <section className="py-16 px-4 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
-          
-        <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Need Help?</h2>
             
-          <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               Can't find what you're looking for? Our support team is here to help.
             </p>
             
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-    href="/support"
+                href="/support"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Contact Support
               </a>
               <a
-    href="/contact"
+                href="/contact"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 Get in Touch
               </a>
             </div>
           </div>
-        </div>
+        </section>
         <Footer />
       </div>
     </>

@@ -27,7 +27,7 @@ const ServicesOverviewPage: React.FC = () => {
       icon: <Code className="w-8 h-8" />,
       color: "from-purple-500 to-pink-600",
       description: "Comprehensive IT solutions and infrastructure services",
-      services: []
+      services: [
         { name: "Cloud Infrastructure", price: "$499/month", features: ["Auto-scaling", "AI Monitoring", "Cost Optimization"] },
         { name: "API Management", price: "$199/month", features: ["API Gateway", "Rate Limiting", "Analytics"] },
         { name: "Database Solutions", price: "$299/month", features: ["Database Design", "Performance Tuning", "Backup & Recovery"] },
