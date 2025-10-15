@@ -10,18 +10,40 @@ const Sidebar: React.FC = () => {
         </div>
         <nav className="flex-1 px-4 pb-4 space-y-1 overflow-y-auto">
           <div className="mb-4">
-            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Main Services</h3>
+            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">AI Services</h3>
             <Link to="/ai-services" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               AI Services
             </Link>
+            <Link to="/ai-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Solutions
+            </Link>
+            <Link to="/ai-content-generator" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Content Generator
+            </Link>
+            <Link to="/ai-fraud-detection" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Fraud Detection
+            </Link>
+            <Link to="/ai-image-recognition" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Image Recognition
+            </Link>
+            <Link to="/ai-lead-scoring" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Lead Scoring
+            </Link>
+            <Link to="/ai-predictive-maintenance" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Predictive Maintenance
+            </Link>
+            <Link to="/ai-price-optimizer" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Price Optimizer
+            </Link>
+            <Link to="/ai-voice-assistant" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Voice Assistant
+            </Link>
+          </div>
+          
+          <div className="mb-4">
+            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">IT Services</h3>
             <Link to="/it-services" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               IT Services
-            </Link>
-            <Link to="/cloud-infrastructure" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              Cloud Infrastructure
-            </Link>
-            <Link to="/5g-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              5G Solutions
             </Link>
             <Link to="/web-development" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Web Development
@@ -29,8 +51,69 @@ const Sidebar: React.FC = () => {
             <Link to="/mobile-development" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Mobile Development
             </Link>
+            <Link to="/api-development" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              API Development
+            </Link>
+            <Link to="/blockchain-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Blockchain Solutions
+            </Link>
+            <Link to="/data-engineering" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Data Engineering
+            </Link>
+            <Link to="/devops-automation" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              DevOps & Automation
+            </Link>
+            <Link to="/iot-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              IoT Solutions
+            </Link>
+            <Link to="/security-audit" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Security Audit
+            </Link>
+            <Link to="/cloud-infrastructure" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Cloud Infrastructure
+            </Link>
+            <Link to="/5g-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              5G Solutions
+            </Link>
+            <Link to="/database-management" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Database Management
+            </Link>
+            <Link to="/network-infrastructure" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Network Infrastructure
+            </Link>
+          </div>
+          
+          <div className="mb-4">
+            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Micro SaaS</h3>
             <Link to="/micro-saas-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Micro SaaS Solutions
+            </Link>
+            <Link to="/ai-chatbot-builder" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Chatbot Builder
+            </Link>
+            <Link to="/ai-form-builder" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Form Builder
+            </Link>
+            <Link to="/ai-document-processor" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Document Processor
+            </Link>
+            <Link to="/ai-scheduling-assistant" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Scheduling Assistant
+            </Link>
+            <Link to="/ai-social-media-manager" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Social Media Manager
+            </Link>
+            <Link to="/ai-crm-optimizer" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI CRM Optimizer
+            </Link>
+            <Link to="/ai-email-optimizer" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Email Optimizer
+            </Link>
+            <Link to="/ai-website-analyzer" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Website Analyzer
+            </Link>
+            <Link to="/ai-data-visualizer" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Data Visualizer
             </Link>
           </div>
           
