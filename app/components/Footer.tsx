@@ -34,21 +34,21 @@ const Footer: React.FC = () => {
         { name: 'AI Automation Suite', href: '/ai-automation-suite' },
         { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
-        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' }
+        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
+        { name: 'AI Customer Insights Pro', href: '/ai-customer-insights-pro' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' }
       ]
     },
     {
       title: 'IT Services',
       icon: <Code className="w-5 h-5 text-purple-400" />,
       services: [
-        { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
-        { name: 'API Management', href: '/ai-api-management' },
+        { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
+        { name: 'AI API Management', href: '/ai-api-management' },
         { name: 'Database Solutions', href: '/database-solutions' },
         { name: 'Advanced Security Suite', href: '/advanced-security-suite' },
         { name: 'Performance Monitoring', href: '/performance-monitoring' },
-        { name: 'DevOps Solutions', href: '/devops-solutions' },
-        { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite' },
-        { name: 'AI Cloud Migration Pro', href: '/ai-cloud-migration-pro' }
+        { name: 'DevOps Solutions', href: '/devops-solutions' }
       ]
     },
     {
@@ -68,17 +68,17 @@ const Footer: React.FC = () => {
       icon: <Cloud className="w-5 h-5 text-orange-400" />,
       services: [
         { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant' },
-        { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro' },
-        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
-        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
-        { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
-        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
-        { name: 'AI Email Marketing Automation', href: '/ai-email-marketing-automation' },
-        { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot' },
-        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
-        { name: 'AI Financial Advisor Pro', href: '/ai-financial-advisor-pro' },
-        { name: 'AI Health Monitoring Pro', href: '/ai-health-monitoring-pro' }
+        { name: 'AI HR Assistant Pro', href: '/ai-hr-assistant-pro' },
+        { name: 'AI Sales Optimizer Pro', href: '/ai-sales-optimizer-pro' },
+        { name: 'AI Document Processor Pro', href: '/ai-document-processor-pro' },
+        { name: 'AI Fraud Detection Pro', href: '/ai-fraud-detection-pro' },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
+        { name: 'AI Price Optimization Pro', href: '/ai-price-optimization-pro' },
+        { name: 'AI Lead Generation Pro', href: '/ai-lead-generation-pro' },
+        { name: 'AI Quality Assurance Pro', href: '/ai-quality-assurance-pro' },
+        { name: 'AI Time Tracking Pro', href: '/ai-time-tracking-pro' },
+        { name: 'AI Legal Assistant Pro', href: '/ai-legal-assistant-pro' },
+        { name: 'AI Data Migration Pro', href: '/ai-data-migration-pro' }
       ]
     }
   ];
@@ -104,27 +104,10 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-slate-900 text-white relative overflow-hidden">
-      {/* Futuristic Animated Background */}
+      {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
-        {/* Animated grid pattern */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="h-full w-full" style={{
-            backgroundImage: `
-              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px',
-            animation: 'grid-move 20s linear infinite'
-          }}></div>
-        </div>
-        
-        {/* Animated top border */}
+        <div className="absolute inset-0 bg-cyber-grid opacity-10"></div>
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-cyan-500 animate-pulse"></div>
-        
-        {/* Floating elements */}
-        <div className="absolute top-10 left-10 w-32 h-32 bg-cyan-500/5 rounded-full blur-2xl animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-40 h-40 bg-purple-500/5 rounded-full blur-2xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 w-24 h-24 bg-pink-500/5 rounded-full blur-2xl animate-pulse delay-2000"></div>
       </div>
 
       <div className="relative z-10">
@@ -145,8 +128,7 @@ const Footer: React.FC = () => {
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Leading provider of cutting-edge AI, IT, and 5G solutions. 
                 We transform businesses through innovative technology and 
-                intelligent automation. Trusted by 500+ companies worldwide 
-                with 99.9% uptime guarantee and 24/7 support.
+                intelligent automation.
               </p>
               
               {/* Contact Info */}

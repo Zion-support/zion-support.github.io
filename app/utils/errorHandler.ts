@@ -40,7 +40,7 @@ export const errorHandler = {
 <<<<<<< HEAD
 =======
     // Error logging logic
->>>>>>> cursor/analyze-improve-and-merge-code-49c8
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-74aa
     console.error('Error logged:', error, context);
   },
   

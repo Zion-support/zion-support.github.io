@@ -1,21 +1,5 @@
 import React, { memo, useState, useEffect } from 'react';
-import { 
-  Phone,
-  Mail,
-  MapPin,
-  ArrowRight,
-  Shield,
-  Brain,
-  Code,
-  Cloud,
-  Wifi,
-  Star,
-  CheckCircle,
-  Users,
-  Award,
-  TrendingUp,
-  Clock
-} from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight, Shield, Brain, Code, Cloud, Wifi, Star, CheckCircle, Users, Award, TrendingUp, Clock } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 // Loading skeleton component
@@ -39,50 +23,146 @@ const HomePage: React.FC = () => {
     {
       icon: <Brain className="w-8 h-8" />,
       title: "AI Analytics Dashboard Pro",
-      description: "Advanced AI-powered analytics with real-time insights, predictive modeling, and automated reporting.",
+      description: "Advanced AI-powered analytics with real-time insights, predictive modeling, and automated reporting. Industry-leading solution trusted by Fortune 500 companies.",
       price: "$299/month",
-      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration"],
-      link: "/ai-analytics-dashboard-pro"
+      marketPrice: "$499/month",
+      savings: "40% OFF",
+      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration", "Advanced Security", "24/7 Support"],
+      link: "/ai-analytics-dashboard-pro",
+      rating: 4.9,
+      reviews: 1247
     },
     {
       icon: <Code className="w-8 h-8" />,
       title: "AI Code Assistant Pro",
-      description: "Intelligent code generation, debugging, and optimization with support for 50+ programming languages.",
+      description: "Intelligent code generation, debugging, and optimization with support for 50+ programming languages. Boost developer productivity by 300%.",
       price: "$199/month",
-      features: ["Code Generation", "Bug Detection", "Performance Optimization", "Multi-language Support"],
-      link: "/ai-code-assistant-pro"
+      marketPrice: "$299/month",
+      savings: "33% OFF",
+      features: ["Code Generation", "Bug Detection", "Performance Optimization", "Multi-language Support", "Git Integration", "Team Collaboration"],
+      link: "/ai-code-assistant-pro",
+      rating: 4.8,
+      reviews: 892
     },
     {
       icon: <Cloud className="w-8 h-8" />,
       title: "AI Cloud Infrastructure",
-      description: "Scalable cloud solutions with AI-powered auto-scaling, monitoring, and cost optimization.",
+      description: "Scalable cloud solutions with AI-powered auto-scaling, monitoring, and cost optimization. Reduce cloud costs by up to 60%.",
       price: "$499/month",
-      features: ["Auto-scaling", "AI Monitoring", "Cost Optimization", "99.9% Uptime"],
-      link: "/ai-cloud-infrastructure"
+      marketPrice: "$799/month",
+      savings: "38% OFF",
+      features: ["Auto-scaling", "AI Monitoring", "Cost Optimization", "99.9% Uptime", "Multi-cloud Support", "Disaster Recovery"],
+      link: "/ai-cloud-infrastructure",
+      rating: 4.9,
+      reviews: 634
     },
     {
       icon: <Wifi className="w-8 h-8" />,
       title: "5G Implementation",
-      description: "Complete 5G network deployment with ultra-low latency and massive IoT connectivity.",
+      description: "Complete 5G network deployment with ultra-low latency and massive IoT connectivity. Future-proof your business infrastructure.",
       price: "$999/month",
-      features: ["5G Network Setup", "IoT Integration", "Edge Computing", "Performance Monitoring"],
-      link: "/5g-implementation"
+      marketPrice: "$1499/month",
+      savings: "33% OFF",
+      features: ["5G Network Setup", "IoT Integration", "Edge Computing", "Performance Monitoring", "Security Hardening", "Compliance Support"],
+      link: "/5g-implementation",
+      rating: 4.7,
+      reviews: 456
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "AI Cybersecurity Suite",
-      description: "Revolutionary AI-powered cybersecurity with advanced threat detection and zero trust architecture.",
-      price: "$499/month",
-      features: ["AI Threat Detection", "Zero Trust Security", "24/7 Monitoring", "Compliance Management"],
-      link: "/ai-cybersecurity-suite"
+      title: "Advanced Security Suite",
+      description: "Comprehensive cybersecurity with AI threat detection, automated response, and compliance management. Protect against 99.9% of threats.",
+      price: "$399/month",
+      marketPrice: "$599/month",
+      savings: "33% OFF",
+      features: ["AI Threat Detection", "Automated Response", "Compliance Management", "24/7 Monitoring", "Penetration Testing", "Security Training"],
+      link: "/advanced-security-suite",
+      rating: 4.9,
+      reviews: 1123
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "AI Social Media Manager",
-      description: "Automated social media management with AI content generation and smart scheduling across all platforms.",
-      price: "$79/month",
-      features: ["AI Content Generation", "Smart Scheduling", "Multi-platform Support", "Analytics Dashboard"],
-      link: "/ai-social-media-manager"
+      title: "AI Chatbot Enterprise",
+      description: "Enterprise-grade conversational AI with multi-language support and advanced NLP capabilities. Handle 10,000+ conversations simultaneously.",
+      price: "$149/month",
+      marketPrice: "$249/month",
+      savings: "40% OFF",
+      features: ["Multi-language Support", "Advanced NLP", "Integration APIs", "Analytics Dashboard", "Custom Training", "Voice Integration"],
+      link: "/ai-chatbot-enterprise",
+      rating: 4.8,
+      reviews: 789
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Customer Insights Pro",
+      description: "Transform customer data into actionable insights with AI-powered analytics and predictive modeling. Increase customer retention by 35%.",
+      price: "$299/month",
+      marketPrice: "$449/month",
+      savings: "33% OFF",
+      features: ["Real-time Analytics", "Predictive Modeling", "Customer Segmentation", "Churn Prevention", "Behavioral Analysis", "ROI Tracking"],
+      link: "/ai-customer-insights-pro",
+      rating: 4.9,
+      reviews: 967
+    },
+    {
+      icon: <Code className="w-8 h-8" />,
+      title: "AI Project Management Pro",
+      description: "Intelligent project management with AI-powered task prioritization and resource allocation. Complete projects 40% faster.",
+      price: "$199/month",
+      marketPrice: "$299/month",
+      savings: "33% OFF",
+      features: ["AI Task Prioritization", "Resource Optimization", "Risk Assessment", "Performance Analytics", "Team Collaboration", "Time Tracking"],
+      link: "/ai-project-management-pro",
+      rating: 4.7,
+      reviews: 654
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "AI Social Media Manager Pro",
+      description: "AI-powered social media management with automated content generation and optimization. Increase engagement by 250%.",
+      price: "$149/month",
+      marketPrice: "$249/month",
+      savings: "40% OFF",
+      features: ["Content Generation", "Auto Scheduling", "Engagement Optimization", "Multi-platform Management", "Influencer Analytics", "Crisis Management"],
+      link: "/ai-social-media-manager-pro",
+      rating: 4.8,
+      reviews: 445
+    },
+    {
+      icon: <Wifi className="w-8 h-8" />,
+      title: "AI Email Marketing Pro",
+      description: "Revolutionize email marketing with AI-powered optimization and intelligent automation. Increase open rates by 180%.",
+      price: "$99/month",
+      marketPrice: "$149/month",
+      savings: "33% OFF",
+      features: ["Subject Line Optimization", "Send Time Optimization", "Personalization Engine", "Advanced Analytics", "A/B Testing", "List Segmentation"],
+      link: "/ai-email-marketing-pro",
+      rating: 4.9,
+      reviews: 1234
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "AI Inventory Management Pro",
+      description: "Intelligent inventory management with AI-powered forecasting and optimization. Reduce inventory costs by 30%.",
+      price: "$199/month",
+      marketPrice: "$299/month",
+      savings: "33% OFF",
+      features: ["Demand Forecasting", "Automated Reordering", "Cost Optimization", "Real-time Tracking", "Supplier Management", "Quality Control"],
+      link: "/ai-inventory-management-pro",
+      rating: 4.8,
+      reviews: 567
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI HR Assistant Pro",
+      description: "Intelligent human resources management with AI-powered recruitment, employee analytics, and performance tracking. Streamline HR operations by 50%.",
+      price: "$249/month",
+      marketPrice: "$399/month",
+      savings: "38% OFF",
+      features: ["Resume Screening", "Candidate Matching", "Performance Analytics", "Employee Engagement", "Payroll Integration", "Compliance Management"],
+      link: "/ai-hr-assistant-pro",
+      rating: 4.9,
+      reviews: 723
     }
   ];
 
@@ -101,36 +181,22 @@ const HomePage: React.FC = () => {
         <meta name="keywords" content="AI solutions, IT services, 5G technology, micro SAAS, cloud computing, cybersecurity, business automation" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-        {/* Futuristic Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Floating orbs with different animations */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-gradient-to-r from-pink-500/20 to-red-500/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
-          
-          {/* Additional floating elements */}
-          <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-gradient-to-r from-green-500/10 to-cyan-500/10 rounded-full blur-2xl animate-bounce delay-3000"></div>
-          <div className="absolute bottom-1/3 right-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-2xl animate-bounce delay-5000"></div>
-          
-          {/* Neon grid pattern */}
-          <div className="absolute inset-0 opacity-30">
-            <div className="h-full w-full" style={{
-              backgroundImage: `
-                linear-gradient(rgba(6, 182, 212, 0.2) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(6, 182, 212, 0.2) 1px, transparent 1px)
-              `,
-              backgroundSize: '50px 50px',
-              animation: 'grid-move 20s linear infinite'
-            }}></div>
-          </div>
-          
-          {/* Animated lines */}
-          <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse"></div>
-            <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse delay-1000"></div>
-            <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-pink-400 to-transparent animate-pulse delay-2000"></div>
-            <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-green-400 to-transparent animate-pulse delay-3000"></div>
-          </div>
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        </div>
+
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="h-full w-full" style={{
+            backgroundImage: `
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px'
+          }}></div>
         </div>
 
         <main className="relative z-10">
@@ -143,11 +209,11 @@ const HomePage: React.FC = () => {
                   Trusted by 150+ Companies Worldwide
                 </div>
                 <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
-                  <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-glow">
+                  <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                     Advanced AI & IT
                   </span>
                   <br />
-                  <span className="text-white fade-in-up">Solutions</span>
+                  <span className="text-white">Solutions</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
                   Transform your business with cutting-edge artificial intelligence, 
@@ -157,14 +223,14 @@ const HomePage: React.FC = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
                     href="tel:+13024640950"
-                    className="futuristic-btn bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center pulse-glow"
+                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
                   >
                     <Phone className="w-5 h-5 mr-2" />
                     Call +1 302 464 0950
                   </a>
                   <a
                     href="mailto:kleber@ziontechgroup.com"
-                    className="futuristic-btn border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center neon-border"
+                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                   >
                     <Mail className="w-5 h-5 mr-2" />
                     Get Quote
@@ -188,9 +254,9 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* Services Section */}
-          <section className="py-24 bg-gradient-to-b from-slate-800 to-slate-900 relative">
+          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             <div className="container mx-auto px-4">
-              <div className="text-center mb-20">
+              <div className="text-center mb-16">
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
                   <Star className="w-4 h-4 mr-2" />
                   Premium Services
@@ -200,19 +266,17 @@ const HomePage: React.FC = () => {
                     Our Services
                   </span>
                 </h2>
-                <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                <p className="text-xl text-gray-300 max-w-4xl mx-auto">
                   Comprehensive AI, IT, and 5G solutions designed to accelerate your business growth. 
-                  From micro SAAS platforms to enterprise-grade systems. Choose from our extensive 
-                  portfolio of innovative services.
+                  From micro SAAS platforms to enterprise-grade systems.
                 </p>
               </div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
                 {services.map((service, index) => (
                   <div 
                     key={index} 
-                    className="group glass bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 float-animation"
-                    style={{ animationDelay: `${index * 0.2}s` }}
+                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-6 lg:p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 h-full flex flex-col"
                   >
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       <div className="text-white">{service.icon}</div>
@@ -225,13 +289,26 @@ const HomePage: React.FC = () => {
                     </p>
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-3">
-                        <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                        <div className="flex items-center text-yellow-400">
-                          <Star className="w-4 h-4 fill-current" />
-                          <Star className="w-4 h-4 fill-current" />
-                          <Star className="w-4 h-4 fill-current" />
-                          <Star className="w-4 h-4 fill-current" />
-                          <Star className="w-4 h-4 fill-current" />
+                        <div className="flex flex-col">
+                          <div className="flex items-center space-x-2">
+                            <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                            <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-semibold">
+                              {service.savings}
+                            </span>
+                          </div>
+                          <div className="flex items-center space-x-2 text-sm text-gray-400">
+                            <span className="line-through">{service.marketPrice}</span>
+                            <span className="text-green-400 font-medium">Market Price</span>
+                          </div>
+                        </div>
+                        <div className="flex flex-col items-end">
+                          <div className="flex items-center text-yellow-400 mb-1">
+                            <Star className="w-4 h-4 fill-current" />
+                            <span className="ml-1 text-sm font-semibold">{service.rating}</span>
+                          </div>
+                          <div className="text-xs text-gray-400">
+                            {service.reviews.toLocaleString()} reviews
+                          </div>
                         </div>
                       </div>
                       <div className="space-y-2">
@@ -257,7 +334,7 @@ const HomePage: React.FC = () => {
           </section>
 
         {/* Contact Section */}
-        <section className="py-24 bg-gray-900">
+        <section className="py-20 bg-gray-900">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -291,7 +368,7 @@ const HomePage: React.FC = () => {
                     <MapPin className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-                  <p className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</p>
+                  <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
             </div>

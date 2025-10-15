@@ -1,6 +1,7 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import './globals.css';
 
 // Components
 import Header from './app/components/Header';
@@ -11,10 +12,6 @@ import HomePage from './app/page';
 import AboutPage from './app/about/page';
 import ServicesPage from './app/services/page';
 import ContactPage from './app/contact/page';
-import PrivacyPage from './app/privacy/page';
-import TermsPage from './app/terms/page';
-import BlogPage from './app/blog/page';
-import CareersPage from './app/careers/page';
 
 // Service Pages
 import AiAnalyticsDashboardProPage from './app/ai-analytics-dashboard-pro/page';
@@ -41,14 +38,14 @@ import AiClimateSolutionsProPage from './app/ai-climate-solutions-pro/page';
 import AiAgriculturalIntelligenceProPage from './app/ai-agricultural-intelligence-pro/page';
 import Ai3DGenerationPage from './app/ai-3d-generation/page';
 import AiBlockchainSolutionsPage from './app/ai-blockchain-solutions/page';
-import AiSocialMediaManagerPage from './app/ai-social-media-manager/page';
-import AiEmailMarketingAutomationPage from './app/ai-email-marketing-automation/page';
-import AiCustomerSupportChatbotPage from './app/ai-customer-support-chatbot/page';
+import AiCustomerInsightsProPage from './app/ai-customer-insights-pro/page';
 import AiProjectManagementProPage from './app/ai-project-management-pro/page';
-import AiFinancialAdvisorProPage from './app/ai-financial-advisor-pro/page';
-import AiHealthMonitoringProPage from './app/ai-health-monitoring-pro/page';
-import AiCybersecuritySuitePage from './app/ai-cybersecurity-suite/page';
-import AiCloudMigrationProPage from './app/ai-cloud-migration-pro/page';
+import AiSocialMediaManagerProPage from './app/ai-social-media-manager-pro/page';
+import AiEmailMarketingProPage from './app/ai-email-marketing-pro/page';
+import AiInventoryManagementProPage from './app/ai-inventory-management-pro/page';
+import AiHrAssistantProPage from './app/ai-hr-assistant-pro/page';
+import AiSalesOptimizerProPage from './app/ai-sales-optimizer-pro/page';
+import MicroSaasPage from './app/micro-saas/page';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -76,7 +73,7 @@ const App: React.FC = () => {
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <Header />
-            <main className="relative z-10 pt-20" id="main-content" role="main">
+            <main className="relative z-10 pt-20 lg:ml-80" id="main-content" role="main">
               <Suspense fallback={
                 <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                   <div className="text-center">
@@ -89,11 +86,8 @@ const App: React.FC = () => {
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/micro-saas" element={<MicroSaasPage />} />
                   <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/privacy" element={<PrivacyPage />} />
-                  <Route path="/terms" element={<TermsPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/careers" element={<CareersPage />} />
                   
                   {/* AI Services */}
                   <Route path="/ai-analytics-dashboard-pro" element={<AiAnalyticsDashboardProPage />} />
@@ -110,8 +104,6 @@ const App: React.FC = () => {
                   <Route path="/advanced-security-suite" element={<AdvancedSecuritySuitePage />} />
                   <Route path="/performance-monitoring" element={<PerformanceMonitoringPage />} />
                   <Route path="/devops-solutions" element={<DevOpsSolutionsPage />} />
-                  <Route path="/ai-cybersecurity-suite" element={<AiCybersecuritySuitePage />} />
-                  <Route path="/ai-cloud-migration-pro" element={<AiCloudMigrationProPage />} />
                   
                   {/* 5G Solutions */}
                   <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
@@ -128,12 +120,13 @@ const App: React.FC = () => {
                   <Route path="/ai-agricultural-intelligence-pro" element={<AiAgriculturalIntelligenceProPage />} />
                   <Route path="/ai-3d-generation" element={<Ai3DGenerationPage />} />
                   <Route path="/ai-blockchain-solutions" element={<AiBlockchainSolutionsPage />} />
-                  <Route path="/ai-social-media-manager" element={<AiSocialMediaManagerPage />} />
-                  <Route path="/ai-email-marketing-automation" element={<AiEmailMarketingAutomationPage />} />
-                  <Route path="/ai-customer-support-chatbot" element={<AiCustomerSupportChatbotPage />} />
+                  <Route path="/ai-customer-insights-pro" element={<AiCustomerInsightsProPage />} />
                   <Route path="/ai-project-management-pro" element={<AiProjectManagementProPage />} />
-                  <Route path="/ai-financial-advisor-pro" element={<AiFinancialAdvisorProPage />} />
-                  <Route path="/ai-health-monitoring-pro" element={<AiHealthMonitoringProPage />} />
+                  <Route path="/ai-social-media-manager-pro" element={<AiSocialMediaManagerProPage />} />
+                  <Route path="/ai-email-marketing-pro" element={<AiEmailMarketingProPage />} />
+                  <Route path="/ai-inventory-management-pro" element={<AiInventoryManagementProPage />} />
+                  <Route path="/ai-hr-assistant-pro" element={<AiHrAssistantProPage />} />
+                  <Route path="/ai-sales-optimizer-pro" element={<AiSalesOptimizerProPage />} />
                 </Routes>
               </Suspense>
             </main>

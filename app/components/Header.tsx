@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Mail, MapPin, Zap, Brain, Code, Cloud, Wifi, Users, ChevronDown } from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin, Zap, Brain, Code, Cloud, Wifi, Users, ChevronDown, Sidebar as SidebarIcon } from 'lucide-react';
+import Sidebar from './Sidebar';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
@@ -28,6 +30,11 @@ const Header: React.FC = () => {
       icon: <Users className="w-4 h-4" />
     },
     {
+      name: 'Services',
+      href: '/services',
+      icon: <Code className="w-4 h-4" />
+    },
+    {
       name: 'AI Services',
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
@@ -35,11 +42,12 @@ const Header: React.FC = () => {
         { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
         { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
         { name: 'AI Automation Suite', href: '/ai-automation-suite' },
-        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
-        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
         { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
-        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
-        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
+        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
+        { name: 'AI Customer Insights Pro', href: '/ai-customer-insights-pro' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
+        { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager-pro' },
         { name: 'AI Email Marketing Pro', href: '/ai-email-marketing-pro' }
       ]
     },
@@ -52,11 +60,8 @@ const Header: React.FC = () => {
         { name: 'AI API Management', href: '/ai-api-management' },
         { name: 'Database Solutions', href: '/database-solutions' },
         { name: 'Advanced Security Suite', href: '/advanced-security-suite' },
-        { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite' },
         { name: 'Performance Monitoring', href: '/performance-monitoring' },
-        { name: 'DevOps Solutions', href: '/devops-solutions' },
-        { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite' },
-        { name: 'AI Cloud Migration Pro', href: '/ai-cloud-migration-pro' }
+        { name: 'DevOps Solutions', href: '/devops-solutions' }
       ]
     },
     {
@@ -69,8 +74,7 @@ const Header: React.FC = () => {
         { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
         { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
         { name: '5G Edge Computing', href: '/5g-edge-computing' },
-        { name: '5G Private Networks', href: '/5g-private-networks' },
-        { name: '5G AI Integration', href: '/5g-ai-integration' }
+        { name: '5G Private Networks', href: '/5g-private-networks' }
       ]
     },
     {
@@ -84,12 +88,27 @@ const Header: React.FC = () => {
         { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
         { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
-        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
-        { name: 'AI Email Marketing Automation', href: '/ai-email-marketing-automation' },
-        { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot' },
-        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
-        { name: 'AI Financial Advisor Pro', href: '/ai-financial-advisor-pro' },
-        { name: 'AI Health Monitoring Pro', href: '/ai-health-monitoring-pro' }
+        { name: 'AI HR Assistant Pro', href: '/ai-hr-assistant-pro' },
+        { name: 'AI Sales Optimizer Pro', href: '/ai-sales-optimizer-pro' },
+        { name: 'AI Document Processor Pro', href: '/ai-document-processor-pro' },
+        { name: 'AI Fraud Detection Pro', href: '/ai-fraud-detection-pro' },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
+        { name: 'AI Price Optimization Pro', href: '/ai-price-optimization-pro' },
+        { name: 'AI Lead Generation Pro', href: '/ai-lead-generation-pro' },
+        { name: 'AI Quality Assurance Pro', href: '/ai-quality-assurance-pro' },
+        { name: 'AI Time Tracking Pro', href: '/ai-time-tracking-pro' },
+        { name: 'AI Legal Assistant Pro', href: '/ai-legal-assistant-pro' },
+        { name: 'AI Data Migration Pro', href: '/ai-data-migration-pro' },
+        { name: 'AI Compliance Monitor Pro', href: '/ai-compliance-monitor-pro' },
+        { name: 'AI Workflow Automation Pro', href: '/ai-workflow-automation-pro' },
+        { name: 'AI Team Collaboration Pro', href: '/ai-team-collaboration-pro' },
+        { name: 'AI Market Research Pro', href: '/ai-market-research-pro' },
+        { name: 'AI Personalization Engine Pro', href: '/ai-personalization-engine-pro' },
+        { name: 'AI Performance Analytics Pro', href: '/ai-performance-analytics-pro' },
+        { name: 'AI Scheduling Assistant Pro', href: '/ai-scheduling-assistant-pro' },
+        { name: 'AI Translation Pro', href: '/ai-translation-pro' },
+        { name: 'AI Backup & Recovery Pro', href: '/ai-backup-recovery-pro' },
+        { name: 'AI Password Manager Pro', href: '/ai-password-manager-pro' }
       ]
     },
     {
@@ -102,11 +121,13 @@ const Header: React.FC = () => {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20 shadow-2xl' 
-        : 'bg-transparent'
-    }`}>
+    <>
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20 shadow-2xl' 
+          : 'bg-transparent'
+      }`}>
       {/* Top Contact Bar */}
       <div className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-2 px-4">
         <div className="container mx-auto flex justify-between items-center text-sm">
@@ -149,7 +170,7 @@ const Header: React.FC = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden xl:flex items-center space-x-1">
+            <div className="hidden lg:flex items-center space-x-1">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
                   <Link
@@ -193,16 +214,24 @@ const Header: React.FC = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="hidden xl:flex items-center space-x-4">
+            <div className="hidden lg:flex items-center space-x-4">
               <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
                 Get Quote
               </button>
             </div>
 
+            {/* Sidebar Toggle */}
+            <button
+              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+              className="hidden lg:block p-2 text-gray-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
+            >
+              <SidebarIcon className="w-6 h-6" />
+            </button>
+
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="xl:hidden p-2 text-gray-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
+              className="lg:hidden p-2 text-gray-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -210,11 +239,11 @@ const Header: React.FC = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`xl:hidden transition-all duration-300 ${
+        <div className={`lg:hidden transition-all duration-300 ${
           isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
           <div className="bg-slate-800/95 backdrop-blur-md border-t border-cyan-500/20">
-            <div className="container mx-auto px-4 py-4 space-y-2">
+            <div className="container mx-auto px-4 py-6 space-y-3">
               {navigationItems.map((item) => (
                 <div key={item.name}>
                   <Link
@@ -230,7 +259,7 @@ const Header: React.FC = () => {
                     <span className="font-medium">{item.name}</span>
                   </Link>
                   {item.dropdown && (
-                    <div className="ml-8 space-y-1">
+                    <div className="ml-6 space-y-2 mt-2">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.name}
@@ -256,6 +285,7 @@ const Header: React.FC = () => {
         </div>
       </nav>
     </header>
+    </>
   );
 };
 
