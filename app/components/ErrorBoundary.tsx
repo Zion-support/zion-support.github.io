@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Component, ErrorInfo, ReactNode } from 'react';
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-a84d
 
 interface Props {
   children: ReactNode;
@@ -20,36 +15,6 @@ interface State {
 }
 
 class ErrorBoundary extends Component<Props, State> {
-<<<<<<< HEAD
-  public state: State = {
-    hasError: false
-  };
-
-  public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-        
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-  }
-
-  public render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
-            <button 
-              onClick={() => window.location.reload()}
-              className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
-            >
-              Try again
-            </button>
-=======
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -110,7 +75,10 @@ class ErrorBoundary extends Component<Props, State> {
     //   body: JSON.stringify(errorData)
     // });
 
-    console.error('Error logged:', errorData);
+    // Only log in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error logged:', errorData);
+    }
   };
 
   private handleRetry = () => {
@@ -238,7 +206,6 @@ class ErrorBoundary extends Component<Props, State> {
                 </div>
               </details>
             )}
->>>>>>> cursor/analyze-improve-and-deploy-application-a84d
           </div>
         </div>
       );
@@ -266,7 +233,10 @@ export const withErrorBoundary = <P extends object>(
 // Hook for error boundary context
 export const useErrorHandler = () => {
   const handleError = (error: Error, errorInfo?: ErrorInfo) => {
-    console.error('Error caught by useErrorHandler:', error, errorInfo);
+    // Only log in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by useErrorHandler:', error, errorInfo);
+    }
     
     // You can add custom error handling logic here
     // For example, sending to an error reporting service
