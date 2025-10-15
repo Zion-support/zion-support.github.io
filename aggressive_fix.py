@@ -11,7 +11,7 @@ def aggressive_fix_conflicts(file_path):
         
         # Check if file has merge conflicts
         if '\n', '', content)
-        content = re.sub(r'
+        content = re.sub(r'>>>>>>> [^\n]+\n?', '', content)
         
         # Clean up any double newlines
         content = re.sub(r'\n\n\n+', '\n\n', content)

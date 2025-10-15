@@ -1,81 +1,109 @@
 #!/usr/bin/env python3
+"""
+Comprehensive script to fix all merge conflicts in the codebase
+"""
+
 import os
 import re
 import glob
+from pathlib import Path
 
-def fix_merge_conflicts(file_path):
-    """Fix merge conflicts in a file by choosing the correct version"""
+def fix_merge_conflicts_in_file(file_path):
+    """Fix merge conflicts in a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         # Check if file has merge conflicts
-
-        if '' not in content and '>>>>>>>' not in content:
-
-        if '' not in content:
-
+        if '<<<<<<< HEAD' not in content:
             return False
         
-        # Pattern to match merge conflicts
-        pattern = r'.*?(.*?)>>>>>>> cursor/fix-errors-and-merge-to-main-e61d'
+        print(f"Fixing merge conflicts in: {file_path}")
         
-
-        # Also handle cases where there might be multiple conflicts in one file
-        # Remove any remaining conflict markers
-        content = re.sub(r'\n?', '', content)
-        content = re.sub(r'
+        # Remove merge conflict markers and keep the newer version (after =======)
+        lines = content.split('\n')
+        new_lines = []
+        skip_until_end = False
+        in_conflict = False
         
-        # Clean up any double newlines
-        content = re.sub(r'\n\n\n+', '\n\n', content)
+        for line in lines:
+            if line.strip() == '<<<<<<< HEAD':
+                in_conflict = True
+                skip_until_end = False
+                continue
+            elif line.strip() == '=======':
+                skip_until_end = True
+                continue
+            elif line.strip().startswith('>>>>>>> '):
+                in_conflict = False
+                skip_until_end = False
+                continue
+            elif not in_conflict or not skip_until_end:
+                new_lines.append(line)
         
-        # Write the fixed content back
+        # Write the cleaned content back
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
+            f.write('\n'.join(new_lines))
         
-        print(f"Fixed merge conflicts in: {file_path}")
         return True
-
-        # Find all merge conflicts and replace with the correct version
-        matches = re.findall(pattern, content, re.DOTALL)
-        if matches:
-            # Replace all merge conflicts with the correct version (after )
-            fixed_content = re.sub(pattern, r'\1', content, flags=re.DOTALL)
-            
-            # Clean up any remaining conflict markers
-            fixed_content = re.sub(r'.*?', '', fixed_content, flags=re.DOTALL)
-            fixed_content = re.sub(r'>>>>>>> cursor/fix-errors-and-merge-to-main-e61d', '', fixed_content)
-            
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(fixed_content)
-            print(f"Fixed: {file_path}")
-            return True
-        return False
-
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript/JavaScript files in the app directory
-    patterns = [
-        'app/**/*.tsx',
-        'app/**/*.ts',
-        'app/**/*.jsx',
-        'app/**/*.js'
-    ]
+    """Main function to fix all merge conflicts"""
+    print("Starting comprehensive merge conflict resolution...")
     
-    files_to_fix = []
-    for pattern in patterns:
-        files_to_fix.extend(glob.glob(pattern, recursive=True))
+    # Get all files with merge conflicts
+    conflict_files = []
+    
+    # Search for files with merge conflict markers
+    for root, dirs, files in os.walk('.'):
+        # Skip node_modules and other irrelevant directories
+        dirs[:] = [d for d in dirs if d not in ['node_modules', '.git', 'dist', 'build', '.next']]
+        
+        for file in files:
+            if file.endswith(('.tsx', '.ts', '.js', '.jsx', '.json', '.css', '.md', '.html')):
+                file_path = os.path.join(root, file)
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                        if '<<<<<<< HEAD' in content:
+                            conflict_files.append(file_path)
+                except:
+                    continue
+    
+    print(f"Found {len(conflict_files)} files with merge conflicts")
     
     fixed_count = 0
-    for file_path in files_to_fix:
-        if os.path.exists(file_path):
-            if fix_merge_conflicts(file_path):
-                fixed_count += 1
+    for file_path in conflict_files:
+        if fix_merge_conflicts_in_file(file_path):
+            fixed_count += 1
     
-    print(f"Fixed {fixed_count} files with merge conflicts")
+    print(f"Fixed merge conflicts in {fixed_count} files")
+    
+    # Verify no more conflicts exist
+    remaining_conflicts = []
+    for root, dirs, files in os.walk('.'):
+        dirs[:] = [d for d in dirs if d not in ['node_modules', '.git', 'dist', 'build', '.next']]
+        
+        for file in files:
+            if file.endswith(('.tsx', '.ts', '.js', '.jsx', '.json', '.css', '.md', '.html')):
+                file_path = os.path.join(root, file)
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                        if '<<<<<<< HEAD' in content:
+                            remaining_conflicts.append(file_path)
+                except:
+                    continue
+    
+    if remaining_conflicts:
+        print(f"Warning: {len(remaining_conflicts)} files still have conflicts:")
+        for file in remaining_conflicts:
+            print(f"  - {file}")
+    else:
+        print("All merge conflicts have been resolved!")
 
 if __name__ == "__main__":
     main()
