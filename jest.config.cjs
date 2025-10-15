@@ -1,7 +1,7 @@
 module.exports = {
   preset: 'ts-jest',
-  testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/app/$1',
     '^@/components/(.*)$': '<rootDir>/app/components/$1',
@@ -27,18 +27,31 @@ module.exports = {
     '!src/**/*.d.ts',
     '!src/setupTests.ts',
   ],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   globals: {
     'ts-jest': {
       useESM: true,
       tsconfig: {
-        jsx: 'react-jsx'
-      }
-    }
+        jsx: 'react-jsx',
+      },
+    },
   },
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
-  preset: 'ts-jest',
   transformIgnorePatterns: [
-    'node_modules/(?!(.*\\.mjs$|@testing-library|@heroicons|framer-motion))',
+    'node_modules/(?!(.*\\.mjs$|@testing-library|@heroicons|lucide-react|framer-motion))',
+  ],
+  collectCoverageFrom: [
+    'app/**/*.{ts,tsx}',
+    'src/**/*.{ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
+    '!**/dist/**',
+    '!**/build/**',
+  ],
+  coverageReporters: ['text', 'lcov', 'html'],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/dist/',
+    '/build/',
   ],
 };
