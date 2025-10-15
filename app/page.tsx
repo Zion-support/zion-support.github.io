@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { memo, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from './components/SEOHead';
 import { 
@@ -16,8 +16,8 @@ import {
   CogIcon
 } from '@heroicons/react/24/outline';
 
-const HomePage: React.FC = () => {
-  const services = [
+const HomePage: React.FC = memo(() => {
+  const services = useMemo(() => [
     {
       icon: CpuChipIcon,
       title: 'AI Solutions',
@@ -82,9 +82,9 @@ const HomePage: React.FC = () => {
       gradient: 'from-pink-500 to-rose-500',
       glow: 'shadow-pink-500/25'
     }
-  ];
+  ], []);
 
-  const features = [
+  const features = useMemo(() => [
     '24/7 Expert Support',
     'Cutting-edge Technology',
     'Scalable Solutions',
@@ -97,16 +97,21 @@ const HomePage: React.FC = () => {
     'Cloud-Native Architecture',
     'Mobile-First Design',
     'API-First Approach'
-  ];
+  ], []);
 
-  const stats = [
+  const stats = useMemo(() => [
     { number: '1000+', label: 'Projects Completed' },
     { number: '200+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' },
     { number: '50+', label: 'AI Models Deployed' },
     { number: '10M+', label: 'API Calls Processed' }
-  ];
+  ], []);
+
+  const handleServiceClick = useCallback((href: string) => {
+    // Analytics tracking could be added here
+    console.log('Service clicked:', href);
+  }, []);
 
   return (
     <>
@@ -165,11 +170,14 @@ const HomePage: React.FC = () => {
               {/* Stats */}
               <div className="grid grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto px-4">
                 {stats.map((stat, index) => (
-                  <div key={index} 
+                  <div 
+                    key={index} 
                     className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm hover:bg-slate-700/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group"
                     style={{
                       animationDelay: `${index * 100}ms`
                     }}
+                    role="region"
+                    aria-label={`${stat.number} ${stat.label}`}
                   >
                     <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-purple-400 mb-1 lg:mb-2 group-hover:text-purple-300 transition-colors">
                       {stat.number}
@@ -198,12 +206,15 @@ const HomePage: React.FC = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               {services.map((service, index) => (
-                <Link key={index}
+                <Link 
+                  key={index}
                   to={service.href}
-                  className="group relative bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 overflow-hidden"
+                  onClick={() => handleServiceClick(service.href)}
+                  className="group relative bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 overflow-hidden focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900"
                   style={{
                     animationDelay: `${index * 100}ms`
                   }}
+                  aria-label={`Learn more about ${service.title}`}
                 >
                   {/* Animated Background */}
                   <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
@@ -211,9 +222,9 @@ const HomePage: React.FC = () => {
                   {/* Glow Effect */}
                   <div className={`absolute -inset-1 bg-gradient-to-r ${service.gradient} rounded-xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
                   
-                  <div className="relative z-10">
+                    <div className="relative z-10">
                     <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${service.gradient} rounded-lg flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                      <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                      <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" aria-hidden="true" />
                     </div>
                     <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-purple-300 transition-colors">
                       {service.title}
@@ -223,7 +234,7 @@ const HomePage: React.FC = () => {
                     </p>
                     <div className="mt-4 flex items-center text-purple-400 group-hover:text-purple-300 transition-colors">
                       <span className="text-sm font-medium">Learn More</span>
-                      <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                     </div>
                   </div>
                 </Link>
@@ -379,14 +390,16 @@ const HomePage: React.FC = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               {features.map((feature, index) => (
-                <div key={index} 
+                <div 
+                  key={index} 
                   className="flex items-center space-x-4 p-4 sm:p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-all duration-300 group hover:scale-105 hover:shadow-lg hover:shadow-green-500/10"
                   style={{
                     animationDelay: `${index * 50}ms`
                   }}
+                  role="listitem"
                 >
                   <div className="relative">
-                    <CheckCircleIcon className="w-5 h-5 sm:w-6 sm:h-6 text-green-400 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                    <CheckCircleIcon className="w-5 h-5 sm:w-6 sm:h-6 text-green-400 flex-shrink-0 group-hover:scale-110 transition-transform" aria-hidden="true" />
                     <div className="absolute inset-0 bg-green-400 rounded-full blur opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
                   </div>
                   <span className="text-gray-300 font-medium text-sm sm:text-base group-hover:text-white transition-colors">{feature}</span>
@@ -430,6 +443,8 @@ const HomePage: React.FC = () => {
       </div>
     </>
   );
-};
+});
+
+HomePage.displayName = 'HomePage';
 
 export default HomePage;

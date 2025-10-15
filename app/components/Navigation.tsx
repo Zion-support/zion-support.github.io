@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import {
   Bars3Icon,
@@ -40,7 +40,49 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close all dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Element;
+      if (!target.closest('[data-dropdown]')) {
+        setIsServicesOpen(false);
+        setIsSolutionsOpen(false);
+        setIsResourcesOpen(false);
+        setIsCompanyOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Close dropdowns on escape key
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsServicesOpen(false);
+        setIsSolutionsOpen(false);
+        setIsResourcesOpen(false);
+        setIsCompanyOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, []);
 
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
@@ -134,36 +176,51 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     return location.pathname === path;
   };
 
-  const toggleServicesMenu = () => {
-    setIsServicesOpen(!isServicesOpen);
+  const toggleServicesMenu = useCallback(() => {
+    setIsServicesOpen(prev => !prev);
     setIsSolutionsOpen(false);
     setIsResourcesOpen(false);
     setIsCompanyOpen(false);
-  };
+  }, []);
 
-  const toggleSolutionsMenu = () => {
-    setIsSolutionsOpen(!isSolutionsOpen);
+  const toggleSolutionsMenu = useCallback(() => {
+    setIsSolutionsOpen(prev => !prev);
     setIsServicesOpen(false);
     setIsResourcesOpen(false);
     setIsCompanyOpen(false);
-  };
+  }, []);
 
-  const toggleResourcesMenu = () => {
-    setIsResourcesOpen(!isResourcesOpen);
+  const toggleResourcesMenu = useCallback(() => {
+    setIsResourcesOpen(prev => !prev);
     setIsServicesOpen(false);
     setIsSolutionsOpen(false);
     setIsCompanyOpen(false);
-  };
+  }, []);
 
-  const toggleCompanyMenu = () => {
-    setIsCompanyOpen(!isCompanyOpen);
+  const toggleCompanyMenu = useCallback(() => {
+    setIsCompanyOpen(prev => !prev);
     setIsServicesOpen(false);
     setIsSolutionsOpen(false);
     setIsResourcesOpen(false);
-  };
+  }, []);
+
+  const closeAllMenus = useCallback(() => {
+    setIsServicesOpen(false);
+    setIsSolutionsOpen(false);
+    setIsResourcesOpen(false);
+    setIsCompanyOpen(false);
+  }, []);
 
   return (
-    <nav className="bg-slate-900 border-b border-slate-700">
+    <nav 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700 shadow-lg' 
+          : 'bg-slate-900 border-b border-slate-700'
+      }`}
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo */}
@@ -179,43 +236,74 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             {navigation.map((item) => (
-              <div key={item.name} className="relative">
+              <div key={item.name} className="relative" data-dropdown>
                 <Link
                   to={item.href}
-                  onClick={() => {
-                    if (item.name === 'AI Services') toggleServicesMenu();
-                    else if (item.name === 'Micro SaaS') toggleSolutionsMenu();
-                    else if (item.name === 'IT Solutions') toggleResourcesMenu();
-                    else if (item.name === 'Resources') toggleResourcesMenu();
-                    else if (item.name === 'Company') toggleCompanyMenu();
+                  onClick={(e) => {
+                    if (item.submenu) {
+                      e.preventDefault();
+                      if (item.name === 'AI Services') toggleServicesMenu();
+                      else if (item.name === 'Micro SaaS') toggleSolutionsMenu();
+                      else if (item.name === 'IT Solutions') toggleResourcesMenu();
+                      else if (item.name === 'Resources') toggleResourcesMenu();
+                      else if (item.name === 'Company') toggleCompanyMenu();
+                    } else {
+                      closeAllMenus();
+                    }
                   }}
-                  className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors border-b-2 ${
+                  className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors border-b-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900 ${
                     isActive(item.href)
                       ? 'border-blue-500 text-white'
                       : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white'
                   }`}
-                >
-                  <item.icon className="w-4 h-4" />
-                  <span>{item.name}</span>
-                  {item.submenu && <ChevronDownIcon className="w-4 h-4" />}
-                </Link>
-                {/* Dropdown Menu */}
-                {item.submenu && (
-                  <div className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
+                  aria-expanded={item.submenu ? (
                     (item.name === 'AI Services' && isServicesOpen) ||
                     (item.name === 'Micro SaaS' && isSolutionsOpen) ||
                     (item.name === 'IT Solutions' && isResourcesOpen) ||
                     (item.name === 'Resources' && isResourcesOpen) ||
                     (item.name === 'Company' && isCompanyOpen)
-                      ? 'block' : 'hidden'
-                  }`}>
+                  ) : undefined}
+                  aria-haspopup={item.submenu ? 'true' : undefined}
+                >
+                  <item.icon className="w-4 h-4 mr-2" aria-hidden="true" />
+                  <span>{item.name}</span>
+                  {item.submenu && (
+                    <ChevronDownIcon 
+                      className={`w-4 h-4 ml-1 transition-transform ${
+                        ((item.name === 'AI Services' && isServicesOpen) ||
+                         (item.name === 'Micro SaaS' && isSolutionsOpen) ||
+                         (item.name === 'IT Solutions' && isResourcesOpen) ||
+                         (item.name === 'Resources' && isResourcesOpen) ||
+                         (item.name === 'Company' && isCompanyOpen)) 
+                          ? 'rotate-180' : ''
+                      }`} 
+                      aria-hidden="true"
+                    />
+                  )}
+                </Link>
+                {/* Dropdown Menu */}
+                {item.submenu && (
+                  <div 
+                    className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 transition-all duration-200 ${
+                      (item.name === 'AI Services' && isServicesOpen) ||
+                      (item.name === 'Micro SaaS' && isSolutionsOpen) ||
+                      (item.name === 'IT Solutions' && isResourcesOpen) ||
+                      (item.name === 'Resources' && isResourcesOpen) ||
+                      (item.name === 'Company' && isCompanyOpen)
+                        ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-2'
+                    }`}
+                    role="menu"
+                    aria-orientation="vertical"
+                  >
                     {item.submenu.map((subItem) => (
-                      <div key={subItem.name}>
+                      <div key={subItem.name} role="none">
                         <Link
                           to={subItem.href}
-                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white"
+                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white transition-colors duration-200 focus:outline-none focus:bg-slate-700 focus:text-white"
+                          role="menuitem"
+                          onClick={closeAllMenus}
                         >
-                          <subItem.icon className="w-4 h-4 mr-3" />
+                          <subItem.icon className="w-4 h-4 mr-3" aria-hidden="true" />
                           <span>{subItem.name}</span>
                         </Link>
                       </div>
@@ -230,10 +318,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="lg:hidden flex items-center">
             <button
               onClick={onSidebarToggle}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition-colors duration-200"
+              aria-label="Open main menu"
+              aria-expanded={isOpen}
             >
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon className="h-6 w-6" />
+              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
         </div>
