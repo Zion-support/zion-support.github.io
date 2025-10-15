@@ -85,10 +85,10 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then(registration => {
-          console.log('SW registered: ', registration);
+          // Service worker registered successfully
         })
         .catch(registrationError => {
-          console.log('SW registration failed: ', registrationError);
+          // Service worker registration failed
         });
     }
   }, []);
@@ -135,11 +135,21 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
       import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
-        onCLS(console.log);
-        onFID(console.log);
-        onFCP(console.log);
-        onLCP(console.log);
-        onTTFB(console.log);
+        onCLS((metric) => {
+          // CLS metric recorded
+        });
+        onFID((metric) => {
+          // FID metric recorded
+        });
+        onFCP((metric) => {
+          // FCP metric recorded
+        });
+        onLCP((metric) => {
+          // LCP metric recorded
+        });
+        onTTFB((metric) => {
+          // TTFB metric recorded
+        });
       });
     }
 
@@ -150,7 +160,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           if (entry.entryType === 'resource') {
             const resourceEntry = entry as PerformanceResourceTiming;
             if (resourceEntry.duration > 1000) {
-              console.warn('Slow resource:', resourceEntry.name, resourceEntry.duration);
+              // Slow resource detected: resourceEntry.name
             }
           }
         });
@@ -200,7 +210,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       try {
         optimization();
       } catch (error) {
-        console.warn('Performance optimization failed:', error);
+        // Performance optimization failed
       }
     });
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Activity, Zap, Clock, Database, Clock } from 'lucide-react';
+import { Activity, Zap, Clock, Database } from 'lucide-react';
 
 interface PerformanceMetrics {
   fcp: number | null;

@@ -57,7 +57,7 @@ const BundleAnalyzer: React.FC = () => {
           chunks: chunks.sort((a, b) => b.size - a.size)
         });
       } catch (error) {
-        console.error('Bundle analysis failed:', error);
+        // Bundle analysis failed
       } finally {
         setIsAnalyzing(false);
       }

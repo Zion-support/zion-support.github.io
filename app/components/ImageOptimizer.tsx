@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState, useRef, useCallback } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -144,4 +142,3 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
 };
 
 export default ImageOptimizer;
->>>>>>> cursor/analyze-improve-and-deploy-application-a84d
