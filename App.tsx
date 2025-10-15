@@ -53,6 +53,17 @@ const ZionAIWorkflowAutomatorProPage = lazy(() => import('./app/zion-ai-workflow
 const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-customer-satisfaction-monitor/page'));
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
 
+// New Micro SaaS Services
+const ZionAIChatbotBuilderPage = lazy(() => import('./app/zion-ai-chatbot-builder/page'));
+const ZionAIFormBuilderPage = lazy(() => import('./app/zion-ai-form-builder/page'));
+const ZionAIDocumentProcessorPage = lazy(() => import('./app/zion-ai-document-processor/page'));
+const ZionAISchedulingAssistantPage = lazy(() => import('./app/zion-ai-scheduling-assistant/page'));
+const ZionAISocialMediaManagerPage = lazy(() => import('./app/zion-ai-social-media-manager/page'));
+const ZionAICRMOptimizerPage = lazy(() => import('./app/zion-ai-crm-optimizer/page'));
+const ZionAIEmailOptimizerPage = lazy(() => import('./app/zion-ai-email-optimizer/page'));
+const ZionAIWebsiteAnalyzerPage = lazy(() => import('./app/zion-ai-website-analyzer/page'));
+const ZionAIDataVisualizerPage = lazy(() => import('./app/zion-ai-data-visualizer/page'));
+
 // Import components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -152,6 +163,17 @@ export default function App() {
                   <Route path="/zion-ai-workflow-automator-pro" element={<ZionAIWorkflowAutomatorProPage />} />
                   <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
                   <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
+                  
+                  {/* New Micro SaaS Services */}
+                  <Route path="/zion-ai-chatbot-builder" element={<ZionAIChatbotBuilderPage />} />
+                  <Route path="/zion-ai-form-builder" element={<ZionAIFormBuilderPage />} />
+                  <Route path="/zion-ai-document-processor" element={<ZionAIDocumentProcessorPage />} />
+                  <Route path="/zion-ai-scheduling-assistant" element={<ZionAISchedulingAssistantPage />} />
+                  <Route path="/zion-ai-social-media-manager" element={<ZionAISocialMediaManagerPage />} />
+                  <Route path="/zion-ai-crm-optimizer" element={<ZionAICRMOptimizerPage />} />
+                  <Route path="/zion-ai-email-optimizer" element={<ZionAIEmailOptimizerPage />} />
+                  <Route path="/zion-ai-website-analyzer" element={<ZionAIWebsiteAnalyzerPage />} />
+                  <Route path="/zion-ai-data-visualizer" element={<ZionAIDataVisualizerPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
