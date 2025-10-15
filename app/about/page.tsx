@@ -1,10 +1,6 @@
 import { Helmet } from "react-helmet-async";
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Shield, Users, Award } from 'lucide-react';
-=======
-import {Brain, Shield, Users, Award} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 export default function AboutPage() {
   const stats = [
@@ -40,7 +36,6 @@ export default function AboutPage() {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge AI and IT solutions." />
       </Helmet>
@@ -112,11 +107,6 @@ export default function AboutPage() {
     </>
   );
 }
-=======
-        <title>About - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group - Leading AI and IT Solutions Provider" />
-      </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold mb-6">About Zion Tech Group</h1>
@@ -151,4 +141,3 @@ export default function AboutPage() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
