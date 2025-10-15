@@ -6,72 +6,56 @@ interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
   ttfb: number | null;
+  loadTime: number | null;
 }
 
-const PerformanceMonitor: React.FC = () => {
+interface PerformanceMonitorProps {
+  children: React.ReactNode;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     cls: null,
     inp: null,
     fcp: null,
     lcp: null,
-    ttfb: null
+    ttfb: null,
+    loadTime: null
   });
 
   useEffect(() => {
     // Measure Core Web Vitals
     onCLS((metric) => {
       setMetrics(prev => ({ ...prev, cls: metric.value }));
-      console.log('CLS:', metric);
     });
 
     onINP((metric) => {
       setMetrics(prev => ({ ...prev, inp: metric.value }));
-      console.log('INP:', metric);
     });
 
     onFCP((metric) => {
       setMetrics(prev => ({ ...prev, fcp: metric.value }));
-      console.log('FCP:', metric);
     });
 
     onLCP((metric) => {
       setMetrics(prev => ({ ...prev, lcp: metric.value }));
-      console.log('LCP:', metric);
     });
 
     onTTFB((metric) => {
       setMetrics(prev => ({ ...prev, ttfb: metric.value }));
-      console.log('TTFB:', metric);
     });
 
-    // Monitor performance in development
+    // Measure page load time
+    const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+    setMetrics(prev => ({ ...prev, loadTime }));
+
+    // Log performance metrics in development
     if (process.env.NODE_ENV === 'development') {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          console.log('Performance Entry:', entry);
-        }
-      });
-
-      observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
-
-      return () => observer.disconnect();
+      console.log('Performance Metrics:', metrics);
     }
   }, []);
 
-  // Send metrics to analytics service in production
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'production') {
-      const allMetricsCollected = Object.values(metrics).every(value => value !== null);
-      
-      if (allMetricsCollected) {
-        // Here you would typically send metrics to your analytics service
-        console.log('All performance metrics collected:', metrics);
-      }
-    }
-  }, [metrics]);
-
-  // This component doesn't render anything visible
-  return null;
+  return <>{children}</>;
 };
 
 export default PerformanceMonitor;

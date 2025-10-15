@@ -4,25 +4,36 @@ import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
+  fallback?: ReactNode;
 }
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null
+    };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return {
+      hasError: true,
+      error,
+      errorInfo: null
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    
     this.setState({
       error,
       errorInfo
@@ -41,53 +52,81 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null
+    });
   };
 
   render() {
     if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
       return (
-        <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white">
-          <div className="max-w-md mx-auto text-center px-4">
-            <div className="mb-8">
-              <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-              <h1 className="text-2xl font-bold text-white mb-2">Something went wrong</h1>
-              <p className="text-gray-300 mb-6">
-                We&apos;re sorry, but something unexpected happened. Please try again or contact support if the problem persists.
-              </p>
+        <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
+          <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
+            <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
-
-            <div className="space-y-4">
-              <button
-                onClick={this.handleRetry}
-                className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2"
-              >
-                <RefreshCw className="w-5 h-5" />
-                <span>Try Again</span>
-              </button>
-
-              <Link
-                to="/"
-                className="w-full bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-all duration-300 flex items-center justify-center space-x-2"
-              >
-                <Home className="w-5 h-5" />
-                <span>Go Home</span>
-              </Link>
-            </div>
+            
+            <h1 className="text-2xl font-bold text-white mb-4">
+              Oops! Something went wrong
+            </h1>
+            
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+            </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-8 text-left">
-                <summary className="cursor-pointer text-sm text-gray-400 hover:text-white">
+              <details className="mb-6 text-left">
+                <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
                   Error Details (Development Only)
                 </summary>
-                <div className="mt-2 p-4 bg-slate-800 rounded-lg text-xs text-gray-300 overflow-auto">
-                  <pre className="whitespace-pre-wrap">
-                    {this.state.error.toString()}
-                    {this.state.errorInfo?.componentStack}
-                  </pre>
+                <div className="mt-2 p-4 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto">
+                  <div className="mb-2">
+                    <strong>Error:</strong> {this.state.error.message}
+                  </div>
+                  {this.state.errorInfo && (
+                    <div>
+                      <strong>Stack Trace:</strong>
+                      <pre className="mt-1 whitespace-pre-wrap">
+                        {this.state.errorInfo.componentStack}
+                      </pre>
+                    </div>
+                  )}
                 </div>
               </details>
             )}
+
+            <div className="flex flex-col sm:flex-row gap-3">
+              <button
+                onClick={this.handleRetry}
+                className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+              >
+                <RefreshCw className="w-4 h-4" />
+                Try Again
+              </button>
+              
+              <Link
+                to="/"
+                className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
+              >
+                <Home className="w-4 h-4" />
+                Go Home
+              </Link>
+            </div>
+
+            <div className="mt-6 pt-6 border-t border-slate-700">
+              <p className="text-sm text-gray-400">
+                If this problem persists, please{' '}
+                <Link to="/contact" className="text-purple-400 hover:text-purple-300">
+                  contact our support team
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
       );

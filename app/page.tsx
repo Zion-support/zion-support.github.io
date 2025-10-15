@@ -359,22 +359,24 @@ const HomePage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <FuturisticButton
-              href="/contact"
-              variant="primary"
-              size="lg"
-              icon={<Sparkles className="w-5 h-5" />}
-            >
-              Get Started Today
-            </FuturisticButton>
-            <FuturisticButton
-              href="/demo"
-              variant="outline"
-              size="lg"
-              icon={<Monitor className="w-5 h-5" />}
-            >
-              Watch Demo
-            </FuturisticButton>
+            <a href="/contact">
+              <FuturisticButton
+                variant="primary"
+                size="lg"
+              >
+                <Sparkles className="w-5 h-5 mr-2" />
+                Get Started Today
+              </FuturisticButton>
+            </a>
+            <a href="/demo">
+              <FuturisticButton
+                variant="secondary"
+                size="lg"
+              >
+                <Monitor className="w-5 h-5 mr-2" />
+                Watch Demo
+              </FuturisticButton>
+            </a>
           </div>
           
           {/* Enhanced Stats */}

@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -13,27 +14,80 @@ import HomePage from './app/page';
 import AboutPage from './app/pages/AboutPage';
 import ContactPage from './app/pages/ContactPage';
 import ServicesPage from './app/pages/ServicesPage';
+import BlogPage from './app/pages/BlogPage';
+import TutorialsPage from './app/pages/TutorialsPage';
+import DemoPage from './app/pages/DemoPage';
+import SupportPage from './app/pages/SupportPage';
+import PrivacyPage from './app/pages/PrivacyPage';
+import TermsPage from './app/pages/TermsPage';
+import PricingPage from './app/pages/PricingPage';
+// import SolutionsPage from './app/pages/SolutionsPage'; // Page doesn't exist
+// import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page'; // Page doesn't exist
+import AISolutionsPage from './app/ai-solutions/page';
+// import ITSolutionsPage from './app/it-solutions/page'; // Page doesn't exist
+
+// Service Pages
 import AIServicesPage from './app/pages/AIServicesPage';
 import ITServicesPage from './app/pages/ITServicesPage';
 import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
 import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
 import CaseStudiesPage from './app/pages/CaseStudiesPage';
 import CareersPage from './app/pages/CareersPage';
+
+// Additional Pages
+// import CybersecurityPage from './app/pages/CybersecurityPage'; // Page doesn't exist
+// import CloudSolutionsPage from './app/pages/CloudSolutionsPage'; // Page doesn't exist
 import MicroSaaSPage from './app/pages/MicroSaaSPage';
+<<<<<<< HEAD
 import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
 import { Cloud } from 'lucide-react';
+=======
+// import FiveGSolutionsPage from './app/pages/5GSolutionsPage'; // Page doesn't exist
+// import TeamPage from './app/pages/TeamPage'; // Page doesn't exist
+// import DocumentationPage from './app/pages/DocumentationPage'; // Page doesn't exist
+
+// Error fallback component
+export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+      <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
+        <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+        </svg>
+      </div>
+      <div className="mt-4 text-center">
+        <h1 className="text-lg font-medium text-gray-900">Something went wrong</h1>
+        <p className="mt-2 text-sm text-gray-500">
+          {error.message}
+        </p>
+        <div className="mt-6">
+          <button
+            onClick={resetErrorBoundary}
+            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            Try again
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+>>>>>>> f80dbd4bfb26cbb4c2a8054d396efe4c53526fb4
 
 function App() {
+  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+
   return (
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-slate-900 text-white">
-          <ErrorBoundary>
-            <div className="flex flex-col min-h-screen">
-              <Navigation />
-              <main className="flex-1">
+    <ErrorBoundary>
+      <HelmetProvider>
+        <Router>
+          <div className="min-h-screen bg-slate-900 flex">
+            <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+            <div className="flex-1 flex flex-col">
+              <Navigation onSidebarToggle={() => setSidebarOpen(true)} />
+              <main className="relative z-10 flex-1" id="main-content" role="main">
                 <ErrorBoundary>
                   <Routes>
                     {/* Main Pages */}
@@ -41,9 +95,17 @@ function App() {
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/services" element={<ServicesPage />} />
+                    {/* <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} /> */}
+                    <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                    {/* <Route path="/it-solutions" element={<ITSolutionsPage />} /> */}
+                    <Route path="/blog" element={<BlogPage />} />
+                    <Route path="/tutorials" element={<TutorialsPage />} />
+                    <Route path="/demo" element={<DemoPage />} />
+                    <Route path="/support" element={<SupportPage />} />
                     <Route path="/privacy" element={<PrivacyPage />} />
                     <Route path="/terms" element={<TermsPage />} />
                     <Route path="/pricing" element={<PricingPage />} />
+                    {/* <Route path="/solutions" element={<SolutionsPage />} /> */}
                     
                     {/* Service Pages */}
                     <Route path="/ai-services" element={<AIServicesPage />} />
@@ -54,7 +116,14 @@ function App() {
                     <Route path="/careers" element={<CareersPage />} />
                     
                     {/* Additional Service Pages */}
+                    {/* <Route path="/cybersecurity" element={<CybersecurityPage />} /> */}
+                    {/* <Route path="/cloud-solutions" element={<CloudSolutionsPage />} /> */}
                     <Route path="/micro-saas" element={<MicroSaaSPage />} />
+                    {/* <Route path="/5g-solutions" element={<FiveGSolutionsPage />} /> */}
+                    
+                    {/* Additional Pages */}
+                    {/* <Route path="/team" element={<TeamPage />} /> */}
+                    {/* <Route path="/docs" element={<DocumentationPage />} /> */}
                     
                     {/* Catch all route */}
                     <Route path="*" element={
@@ -72,13 +141,17 @@ function App() {
                 </ErrorBoundary>
               </main>
               <Footer />
-              <PerformanceMonitor />
-              <AccessibilityEnhancer />
+              <PerformanceMonitor>
+                <div></div>
+              </PerformanceMonitor>
+              <AccessibilityEnhancer>
+                <div></div>
+              </AccessibilityEnhancer>
             </div>
-          </ErrorBoundary>
-        </div>
-      </Router>
-    </HelmetProvider>
+          </div>
+        </Router>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 }
 
