@@ -47,10 +47,10 @@ export interface ErrorContext {
   url?: string;
   userAgent?: string;
   timestamp?: string;
-  component?: string;
-  action?: string;
   userId?: string;
   sessionId?: string;
+  component?: string;
+  action?: string;
   [key: string]: any;
 }
 
