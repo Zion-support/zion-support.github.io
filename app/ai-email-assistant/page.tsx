@@ -1,34 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 export default function AiEmailAssistantPage() {
   return (
+    <>
       <Helmet>
-        <title>AI Email Assistant - Zion Tech Group</title>
-
-              Transform your email management with AI-powered automation, smart
-              classification, and intelligent responses that boost productivity
-              and improve communication.
-            </p>
-
-
-              >
-                View Demo
-              </Link>
-            </div>
-          </div>
-
-                Track email performance and communication patterns
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-
-
-            >
-              Start Your Free Trial
-            </Link>
-          </div>
+        <title>Ai Email Assistant - Zion Tech Group</title>
+        <meta name="description" content="Professional ai email assistant solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Ai Email Assistant</h1>
+          <p className="text-lg text-gray-600">
+            Professional ai email assistant solutions for modern businesses.
+          </p>
         </div>
       </div>
-
+    </>
+  );
+}

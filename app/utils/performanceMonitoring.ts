@@ -1,4 +1,3 @@
-
-interface PerformanceMonitoringOptions {
-
-
+export const performanceMonitoring = () => {
+  // Implementation here
+};

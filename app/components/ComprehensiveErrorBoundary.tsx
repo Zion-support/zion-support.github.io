@@ -1,41 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-    };
-  };
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {,
-      hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({,
-      error,
-
-      this.logErrorToService(error, errorInfo);
-    // Call custom error handler if provided;
-if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {,
-    // In a real application, you would send this to an error reporting service;
-    // like Sentry, LogRocket, or Bugsnag;
-
-    };
-    // For now, just log to console
-  handleRetry = () => {
-    this.setState({
-
-  };
-  handleReload = () => {
-    window.location.reload();
-  render() {
-
-                </p>
-              )};
-            </div>
-          </div>
+export default function ComponentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional components solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Components</h1>
+          <p className="text-lg text-gray-600">
+            Professional components solutions for modern businesses.
+          </p>
         </div>
-      );
-    };
-    return this.props.children;";
-  };";";
-}";";";
-export default ComprehensiveErrorBoundary;"
+      </div>
+    </>
+  );
+}

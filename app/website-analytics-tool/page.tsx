@@ -1,71 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-      ],
-      popular: false
-    },
-    {
-
-      ],
-      popular: true
-    },
-    {
-
-  )
-    },
-    {};
-,
-      export default WebsiteAnalyticsToolPage;
-
-            >
-              Watch Demo
-            </FuturisticButton>
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Features Section */}
-
-                      {benefit}
-
-                    </li>
-                  ))};
-                </ul>
-              </FuturisticCard>
-
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-
-                >
-                  Get Started
-                </FuturisticButton>
-              </FuturisticCard>
-
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* CTA Section */}
-
-
-            >
-              Watch Demo
-            </FuturisticButton>
-          </div>
-        </ResponsiveContainer>
-      </section>
-    </div>
-
+export default function WebsiteAnalyticsToolPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Website Analytics Tool - Zion Tech Group</title>
+        <meta name="description" content="Professional website analytics tool solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Website Analytics Tool</h1>
+          <p className="text-lg text-gray-600">
+            Professional website analytics tool solutions for modern businesses.
+          </p>
+        </div>
+      </div>
+    </>
+  );
 }
-
-
-]
-

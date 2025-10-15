@@ -1,25 +1,57 @@
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 interface PerformanceMetrics {
-
-        if (memory) {
-          const used = memory.usedJSHeapSize / 1024 / 1024; // MB;
-          const total = memory.totalJSHeapSize / 1024 / 1024; // MB;
-          const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB;
-          if (used > limit * 0.8) {,
-            console.warn(`High memory usage detected in ${componentName}`, {
-              used: `${used.toFixed(2)}MB`,;
-              total: `${total.toFixed(2)}MB`,;
-              limit: `${limit.toFixed(2)}MB`,;
-              percentage: `${((used / limit) * 100).toFixed(2)}%`;
-            });
-          };
-        };
-      };
-      const interval = setInterval(checkMemory, 30000); // Check every 30 seconds;
-      return () => clearInterval(interval);
-
-    }
-  }, [componentName])
+  fps: number;
+  memoryUsage: number;
+  loadTime: number;
 }
 
+export const usePerformance = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fps: 0,
+    memoryUsage: 0,
+    loadTime: 0
+  });
 
+  const frameCountRef = useRef(0);
+  const lastTimeRef = useRef(performance.now());
+
+  const measureFPS = useCallback(() => {
+    const now = performance.now();
+    frameCountRef.current++;
+
+    if (now - lastTimeRef.current >= 1000) {
+      const fps = Math.round((frameCountRef.current * 1000) / (now - lastTimeRef.current));
+      setMetrics(prev => ({ ...prev, fps }));
+      frameCountRef.current = 0;
+      lastTimeRef.current = now;
+    }
+  }, []);
+
+  const measureMemoryUsage = useCallback(() => {
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      const memoryUsage = Math.round(memory.usedJSHeapSize / 1024 / 1024);
+      setMetrics(prev => ({ ...prev, memoryUsage }));
+    }
+  }, []);
+
+  const measureLoadTime = useCallback(() => {
+    const loadTime = performance.now();
+    setMetrics(prev => ({ ...prev, loadTime }));
+  }, []);
+
+  useEffect(() => {
+    measureLoadTime();
+    measureMemoryUsage();
+
+    const interval = setInterval(() => {
+      measureFPS();
+      measureMemoryUsage();
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [measureLoadTime, measureMemoryUsage, measureFPS]);
+
+  return metrics;
+};

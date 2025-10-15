@@ -1,79 +1,131 @@
-    enableResourceTiming = true,
-    enableLongTaskMonitoring = true,
-    enableLayoutShiftMonitoring = true,
-    reportInterval = 30000,
-    memoryThreshold = 0.8,
+import { useCallback, useEffect, useRef, useState } from 'react';
 
+interface PerformanceMetrics {
+  fps: number;
+  memoryUsage: number;
+  loadTime: number;
+  renderTime: number;
+  networkLatency: number;
+}
 
-    // Report to analytics
-          metric: name,
-          value,
+interface PerformanceThresholds {
+  fps: number;
+  memoryUsage: number;
+  loadTime: number;
+  renderTime: number;
+  networkLatency: number;
+}
 
-    // }
-  }, [])
-  const  reportMetrics = useCallback(() => {
-    const  metrics = metricsRef.current
-    Object.entries(metrics).forEach(([key, value]) => {
+export const useAdvancedPerformanceMonitoring = (
+  thresholds: PerformanceThresholds = {
+    fps: 30,
+    memoryUsage: 100,
+    loadTime: 3000,
+    renderTime: 16,
+    networkLatency: 200
+  }
+) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fps: 0,
+    memoryUsage: 0,
+    loadTime: 0,
+    renderTime: 0,
+    networkLatency: 0
+  });
 
-            reportMetric(`${key.toUpperCase()}_${subKey.toUpperCase()}`, subValue);
-          };
-      };
+  const [isMonitoring, setIsMonitoring] = useState(false);
+  const frameCountRef = useRef(0);
+  const lastTimeRef = useRef(performance.now());
+  const animationFrameRef = useRef<number>();
+
+  const measureFPS = useCallback(() => {
+    const now = performance.now();
+    frameCountRef.current++;
+
+    if (now - lastTimeRef.current >= 1000) {
+      const fps = Math.round((frameCountRef.current * 1000) / (now - lastTimeRef.current));
+      setMetrics(prev => ({ ...prev, fps }));
+      frameCountRef.current = 0;
+      lastTimeRef.current = now;
+    }
+
+    if (isMonitoring) {
+      animationFrameRef.current = requestAnimationFrame(measureFPS);
+    }
+  }, [isMonitoring]);
+
+  const measureMemoryUsage = useCallback(() => {
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      const memoryUsage = Math.round(memory.usedJSHeapSize / 1024 / 1024);
+      setMetrics(prev => ({ ...prev, memoryUsage }));
+    }
+  }, []);
+
+  const measureLoadTime = useCallback(() => {
+    const loadTime = performance.now();
+    setMetrics(prev => ({ ...prev, loadTime }));
+  }, []);
+
+  const measureRenderTime = useCallback(() => {
+    const start = performance.now();
+    requestAnimationFrame(() => {
+      const renderTime = performance.now() - start;
+      setMetrics(prev => ({ ...prev, renderTime }));
     });
+  }, []);
 
-      try {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-              duration?: number;
-              processingStart?: number;
-              hadRecentInput?: boolean;
-              value?: number;
-              responseStart?: number;
-              requestStart?: number;
+  const measureNetworkLatency = useCallback(async () => {
+    const start = performance.now();
+    try {
+      await fetch('/api/ping', { method: 'HEAD' });
+      const networkLatency = performance.now() - start;
+      setMetrics(prev => ({ ...prev, networkLatency }));
+    } catch (error) {
+      console.warn('Network latency measurement failed:', error);
+    }
+  }, []);
 
-                if (!metric.hadRecentInput && metric.value !== undefined) {
-                  metricsRef.current.cls = (metricsRef.current.cls || 0) + metric.value
-                }
+  const startMonitoring = useCallback(() => {
+    setIsMonitoring(true);
+    measureLoadTime();
+    measureMemoryUsage();
+    measureNetworkLatency();
+  }, [measureLoadTime, measureMemoryUsage, measureNetworkLatency]);
 
-        if (memory) {
-          const usedMB = memory.usedJSHeapSize / 1048576;
-          const totalMB = memory.totalJSHeapSize / 1048576;
-          const limitMB = memory.jsHeapSizeLimit / 1048576;
-      const interval = setInterval(checkMemory, 10000); // Check every 10 seconds;
-return () => clearInterval(interval);
-    };
-    const setupLayoutShiftMonitoring = () => {
-      if (!enableLayoutShiftMonitoring) return;
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-            clsValue += metric.value;
-            metricsRef.current.cls = clsValue;
+  const stopMonitoring = useCallback(() => {
+    setIsMonitoring(false);
+    if (animationFrameRef.current) {
+      cancelAnimationFrame(animationFrameRef.current);
+    }
+  }, []);
 
-          }
-        }
-      })
-      try {
+  useEffect(() => {
+    if (isMonitoring) {
+      measureFPS();
+    }
+  }, [isMonitoring, measureFPS]);
 
-      return () => clsObserver.disconnect();
-    };
-    // Setup all monitoring
-    setupPerformanceObserver();
-    const memoryCleanup = setupMemoryMonitoring();
-    const clsCleanup = setupLayoutShiftMonitoring();
+  useEffect(() => {
+    const interval = setInterval(() => {
+      measureMemoryUsage();
+      measureRenderTime();
+      measureNetworkLatency();
+    }, 1000);
 
-    // Setup periodic reporting
-    reportIntervalRef.current = setInterval(reportMetrics, reportInterval)
-    // Report on page unload
-    enableMemoryMonitoring,
-    enableResourceTiming,
-    enableLongTaskMonitoring,
-    enableLayoutShiftMonitoring,
-    reportInterval,
-    memoryThreshold,
-    longTaskThreshold,
+    return () => clearInterval(interval);
+  }, [measureMemoryUsage, measureRenderTime, measureNetworkLatency]);
+
+  const isPerformanceGood = Object.entries(metrics).every(([key, value]) => {
+    const threshold = thresholds[key as keyof PerformanceThresholds];
+    return value <= threshold;
+  });
 
   return {
-    metrics: metricsRef.current,";
-    reportMetric,";";
-}}}}))";";";
-"
+    metrics,
+    isMonitoring,
+    isPerformanceGood,
+    startMonitoring,
+    stopMonitoring
+  };
+};

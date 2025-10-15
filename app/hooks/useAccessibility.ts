@@ -1,267 +1,161 @@
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 interface AccessibilityOptions {
-
-
-  const  focusableElements = useRef<HTMLElement[]>([])
-
-  // Check for high contrast mode;
-const  checkHighContrast = useCallback(() => {';''
-    if (typeof: window === 'undefined') return;";""
-';''
-    const  mediaQuery = window.matchMedia('(prefers-contrast: high)');";""
-    stateRef.current.isHighContrast = mediaQuery.matches
-
-    // Listen for changes;
-const  handleChange = (e: MediaQueryListEvent) => {
-      stateRef.current.isHighContrast = e.matches;';',""
-      document.documentElement.classList.toggle('high-contrast', e.matches);";""
-    }
-';''
-    mediaQuery.addEventListener('change', handleChange);''
-    document.documentElement.classList.toggle('high-contrast', mediaQuery.matches);";""
-';''
-    return () => mediaQuery.removeEventListener('change', handleChange);";""
-  }, [])
-
-  // Check for reduced motion preference;
-const  checkReducedMotion = useCallback(() => {';''
-    if (typeof: window === 'undefined') return;";""
-';''
-    const  mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');";""
-    stateRef.current.isReducedMotion = mediaQuery.matches
-
-    // Listen for changes;
-const  handleChange = (e: MediaQueryListEvent) => {
-      stateRef.current.isReducedMotion = e.matches;';',""
-      document.documentElement.classList.toggle('reduced-motion', e.matches);";""
-    }
-';''
-    mediaQuery.addEventListener('change', handleChange);''
-    document.documentElement.classList.toggle('reduced-motion', mediaQuery.matches);";""
-';''
-    return () => mediaQuery.removeEventListener('change', handleChange);";""
-  }, [])
-
-  // Detect keyboard usage
-  const  detectKeyboardUsage = useCallback(() => {
-    let  isKeyboardUser = false
-    const  handleKeyDown = (e: KeyboardEvent) => {}
-      if ($1) {}
-  // If body
+  enableKeyboardNavigation?: boolean;
+  enableScreenReader?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
 }
 
+interface AccessibilityState {
+  isHighContrast: boolean;
+  isScreenReaderActive: boolean;
+  currentFocusIndex: number;
+  focusableElements: HTMLElement[];
+}
 
+export const useAccessibility = (options: AccessibilityOptions = {}) => {
+  const {
+    enableKeyboardNavigation = true,
+    enableScreenReader = true,
+    enableHighContrast = true,
+    enableFocusManagement = true
+  } = options;
 
-    const  handleMouseDown = () => {
-      isKeyboardUser = false;
-stateRef.current.isKeyboardUser = false;';''
-      document.body.classList.remove('keyboard-user');";""
-    }
-';''
-    document.addEventListener('keydown', handleKeyDown);''
-    document.addEventListener('mousedown', handleMouseDown);";""
+  const stateRef = useRef<AccessibilityState>({
+    isHighContrast: false,
+    isScreenReaderActive: false,
+    currentFocusIndex: 0,
+    focusableElements: []
+  });
 
-    return () => {';''
-      document.removeEventListener('keydown', handleKeyDown);''
-      document.removeEventListener('mousedown', handleMouseDown);";""
-    }
-  }, [])
+  const [state, setState] = useState<AccessibilityState>(stateRef.current);
+
+  // Check for high contrast mode
+  const checkHighContrast = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+    stateRef.current.isHighContrast = mediaQuery.matches;
+
+    // Listen for changes
+    const handleChange = (e: MediaQueryListEvent) => {
+      stateRef.current.isHighContrast = e.matches;
+      document.documentElement.classList.toggle('high-contrast', e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  // Check for screen reader
+  const checkScreenReader = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    const isScreenReaderActive = 
+      window.navigator.userAgent.includes('NVDA') ||
+      window.navigator.userAgent.includes('JAWS') ||
+      window.navigator.userAgent.includes('VoiceOver') ||
+      document.documentElement.getAttribute('aria-hidden') === 'false';
+
+    stateRef.current.isScreenReaderActive = isScreenReaderActive;
+  }, []);
+
   // Update focusable elements
+  const updateFocusableElements = useCallback(() => {
+    if (typeof document === 'undefined') return;
 
-    focusableElements.current = Array.from()
-      document.querySelectorAll(focusableSelectors)
-    ) as HTMLElement[];
-  }, [
-  ]);
+    const focusableSelectors = [
+      'button:not([disabled])',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      'textarea:not([disabled])',
+      'a[href]',
+      '[tabindex]:not([tabindex="-1"])'
+    ].join(', ');
 
-  // Focus management;
-  const focusElement = useCallback((element: HTMLElement | null) => {;
-    if (!element) return;
+    const elements = Array.from(document.querySelectorAll(focusableSelectors)) as HTMLElement[];
+    stateRef.current.focusableElements = elements;
+  }, []);
 
-    // Add to focus history;
-    stateRef.current.focusHistory.push(element);
-    if (stateRef.current.focusHistory.length > 10) {,
+  // Keyboard navigation
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (!enableKeyboardNavigation) return;
 
-      stateRef.current.focusHistory.shift(),
+    const { focusableElements, currentFocusIndex } = stateRef.current;
 
-
-    // Add focus indicator';'
-    element.classList.add('focus-visible');";"
-  }, [])
-
-  const  focusNext = useCallback(() => {
-    updateFocusableElements()
-    const  currentIndex = focusableElements.current.indexOf(stateRef.current.currentFocus!)
-    const  nextIndex = (currentIndex + 1) % focusableElements.current.length;
-focusElement(focusableElements.current[nextIndex])
-  }, [updateFocusableElements, focusElement])
-
-  const  focusPrevious = useCallback(() => {
-    updateFocusableElements()
-    const  currentIndex = focusableElements.current.indexOf(stateRef.current.currentFocus!)
-    const  prevIndex = currentIndex === 0 ? focusableElements.current.length - 1 : currentIndex - 1;
-focusElement(focusableElements.current[prevIndex])
-  }, [updateFocusableElements, focusElement])
-
-  const  focusFirst = useCallback(() => {
-    updateFocusableElements()
-    if (focusableElements.current.length > 0) {
-      focusElement(focusableElements.current[0])
+    switch (e.key) {
+      case 'Tab':
+        e.preventDefault();
+        const nextIndex = e.shiftKey 
+          ? (currentFocusIndex - 1 + focusableElements.length) % focusableElements.length
+          : (currentFocusIndex + 1) % focusableElements.length;
+        
+        stateRef.current.currentFocusIndex = nextIndex;
+        focusableElements[nextIndex]?.focus();
+        break;
+      
+      case 'Enter':
+      case ' ':
+        e.preventDefault();
+        focusableElements[currentFocusIndex]?.click();
+        break;
     }
-  }, [updateFocusableElements, focusElement])
+  }, [enableKeyboardNavigation]);
 
-  const  focusLast = useCallback(() => {
-    updateFocusableElements()
-    if (focusableElements.current.length > 0) {
-      focusElement(focusableElements.current[focusableElements.current.length - 1])
+  // Initialize accessibility features
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const cleanupFunctions: (() => void)[] = [];
+
+    if (enableHighContrast) {
+      const cleanup = checkHighContrast();
+      if (cleanup) cleanupFunctions.push(cleanup);
     }
-  }, [updateFocusableElements, focusElement])
-  // Trap focus within an element
 
-    ) as HTMLElement[];
-
-    if (focusableInContainer.length === 0) return;
-
-        if (e.shiftKey) {
-          if (document.activeElement === firstElement) {
-            e.preventDefault();,
-
-            lastElement.focus(),
-          };
-        } else {
-          if (document.activeElement === lastElement) {
-
-    announcement.textContent = message;
-
-    document.body.appendChild(announcement);
-
-    // Remove after announcement;
-    setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
-  }, [
-    enableScreenReaderSupport
-  
-  ]);
-  // Add ARIA labels and roles
-  const enhanceElement = useCallback((element: HTMLElement, options: {};)
-    label?: string;
-    description?: string;
-    role?: string;
-    expanded?: boolean;
-    controls?: string;
-
-    style.textContent = `;
-      .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;,
-
-        overflow: hidden,
-        clip: rect(0, 0, 0, 0)
-        white-space: nowrap,
-  border: 0
-      }
-      .focus-visible {}
-        outline: 2px solid #3b82f6;
-outline-offset: 2px,
-      }
-      .keyboard-user *:focus {}
-        outline: 2px solid #3b82f6;
-outline-offset: 2px,
-      }
-      .high-contrast {}
-        filter: contrast(1.2)
-      }
-      .reduced-motion * {}
-        animation-duration: 0.01ms !important
-        animation-iteration-count: 1 !important
-        transition-duration: 0.01ms !important,
-
-        border-radius: 4px
-      }
-      .skip-link:focus {}
-        top: 6px,
-
+    if (enableScreenReader) {
+      checkScreenReader();
     }
+
     if (enableFocusManagement) {
-      updateFocusableElements()
+      updateFocusableElements();
+      
+      const handleFocusUpdate = () => updateFocusableElements();
+      document.addEventListener('focusin', handleFocusUpdate);
+      document.addEventListener('focusout', handleFocusUpdate);
+      
+      cleanupFunctions.push(() => {
+        document.removeEventListener('focusin', handleFocusUpdate);
+        document.removeEventListener('focusout', handleFocusUpdate);
+      });
     }
 
-    document.body.insertBefore(skipLink, document.body.firstChild);
+    if (enableKeyboardNavigation) {
+      document.addEventListener('keydown', handleKeyDown);
+      cleanupFunctions.push(() => {
+        document.removeEventListener('keydown', handleKeyDown);
+      });
+    }
 
     return () => {
-      document.head.removeChild(style);
-      if (document.body.contains(skipLink)) {
-        document.body.removeChild(skipLink);
-      };
       cleanupFunctions.forEach(cleanup => cleanup());
     };
-  }, [
-    enableHighContrast,;
-    enableReducedMotion,;
-    enableKeyboardNavigation,;
-    enableFocusManagement,;
-    checkHighContrast,;
-    checkReducedMotion,;
-    detectKeyboardUsage,;
-    updateFocusableElements;
+  }, [enableHighContrast, enableScreenReader, enableFocusManagement, enableKeyboardNavigation, checkHighContrast, checkScreenReader, updateFocusableElements, handleKeyDown]);
 
-  ]);
-
-  return {
-    state: stateRef.current,;
-    focusElement,;
-    focusNext,;
-    focusPrevious,;
-    focusFirst,;
-    focusLast,;
-    trapFocus,;
-
-
-    return () => {
-      document.head.removeChild(style)
-      if (document.body.contains(skipLink)) {
-        document.body.removeChild(skipLink)
-      }
-      cleanupFunctions.forEach(cleanup => cleanup())
-    }
-  }, [
-    enableHighContrast,
-    enableReducedMotion,
-    enableKeyboardNavigation,
-    enableFocusManagement,
-    checkHighContrast,
-    checkReducedMotion,
-    detectKeyboardUsage,
-    updateFocusableElements
-  ])
-
-  return {
-    state: stateRef.current,
-    focusElement,
-    focusNext,
-    focusPrevious,
-    focusFirst,
-    focusLast,
-    trapFocus,
-    announce,
-    enhanceElement,
-    updateFocusableElements
-import { useEffect } from 'react';
-export const  useAccessibility = () => {
-
+  // Update state when ref changes
   useEffect(() => {
+    setState({ ...stateRef.current });
+  }, [stateRef.current.isHighContrast, stateRef.current.isScreenReaderActive, stateRef.current.currentFocusIndex]);
 
-    // Add accessibility logic here;
-  }, [
-  ]);
   return {
-    // Return accessibility utilities";
-  };";";
-};";";";
-;"
-export default useAccessibility;'";'";"
-
+    ...state,
+    updateFocusableElements,
+    setFocus: (index: number) => {
+      if (stateRef.current.focusableElements[index]) {
+        stateRef.current.currentFocusIndex = index;
+        stateRef.current.focusableElements[index].focus();
+      }
+    }
+  };
+};

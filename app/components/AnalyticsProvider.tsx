@@ -1,45 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-      declare global {},
-      interface Window {},
-      gtag: (_...args: unknown[]) => void
-    },
-    {}
-},
-      interface AnalyticsContextType {},
-      trackEvent: (_eventName: string, parameters?: Record<string, _unknown>) => void,
-      trackPageView: (_pageName: string) => void
-    },
-
-  };
-  return context
+export default function ComponentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional components solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Components</h1>
+          <p className="text-lg text-gray-600">
+            Professional components solutions for modern businesses.
+          </p>
+        </div>
+      </div>
+    </>
+  );
 }
-};
-
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
-        script.async = true
-        document.head.appendChild(script)
-        window.gtag =
-
-    },
-    {}
-    };
-
-      page_title: pageName,
-      page_location: window.location.href})
-    }
-    },
-    {}
-  const value: AnalyticsContextType = {},
-      trackEvent,
-      trackPageView},
-      return ()
-
-      {children};
-    </AnalyticsContext.Provider>
-  )
-}
-};
-
-
-
-

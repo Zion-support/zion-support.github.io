@@ -1,70 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-import {},
-      Target,
-      Rocket,
-      Users,
-      CheckCircle,
-      Star,
-      ArrowRight,
-
-      ],
-      popular: false,
-      rating: 4.7,
-      clients: 60,
-
-      ],
-      popular: false,
-      rating: 4.6,
-      clients: 110,
-
-      ],
-      popular: true,
-      rating: 4.8,
-      clients: 180,
-
-      ],
-      popular: false,
-      rating: 4.5,
-      clients: 140,
-
-      ],
-      popular: false,
-      rating: 4.4,
-      clients: 95,
-
-  ]
-  return ()
-    <div></div>
-      <Helmet></Helmet>
-
-              ></>
-                View All Services
-              </>
-
-            </div>
-          </div>
+export default function MicroSAASPage() {
+  return (
+    <>
+      <Helmet>
+        <title>MicroSAASPage - Zion Tech Group</title>
+        <meta name="description" content="Professional microsaaspage solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">MicroSAASPage</h1>
+          <p className="text-lg text-gray-600">
+            Professional microsaaspage solutions for modern businesses.
+          </p>
         </div>
-      </section>
-
-                  <>
-                    to={`/service/${service.id}`},
-      className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${},
-      service.popular
-
-
-                  ></a
->
-
-                Intuitive interfaces designed for quick adoption and minimal learning curve.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-            ></a
->
-
-
+      </div>
+    </>
+  );
+}

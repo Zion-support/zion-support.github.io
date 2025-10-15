@@ -1,4 +1,3 @@
-
-interface MonitoringOptions {
-
-
+export const monitoring = () => {
+  // Implementation here
+};

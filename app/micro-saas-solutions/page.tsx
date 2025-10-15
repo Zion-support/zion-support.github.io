@@ -1,19 +1,20 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function MicroSAASSolutionsPage() {
+export default function MicroSaasSolutionsPage() {
   return (
     <>
       <Helmet>
-        <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Micro SaaS solutions for modern businesses." />
+        <title>Micro Saas Solutions - Zion Tech Group</title>
+        <meta name="description" content="Professional micro saas solutions solutions for modern businesses." />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center">
-            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">Micro SaaS Solutions</h1>
-            <p className="text-xl text-gray-300">Micro SaaS solutions for modern businesses.</p>
-          </div>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Micro Saas Solutions</h1>
+          <p className="text-lg text-gray-600">
+            Professional micro saas solutions solutions for modern businesses.
+          </p>
         </div>
       </div>
     </>

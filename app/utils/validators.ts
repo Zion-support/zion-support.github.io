@@ -1,4 +1,3 @@
-
-interface ValidatorsOptions {
-
-
+export const validators = () => {
+  // Implementation here
+};

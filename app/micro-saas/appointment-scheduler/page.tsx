@@ -1,12 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+export default function AppointmentSchedulerPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Appointment Scheduler - Zion Tech Group</title>
+        <meta name="description" content="Professional appointment scheduler solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Appointment Scheduler</h1>
+          <p className="text-lg text-gray-600">
+            Professional appointment scheduler solutions for modern businesses.
+          </p>
         </div>
       </div>
     </>
-  ),
-    },
-    {};
-export default PagePage;";
-  ),";";
-};";";";
-"
-
+  );
+}

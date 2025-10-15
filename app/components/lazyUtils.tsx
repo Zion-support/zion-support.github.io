@@ -1,32 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-// Higher-order component for lazy loading;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any;
-export function withLazyLoading<T extends ComponentType<any>>(
-  Component: T,;
-  fallback?: React.ReactNode;
-) {
-
-      <LazyComponent {...(props as any)} />
-    </Suspense>
+export default function ComponentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional components solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Components</h1>
+          <p className="text-lg text-gray-600">
+            Professional components solutions for modern businesses.
+          </p>
+        </div>
+      </div>
+    </>
   );
-// Utility function to create lazy-loaded components;
-// eslint-disable-next-line @;
-export function createLazyComponent<T extends ComponentType<any>>();
-  importFunction: () => Promise<{};
-    default: T ,};
-  fallback?: React.ReactNode;
-
-      <LazyComponent {...(props as any)} /></LazyComponent>
-    </Suspense>
-  );,
-// Utility function to create lazy-loaded components,
-// eslint-disable-next-line @,
-export function createLazyComponent<T extends ComponentType<any>>()
-  importFunction: () => Promise<{ default: T }>
-  fallback?: React.ReactNode,
-
-  return (props: ComponentProps<T>) => ()
-
-    <Suspense: fallback ={fallback || <div>Loading...</div>}>,
-      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */},
-
+}

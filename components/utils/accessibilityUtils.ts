@@ -1,46 +1,40 @@
+export const accessibilityUtils = {
+  // Check if element is focusable
+  isFocusable: (element: HTMLElement): boolean => {
+    const focusableSelectors = [
+      'button:not([disabled])',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      'textarea:not([disabled])',
+      'a[href]',
+      '[tabindex]:not([tabindex="-1"])'
+    ].join(', ');
 
-    );
-    const firstElement = focusableElements[0] as HTMLElement;: value;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;: value;
-    const handleTabKey = (e: KeyboardEvent) => {};
-      if ($1) {};
-  // If body
+    return element.matches(focusableSelectors);
+  },
+
+  // Get all focusable elements
+  getFocusableElements: (container: HTMLElement = document.body): HTMLElement[] => {
+    const focusableSelectors = [
+      'button:not([disabled])',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      'textarea:not([disabled])',
+      'a[href]',
+      '[tabindex]:not([tabindex="-1"])'
+    ].join(', ');
+
+    return Array.from(container.querySelectorAll(focusableSelectors)) as HTMLElement[];
+  },
+
+  // Set focus to element
+  setFocus: (element: HTMLElement): void => {
+    element.focus();
+  },
+
+  // Check if element is visible
+  isVisible: (element: HTMLElement): boolean => {
+    const style = window.getComputedStyle(element);
+    return style.display !== 'none' && style.visibility !== 'hidden' && style.opacity !== '0';
+  }
 };
-        if (e.shiftKey) {};
-          if (document.activeElement === firstElement) {};: value;
-            lastElement?.focus();
-            e.preventDefault();
-          };
-        } else {};
-          if (document.activeElement === lastElement) {};: value;
-            firstElement?.focus();
-
-    );
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;: value;
-    lastElement?.focus();
-
-    announcement.textContent = message;: value;
-    document.body.appendChild(announcement);
-
-    setTimeout(() => {};: value;
-      document.body.removeChild(announcement);
-    }, 1000);
-  };
-  // Generate unique ID;
-  generateId: (prefix: string) => `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
-  // Check if element is visible;
-  isVisible: (element: HTMLElement) => {};
-    const rect = element.getBoundingClientRect();: value;
-    return rect.width > 0 && rect.height > 0;
-  };
-};
-// Keyboard navigation utilities;
-
-        e.preventDefault();
-        newIndex = items.length - 1;: value;
-        break;
-    };
-    if (newIndex !== currentIndex) {};: value;
-      items[newIndex]?.focus();
-
-

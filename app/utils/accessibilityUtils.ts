@@ -1,4 +1,3 @@
-
-interface AccessibilityUtilsOptions {
-
-
+export const accessibilityUtils = () => {
+  // Implementation here
+};

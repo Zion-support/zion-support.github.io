@@ -1,4 +1,3 @@
-
-interface PerformanceEnhancerOptions {
-
-
+export const performanceEnhancer = () => {
+  // Implementation here
+};

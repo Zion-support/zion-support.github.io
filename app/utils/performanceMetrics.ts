@@ -1,4 +1,3 @@
-
-interface PerformanceMetricsOptions {
-
-
+export const performanceMetrics = () => {
+  // Implementation here
+};

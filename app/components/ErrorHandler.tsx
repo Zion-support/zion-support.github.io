@@ -1,57 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface Props {},
-      children: ReactNode;
-fallback?: ReactNode
-      interface State {},
-      hasError: boolean,
-  error: Error | null
-  errorInfo: ErrorInfo | null
-},
-      class ErrorHandler extends Component<Props, State> {},
-      constructor(props: Props) {},
-      super(props)
-    this.state = {},
-      hasError: false,
-      error: null,
-      errorInfo: null
-  static getDerivedStateFromError(error: Error): State {},
-      return {},
-      hasError: true,
-      error,
-      errorInfo: null
-
-      // You can integrate with services like Sentry, LogRocket, etc.
-      this.logErrorToService(error, errorInfo)
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {};
-}// Example: Send to monitoring service;
-try {,
-  } catch (error) {
-    console.error(error);
-} catch (error) {},
-      console.error(error)
-}// Replace with your actual error reporting service
-
-    },
-    {};
-  },
-      handleRetry = () => {};
-}this.setState({},)
-      hasError: false,
-      error: null,
-      errorInfo: null
-
-                Go Home
-              </button>
-            </div>
-          </div>
+export default function ComponentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional components solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Components</h1>
+          <p className="text-lg text-gray-600">
+            Professional components solutions for modern businesses.
+          </p>
         </div>
-      )
-      return this.props.children
-    },";"
-    {};";";"
-
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
-
-
-
+      </div>
+    </>
+  );
+}

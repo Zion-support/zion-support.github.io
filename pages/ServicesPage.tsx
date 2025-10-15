@@ -1,51 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-      ],
-      popular: false,
-      rating: 4.7,
-      clients: 90
-    }
-    {},
-
-    : services.filter(service => service.category === selectedCategory)
-  return ()
-    <div></div>
-      <Helmet></Helmet>
-
-              ></a
-
-                Get Started Today
-              </a>
-
-
-              ></a
-                Call +1 302 464 0950
-              </a>
-            </div>
-
-            {categories.map((category) => ()}
-              <buttonkey={category.id},>
-      onClick={() => setSelectedCategory(category.id)},
-      className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${},
-      selectedCategory === category.id
-
-                <span>{category.name}</span>
-              </button>
-            ))}
-          </div>
+export default function ServicesPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Professional services solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Services</h1>
+          <p className="text-lg text-gray-600">
+            Professional services solutions for modern businesses.
+          </p>
         </div>
-      </section>
-
-                  <>
-                    to={`/service/${service.id}`},
-      className={`w-full inline-flex items-center justify-center px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${},
-      service.popular
-
-
-                  ></a
->
-
-
-            ></a
->
-
-
+      </div>
+    </>
+  );
+}

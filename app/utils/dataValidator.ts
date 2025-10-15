@@ -1,4 +1,3 @@
-
-interface DataValidatorOptions {
-
-
+export const dataValidator = () => {
+  // Implementation here
+};

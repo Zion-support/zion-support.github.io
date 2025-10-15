@@ -1,4 +1,3 @@
-
-interface AnalyticsTrackerOptions {
-
-
+export const analyticsTracker = () => {
+  // Implementation here
+};

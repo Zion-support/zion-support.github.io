@@ -1,34 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface LazyImageProps {};
-  src: string;
-  alt: string;
-  className?: string;
-  placeholder?: React.ReactNode;
-
-  // If body
-          setIsInView(true);
-          observer.disconnect();
-        };
-
-    )
-    if (imgRef.current) {},
-      observer.observe(imgRef.current)
-      return () => observer.disconnect()
-
-}setIsError(true)
-    onError?.()
-      if (isError && fallback) {},
-      return <>{fallback}</>
-  },
-
-        />
-      )};
-    </div>
-  )";"
-},";";"
+export default function ComponentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional components solutions for modern businesses." />
+      </Helmet>
       
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
-
-
-
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Components</h1>
+          <p className="text-lg text-gray-600">
+            Professional components solutions for modern businesses.
+          </p>
+        </div>
+      </div>
+    </>
+  );
+}

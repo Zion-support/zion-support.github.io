@@ -1,4 +1,3 @@
-
-interface AccessibilityEnhancerOptions {
-
-
+export const accessibilityEnhancer = () => {
+  // Implementation here
+};

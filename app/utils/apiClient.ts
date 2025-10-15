@@ -1,4 +1,3 @@
-
-interface ApiClientOptions {
-
-
+export const apiClient = () => {
+  // Implementation here
+};

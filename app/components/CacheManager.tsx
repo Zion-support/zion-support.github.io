@@ -1,39 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface CacheStats {},
-      hits: number,
-  misses: number
-  size: number,
-  maxSize: number
-},
-
-  useEffect(() => {};
-          } catch (error) {};
-    },
-
-          return response
-          return fetch(request);
-        };
-      };
-      // Initialize caching
-      cacheStaticAssets()
-      // Intercept fetch requests for caching
-
-      return cacheAPIResponses(request)
-      return originalFetch(input, init)
-      };
-    },
-
-          // If memory usage is high, trigger garbage collection;
-          if (usedMemory > 0.8) {};
-            // Force garbage collection if available;
-if ((window as any).gc) {};
-              (window as any).gc()
-            };
-    },
-
-      clearInterval(cleanupInterval)
-      })
-    };
-    // Image lazy loading with intersection observer
-
-
+export default function ComponentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional components solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Components</h1>
+          <p className="text-lg text-gray-600">
+            Professional components solutions for modern businesses.
+          </p>
+        </div>
+      </div>
+    </>
+  );
+}

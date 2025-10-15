@@ -1,4 +1,3 @@
-
-interface SecurityManagerOptions {
-
-
+export const securityManager = () => {
+  // Implementation here
+};

@@ -1,4 +1,3 @@
-
-interface SitemapGeneratorOptions {
-
-
+export const sitemapGenerator = () => {
+  // Implementation here
+};

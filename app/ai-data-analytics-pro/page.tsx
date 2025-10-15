@@ -1,11 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-              >
-                View Pricing
-              </FuturisticButton>
-            </div>
-          </div>
-        </ResponsiveContainer>
-      </section>
-    </div>";"
-  );";";"
-};";";";"
+export default function AiDataAnalyticsProPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Ai Data Analytics Pro - Zion Tech Group</title>
+        <meta name="description" content="Professional ai data analytics pro solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Ai Data Analytics Pro</h1>
+          <p className="text-lg text-gray-600">
+            Professional ai data analytics pro solutions for modern businesses.
+          </p>
+        </div>
+      </div>
+    </>
+  );
+}

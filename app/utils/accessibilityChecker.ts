@@ -1,4 +1,3 @@
-
-interface AccessibilityCheckerOptions {
-
-
+export const accessibilityChecker = () => {
+  // Implementation here
+};

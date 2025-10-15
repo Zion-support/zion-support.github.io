@@ -1,81 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import {};
-
-      Server,
-      Cloud,
-      Code,
-      Network,
-      Settings,
-      CheckCircle,
-
-      ],
-      popular: true,
-      rating: 4.8,
-      clients: 180,
-
-      ],
-      popular: true,
-      rating: 4.9,
-      clients: 100,
-
-      ],
-      popular: false,
-      rating: 4.7,
-      clients: 90,
-
-      ],
-      popular: false,
-      rating: 4.6,
-      clients: 70,
-
-      ],
-      popular: false,
-      rating: 4.5,
-      clients: 85,
-
-      ],
-      popular: false,
-      rating: 4.8,
-      clients: 120,
-
-  ]
-  return ()
-    <div></div>
-      <Helmet></Helmet>
-
-              ></>
-                View All Services
-              </>
-
-            </div>
-          </div>
+export default function ITServicesPage() {
+  return (
+    <>
+      <Helmet>
+        <title>ITServicesPage - Zion Tech Group</title>
+        <meta name="description" content="Professional itservicespage solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">ITServicesPage</h1>
+          <p className="text-lg text-gray-600">
+            Professional itservicespage solutions for modern businesses.
+          </p>
         </div>
-      </section>
-
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-                  <>
-                    to={`/service/${service.id}`},
-      className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${},
-      service.popular
-
-
-                  ></a
->
-
-                Certified IT professionals with deep expertise in modern technologies and best practices.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-            ></a
->
-
-
+      </div>
+    </>
+  );
+}

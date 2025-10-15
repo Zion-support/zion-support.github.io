@@ -1,49 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-            style={{},
-      left: `${20 + index * 20}%`,
-      top: `${30 + index * 15}%`,
-      animation: `floatIcon ${item.duration}s ease-in-out infinite`,
-
-                  {stat.label};
-                </div>
-              </div>
-            ))};
-          </div>
+export default function ComponentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional components solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Components</h1>
+          <p className="text-lg text-gray-600">
+            Professional components solutions for modern businesses.
+          </p>
         </div>
       </div>
     </>
   );
-      {/* CSS Animations */};
-      <style jsx>{`};
-        @keyframes gridMove {},
-      0% { transform: translate(0, 0)};
-          100% { transform: translate(50px, 50px)};
-        @keyframes floatIcon {},
-      0%, 100% { transform: translateY(0px) rotate(0deg)};
-          25% { transform: translateY(-20px) rotate(5deg)};
-          50% { transform: translateY(-40px) rotate(0deg)};
-          75% { transform: translateY(-20px) rotate(-5deg)};
-        @keyframes gradient-x {},
-      0%, 100% { background-position: 0% 50%};
-          50% { background-position: 100% 50%};
-        @keyframes fadeInUp {},
-      from {},
-      opacity: 0,
-      transform: translateY(30px)
-          to {},
-      opacity: 1,
-      transform: translateY(0)
-        .animate-gradient-x {},
-      background-size: 200% 200%,
-      animation: gradient-x 3s ease infinite
-      `}</style>
-    </section>
-  )
-    },";"
-    {};";";"
-
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
-
-
-
+}

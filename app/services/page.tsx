@@ -1,19 +1,20 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function Page() {
+export default function ServicesPage() {
   return (
     <>
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Zion Tech Group services and solutions." />
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Professional services solutions for modern businesses." />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center">
-            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">Page</h1>
-            <p className="text-xl text-gray-300">Content coming soon.</p>
-          </div>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Services</h1>
+          <p className="text-lg text-gray-600">
+            Professional services solutions for modern businesses.
+          </p>
         </div>
       </div>
     </>

@@ -1,4 +1,3 @@
-
-interface FormValidationOptions {
-
-
+export const formValidation = () => {
+  // Implementation here
+};

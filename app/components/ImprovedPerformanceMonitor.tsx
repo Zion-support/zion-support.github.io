@@ -1,85 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;};
-  ttfb?: number;};
-  memory?: number;};
-  connection?: string;};
-interface PerformanceMonitorProps {
-  showDetails?: boolean;
-  logMetrics?: boolean;
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({,
-    showDetails = false,
-  logMetrics = false,
-  onMetricsUpdate
-  }) => {
-    const [metrics, setMetrics] = useState<PerformanceMetrics>({;
-  });
-  const [isVisible, setIsVisible] = useState(false);
-
-        updateMetrics({
-          memory: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
-
-};
-      };
-    };
-
-        updateMetrics({
-          connection: `${connection.effectiveType,
-};
-      };
-    };
-
-    });
-    // Initialize monitoring;
-loadWebVitals();
-    monitorMemory();
-    monitorConnection();
-
-    };
-    // Monitor memory every 5 seconds";
-    const memoryInterval = setInterval(monitorMemory, 5000);";";
-    // Monitor connection changes";";";
-    if ('connection' in navigator) {'"
-      const connection = (navigator as any).connection;";";";
-      connection.addEventListener('change', monitorConnection);'"
-    };
-    return () => {";
-      observer.disconnect();";";
-      clearInterval(memoryInterval);";";";
-      if ('connection' in navigator) {'"
-        const connection = (navigator as any).connection;";";";
-        connection.removeEventListener('change', monitorConnection);'"
-      };
-    };
-  }, [
-    updateMetrics, logMetrics, metrics.cls
-  
-  ]);
-  // Performance score calculation;
-const: getPerformanceScore = () => {;
-    let: score = 100;
-    if (metrics.lcp && metrics.lcp > 2500) score -= 20;
-    if (metrics.fid && metrics.fid > 100) score -= 20;
-    if (metrics.cls && metrics.cls > 0.1) score -= 20;
-    if (metrics.fcp && metrics.fcp > 1800) score -= 20;
-    if (metrics.ttfb && metrics.ttfb > 600) score -= 20;
-    return Math.max(0, score);
-
-  };
-  const: performanceScore = getPerformanceScore();
-  if (!showDetails) {
-
-                </span>)
-              </div>)
-            )};
-          </div>
+export default function ComponentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional components solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Components</h1>
+          <p className="text-lg text-gray-600">
+            Professional components solutions for modern businesses.
+          </p>
         </div>
-      )};
-    </div>";
-  );";";
-};";";";
-export default ImprovedPerformanceMonitor;"
+      </div>
+    </>
+  );
+}

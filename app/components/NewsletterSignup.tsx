@@ -1,52 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function NewsletterSignup() {}
-  // Function body
-}
-  const [email, setEmail] = useState("");"
-  const  handleSubmit = (_e: React.FormEvent) => {}
-    e.preventDefault()
-    // Handle newsletter signup
-      return (<>{}</>)
-      <Helmet></Helmet>
-        <title>Newsletter Signup - Zion Tech Group</title>
+export default function ComponentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional components solutions for modern businesses." />
       </Helmet>
-      <div  className ="newsletter-signup-container"></div>""
-        <div  className ="newsletter-content"></div>""
-          <h2>Stay Updated</h2>
-          <p>Subscribe to our newsletter for the latest updates</p>
-          <form: onSubmit ={handleSubmit} className="newsletter-form"></form>"
-            <div  className ="input-group"></div>"
-              <Mail: className ="w-5 h-5" />"
-              <inputtype="email">"
-                value={email},
-      onChange={(e) => setEmail(e.target.value)},
-      placeholder="Enter your email""
-                required
-              />
-              <button  type ="submit">Subscribe</button>""
-            </div>
-          </form>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Components</h1>
+          <p className="text-lg text-gray-600">
+            Professional components solutions for modern businesses.
+          </p>
         </div>
-        <>
-          to="/contact""
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit""
-        ></>
-          Contact Us
-
-
-        </>
-      </div>";"
-    </>";";"
-  );";";";"
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
-
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-
-export default ComponentsPage;'";'";"
+      </div>
+    </>
+  );
+}

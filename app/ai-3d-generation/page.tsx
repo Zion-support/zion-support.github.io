@@ -1,23 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const Ai3DGenerationPage: React.FC = () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
-        title="AI 3D Generation - Zion Tech Group"
-        description="Advanced AI-powered 3D generation solutions for creative professionals"
-        keywords="AI 3D generation, 3D modeling, 3D animation, AI visualization, 3D technology"
-      />
-
+export default function Ai3dGenerationPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Ai 3d Generation - Zion Tech Group</title>
+        <meta name="description" content="Professional ai 3d generation solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Ai 3d Generation</h1>
+          <p className="text-lg text-gray-600">
+            Professional ai 3d generation solutions for modern businesses.
+          </p>
         </div>
       </div>
     </>
   );
-};
-
-export default Ai3DGenerationPage;
-
-};";
-";";
-export default Ai3DGenerationPage;";";";
-"
-
+}

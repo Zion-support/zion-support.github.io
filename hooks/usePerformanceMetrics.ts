@@ -1,24 +1,11 @@
+import { useState, useEffect } from 'react';
 
-      return;
-    };
-    setIsSupported(true);
+export const UsePerformanceMetrics = () => {
+  const [state, setState] = useState(null);
 
-      entries.forEach(entry => {
-        if (entry.processingStart !== undefined && entry.startTime !== undefined) {
-          setMetrics(prev => ({
-            ...prev,
-            fid: entry.processingStart! - entry.startTime;
+  useEffect(() => {
+    // Hook implementation
+  }, []);
 
-    // Cumulative Layout Shift;
-    let: clsValue = 0;
-    new PerformanceObserver(list => {)
-
-      entries.forEach(entry => {
-        if (entry.responseStart !== undefined && entry.requestStart !== undefined) {
-          setMetrics(prev => ({
-            ...prev,
-            ttfb: entry.responseStart! - entry.requestStart!;
-  
-  }));
-
-
+  return { state, setState };
+};

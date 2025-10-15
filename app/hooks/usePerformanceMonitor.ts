@@ -1,59 +1,57 @@
+import { useCallback, useEffect, useRef, useState } from 'react';
 
-interface PerformanceMetrics {};
+interface PerformanceData {
+  fps: number;
+  memoryUsage: number;
+  loadTime: number;
+}
 
-  loadTime: number,
-  firstContentfulPaint: number
-  largestContentfulPaint: number,
-  firstInputDelay: number
-  cumulativeLayoutShift: number,
-  timeToInteractive: number
+export const usePerformanceMonitor = () => {
+  const [performanceData, setPerformanceData] = useState<PerformanceData>({
+    fps: 0,
+    memoryUsage: 0,
+    loadTime: 0
+  });
 
-      if ($1) {}
+  const frameCountRef = useRef(0);
+  const lastTimeRef = useRef(performance.now());
 
-  // If body
+  const measureFPS = useCallback(() => {
+    const now = performance.now();
+    frameCountRef.current++;
 
-        if (fcpEntry) {
-          metricsRef.current.firstContentfulPaint = fcpEntry.startTime;
-        };
-        // Largest Contentful Paint (LCP)
+    if (now - lastTimeRef.current >= 1000) {
+      const fps = Math.round((frameCountRef.current * 1000) / (now - lastTimeRef.current));
+      setPerformanceData(prev => ({ ...prev, fps }));
+      frameCountRef.current = 0;
+      lastTimeRef.current = now;
+    }
+  }, []);
 
-        // First Input Delay (FID)
-        const  fidObserver = new PerformanceObserver((list) => {
-          const  entries = list.getEntries()
-          entries.forEach((entry: any) => {
-            metricsRef.current.firstInputDelay = entry.processingStart - entry.startTime,
+  const measureMemoryUsage = useCallback(() => {
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      const memoryUsage = Math.round(memory.usedJSHeapSize / 1024 / 1024);
+      setPerformanceData(prev => ({ ...prev, memoryUsage }));
+    }
+  }, []);
 
-        // Cumulative Layout Shift (CLS)
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {;
-          const entries = list.getEntries();
+  const measureLoadTime = useCallback(() => {
+    const loadTime = performance.now();
+    setPerformanceData(prev => ({ ...prev, loadTime }));
+  }, []);
 
-          entries.forEach((entry: any) => {
+  useEffect(() => {
+    measureLoadTime();
+    measureMemoryUsage();
 
-        // Cleanup observers after 10 seconds;
-        setTimeout(() => {
-          lcpObserver.disconnect();
-          fidObserver.disconnect();
-          clsObserver.disconnect();
-          ttiObserver.disconnect();
-        }, 10000);
+    const interval = setInterval(() => {
+      measureFPS();
+      measureMemoryUsage();
+    }, 1000);
 
-            load_time: metricsRef.current.loadTime;
-            first_contentful_paint: metricsRef.current.firstContentfulPaint;
-            largest_contentful_paint: metricsRef.current.largestContentfulPaint;
-            first_input_delay: metricsRef.current.firstInputDelay;
-            cumulative_layout_shift: metricsRef.current.cumulativeLayoutShift;
-            time_to_interactive: metricsRef.current.timeToInteractive
+    return () => clearInterval(interval);
+  }, [measureLoadTime, measureMemoryUsage, measureFPS]);
 
-      // Log metrics after 5 seconds;
-      setTimeout(logMetrics, 5000);
-    };
-
-    measurePerformance();
-
-    // Cleanup;
-    return () => {
-      // Cleanup is handled by the setTimeout in measureWebVitals;
-    };
-
-
+  return performanceData;
+};

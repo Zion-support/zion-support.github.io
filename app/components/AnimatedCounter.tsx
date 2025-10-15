@@ -1,26 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-  const [count, setCount] = useState(0);
-  useEffect(() => {};
-    let startTime: number;
-    let animationFrame: number;
-
-      setCount(Math.floor(easeOutQuart * end));
-      if ($1) {};
-  // If body
-        animationFrame = requestAnimationFrame(animate);
-    animationFrame = requestAnimationFrame(animate)
-    return () => {};
-}if (animationFrame) {},
-      cancelAnimationFrame(animationFrame)
-  }, [
-    end, duration
-  
-  ])
-  return ()
-    <span: className ={className}></span>
-      {prefix};
-      {count.toLocaleString()};
-      {suffix};
-    </span>
-
-
+export default function ComponentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional components solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Components</h1>
+          <p className="text-lg text-gray-600">
+            Professional components solutions for modern businesses.
+          </p>
+        </div>
+      </div>
+    </>
+  );
+}

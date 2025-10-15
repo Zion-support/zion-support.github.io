@@ -1,85 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import { 
-
-  CircleStackIcon, 
-  CheckCircleIcon,
-  ClockIcon,
-  UserGroupIcon,
-
-      ],
-      popular: false
-    },
-    {
-
-      ],
-      popular: true
-    },
-    {
-
-      ],
-      popular: false
-
-  ]
+export default function InventoryManagerPage() {
   return (
     <>
-
-                  View Demo
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-
-                Everything you need to manage your inventory efficiently and effectively.
-              </p>
-            </div>
-            
-
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-
-                Flexible pricing options to fit your inventory management needs.
-              </p>
-            </div>
-            
-
-              {pricingPlans.map((plan, index) => (
-                <div  key ={index}>
-                  className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 ${
-                    plan.popular 
-
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <button  className ={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${>
-                    plan.popular
-
-
-                  }`}>
-                    Get Started
-                  </button>
-                </div>
-
-
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
+      <Helmet>
+        <title>Inventory Manager - Zion Tech Group</title>
+        <meta name="description" content="Professional inventory manager solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Inventory Manager</h1>
+          <p className="text-lg text-gray-600">
+            Professional inventory manager solutions for modern businesses.
+          </p>
+        </div>
       </div>
     </>
-
+  );
+}
