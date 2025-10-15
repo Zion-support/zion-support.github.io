@@ -2,6 +2,22 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const ITSolutionsPage: React.FC = () => {
+  const features = [
+    '24/7 Expert Support',
+    'Proven Methodologies',
+    'Scalable Solutions',
+    'Industry Expertise',
+    'Cost Optimization',
+    'Security First'
+  ];
+
+  const stats = [
+    { number: '500+', label: 'IT Projects Completed' },
+    { number: '100+', label: 'Enterprise Clients' },
+    { number: '99.9%', label: 'System Uptime' },
+    { number: '24/7', label: 'Support Available' }
+  ];
+
   return (
     <>
       <Helmet>

@@ -21,25 +21,55 @@ export default defineConfig({
         manualChunks: (id) => {
           // Create chunks based on node_modules
           if (id.includes('node_modules')) {
+            // React and React DOM
             if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor';
+              return 'react-vendor';
             }
+            // React Router
             if (id.includes('react-router')) {
-              return 'router';
+              return 'router-vendor';
             }
-            if (id.includes('framer-motion') || id.includes('lucide-react')) {
-              return 'ui';
+            // UI Libraries
+            if (id.includes('framer-motion')) {
+              return 'animation-vendor';
             }
+            if (id.includes('lucide-react')) {
+              return 'icons-vendor';
+            }
+            // Analytics and monitoring
             if (id.includes('web-vitals')) {
-              return 'analytics';
+              return 'analytics-vendor';
             }
+            // Utility libraries
             if (id.includes('clsx') || id.includes('tailwind-merge')) {
-              return 'utils';
+              return 'utils-vendor';
             }
-            // Group other node_modules
+            // Helmet for SEO
+            if (id.includes('react-helmet')) {
+              return 'seo-vendor';
+            }
+            // Charts and data visualization
+            if (id.includes('recharts')) {
+              return 'charts-vendor';
+            }
+            // Other large libraries
+            if (id.includes('axios') || id.includes('gray-matter')) {
+              return 'http-vendor';
+            }
+            // Group remaining node_modules
             return 'vendor';
           }
-          // Don't create chunks for source files
+          // Create chunks for app code
+          if (id.includes('/app/components/')) {
+            return 'components';
+          }
+          if (id.includes('/app/pages/')) {
+            return 'pages';
+          }
+          if (id.includes('/app/')) {
+            return 'app';
+          }
+          // Don't create chunks for other source files
           return undefined;
         },
         chunkFileNames: 'assets/[name]-[hash].js',
@@ -77,10 +107,10 @@ export default defineConfig({
         ascii_only: true,
       },
     },
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500,
     reportCompressedSize: true,
     cssCodeSplit: true,
-    assetsInlineLimit: 2048,
+    assetsInlineLimit: 4096,
     target: 'es2020',
   },
   server: {

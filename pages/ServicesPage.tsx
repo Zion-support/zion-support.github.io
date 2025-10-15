@@ -6,9 +6,12 @@ import {
   Star, 
   ArrowRight, 
   Brain, 
-  Server, 
-  Zap,
+  Server,
   Rocket,
+<<<<<<< HEAD
+=======
+  // Users,
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
   Settings
 } from 'lucide-react';
 

@@ -1,5 +1,6 @@
-import { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
@@ -8,84 +9,114 @@ interface Props {
 
 interface State {
   hasError: boolean;
-  error?: Error | undefined;
-  errorInfo?: ErrorInfo | undefined;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false, error: undefined, errorInfo: undefined };
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null
+    };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error, errorInfo: undefined };
+    return {
+      hasError: true,
+      error,
+      errorInfo: null
+    };
   }
 
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
     });
 
-    // Log error to monitoring service
-    // eslint-disable-next-line no-console
-    console.error('Error caught by boundary:', error, errorInfo);
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
+
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Here you would typically send the error to an error reporting service
+      console.error('Production error:', error, errorInfo);
+    }
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null
+    });
   };
 
-  override render() {
+  render() {
     if (this.state.hasError) {
+      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="max-w-md mx-auto text-center p-8">
-            <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <AlertTriangle className="w-10 h-10 text-red-400" />
+        <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-lg p-6 text-center">
+            <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-red-500/20 rounded-full">
+              <AlertTriangle className="w-8 h-8 text-red-500" />
             </div>
             
-            <h1 className="text-2xl font-bold text-white mb-4">
+            <h1 className="text-2xl font-bold text-white mb-2">
               Oops! Something went wrong
             </h1>
             
             <p className="text-gray-300 mb-6">
-              We&apos;re sorry, but something unexpected happened. Please try again or contact support if the problem persists.
+              We're sorry, but something unexpected happened. Please try refreshing the page or contact support if the problem persists.
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-400 mb-2">
+                <summary className="cursor-pointer text-sm text-gray-400 hover:text-white mb-2 flex items-center gap-2">
+                  <RefreshCw className="w-4 h-4" />
                   Error Details (Development)
                 </summary>
-                <pre className="bg-slate-800 p-4 rounded text-xs text-red-300 overflow-auto">
+                <pre className="mt-2 text-xs text-red-300 bg-slate-900 p-3 rounded overflow-auto">
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="space-y-3">
               <button
                 onClick={this.handleRetry}
-                className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
-                <RefreshCw className="w-4 h-4 mr-2" />
+                <RefreshCw className="w-4 h-4" />
                 Try Again
               </button>
               
-              <a
-                href="/"
-                className="flex items-center justify-center px-6 py-3 border border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white rounded-lg transition-colors"
+              <Link
+                to="/"
+                className="w-full bg-slate-700 hover:bg-slate-600 text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
-                <Home className="w-4 h-4 mr-2" />
+                <Home className="w-4 h-4" />
                 Go Home
-              </a>
+              </Link>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-slate-700">
+              <p className="text-sm text-gray-400">
+                If this problem continues, please{' '}
+                <Link to="/contact" className="text-blue-400 hover:text-blue-300 underline">
+                  contact our support team
+                </Link>
+              </p>
             </div>
           </div>
         </div>

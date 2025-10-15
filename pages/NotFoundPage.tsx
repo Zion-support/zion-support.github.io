@@ -25,7 +25,7 @@ const NotFoundPage: React.FC = () => {
     <>
       <Helmet>
         <title>404 - Page Not Found | Zion Tech Group</title>
-        <meta name="description" content="The page you're looking for doesn't exist. Explore our AI, IT, and Micro SAAS services or contact us for assistance." />
+        <meta name="description" content="The page you&apos;re looking for doesn&apos;t exist. Explore our AI, IT, and Micro SAAS services or contact us for assistance." />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 

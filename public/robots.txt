@@ -1,7 +1,10 @@
 User-agent: *
 Allow: /
 
+<<<<<<< HEAD
+=======
 # Sitemap
+>>>>>>> cursor/analyze-improve-and-merge-code-b7b5
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Crawl-delay
@@ -21,4 +24,29 @@ Allow: /services
 Allow: /contact
 Allow: /portfolio
 Allow: /pricing
+<<<<<<< HEAD
+Allow: /blog
+Allow: /tutorials
+Allow: /demo
+Allow: /support
+
+# Crawl delay
+Crawl-delay: 1
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /scripts/
+Disallow: /node_modules/
+Disallow: /_next/
+Disallow: /static/
+=======
 Allow: /news
+>>>>>>> cursor/analyze-improve-and-merge-code-b7b5

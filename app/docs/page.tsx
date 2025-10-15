@@ -10,9 +10,8 @@ const DocsPage: React.FC = () => {
     {
       id: 'getting-started',
       title: 'Getting Started',
-      description: 'Learn how to get started with our AI solutions',
-      content: 'Comprehensive guide to implementing AI in your business',
       icon: <Zap className="w-6 h-6" />,
+      description: 'Quick start guides and setup instructions',
       articles: [
         { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', readTime: '5 min' },
         { title: 'Account Setup', description: 'Create and configure your account', readTime: '3 min' },
@@ -49,7 +48,10 @@ const DocsPage: React.FC = () => {
       title: 'API Reference',
       icon: <Book className="w-6 h-6" />,
       description: 'Complete API documentation and examples',
+<<<<<<< HEAD
       content: 'Detailed API reference with examples and best practices',
+=======
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
       articles: [
         { title: 'Authentication', description: 'API authentication methods', readTime: '5 min' },
         { title: 'Endpoints', description: 'Complete endpoint reference', readTime: '45 min' },
@@ -69,7 +71,7 @@ const DocsPage: React.FC = () => {
 
   const filteredSections = documentationSections.map(section => ({
     ...section,
-    articles: section.articles?.filter((article: { title: string; description: string }) =>
+    articles: section.articles?.filter((article: any) =>
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.description.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
@@ -167,7 +169,11 @@ const DocsPage: React.FC = () => {
                   >
                     <div className="flex items-center">
                       <div className="text-cyan-400 mr-4">
+<<<<<<< HEAD
+                        {(section as any).icon || <Book className="w-6 h-6" />}
+=======
                         {section.icon || <Book className="w-6 h-6" />}
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-white">{section.title}</h3>
@@ -184,7 +190,7 @@ const DocsPage: React.FC = () => {
                   {expandedSection === section.id && (
                     <div className="px-8 pb-6">
                       <div className="grid md:grid-cols-2 gap-4">
-                        {section.articles?.map((article: { title: string; readTime: string; description: string }, articleIndex: number) => (
+                        {(section as any).articles?.map((article: any, articleIndex: number) => (
                           <div key={articleIndex} className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors cursor-pointer group">
                             <div className="flex items-center justify-between mb-2">
                               <h4 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">

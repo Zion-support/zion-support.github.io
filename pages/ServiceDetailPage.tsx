@@ -6,6 +6,10 @@ import {
   Star, 
   Users, 
   Shield, 
+<<<<<<< HEAD
+=======
+  // Zap,
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
   ArrowRight,
   Phone,
   Mail,
@@ -15,6 +19,10 @@ import {
   BarChart3,
   Code,
   Cloud,
+<<<<<<< HEAD
+=======
+  // Database,
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
   Settings
 } from 'lucide-react';
 

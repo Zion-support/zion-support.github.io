@@ -4,6 +4,7 @@ const path = require('path');
 // Generate sitemap.xml
 const generateSitemap = () => {
   const baseUrl = 'https://ziontechgroup.com';
+  const currentDate = new Date().toISOString();
   
   const pages = [
     '',

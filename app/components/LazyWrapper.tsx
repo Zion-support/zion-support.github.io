@@ -27,7 +27,25 @@ export const LazyWrapper: React.FC<LazyWrapperProps> = ({
 
 LazyWrapper.displayName = 'LazyWrapper';
 
-// Re-export the utility function
+<<<<<<< HEAD
+// Lazy loading helper function
+export const createLazyComponent = <P extends Record<string, unknown>>(
+  importFunc: () => Promise<{ default: ComponentType<P> }>
+) => {
+  const LazyComponent = lazy(importFunc);
+  
+  const WrappedComponent = (props: P) => (
+    <LazyWrapper>
+      <LazyComponent {...(props as any)} />
+    </LazyWrapper>
+  );
+  
+  WrappedComponent.displayName = 'LazyComponent';
+  return WrappedComponent;
+};
+=======
+// Re-export from utils
 export { createLazyComponent } from '../utils/lazyLoading';
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
 
 export default LazyWrapper;

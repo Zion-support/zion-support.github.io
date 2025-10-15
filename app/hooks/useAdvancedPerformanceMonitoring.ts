@@ -40,10 +40,14 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
   const observerRef = useRef<PerformanceObserver | null>(null);
   const reportIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: Record<string, unknown>) => {
+  const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: any) => {
     // Report to analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', name, {
+<<<<<<< HEAD
+      (window as any)['gtag']('event', name, {
+=======
+      (window as unknown as { gtag: (event: string, name: string, options: Record<string, unknown>) => void }).gtag('event', name, {
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
         event_category: category,
         value: Math.round(value),
         non_interaction: true,
@@ -69,10 +73,10 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       });
     }
 
-    // Log in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`Performance Metric - ${name}:`, value);
-    }
+    // Log in development (commented out for production)
+    // if (process.env.NODE_ENV === 'development') {
+    //   console.log(`Performance Metric - ${name}:`, value);
+    // }
   }, []);
 
   const reportMetrics = useCallback(() => {
@@ -98,15 +102,11 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       try {
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            const metric = entry as PerformanceEntry & { 
-              startTime?: number; 
-              duration?: number;
-              processingStart?: number;
-              hadRecentInput?: boolean;
-              value?: number;
-              responseStart?: number;
-              requestStart?: number;
-            };
+<<<<<<< HEAD
+            const metric = entry as PerformanceEntry & { startTime: number; value?: number; hadRecentInput?: boolean };
+=======
+            const metric = entry as PerformanceEntry & { startTime?: number; value?: number };
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
             
             switch (entry.entryType) {
               case 'paint':
@@ -120,21 +120,17 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
                 break;
               
               case 'first-input':
-                if (metric.processingStart !== undefined && metric.startTime !== undefined) {
-                  metricsRef.current.fid = metric.processingStart - metric.startTime;
-                }
+                metricsRef.current.fid = (metric as any).processingStart - metric.startTime;
                 break;
               
               case 'layout-shift':
-                if (!metric.hadRecentInput && metric.value !== undefined) {
-                  metricsRef.current.cls = (metricsRef.current.cls || 0) + metric.value;
+                if (!metric.hadRecentInput) {
+                  metricsRef.current.cls = (metricsRef.current.cls || 0) + (metric.value || 0);
                 }
                 break;
               
               case 'navigation':
-                if (metric.responseStart !== undefined && metric.requestStart !== undefined) {
-                  metricsRef.current.ttfb = metric.responseStart - metric.requestStart;
-                }
+                metricsRef.current.ttfb = (metric as any).responseStart - (metric as any).requestStart;
                 break;
               
               case 'measure':
@@ -174,10 +170,8 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
         observer.observe({ entryTypes });
         observerRef.current = observer;
 
-      } catch (error) {
-        if (process.env.NODE_ENV === 'development') {
-          console.warn('Performance Observer setup failed:', error);
-        }
+      } catch {
+        // console.warn('Performance Observer setup failed:', error);
       }
     };
 
@@ -186,20 +180,26 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 
       const checkMemory = () => {
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-        if (!memory) return;
+<<<<<<< HEAD
+        if (memory) {
+          const usedMB = memory.usedJSHeapSize / 1048576;
+          const totalMB = memory.totalJSHeapSize / 1048576;
+          const limitMB = memory.jsHeapSizeLimit / 1048576;
+=======
         const usedMB = memory.usedJSHeapSize / 1048576;
         const totalMB = memory.totalJSHeapSize / 1048576;
         const limitMB = memory.jsHeapSizeLimit / 1048576;
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
 
-        metricsRef.current.memory = {
-          used: usedMB,
-          total: totalMB,
-          limit: limitMB,
-        };
-
-        // Alert if memory usage is high
-        if (usedMB / limitMB > memoryThreshold) {
-          reportMetric('HIGH_MEMORY_USAGE', (usedMB / limitMB) * 100, 'Performance');
+          metricsRef.current.memory = {
+            used: usedMB,
+            total: totalMB,
+            limit: limitMB,
+          };
+          // Alert if memory usage is high
+          if (usedMB / limitMB > memoryThreshold) {
+            reportMetric('HIGH_MEMORY_USAGE', (usedMB / limitMB) * 100, 'Performance');
+          }
         }
       };
 
@@ -215,8 +215,12 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
+<<<<<<< HEAD
+          const metric = entry as PerformanceEntry & { value: number; hadRecentInput: boolean };
+=======
           const metric = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
-          if (!metric.hadRecentInput && metric.value !== undefined) {
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
+          if (!metric.hadRecentInput) {
             clsValue += metric.value;
             metricsRef.current.cls = clsValue;
           }
@@ -225,10 +229,8 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (error) {
-        if (process.env.NODE_ENV === 'development') {
-          console.warn('Layout shift monitoring not supported:', error);
-        }
+      } catch {
+        // console.warn('Layout shift monitoring not supported:', error);
       }
 
       return () => clsObserver.disconnect();
@@ -272,7 +274,10 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     reportInterval,
     memoryThreshold,
     longTaskThreshold,
+<<<<<<< HEAD
+=======
     reportMetrics,
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
     reportMetric,
   ]);
 

@@ -4,36 +4,45 @@ import { HelmetProvider } from 'react-helmet-async';
 
 // Components
 import Navigation from './app/components/Navigation';
+import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
-import LoadingStates from './app/components/LoadingStates';
-// import LazyWrapper from './app/components/LazyWrapper';
-// import LoadingSpinner from './app/components/LoadingSpinner';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import LoadingSpinner from './app/components/LoadingSpinner';
 
-// Lazy loaded page components
-const HomePage = React.lazy(() => import('./app/page'));
-const AboutPage = React.lazy(() => import('./app/pages/AboutPage'));
-const ContactPage = React.lazy(() => import('./app/pages/ContactPage'));
-const ServicesPage = React.lazy(() => import('./app/pages/ServicesPage'));
-const BlogPage = React.lazy(() => import('./app/pages/BlogPage'));
-const TutorialsPage = React.lazy(() => import('./app/pages/TutorialsPage'));
-const DemoPage = React.lazy(() => import('./app/pages/DemoPage'));
-const SupportPage = React.lazy(() => import('./app/pages/SupportPage'));
-const PrivacyPage = React.lazy(() => import('./app/pages/PrivacyPage'));
-const TermsPage = React.lazy(() => import('./app/pages/TermsPage'));
-const PricingPage = React.lazy(() => import('./app/pages/PricingPage'));
-const SolutionsPage = React.lazy(() => import('./app/pages/SolutionsPage'));
-const MicroSaaSSolutionsPage = React.lazy(() => import('./app/micro-saas-solutions/page'));
-const AISolutionsPage = React.lazy(() => import('./app/ai-solutions/page'));
-const ITSolutionsPage = React.lazy(() => import('./app/it-solutions/page'));
+// Page Components
+import HomePage from './app/page';
+import AboutPage from './app/pages/AboutPage';
+import ContactPage from './app/pages/ContactPage';
+import ServicesPage from './app/pages/ServicesPage';
+import BlogPage from './app/pages/BlogPage';
+import TutorialsPage from './app/pages/TutorialsPage';
+import DemoPage from './app/pages/DemoPage';
+import SupportPage from './app/pages/SupportPage';
+import PrivacyPage from './app/pages/PrivacyPage';
+import TermsPage from './app/pages/TermsPage';
+import PricingPage from './app/pages/PricingPage';
+import SolutionsPage from './app/pages/SolutionsPage';
+import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
+import AISolutionsPage from './app/ai-solutions/page';
+import ITSolutionsPage from './app/it-solutions/page';
 
 // Service Pages
-const AIServicesPage = React.lazy(() => import('./app/pages/AIServicesPage'));
-const ITServicesPage = React.lazy(() => import('./app/pages/ITServicesPage'));
-const CloudInfrastructurePage = React.lazy(() => import('./app/pages/CloudInfrastructurePage'));
-const DigitalTransformationPage = React.lazy(() => import('./app/pages/DigitalTransformationPage'));
-const CaseStudiesPage = React.lazy(() => import('./app/pages/CaseStudiesPage'));
-const CareersPage = React.lazy(() => import('./app/pages/CareersPage'));
+import AIServicesPage from './app/pages/AIServicesPage';
+import ITServicesPage from './app/pages/ITServicesPage';
+import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
+import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
+import CaseStudiesPage from './app/pages/CaseStudiesPage';
+import CareersPage from './app/pages/CareersPage';
+
+// Additional Pages
+import CybersecurityPage from './app/pages/CybersecurityPage';
+import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
+import MicroSaaSPage from './app/pages/MicroSaaSPage';
+import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
+import TeamPage from './app/pages/TeamPage';
+import DocumentationPage from './app/pages/DocumentationPage';
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -63,60 +72,79 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
 );
 
 function App() {
+  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+
   return (
-    <HelmetProvider>
-      <ErrorBoundary>
+    <ErrorBoundary>
+      <HelmetProvider>
         <Router>
-          <div className="min-h-screen bg-slate-900">
-            <Navigation />
-            <main className="relative z-10" id="main-content" role="main">
-              <Suspense fallback={<LoadingStates />}>
-                <Routes>
-                  {/* Main Pages */}
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
-                  <Route path="/ai-solutions" element={<AISolutionsPage />} />
-                  <Route path="/it-solutions" element={<ITSolutionsPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/tutorials" element={<TutorialsPage />} />
-                  <Route path="/demo" element={<DemoPage />} />
-                  <Route path="/support" element={<SupportPage />} />
-                  <Route path="/privacy" element={<PrivacyPage />} />
-                  <Route path="/terms" element={<TermsPage />} />
-                  <Route path="/pricing" element={<PricingPage />} />
-                  <Route path="/solutions" element={<SolutionsPage />} />
-                  
-                  {/* Service Pages */}
-                  <Route path="/ai-services" element={<AIServicesPage />} />
-                  <Route path="/it-services" element={<ITServicesPage />} />
-                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-                  <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-                  <Route path="/case-studies" element={<CaseStudiesPage />} />
-                  <Route path="/careers" element={<CareersPage />} />
-                  
-                  {/* Catch all route */}
-                  <Route path="*" element={
-                    <div className="min-h-screen flex items-center justify-center bg-slate-900">
-                      <div className="text-center">
-                        <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                        <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
-                        <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
-                          Go Home
-                        </a>
-                      </div>
-                    </div>
-                  } />
-                </Routes>
-              </Suspense>
-            </main>
-            <Footer />
+          <div className="min-h-screen bg-slate-900 flex">
+            <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+            <div className="flex-1 flex flex-col">
+              <Navigation onSidebarToggle={() => setSidebarOpen(true)} />
+              <main className="relative z-10 flex-1" id="main-content" role="main">
+                <ErrorBoundary>
+                  <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
+                    <Routes>
+                      {/* Main Pages */}
+                      <Route path="/" element={<HomePage />} />
+                      <Route path="/about" element={<AboutPage />} />
+                      <Route path="/contact" element={<ContactPage />} />
+                      <Route path="/services" element={<ServicesPage />} />
+                      <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
+                      <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                      <Route path="/it-solutions" element={<ITSolutionsPage />} />
+                      <Route path="/blog" element={<BlogPage />} />
+                      <Route path="/tutorials" element={<TutorialsPage />} />
+                      <Route path="/demo" element={<DemoPage />} />
+                      <Route path="/support" element={<SupportPage />} />
+                      <Route path="/privacy" element={<PrivacyPage />} />
+                      <Route path="/terms" element={<TermsPage />} />
+                      <Route path="/pricing" element={<PricingPage />} />
+                      <Route path="/solutions" element={<SolutionsPage />} />
+                      
+                      {/* Service Pages */}
+                      <Route path="/ai-services" element={<AIServicesPage />} />
+                      <Route path="/it-services" element={<ITServicesPage />} />
+                      <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                      <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                      <Route path="/case-studies" element={<CaseStudiesPage />} />
+                      <Route path="/careers" element={<CareersPage />} />
+                      
+                      {/* Additional Service Pages */}
+                      <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                      <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
+                      <Route path="/micro-saas" element={<MicroSaaSPage />} />
+                      <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                      
+                      {/* Additional Pages */}
+                      <Route path="/team" element={<TeamPage />} />
+                      <Route path="/docs" element={<DocumentationPage />} />
+                      
+                      {/* Catch all route */}
+                      <Route path="*" element={
+                        <div className="min-h-screen flex items-center justify-center bg-slate-900">
+                          <div className="text-center">
+                            <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
+                            <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
+                            <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
+                              Go Home
+                            </a>
+                          </div>
+                        </div>
+                      } />
+                    </Routes>
+                  </Suspense>
+                </ErrorBoundary>
+              </main>
+              <Footer />
+              <PerformanceMonitor />
+              <AccessibilityEnhancer />
+            </div>
           </div>
         </Router>
-      </ErrorBoundary>
-    </HelmetProvider>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 }
 

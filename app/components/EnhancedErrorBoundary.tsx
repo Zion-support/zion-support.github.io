@@ -43,10 +43,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
-    // Log error to console (only in development)
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+    // Log error to console (commented out for production)
+    // console.error('Error caught by boundary:', error, errorInfo);
 
     // Report error to monitoring service
     this.reportError(error, errorInfo);
@@ -77,10 +75,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           },
           body: JSON.stringify(errorReport),
         });
-      } catch (reportingError) {
-        if (process.env.NODE_ENV !== 'production') {
-          console.warn('Failed to report error:', reportingError);
-        }
+      } catch {
+        // console.warn('Failed to report error:', reportingError);
       }
     }
 
@@ -97,10 +93,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (this.state.retryCount < this.maxRetries) {
       this.setState(prevState => ({
         hasError: false,
-        error: undefined,
-        errorInfo: undefined,
+<<<<<<< HEAD
+        error: undefined as Error | undefined,
+        errorInfo: undefined as ErrorInfo | undefined,
         retryCount: prevState.retryCount + 1
       }));
+=======
+        error: undefined,
+        errorInfo: undefined,
+        retryCount: this.state.retryCount + 1
+      });
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
     }
   };
 

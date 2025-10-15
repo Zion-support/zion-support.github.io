@@ -166,8 +166,11 @@ const MicroSAASPage: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
+=======
   // const categories = ['All', 'Productivity', 'Development', 'Monitoring', 'Automation', 'Marketing', 'Document Management'];
 
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
   const stats = [
     { number: '200+', label: 'Micro SAAS Solutions', icon: Zap },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
