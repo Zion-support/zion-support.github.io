@@ -1,31 +1,41 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
-
-interface State {
+interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string;
+  retryCount: number;
+  isRetrying: boolean;
 }
 
-class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+interface ErrorBoundaryProps {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo, errorId: string) => void;
+  onRetry?: () => void;
+  maxRetries?: number;
+  enableErrorReporting?: boolean;
+  enableRetry?: boolean;
+  enableErrorDetails?: boolean;
+}
+
+class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  private retryTimeout: NodeJS.Timeout | null = null;
+
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: ''
+      errorId: '',
+      retryCount: 0,
+      isRetrying: false
     };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
       error,
@@ -34,176 +44,406 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    const { onError, enableErrorReporting } = this.props;
+    const { errorId } = this.state;
+
     this.setState({
-      error,
-      errorInfo
+      errorInfo,
+      errorId
     });
 
-    // Log error to console (commented out for production)
-    // // Report error to monitoring service
-    this.reportError(error, errorInfo);
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error);
+      console.error('Error info:', errorInfo);
+    }
+
+    // Report error to external service
+    if (enableErrorReporting) {
+      this.reportError(error, errorInfo, errorId);
+    }
 
     // Call custom error handler
-    this.props.onError?.(error, errorInfo);
-    // Log error to monitoring service
-    this.logErrorToService(error, errorInfo);
+    if (onError) {
+      onError(error, errorInfo, errorId);
+    }
   }
 
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    const errorData = {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      errorId: this.state.errorId,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-      userId: this.getUserId()
-    };
+  private reportError = async (error: Error, errorInfo: ErrorInfo, errorId: string) => {
+    try {
+      const errorReport = {
+        errorId,
+        message: error.message,
+        stack: error.stack,
+        componentStack: errorInfo.componentStack,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        url: window.location.href,
+        userId: this.getUserId(),
+        sessionId: this.getSessionId(),
+        retryCount: this.state.retryCount
+      };
 
-    // Report to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      try {
-        await fetch('/api/errors', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(errorReport),
-        });
-      } catch {
-        // }
+      // Send to error reporting service
+      await fetch('/api/error-report', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(errorReport)
+      });
+    } catch (reportingError) {
+      console.warn('Failed to report error:', reportingError);
     }
-    // Send to error monitoring service (Sentry, LogRocket, etc.)
-    // You can integrate with services like Sentry here
-    // Sentry.captureException(error, { extra: errorData });
   };
 
-  getUserId = () => {
-    // Get user ID from your auth context or localStorage
-    return localStorage.getItem('userId') || 'anonymous';
+  private getUserId = (): string | null => {
+    // Try to get user ID from various sources
+    const userId = localStorage.getItem('userId') || 
+                   sessionStorage.getItem('userId') || 
+                   document.cookie.split(';').find(c => c.trim().startsWith('userId='))?.split('=')[1];
+    return userId || null;
   };
 
-  handleRetry = () => {
-    if (this.state.retryCount < this.maxRetries) {
-      this.setState(prevState => ({
+  private getSessionId = (): string => {
+    let sessionId = sessionStorage.getItem('sessionId');
+    if (!sessionId) {
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      sessionStorage.setItem('sessionId', sessionId);
+    }
+    return sessionId;
+  };
+
+  private handleRetry = () => {
+    const { onRetry, maxRetries = 3 } = this.props;
+    const { retryCount } = this.state;
+
+    if (retryCount >= maxRetries) {
+      console.warn('Maximum retry attempts reached');
+      return;
+    }
+
+    this.setState({ isRetrying: true });
+
+    // Call custom retry handler
+    if (onRetry) {
+      onRetry();
+    }
+
+    // Reset error state after a short delay
+    this.retryTimeout = setTimeout(() => {
+      this.setState({
         hasError: false,
-        error: undefined as Error | undefined,
-        errorInfo: undefined as ErrorInfo | undefined,
-        retryCount: prevState.retryCount + 1
-      }));
-        error: undefined,
-        errorInfo: undefined,
-        retryCount: prevState.retryCount + 1
-      }));
-    }
+        error: null,
+        errorInfo: null,
+        errorId: '',
+        retryCount: retryCount + 1,
+        isRetrying: false
+      });
+    }, 1000);
   };
 
-  handleReset = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
-    });
-  };
-
-  handleReload = () => {
+  private handleReload = () => {
     window.location.reload();
   };
 
+  private handleGoHome = () => {
+    window.location.href = '/';
+  };
+
+  private handleReportIssue = () => {
+    const { error, errorId } = this.state;
+    const issueData = {
+      errorId,
+      message: error?.message,
+      stack: error?.stack,
+      url: window.location.href,
+      userAgent: navigator.userAgent,
+      timestamp: new Date().toISOString()
+    };
+
+    // Open issue reporting page with pre-filled data
+    const params = new URLSearchParams(issueData);
+    window.open(`/report?${params.toString()}`, '_blank');
+  };
+
+  componentWillUnmount() {
+    if (this.retryTimeout) {
+      clearTimeout(this.retryTimeout);
+    }
+  }
+
   render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
+    const { hasError, error, errorInfo, errorId, retryCount, isRetrying } = this.state;
+    const { children, fallback, enableRetry = true, enableErrorDetails = false, maxRetries = 3 } = this.props;
+
+    if (hasError) {
+      // Use custom fallback if provided
+      if (fallback) {
+        return fallback;
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
-            </div>
-
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-            
-            <p className="text-gray-300 mb-6 text-lg">
-              We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+        <div className="error-boundary">
+          <div className="error-container">
+            <div className="error-icon">⚠️</div>
+            <h1 className="error-title">Something went wrong</h1>
+            <p className="error-message">
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="text-cyan-400 cursor-pointer mb-2">
-                  Error Details (Development)
-                </summary>
-                <div className="bg-gray-800/50 rounded p-4 text-sm text-gray-300 overflow-auto max-h-40">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                  <div className="mb-2">
-                    <strong>Stack:</strong>
-                    <pre className="whitespace-pre-wrap text-xs mt-1">
-                      {this.state.error.stack}
-                    </pre>
-                  </div>
-                  {this.state.errorInfo && (
-                    <div>
-                      <strong>Component Stack:</strong>
-                      <pre className="whitespace-pre-wrap text-xs mt-1">
-                        {this.state.errorInfo.componentStack}
-                      </pre>
-                    </div>
+            {enableErrorDetails && (
+              <details className="error-details">
+                <summary>Error Details</summary>
+                <div className="error-details-content">
+                  <p><strong>Error ID:</strong> {errorId}</p>
+                  <p><strong>Error Message:</strong> {error?.message}</p>
+                  <p><strong>Retry Count:</strong> {retryCount}/{maxRetries}</p>
+                  {process.env.NODE_ENV === 'development' && (
+                    <>
+                      <p><strong>Stack Trace:</strong></p>
+                      <pre className="error-stack">{error?.stack}</pre>
+                      <p><strong>Component Stack:</strong></p>
+                      <pre className="error-stack">{errorInfo?.componentStack}</pre>
+                    </>
                   )}
                 </div>
               </details>
             )}
 
-            <div className="space-y-3">
+            <div className="error-actions">
+              {enableRetry && retryCount < maxRetries && (
+                <button
+                  className="error-button retry-button"
+                  onClick={this.handleRetry}
+                  disabled={isRetrying}
+                >
+                  {isRetrying ? 'Retrying...' : 'Try Again'}
+                </button>
+              )}
+              
               <button
-                onClick={this.handleRetry}
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                <RefreshCw className="w-5 h-5 mr-2" />
-                Try Again
-              </button>
-
-              <button
+                className="error-button reload-button"
                 onClick={this.handleReload}
-                className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
               >
-                <RefreshCw className="w-5 h-5 mr-2" />
                 Reload Page
               </button>
-
-              <Link
-                to="/"
-                className="w-full border border-gray-400 text-gray-400 px-6 py-3 rounded-lg font-semibold hover:bg-gray-400 hover:text-white transition-all duration-300 flex items-center justify-center"
+              
+              <button
+                className="error-button home-button"
+                onClick={this.handleGoHome}
               >
-                <Home className="w-5 h-5 mr-2" />
                 Go Home
-              </Link>
+              </button>
+              
+              <button
+                className="error-button report-button"
+                onClick={this.handleReportIssue}
+              >
+                Report Issue
+              </button>
             </div>
 
-            <div className="mt-6 pt-6 border-t border-white/20">
-              <p className="text-sm text-gray-400 mb-2">
-                Still having trouble? Contact our support team.
+            <div className="error-help">
+              <p>If this problem persists, please contact our support team:</p>
+              <p>
+                <a href="mailto:support@ziontechgroup.com">support@ziontechgroup.com</a> | 
+                <a href="tel:+13024640950">+1 (302) 464-0950</a>
               </p>
-              <a
-                href="mailto:support@ziontechgroup.com"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm"
-              >
-                <Mail className="w-4 h-4 mr-1" />
-                support@ziontechgroup.com
-              </a>
             </div>
           </div>
+
+          <style jsx>{`
+            .error-boundary {
+              min-height: 100vh;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              padding: 20px;
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            }
+
+            .error-container {
+              background: white;
+              border-radius: 12px;
+              padding: 40px;
+              max-width: 600px;
+              width: 100%;
+              box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+              text-align: center;
+            }
+
+            .error-icon {
+              font-size: 64px;
+              margin-bottom: 20px;
+            }
+
+            .error-title {
+              color: #1f2937;
+              font-size: 32px;
+              font-weight: 700;
+              margin: 0 0 16px 0;
+            }
+
+            .error-message {
+              color: #6b7280;
+              font-size: 18px;
+              line-height: 1.6;
+              margin: 0 0 30px 0;
+            }
+
+            .error-details {
+              margin: 20px 0;
+              text-align: left;
+            }
+
+            .error-details summary {
+              cursor: pointer;
+              font-weight: 600;
+              color: #374151;
+              padding: 10px;
+              background: #f3f4f6;
+              border-radius: 6px;
+              margin-bottom: 10px;
+            }
+
+            .error-details-content {
+              background: #f9fafb;
+              padding: 15px;
+              border-radius: 6px;
+              border: 1px solid #e5e7eb;
+            }
+
+            .error-details-content p {
+              margin: 8px 0;
+              color: #374151;
+            }
+
+            .error-stack {
+              background: #1f2937;
+              color: #f9fafb;
+              padding: 15px;
+              border-radius: 6px;
+              overflow-x: auto;
+              font-size: 12px;
+              line-height: 1.4;
+              margin: 10px 0;
+            }
+
+            .error-actions {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 12px;
+              justify-content: center;
+              margin: 30px 0;
+            }
+
+            .error-button {
+              padding: 12px 24px;
+              border: none;
+              border-radius: 8px;
+              font-size: 16px;
+              font-weight: 600;
+              cursor: pointer;
+              transition: all 0.2s ease;
+              text-decoration: none;
+              display: inline-block;
+            }
+
+            .retry-button {
+              background: #3b82f6;
+              color: white;
+            }
+
+            .retry-button:hover:not(:disabled) {
+              background: #2563eb;
+              transform: translateY(-2px);
+            }
+
+            .retry-button:disabled {
+              background: #9ca3af;
+              cursor: not-allowed;
+            }
+
+            .reload-button {
+              background: #10b981;
+              color: white;
+            }
+
+            .reload-button:hover {
+              background: #059669;
+              transform: translateY(-2px);
+            }
+
+            .home-button {
+              background: #6b7280;
+              color: white;
+            }
+
+            .home-button:hover {
+              background: #4b5563;
+              transform: translateY(-2px);
+            }
+
+            .report-button {
+              background: #f59e0b;
+              color: white;
+            }
+
+            .report-button:hover {
+              background: #d97706;
+              transform: translateY(-2px);
+            }
+
+            .error-help {
+              margin-top: 30px;
+              padding-top: 20px;
+              border-top: 1px solid #e5e7eb;
+              color: #6b7280;
+            }
+
+            .error-help p {
+              margin: 8px 0;
+            }
+
+            .error-help a {
+              color: #3b82f6;
+              text-decoration: none;
+              font-weight: 600;
+            }
+
+            .error-help a:hover {
+              text-decoration: underline;
+            }
+
+            @media (max-width: 640px) {
+              .error-container {
+                padding: 20px;
+              }
+
+              .error-title {
+                font-size: 24px;
+              }
+
+              .error-message {
+                font-size: 16px;
+              }
+
+              .error-actions {
+                flex-direction: column;
+              }
+
+              .error-button {
+                width: 100%;
+              }
+            }
+          `}</style>
         </div>
       );
     }
 
-    return this.props.children;
+    return children;
   }
 }
 
