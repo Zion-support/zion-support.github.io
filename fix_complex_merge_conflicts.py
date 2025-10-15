@@ -20,12 +20,12 @@ def resolve_complex_merge_conflicts(file_path):
         return False
     
     # Check if file has merge conflicts
-    if '.*?
+    if '.*?>>>>>>> [^\n]*'
     
     def resolve_conflict(match):
         conflict_text = match.group(0)
         
-        # Split by to get HEAD and other versions
+        # Split by  to get HEAD and other versions
         parts = conflict_text.split('')
         if len(parts) != 2:
             return conflict_text  # Return original if malformed
