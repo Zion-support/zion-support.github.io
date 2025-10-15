@@ -41,9 +41,9 @@ const FiveGSmartCitySolutionsPage = lazy()
 )
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"))
 // Main App Component
-function App() {}
-}return ()
-    <HelmetProvider></Helmet>
+function App() {
+  return (
+    <HelmetProvider>
       <BrowserRouter>
         <ErrorBoundary>
           <PerformanceMonitor />

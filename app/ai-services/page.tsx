@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Code, Database, Users, DollarSign, Globe, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Eye, Heart, Award, Mic, Video, Image, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -827,10 +826,46 @@ export default function AIServices() {
       color: "from-teal-500 to-cyan-500"
     }
   ];
-=======
-import React from 'react';
-import SEOHead from '../components/SEOHead';
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
+
+  return (
+    <>
+      <Helmet>
+        <title>AI Services - Advanced AI Solutions | Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and predictive analytics for business transformation." />
+        <meta name="keywords" content="AI services, machine learning, NLP, computer vision, predictive analytics, AI consulting, artificial intelligence" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Services
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive AI solutions to transform your business with cutting-edge artificial intelligence technologies.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {aiServices.map((service) => (
+              <div key={service.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${service.color} mb-4`}>
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <div className="text-2xl font-bold text-white mb-4">{service.price}</div>
+                <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
 
 const AiServicesPage: React.FC = () => {
   return (

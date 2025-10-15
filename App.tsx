@@ -45,35 +45,15 @@ import AIClimatePredictionEnginePage from './app/ai-climate-prediction-engine/pa
 import AICybersecuritySuiteProPage from './app/ai-cybersecurity-suite-pro/page';
 
 // Additional Pages
-<<<<<<< HEAD
 import CybersecurityPage from './app/cybersecurity/page';
 import CloudSolutionsPage from './app/cloud-services/page';
 import MicroSaaSPage from './app/micro-saas-solutions/page';
 import FiveGSolutionsPage from './app/5g-solutions/page';
 import TeamPage from './app/team/page';
 import DocumentationPage from './app/docs/page';
-=======
-import CybersecurityPage from './app/pages/CybersecurityPage';
-import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
-import MicroSaaSPage from './app/pages/MicroSaaSPage';
-import FiveGSolutionsPage from './app/5g-solutions/page';
-import TeamPage from './app/pages/TeamPage';
-import DocumentationPage from './app/pages/DocumentationPage';
-<<<<<<< HEAD
-import PartnershipsPage from './app/pages/PartnershipsPage';
-import APIDocsPage from './app/pages/APIDocsPage';
-import HelpPage from './app/pages/HelpPage';
-import CommunityPage from './app/pages/CommunityPage';
-import ChatPage from './app/pages/ChatPage';
-import StatusPage from './app/pages/StatusPage';
-import ReportPage from './app/pages/ReportPage';
-import SoftwareDevelopmentPage from './app/pages/SoftwareDevelopmentPage';
-=======
 import PartnershipsPage from './app/partnerships/page';
 import ChatPage from './app/chat/page';
 import ReportPage from './app/report/page';
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
->>>>>>> 4322005aab0ef7243ec1380fa17dedddf01c149e
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -168,18 +148,8 @@ function App() {
                       <Route path="/team" element={<TeamPage />} />
                       <Route path="/docs" element={<DocumentationPage />} />
                       <Route path="/partnerships" element={<PartnershipsPage />} />
-<<<<<<< HEAD
-                      <Route path="/api-docs" element={<APIDocsPage />} />
-                      <Route path="/help" element={<HelpPage />} />
-                      <Route path="/community" element={<CommunityPage />} />
-                      <Route path="/chat" element={<ChatPage />} />
-                      <Route path="/status" element={<StatusPage />} />
-                      <Route path="/report" element={<ReportPage />} />
-                      <Route path="/software-development" element={<SoftwareDevelopmentPage />} />
-=======
                       <Route path="/chat" element={<ChatPage />} />
                       <Route path="/report" element={<ReportPage />} />
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
                       
                       {/* Catch all route */}
                       <Route path="*" element={
