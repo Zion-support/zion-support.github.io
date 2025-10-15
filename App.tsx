@@ -135,6 +135,13 @@ const ZionSmartCRMAutomationPage = lazy(() => import('./app/zion-smart-crm-autom
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
 const ZionSmartInventoryManagerPage = lazy(() => import('./app/zion-smart-inventory-manager/page'));
 
+// New Micro SAAS Services
+const AIProjectManagerPage = lazy(() => import('./app/ai-project-manager/page'));
+const AIInvoiceGeneratorPage = lazy(() => import('./app/ai-invoice-generator/page'));
+const AIHRAssistantPage = lazy(() => import('./app/ai-hr-assistant/page'));
+const AISocialMediaAnalyzerPage = lazy(() => import('./app/ai-social-media-analyzer/page'));
+const AIEmailMarketingAutomationPage = lazy(() => import('./app/ai-email-marketing-automation/page'));
+
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -342,6 +349,13 @@ function App() {
                     <Route path="/zion-smart-crm-automation" element={<ZionSmartCRMAutomationPage />} />
                     <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
                     <Route path="/zion-smart-inventory-manager" element={<ZionSmartInventoryManagerPage />} />
+                    
+                    {/* New Micro SAAS Services */}
+                    <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
+                    <Route path="/ai-invoice-generator" element={<AIInvoiceGeneratorPage />} />
+                    <Route path="/ai-hr-assistant" element={<AIHRAssistantPage />} />
+                    <Route path="/ai-social-media-analyzer" element={<AISocialMediaAnalyzerPage />} />
+                    <Route path="/ai-email-marketing-automation" element={<AIEmailMarketingAutomationPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
