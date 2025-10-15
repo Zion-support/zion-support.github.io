@@ -20,7 +20,6 @@ export interface Service {
   };
 }
 
-<<<<<<< HEAD
 export const servicesData: Service[] = [
   {
     id: 'ai-development',
@@ -38,9 +37,9 @@ export const servicesData: Service[] = [
     useCases: ['Automation', 'Predictive analytics', 'Customer service'],
     technologies: ['Python', 'TensorFlow', 'PyTorch'],
     contactInfo: {
-      phone: '+1-555-0123',
-      email: 'ai@ziontech.com',
-      website: 'https://ziontech.com'
+      phone: '+1-302-464-0950',
+      email: 'info@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
     }
   },
   {
@@ -59,30 +58,6 @@ export const servicesData: Service[] = [
     useCases: ['E-commerce', 'Business websites', 'Web applications'],
     technologies: ['React', 'Next.js', 'TypeScript'],
     contactInfo: {
-      phone: '+1-555-0124',
-      email: 'web@ziontech.com',
-      website: 'https://ziontech.com'
-    }
-  }
-];
-=======
-export const services: Service[] = [
-  {
-    id: 'ai-solutions',
-    title: 'AI Solutions',
-    description: 'Comprehensive AI solutions for modern businesses',
-    shortDescription: 'AI-powered solutions',
-    icon: '🤖',
-    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision'],
-    pricing: {
-      basic: 5000,
-      pro: 15000,
-      enterprise: 50000
-    },
-    benefits: ['Increased Efficiency', 'Cost Reduction', 'Better Decision Making'],
-    useCases: ['Automation', 'Analytics', 'Customer Service'],
-    technologies: ['Python', 'TensorFlow', 'PyTorch'],
-    contactInfo: {
       phone: '+1-302-464-0950',
       email: 'info@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
@@ -90,5 +65,4 @@ export const services: Service[] = [
   }
 ];
 
-export default services;
->>>>>>> cursor/fix-errors-and-merge-to-main-0d53
+export default servicesData;
