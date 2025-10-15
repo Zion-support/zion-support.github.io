@@ -140,11 +140,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
       icon: DocumentTextIcon,
       submenu: [
         { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
-        { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
-        { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },
         { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
         { name: 'API Documentation', href: '/api-docs', icon: CodeBracketIcon },
-        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }
+        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon },
+        { name: 'Accessibility', href: '/accessibility', icon: ShieldCheckIcon }
       ]
     },
     {
