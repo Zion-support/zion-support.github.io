@@ -12,8 +12,9 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', readTime: '5 min' },
         { title: 'Installation Guide', description: 'Step-by-step installation instructions', readTime: '10 min' },
-        { title: 'Configuration', description: 'Configure your services and settings', readTime: '15 min' }]
-        { title: 'First Steps', description: 'Your first project with our platform', readTime: '20 min' }]
+        { title: 'Configuration', description: 'Configure your services and settings', readTime: '15 min' },
+        { title: 'First Steps', description: 'Your first project with our platform', readTime: '20 min' }
+      ]
     },
     {
       title: 'API Documentation',
@@ -22,8 +23,9 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'API Overview', description: 'Introduction to our REST API', readTime: '10 min' },
         { title: 'Authentication', description: 'API keys and authentication methods', readTime: '8 min' },
-        { title: 'Rate Limits', description: 'Understanding API rate limits', readTime: '5 min' }]
-        { title: 'Error Handling', description: 'Common errors and how to handle them', readTime: '12 min' }]
+        { title: 'Rate Limits', description: 'Understanding API rate limits', readTime: '5 min' },
+        { title: 'Error Handling', description: 'Common errors and how to handle them', readTime: '12 min' }
+      ]
     },
     {
       title: 'AI Services',
@@ -32,8 +34,9 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'AI Analytics', description: 'Using our AI analytics platform', readTime: '25 min' },
         { title: 'Content Generation', description: 'AI-powered content creation tools', readTime: '20 min' },
-        { title: 'Machine Learning', description: 'ML model training and deployment', readTime: '30 min' }]
-        { title: 'Natural Language Processing', description: 'NLP services and capabilities', readTime: '18 min' }]
+        { title: 'Machine Learning', description: 'ML model training and deployment', readTime: '30 min' },
+        { title: 'Natural Language Processing', description: 'NLP services and capabilities', readTime: '18 min' }
+      ]
     },
     {
       title: 'Cloud Services',
@@ -42,8 +45,9 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'Cloud Migration', description: 'Migrating to our cloud platform', readTime: '45 min' },
         { title: 'Container Services', description: 'Docker and Kubernetes deployment', readTime: '35 min' },
-        { title: 'Database Management', description: 'Managing databases in the cloud', readTime: '25 min' }]
-        { title: 'Monitoring & Logging', description: 'System monitoring and log analysis', readTime: '20 min' }]
+        { title: 'Database Management', description: 'Managing databases in the cloud', readTime: '25 min' },
+        { title: 'Monitoring & Logging', description: 'System monitoring and log analysis', readTime: '20 min' }
+      ]
     },
     {
       title: 'Security',
@@ -52,8 +56,9 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'Security Overview', description: 'Our security measures and protocols', readTime: '15 min' },
         { title: 'Data Protection', description: 'Protecting sensitive data and privacy', readTime: '20 min' },
-        { title: 'Compliance', description: 'SOC 2, GDPR, and other compliance standards', readTime: '30 min' }]
-        { title: 'Access Control', description: 'User permissions and access management', readTime: '12 min' }]
+        { title: 'Compliance', description: 'SOC 2, GDPR, and other compliance standards', readTime: '30 min' },
+        { title: 'Access Control', description: 'User permissions and access management', readTime: '12 min' }
+      ]
     },
     {
       title: 'Tutorials',
@@ -62,8 +67,9 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'Building Your First App', description: 'Complete tutorial for beginners', readTime: '60 min' },
         { title: 'Advanced Features', description: 'Exploring advanced platform features', readTime: '45 min' },
-        { title: 'Integration Examples', description: 'Real-world integration examples', readTime: '40 min' }]
-        { title: 'Best Practices', description: 'Industry best practices and tips', readTime: '25 min' }]
+        { title: 'Integration Examples', description: 'Real-world integration examples', readTime: '40 min' },
+        { title: 'Best Practices', description: 'Industry best practices and tips', readTime: '25 min' }
+      ]
     }
   ];
 
@@ -119,10 +125,10 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
         <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
                 <button
-    const key = {category} className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+                  key={category} className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
                     category === 'All'
                       ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800/50 text-gray-300 hover: bg-cyan-500/20 hover:text-cyan-400'
+                      : 'bg-slate-800/50 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400'
                   }`}
                 >
                   {category}
@@ -156,7 +162,7 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
         <div className="space-y-3">
                     {section.articles.map((article, articleIndex) => (
                       <a
-    const key = {articleIndex} href={`/docs/${section.title.toLowerCase().replace(/\s+/g, '-')}/${article.title.toLowerCase().replace(/\s+/g, '-')}`}
+                        key={articleIndex} href={`/docs/${section.title.toLowerCase().replace(/\s+/g, '-')}/${article.title.toLowerCase().replace(/\s+/g, '-')}`}
                         className="block p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors group"
                       >
                         
@@ -196,7 +202,7 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {popularArticles.map((article, index) => (
                 <a
-    const key = {index} href={`/docs/${article.category.toLowerCase().replace(/\s+/g, '-')}/${article.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  key={index} href={`/docs/${article.category.toLowerCase().replace(/\s+/g, '-')}/${article.title.toLowerCase().replace(/\s+/g, '-')}`}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group"
                 >
                   
@@ -301,8 +307,7 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
               </a>
             </div>
           </div>
-        </div>
-        <Footer />
+        </section>
       </div>
     </>
   );

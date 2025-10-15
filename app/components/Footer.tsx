@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
     { name: 'Documentation', path: '/docs' },
     { name: 'API Reference', path: '/api-docs' },
     { name: 'System Status', path: '/status' },
-    { name: 'Report Issue', path: '/support' }
+    { name: 'Contact Support', path: '/contact' }
   ];
 
   return (

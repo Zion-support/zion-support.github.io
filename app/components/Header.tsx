@@ -41,6 +41,16 @@ const Header: React.FC = memo(() => {
         { name: 'News & Updates', path: '/news' }
       ]
     },
+    { 
+      name: 'Resources', 
+      path: '#',
+      dropdown: [
+        { name: 'Documentation', path: '/docs' },
+        { name: 'API Reference', path: '/api-docs' },
+        { name: 'Help Center', path: '/help' },
+        { name: 'System Status', path: '/status' }
+      ]
+    },
     { name: 'Contact', path: '/contact' }
   ];
 
