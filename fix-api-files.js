@@ -1,19 +1,19 @@
 import React from 'react';
 
-interface pageProps {
+interface fix-api-filesProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const page: React.FC<pageProps> = ({ 
+const fix-api-files: React.FC<fix-api-filesProps> = ({ 
   className = '', 
   children 
 }) => {
   return (
-    <div className={`page ${className}`}>
+    <div className={`fix-api-files ${className}`}>
       {children}
     </div>
   );
 };
 
-export default page;
+export default fix-api-files;

@@ -1,19 +1,19 @@
 import React from 'react';
 
-interface pageProps {
+interface fix-app-pagesProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const page: React.FC<pageProps> = ({ 
+const fix-app-pages: React.FC<fix-app-pagesProps> = ({ 
   className = '', 
   children 
 }) => {
   return (
-    <div className={`page ${className}`}>
+    <div className={`fix-app-pages ${className}`}>
       {children}
     </div>
   );
 };
 
-export default page;
+export default fix-app-pages;
