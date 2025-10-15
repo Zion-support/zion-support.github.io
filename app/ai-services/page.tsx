@@ -679,9 +679,8 @@ export default function AIServices() {
       applications: ["Voice assistants", "Call centers", "Accessibility", "Interactive systems"],
       price: "Starting at $1,599/month",
       benefits: ["99% speech accuracy", "Natural voice synthesis", "Real-time processing", "Multi-language support"]
-    },
-    {
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
+      },
+      {
       name: "AI Blockchain Solutions",
       description: "Intelligent blockchain applications with AI-powered smart contracts and analytics.",
       features: ["Smart contracts", "DeFi analytics", "NFT generation", "Blockchain monitoring", "Cryptocurrency analysis", "Risk assessment"],
@@ -689,10 +688,9 @@ export default function AIServices() {
       applications: ["DeFi platforms", "NFT marketplaces", "Cryptocurrency trading", "Supply chain tracking"],
       price: "Starting at $3,999/month",
       benefits: ["Automated smart contracts", "Real-time blockchain analysis", "Fraud detection", "Optimized transactions"]
-<<<<<<< HEAD
-    }  ];
-=======
-      id: "ai-time-series-forecasting",
+      },
+      {
+        id: "ai-time-series-forecasting",
       name: "AI Time Series Forecasting",
       description: "Advanced time series analysis with forecasting, trend detection, and seasonal pattern recognition",
       price: "From $1,500/month",
@@ -750,7 +748,6 @@ export default function AIServices() {
       featured: false
     }
   ];
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
   const categories = [
     { name: "All", count: aiServices.length, active: true },
@@ -804,8 +801,6 @@ export default function AIServices() {
       content: "AI Content Generation Pro has transformed our content strategy. We're producing 20x more content with better quality and higher engagement rates.",
       rating: 5,
       avatar: "EW"
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
     }
   ];
 

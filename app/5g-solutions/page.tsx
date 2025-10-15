@@ -186,4 +186,6 @@ const FiveGSolutionsPage: React.FC = () => {
       </div>
     </>
   );
-}
+};
+
+export default FiveGSolutionsPage;
