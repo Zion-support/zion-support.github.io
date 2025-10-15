@@ -95,50 +95,59 @@ const Header: React.FC = () => {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20 shadow-2xl' 
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' 
         : 'bg-transparent'
     }`}>
       {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-2 px-4">
-        <div className="container mx-auto flex justify-between items-center text-sm">
+      <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-cyan-600 text-white py-2 px-4 relative overflow-hidden">
+        {/* Animated background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20 animate-pulse"></div>
+        <div className="container mx-auto flex justify-between items-center text-sm relative z-10">
           <div className="flex items-center space-x-6">
-            <div className="flex items-center space-x-2">
-              <Phone className="w-4 h-4" />
-              <span>+1 302 464 0950</span>
+            <div className="flex items-center space-x-2 group hover:text-cyan-200 transition-colors duration-300">
+              <Phone className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+              <a href="tel:+13024640950" className="hover:text-cyan-200 transition-colors duration-300">+1 302 464 0950</a>
             </div>
-            <div className="flex items-center space-x-2">
-              <Mail className="w-4 h-4" />
-              <span>kleber@ziontechgroup.com</span>
+            <div className="flex items-center space-x-2 group hover:text-cyan-200 transition-colors duration-300">
+              <Mail className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+              <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-200 transition-colors duration-300">kleber@ziontechgroup.com</a>
             </div>
-            <div className="flex items-center space-x-2">
-              <MapPin className="w-4 h-4" />
+            <div className="flex items-center space-x-2 group hover:text-cyan-200 transition-colors duration-300">
+              <MapPin className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-4">
-            <span className="text-cyan-200">24/7 Support Available</span>
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <span className="text-cyan-200 font-medium">24/7 Support Available</span>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="text-green-300 text-xs font-medium">LIVE</span>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Main Navigation */}
-      <nav className="bg-slate-900/90 backdrop-blur-md border-b border-cyan-500/20">
-        <div className="container mx-auto px-4">
+      <nav className="bg-slate-900/90 backdrop-blur-md border-b border-cyan-500/20 relative">
+        {/* Animated background glow */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-cyan-500/5 opacity-50"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Zap className="w-6 h-6 text-white" />
+            <Link to="/" className="flex items-center space-x-2 group relative">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25 group-hover:shadow-cyan-500/40">
+                <Zap className="w-6 h-6 text-white group-hover:animate-pulse" />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
                   Zion Tech Group
                 </span>
-                <span className="text-xs text-cyan-400 -mt-1">Advanced AI & IT Solutions</span>
+                <span className="text-xs text-cyan-400 -mt-1 group-hover:text-cyan-300 transition-colors duration-300">Advanced AI & IT Solutions</span>
               </div>
+              {/* Hover glow effect */}
+              <div className="absolute -inset-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
             </Link>
 
             {/* Desktop Navigation */}
@@ -147,7 +156,7 @@ const Header: React.FC = () => {
                 <div key={item.name} className="relative group">
                   <Link
                     to={item.href}
-                    className={`flex items-center space-x-1 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    className={`flex items-center space-x-1 px-4 py-2 rounded-lg transition-all duration-300 relative group ${
                       isActive(item.href)
                         ? 'bg-cyan-600 text-white shadow-lg shadow-cyan-500/25'
                         : 'text-gray-300 hover:text-white hover:bg-slate-800/50'
@@ -155,9 +164,15 @@ const Header: React.FC = () => {
                     onMouseEnter={() => setActiveDropdown(item.dropdown ? item.name : null)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
-                    {item.icon}
-                    <span className="font-medium">{item.name}</span>
-                    {item.dropdown && <ChevronDown className="w-4 h-4" />}
+                    <div className="flex items-center space-x-1">
+                      <div className="group-hover:scale-110 transition-transform duration-300">
+                        {item.icon}
+                      </div>
+                      <span className="font-medium">{item.name}</span>
+                      {item.dropdown && <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />}
+                    </div>
+                    {/* Hover glow effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </Link>
 
                   {/* Dropdown Menu */}
@@ -167,15 +182,19 @@ const Header: React.FC = () => {
                         ? 'opacity-100 visible translate-y-0' 
                         : 'opacity-0 invisible translate-y-2'
                     }`}>
-                      <div className="py-2">
+                      {/* Animated background */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-cyan-500/5 rounded-lg"></div>
+                      <div className="py-2 relative z-10">
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
                             to={dropdownItem.href}
-                            className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors duration-200"
+                            className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-slate-700/50 transition-all duration-200 group relative"
                           >
-                            <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                            <span className="text-sm">{dropdownItem.name}</span>
+                            <div className="w-2 h-2 bg-cyan-500 rounded-full group-hover:scale-125 transition-transform duration-200"></div>
+                            <span className="text-sm group-hover:text-cyan-300 transition-colors duration-200">{dropdownItem.name}</span>
+                            {/* Hover glow effect */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                           </Link>
                         ))}
                       </div>
@@ -187,8 +206,9 @@ const Header: React.FC = () => {
 
             {/* CTA Button */}
             <div className="hidden lg:flex items-center space-x-4">
-              <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
-                Get Quote
+              <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 relative group overflow-hidden">
+                <span className="relative z-10">Get Quote</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
             </div>
 
@@ -203,24 +223,28 @@ const Header: React.FC = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`lg:hidden transition-all duration-300 ${
+        <div className={`lg:hidden transition-all duration-500 ${
           isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
-          <div className="bg-slate-800/95 backdrop-blur-md border-t border-cyan-500/20">
-            <div className="container mx-auto px-4 py-4 space-y-2">
+          <div className="bg-slate-800/95 backdrop-blur-md border-t border-cyan-500/20 relative">
+            {/* Animated background */}
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-cyan-500/5"></div>
+            <div className="container mx-auto px-4 py-4 space-y-2 relative z-10">
               {navigationItems.map((item) => (
                 <div key={item.name}>
                   <Link
                     to={item.href}
-                    className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
+                    className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-300 group ${
                       isActive(item.href)
-                        ? 'bg-cyan-600 text-white'
+                        ? 'bg-cyan-600 text-white shadow-lg shadow-cyan-500/25'
                         : 'text-gray-300 hover:text-white hover:bg-slate-700/50'
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    {item.icon}
-                    <span className="font-medium">{item.name}</span>
+                    <div className="group-hover:scale-110 transition-transform duration-300">
+                      {item.icon}
+                    </div>
+                    <span className="font-medium group-hover:text-cyan-300 transition-colors duration-300">{item.name}</span>
                   </Link>
                   {item.dropdown && (
                     <div className="ml-8 space-y-1">
@@ -228,11 +252,11 @@ const Header: React.FC = () => {
                         <Link
                           key={dropdownItem.name}
                           to={dropdownItem.href}
-                          className="flex items-center space-x-3 px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/30 rounded-lg transition-colors"
+                          className="flex items-center space-x-3 px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/30 rounded-lg transition-all duration-300 group"
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full"></div>
-                          <span>{dropdownItem.name}</span>
+                          <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full group-hover:scale-125 transition-transform duration-200"></div>
+                          <span className="group-hover:text-cyan-300 transition-colors duration-200">{dropdownItem.name}</span>
                         </Link>
                       ))}
                     </div>
@@ -240,8 +264,9 @@ const Header: React.FC = () => {
                 </div>
               ))}
               <div className="pt-4 border-t border-cyan-500/20">
-                <button className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300">
-                  Get Quote
+                <button className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 relative group overflow-hidden">
+                  <span className="relative z-10">Get Quote</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
               </div>
             </div>
