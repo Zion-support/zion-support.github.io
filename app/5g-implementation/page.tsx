@@ -59,8 +59,8 @@ const pricingPlans = [
         "Up to 100 devices",
         "Standard support",
         "Basic analytics",
-        "Email support",]
-        "1 year warranty"]
+        "Email support",
+        "1 year warranty"
       ],
       popular: false },
     { name: "Enterprise",

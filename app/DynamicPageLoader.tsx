@@ -38,8 +38,8 @@ const DynamicPageLoader = () => {
       features: [
         "Basic features",
         "Email support",
-        "1 user account",]
-        "Standard templates"]
+        "1 user account",
+        "Standard templates"
       ],
       popular: false
     },
