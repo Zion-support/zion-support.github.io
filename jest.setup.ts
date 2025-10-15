@@ -72,6 +72,7 @@ if (typeof window.IntersectionObserver === 'undefined') {
 
 // Polyfill performance.getEntriesByType for JSDOM (used in productionLogger)
 if (typeof performance.getEntriesByType !== 'function') {
+  // @ts-expect-error - Mock implementation for testing
   performance.getEntriesByType = () => [];
 }
 
