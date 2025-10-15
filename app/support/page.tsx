@@ -1,30 +1,114 @@
-import { import React, { useState, useEffect, memo, lazy, Suspense } from "react";
-import { Helmet } from "react-helmet-async"; HelpCircle, Mail, Phone } from 'lucide-react'; interface FAQ { question: string; answer: string; category: string; } const SupportPage: React.FC = () => { const [searchTerm, setSearchTerm] = useState(""); const [selectedCategory, setSelectedCategory] = useState("all"); const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null); const resources = [ { title: "Documentation", description: "Comprehensive guides and API references", icon: BookOpen, link: "/docs", }, { title: "Community Forum", description: "Connect with other users and experts", icon: Users, link: "/community", }, { title: "Video Tutorials", description: "Step-by-step video guides", icon: Zap, link: "/tutorials", }, ]; const faqs: FAQ[] = [ { question: "How do I get started with your AI solutions?", answer: "Contact our team for a free consultation where we'll assess your needs and recommend the best AI solutions for your business. We'll guide you through the entire process from planning to implementation.", category: "general", }, { question: "What support do you provide after implementation?", answer: "We provide 24/7 technical support, regular maintenance, updates, and ongoing optimization to ensure your systems run smoothly. Our support includes monitoring, troubleshooting, and performance optimization.", category: "support", }, { question: "How long does implementation typically take?", answer: "Implementation time varies based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise systems may take 3-6 months. We provide detailed timelines during the planning phase.", category: "implementation", }, { question: "Do you offer training for our team?", answer: "Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions. Training includes hands-on workshops, documentation, and ongoing support.", category: "training", }, { question: "What security measures do you have in place?", answer: "We implement enterprise-grade security including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA.", category: "security", }, { question: "Can you integrate with our existing systems?", answer: "Absolutely. We specialize in seamless integration with existing systems and can work with most platforms, databases, and APIs to ensure smooth data flow and functionality.", category: "integration", }, { question: "What happens if we need to scale up?", answer: "Our solutions are designed to scale with your business. We can easily add more capacity, features, or users as your needs grow, with minimal disruption to your operations.", category: "scaling", }, { question: "Do you provide custom development?", answer: "Yes, we offer custom development services to create tailored solutions that meet your specific business requirements and integrate perfectly with your existing workflows.", category: "development", }, ];
+import React, { useState, useEffect, memo, lazy, Suspense } from "react";
+import { Helmet } from "react-helmet-async";
+import { HelpCircle, Mail, Phone, BookOpen, Users, Zap } from 'lucide-react';
+
+interface FAQ {
+  question: string;
+  answer: string;
+  category: string;
+}
+
+const SupportPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+
+  const resources = [
+    {
+      title: "Documentation",
+      description: "Comprehensive guides and API references",
+      icon: BookOpen,
+      link: "/docs",
+    },
+    {
+      title: "Community Forum",
+      description: "Connect with other users and experts",
+      icon: Users,
+      link: "/community",
+    },
+    {
+      title: "Video Tutorials",
+      description: "Step-by-step video guides",
+      icon: Zap,
+      link: "/tutorials",
+    },
+  ];
+
+  const faqs: FAQ[] = [
+    {
+      question: "How do I get started with your AI solutions?",
+      answer: "Contact our team for a free consultation where we'll assess your needs and recommend the best AI solutions for your business. We'll guide you through the entire process from planning to implementation.",
+      category: "general",
+    },
+    {
+      question: "What support do you provide after implementation?",
+      answer: "We provide 24/7 technical support, regular maintenance, updates, and ongoing optimization to ensure your systems run smoothly. Our support includes monitoring, troubleshooting, and performance optimization.",
+      category: "support",
+    },
+    {
+      question: "How long does implementation typically take?",
+      answer: "Implementation time varies based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise systems may take 3-6 months. We provide detailed timelines during the planning phase.",
+      category: "implementation",
+    },
+    {
+      question: "Do you offer training for our team?",
+      answer: "Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions. Training includes hands-on workshops, documentation, and ongoing support.",
+      category: "training",
+    },
+    {
+      question: "What security measures do you have in place?",
+      answer: "We implement enterprise-grade security including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA.",
+      category: "security",
+    },
+    {
+      question: "Can you integrate with our existing systems?",
+      answer: "Absolutely. We specialize in seamless integration with existing systems and can work with most platforms, databases, and APIs to ensure smooth data flow and functionality.",
+      category: "integration",
+    },
+    {
+      question: "What happens if we need to scale up?",
+      answer: "Our solutions are designed to scale with your business. We can easily add more capacity, features, or users as your needs grow, with minimal disruption to your operations.",
+      category: "scaling",
+    },
+    {
+      question: "Do you provide custom development?",
+      answer: "Yes, we offer custom development services to create tailored solutions that meet your specific business requirements and integrate perfectly with your existing workflows.",
+      category: "development",
+    },
+  ];
   const supportChannels = [
-    { name: "Phone Support",
+    {
+      name: "Phone Support",
       description: "Speak directly with our technical experts",
       icon: Phone,
       contact: "+1 302 464 0950",
       availability: "24/7 Available",
-      color: "text-blue-400", },
-    { name: "Email Support",
+      color: "text-blue-400",
+    },
+    {
+      name: "Email Support",
       description: "Get detailed responses to your questions",
       icon: Mail,
       contact: "kleber@ziontechgroup.com",
       availability: "Response within 2 hours",
-      color: "text-green-400", },
-    { name: "Live Chat",
+      color: "text-green-400",
+    },
+    {
+      name: "Live Chat",
       description: "Instant help when you need it most",
-      icon: MessageCircle,
+      icon: HelpCircle,
       contact: "Available on website",
       availability: "Mon-Fri 9AM-6PM EST",
-      color: "text-purple-400", },
-    { name: "Emergency Support",
+      color: "text-purple-400",
+    },
+    {
+      name: "Emergency Support",
       description: "Critical issues resolved quickly",
       icon: Zap,
       contact: "+1 302 464 0950",
       availability: "24/7 Critical Support",
-      color: "text-red-400", },
+      color: "text-red-400",
+    },
   ];
   const categories = [
     "all",
@@ -86,7 +170,7 @@ import { Helmet } from "react-helmet-async"; HelpCircle, Mail, Phone } from 'luc
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-white mb-2">
-                  <2min
+                  &lt;2min
                 </div>
                 <div className="text-gray-400">Average Response Time</div>
               </div>

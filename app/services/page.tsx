@@ -1,7 +1,25 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Zap, Shield, Globe, Brain, Cloud, Database, Smartphone, Lock, ArrowRight, CheckCircle } from "lucide-react"; // Service categories const serviceCategories = [ { icon: <Brain className="w-8 h-8" />, title: "AI & Machine Learning", description: "Advanced artificial intelligence solutions including deep learning, natural language processing, computer vision, and predictive analytics.", services: [ "Machine Learning Model Development", "Natural Language Processing", "Computer Vision Solutions", "Predictive Analytics", "AI Chatbots & Virtual Assistants", "Recommendation Systems" ], color: "from-blue-600 to-cyan-600" },
-  { icon: <Globe className="w-8 h-8" />,
+import { Zap, Shield, Globe, Brain, Cloud, Database, Smartphone, Lock, ArrowRight, CheckCircle } from "lucide-react";
+
+// Service categories
+const serviceCategories = [
+  {
+    icon: <Brain className="w-8 h-8" />,
+    title: "AI & Machine Learning",
+    description: "Advanced artificial intelligence solutions including deep learning, natural language processing, computer vision, and predictive analytics.",
+    services: [
+      "Machine Learning Model Development",
+      "Natural Language Processing",
+      "Computer Vision Solutions",
+      "Predictive Analytics",
+      "AI Chatbots & Virtual Assistants",
+      "Recommendation Systems"
+    ],
+    color: "from-blue-600 to-cyan-600"
+  },
+  {
+    icon: <Globe className="w-8 h-8" />,
     title: "5G Technology",
     description: "Next-generation 5G implementation, optimization, and IoT solutions for ultra-fast connectivity and smart infrastructure.",
     services: [
@@ -12,8 +30,10 @@ import { Zap, Shield, Globe, Brain, Cloud, Database, Smartphone, Lock, ArrowRigh
       "5G Performance Optimization",
       "Private 5G Networks"
     ],
-    color: "from-purple-600 to-pink-600" },
-  { icon: <Shield className="w-8 h-8" />,
+    color: "from-purple-600 to-pink-600"
+  },
+  {
+    icon: <Shield className="w-8 h-8" />,
     title: "Cybersecurity",
     description: "Comprehensive security solutions to protect your business from cyber threats and ensure data integrity and compliance.",
     services: [
@@ -24,8 +44,10 @@ import { Zap, Shield, Globe, Brain, Cloud, Database, Smartphone, Lock, ArrowRigh
       "Security Training & Awareness",
       "Incident Response Planning"
     ],
-    color: "from-green-600 to-emerald-600" },
-  { icon: <Cloud className="w-8 h-8" />,
+    color: "from-green-600 to-emerald-600"
+  },
+  {
+    icon: <Cloud className="w-8 h-8" />,
     title: "Cloud Solutions",
     description: "Scalable cloud infrastructure and migration services to optimize your business operations and reduce costs.",
     services: [
@@ -36,8 +58,10 @@ import { Zap, Shield, Globe, Brain, Cloud, Database, Smartphone, Lock, ArrowRigh
       "Cost Optimization",
       "Disaster Recovery Solutions"
     ],
-    color: "from-orange-600 to-red-600" },
-  { icon: <Database className="w-8 h-8" />,
+    color: "from-orange-600 to-red-600"
+  },
+  {
+    icon: <Database className="w-8 h-8" />,
     title: "Data Analytics",
     description: "Transform your data into actionable insights with advanced analytics, business intelligence, and data visualization solutions.",
     services: [
@@ -48,8 +72,10 @@ import { Zap, Shield, Globe, Brain, Cloud, Database, Smartphone, Lock, ArrowRigh
       "Statistical Analysis",
       "Data Quality Management"
     ],
-    color: "from-indigo-600 to-purple-600" },
-  { icon: <Smartphone className="w-8 h-8" />,
+    color: "from-indigo-600 to-purple-600"
+  },
+  {
+    icon: <Smartphone className="w-8 h-8" />,
     title: "Mobile Development",
     description: "Native and cross-platform mobile applications that deliver exceptional user experiences across all devices.",
     services: [
@@ -60,27 +86,40 @@ import { Zap, Shield, Globe, Brain, Cloud, Database, Smartphone, Lock, ArrowRigh
       "Mobile Security",
       "Progressive Web Apps"
     ],
-    color: "from-teal-600 to-cyan-600" }
+    color: "from-teal-600 to-cyan-600"
+  }
 ];
 // Process steps
 const processSteps = [
-  { step: "01",
+  {
+    step: "01",
     title: "Discovery & Analysis",
-    description: "We begin by understanding your business goals, challenges, and requirements through comprehensive analysis and stakeholder interviews." },
-  { step: "02",
+    description: "We begin by understanding your business goals, challenges, and requirements through comprehensive analysis and stakeholder interviews."
+  },
+  {
+    step: "02",
     title: "Strategy & Planning",
-    description: "Our team develops a customized strategy and detailed implementation plan tailored to your specific needs and objectives." },
-  { step: "03",
+    description: "Our team develops a customized strategy and detailed implementation plan tailored to your specific needs and objectives."
+  },
+  {
+    step: "03",
     title: "Development & Implementation",
-    description: "We execute the solution using cutting-edge technologies and best practices, ensuring quality and performance at every step." },
-  { step: "04",
+    description: "We execute the solution using cutting-edge technologies and best practices, ensuring quality and performance at every step."
+  },
+  {
+    step: "04",
     title: "Testing & Optimization",
-    description: "Rigorous testing and optimization ensure your solution meets all requirements and performs at peak efficiency." },
-  { step: "05",
+    description: "Rigorous testing and optimization ensure your solution meets all requirements and performs at peak efficiency."
+  },
+  {
+    step: "05",
     title: "Deployment & Support",
-    description: "We handle the deployment process and provide ongoing support to ensure your solution continues to deliver value." }
+    description: "We handle the deployment process and provide ongoing support to ensure your solution continues to deliver value."
+  }
 ];
-const ServicesPage: React.FC = () => { return (
+
+const ServicesPage: React.FC = () => {
+  return (
     <>
       <Helmet>
         <title>Our Services - Zion Tech Group | AI & IT Solutions</title>
