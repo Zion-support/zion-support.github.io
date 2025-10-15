@@ -1,56 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, Camera, CheckCircle, Hash, Image, Mail, MessageCircle, Phone, Play, Star } from 'lucide-react';
+import { ArrowRight, Brain, Camera, CheckCircle, Hash, Hashtag, Image, Mail, MessageCircle, Phone, Play, Shield, Star } from 'lucide-react';
 
 const AISocialMediaManagerProPage = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const features = [
-    {
-      icon: <Brain className="w-8 h-8" />,
-      title: "AI Content Creation",
-      description: "Intelligent content generation for all social media platforms.",
-      benefits: ["Auto-generated posts", "Trend analysis", "Content optimization"]
-    },
-    {
-      icon: <Camera className="w-8 h-8" />,
-      title: "Visual Content",
-      description: "AI-powered image and video creation tools.",
-      benefits: ["Auto-generated visuals", "Brand consistency", "Template library"]
-    }
-  ];
-
-  const platforms = [
-    { name: "Facebook", status: "Active" },
-    { name: "Twitter", status: "Active" },
-    { name: "Instagram", status: "Active" },
-    { name: "LinkedIn", status: "Inactive" }
-  ];
-
-  const metrics = [
-    { name: "Engagement Rate", value: "15.2%" },
-    { name: "Followers", value: "50K+" },
-    { name: "Posts per Day", value: "5" }
-  ];
-
-  const pricingPlans = [
-    { name: "Starter", price: "$39", features: ["Basic posting", "1 platform"], description: "Perfect for individuals", period: "per month", popular: false },
-    { name: "Professional", price: "$99", features: ["All platforms", "AI content"], description: "Ideal for businesses", period: "per month", popular: true },
-    { name: "Enterprise", price: "Custom", features: ["Custom solutions", "Dedicated support"], description: "Tailored for agencies", period: "contact us", popular: false }
-  ];
-
-  const testimonials = [
-    { name: "Jennifer Lee", role: "Social Media Manager", content: "Increased our engagement by 300%!", rating: 5, company: "Digital Marketing Co." },
-    { name: "David Kim", role: "Marketing Director", content: "Best social media management tool!", rating: 5, company: "Brand Solutions" }
-  ];
-
   return (
     <>
       <Helmet>
-        <title>AI Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered solutions for your business." />
+        <title>AI Social Media Manager Pro - Zion Tech Group | Advanced Social Media Solutions</title>
+        <meta name="description" content="Revolutionary AI-powered social media management solutions. Optimize content, increase engagement, and grow your audience with intelligent automation." />
+        <meta name="keywords" content="AI social media, social media automation, content optimization, engagement analytics, social media management" />
       </Helmet>
-      <div className="min-h-screen bg-slate-900 relative overflow-hidden">
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -59,7 +20,7 @@ const AISocialMediaManagerProPage = () => {
         </div>
         { /* Grid Pattern */ }
         <div className="absolute inset-0 opacity-20">
-          <div className="h-full w-full" style={{
+          <div className="h-full w-full" style={ {
             backgroundImage: `
               linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
@@ -323,4 +284,4 @@ const AISocialMediaManagerProPage = () => {
     </>
   );
 };
-export default AISocialMediaManagerProPage;
+export default AiSocialMediaManagerProPage;

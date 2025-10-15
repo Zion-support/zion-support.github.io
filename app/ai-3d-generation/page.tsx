@@ -1,4 +1,4 @@
-import { ArrowRight, Box, Zap, Target, BarChart3, CheckCircle, Clock, DollarSign, Users, Settings, Globe, FileText, Sparkles, Star } from "lucide-react";
+import { ArrowRight, Box, Zap, Target, BarChart3, CheckCircle, Clock, DollarSign, Users, Settings, Globe, FileText, Sparkles } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -327,7 +327,7 @@ export default function AI3DGeneration() {
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      <Box key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
