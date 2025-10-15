@@ -23,31 +23,34 @@ const Footer: React.FC = () => {
     {
       title: 'Micro SAAS Solutions',
       services: [
-        { name: 'AI Content Writer', path: '/micro-saas/ai-content-writer' },
-        { name: 'Project Manager', path: '/micro-saas/ai-project-manager' },
-        { name: 'Email Marketing', path: '/micro-saas/ai-email-marketing' },
-        { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard' },
-        { name: 'Document Processor', path: '/micro-saas/document-processor' }
+        { name: 'AI Content Writer Pro', path: '/micro-saas' },
+        { name: 'AI Project Manager', path: '/micro-saas' },
+        { name: 'Email Marketing Suite', path: '/micro-saas' },
+        { name: 'Analytics Dashboard Pro', path: '/micro-saas' },
+        { name: 'Document Processor', path: '/micro-saas' },
+        { name: 'Customer Support Bot', path: '/micro-saas' }
       ]
     },
     {
       title: 'AI Services',
       services: [
-        { name: 'AI Automation', path: '/ai-services/automation' },
-        { name: 'Machine Learning', path: '/ai-services/ml' },
-        { name: 'Computer Vision', path: '/ai-services/computer-vision' },
-        { name: 'Natural Language Processing', path: '/ai-services/nlp' },
-        { name: 'Predictive Analytics', path: '/ai-services/predictive-analytics' }
+        { name: 'AI Automation Platform', path: '/ai-services' },
+        { name: 'Machine Learning Suite', path: '/ai-services' },
+        { name: 'Computer Vision Solutions', path: '/ai-services' },
+        { name: 'Natural Language Processing', path: '/ai-services' },
+        { name: 'Predictive Analytics', path: '/ai-services' },
+        { name: 'Conversational AI', path: '/ai-services' }
       ]
     },
     {
       title: 'IT Services',
       services: [
-        { name: 'Cloud Migration', path: '/it-services/cloud-migration' },
-        { name: 'Cybersecurity', path: '/it-services/cybersecurity' },
-        { name: 'DevOps', path: '/it-services/devops' },
-        { name: 'Mobile Development', path: '/it-services/mobile-development' },
-        { name: 'Web Development', path: '/it-services/web-development' }
+        { name: 'Cloud Migration Services', path: '/it-services' },
+        { name: 'Cybersecurity Solutions', path: '/it-services' },
+        { name: 'DevOps & Automation', path: '/it-services' },
+        { name: 'Web Development', path: '/it-services' },
+        { name: 'Mobile App Development', path: '/it-services' },
+        { name: 'Data Analytics Solutions', path: '/it-services' }
       ]
     }
   ];
