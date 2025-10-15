@@ -4,6 +4,18 @@ import { Brain, Code, Wifi, Cloud, Target, Users, TrendingUp, Clock, Zap, Shield
 
 const ServicesOverviewPage: React.FC = () => {
   const serviceCategories = [
+    {
+      title: "AI Services",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-600",
+      description: "Revolutionary AI-powered solutions for modern businesses",
+      services: [
+        { name: "AI Analytics Dashboard Pro", price: "$299/month", features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards"] },
+        { name: "AI Content Generation Pro", price: "$199/month", features: ["AI Writing", "Content Optimization", "Multi-language Support"] }
+      ]
+    }
+  ];
+
   const features = [
     {
       title: "AI Services",
