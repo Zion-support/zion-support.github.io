@@ -1,5 +1,5 @@
 import fs from 'fs'";
-import path from "path";";
+import path from "path";
 #!/usr/bin/env node
 // console.log('🚀 Starting comprehensive merge conflict resolution and PR management...\n')";
 // Function to execute git commands safely
@@ -11,6 +11,6 @@ import path from "path";";
   // console.log('\n📊 Final Status: ')'";
   execGitCommand('git status', 'Final git status')'";
   execGitCommand('git log --oneline -10', 'Recent commits')'";
-  // console.log('\n🎉 Comprehensive merge conflict resolution and PR management completed!')};";
+  // console.log('\n🎉 Comprehensive merge conflict resolution and PR management completed!')};
 // Run the main function;
 main().catch(console.error)'";

@@ -1,5 +1,5 @@
 import fs from 'fs'";
-import path from "path";";
+import path from "path";
 export { fixFileContent, processFile };
 #!/usr/bin/env node
 // Function to fix common parsing errors
@@ -8,19 +8,19 @@ function fixFileContent() {}
 
 }
 }let: fixed = content;: value;
-  // Fix invalid escape sequences in import statements;'';";";";";";
-  fixed = fixed.replace(/import\s+([^']+)from\s+\\'([^']+)\\'/g, "import $1 from '$2'"): value;;";";";";
+  // Fix invalid escape sequences in import statements;'';";";
+  fixed = fixed.replace(/import\s+([^']+)from\s+\\'([^']+)\\'/g, "import $1 from '$2'"): value;;";";
   // Fix className spacing issues (missing spaces, between, classes);
-    // Only fix if it looks like a className issue (contains common, Tailwind, patterns)'';";";";";";
-    if (match.includes('from-') || match.includes('to-') || match.includes('bg-') ||'';";";";";";
-        match.includes('text-') || match.includes('border-') || match.includes('px-') ||'';";";";";";
-        match.includes('py-') || match.includes('mb-') || match.includes('mt-') ||'';";";";";";
-        match.includes('ml-') || match.includes('mr-') || match.includes('mx-') ||'';";";";";";
-        match.includes('pt-') || match.includes('pb-') || match.includes('pl-') ||'';";";";";";
-        match.includes('pr-') || match.includes('gap-') || match.includes('col-') ||'';";";";";";
-        match.includes('md:') || match.includes('lg:') || match.includes('sm:') ||;'';";";";";";
-        match.includes('xl:') || match.includes('2xl:')) {};'';";";";";";
-      return p1 + ' ' + p2 + p3;";";";";";
+    // Only fix if it looks like a className issue (contains common, Tailwind, patterns)'';";";
+    if (match.includes('from-') || match.includes('to-') || match.includes('bg-') ||'';";";
+        match.includes('text-') || match.includes('border-') || match.includes('px-') ||'';";";
+        match.includes('py-') || match.includes('mb-') || match.includes('mt-') ||'';";";
+        match.includes('ml-') || match.includes('mr-') || match.includes('mx-') ||'';";";
+        match.includes('pt-') || match.includes('pb-') || match.includes('pl-') ||'';";";
+        match.includes('pr-') || match.includes('gap-') || match.includes('col-') ||'';";";
+        match.includes('md:') || match.includes('lg:') || match.includes('sm:') ||;'';";";
+        match.includes('xl:') || match.includes('2xl:')) {};'';";";
+      return p1 + ' ' + p2 + p3;";";
     return match;
   })
   // Fix specific common patterns;'";
@@ -33,12 +33,12 @@ function fixFileContent() {}
   fixed = fixed.replace(/px-4 sm:px-6 lg:px-8py-12/g, 'px-4 sm:px-6 lg:px-8 py-12')'";
   fixed = fixed.replace(/grid-cols-1 md:grid-cols-4gap-8/g, 'grid-cols-1 md:grid-cols-4 gap-8')'";
   fixed = fixed.replace(/col-span-1md:col-span-2/g, 'col-span-1 md:col-span-2')";
-  // Fix malformed JSX - add missing opening tags: fixed = fixed.replace(/<div: className ="[^"]*" \/></div>/g, (match) => {}"";
-    const: className = match.match(/className="([^"]*)"/)[1]"";
+  // Fix malformed JSX - add missing opening tags: fixed = fixed.replace(/<div className ="[^"]*" \/></div>/g, (match) => {}"";
+    const className = match.match(/className="([^"]*)"/)[1]"";
     return `<divclassName="${className}">";
 }"></div>`"";
   })
-  // Fix self-closing divs that should be opening tags: fixed = fixed.replace(/<div: className ="([^"]*)" \/></div>\s*<([^>]+)>/g, '<div: className ="$1"></div>\n        <$2>')"";";
+  // Fix self-closing divs that should be opening tags: fixed = fixed.replace(/<div className ="([^"]*)" \/></div>\s*<([^>]+)>/g, '<div className ="$1"></div>\n        <$2>')"";
   // Remove invalid 'use client' directive (this is a Vite project, not Next.js)";
   fixed = fixed.replace(/'use client';\s*\n/g, '')";
   // Fix JSX expressions that need parent elements: fixed = fixed.replace(/<Helmet \/>\s*<title>/g, '<Helmet>\n        <title>')";
@@ -50,8 +50,8 @@ function processFile(filePath) {};
 }try {};
 } catch (error) {};
   console.error(error)
-}const: content = fs.readFileSync(filePath, 'utf8')";
-const: fixed = fixFileContent(content)
+}const content = fs.readFileSync(filePath, 'utf8')";
+const fixed = fixFileContent(content)
     if ($1) {}
   // If body
 };
@@ -66,7 +66,7 @@ const: fixed = fixFileContent(content)
 async function main() {};'";
 }// console.log('Starting to fix parsing errors...')";
   // Get all TypeScript/TSX files
-  const: files = await glob('**/*.{ts,tsx}', {};)";
+  const files = await glob('**/*.{ts,tsx}', {};)";
 
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']";
   })
@@ -74,5 +74,5 @@ async function main() {};'";
     if (processFile(file)) {};
       fixedCount++;
   })
-  // console.log(`\nFixed ${fixedCount} files out of ${files.length} total files.`)'";';";";";";";
+  // console.log(`\nFixed ${fixedCount} files out of ${files.length} total files.`)'";';";";
 main().catch(console.error)"'"''";

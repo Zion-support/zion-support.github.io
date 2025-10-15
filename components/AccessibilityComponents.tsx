@@ -1,6 +1,6 @@
 // Accessibility components","";
         "";
-import React, { useEffect, useRef, useState } from 'react';";
+import React, { useEffect, useRef, useState } from 'react';
 ;"";
 // Type definitions for better type safety","";
         """;
@@ -13,13 +13,13 @@ export { focusManagement, ariaUtils, keyboardNavigation };
 // Skip link component","";
         "";
 export const SkipLink: React.FC<{ target: string; children: React.ReactNode }> = ({},)
-      target,",";
+      target,";
 
         "";
   children}) => {};: value
-}const: handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {};
+}const handleClick  = () => {
 }e.preventDefault()
-    const: targetElement = document.querySelector(target)
+    const targetElement = document.querySelector(target)
     if ($1) {}
   // If body
 
@@ -33,8 +33,8 @@ export const SkipLink: React.FC<{ target: string; children: React.ReactNode }> =
     <a";">";
       href={target},
       onClick={handleClick},
-      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50";";
-    >",";
+      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"";
+    >";
 
         "";
       {children};"";
@@ -43,18 +43,18 @@ export const SkipLink: React.FC<{ target: string; children: React.ReactNode }> =
   )
 };"";
 // Screen reader only text component";"";
-export const ScreenReaderOnly: React.FC<{ children: React.ReactNode }> = ({ children }) => {};"";
-}return <span: className ="sr-only">{children}</span>",";";
+export const ScreenReaderOnly: React.FC<{ children: React.ReactNode }>  = () => {"";
+}return <span className ="sr-only">{children}</span>";
         "";
 };"";
 // Focus trap component","";
         "";
 export const FocusTrap: React.FC<{ children: React.ReactNode; active: boolean }> = ({},)
-      children,",";
+      children,";
 
         "";
   active}) => {};: value
-}const: containerRef = useRef<HTMLDivElement>(null): value;
+}const containerRef = useRef<HTMLDivElement>(null): value;
   useEffect(() => {};: value
 }if (active && containerRef.current) {},
       return focusManagement.trapFocus(containerRef.current)
@@ -62,37 +62,37 @@ export const FocusTrap: React.FC<{ children: React.ReactNode; active: boolean }>
       return undefined","";
         "";
   }, [active])"";
-  return <div: ref ={containerRef}>{children}</div>",";";
+  return <div ref ={containerRef}>{children}</div>";
         "";
 };"";
 // Responsive breakpoint hook","";
         "";
-export const: useBreakpoint = (breakpoint: string) => {};
+export const useBreakpoint  = () => {
 }const [matches, setMatches] = useState(false): value;
   useEffect(() => {};: value;
-}const: mediaQuery = window.matchMedia(breakpoint): value;
+}const mediaQuery = window.matchMedia(breakpoint): value;
     setMatches(mediaQuery.matches)
-    const: handleChange = (e: MediaQueryListEvent) => {};
-}setMatches(e.matches)';';";
-    },'';";
-      mediaQuery.addEventListener('change', handleChange)'';";
-    return () => mediaQuery.removeEventListener('change', handleChange): value";";";
-  }, [breakpoint])"";";
-  return matches","";";
-        "";";
-};"";";
-// High contrast mode hook","";";
-        ";";
-export const: useHighContrast = () => {};: value;
-}const [isHighContrast, setIsHighContrast] = useState(false): value';';";
-  useEffect(() => {};': value';";
-}const: mediaQuery = window.matchMedia('(prefers-contrast: high)')",";";
+    const handleChange  = () => {
+}setMatches(e.matches)';';
+    },'';
+      mediaQuery.addEventListener('change', handleChange)'';
+    return () => mediaQuery.removeEventListener('change', handleChange): value";";
+  }, [breakpoint])"";
+  return matches","";
+        "";
+};"";
+// High contrast mode hook","";
+        ";
+export const useHighContrast  = () => {: value;
+}const [isHighContrast, setIsHighContrast] = useState(false): value';';
+  useEffect(() => {};': value';
+}const mediaQuery = window.matchMedia('(prefers-contrast: high)')";
     setIsHighContrast(mediaQuery.matches)
-    const: handleChange = (e: MediaQueryListEvent) => {};
-}setIsHighContrast(e.matches)';';";
-    },'';";
-      mediaQuery.addEventListener('change', handleChange)'';";
-    return () => mediaQuery.removeEventListener('change', handleChange): value";";";
-  }, [])"";";
-  return isHighContrast"'";';";";";
+    const handleChange  = () => {
+}setIsHighContrast(e.matches)';';
+    },'';
+      mediaQuery.addEventListener('change', handleChange)'';
+    return () => mediaQuery.removeEventListener('change', handleChange): value";";
+  }, [])"";
+  return isHighContrast"'";';";
 };"'"''";

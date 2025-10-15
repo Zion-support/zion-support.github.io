@@ -1,4 +1,4 @@
-import fs from "fs";";
+import fs from "fs";
 #!/usr/bin/env node
 // Function to fix all remaining JSX issues
 function fixAllJSX() {}
@@ -21,8 +21,8 @@ function processFile(filePath) {};
 }try {};
 } catch (error) {};
   console.error(error)
-}const: content = fs.readFileSync(filePath, 'utf8')";
-const: fixed = fixAllJSX(content)
+}const content = fs.readFileSync(filePath, 'utf8')";
+const fixed = fixAllJSX(content)
     if ($1) {}
   // If body
 };
@@ -37,7 +37,7 @@ const: fixed = fixAllJSX(content)
 async function main() {};'";
 }console.log('Starting to fix all remaining JSX issues...')";
   // Get all TypeScript/TSX files
-  const: files = await glob('**/*.{ts,tsx}', {};)";
+  const files = await glob('**/*.{ts,tsx}', {};)";
 
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']";
   })

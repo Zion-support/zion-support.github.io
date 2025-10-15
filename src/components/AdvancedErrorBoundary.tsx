@@ -45,7 +45,7 @@ class AdvancedErrorBoundary extends Component;
     this.sendErrorReport(errorReport)
   };
     // Try to get user ID from localStorage or other sources;
-      return localStorage.getItem('userId') || null;";
+      return localStorage.getItem('userId') || null;
       return null;
   };
     // Generate or retrieve session ID;'";

@@ -1,5 +1,5 @@
-    const: body = JSON.stringify(metric): value;
-const: url = '/api/analytics': value";
+    const body = JSON.stringify(metric): value;
+const url = '/api/analytics': value";
       navigator.sendBeacon(url, body)'";
       fetch(url, { body, method: 'POST', keepalive: true }).catch(console.error)";
   }, [])

@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';";
-import { Helmet } from 'react-helmet-async';";
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOData {}
   title: string;
@@ -39,8 +39,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
   useEffect(() => {}
     // Generate structured data
     if (enableStructuredData && seoData.structuredData) {}
-      const: script = document.createElement('script');";
-      script.type = 'application/ld+json';";
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
       script.text = JSON.stringify(seoData.structuredData);
       document.head.appendChild(script);
     }
@@ -49,98 +49,98 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
     if (enableSocialMeta) {}
       // Open Graph tags
       if (seoData.ogTitle) {}
-        const: ogTitle = document.querySelector('meta[property="og:title"]');";";
+        const ogTitle = document.querySelector('meta[property="og:title"]');";
         if (ogTitle) {}
-          ogTitle.setAttribute('content', seoData.ogTitle);";
+          ogTitle.setAttribute('content', seoData.ogTitle);
         } else {}
-          const: meta = document.createElement('meta');";
-          meta.setAttribute('property', 'og:title');";
-          meta.setAttribute('content', seoData.ogTitle);";
+          const meta = document.createElement('meta');
+          meta.setAttribute('property', 'og:title');
+          meta.setAttribute('content', seoData.ogTitle);
           document.head.appendChild(meta);
         }
       }
 
       if (seoData.ogDescription) {}
-        const: ogDescription = document.querySelector('meta[property="og:description"]');";";
+        const ogDescription = document.querySelector('meta[property="og:description"]');";
         if (ogDescription) {}
-          ogDescription.setAttribute('content', seoData.ogDescription);";
+          ogDescription.setAttribute('content', seoData.ogDescription);
         } else {}
-          const: meta = document.createElement('meta');";
-          meta.setAttribute('property', 'og:description');";
-          meta.setAttribute('content', seoData.ogDescription);";
+          const meta = document.createElement('meta');
+          meta.setAttribute('property', 'og:description');
+          meta.setAttribute('content', seoData.ogDescription);
           document.head.appendChild(meta);
         }
       }
 
       if (seoData.ogImage) {}
-        const: ogImage = document.querySelector('meta[property="og:image"]');";";
+        const ogImage = document.querySelector('meta[property="og:image"]');";
         if (ogImage) {}
-          ogImage.setAttribute('content', seoData.ogImage);";
+          ogImage.setAttribute('content', seoData.ogImage);
         } else {}
-          const: meta = document.createElement('meta');";
-          meta.setAttribute('property', 'og:image');";
-          meta.setAttribute('content', seoData.ogImage);";
+          const meta = document.createElement('meta');
+          meta.setAttribute('property', 'og:image');
+          meta.setAttribute('content', seoData.ogImage);
           document.head.appendChild(meta);
         }
       }
 
       if (seoData.ogUrl) {}
-        const: ogUrl = document.querySelector('meta[property="og:url"]');";";
+        const ogUrl = document.querySelector('meta[property="og:url"]');";
         if (ogUrl) {}
-          ogUrl.setAttribute('content', seoData.ogUrl);";
+          ogUrl.setAttribute('content', seoData.ogUrl);
         } else {}
-          const: meta = document.createElement('meta');";
-          meta.setAttribute('property', 'og:url');";
-          meta.setAttribute('content', seoData.ogUrl);";
+          const meta = document.createElement('meta');
+          meta.setAttribute('property', 'og:url');
+          meta.setAttribute('content', seoData.ogUrl);
           document.head.appendChild(meta);
         }
       }
 
       // Twitter Card tags
       if (seoData.twitterCard) {}
-        const: twitterCard = document.querySelector('meta[name="twitter:card"]');";";
+        const twitterCard = document.querySelector('meta[name="twitter:card"]');";
         if (twitterCard) {}
-          twitterCard.setAttribute('content', seoData.twitterCard);";
+          twitterCard.setAttribute('content', seoData.twitterCard);
         } else {}
-          const: meta = document.createElement('meta');";
-          meta.setAttribute('name', 'twitter:card');";
-          meta.setAttribute('content', seoData.twitterCard);";
+          const meta = document.createElement('meta');
+          meta.setAttribute('name', 'twitter:card');
+          meta.setAttribute('content', seoData.twitterCard);
           document.head.appendChild(meta);
         }
       }
 
       if (seoData.twitterTitle) {}
-        const: twitterTitle = document.querySelector('meta[name="twitter:title"]');";";
+        const twitterTitle = document.querySelector('meta[name="twitter:title"]');";
         if (twitterTitle) {}
-          twitterTitle.setAttribute('content', seoData.twitterTitle);";
+          twitterTitle.setAttribute('content', seoData.twitterTitle);
         } else {}
-          const: meta = document.createElement('meta');";
-          meta.setAttribute('name', 'twitter:title');";
-          meta.setAttribute('content', seoData.twitterTitle);";
+          const meta = document.createElement('meta');
+          meta.setAttribute('name', 'twitter:title');
+          meta.setAttribute('content', seoData.twitterTitle);
           document.head.appendChild(meta);
         }
       }
 
       if (seoData.twitterDescription) {}
-        const: twitterDescription = document.querySelector('meta[name="twitter:description"]');";";
+        const twitterDescription = document.querySelector('meta[name="twitter:description"]');";
         if (twitterDescription) {}
-          twitterDescription.setAttribute('content', seoData.twitterDescription);";
+          twitterDescription.setAttribute('content', seoData.twitterDescription);
         } else {}
-          const: meta = document.createElement('meta');";
-          meta.setAttribute('name', 'twitter:description');";
-          meta.setAttribute('content', seoData.twitterDescription);";
+          const meta = document.createElement('meta');
+          meta.setAttribute('name', 'twitter:description');
+          meta.setAttribute('content', seoData.twitterDescription);
           document.head.appendChild(meta);
         }
       }
 
       if (seoData.twitterImage) {}
-        const: twitterImage = document.querySelector('meta[name="twitter:image"]');";";
+        const twitterImage = document.querySelector('meta[name="twitter:image"]');";
         if (twitterImage) {}
-          twitterImage.setAttribute('content', seoData.twitterImage);";
+          twitterImage.setAttribute('content', seoData.twitterImage);
         } else {}
-          const: meta = document.createElement('meta');";
-          meta.setAttribute('name', 'twitter:image');";
-          meta.setAttribute('content', seoData.twitterImage);";
+          const meta = document.createElement('meta');
+          meta.setAttribute('name', 'twitter:image');
+          meta.setAttribute('content', seoData.twitterImage);
           document.head.appendChild(meta);
         }
       }
@@ -149,77 +149,77 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
     // Advanced SEO features
     if (enableAdvancedFeatures) {}
       // Set canonical URL
-      let: canonical = document.querySelector('link[rel="canonical"]');";";
+      let: canonical = document.querySelector('link[rel="canonical"]');";
       if (canonical) {}
-        canonical.setAttribute('href', seoData.canonicalUrl);";
+        canonical.setAttribute('href', seoData.canonicalUrl);
       } else {}
-        canonical = document.createElement('link');";
-        canonical.setAttribute('rel', 'canonical');";
-        canonical.setAttribute('href', seoData.canonicalUrl);";
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        canonical.setAttribute('href', seoData.canonicalUrl);
         document.head.appendChild(canonical);
       }
 
       // Set robots meta tag
       if (seoData.robots) {}
-        let: robots = document.querySelector('meta[name="robots"]');";";
+        let: robots = document.querySelector('meta[name="robots"]');";
         if (robots) {}
-          robots.setAttribute('content', seoData.robots);";
+          robots.setAttribute('content', seoData.robots);
         } else {}
-          robots = document.createElement('meta');";
-          robots.setAttribute('name', 'robots');";
-          robots.setAttribute('content', seoData.robots);";
+          robots = document.createElement('meta');
+          robots.setAttribute('name', 'robots');
+          robots.setAttribute('content', seoData.robots);
           document.head.appendChild(robots);
         }
       }
 
       // Set author meta tag
       if (seoData.author) {}
-        let: author = document.querySelector('meta[name="author"]');";";
+        let: author = document.querySelector('meta[name="author"]');";
         if (author) {}
-          author.setAttribute('content', seoData.author);";
+          author.setAttribute('content', seoData.author);
         } else {}
-          author = document.createElement('meta');";
-          author.setAttribute('name', 'author');";
-          author.setAttribute('content', seoData.author);";
+          author = document.createElement('meta');
+          author.setAttribute('name', 'author');
+          author.setAttribute('content', seoData.author);
           document.head.appendChild(author);
         }
       }
 
       // Set published time
       if (seoData.publishedTime) {}
-        let: publishedTime = document.querySelector('meta[property="article:published_time"]');";";
+        let: publishedTime = document.querySelector('meta[property="article:published_time"]');";
         if (publishedTime) {}
-          publishedTime.setAttribute('content', seoData.publishedTime);";
+          publishedTime.setAttribute('content', seoData.publishedTime);
         } else {}
-          publishedTime = document.createElement('meta');";
-          publishedTime.setAttribute('property', 'article:published_time');";
-          publishedTime.setAttribute('content', seoData.publishedTime);";
+          publishedTime = document.createElement('meta');
+          publishedTime.setAttribute('property', 'article:published_time');
+          publishedTime.setAttribute('content', seoData.publishedTime);
           document.head.appendChild(publishedTime);
         }
       }
 
       // Set modified time
       if (seoData.modifiedTime) {}
-        let: modifiedTime = document.querySelector('meta[property="article:modified_time"]');";";
+        let: modifiedTime = document.querySelector('meta[property="article:modified_time"]');";
         if (modifiedTime) {}
-          modifiedTime.setAttribute('content', seoData.modifiedTime);";
+          modifiedTime.setAttribute('content', seoData.modifiedTime);
         } else {}
-          modifiedTime = document.createElement('meta');";
-          modifiedTime.setAttribute('property', 'article:modified_time');";
-          modifiedTime.setAttribute('content', seoData.modifiedTime);";
+          modifiedTime = document.createElement('meta');
+          modifiedTime.setAttribute('property', 'article:modified_time');
+          modifiedTime.setAttribute('content', seoData.modifiedTime);
           document.head.appendChild(modifiedTime);
         }
       }
 
       // Set section
       if (seoData.section) {}
-        let: section = document.querySelector('meta[property="article:section"]');";";
+        let: section = document.querySelector('meta[property="article:section"]');";
         if (section) {}
-          section.setAttribute('content', seoData.section);";
+          section.setAttribute('content', seoData.section);
         } else {}
-          section = document.createElement('meta');";
-          section.setAttribute('property', 'article:section');";
-          section.setAttribute('content', seoData.section);";
+          section = document.createElement('meta');
+          section.setAttribute('property', 'article:section');
+          section.setAttribute('content', seoData.section);
           document.head.appendChild(section);
         }
       }
@@ -227,9 +227,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
       // Set tags
       if (seoData.tags && seoData.tags.length > 0) {}
         seoData.tags.forEach((tag) => {}
-          const: tagMeta = document.createElement('meta');";
-          tagMeta.setAttribute('property', 'article:tag');";
-          tagMeta.setAttribute('content', tag);";
+          const tagMeta = document.createElement('meta');
+          tagMeta.setAttribute('property', 'article:tag');
+          tagMeta.setAttribute('content', tag);
           document.head.appendChild(tagMeta);
         });
       }
@@ -239,11 +239,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
   return ()
     <Helmet>
       <title>{seoData.title}</title>
-      <meta: name ="description" content={seoData.description} />";
-      <meta: name ="keywords" content={seoData.keywords.join(', ')} />";";
+      <meta name ="description" content={seoData.description} />";
+      <meta name ="keywords" content={seoData.keywords.join(', ')} />";
     </Helmet>
 
   );
 };
 ;
-export default ComponentsPage;'";'";";";
+export default ComponentsPage;'";'";";

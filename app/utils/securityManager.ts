@@ -7,8 +7,8 @@ interface SecurityManagerState {
   // Add your state here;
 }
 ;
-export const: SecurityManager = (options: SecurityManagerOptions = {}) => {
-  const: stateRef = useRef<SecurityManagerState>({;
+export const SecurityManager = (options: SecurityManagerOptions = {}) => {
+  const stateRef = useRef<SecurityManagerState>({;
     // Initialize your state here;
   });
 ;
@@ -22,4 +22,4 @@ export const: SecurityManager = (options: SecurityManagerOptions = {}) => {
   };
 };
 ;
-export default SecurityManager;';';";
+export default SecurityManager;';';

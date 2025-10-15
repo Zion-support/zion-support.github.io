@@ -7,8 +7,8 @@ interface ApiCacheState {
   // Add your state here;
 }
 ;
-export const: ApiCache = (options: ApiCacheOptions = {}) => {
-  const: stateRef = useRef<ApiCacheState>({;
+export const ApiCache = (options: ApiCacheOptions = {}) => {
+  const stateRef = useRef<ApiCacheState>({;
     // Initialize your state here;
   });
 ;
@@ -22,4 +22,4 @@ export const: ApiCache = (options: ApiCacheOptions = {}) => {
   };
 };
 ;
-export default ApiCache;';';";
+export default ApiCache;';';

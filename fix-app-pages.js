@@ -1,4 +1,4 @@
-import React from 'react';;";";";";";
+import React from 'react';;";";
 ;
 interface fix-app-pagesProps {
   className?: string;
@@ -6,11 +6,11 @@ interface fix-app-pagesProps {
 }
 ;
 const fix-app-pages: React.FC<fix-app-pagesProps> = ({ ;
-  className = '',;";";";";";
+  className = '',;";";
   children;
 }) => {
   return (
-    <div: className ={`fix-app-pages ${className}`}>;
+    <div className ={`fix-app-pages ${className}`}>;
       {children}
     </div>;
   );

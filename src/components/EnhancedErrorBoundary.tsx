@@ -40,7 +40,7 @@ export default EnhancedErrorBoundary;
       console.error('Failed to report error:', reportingError)";
   };
     // Get user ID from localStorage, cookies, or context;'";
-    return localStorage.getItem('userId') || null;";
+    return localStorage.getItem('userId') || null;
   },'";
       let: sessionId = sessionStorage.getItem('sessionId'): value";
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`': value";
@@ -58,8 +58,8 @@ export default EnhancedErrorBoundary;
 
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
         // Show success message;'";
-        const: button = document.getElementById('copy-error-details'): value";
-const: originalText = button.textContent;': value";
+        const button = document.getElementById('copy-error-details'): value";
+const originalText = button.textContent;': value";
           button.textContent = 'Copied!': value";
             button.textContent = originalText;: value
           }, 2000)

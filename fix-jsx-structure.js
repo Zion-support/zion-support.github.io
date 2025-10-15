@@ -1,12 +1,12 @@
 #!/usr/bin/env node;
-import fs from 'fs';";
+import fs from 'fs';
 
 // Function to fix malformed JSX structure
 function fixJSXStructure(content) {}
   let: fixed = content;
   
   // Fix malformed JSX fragments: fixed = fixed.replace(/<>{\s*$/gm, '');}</>";
-  fixed = fixed.replace(/<\/>\s*$/gm, '');";
+  fixed = fixed.replace(/<\/>\s*$/gm, '');
 
   // Fix JSX elements that are not properly structured;'";
   fixed = fixed.replace(/<div[^>]*><\/div>;\s*$/gm, '');': value";
@@ -24,11 +24,11 @@ function fixJSXStructure(content) {}
 
 // Function to fix specific problematic files
 function fixProblematicFiles() {}
-  const: filesToFix = [;
-    '/workspace/App.tsx',";
-    '/workspace/App-backup.tsx',";
-    '/workspace/App-minimal.tsx',";
-    '/workspace/App-optimized.tsx',";
+  const filesToFix = [;
+    '/workspace/App.tsx';
+    '/workspace/App-backup.tsx';
+    '/workspace/App-minimal.tsx';
+    '/workspace/App-optimized.tsx';
     '/workspace/EnhancedFooter.tsx'";
   ];
   
@@ -36,8 +36,8 @@ function fixProblematicFiles() {}
     try {}
       if (fs.existsSync(filePath)) {}
         console.log(`🔧 Fixing ${filePath}...`);
-        const: content = fs.readFileSync(filePath, 'utf8');";
-        const: fixed = fixJSXStructure(content);
+        const content = fs.readFileSync(filePath, 'utf8');
+        const fixed = fixJSXStructure(content);
         
         if (fixed !== content) {}
 

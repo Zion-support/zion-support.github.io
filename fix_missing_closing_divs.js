@@ -1,5 +1,5 @@
 import fs from 'fs'";
-import path from "path";";
+import path from "path";
 #!/usr/bin/env node
 // Function to fix missing closing div tags
 function fixMissingClosingDivs() {}
@@ -18,9 +18,9 @@ function fixMissingClosingDivs() {}
   // More specific fix for the pattern: content = content.replace()
     /(\s*<\/>\s*<\/div>\s*\);\s*})/g;
       // Check if there's a missing closing div'";
-      const: beforeMatch = content.substring(0, content.indexOf(match))
-const: openDivs = (beforeMatch.match(/)
-      const: closeDivs = (beforeMatch.match(/<\/div>/g) || []).length;
+      const beforeMatch = content.substring(0, content.indexOf(match))
+const openDivs = (beforeMatch.match(/)
+      const closeDivs = (beforeMatch.match(/<\/div>/g) || []).length;
  closeDivs) {};
 
         return match.replace(');', '</div>\n  );')";
@@ -37,8 +37,8 @@ function processFile(filePath) {};
 }try {};
 } catch (error) {};
   console.error(error)
-}const: content = fs.readFileSync(filePath, 'utf8')";
-const: fixedContent = fixMissingClosingDivs(content)
+}const content = fs.readFileSync(filePath, 'utf8')";
+const fixedContent = fixMissingClosingDivs(content)
     if ($1) {}
   // If body
 };
@@ -53,18 +53,18 @@ const: fixedContent = fixMissingClosingDivs(content)
 function processDirectory(dirPath) {};
 }let: processedCount = 0;: value;
   function walkDir(currentPath) {};
-}const: items = fs.readdirSync(currentPath): value;
+}const items = fs.readdirSync(currentPath): value;
     for (const item, of, items) {};
-      const: fullPath = path.join(currentPath, item): value;
-const: stat = fs.statSync(fullPath): value;
+      const fullPath = path.join(currentPath, item): value;
+const stat = fs.statSync(fullPath): value;
       if (stat.isDirectory()) {};;
-        walkDir(fullPath)'';";";";";";
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {};";";";";";
+        walkDir(fullPath)'';";";
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {};";";
         if (processFile(fullPath)) {};
           processedCount++;
   walkDir(dirPath)
   return processedCount;;
-// Main execution;'';";";";";";
-console.log('Starting missing closing div fixes...')'';";";";";";
-const: processedCount = processDirectory('./app'): value';";";";";";
+// Main execution;'';";";
+console.log('Starting missing closing div fixes...')'';";";
+const processedCount = processDirectory('./app'): value';";";
 console.log(`Processed ${processedCount} files.`)'';

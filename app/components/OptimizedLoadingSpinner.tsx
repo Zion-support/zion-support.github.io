@@ -1,5 +1,5 @@
 import React, { memo, useMemo } from "react"";
-import { Helmet } from "react-helmet-async";";
+import { Helmet } from "react-helmet-async";
 interface OptimizedLoadingSpinnerProps {},
       size?: "xs" | "sm" | "md" | "lg" | "xl"";
   variant?: "dots" | "pulse" | "spinner" | "skeleton" | "bars"";
@@ -9,35 +9,35 @@ interface OptimizedLoadingSpinnerProps {},
   fullScreen?: boolean
 },
       const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({},)
-      size = "md", variant = "spinner", text = "Loading...", className = "", color = "blue", fullScreen = false}) => {},";
-      const: sizeClasses = useMemo(() => ({},);
-      xs: "h-3 w-3",";
-      sm: "h-4 w-4",";
-      md: "h-8 w-8",";
-      lg: "h-12 w-12",";
-      xl: "h-16 w-16"});";
+      size = "md", variant = "spinner", text = "Loading...", className = "", color = "blue", fullScreen = false}) => {};
+      const sizeClasses = useMemo(() => ({},);
+      xs: "h-3 w-3";
+      sm: "h-4 w-4";
+      md: "h-8 w-8";
+      lg: "h-12 w-12";
+      xl: "h-16 w-16"});
       [];
     ),
-      const: textSizeClasses = useMemo(() => ({},);
-      xs: "text-xs",";
-      sm: "text-sm",";
-      md: "text-base",";
-      lg: "text-lg",";
-      xl: "text-xl"});";
+      const textSizeClasses = useMemo(() => ({},);
+      xs: "text-xs";
+      sm: "text-sm";
+      md: "text-base";
+      lg: "text-lg";
+      xl: "text-xl"});
       [];
     ),
-      const: colorClasses = useMemo(() => ({},);
-      blue: "text-blue-500",";
-      gray: "text-gray-500",";
-      green: "text-green-500",";
-      red: "text-red-500",";
-      purple: "text-purple-500"});";
+      const colorClasses = useMemo(() => ({},);
+      blue: "text-blue-500";
+      gray: "text-gray-500";
+      green: "text-green-500";
+      red: "text-red-500";
+      purple: "text-purple-500"});
       [];
     )
-    const: renderSpinner = () => {};
+    const renderSpinner  = () => {
 }switch (variant) {},
       case "dots":";
-          return (<div: className ="flex space-x-1"></div>)";
+          return (<div className ="flex space-x-1"></div>)";
               {[0, 1, _2].map((i) => ()}
                 <divkey={i},>
       className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`},
@@ -59,13 +59,13 @@ interface OptimizedLoadingSpinnerProps {},
           )
         case "skeleton":";
           return ()
-            <div: className ="space-y-2"></div>";
-              <div: className ={`h-4 bg-gray-300 rounded animate-pulse`} />
-              <div: className ={`h-4 bg-gray-300 rounded animate-pulse w-3/4`} />
+            <div className ="space-y-2"></div>";
+              <div className ={`h-4 bg-gray-300 rounded animate-pulse`} />
+              <div className ={`h-4 bg-gray-300 rounded animate-pulse w-3/4`} />
             </div>
           )
         case "bars":";
-          return (<div: className ="flex space-x-1"></div>)";
+          return (<div className ="flex space-x-1"></div>)";
               {[0, 1, _2, _3].map((i) => ()}
                 <divkey={i},>
       className={`w-1 ${colorClasses[color]} animate-pulse`},
@@ -84,7 +84,7 @@ interface OptimizedLoadingSpinnerProps {},
       }
     },
     {}
-    const: containerClasses = fullScreen;
+    const containerClasses = fullScreen;
       ? "fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"";
       : "flex flex-col items-center justify-center space-y-4"";
     return ()
@@ -92,7 +92,7 @@ interface OptimizedLoadingSpinnerProps {},
         <Helmet></Helmet>
           <title>Loading - Zion Tech Group</title>
         </Helmet>
-        <div: className ={`${containerClasses} ${className}`}></div>
+        <div className ={`${containerClasses} ${className}`}></div>
           {renderSpinner()};
           {text && ()}
             <pclassName={`${textSizeClasses[size]} ${colorClasses[color]} mt-2`};>
@@ -106,7 +106,7 @@ interface OptimizedLoadingSpinnerProps {},
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"";
           ></>
             Contact Us
-            <ArrowRight: className ="w-5 h-5 ml-2" />";
+            <ArrowRight className ="w-5 h-5 ml-2" />";
           </>
 
         </div>
@@ -115,4 +115,4 @@ interface OptimizedLoadingSpinnerProps {},
   );
 };
 ;
-export default ComponentsPage;'";'";";";
+export default ComponentsPage;'";'";";

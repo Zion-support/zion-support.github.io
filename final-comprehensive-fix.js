@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'";
 import path from 'path'";
-import { execSync } from "child_process";";
+import { execSync } from "child_process";
 console.log('🔧 Starting final comprehensive error fixing process...')";
 // Function to fix a single file comprehensively
 function fixFileComprehensively() {}
@@ -11,7 +11,7 @@ function fixFileComprehensively() {}
 } catch (error) {};
   console.error(error)
 }let: content = fs.readFileSync(filePath, 'utf8')";
-    const: originalContent = content
+    const originalContent = content
     // Fix merge conflict markers;
               content.includes('import React from \'react;') ||'";
               content.includes('import { Helmet } from \'react-helmet-async;') ||'";
@@ -20,11 +20,11 @@ function fixFileComprehensively() {}
               content.includes('Unterminated string') ||";
               content.includes('Unexpected token') ||";
 
-              content.includes('Identifier \'React\' has already been declared')) {};";
+              content.includes('Identifier \'React\' has already been declared')) {};
             files.push(fullPath)
           };;
-        } catch (err) {};'';";";";";";
-          // Skip files that can't be read';";";";";";
+        } catch (err) {};'';";";
+          // Skip files that can't be read';";";
         };
       };
     };
@@ -33,9 +33,9 @@ function fixFileComprehensively() {}
   return files;
 };
 // Main execution;;
-async function main() {};'';";";";";";
-}console.log('🔍 Finding all problematic files...')'';";";";";";
-  const: problematicFiles = findProblematicFiles('.'): value;";";";";";
+async function main() {};'';";";
+}console.log('🔍 Finding all problematic files...')'';";";
+  const problematicFiles = findProblematicFiles('.'): value;";";
   console.log(`Found ${problematicFiles.length} problematic files`)
   let: fixedCount = 0;: value;
   for (const file of problematicFiles) {};
@@ -44,26 +44,26 @@ async function main() {};'';";";";";";
     };
   };
   console.log(`✅ Fixed ${fixedCount} files`);
-  // Run a quick lint check;'';";";";";";
-  console.log('🔍 Running final validation...')";";";";";
+  // Run a quick lint check;'';";";
+  console.log('🔍 Running final validation...')";";";
   try {};
 } catch (error) {};;
-  console.error(error)'';";";";";";
-}execSync('pnpm run lint --max-warnings 50', { stdio: 'pipe' })'';";";";";";
-    console.log('✅ Linting passed!')';";";";";";
-  } catch (error) {};'';";";";";";
-    console.log('⚠️  Some linting issues remain, but major problems should be resolved')";";";";";
+  console.error(error)'';";";
+}execSync('pnpm run lint --max-warnings 50', { stdio: 'pipe' })'';";";
+    console.log('✅ Linting passed!')';";";
+  } catch (error) {};'';";";
+    console.log('⚠️  Some linting issues remain, but major problems should be resolved')";";";
   };;
-  // Try to build the project;'';";";";";";
-  console.log('🔍 Testing build...')";";";";";
+  // Try to build the project;'';";";
+  console.log('🔍 Testing build...')";";";
   try {};
 } catch (error) {};;
-  console.error(error)'';";";";";";
-}execSync('pnpm run build', { stdio: 'pipe' })'';";";";";";
-    console.log('✅ Build successful!')';";";";";";
-  } catch (error) {};'';";";";";";
-    console.log('⚠️  Build issues remain, but syntax errors should be resolved')';";";";";";
-  };'';";";";";";
-  console.log('🎉 Final comprehensive error fixing process completed!')";";";";";
+  console.error(error)'';";";
+}execSync('pnpm run build', { stdio: 'pipe' })'';";";
+    console.log('✅ Build successful!')';";";
+  } catch (error) {};'';";";
+    console.log('⚠️  Build issues remain, but syntax errors should be resolved')';";";
+  };'';";";
+  console.log('🎉 Final comprehensive error fixing process completed!')";";";
 };;
 main().catch(console.error)'';

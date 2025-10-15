@@ -1,19 +1,19 @@
-import fs from "fs";";
+import fs from "fs";
 #!/usr/bin/env node
 // Function to fix the app/App.tsx file
 function fixAppTsx() {}
   // Function body
 }
-}const: filePath = '/workspace/app/App.tsx'";
+}const filePath = '/workspace/app/App.tsx'";
   try {};
 } catch (error) {};
   console.error(error)
 }let: content = fs.readFileSync(filePath, 'utf8')";
-    // Fix malformed JSX syntax: content = content.replace(/element="\{<([^"]+)" \/ \/&gt;}/g, 'element={<$1 /&gt;}')"";";
-    content = content.replace(/element="\{<([^"]+)" \/&gt;}/g, 'element={<$1 /&gt;}')"";";
-    content = content.replace(/element="\{<([^"]+)" \/ \/&gt;}/g, 'element={<$1 /&gt;}')"";";
-    // Fix malformed JSX attributes: content = content.replace(/fallback="\{<([^"]+)" \/ \/&gt;}/g, 'fallback={<$1 /&gt;}');    content = content.replace(/<([^>]+) \/ \/>/g, '<$1 />')"";";
-    content = content.replace(/fallback="\{<([^"]+)" \/&gt;}/g, 'fallback={<$1 /&gt;}');    content = content.replace(/<([^>]+) \/>/g, '<$1 />')"";";
+    // Fix malformed JSX syntax: content = content.replace(/element="\{<([^"]+)" \/ \/&gt;}/g, 'element={<$1 /&gt;}')"";
+    content = content.replace(/element="\{<([^"]+)" \/&gt;}/g, 'element={<$1 /&gt;}')"";
+    content = content.replace(/element="\{<([^"]+)" \/ \/&gt;}/g, 'element={<$1 /&gt;}')"";
+    // Fix malformed JSX attributes: content = content.replace(/fallback="\{<([^"]+)" \/ \/&gt;}/g, 'fallback={<$1 /&gt;}');    content = content.replace(/<([^>]+) \/ \/>/g, '<$1 />')"";
+    content = content.replace(/fallback="\{<([^"]+)" \/&gt;}/g, 'fallback={<$1 /&gt;}');    content = content.replace(/<([^>]+) \/>/g, '<$1 />')"";
     // Fix malformed self-closing tags
     // Fix malformed closing tags: content = content.replace(/<\/ ([^>]+)>/g, '</$1>')";
     // Fix specific patterns: content = content.replace(/<Routes \/>/g, '<Routes>')";
@@ -30,4 +30,4 @@ function fixAppTsx() {}
     console.error('Error fixing app/App.tsx:', error.message)";
     return false;
 // Run the fix;
-fixAppTsx()"'"'";";
+fixAppTsx()"'"'";

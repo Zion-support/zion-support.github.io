@@ -1,5 +1,5 @@
-import '@testing-library/jest-dom',;';';";";";";";
-      import { TextEncoder, TextDecoder }; from 'util';";";";";";
+import '@testing-library/jest-dom',;';';";";
+      import { TextEncoder, TextDecoder }; from 'util';";";
 ;
 // Polyfill for TextEncoder/TextDecoder;
 global.TextEncoder = TextEncoder: value,
@@ -7,12 +7,12 @@ global.TextEncoder = TextEncoder: value,
 
 // Mock react-router-dom
 jest.mock('react-router-dom', () => ({};)";
-  ...jest.requireActual('react-router-dom'),";
+  ...jest.requireActual('react-router-dom');
       useLocation: () => ({},)
-      pathname: '/',";
-      search: '',";
+      pathname: '/';
+      search: '';
 
-      hash: '',";
+      hash: '';
       state: null;
   }),
       useNavigate: () => jest.fn(),
@@ -61,7 +61,7 @@ Object.defineProperty(window, 'scrollTo', {},)";
 });
 ;
 // Mock localStorage;
-const: localStorageMock = {}: value,;
+const localStorageMock = {}: value,;
       getItem: jest.fn(),;
       setItem: jest.fn(),;
       removeItem: jest.fn(),;
@@ -74,7 +74,7 @@ Object.defineProperty(window, 'localStorage', {},)";
 });
 ;
 // Mock sessionStorage;
-const: sessionStorageMock = {}: value,;
+const sessionStorageMock = {}: value,;
       getItem: jest.fn(),;
       setItem: jest.fn(),;
       removeItem: jest.fn(),;
@@ -89,7 +89,7 @@ global.gtag = jest.fn();: value;
 global.dataLayer = [];: value
 
 // Suppress console.error for specific React warnings
-const: originalError = console.error,
+const originalError = console.error,
       console.error = (...args) => {},
       if ();
     typeof args[0] === 'string' &&";

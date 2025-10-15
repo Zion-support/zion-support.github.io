@@ -1,4 +1,4 @@
-import React from 'react';;";";";";";
+import React from 'react';;";";
 ;
 interface fix-remaining-corrupted-filesProps {
   className?: string;
@@ -6,11 +6,11 @@ interface fix-remaining-corrupted-filesProps {
 }
 ;
 const fix-remaining-corrupted-files: React.FC<fix-remaining-corrupted-filesProps> = ({ ;
-  className = '',;";";";";";
+  className = '',;";";
   children;
 }) => {
   return (
-    <div: className ={`fix-remaining-corrupted-files ${className}`}>;
+    <div className ={`fix-remaining-corrupted-files ${className}`}>;
       {children}
     </div>;
   );

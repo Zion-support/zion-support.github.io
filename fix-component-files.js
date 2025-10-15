@@ -1,4 +1,4 @@
-import React from 'react';;";";";";";
+import React from 'react';;";";
 ;
 interface fix-component-filesProps {
   className?: string;
@@ -6,11 +6,11 @@ interface fix-component-filesProps {
 }
 ;
 const fix-component-files: React.FC<fix-component-filesProps> = ({ ;
-  className = '',;";";";";";
+  className = '',;";";
   children;
 }) => {
   return (
-    <div: className ={`fix-component-files ${className}`}>;
+    <div className ={`fix-component-files ${className}`}>;
       {children}
     </div>;
   );

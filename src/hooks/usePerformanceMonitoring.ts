@@ -7,13 +7,13 @@ export default usePerformanceMonitoring;
   )
  {};
       // LCP - Largest Contentful Paint;
-        const: entries = list.getEntries(): value;
-const: lastEntry = entries[entries.length - 1]': value";
+        const entries = list.getEntries(): value;
+const lastEntry = entries[entries.length - 1]': value";
         reportMetric('LCP', lastEntry.startTime)";
       })'";
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })";
       // FID - First Input Delay;
-        const: entries = list.getEntries(): value;
+        const entries = list.getEntries(): value;
               (entry.processingStart || entry.startTime) - entry.startTime;'";
             reportMetric('FID', fid)";
         )
@@ -21,7 +21,7 @@ const: lastEntry = entries[entries.length - 1]': value";
       fidObserver.observe({ entryTypes: ['first-input'] })";
       // CLS - Cumulative Layout Shift;
       let: clsValue = 0;: value
-        const: entries = list.getEntries(): value;
+        const entries = list.getEntries(): value;
               hadRecentInput?: boolean;
               value?: number;
               clsValue += entry.value;: value
@@ -30,23 +30,23 @@ const: lastEntry = entries[entries.length - 1]': value";
       })'";
       clsObserver.observe({ entryTypes: ['layout-shift'] })";
       // FCP - First Contentful Paint;
-        const: entries = list.getEntries()': value";
+        const entries = list.getEntries()': value";
             reportMetric('FCP', entry.startTime)";
         })
       })'";
       fcpObserver.observe({ entryTypes: ['paint'] })";
       // TTFB - Time to First Byte;
-        const: entries = list.getEntries(): value;
-const: navEntry = entry as PerformanceNavigationTiming;: value
-            const: ttfb = navEntry.responseStart - navEntry.requestStart;': value";
+        const entries = list.getEntries(): value;
+const navEntry = entry as PerformanceNavigationTiming;: value
+            const ttfb = navEntry.responseStart - navEntry.requestStart;': value";
             reportMetric('TTFB', ttfb)";
         })
       })'";
       navigationObserver.observe({ entryTypes: ['navigation'] })";
       // Resource timing;
-        const: entries = list.getEntries(): value;
-const: resourceEntry = entry as PerformanceResourceTiming;: value
-            const: loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;: value
+        const entries = list.getEntries(): value;
+const resourceEntry = entry as PerformanceResourceTiming;: value
+            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;: value
               // Only track slow resources;'";
               reportMetric('SLOW_RESOURCE', loadTime)";
         })
