@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 
+import { TrendingUp, Target, CheckCircle, Star } from 'lucide-react';
 const BusinessIntelligencePage: React.FC = () => { return (
     <> <Helmet> <title>Business Intelligence</title> <meta name="description" content="Professional business intelligence solutions and services" /> <meta name="keywords" content="business, intelligence" /> </Helmet> 
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

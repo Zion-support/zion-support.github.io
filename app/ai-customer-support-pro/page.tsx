@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 
+import { Bot, Brain, Headphones, BarChart3, Shield, Zap, ShoppingCart, Cpu, Activity, Star, Phone, Play, CheckCircle, ArrowRight, Mail } from 'lucide-react';
 const AiCustomerSupportProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
@@ -296,7 +297,7 @@ const useCases = [ { title: "E-commerce Support", description: "Handle order inq
                     </div>
                     
           <p className="text-gray-300 mb-6 leading-relaxed">
-                      &ldquo;{ testimonial.content }&rdquo;
+                      "{ testimonial.content }"
                     </p>
                     <div>
                       

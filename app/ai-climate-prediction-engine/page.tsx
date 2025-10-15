@@ -1,6 +1,7 @@
 import { ArrowRight, Cloud,  Target, BarChart3, CheckCircle, Clock,    Globe, Shield, Leaf } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
+import { Target, Globe, Shield, Leaf, BarChart3, Cloud, Clock, ArrowRight, CheckCircle } from 'lucide-react';
 export default function AIClimatePredictionEngine() {
   return;
 },

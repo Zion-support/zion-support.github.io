@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 
+import { Clock, MessageSquare, CheckCircle } from 'lucide-react';
 const DemoPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -17,9 +18,8 @@ const [isSubmitting, setIsSubmitting] = useState(false);
 
 const [isSubmitted, setIsSubmitted] = useState(false);
 
-const handleInputChange = () => {
-  return;
-} = e.target;
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+import { Brain, Code, Wifi, Cloud, Target, Users, TrendingUp, Clock, Zap, Shield, Globe, Star, Phone, Mail, CheckCircle, ArrowRight } from 'lucide-react';
 const ServicesOverviewPage: React.FC = () => {
   const serviceCategories = [
     {

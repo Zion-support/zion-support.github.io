@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
+import { Activity, BarChart3, Zap, CheckCircle } from 'lucide-react';
 const PerformanceMonitoringPage: React.FC = () => {
   const features = [
     {

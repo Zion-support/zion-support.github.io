@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { Database, Zap, Shield, Users, BarChart3, Clock, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionDataSync() {
   return;
 },

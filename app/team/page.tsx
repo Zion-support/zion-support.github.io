@@ -2,6 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+import { Users, Award, Globe, Mail } from 'lucide-react';
 const TeamPage: React.FC = () => {
   const teamMembers = [
     {

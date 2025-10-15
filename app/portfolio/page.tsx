@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
+import { Award, Users, Star, ArrowRight } from 'lucide-react';
 const PortfolioPage: React.FC = () => {
   const projects = [
     {

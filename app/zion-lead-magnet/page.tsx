@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { Mail, TrendingUp, Users, BarChart3, Zap, Target, Clock, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionLeadMagnet() {
   return;
 },

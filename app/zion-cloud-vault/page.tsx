@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { Zap, Users, Shield, CheckCircle, Cloud, Clock, ArrowRight } from 'lucide-react';
 export default function ZionCloudVault() {
   return;
 },

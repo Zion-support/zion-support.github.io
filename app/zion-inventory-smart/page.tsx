@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { Zap, Globe, Target, BarChart3, Settings, Clock, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionInventorySmart() {
   return;
 },

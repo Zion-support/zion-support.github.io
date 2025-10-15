@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
+import { ArrowRight, Star, CheckCircle, Clock } from 'lucide-react';
 const WebDevelopmentPage: React.FC = () => {
   const webServices = [
     {

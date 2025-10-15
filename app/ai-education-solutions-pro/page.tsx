@@ -1,6 +1,7 @@
 import  { useState } from "react";
 import { Helmet } from "react-helmet-async";
 
+import { Brain, BookOpen, Users, Star, Phone, Play, CheckCircle, ArrowRight, Mail } from 'lucide-react';
 const AIEducationSolutionsProPage = () => {
   const [isVisible, ] = useState(false);
 
@@ -337,7 +338,7 @@ const testimonials = [
                     </div>
                     
           <p className="text-gray-300 mb-6 leading-relaxed">
-                      &ldquo;{ testimonial.content }&rdquo;
+                      "{ testimonial.content }"
                     </p>
                     <div>
                       

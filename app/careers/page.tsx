@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+import { Clock, Users, ArrowRight, CheckCircle } from 'lucide-react';
 const CareersPage: React.FC = () => {
   const openPositions = [
     {
@@ -163,7 +164,7 @@ const stats = [
                   Contact Us
                 </a>
               </div>
-            ))}
+            </div>
           </div>
         </section>
         {/* Stats Section */}
@@ -325,7 +326,6 @@ const stats = [
                   Email Us
                 </a>
               </div>
-            ))}
           </div>
         </div>
       </section>
@@ -356,6 +356,7 @@ const stats = [
         </div>
       </section>
     </div>
+    </>
   );
 };
 export default CareersPage;

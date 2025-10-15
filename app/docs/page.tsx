@@ -2,6 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+import { Zap, FileText, Code, Database, Shield, BookOpen, ArrowRight } from 'lucide-react';
 const DocsPage: React.FC = () => {
   const documentationSections = [
     {
@@ -309,7 +310,7 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
               </a>
             </div>
           </div>
-        </div>
+        </section>
         <Footer />
       </div>
     </>

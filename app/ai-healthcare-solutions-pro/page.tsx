@@ -1,6 +1,7 @@
 import  { useState } from "react";
 import { Helmet } from "react-helmet-async";
 
+import { Brain, Heart, Shield, Star, Phone, Play, CheckCircle, ArrowRight, Mail } from 'lucide-react';
 const ShieldIcon = Shield;
 
 const AIHealthcareSolutionsProPage = () => {
@@ -341,7 +342,7 @@ const testimonials = [
                     </div>
                     
           <p className="text-gray-300 mb-6 leading-relaxed">
-                      &ldquo;{ testimonial.content }&rdquo;
+                      "{ testimonial.content }"
                     </p>
                     <div>
                       

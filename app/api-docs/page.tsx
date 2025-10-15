@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
+import { Code, Star, ArrowRight, Zap } from 'lucide-react';
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
 
@@ -317,12 +318,8 @@ const features = [
               {apiEndpoints.map((endpoint, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20">
                   
-        <div className="flex items-center mb-6">
-                    <span className={`px-3 py-1 rounded text-sm font-semibold mr-4 ${
-                      endpoint.method === 'GET' ? 'bg-green-500/20 text-green-400' :
-                      endpoint.method === 'POST' ? 'bg-blue-500/20 text-blue-400' :
-                      'bg-yellow-500/20 text-yellow-400'
-                    }`}>
+                  <div className="flex items-center mb-6">
+                    <span className="px-3 py-1 rounded text-sm font-semibold mr-4 bg-green-500/20 text-green-400">
                       {endpoint.method}
                     </span>
                     <code className="text-cyan-400 font-mono text-lg">{endpoint.path}</code>

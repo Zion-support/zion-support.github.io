@@ -1,4 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from "react";
+import { Bug } from 'lucide-react';
 import { Helmet } from "react-helmet-async"; interface Props { children: ReactNode; fallback?: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void; maxRetries?: number; } interface State { hasError: boolean; error: Error | null; retryCount: number; } class ImprovedErrorBoundary extends Component<Props, State> { private maxRetries: number;
 
 constructor(props: Props) { super(props); this.maxRetries = props.maxRetries || 3; this.state = { hasError: false, error: null, retryCount: 0 }; } static getDerivedStateFromError(error: Error): Partial<State> { return { hasError: true, error }; } componentDidCatch(error: Error, errorInfo: ErrorInfo) { if (this.props.onError) { this.props.onError( errorInfo); } } handleRetry = () => { this.setState(prevState => ({ hasError: false, error: null, retryCount: prevState.retryCount + 1 })); }; get canRetry(): boolean { return this.state.retryCount <this.maxRetries; } render() { if (this.state.hasError) { if (this.props.fallback) { return this.props.fallback; } return (

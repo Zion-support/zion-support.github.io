@@ -1,6 +1,7 @@
 import { ArrowRight, TestTube, Zap, Target, BarChart3, CheckCircle, Clock,    Globe,  Bug } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { Zap, Globe, Target, BarChart3, Bug, Clock, ArrowRight, CheckCircle } from 'lucide-react';
 export default function AIAutomatedTesting() {
   return;
 },

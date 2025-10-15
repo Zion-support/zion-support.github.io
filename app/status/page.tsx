@@ -2,6 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+import { Activity, Database, Globe, CheckCircle, Clock } from 'lucide-react';
 const StatusPage: React.FC = () => {
   const [lastUpdated, setLastUpdated] = useState(new Date());
 
@@ -371,7 +372,7 @@ const refreshStatus = async () => {
               </button>
             </div>
           </div>
-        </div>
+        </section>
         <Footer />
       </div>
     </>

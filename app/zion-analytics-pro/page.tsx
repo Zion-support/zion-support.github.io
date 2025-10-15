@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { TrendingUp, Target, Globe, Users, Shield, Star, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionAnalyticsPro() {
   return;
 },

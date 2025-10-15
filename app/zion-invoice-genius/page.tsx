@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { Zap, Users, BarChart3, Globe, FileText, Clock, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionInvoiceGenius() {
   return;
 },

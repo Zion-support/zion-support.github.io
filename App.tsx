@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Lazy load pages for better performance
-const HomePage = React.lazy(() => import('./app/home/page'));
+const HomePage = React.lazy(() => import('./app/page'));
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const PricingPage = React.lazy(() => import('./app/pricing/page'));
@@ -22,43 +23,16 @@ const SupportPage = React.lazy(() => import('./app/support/page'));
 const StatusPage = React.lazy(() => import('./app/status/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
+const AISolutionsPage = React.lazy(() => import('./app/ai-solutions/page'));
 
 // Components
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
-import ErrorBoundary from './app/components/ErrorBoundary';
+// import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-
-// Page Components
-import HomePage from './app/page';
-import AboutPage from './app/pages/AboutPage';
-import ContactPage from './app/pages/ContactPage';
-import ServicesPage from './app/pages/ServicesPage';
-import BlogPage from './app/pages/BlogPage';
-import TutorialsPage from './app/pages/TutorialsPage';
-import DemoPage from './app/pages/DemoPage';
-import SupportPage from './app/pages/SupportPage';
-import PrivacyPage from './app/pages/PrivacyPage';
-import TermsPage from './app/pages/TermsPage';
-import PricingPage from './app/pages/PricingPage';
-import AISolutionsPage from './app/ai-solutions/page';
-
-// Service Pages
-// import AIServicesPage from './app/pages/AIServicesPage';
-// import ITServicesPage from './app/pages/ITServicesPage';
-// import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
-// import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
-// import CaseStudiesPage from './app/pages/CaseStudiesPage';
-// import CareersPage from './app/pages/CareersPage';
-
-// Additional Pages - commented out until components are created
-// import CybersecurityPage from './app/pages/CybersecurityPage';
-// import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
-// import MicroSaaSPage from './app/pages/MicroSaaSPage';
-// import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
-// import TeamPage from './app/pages/TeamPage';
-// import DocumentationPage from './app/pages/DocumentationPage';
+import Sidebar from './app/components/Sidebar';
+import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -87,86 +61,13 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
   </div>
 );
 
-function App() {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false);
-
-  return (
-    <ErrorBoundary>
-      <HelmetProvider>
-        <Router>
-          <div className="min-h-screen bg-slate-900 flex">
-            <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-            <div className="flex-1 flex flex-col">
-              <Navigation />
-              <main className="relative z-10 flex-1" id="main-content" role="main">
-              <ErrorBoundary>
-                <Routes>
-                  {/* Main Pages */}
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/ai-solutions" element={<AISolutionsPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/tutorials" element={<TutorialsPage />} />
-                  <Route path="/demo" element={<DemoPage />} />
-                  <Route path="/support" element={<SupportPage />} />
-                  <Route path="/privacy" element={<PrivacyPage />} />
-                  <Route path="/terms" element={<TermsPage />} />
-                    <Route path="/pricing" element={<PricingPage />} />
-                  
-                  {/* Service Pages */}
-                  {/* <Route path="/ai-services" element={<AIServicesPage />} /> */}
-                  {/* <Route path="/it-services" element={<ITServicesPage />} /> */}
-                  {/* <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} /> */}
-                  {/* <Route path="/digital-transformation" element={<DigitalTransformationPage />} /> */}
-                  {/* <Route path="/case-studies" element={<CaseStudiesPage />} /> */}
-                  {/* <Route path="/careers" element={<CareersPage />} /> */}
-                  
-                  {/* Additional Service Pages */}
-                  <Route path="/cybersecurity" element={<CybersecurityPage />} />
-                  <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
-                  <Route path="/micro-saas" element={<MicroSaaSPage />} />
-                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                  
-                  {/* Additional Pages */}
-                  <Route path="/team" element={<TeamPage />} />
-                  <Route path="/docs" element={<DocumentationPage />} />
-                  {/* Catch all route */}
-                  <Route path="*" element={
-                    <div className="min-h-screen flex items-center justify-center bg-slate-900">
-                      <div className="text-center">
-                        <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                        <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
-                        <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
-                          Go Home
-                        </a>
-                      </div>
-                    </div>
-                  } />
-                </Routes>
-              </ErrorBoundary>
-              </main>
-              <Footer />
-              <PerformanceMonitor>
-                <AccessibilityEnhancer>
-                  <div></div>
-                </AccessibilityEnhancer>
-              </PerformanceMonitor>
-            </div>
-          </div>
-        </Router>
-      </HelmetProvider>
-    </ErrorBoundary>
-  );
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
 }
 
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-}
-
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
+class AppErrorBoundary extends React.Component<{ children: React.ReactNode }, ErrorBoundaryState> {
+  constructor(props: { children: React.ReactNode }) {
     super(props);
     this.state = { hasError: false, error: null };
   }
@@ -175,10 +76,10 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  componentDidCatch(_error: Error, _errorInfo: React.ErrorInfo) {
     // Log error for debugging
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      // console.error('Error caught by boundary:', error, errorInfo);
     }
   }
 
@@ -203,40 +104,76 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 }
 
-// Main App component
-const App: React.FC = () => {
+function App() {
+  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+
   return (
-    <ErrorBoundary>
-      <Router>
-        <div className="App">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
-              <Route path="/ai-services" element={<AIServicesPage />} />
-              <Route path="/it-services" element={<ITServicesPage />} />
-              <Route path="/micro-saas" element={<MicroSaasPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/case-studies" element={<CaseStudiesPage />} />
-              <Route path="/team" element={<TeamPage />} />
-              <Route path="/careers" element={<CareersPage />} />
-              <Route path="/privacy" element={<PrivacyPage />} />
-              <Route path="/terms" element={<TermsPage />} />
-              <Route path="/cookies" element={<CookiesPage />} />
-              <Route path="/docs" element={<DocsPage />} />
-              <Route path="/api-docs" element={<ApiDocsPage />} />
-              <Route path="/support" element={<SupportPage />} />
-              <Route path="/status" element={<StatusPage />} />
-              <Route path="/demo" element={<DemoPage />} />
-              <Route path="/consultation" element={<ConsultationPage />} />
-            </Routes>
-          </Suspense>
-        </div>
-      </Router>
-    </ErrorBoundary>
+    <AppErrorBoundary>
+      <HelmetProvider>
+        <Router>
+          <div className="min-h-screen bg-slate-900 flex">
+            <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+            <div className="flex-1 flex flex-col">
+              <Navigation />
+              <main className="relative z-10 flex-1" id="main-content" role="main">
+                <AppErrorBoundary>
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <Routes>
+                      {/* Main Pages */}
+                      <Route path="/" element={<HomePage />} />
+                      <Route path="/about" element={<AboutPage />} />
+                      <Route path="/contact" element={<ContactPage />} />
+                      <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                      <Route path="/blog" element={<BlogPage />} />
+                      <Route path="/demo" element={<DemoPage />} />
+                      <Route path="/support" element={<SupportPage />} />
+                      <Route path="/privacy" element={<PrivacyPage />} />
+                      <Route path="/terms" element={<TermsPage />} />
+                      <Route path="/pricing" element={<PricingPage />} />
+                      
+                      {/* Service Pages */}
+                      <Route path="/ai-services" element={<AIServicesPage />} />
+                      <Route path="/it-services" element={<ITServicesPage />} />
+                      <Route path="/micro-saas" element={<MicroSaasPage />} />
+                      
+                      {/* Additional Pages */}
+                      <Route path="/case-studies" element={<CaseStudiesPage />} />
+                      <Route path="/team" element={<TeamPage />} />
+                      <Route path="/careers" element={<CareersPage />} />
+                      <Route path="/cookies" element={<CookiesPage />} />
+                      <Route path="/docs" element={<DocsPage />} />
+                      <Route path="/api-docs" element={<ApiDocsPage />} />
+                      <Route path="/status" element={<StatusPage />} />
+                      <Route path="/consultation" element={<ConsultationPage />} />
+                      
+                      {/* Catch all route */}
+                      <Route path="*" element={
+                        <div className="min-h-screen flex items-center justify-center bg-slate-900">
+                          <div className="text-center">
+                            <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
+                            <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
+                            <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
+                              Go Home
+                            </a>
+                          </div>
+                        </div>
+                      } />
+                    </Routes>
+                  </Suspense>
+                </AppErrorBoundary>
+              </main>
+              <Footer />
+              <PerformanceMonitor>
+                <AccessibilityEnhancer>
+                  <div></div>
+                </AccessibilityEnhancer>
+              </PerformanceMonitor>
+            </div>
+          </div>
+        </Router>
+      </HelmetProvider>
+    </AppErrorBoundary>
   );
-};
+}
 
 export default App;

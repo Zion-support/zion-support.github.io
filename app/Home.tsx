@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import {CheckIcon, PlayIcon, ShieldCheckIcon, CpuChipIcon, CloudIcon, ChartBarIcon} from '@heroicons/react/24/outline';
 
 import { StarIcon } from '@heroicons/react/24/solid';
-import { Shield, Cloud } from 'lucide-react';
+// import { Shield, Cloud } from 'lucide-react';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 const Home: React.FC = () => {
   return (
