@@ -1,29 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-import { 
-  PhoneIcon, 
-  EnvelopeIcon, 
-  MapPinIcon,
-<<<<<<< HEAD
-  ArrowRightIcon,
-  HeartIcon
-} from '@heroicons/react/24/outline';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
-  ArrowRightIcon
-} from '@heroicons/react/24/outline';
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
@@ -31,7 +7,7 @@ import {
   ArrowRightIcon,
   HeartIcon
 } from '@heroicons/react/24/outline';
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
+import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
