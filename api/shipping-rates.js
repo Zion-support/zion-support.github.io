@@ -30,6 +30,3 @@ export default function handler(req, res) {
     res.status(500).json({ error: 'Internal server error' });
   }
 }
-  return (
-    <div className={`shipping-rates ${className}`}>
-}
