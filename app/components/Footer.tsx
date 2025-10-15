@@ -6,25 +6,45 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
-    services: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'IT Services', href: '/services' },
-      { name: 'Micro SAAS', href: '/micro-saas' },
-      { name: '5G Solutions', href: '/5g-solutions' },
+    aiServices: [
+      { name: 'AI Analytics', href: '/ai-analytics' },
+      { name: 'AI Content Generation', href: '/ai-content-generation' },
+      { name: 'AI Customer Support', href: '/ai-customer-support' },
+      { name: 'AI Cybersecurity', href: '/ai-cybersecurity' },
+      { name: 'AI Data Analytics', href: '/ai-data-analytics' },
+      { name: 'AI Document Processing', href: '/ai-document-processing' },
+      { name: 'AI Marketing Automation', href: '/ai-marketing-automation' },
+      { name: 'AI Voice Assistant', href: '/ai-voice-assistant' },
+    ],
+    itServices: [
       { name: 'Cloud Migration', href: '/cloud-migration' },
-      { name: 'Cybersecurity', href: '/network-security' },
       { name: 'DevOps Services', href: '/devops-services' },
-      { name: 'Data Analytics', href: '/data-analytics' },
+      { name: 'IT Consulting', href: '/it-consulting' },
+      { name: 'Network Security', href: '/network-security' },
+      { name: 'Software Development', href: '/software-development' },
+      { name: 'System Integration', href: '/system-integration' },
+      { name: 'Web Development', href: '/web-development' },
+      { name: 'Cloud Consulting', href: '/cloud-consulting' },
     ],
     microSaas: [
-      { name: 'AI Analytics Pro', href: '/zion-ai-analytics-pro' },
-      { name: 'AI Security Suite', href: '/zion-ai-security-suite' },
-      { name: 'AI CRM Enterprise', href: '/zion-ai-crm-enterprise' },
-      { name: 'AI Marketing Automation', href: '/zion-ai-marketing-automation' },
-      { name: 'AI Project Management', href: '/zion-ai-project-management-pro' },
-      { name: 'AI Content Studio', href: '/zion-ai-content-studio' },
-      { name: 'AI Financial Analytics', href: '/zion-ai-financial-analytics' },
-      { name: 'AI Inventory Optimizer', href: '/zion-ai-inventory-optimizer' },
+      { name: 'Zion AI Analytics Pro', href: '/zion-ai-analytics-pro' },
+      { name: 'Zion AI Security Suite', href: '/zion-ai-security-suite' },
+      { name: 'Zion AI CRM Enterprise', href: '/zion-ai-crm-enterprise' },
+      { name: 'Zion AI Marketing Automation', href: '/zion-ai-marketing-automation' },
+      { name: 'Zion AI Project Management', href: '/zion-ai-project-management-pro' },
+      { name: 'Zion AI Content Studio', href: '/zion-ai-content-studio' },
+      { name: 'Zion AI Financial Analytics', href: '/zion-ai-financial-analytics' },
+      { name: 'Zion AI Inventory Optimizer', href: '/zion-ai-inventory-optimizer' },
+    ],
+    fiveGSolutions: [
+      { name: '5G Network Infrastructure', href: '/5g-network-infrastructure' },
+      { name: '5G Edge Computing', href: '/5g-edge-computing' },
+      { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
+      { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
+      { name: '5G Private Networks', href: '/5g-private-networks' },
+      { name: '5G Mobile Applications', href: '/5g-mobile-applications' },
+      { name: '5G Data Analytics', href: '/5g-data-analytics' },
+      { name: '5G Implementation', href: '/5g-implementation' },
     ],
     company: [
       { name: 'About Us', href: '/about' },
@@ -59,7 +79,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 py-16 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <h3 className="text-2xl font-bold text-white">
@@ -85,22 +105,10 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">AI Services</h4>
             <div className="space-y-3">
-<<<<<<< HEAD
               {footerLinks.aiServices.map((link) => (
-                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group">
                   {link.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Micro SAAS */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Micro SAAS</h4>
-            <div className="space-y-3">
-              {footerLinks.microSaas.map((link) => (
-                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                  {link.name}
+                  <span className="block w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300"></span>
                 </Link>
               ))}
             </div>
@@ -111,11 +119,7 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold text-white">IT Services</h4>
             <div className="space-y-3">
               {footerLinks.itServices.map((link) => (
-                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-=======
-              {footerLinks.services.map((link) => (
                 <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7775
                   {link.name}
                   <span className="block w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300"></span>
                 </Link>
@@ -128,6 +132,19 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold text-white">Micro SAAS</h4>
             <div className="space-y-3">
               {footerLinks.microSaas.map((link) => (
+                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group">
+                  {link.name}
+                  <span className="block w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300"></span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* 5G Solutions */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white">5G Solutions</h4>
+            <div className="space-y-3">
+              {footerLinks.fiveGSolutions.map((link) => (
                 <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group">
                   {link.name}
                   <span className="block w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300"></span>
