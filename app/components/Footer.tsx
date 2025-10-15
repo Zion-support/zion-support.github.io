@@ -11,6 +11,11 @@ const Footer: React.FC = memo(() => {
             <p className="text-gray-300 mb-4">
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
+            <div className="text-gray-300 text-sm">
+              <p>📞 +1 302 464 0950</p>
+              <p>✉️ kleber@ziontechgroup.com</p>
+              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            </div>
             <div className="flex space-x-4">
               <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
                 <span className="sr-only">Website</span>
@@ -49,6 +54,11 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
               <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">Document Analyzer</Link></li>
               <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
+              <li><Link to="/zion-ai-code-reviewer" className="text-gray-300 hover:text-white">AI Code Reviewer</Link></li>
+              <li><Link to="/zion-ai-api-tester" className="text-gray-300 hover:text-white">AI API Tester</Link></li>
+              <li><Link to="/zion-ai-database-optimizer" className="text-gray-300 hover:text-white">AI Database Optimizer</Link></li>
+              <li><Link to="/zion-ai-security-scanner" className="text-gray-300 hover:text-white">AI Security Scanner</Link></li>
+              <li><Link to="/zion-ai-performance-monitor" className="text-gray-300 hover:text-white">AI Performance Monitor</Link></li>
               <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
             </ul>
           </div>

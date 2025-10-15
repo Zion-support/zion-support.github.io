@@ -111,6 +111,21 @@ const Navigation: React.FC = () => {
                     <Link to="/zion-ai-workflow-automator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Workflow Automator
                     </Link>
+                    <Link to="/zion-ai-code-reviewer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Code Reviewer
+                    </Link>
+                    <Link to="/zion-ai-api-tester" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI API Tester
+                    </Link>
+                    <Link to="/zion-ai-database-optimizer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Database Optimizer
+                    </Link>
+                    <Link to="/zion-ai-security-scanner" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Security Scanner
+                    </Link>
+                    <Link to="/zion-ai-performance-monitor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Performance Monitor
+                    </Link>
                   </div>
                 </div>
               )}
@@ -224,6 +239,21 @@ const Navigation: React.FC = () => {
               </Link>
               <Link to="/zion-ai-workflow-automator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Workflow Automator
+              </Link>
+              <Link to="/zion-ai-code-reviewer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Code Reviewer
+              </Link>
+              <Link to="/zion-ai-api-tester" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI API Tester
+              </Link>
+              <Link to="/zion-ai-database-optimizer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Database Optimizer
+              </Link>
+              <Link to="/zion-ai-security-scanner" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Security Scanner
+              </Link>
+              <Link to="/zion-ai-performance-monitor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Performance Monitor
               </Link>
             </div>
             <div className="px-3 py-2 text-base font-medium text-gray-700">

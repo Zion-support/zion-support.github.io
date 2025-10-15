@@ -52,6 +52,11 @@ const ZionAIWorkflowAutomatorPage = lazy(() => import('./app/zion-ai-workflow-au
 const ZionAIWorkflowAutomatorProPage = lazy(() => import('./app/zion-ai-workflow-automator-pro/page'));
 const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-customer-satisfaction-monitor/page'));
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
+const ZionAICodeReviewerPage = lazy(() => import('./app/zion-ai-code-reviewer/page'));
+const ZionAIAPITesterPage = lazy(() => import('./app/zion-ai-api-tester/page'));
+const ZionAIDatabaseOptimizerPage = lazy(() => import('./app/zion-ai-database-optimizer/page'));
+const ZionAISecurityScannerPage = lazy(() => import('./app/zion-ai-security-scanner/page'));
+const ZionAIPerformanceMonitorPage = lazy(() => import('./app/zion-ai-performance-monitor/page'));
 
 // Import components
 import Navigation from './app/components/Navigation';
@@ -152,6 +157,11 @@ export default function App() {
                   <Route path="/zion-ai-workflow-automator-pro" element={<ZionAIWorkflowAutomatorProPage />} />
                   <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
                   <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
+                  <Route path="/zion-ai-code-reviewer" element={<ZionAICodeReviewerPage />} />
+                  <Route path="/zion-ai-api-tester" element={<ZionAIAPITesterPage />} />
+                  <Route path="/zion-ai-database-optimizer" element={<ZionAIDatabaseOptimizerPage />} />
+                  <Route path="/zion-ai-security-scanner" element={<ZionAISecurityScannerPage />} />
+                  <Route path="/zion-ai-performance-monitor" element={<ZionAIPerformanceMonitorPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
