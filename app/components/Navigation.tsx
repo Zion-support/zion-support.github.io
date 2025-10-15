@@ -69,6 +69,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
         { name: 'AI Email Optimizer', href: '/ai-email-optimizer', icon: EnvelopeIcon },
         { name: 'AI Website Analyzer', href: '/ai-website-analyzer', icon: EyeIcon },
         { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },
+        { name: 'AI Project Manager', href: '/ai-project-manager', icon: CogIcon },
+        { name: 'AI Customer Support', href: '/ai-customer-support-chatbot', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: ChartBarIcon },
+        { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: EnvelopeIcon },
+        { name: 'AI Social Media Pro', href: '/ai-social-media-manager-pro', icon: ShareIcon },
         { name: 'Data Analytics', href: '/data-analytics', icon: ChartBarIcon }
       ]
     },
@@ -213,6 +218,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
     setIsResourcesOpen(false);
   };
 
+  const closeAllMenus = () => {
+    setIsServicesOpen(false);
+    setIsSolutionsOpen(false);
+    setIsResourcesOpen(false);
+    setIsCompanyOpen(false);
+  };
+
   return (
     <nav className="bg-slate-900 border-b border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -239,6 +251,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
                     else if (item.name === 'IT Solutions') toggleResourcesMenu();
                     else if (item.name === 'Resources') toggleResourcesMenu();
                     else if (item.name === 'Company') toggleCompanyMenu();
+                    else if (item.name === 'Zion AI Tools') toggleSolutionsMenu();
+                    else closeAllMenus();
                   }}
                   className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors border-b-2 ${
                     isActive(item.href)
@@ -249,7 +263,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
                     (item.name === 'Micro SaaS' && isSolutionsOpen) ||
                     (item.name === 'IT Solutions' && isResourcesOpen) ||
                     (item.name === 'Resources' && isResourcesOpen) ||
-                    (item.name === 'Company' && isCompanyOpen) : undefined}
+                    (item.name === 'Company' && isCompanyOpen) ||
+                    (item.name === 'Zion AI Tools' && isSolutionsOpen) : undefined}
                   aria-haspopup={item.submenu ? 'true' : undefined}
                 >
                   <item.icon className="w-4 h-4" aria-hidden="true" />
@@ -264,7 +279,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
                       (item.name === 'Micro SaaS' && isSolutionsOpen) ||
                       (item.name === 'IT Solutions' && isResourcesOpen) ||
                       (item.name === 'Resources' && isResourcesOpen) ||
-                      (item.name === 'Company' && isCompanyOpen)
+                      (item.name === 'Company' && isCompanyOpen) ||
+                      (item.name === 'Zion AI Tools' && isSolutionsOpen)
                         ? 'block' : 'hidden'
                     }`}
                     role="menu"

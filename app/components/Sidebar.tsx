@@ -54,6 +54,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'AI Solutions', href: '/ai-solutions', icon: Settings },
         { name: 'AI Services', href: '/ai-services', icon: Settings },
+        { name: 'AI Project Manager', href: '/ai-project-manager', icon: Settings },
+        { name: 'AI Customer Support', href: '/ai-customer-support-chatbot', icon: Settings },
+        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: Settings },
+        { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: Settings },
         { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Settings },
         { name: 'AI Document Processor', href: '/ai-document-processor', icon: Settings },
         { name: 'AI Voice Assistant', href: '/ai-voice-assistant', icon: Settings },

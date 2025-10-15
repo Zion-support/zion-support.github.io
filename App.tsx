@@ -85,6 +85,13 @@ const BlockchainSolutionsProPage = lazy(() => import('./app/blockchain-solutions
 const DevOpsAutomationProPage = lazy(() => import('./app/devops-automation-pro/page'));
 const IOTSolutionsProPage = lazy(() => import('./app/iot-solutions-pro/page'));
 
+// New AI Services
+const AIProjectManagerPage = lazy(() => import('./app/ai-project-manager/page'));
+const AICustomerSupportChatbotPage = lazy(() => import('./app/ai-customer-support-chatbot/page'));
+const AIAnalyticsDashboardPage = lazy(() => import('./app/ai-analytics-dashboard/page'));
+const AIEmailMarketingAutomationPage = lazy(() => import('./app/ai-email-marketing-automation/page'));
+const AISocialMediaManagerProPage = lazy(() => import('./app/ai-social-media-manager-pro/page'));
+
 // Zion AI Services
 const ZionAIChatbotBuilderPage = lazy(() => import('./app/zion-ai-chatbot-builder/page'));
 const ZionAICodeAssistantPage = lazy(() => import('./app/zion-ai-code-assistant/page'));
@@ -287,6 +294,13 @@ function App() {
                     <Route path="/blockchain-solutions-pro" element={<BlockchainSolutionsProPage />} />
                     <Route path="/devops-automation-pro" element={<DevOpsAutomationProPage />} />
                     <Route path="/iot-solutions-pro" element={<IOTSolutionsProPage />} />
+                    
+                    {/* New AI Services */}
+                    <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
+                    <Route path="/ai-customer-support-chatbot" element={<AICustomerSupportChatbotPage />} />
+                    <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
+                    <Route path="/ai-email-marketing-automation" element={<AIEmailMarketingAutomationPage />} />
+                    <Route path="/ai-social-media-manager-pro" element={<AISocialMediaManagerProPage />} />
                     
                     {/* Zion AI Services */}
                     <Route path="/zion-ai-chatbot-builder" element={<ZionAIChatbotBuilderPage />} />

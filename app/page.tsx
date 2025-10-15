@@ -13,7 +13,8 @@ import {
   SparklesIcon,
   ChartBarIcon,
   GlobeAltIcon,
-  CogIcon
+  CogIcon,
+  ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline';
 
 const HomePage: React.FC = () => {
@@ -245,101 +246,23 @@ const HomePage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* AI Content Generator */}
-              <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <SparklesIcon className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="text-sm text-cyan-400 font-medium">AI Content</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
-                  AI Content Generator Pro
-                </h3>
-                <p className="text-gray-400 mb-4 text-sm">
-                  Generate high-quality content for blogs, social media, and marketing materials using advanced AI.
-                </p>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-cyan-400">$199/mo</span>
-                  <span className="text-sm text-gray-400 line-through">$299/mo</span>
-                </div>
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Unlimited content generation</span>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>SEO optimization</span>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Multi-language support</span>
-                  </div>
-                </div>
-                <Link to="/ai-content-generator"
-                  className="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-                >
-                  Try Free Trial
-                </Link>
-              </div>
-
-              {/* Analytics Dashboard */}
+              {/* AI Project Manager */}
               <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <ChartBarIcon className="w-6 h-6 text-white" />
+                    <CogIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-purple-400 font-medium">Analytics</span>
+                  <span className="text-sm text-purple-400 font-medium">Productivity</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                  Business Analytics Pro
+                  AI Project Manager Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Comprehensive business intelligence and analytics platform with real-time insights and reporting.
+                  Intelligent project management with AI-powered task prioritization and team collaboration.
                 </p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-purple-400">$349/mo</span>
-                  <span className="text-sm text-gray-400 line-through">$499/mo</span>
-                </div>
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Real-time dashboards</span>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Predictive analytics</span>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Custom reports</span>
-                  </div>
-                </div>
-                <Link to="/analytics-dashboard"
-                  className="block w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-                >
-                  Try Free Trial
-                </Link>
-              </div>
-
-              {/* Task Manager */}
-              <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/20">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <CheckCircleIcon className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="text-sm text-green-400 font-medium">Productivity</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
-                  Task Manager Pro
-                </h3>
-                <p className="text-gray-400 mb-4 text-sm">
-                  Advanced task management with AI-powered prioritization and team collaboration features.
-                </p>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-green-400">$29/mo</span>
-                  <span className="text-sm text-gray-400 line-through">$49/mo</span>
+                  <span className="text-2xl font-bold text-purple-400">$99/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$149/mo</span>
                 </div>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
@@ -348,14 +271,92 @@ const HomePage: React.FC = () => {
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Team collaboration</span>
+                    <span>Predictive analytics</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Time tracking</span>
+                    <span>Team collaboration</span>
                   </div>
                 </div>
-                <Link to="/task-manager"
+                <Link to="/ai-project-manager"
+                  className="block w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI Customer Support */}
+              <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <ChatBubbleLeftRightIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-blue-400 font-medium">Support</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                  AI Customer Support
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Intelligent chatbot with natural language processing and 24/7 customer support automation.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-blue-400">$149/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$199/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>24/7 availability</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Multi-language support</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Smart routing</span>
+                  </div>
+                </div>
+                <Link to="/ai-customer-support-chatbot"
+                  className="block w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI Analytics Dashboard */}
+              <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <ChartBarIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-green-400 font-medium">Analytics</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
+                  AI Analytics Dashboard
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Advanced analytics with AI-powered insights, predictive analytics, and real-time monitoring.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-green-400">$199/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$299/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Real-time insights</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Predictive analytics</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Custom dashboards</span>
+                  </div>
+                </div>
+                <Link to="/ai-analytics-dashboard"
                   className="block w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
