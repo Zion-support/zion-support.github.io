@@ -1,201 +1,236 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
+import { servicesData } from '../data/servicesData';
 
 const ServicesPage: React.FC = () => {
+  const aiServices = servicesData.aiServices;
+  const itSolutions = servicesData.itSolutions;
+  const microSaas = servicesData.microSaas.slice(0, 6); // Show first 6 micro SaaS services
+
   return (
     <>
       <SEOHead
         title="Services - Zion Tech Group"
-        description="Explore our comprehensive range of AI and IT services designed to accelerate your business growth."
-        keywords="AI services, IT services, cloud solutions, digital transformation, business automation, technology consulting"
+        description="Explore our comprehensive range of AI and IT services designed to accelerate your business growth. From AI development to cloud infrastructure and micro SaaS solutions."
+        keywords="AI services, IT services, cloud solutions, digital transformation, business automation, technology consulting, micro saas, machine learning, data analytics"
         canonicalUrl="https://ziontechgroup.com/services"
       />
       
-      <div className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Comprehensive AI and IT solutions designed to transform your business and drive sustainable growth
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="#ai-services" 
+                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Explore AI Services
+                </a>
+                <a 
+                  href="/contact" 
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  Get Consultation
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* AI Services Section */}
+        <div id="ai-services" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">Our Services</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions tailored to your business needs
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">AI & Machine Learning Services</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Harness the power of artificial intelligence to automate processes, gain insights, and drive innovation in your business.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Services</h3>
-              <p className="text-gray-600">
-                Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
-              </p>
-            </div>
-<<<<<<< HEAD
-          </div>
-        </section>
 
-        {/* Service Categories */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Tab Navigation */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id as any)}
-                  className={`group relative px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 ${
-                    activeTab === tab.id
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25'
-                      : 'glass-effect text-gray-300 hover:text-white hover:bg-white/10'
-                  }`}
-                >
-                  <span className="flex items-center space-x-3">
-                    <span className="text-2xl">{tab.icon}</span>
-                    <span>{tab.name}</span>
-                    <span className="px-2 py-1 bg-white/20 rounded-full text-sm">
-                      {tab.count}
-                    </span>
-                  </span>
-                </button>
-              ))}
-            </div>
-
-            {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {getCurrentServices().map((service, index) => (
-                <div
-                  key={service.id}
-                  className="group relative card-futuristic p-8 hover:scale-105 transition-all duration-300"
-                >
-                  {/* Service Icon */}
-                  <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                    {service.icon}
-                  </div>
-
-                  {/* Service Title */}
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                    {service.title}
-                  </h3>
-
-                  {/* Service Description */}
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  {/* Features */}
-                  <div className="space-y-2 mb-6">
-                    <h4 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
-                      Key Features
-                    </h4>
-                    <ul className="space-y-1">
-                      {service.features.slice(0, 3).map((feature, idx) => (
-                        <li key={idx} className="text-sm text-gray-400 flex items-center">
-                          <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></span>
-                          {feature}
-                        </li>
-                      ))}
-                      {service.features.length > 3 && (
-                        <li className="text-sm text-gray-500">
-                          +{service.features.length - 3} more features
-                        </li>
-                      )}
-                    </ul>
-                  </div>
-
-                  {/* Pricing */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {aiServices.map((service) => (
+              <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                <div className="p-8">
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  
                   <div className="mb-6">
-                    <div className="flex items-baseline space-x-2">
-                      <span className="text-3xl font-bold gradient-text">
-                        ${service.pricing.basic.toLocaleString()}
-                      </span>
-                      <span className="text-gray-400">
-                        {activeTab === 'saas' ? '/month' : 'starting'}
-                      </span>
-                    </div>
-                    <p className="text-sm text-gray-400">
-                      Market Price: {service.marketPrice}
-                    </p>
-                  </div>
-
-                  {/* Benefits */}
-                  <div className="space-y-2 mb-6">
-                    <h4 className="text-sm font-semibold text-green-400 uppercase tracking-wide">
-                      Benefits
-                    </h4>
-                    <ul className="space-y-1">
-                      {service.benefits.slice(0, 2).map((benefit, idx) => (
-                        <li key={idx} className="text-sm text-gray-400 flex items-center">
-                          <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2"></span>
-                          {benefit}
-                        </li>
+                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                    <div className="grid grid-cols-2 gap-2">
+                      {service.features.slice(0, 6).map((feature, index) => (
+                        <div key={index} className="flex items-center text-sm text-gray-600">
+                          <span className="text-green-500 mr-2">✓</span>
+                          {feature}
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   </div>
 
-                  {/* CTA Buttons */}
-                  <div className="space-y-3">
-                    <Link
-                      to={`/contact?service=${service.id}`}
-                      className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-medium text-center hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-2">Pricing:</h4>
+                    <div className="text-2xl font-bold text-blue-600">{service.marketPrice}</div>
+                    <div className="text-sm text-gray-500">Starting from ${service.pricing.basic.toLocaleString()}</div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-2">
+                    <a 
+                      href={`/contact?service=${service.id}`}
+                      className="flex-1 bg-blue-600 text-white text-center py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors"
                     >
-                      Get Quote
-                    </Link>
-                    <a
+                      Get Started
+                    </a>
+                    <a 
                       href={service.contactInfo.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full px-6 py-3 border border-cyan-500 text-cyan-400 rounded-lg font-medium text-center hover:bg-cyan-500 hover:text-white transition-all duration-300"
+                      className="flex-1 border border-blue-600 text-blue-600 text-center py-3 px-4 rounded-lg hover:bg-blue-50 transition-colors"
                     >
                       Learn More
                     </a>
                   </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
-                  {/* Contact Info */}
-                  <div className="mt-6 pt-6 border-t border-gray-700">
-                    <div className="space-y-2 text-sm">
-                      <div className="flex items-center space-x-2 text-gray-400">
-                        <span>📞</span>
-                        <a href={`tel:${service.contactInfo.phone}`} className="hover:text-cyan-400 transition-colors">
-                          {service.contactInfo.phone}
-                        </a>
-                      </div>
-                      <div className="flex items-center space-x-2 text-gray-400">
-                        <span>✉️</span>
-                        <a href={`mailto:${service.contactInfo.email}`} className="hover:text-cyan-400 transition-colors">
-                          {service.contactInfo.email}
-                        </a>
-                      </div>
+        {/* IT Solutions Section */}
+        <div className="bg-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">IT Solutions & Infrastructure</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Comprehensive IT services to build, secure, and optimize your technology infrastructure for maximum performance and reliability.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {itSolutions.map((service) => (
+                <div key={service.id} className="bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                  <div className="p-6">
+                    <div className="text-4xl mb-4">{service.icon}</div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                    <p className="text-gray-600 mb-4">{service.description}</p>
+                    
+                    <div className="mb-4">
+                      <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                      <ul className="text-sm text-gray-600 space-y-1">
+                        {service.features.slice(0, 4).map((feature, index) => (
+                          <li key={index} className="flex items-center">
+                            <span className="text-green-500 mr-2">✓</span>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="mb-4">
+                      <h4 className="font-semibold text-gray-900 mb-2">Pricing:</h4>
+                      <div className="text-xl font-bold text-blue-600">{service.marketPrice}</div>
+                    </div>
+
+                    <div className="flex flex-col gap-2">
+                      <a 
+                        href={`/contact?service=${service.id}`}
+                        className="bg-blue-600 text-white text-center py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+                      >
+                        Get Quote
+                      </a>
+                      <a 
+                        href={service.contactInfo.website}
+                        className="border border-blue-600 text-blue-600 text-center py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors"
+                      >
+                        Learn More
+                      </a>
                     </div>
                   </div>
-
-                  {/* Hover Effect Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 to-purple-500/0 group-hover:from-cyan-500/5 group-hover:to-purple-500/5 rounded-2xl transition-all duration-300"></div>
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* CTA Section */}
-        <section className="py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-3xl p-12 border border-cyan-500/20">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our AI and IT solutions can accelerate your digital transformation. 
-                Contact us today for a free consultation.
-=======
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Infrastructure</h3>
-              <p className="text-gray-600">
-                Scalable cloud solutions that provide reliability, security, and performance for your business applications.
+        {/* Micro SaaS Section */}
+        <div className="bg-gray-50 py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Micro SaaS Solutions</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Specialized software solutions designed to solve specific business challenges with AI-powered intelligence and automation.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
-              <p className="text-gray-600">
-                Complete digital transformation services to modernize your business processes and systems.
->>>>>>> cursor/comprehensive-app-audit-and-update-1ae3
-              </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {microSaas.map((service) => (
+                <div key={service.id} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                  <div className="p-6">
+                    <div className="text-3xl mb-3">{service.icon}</div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h3>
+                    <p className="text-sm text-gray-600 mb-3">{service.shortDescription}</p>
+                    
+                    <div className="mb-3">
+                      <div className="text-lg font-bold text-blue-600">{service.marketPrice}</div>
+                      <div className="text-xs text-gray-500">Starting from ${service.pricing.basic}/month</div>
+                    </div>
+
+                    <div className="flex flex-col gap-2">
+                      <a 
+                        href={`/contact?service=${service.id}`}
+                        className="bg-blue-600 text-white text-center py-2 px-3 rounded text-sm hover:bg-blue-700 transition-colors"
+                      >
+                        Try Free
+                      </a>
+                      <a 
+                        href={service.contactInfo.website}
+                        className="border border-blue-600 text-blue-600 text-center py-2 px-3 rounded text-sm hover:bg-blue-50 transition-colors"
+                      >
+                        Details
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-8">
+              <a 
+                href="/micro-saas-solutions" 
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              >
+                View All Micro SaaS Solutions
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-xl mb-8">
+              Let our expert team help you choose the right solutions for your business needs. Get a free consultation today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/contact" 
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Get Free Consultation
+              </a>
+              <a 
+                href="tel:+13024640950" 
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                Call +1 302 464 0950
+              </a>
+            </div>
+            <div className="mt-8 text-sm">
+              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
         </div>

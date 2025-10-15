@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { servicesData } from './data/servicesData';
 
 const HomePage: React.FC = () => {
   const structuredData = {
@@ -29,12 +30,14 @@ const HomePage: React.FC = () => {
     ]
   };
 
+  const featuredMicroSaas = servicesData.microSaas.slice(0, 6);
+
   return (
     <>
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation." />
-        <meta name="keywords" content="AI solutions, IT services, cloud infrastructure, digital transformation, machine learning, artificial intelligence" />
+        <meta name="description" content="Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, digital transformation, and micro SaaS solutions." />
+        <meta name="keywords" content="AI solutions, IT services, cloud infrastructure, digital transformation, machine learning, artificial intelligence, micro saas, business automation, ai tools" />
         <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
         <meta property="og:description" content="Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation." />
         <meta property="og:type" content="website" />
@@ -50,82 +53,152 @@ const HomePage: React.FC = () => {
         </script>
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-cyan-500 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-48 h-48 bg-purple-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-pink-500 rounded-full blur-3xl animate-pulse delay-2000"></div>
-          <div className="absolute bottom-40 right-1/3 w-36 h-36 bg-blue-500 rounded-full blur-3xl animate-pulse delay-3000"></div>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Transform Your Business with AI
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
+                Leading provider of AI and IT solutions, micro SaaS tools, and digital transformation services. 
+                We help businesses automate, optimize, and scale with cutting-edge technology.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a href="/contact" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg">
+                  Get Free Consultation
+                </a>
+                <a href="/services" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg">
+                  Explore Services
+                </a>
+              </div>
+              
+              {/* Contact Info */}
+              <div className="text-center text-sm opacity-90">
+                <p>📞 +1 302 464 0950 | ✉️ kleber@ziontechgroup.com</p>
+                <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 gradient-text">
-              Welcome to Zion Tech Group
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              We provide cutting-edge AI and IT solutions to help your business thrive in the digital age. 
-              Transform your operations with our innovative micro SAAS services and advanced technology solutions.
+
+        {/* Featured Services */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Core Services</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Comprehensive AI and IT solutions designed to accelerate your business growth and digital transformation.
             </p>
-<<<<<<< HEAD
-            
-            {/* Contact Information */}
-            <div className="mb-12 p-6 glass-effect rounded-2xl max-w-2xl mx-auto">
-              <h3 className="text-xl font-semibold text-cyan-400 mb-4">Ready to Get Started?</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                <div className="flex items-center justify-center space-x-2">
-                  <span className="text-cyan-400">📞</span>
-                  <a href="tel:+13024640950" className="text-gray-300 hover:text-cyan-400 transition-colors">+1 302 464 0950</a>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <span className="text-cyan-400">📧</span>
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a>
-                </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>
+              <p className="text-gray-600 mb-6">
+                Advanced artificial intelligence solutions including machine learning, NLP, computer vision, and custom AI development.
+              </p>
+              <div className="mb-4">
+                <div className="text-2xl font-bold text-blue-600">$5,000 - $50,000</div>
+                <div className="text-sm text-gray-500">Starting from $5,000</div>
               </div>
+              <a href="/ai-services" className="text-blue-600 hover:text-blue-800 font-semibold">Explore AI Services →</a>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="/services" className="btn-futuristic">
-                Explore Services
-              </a>
-              <a href="/contact" className="px-8 py-3 border-2 border-cyan-500 text-cyan-400 rounded-full font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 hover:scale-105">
-                Get Quote
-              </a>
-=======
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Get Started
-              </a>
-              <a href="/about" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-                Learn More
-              </a>
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">☁️</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Cloud Infrastructure</h3>
+              <p className="text-gray-600 mb-6">
+                Scalable cloud solutions that provide reliability, security, and performance for your business applications.
+              </p>
+              <div className="mb-4">
+                <div className="text-2xl font-bold text-blue-600">$1,000 - $20,000/month</div>
+                <div className="text-sm text-gray-500">Starting from $1,000/month</div>
+              </div>
+              <a href="/cloud-infrastructure" className="text-blue-600 hover:text-blue-800 font-semibold">Explore Cloud Solutions →</a>
             </div>
             
-            {/* Featured Services */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Services</h3>
-                <p className="text-gray-600 mb-4">
-                  Advanced artificial intelligence solutions including machine learning, NLP, and computer vision.
-                </p>
-                <a href="/ai-services" className="text-blue-600 hover:text-blue-800">Explore AI Services →</a>
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Digital Transformation</h3>
+              <p className="text-gray-600 mb-6">
+                Complete digital transformation services to modernize your business processes and systems for the digital age.
+              </p>
+              <div className="mb-4">
+                <div className="text-2xl font-bold text-blue-600">Custom Pricing</div>
+                <div className="text-sm text-gray-500">Based on project scope</div>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Infrastructure</h3>
-                <p className="text-gray-600 mb-4">
-                  Scalable cloud solutions that provide reliability, security, and performance for your business.
-                </p>
-                <a href="/cloud-infrastructure" className="text-blue-600 hover:text-blue-800">Explore Cloud Solutions →</a>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
-                <p className="text-gray-600 mb-4">
-                  Complete digital transformation services to modernize your business processes and systems.
-                </p>
-                <a href="/digital-transformation" className="text-blue-600 hover:text-blue-800">Learn More →</a>
-              </div>
->>>>>>> cursor/comprehensive-app-audit-and-update-1ae3
+              <a href="/digital-transformation" className="text-blue-600 hover:text-blue-800 font-semibold">Learn More →</a>
+            </div>
+          </div>
+        </div>
+
+        {/* Micro SaaS Solutions */}
+        <div className="bg-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Micro SaaS Solutions</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Powerful, specialized software solutions designed to solve specific business challenges with AI-powered intelligence and automation.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {featuredMicroSaas.map((service) => (
+                <div key={service.id} className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+                  <div className="text-3xl mb-3">{service.icon}</div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h3>
+                  <p className="text-sm text-gray-600 mb-3">{service.shortDescription}</p>
+                  <div className="mb-3">
+                    <div className="text-lg font-bold text-blue-600">{service.marketPrice}</div>
+                    <div className="text-xs text-gray-500">Starting from ${service.pricing.basic}/month</div>
+                  </div>
+                  <a 
+                    href={`/contact?service=${service.id}`}
+                    className="text-blue-600 hover:text-blue-800 text-sm font-semibold"
+                  >
+                    Try Free →
+                  </a>
+                </div>
+              ))}
+            </div>
+            
+            <div className="text-center mt-8">
+              <a 
+                href="/micro-saas-solutions" 
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              >
+                View All Micro SaaS Solutions
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-xl mb-8">
+              Join thousands of businesses already using our solutions to drive growth, efficiency, and innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/contact" 
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Get Free Consultation
+              </a>
+              <a 
+                href="tel:+13024640950" 
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                Call +1 302 464 0950
+              </a>
+            </div>
+            <div className="mt-8 text-sm">
+              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
         </div>
