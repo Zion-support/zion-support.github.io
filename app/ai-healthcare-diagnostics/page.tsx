@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-
-const AiHealthcareDiagnosticsPage: React.FC = () => {";"
-  return (";"
-    <>";"
-      </div>";"
-    </>";"
-=======
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
@@ -23,8 +15,7 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {
         </div>
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9
   );
 };
-;
+
 export default AiHealthcareDiagnosticsPage;
