@@ -29,6 +29,28 @@ const Sidebar: React.FC = () => {
           </div>
           
           <div className="mb-4">
+            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Zion AI Products</h3>
+            <Link to="/zion-ai-content-moderator" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Content Moderator
+            </Link>
+            <Link to="/zion-ai-customer-churn-predictor" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Customer Churn Predictor
+            </Link>
+            <Link to="/zion-ai-customer-support-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Customer Support Pro
+            </Link>
+            <Link to="/zion-ai-document-analyzer" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Document Analyzer
+            </Link>
+            <Link to="/zion-ai-financial-forecaster" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Financial Forecaster
+            </Link>
+            <Link to="/zion-ai-workflow-automator" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Workflow Automator
+            </Link>
+          </div>
+          
+          <div className="mb-4">
             <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Company</h3>
             <Link to="/about" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               About Us
