@@ -1,6 +1,4 @@
-import React, { Suspense, lazy } from 'react';
-
-// Loading component
+import React, { lazy, Suspense } from 'react';
 const PageLoader: React.FC = () => (
   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
     <div className="text-white text-xl">Loading page...</div>

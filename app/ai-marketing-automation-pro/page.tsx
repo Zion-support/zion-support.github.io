@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { Zap, Shield, Globe, Brain, CheckCircle, ArrowRight, Star, Phone, Mail, Play, Target, Cpu, BarChart3, FileText, Briefcase, Mail as MailIcon, Share2, Image, Smartphone, Monitor } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Megaphone, Zap, Shield, Globe, Brain, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin, Download, Play, Pause, RefreshCw, Settings, Eye, Filter, Target, Users, Award, TrendingUp, Cpu, Database, BarChart3, Activity, Clock, FileText, Send, ThumbsUp, ThumbsDown, AlertCircle, CheckSquare, XCircle, PieChart, LineChart, TrendingDown, Calculator, CreditCard, Banknote, Wallet, Receipt, ChartBar, Percent, Coins, Building2, Briefcase, PiggyBank, HandCoins, Mail as MailIcon, MessageSquare, Share2, Camera, Video, Image, Palette, MousePointer, Layers, Command, Smartphone, Monitor, Tablet } from 'lucide-react';
-
+import React, {  } from 'react';
 const AiMarketingAutomationProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 

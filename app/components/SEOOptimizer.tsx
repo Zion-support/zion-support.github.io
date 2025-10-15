@@ -1,6 +1,4 @@
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
-
-
+import React, { useEffect } from 'react';
 const SEOOptimizer: React.FC = () => {
   useEffect(() => {
     // Set up structured data

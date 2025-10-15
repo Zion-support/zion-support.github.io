@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 export const seoUtils = {
   generateTitle: (pageTitle: string, siteName: string = 'Zion Tech Group') => {
     return `${pageTitle} | ${siteName}`;

@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { Users, TrendingUp, BarChart3, Zap, Shield, Brain, CheckCircle, ArrowRight, Star, Phone, Mail, Play, Clock, Camera, Hash, MessageCircle, Calendar, Image, Video, Link, Hashtag } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Share2, Users, TrendingUp, BarChart3, Zap, Shield, Globe, Brain, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin, Download, Play, Pause, RefreshCw, Settings, Eye, Filter, Clock, PieChart, LineChart, Activity, AlertTriangle, CheckSquare, FileText, MessageSquare, Camera, Hash, Heart, MessageCircle, ThumbsUp, Target, Calendar, Image, Video, Link, Hashtag, AtSign, DollarSign, Award } from 'lucide-react';
-
+import React, {  } from 'react';
 const AiSocialMediaManagerProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 

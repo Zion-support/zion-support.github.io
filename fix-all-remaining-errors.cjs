@@ -4,147 +4,180 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-// Function to fix all remaining syntax errors
-function fixAllRemainingErrors(content) {
-  let fixed = content;
-
-  // Fix import statements with spaces in the middle
-  fixed = fixed.replace(/import\s+\{\s*([^}]+)\s*\}\s*from\s+'([^']+)';/g, (match, imports, module) => {
-    // Clean up the imports by removing extra spaces and fixing common patterns
-    const cleanImports = imports
-      .split(',')
-      .map(imp => {
-        let cleaned = imp.trim();
-        // Fix common patterns
-        cleaned = cleaned.replace(/\s+/g, '');
-        return cleaned;
-      })
-      .join(', ');
-    return `import { ${cleanImports} } from '${module}';`;
-  });
-
-  // Fix specific broken import patterns
-  fixed = fixed.replace(/import\s+React\s+from\s+'react';/g, 'import React from \'react\';');
-  fixed = fixed.replace(/import\s+\{\s*Arrow\s+Right\s*,\s*Check\s+Circle\s*,\s*Link\s*\}\s*from\s+'lucide-react';/g, 'import { ArrowRight, CheckCircle, Link } from \'lucide-react\';');
-  fixed = fixed.replace(/import\s+Enhanced\s+SEO\s+from\s+'\.\.\/components\/Enhanced\s+SEO';/g, 'import EnhancedSEO from \'../components/EnhancedSEO\';');
-  fixed = fixed.replace(/import\s+Home\s+Page\s+from\s+'\.\/page';/g, 'import HomePage from \'./page\';');
-  fixed = fixed.replace(/import\s+\{\s*Browser\s+Router\s+as\s+Router\s*,\s*Routes\s*,\s*Route\s*,\s*Helmet\s+Provider\s*\}\s*from\s+'react-router-dom';/g, 'import { BrowserRouter as Router, Routes, Route, HelmetProvider } from \'react-router-dom\';');
-  fixed = fixed.replace(/import\s+Performance\s+Monitor\s+from\s+'\.\/components\/Performance\s+Monitor';/g, 'import PerformanceMonitor from \'./components/PerformanceMonitor\';');
-
-  // Fix component names with spaces
-  fixed = fixed.replace(/const\s+Not\s+Found\s+Page\s*:/g, 'const NotFoundPage:');
-  fixed = fixed.replace(/const\s+Five\s+GConsulting\s+Page\s*=/g, 'const FiveGConsultingPage =');
-  fixed = fixed.replace(/const\s+Five\s+GData\s+Analytics\s+Page\s*=/g, 'const FiveGDataAnalyticsPage =');
-  fixed = fixed.replace(/const\s+Five\s+GDeployment\s+Page\s*=/g, 'const FiveGDeploymentPage =');
-  fixed = fixed.replace(/const\s+Five\s+GEdge\s+Computing\s+Page\s*=/g, 'const FiveGEdgeComputingPage =');
-  fixed = fixed.replace(/const\s+Five\s+GImplementation\s+Page\s*=/g, 'const FiveGImplementationPage =');
-  fixed = fixed.replace(/const\s+Five\s+GInfrastructure\s+Page\s*=/g, 'const FiveGInfrastructurePage =');
-  fixed = fixed.replace(/const\s+Five\s+GIntegration\s+Page\s*=/g, 'const FiveGIntegrationPage =');
-  fixed = fixed.replace(/const\s+Five\s+GIot\s+Solutions\s+Page\s*=/g, 'const FiveGIotSolutionsPage =');
-  fixed = fixed.replace(/const\s+Five\s+GMaintenance\s+Page\s*=/g, 'const FiveGMaintenancePage =');
-  fixed = fixed.replace(/const\s+Five\s+GMigration\s+Page\s*=/g, 'const FiveGMigrationPage =');
-  fixed = fixed.replace(/const\s+Five\s+GMobile\s+Applications\s+Page\s*=/g, 'const FiveGMobileApplicationsPage =');
-  fixed = fixed.replace(/const\s+Five\s+GModernization\s+Page\s*=/g, 'const FiveGModernizationPage =');
-  fixed = fixed.replace(/const\s+Five\s+GMonitoring\s+Page\s*=/g, 'const FiveGMonitoringPage =');
-  fixed = fixed.replace(/const\s+Five\s+GNetwork\s+Infrastructure\s+Page\s*=/g, 'const FiveGNetworkInfrastructurePage =');
-  fixed = fixed.replace(/const\s+Five\s+GNetwork\s+Optimization\s+Page\s*=/g, 'const FiveGNetworkOptimizationPage =');
-  fixed = fixed.replace(/const\s+Five\s+GOptimization\s+Page\s*=/g, 'const FiveGOptimizationPage =');
-  fixed = fixed.replace(/const\s+Five\s+GPerformance\s+Page\s*=/g, 'const FiveGPerformancePage =');
-  fixed = fixed.replace(/const\s+Five\s+GPrivate\s+Networks\s+Page\s*=/g, 'const FiveGPrivateNetworksPage =');
-  fixed = fixed.replace(/const\s+Five\s+GReliability\s+Page\s*=/g, 'const FiveGReliabilityPage =');
-  fixed = fixed.replace(/const\s+Five\s+GScalability\s+Page\s*=/g, 'const FiveGScalabilityPage =');
-  fixed = fixed.replace(/const\s+Five\s+GSecurity\s+Page\s*=/g, 'const FiveGSecurityPage =');
-  fixed = fixed.replace(/const\s+Five\s+GSmart\s+City\s+Solutions\s+Page\s*=/g, 'const FiveGSmartCitySolutionsPage =');
-  fixed = fixed.replace(/const\s+Five\s+GSolutions\s+Page\s*=/g, 'const FiveGSolutionsPage =');
-  fixed = fixed.replace(/const\s+Five\s+GSupport\s+Page\s*=/g, 'const FiveGSupportPage =');
-  fixed = fixed.replace(/const\s+Five\s+GTesting\s+Page\s*=/g, 'const FiveGTestingPage =');
-  fixed = fixed.replace(/const\s+Five\s+GTraining\s+Page\s*=/g, 'const FiveGTrainingPage =');
-  fixed = fixed.replace(/const\s+Five\s+GTransformation\s+Page\s*=/g, 'const FiveGTransformationPage =');
-  fixed = fixed.replace(/const\s+Five\s+GUpgrade\s+Page\s*=/g, 'const FiveGUpgradePage =');
-
-  // Fix function declarations with spaces
-  fixed = fixed.replace(/function\s+Home\s+Page\s*\(/g, 'function HomePage(');
-  fixed = fixed.replace(/function\s+App\s*\(/g, 'function App(');
-
-  // Fix JSX elements with spaces
-  fixed = fixed.replace(/<Helmet\s+Provider>/g, '<HelmetProvider>');
-  fixed = fixed.replace(/<\/Helmet\s+Provider>/g, '</HelmetProvider>');
-  fixed = fixed.replace(/<Home\s+Page\s*\/>/g, '<HomePage />');
-  fixed = fixed.replace(/<Route\s+path\s*=\s*"/g, '<Route path="/');
-  fixed = fixed.replace(/class\s+Name\s*=/g, 'className=');
-
-  // Fix text content with spaces
-  fixed = fixed.replace(/5G\s+Strategy\s+Development/g, '5G Strategy Development');
-  fixed = fixed.replace(/Comprehensive\s+5G\s+implementation\s+strategiestailored\s+toyourbusiness\s+needs\./g, 'Comprehensive 5G implementation strategies tailored to your business needs.');
-
-  // Fix all remaining spaces in identifiers
-  fixed = fixed.replace(/(\w+)\s+(\w+)\s*:/g, (match, part1, part2) => {
-    // Don't fix common object properties
-    if (['title', 'description', 'icon', 'href', 'src', 'alt'].includes(part1)) {
-      return match;
+// Function to fix missing React imports
+function fixMissingReactImports(content) {
+  // Check if React hooks are used but not imported
+  const usesUseState = content.includes('useState') && !content.includes('import { useState');
+  const usesUseEffect = content.includes('useEffect') && !content.includes('import { useEffect');
+  const usesLazy = content.includes('lazy') && !content.includes('import { lazy');
+  const usesSuspense = content.includes('Suspense') && !content.includes('import { Suspense');
+  const usesMemo = content.includes('memo') && !content.includes('import { memo');
+  
+  if (usesUseState || usesUseEffect || usesLazy || usesSuspense || usesMemo) {
+    // Find the first import statement
+    const lines = content.split('\n');
+    let firstImportIndex = -1;
+    
+    for (let i = 0; i < lines.length; i++) {
+      if (lines[i].trim().startsWith('import ')) {
+        firstImportIndex = i;
+        break;
+      }
     }
-    return `${part1}${part2}:`;
-  });
-
-  // Fix all remaining spaces in component names
-  fixed = fixed.replace(/(\w+)\s+(\w+)\s*Page\s*:/g, '$1$2Page:');
-  fixed = fixed.replace(/(\w+)\s+(\w+)\s*Page\s*=/g, '$1$2Page =');
-  fixed = fixed.replace(/(\w+)\s+(\w+)\s*Page\s*>/g, '$1$2Page>');
-  fixed = fixed.replace(/(\w+)\s+(\w+)\s*Page\s*\)/g, '$1$2Page)');
-  fixed = fixed.replace(/(\w+)\s+(\w+)\s*Page\s*</g, '$1$2Page<');
-  fixed = fixed.replace(/(\w+)\s+(\w+)\s*Page\s*$/gm, '$1$2Page');
-
-  // Fix all remaining spaces in import statements
-  fixed = fixed.replace(/import\s+(\w+)\s+(\w+)\s+from/g, 'import $1$2 from');
-
-  // Fix all remaining spaces in JSX attributes
-  fixed = fixed.replace(/<(\w+)\s+(\w+)\s*=/g, '<$1 $2=');
-
-  // Fix all remaining spaces in className values
-  fixed = fixed.replace(/className="([^"]*?)([a-z])([A-Z])([^"]*?)"/g, 'className="$1$2 $3$4"');
-  fixed = fixed.replace(/className="([^"]*?)([a-z])(\d+)([^"]*?)"/g, 'className="$1$2-$3$4"');
-  fixed = fixed.replace(/className="([^"]*?)(\d+)([a-z])([^"]*?)"/g, 'className="$1$2-$3$4"');
-
-  return fixed;
+    
+    if (firstImportIndex >= 0) {
+      // Add React import before the first import
+      const reactImports = [];
+      if (usesUseState) reactImports.push('useState');
+      if (usesUseEffect) reactImports.push('useEffect');
+      if (usesLazy) reactImports.push('lazy');
+      if (usesSuspense) reactImports.push('Suspense');
+      if (usesMemo) reactImports.push('memo');
+      
+      const reactImport = `import React, { ${reactImports.join(', ')} } from 'react';`;
+      lines.splice(firstImportIndex, 0, reactImport);
+      return lines.join('\n');
+    }
+  }
+  
+  return content;
 }
 
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixAllRemainingErrors(content);
+// Function to fix malformed import statements
+function fixMalformedImports(content) {
+  const lines = content.split('\n');
+  const result = [];
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
     
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed);
+    // Check for malformed import with comma operator at the beginning
+    if (line.trim().startsWith(',') || line.trim().startsWith('  ,')) {
+      // This is a malformed import line, skip it
+      continue;
+    }
+    
+    // Check for lines that start with import but have comma operators
+    if (line.trim().startsWith('import ') && line.includes(',') && !line.includes('{')) {
+      // This is a malformed import, try to fix it
+      const match = line.match(/import\s+([^,]+),\s*(.+)/);
+      if (match) {
+        const firstPart = match[1].trim();
+        const rest = match[2].trim();
+        
+        // If it looks like a named import, fix it
+        if (rest.includes('from')) {
+          const moduleName = rest.match(/from\s+['"]([^'"]+)['"]/)?.[1];
+          if (moduleName) {
+            const newImport = `import { ${firstPart} } from '${moduleName}';`;
+            result.push(newImport);
+            continue;
+          }
+        }
+      }
+    }
+    
+    result.push(line);
+  }
+  
+  return result.join('\n');
+}
+
+// Function to remove unused imports
+function removeUnusedImports(content) {
+  const lines = content.split('\n');
+  const result = [];
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    
+    // Check if this is an import statement
+    if (line.trim().startsWith('import ')) {
+      const match = line.match(/import\s+(?:{([^}]+)}|([^{][^;]+?))\s+from\s+['"]([^'"]+)['"];?/);
+      if (match) {
+        const namedImports = match[1];
+        const defaultImport = match[2];
+        const moduleName = match[3];
+        
+        if (namedImports) {
+          // Handle named imports
+          const namedImportList = namedImports.split(',').map(imp => imp.trim());
+          const usedNamedImports = [];
+          
+          for (const namedImport of namedImportList) {
+            const cleanImport = namedImport.replace(/\s+as\s+\w+/, '').trim();
+            if (content.includes(cleanImport) && !content.includes(`// ${cleanImport}`)) {
+              usedNamedImports.push(namedImport);
+            }
+          }
+          
+          if (usedNamedImports.length === 0) {
+            // All imports are unused, skip this line
+            continue;
+          } else if (usedNamedImports.length < namedImportList.length) {
+            // Some imports are unused, replace with only used imports
+            const newImport = `import { ${usedNamedImports.join(', ')} } from '${moduleName}';`;
+            result.push(newImport);
+            continue;
+          }
+        } else if (defaultImport) {
+          // Handle default imports
+          const cleanImport = defaultImport.trim();
+          if (!content.includes(cleanImport) || content.includes(`// ${cleanImport}`)) {
+            // Import is unused, skip this line
+            continue;
+          }
+        }
+      }
+    }
+    
+    result.push(line);
+  }
+  
+  return result.join('\n');
+}
+
+// Function to fix a file
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    // Fix missing React imports
+    content = fixMissingReactImports(content);
+    
+    // Fix malformed imports
+    content = fixMalformedImports(content);
+    
+    // Remove unused imports
+    content = removeUnusedImports(content);
+    
+    // Clean up multiple empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
       return true;
     }
+    
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Main function
-function main() {
-  const pattern = 'app/**/*.tsx';
-  const files = glob.sync(pattern);
-  
-  console.log(`Found ${files.length} TSX files to process...`);
-  
-  let fixedCount = 0;
-  files.forEach(file => {
-    if (processFile(file)) {
-      fixedCount++;
-    }
-  });
-  
-  console.log(`Fixed ${fixedCount} files`);
+// Find all TypeScript/TSX files
+const files = glob.sync('app/**/*.{ts,tsx}', { cwd: process.cwd() });
+
+console.log(`Fixing ${files.length} TypeScript files...`);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixFile(file)) {
+    fixedCount++;
+  }
 }
 
-if (require.main === module) {
-  main();
-}
-
-module.exports = { fixAllRemainingErrors, processFile };
+console.log(`Fixed ${fixedCount} files`);

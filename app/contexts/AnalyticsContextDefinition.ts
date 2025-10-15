@@ -1,5 +1,4 @@
-// import { createContext } from 'react';
-
+import React, { ReactNode } from 'react';
 export interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
   trackPageView: (page: string) => void;

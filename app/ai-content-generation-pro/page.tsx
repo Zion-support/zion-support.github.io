@@ -1,8 +1,6 @@
-
-import React, { useState, useEffect } from 'react';
+import { FileText, Wand2, CheckCircle, ArrowRight, Star, Phone, Mail, Play, Zap, Target, Globe, Shield } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { FileText, Wand2, CheckCircle, ArrowRight, Star, Phone, Mail, Play, Zap, Target, Globe, Shield, Brain, Clock, Users } from 'lucide-react';
-
+import React, {  } from 'react';
 const AiContentGenerationProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 

@@ -1,7 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Shield, Lock, Eye, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-
+import { Helmet } from 'react-helmet-async';
+import React, {  } from 'react';
 const PrivacyPage: React.FC = () => {
   const privacySections = [
     {

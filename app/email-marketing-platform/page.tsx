@@ -1,6 +1,4 @@
-
-import { Helmet } from "react-helmet-async";
-
+import { Helmet } from 'react-helmet-async';
 const EmailMarketingPlatformPage: React.FC = () => {
   return (
     <>

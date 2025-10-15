@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 interface LoadingState {
   isLoading: boolean;
   progress: number;

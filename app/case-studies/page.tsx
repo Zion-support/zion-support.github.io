@@ -1,11 +1,9 @@
-import { 
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, ExternalLink } from 'lucide-react';
   ArrowRight,
   CheckCircle,
   ExternalLink
-} from 'lucide-react';
-
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 interface CaseStudy {
   id: string;

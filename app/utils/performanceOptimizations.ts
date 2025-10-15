@@ -1,3 +1,4 @@
+import React, { memo } from 'react';
 export const performanceOptimizations = {
   debounce: <T extends (...args: unknown[]) => unknown>(func: T, wait: number): T => {
     let timeout: NodeJS.Timeout

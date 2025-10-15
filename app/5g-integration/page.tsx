@@ -1,6 +1,5 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
+import { Helmet } from 'react-helmet-async';
+import React, {  } from 'react';
 const FiveGIntegration: React.FC = () => {
   return (
     <>
@@ -55,5 +54,4 @@ const FiveGIntegration: React.FC = () => {
 };
 
 export default FiveGIntegration;
-
 

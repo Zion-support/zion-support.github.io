@@ -1,7 +1,6 @@
-import React from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import React, {  } from 'react';
 interface ErrorFallbackProps {
   error: Error;
   resetError: () => void;

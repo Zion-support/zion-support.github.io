@@ -1,7 +1,6 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Bug } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-
+import { AlertTriangle, RefreshCw, Bug } from 'lucide-react';
+import React, { Component, ReactNode, ErrorInfo } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;

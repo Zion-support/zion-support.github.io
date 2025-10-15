@@ -1,6 +1,4 @@
-
-import { Helmet } from "react-helmet-async";
-
+import { Helmet } from 'react-helmet-async';
 const AiSpaceTechnologyProPage = () => {
   return (
     <>

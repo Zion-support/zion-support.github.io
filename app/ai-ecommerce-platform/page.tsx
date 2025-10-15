@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
+import { BarChart3, Brain, CheckCircle, Mail, MessageSquare, Package, Percent, Phone, Play, Search, Settings, Shield, Smartphone, Star, Users } from 'lucide-react';
+import React, {  } from 'react';
   BarChart3,
   Brain,
   CheckCircle,
@@ -16,7 +16,6 @@ import {
   Smartphone,
   Star,
   Users
-} from 'lucide-react';
 
 const AiEcommercePlatformPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

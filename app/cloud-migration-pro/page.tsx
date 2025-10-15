@@ -1,6 +1,4 @@
-
-import { Helmet } from "react-helmet-async";
-
+import { Helmet } from 'react-helmet-async';
 const CloudMigrationProPage: React.FC = () => {
   return (
     <>

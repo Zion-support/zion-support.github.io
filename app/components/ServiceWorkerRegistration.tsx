@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-
+import { useEffect } from 'react';
 const ServiceWorkerRegistration: React.FC = () => {
   useEffect(() => {
     if ('serviceWorker' in navigator) {

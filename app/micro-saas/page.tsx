@@ -1,11 +1,9 @@
-import { 
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { CheckCircle, Star, Zap } from 'lucide-react';
   CheckCircle,
   Star,
   Zap
-} from 'lucide-react';
-
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 interface MicroSaasProduct {
   id: string;

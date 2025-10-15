@@ -1,6 +1,4 @@
-
-import { Helmet } from "react-helmet-async";
-
+import { Helmet } from 'react-helmet-async';
 const CloudInfrastructureManagerPage: React.FC = () => {
   return (
     <>

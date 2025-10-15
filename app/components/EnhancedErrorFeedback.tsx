@@ -1,7 +1,6 @@
-import React from 'react';
-import { AlertTriangle, Send } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-
+import { AlertTriangle, Send } from 'lucide-react';
+import React, {  } from 'react';
 interface ErrorFeedbackProps {
   error: Error;
   onRetry?: () => void;

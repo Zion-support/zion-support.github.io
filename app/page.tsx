@@ -1,5 +1,6 @@
-import React, { memo, useState, useEffect } from 'react';
-import { 
+import { Phone, Mail, MapPin, ArrowRight, Shield, Brain, Code, Cloud, Wifi, Star, CheckCircle, Users, Award, TrendingUp, Clock } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import React, {  } from 'react';
   Phone,
   Mail,
   MapPin,
@@ -15,10 +16,6 @@ import {
   Award,
   TrendingUp,
   Clock
-} from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-
-// Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-4 bg-gray-300 rounded mb-4"></div>

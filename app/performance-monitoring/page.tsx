@@ -1,12 +1,10 @@
-import { 
+import { Helmet } from 'react-helmet-async';
+import { Activity, AlertTriangle, ArrowRight, CheckCircle, Zap } from 'lucide-react';
   Activity,
   AlertTriangle,
   ArrowRight,
   CheckCircle,
   Zap
-} from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-
 const PerformanceMonitoringPage: React.FC = () => {
   const features = [
     {

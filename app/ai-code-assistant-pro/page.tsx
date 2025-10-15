@@ -1,8 +1,6 @@
-
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
+import { Code, Globe, CheckCircle, ArrowRight, Star, Phone, Mail, Play, Terminal, GitBranch, Bug, FileText, Cpu, Cloud, Brain, Database } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Code, Globe, CheckCircle, ArrowRight, Star, Phone, Mail, Play, Terminal, GitBranch, Bug, FileText, Cpu, Cloud, TrendingUp, Brain, Database } from 'lucide-react';
-
+import { useState, useEffect } from 'react';
 const AiCodeAssistantProPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   // const [activeTab, setActiveTab] = useState('overview');

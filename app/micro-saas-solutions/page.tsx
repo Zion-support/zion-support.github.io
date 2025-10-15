@@ -1,8 +1,6 @@
-import { 
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
   ArrowRight
-} from 'lucide-react';
-
-import { Helmet } from "react-helmet-async";
 
 const MicroSaasSolutionsPage: React.FC = () => {
   return (

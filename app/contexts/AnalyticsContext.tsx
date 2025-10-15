@@ -1,6 +1,5 @@
-import React, { ReactNode, useCallback } from 'react';
 import { AnalyticsContext, AnalyticsContextType } from './AnalyticsContextDefinition';
-
+import React, { ReactNode } from 'react';
 interface AnalyticsProviderProps {
   children: ReactNode;
 }

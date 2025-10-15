@@ -1,48 +1,48 @@
-import React, { Suspense, useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AiBlockchainSolutionsPage from './app/ai-blockchain-solutions/page';
+import Ai3DGenerationPage from './app/ai-3d-generation/page';
+import AiAgriculturalIntelligenceProPage from './app/ai-agricultural-intelligence-pro/page';
+import AiClimateSolutionsProPage from './app/ai-climate-solutions-pro/page';
+import AiContentModerationProPage from './app/ai-content-moderation-pro/page';
+import AiAccountingAssistantPage from './app/ai-accounting-assistant/page';
+import FiveGPrivateNetworksPage from './app/5g-private-networks/page';
+import FiveGEdgeComputingPage from './app/5g-edge-computing/page';
+import FiveGSmartCitySolutionsPage from './app/5g-smart-city-solutions/page';
+import FiveGIotSolutionsPage from './app/5g-iot-solutions/page';
+import FiveGNetworkInfrastructurePage from './app/5g-network-infrastructure/page';
+import FiveGImplementationPage from './app/5g-implementation/page';
+import DevOpsSolutionsPage from './app/devops-solutions/page';
+import PerformanceMonitoringPage from './app/performance-monitoring/page';
+import AdvancedSecuritySuitePage from './app/advanced-security-suite/page';
+import DatabaseSolutionsPage from './app/database-solutions/page';
+import AiApiManagementPage from './app/ai-api-management/page';
+import AiCloudInfrastructurePage from './app/ai-cloud-infrastructure/page';
+import AiChatbotEnterprisePage from './app/ai-chatbot-enterprise/page';
+import AiCodeAssistantProPage from './app/ai-code-assistant-pro/page';
+import AiBusinessIntelligenceProPage from './app/ai-business-intelligence-pro/page';
+import AiAutomationSuitePage from './app/ai-automation-suite/page';
+import AiContentGenerationProPage from './app/ai-content-generation-pro/page';
+import AiAnalyticsDashboardProPage from './app/ai-analytics-dashboard-pro/page';
+import CareersPage from './app/careers/page';
+import BlogPage from './app/blog/page';
+import TermsPage from './app/terms/page';
+import PrivacyPage from './app/privacy/page';
+import ContactPage from './app/contact/page';
+import ServicesPage from './app/services/page';
+import AboutPage from './app/about/page';
+import HomePage from './app/page';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
+import Footer from './app/components/Footer';
+import Header from './app/components/Header';
 import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { Suspense, useState, useEffect } from 'react';
 
 // Components
-import Header from './app/components/Header';
-import Footer from './app/components/Footer';
-import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
 
 // Pages
-import HomePage from './app/page';
-import AboutPage from './app/about/page';
-import ServicesPage from './app/services/page';
-import ContactPage from './app/contact/page';
-import PrivacyPage from './app/privacy/page';
-import TermsPage from './app/terms/page';
-import BlogPage from './app/blog/page';
-import CareersPage from './app/careers/page';
 
 // Service Pages
-import AiAnalyticsDashboardProPage from './app/ai-analytics-dashboard-pro/page';
-import AiContentGenerationProPage from './app/ai-content-generation-pro/page';
-import AiAutomationSuitePage from './app/ai-automation-suite/page';
-import AiBusinessIntelligenceProPage from './app/ai-business-intelligence-pro/page';
-import AiCodeAssistantProPage from './app/ai-code-assistant-pro/page';
-import AiChatbotEnterprisePage from './app/ai-chatbot-enterprise/page';
-import AiCloudInfrastructurePage from './app/ai-cloud-infrastructure/page';
-import AiApiManagementPage from './app/ai-api-management/page';
-import DatabaseSolutionsPage from './app/database-solutions/page';
-import AdvancedSecuritySuitePage from './app/advanced-security-suite/page';
-import PerformanceMonitoringPage from './app/performance-monitoring/page';
-import DevOpsSolutionsPage from './app/devops-solutions/page';
-import FiveGImplementationPage from './app/5g-implementation/page';
-import FiveGNetworkInfrastructurePage from './app/5g-network-infrastructure/page';
-import FiveGIotSolutionsPage from './app/5g-iot-solutions/page';
-import FiveGSmartCitySolutionsPage from './app/5g-smart-city-solutions/page';
-import FiveGEdgeComputingPage from './app/5g-edge-computing/page';
-import FiveGPrivateNetworksPage from './app/5g-private-networks/page';
-import AiAccountingAssistantPage from './app/ai-accounting-assistant/page';
-import AiContentModerationProPage from './app/ai-content-moderation-pro/page';
-import AiClimateSolutionsProPage from './app/ai-climate-solutions-pro/page';
-import AiAgriculturalIntelligenceProPage from './app/ai-agricultural-intelligence-pro/page';
-import Ai3DGenerationPage from './app/ai-3d-generation/page';
-import AiBlockchainSolutionsPage from './app/ai-blockchain-solutions/page';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);

@@ -1,11 +1,9 @@
-import { 
+import { Helmet } from 'react-helmet-async';
+import { HelpCircle, Mail, Phone } from 'lucide-react';
+import React, {  } from 'react';
   HelpCircle,
   Mail,
   Phone
-} from 'lucide-react';
-
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
-import { Helmet } from "react-helmet-async";
 
 interface FAQ {
   question: string;

@@ -1,6 +1,4 @@
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
-
-
+import React, { useEffect, lazy } from 'react';
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
     // Preload critical resources

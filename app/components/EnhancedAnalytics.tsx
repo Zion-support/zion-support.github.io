@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-
 interface EnhancedAnalyticsProps {
   eventName?: string;
   eventProperties?: Record<string, unknown>;

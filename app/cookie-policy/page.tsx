@@ -1,6 +1,4 @@
-
-import { Helmet } from "react-helmet-async";
-
+import { Helmet } from 'react-helmet-async';
 const CookiePolicyPage: React.FC = () => {
   return (
     <>
