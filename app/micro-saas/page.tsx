@@ -6,35 +6,83 @@ const MicroSaasPage: React.FC = () => {
   const saasProducts = [
     {
       name: "AI Content Writer Pro",
-      description: "Advanced AI-powered content creation tool that generates high-quality articles, blogs, and marketing copy.",
-      features: ["Natural language generation", "SEO optimization", "Multi-language support", "Brand voice customization"],
-      price: "$29/month",
+      description: "Advanced AI-powered content creation tool that generates high-quality articles, blogs, and marketing copy with 99.9% accuracy.",
+      features: ["GPT-4 powered generation", "SEO optimization", "Multi-language support", "Brand voice customization", "Plagiarism detection", "Content scheduling"],
+      price: "$49/month",
       popular: true,
-      icon: <Zap className="w-8 h-8" />
+      icon: <Zap className="w-8 h-8" />,
+      marketPrice: "$99/month",
+      savings: "50% off"
     },
     {
       name: "Analytics Dashboard Pro",
-      description: "Comprehensive business intelligence dashboard with real-time data visualization and insights.",
-      features: ["Real-time analytics", "Custom reports", "Data export", "Team collaboration"],
-      price: "$49/month",
-      popular: false,
-      icon: <BarChart3 className="w-8 h-8" />
-    },
-    {
-      name: "Security Shield",
-      description: "Enterprise-grade security monitoring and threat detection for your applications and data.",
-      features: ["24/7 monitoring", "Threat detection", "Compliance reporting", "Incident response"],
+      description: "Comprehensive business intelligence dashboard with real-time data visualization, predictive analytics, and automated insights.",
+      features: ["Real-time analytics", "Custom reports", "Data export", "Team collaboration", "Predictive modeling", "Alert system"],
       price: "$79/month",
       popular: false,
-      icon: <Shield className="w-8 h-8" />
+      icon: <BarChart3 className="w-8 h-8" />,
+      marketPrice: "$149/month",
+      savings: "47% off"
+    },
+    {
+      name: "Security Shield Enterprise",
+      description: "Enterprise-grade security monitoring and threat detection with AI-powered anomaly detection and automated response.",
+      features: ["24/7 monitoring", "AI threat detection", "Compliance reporting", "Incident response", "Vulnerability scanning", "Security training"],
+      price: "$129/month",
+      popular: false,
+      icon: <Shield className="w-8 h-8" />,
+      marketPrice: "$299/month",
+      savings: "57% off"
     },
     {
       name: "Project Manager AI",
-      description: "Intelligent project management tool with AI-powered task optimization and team coordination.",
-      features: ["Smart scheduling", "Resource optimization", "Progress tracking", "Team communication"],
+      description: "Intelligent project management tool with AI-powered task optimization, resource allocation, and predictive project completion.",
+      features: ["Smart scheduling", "Resource optimization", "Progress tracking", "Team communication", "Risk assessment", "Budget forecasting"],
+      price: "$59/month",
+      popular: false,
+      icon: <Users className="w-8 h-8" />,
+      marketPrice: "$119/month",
+      savings: "50% off"
+    },
+    {
+      name: "AI Email Marketing Suite",
+      description: "Complete email marketing automation platform with AI-powered personalization, A/B testing, and advanced segmentation.",
+      features: ["AI personalization", "A/B testing", "Advanced segmentation", "Automation workflows", "Analytics dashboard", "Template library"],
       price: "$39/month",
       popular: false,
-      icon: <Users className="w-8 h-8" />
+      icon: <Zap className="w-8 h-8" />,
+      marketPrice: "$79/month",
+      savings: "51% off"
+    },
+    {
+      name: "AI Customer Support Bot",
+      description: "Intelligent customer support chatbot with natural language processing, sentiment analysis, and seamless human handoff.",
+      features: ["NLP processing", "Sentiment analysis", "Multi-channel support", "Human handoff", "Knowledge base", "Performance analytics"],
+      price: "$69/month",
+      popular: false,
+      icon: <Users className="w-8 h-8" />,
+      marketPrice: "$149/month",
+      savings: "54% off"
+    },
+    {
+      name: "AI Social Media Manager",
+      description: "Automated social media management with AI content creation, optimal posting times, and engagement optimization.",
+      features: ["Content generation", "Optimal timing", "Engagement optimization", "Multi-platform posting", "Analytics insights", "Hashtag research"],
+      price: "$49/month",
+      popular: false,
+      icon: <BarChart3 className="w-8 h-8" />,
+      marketPrice: "$99/month",
+      savings: "51% off"
+    },
+    {
+      name: "AI Accounting Assistant",
+      description: "Smart accounting software with automated bookkeeping, expense categorization, and financial reporting powered by AI.",
+      features: ["Automated bookkeeping", "Expense categorization", "Financial reporting", "Tax preparation", "Invoice generation", "Receipt scanning"],
+      price: "$89/month",
+      popular: false,
+      icon: <Shield className="w-8 h-8" />,
+      marketPrice: "$199/month",
+      savings: "55% off"
     }
   ];
 
@@ -106,41 +154,49 @@ const MicroSaasPage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {saasProducts.map((product, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 relative ${product.popular ? 'ring-2 ring-cyan-500' : ''}`}>
+                <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 relative group hover:transform hover:scale-105 ${product.popular ? 'ring-2 ring-cyan-500 shadow-lg shadow-cyan-500/25' : ''}`}>
                   {product.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center shadow-lg">
                         <Star className="w-4 h-4 mr-1" />
                         Most Popular
                       </span>
                     </div>
                   )}
                   
-                  <div className="text-cyan-400 mb-4">
+                  <div className="text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors">
                     {product.icon}
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-white mb-4">{product.name}</h3>
-                  <p className="text-gray-300 mb-6">{product.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">{product.name}</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">{product.description}</p>
                   
                   <ul className="space-y-3 mb-8">
                     {product.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                   
-                  <div className="flex items-center justify-between">
-                    <div className="text-3xl font-bold text-white">{product.price}</div>
-                    <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center">
-                      Get Started
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </button>
+                  <div className="mb-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="text-3xl font-bold text-white">{product.price}</div>
+                      <div className="text-right">
+                        <div className="text-sm text-gray-400 line-through">{product.marketPrice}</div>
+                        <div className="text-sm text-green-400 font-semibold">{product.savings}</div>
+                      </div>
+                    </div>
+                    <div className="text-sm text-gray-400">Billed monthly • Cancel anytime</div>
                   </div>
+                  
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25">
+                    Start Free Trial
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </button>
                 </div>
               ))}
             </div>

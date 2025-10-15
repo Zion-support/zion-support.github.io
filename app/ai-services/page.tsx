@@ -6,45 +6,84 @@ const AiServicesPage: React.FC = () => {
   const aiServices = [
     {
       name: "Machine Learning Solutions",
-      description: "Custom ML models and algorithms tailored to your specific business needs and data patterns.",
-      features: ["Predictive analytics", "Pattern recognition", "Custom model training", "Real-time inference"],
+      description: "Custom ML models and algorithms tailored to your specific business needs with 99.7% accuracy and real-time processing.",
+      features: ["Predictive analytics", "Pattern recognition", "Custom model training", "Real-time inference", "AutoML capabilities", "Model monitoring"],
       icon: <Brain className="w-8 h-8" />,
-      applications: ["Fraud detection", "Demand forecasting", "Customer segmentation", "Quality control"]
+      applications: ["Fraud detection", "Demand forecasting", "Customer segmentation", "Quality control", "Price optimization", "Churn prediction"],
+      price: "From $2,999/month",
+      marketPrice: "$5,999/month"
     },
     {
-      name: "Computer Vision",
-      description: "Advanced image and video analysis capabilities for automation and intelligent decision making.",
-      features: ["Object detection", "Facial recognition", "OCR processing", "Video analytics"],
+      name: "Computer Vision AI",
+      description: "Advanced image and video analysis capabilities with 99.9% accuracy for automation and intelligent decision making.",
+      features: ["Object detection", "Facial recognition", "OCR processing", "Video analytics", "3D reconstruction", "Medical imaging"],
       icon: <Eye className="w-8 h-8" />,
-      applications: ["Quality inspection", "Security monitoring", "Medical imaging", "Autonomous vehicles"]
+      applications: ["Quality inspection", "Security monitoring", "Medical imaging", "Autonomous vehicles", "Retail analytics", "Manufacturing"],
+      price: "From $3,499/month",
+      marketPrice: "$6,999/month"
     },
     {
       name: "Natural Language Processing",
-      description: "Transform text and speech data into actionable insights with our advanced NLP solutions.",
-      features: ["Sentiment analysis", "Language translation", "Text summarization", "Chatbot development"],
+      description: "Transform text and speech data into actionable insights with our advanced NLP solutions supporting 50+ languages.",
+      features: ["Sentiment analysis", "Language translation", "Text summarization", "Chatbot development", "Voice recognition", "Document analysis"],
       icon: <MessageSquare className="w-8 h-8" />,
-      applications: ["Customer service", "Content moderation", "Document processing", "Voice assistants"]
+      applications: ["Customer service", "Content moderation", "Document processing", "Voice assistants", "Legal analysis", "Market research"],
+      price: "From $2,499/month",
+      marketPrice: "$4,999/month"
     },
     {
-      name: "AI Automation",
-      description: "Intelligent automation solutions that streamline workflows and reduce manual processes.",
-      features: ["Process automation", "Workflow optimization", "Decision automation", "Integration APIs"],
+      name: "AI Automation Suite",
+      description: "Intelligent automation solutions that streamline workflows and reduce manual processes by up to 80%.",
+      features: ["Process automation", "Workflow optimization", "Decision automation", "Integration APIs", "RPA capabilities", "Smart scheduling"],
       icon: <Zap className="w-8 h-8" />,
-      applications: ["Document processing", "Email automation", "Data entry", "Report generation"]
+      applications: ["Document processing", "Email automation", "Data entry", "Report generation", "Invoice processing", "Customer onboarding"],
+      price: "From $1,999/month",
+      marketPrice: "$3,999/month"
     },
     {
-      name: "Predictive Analytics",
-      description: "Leverage historical data to predict future trends and make informed business decisions.",
-      features: ["Trend forecasting", "Risk assessment", "Performance prediction", "Scenario modeling"],
+      name: "Predictive Analytics Pro",
+      description: "Leverage historical data to predict future trends with 95% accuracy and make informed business decisions.",
+      features: ["Trend forecasting", "Risk assessment", "Performance prediction", "Scenario modeling", "Real-time alerts", "Custom dashboards"],
       icon: <BarChart3 className="w-8 h-8" />,
-      applications: ["Sales forecasting", "Risk management", "Inventory optimization", "Market analysis"]
+      applications: ["Sales forecasting", "Risk management", "Inventory optimization", "Market analysis", "Financial planning", "Supply chain"],
+      price: "From $2,799/month",
+      marketPrice: "$5,599/month"
     },
     {
       name: "AI Security Solutions",
-      description: "Advanced AI-powered security systems to protect your digital assets and infrastructure.",
-      features: ["Threat detection", "Anomaly detection", "Behavioral analysis", "Incident response"],
+      description: "Advanced AI-powered security systems with 99.8% threat detection accuracy to protect your digital assets.",
+      features: ["Threat detection", "Anomaly detection", "Behavioral analysis", "Incident response", "Zero-trust architecture", "Compliance monitoring"],
       icon: <Shield className="w-8 h-8" />,
-      applications: ["Cybersecurity", "Fraud prevention", "Access control", "Network monitoring"]
+      applications: ["Cybersecurity", "Fraud prevention", "Access control", "Network monitoring", "Data protection", "Compliance"],
+      price: "From $3,999/month",
+      marketPrice: "$7,999/month"
+    },
+    {
+      name: "AI Content Generation",
+      description: "Revolutionary AI content creation platform that generates high-quality, SEO-optimized content at scale.",
+      features: ["Multi-format content", "SEO optimization", "Brand voice training", "Plagiarism detection", "Content scheduling", "Performance analytics"],
+      icon: <MessageSquare className="w-8 h-8" />,
+      applications: ["Blog writing", "Social media", "Email marketing", "Product descriptions", "Ad copy", "Technical documentation"],
+      price: "From $1,499/month",
+      marketPrice: "$2,999/month"
+    },
+    {
+      name: "AI Customer Intelligence",
+      description: "Comprehensive customer analytics platform that provides deep insights into customer behavior and preferences.",
+      features: ["Customer segmentation", "Behavioral analysis", "Churn prediction", "Personalization", "Lifetime value prediction", "Recommendation engine"],
+      icon: <Users className="w-8 h-8" />,
+      applications: ["E-commerce", "SaaS platforms", "Retail", "Banking", "Healthcare", "Education"],
+      price: "From $2,299/month",
+      marketPrice: "$4,599/month"
+    },
+    {
+      name: "AI Blockchain Analytics",
+      description: "Advanced blockchain analysis and cryptocurrency intelligence platform with real-time monitoring and insights.",
+      features: ["Transaction analysis", "Risk scoring", "Compliance monitoring", "Market intelligence", "DeFi analytics", "NFT tracking"],
+      icon: <Shield className="w-8 h-8" />,
+      applications: ["Cryptocurrency exchanges", "DeFi platforms", "Regulatory compliance", "Investment analysis", "Fraud detection", "Tax reporting"],
+      price: "From $4,999/month",
+      marketPrice: "$9,999/month"
     }
   ];
 
@@ -118,15 +157,23 @@ const AiServicesPage: React.FC = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 group">
-                  <div className="text-cyan-400 mb-6">
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105">
+                  <div className="text-cyan-400 mb-6 group-hover:text-cyan-300 transition-colors">
                     {service.icon}
                   </div>
                   
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                     {service.name}
                   </h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                  
+                  <div className="mb-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+                      <div className="text-sm text-gray-400 line-through">{service.marketPrice}</div>
+                    </div>
+                    <div className="text-sm text-green-400 font-semibold">Save up to 50% • Custom pricing available</div>
+                  </div>
                   
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
@@ -144,16 +191,16 @@ const AiServicesPage: React.FC = () => {
                     <h4 className="text-lg font-semibold text-white mb-3">Applications:</h4>
                     <div className="flex flex-wrap gap-2">
                       {service.applications.map((app, appIndex) => (
-                        <span key={appIndex} className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">
+                        <span key={appIndex} className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full hover:bg-cyan-500/30 transition-colors">
                           {app}
                         </span>
                       ))}
                     </div>
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25">
+                    Get Quote
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
               ))}

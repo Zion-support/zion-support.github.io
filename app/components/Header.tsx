@@ -22,26 +22,52 @@ const Header: React.FC = memo(() => {
       name: 'Services', 
       path: '#',
       dropdown: [
-        { name: 'Micro SAAS Solutions', path: '/micro-saas' },
-        { name: 'AI Services', path: '/ai-services' },
-        { name: 'IT Services', path: '/it-services' }
+        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: 'AI-powered business tools' },
+        { name: 'AI Services', path: '/ai-services', description: 'Advanced AI solutions' },
+        { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT solutions' },
+        { name: '5G Solutions', path: '/5g-solutions', description: 'Next-gen connectivity' },
+        { name: 'Blockchain Services', path: '/blockchain-services', description: 'Decentralized solutions' },
+        { name: 'IoT Solutions', path: '/iot-solutions', description: 'Smart device integration' }
+      ]
+    },
+    { 
+      name: 'Solutions', 
+      path: '#',
+      dropdown: [
+        { name: 'Enterprise AI', path: '/enterprise-ai', description: 'Large-scale AI implementation' },
+        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Seamless cloud transition' },
+        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Advanced security solutions' },
+        { name: 'Data Analytics', path: '/data-analytics', description: 'Business intelligence' },
+        { name: 'Mobile Apps', path: '/mobile-apps', description: 'Native & cross-platform' },
+        { name: 'Web Development', path: '/web-development', description: 'Modern web solutions' }
       ]
     },
     { name: 'About', path: '/about' },
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'Pricing', path: '/pricing' },
-    { name: 'News', path: '/news' },
+    { 
+      name: 'Resources', 
+      path: '#',
+      dropdown: [
+        { name: 'Blog & News', path: '/news', description: 'Latest insights' },
+        { name: 'Case Studies', path: '/case-studies', description: 'Success stories' },
+        { name: 'Documentation', path: '/docs', description: 'Technical guides' },
+        { name: 'API Reference', path: '/api-docs', description: 'Developer resources' },
+        { name: 'Support Center', path: '/support', description: 'Help & support' },
+        { name: 'Status Page', path: '/status', description: 'System status' }
+      ]
+    },
     { 
       name: 'Company', 
       path: '#',
       dropdown: [
-        { name: 'About Us', path: '/about' },
-        { name: 'Our Team', path: '/about#team' },
-        { name: 'Careers', path: '/careers' },
-        { name: 'News & Updates', path: '/news' }
+        { name: 'About Us', path: '/about', description: 'Our story & mission' },
+        { name: 'Our Team', path: '/about#team', description: 'Meet the experts' },
+        { name: 'Careers', path: '/careers', description: 'Join our team' },
+        { name: 'Partners', path: '/partners', description: 'Strategic partnerships' },
+        { name: 'Contact', path: '/contact', description: 'Get in touch' }
       ]
-    },
-    { name: 'Contact', path: '/contact' }
+    }
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -87,11 +113,11 @@ const Header: React.FC = memo(() => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2 text-white font-bold text-xl">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">Z</span>
+            <Link to="/" className="group flex items-center space-x-2 text-white font-bold text-xl hover:text-cyan-400 transition-colors duration-300">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-cyan-500/30">
+                <span className="text-white font-bold group-hover:text-cyan-100 transition-colors">Z</span>
               </div>
-              <span>Zion Tech Group</span>
+              <span className="group-hover:text-cyan-300 transition-colors">Zion Tech Group</span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -120,15 +146,22 @@ const Header: React.FC = memo(() => {
                   
                   {/* Dropdown Menu */}
                   {item.dropdown && activeDropdown === item.name && (
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                    <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-500/20 py-4 z-50">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.name}
                           to={dropdownItem.path}
-                          className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                          className="group block px-4 py-3 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-200 border-l-2 border-transparent hover:border-cyan-400"
                           onClick={() => setActiveDropdown(null)}
                         >
-                          {dropdownItem.name}
+                          <div className="font-semibold group-hover:text-cyan-300 transition-colors">
+                            {dropdownItem.name}
+                          </div>
+                          {dropdownItem.description && (
+                            <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                              {dropdownItem.description}
+                            </div>
+                          )}
                         </Link>
                       ))}
                     </div>
@@ -141,9 +174,10 @@ const Header: React.FC = memo(() => {
             <div className="hidden lg:flex items-center space-x-4">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                className="group relative bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 overflow-hidden"
               >
-                Get Started
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <span className="relative z-10">Get Started</span>
               </Link>
             </div>
 

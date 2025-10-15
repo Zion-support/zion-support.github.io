@@ -5,46 +5,85 @@ import { Cloud, Shield, Code, Smartphone, Database, Network, CheckCircle, ArrowR
 const ItServicesPage: React.FC = () => {
   const itServices = [
     {
-      name: "Cloud Infrastructure",
-      description: "Scalable and secure cloud solutions that grow with your business needs.",
-      features: ["AWS/Azure/GCP migration", "Cloud architecture design", "Auto-scaling solutions", "Cost optimization"],
+      name: "Cloud Infrastructure Solutions",
+      description: "Enterprise-grade cloud solutions with 99.99% uptime SLA, global scalability, and advanced security features.",
+      features: ["AWS/Azure/GCP migration", "Cloud architecture design", "Auto-scaling solutions", "Cost optimization", "Disaster recovery", "Multi-cloud strategy"],
       icon: <Cloud className="w-8 h-8" />,
-      benefits: ["99.9% uptime", "Global scalability", "Pay-as-you-scale", "24/7 monitoring"]
+      benefits: ["99.99% uptime SLA", "Global scalability", "Pay-as-you-scale", "24/7 monitoring", "Security compliance", "Cost savings up to 40%"],
+      price: "From $2,999/month",
+      marketPrice: "$5,999/month"
     },
     {
       name: "Cybersecurity Solutions",
-      description: "Comprehensive security measures to protect your digital assets and data.",
-      features: ["Security audits", "Penetration testing", "Compliance management", "Incident response"],
+      description: "Comprehensive security measures with 99.8% threat detection accuracy and zero-trust architecture implementation.",
+      features: ["Security audits", "Penetration testing", "Compliance management", "Incident response", "Zero-trust architecture", "Security training"],
       icon: <Shield className="w-8 h-8" />,
-      benefits: ["SOC 2 compliance", "Real-time monitoring", "Threat detection", "Data encryption"]
+      benefits: ["SOC 2 compliance", "Real-time monitoring", "99.8% threat detection", "Data encryption", "24/7 SOC", "Compliance automation"],
+      price: "From $3,499/month",
+      marketPrice: "$6,999/month"
     },
     {
-      name: "Web Development",
-      description: "Modern, responsive websites and web applications built with cutting-edge technologies.",
-      features: ["React/Next.js development", "API integration", "Performance optimization", "SEO optimization"],
+      name: "Web Development Services",
+      description: "Modern, responsive websites and web applications with 99.9% performance score and advanced SEO optimization.",
+      features: ["React/Next.js development", "API integration", "Performance optimization", "SEO optimization", "PWA development", "Headless CMS"],
       icon: <Code className="w-8 h-8" />,
-      benefits: ["Mobile-first design", "Fast loading times", "Search engine optimized", "Cross-browser compatible"]
+      benefits: ["Mobile-first design", "99.9% performance score", "SEO optimized", "Cross-browser compatible", "Accessibility compliant", "Fast loading"],
+      price: "From $1,999/project",
+      marketPrice: "$3,999/project"
     },
     {
       name: "Mobile Development",
-      description: "Native and cross-platform mobile applications for iOS and Android platforms.",
-      features: ["iOS/Android apps", "React Native development", "App store optimization", "Push notifications"],
+      description: "Native and cross-platform mobile applications with 4.8+ app store ratings and advanced features.",
+      features: ["iOS/Android apps", "React Native development", "App store optimization", "Push notifications", "Offline functionality", "Biometric authentication"],
       icon: <Smartphone className="w-8 h-8" />,
-      benefits: ["Native performance", "Offline functionality", "App store ready", "User-friendly design"]
+      benefits: ["Native performance", "Offline functionality", "App store ready", "User-friendly design", "4.8+ ratings", "Cross-platform"],
+      price: "From $2,499/app",
+      marketPrice: "$4,999/app"
     },
     {
       name: "Database Management",
-      description: "Efficient database design, optimization, and management for optimal performance.",
-      features: ["Database design", "Performance tuning", "Data migration", "Backup & recovery"],
+      description: "High-performance database solutions with 99.99% availability and automated backup and recovery systems.",
+      features: ["Database design", "Performance tuning", "Data migration", "Backup & recovery", "Real-time replication", "Query optimization"],
       icon: <Database className="w-8 h-8" />,
-      benefits: ["High performance", "Data integrity", "Automated backups", "Scalable architecture"]
+      benefits: ["99.99% availability", "Data integrity", "Automated backups", "Scalable architecture", "Real-time monitoring", "Performance optimization"],
+      price: "From $1,499/month",
+      marketPrice: "$2,999/month"
     },
     {
       name: "DevOps & CI/CD",
-      description: "Streamlined development workflows with automated testing and deployment pipelines.",
-      features: ["CI/CD pipelines", "Infrastructure as code", "Container orchestration", "Monitoring & logging"],
+      description: "Streamlined development workflows with 90% faster deployments and automated testing and monitoring.",
+      features: ["CI/CD pipelines", "Infrastructure as code", "Container orchestration", "Monitoring & logging", "GitOps workflows", "Security scanning"],
       icon: <Network className="w-8 h-8" />,
-      benefits: ["Faster deployments", "Reduced errors", "Automated testing", "Continuous integration"]
+      benefits: ["90% faster deployments", "Reduced errors", "Automated testing", "Continuous integration", "Infrastructure automation", "Cost optimization"],
+      price: "From $2,299/month",
+      marketPrice: "$4,599/month"
+    },
+    {
+      name: "API Development & Management",
+      description: "Comprehensive API solutions with advanced security, rate limiting, and real-time analytics.",
+      features: ["REST/GraphQL APIs", "API gateway", "Rate limiting", "Authentication", "Documentation", "Analytics"],
+      icon: <Code className="w-8 h-8" />,
+      benefits: ["High performance", "Security", "Scalability", "Developer-friendly", "Real-time analytics", "Rate limiting"],
+      price: "From $1,299/month",
+      marketPrice: "$2,599/month"
+    },
+    {
+      name: "IT Consulting & Strategy",
+      description: "Strategic IT consulting to optimize your technology stack and digital transformation initiatives.",
+      features: ["Technology assessment", "Digital transformation", "IT strategy", "Architecture review", "Process optimization", "Vendor management"],
+      icon: <Users className="w-8 h-8" />,
+      benefits: ["Cost reduction", "Efficiency gains", "Technology alignment", "Risk mitigation", "Competitive advantage", "ROI optimization"],
+      price: "From $299/hour",
+      marketPrice: "$599/hour"
+    },
+    {
+      name: "5G & IoT Solutions",
+      description: "Next-generation 5G and IoT solutions for smart cities, industrial automation, and connected devices.",
+      features: ["5G network design", "IoT platform development", "Edge computing", "Sensor integration", "Data analytics", "Real-time monitoring"],
+      icon: <Network className="w-8 h-8" />,
+      benefits: ["Ultra-low latency", "Massive connectivity", "Edge processing", "Real-time insights", "Scalable architecture", "Future-proof"],
+      price: "From $4,999/project",
+      marketPrice: "$9,999/project"
     }
   ];
 
@@ -123,15 +162,23 @@ const ItServicesPage: React.FC = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {itServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 group">
-                  <div className="text-cyan-400 mb-6">
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105">
+                  <div className="text-cyan-400 mb-6 group-hover:text-cyan-300 transition-colors">
                     {service.icon}
                   </div>
                   
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                     {service.name}
                   </h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                  
+                  <div className="mb-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+                      <div className="text-sm text-gray-400 line-through">{service.marketPrice}</div>
+                    </div>
+                    <div className="text-sm text-green-400 font-semibold">Save up to 50% • Free consultation included</div>
+                  </div>
                   
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
@@ -149,16 +196,16 @@ const ItServicesPage: React.FC = () => {
                     <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4>
                     <div className="flex flex-wrap gap-2">
                       {service.benefits.map((benefit, benefitIndex) => (
-                        <span key={benefitIndex} className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">
+                        <span key={benefitIndex} className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full hover:bg-cyan-500/30 transition-colors">
                           {benefit}
                         </span>
                       ))}
                     </div>
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25">
+                    Get Quote
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
               ))}

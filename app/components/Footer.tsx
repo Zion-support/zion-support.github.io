@@ -78,17 +78,23 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-slate-900 text-white relative overflow-hidden">
+      {/* Futuristic Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent"></div>
+      </div>
+      
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
+            <div className="flex items-center space-x-2 mb-6 group">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-cyan-500/30">
+                <span className="text-white font-bold text-xl group-hover:text-cyan-100 transition-colors">Z</span>
               </div>
-              <span className="text-2xl font-bold">Zion Tech Group</span>
+              <span className="text-2xl font-bold group-hover:text-cyan-400 transition-colors">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered micro SAAS solutions, IT services, and innovative technology solutions. 
@@ -97,21 +103,21 @@ const Footer: React.FC = () => {
             
             {/* Contact Info */}
             <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-blue-400" />
-                <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
+              <div className="flex items-center space-x-3 group">
+                <Phone className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                <a href="tel:+13024640950" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   +1 302 464 0950
                 </a>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-blue-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
+              <div className="flex items-center space-x-3 group">
+                <Mail className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-blue-400 mt-1" />
-                <span className="text-gray-300">
+              <div className="flex items-start space-x-3 group">
+                <MapPin className="w-5 h-5 text-cyan-400 mt-1 group-hover:text-cyan-300 transition-colors" />
+                <span className="text-gray-300 group-hover:text-gray-200 transition-colors">
                   364 E Main St STE 1008<br />
                   Middletown DE 19709
                 </span>
@@ -120,20 +126,20 @@ const Footer: React.FC = () => {
 
             {/* Social Links */}
             <div className="flex space-x-4 mt-6">
-              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook className="w-6 h-6" />
+              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors group">
+                <Facebook className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
               </a>
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="w-6 h-6" />
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors group">
+                <Twitter className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
               </a>
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="w-6 h-6" />
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors group">
+                <Linkedin className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
               </a>
-              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
-                <Github className="w-6 h-6" />
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors group">
+                <Github className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
               </a>
-              <a href="https://instagram.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
-                <Instagram className="w-6 h-6" />
+              <a href="https://instagram.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors group">
+                <Instagram className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
               </a>
             </div>
           </div>
@@ -211,20 +217,23 @@ const Footer: React.FC = () => {
             </ul>
 
             {/* Newsletter Signup */}
-            <div className="bg-slate-800 rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-3">Stay Updated</h4>
-              <p className="text-gray-300 text-sm mb-4">
-                Get the latest updates on our services and industry insights.
-              </p>
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-3 py-2 bg-slate-700 text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
-                />
-                <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition-colors text-sm">
-                  Subscribe
-                </button>
+            <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl p-6 border border-cyan-500/20 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
+              <div className="relative z-10">
+                <h4 className="text-lg font-semibold mb-3 text-cyan-400">Stay Updated</h4>
+                <p className="text-gray-300 text-sm mb-4">
+                  Get the latest updates on our services and industry insights.
+                </p>
+                <div className="flex group">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="flex-1 px-3 py-2 bg-slate-700/50 text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-sm border border-cyan-500/20 focus:border-cyan-400/40 transition-colors"
+                  />
+                  <button className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 px-4 py-2 rounded-r-lg transition-all duration-300 text-sm font-semibold group-hover:shadow-lg group-hover:shadow-cyan-500/25">
+                    Subscribe
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -232,24 +241,25 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Trust Indicators */}
-      <div className="border-t border-slate-700">
-        <div className="container mx-auto px-4 py-8">
+      <div className="border-t border-slate-700 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
+        <div className="container mx-auto px-4 py-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-            <div className="flex items-center justify-center space-x-2">
-              <Shield className="w-6 h-6 text-green-400" />
-              <span className="text-gray-300">Enterprise Security</span>
+            <div className="group flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300">
+              <Shield className="w-6 h-6 text-green-400 group-hover:text-green-300 transition-colors" />
+              <span className="text-gray-300 group-hover:text-white transition-colors">Enterprise Security</span>
             </div>
-            <div className="flex items-center justify-center space-x-2">
-              <Clock className="w-6 h-6 text-blue-400" />
-              <span className="text-gray-300">24/7 Support</span>
+            <div className="group flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300">
+              <Clock className="w-6 h-6 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+              <span className="text-gray-300 group-hover:text-white transition-colors">24/7 Support</span>
             </div>
-            <div className="flex items-center justify-center space-x-2">
-              <Award className="w-6 h-6 text-yellow-400" />
-              <span className="text-gray-300">Certified Experts</span>
+            <div className="group flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300">
+              <Award className="w-6 h-6 text-yellow-400 group-hover:text-yellow-300 transition-colors" />
+              <span className="text-gray-300 group-hover:text-white transition-colors">Certified Experts</span>
             </div>
-            <div className="flex items-center justify-center space-x-2">
-              <Users className="w-6 h-6 text-purple-400" />
-              <span className="text-gray-300">500+ Happy Clients</span>
+            <div className="group flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300">
+              <Users className="w-6 h-6 text-purple-400 group-hover:text-purple-300 transition-colors" />
+              <span className="text-gray-300 group-hover:text-white transition-colors">500+ Happy Clients</span>
             </div>
           </div>
         </div>

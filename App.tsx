@@ -40,10 +40,10 @@ const App: React.FC = () => {
       <Router>
         <SEOHead />
         
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-x-hidden">
           <Header />
           
-          <main id="main-content" role="main">
+          <main id="main-content" role="main" className="relative z-10">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={
@@ -73,10 +73,19 @@ const App: React.FC = () => {
                 <Route path="/careers" element={<CareersPage />} />
                 <Route path="/sitemap" element={<SitemapPage />} />
                 <Route path="*" element={
-                  <div className="container mx-auto px-4 py-16 text-center">
-                    <h1 className="text-4xl font-bold text-white mb-8">404 - Page Not Found</h1>
-                    <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
-                    <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  <div className="container mx-auto px-4 py-16 text-center min-h-screen flex flex-col items-center justify-center">
+                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+                      <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                        404 - Page Not Found
+                      </span>
+                    </h1>
+                    <p className="text-gray-300 mb-8 text-lg max-w-md mx-auto">
+                      The page you&apos;re looking for doesn&apos;t exist.
+                    </p>
+                    <a 
+                      href="/" 
+                      className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
                       Go Home
                     </a>
                   </div>
