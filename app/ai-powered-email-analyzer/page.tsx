@@ -1,7 +1,10 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code-4a9f
+import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const AIPoweredEmailAnalyzerPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI-Powered Email Analyzer | Zion Tech Group</title>
         <meta name="description" content="Revolutionize your email communication with our AI-powered email analyzer. Get sentiment analysis, smart suggestions, and performance insights." />
@@ -55,4 +58,4 @@ import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code
   );
 };
 
-export default AiPoweredEmailAnalyzerPage;
+export default AIPoweredEmailAnalyzerPage;

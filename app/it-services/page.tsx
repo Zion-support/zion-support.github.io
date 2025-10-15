@@ -1,7 +1,11 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
 
-  return (<>
+const ItServicesPage = () => {
+  return (
+    <>
       <Helmet>
         <title>IT Services - Zion Tech Group | Professional IT Solutions</title>
         <meta

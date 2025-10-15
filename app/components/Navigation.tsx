@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
   Bars3Icon, 
@@ -287,21 +286,25 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     </div>
                   </div>
                 ) : (
-                  <Link
-                    to={item.href}
-                    className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                      isActive(item.href)
-                        ? 'text-white bg-slate-700'
-                        : 'text-gray-300 hover:text-white hover:bg-slate-700'
-                    }`}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <item.icon className="w-5 h-5 mr-3" />
-                    {item.name}
-                  </Link>
+                  <div>
+                    <Link
+                      to={item.href}
+                      className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                        isActive(item.href)
+                          ? 'text-white bg-slate-700'
+                          : 'text-gray-300 hover:text-white hover:bg-slate-700'
+                      }`}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <item.icon className="w-5 h-5 mr-3" />
+                      {item.name}
+                    </Link>
+                  </div>
+                )}
               </div>
             ))}
           </div>
+        </div>
       </div>
     </nav>
   )
