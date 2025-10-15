@@ -1,8 +1,8 @@
-import React, { lazy } from 'react',";";";
-      import { HelmetProvider } from 'react-helmet-async';";";";
+import React, { lazy } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-import Navigation from './app/components/Navigation';";";";
+import Navigation from './app/components/Navigation';
     import Sidebar from './app/components/Sidebar';";";";
     import Footer from './app/components/Footer';";";";
     import ErrorBoundary from './app/components/ErrorBoundary';";";";

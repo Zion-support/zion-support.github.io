@@ -1,5 +1,5 @@
 
-import React from 'react';";";";
+import React from 'react';
 // Minimal working App component
 function App() {}
   return ()
