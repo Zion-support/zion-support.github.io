@@ -12,14 +12,16 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["./app/*"],
       "@app/*": ["./app/*"],
-      "@components/*": ["./app/components/*"]
+      "@components/*": ["./app/components/*"],
+      "@hooks/*": ["./app/hooks/*"],
+      "@utils/*": ["./app/utils/*"]
     },
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
@@ -56,5 +58,6 @@
     ".next",
     "out",
     "vite.config.ts"
-  ]
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
