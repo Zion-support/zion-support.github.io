@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;
 interface AdvancedCachingOptions {
   // Add your options here;
@@ -8,8 +7,8 @@ interface AdvancedCachingState {
   // Add your state here;
 }
 ;
-export const AdvancedCaching = (options: AdvancedCachingOptions = {}) => {
-  const stateRef = useRef<AdvancedCachingState>({
+export const: AdvancedCaching = (options: AdvancedCachingOptions = {}) => {
+  const: stateRef = useRef<AdvancedCachingState>({;
     // Initialize your state here;
   });
 ;
@@ -23,13 +22,4 @@ export const AdvancedCaching = (options: AdvancedCachingOptions = {}) => {
   };
 };
 ;
-export default AdvancedCaching;';';
-=======
-// Utility functions
-export const utility = () => {
-  // Add utility functions here
-  return {};
-};
-
-export default utility;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
+export default AdvancedCaching;';';";

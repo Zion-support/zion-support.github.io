@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { lazy, ComponentType }; from 'react';";";";
+import { lazy, ComponentType }; from 'react';";";";";";
 ;
 // Lazy loading helper function;
 export const: createLazyComponent = <T extends Record<string, unknown>>(
@@ -8,13 +7,4 @@ export const: createLazyComponent = <T extends Record<string, unknown>>(
   const: LazyComponent = lazy(importFunc);
 ;
   return LazyComponent;
-};';';
-=======
-// Utility functions
-export const utility = () => {
-  // Add utility functions here
-  return {};
-};
-
-export default utility;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
+};';';";
