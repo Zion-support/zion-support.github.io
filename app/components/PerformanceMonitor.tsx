@@ -1,16 +1,19 @@
 import React, { useEffect } from 'react';
+import { PerformanceMonitor as PerfMonitor, setupGlobalErrorHandlers } from '../utils/performance';
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-    // Monitor Core Web Vitals
-    if ('web-vitals' in window) {
-      import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-        onCLS(console.log);
-        onFCP(console.log);
-        onLCP(console.log);
-        onTTFB(console.log);
-      });
-    }
+    // Initialize performance monitoring
+    const perfMonitor = PerfMonitor.getInstance();
+    perfMonitor.startMonitoring();
+
+    // Setup global error handlers
+    setupGlobalErrorHandlers();
+
+    // Cleanup on unmount
+    return () => {
+      perfMonitor.disconnect();
+    };
   }, []);
 
   return null;

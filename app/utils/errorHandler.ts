@@ -1,81 +1,91 @@
-import { ErrorReport, ErrorContext, ErrorSeverity } from '../types/app.types';
+export interface ErrorInfo {
+  message: string;
+  stack?: string;
+  componentStack?: string;
+  timestamp: number;
+  userAgent: string;
+  url: string;
+}
 
-class ErrorHandler {
-  private errors: ErrorReport[] = [];
+export class ErrorHandler {
+  private static instance: ErrorHandler;
+  private errorLog: ErrorInfo[] = [];
 
-  reportError(error: Error, context: ErrorContext = {}): string {
-    const errorId = this.generateErrorId();
-    const errorReport: ErrorReport = {
-      id: errorId,
+  private constructor() {}
+
+  public static getInstance(): ErrorHandler {
+    if (!ErrorHandler.instance) {
+      ErrorHandler.instance = new ErrorHandler();
+    }
+    return ErrorHandler.instance;
+  }
+
+  public logError(error: Error, errorInfo?: { componentStack?: string }): void {
+    const errorData: ErrorInfo = {
       message: error.message,
       stack: error.stack,
-      context: {
-        ...context,
-        url: context.url || window.location.href,
-        userAgent: context.userAgent || navigator.userAgent,
-        timestamp: context.timestamp || new Date().toISOString()
-      },
-      severity: this.determineSeverity(error),
-      resolved: false,
-      createdAt: new Date().toISOString()
+      componentStack: errorInfo?.componentStack,
+      timestamp: Date.now(),
+      userAgent: navigator.userAgent,
+      url: window.location.href
     };
 
-    this.errors.push(errorReport);
-    this.logError(errorReport);
-    return errorId;
-  }
+    this.errorLog.push(errorData);
 
-  getErrors(): ErrorReport[] {
-    return [...this.errors];
-  }
-
-  getErrorById(id: string): ErrorReport | undefined {
-    return this.errors.find(error => error.id === id);
-  }
-
-  getErrorStats(): {
-    total: number;
-    resolved: number;
-    unresolved: number;
-    bySeverity: Record<string, number>;
-  } {
-    const total = this.errors.length;
-    const resolved = this.errors.filter(e => e.resolved).length;
-    const unresolved = total - resolved;
-    const bySeverity = this.errors.reduce((acc, error) => {
-      acc[error.severity] = (acc[error.severity] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
-
-    return {
-      total,
-      resolved,
-      unresolved,
-      bySeverity
-    };
-  }
-
-  private generateErrorId(): string {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-
-  private determineSeverity(error: Error): ErrorSeverity {
-    if (error.name === 'ChunkLoadError' || error.message.includes('Loading chunk')) {
-      return 'low';
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error logged:', errorData);
     }
-    if (error.message.includes('Network') || error.message.includes('fetch')) {
-      return 'medium';
+
+    // Send to error tracking service in production
+    if (process.env.NODE_ENV === 'production') {
+      this.sendToErrorService(errorData);
     }
-    if (error.message.includes('TypeError') || error.message.includes('ReferenceError')) {
-      return 'high';
-    }
-    return 'medium';
   }
 
-  private logError(errorReport: ErrorReport): void {
-    console.error('Error reported:', errorReport);
-    // Here you could send to external logging service
+  private async sendToErrorService(errorData: ErrorInfo): Promise<void> {
+    try {
+    // Send to your preferred error tracking service
+    // Example: Sentry, LogRocket, Bugsnag, etc.
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'exception', {
+        description: errorData.message,
+        fatal: false,
+        custom_map: {
+          error_stack: errorData.stack,
+          component_stack: errorData.componentStack
+        }
+      });
+    }
+    } catch (error) {
+      console.error('Failed to send error to tracking service:', error);
+    }
+  }
+
+  public getErrorLog(): ErrorInfo[] {
+    return [...this.errorLog];
+  }
+
+  public clearErrorLog(): void {
+    this.errorLog = [];
   }
 }
 
-export const errorHandler = new ErrorHandler();
+// Global error handler for unhandled errors
+export const setupGlobalErrorHandlers = (): void => {
+  const errorHandler = ErrorHandler.getInstance();
+
+  // Handle unhandled promise rejections
+  window.addEventListener('unhandledrejection', (event) => {
+    const error = new Error(`Unhandled Promise Rejection: ${event.reason}`);
+    errorHandler.logError(error);
+  });
+
+  // Handle uncaught errors
+  window.addEventListener('error', (event) => {
+    const error = new Error(`Uncaught Error: ${event.message}`);
+    errorHandler.logError(error);
+  });
+};
+
+export default ErrorHandler;

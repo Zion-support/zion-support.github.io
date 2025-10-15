@@ -1,4 +1,5 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
+import { ErrorHandler } from '../utils/errorHandler';
 
 interface Props {
   children: ReactNode;
@@ -20,7 +21,9 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Global error caught:', error, errorInfo);
+    // Use centralized error handler
+    const errorHandler = ErrorHandler.getInstance();
+    errorHandler.logError(error, { componentStack: errorInfo.componentStack || undefined });
   }
 
   render() {

@@ -1,6 +1,7 @@
 import { Suspense, useEffect } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import './app/styles/accessibility.css'
 
 // Import pages
 import HomePage from './app/page';
@@ -41,10 +42,13 @@ import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
+// Import LoadingSpinner
+import LoadingSpinner from './app/components/LoadingSpinner';
+
 // Loading component
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+    <LoadingSpinner size="lg" text="Loading application..." />
   </div>
 )
 
