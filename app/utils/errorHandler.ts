@@ -1,8 +1,8 @@
 export const errorHandler = {
-  handle: (_error: Error, _context?: string) => {
+  handle: (error: Error, context?: string) => {
     // Log to external service
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: context ? { context } : {}
@@ -21,23 +21,28 @@ export const errorHandler = {
     const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
     
     switch (status) {
-      case 4 0 0:
-        return { message: 'Invalid request', code: 'BAD_REQUEST' ;};
-      case 4 0 1:
-        return { message: 'Unauthorized', code: 'UNAUTHORIZED' ;};
-      case 4 0 3:
-        return { message: 'Forbidden', code: 'FORBIDDEN' ;};
-      case 4 0 4:
-        return { message: 'Not found', code: 'NOT_FOUND' ;};
-      case 5 0 0:
-        return { message: 'Server error', code: 'SERVER_ERROR' ;};
+      case 400:
+        return { message: 'Invalid request', code: 'BAD_REQUEST' };
+      case 401:
+        return { message: 'Unauthorized', code: 'UNAUTHORIZED' };
+      case 403:
+        return { message: 'Forbidden', code: 'FORBIDDEN' };
+      case 404:
+        return { message: 'Not found', code: 'NOT_FOUND' };
+      case 500:
+        return { message: 'Server error', code: 'SERVER_ERROR' };
       default:
-        return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' ;};
-  log: () => {
+        return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' };
+    }
+  },
+  
+  log: (error: Error, context?: Record<string, unknown>) => {
     // Error logging logic
-  report: () => {
-  log: (_error: Error, _context?: Record<string, unknown>) => {
-    // Error logginglogic},
-  report: (_error: Error, _context?: Record<string, unknown>) => {
+    console.error('Error logged:', error, context);
+  },
+  
+  report: (error: Error, context?: Record<string, unknown>) => {
     // Error reporting logic
-}}
+    console.error('Error reported:', error, context);
+  }
+};
