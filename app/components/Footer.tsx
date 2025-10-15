@@ -93,10 +93,19 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-slate-900 text-white relative overflow-hidden">
-      {/* Animated background elements */}
+      {/* Futuristic Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-40 h-40 bg-cyan-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-r from-cyan-500/8 to-blue-500/8 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-r from-purple-500/8 to-pink-500/8 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 rounded-full blur-2xl animate-pulse delay-500"></div>
+        
+        {/* Neon grid lines */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/2 via-transparent to-purple-500/2 opacity-30"></div>
+        
+        {/* Floating particles */}
+        <div className="absolute top-10 left-10 w-1 h-1 bg-cyan-400 rounded-full animate-ping delay-1000"></div>
+        <div className="absolute top-20 right-20 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-2000"></div>
+        <div className="absolute bottom-20 left-20 w-1 h-1 bg-blue-400 rounded-full animate-ping delay-3000"></div>
       </div>
       
       {/* Main Footer Content */}
@@ -231,20 +240,26 @@ const Footer: React.FC = () => {
             </ul>
 
             {/* Newsletter Signup */}
-            <div className="bg-slate-800 rounded-lg p-6">
-              <h4 className="text-lg font-semibold mb-3">Stay Updated</h4>
-              <p className="text-gray-300 text-sm mb-4">
-                Get the latest updates on our services and industry insights.
-              </p>
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-3 py-2 bg-slate-700 text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
-                />
-                <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition-colors text-sm">
-                  Subscribe
-                </button>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 relative overflow-hidden">
+              {/* Neon glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-cyan-500/5 rounded-lg"></div>
+              
+              <div className="relative z-10">
+                <h4 className="text-lg font-semibold mb-3 text-cyan-400">Stay Updated</h4>
+                <p className="text-gray-300 text-sm mb-4">
+                  Get the latest updates on our services and industry insights.
+                </p>
+                <div className="flex">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="flex-1 px-3 py-2 bg-slate-700/50 text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-sm border border-cyan-500/20"
+                  />
+                  <button className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 px-4 py-2 rounded-r-lg transition-all duration-300 text-sm font-semibold relative overflow-hidden group">
+                    <span className="relative z-10">Subscribe</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
