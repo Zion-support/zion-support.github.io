@@ -23,66 +23,74 @@ const HomePage: React.FC = () => {
     {
       icon: CpuChipIcon,
       title: 'AI Solutions',
-      description: 'Advanced artificial intelligence and machine learning solutions to transform your business.',
+      description: 'Advanced artificial intelligence and machine learning solutions including chatbots, document processing, fraud detection, and predictive analytics to transform your business operations.',
       href: '/ai-solutions',
       gradient: 'from-purple-500 to-pink-500',
-      glow: 'shadow-purple-500/25'
+      glow: 'shadow-purple-500/25',
+      price: 'Starting at $99/mo'
     },
     {
       icon: ShieldCheckIcon,
       title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
+      description: 'Comprehensive security solutions including threat detection, vulnerability assessment, compliance management, and 24/7 monitoring to protect your digital assets.',
       href: '/cybersecurity',
       gradient: 'from-green-500 to-emerald-500',
-      glow: 'shadow-green-500/25'
+      glow: 'shadow-green-500/25',
+      price: 'Starting at $199/mo'
     },
     {
       icon: CloudIcon,
       title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions and infrastructure management for modern businesses.',
-      href: '/cloud-solutions',
+      description: 'Scalable cloud solutions including AWS, Azure, and Google Cloud management, migration services, and cost optimization for modern businesses.',
+      href: '/cloud-infrastructure',
       gradient: 'from-blue-500 to-cyan-500',
-      glow: 'shadow-blue-500/25'
+      glow: 'shadow-blue-500/25',
+      price: 'Starting at $299/mo'
     },
     {
       icon: RocketLaunchIcon,
       title: 'Digital Transformation',
-      description: 'Complete digital transformation strategies to modernize your operations.',
+      description: 'Complete digital transformation strategies including process automation, legacy system modernization, and change management to modernize your operations.',
       href: '/digital-transformation',
       gradient: 'from-orange-500 to-red-500',
-      glow: 'shadow-orange-500/25'
+      glow: 'shadow-orange-500/25',
+      price: 'Custom pricing'
     },
     {
       icon: GlobeAltIcon,
       title: 'Micro SaaS Solutions',
-      description: 'Innovative micro software solutions designed to solve specific business challenges.',
+      description: 'Innovative micro software solutions including AI tools, productivity apps, and specialized business applications designed to solve specific challenges.',
       href: '/micro-saas-solutions',
       gradient: 'from-cyan-500 to-blue-500',
-      glow: 'shadow-cyan-500/25'
+      glow: 'shadow-cyan-500/25',
+      price: 'Starting at $49/mo'
     },
     {
       icon: CogIcon,
       title: 'IT Solutions',
-      description: 'Comprehensive technology services including development, infrastructure, and support.',
-      href: '/it-solutions',
+      description: 'Comprehensive technology services including web development, mobile apps, database management, and 24/7 technical support for your business needs.',
+      href: '/it-services',
       gradient: 'from-indigo-500 to-purple-500',
-      glow: 'shadow-indigo-500/25'
+      glow: 'shadow-indigo-500/25',
+      price: 'Starting at $149/mo'
     },
     {
       icon: ChartBarIcon,
       title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics and visualization.',
+      description: 'Transform your data into actionable insights with advanced analytics, business intelligence dashboards, and predictive modeling for better decision making.',
       href: '/data-analytics',
       gradient: 'from-yellow-500 to-orange-500',
-      glow: 'shadow-yellow-500/25'
+      glow: 'shadow-yellow-500/25',
+      price: 'Starting at $179/mo'
     },
     {
       icon: BoltIcon,
       title: '5G Solutions',
-      description: 'Next-generation 5G technology solutions for ultra-fast connectivity and IoT applications.',
+      description: 'Next-generation 5G technology solutions including IoT connectivity, edge computing, and ultra-fast network infrastructure for modern applications.',
       href: '/5g-solutions',
       gradient: 'from-pink-500 to-rose-500',
-      glow: 'shadow-pink-500/25'
+      glow: 'shadow-pink-500/25',
+      price: 'Starting at $399/mo'
     }
   ];
 
@@ -141,18 +149,30 @@ const HomePage: React.FC = () => {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/5 rounded-full blur-2xl animate-pulse delay-500 floating"></div>
           
           {/* Holographic Overlay */}
-          <div className="absolute inset-0 holographic-card opacity-10"></div>
+          <div className="absolute inset-0 holographic-card-advanced opacity-10"></div>
+          
+          {/* Advanced Floating Elements */}
+          <div className="floating-elements">
+            {[...Array(15)].map((_, i) => (
+              <div key={i} className="floating-element" style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 15}s`,
+                animationDuration: `${15 + Math.random() * 10}s`
+              }}></div>
+            ))}
+          </div>
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
             <div className="text-center">
               <div className="relative inline-block mb-6">
-                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold holographic leading-tight neon-text">
-                  Zion Tech Group
+                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold holographic-text leading-tight cyber-text-effect cyber-glitch" data-text="ZION TECH GROUP">
+                  ZION TECH GROUP
                 </h1>
                 <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-lg blur opacity-30 animate-pulse"></div>
                 <div className="absolute -inset-2 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 rounded-lg blur opacity-20 animate-pulse delay-1000"></div>
+                <div className="absolute -inset-3 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-10 animate-pulse delay-2000"></div>
               </div>
               <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed px-4">
-                Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services that drive innovation and growth.
+                Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services. We help businesses transform through cutting-edge technology, innovative micro SAAS solutions, and intelligent automation that drives real growth and competitive advantage.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 lg:mb-16 px-4">
                 <Link to="/contact"
@@ -226,9 +246,12 @@ const HomePage: React.FC = () => {
                     <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-purple-300 transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-gray-400 mb-4 group-hover:text-gray-300 transition-colors text-sm sm:text-base">
+                    <p className="text-gray-400 mb-3 group-hover:text-gray-300 transition-colors text-sm sm:text-base">
                       {service.description}
                     </p>
+                    <div className="mb-4">
+                      <span className="text-lg font-bold text-purple-400 neon-text">{service.price}</span>
+                    </div>
                     <div className="mt-4 flex items-center text-purple-400 group-hover:text-purple-300 transition-colors">
                       <span className="text-sm font-medium">Learn More</span>
                       <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -266,12 +289,12 @@ const HomePage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* AI Content Generator */}
-              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20">
+              <div className="group holographic-card-advanced p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 neon-border-advanced">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-advanced">
                     <SparklesIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-cyan-400 font-medium neon-text">AI Content</span>
+                  <span className="text-sm text-cyan-400 font-medium neon-text cyber-text-effect">AI Content</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
                   AI Content Generator Pro
@@ -280,7 +303,7 @@ const HomePage: React.FC = () => {
                   Generate high-quality content for blogs, social media, and marketing materials using advanced AI with 95% accuracy.
                 </p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-cyan-400 neon-text">$199/mo</span>
+                  <span className="text-2xl font-bold text-cyan-400 neon-text cyber-text-effect">$199/mo</span>
                   <span className="text-sm text-gray-400 line-through">$299/mo</span>
                 </div>
                 <div className="space-y-2 mb-6">
@@ -298,7 +321,7 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
                 <Link to="/ai-content-generator"
-                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                  className="block w-full cyber-button-advanced text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
                 </Link>

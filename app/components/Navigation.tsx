@@ -96,7 +96,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: UserGroupIcon },
         { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: AcademicCapIcon },
         { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer', icon: ChartBarIcon },
-        { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: CogIcon }
+        { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: CogIcon },
+        { name: 'AI Financial Advisor', href: '/ai-financial-advisor', icon: CurrencyDollarIcon },
+        { name: 'AI Marketing Automation', href: '/ai-marketing-automation', icon: ShareIcon },
+        { name: 'AI HR Assistant', href: '/ai-hr-assistant', icon: UserGroupIcon },
+        { name: 'AI Project Manager', href: '/ai-project-manager', icon: CogIcon },
+        { name: 'AI Quality Assurance', href: '/ai-quality-assurance', icon: ShieldCheckIcon }
       ]
     },
     {
@@ -168,7 +173,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Document Analyzer', href: '/zion-ai-document-analyzer', icon: DocumentTextIcon },
         { name: 'AI Task Scheduler', href: '/zion-ai-task-scheduler', icon: CogIcon },
         { name: 'AI Translation Service', href: '/zion-ai-translation-service', icon: GlobeAltIcon },
-        { name: 'AI Video Generator', href: '/zion-ai-video-generator', icon: EyeIcon }
+        { name: 'AI Video Generator', href: '/zion-ai-video-generator', icon: EyeIcon },
+        { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: CodeBracketIcon },
+        { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon },
+        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: EyeIcon }
       ]
     },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },

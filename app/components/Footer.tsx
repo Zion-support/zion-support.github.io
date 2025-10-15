@@ -20,7 +20,7 @@ const Footer: React.FC = memo(() => {
                 Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
               </p>
               <div className="space-y-2 text-sm text-gray-300">
-                <p className="flex items-center"><strong className="text-cyan-400 mr-2">📞</strong> <a href="tel:+13024640950" className="hover:text-cyan-300 transition-colors neon-glow">+1 302 464 0950</a></p>
+                <p className="flex items-center"><strong className="text-cyan-400 mr-2">📞</strong> <a href="tel:+13024640950" className="hover:text-cyan-300 transition-colors neon-glow">+1 (302) 464-0950</a></p>
                 <p className="flex items-center"><strong className="text-cyan-400 mr-2">✉️</strong> <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-300 transition-colors">kleber@ziontechgroup.com</a></p>
                 <p className="flex items-center"><strong className="text-cyan-400 mr-2">📍</strong> 364 E Main St STE 1008<br />Middletown DE 19709</p>
                 <p className="flex items-center"><strong className="text-cyan-400 mr-2">🌐</strong> <a href="https://ziontechgroup.com" className="hover:text-cyan-300 transition-colors">https://ziontechgroup.com</a></p>
@@ -85,6 +85,12 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
               <li><Link to="/zion-ai-translation-service" className="text-gray-300 hover:text-white">Translation Service</Link></li>
               <li><Link to="/zion-ai-video-generator" className="text-gray-300 hover:text-white">Video Generator</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">New AI Services</h4>
+            <ul className="space-y-2">
               <li><Link to="/ai-code-assistant" className="text-gray-300 hover:text-white">AI Code Assistant</Link></li>
               <li><Link to="/ai-translator" className="text-gray-300 hover:text-white">AI Translator</Link></li>
               <li><Link to="/ai-audio-processor" className="text-gray-300 hover:text-white">AI Audio Processor</Link></li>
@@ -94,6 +100,9 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/ai-education-tutor" className="text-gray-300 hover:text-white">AI Education Tutor</Link></li>
               <li><Link to="/ai-real-estate-analyzer" className="text-gray-300 hover:text-white">AI Real Estate Analyzer</Link></li>
               <li><Link to="/ai-supply-chain-optimizer" className="text-gray-300 hover:text-white">AI Supply Chain Optimizer</Link></li>
+              <li><Link to="/ai-financial-advisor" className="text-gray-300 hover:text-white">AI Financial Advisor</Link></li>
+              <li><Link to="/ai-marketing-automation" className="text-gray-300 hover:text-white">AI Marketing Automation</Link></li>
+              <li><Link to="/ai-hr-assistant" className="text-gray-300 hover:text-white">AI HR Assistant</Link></li>
             </ul>
           </div>
           
