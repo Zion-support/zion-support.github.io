@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, Brain, CheckCircle, Mail, Phone, Play, Star } from 'lucide-react';
 
 const AIMarketingAutomationProPage = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible] = useState(false);
 
   const features = [
     {

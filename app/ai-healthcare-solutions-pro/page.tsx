@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, Brain, CheckCircle, Heart, Mail, Phone, Play, Shield, Star } from 'lucide-react';
 
 const ShieldIcon = Shield;
 
 const AIHealthcareSolutionsProPage = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, ] = useState(false);
 
   const features = [
     {

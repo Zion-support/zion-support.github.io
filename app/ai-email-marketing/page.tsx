@@ -8,7 +8,7 @@ import {
   CheckCircle, 
   Star,
   ArrowRight,
-  Clock,
+  
   Users,
   TrendingUp,
   Send,
