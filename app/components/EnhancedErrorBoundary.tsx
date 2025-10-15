@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug, Mail } from 'lucide-react';
 
 interface Props {
@@ -10,8 +10,8 @@ interface Props {
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  error: Error | undefined;
+  errorInfo: ErrorInfo | undefined;
   errorId?: string;
   retryCount: number;
 }
@@ -23,6 +23,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = { 
       hasError: false, 
+      error: undefined,
+      errorInfo: undefined,
       retryCount: 0 
     };
   }
@@ -35,7 +37,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
@@ -93,8 +95,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (this.state.retryCount < this.maxRetries) {
       this.setState(prevState => ({
         hasError: false,
-        error: undefined,
-        errorInfo: undefined,
+        error: undefined as Error | undefined,
+        errorInfo: undefined as ErrorInfo | undefined,
         retryCount: prevState.retryCount + 1
       }));
     }
@@ -103,8 +105,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   handleReset = () => {
     this.setState({
       hasError: false,
-      error: undefined,
-      errorInfo: undefined,
+      error: undefined as Error | undefined,
+      errorInfo: undefined as ErrorInfo | undefined,
       retryCount: 0
     });
   };
@@ -125,7 +127,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     window.open(mailtoLink);
   };
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;

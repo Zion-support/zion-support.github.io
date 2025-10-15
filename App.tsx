@@ -7,8 +7,6 @@ import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import LoadingStates from './app/components/LoadingStates';
-// import LazyWrapper from './app/components/LazyWrapper';
-// import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Lazy loaded page components
 const HomePage = React.lazy(() => import('./app/page'));

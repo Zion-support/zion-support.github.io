@@ -19,6 +19,53 @@ import {
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
+  // Service categories for future use
+  // const serviceCategories = [
+  //   {
+  //     title: 'AI Solutions',
+  //     services: [
+  //       { name: 'AI Smart Contracts', path: '/ai-smart-contracts' },
+  //       { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
+  //       { name: 'AI Predictive Maintenance', path: '/ai-predictive-maintenance' },
+  //       { name: 'AI Personalized Learning', path: '/ai-personalized-learning' },
+  //       { name: 'View All AI Services', path: '/ai-services' }
+  //     ]
+  //   },
+  //   {
+  //     title: 'Micro SAAS',
+  //     services: [
+  //       { name: 'AI Accounting Assistant', path: '/ai-accounting-assistant' },
+  //       { name: 'AI Content Moderation Pro', path: '/ai-content-moderation-pro' },
+  //       { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro' },
+  //       { name: 'AI Agricultural Intelligence Pro', path: '/ai-agricultural-intelligence-pro' },
+  //       { name: 'View All Micro SAAS', path: '/micro-saas' }
+  //     ]
+  //   },
+  //   {
+  //     title: 'IT Services',
+  //     services: [
+  //       { name: 'Quantum Computing', path: '/quantum-computing-solutions' },
+  //       { name: 'Edge Computing', path: '/edge-computing-solutions' },
+  //       { name: 'Cloud Infrastructure', path: '/it-services' },
+  //       { name: 'Cybersecurity', path: '/it-services' },
+  //       { name: 'Web Development', path: '/it-services' },
+  //       { name: 'Mobile Development', path: '/it-services' },
+  //       { name: 'View All IT Services', path: '/it-services' }
+  //     ]
+  //   },
+  //   {
+  //     title: '5G Solutions',
+  //     services: [
+  //       { name: '5G Implementation', path: '/5g-solutions' },
+  //       { name: '5G Network Infrastructure', path: '/5g-solutions' },
+  //       { name: '5G IoT Solutions', path: '/5g-solutions' },
+  //       { name: '5G Smart City Solutions', path: '/5g-solutions' },
+  //       { name: '5G Edge Computing', path: '/5g-solutions' },
+  //       { name: '5G Private Networks', path: '/5g-solutions' },
+  //       { name: 'View All 5G Solutions', path: '/5g-solutions' }
+  //     ]
+  //   }
+  // ];
 
   const quickLinks = [
     { name: 'About Us', path: '/about' },
