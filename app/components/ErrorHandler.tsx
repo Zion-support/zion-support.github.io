@@ -1,23 +1,27 @@
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
-interface Props {}
+
+interface Props {
   children: ReactNode
   fallback?: ReactNode
 }
-interface State {}
+
+interface State {
   hasError: boolean
   error: Error | null
   errorInfo: ErrorInfo | null
 }
-class ErrorHandler extends Component<Props, State> {}
-  constructor(props: Props) {}
+
+class ErrorHandler extends Component<Props, State> {
+  constructor(props: Props) {
     super(props)
-    this.state = {}
+    this.state = {
       hasError: false,
       error: null,
       errorInfo: null
     }
+  }
   }
   static getDerivedStateFromError(error: Error): State {}
     return {}
