@@ -1,135 +1,138 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Share2, 
-  TrendingUp, 
+  Cloud, 
   Users, 
-  BarChart3, 
-  Calendar,
-  MessageSquare,
-  Image,
-  Video,
-  Hash,
-  Target,
   Zap,
   CheckCircle,
   Star,
   ArrowRight,
   Clock,
   DollarSign,
-  Globe,
+  Target,
+  TrendingUp,
   Smartphone,
-  Monitor
+  Monitor,
+  Globe,
+  Phone,
+  Mail,
+  Settings,
+  FileText,
+  Share2,
+  Database,
+  Shield,
+  Server,
+  Lock
 } from 'lucide-react';
 
-const AiSocialMediaManagerPage: React.FC = () => {
+const AiCloudMigrationProPage: React.FC = () => {
   const features = [
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "AI-Powered Content Optimization",
-      description: "Automatically optimize posts for maximum engagement using machine learning algorithms"
+      icon: <Cloud className="w-6 h-6" />,
+      title: "AI-Powered Migration Planning",
+      description: "Intelligent assessment and migration strategy using AI to optimize cloud architecture and costs"
     },
     {
-      icon: <Calendar className="w-6 h-6" />,
-      title: "Smart Scheduling",
-      description: "Intelligent posting schedule based on audience activity patterns and optimal timing"
+      icon: <Zap className="w-6 h-6" />,
+      title: "Zero-Downtime Migration",
+      description: "Seamless migration with minimal business disruption using advanced migration techniques"
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Advanced Analytics",
-      description: "Comprehensive insights and performance tracking across all social media platforms"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Security-First Approach",
+      description: "Comprehensive security assessment and implementation during the migration process"
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Audience Targeting",
-      description: "AI-driven audience segmentation and personalized content recommendations"
+      title: "Cost Optimization",
+      description: "AI-driven cost analysis and optimization to reduce cloud expenses by up to 40%"
     },
     {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: "Automated Responses",
-      description: "Smart chatbot integration for instant customer engagement and support"
+      icon: <Server className="w-6 h-6" />,
+      title: "Multi-Cloud Strategy",
+      description: "Support for AWS, Azure, Google Cloud, and hybrid cloud environments"
     },
     {
-      icon: <Hash className="w-6 h-6" />,
-      title: "Hashtag Intelligence",
-      description: "AI-powered hashtag research and trending topic identification"
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Performance Monitoring",
+      description: "Continuous monitoring and optimization of cloud performance and costs"
     }
   ];
 
-  const platforms = [
-    { name: "Facebook", icon: <Globe className="w-5 h-5" />, color: "text-blue-500" },
-    { name: "Instagram", icon: <Image className="w-5 h-5" />, color: "text-pink-500" },
-    { name: "Twitter", icon: <MessageSquare className="w-5 h-5" />, color: "text-cyan-500" },
-    { name: "LinkedIn", icon: <Users className="w-5 h-5" />, color: "text-blue-600" },
-    { name: "TikTok", icon: <Video className="w-5 h-5" />, color: "text-white" },
-    { name: "YouTube", icon: <Video className="w-5 h-5" />, color: "text-red-500" }
+  const cloudProviders = [
+    { name: "AWS", icon: <Cloud className="w-5 h-5" />, color: "text-orange-500" },
+    { name: "Azure", icon: <Cloud className="w-5 h-5" />, color: "text-blue-500" },
+    { name: "Google Cloud", icon: <Cloud className="w-5 h-5" />, color: "text-green-500" },
+    { name: "IBM Cloud", icon: <Cloud className="w-5 h-5" />, color: "text-cyan-500" },
+    { name: "Oracle Cloud", icon: <Cloud className="w-5 h-5" />, color: "text-red-500" },
+    { name: "Hybrid Cloud", icon: <Server className="w-5 h-5" />, color: "text-purple-500" }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$49",
-      period: "/month",
-      description: "Perfect for small businesses and startups",
+      name: "Assessment",
+      price: "$2,999",
+      period: "one-time",
+      description: "Comprehensive cloud readiness assessment",
       features: [
-        "Up to 3 social media accounts",
-        "50 posts per month",
-        "Basic analytics dashboard",
-        "AI content suggestions",
+        "Infrastructure analysis",
+        "Security assessment",
+        "Cost analysis",
+        "Migration roadmap",
+        "Risk assessment",
         "Email support"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$149",
-      period: "/month",
-      description: "Ideal for growing businesses and agencies",
+      name: "Migration",
+      price: "$9,999",
+      period: "per project",
+      description: "Complete cloud migration service",
       features: [
-        "Up to 10 social media accounts",
-        "Unlimited posts",
-        "Advanced analytics & reporting",
-        "AI-powered content optimization",
-        "Automated scheduling",
+        "Full migration planning",
+        "Zero-downtime migration",
+        "Security implementation",
+        "Performance optimization",
+        "Training & documentation",
         "Priority support",
-        "Team collaboration tools"
+        "3 months monitoring"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
-      period: "/month",
-      description: "For large organizations and enterprises",
+      price: "Custom",
+      period: "pricing",
+      description: "Large-scale enterprise migration",
       features: [
-        "Unlimited social media accounts",
-        "Unlimited posts",
-        "Custom analytics dashboard",
-        "Advanced AI features",
+        "Custom migration strategy",
+        "Dedicated migration team",
         "White-label options",
+        "Custom integrations",
         "Dedicated account manager",
         "24/7 phone support",
-        "Custom integrations"
+        "Unlimited monitoring"
       ],
       popular: false
     }
   ];
 
   const stats = [
-    { number: "500+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
-    { number: "2M+", label: "Posts Managed", icon: <Share2 className="w-6 h-6" /> },
-    { number: "85%", label: "Engagement Increase", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime Guarantee", icon: <Zap className="w-6 h-6" /> }
+    { number: "500+", label: "Migrations Completed", icon: <Cloud className="w-6 h-6" /> },
+    { number: "40%", label: "Average Cost Savings", icon: <DollarSign className="w-6 h-6" /> },
+    { number: "99.9%", label: "Uptime During Migration", icon: <Zap className="w-6 h-6" /> },
+    { number: "24/7", label: "Support Available", icon: <Clock className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Social Media Manager - Zion Tech Group | Automated Social Media Management</title>
-        <meta name="description" content="Revolutionary AI-powered social media management platform. Automate posting, optimize content, and boost engagement across all platforms with intelligent scheduling and analytics." />
-        <meta name="keywords" content="AI social media manager, automated posting, social media automation, content optimization, social media analytics, social media scheduling" />
-        <meta property="og:title" content="AI Social Media Manager - Zion Tech Group" />
-        <meta property="og:description" content="Transform your social media presence with AI-powered automation and optimization." />
+        <title>AI Cloud Migration Pro - Zion Tech Group | Intelligent Cloud Migration</title>
+        <meta name="description" content="Revolutionary AI-powered cloud migration services. Seamlessly migrate your infrastructure with zero downtime, cost optimization, and advanced security." />
+        <meta name="keywords" content="AI cloud migration, cloud migration services, AWS migration, Azure migration, Google Cloud migration, cloud optimization" />
+        <meta property="og:title" content="AI Cloud Migration Pro - Zion Tech Group" />
+        <meta property="og:description" content="Transform your infrastructure with AI-powered cloud migration." />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -158,20 +161,19 @@ const AiSocialMediaManagerPage: React.FC = () => {
             <div className="container mx-auto px-4">
               <div className="text-center max-w-6xl mx-auto">
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
-                  <Share2 className="w-4 h-4 mr-2" />
-                  AI-Powered Social Media Management
+                  <Cloud className="w-4 h-4 mr-2" />
+                  AI-Powered Cloud Migration
                 </div>
                 <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    AI Social Media
+                    AI Cloud Migration
                   </span>
                   <br />
-                  <span className="text-white">Manager</span>
+                  <span className="text-white">Pro</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Revolutionize your social media presence with AI-powered automation, 
-                  intelligent content optimization, and advanced analytics. Manage all 
-                  platforms from one unified dashboard.
+                  Transform your infrastructure with AI-powered cloud migration. Seamlessly migrate 
+                  to any cloud platform with zero downtime, cost optimization, and enhanced security.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -186,7 +188,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                   >
                     <Mail className="w-5 h-5 mr-2" />
-                    Get Demo
+                    Get Assessment
                   </a>
                 </div>
                 
@@ -212,11 +214,11 @@ const AiSocialMediaManagerPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Powerful Features
+                    Migration Features
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                  Advanced AI capabilities that transform your social media management workflow
+                  Advanced AI capabilities that ensure successful cloud migration
                 </p>
               </div>
               
@@ -241,26 +243,26 @@ const AiSocialMediaManagerPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Supported Platforms */}
+          {/* Cloud Providers */}
           <section className="py-20">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-6">Supported Platforms</h2>
+                <h2 className="text-4xl font-bold text-white mb-6">Supported Cloud Providers</h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Manage all your social media accounts from one unified dashboard
+                  Migrate to any major cloud platform with our expertise
                 </p>
               </div>
               
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                {platforms.map((platform, index) => (
+                {cloudProviders.map((provider, index) => (
                   <div 
                     key={index} 
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 group"
                   >
-                    <div className={`w-12 h-12 mx-auto mb-4 ${platform.color} group-hover:scale-110 transition-transform duration-300`}>
-                      {platform.icon}
+                    <div className={`w-12 h-12 mx-auto mb-4 ${provider.color} group-hover:scale-110 transition-transform duration-300`}>
+                      {provider.icon}
                     </div>
-                    <h3 className="text-white font-semibold">{platform.name}</h3>
+                    <h3 className="text-white font-semibold">{provider.name}</h3>
                   </div>
                 ))}
               </div>
@@ -271,9 +273,9 @@ const AiSocialMediaManagerPage: React.FC = () => {
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-6">Simple, Transparent Pricing</h2>
+                <h2 className="text-4xl font-bold text-white mb-6">Flexible Pricing Plans</h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the perfect plan for your social media management needs
+                  Choose the perfect migration service for your needs
                 </p>
               </div>
               
@@ -330,22 +332,22 @@ const AiSocialMediaManagerPage: React.FC = () => {
           <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
-                <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Social Media?</h2>
+                <h2 className="text-4xl font-bold text-white mb-6">Ready to Migrate to the Cloud?</h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Join thousands of businesses already using our AI-powered social media management platform.
+                  Join thousands of businesses already using our AI-powered cloud migration services.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="tel:+13024640950"
                     className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                   >
-                    Start Free Trial
+                    Start Migration
                   </a>
                   <a
                     href="mailto:kleber@ziontechgroup.com"
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                   >
-                    Schedule Demo
+                    Get Free Assessment
                   </a>
                 </div>
               </div>
@@ -357,4 +359,4 @@ const AiSocialMediaManagerPage: React.FC = () => {
   );
 };
 
-export default AiSocialMediaManagerPage;
+export default AiCloudMigrationProPage;

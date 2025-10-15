@@ -1,6 +1,7 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import './app/styles/futuristic.css';
 
 // Components
 import Header from './app/components/Header';
@@ -43,6 +44,13 @@ import AiClimateSolutionsProPage from './app/ai-climate-solutions-pro/page';
 import AiAgriculturalIntelligenceProPage from './app/ai-agricultural-intelligence-pro/page';
 import Ai3DGenerationPage from './app/ai-3d-generation/page';
 import AiBlockchainSolutionsPage from './app/ai-blockchain-solutions/page';
+import AiSocialMediaManagerPage from './app/ai-social-media-manager/page';
+import AiEmailMarketingProPage from './app/ai-email-marketing-pro/page';
+import AiProjectManagementProPage from './app/ai-project-management-pro/page';
+import AiCustomerSupportProPage from './app/ai-customer-support-pro/page';
+import AiCybersecurityProPage from './app/ai-cybersecurity-pro/page';
+import AiDataAnalyticsProPage from './app/ai-data-analytics-pro/page';
+import AiCloudMigrationProPage from './app/ai-cloud-migration-pro/page';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -58,8 +66,11 @@ const App: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="text-white text-xl">Loading application...</div>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 particle-bg">
+        <div className="text-center">
+          <div className="cyber-loading mx-auto mb-4"></div>
+          <div className="text-white text-xl neon-text">Loading application...</div>
+        </div>
       </div>
     );
   }
@@ -72,10 +83,10 @@ const App: React.FC = () => {
             <Header />
             <main className="relative z-10 pt-20" id="main-content" role="main">
               <Suspense fallback={
-                <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 particle-bg">
                   <div className="text-center">
                     <div className="cyber-loading mx-auto mb-4"></div>
-                    <div className="text-white text-xl">Loading application...</div>
+                    <div className="text-white text-xl neon-text">Loading application...</div>
                   </div>
                 </div>
               }>
@@ -120,6 +131,13 @@ const App: React.FC = () => {
                   <Route path="/ai-agricultural-intelligence-pro" element={<AiAgriculturalIntelligenceProPage />} />
                   <Route path="/ai-3d-generation" element={<Ai3DGenerationPage />} />
                   <Route path="/ai-blockchain-solutions" element={<AiBlockchainSolutionsPage />} />
+                  <Route path="/ai-social-media-manager" element={<AiSocialMediaManagerPage />} />
+                  <Route path="/ai-email-marketing-pro" element={<AiEmailMarketingProPage />} />
+                  <Route path="/ai-project-management-pro" element={<AiProjectManagementProPage />} />
+                  <Route path="/ai-customer-support-pro" element={<AiCustomerSupportProPage />} />
+                  <Route path="/ai-cybersecurity-pro" element={<AiCybersecurityProPage />} />
+                  <Route path="/ai-data-analytics-pro" element={<AiDataAnalyticsProPage />} />
+                  <Route path="/ai-cloud-migration-pro" element={<AiCloudMigrationProPage />} />
                 </Routes>
               </Suspense>
             </main>

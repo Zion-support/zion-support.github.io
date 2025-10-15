@@ -14,7 +14,9 @@ import {
   Users,
   Award,
   TrendingUp,
-  Clock
+  Clock,
+  Calendar,
+  MessageSquare
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
@@ -38,11 +40,43 @@ const HomePage: React.FC = () => {
   const services = [
     {
       icon: <Brain className="w-8 h-8" />,
-      title: "AI Analytics Dashboard Pro",
-      description: "Advanced AI-powered analytics with real-time insights, predictive modeling, and automated reporting.",
-      price: "$299/month",
-      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration"],
-      link: "/ai-analytics-dashboard-pro"
+      title: "AI Social Media Manager",
+      description: "Revolutionary AI-powered social media management with automated posting, content optimization, and analytics.",
+      price: "$149/month",
+      features: ["AI Content Optimization", "Smart Scheduling", "Multi-platform Support", "Advanced Analytics"],
+      link: "/ai-social-media-manager"
+    },
+    {
+      icon: <Mail className="w-8 h-8" />,
+      title: "AI Email Marketing Pro",
+      description: "Intelligent email marketing automation with AI segmentation, personalized content, and advanced analytics.",
+      price: "$99/month",
+      features: ["AI Segmentation", "Smart Templates", "Automated Workflows", "Performance Analytics"],
+      link: "/ai-email-marketing-pro"
+    },
+    {
+      icon: <Calendar className="w-8 h-8" />,
+      title: "AI Project Management Pro",
+      description: "AI-powered project management with intelligent task allocation, predictive analytics, and team optimization.",
+      price: "$99/month",
+      features: ["AI Task Automation", "Predictive Analytics", "Smart Team Management", "Goal Tracking"],
+      link: "/ai-project-management-pro"
+    },
+    {
+      icon: <MessageSquare className="w-8 h-8" />,
+      title: "AI Customer Support Pro",
+      description: "Advanced customer support with AI chatbots, multi-channel support, and intelligent ticket routing.",
+      price: "$149/month",
+      features: ["AI Chatbots", "Multi-channel Support", "Smart Routing", "Performance Analytics"],
+      link: "/ai-customer-support-pro"
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "AI Cybersecurity Pro",
+      description: "Comprehensive AI-powered cybersecurity with threat detection, automated response, and compliance management.",
+      price: "$499/month",
+      features: ["AI Threat Detection", "24/7 Monitoring", "Automated Response", "Compliance Management"],
+      link: "/ai-cybersecurity-pro"
     },
     {
       icon: <Code className="w-8 h-8" />,
@@ -51,38 +85,6 @@ const HomePage: React.FC = () => {
       price: "$199/month",
       features: ["Code Generation", "Bug Detection", "Performance Optimization", "Multi-language Support"],
       link: "/ai-code-assistant-pro"
-    },
-    {
-      icon: <Cloud className="w-8 h-8" />,
-      title: "AI Cloud Infrastructure",
-      description: "Scalable cloud solutions with AI-powered auto-scaling, monitoring, and cost optimization.",
-      price: "$499/month",
-      features: ["Auto-scaling", "AI Monitoring", "Cost Optimization", "99.9% Uptime"],
-      link: "/ai-cloud-infrastructure"
-    },
-    {
-      icon: <Wifi className="w-8 h-8" />,
-      title: "5G Implementation",
-      description: "Complete 5G network deployment with ultra-low latency and massive IoT connectivity.",
-      price: "$999/month",
-      features: ["5G Network Setup", "IoT Integration", "Edge Computing", "Performance Monitoring"],
-      link: "/5g-implementation"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Advanced Security Suite",
-      description: "Comprehensive cybersecurity with AI threat detection, automated response, and compliance management.",
-      price: "$399/month",
-      features: ["AI Threat Detection", "Automated Response", "Compliance Management", "24/7 Monitoring"],
-      link: "/advanced-security-suite"
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "AI Chatbot Enterprise",
-      description: "Enterprise-grade conversational AI with multi-language support and advanced NLP capabilities.",
-      price: "$149/month",
-      features: ["Multi-language Support", "Advanced NLP", "Integration APIs", "Analytics Dashboard"],
-      link: "/ai-chatbot-enterprise"
     }
   ];
 
@@ -100,24 +102,19 @@ const HomePage: React.FC = () => {
         <meta name="description" content="Leading provider of AI, IT, and 5G solutions. Transform your business with cutting-edge technology, micro SAAS services, and innovative digital solutions." />
         <meta name="keywords" content="AI solutions, IT services, 5G technology, micro SAAS, cloud computing, cybersecurity, business automation" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden particle-bg">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse floating-element"></div>
+          <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000 floating-element"></div>
+          <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000 floating-element"></div>
         </div>
 
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="h-full w-full" style={{
-            backgroundImage: `
-              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px'
-          }}></div>
-        </div>
+        {/* Cyber Grid Pattern */}
+        <div className="absolute inset-0 opacity-20 cyber-grid"></div>
+        
+        {/* Scan Lines Effect */}
+        <div className="absolute inset-0 scan-lines"></div>
 
         <main className="relative z-10">
           {/* Hero Section */}
@@ -129,11 +126,11 @@ const HomePage: React.FC = () => {
                   Trusted by 150+ Companies Worldwide
                 </div>
                 <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
-                  <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text">
                     Advanced AI & IT
                   </span>
                   <br />
-                  <span className="text-white">Solutions</span>
+                  <span className="text-white cyber-font">Solutions</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
                   Transform your business with cutting-edge artificial intelligence, 
@@ -143,14 +140,14 @@ const HomePage: React.FC = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
                     href="tel:+13024640950"
-                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
+                    className="cyber-button text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center justify-center neon-cursor"
                   >
                     <Phone className="w-5 h-5 mr-2" />
                     Call +1 302 464 0950
                   </a>
                   <a
                     href="mailto:kleber@ziontechgroup.com"
-                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+                    className="neon-border text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center neon-cursor"
                   >
                     <Mail className="w-5 h-5 mr-2" />
                     Get Quote
@@ -196,7 +193,7 @@ const HomePage: React.FC = () => {
                 {services.map((service, index) => (
                   <div 
                     key={index} 
-                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                    className="group holographic-card rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 hover-lift"
                   >
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       <div className="text-white">{service.icon}</div>

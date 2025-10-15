@@ -1,110 +1,113 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Share2, 
-  TrendingUp, 
-  Users, 
+  Mail, 
+  Target, 
   BarChart3, 
-  Calendar,
-  MessageSquare,
-  Image,
-  Video,
-  Hash,
-  Target,
+  Users, 
   Zap,
   CheckCircle,
   Star,
   ArrowRight,
   Clock,
   DollarSign,
-  Globe,
+  Send,
+  TrendingUp,
+  Palette,
   Smartphone,
-  Monitor
+  Monitor,
+  Globe,
+  MessageSquare,
+  PieChart,
+  Filter,
+  Phone,
+  ShoppingCart,
+  RefreshCw
 } from 'lucide-react';
 
-const AiSocialMediaManagerPage: React.FC = () => {
+const AiEmailMarketingProPage: React.FC = () => {
   const features = [
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "AI-Powered Content Optimization",
-      description: "Automatically optimize posts for maximum engagement using machine learning algorithms"
+      icon: <Target className="w-6 h-6" />,
+      title: "AI-Powered Segmentation",
+      description: "Automatically segment your audience based on behavior, preferences, and engagement patterns"
     },
     {
-      icon: <Calendar className="w-6 h-6" />,
-      title: "Smart Scheduling",
-      description: "Intelligent posting schedule based on audience activity patterns and optimal timing"
+      icon: <Palette className="w-6 h-6" />,
+      title: "Smart Template Designer",
+      description: "AI-generated email templates that adapt to your brand and optimize for conversions"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Advanced Analytics",
-      description: "Comprehensive insights and performance tracking across all social media platforms"
+      description: "Comprehensive insights with predictive analytics and ROI tracking"
     },
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Audience Targeting",
-      description: "AI-driven audience segmentation and personalized content recommendations"
+      icon: <Zap className="w-6 h-6" />,
+      title: "Automated Workflows",
+      description: "Create complex email sequences that trigger based on user actions and behaviors"
     },
     {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: "Automated Responses",
-      description: "Smart chatbot integration for instant customer engagement and support"
+      icon: <Send className="w-6 h-6" />,
+      title: "Optimal Send Times",
+      description: "AI determines the best time to send emails for maximum open and click rates"
     },
     {
-      icon: <Hash className="w-6 h-6" />,
-      title: "Hashtag Intelligence",
-      description: "AI-powered hashtag research and trending topic identification"
+      icon: <Filter className="w-6 h-6" />,
+      title: "Content Optimization",
+      description: "A/B testing and AI-powered content suggestions for better performance"
     }
   ];
 
-  const platforms = [
-    { name: "Facebook", icon: <Globe className="w-5 h-5" />, color: "text-blue-500" },
-    { name: "Instagram", icon: <Image className="w-5 h-5" />, color: "text-pink-500" },
-    { name: "Twitter", icon: <MessageSquare className="w-5 h-5" />, color: "text-cyan-500" },
-    { name: "LinkedIn", icon: <Users className="w-5 h-5" />, color: "text-blue-600" },
-    { name: "TikTok", icon: <Video className="w-5 h-5" />, color: "text-white" },
-    { name: "YouTube", icon: <Video className="w-5 h-5" />, color: "text-red-500" }
+  const emailTypes = [
+    { name: "Newsletter", icon: <Mail className="w-5 h-5" />, color: "text-blue-500" },
+    { name: "Promotional", icon: <TrendingUp className="w-5 h-5" />, color: "text-green-500" },
+    { name: "Transactional", icon: <MessageSquare className="w-5 h-5" />, color: "text-purple-500" },
+    { name: "Welcome Series", icon: <Users className="w-5 h-5" />, color: "text-cyan-500" },
+    { name: "Abandoned Cart", icon: <ShoppingCart className="w-5 h-5" />, color: "text-orange-500" },
+    { name: "Re-engagement", icon: <RefreshCw className="w-5 h-5" />, color: "text-pink-500" }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$49",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small businesses and startups",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 3 social media accounts",
-        "50 posts per month",
-        "Basic analytics dashboard",
-        "AI content suggestions",
+        "Up to 1,000 subscribers",
+        "10,000 emails per month",
+        "Basic templates",
+        "Email analytics",
         "Email support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$149",
+      price: "$99",
       period: "/month",
-      description: "Ideal for growing businesses and agencies",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 10 social media accounts",
-        "Unlimited posts",
-        "Advanced analytics & reporting",
-        "AI-powered content optimization",
-        "Automated scheduling",
-        "Priority support",
-        "Team collaboration tools"
+        "Up to 10,000 subscribers",
+        "Unlimited emails",
+        "Advanced templates",
+        "AI segmentation",
+        "Automated workflows",
+        "A/B testing",
+        "Priority support"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$299",
       period: "/month",
-      description: "For large organizations and enterprises",
+      description: "For large organizations",
       features: [
-        "Unlimited social media accounts",
-        "Unlimited posts",
-        "Custom analytics dashboard",
+        "Unlimited subscribers",
+        "Unlimited emails",
+        "Custom templates",
         "Advanced AI features",
         "White-label options",
         "Dedicated account manager",
@@ -116,20 +119,20 @@ const AiSocialMediaManagerPage: React.FC = () => {
   ];
 
   const stats = [
-    { number: "500+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
-    { number: "2M+", label: "Posts Managed", icon: <Share2 className="w-6 h-6" /> },
-    { number: "85%", label: "Engagement Increase", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime Guarantee", icon: <Zap className="w-6 h-6" /> }
+    { number: "2M+", label: "Emails Sent", icon: <Send className="w-6 h-6" /> },
+    { number: "45%", label: "Average Open Rate", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "12%", label: "Average Click Rate", icon: <Target className="w-6 h-6" /> },
+    { number: "99.9%", label: "Deliverability Rate", icon: <Zap className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Social Media Manager - Zion Tech Group | Automated Social Media Management</title>
-        <meta name="description" content="Revolutionary AI-powered social media management platform. Automate posting, optimize content, and boost engagement across all platforms with intelligent scheduling and analytics." />
-        <meta name="keywords" content="AI social media manager, automated posting, social media automation, content optimization, social media analytics, social media scheduling" />
-        <meta property="og:title" content="AI Social Media Manager - Zion Tech Group" />
-        <meta property="og:description" content="Transform your social media presence with AI-powered automation and optimization." />
+        <title>AI Email Marketing Pro - Zion Tech Group | Intelligent Email Automation</title>
+        <meta name="description" content="Revolutionary AI-powered email marketing platform. Automate campaigns, optimize content, and boost engagement with intelligent segmentation and analytics." />
+        <meta name="keywords" content="AI email marketing, email automation, email campaigns, email analytics, email segmentation, email templates" />
+        <meta property="og:title" content="AI Email Marketing Pro - Zion Tech Group" />
+        <meta property="og:description" content="Transform your email marketing with AI-powered automation and optimization." />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -158,20 +161,20 @@ const AiSocialMediaManagerPage: React.FC = () => {
             <div className="container mx-auto px-4">
               <div className="text-center max-w-6xl mx-auto">
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
-                  <Share2 className="w-4 h-4 mr-2" />
-                  AI-Powered Social Media Management
+                  <Mail className="w-4 h-4 mr-2" />
+                  AI-Powered Email Marketing
                 </div>
                 <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    AI Social Media
+                    AI Email Marketing
                   </span>
                   <br />
-                  <span className="text-white">Manager</span>
+                  <span className="text-white">Pro</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Revolutionize your social media presence with AI-powered automation, 
-                  intelligent content optimization, and advanced analytics. Manage all 
-                  platforms from one unified dashboard.
+                  Transform your email marketing with AI-powered automation, intelligent 
+                  segmentation, and advanced analytics. Boost engagement and drive conversions 
+                  with personalized, data-driven campaigns.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -212,11 +215,11 @@ const AiSocialMediaManagerPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Powerful Features
+                    Advanced Features
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                  Advanced AI capabilities that transform your social media management workflow
+                  Powerful AI capabilities that revolutionize your email marketing strategy
                 </p>
               </div>
               
@@ -241,26 +244,26 @@ const AiSocialMediaManagerPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Supported Platforms */}
+          {/* Email Types */}
           <section className="py-20">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-6">Supported Platforms</h2>
+                <h2 className="text-4xl font-bold text-white mb-6">Email Campaign Types</h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Manage all your social media accounts from one unified dashboard
+                  Create and automate various types of email campaigns
                 </p>
               </div>
               
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                {platforms.map((platform, index) => (
+                {emailTypes.map((type, index) => (
                   <div 
                     key={index} 
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 group"
                   >
-                    <div className={`w-12 h-12 mx-auto mb-4 ${platform.color} group-hover:scale-110 transition-transform duration-300`}>
-                      {platform.icon}
+                    <div className={`w-12 h-12 mx-auto mb-4 ${type.color} group-hover:scale-110 transition-transform duration-300`}>
+                      {type.icon}
                     </div>
-                    <h3 className="text-white font-semibold">{platform.name}</h3>
+                    <h3 className="text-white font-semibold">{type.name}</h3>
                   </div>
                 ))}
               </div>
@@ -271,9 +274,9 @@ const AiSocialMediaManagerPage: React.FC = () => {
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-6">Simple, Transparent Pricing</h2>
+                <h2 className="text-4xl font-bold text-white mb-6">Flexible Pricing Plans</h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the perfect plan for your social media management needs
+                  Choose the perfect plan for your email marketing needs
                 </p>
               </div>
               
@@ -330,9 +333,9 @@ const AiSocialMediaManagerPage: React.FC = () => {
           <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
-                <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Social Media?</h2>
+                <h2 className="text-4xl font-bold text-white mb-6">Ready to Boost Your Email Marketing?</h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Join thousands of businesses already using our AI-powered social media management platform.
+                  Join thousands of businesses already using our AI-powered email marketing platform.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -357,4 +360,4 @@ const AiSocialMediaManagerPage: React.FC = () => {
   );
 };
 
-export default AiSocialMediaManagerPage;
+export default AiEmailMarketingProPage;

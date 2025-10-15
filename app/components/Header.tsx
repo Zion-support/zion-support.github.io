@@ -45,6 +45,8 @@ const Header: React.FC = () => {
       href: '/it-services',
       icon: <Code className="w-4 h-4" />,
       dropdown: [
+        { name: 'AI Data Analytics Pro', href: '/ai-data-analytics-pro' },
+        { name: 'AI Cloud Migration Pro', href: '/ai-cloud-migration-pro' },
         { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
         { name: 'API Management', href: '/ai-api-management' },
         { name: 'Database Solutions', href: '/database-solutions' },
@@ -71,6 +73,11 @@ const Header: React.FC = () => {
       href: '/micro-saas',
       icon: <Cloud className="w-4 h-4" />,
       dropdown: [
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+        { name: 'AI Email Marketing Pro', href: '/ai-email-marketing-pro' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
+        { name: 'AI Cybersecurity Pro', href: '/ai-cybersecurity-pro' },
         { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant' },
         { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
@@ -91,7 +98,7 @@ const Header: React.FC = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20 shadow-2xl' 
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20 shadow-2xl glass-morphism' 
         : 'bg-transparent'
     }`}>
       {/* Top Contact Bar */}

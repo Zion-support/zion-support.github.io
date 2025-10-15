@@ -1,182 +1,139 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Zap, 
-  Shield, 
-  Brain, 
-  CheckCircle, 
-  ArrowRight, 
+  MessageSquare, 
+  Users, 
+  BarChart3, 
+  Zap,
+  CheckCircle,
   Star,
+  ArrowRight,
+  Clock,
+  DollarSign,
+  Target,
+  TrendingUp,
+  Smartphone,
+  Monitor,
+  Globe,
   Phone,
   Mail,
-  Play,
-  Cpu,
-  BarChart3,
-  Activity,
+  Settings,
+  FileText,
+  Share2,
   Headphones,
   Bot,
-  ShoppingCart
+  Shield
 } from 'lucide-react';
 
 const AiCustomerSupportProPage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   const features = [
     {
       icon: <Bot className="w-6 h-6" />,
       title: "AI-Powered Chatbots",
-      description: "Intelligent chatbots that understand context, provide instant responses, and escalate complex issues to human agents.",
-      benefits: ["24/7 availability", "Instant responses", "Context awareness", "Multi-language support"]
+      description: "Intelligent chatbots that understand context and provide instant, accurate responses to customer queries"
     },
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Natural Language Processing",
-      description: "Advanced NLP capabilities that understand customer intent, sentiment, and provide personalized responses.",
-      benefits: ["Intent recognition", "Sentiment analysis", "Personalization", "Emotion detection"]
-    },
-    {
-      icon: <Headphones className="w-6 h-6" />,
-      title: "Omnichannel Support",
-      description: "Unified customer support across all channels including chat, email, phone, and social media.",
-      benefits: ["Multi-channel integration", "Unified inbox", "Consistent experience", "Cross-channel history"]
+      icon: <MessageSquare className="w-6 h-6" />,
+      title: "Multi-Channel Support",
+      description: "Unified support across email, chat, phone, social media, and messaging platforms"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Analytics & Insights",
-      description: "Comprehensive analytics dashboard with customer satisfaction metrics, response times, and performance insights.",
-      benefits: ["Real-time metrics", "Customer satisfaction", "Performance tracking", "Trend analysis"]
+      title: "Advanced Analytics",
+      description: "Comprehensive insights into customer satisfaction, response times, and support team performance"
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "Bank-level security with encryption, access controls, and compliance with GDPR and other regulations.",
-      benefits: ["End-to-end encryption", "Role-based access", "GDPR compliance", "Audit logs"]
+      icon: <Target className="w-6 h-6" />,
+      title: "Smart Ticket Routing",
+      description: "AI automatically routes tickets to the right agent based on expertise and workload"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automated Workflows",
-      description: "Smart automation that routes tickets, assigns agents, and triggers follow-up actions based on predefined rules.",
-      benefits: ["Smart routing", "Auto-assignment", "Escalation rules", "Workflow automation"]
+      title: "Automated Responses",
+      description: "Pre-built response templates and AI-generated suggestions for faster resolution"
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Performance Optimization",
+      description: "AI-driven recommendations to improve response times and customer satisfaction"
     }
+  ];
+
+  const supportChannels = [
+    { name: "Live Chat", icon: <MessageSquare className="w-5 h-5" />, color: "text-blue-500" },
+    { name: "Email Support", icon: <Mail className="w-5 h-5" />, color: "text-green-500" },
+    { name: "Phone Support", icon: <Phone className="w-5 h-5" />, color: "text-purple-500" },
+    { name: "Social Media", icon: <Share2 className="w-5 h-5" />, color: "text-cyan-500" },
+    { name: "Mobile App", icon: <Smartphone className="w-5 h-5" />, color: "text-orange-500" },
+    { name: "Video Support", icon: <Monitor className="w-5 h-5" />, color: "text-pink-500" }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$99",
-      period: "month",
-      description: "Perfect for small businesses starting with AI customer support",
+      price: "$49",
+      period: "/month",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 1,000 conversations/month",
+        "Up to 3 agents",
+        "Unlimited tickets",
         "Basic AI chatbot",
         "Email & chat support",
         "Basic analytics",
-        "Email support",
-        "5 agents max"
+        "Email support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
-      period: "month",
-      description: "Ideal for growing companies with advanced support needs",
+      price: "$149",
+      period: "/month",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 10,000 conversations/month",
-        "Advanced AI chatbot",
-        "Omnichannel support",
+        "Up to 10 agents",
+        "Advanced AI features",
+        "Multi-channel support",
+        "Custom integrations",
         "Advanced analytics",
         "Priority support",
-        "25 agents max",
-        "Custom integrations",
-        "API access"
+        "Phone support"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$599",
-      period: "month",
-      description: "Complete solution for large organizations with complex requirements",
+      price: "$399",
+      period: "/month",
+      description: "For large organizations",
       features: [
-        "Unlimited conversations",
-        "Custom AI training",
-        "All channels supported",
-        "Full analytics suite",
-        "24/7 dedicated support",
         "Unlimited agents",
-        "Custom development",
-        "On-premise deployment"
+        "All AI features",
+        "White-label options",
+        "Custom integrations",
+        "Dedicated account manager",
+        "24/7 phone support",
+        "Advanced security"
       ],
       popular: false
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Jennifer Martinez",
-      company: "E-commerce Plus",
-      role: "Customer Success Manager",
-      content: "AI Customer Support Pro has reduced our response time by 80% and increased customer satisfaction by 45%. The AI chatbot handles 70% of inquiries automatically.",
-      rating: 5
-    },
-    {
-      name: "David Thompson",
-      company: "TechStart Inc.",
-      role: "VP of Operations",
-      content: "The omnichannel support and analytics have given us unprecedented visibility into customer interactions. Our team productivity has increased significantly.",
-      rating: 5
-    },
-    {
-      name: "Sarah Johnson",
-      company: "Global Services Ltd",
-      role: "Head of Support",
-      content: "The AI-powered automation and smart routing have streamlined our support operations. We can now handle 3x more tickets with the same team size.",
-      rating: 5
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "E-commerce Support",
-      description: "Handle order inquiries, product questions, and returns with AI-powered assistance",
-      icon: <ShoppingCart className="w-8 h-8" />,
-      benefits: ["Order tracking", "Product recommendations", "Return processing", "Inventory queries"]
-    },
-    {
-      title: "SaaS Support",
-      description: "Provide technical support and onboarding assistance for software products",
-      icon: <Cpu className="w-8 h-8" />,
-      benefits: ["Technical troubleshooting", "Feature explanations", "Onboarding guidance", "Bug reporting"]
-    },
-    {
-      title: "Financial Services",
-      description: "Secure customer support for banking, insurance, and financial products",
-      icon: <Shield className="w-8 h-8" />,
-      benefits: ["Account inquiries", "Transaction support", "Compliance assistance", "Security alerts"]
-    },
-    {
-      title: "Healthcare Support",
-      description: "HIPAA-compliant patient support and appointment scheduling",
-      icon: <Activity className="w-8 h-8" />,
-      benefits: ["Appointment scheduling", "Insurance verification", "Prescription inquiries", "Emergency routing"]
-    }
+  const stats = [
+    { number: "1M+", label: "Tickets Resolved", icon: <CheckCircle className="w-6 h-6" /> },
+    { number: "95%", label: "Customer Satisfaction", icon: <Star className="w-6 h-6" /> },
+    { number: "2min", label: "Average Response Time", icon: <Clock className="w-6 h-6" /> },
+    { number: "99.9%", label: "Uptime Guarantee", icon: <Zap className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Customer Support Pro - Intelligent Support Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform your customer support with AI-powered chatbots, omnichannel support, and intelligent automation. Reduce response times and increase satisfaction." />
-        <meta name="keywords" content="AI customer support, chatbot, omnichannel support, customer service automation, NLP, customer satisfaction" />
+        <title>AI Customer Support Pro - Zion Tech Group | Intelligent Customer Service</title>
+        <meta name="description" content="Revolutionary AI-powered customer support platform. Automate responses, optimize team performance, and deliver exceptional customer experiences with intelligent chatbots and analytics." />
+        <meta name="keywords" content="AI customer support, customer service automation, support chatbots, ticket management, customer analytics, multi-channel support" />
         <meta property="og:title" content="AI Customer Support Pro - Zion Tech Group" />
-        <meta property="og:description" content="Intelligent customer support platform with AI-powered chatbots and omnichannel capabilities" />
+        <meta property="og:description" content="Transform your customer support with AI-powered automation and optimization." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-customer-support-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -200,238 +157,26 @@ const AiCustomerSupportProPage: React.FC = () => {
 
         <main className="relative z-10">
           {/* Hero Section */}
-          <section className="relative py-20 overflow-hidden">
+          <section className="py-20">
             <div className="container mx-auto px-4">
-              <div className={`text-center max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <div className="text-center max-w-6xl mx-auto">
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
-                  <Star className="w-4 h-4 mr-2" />
-                  #1 AI Support Platform
+                  <Headphones className="w-4 h-4 mr-2" />
+                  AI-Powered Customer Support
                 </div>
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    AI Customer Support Pro
+                    AI Customer Support
                   </span>
+                  <br />
+                  <span className="text-white">Pro</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Revolutionize your customer support with AI-powered chatbots, omnichannel capabilities, 
-                  and intelligent automation. Reduce response times by 80% and increase satisfaction by 45%.
+                  Revolutionize your customer support with AI-powered automation, intelligent 
+                  chatbots, and advanced analytics. Deliver exceptional customer experiences 
+                  across all channels.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                  <a
-                    href="tel:+13024640950"
-                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
-                  >
-                    <Phone className="w-5 h-5 mr-2" />
-                    Start Free Trial
-                  </a>
-                  <a
-                    href="#demo"
-                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
-                  >
-                    <Play className="w-5 h-5 mr-2" />
-                    Watch Demo
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Features Section */}
-          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Intelligent Support Features
-                  </span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Everything you need to provide exceptional customer support with AI-powered automation.
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index) => (
-                  <div 
-                    key={index} 
-                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 neon-card"
-                  >
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <div className="text-white">{feature.icon}</div>
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed">
-                      {feature.description}
-                    </p>
-                    <div className="space-y-2">
-                      {feature.benefits.map((benefit, benefitIndex) => (
-                        <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Use Cases Section */}
-          <section className="py-20 bg-slate-900">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Perfect for Every Industry
-                  </span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Our AI customer support solution adapts to your specific industry needs and requirements.
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {useCases.map((useCase, index) => (
-                  <div 
-                    key={index} 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
-                  >
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
-                      <div className="text-white">{useCase.icon}</div>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
-                    <p className="text-gray-300 mb-6">{useCase.description}</p>
-                    <div className="space-y-2">
-                      {useCase.benefits.map((benefit, benefitIndex) => (
-                        <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Pricing Section */}
-          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Simple Pricing
-                  </span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the plan that fits your support needs. All plans include our core AI features.
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {pricingPlans.map((plan, index) => (
-                  <div 
-                    key={index} 
-                    className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl ${
-                      plan.popular 
-                        ? 'border-cyan-400/40 shadow-cyan-500/10' 
-                        : 'border-cyan-500/20 hover:border-cyan-400/40'
-                    }`}
-                  >
-                    {plan.popular && (
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                          Most Popular
-                        </div>
-                      </div>
-                    )}
-                    <div className="text-center mb-8">
-                      <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                      <p className="text-gray-300 mb-4">{plan.description}</p>
-                      <div className="flex items-baseline justify-center">
-                        <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
-                        <span className="text-gray-400 ml-2">/{plan.period}</span>
-                      </div>
-                    </div>
-                    <div className="space-y-4 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                    <a
-                      href="tel:+13024640950"
-                      className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
-                        plan.popular
-                          ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                          : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                      }`}
-                    >
-                      Get Started
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Testimonials Section */}
-          <section className="py-20 bg-slate-900">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Customer Success Stories
-                  </span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  See how companies are transforming their customer support with AI Customer Support Pro.
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-3 gap-8">
-                {testimonials.map((testimonial, index) => (
-                  <div 
-                    key={index} 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300"
-                  >
-                    <div className="flex items-center mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                      ))}
-                    </div>
-                    <p className="text-gray-300 mb-6 leading-relaxed">
-                      &ldquo;{testimonial.content}&rdquo;
-                    </p>
-                    <div>
-                      <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-cyan-400">{testimonial.role}</div>
-                      <div className="text-gray-400 text-sm">{testimonial.company}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* CTA Section */}
-          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
-            <div className="container mx-auto px-4">
-              <div className="text-center max-w-4xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Ready to Transform Your Support?
-                </h2>
-                <p className="text-xl text-gray-300 mb-8">
-                  Join thousands of companies that have revolutionized their customer support with AI-powered automation and intelligent chatbots.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="tel:+13024640950"
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
@@ -444,7 +189,166 @@ const AiCustomerSupportProPage: React.FC = () => {
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                   >
                     <Mail className="w-5 h-5 mr-2" />
-                    Get Free Trial
+                    Get Demo
+                  </a>
+                </div>
+                
+                {/* Stats */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                  {stats.map((stat, index) => (
+                    <div key={index} className="text-center group">
+                      <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                        <div className="text-cyan-400">{stat.icon}</div>
+                      </div>
+                      <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
+                      <div className="text-gray-400 text-sm">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Features Section */}
+          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                    Advanced Features
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                  Powerful AI capabilities that transform your customer support operations
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {features.map((feature, index) => (
+                  <div 
+                    key={index} 
+                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                      <div className="text-white">{feature.icon}</div>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Support Channels */}
+          <section className="py-20">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold text-white mb-6">Multi-Channel Support</h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Provide seamless support across all customer touchpoints
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                {supportChannels.map((channel, index) => (
+                  <div 
+                    key={index} 
+                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 group"
+                  >
+                    <div className={`w-12 h-12 mx-auto mb-4 ${channel.color} group-hover:scale-110 transition-transform duration-300`}>
+                      {channel.icon}
+                    </div>
+                    <h3 className="text-white font-semibold">{channel.name}</h3>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Pricing Section */}
+          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold text-white mb-6">Flexible Pricing Plans</h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Choose the perfect plan for your support team size and needs
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {pricingPlans.map((plan, index) => (
+                  <div 
+                    key={index} 
+                    className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300 ${
+                      plan.popular 
+                        ? 'border-cyan-400/40 shadow-2xl shadow-cyan-500/10' 
+                        : 'border-cyan-500/20 hover:border-cyan-400/40'
+                    }`}
+                  >
+                    {plan.popular && (
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                          Most Popular
+                        </div>
+                      </div>
+                    )}
+                    
+                    <div className="text-center mb-8">
+                      <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                      <p className="text-gray-300 mb-4">{plan.description}</p>
+                      <div className="flex items-baseline justify-center">
+                        <span className="text-5xl font-bold text-white">{plan.price}</span>
+                        <span className="text-gray-400 ml-2">{plan.period}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-4 mb-8">
+                      {plan.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center">
+                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                          <span className="text-gray-300">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 transform hover:scale-105'
+                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                    }`}>
+                      Get Started
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
+            <div className="container mx-auto px-4">
+              <div className="text-center max-w-4xl mx-auto">
+                <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2>
+                <p className="text-xl text-gray-300 mb-8">
+                  Join thousands of businesses already using our AI-powered customer support platform.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="tel:+13024640950"
+                    className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                  >
+                    Start Free Trial
+                  </a>
+                  <a
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                  >
+                    Schedule Demo
                   </a>
                 </div>
               </div>

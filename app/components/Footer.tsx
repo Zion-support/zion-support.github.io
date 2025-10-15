@@ -41,6 +41,8 @@ const Footer: React.FC = () => {
       title: 'IT Services',
       icon: <Code className="w-5 h-5 text-purple-400" />,
       services: [
+        { name: 'AI Data Analytics Pro', href: '/ai-data-analytics-pro' },
+        { name: 'AI Cloud Migration Pro', href: '/ai-cloud-migration-pro' },
         { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
         { name: 'API Management', href: '/ai-api-management' },
         { name: 'Database Solutions', href: '/database-solutions' },
@@ -65,6 +67,11 @@ const Footer: React.FC = () => {
       title: 'Micro SAAS',
       icon: <Cloud className="w-5 h-5 text-orange-400" />,
       services: [
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+        { name: 'AI Email Marketing Pro', href: '/ai-email-marketing-pro' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
+        { name: 'AI Cybersecurity Pro', href: '/ai-cybersecurity-pro' },
         { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant' },
         { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },

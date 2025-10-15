@@ -1,135 +1,139 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Share2, 
-  TrendingUp, 
+  Shield, 
   Users, 
   BarChart3, 
-  Calendar,
-  MessageSquare,
-  Image,
-  Video,
-  Hash,
-  Target,
   Zap,
   CheckCircle,
   Star,
   ArrowRight,
   Clock,
   DollarSign,
-  Globe,
+  Target,
+  TrendingUp,
   Smartphone,
-  Monitor
+  Monitor,
+  Globe,
+  Phone,
+  Mail,
+  Settings,
+  FileText,
+  Share2,
+  Lock,
+  Eye,
+  AlertTriangle,
+  Cloud
 } from 'lucide-react';
 
-const AiSocialMediaManagerPage: React.FC = () => {
+const AiCybersecurityProPage: React.FC = () => {
   const features = [
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "AI-Powered Content Optimization",
-      description: "Automatically optimize posts for maximum engagement using machine learning algorithms"
+      icon: <Shield className="w-6 h-6" />,
+      title: "AI Threat Detection",
+      description: "Advanced machine learning algorithms detect and prevent cyber threats in real-time"
     },
     {
-      icon: <Calendar className="w-6 h-6" />,
-      title: "Smart Scheduling",
-      description: "Intelligent posting schedule based on audience activity patterns and optimal timing"
+      icon: <Eye className="w-6 h-6" />,
+      title: "24/7 Monitoring",
+      description: "Continuous monitoring of your network, systems, and data with instant threat response"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Advanced Analytics",
-      description: "Comprehensive insights and performance tracking across all social media platforms"
+      title: "Security Analytics",
+      description: "Comprehensive security insights and threat intelligence with predictive analytics"
     },
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Audience Targeting",
-      description: "AI-driven audience segmentation and personalized content recommendations"
+      icon: <Lock className="w-6 h-6" />,
+      title: "Data Protection",
+      description: "End-to-end encryption and data loss prevention with AI-powered classification"
     },
     {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: "Automated Responses",
-      description: "Smart chatbot integration for instant customer engagement and support"
+      icon: <Zap className="w-6 h-6" />,
+      title: "Automated Response",
+      description: "AI-driven incident response and automated threat mitigation"
     },
     {
-      icon: <Hash className="w-6 h-6" />,
-      title: "Hashtag Intelligence",
-      description: "AI-powered hashtag research and trending topic identification"
+      icon: <AlertTriangle className="w-6 h-6" />,
+      title: "Compliance Management",
+      description: "Automated compliance monitoring and reporting for GDPR, HIPAA, and other regulations"
     }
   ];
 
-  const platforms = [
-    { name: "Facebook", icon: <Globe className="w-5 h-5" />, color: "text-blue-500" },
-    { name: "Instagram", icon: <Image className="w-5 h-5" />, color: "text-pink-500" },
-    { name: "Twitter", icon: <MessageSquare className="w-5 h-5" />, color: "text-cyan-500" },
-    { name: "LinkedIn", icon: <Users className="w-5 h-5" />, color: "text-blue-600" },
-    { name: "TikTok", icon: <Video className="w-5 h-5" />, color: "text-white" },
-    { name: "YouTube", icon: <Video className="w-5 h-5" />, color: "text-red-500" }
+  const securityAreas = [
+    { name: "Network Security", icon: <Globe className="w-5 h-5" />, color: "text-blue-500" },
+    { name: "Endpoint Protection", icon: <Monitor className="w-5 h-5" />, color: "text-green-500" },
+    { name: "Cloud Security", icon: <Cloud className="w-5 h-5" />, color: "text-purple-500" },
+    { name: "Mobile Security", icon: <Smartphone className="w-5 h-5" />, color: "text-cyan-500" },
+    { name: "Data Encryption", icon: <Lock className="w-5 h-5" />, color: "text-orange-500" },
+    { name: "Identity Management", icon: <Users className="w-5 h-5" />, color: "text-pink-500" }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$49",
+      name: "Essential",
+      price: "$199",
       period: "/month",
-      description: "Perfect for small businesses and startups",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 3 social media accounts",
-        "50 posts per month",
-        "Basic analytics dashboard",
-        "AI content suggestions",
+        "Basic threat detection",
+        "24/7 monitoring",
+        "Email security",
+        "Firewall protection",
+        "Basic reporting",
         "Email support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$149",
+      price: "$499",
       period: "/month",
-      description: "Ideal for growing businesses and agencies",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 10 social media accounts",
-        "Unlimited posts",
-        "Advanced analytics & reporting",
-        "AI-powered content optimization",
-        "Automated scheduling",
+        "Advanced AI features",
+        "Multi-layer protection",
+        "Compliance monitoring",
+        "Incident response",
+        "Advanced analytics",
         "Priority support",
-        "Team collaboration tools"
+        "Custom integrations"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$999",
       period: "/month",
-      description: "For large organizations and enterprises",
+      description: "For large organizations",
       features: [
-        "Unlimited social media accounts",
-        "Unlimited posts",
-        "Custom analytics dashboard",
-        "Advanced AI features",
+        "Complete security suite",
         "White-label options",
+        "Dedicated security team",
+        "Custom integrations",
         "Dedicated account manager",
         "24/7 phone support",
-        "Custom integrations"
+        "Advanced threat intelligence"
       ],
       popular: false
     }
   ];
 
   const stats = [
-    { number: "500+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
-    { number: "2M+", label: "Posts Managed", icon: <Share2 className="w-6 h-6" /> },
-    { number: "85%", label: "Engagement Increase", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime Guarantee", icon: <Zap className="w-6 h-6" /> }
+    { number: "99.9%", label: "Threat Detection Rate", icon: <Shield className="w-6 h-6" /> },
+    { number: "2min", label: "Average Response Time", icon: <Zap className="w-6 h-6" /> },
+    { number: "1000+", label: "Threats Blocked Daily", icon: <AlertTriangle className="w-6 h-6" /> },
+    { number: "24/7", label: "Security Monitoring", icon: <Eye className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Social Media Manager - Zion Tech Group | Automated Social Media Management</title>
-        <meta name="description" content="Revolutionary AI-powered social media management platform. Automate posting, optimize content, and boost engagement across all platforms with intelligent scheduling and analytics." />
-        <meta name="keywords" content="AI social media manager, automated posting, social media automation, content optimization, social media analytics, social media scheduling" />
-        <meta property="og:title" content="AI Social Media Manager - Zion Tech Group" />
-        <meta property="og:description" content="Transform your social media presence with AI-powered automation and optimization." />
+        <title>AI Cybersecurity Pro - Zion Tech Group | Advanced Security Solutions</title>
+        <meta name="description" content="Revolutionary AI-powered cybersecurity platform. Protect your business with advanced threat detection, automated response, and comprehensive security monitoring." />
+        <meta name="keywords" content="AI cybersecurity, threat detection, security monitoring, data protection, compliance management, incident response" />
+        <meta property="og:title" content="AI Cybersecurity Pro - Zion Tech Group" />
+        <meta property="og:description" content="Protect your business with AI-powered cybersecurity solutions." />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -158,20 +162,20 @@ const AiSocialMediaManagerPage: React.FC = () => {
             <div className="container mx-auto px-4">
               <div className="text-center max-w-6xl mx-auto">
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
-                  <Share2 className="w-4 h-4 mr-2" />
-                  AI-Powered Social Media Management
+                  <Shield className="w-4 h-4 mr-2" />
+                  AI-Powered Cybersecurity
                 </div>
                 <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    AI Social Media
+                    AI Cybersecurity
                   </span>
                   <br />
-                  <span className="text-white">Manager</span>
+                  <span className="text-white">Pro</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Revolutionize your social media presence with AI-powered automation, 
-                  intelligent content optimization, and advanced analytics. Manage all 
-                  platforms from one unified dashboard.
+                  Protect your business with advanced AI-powered cybersecurity solutions. 
+                  Detect threats in real-time, prevent attacks, and ensure compliance with 
+                  intelligent security monitoring and automated response.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -186,7 +190,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                   >
                     <Mail className="w-5 h-5 mr-2" />
-                    Get Demo
+                    Get Security Audit
                   </a>
                 </div>
                 
@@ -212,11 +216,11 @@ const AiSocialMediaManagerPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Powerful Features
+                    Advanced Security Features
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                  Advanced AI capabilities that transform your social media management workflow
+                  Comprehensive AI-powered security solutions for complete protection
                 </p>
               </div>
               
@@ -241,26 +245,26 @@ const AiSocialMediaManagerPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Supported Platforms */}
+          {/* Security Areas */}
           <section className="py-20">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-6">Supported Platforms</h2>
+                <h2 className="text-4xl font-bold text-white mb-6">Comprehensive Security Coverage</h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Manage all your social media accounts from one unified dashboard
+                  Protect every aspect of your digital infrastructure
                 </p>
               </div>
               
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                {platforms.map((platform, index) => (
+                {securityAreas.map((area, index) => (
                   <div 
                     key={index} 
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 group"
                   >
-                    <div className={`w-12 h-12 mx-auto mb-4 ${platform.color} group-hover:scale-110 transition-transform duration-300`}>
-                      {platform.icon}
+                    <div className={`w-12 h-12 mx-auto mb-4 ${area.color} group-hover:scale-110 transition-transform duration-300`}>
+                      {area.icon}
                     </div>
-                    <h3 className="text-white font-semibold">{platform.name}</h3>
+                    <h3 className="text-white font-semibold">{area.name}</h3>
                   </div>
                 ))}
               </div>
@@ -271,9 +275,9 @@ const AiSocialMediaManagerPage: React.FC = () => {
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-6">Simple, Transparent Pricing</h2>
+                <h2 className="text-4xl font-bold text-white mb-6">Flexible Security Plans</h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the perfect plan for your social media management needs
+                  Choose the perfect security solution for your business needs
                 </p>
               </div>
               
@@ -318,7 +322,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 transform hover:scale-105'
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                     }`}>
-                      Get Started
+                      Get Protected
                     </button>
                   </div>
                 ))}
@@ -330,9 +334,9 @@ const AiSocialMediaManagerPage: React.FC = () => {
           <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
-                <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Social Media?</h2>
+                <h2 className="text-4xl font-bold text-white mb-6">Ready to Secure Your Business?</h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Join thousands of businesses already using our AI-powered social media management platform.
+                  Join thousands of businesses already protected by our AI-powered cybersecurity platform.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -345,7 +349,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
                     href="mailto:kleber@ziontechgroup.com"
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                   >
-                    Schedule Demo
+                    Schedule Security Audit
                   </a>
                 </div>
               </div>
@@ -357,4 +361,4 @@ const AiSocialMediaManagerPage: React.FC = () => {
   );
 };
 
-export default AiSocialMediaManagerPage;
+export default AiCybersecurityProPage;
