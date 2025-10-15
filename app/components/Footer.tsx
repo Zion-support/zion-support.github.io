@@ -103,11 +103,14 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/ai-translator" className="text-gray-300 hover:text-white">AI Translator</Link></li>
               <li><Link to="/ai-audio-processor" className="text-gray-300 hover:text-white">AI Audio Processor</Link></li>
               <li><Link to="/ai-3d-model-generator" className="text-gray-300 hover:text-white">AI 3D Model Generator</Link></li>
-              <li><Link to="/ai-legal-assistant" className="text-gray-300 hover:text-white">AI Legal Assistant</Link></li>
-              <li><Link to="/ai-medical-assistant" className="text-gray-300 hover:text-white">AI Medical Assistant</Link></li>
-              <li><Link to="/ai-education-tutor" className="text-gray-300 hover:text-white">AI Education Tutor</Link></li>
-              <li><Link to="/ai-real-estate-analyzer" className="text-gray-300 hover:text-white">AI Real Estate Analyzer</Link></li>
-              <li><Link to="/ai-supply-chain-optimizer" className="text-gray-300 hover:text-white">AI Supply Chain Optimizer</Link></li>
+              <li><Link to="/zion-ai-legal-assistant" className="text-gray-300 hover:text-white">AI Legal Assistant</Link></li>
+              <li><Link to="/zion-ai-medical-assistant" className="text-gray-300 hover:text-white">AI Medical Assistant</Link></li>
+              <li><Link to="/zion-ai-education-tutor" className="text-gray-300 hover:text-white">AI Education Tutor</Link></li>
+              <li><Link to="/zion-ai-real-estate-analyzer" className="text-gray-300 hover:text-white">AI Real Estate Analyzer</Link></li>
+              <li><Link to="/zion-ai-supply-chain-optimizer" className="text-gray-300 hover:text-white">AI Supply Chain Optimizer</Link></li>
+              <li><Link to="/zion-ai-3d-model-generator" className="text-gray-300 hover:text-white">AI 3D Model Generator</Link></li>
+              <li><Link to="/zion-ai-audio-processor" className="text-gray-300 hover:text-white">AI Audio Processor</Link></li>
+              <li><Link to="/zion-ai-translator" className="text-gray-300 hover:text-white">AI Translator</Link></li>
             </ul>
           </div>
           

@@ -90,7 +90,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard', icon: Settings },
         { name: 'Smart CRM Automation', href: '/zion-smart-crm-automation', icon: Settings },
         { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager', icon: Settings },
-        { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker', icon: Settings }
+        { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker', icon: Settings },
+        { name: 'AI Legal Assistant', href: '/zion-ai-legal-assistant', icon: Settings },
+        { name: 'AI Medical Assistant', href: '/zion-ai-medical-assistant', icon: Settings },
+        { name: 'AI Education Tutor', href: '/zion-ai-education-tutor', icon: Settings },
+        { name: 'AI Real Estate Analyzer', href: '/zion-ai-real-estate-analyzer', icon: Settings },
+        { name: 'AI Supply Chain Optimizer', href: '/zion-ai-supply-chain-optimizer', icon: Settings },
+        { name: 'AI 3D Model Generator', href: '/zion-ai-3d-model-generator', icon: Settings },
+        { name: 'AI Audio Processor', href: '/zion-ai-audio-processor', icon: Settings },
+        { name: 'AI Translator', href: '/zion-ai-translator', icon: Settings }
       ]
     },
     {

@@ -90,11 +90,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Video Generator', href: '/ai-video-generator', icon: EyeIcon },
         { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: ChatBubbleLeftRightIcon },
         { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: EyeIcon },
-        { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: ShieldCheckIcon },
-        { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: UserGroupIcon },
-        { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: AcademicCapIcon },
-        { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer', icon: ChartBarIcon },
-        { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: CogIcon }
+        { name: 'AI Legal Assistant', href: '/zion-ai-legal-assistant', icon: ShieldCheckIcon },
+        { name: 'AI Medical Assistant', href: '/zion-ai-medical-assistant', icon: UserGroupIcon },
+        { name: 'AI Education Tutor', href: '/zion-ai-education-tutor', icon: AcademicCapIcon },
+        { name: 'AI Real Estate Analyzer', href: '/zion-ai-real-estate-analyzer', icon: ChartBarIcon },
+        { name: 'AI Supply Chain Optimizer', href: '/zion-ai-supply-chain-optimizer', icon: CogIcon },
+        { name: 'AI 3D Model Generator', href: '/zion-ai-3d-model-generator', icon: EyeIcon },
+        { name: 'AI Audio Processor', href: '/zion-ai-audio-processor', icon: ShareIcon },
+        { name: 'AI Translator', href: '/zion-ai-translator', icon: GlobeAltIcon }
       ]
     },
     {

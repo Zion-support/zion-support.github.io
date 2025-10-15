@@ -137,6 +137,16 @@ const ZionSmartCRMAutomationPage = lazy(() => import('./app/zion-smart-crm-autom
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
 const ZionSmartInventoryManagerPage = lazy(() => import('./app/zion-smart-inventory-manager/page'));
 
+// Additional Zion AI Services
+const ZionAILegalAssistantPage = lazy(() => import('./app/zion-ai-legal-assistant/page'));
+const ZionAIMedicalAssistantPage = lazy(() => import('./app/zion-ai-medical-assistant/page'));
+const ZionAIEducationTutorPage = lazy(() => import('./app/zion-ai-education-tutor/page'));
+const ZionAIRealEstateAnalyzerPage = lazy(() => import('./app/zion-ai-real-estate-analyzer/page'));
+const ZionAISupplyChainOptimizerPage = lazy(() => import('./app/zion-ai-supply-chain-optimizer/page'));
+const ZionAI3DModelGeneratorPage = lazy(() => import('./app/zion-ai-3d-model-generator/page'));
+const ZionAIAudioProcessorPage = lazy(() => import('./app/zion-ai-audio-processor/page'));
+const ZionAITranslatorPage = lazy(() => import('./app/zion-ai-translator/page'));
+
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -367,6 +377,16 @@ const App = memo(() => {
                     <Route path="/zion-smart-crm-automation" element={<ZionSmartCRMAutomationPage />} />
                     <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
                     <Route path="/zion-smart-inventory-manager" element={<ZionSmartInventoryManagerPage />} />
+                    
+                    {/* Additional Zion AI Services */}
+                    <Route path="/zion-ai-legal-assistant" element={<ZionAILegalAssistantPage />} />
+                    <Route path="/zion-ai-medical-assistant" element={<ZionAIMedicalAssistantPage />} />
+                    <Route path="/zion-ai-education-tutor" element={<ZionAIEducationTutorPage />} />
+                    <Route path="/zion-ai-real-estate-analyzer" element={<ZionAIRealEstateAnalyzerPage />} />
+                    <Route path="/zion-ai-supply-chain-optimizer" element={<ZionAISupplyChainOptimizerPage />} />
+                    <Route path="/zion-ai-3d-model-generator" element={<ZionAI3DModelGeneratorPage />} />
+                    <Route path="/zion-ai-audio-processor" element={<ZionAIAudioProcessorPage />} />
+                    <Route path="/zion-ai-translator" element={<ZionAITranslatorPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">

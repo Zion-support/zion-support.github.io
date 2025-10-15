@@ -17,7 +17,8 @@ import {
   UserGroupIcon,
   ShareIcon,
   CodeBracketIcon,
-  EyeIcon
+  EyeIcon,
+  HeartIcon
 } from '@heroicons/react/24/outline';
 
 const HomePage: React.FC = () => {
@@ -613,7 +614,85 @@ const HomePage: React.FC = () => {
                     <span>API integration</span>
                   </div>
                 </div>
-                <Link to="/zion-ai-translation-service"
+                <Link to="/zion-ai-translator"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI Legal Assistant */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 cyber-circuit">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <ShieldCheckIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-blue-400 font-medium neon-text">AI Legal</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                  AI Legal Assistant Pro
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Transform your legal practice with AI-powered contract analysis, legal research, and compliance monitoring.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-blue-400 neon-text">$299/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$499/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>99.2% contract analysis accuracy</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Legal research automation</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Compliance monitoring</span>
+                  </div>
+                </div>
+                <Link to="/zion-ai-legal-assistant"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI Medical Assistant */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/20 cyber-circuit">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <HeartIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-green-400 font-medium neon-text">AI Medical</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
+                  AI Medical Assistant Pro
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Revolutionize healthcare with AI-powered diagnostic support, medical records analysis, and predictive analytics.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-green-400 neon-text">$399/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$699/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>96.8% diagnostic accuracy</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>HIPAA compliant</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Predictive analytics</span>
+                  </div>
+                </div>
+                <Link to="/zion-ai-medical-assistant"
                   className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
