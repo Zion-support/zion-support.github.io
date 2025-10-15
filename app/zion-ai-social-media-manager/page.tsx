@@ -370,25 +370,3 @@ const ZionAiSocialMediaManagerPage: React.FC = () => {
 };
 
 export default ZionAiSocialMediaManagerPage;
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  ); };
-export default ZionAiSocialMediaManagerPage;

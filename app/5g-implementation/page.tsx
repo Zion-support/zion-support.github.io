@@ -1,23 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, 
   Shield, 
   Globe, 
   CheckCircle, 
-  ArrowRight, 
   Star, 
-  Phone, 
-  Mail, 
-  Play, 
   Settings, 
   Smartphone, 
   Cloud, 
   Cpu, 
   BarChart3, 
   Activity } from 'lucide-react';
-const FiveGImplementationPage: React.FC = () => { const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    setIsVisible(true); }, []);
+
+const FiveGImplementationPage: React.FC = () => {
   const features = [
     { icon: <Wifi className="w-6 h-6" />,
       title: "Ultra-Fast 5G Networks",
@@ -124,14 +119,14 @@ const FiveGImplementationPage: React.FC = () => { const [isVisible, setIsVisible
       content: "The 5G network has revolutionized our telemedicine capabilities. We can now provide remote care with unprecedented quality and speed.",
       rating: 5 }
   ];
-  const technologies = [
-    { name: "5G NR", description: "New Radio technology" },
-    { name: "Network Slicing", description: "Virtual network segments" },
-    { name: "Edge Computing", description: "Distributed processing" },
-    { name: "IoT Platforms", description: "Device management" },
-    { name: "AI/ML", description: "Intelligent optimization" },
-    { name: "Security", description: "Advanced protection" }
-  ];
+  // const technologies = [
+  //   { name: "5G NR", description: "New Radio technology" },
+  //   { name: "Network Slicing", description: "Virtual network segments" },
+  //   { name: "Edge Computing", description: "Distributed processing" },
+  //   { name: "IoT Platforms", description: "Device management" },
+  //   { name: "AI/ML", description: "Intelligent optimization" },
+  //   { name: "Security", description: "Advanced protection" }
+  // ];
   return (
     <>
       <Helmet>

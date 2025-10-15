@@ -155,9 +155,9 @@ function App() {
           <AnalyticsProvider>
             <PerformanceMonitor>
               <WebVitalsTracker>
-                <AccessibilityEnhancer>
-                  <CoreWebVitals>
-                    <Router>
+                <AccessibilityEnhancer />
+                <CoreWebVitals>
+                  <Router>
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                         <FuturisticBackground>
                           <Navigation onSidebarToggle={toggleSidebar} />
@@ -289,7 +289,6 @@ function App() {
                       </div>
                     </Router>
                   </CoreWebVitals>
-                </AccessibilityEnhancer>
               </WebVitalsTracker>
             </PerformanceMonitor>
           </AnalyticsProvider>
