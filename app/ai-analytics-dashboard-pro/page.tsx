@@ -1,392 +1,379 @@
-import React from 'react';';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
+import SEOHead from '../../components/SEOHead';
 import { 
-  CheckCircle,;
-  ArrowRight,;
-  BarChart3,;
-  TrendingUp,;
-  Target,;
-  Database,;
-  Cloud,;
-  ShoppingCart,;
-  DollarSign';';
+  BarChart3, 
+  TrendingUp, 
+  Users, 
+  DollarSign, 
+  Zap, 
+  Shield, 
+  Clock, 
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Brain,
+  Database,
+  Target,
+  BarChart,
+  PieChart,
+  LineChart,
+  Activity
 } from 'lucide-react';
-;
-const AIAnalyticsDashboardProPage: React.FC = () => {
-  const features = [';';
-    'AI-powered data analysis and insights',';
-    'Real-time dashboard customization',';
-    'Predictive analytics and forecasting',';
-    'Automated report generation',';
-    'Multi-source data integration',';
-    'Advanced visualization tools',';
-    'Custom KPI tracking and alerts',';
-    'White-label dashboard options',';
-    'Mobile-responsive design',';
-    'API access and custom integrations';
-  ];
-;
-  const benefits = [';';
-    'Make data-driven decisions 3x faster',';
-    'Identify trends and opportunities automatically',';
-    'Reduce reporting time by 90%',';
-    'Improve business performance by 35%',';
-    'Save 20+ hours weekly on data analysis',';
-    'Scale analytics with business growth';
-  ];
-;
-  const integrations = [';';
-    { name: 'Google Analytics', icon: <BarChart3 className="w-6 h-6 text-orange-400" /> },'";
-    { name: 'Salesforce', icon: <Cloud className="w-6 h-6 text-blue-400" /> },'";
-    { name: 'HubSpot', icon: <Target className="w-6 h-6 text-orange-400" /> },'";
-    { name: 'MySQL', icon: <Database className="w-6 h-6 text-blue-600" /> },'";
-    { name: 'PostgreSQL', icon: <Database className="w-6 h-6 text-indigo-400" /> },'";
-    { name: 'MongoDB', icon: <Database className="w-6 h-6 text-green-400" /> }
-  ];
-;
-  const pricingPlans = [;
-    {';';
-      name: 'Starter',';
-      price: '$79/mo',';
-      originalPrice: '$129/mo',';
-      description: 'Perfect for small businesses',;
-      features: [';';
-        'Up to 5 data sources',';
-        'Basic AI insights',';
-        'Standard dashboards',';
-        'Email support',';
-        'Basic visualizations',';
-        'Monthly reports';
-      ],;
-      popular: false;
-    },;
-    {';';
-      name: 'Professional',';
-      price: '$149/mo',';
-      originalPrice: '$249/mo',';
-      description: 'Ideal for growing businesses',;
-      features: [';';
-        'Up to 25 data sources',';
-        'Advanced AI analytics',';
-        'Custom dashboards',';
-        'Priority support',';
-        'Advanced visualizations',';
-        'Real-time reports',';
-        'Predictive analytics',';
-        'API access';
-      ],;
-      popular: true;
-    },;
-    {';';
-      name: 'Enterprise',';
-      price: '$299/mo',';
-      originalPrice: '$499/mo',';
-      description: 'For large organizations',;
-      features: [';';
-        'Unlimited data sources',';
-        'Full AI suite',';
-        'White-label options',';
-        'Dedicated account manager',';
-        'Custom integrations',';
-        'Advanced security',';
-        'SLA guarantees',';
-        'On-premise deployment';
-      ],;
-      popular: false;
+
+const AIAnalyticsDashboardPro: React.FC = () => {
+  const features = [
+    {
+      icon: <Brain className="w-6 h-6" />,
+      title: 'AI-Powered Insights',
+      description: 'Advanced machine learning algorithms analyze your data to provide actionable insights and predictions.'
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: 'Real-time Analytics',
+      description: 'Monitor your business performance with live dashboards that update in real-time.'
+    },
+    {
+      icon: <Target className="w-6 h-6" />,
+      title: 'Custom Dashboards',
+      description: 'Create personalized dashboards tailored to your specific business needs and KPIs.'
+    },
+    {
+      icon: <Database className="w-6 h-6" />,
+      title: 'Data Integration',
+      description: 'Connect with 100+ data sources including CRM, ERP, social media, and more.'
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with SOC 2 compliance and advanced encryption.'
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: 'Automated Reports',
+      description: 'Generate and schedule automated reports to keep stakeholders informed.'
     }
   ];
-;
-  const useCases = [;
-    {';';
-      title: 'E-commerce',';
-      description: 'Track sales, customer behavior, and inventory analytics',";";
-      icon: <ShoppingCart className="w-6 h-6 text-blue-400" />,';';
-      results: '40% increase in conversion rates';
-    },;
-    {';';
-      title: 'SaaS',';
-      description: 'Monitor user engagement, churn, and product usage',";";
-      icon: <Cloud className="w-6 h-6 text-green-400" />,';';
-      results: '50% reduction in churn rate';
-    },;
-    {';';
-      title: 'Marketing',';
-      description: 'Analyze campaign performance and ROI across channels',";";
-      icon: <Target className="w-6 h-6 text-purple-400" />,';';
-      results: '60% improvement in campaign ROI';
-    },;
-    {';';
-      title: 'Finance',';
-      description: 'Track financial metrics and cash flow analytics',";";
-      icon: <DollarSign className="w-6 h-6 text-green-600" />,';';
-      results: '35% better financial forecasting';
+
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$99',
+      period: '/month',
+      description: 'Perfect for small businesses',
+      features: [
+        'Up to 5 dashboards',
+        '10 data sources',
+        'Basic AI insights',
+        'Email support',
+        '1 user account',
+        '30-day data retention'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$199',
+      period: '/month',
+      description: 'Ideal for growing companies',
+      features: [
+        'Unlimited dashboards',
+        '50 data sources',
+        'Advanced AI insights',
+        'Priority support',
+        'Up to 10 user accounts',
+        '1-year data retention',
+        'Custom integrations',
+        'API access'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$499',
+      period: '/month',
+      description: 'For large organizations',
+      features: [
+        'Everything in Professional',
+        'Unlimited data sources',
+        'Premium AI insights',
+        '24/7 dedicated support',
+        'Unlimited user accounts',
+        'Unlimited data retention',
+        'White-label options',
+        'Custom development',
+        'SLA guarantee'
+      ],
+      popular: false
     }
   ];
-;
-  const stats = [';';
-    { number: '3x', label: 'Faster Decisions' },';
-    { number: '90%', label: 'Less Reporting Time' },';
-    { number: '35%', label: 'Better Performance' },';
-    { number: '20+', label: 'Hours Saved Weekly' }
+
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      role: 'CEO',
+      content: 'AI Analytics Dashboard Pro has transformed how we understand our business data. The AI insights are incredibly accurate and actionable.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      company: 'DataFlow Solutions',
+      role: 'CTO',
+      content: 'The real-time analytics capabilities are outstanding. We can now make data-driven decisions instantly.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      company: 'GrowthMetrics',
+      role: 'Head of Analytics',
+      content: 'The custom dashboard builder is intuitive and powerful. We created exactly what we needed in minutes.',
+      rating: 5
+    }
   ];
-;
+
   return (
-    <>;
-      <Helmet>;
-        <title>AI Analytics Dashboard Pro - Intelligent Business Analytics | Zion Tech Group</title>";";
-        <meta name="description" content="Transform your business with AI-powered analytics. Make decisions 3x faster, reduce reporting time by 90%, and improve performance by 35% with our intelligent analytics platform." />";
-        <meta name="keywords" content="AI analytics, business intelligence, data visualization, predictive analytics, dashboard, reporting, data analysis" />";
-        <meta property="og:title" content="AI Analytics Dashboard Pro - Intelligent Business Analytics" />";
-        <meta property="og:description" content="Transform your business with AI-powered analytics. Make decisions 3x faster and reduce reporting time by 90%." />";
-        <meta property="og:url" content="https://ziontechgroup.com/ai-analytics-dashboard-pro" />";
-        <link rel="canonical" href="https://ziontechgroup.com/ai-analytics-dashboard-pro" />;
-      </Helmet>;
-      {/* Hero Section */}";";
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 overflow-hidden">";
-        <div className="absolute inset-0 overflow-hidden">";
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl animate-pulse"></div>";
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>;
-        </div>;
-";";
-        <div className="container mx-auto px-4 relative z-10">";
-          <div className="text-center max-w-4xl mx-auto">";
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
-              AI Analytics Dashboard";";
-              <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">';';
-                {' '}Pro;
-              </span>;
-            </h1>";";
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">;
-              Transform your business with AI-powered analytics that make decisions 3x faster,;
-              reduce reporting time by 90%, and improve performance by 35%.;
-            </p>";";
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">;
-              <Link";";
-                to="/contact"";
-                className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-emerald-500/25 flex items-center group";
-              >;
-                Start Free Trial";";
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />;
-              </Link>;
-              <Link";";
-                to="#pricing"";
-                className="border-2 border-white/30 hover:border-emerald-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center group";
-              >;
-                View Pricing";";
-                <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />;
-              </Link>;
-            </div>;
-            {/* Stats */}";";
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">;
-              {stats.map((stat, index) => (";";
-                <div key={index} className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm">";
-                  <div className="text-3xl font-bold text-emerald-400 mb-2">{stat.number}</div>";
-                  <div className="text-gray-300 text-sm">{stat.label}</div>;
-                </div>;
-              ))}
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-      {/* Features Section */}";";
-      <section className="py-20 bg-slate-800">";
-        <div className="container mx-auto px-4">";
-          <div className="text-center mb-16">";
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-              Advanced AI Features;
-            </h2>";";
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Our AI-powered analytics platform includes everything you need to transform;
-              your data into actionable business insights.;
-            </p>;
-          </div>;
-";";
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {features.map((feature, index) => (";";
-              <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">";
-                <div className="flex items-center mb-4">";
-                  <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />";
-                  <h3 className="text-lg font-semibold text-white group-hover:text-emerald-300 transition-colors">;
-                    {feature}
-                  </h3>;
-                </div>;
-              </div>;
+    <>
+      <SEOHead
+        title="AI Analytics Dashboard Pro - Advanced Business Intelligence | Zion Tech Group"
+        description="Transform your business with AI-powered analytics dashboard. Real-time insights, predictive analytics, and custom dashboards. Starting at $99/month."
+        keywords="AI analytics, business intelligence, data visualization, real-time analytics, predictive analytics, dashboard, business insights"
+      />
+      
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900">
+        <div className="absolute inset-0 animated-bg cyber-grid">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 py-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-purple-600/20 text-purple-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <Star className="w-4 h-4" />
+                #1 AI Analytics Platform
+              </div>
+              <h1 className="text-5xl lg:text-6xl font-bold mb-6 futuristic-text">
+                AI Analytics Dashboard Pro
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                Transform your business data into actionable insights with our advanced AI-powered analytics platform. 
+                Get real-time dashboards, predictive analytics, and intelligent recommendations.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <a
+                  href="#pricing"
+                  className="group bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 hover-glow flex items-center justify-center gap-2"
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a
+                  href="#demo"
+                  className="group glass-morphism text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 hover-glow flex items-center justify-center gap-2"
+                >
+                  View Demo
+                  <Activity className="w-5 h-5" />
+                </a>
+              </div>
+              <div className="flex items-center gap-6 text-sm text-gray-400">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Free 14-day trial
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  No credit card required
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Cancel anytime
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="glass-morphism p-8 rounded-2xl">
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 rounded-lg">
+                    <div className="flex items-center justify-between mb-2">
+                      <TrendingUp className="w-6 h-6 text-white" />
+                      <span className="text-white text-sm">+24.5%</span>
+                    </div>
+                    <p className="text-white text-sm">Revenue Growth</p>
+                  </div>
+                  <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-4 rounded-lg">
+                    <div className="flex items-center justify-between mb-2">
+                      <Users className="w-6 h-6 text-white" />
+                      <span className="text-white text-sm">1,234</span>
+                    </div>
+                    <p className="text-white text-sm">Active Users</p>
+                  </div>
+                  <div className="bg-gradient-to-r from-green-600 to-emerald-600 p-4 rounded-lg">
+                    <div className="flex items-center justify-between mb-2">
+                      <DollarSign className="w-6 h-6 text-white" />
+                      <span className="text-white text-sm">$45.2K</span>
+                    </div>
+                    <p className="text-white text-sm">Monthly Revenue</p>
+                  </div>
+                  <div className="bg-gradient-to-r from-orange-600 to-red-600 p-4 rounded-lg">
+                    <div className="flex items-center justify-between mb-2">
+                      <Target className="w-6 h-6 text-white" />
+                      <span className="text-white text-sm">89%</span>
+                    </div>
+                    <p className="text-white text-sm">Goal Achievement</p>
+                  </div>
+                </div>
+                <div className="h-32 bg-gradient-to-r from-slate-800 to-slate-700 rounded-lg flex items-center justify-center">
+                  <BarChart className="w-12 h-12 text-purple-400" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6 neon-text">
+              Powerful Features for Modern Analytics
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Everything you need to transform your data into actionable business insights
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="glass-morphism p-8 rounded-xl hover-glow group">
+                <div className="text-purple-400 mb-4 group-hover:scale-110 transition-transform">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
             ))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Integrations Section */}";";
-      <section className="py-20 bg-slate-900">";
-        <div className="container mx-auto px-4">";
-          <div className="text-center mb-16">";
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-              Seamless Integrations;
-            </h2>";";
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Connect with your existing data sources and tools for a unified analytics experience.;
-            </p>;
-          </div>;
-";";
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {integrations.map((integration, index) => (";";
-              <div key={index} className="bg-slate-800/50 rounded-xl p-6 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 group">";
-                <div className="flex items-center justify-center mb-4">";
-                  <div className="group-hover:scale-110 transition-transform">;
-                    {integration.icon}
-                  </div>;
-                </div>";";
-                <h3 className="text-xl font-semibold text-white text-center group-hover:text-emerald-300 transition-colors">;
-                  {integration.name}
-                </h3>;
-              </div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Benefits Section */}";";
-      <section className="py-20 bg-slate-800">";
-        <div className="container mx-auto px-4">";
-          <div className="text-center mb-16">";
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-              Proven Results;
-            </h2>";";
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Join thousands of businesses that have transformed their analytics with our AI platform.;
-            </p>;
-          </div>;
-";";
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {benefits.map((benefit, index) => (";";
-              <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">";
-                <div className="flex items-center mb-4">";
-                  <TrendingUp className="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" />";
-                  <h3 className="text-lg font-semibold text-white group-hover:text-emerald-300 transition-colors">;
-                    {benefit}
-                  </h3>;
-                </div>;
-              </div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Use Cases Section */}";";
-      <section className="py-20 bg-slate-900">";
-        <div className="container mx-auto px-4">";
-          <div className="text-center mb-16">";
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-              Perfect for Every Industry;
-            </h2>";";
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Our AI analytics platform works across all industries and business types.;
-            </p>;
-          </div>;
-";";
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {useCases.map((useCase, index) => (";";
-              <div key={index} className="bg-slate-800/50 rounded-xl p-6 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 group">";
-                <div className="mb-4 group-hover:scale-110 transition-transform">;
-                  {useCase.icon}
-                </div>";";
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-emerald-300 transition-colors">;
-                  {useCase.title}
-                </h3>";";
-                <p className="text-gray-300 mb-4">;
-                  {useCase.description}
-                </p>";";
-                <div className="text-sm text-emerald-400 font-medium">;
-                  {useCase.results}
-                </div>;
-              </div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Pricing Section */}";";
-      <section id="pricing" className="py-20 bg-slate-800">";
-        <div className="container mx-auto px-4">";
-          <div className="text-center mb-16">";
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-              Simple, Transparent Pricing;
-            </h2>";";
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Choose the perfect plan for your business. All plans include 14-day free trial and no setup fees.;
-            </p>;
-          </div>;
-";";
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">;
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 bg-slate-900/50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6 futuristic-text">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your business needs. All plans include our core features.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${';';
-                plan.popular ? 'ring-2 ring-emerald-500 bg-slate-700/50' : '';
-              }`}>;
-                {plan.popular && (";";
-                  <div className="text-center mb-4">";
-                    <span className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">;
-                      Most Popular;
-                    </span>;
-                  </div>;
+              <div key={index} className={`glass-morphism p-8 rounded-xl hover-glow relative ${
+                plan.popular ? 'ring-2 ring-purple-500' : ''
+              }`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-bold">
+                      Most Popular
+                    </div>
+                  </div>
                 )}
-                ";";
-                <div className="text-center mb-8">";
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>";
-                  <div className="flex items-center justify-center space-x-2 mb-2">";
-                    <span className="text-4xl font-bold text-emerald-400">{plan.price}</span>";
-                    <span className="text-lg text-gray-400 line-through">{plan.originalPrice}</span>;
-                  </div>";";
-                  <p className="text-gray-300">{plan.description}</p>;
-                </div>;
-";";
-                <ul className="space-y-4 mb-8">;
-                  {plan.features.map((feature, featureIndex) => (";";
-                    <li key={featureIndex} className="flex items-center text-gray-300">";
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
-                      {feature}
-                    </li>;
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
+                  <p className="text-gray-400 mb-4">{plan.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-2">{plan.period}</span>
+                  </div>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
                   ))}
-                </ul>;
-                <Link";";
-                  to="/contact";
-                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
-                    plan.popular';';
-                      ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white'';
-                      : 'border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white';
+                </ul>
+                <a
+                  href="/contact"
+                  className={`w-full py-3 px-6 rounded-lg font-bold transition-all duration-300 flex items-center justify-center gap-2 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white hover-glow'
+                      : 'glass-morphism text-white hover:bg-slate-700/50'
                   }`}
-                >;
-                  Start Free Trial;
-                </Link>;
-              </div>;
+                >
+                  Get Started
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
             ))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}";";
-      <section className="py-20 bg-gradient-to-r from-emerald-600 to-cyan-600">";
-        <div className="container mx-auto px-4 text-center">";
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-            Ready to Transform Your Analytics?;
-          </h2>";";
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">;
-            Join thousands of businesses using our AI analytics platform to make better decisions,;
-            save time, and improve performance.;
-          </p>";";
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-            <Link";";
-              to="/contact"";
-              className="bg-white text-emerald-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg";
-            >;
-              Start Free Trial;
-            </Link>;
-            <Link";";
-              to="/demo"";
-              className="border-2 border-white text-white hover:bg-white hover:text-emerald-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105";
-            >;
-              Schedule Demo;
-            </Link>;
-          </div>;
-        </div>;
-      </section>;
-    </>;
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6 neon-text">
+              What Our Customers Say
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Join thousands of businesses that trust AI Analytics Dashboard Pro
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="glass-morphism p-8 rounded-xl hover-glow">
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                <div>
+                  <p className="font-bold text-white">{testimonial.name}</p>
+                  <p className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-900/50 to-cyan-900/50">
+        <div className="max-w-4xl mx-auto text-center px-4">
+          <h2 className="text-4xl font-bold mb-6 futuristic-text">
+            Ready to Transform Your Analytics?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Start your free trial today and see the power of AI-driven insights
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="group bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 hover-glow flex items-center justify-center gap-2"
+            >
+              Start Free Trial
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
+            <a
+              href="tel:+13024640950"
+              className="group glass-morphism text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 hover-glow flex items-center justify-center gap-2"
+            >
+              Call: +1 302 464 0950
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
-;
-export default AIAnalyticsDashboardProPage;
-'";'";
+
+export default AIAnalyticsDashboardPro;
