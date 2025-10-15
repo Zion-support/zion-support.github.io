@@ -4,12 +4,22 @@ import { Zap, Star, Users, Award, Clock } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-advanced">
+      {/* Matrix Rain Background */}
+      <div className="matrix-rain-bg"></div>
+      
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/4 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse cyber-pulse"></div>
+        <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000 cyber-pulse"></div>
+        <div className="absolute bottom-20 left-1/4 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000 cyber-pulse"></div>
+        
+        {/* Holographic Scan Lines */}
+        <div className="absolute inset-0 hologram-scan"></div>
+        
+        {/* Data Flow Effects */}
+        <div className="absolute top-1/4 left-0 w-full data-flow"></div>
+        <div className="absolute top-3/4 left-0 w-full data-flow" style={{animationDelay: '1s'}}></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -20,11 +30,11 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text-advanced">
               Transform Your Business
             </span>
             <br />
-            <span className="text-white">With AI & IT Solutions</span>
+            <span className="text-white neon-flicker">With AI & IT Solutions</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
