@@ -1,5 +1,5 @@
 export const advancedCaching = {
-  setCache: (key: string, value: unknown;, ttl: number = 3 6 0 0) => {
+  setCache: (key: string, value: unknown, ttl: number = 3600) => {
     const item = {
       value,
       timestamp: Date.now(),
@@ -9,27 +9,29 @@ export const advancedCaching = {
   },
   
   getCache: (key: string) => {
-    const item = localStorage.getItem(key)
-    if (!item) return null
-    const parsed = JSON.parse(item)
-    const now = Date.now()
+    const item = localStorage.getItem(key);
+    if (!item) return null;
+    
+    const parsed = JSON.parse(item);
+    const now = Date.now();
     if (now - parsed.timestamp > parsed.ttl) {
-      localStorage.removeItem(key)
-      return null
+      localStorage.removeItem(key);
+      return null;
     }
     
-    return parsed.value
+    return parsed.value;
   },
-  clear Cache: (pattern?: string) => {
+  
+  clearCache: (pattern?: string) => {
     if (pattern) {
-      const keys = Object.keys(localStorage)
+      const keys = Object.keys(localStorage);
       keys.forEach(key => {
         if (key.includes(pattern)) {
-          localStorage.removeItem(key)
+          localStorage.removeItem(key);
         }
-      })
+      });
     } else {
-      localStorage.clear()
+      localStorage.clear();
     }
   }
-}
+};
