@@ -469,7 +469,7 @@ const AICodeAssistantPage = () => {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-6 italic leading-relaxed">"{testimonial.content}"</p>
+                <p className="text-gray-300 mb-6 italic leading-relaxed">&ldquo;{testimonial.content}&rdquo;</p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm mr-4">
                     {testimonial.avatar}

@@ -3,9 +3,25 @@ import { Helmet } from "react-helmet-async";
 import { ArrowRight, Brain, CheckCircle, Mail, Phone, Play, Shield, Star, Users } from 'lucide-react';
 
 const AIProjectManagerProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <>
-      { /* Animated Background */ }
+      <Helmet>
+        <title>AI Project Manager Pro - Zion Tech Group | Advanced AI-Powered Project Management Platform</title>
+        <meta name="description" content="Revolutionary AI-powered project management platform with intelligent planning, automated scheduling, and advanced analytics. Transform your project management today!" />
+        <meta name="keywords" content="AI project management, project planning, automated scheduling, project analytics, team collaboration, project optimization" />
+        <meta property="og:title" content="AI Project Manager Pro - Zion Tech Group" />
+        <meta property="og:description" content="Transform project management with AI-powered intelligent planning and automated scheduling systems." />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>

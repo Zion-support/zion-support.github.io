@@ -3,9 +3,25 @@ import { Helmet } from "react-helmet-async";
 import { ArrowRight, Brain, Camera, CheckCircle, Hash, Hashtag, Image, Mail, MessageCircle, Phone, Play, Shield, Star } from 'lucide-react';
 
 const AISocialMediaManagerProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <>
-      { /* Animated Background */ }
+      <Helmet>
+        <title>AI Social Media Manager Pro - Zion Tech Group | Advanced AI-Powered Social Media Management Platform</title>
+        <meta name="description" content="Revolutionary AI-powered social media management platform with intelligent content generation, automated posting, and advanced analytics. Transform your social media presence today!" />
+        <meta name="keywords" content="AI social media, social media management, content generation, social media automation, social media analytics, AI marketing" />
+        <meta property="og:title" content="AI Social Media Manager Pro - Zion Tech Group" />
+        <meta property="og:description" content="Transform social media management with AI-powered content generation and intelligent automation." />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>

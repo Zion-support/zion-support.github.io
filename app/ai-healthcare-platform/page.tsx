@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { AlertTriangle, BarChart3, Brain, Camera, CheckCircle, FileText, Heart, Microscope, Pill, Shield, Star, Stethoscope, Syringe, Thermometer, Users, Video, X } from 'lucide-react';
+import { AlertTriangle, BarChart3, Brain, CheckCircle, FileText, Heart, Microscope, Pill, Shield, Star, Stethoscope, Syringe, Thermometer, Users } from 'lucide-react';
 const AiHealthcarePlatformPage: React.FC = () => { const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     setIsVisible(true); }, []);

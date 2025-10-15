@@ -3,9 +3,25 @@ import { Helmet } from "react-helmet-async";
 import { ArrowRight, Brain, Briefcase, CheckCircle, FileText, Mail, Mail as MailIcon, Monitor, Phone, Play, Share2, Shield, Star } from 'lucide-react';
 
 const AIMarketingAutomationProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <>
-      { /* Animated Background */ }
+      <Helmet>
+        <title>AI Marketing Automation Pro - Zion Tech Group | Advanced AI-Powered Marketing Platform</title>
+        <meta name="description" content="Revolutionary AI-powered marketing automation platform with intelligent campaign management, personalized content, and advanced analytics. Transform your marketing today!" />
+        <meta name="keywords" content="AI marketing, marketing automation, campaign management, personalized marketing, marketing analytics, AI advertising" />
+        <meta property="og:title" content="AI Marketing Automation Pro - Zion Tech Group" />
+        <meta property="og:description" content="Transform marketing with AI-powered automation and intelligent campaign management systems." />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>

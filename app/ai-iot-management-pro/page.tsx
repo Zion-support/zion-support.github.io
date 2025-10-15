@@ -3,9 +3,25 @@ import { Helmet } from "react-helmet-async";
 import { ArrowRight, Brain, Building, Camera, Car, CheckCircle, Home, Mail, Phone, Play, Star, Thermometer, Wind } from 'lucide-react';
 
 const AIIoTManagementProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <>
-      { /* Animated Background */ }
+      <Helmet>
+        <title>AI IoT Management Pro - Zion Tech Group | Advanced AI-Powered IoT Management Platform</title>
+        <meta name="description" content="Revolutionary AI-powered IoT management platform with intelligent device monitoring, predictive maintenance, and advanced analytics. Transform your IoT infrastructure today!" />
+        <meta name="keywords" content="AI IoT, IoT management, smart devices, predictive maintenance, IoT analytics, connected devices" />
+        <meta property="og:title" content="AI IoT Management Pro - Zion Tech Group" />
+        <meta property="og:description" content="Transform IoT management with AI-powered intelligent monitoring and predictive maintenance systems." />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>

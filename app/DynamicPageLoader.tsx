@@ -10,7 +10,7 @@ const DynamicPageLoader: React.FC<{ pagePath: string }> = ({ pagePath }) => { //
   const PageComponent = React.useMemo(() => {
     try {
       return lazy(() => import(`./${pagePath }`));
-    } catch (error) { return lazy(() => import('./404')); }
+    } catch { return lazy(() => import('./404')); }
   }, [pagePath]);
   return (
     <Suspense fallback={ <PageLoader /> }>

@@ -60,7 +60,7 @@ import { ArrowRight, CheckCircle, Cpu, Globe, Shield, Smartphone, Wifi, Zap } fr
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Embrace 5G Technology?</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Let's discuss how our 5G solutions can transform your business connectivity and enable new possibilities.
+                Let&apos;s discuss how our 5G solutions can transform your business connectivity and enable new possibilities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 

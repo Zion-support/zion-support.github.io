@@ -3,9 +3,25 @@ import { Helmet } from "react-helmet-async";
 import { ArrowRight, Award, Award as AwardIcon, AwardIcon, Book, BookOpen, Brain, Briefcase, CheckCircle, Download, Download as DownloadIcon, DownloadIcon, GraduationCap, Mail, Monitor, Phone, Play, Shield, Star, Target, Target as TargetIcon, TargetIcon, Users, Users as UsersIcon, UsersIcon } from 'lucide-react';
 
 const AIEducationSolutionsProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <>
-      { /* Animated Background */ }
+      <Helmet>
+        <title>AI Education Solutions Pro - Zion Tech Group | Advanced AI-Powered Learning Platform</title>
+        <meta name="description" content="Revolutionary AI-powered education platform with personalized learning, intelligent tutoring, and advanced analytics. Transform your educational experience today!" />
+        <meta name="keywords" content="AI education, personalized learning, intelligent tutoring, education technology, learning analytics, educational AI" />
+        <meta property="og:title" content="AI Education Solutions Pro - Zion Tech Group" />
+        <meta property="og:description" content="Transform education with AI-powered personalized learning and intelligent tutoring systems." />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -285,4 +301,4 @@ const AIEducationSolutionsProPage = () => {
     </>
   );
 };
-export default AiEducationSolutionsProPage;
+export default AIEducationSolutionsProPage;
