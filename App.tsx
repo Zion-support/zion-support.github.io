@@ -106,6 +106,12 @@ const AIDataVisualizationPage = React.lazy(() => import("./app/ai-data-visualiza
 const AIDevOpsAutomationPage = React.lazy(() => import("./app/ai-devops-automation/page"));
 const AIDocumentIntelligencePage = React.lazy(() => import("./app/ai-document-intelligence/page"));
 
+// New Innovative AI Services
+const ZionAICybersecuritySuitePage = React.lazy(() => import("./app/zion-ai-cybersecurity-suite/page"));
+const ZionAIBlockchainAnalyzerPage = React.lazy(() => import("./app/zion-ai-blockchain-analyzer/page"));
+const ZionAIHealthcareAssistantPage = React.lazy(() => import("./app/zion-ai-healthcare-assistant/page"));
+const ZionAIEducationPlatformPage = React.lazy(() => import("./app/zion-ai-education-platform/page"));
+
 // Additional IT Services Pages
 const CloudConsultingPage = React.lazy(() => import("./app/cloud-consulting/page"));
 const DataCenterSolutionsPage = React.lazy(() => import("./app/data-center-solutions/page"));
@@ -257,6 +263,12 @@ function App() {
                                 <Route path="/ai-data-visualization" element={<AIDataVisualizationPage />} />
                                 <Route path="/ai-devops-automation" element={<AIDevOpsAutomationPage />} />
                                 <Route path="/ai-document-intelligence" element={<AIDocumentIntelligencePage />} />
+
+                                {/* New Innovative AI Services Routes */}
+                                <Route path="/zion-ai-cybersecurity-suite" element={<ZionAICybersecuritySuitePage />} />
+                                <Route path="/zion-ai-blockchain-analyzer" element={<ZionAIBlockchainAnalyzerPage />} />
+                                <Route path="/zion-ai-healthcare-assistant" element={<ZionAIHealthcareAssistantPage />} />
+                                <Route path="/zion-ai-education-platform" element={<ZionAIEducationPlatformPage />} />
 
                                 {/* Additional IT Services Routes */}
                                 <Route path="/cloud-consulting" element={<CloudConsultingPage />} />

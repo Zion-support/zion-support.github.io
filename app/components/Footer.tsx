@@ -35,6 +35,10 @@ const Footer: React.FC = () => {
       { name: 'Zion AI HR Assistant Pro', href: '/zion-ai-hr-assistant' },
       { name: 'Zion AI Backup Manager', href: '/zion-ai-backup-manager' },
       { name: 'Zion AI CRM Pro', href: '/zion-ai-crm-pro' },
+      { name: 'Zion AI Cybersecurity Suite', href: '/zion-ai-cybersecurity-suite' },
+      { name: 'Zion AI Blockchain Analyzer', href: '/zion-ai-blockchain-analyzer' },
+      { name: 'Zion AI Healthcare Assistant', href: '/zion-ai-healthcare-assistant' },
+      { name: 'Zion AI Education Platform', href: '/zion-ai-education-platform' },
     ],
     company: [
       { name: 'About Us', href: '/about' },

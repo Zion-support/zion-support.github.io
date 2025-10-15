@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, Heart, GraduationCap } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -275,6 +275,50 @@ const HomePage = () => {
       category: "Data Protection",
       marketPrice: "$59-120/month",
       benefits: ["Auto backup scheduling", "Version control", "Disaster recovery", "Data encryption"]
+    },
+    {
+      name: "Zion AI Cybersecurity Suite",
+      description: "Advanced AI-powered cybersecurity platform with threat detection, automated incident response, and compliance monitoring. Protects against 99.9% of cyber threats.",
+      price: "From $199/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/zion-ai-cybersecurity-suite",
+      featured: true,
+      category: "Cybersecurity",
+      marketPrice: "$499-999/month",
+      benefits: ["AI threat detection", "Automated response", "Compliance monitoring", "24/7 protection"]
+    },
+    {
+      name: "Zion AI Blockchain Analyzer",
+      description: "Comprehensive blockchain analytics platform with portfolio management, smart contract auditing, and DeFi monitoring across 50+ networks.",
+      price: "From $99/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-ai-blockchain-analyzer",
+      featured: true,
+      category: "Blockchain",
+      marketPrice: "$299-599/month",
+      benefits: ["Multi-chain support", "Portfolio optimization", "Smart contract auditing", "DeFi monitoring"]
+    },
+    {
+      name: "Zion AI Healthcare Assistant",
+      description: "Revolutionary AI-powered healthcare platform with medical diagnosis, health monitoring, and patient management. 99.5% diagnostic accuracy.",
+      price: "From $299/month",
+      icon: <Heart className="w-6 h-6" />,
+      link: "/zion-ai-healthcare-assistant",
+      featured: true,
+      category: "Healthcare",
+      marketPrice: "$799-1499/month",
+      benefits: ["Medical diagnosis", "Health monitoring", "Image analysis", "Patient management"]
+    },
+    {
+      name: "Zion AI Education Platform",
+      description: "Revolutionary AI-powered education platform with personalized learning paths, virtual classrooms, and automated assessment. 95% student engagement improvement.",
+      price: "From $49/month",
+      icon: <GraduationCap className="w-6 h-6" />,
+      link: "/zion-ai-education-platform",
+      featured: true,
+      category: "Education",
+      marketPrice: "$149-599/month",
+      benefits: ["Personalized learning", "Virtual classrooms", "Auto assessment", "Content creation"]
     }
   ];
 

@@ -25,13 +25,19 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </Link>
-              <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-sm border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <div className="p-4 space-y-2">
-                  <Link to="/ai-analytics" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">AI Analytics</Link>
-                  <Link to="/ai-content-generation" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Content Generation</Link>
-                  <Link to="/ai-customer-support" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Customer Support</Link>
-                  <Link to="/ai-cybersecurity" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">AI Cybersecurity</Link>
-                  <Link to="/ai-voice-assistant" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Voice Assistant</Link>
+                  <div className="grid grid-cols-2 gap-2">
+                    <Link to="/ai-analytics" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">AI Analytics</Link>
+                    <Link to="/ai-content-generation" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Content Generation</Link>
+                    <Link to="/ai-customer-support" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Customer Support</Link>
+                    <Link to="/ai-cybersecurity" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">AI Cybersecurity</Link>
+                    <Link to="/ai-voice-assistant" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Voice Assistant</Link>
+                    <Link to="/zion-ai-cybersecurity-suite" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Cybersecurity Suite</Link>
+                    <Link to="/zion-ai-blockchain-analyzer" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Blockchain Analyzer</Link>
+                    <Link to="/zion-ai-healthcare-assistant" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Healthcare Assistant</Link>
+                    <Link to="/zion-ai-education-platform" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Education Platform</Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -61,13 +67,19 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </Link>
-              <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-sm border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <div className="p-4 space-y-2">
-                  <Link to="/zion-ai-video-generator" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">AI Video Generator</Link>
-                  <Link to="/zion-ai-crm-pro" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">AI CRM Pro</Link>
-                  <Link to="/zion-ai-marketing-automation" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Marketing Automation</Link>
-                  <Link to="/zion-ai-social-media-manager" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Social Media Manager</Link>
-                  <Link to="/zion-ai-meeting-assistant" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Meeting Assistant</Link>
+                  <div className="grid grid-cols-2 gap-2">
+                    <Link to="/zion-ai-video-generator" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">AI Video Generator</Link>
+                    <Link to="/zion-ai-crm-pro" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">AI CRM Pro</Link>
+                    <Link to="/zion-ai-marketing-automation" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Marketing Automation</Link>
+                    <Link to="/zion-ai-social-media-manager" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Social Media Manager</Link>
+                    <Link to="/zion-ai-meeting-assistant" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Meeting Assistant</Link>
+                    <Link to="/zion-ai-cybersecurity-suite" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Cybersecurity Suite</Link>
+                    <Link to="/zion-ai-blockchain-analyzer" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Blockchain Analyzer</Link>
+                    <Link to="/zion-ai-healthcare-assistant" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Healthcare Assistant</Link>
+                    <Link to="/zion-ai-education-platform" className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded transition-colors">Education Platform</Link>
+                  </div>
                 </div>
               </div>
             </div>
