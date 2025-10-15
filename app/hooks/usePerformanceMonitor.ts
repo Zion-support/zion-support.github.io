@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import { useState, useEffect } from 'react';
+
+export function usePerformanceMonitor() {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    /// Comment
+  }, []);
+  
+  return { state, setState };
+}
+=======
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 interface PerformanceData {
@@ -55,3 +68,4 @@ export const usePerformanceMonitor = () => {
 
   return performanceData;
 };
+>>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624

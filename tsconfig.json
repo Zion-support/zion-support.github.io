@@ -24,9 +24,9 @@
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": [
-    "node_modules", 
-    "dist", 
-    ".next", 
+    "node_modules",
+    "dist",
+    ".next",
     "out",
     "app-broken/**",
     "app-disabled/**",
