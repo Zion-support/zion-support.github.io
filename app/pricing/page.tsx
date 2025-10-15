@@ -5,71 +5,168 @@ import { Check, X, Star, ArrowRight } from 'lucide-react';
 const PricingPage: React.FC = () => {
   const [isAnnual, setIsAnnual] = useState(true);
 
-  const pricingPlans = [
+  const serviceCategories = [
     {
-      name: "Starter",
-      description: "Perfect for small businesses and startups",
-      monthlyPrice: 99,
-      annualPrice: 79,
-      features: [
-        "Up to 5 team members",
-        "Basic AI tools access",
-        "Email support",
-        "Standard security",
-        "Basic analytics",
-        "5GB storage"
-      ],
-      limitations: [
-        "Limited AI requests",
-        "Basic customization",
-        "Standard templates"
-      ],
-      popular: false,
-      cta: "Start Free Trial"
+      name: "AI Services",
+      plans: [
+        {
+          name: "AI Starter",
+          description: "Basic AI tools for small businesses",
+          monthlyPrice: 199,
+          annualPrice: 159,
+          features: [
+            "AI Content Generation",
+            "Basic Analytics Dashboard",
+            "Email Support",
+            "Up to 1,000 AI requests/month",
+            "Standard Security",
+            "5GB Storage"
+          ],
+          popular: false
+        },
+        {
+          name: "AI Professional",
+          description: "Advanced AI solutions for growing businesses",
+          monthlyPrice: 499,
+          annualPrice: 399,
+          features: [
+            "Full AI Suite Access",
+            "Advanced Analytics Pro",
+            "Priority Support",
+            "Up to 10,000 AI requests/month",
+            "Enhanced Security",
+            "100GB Storage",
+            "API Access",
+            "Custom Integrations"
+          ],
+          popular: true
+        },
+        {
+          name: "AI Enterprise",
+          description: "Complete AI solutions for large organizations",
+          monthlyPrice: 1299,
+          annualPrice: 999,
+          features: [
+            "Unlimited AI Requests",
+            "Custom AI Models",
+            "24/7 Dedicated Support",
+            "Enterprise Security",
+            "Unlimited Storage",
+            "Full API Access",
+            "White-label Options",
+            "Dedicated Account Manager"
+          ],
+          popular: false
+        }
+      ]
     },
     {
-      name: "Professional",
-      description: "Ideal for growing businesses",
-      monthlyPrice: 299,
-      annualPrice: 239,
-      features: [
-        "Up to 25 team members",
-        "Advanced AI tools",
-        "Priority support",
-        "Enhanced security",
-        "Advanced analytics",
-        "100GB storage",
-        "API access",
-        "Custom integrations"
-      ],
-      limitations: [
-        "Monthly AI limits",
-        "Standard SLA"
-      ],
-      popular: true,
-      cta: "Start Free Trial"
+      name: "IT Services",
+      plans: [
+        {
+          name: "IT Basic",
+          description: "Essential IT services for small businesses",
+          monthlyPrice: 299,
+          annualPrice: 239,
+          features: [
+            "Cloud Migration Support",
+            "Basic Cybersecurity",
+            "Email Support",
+            "Monthly Health Checks",
+            "Standard Monitoring",
+            "10GB Cloud Storage"
+          ],
+          popular: false
+        },
+        {
+          name: "IT Professional",
+          description: "Comprehensive IT solutions for growing companies",
+          monthlyPrice: 799,
+          annualPrice: 639,
+          features: [
+            "Full Cloud Services",
+            "Advanced Cybersecurity",
+            "Priority Support",
+            "Weekly Health Checks",
+            "Advanced Monitoring",
+            "100GB Cloud Storage",
+            "DevOps Support",
+            "API Management"
+          ],
+          popular: true
+        },
+        {
+          name: "IT Enterprise",
+          description: "Complete IT infrastructure for large organizations",
+          monthlyPrice: 1999,
+          annualPrice: 1599,
+          features: [
+            "Custom Cloud Architecture",
+            "Enterprise Security Suite",
+            "24/7 Dedicated Support",
+            "Daily Health Checks",
+            "Real-time Monitoring",
+            "Unlimited Cloud Storage",
+            "Full DevOps Pipeline",
+            "Custom Development"
+          ],
+          popular: false
+        }
+      ]
     },
     {
-      name: "Enterprise",
-      description: "For large organizations with complex needs",
-      monthlyPrice: 999,
-      annualPrice: 799,
-      features: [
-        "Unlimited team members",
-        "Full AI suite access",
-        "24/7 dedicated support",
-        "Enterprise security",
-        "Custom analytics",
-        "Unlimited storage",
-        "Full API access",
-        "Custom integrations",
-        "Dedicated account manager",
-        "SLA guarantee",
-        "Custom training"
-      ],
-      limitations: [],
-      popular: false,
-      cta: "Contact Sales"
+      name: "5G Solutions",
+      plans: [
+        {
+          name: "5G Starter",
+          description: "Basic 5G implementation for small businesses",
+          monthlyPrice: 599,
+          annualPrice: 479,
+          features: [
+            "5G Network Planning",
+            "Basic Implementation",
+            "Email Support",
+            "Standard Monitoring",
+            "Basic Security",
+            "Up to 10 devices"
+          ],
+          popular: false
+        },
+        {
+          name: "5G Professional",
+          description: "Advanced 5G solutions for growing businesses",
+          monthlyPrice: 1299,
+          annualPrice: 1039,
+          features: [
+            "Full 5G Implementation",
+            "IoT Integration",
+            "Priority Support",
+            "Advanced Monitoring",
+            "Enhanced Security",
+            "Up to 100 devices",
+            "Edge Computing",
+            "Custom Applications"
+          ],
+          popular: true
+        },
+        {
+          name: "5G Enterprise",
+          description: "Complete 5G infrastructure for large organizations",
+          monthlyPrice: 2999,
+          annualPrice: 2399,
+          features: [
+            "Custom 5G Architecture",
+            "Full IoT Suite",
+            "24/7 Dedicated Support",
+            "Real-time Monitoring",
+            "Enterprise Security",
+            "Unlimited Devices",
+            "Private 5G Networks",
+            "Custom Development"
+          ],
+          popular: false
+        }
+      ]
     }
   ];
 
@@ -168,69 +265,64 @@ const PricingPage: React.FC = () => {
         {/* Pricing Cards */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-cyan-500 scale-105' : ''}`}>
-                  {plan.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
-                        <Star className="w-4 h-4 mr-1" />
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
-                    <div className="mb-4">
-                      <span className="text-5xl font-bold text-white">
-                        ${isAnnual ? plan.annualPrice : plan.monthlyPrice}
-                      </span>
-                      <span className="text-gray-400 text-lg">/month</span>
-                    </div>
-                    {isAnnual && (
-                      <p className="text-cyan-400 text-sm">Billed annually (${plan.annualPrice * 12}/year)</p>
-                    )}
-                  </div>
-                  
-                  <div className="mb-8">
-                    <h4 className="text-lg font-semibold text-white mb-4">What's included:</h4>
-                    <ul className="space-y-3">
-                      {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  {plan.limitations.length > 0 && (
-                    <div className="mb-8">
-                      <h4 className="text-lg font-semibold text-white mb-4">Limitations:</h4>
-                      <ul className="space-y-3">
-                        {plan.limitations.map((limitation, limitationIndex) => (
-                          <li key={limitationIndex} className="flex items-center text-gray-400">
-                            <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
-                            {limitation}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                  
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
-                  }`}>
-                    {plan.cta}
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
+            {serviceCategories.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="mb-20">
+                <div className="text-center mb-12">
+                  <h2 className="text-4xl font-bold text-white mb-4">{category.name}</h2>
+                  <p className="text-xl text-gray-300">Choose the perfect plan for your {category.name.toLowerCase()} needs</p>
                 </div>
-              ))}
-            </div>
+                
+                <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                  {category.plans.map((plan, planIndex) => (
+                    <div key={planIndex} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-cyan-500 scale-105' : ''}`}>
+                      {plan.popular && (
+                        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                          <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
+                            <Star className="w-4 h-4 mr-1" />
+                            Most Popular
+                          </span>
+                        </div>
+                      )}
+                      
+                      <div className="text-center mb-8">
+                        <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                        <p className="text-gray-300 mb-4">{plan.description}</p>
+                        <div className="mb-4">
+                          <span className="text-5xl font-bold text-white">
+                            ${isAnnual ? plan.annualPrice : plan.monthlyPrice}
+                          </span>
+                          <span className="text-gray-400 text-lg">/month</span>
+                        </div>
+                        {isAnnual && (
+                          <p className="text-cyan-400 text-sm">Billed annually (${plan.annualPrice * 12}/year)</p>
+                        )}
+                      </div>
+                      
+                      <div className="mb-8">
+                        <h4 className="text-lg font-semibold text-white mb-4">What's included:</h4>
+                        <ul className="space-y-3">
+                          {plan.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-center text-gray-300">
+                              <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
+                        plan.popular
+                          ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                          : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+                      }`}>
+                        Get Started
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 

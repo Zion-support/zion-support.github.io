@@ -6,7 +6,10 @@ import {
   Wifi, 
   Zap, 
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  ShoppingCart,
+  Megaphone,
+  BarChart3
 } from 'lucide-react';
 
 const Services: React.FC = () => {
@@ -24,7 +27,11 @@ const Services: React.FC = () => {
         { name: 'AI Customer Support', href: '/ai-customer-support', price: 'From $149/month', features: '24/7 chatbot, Multi-language, Ticket routing' },
         { name: 'AI Email Marketing', href: '/ai-email-marketing', price: 'From $99/month', features: 'Personalization, A/B testing, Analytics' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro', price: 'From $199/month', features: 'Code generation, Bug detection, Documentation' },
-        { name: 'AI Business Intelligence', href: '/ai-business-intelligence-pro', price: 'From $399/month', features: 'Data visualization, Forecasting, KPI tracking' }
+        { name: 'AI Business Intelligence', href: '/ai-business-intelligence-pro', price: 'From $399/month', features: 'Data visualization, Forecasting, KPI tracking' },
+        { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant', price: 'From $179/month', features: 'Patient monitoring, Diagnosis support, Treatment recommendations' },
+        { name: 'AI Financial Advisor', href: '/ai-financial-advisor', price: 'From $99/month', features: 'Portfolio management, Risk assessment, Investment advice' },
+        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro', price: 'From $129/month', features: 'Carbon tracking, Sustainability reports, Green recommendations' },
+        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro', price: 'From $199/month', features: 'Crop monitoring, Weather prediction, Yield optimization' }
       ]
     },
     {
@@ -40,7 +47,11 @@ const Services: React.FC = () => {
         { name: 'API Management', href: '/ai-api-management', price: 'From $999', features: 'API gateway, Rate limiting, Documentation' },
         { name: 'Performance Monitoring', href: '/performance-monitoring', price: 'From $799', features: 'Real-time alerts, Performance metrics, Uptime monitoring' },
         { name: 'Web Development', href: '/web-development', price: 'From $1,299', features: 'React/Next.js, Mobile-first, SEO optimized' },
-        { name: 'Mobile App Development', href: '/mobile-development', price: 'From $1,999', features: 'iOS/Android, Cross-platform, App store ready' }
+        { name: 'Mobile App Development', href: '/mobile-development', price: 'From $1,999', features: 'iOS/Android, Cross-platform, App store ready' },
+        { name: 'Blockchain Development', href: '/blockchain-development', price: 'From $3,999', features: 'Smart contracts, DeFi apps, NFT marketplace, Web3 integration' },
+        { name: 'IoT Solutions', href: '/iot-solutions', price: 'From $2,499', features: 'Device connectivity, Data analytics, Remote monitoring, Edge computing' },
+        { name: 'AR/VR Development', href: '/ar-vr-development', price: 'From $4,999', features: 'Immersive experiences, Training simulations, Virtual showrooms' },
+        { name: 'Machine Learning Ops', href: '/mlops-solutions', price: 'From $1,799', features: 'Model deployment, A/B testing, Monitoring, Auto-scaling' }
       ]
     },
     {
@@ -56,7 +67,11 @@ const Services: React.FC = () => {
         { name: '5G Edge Computing', href: '/5g-edge-computing', price: 'From $2,999', features: 'Low latency processing, Local data centers, Real-time analytics' },
         { name: '5G Private Networks', href: '/5g-private-networks', price: 'From $6,999', features: 'Dedicated spectrum, Enhanced security, Custom configuration' },
         { name: '5G Mobile Applications', href: '/5g-mobile-applications', price: 'From $3,499', features: 'AR/VR support, Ultra-low latency, High bandwidth' },
-        { name: '5G Data Analytics', href: '/5g-data-analytics', price: 'From $2,499', features: 'Real-time insights, Predictive analytics, Network optimization' }
+        { name: '5G Data Analytics', href: '/5g-data-analytics', price: 'From $2,499', features: 'Real-time insights, Predictive analytics, Network optimization' },
+        { name: '5G Autonomous Vehicles', href: '/5g-autonomous-vehicles', price: 'From $9,999', features: 'V2X communication, Real-time navigation, Safety systems' },
+        { name: '5G Healthcare Solutions', href: '/5g-healthcare-solutions', price: 'From $4,999', features: 'Remote surgery, Telemedicine, Patient monitoring' },
+        { name: '5G Industrial IoT', href: '/5g-industrial-iot', price: 'From $5,999', features: 'Smart manufacturing, Predictive maintenance, Quality control' },
+        { name: '5G Security Solutions', href: '/5g-security-solutions', price: 'From $3,999', features: 'Network security, Threat detection, Compliance monitoring' }
       ]
     },
     {
@@ -72,7 +87,59 @@ const Services: React.FC = () => {
         { name: 'AI 3D Generation', href: '/ai-3d-generation', price: 'From $149/month', features: '3D modeling, Animation, Rendering' },
         { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', price: 'From $299/month', features: 'Smart contracts, DeFi integration, NFT marketplace' },
         { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant', price: 'From $179/month', features: 'Patient monitoring, Diagnosis support, Treatment recommendations' },
-        { name: 'AI Financial Advisor', href: '/ai-financial-advisor', price: 'From $99/month', features: 'Portfolio management, Risk assessment, Investment advice' }
+        { name: 'AI Financial Advisor', href: '/ai-financial-advisor', price: 'From $99/month', features: 'Portfolio management, Risk assessment, Investment advice' },
+        { name: 'AI Legal Assistant', href: '/ai-legal-assistant', price: 'From $199/month', features: 'Contract analysis, Legal research, Document review' },
+        { name: 'AI HR Management', href: '/ai-hr-management', price: 'From $89/month', features: 'Recruitment, Performance tracking, Employee analytics' },
+        { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', price: 'From $159/month', features: 'Inventory management, Demand forecasting, Route optimization' },
+        { name: 'AI Real Estate Assistant', href: '/ai-real-estate-assistant', price: 'From $119/month', features: 'Property valuation, Market analysis, Lead generation' }
+      ]
+    },
+    {
+      title: 'E-Commerce Solutions',
+      icon: <ShoppingCart className="w-8 h-8" />,
+      color: 'from-emerald-500 to-cyan-600',
+      description: 'Complete e-commerce platforms and tools',
+      services: [
+        { name: 'AI-Powered Store Builder', href: '/ai-store-builder', price: 'From $79/month', features: 'Auto-design, Product recommendations, SEO optimization' },
+        { name: 'Multi-Channel Sales Manager', href: '/multi-channel-sales', price: 'From $129/month', features: 'Amazon, eBay, Shopify sync, Inventory management' },
+        { name: 'AI Customer Service Bot', href: '/ai-customer-service-bot', price: 'From $99/month', features: '24/7 support, Order tracking, Returns handling' },
+        { name: 'Dynamic Pricing Engine', href: '/dynamic-pricing-engine', price: 'From $149/month', features: 'Competitor analysis, Price optimization, Profit maximization' },
+        { name: 'Social Commerce Platform', href: '/social-commerce-platform', price: 'From $199/month', features: 'Instagram shopping, Live selling, Influencer tools' },
+        { name: 'Subscription Management', href: '/subscription-management', price: 'From $89/month', features: 'Recurring billing, Customer retention, Analytics' },
+        { name: 'AI Inventory Predictor', href: '/ai-inventory-predictor', price: 'From $119/month', features: 'Demand forecasting, Stock optimization, Reorder alerts' },
+        { name: 'Mobile Commerce App', href: '/mobile-commerce-app', price: 'From $299/month', features: 'iOS/Android app, Push notifications, Mobile payments' }
+      ]
+    },
+    {
+      title: 'Marketing Automation',
+      icon: <Megaphone className="w-8 h-8" />,
+      color: 'from-pink-500 to-rose-600',
+      description: 'Advanced marketing tools and automation platforms',
+      services: [
+        { name: 'AI Email Campaign Manager', href: '/ai-email-campaign-manager', price: 'From $99/month', features: 'Personalization, A/B testing, Send time optimization' },
+        { name: 'Social Media Scheduler Pro', href: '/social-media-scheduler-pro', price: 'From $79/month', features: 'Multi-platform posting, Content calendar, Analytics' },
+        { name: 'Lead Generation Engine', href: '/lead-generation-engine', price: 'From $149/month', features: 'Prospect research, Contact enrichment, Outreach automation' },
+        { name: 'AI Content Calendar', href: '/ai-content-calendar', price: 'From $59/month', features: 'Content planning, Trend analysis, Publishing schedule' },
+        { name: 'Influencer Marketing Platform', href: '/influencer-marketing-platform', price: 'From $199/month', features: 'Influencer discovery, Campaign management, ROI tracking' },
+        { name: 'Video Marketing Suite', href: '/video-marketing-suite', price: 'From $179/month', features: 'Video creation, Editing tools, Distribution' },
+        { name: 'Voice Search Optimizer', href: '/voice-search-optimizer', price: 'From $89/month', features: 'Voice SEO, Featured snippets, Local optimization' },
+        { name: 'AI Ad Campaign Manager', href: '/ai-ad-campaign-manager', price: 'From $199/month', features: 'Auto-bidding, Audience targeting, Performance optimization' }
+      ]
+    },
+    {
+      title: 'Data & Analytics',
+      icon: <BarChart3 className="w-8 h-8" />,
+      color: 'from-indigo-500 to-purple-600',
+      description: 'Powerful data processing and business intelligence tools',
+      services: [
+        { name: 'Real-Time Analytics Dashboard', href: '/real-time-analytics-dashboard', price: 'From $199/month', features: 'Live data visualization, Custom metrics, Alerts' },
+        { name: 'AI Data Cleaner', href: '/ai-data-cleaner', price: 'From $79/month', features: 'Duplicate removal, Data validation, Format standardization' },
+        { name: 'Predictive Analytics Engine', href: '/predictive-analytics-engine', price: 'From $299/month', features: 'Forecasting, Trend analysis, Risk assessment' },
+        { name: 'Customer Journey Mapper', href: '/customer-journey-mapper', price: 'From $149/month', features: 'Touchpoint tracking, Conversion analysis, Optimization' },
+        { name: 'Competitive Intelligence', href: '/competitive-intelligence', price: 'From $179/month', features: 'Market monitoring, Price tracking, Feature analysis' },
+        { name: 'AI Report Generator', href: '/ai-report-generator', price: 'From $99/month', features: 'Automated reports, Data visualization, Scheduling' },
+        { name: 'Data Warehouse Manager', href: '/data-warehouse-manager', price: 'From $249/month', features: 'Data integration, ETL processes, Storage optimization' },
+        { name: 'Business Intelligence Suite', href: '/business-intelligence-suite', price: 'From $399/month', features: 'KPI tracking, Executive dashboards, Strategic insights' }
       ]
     }
   ];
@@ -100,9 +167,9 @@ const Services: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
           {serviceCategories.map((category, index) => (
-            <div key={index} className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-md border border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-400/60 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden group">
+            <div key={index} className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-md border border-cyan-500/30 rounded-2xl p-4 sm:p-6 lg:p-8 hover:border-cyan-400/60 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden group">
               {/* Neon glow effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
@@ -116,12 +183,12 @@ const Services: React.FC = () => {
                 </div>
               </div>
               
-              <div className="space-y-3 relative z-10">
+              <div className="space-y-2 sm:space-y-3 relative z-10">
                 {category.services.map((service, serviceIndex) => (
                   <Link
                     key={serviceIndex}
                     to={service.href}
-                    className="block p-4 bg-slate-700/40 rounded-lg hover:bg-slate-600/60 transition-all duration-300 group border border-slate-600/30 hover:border-cyan-500/60 hover:shadow-lg hover:shadow-cyan-500/10"
+                    className="block p-3 sm:p-4 bg-slate-700/40 rounded-lg hover:bg-slate-600/60 transition-all duration-300 group border border-slate-600/30 hover:border-cyan-500/60 hover:shadow-lg hover:shadow-cyan-500/10"
                   >
                     <div className="flex items-start justify-between mb-2">
                       <div className="flex items-center space-x-3">

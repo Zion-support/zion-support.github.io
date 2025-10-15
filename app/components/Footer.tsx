@@ -21,47 +21,55 @@ const Footer: React.FC = () => {
 
   const serviceCategories = [
     {
-      title: 'Micro SAAS Solutions',
-      services: [
-        { name: 'AI Content Writer Pro', path: '/ai-content-generation-pro' },
-        { name: 'AI Project Manager', path: '/ai-project-manager' },
-        { name: 'AI Email Marketing', path: '/ai-email-marketing' },
-        { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro' },
-        { name: 'AI Accounting Assistant', path: '/ai-accounting-assistant' },
-        { name: 'AI Healthcare Assistant', path: '/ai-healthcare-assistant' }
-      ]
-    },
-    {
       title: 'AI Services',
       services: [
-        { name: 'AI Automation', path: '/ai-automation' },
-        { name: 'Machine Learning', path: '/ai-services' },
-        { name: 'Computer Vision', path: '/ai-computer-vision' },
-        { name: 'Natural Language Processing', path: '/ai-services' },
-        { name: 'Predictive Analytics', path: '/ai-analytics' },
-        { name: 'AI Security Solutions', path: '/ai-security-solutions' }
+        { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro' },
+        { name: 'AI Content Generation Pro', path: '/ai-content-generation-pro' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
+        { name: 'AI Project Manager', path: '/ai-project-manager' },
+        { name: 'AI Customer Support', path: '/ai-customer-support' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing' },
+        { name: 'AI Code Assistant Pro', path: '/ai-code-assistant-pro' },
+        { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro' }
       ]
     },
     {
-      title: 'IT Services',
+      title: 'Micro SAAS Solutions',
       services: [
-        { name: 'Cloud Migration', path: '/cloud-migration-services' },
-        { name: 'Cybersecurity', path: '/cybersecurity-consulting' },
-        { name: 'DevOps', path: '/devops-solutions' },
-        { name: 'Mobile Development', path: '/mobile-development' },
+        { name: 'AI Healthcare Assistant', path: '/ai-healthcare-assistant' },
+        { name: 'AI Financial Advisor', path: '/ai-financial-advisor' },
+        { name: 'AI Legal Assistant', path: '/ai-legal-assistant' },
+        { name: 'AI HR Management', path: '/ai-hr-management' },
+        { name: 'AI Supply Chain Optimizer', path: '/ai-supply-chain-optimizer' },
+        { name: 'AI Real Estate Assistant', path: '/ai-real-estate-assistant' },
+        { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro' },
+        { name: 'AI Agricultural Intelligence Pro', path: '/ai-agricultural-intelligence-pro' }
+      ]
+    },
+    {
+      title: 'E-Commerce & Marketing',
+      services: [
+        { name: 'AI-Powered Store Builder', path: '/ai-store-builder' },
+        { name: 'Multi-Channel Sales Manager', path: '/multi-channel-sales' },
+        { name: 'AI Customer Service Bot', path: '/ai-customer-service-bot' },
+        { name: 'Dynamic Pricing Engine', path: '/dynamic-pricing-engine' },
+        { name: 'AI Email Campaign Manager', path: '/ai-email-campaign-manager' },
+        { name: 'Social Media Scheduler Pro', path: '/social-media-scheduler-pro' },
+        { name: 'Lead Generation Engine', path: '/lead-generation-engine' },
+        { name: 'Influencer Marketing Platform', path: '/influencer-marketing-platform' }
+      ]
+    },
+    {
+      title: 'IT & 5G Solutions',
+      services: [
+        { name: 'Cloud Migration Services', path: '/cloud-migration-services' },
+        { name: 'Cybersecurity Consulting', path: '/cybersecurity-consulting' },
+        { name: 'DevOps Solutions', path: '/devops-solutions' },
         { name: 'Web Development', path: '/web-development' },
-        { name: 'Database Solutions', path: '/database-solutions' }
-      ]
-    },
-    {
-      title: '5G Solutions',
-      services: [
+        { name: 'Mobile App Development', path: '/mobile-development' },
         { name: '5G Implementation', path: '/5g-implementation' },
-        { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
         { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
-        { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions' },
-        { name: '5G Edge Computing', path: '/5g-edge-computing' },
-        { name: '5G Private Networks', path: '/5g-private-networks' }
+        { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions' }
       ]
     }
   ];
@@ -101,7 +109,7 @@ const Footer: React.FC = () => {
       
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6 group">

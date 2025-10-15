@@ -22,9 +22,27 @@ const Header: React.FC = memo(() => {
       name: 'Services', 
       path: '#',
       dropdown: [
-        { name: 'Micro SAAS Solutions', path: '/micro-saas' },
         { name: 'AI Services', path: '/ai-services' },
-        { name: 'IT Services', path: '/it-services' }
+        { name: 'IT Services', path: '/it-services' },
+        { name: '5G Solutions', path: '/5g-solutions' },
+        { name: 'Micro SAAS', path: '/micro-saas' },
+        { name: 'E-Commerce Solutions', path: '/ecommerce-solutions' },
+        { name: 'Marketing Automation', path: '/marketing-automation' },
+        { name: 'Data & Analytics', path: '/data-analytics' }
+      ]
+    },
+    { 
+      name: 'Solutions', 
+      path: '#',
+      dropdown: [
+        { name: 'AI Healthcare Assistant', path: '/ai-healthcare-assistant' },
+        { name: 'AI Financial Advisor', path: '/ai-financial-advisor' },
+        { name: 'AI Legal Assistant', path: '/ai-legal-assistant' },
+        { name: 'AI HR Management', path: '/ai-hr-management' },
+        { name: 'AI Supply Chain Optimizer', path: '/ai-supply-chain-optimizer' },
+        { name: 'AI Real Estate Assistant', path: '/ai-real-estate-assistant' },
+        { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro' },
+        { name: 'AI Agricultural Intelligence Pro', path: '/ai-agricultural-intelligence-pro' }
       ]
     },
     { name: 'About', path: '/about' },
@@ -38,7 +56,19 @@ const Header: React.FC = memo(() => {
         { name: 'About Us', path: '/about' },
         { name: 'Our Team', path: '/about#team' },
         { name: 'Careers', path: '/careers' },
-        { name: 'News & Updates', path: '/news' }
+        { name: 'News & Updates', path: '/news' },
+        { name: 'Contact Us', path: '/contact' }
+      ]
+    },
+    { 
+      name: 'Support', 
+      path: '#',
+      dropdown: [
+        { name: 'Help Center', path: '/help' },
+        { name: 'Documentation', path: '/docs' },
+        { name: 'API Reference', path: '/api-docs' },
+        { name: 'System Status', path: '/status' },
+        { name: 'Report Issue', path: '/support' }
       ]
     },
     { name: 'Contact', path: '/contact' }
@@ -61,8 +91,8 @@ const Header: React.FC = memo(() => {
       }`}>
       {/* Top Contact Bar */}
       <div className="bg-slate-800 text-white py-2 px-4 hidden lg:block">
-        <div className="container mx-auto flex justify-between items-center text-sm">
-          <div className="flex items-center space-x-6">
+        <div className="container mx-auto flex flex-col xl:flex-row justify-between items-center text-sm space-y-2 xl:space-y-0">
+          <div className="flex flex-col xl:flex-row items-center space-y-2 xl:space-y-0 xl:space-x-6">
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4" />
               <span>+1 302 464 0950</span>
@@ -73,7 +103,8 @@ const Header: React.FC = memo(() => {
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="w-4 h-4" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <span className="hidden 2xl:inline">364 E Main St STE 1008, Middletown DE 19709</span>
+              <span className="2xl:hidden">Middletown DE 19709</span>
             </div>
           </div>
           <div className="text-sm">
@@ -95,7 +126,7 @@ const Header: React.FC = memo(() => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden xl:flex items-center space-x-6 2xl:space-x-8">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
                   {item.dropdown ? (
@@ -149,9 +180,20 @@ const Header: React.FC = memo(() => {
               </Link>
             </div>
 
+            {/* Tablet Navigation */}
+            <div className="hidden lg:flex xl:hidden items-center space-x-4">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 relative overflow-hidden group"
+              >
+                <span className="relative z-10">Get Started</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </Link>
+            </div>
+
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden text-white p-2"
+              className="xl:hidden text-white p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMenuOpen}
@@ -166,7 +208,7 @@ const Header: React.FC = memo(() => {
         {isMenuOpen && (
           <div 
             id="mobile-menu"
-            className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/20"
+            className="xl:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/20"
             role="navigation"
             aria-label="Mobile navigation"
           >

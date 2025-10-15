@@ -1,32 +1,32 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Heart, Brain, Shield, Clock, Users, CheckCircle, ArrowRight, Star, Zap, Activity } from 'lucide-react';
+import { Heart, Stethoscope, Activity, Shield, Clock, Users, CheckCircle, ArrowRight, Star } from 'lucide-react';
 
 const AiHealthcareAssistantPage: React.FC = () => {
   const features = [
     {
-      icon: <Heart className="w-8 h-8" />,
       title: "Patient Monitoring",
-      description: "Real-time health monitoring with AI-powered analysis of vital signs and symptoms",
-      benefits: ["Continuous monitoring", "Early warning alerts", "Trend analysis", "Risk assessment"]
+      description: "24/7 real-time monitoring of vital signs and health metrics",
+      icon: <Activity className="w-6 h-6" />,
+      benefits: ["Continuous monitoring", "Early warning alerts", "Trend analysis", "Remote patient care"]
     },
     {
-      icon: <Brain className="w-8 h-8" />,
       title: "Diagnosis Support",
-      description: "AI-assisted diagnostic tools that help healthcare professionals make informed decisions",
-      benefits: ["Symptom analysis", "Differential diagnosis", "Treatment recommendations", "Evidence-based insights"]
+      description: "AI-powered diagnostic assistance and symptom analysis",
+      icon: <Stethoscope className="w-6 h-6" />,
+      benefits: ["Symptom checker", "Differential diagnosis", "Risk assessment", "Treatment recommendations"]
     },
     {
-      icon: <Shield className="w-8 h-8" />,
       title: "Treatment Planning",
-      description: "Personalized treatment plans based on patient data and medical best practices",
-      benefits: ["Custom protocols", "Drug interactions", "Dosage optimization", "Follow-up scheduling"]
+      description: "Personalized treatment plans based on patient data and medical history",
+      icon: <Heart className="w-6 h-6" />,
+      benefits: ["Personalized care", "Drug interaction checks", "Dosage optimization", "Follow-up scheduling"]
     },
     {
-      icon: <Activity className="w-8 h-8" />,
-      title: "Health Analytics",
-      description: "Comprehensive health analytics and reporting for better patient outcomes",
-      benefits: ["Population health insights", "Outcome predictions", "Resource optimization", "Quality metrics"]
+      title: "Data Security",
+      description: "HIPAA-compliant data protection and privacy measures",
+      icon: <Shield className="w-6 h-6" />,
+      benefits: ["HIPAA compliance", "Data encryption", "Secure storage", "Access controls"]
     }
   ];
 
@@ -34,70 +34,67 @@ const AiHealthcareAssistantPage: React.FC = () => {
     {
       name: "Starter",
       price: "$179",
-      period: "per month",
-      description: "Perfect for small clinics and individual practitioners",
+      period: "/month",
+      description: "Perfect for small practices",
       features: [
         "Up to 100 patients",
-        "Basic AI diagnostics",
-        "Patient monitoring",
+        "Basic monitoring",
         "Email support",
-        "Standard reporting"
+        "Standard reports"
       ],
       popular: false
     },
     {
       name: "Professional",
       price: "$299",
-      period: "per month",
-      description: "Ideal for medium-sized healthcare facilities",
+      period: "/month",
+      description: "Ideal for growing practices",
       features: [
         "Up to 500 patients",
         "Advanced AI diagnostics",
-        "Real-time monitoring",
-        "Treatment planning",
         "Priority support",
-        "Custom integrations"
+        "Custom integrations",
+        "Advanced analytics"
       ],
       popular: true
     },
     {
       name: "Enterprise",
       price: "$499",
-      period: "per month",
-      description: "Comprehensive solution for large healthcare systems",
+      period: "/month",
+      description: "For large healthcare systems",
       features: [
         "Unlimited patients",
         "Full AI suite",
-        "Advanced analytics",
-        "Custom workflows",
         "24/7 support",
-        "API access",
+        "Custom development",
         "White-label options"
       ],
       popular: false
     }
   ];
 
-  const useCases = [
+  const testimonials = [
     {
-      title: "Primary Care",
-      description: "Streamline routine checkups and preventive care with AI-powered patient assessment tools",
-      icon: <Users className="w-6 h-6" />
+      name: "Dr. Sarah Johnson",
+      role: "Chief Medical Officer",
+      company: "MedTech Solutions",
+      content: "The AI Healthcare Assistant has revolutionized our patient care. The diagnostic accuracy and monitoring capabilities are outstanding.",
+      rating: 5
     },
     {
-      title: "Emergency Medicine",
-      description: "Rapid triage and critical care decision support for emergency departments",
-      icon: <Zap className="w-6 h-6" />
+      name: "Dr. Michael Chen",
+      role: "Family Physician",
+      company: "City Health Clinic",
+      content: "This tool has significantly improved our efficiency and patient outcomes. The AI recommendations are incredibly accurate.",
+      rating: 5
     },
     {
-      title: "Chronic Disease Management",
-      description: "Continuous monitoring and management of chronic conditions like diabetes and hypertension",
-      icon: <Heart className="w-6 h-6" />
-    },
-    {
-      title: "Mental Health",
-      description: "AI-assisted mental health screening and treatment planning for better patient outcomes",
-      icon: <Brain className="w-6 h-6" />
+      name: "Dr. Emily Rodriguez",
+      role: "Internal Medicine",
+      company: "Regional Medical Center",
+      content: "The predictive analytics help us catch potential issues before they become serious problems. Highly recommended.",
+      rating: 5
     }
   ];
 
@@ -105,40 +102,30 @@ const AiHealthcareAssistantPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Healthcare Assistant - Zion Tech Group | Advanced Medical AI Solutions</title>
-        <meta name="description" content="Revolutionary AI healthcare assistant with patient monitoring, diagnosis support, and treatment planning. Improve patient outcomes with cutting-edge medical AI technology." />
-        <meta name="keywords" content="ai healthcare, medical ai, patient monitoring, diagnosis support, healthcare technology, medical software" />
+        <meta name="description" content="Revolutionary AI-powered healthcare assistant for patient monitoring, diagnosis support, and treatment planning. HIPAA-compliant and designed for modern healthcare providers." />
+        <meta name="keywords" content="ai healthcare, medical ai, patient monitoring, diagnosis support, healthcare technology, medical software, HIPAA compliant" />
         <meta property="og:title" content="AI Healthcare Assistant - Zion Tech Group" />
-        <meta property="og:description" content="Advanced AI solutions for healthcare professionals" />
+        <meta property="og:description" content="Advanced AI healthcare solutions for modern medical practices" />
         <meta property="og:type" content="website" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
-        </div>
-
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="py-20 relative z-10">
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 relative">
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  AI Healthcare Assistant
-                </span>
-                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400/20 via-purple-400/20 to-pink-400/20 blur-lg opacity-75"></div>
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Healthcare Assistant</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Transform healthcare delivery with our advanced AI-powered assistant. 
-                Enhance patient care, improve diagnostics, and streamline medical workflows.
+                Transform patient care with our advanced AI-powered healthcare assistant. 
+                Monitor patients, support diagnoses, and optimize treatment plans with cutting-edge artificial intelligence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
+                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                   Start Free Trial
                 </button>
-                <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+                <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                   Schedule Demo
                 </button>
               </div>
@@ -147,33 +134,29 @@ const AiHealthcareAssistantPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 relative z-10">
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Powerful AI Features</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Powerful Healthcare AI Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive AI tools designed to enhance every aspect of healthcare delivery
+                Comprehensive AI solutions designed to enhance patient care and streamline medical workflows
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-md border border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-400/60 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden group">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 group">
                   <div className="text-cyan-400 mb-6 group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
                   </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-300 mb-6 group-hover:text-gray-200 transition-colors duration-300">
-                    {feature.description}
-                  </p>
-                  
+                  <p className="text-gray-300 mb-6">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-gray-300 text-sm group-hover:text-gray-200 transition-colors">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                      <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
@@ -184,49 +167,19 @@ const AiHealthcareAssistantPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Use Cases Section */}
-        <section className="py-20 bg-white/5 relative z-10">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Healthcare Applications</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Versatile AI solutions for different healthcare specialties and settings
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-slate-800/40 rounded-xl p-6 text-center hover:bg-slate-700/40 transition-all duration-300 group">
-                  <div className="text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
-                    {useCase.icon}
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {useCase.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors">
-                    {useCase.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Pricing Section */}
-        <section className="py-20 relative z-10">
+        <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Flexible Pricing Plans</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Choose Your Plan</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your healthcare facility
+                Flexible pricing options designed for healthcare providers of all sizes
               </p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-md border rounded-2xl p-8 relative overflow-hidden group ${
-                  plan.popular ? 'border-cyan-500/60 ring-2 ring-cyan-500/20' : 'border-cyan-500/30'
-                }`}>
+                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-cyan-500 scale-105' : ''}`}>
                   {plan.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
@@ -238,11 +191,11 @@ const AiHealthcareAssistantPage: React.FC = () => {
                   
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="text-4xl font-bold text-cyan-400 mb-2">
-                      {plan.price}
-                      <span className="text-lg text-gray-400 font-normal">/{plan.period}</span>
+                    <p className="text-gray-300 mb-4">{plan.description}</p>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-5xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-300 ml-2">{plan.period}</span>
                     </div>
-                    <p className="text-gray-300">{plan.description}</p>
                   </div>
                   
                   <ul className="space-y-4 mb-8">
@@ -254,13 +207,13 @@ const AiHealthcareAssistantPage: React.FC = () => {
                     ))}
                   </ul>
                   
-                  <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group ${
+                  <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
                     plan.popular 
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-500/25' 
-                      : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
+                      : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                   }`}>
                     Get Started
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 ml-2" />
                   </button>
                 </div>
               ))}
@@ -268,34 +221,51 @@ const AiHealthcareAssistantPage: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 relative z-10">
+        {/* Testimonials Section */}
+        <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-2xl p-12 text-center relative overflow-hidden backdrop-blur-sm border border-cyan-500/30">
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 animate-pulse"></div>
-              <div className="absolute -top-20 -right-20 w-40 h-40 bg-cyan-500/10 rounded-full blur-2xl"></div>
-              <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-purple-500/10 rounded-full blur-2xl"></div>
-              
-              <div className="relative z-10">
-                <h2 className="text-4xl font-bold text-white mb-6 relative">
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Ready to Transform Healthcare?
-                  </span>
-                  <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400/10 to-purple-400/10 blur-sm"></div>
-                </h2>
-                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-                  Join leading healthcare providers who are already using our AI assistant to improve patient outcomes and streamline operations.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 relative overflow-hidden group">
-                    <span className="relative z-10">Start Free Trial</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </button>
-                  <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/25 relative overflow-hidden group">
-                    <span className="relative z-10">Contact Sales</span>
-                    <div className="absolute inset-0 bg-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </button>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Trusted by Healthcare Professionals</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                See what medical professionals are saying about our AI Healthcare Assistant
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                  <div>
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-cyan-400 text-sm">{testimonial.role}</div>
+                    <div className="text-gray-400 text-sm">{testimonial.company}</div>
+                  </div>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Healthcare?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Join thousands of healthcare providers already using our AI Healthcare Assistant to improve patient outcomes and streamline operations.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+                  Start Free Trial
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
+                  Contact Sales
+                </button>
               </div>
             </div>
           </div>
