@@ -1,77 +1,150 @@
+import { useCallback, useEffect, useRef } from 'react';
+
+interface PerformanceMetrics {
+  [key: string]: number | { [subKey: string]: number };
+}
+
+interface UseAdvancedPerformanceMonitoringOptions {
+  enableResourceTiming?: boolean;
+  enableLongTaskMonitoring?: boolean;
+  enableLayoutShiftMonitoring?: boolean;
+  reportInterval?: number;
+  memoryThreshold?: number;
+}
+
+export const useAdvancedPerformanceMonitoring = (options: UseAdvancedPerformanceMonitoringOptions = {}) => {
+  const {
     enableResourceTiming = true,
     enableLongTaskMonitoring = true,
     enableLayoutShiftMonitoring = true,
     reportInterval = 30000,
-    memoryThreshold = 0.8,
+    memoryThreshold = 0.8
+  } = options;
 
+  const metricsRef = useRef<PerformanceMetrics>({});
+  const observerRef = useRef<PerformanceObserver | null>(null);
 
+  const reportMetric = useCallback((name: string, value: number) => {
     // Report to analytics
-          metric: name,
-          value,
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'performance_metric', {
+        metric: name,
+        value,
+        timestamp: Date.now()
+      });
+    }
+  }, []);
 
-    // }
-  }, [])
-  const  reportMetrics = useCallback(() => {
-    const  metrics = metricsRef.current
+  const reportMetrics = useCallback(() => {
+    const metrics = metricsRef.current;
     Object.entries(metrics).forEach(([key, value]) => {
-
+      if (typeof value === 'number') {
+        reportMetric(key, value);
+      } else if (typeof value === 'object') {
+        Object.entries(value).forEach(([subKey, subValue]) => {
+          if (typeof subValue === 'number') {
             reportMetric(`${key.toUpperCase()}_${subKey.toUpperCase()}`, subValue);
-          };
-      };
+          }
+        });
+      }
+    });
+  }, [reportMetric]);
+
+  const updateMetric = useCallback((key: string, value: number, subKey?: string) => {
+    if (subKey) {
+      if (!metricsRef.current[key]) {
+        metricsRef.current[key] = {};
+      }
+      (metricsRef.current[key] as { [subKey: string]: number })[subKey] = value;
+    } else {
+      metricsRef.current[key] = value;
+    }
+  }, []);
+
+  const monitorResourceTiming = useCallback(() => {
+    if (!enableResourceTiming || typeof window === 'undefined') return;
+
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === 'resource') {
+          const resourceEntry = entry as PerformanceResourceTiming;
+          updateMetric('resource_load_time', resourceEntry.duration);
+          updateMetric('resource_size', resourceEntry.transferSize);
+        }
+      });
     });
 
-      try {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-              duration?: number;
-              processingStart?: number;
-              hadRecentInput?: boolean;
-              value?: number;
-              responseStart?: number;
-              requestStart?: number;
+    observer.observe({ entryTypes: ['resource'] });
+    observerRef.current = observer;
+  }, [enableResourceTiming, updateMetric]);
 
-                if (!metric.hadRecentInput && metric.value !== undefined) {
-                  metricsRef.current.cls = (metricsRef.current.cls || 0) + metric.value
-                }
+  const monitorLongTasks = useCallback(() => {
+    if (!enableLongTaskMonitoring || typeof window === 'undefined') return;
 
-        if (memory) {
-          const usedMB = memory.usedJSHeapSize / 1048576;
-          const totalMB = memory.totalJSHeapSize / 1048576;
-          const limitMB = memory.jsHeapSizeLimit / 1048576;
-      const interval = setInterval(checkMemory, 10000); // Check every 10 seconds;
-return () => clearInterval(interval);
-    };
-    const setupLayoutShiftMonitoring = () => {
-      if (!enableLayoutShiftMonitoring) return;
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-            clsValue += metric.value;
-            metricsRef.current.cls = clsValue;
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === 'longtask') {
+          updateMetric('long_task_duration', entry.duration);
+        }
+      });
+    });
 
+    observer.observe({ entryTypes: ['longtask'] });
+  }, [enableLongTaskMonitoring, updateMetric]);
+
+  const monitorLayoutShifts = useCallback(() => {
+    if (!enableLayoutShiftMonitoring || typeof window === 'undefined') return;
+
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === 'layout-shift') {
+          const layoutShiftEntry = entry as any;
+          if (!layoutShiftEntry.hadRecentInput) {
+            updateMetric('layout_shift_score', layoutShiftEntry.value);
           }
         }
-      })
-      try {
+      });
+    });
 
-      return () => clsObserver.disconnect();
+    observer.observe({ entryTypes: ['layout-shift'] });
+  }, [enableLayoutShiftMonitoring, updateMetric]);
+
+  const monitorMemory = useCallback(() => {
+    if (typeof window === 'undefined' || !('memory' in performance)) return;
+
+    const memory = (performance as any).memory;
+    const usedMemory = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
+    
+    if (usedMemory > memoryThreshold) {
+      updateMetric('memory_usage_high', usedMemory);
+    }
+    
+    updateMetric('memory_usage', usedMemory);
+  }, [memoryThreshold, updateMetric]);
+
+  useEffect(() => {
+    monitorResourceTiming();
+    monitorLongTasks();
+    monitorLayoutShifts();
+
+    const interval = setInterval(() => {
+      monitorMemory();
+      reportMetrics();
+    }, reportInterval);
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+      clearInterval(interval);
     };
-    // Setup all monitoring
-    setupPerformanceObserver();
-    const memoryCleanup = setupMemoryMonitoring();
-    const clsCleanup = setupLayoutShiftMonitoring();
-
-    // Setup periodic reporting
-    reportIntervalRef.current = setInterval(reportMetrics, reportInterval)
-    // Report on page unload
-    enableMemoryMonitoring,
-    enableResourceTiming,
-    enableLongTaskMonitoring,
-    enableLayoutShiftMonitoring,
-    reportInterval,
-    memoryThreshold,
-    longTaskThreshold,
+  }, [monitorResourceTiming, monitorLongTasks, monitorLayoutShifts, monitorMemory, reportMetrics, reportInterval]);
 
   return {
-    metrics: metricsRef.current,";
-    reportMetric,";";
+    metrics: metricsRef.current,
+    reportMetrics,
+    updateMetric
+  };
+};
+
+export default useAdvancedPerformanceMonitoring;

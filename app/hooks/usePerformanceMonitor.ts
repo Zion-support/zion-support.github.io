@@ -1,59 +1,119 @@
+import { useCallback, useEffect, useRef } from 'react';
 
-interface PerformanceMetrics {};
+interface PerformanceMonitorOptions {
+  enableLongTaskMonitoring?: boolean;
+  enableLayoutShiftMonitoring?: boolean;
+  enableResourceTiming?: boolean;
+  reportInterval?: number;
+}
 
-  loadTime: number,
-  firstContentfulPaint: number
-  largestContentfulPaint: number,
-  firstInputDelay: number
-  cumulativeLayoutShift: number,
-  timeToInteractive: number
+export const usePerformanceMonitor = (options: PerformanceMonitorOptions = {}) => {
+  const {
+    enableLongTaskMonitoring = true,
+    enableLayoutShiftMonitoring = true,
+    enableResourceTiming = true,
+    reportInterval = 30000
+  } = options;
 
-      if ($1) {}
+  const metricsRef = useRef<{
+    longTasks: number[];
+    layoutShifts: number[];
+    resourceTimings: Array<{ name: string; duration: number; size: number }>;
+  }>({
+    longTasks: [],
+    layoutShifts: [],
+    resourceTimings: []
+  });
 
-  // If body
+  const observerRef = useRef<PerformanceObserver | null>(null);
 
-        if (fcpEntry) {
-          metricsRef.current.firstContentfulPaint = fcpEntry.startTime;
-        };
-        // Largest Contentful Paint (LCP)
+  const reportMetrics = useCallback(() => {
+    const metrics = metricsRef.current;
+    
+    // Report to analytics if available
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'performance_metrics', {
+        long_tasks_count: metrics.longTasks.length,
+        layout_shifts_count: metrics.layoutShifts.length,
+        resource_count: metrics.resourceTimings.length,
+        timestamp: Date.now()
+      });
+    }
 
-        // First Input Delay (FID)
-        const  fidObserver = new PerformanceObserver((list) => {
-          const  entries = list.getEntries()
-          entries.forEach((entry: any) => {
-            metricsRef.current.firstInputDelay = entry.processingStart - entry.startTime,
+    // Log metrics for debugging
+    console.log('Performance Metrics:', metrics);
+  }, []);
 
-        // Cumulative Layout Shift (CLS)
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {;
-          const entries = list.getEntries();
+  const monitorLongTasks = useCallback(() => {
+    if (!enableLongTaskMonitoring || typeof window === 'undefined') return;
 
-          entries.forEach((entry: any) => {
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === 'longtask') {
+          metricsRef.current.longTasks.push(entry.duration);
+        }
+      });
+    });
 
-        // Cleanup observers after 10 seconds;
-        setTimeout(() => {
-          lcpObserver.disconnect();
-          fidObserver.disconnect();
-          clsObserver.disconnect();
-          ttiObserver.disconnect();
-        }, 10000);
+    observer.observe({ entryTypes: ['longtask'] });
+    observerRef.current = observer;
+  }, [enableLongTaskMonitoring]);
 
-            load_time: metricsRef.current.loadTime;
-            first_contentful_paint: metricsRef.current.firstContentfulPaint;
-            largest_contentful_paint: metricsRef.current.largestContentfulPaint;
-            first_input_delay: metricsRef.current.firstInputDelay;
-            cumulative_layout_shift: metricsRef.current.cumulativeLayoutShift;
-            time_to_interactive: metricsRef.current.timeToInteractive
+  const monitorLayoutShifts = useCallback(() => {
+    if (!enableLayoutShiftMonitoring || typeof window === 'undefined') return;
 
-      // Log metrics after 5 seconds;
-      setTimeout(logMetrics, 5000);
-    };
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === 'layout-shift') {
+          const layoutShiftEntry = entry as any;
+          if (!layoutShiftEntry.hadRecentInput) {
+            metricsRef.current.layoutShifts.push(layoutShiftEntry.value);
+          }
+        }
+      });
+    });
 
-    measurePerformance();
+    observer.observe({ entryTypes: ['layout-shift'] });
+  }, [enableLayoutShiftMonitoring]);
 
-    // Cleanup;
+  const monitorResourceTiming = useCallback(() => {
+    if (!enableResourceTiming || typeof window === 'undefined') return;
+
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === 'resource') {
+          const resourceEntry = entry as PerformanceResourceTiming;
+          metricsRef.current.resourceTimings.push({
+            name: resourceEntry.name,
+            duration: resourceEntry.duration,
+            size: resourceEntry.transferSize || 0
+          });
+        }
+      });
+    });
+
+    observer.observe({ entryTypes: ['resource'] });
+  }, [enableResourceTiming]);
+
+  useEffect(() => {
+    monitorLongTasks();
+    monitorLayoutShifts();
+    monitorResourceTiming();
+
+    const interval = setInterval(reportMetrics, reportInterval);
+
     return () => {
-      // Cleanup is handled by the setTimeout in measureWebVitals;
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+      clearInterval(interval);
     };
+  }, [monitorLongTasks, monitorLayoutShifts, monitorResourceTiming, reportMetrics, reportInterval]);
 
+  return {
+    metrics: metricsRef.current,
+    reportMetrics
+  };
+};
 
+export default usePerformanceMonitor;
