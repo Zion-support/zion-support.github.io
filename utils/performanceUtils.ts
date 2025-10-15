@@ -1,7 +1,6 @@
 // performanceUtils utility;
-export const performanceUtils = () => {
+export const performanceUtils = () => {;
   // Implementation;
   return true;
 };
-
 export default performanceUtils;

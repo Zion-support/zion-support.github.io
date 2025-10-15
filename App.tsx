@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 import React, { Suspense } from 'react';
-=======
-import React, { Suspense, lazy } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-
 // Components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -14,7 +9,6 @@ import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
-
 // Page Components
 import HomePage from './app/page';
 import AboutPage from './app/pages/AboutPage';
@@ -31,7 +25,6 @@ import SolutionsPage from './app/pages/SolutionsPage';
 import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
 import AISolutionsPage from './app/ai-solutions/page';
 import ITSolutionsPage from './app/it-solutions/page';
-
 // Service Pages
 import AIServicesPage from './app/pages/AIServicesPage';
 import ITServicesPage from './app/pages/ITServicesPage';
@@ -39,7 +32,6 @@ import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
 import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
 import CaseStudiesPage from './app/pages/CaseStudiesPage';
 import CareersPage from './app/pages/CareersPage';
-
 // Additional Pages
 import CybersecurityPage from './app/pages/CybersecurityPage';
 import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
@@ -47,9 +39,8 @@ import MicroSaaSPage from './app/pages/MicroSaaSPage';
 import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
 import TeamPage from './app/pages/TeamPage';
 import DocumentationPage from './app/pages/DocumentationPage';
-
 // Error fallback component
-export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+export const ErrorFallback = ({ error, resetErrorBoundary }: { error: 'Error', resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
     <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
       <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
@@ -74,10 +65,8 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
     </div>
   </div>
 );
-
 function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
-
   return (
     <ErrorBoundary>
       <HelmetProvider>
@@ -106,7 +95,7 @@ function App() {
                       <Route path="/terms" element={<TermsPage />} />
                       <Route path="/pricing" element={<PricingPage />} />
                       <Route path="/solutions" element={<SolutionsPage />} />
-                      
+
                       {/* Service Pages */}
                       <Route path="/ai-services" element={<AIServicesPage />} />
                       <Route path="/it-services" element={<ITServicesPage />} />
@@ -114,17 +103,17 @@ function App() {
                       <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                       <Route path="/case-studies" element={<CaseStudiesPage />} />
                       <Route path="/careers" element={<CareersPage />} />
-                      
+
                       {/* Additional Service Pages */}
                       <Route path="/cybersecurity" element={<CybersecurityPage />} />
                       <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
                       <Route path="/micro-saas" element={<MicroSaaSPage />} />
                       <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                      
+
                       {/* Additional Pages */}
                       <Route path="/team" element={<TeamPage />} />
                       <Route path="/docs" element={<DocumentationPage />} />
-                      
+
                       {/* Catch all route */}
                       <Route path="*" element={
                         <div className="min-h-screen flex items-center justify-center bg-slate-900">

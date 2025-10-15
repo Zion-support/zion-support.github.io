@@ -47,7 +47,7 @@ export default defineConfig({
             }
             return 'vendor-other';
           }
-          
+
           // Page chunks for better code splitting
           if (id.includes('/app/pages/')) {
             return 'pages';

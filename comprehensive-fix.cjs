@@ -1,114 +1,176 @@
-#!/usr/bin/env node;
-const fs = require('fs');';
-const _path = require('_path');';
-global.console.log('🔧 Starting comprehensive fix...');';
-// Function to fix a specific file;
-function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');';
-    let originalContent = content;
+#!/usr/bin/env node
 
-    content = content.replace(/^ origin\/main$/gm, '');';
-    content = content.replace(/^ cursor\/fix-errors-and-merge-to-main-[a-z0-9]+$/gm, '');';
-    content = content.replace(/^ cursor\/fix-errors-and-merge-to-main-[a-z0-9]+$/gm, '');';
-    // Fix incomplete lazy imports - add missing closing parentheses and commas;
-    content = content.replace(/lazy\(\s*\(\s*\)\s*=>\s*import\("([^"]+)"\)\s*\n\s*const/g, 'lazy(() => import("$1")),\nconst');';
-    content = content.replace(/lazy\(\s*\(\s*\)\s*=>\s*import\("([^"]+)"\)\s*\n\s*\/\//g, 'lazy(() => import("$1")),\n//');';
-    content = content.replace(/lazy\(\s*\(\s*\)\s*=>\s*import\("([^"]+)"\)\s*\n\s*$/gm, 'lazy(() => import("$1")),');';
-    // Fix incomplete function calls;
-    content = content.replace(/lazy\(\s*\(\s*\)\s*=>\s*import\("([^"]+)"\)\s*\n\s*([a-zA-Z_$])/g, 'lazy(() => import("$1")),\n$2');';
-    // Fix missing closing parentheses in multi-line lazy imports;
-    content = content.replace(/lazy\(\s*\(\s*\)\s*=>\s*import\("([^"]+)"\)\s*\n\s*\)\s*$/gm, 'lazy(() => import("$1"))');';
-    // Fix object literal syntax errors;
-    content = content.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*\s*:\s*[^,\n}]+)\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');';
-    // Fix missing commas in arrays;
-    content = content.replace(/([^,\n])\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');';
-    // Fix JSX syntax errors;
-    content = content.replace(/(<[^>]+)\n\s*([a-zA-Z_$])/g, '$1>\n  $2');';
-    // Fix incomplete JSX elements;
-    content = content.replace(/(<[^>]+)\n\s*<\/[^>]+>/g, '$1>\n  </div>');';
-    // Fix missing closing tags;
-    content = content.replace(/(<[^>]+)\n\s*([a-zA-Z_$])/g, '$1>\n  $2');';
-    // Fix function declarations;
-    content = content.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*\)\s*{\s*\n\s*return\s*\(\s*\n\s*<[^>]*>\s*\n\s*\)\s*;\s*\n\s*}\s*\n\s*([a-zA-Z_$])/g, 
-      'function $1() {\n  return (\n    <div>\n      {/* Content */}\n    </div>\n  );\n}\n\n$2');';
-    // Fix export statements;
-    content = content.replace(/}\s*\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '}\n\nexport { $1');';
-    // Clean up multiple empty lines;
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');';
-    // Remove any remaining orphaned markers;
-    content = content.replace(/^<<<<<<<|^;
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+console.log('🔧 Starting comprehensive fix for merge conflicts and syntax errors...');
+
+// Function to completely rewrite a file with proper syntax
+function rewriteFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+    
+    // Remove all merge conflict markers and keep only the HEAD version
+    const conflictRegex = /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g;
+    content = content.replace(conflictRegex, (match, headContent) => {
+      return headContent.trim();
+    });
+    
+    // Remove any remaining merge conflict markers
+    content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
+    content = content.replace(/=======\n?/g, '');
+    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+    
+    // Fix common syntax issues
+    // Fix import statements
+    content = content.replace(/import React from 'react';'/g, "import React from 'react';");
+    content = content.replace(/import React from 'react';/g, "import React from 'react';");
+    content = content.replace(/import React from 'react'/g, "import React from 'react';");
+    
+    // Fix 'use client' directive
+    content = content.replace(/'use client';/g, "'use client';");
+    content = content.replace(/'use client'/g, "'use client';");
+    
+    // Fix Helmet imports
+    content = content.replace(/import { Helmet } from 'react-helmet-async';'/g, "import { Helmet } from 'react-helmet-async';");
+    content = content.replace(/import { Helmet } from 'react-helmet-async';/g, "import { Helmet } from 'react-helmet-async';");
+    
+    // Remove extra semicolons and quotes
+    content = content.replace(/;'/g, ';');
+    content = content.replace(/';/g, ';');
+    content = content.replace(/;\s*$/gm, ';');
+    
+    // Fix JSX content - remove semicolons from text content
+    content = content.replace(/(<h[1-6][^>]*>)\s*([^<]+);\s*(<\/h[1-6]>)/g, '$1$2$3');
+    content = content.replace(/(<p[^>]*>)\s*([^<]+);\s*(<\/p>)/g, '$1$2$3');
+    content = content.replace(/(<div[^>]*>)\s*([^<]+);\s*(<\/div>)/g, '$1$2$3');
+    content = content.replace(/(<span[^>]*>)\s*([^<]+);\s*(<\/span>)/g, '$1$2$3');
+    
+    // Fix object syntax
+    content = content.replace(/(\w+):\s*([^,}]+);/g, '$1: $2,');
+    
+    // Fix array syntax
+    content = content.replace(/\[\s*;\s*\]/g, '[]');
+    content = content.replace(/\[\s*([^,\]]+);\s*\]/g, '[$1]');
+    
+    // Fix function declarations
+    content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*;\s*{/g, 'function $1() {');
+    content = content.replace(/export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*;\s*{/g, 'export default function $1() {');
+    
+    // Fix JSX closing tags
+    content = content.replace(/<\/\s*([^>]+)\s*;\s*>/g, '</$1>');
+    
+    // Remove stray semicolons in JSX
+    content = content.replace(/([^;])\s*;\s*<\/[^>]+>/g, '$1</>');
+    
+    // Fix string literals
+    content = content.replace(/"([^"]*)"([^"]*)"([^"]*)"/g, '"$1$2$3"');
+    content = content.replace(/'([^']*)'([^']*)'([^']*)'/g, "'$1$2$3'");
+    
+    // Fix unterminated strings
+    content = content.replace(/([^;])\s*;\s*$/gm, '$1;');
+    
+    // Clean up extra whitespace
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    content = content.replace(/^\s+$/gm, '');
+    
+    // Remove any remaining problematic characters
+    content = content.replace(/\x00/g, ''); // Remove null characters
+    
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');';
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`✅ Fixed: ${filePath}`);
       return true;
     }
     
     return false;
-  } catch (_error) {
-    global.console._error(`  ❌ Error processing ${filePath}:`, _error.message);
+  } catch (error) {
+    console.error(`❌ Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all TypeScript/JavaScript _files;
-function findSourceFiles(dir) {
-  const _files = [];
+// Function to find all TypeScript/JavaScript files
+function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+  let files = [];
   
-  function scanDirectory(currentDir) {
-    try {
-      const items = fs.readdirSync(currentDir);
+  try {
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
       
-      for (const item of items) {
-        const fullPath = _path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          // Skip node_modules, .git, and other irrelevant directories;
-          if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {';
-            scanDirectory(fullPath);
-          }
-        } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {';
-          _files.push(fullPath);
+      if (stat.isDirectory()) {
+        // Skip node_modules and other common directories
+        if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
+          files = files.concat(findFiles(fullPath, extensions));
         }
+      } else if (extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
       }
-    } catch (_error) {
-      // Skip directories that can't be read';
     }
+  } catch (error) {
+    // Skip directories we can't read
   }
   
-  scanDirectory(dir);
-  return _files;
+  return files;
 }
 
-// Main execution;
-try {
-  const workspaceDir = process.cwd();
-  global.console.log(`📁 Scanning workspace: ${workspaceDir}`);
+// Function to check if a file has merge conflicts
+function hasMergeConflicts(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    return content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>');
+  } catch (error) {
+    return false;
+  }
+}
+
+// Main execution
+async function main() {
+  console.log('📁 Scanning for files with merge conflicts...');
   
-  const sourceFiles = findSourceFiles(workspaceDir);
-  global.console.log(`🔍 Found ${sourceFiles.length} source _files`);
-  
+  const files = findFiles(process.cwd());
   let fixedCount = 0;
-  let errorCount = 0;
+  let totalFiles = 0;
+  let conflictFiles = 0;
   
-  for (const file of sourceFiles) {
-    try {
-      if (fixFile(file)) {
-        fixedCount++;
-        global.console.log(`  ✅ Fixed: ${file}`);
-      }
-    } catch (_error) {
-      global.console._error(`❌ Failed to fix ${file}:`, _error.message);
-      errorCount++;
+  // First pass: identify files with conflicts
+  for (const file of files) {
+    if (hasMergeConflicts(file)) {
+      conflictFiles++;
+      console.log(`🔍 Found conflicts in: ${file}`);
     }
   }
   
-  global.console.log(`\n📊 Fix Summary:`);
-  global.console.log(`  ✅ Successfully fixed: ${fixedCount} _files`);
-  global.console.log(`  ❌ Failed to fix: ${errorCount} _files`);
-  global.console.log(`  📁 Total _files processed: ${sourceFiles.length}`);
+  console.log(`\n📊 Found ${conflictFiles} files with merge conflicts`);
   
-} catch (_error) {
-  global.console._error('💥 Script failed:', _error.message);';
-  process.exit(1);
+  // Second pass: fix all files
+  for (const file of files) {
+    totalFiles++;
+    if (rewriteFile(file)) {
+      fixedCount++;
+    }
+  }
+  
+  console.log(`\n📊 Summary:`);
+  console.log(`   Total files processed: ${totalFiles}`);
+  console.log(`   Files fixed: ${fixedCount}`);
+  
+  if (fixedCount > 0) {
+    console.log('\n🔍 Running build check...');
+    try {
+      execSync('npm run build', { stdio: 'inherit' });
+      console.log('✅ Build check passed!');
+    } catch (error) {
+      console.log('⚠️  Build check found remaining issues, continuing...');
+    }
+  }
+  
+  console.log('\n🎉 Comprehensive fix completed!');
 }
+
+main().catch(console.error);

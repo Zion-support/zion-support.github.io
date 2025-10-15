@@ -2,7 +2,6 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import './index.css';
-
 // Ensure scheduler is properly initialized
 if (typeof window !== 'undefined') {
   // Fix for scheduler unstable_now error
@@ -15,18 +14,16 @@ if (typeof window !== 'undefined') {
 const root = createRoot(
   document.getElementById('root') as HTMLElement
 );
-
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-
 // Register service worker for PWA functionality
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
     navigator.serviceWorker
-      .register("/sw.js")
+      .register('/sw.js')
       .then((registration) => {
         // Service worker registered successfully
       })
