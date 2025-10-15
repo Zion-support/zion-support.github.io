@@ -1,4 +1,4 @@
-// NextPage import removed as it's not used
+// Next.js type declarations
 
 declare module 'next' {
   interface NextPageContext {
