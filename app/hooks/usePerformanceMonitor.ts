@@ -1,9 +1,25 @@
-// usePerformanceMonitor utility function
+import { useState, useEffect } from 'react';
+
 export const usePerformanceMonitor = () => {
-  // Placeholder implementation
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Performance monitoring logic here,
+    const observer = new PerformanceObserver((list) => {
+      // Handle performance, entries});
+
+    observer.observe({ entryTypes: ['measure', 'navigation'] });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return {
-    // Add implementation here
+    isLoading,
+    error,
+    setIsLoading,
+    setError
   };
 };
-
-export default usePerformanceMonitor;

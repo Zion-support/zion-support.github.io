@@ -1,9 +1,3 @@
-// useAnalytics utility function
-export const useAnalytics = () => {
-  // Placeholder implementation
-  return {
-    // Add implementation here
-  };
-};
+import { useContext } from "react";
 
-export default useAnalytics;
+export default NotFoundPage;
