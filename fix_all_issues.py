@@ -51,7 +51,7 @@ def fix_file_issues(file_path):
         
         # Remove any remaining merge conflict markers
         content = re.sub(r'\n?', '', content)
-        content = re.sub(r'
+        content = re.sub(r'>>>>>>> [^\n]+\n?', '', content)
         
         # Clean up multiple empty lines
         content = re.sub(r'\n\n\n+', '\n\n', content)

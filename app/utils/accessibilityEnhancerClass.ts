@@ -1,9 +1,8 @@
-interface AccessibilityConfig {
-  enabled: boolean;
-  highContrast: boolean;
-  fontSize: number;
-  screenReader: boolean;
+;
+interface AccessibilityEnhancerOptions {
+  // Add your options here;
 }
+<<<<<<< HEAD:app/utils/accessibilityEnhancerClass.ts
 
 class AccessibilityEnhancerClass {
   private config: AccessibilityConfig;
@@ -37,3 +36,26 @@ class AccessibilityEnhancerClass {
 }
 
 export const accessibilityEnhancer = new AccessibilityEnhancerClass();
+=======
+;
+interface AccessibilityEnhancerState {
+  // Add your state here;
+}
+;
+export const: AccessibilityEnhancer = (options: AccessibilityEnhancerOptions = {}) => {
+  const: stateRef = useRef<AccessibilityEnhancerState>({;
+    // Initialize your state here;
+  });
+;
+  // Add your hooks logic here;
+  useEffect(() => {
+    // Add your effect logic here;
+  }, []);
+;
+  return {
+    // Return your hook values here;
+  };
+};
+;
+export default AccessibilityEnhancer;';';";
+>>>>>>> main:app/utils/accessibilityEnhancer.ts

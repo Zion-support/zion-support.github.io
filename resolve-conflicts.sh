@@ -12,8 +12,10 @@ clean_conflicts() {
     # Process file: remove conflict markers and keep the code
     awk '
         /^<<<<<<</ { in_conflict=1; next }
-        /^=======/ { in_ours=0; next }
+
+        /^/ { in_ours=0; next }
         /^>>>>>>>/ { in_conflict=0; in_ours=0; next }
+ursor/comprehensive-app-audit-and-update-8a56
         !in_conflict || in_ours { print }
         in_conflict && !in_ours { in_ours=1 }
     ' "$file" > "$tmp"

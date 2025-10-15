@@ -1,31 +1,36 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
+'use client;'
+=======
+import SEOHead from '../components/SEOHead';
 
-export default function webdevelopmentPage() {
+const PagePage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="page - Zion Tech Group"
+        description="Zion Tech Group page service page"
+
+const WebDevelopmentPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Web Development - Zion Tech Group</title>
-        <meta name="description" content="Advanced web development solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Web Development</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced web development solutions by Zion Tech Group
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              This page is under development. Please check back later for updates.
-            </p>
-          </div>
+    <>
+      <SEOHead title ="web-development - Zion Tech Group - Zion Tech Group"";
+        description="Zion Tech Group web-development service page"";
+
+      />
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">web-development - Zion Tech Group</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
         </div>
       </div>
-    </div>
-  );
-}
+    </>
+
+  )
+    },
+    {}
+export default PagePage;
+
+  ),
+};
+
+>>>>>>> main
