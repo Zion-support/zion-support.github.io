@@ -12,11 +12,7 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 
-// Page Components
-import HomePage from './app/page';
-import AboutPage from './app/pages/AboutPage';
-import ContactPage from './app/pages/ContactPage';
-import ServicesPage from './app/pages/ServicesPage';
+// Page Components - These are imported but not used directly as we use lazy loading
 import BlogPage from './app/pages/BlogPage';
 import TutorialsPage from './app/pages/TutorialsPage';
 import DemoPage from './app/pages/DemoPage';

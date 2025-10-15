@@ -1,10 +1,9 @@
 // API endpoint for shipping rates
-export default function handler(req, res) {
+export default function handler(req: any, res: any) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-<<<<<<< HEAD:api/shipping-rates.js
   try {
     // Mock shipping rates data
     const shippingRates = {
@@ -31,22 +30,3 @@ export default function handler(req, res) {
     res.status(500).json({ error: 'Internal server error' });
   }
 }
-=======
-interface ShippingRatesProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ShippingRates: React.FC<ShippingRatesProps> = ({ 
-  className = '', 
-  children 
-}) => {
-  return (
-    <div className={`shipping-rates ${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default ShippingRates;
->>>>>>> cursor/fix-errors-and-merge-to-main-7017:api/shipping-rates.tsx
