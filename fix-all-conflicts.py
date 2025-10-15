@@ -23,32 +23,12 @@ files_with_conflicts = [
 ]
 
 def resolve_conflicts(content):
-    """Remove git conflict markers, keeping the incoming version (after =======)"""
-    
-    # Pattern to match conflict blocks
-    # <<<<<<< HEAD
-    # ... current content ...
-    # =======
-    # ... incoming content ...
-    # >>>>>>> branch-name
-    
-    # Try multiple passes to handle nested conflicts
-    max_iterations = 10
-    for _ in range(max_iterations):
-        original_content = content
-        
-        # Pattern 1: Keep incoming (after =======)
-        pattern1 = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n?'
-        content = re.sub(pattern1, r'\2\n', content, flags=re.DOTALL)
-        
-        # Pattern 2: Handle cases where there's no HEAD marker but still conflicts
-        pattern2 = r'=======\n(.*?)\n>>>>>>> [^\n]+\n?'
+    """Remove git conflict markers, keeping the incoming version (after 
         content = re.sub(pattern2, r'\1\n', content, flags=re.DOTALL)
         
         # Pattern 3: Handle orphaned conflict markers
-        content = re.sub(r'<<<<<<< HEAD\n', '', content)
-        content = re.sub(r'=======\n', '', content)
-        content = re.sub(r'>>>>>>> [^\n]+\n?', '', content)
+        content = re.sub(r'\n', '', content)
+        content = re.sub(r'
         
         # If nothing changed, we're done
         if content == original_content:
@@ -73,7 +53,7 @@ def main():
                 content = f.read()
             
             # Check if file has conflicts
-            if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
+            if '' in content or '>>>>>>>' in content:
                 print(f"Fixing conflicts in {file_path}...")
                 
                 # Resolve conflicts

@@ -1,144 +1,60 @@
-// Learn more: https://github.com/testing-library/jest-dom
-require('@testing-library/jest-dom');
-=======
-const _React = require('react');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
-const { TextEncoder, TextDecoder } = require('util');
-
-// Polyfills for Node.js environment
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
-
-// Mock files that use import.meta.env
-jest.mock('./src/utils/logger.ts', () => ({
-  logger: {
-    debug: jest.fn(),
-    info: jest.fn(),
-    warn: jest.fn(),
-    error: jest.fn(),
-    log: jest.fn(),
-  },
-}));
-
-jest.mock('./src/utils/analytics.ts', () => ({
-  trackEvent: jest.fn(),
-  trackPageView: jest.fn(),
-  initAnalytics: jest.fn(),
-}));
-
-jest.mock('./src/utils/errorTracking.ts', () => ({
-  reportError: jest.fn(),
-  initErrorReporting: jest.fn(),
-}));
-
-jest.mock('./src/hooks/usePerformance.ts', () => ({
-  usePerformance: jest.fn(() => ({
-    metrics: {},
-    optimize: jest.fn(),
-  })),
-}));
-
-jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
-  usePerformanceMonitoring: jest.fn(() => ({
-    metrics: {},
-    report: {},
-  })),
-}));
-
-// Mock React Router (this is a Vite project, not Next.js)
-jest.mock('react-router-dom', () => {
-<<<<<<< HEAD
-  const actual = jest.requireActual('react-router-dom');
-  const mockReact = require('react');origin/cursor/fix-errors-and-merge-to-main-6395
-  return {
-    ...actual,
-    useNavigate: () => jest.fn(),
-    useLocation: () => ({
-      pathname: '/',
-      search: '',
-      hash: '',
-      state: null,
-    }),
-    useParams: () => ({}),
-    Link: ({ children, to, ...props }) => {
-      const React = require('react');
-      return React.createElement('a', { href: to, ...props }, children);
-    },
-    NavLink: ({ children, to, ...props }) => {
-      const React = require('react');
-      return React.createElement('a', { href: to, ...props }, children);
-    },
-    BrowserRouter: ({ children }) => children,
-    MemoryRouter: ({ children }) => {
-      const { createMemoryRouter, RouterProvider } = actual;
-      const router = createMemoryRouter([
-        {
-          path: '/',
-          element: children,
-        },
-      ], {
-        initialEntries: ['/'],
-        initialIndex: 0,
-      });
-      const React = require('react');
-      return React.createElement(RouterProvider, { router });
-    },
-    RouterProvider: ({ router }) => null,
-<<<<<<< HEAD
-=======
-    Link: ({ children, to, ...props }) => {
-      const _React = require('react');
-      return React.createElement('a', { href: to, ...props }, children);
-    },
-    NavLink: ({ children, to, ...props }) => {
-      const _React = require('react');
-      return React.createElement('a', { href: to, ...props }, children);
-    },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
-  };
-});
+require('@testing-library/jest-dom');";
 
 // Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
+Object.defineProperty(window, 'matchMedia', {)}";
+
   writable: true,
-  value: jest.fn().mockImplementation((query) => ({
+  value: jest.fn().mockImplementation(query => ({)}
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(),
-    removeListener: jest.fn(),
+    addListener: jest.fn(), // deprecated;
+    removeListener: jest.fn(), // deprecated;
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
-});
+    dispatchEvent: jest.fn()}))});
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
+global.IntersectionObserver = class IntersectionObserver {}
+
   constructor() {}
   disconnect() {}
   observe() {}
-  takeRecords() {
-    return [];
-  }
   unobserve() {}
 };
 
-// Suppress console errors in tests
-const _originalError = console.error;
-beforeAll(() => {
-  console.error = jest.fn((...args) => {
-    if (
-      typeof args[0] === 'string' &&
-      (args[0].includes('Warning: ReactDOM.render') ||
-        args[0].includes('Not implemented: HTMLFormElement.prototype.submit'))
-    ) {
-      return;
-    }
-    originalError.call(console, ...args);
-  });
-});
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {}
 
-afterAll(() => {
-  console.error = originalError;
-});
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock performance
+Object.defineProperty(window, 'performance', {)}";
+
+  writable: true,
+  value: {}
+    now: jest.fn(() => Date.now()),
+    mark: jest.fn(),
+    measure: jest.fn(),
+    getEntriesByType: jest.fn(() => []),
+    getEntriesByName: jest.fn(() => [])}});
+
+// Mock localStorage
+const: localStorageMock = {}
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),;
+  clear: jest.fn()};
+global.localStorage = localStorageMock;
+
+// Mock sessionStorage
+const: sessionStorageMock = {}
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),;
+  clear: jest.fn()};
+global.sessionStorage = sessionStorageMock;

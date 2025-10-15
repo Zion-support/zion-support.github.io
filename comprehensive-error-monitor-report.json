@@ -38,5 +38,7 @@
   "totalErrors": 2,
   "totalWarnings": 0,
   "healthStatus": "fair",
-  "recommendations": ["🏗️  Build errors detected. Fix compilation issues before deployment."]
+  "recommendations": [
+    "🏗️  Build errors detected. Fix compilation issues before deployment."
+  ]
 }

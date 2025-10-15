@@ -1,183 +1,251 @@
-import React, { memo, useMemo, Suspense } from 'react';
-import { HelmetProvider, Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
+import React, { useState, useEffect, Suspense } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import Navigation from "./app/components/Navigation";
+import Sidebar from "./app/components/Sidebar";
+import Footer from "./app/components/Footer";
+import LoadingPage from "./app/components/Loading";
+import HomePage from "./app/page";
+import AnalyticsProvider from "./app/components/AnalyticsProvider";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import WebVitalsTracker from "./app/components/WebVitalsTracker";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import CoreWebVitals from "./app/components/CoreWebVitals";
+import FuturisticBackground from "./app/components/FuturisticBackground";
+import ErrorBoundary from "./app/components/ErrorBoundary";
 
-// Memoized components for better performance
-const UnifiedContentPromotion = memo(() => (
-  <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Latest AI Innovations</h2>
-      <p className="text-xl">Discover cutting-edge AI solutions for your business</p>
-    </div>
-  </div>
-));
+// Lazy load pages for better performance
+const AboutPage = React.lazy(() => import("./app/about/page"));
+const ServicesPage = React.lazy(() => import("./app/services/page"));
+const ContactPage = React.lazy(() => import("./app/contact/page"));
+const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
+const ITServicesPage = React.lazy(() => import("./app/it-services/page"));
+const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 
-const InteractiveAIROICalculator = memo(() => (
-  <div className="bg-gray-50 py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">AI ROI Calculator</h2>
-      <p className="text-xl text-gray-600">Calculate your potential AI investment returns</p>
-    </div>
-  </div>
-));
+const App: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
-const ContentShowcase = memo(() => (
-  <div className="py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Featured Content</h2>
-      <p className="text-xl text-gray-600">Explore our latest insights and case studies</p>
-    </div>
-  </div>
-));
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
 
-const InteractiveContentShowcase2026 = memo(() => (
-  <div className="bg-blue-50 py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">2026 Content Showcase</h2>
-      <p className="text-xl text-gray-600">Latest trends and innovations for 2026</p>
-    </div>
-  </div>
-));
+    return () => clearTimeout(timer);
+  }, []);
 
-// Loading component
-const LoadingSpinner = memo(() => (
-  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
-    <div className="text-gray-500">Loading...</div>
-  </div>
-));
-
-// Error Boundary Component
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-}
-
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-}
-
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: null };
+  if (isLoading) {
+    return <LoadingPage />;
   }
-
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
-
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.error('App Error Boundary caught an error:', error, errorInfo);
-    }
-  }
-
-  override render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center p-8">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
-            <p className="text-gray-600 mb-4">
-              We're working to fix this issue. Please try refreshing the page.
-            </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Refresh Page
-            </button>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
-export default function App() {
-  const structuredData = useMemo(
-    () => ({
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      description:
-        'Leading provider of AI-powered enterprise solutions and digital transformation services',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-302-464-0950',
-        contactType: 'customer service',
-        email: 'kleber@ziontechgroup.com',
-      },
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '364 E Main St STE 1008',
-        addressLocality: 'Middletown',
-        addressRegion: 'DE',
-        postalCode: '19709',
-        addressCountry: 'US',
-      },
-      sameAs: ['https://linkedin.com/company/zion-tech-group', 'https://twitter.com/ziontechgroup'],
-      offers: {
-        '@type': 'Offer',
-        name: 'AI Enterprise Transformation Services',
-        description:
-          'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
-        price: '50000',
-        priceCurrency: 'USD',
-        availability: 'https://schema.org/InStock',
-      },
-    }),
-    []
-  );
 
   return (
-    <ErrorBoundary>
+    <HelmetProvider>
+      <AnalyticsProvider>
+        <PerformanceMonitor />
+        <WebVitalsTracker />
+        <AccessibilityEnhancer />
+        <CoreWebVitals />
+        <FuturisticBackground />
+        <ErrorBoundary>
+          <Router>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+              <Navigation 
+                sidebarOpen={sidebarOpen}
+                setSidebarOpen={setSidebarOpen}
+              />
+              <Sidebar 
+                isOpen={sidebarOpen}
+                onClose={() => setSidebarOpen(false)}
+              />
+              <main className="relative">
+                <Suspense fallback={<LoadingPage />}>
+                  <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/ai-services" element={<AIServicesPage />} />
+                    <Route path="/it-services" element={<ITServicesPage />} />
+                    <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                  </Routes>
+                </Suspense>
+              </main>
+              <Footer />
+            </div>
+          </Router>
+        </ErrorBoundary>
+      </AnalyticsProvider>
+    </HelmetProvider>
+=======
+import React, { Suspense, lazy, useEffect } from 'react';";
+import { HelmetProvider } from 'react-helmet-async';";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';";
+import './app/styles/futuristic.css';";
+// Components
+import Navigation from './app/components/Navigation';";
+import Sidebar from './app/components/Sidebar';";
+import Footer from './app/components/Footer';";
+import ErrorBoundary from './app/components/ErrorBoundary';";
+import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';";
+import PerformanceMonitor from './app/components/PerformanceMonitor';";
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';";
+import LoadingSpinner from './app/components/LoadingSpinner';";
+
+// Lazy load pages for better performance
+const: HomePage = lazy(() => import('./app/page'));";
+const: AboutPage = lazy(() => import('./app/about/page'));";
+const: ContactPage = lazy(() => import('./app/contact/page'));";
+const: ServicesPage = lazy(() => import('./app/services/page'));";
+const: PricingPage = lazy(() => import('./app/pricing/page'));";
+const: CaseStudiesPage = lazy(() => import('./app/case-studies/page'));";
+const: BlogPage = lazy(() => import('./app/blog/page'));";
+const: TeamPage = lazy(() => import('./app/team/page'));";
+const: CareersPage = lazy(() => import('./app/careers/page'));";
+const: PrivacyPage = lazy(() => import('./app/privacy/page'));";
+const: TermsPage = lazy(() => import('./app/terms/page'));";
+const: CookiesPage = lazy(() => import('./app/cookies/page'));";
+
+// AI Services Pages
+const: AIServicesPage = lazy(() => import('./app/ai-services/page'));";
+const: AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));";
+
+// Micro SaaS Pages
+const AIContentGeneratorPage = lazy(() => import('./app/ai-content-generator/page'));
+const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
+const TaskManagerPage = lazy(() => import('./app/task-manager/page'));
+const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
+
+// IT Services Pages
+const: ITServicesPage = lazy(() => import('./app/it-services/page'));";
+const: CloudInfrastructurePage = lazy(() => import('./app/cloud-infrastructure/page'));";
+const: DigitalTransformationPage = lazy(() => import('./app/digital-transformation/page'));";
+
+// 5G Solutions Pages
+const: FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'));";
+
+// Micro SaaS Solutions Pages
+const MicroSaasSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
+
+// Error fallback component
+export const: ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div: className ="min-h-screen flex items-center justify-center bg-gray-50">";
+    <div: className ="max-w-md w-full bg-white shadow-lg rounded-lg p-6">";
+      <div: className ="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">";
+        <svg: className ="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">";
+          <path: strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z" />";
+        </svg>
+      </div>
+      <div: className ="mt-4 text-center">";
+        <h3: className ="text-lg font-medium text-gray-900">Something went wrong</h3>";
+        <p: className ="mt-2 text-sm text-gray-500">{error.message}</p>";
+        <button: onClick ={resetErrorBoundary}
+          className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"";
+        >
+          Try again
+        </button>
+      </div>
+    </div>
+  </div>
+);
+// Loading component
+const: LoadingFallback = () => (;
+  <div: className ="min-h-screen flex items-center justify-center">";
+    <LoadingSpinner />
+  </div>
+);
+
+function App() {
+  useEffect(() => {
+    // Preload critical resources
+    const: preloadCriticalResources = () => {
+      // Preload critical CSS;
+      const: criticalCSS = document.createElement('link');";
+      criticalCSS.rel = 'preload';";
+      criticalCSS.href = '/app/styles/futuristic.css';";
+      criticalCSS.as = 'style';";
+      document.head.appendChild(criticalCSS);
+
+      // Preload critical fonts
+      const: fontPreload = document.createElement('link');";
+      fontPreload.rel = 'preload';";
+      fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';";
+      fontPreload.as = 'style';";
+      document.head.appendChild(fontPreload);
+    };
+
+    preloadCriticalResources();
+  }, []);
+  return (
+    <GlobalErrorBoundary>
       <HelmetProvider>
-        <Helmet>
-          <title>Zion Tech Group - AI & IT Solutions</title>
-          <meta
-            name="description"
-            content="Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology."
-          />
-          <meta
-            name="keywords"
-            content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services"
-          />
-          <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
-          <meta
-            property="og:description"
-            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
-          />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://ziontechgroup.com" />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
-          <meta
-            name="twitter:description"
-            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
-          />
-          <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-        </Helmet>
-        <div className="min-h-screen bg-white">
-          <Suspense fallback={<LoadingSpinner />}>
-            <UnifiedContentPromotion />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveAIROICalculator />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <ContentShowcase />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveContentShowcase2026 />
-          </Suspense>
-        </div>
+        <Router>
+          <div: className ="min-h-screen bg-gray-50">";
+            <Navigation />
+            <Sidebar />
+            
+            <main: className ="flex-1">";
+              <ErrorBoundary>
+                <PerformanceMonitor />
+                <AccessibilityEnhancer />
+                
+                <Suspense: fallback ={<LoadingFallback />}>
+                  <Routes>
+                    {/* Main Pages */}
+                    <Route: path ="/" element={<HomePage />} />";
+                    <Route: path ="/about" element={<AboutPage />} />";
+                    <Route: path ="/contact" element={<ContactPage />} />";
+                    <Route: path ="/services" element={<ServicesPage />} />";
+                    <Route: path ="/pricing" element={<PricingPage />} />";
+                    <Route: path ="/case-studies" element={<CaseStudiesPage />} />";
+                    <Route: path ="/blog" element={<BlogPage />} />";
+                    <Route: path ="/team" element={<TeamPage />} />";
+                    <Route: path ="/careers" element={<CareersPage />} />";
+                    <Route: path ="/privacy" element={<PrivacyPage />} />";
+                    <Route: path ="/terms" element={<TermsPage />} />";
+                    <Route: path ="/cookies" element={<CookiesPage />} />";
+                    
+                    {/* AI Services */}
+                    <Route: path ="/ai-services" element={<AIServicesPage />} />";
+                    <Route: path ="/ai-solutions" element={<AISolutionsPage />} />";
+                    
+                    {/* Micro SaaS Services */}
+                    <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                    <Route path="/analytics-dashboard" element={<AnalyticsDashboardPage />} />
+                    <Route path="/task-manager" element={<TaskManagerPage />} />
+                    <Route path="/customer-support-hub" element={<CustomerSupportHubPage />} />
+                    
+                    {/* IT Services */}
+                    <Route: path ="/it-services" element={<ITServicesPage />} />";
+                    <Route: path ="/cloud-infrastructure" element={<CloudInfrastructurePage />} />";
+                    <Route: path ="/digital-transformation" element={<DigitalTransformationPage />} />";
+                    
+                    {/* 5G Solutions */}
+                    <Route: path ="/5g-solutions" element={<FiveGSolutionsPage />} />";
+                    
+                    {/* Micro SaaS Solutions */}
+                    <Route path="/micro-saas-solutions" element={<MicroSaasSolutionsPage />} />
+                    
+                    {/* Catch all route */}
+                    <Route: path ="*" element={<div: className ="min-h-screen flex items-center justify-center">";
+                      <div: className ="text-center">";
+                        <h1: className ="text-4xl font-bold text-gray-900 mb-4">404</h1>";
+                        <p: className ="text-gray-600 mb-8">Page not found</p>";
+                        <a: href ="/" className="text-blue-600 hover:text-blue-800">Go back home</a>";
+                      </div>
+                    </div>} />
+                  </Routes>
+                </Suspense>
+              </ErrorBoundary>
+            </main>
+            
+            <Footer />          </div>
+        </Router>
       </HelmetProvider>
-    </ErrorBoundary>
+    </GlobalErrorBoundary>
+>>>>>>> main
   );
 }
+
+export default App;

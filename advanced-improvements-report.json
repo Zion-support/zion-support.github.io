@@ -112,7 +112,19 @@
       },
       "inputValidation": {
         "html": {
-          "allowedTags": ["p", "br", "strong", "em", "u", "h1", "h2", "h3", "h4", "h5", "h6"],
+          "allowedTags": [
+            "p",
+            "br",
+            "strong",
+            "em",
+            "u",
+            "h1",
+            "h2",
+            "h3",
+            "h4",
+            "h5",
+            "h6"
+          ],
           "allowedAttributes": {}
         },
         "sql": {
@@ -320,7 +332,11 @@
         }
       },
       "eslintConfig": {
-        "extends": ["next/core-web-vitals", "@typescript-eslint/recommended", "prettier"],
+        "extends": [
+          "next/core-web-vitals",
+          "@typescript-eslint/recommended",
+          "prettier"
+        ],
         "plugins": ["@typescript-eslint", "prettier"],
         "rules": {
           "prettier/prettier": "error",

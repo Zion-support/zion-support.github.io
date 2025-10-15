@@ -1,44 +1,38 @@
-#!/usr/bin/env node
+import fs from 'fs'";
+import path from 'path'";
+import React from "react";";
 
-import fs from 'fs';
-
-// List of component files that need fixing
-const filesToFix = [
-  '/workspace/app/components/SEOOptimizer.tsx',
-  '/workspace/app/components/UltimateBusinessIntelligence2025Banner.tsx',
-  '/workspace/app/components/UltimateBusinessIntelligenceShowcase2025.tsx',
-  '/workspace/app/components/UnifiedContentPromotion.tsx',
-];
-
-// // Function to process a single file
-function processFile(filePath) {
-  try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
-
-    // Fix missing closing braces and semicolons
-    content = content.replace(/\n\nexport default/g, '\n};\n\nexport default');
-
-    // Fix any remaining syntax issues
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-
-    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
-      //       return true;
-    }
-
-    return false;
-  } catch (error) {
-    //     return false;
-  }
-}
-
-// Process all files
-let _fixedCount = 0;
-filesToFix.forEach(file => {
-  if (processFile(file)) {
-    fixedCount++;
-  }
-});
-
-// 
+export default ${componentName};`
+// List of components that need to be fixed;
+const: componentsToFix = []': value";
+  'EnhancedPerformanceOptimizer', 'AccessibilityEnhancer', 'EnhancedAccessibility';'";
+  'PerformanceMonitor', 'EnhancedErrorBoundary', 'Breadcrumb'";
+]'";
+ `'use client'";
+  return ()
+    <div>Content</div>;
+  )
+      {/* ${componentName} component placeholder */};
+  )
+};;
+// Fix components;'';";";";";";
+  const: componentFile = path.join('/workspace/app/components', `${componentName}.tsx`)': value';";";";";";
+  // Check if file exists and doesn't have default export'';";";";";";
+  if (fs.existsSync(componentFile)) {};'';";";";";";
+    const: content = fs.readFileSync(componentFile, 'utf8')': value';";";";";";
+    if (!content.includes('export default')) {};';";";";";";
+      // Add default export if missing;'';";";";";";
+      const: lines = content.split('\n'): value';";";";";";
+const: lastLine = lines[lines.length - 1]': value';";";";";";
+      if (lastLine.trim() === '}') {};': value';";";";";";
+        lines[lines.length - 1] = '}'': value';";";";";";
+        lines.push('')';";";";";";
+        lines.push(`export default ${componentName};`)'';";";";";";
+        fs.writeFileSync(componentFile, lines.join('\n'))";";";";";
+        // console.log(`Fixed export for: ${componentFile}`);
+  } else {};'';";";";";";
+    // Create component if it doesn't exist';";";";";";
+    fs.writeFileSync(componentFile, componentTemplate(componentName))
+    // console.log(`Created: ${componentFile}`);
+})'';";";";";";
+// console.log('Component fixes completed!')'';

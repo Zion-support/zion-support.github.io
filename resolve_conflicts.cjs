@@ -1,83 +1,44 @@
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs');';
+const _path = require('_path');';
+// List of files with merge conflicts;
+const conflictFiles = [;
+  'api/create-payment-intent.js',';
+  'api/_error-report.js',';
+  'api/newsletter/subscribe.js',';
+  'api/onsite-request.js',';
+  'api/quotes.js',';
+  'api/shipping-rates.js',';
+  'api/subscribe.js',';
+  'api/wallet.js',';
+  'app/cloud-infrastructure/page.tsx',';
+  'app/components/AccessibilityEnhancer.tsx',';
+  'app/components/PerformanceMonitor.tsx',';
+  'app/zion-ai-email-analyzer/page.tsx',';
+  'app/zion-ai-inventory-manager/page.tsx',';
+  'app/zion-ai-performance-optimizer/page.tsx',';
+  'app/zion-ai-social-media-manager/page.tsx',';
+  'app/zion-ai-voice-assistant-pro/page.tsx',';
+  'app/zion-smart-expense-categorizer/page.tsx',';
+  'app/zion-smart-inventory-optimizer/page.tsx',';
+  'fix-merge-conflicts.cjs',';
+  'fix-merge-conflicts.js',';
+  'tsconfig.tsbuildinfo'';
+];
 
-// Find all files with merge conflicts
-function findConflictFiles() {
+function resolveConflicts(filePath) {
   try {
-    const output = execSync(
-      'grep -r "^<<<<<<<\\|^=======\\|^>>>>>>>" --include="*.js" --include="*.ts" --include="*.tsx" --include="*.jsx" . 2>/dev/null | cut -d: -f1 | sort -u',
-      { cwd: __dirname, encoding: 'utf8', maxBuffer: 10 * 1024 * 1024 }
-    );
-    return output.trim().split('\n').filter(f => f && !f.includes('node_modules') && !f.includes('.disabled') && !f.includes('backup'));
-  } catch (error) {
-    console.error('Error finding conflict files:', error.message);
-    return [];
+    let content = fs.readFileSync(filePath, 'utf8');';
+    // Remove merge conflict markers and keep the HEAD version (current branch)
+    // Clean up extra newlines;
+    content = content.replace(/\n\n\n+/g, '\n\n');';
+    fs.writeFileSync(filePath, content);
+    global.console.log(`Resolved conflicts in: ${filePath}`);
+  } catch (_error) {
+    global.console._error(`Error resolving ${filePath}:`, _error.message);
   }
 }
 
-// Resolve conflicts by taking the "ours" version (origin/main or latest)
-function resolveConflict(content) {
-  const lines = content.split('\n');
-  const result = [];
-  let inConflict = false;
-  let inOurs = false;
-  let conflictDepth = 0;
-  
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    
-    if (line.startsWith('<<<<<<<')) {
-      inConflict = true;
-      inOurs = true;
-      conflictDepth++;
-      continue;
-    }
-    
-    if (line.startsWith('=======') && inConflict) {
-      inOurs = false;
-      continue;
-    }
-    
-    if (line.startsWith('>>>>>>>') && inConflict) {
-      conflictDepth--;
-      if (conflictDepth === 0) {
-        inConflict = false;
-        inOurs = false;
-      }
-      continue;
-    }
-    
-    if (!inConflict || inOurs) {
-      result.push(line);
-    }
-  }
-  
-  return result.join('\n');
-}
+// Resolve all conflicts;
+conflictFiles.forEach(resolveConflicts);
 
-// Main execution
-const conflictFiles = findConflictFiles();
-console.log(`Found ${conflictFiles.length} files with merge conflicts`);
-
-let fixed = 0;
-for (const file of conflictFiles) {
-  const filePath = path.join(__dirname, file);
-  try {
-    if (!fs.existsSync(filePath)) continue;
-    
-    const content = fs.readFileSync(filePath, 'utf8');
-    if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      continue;
-    }
-    
-    const resolved = resolveConflict(content);
-    fs.writeFileSync(filePath, resolved, 'utf8');
-    console.log(`✓ Resolved: ${file}`);
-    fixed++;
-  } catch (error) {
-    console.error(`✗ Error resolving ${file}:`, error.message);
-  }
-}
-
-console.log(`\nResolved ${fixed} files`);
+global.console.log('All merge conflicts resolved!');';

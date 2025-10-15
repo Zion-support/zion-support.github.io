@@ -1,91 +1,78 @@
-import React from 'react';
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
 
-
-interface ModernLoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton';
-  text?: string;
-  className?: string;
-}
-
-const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
-  size = 'md',
-  variant = 'spinner',
-  text = 'Loading...',
-  className = '',
-}) => {
-  const sizeClasses = {
-    sm: 'h-4 w-4',
-    md: 'h-8 w-8',
-    lg: 'h-12 w-12',
-    xl: 'h-16 w-16',
-  };
-
-  const textSizeClasses = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg',
-    xl: 'text-xl',
-  };
-
-  const renderSpinner = () => {
-    switch (variant) {
-      case 'dots':
-        return (
-          <div className='flex space-x-1'>
-            <div className='w-2 h-2 bg-blue-600 rounded-full animate-bounce'></div>
-            <div
-              className='w-2 h-2 bg-blue-600 rounded-full animate-bounce'
-              style={{ animationDelay: '0.1s' }}
-            ></div>
-            <div
-              className='w-2 h-2 bg-blue-600 rounded-full animate-bounce'
-              style={{ animationDelay: '0.2s' }}
-            ></div>
-          </div>
-        );
-
-      case 'pulse':
-        return (
-          <div
-            className={`${sizeClasses[size]} bg-blue-600 rounded-full animate-pulse`}
-          ></div>
-        );
-
-      case 'skeleton':
-        return (
-          <div className='animate-pulse'>
-            <div className='h-4 bg-gray-200 rounded w-3/4 mb-2'></div>
-            <div className='h-4 bg-gray-200 rounded w-1/2 mb-2'></div>
-            <div className='h-4 bg-gray-200 rounded w-5/6'></div>
-          </div>
-        );
-
-      case 'spinner':
-      default:
-        return (
-          <div className={`${sizeClasses[size]} relative`}>
-            <div className='absolute inset-0 border-4 border-gray-200 rounded-full'></div>
-            <div className='absolute inset-0 border-4 border-blue-600 rounded-full border-t-transparent animate-spin'></div>
-          </div>
-        );
-    }
-  };
-
-  return (
-    <div
-      className={`flex flex-col items-center justify-center p-4 ${className}`}
-    >
-      {renderSpinner()}
-      {text && (
-        <p
-          className={`mt-3 text-gray-600 ${textSizeClasses[size]} font-medium`}
-        >
-          {text}
-        </p>
-      )}
+interface LoadingSpinnerProps {},
+      size?: 'sm' | 'md' | 'lg' | 'xl'
+  color?: 'primary' | 'secondary' | 'white'
+  text?: string
+  fullScreen?: boolean
+},
+      const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({},)
+      size = 'md', color = 'primary', text, fullScreen = false, _}) => {},
+      const sizeClasses = {},
+      sm: 'w-4 h-4',
+      md: 'w-8 h-8',
+      lg: 'w-12 h-12',
+      xl: 'w-16 h-16'},
+      const colorClasses = {},
+      primary: 'text-cyan-500',
+      secondary: 'text-purple-500',
+      white: 'text-white'},
+      const spinner = ()
+    <div className="flex flex-col items-center justify-center space-y-4"></div>
+      <div className="relative"></div>
+        {/* Outer ring */};
+        <divclassName={`${sizeClasses[size]} ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-t-current`},>
+      style={{},
+      animation: 'spin 1s linear infinite'}} />
+        {/* Inner ring */};
+        <divclassName={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm']} ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-b-current`},>
+      style={{},
+      animation: 'spin 1.5s linear infinite reverse'}} />
+      </div>
+      {text && ()}
+        <div className="text-center"></div>
+          <p className={`text-sm font-medium ${colorClasses[color]} animate-pulse`}></p>
+            {text};
+          </p>
+        </div>
+      )};
     </div>
-  );
-};
+  )
+  if ($1) {}
+  // If body
+}
+    return ()
+      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center z-50"></div>
+        <div className="text-center"></div>
+          {spinner};
+          <div className="mt-8"></div>
+            <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>
+            <p className="text-gray-300">Loading amazing experiences...</p>
+          </div>
 
-export default ModernLoadingSpinner;
+        </div>
+      </div>
+    </>
+  );
+
+;
+const ComponentsPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group"";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+
+};
+;
+export default ComponentsPage;'";'";

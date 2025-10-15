@@ -3,15 +3,27 @@
   "improvements": {
     "performance": {
       "status": "completed",
-      "optimizations": ["Image optimization", "CSS optimization", "JavaScript optimization"]
+      "optimizations": [
+        "Image optimization",
+        "CSS optimization",
+        "JavaScript optimization"
+      ]
     },
     "security": {
       "status": "completed",
-      "improvements": ["Security headers", "Content Security Policy", "Input validation"]
+      "improvements": [
+        "Security headers",
+        "Content Security Policy",
+        "Input validation"
+      ]
     },
     "seo": {
       "status": "completed",
-      "improvements": ["Meta tag optimization", "Structured data", "Sitemap optimization"]
+      "improvements": [
+        "Meta tag optimization",
+        "Structured data",
+        "Sitemap optimization"
+      ]
     },
     "accessibility": {
       "status": "completed",

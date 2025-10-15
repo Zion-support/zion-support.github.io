@@ -1,20 +1,61 @@
-import { render, screen } from '@testing-library/react';
-import { HelmetProvider } from 'react-helmet-async';
-import LoadingSpinner from '../app/components/LoadingSpinner';
-import SEOEnhancer from '../app/components/SEOEnhancer';
-
-describe('Component Tests', () => {
-  test('LoadingSpinner renders correctly', () => {
-    render(<LoadingSpinner />);
-    expect(screen.getByRole('status')).toBeInTheDocument();
-  });
-
-  test('SEOEnhancer renders without crashing', () => {
+<<<<<<< HEAD
+import React from 'react';'
+import { render, screen } from '@testing-library/react';'
+import { MemoryRouter } from 'react-router-dom';'
+import ErrorBoundary from '../app/components/ErrorBoundary';'
+describe('Component Tests', () => {'
+  test('ErrorBoundary renders without crashing', () => {'
     render(
+      <ErrorBoundary>
+        <div>Test content</div>
+      </ErrorBoundary>
+    );
+    expect(screen.getByText('Test content')).toBeInTheDocument();'
+  });
+  test('ErrorBoundary handles errors gracefully', () => {'
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});'
+    const ThrowError = () => {
+      throw new Error('Test error');'
+    };
+    render(
+      <ErrorBoundary>
+        <ThrowError />
+      </ErrorBoundary>
+    );
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();'
+    consoleSpy.mockRestore();
+  });
+  test('Components render with MemoryRouter', () => {'
+    render(
+      <MemoryRouter>
+        <div>Router test</div>
+      </MemoryRouter>
+    );
+    expect(screen.getByText('Router test')).toBeInTheDocument();'
+  });
+=======
+import { describe, test, expect } from "@jest/globals"";
+import {render} from "@testing-library/react"";
+import { HelmetProvider } from "react-helmet-async"";
+import Loading from "../app/components/Loading"";
+import SEOHead from "../app/components/SEOHead";";
+describe("Components", () => {}";
+  test("Loading component renders", () => {}";
+    render()
       <HelmetProvider>
-        <SEOEnhancer />
+        <Loading />
+      </HelmetProvider>,
+    )
+    expect(screen.getByText("Loading...")).toBeInTheDocument()";
+  })
+  
+  test("SEOHead component renders", () => {}";
+    render()
+      <HelmetProvider>
+        <SEOHead: title ="Test Title" description="Test Description" />";";
       </HelmetProvider>
     );
     expect(document.head).toBeInTheDocument();
   });
+>>>>>>> main
 });

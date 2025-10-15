@@ -1,154 +1,358 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-
-const SitemapPage: React.FC = () => {
-  const pages = [
+<<<<<<< HEAD
+import React from 'react;'
+import { ArrowRight } from 'lucide-react;'
+import { CheckCircle } from 'lucide-react;'
+import { Star } from 'lucide-react;'
+import { Users } from 'lucide-react;'
+import { Clock } from 'lucide-react;'
+import { DollarSign } from 'lucide-react;'
+import { Shield } from 'lucide-react;'
+import { Code } from 'lucide-react;'
+import { Database } from 'lucide-react;'
+import { Mail } from 'lucide-react;'
+import { Settings } from 'lucide-react;'
+import { Target } from 'lucide-react;'
+import { TrendingUp } from 'lucide-react;'
+import { PieChart } from 'lucide-react;'
+import { MessageSquare } from 'lucide-react;'
+import { Heart } from 'lucide-react;'
+import { Globe } from 'lucide-react;'
+import { Smartphone } from 'lucide-react;'
+import { Network } from 'lucide-react;'
+import { Lock } from 'lucide-react;'
+import { Cpu } from 'lucide-react;'
+import { Wifi } from 'lucide-react;'
+import { Building2 } from 'lucide-react;'
+import { Briefcase } from 'lucide-react;'
+import { Lightbulb } from 'lucide-react;'
+import { Link } from 'react-router-dom;'
+import EnhancedSEO from '../components/EnhancedSEO;'
+const Page = () => {
+  const features = [
     {
-      category: 'Main Pages',
-      links: [
-        { title: 'Home', url: '/', description: 'Zion Tech Group homepage' },
-        { title: 'About Us', url: '/about', description: 'Learn about our company and mission' },
-        { title: 'Contact', url: '/contact', description: 'Get in touch with our team' },
-        { title: 'Team', url: '/team', description: 'Meet our expert team' },
-      ]
+      icon: <CheckCircle className="w-8 h-8" />,""
+      title: 'Advanced Features',''
+      description: 'Cutting-edge technology for maximum efficiency''
     },
     {
-      category: 'Services',
-      links: [
-        { title: 'All Services', url: '/services', description: 'Overview of all our services' },
-        { title: 'AI Services', url: '/ai-services', description: 'Artificial Intelligence solutions' },
-        { title: 'IT Services', url: '/it-services', description: 'Information Technology services' },
-        { title: 'Micro SaaS Solutions', url: '/micro-saas', description: 'Micro Software as a Service solutions' },
-        { title: 'Cybersecurity', url: '/cybersecurity', description: 'Cybersecurity and protection services' },
-        { title: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum computing solutions' },
-        { title: 'Autonomous Systems', url: '/autonomous-systems', description: 'Autonomous system development' },
-        { title: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Blockchain and Web3 solutions' },
-        { title: 'Business Intelligence', url: '/business-intelligence', description: 'Business intelligence solutions' },
-        { title: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Internet of Things and edge computing' },
-      ]
+      icon: <Shield className="w-8 h-8" />,""
+      title: 'Secure & Reliable',''
+      description: 'Enterprise-grade security and 99.9% uptime''
     },
     {
-      category: 'Solutions',
-      links: [
-        { title: 'Enterprise Solutions', url: '/enterprise', description: 'Enterprise-level solutions and services' },
-        { title: 'Case Studies', url: '/case-studies', description: 'Success stories and client results' },
-        { title: 'Services Advertising', url: '/services-advertising', description: 'Advertising and marketing services' },
-      ]
-    },
-    {
-      category: 'Resources',
-      links: [
-        { title: 'Blog & Insights', url: '/blog', description: 'Latest AI trends and insights' },
-        { title: 'Technical Guides', url: '/guides', description: 'Implementation guides and roadmaps' },
-        { title: 'Privacy Policy', url: '/privacy', description: 'Our privacy policy and data protection' },
-        { title: 'Terms of Service', url: '/terms', description: 'Terms and conditions of service' },
-      ]
+      icon: <Users className="w-8 h-8" />,""
+      title: 'Expert Support',''
+      description: '24/7 support from our team of specialists''
     }
   ];
-
   return (
-    <>
-      <Helmet>
-        <title>Sitemap | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place."
-        />
-        <meta name="robots" content="index, follow" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Sitemap</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Complete overview of all pages and resources available on our website. 
-              Find what you're looking for quickly and easily.
+    <></>
+      <EnhancedSEO
+        title="Page - Zion Tech Group""
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs.""
+        keywords="page, business solutions, technology services, professional services""
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto text-center">""
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
+              Page
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">""
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
+              Professional page services designed to help your business succeed and grow.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/demo""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View Demo
+              </Link>
+            </div>
           </div>
-
-          {/* Sitemap Content */}
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {pages.map((section, sectionIndex) => (
-                <div key={sectionIndex} className="bg-white rounded-lg shadow-md p-6">
-                  <h2 className="text-xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-2">
-                    {section.category}
-                  </h2>
-                  <ul className="space-y-3">
-                    {section.links.map((link, linkIndex) => (
-                      <li key={linkIndex}>
-                        <Link
-                          to={link.url}
-                          className="block text-indigo-600 hover:text-indigo-700 hover:underline transition-colors"
-                        >
-                          <div className="font-medium">{link.title}</div>
-                          <div className="text-sm text-gray-500 mt-1">{link.description}</div>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+        </section>
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto">""
+            <div className="text-center mb-16">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
+                Why Choose Our Page Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">""
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">""
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
+                  <p className="text-gray-300">{feature.description}</p>""
                 </div>
               ))}
             </div>
           </div>
-
-          {/* Additional Information */}
-          <div className="mt-16 bg-white rounded-lg shadow-md p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              Additional Information
+        </section>
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+          <div className="max-w-4xl mx-auto text-center">""
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">""
+              Ready to Get Started?
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
-                <ul className="space-y-2">
-                  <li>
-                    <Link to="/" className="text-indigo-600 hover:text-indigo-700">
-                      ← Back to Homepage
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/contact" className="text-indigo-600 hover:text-indigo-700">
-                      Contact Us
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/about" className="text-indigo-600 hover:text-indigo-700">
-                      About Zion Tech Group
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Need Help?</h3>
-                <p className="text-gray-600 mb-4">
-                  Can't find what you're looking for? Our team is here to help.
-                </p>
-                <div className="space-y-2">
-                  <p className="text-sm text-gray-600">
-                    <strong>Phone:</strong> <a href="tel:+13026009898" className="text-indigo-600">+1 302 600 9898</a>
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    <strong>Email:</strong> <a href="mailto:kleber@ziontechgroup.com" className="text-indigo-600">kleber@ziontechgroup.com</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+            <p className="text-xl text-gray-300 mb-8">""
+              Let's discuss how our page services can help your business succeed.''
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/services""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View All Services
+              </Link>
+=======
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
 
-          {/* SEO Information */}
-          <div className="mt-8 text-center text-sm text-gray-500">
-            <p>
-              Last updated: {new Date().toLocaleDateString()} | 
-              Total pages: {pages.reduce((total, section) => total + section.links.length, 0)}
+  // return statement
+        <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></div>
+          <div className="max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"></span>
+                Sitemap
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+              Navigate through our complete website directory. Find all our AI services, _micro SAAS solutions, _5G technology, and company information.
             </p>
           </div>
         </div>
+
+        {/* Main Pages */};
+        <div className="py-16 px-4 sm:px-6 lg:px-8"></div>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-12"></div>
+              <h2 className="text-3xl font-bold text-white mb-4 flex items-center justify-center"></h2>
+                <Globe className="w-8 h-8 mr-3 text-cyan-400" />
+                Main Pages
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+              {mainPages.map((page, index) => ()}
+                <>
+                  key={index},
+      to={page.path},
+      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                ></>
+                  <div className="flex items-center justify-between"></div>
+                    <div></div>
+                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors"></h3>
+                        {page.name};
+                      </h3>
+                      <p className="text-gray-300 text-sm mt-1">{page.description}</p>
+                    </div>
+                    <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </>
+              ))};
+>>>>>>> main
+            </div>
+          </div>
+        </div>
+
+        {/* AI Services */};
+        <div className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20"></div>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-12"></div>
+              <h2 className="text-3xl font-bold text-white mb-4 flex items-center justify-center"></h2>
+                <className="w-8 h-8 mr-3 text-purple-400" />
+                AI Services
+              </h2>
+              <p className="text-gray-300">Advanced artificial intelligence solutions for every business need</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"></div>
+              {aiServices.map((service, index) => ()}
+                <>
+                  key={index},
+      to={service.path},
+      className="group bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"
+                ></>
+                  <div className="flex items-center justify-between"></div>
+                    <span className="text-white text-sm group-hover:text-purple-300 transition-colors"></span>
+                      {service.name};
+                    </span>
+                    <ArrowRight className="w-4 h-4 text-purple-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </>
+              ))};
+            </div>
+          </div>
+        </div>
+
+        {/* Micro SAAS Services */};
+        <div className="py-16 px-4 sm:px-6 lg:px-8"></div>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-12"></div>
+              <h2 className="text-3xl font-bold text-white mb-4 flex items-center justify-center"></h2>
+                <className="w-8 h-8 mr-3 text-yellow-400" />
+                Micro SAAS Solutions
+              </h2>
+              <p className="text-gray-300">Ready-to-use business software solutions</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"></div>
+              {microSaasServices.map((service, index) => ()}
+                <>
+                  key={index},
+      to={service.path},
+      className="group bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"
+                ></>
+                  <div className="flex items-center justify-between"></div>
+                    <span className="text-white text-sm group-hover:text-yellow-300 transition-colors"></span>
+                      {service.name};
+                    </span>
+                    <ArrowRight className="w-4 h-4 text-yellow-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </>
+              ))};
+            </div>
+          </div>
+        </div>
+
+        {/* 5G Solutions */};
+        <div className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20"></div>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-12"></div>
+              <h2 className="text-3xl font-bold text-white mb-4 flex items-center justify-center"></h2>
+                <className="w-8 h-8 mr-3 text-cyan-400" />
+                5G Solutions
+              </h2>
+              <p className="text-gray-300">Next-generation 5G technology solutions</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"></div>
+              {fiveGServices.map((service, index) => ()}
+                <>
+                  key={index},
+      to={service.path},
+      className="group bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"
+                ></>
+                  <div className="flex items-center justify-between"></div>
+                    <span className="text-white text-sm group-hover:text-cyan-300 transition-colors"></span>
+                      {service.name};
+                    </span>
+                    <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </>
+              ))};
+            </div>
+          </div>
+        </div>
+
+        {/* Legal Pages */};
+        <div className="py-16 px-4 sm:px-6 lg:px-8"></div>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-12"></div>
+              <h2 className="text-3xl font-bold text-white mb-4 flex items-center justify-center"></h2>
+                <className="w-8 h-8 mr-3 text-gray-400" />
+                Legal & Policies
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+              {legalPages.map((page, index) => ()}
+                <>
+                  key={index},
+      to={page.path},
+      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                ></>
+                  <div className="flex items-center justify-between"></div>
+                    <span className="text-white text-lg font-semibold group-hover:text-gray-300 transition-colors"></span>
+                      {page.name};
+                    </span>
+                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </>
+              ))};
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Information */};
+        <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h2 className="text-3xl font-bold text-white mb-6"></h2>
+              Need Help Finding Something?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8"></p>
+              Can't find what you're looking for? Contact us and we'll help you navigate to the right page.'
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <>
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105"
+              ></>
+                Contact Us
+              </>
+              <>
+                to="/support"
+                className="border-2 border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+              ></>
+                Get Support
+              </>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </>
+<<<<<<< HEAD
+    </div>
   );
 };
+const page = React.lazy(() => import('./page'));''
+export default page;
+=======
+    </>
+  )
 
-export default SitemapPage;
+    },
+    {}
+
+;
+const SitemapPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Sitemap - Zion Tech Group"";
+        description="Professional sitemap solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Sitemap</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>,
+  )
+    };
+{
+
+export default SitemapPage;'";'";
+}
+>>>>>>> main

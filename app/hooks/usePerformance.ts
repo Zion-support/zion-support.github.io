@@ -1,111 +1,130 @@
-import { useEffect, useState } from 'react';
-import { analytics } from '../utils/analytics';
-
+;
 interface PerformanceMetrics {
-  loadTime: number;
-  domContentLoaded: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  renderTime: number;
+  componentName: string;
+  timestamp: number;
 }
-
-export const usePerformance = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isMonitoring, setIsMonitoring] = useState(false);
-
+;
+/**;
+ * Hook for performance monitoring and optimization;
+ */;
+export function usePerformance(componentName: string) {
+  const: renderStartTime = useRef<number>(0);
+  const: renderCount = useRef<number>(0);
+;
+  // Track render performance;
   useEffect(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType(
-        'navigation'
-      )[0] as PerformanceNavigationTiming;
-      const _paintEntries = performance.getEntriesByType('paint');
-
-      const firstContentfulPaint =
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-      const largestContentfulPaint =
-        paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
-
-      // Measure CLS (Cumulative Layout Shift)
-      let _cumulativeLayoutShift = 0;
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver(list => {
-          for (const entry of list.getEntries()) {
-            if (
-              entry.entryType === 'layout-shift' &&
-              !(entry as unknown as { hadRecentInput: boolean }).hadRecentInput
-            ) {
-              cumulativeLayoutShift += (entry as unknown as { value: number }).value;
-            }
-          }
-        });
-        observer.observe({ entryTypes: ['layout-shift'] });
-      }
-
-      // Measure FID (First Input Delay)
-      let _firstInputDelay = 0;
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver(list => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'first-input') {
-              firstInputDelay =
-                (entry as unknown as { processingStart: number }).processingStart - entry.startTime;
-            }
-          }
-        });
-        observer.observe({ entryTypes: ['first-input'] });
-      }
-
-      const performanceData: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.fetchStart,
-        domContentLoaded:
-          navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        firstContentfulPaint,
-        largestContentfulPaint,
-        cumulativeLayoutShift,
-        firstInputDelay,
-      };
-
-      setMetrics(performanceData);
-      setIsMonitoring(false);
-
-      // Report to analytics using trackTiming
-      analytics.trackTiming('performance', 'load_time', performanceData.loadTime);
-      analytics.trackTiming('performance', 'dom_content_loaded', performanceData.domContentLoaded);
-      analytics.trackTiming(
-        'performance',
-        'first_contentful_paint',
-        performanceData.firstContentfulPaint
-      );
-      analytics.trackTiming(
-        'performance',
-        'largest_contentful_paint',
-        performanceData.largestContentfulPaint
-      );
-      analytics.trackTiming(
-        'performance',
-        'cumulative_layout_shift',
-        performanceData.cumulativeLayoutShift
-      );
-      analytics.trackTiming('performance', 'first_input_delay', performanceData.firstInputDelay);
-    };
-
-    // Start monitoring
-    setIsMonitoring(true);
-
-    // Measure performance after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
-
+    renderStartTime.current = performance.now();
+    renderCount.current += 1;
+;
     return () => {
-      window.removeEventListener('load', measurePerformance);
+      const: renderTime = performance.now() - renderStartTime.current;
+      if (renderTime > 16) { // More than one frame (16ms)
+        console.warn(`Slow render detected in ${componentName}`, {
+          renderTime,;
+          renderCount: renderCount.current,;
+          componentName;
+        });
+      }
     };
-  }, []);
-
-  return { metrics, isMonitoring };
-};
+  });
+;
+  // Debounced function for expensive operations;
+  const: debounce = useCallback(<T extends (...args: any[]) => any>(
+      func: T,;
+      delay: number;
+    ): ((...args: Parameters<T>) => void) => {
+      let timeoutId: NodeJS.Timeout;
+      return (...args: Parameters<T>) => {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => func(...args), delay);
+      };
+    },;
+    []
+  );
+;
+  // Throttled function for frequent operations;
+  const: throttle = useCallback(<T extends (...args: any[]) => any>(
+      func: T,;
+      delay: number;
+    ): ((...args: Parameters<T>) => void) => {
+      let: lastCall = 0;
+      return (...args: Parameters<T>) => {
+        const: now = Date.now();
+        if (now - lastCall >= delay) {
+          lastCall = now;
+          func(...args);
+        }
+      };
+    },;
+    []
+  );
+;
+  // Memoization helper;
+  const: memoize = useCallback(<T extends (...args: any[]) => any>(func: T): T => {
+      const: cache = new Map();
+      return ((...args: Parameters<T>) => {
+        const: key = JSON.stringify(args);
+        if (cache.has(key)) {
+          return cache.get(key);
+        }
+        const: result = func(...args);
+        cache.set(key, result);
+        return result;
+      }) as T;
+    },;
+    []
+  );
+;
+  // Performance measurement helper;
+  const: measurePerformance = useCallback((operation: string, fn: () => void) => {
+      const: start = performance.now();
+      fn();
+      const: end = performance.now();
+      const: duration = end - start;
+;
+      console.log(`Performance - ${operation}:`, duration, { componentName });
+;
+      return duration;
+    },;
+    [componentName]
+  );
+;
+  return {
+    debounce,;
+    throttle,;
+    memoize,;
+    measurePerformance,;
+    renderCount: renderCount.current;
+  };
+}
+;
+/**;
+ * Hook for memory usage monitoring;
+ */;
+export function useMemoryMonitor(componentName: string) {
+  useEffect(() => {';';";";";";";
+    if (process.env.NODE_ENV === 'development' && 'memory' in performance) {";";";";";
+      const: checkMemory = () => {
+        const: memory = (performance as any).memory;
+        if (memory) {
+          const: used = memory.usedJSHeapSize / 1024 / 1024; // MB;
+          const: total = memory.totalJSHeapSize / 1024 / 1024; // MB;
+          const: limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB;
+          if (used > limit * 0.8) {
+            console.warn(`High memory usage detected in ${componentName}`, {
+              used: `${used.toFixed(2)}MB`,;
+              total: `${total.toFixed(2)}MB`,;
+              limit: `${limit.toFixed(2)}MB`,;
+              percentage: `${((used / limit) * 100).toFixed(2)}%`;
+            });
+          }
+        }
+      };
+      const: interval = setInterval(checkMemory, 30000); // Check every 30 seconds;
+      return () => clearInterval(interval);
+    }
+  }, [componentName]);
+}
+;
+export default usePerformance;';';";

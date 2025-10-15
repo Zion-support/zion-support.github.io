@@ -1,99 +1,208 @@
-#!/usr/bin/env node
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
 
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
+// Get all TypeScript/JavaScript files in the app directory
+function getAllFiles(dir, fileList = []) {
+  const files = fs.readdirSync(dir);
 
-// Files to fix
-const filesToFix = [
-  'app/blog/ai-2025-january-cutting-edge-trends-breakthrough/page.tsx',
-  'app/blog/ai-2025-march-autonomous-enterprise-operations-revolution/page.tsx',
-  'app/blog/ai-2026-adaptive-neural-architectures-breakthrough/page.tsx',
-  'app/blog/ai-2026-advanced-neural-optimization-revolution/page.tsx',
-  'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
-  'app/blog/ai-2026-april-ultimate-breakthrough-revolution/page.tsx',
-  'app/blog/ai-2026-autonomous-agent-factories/page.tsx',
-  'app/blog/ai-2026-autonomous-business-intelligence-breakthrough/page.tsx',
-  'app/blog/ai-2026-autonomous-business-intelligence-mega-breakthrough/page.tsx',
-  'app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx',
-  'app/blog/ai-2026-autonomous-enterprise-automation-mega-breakthrough/page.tsx',
-  'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
-  'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx',
-  'app/blog/ai-2026-enterprise-breakthrough/page.tsx',
-  'app/blog/ai-2026-february-mega-breakthrough-revolution/page.tsx',
-  'app/blog/ai-2026-february-ultimate-consciousness-breakthrough/page.tsx',
-  'app/blog/ai-2026-hyperconscious-computing-revolution/page.tsx',
-  'app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx',
-  'app/blog/ai-trends-2026-future-enterprise-transformation/page.tsx',
-  'app/contact/page.tsx',
-  'app/privacy/page.tsx',
-  'app/team/page.tsx',
-  'app/terms/page.tsx'
+  files.forEach((file) => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      getAllFiles(filePath, fileList);
+    } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
+      fileList.push(filePath);
+    }
+  });
+
+  return fileList;
+}
+
+// Common unused imports to remove
+const unusedImports = [
+  "Helmet",
+  "Star",
+  "Users",
+  "Award",
+  "Zap",
+  "Shield",
+  "Brain",
+  "Cloud",
+  "Code",
+  "Target",
+  "Globe",
+  "Database",
+  "Smartphone",
+  "Lock",
+  "TrendingUp",
+  "Settings",
+  "Calendar",
+  "CheckSquare",
+  "FileText",
+  "MessageCircle",
+  "Heart",
+  "DollarSign",
+  "Box",
+  "Monitor",
+  "LinkIcon",
+  "Server",
+  "Package",
+  "Mic",
+  "Workflow",
+  "Eye",
+  "Wifi",
+  "MessageSquare",
+  "ShoppingCart",
+  "Phone",
+  "Mail",
+  "MapPin",
+  "BarChart3",
+  "Sparkles",
+  "Cpu",
+  "Satellite",
+  "AlertTriangle",
+  "BarChart",
+  "PieChart",
+  "Receipt",
+  "CreditCard",
+  "Banknote",
+  "Camera",
+  "Image",
+  "Video",
+  "RotateCcw",
+  "Download",
+  "Upload",
+  "Lightbulb",
+  "Clock",
+  "MessageCircle",
+  "Filter",
+  "Share",
+  "Bell",
+  "RefreshCw",
+  "Pause",
+  "SkipForward",
+  "SkipBack",
+  "Repeat",
+  "Shuffle",
+  "ThumbsUp",
+  "ThumbsDown",
+  "Bookmark",
+  "Flag",
+  "Info",
+  "HelpCircle",
+  "Plus",
+  "Minus",
+  "Edit",
+  "Trash2",
+  "Save",
+  "Copy",
+  "Paste",
+  "Cut",
+  "Undo",
+  "Redo",
+  "Move",
+  "Maximize",
+  "Minimize",
+  "Square",
+  "Circle",
+  "Triangle",
+  "Hexagon",
+  "Octagon",
+  "Pentagon",
+  "Star2",
+  "Heart2",
+  "Smile",
+  "Frown",
+  "Meh",
+  "Laugh",
+  "Angry",
+  "Surprised",
+  "Confused",
+  "Wink",
+  "Kiss",
+  "Tongue",
+  "Wink2",
+  "Kiss2",
+  "Tongue2",
+  "Wink3",
+  "Kiss3",
+  "Tongue3",
+  "Wink4",
+  "Kiss4",
+  "Tongue4",
+  "Wink5",
+  "Kiss5",
+  "Tongue5",
+  "Wink6",
+  "Kiss6",
+  "Tongue6",
+  "Wink7",
+  "Kiss7",
+  "Tongue7",
+  "Wink8",
+  "Kiss8",
+  "Tongue8",
 ];
 
-// Fix unused Link imports
-filesToFix.forEach(filePath => {
+function removeUnusedImports(filePath) {
   try {
-    const fullPath = path.join(__dirname, filePath);
-    if (fs.existsSync(fullPath)) {
-      let content = fs.readFileSync(fullPath, 'utf8');
-      
-      // Remove unused Link import
-      content = content.replace(/import { Link } from 'react-router-dom';\n/g, '');
-      content = content.replace(/import { Link } from 'react-router-dom';\r\n/g, '');
-      content = content.replace(/import { Link } from 'react-router-dom';\n\n/g, '');
-      
-      // Remove unused Link from multi-import
-      content = content.replace(/import { [^}]*Link[^}]* } from 'react-router-dom';\n/g, '');
-      content = content.replace(/import { [^}]*Link[^}]* } from 'react-router-dom';\r\n/g, '');
-      
-      fs.writeFileSync(fullPath, content);
-      console.log(`Fixed: ${filePath}`);
+    let content = fs.readFileSync(filePath, "utf8");
+    let modified = false;
+
+    // Remove unused imports from lucide-react
+    const lucideImportRegex =
+      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g;
+
+    content = content.replace(lucideImportRegex, (match, imports) => {
+      const importList = imports.split(",").map((imp) => imp.trim());
+      const usedImports = importList.filter((imp) => {
+        // Check if the import is actually used in the file
+        const importName = imp.split(" as ")[0].trim();
+        const usageRegex = new RegExp(`\\b${importName}\\b`, "g");
+        const usageCount = (content.match(usageRegex) || []).length;
+        return usageCount > 1; // More than 1 because the import itself counts as 1
+      });
+
+      if (usedImports.length === 0) {
+        modified = true;
+        return ""; // Remove the entire import line
+      } else if (usedImports.length < importList.length) {
+        modified = true;
+        return `import { ${usedImports.join(", ")} } from 'lucide-react';`;
+      }
+
+      return match;
+    });
+
+    // Remove unused Helmet imports
+    if (
+      content.includes("import { Helmet } from 'react-helmet-async';") &&
+      !content.includes("<Helmet>")
+    ) {
+      content = content.replace(
+        /import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];?\n?/g,
+        "",
+      );
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed unused imports in: ${filePath}`);
     }
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
   }
+}
+
+// Get all files and process them
+const files = getAllFiles("./app");
+console.log(`Processing ${files.length} files...`);
+
+files.forEach((file) => {
+  removeUnusedImports(file);
 });
 
-// Fix other common issues
-const otherFiles = [
-  'app/not-found.tsx',
-  'app/guides/ai-2026-implementation-roadmap/page.tsx',
-  'app/guides/ai-2027-implementation-roadmap/page.tsx'
-];
-
-otherFiles.forEach(filePath => {
-  try {
-    const fullPath = path.join(__dirname, filePath);
-    if (fs.existsSync(fullPath)) {
-      let content = fs.readFileSync(fullPath, 'utf8');
-      
-      // Remove unused icon imports
-      if (filePath.includes('not-found.tsx')) {
-        content = content.replace(/import { [^}]*ArrowLeft[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*Search[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*BookOpen[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*Users[^}]* } from 'lucide-react';\n/g, '');
-      }
-      
-      if (filePath.includes('ai-2026-implementation-roadmap')) {
-        content = content.replace(/import { [^}]*Target[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*CheckCircle[^}]* } from 'lucide-react';\n/g, '');
-      }
-      
-      if (filePath.includes('ai-2027-implementation-roadmap')) {
-        content = content.replace(/import { [^}]*Calendar[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*User[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*Tag[^}]* } from 'lucide-react';\n/g, '');
-        content = content.replace(/import { [^}]*Cpu[^}]* } from 'lucide-react';\n/g, '');
-      }
-      
-      fs.writeFileSync(fullPath, content);
-      console.log(`Fixed: ${filePath}`);
-    }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-});
-
-console.log('Fixed unused imports!');
+console.log("Unused imports cleanup completed!");

@@ -1,41 +1,116 @@
-import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-
+import React from 'react;'
+import { Loader2 } from 'lucide-react;'
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  color?: 'indigo' | 'blue' | 'green' | 'purple';
+  size?: 'sm' | 'md' | 'lg' | 'xl;''
   text?: string;
+  fullScreen?: boolean;
   className?: string;
 }
-
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  color = 'indigo',
-  text,
-  className = '',
+  size = 'md',''
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12',
+    sm: 'w-4 h-4',''
+    md: 'w-8 h-8',''
+    lg: 'w-12 h-12',''
+    xl: 'w-16 h-16''
   };
+      </div>
+    );
+  }
+=======
 
-  const colorClasses = {
-    indigo: 'text-indigo-600',
-    blue: 'text-blue-600',
-    green: 'text-green-600',
-    purple: 'text-purple-600',
-  };
+import React from 'react',
+      interface LoadingSpinnerProps {}
+  size?: 'sm' | 'md' | 'lg',
+      text?: string,
+      className?: string,
+      fullScreen?: boolean;
+}
 
-  return (
-    <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-live="polite">
-      <div
-        className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin rounded-full border-4 border-t-transparent border-current`}
-        aria-hidden="true"
-      />
-      {text && <p className="mt-2 text-sm text-gray-600">{text}</p>}
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({)}
+  size = 'md', text = 'Loading...', className = '', fullScreen = false
+}) => {}
+  const sizeClasses = {}
+    sm: 'h-4 w-4',
+    md: 'h-8 w-8',
+    lg: 'h-12 w-12'
+  },
+      return ()
+    <div className={`flex flex-col items-center justify-center p-8 ${className}`}>
+      <divdata-testid="loading-spinner">
+        className={`animate-spin rounded-full border-2 border-gray-300 border-t-purple-600 ${sizeClasses[size]}`}
+      ></div>
+      {text && <p className="mt-2 text-gray-600">{text}</p>}
+    </div>
+  )
+    },
+    {}
+export default Component;
+
+import React from 'react';;
+;
+interface LoadingSpinnerProps {
+  fullScreen?: boolean;
+  text?: string;';';
+  size?: 'sm' | 'md' | 'lg';
+}
+';';
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ '',
+  size = 'md', text = 'Loading...', className = '', fullScreen = false;: value;";
+}) => {: value';';
+  const sizeClasses = {': value';
+    sm: 'h-4 w-4','';
+    md: 'h-8 w-8','';
+    lg: 'h-12 w-12',
+  },;
+      return (
+    <div className ={`flex flex-col items-center justify-center p-8 ${className}`}>: value;
+      <div;>;
+        data-testid="loading-spinner">: value`;
+        className={`animate-spin rounded-full border-2 border-gray-300 border-t-purple-600 ${sizeClasses[size]}`}>: value";
+      ></div>"";
+      {text && <p className ="mt-2 text-gray-600">{text}</p>}: value;";
+    </div>;
+  );
+    };
+{
+
+  const spinner = (";
+    <div className ="flex flex-col items-center justify-center space-y-4">`;
+      <div className ={`${sizeClasses[size]} border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin`} />";
+      {text && <p className ="text-gray-600">{text}</p>}";
+    </div>;
+  );
+;
+  if (fullScreen) {
+    return (";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">`;
+        {spinner}
+      </div>;
+    );
+  }
+;
+>>>>>>> main
+  return spinner;
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-purple-600`}></div>
+      {text && (
+        <p className="mt-2 text-sm text-gray-400">{text}</p>""
+      )}
     </div>
   );
 };
+<<<<<<< HEAD
+export default LoadingSpinner;
+=======
 
 export default LoadingSpinner;
+
+;
+export default LoadingSpinner;'";'";
+
+>>>>>>> main

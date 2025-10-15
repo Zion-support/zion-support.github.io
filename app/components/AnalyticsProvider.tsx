@@ -1,161 +1,155 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-
-import { logger } from '../utils/logger';
-
-interface AnalyticsEvent {
-  event: string;
-  category: string;
-  action: string;
-  label?: string;
-  value?: number;
-}
-
+<<<<<<< HEAD
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';'
 interface AnalyticsContextType {
-  trackEvent: (event: AnalyticsEvent) => void;
-  trackPageView: (page: string) => void;
-  trackPerformance: (metric: string, value: number) => void;
-  trackError: (error: Error, context?: string) => void;
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
-  undefined
-);
-
-export const useAnalytics = () => {
-  const _context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
-
+  track: (event: string, properties?: Record<string, any>) => void;
+  identify: (userId: string, traits?: Record<string, any>) => void;
+  page: (name: string, properties?: Record<string, any>) => void}
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+export default AnalyticsProvider; cursor/analyze-improve-and-deploy-application-30da
 interface AnalyticsProviderProps {
-  children: React.ReactNode;
-  googleAnalyticsId?: string;
-  enableDebug?: boolean;
-}
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
-  googleAnalyticsId = process.env.NEXT_PUBLIC_GA_ID,
-  enableDebug = process.env['NODE_ENV'] === 'development',
-}) => {
-  const [isInitialized, setIsInitialized] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === 'undefined' || !googleAnalyticsId) return;
-
-    // Initialize Google Analytics
-    const _script = document.createElement('script');
-    script.async = true;
-    script['src'] = `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`;
-    document.head.appendChild(script);
-
-    script.onload = () => {
-      // Initialize gtag
-      (window as unknown as { dataLayer: unknown[] }).dataLayer = (window as unknown as { dataLayer: unknown[] }).dataLayer || [];
-      function gtag(...args: unknown[]) {
-        (window as unknown as { dataLayer: unknown[] }).dataLayer.push(args);
-      }
-      (window as unknown as { gtag: typeof gtag }).gtag = gtag;
-
-      gtag('js', new Date());
-      gtag('config', googleAnalyticsId, {
-        page_title: document.title,
+  children: ReactNode}
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  const track = (event: string, properties?: Record<string, any>) => {
+    // Analytics tracking implementation;
+    console.log('Analytics Event:', event, properties);''
+    // In a real implementation, you would send this to your analytics service;''
+    if (typeof window !== 'undefined' && (window as any).gtag) {;''
+      (window as any).gtag('event', event, properties);}''
+    }
+  };
+  const identify = (userId: string, traits?: Record<string, any>) => {''
+    console.log('Analytics Identify:', userId, traits);''
+    if (typeof window !== 'undefined' && (window as any).gtag) {;''
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {;''
+        user_id: userId,
+        custom_map: traits})}
+  };
+  const page = (name: string, properties?: Record<string, any>) => {''
+    console.log('Analytics Page:', name, properties);''
+    if (typeof window !== 'undefined' && (window as any).gtag) {;''
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {;''
+        page_title: name,
         page_location: window.location.href,
-      });
-
-      setIsInitialized(true);
-    };
-
-    return () => {
-      // Cleanup
-      if (script.parentNode) {
-        script.parentNode.removeChild(script);
-      }
-    };
-  }, [googleAnalyticsId]);
-
-  const trackEvent = (event: AnalyticsEvent) => {
-    if (!isInitialized || typeof window === 'undefined') return;
-
-    if (enableDebug) {
-      logger.debug('Analytics Event', 'Analytics', { event: JSON.stringify(event) });
-    }
-
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', event.action, {
-        event_category: event.category,
-        event_label: event.label,
-        value: event.value,
-      });
-    }
+        ...properties})}
   };
-
-  const trackPageView = (page: string) => {
-    if (!isInitialized || typeof window === 'undefined') return;
-
-    if (enableDebug) {
-      logger.debug('Page View', 'Analytics', { page });
-    }
-
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('config', googleAnalyticsId, {
-        page_title: document.title,
-        page_location: page,
-      });
-    }
-  };
-
-  const trackPerformance = (metric: string, value: number) => {
-    if (!isInitialized || typeof window === 'undefined') return;
-
-    if (enableDebug) {
-      logger.perf(metric, value);
-    }
-
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'web_vitals', {
-        event_category: 'Performance',
-        event_label: metric,
-        value: Math.round(value),
-        non_interaction: true,
-      });
-    }
-  };
-
-  const trackError = (error: Error, context?: string) => {
-    if (!isInitialized || typeof window === 'undefined') return;
-
-    if (enableDebug) {
-       
-      // eslint-disable-next-line no-console
-      console.error('Analytics Error:', error, context);origin/cursor/fix-errors-and-merge-to-main-6395
-    }
-
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          context: context || 'unknown',
-        },
-      });
-    }
-  };
-
+  useEffect(() => {
+    // Initialize analytics;
+    if (typeof window !== 'undefined') {;''
+      // Load Google Analytics or other analytics scripts here;
+      console.log('Analytics initialized')}''
+  }, []);
   const value: AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-    trackPerformance,
-    trackError,
-  };
-
+    track,
+    identify,
+    page};
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContext.Provider>
-  );
+    </AnalyticsContext.Provider>)};
+const  (): AnalyticsContextType => {
+  const context = useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider')}''
+  return context};
+export default AnalyticsProvider;
+=======
+
+import React, { createContext, useContext, useEffect, ReactNode } from "react",
+      declare global {},
+      interface Window {},
+      gtag: (_...args: unknown[]) => void
+    },
+    {}
+},
+      interface AnalyticsContextType {},
+      trackEvent: (_eventName: string, parameters?: Record<string, _unknown>) => void,
+      trackPageView: (_pageName: string) => void
+    },
+    {}
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>()
+  undefined;
+)
+export const useAnalytics = () => {}
+}const context = useContext(AnalyticsContext)
+  if ($1) {}
+  // If body
+}
+    throw new Error("useAnalytics must be used within an AnalyticsProvider")
+  };
+  return context
+}
 };
 
-export default AnalyticsProvider;
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};)
+  children}) => {};
+  useEffect(() => {};
+    if (typeof window !== "undefined") {};
+      // Google Analytics
+      if (process.env.NODE_ENV === "production") {},
+      const script = document.createElement("script")
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
+        script.async = true
+        document.head.appendChild(script)
+        window.gtag =
+          window.gtag ||
+          function (...args: unknown[]) {};
+            (window.gtag as any).q = (window.gtag as any).q || [];
+            (window.gtag as any).q.push(args)
+    },
+    {}
+        window.gtag("js", new Date()),
+      window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID || "")
+    },
+    {}
+    };
+  }, []),
+      const trackEvent = (_eventName: string, parameters?: Record<string, _unknown>, ) => {},
+      if (typeof window !== "undefined" && window.gtag) {},
+      window.gtag("event", eventName, parameters)
+    },
+    {}
+  },
+      const trackPageView = (_pageName: string) => {},
+      if (typeof window !== "undefined" && window.gtag) {},
+      window.gtag("config", "GA_MEASUREMENT_ID", {},)
+      page_title: pageName,
+      page_location: window.location.href})
+    }
+    },
+    {}
+  const value: AnalyticsContextType = {},
+      trackEvent,
+      trackPageView},
+      return ()
+    <AnalyticsContext.Provider value={value}></AnalyticsContext.Provider>
+      {children};
+    </AnalyticsContext.Provider>
+  )
+}
+};
+
+export default AnalyticsProvider
+
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+const ComponentsPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group"";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+};
+;
+export default ComponentsPage;'";'";
+
+>>>>>>> main

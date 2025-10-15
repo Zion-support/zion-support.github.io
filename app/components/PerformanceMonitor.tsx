@@ -1,131 +1,153 @@
-import React, { useState, useEffect } from 'react';
-import { logger } from '../utils/logger';
-
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react;'
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
+  cls: number | null;
+  fcp: number | null;}
+  lcp: number | null;}
+  ttfb: number | null;}
+  loadTime: number | null;}
 }
-
-interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enableConsoleLogging?: boolean;
-  updateInterval?: number;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  onMetricsUpdate,
-  enableConsoleLogging = false,
-  updateInterval = 1000,
-}) => {
+const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    fps: 0,
+    cls: null,
+    fcp: null,
+    lcp: null,
+    ttfb: null,
+    loadTime: null
   });
-  const [performanceScore, setPerformanceScore] = useState(100);
-
   useEffect(() => {
-    // const _reportWebVitals = (_metric: { name: string; value: number }) => {
-    //   // Log to console in development (only on client side)
-    //   if (typeof window !== 'undefined' && enableConsoleLogging) {
-    //     logger.info('Web Vital captured', { name: _metric.name, value: _metric.value });
-    //   }
-    // };
-
-    // Monitor Core Web Vitals
-    const navigation = performance.getEntriesByType('navigation')[0] as
-      | PerformanceNavigationTiming
-      | undefined;
-    const memory = (
-      performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }
-    ).memory;
-
-    const getPerformanceScore = (): number => {
-      let _score = 100;
-      if (metrics.renderTime > 1500) score -= 15;
-      if (metrics.loadTime > 3000) score -= 20;
-      if (metrics.memoryUsage > 50) score -= 10;
-      return Math.max(0, score);
+    // Only run in development
+    if (process.env.NODE_ENV !== 'development') {''
+      return;
+    }
+    // Simulate performance metrics for development
+    const simulateMetrics = () => {
+      setMetrics({)
+        cls: Math.random() * 0.1,
+        fcp: Math.random() * 1000 + 500,}
+        lcp: Math.random() * 2000 + 1000,}
+        ttfb: Math.random() * 500 + 200,}
+        loadTime: Math.random() * 3000 + 1000}
+      });
     };
-
-    const updateMetrics = () => {
-      const currentMetrics = {
-        loadTime: navigation?.loadEventEnd ?? 0,
-        memoryUsage: memory?.usedJSHeapSize ? memory.usedJSHeapSize / 1024 / 1024 : 0,
-        renderTime: performance.now(),
-        fps: 60, // Placeholder - would need actual FPS calculation
-      };
-
-      setMetrics(currentMetrics);
-
-      const _score = getPerformanceScore();
-      setPerformanceScore(score);
-
-      if (enableConsoleLogging) {
-        if (typeof console !== 'undefined') {
-          logger.debug('Performance Metrics', {
-            metrics: currentMetrics,
-            score,
-          });
-        }
-      }
-
-      if (onMetricsUpdate) {
-        onMetricsUpdate(currentMetrics);
-      }
-    };
-
-    // Initial update
-    updateMetrics();
-
-    // Set up interval for continuous monitoring
-    const _interval = setInterval(updateMetrics, updateInterval);
-
-    return () => clearInterval(interval);
-  }, [
-    onMetricsUpdate,
-    enableConsoleLogging,
-    updateInterval,
-    metrics.renderTime,
-    metrics.loadTime,
-    metrics.memoryUsage,
-  ]);
-
-  // Only show when explicitly enabled via props
-  if (!enableConsoleLogging) {
+    // Simulate metrics after a delay
+    const timer = setTimeout(simulateMetrics, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+  // Don't render anything in production''
+  if (process.env.NODE_ENV === 'production') {''
     return null;
   }
-
   return (
-    <div className="fixed bottom-4 right-4 z-50 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-64">
-      <h3 className="text-sm font-semibold text-gray-900 mb-3">Performance Monitor</h3>
-      <div className="space-y-2 text-xs">
-        <div className="flex justify-between">
-          <span className="text-gray-600">Load Time:</span>
-          <span className="font-mono">{metrics.loadTime.toFixed(2)}ms</span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-gray-600">Memory:</span>
-          <span className="font-mono">{metrics.memoryUsage.toFixed(2)}MB</span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-gray-600">FPS:</span>
-          <span className="font-mono">{metrics.fps.toFixed(1)}</span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-gray-600">Score:</span>
-          <span
-            className={`font-mono ${performanceScore > 80 ? 'text-green-600' : performanceScore > 60 ? 'text-yellow-600' : 'text-red-600'}`}
-          >
-            {performanceScore}
-          </span>
-        </div>
+    <div className="fixed bottom-4 left-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs">""
+      <h3 className="font-bold mb-2">Performance Metrics</h3>""
+      <div className="space-y-1 text-sm">""
+        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>''
+        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>''
+        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>''
+        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>''
+        <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'Loading...'}</div>''
       </div>
     </div>
   );
 };
-
 export default PerformanceMonitor;
+=======
+
+import React, { useEffect, useState } from 'react',
+      import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals',
+      interface PerformanceMetrics {},
+      CLS: number | null,
+      INP: number | null,
+      FCP: number | null,
+      LCP: number | null,
+      TTFB: number | null
+    },
+    {}
+const PerformanceMonitor: React.FC = () => {},
+      const [metrics, setMetrics] = useState<PerformanceMetrics>({},)
+      CLS: null,
+      INP: null,
+      FCP: null,
+      LCP: null,
+      TTFB: null
+  }),
+      useEffect(() => {},
+      const handleMetric = (metric: any) => {},
+      setMetrics(prev => ({};)
+        ...prev;
+        [metric.name]: metric.value
+      }));
+
+      // Send to analytics (replace with your analytics service)
+      if (typeof window !== 'undefined' && (window as any).gtag) {};
+        (window as any).gtag('event', metric.name, {},)
+      event_category: 'Web Vitals',
+      value: Math.round(metric.value),
+      event_label: metric.id,
+      non_interaction: true})
+    },
+    {}
+    };
+
+    // Measure Core Web Vitals
+    onCLS(handleMetric),
+      onINP(handleMetric),
+      onFCP(handleMetric),
+      onLCP(handleMetric),
+      onTTFB(handleMetric);
+
+    // Performance observer for additional metrics
+    if ($1) {}
+  // If body
+}
+      const observer = new PerformanceObserver((list) => {};
+        for (const entry of list.getEntries()) {};
+          if (entry.entryType === 'navigation') {};
+            // Navigation timing metrics collected
+          }
+    },
+    {}
+      }),
+      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
+    },
+    {}
+    // Memory usage monitoring
+    if ('memory' in performance) {};
+      // Memory usage metrics collected
+    };
+  }, []);
+
+  // Development mode: metrics available for debugging
+  useEffect(() => {},
+      if (process.env.NODE_ENV === 'development') {};
+      // Performance metrics available for debugging
+    };
+  }, [metrics]),
+      return null; // This component doesn't render anything'
+},
+      export default PerformanceMonitor;
+
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+const ComponentsPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group"";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+};
+;
+export default ComponentsPage;'";'";
+
+>>>>>>> main
