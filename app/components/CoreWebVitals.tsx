@@ -28,28 +28,28 @@ const CoreWebVitals: React.FC = () => {}
       })
     }
     // Log in development
-    if (process.env.NODE_ENV === 'development') {}
-      console.log('Web Vital:', data.name, data.value)
-    }
-  }, [])
-  useEffect(() => {}
-}const measureWebVitals = async () => {}
-}try {}
-} catch (error) {}
-  console.error(error)
-}const { onCLS, onFID, onFCP, onLCP, onTTFB, onINP } = await import('web-vitals')
-        onCLS(reportWebVitals)
-        onFID(reportWebVitals)
-        onFCP(reportWebVitals)
-        onLCP(reportWebVitals)
-        onTTFB(reportWebVitals)
-        onINP(reportWebVitals)
-      } catch (error) {}
-        console.warn('Failed to load web-vitals:', error)
+    if (process.env.NODE_ENV === 'development') {
       }
-    }
-    measureWebVitals()
-  }, [reportWebVitals])
+  }, []);
+
+  useEffect(() => {
+    const measureWebVitals = async () => {
+      try {
+        const { onCLS, onFID, onFCP, onLCP, onTTFB, onINP } = await import('web-vitals');
+
+        onCLS(reportWebVitals);
+        onFID(reportWebVitals);
+        onFCP(reportWebVitals);
+        onLCP(reportWebVitals);
+        onTTFB(reportWebVitals);
+        onINP(reportWebVitals);
+      } catch (error) {
+        }
+    };
+
+    measureWebVitals();
+  }, [reportWebVitals]);
+
   return null; // This component doesn't render anything
 }
 export default CoreWebVitals

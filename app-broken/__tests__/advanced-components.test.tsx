@@ -48,6 +48,7 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: {}
       </div>
     )
   }
+<<<<<<< HEAD
 
   return <>{children}</>;
 };
@@ -60,6 +61,17 @@ const TestComponent = () => <div>Test Component</div>;
 describe('Advanced Components', () => {
   test('AdvancedErrorBoundary renders children when no error', () => {
     render(
+=======
+return <>{children}</>
+}
+const TestComponent = () => <div>Test Component</div>
+const ErrorComponent = () => {}
+}throw new Error('Test error')
+}
+describe('Advanced Components', () => {}
+}test('AdvancedErrorBoundary renders children when no error', () => {}
+}render()ursor/analyze-improve-and-merge-code-4a9f
+>>>>>>> origin/main
       <AdvancedErrorBoundary>
         <TestComponent />
       </AdvancedErrorBoundary>
@@ -70,6 +82,7 @@ describe('Advanced Components', () => {
 }const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {}
 })
     // Mock the error boundary to actually catch errors
+<<<<<<< HEAD
     const ErrorBoundaryWrapper = () => {
       const [hasError, setHasError] = React.useState(false);
       
@@ -78,6 +91,17 @@ describe('Advanced Components', () => {
           throw new Error('Test error');
         } catch {
           setHasError(true);
+=======
+const ErrorBoundaryWrapper = () => {}
+}const [hasError, setHasError] = React.useState(false)
+      React.useEffect(() => {}
+}try {}
+} catch (error) {}
+  console.error(error)
+}throw new Error('Test error')
+        } catch (error) {}
+          setHasError(true)ursor/analyze-improve-and-merge-code-4a9f
+>>>>>>> origin/main
         }
       }, [])
       if (hasError) {}

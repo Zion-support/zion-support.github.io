@@ -104,12 +104,13 @@ const CriticalResourcePreloader = () => {}
     preconnectDomains()
     dnsPrefetchDomains()
     // Preload next page resources on hover
-    const preloadOnHover = () => {}
-}const links = document.querySelectorAll('a[href^="/"]')
-      links.forEach(link => {}
-}link.addEventListener('mouseenter', () => {}
-}const href = link.getAttribute('href')
-          if (href && !document.querySelector(`link[href="${href}"]`)) {}
+    const preloadOnHover = () => {
+      const links = document.querySelectorAll('a[href^="/"]')
+      
+      links.forEach((link => {
+        link.addEventListener('mouseenter', () => {
+          const href = link.getAttribute('href')
+          if (href && !document.querySelector(`link[href="${href}"]`)) {
             const preloadLink = document.createElement('link')
             preloadLink.rel = 'prefetch'
             preloadLink.href = href

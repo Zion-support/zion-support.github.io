@@ -1,30 +1,23 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-interface SEOEnhancerProps {}
-  title?: string
-  description?: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  ogType?: string
-  twitterCard?: string
-  structuredData?: object
-  noIndex?: boolean
-  noFollow?: boolean
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+interface SEOEnhancerProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: Record<string, unknown>;
+  noIndex?: boolean;
+  noFollow?: boolean;
 }
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({}
-  title = "Zion Tech Group - Advanced AI and IT Solutions",
-  description = "Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology.",
-  keywords = "AI solutions, IT services, cybersecurity, cloud computing, digital transformation, technology services, Zion Tech Group",
-  canonical = "https://ziontechgroup.com",
-  ogImage = "https://ziontechgroup.com/og-image.jpg",
-  ogType = "website",
-  twitterCard = "summary_large_image",
-  structuredData,
-  noIndex = false,
-  noFollow = false
-}) => {}
-}const defaultStructuredData = {}
+
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+  title = "Zion Tech Group - Advanced AI and IT Solutions", description = "Leading provider of AI-powered solutions, cybersecurity, _cloud infrastructure, _and digital transformation services. Transform your business with cutting-edge technology.", keywords = "AI solutions, _IT services, _cybersecurity, _cloud computing, _digital transformation, _technology services, _Zion Tech Group", canonical = "https://ziontechgroup.com", ogImage = "https://ziontechgroup.com/og-image.jpg", ogType = "website", twitterCard = "summary_large_image", _structuredData, noIndex = false, noFollow = false
+}) => {
+  const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",

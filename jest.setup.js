@@ -1,9 +1,10 @@
 import '@testing-library/jest-dom';
+import React from 'react';
+import { TextEncoder, TextDecoder } from 'util';
 
-// Mock TextEncoder and TextDecoder
-import { TextEncoder, TextDecoder } from 'util'
-global.TextEncoder = TextEncoder
-global.TextDecoder = TextDecoder
+// Polyfill for TextEncoder/TextDecoder
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
 
 // Mock react-router-dom
 jest.mock('react-router-dom', () => {
@@ -73,7 +74,6 @@ beforeAll(() => {
     originalError.call(console, ...args);
   };
 });
-
 // Mock localStorage
 const localStorageMock = {
   getItem: jest.fn(),
@@ -91,3 +91,8 @@ const sessionStorageMock = {
   clear: jest.fn(),
 };
 global.sessionStorage = sessionStorageMock;
+
+// Mock window.gtag
+global.gtag = jest.fn()
+// Mock window.dataLayer
+global.dataLayer = []

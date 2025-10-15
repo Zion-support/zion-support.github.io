@@ -1,5 +1,5 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { Cloud } from "lucide-react";
 
 const CloudSolutionsPage: React.FC = () => {
   return (

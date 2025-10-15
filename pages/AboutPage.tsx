@@ -1,9 +1,9 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import {}
-  Users,
-  CheckCircle,
-  Brain,
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { 
+  Users, 
+  CheckCircle, 
+  Brain, 
   Shield,
   Globe,
   Lightbulb,
