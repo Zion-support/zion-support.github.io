@@ -15,33 +15,33 @@ const Footer: React.FC = () => {
 
   const footerLinks = {
     services: [
-      { name: 'AI Solutions', href: '/ai-services' },
-      { name: 'IT Solutions', href: '/it-services' },
+      { name: 'AI Services', href: '/ai-services' },
+      { name: 'IT Services', href: '/it-services' },
       { name: '5G Solutions', href: '/5g-solutions' },
       { name: 'Micro SAAS', href: '/micro-saas' },
-      { name: 'Cybersecurity', href: '/advanced-security-suite' },
       { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
-      { name: 'Digital Transformation', href: '/services' },
+      { name: 'Cybersecurity', href: '/advanced-security-suite' },
+      { name: 'All Services', href: '/services' },
     ],
     company: [
       { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/about' },
       { name: 'Careers', href: '/careers' },
-      { name: 'Case Studies', href: '/blog' },
       { name: 'Contact', href: '/contact' },
+      { name: 'Schedule Demo', href: '/demo' },
+      { name: 'Blog', href: '/blog' },
     ],
     resources: [
-      { name: 'Blog', href: '/blog' },
       { name: 'Documentation', href: '/docs' },
       { name: 'Support', href: '/contact' },
-      { name: 'FAQ', href: '/contact' },
-      { name: 'Tutorials', href: '/blog' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'Schedule Demo', href: '/demo' },
     ],
     legal: [
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
       { name: 'Cookie Policy', href: '/privacy' },
-      { name: 'GDPR', href: '/privacy' },
+      { name: 'GDPR Compliance', href: '/privacy' },
       { name: 'Security', href: '/advanced-security-suite' },
     ]
   };
