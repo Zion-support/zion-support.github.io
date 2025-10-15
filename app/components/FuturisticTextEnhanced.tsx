@@ -1,156 +1,107 @@
+
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
+'use client';
+const FuturisticTextEnhanced: React.FC = () => {}
+  return ()
+    <div className="min-h-screen bg-white">;
+      <Helmet>;
+        <title>Futuristic Text Enhanced - Zion Tech Group</title>;
+        <meta name="description" content="Professional futuristic text enhanced services by Zion Tech Group." />;
+      </Helmet>;
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">;
+        <div className="max-w-6xl mx-auto text-center">;
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">;
+            Futuristic Text Enhanced;
+          </h1>;
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+            Professional futuristic text enhanced services;
+            designed to help your business grow and succeed.;
+          </p>;
+        </div>;
+      </section>;
+      {/* Content Section */}
+      <section className="py-16 px-4">;
+        <div className="max-w-6xl mx-auto">;
+          <div className="grid md:grid-cols-2 gap-12 items-center">;
+            <div>;
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>;
+              <p className="text-lg text-gray-600 mb-6">;
+                We provide comprehensive futuristic text enhanced;
+                solutions tailored to your specific needs and requirements.;
+              </p>;
+              <ul className="space-y-3">;
+                <li className="flex items-center">;
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>;
+                  Custom solutions;
+                </li>;
+                <li className="flex items-center">;
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>;
+                  Expert consultation;
+                </li>;
+                <li className="flex items-center">;
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>;
+                  Ongoing support;
+                </li>;
+              </ul>;
+            </div>;
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">;
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>;
+              <p className="mb-6">;
+                Ready to transform your business with our futuristic text enhanced services?;
+              </p>;
+              <a;>
+                href="/contact";
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";
+              >;
+                Contact Us;
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">;
+        <div className="max-w-4xl mx-auto text-center">;
+          <h2 className="text-3xl font-bold text-white mb-6">;
+            Ready to Get Started?;
+          </h2>;
+          <p className="text-xl text-blue-100 mb-8">;
+            Let's discuss how our futuristic text enhanced';
+            services can help you achieve your goals.;
+          </p>;
+          <a;>
+            href="/contact";
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors";
+          >;
+            Get Started Today;
+          </a>;
+        </div>;
+      </section>;
+    </div>;
 
-interface FuturisticTextEnhancedProps {
-  children: React.ReactNode;
-  variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'display';
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl';
-  color?: 'primary' | 'secondary' | 'accent' | 'muted' | 'white' | 'cyan' | 'purple' | 'pink';
-  gradient?: boolean;
-  animated?: boolean;
-  glow?: boolean;
-  neon?: boolean;
-  className?: string;
-  delay?: number;
-  duration?: number;
-}
-
-const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
-  children,
-  variant = 'body',
-  size = 'md',
-  color = 'white',
-  gradient = false,
-  animated = true,
-  glow = false,
-  neon = false,
-  className = '',
-  delay = 0,
-  duration = 0.6
-}) => {
-  const variantClasses = {
-    heading: 'font-bold',
-    subheading: 'font-semibold',
-    body: 'font-normal',
-    caption: 'font-light',
-    display: 'font-black'
-  };
-
-  const sizeClasses = {
-    xs: 'text-xs',
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg',
-    xl: 'text-xl',
-    '2xl': 'text-2xl',
-    '3xl': 'text-3xl',
-    '4xl': 'text-4xl',
-    '5xl': 'text-5xl',
-    '6xl': 'text-6xl'
-  };
-
-  const colorClasses = {
-    primary: 'text-white',
-    secondary: 'text-gray-300',
-    accent: 'text-cyan-400',
-    muted: 'text-gray-400',
-    white: 'text-white',
-    cyan: 'text-cyan-400',
-    purple: 'text-purple-400',
-    pink: 'text-pink-400'
-  };
-
-  const gradientClasses = {
-    primary: 'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400',
-    cyan: 'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-600',
-    purple: 'text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600',
-    pink: 'text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600'
-  };
-
-  const glowClasses = {
-    cyan: 'drop-shadow-[0_0_10px_rgba(6,182,212,0.5)]',
-    purple: 'drop-shadow-[0_0_10px_rgba(139,92,246,0.5)]',
-    pink: 'drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]'
-  };
-
-  const neonClasses = {
-    cyan: 'text-shadow-[0_0_20px_rgba(6,182,212,0.8)]',
-    purple: 'text-shadow-[0_0_20px_rgba(139,92,246,0.8)]',
-    pink: 'text-shadow-[0_0_20px_rgba(236,72,153,0.8)]'
-  };
-
-  const textVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 20,
-      scale: 0.95
-    },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: duration,
-        delay: delay,
-        ease: [0.4, 0, 0.2, 1]
-      }
-    },
-    hover: {
-      scale: 1.05,
-      transition: { duration: 0.2 }
-    }
-  };
-
-  const getTextColor = () => {
-    if (gradient) {
-      return gradientClasses[color as keyof typeof gradientClasses] || gradientClasses.primary;
-    }
-    return colorClasses[color];
-  };
-
-  const getGlowEffect = () => {
-    if (glow) {
-      return glowClasses[color as keyof typeof glowClasses] || glowClasses.cyan;
-    }
-    return '';
-  };
-
-  const getNeonEffect = () => {
-    if (neon) {
-      return neonClasses[color as keyof typeof neonClasses] || neonClasses.cyan;
-    }
-    return '';
-  };
-
-  const textClasses = `
-    ${variantClasses[variant]}
-    ${sizeClasses[size]}
-    ${getTextColor()}
-    ${getGlowEffect()}
-    ${getNeonEffect()}
-    ${className}
-  `;
-
-  if (animated) {
-    return (
-      <motion.div
-        className={textClasses}
-        variants={textVariants}
-        initial="hidden"
-        whileInView="visible"
-        whileHover="hover"
-        viewport={{ once: true, margin: "-100px" }}
-      >
-        {children}
-      </motion.div>
-    );
-  }
-
-  return (
-    <div className={textClasses}>
-      {children}
-    </div>
   );
-};
 
-export default FuturisticTextEnhanced;
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+const ComponentsPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group"";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+
+};
+;
+export default ComponentsPage;'";'";

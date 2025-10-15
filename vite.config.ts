@@ -1,210 +1,111 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
+import path from 'path';
+<<<<<<< HEAD
+
+const resolve = path.resolve;
+=======
+>>>>>>> main
 
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      // Enable React Fast Refresh
+<<<<<<< HEAD
+      fastRefresh: true
+=======
+      fastRefresh: true,
+      // Optimize JSX runtime
+      jsxRuntime: 'automatic',
+>>>>>>> main
+    })
   ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './app'),
-      '@/components': resolve(__dirname, './app/components'),
-      '@/pages': resolve(__dirname, './app'),
-      '@/utils': resolve(__dirname, './utils'),
-      '@/types': resolve(__dirname, './types'),
-      '@/hooks': resolve(__dirname, './hooks'),
-      '@/config': resolve(__dirname, './config'),
-      '@/data': resolve(__dirname, './data'),
-      '@/content': resolve(__dirname, './content'),
+      '@': path.resolve(__dirname, './app'),
+<<<<<<< HEAD
+      '@/components': path.resolve(__dirname, './app/components'),
+      '@/utils': path.resolve(__dirname, './app/utils'),
+      '@/hooks': path.resolve(__dirname, './hooks'),
+=======
+      '@components': path.resolve(__dirname, './app/components'),
+      '@pages': path.resolve(__dirname, './app/pages'),
+      '@utils': path.resolve(__dirname, './utils'),
+      '@types': path.resolve(__dirname, './types'),
+>>>>>>> main
     },
   },
   build: {
-    target: "es2020",
+    outDir: 'dist',
+<<<<<<< HEAD
+    sourcemap: false,
+    minify: 'esbuild',
+    target: 'es2020',
+=======
+    sourcemap: true,
+    minify: 'esbuild',
+    target: 'es2020',
     cssCodeSplit: true,
-    modulePreload: {
-      polyfill: false,
-    },
-    // Performance optimizations
-    chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance
-    assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
-    // Enable compression
-    reportCompressedSize: true,
-    // Optimize for production
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        moduleSideEffects: false,
-        propertyReadSideEffects: false,
-        tryCatchDeoptimization: false,
-      },
-      output: {
-        manualChunks: (id) => {
-          // Core React libraries - keep smaller
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor'
-          }
-          // Router - separate chunk
-          if (id.includes('react-router')) {
-            return 'router'
-          }
-          // UI libraries - split further
-          if (id.includes('framer-motion')) {
-            return 'ui-animations'
-          }
-          if (id.includes('lucide-react')) {
-            return 'ui-icons'
-          }
-          // SEO and meta - separate chunk
-          if (id.includes('react-helmet') || id.includes('gray-matter')) {
-            return 'seo'
-          }
-          // Analytics and monitoring - separate chunk
-          if (id.includes('web-vitals') || id.includes('analytics')) {
-            return 'analytics'
-          }
-          // Large libraries - separate chunks
-          if (id.includes('recharts')) {
-            return 'charts'
-          }
-          // Node modules - vendor chunk
-          if (id.includes('node_modules')) {
-            return 'vendor'
-          }
-          // Performance monitoring - separate chunk
-          if (id.includes('web-vitals')) {
-            return 'performance'
-          }
-          // Error handling - separate chunk
-          if (id.includes('react-error-boundary')) {
-            return 'error-handling'
-          }
-          // Components - split by functionality
-          if (id.includes('/components/')) {
-            if (id.includes('Enhanced') || id.includes('Advanced')) {
-              return 'enhanced-components'
-            }
-            if (id.includes('Futuristic') || id.includes('Neon')) {
-              return 'ui-components'
-            }
-            if (id.includes('Performance') || id.includes('Analytics')) {
-              return 'monitoring-components'
-            }
-            return 'base-components'
-          }
-          // AI service pages - group by category with smaller chunks
-          if (id.includes('/ai-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/ai-')[1]?.split('/')[0];
-            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
-              return 'ai-analytics'
-            }
-            if (serviceName?.includes('content') || serviceName?.includes('generation')) {
-              return 'ai-content'
-            }
-            if (serviceName?.includes('cyber') || serviceName?.includes('security')) {
-              return 'ai-security'
-            }
-            if (serviceName?.includes('customer') || serviceName?.includes('support')) {
-              return 'ai-customer'
-            }
-            return 'ai-other'
-          }
-          // Zion service pages - group by category
-          if (id.includes('/zion-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/zion-')[1]?.split('/')[0];
-            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
-              return 'zion-analytics'
-            }
-            if (serviceName?.includes('ai-')) {
-              return 'zion-ai'
-            }
-            if (serviceName?.includes('security') || serviceName?.includes('shield')) {
-              return 'zion-security'
-            }
-            return 'zion-other'
-          }
-          // 5G service pages - group together
-          if (id.includes('/5g-') && id.includes('/page.tsx')) {
-            return '5g-services'
-          }
-          // IT service pages - group together
-          if (id.includes('/app/') && id.includes('/page.tsx') && 
-              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') &&
-              (id.includes('devops') || id.includes('cloud') || id.includes('network') || 
-               id.includes('software') || id.includes('web') || id.includes('it-'))) {
-            return 'it-services'
-          }
-          // Micro SAAS pages - group together
-          if (id.includes('/app/') && id.includes('/page.tsx') && 
-              (id.includes('micro-saas') || id.includes('project-management') || 
-               id.includes('customer-relationship') || id.includes('inventory') ||
-               id.includes('financial') || id.includes('employee') || id.includes('social') ||
-               id.includes('email') || id.includes('website') || id.includes('task') ||
-               id.includes('smart-') || id.includes('ai-powered'))) {
-            return 'micro-saas'
-          }
-          // Main pages - keep core pages together
-          if (id.includes('/app/') && id.includes('/page.tsx') && 
-              (id.includes('about') || id.includes('contact') || id.includes('services') || 
-               id.includes('blog') || id.includes('privacy') || id.includes('terms'))) {
-            return 'main-pages'
-          }
-          // Components - group by type
-          if (id.includes('/components/')) {
-            if (id.includes('Performance') || id.includes('Analytics')) {
-              return 'components-performance'
-            }
-            if (id.includes('SEO') || id.includes('Accessibility')) {
-              return 'components-seo'
-            }
-            if (id.includes('Loading') || id.includes('Error')) {
-              return 'components-ui'
-            }
-            return 'components-common'
-          }
-          // Default chunk for other modules
-          return 'vendor'
-        },
-      },
-    },
+>>>>>>> main
     rollupOptions: {
       output: {
         manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'router': ['react-router-dom'],
-          'ui-animations': ['framer-motion'],
-          'ui-icons': ['lucide-react'],
-          'seo': ['react-helmet-async', 'gray-matter'],
-          'analytics': ['web-vitals'],
-          'charts': ['recharts'],
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          icons: ['@heroicons/react'],
+          motion: ['framer-motion'],
+          ui: ['clsx', 'tailwind-merge'],
         },
+<<<<<<< HEAD
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
       },
     },
+    // Optimize bundle size
+    treeshake: true,
   },
   server: {
     port: 3000,
+    open: false,
     host: true,
-    open: true,
   },
   preview: {
     port: 4173,
+=======
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
+      },
+    },
+    // Optimize chunk size
+    chunkSizeWarningLimit: 1000,
+  },
+  server: {
+    port: 3000,
+    open: true,
+    host: true,
+    cors: true,
+  },
+  preview: {
+    port: 4173,
+    open: true,
+>>>>>>> main
     host: true,
   },
+  // Optimize dependencies
   optimizeDeps: {
     include: [
       'react',
       'react-dom',
       'react-router-dom',
+      '@heroicons/react/24/outline',
       'framer-motion',
-      'lucide-react',
-      'react-helmet-async',
-      'web-vitals',
-      'recharts',
+      'clsx',
+      'tailwind-merge'
     ],
   },
-  define: {
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+  // CSS optimization
+  css: {
+    devSourcemap: true,
   },
 });

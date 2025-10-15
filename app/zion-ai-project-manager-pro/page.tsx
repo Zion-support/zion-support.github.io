@@ -1,508 +1,800 @@
-import { Calendar, Brain, Users, Zap, CheckCircle, Star, Award, BarChart3, Target, Sparkles, TrendingUp, Monitor, FileText, MessageSquare, Workflow, Shield, Lightbulb, GitBranch, Timer } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-
-const ZionAIProjectManagerProPage = () => {
+<<<<<<< HEAD
+import React from 'react;'
+import { ArrowRight } from 'lucide-react;'
+import { CheckCircle } from 'lucide-react;'
+import { Star } from 'lucide-react;'
+import { Users } from 'lucide-react;'
+import { Clock } from 'lucide-react;'
+import { DollarSign } from 'lucide-react;'
+import { Shield } from 'lucide-react;'
+import { Code } from 'lucide-react;'
+import { Database } from 'lucide-react;'
+import { Mail } from 'lucide-react;'
+import { Settings } from 'lucide-react;'
+import { Target } from 'lucide-react;'
+import { TrendingUp } from 'lucide-react;'
+import { PieChart } from 'lucide-react;'
+import { MessageSquare } from 'lucide-react;'
+import { Heart } from 'lucide-react;'
+import { Globe } from 'lucide-react;'
+import { Smartphone } from 'lucide-react;'
+import { Network } from 'lucide-react;'
+import { Lock } from 'lucide-react;'
+import { Cpu } from 'lucide-react;'
+import { Wifi } from 'lucide-react;'
+import { Building2 } from 'lucide-react;'
+import { Briefcase } from 'lucide-react;'
+import { Lightbulb } from 'lucide-react;'
+import { Link } from 'react-router-dom;'
+import EnhancedSEO from '../components/EnhancedSEO;'
+const Page = () => {
   const features = [
     {
-      title: "AI-Powered Task Management",
-      description: "Intelligent task prioritization, automatic scheduling, and smart resource allocation based on team capacity and project requirements",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      icon: <CheckCircle className="w-8 h-8" />,""
+      title: 'Advanced Features',''
+      description: 'Cutting-edge technology for maximum efficiency''
     },
     {
-      title: "Predictive Analytics",
-      description: "Forecast project completion dates, identify potential bottlenecks, and predict resource needs with advanced AI algorithms",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      icon: <Shield className="w-8 h-8" />,""
+      title: 'Secure & Reliable',''
+      description: 'Enterprise-grade security and 99.9% uptime''
     },
     {
-      title: "Smart Resource Allocation",
-      description: "Automatically assign tasks to the right team members based on skills, availability, and workload optimization",
-      icon: <Users className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Real-time Collaboration",
-      description: "Seamless team communication, file sharing, and collaborative workspace with AI-powered meeting summaries",
-      icon: <MessageSquare className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate comprehensive project reports, status updates, and stakeholder communications automatically",
-      icon: <FileText className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Risk Management",
-      description: "AI-powered risk assessment, early warning systems, and automated mitigation strategies",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-cyan-500 to-blue-500"
+      icon: <Users className="w-8 h-8" />,""
+      title: 'Expert Support',''
+      description: '24/7 support from our team of specialists''
     }
   ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$19",
-      period: "per user/month",
-      description: "Perfect for small teams",
-      features: [
-        "Up to 10 projects",
-        "Basic AI task management",
-        "5 team members",
-        "Email support",
-        "Standard templates",
-        "Basic analytics",
-        "Mobile app access"
-      ],
-      popular: false,
-      color: "from-gray-500 to-gray-600"
-    },
-    {
-      name: "Professional",
-      price: "$49",
-      period: "per user/month",
-      description: "Most popular for growing teams",
-      features: [
-        "Unlimited projects",
-        "Advanced AI features",
-        "Unlimited team members",
-        "Priority support",
-        "Custom workflows",
-        "Advanced analytics",
-        "API access",
-        "Integration tools",
-        "Time tracking",
-        "Resource management"
-      ],
-      popular: true,
-      color: "from-cyan-500 to-purple-600"
-    },
-    {
-      name: "Enterprise",
-      price: "$99",
-      period: "per user/month",
-      description: "For large organizations",
-      features: [
-        "Everything in Professional",
-        "Custom AI models",
-        "Dedicated support",
-        "White-label options",
-        "Advanced security",
-        "Custom integrations",
-        "Dedicated account manager",
-        "On-premise deployment",
-        "SLA guarantees"
-      ],
-      popular: false,
-      color: "from-purple-500 to-pink-500"
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Software Development",
-      description: "Manage agile sprints, code reviews, and deployment pipelines with AI-powered sprint planning and bug tracking",
-      icon: <GitBranch className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Marketing Campaigns",
-      description: "Plan and execute multi-channel marketing campaigns with AI-optimized content scheduling and performance tracking",
-      icon: <Target className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Event Planning",
-      description: "Coordinate complex events with AI-powered vendor management, timeline optimization, and resource allocation",
-      icon: <Calendar className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Construction Projects",
-      description: "Manage construction timelines, resource allocation, and compliance tracking with industry-specific AI models",
-      icon: <Workflow className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Research & Development",
-      description: "Track R&D milestones, manage experiments, and optimize research workflows with AI-powered insights",
-      icon: <Lightbulb className="w-6 h-6" />,
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      title: "Client Services",
-      description: "Deliver exceptional client projects with AI-optimized resource planning and automated progress reporting",
-      icon: <Users className="w-6 h-6" />,
-      color: "from-cyan-500 to-blue-500"
-    }
-  ];
-
-  const aiCapabilities = [
-    {
-      title: "Intelligent Task Prioritization",
-      description: "AI analyzes task dependencies, deadlines, and team capacity to automatically prioritize tasks for optimal project flow",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Predictive Timeline Management",
-      description: "Machine learning algorithms predict project completion dates and identify potential delays before they occur",
-      icon: <Timer className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Smart Resource Optimization",
-      description: "AI automatically assigns tasks to the most suitable team members based on skills, availability, and workload",
-      icon: <Users className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Automated Risk Assessment",
-      description: "Continuous monitoring and analysis of project risks with AI-powered early warning systems and mitigation strategies",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Intelligent Reporting",
-      description: "Generate comprehensive project reports, stakeholder updates, and performance analytics automatically",
-      icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Workflow Automation",
-      description: "Automate repetitive tasks, approvals, and notifications to streamline project management processes",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-cyan-500 to-blue-500"
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <EnhancedSEO
-        title="Zion AI Project Manager Pro - Intelligent Project Management & Team Collaboration | Zion Tech Group"
-        description="Revolutionize project management with AI-powered task prioritization, predictive analytics, and smart resource allocation. Boost team productivity by 40%. Starting at $19/user/month."
-        keywords="AI project management, intelligent project planning, team collaboration, predictive analytics, resource allocation, project automation, agile project management"
-        canonical="https://ziontechgroup.com/zion-ai-project-manager-pro"
+        title="Page - Zion Tech Group""
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs.""
+        keywords="page, business solutions, technology services, professional services""
       />
-
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-        
-        <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI-Powered Project Intelligence</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Zion AI Project Manager Pro
-            </span>
-          </h1>
-          
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your project management with AI-powered task prioritization, predictive analytics, 
-            and intelligent resource allocation. Boost team productivity by 40% and deliver projects on time, every time.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <FuturisticButton
-              href="/contact"
-              variant="primary"
-              size="lg"
-              icon={<Sparkles className="w-5 h-5" />}
-            >
-              Start Free Trial
-            </FuturisticButton>
-            <FuturisticButton
-              href="#demo"
-              variant="outline"
-              size="lg"
-              icon={<Monitor className="w-5 h-5" />}
-            >
-              Watch Demo
-            </FuturisticButton>
-          </div>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="text-center group">
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <TrendingUp className="w-6 h-6 text-cyan-400" />
-              </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">40%</div>
-              <div className="text-gray-300 text-xs md:text-sm">Productivity Boost</div>
-            </div>
-            <div className="text-center group">
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Target className="w-6 h-6 text-cyan-400" />
-              </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">95%</div>
-              <div className="text-gray-300 text-xs md:text-sm">On-Time Delivery</div>
-            </div>
-            <div className="text-center group">
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Users className="w-6 h-6 text-cyan-400" />
-              </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">50,000+</div>
-              <div className="text-gray-300 text-xs md:text-sm">Active Users</div>
-            </div>
-            <div className="text-center group">
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Award className="w-6 h-6 text-cyan-400" />
-              </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-gray-300 text-xs md:text-sm">Uptime SLA</div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto text-center">""
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
+              Page
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">""
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
+              Professional page services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/demo""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View Demo
+              </Link>
             </div>
           </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* AI Capabilities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Revolutionary AI Capabilities
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our advanced AI technology learns from your team's patterns and optimizes project management 
-              processes automatically for maximum efficiency and success.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiCapabilities.map((capability, index) => (
-              <FuturisticCard
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
-              >
-                <div
-                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${capability.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                >
-                  {capability.icon}
-                </div>
-                <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
-                  {capability.title}
-                </h3>
-                <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
-                  {capability.description}
-                </p>
-              </FuturisticCard>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Everything You Need to Succeed
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive project management features designed to streamline workflows and boost team productivity.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
-              >
-                <div
-                  className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
-                >
-                  {feature.icon}
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Perfect for Every Industry
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From software development to event planning, our AI adapts to your specific project management needs.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
-              <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
-              >
-                <div
-                  className={`w-12 h-12 rounded-lg bg-gradient-to-r ${useCase.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
-                >
-                  {useCase.icon}
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                  {useCase.title}
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {useCase.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your team size and project complexity. All plans include our core AI features.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div
-                key={index}
-                className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-cyan-500/50 shadow-2xl shadow-cyan-500/20' 
-                    : 'border-white/20'
-                } hover:bg-white/20 transition-all duration-300 hover:scale-105`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
+        </section>
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto">""
+            <div className="text-center mb-16">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
+                Why Choose Our Page Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">""
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">""
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
+                    {feature.icon}
                   </div>
-                )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-300 ml-2">{plan.period}</span>
-                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
+                  <p className="text-gray-300">{feature.description}</p>""
                 </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      <span className="text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <FuturisticButton
-                  href="/contact"
-                  variant={plan.popular ? "primary" : "outline"}
-                  size="lg"
-                  className="w-full"
-                >
-                  Get Started
-                </FuturisticButton>
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Project Teams Worldwide
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what project managers and teams say about Zion AI Project Manager Pro
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Revolutionize Your Project Management?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join thousands of teams already using Zion AI Project Manager Pro to deliver projects faster, 
-              more efficiently, and with greater success. Start your free trial today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <FuturisticButton
-                href="/contact"
-                variant="primary"
-                size="lg"
-                icon={<Sparkles className="w-5 h-5" />}
-              >
-                Start Free Trial
-              </FuturisticButton>
-              <FuturisticButton
-                href="/demo"
-                variant="outline"
-                size="lg"
-                icon={<Monitor className="w-5 h-5" />}
-              >
-                Schedule Demo
-              </FuturisticButton>
+              ))}
             </div>
-            <p className="text-gray-400 text-sm mt-6">
-              No credit card required • 14-day free trial • Cancel anytime
-            </p>
           </div>
-        </ResponsiveContainer>
-      </section>
-    </div>
+        </section>
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+          <div className="max-w-4xl mx-auto text-center">""
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">""
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">""
+              Let's discuss how our page services can help your business succeed.''
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/services""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
+const page = React.lazy(() => import('./page'));''
+export default page;
+=======
 
-export default ZionAIProjectManagerProPage;
+import { Helmet } from "react-helmet-async",
+      export default function ZionAiProjectManagerPro() {"}
+        "
+  const features = [",
+        "
+    {""}
+      title: "AI-Powered Task Prioritization",""
+      description: "Automatically prioritize tasks using machine learning algorithms that analyze deadlines, dependencies, team capacity, and project impact to optimize workflow efficiency.",""
+      icon: <Target className="w-6 h-6" />,""
+      benefits: ["Smart task ranking", "Dependency analysis", "Resource optimization", "Deadline management"]
+    },",
+        "
+    {"}
+        "
+      title: "Intelligent Resource Allocation",""
+      description: "AI-driven resource management that automatically assigns team members to tasks based on skills, availability, workload, and project requirements.",""
+      icon: <Users className="w-6 h-6" />,""
+      benefits: ["Skill-based matching", "Workload balancing", "Availability tracking", "Performance optimization"]
+    },",
+        "
+    {"}
+        "
+      title: "Predictive Project Analytics",""
+      description: "Advanced analytics and forecasting that predict project completion times, identify potential risks, and suggest optimizations using historical data and AI models.",""
+      icon: <className="w-6 h-6" />,""
+      benefits: ["Completion forecasting", "Risk identification", "Performance insights", "Optimization suggestions"]
+    },",
+        "
+    {"}
+        "
+      title: "Automated Progress Tracking",""
+      description: "Real-time project monitoring with AI-powered progress tracking, milestone detection, and automatic status updates across all project components.",""
+      icon: <TrendingUp className="w-6 h-6" />,""
+      benefits: ["Real-time monitoring", "Milestone tracking", "Status automation", "Progress visualization"]
+    },",
+        "
+    {"}
+        "
+      title: "Smart Collaboration Tools",""
+      description: "AI-enhanced collaboration features including intelligent meeting scheduling, automated follow-ups, and context-aware communication suggestions.",""
+      icon: <Calendar className="w-6 h-6" />,""
+      benefits: ["Smart scheduling", "Auto follow-ups", "Context awareness", "Team coordination"]
+    },",
+        "
+    {"}
+        "
+      title: "Intelligent Risk Management",""
+      description: "Proactive risk identification and mitigation using AI algorithms that analyze project patterns, team performance, and external factors to prevent issues before they occur.",""
+      icon: <className="w-6 h-6" />,""
+      benefits: ["Risk prediction", "Mitigation strategies", "Early warning system", "Contingency planning"]
+    };
+  ];
+,
+      const pricingPlans = [",
+        "
+    {"}
+        "
+      name: "Team",""
+      price: "$99",""
+      period: "/month",""
+      description: "Perfect for small teams",",
+        "
+      features: [",
+        "
+        "Up to 10 team members",""
+        "Basic AI features",""
+        "Project templates",""
+        "Basic reporting",""
+        "Email support",""
+        "5GB storage",""
+        "Mobile app access";
+      ],",
+        "
+      popular: false",
+        "
+    },",
+        "
+    {"}
+        "
+      name: "Professional",""
+      price: "$199",""
+      period: "/month",""
+      description: "Most popular for growing teams",",
+        "
+      features: [",
+        "
+        "Up to 50 team members",""
+        "Advanced AI features",""
+        "Custom workflows",""
+        "Advanced analytics",""
+        "Priority support",""
+        "50GB storage",""
+        "API access",""
+        "Integrations";
+      ],",
+        "
+      popular: true",
+        "
+    },",
+        "
+    {"}
+        "
+      name: "Enterprise",""
+      price: "$399",""
+      period: "/month",""
+      description: "For large organizations",",
+        "
+      features: [",
+        "
+        "Unlimited team members",""
+        "AI-powered insights",""
+        "Custom integrations",""
+        "24/7 phone support",""
+        "Advanced security",""
+        "Unlimited storage",""
+        "White-label options",""
+        "Dedicated account manager";
+      ],",
+        "
+      popular: false",
+        "
+    };
+  ];
+,
+      const testimonials = [",
+        "
+    {"}
+        "
+      name: "Rachel Kim",""
+      company: "Software Development Co.",""
+      role: "Project Director",""
+      content: "Zion AI Project Manager Pro has revolutionized how we manage projects. The AI prioritization increased our team productivity by 55% and reduced project delays by 70%.",",
+        "
+      rating: 5,",
+        "
+      avatar: "RK"},",
+        "
+    {"}
+        "
+      name: "James Wilson",""
+      company: "Consulting Firm",""
+      role: "Operations Manager",""
+      content: "The predictive analytics are incredibly accurate. We can now forecast project completion with 92% accuracy and identify risks before they become problems.",",
+        "
+      rating: 5,",
+        "
+      avatar: "JW"},",
+        "
+    {"}
+        "
+      name: "Lisa Martinez",""
+      company: "Marketing Agency",""
+      role: "Project Manager",""
+      content: "The intelligent resource allocation is a game-changer. It automatically assigns the right people to the right tasks, saving us hours of manual planning every week.",",
+        "
+      rating: 5,",
+        "
+      avatar: "LM"
+    },
+    {}
+  ];
+,
+      const stats = [""
+    { number: "12,000+", label: "Project Teams", icon: <Users className="w-6 h-6" /> },""
+    { number: "55%", label: "Productivity Increase", icon: <TrendingUp className="w-6 h-6" /> },""
+    { number: "92%", label: "Forecast Accuracy", icon: <Target className="w-6 h-6" /> },""
+    { number: "70%", label: "Reduced Delays", icon: <className="w-6 h-6" /> };
+  ];
+,
+      const ZionAiProjectManagerProPage: React.FC = () => {"}
+        "
+  return (",)
+        "
+    <>{"}</>
+        "
+      <Helmet>",
+        "
+        <title>Zion AI Project Manager Pro - AI-Powered Project Management | Zion Tech Group</title>",
+        "
+        <meta",>
+        "
+          name="description",
+      content="Transform your project management with Zion AI Project Manager Pro. AI-powered task prioritization, resource allocation, and predictive analytics for modern teams." />",
+        "
+        <meta",>
+        "
+          name="keywords",
+      content="AI project management, project management software, task prioritization, resource allocation, predictive analytics, team collaboration, project planning" />",
+        "
+      </Helmet>",
+        "
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 relative overflow-hidden">""
+        {/* Animated Background */};
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-cyan-500/10 animate-pulse"></div>""
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.3),transparent_50%)]"></div>""
+        {/* Hero Section */};
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">""
+          <div className="max-w-7xl mx-auto">""
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">",
+        "
+              <div>",
+        "
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 mb-6">""
+                  <Calendar className="w-4 h-4 text-emerald-400 mr-2" />""
+                  <span className="text-emerald-400 text-sm font-medium">AI-Powered Project Management</span>",
+        "
+                </div>",
+        "
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">",
+        "
+                  Zion AI Project",
+        "
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 animate-pulse">""
+                    {" "}Manager Pro",
+        "
+                  </span>",
+        "
+                </h1>""
+                <p className="text-xl text-gray-300 mb-8 leading-relaxed">",
+        "
+                  Transform your project management with the world's most intelligent platform.",
+        "
+                  AI-powered task prioritization, resource allocation, and predictive analytics for modern teams.",
+        "
+                </p>",
+        "
+                <div className="flex flex-col sm:flex-row gap-4 mb-8">",
+        "
+                  <",>
+        "
+                    to="/contact",
+      className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-emerald-500/25 hover:scale-105";
+                  >",
+        "
+                    Start Free Trial",
+        "
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />",
+        "
+                  </>",
+        "
+                  <"">
+                    to="/demo",
+      className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105";
+                  >",
+        "
+                    Watch Demo",
+        "
+                    <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />",
+        "
+                  </>",
+        "
+                </div>""
+                {/* Stats */};
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">",
+        "
+                  {stats.map((stat, index) => (",)}
+        "
+                    <div key={index} className="text-center group">""
+                      <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">",
+        "
+                        {stat.icon};
+                      </div>",
+        "
+                      <div className="text-xl font-bold text-white mb-1">{stat.number}</div>""
+                      <div className="text-gray-300 text-sm">{stat.label}</div>",
+        "
+                    </div>",
+        "
+                  ))};
+                </div>",
+        "
+              </div>",
+        "
+              <div className="relative">""
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">""
+                  <div className="text-center mb-6">""
+                    <h3 className="text-2xl font-bold text-white mb-2">Project Dashboard</h3>""
+                    <p className="text-gray-300">See your projects in action</p>",
+        "
+                  </div>",
+        "
+                  {/* Mock Project Dashboard */};
+                  <div className="space-y-4">""
+                    <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-lg p-4">""
+                      <div className="flex items-center justify-between mb-2">""
+                        <span className="text-white font-semibold">Project Progress</span>""
+                        <span className="text-green-400 text-sm">+15%</span>",
+        "
+                      </div>",
+        "
+                      <div className="text-2xl font-bold text-white">78% Complete</div>",
+        "
+                    </div>",
+        "
+                    <div className="grid grid-cols-2 gap-4">""
+                      <div className="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 rounded-lg p-4">""
+                        <div className="text-white font-semibold text-sm mb-1">Active Tasks</div>""
+                        <div className="text-xl font-bold text-white">47</div>",
+        "
+                      </div>",
+        "
+                      <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg p-4">""
+                        <div className="text-white font-semibold text-sm mb-1">Team Efficiency</div>""
+                        <div className="text-xl font-bold text-white">94%</div>",
+        "
+                      </div>",
+        "
+                    </div>""
+                    <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg p-4">""
+                      <div className="flex items-center justify-between mb-2">""
+                        <span className="text-white font-semibold">AI Insights</span>""
+                        <span className="text-yellow-400 text-sm">Live</span>",
+        "
+                      </div>",
+        "
+                      <div className="text-sm text-gray-300">Next milestone: 3 days ahead</div>",
+        "
+                    </div>",
+        "
+                  </div>",
+        "
+                </div>",
+        "
+              </div>",
+        "
+            </div>",
+        "
+          </div>",
+        "
+        </section>",
+        "
+        {/* Features Section */};
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">""
+          <div className="max-w-7xl mx-auto">""
+            <div className="text-center mb-16">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">",
+        "
+                  AI-Powered Project Features",
+        "
+                </span>",
+        "
+              </h2>",
+        "
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">",
+        "
+                Everything you need to transform your project management with artificial intelligence.",
+        "
+              </p>",
+        "
+            </div>",
+        "
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
+        "
+              {features.map((feature, index) => (<div",>)}
+        "
+                  key={index},
+      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/10";
+                >""
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">",
+        "
+                    {feature.icon};
+                  </div>",
+        "
+                  <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-emerald-300 transition-colors">",
+        "
+                    {feature.title};
+                  </h3>",
+        "
+                  <p className="text-gray-300 text-center mb-4 leading-relaxed">",
+        "
+                    {feature.description};
+                  </p>",
+        "
+                  <div className="space-y-2">",
+        "
+                    {feature.benefits.map((benefit, idx) => (",)}
+        "
+                      <div key={idx} className="flex items-center text-sm text-gray-300">""
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />",
+        "
+                        <span>{benefit}</span>",
+        "
+                      </div>",
+        "
+                    ))};
+                  </div>",
+        "
+                </div>",
+        "
+              ))};
+            </div>",
+        "
+          </div>",
+        "
+        </section>",
+        "
+        {/* Pricing Section */};
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-emerald-800/50">""
+          <div className="max-w-7xl mx-auto">""
+            <div className="text-center mb-16">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">",
+        "
+                Simple, Transparent Pricing",
+        "
+              </h2>""
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">",
+        "
+                Choose the plan that fits your team size. All plans include our core AI features.",
+        "
+              </p>",
+        "
+            </div>",
+        "
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">",
+        "
+              {pricingPlans.map((plan, index) => (",)}
+        "
+                <div",>
+        "
+                  key={index},
+      className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${"}
+        "
+                    plan.popular",
+        "
+                      ? 'border-emerald-500/50 shadow-2xl shadow-emerald-500/25' ",
+        "
+                      : 'border-white/20 hover:border-emerald-500/30';
+                  }`};
+                >",
+        "
+                  {plan.popular && (",)}
+        "
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
+                      <span className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-2 rounded-full text-sm font-semibold">",
+        "
+                        Most Popular",
+        "
+                      </span>",
+        "
+                    </div>",
+        "
+                  )};
+;
+                  <div className="text-center mb-6">""
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
+                    <p className="text-gray-300 mb-4">{plan.description}</p>""
+                    <div className="flex items-baseline justify-center">""
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>""
+                      <span className="text-gray-300 ml-1">{plan.period}</span>",
+        "
+                    </div>",
+        "
+                  </div>""
+                  <div className="space-y-4 mb-8">",
+        "
+                    {plan.features.map((feature, idx) => (",)}
+        "
+                      <div key={idx} className="flex items-center text-gray-300">""
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />",
+        "
+                        <span>{feature}</span>",
+        "
+                      </div>",
+        "
+                    ))};
+                  </div>",
+        "
+                  <"">
+                    to="/contact",
+      className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${"}
+        "
+                      plan.popular",
+        "
+                        ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:from-emerald-600 hover:to-teal-700 shadow-lg hover:shadow-emerald-500/25';
+                        : 'border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900';
+                    }`};
+                  >",
+        "
+                    Get Started",
+        "
+                    <ArrowRight className="w-4 h-4 ml-2" />",
+        "
+                  </>",
+        "
+                </div>",
+        "
+              ))};
+            </div>",
+        "
+          </div>",
+        "
+        </section>",
+        "
+        {/* Testimonials Section */};
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">""
+          <div className="max-w-7xl mx-auto">""
+            <div className="text-center mb-16">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">",
+        "
+                What Project Managers Say",
+        "
+              </h2>""
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">",
+        "
+                Join thousands of project managers already using Zion AI Project Manager Pro to boost their team's performance.",
+        "
+              </p>",
+        "
+            </div>",
+        "
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">",
+        "
+              {testimonials.map((testimonial, index) => (",)}
+        "
+                <div"">
+                  key={index},
+      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105";
+                >""
+                  <div className="flex items-center mb-4">",
+        "
+                    {[...Array(testimonial.rating)].map(( i) => (",)}
+        "
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />",
+        "
+                    ))};
+                  </div>",
+        "
+                  <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>""
+                  <div className="flex items-center">""
+                    <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">",
+        "
+                      {testimonial.avatar};
+                    </div>",
+        "
+                    <div>""
+                      <div className="font-semibold text-white">{testimonial.name}</div>""
+                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>",
+        "
+                    </div>",
+        "
+                  </div>",
+        "
+                </div>",
+        "
+              ))};
+            </div>",
+        "
+          </div>",
+        "
+        </section>""
+        {/* Contact Information Section */};
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">""
+          <div className="max-w-4xl mx-auto text-center">""
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">",
+        "
+                Ready to Transform Your Project Management?",
+        "
+              </h2>""
+              <p className="text-xl text-gray-300 mb-8">",
+        "
+                Contact us today to start your free trial or schedule a personalized demo.",
+        "
+              </p>""
+              {/* Contact Details */};
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">""
+                <div className="text-center">""
+                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3">""
+                    <Mail className="w-6 h-6 text-white" />",
+        "
+                  </div>",
+        "
+                  <h3 className="text-white font-semibold mb-2">Email</h3>""
+                  <p className="text-emerald-400">kleber@ziontechgroup.com</p>",
+        "
+                </div>",
+        "
+                <div className="text-center">""
+                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3">""
+                    <Phone className="w-6 h-6 text-white" />",
+        "
+                  </div>",
+        "
+                  <h3 className="text-white font-semibold mb-2">Phone</h3>""
+                  <p className="text-emerald-400">+1 302 464 0950</p>",
+        "
+                </div>",
+        "
+                <div className="text-center">""
+                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3">""
+                    <Globe className="w-6 h-6 text-white" />",
+        "
+                  </div>",
+        "
+                  <h3 className="text-white font-semibold mb-2">Address</h3>""
+                  <p className="text-emerald-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>",
+        "
+                </div>",
+        "
+              </div>""
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+        "
+                <",>
+        "
+                  to="/contact",
+      className="group bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-emerald-500/25 hover:scale-105";
+                >",
+        "
+                  Start Free Trial",
+        "
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />",
+        "
+                </>",
+        "
+                <"">
+                  to="/contact";
+                  className="group bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-emerald-500/25 hover:scale-105";
+                >""
+                  Start Free Trial""
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />""
+                </>""
+                <"">
+                  to="/demo";
+                  className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300 hover:scale-105";
+                >""
+                  Schedule Demo""
+                </>""
+              </div>""
+            </div>""
+          </div>""
+        </section>""
+      </div>""
+    </>""
+
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+const ZionAiProjectManagerProPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Zion Ai Project Manager Pro - Zion Tech Group"";
+        description="Professional zion ai project manager pro solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Zion Ai Project Manager Pro</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+};
+;
+export default ZionAiProjectManagerProPage;'";'";
+
+>>>>>>> main

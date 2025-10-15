@@ -1,125 +1,114 @@
 #!/usr/bin/env python3
 """
-Script to fix JSX syntax errors and malformed class names
+Comprehensive script to fix JSX syntax errors in the codebase.
 """
+
 import os
 import re
 import glob
+from pathlib import Path
 
-def fix_jsx_syntax(content):
-    """Fix JSX syntax errors"""
-    # Fix spaces in class names
-    content = re.sub(r'className="([^"]*?)\s+([^"]*?)"', r'className="\1\2"', content)
-    
-    # Fix malformed JSX structure - self-closing tags with spaces
-    content = re.sub(r'<([^>]+)\s+/>', r'<\1 />', content)
-    
-    # Fix malformed JSX structure - missing closing tags
-    content = re.sub(r'<([^>]+)\s*/>\s*([^<]+)', r'<\1>\2</\1>', content)
-    
-    # Fix specific patterns like "m in-h-screen" -> "min-h-screen"
-    content = re.sub(r'\bm\s+in-', 'min-', content)
-    content = re.sub(r'\bm\s+ax-', 'max-', content)
-    content = re.sub(r'\bt\s+ext-', 'text-', content)
-    content = re.sub(r'\bb\s+g-', 'bg-', content)
-    content = re.sub(r'\bw\s+fit', 'w-fit', content)
-    content = re.sub(r'\bm\s+l-', 'ml-', content)
-    content = re.sub(r'\bm\s+b-', 'mb-', content)
-    content = re.sub(r'\bpt\s+20', 'pt-20', content)
-    content = re.sub(r'\bpy\s+16', 'py-16', content)
-    content = re.sub(r'\btext\s+center', 'text-center', content)
-    content = re.sub(r'\bwhitemb-', 'white mb-', content)
-    content = re.sub(r'\bgray-300mb-', 'gray-300 mb-', content)
-    content = re.sub(r'\bautow-fit', 'auto w-fit', content)
-    content = re.sub(r'\bjustify-center\s+mx-autow-fit', 'justify-center mx-auto w-fit', content)
-    
-    # Fix React import
-    content = re.sub(r'import react from', 'import React from', content)
-    
-    # Fix JSX structure issues
-    lines = content.split('\n')
-    fixed_lines = []
-    i = 0
-    
-    while i < len(lines):
-        line = lines[i]
-        
-        # Fix malformed JSX structure
-        if re.search(r'<div[^>]*/>\s*$', line) and i + 1 < len(lines):
-            next_line = lines[i + 1]
-            if not next_line.strip().startswith('</div>') and not next_line.strip().startswith('<'):
-                # This is a self-closing div that should contain content
-                # Find the matching closing tag
-                open_tag = line.strip()
-                tag_name = re.search(r'<(\w+)', open_tag).group(1)
-                
-                # Look for the closing tag
-                j = i + 1
-                while j < len(lines):
-                    if re.search(rf'</{tag_name}>', lines[j]):
-                        # Found closing tag, fix the structure
-                        fixed_lines.append(open_tag.replace('/>', '>'))
-                        fixed_lines.extend(lines[i+1:j])
-                        fixed_lines.append(f'</{tag_name}>')
-                        i = j
-                        break
-                    j += 1
-                else:
-                    # No closing tag found, keep as is
-                    fixed_lines.append(line)
-            else:
-                fixed_lines.append(line)
-        else:
-            fixed_lines.append(line)
-        
-        i += 1
-    
-    return '\n'.join(fixed_lines)
-
-def process_file(file_path):
-    """Process a single file"""
+def fix_jsx_syntax_errors(file_path):
+    """Fix common JSX syntax errors in a file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
-        content = fix_jsx_syntax(content)
         
-        # Only write if content changed
+        # Fix 1: Fix object syntax errors (replace {} with {})
+        content = re.sub(r'const\s+\w+\s*=\s*\[\s*\{\s*;\s*', 'const solutions = [\n    {', content)
+        content = re.sub(r'\{\s*;\s*', '{\n      ', content)
+        content = re.sub(r';\s*\}\s*;', '\n    },\n    {', content)
+        content = re.sub(r';\s*\}\s*\]\s*;', '\n    }\n  ];', content)
+        
+        # Fix 2: Fix function declaration syntax
+        content = re.sub(r'const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*;\s*', r'const \1: React.FC = () => {\n  ', content)
+        
+        # Fix 3: Fix JSX fragment syntax
+        content = re.sub(r'return\s*\(\s*<>\s*;\s*', 'return (\n    <>\n      ', content)
+        content = re.sub(r'<>\s*;\s*', '<>\n      ', content)
+        content = re.sub(r';\s*</>\s*;\s*', '\n    </>\n  );', content)
+        
+        # Fix 4: Fix component syntax
+        content = re.sub(r'<(\w+)\s*;\s*', r'<\1 ', content)
+        content = re.sub(r';\s*/>', ' />', content)
+        
+        # Fix 5: Fix string literals
+        content = re.sub(r'(\w+):\s*"([^"]*)"\s*;\s*', r'\1: "\2",\n      ', content)
+        content = re.sub(r'(\w+):\s*(\d+)\s*;\s*', r'\1: \2,\n      ', content)
+        content = re.sub(r'(\w+):\s*(true|false)\s*;\s*', r'\1: \2,\n      ', content)
+        
+        # Fix 6: Fix array syntax
+        content = re.sub(r'\[\s*"([^"]*)"\s*;\s*', r'["\1",\n        ', content)
+        content = re.sub(r';\s*"([^"]*)"\s*;\s*', r',\n        "\1",\n        ', content)
+        content = re.sub(r';\s*"([^"]*)"\s*\]\s*;\s*', r',\n        "\1"\n      ],\n      ', content)
+        
+        # Fix 7: Fix JSX elements
+        content = re.sub(r'<(\w+)\s+className="([^"]*)"\s*/>\s*;\s*', r'<\1 className="\2" />,\n      ', content)
+        
+        # Fix 8: Fix trailing semicolons in wrong places
+        content = re.sub(r';\s*\n\s*(\w+)', r',\n      \1', content)
+        
+        # Fix 9: Fix missing closing braces
+        content = re.sub(r'(\w+):\s*"([^"]*)"\s*;\s*$', r'\1: "\2"', content, flags=re.MULTILINE)
+        
+        # Fix 10: Fix React component structure
+        content = re.sub(r'const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*;\s*return\s*\(\s*<>\s*;\s*', 
+                        r'const \1: React.FC = () => {\n  return (\n    <>\n      ', content)
+        
+        # Fix 11: Fix export statements
+        content = re.sub(r'export\s+default\s+(\w+)\s*;\s*$', r'export default \1;', content, flags=re.MULTILINE)
+        
+        # Write back if changed
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Fixed: {file_path}")
             return True
-        else:
-            return False
-            
+        
+        return False
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return False
 
+def find_jsx_files():
+    """Find all JSX/TSX files that might have syntax errors."""
+    file_extensions = ['*.tsx', '*.jsx']
+    jsx_files = []
+    
+    for ext in file_extensions:
+        for file_path in glob.glob(f'**/{ext}', recursive=True):
+            # Skip node_modules and other irrelevant directories
+            if any(skip in file_path for skip in ['node_modules', '.git', 'dist', 'build', '.next']):
+                continue
+            jsx_files.append(file_path)
+    
+    return jsx_files
+
 def main():
-    """Main function"""
-    # Find all TypeScript/React files
-    patterns = [
-        '/workspace/app/**/*.tsx',
-        '/workspace/app/**/*.ts',
-        '/workspace/*.tsx',
-        '/workspace/*.ts'
-    ]
+    """Main function to fix JSX syntax errors."""
+    print("🔍 Scanning for JSX/TSX files...")
     
-    files_to_process = []
-    for pattern in patterns:
-        files_to_process.extend(glob.glob(pattern, recursive=True))
+    # Change to workspace directory
+    os.chdir('/workspace')
     
-    print(f"Found {len(files_to_process)} files to process")
+    jsx_files = find_jsx_files()
+    
+    if not jsx_files:
+        print("✅ No JSX files found!")
+        return
+    
+    print(f"📁 Found {len(jsx_files)} JSX/TSX files")
+    
+    print("\n🔧 Fixing JSX syntax errors...")
     
     fixed_count = 0
-    for file_path in files_to_process:
-        if process_file(file_path):
+    for file_path in jsx_files:
+        if fix_jsx_syntax_errors(file_path):
+            print(f"  ✅ Fixed: {file_path}")
             fixed_count += 1
     
-    print(f"Fixed {fixed_count} files")
+    print(f"\n✅ Successfully fixed syntax errors in {fixed_count} files")
 
 if __name__ == "__main__":
     main()

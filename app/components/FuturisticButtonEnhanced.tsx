@@ -1,164 +1,107 @@
+
 import React from 'react';
-import { motion } from 'framer-motion';
-import { LucideIcon } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+'use client';
+const FuturisticButtonEnhanced: React.FC = () => {}
+  return ()
+    <div className="min-h-screen bg-white">;
+      <Helmet>;
+        <title>Futuristic Button Enhanced - Zion Tech Group</title>;
+        <meta name="description" content="Professional futuristic button enhanced services by Zion Tech Group." />;
+      </Helmet>;
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">;
+        <div className="max-w-6xl mx-auto text-center">;
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">;
+            Futuristic Button Enhanced;
+          </h1>;
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+            Professional futuristic button enhanced services;
+            designed to help your business grow and succeed.;
+          </p>;
+        </div>;
+      </section>;
+      {/* Content Section */}
+      <section className="py-16 px-4">;
+        <div className="max-w-6xl mx-auto">;
+          <div className="grid md:grid-cols-2 gap-12 items-center">;
+            <div>;
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>;
+              <p className="text-lg text-gray-600 mb-6">;
+                We provide comprehensive futuristic button enhanced;
+                solutions tailored to your specific needs and requirements.;
+              </p>;
+              <ul className="space-y-3">;
+                <li className="flex items-center">;
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>;
+                  Custom solutions;
+                </li>;
+                <li className="flex items-center">;
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>;
+                  Expert consultation;
+                </li>;
+                <li className="flex items-center">;
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>;
+                  Ongoing support;
+                </li>;
+              </ul>;
+            </div>;
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">;
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>;
+              <p className="mb-6">;
+                Ready to transform your business with our futuristic button enhanced services?;
+              </p>;
+              <a;>
+                href="/contact";
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";
+              >;
+                Contact Us;
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">;
+        <div className="max-w-4xl mx-auto text-center">;
+          <h2 className="text-3xl font-bold text-white mb-6">;
+            Ready to Get Started?;
+          </h2>;
+          <p className="text-xl text-blue-100 mb-8">;
+            Let's discuss how our futuristic button enhanced';
+            services can help you achieve your goals.;
+          </p>;
+          <a;>
+            href="/contact";
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors";
+          >;
+            Get Started Today;
+          </a>;
+        </div>;
+      </section>;
+    </div>;
 
-interface FuturisticButtonEnhancedProps {
-  children: React.ReactNode;
-  onClick?: () => void;
-  href?: string;
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  glowColor?: 'cyan' | 'purple' | 'pink' | 'green' | 'blue' | 'orange';
-  icon?: LucideIcon;
-  iconPosition?: 'left' | 'right';
-  disabled?: boolean;
-  loading?: boolean;
-  className?: string;
-  animated?: boolean;
-  neon?: boolean;
-}
-
-const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
-  children,
-  onClick,
-  href,
-  variant = 'primary',
-  size = 'md',
-  glowColor = 'cyan',
-  icon: Icon,
-  iconPosition = 'right',
-  disabled = false,
-  loading = false,
-  className = '',
-  animated = true,
-  neon = true
-}) => {
-  const baseClasses = `
-    relative inline-flex items-center justify-center font-semibold rounded-lg
-    transition-all duration-300 overflow-hidden group
-    ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
-  `;
-
-  const sizeClasses = {
-    sm: 'px-3 py-1.5 text-sm',
-    md: 'px-4 py-2 text-base',
-    lg: 'px-6 py-3 text-lg',
-    xl: 'px-8 py-4 text-xl'
-  };
-
-  const variantClasses = {
-    primary: `
-      bg-gradient-to-r from-cyan-500 to-purple-600 text-white
-      hover:from-cyan-600 hover:to-purple-700
-      ${neon ? 'shadow-lg shadow-cyan-500/25 hover:shadow-2xl hover:shadow-cyan-500/40' : ''}
-    `,
-    secondary: `
-      bg-gradient-to-r from-slate-700 to-slate-800 text-white
-      hover:from-slate-600 hover:to-slate-700
-      ${neon ? 'shadow-lg shadow-slate-500/25 hover:shadow-2xl hover:shadow-slate-500/40' : ''}
-    `,
-    outline: `
-      border-2 border-cyan-400 text-cyan-400 bg-transparent
-      hover:bg-cyan-400 hover:text-slate-900
-      ${neon ? 'shadow-lg shadow-cyan-500/25 hover:shadow-2xl hover:shadow-cyan-500/40' : ''}
-    `,
-    ghost: `
-      text-cyan-400 bg-transparent
-      hover:bg-cyan-400/10 hover:text-cyan-300
-    `
-  };
-
-  const buttonVariants = {
-    initial: { 
-      scale: 1,
-      boxShadow: '0 0 0 rgba(6, 182, 212, 0)'
-    },
-    hover: { 
-      scale: 1.05,
-      boxShadow: '0 10px 30px rgba(6, 182, 212, 0.4)',
-      transition: { duration: 0.2 }
-    },
-    tap: { 
-      scale: 0.95,
-      transition: { duration: 0.1 }
-    }
-  };
-
-  const content = (
-    <>
-      {/* Animated background */}
-      {animated && (
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      )}
-      
-      {/* Neon glow effect */}
-      {neon && (
-        <div className={`
-          absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300
-          bg-gradient-to-r from-${glowColor}-500/20 to-${glowColor}-500/10
-        `} />
-      )}
-      
-      {/* Loading spinner */}
-      {loading && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-        </div>
-      )}
-      
-      {/* Content */}
-      <div className={`relative z-10 flex items-center ${loading ? 'opacity-0' : 'opacity-100'}`}>
-        {Icon && iconPosition === 'left' && (
-          <Icon className={`w-4 h-4 ${size === 'sm' ? 'w-3 h-3' : size === 'lg' ? 'w-5 h-5' : size === 'xl' ? 'w-6 h-6' : 'w-4 h-4'} mr-2 group-hover:scale-110 transition-transform duration-200`} />
-        )}
-        {children}
-        {Icon && iconPosition === 'right' && (
-          <Icon className={`w-4 h-4 ${size === 'sm' ? 'w-3 h-3' : size === 'lg' ? 'w-5 h-5' : size === 'xl' ? 'w-6 h-6' : 'w-4 h-4'} ml-2 group-hover:scale-110 transition-transform duration-200`} />
-        )}
-      </div>
-      
-      {/* Corner accents */}
-      <div className="absolute top-1 right-1 w-1 h-1 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
-      <div className="absolute bottom-1 left-1 w-1 h-1 bg-purple-400 rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-300" />
-    </>
   );
 
-  const buttonClasses = `
-    ${baseClasses}
-    ${sizeClasses[size]}
-    ${variantClasses[variant]}
-    ${className}
-  `;
-
-  if (href) {
-    return (
-      <motion.a
-        href={href}
-        className={buttonClasses}
-        variants={animated ? buttonVariants : undefined}
-        initial="initial"
-        whileHover={!disabled ? "hover" : undefined}
-        whileTap={!disabled ? "tap" : undefined}
-        onClick={onClick}
-      >
-        {content}
-      </motion.a>
-    );
-  }
-
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+const ComponentsPage: React.FC = () => {
   return (
-    <motion.button
-      className={buttonClasses}
-      variants={animated ? buttonVariants : undefined}
-      initial="initial"
-      whileHover={!disabled ? "hover" : undefined}
-      whileTap={!disabled ? "tap" : undefined}
-      onClick={onClick}
-      disabled={disabled || loading}
-    >
-      {content}
-    </motion.button>
-  );
-};
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group"";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
 
-export default FuturisticButtonEnhanced;
+};
+;
+export default ComponentsPage;'";'";

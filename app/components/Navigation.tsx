@@ -1,270 +1,880 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Star, 
-  Users, 
-  Sparkles, 
-  Mail, 
-  Monitor,
-  ChevronDown,
-  Menu,
-  X
-} from 'lucide-react';
+  Bars3Icon,
+  XMarkIcon,
+  HomeIcon,
+  InformationCircleIcon,
+  BriefcaseIcon,
+  CpuChipIcon,
+  ShieldCheckIcon,
+  CloudIcon,
+  SignalIcon,
+  GlobeAltIcon,
+  ChevronDownIcon
+} from '@heroicons/react/24/outline';
 
 interface NavigationProps {
-  onSidebarToggle: () => void;
+  sidebarOpen: boolean;
+  setSidebarOpen: (open: boolean) => void;
+}
+
+const Navigation: React.FC<NavigationProps> = ({ sidebarOpen, setSidebarOpen }) => {
+  const location = useLocation();
+const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
+  const [isITServicesOpen, setIsITServicesOpen] = useState(false);
+  const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false);}
+  const [is5GServicesOpen, setIs5GServicesOpen] = useState(false);';}
+';}
+  const navigation = ['}
+    { name: 'Home', href: '/', icon: HomeIcon },'
+    { name: 'About', href: '/about', icon: InformationCircleIcon },
+    {
+      name: 'Services',
+      href: '/services',
+      icon: BriefcaseIcon,
+      submenu: [
+        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
+        { name: 'IT Solutions', href: '/it-solutions', icon: BriefcaseIcon },
+        { name: 'Micro SaaS', href: '/micro-saas-solutions', icon: GlobeAltIcon },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
+        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
+      ]
+    },
+    { name: 'Contact', href: '/contact', icon: InformationCircleIcon }
+  ];
+
+  return (
+    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex items-center">
+            <Link to="/" className="flex-shrink-0">
+              <span className="text-2xl font-bold text-white">Zion Tech Group</span>
+=======
+
+import React, { useState } from 'react',
+      import {"}
+        "
+  Bars3Icon,",
+        "
+  XMarkIcon,",
+        "
+  HomeIcon,",
+        "
+  InformationCircleIcon,",
+        "
+  BriefcaseIcon,",
+        "
+  PhoneIcon,",
+        "
+  DocumentTextIcon,",
+        "
+  AcademicCapIcon,",
+        "
+  PlayIcon,",
+        "
+  QuestionMarkCircleIcon,",
+        "
+  CheckIcon,",
+        "
+  CurrencyDollarIcon,",
+        "
+  CogIcon,",
+        "
+  ChevronDownIcon,",
+        "
+  GlobeAltIcon,",
+        "
+  CloudIcon,",
+        "
+  ChipIcon,",
+        "
+  SignalIcon,",
+        "
+  UserGroupIcon,",
+        "
+  EnvelopeIcon,",
+        "
+  ShareIcon,",
+        "
+  ChatBubbleLeftRightIcon,",
+        "
+  ChartBarIcon,",
+        "
+  Icon,",
+        "
+  CircleStackIcon,",
+        "
+  CodeBracketIcon,",
+        "
+  DevicePhoneMobileIcon,",
+        "
+  UserPlusIcon,",
+        "
+  CheckCircleIcon,",
+        "
+  RocketLaunchIcon,",
+        "
+  ServerIcon",
+        "
+} from '@heroicons/react/24/outline';
+,
+      interface NavigationProps {"}
+        "
+  onSidebarToggle?: () => void",
+        "
+};
+,
+      const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {"}
+        "
+
+  const [isOpen, setIsOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false)
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false)
+  const location = useLocation()
+
+  const navigation = [",
+        "
+    { name: 'Home', href: '/', icon: HomeIcon },",
+        "
+    { name: 'About', href: '/about', icon: InformationCircleIcon },",
+        "
+    {"}
+        "
+      name: 'AI Services',",
+        "
+      href: '/ai-solutions',",
+        "
+      icon: ChipIcon,",
+        "
+      submenu: [",
+        "
+        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: ChipIcon },",
+        "
+        { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: EnvelopeIcon },",
+        "
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },",
+        "
+        { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot', icon: ChatBubbleLeftRightIcon },",
+        "
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro', icon: CogIcon },",
+        "
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', icon: ChartBarIcon },",
+        "
+        { name: 'AI Content Generation', href: '/ai-content-generation-pro', icon: DocumentTextIcon },",
+        "
+        { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: Icon },",
+        "
+        { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon };
+      ]
+    },",
+        "
+    {"}
+        "
+      name: 'Micro SaaS',",
+        "
+      href: '/micro-saas-solutions',",
+        "
+      icon: GlobeAltIcon,",
+        "
+      submenu: [",
+        "
+        { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },",
+        "
+        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },",
+        "
+        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },",
+        "
+        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },",
+        "
+        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },",
+        "
+        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },",
+        "
+        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon };
+      ]
+    },",
+        "
+    {"}
+        "
+      name: 'IT Solutions',",
+        "
+      href: '/it-solutions',",
+        "
+      icon: CogIcon,",
+        "
+      submenu: [",
+        "
+        { name: 'IT Solutions Overview', href: '/it-solutions', icon: CogIcon },",
+        "
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },",
+        "
+        { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: CheckIcon },",
+        "
+        { name: 'Web Development', href: '/web-development', icon: CodeBracketIcon },",
+        "
+        { name: 'Mobile App Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },",
+        "
+        { name: 'Management', href: '/database-management', icon: CircleStackIcon },",
+        "
+        { name: 'Network Infrastructure', href: '/network-infrastructure', icon: SignalIcon },",
+        "
+        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon };
+      ]
+    },",
+        "
+    {"}
+        "
+      name: 'Resources',",
+        "
+      href: '#',",
+        "
+      icon: DocumentTextIcon,",
+        "
+      submenu: [",
+        "
+        { name: 'Blog', href: '/blog', icon: DocumentTextIcon },",
+        "
+        { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },",
+        "
+        { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },",
+        "
+        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },",
+        "
+        { name: 'API Documentation', href: '/api-docs', icon: CodeBracketIcon },",
+        "
+        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon };
+      ]
+    },",
+        "
+    {"}
+        "
+      name: 'Company',",
+        "
+      href: '#',",
+        "
+      icon: UserGroupIcon,",
+        "
+      submenu: [",
+        "
+        { name: 'About Us', href: '/about', icon: InformationCircleIcon },",
+        "
+        { name: 'Our Team', href: '/team', icon: UserGroupIcon },",
+        "
+        { name: 'Careers', href: '/careers', icon: UserGroupIcon },",
+        "
+        { name: 'Partnerships', href: '/partnerships', icon: UserPlusIcon },",
+        "
+
+        { name: 'Contact', href: '/contact', icon: PhoneIcon };
+      ]
+    },";"
+    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },";"
+    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon };
+  ]
+
+  const mobileNavigation = [",
+        "
+    { name: 'AI Solutions', href: '/ai-solutions', icon: ChipIcon },",
+        "
+    { name: 'Cybersecurity', href: '/cybersecurity', icon: CheckIcon },",
+        "
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },",
+        "
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: RocketLaunchIcon },",
+        "
+    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: CogIcon },",
+        "
+    { name: 'IT Solutions', href: '/it-solutions', icon: ServerIcon },",
+        "
+  ]
+
+  const isActive = (path: string) => {"}
+        "
+    return location.pathname === path",
+        "
+  };
+,
+      const toggleServicesMenu = () => {"}
+        "
+
+    setIsServicesOpen(!isServicesOpen)
+    setIsSolutionsOpen(false)
+    setIsResourcesOpen(false)
+    setIsCompanyOpen(false)
+  };
+,
+      const toggleSolutionsMenu = () => {"}
+        "
+
+    setIsSolutionsOpen(!isSolutionsOpen)
+    setIsServicesOpen(false)
+    setIsResourcesOpen(false)
+    setIsCompanyOpen(false)
+  };
+,
+      const toggleResourcesMenu = () => {"}
+        "
+
+    setIsResourcesOpen(!isResourcesOpen)
+    setIsServicesOpen(false)
+    setIsSolutionsOpen(false)
+    setIsCompanyOpen(false)
+  };
+,
+      const toggleCompanyMenu = () => {"}
+        "
+    setIsCompanyOpen(!isCompanyOpen)
+    setIsServicesOpen(false)
+    setIsSolutionsOpen(false)
+    setIsResourcesOpen(false)
+  };
+,
+      return (";")
+    <nav className="bg-slate-900 shadow-lg">";"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";"
+        <div className="flex justify-between h-16">";"
+          <div className="flex">";"
+            <div className="flex-shrink-0 flex items-center">";"
+              <to="/" className="flex-shrink-0 flex items-center">";"
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">";"
+                  <span className="text-white font-bold text-sm">Z</span>",
+        "
+                </div>",
+        "
+                <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>",
+        "
+              </>",
+        "
+            </div>";"
+            {/* Desktop Navigation */};
+            <div className="hidden lg:ml-6 lg:flex lg:space-x-8">";"
+              {navigation.map((item) => (";")}
+                <div key={item.name} className="relative">";"
+                  <";">
+                    to={item.href};
+                    className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${";"}
+
+                      isActive(item.href)
+                        ? 'border-blue-500 text-white';
+                        : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white';
+                    }`};
+                  >";"
+                    <item.icon className="w-4 h-4" />";"
+                    <span>{item.name}</span>";"
+                    {item.submenu && <ChevronDownIcon className="w-4 h-4" />};
+                  </>",
+        "
+                  {/* Dropdown Menu */};
+                  {item.submenu && (",)}
+        "
+                    <divclassName={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${",>}
+        "
+                      (item.name === 'AI Services' && isServicesOpen) ||",
+        "
+                      (item.name === 'Micro SaaS' && isSolutionsOpen) ||",
+        "
+                      (item.name === 'IT Solutions' && isResourcesOpen) ||",
+        "
+                      (item.name === 'Resources' && isResourcesOpen) ||",
+        "
+                      (item.name === 'Company' && isCompanyOpen)
+                        ? 'block' : 'hidden';
+                    }`}>",
+        "
+                      {item.submenu.map((subItem) => (",)}
+        "
+                        <div key={subItem.name}>",
+        "
+                          <";">
+                            to={subItem.href},
+      className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white";
+                          >";"
+                            <subItem.icon className="w-4 h-4 mr-3" />",
+        "
+                            <span>{subItem.name}</span>",
+        "
+                          </>",
+        "
+                        </div>",
+        "
+
+                      ))};
+                    </div>";"
+                  )};
+                </div>";"
+              ))};
+            </div>";"
+          </div>";"
+          {/* Mobile menu button */};
+          <div className="lg:hidden flex items-center">",
+        "
+            <button",>
+        "
+              onClick={() => setIsOpen(!isOpen)},
+      className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white";
+            >";"
+              <span className="sr-only">Open main menu</span>",
+        "
+              {isOpen ? (",)}
+        "
+                <XMarkIcon className="h-6 w-6" />",
+        "
+              ) : (",)
+        "
+                <Bars3Icon className="h-6 w-6" />",
+        "
+              )};
+            </button>",
+        "
+          </div>",
+        "
+        </div>",
+        "
+        {/* Mobile Navigation */};
+        <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>";"
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700 max-h-96 overflow-y-auto">",
+        "
+            {navigation.map((item) => (",)}
+        "
+              <div key={item.name}>",
+        "
+                {item.submenu ? (",)}
+        "
+                  <div>",
+        "
+                    <button",>
+        "
+                      onClick={() => {";"}
+                        if (item.name === 'AI Services') toggleServicesMenu(),
+      else if (item.name === 'Micro SaaS') toggleSolutionsMenu(),
+      else if (item.name === 'IT Solutions') toggleResourcesMenu(),
+      else if (item.name === 'Resources') toggleResourcesMenu(),
+      else if (item.name === 'Company') toggleCompanyMenu();
+                      }},
+      className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-300 hover:text-white hover:bg-slate-700";
+                    >";"
+                      <item.icon className="w-5 h-5 mr-3" />",
+        "
+                      <span>{item.name}</span>",
+        "
+                      <ChevronDownIcon className="w-4 h-4 ml-auto" />",
+        "
+                    </button>",
+        "
+                    {/* Mobile Submenu */};
+                    <divclassName={`pl-6 ${",>}
+        "
+                      (item.name === 'AI Services' && isServicesOpen) ||",
+        "
+                      (item.name === 'Micro SaaS' && isSolutionsOpen) ||",
+        "
+                      (item.name === 'IT Solutions' && isResourcesOpen) ||",
+        "
+                      (item.name === 'Resources' && isResourcesOpen) ||",
+        "
+                      (item.name === 'Company' && isCompanyOpen)
+                        ? 'block' : 'hidden';
+                    }`}>",
+        "
+                      {item.submenu.map((subItem) => (",)}
+        "
+                        <div key={subItem.name}>",
+        "
+                          <";">
+                            to={subItem.href},
+      className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-slate-700",
+      onClick={() => setIsOpen(false)};
+                          >";"
+                            <subItem.icon className="w-4 h-4 mr-3" />",
+        "
+                            <span>{subItem.name}</span>",
+        "
+                          </>",
+        "
+                        </div>",
+        "
+                      ))};
+                    </div>",
+        "
+                  </div>",
+        "
+                ) : (",)
+        "
+                  <div>",
+        "
+                    <",>
+        "
+                      to={item.href},
+      className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${isActive(item.href) ? 'text-white bg-slate-700' : 'text-gray-300 hover:text-white hover:bg-slate-700'}`},
+      onClick={() => setIsOpen(false)};
+                    >",
+        "
+                      <item.icon className="w-5 h-5 mr-3" />",
+        "
+                      {item.name};
+                    </>",
+        "
+                  </div>",
+        "
+                )};
+              </div>",
+        "
+            ))};
+          </div>";"
+        </div>";"
+      </div>";"
+    </nav>";"
+
+  )
+
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import {
+  Bars3Icon,
+  XMarkIcon,
+  HomeIcon,
+  InformationCircleIcon,
+  PhoneIcon,
+  DocumentTextIcon,
+  AcademicCapIcon,
+  QuestionMarkCircleIcon,
+  ShieldCheckIcon,
+  CurrencyDollarIcon,
+  CogIcon,
+  ChevronDownIcon,
+  GlobeAltIcon,
+  CloudIcon,
+  CpuChipIcon,
+  SignalIcon,
+  UserGroupIcon,
+  EnvelopeIcon,
+  ShareIcon,
+  ChatBubbleLeftRightIcon,
+  ChartBarIcon,
+  EyeIcon,
+  CircleStackIcon,
+  CodeBracketIcon,
+  DevicePhoneMobileIcon,
+  UserPlusIcon,
+  CheckCircleIcon,
+  RocketLaunchIcon,
+  ServerIcon;
+}; from '@heroicons/react/24/outline';
+
+interface NavigationProps {
+  onSidebarToggle?: () => void;
 }
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   const location = useLocation();
 
-  const toggleMenu = useCallback(() => {
-    setIsMenuOpen(prev => !prev);
-  }, []);
-
-
-  const closeDropdowns = useCallback(() => {
-    setActiveDropdown(null);
-  }, []);
-
-  const isActive = useCallback((path: string) => {
-    return location.pathname === path;
-  }, [location.pathname]);
-
-  const navigationItems = useMemo(() => [
+  const navigation = [
+    { name: 'Home', href: '/', icon: HomeIcon },";
+    { name: 'About', href: '/about', icon: InformationCircleIcon },";
     {
-      label: 'Home',
-      href: '/',
-      icon: <Star className="w-4 h-4" />
-    },
-    {
-      label: 'AI Services',
-      href: '/ai-services',
-      icon: <Brain className="w-4 h-4" />,
-      dropdown: [
-        { label: 'AI Analytics', href: '/ai-analytics' },
-        { label: 'AI Automation', href: '/ai-automation' },
-        { label: 'AI Business Intelligence', href: '/ai-business-intelligence' },
-        { label: 'AI Content Generation', href: '/ai-content-generation' },
-        { label: 'AI Customer Service', href: '/ai-customer-service' },
-        { label: 'AI Data Analytics', href: '/ai-data-analytics' },
-        { label: 'AI Email Automation', href: '/ai-email-automation' },
-        { label: 'AI Fraud Detection', href: '/ai-fraud-detection' },
-        { label: 'AI Healthcare', href: '/ai-healthcare' },
-        { label: 'AI Marketing', href: '/ai-marketing' },
-        { label: 'AI Predictive Analytics', href: '/ai-predictive-analytics' },
-        { label: 'AI Project Management', href: '/ai-project-management' },
-        { label: 'AI Recommendation Engine', href: '/ai-recommendation-engine' },
-        { label: 'AI Sales Automation', href: '/ai-sales-automation' },
-        { label: 'AI Workflow Automation', href: '/ai-workflow-automation' }
+      name: 'AI Services',";
+      href: '/ai-solutions',";
+      icon: CpuChipIcon,
+      submenu: [
+        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon },";
+        { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: EnvelopeIcon },";
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },";
+        { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot', icon: ChatBubbleLeftRightIcon },";
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro', icon: CogIcon },";
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', icon: ChartBarIcon },";
+        { name: 'AI Content Generation', href: '/ai-content-generation-pro', icon: DocumentTextIcon },";
+        { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: EyeIcon },";
+        { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon }";
       ]
     },
     {
-      label: 'IT Services',
-      href: '/services',
-      icon: <Shield className="w-4 h-4" />,
-      dropdown: [
-        { label: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-        { label: 'Cybersecurity Solutions', href: '/cybersecurity-solutions' },
-        { label: 'Web Development', href: '/web-development' },
-        { label: 'Mobile Development', href: '/mobile-development' },
-        { label: 'Database Management', href: '/database-management' },
-        { label: 'Custom Software', href: '/custom-software' },
-        { label: 'Network Infrastructure', href: '/network-infrastructure' }
+      name: 'Micro SaaS',";
+      href: '/micro-saas-solutions',";
+      icon: GlobeAltIcon,
+      submenu: [
+        { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },";
+        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },";
+        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },";
+        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },";
+        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },";
+        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },";
+        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon }";
       ]
     },
     {
-      label: 'Micro SAAS',
-      href: '/micro-saas',
-      icon: <Zap className="w-4 h-4" />,
-      dropdown: [
-        { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
-        { label: 'Zion Security Shield', href: '/zion-security-shield' },
-        { label: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
-        { label: 'Zion Content Studio', href: '/zion-content-studio' },
-        { label: 'Zion AI CRM Pro', href: '/zion-ai-crm-pro' },
-        { label: 'Zion AI Marketing Automation Pro', href: '/zion-ai-marketing-automation-pro' },
-        { label: 'Zion AI Project Manager Pro', href: '/zion-ai-project-manager-pro' },
-        { label: 'Zion AI Meeting Transcriber', href: '/zion-ai-meeting-transcriber' },
-        { label: 'Zion AI Sales Predictor', href: '/zion-ai-sales-predictor' },
-        { label: 'Zion Smart Expense Tracker', href: '/zion-smart-expense-tracker' },
-        { label: 'Zion AI Document Analyzer', href: '/zion-ai-document-analyzer' },
-        { label: 'Zion Customer Satisfaction Monitor', href: '/zion-customer-satisfaction-monitor' },
-        { label: 'Zion AI Workflow Automator', href: '/zion-ai-workflow-automator' }
+      name: 'IT Solutions',";
+      href: '/it-solutions',";
+      icon: CogIcon,
+      submenu: [
+        { name: 'IT Solutions Overview', href: '/it-solutions', icon: CogIcon },";
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },";
+        { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: ShieldCheckIcon },";
+        { name: 'Web Development', href: '/web-development', icon: CodeBracketIcon },";
+        { name: 'Mobile App Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },";
+        { name: 'Database Management', href: '/database-management', icon: CircleStackIcon },";
+        { name: 'Network Infrastructure', href: '/network-infrastructure', icon: SignalIcon },";
+        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }";
       ]
     },
     {
-      label: '5G Solutions',
-      href: '/5g-solutions',
-      icon: <Globe className="w-4 h-4" />,
-      dropdown: [
-        { label: '5G Data Analytics', href: '/5g-data-analytics' },
-        { label: '5G Edge Computing', href: '/5g-edge-computing' },
-        { label: '5G Implementation', href: '/5g-implementation' },
-        { label: '5G Mobile Applications', href: '/5g-mobile-applications' },
-        { label: '5G Network Infrastructure', href: '/5g-network-infrastructure' },
-        { label: '5G Private Networks', href: '/5g-private-networks' },
-        { label: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
-        { label: '5G IoT Solutions', href: '/5g-iot-solutions' }
+      name: 'Resources',";
+      href: '#',";
+      icon: DocumentTextIcon,
+      submenu: [
+        { name: 'Blog', href: '/blog', icon: DocumentTextIcon },";
+        { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },";
+        { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },";
+        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },";
+        { name: 'API Documentation', href: '/api-docs', icon: CodeBracketIcon },";
+        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }";
       ]
     },
     {
-      label: 'About',
-      href: '/about',
-      icon: <Users className="w-4 h-4" />
+      name: 'Company',";
+      href: '#',";
+      icon: UserGroupIcon,
+      submenu: [
+        { name: 'About Us', href: '/about', icon: InformationCircleIcon },";
+        { name: 'Our Team', href: '/team', icon: UserGroupIcon },";
+        { name: 'Careers', href: '/careers', icon: UserGroupIcon },";
+        { name: 'Partnerships', href: '/partnerships', icon: UserPlusIcon },";
+        { name: 'Contact', href: '/contact', icon: PhoneIcon }";
+      ]
     },
-    {
-      label: 'Contact',
-      href: '/contact',
-      icon: <Mail className="w-4 h-4" />
-    }
-  ], []);
+    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },";
+    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }";
+  ];
+
+  const isActive = (path: string) => {
+    return location.pathname === path,
+  };
+
+  const toggleServicesMenu = () => {
+    setIsServicesOpen(!isServicesOpen);
+    setIsSolutionsOpen(false);
+    setIsResourcesOpen(false);
+    setIsCompanyOpen(false);
+  };
+
+  const toggleSolutionsMenu = () => {
+    setIsSolutionsOpen(!isSolutionsOpen);
+    setIsServicesOpen(false);
+    setIsResourcesOpen(false);
+    setIsCompanyOpen(false);
+  };
+
+  const toggleResourcesMenu = () => {
+    setIsResourcesOpen(!isResourcesOpen);
+    setIsServicesOpen(false);
+    setIsSolutionsOpen(false);
+    setIsCompanyOpen(false);
+  };
+
+  const toggleCompanyMenu = () => {
+    setIsCompanyOpen(!isCompanyOpen);
+    setIsServicesOpen(false);
+    setIsSolutionsOpen(false);
+    setIsResourcesOpen(false);
+  };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link
-              to="/"
-              className="flex items-center space-x-2 text-white hover:text-cyan-400 transition-colors"
-            >
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
+    <nav className ="bg-slate-800 border-b border-slate-700">";
+      <div className ="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
+        <div className ="flex justify-between h-16">";
+          <div className ="flex items-center">";
+            <Link to ="/" className="flex-shrink-0 flex items-center">";
+              <div className ="h-8 w-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center">";
+                <span className ="text-white font-bold text-sm">Z</span>";
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Zion Tech Group
-              </span>
+              <span className ="ml-2 text-white font-bold text-lg">Zion Tech Group</span>",
+>>>>>>> main
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <div key={item.label} className="relative group">
-                <Link
-                  to={item.href}
-                  className={`flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors py-2 ${
-                    isActive(item.href) ? 'text-cyan-400' : ''
+<<<<<<< HEAD
+          <div className="hidden lg:flex lg:items-center lg:space-x-8">
+            {navigation.map((item) => (
+              <div key={item.name} className="relative">
+                {item.submenu ? (
+                  <div className="relative">
+                    <button
+                      onClick={() => setIsAIServicesOpen(!isAIServicesOpen)}
+                      className="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      {item.name}
+                      <ChevronDownIcon className="ml-1 h-4 w-4" />
+                    </button>
+                    {isAIServicesOpen && (
+                      <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg z-50">
+                        <div className="py-1">
+                          {item.submenu.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              to={subItem.href}
+                              className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white"
+                            >
+                              <subItem.icon className="mr-3 h-4 w-4" />
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className={`px-3 py-2 rounded-md text-sm font-medium ${
+                      location.pathname === item.href
+                        ? 'text-white bg-slate-700'
+                        : 'text-gray-300 hover:text-white hover:bg-slate-700'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+=======
+          <div className ="hidden lg: flex lg:items-center lg:space-x-8">",
+            {navigation.map((item) => (
+              <div key ={item.name} className="relative">";
+                <Link to ={item.href}
+                  className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors border-b-2 ${
+                    isActive(item.href)
+                      ? 'border-blue-500 text-white'";
+                       'border-transparent text-gray-300 hover: border-gray-300 hover:text-white'",
                   }`}
-                  onMouseEnter={() => item.dropdown && setActiveDropdown(item.label)}
-                  onMouseLeave={() => item.dropdown && setActiveDropdown(null)}
                 >
-                  {item.icon}
-                  <span>{item.label}</span>
-                  {item.dropdown && <ChevronDown className="w-4 h-4" />}
+                  <item.icon: className ="w-4 h-4" />",
+                  <span>{item.name}</span>
+                  {item.submenu && <ChevronDownIcon className ="w-4 h-4" />}";
                 </Link>
-
                 {/* Dropdown Menu */}
-                {item.dropdown && activeDropdown === item.label && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-gray-900 rounded-lg shadow-lg opacity-100 visible transition-all duration-200 z-50">
-                    <div className="py-2">
-                      {item.dropdown.map((dropdownItem) => (
-                        <Link
-                          key={dropdownItem.label}
-                          to={dropdownItem.href}
-                          className={`flex items-center space-x-2 px-4 py-2 text-sm hover:bg-gray-800 transition-colors ${
-                            isActive(dropdownItem.href) ? 'text-cyan-400' : 'text-gray-300'
-                          }`}
-                          onClick={closeDropdowns}
+                {item.submenu && (
+                  <div className ={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
+                    (item.name === 'AI Services' && isServicesOpen) ||";
+                    (item.name === 'Micro SaaS' && isSolutionsOpen) ||";
+                    (item.name === 'IT Solutions' && isResourcesOpen) ||";
+                    (item.name === 'Resources' && isResourcesOpen) ||";
+                    (item.name === 'Company' && isCompanyOpen)";
+                      ? 'block'  'hidden'";
+                  }`}>
+                    {item.submenu.map((subItem) => (
+                      <div key ={subItem.name}>
+                        <Link to ={subItem.href}
+                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover: bg-slate-700 hover:text-white"";
                         >
-                          <span>{dropdownItem.label}</span>
+                          <subItem.icon: className ="w-4 h-4 mr-3" />",
+                          <span>{subItem.name}</span>
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+>>>>>>> main
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile menu button */}
+<<<<<<< HEAD
+          <div className="lg:hidden flex items-center">
+            <button
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+              className="text-gray-300 hover:text-white p-2 rounded-md"
+            >
+              {sidebarOpen ? (
+                <XMarkIcon className="h-6 w-6" />
+              ) : (
+                <Bars3Icon className="h-6 w-6" />
+              )}
+            </button>
+=======
+          <div className ="lg: hidden flex items-center">",
+            <button onClick ={() => setIsOpen(!isOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover: text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"";
+            >
+              <span className ="sr-only">Open main menu</span>";
+              {isOpen ? (
+                <XMarkIcon className ="h-6 w-6" />";
+              ) : (
+                <Bars3Icon className ="h-6 w-6" />",
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className ={`lg:hidden ${isOpen ? 'block'  'hidden'}`}>";
+          <div className ="px-2 pt-2 pb-3 space-y-1 sm: px-3 bg-slate-800 border-t border-slate-700 max-h-96 overflow-y-auto">",
+            {navigation.map((item) => (
+              <div key ={item.name}>
+                {item.submenu ? (
+                  <div>
+                    <button onClick ={() => {
+                        if (item.name === 'AI Services') toggleServicesMenu();";
+                        else if (item.name === 'Micro SaaS') toggleSolutionsMenu();";
+                        else if (item.name === 'IT Solutions') toggleResourcesMenu();";
+                        else if (item.name === 'Resources') toggleResourcesMenu();";
+                        else if (item.name === 'Company') toggleCompanyMenu()`;
+                      }}
+                      className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-300 hover: text-white hover:bg-slate-700"";
+                    >
+                      <item.icon: className ="w-5 h-5 mr-3" />",
+                      <span>{item.name}</span>
+                      <ChevronDownIcon className ="w-4 h-4 ml-auto" />";
+                    </button>
+                    {/* Mobile Submenu */}
+                    <div className ={`pl-6 ${
+                      (item.name === 'AI Services' && isServicesOpen) ||";
+                      (item.name === 'Micro SaaS' && isSolutionsOpen) ||";
+                      (item.name === 'IT Solutions' && isResourcesOpen) ||";
+                      (item.name === 'Resources' && isResourcesOpen) ||";
+                      (item.name === 'Company' && isCompanyOpen)";
+                        ? 'block'  'hidden'";
+                    }`}>
+                      {item.submenu.map((subItem) => (
+                        <Link key ={subItem.name}
+                          to={subItem.href}
+                          className="flex items-center px-3 py-2 text-sm text-gray-300 hover: text-white hover:bg-slate-700"";
+                        >
+                          <subItem.icon: className ="w-4 h-4 mr-3" />",
+                          <span>{subItem.name}</span>
                         </Link>
                       ))}
                     </div>
                   </div>
+                ) : (
+                  <Link to ={item.href}
+                    className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                      isActive(item.href)
+                        ? 'bg-slate-700 text-white'";
+                         'text-gray-300 hover: text-white hover:bg-slate-700'",
+                    }`}
+                  >
+                    <item.icon: className ="w-5 h-5 mr-3" />",
+                    <span>{item.name}</span>
+                  </Link>
                 )}
               </div>
             ))}
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              to="/demo"
-              className="border border-cyan-400 text-cyan-400 px-4 py-2 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center space-x-2"
-            >
-              <Monitor className="w-4 h-4" />
-              <span>Demo</span>
-            </Link>
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center space-x-2"
-            >
-              <Sparkles className="w-4 h-4" />
-              <span>Get Started</span>
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center space-x-2">
-            <button
-              onClick={onSidebarToggle}
-              className="p-2 text-gray-300 hover:text-cyan-400 transition-colors"
-              aria-label="Toggle sidebar"
-            >
-              <Menu className="w-6 h-6" />
-            </button>
-            <button
-              onClick={toggleMenu}
-              className="p-2 text-gray-300 hover:text-cyan-400 transition-colors"
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+>>>>>>> main
           </div>
         </div>
       </div>
-
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="lg:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-900/95 backdrop-blur-md border-t border-cyan-500/20">
-            {navigationItems.map((item) => (
-              <div key={item.label}>
-                <Link
-                  to={item.href}
-                  className={`flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors py-2 px-3 rounded-lg hover:bg-white/5 ${
-                    isActive(item.href) ? 'text-cyan-400' : ''
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.icon}
-                  <span>{item.label}</span>
-                </Link>
-                
-                {/* Mobile Dropdown */}
-                {item.dropdown && (
-                  <div className="ml-4 mt-1 space-y-1">
-                    {item.dropdown.map((dropdownItem) => (
-                      <Link
-                        key={dropdownItem.label}
-                        to={dropdownItem.href}
-                        className={`block px-3 py-2 text-sm rounded-md ${
-                          isActive(dropdownItem.href)
-                            ? 'text-cyan-400 bg-cyan-500/10'
-                            : 'text-gray-300 hover:text-white hover:bg-white/10'
-                        }`}
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {dropdownItem.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
     </nav>
   );
+
 };
 
 export default Navigation;
