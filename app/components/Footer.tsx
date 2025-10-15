@@ -1,5 +1,12 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
+import { 
+  PhoneIcon, 
+  EnvelopeIcon, 
+  MapPinIcon, 
+  GlobeAltIcon, 
+  ClockIcon 
+} from '@heroicons/react/24/outline';
 
 const Footer: React.FC = memo(() => {
   return (
@@ -19,11 +26,33 @@ const Footer: React.FC = memo(() => {
               <p className="text-gray-300 mb-6 leading-relaxed matrix-text">
                 Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
               </p>
-              <div className="space-y-2 text-sm text-gray-300">
-                <p className="flex items-center"><strong className="text-cyan-400 mr-2">📞</strong> <a href="tel:+13024640950" className="hover:text-cyan-300 transition-colors neon-glow">+1 302 464 0950</a></p>
-                <p className="flex items-center"><strong className="text-cyan-400 mr-2">✉️</strong> <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-300 transition-colors">kleber@ziontechgroup.com</a></p>
-                <p className="flex items-center"><strong className="text-cyan-400 mr-2">📍</strong> 364 E Main St STE 1008<br />Middletown DE 19709</p>
-                <p className="flex items-center"><strong className="text-cyan-400 mr-2">🌐</strong> <a href="https://ziontechgroup.com" className="hover:text-cyan-300 transition-colors">https://ziontechgroup.com</a></p>
+              <div className="space-y-3 text-sm text-gray-300">
+                <div className="flex items-center">
+                  <PhoneIcon className="w-4 h-4 text-cyan-400 mr-3" />
+                  <a href="tel:+13024640950" className="hover:text-cyan-300 transition-colors neon-glow">+1 (302) 464-0950</a>
+                </div>
+                <div className="flex items-center">
+                  <EnvelopeIcon className="w-4 h-4 text-cyan-400 mr-3" />
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-300 transition-colors">kleber@ziontechgroup.com</a>
+                </div>
+                <div className="flex items-start">
+                  <MapPinIcon className="w-4 h-4 text-cyan-400 mr-3 mt-1" />
+                  <div>
+                    <div>364 E Main St STE 1008</div>
+                    <div>Middletown, DE 19709</div>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <GlobeAltIcon className="w-4 h-4 text-cyan-400 mr-3" />
+                  <a href="https://ziontechgroup.com" className="hover:text-cyan-300 transition-colors">https://ziontechgroup.com</a>
+                </div>
+                <div className="flex items-center">
+                  <ClockIcon className="w-4 h-4 text-cyan-400 mr-3" />
+                  <div>
+                    <div>Mon-Fri: 9AM-6PM EST</div>
+                    <div>24/7 Support Available</div>
+                  </div>
+                </div>
               </div>
               <div className="flex space-x-4 mt-4">
                 <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-cyan-300 transition-colors neon-glow p-2 rounded-lg hover:bg-cyan-500/10">

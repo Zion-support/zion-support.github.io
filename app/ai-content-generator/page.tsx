@@ -1,38 +1,433 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
+import { 
+  CheckCircleIcon, 
+  ArrowRightIcon, 
+  StarIcon,
+  ClockIcon,
+  UserGroupIcon,
+  DocumentTextIcon,
+  SparklesIcon,
+  GlobeAltIcon,
+  ChartBarIcon,
+  ShieldCheckIcon,
+  CogIcon,
+  EyeIcon,
+  ChatBubbleLeftRightIcon,
+  CurrencyDollarIcon,
+  PhoneIcon,
+  EnvelopeIcon,
+  MapPinIcon,
+  PlayIcon,
+  PauseIcon,
+  StopIcon,
+  ArrowPathIcon as RefreshIcon
+} from '@heroicons/react/24/outline';
 
 const AIContentGeneratorPage: React.FC = () => {
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState('');
+  const [contentType, setContentType] = useState('blog-post');
+  const [topic, setTopic] = useState('');
+  const [tone, setTone] = useState('professional');
+
+  const contentTypes = [
+    { id: 'blog-post', name: 'Blog Post', icon: DocumentTextIcon },
+    { id: 'social-media', name: 'Social Media', icon: ChatBubbleLeftRightIcon },
+    { id: 'email', name: 'Email Campaign', icon: EnvelopeIcon },
+    { id: 'ad-copy', name: 'Ad Copy', icon: EyeIcon },
+    { id: 'product-description', name: 'Product Description', icon: CogIcon },
+    { id: 'press-release', name: 'Press Release', icon: GlobeAltIcon }
+  ];
+
+  const tones = [
+    'Professional', 'Casual', 'Friendly', 'Authoritative', 'Creative', 'Technical'
+  ];
+
+  const features = [
+    {
+      icon: SparklesIcon,
+      title: 'AI-Powered Generation',
+      description: 'Advanced GPT-4 technology generates high-quality, original content tailored to your needs.',
+      stats: '95% accuracy rate'
+    },
+    {
+      icon: GlobeAltIcon,
+      title: 'Multi-Language Support',
+      description: 'Generate content in 50+ languages with native-level quality and cultural adaptation.',
+      stats: '50+ languages'
+    },
+    {
+      icon: ChartBarIcon,
+      title: 'SEO Optimization',
+      description: 'Automatically optimize content for search engines with keyword integration and meta descriptions.',
+      stats: '40% better SEO scores'
+    },
+    {
+      icon: ShieldCheckIcon,
+      title: 'Plagiarism Detection',
+      description: 'Built-in plagiarism checker ensures 100% original content with detailed similarity reports.',
+      stats: '100% original content'
+    },
+    {
+      icon: CogIcon,
+      title: 'Brand Voice Customization',
+      description: 'Train the AI to match your brand voice, tone, and style for consistent messaging.',
+      stats: 'Custom brand profiles'
+    },
+    {
+      icon: ClockIcon,
+      title: 'Content Scheduling',
+      description: 'Schedule content publication across multiple platforms with automated posting capabilities.',
+      stats: '8+ platforms supported'
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: 49,
+      period: 'month',
+      description: 'Perfect for individuals and small businesses',
+      features: [
+        '10,000 words/month',
+        '5 content types',
+        'Basic SEO optimization',
+        'Email support',
+        'Standard templates'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: 199,
+      period: 'month',
+      description: 'Ideal for growing businesses and content teams',
+      features: [
+        'Unlimited words',
+        'All content types',
+        'Advanced SEO optimization',
+        'Priority support',
+        'Custom templates',
+        'Team collaboration',
+        'API access',
+        'Plagiarism detection'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: 499,
+      period: 'month',
+      description: 'For large organizations with advanced needs',
+      features: [
+        'Everything in Professional',
+        'Custom AI training',
+        'White-label solution',
+        'Dedicated account manager',
+        'Custom integrations',
+        'Advanced analytics',
+        'SLA guarantee',
+        'On-premise deployment'
+      ],
+      popular: false
+    }
+  ];
+
+  const handleGenerateContent = async () => {
+    setIsGenerating(true);
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    setGeneratedContent(`
+# ${topic || 'Sample Topic'}
+
+## Introduction
+This is a professionally generated ${contentType.replace('-', ' ')} about ${topic || 'your chosen topic'}. The content has been optimized for SEO and written in a ${tone.toLowerCase()} tone to engage your target audience effectively.
+
+## Key Points
+- Point 1: Engaging content that drives conversions
+- Point 2: SEO-optimized for better search rankings
+- Point 3: Brand-consistent messaging and tone
+- Point 4: Call-to-action integration for better results
+
+## Conclusion
+This AI-generated content demonstrates the power of our advanced content generation technology, helping you create high-quality content at scale while maintaining consistency and effectiveness.
+
+---
+*Generated by Zion AI Content Generator Pro*
+    `);
+    setIsGenerating(false);
+  };
+
   return (
     <>
-      <Helmet>
-        <title>AI Content Generator - Zion Tech Group</title>
-        <meta name="description" content="Generate high-quality content automatically with our AI-powered content generation tools." />
-      </Helmet>
+      <SEOHead
+        title="AI Content Generator Pro - Zion Tech Group | AI-Powered Content Creation"
+        description="Generate high-quality, SEO-optimized content for blogs, social media, marketing materials, and more using advanced AI technology. 50+ languages, plagiarism detection, and brand voice customization."
+        keywords="ai content generator, content creation, blog writing, social media content, seo optimization, content marketing, ai writing assistant, content automation"
+        canonicalUrl="https://ziontechgroup.com/ai-content-generator"
+      />
       
-      <div className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Content Generator</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Generate high-quality content automatically with AI
+      <div className="min-h-screen bg-slate-900 text-white">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden py-20 bg-gradient-to-br from-cyan-900/30 via-slate-900 to-blue-900/30">
+          <div className="absolute inset-0 cyber-grid opacity-20"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 holographic-text">
+                AI Content <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Generator Pro</span>
+              </h1>
+              <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Generate high-quality, SEO-optimized content for blogs, social media, marketing materials, and more using advanced AI technology
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button 
+                  onClick={handleGenerateContent}
+                  disabled={isGenerating}
+                  className="cyber-button px-8 py-4 text-lg font-semibold disabled:opacity-50"
+                >
+                  {isGenerating ? (
+                    <>
+                      <RefreshIcon className="w-5 h-5 mr-2 animate-spin inline" />
+                      Generating...
+                    </>
+                  ) : (
+                    <>
+                      Try Free Demo
+                      <ArrowRightIcon className="w-5 h-5 ml-2 inline" />
+                    </>
+                  )}
+                </button>
+                <Link to="/contact" className="border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Demo Section */}
+        <section className="py-16 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+                Try Our <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">AI Content Generator</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the power of AI-driven content creation with our interactive demo
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Input Form */}
+              <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                <h3 className="text-xl font-bold mb-6 text-cyan-400">Content Configuration</h3>
+                
+                <div className="space-y-6">
+                  {/* Content Type */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Content Type</label>
+                    <div className="grid grid-cols-2 gap-2">
+                      {contentTypes.map((type) => (
+                        <button
+                          key={type.id}
+                          onClick={() => setContentType(type.id)}
+                          className={`p-3 rounded-lg border transition-all duration-300 ${
+                            contentType === type.id
+                              ? 'border-cyan-500 bg-cyan-500/10 text-cyan-300'
+                              : 'border-slate-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-300'
+                          }`}
+                        >
+                          <type.icon className="w-5 h-5 mx-auto mb-1" />
+                          <span className="text-sm">{type.name}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Topic Input */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Topic</label>
+                    <input
+                      type="text"
+                      value={topic}
+                      onChange={(e) => setTopic(e.target.value)}
+                      placeholder="Enter your content topic..."
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                    />
+                  </div>
+
+                  {/* Tone Selection */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Tone</label>
+                    <select
+                      value={tone}
+                      onChange={(e) => setTone(e.target.value)}
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                    >
+                      {tones.map((toneOption) => (
+                        <option key={toneOption} value={toneOption.toLowerCase()}>
+                          {toneOption}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* Generate Button */}
+                  <button
+                    onClick={handleGenerateContent}
+                    disabled={isGenerating || !topic.trim()}
+                    className="w-full cyber-button py-3 text-lg font-semibold disabled:opacity-50"
+                  >
+                    {isGenerating ? (
+                      <>
+                        <RefreshIcon className="w-5 h-5 mr-2 animate-spin inline" />
+                        Generating Content...
+                      </>
+                    ) : (
+                      <>
+                        <SparklesIcon className="w-5 h-5 mr-2 inline" />
+                        Generate Content
+                      </>
+                    )}
+                  </button>
+                </div>
+              </div>
+
+              {/* Generated Content Display */}
+              <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                <h3 className="text-xl font-bold mb-6 text-cyan-400">Generated Content</h3>
+                
+                {generatedContent ? (
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-600">
+                    <pre className="whitespace-pre-wrap text-gray-300 text-sm leading-relaxed">
+                      {generatedContent}
+                    </pre>
+                  </div>
+                ) : (
+                  <div className="bg-slate-900 p-8 rounded-lg border border-slate-600 text-center">
+                    <DocumentTextIcon className="w-12 h-12 text-gray-500 mx-auto mb-4" />
+                    <p className="text-gray-500">Generated content will appear here</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+                Powerful <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Features</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to create professional content at scale
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="group bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-400 mb-4">
+                    {feature.description}
+                  </p>
+                  <div className="text-cyan-400 font-semibold text-sm">
+                    {feature.stats}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-16 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+                Simple <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Pricing</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the plan that fits your content creation needs
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:transform hover:scale-105 ${
+                  plan.popular 
+                    ? 'border-cyan-500 shadow-xl shadow-cyan-500/20' 
+                    : 'border-slate-700 hover:border-cyan-400'
+                }`}>
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-1 rounded-full text-sm font-bold flex items-center">
+                        <StarIcon className="w-4 h-4 mr-1" />
+                        Most Popular
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <p className="text-gray-400 mb-4">{plan.description}</p>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-cyan-400">${plan.price}</span>
+                      <span className="text-gray-400 ml-1">/{plan.period}</span>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'cyber-button'
+                      : 'border-2 border-cyan-400 text-cyan-300 hover:bg-cyan-400 hover:text-white'
+                  }`}>
+                    {plan.popular ? 'Get Started' : 'Choose Plan'}
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 bg-gradient-to-r from-cyan-900/40 via-slate-900 to-blue-900/40">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+              Ready to Transform Your <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Content Strategy</span>?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using AI Content Generator Pro to create better content faster.
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Text Generation</h3>
-              <p className="text-gray-600">
-                Generate articles, blog posts, and other written content using advanced AI models.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Content Optimization</h3>
-              <p className="text-gray-600">
-                Optimize your content for SEO and engagement using AI-powered analysis.
-              </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
+                Start Free Trial
+                <ArrowRightIcon className="w-5 h-5 ml-2 inline" />
+              </Link>
+              <a href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Call: +1 (302) 464-0950
+              </a>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </>
   );

@@ -52,6 +52,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       submenu: [
         { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon },
         { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
+        { name: 'AI Content Generator Pro', href: '/ai-content-generator', icon: DocumentTextIcon, featured: true },
+        { name: 'AI CRM Optimizer', href: '/ai-crm-optimizer', icon: UserGroupIcon, featured: true },
+        { name: 'AI Data Visualizer', href: '/ai-data-visualizer', icon: ChartBarIcon, featured: true },
         { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: ChatBubbleLeftRightIcon },
         { name: 'AI Document Processor', href: '/ai-document-processor', icon: DocumentTextIcon },
         { name: 'AI Form Builder', href: '/ai-form-builder', icon: DocumentTextIcon },
@@ -62,9 +65,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: CogIcon },
         { name: 'AI Price Optimizer', href: '/ai-price-optimizer', icon: CurrencyDollarIcon },
         { name: 'AI Scheduling Assistant', href: '/ai-scheduling-assistant', icon: CogIcon },
-        { name: 'AI Content Generator', href: '/ai-content-generator', icon: DocumentTextIcon },
-        { name: 'AI CRM Optimizer', href: '/ai-crm-optimizer', icon: UserGroupIcon },
-        { name: 'AI Data Visualizer', href: '/ai-data-visualizer', icon: ChartBarIcon },
         { name: 'AI Email Optimizer', href: '/ai-email-optimizer', icon: EnvelopeIcon },
         { name: 'AI Website Analyzer', href: '/ai-website-analyzer', icon: EyeIcon },
         { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },
@@ -77,21 +77,21 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       icon: GlobeAltIcon,
       submenu: [
         { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
-        { name: 'Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard', icon: ChartBarIcon },
+        { name: 'AI Content Generator Pro', href: '/ai-content-generator', icon: DocumentTextIcon, featured: true, price: '$199/mo' },
+        { name: 'AI CRM Optimizer', href: '/ai-crm-optimizer', icon: UserGroupIcon, featured: true, price: '$299/mo' },
+        { name: 'AI Data Visualizer', href: '/ai-data-visualizer', icon: ChartBarIcon, featured: true, price: '$149/mo' },
+        { name: 'Social Media Scheduler Pro', href: '/social-media-scheduler', icon: ShareIcon, featured: true, price: '$49/mo' },
+        { name: 'AI Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon, price: '$79/mo' },
+        { name: 'AI Inventory Manager', href: '/zion-smart-inventory-manager', icon: CircleStackIcon, price: '$199/mo' },
+        { name: 'AI Task Scheduler Pro', href: '/zion-ai-task-scheduler', icon: CheckCircleIcon, price: '$39/mo' },
+        { name: 'AI Email Marketing Pro', href: '/zion-ai-email-marketing-pro', icon: EnvelopeIcon, price: '$99/mo' },
+        { name: 'AI Customer Support Pro', href: '/zion-ai-customer-support-pro', icon: ChatBubbleLeftRightIcon, price: '$149/mo' },
+        { name: 'AI Analytics Dashboard', href: '/zion-smart-analytics-dashboard', icon: ChartBarIcon, price: '$199/mo' },
+        { name: 'AI Translation Service Pro', href: '/zion-ai-translation-service', icon: GlobeAltIcon, price: '$79/mo' },
+        { name: 'AI Video Generator Pro', href: '/zion-ai-video-generator', icon: EyeIcon, price: '$149/mo' },
         { name: 'Smart CRM Automation', href: '/zion-smart-crm-automation', icon: ChatBubbleLeftRightIcon },
-        { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager', icon: CircleStackIcon },
         { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker', icon: CurrencyDollarIcon },
-        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
-        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
-        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
-        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },
-        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },
-        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon },
-        { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: CodeBracketIcon },
-        { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon },
-        { name: 'AI Video Generator', href: '/ai-video-generator', icon: EyeIcon },
-        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: ChatBubbleLeftRightIcon },
-        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: EyeIcon },
+        { name: 'AI Code Assistant', href: '/zion-ai-code-assistant', icon: CodeBracketIcon },
         { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: ShieldCheckIcon },
         { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: UserGroupIcon },
         { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: AcademicCapIcon },
@@ -101,33 +101,32 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     },
     {
       name: 'IT Solutions',
-      href: '/it-solutions',
+      href: '/it-services',
       icon: CogIcon,
       submenu: [
-        { name: 'IT Solutions Overview', href: '/it-solutions', icon: CogIcon },
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-        { name: 'Web Development', href: '/web-development', icon: CodeBracketIcon },
-        { name: 'Mobile App Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
+        { name: 'IT Services Overview', href: '/it-services', icon: CogIcon },
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon, featured: true },
+        { name: 'Web Development', href: '/web-development', icon: CodeBracketIcon, featured: true },
+        { name: 'Mobile App Development', href: '/mobile-development', icon: DevicePhoneMobileIcon, featured: true },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon, featured: true },
         { name: 'Database Management', href: '/database-management', icon: CircleStackIcon },
         { name: 'Network Infrastructure', href: '/network-infrastructure', icon: SignalIcon },
         { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon },
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
         { name: 'Blockchain Solutions', href: '/blockchain-solutions', icon: ShieldCheckIcon },
         { name: 'IoT Solutions', href: '/iot-solutions', icon: SignalIcon },
         { name: 'DevOps Automation', href: '/devops-automation', icon: CogIcon },
         { name: 'Data Engineering', href: '/data-engineering', icon: CircleStackIcon },
         { name: 'API Development', href: '/api-development', icon: CodeBracketIcon },
         { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon },
-        { name: 'Quantum Computing', href: '/quantum-computing-solutions', icon: CpuChipIcon },
-        { name: 'Edge Computing', href: '/edge-computing-solutions', icon: CloudIcon },
-        { name: 'AR Solutions', href: '/augmented-reality-solutions', icon: EyeIcon },
-        { name: 'VR Solutions', href: '/virtual-reality-solutions', icon: EyeIcon },
-        { name: 'RPA Solutions', href: '/robotic-process-automation', icon: CogIcon },
-        { name: 'Low-Code Platform', href: '/low-code-platform', icon: CodeBracketIcon },
-        { name: 'Serverless Architecture', href: '/serverless-architecture', icon: CloudIcon },
-        { name: 'Container Orchestration', href: '/container-orchestration', icon: CircleStackIcon },
-        { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: CpuChipIcon },
-        { name: 'Data Lake Solutions', href: '/data-lake-solutions', icon: CircleStackIcon }
+        { name: 'Cybersecurity Services', href: '/cybersecurity-services', icon: ShieldCheckIcon },
+        { name: 'Cloud Migration', href: '/cloud-migration', icon: CloudIcon },
+        { name: 'System Integration', href: '/system-integration', icon: CogIcon },
+        { name: 'IT Consulting', href: '/it-consulting', icon: UserGroupIcon },
+        { name: 'Managed IT Services', href: '/managed-it-services', icon: CogIcon },
+        { name: 'Disaster Recovery', href: '/disaster-recovery', icon: ShieldCheckIcon },
+        { name: 'Backup Solutions', href: '/backup-solutions', icon: CircleStackIcon },
+        { name: 'Network Security', href: '/network-security', icon: ShieldCheckIcon },
+        { name: 'Endpoint Protection', href: '/endpoint-protection', icon: ShieldCheckIcon }
       ]
     },
     {
@@ -139,7 +138,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
         { name: 'API Documentation', href: '/api-docs', icon: CodeBracketIcon },
         { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon },
-        { name: 'Accessibility', href: '/accessibility', icon: ShieldCheckIcon }
+        { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
+        { name: 'Webinars', href: '/webinars', icon: EyeIcon },
+        { name: 'White Papers', href: '/white-papers', icon: DocumentTextIcon },
+        { name: 'E-books', href: '/ebooks', icon: DocumentTextIcon },
+        { name: 'Video Library', href: '/video-library', icon: EyeIcon },
+        { name: 'FAQ', href: '/faq', icon: QuestionMarkCircleIcon },
+        { name: 'Accessibility', href: '/accessibility', icon: ShieldCheckIcon },
+        { name: 'Status Page', href: '/status', icon: CheckCircleIcon }
       ]
     },
     {
@@ -151,7 +157,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'Our Team', href: '/team', icon: UserGroupIcon },
         { name: 'Careers', href: '/careers', icon: UserGroupIcon },
         { name: 'Partnerships', href: '/partnerships', icon: UserPlusIcon },
-        { name: 'Contact', href: '/contact', icon: PhoneIcon }
+        { name: 'Contact', href: '/contact', icon: PhoneIcon },
+        { name: 'News & Press', href: '/news', icon: DocumentTextIcon },
+        { name: 'Investor Relations', href: '/investors', icon: CurrencyDollarIcon },
+        { name: 'Sustainability', href: '/sustainability', icon: GlobeAltIcon },
+        { name: 'Diversity & Inclusion', href: '/diversity', icon: UserGroupIcon },
+        { name: 'Leadership', href: '/leadership', icon: UserGroupIcon }
       ]
     },
     {
@@ -159,16 +170,21 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       href: '#',
       icon: CpuChipIcon,
       submenu: [
-        { name: 'AI Content Moderator', href: '/zion-ai-content-moderator', icon: ShieldCheckIcon },
-        { name: 'AI Customer Support Pro', href: '/zion-ai-customer-support-pro', icon: ChatBubbleLeftRightIcon },
-        { name: 'AI Workflow Automator Pro', href: '/zion-ai-workflow-automator-pro', icon: CogIcon },
-        { name: 'AI Email Marketing Pro', href: '/zion-ai-email-marketing-pro', icon: EnvelopeIcon },
-        { name: 'AI Sales Predictor', href: '/zion-ai-sales-predictor', icon: ChartBarIcon },
-        { name: 'AI Financial Forecaster', href: '/zion-ai-financial-forecaster', icon: CurrencyDollarIcon },
-        { name: 'AI Document Analyzer', href: '/zion-ai-document-analyzer', icon: DocumentTextIcon },
-        { name: 'AI Task Scheduler', href: '/zion-ai-task-scheduler', icon: CogIcon },
-        { name: 'AI Translation Service', href: '/zion-ai-translation-service', icon: GlobeAltIcon },
-        { name: 'AI Video Generator', href: '/zion-ai-video-generator', icon: EyeIcon }
+        { name: 'AI Content Moderator', href: '/zion-ai-content-moderator', icon: ShieldCheckIcon, price: '$99/mo' },
+        { name: 'AI Customer Support Pro', href: '/zion-ai-customer-support-pro', icon: ChatBubbleLeftRightIcon, price: '$149/mo' },
+        { name: 'AI Workflow Automator Pro', href: '/zion-ai-workflow-automator-pro', icon: CogIcon, price: '$199/mo' },
+        { name: 'AI Email Marketing Pro', href: '/zion-ai-email-marketing-pro', icon: EnvelopeIcon, price: '$99/mo' },
+        { name: 'AI Sales Predictor', href: '/zion-ai-sales-predictor', icon: ChartBarIcon, price: '$299/mo' },
+        { name: 'AI Financial Forecaster', href: '/zion-ai-financial-forecaster', icon: CurrencyDollarIcon, price: '$399/mo' },
+        { name: 'AI Document Analyzer', href: '/zion-ai-document-analyzer', icon: DocumentTextIcon, price: '$149/mo' },
+        { name: 'AI Task Scheduler', href: '/zion-ai-task-scheduler', icon: CogIcon, price: '$39/mo' },
+        { name: 'AI Translation Service', href: '/zion-ai-translation-service', icon: GlobeAltIcon, price: '$79/mo' },
+        { name: 'AI Video Generator', href: '/zion-ai-video-generator', icon: EyeIcon, price: '$149/mo' },
+        { name: 'AI Code Assistant', href: '/zion-ai-code-assistant', icon: CodeBracketIcon, price: '$199/mo' },
+        { name: 'AI Meeting Transcriber', href: '/zion-ai-meeting-transcriber', icon: DocumentTextIcon, price: '$79/mo' },
+        { name: 'AI Voice Synthesis', href: '/zion-ai-voice-synthesis', icon: ChatBubbleLeftRightIcon, price: '$99/mo' },
+        { name: 'AI Image Generator', href: '/zion-ai-image-generator', icon: EyeIcon, price: '$149/mo' },
+        { name: 'AI Website Analyzer', href: '/zion-ai-website-analyzer', icon: EyeIcon, price: '$79/mo' }
       ]
     },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
@@ -273,10 +289,18 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       <div key={subItem.name} role="none">
                         <Link
                           to={subItem.href}
-                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-300 transition-all duration-300 group"
+                          className="flex items-center justify-between px-4 py-2 text-sm text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-300 transition-all duration-300 group"
                         >
-                          <subItem.icon className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span className="group-hover:text-white transition-colors">{subItem.name}</span>
+                          <div className="flex items-center">
+                            <subItem.icon className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                            <span className="group-hover:text-white transition-colors">{subItem.name}</span>
+                            {(subItem as any).featured && (
+                              <span className="ml-2 px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">Featured</span>
+                            )}
+                          </div>
+                          {(subItem as any).price && (
+                            <span className="text-cyan-400 text-xs font-medium">{(subItem as any).price}</span>
+                          )}
                         </Link>
                       </div>
                     ))}
