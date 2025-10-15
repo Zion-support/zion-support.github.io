@@ -20,7 +20,18 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Global error caught:', error, errorInfo);
+    // Use proper error handling instead of console.error
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Global error caught:', error, errorInfo);
+    }
+    
+    // Report error to error handler
+    const { errorHandler } = require('../utils/errorHandler');
+    errorHandler.reportError(error, {
+      component: 'GlobalErrorBoundary',
+      action: 'componentDidCatch',
+      ...errorInfo
+    });
   }
 
   render() {

@@ -1,13 +1,27 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from './components/SEOHead';
 
 const HomePage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation." />
-      </Helmet>
+      <SEOHead
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation."
+        keywords="AI solutions, IT services, artificial intelligence, cloud infrastructure, digital transformation, machine learning, business automation"
+        canonicalUrl="https://ziontechgroup.com"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com",
+          "description": "Leading provider of AI and IT solutions for modern businesses",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://ziontechgroup.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }}
+      />
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

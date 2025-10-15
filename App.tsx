@@ -1,12 +1,56 @@
-import { Suspense, useEffect } from 'react'
+import { Suspense, useEffect, lazy } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-// Import pages
-import HomePage from './app/page';
-import AboutPage from './app/about/page';
-import ServicesPage from './app/services/page';
-import ContactPage from './app/contact/page';
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./app/page'));
+const AboutPage = lazy(() => import('./app/about/page'));
+const ServicesPage = lazy(() => import('./app/services/page'));
+const ContactPage = lazy(() => import('./app/contact/page'));
+const AIServicesPage = lazy(() => import('./app/ai-services/page'));
+const ITServicesPage = lazy(() => import('./app/it-services/page'));
+const CloudInfrastructurePage = lazy(() => import('./app/cloud-infrastructure/page'));
+const TeamPage = lazy(() => import('./app/team/page'));
+const CareersPage = lazy(() => import('./app/careers/page'));
+const HelpPage = lazy(() => import('./app/help/page'));
+const PrivacyPage = lazy(() => import('./app/privacy/page'));
+const TermsPage = lazy(() => import('./app/terms/page'));
+const BlogPage = lazy(() => import('./app/blog/page'));
+const CaseStudiesPage = lazy(() => import('./app/case-studies/page'));
+const PricingPage = lazy(() => import('./app/pricing/page'));
+const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
+const DataAnalyticsPage = lazy(() => import('./app/data-analytics/page'));
+const DigitalTransformationPage = lazy(() => import('./app/digital-transformation/page'));
+const WebDevelopmentPage = lazy(() => import('./app/web-development/page'));
+const MobileDevelopmentPage = lazy(() => import('./app/mobile-development/page'));
+const DatabaseManagementPage = lazy(() => import('./app/database-management/page'));
+const NetworkInfrastructurePage = lazy(() => import('./app/network-infrastructure/page'));
+const MicroSaaSSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
+const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
+const AIContentGeneratorPage = lazy(() => import('./app/ai-content-generator/page'));
+const AccessibilityPage = lazy(() => import('./app/accessibility/page'));
+const APIDocsPage = lazy(() => import('./app/api-docs/page'));
+const CookiesPage = lazy(() => import('./app/cookies/page'));
+const FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'));
+
+// AI Product Pages
+const ZionAIContentModeratorPage = lazy(() => import('./app/zion-ai-content-moderator/page'));
+const ZionAICustomerChurnPredictorPage = lazy(() => import('./app/zion-ai-customer-churn-predictor/page'));
+const ZionAICustomerChurnPredictorProPage = lazy(() => import('./app/zion-ai-customer-churn-predictor-pro/page'));
+const ZionAICustomerSentimentTrackerPage = lazy(() => import('./app/zion-ai-customer-sentiment-tracker/page'));
+const ZionAICustomerSupportProPage = lazy(() => import('./app/zion-ai-customer-support-pro/page'));
+const ZionAIDocumentAnalyzerPage = lazy(() => import('./app/zion-ai-document-analyzer/page'));
+const ZionAIEmailMarketingProPage = lazy(() => import('./app/zion-ai-email-marketing-pro/page'));
+const ZionAIFinancialForecasterPage = lazy(() => import('./app/zion-ai-financial-forecaster/page'));
+const ZionAIInventoryOptimizerProPage = lazy(() => import('./app/zion-ai-inventory-optimizer-pro/page'));
+const ZionAIMeetingTranscriberPage = lazy(() => import('./app/zion-ai-meeting-transcriber/page'));
+const ZionAISalesPredictorPage = lazy(() => import('./app/zion-ai-sales-predictor/page'));
+const ZionAISocialSchedulerProPage = lazy(() => import('./app/zion-ai-social-scheduler-pro/page'));
+const ZionAITaskSchedulerPage = lazy(() => import('./app/zion-ai-task-scheduler/page'));
+const ZionAIWorkflowAutomatorPage = lazy(() => import('./app/zion-ai-workflow-automator/page'));
+const ZionAIWorkflowAutomatorProPage = lazy(() => import('./app/zion-ai-workflow-automator-pro/page'));
+const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-customer-satisfaction-monitor/page'));
+const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
 
 // Import components
 import Navigation from './app/components/Navigation';
@@ -16,10 +60,18 @@ import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
-// Loading component
+// Enhanced loading component
 const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
+      <p className="text-gray-600 text-lg">Loading...</p>
+      <div className="mt-4 flex justify-center space-x-1">
+        <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce"></div>
+        <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+        <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+      </div>
+    </div>
   </div>
 )
 
@@ -46,7 +98,7 @@ export default function App() {
             <Navigation />
             <Sidebar />
             
-            <main className="flex-1">
+            <main className="flex-1 pt-16">
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               
@@ -57,6 +109,58 @@ export default function App() {
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/services" element={<ServicesPage />} />
+                  
+                  {/* Service Pages */}
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                  <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                  <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                  <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                  <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                  <Route path="/web-development" element={<WebDevelopmentPage />} />
+                  <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                  <Route path="/database-management" element={<DatabaseManagementPage />} />
+                  <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                  <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
+                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                  
+                  {/* Company Pages */}
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
+                  <Route path="/partnerships" element={<PartnershipsPage />} />
+                  
+                  {/* Content Pages */}
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/case-studies" element={<CaseStudiesPage />} />
+                  <Route path="/pricing" element={<PricingPage />} />
+                  
+                  {/* Support Pages */}
+                  <Route path="/help" element={<HelpPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="/cookies" element={<CookiesPage />} />
+                  <Route path="/accessibility" element={<AccessibilityPage />} />
+                  <Route path="/api-docs" element={<APIDocsPage />} />
+                  
+                  {/* AI Product Pages */}
+                  <Route path="/zion-ai-content-moderator" element={<ZionAIContentModeratorPage />} />
+                  <Route path="/zion-ai-customer-churn-predictor" element={<ZionAICustomerChurnPredictorPage />} />
+                  <Route path="/zion-ai-customer-churn-predictor-pro" element={<ZionAICustomerChurnPredictorProPage />} />
+                  <Route path="/zion-ai-customer-sentiment-tracker" element={<ZionAICustomerSentimentTrackerPage />} />
+                  <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+                  <Route path="/zion-ai-document-analyzer" element={<ZionAIDocumentAnalyzerPage />} />
+                  <Route path="/zion-ai-email-marketing-pro" element={<ZionAIEmailMarketingProPage />} />
+                  <Route path="/zion-ai-financial-forecaster" element={<ZionAIFinancialForecasterPage />} />
+                  <Route path="/zion-ai-inventory-optimizer-pro" element={<ZionAIInventoryOptimizerProPage />} />
+                  <Route path="/zion-ai-meeting-transcriber" element={<ZionAIMeetingTranscriberPage />} />
+                  <Route path="/zion-ai-sales-predictor" element={<ZionAISalesPredictorPage />} />
+                  <Route path="/zion-ai-social-scheduler-pro" element={<ZionAISocialSchedulerProPage />} />
+                  <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
+                  <Route path="/zion-ai-workflow-automator" element={<ZionAIWorkflowAutomatorPage />} />
+                  <Route path="/zion-ai-workflow-automator-pro" element={<ZionAIWorkflowAutomatorProPage />} />
+                  <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
+                  <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">

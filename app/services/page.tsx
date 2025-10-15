@@ -1,13 +1,15 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '../components/SEOHead';
 
 const ServicesPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive range of AI and IT services designed to accelerate your business growth." />
-      </Helmet>
+      <SEOHead
+        title="Services - Zion Tech Group"
+        description="Explore our comprehensive range of AI and IT services designed to accelerate your business growth."
+        keywords="AI services, IT services, cloud solutions, digital transformation, business automation, technology consulting"
+        canonicalUrl="https://ziontechgroup.com/services"
+      />
       
       <div className="min-h-screen bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
