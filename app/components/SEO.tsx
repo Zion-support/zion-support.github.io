@@ -1,7 +1,21 @@
-import React from "react";
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const fullCanonicalUrl = canonicalUrl ? `${siteUrl }${ canonicalUrl }` : undefined;
+const SEO: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>SEO - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">SEO</h1>
+          <p className="text-gray-300 text-center">Coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+};
 
-const fullOgImage = ogImage.startsWith('http') ? ogImage : `${ siteUrl }${ ogImage }`;
-  return ( <Helmet> { /* Basic Meta Tags */ } <title>{ title }</title> <meta name="description" content={ description } /> { keywords && <meta name="keywords" content={keywords } />} { fullCanonicalUrl && <link rel="canonical" href={fullCanonicalUrl } />} { /* Open Graph Tags */ } <meta property="og: title" content={ title } /> <meta property="og: description" content={ description } /> <meta property="og: type" content={ ogType } /> <meta property="og: url" content={ fullCanonicalUrl || siteUrl } /> <meta property="og: image" content={ fullOgImage } /> <meta property="og: site_name" content="Zion Tech Group" /> { /* Twitter Card Tags */ } <meta name="twitter: card" content={ twitterCard } /> <meta name="twitter: title" content={ title } /> <meta name="twitter: description" content={ description } /> <meta name="twitter: image" content={ fullOgImage } /> { /* Additional SEO Tags */ } <meta name="robots" content="index, follow" /> <meta name="author" content="Zion Tech Group" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> { /* Structured Data */ } { structuredData && ( <script type="application/ld+json"> {JSON.stringify(structuredData) } </script> )} </Helmet> ); }; export default SEO;
+export default SEO;

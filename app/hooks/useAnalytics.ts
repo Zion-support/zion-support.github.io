@@ -1,10 +1,9 @@
-import { useContext } from "react";
+// useAnalytics utility function
 export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error("useAnalytics must be used within an AnalyticsProvider");
-  }
-  return context;
+  // Placeholder implementation
+  return {
+    // Add implementation here
+  };
 };
 
-export default NotFoundPage;
+export default useAnalytics;

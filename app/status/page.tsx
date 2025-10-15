@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Server, Activity, Database, Globe, CheckCircle, AlertTriangle, XCircle, Clock, RefreshCw, Footer } from 'lucide-react';
 
 const StatusPage: React.FC = () => {
   const [lastUpdated, setLastUpdated] = useState(new Date());

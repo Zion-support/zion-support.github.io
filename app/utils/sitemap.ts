@@ -1,5 +1,5 @@
-// Sitemap generation utility,
-    export interface SitemapUrl {
+// Sitemap generation utility
+export interface SitemapUrl {
   loc: string;
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
@@ -24,8 +24,8 @@ export const generateSitemap = (urls: SitemapUrl[]): string => {
   return sitemap;
 };
 
-// Default sitemap URLs,
-    export const defaultSitemapUrls: SitemapUrl[] = [
+// Default sitemap URLs
+export const defaultSitemapUrls: SitemapUrl[] = [
   { loc: '/', priority: 1.0, changefreq: 'daily' },
   { loc: '/about', priority: 0.9, changefreq: 'monthly' },
   { loc: '/services', priority: 0.9, changefreq: 'weekly' },
@@ -37,20 +37,22 @@ export const generateSitemap = (urls: SitemapUrl[]): string => {
   { loc: '/support', priority: 0.6, changefreq: 'weekly' },
   { loc: '/pricing', priority: 0.8, changefreq: 'monthly' },
   { loc: '/privacy', priority: 0.3, changefreq: 'yearly' },
-  { loc: '/terms', priority: 0.3, changefreq: 'yearly' }];
+  { loc: '/terms', priority: 0.3, changefreq: 'yearly' },
+];
 
-// Generate robots.txt content,
-    export const generateRobotsTxt = (): string => {
-  return `User-agent: *,
-    Allow: /,
-    Sitemap: https://ziontechgroup.com/sitemap.xml
+// Generate robots.txt content
+export const generateRobotsTxt = (): string => {
+  return `User-agent: *
+Allow: /
 
-# Crawl-delay for respectful crawling,
-    Crawl-delay: 1
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
 
 # Disallow admin and private areas,
-    Disallow: /admin/,
-    Disallow: /api/,
-    Disallow: /_next/,
-    Disallow: /static/`;
+Disallow: /admin/,
+Disallow: /api/,
+Disallow: /_next/,
+Disallow: /static/`;
 };
