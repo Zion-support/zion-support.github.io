@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, TrendingUp, BarChart3, Database, Globe, Target, MessageSquare } from 'lucide-react';
+import {CheckCircle, BarChart3, Database, Globe, Target, MessageSquare} from 'lucide-react';
 
 const MicroSaaSSolutionsPage: React.FC = () => {
   const microSaasProducts = [

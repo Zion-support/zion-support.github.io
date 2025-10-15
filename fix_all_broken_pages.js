@@ -1,6 +1,5 @@
 import fs from 'fs'
 import path from 'path'
-import { Helmet } from 'react-helmet-async'
 import Layout from '../layout'
 export default ${pageName}Page`
 // Find all page.tsx files that might be broken

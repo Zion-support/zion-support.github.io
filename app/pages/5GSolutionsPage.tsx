@@ -1,6 +1,4 @@
 import React from 'react';
-import { Wifi } from "lucide-react";
-
 const FiveGSolutionsPage: React.FC = () => {
   return (
     <>

@@ -1,6 +1,4 @@
-import { useEffect, useCallback, useRef } from 'react';
-import { logger } from '../utils/logger';
-
+import {useEffect, useCallback} from 'react';
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;

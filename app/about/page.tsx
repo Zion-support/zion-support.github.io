@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from 'lucide-react';export default function AboutPage() {
+import {Brain, Shield, Users, Award} from 'lucide-react';
+
+export default function AboutPage() {
   const stats = [
     { number: "500+", label: "Projects Completed" },
     { number: "100+", label: "Happy Clients" },
@@ -31,21 +32,44 @@ import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from 'lucid
     }
   ];
 
-const AboutPage: React.FC = () => {
   return (
     <>
-      <SEOHead 
-        title="about - Zion Tech Group"
-        description="Zion Tech Group about service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">about</h1>
-          <p className="text-gray-300">Coming soon...</p>
+      <Helmet>
+        <title>About - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group - Leading AI and IT Solutions Provider" />
+      </Helmet>
+      <div className="min-h-screen bg-slate-900 text-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold mb-6">About Zion Tech Group</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We are a leading technology company specializing in AI solutions, cloud services, 
+              and innovative IT solutions that transform businesses.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
+              <div key={index} className="text-center p-6 bg-slate-800 rounded-lg">
+                <div className="text-blue-400 mb-4 flex justify-center">
+                  {value.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
+                <p className="text-gray-300">{value.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>
   );
-};
-
-export default AboutPage;
+}

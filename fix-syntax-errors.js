@@ -1,93 +1,129 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-// import path from 'path';
-import { glob } from 'glob';
-
-// Patterns to fix malformed object syntax
-const fixes = [
-  // Fix trailing commas in object properties
-  { pattern: /(\w+):\s*([^,}]+),\s*}/g, replacement: '$1: $2 }' },
-  // Fix trailing commas in arrays
-  { pattern: /(\w+)\s*,\s*]/g, replacement: '$1 ]' },
-  // Fix double commas
-  { pattern: /,\s*,/g, replacement: ',' },
-  // Fix semicolons in object properties
-  { pattern: /(\w+):\s*([^,}]+);/g, replacement: '$1: $2,' },
-  // Fix malformed object declarations
-  { pattern: /{\s*(\w+):\s*([^,}]+),\s*}/g, replacement: '{ $1: $2 }' },
-  // Fix array syntax issues
-  { pattern: /\[\s*(\w+)\s*,\s*\]/g, replacement: '[ $1 ]' },
-  // Fix malformed JSX attributes
-  { pattern: /const\s+(\w+)\s*=\s*{([^}]+)}/g, replacement: '$1={$2}' },
-  // Fix duplicate closing brackets
-  { pattern: /\]\]/g, replacement: ']' },
-  // Fix malformed export statements
-  { pattern: /export\s+default\s+NotFoundPage;/g, replacement: 'export default config;' },
-  // Fix interface syntax
-  { pattern: /(\w+):\s*(\w+);,/g, replacement: '$1: $2;' },
+import path from 'path';
+// Files with critical syntax errors that need fixing
+const criticalFiles = [
+  'app/components/AdvancedAccessibilityEnhancer.tsx',
+  'app/components/AdvancedErrorBoundary.tsx',
+  'app/components/AdvancedPerformanceEnhancer.tsx',
+  'app/components/AdvancedPerformanceMonitor.tsx',
+  'app/components/AdvancedPerformanceOptimizer.tsx',
+  'app/components/AdvancedSEOOptimizer.tsx',
+  'app/components/Analytics.tsx',
+  'app/components/AnalyticsProvider.tsx',
+  'app/components/AnimatedCounter.tsx',
+  'app/components/Breadcrumb.tsx',
+  'app/components/CacheManager.tsx',
+  'app/components/ContactForm.tsx',
+  'app/components/ContentCarousel.tsx',
+  'app/components/ContentNewsletterSignup.tsx',
+  'app/components/ContentPromotionBanner.tsx',
+  'app/components/ContentStatistics.tsx',
+  'app/components/CookieConsent.tsx',
+  'app/components/CoreWebVitals.tsx',
+  'app/components/CriticalResourcePreloader.tsx',
+  'app/components/DynamicContentShowcase.tsx',
+  'app/components/EnhancedAccessibility.tsx',
+  'app/components/EnhancedAccessibilityManager.tsx',
+  'app/components/EnhancedAnalytics.tsx',
+  'app/components/EnhancedErrorBoundary.tsx',
+  'app/components/EnhancedErrorFeedback.tsx',
+  'app/components/EnhancedHero.tsx',
+  'app/components/EnhancedLoading.tsx',
+  'app/components/EnhancedLoadingSkeleton.tsx',
+  'app/components/EnhancedLoadingStates.tsx',
+  'app/components/EnhancedPerformanceMonitor.tsx',
+  'app/components/EnhancedPerformanceOptimizer.tsx',
+  'app/components/EnhancedSEO.tsx',
+  'app/components/EnhancedSEOHead.tsx',
+  'app/components/EnhancedSEOOptimizer.tsx',
+  'app/components/EnhancedServicesShowcase.tsx',
+  'app/components/EnhancedSkipLink.tsx',
+  'app/components/ErrorFallback.tsx',
+  'app/components/ErrorHandler.tsx',
+  'app/components/FuturisticButton.tsx',
+  'app/components/FuturisticCard.tsx',
+  'app/components/FuturisticGlow.tsx',
+  'app/components/FuturisticHero.tsx',
+  'app/components/FuturisticLoader.tsx',
+  'app/components/FuturisticServiceCard.tsx',
+  'app/components/FuturisticText.tsx',
+  'app/components/GenericServicePage.tsx',
+  'app/components/GlobalErrorBoundary.tsx',
+  'app/components/Icons.tsx',
+  'app/components/LazyImage.tsx',
+  'app/components/Loading.tsx',
+  'app/components/LoadingOptimizer.tsx',
+  'app/components/LoadingSkeleton.tsx',
+  'app/components/LoadingStates.tsx',
+  'app/components/MobileNavigation.tsx',
+  'app/components/MobileOptimizer.tsx',
+  'app/components/ModernLoadingSpinner.tsx',
+  'app/components/NeonButton.tsx',
+  'app/components/NewsletterSignup.tsx',
+  'app/components/OptimizedImage.tsx'
 ];
 
-function fixFile(filePath) {
+// Function to fix common syntax errors
+function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Apply all fixes
-    fixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
-    });
-    
-    // Additional specific fixes for common patterns
-    content = content.replace(/,\s*}/g, ' }');
-    content = content.replace(/,\s*]/g, ' ]');
-    content = content.replace(/;\s*}/g, ' }');
-    content = content.replace(/;\s*]/g, ' ]');
-    
-    // Fix malformed object destructuring
-    content = content.replace(/{\s*(\w+)\s*,\s*}/g, '{ $1 }');
-    
-    // Fix malformed array destructuring
-    content = content.replace(/\[\s*(\w+)\s*,\s*\]/g, '[ $1 ]');
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
+    let modified = false;
+
+    // Fix missing React import
+    if (!content.includes('import React') && content.includes('JSX')) {
+      content = 'import React from \'react\';\n' + content;
+      modified = true;
     }
-    return false
-  } catch (error) {}
-    console.error(`Error fixing ${filePath}:`, error.message)
-    return false
-  }
-}
-// Function to recursively find and fix files
-function fixDirectory(dirPath) {}
-}let fixedCount = 0
-  try {}
-} catch (error) {}
-  console.error(error)
-}const items = fs.readdirSync(dirPath)
-    for (const item of items) {}
-      const fullPath = path.join(dirPath, item)
-      const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {}
-        // Skip node_modules and other build directories
-        if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {}
-          fixedCount += fixDirectory(fullPath)
-        }
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {}
-        if (fixSyntaxErrors(fullPath)) {}
-          fixedCount++
-        }
+
+    // Fix missing function declarations
+    if (content.includes('return (') && !content.includes('function ') && !content.includes('const ') && !content.includes('export default')) {
+      const lines = content.split('\n');
+      const returnIndex = lines.findIndex(line => line.trim().startsWith('return ('));
+      if (returnIndex > 0) {
+        lines.splice(returnIndex, 0, 'export default function Component() {');
+        content = lines.join('\n');
+        modified = true;
       }
     }
-  } catch (error) {}
-    console.error(`Error reading directory ${dirPath}:`, error.message)
+
+    // Fix missing closing braces
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+    if (openBraces > closeBraces) {
+      const missingBraces = openBraces - closeBraces;
+      content += '\n' + '}'.repeat(missingBraces);
+      modified = true;
+    }
+
+    // Fix common JSX syntax errors
+    content = content.replace(/<(\w+)\s*$/gm, '<$1>');
+    content = content.replace(/<\/\s*$/gm, '</>');
+    
+    // Fix missing semicolons
+    content = content.replace(/(\w+)\s*$/gm, '$1;');
+    
+    // Fix common parsing errors
+    content = content.replace(/,\s*$/gm, '');
+    content = content.replace(/;\s*$/gm, '');
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed syntax errors in: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
-  return fixedCount
 }
-// Main execution
-console.log('Starting syntax error fixes...')
-const fixedCount = fixDirectory('./')
-console.log(`Syntax fixes complete. Fixed ${fixedCount} files.`)
+
+// Process critical files
+console.log('Fixing critical syntax errors...');
+criticalFiles.forEach(file => {
+  const fullPath = path.join(process.cwd(), file);
+  if (fs.existsSync(fullPath)) {
+    fixSyntaxErrors(fullPath);
+  }
+});
+
+console.log('Syntax error fixing completed!');

@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Core components - keep these synchronous for critical path
@@ -11,7 +11,6 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import OptimizedLoadingSpinner from './app/components/OptimizedLoadingSpinner';
 import SEOHead from './app/components/SEOHead';
-import LazyRoute from './app/components/LazyRoute';
 
 // Lazy load all page components
 const HomePage = lazy(() => import('./app/page'));

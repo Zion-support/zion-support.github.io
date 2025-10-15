@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Star, Brain, Cloud, Target, Play } from "lucide-react";
+import {Star, Play} from "lucide-react";
 
 const DemoPage: React.FC = () => {
   const [selectedDemo, setSelectedDemo] = useState('ai-solutions');

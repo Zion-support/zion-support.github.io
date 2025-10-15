@@ -1,4 +1,4 @@
-import { ComponentType, lazy } from 'react'
+import {lazy} from 'react'
 import LazyWrapper from '../components/LazyWrapper'
 // Lazy loading helper function
 export const createLazyComponent = (_importFunc: () => Promise<{ default: ComponentType<Record<string, unknown>> }>

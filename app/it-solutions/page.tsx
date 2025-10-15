@@ -1,6 +1,4 @@
 import React from 'react';
-import {  } from "lucide-react";
-
 const ITSolutionsPage: React.FC = () => {
   const itServices = [
     {

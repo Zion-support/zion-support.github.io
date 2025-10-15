@@ -1,7 +1,5 @@
 'use client'
 import React, { useState } from 'react';
-import { useEffect, useState } from 'react'
-
     }
 
     // Report metrics to analytics

@@ -76,7 +76,7 @@ const eersPage: React.FC = () => {}
     </div>
   )
 }
-import { Right, Circle, Star} from 'lucide-react'
+import {Star} from 'lucide-react'
     },
     {}
       id: 3,

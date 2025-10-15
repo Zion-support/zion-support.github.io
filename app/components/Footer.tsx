@@ -9,7 +9,7 @@ import {
 import { Facebook, Twitter, Linkedin, Github } from 'lucide-react';import { 
   HeartIcon
 } from '@heroicons/react/24/outline'
-import { ArrowRight, Twitter, Linkedin, Github } from 'lucide-react'
+import {Twitter, Linkedin, Github} from 'lucide-react'
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
