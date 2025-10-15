@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;
 interface PerformanceEnhancerOptions {
   // Add your options here;
@@ -8,8 +7,8 @@ interface PerformanceEnhancerState {
   // Add your state here;
 }
 ;
-export const PerformanceEnhancer = (options: PerformanceEnhancerOptions = {}) => {
-  const stateRef = useRef<PerformanceEnhancerState>({
+export const: PerformanceEnhancer = (options: PerformanceEnhancerOptions = {}) => {
+  const: stateRef = useRef<PerformanceEnhancerState>({;
     // Initialize your state here;
   });
 ;
@@ -23,13 +22,4 @@ export const PerformanceEnhancer = (options: PerformanceEnhancerOptions = {}) =>
   };
 };
 ;
-export default PerformanceEnhancer;';';
-=======
-// Utility functions
-export const utility = () => {
-  // Add utility functions here
-  return {};
-};
-
-export default utility;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
+export default PerformanceEnhancer;';';";

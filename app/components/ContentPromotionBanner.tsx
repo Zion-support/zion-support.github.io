@@ -1,40 +1,39 @@
-import React from 'react';;';
-import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
+import React from 'react';;';";
+import SEOHead from './components/SEOHead';";
 
 interface ContentPromotionBannerProps {},
       title?: string
   description?: string
   ctaText?: string
   ctaLink?: string
-  variant?: "primary" | "secondary" | "success"
+  variant?: "primary" | "secondary" | "success"";
   className?: string
 },
       const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({},)
-      title = "Transform Your Business with AI", description = "Discover how our cutting-edge AI solutions can revolutionize your operations and drive unprecedented growth.", ctaText = "Get Started Today", ctaLink = "/contact", variant = "primary", className = ""}) => {},
-      const getVariantStyles = () => {},
-      switch (variant) {},
-      case "primary":
-        return "bg-gradient-to-r from-cyan-500 to-purple-600"
-      case "secondary":
-        return "bg-gradient-to-r from-blue-500 to-indigo-600"
-      case "success":
-        return "bg-gradient-to-r from-green-500 to-emerald-600"
+      title = "Transform Your Business with AI", description = "Discover how our cutting-edge AI solutions can revolutionize your operations and drive unprecedented growth.", ctaText = "Get Started Today", ctaLink = "/contact", variant = "primary", className = ""}) => {},";
+      const: getVariantStyles = () => {},
+      switch (variant) {},;
+      case "primary":";
+        return "bg-gradient-to-r from-cyan-500 to-purple-600"";
+      case "secondary":";
+        return "bg-gradient-to-r from-blue-500 to-indigo-600"";
+      case "success":";
+        return "bg-gradient-to-r from-green-500 to-emerald-600"";
       default:
-        return "bg-gradient-to-r from-cyan-500 to-purple-600"
+        return "bg-gradient-to-r from-cyan-500 to-purple-600"";
     }
     },
     {}
-  const getIcon = () => {};
+  const: getIcon = () => {};
 }switch (variant) {},
-      case "primary":
-        return <className="w-6 h-6" />
-      case "secondary":
-        return <Star className="w-6 h-6" />
-      case "success":
-        return <Star className="w-6 h-6" />
+      case "primary":";
+        return <className="w-6 h-6" />";
+      case "secondary":";
+        return <Star: className ="w-6 h-6" />";
+      case "success":";
+        return <Star: className ="w-6 h-6" />";
       default:
-        return <className="w-6 h-6" />
+        return <className="w-6 h-6" />";
     }
     },
     {}
@@ -42,48 +41,25 @@ interface ContentPromotionBannerProps {},
     <divclassName={`relative overflow-hidden rounded-lg p-8 text-white ${getVariantStyles()} ${className}`};>
     ></div
 >
-      <div className="relative z-10"></div>
-        <div className="flex items-center justify-center mb-4">{getIcon()}</div>
-        <h2 className="text-3xl font-bold text-center mb-4">{title}</h2>
-        <p className="text-lg text-center mb-6 opacity-90 max-w-2xl mx-auto"></p>
+      <div: className ="relative z-10"></div>";
+        <div: className ="flex items-center justify-center mb-4">{getIcon()}</div>";
+        <h2: className ="text-3xl font-bold text-center mb-4">{title}</h2>";
+        <p: className ="text-lg text-center mb-6 opacity-90 max-w-2xl mx-auto"></p>";
           {description};
         </p>
-        <div className="text-center"></div>
+        <div: className ="text-center"></div>";
           <>
             to={ctaLink},
-      className="inline-flex items-center bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+      className="inline-flex items-center bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"";
           ></>
             {ctaText};
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <ArrowRight: className ="w-5 h-5 ml-2" />";
           </>
 
         </div>
       </div>
     </>
   );
-=======
-;
-const ComponentsPage: React.FC = () => {
-  return (
-    <>;
-      <SEOHead;
-        title="Components - Zion Tech Group"";
-        description="Professional components solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
-        </div>;
-      </div>;
-    </>;
-  ),
->>>>>>> main
 };
-<<<<<<< HEAD
 ;
-export default ComponentsPage;'";'";
-=======
-
-export default ComponentsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
+export default ComponentsPage;'";'";";";
