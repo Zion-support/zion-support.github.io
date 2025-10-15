@@ -15,13 +15,13 @@ const Footer: React.FC = () => {
 
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'IT Solutions', href: '/it-solutions' },
+    { name: 'AI Email Marketing', href: '/ai-email-marketing-automation' },
+    { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+    { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot' },
+    { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
+    { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
     { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Cloud Solutions', href: '/cloud-solutions' },
-    { name: '5G Solutions', href: '/5g-solutions' },
-    { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'Software Development', href: '/software-development' }
+    { name: 'IT Solutions', href: '/it-solutions' }
   ];
 
   const company = [
@@ -30,7 +30,8 @@ const Footer: React.FC = () => {
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'News & Updates', href: '/blog' },
-    { name: 'Partnerships', href: '/partnerships' }
+    { name: 'Partnerships', href: '/partnerships' },
+    { name: 'Contact Us', href: '/contact' }
   ];
 
   const resources = [
@@ -57,10 +58,10 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', href: '#', icon: 'facebook' },
-    { name: 'Twitter', href: '#', icon: 'twitter' },
-    { name: 'LinkedIn', href: '#', icon: 'linkedin' },
-    { name: 'GitHub', href: '#', icon: 'github' }
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: 'facebook' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter' },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin' },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github' }
   ];
 
   return (<footer className="bg-slate-900 border-t border-slate-700">

@@ -37,6 +37,13 @@ import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
 import CaseStudiesPage from './app/pages/CaseStudiesPage';
 import CareersPage from './app/pages/CareersPage';
 
+// New AI Services
+import AIEmailMarketingAutomationPage from './app/ai-email-marketing-automation/page';
+import AISocialMediaManagerPage from './app/ai-social-media-manager/page';
+import AICustomerSupportChatbotPage from './app/ai-customer-support-chatbot/page';
+import AIProjectManagementProPage from './app/ai-project-management-pro/page';
+import AIAnalyticsDashboardProPage from './app/ai-analytics-dashboard-pro/page';
+
 // Additional Pages
 import CybersecurityPage from './app/pages/CybersecurityPage';
 import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
@@ -120,6 +127,13 @@ function App() {
                       <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                       <Route path="/case-studies" element={<CaseStudiesPage />} />
                       <Route path="/careers" element={<CareersPage />} />
+                      
+                      {/* New AI Services */}
+                      <Route path="/ai-email-marketing-automation" element={<AIEmailMarketingAutomationPage />} />
+                      <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
+                      <Route path="/ai-customer-support-chatbot" element={<AICustomerSupportChatbotPage />} />
+                      <Route path="/ai-project-management-pro" element={<AIProjectManagementProPage />} />
+                      <Route path="/ai-analytics-dashboard-pro" element={<AIAnalyticsDashboardProPage />} />
                       
                       {/* Additional Service Pages */}
                       <Route path="/cybersecurity" element={<CybersecurityPage />} />
