@@ -46,7 +46,6 @@ import MicroSaaSPage from './app/pages/MicroSaaSPage';
 import FiveGSolutionsPage from './app/5g-solutions/page';
 import TeamPage from './app/pages/TeamPage';
 import DocumentationPage from './app/pages/DocumentationPage';
-<<<<<<< HEAD
 import PartnershipsPage from './app/pages/PartnershipsPage';
 import APIDocsPage from './app/pages/APIDocsPage';
 import HelpPage from './app/pages/HelpPage';
@@ -55,11 +54,6 @@ import ChatPage from './app/pages/ChatPage';
 import StatusPage from './app/pages/StatusPage';
 import ReportPage from './app/pages/ReportPage';
 import SoftwareDevelopmentPage from './app/pages/SoftwareDevelopmentPage';
-=======
-import PartnershipsPage from './app/partnerships/page';
-import ChatPage from './app/chat/page';
-import ReportPage from './app/report/page';
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
