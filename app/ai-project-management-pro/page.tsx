@@ -1,7 +1,7 @@
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
+import { Star, CheckCircleIcon } from 'lucide-react';
   CpuChipIcon, 
   ChartBarIcon, 
   ClockIcon,
@@ -13,8 +13,6 @@ import {
   CloudIcon} from '@heroicons/react/24/outline';
 
 export default function AiProjectManagementProPage() {
-  return;
-},
     {
       icon: ChartBarIcon,
       title: 'Predictive Analytics',
@@ -160,7 +158,7 @@ const testimonials = [
             {/* Pricing Badge */}
             
         <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full px-6 py-3 mb-8">
-              <StarIcon className="w-5 h-5 text-green-400" />
+              <Star className="w-5 h-5 text-green-400" />
               <span className="text-green-400 font-semibold">Starting at $199/month</span>
             </div>
             
@@ -314,7 +312,7 @@ const testimonials = [
                 
         <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <StarIcon key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
                 

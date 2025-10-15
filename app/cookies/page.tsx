@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Cookie, Settings, Eye, Shield, CheckCircle, AlertTriangle } from 'lucide-react';
 
 const CookiesPage: React.FC = () => {
   const cookieTypes = [

@@ -1,8 +1,7 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { Mail, TrendingUp, Users, BarChart3, Zap, Target, Clock, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionLeadMagnet() {
-  return;
-},
     {
       title: "Email Automation",
       description: "Automated email sequences that nurture leads from first contact to conversion",

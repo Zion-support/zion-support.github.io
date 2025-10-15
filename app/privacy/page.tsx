@@ -1,6 +1,6 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Eye, FileText, Lock, Shield } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Shield, Eye, Lock, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 
 const PrivacyPage: React.FC = () => { const privacySections = [ { icon: <Shield className="w-6 h-6" />, title: "Information We Collect", content: "We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support. This may include your name, email address, phone number, and any other information you choose to provide." }, { icon: <Eye className="w-6 h-6" />, title: "How We Use Your Information", content: "We use the information we collect to provide, maintain, and improve our services, process transactions, send you technical notices and support messages, and communicate with you about products, services, and promotional offers." }, { icon: <Lock className="w-6 h-6" />, title: "Information Sharing", content: "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this privacy policy. We may share your information with trusted third parties who assist us in operating our website and conducting our business." }, { icon: <FileText className="w-6 h-6" />, title: "Data Security", content: "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure." } ];
 

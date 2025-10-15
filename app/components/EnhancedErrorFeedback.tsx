@@ -1,4 +1,5 @@
 import React, { Component, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 interface ErrorBoundaryState {
   hasError: boolean;
   error?: Error;

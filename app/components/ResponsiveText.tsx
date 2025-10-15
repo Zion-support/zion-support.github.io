@@ -1,4 +1,5 @@
 import React from 'react';
+import { ResponsiveTextProps } from 'lucide-react';
 interface ResponsiveTextProps {
   children: React.ReactNode;
   className?: string;

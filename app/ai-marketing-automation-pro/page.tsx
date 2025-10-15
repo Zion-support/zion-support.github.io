@@ -1,4 +1,5 @@
-import { ArrowRight, Brain, CheckCircle, Phone, Play, Star } from 'lucide-react';
+import { ArrowRight, Brain, CheckCircle, Phone, Play, Star, Mail } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const AIMarketingAutomationProPage = () => {
   const features = [

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Shield, Lock, CheckCircle, AlertTriangle, Users, Eye, TrendingUp, Star, Zap, BarChart3, ArrowRight } from 'lucide-react';
 
 const CybersecurityConsultingPage: React.FC = () => {
   const features = [

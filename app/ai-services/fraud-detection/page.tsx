@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
 
 const FraudDetectionPage: React.FC = () => { return (
     <> <Helmet> <title>Fraud Detection</title> <meta name="description" content="Professional fraud detection solutions and services" /> <meta name="keywords" content="fraud, detection" /> </Helmet> 

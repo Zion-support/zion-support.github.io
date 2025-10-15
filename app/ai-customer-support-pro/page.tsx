@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
+import { Bot, Brain, Headphones, BarChart3, Shield, Zap, ShoppingCart, Cpu, Activity, Star, Phone, Play, CheckCircle, ArrowRight, Mail } from 'lucide-react';
 
 const AiCustomerSupportProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -46,6 +47,8 @@ const features = [
     }
   ];
 
+
+export default function Page() {
 const pricingPlans = [ { name: "Starter", price: "$99", period: "month", description: "Perfect for small businesses starting with AI customer support", features: [ "Up to 1,000 conversations/month", "Basic AI chatbot", "Email & chat support", "Basic analytics", "Email support", "5 agents max" ], popular: false }, { name: "Professional", price: "$299", period: "month", description: "Ideal for growing companies with advanced support needs", features: [ "Up to 10,000 conversations/month", "Advanced AI chatbot", "Omnichannel support", "Advanced analytics", "Priority support", "25 agents max", "Custom integrations", "API access" ], popular: true }, { name: "Enterprise", price: "$599", period: "month", description: "Complete solution for large organizations with complex requirements", features: [ "Unlimited conversations", "Custom AI training", "All channels supported", "Full analytics suite", "24/7 dedicated support", "Unlimited agents", "Custom development", "On-premise deployment" ], popular: false } ];
 
 const testimonials = [ { name: "Jennifer Martinez", company: "E-commerce Plus", role: "Customer Success Manager", content: "AI Customer Support Pro has reduced our response time by 80% and increased customer satisfaction by 45%. The AI chatbot handles 70% of inquiries automatically.", rating: 5 }, { name: "David Thompson", company: "TechStart Inc.", role: "VP of Operations", content: "The omnichannel support and analytics have given us unprecedented visibility into customer interactions. Our team productivity has increased significantly.", rating: 5 }, { name: "Sarah Johnson", company: "Global Services Ltd", role: "Head of Support", content: "The AI-powered automation and smart routing have streamlined our support operations. We can now handle 3x more tickets with the same team size.", rating: 5 } ];

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Target, CheckCircle, Star, ArrowRight, TrendingUp, Send, Eye, MousePointer, Palette, Smartphone } from 'lucide-react';
+import { Target, DollarSign, Users, BarChart3, Mail, Zap, Send, Eye, MousePointer, TrendingUp, Palette, Smartphone, Star, CheckCircle, ArrowRight } from 'lucide-react';
 
 const AiEmailMarketingPage: React.FC = () => {
   const features = [

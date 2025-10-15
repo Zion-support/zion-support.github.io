@@ -1,6 +1,6 @@
-import React, { useState} from &quot;react&quot;;
-import { Helmet } from &quot;react-helmet-async&quot;;
-import { CheckCircle, Clock,  Mail, MapPin, Phone, Send } from &apos;lucide-react&apos;;
+import React, { useState} from &quot;react&quot;
+import { Helmet } from 'react-helmet-async';
+import { Phone, Mail, MapPin, Clock, CheckCircle, Send } from 'lucide-react';
 
 // Contact information
 const contactInfo = [

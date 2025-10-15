@@ -1,20 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Cloud, 
-  ArrowRight, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  Star,
-  Clock,
-  Users,
-  TrendingUp,
-  Database,
-  Server,
-  
-  Globe,
-  BarChart3} from 'lucide-react';
+import { Cloud, Server, Globe, Database, Shield, TrendingUp, Clock, Users, Zap, BarChart3, Star, CheckCircle, ArrowRight } from 'lucide-react';
 
 const CloudMigrationServicesPage: React.FC = () => {
   const features = [

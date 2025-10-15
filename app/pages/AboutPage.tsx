@@ -1,6 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import {CheckCircleIcon, UserGroupIcon, LightBulbIcon, ShieldCheckIcon, RocketLaunchIcon, HeartIcon, PhoneIcon, EnvelopeIcon} from '@heroicons/react/24/outline';
+import { Helmet } from 'react-helmet-async';
 
 export default function AboutPage() {
   const stats = [

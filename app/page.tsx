@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Shield, Zap, Brain, Cloud, Database, Globe, Users, BarChart3, CheckCircle, Star, ArrowRight } from 'lucide-react';
-import FuturisticButton from './components/FuturisticButton';
+import { Brain, Shield, Zap, Cloud, Database, Globe, Users, FuturisticButton } from 'lucide-react';
 
 const HomePage = () => {
   const services = [

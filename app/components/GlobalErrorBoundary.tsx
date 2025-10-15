@@ -1,5 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from "react";
-import { Helmet } from "react-helmet-async"; interface Props { children: ReactNode; fallback?: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void; } interface State { hasError: boolean; error: Error | null; } class GlobalErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props); this.state = { hasError: false, error: null }; } static getDerivedStateFromError(error: Error): State { return { hasError: true, error }; } componentDidCatch(error: Error, errorInfo: ErrorInfo) { if (this.props.onError) { this.props.onError( errorInfo); } } handleRetry = () => { this.setState({ hasError: false, error: null }); }; render() { if (this.state.hasError) { if (this.props.fallback) { return this.props.fallback; } return (
+import { Helmet } from 'react-helmet-async';
+import { React, Component } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
     <> <Helmet> <title>Application Error - Zion Tech Group</title> <meta name="description" content="An error occurred in the application" /> </Helmet> 
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
             

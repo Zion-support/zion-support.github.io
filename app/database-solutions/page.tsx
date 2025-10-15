@@ -1,5 +1,6 @@
 import React from 'react';
-import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
+import { Database, Server, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 
 const DatabaseSolutionsPage: React.FC = () => {
   const features = [

@@ -1,8 +1,7 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { Calendar, Zap, Users, BarChart3, Target, Share2, Clock, Globe, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionSocialScheduler() {
-  return;
-},
     {
       title: "Content Calendar",
       description: "Visual content calendar with drag-and-drop scheduling and content planning tools",

@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
 
 const NotFoundPage: React.FC = () => { return (
     <> <Helmet> <title>404 - Page Not Found</title> <meta name="description" content="The page you are looking for does not exist." /> <meta name="keywords" content="404, not found, error" /> </Helmet> 

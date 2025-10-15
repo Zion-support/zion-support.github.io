@@ -1,13 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { 
-  ArrowRight, Play, CheckCircle, Star, Shield, Award, 
-  Brain, Cpu, Target, BarChart, MessageSquare, Phone, Mail,
-  Users, Globe, Zap, TrendingUp, Clock, DollarSign
-} from 'lucide-react';
+import { Navigation, Phone, Mail, CheckCircle, Brain, Play, Star, Footer } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const features = [

@@ -1,6 +1,6 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { RefreshCw, CheckCircle, Zap, Users, Shield, BarChart3, Target, TrendingUp } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Icon, CheckCircle } from 'lucide-react';
 
 const DigitalTransformationPage: React.FC = () => {
   const services = [

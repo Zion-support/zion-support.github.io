@@ -1,4 +1,5 @@
 import React from 'react';
+import { ResponsiveContainerProps } from 'lucide-react';
 interface ResponsiveContainerProps {
   children: React.ReactNode;
   className?: string;

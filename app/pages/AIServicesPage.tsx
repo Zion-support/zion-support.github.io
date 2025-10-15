@@ -1,5 +1,6 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
+import { Icon } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
   const services = [

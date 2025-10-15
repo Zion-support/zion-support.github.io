@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async"; interface SEOProps { title: string; description: string; keywords?: string; canonicalUrl?: string; ogImage?: string; ogType?: string; twitterCard?: string; structuredData?: object; } const SEO: React.FC<SEOProps> = ({ title, description, keywords = '', canonicalUrl, ogImage = '/og-image.jpg', ogType = 'website', twitterCard = 'summary_large_image', structuredData }) => { const siteUrl = process.env.VITE_APP_URL || 'https://ziontechgroup.com';
+import { Helmet } from 'react-helmet-async';
 
 const fullCanonicalUrl = canonicalUrl ? `${siteUrl }${ canonicalUrl }` : undefined;
 

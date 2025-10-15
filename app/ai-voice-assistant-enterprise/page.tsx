@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Mic, Brain, Volume2, Globe, Star, Settings, Headphones, Users, Smartphone, CheckCircle } from 'lucide-react';
 
 const AiVoiceAssistantEnterprisePage: React.FC = () => {
   const [ setIsVisible] = useState(false);
@@ -47,6 +48,8 @@ const features = [
     }
   ];
 
+
+export default function Page() {
 const useCases = [
     {
       title: &quot;Customer Service&quot;,

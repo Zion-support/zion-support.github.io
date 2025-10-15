@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Zap, FileText, Code, Database, Shield, BookOpen, Search, ArrowRight, Footer } from 'lucide-react';
 
 const DocsPage: React.FC = () => {
   const documentationSections = [

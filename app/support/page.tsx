@@ -1,6 +1,7 @@
 import React, { useState, useEffect, memo, lazy, Suspense } from "react";
-import { Helmet } from "react-helmet-async";
-import { HelpCircle, Mail, Phone, BookOpen, Users, Zap, Search, Clock, MessageCircle } from 'lucide-react'; interface FAQ { question: string; answer: string; category: string; } const SupportPage: React.FC = () => { const [searchTerm, setSearchTerm] = useState("");
+import { Helmet } from 'react-helmet-async';
+import { React, Suspense } from 'react';
+import { Search, 2min, HelpCircle, BookOpen, Users, Clock, Phone, Mail } from 'lucide-react';
 
 const [selectedCategory, setSelectedCategory] = useState("all");
 

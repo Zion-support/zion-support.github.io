@@ -1,4 +1,5 @@
 import React from 'react';
+import { ResponsiveGridProps } from 'lucide-react';
 interface ResponsiveGridProps {
   children: React.ReactNode;
   className?: string;

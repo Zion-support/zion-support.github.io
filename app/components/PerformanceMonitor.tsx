@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import { PerformanceMonitorProps } from 'lucide-react';
 
 interface PerformanceMonitorProps {
   children: React.ReactNode;

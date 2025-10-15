@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { 
+import { Link } from 'react-router-dom';
+import { NavigationProps, Bars3Icon } from 'lucide-react';
   Bars3Icon, 
   XMarkIcon,
   ChevronDownIcon

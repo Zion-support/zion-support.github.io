@@ -1,4 +1,5 @@
 import React from 'react';
+import { FuturisticTextProps } from 'lucide-react';
 interface FuturisticTextProps {
   children: React.ReactNode;
   className?: string;

@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, Camera, CheckCircle, Phone, Play, Star } from 'lucide-react';
+import { Brain, Camera, MessageCircle, Hash, Mail, Star, CheckCircle, Play, Phone, ArrowRight } from 'lucide-react';
 
 const AISocialMediaManagerProPage = () => {
   const features = [

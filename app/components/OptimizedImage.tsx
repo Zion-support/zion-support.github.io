@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { OptimizedImageProps, HTMLImageElement, ImageIcon, Loader2 } from 'lucide-react';
 interface OptimizedImageProps {
   src: string;
   alt: string;

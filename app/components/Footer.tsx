@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
   PhoneIcon, 
   EnvelopeIcon, 
   MapPinIcon, 
   ArrowRightIcon,
   HeartIcon
 } from '@heroicons/react/24/outline';
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+import { ArrowRight, Facebook, Twitter, Linkedin, Github, ArrowRightIcon, PhoneIcon, EnvelopeIcon, MapPinIcon, HeartIcon } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Phone, EnvelopeIcon, MapPinIcon, HeartIcon } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
                     to={service.href} 
                     className="text-gray-300 hover:text-white transition-colors flex items-center group"
                   >
-                    <ArrowRightIcon className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {service.name}
                   </Link>
                 </li>
@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
                     to={item.href} 
                     className="text-gray-300 hover:text-white transition-colors flex items-center group"
                   >
-                    <ArrowRightIcon className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
                   </Link>
                 </li>
@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
                     to={resource.href} 
                     className="text-gray-300 hover:text-white transition-colors flex items-center group"
                   >
-                    <ArrowRightIcon className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {resource.name}
                   </Link>
                 </li>
@@ -127,7 +127,7 @@ const Footer: React.FC = () => {
         <div className="mt-12 pt-8 border-t border-slate-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center">
-              <PhoneIcon className="h-5 w-5 text-purple-400 mr-3" />
+              <Phone className="h-5 w-5 text-purple-400 mr-3" />
               <span className="text-gray-300">+1 (555) 123-4567</span>
             </div>
             <div className="flex items-center">

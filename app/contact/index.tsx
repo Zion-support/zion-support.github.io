@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import {PhoneIcon, EnvelopeIcon, MapPinIcon, ClockIcon, CheckIcon} from '@heroicons/react/24/outline';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import { CheckCircle, IconComponent, ArrowRight } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -85,7 +84,7 @@ const services = [
         <div className="max-w-2xl mx-auto text-center">
             
         <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-8">
-              <CheckIcon className="w-12 h-12 text-white" />
+              <CheckCircle className="w-12 h-12 text-white" />
             </div>
             
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -341,7 +340,7 @@ const services = [
                   ) : (
                     <>
                       Send Message
-                      <ArrowRightIcon className="w-5 h-5 ml-2" />
+                      <ArrowRight className="w-5 h-5 ml-2" />
                     </>
                   )}
                 </button>
@@ -360,7 +359,7 @@ const services = [
         <div className="flex items-start">
                     
         <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-                      <CheckIcon className="w-5 h-5 text-white" />
+                      <CheckCircle className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <h4 className="text-xl font-bold text-white mb-2">Real Solutions</h4>
@@ -372,7 +371,7 @@ const services = [
         <div className="flex items-start">
                     
         <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-                      <CheckIcon className="w-5 h-5 text-white" />
+                      <CheckCircle className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <h4 className="text-xl font-bold text-white mb-2">Expert Team</h4>
@@ -384,7 +383,7 @@ const services = [
         <div className="flex items-start">
                     
         <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-                      <CheckIcon className="w-5 h-5 text-white" />
+                      <CheckCircle className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <h4 className="text-xl font-bold text-white mb-2">24/7 Support</h4>
@@ -396,7 +395,7 @@ const services = [
         <div className="flex items-start">
                     
         <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-                      <CheckIcon className="w-5 h-5 text-white" />
+                      <CheckCircle className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <h4 className="text-xl font-bold text-white mb-2">Proven Results</h4>

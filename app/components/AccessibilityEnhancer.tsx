@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
+import { AccessibilityEnhancerProps } from 'lucide-react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;

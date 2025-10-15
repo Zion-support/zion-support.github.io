@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { AlertTriangle, Brain, Camera, CheckCircle, Heart, Microscope, Pill, Star, Stethoscope, Syringe, Thermometer } from 'lucide-react';
+import { Brain, Camera, FileText, Stethoscope, Star, Pill, Thermometer, Microscope, Syringe, CheckCircle } from 'lucide-react';
 
 const AiHealthcarePlatformPage: React.FC = () => {
   useEffect(() => {
@@ -34,6 +34,8 @@ const features = [
       benefits: ["Population health", "Clinical outcomes", "Operational metrics", "Predictive analytics"] }
   ];
 
+
+export default function Page() {
 const aiCapabilities = [
     { title: "Drug Interaction Checker",
       description: "AI-powered system that identifies potential drug interactions and adverse effects",
