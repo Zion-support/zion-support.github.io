@@ -54,7 +54,7 @@ class AdvancedErrorBoundary extends Component;
         sessionStorage.setItem('sessionId', sessionId)
       return sessionId;
       return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-  },
+  },;
       return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   };
       // Send to your error reporting service;'

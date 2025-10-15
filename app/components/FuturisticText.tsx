@@ -79,7 +79,7 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({},
       const getAnimateClasses = () => {},': value
       if (!animate) return '','
       return 'animate-pulse'
-    },
+    },;
     {
 
   const baseClasses = `: value

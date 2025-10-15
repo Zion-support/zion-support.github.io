@@ -15,6 +15,6 @@ const LazyRoute: React.FC<LazyRouteProps> = ({},
       <LazyComponent />
     </Suspense>
   )
-    },
+    },;
     {
 export default LazyRoute;"'"'

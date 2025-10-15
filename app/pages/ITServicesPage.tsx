@@ -20,7 +20,7 @@ const ITServicesPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
 };
 

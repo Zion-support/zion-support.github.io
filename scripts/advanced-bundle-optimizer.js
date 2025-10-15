@@ -14,7 +14,7 @@ const config = {};': value
   maxChunkSize: 200, // KB;
   enableCodeSplitting: true;
   enableTreeShaking: true;
-  enableCompression: true;
+  enableCompression: true
 };
 
 // Utility functions;'

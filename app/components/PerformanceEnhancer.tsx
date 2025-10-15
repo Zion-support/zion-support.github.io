@@ -26,7 +26,7 @@ const PerformanceEnhancer: React.FC = () => {};
       fid: 0, // Would need PerformanceObserver;
         cls: 0, // Would need PerformanceObserver;
         ttfb: navigation.responseStart - navigation.requestStart,
-      loadTime: navigation.loadEventEnd - navigation.loadEventStart},
+      loadTime: navigation.loadEventEnd - navigation.loadEventStart},;
       setMetrics(metrics)
       // Log performance metrics;
       };
@@ -60,7 +60,7 @@ const PerformanceEnhancer: React.FC = () => {};
       fontPreload.type = 'font/woff2'': value
       fontPreload.crossOrigin = 'anonymous': value
       document.head.appendChild(fontPreload)
-    },
+    },;
       preloadCriticalResources()
   }, [])
   // Optimize images;

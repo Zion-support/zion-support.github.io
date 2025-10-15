@@ -38,7 +38,7 @@ class LightweightErrorBoundary extends Component<Props, State> {},
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString();
+      timestamp: new Date().toISOString()
         });
       }).catch(() => {};: value
         // Silently fail if error reporting fails;

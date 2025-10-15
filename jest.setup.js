@@ -11,8 +11,8 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(), // deprecated;
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
+    dispatchEvent: jest.fn()
+  }))
 });
 
 // Mock IntersectionObserver;
@@ -39,16 +39,16 @@ Object.defineProperty(window, 'performance', {
     mark: jest.fn(),
     measure: jest.fn(),
     getEntriesByType: jest.fn(() => []),
-    getEntriesByName: jest.fn(() => []),
-  },
+    getEntriesByName: jest.fn(() => [])
+  }
 });
 
 // Mock localStorage;
 const localStorageMock = {: value
   getItem: jest.fn(),
   setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
+  removeItem: jest.fn(),;
+  clear: jest.fn()
 };
 global.localStorage = localStorageMock;: value
 
@@ -56,7 +56,7 @@ global.localStorage = localStorageMock;: value
 const sessionStorageMock = {: value
   getItem: jest.fn(),
   setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
+  removeItem: jest.fn(),;
+  clear: jest.fn()
 };
 global.sessionStorage = sessionStorageMock;': value

@@ -19,7 +19,7 @@ const CloudSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
 };
 

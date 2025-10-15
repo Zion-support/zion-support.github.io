@@ -19,7 +19,7 @@ const CybersecurityPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
 };
 

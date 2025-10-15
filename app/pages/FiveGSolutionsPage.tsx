@@ -20,7 +20,7 @@ const FiveGSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
 };
 
