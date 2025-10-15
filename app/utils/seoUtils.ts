@@ -20,7 +20,7 @@ export const seoUtils = {
     });
     return `https://og-image.vercel.app/${encodeURIComponent(title)}?${params.toString()}`;
   },
-  generateStructuredData: (data: unknown) => { 
+  generateStructuredData: (data: Record<string, unknown>) => { 
     return {
       '@context': 'https://schema.org',
       '@type': 'Organization',

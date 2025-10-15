@@ -30,4 +30,4 @@ export const performanceOptimizations = {
   }
 };
 
-export default NotFoundPage;
+export default performanceOptimizations;

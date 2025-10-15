@@ -3,11 +3,11 @@ import { Helmet } from 'react-helmet-async';
 import { Search, HelpCircle, ChevronUp, ChevronDown } from 'lucide-react';
 
 const FAQPage: React.FC = () => {
-  const [openItems, setOpenItems] = useState<number[]>([]);
+  const [openItems] = useState<number[]>([]);
 
 const [searchTerm, setSearchTerm] = useState('');
 
-const toggleItem = () => {
+const toggleItem = (_index: number) => {
   return;
 };
 

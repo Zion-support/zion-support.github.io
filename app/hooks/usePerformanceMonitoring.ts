@@ -1,13 +1,5 @@
 import { useEffect, useCallback } from 'react';
 
-interface PerformanceMetrics {
-  fcp?: number;
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  ttfb?: number;
-}
-
 export const usePerformanceMonitoring = () => {
   const reportMetric = useCallback((name: string, value: number) => {
     // Report to analytics service

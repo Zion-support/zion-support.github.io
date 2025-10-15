@@ -48,8 +48,8 @@ class Logger {
       level,
       message,
       timestamp: new Date().toISOString(),
-      context,
-      error
+      ...(context && { context }),
+      ...(error && { error })
     };
 
     const formattedMessage = this.formatMessage(entry);

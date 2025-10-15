@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { MapPin, Clock, Users, ArrowRight, Filter, Search, ExternalLink, CheckCircle, Star } from 'lucide-react';
+import { MapPin, Clock, Users, ArrowRight, Search, ExternalLink, CheckCircle, Star } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');

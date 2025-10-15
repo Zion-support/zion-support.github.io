@@ -1,7 +1,7 @@
 // Global gtag function declaration
 declare global { 
   interface Window {
-    gtag: (command: string, targetId: string, config?: Record<string, unknown>) => void; 
+    gtag: (...args: unknown[]) => void; 
   }
 }
 export const analytics = { 
@@ -19,4 +19,4 @@ export const analytics = {
   }
 };
 
-export default NotFoundPage;
+export default analytics;

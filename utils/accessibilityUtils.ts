@@ -42,6 +42,13 @@ export const focusManagement = {
     };
   },
 
+  // Get focusable elements within a container
+  getFocusableElements: (container: HTMLElement) => {
+    return container.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+  },
+
   // Move focus to next focusable element
   moveToNext: (currentElement: HTMLElement) => {
     const focusableElements = document.querySelectorAll(
@@ -185,12 +192,15 @@ export const colorContrast = {
     if (!rgb) return 0;
     
     const { r, g, b } = rgb;
-    const [rs, gs, bs] = [r, g, b].map(c => {
-      c = c / 255;
-      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
-    });
+    const rs = r / 255;
+    const gs = g / 255;
+    const bs = b / 255;
     
-    return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+    const rLuminance = rs <= 0.03928 ? rs / 12.92 : Math.pow((rs + 0.055) / 1.055, 2.4);
+    const gLuminance = gs <= 0.03928 ? gs / 12.92 : Math.pow((gs + 0.055) / 1.055, 2.4);
+    const bLuminance = bs <= 0.03928 ? bs / 12.92 : Math.pow((bs + 0.055) / 1.055, 2.4);
+    
+    return 0.2126 * rLuminance + 0.7152 * gLuminance + 0.0722 * bLuminance;
   }
 };
 
@@ -198,9 +208,9 @@ export const colorContrast = {
 function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result ? {
-    r: parseInt(result[1], 16),
-    g: parseInt(result[2], 16),
-    b: parseInt(result[3], 16)
+    r: parseInt(result[1]!, 16),
+    g: parseInt(result[2]!, 16),
+    b: parseInt(result[3]!, 16)
   } : null;
 }
 
