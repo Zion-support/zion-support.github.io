@@ -9,11 +9,7 @@ interface PerformanceOptimizerProps {
 }
 
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableImageOptimization = true,
-  enablePreloading = true,
-  enableCaching = true,
-  enableCompression = true,
-}) => {
+  enableImageOptimization = true, enablePreloading = true, enableCaching = true, enableCompression = true, }) => {
   const location = useLocation();
 
   // Image optimization
@@ -77,13 +73,11 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
           if (process.env.NODE_ENV === 'development') {
-            console.log('SW registered: ', registration);
-          }
+            }
         })
         .catch((registrationError) => {
           if (process.env.NODE_ENV === 'development') {
-            console.log('SW registration failed: ', registrationError);
-          }
+            }
         });
     }
 

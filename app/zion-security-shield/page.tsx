@@ -126,8 +126,7 @@ export default function ZionSecurityShield() {
     }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Zion Security Shield - Advanced Cybersecurity Platform | Zion Tech Group</title>
         <meta
@@ -136,7 +135,7 @@ export default function ZionSecurityShield() {
         />
         <meta
           name="keywords"
-          content="cybersecurity, threat detection, security monitoring, AI security, zero trust, compliance, SOC 2, GDPR, security platform"
+          content="cybersecurity, _threat detection, _security monitoring, _AI security, _zero trust, _compliance, _SOC 2, _GDPR, security platform"
         />
       </Helmet>
 
@@ -155,7 +154,7 @@ export default function ZionSecurityShield() {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Protect your business with the most advanced AI-powered cybersecurity platform. 
-              Real-time threat detection, automated incident response, and comprehensive compliance management.
+              Real-time threat detection, _automated incident response, and comprehensive compliance management.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
@@ -184,7 +183,7 @@ export default function ZionSecurityShield() {
                 <div className="text-gray-300">Security Monitoring</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">5,000+</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">5, 000+</div>
                 <div className="text-gray-300">Protected Organizations</div>
               </div>
             </div>
@@ -326,7 +325,7 @@ export default function ZionSecurityShield() {
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(( i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>

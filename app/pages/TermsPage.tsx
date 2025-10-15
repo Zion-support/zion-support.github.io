@@ -1,20 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  FileText,
-  Scale,
-  Users,
-  Shield,
-  AlertTriangle,
-  CheckCircle,
-  Mail,
-  Phone,
-  Calendar
-} from 'lucide-react';
-
-const TermsPage: React.FC = () => {
+import { ArrowRight, FileText, Scale, Users, Shield, AlertTriangle, Mail, Phone, Calendar } from 'lucide-react';const TermsPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024';
 
   const sections = [
@@ -109,12 +96,11 @@ const TermsPage: React.FC = () => {
     'Collecting user information without consent'
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Terms of Service - Zion Tech Group | Legal Terms & Conditions</title>
         <meta name="description" content="Read Zion Tech Group's Terms of Service. Understand your rights and obligations when using our AI and IT solutions." />
-        <meta name="keywords" content="terms of service, legal terms, conditions, user agreement, service terms" />
+        <meta name="keywords" content="terms of service, legal terms, _conditions, _user agreement, service terms" />
         <link rel="canonical" href="https://ziontechgroup.com/terms" />
       </Helmet>
 

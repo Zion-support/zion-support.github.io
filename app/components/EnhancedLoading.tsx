@@ -7,9 +7,7 @@ interface EnhancedLoadingProps {
 }
 
 const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
-  message = "Loading...",
-  showProgress = false,
-  progress = 0
+  message = "Loading...", showProgress = false, progress = 0
 }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -46,7 +44,7 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
 
         {/* Loading Animation */}
         <div className="flex justify-center space-x-2">
-          {[...Array(3)].map((_, i) => (
+          {[...Array(3)].map(( i) => (
             <div
               key={i}
               className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-bounce"

@@ -1,4 +1,5 @@
 'use client';
+import React, { useState } from 'react';
 import React, { useState, useEffect, useCallback } from 'react';
 import { Search, Eye } from 'lucide-react';
 
@@ -91,7 +92,7 @@ const AdvancedSEOOptimizer: React.FC = () => {
     analyzeSEO();
   }, [analyzeSEO]);
 
-  const optimizeSEO = useCallback(async () => {
+  const optimizeSEO = useCallback(_async () => {
     setIsOptimizing(true);
     
     // Simulate optimization process
@@ -128,7 +129,7 @@ const AdvancedSEOOptimizer: React.FC = () => {
     setTimeout(analyzeSEO, 1000);
   }, [settings, analyzeSEO]);
 
-  const toggleSetting = (key: keyof SEOSettings) => {
+  const toggleSetting = (_key: keyof SEOSettings) => {
     setSettings(prev => ({
       ...prev,
       [key]: !prev[key]
@@ -174,7 +175,7 @@ const AdvancedSEOOptimizer: React.FC = () => {
     }
   ];
 
-  const getImpactColor = (impact: string) => {
+  const getImpactColor = (_impact: string) => {
     switch (impact) {
       case 'High': return 'text-red-400';
       case 'Medium': return 'text-yellow-400';
@@ -183,7 +184,7 @@ const AdvancedSEOOptimizer: React.FC = () => {
     }
   };
 
-  const getScoreColor = (value: number | null, thresholds: { good: number; poor: number }) => {
+  const getScoreColor = (_value: number | null, thresholds: { good: number; poor: number }) => {
     if (value === null) return 'text-gray-400';
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.poor) return 'text-yellow-400';
@@ -191,8 +192,7 @@ const AdvancedSEOOptimizer: React.FC = () => {
   };
 
   if (!isVisible) {
-    return (
-      <button
+    return (<button
         onClick={() => setIsVisible(true)}
         className="fixed bottom-4 right-4 bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
         aria-label="Open SEO optimizer"
@@ -202,8 +202,7 @@ const AdvancedSEOOptimizer: React.FC = () => {
     );
   }
 
-  return (
-    <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6 w-80 z-50">
+  return (<div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6 w-80 z-50">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center">
           <Search className="w-5 h-5 mr-2" />

@@ -9,7 +9,7 @@ interface EnhancedSEOOptimizerProps {
   canonical?: string;
   ogImage?: string;
   noIndex?: boolean;
-  structuredData?: any;
+  structuredData?: unknown;
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;

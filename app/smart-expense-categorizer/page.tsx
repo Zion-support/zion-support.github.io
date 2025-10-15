@@ -1,26 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { 
-  Receipt, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Clock, 
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe,
-  DollarSign,
-  FileText,
-  CreditCard
-} from 'lucide-react';
-
-const SmartExpenseCategorizerPage = () => {
+import { Receipt, TrendingUp, Shield, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe, DollarSign, FileText, CreditCard } from 'lucide-react';const SmartExpenseCategorizerPage = () => {
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
@@ -134,12 +115,11 @@ const SmartExpenseCategorizerPage = () => {
     { number: "3x", label: "Faster Processing" }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Smart Expense Categorizer | Zion Tech Group</title>
         <meta name="description" content="Automate expense categorization with AI-powered receipt processing, bank integration, and real-time analytics." />
-        <meta name="keywords" content="expense management, receipt scanning, expense categorization, financial automation, AI expenses" />
+        <meta name="keywords" content="expense management, _receipt scanning, _expense categorization, _financial automation, AI expenses" />
       </Helmet>
 
       {/* Hero Section */}
@@ -162,8 +142,7 @@ const SmartExpenseCategorizerPage = () => {
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your expense management with AI-powered categorization, automated receipt processing, 
-              and real-time financial insights that save time and money.
+              Transform your expense management with AI-powered categorization, _automated receipt processing, and real-time financial insights that save time and money.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -65,17 +65,16 @@ export default function Community() {
     { number: "95%", label: "Member Satisfaction", icon: <Star className="w-6 h-6" /> }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Community - Zion Tech Group | Tech Community & Events</title>
         <meta
           name="description"
-          content="Join our vibrant tech community. Connect with like-minded professionals, attend events, participate in workshops, and grow your career with Zion Tech Group."
+          content="Join our vibrant tech community. Connect with like-minded professionals, attend events, _participate in workshops, and grow your career with Zion Tech Group."
         />
         <meta
           name="keywords"
-          content="tech community, developer community, tech events, workshops, mentorship, open source, networking, professional development"
+          content="tech community, _developer community, _tech events, _workshops, _mentorship, _open source, _networking, professional development"
         />
       </Helmet>
 
@@ -89,8 +88,7 @@ export default function Community() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Connect with thousands of tech professionals, attend exclusive events, 
-              and be part of a community that's shaping the future of technology.
+              Connect with thousands of tech professionals, _attend exclusive events, and be part of a community that's shaping the future of technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+import React, { useState } from 'react';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';import { MessageSquare, Phone, Mail, CheckCircle, Send, AlertCircle, FileText, Video } from 'lucide-react';
-=======
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { MessageSquare, Phone, Mail, CheckCircle, Send, AlertCircle, FileText, Video } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 
 const SupportPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -49,7 +43,7 @@ const SupportPage: React.FC = () => {
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: <FileText className="w-8 h-8" />,
+      icon: BookOpen,
       title: 'Documentation',
       description: 'Browse our comprehensive guides',
       action: 'View Docs',
@@ -128,10 +122,6 @@ const SupportPage: React.FC = () => {
       });
     }, 3000);
   };
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
 export default function Support() {
   return (

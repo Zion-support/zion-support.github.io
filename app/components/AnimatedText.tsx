@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import React, { useState, useEffect } from "react";
 
 interface AnimatedTextProps {
@@ -8,11 +9,7 @@ interface AnimatedTextProps {
 }
 
 const AnimatedText: React.FC<AnimatedTextProps> = ({
-  text,
-  className = "",
-  delay = 0,
-  speed = 100,
-}) => {
+  text, className = "", delay = 0, speed = 100, }) => {
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
 

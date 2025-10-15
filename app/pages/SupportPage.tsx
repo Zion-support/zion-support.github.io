@@ -1,29 +1,8 @@
 import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Search,
-  MessageSquare,
-  Phone,
-  Mail,
-  Calendar,
-  Clock,
-  CheckCircle,
-  Star,
-  Users,
-  Award,
-  Globe,
-  Zap,
-  BookOpen,
-  ExternalLink,
-  HelpCircle,
-  FileText,
-  Video,
-  Download
-} from 'lucide-react';
-
-const SupportPage: React.FC = () => {
+import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckCircle, Zap, BookOpen, ExternalLink, FileText, Video, Download } from 'lucide-react';const SupportPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -153,12 +132,11 @@ const SupportPage: React.FC = () => {
     return matchesCategory && matchesSearch;
   });
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Support - Zion Tech Group | Help & Support Center</title>
         <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Find answers, documentation, and contact our expert support team." />
-        <meta name="keywords" content="support, help, documentation, FAQ, technical support, customer service" />
+        <meta name="keywords" content="support, _help, _documentation, _FAQ, _technical support, customer service" />
         <link rel="canonical" href="https://ziontechgroup.com/support" />
       </Helmet>
 
@@ -209,7 +187,7 @@ const SupportPage: React.FC = () => {
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
-                placeholder="Search for help articles, FAQs, and documentation..."
+                placeholder="Search for help articles, _FAQs, and documentation..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
@@ -302,8 +280,7 @@ const SupportPage: React.FC = () => {
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {supportCategories.map((category) => (
-              <button
+            {supportCategories.map((category) => (<button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${

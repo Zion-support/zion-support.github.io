@@ -65,10 +65,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
   }, []);
 
   // Add performance monitoring
-  const addPerformanceMonitoring = useCallback(() => {
+  const addPerformanceMonitoring = useCallback() => {
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, _getLCP, _getTTFB }) => {
         getCLS(console.log);
         getFID(console.log);
         getFCP(console.log);
@@ -82,10 +82,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'navigation') {
-            console.log('Navigation timing:', entry);
-          } else if (entry.entryType === 'resource') {
-            console.log('Resource timing:', entry);
-          }
+            } else if (entry.entryType === 'resource') {
+            }
         });
       });
       

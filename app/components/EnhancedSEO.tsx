@@ -15,7 +15,7 @@ interface EnhancedSEOProps {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-  structuredData?: object;
+  structuredData?: Record<string, unknown>;
   noIndex?: boolean;
   lang?: string;
   noindex?: boolean;
@@ -23,24 +23,7 @@ interface EnhancedSEOProps {
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
-  title,
-  description,
-  keywords,
-  canonical,
-  ogTitle,
-  ogDescription,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogUrl,
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  twitterTitle,
-  twitterDescription,
-  twitterImage,
-  structuredData,
-  noIndex = false,
-  noindex = false,
-  nofollow = false,
-  lang = 'en'
+  title, description, _keywords, _canonical, _ogTitle, _ogDescription, ogImage = 'https://ziontechgroup.com/og-image.jpg', _ogUrl, ogType = 'website', twitterCard = 'summary_large_image', _twitterTitle, _twitterDescription, _twitterImage, _structuredData, noIndex = false, noindex = false, nofollow = false, lang = 'en'
 }) => {
   const siteName = 'Zion Tech Group';
   const siteUrl = 'https://ziontechgroup.com';

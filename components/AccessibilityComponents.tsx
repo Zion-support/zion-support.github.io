@@ -1,22 +1,13 @@
 // Accessibility components
 import React, { useEffect, useRef, useState } from 'react';
 
-<<<<<<< HEAD
-// Type definitions for better type safety (moved to utils)
-
-// Remove unused interface
+// Type definitions for better type safety
 
 // Import utilities
 import { focusManagement, ariaUtils, keyboardNavigation } from './utils/accessibilityUtils';
 
 // Re-export utilities
 export { focusManagement, ariaUtils, keyboardNavigation };
-=======
-// Type definitions for better type safety
-
-// Re-export utilities
-export { focusManagement, ariaUtils, keyboardUtils } from './utils/accessibilityUtils';
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
 // Skip link component
 export const SkipLink: React.FC<{ target: string; children: React.ReactNode }> = ({

@@ -4,7 +4,7 @@ export const Advancedanalytics = {
   init: () => {
     },
 
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
 

@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import React, { useState, useEffect } from 'react';
 import { cn } from '../lib/utils';
 
@@ -9,12 +10,8 @@ interface FuturisticTextProps {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div';
 }
 
-const FuturisticText = ({ 
-  text, 
-  delay = 0, 
-  speed = 100, 
-  className,
-  as: Component = 'span'
+const FuturisticText = (_{ 
+  text, delay = 0, speed = 100, className, as: Component = 'span'
 }: FuturisticTextProps) => {
   const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -1,16 +1,9 @@
-import React, { useEffect, useState, useCallback } from 'react';
-
-interface AccessibilitySettings {
-  enableKeyboard: boolean;
-  enableScreenReader: boolean;
-  enableHighContrast: boolean;
-  enableFocusManagement: boolean;
-  enableLargeText: boolean;
-  enableReducedMotion: boolean;
-}
-
+import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 interface AccessibilityEnhancerProps {
-  children?: React.ReactNode;
+  isHighContrast?: boolean;
+  isReducedMotion?: boolean;
+  fontSize?: number;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
@@ -32,8 +25,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       try {
         setSettings(JSON.parse(savedSettings));
       } catch (error) {
-        console.error('Error loading accessibility settings:', error);
-      }
+        }
     }
   }, []);
 
@@ -306,7 +298,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         }
       `}</style>
     </>
-  );
-};
+  );};
 
 export default AccessibilityEnhancer;

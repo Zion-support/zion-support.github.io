@@ -4,7 +4,7 @@ export const Monitoring = {
   init: () => {
     },
 
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
 

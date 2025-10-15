@@ -1,20 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Globe, 
-  Calendar, 
-  BarChart3, 
-  CheckCircle, 
-  ArrowRight, 
-  Target, 
-  Zap,
-  Shield,
-  Users,
-  Database,
-  Smartphone,
-  Image
-} from 'lucide-react';
-import FuturisticCard from '../components/FuturisticCard';
+import { Globe, Calendar, BarChart3, CheckCircle, ArrowRight, Target, Zap, Users, Image } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -129,12 +115,11 @@ const SocialMediaSchedulerPage = () => {
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Social Media Scheduler - Zion Tech Group | Multi-Platform Social Media Management"
-        description="Advanced social media scheduler with multi-platform posting, content calendar, analytics, and team collaboration. Streamline your social media management."
-        keywords="social media scheduler, social media management, content calendar, social media analytics, team collaboration, social media automation"
+        description="Advanced social media scheduler with multi-platform posting, content calendar, _analytics, and team collaboration. Streamline your social media management."
+        keywords="social media scheduler, _social media management, _content calendar, _social media analytics, _team collaboration, social media automation"
         canonical="https://ziontechgroup.com/social-media-scheduler"
       />
 
@@ -148,7 +133,7 @@ const SocialMediaSchedulerPage = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Streamline your social media management with our comprehensive scheduler. 
-            Plan, schedule, and analyze your content across all platforms from one dashboard.
+            Plan, _schedule, and analyze your content across all platforms from one dashboard.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
@@ -183,8 +168,7 @@ const SocialMediaSchedulerPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <FuturisticCard key={index} className="h-full">
+            {features.map((feature, index) => (<FuturisticCard key={index} className="h-full">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     {feature.icon}

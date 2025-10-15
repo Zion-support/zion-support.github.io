@@ -142,8 +142,7 @@ export default function AIEmailAssistant() {
     },
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>AI Email Assistant - Zion Tech Group</title>
         <meta
@@ -160,7 +159,7 @@ export default function AIEmailAssistant() {
               AI Email <span className="text-blue-600">Assistant</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your email management with AI-powered automation, smart
+              Transform your email management with AI-powered automation, _smart
               classification, and intelligent responses that boost productivity
               and improve communication.
             </p>
@@ -285,7 +284,7 @@ export default function AIEmailAssistant() {
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(( i) => (
                       <Star
                         key={i}
                         className="w-5 h-5 text-yellow-400 fill-current"

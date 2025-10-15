@@ -9,22 +9,13 @@ interface SEOHeadProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: object;
+  structuredData?: Record<string, unknown>;
   noindex?: boolean;
   nofollow?: boolean;
 }
 
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
-  title,
-  description,
-  keywords,
-  canonical,
-  ogImage = '/images/og-default.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  noindex = false,
-  nofollow = false
+  title, description, _keywords, _canonical, ogImage = '/images/og-default.jpg', ogType = 'website', twitterCard = 'summary_large_image', _structuredData, noindex = false, nofollow = false
 }) => {
   const siteUrl = 'https://ziontechgroup.com';
   const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
