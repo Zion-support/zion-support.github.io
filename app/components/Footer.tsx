@@ -22,6 +22,7 @@ const Footer: React.FC = () => {
       { name: 'Cybersecurity', href: '/advanced-security-suite' },
       { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
       { name: 'Digital Transformation', href: '/services' },
+      { name: 'Schedule Demo', href: '/demo' },
     ],
     company: [
       { name: 'About Us', href: '/about' },
@@ -29,6 +30,7 @@ const Footer: React.FC = () => {
       { name: 'Careers', href: '/careers' },
       { name: 'Case Studies', href: '/blog' },
       { name: 'Contact', href: '/contact' },
+      { name: 'Partnerships', href: '/contact' },
     ],
     resources: [
       { name: 'Blog', href: '/blog' },
@@ -36,12 +38,13 @@ const Footer: React.FC = () => {
       { name: 'Support', href: '/contact' },
       { name: 'FAQ', href: '/contact' },
       { name: 'Tutorials', href: '/blog' },
+      { name: 'API Reference', href: '/docs' },
     ],
     legal: [
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
       { name: 'Cookie Policy', href: '/privacy' },
-      { name: 'GDPR', href: '/privacy' },
+      { name: 'GDPR Compliance', href: '/privacy' },
       { name: 'Security', href: '/advanced-security-suite' },
     ]
   };

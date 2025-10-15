@@ -28,13 +28,18 @@ const Header: React.FC = () => {
       icon: <Users className="w-4 h-4" />
     },
     {
+      name: 'Services',
+      href: '/services',
+      icon: <Code className="w-4 h-4" />
+    },
+    {
       name: 'AI Services',
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
       dropdown: [
-        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
-        { name: 'AI Content Generation', href: '/ai-content-generation' },
-        { name: 'AI Automation Platform', href: '/ai-automation-platform' },
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
+        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
+        { name: 'AI Automation Suite', href: '/ai-automation-suite' },
         { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
         { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' }
@@ -78,6 +83,11 @@ const Header: React.FC = () => {
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
         { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
       ]
+    },
+    {
+      name: 'Blog',
+      href: '/blog',
+      icon: <Mail className="w-4 h-4" />
     },
     {
       name: 'Contact',
