@@ -123,6 +123,15 @@ function App() {
                   {/* <Route path="/case-studies" element={<CaseStudiesPage />} /> */}
                   {/* <Route path="/careers" element={<CareersPage />} /> */}
                   
+                  {/* Additional Service Pages */}
+                  <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                  <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
+                  <Route path="/micro-saas" element={<MicroSaaSPage />} />
+                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                  
+                  {/* Additional Pages */}
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/docs" element={<DocumentationPage />} />
                   {/* Catch all route */}
                   <Route path="*" element={
                     <div className="min-h-screen flex items-center justify-center bg-slate-900">
