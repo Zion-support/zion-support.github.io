@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
 interface ImageOptimizerProps {
   src: string;
@@ -33,6 +32,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
+  const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
   };
@@ -104,29 +104,29 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   }
 
   return (
+    <div className="relative">
+      {!isLoaded && (
         <div 
           className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
           style={{ width, height }}
-        >
-          style={{ width, height }}
         />
       )}
+      <LazyLoadImage
+        src={optimizedSrc}
+        srcSet={srcSet}
+        alt={alt}
+        className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
+        width={width}
+        height={height}
+        effect={effect}
+        placeholderSrc={placeholder}
+        threshold={threshold}
+        onLoad={handleLoad}
+        onError={handleError}
+        loading="lazy"
+        decoding="async"
+      />
     </div>
-    <LazyLoadImage
-      src={optimizedSrc}
-      srcSet={srcSet}
-      alt={alt}
-      className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
-      width={width}
-      height={height}
-      effect={effect}
-      placeholderSrc={placeholder}
-      threshold={threshold}
-      onLoad={handleLoad}
-      onError={handleError}
-      loading="lazy"
-      decoding="async"
-    />
   );
 };
 

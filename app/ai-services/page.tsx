@@ -11,6 +11,7 @@ export default function AIServices() {
       name: "AI Analytics Dashboard Pro",
       description: "Advanced AI-powered business intelligence platform with predictive analytics, real-time insights, and automated reporting",
       price: "From $2,500/month",
+      originalPrice: "$5,000/month",
       icon: <BarChart3 className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
       features: [
@@ -33,7 +34,8 @@ export default function AIServices() {
       rating: 4.9,
       reviews: 1247,
       link: "/ai-analytics-dashboard-pro",
-      featured: true
+      featured: true,
+      popular: true
     },
     {
       id: "ai-cybersecurity-suite-pro",
@@ -678,6 +680,7 @@ export default function AIServices() {
       name: "AI NLP Text Analysis",
       description: "Comprehensive natural language processing with text classification, entity extraction, and semantic analysis",
       price: "From $1,600/month",
+      originalPrice: "$3,200/month",
       icon: <FileText className="w-8 h-8" />,
       color: "from-indigo-500 to-blue-500",
       features: [
@@ -700,7 +703,287 @@ export default function AIServices() {
       rating: 4.7,
       reviews: 1123,
       link: "/ai-nlp-text-analysis",
-      featured: false
+      featured: false,
+      popular: true
+    },
+    {
+      id: "ai-3d-generation-pro",
+      name: "AI 3D Generation Pro",
+      description: "Revolutionary AI-powered 3D content creation with text-to-3D generation, model optimization, and real-time rendering",
+      price: "From $3,500/month",
+      originalPrice: "$7,000/month",
+      icon: <Cube className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "Text-to-3D generation",
+        "3D model optimization",
+        "Real-time rendering",
+        "Material & texture generation",
+        "Animation creation",
+        "VR/AR integration",
+        "Custom model training",
+        "Batch processing"
+      ],
+      benefits: [
+        "Create 3D content 100x faster",
+        "Reduce 3D production costs by 80%",
+        "Enable rapid prototyping",
+        "Scale 3D content creation"
+      ],
+      category: "3D & Graphics",
+      rating: 4.8,
+      reviews: 567,
+      link: "/ai-3d-generation-pro",
+      featured: true,
+      popular: true
+    },
+    {
+      id: "ai-accounting-assistant-pro",
+      name: "AI Accounting Assistant Pro",
+      description: "Intelligent accounting automation with AI-powered bookkeeping, tax preparation, and financial analysis",
+      price: "From $899/month",
+      originalPrice: "$1,799/month",
+      icon: <Calculator className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "Automated bookkeeping",
+        "AI tax preparation",
+        "Financial analysis & insights",
+        "Expense categorization",
+        "Invoice processing",
+        "Compliance monitoring",
+        "Multi-currency support",
+        "Integration with accounting software"
+      ],
+      benefits: [
+        "Reduce accounting time by 90%",
+        "Improve accuracy by 95%",
+        "Ensure tax compliance",
+        "Save on accounting costs"
+      ],
+      category: "Financial AI",
+      rating: 4.9,
+      reviews: 234,
+      link: "/ai-accounting-assistant-pro",
+      featured: true,
+      popular: true
+    },
+    {
+      id: "ai-agricultural-intelligence-pro",
+      name: "AI Agricultural Intelligence Pro",
+      description: "Smart farming solutions with AI-powered crop monitoring, yield prediction, and precision agriculture",
+      price: "From $2,200/month",
+      originalPrice: "$4,400/month",
+      icon: <Leaf className="w-8 h-8" />,
+      color: "from-green-500 to-teal-500",
+      features: [
+        "Crop health monitoring",
+        "Yield prediction models",
+        "Precision irrigation",
+        "Pest & disease detection",
+        "Weather analysis",
+        "Soil quality assessment",
+        "IoT sensor integration",
+        "Farm management dashboard"
+      ],
+      benefits: [
+        "Increase crop yields by 30%",
+        "Reduce water usage by 40%",
+        "Minimize pesticide use",
+        "Optimize farming operations"
+      ],
+      category: "Agricultural AI",
+      rating: 4.7,
+      reviews: 189,
+      link: "/ai-agricultural-intelligence-pro",
+      featured: true,
+      popular: true
+    },
+    {
+      id: "ai-climate-prediction-engine",
+      name: "AI Climate Prediction Engine",
+      description: "Advanced climate modeling with AI-powered weather forecasting, climate change analysis, and environmental monitoring",
+      price: "From $4,500/month",
+      originalPrice: "$9,000/month",
+      icon: <CloudRain className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      features: [
+        "Long-term climate forecasting",
+        "Weather pattern analysis",
+        "Climate change modeling",
+        "Environmental impact assessment",
+        "Disaster prediction",
+        "Carbon footprint tracking",
+        "Renewable energy optimization",
+        "Custom climate models"
+      ],
+      benefits: [
+        "Improve forecast accuracy by 60%",
+        "Enable better climate planning",
+        "Reduce environmental risks",
+        "Support sustainability goals"
+      ],
+      category: "Climate AI",
+      rating: 4.8,
+      reviews: 156,
+      link: "/ai-climate-prediction-engine",
+      featured: true,
+      popular: true
+    },
+    {
+      id: "ai-autonomous-systems-pro",
+      name: "AI Autonomous Systems Pro",
+      description: "Advanced autonomous vehicle and robotics solutions with AI-powered navigation, decision making, and safety systems",
+      price: "From $5,000/month",
+      originalPrice: "$10,000/month",
+      icon: <Car className="w-8 h-8" />,
+      color: "from-slate-500 to-gray-500",
+      features: [
+        "Autonomous navigation",
+        "Real-time decision making",
+        "Safety monitoring systems",
+        "Object detection & recognition",
+        "Path planning optimization",
+        "Fleet management",
+        "Predictive maintenance",
+        "Custom AI model training"
+      ],
+      benefits: [
+        "Improve safety by 99%",
+        "Reduce operational costs by 50%",
+        "Enable 24/7 operations",
+        "Optimize route efficiency"
+      ],
+      category: "Autonomous Systems",
+      rating: 4.9,
+      reviews: 89,
+      link: "/ai-autonomous-systems-pro",
+      featured: true,
+      popular: true
+    },
+    {
+      id: "ai-blockchain-analytics-pro",
+      name: "AI Blockchain Analytics Pro",
+      description: "Intelligent blockchain analysis with AI-powered transaction monitoring, fraud detection, and DeFi insights",
+      price: "From $2,800/month",
+      originalPrice: "$5,600/month",
+      icon: <Link className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      features: [
+        "Transaction pattern analysis",
+        "Fraud detection & prevention",
+        "DeFi protocol monitoring",
+        "Smart contract analysis",
+        "Market sentiment tracking",
+        "Risk assessment",
+        "Compliance reporting",
+        "Real-time alerts"
+      ],
+      benefits: [
+        "Detect fraud with 99.5% accuracy",
+        "Reduce financial risks",
+        "Ensure regulatory compliance",
+        "Optimize DeFi strategies"
+      ],
+      category: "Blockchain AI",
+      rating: 4.8,
+      reviews: 234,
+      link: "/ai-blockchain-analytics-pro",
+      featured: true,
+      popular: true
+    },
+    {
+      id: "ai-healthcare-diagnostics-pro",
+      name: "AI Healthcare Diagnostics Pro",
+      description: "Revolutionary medical AI with advanced diagnostic capabilities, treatment recommendations, and patient monitoring",
+      price: "From $6,500/month",
+      originalPrice: "$13,000/month",
+      icon: <Heart className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "Medical image analysis",
+        "Symptom assessment",
+        "Treatment recommendations",
+        "Drug interaction checking",
+        "Patient monitoring",
+        "Clinical decision support",
+        "HIPAA compliance",
+        "Integration with EHR systems"
+      ],
+      benefits: [
+        "Improve diagnostic accuracy by 40%",
+        "Reduce misdiagnosis by 60%",
+        "Accelerate treatment decisions",
+        "Enhance patient outcomes"
+      ],
+      category: "Healthcare AI",
+      rating: 4.9,
+      reviews: 345,
+      link: "/ai-healthcare-diagnostics-pro",
+      featured: true,
+      popular: true
+    },
+    {
+      id: "ai-legal-research-pro",
+      name: "AI Legal Research Pro",
+      description: "Advanced legal AI with case law analysis, contract review, and legal document generation",
+      price: "From $3,200/month",
+      originalPrice: "$6,400/month",
+      icon: <Scale className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500",
+      features: [
+        "Case law research",
+        "Contract analysis",
+        "Legal document generation",
+        "Compliance monitoring",
+        "Precedent analysis",
+        "Risk assessment",
+        "Document automation",
+        "Integration with legal databases"
+      ],
+      benefits: [
+        "Reduce research time by 80%",
+        "Improve case outcomes",
+        "Ensure compliance",
+        "Accelerate document processing"
+      ],
+      category: "Legal AI",
+      rating: 4.7,
+      reviews: 178,
+      link: "/ai-legal-research-pro",
+      featured: true,
+      popular: true
+    },
+    {
+      id: "ai-energy-management-pro",
+      name: "AI Energy Management Pro",
+      description: "Smart energy solutions with AI-powered optimization, renewable energy integration, and carbon footprint tracking",
+      price: "From $2,100/month",
+      originalPrice: "$4,200/month",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-yellow-500 to-orange-500",
+      features: [
+        "Energy consumption optimization",
+        "Renewable energy integration",
+        "Carbon footprint tracking",
+        "Smart grid management",
+        "Predictive maintenance",
+        "Cost optimization",
+        "Sustainability reporting",
+        "IoT sensor integration"
+      ],
+      benefits: [
+        "Reduce energy costs by 35%",
+        "Lower carbon emissions by 50%",
+        "Optimize renewable energy use",
+        "Improve energy efficiency"
+      ],
+      category: "Energy AI",
+      rating: 4.8,
+      reviews: 267,
+      link: "/ai-energy-management-pro",
+      featured: true,
+      popular: true
     }
   ];
 
@@ -722,12 +1005,21 @@ export default function AIServices() {
     { name: "Computer Vision", count: aiServices.filter(s => s.category === "Computer Vision").length, active: false },
     { name: "IoT & Maintenance", count: aiServices.filter(s => s.category === "IoT & Maintenance").length, active: false },
     { name: "Personalization", count: aiServices.filter(s => s.category === "Personalization").length, active: false },
-    { name: "Language Processing", count: aiServices.filter(s => s.category === "Language Processing").length, active: false }
+    { name: "Language Processing", count: aiServices.filter(s => s.category === "Language Processing").length, active: false },
+    { name: "3D & Graphics", count: aiServices.filter(s => s.category === "3D & Graphics").length, active: false },
+    { name: "Financial AI", count: aiServices.filter(s => s.category === "Financial AI").length, active: false },
+    { name: "Agricultural AI", count: aiServices.filter(s => s.category === "Agricultural AI").length, active: false },
+    { name: "Climate AI", count: aiServices.filter(s => s.category === "Climate AI").length, active: false },
+    { name: "Autonomous Systems", count: aiServices.filter(s => s.category === "Autonomous Systems").length, active: false },
+    { name: "Blockchain AI", count: aiServices.filter(s => s.category === "Blockchain AI").length, active: false },
+    { name: "Healthcare AI", count: aiServices.filter(s => s.category === "Healthcare AI").length, active: false },
+    { name: "Legal AI", count: aiServices.filter(s => s.category === "Legal AI").length, active: false },
+    { name: "Energy AI", count: aiServices.filter(s => s.category === "Energy AI").length, active: false }
   ];
 
   const stats = [
-    { number: "35+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
-    { number: "20,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
+    { number: "50+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
+    { number: "50,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
     { number: "99.9%", label: "Accuracy Rate", icon: <Award className="w-6 h-6" /> },
     { number: "24/7", label: "AI Monitoring", icon: <Monitor className="w-6 h-6" /> }
   ];
@@ -841,11 +1133,11 @@ export default function AIServices() {
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">35+ AI services</span>
+                  <span className="text-sm">50+ AI services</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">20,000+ models trained</span>
+                  <span className="text-sm">50,000+ models trained</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />

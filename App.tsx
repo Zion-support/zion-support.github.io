@@ -47,6 +47,10 @@ const NetworkInfrastructurePage = React.lazy(() => import("./app/network-infrast
 const DataAnalyticsPage = React.lazy(() => import("./app/data-analytics/page"));
 const CareersPage = React.lazy(() => import("./app/careers/page"));
 
+// Micro SAAS Services
+const MicroSaasServicesPage = React.lazy(() => import("./app/micro-saas-services/page"));
+const ZionAIAnalyticsProPage = React.lazy(() => import("./app/zion-ai-analytics-pro/page"));
+
 // Main App Component
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
@@ -97,6 +101,10 @@ function App() {
                         <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
                         <Route path="/data-analytics" element={<DataAnalyticsPage />} />
                         <Route path="/careers" element={<CareersPage />} />
+                        
+                        {/* Micro SAAS Services */}
+                        <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
+                        <Route path="/zion-ai-analytics-pro" element={<ZionAIAnalyticsProPage />} />
                       </Routes>
                     </Suspense>
                   </main>
