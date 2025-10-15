@@ -1,39 +1,22 @@
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
 
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /node_modules/
+Disallow: /static/
 
 # Allow important pages
-Allow: /ai-services/
-Allow: /micro-saas/
-Allow: /5g-solutions/
-Allow: /case-studies/
-Allow: /careers/
-
-# Block common bot traps
-Disallow: /*.json$
-Disallow: /*.xml$
-Disallow: /*.txt$
-Disallow: /*.log$
-
-# Allow specific file types
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.png$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.gif$
-Allow: /*.svg$
-Allow: /*.webp$
-Allow: /*.ico$
+Allow: /
+Allow: /about
+Allow: /contact
+Allow: /services
+Allow: /ai-services
+Allow: /micro-saas
+Allow: /5g-solutions
+Allow: /blog
+Allow: /pricing
