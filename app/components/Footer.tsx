@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
     { name: 'Cloud Solutions', href: '/cloud-solutions' },
     { name: '5G Solutions', href: '/5g-solutions' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'Software Development', href: '/software-development' }
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' }
   ];
 
   const company = [
@@ -31,25 +31,25 @@ const Footer: React.FC = () => {
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'News & Updates', href: '/blog' },
-    { name: 'Partnerships', href: '/partnerships' }
+    { name: 'Contact Us', href: '/contact' }
   ];
 
   const resources = [
     { name: 'Documentation', href: '/docs' },
     { name: 'Tutorials', href: '/tutorials' },
     { name: 'Blog', href: '/blog' },
-    { name: 'API Reference', href: '/api-docs' },
-    { name: 'Help Center', href: '/help' },
-    { name: 'Community', href: '/community' }
+    { name: 'Support Center', href: '/support' },
+    { name: 'Demo', href: '/demo' },
+    { name: 'Pricing', href: '/pricing' }
   ];
 
   const support = [
     { name: 'Contact Us', href: '/contact' },
     { name: 'Support Center', href: '/support' },
-    { name: 'Live Chat', href: '/chat' },
     { name: 'Schedule Demo', href: '/demo' },
-    { name: 'System Status', href: '/status' },
-    { name: 'Report Issue', href: '/report' }
+    { name: 'Documentation', href: '/docs' },
+    { name: 'Tutorials', href: '/tutorials' },
+    { name: 'Privacy Policy', href: '/privacy' }
   ];
 
   const legal = [
