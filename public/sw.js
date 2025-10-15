@@ -1,18 +1,4 @@
 // Service Worker for Zion Tech Group
-<<<<<<< HEAD
-const CACHE_NAME = 'zion-tech-group-v1';
-const urlsToCache = [
-  '/',
-  '/about',
-  '/services',
-  '/contact',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/manifest.json'
-];
-
-// Install event
-=======
 const CACHE_NAME = 'zion-tech-group-v1.0.0';
 const STATIC_CACHE_NAME = 'zion-static-v1.0.0';
 const DYNAMIC_CACHE_NAME = 'zion-dynamic-v1.0.0';
@@ -21,9 +7,6 @@ const DYNAMIC_CACHE_NAME = 'zion-dynamic-v1.0.0';
 const CRITICAL_RESOURCES = [
   '/',
   '/index.html',
-  '/assets/index-CYmZS0So.js',
-  '/assets/index-Dq8n7JAm.css',
-  '/assets/react-vendor-CByNqczl.js',
   '/manifest.json',
   '/favicon.svg'
 ];
@@ -38,17 +21,10 @@ const CACHEABLE_PATTERNS = [
 ];
 
 // Install event - cache critical resources
->>>>>>> cursor/analyze-improve-and-deploy-application-a84d
 self.addEventListener('install', (event) => {
   console.log('Service Worker installing...');
   
   event.waitUntil(
-<<<<<<< HEAD
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
-=======
     caches.open(STATIC_CACHE_NAME)
       .then((cache) => {
         console.log('Caching critical resources...');
@@ -57,21 +33,9 @@ self.addEventListener('install', (event) => {
       .then(() => {
         console.log('Critical resources cached successfully');
         return self.skipWaiting();
->>>>>>> cursor/analyze-improve-and-deploy-application-a84d
       })
       .catch((error) => {
         console.error('Failed to cache critical resources:', error);
-      })
-  );
-});
-
-// Fetch event
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Return cached version or fetch from network
-        return response || fetch(event.request);
       })
   );
 });
@@ -81,20 +45,6 @@ self.addEventListener('activate', (event) => {
   console.log('Service Worker activating...');
   
   event.waitUntil(
-<<<<<<< HEAD
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            console.log('Deleting old cache:', cacheName);
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
-});
-=======
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(

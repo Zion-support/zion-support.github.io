@@ -60,9 +60,9 @@ export default defineConfig({
         manualChunks: (id: string) => {
           // Split vendor chunks for better caching
           if (id.includes('node_modules')) {
-            // React core
-            if (id.includes('react/') || id.includes('react-dom/')) {
-              return 'react-core';
+            // React and React DOM together to avoid circular dependencies
+            if (id.includes('react/') || id.includes('react-dom/') || id.includes('scheduler')) {
+              return 'react-vendor';
             }
             // React router
             if (id.includes('react-router')) {
