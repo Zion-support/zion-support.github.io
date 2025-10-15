@@ -51,6 +51,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       title: 'AI Services',
       items: [
         { name: 'AI Solutions', href: '/ai-solutions', icon: Settings },
+        { name: 'AI Services', href: '/ai-services', icon: Code },
+        { name: 'Data Analytics', href: '/data-analytics', icon: Settings },
         { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Code },
         { name: 'AI Document Processor', href: '/ai-document-processor', icon: Code },
         { name: 'AI Form Builder', href: '/ai-form-builder', icon: Code },

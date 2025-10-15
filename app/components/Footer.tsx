@@ -154,10 +154,19 @@ const Footer: React.FC = memo(() => {
             <h4 className="text-md font-semibold mb-4">Resources</h4>
             <ul className="space-y-2">
               <li><Link to="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
+              <li><Link to="/tutorials" className="text-gray-300 hover:text-white">Tutorials</Link></li>
+              <li><Link to="/docs" className="text-gray-300 hover:text-white">Documentation</Link></li>
               <li><Link to="/api-docs" className="text-gray-300 hover:text-white">API Docs</Link></li>
               <li><Link to="/help" className="text-gray-300 hover:text-white">Help Center</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
+              <li><Link to="/support" className="text-gray-300 hover:text-white">Support</Link></li>
+              <li><Link to="/demo" className="text-gray-300 hover:text-white">Live Demos</Link></li>
               <li><Link to="/accessibility" className="text-gray-300 hover:text-white">Accessibility</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Legal</h4>
+            <ul className="space-y-2">
               <li><Link to="/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
               <li><Link to="/terms" className="text-gray-300 hover:text-white">Terms of Service</Link></li>
               <li><Link to="/cookies" className="text-gray-300 hover:text-white">Cookie Policy</Link></li>

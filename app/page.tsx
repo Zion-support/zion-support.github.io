@@ -316,7 +316,7 @@ const HomePage: React.FC = () => {
                     <span>Custom reports</span>
                   </div>
                 </div>
-                <Link to="/analytics-dashboard"
+                <Link to="/data-analytics"
                   className="block w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
@@ -355,7 +355,7 @@ const HomePage: React.FC = () => {
                     <span>Time tracking</span>
                   </div>
                 </div>
-                <Link to="/task-manager"
+                <Link to="/micro-saas-solutions"
                   className="block w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial

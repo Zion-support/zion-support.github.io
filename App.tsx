@@ -67,6 +67,12 @@ const HelpPage = lazy(() => import('./app/help/page'));
 const AccessibilityPage = lazy(() => import('./app/accessibility/page'));
 const APIDocsPage = lazy(() => import('./app/api-docs/page'));
 const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
+const TutorialsPage = lazy(() => import('./app/tutorials/page'));
+const DocsPage = lazy(() => import('./app/docs/page'));
+const SupportPage = lazy(() => import('./app/support/page'));
+const DemoPage = lazy(() => import('./app/demo/page'));
+const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
+const CloudSolutionsPage = lazy(() => import('./app/cloud-solutions/page'));
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -205,6 +211,12 @@ function App() {
                     <Route path="/accessibility" element={<AccessibilityPage />} />
                     <Route path="/api-docs" element={<APIDocsPage />} />
                     <Route path="/partnerships" element={<PartnershipsPage />} />
+                    <Route path="/tutorials" element={<TutorialsPage />} />
+                    <Route path="/docs" element={<DocsPage />} />
+                    <Route path="/support" element={<SupportPage />} />
+                    <Route path="/demo" element={<DemoPage />} />
+                    <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                    <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
