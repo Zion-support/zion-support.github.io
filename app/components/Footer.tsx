@@ -23,6 +23,14 @@ const Footer: React.FC = () => {
       { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
       { name: 'Digital Transformation', href: '/services' },
     ],
+    aiServices: [
+      { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
+      { name: 'AI Content Generation', href: '/ai-content-generation' },
+      { name: 'AI Automation Platform', href: '/ai-automation-platform' },
+      { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
+      { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
+      { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
+    ],
     company: [
       { name: 'About Us', href: '/about' },
       { name: 'Our Team', href: '/about' },
@@ -36,6 +44,7 @@ const Footer: React.FC = () => {
       { name: 'Support', href: '/contact' },
       { name: 'FAQ', href: '/contact' },
       { name: 'Tutorials', href: '/blog' },
+      { name: 'Demo', href: '/demo' },
     ],
     legal: [
       { name: 'Privacy Policy', href: '/privacy' },
@@ -55,7 +64,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 border-t border-slate-700/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
@@ -111,6 +120,23 @@ const Footer: React.FC = () => {
                   <Link
                     to={link.href}
                     className="text-gray-400 hover:text-purple-400 transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* AI Services */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">AI Services</h3>
+            <ul className="space-y-2">
+              {footerLinks.aiServices.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-gray-400 hover:text-cyan-400 transition-colors"
                   >
                     {link.name}
                   </Link>

@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Mail, MapPin, Zap, Brain, Code, Cloud, Wifi, Users, ChevronDown } from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin, Zap, Brain, Code, Cloud, Wifi, Users, ChevronDown, Search } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [showSearch, setShowSearch] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -179,8 +181,35 @@ const Header: React.FC = () => {
               ))}
             </div>
 
-            {/* CTA Button */}
+            {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
+              {/* Search Button */}
+              <button
+                onClick={() => setShowSearch(!showSearch)}
+                className="p-2 text-gray-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
+              >
+                <Search className="w-5 h-5" />
+              </button>
+              
+              {/* Search Bar */}
+              {showSearch && (
+                <div className="absolute top-full right-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md border border-cyan-500/20 rounded-lg shadow-2xl z-50">
+                  <div className="p-4">
+                    <input
+                      type="text"
+                      placeholder="Search services, pages..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="w-full px-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      autoFocus
+                    />
+                    <div className="mt-2 text-sm text-gray-400">
+                      Press Enter to search
+                    </div>
+                  </div>
+                </div>
+              )}
+              
               <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
                 Get Quote
               </button>
