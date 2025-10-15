@@ -1,73 +1,33 @@
-<<<<<<< HEAD
-interface AnimatedCardProps {}
-  children: React.ReactNode
-  className?: string
-  glowColor?: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow'
-  hoverEffect?: boolean
-}
+import { Helmet } from 'react-helmet-async';
 
-const AnimatedCard= React.FC<AnimatedCardProps> = ({)}
-  children,
-  className = '',"
-  glowColor = 'purple',"
-  hoverEffect = true
-}) => {}
-  const  glowColors = {}
-    purple: 'shadow-purple-500/25 hover:shadow-purple-500/40',"
-    cyan: 'shadow-cyan-500/25 hover:shadow-cyan-500/40',"
-    pink: 'shadow-pink-500/25 hover:shadow-pink-500/40',"
-    green: 'shadow-green-500/25 hover:shadow-green-500/40',"
-    blue: 'shadow-blue-500/25 hover:shadow-blue-500/40',"
-    yellow: 'shadow-yellow-500/25 hover:shadow-yellow-500/40'"
-  }
-  const  borderColors = {}
-    purple: 'border-purple-500/30 hover:border-purple-500/60',"
-    cyan: 'border-cyan-500/30 hover:border-cyan-500/60',"
-    pink: 'border-pink-500/30 hover:border-pink-500/60',"
-    green: 'border-green-500/30 hover:border-green-500/60',"
-    blue: 'border-blue-500/30 hover:border-blue-500/60',"
-    yellow: 'border-yellow-500/30 hover:border-yellow-500/60'"
-  }
-  return ()
-    <divclassName={`>}
-        relative bg-gradient-to-br from-slate-800/80 to-slate-700/80 
-        backdrop-blur-sm border border-slate-600/50 
-        rounded-xl p-6 transition-all duration-300
-        ${hoverEffect ? 'hover:transform hover:scale-105 hover:-translate-y-1' : ''}"
-        ${glowColors[glowColor]}
-        ${borderColors[glowColor]}
-        ${className}
-      `}
-      {/* Animated border gradient */}
-      <div  className ="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/20 via-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>""
-      {/* Content */}
-      <div  className ="relative z-10">""
-        {children}
-
-
+export default function componentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Components services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </>
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-;"
-
-export default ComponentsPage;'";'";"
-=======
-import React from 'react';
-
-interface AnimatedCardProps {
-  className?: string;
-}
-
-export default function AnimatedCard({ className }: AnimatedCardProps) {
-  return (
-    <div className={className}>
-      <h2>AnimatedCard<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

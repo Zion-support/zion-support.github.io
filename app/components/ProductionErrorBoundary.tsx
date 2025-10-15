@@ -1,55 +1,33 @@
-<<<<<<< HEAD
-class ProductionErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);,
-    this.state = { hasError: false };
-  static getDerivedStateFromError(error: Error): State {
-    // Update state so the next render will show the fallback UI;
-return {,
-      hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error details;
-this.setState({,
-      error,
-      errorInfo,
+import { Helmet } from 'react-helmet-async';
 
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        errorId: this.state.errorId,
-
-      timestamp: new Date().toISOString(),};
-    // Create mailto link with error details;
-const: subject = `Error Report - ${this.state.errorId}`;
-    const: body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;
-    const: mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.open(mailtoLink);
-  render() {
-
-              </p>
-            )};
+export default function componentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Components services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
+            </div>
           </div>
         </div>
-      );
-    };
-    return this.props.children;";
-  };";";
-export default ProductionErrorBoundary;"
-=======
-import React from 'react';
-
-interface ProductionErrorBoundaryProps {
-  className?: string;
-}
-
-export default function ProductionErrorBoundary({ className }: ProductionErrorBoundaryProps) {
-  return (
-    <div className={className}>
-      <h2>ProductionErrorBoundary<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      </div>
+    </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

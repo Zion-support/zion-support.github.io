@@ -1,9 +1,5 @@
 import { useEffect, useState } from 'react';
 
-<<<<<<< HEAD
-export const usePerformanceOptimization = () => {
-  const [state, setState] = useState(null);
-=======
 interface interface PerformanceOptimizationOptions {} { id: string; };
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
@@ -76,7 +72,6 @@ const observerRef  = useRef<IntersectionObserver | null>(null)
         observerRef.current.disconnect()
     setupPerformanceMonitoring}'"'""";"
 }"'"'";"
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
 
   useEffect(() => {
     // Hook logic will be implemented here

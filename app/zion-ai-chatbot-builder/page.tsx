@@ -1,19 +1,33 @@
-<<<<<<< HEAD
-          This page is under development.;
-        </p>;
-      </div>;";"
-import SEOHead from './components/SEOHead";"'
-=======
-import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function page() {
+export default function ZionaichatbotbuilderPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">page<// Comment
-        <p className="text-gray-600">This page is under construction.<// Comment
-      <// Comment
-    <// Comment
+    <>
+      <Helmet>
+        <title>Zion Ai Chatbot Builder - Zion Tech Group</title>
+        <meta name="description" content="Zion Ai Chatbot Builder services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Zion Ai Chatbot Builder
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Zion Ai Chatbot Builder services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

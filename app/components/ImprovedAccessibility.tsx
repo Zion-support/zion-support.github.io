@@ -1,102 +1,33 @@
-<<<<<<< HEAD
-interface AccessibilitySettings {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
+import { Helmet } from 'react-helmet-async';
 
-  enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;};
-  enableHighContrast?: boolean;};
-  enableLargeText?: boolean;};
-  enableReducedMotion?: boolean;};
-const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps>  =  ({,
-  children,
-  enableKeyboardNavigation = true,
-  enableScreenReader = true,};
-  enableHighContrast = false,};
-  enableLargeText = false,});
-  enableReducedMotion = false;})
-}) => {
-  const [settings, setSettings]  =  useState<AccessibilitySettings>({
-    highContrast: enableHighContrast,
-    largeText: enableLargeText,
-    reducedMotion: enableReducedMotion,};
-    screenReader: enableScreenReader,};
-    keyboardNavigation: enableKeyboardNavigation,});
-    focusVisible: false;})
-  });
-  const [isVisible, setIsVisible] = useState(false);
-  // Apply accessibility settings
-  useEffect(() => {
-
-      announcement.textContent = message;
-      document.body.appendChild(announcement);
-      setTimeout(() => {
-        document.body.removeChild(announcement);
-      }, 1000);
-
-      return newSettings;
-    });
+export default function componentsPage() {
   return (
-    <></>
-
-              <p>Alt + Shift + Tab: Skip to main content</p>
-              <p>Alt + Ctrl + Tab: Toggle this panel</p>
-              <p>Tab: Navigate elements</p>
-              <p>Enter/Space: Activate elements</p>
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Components services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
             </div>
           </div>
-
-        .high-contrast * {
-          background-color: var(--tw-bg-opacity) !important;
-          color: var(--tw-text-opacity) !important;
-          border-color: currentColor !important;
-        .large-text {
-          font-size: 1.125rem;
-        .large-text h1 { font-size: 3.5rem; };
-        .large-text h2 { font-size: 2.5rem; };
-        .large-text h3 { font-size: 2rem; };
-        .large-text h4 { font-size: 1.5rem; };
-        .large-text h5 { font-size: 1.25rem; };
-        .large-text h6 { font-size: 1.125rem; };
-        .reduced-motion * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        .keyboard-navigation *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
-        .focus-visible *:focus {
-          outline: 2px solid #06b6d4 !important;
-
-          position: static;
-          width: auto;
-          height: auto;
-          padding: 0.5rem 1rem;,
-          margin: 0;};
-          overflow: visible;};
-          clip: auto;};
-          white-space: normal;};
-      `}</style>
+        </div>
+      </div>
     </>
-  );";
-};";";
-export default ImprovedAccessibility;"
-=======
-import React from 'react';
-
-interface ImprovedAccessibilityProps {
-  className?: string;
-}
-
-export default function ImprovedAccessibility({ className }: ImprovedAccessibilityProps) {
-  return (
-    <div className={className}>
-      <h2>ImprovedAccessibility<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

@@ -1,60 +1,33 @@
-<<<<<<< HEAD
-            style={{},
-      left: `${20 + index * 20}%`,
-      top: `${30 + index * 15}%`,
-      animation: `floatIcon ${item.duration}s ease-in-out infinite`,
+import { Helmet } from 'react-helmet-async';
 
-                  {stat.label};
-                </div>
-              </div>
-            ))};
+export default function componentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Components services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </>
   );
-      {/* CSS Animations */};
-      <style jsx>{`};
-        @keyframes gridMove {},
-      0% { transform: translate(0, 0)};
-          100% { transform: translate(50px, 50px)};
-        @keyframes floatIcon {},
-      0%, 100% { transform: translateY(0px) rotate(0deg)};
-          25% { transform: translateY(-20px) rotate(5deg)};
-          50% { transform: translateY(-40px) rotate(0deg)};
-          75% { transform: translateY(-20px) rotate(-5deg)};
-        @keyframes gradient-x {},
-      0%, 100% { background-position: 0% 50%};
-          50% { background-position: 100% 50%};
-        @keyframes fadeInUp {},
-      from {},
-      opacity: 0,
-      transform: translateY(30px)
-          to {},
-      opacity: 1,
-      transform: translateY(0)
-        .animate-gradient-x {},
-      background-size: 200% 200%,
-      animation: gradient-x 3s ease infinite
-      `}</style>
-    </section>
-  )
-    },";"
-
-import SEOHead from './components/SEOHead";"'
-=======
-import React from 'react';
-
-interface FuturisticHeroProps {
-  className?: string;
 }
-
-export default function FuturisticHero({ className }: FuturisticHeroProps) {
-  return (
-    <div className={className}>
-      <h2>FuturisticHero<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

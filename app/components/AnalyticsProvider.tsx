@@ -1,62 +1,33 @@
-<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
 
-      declare global {},
-      interface Window {},
-      gtag: (_...args: unknown[]) => void
-    },
-    {}
-},
-      interface AnalyticsContextType {},
-      trackEvent: (_eventName: string, parameters?: Record<string, _unknown>) => void,
-      trackPageView: (_pageName: string) => void
-    },
-
-  };
-  return context
-}
-};
-
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
-        script.async = true
-        document.head.appendChild(script)
-        window.gtag =
-
-    },
-    {}
-    };
-
-      page_title: pageName,
-      page_location: window.location.href})
-    }
-    },
-    {}
-  const value: AnalyticsContextType = {},
-      trackEvent,
-      trackPageView},
-      return ()
-
-      {children};
-    </AnalyticsContext.Provider>
-  )
-}
-};
-
-
-
-
-=======
-import React from 'react';
-
-interface AnalyticsProviderProps {
-  className?: string;
-}
-
-export default function AnalyticsProvider({ className }: AnalyticsProviderProps) {
+export default function componentsPage() {
   return (
-    <div className={className}>
-      <h2>AnalyticsProvider<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Components services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

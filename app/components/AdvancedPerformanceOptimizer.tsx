@@ -1,74 +1,33 @@
-<<<<<<< HEAD
-  enableImageOptimization?: boolean;
-  enablePreloading?: boolean;
-  enableCaching?: boolean;
-  enableCompression?: boolean;
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps>  =  ({)};
+import { Helmet } from 'react-helmet-async';
 
-  enableImageOptimization = true,
-  enablePreloading = true,
-  enableCaching = true,
-  enableCompression = true
-
-    });
-  }, [
-    enableCaching
-  
-  ]);
-  // Compression optimization
-
-    // Enable gzip compression for text content
-    const  textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');"
-    textElements.forEach((element) => {}
-      if (element instanceof HTMLElement) {}
-        element.style.textCompression = 'gzip'
-      }
-    })
-  }, [enableCompression])
-  // Performance monitoring
-  const  setupPerformanceMonitoring = useCallback(() => {}
-    if (typeof window !== 'undefined' && 'performance' in window) {}"
-      // Core Web Vitals
-      const  observer = new PerformanceObserver((list) => {}
-        list.getEntries().forEach((entry) => {}
-          if (entry.entryType === 'largest-contentful-paint') {}"
-            console.log('LCP:', entry.startTime);"
-          }
-          if (entry.entryType === 'first-input') {}"
-            console.log('FID:', entry.processingStart - entry.startTime);"
-          }
-          if (entry.entryType === 'layout-shift') {}"
-            console.log('CLS:', (entry as any).value);"
-          }
-        })
-      })
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });"
-    }
-  }, [])
-  useEffect(() => {}
-
-    // Run optimizations on mount
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-;"
-
-export default ComponentsPage;'";'";"
-=======
-import React from 'react';
-
-interface AdvancedPerformanceOptimizerProps {
-  className?: string;
-}
-
-export default function AdvancedPerformanceOptimizer({ className }: AdvancedPerformanceOptimizerProps) {
+export default function componentsPage() {
   return (
-    <div className={className}>
-      <h2>AdvancedPerformanceOptimizer<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Components services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

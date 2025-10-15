@@ -1,109 +1,33 @@
-<<<<<<< HEAD
-      interface Props {},
-      children: ReactNode,
-      fallback?: ReactNode,
-      onError?: (_error: Error, errorInfo: ErrorInfo) => void
-interface State {},
-      hasError: boolean,
-  error: Error | null
-  errorInfo: ErrorInfo | null
-  retryCount: number
-};
-};
-export class GlobalErrorBoundary extends Component<Props, State> {};
-  private: maxRetries = 3;
-constructor(props: Props) {};
-    super(props)
-    this.state = {};
-      hasError: false;
-      error: null;
-      errorInfo: null;
-      retryCount: 0
-  static getDerivedStateFromError(error: Error): Partial<State> {},
-      return {},
-      hasError: true,
-      error
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {},
-      this.setState({},)
-      error,
-      errorInfo
-    })
-    // Log error to console in development;
-if ($1) {};
-  // If body
-};
-      };
-    // Call custom error handler if provided
-    if (this.props.onError) {},
+import { Helmet } from 'react-helmet-async';
 
-      this.logErrorToService(error, errorInfo)
-    };
-    },
-
-    // In a real app, you would send this to an error reporting service
-    // like Sentry, LogRocket, or Bugsnag
-    .toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href
-    })
-      private: handleRetry = () => {};
-}if (this.state.retryCount < this.maxRetries) {},
-      this.setState(prevState => ({},)
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      retryCount: prevState.retryCount + 1
-      }))
-
-  },
-      private: handleReload = () => {};
-}window.location.reload()
-      render() {},
-      if (this.state.hasError) {};
-      // Use custom fallback if provided
-      if (this.props.fallback) {},
-
-              <p>Error ID: {Date.now().toString(36)}</p>
-              <p>If this problem continues, please contact our support team.</p>
+export default function componentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Components services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
             </div>
           </div>
         </div>
-      )
-      return this.props.children
-// Functional error boundary for specific components;
-export const ErrorBoundary: React.FC<{},
-      children: ReactNode,
-      fallback?: ReactNode,;
-      onError?: (_error: Error) => void;
-}> = ({
-    children, fallback, _onError 
-  }) => {},
-      const [hasError, setHasError]  =  React.useState(false),
-      const [error, setError] = React.useState<Error | null>(null),
-      React.useEffect(() => {},
-      const: handleError = (_event: ErrorEvent) => {},
-      setHasError(true),
-      setError(new Error(event.message)),
-      if (onError) {},
-      onError(new Error(event.message))
-
       </div>
-    );
-  return <>{children}</>
-};";"
-=======
-import React from 'react';
-
-interface EnhancedErrorFeedbackProps {
-  className?: string;
-}
-
-export default function EnhancedErrorFeedback({ className }: EnhancedErrorFeedbackProps) {
-  return (
-    <div className={className}>
-      <h2>EnhancedErrorFeedback<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+    </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

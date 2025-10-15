@@ -1,66 +1,33 @@
-<<<<<<< HEAD
-  src: string,
-      alt: string,
-      className?: string,
-      width?: number,
-      height?: number,
+import { Helmet } from 'react-helmet-async';
 
-      return webpSrc;
-    }
-    
-    return originalSrc
-    },
-    {}
-  // Intersection Observer for lazy loading
-  useEffect(() => {}
-    if (priority) return,
-
-          setIsInView(true),;
-      observer.disconnect();
-        };
-      },
-      {
-    threshold: 0.1 
-  
-  }),
-      if (imgRef.current) {};
-      observer.observe(imgRef.current);
-    }
-
-    return () => observer.disconnect();
-
-      </div>
-    );
-  };
-  if (!isInView && !priority) {};
-    return ()
-      <divref={imgRef}>
-        className={`bg-gray-200 animate-pulse ${className}`};
-        style={{ width, height }};
-      />
-    );
-  };
-  return ()
-    <imgref={imgRef}>
-
-    />
-  )
-    },";
-    {};";";
-import SEOHead from './components/SEOHead";
-=======
-import React from 'react';
-
-interface ImageOptimizerProps {
-  className?: string;
-}
-
-export default function ImageOptimizer({ className }: ImageOptimizerProps) {
+export default function componentsPage() {
   return (
-    <div className={className}>
-      <h2>ImageOptimizer<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Components services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

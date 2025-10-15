@@ -1,99 +1,33 @@
-<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
 
-    if ($1) {}
-
-  // If body
-
-  }, [])
-  const  handleAccept = () => {}
-}localStorage.setItem("cookie-consent", "accepted")""
-    setIsVisible(false)
-      const  handleReject = () => {}
-}localStorage.setItem("cookie-consent", "rejected")""
-    setIsVisible(false)
-      const  handleSettings = () => {}
-}setShowSettings(!showSettings)
-      if (!isVisible) return null;
-return ()
-    <div  className ="fixed bottom-0 left-0 right-0 z-50 bg-gray-900 border-t border-gray-700 p-4"></div>""
-      <div  className ="max-w-6xl mx-auto"></div>""
-        <div  className ="flex items-start justify-between"></div>""
-          <div  className ="flex items-start space-x-4"></div>""
-            <Cookie: className ="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />""
-            <div  className ="flex-1"></div>""
-              <h3  className ="text-lg font-semibold text-white mb-2"></h3>""
-                We use cookies
-              </h3>
-              <p  className ="text-gray-300 text-sm mb-4"></p>""
-                We use cookies to enhance your browsing experience, serve;
-personalized content, and analyze our traffic. By clicking
-                "Accept All", you consent to our use of cookies.""
-              </p>
-              {showSettings && ()}
-                <div  className ="bg-gray-800 rounded-lg p-4 mb-4"></div>""
-                  <h4  className ="text-white font-semibold mb-3"></h4>""
-                    Cookie Preferences
-                  </h4>
-                  <div  className ="space-y-3"></div>""
-                    <label: className ="flex items-center justify-between"></label>""
-                      <span  className ="text-gray-300">Essential Cookies</span>""
-                      <inputtype="checkbox">""
-                        defaultChecked;
-disabled= className ="rounded"""
-                      />
-                    </label>
-                    <label: className ="flex items-center justify-between"></label>""
-                      <span  className ="text-gray-300">Analytics Cookies</span>""
-                      <inputtype="checkbox">""
-                        defaultChecked= className ="rounded"""
-                      />
-                    </label>
-                    <label: className ="flex items-center justify-between"></label>""
-                      <span  className ="text-gray-300">Marketing Cookies</span>""
-                      <input: type ="checkbox" className="rounded" />""
-                    </label>
-                  </div>
-                </div>
-              )}
+export default function componentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Components services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
             </div>
           </div>
-          <div  className ="flex flex-col sm:flex-row gap-2 ml-4"></div>""
-            <buttononClick={handleSettings},>
-      className="flex items-center px-4 py-2 text-gray-300 hover:text-white transition-colors"""
-            ></button
-              <Settings: className ="w-4 h-4 mr-2" />""
-              Settings
-            </button>
-            <buttononClick={handleReject},>
-      className="px-4 py-2 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-800 transition-colors"""
-            ></button
-              Reject All
-            </button>
-            <buttononClick={handleAccept},>
-      className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"""
-            ></button
-
->
-              Accept All
-            </button>
-          </div>
         </div>
-
-
-
-=======
-import React from 'react';
-
-interface CookieConsentProps {
-  className?: string;
-}
-
-export default function CookieConsent({ className }: CookieConsentProps) {
-  return (
-    <div className={className}>
-      <h2>CookieConsent<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      </div>
+    </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

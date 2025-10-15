@@ -1,5 +1,5 @@
 
-export default function AICybersecuritySuitePage() {}
+export default function AicybersecuritysuitePage() {}
   // Function body
 
 }return ()

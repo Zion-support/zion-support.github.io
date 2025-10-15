@@ -1,98 +1,33 @@
-<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
 
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Zap,
-  Cloud,
-  Shield,
-  Database,
-  Code,
-  Brain,
-  BarChart3,
-  Star,
-  ArrowRight,
-  Globe,
-  Cpu,
-  Link as LinkIcon,
-  Sidebar as SidebarIcon,
-  Video,
-  Users,
-  Target,
-  Settings,
-
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
-  const: location = useLocation()
-  const: toggleMenu = useCallback(() => {
-    setIsOpen(!isOpen)
-
-    setIsSearchOpen(!isSearchOpen)
-  }, [
-    isSearchOpen
-  
-  ])
-  // Close all dropdowns when route changes;
-useEffect(() => {
-    setIsServicesOpen(false)
-
-              >
-                Get Quote
-              </FuturisticButton>
-            </div>
-
-                          </div>
-                        )};
-                      </div>
-                    </Link>
-
-                          </div>
-                        )};
-                      </div>
-                    </Link>
-
-                ></Link>
-
-    item.name
-  })
-                </Link>)
-
-                      </Link>
-))};
-                  </div>
-                )};
-              </div>
-
-                        onClick={() => {
-                          setIsItServicesOpen(false)
-                          toggleMenu(),
-                        {service.icon;};
-                        <span>{service.name}</span>
-                      </Link>
-))};
-                  </div>
-                )};
-              </div>
-
-              </FuturisticButton>
+export default function componentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Components services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
             </div>
           </div>
-        )};
+        </div>
       </div>
-
-=======
-import React from 'react';
-
-interface NavigationEnhancedProps {
-  className?: string;
-}
-
-export default function NavigationEnhanced({ className }: NavigationEnhancedProps) {
-  return (
-    <div className={className}>
-      <h2>NavigationEnhanced<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+    </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

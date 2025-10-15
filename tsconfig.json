@@ -23,11 +23,10 @@
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],
-<<<<<<< HEAD
   "exclude": [
-    "node_modules", 
-    "dist", 
-    ".next", 
+    "node_modules",
+    "dist",
+    ".next",
     "out",
     "app-broken/**",
     "app-disabled/**",
@@ -35,13 +34,6 @@
     "corrupted-src-backup/**",
     "scripts/**",
     "**/*.cjs",
-    "**/*.js",
-    "app/blog/**",
-    "app/components/About.tsx",
-    "app/components/AccessibilityAudit.tsx",
-    "app/components/AccessibilityManager.tsx"
+    "**/*.js"
   ]
-=======
-  "exclude": ["node_modules", "dist", ".next", "out", "app-broken", "app-disabled", "backup*", "corrupted-src-backup"]
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
 }

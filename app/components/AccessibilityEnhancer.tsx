@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import { ReactNode } from 'react';
-
-interface AccessibilityEnhancerProps {
-  children: ReactNode;
-  className?: string;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
-  children, 
-  className = '' 
-}) => {
-  return (
-    <div className={`accessibility-enhancer ${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default AccessibilityEnhancer;
-=======
 import React from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -28,9 +7,8 @@ interface AccessibilityEnhancerProps {
 export default function AccessibilityEnhancer({ className }: AccessibilityEnhancerProps) {
   return (
     <div className={className}>
-      <h2>AccessibilityEnhancer<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      <h2>AccessibilityEnhancer</h2>
+      <p>This component is under construction.</p>
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

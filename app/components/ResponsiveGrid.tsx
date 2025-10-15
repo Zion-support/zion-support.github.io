@@ -1,38 +1,33 @@
-<<<<<<< HEAD
-interface ResponsiveGridProps {},
-      children: React.ReactNode
-  className?: string";
-  cols?: {},";
-      default: number";
-    sm?: number";";
-    md?: number";";
-      gap?: 'sm' | 'md' | 'lg' | 'xl"
-},";";
-      children, className, cols = { default: 1, _sm: 2, _md: 3, _lg: 4 }, gap = 'md"
-}: ResponsiveGridProps) => {},";";
-      xl: 'gap-8"
-  },";";
-      6: 'grid-cols-6"
-  },
+import { Helmet } from 'react-helmet-async';
 
-      {children};
-    </div>
-  )
-},
-      export default ResponsiveGrid
-=======
-import React from 'react';
-
-interface ResponsiveGridProps {
-  className?: string;
-}
-
-export default function ResponsiveGrid({ className }: ResponsiveGridProps) {
+export default function componentsPage() {
   return (
-    <div className={className}>
-      <h2>ResponsiveGrid<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Components services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

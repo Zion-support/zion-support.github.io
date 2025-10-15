@@ -1,68 +1,33 @@
-<<<<<<< HEAD
-interface Props {},
-      children: ReactNode;
-fallback?: ReactNode
-      interface State {},
-      hasError: boolean,
-  error: Error | null
-  errorInfo: ErrorInfo | null
-},
-      class ErrorHandler extends Component<Props, State> {},
-      constructor(props: Props) {},
-      super(props)
-    this.state = {},
-      hasError: false,
-      error: null,
-      errorInfo: null
-  static getDerivedStateFromError(error: Error): State {},
-      return {},
-      hasError: true,
-      error,
-      errorInfo: null
+import { Helmet } from 'react-helmet-async';
 
-      // You can integrate with services like Sentry, LogRocket, etc.
-      this.logErrorToService(error, errorInfo)
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {};
-}// Example: Send to monitoring service;
-try {,
-  } catch (error) {
-    console.error(error);
-} catch (error) {},
-      console.error(error)
-}// Replace with your actual error reporting service
-
-    },
-    {};
-  },
-      handleRetry = () => {};
-}this.setState({},)
-      hasError: false,
-      error: null,
-      errorInfo: null
-
-                Go Home
+export default function componentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Components services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
               </button>
             </div>
           </div>
         </div>
-      )
-      return this.props.children
-    },";"
-
-import SEOHead from './components/SEOHead";"'
-=======
-import React from 'react';
-
-interface ErrorHandlerProps {
-  className?: string;
-}
-
-export default function ErrorHandler({ className }: ErrorHandlerProps) {
-  return (
-    <div className={className}>
-      <h2>ErrorHandler<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      </div>
+    </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

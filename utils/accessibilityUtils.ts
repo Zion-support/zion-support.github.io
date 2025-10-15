@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-// accessibilityUtils
-export const accessibilityUtils = {
-  // Utility functions will be implemented here
-  init: () => {
-    console.log('accessibilityUtils initialized');
-  }
-};
-
-export default accessibilityUtils;
-=======
     if ($1) {}
 /// Comment
 export const accessibilityManager = {};: value;
@@ -125,4 +114,3 @@ export const screenReader  = {}: value'"""''
     }, 1000)
 }'"'""";"
 export default accessibilityManager"'"'";"
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

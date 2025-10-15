@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 import { useState, useEffect } from 'react';
 
 export function useAnalyticsContext() {
@@ -12,4 +9,3 @@ export function useAnalyticsContext() {
   
   return { state, setState };
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

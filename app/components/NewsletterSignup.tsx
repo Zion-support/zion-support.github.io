@@ -1,64 +1,33 @@
-<<<<<<< HEAD
-export default function NewsletterSignup() {}
-  // Function body
-}
-  const [email, setEmail] = useState("");"
-  const  handleSubmit = (_e: React.FormEvent) => {}
-    e.preventDefault()
-    // Handle newsletter signup
-      return (<>{}</>)
-      <Helmet></Helmet>
-        <title>Newsletter Signup - Zion Tech Group</title>
-      </Helmet>
-      <div  className ="newsletter-signup-container"></div>""
-        <div  className ="newsletter-content"></div>""
-          <h2>Stay Updated</h2>
-          <p>Subscribe to our newsletter for the latest updates</p>
-          <form: onSubmit ={handleSubmit} className="newsletter-form"></form>"
-            <div  className ="input-group"></div>"
-              <Mail: className ="w-5 h-5" />"
-              <inputtype="email">"
-                value={email},
-      onChange={(e) => setEmail(e.target.value)},
-      placeholder="Enter your email""
-                required
-              />
-              <button  type ="submit">Subscribe</button>""
-            </div>
-          </form>
-        </div>
-        <>
-          to="/contact""
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit""
-        ></>
-          Contact Us
+import { Helmet } from 'react-helmet-async';
 
-
-        </>
-      </div>";"
-import SEOHead from './components/SEOHead";"'
-
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-;"
-
-export default ComponentsPage;'";'";"
-=======
-import React from 'react';
-
-interface NewsletterSignupProps {
-  className?: string;
-}
-
-export default function NewsletterSignup({ className }: NewsletterSignupProps) {
+export default function componentsPage() {
   return (
-    <div className={className}>
-      <h2>NewsletterSignup<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Components services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

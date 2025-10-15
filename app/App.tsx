@@ -1,76 +1,33 @@
-<<<<<<< HEAD
-"use client";
-import React, { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
-import ErrorBoundary from "./components/ErrorBoundary";
-import PerformanceMonitor from "./components/PerformanceMonitor";
-import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
+import { Helmet } from 'react-helmet-async';
 
-// Lazy load pages for better performance
-const HomePage = lazy(() => import("./page"));
-const AboutPage = lazy(() => import("./about/page"));
-const ContactPage = lazy(() => import("./contact/page"));
-const ServicesPage = lazy(() => import("./services/page"));
-const PricingPage = lazy(() => import("./pricing/page"));
-const CaseStudiesPage = lazy(() => import("./case-studies/page"));
-const BlogPage = lazy(() => import("./blog/page"));
-const TeamPage = lazy(() => import("./team/page"));
-const CareersPage = lazy(() => import("./careers/page"));
-const PrivacyPage = lazy(() => import("./privacy/page"));
-const TermsPage = lazy(() => import("./terms/page"));
-const CookiesPage = lazy(() => import("./cookies/page"));
-
-// 5G Solutions Pages
-const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
-
-// Loading component
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
-  </div>
-);
-
-function App() {
+export default function appPage() {
   return (
-    <Router>
-      <HelmetProvider>
-        <ErrorBoundary>
-          <PerformanceMonitor />
-          <AccessibilityEnhancer />
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
-              <Route path="/case-studies" element={<CaseStudiesPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/team" element={<TeamPage />} />
-              <Route path="/careers" element={<CareersPage />} />
-              <Route path="/privacy" element={<PrivacyPage />} />
-              <Route path="/terms" element={<TermsPage />} />
-              <Route path="/cookies" element={<CookiesPage />} />
-              <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-            </Routes>
-          </Suspense>
-        </ErrorBoundary>
-      </HelmetProvider>
-    </Router>
+    <>
+      <Helmet>
+        <title>App - Zion Tech Group</title>
+        <meta name="description" content="App services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              App
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional App services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
-
-export default App;
-=======
-import React from 'react';
-
-export default function App() {
-  return (
-    <div>
-      <h1>App<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

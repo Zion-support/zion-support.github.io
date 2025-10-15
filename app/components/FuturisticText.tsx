@@ -1,98 +1,33 @@
-<<<<<<< HEAD
-      className?: string,
-      glow?: boolean,
-      animate?: boolean;
-    },
+import { Helmet } from 'react-helmet-async';
 
-    {}
-const FuturisticText: React.FC<FuturisticTextProps> = ({},)
-      children,
-      variant = 'body',
-      size = 'base',
-      className = '',
-      glow = false,
-      animate = false
-}) => {},
-
-    ${getVariantClasses()};
-    ${getSizeClasses()};
-    ${getGlowClasses()};
-    ${getAnimateClasses()};
-    ${className};
-  `,
-      return ()
-    <span className={baseClasses}></span>
-      {children};
-    </span>
-  )
-    },
-    {}
-export default FuturisticText;
-
-export default ComponentsPage;
-
-interface $1 { [key: string]: any },;
-      children: React.ReactNode,';';
-      variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'gradient' | 'neon','';
-      size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl',;";
-      className?: string,;
-      glow?: boolean,;
-      animate?: boolean;
-    },;
-    {
-const FuturisticText: React.FC<FuturisticTextProps> = ({},';';
-      children,'';
-      variant = 'body',': value';
-      size = 'base',': value';
-      className = '': value,;";
-      glow = false: value,;
-      animate = false;: value;
-}) => {}: value,;
-      const getVariantClasses = () => {}: value,';';
-      switch (variant) {},'';
-      case 'heading':'';
-        return 'font-bold text-white','';
-      case 'subheading':'';
-        return 'font-semibold text-gray-200','';
-      case 'body':'';
-        return 'font-normal text-gray-300','';
-      case 'caption':'';
-        return 'font-medium text-gray-400','';
-      case 'gradient':'';
-        return 'font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent','';
-      case 'neon':'';
-        return 'font-bold text-cyan-400',';
-      default: '';
-        return 'font-normal text-gray-300',
-    },;
-    {
-  },;";
-      const getSizeClasses = () => {";";
-        return 'text-base",";
-    },;";";
-  },';";
-      const getGlowClasses = () => {";
-  ";";
-        return 'drop-shadow-[0_0_10px_rgba(34,211,238,0.3)]";";
-    },;";";
-  },';";
-      const getAnimateClasses = () => {";
-  ";";
-      return 'animate-pulse";";
-    },;";";
-=======
-import React from 'react';
-
-interface FuturisticTextProps {
-  className?: string;
-}
-
-export default function FuturisticText({ className }: FuturisticTextProps) {
+export default function componentsPage() {
   return (
-    <div className={className}>
-      <h2>FuturisticText<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Components services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

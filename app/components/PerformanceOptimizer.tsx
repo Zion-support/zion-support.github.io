@@ -1,114 +1,33 @@
-<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
 
-      };
-    })
-  }, [])
-  // Add performance monitoring
-  const addPerformanceMonitoring = useCallback() => {};
-    // Core Web Vitals
-
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
-
-    },
-    {}
-  }, [])
-  // Optimize scroll performance
-
-}// Throttle scroll events for better performance
-      if (!ticking) {},
-      requestAnimationFrame(() => {};
-}// Add scroll-based optimizations here
-          ticking = false
-        })
-        ticking = true
-
-      lazyElements.forEach(el => observer.observe(el))
-      return () => observer.disconnect()
-    };
-  }, [])
-  useEffect(() => {};
-}// Run optimizations after component mounts
-    preloadCriticalResources()
-    optimizeImages()
-    optimizeThirdPartyScripts()
-    addPerformanceMonitoring()
-
-    return () => {};
-}scrollCleanup?.()
-      observerCleanup?.()
-    };
-  }, []
-    preloadCriticalResources,
-      optimizeImages,
-      optimizeThirdPartyScripts,
-      addPerformanceMonitoring,
-      optimizeScrollPerformance,
-      addIntersectionObserver
-
-    style.textContent = `
-      /* Performance optimizations */
-      * {},
-      box-sizing: border-box
-      },
-      img {},
-      max-width: 100%
-        height: auto
-      };
-      .lazy-load {},
-      opacity: 0,
-  transform: translateY(20px)
-        transition: opacity 0.6s ease, transform 0.6s ease
-      };
-      .lazy-load.animate-in {},
-      opacity: 1,
-  transform: translateY(0)
-      };
-      /* Reduce motion for users who prefer it */
-      @media (prefers-reduced-motion: reduce) {};
-        * {},
-      animation-duration: 0.01ms !important
-          animation-iteration-count: 1 !important
-          transition-duration: 0.01ms !important
-        }
-    },
-    {}
-      /* Optimize for mobile */
-      @media (max-width: 768px) {};
-        .lazy-load {},
-      transform: translateY(10px)
-        }
-    },
-    {}
-    `
-    document.head.appendChild(style)
-    return () => {};
-}document.head.removeChild(style)
-    };
-  }, [])
-  return <>{children}</>
-},
-      export default PerformanceOptimizer
-
-
-
-
-=======
-import React from 'react';
-
-interface PerformanceOptimizerProps {
-  className?: string;
-}
-
-export default function PerformanceOptimizer({ className }: PerformanceOptimizerProps) {
+export default function componentsPage() {
   return (
-    <div className={className}>
-      <h2>PerformanceOptimizer<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Components services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import { useEffect, useState } from 'react';
-
-export const usePerformanceMonitor = () => {
-  const [state, setState] = useState(null);
-
-  useEffect(() => {
-    // Hook logic will be implemented here
-  }, []);
-
-  return {
-    state,
-    setState
-=======
 import { useState, useEffect } from \"react\";"
 export const usePerformanceMonitor  = () => {};
 }const [data, setData] = useState<any>(null)
@@ -29,7 +15,6 @@ setData(input)
     } finally {};
       setLoading(false)
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
   };
 };
 

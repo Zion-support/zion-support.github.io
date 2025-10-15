@@ -1,137 +1,33 @@
-<<<<<<< HEAD
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  fmp: number | null;
-  memory: {}
-    usedJSHeapSize: number;
-    totalJSHeapSize: number;
-    jsHeapSizeLimit: number;
-  } | null;
-  navigation: {}
-    loadEventEnd: number;
-    domContentLoadedEventEnd: number;
-    domContentLoadedEventStart: number;
-    loadEventStart: number;
-  } | null;
-}
+import { Helmet } from 'react-helmet-async';
 
-interface PerformanceMonitorProps {}
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enableRealTimeMonitoring?: boolean;
-  logToConsole?: boolean;
-};
-const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({)};
-
-  onMetricsUpdate,
-  enableRealTimeMonitoring = true,
-  logToConsole = false
-}) => {}
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({)}
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    fmp: null,
-    memory: null,
-
-      return;
-    };
-    const newMetrics: PerformanceMetrics  =  {};
-
-      fcp: null,
-      lcp: null,
-      fid: null,
-      cls: null,
-      ttfb: null,
-      fmp: null,
-      memory: null,
-
-      newMetrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-      newMetrics.navigation = {}
-        loadEventEnd: navigationEntry.loadEventEnd,
-        domContentLoadedEventEnd: navigationEntry.domContentLoadedEventEnd,
-        domContentLoadedEventStart: navigationEntry.domContentLoadedEventStart,
-        loadEventStart: navigationEntry.loadEventStart
-
-    }
-
-    // First Meaningful Paint (FMP) - approximated
-    const  paintEntries = performance.getEntriesByType('paint');"
-    const  fmpEntry = paintEntries.find(entry => entry.name === 'first-meaningful-paint');"
-    if (fmpEntry) {}
-      newMetrics.fmp = fmpEntry.startTime;
-    }
-
-    // Memory usage
-    if ('memory' in performance) {}"
-      const  memoryInfo = (performance as any).memory
-      newMetrics.memory = {}
-
-        usedJSHeapSize: memoryInfo.usedJSHeapSize,
-        totalJSHeapSize: memoryInfo.totalJSHeapSize,
-        jsHeapSizeLimit: memoryInfo.jsHeapSizeLimit
-
-    if (onMetricsUpdate) {}
-      onMetricsUpdate(newMetrics)
-    }
-  }, [measurePerformance, enableRealTimeMonitoring]);
-
-    if (logToConsole) {}
-      console.log('Performance Metrics:', newMetrics);"
-    }
-  }, [onMetricsUpdate, logToConsole])
-  useEffect(() => {}
-    // Initial measurement
-    measurePerformance()
-    if (enableRealTimeMonitoring) {}
-      // Set up real-time monitoring
-      const  observer = new PerformanceObserver((list) => {}
-        list.getEntries().forEach((entry) => {}
-          if (entry.entryType === 'largest-contentful-paint' ||)"
-              entry.entryType === 'first-input' || "
-              entry.entryType === 'layout-shift') {}"
-            measurePerformance()
-          }
-        })
-      })
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });"
-      // Periodic monitoring
-      const  interval = setInterval(measurePerformance, 5000)
-      return () => {}
-        observer.disconnect()
-        clearInterval(interval)
-      }
-    }
-  }, [measurePerformance, enableRealTimeMonitoring])
-  // This component doesn't render anything visible"
-  return null
-}
-
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-;"
-
-export default ComponentsPage;'";'";"
-=======
-import React from 'react';
-
-interface AdvancedPerformanceMonitorProps {
-  className?: string;
-}
-
-export default function AdvancedPerformanceMonitor({ className }: AdvancedPerformanceMonitorProps) {
+export default function componentsPage() {
   return (
-    <div className={className}>
-      <h2>AdvancedPerformanceMonitor<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Components services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

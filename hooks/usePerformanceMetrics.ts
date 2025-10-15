@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import { useEffect, useState } from 'react';
-
-export const usePerformanceMetrics = () => {
-  const [state, setState] = useState(null);
-
-  useEffect(() => {
-    // Hook logic will be implemented here
-=======
 import { useState, useEffect  } from 'lucide-react'";"
     if (typeof: window === 'undefined' || !('PerformanceObserver' in window)) {'"'""
       return;
@@ -39,7 +30,6 @@ import { useState, useEffect  } from 'lucide-react'";"
         }
       });
     }).observe({ entryTypes: ['navigation'] })'"'""
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
   }, []);
 
   return {

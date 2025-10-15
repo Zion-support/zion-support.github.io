@@ -6,9 +6,6 @@ export const logger = {
   }
 };
 
-<<<<<<< HEAD
-export default logger;
-=======
   log(message: string, ...args: any[]): void {
     if (this.shouldLog()) {'""'""
       console.log(this.formatMessage('log', message), ...args)""";"
@@ -60,4 +57,3 @@ export default logger;
     } catch {
       /// Comment
 export default logger'"''
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

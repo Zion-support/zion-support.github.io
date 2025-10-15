@@ -1,79 +1,33 @@
-<<<<<<< HEAD
-interface EnhancedLoadingProps {},
-      message?: string;
-showProgress?: boolean;
-progress?: number
-      const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({},)
-      message = "Loading...", showProgress = false, progress = 0""
-}) => {},
-      return ()
-    <div  className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>""
-      <div  className ="text-center"></div>""
-        {/* Animated Logo/Icon */}
-        <div  className ="mb-8"></div>""
-          <div  className ="w-20 h-20 mx-auto relative"></div>""
-            <div  className ="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 animate-spin"></div>""
-            <div  className ="absolute inset-2 rounded-full bg-slate-900 flex items-center justify-center"></div>""
-              <div  className ="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-pulse"></div>""
-            </div>
-          </div>
-        </div>
-        {/* Loading Message */}
-        <h2  className ="text-2xl font-bold text-white mb-4 animate-pulse"></h2>""
-          {message}
-        </h2>
-        {/* Progress Bar */}
-        {showProgress && ()}
-          <div  className ="w-64 mx-auto mb-4"></div>""
-            <div  className ="bg-slate-700 rounded-full h-2 overflow-hidden"></div>""
-              <divclassName="bg-gradient-to-r from-cyan-500 to-purple-600 h-full transition-all duration-300 ease-out">""
-                style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
-              ></div>
-            </div>
-            <p  className ="text-sm text-gray-400 mt-2"></p>""
-              {Math.round(progress)}% Complete
+import { Helmet } from 'react-helmet-async';
+
+export default function componentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Components services and solutions for your business needs.
             </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
+            </div>
           </div>
-        )}
-        {/* Loading Animation */}
-        <div  className ="flex justify-center space-x-2"></div>""
-          {[...Array(3)].map(( i) => ()}
-            <divkey={i},>
-      className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-bounce""
-              style={{},
-      animationDelay: `${i * 0.1}s`,
-      animationDuration: '1s'""
-
-            ></div>
-          ))}
         </div>
-
-
-          Preparing your experience with cutting-edge technology...
-        </p>
       </div>
     </>
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-;"
-
-export default ComponentsPage;'";'";"
-=======
-import React from 'react';
-
-interface EnhancedLoadingProps {
-  className?: string;
-}
-
-export default function EnhancedLoading({ className }: EnhancedLoadingProps) {
-  return (
-    <div className={className}>
-      <h2>EnhancedLoading<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

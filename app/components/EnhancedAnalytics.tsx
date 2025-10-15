@@ -1,108 +1,33 @@
-<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
 
-      interface AnalyticsContextType {},
-      track: (_event: string, properties?: Record<string, _unknown>) => void,
-      identify: (_userId: string, traits?: Record<string, _unknown>) => void,
-      page: (_name: string, properties?: Record<string, _unknown>) => void
-    },
-
-interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, unknown>) => void;
-  identify: (userId: string, traits?: Record<string, unknown>) => void;
-  page: (name: string, properties?: Record<string, unknown>) => void;
-
-  }
-  return context
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
-}) => {
-  useEffect(() => {
-
-    // Initialize analytics
-
-        script.async = true;
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`;
-        document.head.appendChild(script);
-        (window as any).dataLayer = (window as any).dataLayer || [];
-
-      }
-
-
-  }, []),
-      const: track = (_event: string, properties?: Record<string, _unknown>) => {},;
-      if (typeof window !== "undefined") {};";"
-      // Google Analytics;
-if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {};
-        (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag()
-
-          "event",";
-
-          event,
-          properties,
-        )
-      };
-      // Custom analytics
-
-          process.env.REACT_APP_GA_ID,
-          {};
-            user_id: userId,
-            custom_map: traits},
-        )
-      };
-      // Custom analytics
-
-            page_title: name,
-            page_location: window.location.href,
-            ...properties},
-        )
-      // Custom analytics
-  const value: AnalyticsContextType  =  {},
-      track,
-      identify,
-      page},
-      return ()
-
-          custom_map: traits,
-        })
-      }
-      
-      // Custom analytics tracking
-
-          page_title: name,
-          page_location: window.location.href,
-          ...properties,
-        })
-
-      
-      // Custom analytics tracking
-
-  };
-  const value: AnalyticsContextType  =  {,
-    track,
-    identify,
-    page,;
-  };
-
+export default function componentsPage() {
   return (
-    <AnalyticsContext.Provider: value ={value}>
-      {children};
-    </AnalyticsContext.Provider>
-  )
-
-=======
-import React from 'react';
-
-interface EnhancedAnalyticsProps {
-  className?: string;
-}
-
-export default function EnhancedAnalytics({ className }: EnhancedAnalyticsProps) {
-  return (
-    <div className={className}>
-      <h2>EnhancedAnalytics<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Components services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

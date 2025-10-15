@@ -1,81 +1,33 @@
-<<<<<<< HEAD
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: any;
-  robots?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-interface AdvancedSEOOptimizerProps {};
-  seoData: SEOData;
-  enableStructuredData?: boolean;
-  enableSocialMeta?: boolean;
-  enableAdvancedFeatures?: boolean;
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps>  =  ({)};
+import { Helmet } from 'react-helmet-async';
 
-  seoData,
-  enableStructuredData = true,
-  enableSocialMeta = true,
-  enableAdvancedFeatures = true
-
-      script.text = JSON.stringify(seoData.structuredData);
-      document.head.appendChild(script);
-    };
-
-    // Set up meta tags for social media
-
-          document.head.appendChild(tagMeta);
-        });
-  }, [
-    seoData, enableStructuredData, enableSocialMeta, enableAdvancedFeatures
-  
-  ]);";"
-      <title>{seoData.title}</title>""
-      <meta name="description" content={seoData.description} />""
-      <meta name="keywords" content={seoData.keywords.join(', ")} />";"'
-import SEOHead from './components/SEOHead";"'
-
-
-  return ()
-    <Helmet>
-      <title>{seoData.title}</title>
-      <meta: name ="description" content={seoData.description} />"
-      <meta: name ="keywords" content={seoData.keywords.join(', ')} />"
-    </Helmet>
-
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-;"
-
-export default ComponentsPage;'";'";"
-=======
-import React from 'react';
-
-interface AdvancedSEOOptimizerProps {
-  className?: string;
-}
-
-export default function AdvancedSEOOptimizer({ className }: AdvancedSEOOptimizerProps) {
+export default function componentsPage() {
   return (
-    <div className={className}>
-      <h2>AdvancedSEOOptimizer<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional Components services and solutions for your business needs.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
