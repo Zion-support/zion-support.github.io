@@ -15,7 +15,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'IT Services', href: '/services', icon: Shield },
     { name: 'Micro SAAS', href: '/micro-saas', icon: Zap },
     { name: '5G Solutions', href: '/5g-solutions', icon: Globe },
-    { name: 'Resources', href: '/resources', icon: BarChart3 },
     { name: 'Portfolio', href: '/portfolio', icon: BarChart3 },
     { name: 'Blog', href: '/blog', icon: Globe },
     { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
