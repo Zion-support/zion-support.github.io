@@ -1,22 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { CpuChipIcon,
-=======
 import { 
   CpuChipIcon,
->>>>>>> cursor/analyze-improve-and-merge-code-636f
   EyeIcon,
   ChatBubbleLeftRightIcon,
   DocumentTextIcon,
   LightBulbIcon,
   ArrowRightIcon,
-<<<<<<< HEAD
-  CheckCircleIcon } from '@heroicons/react/24/outline';
-
-export default function AISolutionsPage() { const aiServices = [
-=======
   CheckCircleIcon,
   ChartBarIcon,
   CogIcon,
@@ -25,7 +16,6 @@ export default function AISolutionsPage() { const aiServices = [
 
 const AISolutionsPage: React.FC = () => {
   const aiServices = [
->>>>>>> cursor/analyze-improve-and-merge-code-636f
     {
       title: "Machine Learning Models",
       description: "Custom machine learning models tailored to your specific business needs with advanced algorithms and real-time processing.",
