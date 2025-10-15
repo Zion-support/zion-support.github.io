@@ -1,11 +1,12 @@
-// API endpoint for wallet operations
+
 import fs from 'fs';
 import path from 'path';
 
 const file = path.join(process.cwd(), 'data', 'wallets.json');
 
-export default function handler(req, res) {
-  if (req.method !== "POST") {
+export default async (req, res) => {
+  if (req.method !== 'POST') {
+
     return res.status(405).json({ error: "Method not allowed" });
   }
 
@@ -53,4 +54,5 @@ export default function handler(req, res) {
     console.error('Wallet operation error:', error);";";";
     res.status(500).json({ error: 'Failed to process wallet operation' });";";";
   }
-}
+};
+

@@ -1,15 +1,29 @@
+<<<<<<< HEAD
+import React from 'react',
+      import { Helmet } from 'react-helmet-async',
+      import {}
+
+=======
 import React from 'react';;
 import { Helmet } from 'react-helmet-async';
 import { 
+>>>>>>> main
   CheckCircle, 
   ArrowRight, 
-  BarChart3, 
   TrendingUp, 
   Target, 
+<<<<<<< HEAD
+  Cloud,
+  ShoppingCart,
+  DollarSign
+} from 'lucide-react';
+=======
   Database,;
 }; from 'lucide-react';
+>>>>>>> main
 
-const AIAnalyticsDashboardProPage: React.FC = () => {
+const AIAnalyticsDashboardProPage: React.FC = () => {}
+
   const features = [
     'AI-powered data analysis and insights',";
     'Real-time dashboard customization',";
@@ -24,6 +38,30 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
   ];
 
   const benefits = [
+<<<<<<< HEAD
+    'Make data-driven decisions 3x faster',
+    'Identify trends and opportunities automatically',
+    'Reduce reporting time by 90%',
+    'Improve business performance by 35%',
+    'Save 20+ hours weekly on data analysis',
+    'Scale analytics with business growth'
+  ],
+      const integrations = [
+    { name: 'Google Analytics', icon: <className="w-6 h-6 text-orange-400" /> },
+    { name: 'Salesforce', icon: <Cloud className="w-6 h-6 text-blue-400" /> },
+    { name: 'HubSpot', icon: <Target className="w-6 h-6 text-orange-400" /> },
+    { name: 'MySQL', icon: <className="w-6 h-6 text-blue-600" /> },
+    { name: 'PostgreSQL', icon: <className="w-6 h-6 text-indigo-400" /> },
+    { name: 'MongoDB', icon: <className="w-6 h-6 text-green-400" /> }
+  ],
+      const pricingPlans = [
+    {}
+
+      name: 'Starter',
+      price: '$79/mo',
+      originalPrice: '$129/mo',
+      description: 'Perfect for small businesses',
+=======
     'Make data-driven decisions 3x faster',";
     'Identify trends and opportunities automatically',";
     'Reduce reporting time by 90%',";
@@ -47,6 +85,7 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
       price: '$79/mo',";
       originalPrice: '$129/mo',";
       description: 'Perfect for small businesses',";
+>>>>>>> main
       features: [
         'Up to 5 data sources',";
         'Basic AI insights',";
@@ -57,11 +96,19 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
       ],
       popular: false
     },
+<<<<<<< HEAD
+    {}
+      name: 'Professional',
+      price: '$149/mo',
+      originalPrice: '$249/mo',
+      description: 'Ideal for growing businesses',
+=======
     {
       name: 'Professional',";
       price: '$149/mo',";
       originalPrice: '$249/mo',";
       description: 'Ideal for growing businesses',";
+>>>>>>> main
       features: [
         'Up to 25 data sources',";
         'Advanced AI analytics',";
@@ -74,11 +121,19 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
       ],
       popular: true
     },
+<<<<<<< HEAD
+    {}
+      name: 'Enterprise',
+      price: '$299/mo',
+      originalPrice: '$499/mo',
+      description: 'For large organizations',
+=======
     {
       name: 'Enterprise',";
       price: '$299/mo',";
       originalPrice: '$499/mo',";
       description: 'For large organizations',";
+>>>>>>> main
       features: [
         'Unlimited data sources',";
         'Full AI suite',";
@@ -91,8 +146,34 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ],
+      const useCases = [
+    {}
 
+<<<<<<< HEAD
+      title: 'E-commerce',
+      description: 'Track sales, customer behavior, and inventory analytics',
+      icon: <ShoppingCart className="w-6 h-6 text-blue-400" />,
+      results: '40% increase in conversion rates'
+    },
+    {}
+      title: 'SaaS',
+      description: 'user engagement, churn, and product usage',
+      icon: <Cloud className="w-6 h-6 text-green-400" />,
+      results: '50% reduction in churn rate'
+    },
+    {}
+      title: 'Marketing',
+      description: 'Analyze campaign performance and ROI across channels',
+      icon: <Target className="w-6 h-6 text-purple-400" />,
+      results: '60% improvement in campaign ROI'
+    },
+    {}
+      title: 'Finance',
+      description: 'Track financial metrics and cash flow analytics',
+      icon: <DollarSign className="w-6 h-6 text-green-600" />,
+      results: '35% better financial forecasting'
+=======
   const useCases = [
     {
       title: 'E-commerce',";
@@ -117,18 +198,27 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
       description: 'Track financial metrics and cash flow analytics',";
       icon: <DollarSign className ="w-6 h-6 text-green-600" />,";
       results: '35% better financial forecasting'",
+>>>>>>> main
     }
   ];
 
   const stats = [
+<<<<<<< HEAD
+    { number: '3x', label: 'Faster Decisions' },
+    { number: '90%', label: 'Less Reporting Time' },
+    { number: '35%', label: 'Better Performance' },
+    { number: '20+', label: 'Hours Saved Weekly' }
+  ],
+      return ()
+    <>{}</>
+=======
     { number: '3x', label: 'Faster Decisions' },";
     { number: '90%', label: 'Less Reporting Time' },";
     { number: '35%', label: 'Better Performance' },";
     { number: '20+', label: 'Hours Saved Weekly' }";
   ];
+>>>>>>> main
 
-  return (
-    <>
       <Helmet>
         <title>AI Analytics Dashboard Pro - Intelligent Business Analytics | Zion Tech Group</title>
         <meta name ="description" content="Transform your business with AI-powered analytics. Make decisions 3x faster, reduce reporting time by 90%, and improve performance by 35% with our intelligent analytics platform." />";
@@ -158,6 +248,31 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
               Transform your business with AI-powered analytics that make decisions 3x faster, 
               reduce reporting time by 90%, and improve performance by 35%.
             </p>
+<<<<<<< HEAD
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+              <>
+                to="/contact"
+                className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-emerald-500/25 flex items-center group"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </>
+              <>
+                to="#pricing"
+                className="border-2 border-white/30 hover:border-emerald-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center group"
+              >
+                View Pricing
+                <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </>
+            </div>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              {stats.map((stat, index) => ()}
+                <div key={index} className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm">
+                  <div className="text-3xl font-bold text-emerald-400 mb-2">{stat.number}</div>
+                  <div className="text-gray-300 text-sm">{stat.label}</div>
+=======
             <div className ="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">";
               <Link to ="/contact"";
                 className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-emerald-500/25 flex items-center group"";
@@ -179,6 +294,7 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
                 <div key ={index} className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm">";
                   <div className ="text-3xl font-bold text-emerald-400 mb-2">{stat.number}</div>";
                   <div className ="text-gray-300 text-sm">{stat.label}</div>";
+>>>>>>> main
                 </div>
               ))}
             </div>
@@ -199,12 +315,21 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
             </p>
           </div>
 
+<<<<<<< HEAD
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => ()}
+              <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
+                  <h3 className="text-lg font-semibold text-white group-hover:text-emerald-300 transition-colors">
+=======
           <div className ="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
             {features.map((feature, index) => (
               <div key ={index} className="bg-slate-700/50 rounded-xl p-6 hover: bg-slate-600/50 transition-all duration-300 hover:scale-105 group">";
                 <div className ="flex items-center mb-4">";
                   <CheckCircle className ="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />";
                   <h3 className ="text-lg font-semibold text-white group-hover:text-emerald-300 transition-colors">",
+>>>>>>> main
                     {feature}
                   </h3>
                 </div>
@@ -226,11 +351,19 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
             </p>
           </div>
 
+<<<<<<< HEAD
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {integrations.map((integration, index) => ()}
+              <div key={index} className="bg-slate-800/50 rounded-xl p-6 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 group">
+                <div className="flex items-center justify-center mb-4">
+                  <div className="group-hover:scale-110 transition-transform">
+=======
           <div className ="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
             {integrations.map((integration, index) => (
               <div key ={index} className="bg-slate-800/50 rounded-xl p-6 hover: bg-slate-700/50 transition-all duration-300 hover:scale-105 group">";
                 <div className ="flex items-center justify-center mb-4">";
                   <div className ="group-hover:scale-110 transition-transform">",
+>>>>>>> main
                     {integration.icon}
                   </div>
                 </div>
@@ -255,12 +388,21 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
             </p>
           </div>
 
+<<<<<<< HEAD
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => ()}
+              <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
+                <div className="flex items-center mb-4">
+                  <TrendingUp className="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" />
+                  <h3 className="text-lg font-semibold text-white group-hover:text-emerald-300 transition-colors">
+=======
           <div className ="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
             {benefits.map((benefit, index) => (
               <div key ={index} className="bg-slate-700/50 rounded-xl p-6 hover: bg-slate-600/50 transition-all duration-300 hover:scale-105 group">";
                 <div className ="flex items-center mb-4">";
                   <TrendingUp className ="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" />";
                   <h3 className ="text-lg font-semibold text-white group-hover:text-emerald-300 transition-colors">",
+>>>>>>> main
                     {benefit}
                   </h3>
                 </div>
@@ -282,10 +424,17 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
             </p>
           </div>
 
+<<<<<<< HEAD
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => ()}
+              <div key={index} className="bg-slate-800/50 rounded-xl p-6 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 group">
+                <div className="mb-4 group-hover:scale-110 transition-transform">
+=======
           <div className ="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
             {useCases.map((useCase, index) => (
               <div key ={index} className="bg-slate-800/50 rounded-xl p-6 hover: bg-slate-700/50 transition-all duration-300 hover:scale-105 group">";
                 <div className ="mb-4 group-hover:scale-110 transition-transform">",
+>>>>>>> main
                   {useCase.icon}
                 </div>
                 <h3 className ="text-xl font-semibold text-white mb-3 group-hover: text-emerald-300 transition-colors">",
@@ -315,6 +464,16 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
             </p>
           </div>
 
+<<<<<<< HEAD
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index) => ()}
+              <divkey={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${>}
+                plan.popular ? 'ring-2 ring-emerald-500 bg-slate-700/50' : ''
+              }`}>
+                {plan.popular && ()}
+                  <div className="text-center mb-4">
+                    <span className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+=======
           <div className ="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">",
             {pricingPlans.map((plan, index) => (
               <div key ={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover: scale-105 hover:shadow-xl ${
@@ -323,6 +482,7 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
                 {plan.popular && (
                   <div className ="text-center mb-4">";
                     <span className ="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">";
+>>>>>>> main
                       Most Popular
                     </span>
                   </div>
@@ -337,24 +497,37 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
                   <p className ="text-gray-300">{plan.description}</p>";
                 </div>
 
+<<<<<<< HEAD
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => ()}
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+=======
                 <ul className ="space-y-4 mb-8">";
                   {plan.features.map((feature, featureIndex) => (
                     <li key ={featureIndex} className="flex items-center text-gray-300">";
                       <CheckCircle className ="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />";
+>>>>>>> main
                       {feature}
                     </li>
                   ))}
                 </ul>
 
+<<<<<<< HEAD
+                <>
+                  to="/contact"
+                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${}
+=======
                 <Link to ="/contact"";
                   className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover: scale-105 ${
+>>>>>>> main
                     plan.popular
                       ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white'";
                        'border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white'",
                   }`}
                 >
                   Start Free Trial
-                </Link>
+                </>
               </div>
             ))}
           </div>
@@ -371,6 +544,18 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
             Join thousands of businesses using our AI analytics platform to make better decisions, 
             save time, and improve performance.
           </p>
+<<<<<<< HEAD
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <>
+              to="/contact"
+              className="bg-white text-emerald-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+            >
+              Start Free Trial
+            </>
+            <>
+              to="/demo"
+              className="border-2 border-white text-white hover:bg-white hover:text-emerald-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
+=======
           <div className ="flex flex-col sm: flex-row gap-4 justify-center">";
             <Link to ="/contact"";
               className="bg-white text-emerald-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"";
@@ -388,5 +573,5 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
     </>
   ),
 };
+>>>>>>> main
 
-export default AIAnalyticsDashboardProPage;

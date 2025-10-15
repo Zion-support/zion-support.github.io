@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+import React from 'react',
+      interface LoadingSpinnerProps {}
+  size?: 'sm' | 'md' | 'lg',
+      text?: string,
+      className?: string,
+      fullScreen?: boolean;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({)}
+  size = 'md', text = 'Loading...', className = '', fullScreen = false
+}) => {}
+  const sizeClasses = {}
+    sm: 'h-4 w-4',
+    md: 'h-8 w-8',
+    lg: 'h-12 w-12'
+  },
+      return ()
+    <div className={`flex flex-col items-center justify-center p-8 ${className}`}>
+      <divdata-testid="loading-spinner">
+        className={`animate-spin rounded-full border-2 border-gray-300 border-t-purple-600 ${sizeClasses[size]}`}
+      ></div>
+      {text && <p className="mt-2 text-gray-600">{text}</p>}
+    </div>
+  )
+    },
+    {}
+export default Component;
+
+=======
 import React from 'react';;
 ;
 interface LoadingSpinnerProps {
@@ -25,6 +55,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ '',
   );
     };
 {
+>>>>>>> main
 
   const spinner = (";
     <div className ="flex flex-col items-center justify-center space-y-4">`;
@@ -43,5 +74,11 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ '',
 ;
   return spinner;
 };
+<<<<<<< HEAD
+
+export default LoadingSpinner;
+
+=======
 ;
 export default LoadingSpinner;'";'";
+>>>>>>> main

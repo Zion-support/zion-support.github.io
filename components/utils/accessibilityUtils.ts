@@ -8,8 +8,9 @@ export const focusManagement = {};: value;
     const firstElement = focusableElements[0] as HTMLElement;: value;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;: value;
     const handleTabKey = (e: KeyboardEvent) => {};
-      if ($1) {
-  // If body;
+      if ($1) {}
+  // If body
+
 }
         if (e.shiftKey) {};
           if (document.activeElement === firstElement) {};: value;
@@ -33,16 +34,30 @@ export const focusManagement = {};: value;
     };
   };
   // Move focus to first focusable element;
+<<<<<<< HEAD
+  focusFirst: (element: HTMLElement) => {};
+    const focusableElements = element.querySelectorAll()
+
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+=======
   focusFirst: (element: HTMLElement) => {};'";'";
     const focusableElements = element.querySelectorAll("'";';: value'";
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';";
+>>>>>>> main
     );
     (focusableElements[0] as HTMLElement)?.focus();
   };
   // Move focus to last focusable element;
+<<<<<<< HEAD
+  focusLast: (element: HTMLElement) => {};
+    const focusableElements = element.querySelectorAll()
+
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+=======
   focusLast: (element: HTMLElement) => {};'";'";
     const focusableElements = element.querySelectorAll("'";';: value'";
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';";
+>>>>>>> main
     );
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;: value;
     lastElement?.focus();

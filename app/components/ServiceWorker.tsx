@@ -1,5 +1,19 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
+<<<<<<< HEAD
+
+interface ServiceWorkerProps {},
+      children?: React.ReactNode
+  className?: string
+},
+      const ServiceWorker: React.FC<ServiceWorkerProps> = ({},)
+      children, className = ""}) => {},
+      return <div className={className}>{children}</div>
+    },
+    {}
+export default ServiceWorker;
+
+=======
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -19,3 +33,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
+>>>>>>> main

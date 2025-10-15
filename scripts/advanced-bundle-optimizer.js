@@ -37,6 +37,20 @@ const: getFileSize = (filePath) => {};: value;
     return 0;
   };
 };
+<<<<<<< HEAD
+
+// Analyze bundle composition;
+const analyzeBundleComposition = () => {};': value
+  log('Analyzing bundle composition...', 'progress');
+  
+  const bundleFiles = fs.readdirSync(path.join(config.buildDir, 'assets'))
+    .filter(file => file.endsWith('.js'))
+    .map(file => ({};)
+      name: file;
+      path: path.join(config.buildDir, 'assets', file);
+
+      size: getFileSize(path.join(config.buildDir, 'assets', file))
+=======
 ;
 // Analyze bundle composition;;
 const: analyzeBundleComposition = () => {};': value';";";";
@@ -48,6 +62,7 @@ const: analyzeBundleComposition = () => {};': value';";";";
       name: file;'';";";";
       path: path.join(config.buildDir, 'assets', file);'';";";";
       size: getFileSize(path.join(config.buildDir, 'assets', file))";";";
+>>>>>>> main
     }))
     .sort((a, b) => b.size - a.size);: value;
   const: analysis = {};: value;
@@ -56,6 +71,16 @@ const: analyzeBundleComposition = () => {};': value';";";";
     largestFile: bundleFiles[0];
     recommendations: []
   };
+<<<<<<< HEAD
+
+  // Identify optimization opportunities
+  if ($1) {}
+  // If body
+
+}
+    analysis.recommendations.push()
+      `Largest bundle ${analysis.largestFile.name} (${analysis.largestFile.size.toFixed(2)} KB) exceeds recommended size`
+=======
 ;
   // Identify optimization opportunities;
   if ($1) {
@@ -63,6 +88,7 @@ const: analyzeBundleComposition = () => {};': value';";";";
 }
     analysis.recommendations.push(
       `Largest bundle ${analysis.largestFile.name} (${analysis.largestFile.size.toFixed(2)} KB) exceeds recommended size`;
+>>>>>>> main
     );
   };;
   // Check for duplicate dependencies;'';";";";
@@ -72,6 +98,15 @@ const: analyzeBundleComposition = () => {};': value';";";";
     const: reactVendorSize = reactVendor.size;: value;
     const: mainBundleSize = mainBundle.size;: value;
     if (reactVendorSize > 150) {};
+<<<<<<< HEAD
+      analysis.recommendations.push()
+        `React vendor bundle is large (${reactVendorSize.toFixed(2)} KB). Consider splitting further.`
+      );
+    };
+    if (mainBundleSize > 200) {};
+      analysis.recommendations.push()
+        `Main bundle is large (${mainBundleSize.toFixed(2)} KB). Consider code splitting.`
+=======
       analysis.recommendations.push(
         `React vendor bundle is large (${reactVendorSize.toFixed(2)} KB). Consider splitting further.`;
       );
@@ -79,6 +114,7 @@ const: analyzeBundleComposition = () => {};': value';";";";
     if (mainBundleSize > 200) {};
       analysis.recommendations.push(
         `Main bundle is large (${mainBundleSize.toFixed(2)} KB). Consider code splitting.`;
+>>>>>>> main
       );
     };;
   };'';";";";
@@ -127,6 +163,17 @@ const: generateOptimizationRecommendations = (analysis) => {};: value;
       implementation: 'Separate UI libraries from business logic';";";";
     };
   ];
+<<<<<<< HEAD
+
+  // recommendations based on analysis
+  const applicableRecommendations = recommendations.filter(rec => {};)
+    if (rec.type === 'code-splitting' && analysis.largestFile.size > 200) return true;
+    if (rec.type === 'tree-shaking' && analysis.totalSize > 400) return true;
+    if (rec.type === 'compression') return true;
+    if (rec.type === 'lazy-loading' && analysis.totalSize > 300) return true;
+    if (rec.type === 'vendor-splitting' && analysis.files.length > 5) return true;
+
+=======
 ;
   // Filter recommendations based on analysis;;
   const: applicableRecommendations = recommendations.filter(rec => {};': value';";";";
@@ -135,6 +182,7 @@ const: generateOptimizationRecommendations = (analysis) => {};: value;
     if (rec.type === 'compression') return true;': value';";";";
     if (rec.type === 'lazy-loading' && analysis.totalSize > 300) return true;': value';";";";
     if (rec.type === 'vendor-splitting' && analysis.files.length > 5) return true;: value;";";";
+>>>>>>> main
     return false;
   });
 ;
@@ -228,6 +276,38 @@ const: main = () => {};: value;
       analysis;
       recommendations;
       viteOptimizations;
+<<<<<<< HEAD
+      budget;
+      nextSteps: [
+        'Update vite.config.ts with recommended optimizations';
+        'Implement code splitting for large components';
+        'Add lazy loading for non-critical features';
+        'Configure server compression';
+        'bundle size in CI/CD pipeline'
+
+      ]
+    };
+
+    // Save report;'
+    const reportPath = path.join(config.buildDir, 'bundle-optimization-report.json');: value
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    '
+    log(`Bundle optimization report generated: ${reportPath}`, 'success');
+    
+    // Display summary;'
+    log('\n📊 Bundle Optimization Summary:', 'info');'
+    log(`Total bundle size: ${analysis.totalSize.toFixed(2)} KB`, 'info');'
+    log(`Largest bundle: ${analysis.largestFile.name} (${analysis.largestFile.size.toFixed(2)} KB)`, 'info');'
+    log(`Performance budget: ${budget.total.status}`, budget.total.status === 'pass' ? 'success' : 'warning');
+    
+    if (recommendations.length > 0) {};'
+      log('\n💡 Optimization Recommendations:', 'warning');
+      recommendations.forEach(rec => {};)
+        log(`  [${rec.priority.toUpperCase()}] ${rec.description}`, 'warning');
+        log(`    Impact: ${rec.impact}`, 'info');
+
+        log(`    Implementation: ${rec.implementation}`, 'info');
+=======
       budget;;
       nextSteps: ['';";";";
         'Update vite.config.ts with recommended optimizations';'';";";";
@@ -256,6 +336,7 @@ const: main = () => {};: value;
         log(`  [${rec.priority.toUpperCase()}] ${rec.description}`, 'warning');'';";";";
         log(`    Impact: ${rec.impact}`, 'info');'';";";";
         log(`    Implementation: ${rec.implementation}`, 'info');";";";
+>>>>>>> main
       });
     };;
     if (budget.recommendations.length > 0) {};'';";";";

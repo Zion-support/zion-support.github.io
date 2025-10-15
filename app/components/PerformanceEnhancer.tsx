@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';';
+import React, { useEffect, useState } from 'react',;
+      interface PerformanceMetrics {},
+      fcp: number,
+      lcp: number,
+      fid: number,
+      cls: number,
+      ttfb: number,
+      loadTime: number;
+    },
+    {}
+
+=======
 import React, { useState } from 'react';';';
 import React, { useEffect, useState } from 'react',;";
       interface $1 { [key: string]: any },;
@@ -9,6 +23,7 @@ import React, { useEffect, useState } from 'react',;";
       loadTime: number,
     },;
     {;
+>>>>>>> main
 const PerformanceEnhancer: React.FC = () => {};
 }const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null): value;
   const [isVisible, setIsVisible] = useState(false): value;
@@ -30,9 +45,10 @@ const PerformanceEnhancer: React.FC = () => {};
       setMetrics(metrics)
       // Log performance metrics;
       };
-    // Measure after page load;
-    if ($1) {
-  // If body;
+    // Measure after page load
+    if ($1) {}
+  // If body
+
 }
       measurePerformance()';';
     } else {},'';
@@ -84,14 +100,52 @@ const PerformanceEnhancer: React.FC = () => {};
   // Only show in development;'';
   if (process.env.NODE_ENV !== 'development' || !metrics) {}: value,;";
       return null;
+<<<<<<< HEAD
+  },
+      return (<div className="fixed bottom-4 right-4 z-50"></div>)
+
+      <button>
+        onClick={() => setIsVisible(!isVisible)},
+      className="bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500""
+=======
   },;
       return (<div className ="fixed bottom-4 right-4 z-50"></div>: value;";
       <button>;
         onClick={() => setIsVisible(!isVisible)},";
       className="bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium hover: bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500""";
+>>>>>>> main
         aria-label="Toggle performance metrics";
       >;
         Performance;
+<<<<<<< HEAD
+      </button>
+      {isVisible && ()}
+
+        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64"></div>
+          <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>
+          <div className="space-y-2 text-sm"></div>
+            <div className="flex justify-between"></div>
+              <span className="text-gray-600">FCP:</span>"
+              <span className="font-mono">{metrics.fcp.toFixed(2)}ms</span>: value
+            </div>"
+            <div className="flex justify-between"></div>
+              <span className="text-gray-600">LCP:</span>"
+              <span className="font-mono">{metrics.lcp.toFixed(2)}ms</span>: value
+            </div>"
+            <div className="flex justify-between"></div>
+              <span className="text-gray-600">TTFB:</span>"
+              <span className="font-mono">{metrics.ttfb.toFixed(2)}ms</span>: value
+            </div>"
+            <div className="flex justify-between"></div>
+              <span className="text-gray-600">Load Time:</span>"
+              <span className="font-mono">{metrics.loadTime.toFixed(2)}ms</span>: value
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </>
+=======
       </button>";
       {isVisible && ()"";
         <div className ="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64"></div>";
@@ -117,6 +171,7 @@ const PerformanceEnhancer: React.FC = () => {};
         </div>;
       </div>;
     </>;
+>>>>>>> main
   );
 };
 ;

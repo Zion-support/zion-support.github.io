@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+import {useEffect, useCallback} from "react";
+interface PerformanceMetrics {};
+  renderTime: number
+  componentName: string
+  timestamp: number
+};
+/**
+ * Hook for performance monitoring and optimization
+ */
+export function usePerformance() {}
+  // Function body
+}
+}const renderStartTime = useRef<number>(0)
+  const renderCount = useRef<number>(0)
+  // Track render performance
+  useEffect(() => {};
+}renderStartTime.current = performance.now()
+    renderCount.current += 1
+    return () => {};
+}const renderTime = performance.now() - renderStartTime.current
+      if (renderTime > 16) { // More than one frame (16ms)}
+        logger.warn(`Slow render detected in ${componentName}`, {};)
+          renderTime;
+          renderCount: renderCount.current;
+
+          componentName
+=======
 ;
 interface PerformanceMetrics {
   renderTime: number;
@@ -24,15 +52,25 @@ export function usePerformance(componentName: string) {
           renderTime,;
           renderCount: renderCount.current,;
           componentName;
+>>>>>>> main
         });
       }
     };
   });
+<<<<<<< HEAD
+
+  // Debounced function for expensive operations
+  const debounce = useCallback(_<T extends (...args: any[]) => any>()
+      func: T;
+
+      delay: number
+=======
 ;
   // Debounced function for expensive operations;
   const debounce = useCallback(<T extends (...args any[]) => any>(
       func: T,;
       delay: number;
+>>>>>>> main
     ): ((...args: Parameters<T>) => void) => {
       let timeoutId: NodeJS.Timeout;
       return (...args: Parameters<T>) => {
@@ -42,16 +80,28 @@ export function usePerformance(componentName: string) {
     },;
     []
   );
+<<<<<<< HEAD
+
+  // Throttled function for frequent operations
+  const throttle = useCallback(_<T extends (...args: any[]) => any>()
+      func: T;
+
+      delay: number
+=======
 ;
   // Throttled function for frequent operations;
   const throttle = useCallback(<T extends (...args any[]) => any>(
       func: T,;
       delay: number;
+>>>>>>> main
     ): ((...args: Parameters<T>) => void) => {
       let lastCall = 0;
       return (...args: Parameters<T>) => {
         const now = Date.now();
-        if (now - lastCall >= delay) {
+        if ($1) {}
+  // If body
+}
+
           lastCall = now;
           func(...args),
         }
@@ -108,6 +158,18 @@ export function useMemoryMonitor(componentName: string) {
       const checkMemory = () => {
         const memory = (performance as any).memory;
         if (memory) {
+<<<<<<< HEAD
+          const used = memory.usedJSHeapSize / 1024 / 1024; // MB
+          const total = memory.totalJSHeapSize / 1024 / 1024; // MB
+          const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
+          if (used > limit * 0.8) {};
+            logger.warn(`High memory usage detected in ${componentName}`, {};)
+              used: `${used.toFixed(2)}MB`;
+              total: `${total.toFixed(2)}MB`;
+              limit: `${limit.toFixed(2)}MB`;
+
+              percentage: `${((used / limit) * 100).toFixed(2)}%`
+=======
           const used = memory.usedJSHeapSize / 1024 / 1024; // MB;
           const total = memory.totalJSHeapSize / 1024 / 1024; // MB;
           const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB,
@@ -117,6 +179,7 @@ export function useMemoryMonitor(componentName: string) {
               total: `${total.toFixed(2)}MB`,;
               limit: `${limit.toFixed(2)}MB`,;
               percentage: `${((used / limit) * 100).toFixed(2)}%`;
+>>>>>>> main
             });
           }
         }

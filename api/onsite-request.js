@@ -47,7 +47,7 @@ export default async function handler(req, res) {
     // Save to file
     fs.writeFileSync(file, JSON.stringify(requests, null, 2));
 
-    res.status(200).json({ 
+    res.status(200).json({
       success: true, 
       message: 'Onsite request submitted successfully',
       requestId: newRequest.id

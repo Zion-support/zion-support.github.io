@@ -1,6 +1,39 @@
+<<<<<<< HEAD
+'use client',
+      import { Helmet } from 'react-helmet-async',
+      import {},
+      Server,
+      Cloud,
+      Network,
+      Globe,
+      Settings,
+      Users,
+      Lock,
+      Code,
+      HardDrive,
+      Wifi,
+      CheckCircle,
+      ArrowRight,
+      Star,
+      TrendingUp,
+      Award,
+      Sparkles,
+      Layers,
+      Key,
+      FileText,
+      MessageSquare,
+      ShoppingCart,
+      Search,
+      Target,
+      Workflow
+} from 'lucide-react';
+
+
+=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
+>>>>>>> main
 const ItServicesPage: React.FC = () => {
   return (
     <>;

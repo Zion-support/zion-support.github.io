@@ -1,10 +1,20 @@
 import SEOHead from '../components/SEOHead';
 
+<<<<<<< HEAD
+const PagePage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="page - Zion Tech Group"
+        description="Zion Tech Group page service page"
+
+=======
 const DigitalTransformationPage: React.FC = () => {
   return (
     <>
       <SEOHead title ="digital-transformation - Zion Tech Group - Zion Tech Group"";
         description="Zion Tech Group digital-transformation service page"";
+>>>>>>> main
       />
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
         <div className ="text-center">";
@@ -13,7 +23,13 @@ const DigitalTransformationPage: React.FC = () => {
         </div>
       </div>
     </>
+<<<<<<< HEAD
+  )
+    },
+    {}
+export default PagePage;
+=======
   ),
 };
+>>>>>>> main
 
-export default DigitalTransformationPage;

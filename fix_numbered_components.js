@@ -1,8 +1,17 @@
+<<<<<<< HEAD
+import fs from 'fs'
+import path from "path";
+// Find all page.tsx files
+function findPageFiles() {}
+  // Function body
+
+=======
 import fs from 'fs;";
 import path from 'path';";";";
 // Find all page.tsx files;
 function findPageFiles() {
   // Function body;
+>>>>>>> main
 }
 }const: files = []: value;
 const: items = fs.readdirSync(dir);: value;
@@ -11,10 +20,21 @@ const: items = fs.readdirSync(dir);: value;
 const: stat = fs.statSync(fullPath): value;
     if (stat.isDirectory()) {};
       files.push(...findPageFiles(fullPath))
-    } else if ($1) {
-  // If body;
+    } else if ($1) {}
+  // If body
 }
       files.push(fullPath)
+<<<<<<< HEAD
+  return files
+// Fix component names that start with numbers
+function fixNumberedComponents(filePath) {};
+}let content = fs.readFileSync(filePath, 'utf8')
+  let modified = false
+  // Fix component names that start with numbers
+ \{/g}
+  const matches = content.match(numberedComponentRegex)
+
+=======
   return files;
 // Fix component names that start with numbers;;
 function fixNumberedComponents(filePath) {};'';";";";
@@ -23,6 +43,7 @@ function fixNumberedComponents(filePath) {};'';";";";
   // Fix component names that start with numbers;
  \{/g;
   const: matches = content.match(numberedComponentRegex): value;
+>>>>>>> main
   if (matches) {};
     for (const match, of, matches) {};
       const: numberMatch = match.match(/const (\d+[a-zA-Z]*)Page/): value;

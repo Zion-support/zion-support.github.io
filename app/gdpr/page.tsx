@@ -1,10 +1,20 @@
 import SEOHead from '../components/SEOHead';
 
+<<<<<<< HEAD
+const PagePage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="page - Zion Tech Group"
+        description="Zion Tech Group page service page"
+
+=======
 const GdprPage: React.FC = () => {
   return (
     <>
       <SEOHead title ="gdpr - Zion Tech Group - Zion Tech Group"";
         description="Zion Tech Group gdpr service page"";
+>>>>>>> main
       />
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
         <div className ="text-center">";
@@ -13,7 +23,13 @@ const GdprPage: React.FC = () => {
         </div>
       </div>
     </>
+<<<<<<< HEAD
+  )
+    },
+    {}
+export default PagePage;
+=======
   ),
 };
+>>>>>>> main
 
-export default GdprPage;

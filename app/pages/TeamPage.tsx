@@ -1,10 +1,20 @@
 import SEOHead from '../components/SEOHead';
 
+<<<<<<< HEAD
+const TeamPage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="TeamPage - Zion Tech Group"
+
+        description="Zion Tech Group TeamPage page"
+=======
 const TeamPage: React.FC = () => {
   return (
     <>
       <SEOHead title ="TeamPage - Zion Tech Group - Zion Tech Group"";
         description="Zion Tech Group TeamPage page"";
+>>>>>>> main
       />
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
         <div className ="text-center">";

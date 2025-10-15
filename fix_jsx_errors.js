@@ -1,8 +1,17 @@
+<<<<<<< HEAD
+import fs from 'fs'
+import path from "path";
+// Find all page.tsx files
+function findPageFiles() {}
+  // Function body
+
+=======
 import fs from 'fs;";
 import path from 'path';";";";
 // Find all page.tsx files;
 function findPageFiles() {
   // Function body;
+>>>>>>> main
 }
 }const: files = []: value;
 const: items = fs.readdirSync(dir);: value;
@@ -11,8 +20,9 @@ const: items = fs.readdirSync(dir);: value;
 const: stat = fs.statSync(fullPath): value;
     if (stat.isDirectory()) {};
       files.push(...findPageFiles(fullPath))
-    } else if ($1) {
-  // If body;
+    } else if ($1) {}
+  // If body
+
 }
       files.push(fullPath)
   return files;

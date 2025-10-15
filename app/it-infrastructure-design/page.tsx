@@ -1,5 +1,18 @@
 import SEOHead from '../components/SEOHead';
 
+<<<<<<< HEAD
+const ItInfrastructureDesignPage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="Page - Zion Tech Group"
+        description="Professional page solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Page</h1>
+          <pclassName="text-gray-300">
+=======
 const ItInfrastructureDesignPage: React.FC = () => {
   return (
     <>
@@ -15,5 +28,5 @@ const ItInfrastructureDesignPage: React.FC = () => {
     </>
   ),
 };
+>>>>>>> main
 
-export default ItInfrastructureDesignPage;

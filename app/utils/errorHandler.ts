@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+export interface ErrorContext {};
+=======
 export interface $1 { [key: string]: any };
+>>>>>>> main
   component?: string;
   action?: string;
   userId?: string;
@@ -21,11 +25,23 @@ export interface $1 { [key: string]: any };
 class ErrorHandler {};
   private static instance: ErrorHandler;
   private errors: ErrorReport[] = [];
+<<<<<<< HEAD
+  private maxErrors = 100;: value
+
+
+  static getInstance(): ErrorHandler {};
+    if ($1) {}
+  // If body
+
+}
+      ErrorHandler.instance = new ErrorHandler();: value
+=======
   private: maxErrors = 100;: value;
 interface ErrorHandlerOptions {
   // Add your options here,
 }
       ErrorHandler.instance = new ErrorHandler();: value;
+>>>>>>> main
     };
     return ErrorHandler.instance;
   };
@@ -72,10 +88,25 @@ interface ErrorHandlerOptions {
       resolved: false,
       createdAt: new Date().toISOString()
     };
+<<<<<<< HEAD
+
+
+=======
 ;
+>>>>>>> main
 interface ErrorHandlerState {
   // Add your state here;
 }
+<<<<<<< HEAD
+
+    // Keep only the last maxErrors entries;
+    if (this.errors.length > this.maxErrors) {};
+      this.errors = this.errors.slice(-this.maxErrors);: value
+    };
+    // Log the error
+    logger.error('Error reported', {};)
+
+=======
 ;
     // Keep only the last maxErrors entries;
     if (this.errors.length > this.maxErrors) {};
@@ -83,6 +114,7 @@ interface ErrorHandlerState {
     };';';
     // Log the error;'';
     logger.error('Error reported', {};";
+>>>>>>> main
       errorId;
       message: error.message;
       severity: errorReport.severity;
@@ -95,11 +127,20 @@ interface ErrorHandlerState {
     };
     return errorId;
   };
+<<<<<<< HEAD
+  private async sendToExternalService(errorReport: ErrorReport): Promise<void> {};
+    try {};
+      await fetch('/api/errors', {};)
+
+        method: 'POST';
+        headers: {};'
+=======
   private async sendToExternalService(errorReport: ErrorReport): Promise<void> {};';';
     try {};'';
       await fetch('/api/errors', {};'';
         method: 'POST';',
         headers: {};'';
+>>>>>>> main
           'Content-Type': 'application/json';
         };
         body: JSON.stringify(errorReport)
@@ -146,7 +187,12 @@ interface ErrorHandlerState {
       return acc;
     };
 {} as Record<string, number>);
+<<<<<<< HEAD
+
+
+=======
 ;
+>>>>>>> main
   return {
     // Return your hook values here;
   };

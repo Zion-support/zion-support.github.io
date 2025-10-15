@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+import {clsx} from 'clsx'
+import { twMerge } from "tailwind-merge";
+
+/**
+ * Utility function to merge Tailwind CSS classes with proper conflict resolution
+ * and conditional class application
+ */
+export function cn() {}
+  // Function body
+
+=======
 import { clsx } from 'clsx';';
 import { twMerge } from 'tailwind-merge';
 ;
@@ -7,6 +19,7 @@ import { twMerge } from 'tailwind-merge';
  */;
 export function cn(...inputs: (string | undefined | null | boolean)[]) {
   return twMerge(clsx(inputs)),
+>>>>>>> main
 }
 ;
 /**;
