@@ -1,4 +1,3 @@
-import { Target, Clock, MapPin, Users, Zap } from 'lucide-react';
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { MapPin, Clock, Users, Heart, Zap, Target } from "lucide-react";

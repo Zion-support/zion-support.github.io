@@ -1,8 +1,50 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, Camera, CheckCircle, Hash, Hashtag, Image, Mail, MessageCircle, Phone, Play, Shield, Star } from 'lucide-react';
+import { ArrowRight, Brain, Camera, CheckCircle, Hash, Image, Mail, MessageCircle, Phone, Play, Star, Users } from 'lucide-react';
 
 const AISocialMediaManagerProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const features = [
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Content Creation",
+      description: "Intelligent content generation for all social media platforms.",
+      benefits: ["Auto-generated posts", "Trend analysis", "Content optimization"]
+    },
+    {
+      icon: <Camera className="w-8 h-8" />,
+      title: "Visual Content",
+      description: "AI-powered image and video creation tools.",
+      benefits: ["Auto-generated visuals", "Brand consistency", "Template library"]
+    }
+  ];
+
+  const platforms = [
+    { name: "Facebook", status: "Active", color: "text-blue-500", icon: <Brain className="w-6 h-6" /> },
+    { name: "Twitter", status: "Active", color: "text-blue-400", icon: <Camera className="w-6 h-6" /> },
+    { name: "Instagram", status: "Active", color: "text-pink-500", icon: <Image className="w-6 h-6" /> },
+    { name: "LinkedIn", status: "Inactive", color: "text-blue-600", icon: <MessageCircle className="w-6 h-6" /> }
+  ];
+
+  const metrics = [
+    { name: "Engagement Rate", value: "15.2%", icon: <Star className="w-5 h-5" />, number: "15.2%", label: "Engagement" },
+    { name: "Followers", value: "50K+", icon: <Users className="w-5 h-5" />, number: "50K+", label: "Followers" },
+    { name: "Posts per Day", value: "5", icon: <Mail className="w-5 h-5" />, number: "5", label: "Posts/Day" }
+  ];
+
+  const pricingPlans = [
+    { name: "Starter", price: "$39", features: ["Basic posting", "1 platform"], description: "Perfect for individuals", period: "per month", popular: false },
+    { name: "Professional", price: "$99", features: ["All platforms", "AI content"], description: "Ideal for businesses", period: "per month", popular: true },
+    { name: "Enterprise", price: "Custom", features: ["Custom solutions", "Dedicated support"], description: "Tailored for agencies", period: "contact us", popular: false }
+  ];
+
+  const testimonials = [
+    { name: "Jennifer Lee", role: "Social Media Manager", content: "Increased our engagement by 300%!", rating: 5, company: "Digital Marketing Co." },
+    { name: "David Kim", role: "Marketing Director", content: "Best social media management tool!", rating: 5, company: "Brand Solutions" }
+  ];
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-d1e0
   return (
     <>
       <Helmet>
