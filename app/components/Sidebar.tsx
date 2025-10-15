@@ -67,8 +67,22 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       title: 'Resources',
       items: [
         { name: 'Blog', href: '/blog', icon: Code },
+        { name: 'Tutorials', href: '/tutorials', icon: Code },
+        { name: 'Documentation', href: '/docs', icon: Code },
         { name: 'Case Studies', href: '/case-studies', icon: Star },
-        { name: 'Documentation', href: '/docs', icon: Code }
+        { name: 'API Docs', href: '/api-docs', icon: Code },
+        { name: 'Help Center', href: '/help', icon: Code }
+      ]
+    },
+    {
+      title: 'Micro SaaS',
+      items: [
+        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: Settings },
+        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: Code },
+        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: Settings },
+        { name: 'Inventory Manager', href: '/inventory-manager', icon: Settings },
+        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: Settings },
+        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: Settings }
       ]
     }
   ], []);
