@@ -19,11 +19,21 @@ const Header: React.FC = memo(() => {
   const navigationItems = [
     { name: 'Home', path: '/' },
     { 
+      name: 'AI Solutions', 
+      path: '#',
+      dropdown: [
+        { name: 'AI Services Overview', path: '/ai-services' },
+        { name: 'AI Smart Contracts', path: '/ai-smart-contracts' },
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
+        { name: 'AI Predictive Maintenance', path: '/ai-predictive-maintenance' },
+        { name: 'AI Personalized Learning', path: '/ai-personalized-learning' }
+      ]
+    },
+    { 
       name: 'Services', 
       path: '#',
       dropdown: [
         { name: 'Micro SAAS Solutions', path: '/micro-saas' },
-        { name: 'AI Services', path: '/ai-services' },
         { name: 'IT Services', path: '/it-services' },
         { name: '5G Solutions', path: '/5g-solutions' },
         { name: 'Quantum Computing', path: '/quantum-computing-solutions' },

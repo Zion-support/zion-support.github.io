@@ -21,34 +21,34 @@ const Footer: React.FC = () => {
 
   const serviceCategories = [
     {
-      title: 'Micro SAAS Solutions',
+      title: 'AI Solutions',
       services: [
         { name: 'AI Smart Contracts', path: '/ai-smart-contracts' },
         { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
         { name: 'AI Predictive Maintenance', path: '/ai-predictive-maintenance' },
         { name: 'AI Personalized Learning', path: '/ai-personalized-learning' },
-        { name: 'View All Micro SAAS', path: '/micro-saas' }
+        { name: 'View All AI Services', path: '/ai-services' }
       ]
     },
     {
-      title: 'AI Services',
+      title: 'Micro SAAS',
       services: [
-        { name: 'Machine Learning', path: '/ai-services' },
-        { name: 'Computer Vision', path: '/ai-services' },
-        { name: 'Natural Language Processing', path: '/ai-services' },
-        { name: 'Predictive Analytics', path: '/ai-services' },
-        { name: 'View All AI Services', path: '/ai-services' }
+        { name: 'AI Accounting Assistant', path: '/ai-accounting-assistant' },
+        { name: 'AI Content Moderation Pro', path: '/ai-content-moderation-pro' },
+        { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro' },
+        { name: 'AI Agricultural Intelligence Pro', path: '/ai-agricultural-intelligence-pro' },
+        { name: 'View All Micro SAAS', path: '/micro-saas' }
       ]
     },
     {
       title: 'IT Services',
       services: [
+        { name: 'Quantum Computing', path: '/quantum-computing-solutions' },
+        { name: 'Edge Computing', path: '/edge-computing-solutions' },
         { name: 'Cloud Infrastructure', path: '/it-services' },
         { name: 'Cybersecurity', path: '/it-services' },
         { name: 'Web Development', path: '/it-services' },
         { name: 'Mobile Development', path: '/it-services' },
-        { name: 'Quantum Computing', path: '/quantum-computing-solutions' },
-        { name: 'Edge Computing', path: '/edge-computing-solutions' },
         { name: 'View All IT Services', path: '/it-services' }
       ]
     },
