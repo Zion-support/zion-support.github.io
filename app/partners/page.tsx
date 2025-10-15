@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Users, Globe, Shield, Zap } from 'lucide-react';export default function Partners() {
+import { CheckCircle, Shield } from 'lucide-react';export default function Partners() {
   const partners = [
     {
       name: "Microsoft",

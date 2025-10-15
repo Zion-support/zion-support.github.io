@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Database, Smartphone, Globe, Network } from 'lucide-react';const SoftwareDevelopmentPage: React.FC = () => {
+import { CheckCircle, Database, Network } from 'lucide-react';const SoftwareDevelopmentPage: React.FC = () => {
   const developmentServices = [
     {
       title: 'Custom Web Applications',

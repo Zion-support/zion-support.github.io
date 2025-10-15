@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Server, Shield, Zap, Globe, Database, CheckCircle, TrendingUp, Clock, Users } from 'lucide-react';
+import { Server, Shield, Database, CheckCircle, TrendingUp } from 'lucide-react';
 
 export default function ItServices() {
   const itServices = [

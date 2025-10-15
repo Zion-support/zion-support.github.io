@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Zap, Brain, Server, Code, Cloud, Layers } from 'lucide-react';const PricingPage: React.FC = () => {
+import { CheckCircle, Brain, Server, Layers } from 'lucide-react';const PricingPage: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 

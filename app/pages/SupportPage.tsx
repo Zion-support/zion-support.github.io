@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckCircle, Zap, BookOpen, ExternalLink, FileText, Video, Download } from 'lucide-react';const SupportPage: React.FC = () => {
+import { CheckCircle, ExternalLink, Video } from 'lucide-react';const SupportPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 

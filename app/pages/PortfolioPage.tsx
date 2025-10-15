@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Zap, Brain, Cpu, Cloud, Smartphone, Target, Rocket, Globe, ExternalLink, Github, Filter, Search } from 'lucide-react';const PortfolioPage: React.FC = () => {
+import { CheckCircle, Brain, Cpu, ExternalLink, Github } from 'lucide-react';const PortfolioPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 

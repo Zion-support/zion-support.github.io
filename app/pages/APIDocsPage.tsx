@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code, Copy, Search, BookOpen, Zap, Shield, Clock, Users, Database, Globe, Smartphone, BarChart3, MessageSquare, FileText, Play, Download } from 'lucide-react';const APIDocsPage: React.FC = () => {
+import { Copy, Shield, Database } from 'lucide-react';const APIDocsPage: React.FC = () => {
   const [selectedAPI, setSelectedAPI] = useState('ai-chatbot');
   const [searchTerm, setSearchTerm] = useState('');
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Package, BarChart3, AlertTriangle, CheckCircle, ArrowRight, Target, Zap, Globe, Database } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
+import { Package, AlertTriangle, CheckCircle, Database } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';

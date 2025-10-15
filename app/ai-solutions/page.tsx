@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, TrendingUp, BarChart3, Eye, MessageSquare, Network, FileText, Settings } from 'lucide-react';const AISolutionsPage: React.FC = () => {
+import { CheckCircle, TrendingUp, Network } from 'lucide-react';const AISolutionsPage: React.FC = () => {
   const aiServices = [
     {
       id: 'ai-chatbot-enterprise',

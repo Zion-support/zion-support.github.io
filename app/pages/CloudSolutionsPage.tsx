@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Cloud, ArrowRight } from 'lucide-react';const CloudSolutionsPage: React.FC = () => {
+const CloudSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>

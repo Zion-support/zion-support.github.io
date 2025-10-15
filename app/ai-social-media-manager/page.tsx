@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { CheckCircle, TrendingUp, Instagram, Twitter, Facebook, Linkedin, Youtube } from 'lucide-react';
+import { CheckCircle, TrendingUp } from 'lucide-react';
 
 const AISocialMediaManagerPage: React.FC = () => {
   const features = [

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import React, { useState } from 'react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Zap, Search, BookOpen, Code, Settings, Shield, Cloud, Cpu, Database, Globe, Users, FileText, ChevronDown, ChevronRight } from "lucide-react";
+import { Shield, Cpu, Database, ChevronDown, ChevronRight } from 'lucide-react';
 
 const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');

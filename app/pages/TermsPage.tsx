@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, FileText, Scale, Users, Shield, AlertTriangle, Mail, Phone, Calendar } from 'lucide-react';const TermsPage: React.FC = () => {
+import { Scale, Shield, AlertTriangle } from 'lucide-react';const TermsPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024';
 
   const sections = [

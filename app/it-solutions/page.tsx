@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Shield, Cloud, Code, Database, Smartphone, Settings, TrendingUp, Rocket, Network, Smartphone as Mobile } from 'lucide-react';const ITSolutionsPage: React.FC = () => {
+import { CheckCircle, Shield, Database, TrendingUp, Network } from 'lucide-react';const ITSolutionsPage: React.FC = () => {
   const itServices = [
     {
       id: 'cloud-infrastructure',

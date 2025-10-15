@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Zap, Brain, Server, Globe, Shield, Code, Database, BarChart3, Users, Settings, Award, Clock, Star, TrendingUp, Target, Lightbulb, Rocket, Cloud, Network } from 'lucide-react';const ServicesPage: React.FC = () => {
+import { CheckCircle, Brain, Server, Shield, Database, TrendingUp, Network } from 'lucide-react';const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
       title: 'Micro SAAS Solutions',

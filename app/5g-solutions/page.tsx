@@ -55,10 +55,10 @@ const FiveGSolutionsPage: React.FC = () => {
     "Future-proof solutions"
   ];
 
-  const technologies = [
-    "5G NR", "Network Slicing", "Edge Computing", "IoT Protocols", 
-    "AI/ML Integration", "Cloud-Native", "SDN/NFV", "MEC"
-  ];
+  // const technologies = [
+  //   "5G NR", "Network Slicing", "Edge Computing", "IoT Protocols", 
+  //   "AI/ML Integration", "Cloud-Native", "SDN/NFV", "MEC"
+  // ];
 
   return (
     <>

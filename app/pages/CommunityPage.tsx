@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, MessageSquare, Code, BookOpen, Award } from 'lucide-react';const CommunityPage: React.FC = () => {
+const CommunityPage: React.FC = () => {
   const communityFeatures = [
     {
       icon: <MessageSquare className="w-8 h-8 text-blue-400" />,

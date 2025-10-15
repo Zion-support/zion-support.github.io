@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, TrendingUp, Users, DollarSign } from 'lucide-react';export default function CaseStudies() {
+import { CheckCircle, TrendingUp } from 'lucide-react';export default function CaseStudies() {
   const caseStudies = [
     {
       id: 1,

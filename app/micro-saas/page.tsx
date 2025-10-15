@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Code, Database, Mail, Users, DollarSign, Globe, Smartphone, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Share, Eye, Heart, Battery, Camera, Headphones, Mic, Video, Image, ShoppingCart, Calculator, Grid, HardDrive, Phone, Speaker, Maximize, Minimize, Star as StarIcon, Calendar as CalendarIcon, Package, Receipt, ClipboardList, Workflow } from 'lucide-react';import { Helmet } from "react-helmet-async";
+import { CheckCircle, Shield, Brain, Database, Monitor, Battery, Camera, Mic, Video, Image, Calculator, Package, Receipt, ClipboardList, Workflow } from 'lucide-react';import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 

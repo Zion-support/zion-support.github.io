@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Smartphone, Target, Rocket, Users, Award, Clock, Play, Calendar, Phone } from 'lucide-react';const DemoPage: React.FC = () => {
+import { CheckCircle, Brain, Cpu } from 'lucide-react';const DemoPage: React.FC = () => {
   const [selectedDemo, setSelectedDemo] = useState('ai-solutions');
 
   const demos = [

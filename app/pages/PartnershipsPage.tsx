@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Target, MessageSquare, Cpu, Settings } from 'lucide-react';const PartnershipsPage: React.FC = () => {
+import { CheckCircle, Cpu } from 'lucide-react';const PartnershipsPage: React.FC = () => {
   const partnershipTypes = [
     {
       title: 'Technology Partners',

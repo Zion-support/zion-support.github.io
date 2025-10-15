@@ -6,7 +6,7 @@ import {
   MapPinIcon,
   ArrowRightIcon
 } from '@heroicons/react/24/outline';
-import { Facebook, Twitter, Linkedin, Github } from 'lucide-react';import { 
+import { Github } from 'lucide-react';import { 
   HeartIcon
 } from '@heroicons/react/24/outline';
 

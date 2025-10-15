@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, Star, Users, Award, Globe, Zap, BookOpen, ExternalLink, HelpCircle, FileText, Video, Download, ChevronDown, ChevronRight } from 'lucide-react';const HelpPage: React.FC = () => {
+import { ExternalLink, HelpCircle, Video, ChevronDown, ChevronRight } from 'lucide-react';const HelpPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { BookOpen, Brain, Users, CheckCircle, ArrowRight, Star, Award, Target } from 'lucide-react';
+import { Brain, CheckCircle } from 'lucide-react';
 
 const AiPersonalizedLearningPage: React.FC = () => {
   const features = [

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
+import { Workflow, Brain } from 'lucide-react';
 
 const AIAutomationPlatform: React.FC = () => {
   const features = [

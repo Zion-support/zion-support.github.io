@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckCircle, Brain, Code, Database, DollarSign, TrendingUp, Cpu, Monitor, Heart, Mic, Video, Image, Calculator, Layers } from 'lucide-react';
+import { CheckCircle, Brain, Database, TrendingUp, Cpu, Monitor, Mic, Video, Image, Calculator, Layers } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";

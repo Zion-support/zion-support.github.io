@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { MessageSquare } from 'lucide-react';const ChatPage: React.FC = () => {
+const ChatPage: React.FC = () => {
   return (
     <>
       <Helmet>
