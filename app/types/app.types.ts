@@ -42,3 +42,27 @@ export interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
 }
+
+export interface ErrorContext {
+  url?: string;
+  userAgent?: string;
+  timestamp?: string;
+  component?: string;
+  action?: string;
+  userId?: string;
+  sessionId?: string;
+  [key: string]: any;
+}
+
+export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';
+
+export interface ErrorReport {
+  id: string;
+  message: string;
+  stack?: string;
+  context: ErrorContext;
+  severity: ErrorSeverity;
+  resolved: boolean;
+  createdAt: string;
+  resolvedAt?: string;
+}

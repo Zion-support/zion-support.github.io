@@ -74,11 +74,11 @@ export class AccessibilityManager {
     this.announcePageChange();
   }
 
-  private handleTabNavigation() {
+  private handleTabNavigation(event: KeyboardEvent) {
     // Custom tab navigation logic
   }
 
-  private handleActivation() {
+  private handleActivation(event: KeyboardEvent) {
     // Handle Enter and Space key activation
   }
 
