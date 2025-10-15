@@ -1,163 +1,78 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
+const SEOOptimizerPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>SEOOptimizer - Zion Tech Group</title>
+        <meta name="description" content="Professional seooptimizer solutions for modern businesses" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-6">
+              SEOOptimizer
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional seooptimizer solutions designed to help your business thrive in the digital age.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Advanced Solutions</h3>
+              <p className="text-gray-300 mb-4">
+                Cutting-edge technology solutions tailored to your business needs.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+              <p className="text-gray-300 mb-4">
+                Dedicated support team to ensure your success.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Get Support
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Custom Integration</h3>
+              <p className="text-gray-300 mb-4">
+                Seamless integration with your existing systems.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Start Now
+              </Link>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Link 
+              to="/contact" 
+              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
-      interface SEOOptimizerProps {},
-      title?: string,
-      description?: string,
-      keywords?: string,
-      canonical?: string,
-      ogImage?: string,
-      noIndex?: boolean,
-      structuredData?: unknown
-
-      };
-    ];
-  };
-  // Page-specific structured data
-
-    if ($1) {}
-  // If body
-}
-      return {}
-        ...defaultStructuredData
-        "@type": "WebSite"
-        "potentialAction": {};"
-          "@type": "SearchAction"
-          "target": "https://ziontechgroup.com/search?q={search_term_string}"
-          "query-input": "required= name =search_term_string"
-        }
-    },
-    {}
-    },
-      if (path === '/about') {},"
-      return {}
-        ...defaultStructuredData
-        "@type": "AboutPage"
-      }
-    },
-    {}
-    if (path === '/contact') {},"
-      return {}
-        ...defaultStructuredData
-        "@type": "ContactPage"
-      }
-    },
-    {}
-    if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-')) {},"
-      return {}
-        ...defaultStructuredData
-        "@type": "Service"
-        "name": title;"
-        "description": description;"
-        "provider": {};"
-          "@type": "Organization"
-          "name": "Zion Tech Group"
-        }
-        "offers": {};"
-          "@type": "Offer"
-          "availability": "https://schema.org/InStock"
-          "priceCurrency": "USD"
-          "category": "Technology Services"
-        }
-        "areaServed": {};"
-          "@type": "Country"
-          "name": "United States"
-        }
-        "serviceType": "AI and IT Solutions"
-      }
-
-    },
-    {};
-    return defaultStructuredData
-  },
-
-}// Track page view in analytics
-    if (typeof window !== 'undefined' && window.gtag) {},"
-      window.gtag('config', 'GA_MEASUREMENT_ID', {},)"
-      page_title: title,
-      page_location: currentUrl})
-    }
-  }, [title, currentUrl])
-  return ()
-    <Helmet></Helmet>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta: name ="description" content={description} />"
-      <meta: name ="keywords" content={keywords} />"
-      <meta: name ="author" content="Zion Tech Group" />"
-      <meta: name ="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />"
-      <meta: name ="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow"} />"
-      {/* Canonical URL */}
-      <link: rel ="canonical" href={finalCanonical} />"
-      {/* Open Graph / Facebook */}
-      <meta: property ="og:type" content="website" />"
-      <meta: property ="og:url" content={finalCanonical} />"
-      <meta: property ="og:title" content={title} />"
-      <meta: property ="og:description" content={description} />"
-      <meta: property ="og:image" content={ogImage} />"
-      <meta: property ="og:image:width" content="1200" />"
-      <meta: property ="og:image:height" content="630" />"
-      <meta: property ="og:image:alt" content={`${title} - Zion Tech Group`} />"
-      <meta: property ="og:site_name" content="Zion Tech Group" />"
-      <meta: property ="og:locale" content="en_US" />"
-      {/* Twitter Card */}
-      <meta: name ="twitter:card" content="summary_large_image" />"
-      <meta: name ="twitter:url" content={finalCanonical} />"
-      <meta: name ="twitter:title" content={title} />"
-      <meta: name ="twitter:description" content={description} />"
-      <meta: name ="twitter:image" content={ogImage} />"
-      <meta: name ="twitter:site" content="@ziontechgroup" />"
-      <meta: name ="twitter:creator" content="@ziontechgroup" />"
-      {/* Additional SEO Meta Tags */}
-      <meta: name ="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />"
-      <meta: name ="theme-color" content="#8b5cf6" />"
-      <meta: name ="msapplication-TileColor" content="#8b5cf6" />"
-      <meta: name ="apple-mobile-web-app-capable" content="yes" />"
-      <meta: name ="apple-mobile-web-app-status-bar-style" content="black-translucent" />"
-      <meta: name ="apple-mobile-web-app-title" content="Zion Tech Group" />"
-      {/* Enhanced SEO Meta Tags */}
-      <meta: name ="rating" content="General" />"
-      <meta: name ="distribution" content="global" />"
-      <meta: name ="revisit-after" content="1 days" />"
-      <meta: name ="expires" content="never" />"
-      <meta: name ="coverage" content="worldwide" />"
-      <meta: name ="target" content="all" />"
-      <meta: name ="HandheldFriendly" content="true" />"
-      <meta: name ="MobileOptimized" content="320" />"
-      <meta: name ="apple-touch-fullscreen" content="yes" />"
-      <meta: name ="apple-mobile-web-app-capable" content="yes" />"
-      <meta: name ="format-detection" content="telephone=no" />"
-      <meta: name ="mobile-web-app-capable" content="yes" />"
-      <meta: name ="application-name" content="Zion Tech Group" />"
-      <meta: name ="msapplication-tooltip" content="Zion Tech Group - Advanced AI and IT Solutions" />"
-      <meta: name ="msapplication-starturl" content="/" />"
-      <meta: name ="msapplication-navbutton-color" content="#8b5cf6" />"
-      <meta: name ="msapplication-TileImage" content="/ms-icon-144x144.png" />"
-      <meta: name ="msapplication-config" content="/browserconfig.xml" />"
-      {/* Language and Geo Tags */}
-      <meta: name ="language" content="en-US" />"
-      <meta: name ="geo.region" content="US-DE" />"
-      <meta: name ="geo.placename" content="Middletown" />"
-      <meta: name ="geo.position" content="39.4496;-75.7163" />"
-      <meta: name ="ICBM" content="39.4496, -75.7163" />"
-      {/* Structured Data */}
-      <script: type ="application/ld+json"></script>"
-        {JSON.stringify(finalStructuredData)}
-      </script>
-      {/* Breadcrumb Structured Data */}
-      <script: type ="application/ld+json"></script>"
-        {JSON.stringify(breadcrumbData)}
-      </script>
-      {/* Additional Page-specific Meta Tags */}
-      <meta: name ="format-detection" content="telephone=no" />"
-      <meta: name ="mobile-web-app-capable" content="yes" />"
-      <meta: name ="application-name" content="Zion Tech Group" />"
-      {/* Preload critical resources */}
-      <link: rel ="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />"
-      {/* DNS prefetch for performance */}
-      <link: rel ="dns-prefetch" href="//fonts.googleapis.com" />"
-      <link: rel ="dns-prefetch" href="//fonts.gstatic.com" />"
-      <link: rel ="dns-prefetch" href="//www.google-analytics.com" />"
-    </Helmet>
-  )
-}
-
+export default SEOOptimizerPage;

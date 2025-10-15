@@ -2,365 +2,191 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
 
-console.log('🔧 Starting comprehensive file corruption fix...');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// List of corrupted files that need to be fixed or removed
-const corruptedFiles = [
-  'App-backup.tsx',
-  'App-minimal.tsx', 
-  'App-optimized.tsx',
-  'EnhancedFooter.tsx',
-  'EnhancedHeader.tsx',
-  'add-missing-routes-v2.js',
-  'add-missing-routes.js',
-  'api/shipping-rates.tsx',
-  'app-disabled/careers/page.tsx',
-  'app/5g-mobile-applications/page.tsx',
-  'app/5g-network-infrastructure/page.tsx',
-  'app/5g-network-optimization/page.tsx',
-  'app/5g-private-networks/page.tsx',
-  'app/5g-smart-city-solutions/page.tsx',
-  'app/5g-solutions/page.tsx',
-  'app/App.tsx',
-  'app/about/page.tsx',
-  'app/accessibility-page/page.tsx',
-  'app/accessibility/page.tsx',
-  'app/ad-management/page.tsx',
-  'app/advanced-security-suite/page.tsx',
-  'app/ai-3d-generation/page.tsx',
-  'app/ai-accounting-assistant/page.tsx',
-  'app/ai-agricultural-intelligence-pro/page.tsx',
-  'app/ai-analytics-dashboard-pro/page.tsx',
-  'app/ai-analytics-dashboard/page.tsx',
-  'app/ai-analytics/page.tsx',
-  'app/ai-api-management/page.tsx',
-  'app/ai-api-manager/page.tsx',
-  'app/ai-automated-reporting/page.tsx',
-  'app/ai-automated-testing/page.tsx',
-  'app/ai-automation-platform/page.tsx'
-];
-
-// Function to check if file is corrupted
-function isFileCorrupted(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check for common corruption patterns
-    const corruptionPatterns = [
-      /<div:\s*className\s*=\s*"/,  // Malformed JSX
-      /<Link:\s*to\s*=\s*"/,        // Malformed JSX
-      /<ArrowRight:\s*className\s*=\s*"/, // Malformed JSX
-      /export\s+default\s+\w+;\s*";\s*";\s*";/, // Multiple semicolons
-      /;\s*";\s*";\s*";/,           // Multiple semicolons
-      /<[^>]*:\s*[^>]*>/,           // Malformed JSX with colons
-      /}\s*\)\s*\)\s*\)\s*\)/,      // Multiple closing parentheses
-      /function\s+\w+\(\)\s*{\s*}\s*\[/, // Malformed function syntax
-      /return\s+\(\s*<[^>]*:\s*[^>]*>/, // Malformed return with colons
-    ];
-    
-    return corruptionPatterns.some(pattern => pattern.test(content));
-  } catch (error) {
-    return true; // If we can't read the file, consider it corrupted
-  }
-}
-
-// Function to create a basic valid page component
-function createValidPageComponent(fileName) {
+// Function to create a proper React component structure
+function createProperComponent(filePath) {
+  const fileName = path.basename(filePath, '.tsx');
+  const dirName = path.basename(path.dirname(filePath));
+  
+  // Convert kebab-case to TitleCase
   const componentName = fileName
-    .replace(/[^a-zA-Z0-9]/g, '')
-    .replace(/^page$/, 'Page')
-    .replace(/^([a-z])/, (match, p1) => p1.toUpperCase());
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('');
+  
+  // Create a proper page title
+  const pageTitle = fileName
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
   
   return `import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-export default function ${componentName}() {
+const ${componentName}Page: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>${componentName} - Zion Tech Group</title>
-        <meta name="description" content="Professional ${componentName} services by Zion Tech Group" />
+        <title>${pageTitle} - Zion Tech Group</title>
+        <meta name="description" content="Professional ${pageTitle.toLowerCase()} solutions for modern businesses" />
       </Helmet>
-      
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              ${componentName}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-6">
+              ${pageTitle}
             </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Professional ${componentName} services delivered with excellence by our expert team.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional ${pageTitle.toLowerCase()} solutions designed to help your business thrive in the digital age.
             </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Advanced Solutions</h3>
+              <p className="text-gray-300 mb-4">
+                Cutting-edge technology solutions tailored to your business needs.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+              <p className="text-gray-300 mb-4">
+                Dedicated support team to ensure your success.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Get Support
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Custom Integration</h3>
+              <p className="text-gray-300 mb-4">
+                Seamless integration with your existing systems.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Start Now
+              </Link>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Link 
+              to="/contact" 
+              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
           </div>
         </div>
       </div>
     </>
   );
-}`;
+};
+
+export default ${componentName}Page;
+`;
 }
 
-// Function to create a valid App component
-function createValidAppComponent() {
-  return `import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import { ErrorBoundary } from 'react-error-boundary';
-
-// Lazy load components
-const HomePage = React.lazy(() => import('./pages/HomePage'));
-const AboutPage = React.lazy(() => import('./pages/AboutPage'));
-const ContactPage = React.lazy(() => import('./pages/ContactPage'));
-
-// Error fallback component
-function ErrorFallback({ error, resetErrorBoundary }) {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h2>
-        <p className="text-gray-600 mb-4">{error.message}</p>
-        <button
-          onClick={resetErrorBoundary}
-          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-        >
-          Try again
-        </button>
-      </div>
-    </div>
-  );
-}
-
-function App() {
-  return (
-    <Router>
-      <HelmetProvider>
-        <ErrorBoundary FallbackComponent={ErrorFallback}>
-          <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-            </Routes>
-          </Suspense>
-        </ErrorBoundary>
-      </HelmetProvider>
-    </Router>
-  );
-}
-
-export default App;`;
-}
-
-// Function to fix corrupted files
-function fixCorruptedFiles() {
-  let fixedCount = 0;
-  let removedCount = 0;
+// Function to check if a file is corrupted
+function isCorrupted(content) {
+  // Check for common corruption patterns
+  const corruptionPatterns = [
+    /^\s*}\s*$/, // Just a closing brace
+    /^\s*return\s*\(\s*$/, // Incomplete return statement
+    /^\s*import\s*{\s*$/, // Incomplete import
+    /^\s*<[^>]*$/, // Incomplete JSX tag
+    /^\s*\)\s*$/, // Just a closing parenthesis
+    /^\s*;\s*$/, // Just a semicolon
+    /^\s*"\s*$/, // Just a quote
+    /^\s*;\s*";\s*$/, // Malformed syntax
+    /^\s*Get Started Today;\s*$/, // Malformed button text
+    /^\s*import React from 'react';\s*";\s*$/, // Malformed import
+    /^\s*>\s*$/, // Just a greater than
+    /^\s*>\s*View Pricing\s*$/, // Malformed button
+    /^\s*>\s*View Demo\s*$/, // Malformed button
+    /^\s*>\s*Start Your Free Trial\s*$/, // Malformed button
+    /^\s*export default function.*\(\s*$/, // Incomplete function declaration
+    /^\s*export default.*;\s*$/, // Incomplete export
+    /^\s*\);\s*";\s*$/, // Malformed closing
+    /^\s*\};\s*";\s*$/, // Malformed closing
+    /^\s*<[^>]*>\s*$/, // Incomplete JSX
+    /^\s*<[^>]*>\s*[^<]*\s*$/, // Incomplete JSX with text
+  ];
   
-  for (const filePath of corruptedFiles) {
-    const fullPath = path.join(process.cwd(), filePath);
+  return corruptionPatterns.some(pattern => pattern.test(content.trim())) || 
+         content.trim().length < 50 || // Very short files
+         !content.includes('export default') || // Missing export
+         content.includes('";') || // Contains malformed syntax
+         content.includes(');";') || // Contains malformed syntax
+         content.includes('};";'); // Contains malformed syntax
+}
+
+// Function to fix a single file
+function fixFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
     
-    if (fs.existsSync(fullPath)) {
-      if (isFileCorrupted(fullPath)) {
-        console.log(`🔧 Fixing corrupted file: ${filePath}`);
-        
-        try {
-          // For App.tsx, create a proper App component
-          if (filePath === 'app/App.tsx') {
-            fs.writeFileSync(fullPath, createValidAppComponent());
-            fixedCount++;
-          }
-          // For page components, create basic valid components
-          else if (filePath.includes('/page.tsx')) {
-            const fileName = path.basename(path.dirname(filePath));
-            fs.writeFileSync(fullPath, createValidPageComponent(fileName));
-            fixedCount++;
-          }
-          // For other files, remove them if they're corrupted
-          else {
-            fs.unlinkSync(fullPath);
-            console.log(`🗑️  Removed corrupted file: ${filePath}`);
-            removedCount++;
-          }
-        } catch (error) {
-          console.error(`❌ Error fixing ${filePath}:`, error.message);
+    // Skip if file is not corrupted
+    if (!isCorrupted(content) && content.includes('export default')) {
+      return false;
+    }
+    
+    console.log(`Fixing: ${filePath}`);
+    const newContent = createProperComponent(filePath);
+    fs.writeFileSync(filePath, newContent, 'utf8');
+    return true;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Main function to fix all TSX files
+function fixAllTSXFiles() {
+  const appDir = path.join(__dirname, 'app');
+  let fixedCount = 0;
+  let totalCount = 0;
+  
+  function processDirectory(dir) {
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        processDirectory(fullPath);
+      } else if (item.endsWith('.tsx') && !item.includes('App.tsx')) {
+        totalCount++;
+        if (fixFile(fullPath)) {
+          fixedCount++;
         }
       }
     }
   }
   
-  console.log(`✅ Fixed ${fixedCount} files and removed ${removedCount} corrupted files`);
+  console.log('Starting to fix corrupted TSX files...');
+  processDirectory(appDir);
+  console.log(`Fixed ${fixedCount} out of ${totalCount} TSX files`);
 }
 
-// Function to clean up backup and temporary files
-function cleanupTemporaryFiles() {
-  const tempFiles = [
-    'App-backup.tsx',
-    'App-minimal.tsx',
-    'App-optimized.tsx',
-    'EnhancedFooter.tsx',
-    'EnhancedHeader.tsx',
-    'add-missing-routes-v2.js',
-    'add-missing-routes.js',
-    'api/shipping-rates.tsx',
-    'app-disabled/careers/page.tsx'
-  ];
-  
-  let cleanedCount = 0;
-  
-  for (const filePath of tempFiles) {
-    const fullPath = path.join(process.cwd(), filePath);
-    if (fs.existsSync(fullPath)) {
-      try {
-        fs.unlinkSync(fullPath);
-        console.log(`🗑️  Removed temporary file: ${filePath}`);
-        cleanedCount++;
-      } catch (error) {
-        console.error(`❌ Error removing ${filePath}:`, error.message);
-      }
-    }
-  }
-  
-  console.log(`✅ Cleaned up ${cleanedCount} temporary files`);
-}
-
-// Function to create missing essential pages
-function createEssentialPages() {
-  const essentialPages = [
-    {
-      path: 'app/pages/HomePage.tsx',
-      content: `import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function HomePage() {
-  return (
-    <>
-      <Helmet>
-        <title>Zion Tech Group - AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions and innovative IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Welcome to Zion Tech Group
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              We deliver cutting-edge AI and IT solutions that transform businesses and drive digital innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
-                Get Started
-              </button>
-              <button className="px-8 py-4 border border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}`
-    },
-    {
-      path: 'app/pages/AboutPage.tsx',
-      content: `import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AboutPage() {
-  return (
-    <>
-      <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission and expertise in AI and IT solutions" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              About Zion Tech Group
-            </h1>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              We are a leading technology company specializing in AI-powered solutions and innovative IT services that transform businesses and drive digital transformation.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}`
-    },
-    {
-      path: 'app/pages/ContactPage.tsx',
-      content: `import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function ContactPage() {
-  return (
-    <>
-      <Helmet>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for your AI and IT solution needs" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              Contact Us
-            </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Ready to transform your business with our AI and IT solutions? Get in touch with our expert team.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}`
-    }
-  ];
-  
-  // Create pages directory if it doesn't exist
-  const pagesDir = path.join(process.cwd(), 'app/pages');
-  if (!fs.existsSync(pagesDir)) {
-    fs.mkdirSync(pagesDir, { recursive: true });
-  }
-  
-  let createdCount = 0;
-  
-  for (const page of essentialPages) {
-    const fullPath = path.join(process.cwd(), page.path);
-    if (!fs.existsSync(fullPath)) {
-      try {
-        fs.writeFileSync(fullPath, page.content);
-        console.log(`📄 Created essential page: ${page.path}`);
-        createdCount++;
-      } catch (error) {
-        console.error(`❌ Error creating ${page.path}:`, error.message);
-      }
-    }
-  }
-  
-  console.log(`✅ Created ${createdCount} essential pages`);
-}
-
-// Main execution
-try {
-  console.log('🧹 Cleaning up temporary files...');
-  cleanupTemporaryFiles();
-  
-  console.log('🔧 Fixing corrupted files...');
-  fixCorruptedFiles();
-  
-  console.log('📄 Creating essential pages...');
-  createEssentialPages();
-  
-  console.log('🎉 File corruption fix completed successfully!');
-} catch (error) {
-  console.error('❌ Error during file corruption fix:', error);
-  process.exit(1);
-}
+// Run the fix
+fixAllTSXFiles();

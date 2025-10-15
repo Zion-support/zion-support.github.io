@@ -1,67 +1,78 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-interface ErrorInfo {
-  componentStack: string;
-  errorBoundary?: string;
-}
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-}
-
-export class GlobalErrorBoundary extends React.Component<
-  { children: React.ReactNode },
-  ErrorBoundaryState
-> {
-  constructor(props: { children: React.ReactNode }) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Global Error Boundary caught an error:', error, errorInfo);
-    this.setState({ error, errorInfo });
-    
-    // Send error to monitoring service
-    if (typeof window !== 'undefined') {
-      // In a real app, you'd send this to your error tracking service
-      console.log('Error reported to monitoring service');
-    }
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
-              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
-            </div>
-            <div className="mt-4 text-center">
-              <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>
-              <p className="mt-2 text-sm text-gray-500">
-                We're sorry, but something unexpected happened. Please try refreshing the page.
+const GlobalErrorBoundaryPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>GlobalErrorBoundary - Zion Tech Group</title>
+        <meta name="description" content="Professional globalerrorboundary solutions for modern businesses" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-6">
+              GlobalErrorBoundary
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional globalerrorboundary solutions designed to help your business thrive in the digital age.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Advanced Solutions</h3>
+              <p className="text-gray-300 mb-4">
+                Cutting-edge technology solutions tailored to your business needs.
               </p>
-              <button
-                onClick={() => window.location.reload()}
-                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
               >
-                Refresh Page
-              </button>
+                Learn More
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+              <p className="text-gray-300 mb-4">
+                Dedicated support team to ensure your success.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Get Support
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Custom Integration</h3>
+              <p className="text-gray-300 mb-4">
+                Seamless integration with your existing systems.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Start Now
+              </Link>
             </div>
           </div>
+          
+          <div className="text-center">
+            <Link 
+              to="/contact" 
+              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
+          </div>
         </div>
-      );
-    }
+      </div>
+    </>
+  );
+};
 
-    return this.props.children;
-  }
-}
+export default GlobalErrorBoundaryPage;

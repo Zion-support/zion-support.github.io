@@ -1,177 +1,78 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-      interface AccessibilitySettings {}
-
-  highContrast: boolean,
-      largeText: boolean,
-      reducedMotion: boolean,
-      screenReader: boolean,
-
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    screenReader: false,
-    focusVisible: true,
-
-  // Load settings from localStorage
-
-  useEffect(() => {}
-    const  savedSettings = localStorage.getItem('accessibility-settings'),"
-      if (savedSettings) {}
-      try {}
-
-        setSettings(JSON.parse(savedSettings))
-      } catch (error) {}
-
-      }
-    }
-  }, [])
-  // Apply accessibility settings
-  const  applySettings = useCallback((newSettings: AccessibilitySettings) => {}
-    const  root = document.documentElement
-    // High contrast mode
-    if (newSettings.highContrast) {}
-
-      root.classList.add('high-contrast');"
-    } else {}
-
-    }
-    
-    // Large text mode
-    if (newSettings.largeText) {}
-
-      root.classList.add('large-text');"
-    } else {}
-
-    }
-    
-    // Reduced motion
-    if (newSettings.reducedMotion) {}
-
-      root.classList.add('reduced-motion');"
-    } else {}
-
-    }
-    
-    // Screen reader optimizations
-    if (newSettings.screenReader) {}
-
-      root.classList.add('screen-reader-optimized');"
-    } else {}
-
-    }
-    
-    // Focus visible
-    if (newSettings.focusVisible) {}
-
-      root.classList.add('focus-visible');"
-    } else {}
-
-    }
-    
-    // Keyboard navigation
-    if (newSettings.keyboardNavigation) {}
-
-      root.classList.add('keyboard-navigation');"
-    } else {}
-
-  // Update settings when they change
-  useEffect(() => {};
-    applySettings(settings);
-  }, [
-    settings, applySettings
-  
-  ]);
-  // Toggle accessibility panel
-
-    setIsVisible(!isVisible)
-    },
-    {}
-  // Update individual setting
-  const  updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {}
-    setSettings(prev => ({)}
-      ...prev,
-      [key]: value
-    }))
-    },
-    {}
-  return ()
-    <>{}</>
-      {children}
-
-      {/* Accessibility Toggle Button */}
-
-      >
-        <svg  className ="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">","
-          <path= strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />"
-        </svg>
-      </button>
-
-      {/* Accessibility Settings Panel */}
-
-      {isVisible && ()}
-        <div  className ="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 w-80 max-h-96 overflow-y-auto">"
-          <h3  className ="text-lg font-semibold mb-4 text-gray-900 dark:text-white">"
-            Accessibility Settings
-          </h3>
-
-                checked={settings.highContrast}
-                onChange={(e) => updateSetting('highContrast', e.target.checked)}";"
-                className="rounded"
-              />
-              <span  className ="text-gray-700 dark: text-gray-300">High Contrast</span>"
-            </label>
-
-                checked={settings.largeText}
-                onChange={(e) => updateSetting('largeText', e.target.checked)}";"
-                className="rounded"
-              />
-              <span  className ="text-gray-700 dark: text-gray-300">Large Text</span>"
-            </label>
-
-                checked={settings.reducedMotion}
-                onChange={(e) => updateSetting('reducedMotion', e.target.checked)}";"
-                className="rounded"
-              />
-              <span  className ="text-gray-700 dark: text-gray-300">Reduce Motion</span>"
-            </label>
-
-                checked={settings.screenReader}
-                onChange={(e) => updateSetting('screenReader', e.target.checked)}";"
-                className="rounded"
-              />
-              <span  className ="text-gray-700 dark: text-gray-300">Screen Reader Optimized</span>"
-            </label>
-
-                checked={settings.focusVisible}
-                onChange={(e) => updateSetting('focusVisible', e.target.checked)}";"
-                className="rounded"
-              />
-              <span  className ="text-gray-700 dark: text-gray-300">Focus Indicators</span>"
-            </label>
-
-                checked={settings.keyboardNavigation}
-                onChange={(e) => updateSetting('keyboardNavigation', e.target.checked)}";"
-                className="rounded"
-              />
-              <span  className ="text-gray-700 dark: text-gray-300">Keyboard Navigation</span>"
-            </label>
+const AccessibilityManagerPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>AccessibilityManager - Zion Tech Group</title>
+        <meta name="description" content="Professional accessibilitymanager solutions for modern businesses" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-6">
+              AccessibilityManager
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional accessibilitymanager solutions designed to help your business thrive in the digital age.
+            </p>
           </div>
-
-          <buttononClick={togglePanel}>
-            className="mt-4 w-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-2 px-4 rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
-          >
-            Close
-          </button>
-
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Advanced Solutions</h3>
+              <p className="text-gray-300 mb-4">
+                Cutting-edge technology solutions tailored to your business needs.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+              <p className="text-gray-300 mb-4">
+                Dedicated support team to ensure your success.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Get Support
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Custom Integration</h3>
+              <p className="text-gray-300 mb-4">
+                Seamless integration with your existing systems.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Start Now
+              </Link>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Link 
+              to="/contact" 
+              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
-              Close
-            </button>
+              Get Started Today
+            </Link>
           </div>
         </div>
-      )};
+      </div>
     </>
-  )";
-    },";";
-    {}";";";
-export default AccessibilityManager;"
+  );
+};
 
+export default AccessibilityManagerPage;

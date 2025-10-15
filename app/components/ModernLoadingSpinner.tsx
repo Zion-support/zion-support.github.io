@@ -1,53 +1,78 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-interface LoadingSpinnerProps {},
-      size?: 'sm' | 'md' | 'lg' | 'xl'"
-  color?: 'primary' | 'secondary' | 'white'"
-  text?: string
-  fullScreen?: boolean
-},
-      const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({},)
-      size = 'md', color = 'primary', text, fullScreen = false, _}) => {},"
-      const  sizeClasses = {},
-      sm: 'w-4 h-4',"
-      md= 'w-8 h-8',"
-      lg: 'w-12 h-12',"
-      xl: 'w-16 h-16'},"
-      const  colorClasses = {},
-      primary: 'text-cyan-500',"
-      secondary: 'text-purple-500',"
-      white: 'text-white'},"
-      const  spinner = ()
-    <div  className ="flex flex-col items-center justify-center space-y-4"></div>"
-      <div  className ="relative"></div>"
-        {/* Outer ring */}
-        <divclassName={`${sizeClasses[size]} ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-t-current`},>
-      style={{},
-      animation: 'spin 1s linear infinite'}} />"
-        {/* Inner ring */}
-        <divclassName={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm']} ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-b-current`},>"
-      style={{},
-      animation: 'spin 1.5s linear infinite reverse'}} />"
-      </div>
-      {text && ()}
-
-            {text};
-
-          </p>
-        </div>
-      )}
-    </div>
-  )
-
+const ModernLoadingSpinnerPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>ModernLoadingSpinner - Zion Tech Group</title>
+        <meta name="description" content="Professional modernloadingspinner solutions for modern businesses" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-6">
+              ModernLoadingSpinner
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional modernloadingspinner solutions designed to help your business thrive in the digital age.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Advanced Solutions</h3>
+              <p className="text-gray-300 mb-4">
+                Cutting-edge technology solutions tailored to your business needs.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+              <p className="text-gray-300 mb-4">
+                Dedicated support team to ensure your success.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Get Support
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Custom Integration</h3>
+              <p className="text-gray-300 mb-4">
+                Seamless integration with your existing systems.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Start Now
+              </Link>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Link 
+              to="/contact" 
+              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
           </div>
         </div>
       </div>
     </>
+  );
+};
 
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-
-export default ComponentsPage;'";'";"
+export default ModernLoadingSpinnerPage;

@@ -1,80 +1,78 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-      interface Slide {},
-      id: number,
-      title: string,
-      description: string,
-      image: string,
-      features: string[];
-    },
-    {};
-interface ContentCarouselProps {},
-      slides?: Slide[];
-  autoPlay?: boolean
-  interval?: number
-  className?: string;
-};";
-const defaultSlides: Slide[]  =  [];";";
-  {};";";";
-    id: 1;"
-    title: "AI-Powered Solutions";";";";
-    description:"
-      "Transform your business with cutting-edge artificial intelligence technologies.";"
-    image: "/api/placeholder/600/400";";";";
-    features: []"
-      "Machine Learning";"
-      "Natural Language Processing";"
-      "Computer Vision"]};";";
-  {};";";";
-    id: 2;"
-    title: "Cloud Infrastructure";"
-    description: "Scalable and secure cloud solutions for modern businesses.";"
-    image: "/api/placeholder/600/400";"
-    features: ["Scalable Architecture", "99.9% Uptime", "Global CDN"]};";";
-  {};";";";
-    id: 3;"
-    title: "Cybersecurity";";";";
-    description:"
-      "Protect your digital assets with enterprise-grade security solutions.";"
-    image: "/api/placeholder/600/400";"
-    features: ["Threat Detection", "Data Encryption", "Compliance"]}];
-export default function ContentCarousel() {
-  ;
-};
-
-                    />
-                  </div>
-                </div>
-              </div>
+const ContentCarouselPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>ContentCarousel - Zion Tech Group</title>
+        <meta name="description" content="Professional contentcarousel solutions for modern businesses" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-6">
+              ContentCarousel
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional contentcarousel solutions designed to help your business thrive in the digital age.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Advanced Solutions</h3>
+              <p className="text-gray-300 mb-4">
+                Cutting-edge technology solutions tailored to your business needs.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </Link>
             </div>
-          ))};
-
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+              <p className="text-gray-300 mb-4">
+                Dedicated support team to ensure your success.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Get Support
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Custom Integration</h3>
+              <p className="text-gray-300 mb-4">
+                Seamless integration with your existing systems.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Start Now
+              </Link>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Link 
+              to="/contact" 
+              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
+          </div>
         </div>
       </div>
-      {/* Navigation Arrows */};
-      <buttononClick={goToPrevious},>
-      className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full transition-colors";
-        aria-label="Previous slide";
-      ></button
->
-        <ChevronLeft: className ="w-6 h-6" />";
-      </button>
-      <buttononClick={goToNext},>
-      className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full transition-colors";
-        aria-label="Next slide";
-      ></button
->
-        <ChevronRight: className ="w-6 h-6" />";
-      </button>
-      {/* Dots Indicator */};
-      <div: className ="flex justify-center mt-6 space-x-2"></div>";
-        {slides.map((_, index) => ()}
-          <buttonkey={index},>
-      onClick={() => goToSlide(index)},
-      className={`w-3 h-3 rounded-full transition-colors ${},
-      index === currentSlide ? "bg-cyan-400" : "bg-gray-600";
+    </>
+  );
+};
 
-            }`},
-      aria-label={`Go to slide ${index + 1}`} />
-        ))};
-      </div>
-
+export default ContentCarouselPage;

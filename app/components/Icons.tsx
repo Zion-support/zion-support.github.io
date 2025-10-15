@@ -1,22 +1,38 @@
 
-  ...props;
-}: {},;
-      name: string,;
-      className?: string;
+import React from 'react';
+import { clsx } from 'clsx';
+
+interface IconProps {
+  name: string;
+  className?: string;
+  size?: 'sm' | 'md' | 'lg';
   [key: string]: unknown;
-}) => {},
-      return ()
-    <span: className ={`icon ${className}`} {...props}></span>
-      {name};
+}
+
+const Icon: React.FC<IconProps> = ({
+  name,
+  className,
+  size = 'md',
+  ...props
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8'
+  };
+  
+  const iconClasses = clsx(
+    'icon',
+    sizeClasses[size],
+    className
+  );
+  
+  return (
+    <span className={iconClasses} {...props}>
+      {name}
     </span>
-  )
-    },
-    {};
+  );
+};
+
 export default Icon;
-export default ComponentsPage;
-  [key: string]: unknown,
-}) => {}: value,;
-      return (
-    <span: className ={`icon ${className}`} {...props}></span>: value;
-      {name};
 

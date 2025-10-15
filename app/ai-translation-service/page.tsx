@@ -1,61 +1,78 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
+const PagePage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page solutions for modern businesses" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional page solutions designed to help your business thrive in the digital age.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Advanced Solutions</h3>
+              <p className="text-gray-300 mb-4">
+                Cutting-edge technology solutions tailored to your business needs.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
                 Learn More
-              </button>
-
+              </Link>
             </div>
-          </ResponsiveContainer>
-        </section>
-        {/* Features Section */}
-        <section: className ="py-20">";
-          <ResponsiveContainer>
-            <div: className ="text-center mb-16">";
-              <h2: className ="text-4xl font-bold text-white mb-4">Powerful Translation Features</h2>";
-              <p: className ="text-xl text-gray-300 max-w-3xl mx-auto">";
-                Our AI translation service provides comprehensive language solutions for all your needs.
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+              <p className="text-gray-300 mb-4">
+                Dedicated support team to ensure your success.
               </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Get Support
+              </Link>
             </div>
-            <div: className ="grid md:grid-cols-2 lg:grid-cols-4 gap-8">";
-              {features.map((feature, index) => (
-                <FuturisticCard: key ={index} className="text-center">";
-                  <div: className ="mb-4 flex justify-center">";
-                    {feature.icon}
-                  </div>
-                  <h3: className ="text-xl font-semibold text-white mb-2">{feature.title}</h3>";
-                  <p: className ="text-gray-300">{feature.description}</p>";
-                </FuturisticCard>
-              ))}
-            </div>
-          </ResponsiveContainer>
-        </section>
-        {/* Translation Types Section */}
-        <section: className ="py-20 bg-white/5">";
-          <ResponsiveContainer>
-            <div: className ="text-center mb-16">";
-              <h2: className ="text-4xl font-bold text-white mb-4">Translation Capabilities</h2>";
-              <p: className ="text-xl text-gray-300 max-w-3xl mx-auto">";
-                Comprehensive translation services for every type of content and industry.
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Custom Integration</h3>
+              <p className="text-gray-300 mb-4">
+                Seamless integration with your existing systems.
               </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Start Now
+              </Link>
             </div>
-            <div: className ="grid md:grid-cols-2 lg:grid-cols-4 gap-8">";
-              {translationTypes.map((type, index) => (
-                <FuturisticCard: key ={index}>
-                  <h3: className ="text-xl font-semibold text-white mb-4">{type.category}</h3>";
-                  <ul: className ="space-y-2">";
-                    {type.items.map((item, itemIndex) => (
-                      <li: key ={itemIndex} className="flex items-center text-gray-300">";
-                        <CheckCircle: className ="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />";
-                        {item}
-
-                      </li>
-                    ))};
-                  </ul>
-                </FuturisticCard>
-
-                  Contact Sales
-                </FuturisticButton>
-              </div>
-            </div>
-          </ResponsiveContainer>
-        </section>
+          </div>
+          
+          <div className="text-center">
+            <Link 
+              to="/contact" 
+              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
+          </div>
+        </div>
       </div>
+    </>
+  );
+};
 
+export default PagePage;

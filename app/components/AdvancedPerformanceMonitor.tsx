@@ -1,119 +1,78 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  fmp: number | null;
-  memory: {};
-    usedJSHeapSize: number;
-    totalJSHeapSize: number;
-    jsHeapSizeLimit: number;
-  } | null;
-  navigation: {};
-    loadEventEnd: number;
-    domContentLoadedEventEnd: number;
-    domContentLoadedEventStart: number;
-    loadEventStart: number;
-  } | null;
+const AdvancedPerformanceMonitorPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>AdvancedPerformanceMonitor - Zion Tech Group</title>
+        <meta name="description" content="Professional advancedperformancemonitor solutions for modern businesses" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-6">
+              AdvancedPerformanceMonitor
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional advancedperformancemonitor solutions designed to help your business thrive in the digital age.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Advanced Solutions</h3>
+              <p className="text-gray-300 mb-4">
+                Cutting-edge technology solutions tailored to your business needs.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+              <p className="text-gray-300 mb-4">
+                Dedicated support team to ensure your success.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Get Support
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Custom Integration</h3>
+              <p className="text-gray-300 mb-4">
+                Seamless integration with your existing systems.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Start Now
+              </Link>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Link 
+              to="/contact" 
+              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
-interface PerformanceMonitorProps {};
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enableRealTimeMonitoring?: boolean;
-  logToConsole?: boolean;
-};
-const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({)};
 
-  onMetricsUpdate,
-  enableRealTimeMonitoring = true,
-  logToConsole = false
-}) => {};
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({)};
-    fcp: null,
-    lcp: null,
-    fid= null,
-    cls: null,
-    ttfb: null,
-    fmp: null,
-    memory: null,
-
-      return;
-    };
-    const newMetrics: PerformanceMetrics  =  {};
-
-      fcp: null,
-      lcp: null,
-      fid= null,
-      cls: null,
-      ttfb: null,
-      fmp: null,
-      memory: null,
-
-      newMetrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-      newMetrics.navigation = {};
-        loadEventEnd: navigationEntry.loadEventEnd,
-        domContentLoadedEventEnd: navigationEntry.domContentLoadedEventEnd,
-        domContentLoadedEventStart: navigationEntry.domContentLoadedEventStart,
-        loadEventStart: navigationEntry.loadEventStart
-
-    }
-
-    // First Meaningful Paint (FMP) - approximated
-    const  paintEntries = performance.getEntriesByType('paint');"
-    const  fmpEntry = paintEntries.find(entry => entry.name === 'first-meaningful-paint');"
-    if (fmpEntry) {}
-      newMetrics.fmp = fmpEntry.startTime
-    }
-
-    // Memory usage
-    if ('memory' in performance) {}"
-      const  memoryInfo = (performance as any).memory
-      newMetrics.memory = {}
-
-        usedJSHeapSize: memoryInfo.usedJSHeapSize,
-        totalJSHeapSize: memoryInfo.totalJSHeapSize,
-        jsHeapSizeLimit: memoryInfo.jsHeapSizeLimit
-
-    if (onMetricsUpdate) {}
-      onMetricsUpdate(newMetrics)
-    }
-
-    if (logToConsole) {}
-      console.log('Performance Metrics:', newMetrics);"
-    }
-  }, [onMetricsUpdate, logToConsole])
-  useEffect(() => {}
-    // Initial measurement
-    measurePerformance()
-    if (enableRealTimeMonitoring) {}
-      // Set up real-time monitoring
-      const  observer = new PerformanceObserver((list) => {}
-        list.getEntries().forEach((entry) => {}
-          if (entry.entryType === 'largest-contentful-paint' ||)"
-              entry.entryType === 'first-input' || "
-              entry.entryType === 'layout-shift') {}"
-            measurePerformance()
-          }
-        })
-      })
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });"
-      // Periodic monitoring
-      const  interval = setInterval(measurePerformance, 5000)
-      return () => {}
-        observer.disconnect()
-        clearInterval(interval)
-      }
-    }
-  }, [measurePerformance, enableRealTimeMonitoring])
-  // This component doesn't render anything visible"
-  return null
-}
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-
-export default ComponentsPage;'";'";"
+export default AdvancedPerformanceMonitorPage;

@@ -1,152 +1,78 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-import { 
-  CpuChipIcon, 
-  ShieldCheckIcon, 
-  CloudIcon, 
-
-  RocketLaunchIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  BoltIcon,
-  SparklesIcon,
-  ChartBarIcon,
-
-                >
-                  Learn More
-                </Link>
-              </div>
-              
-              {/* Stats */}
-
-                    style={{
-                      animationDelay: `${index * 100}ms`
-                    }}
-                  >
-
-                      {stat.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-
-                Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
-              </p>
-            </div>
-
-                  style={{
-                    animationDelay: `${index * 100}ms`
-                  }}
-                >
-                  {/* Animated Background */}
-                  <div  className ={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
-                  
-                  {/* Glow Effect */}
-                  <div  className ={`absolute -inset-1 bg-gradient-to-r ${service.gradient} rounded-xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
-
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Micro SAAS Showcase Section */}
-
-                Discover our innovative micro SAAS applications designed to solve specific business challenges with real functionality.
-              </p>
-            </div>
-
-                >
-                  Try Free Trial
-                </Link>
-              </div>
-
-              {/* Analytics Dashboard */}
-
-                >
-                  Try Free Trial
-                </Link>
-              </div>
-
-              {/* Task Manager */}
-
-                >
-                  Try Free Trial
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-
-                We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
-              </p>
-            </div>
-
-                  style={{
-                    animationDelay: `${index * 50}ms`
-                  }}
-                >
-
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Features Section */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+const PagePage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page solutions for modern businesses" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Zion Tech Group?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              We deliver cutting-edge technology solutions that drive business growth and innovation.
+            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional page solutions designed to help your business thrive in the digital age.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <ShieldCheckIcon className="h-12 w-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Cybersecurity</h3>
-              <p className="text-gray-300">
-                Advanced security solutions to protect your digital assets and infrastructure.
+              <h3 className="text-xl font-semibold text-white mb-4">Advanced Solutions</h3>
+              <p className="text-gray-300 mb-4">
+                Cutting-edge technology solutions tailored to your business needs.
               </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </Link>
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <CloudIcon className="h-12 w-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Cloud Infrastructure</h3>
-              <p className="text-gray-300">
-                Scalable cloud solutions for modern business needs and digital transformation.
+              <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+              <p className="text-gray-300 mb-4">
+                Dedicated support team to ensure your success.
               </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Get Support
+              </Link>
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <CpuChipIcon className="h-12 w-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">AI Solutions</h3>
-              <p className="text-gray-300">
-                Intelligent automation and AI-powered solutions for enhanced productivity.
+              <h3 className="text-xl font-semibold text-white mb-4">Custom Integration</h3>
+              <p className="text-gray-300 mb-4">
+                Seamless integration with your existing systems.
               </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Start Now
+              </Link>
             </div>
+          </div>
+          
+          <div className="text-center">
+            <Link 
+              to="/contact" 
+              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
           </div>
         </div>
       </div>
     </>
-ursor/fix-errors-and-merge-to-main-df8b
+  );
+};
+
+export default PagePage;

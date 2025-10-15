@@ -1,86 +1,78 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-
-import {},
-      X,
-      ChevronDown,
-      ChevronRight,
-      Home,
-      Users,
-      Settings,
-      Cloud,
-      Code,
-      Star,
-      ArrowRight,
-
-interface SidebarProps {},
-      isOpen: boolean,
-      onClose: () => void
-    },
-
-      setExpandedSections(prev => {},)
-      const  newSet = new Set(prev)
-      if (newSet.has(section)) {},
-      newSet.delete(section)
-      } else {},
-      newSet.add(section)
-      },
-      return newSet
-    })
-
-                      )};
-                    </div>
-                  </>
-                ))};
-
-              </div>
-            )}
+const SidebarPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Sidebar - Zion Tech Group</title>
+        <meta name="description" content="Professional sidebar solutions for modern businesses" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-6">
+              Sidebar
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional sidebar solutions designed to help your business thrive in the digital age.
+            </p>
           </div>
-
-          {/* Contact Info */}
-          <div  className ="border-t border-white/10 pt-6"></div>"
-            <h4  className ="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Contact Info</h4>"
-            <div  className ="space-y-3"></div>"
-              {contactInfo.map((info, index) => ()}
-                <div  key ={index} className="flex items-center space-x-3 text-sm text-gray-300"></div>"
-                  <div  className ="w-5 h-5 text-cyan-400">{info.icon}</div>"
-                  <span>{info.text}</span>
-                </div>
-              ))}
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Advanced Solutions</h3>
+              <p className="text-gray-300 mb-4">
+                Cutting-edge technology solutions tailored to your business needs.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+              <p className="text-gray-300 mb-4">
+                Dedicated support team to ensure your success.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Get Support
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Custom Integration</h3>
+              <p className="text-gray-300 mb-4">
+                Seamless integration with your existing systems.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Start Now
+              </Link>
             </div>
           </div>
-
-          {/* CTA Button */}
-          <div  className ="mt-6"></div>"
-            <>
-              to="/consultation"
-              className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 font-semibold shadow-lg hover:shadow-cyan-500/25 group"
-              onClick={onClose}
-            ></>
-              <span>Get Started</span>
-              <ArrowRight: className ="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />"
-            </>
-
-import React from 'react';";
-import { X, ChevronDown, ChevronRight } from 'lucide-react';";
-
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void,
-}
-
-interface SidebarProps {}
-  isOpen: boolean}
-  onClose: () => void;}
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-
-  if (!isOpen) return null;
-  return (
-
-            onClick={onClose};
-
-          ></>
-            Contact
-          </>
-        </nav>
+          
+          <div className="text-center">
+            <Link 
+              to="/contact" 
+              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
+          </div>
+        </div>
       </div>
+    </>
+  );
+};
 
+export default SidebarPage;

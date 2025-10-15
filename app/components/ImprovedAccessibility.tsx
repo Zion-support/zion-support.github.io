@@ -1,94 +1,78 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-interface AccessibilitySettings {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
-
-  enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;};
-  enableHighContrast?: boolean;};
-  enableLargeText?: boolean;};
-  enableReducedMotion?: boolean;};
-};
-const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps>  =  ({,
-  children,
-  enableKeyboardNavigation = true,
-  enableScreenReader = true,};
-  enableHighContrast = false,};
-  enableLargeText = false,});
-  enableReducedMotion = false;})
-}) => {
-  const [settings, setSettings]  =  useState<AccessibilitySettings>({
-    highContrast: enableHighContrast,
-    largeText: enableLargeText,
-    reducedMotion: enableReducedMotion,};
-    screenReader: enableScreenReader,};
-    keyboardNavigation: enableKeyboardNavigation,});
-    focusVisible: false;})
-  });
-  const [isVisible, setIsVisible] = useState(false);
-  // Apply accessibility settings
-  useEffect(() => {
-
-      announcement.textContent = message;
-      document.body.appendChild(announcement);
-      setTimeout(() => {
-        document.body.removeChild(announcement);
-      }, 1000);
-
-      return newSettings;
-    });
-  };
+const ImprovedAccessibilityPage: React.FC = () => {
   return (
-    <></>
-
-              <p>Alt + Shift + Tab: Skip to main content</p>
-              <p>Alt + Ctrl + Tab: Toggle this panel</p>
-              <p>Tab: Navigate elements</p>
-              <p>Enter/Space: Activate elements</p>
+    <>
+      <Helmet>
+        <title>ImprovedAccessibility - Zion Tech Group</title>
+        <meta name="description" content="Professional improvedaccessibility solutions for modern businesses" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-6">
+              ImprovedAccessibility
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional improvedaccessibility solutions designed to help your business thrive in the digital age.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Advanced Solutions</h3>
+              <p className="text-gray-300 mb-4">
+                Cutting-edge technology solutions tailored to your business needs.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+              <p className="text-gray-300 mb-4">
+                Dedicated support team to ensure your success.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Get Support
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Custom Integration</h3>
+              <p className="text-gray-300 mb-4">
+                Seamless integration with your existing systems.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Start Now
+              </Link>
             </div>
           </div>
-
-        .high-contrast * {
-          background-color: var(--tw-bg-opacity) !important;
-          color: var(--tw-text-opacity) !important;
-          border-color: currentColor !important;
-        };
-        .large-text {
-          font-size: 1.125rem;
-        };
-        .large-text h1 { font-size: 3.5rem; };
-        .large-text h2 { font-size: 2.5rem; };
-        .large-text h3 { font-size: 2rem; };
-        .large-text h4 { font-size: 1.5rem; };
-        .large-text h5 { font-size: 1.25rem; };
-        .large-text h6 { font-size: 1.125rem; };
-        .reduced-motion * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        };
-        .keyboard-navigation *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
-        };
-        .focus-visible *:focus {
-          outline: 2px solid #06b6d4 !important;
-
-          position: static;
-          width: auto;
-          height: auto;
-          padding: 0.5rem 1rem;,
-          margin: 0;};
-          overflow: visible;};
-          clip: auto;};
-          white-space: normal;};
-        };
-      `}</style>
+          
+          <div className="text-center">
+            <Link 
+              to="/contact" 
+              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
+          </div>
+        </div>
+      </div>
     </>
-  );";
-};";";
-";";";
-export default ImprovedAccessibility;"
+  );
+};
+
+export default ImprovedAccessibilityPage;

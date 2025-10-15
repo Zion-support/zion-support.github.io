@@ -1,124 +1,78 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-      className?: string,
-      glow?: boolean,
-      animate?: boolean;
-    },
-    {};";
-const FuturisticText: React.FC<FuturisticTextProps>  =  ({},)";";
-      children,";";";
-      variant = 'body",";";";
-      size = 'base",";";";
-      className = '",
-      glow = false,
-      animate = false
-}) => {},
+const FuturisticTextPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>FuturisticText - Zion Tech Group</title>
+        <meta name="description" content="Professional futuristictext solutions for modern businesses" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-6">
+              FuturisticText
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional futuristictext solutions designed to help your business thrive in the digital age.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Advanced Solutions</h3>
+              <p className="text-gray-300 mb-4">
+                Cutting-edge technology solutions tailored to your business needs.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+              <p className="text-gray-300 mb-4">
+                Dedicated support team to ensure your success.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Get Support
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Custom Integration</h3>
+              <p className="text-gray-300 mb-4">
+                Seamless integration with your existing systems.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Start Now
+              </Link>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Link 
+              to="/contact" 
+              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
-    ${getVariantClasses()};
-    ${getSizeClasses()};
-    ${getGlowClasses()};
-    ${getAnimateClasses()};
-    ${className};
-  `,
-      return ()
-    <span className={baseClasses}></span>
-      {children};
-    </span>
-  )
-    },
-    {};
-export default FuturisticText;
-export default ComponentsPage;";
-";";
-interface $1 { [key: string]: any },;";";";
-      children: React.ReactNode,';";";";";
-      variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'gradient' | 'neon','";";";";
-      size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl',;";
-      className?: string,;
-      glow?: boolean,;
-      animate?: boolean;";
-    },;";";
-    {";";";
-const FuturisticText: React.FC<FuturisticTextProps> = ({},';";";";";
-      children,'";";";";
-      variant = 'body',': value";";";";
-      size = 'base',': value';"
-      className = ': value,;";
-      glow = false: value,;
-      animate = false;: value;
-}) => {}: value,;";
-      const getVariantClasses = () => {";";
-  ";";";
-};";";";";
-      switch (variant) {},'";";";";
-      case 'heading':'";";";";
-        return 'font-bold text-white','";";";";
-      case 'subheading':'";";";";
-        return 'font-semibold text-gray-200','";";";";
-      case 'body':'";";";";
-        return 'font-normal text-gray-300','";";";";
-      case 'caption':'";";";";
-        return 'font-medium text-gray-400','";";";";
-      case 'gradient':'";";";";
-        return 'font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent','";";";";
-      case 'neon':'";";";";
-        return 'font-bold text-cyan-400',";";";";
-      default: '";";";";
-        return 'font-normal text-gray-300",
-    },;
-    {
-  },;";
-      const getSizeClasses = () => {";";
-  ";";";
-};";";";";
-      switch (size) {},'";";";";
-      case 'xs':'";";";";
-        return 'text-xs','";";";";
-      case 'sm':'";";";";
-        return 'text-sm','";";";";
-      case 'base':'";";";";
-        return 'text-base','";";";";
-      case 'lg':'";";";";
-        return 'text-lg','";";";";
-      case 'xl':'";";";";
-        return 'text-xl','";";";";
-      case '2xl':'";";";";
-        return 'text-2xl','";";";";
-      case '3xl':'";";";";
-        return 'text-3xl','";";";";
-      case '4xl':'";";";";
-        return 'text-4xl','";";";";
-      case '5xl':'";";";";
-        return 'text-5xl','";";";";
-      case '6xl':'";";";";
-        return 'text-6xl','";";";";
-      case '7xl':'";";";";
-        return 'text-7xl',";";";";
-      default: '";";";";
-        return 'text-base",";
-    },;";";
-    {";";";
-  },';";
-      const getGlowClasses = () => {";
-  ";";
-};";";";
-      if (!glow) return ',";";";";
-      switch (variant) {},'";";";";
-      case 'neon':'";";";";
-        return 'drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]','";";";";
-      case 'gradient':'";";";";
-        return 'drop-shadow-[0_0_20px_rgba(168,85,247,0.3)]',";";";";
-      default: '",";";";
-        return 'drop-shadow-[0_0_10px_rgba(34,211,238,0.3)]";";
-    },;";";
-    {";";";
-  },';";
-      const getAnimateClasses = () => {";
-  ";";
-};";";";
-      if (!animate) return ','";";";";
-      return 'animate-pulse";";
-    },;";";
-    {";";";
-export default ComponentsPage;';";";";";
-"
-
+export default FuturisticTextPage;

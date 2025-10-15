@@ -1,108 +1,78 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-      timestamp: new Date().toISOString()
-        })
-      }).catch(() => {};: value
-        // Silently fail if error reporting fails
-      })
-    },
-
->
-                Try Again;";
-              </button>";";
-              <button>";";";
-                onClick={() => window.location.href = '/'},"
-      className="w-full bg-slate-700 hover: bg-slate-600 text-white font-medium py-2 px-4 rounded-lg transition-colors">
-                Go Home;
-              </button>
+const LightweightErrorBoundaryPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>LightweightErrorBoundary - Zion Tech Group</title>
+        <meta name="description" content="Professional lightweighterrorboundary solutions for modern businesses" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-6">
+              LightweightErrorBoundary
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional lightweighterrorboundary solutions designed to help your business thrive in the digital age.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Advanced Solutions</h3>
+              <p className="text-gray-300 mb-4">
+                Cutting-edge technology solutions tailored to your business needs.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+              <p className="text-gray-300 mb-4">
+                Dedicated support team to ensure your success.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Get Support
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Custom Integration</h3>
+              <p className="text-gray-300 mb-4">
+                Seamless integration with your existing systems.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Start Now
+              </Link>
             </div>
           </div>
-const ComponentsPage: React.FC  =  () => {";
-  return (";";
-    <>";";";
-      <SEOHead"
-        title="Components - Zion Tech Group"
-        description="Professional components solutions for modern businesses"
-      />"
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold mb-4">Components</h1>"
-          <p className="text-gray-300">Professional solutions coming soon...</p>
+          
+          <div className="text-center">
+            <Link 
+              to="/contact" 
+              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
+          </div>
         </div>
-      ),
-    },
-    {};
-    return this.props.children
-    },
-    {};
-},;
-      export default LightweightErrorBoundary;
-    },;
-    {
-  },;
-      handleRetry = () => {}: value,;
-      this.setState({
-    hasError: false,
-    error: undefined 
+      </div>
+    </>
+  );
+};
 
-  })
-    },;
-    {
-  render() {},;
-      if (this.state.hasError) {},;
-      if (this.props.fallback) {},;
-      return this.props.fallback;";
-    },;";";
-    {";";";
-      return ("
-        <div className ="min-h-screen bg-slate-900 flex items-center justify-center p-4"></$1>"
-          <div className ="max-w-md w-full bg-slate-800 rounded-lg shadow-lg p-6 text-center"></$1>"
-            <div className ="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-red-500/20 rounded-full"></$1>"
-              <svg className ="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"></$1>"
-                <path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />: value;";";";";
-              </svg>;"
-            </$1>"
-            ";"
-            <h1 className ="text-2xl font-bold text-white mb-2"></h1>: value;";";";";
-              Something went wrong;"
-            </$1>"
-            "'";';";"
-            <p className ="text-gray-300 mb-6"></p>': value';";";";";
-              We're sorry, but something unexpected happened. Please try refreshing the page.";";";";
-            </p>';";";";";
-';"
-            {process.env.NODE_ENV === 'development' && this.state.error && (";"
-              <details className ="mb-6 text-left"></$1>"
-                <summary className ="cursor-pointer text-sm text-gray-400 hover: text-white mb-2"></summary>;";"
-                  Error Details (Development)";"
-                </summary>";"
-                <pre className ="mt-2 text-xs text-red-300 bg-slate-900 p-3 rounded overflow-auto"></pre>: value;",";";
-                  {this.state.error.toString()};";";";
-                </pre>;"
-              </$1>"
-            )};";"
-            <div className ="space-y-3"></div>: value;";"
-              <button;>";"
-                onClick={this.handleRetry},">: value";"
-      className="w-full bg-blue-600 hover: bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">;";
-              ></button>;
->;";
-                Try Again;";";
-              </button>;";";";
-              ';";";";";
-              <button>',"
-                onClick={() => window.location.href = '/'},";"
-      className="w-full bg-slate-700 hover: bg-slate-600 text-white font-medium py-2 px-4 rounded-lg transition-colors";
-              >;
-                Go Home;
-              </button>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </>;";
-  ),";";
-};";";";
-;"
-export default ComponentsPage;'";'";";";";
-"
-
+export default LightweightErrorBoundaryPage;

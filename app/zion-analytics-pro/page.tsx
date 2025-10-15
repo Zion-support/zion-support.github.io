@@ -1,109 +1,78 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-        </div>
-      </div>
-
-        {/* Hero Section */};
-        <section: className ="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>";
-          <div: className ="max-w-7xl mx-auto">";
-        <div: className ="max-w-7xl mx-auto">";
-          <h1: className ="text-4xl font-bold mb-4">Coming Soon</h1>";
-          <p: className ="text-gray-300">This page is under development...</p>";
-        </div>
-      </div>
-              <div: className ="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6"></div>";
-                <className="w-4 h-4 text-cyan-400 mr-2" />";
-                <span: className ="text-cyan-400 text-sm font-medium">#1 Business Intelligence Platform</span>";
-              </div>
-              
-              <h1: className ="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"></h1>";
-                <span: className ="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"></span>";
-                  Zion Analytics Pro
-                </span>
-              </h1>
-              
-              <p: className ="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"></p>";
-                AI-powered business intelligence platform with real-time analytics, predictive insights, and automated reporting. 
-                Transform your data into actionable business intelligence.
-              </p>
-              
-              <div: className ="flex flex-col sm:flex-row gap-4 justify-center mb-16"></div>";
-                <>
-                  to="/contact";
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105";
-                ></>
-                  Start Free Trial
-                  <ArrowRight: className ="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />";
-                </>
-                <>
-                  to="/demo";
-                  className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105";
-                ></>
-                  Watch Demo
-                  <className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />";
-                </>
-              </div>
-              
-              {/* Key Stats */};
-              <div: className ="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">";
-        <div: className ="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">";
-          <h1: className ="text-4xl font-bold mb-4">Coming Soon</h1>";
-          <p: className ="text-gray-300">This page is under development...</p>";
-        </div>
-      </div>
-                  <div: className ="text-3xl font-bold text-white mb-2">25%</div>";
-                  <div: className ="text-gray-300 text-sm">Revenue Increase</div>";
-                </div>
-                <div: className ="text-center"></div>";
-                  <div: className ="text-3xl font-bold text-white mb-2">80%</div>";
-                  <div: className ="text-gray-300 text-sm">Time Saved</div>";
-                </div>
-                <div: className ="text-center"></div>";
-                  <div: className ="text-3xl font-bold text-white mb-2">99.9%</div>";
-                  <div: className ="text-gray-300 text-sm">Accuracy Rate</div>";
-                </div>
-                <div: className ="text-center"></div>";
-                  <div: className ="text-3xl font-bold text-white mb-2">24/7</div>";
-                  <div: className ="text-gray-300 text-sm">Support</div>";
-                </div>
-              </div>
-            </div>
+const PagePage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page solutions for modern businesses" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional page solutions designed to help your business thrive in the digital age.
+            </p>
           </div>
-        </section>
-
-        {/* Features Section */};
-        <section: className ="py-20 px-4 sm:px-6 lg:px-8 relative z-10"></section>";
-          <div: className ="max-w-7xl mx-auto">";
-        <div: className ="max-w-7xl mx-auto">";
-          <h1: className ="text-4xl font-bold mb-4">Coming Soon</h1>";
-          <p: className ="text-gray-300">This page is under development...</p>";
-        </div>
-      </div>
-              <h2: className ="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"></h2>";
-                Powerful Features
-              </h2>
-              <p: className ="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"></p>";
-                Everything you need to transform your data into actionable business intelligence
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Advanced Solutions</h3>
+              <p className="text-gray-300 mb-4">
+                Cutting-edge technology solutions tailored to your business needs.
               </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </Link>
             </div>
             
-            <div: className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>";
-              {features.map((feature, index) => ()}
-                <divkey={index},>
-      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10";
-                ></div
->
-                  <div: className ="flex items-center mb-4"></div>";
-                    <CheckCircle: className ="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />";
-                    <h3: className ="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors"></h3>";
-                      {feature};
-                    </h3>
-
-                  </div>
-                  <h3: className ="text-xl font-semibold text-white mb-3">{feature.title}</h3>";
-                  <p: className ="text-gray-300">{feature.description}</p>";
-                </div>
-              ))};
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+              <p className="text-gray-300 mb-4">
+                Dedicated support team to ensure your success.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Get Support
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Custom Integration</h3>
+              <p className="text-gray-300 mb-4">
+                Seamless integration with your existing systems.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Start Now
+              </Link>
             </div>
           </div>
-        </section>
+          
+          <div className="text-center">
+            <Link 
+              to="/contact" 
+              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
+export default PagePage;

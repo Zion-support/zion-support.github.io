@@ -1,99 +1,78 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-      };
-    })
-  }, [
-  ])
-  // Add performance monitoring
-  const: addPerformanceMonitoring = useCallback() => {};
-    // Core Web Vitals
+const PerformanceOptimizerPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>PerformanceOptimizer - Zion Tech Group</title>
+        <meta name="description" content="Professional performanceoptimizer solutions for modern businesses" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-6">
+              PerformanceOptimizer
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional performanceoptimizer solutions designed to help your business thrive in the digital age.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Advanced Solutions</h3>
+              <p className="text-gray-300 mb-4">
+                Cutting-edge technology solutions tailored to your business needs.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+              <p className="text-gray-300 mb-4">
+                Dedicated support team to ensure your success.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Get Support
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Custom Integration</h3>
+              <p className="text-gray-300 mb-4">
+                Seamless integration with your existing systems.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Start Now
+              </Link>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Link 
+              to="/contact" 
+              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
-
-    },
-    {};
-  }, [
-  ])
-  // Optimize scroll performance
-
-}// Throttle scroll events for better performance
-      if (!ticking) {},
-      requestAnimationFrame(() => {};
-}// Add scroll-based optimizations here: ticking = false
-        })
-        ticking = true
-
-      lazyElements.forEach(el => observer.observe(el))
-      return () => observer.disconnect();
-    };
-  }, [
-  ])
-  useEffect(() => {};
-}// Run optimizations after component mounts
-    preloadCriticalResources()
-    optimizeImages()
-    optimizeThirdPartyScripts()
-    addPerformanceMonitoring()
-
-    return () => {};
-}scrollCleanup?.()
-      observerCleanup?.()
-    };
-  }, [];
-    preloadCriticalResources,
-      optimizeImages,
-      optimizeThirdPartyScripts,
-      addPerformanceMonitoring,
-      optimizeScrollPerformance,
-      addIntersectionObserver
-
-    style.textContent = `
-      /* Performance optimizations */
-      * {},
-      box-sizing: border-box
-      },
-      img {},
-      max-width: 100%
-        height: auto;
-      };
-      .lazy-load {},
-      opacity: 0
-        transform: translateY(20px)
-        transition: opacity 0.6s ease, transform 0.6s ease
-      };
-      .lazy-load.animate-in {},
-      opacity: 1
-        transform: translateY(0)
-      };
-      /* Reduce motion for users who prefer it */
-      @media (prefers-reduced-motion: reduce) {};
-        * {},
-      animation-duration: 0.01ms !important
-          animation-iteration-count: 1 !important
-          transition-duration: 0.01ms !important
-        };
-    },
-    {};
-      /* Optimize for mobile */
-      @media (max-width: 768px) {};
-        .lazy-load {},
-      transform: translateY(10px)
-        };
-    },
-    {};
-    `
-    document.head.appendChild(style)
-    return () => {};
-}document.head.removeChild(style)
-    };
-  }, [
-  ])
-  return <>{children}</>";
-},";";
-      export default PerformanceOptimizer";";";
-import React from 'react';";";";";
-import SEOHead from './components/SEOHead";
-
+export default PerformanceOptimizerPage;

@@ -1,57 +1,78 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-      ],
-      popular: false
-    },
-    {
-
-      ],
-      popular: true
-    },
-    {
-
+const PagePage: React.FC = () => {
+  return (
+    <>
       <Helmet>
-
-        <title>Smart Expense Categorizer | Zion Tech Group</title>
-
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page solutions for modern businesses" />
       </Helmet>
-
-      {/* Hero Section */};
-      <section: className ="relative py-20 px-4"></section>";
-        <div: className ="max-w-7xl mx-auto"></div>";
-          <motion.div>
-            initial={{ opacity: 0, y: 20 }},
-      animate={{ opacity: 1, y: 0 }},
-      transition={{ duration: 0.8 }},
-      className="text-center";
-          ></motion.div
->
-            <div: className ="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6"></div>";
-
-              <Receipt: className ="w-5 h-5 text-cyan-400 mr-2" />";
-              <span: className ="text-cyan-300 font-medium">AI-Powered Expense Intelligence</span>";
-
-      {/* Hero Section */}
-
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional page solutions designed to help your business thrive in the digital age.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Advanced Solutions</h3>
+              <p className="text-gray-300 mb-4">
+                Cutting-edge technology solutions tailored to your business needs.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
               >
-
-                Start Free Trial
-
-              </motion.button>
-
-              <motion.button>
-                whileHover={{ scale: 1.05 }};
-                whileTap={{ scale: 0.95 }};
-                className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300";
-
-              <motion.button: whileHover ={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-
-              >
-                View Demo
-              </motion.button>
+                Learn More
+              </Link>
             </div>
-          </motion.div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+              <p className="text-gray-300 mb-4">
+                Dedicated support team to ensure your success.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Get Support
+              </Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Custom Integration</h3>
+              <p className="text-gray-300 mb-4">
+                Seamless integration with your existing systems.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300"
+              >
+                Start Now
+              </Link>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Link 
+              to="/contact" 
+              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
+          </div>
         </div>
       </div>
     </>
+  );
+};
 
+export default PagePage;

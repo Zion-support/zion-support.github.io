@@ -27,9 +27,10 @@ import {
   DevicePhoneMobileIcon,
   UserPlusIcon,
   CheckCircleIcon,
+} from '@heroicons/react/24/outline';
 
 interface NavigationProps {
-  onSidebarToggle?: () => void
+  onSidebarToggle?: () => void;
 }
 
             </Link>
