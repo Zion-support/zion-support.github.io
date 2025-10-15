@@ -338,6 +338,7 @@ const AIHealthcareSolutionsProPage = () => {
             </div>
           </section>
         </main>
+      </div>
     </>
   );
 };

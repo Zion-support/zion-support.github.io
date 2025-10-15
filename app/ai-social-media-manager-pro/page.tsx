@@ -325,4 +325,4 @@ const AISocialMediaManagerProPage = () => {
     </>
   );
 };
-export default AiSocialMediaManagerProPage;
+export default AISocialMediaManagerProPage;

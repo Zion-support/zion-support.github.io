@@ -3,6 +3,69 @@ import { Helmet } from "react-helmet-async";
 import { ArrowRight, Brain, CheckCircle, Mail, Phone, Play, Shield, Star, Users } from 'lucide-react';
 
 const AIProjectManagerProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const features = [
+    {
+      title: "AI-Powered Task Management",
+      description: "Intelligent task assignment and prioritization based on team capabilities and project requirements",
+      icon: <Brain className="w-6 h-6" />,
+      benefits: ["Smart task distribution", "Priority optimization", "Deadline management"]
+    },
+    {
+      title: "Predictive Risk Analysis",
+      description: "Advanced AI algorithms predict potential project risks and suggest mitigation strategies",
+      icon: <Shield className="w-6 h-6" />,
+      benefits: ["Risk prediction", "Mitigation strategies", "Early warning system"]
+    },
+    {
+      title: "Team Performance Analytics",
+      description: "Comprehensive analytics on team performance, productivity, and collaboration patterns",
+      icon: <Users className="w-6 h-6" />,
+      benefits: ["Performance tracking", "Productivity insights", "Team optimization"]
+    }
+  ];
+
+  const integrations = [
+    { name: "Slack", description: "Real-time team communication", icon: "💬" },
+    { name: "Jira", description: "Issue tracking and project management", icon: "🎯" },
+    { name: "GitHub", description: "Code repository integration", icon: "💻" },
+    { name: "Trello", description: "Visual project boards", icon: "📋" }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$29",
+      period: "per month",
+      features: ["Up to 5 projects", "Basic AI insights", "Email support"],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$79",
+      period: "per month",
+      features: ["Up to 25 projects", "Advanced AI analytics", "Priority support", "Team collaboration"],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$199",
+      period: "per month",
+      features: ["Unlimited projects", "Custom AI models", "24/7 support", "Advanced integrations"],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    { name: "Sarah Johnson", role: "Project Manager", content: "Revolutionary project management!", rating: 5, company: "Tech Corp" },
+    { name: "Mike Chen", role: "Team Lead", content: "AI insights changed our workflow!", rating: 5, company: "Innovation Labs" }
+  ];
+
   return (
     <>
       <Helmet>
@@ -158,7 +221,7 @@ const AIProjectManagerProPage = () => {
                     ) }
                     <div className="text-center mb-8">
                       <h3 className="text-2xl font-bold text-white mb-2">{ plan.name }</h3>
-                      <p className="text-gray-300 mb-4">{ plan.description }</p>
+                      <p className="text-gray-300 mb-4">Perfect for {plan.name.toLowerCase()} teams</p>
                       <div className="flex items-baseline justify-center">
                         <span className="text-5xl font-bold text-cyan-400">{ plan.price }</span>
                         <span className="text-gray-400 ml-2">/{ plan.period }</span>
@@ -256,4 +319,4 @@ const AIProjectManagerProPage = () => {
     </>
   );
 };
-export default AiProjectManagerProPage;
+export default AIProjectManagerProPage;
