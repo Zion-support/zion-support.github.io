@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';;'
 import SEOHead from './components/SEOHead'
 import {"}"
@@ -596,8 +597,13 @@ const Footer: React.FC = () => {
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' }
   ];
+=======
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
+
+export default function Footer() {
   return (
+<<<<<<< HEAD
     <footer className="bg-slate-900 border-t border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
@@ -796,10 +802,17 @@ const Footer: React.FC = () => {
           <p className="text-gray-400 text-sm flex items-center justify-center">
             Made with <HeartIcon className="h-4 w-4 text-red-400 mx-1" /> by Zion Tech Group
           </p>
+=======
+    <footer className="bg-gray-800 text-white py-8">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
         </div>
       </div>
     </footer>
   );
+<<<<<<< HEAD
 };
 
 export default Footer;
@@ -807,3 +820,6 @@ export default Footer;
 >>>>>>> main
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1

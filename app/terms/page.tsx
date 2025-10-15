@@ -1,21 +1,27 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import SEOHead from '../components/SEOHead';";"
 const TermsPage: React.FC = () => {
+=======
+
+
+export default function TermsPage() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
   return (
-    <>
-      <SEOHead= title ="terms - Zion Tech Group - Zion Tech Group"";"
-        description="Zion Tech Group terms service page"";"
-      />
-      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div  className ="text-center">";"
-          <h1  className ="text-4xl font-bold mb-4">terms - Zion Tech Group</h1>";"
-          <p  className ="text-gray-300">Coming soon...</p>";"
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">Terms of Service</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Terms and conditions for using our services.
+          </p>
         </div>
       </div>
-    </>
-  )
+    </div>
+  );
 }
+<<<<<<< HEAD
 export default TermsPage
 =======
 <<<<<<< HEAD
@@ -228,3 +234,5 @@ export default page;
 >>>>>>> main
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react',"
 =======
 <<<<<<< HEAD
@@ -28,59 +29,30 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+=======
+import { Component, ReactNode } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
 }
 
 interface State {
   hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
+  error?: Error;
 }
 
-class ErrorBoundary extends Component<Props, State> {
+export default class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
->>>>>>> main
-      hasError: false,
-      error: null,
-      errorInfo: null
-    };
-<<<<<<< HEAD
-    },
-    {};
-  static getDerivedStateFromError(error: Error): State {},
-      return {},
-=======
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return {
->>>>>>> main
-      hasError: true,
-      error,
-      errorInfo: null
-<<<<<<< HEAD
-    }
-    },
-    {}
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {},
-      console.error('ErrorBoundary caught an error:', error, errorInfo)"
-=======
-    };
-<<<<<<< HEAD
-    },";
-    {};";";
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {},";";";
-      console.error('ErrorBoundary caught an error:", error, errorInfo)
->>>>>>> main
-    this.setState({},)
-=======
+    return { hasError: true, error };
   }
 
+<<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
 >>>>>>> main
@@ -333,14 +305,14 @@ export default ErrorBoundary;'";'";";";";
 
     // Here you would typically send the error to a logging service
     // like Sentry, LogRocket, or DataDog
+=======
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
   }
 
   render() {
     if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
@@ -355,6 +327,7 @@ export default ErrorBoundary;'";'";";";";
                 {this.state.error?.message || 'An unexpected error occurred'}
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <button 
                 onClick={() => window.location.reload()}
                 className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -362,26 +335,24 @@ export default ErrorBoundary;'";'";";";";
               <button: onClick ={() => window.location.reload()}
                 className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500";
 >>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+=======
+              <button
+                onClick={() => this.setState({ hasError: false, error: undefined })}
+                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
               >
                 Try again
               </button>
             </div>
->>>>>>> main
           </div>
         </div>
-      )
+      );
     }
 
-<<<<<<< HEAD
-    return this.props.children
-  }
-}
-
-export default ErrorBoundary;'";'";"
-=======
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default ErrorBoundary;
@@ -390,3 +361,5 @@ export default ErrorBoundary;
 =======
 export default ErrorBoundary;
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1

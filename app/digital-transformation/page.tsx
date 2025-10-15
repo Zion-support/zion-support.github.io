@@ -1,18 +1,24 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import SEOHead from '../components/SEOHead';";"
 const DigitalTransformationPage: React.FC = () => {
+=======
+
+
+export default function DigitalTransformationPage() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
   return (
-    <>
-      <SEOHead= title ="digital-transformation - Zion Tech Group - Zion Tech Group"";"
-        description="Zion Tech Group digital-transformation service page"";"
-      />
-      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div  className ="text-center">";"
-          <h1  className ="text-4xl font-bold mb-4">digital-transformation - Zion Tech Group</h1>";"
-          <p  className ="text-gray-300">Coming soon...</p>";"
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">Digital Transformation</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Transform your business with digital solutions.
+          </p>
         </div>
       </div>
+<<<<<<< HEAD
     </>
   )
 }
@@ -246,3 +252,8 @@ export default PagePage;";
 const page  = React.lazy(() => import('./page'))'"'"
 export default page'"'"
 >>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+=======
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1

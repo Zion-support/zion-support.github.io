@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';";"
 import { RefreshCw, Home, Bug }; from 'lucide-react';";"
 import { Link }; from 'react-router-dom';";"
@@ -191,69 +192,26 @@ import { Link } from 'react-router-dom';
 interface Props {
   children: ReactNode
   fallback?: ReactNode
+=======
+import { Component, ReactNode } from 'react';
+
+interface Props {
+  children: ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
 }
 
->>>>>>> main
 interface State {
-<<<<<<< HEAD
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
-  errorId?: string
-=======
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
-<<<<<<< HEAD
-  errorId?: string,
-};
-class GlobalErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {,
-    super(props),
-=======
-  errorId?: string;
->>>>>>> main
 }
 
-class GlobalErrorBoundary extends Component<Props, State> {
+export default class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-<<<<<<< HEAD
-    super(props)
-    this.state = { hasError: false }
-  }
-
-=======
     super(props);
->>>>>>> main
     this.state = { hasError: false };
-  };
->>>>>>> main
-  static getDerivedStateFromError(error: Error): State {
-    return {,
-      hasError: true,
-      error,
-<<<<<<< HEAD
-      errorId= `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    }
-=======
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    };";
-  };";";
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {";";";
-    // Log error to console in development",";
-    if (process.env.NODE_ENV === 'development') {","
-      console.error('Global Error Boundary caught an error:', error, errorInfo);";";";
-    }";";";
-    // Log error to external service in production"
-    if (process.env.NODE_ENV === 'production') {";";";
-      // Here you would typically send the error to a logging service";";";
-      console.error('Production error: ", error, errorInfo)`;
-    };
-<<<<<<< HEAD
-=======
->>>>>>> main
   }
 
+<<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error to console in development
 <<<<<<< HEAD
@@ -337,11 +295,20 @@ class GlobalErrorBoundary extends Component<Props, State> {
 =======
     });
 >>>>>>> main
+=======
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('GlobalErrorBoundary caught an error:', error, errorInfo);
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
   }
 
   render() {
     if (this.state.hasError) {
       return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <div  className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">";"
@@ -411,10 +378,27 @@ class GlobalErrorBoundary extends Component<Props, State> {
             <div  className ="flex flex-col sm:flex-row gap-3">";"
               <button  onClick ={() => window.location.reload()}
                 className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"";"
+=======
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
+              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+            </div>
+            <div className="mt-4 text-center">
+              <h3 className="text-lg font-medium text-gray-900">Application Error</h3>
+              <p className="mt-2 text-sm text-gray-500">
+                {this.state.error?.message || 'An unexpected error occurred'}
+              </p>
+              <button
+                onClick={() => window.location.reload()}
+                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
               >
-                <RefreshCw: className ="w-4 h-4" />";"
-                Try Again
+                Reload Page
               </button>
+<<<<<<< HEAD
               
               <Link: to ="/"";"
                 className="flex items-center justify-center gap-2 border border-white/30 text-white hover:bg-white/10 font-semibold py-3 px-6 rounded-lg transition-all duration-300"";"
@@ -444,32 +428,14 @@ class GlobalErrorBoundary extends Component<Props, State> {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2f04
                 Go Home
               </Link>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      )
-=======
-<<<<<<< HEAD
-      ),
-    };
-    return this.props.children;
-  };";
-};";";
-export default GlobalErrorBoundary;";";";
-"
-=======
       );
->>>>>>> main
     }
 
-    return this.props.children
+    return this.props.children;
   }
 }
-
-<<<<<<< HEAD
-export default GlobalErrorBoundary
-=======
-export default GlobalErrorBoundary;
->>>>>>> main
->>>>>>> main

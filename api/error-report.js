@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async (req, res) => {
   if (req.method !== 'POST') {"
     return res.status(405).json({ error: 'Method not allowed' });"
@@ -21,10 +22,15 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+=======
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
   }
 
->>>>>>> main
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     const { error, stack, userAgent, url } = req.body
@@ -50,43 +56,25 @@ export default async function handler(req, res) {
     // Log the error (in production, you'd send this to a logging service)
     console.error('Client Error Report:', {
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+=======
+    const { error, stack, userAgent, url } = req.body;
+    
+    console.error('Client Error Report:', {
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
       error,
       userAgent,
       url,
 <<<<<<< HEAD
       timestamp: new Date().toISOString()
-<<<<<<< HEAD
-    })
-    res.status(200).json({ message: 'Error reported successfully' });"
-=======
-<<<<<<< HEAD
-  ";
-  });";";
-    res.status(200).json({";";";
-    message: 'Error reported successfully' "
-  ";";";
-  });";";";
-  } catch (error) {";";";
-    "
-    console.error('Error reporting failed: ",";";";
-    error);";";";";
-    res.status(500).json({ error: 'Failed to report error' "
-";";";
-  });";";
-  };";";
-};";";";
-"
-=======
     });
-
-    res.status(200).json({ message: 'Error reported successfully' });";
->>>>>>> main
+    
+    res.status(200).json({ message: 'Error reported successfully' });
   } catch (error) {
-    console.error('Error reporting failed=', error);"
-    res.status(500).json({ error: 'Failed to report error' });"
+    console.error('Error reporting failed:', error);
+    res.status(500).json({ error: 'Failed to report error' });
   }
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 }
 >>>>>>> main
@@ -116,3 +104,5 @@ export default function handler(req, res) {
   res.status(200).json({ message: 'API endpoint' });
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1

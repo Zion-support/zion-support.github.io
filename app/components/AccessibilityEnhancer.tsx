@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';;"
 
 =======
@@ -77,10 +78,33 @@ const AccessibilityEnhancer: React.FC = () => {
       const toggle  = document.querySelector('button[onclick*="high-contrast"]')'"'";
       if (toggle) {
         toggle.remove();
+=======
+import { useEffect } from 'react';
+
+export default function AccessibilityEnhancer() {
+  useEffect(() => {
+    // Accessibility enhancements
+    const enhanceAccessibility = () => {
+      // Add skip links
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
+      document.body.insertBefore(skipLink, document.body.firstChild);
+
+      // Add main content landmark
+      const main = document.querySelector('main');
+      if (main && !main.id) {
+        main.id = 'main-content';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
       }
     };
+
+    enhanceAccessibility();
   }, []);
+
   return null;
+<<<<<<< HEAD
 };
 export default AccessibilityEnhancer;
 <<<<<<< HEAD
@@ -135,3 +159,6 @@ export default AccessibilityEnhancer;';';";";";
 >>>>>>> main
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1

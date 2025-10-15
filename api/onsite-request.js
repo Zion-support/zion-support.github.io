@@ -1,83 +1,43 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs'
 import path from 'path'
 const  dir = path.join(process.cwd(), 'data');"
 const  file = path.join(dir, 'onsite-requests.json');"
+=======
+import fs from 'fs';
+import path from 'path';
+
+const dir = path.join(process.cwd(), 'data');
+const file = path.join(dir, 'onsite-requests.json');
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {"
-    res.setHeader('Content-Type', 'application/json');"
-    res.end(JSON.stringify({ error: 'Method not allowed' }));"
-    return
+  if (req.method !== 'POST') {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
   }
 
   try {
-    const { name, email, company, phone, message, serviceType, preferredDate } = req.body
+    const { name, email, company, phone, message, serviceType, preferredDate } = req.body;
+    
     // Ensure data directory exists
     if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true })
+      fs.mkdirSync(dir, { recursive: true });
     }
 
     // Load existing requests
-    let  requests = []
-=======
-<<<<<<< HEAD
-      id: Date.now().toString(),};
-      ...req.body,};
-      status: 'pending",};
-      createdAt: new Date().toISOString()};
-    };";
-    requests.push(newRequest);";";
-    fs.writeFileSync(file, JSON.stringify(requests, null, 2));";";";
-    res.setHeader('Content-Type', 'application/json');"
-    res.end(JSON.stringify({";";
-    success: true,";";";
-    message: 'Onsite request submitted successfully' "
-";
-  }));";";
-  } catch (error) {";";";
-    console.error('Error:', error);'
-    console.error('Error saving onsite request:', error);'
-    res.setHeader('Content-Type', 'application/json');'
-    res.end(JSON.stringify({ error: 'Failed to save request" ";";
-  ";";";
-  }));"
-  };";";
-}";";";
-import fs from 'fs";";";";
-import path from 'path";";";";
-const dir = path.join(process.cwd(), 'data');";"
-const file = path.join(dir, 'onsite-requests.json');";";";
-export default async function handler(req, res) {";";";
-    "
-    if (req.method !== 'POST') {";"
-    res.setHeader('Content-Type', 'application/json');";";";";
-    res.end(JSON.stringify({ error: 'Method not allowed' "
-  ";";";
-  }));";
-    return;
-  };
-  try {
-    const { name, email, company, phone, message, serviceType, preferredDate 
-  
-  } catch (error) {
-    console.error(error);
-  };
-  };
-    // Ensure data directory exists
-    if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true 
-  
-  });
-    };";
-    // Load existing requests";";
-    let requests = [];";";";
-    if (fs.existsSync(file)) {"
-      const data = fs.readFileSync(file, 'utf8');";
+    let requests = [];
+    if (fs.existsSync(file)) {
+      const data = fs.readFileSync(file, 'utf8');
       requests = JSON.parse(data);
-    };
+    }
+
     // Add new request
     const newRequest = {
+<<<<<<< HEAD
 =======
 // API endpoint for onsite service requests
 import fs from 'fs';
@@ -127,17 +87,23 @@ export default async function handler(req, res) {
 =======
     const request = {
 >>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
       id: Date.now().toString(),
->>>>>>> main
       name,
       email,
+      company,
       phone,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
       message,
       serviceType,
       preferredDate,
       timestamp: new Date().toISOString(),
+<<<<<<< HEAD
       status: 'pending'"
     }
     requests.push(newRequest)
@@ -248,3 +214,27 @@ export default function handler(req, res) {
   res.status(200).json({ message: 'API endpoint' });
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+=======
+      status: 'pending'
+    };
+    
+    requests.push(newRequest);
+    
+    // Save to file
+    fs.writeFileSync(file, JSON.stringify(requests, null, 2));
+    
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Onsite request submitted successfully',
+      requestId: newRequest.id
+    }));
+  } catch (error) {
+    console.error('Onsite request error:', error);
+    res.setHeader('Content-Type', 'application/json');
+    res.status(500).end(JSON.stringify({ 
+      error: 'Failed to submit onsite request' 
+    }));
+  }
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1

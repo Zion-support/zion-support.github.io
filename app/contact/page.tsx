@@ -1,10 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';;'
 import SEOHead from './components/SEOHead'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
 
-const ContactPage: React.FC = () => {
+
+export default function ContactPage() {
   return (
+<<<<<<< HEAD
     <>
       <SEOHead
         title="Contact - Zion Tech Group""
@@ -811,9 +816,20 @@ const ContactPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">Contact Us</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Get in touch with our team for your AI and IT needs.
+          </p>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
       </div>
-    </>
+    </div>
   );
+<<<<<<< HEAD
 };";
 ";";
 export default ContactPage;";";";
@@ -821,3 +837,6 @@ export default ContactPage;";";";
 >>>>>>> main
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1

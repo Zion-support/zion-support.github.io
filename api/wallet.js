@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // API endpoint for wallet operations
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,6 +60,19 @@ import path from 'path';
 const file = path.join(process.cwd(), 'data', 'wallets.json');
 
 export default async function handler(req, res) {
+=======
+import fs from 'fs';
+import path from 'path';
+
+const file = path.join(process.cwd(), 'data', 'wallets.json');
+
+// Ensure data directory exists
+if (!fs.existsSync(path.dirname(file))) {
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+}
+
+export default function handler(req, res) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -66,6 +80,7 @@ export default async function handler(req, res) {
   try {
     const { action, userId, amount, currency = 'USD' } = req.body;
 
+<<<<<<< HEAD
     if (!action || !userId) {
       return res.status(400).json({ 
         error: 'Action and user ID are required' 
@@ -82,77 +97,26 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
     let: wallets = [];
 >>>>>>> main
-    if (fs.existsSync(file)) {
-      const  data = fs.readFileSync(file, 'utf8');"
-      wallets = JSON.parse(data)
-    }
-
-<<<<<<< HEAD
-    // Find or create wallet for user
-    let  wallet = wallets.find(w => w.userId === userId)
-    if (!wallet) {
-      wallet = {
-        id= Date.now().toString(),
-        userId,
-        balance: 0,
-        currency,
-        transactions: [],
-        createdAt: new Date().toISOString()
-      }
-      wallets.push(wallet)
-    }
-
-    // Process action
-    switch (action) {
-      case 'deposit':"
-        wallet.balance += amount
-        wallet.transactions.push({
-          id= Date.now().toString(),
-          type: 'deposit',"
-          amount,
-          currency,
-          timestamp: new Date().toISOString()
-        })
-        break
-      case 'withdraw':"
-        if (wallet.balance < amount) {
-          return res.status(400).json({ error: "Insufficient balance" });"
-        }
-        wallet.balance -= amount
-        wallet.transactions.push({
-          id= Date.now().toString(),
-          type: 'withdraw',"
-          amount,
-          currency,
-          timestamp: new Date().toISOString()
-        })
-        break
-      default:
-        return res.status(400).json({ error: "Invalid action" });"
-    }
-
-    // Save to file
-    fs.writeFileSync(file, JSON.stringify(wallets, null, 2))
-    res.status(200).json({ 
-      success: true, 
-      wallet  {
-        id= wallet.id,
-        userId= wallet.userId,
-        balance: wallet.balance,
-        currency: wallet.currency
-      }
-    })
-  } catch (error) {
-    console.error('Wallet operation error:', error);"
-    res.status(500).json({ error: "Failed to process wallet operation" });"
 =======
-    const: newWallet = {
+    if (!address || !type) {
+      return res.status(400).json({ error: 'Address and type are required' });
+    }
+
+    // Read existing wallets
+    let wallets = [];
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
+    if (fs.existsSync(file)) {
+      const data = fs.readFileSync(file, 'utf8');
+      wallets = JSON.parse(data);
+    }
+
+    const newWallet = {
       id: Date.now().toString(),
       address,
-      type,;
-      name: name || '',";
-      userId: userId || '',";
-      status: 'active',";
+      type,
+      name: name || '',
+      userId: userId || '',
+      status: 'active',
       createdAt: new Date().toISOString()
     };
 =======
@@ -215,6 +179,7 @@ export default async function handler(req, res) {
 
     res.status(200).json({ 
       success: true,
+<<<<<<< HEAD
       balance: wallet.balance,
       currency: wallet.currency,
       action
@@ -241,3 +206,13 @@ export default function handler(req, res) {
   res.status(200).json({ message: 'API endpoint' });
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+=======
+      message: 'Wallet added successfully',
+      walletId: newWallet.id
+    });
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ error: 'Failed to save wallet' });
+  }
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1

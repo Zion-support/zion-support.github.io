@@ -1,21 +1,24 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';;';";"
 import SEOHead from './components/SEOHead';";"
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
 
-const AiServicesPage: React.FC = () => {
+
+export default function AIServicesPage() {
   return (
-    <>
-      <SEOHead
-        title="Ai Services - Zion Tech Group"";"
-        description="Professional ai services solutions for modern businesses";"
-      />";";"
-      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div  className ="text-center">";"
-          <h1  className ="text-4xl font-bold mb-4">Ai Services</h1>";"
-          <p  className ="text-gray-300">Professional solutions coming soon...</p>;";"
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">AI Services</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Cutting-edge artificial intelligence solutions.
+          </p>
         </div>
       </div>
+<<<<<<< HEAD
     </>
   )
 }
@@ -152,3 +155,8 @@ export default AiServicesPage;'";'";";";
 =======
 export default Page;
 >>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+=======
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1

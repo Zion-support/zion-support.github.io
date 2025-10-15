@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';;";";"
 
 interface LoadingSpinnerProps {
@@ -159,8 +160,13 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       </div>
     );
   }
+=======
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
+
+export default function LoadingSpinner() {
   return (
+<<<<<<< HEAD
     <div className={`flex items-center justify-center ${className}`}>
       {spinner}
     </div>
@@ -217,3 +223,10 @@ export default LoadingSpinner;
 =======
 export default LoadingSpinner'"'";
 >>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+=======
+    <div className="flex items-center justify-center">
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1

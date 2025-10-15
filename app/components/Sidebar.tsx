@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useCallback, useMemo } from 'react'"
 =======
 <<<<<<< HEAD
@@ -26,55 +27,11 @@ import {
 <<<<<<< HEAD
 } from '@heroicons/react/24/outline';";
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
 
-import React, { useState, useCallback, useMemo } from 'react'";
->>>>>>> main
->>>>>>> main
-import {},
-      X,
-      ChevronDown,
-      ChevronRight,
-      Home,
-      Users,
-      Settings,
-      Cloud,
-      Code,
-      Star,
-      ArrowRight,
-<<<<<<< HEAD
-      Phone,";
-      Mail,";";
-      MapPin;";";";
-} from "lucide-react";
-=======
-      Phone,
-      Mail,
-<<<<<<< HEAD
-      MapPin
-} from "lucide-react"
-=======
-      MapPin;
-} from "lucide-react";";
->>>>>>> main
->>>>>>> main
-interface SidebarProps {},
-      isOpen: boolean,
-      onClose: () => void
-    },
-<<<<<<< HEAD
-    {};
-const Sidebar: React.FC<SidebarProps>  =  ({,
-    isOpen, onClose 
-  }) => {},
-      const location = useLocation()
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set())
-  const toggleSection = useCallback((section: string) => {},
-=======
-    {}
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {},
-      const  location = useLocation()
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set())
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const  toggleSection = useCallback((section: string) => {},
 =======
@@ -786,9 +743,23 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             </div>
           ))}
         </nav>
+=======
+export default function Sidebar() {
+  return (
+    <aside className="hidden lg:block w-64 bg-gray-100 min-h-screen">
+      <div className="p-4">
+        <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+        <ul className="space-y-2">
+          <li><a href="/ai-services" className="text-blue-600 hover:underline">AI Services</a></li>
+          <li><a href="/it-services" className="text-blue-600 hover:underline">IT Services</a></li>
+          <li><a href="/5g-solutions" className="text-blue-600 hover:underline">5G Solutions</a></li>
+          <li><a href="/micro-saas-solutions" className="text-blue-600 hover:underline">Micro SaaS</a></li>
+        </ul>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
       </div>
-    </div>
+    </aside>
   );
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 =======
@@ -923,3 +894,6 @@ export default Sidebar
     {}";";";
 export default Sidebar'";";";
 >>>>>>> main
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1

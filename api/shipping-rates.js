@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // API endpoint for shipping rates
 <<<<<<< HEAD
   let rates = [];  try {
@@ -44,6 +45,8 @@
   }";";";
 }"
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
 export default function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -127,6 +130,7 @@ export default function handler(req, res) {
     res.status(500).json({ error: 'Failed to calculate shipping rates' });
   }
 }
+<<<<<<< HEAD
 >>>>>>> main
 =======
     res.status(500).json({ 
@@ -141,3 +145,5 @@ export default function handler(req, res) {
   res.status(200).json({ message: 'API endpoint' });
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1

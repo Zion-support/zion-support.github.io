@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async (req, res) => {
   if (req.method !== 'POST') {"
     return res.status(405).json({ error: 'Method not allowed' });"
@@ -82,6 +83,8 @@ export default async (req, res) => {";";";
 "
 =======
 // API endpoint for quote requests
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
 export default function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -155,6 +158,7 @@ export default function handler(req, res) {
     res.status(500).json({ error: 'Internal server error' });
   }
 }
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> main
 =======
@@ -171,3 +175,5 @@ export default function handler(req, res) {
   res.status(200).json({ message: 'API endpoint' });
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
