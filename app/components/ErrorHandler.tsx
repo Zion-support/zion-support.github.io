@@ -1,6 +1,6 @@
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode
@@ -65,10 +65,6 @@ class ErrorHandler extends Component<Props, State> {
       console.log('Error data prepared for reporting:', errorData);
     } catch (reportingError) {
       console.error('Failed to prepare error data for reporting:', reportingError);
-      console.log('Error data prepared for reporting:', errorData);
-    } catch (reportingError) {
-      console.error('Failed to prepare error data for reporting:', reportingError);
-
     }
   }
 

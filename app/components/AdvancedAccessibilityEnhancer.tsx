@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { Eye, Volume2, MousePointer, Keyboard, Contrast, ZoomIn } from 'lucide-react';
+import { Eye } from 'lucide-react';
 
 interface AccessibilitySettings {
   highContrast: boolean;

@@ -1,19 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Code, 
-  Smartphone, 
-  Globe, 
-  Database, 
-  ArrowRight, 
-  CheckCircle, 
-  Users, 
-  BarChart3,
-  Clock,
-  Shield,
-  Zap,
-  Cpu
-} from 'lucide-react';
+import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarChart3, Shield, Zap, Cpu } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';

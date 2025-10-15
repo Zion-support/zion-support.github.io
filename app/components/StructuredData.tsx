@@ -89,30 +89,22 @@ export const ServiceStructuredData: React.FC<{ service: Record<string, unknown> 
   <StructuredData
     type="Service"
     data={{
-<<<<<<< HEAD
-      name: service['name'],
-      description: service['description'],
-=======
+
       name: service['name'] as string,
       description: service['description'] as string,
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+
       provider: {
         '@type': 'Organization',
         name: 'Zion Tech Group',
         url: 'https://ziontechgroup.com',
       },
       areaServed: 'Worldwide',
-<<<<<<< HEAD
-      serviceType: service['category'],
-      offers: service['price'] ? {
-        '@type': 'Offer',
-        price: service['price'],
-=======
+
       serviceType: service['category'] as string,
       offers: service['price'] ? {
         '@type': 'Offer',
         price: service['price'] as number,
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock',
       } : undefined,

@@ -1,35 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Brain, 
-  Star, 
-  Users, 
-  Shield, 
-  Clock, 
-  TrendingUp,
-  BarChart3,
-  Database,
-  Smartphone,
-  Globe,
-  Target,
-  Lightbulb,
-  Rocket,
-  Award,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Code,
-  Eye,
-  MessageSquare,
-  Cpu,
-  Network,
-  FileText,
-  Settings
-} from 'lucide-react';
+import { CheckCircle, ArrowRight, TrendingUp, BarChart3, Eye, MessageSquare, Network, FileText, Settings } from 'lucide-react';
 
 const AISolutionsPage: React.FC = () => {
   const aiServices = [
@@ -215,8 +187,7 @@ const AISolutionsPage: React.FC = () => {
     }
   ];
 
-  const categories = ['All', 'Conversational AI', 'Computer Vision', 'Content Creation', 'Analytics', 'Automation', 'Blockchain'];
-
+  
   const useCases = [
     {
       title: 'Customer Service',

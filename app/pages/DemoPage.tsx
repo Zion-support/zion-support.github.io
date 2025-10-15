@@ -1,30 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Zap,
-  Brain,
-  Cpu,
-  Cloud,
-  Shield,
-  Smartphone,
-  BarChart3,
-  Target,
-  Rocket,
-  Users,
-  Award,
-  Clock,
-  Globe,
-  Lock,
-  Play,
-  Calendar,
-  Phone,
-  Mail,
-  ExternalLink
-} from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Rocket, Clock, Play, Calendar, Phone } from 'lucide-react';
 
 const DemoPage: React.FC = () => {
   const [selectedDemo, setSelectedDemo] = useState('ai-solutions');

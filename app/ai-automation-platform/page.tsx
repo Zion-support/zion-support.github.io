@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
 
 const AIAutomationPlatform: React.FC = () => {
@@ -40,22 +38,10 @@ const AIAutomationPlatform: React.FC = () => {
     "Scalable workflows",
     "Cost reduction"
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">Page</h1>
-          <p className="text-gray-300 text-center">Coming soon...</p>
-        </div>
-      </div>    </>
-=======
         <title>AI Automation Platform - Intelligent Process Automation | Zion Tech Group</title>
         <meta name="description" content="Transform your business with our AI automation platform. Automate workflows, optimize processes, and achieve 70% efficiency gains with intelligent automation solutions." />
         <meta name="keywords" content="AI automation, process automation, workflow automation, business intelligence, machine learning, AI platform" />
@@ -91,14 +77,16 @@ const AIAutomationPlatform: React.FC = () => {
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Platform Features</h2>
-              <p className="text-xl text-gray-300">Comprehensive AI automation capabilities</p>
+              <h2 className="text-4xl font-bold text-white mb-4">Powerful Automation Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our platform provides comprehensive automation capabilities designed to transform your business operations.
+              </p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400 transition-all duration-300">
+                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}>
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -113,15 +101,17 @@ const AIAutomationPlatform: React.FC = () => {
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Platform</h2>
-              <p className="text-xl text-gray-300">Proven results and measurable impact</p>
+              <h2 className="text-4xl font-bold text-white mb-4">Measurable Results</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                See the impact of AI automation on your business with quantifiable improvements.
+              </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
+                <div key={index} className="flex items-center space-x-4">
                   <Circle className="w-6 h-6 text-cyan-400 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
+                  <span className="text-gray-300 text-lg">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -144,7 +134,6 @@ const AIAutomationPlatform: React.FC = () => {
         </section>
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
   );
 };
 

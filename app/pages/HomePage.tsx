@@ -1,7 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
+
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 import { 
@@ -24,20 +22,7 @@ import AnimatedCard from '../components/AnimatedCard';
 import { services } from '../data/servicesData';
 
 export default function HomePage() {
-const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "description": "Advanced AI and IT solutions provider specializing in cybersecurity, cloud infrastructure, and digital transformation.",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://ziontechgroup.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 const HomePage: React.FC = () => {
   return (
     <>

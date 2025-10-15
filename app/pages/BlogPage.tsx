@@ -1,18 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Calendar,
-  Clock,
-  User,
-  Tag,
-  Search,
-  Filter,
-  TrendingUp,
-  BookOpen,
-  ExternalLink
-} from 'lucide-react';
+import { ArrowRight, Calendar, Clock, Search, BookOpen } from 'lucide-react';
 
 const BlogPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

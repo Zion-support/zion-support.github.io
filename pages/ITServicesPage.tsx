@@ -166,14 +166,10 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+
+
   // const categories = ['All', 'Infrastructure', 'Security', 'DevOps', 'Database', 'Networking', 'Consulting'];
 
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
   const stats = [
     { number: '500+', label: 'Infrastructure Projects', icon: Server },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },

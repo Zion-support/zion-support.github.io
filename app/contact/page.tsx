@@ -1,4 +1,4 @@
-import { ArrowRight, Mail, Smartphone, Globe, Clock, MapPin, Send, CheckCircle } from "lucide-react";
+import { ArrowRight, Mail, Smartphone, Globe, Clock, MapPin, Send, CheckCircle } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -43,22 +43,16 @@ export default function Contact() {
 
   const contactInfo = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
+
+
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
       details: ["+1 302 464 0950", "Mon-Fri 9AM-6PM EST"],
       action: "Call Now"
-<<<<<<< HEAD
-    },    {
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
-=======
+
+
     },
     {
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
       details: "kleber@ziontechgroup.com",
@@ -77,8 +71,7 @@ export default function Contact() {
       description: "Middletown DE 19709"
     },
     {
-<<<<<<< HEAD
-=======
+
       icon: <Clock className="w-6 h-6" />,
       title: 'Phone',
       value: '+1 (555) 123-4567',
@@ -101,22 +94,15 @@ export default function Contact() {
       title: 'Business Hours',
       value: 'Monday - Friday',
 value: 'Monday - Friday',
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
+
       icon: <Clock className="w-6 h-6" />,
       title: "Business Hours",
-<<<<<<< HEAD
-      details: ["Mon-Fri: 9AM-6PM EST", "Sat: 10AM-4PM EST"],
-      action: "Schedule Call"
-<<<<<<< HEAD
-    }  ];
-=======
+
       details: "Mon - Fri: 9:00 AM - 6:00 PM",
       description: "EST Time Zone"
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
+
     }
   ];
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
   const services = [
     "AI Business Intelligence",
