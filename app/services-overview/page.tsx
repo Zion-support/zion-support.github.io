@@ -4,6 +4,32 @@ import { Brain, Code, Wifi, Cloud, Target, Users, TrendingUp, Clock, Zap, Shield
 
 const ServicesOverviewPage: React.FC = () => {
   const serviceCategories = [
+    {
+      title: "AI Services",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-600",
+      description: "Revolutionary AI-powered solutions for modern businesses"
+    },
+    {
+      title: "IT Services",
+      icon: <Code className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-600",
+      description: "Comprehensive IT solutions for digital transformation"
+    },
+    {
+      title: "5G Solutions",
+      icon: <Wifi className="w-8 h-8" />,
+      color: "from-green-500 to-teal-600",
+      description: "Next-generation 5G network solutions"
+    },
+    {
+      title: "Cloud Services",
+      icon: <Cloud className="w-8 h-8" />,
+      color: "from-orange-500 to-red-600",
+      description: "Scalable cloud infrastructure and services"
+    }
+  ];
+
   const features = [
     {
       title: "AI Services",

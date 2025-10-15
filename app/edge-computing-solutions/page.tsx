@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, Zap, Shield, CheckCircle, ArrowRight, Star, Clock, Users, Award, Cpu, Globe } from 'lucide-react';
+import { Wifi, Zap, Shield, CheckCircle, ArrowRight, Star, Award, Cpu, Globe } from 'lucide-react';
 
 const EdgeComputingSolutionsPage: React.FC = () => {
   const features = [
