@@ -1,37 +1,37 @@
-import { Suspense, useEffect } from 'react'
+import { Suspense, useEffect, lazy } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-// Import pages
-import HomePage from './app/page';
-import AboutPage from './app/about/page';
-import ServicesPage from './app/services/page';
-import ContactPage from './app/contact/page';
-import AIServicesPage from './app/ai-services/page';
-import ITServicesPage from './app/it-services/page';
-import CloudInfrastructurePage from './app/cloud-infrastructure/page';
-import FiveGSolutionsPage from './app/5g-solutions/page';
-import TeamPage from './app/team/page';
-import CareersPage from './app/careers/page';
-import HelpPage from './app/help/page';
-import PrivacyPage from './app/privacy/page';
-import TermsPage from './app/terms/page';
-import PricingPage from './app/pricing/page';
-import BlogPage from './app/blog/page';
-import CaseStudiesPage from './app/case-studies/page';
-import PartnershipsPage from './app/partnerships/page';
-import APIDocsPage from './app/api-docs/page';
-import AccessibilityPage from './app/accessibility/page';
-import AISolutionsPage from './app/ai-solutions/page';
-import DigitalTransformationPage from './app/digital-transformation/page';
-import MicroSAASSolutionsPage from './app/micro-saas-solutions/page';
-import AIContentGeneratorPage from './app/ai-content-generator/page';
-import DataAnalyticsPage from './app/data-analytics/page';
-import WebDevelopmentPage from './app/web-development/page';
-import MobileDevelopmentPage from './app/mobile-development/page';
-import DatabaseManagementPage from './app/database-management/page';
-import NetworkInfrastructurePage from './app/network-infrastructure/page';
-import CookiesPage from './app/cookies/page';
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./app/page'));
+const AboutPage = lazy(() => import('./app/about/page'));
+const ServicesPage = lazy(() => import('./app/services/page'));
+const ContactPage = lazy(() => import('./app/contact/page'));
+const AIServicesPage = lazy(() => import('./app/ai-services/page'));
+const ITServicesPage = lazy(() => import('./app/it-services/page'));
+const CloudInfrastructurePage = lazy(() => import('./app/cloud-infrastructure/page'));
+const FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'));
+const TeamPage = lazy(() => import('./app/team/page'));
+const CareersPage = lazy(() => import('./app/careers/page'));
+const HelpPage = lazy(() => import('./app/help/page'));
+const PrivacyPage = lazy(() => import('./app/privacy/page'));
+const TermsPage = lazy(() => import('./app/terms/page'));
+const PricingPage = lazy(() => import('./app/pricing/page'));
+const BlogPage = lazy(() => import('./app/blog/page'));
+const CaseStudiesPage = lazy(() => import('./app/case-studies/page'));
+const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
+const APIDocsPage = lazy(() => import('./app/api-docs/page'));
+const AccessibilityPage = lazy(() => import('./app/accessibility/page'));
+const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
+const DigitalTransformationPage = lazy(() => import('./app/digital-transformation/page'));
+const MicroSAASSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
+const AIContentGeneratorPage = lazy(() => import('./app/ai-content-generator/page'));
+const DataAnalyticsPage = lazy(() => import('./app/data-analytics/page'));
+const WebDevelopmentPage = lazy(() => import('./app/web-development/page'));
+const MobileDevelopmentPage = lazy(() => import('./app/mobile-development/page'));
+const DatabaseManagementPage = lazy(() => import('./app/database-management/page'));
+const NetworkInfrastructurePage = lazy(() => import('./app/network-infrastructure/page'));
+const CookiesPage = lazy(() => import('./app/cookies/page'));
 
 // Import components
 import Navigation from './app/components/Navigation';
@@ -41,10 +41,13 @@ import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
-// Loading component
+// Enhanced loading component
 const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
+      <p className="text-gray-600 animate-pulse">Loading...</p>
+    </div>
   </div>
 )
 
@@ -117,13 +120,37 @@ export default function App() {
                   <Route path="/accessibility" element={<AccessibilityPage />} />
                   
                   {/* Catch all route */}
-                  <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
-                    <div className="text-center">
-                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>
-                      <p className="text-gray-600 mb-8">Page not found</p>
-                      <a href="/" className="text-blue-600 hover:text-blue-800">Go back home</a>
+                  <Route path="*" element={
+                    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+                      <div className="text-center max-w-md mx-auto px-4">
+                        <div className="mb-8">
+                          <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
+                          <h2 className="text-2xl font-semibold text-gray-700 mb-4">Page Not Found</h2>
+                          <p className="text-gray-600 mb-8">
+                            Sorry, we couldn't find the page you're looking for. 
+                            It might have been moved, deleted, or doesn't exist.
+                          </p>
+                        </div>
+                        <div className="space-y-4">
+                          <a 
+                            href="/" 
+                            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                          >
+                            Go Back Home
+                          </a>
+                          <div className="text-sm text-gray-500">
+                            <a href="/contact" className="text-blue-600 hover:text-blue-800">
+                              Contact Support
+                            </a>
+                            {' • '}
+                            <a href="/services" className="text-blue-600 hover:text-blue-800">
+                              Browse Services
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>} />
+                  } />
                 </Routes>
               </Suspense>
             </main>

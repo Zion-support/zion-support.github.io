@@ -20,7 +20,40 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Global error caught:', error, errorInfo);
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Global error caught:', error, errorInfo);
+    }
+    
+    // Send error to monitoring service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Replace with your error monitoring service (e.g., Sentry, LogRocket, etc.)
+      this.reportError(error, errorInfo);
+    }
+  }
+
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    // Example error reporting - replace with your service
+    const errorData = {
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+    };
+    
+    // Send to your error monitoring service
+    // Example: fetch('/api/error-report', { method: 'POST', body: JSON.stringify(errorData) });
+    
+    // For now, store in localStorage for debugging
+    try {
+      const existingErrors = JSON.parse(localStorage.getItem('errorLogs') || '[]');
+      existingErrors.push(errorData);
+      localStorage.setItem('errorLogs', JSON.stringify(existingErrors.slice(-10))); // Keep last 10 errors
+    } catch (e) {
+      // Ignore localStorage errors
+    }
   }
 
   render() {
