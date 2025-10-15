@@ -1,37 +1,42 @@
+const CACHE_NAME = 'zion-tech-v1';
+const urlsToCache = [
+  '/',
+  '/about',
+  '/services',
+  '/contact',
+  '/static/js/bundle.js',
+  '/static/css/main.css'
+];
 
-        return cache.addAll(STATIC_ASSETS);
-  })
-      .then(() => {
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => {
+        return cache.addAll(urlsToCache);
+      })
+  );
+});
 
+self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(request)
-      .then((response) => {
-        // Return cached version if available;
-if (response) {
-          return responseursor/fix-errors-and-merge-to-main-d2b1
-        // Otherwise, fetch from network
-
-      })
-  )
-})
-// Fetch event
-
-
-  event.respondWith()
     caches.match(event.request)
-
+      .then((response) => {
+        // Return cached version or fetch from network
+        return response || fetch(event.request);
       })
-  )
-})
-// Activate event
+  );
+});
 
-  event.waitUntil()
-    caches.keys().then((cacheNames) => {}
-      return Promise.all()
-        cacheNames.map((cacheName) => {}
-          if ($1) {}
-  // If body
-
-
-
-
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== CACHE_NAME) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
