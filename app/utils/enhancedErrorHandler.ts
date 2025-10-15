@@ -1,51 +1,39 @@
 import React from 'react';
 export const enhancedErrorHandler = {
-  handleError: (error: Error, context?: string) => {
+  handleErr, o: (err, o: Error, context?: stri, n) => {
         
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window !== 'undefined' && window.gt, a) {
       window.gtag('event', 'exception', {
-        description: error.message;
-        context: context
+        descripti, o:  ,context context
       });
     }
     
     return {
-      message: 'Something went wrong. Please try again.';
-      code: 'GENERIC_ERROR'
+      messa, g:  ,code 'GENERIC_ERROR'
     };
   };
-  handleApiError: (error: unknown) => {
+  handleApiErr, o: (err, o: unkno, w) => {
     const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
     const status = errorWithResponse.response?.status;
     const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
     
-    switch (status) {
-      case 400:
-        return { message: 'Invalid request', code: 'BAD_REQUEST' };
-      case 401:
-        return { message: 'Unauthorized', code: 'UNAUTHORIZED' };
-      case 403:
-        return { message: 'Forbidden', code: 'FORBIDDEN' };
-      case 404:
-        return { message: 'Not found', code: 'NOT_FOUND' };
-      case 500:
-        return { message: 'Internal server error', code: 'SERVER_ERROR' };
-      default:
-        return { message: message || 'An error occurred', code: 'UNKNOWN_ERROR' };
+    switch (stat, u) {
+      case, 40:  ,message 'Invalid request', co, d: 'BAD_REQUEST' };
+      case, 40:  ,message 'Unauthorized', co, d: 'UNAUTHORIZED' };
+      case, 40:  ,message 'Forbidden', co, d: 'FORBIDDEN' };
+      case, 40:  ,message 'Not found', co, d: 'NOT_FOUND' };
+      case, 50:  ,message 'Internal server error', co, d: 'SERVER_ERROR' };
+      defau, l:  ,message message || 'An error occurred', co, d: 'UNKNOWN_ERROR' };
     }
   };
-  handleNetworkError: (error: unknown) => {
-        return {
-      message: 'Network error. Please check your connection.';
-      code: 'NETWORK_ERROR'
+  handleNetworkErr, o:  ,code 'NETWORK_ERROR'
     };
   };
-  handleValidationError: (errors: Record<string, string[]>) => {
-    const errorMessages = Object.values(errors).flat();
+  handleValidationErr, o: (erro, r: Record<string, string[]>) => {
+    const errorMessages = Object.values(erro, r).flat();
     return {
-      message: errorMessages.join(', ');
-      code: 'VALIDATION_ERROR';
-      details: errors
+      messa, g: errorMessages.join(', ');
+      co, d:  ,details errors
     };
   }
 };

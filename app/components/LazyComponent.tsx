@@ -36,7 +36,14 @@ export function useLazyLoad(ref: React.RefObject<HTMLElement>, options?: Interse
   const [isVisible, setIsVisible] = React.useState(false);
 
   React.useEffect(() => {
-    if (!ref.current) return; }
+    if (!ref.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
       },
       {
         threshold: 0.1,

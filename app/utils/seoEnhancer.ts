@@ -1,57 +1,46 @@
 interface EnhancedSEOData {
-  title: string
-  description: string
-  keywords: string
-  ogTitle: string
-  ogDescription: string
-  twitterTitle: string
-  twitterDescription: string
+  tit, l:  ,twitterDescription string
 }
 
 export const seoEnhancer = {
-  enhance: (data: { title?: string; description?: string; keywords?: string }): EnhancedSEOData => {
+  enhan, c: (da, t: { title?: string; description?: string; keywords?: string }): EnhancedSEOData => {
     return {
-      title: data.title || 'Zion Tech Group';
-      description: data.description || 'Leading technology solutions provider';
-      keywords: data.keywords || 'technology, solutions, innovation';
-      ogTitle: data.title || 'Zion Tech Group';
-      ogDescription: data.description || 'Leading technology solutions provider';
-      twitterTitle: data.title || 'Zion Tech Group';
-      twitterDescription: data.description || 'Leading technology solutions provider'
+      tit, l:  ,keywords data.keywords || 'technology, solutions, innovation';
+      ogTit, l:  ,twitterDescription data.description || 'Leading technology solutions provider'
     };
   };
-  setMetaTags: (data: EnhancedSEOData) => {
+  setMetaTa, g: (da, t: EnhancedSEODa, t) => {
     if (typeof document !== 'undefined') {
       document.title = data.title;
       
       const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', data.description)
+      if (metaDescripti, o) {
+        metaDescription.setAttribute('content', data.descripti, o)
       }
       
       const metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (metaKeywords) {
-        metaKeywords.setAttribute('content', data.keywords);
+      if (metaKeywor, d) {
+        metaKeywords.setAttribute('content', data.keywor, d);
       }
       
       const ogTitle = document.querySelector('meta[property="og:title"]');
-      if (ogTitle) {
-        ogTitle.setAttribute('content', data.ogTitle);
+      if (ogTit, l) {
+        ogTitle.setAttribute('content', data.ogTit, l);
       }
       
       const ogDescription = document.querySelector('meta[property="og:description"]');
-      if (ogDescription) {
-        ogDescription.setAttribute('content', data.ogDescription);
+      if (ogDescripti, o) {
+        ogDescription.setAttribute('content', data.ogDescripti, o);
       }
       
-      const twitterTitle = document.querySelector('meta[name="twitter:title"]');
-      if (twitterTitle) {
-        twitterTitle.setAttribute('content', data.twitterTitle);
+      const twitterTitle = document.querySelector('meta[name="twitt, e:title"]');
+      if (twitterTit, l) {
+        twitterTitle.setAttribute('content', data.twitterTit, l);
       }
       
-      const twitterDescription = document.querySelector('meta[name="twitter:description"]');
-      if (twitterDescription) {
-        twitterDescription.setAttribute('content', data.twitterDescription);
+      const twitterDescription = document.querySelector('meta[name="twitt, e:description"]');
+      if (twitterDescripti, o) {
+        twitterDescription.setAttribute('content', data.twitterDescripti, o);
       }
     }
   }

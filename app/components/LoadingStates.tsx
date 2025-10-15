@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Loader2, Zap, Brain, Shield, Cloud } from 'lucide-react';
 
@@ -273,4 +271,3 @@ export const CloudLoadingPage: React.FC = () => (
 export const FiveGLoadingPage: React.FC = () => (
   <ServiceLoader service="5g" message="Establishing 5G connection..." />
 );
->>>>>>> cursor/analyze-improve-and-deploy-application-a84d

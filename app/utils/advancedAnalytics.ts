@@ -2,36 +2,34 @@ import React from 'react';
 // Global gtag function declaration
 declare global {
   interface Window {
-    gtag: (command: string, targetId: string, config?: Record<string, unknown>) => void;
+    gt, a: (comma, n: string, target, I: string, config?: Record<string, unknown>) => void;
   }
 }
 
 export const advancedAnalytics = {
-  trackPageView: (page: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
+  trackPageVi, e: (pa, g: stri, n) => {
+    if (typeof window !== 'undefined' && window.gt, a) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_path: page
+        page_pa, t: page
       });
     }
   };
-  trackEvent: (eventName: string, parameters: Record<string, unknown> = { /* empty */ }) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, parameters);
+  trackEve, n: (eventNa, m: string, paramete, r: Record<string, unknown> = { /* empty */ }) => {
+    if (typeof window !== 'undefined' && window.gt, a) {
+      window.gtag('event', eventName, paramete, r);
     }
   };
-  trackConversion: (conversionId: string, value?: number, currency?: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
+  trackConversi, o: (conversion, I: string, value?: number, currency?: stri, n) => {
+    if (typeof window !== 'undefined' && window.gt, a) {
       window.gtag('event', 'conversion', {
-        send_to: conversionId;
-        value: value;
-        currency: currency
+        send_, t:  ,currency currency
       });
     }
   };
-  setUserProperties: (properties: Record<string, unknown>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
+  setUserProperti, e: (properti, e: Record<string, unknown>) => {
+    if (typeof window !== 'undefined' && window.gt, a) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
-        user_properties: properties
+        user_properti, e: properties
       });
     }
   }

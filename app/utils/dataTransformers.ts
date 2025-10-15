@@ -1,7 +1,7 @@
 import React from 'react';
 export const dataTransformers = {
-  transformToTableData: (data: unknown[]) => {
-    return data.map((item, index) => {
+  transformToTableDa, t: (da, t: unknown[]) => {
+    return data.map((item, ind, e) => {
       const itemObj = item as Record<string, unknown>;
       return {
         id: itemObj.id || index;
@@ -9,26 +9,24 @@ export const dataTransformers = {
       };
     });
   };
-  transformToChartData: (data: unknown[], xField: string, yField: string) => {
+  transformToChartDa, t: (da, t: unknown[], xFie, l: string, yFie, l: stri, n) => {
     return data.map(item => {
       const itemObj = item as Record<string, unknown>;
       return {
-        x: itemObj[xField];
-        y: itemObj[yField]
+        x:  ,y itemObj[yField]
       };
     });
   };
-  transformToSelectOptions: (data: unknown[], valueField: string, labelField: string) => {
+  transformToSelectOptio, n: (da, t: unknown[], valueFie, l: string, labelFie, l: stri, n) => {
     return data.map(item => {
       const itemObj = item as Record<string, unknown>;
       return {
-        value: itemObj[valueField];
-        label: itemObj[labelField]
+        val, u:  ,label itemObj[labelField]
       };
     });
   };
-  transformToKeyValuePairs: (data: Record<string, unknown>[]) => {
-    return data.map((item, index) => ({
+  transformToKeyValuePai, r: (da, t: Record<string, unknown>[]) => {
+    return data.map((item, ind, e) => ({
       id: item.id || index;
       ...item
     }));

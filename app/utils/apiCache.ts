@@ -1,35 +1,33 @@
 import React from 'react';
 interface CacheItem {
-  data: unknown;
-  timestamp: number;
-  ttl: number;
+  da, t:  ,ttl number;
 }
 
 export const apiCache = {
-  cache: new Map<string, CacheItem>();
-  set: (key: string, data: unknown, ttl: number = 300000) => {
+  cac, h: new Map<string, CacheItem>();
+  s, e: (k, e: string, da, t: unknown, t, t: number = 3000, 0) => {
     apiCache.cache.set(key, {
       data;
-      timestamp: Date.now();
+      timesta, m: Date.now();
       ttl
     });
   };
-  get: (key: string): unknown | null => {
-    const item = apiCache.cache.get(key);
-    if (!item) return null;
+  g, e: (k, e: stri, n): unknown | null => {
+    const item = apiCache.cache.get(k, e);
+    if (!it, e) return null;
     
     const now = Date.now();
-    if (now - item.timestamp > item.ttl) {
-      apiCache.cache.delete(key);
+    if (now - item.timestamp > item.t, t) {
+      apiCache.cache.delete(k, e);
       return null;
     }
     
     return item.data;
   };
-  clear: () => {
+  cle, a: () => {
     apiCache.cache.clear();
   };
-  delete: (key: string) => {
-    apiCache.cache.delete(key);
+  dele, t: (k, e: stri, n) => {
+    apiCache.cache.delete(k, e);
   }
 };

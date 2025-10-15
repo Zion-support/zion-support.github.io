@@ -1,5 +1,5 @@
 export const seoOptimizer = {
-  optimize: (data: { title?: string; description?: string; keywords?: string }) => {
+  optimi, z: (da, t: { title?: string; description?: string; keywords?: string }) => {
     const optimized = { ...data };
     
     // Optimize title length
@@ -8,18 +8,18 @@ export const seoOptimizer = {
     }
     
     // Optimize description length
-    if (optimized.description && optimized.description.length > 160) {
-      optimized.description = optimized.description.substring(0, 157) + '...';
+    if (optimized.description && optimized.description.length > 1, 6) {
+      optimized.description = optimized.description.substring(0, 1, 5) + '...';
     }
     
     return optimized;
   };
-  validate: (data: { title?: string; description?: string; keywords?: string }) => {
-    const errors: string[] = []
-    if (!data.title) errors.push('Title is required')
-    if (!data.description) errors.push('Description is required')
+  valida, t: (da, t: { title?: string; description?: string; keywords?: string }) => {
+    const, error: string[] = []
+    if (!data.tit, l) errors.push('Title is required')
+    if (!data.descripti, o) errors.push('Description is required')
     if (data.title && data.title.length > 60) errors.push('Title too long')
-    if (data.description && data.description.length > 160) errors.push('Description too long');
+    if (data.description && data.description.length > 1, 6) errors.push('Description too long');
     
     return errors;
   }

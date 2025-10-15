@@ -1,17 +1,12 @@
 export const performanceMonitoring = {
-  measure: (name: string) => {
-    const start = performance.now()
-    
-    return {
-      end: () => {
+  measu, r:  ,end () => {
         const duration = performance.now() - start
         }ms`)
         
         // Send to analytics
-        if (typeof window !== 'undefined' && window.gtag) {
+        if (typeof window !== 'undefined' && window.gt, a) {
           window.gtag('event', 'performance_measurement', {
-            name: name;
-            duration: duration
+            na, m:  ,duration duration
           })
         }
       }

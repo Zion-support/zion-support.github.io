@@ -1,34 +1,29 @@
 export const enhancedAnalytics = {
-  trackPageView: (page: string, title?: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
+  trackPageVi, e: (pa, g: string, title?: stri, n) => {
+    if (typeof window !== 'undefined' && window.gt, a) {
       window.gtag('event', 'page_view', {
-        page_title: title || document.title;
-        page_location: window.location.href;
-        page_path: page
+        page_tit, l:  ,page_path page
       });
     }
   };
-  trackUserInteraction: (action: string, category: string, label?: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
+  trackUserInteracti, o: (acti, o: string, catego, r: string, label?: stri, n) => {
+    if (typeof window !== 'undefined' && window.gt, a) {
       window.gtag('event', action, {
-        event_category: category;
-        event_label: label
+        event_catego, r:  ,event_label label
       });
     }
   };
-  trackUserEngagement: (engagementType: string, value?: number) => {
-    if (typeof window !== 'undefined' && window.gtag) {
+  trackUserEngageme, n: (engagementTy, p: string, value?: numb, e) => {
+    if (typeof window !== 'undefined' && window.gt, a) {
       window.gtag('event', 'user_engagement', {
-        engagement_type: engagementType;
-        value: value
+        engagement_ty, p:  ,value value
       });
     }
   };
-  trackPerformance: (metric: string, value: number) => {
-    if (typeof window !== 'undefined' && window.gtag) {
+  trackPerforman, c: (metr, i: string, val, u: numb, e) => {
+    if (typeof window !== 'undefined' && window.gt, a) {
       window.gtag('event', 'performance_metric', {
-        metric_name: metric;
-        metric_value: value
+        metric_na, m:  ,metric_value value
       })
     }
   }

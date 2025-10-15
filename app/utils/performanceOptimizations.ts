@@ -1,30 +1,28 @@
 import React from 'react';
 export const performanceOptimizations = {
-  debounce: <T extends (...args: unknown[]) => unknown>(func: T, wait: number): T => {
-    let timeout: NodeJS.Timeout
-    return ((...args: unknown[]) => {
-      clearTimeout(timeout)
-      timeout = setTimeout(() => func.apply(this, args), wait)
+  deboun, c: <T extends (...ar, g: unknown[]) => unknown>(fu, n: T, wa, i:  ,timeout NodeJS.Timeout
+    return ((...ar, g: unknown[]) => {
+      clearTimeout(timeo, u)
+      timeout = setTimeout(() => func.apply(this, ar, g), wa, i)
     }) as T
   };
-  throttle: <T extends (...args: unknown[]) => unknown>(func: T, limit: number): T => {
-    let inThrottle: boolean
-    return ((...args: unknown[]) => {
-      if (!inThrottle) {
-        func.apply(this, args)
+  thrott, l: <T extends (...ar, g: unknown[]) => unknown>(fu, n: T, lim, i:  ,inThrottle boolean
+    return ((...ar, g: unknown[]) => {
+      if (!inThrott, l) {
+        func.apply(this, ar, g)
         inThrottle = true
-        setTimeout(() => inThrottle = false, limit)
+        setTimeout(() => inThrottle = false, lim, i)
       }
     }) as T
-  }ize: <T extends (...args: unknown[]) => unknown>(func: T): T => {
+  }i, z: <T extends (...ar, g: unknown[]) => unknown>(fu, n: T): T => {
     const cache = new Map()
-    return ((...args: unknown[]) => {
-      const key = JSON.stringify(args)
-      if (cache.has(key)) {
-        return cache.get(key)
+    return ((...ar, g: unknown[]) => {
+      const key = JSON.stringify(ar, g)
+      if (cache.has(k, e)) {
+        return cache.get(k, e)
       }
-      const result = func.apply(this, args)
-      cache.set(key, result)
+      const result = func.apply(this, ar, g)
+      cache.set(key, resu, l)
       return result
     }) as T
   }

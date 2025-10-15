@@ -1,32 +1,32 @@
 import React from 'react';
 export const cacheManager = {
-  cache: new Map<string, { data: unknown; timestamp: number; ttl: number }>();
-  set: (key: string, data: unknown, ttl: number = 300000) => {
+  cac, h: new Map<string, { da, t:  ,ttl number }>();
+  s, e: (k, e: string, da, t: unknown, t, t: number = 3000, 0) => {
     cacheManager.cache.set(key, {
       data;
-      timestamp: Date.now();
+      timesta, m: Date.now();
       ttl
     });
   };
-  get: (key: string) => {
-    const item = cacheManager.cache.get(key);
-    if (!item) return null;
+  g, e: (k, e: stri, n) => {
+    const item = cacheManager.cache.get(k, e);
+    if (!it, e) return null;
     
     const now = Date.now();
-    if (now - item.timestamp > item.ttl) {
-      cacheManager.cache.delete(key);
+    if (now - item.timestamp > item.t, t) {
+      cacheManager.cache.delete(k, e);
       return null;
     }
     
     return item.data;
   };
-  clear: () => {
+  cle, a: () => {
     cacheManager.cache.clear();
   };
-  delete: (key: string) => {
-    cacheManager.cache.delete(key);
+  dele, t: (k, e: stri, n) => {
+    cacheManager.cache.delete(k, e);
   };
-  has: (key: string) => {
-    return cacheManager.cache.has(key);
+  h, a: (k, e: stri, n) => {
+    return cacheManager.cache.has(k, e);
   }
 };
