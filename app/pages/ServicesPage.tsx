@@ -9,31 +9,43 @@ const ServicesPage: React.FC = () => {
       icon: <Zap className="w-8 h-8 text-purple-400" />,
       title: "AI Solutions",
       description: "Cutting-edge artificial intelligence solutions for business automation and intelligence.",
-      link: "/ai-solutions"
+      link: "/ai-analytics-dashboard-pro",
+      price: "From $299/month"
     },
     {
       icon: <Shield className="w-8 h-8 text-cyan-400" />,
       title: "Cybersecurity",
       description: "Comprehensive security solutions to protect your digital assets and data.",
-      link: "/cybersecurity"
+      link: "/ai-cybersecurity-platform",
+      price: "From $2,999/month"
     },
     {
       icon: <Cloud className="w-8 h-8 text-green-400" />,
-      title: "Cloud Services",
-      description: "Scalable cloud infrastructure and migration services for modern businesses.",
-      link: "/cloud-services"
+      title: "IT Services",
+      description: "Professional IT services including infrastructure, cloud migration, and support.",
+      link: "/it-services",
+      price: "From $2,500/month"
     },
     {
       icon: <Code className="w-8 h-8 text-yellow-400" />,
       title: "5G Technology",
       description: "Next-generation 5G infrastructure and implementation services.",
-      link: "/5g-solutions"
+      link: "/5g-implementation",
+      price: "From $50,000"
     },
     {
       icon: <Database className="w-8 h-8 text-red-400" />,
-      title: "Data Analytics",
-      description: "Advanced data analytics and business intelligence solutions.",
-      link: "/data-analytics"
+      title: "Voice AI",
+      description: "Advanced AI voice assistant with natural language processing and multi-language support.",
+      link: "/ai-voice-assistant-enterprise",
+      price: "From $2,999/month"
+    },
+    {
+      icon: <Database className="w-8 h-8 text-blue-400" />,
+      title: "AI Accounting",
+      description: "Automated bookkeeping and financial management with AI-powered assistance.",
+      link: "/ai-accounting-assistant",
+      price: "From $99/month"
     }
   ];
 
@@ -62,7 +74,7 @@ const ServicesPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-slate-700 hover:border-purple-500 transition-colors">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-slate-700 hover:border-cyan-500 transition-colors">
                   <div className="mb-4">
                     {service.icon}
                   </div>
@@ -72,9 +84,12 @@ const ServicesPage: React.FC = () => {
                   <p className="text-gray-300 mb-4">
                     {service.description}
                   </p>
+                  <div className="text-cyan-400 font-semibold text-lg mb-4">
+                    {service.price}
+                  </div>
                   <Link 
                     to={service.link}
-                    className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4" />
