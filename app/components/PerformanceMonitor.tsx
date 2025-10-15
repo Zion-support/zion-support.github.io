@@ -22,9 +22,14 @@ const PerformanceMonitor: React.FC = () => {
         });
       }
       
-      // Also log in development
+      // Log in development for debugging
       if (process.env.NODE_ENV === 'development') {
         console.log(`[Web Vitals] ${metric.name}:`, metric.value);
+      }
+      
+      // Send to analytics service in production
+      if (process.env.NODE_ENV === 'production') {
+        // Example: sendToAnalytics(metric);
       }
     };
 
