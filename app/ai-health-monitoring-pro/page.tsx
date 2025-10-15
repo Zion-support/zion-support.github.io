@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Calendar, 
-  Users, 
+  Heart, 
+  Activity, 
   BarChart3, 
   Zap, 
   CheckCircle, 
@@ -10,140 +10,139 @@ import {
   ArrowRight,
   Clock,
   Target,
-  TrendingUp,
-  FileText,
-  MessageSquare,
-  Bell,
   Shield,
-  Database
+  Smartphone,
+  Database,
+  AlertTriangle,
+  TrendingUp
 } from 'lucide-react';
 
-const AiProjectManagementProPage: React.FC = () => {
+const AiHealthMonitoringProPage: React.FC = () => {
   const features = [
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "AI Task Automation",
-      description: "Automatically assign tasks, set deadlines, and optimize workflows based on team capacity and skills"
+      icon: <Heart className="w-6 h-6" />,
+      title: "AI Health Analysis",
+      description: "Advanced algorithms analyze your health data to provide personalized insights and recommendations"
+    },
+    {
+      icon: <Activity className="w-6 h-6" />,
+      title: "Real-time Monitoring",
+      description: "Continuous health monitoring with instant alerts for any concerning changes or patterns"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Predictive Analytics",
-      description: "AI-powered insights to predict project risks, resource needs, and completion timelines"
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Smart Team Collaboration",
-      description: "Intelligent team matching, workload balancing, and communication optimization"
+      title: "Health Trends",
+      description: "Track your health progress over time with detailed analytics and trend analysis"
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Goal Tracking",
-      description: "Automated progress tracking with smart alerts and milestone management"
+      title: "Goal Setting",
+      description: "Set personalized health goals and receive AI-powered recommendations to achieve them"
     },
     {
-      icon: <FileText className="w-6 h-6" />,
-      title: "Document Intelligence",
-      description: "AI-powered document analysis, summarization, and knowledge extraction"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Privacy Protection",
+      description: "HIPAA-compliant data protection with end-to-end encryption for your health information"
     },
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Performance Insights",
-      description: "Real-time analytics and reporting with actionable recommendations for improvement"
+      icon: <Smartphone className="w-6 h-6" />,
+      title: "Mobile Integration",
+      description: "Seamless integration with wearables and health apps for comprehensive data collection"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$29",
+      name: "Basic",
+      price: "$19",
       period: "/month",
-      description: "Perfect for small teams and freelancers",
+      description: "Perfect for individuals starting their health journey",
       features: [
-        "5 Team Members",
-        "Unlimited Projects",
-        "Basic AI Features",
-        "Standard Templates",
+        "Basic Health Tracking",
+        "Monthly Reports",
         "Email Support",
-        "Mobile App"
+        "Standard Metrics",
+        "Mobile App",
+        "Basic Alerts"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$79",
+      price: "$49",
       period: "/month",
-      description: "Ideal for growing teams and agencies",
+      description: "Ideal for health-conscious individuals and fitness enthusiasts",
       features: [
-        "25 Team Members",
-        "Advanced AI Automation",
-        "Custom Workflows",
+        "Advanced AI Analysis",
+        "Real-time Alerts",
         "Priority Support",
-        "Advanced Analytics",
-        "API Access",
-        "Integrations"
+        "Custom Health Goals",
+        "Wearable Integration",
+        "Detailed Analytics",
+        "Family Sharing"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$149",
       period: "/month",
-      description: "For large organizations and enterprises",
+      description: "For healthcare providers and wellness programs",
       features: [
-        "Unlimited Team Members",
-        "Custom AI Models",
-        "White-label Options",
-        "24/7 Phone Support",
-        "Advanced Security",
+        "Patient Management",
+        "HIPAA Compliance",
+        "24/7 Support",
         "Custom Integrations",
-        "Dedicated Account Manager"
+        "Advanced Security",
+        "Reporting Dashboard",
+        "API Access"
       ],
       popular: false
     }
   ];
 
-  const integrations = [
-    { name: "Slack", icon: <MessageSquare className="w-6 h-6" />, color: "text-purple-600" },
-    { name: "Microsoft Teams", icon: <Users className="w-6 h-6" />, color: "text-blue-600" },
-    { name: "Google Workspace", icon: <FileText className="w-6 h-6" />, color: "text-green-600" },
-    { name: "Jira", icon: <Target className="w-6 h-6" />, color: "text-blue-500" },
-    { name: "Trello", icon: <Calendar className="w-6 h-6" />, color: "text-cyan-600" },
-    { name: "Asana", icon: <BarChart3 className="w-6 h-6" />, color: "text-orange-600" }
+  const healthMetrics = [
+    {
+      title: "Heart Rate",
+      description: "Continuous heart rate monitoring with arrhythmia detection",
+      icon: <Heart className="w-8 h-8" />
+    },
+    {
+      title: "Sleep Quality",
+      description: "Comprehensive sleep analysis with improvement recommendations",
+      icon: <Clock className="w-8 h-8" />
+    },
+    {
+      title: "Activity Levels",
+      description: "Track steps, calories, and exercise with AI-powered insights",
+      icon: <Activity className="w-8 h-8" />
+    },
+    {
+      title: "Stress Management",
+      description: "Monitor stress levels and receive personalized relaxation techniques",
+      icon: <Target className="w-8 h-8" />
+    }
   ];
 
-  const projectTypes = [
-    {
-      title: "Software Development",
-      description: "Agile project management with AI-powered sprint planning and code analysis",
-      icon: <FileText className="w-8 h-8" />
-    },
-    {
-      title: "Marketing Campaigns",
-      description: "End-to-end campaign management with AI insights and performance optimization",
-      icon: <Target className="w-8 h-8" />
-    },
-    {
-      title: "Event Planning",
-      description: "Comprehensive event management with AI-powered logistics and timeline optimization",
-      icon: <Calendar className="w-8 h-8" />
-    },
-    {
-      title: "Product Launch",
-      description: "Strategic product launch management with AI-driven market analysis and planning",
-      icon: <TrendingUp className="w-8 h-8" />
-    }
+  const integrations = [
+    { name: "Apple Health", icon: <Smartphone className="w-6 h-6" />, color: "text-gray-600" },
+    { name: "Google Fit", icon: <Activity className="w-6 h-6" />, color: "text-green-600" },
+    { name: "Fitbit", icon: <Heart className="w-6 h-6" />, color: "text-blue-600" },
+    { name: "Garmin", icon: <Target className="w-6 h-6" />, color: "text-orange-600" },
+    { name: "Samsung Health", icon: <BarChart3 className="w-6 h-6" />, color: "text-purple-600" },
+    { name: "MyFitnessPal", icon: <TrendingUp className="w-6 h-6" />, color: "text-cyan-600" }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Project Management Pro - Zion Tech Group | Intelligent Project Management</title>
-        <meta name="description" content="Revolutionary AI-powered project management platform. Automate workflows, predict risks, and optimize team performance. Increase productivity by 40% with intelligent project management." />
-        <meta name="keywords" content="AI project management, project automation, team collaboration, project analytics, workflow optimization, project planning" />
-        <meta property="og:title" content="AI Project Management Pro - Zion Tech Group" />
-        <meta property="og:description" content="Transform your project management with AI-powered automation and insights." />
+        <title>AI Health Monitoring Pro - Zion Tech Group | Intelligent Health Management</title>
+        <meta name="description" content="Revolutionary AI-powered health monitoring platform. Track vital signs, analyze health trends, and receive personalized recommendations. Improve your health with intelligent monitoring." />
+        <meta name="keywords" content="AI health monitoring, health tracking, vital signs, health analytics, wellness, health management" />
+        <meta property="og:title" content="AI Health Monitoring Pro - Zion Tech Group" />
+        <meta property="og:description" content="Transform your health with AI-powered monitoring and personalized insights." />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-project-management-pro" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-health-monitoring-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -154,21 +153,21 @@ const AiProjectManagementProPage: React.FC = () => {
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
                 <Star className="w-4 h-4 mr-2" />
-                #1 AI Project Management Platform
+                #1 AI Health Monitoring Platform
               </div>
               
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  AI Project Management
+                  AI Health Monitoring
                 </span>
                 <br />
                 <span className="text-white">Pro</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Transform your project management with AI-powered automation, predictive analytics, 
-                and intelligent team collaboration. Increase productivity by 40% and reduce project 
-                delays by 60%.
+                Transform your health with AI-powered monitoring, personalized insights, and proactive 
+                health management. Track vital signs, analyze trends, and receive intelligent 
+                recommendations for better health.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -177,7 +176,7 @@ const AiProjectManagementProPage: React.FC = () => {
                   Start Free Trial
                 </button>
                 <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center">
-                  <Calendar className="w-5 h-5 mr-2" />
+                  <Heart className="w-5 h-5 mr-2" />
                   Schedule Demo
                 </button>
               </div>
@@ -185,20 +184,20 @@ const AiProjectManagementProPage: React.FC = () => {
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
-                  <div className="text-gray-400 text-sm">Productivity Increase</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">50K+</div>
+                  <div className="text-gray-400 text-sm">Active Users</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">60%</div>
-                  <div className="text-gray-400 text-sm">Fewer Delays</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
+                  <div className="text-gray-400 text-sm">Accuracy Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">25K+</div>
-                  <div className="text-gray-400 text-sm">Active Teams</div>
+                  <div className="text-3xl font-bold text-pink-400 mb-2">24/7</div>
+                  <div className="text-gray-400 text-sm">Health Monitoring</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">99.9%</div>
-                  <div className="text-gray-400 text-sm">Uptime Guarantee</div>
+                  <div className="text-3xl font-bold text-green-400 mb-2">HIPAA</div>
+                  <div className="text-gray-400 text-sm">Compliant</div>
                 </div>
               </div>
             </div>
@@ -213,7 +212,7 @@ const AiProjectManagementProPage: React.FC = () => {
                 Powerful <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to manage projects efficiently with AI-powered intelligence
+                Everything you need to monitor and improve your health with AI-powered insights
               </p>
             </div>
 
@@ -231,24 +230,24 @@ const AiProjectManagementProPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Project Types */}
+        {/* Health Metrics */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Perfect For Every Project Type</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Comprehensive Health Tracking</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI adapts to your specific project needs and industry requirements
+                Monitor all aspects of your health with AI-powered analysis and insights
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {projectTypes.map((project, index) => (
+              {healthMetrics.map((metric, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-white">{project.icon}</div>
+                    <div className="text-white">{metric.icon}</div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{project.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{metric.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{metric.description}</p>
                 </div>
               ))}
             </div>
@@ -261,7 +260,7 @@ const AiProjectManagementProPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Seamless Integrations</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Connect with your existing tools and workflows effortlessly
+                Connect with your favorite health and fitness apps and devices
               </p>
             </div>
 
@@ -286,7 +285,7 @@ const AiProjectManagementProPage: React.FC = () => {
                 Simple <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Pricing</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your team size and project needs
+                Choose the perfect plan for your health monitoring needs
               </p>
             </div>
 
@@ -341,10 +340,10 @@ const AiProjectManagementProPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Project Management?
+                Ready to Transform Your Health?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of teams already using AI to supercharge their project management. 
+                Join thousands of users already using AI to monitor and improve their health. 
                 Start your free trial today - no credit card required!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -353,7 +352,7 @@ const AiProjectManagementProPage: React.FC = () => {
                   Start Free Trial
                 </button>
                 <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center">
-                  <Calendar className="w-5 h-5 mr-2" />
+                  <Heart className="w-5 h-5 mr-2" />
                   Schedule Demo
                 </button>
               </div>
@@ -365,4 +364,4 @@ const AiProjectManagementProPage: React.FC = () => {
   );
 };
 
-export default AiProjectManagementProPage;
+export default AiHealthMonitoringProPage;

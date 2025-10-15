@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Calendar, 
-  Users, 
+  DollarSign, 
+  TrendingUp, 
   BarChart3, 
   Zap, 
   CheckCircle, 
@@ -10,140 +10,140 @@ import {
   ArrowRight,
   Clock,
   Target,
-  TrendingUp,
-  FileText,
-  MessageSquare,
-  Bell,
   Shield,
+  PieChart,
+  Calculator,
+  FileText,
+  AlertTriangle,
   Database
 } from 'lucide-react';
 
-const AiProjectManagementProPage: React.FC = () => {
+const AiFinancialAdvisorProPage: React.FC = () => {
   const features = [
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "AI Task Automation",
-      description: "Automatically assign tasks, set deadlines, and optimize workflows based on team capacity and skills"
+      title: "AI Investment Analysis",
+      description: "Advanced algorithms analyze market trends, risk factors, and investment opportunities in real-time"
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Predictive Analytics",
-      description: "AI-powered insights to predict project risks, resource needs, and completion timelines"
+      icon: <PieChart className="w-6 h-6" />,
+      title: "Portfolio Optimization",
+      description: "Intelligent portfolio rebalancing and diversification recommendations based on your risk profile"
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Smart Team Collaboration",
-      description: "Intelligent team matching, workload balancing, and communication optimization"
+      icon: <Calculator className="w-6 h-6" />,
+      title: "Tax Optimization",
+      description: "AI-powered tax planning strategies to minimize liabilities and maximize after-tax returns"
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Goal Tracking",
-      description: "Automated progress tracking with smart alerts and milestone management"
+      title: "Goal Planning",
+      description: "Personalized financial goal setting with AI-driven strategies for retirement, education, and major purchases"
     },
     {
-      icon: <FileText className="w-6 h-6" />,
-      title: "Document Intelligence",
-      description: "AI-powered document analysis, summarization, and knowledge extraction"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Risk Assessment",
+      description: "Comprehensive risk analysis and insurance recommendations tailored to your financial situation"
     },
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Performance Insights",
-      description: "Real-time analytics and reporting with actionable recommendations for improvement"
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Market Insights",
+      description: "Real-time market analysis, economic indicators, and investment opportunities with AI predictions"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$29",
+      name: "Basic",
+      price: "$49",
       period: "/month",
-      description: "Perfect for small teams and freelancers",
+      description: "Perfect for individuals starting their financial journey",
       features: [
-        "5 Team Members",
-        "Unlimited Projects",
-        "Basic AI Features",
-        "Standard Templates",
+        "Basic Portfolio Analysis",
+        "Monthly Reports",
         "Email Support",
+        "Standard Templates",
+        "Basic Tax Planning",
         "Mobile App"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$79",
+      price: "$149",
       period: "/month",
-      description: "Ideal for growing teams and agencies",
+      description: "Ideal for serious investors and small business owners",
       features: [
-        "25 Team Members",
-        "Advanced AI Automation",
-        "Custom Workflows",
+        "Advanced AI Analysis",
+        "Real-time Alerts",
         "Priority Support",
-        "Advanced Analytics",
+        "Custom Strategies",
+        "Advanced Tax Optimization",
         "API Access",
-        "Integrations"
+        "Family Planning Tools"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$399",
       period: "/month",
-      description: "For large organizations and enterprises",
+      description: "For financial advisors and wealth management firms",
       features: [
-        "Unlimited Team Members",
-        "Custom AI Models",
-        "White-label Options",
+        "White-label Platform",
+        "Client Management",
         "24/7 Phone Support",
-        "Advanced Security",
         "Custom Integrations",
+        "Advanced Security",
+        "Compliance Tools",
         "Dedicated Account Manager"
       ],
       popular: false
     }
   ];
 
-  const integrations = [
-    { name: "Slack", icon: <MessageSquare className="w-6 h-6" />, color: "text-purple-600" },
-    { name: "Microsoft Teams", icon: <Users className="w-6 h-6" />, color: "text-blue-600" },
-    { name: "Google Workspace", icon: <FileText className="w-6 h-6" />, color: "text-green-600" },
-    { name: "Jira", icon: <Target className="w-6 h-6" />, color: "text-blue-500" },
-    { name: "Trello", icon: <Calendar className="w-6 h-6" />, color: "text-cyan-600" },
-    { name: "Asana", icon: <BarChart3 className="w-6 h-6" />, color: "text-orange-600" }
-  ];
-
-  const projectTypes = [
+  const investmentTypes = [
     {
-      title: "Software Development",
-      description: "Agile project management with AI-powered sprint planning and code analysis",
-      icon: <FileText className="w-8 h-8" />
+      title: "Stocks & ETFs",
+      description: "AI-powered stock analysis and ETF selection with risk-adjusted returns",
+      icon: <TrendingUp className="w-8 h-8" />
     },
     {
-      title: "Marketing Campaigns",
-      description: "End-to-end campaign management with AI insights and performance optimization",
+      title: "Real Estate",
+      description: "Property investment analysis with market trends and rental yield optimization",
       icon: <Target className="w-8 h-8" />
     },
     {
-      title: "Event Planning",
-      description: "Comprehensive event management with AI-powered logistics and timeline optimization",
-      icon: <Calendar className="w-8 h-8" />
+      title: "Cryptocurrency",
+      description: "Digital asset portfolio management with volatility analysis and DeFi opportunities",
+      icon: <DollarSign className="w-8 h-8" />
     },
     {
-      title: "Product Launch",
-      description: "Strategic product launch management with AI-driven market analysis and planning",
-      icon: <TrendingUp className="w-8 h-8" />
+      title: "Bonds & Fixed Income",
+      description: "Fixed income analysis with yield curve optimization and credit risk assessment",
+      icon: <Shield className="w-8 h-8" />
     }
+  ];
+
+  const securityFeatures = [
+    { name: "Bank-Level Encryption", icon: <Shield className="w-6 h-6" />, color: "text-green-600" },
+    { name: "SOC 2 Compliance", icon: <CheckCircle className="w-6 h-6" />, color: "text-blue-600" },
+    { name: "Multi-Factor Auth", icon: <Target className="w-6 h-6" />, color: "text-purple-600" },
+    { name: "Regular Audits", icon: <FileText className="w-6 h-6" />, color: "text-orange-600" },
+    { name: "Data Privacy", icon: <Database className="w-6 h-6" />, color: "text-cyan-600" },
+    { name: "24/7 Monitoring", icon: <Clock className="w-6 h-6" />, color: "text-red-600" }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Project Management Pro - Zion Tech Group | Intelligent Project Management</title>
-        <meta name="description" content="Revolutionary AI-powered project management platform. Automate workflows, predict risks, and optimize team performance. Increase productivity by 40% with intelligent project management." />
-        <meta name="keywords" content="AI project management, project automation, team collaboration, project analytics, workflow optimization, project planning" />
-        <meta property="og:title" content="AI Project Management Pro - Zion Tech Group" />
-        <meta property="og:description" content="Transform your project management with AI-powered automation and insights." />
+        <title>AI Financial Advisor Pro - Zion Tech Group | Intelligent Financial Planning</title>
+        <meta name="description" content="Revolutionary AI-powered financial advisory platform. Get personalized investment advice, portfolio optimization, and tax planning. Increase returns by 25% with intelligent financial management." />
+        <meta name="keywords" content="AI financial advisor, investment analysis, portfolio optimization, financial planning, wealth management, tax optimization" />
+        <meta property="og:title" content="AI Financial Advisor Pro - Zion Tech Group" />
+        <meta property="og:description" content="Transform your financial future with AI-powered investment advice and planning." />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-project-management-pro" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-financial-advisor-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -154,21 +154,21 @@ const AiProjectManagementProPage: React.FC = () => {
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
                 <Star className="w-4 h-4 mr-2" />
-                #1 AI Project Management Platform
+                #1 AI Financial Advisory Platform
               </div>
               
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  AI Project Management
+                  AI Financial Advisor
                 </span>
                 <br />
                 <span className="text-white">Pro</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Transform your project management with AI-powered automation, predictive analytics, 
-                and intelligent team collaboration. Increase productivity by 40% and reduce project 
-                delays by 60%.
+                Transform your financial future with AI-powered investment advice, portfolio optimization, 
+                and tax planning. Increase your returns by 25% while reducing risk with intelligent 
+                financial management.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -177,28 +177,28 @@ const AiProjectManagementProPage: React.FC = () => {
                   Start Free Trial
                 </button>
                 <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Schedule Demo
+                  <DollarSign className="w-5 h-5 mr-2" />
+                  Schedule Consultation
                 </button>
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
-                  <div className="text-gray-400 text-sm">Productivity Increase</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">25%</div>
+                  <div className="text-gray-400 text-sm">Higher Returns</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">60%</div>
-                  <div className="text-gray-400 text-sm">Fewer Delays</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">30%</div>
+                  <div className="text-gray-400 text-sm">Lower Risk</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">25K+</div>
-                  <div className="text-gray-400 text-sm">Active Teams</div>
+                  <div className="text-3xl font-bold text-pink-400 mb-2">10K+</div>
+                  <div className="text-gray-400 text-sm">Active Users</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">99.9%</div>
-                  <div className="text-gray-400 text-sm">Uptime Guarantee</div>
+                  <div className="text-3xl font-bold text-green-400 mb-2">$2B+</div>
+                  <div className="text-gray-400 text-sm">Assets Managed</div>
                 </div>
               </div>
             </div>
@@ -213,7 +213,7 @@ const AiProjectManagementProPage: React.FC = () => {
                 Powerful <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to manage projects efficiently with AI-powered intelligence
+                Everything you need to make informed financial decisions with AI-powered insights
               </p>
             </div>
 
@@ -231,47 +231,47 @@ const AiProjectManagementProPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Project Types */}
+        {/* Investment Types */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Perfect For Every Project Type</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Comprehensive Investment Coverage</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI adapts to your specific project needs and industry requirements
+                Our AI analyzes all major investment types to provide comprehensive financial advice
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {projectTypes.map((project, index) => (
+              {investmentTypes.map((investment, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-white">{project.icon}</div>
+                    <div className="text-white">{investment.icon}</div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{project.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{investment.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{investment.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Integrations */}
+        {/* Security Features */}
         <section className="py-20 bg-slate-800/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Seamless Integrations</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Bank-Level Security</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Connect with your existing tools and workflows effortlessly
+                Your financial data is protected with enterprise-grade security measures
               </p>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {integrations.map((integration, index) => (
+              {securityFeatures.map((security, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 group">
-                  <div className={`w-12 h-12 mx-auto mb-3 ${integration.color} group-hover:scale-110 transition-transform duration-300`}>
-                    {integration.icon}
+                  <div className={`w-12 h-12 mx-auto mb-3 ${security.color} group-hover:scale-110 transition-transform duration-300`}>
+                    {security.icon}
                   </div>
-                  <h3 className="text-white font-semibold">{integration.name}</h3>
+                  <h3 className="text-white font-semibold text-sm">{security.name}</h3>
                 </div>
               ))}
             </div>
@@ -286,7 +286,7 @@ const AiProjectManagementProPage: React.FC = () => {
                 Simple <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Pricing</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your team size and project needs
+                Choose the perfect plan for your financial planning needs
               </p>
             </div>
 
@@ -341,10 +341,10 @@ const AiProjectManagementProPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Project Management?
+                Ready to Transform Your Financial Future?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of teams already using AI to supercharge their project management. 
+                Join thousands of investors already using AI to optimize their portfolios and maximize returns. 
                 Start your free trial today - no credit card required!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -353,8 +353,8 @@ const AiProjectManagementProPage: React.FC = () => {
                   Start Free Trial
                 </button>
                 <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Schedule Demo
+                  <DollarSign className="w-5 h-5 mr-2" />
+                  Schedule Consultation
                 </button>
               </div>
             </div>
@@ -365,4 +365,4 @@ const AiProjectManagementProPage: React.FC = () => {
   );
 };
 
-export default AiProjectManagementProPage;
+export default AiFinancialAdvisorProPage;
