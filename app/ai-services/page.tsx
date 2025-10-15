@@ -701,6 +701,35 @@ export default function AIServices() {
       reviews: 1123,
       link: "/ai-nlp-text-analysis",
       featured: false
+    },
+    {
+      id: "ai-quantum-computing",
+      name: "AI Quantum Computing",
+      description: "Revolutionary quantum computing platform with AI integration, quantum algorithms, and advanced simulation capabilities",
+      price: "From $2,500/month",
+      icon: <Cpu className="w-8 h-8" />,
+      color: "from-cyan-500 to-purple-500",
+      features: [
+        "Quantum algorithm development",
+        "Quantum machine learning",
+        "Quantum cryptography",
+        "Quantum simulation",
+        "Quantum optimization",
+        "Quantum error correction",
+        "Hybrid classical-quantum computing",
+        "Quantum cloud platform"
+      ],
+      benefits: [
+        "Solve exponentially complex problems",
+        "Achieve quantum advantage",
+        "Revolutionize cryptography",
+        "Accelerate scientific discovery"
+      ],
+      category: "Quantum Computing",
+      rating: 4.9,
+      reviews: 456,
+      link: "/ai-quantum-computing",
+      featured: true
     }
   ];
 
@@ -722,12 +751,13 @@ export default function AIServices() {
     { name: "Computer Vision", count: aiServices.filter(s => s.category === "Computer Vision").length, active: false },
     { name: "IoT & Maintenance", count: aiServices.filter(s => s.category === "IoT & Maintenance").length, active: false },
     { name: "Personalization", count: aiServices.filter(s => s.category === "Personalization").length, active: false },
-    { name: "Language Processing", count: aiServices.filter(s => s.category === "Language Processing").length, active: false }
+    { name: "Language Processing", count: aiServices.filter(s => s.category === "Language Processing").length, active: false },
+    { name: "Quantum Computing", count: aiServices.filter(s => s.category === "Quantum Computing").length, active: false }
   ];
 
   const stats = [
-    { number: "35+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
-    { number: "20,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
+    { number: "36+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
+    { number: "25,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
     { number: "99.9%", label: "Accuracy Rate", icon: <Award className="w-6 h-6" /> },
     { number: "24/7", label: "AI Monitoring", icon: <Monitor className="w-6 h-6" /> }
   ];

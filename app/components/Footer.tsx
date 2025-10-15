@@ -230,6 +230,14 @@ const Footer = React.memo(() => {
                   AI Cybersecurity
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/ai-quantum-computing"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  AI Quantum Computing
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -318,26 +326,26 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/zion-content-studio"
+                  to="/zion-ai-video-generator"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Content Studio
+                  Zion AI Video Generator
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/zion-data-sync"
+                  to="/zion-ai-project-manager-pro"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Data Sync
+                  Zion AI Project Manager Pro
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/zion-project-master"
+                  to="/zion-ai-cybersecurity-monitor-pro"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Project Master
+                  Zion AI Cybersecurity Monitor Pro
                 </Link>
               </li>
             </ul>

@@ -997,6 +997,99 @@ export default function MicroSaas() {
       reviews: 1234,
       link: "/zion-social-scheduler",
       featured: false
+    },
+    {
+      id: "zion-ai-video-generator",
+      name: "Zion AI Video Generator",
+      description: "Create professional videos with AI from text prompts. Voice synthesis, music, and automated editing",
+      price: "From $29/month",
+      originalPrice: "$49/month",
+      discount: "41% OFF",
+      icon: <Video className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "AI video generation from text",
+        "4K and HD video output",
+        "Voice synthesis & TTS",
+        "Music & sound effects",
+        "Brand customization",
+        "Social media optimization",
+        "Batch processing",
+        "Cloud storage integration"
+      ],
+      benefits: [
+        "Create videos in minutes",
+        "Reduce production costs by 80%",
+        "Scale content creation 10x",
+        "Improve engagement by 45%"
+      ],
+      category: "Content",
+      rating: 4.8,
+      reviews: 2156,
+      link: "/zion-ai-video-generator",
+      featured: true
+    },
+    {
+      id: "zion-ai-project-manager-pro",
+      name: "Zion AI Project Manager Pro",
+      description: "AI-powered project management with intelligent task prioritization and predictive analytics",
+      price: "From $49/month",
+      originalPrice: "$79/month",
+      discount: "38% OFF",
+      icon: <Calendar className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500",
+      features: [
+        "AI task prioritization",
+        "Predictive timeline estimation",
+        "Resource optimization",
+        "Risk assessment automation",
+        "Team collaboration tools",
+        "Real-time analytics",
+        "100+ integrations",
+        "Custom AI models"
+      ],
+      benefits: [
+        "Complete projects 30% faster",
+        "Reduce costs by 25%",
+        "Improve productivity by 40%",
+        "Minimize risks by 60%"
+      ],
+      category: "Productivity",
+      rating: 4.9,
+      reviews: 1876,
+      link: "/zion-ai-project-manager-pro",
+      featured: true
+    },
+    {
+      id: "zion-ai-cybersecurity-monitor-pro",
+      name: "Zion AI Cybersecurity Monitor Pro",
+      description: "Advanced AI-powered security monitoring with real-time threat detection and automated response",
+      price: "From $199/month",
+      originalPrice: "$299/month",
+      discount: "33% OFF",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-orange-500",
+      features: [
+        "AI threat detection",
+        "24/7 security monitoring",
+        "Automated incident response",
+        "Compliance monitoring",
+        "Behavioral analytics",
+        "Zero-day protection",
+        "Multi-cloud support",
+        "Custom security policies"
+      ],
+      benefits: [
+        "Detect threats 99.9% faster",
+        "Reduce incidents by 95%",
+        "Achieve 100% compliance",
+        "Save 60% on security costs"
+      ],
+      category: "Security",
+      rating: 4.8,
+      reviews: 1247,
+      link: "/zion-ai-cybersecurity-monitor-pro",
+      featured: true
     }
   ];
 
@@ -1024,8 +1117,8 @@ export default function MicroSaas() {
   ];
 
   const stats = [
-    { number: "25+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
-    { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "28+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "18,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
   ];
