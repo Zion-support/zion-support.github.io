@@ -52,6 +52,6 @@ const FiveGTraining: React.FC = () => {
   );
 };
 
-export default FiveGtrainingPage;
+export default FiveGTraining;
 
 

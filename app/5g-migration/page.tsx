@@ -52,6 +52,6 @@ const FiveGMigration: React.FC = () => {
   );
 };
 
-export default FiveGmigrationPage;
+export default FiveGMigration;
 
 

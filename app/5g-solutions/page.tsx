@@ -52,6 +52,6 @@ const FiveGSolutions: React.FC = () => {
   );
 };
 
-export default FiveGsolutionsPage;
+export default FiveGSolutions;
 
 

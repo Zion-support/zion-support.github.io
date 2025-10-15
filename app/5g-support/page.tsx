@@ -52,6 +52,6 @@ const FiveGSupport: React.FC = () => {
   );
 };
 
-export default FiveGsupportPage;
+export default FiveGSupport;
 
 

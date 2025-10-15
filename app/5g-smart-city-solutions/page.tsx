@@ -54,6 +54,6 @@ const FiveGSmartCitySolutionsPage: React.FC = () => {
   );
 };
 
-export default FiveGsmartcitysolutionsPage;
+export default FiveGSmartCitySolutionsPage;
 
 
