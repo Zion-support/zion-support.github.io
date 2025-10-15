@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
     { name: 'Cloud Solutions', href: '/cloud-solutions' },
     { name: '5G Solutions', href: '/5g-solutions' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'Software Development', href: '/software-development' }
+    { name: 'Web Development', href: '/web-development' }
   ];
 
   const company = [
@@ -31,25 +31,25 @@ const Footer: React.FC = () => {
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'News & Updates', href: '/blog' },
-    { name: 'Partnerships', href: '/partnerships' }
+    { name: 'Solutions', href: '/solutions' }
   ];
 
   const resources = [
     { name: 'Documentation', href: '/docs' },
     { name: 'Tutorials', href: '/tutorials' },
     { name: 'Blog', href: '/blog' },
-    { name: 'API Reference', href: '/api-docs' },
-    { name: 'Help Center', href: '/help' },
-    { name: 'Community', href: '/community' }
+    { name: 'API Reference', href: '/docs' },
+    { name: 'Help Center', href: '/support' },
+    { name: 'Pricing', href: '/pricing' }
   ];
 
   const support = [
     { name: 'Contact Us', href: '/contact' },
     { name: 'Support Center', href: '/support' },
-    { name: 'Live Chat', href: '/chat' },
+    { name: 'Live Chat', href: '/contact' },
     { name: 'Schedule Demo', href: '/demo' },
-    { name: 'System Status', href: '/status' },
-    { name: 'Report Issue', href: '/report' }
+    { name: 'System Status', href: '/support' },
+    { name: 'Report Issue', href: '/contact' }
   ];
 
   const legal = [
@@ -58,10 +58,10 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', href: '#', icon: 'facebook' },
-    { name: 'Twitter', href: '#', icon: 'twitter' },
-    { name: 'LinkedIn', href: '#', icon: 'linkedin' },
-    { name: 'GitHub', href: '#', icon: 'github' }
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: 'facebook' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter' },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin' },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github' }
   ];
 
   return (
