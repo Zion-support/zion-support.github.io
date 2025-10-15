@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 3e833c3ad2c3ddcb3543c60cbab89bd9bae51a20
 export default function AICybersecuritySuitePage() {}
   // Function body
 }
 }return ()
-=======
-export default function AICybersecuritySuitePage() {
-  ;
-};
->>>>>>> main
+
     <div>Content</div>
   )
     <div>Component content</div>
