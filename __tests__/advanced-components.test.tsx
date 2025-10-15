@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { render, screen } from "@testing-library/react"
-=======
-import {render} from "@testing-library/react"
->>>>>>> cursor/fix-errors-and-merge-to-main-7017
 
 const TestComponent = () => {
   return <div>Test content</div>
@@ -24,12 +19,3 @@ describe("Advanced Components", () => {
       .spyOn(console, "error")
       .mockImplementation(() => {});
     // Test implementation
-<<<<<<< HEAD
-    consoleSpy.mockRestore()
-  })
-})
-=======
-    consoleSpy.mockRestore();
-  });
-});
->>>>>>> cursor/fix-errors-and-merge-to-main-7017

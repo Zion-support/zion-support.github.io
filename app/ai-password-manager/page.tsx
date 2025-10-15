@@ -1,5 +1,4 @@
-import React from 'react';
-import SEOHead from './components/SEOHead';
+import SEOHead from '../components/SEOHead';
 
 const AiPasswordManagerPage: React.FC = () => {
   return (

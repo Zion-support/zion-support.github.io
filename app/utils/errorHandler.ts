@@ -1,176 +1,99 @@
-<<<<<<< HEAD
-export interface ErrorContext {};
-  component?: string;
-  action?: string;
-  userId?: string;
-  sessionId?: string;
-  url?: string;
-  userAgent?: string;
-  timestamp?: string;
-  additionalData?: any;
-};
-export interface ErrorReport {};
-  id: string;
-  message: string;
-  stack?: string;
-  context: ErrorContext;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  resolved: boolean;
-  createdAt: string;
-  resolvedAt?: string
-};
-class ErrorHandler {};
-  private static instance: ErrorHandler;
-  private errors: ErrorReport[] = [];
-  private maxErrors = 100;: value
-=======
-import { useEffect, useCallback, useRef } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-7017
-
 interface ErrorHandlerOptions {
-  // Add your options here
+  enableLogging?: boolean;
+  enableReporting?: boolean;
+  enableRetry?: boolean;
+  maxRetries?: number;
+  retryDelay?: number;
 }
-<<<<<<< HEAD
-      ErrorHandler.instance = new ErrorHandler();: value
-    };
-    return ErrorHandler.instance;
-  };
-  private generateErrorId(): string {};
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  };'
-  private determineSeverity(error: Error, context: ErrorContext): 'low' | 'medium' | 'high' | 'critical' {};
-    // Critical: Network errors, authentication failures, payment issues;'
-    if (error.message.includes('Network') || '
-        error.message.includes('Authentication') ||'
-        error.message.includes('Payment') ||'
-        error.message.includes('Security')) {};'
-      return 'critical';
-    };
-    // High: Component crashes, API failures, data corruption;'
-    if (error.message.includes('Component') ||'
-        error.message.includes('API') ||'
-        error.message.includes('Data') ||'
-        error.message.includes('Render')) {};'
-      return 'high';
-    };
-    // Medium: Performance issues, validation errors;'
-    if (error.message.includes('Performance') ||'
-        error.message.includes('Validation') ||'
-        error.message.includes('Timeout')) {};'
-      return 'medium';
-    };
-    // Low: UI issues, minor bugs;'
-    return 'low';
-  };
-  reportError(error: Error, context: ErrorContext = {}): string {};
-    const errorId = this.generateErrorId();: value
-    const errorReport: ErrorReport = {};
-      id: errorId;
-      message: error.message;
-      stack: error.stack;
-      context: {};
-        ...context;
-        url: context.url || window.location.href;
-        userAgent: context.userAgent || navigator.userAgent;
-        timestamp: context.timestamp || new Date().toISOString()
-      };
-      severity: this.determineSeverity(error, context);
-      resolved: false;
-      createdAt: new Date().toISOString()
-    };
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7017
 
 interface ErrorHandlerState {
-  // Add your state here
+  error: Error | null;
+  isRetrying: boolean;
+  retryCount: number;
 }
 
-<<<<<<< HEAD
-    // Keep only the last maxErrors entries;
-    if (this.errors.length > this.maxErrors) {};
-      this.errors = this.errors.slice(-this.maxErrors);: value
-    };
-    // Log the error;'
-    logger.error('Error reported', {};
-      errorId;
-      message: error.message;
-      severity: errorReport.severity;
-      context: errorReport.context
-    }, error);
+class ErrorHandler {
+  private options: ErrorHandlerOptions;
+  private state: ErrorHandlerState;
 
-    // Send to external error reporting service in production;'
-    if (process.env.NODE_ENV === 'production') {};: value
-      this.sendToExternalService(errorReport);
+  constructor(options: ErrorHandlerOptions = {}) {
+    this.options = {
+      enableLogging: true,
+      enableReporting: false,
+      enableRetry: false,
+      maxRetries: 3,
+      retryDelay: 1000,
+      ...options
     };
-    return errorId;
-  };
-  private async sendToExternalService(errorReport: ErrorReport): Promise<void> {};
-    try {};'
-      await fetch('/api/errors', {};'
-        method: 'POST';
-        headers: {};'
-          'Content-Type': 'application/json';
-        };
-        body: JSON.stringify(errorReport)
-      });
-    } catch (error) {};'
-      logger.error('Failed to send error to external service', { error });
-    };
-  };
-  getErrors(): ErrorReport[] {};
-    return [...this.errors];
-  };
-  getErrorById(id: string): ErrorReport | undefined {};
-    return this.errors.find(error => error.id === id);: value
-  };
-  resolveError(id: string): boolean {};
-    const error = this.errors.find(e => e.id === id);: value
-    if (error) {};
-      error.resolved = true;: value
-      error.resolvedAt = new Date().toISOString();': value
-      logger.info('Error resolved', { errorId: id });
-      return true;
-    };
-    return false;
-  };
-  clearResolvedErrors(): void {};
-    this.errors = this.errors.filter(error => !error.resolved);': value
-    logger.info('Cleared resolved errors');
-  };
-  clearAllErrors(): void {};
-    this.errors = [];': value
-    logger.info('Cleared all errors');
-  };
-  getErrorStats(): {};
-    total: number;
-    resolved: number;
-    unresolved: number;
-    bySeverity: Record<string>
-  } {};
-    const total = this.errors.length;: value
-    const resolved = this.errors.filter(e => e.resolved).length;: value
-    const unresolved = total - resolved;: value
     
-    const bySeverity = this.errors.reduce((acc, error) => {};: value
-      acc[error.severity] = (acc[error.severity] || 0) + 1;: value
-      return acc;
+    this.state = {
+      error: null,
+      isRetrying: false,
+      retryCount: 0
     };
-{} as Record<string, number>);
-=======
-export const ErrorHandler = (options: ErrorHandlerOptions = {}) => {
-  const stateRef = useRef<ErrorHandlerState>({
-    // Initialize your state here
-  });
+  }
 
-  // Add your hooks logic here
-  useEffect(() => {
-    // Add your effect logic here
-  }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-7017
+  handleError(error: Error, context?: string): void {
+    this.state.error = error;
+    
+    if (this.options.enableLogging) {
+      console.error(`Error${context ? ` in ${context}` : ''}:`, error);
+    }
+    
+    if (this.options.enableReporting) {
+      this.reportError(error, context);
+    }
+  }
 
-  return {
-    // Return your hook values here
-  };
-};
+  private reportError(error: Error, context?: string): void {
+    // In a real application, you would send this to an error reporting service
+    // like Sentry, LogRocket, or Bugsnag
+    console.log('Reporting error:', {
+      message: error.message,
+      stack: error.stack,
+      context,
+      timestamp: new Date().toISOString()
+    });
+  }
+
+  async retry<T>(fn: () => Promise<T>): Promise<T> {
+    if (!this.options.enableRetry) {
+      throw this.state.error || new Error('No error to retry');
+    }
+
+    this.state.isRetrying = true;
+    
+    for (let i = 0; i < this.options.maxRetries!; i++) {
+      try {
+        this.state.retryCount = i + 1;
+        const result = await fn();
+        this.state.isRetrying = false;
+        this.state.retryCount = 0;
+        return result;
+      } catch (error) {
+        if (i === this.options.maxRetries! - 1) {
+          this.state.isRetrying = false;
+          throw error;
+        }
+        
+        await new Promise(resolve => 
+          setTimeout(resolve, this.options.retryDelay! * (i + 1))
+        );
+      }
+    }
+    
+    throw new Error('Max retries exceeded');
+  }
+
+  getState(): ErrorHandlerState {
+    return { ...this.state };
+  }
+
+  clearError(): void {
+    this.state.error = null;
+    this.state.isRetrying = false;
+    this.state.retryCount = 0;
+  }
+}
 
 export default ErrorHandler;

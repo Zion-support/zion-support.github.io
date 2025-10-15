@@ -1,40 +1,62 @@
 import React from 'react';
-import SEOHead from './components/SEOHead';
+import { 
+  Wifi, 
+  Zap, 
+  Shield, 
+  Globe, 
+  Cpu, 
+  ChevronRight,
+  Check,
+  Star,
+  ArrowRight,
+  Menu,
+  X,
+  Search,
+  User,
+  Settings,
+  Home,
+  Info,
+  AlertCircle,
+  CheckCircle,
+  XCircle
+} from 'lucide-react';
 
-<<<<<<< HEAD
-export const Icon = ({}: value,
-      name,
-      className = "";: value
-  ...props;
-}: {},
-      name: string,
-      className?: string;
-  [key: string]: unknown;
-}) => {}: value,
-      return (
-    <span className={`icon ${className}`} {...props}></span>: value
-      {name};
-    </span>
-  );
-    };
-{
-=======
-const ComponentsPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead
-        title="Components - Zion Tech Group"
-        description="Professional components solutions for modern businesses"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Components</h1>
-          <p className="text-gray-300">Professional solutions coming soon...</p>
-        </div>
-      </div>
-    </>
-  );
+interface IconProps {
+  name: string;
+  className?: string;
+  size?: number;
+}
+
+const Icons: React.FC<IconProps> = ({ name, className = '', size = 24 }) => {
+  const iconMap = {
+    wifi: Wifi,
+    zap: Zap,
+    shield: Shield,
+    globe: Globe,
+    cpu: Cpu,
+    chevronRight: ChevronRight,
+    check: Check,
+    star: Star,
+    arrowRight: ArrowRight,
+    menu: Menu,
+    x: X,
+    search: Search,
+    user: User,
+    settings: Settings,
+    home: Home,
+    info: Info,
+    alertCircle: AlertCircle,
+    checkCircle: CheckCircle,
+    xCircle: XCircle
+  };
+  
+  const IconComponent = iconMap[name as keyof typeof iconMap];
+  
+  if (!IconComponent) {
+    return null;
+  }
+  
+  return <IconComponent className={className} size={size} />;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-7017
 
-export default ComponentsPage;
+export default Icons;

@@ -1,13 +1,7 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
 
 const __tests__Page: React.FC = () => {
   return (
     <>
-      <SEOHead
-        title="__tests__ - Zion Tech Group"
-        description="Professional __tests__ solutions for modern businesses"
-      />
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">__tests__</h1>
