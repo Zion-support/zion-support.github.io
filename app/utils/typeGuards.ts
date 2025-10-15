@@ -1,6 +1,7 @@
 /**
  * Type guard utilities for better type safety
  */
+import React from 'react';
 
 export const isString = (value: unknown): value is string => {
   return typeof value === 'string';
@@ -22,7 +23,7 @@ export const isArray = (value: unknown): value is unknown[] => {
   return Array.isArray(value);
 };
 
-export const isFunction = (value: unknown): value is Function => {
+export const isFunction = (value: unknown): value is (...args: unknown[]) => unknown => {
   return typeof value === 'function';
 };
 
@@ -48,7 +49,7 @@ export const hasProperty = <T extends object, K extends PropertyKey>(
 export const hasMethod = <T extends object, K extends PropertyKey>(
   obj: T,
   method: K
-): obj is T & Record<K, Function> => {
+): obj is T & Record<K, (...args: unknown[]) => unknown> => {
   return hasProperty(obj, method) && isFunction(obj[method]);
 };
 

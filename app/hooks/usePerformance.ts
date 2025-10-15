@@ -10,9 +10,6 @@ export interface UsePerformanceOptions {
 
 export const usePerformance = (options: UsePerformanceOptions = {}) => {
   const {
-    trackWebVitals = true,
-    trackNavigation = true,
-    trackResources = true,
     reportInterval = 5000
   } = options;
 
