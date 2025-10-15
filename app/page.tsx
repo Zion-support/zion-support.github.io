@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap } from 'lucide-react';
-=======
 import React, { memo, useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, ArrowRight, Shield, Brain, Code, Cloud, Wifi, Star, CheckCircle, Users, Award, TrendingUp, Clock, Database, Smartphone, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -16,26 +11,23 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
 
 const HomePage: React.FC = () => {
-  const features = [
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const stats = [
+    { icon: <Users className="w-8 h-8" />, number: "150+", label: "Clients" },
+    { icon: <Award className="w-8 h-8" />, number: "99.9%", label: "Uptime" },
+    { icon: <TrendingUp className="w-8 h-8" />, number: "300%", label: "ROI" },
+    { icon: <Clock className="w-8 h-8" />, number: "24/7", label: "Support" }
+  ];
+
+  const services = [
     {
-<<<<<<< HEAD
-      icon: <Zap className="w-8 h-8 text-purple-400" />,
-      title: "AI-Powered Solutions",
-      description: "Cutting-edge artificial intelligence to transform your business operations and drive innovation."
-    },
-    {
-      icon: <Award className="w-8 h-8 text-cyan-400" />,
-      title: "5G Technology",
-      description: "Next-generation 5G infrastructure for ultra-fast connectivity and enhanced user experiences."
-    },
-    {
-      icon: <Users className="w-8 h-8 text-green-400" />,
-      title: "Expert Team",
-      description: "Highly skilled professionals with deep expertise in AI, cloud, and cybersecurity technologies."
-=======
       icon: <Brain className="w-8 h-8" />,
       title: "AI Analytics Dashboard Pro",
       description: "Advanced AI-powered analytics with real-time insights, predictive modeling, and automated reporting for data-driven decision making.",
@@ -58,54 +50,6 @@ const HomePage: React.FC = () => {
       savings: "Save up to $200/month"
     },
     {
-<<<<<<< HEAD
-      icon: <Users className="w-8 h-8" />,
-      title: "AI Voice Assistant Enterprise",
-      description: "Advanced conversational AI with 99.5% accuracy, 50+ languages, and enterprise-grade security.",
-      price: "$199/month",
-      features: ["99.5% Accuracy", "50+ Languages", "Natural Language Processing", "Enterprise Security"],
-      link: "/ai-voice-assistant-enterprise"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "AI Cybersecurity Platform",
-      description: "Advanced threat protection with AI-powered detection, 24/7 monitoring, and compliance management.",
-      price: "$299/month",
-      features: ["AI Threat Detection", "24/7 Monitoring", "HIPAA Compliance", "Real-time Protection"],
-      link: "/ai-cybersecurity-platform"
-    },
-    {
-      icon: <Cloud className="w-8 h-8" />,
-      title: "AI E-commerce Platform",
-      description: "Intelligent online stores with AI recommendations, analytics, and automation for modern businesses.",
-      price: "$199/month",
-      features: ["AI Recommendations", "Smart Search", "Analytics Dashboard", "Mobile Optimization"],
-      link: "/ai-ecommerce-platform"
-    },
-    {
-      icon: <Heart className="w-8 h-8" />,
-      title: "AI Healthcare Platform",
-      description: "Revolutionary healthcare delivery with AI diagnosis assistance, telemedicine, and patient care.",
-      price: "$399/month",
-      features: ["AI Diagnosis", "Telemedicine", "EHR System", "HIPAA Compliance"],
-      link: "/ai-healthcare-platform"
-    },
-    {
-      icon: <DollarSign className="w-8 h-8" />,
-      title: "AI Financial Platform",
-      description: "Intelligent financial operations with AI analytics, payment processing, and investment management.",
-      price: "$299/month",
-      features: ["AI Analytics", "Payment Processing", "Fraud Detection", "Investment Management"],
-      link: "/ai-financial-platform"
-    },
-    {
-      icon: <BookOpen className="w-8 h-8" />,
-      title: "AI Education Platform",
-      description: "Transform education with personalized learning, virtual classrooms, and smart assessment tools.",
-      price: "$199/month",
-      features: ["Personalized Learning", "Virtual Classrooms", "Smart Assessment", "Learning Analytics"],
-      link: "/ai-education-platform"
-=======
       icon: <Cloud className="w-8 h-8" />,
       title: "AI Cloud Infrastructure",
       description: "Scalable cloud solutions with AI-powered auto-scaling, monitoring, and cost optimization for enterprise workloads.",
@@ -181,54 +125,10 @@ const HomePage: React.FC = () => {
       category: "Content Solutions",
       marketPrice: "$179-359",
       savings: "Save up to $180/month"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c0a
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
     }
   ];
 
-  const services = [
-    "AI & Machine Learning Solutions",
-    "5G Network Implementation",
-    "Cloud Infrastructure & Migration",
-    "Cybersecurity & Compliance",
-    "DevOps & Automation",
-    "Data Analytics & Business Intelligence"
-  ];
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transform Your Business with
-              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                {" "}AI & 5G Technology
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leading provider of advanced AI solutions, 5G infrastructure, and digital transformation services 
-              for businesses worldwide.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/services" 
-                className="inline-flex items-center bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
-              >
-                Explore Our Services
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link 
-                to="/contact" 
-                className="inline-flex items-center border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-=======
     <>
       <Helmet>
         <title>Zion Tech Group - Advanced AI & IT Solutions</title>
@@ -243,38 +143,8 @@ const HomePage: React.FC = () => {
           <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
           <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-400/5 rounded-full blur-2xl animate-ping delay-3000"></div>
           <div className="absolute bottom-1/3 right-1/3 w-48 h-48 bg-purple-400/5 rounded-full blur-2xl animate-ping delay-5000"></div>
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
         </div>
-      </section>
 
-<<<<<<< HEAD
-      {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Zion Tech Group?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              We deliver innovative solutions that drive real business value and competitive advantage.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-slate-700">
-                <div className="mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-=======
         {/* Futuristic Grid Pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="h-full w-full" style={{
@@ -284,28 +154,8 @@ const HomePage: React.FC = () => {
             `,
             backgroundSize: '50px 50px'
           }}></div>
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
         </div>
-      </section>
 
-<<<<<<< HEAD
-      {/* Services Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive technology solutions tailored to your business needs.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <div key={index} className="flex items-center space-x-3 bg-slate-800/50 backdrop-blur-sm rounded-lg p-4 border border-slate-700">
-                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{service}</span>
-=======
         {/* Animated Lines */}
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent animate-pulse"></div>
@@ -383,40 +233,10 @@ const HomePage: React.FC = () => {
                     </div>
                   ))}
                 </div>
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
 
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 p-12 rounded-lg border border-slate-700">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let our experts help you implement cutting-edge solutions
-            </p>
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
-            >
-              Contact Us Today
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default HomePage;
-=======
           {/* Services Section */}
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             <div className="container mx-auto px-4">
@@ -560,4 +380,3 @@ export default HomePage;
 };
 
 export default HomePage;
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
