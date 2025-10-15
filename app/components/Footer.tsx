@@ -31,6 +31,10 @@ const Footer: React.FC = memo(() => {
                 <span className="text-cyan-400">📍</span>
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
+              <div className="flex items-center space-x-3 text-sm text-gray-400">
+                <span className="text-cyan-400">🌐</span>
+                <a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">ziontechgroup.com</a>
+              </div>
             </div>
             <div className="flex space-x-4">
               <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10">
@@ -66,6 +70,8 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Financial Forecaster</Link></li>
               <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Document Analyzer</Link></li>
               <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Task Scheduler</Link></li>
+              <li><Link to="/zion-ai-customer-sentiment-tracker" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Sentiment Tracker</Link></li>
+              <li><Link to="/zion-ai-meeting-transcriber" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Meeting Transcriber</Link></li>
             </ul>
           </div>
           

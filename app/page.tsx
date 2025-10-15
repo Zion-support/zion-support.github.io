@@ -75,12 +75,12 @@ const HomePage: React.FC = memo(() => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="/services" className="btn-futuristic">
+              <Link to="/services" className="btn-futuristic">
                 Explore Services
-              </a>
-              <a href="/contact" className="px-8 py-3 border-2 border-cyan-500 text-cyan-400 rounded-full font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 hover:scale-105">
+              </Link>
+              <Link to="/contact" className="px-8 py-3 border-2 border-cyan-500 text-cyan-400 rounded-full font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 hover:scale-105">
                 Get Quote
-              </a>
+              </Link>
             </div>
           </div>
         </div>

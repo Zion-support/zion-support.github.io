@@ -72,6 +72,9 @@ const Navigation: React.FC = memo(() => {
             <Link to="/blog" className="nav-link-futuristic">
               Blog
             </Link>
+            <Link to="/case-studies" className="nav-link-futuristic">
+              Case Studies
+            </Link>
             <Link to="/team" className="nav-link-futuristic">
               Team
             </Link>
@@ -124,6 +127,9 @@ const Navigation: React.FC = memo(() => {
             </Link>
             <Link to="/blog" className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors">
               Blog
+            </Link>
+            <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+              Case Studies
             </Link>
             <Link to="/team" className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors">
               Team
