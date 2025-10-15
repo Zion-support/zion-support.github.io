@@ -41,15 +41,22 @@ const Footer: React.FC = memo(() => {
             <h4 className="text-md font-semibold mb-4">AI Tools</h4>
             <ul className="space-y-2">
               <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">Content Moderator</Link></li>
-              <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">Customer Support Pro</Link></li>
-              <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-white">Workflow Automator Pro</Link></li>
-              <li><Link to="/zion-ai-email-marketing-pro" className="text-gray-300 hover:text-white">Email Marketing Pro</Link></li>
               <li><Link to="/zion-ai-customer-churn-predictor" className="text-gray-300 hover:text-white">Customer Churn Predictor</Link></li>
-              <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-white">Sales Predictor</Link></li>
-              <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
+              <li><Link to="/zion-ai-customer-churn-predictor-pro" className="text-gray-300 hover:text-white">Customer Churn Predictor Pro</Link></li>
+              <li><Link to="/zion-ai-customer-sentiment-tracker" className="text-gray-300 hover:text-white">Customer Sentiment Tracker</Link></li>
+              <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">Customer Support Pro</Link></li>
               <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">Document Analyzer</Link></li>
+              <li><Link to="/zion-ai-email-marketing-pro" className="text-gray-300 hover:text-white">Email Marketing Pro</Link></li>
+              <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
+              <li><Link to="/zion-ai-inventory-optimizer-pro" className="text-gray-300 hover:text-white">Inventory Optimizer Pro</Link></li>
+              <li><Link to="/zion-ai-meeting-transcriber" className="text-gray-300 hover:text-white">Meeting Transcriber</Link></li>
+              <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-white">Sales Predictor</Link></li>
+              <li><Link to="/zion-ai-social-scheduler-pro" className="text-gray-300 hover:text-white">Social Scheduler Pro</Link></li>
               <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
-              <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
+              <li><Link to="/zion-ai-workflow-automator" className="text-gray-300 hover:text-white">Workflow Automator</Link></li>
+              <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-white">Workflow Automator Pro</Link></li>
+              <li><Link to="/zion-customer-satisfaction-monitor" className="text-gray-300 hover:text-white">Customer Satisfaction Monitor</Link></li>
+              <li><Link to="/zion-smart-expense-tracker" className="text-gray-300 hover:text-white">Smart Expense Tracker</Link></li>
             </ul>
           </div>
           
