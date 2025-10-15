@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Users, TrendingUp, BarChart3, Zap, Shield, Brain, CheckCircle, ArrowRight, Star, Phone, Mail, Play, Clock, Camera, Hash, MessageCircle, Calendar, Image, Video, Star, Shield, BarChart3, Clock } from 'lucide-react';
+import { Users, TrendingUp, BarChart3, Zap, Shield, Brain, CheckCircle, ArrowRight, Star, Phone, Mail, Play, Clock, Camera, Hash, MessageCircle, Calendar, Image, Video } from 'lucide-react';
 
 const AiSocialMediaManagerProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

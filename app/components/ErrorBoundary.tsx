@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Component, ErrorInfo, ReactNode } from 'react';
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-a84d
 
 interface Props {
   children: ReactNode;

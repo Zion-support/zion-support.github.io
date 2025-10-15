@@ -252,7 +252,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
 
   return (
     <>
-      <style jsx>{`
+      <style>{`
         .skip-links {
           position: absolute;
           top: -40px;

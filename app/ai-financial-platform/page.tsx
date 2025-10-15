@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { DollarSign, Shield, Brain, CheckCircle, Phone, Mail, Play, Eye, CreditCard, TrendingUp, BarChart3, Calculator, Receipt, Star, Shield, BarChart3 } from 'lucide-react';
+import { DollarSign, Shield, Brain, CheckCircle, Phone, Mail, Play, Eye, CreditCard, TrendingUp, BarChart3, Calculator, Receipt, Star } from 'lucide-react';
 
 const AiFinancialPlatformPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

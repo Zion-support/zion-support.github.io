@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Calendar, User, ArrowRight, Clock, Tag, Search, Search, Clock } from 'lucide-react';
+import { Calendar, User, ArrowRight, Clock, Tag, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const BlogPage: React.FC = () => {
