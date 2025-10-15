@@ -6,9 +6,10 @@ import Hero from './app/components/Hero';
 import Services from './pages/ServicesPage';
 import About from './app/components/About';
 import LoadingSpinner from './app/components/LoadingSpinner';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import SEOHead from './app/components/SEOHead';
-import { usePerformanceMonitoring } from './app/hooks/usePerformanceMonitoring';
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
+import EnhancedSEO from './app/components/EnhancedSEO';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import { useAdvancedPerformanceMonitoring } from './app/hooks/useAdvancedPerformanceMonitoring';
 
 // Lazy load pages for better performance
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
@@ -45,13 +46,22 @@ const QuantumComputingSolutionsPage = React.lazy(() => import('./app/quantum-com
 const EdgeComputingSolutionsPage = React.lazy(() => import('./app/edge-computing-solutions/page'));
 
 const App: React.FC = () => {
-  // Initialize performance monitoring
-  usePerformanceMonitoring();
+  // Initialize advanced performance monitoring
+  useAdvancedPerformanceMonitoring({
+    enableMemoryMonitoring: true,
+    enableResourceTiming: true,
+    enableLongTaskMonitoring: true,
+    enableLayoutShiftMonitoring: true,
+    reportInterval: 30000,
+    memoryThreshold: 0.8,
+    longTaskThreshold: 50,
+  });
 
   return (
-    <ErrorBoundary>
-      <Router>
-        <SEOHead />
+    <EnhancedErrorBoundary>
+      <AccessibilityEnhancer>
+        <Router>
+          <EnhancedSEO />
         
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-x-hidden">
           {/* Futuristic Animated Background */}
@@ -139,8 +149,9 @@ const App: React.FC = () => {
           
           <Footer />
         </div>
-      </Router>
-    </ErrorBoundary>
+        </Router>
+      </AccessibilityEnhancer>
+    </EnhancedErrorBoundary>
   );
 };
 
