@@ -38,7 +38,8 @@ import {
   ThumbsDown,
   AlertCircle,
   CheckSquare,
-  XCircle
+  XCircle,
+  ShoppingCart
 } from 'lucide-react';
 
 const AiCustomerSupportProPage: React.FC = () => {

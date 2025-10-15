@@ -1,4 +1,4 @@
-export constaccessibilityChecker= {
+export const accessibilityChecker = {
   checkAltText: () => {
     const images = document.querySelectorAll('img')
     const issues: Array<{ element: HTMLElement; issue: string ;}> = []

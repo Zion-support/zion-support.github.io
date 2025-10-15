@@ -1,4 +1,4 @@
-export constanalyticsTracker= {
+export const analyticsTracker = {
   trackPageView: (page: string, title?: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'page_view', {
