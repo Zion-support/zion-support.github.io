@@ -81,16 +81,18 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   };
 
   return (
-    <nav className="bg-slate-900 border-b border-slate-700">
+    <nav className="cyber-nav relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
-              <div className="h-8 w-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
+            <Link to="/" className="flex-shrink-0 flex items-center group">
+              <div className="h-10 w-10 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center cyber-glow group-hover:scale-110 transition-transform duration-300">
+                <span className="text-white font-bold text-xl neon-pulse">Z</span>
               </div>
-              <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
+              <span className="ml-3 text-white font-bold text-xl cyber-text group-hover:neon-pulse transition-all duration-300">
+                Zion Tech Group
+              </span>
             </Link>
           </div>
 
@@ -100,28 +102,28 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               <div key={item.name} className="relative group">
                 <Link
                   to={item.href}
-                  className="flex items-center space-x-1 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="cyber-nav-item flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300"
                   onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
                   onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                 >
-                  <item.icon className="w-4 h-4" />
-                  <span>{item.name}</span>
-                  {item.submenu && <ChevronDownIcon className="w-4 h-4" />}
+                  <item.icon className="w-4 h-4 group-hover:text-cyan-400 transition-colors duration-300" />
+                  <span className="group-hover:text-cyan-400 transition-colors duration-300">{item.name}</span>
+                  {item.submenu && <ChevronDownIcon className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />}
                 </Link>
                 
                 {/* Dropdown Menu */}
                 {item.submenu && isServicesOpen && (
-                  <div className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700">
+                  <div className="absolute left-0 mt-2 w-64 cyber-card py-2 z-50 cyber-glow">
                     {item.submenu.map((subItem) => (
                       <Link
                         key={subItem.name}
                         to={subItem.href}
-                        className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
+                        className="block px-4 py-3 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 group"
                         onClick={() => setIsServicesOpen(false)}
                       >
                         <div className="flex items-center">
-                          <subItem.icon className="w-4 h-4 mr-3" />
-                          {subItem.name}
+                          <subItem.icon className="w-4 h-4 mr-3 group-hover:text-cyan-400 transition-colors duration-300" />
+                          <span className="group-hover:text-cyan-400 transition-colors duration-300">{subItem.name}</span>
                         </div>
                       </Link>
                     ))}
@@ -135,7 +137,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white p-2 rounded-md"
+              className="cyber-button-secondary p-2 rounded-md transition-all duration-300 hover:scale-110"
             >
               {isOpen ? (
                 <XMarkIcon className="block h-6 w-6" />
@@ -147,40 +149,42 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700">
+        <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'} cyber-scan`}>
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 cyber-card border-t border-cyan-500/30">
             {navigation.map((item) => (
               <div key={item.name}>
                 {item.submenu ? (
                   <div>
                     <button
                       onClick={item.name === 'Services' ? toggleServicesMenu : toggleSolutionsMenu}
-                      className={`flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                      className={`cyber-nav-item flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
                         isActive(item.href) || (item.submenu && item.submenu.some(sub => isActive(sub.href)))
-                          ? 'text-white bg-slate-700'
-                          : 'text-gray-300 hover:text-white hover:bg-slate-700'
+                          ? 'text-cyan-400 bg-cyan-500/10'
+                          : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
                       }`}
                     >
                       <item.icon className="w-5 h-5 mr-3" />
                       {item.name}
-                      <ChevronDownIcon className="w-4 h-4 ml-auto" />
+                      <ChevronDownIcon className={`w-4 h-4 ml-auto transition-transform duration-300 ${
+                        (item.name === 'Services' ? isServicesOpen : isSolutionsOpen) ? 'rotate-180' : ''
+                      }`} />
                     </button>
                     
                     {/* Mobile Submenu */}
-                    <div className={`pl-6 ${(item.name === 'Services' ? isServicesOpen : isSolutionsOpen) ? 'block' : 'hidden'}`}>
+                    <div className={`pl-6 ${(item.name === 'Services' ? isServicesOpen : isSolutionsOpen) ? 'block' : 'hidden'} cyber-data-flow`}>
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
                           to={subItem.href}
-                          className="flex items-center px-3 py-2 rounded-md text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
+                          className="cyber-nav-item flex items-center px-3 py-2 rounded-md text-sm transition-all duration-300 group"
                           onClick={() => {
                             setIsOpen(false);
                             setIsServicesOpen(false);
                             setIsSolutionsOpen(false);
                           }}
                         >
-                          <subItem.icon className="w-4 h-4 mr-3" />
-                          {subItem.name}
+                          <subItem.icon className="w-4 h-4 mr-3 group-hover:text-cyan-400 transition-colors duration-300" />
+                          <span className="group-hover:text-cyan-400 transition-colors duration-300">{subItem.name}</span>
                         </Link>
                       ))}
                     </div>
@@ -188,10 +192,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 ) : (
                   <Link
                     to={item.href}
-                    className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    className={`cyber-nav-item flex items-center px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
                       isActive(item.href)
-                        ? 'text-white bg-slate-700'
-                        : 'text-gray-300 hover:text-white hover:bg-slate-700'
+                        ? 'text-cyan-400 bg-cyan-500/10'
+                        : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
                     }`}
                     onClick={() => setIsOpen(false)}
                   >

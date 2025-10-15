@@ -1,16 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-// Generate sitemap.xml
-const generateSitemap = () => {
-<<<<<<< HEAD
-// Generate comprehensive sitemap;
+// Generate comprehensive sitemap
 function generateSitemap() {
-  const baseUrl = 'https://ziontechgroup.com';';
-  const currentDate = new Date().toISOString();
-=======
   const baseUrl = 'https://ziontechgroup.com';
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
+  const currentDate = new Date().toISOString();
   
   const pages = [
     '',
@@ -18,10 +12,19 @@ function generateSitemap() {
     '/services',
     '/contact',
     '/blog',
-    '/ai-services',
-    '/micro-saas',
+    '/ai-solutions',
+    '/it-solutions',
+    '/micro-saas-solutions',
+    '/cybersecurity',
+    '/cloud-solutions',
     '/5g-solutions',
-    '/web-development',
+    '/digital-transformation',
+    '/pricing',
+    '/solutions',
+    '/team',
+    '/careers',
+    '/case-studies',
+    '/docs',
     '/privacy',
     '/terms',
     '/support',

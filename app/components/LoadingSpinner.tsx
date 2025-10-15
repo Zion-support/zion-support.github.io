@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Loader2 } from 'lucide-react';
 
 interface LoadingSpinnerProps {
@@ -25,18 +24,18 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   const colorClasses = {
-    primary: 'text-blue-600',
-    secondary: 'text-gray-600',
+    primary: 'text-cyan-400',
+    secondary: 'text-gray-400',
     white: 'text-white',
     gray: 'text-gray-400'
   };
 
   const spinner = (
     <div className={`flex items-center justify-center ${className}`}>
-      <div className="flex flex-col items-center space-y-2">
-        <Loader2 className={`animate-spin ${sizeClasses[size]} ${colorClasses[color]}`} />
+      <div className="flex flex-col items-center space-y-3">
+        <div className="cyber-loader"></div>
         {text && (
-          <p className={`text-sm ${colorClasses[color]}`}>
+          <p className={`text-sm ${colorClasses[color]} neon-pulse`}>
             {text}
           </p>
         )}
@@ -46,32 +45,13 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
   if (fullScreen) {
     return (
-      <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
+      <div className="fixed inset-0 bg-slate-900/90 backdrop-blur-sm flex items-center justify-center z-50 cyber-grid">
         {spinner}
       </div>
     );
   }
 
   return spinner;
-=======
-import { Helmet } from 'react-helmet-async';
-
-const LoadingSpinner: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>LoadingSpinner - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">LoadingSpinner</h1>
-          <p className="text-gray-300 text-center">Coming soon...</p>
-        </div>
-      </div>
-    </>
-  );
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
 };
 
 export default LoadingSpinner;
