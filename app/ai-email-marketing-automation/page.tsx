@@ -4,24 +4,7 @@ import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 
   ArrowRight, 
-  Mail, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  Target, 
-  TrendingUp,
-  Clock,
-  Shield,
-  Smartphone,
-  Globe,
-  MessageSquare,
-  FileText,
-  Settings,
-  Star,
-  Award,
-  Phone,
-  MapPin,
-  Envelope
+  TrendingUp
 } from 'lucide-react';
 
 const AIEmailMarketingAutomationPage: React.FC = () => {

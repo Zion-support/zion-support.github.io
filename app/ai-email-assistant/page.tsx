@@ -1,7 +1,9 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
 
-  return (<>
+const AiEmailAssistantPage: React.FC = () => {
+  return (
+    <>
       <Helmet>
         <title>AI Email Assistant - Zion Tech Group</title>
         <meta
