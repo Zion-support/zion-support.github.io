@@ -58,15 +58,15 @@ const ContactPage: React.FC = memo(() => {
               <div className="space-y-4">
                 <div>
                   <h3 className="text-lg font-medium text-gray-900">Email</h3>
-                  <p className="text-gray-600">contact@ziontechgroup.com</p>
+                  <p className="text-gray-600">kleber@ziontechgroup.com</p>
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-gray-900">Phone</h3>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                  <p className="text-gray-600">+1 (302) 464-0950</p>
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-gray-900">Address</h3>
-                  <p className="text-gray-600">123 Tech Street, Innovation City, IC 12345</p>
+                  <p className="text-gray-600">364 E Main St STE 1008, Middletown DE 19709</p>
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-gray-900">Website</h3>
