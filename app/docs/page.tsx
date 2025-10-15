@@ -5,6 +5,13 @@ import { Zap, FileText, Code, Database, Shield, BookOpen, Search, ArrowRight, Fo
 
 const DocsPage: React.FC = () => {
   const documentationSections = [
+    {
+      title: 'Getting Started',
+      description: 'Learn how to get started with our AI solutions',
+      content: 'Comprehensive guide to implementing AI in your business'
+    }
+  ];
+  
   const features = [
     {
       title: 'Getting Started',

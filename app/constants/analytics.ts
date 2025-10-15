@@ -6,8 +6,8 @@ export const analyticsConfig = { googleAnalytics: {
     scroll: 'scroll',
     formSubmit: 'form_submit',
     page: 'page',
-    section: 'section',}
-    action: 'action' }
+    section: 'section',
+    action: 'action'
 };
 
 export default NotFoundPage;

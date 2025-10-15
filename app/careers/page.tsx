@@ -5,6 +5,17 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   const openPositions = [
+    {
+      title: 'Senior AI Engineer',
+      department: 'Engineering',
+      location: 'Remote',
+      type: 'Full-time',
+      description: 'Lead AI solution development and implementation.',
+      requirements: ['5+ years AI experience', 'Python/TypeScript', 'ML frameworks'],
+      salary: '$120k - $180k'
+    }
+  ];
+  
   const features = [
     {
       title: 'Senior AI Engineer',

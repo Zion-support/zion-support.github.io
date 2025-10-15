@@ -7,7 +7,8 @@ const FAQPage: React.FC = () => {
 
 const [searchTerm, setSearchTerm] = useState('');
 
-const toggleItem = () => {  return (
+const toggleItem = (index: number) => {
+  // Toggle FAQ item logic
   return;
 };
 

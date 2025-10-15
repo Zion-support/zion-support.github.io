@@ -981,10 +981,9 @@ const benefits = [
             >
               Email Us
             </a>
-              </div>
-            </div>
           </div>
-        </section>
+        </div>
+      </section>
       </div>
     </>
   );

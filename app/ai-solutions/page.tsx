@@ -4,6 +4,22 @@ import { Link } from 'react-router-dom';
 import { CheckCircleIcon, Lightbulb, DocumentTextIcon, Cpu, ArrowRight } from 'lucide-react';
 const AISolutionsPage: React.FC = () => {
   const aiServices = [
+    {
+      title: "Machine Learning Models",
+      description: "Custom machine learning models tailored to your specific business needs with advanced algorithms and real-time processing.",
+      icon: Cpu,
+      features: [
+        "Custom algorithm development",
+        "Real-time model training",
+        "A/B testing framework",
+        "Model performance monitoring",
+        "Automated retraining",
+        "Edge deployment"
+      ],
+      color: "from-purple-500 to-pink-500"
+    }
+  ];
+  
   const features = [
     {
       title: "Machine Learning Models",

@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Shield, Brain, BarChart, MessageSquare, Globe, Zap, Clock } from 'lucide-react';
 
-const AIService = () => {  return (
+const AIService = () => {
   const features = [
     {
       title: "Advanced AI Integration",

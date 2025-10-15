@@ -5,8 +5,8 @@ export interface ServiceData { id: string;
   features: string[];
   pricing: {
     starter: number;
-    professional: number;}
-    enterprise: number; };
+    professional: number;
+    enterprise: number;
   icon: string;
 }
 export const servicesData: ServiceData[] = [

@@ -1,8 +1,10 @@
+import React from 'react';
 import { Shield, Bug, FileText, Zap, Code, Terminal, Users, Award, Brain, CheckCircle, Star, ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-const features = [
+const AICodeAssistantPage = () => {
+  const features = [
     {
       title: "Intelligent Code Review",
       description: "Automated code review with security analysis, performance optimization suggestions, and best practice recommendations.",
@@ -169,16 +171,16 @@ const capabilities = [
     }
   ];
 
-export default function AICodeAssistant() {
+const AICodeAssistantPage = () => {
   return (
     
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <EnhancedSEO
-        title="Zion AI Code Assistant - Intelligent Code Generation & Review | Zion Tech Group"
-        description="Boost your development with AI-powered code generation, review, and debugging. Support for 50+ languages, automated testing, and intelligent documentation. Code smarter today!"
-        keywords="AI code assistant, code generation, automated code review, AI programming, code debugging, software development, AI coding tools, code quality"
-        canonical="https://ziontechgroup.com/ai-code-assistant"
-      />
+      <Helmet>
+        <title>Zion AI Code Assistant - Intelligent Code Generation & Review | Zion Tech Group</title>
+        <meta name="description" content="Boost your development with AI-powered code generation, review, and debugging. Support for 50+ languages, automated testing, and intelligent documentation. Code smarter today!" />
+        <meta name="keywords" content="AI code assistant, code generation, automated code review, AI programming, code debugging, software development, AI coding tools, code quality" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-code-assistant" />
+      </Helmet>
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden cyber-grid-enhanced quantum-dots">
         
@@ -192,7 +194,7 @@ export default function AICodeAssistant() {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           
         <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-8 neon-border">
-            <Sparkles className="w-5 h-5 text-blue-400 mr-2 animate-pulse" />
+            <Star className="w-5 h-5 text-blue-400 mr-2 animate-pulse" />
             <span className="text-blue-400 text-sm font-medium">#1 AI Code Assistant 2024</span>
           </div>
           
@@ -206,22 +208,20 @@ export default function AICodeAssistant() {
           </p>
           
         <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <FuturisticButton
+            <button
               onClick={() => window.open("https://zion.app/contact", "_blank")}
-              variant="primary"
-              size="lg"
-              icon={<Code className="w-5 h-5" />}
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 flex items-center gap-2"
             >
+              <Code className="w-5 h-5" />
               Start Coding with AI
-            </FuturisticButton>
-            <FuturisticButton
+            </button>
+            <button
               onClick={() => window.open("https://zion.app/contact", "_blank")}
-              variant="secondary"
-              size="lg"
-              icon={<Terminal className="w-5 h-5" />}
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2"
             >
+              <Terminal className="w-5 h-5" />
               Try Live Demo
-            </FuturisticButton>
+            </button>
           </div>
           {/* Stats */}
           
@@ -290,9 +290,8 @@ export default function AICodeAssistant() {
           
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <FuturisticCard key={index} className="group hover:scale-105 transition-all duration-300">
-                
-        <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+              <div key={index} className="group hover:scale-105 transition-all duration-300 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
@@ -308,7 +307,7 @@ export default function AICodeAssistant() {
                     {feature.stats}
                   </span>
                 </div>
-              </FuturisticCard>
+              </div>
             ))}
           </div>
         </div>
@@ -330,7 +329,7 @@ export default function AICodeAssistant() {
           
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {capabilities.map((capability, index) => (
-              <FuturisticCard key={index} className="group hover:scale-105 transition-all duration-300">
+              <div key={index} className="group hover:scale-105 transition-all duration-300 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
                 
         <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
                   <Brain className="w-8 h-8" />
@@ -355,7 +354,7 @@ export default function AICodeAssistant() {
                     <span className="text-sm text-blue-400">{capability.speed}</span>
                   </div>
                 </div>
-              </FuturisticCard>
+              </div>
             ))}
           </div>
         </div>
@@ -377,7 +376,7 @@ export default function AICodeAssistant() {
           
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
             {languages.map((language, index) => (
-              <FuturisticCard key={index} className="group hover:scale-110 transition-all duration-300 text-center">
+              <div key={index} className="group hover:scale-110 transition-all duration-300 text-center">
                 
         <div className="text-4xl mb-3">{language.logo}</div>
                 <h3 className="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors mb-2">
@@ -387,7 +386,7 @@ export default function AICodeAssistant() {
         <div className="text-xs text-gray-400">
                   {language.popularity} accuracy
                 </div>
-              </FuturisticCard>
+              </div>
             ))}
           </div>
         </div>
@@ -409,7 +408,7 @@ export default function AICodeAssistant() {
           
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
-              <FuturisticCard key={index} className="group hover:scale-105 transition-all duration-300">
+              <div key={index} className="group hover:scale-105 transition-all duration-300 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
                 
         <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
                   {useCase.icon}
@@ -430,7 +429,7 @@ export default function AICodeAssistant() {
                     </div>
                   ))}
                 </div>
-              </FuturisticCard>
+              </div>
             ))}
           </div>
         </div>
@@ -452,7 +451,7 @@ export default function AICodeAssistant() {
           
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <FuturisticCard key={index} className={`relative ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}>
+              <div key={index} className={`relative ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}>
                 {plan.popular && (
                   
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -482,15 +481,18 @@ export default function AICodeAssistant() {
                     </div>
                   ))}
                 </div>
-                <FuturisticButton
+                <button
                   onClick={() => window.open("https://zion.app/contact", "_blank")}
-                  variant={plan.popular ? "primary" : "outline"}
-                  className="w-full"
-                  icon={<ArrowRight className="w-4 h-4" />}
+                  className={`w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
+                    plan.popular 
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white' 
+                      : 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600'
+                  }`}
                 >
+                  <ArrowRight className="w-4 h-4" />
                   Get Started
-                </FuturisticButton>
-              </FuturisticCard>
+                </button>
+              </div>
             ))}
           </div>
         </div>
@@ -512,7 +514,7 @@ export default function AICodeAssistant() {
           
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <FuturisticCard key={index} className="group hover:scale-105 transition-all duration-300">
+              <div key={index} className="group hover:scale-105 transition-all duration-300 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
                 
         <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -534,7 +536,7 @@ export default function AICodeAssistant() {
         <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
-              </FuturisticCard>
+              </div>
             ))}
           </div>
         </div>
@@ -553,22 +555,20 @@ export default function AICodeAssistant() {
           </p>
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <FuturisticButton
+            <button
               onClick={() => window.open("https://zion.app/contact", "_blank")}
-              variant="primary"
-              size="lg"
-              icon={<Code className="w-5 h-5" />}
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 flex items-center gap-2"
             >
+              <Code className="w-5 h-5" />
               Start Free Trial
-            </FuturisticButton>
-            <FuturisticButton
+            </button>
+            <button
               onClick={() => window.open("https://zion.app/contact", "_blank")}
-              variant="secondary"
-              size="lg"
-              icon={<Terminal className="w-5 h-5" />}
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2"
             >
+              <Terminal className="w-5 h-5" />
               Try Live Demo
-            </FuturisticButton>
+            </button>
           </div>
           
         <div className="mt-8 text-sm text-gray-400">

@@ -399,4 +399,4 @@ const testimonials = [
       </div>
     </>
   );
-}
+};
