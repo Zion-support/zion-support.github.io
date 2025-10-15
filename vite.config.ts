@@ -1,46 +1,61 @@
+
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
 export default defineConfig({
-  plugins: [
-    react({
-      // Enable React Fast Refresh
-      fastRefresh: true,
-      // Optimize JSX runtime
-      jsxRuntime: 'automatic',
-    }),
-  ],
+  plugins: [react()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './app'),
-      '@/components': resolve(__dirname, './app/components'),
-      '@/utils': resolve(__dirname, './app/utils'),
-      '@/hooks': resolve(__dirname, './hooks'),
+      '@': resolve(__dirname, './src'),
+      '@app': resolve(__dirname, './app'),
+      '@components': resolve(__dirname, './app/components'),
     },
   },
   build: {
-    // Optimize build output
-    target: 'es2020',
-    minify: 'esbuild',
+    outDir: 'dist',
     sourcemap: false,
+    minify: 'terser',
     rollupOptions: {
       output: {
-        // Manual chunk splitting for better caching
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          ui: ['@heroicons/react', 'lucide-react'],
-          utils: ['clsx', 'tailwind-merge'],
+          ui: ['framer-motion', 'lucide-react'],
         },
-        // Optimize chunk file names
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
+        assetFileNames: (assetInfo) => {
+          const ext = assetInfo.name?.split('.').pop();
+          if (/\.(css)$/i.test(assetInfo.name || '')) {
+            return `assets/css/[name]-[hash].${ext}`;
+          }
+          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
+            return `assets/images/[name]-[hash].${ext}`;
+          }
+          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {
+            return `assets/fonts/[name]-[hash].${ext}`;
+          }
+          return `assets/[name]-[hash].${ext}`;
+        },
       },
     },
-    // Increase chunk size warning limit
-    chunkSizeWarningLimit: 1000,
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+      mangle: {
+        safari10: true,
+      },
+      format: {
+        comments: false,
+      },
+    },
+    chunkSizeWarningLimit: 500,
+    reportCompressedSize: true,
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096,
   },
   server: {
     port: 3000,
@@ -51,20 +66,10 @@ export default defineConfig({
     port: 4173,
     open: true,
   },
-  // Optimize dependencies
   optimizeDeps: {
-    include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-      '@heroicons/react/24/outline',
-      'lucide-react',
-      'clsx',
-      'tailwind-merge',
-    ],
+    include: ['react', 'react-dom', 'react-router-dom'],
   },
-  // CSS optimization
   css: {
-    devSourcemap: false,
+    devSourcemap: true,
   },
 });

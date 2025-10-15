@@ -1,368 +1,779 @@
-import React from 'react';
+'use client';
+import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Award, BarChart3, Brain, CheckCircle, Clock, Globe, Settings, Shield, Star, Users, Zap } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { 
+
+  Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, 
+  Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Rocket, Code, 
+  Database, Smartphone, Lock, Settings, Calendar, FileText, Image, Video, 
+  Music, Palette, ShoppingCart, CreditCard, PieChart, LineChart, Activity, 
+  Zap, Globe, Shield, Users, Clock, Star, TrendingUp, Search, Filter,
+  ChevronDown, Play, Download, ExternalLink, Building, Star as StarIcon, 
+  TrendingUp as Growth, BarChart as Analytics, MessageSquare as Chat,
+  Eye as View, Sparkles as Magic, ArrowRight as Arrow, Phone as Call,
+  Mail as Email, MapPin as Location, CheckCircle as Check, DollarSign as Money,
+  Award as Trophy, Rocket as Launch, Code as Dev, Database as Data,
+  Smartphone as Mobile, Lock as Secure, Settings as Config, Calendar as Schedule,
+  FileText as Document, Image as Photo, Video as Media, Music as Audio,
+  Palette as Design, ShoppingCart as Cart, CreditCard as Payment,
+  PieChart as Pie, LineChart as Line, Activity as ActivityIcon
+} from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
-  const aiServices = [
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popularity');
+
+  const aiServices = useMemo(() => [
     {
-      id: 'ai-analytics',
-      title: 'AI Business Intelligence Suite',
-      description: 'Advanced AI-powered analytics platform with predictive modeling, real-time insights, and automated reporting for data-driven decision making.',
-      icon: BarChart3,
-      features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom ML Models', 'Data Visualization', 'Automated Reporting', 'Anomaly Detection'],
-      price: 'Starting at $299/month',
-      marketPrice: '$799/month',
-      savings: '63%',
-      users: '8,500+',
-      rating: 4.9,
+      id: 'ai-enterprise-solutions',
+      name: 'AI Enterprise Solutions',
+      description: 'Comprehensive AI transformation for large enterprises with custom AI models, integration, and ongoing support.',
+      category: 'enterprise',
+      price: 50000,
+      priceType: 'project',
+      features: [
+        'Custom AI model development',
+        'Enterprise integration',
+        'Data pipeline optimization',
+        'Real-time analytics',
+        'Scalable infrastructure',
+        '24/7 monitoring',
+        'Dedicated support team',
+        'Custom training programs'
+      ],
+      benefits: [
+        '300% average ROI',
+        '70% cost reduction',
+        '90% efficiency improvement',
+        'Complete digital transformation'
+      ],
+      icon: Building,
+      color: 'purple',
       popular: true,
-      category: 'Analytics',
-      link: 'https://ziontechgroup.com/ai-analytics'
-    },
-    {
-      id: 'ai-content-generation',
-      title: 'AI Content Studio Pro',
-      description: 'Enterprise-grade AI content creation platform with multi-language support, brand voice training, and SEO optimization for scalable content production.',
-      icon: Brain,
-      features: ['Multi-language Content', 'Brand Voice Training', 'SEO Optimization', 'Content Templates', 'Plagiarism Detection', 'Performance Analytics'],
-      price: 'Starting at $199/month',
-      marketPrice: '$499/month',
-      savings: '60%',
-      users: '12,000+',
-      rating: 4.8,
-      popular: false,
-      category: 'Content Creation',
-      link: 'https://ziontechgroup.com/ai-content-generation'
-    },
-    {
-      id: 'ai-customer-support',
-      title: 'AI Customer Experience Platform',
-      description: 'Comprehensive AI-powered customer support solution with intelligent routing, sentiment analysis, and automated resolution for enhanced customer satisfaction.',
-      icon: Users,
-      features: ['Intelligent Routing', 'Sentiment Analysis', 'Multi-channel Support', 'Knowledge Base AI', 'Escalation Management', 'Performance Metrics'],
-      price: 'Starting at $399/month',
-      marketPrice: '$999/month',
-      savings: '60%',
-      users: '6,800+',
       rating: 4.9,
-      popular: false,
-      category: 'Customer Service',
-      link: 'https://ziontechgroup.com/ai-customer-support'
-    },
-    {
-      id: 'ai-cybersecurity',
-      title: 'AI Security Operations Center',
-      description: 'Next-generation AI cybersecurity platform with threat hunting, behavioral analysis, and automated incident response for comprehensive protection.',
-      icon: Shield,
-      features: ['Threat Hunting', 'Behavioral Analysis', 'Automated Response', 'Compliance Monitoring', 'Risk Assessment', 'Security Orchestration'],
-      price: 'Starting at $599/month',
-      marketPrice: '$1,499/month',
-      savings: '60%',
-      users: '4,200+',
-      rating: 4.9,
-      popular: false,
-      category: 'Cybersecurity',
-      link: 'https://ziontechgroup.com/ai-cybersecurity'
-    },
-    {
-      id: 'ai-data-analytics',
-      title: 'AI Data Science Platform',
-      description: 'Complete AI data science platform with automated machine learning, data preprocessing, and model deployment for advanced analytics.',
-      icon: BarChart3,
-      features: ['AutoML Pipeline', 'Data Preprocessing', 'Model Deployment', 'Feature Engineering', 'Model Monitoring', 'A/B Testing'],
-      price: 'Starting at $349/month',
-      marketPrice: '$899/month',
-      savings: '61%',
-      users: '7,100+',
-      rating: 4.8,
-      popular: false,
-      category: 'Data Science',
-      link: 'https://ziontechgroup.com/ai-data-analytics'
+      clients: 150,
+      launchDate: '2023-01-01',
+      tags: ['Enterprise', 'AI Transformation', 'Custom Solutions', 'Integration'],
+      caseStudy: {
+        title: 'Fortune 500 Manufacturing Company',
+        result: 'Reduced operational costs by $2.3M annually',
+        description: 'Implemented AI-powered predictive maintenance and supply chain optimization'
+      }
     },
     {
       id: 'ai-marketing-automation',
-      title: 'AI Marketing Intelligence',
-      description: 'Advanced AI marketing platform with customer journey optimization, predictive targeting, and automated campaign management for maximum ROI.',
-      icon: Zap,
-      features: ['Customer Journey Mapping', 'Predictive Targeting', 'Campaign Optimization', 'Personalization Engine', 'ROI Analytics', 'Cross-channel Orchestration'],
-      price: 'Starting at $249/month',
-      marketPrice: '$699/month',
-      savings: '64%',
-      users: '9,300+',
+      name: 'AI Marketing Automation',
+      description: 'End-to-end AI-powered marketing automation with personalized campaigns, lead scoring, and conversion optimization.',
+      category: 'marketing',
+      price: 2500,
+      priceType: 'month',
+      features: [
+        'AI content generation',
+        'Predictive lead scoring',
+        'Automated campaign optimization',
+        'Customer journey mapping',
+        'Multi-channel orchestration',
+        'Real-time personalization',
+        'Advanced analytics',
+        'A/B testing automation'
+      ],
+      benefits: [
+        'Increase conversion rates by 250%',
+        'Reduce marketing costs by 40%',
+        'Improve lead quality by 180%',
+        'Save 20 hours per week'
+      ],
+      icon: Target,
+      color: 'blue',
+      popular: true,
+      rating: 4.8,
+      clients: 320,
+      launchDate: '2023-03-15',
+      tags: ['Marketing', 'Automation', 'Personalization', 'Analytics'],
+      caseStudy: {
+        title: 'E-commerce Retailer',
+        result: 'Increased online sales by 340% in 6 months',
+        description: 'Implemented AI-powered product recommendations and dynamic pricing'
+      }
+    },
+    {
+      id: 'ai-customer-service',
+      name: 'AI Customer Service Suite',
+      description: 'Complete AI-powered customer service solution with chatbots, sentiment analysis, and intelligent routing.',
+      category: 'customer-service',
+      price: 1500,
+      priceType: 'month',
+      features: [
+        'Natural language processing',
+        'Multi-language support',
+        'Sentiment analysis',
+        'Intelligent ticket routing',
+        'Knowledge base integration',
+        'Human handoff capability',
+        'Performance analytics',
+        'Custom training'
+      ],
+      benefits: [
+        'Reduce support costs by 60%',
+        'Improve response time by 85%',
+        'Increase customer satisfaction by 45%',
+        'Handle 90% of queries automatically'
+      ],
+      icon: MessageSquare,
+      color: 'green',
+      popular: true,
       rating: 4.7,
-      popular: false,
-      category: 'Marketing',
-      link: 'https://ziontechgroup.com/ai-marketing-automation'
+      clients: 280,
+      launchDate: '2023-02-20',
+      tags: ['Customer Service', 'Chatbot', 'NLP', 'Automation'],
+      caseStudy: {
+        title: 'SaaS Company',
+        result: 'Reduced support tickets by 70% and improved CSAT by 50%',
+        description: 'Deployed AI chatbot with intelligent escalation and knowledge base integration'
+      }
+    },
+    {
+      id: 'ai-data-analytics',
+      name: 'AI Data Analytics Platform',
+      description: 'Advanced AI-powered data analytics with predictive modeling, real-time insights, and automated reporting.',
+      category: 'analytics',
+      price: 3000,
+      priceType: 'month',
+      features: [
+        'Predictive analytics',
+        'Real-time data processing',
+        'Automated insights generation',
+        'Custom dashboard creation',
+        'Data visualization',
+        'Machine learning models',
+        'API integration',
+        'Custom reporting'
+      ],
+      benefits: [
+        'Make data-driven decisions 3x faster',
+        'Identify trends and patterns automatically',
+        'Reduce analysis time by 75%',
+        'Increase revenue by 30%'
+      ],
+      icon: BarChart,
+      color: 'orange',
+      popular: true,
+      rating: 4.8,
+      clients: 200,
+      launchDate: '2023-04-01',
+      tags: ['Analytics', 'Predictive Modeling', 'Data Science', 'Insights'],
+      caseStudy: {
+        title: 'Financial Services Firm',
+        result: 'Improved investment decisions and reduced risk by 40%',
+        description: 'Implemented AI-powered risk assessment and market prediction models'
+      }
     },
     {
       id: 'ai-workflow-automation',
-      title: 'AI Process Automation Suite',
-      description: 'Intelligent workflow automation platform with RPA, document processing, and decision automation for streamlined business operations.',
+      name: 'AI Workflow Automation',
+      description: 'Intelligent workflow automation with AI decision-making, process optimization, and seamless integration.',
+      category: 'automation',
+      price: 2000,
+      priceType: 'month',
+      features: [
+        'Process mining and analysis',
+        'Intelligent automation',
+        'Decision tree optimization',
+        'Integration with 200+ tools',
+        'Custom workflow builder',
+        'Performance monitoring',
+        'Exception handling',
+        'Scalable architecture'
+      ],
+      benefits: [
+        'Automate 80% of repetitive tasks',
+        'Reduce processing time by 90%',
+        'Eliminate human errors',
+        'Save 30 hours per week'
+      ],
       icon: Settings,
-      features: ['RPA Integration', 'Document Processing', 'Decision Automation', 'Process Mining', 'Exception Handling', 'Performance Analytics'],
-      price: 'Starting at $199/month',
-      marketPrice: '$599/month',
-      savings: '67%',
-      users: '5,600+',
+      color: 'cyan',
+      popular: false,
+      rating: 4.6,
+      clients: 150,
+      launchDate: '2023-05-15',
+      tags: ['Automation', 'Workflow', 'Process Optimization', 'Integration'],
+      caseStudy: {
+        title: 'Healthcare Provider',
+        result: 'Reduced patient processing time by 85%',
+        description: 'Automated patient intake, scheduling, and insurance verification processes'
+      }
+    },
+    {
+      id: 'ai-content-generation',
+      name: 'AI Content Generation Studio',
+      description: 'Complete AI content creation platform with brand voice training, multi-format output, and quality assurance.',
+      category: 'content',
+      price: 800,
+      priceType: 'month',
+      features: [
+        'Multi-format content creation',
+        'Brand voice training',
+        'SEO optimization',
+        'Plagiarism detection',
+        'Content calendar management',
+        'Team collaboration tools',
+        'Version control',
+        'Performance tracking'
+      ],
+      benefits: [
+        'Create content 10x faster',
+        'Maintain brand consistency',
+        'Improve SEO rankings by 200%',
+        'Reduce content costs by 70%'
+      ],
+      icon: FileText,
+      color: 'pink',
+      popular: false,
+      rating: 4.5,
+      clients: 400,
+      launchDate: '2023-06-01',
+      tags: ['Content Creation', 'AI Writing', 'Brand Voice', 'SEO'],
+      caseStudy: {
+        title: 'Digital Marketing Agency',
+        result: 'Increased content output by 500% while maintaining quality',
+        description: 'Implemented AI content generation for multiple client campaigns'
+      }
+    },
+    {
+      id: 'ai-cybersecurity',
+      name: 'AI Cybersecurity Suite',
+      description: 'Advanced AI-powered cybersecurity with threat detection, incident response, and security analytics.',
+      category: 'security',
+      price: 4000,
+      priceType: 'month',
+      features: [
+        'Real-time threat detection',
+        'Behavioral analysis',
+        'Automated incident response',
+        'Vulnerability assessment',
+        'Security analytics',
+        'Compliance monitoring',
+        'Threat intelligence',
+        '24/7 monitoring'
+      ],
+      benefits: [
+        'Detect threats 10x faster',
+        'Reduce false positives by 80%',
+        'Improve security posture',
+        'Ensure compliance'
+      ],
+      icon: Shield,
+      color: 'red',
+      popular: false,
+      rating: 4.7,
+      clients: 120,
+      launchDate: '2023-07-10',
+      tags: ['Cybersecurity', 'Threat Detection', 'Security Analytics', 'Compliance'],
+      caseStudy: {
+        title: 'Financial Institution',
+        result: 'Prevented 99.9% of cyber attacks and reduced response time by 95%',
+        description: 'Deployed AI-powered threat detection and automated incident response'
+      }
+    },
+    {
+      id: 'ai-healthcare-solutions',
+      name: 'AI Healthcare Solutions',
+      description: 'Specialized AI solutions for healthcare including diagnostic assistance, patient monitoring, and treatment optimization.',
+      category: 'healthcare',
+      price: 6000,
+      priceType: 'month',
+      features: [
+        'Medical image analysis',
+        'Diagnostic assistance',
+        'Patient monitoring',
+        'Treatment optimization',
+        'Drug discovery support',
+        'Clinical decision support',
+        'HIPAA compliance',
+        'Integration with EMR systems'
+      ],
+      benefits: [
+        'Improve diagnostic accuracy by 35%',
+        'Reduce diagnosis time by 60%',
+        'Enhance patient outcomes',
+        'Optimize treatment plans'
+      ],
+      icon: Activity,
+      color: 'emerald',
+      popular: false,
       rating: 4.8,
-      popular: false,
-      category: 'Automation',
-      link: 'https://ziontechgroup.com/ai-workflow-automation'
+      clients: 80,
+      launchDate: '2023-08-01',
+      tags: ['Healthcare', 'Medical AI', 'Diagnostics', 'Patient Care'],
+      caseStudy: {
+        title: 'Regional Hospital Network',
+        result: 'Improved diagnostic accuracy by 40% and reduced readmission rates by 25%',
+        description: 'Implemented AI-powered diagnostic assistance and patient monitoring systems'
+      }
     },
     {
-      id: 'ai-voice-assistant',
-      title: 'AI Voice Intelligence',
-      description: 'Enterprise AI voice platform with natural language processing, voice analytics, and conversational AI for enhanced communication.',
-      icon: Users,
-      features: ['Natural Language Processing', 'Voice Analytics', 'Conversational AI', 'Multi-language Support', 'Voice Biometrics', 'Integration APIs'],
-      price: 'Starting at $179/month',
-      marketPrice: '$499/month',
-      savings: '64%',
-      users: '3,900+',
-      rating: 4.9,
+      id: 'ai-fintech-solutions',
+      name: 'AI Fintech Solutions',
+      description: 'Advanced AI solutions for financial services including fraud detection, risk assessment, and algorithmic trading.',
+      category: 'fintech',
+      price: 3500,
+      priceType: 'month',
+      features: [
+        'Fraud detection and prevention',
+        'Risk assessment models',
+        'Algorithmic trading',
+        'Credit scoring',
+        'Regulatory compliance',
+        'Real-time monitoring',
+        'Anomaly detection',
+        'Financial forecasting'
+      ],
+      benefits: [
+        'Reduce fraud by 95%',
+        'Improve risk assessment accuracy',
+        'Increase trading efficiency',
+        'Ensure regulatory compliance'
+      ],
+      icon: CreditCard,
+      color: 'indigo',
       popular: false,
-      category: 'Voice AI',
-      link: 'https://ziontechgroup.com/ai-voice-assistant'
+      rating: 4.6,
+      clients: 100,
+      launchDate: '2023-09-15',
+      tags: ['Fintech', 'Fraud Detection', 'Risk Assessment', 'Trading'],
+      caseStudy: {
+        title: 'Digital Bank',
+        result: 'Reduced fraudulent transactions by 98% and improved approval rates by 30%',
+        description: 'Implemented AI-powered fraud detection and credit scoring systems'
+      }
     },
     {
-      id: 'ai-predictive-analytics',
-      title: 'AI Predictive Intelligence',
-      description: 'Advanced predictive analytics platform with forecasting models, risk assessment, and scenario planning for strategic decision making.',
-      icon: BarChart3,
-      features: ['Forecasting Models', 'Risk Assessment', 'Scenario Planning', 'Trend Analysis', 'Predictive Maintenance', 'Financial Modeling'],
-      price: 'Starting at $399/month',
-      marketPrice: '$1,199/month',
-      savings: '67%',
-      users: '2,800+',
-      rating: 4.9,
+      id: 'ai-mobile-app-development',
+      name: 'AI Mobile App Development',
+      description: 'AI-powered mobile app development with intelligent features, personalization, and advanced analytics.',
+      category: 'mobile',
+      price: 2500,
+      priceType: 'month',
+      features: [
+        'AI-powered app features',
+        'Personalized user experience',
+        'Intelligent recommendations',
+        'Voice and image recognition',
+        'Predictive analytics',
+        'Cross-platform development',
+        'Real-time synchronization',
+        'Advanced security'
+      ],
+      benefits: [
+        'Increase user engagement by 200%',
+        'Improve user retention by 150%',
+        'Reduce development time by 40%',
+        'Enhance user experience'
+      ],
+      icon: Smartphone,
+      color: 'violet',
       popular: false,
-      category: 'Predictive Analytics',
-      link: 'https://ziontechgroup.com/ai-predictive-analytics'
+      rating: 4.5,
+      clients: 180,
+      launchDate: '2023-10-01',
+      tags: ['Mobile Development', 'AI Features', 'Personalization', 'Cross-platform'],
+      caseStudy: {
+        title: 'E-commerce Mobile App',
+        result: 'Increased user engagement by 250% and boosted sales by 180%',
+        description: 'Integrated AI-powered product recommendations and personalized shopping experience'
+      }
     }
+  ], []);
+
+  const categories = [
+    { id: 'all', name: 'All AI Services', count: aiServices.length },
+    { id: 'enterprise', name: 'Enterprise Solutions', count: aiServices.filter(s => s.category === 'enterprise').length },
+    { id: 'marketing', name: 'Marketing', count: aiServices.filter(s => s.category === 'marketing').length },
+    { id: 'customer-service', name: 'Customer Service', count: aiServices.filter(s => s.category === 'customer-service').length },
+    { id: 'analytics', name: 'Analytics', count: aiServices.filter(s => s.category === 'analytics').length },
+    { id: 'automation', name: 'Automation', count: aiServices.filter(s => s.category === 'automation').length },
+    { id: 'content', name: 'Content', count: aiServices.filter(s => s.category === 'content').length },
+    { id: 'security', name: 'Security', count: aiServices.filter(s => s.category === 'security').length },
+    { id: 'healthcare', name: 'Healthcare', count: aiServices.filter(s => s.category === 'healthcare').length },
+    { id: 'fintech', name: 'Fintech', count: aiServices.filter(s => s.category === 'fintech').length },
+    { id: 'mobile', name: 'Mobile', count: aiServices.filter(s => s.category === 'mobile').length }
   ];
 
-  const benefits = [
-    {
-      title: 'Increased Efficiency',
-      description: 'Automate repetitive tasks and focus on strategic initiatives.',
-      icon: Zap,
-    },
-    {
-      title: 'Better Insights',
-      description: 'Gain deeper understanding of your data and customer behavior.',
-      icon: BarChart3,
-    },
-    {
-      title: 'Cost Savings',
-      description: 'Reduce operational costs through intelligent automation.',
-      icon: Award,
-    },
-    {
-      title: 'Scalability',
-      description: 'Scale your operations without proportional cost increases.',
-      icon: Globe,
-    },
-  ];
+  const filteredServices = useMemo(() => {
+    let filtered = aiServices;
+
+    // Filter by search term
+    if (searchTerm) {
+      filtered = filtered.filter(service =>
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+      );
+    }
+
+    // Filter by category
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(service => service.category === selectedCategory);
+    }
+
+    // Sort services
+    switch (sortBy) {
+      case 'price-low':
+        filtered.sort((a, b) => a.price - b.price);
+        break;
+      case 'price-high':
+        filtered.sort((a, b) => b.price - a.price);
+        break;
+      case 'rating':
+        filtered.sort((a, b) => b.rating - a.rating);
+        break;
+      case 'clients':
+        filtered.sort((a, b) => b.clients - a.clients);
+        break;
+      case 'popularity':
+      default:
+        filtered.sort((a, b) => {
+          if (a.popular && !b.popular) return -1;
+          if (!a.popular && b.popular) return 1;
+          return b.rating - a.rating;
+        });
+        break;
+    }
+
+    return filtered;
+  }, [aiServices, searchTerm, selectedCategory, sortBy]);
+
+  const getColorClasses = (color: string) => {
+    const colorMap: { [key: string]: string } = {
+      purple: 'from-purple-500 to-purple-600',
+      blue: 'from-blue-500 to-blue-600',
+      green: 'from-green-500 to-green-600',
+      orange: 'from-orange-500 to-orange-600',
+      cyan: 'from-cyan-500 to-cyan-600',
+      pink: 'from-pink-500 to-pink-600',
+      red: 'from-red-500 to-red-600',
+      emerald: 'from-emerald-500 to-emerald-600',
+      indigo: 'from-indigo-500 to-indigo-600',
+      violet: 'from-violet-500 to-violet-600'
+    };
+    return colorMap[color] || 'from-gray-500 to-gray-600';
+  };
 
   return (
     <>
       <Helmet>
-        <title>AI Services - Zion Tech Group | Advanced AI Solutions</title>
-        <meta name="description" content="Transform your business with our comprehensive AI services including analytics, content generation, customer support, and cybersecurity solutions." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI analytics, AI automation, business AI solutions" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Transform your business with our comprehensive AI services. From enterprise solutions to specialized AI applications, we deliver cutting-edge artificial intelligence solutions." />
+        <meta name="keywords" content="ai services, artificial intelligence, machine learning, ai consulting, ai development, ai solutions" />
+        <meta property="og:title" content="AI Services - Zion Tech Group" />
+        <meta property="og:description" content="Transform your business with our comprehensive AI services. Achieve 300% ROI with our cutting-edge artificial intelligence solutions." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-services" />
       </Helmet>
-
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI <span className="text-cyan-400">Services</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge AI solutions designed to drive growth, efficiency, and innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors flex items-center justify-center space-x-2"
-              >
-                <span>Get Started</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link
-                to="/demo"
-                className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 font-semibold py-3 px-8 rounded-lg transition-colors"
-              >
-                View Demo
-              </Link>
+        <section className="pt-24 pb-16 px-4">
+          <div className="container mx-auto text-center">
+            <div className="max-w-4xl mx-auto">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+                AI Services
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                Transform your business with our comprehensive AI services. From enterprise solutions to 
+                specialized AI applications, we deliver cutting-edge artificial intelligence that drives real results.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="tel:+13024640950"
+                  className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call (302) 464-0950
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="cyber-button-secondary inline-flex items-center justify-center px-8 py-4 text-lg"
+                >
+                  <Mail className="w-5 h-5 mr-2" />
+                  Get Started
+                </a>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="px-4 sm:px-6 lg:px-8 mb-20">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Why Choose Our AI Services?
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => {
-                const IconComponent = benefit.icon;
-                return (
-                  <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <IconComponent className="w-8 h-8 text-cyan-400" />
+        {/* Stats Section */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">10+</div>
+                <div className="text-gray-300">AI Service Categories</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">1,500+</div>
+                <div className="text-gray-300">Successful Projects</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">300%</div>
+                <div className="text-gray-300">Average ROI</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Client Satisfaction</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Search and Filter Section */}
+        <section className="py-8 px-4">
+          <div className="container mx-auto">
+            <div className="max-w-6xl mx-auto">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/20">
+                <div className="flex flex-col lg:flex-row gap-4">
+                  {/* Search */}
+                  <div className="flex-1">
+                    <div className="relative">
+                      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                      <input
+                        type="text"
+                        placeholder="Search AI services..."
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                      />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                    <p className="text-gray-300">{benefit.description}</p>
                   </div>
-                );
-              })}
+
+                  {/* Category Filter */}
+                  <div className="lg:w-64">
+                    <select
+                      value={selectedCategory}
+                      onChange={(e) => setSelectedCategory(e.target.value)}
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                    >
+                      {categories.map((category) => (
+                        <option key={category.id} value={category.id}>
+                          {category.name} ({category.count})
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* Sort */}
+                  <div className="lg:w-48">
+                    <select
+                      value={sortBy}
+                      onChange={(e) => setSortBy(e.target.value)}
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                    >
+                      <option value="popularity">Most Popular</option>
+                      <option value="rating">Highest Rated</option>
+                      <option value="clients">Most Clients</option>
+                      <option value="price-low">Price: Low to High</option>
+                      <option value="price-high">Price: High to Low</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Services Grid */}
-        <section className="px-4 sm:px-6 lg:px-8 mb-20">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Our AI Services
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiServices.map((service) => {
-                const IconComponent = service.icon;
-                return (
-                  <div
-                    key={service.id}
-                    className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${
-                      service.popular 
-                        ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' 
-                        : 'border-cyan-500/20'
-                    }`}
-                  >
-                    {service.popular && (
-                      <div className="flex items-center justify-center mb-4">
-                        <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center space-x-1">
-                          <Star className="w-4 h-4" />
-                          <span>Most Popular</span>
-                        </span>
-                      </div>
-                    )}
-                    
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center">
-                        <IconComponent className="w-6 h-6 text-cyan-400" />
-                      </div>
-                      <span className="px-3 py-1 bg-slate-700 text-gray-300 text-sm rounded-full">
-                        {service.category}
-                      </span>
+        <section className="py-16 px-4">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {filteredServices.map((service) => (
+                <div
+                  key={service.id}
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
+                >
+                  {/* Header */}
+                  <div className="flex items-start justify-between mb-6">
+                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${getColorClasses(service.color)} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                      <service.icon className="w-8 h-8 text-white" />
                     </div>
-                    
-                    <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                    
-                    {/* Rating and Users */}
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center space-x-2">
-                        <div className="flex items-center space-x-1">
-                          {[...Array(5)].map((_, i) => (
-                            <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} />
-                          ))}
-                        </div>
+                    <div className="flex items-center space-x-3">
+                      {service.popular && (
+                        <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm font-medium rounded-full">
+                          Popular
+                        </span>
+                      )}
+                      <div className="flex items-center space-x-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
                         <span className="text-sm text-gray-300">{service.rating}</span>
                       </div>
-                      <span className="text-sm text-gray-400">{service.users} users</span>
-                    </div>
-                    
-                    <ul className="space-y-2 mb-6">
-                      {service.features.slice(0, 4).map((feature, index) => (
-                        <li key={index} className="flex items-center space-x-2 text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          <span className="text-sm">{feature}</span>
-                        </li>
-                      ))}
-                      {service.features.length > 4 && (
-                        <li className="text-sm text-cyan-400">
-                          +{service.features.length - 4} more features
-                        </li>
-                      )}
-                    </ul>
-                    
-                    <div className="mb-6">
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="flex items-center space-x-2">
-                          <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                          <span className="text-sm text-gray-400 line-through">{service.marketPrice}</span>
-                        </div>
-                        <span className="bg-green-500/20 text-green-400 px-2 py-1 rounded-full text-xs font-semibold">
-                          Save {service.savings}
-                        </span>
-                      </div>
-                      <div className="flex items-center space-x-1 text-gray-400 text-sm">
-                        <Clock className="w-4 h-4" />
-                        <span>Setup in 24h</span>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <Link
-                        to={`/${service.id}`}
-                        className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105"
-                      >
-                        <span>Get Started</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                      <a
-                        href={service.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full border border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 font-semibold py-2 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 text-sm"
-                      >
-                        <span>Learn More</span>
-                        <ArrowRight className="w-3 h-3" />
-                      </a>
                     </div>
                   </div>
-                );
-              })}
+
+                  {/* Content */}
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    {service.name}
+                  </h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  {/* Features */}
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features:</h4>
+                    <ul className="grid grid-cols-2 gap-2">
+                      {service.features.slice(0, 6).map((feature, index) => (
+                        <li key={index} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Benefits */}
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-cyan-400 mb-3">Proven Benefits:</h4>
+                    <ul className="space-y-2">
+                      {service.benefits.map((benefit, index) => (
+                        <li key={index} className="flex items-center text-sm text-gray-300">
+                          <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Case Study */}
+                  {service.caseStudy && (
+                    <div className="mb-6 p-4 bg-slate-700/50 rounded-lg border border-cyan-400/20">
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Case Study:</h4>
+                      <div className="text-sm text-gray-300">
+                        <div className="font-medium text-white mb-1">{service.caseStudy.title}</div>
+                        <div className="text-cyan-400 font-medium mb-1">{service.caseStudy.result}</div>
+                        <div className="text-xs text-gray-400">{service.caseStudy.description}</div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Pricing and Stats */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div>
+                      <div className="text-3xl font-bold text-white">
+                        ${service.price.toLocaleString()}
+                        <span className="text-sm text-gray-400">/{service.priceType}</span>
+                      </div>
+                      <div className="text-sm text-gray-400">
+                        {service.clients} successful clients
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-sm text-gray-300">Launched</div>
+                      <div className="text-sm text-gray-400">
+                        {new Date(service.launchDate).toLocaleDateString()}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {service.tags.map((tag, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-slate-700 text-gray-300 text-sm rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* CTA Buttons */}
+                  <div className="flex space-x-3">
+                    <a
+                      href={`/contact?service=${service.id}`}
+                      className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all text-center"
+                    >
+                      Get Started
+                    </a>
+                    <a
+                      href={`/demo?service=${service.id}`}
+                      className="px-6 py-3 border border-cyan-400 text-cyan-400 rounded-lg font-medium hover:bg-cyan-400/10 transition-all"
+                    >
+                      Demo
+                    </a>
+                    <a
+                      href={`/case-studies?service=${service.id}`}
+                      className="px-6 py-3 border border-purple-400 text-purple-400 rounded-lg font-medium hover:bg-purple-400/10 transition-all"
+                    >
+                      Case Study
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
+
+            {filteredServices.length === 0 && (
+              <div className="text-center py-16">
+                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+                <p className="text-gray-300 mb-6">Try adjusting your search or filter criteria</p>
+                <button
+                  onClick={() => {
+                    setSearchTerm('');
+                    setSelectedCategory('all');
+                    setSortBy('popularity');
+                  }}
+                  className="cyber-button"
+                >
+                  Reset Filters
+                </button>
+              </div>
+            )}
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="px-4 sm:px-6 lg:px-8 pb-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Ready to Transform Your Business with AI?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Let our AI experts help you identify the best solutions for your specific needs.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors flex items-center justify-center space-x-2"
-                >
-                  <span>Get Free Consultation</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  to="/demo"
-                  className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 font-semibold py-3 px-8 rounded-lg transition-colors"
-                >
-                  Schedule Demo
-                </Link>
+        <section className="py-16 px-4">
+          <div className="container mx-auto">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-2xl p-8 border border-cyan-400/20">
+                <h2 className="text-3xl font-bold text-white mb-4">
+                  Ready to Transform Your Business with AI?
+                </h2>
+                <p className="text-gray-300 mb-8 text-lg">
+                  Our AI experts are ready to help you implement the perfect AI solution for your business. 
+                  Get a free consultation and discover how AI can revolutionize your operations.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="tel:+13024640950"
+                    className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg"
+                  >
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call (302) 464-0950
+                  </a>
+                  <a
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="cyber-button-secondary inline-flex items-center justify-center px-8 py-4 text-lg"
+                  >
+                    <Mail className="w-5 h-5 mr-2" />
+                    Email Us
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </section>
+
+        <Footer />
       </div>
     </>
   );
 };
 
-export default AIServicesPage;
+
