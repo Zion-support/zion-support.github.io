@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
   CLS: number | null;
-  INP: number | null;
+  FID: number | null;
   FCP: number | null;
   LCP: number | null;
   TTFB: number | null;
@@ -12,67 +11,60 @@ interface PerformanceMetrics {
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     CLS: null,
-    INP: null,
+    FID: null,
     FCP: null,
     LCP: null,
-    TTFB: null
+    TTFB: null,
   });
 
   useEffect(() => {
-    const handleMetric = (metric: any) => {
-      setMetrics(prev => ({
-        ...prev,
-        [metric.name]: metric.value
-      }));
+    // Only run in production
+    if (process.env.NODE_ENV !== 'production') return;
 
-      // Send to analytics (replace with your analytics service)
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          value: Math.round(metric.value),
-          event_label: metric.id,
+    const updateMetric = (name: string, value: number) => {
+      setMetrics(prev => ({ ...prev, [name]: value }));
+      
+      // Send to analytics service
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: name,
+          value: Math.round(name === 'CLS' ? value * 1000 : value),
           non_interaction: true,
         });
       }
     };
 
-    // Measure Core Web Vitals
-    onCLS(handleMetric);
-    onINP(handleMetric);
-    onFCP(handleMetric);
-    onLCP(handleMetric);
-    onTTFB(handleMetric);
-
-    // Performance observer for additional metrics
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
-            const navEntry = entry as PerformanceNavigationTiming;
-            // Navigation timing metrics collected
-          }
-        }
-      });
-
-      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
-    }
-
-    // Memory usage monitoring
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      // Memory usage metrics collected
-    }
-
+    // Use dynamic import for web-vitals to avoid build issues
+    import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
+      onCLS((metric) => updateMetric('CLS', metric.value));
+      onFID((metric) => updateMetric('FID', metric.value));
+      onFCP((metric) => updateMetric('FCP', metric.value));
+      onLCP((metric) => updateMetric('LCP', metric.value));
+      onTTFB((metric) => updateMetric('TTFB', metric.value));
+    }).catch(() => {
+      // Fallback if web-vitals fails to load
+      console.log('Web Vitals not available');
+    });
   }, []);
 
-  // Development mode: metrics available for debugging
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      // Performance metrics available for debugging
-    }
-  }, [metrics]);
+  // Don't render anything in production
+  if (process.env.NODE_ENV === 'production') {
+    return null;
+  }
 
-  return null; // This component doesn't render anything
+  return (
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-4 rounded-lg text-xs font-mono z-50">
+      <h4 className="font-bold mb-2">Performance Metrics</h4>
+      <div className="space-y-1">
+        <div>CLS: {metrics.CLS?.toFixed(3) || 'N/A'}</div>
+        <div>FID: {metrics.FID?.toFixed(0) || 'N/A'}ms</div>
+        <div>FCP: {metrics.FCP?.toFixed(0) || 'N/A'}ms</div>
+        <div>LCP: {metrics.LCP?.toFixed(0) || 'N/A'}ms</div>
+        <div>TTFB: {metrics.TTFB?.toFixed(0) || 'N/A'}ms</div>
+      </div>
+    </div>
+  );
 };
 
 export default PerformanceMonitor;

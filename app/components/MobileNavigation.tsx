@@ -1,20 +1,16 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, ArrowRight } from 'lucide-react';
-
-const MobileNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-
-  return (
-    <>
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Menu, X, ArrowRight } from 'lucide-react'
+const MobileNavigation: React.FC = () => {}
+}const [isOpen, setIsOpen] = useState(false)
+  const toggleMenu = () => {}
+}setIsOpen(!isOpen)
+  }
+  const closeMenu = () => {}
+}setIsOpen(false)
+  }
+  return ()
+    <div>
       {/* Mobile menu button */}
       <button
         onClick={toggleMenu}
@@ -24,16 +20,14 @@ const MobileNavigation: React.FC = () => {
       >
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </button>
-
       {/* Mobile menu overlay */}
-      {isOpen && (
+      {isOpen && ()
         <div className="fixed inset-0 z-50 md:hidden">
           {/* Backdrop */}
-          <div 
+          <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={closeMenu}
           />
-          
           {/* Menu panel */}
           <div className="absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-slate-900/95 backdrop-blur-sm border-l border-white/20 shadow-2xl">
             <div className="p-6">
@@ -50,7 +44,6 @@ const MobileNavigation: React.FC = () => {
                   <X className="w-6 h-6" />
                 </button>
               </div>
-
               {/* Navigation links */}
               <nav className="space-y-4 mb-8">
                 <Link
@@ -61,7 +54,6 @@ const MobileNavigation: React.FC = () => {
                   <span className="font-medium">About Us</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                
                 <Link
                   to="/services"
                   onClick={closeMenu}
@@ -70,7 +62,6 @@ const MobileNavigation: React.FC = () => {
                   <span className="font-medium">Our Services</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                
                 <Link
                   to="/contact"
                   onClick={closeMenu}
@@ -80,7 +71,6 @@ const MobileNavigation: React.FC = () => {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </nav>
-
               {/* Quick services */}
               <div className="mb-8">
                 <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
@@ -110,7 +100,6 @@ const MobileNavigation: React.FC = () => {
                   </Link>
                 </div>
               </div>
-
               {/* CTA Button */}
               <Link
                 to="/contact"
@@ -124,8 +113,7 @@ const MobileNavigation: React.FC = () => {
           </div>
         </div>
       )}
-    </>
-  );
-};
-
-export default MobileNavigation;
+</div>
+  )
+}
+export default MobileNavigation
