@@ -6,7 +6,7 @@ import { twMerge } from 'tailwind-merge';
  * and conditional class application;
  */;
 export function cn(...inputs: (string | undefined | null | boolean)[]) {
-  return twMerge(clsx(inputs));
+  return twMerge(clsx(inputs)),
 }
 ;
 /**;
@@ -17,7 +17,7 @@ export function conditionalClass(
   trueClass: string,';';
   falseClass: string = '';
 ): string {
-  return condition ? trueClass : falseClass;
+  return condition ? trueClass : falseClass,
 }
 ;
 /**;
@@ -35,15 +35,15 @@ export function responsiveClass(
   if (md) classes.push(`md:${md}`);
   if (lg) classes.push(`lg:${lg}`);
   if (xl) classes.push(`xl:${xl}`);';';
-  return classes.join(' ');
+  return classes.join(' ');";
 }
 ;
 /**;
  * Utility function for state-based class names;
  */;
 export function stateClass(';';
-  state: 'default' | 'hover' | 'focus' | 'active' | 'disabled',;
-  baseClass: string;
+  state: 'default' | 'hover' | 'focus' | 'active' | 'disabled',`;
+  baseClass: string,
 ): string {
   const stateMap = {
     default: baseClass,;
@@ -63,7 +63,7 @@ export function variantClass<T extends string>(
   variants: Record<T, string>,;
   defaultVariant?: T;
 ): string {';';
-  return variants[variant] || (defaultVariant ? variants[defaultVariant] : '');
+  return variants[variant] || (defaultVariant ? variants[defaultVariant] : '')`;
 }
 ;
 export default cn;';';

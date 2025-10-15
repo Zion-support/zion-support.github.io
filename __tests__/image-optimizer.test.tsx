@@ -1,40 +1,44 @@
-import React from 'react';';
-import { render, screen } from '@testing-library/react';';
-import '@testing-library/jest-dom';';
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import ImageOptimizer from '../app/components/ImageOptimizer';
-;
-// Mock the image loading;
+
+// Mock the image loading
 const mockImage = {
-  addEventListener: jest.fn(),;
-  removeEventListener: jest.fn(),';';
-  src: '',;
-  onload: null,;
-  onerror: null;
+  addEventListener: jest.fn(),
+  removeEventListener: jest.fn(),
+  src: '',
+  onload: null,
+  onerror: null
 };
-;
-// Mock Image constructor;
+
+// Mock Image constructor
 global.Image = jest.fn(() => mockImage) as any;
-';';
-describe('ImageOptimizer', () => {';
-  it('renders without crashing', () => {
-    render(<ImageOptimizer src="test.jpg" alt="Test image" />);';';
-    expect(screen.getByAltText('Test image')).toBeInTheDocument();
-  });
-';';
-  it('applies correct props', () => {
+
+describe('ImageOptimizer', () => {";
+  it('renders without crashing', () => {";
     render(
-      <ImageOptimizer ";";
-        src="test.jpg" ";
-        alt="Test image" ";
-        className="test-class";
-        width={100}
-        height={100}
-      />;
+      <ImageOptimizer src ="/test-image.jpg"";
+        alt="Test image"";
+        width={300}
+        height={200}
+      />
     );
-    ';';
-    const img = screen.getByAltText('Test image');';
-    expect(img).toHaveAttribute('src', 'test.jpg');';
-    expect(img).toHaveClass('test-class');
+    
+    expect(screen.getByAltText('Test image')).toBeInTheDocument();";
+  });
+
+  it('applies lazy loading', () => {";
+    render(
+      <ImageOptimizer src ="/test-image.jpg"";
+        alt="Test image"";
+        width={300}
+        height={200}
+        lazy={true}
+      />
+    );
+    
+    const img = screen.getByAltText('Test image');";
+    expect(img).toHaveAttribute('loading', 'lazy');";
   });
 });
-'";'";

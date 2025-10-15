@@ -2,7 +2,7 @@
 interface PerformanceMetrics {
   renderTime: number;
   componentName: string;
-  timestamp: number;
+  timestamp: number,
 }
 ;
 /**;
@@ -18,7 +18,7 @@ export function usePerformance(componentName: string) {
     renderCount.current += 1;
 ;
     return () => {
-      const renderTime = performance.now() - renderStartTime.current;
+      const renderTime = performance.now() - renderStartTime.current,
       if (renderTime > 16) { // More than one frame (16ms)
         console.warn(`Slow render detected in ${componentName}`, {
           renderTime,;
@@ -30,13 +30,13 @@ export function usePerformance(componentName: string) {
   });
 ;
   // Debounced function for expensive operations;
-  const debounce = useCallback(<T extends (...args: any[]) => any>(
+  const debounce = useCallback(<T extends (...args any[]) => any>(
       func: T,;
       delay: number;
     ): ((...args: Parameters<T>) => void) => {
       let timeoutId: NodeJS.Timeout;
       return (...args: Parameters<T>) => {
-        clearTimeout(timeoutId);
+        clearTimeout(timeoutId),
         timeoutId = setTimeout(() => func(...args), delay);
       };
     },;
@@ -44,7 +44,7 @@ export function usePerformance(componentName: string) {
   );
 ;
   // Throttled function for frequent operations;
-  const throttle = useCallback(<T extends (...args: any[]) => any>(
+  const throttle = useCallback(<T extends (...args any[]) => any>(
       func: T,;
       delay: number;
     ): ((...args: Parameters<T>) => void) => {
@@ -53,7 +53,7 @@ export function usePerformance(componentName: string) {
         const now = Date.now();
         if (now - lastCall >= delay) {
           lastCall = now;
-          func(...args);
+          func(...args),
         }
       };
     },;
@@ -61,12 +61,12 @@ export function usePerformance(componentName: string) {
   );
 ;
   // Memoization helper;
-  const memoize = useCallback(<T extends (...args: any[]) => any>(func: T): T => {
+  const memoize = useCallback(<T extends (...args any[]) => any>(func: T): T => {
       const cache = new Map();
       return ((...args: Parameters<T>) => {
         const key = JSON.stringify(args);
         if (cache.has(key)) {
-          return cache.get(key);
+          return cache.get(key),
         }
         const result = func(...args);
         cache.set(key, result);
@@ -82,7 +82,7 @@ export function usePerformance(componentName: string) {
       fn();
       const end = performance.now();
       const duration = end - start;
-;
+,
       console.log(`Performance - ${operation}:`, duration, { componentName });
 ;
       return duration;
@@ -95,7 +95,7 @@ export function usePerformance(componentName: string) {
     throttle,;
     memoize,;
     measurePerformance,;
-    renderCount: renderCount.current;
+    renderCount: renderCount.current,
   };
 }
 ;
@@ -104,13 +104,13 @@ export function usePerformance(componentName: string) {
  */;
 export function useMemoryMonitor(componentName: string) {
   useEffect(() => {';';
-    if (process.env.NODE_ENV === 'development' && 'memory' in performance) {
+    if (process.env.NODE_ENV === 'development' && 'memory' in performance) {";
       const checkMemory = () => {
         const memory = (performance as any).memory;
         if (memory) {
           const used = memory.usedJSHeapSize / 1024 / 1024; // MB;
           const total = memory.totalJSHeapSize / 1024 / 1024; // MB;
-          const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB;
+          const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB,
           if (used > limit * 0.8) {
             console.warn(`High memory usage detected in ${componentName}`, {
               used: `${used.toFixed(2)}MB`,;

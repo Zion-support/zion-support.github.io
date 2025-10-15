@@ -1,125 +1,203 @@
-import React, { useEffect, useState, useCallback } from 'react',;
-      interface AccessibilitySettings {
-  highContrast: boolean,;
-      largeText: boolean,;
-      reducedMotion: boolean,;
-      screenReader: boolean,;
-      focusVisible: boolean,;
-      keyboardNavigation: boolean;
+import React, { useEffect, useState, useCallback } from 'react';
+
+interface AccessibilitySettings {
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  screenReader: boolean;
+  focusVisible: boolean;
+  keyboardNavigation: boolean,
 }
-;
+
 interface AccessibilityManagerProps {
-  children: React.ReactNode;
+  children: React.ReactNode,
 }
-;
+
 const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children }) => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({: value;
-    highContrast: false,;
-    largeText: false,;
-    reducedMotion: false,;
-    screenReader: false,;
-    focusVisible: true,;
-    keyboardNavigation: true;
-  }),;
-      const [isVisible, setIsVisible] = useState(false);: value;
-  // Load settings from localStorage;';';
-  useEffect(() => {': value';
-    const savedSettings = localStorage.getItem('accessibility-settings'): value,;
-      if (savedSettings) {
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    screenReader: false,
+    focusVisible: true,
+    keyboardNavigation: true
+  });
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Load settings from localStorage
+  useEffect(() => {
+    const savedSettings = localStorage.getItem('accessibility-settings');";
+    if (savedSettings) {
       try {
-        setSettings(JSON.parse(savedSettings));';';
-      } catch (error) {'';
-        console.error('Error loading accessibility settings: ", error);
+        setSettings(JSON.parse(savedSettings));
+      } catch (error) {
+        console.error('Error loading accessibility settings: ', error);";
       }
     }
   }, []);
-;
-  // Apply accessibility settings;
-  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
-    const root = document.documentElement;: value;"
-    // High contrast mode;';';
-    if (newSettings.highContrast) {'';
-      root.classList.add('high-contrast');';
-    } else {'';
-      root.classList.remove('high-contrast');
+
+  // Save settings to localStorage
+  useEffect(() => {
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings));";
+  }, [settings]);
+
+  // Apply accessibility settings to document
+  useEffect(() => {
+    const root = document.documentElement;
+    
+    if (settings.highContrast) {
+      root.classList.add('high-contrast');";
+    } else {
+      root.classList.remove('high-contrast');";
     }
-;
-    // Large text mode;';';
-    if (newSettings.largeText) {'';
-      root.classList.add('large-text');';
-    } else {'';
-      root.classList.remove('large-text');
+
+    if (settings.largeText) {
+      root.classList.add('large-text');";
+    } else {
+      root.classList.remove('large-text');";
     }
-;
-    // Reduced motion;';';
-    if (newSettings.reducedMotion) {'';
-      root.classList.add('reduced-motion');';
-    } else {'';
-      root.classList.remove('reduced-motion');
+
+    if (settings.reducedMotion) {
+      root.classList.add('reduced-motion');";
+    } else {
+      root.classList.remove('reduced-motion');";
     }
-;
-    // Screen reader optimizations;';';
-    if (newSettings.screenReader) {'';
-      root.classList.add('screen-reader-optimized');';
-    } else {'';
-      root.classList.remove('screen-reader-optimized');
+
+    if (settings.screenReader) {
+      root.classList.add('screen-reader-optimized');";
+    } else {
+      root.classList.remove('screen-reader-optimized');";
     }
-;
-    // Focus visible;';';
-    if (newSettings.focusVisible) {'';
-      root.classList.add('focus-visible');';
-    } else {'';
-      root.classList.remove('focus-visible');
+
+    if (settings.focusVisible) {
+      root.classList.add('focus-visible');";
+    } else {
+      root.classList.remove('focus-visible');";
     }
-;
-    // Keyboard navigation;';';
-    if (newSettings.keyboardNavigation) {'';
-      root.classList.add('keyboard-navigation');';
-    } else {'';
-      root.classList.remove('keyboard-navigation');
+
+    if (settings.keyboardNavigation) {
+      root.classList.add('keyboard-navigation');";
+    } else {
+      root.classList.remove('keyboard-navigation');";
     }
-    ';';
-    // Save to localStorage;'';
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings)),;
-      setSettings(newSettings);
+  }, [settings]);
+
+  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: boolean) => {
+    setSettings(prev => ({
+      ...prev,
+      [key]: value
+    }));
   }, []);
-;
-  // Update settings when they change;
-  useEffect(() => {: value;
-    applySettings(settings);
-  }, [settings, applySettings]);
-;
-  // Toggle accessibility panel;
-  const togglePanel = () => {: value;
-    setIsVisible(!isVisible)
-    };
-{
 
-  // Update individual setting;
-  const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
-    setSettings(prev => ({: value;
-      ...prev,;
-      [key]: value;
-    }))
-    };
-{
+  const resetSettings = useCallback(() => {
+    setSettings({
+      highContrast: false,
+      largeText: false,
+      reducedMotion: false,
+      screenReader: false,
+      focusVisible: true,
+      keyboardNavigation: true
+    });
+  }, []);
 
-const ComponentsPage: React.FC = () => {
+  const togglePanel = useCallback(() => {
+    setIsVisible(prev => !prev);
+  }, []);
+
   return (
-    <>;
-      <SEOHead;
-        title="Components - Zion Tech Group"";
-        description="Professional components solutions for modern businesses";
-      />";";
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className="text-center">";
-          <h1 className="text-4xl font-bold mb-4">Components</h1>";
-          <p className="text-gray-300">Professional solutions coming soon...</p>;
-        </div>;
-      </div>;
-    </>;
-  )
-    };
-{
+    <>
+      {children}
+      
+      {/* Accessibility Panel Toggle Button */}
+      <button onClick ={togglePanel}
+        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover: bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"";
+        aria-label="Toggle accessibility settings"";
+      >
+        <svg className ="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">",
+          <path strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />";
+        </svg>
+      </button>
 
-export default ComponentsPage;'";'";
+      {/* Accessibility Settings Panel */}
+      {isVisible && (
+        <div className ="fixed bottom-20 right-4 z-50 bg-white dark: bg-gray-800 p-6 rounded-lg shadow-xl max-w-sm">";
+          <h3 className ="text-lg font-semibold mb-4 text-gray-900 dark:text-white">";
+            Accessibility Settings
+          </h3>
+          
+          <div className ="space-y-4">";
+            <label className ="flex items-center space-x-3">";
+              <input type ="checkbox"",
+                checked={settings.highContrast}
+                onChange={(e) => updateSetting('highContrast', e.target.checked)}";
+                className="rounded"";
+              />
+              <span className ="text-gray-700 dark: text-gray-300">High Contrast</span>";
+            </label>
+
+            <label className ="flex items-center space-x-3">";
+              <input type ="checkbox"",
+                checked={settings.largeText}
+                onChange={(e) => updateSetting('largeText', e.target.checked)}";
+                className="rounded"";
+              />
+              <span className ="text-gray-700 dark: text-gray-300">Large Text</span>";
+            </label>
+
+            <label className ="flex items-center space-x-3">";
+              <input type ="checkbox"",
+                checked={settings.reducedMotion}
+                onChange={(e) => updateSetting('reducedMotion', e.target.checked)}";
+                className="rounded"";
+              />
+              <span className ="text-gray-700 dark: text-gray-300">Reduce Motion</span>";
+            </label>
+
+            <label className ="flex items-center space-x-3">";
+              <input type ="checkbox"",
+                checked={settings.screenReader}
+                onChange={(e) => updateSetting('screenReader', e.target.checked)}";
+                className="rounded"";
+              />
+              <span className ="text-gray-700 dark: text-gray-300">Screen Reader Optimized</span>";
+            </label>
+
+            <label className ="flex items-center space-x-3">";
+              <input type ="checkbox"",
+                checked={settings.focusVisible}
+                onChange={(e) => updateSetting('focusVisible', e.target.checked)}";
+                className="rounded"";
+              />
+              <span className ="text-gray-700 dark: text-gray-300">Focus Indicators</span>";
+            </label>
+
+            <label className ="flex items-center space-x-3">";
+              <input type ="checkbox"",
+                checked={settings.keyboardNavigation}
+                onChange={(e) => updateSetting('keyboardNavigation', e.target.checked)}";
+                className="rounded"";
+              />
+              <span className ="text-gray-700 dark: text-gray-300">Keyboard Navigation</span>";
+            </label>
+          </div>
+
+          <div className ="mt-6 flex space-x-3">",
+            <button onClick ={resetSettings}
+              className="px-4 py-2 text-sm bg-gray-200 text-gray-700 rounded hover: bg-gray-300 transition-colors"",
+            >
+              Reset
+            </button>
+            <button onClick ={togglePanel}
+              className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover: bg-blue-700 transition-colors"",
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default AccessibilityManager;

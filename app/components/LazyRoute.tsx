@@ -7,15 +7,15 @@ import OptimizedLoadingSpinner from './OptimizedLoadingSpinner';
     {
 const LazyRoute: React.FC<LazyRouteProps> = ({},;
       component,;
-      fallback = <OptimizedLoadingSpinner size="lg" text="Loading page..." />: value;
+      fallback = <OptimizedLoadingSpinner size ="lg" text="Loading page..." />: value;";
 }) => {}: value,;
       const LazyComponent = lazy(component): value,;
       return (
-    <Suspense fallback={fallback}></Suspense>: value;
+    <Suspense fallback ={fallback}></Suspense>: value;
       <LazyComponent />;
     </Suspense>;
   )
     },;
     {'";'";
-export default LazyRoute;"'"';
+export default LazyRoute;"'"';";
 '";'";

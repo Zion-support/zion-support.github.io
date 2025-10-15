@@ -1,21 +1,19 @@
-import React from 'react';';
-import SEOHead from './components/SEOHead';
-;
+import SEOHead from '../components/SEOHead';
+
 const IotSolutionsPage: React.FC = () => {
   return (
-    <>;
-      <SEOHead;
-        title="Iot Solutions - Zion Tech Group"";
-        description="Professional iot solutions solutions for modern businesses";
-      />";";
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className="text-center">";
-          <h1 className="text-4xl font-bold mb-4">Iot Solutions</h1>";
-          <p className="text-gray-300">Professional solutions coming soon...</p>;
-        </div>;
-      </div>;
-    </>;
-  );
+    <>
+      <SEOHead title ="iot-solutions - Zion Tech Group - Zion Tech Group"";
+        description="Zion Tech Group iot-solutions service page"";
+      />
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">iot-solutions - Zion Tech Group</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
+        </div>
+      </div>
+    </>
+  ),
 };
-;
-export default IotSolutionsPage;'";'";
+
+export default IotSolutionsPage;

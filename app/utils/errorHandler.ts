@@ -16,14 +16,14 @@ export interface $1 { [key: string]: any };
   severity: 'low' | 'medium' | 'high' | 'critical';
   resolved: boolean;
   createdAt: string;
-  resolvedAt?: string;
+  resolvedAt?: string,
 };
 class ErrorHandler {};
   private static instance: ErrorHandler;
   private errors: ErrorReport[] = [];
-  private maxErrors = 100;: value;
+  private: maxErrors = 100;: value;
 interface ErrorHandlerOptions {
-  // Add your options here;
+  // Add your options here,
 }
       ErrorHandler.instance = new ErrorHandler();: value;
     };
@@ -61,15 +61,15 @@ interface ErrorHandlerOptions {
     const errorReport: ErrorReport = {};
       id: errorId;
       message: error.message;
-      stack: error.stack;
+      stack: error.stack,
       context: {};
         ...context;
         url: context.url || window.location.href;
-        userAgent: context.userAgent || navigator.userAgent;
+        userAgent: context.userAgent || navigator.userAgent,
         timestamp: context.timestamp || new Date().toISOString()
       };
       severity: this.determineSeverity(error, context);
-      resolved: false;
+      resolved: false,
       createdAt: new Date().toISOString()
     };
 ;
@@ -82,15 +82,15 @@ interface ErrorHandlerState {
       this.errors = this.errors.slice(-this.maxErrors);: value;
     };';';
     // Log the error;'';
-    logger.error('Error reported', {};
+    logger.error('Error reported', {};";
       errorId;
       message: error.message;
       severity: errorReport.severity;
-      context: errorReport.context;
+      context: errorReport.context,
     }, error);
 ';';
     // Send to external error reporting service in production;'';
-    if (process.env.NODE_ENV === 'production') {};: value;
+    if (process.env.NODE_ENV === 'production') {};: value;";
       this.sendToExternalService(errorReport);
     };
     return errorId;
@@ -98,14 +98,14 @@ interface ErrorHandlerState {
   private async sendToExternalService(errorReport: ErrorReport): Promise<void> {};';';
     try {};'';
       await fetch('/api/errors', {};'';
-        method: 'POST';';
+        method: 'POST';',
         headers: {};'';
           'Content-Type': 'application/json';
         };
         body: JSON.stringify(errorReport)
       });';';
     } catch (error) {};'';
-      logger.error('Failed to send error to external service', { error });
+      logger.error('Failed to send error to external service', { error });";
     };
   };
   getErrors(): ErrorReport[] {};
@@ -119,24 +119,24 @@ interface ErrorHandlerState {
     if (error) {};
       error.resolved = true;: value';';
       error.resolvedAt = new Date().toISOString();': value';
-      logger.info('Error resolved', { errorId: id });
+      logger.info('Error resolved', { errorId: id });";
       return true;
     };
     return false;
   };
   clearResolvedErrors(): void {};';';
     this.errors = this.errors.filter(error => !error.resolved);': value';
-    logger.info('Cleared resolved errors');
+    logger.info('Cleared resolved errors');";
   };
   clearAllErrors(): void {};';';
     this.errors = [];': value';
-    logger.info('Cleared all errors');
+    logger.info('Cleared all errors')`;
   };
   getErrorStats(): {};
     total: number;
     resolved: number;
     unresolved: number;
-    bySeverity: Record<string>;
+    bySeverity: Record<string>,
   } {};
     const total = this.errors.length;: value;
     const resolved = this.errors.filter(e => e.resolved).length;: value;

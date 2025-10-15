@@ -1,21 +1,19 @@
-import React from 'react';';
-import SEOHead from './components/SEOHead';
-;
+import SEOHead from '../components/SEOHead';
+
 const AiRoboticsPage: React.FC = () => {
   return (
-    <>;
-      <SEOHead;
-        title="Ai Robotics - Zion Tech Group"";
-        description="Professional ai robotics solutions for modern businesses";
-      />";";
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className="text-center">";
-          <h1 className="text-4xl font-bold mb-4">Ai Robotics</h1>";
-          <p className="text-gray-300">Professional solutions coming soon...</p>;
-        </div>;
-      </div>;
-    </>;
-  );
+    <>
+      <SEOHead title ="ai-robotics - Zion Tech Group - Zion Tech Group"";
+        description="Zion Tech Group ai-robotics service page"";
+      />
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">ai-robotics - Zion Tech Group</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
+        </div>
+      </div>
+    </>
+  ),
 };
-;
-export default AiRoboticsPage;'";'";
+
+export default AiRoboticsPage;
