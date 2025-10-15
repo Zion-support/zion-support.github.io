@@ -120,6 +120,11 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/zion-ai-predictive-maintenance" className="text-gray-300 hover:text-white">AI Predictive Maintenance</Link></li>
               <li><Link to="/zion-ai-price-optimizer" className="text-gray-300 hover:text-white">AI Price Optimizer</Link></li>
               <li><Link to="/zion-ai-voice-assistant" className="text-gray-300 hover:text-white">AI Voice Assistant</Link></li>
+              <li><Link to="/ai-legal-assistant" className="text-gray-300 hover:text-white">AI Legal Assistant</Link></li>
+              <li><Link to="/ai-medical-assistant" className="text-gray-300 hover:text-white">AI Medical Assistant</Link></li>
+              <li><Link to="/ai-education-tutor" className="text-gray-300 hover:text-white">AI Education Tutor</Link></li>
+              <li><Link to="/ai-real-estate-analyzer" className="text-gray-300 hover:text-white">AI Real Estate Analyzer</Link></li>
+              <li><Link to="/ai-supply-chain-optimizer" className="text-gray-300 hover:text-white">AI Supply Chain Optimizer</Link></li>
             </ul>
           </div>
           
@@ -132,6 +137,20 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/ai-lead-scoring-pro" className="text-gray-300 hover:text-white">AI Lead Scoring Pro</Link></li>
               <li><Link to="/ai-predictive-maintenance-pro" className="text-gray-300 hover:text-white">AI Predictive Maintenance Pro</Link></li>
               <li><Link to="/ai-price-optimizer-pro" className="text-gray-300 hover:text-white">AI Price Optimizer Pro</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Emerging Technologies</h4>
+            <ul className="space-y-2">
+              <li><Link to="/ai-3d-model-generator" className="text-gray-300 hover:text-white">AI 3D Model Generator</Link></li>
+              <li><Link to="/ai-audio-processor" className="text-gray-300 hover:text-white">AI Audio Processor</Link></li>
+              <li><Link to="/ai-translator" className="text-gray-300 hover:text-white">AI Translator</Link></li>
+              <li><Link to="/quantum-computing-solutions" className="text-gray-300 hover:text-white">Quantum Computing</Link></li>
+              <li><Link to="/edge-computing-solutions" className="text-gray-300 hover:text-white">Edge Computing</Link></li>
+              <li><Link to="/augmented-reality-solutions" className="text-gray-300 hover:text-white">AR Solutions</Link></li>
+              <li><Link to="/virtual-reality-solutions" className="text-gray-300 hover:text-white">VR Solutions</Link></li>
+              <li><Link to="/robotic-process-automation" className="text-gray-300 hover:text-white">RPA Solutions</Link></li>
             </ul>
           </div>
           

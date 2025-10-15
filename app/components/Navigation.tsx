@@ -174,7 +174,15 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Image Generator', href: '/zion-ai-image-generator', icon: EyeIcon },
         { name: 'AI Meeting Transcriber', href: '/zion-ai-meeting-transcriber', icon: DocumentTextIcon },
         { name: 'AI Customer Churn Predictor', href: '/zion-ai-customer-churn-predictor', icon: ChartBarIcon },
-        { name: 'AI Customer Sentiment Tracker', href: '/zion-ai-customer-sentiment-tracker', icon: ChartBarIcon }
+        { name: 'AI Customer Sentiment Tracker', href: '/zion-ai-customer-sentiment-tracker', icon: ChartBarIcon },
+        { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: ShieldCheckIcon },
+        { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: UserGroupIcon },
+        { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: AcademicCapIcon },
+        { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer', icon: ChartBarIcon },
+        { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: CogIcon },
+        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: EyeIcon },
+        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon }
       ]
     },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
