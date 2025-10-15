@@ -34,6 +34,8 @@ export default defineConfig({
           icons: ['@heroicons/react'],
           motion: ['framer-motion'],
           ui: ['clsx', 'tailwind-merge'],
+          helmet: ['react-helmet-async'],
+          charts: ['recharts'],
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
@@ -42,6 +44,15 @@ export default defineConfig({
     },
     // Optimize chunk size
     chunkSizeWarningLimit: 1000,
+    // Enable compression
+    reportCompressedSize: true,
+    // Optimize for production
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
   },
   server: {
     port: 3000,
