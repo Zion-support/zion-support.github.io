@@ -6,7 +6,6 @@ interface CacheItem {
 
 export const advancedCaching = {
   setCache: (key: string, value: unknown, ttl: number = 3600) => {
-    const item = {
     const item: CacheItem = {
       value,
       timestamp: Date.now(),
