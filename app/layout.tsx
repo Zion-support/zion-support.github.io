@@ -55,7 +55,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         </span>
                       </h3>
                       <p className="text-gray-300 text-sm leading-relaxed max-w-md">
-                        Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology.
+                        Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology at <span className="text-cyan-400">ziontechgroup.com</span>.
                       </p>
                       <div className="flex space-x-4">
                         <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
@@ -190,7 +190,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         </div>
                         <div>
                           <p className="text-white text-sm font-medium">Email</p>
-                          <p className="text-gray-300 text-sm">kleber@ziontechgroup.com</p>
+                          <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors">kleber@ziontechgroup.com</a>
                         </div>
                       </div>
                       <div className="flex items-center space-x-3">
@@ -199,7 +199,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         </div>
                         <div>
                           <p className="text-white text-sm font-medium">Phone</p>
-                          <p className="text-gray-300 text-sm">+1 302 464 0950</p>
+                          <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors">+1 302 464 0950</a>
                         </div>
                       </div>
                       <div className="flex items-start space-x-3">

@@ -1,153 +1,129 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
-const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    let animationId: number;
-    let particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-      color: string;
-    }> = [];
-
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
-    const createParticle = () => {
-      const colors = ['#00f5ff', '#ff00ff', '#00ff00', '#ffff00', '#ff4500'];
-      return {
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 2,
-        vy: (Math.random() - 0.5) * 2,
-        size: Math.random() * 3 + 1,
-        opacity: Math.random() * 0.8 + 0.2,
-        color: colors[Math.floor(Math.random() * colors.length)]
-      };
-    };
-
-    const initParticles = () => {
-      particles = [];
-      for (let i = 0; i < 100; i++) {
-        particles.push(createParticle());
-      }
-    };
-
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      // Update and draw particles
-      particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-
-        // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
-
-        // Draw particle
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
-        ctx.fill();
-
-        // Draw connections
-        particles.forEach((otherParticle, otherIndex) => {
-          if (index !== otherIndex) {
-            const dx = particle.x - otherParticle.x;
-            const dy = particle.y - otherParticle.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-
-            if (distance < 150) {
-              ctx.beginPath();
-              ctx.moveTo(particle.x, particle.y);
-              ctx.lineTo(otherParticle.x, otherParticle.y);
-              ctx.strokeStyle = `rgba(0, 245, 255, ${0.1 * (1 - distance / 150)})`;
-              ctx.lineWidth = 1;
-              ctx.stroke();
-            }
-          }
-        });
-      });
-
-      // Draw animated grid
-      ctx.strokeStyle = 'rgba(0, 245, 255, 0.1)';
-      ctx.lineWidth = 1;
-      const gridSize = 50;
-      const time = Date.now() * 0.001;
-
-      for (let x = 0; x < canvas.width; x += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
-        ctx.stroke();
-      }
-
-      for (let y = 0; y < canvas.height; y += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
-        ctx.stroke();
-      }
-
-      // Draw animated circles
-      for (let i = 0; i < 5; i++) {
-        const radius = 100 + Math.sin(time + i) * 50;
-        const x = canvas.width / 2 + Math.cos(time * 0.5 + i) * 200;
-        const y = canvas.height / 2 + Math.sin(time * 0.5 + i) * 200;
-
-        ctx.beginPath();
-        ctx.arc(x, y, radius, 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(255, 0, 255, ${0.1 * Math.sin(time + i)})`;
-        ctx.lineWidth = 2;
-        ctx.stroke();
-      }
-
-      animationId = requestAnimationFrame(animate);
-    };
-
-    resizeCanvas();
-    initParticles();
-    animate();
-
-    const handleResize = () => {
-      resizeCanvas();
-      initParticles();
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      cancelAnimationFrame(animationId);
-    };
-  }, []);
-
+const FuturisticBackground: React.FC = () => {
   return (
-    <div className="relative min-h-screen">
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
-        style={{ zIndex: 1 }}
-      />
-      <div className="relative z-10">
-        {children}
+    <div className="fixed inset-0 overflow-hidden pointer-events-none">
+      {/* Animated Grid */}
+      <div className="absolute inset-0 opacity-20">
+        <div 
+          className="w-full h-full"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px',
+            animation: 'gridMove 20s linear infinite'
+          }}
+        />
       </div>
+
+      {/* Floating Particles */}
+      <div className="absolute inset-0">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 2}s`
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Animated Orbs */}
+      <div className="absolute inset-0">
+        <div 
+          className="absolute w-64 h-64 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl"
+          style={{
+            left: '10%',
+            top: '20%',
+            animation: 'orbFloat 8s ease-in-out infinite'
+          }}
+        />
+        <div 
+          className="absolute w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"
+          style={{
+            right: '10%',
+            top: '60%',
+            animation: 'orbFloat 12s ease-in-out infinite reverse'
+          }}
+        />
+        <div 
+          className="absolute w-80 h-80 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl"
+          style={{
+            left: '50%',
+            top: '10%',
+            animation: 'orbFloat 10s ease-in-out infinite'
+          }}
+        />
+      </div>
+
+      {/* Scanning Lines */}
+      <div className="absolute inset-0">
+        <div 
+          className="absolute w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-60"
+          style={{
+            top: '30%',
+            animation: 'scanLine 4s linear infinite'
+          }}
+        />
+        <div 
+          className="absolute w-full h-0.5 bg-gradient-to-r from-transparent via-purple-400 to-transparent opacity-60"
+          style={{
+            top: '70%',
+            animation: 'scanLine 6s linear infinite reverse'
+          }}
+        />
+      </div>
+
+      {/* Neon Glow Effects */}
+      <div className="absolute inset-0">
+        <div 
+          className="absolute w-full h-full"
+          style={{
+            background: `
+              radial-gradient(circle at 20% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 40% 60%, rgba(236, 72, 153, 0.1) 0%, transparent 50%)
+            `,
+            animation: 'neonPulse 6s ease-in-out infinite'
+          }}
+        />
+      </div>
+
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes gridMove {
+          0% { transform: translate(0, 0); }
+          100% { transform: translate(50px, 50px); }
+        }
+
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) scale(1); opacity: 0.6; }
+          50% { transform: translateY(-20px) scale(1.2); opacity: 1; }
+        }
+
+        @keyframes orbFloat {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          25% { transform: translate(20px, -20px) scale(1.1); }
+          50% { transform: translate(-10px, -40px) scale(0.9); }
+          75% { transform: translate(-20px, 10px) scale(1.05); }
+        }
+
+        @keyframes scanLine {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
+        }
+
+        @keyframes neonPulse {
+          0%, 100% { opacity: 0.3; }
+          50% { opacity: 0.6; }
+        }
+      `}</style>
     </div>
   );
 };
