@@ -46,6 +46,14 @@ const LazyHomePage = React.lazy(() => import('./app/page'));
 const LazyAboutPage = React.lazy(() => import('./app/pages/AboutPage'));
 const LazyContactPage = React.lazy(() => import('./app/pages/ContactPage'));
 const LazyServicesPage = React.lazy(() => import('./app/pages/ServicesPage'));
+const LazyDataAnalyticsPage = React.lazy(() => import('./app/data-analytics/page'));
+const LazyWebDevelopmentPage = React.lazy(() => import('./app/web-development/page'));
+const LazyMobileDevelopmentPage = React.lazy(() => import('./app/mobile-development/page'));
+const LazyDatabaseManagementPage = React.lazy(() => import('./app/database-management/page'));
+const LazyNetworkInfrastructurePage = React.lazy(() => import('./app/network-infrastructure/page'));
+const LazyPartnershipsPage = React.lazy(() => import('./app/partnerships/page'));
+const LazyHelpPage = React.lazy(() => import('./app/help/page'));
+const LazyAPIDocsPage = React.lazy(() => import('./app/api-docs/page'));
 
 const App: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -98,6 +106,18 @@ const App: React.FC = () => {
                         {/* Additional Pages */}
                         <Route path="/team" element={<TeamPage />} />
                         <Route path="/docs" element={<DocumentationPage />} />
+                        
+                        {/* Service-specific Pages */}
+                        <Route path="/data-analytics" element={<LazyDataAnalyticsPage />} />
+                        <Route path="/web-development" element={<LazyWebDevelopmentPage />} />
+                        <Route path="/mobile-development" element={<LazyMobileDevelopmentPage />} />
+                        <Route path="/database-management" element={<LazyDatabaseManagementPage />} />
+                        <Route path="/network-infrastructure" element={<LazyNetworkInfrastructurePage />} />
+                        
+                        {/* Additional Pages */}
+                        <Route path="/partnerships" element={<LazyPartnershipsPage />} />
+                        <Route path="/help" element={<LazyHelpPage />} />
+                        <Route path="/api-docs" element={<LazyAPIDocsPage />} />
                         
                         {/* Catch all route */}
                         <Route path="*" element={
