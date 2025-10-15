@@ -25,12 +25,14 @@ const message = errorWithResponse.response?.data?.message || errorWithResponse.m
     message: 'Network error. Please check your connection.',
       code: 'NETWORK_ERROR' };
   },
-  handleValidationError: (errors: Record<string string[]>) => { const errorMessages = Object.values(errors).flat();
-  return {
+  handleValidationError: (errors: Record<string, string[]>) => {
+    const errorMessages = Object.values(errors).flat();
+    return {
       message: errorMessages.join(', '),
       code: 'VALIDATION_ERROR',
-      details: errors };
+      details: errors
+    };
   }
 };
 
-export default NotFoundPage;
+export default enhancedErrorHandler;

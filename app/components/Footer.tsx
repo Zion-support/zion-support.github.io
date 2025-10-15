@@ -47,15 +47,9 @@ const Footer: React.FC = () => {
       services: [
         { name: 'Cloud Migration', path: '/cloud-migration-services' },
         { name: 'Cybersecurity', path: '/cybersecurity-consulting' },
-<<<<<<< HEAD
-        { name: 'DevOps', path: '/devops-solutions' },
-        { name: 'Mobile Development', path: '/mobile-development' },
-        { name: 'Web Development', path: '/web-development' },
-=======
         { name: 'DevOps Solutions', path: '/devops-solutions' },
         { name: 'Mobile Development', path: '/mobile-app-development' },
         { name: 'Web Development', path: '/web-application-development' },
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-265e
         { name: 'Database Solutions', path: '/database-solutions' }
       ]
     },
@@ -67,11 +61,8 @@ const Footer: React.FC = () => {
         { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
         { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions' },
         { name: '5G Edge Computing', path: '/5g-edge-computing' },
-<<<<<<< HEAD
-        { name: '5G Private Networks', path: '/5g-private-networks' }
-=======
+        { name: '5G Private Networks', path: '/5g-private-networks' },
         { name: '5G Security Solutions', path: '/5g-security' }
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-265e
       ]
     }
   ];
@@ -110,13 +101,8 @@ const Footer: React.FC = () => {
       </div>
       
       {/* Main Footer Content */}
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-=======
-      <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 lg:gap-8">
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-265e
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6 group">
