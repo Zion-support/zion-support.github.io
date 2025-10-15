@@ -6,7 +6,7 @@ import {
   MapPinIcon,
   ArrowRightIcon
 } from '@heroicons/react/24/outline';
-import { Facebook, Twitter, Linkedin, Github } from 'lucide-react';import { 
+import { 
   HeartIcon
 } from '@heroicons/react/24/outline'
 import { ArrowRight, Twitter, Linkedin, Github } from 'lucide-react'
@@ -44,6 +44,17 @@ const Footer: React.FC = () => {
     { name: 'Community', href: '/community' }
   ];
 
+  const solutions = [
+    { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
+    { name: 'IT Solutions', href: '/it-solutions' },
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
+    { name: 'Cybersecurity Solutions', href: '/cybersecurity' },
+    { name: 'Web Development', href: '/web-development' },
+    { name: 'Mobile Development', href: '/mobile-development' },
+    { name: 'Data Analytics', href: '/data-analytics' }
+  ];
+
   const support = [
     { name: 'Contact Us', href: '/contact' },
     { name: 'Support Center', href: '/support' },
@@ -65,7 +76,8 @@ const Footer: React.FC = () => {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github' }
   ];
 
-  return (<footer className="bg-slate-900 border-t border-slate-700">
+  return (
+    <footer className="bg-slate-900 border-t border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
