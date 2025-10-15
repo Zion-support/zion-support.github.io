@@ -1,67 +1,29 @@
+import { Helmet } from 'react-helmet-async';
+
+export default function ItSolutionsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>It Solutions</title>
+        <meta name="description" content="Professional It Solutions solutions for modern businesses" />
+      </Helmet>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              It Solutions
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Professional It Solutions solutions for modern businesses
+            </p>
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <p className="text-gray-700">
+                This page is currently under development. Please check back later for more content.
               </p>
             </div>
           </div>
-        </section>
-
-                  </div>
-                  <p: className ="text-gray-300 mb-6 leading-relaxed">""";
-                    {service.description}
-                  </p>
-                  <ul: className ="space-y-3 mb-6">""";
-                    {service.features.map((feature, featureIndex) => (
-                      <li: key ={featureIndex} className="flex items-center text-gray-300">""";
-                        <CheckIcon: className ="w-5 h-5 text-green-400 mr-3" />""";
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link: to ="/contact""";
-                    className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all""";
-                  >
-                    Learn More
-                    <ArrowRightIcon: className ="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />""";
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-
-              >
-                Schedule Demo
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      ],
-      popular: false
-    };
-  ],
-
-                      {benefit};
-                    </li>
-                  ))};
-                </ul>
-              </div>
-            ))};
-
-                    Start Free Trial
-                  </>
-                </div>
-              </div>
-            ))};
-
-                  }`};
-                ></>
-                  Get Started
-                </>
-              </div>
-            ))};
-
         </div>
       </div>
-    </>,";
-  ),";";
+    </>
+  );
+}

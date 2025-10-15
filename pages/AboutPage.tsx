@@ -1,39 +1,17 @@
+import React from 'react';
 
-      import {};
+interface AboutPageProps {
+  children?: React.ReactNode;
+  className?: string;
+}
 
-      Users,
-      CheckCircle,
-      Globe,
+const AboutPage: React.FC<AboutPageProps> = () => {
+  return (
+    <div>
+      <h1>AboutPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
 
-
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-            ></a
->
-
-
+export default AboutPage;

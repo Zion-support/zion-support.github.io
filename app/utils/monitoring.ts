@@ -1,4 +1,9 @@
+// monitoring
+export const monitoring = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('monitoring initialized');
+  }
+};
 
-interface MonitoringOptions {
-
-
+export default monitoring;

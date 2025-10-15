@@ -1,55 +1,29 @@
+import { Helmet } from 'react-helmet-async';
 
-import { 
-
-  CloudIcon, 
-  CheckCircleIcon,
-  ShieldCheckIcon,
-  CpuChipIcon,
-
-    }
-  ]
+export default function CloudSolutionsPage() {
   return (
     <>
-
-                  View Portfolio
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-
-                We provide comprehensive cloud services that drive innovation and growth.
+      <Helmet>
+        <title>Cloud Solutions</title>
+        <meta name="description" content="Professional Cloud Solutions solutions for modern businesses" />
+      </Helmet>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Cloud Solutions
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Professional Cloud Solutions solutions for modern businesses
+            </p>
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <p className="text-gray-700">
+                This page is currently under development. Please check back later for more content.
               </p>
             </div>
-            
-
-                </div>
-              ))}
-            </div>
           </div>
-        </section>
-
-        {/* Services Section */}
-
-                Comprehensive cloud solutions to accelerate your digital transformation.
-              </p>
-            </div>
-            
-
-
-                      </li>
-                    ))};
-                  </ul>
-                </div>
-
-
-                View Case Studies
-              </button>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
     </>
-
+  );
+}

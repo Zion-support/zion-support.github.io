@@ -1,4 +1,9 @@
+// apiCache
+export const apiCache = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('apiCache initialized');
+  }
+};
 
-interface ApiCacheOptions {
-
-
+export default apiCache;

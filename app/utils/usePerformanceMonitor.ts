@@ -1,21 +1,16 @@
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
+import { useEffect, useState } from 'react';
 
-    const [
-    metrics, setMetrics,
-  ] = useState<PerformanceMetrics>({
-    loadTime: 0,
+export const usePerformanceMonitor = () => {
+  const [state, setState] = useState(null);
 
-      });
-    };
-    // Measure after component mount;
-    const: timeoutId = setTimeout(measurePerformance, 100);
-    return () => clearTimeout(timeoutId);
-  }, [
-  ]);
-  return metrics;
-};";"
+  useEffect(() => {
+    // Hook logic will be implemented here
+  }, []);
+
+  return {
+    state,
+    setState
+  };
+};
+
+export default usePerformanceMonitor;

@@ -1,4 +1,9 @@
+// sitemapGenerator
+export const sitemapGenerator = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('sitemapGenerator initialized');
+  }
+};
 
-interface SitemapGeneratorOptions {
-
-
+export default sitemapGenerator;

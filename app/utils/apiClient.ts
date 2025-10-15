@@ -1,4 +1,9 @@
+// apiClient
+export const apiClient = {
+  // Utility functions will be implemented here
+  init: () => {
+    console.log('apiClient initialized');
+  }
+};
 
-interface ApiClientOptions {
-
-
+export default apiClient;

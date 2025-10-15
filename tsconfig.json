@@ -34,6 +34,10 @@
     "corrupted-src-backup/**",
     "scripts/**",
     "**/*.cjs",
-    "**/*.js"
+    "**/*.js",
+    "app/blog/**",
+    "app/components/About.tsx",
+    "app/components/AccessibilityAudit.tsx",
+    "app/components/AccessibilityManager.tsx"
   ]
 }

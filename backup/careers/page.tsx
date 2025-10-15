@@ -1,37 +1,30 @@
 
-      ]
-    }
-  ]
+import { Helmet } from 'react-helmet-async';
 
-  ]
-  return ()
-    <div></div>
-      <Helmet></Helmet>
-
-              </button>
+export default function CareersPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Careers - Zion Tech Group</title>
+        <meta name="description" content="Join our team and help shape the future of AI and IT solutions" />
+      </Helmet>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Careers
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Join our team and help shape the future of AI and IT solutions
+            </p>
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <p className="text-gray-700">
+                This page is currently under development. Please check back later for more content.
+              </p>
             </div>
           </div>
-        </section>
-
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-                          {req};
-
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-
-            </button>
-          </div>
-        </section>";
-      </div>";";
-</div>";";";
-  )"
-};"'"'"
+        </div>
+      </div>
+    </>
+  );
+}

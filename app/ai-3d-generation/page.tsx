@@ -1,19 +1,29 @@
-const Ai3DGenerationPage: React.FC = () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
-        title="AI 3D Generation - Zion Tech Group"
-        description="Advanced AI-powered 3D generation solutions for creative professionals"
-        keywords="AI 3D generation, 3D modeling, 3D animation, AI visualization, 3D technology"
-      />
+import { Helmet } from 'react-helmet-async';
 
+export default function Ai3dGenerationPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Ai 3d Generation</title>
+        <meta name="description" content="Professional Ai 3d Generation solutions for modern businesses" />
+      </Helmet>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Ai 3d Generation
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Professional Ai 3d Generation solutions for modern businesses
+            </p>
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <p className="text-gray-700">
+                This page is currently under development. Please check back later for more content.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </>
   );
-};
-
-export default Ai3DGenerationPage;
-
-};";
-";";
+}
