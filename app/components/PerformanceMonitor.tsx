@@ -25,11 +25,10 @@ const PerformanceMonitor: React.FC = () => {
             // Send to analytics service with enhanced tracking
             if (typeof window !== 'undefined' && window.gtag) {
               window.gtag('event', 'performance_metric', {
-                metric_name: metric.name,
-                metric_value: metric.value,
-                metric_delta: metric.delta,
-                metric_id: metric.id,
-                metric_navigationType: metric.navigationType
+                event_category: 'performance',
+                event_label: metric.name,
+                value: metric.value,
+                non_interaction: true
               });
             }
           }
@@ -59,10 +58,10 @@ const PerformanceMonitor: React.FC = () => {
             if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && window.gtag) {
               const navEntry = entry as PerformanceNavigationTiming;
               window.gtag('event', 'navigation_timing', {
-                dom_content_loaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-                load_complete: navEntry.loadEventEnd - navEntry.loadEventStart,
-                first_byte: navEntry.responseStart - navEntry.requestStart,
-                dom_processing: navEntry.domComplete - navEntry.domLoading
+                event_category: 'performance',
+                event_label: 'navigation',
+                value: Math.round(navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart),
+                non_interaction: true
               });
             }
           }

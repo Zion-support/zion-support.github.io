@@ -24,7 +24,6 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   const {
     enableLazyLoading = true,
     enablePreloading = true,
-    enableCodeSplitting = true,
     enableImageOptimization = true,
     enableBundleAnalysis = false
   } = options;
@@ -75,21 +74,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     });
   }, [enablePreloading]);
 
-  // Preload critical images
-  const preloadImages = useCallback((imageUrls: string[]) => {
-    if (!enablePreloading) return;
 
-    imageUrls.forEach((url) => {
-      const img = new Image();
-      img.src = url;
-      img.onload = () => {
-        // Image preloaded successfully
-      };
-      img.onerror = () => {
-        // Silently handle image preload errors
-      };
-    });
-  }, [enablePreloading]);
 
   // Optimize images
   const optimizeImages = useCallback(() => {

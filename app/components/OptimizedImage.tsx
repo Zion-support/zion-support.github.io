@@ -34,7 +34,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const [hasError, setHasError] = useState(false);
   const [currentSrc, setCurrentSrc] = useState(placeholder || '');
   const imgRef = useRef<HTMLImageElement>(null);
-  const { preloadImages } = usePerformanceOptimization();
+  const { } = usePerformanceOptimization();
 
   // Generate optimized image URL (you can integrate with your image optimization service)
   const getOptimizedSrc = (originalSrc: string, _w?: number, _h?: number, _q: number = quality) => {
@@ -49,10 +49,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   useEffect(() => {
     if (priority) {
-      preloadImages([optimizedSrc]);
       setCurrentSrc(optimizedSrc);
     }
-  }, [optimizedSrc, priority, preloadImages]);
+  }, [optimizedSrc, priority]);
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -70,7 +69,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         setCurrentSrc(optimizedSrc);
       }
     });
-    return undefined;
   };
 
   useEffect(() => {
@@ -88,6 +86,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     } else if (priority) {
       setCurrentSrc(optimizedSrc);
     }
+    
+    return undefined;
   }, [loading, priority, optimizedSrc, isLoaded, hasError]);
 
   if (hasError) {

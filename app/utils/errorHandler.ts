@@ -1,9 +1,9 @@
 // Error handling utilities
 export interface AppError {
   message: string;
-  code?: string;
-  statusCode?: number;
-  details?: Record<string, unknown>;
+  code?: string | undefined;
+  statusCode?: number | undefined;
+  details?: Record<string, unknown> | undefined;
 }
 
 export class CustomError extends Error {
@@ -14,9 +14,9 @@ export class CustomError extends Error {
   constructor(message: string, code?: string, statusCode?: number, details?: Record<string, unknown>) {
     super(message);
     this.name = 'CustomError';
-    this.code = code ?? undefined;
-    this.statusCode = statusCode ?? undefined;
-    this.details = details;
+    if (code !== undefined) this.code = code;
+    if (statusCode !== undefined) this.statusCode = statusCode;
+    if (details !== undefined) this.details = details;
   }
 }
 
@@ -24,8 +24,8 @@ export const handleError = (error: unknown): AppError => {
   if (error instanceof CustomError) {
     return {
       message: error.message,
-      code: error.code ?? undefined,
-      statusCode: error.statusCode ?? undefined,
+      code: error.code,
+      statusCode: error.statusCode,
       details: error.details,
     };
   }
@@ -34,12 +34,16 @@ export const handleError = (error: unknown): AppError => {
     return {
       message: error.message,
       code: 'UNKNOWN_ERROR',
+      statusCode: undefined,
+      details: undefined
     };
   }
 
   return {
     message: 'An unexpected error occurred',
     code: 'UNKNOWN_ERROR',
+    statusCode: undefined,
+    details: undefined
   };
 };
 

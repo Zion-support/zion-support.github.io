@@ -16,7 +16,7 @@ const ContactPage: React.FC = memo(() => {
       email: '',
       message: ''
     },
-    onSubmit: async (data) => {
+    onSubmit: async (_data) => {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
       
