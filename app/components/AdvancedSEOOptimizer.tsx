@@ -91,7 +91,7 @@ const AdvancedSEOOptimizer: React.FC = () => {
     analyzeSEO();
   }, [analyzeSEO]);
 
-  const optimizeSEO = useCallback(_async () => {
+  const optimizeSEO = useCallback(async () => {
     setIsOptimizing(true);
     
     // Simulate optimization process

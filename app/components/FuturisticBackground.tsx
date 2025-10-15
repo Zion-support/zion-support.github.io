@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-const FuturisticBackground = (_{ children }: { children: React.ReactNode }) => {
+const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {

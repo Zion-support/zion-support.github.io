@@ -1,4 +1,5 @@
 export default {
+  preset: 'ts-jest/presets/default-esm',
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   moduleNameMapper: {
@@ -6,8 +7,19 @@ export default {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
   },
   transform: {
-    '^.+\\.(ts|tsx)$': ['ts-jest', { useESM: true }],
-    '^.+\\.(js|jsx)$': 'babel-jest',
+    '^.+\\.(ts|tsx)$': ['ts-jest', { 
+      useESM: true,
+      tsconfig: {
+        jsx: 'react-jsx'
+      }
+    }],
+    '^.+\\.(js|jsx)$': ['babel-jest', {
+      presets: [
+        ['@babel/preset-env', { targets: { node: 'current' } }],
+        ['@babel/preset-react', { runtime: 'automatic' }],
+        '@babel/preset-typescript'
+      ]
+    }],
   },
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   globals: {
@@ -30,6 +42,6 @@ export default {
   coverageReporters: ["text", "lcov", "html"],
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
   transformIgnorePatterns: [
-    "node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))",
+    "node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion|@testing-library))",
   ],
 };

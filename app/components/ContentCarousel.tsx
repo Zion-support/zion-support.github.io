@@ -69,7 +69,7 @@ export default function ContentCarousel({
   };
 
   const goToPrevious = () => {
-    setCurrentSlide(prev) => (prev - 1 + slides.length) % slides.length);
+    setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length);
   };
 
   const goToNext = () => {

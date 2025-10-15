@@ -130,9 +130,9 @@ const CriticalResourcePreloader = () => {
             preloadLink.href = href
             document.head.appendChild(preloadLink)
           }
-        })
-      })
-    }
+        });
+      });
+    };
 
     // Initialize hover preloading after a delay
     setTimeout(preloadOnHover, 2000)

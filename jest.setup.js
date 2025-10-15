@@ -1,6 +1,6 @@
-import '@testing-library/jest-dom';
-import React from 'react';
-import { TextEncoder, TextDecoder } from 'util';
+require('@testing-library/jest-dom');
+const React = require('react');
+const { TextEncoder, TextDecoder } = require('util');
 
 // Polyfill for TextEncoder/TextDecoder
 global.TextEncoder = TextEncoder;
