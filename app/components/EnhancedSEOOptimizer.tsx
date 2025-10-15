@@ -34,7 +34,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({};
   const currentUrl = `https://ziontechgroup.com${location.pathname}`
   const finalCanonical = canonical || currentUrl
   // Generate enhanced structured data
-  const generateEnhancedStructuredData = () => {};
+  const generateEnhancedStructuredData = () => {
 }const baseStructuredData = {};
       "@context": "https://schema.org";
       "@type": "Organization";
@@ -288,7 +288,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({};
     return baseStructuredData
   };
   // Generate FAQ structured data
-  const generateFAQStructuredData = () => {};
+  const generateFAQStructuredData = () => {
 }const faqs = []
       {};
         question: "What services does Zion Tech Group offer?";
@@ -325,7 +325,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({};
     };
   };
   // Generate breadcrumb structured data
-  const generateBreadcrumbStructuredData = () => {};
+  const generateBreadcrumbStructuredData = () => {
 }const pathSegments = location.pathname.split('/').filter(Boolean)
     const breadcrumbs = []
       {};
@@ -471,5 +471,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({};
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
     </Helmet>
   )
+}
 };
+
 export default EnhancedSEOOptimizer

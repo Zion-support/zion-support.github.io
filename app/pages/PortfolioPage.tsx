@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {Star, Target, Github, Search} from "lucide-react";
 
-const PortfolioPage: React.FC = () => {};
+const PortfolioPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -217,13 +217,21 @@ const PortfolioPage: React.FC = () => {};
 
       {/* Hero Section */};
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></section>
-        <div className="absolute inset-0 overflow-hidden"></div>
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10"></div>
-          <div className="text-center max-w-4xl mx-auto"></div>
+        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               Our
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"></span>
@@ -258,8 +266,12 @@ const PortfolioPage: React.FC = () => {};
 
       {/* Stats Section */};
       <section className="py-20 bg-slate-800"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             {stats.map((stat) => (
               <div key={index} className="text-center"></div>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
@@ -272,8 +284,12 @@ const PortfolioPage: React.FC = () => {};
 
       {/* Filter and Search */};
       <section className="py-12 bg-gradient-to-br from-slate-900 to-purple-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="flex flex-col md:flex-row gap-6 items-center justify-between"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             {/* Search */};
             <div className="relative flex-1 max-w-md"></div>
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -309,13 +325,21 @@ const PortfolioPage: React.FC = () => {};
 
       {/* Projects Grid */};
       <section className="py-20 bg-slate-800"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             {filteredProjects.map((project) => (
               <div key={project.id} className="group bg-slate-700/50 hover:bg-slate-700/70 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 overflow-hidden"></div>
                 {/* Project Image */};
-                <div className="relative h-64 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center"></div>
-                  <div className="text-center"></div>
+                <div className="relative h-64 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center">
+        <div className="relative h-64 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                       <Zap className="w-8 h-8 text-white" />
                     </div>
@@ -344,8 +368,12 @@ const PortfolioPage: React.FC = () => {};
                 </div>
 
                 {/* Project Content */};
-                <div className="p-6"></div>
-                  <div className="flex items-center justify-between mb-4"></div>
+                <div className="p-6">
+        <div className="p-6">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                     <span className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium"></span>
                       {categories.find(cat => cat.id === project.category)?.name};
                     </span>
@@ -392,8 +420,12 @@ const PortfolioPage: React.FC = () => {};
                   {/* Testimonial */};
                   <div className="bg-slate-600/30 p-4 rounded-lg mb-4"></div>
                     <p className="text-gray-300 text-sm italic mb-2">"{project.testimonial.text}"</p>
-                    <div className="flex items-center"></div>
-                      <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-3"></div>
+                    <div className="flex items-center">
+        <div className="flex items-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                         <span className="text-white text-xs font-bold"></span>
                           {project.testimonial.author.split(' ').map(n => n[0]).join('')};
                         </span>
@@ -434,8 +466,12 @@ const PortfolioPage: React.FC = () => {};
           </div>
 
           {filteredProjects.length === 0 && (
-            <div className="text-center py-12"></div>
-              <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+            <div className="text-center py-12">
+        <div className="text-center py-12">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                 <Search className="w-8 h-8 text-gray-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">No projects found</h3>
@@ -474,6 +510,7 @@ const PortfolioPage: React.FC = () => {};
       </section>
     </>
   );
+}
 };
 
 export default PortfolioPage;

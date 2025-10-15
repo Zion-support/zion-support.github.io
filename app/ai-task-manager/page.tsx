@@ -1,16 +1,17 @@
+import React from 'react';
 
 import SEOHead from '../components/SEOHead';
 
-const AiTaskManagerPage: React.FC = () => {};
+const PagePage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="ai-task-manager - Zion Tech Group"
-        description="Zion Tech Group ai-task-manager service page"
+        title="page - Zion Tech Group"
+        description="Zion Tech Group page service page"
       />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold mb-4">ai-task-manager</h1>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Page</h1>
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
@@ -18,4 +19,4 @@ const AiTaskManagerPage: React.FC = () => {};
   );
 };
 
-export default AiTaskManagerPage;
+export default PagePage;

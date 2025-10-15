@@ -2,7 +2,7 @@
 
 import { Helmet } from 'react-helmet-async';
 
-const CloudServicesPage: React.FC = () => {};
+const CloudServicesPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
@@ -89,8 +89,12 @@ const CloudServicesPage: React.FC = () => {
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white"></div>
-        <div className="container mx-auto px-4 py-16"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
           <div className="text-center mb-16"></div>
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"></h1>
               Cloud Services
@@ -108,8 +112,12 @@ const CloudServicesPage: React.FC = () => {
           </div>
 
 <<<<<<< HEAD
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20"></div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
               <h3 className="text-xl font-semibold mb-4 text-cyan-400">Cloud Migration</h3>
               <p className="text-gray-300 mb-4"></p>
                 Seamless migration to cloud platforms with zero downtime and maximum efficiency.
@@ -208,6 +216,7 @@ const CloudServicesPage: React.FC = () => {
       </div>
     </>
   );
+}
 };
 
 export default CloudServicesPage;
@@ -216,6 +225,7 @@ export default CloudServicesPage;
       </div>
     </>
   );
+}
 };
 
 export default CloudServicesPage;

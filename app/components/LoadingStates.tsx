@@ -1,17 +1,28 @@
+import React from 'react';
 
 interface LoadingPageProps {};
   message?: string
   showIcon?: boolean
+}
 };
+
 export const LoadingPage: React.FC<LoadingPageProps> = ({};
   message = "Loading...", showIcon = true 
 }) => {};
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
-      <div className="text-center"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
         {showIcon && ()
-          <div className="mb-8"></div>
-            <div className="relative"></div>
+          <div className="mb-8">
+        <div className="mb-8">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
               <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center animate-pulse"></div>
                 <Brain className="w-10 h-10 text-white" />
               </div>
@@ -27,6 +38,7 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({};
       </div>
     </div>
   );
+}
 };
 
 export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {};
@@ -49,10 +61,18 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {}
     };
   };
   return ()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
-      <div className="text-center max-w-md mx-auto px-4"></div>
-        <div className="mb-8"></div>
-          <div className="relative"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
+        <div className="mb-8">
+        <div className="mb-8">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-600/20 flex items-center justify-center animate-pulse"></div>
               {getServiceIcon(service)};
             </div>
@@ -70,16 +90,25 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {}
       </div>
     </div>
   );
+}
 };
 
 export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = ({};
   error = "Something went wrong", onRetry 
 }) => {};
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
-      <div className="text-center max-w-md mx-auto px-4"></div>
-        <div className="mb-8"></div>
-          <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 flex items-center justify-center"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
+        <div className="mb-8">
+        <div className="mb-8">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <Shield className="w-10 h-10 text-red-400" />
           </div>
         </div>
@@ -97,9 +126,12 @@ export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = 
       </div>
     </div>
   )
+}
 };
+
 export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {};
-}return ()
+}
+  return ()
     <div className="animate-pulse"></div>
       {Array.from({ length: lines }).map(( index) => (
         <div
@@ -111,18 +143,35 @@ export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
       ))};
     </div>
   )
+}
 };
-export const CardSkeleton: React.FC = () => {};
-}return ()
-    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse"></div>
-      <div className="w-16 h-16 bg-gray-700 rounded-lg mb-4"></div>
-      <div className="h-6 bg-gray-700 rounded mb-3"></div>
-      <div className="space-y-2 mb-4"></div>
-        <div className="h-4 bg-gray-700 rounded"></div>
-        <div className="h-4 bg-gray-700 rounded w-3/4"></div>
+
+export const CardSkeleton: React.FC = () => {
+}
+  return ()
+    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
+      <div className="h-6 bg-gray-700 rounded mb-3">
+        <div className="h-6 bg-gray-700 rounded mb-3">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
+        <div className="h-4 bg-gray-700 rounded">
+        <div className="h-4 bg-gray-700 rounded">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
       </div>
       <div className="h-8 bg-gray-700 rounded w-1/3"></div>
     </div>
   )
+}
 };
+
 export default LoadingPage

@@ -76,8 +76,12 @@ Error Details:
         return this.props.fallback;
       };
       return (
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4"></div>
-          <div className="max-w-md w-full bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center"></div>
+        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4">
+        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <div className="flex justify-center mb-4"></div>
               <AlertTriangle className="w-16 h-16 text-red-500" />
             </div>
@@ -149,5 +153,7 @@ Error Details:
     };
     return this.props.children;
   };
+}
 };
+
 export default AdvancedErrorBoundary;

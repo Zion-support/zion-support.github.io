@@ -35,7 +35,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
   enableAdvancedFeatures = true
 }) => {};
   // Generate structured data
-  const generateStructuredData = () => {};
+  const generateStructuredData = () => {
     if (!enableStructuredData || !seoData.structuredData) return null;
 
     const baseStructuredData = {};
@@ -62,7 +62,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
   };
 
   // Generate breadcrumb structured data
-  const generateBreadcrumbStructuredData = () => {};
+  const generateBreadcrumbStructuredData = () => {
     if (!enableStructuredData) return null;
 
     const pathSegments = seoData.canonicalUrl.replace('https://ziontechgroup.com', '').split('/').filter(Boolean);
@@ -89,7 +89,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
   };
 
   // Generate FAQ structured data
-  const generateFAQStructuredData = () => {};
+  const generateFAQStructuredData = () => {
     if (!enableStructuredData || !seoData.structuredData?.faq) return null;
 
     return {};
@@ -107,7 +107,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
   };
 
   // Generate organization structured data
-  const generateOrganizationStructuredData = () => {};
+  const generateOrganizationStructuredData = () => {
     if (!enableStructuredData) return null;
 
     return {};
@@ -140,7 +140,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
   };
 
   // Generate service structured data
-  const generateServiceStructuredData = () => {};
+  const generateServiceStructuredData = () => {
     if (!enableStructuredData || !seoData.structuredData?.service) return null;
 
     return {};
@@ -322,6 +322,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
       )};
     </Helmet>
   );
+}
 };
 
 export default AdvancedSEOOptimizer;

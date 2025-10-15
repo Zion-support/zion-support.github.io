@@ -173,8 +173,12 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
         return fallback;
       };
       return (
-        <div className="error-boundary"></div>
-          <div className="error-container"></div>
+        <div className="error-boundary">
+        <div className="error-boundary">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <div className="error-icon">⚠️</div>
             <h1 className="error-title">Something went wrong</h1>
             <p className="error-message"></p>
@@ -405,5 +409,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     };
     return children;
   };
+}
 };
+
 export default EnhancedErrorBoundary;

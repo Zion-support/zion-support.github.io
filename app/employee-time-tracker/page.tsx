@@ -4,7 +4,7 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const EmployeeTimeTrackerPage = () => {};
+const EmployeeTimeTrackerPage = () => {
   const features = [
     {};
       title: "Automatic Time Tracking";
@@ -170,8 +170,12 @@ const EmployeeTimeTrackerPage = () => {};
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {features.map((feature) => (
               <FuturisticCard key={index} className="h-full"></FuturisticCard>
-                <div className="text-center mb-6"></div>
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
+                <div className="text-center mb-6">
+        <div className="text-center mb-6">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                     {feature.icon};
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -256,8 +260,12 @@ const EmployeeTimeTrackerPage = () => {};
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {benefits.map((benefit) => (
-              <div key={index} className="text-center"></div>
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
+              <div key={index} className="text-center">
+        <div key={index} className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                   {benefit.icon};
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
@@ -299,6 +307,7 @@ const EmployeeTimeTrackerPage = () => {};
       </section>
     </div>
   );
+}
 };
 
 export default EmployeeTimeTrackerPage;

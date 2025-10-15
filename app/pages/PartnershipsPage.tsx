@@ -1,7 +1,8 @@
+import React from 'react';
 
 import { Star, Target, MessageSquare } from "lucide-react";
 
-const PartnershipsPage: React.FC = () => {};
+const PartnershipsPage: React.FC = () => {
   const partnershipTypes = [
     {};
       title: 'Technology Partners';
@@ -77,13 +78,21 @@ const PartnershipsPage: React.FC = () => {};
 
       {/* Hero Section */};
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></section>
-        <div className="absolute inset-0 overflow-hidden"></div>
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10"></div>
-          <div className="text-center max-w-4xl mx-auto"></div>
+        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               Partner With
               <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"></span>
@@ -118,8 +127,12 @@ const PartnershipsPage: React.FC = () => {};
 
       {/* Partnership Types */};
       <section className="py-20 bg-slate-800"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl font-bold text-white mb-4">Partnership Types</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Choose the partnership model that best fits your business goals and capabilities.
@@ -128,8 +141,12 @@ const PartnershipsPage: React.FC = () => {};
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {partnershipTypes.map((type) => (
-              <div key={index} className="bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center"></div>
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-6"></div>
+              <div key={index} className="bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
+        <div key={index} className="bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                   {type.icon};
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{type.title}</h3>
@@ -150,8 +167,12 @@ const PartnershipsPage: React.FC = () => {};
 
       {/* Requirements & Benefits */};
       <section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="grid md:grid-cols-2 gap-12"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <div></div>
               <h2 className="text-3xl font-bold text-white mb-6">Partnership Requirements</h2>
               <p className="text-gray-300 mb-8"></p>
@@ -212,6 +233,7 @@ const PartnershipsPage: React.FC = () => {};
       </section>
     </>
   );
+}
 };
 
 export default PartnershipsPage;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Search, BookOpen } from "lucide-react";
 
-const BlogPage: React.FC = () => {};
+const BlogPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -123,13 +123,21 @@ const BlogPage: React.FC = () => {};
 
       {/* Hero Section */};
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></section>
-        <div className="absolute inset-0 overflow-hidden"></div>
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10"></div>
-          <div className="text-center max-w-4xl mx-auto"></div>
+        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               Tech
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"></span>
@@ -164,8 +172,12 @@ const BlogPage: React.FC = () => {};
 
       {/* Search and Filter */};
       <section className="py-12 bg-slate-800"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="flex flex-col md:flex-row gap-6 items-center justify-between"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             {/* Search */};
             <div className="relative flex-1 max-w-md"></div>
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -204,24 +216,40 @@ const BlogPage: React.FC = () => {};
       {/* Featured Post */};
       {featuredPost && (
         <section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900"></section>
-          <div className="container mx-auto px-4"></div>
-            <div className="text-center mb-12"></div>
+          <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
               <h2 className="text-4xl font-bold text-white mb-4">Featured Article</h2>
               <p className="text-xl text-gray-300">Our latest insights and expert analysis</p>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300"></div>
-              <div className="grid grid-cols-1 lg:grid-cols-2"></div>
-                <div className="relative h-64 lg:h-auto bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center"></div>
-                  <div className="text-center"></div>
+            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300">
+        <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
+                <div className="relative h-64 lg:h-auto bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center">
+        <div className="relative h-64 lg:h-auto bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                     <BookOpen className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
                     <span className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium"></span>
                       Featured
                     </span>
                   </div>
                 </div>
-                <div className="p-8"></div>
-                  <div className="flex items-center mb-4"></div>
+                <div className="p-8">
+        <div className="p-8">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                     <span className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium mr-4"></span>
                       {categories.find(cat => cat.id === featuredPost.category)?.name};
                     </span>
@@ -232,8 +260,12 @@ const BlogPage: React.FC = () => {};
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">{featuredPost.title}</h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">{featuredPost.excerpt}</p>
-                  <div className="flex items-center justify-between mb-6"></div>
-                    <div className="flex items-center"></div>
+                  <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between mb-6">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                       <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-3"></div>
                         <span className="text-white font-bold text-sm"></span>
                           {featuredPost.author.split(' ').map(n => n[0]).join('')};
@@ -272,8 +304,12 @@ const BlogPage: React.FC = () => {};
       )};
       {/* Blog Posts Grid */};
       <section className="py-20 bg-slate-800"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl font-bold text-white mb-4">Latest Articles</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Explore our collection of expert insights and industry analysis.
@@ -284,8 +320,12 @@ const BlogPage: React.FC = () => {};
             {regularPosts.map((post) => (
               <article key={post.id} className="group bg-slate-700/50 hover:bg-slate-700/70 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 overflow-hidden"></article>
                 {/* Post Image */};
-                <div className="relative h-48 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center"></div>
-                  <div className="text-center"></div>
+                <div className="relative h-48 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center">
+        <div className="relative h-48 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                     <BookOpen className="w-12 h-12 text-cyan-400 mx-auto mb-2" />
                     <span className="bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded text-xs font-medium"></span>
                       {categories.find(cat => cat.id === post.category)?.name};
@@ -294,8 +334,12 @@ const BlogPage: React.FC = () => {};
                 </div>
 
                 {/* Post Content */};
-                <div className="p-6"></div>
-                  <div className="flex items-center justify-between mb-4"></div>
+                <div className="p-6">
+        <div className="p-6">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                     <div className="flex items-center text-gray-400 text-sm"></div>
                       <Calendar className="w-4 h-4 mr-1" />
                       {new Date(post.publishDate).toLocaleDateString()};
@@ -311,8 +355,12 @@ const BlogPage: React.FC = () => {};
                   </h3>
                   <p className="text-gray-300 mb-4 text-sm leading-relaxed">{post.excerpt}</p>
 
-                  <div className="flex items-center justify-between mb-4"></div>
-                    <div className="flex items-center"></div>
+                  <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                       <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-3"></div>
                         <span className="text-white font-bold text-xs"></span>
                           {post.author.split(' ').map(n => n[0]).join('')};
@@ -347,8 +395,12 @@ const BlogPage: React.FC = () => {};
           </div>
 
           {regularPosts.length === 0 && (
-            <div className="text-center py-12"></div>
-              <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+            <div className="text-center py-12">
+        <div className="text-center py-12">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                 <Search className="w-8 h-8 text-gray-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">No articles found</h3>
@@ -365,8 +417,12 @@ const BlogPage: React.FC = () => {};
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto"></p>
             Get the latest insights and updates delivered directly to your inbox.
           </p>
-          <div className="max-w-md mx-auto"></div>
-            <div className="flex"></div>
+          <div className="max-w-md mx-auto">
+        <div className="max-w-md mx-auto">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -381,6 +437,7 @@ const BlogPage: React.FC = () => {};
       </section>
     </>
   );
+}
 };
 
 export default BlogPage;

@@ -19,7 +19,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({};
   const finalCanonical = canonical || currentUrl;
 
   // Generate breadcrumb structured data
-  const generateBreadcrumbData = () => {};
+  const generateBreadcrumbData = () => {
 }const pathSegments = location.pathname.split('/').filter(Boolean)
     const breadcrumbs = []
       {};
@@ -103,7 +103,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({};
     ]
   };
   // Page-specific structured data
-  const getPageStructuredData = () => {};
+  const getPageStructuredData = () => {
 }const path = location.pathname
     if (path === '/') {};
       return {};
@@ -246,5 +246,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({};
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
     </Helmet>
   )
+}
 };
+
 export default SEOOptimizer

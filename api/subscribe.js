@@ -1,15 +1,12 @@
-// API endpoint for general subscription;
+// API endpoint for general subscription
 import fs from 'fs';
 import path from 'path';
-;
+
 const file = path.join(process.cwd(), 'data', 'subscribers.json');
-;
-function handler(req, res) {};
-  if (req.method !== "POST") {};
+
+export default function handler(req, res) {
+  if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
-<<<<<<< HEAD
-  };
-=======
   }
 
   try {
@@ -56,4 +53,3 @@ function handler(req, res) {};
     res.status(500).json({ error: "Failed to subscribe" });
   }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9

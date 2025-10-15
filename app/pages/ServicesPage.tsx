@@ -1,8 +1,9 @@
+import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 import { Zap, Brain, Cloud, Shield, Code, Database, Users, DollarSign, Globe, Settings, Target, TrendingUp, Cpu, Monitor, Eye, Heart, Award, Mic, Video, Image, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from 'lucide-react';
 
-const ServicesPage: React.FC = () => {};
+const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {};
       title: 'Micro SAAS Solutions';
@@ -172,13 +173,21 @@ const ServicesPage: React.FC = () => {};
 
       {/* Hero Section */};
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden"></section>
-        <div className="absolute inset-0 overflow-hidden"></div>
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10"></div>
-          <div className="text-center max-w-4xl mx-auto"></div>
+        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               Our
               <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"></span>
@@ -213,8 +222,12 @@ const ServicesPage: React.FC = () => {};
 
       {/* Service Categories */};
       <section id="categories" className="py-20 bg-slate-800"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
               Service Categories
             </h2>
@@ -263,8 +276,12 @@ const ServicesPage: React.FC = () => {};
 
       {/* Features Section */};
       <section className="py-20 bg-slate-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
               Why Choose Our Services?
             </h2>
@@ -275,8 +292,12 @@ const ServicesPage: React.FC = () => {};
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {features.map((feature, index) => (
-              <div key={index} className="text-center group"></div>
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform"></div>
+              <div key={index} className="text-center group">
+        <div key={index} className="text-center group">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                   {feature.icon};
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors"></h3>
@@ -293,8 +314,12 @@ const ServicesPage: React.FC = () => {};
 
       {/* Process Section */};
       <section className="py-20 bg-slate-800"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
               Our Process
             </h2>
@@ -305,8 +330,12 @@ const ServicesPage: React.FC = () => {};
 
           <div className="grid md:grid-cols-5 gap-8"></div>
             {processSteps.map((step, index) => (
-              <div key={index} className="text-center group"></div>
-                <div className="relative mb-6"></div>
+              <div key={index} className="text-center group">
+        <div key={index} className="text-center group">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform"></div>
                     {step.icon};
                   </div>
@@ -328,8 +357,12 @@ const ServicesPage: React.FC = () => {};
 
       {/* Testimonials */};
       <section className="py-20 bg-slate-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
               What Our Clients Say
             </h2>
@@ -340,8 +373,12 @@ const ServicesPage: React.FC = () => {};
 
           <div className="grid md:grid-cols-3 gap-8"></div>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-700/50 transition-all duration-300"></div>
-                <div className="flex items-center mb-4"></div>
+              <div key={index} className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-700/50 transition-all duration-300">
+        <div key={index} className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-700/50 transition-all duration-300">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                   {[...Array(testimonial.rating)].map(( i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))};
@@ -396,6 +433,7 @@ const ServicesPage: React.FC = () => {};
       </section>
     </>
   );
+}
 };
 
 export default ServicesPage;

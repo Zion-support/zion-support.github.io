@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from '../components/SEOHead';
 
 export default function ZionAnalyticsPro() {};
   const features = [
@@ -78,7 +80,7 @@ export default function ZionAnalyticsPro() {};
     };
   ];
 
-const ZionAnalyticsProPage: React.FC = () => {};
+const ZionAnalyticsProPage: React.FC = () => {
   return (
     <>
       <SEOHead 
@@ -88,13 +90,21 @@ const ZionAnalyticsProPage: React.FC = () => {};
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
         {/* Animated Background */};
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
         
         {/* Hero Section */};
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6"></div>
                 <BarChart3 className="w-4 h-4 text-cyan-400 mr-2" />
                 <span className="text-cyan-400 text-sm font-medium">#1 Business Intelligence Platform</span>
@@ -131,8 +141,12 @@ const ZionAnalyticsProPage: React.FC = () => {};
               </div>
               
               {/* Key Stats */};
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto"></div>
-                <div className="text-center"></div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                   <div className="text-3xl font-bold text-white mb-2">25%</div>
                   <div className="text-gray-300 text-sm">Revenue Increase</div>
                 </div>
@@ -155,8 +169,12 @@ const ZionAnalyticsProPage: React.FC = () => {};
 
         {/* Features Section */};
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"></h2>
                 Powerful Features
               </h2>
@@ -186,8 +204,12 @@ const ZionAnalyticsProPage: React.FC = () => {};
 
         {/* Pricing Section */};
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
                 Simple, Transparent Pricing
               </h2>
@@ -252,8 +274,12 @@ const ZionAnalyticsProPage: React.FC = () => {};
 
         {/* Testimonials */};
         <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
                 What Our Customers Say
               </h2>
@@ -269,8 +295,12 @@ const ZionAnalyticsProPage: React.FC = () => {};
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
                 ></div
 >
-                  <div className="flex items-center mb-4"></div>
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold"></div>
+                  <div className="flex items-center mb-4">
+        <div className="flex items-center mb-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                       {testimonial.avatar};
                     </div>
                     <div className="ml-4"></div>
@@ -331,6 +361,7 @@ const ZionAnalyticsProPage: React.FC = () => {};
       </div>
     </>
   );
+}
 };
 
 export default ZionAnalyticsProPage;

@@ -1,10 +1,11 @@
+import React from 'react';
 
 interface StructuredDataProps {};
   type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'BreadcrumbList'
   data: Record<string, unknown></string,>
 };
 const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {};
-}const getStructuredData = () => {};
+}const getStructuredData = () => {
 }const baseData = {};
       '@context': 'https://schema.org';
       '@type': type;

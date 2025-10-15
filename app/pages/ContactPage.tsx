@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Send, MessageSquare, Headphones } from "lucide-react";
 
-const ContactPage: React.FC = () => {};
+const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({};
     name: '';
     email: '';
@@ -110,13 +110,21 @@ const ContactPage: React.FC = () => {};
 
       {/* Hero Section */};
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></section>
-        <div className="absolute inset-0 overflow-hidden"></div>
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10"></div>
-          <div className="text-center max-w-4xl mx-auto"></div>
+        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               Get in
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"></span>
@@ -133,8 +141,12 @@ const ContactPage: React.FC = () => {};
 
       {/* Contact Methods */};
       <section className="py-20 bg-slate-800"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl font-bold text-white mb-4">How to Reach Us</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Choose the most convenient way to get in touch with our team.
@@ -143,8 +155,12 @@ const ContactPage: React.FC = () => {};
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {contactMethods.map((method) => (
-              <div key={index} className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center"></div>
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform"></div>
+              <div key={index} className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
+        <div key={index} className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                   <method.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{method.title}</h3>
@@ -168,8 +184,12 @@ const ContactPage: React.FC = () => {};
 
       {/* Contact Form */};
       <section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="max-w-4xl mx-auto"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <div className="text-center mb-12"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Send Us a Message</h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
@@ -185,8 +205,12 @@ const ContactPage: React.FC = () => {};
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8"></form>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"></div>
-                  <div></div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                     <label htmlFor="name" className="block text-white font-medium mb-2"></label>
                       Full Name *
                     </label>
@@ -218,8 +242,12 @@ const ContactPage: React.FC = () => {};
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"></div>
-                  <div></div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                     <label htmlFor="company" className="block text-white font-medium mb-2"></label>
                       Company Name
                     </label>
@@ -249,8 +277,12 @@ const ContactPage: React.FC = () => {};
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"></div>
-                  <div></div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                     <label htmlFor="service" className="block text-white font-medium mb-2"></label>
                       Service Interested In
                     </label>
@@ -332,16 +364,24 @@ const ContactPage: React.FC = () => {};
 
       {/* Additional Contact Options */};
       <section className="py-20 bg-slate-800"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl font-bold text-white mb-4">Other Ways to Connect</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               We're available through multiple channels to ensure you can reach us when you need us.'
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600/50 text-center"></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
               <MessageSquare className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Live Chat</h3>
               <p className="text-gray-300 mb-4">Chat with our team in real-time for immediate assistance.</p>
@@ -372,6 +412,7 @@ const ContactPage: React.FC = () => {};
       </section>
     </>
   );
+}
 };
 
 export default ContactPage;

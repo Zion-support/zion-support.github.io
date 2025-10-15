@@ -55,8 +55,12 @@ class ErrorBoundary extends Component<Props, State> {};
         return this.props.fallback
       };
       return (
-        <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white"></div>
-          <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-6 text-center"></div>
+        <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white">
+        <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-red-500/20 rounded-full"></div>
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
@@ -129,5 +133,7 @@ class ErrorBoundary extends Component<Props, State> {};
     };
     return this.props.children
   };
+}
 };
+
 export default ErrorBoundary;

@@ -1,5 +1,6 @@
+import React from 'react';
 
-const ITSolutionsPage: React.FC = () => {};
+const ITSolutionsPage: React.FC = () => {
   const itServices = [
     {};
       id: 'cloud-infrastructure';
@@ -264,13 +265,21 @@ const ITSolutionsPage: React.FC = () => {};
 
       {/* Hero Section */};
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden"></section>
-        <div className="absolute inset-0 overflow-hidden"></div>
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10"></div>
-          <div className="text-center max-w-4xl mx-auto"></div>
+        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               IT Solutions
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"></span>
@@ -305,8 +314,12 @@ const ITSolutionsPage: React.FC = () => {};
 
       {/* Use Cases Section */};
       <section className="py-20 bg-slate-800"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
               IT Solutions for Every Business Need
             </h2>
@@ -317,8 +330,12 @@ const ITSolutionsPage: React.FC = () => {};
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {useCases.map((useCase) => (
-              <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group"></div>
-                <div className="mb-4 group-hover:scale-110 transition-transform"></div>
+              <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
+        <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                   {useCase.icon};
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors"></h3>
@@ -343,8 +360,12 @@ const ITSolutionsPage: React.FC = () => {};
 
       {/* Services Grid */};
       <section className="py-20 bg-slate-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
               Our IT Solutions
             </h2>
@@ -365,8 +386,12 @@ const ITSolutionsPage: React.FC = () => {};
                     </span>
                   </div>
                 )};
-                <div className="mb-6"></div>
-                  <div className="flex items-center justify-between mb-4"></div>
+                <div className="mb-6">
+        <div className="mb-6">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                     <div className="group-hover:scale-110 transition-transform"></div>
                       {service.icon};
                     </div>
@@ -422,8 +447,12 @@ const ITSolutionsPage: React.FC = () => {};
 
       {/* Pricing Section */};
       <section id="pricing" className="py-20 bg-slate-800"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
               IT Solutions Pricing
             </h2>
@@ -505,6 +534,7 @@ const ITSolutionsPage: React.FC = () => {};
       </section>
     </>
   );
+}
 };
 
 export default ItSolutionsPage;

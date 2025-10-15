@@ -1,7 +1,8 @@
+import React from 'react';
 
 import SEOHead from '../components/SEOHead';
 
-const PartnersPage: React.FC = () => {};
+const PartnersPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
@@ -9,8 +10,12 @@ const PartnersPage: React.FC = () => {};
         <meta name="description" content="Join our partner ecosystem and unlock new opportunities for growth. Strategic partnerships with leading technology companies." />
         <meta name="keywords" content="partners, partnerships, technology partners, cloud partners, strategic alliances" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
           <div className="text-center"></div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6"></h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"></span>
@@ -50,8 +55,12 @@ const PartnersPage: React.FC = () => {};
           </div>
 
           {/* Benefits Section */};
-          <div className="mt-20"></div>
-            <div className="text-center mb-12"></div>
+          <div className="mt-20">
+        <div className="mt-20">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
               <h2 className="text-3xl font-bold text-white mb-4"></h2>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"></span>
                   Partnership Benefits
@@ -80,8 +89,12 @@ const PartnersPage: React.FC = () => {};
           </div>
 
           {/* Partnership Tiers */};
-          <div className="mt-20"></div>
-            <div className="text-center mb-12"></div>
+          <div className="mt-20">
+        <div className="mt-20">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
               <h2 className="text-3xl font-bold text-white mb-4"></h2>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"></span>
                   Partnership Tiers
@@ -120,8 +133,12 @@ const PartnersPage: React.FC = () => {};
           </div>
 
           {/* CTA Section */};
-          <div className="mt-20 text-center"></div>
-            <div className="bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-white/20"></div>
+          <div className="mt-20 text-center">
+        <div className="mt-20 text-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
               <h2 className="text-3xl font-bold text-white mb-4"></h2>
                 Ready to Partner with Us?
               </h2>
@@ -150,6 +167,7 @@ const PartnersPage: React.FC = () => {};
       </div>
     </>
   );
+}
 };
 
 export default PartnersPage;

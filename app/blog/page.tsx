@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import SEOHead from '../components/SEOHead';
 >>>>>>> cursor/fix-errors-and-merge-to-main-13a9
 
-const BlogPage: React.FC = () => {};
+const BlogPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
@@ -34,6 +34,7 @@ const BlogPage: React.FC = () => {};
     </>
 >>>>>>> cursor/fix-errors-and-merge-to-main-13a9
   );
+}
 };
 
 export default BlogPage;

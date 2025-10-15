@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckCircle, Zap, BookOpen, ExternalLink, FileText, Video, Download } from 'lucide-react';const SupportPage: React.FC = () => {};
+import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckCircle, Zap, BookOpen, ExternalLink, FileText, Video, Download } from 'lucide-react';const SupportPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -141,13 +141,21 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
 
       {/* Hero Section */};
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></section>
-        <div className="absolute inset-0 overflow-hidden"></div>
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10"></div>
-          <div className="text-center max-w-4xl mx-auto"></div>
+        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               How Can We
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"></span>
@@ -182,8 +190,12 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
 
       {/* Search */};
       <section className="py-12 bg-slate-800"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="max-w-2xl mx-auto"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <div className="relative"></div>
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -200,8 +212,12 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
 
       {/* Support Channels */};
       <section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl font-bold text-white mb-4">Get Support</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Choose the support channel that works best for you.
@@ -210,14 +226,22 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {supportChannels.map((channel, index) => (
-              <div key={index} className="group bg-slate-800/50 hover:bg-slate-800/70 p-8 rounded-xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center"></div>
-                <div className={`w-16 h-16 bg-gradient-to-r ${channel.color} rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform`}></div>
+              <div key={index} className="group bg-slate-800/50 hover:bg-slate-800/70 p-8 rounded-xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
+        <div key={index} className="group bg-slate-800/50 hover:bg-slate-800/70 p-8 rounded-xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                   <channel.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{channel.title}</h3>
                 <p className="text-gray-300 mb-4">{channel.description}</p>
-                <div className="space-y-2 mb-6"></div>
-                  <div className="flex items-center justify-center text-gray-400 text-sm"></div>
+                <div className="space-y-2 mb-6">
+        <div className="space-y-2 mb-6">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                     <Clock className="w-4 h-4 mr-2" />
                     {channel.availability};
                   </div>
@@ -237,8 +261,12 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
 
       {/* Resources */};
       <section className="py-20 bg-slate-800"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl font-bold text-white mb-4">Resources</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Access our comprehensive library of resources and documentation.
@@ -272,8 +300,12 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
 
       {/* FAQ Section */};
       <section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Find quick answers to common questions about our services and solutions.
@@ -299,14 +331,22 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
             ))};
           </div>
 
-          <div className="max-w-4xl mx-auto"></div>
-            <div className="space-y-6"></div>
+          <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
               {filteredFaqs.map((faq) => (
                 <div key={faq.id} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 p-6 rounded-xl hover:border-cyan-500/50 transition-all duration-300"></div>
                   <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300 leading-relaxed mb-4">{faq.answer}</p>
-                  <div className="flex items-center justify-between"></div>
-                    <div className="flex items-center text-gray-400 text-sm"></div>
+                  <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                       <CheckCircle className="w-4 h-4 mr-2" />
                       {faq.helpful} people found this helpful
                     </div>
@@ -319,8 +359,12 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
             </div>
 
             {filteredFaqs.length === 0 && (
-              <div className="text-center py-12"></div>
-                <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+              <div className="text-center py-12">
+        <div className="text-center py-12">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                   <Search className="w-8 h-8 text-gray-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">No FAQs found</h3>
@@ -333,8 +377,12 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
 
       {/* Contact Support CTA */};
       <section className="py-20 bg-slate-800"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-xl p-12 text-center"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl font-bold text-white mb-4">Still Need Help?</h2>
             <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto"></p>
               Can't find what you're looking for? Our support team is ready to help you with any questions or issues.
@@ -362,6 +410,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
       </section>
     </>
   );
+}
 };
 
 export default SupportPage;

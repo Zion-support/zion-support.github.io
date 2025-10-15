@@ -1,7 +1,8 @@
+import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Target, Rocket, Users, Globe, TrendingUp } from 'lucide-react';const SolutionsPage: React.FC = () => {};
+import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Target, Rocket, Users, Globe, TrendingUp } from 'lucide-react';const SolutionsPage: React.FC = () => {
   const industrySolutions = [
     {};
       title: 'Healthcare';
@@ -220,13 +221,21 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
 
       {/* Hero Section */};
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></section>
-        <div className="absolute inset-0 overflow-hidden"></div>
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10"></div>
-          <div className="text-center max-w-4xl mx-auto"></div>
+        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               Industry
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"></span>
@@ -261,8 +270,12 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
 
       {/* Industry Solutions */};
       <section className="py-20 bg-slate-800"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl font-bold text-white mb-4">Industry-Specific Solutions</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               We specialize in delivering technology solutions that address the unique needs of different industries.
@@ -270,8 +283,12 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {industrySolutions.map((solution, index) => (<div key={index} className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"></div>
-                <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}></div>
+            {industrySolutions.map((solution, index) => (<div key={index} className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+        <div key={index} className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-4">{solution.title}</h3>
@@ -302,8 +319,12 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
 
       {/* Technology Solutions */};
       <section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl font-bold text-white mb-4">Technology Solutions</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Comprehensive technology solutions powered by the latest innovations in AI, cloud, and data science.
@@ -311,8 +332,12 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-            {technologySolutions.map((solution, index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-all duration-300"></div>
-                <div className="flex items-center mb-6"></div>
+            {technologySolutions.map((solution, index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-all duration-300">
+        <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-all duration-300">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4"></div>
                     <solution.icon className="w-6 h-6 text-white" />
                   </div>
@@ -338,8 +363,12 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
 
       {/* Micro SAAS Solutions */};
       <section className="py-20 bg-slate-800"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl font-bold text-white mb-4">Micro SAAS Solutions</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Ready-to-use software solutions that can be deployed quickly and scaled as your business grows.
@@ -379,8 +408,12 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
 
       {/* Case Studies */};
       <section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Real results from real clients. See how our solutions have transformed businesses across industries.
@@ -388,8 +421,12 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8"></div>
-            {caseStudies.map((study, index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-all duration-300"></div>
-                <div className="flex items-center justify-between mb-4"></div>
+            {caseStudies.map((study, index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-all duration-300">
+        <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-all duration-300">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                   <span className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium"></span>
                     {study.industry};
                   </span>
@@ -449,6 +486,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
       </section>
     </>
   );
+}
 };
 
 export default SolutionsPage;

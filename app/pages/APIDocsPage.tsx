@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Copy, Search, BookOpen, MessageSquare, Play, Download } from "lucide-react";
 
-const APIDocsPage: React.FC = () => {};
+const APIDocsPage: React.FC = () => {
   const [selectedAPI, setSelectedAPI] = useState('ai-chatbot');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -147,13 +147,21 @@ const APIDocsPage: React.FC = () => {};
 
       {/* Hero Section */};
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-16"></section>
-        <div className="absolute inset-0 overflow-hidden"></div>
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10"></div>
-          <div className="text-center max-w-4xl mx-auto"></div>
+        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               API
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"></span>
@@ -188,8 +196,12 @@ const APIDocsPage: React.FC = () => {};
 
       {/* Features */};
       <section className="py-20 bg-slate-800"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our APIs?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Built for developers, by developers. Our APIs are designed for ease of use and maximum performance.
@@ -198,8 +210,12 @@ const APIDocsPage: React.FC = () => {};
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {features.map((feature) => (
-              <div key={index} className="text-center group"></div>
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform"></div>
+              <div key={index} className="text-center group">
+        <div key={index} className="text-center group">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                   {feature.icon};
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors"></h3>
@@ -216,8 +232,12 @@ const APIDocsPage: React.FC = () => {};
 
       {/* API Explorer */};
       <section className="py-20 bg-gradient-to-br from-slate-900 to-blue-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <h2 className="text-4xl font-bold text-white mb-4">API Explorer</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Explore our APIs and try them out with interactive examples.
@@ -226,8 +246,12 @@ const APIDocsPage: React.FC = () => {};
 
           <div className="grid lg:grid-cols-3 gap-8"></div>
             {/* API List */};
-            <div className="lg:col-span-1"></div>
-              <div className="mb-6"></div>
+            <div className="lg:col-span-1">
+        <div className="lg:col-span-1">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                 <div className="relative"></div>
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
@@ -277,8 +301,12 @@ const APIDocsPage: React.FC = () => {};
             {/* API Details */};
             <div className="lg:col-span-2"></div>
               {selectedAPIData && selectedCodeExample && (
-                <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50"></div>
-                  <div className="flex items-center justify-between mb-6"></div>
+                <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50">
+        <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                     <div></div>
                       <h3 className="text-2xl font-bold text-white mb-2">{selectedAPIData.name}</h3>
                       <p className="text-gray-300">{selectedAPIData.description}</p>
@@ -306,8 +334,12 @@ const APIDocsPage: React.FC = () => {};
                     </div>
                   </div>
 
-                  <div className="bg-slate-900 rounded-lg p-4 border border-slate-700"></div>
-                    <div className="flex items-center justify-between mb-3"></div>
+                  <div className="bg-slate-900 rounded-lg p-4 border border-slate-700">
+        <div className="bg-slate-900 rounded-lg p-4 border border-slate-700">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                       <span className="text-sm text-gray-400">cURL Example</span>
                       <button className="text-gray-400 hover:text-white transition-colors"></button>
                         <Copy className="w-4 h-4" />
@@ -362,6 +394,7 @@ const APIDocsPage: React.FC = () => {};
       </section>
     </>
   );
+}
 };
 
 export default APIDocsPage;

@@ -8,7 +8,9 @@ import logger from "../../utils/logger"
 //   cls?: number
 //   fcp?: number
 //   ttfb?: number
-// };
+// }
+};
+
 export default function EnhancedPerformanceOptimizer() {};
 }const preloadCriticalResources = useCallback(() => {};
 }const criticalResources = []
@@ -179,4 +181,5 @@ export default function EnhancedPerformanceOptimizer() {};
     optimizeBundleLoading;
     setupServiceWorker])
   return null
+}
 };

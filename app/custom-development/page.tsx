@@ -1,5 +1,6 @@
+import React from 'react';
 
-const CustomDevelopmentPage: React.FC = () => {};
+const CustomDevelopmentPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
@@ -16,13 +17,21 @@ const CustomDevelopmentPage: React.FC = () => {};
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
         {/* Animated Background */};
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
         
         {/* Hero Section */};
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
-          <div className="max-w-7xl mx-auto text-center"></div>
-            <div className="inline-block"></div>
+          <div className="max-w-7xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative"></h1>
                 Custom
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse"></span>
@@ -57,8 +66,12 @@ const CustomDevelopmentPage: React.FC = () => {};
 
         {/* Services Grid */};
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"></span>
                   Development Services
@@ -75,9 +88,12 @@ const CustomDevelopmentPage: React.FC = () => {};
                 ></div
 >
                   {/* Animated background effect */};
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
-                  <div className="relative z-10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                     <div
                       className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`};
                     ></div
@@ -92,8 +108,12 @@ const CustomDevelopmentPage: React.FC = () => {};
                     </p>
                     
                     {/* Price and Features */};
-                    <div className="space-y-3"></div>
-                      <div className="text-center"></div>
+                    <div className="space-y-3">
+        <div className="space-y-3">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                         <span className="text-cyan-400 font-bold text-lg">{service.price}</span>
                       </div>
                       <div className="flex flex-wrap gap-2 justify-center"></div>
@@ -128,8 +148,12 @@ const CustomDevelopmentPage: React.FC = () => {};
 
         {/* Contact Information Section */};
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"></div>
+          <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
                 Ready to Build Something Amazing?
               </h2>
@@ -139,23 +163,35 @@ const CustomDevelopmentPage: React.FC = () => {};
               </p>
               
               {/* Contact Details */};
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
-                <div className="text-center"></div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3"></div>
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Email</h3>
                   <p className="text-cyan-400">kleber@ziontechgroup.com</p>
                 </div>
-                <div className="text-center"></div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3"></div>
+                <div className="text-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                     <Smartphone className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Phone</h3>
                   <p className="text-cyan-400">+1 302 464 0950</p>
                 </div>
-                <div className="text-center"></div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3"></div>
+                <div className="text-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                     <Globe className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Address</h3>
@@ -186,6 +222,7 @@ const CustomDevelopmentPage: React.FC = () => {};
       </div>
     </>
   );
+}
 };
 
 export default CustomDevelopmentPage;

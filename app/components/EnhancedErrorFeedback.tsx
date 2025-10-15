@@ -11,7 +11,9 @@ interface State {};
   error: Error | null
   errorInfo: ErrorInfo | null
   retryCount: number
+}
 };
+
 export class GlobalErrorBoundary extends Component<Props, State> {};
   private maxRetries = 3
   constructor(props: Props) {};
@@ -77,10 +79,18 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
         return this.props.fallback
       };
       return ()
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
-          <div className="max-w-2xl mx-auto text-center"></div>
-            <div className="mb-8"></div>
-              <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 flex items-center justify-center mb-6"></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
+            <div className="mb-8">
+        <div className="mb-8">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                 <AlertTriangle className="w-12 h-12 text-red-400" />
               </div>
               <h1 className="text-4xl font-bold text-white mb-4"></h1>
@@ -184,5 +194,7 @@ export const ErrorBoundary: React.FC<{};
     )
   };
   return <>{children}</>
+}
 };
+
 export default GlobalErrorBoundary

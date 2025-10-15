@@ -1,5 +1,6 @@
+import React from 'react';
 
-const AboutPage: React.FC = () => {};
+const AboutPage: React.FC = () => {
   const values = [
     {};
       icon: CheckCircleIcon;
@@ -40,8 +41,12 @@ const AboutPage: React.FC = () => {};
       <div className="min-h-screen bg-slate-900 text-white"></div>
         {/* Hero Section */};
         <section className="relative py-20 lg:py-32"></section>
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-cyan-900/20">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-cyan-900/20">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
             <div className="text-center"></div>
               <h1 className="text-5xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"></h1>
                 About Zion Tech Group
@@ -56,11 +61,19 @@ const AboutPage: React.FC = () => {};
 
         {/* Stats Section */};
         <section className="py-20 bg-slate-800/30"></section>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
               {stats.map((stat, index) => (
-                <div key={index} className="text-center"></div>
-                  <div className="text-4xl lg:text-5xl font-bold text-purple-400 mb-2"></div>
+                <div key={index} className="text-center">
+        <div key={index} className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                     {stat.number};
                   </div>
                   <div className="text-gray-300 text-lg"></div>
@@ -74,8 +87,12 @@ const AboutPage: React.FC = () => {};
 
         {/* Values Section */};
         <section className="py-20"></section>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
               <h2 className="text-4xl lg:text-5xl font-bold mb-6"></h2>
                 Our <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Values</span>
               </h2>
@@ -86,8 +103,12 @@ const AboutPage: React.FC = () => {};
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {values.map((value, index) => (
-                <div key={index} className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300"></div>
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-6"></div>
+                <div key={index} className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300">
+        <div key={index} className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold mb-4 text-white"></h3>
@@ -104,8 +125,12 @@ const AboutPage: React.FC = () => {};
 
         {/* Mission Section */};
         <section className="py-20 bg-slate-800/30"></section>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-            <div className="text-center"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
+        </div>
+      </div>
               <h2 className="text-4xl lg:text-5xl font-bold mb-8"></h2>
                 Our <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Mission</span>
               </h2>
@@ -128,6 +153,7 @@ const AboutPage: React.FC = () => {};
       </div>
     </>
   );
+}
 };
 
 export default AboutPage;
