@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -137,10 +136,6 @@ const ITSolutionsPage: React.FC = () => {
       href: "/it-compliance"
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
 
   const features = [
     '24/7 Expert Support',
@@ -162,7 +157,6 @@ import { Helmet } from 'react-helmet-async';
     <>
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Comprehensive IT solutions including infrastructure management, cloud migration, network security, and database optimization services." />
         <meta name="keywords" content="IT solutions, infrastructure management, cloud migration, network security, database management, IT support, Zion Tech Group" />
       </Helmet>
@@ -311,15 +305,6 @@ import { Helmet } from 'react-helmet-async';
             </div>
           </div>
         </section>
-=======
-        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">IT Solutions</h1>
-          <p className="text-gray-300 text-center">Coming soon...</p>
-        </div>
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
       </div>
     </>
   );

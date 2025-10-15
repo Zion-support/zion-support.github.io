@@ -1,16 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-// Generate sitemap.xml
-const generateSitemap = () => {
-<<<<<<< HEAD
-// Generate comprehensive sitemap;
+// Generate comprehensive sitemap
 function generateSitemap() {
-  const baseUrl = 'https://ziontechgroup.com';';
-  const currentDate = new Date().toISOString();
-=======
   const baseUrl = 'https://ziontechgroup.com';
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
+  const currentDate = new Date().toISOString();
   
   const pages = [
     '',
