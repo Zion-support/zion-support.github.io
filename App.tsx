@@ -1,20 +1,38 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import Layout from './components/Layout';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ServicesPage from './pages/ServicesPage';
+import ContactPage from './pages/ContactPage';
+import AIServicesPage from './pages/AIServicesPage';
+import ITServicesPage from './pages/ITServicesPage';
+import MicroSAASPage from './pages/MicroSAASPage';
+import ServiceDetailPage from './pages/ServiceDetailPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 const App: React.FC = () => {
   return (
-    <>
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">Zion Tech Group</h1>
-          <p className="text-gray-300 text-center">Advanced AI and IT Solutions</p>
+    <HelmetProvider>
+      <Router>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <Layout>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/it-services" element={<ITServicesPage />} />
+              <Route path="/micro-saas" element={<MicroSAASPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/service/:id" element={<ServiceDetailPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </Layout>
         </div>
-      </div>
-    </>
+      </Router>
+    </HelmetProvider>
   );
 };
 
