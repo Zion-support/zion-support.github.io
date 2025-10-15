@@ -11,6 +11,7 @@ import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
+import SEOOptimizer from './app/components/SEOOptimizer';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -68,6 +69,8 @@ const LoadingFallback = () => (
 );
 
 function App() {
+  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
@@ -93,13 +96,14 @@ function App() {
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-gray-50">
-            <Navigation />
-            <Sidebar />
+            <Navigation onSidebarToggle={() => setSidebarOpen(!sidebarOpen)} />
+            <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
             
             <main className="flex-1">
               <ErrorBoundary>
                 <PerformanceMonitor />
                 <AccessibilityEnhancer />
+                <SEOOptimizer />
                 
                 <Suspense fallback={<LoadingFallback />}>
                   <Routes>

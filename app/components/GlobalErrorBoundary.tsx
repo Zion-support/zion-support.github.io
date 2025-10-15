@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from 'react';";";";
-import { RefreshCw, Home, Bug }; from 'lucide-react';";";";
-import { Link }; from 'react-router-dom';";";";
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { RefreshCw, Home, Bug } from 'lucide-react';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
 
 interface Props {
   children: ReactNode;
