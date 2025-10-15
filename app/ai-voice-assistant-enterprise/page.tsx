@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Brain, CheckCircle, Globe, Headphones, Mic, Settings, Smartphone, Star, Users, Volume2 } from 'lucide-react';
 
 const AiVoiceAssistantEnterprisePage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [ setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -12,116 +12,116 @@ const AiVoiceAssistantEnterprisePage: React.FC = () => {
   const features = [
     {
       icon: <Mic className="w-6 h-6" />,
-      title: "Advanced Voice Recognition",
-      description: "State-of-the-art speech-to-text with 99.5% accuracy in 50+ languages and dialects.",
-      benefits: ["99.5% accuracy", "50+ languages", "Noise cancellation", "Real-time processing"]
+      title: &quot;Advanced Voice Recognition&quot;,
+      description: &quot;State-of-the-art speech-to-text with 99.5% accuracy in 50+ languages and dialects.&quot;,
+      benefits: [&quot;99.5% accuracy&quot;, &quot;50+ languages&quot;, &quot;Noise cancellation&quot;, &quot;Real-time processing&quot;]
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "Natural Language Understanding",
-      description: "Deep learning models that understand context, intent, and complex conversational flows.",
-      benefits: ["Context awareness", "Intent recognition", "Multi-turn conversations", "Sentiment analysis"]
+      title: &quot;Natural Language Understanding&quot;,
+      description: &quot;Deep learning models that understand context, intent, and complex conversational flows.&quot;,
+      benefits: [&quot;Context awareness&quot;, &quot;Intent recognition&quot;, &quot;Multi-turn conversations&quot;, &quot;Sentiment analysis&quot;]
     },
     {
       icon: <Volume2 className="w-6 h-6" />,
-      title: "Text-to-Speech Synthesis",
-      description: "Human-like voice synthesis with emotional expression and multiple voice personalities.",
-      benefits: ["Natural voices", "Emotional expression", "Multiple personalities", "Custom voice training"]
+      title: &quot;Text-to-Speech Synthesis&quot;,
+      description: &quot;Human-like voice synthesis with emotional expression and multiple voice personalities.&quot;,
+      benefits: [&quot;Natural voices&quot;, &quot;Emotional expression&quot;, &quot;Multiple personalities&quot;, &quot;Custom voice training&quot;]
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: "Multi-Language Support",
-      description: "Seamless conversation in multiple languages with automatic translation and localization.",
-      benefits: ["Auto-translation", "Cultural adaptation", "Regional accents", "Language switching"]
+      title: &quot;Multi-Language Support&quot;,
+      description: &quot;Seamless conversation in multiple languages with automatic translation and localization.&quot;,
+      benefits: [&quot;Auto-translation&quot;, &quot;Cultural adaptation&quot;, &quot;Regional accents&quot;, &quot;Language switching&quot;]
     },
     {
       icon: <Star className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "Bank-level encryption, compliance with GDPR/CCPA, and secure voice data processing.",
-      benefits: ["End-to-end encryption", "GDPR compliance", "Data privacy", "Secure processing"]
+      title: &quot;Enterprise Security&quot;,
+      description: &quot;Bank-level encryption, compliance with GDPR/CCPA, and secure voice data processing.&quot;,
+      benefits: [&quot;End-to-end encryption&quot;, &quot;GDPR compliance&quot;, &quot;Data privacy&quot;, &quot;Secure processing&quot;]
     },
     {
       icon: <Settings className="w-6 h-6" />,
-      title: "Custom Integration",
-      description: "Easy integration with existing systems, CRM, ERP, and third-party applications.",
-      benefits: ["API integration", "Webhook support", "Custom workflows", "Legacy system support"]
+      title: &quot;Custom Integration&quot;,
+      description: &quot;Easy integration with existing systems, CRM, ERP, and third-party applications.&quot;,
+      benefits: [&quot;API integration&quot;, &quot;Webhook support&quot;, &quot;Custom workflows&quot;, &quot;Legacy system support&quot;]
     }
   ];
 
   const useCases = [
     {
-      title: "Customer Service",
-      description: "24/7 intelligent customer support with voice and chat capabilities",
+      title: &quot;Customer Service&quot;,
+      description: &quot;24/7 intelligent customer support with voice and chat capabilities&quot;,
       icon: <Headphones className="w-8 h-8" />,
-      benefits: ["24/7 availability", "Instant responses", "Multi-channel support", "Customer satisfaction"]
+      benefits: [&quot;24/7 availability&quot;, &quot;Instant responses&quot;, &quot;Multi-channel support&quot;, &quot;Customer satisfaction&quot;]
     },
     {
-      title: "Healthcare",
-      description: "Voice-enabled patient care and medical documentation",
+      title: &quot;Healthcare&quot;,
+      description: &quot;Voice-enabled patient care and medical documentation&quot;,
       icon: <Star className="w-6 h-6" />,
-      benefits: ["Patient monitoring", "Medical transcription", "Appointment scheduling", "HIPAA compliance"]
+      benefits: [&quot;Patient monitoring&quot;, &quot;Medical transcription&quot;, &quot;Appointment scheduling&quot;, &quot;HIPAA compliance&quot;]
     },
     {
-      title: "Education",
-      description: "Interactive learning with voice-based tutoring and assessment",
+      title: &quot;Education&quot;,
+      description: &quot;Interactive learning with voice-based tutoring and assessment&quot;,
       icon: <Users className="w-8 h-8" />,
-      benefits: ["Personalized learning", "Voice assessments", "Language training", "Accessibility support"]
+      benefits: [&quot;Personalized learning&quot;, &quot;Voice assessments&quot;, &quot;Language training&quot;, &quot;Accessibility support&quot;]
     },
     {
-      title: "Smart Home",
-      description: "Voice control for IoT devices and home automation systems",
+      title: &quot;Smart Home&quot;,
+      description: &quot;Voice control for IoT devices and home automation systems&quot;,
       icon: <Smartphone className="w-8 h-8" />,
-      benefits: ["Device control", "Routine automation", "Energy management", "Security monitoring"]
+      benefits: [&quot;Device control&quot;, &quot;Routine automation&quot;, &quot;Energy management&quot;, &quot;Security monitoring&quot;]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$199",
-      period: "month",
-      description: "Perfect for small businesses starting with voice AI",
+      name: &quot;Starter&quot;,
+      price: &quot;$199&quot;,
+      period: &quot;month&quot;,
+      description: &quot;Perfect for small businesses starting with voice AI&quot;,
       features: [
-        "Up to 1,000 voice interactions",
-        "5 languages supported",
-        "Basic voice recognition",
-        "Email support",
-        "Standard integration",
-        "1 voice personality"
+        &quot;Up to 1,000 voice interactions&quot;,
+        &quot;5 languages supported&quot;,
+        &quot;Basic voice recognition&quot;,
+        &quot;Email support&quot;,
+        &quot;Standard integration&quot;,
+        &quot;1 voice personality&quot;
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$499",
-      period: "month",
-      description: "Ideal for growing companies with advanced voice needs",
+      name: &quot;Professional&quot;,
+      price: &quot;$499&quot;,
+      period: &quot;month&quot;,
+      description: &quot;Ideal for growing companies with advanced voice needs&quot;,
       features: [
-        "Up to 10,000 voice interactions",
-        "25 languages supported",
-        "Advanced NLP capabilities",
-        "Priority support",
-        "Custom integrations",
-        "5 voice personalities",
-        "Analytics dashboard",
-        "API access"
+        &quot;Up to 10,000 voice interactions&quot;,
+        &quot;25 languages supported&quot;,
+        &quot;Advanced NLP capabilities&quot;,
+        &quot;Priority support&quot;,
+        &quot;Custom integrations&quot;,
+        &quot;5 voice personalities&quot;,
+        &quot;Analytics dashboard&quot;,
+        &quot;API access&quot;
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$999",
-      period: "month",
-      description: "Complete solution for large organizations",
+      name: &quot;Enterprise&quot;,
+      price: &quot;$999&quot;,
+      period: &quot;month&quot;,
+      description: &quot;Complete solution for large organizations&quot;,
       features: [
-        "Unlimited voice interactions",
-        "50+ languages supported",
-        "Full AI capabilities",
-        "24/7 dedicated support",
-        "Custom development",
-        "Unlimited personalities",
-        "Advanced analytics",
-        "On-premise deployment"
+        &quot;Unlimited voice interactions&quot;,
+        &quot;50+ languages supported&quot;,
+        &quot;Full AI capabilities&quot;,
+        &quot;24/7 dedicated support&quot;,
+        &quot;Custom development&quot;,
+        &quot;Unlimited personalities&quot;,
+        &quot;Advanced analytics&quot;,
+        &quot;On-premise deployment&quot;
       ],
       popular: false
     }
@@ -129,37 +129,37 @@ const AiVoiceAssistantEnterprisePage: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "CustomerFirst Corp",
-      role: "VP of Customer Experience",
-      content: "The AI Voice Assistant has transformed our customer service. We've seen a 70% reduction in wait times and 95% customer satisfaction.",
+      name: &quot;Jennifer Martinez&quot;,
+      company: &quot;CustomerFirst Corp&quot;,
+      role: &quot;VP of Customer Experience&quot;,
+      content: &quot;The AI Voice Assistant has transformed our customer service. We&apos;ve seen a 70% reduction in wait times and 95% customer satisfaction.&quot;,
       rating: 5
     },
     {
-      name: "Dr. Robert Kim",
-      company: "MedTech Solutions",
-      role: "Chief Medical Officer",
-      content: "Voice-enabled patient care has revolutionized our workflow. The accuracy and natural conversation flow are exceptional.",
+      name: &quot;Dr. Robert Kim&quot;,
+      company: &quot;MedTech Solutions&quot;,
+      role: &quot;Chief Medical Officer&quot;,
+      content: &quot;Voice-enabled patient care has revolutionized our workflow. The accuracy and natural conversation flow are exceptional.&quot;,
       rating: 5
     },
     {
-      name: "Sarah Johnson",
-      company: "EduTech Innovations",
-      role: "Director of Learning",
-      content: "Our students love the interactive voice learning experience. Engagement has increased by 60% since implementation.",
+      name: &quot;Sarah Johnson&quot;,
+      company: &quot;EduTech Innovations&quot;,
+      role: &quot;Director of Learning&quot;,
+      content: &quot;Our students love the interactive voice learning experience. Engagement has increased by 60% since implementation.&quot;,
       rating: 5
     }
   ];
 
   const languages = [
-    { name: "English", flag: "🇺🇸", accuracy: "99.8%" },
-    { name: "Spanish", flag: "🇪🇸", accuracy: "99.5%" },
-    { name: "French", flag: "🇫🇷", accuracy: "99.3%" },
-    { name: "German", flag: "🇩🇪", accuracy: "99.4%" },
-    { name: "Chinese", flag: "🇨🇳", accuracy: "99.2%" },
-    { name: "Japanese", flag: "🇯🇵", accuracy: "99.1%" },
-    { name: "Arabic", flag: "🇸🇦", accuracy: "98.9%" },
-    { name: "Portuguese", flag: "🇵🇹", accuracy: "99.3%" }
+    { name: &quot;English&quot;, flag: &quot;🇺🇸&quot;, accuracy: &quot;99.8%&quot; },
+    { name: &quot;Spanish&quot;, flag: &quot;🇪🇸&quot;, accuracy: &quot;99.5%&quot; },
+    { name: &quot;French&quot;, flag: &quot;🇫🇷&quot;, accuracy: &quot;99.3%&quot; },
+    { name: &quot;German&quot;, flag: &quot;🇩🇪&quot;, accuracy: &quot;99.4%&quot; },
+    { name: &quot;Chinese&quot;, flag: &quot;🇨🇳&quot;, accuracy: &quot;99.2%&quot; },
+    { name: &quot;Japanese&quot;, flag: &quot;🇯🇵&quot;, accuracy: &quot;99.1%&quot; },
+    { name: &quot;Arabic&quot;, flag: &quot;🇸🇦&quot;, accuracy: &quot;98.9%&quot; },
+    { name: &quot;Portuguese&quot;, flag: &quot;🇵🇹&quot;, accuracy: &quot;99.3%&quot; }
   ];
 
   return (
@@ -363,7 +363,7 @@ const AiVoiceAssistantEnterprisePage: React.FC = () => {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                  <p className="text-gray-300 mb-4 italic">&quot;{testimonial.content}&quot;</p>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-cyan-400">{testimonial.role}</div>

@@ -210,7 +210,7 @@ const AICodeAssistantPage = () => {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <FuturisticButton
-              href="/contact"
+              onClick={() => window.open("https://zion.app/contact", "_blank")}
               variant="primary"
               size="lg"
               icon={<Code className="w-5 h-5" />}
@@ -218,8 +218,8 @@ const AICodeAssistantPage = () => {
               Start Coding with AI
             </FuturisticButton>
             <FuturisticButton
-              href="#demo"
-              variant="outline"
+              onClick={() => window.open("https://zion.app/contact", "_blank")}
+              variant="secondary"
               size="lg"
               icon={<Terminal className="w-5 h-5" />}
             >
@@ -437,7 +437,7 @@ const AICodeAssistantPage = () => {
                   ))}
                 </div>
                 <FuturisticButton
-                  href="/contact"
+                  onClick={() => window.open("https://zion.app/contact", "_blank")}
                   variant={plan.popular ? "primary" : "outline"}
                   className="w-full"
                   icon={<ArrowRight className="w-4 h-4" />}
@@ -498,7 +498,7 @@ const AICodeAssistantPage = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
-              href="/contact"
+              onClick={() => window.open("https://zion.app/contact", "_blank")}
               variant="primary"
               size="lg"
               icon={<Code className="w-5 h-5" />}
@@ -506,8 +506,8 @@ const AICodeAssistantPage = () => {
               Start Free Trial
             </FuturisticButton>
             <FuturisticButton
-              href="/demo"
-              variant="outline"
+              onClick={() => window.open("https://zion.app/contact", "_blank")}
+              variant="secondary"
               size="lg"
               icon={<Terminal className="w-5 h-5" />}
             >

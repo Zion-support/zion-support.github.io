@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Brain, Bug, CheckCircle, Code, FileText, GitBranch, Globe, Star, Terminal } from 'lucide-react';
 
 const AiCodeAssistantProPage = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);

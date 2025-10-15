@@ -14,8 +14,8 @@ import {
   AlertTriangle,
   MessageSquare,
   FileText,
-  PieChart,
-  Settings,
+  
+  
   Shield
 } from 'lucide-react';
 

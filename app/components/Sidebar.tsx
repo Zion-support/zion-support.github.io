@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { X, Menu, Home, Brain, Shield, Zap, Globe, BarChart3, Users, Settings } from 'lucide-react';
+import { X,  Home, Brain, Shield, Zap, Globe, BarChart3, Users, Settings } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -9,19 +9,19 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Users },
-    { name: 'AI Services', href: '/ai-services', icon: Brain },
-    { name: 'IT Services', href: '/services', icon: Shield },
-    { name: 'Micro SAAS', href: '/micro-saas', icon: Zap },
-    { name: '5G Solutions', href: '/5g-solutions', icon: Globe },
-    { name: 'Portfolio', href: '/portfolio', icon: BarChart3 },
-    { name: 'Blog', href: '/blog', icon: Globe },
-    { name: 'Tutorials', href: '/tutorials', icon: Settings },
-    { name: 'Demo', href: '/demo', icon: Settings },
-    { name: 'Support', href: '/support', icon: Settings },
-    { name: 'FAQ', href: '/faq', icon: Settings },
-    { name: 'Contact', href: '/contact', icon: Settings },
+    { name: &apos;Home&apos;, href: &apos;/&apos;, icon: Home },
+    { name: &apos;About&apos;, href: &apos;/about&apos;, icon: Users },
+    { name: &apos;AI Services&apos;, href: &apos;/ai-services&apos;, icon: Brain },
+    { name: &apos;IT Services&apos;, href: &apos;/services&apos;, icon: Shield },
+    { name: &apos;Micro SAAS&apos;, href: &apos;/micro-saas&apos;, icon: Zap },
+    { name: &apos;5G Solutions&apos;, href: &apos;/5g-solutions&apos;, icon: Globe },
+    { name: &apos;Portfolio&apos;, href: &apos;/portfolio&apos;, icon: BarChart3 },
+    { name: &apos;Blog&apos;, href: &apos;/blog&apos;, icon: Globe },
+    { name: &apos;Tutorials&apos;, href: &apos;/tutorials&apos;, icon: Settings },
+    { name: &apos;Demo&apos;, href: &apos;/demo&apos;, icon: Settings },
+    { name: &apos;Support&apos;, href: &apos;/support&apos;, icon: Settings },
+    { name: &apos;FAQ&apos;, href: &apos;/faq&apos;, icon: Settings },
+    { name: &apos;Contact&apos;, href: &apos;/contact&apos;, icon: Settings },
   ];
 
   return (
