@@ -1,31 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
-interface BreadcrumbProps {
-  items: Array<{
-    label: string;
-    href?: string;
-  }>;
-  className?: string;
-}
-
-export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
+const Breadcrumb: React.FC = () => {
   return (
-    <nav className={`breadcrumb ${className}`} aria-label="Breadcrumb">
-      <ol className="flex space-x-2">
-        {items.map((item, index) => (
-          <li key={index} className="flex items-center">
-            {index > 0 && <span className="mx-2">/</span>}
-            {item.href ? (
-              <Link to={item.href} className="text-blue-600 hover:text-blue-800">
-                {item.label}
-              </Link>
-            ) : (
-              <span className="text-gray-500">{item.label}</span>
-            )}
-          </li>
-        ))}
-      </ol>
-    </nav>
+    <>
+      <Helmet>
+        <title>Breadcrumb - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">Breadcrumb</h1>
+          <p className="text-gray-300 text-center">Coming soon...</p>
+        </div>
+      </div>
+    </>
   );
-}
+};
+
+export default Breadcrumb;

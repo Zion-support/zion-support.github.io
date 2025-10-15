@@ -18,6 +18,12 @@
   NODE_OPTIONS = "--max-old-space-size=4096"
   # Reduce memory leak warnings
   NODE_NO_WARNINGS = "1"
+  # Enable build optimizations
+  VITE_BUILD_OPTIMIZE = "true"
+  # Enable compression
+  VITE_COMPRESS = "true"
+  # Enable source maps for debugging
+  VITE_SOURCEMAP = "false"
 
 [[headers]]
   for = "/*"
@@ -29,6 +35,14 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-src 'none';"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    # Performance headers
+    X-DNS-Prefetch-Control = "on"
+    X-Permitted-Cross-Domain-Policies = "none"
+    # PWA headers
+    X-Web-App-Capable = "yes"
+    X-Web-App-Status-Bar-Style = "black-translucent"
+    # Accessibility headers
+    X-UA-Compatible = "IE=edge"
 
 [[headers]]
   for = "/assets/*"

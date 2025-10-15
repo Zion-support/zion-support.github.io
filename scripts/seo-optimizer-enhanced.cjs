@@ -1,256 +1,384 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
-console.log('Starting enhanced SEO optimization...');
+console.log('🔍 Starting Enhanced SEO Optimization...\n');
 
-// Generate enhanced sitemap
-const generateEnhancedSitemap = () => {
+// 1. Create comprehensive sitemap generator
+const sitemapGenerator = `import fs from 'fs';
+import path from 'path';
+
+const generateSitemap = () => {
   const baseUrl = 'https://ziontechgroup.com';
-  const routes = [
-    { url: '/', priority: '1.0', changefreq: 'daily' },
-    { url: '/about', priority: '0.8', changefreq: 'monthly' },
-    { url: '/contact', priority: '0.9', changefreq: 'monthly' },
-    { url: '/services', priority: '0.9', changefreq: 'weekly' },
-    { url: '/pricing', priority: '0.8', changefreq: 'monthly' },
-    { url: '/ai-services', priority: '0.9', changefreq: 'weekly' },
-    { url: '/micro-saas', priority: '0.8', changefreq: 'weekly' },
-    { url: '/5g-solutions', priority: '0.8', changefreq: 'weekly' },
-    { url: '/blog', priority: '0.7', changefreq: 'weekly' },
-    { url: '/tutorials', priority: '0.7', changefreq: 'weekly' },
-    { url: '/demo', priority: '0.8', changefreq: 'monthly' },
-    { url: '/support', priority: '0.7', changefreq: 'monthly' },
-    { url: '/privacy', priority: '0.5', changefreq: 'yearly' },
-    { url: '/terms', priority: '0.5', changefreq: 'yearly' },
-    { url: '/cookies', priority: '0.5', changefreq: 'yearly' },
-    { url: '/sitemap', priority: '0.3', changefreq: 'monthly' }
+  const pages = [
+    { url: '/', priority: 1.0, changefreq: 'daily' },
+    { url: '/about', priority: 0.8, changefreq: 'monthly' },
+    { url: '/services', priority: 0.9, changefreq: 'weekly' },
+    { url: '/contact', priority: 0.7, changefreq: 'monthly' },
+    // AI Services
+    { url: '/ai-analytics-dashboard-pro', priority: 0.8, changefreq: 'weekly' },
+    { url: '/ai-code-assistant-pro', priority: 0.8, changefreq: 'weekly' },
+    { url: '/ai-chatbot-enterprise', priority: 0.8, changefreq: 'weekly' },
+    { url: '/ai-automation-platform', priority: 0.8, changefreq: 'weekly' },
+    { url: '/ai-business-intelligence-pro', priority: 0.8, changefreq: 'weekly' },
+    { url: '/ai-content-generation-pro', priority: 0.8, changefreq: 'weekly' },
+    // 5G Solutions
+    { url: '/5g-implementation', priority: 0.8, changefreq: 'weekly' },
+    { url: '/5g-network-infrastructure', priority: 0.8, changefreq: 'weekly' },
+    { url: '/5g-iot-solutions', priority: 0.8, changefreq: 'weekly' },
+    { url: '/5g-smart-city-solutions', priority: 0.8, changefreq: 'weekly' },
+    { url: '/5g-edge-computing', priority: 0.8, changefreq: 'weekly' },
+    { url: '/5g-private-networks', priority: 0.8, changefreq: 'weekly' },
+    // IT Services
+    { url: '/ai-cloud-infrastructure', priority: 0.8, changefreq: 'weekly' },
+    { url: '/ai-api-management', priority: 0.8, changefreq: 'weekly' },
+    { url: '/advanced-security-suite', priority: 0.8, changefreq: 'weekly' },
+    { url: '/performance-monitoring', priority: 0.8, changefreq: 'weekly' },
+    { url: '/devops-solutions', priority: 0.8, changefreq: 'weekly' },
+    // Micro SAAS
+    { url: '/ai-accounting-assistant', priority: 0.7, changefreq: 'weekly' },
+    { url: '/ai-content-moderation-pro', priority: 0.7, changefreq: 'weekly' },
+    { url: '/ai-climate-solutions-pro', priority: 0.7, changefreq: 'weekly' },
+    { url: '/ai-agricultural-intelligence-pro', priority: 0.7, changefreq: 'weekly' },
+    { url: '/ai-3d-generation', priority: 0.7, changefreq: 'weekly' },
+    { url: '/ai-blockchain-solutions', priority: 0.7, changefreq: 'weekly' }
   ];
 
-  // Add AI service pages
-  const aiServices = [
-    'ai-analytics', 'ai-automation', 'ai-chatbot-builder', 'ai-content-generation',
-    'ai-cybersecurity', 'ai-data-analytics', 'ai-machine-learning', 'ai-nlp',
-    'ai-computer-vision', 'ai-predictive-analytics', 'ai-business-intelligence',
-    'ai-customer-service', 'ai-content-moderation', 'ai-document-processing',
-    'ai-api-management', 'ai-cloud-infrastructure', 'ai-devops-automation',
-    'ai-blockchain-solutions', 'ai-iot-solutions', 'ai-edge-computing'
-  ];
+  const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+\${pages.map(page => \`  <url>
+    <loc>\${baseUrl}\${page.url}</loc>
+    <lastmod>\${new Date().toISOString()}</lastmod>
+    <changefreq>\${page.changefreq}</changefreq>
+    <priority>\${page.priority}</priority>
+  </url>\`).join('\\n')}
+</urlset>\`;
 
-  aiServices.forEach(service => {
-    routes.push({
-      url: `/${service}`,
-      priority: '0.8',
-      changefreq: 'weekly'
-    });
-  });
-
-  // Add Zion service pages
-  const zionServices = [
-    'zion-analytics-pro', 'zion-security-shield', 'zion-cloud-vault',
-    'zion-ai-assistant', 'zion-automation-suite', 'zion-data-insights'
-  ];
-
-  zionServices.forEach(service => {
-    routes.push({
-      url: `/${service}`,
-      priority: '0.8',
-      changefreq: 'weekly'
-    });
-  });
-
-  // Add 5G service pages
-  const g5Services = [
-    '5g-network-infrastructure', '5g-iot-solutions', '5g-edge-computing',
-    '5g-smart-city-solutions', '5g-mobile-applications', '5g-data-analytics',
-    '5g-private-networks', '5g-implementation'
-  ];
-
-  g5Services.forEach(service => {
-    routes.push({
-      url: `/${service}`,
-      priority: '0.8',
-      changefreq: 'weekly'
-    });
-  });
-
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
-${routes.map(route => `  <url>
-    <loc>${baseUrl}${route.url}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>${route.changefreq}</changefreq>
-    <priority>${route.priority}</priority>
-  </url>`).join('\n')}
-</urlset>`;
-
-  return sitemap;
+  fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemap);
+  console.log('✅ Sitemap generated successfully');
 };
 
-// Generate robots.txt
-const generateRobotsTxt = () => {
-  return `User-agent: *
+export default generateSitemap;
+`;
+
+const sitemapPath = path.join(__dirname, '..', 'scripts', 'generate-sitemap-enhanced.js');
+fs.writeFileSync(sitemapPath, sitemapGenerator);
+console.log('✅ Enhanced sitemap generator created');
+
+// 2. Create robots.txt
+const robotsTxt = `User-agent: *
 Allow: /
 
 # Sitemaps
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
-# Crawl-delay
+# Crawl-delay for respectful crawling
 Crawl-delay: 1
 
-# Disallow admin areas
+# Disallow admin areas (if any)
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/
+Disallow: /private/
 
 # Allow important pages
-Allow: /ai-services/
-Allow: /micro-saas/
-Allow: /5g-solutions/
-Allow: /services/
-Allow: /about/
-Allow: /contact/`;
-};
+Allow: /ai-*
+Allow: /5g-*
+Allow: /services
+Allow: /about
+Allow: /contact
+`;
 
-// Generate enhanced meta tags
-const generateMetaTags = () => {
-  return {
-    title: 'Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company',
-    description: 'Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology.',
-    keywords: 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology, machine learning, artificial intelligence, Zion Tech Group',
-    canonical: 'https://ziontechgroup.com',
-    ogImage: 'https://ziontechgroup.com/og-image.jpg',
-    twitterCard: 'summary_large_image',
-    twitterSite: '@ziontechgroup',
-    twitterCreator: '@ziontechgroup'
-  };
-};
+const robotsPath = path.join(__dirname, '..', 'public', 'robots.txt');
+fs.writeFileSync(robotsPath, robotsTxt);
+console.log('✅ Robots.txt created');
 
-// Generate structured data
-const generateStructuredData = () => {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.",
-    "foundingDate": "2020",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "areaServed": "US",
-      "availableLanguage": "English",
-      "email": "kleber@ziontechgroup.com"
-    },
-    "sameAs": [
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/ziontechgroup"
-    ],
-    "service": [
-      {
-        "@type": "Service",
-        "name": "AI Solutions",
-        "description": "Cutting-edge artificial intelligence solutions for business automation and optimization"
-      },
-      {
-        "@type": "Service",
-        "name": "IT Services",
-        "description": "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and custom development"
-      },
-      {
-        "@type": "Service",
-        "name": "5G Implementation",
-        "description": "Next-generation connectivity and infrastructure services for modern businesses"
-      },
-      {
-        "@type": "Service",
-        "name": "Micro SaaS Solutions",
-        "description": "Ready-to-use software solutions for immediate deployment and business growth"
-      }
-    ]
-  };
-};
+// 3. Create enhanced meta tags utility
+const metaTagsUtility = `// Enhanced SEO meta tags utility
+import { Helmet } from 'react-helmet-async';
 
-// Create dist directory if it doesn't exist
-const distDir = path.join(__dirname, '../dist');
-if (!fs.existsSync(distDir)) {
-  fs.mkdirSync(distDir, { recursive: true });
+interface SEOProps {
+  title: string;
+  description: string;
+  keywords?: string[];
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: any;
+  noIndex?: boolean;
 }
 
-// Generate files
-console.log('Generating enhanced sitemap...');
-const sitemap = generateEnhancedSitemap();
-fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap);
+export const generateSEOTags = ({
+  title,
+  description,
+  keywords = [],
+  canonical,
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData,
+  noIndex = false
+}: SEOProps) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group\`;
+  const defaultKeywords = [
+    'AI solutions',
+    '5G technology', 
+    'IT services',
+    'artificial intelligence',
+    'machine learning',
+    'cybersecurity',
+    'cloud computing',
+    'business automation',
+    'Zion Tech Group'
+  ];
+  const allKeywords = [...new Set([...defaultKeywords, ...keywords])].join(', ');
 
-console.log('Generating robots.txt...');
-const robotsTxt = generateRobotsTxt();
-fs.writeFileSync(path.join(distDir, 'robots.txt'), robotsTxt);
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={allKeywords} />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#8b5cf6" />
+      
+      {/* Canonical URL */}
+      {canonical && <link rel="canonical" href={canonical} />}
+      
+      {/* Open Graph Tags */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Twitter Card Tags */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      
+      {/* Additional SEO Tags */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
+      
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+      
+      {/* DNS Prefetch */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+    </Helmet>
+  );
+};
 
-console.log('Generating meta tags...');
-const metaTags = generateMetaTags();
-fs.writeFileSync(path.join(distDir, 'meta-tags.json'), JSON.stringify(metaTags, null, 2));
-
-console.log('Generating structured data...');
-const structuredData = generateStructuredData();
-fs.writeFileSync(path.join(distDir, 'structured-data.json'), JSON.stringify(structuredData, null, 2));
-
-// Generate SEO report
-const seoReport = {
-  timestamp: new Date().toISOString(),
-  optimizations: [
-    'Enhanced sitemap generated with 100+ routes',
-    'Robots.txt optimized for search engines',
-    'Meta tags enhanced for better social sharing',
-    'Structured data generated for rich snippets',
-    'Canonical URLs properly configured',
-    'Open Graph tags optimized',
-    'Twitter Card meta tags added',
-    'Schema.org markup implemented',
-    'Image alt tags optimized',
-    'Internal linking structure improved'
+// Structured data generators
+export const generateOrganizationSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Zion Tech Group",
+  "url": "https://ziontechgroup.com",
+  "logo": "https://ziontechgroup.com/logo.png",
+  "description": "Leading provider of AI solutions, 5G technology, and comprehensive IT services",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "364 E Main St STE 1008",
+    "addressLocality": "Middletown",
+    "addressRegion": "DE",
+    "postalCode": "19709",
+    "addressCountry": "US"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-302-464-0950",
+    "contactType": "customer service",
+    "email": "kleber@ziontechgroup.com"
+  },
+  "sameAs": [
+    "https://facebook.com/ziontechgroup",
+    "https://twitter.com/ziontechgroup",
+    "https://linkedin.com/company/ziontechgroup",
+    "https://instagram.com/ziontechgroup",
+    "https://github.com/ziontechgroup"
   ],
-  recommendations: [
-    'Implement breadcrumb navigation for better UX',
-    'Add FAQ schema markup for common questions',
-    'Create video content with proper schema markup',
-    'Implement local business schema if applicable',
-    'Add review schema for testimonials',
-    'Create topic clusters for better content organization',
-    'Implement AMP pages for mobile performance',
-    'Add hreflang tags for international SEO',
-    'Create XML sitemap for images',
-    'Implement Core Web Vitals monitoring'
-  ],
-  metrics: {
-    totalRoutes: 100,
-    sitemapGenerated: true,
-    robotsTxtGenerated: true,
-    structuredDataGenerated: true,
-    metaTagsOptimized: true
+  "foundingDate": "2020",
+  "numberOfEmployees": "10-50",
+  "industry": "Technology",
+  "services": [
+    "AI Solutions",
+    "5G Technology",
+    "IT Services",
+    "Cybersecurity",
+    "Cloud Computing",
+    "Business Automation"
+  ]
+});
+
+export const generateServiceSchema = (serviceName: string, description: string, price?: string) => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": serviceName,
+  "description": description,
+  "provider": {
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com"
+  },
+  "offers": price ? {
+    "@type": "Offer",
+    "price": price,
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  } : undefined,
+  "category": "Technology Services",
+  "serviceType": "AI and IT Solutions"
+});
+
+export const generateBreadcrumbSchema = (items: Array<{name: string, url: string}>) => ({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": items.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": item.name,
+    "item": \`https://ziontechgroup.com\${item.url}\`
+  }))
+});
+`;
+
+const metaTagsPath = path.join(__dirname, '..', 'utils', 'seoUtils.ts');
+fs.writeFileSync(metaTagsPath, metaTagsUtility);
+console.log('✅ Enhanced SEO utilities created');
+
+// 4. Create performance monitoring for SEO
+const seoMonitoring = `// SEO performance monitoring
+export const seoMetrics = {
+  // Core Web Vitals monitoring
+  measureCoreWebVitals: () => {
+    // LCP - Largest Contentful Paint
+    new PerformanceObserver((entryList) => {
+      const entries = entryList.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      console.log('LCP:', lastEntry.startTime);
+    }).observe({ entryTypes: ['largest-contentful-paint'] });
+
+    // FID - First Input Delay
+    new PerformanceObserver((entryList) => {
+      const entries = entryList.getEntries();
+      entries.forEach(entry => {
+        console.log('FID:', entry.processingStart - entry.startTime);
+      });
+    }).observe({ entryTypes: ['first-input'] });
+
+    // CLS - Cumulative Layout Shift
+    let clsValue = 0;
+    new PerformanceObserver((entryList) => {
+      const entries = entryList.getEntries();
+      entries.forEach(entry => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
+        }
+      });
+      console.log('CLS:', clsValue);
+    }).observe({ entryTypes: ['layout-shift'] });
+  },
+
+  // Page load time monitoring
+  measurePageLoad: () => {
+    window.addEventListener('load', () => {
+      const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+      console.log('Page Load Time:', loadTime + 'ms');
+    });
+  },
+
+  // SEO element presence check
+  checkSEOElements: () => {
+    const checks = {
+      title: !!document.querySelector('title'),
+      metaDescription: !!document.querySelector('meta[name="description"]'),
+      h1: !!document.querySelector('h1'),
+      canonical: !!document.querySelector('link[rel="canonical"]'),
+      ogTags: !!document.querySelector('meta[property="og:title"]'),
+      structuredData: !!document.querySelector('script[type="application/ld+json"]')
+    };
+    
+    console.log('SEO Elements Check:', checks);
+    return checks;
+  },
+
+  // Image optimization check
+  checkImageOptimization: () => {
+    const images = document.querySelectorAll('img');
+    const issues = [];
+    
+    images.forEach(img => {
+      if (!img.alt) issues.push('Missing alt text');
+      if (!img.loading) issues.push('Missing lazy loading');
+      if (img.width && img.height && img.naturalWidth && img.naturalHeight) {
+        const aspectRatio = img.naturalWidth / img.naturalHeight;
+        const displayRatio = img.width / img.height;
+        if (Math.abs(aspectRatio - displayRatio) > 0.1) {
+          issues.push('Aspect ratio mismatch');
+        }
+      }
+    });
+    
+    console.log('Image Optimization Issues:', issues);
+    return issues;
   }
 };
 
-fs.writeFileSync(
-  path.join(distDir, 'seo-report-enhanced.json'),
-  JSON.stringify(seoReport, null, 2)
-);
+// Initialize SEO monitoring
+export const initSEOMonitoring = () => {
+  seoMetrics.measureCoreWebVitals();
+  seoMetrics.measurePageLoad();
+  seoMetrics.checkSEOElements();
+  seoMetrics.checkImageOptimization();
+};
+`;
 
-console.log('✓ Enhanced SEO optimization completed!');
-console.log('Generated files:');
-console.log('- sitemap.xml');
-console.log('- robots.txt');
-console.log('- meta-tags.json');
-console.log('- structured-data.json');
-console.log('- seo-report-enhanced.json');
+const seoMonitoringPath = path.join(__dirname, '..', 'utils', 'seoMonitoring.ts');
+fs.writeFileSync(seoMonitoringPath, seoMonitoring);
+console.log('✅ SEO monitoring utilities created');
+
+// 5. Update package.json with SEO scripts
+const packageJsonPath = path.join(__dirname, '..', 'package.json');
+const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+
+packageJson.scripts = {
+  ...packageJson.scripts,
+  'seo:generate-sitemap': 'node scripts/generate-sitemap-enhanced.js',
+  'seo:optimize': 'node scripts/seo-optimizer-enhanced.cjs',
+  'seo:check': 'npm run seo:generate-sitemap && npm run build'
+};
+
+fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+console.log('✅ Package.json SEO scripts updated');
+
+console.log('\n🎉 Enhanced SEO Optimization Complete!');
+console.log('\n📋 Next Steps:');
+console.log('  1. Run: npm run seo:generate-sitemap');
+console.log('  2. Run: npm run build');
+console.log('  3. Check sitemap.xml and robots.txt in public folder');
+console.log('  4. Test SEO utilities in components');
+console.log('  5. Monitor Core Web Vitals');

@@ -1,27 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
-export default function Navigation() {
+const Navigation: React.FC = () => {
   return (
-    <nav className="bg-white shadow-lg">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          <Link to="/" className="text-xl font-bold text-gray-800">
-            Zion Tech Group
-          </Link>
-          <div className="space-x-6">
-            <Link to="/about" className="text-gray-600 hover:text-gray-800">
-              About
-            </Link>
-            <Link to="/services" className="text-gray-600 hover:text-gray-800">
-              Services
-            </Link>
-            <Link to="/contact" className="text-gray-600 hover:text-gray-800">
-              Contact
-            </Link>
-          </div>
+    <>
+      <Helmet>
+        <title>Navigation - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">Navigation</h1>
+          <p className="text-gray-300 text-center">Coming soon...</p>
         </div>
       </div>
-    </nav>
+    </>
   );
-}
+};
+
+export default Navigation;

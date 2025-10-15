@@ -1,151 +1,158 @@
-import React, { useState, useCallback, useEffect, Suspense } from 'react';
-import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import Navigation from "./app/components/Navigation";
-import Footer from "./app/components/Footer";
-import Sidebar from "./app/components/Sidebar";
-import HomePage from "./app/page";
-import LoadingStates from './app/components/LoadingStates';
-import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-import AnalyticsProvider from "./app/components/AnalyticsProvider";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
-import WebVitalsTracker from "./app/components/WebVitalsTracker";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import CoreWebVitals from "./app/components/CoreWebVitals";
-import FuturisticBackground from "./app/components/FuturisticBackground";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
-import Breadcrumb from "./app/components/Breadcrumb";
-import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './app/components/Header';
+import Footer from './app/components/Footer';
+import Hero from './app/components/Hero';
+import Services from './pages/ServicesPage';
+import About from './app/components/About';
+import LoadingSpinner from './app/components/LoadingSpinner';
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
+import EnhancedSEO from './app/components/EnhancedSEO';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import { useAdvancedPerformanceMonitoring } from './app/hooks/useAdvancedPerformanceMonitoring';
 
 // Lazy load pages for better performance
-const AboutPage = React.lazy(() => import("./app/about/page"));
-const ContactPage = React.lazy(() => import("./app/contact/page"));
-const ServicesPage = React.lazy(() => import("./app/services/page"));
-const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
-const TermsPage = React.lazy(() => import("./app/terms/page"));
-const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
-const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
-const CloudInfrastructurePage = React.lazy(() => import("./app/cloud-infrastructure/page"));
-const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
-const DemoPage = React.lazy(() => import("./app/demo/page"));
-const SupportPage = React.lazy(() => import("./app/support/page"));
-const BlogPage = React.lazy(() => import("./app/blog/page"));
+const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
+const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
+const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+const FiveGSolutionsPage = React.lazy(() => import('./app/5g-solutions/page'));
+const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'));
+const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'));
+const PricingPage = React.lazy(() => import('./app/pricing/page'));
+const PortfolioPage = React.lazy(() => import('./app/portfolio/page'));
+const NewsPage = React.lazy(() => import('./app/news/page'));
+const ContactPage = React.lazy(() => import('./app/contact/page'));
+const PrivacyPolicyPage = React.lazy(() => import('./app/privacy-policy/page'));
+const TermsPage = React.lazy(() => import('./app/terms/page'));
+const SlaPage = React.lazy(() => import('./app/sla/page'));
+const CookiesPage = React.lazy(() => import('./app/cookies/page'));
+const GdprPage = React.lazy(() => import('./app/gdpr/page'));
+const HelpPage = React.lazy(() => import('./app/help/page'));
+const DocsPage = React.lazy(() => import('./app/docs/page'));
+const ApiDocsPage = React.lazy(() => import('./app/api-docs/page'));
+const StatusPage = React.lazy(() => import('./app/status/page'));
+const SupportPage = React.lazy(() => import('./app/support/page'));
+const CareersPage = React.lazy(() => import('./app/careers/page'));
+const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
 
-// AI Services Pages
-const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
-const AIAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
-const AIBusinessIntelligencePage = React.lazy(() => import("./app/ai-business-intelligence/page"));
-const AIContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
-const AICustomerServicePage = React.lazy(() => import("./app/ai-customer-service/page"));
-const AIDataAnalyticsPage = React.lazy(() => import("./app/ai-data-analytics/page"));
-const AIEmailAutomationPage = React.lazy(() => import("./app/ai-email-automation/page"));
-const AIFraudDetectionPage = React.lazy(() => import("./app/ai-fraud-detection/page"));
-const AIHealthcarePage = React.lazy(() => import("./app/ai-healthcare/page"));
-const AIMarketingPage = React.lazy(() => import("./app/ai-marketing/page"));
-const AIPredictiveAnalyticsPage = React.lazy(() => import("./app/ai-predictive-analytics/page"));
-const AIProjectManagementPage = React.lazy(() => import("./app/ai-project-management/page"));
+// New AI Services
+const AiSmartContractsPage = React.lazy(() => import('./app/ai-smart-contracts/page'));
+const AiVoiceAssistantPage = React.lazy(() => import('./app/ai-voice-assistant/page'));
+const AiPredictiveMaintenancePage = React.lazy(() => import('./app/ai-predictive-maintenance/page'));
+const AiPersonalizedLearningPage = React.lazy(() => import('./app/ai-personalized-learning/page'));
 
-// 5G Solutions Pages
-const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
-const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
-const FiveGIoTSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
-const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
-const FiveGSmartCitiesPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
+// New IT Services
+const QuantumComputingSolutionsPage = React.lazy(() => import('./app/quantum-computing-solutions/page'));
+const EdgeComputingSolutionsPage = React.lazy(() => import('./app/edge-computing-solutions/page'));
 
-function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-
-  const closeSidebar = useCallback(() => {
-    setIsSidebarOpen(false);
-  }, []);
-
-  useEffect(() => {
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('Zion Tech Group App initialized');
-    }
-  }, []);
-
-  const breadcrumbItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Current Page' }
-  ];
+const App: React.FC = () => {
+  // Initialize advanced performance monitoring
+  useAdvancedPerformanceMonitoring({
+    enableMemoryMonitoring: true,
+    enableResourceTiming: true,
+    enableLongTaskMonitoring: true,
+    enableLayoutShiftMonitoring: true,
+    reportInterval: 30000,
+    memoryThreshold: 0.8,
+    longTaskThreshold: 50,
+  });
 
   return (
     <EnhancedErrorBoundary>
-      <HelmetProvider>
-        <AnalyticsProvider>
-          <PerformanceMonitor className="performance-monitor" />
-          <WebVitalsTracker className="web-vitals-tracker" />
-          <EnhancedAccessibility className="enhanced-accessibility" />
-          <AccessibilityEnhancer>
-            <CoreWebVitals className="core-web-vitals" />
-            <Router>
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                        <FuturisticBackground>
-                          <PerformanceOptimizer>
-                            <Navigation />
-                            <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-                            <Breadcrumb items={breadcrumbItems} />
-                            
-                            <main className="relative z-10" id="main-content" role="main">
-                              <Suspense fallback={<LoadingStates isLoading={true}><div>Loading...</div></LoadingStates>}>
-                                <Routes>
-                                  {/* Main Pages */}
-                                  <Route path="/" element={<HomePage />} />
-                                  <Route path="/about" element={<AboutPage />} />
-                                  <Route path="/contact" element={<ContactPage />} />
-                                  <Route path="/services" element={<ServicesPage />} />
-                                  <Route path="/privacy" element={<PrivacyPage />} />
-                                  <Route path="/terms" element={<TermsPage />} />
-                                  <Route path="/tutorials" element={<TutorialsPage />} />
-                                  <Route path="/demo" element={<DemoPage />} />
-                                  <Route path="/support" element={<SupportPage />} />
-                                  <Route path="/blog" element={<BlogPage />} />
-
-                                  {/* AI Services */}
-                                  <Route path="/ai-services" element={<AIServicesPage />} />
-                                  <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
-                                  <Route path="/ai-automation" element={<AIAutomationPage />} />
-                                  <Route path="/ai-business-intelligence" element={<AIBusinessIntelligencePage />} />
-                                  <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
-                                  <Route path="/ai-customer-service" element={<AICustomerServicePage />} />
-                                  <Route path="/ai-data-analytics" element={<AIDataAnalyticsPage />} />
-                                  <Route path="/ai-email-automation" element={<AIEmailAutomationPage />} />
-                                  <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
-                                  <Route path="/ai-healthcare" element={<AIHealthcarePage />} />
-                                  <Route path="/ai-marketing" element={<AIMarketingPage />} />
-                                  <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
-                                  <Route path="/ai-project-management" element={<AIProjectManagementPage />} />
-
-                                  {/* 5G Solutions */}
-                                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                                  <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
-                                  <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
-                                  <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
-                                  <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
-                                  <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitiesPage />} />
-
-                                  {/* Cloud Infrastructure */}
-                                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-
-                                  {/* Catch all route */}
-                                  <Route path="*" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl text-white">404 - Page Not Found</h1></div>} />
-                                </Routes>
-                              </Suspense>
-                            </main>
-                            
-                            <Footer />
-                          </PerformanceOptimizer>
-                        </FuturisticBackground>
-                      </div>
-                    </Router>
-            </AccessibilityEnhancer>
-        </AnalyticsProvider>
-      </HelmetProvider>
+      <AccessibilityEnhancer>
+        <Router>
+          <EnhancedSEO />
+        
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-x-hidden">
+          {/* Futuristic Animated Background */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            {/* Primary animated orbs */}
+            <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-500/8 to-cyan-500/8 rounded-full blur-3xl animate-pulse delay-500"></div>
+            <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-to-r from-pink-500/8 to-purple-500/8 rounded-full blur-3xl animate-pulse delay-700"></div>
+            
+            {/* Secondary floating elements */}
+            <div className="absolute top-1/4 right-1/3 w-32 h-32 bg-cyan-400/5 rounded-full blur-2xl animate-bounce delay-300"></div>
+            <div className="absolute bottom-1/4 left-1/3 w-24 h-24 bg-purple-400/5 rounded-full blur-2xl animate-bounce delay-500"></div>
+            <div className="absolute top-3/4 right-1/4 w-40 h-40 bg-blue-400/5 rounded-full blur-2xl animate-bounce delay-700"></div>
+            
+            {/* Neon grid overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/2 via-transparent to-purple-500/2 opacity-30"></div>
+            
+            {/* Animated particles */}
+            <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full animate-ping delay-1000"></div>
+            <div className="absolute top-40 right-32 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-2000"></div>
+            <div className="absolute bottom-32 left-40 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping delay-3000"></div>
+            <div className="absolute bottom-20 right-20 w-2 h-2 bg-pink-400 rounded-full animate-ping delay-4000"></div>
+            
+            {/* Futuristic lines */}
+            <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-cyan-500/20 via-transparent to-purple-500/20 animate-pulse"></div>
+            <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-purple-500/20 via-transparent to-cyan-500/20 animate-pulse delay-1000"></div>
+          </div>
+          <Header />
+          
+          <main id="main-content" role="main">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={
+                  <>
+                    <Hero />
+                    <Services />
+                  </>
+                } />
+                <Route path="/about" element={<About />} />
+                <Route path="/micro-saas" element={<MicroSaasPage />} />
+                <Route path="/ai-services" element={<AiServicesPage />} />
+                <Route path="/it-services" element={<ItServicesPage />} />
+                <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                <Route path="/pricing" element={<PricingPage />} />
+                <Route path="/portfolio" element={<PortfolioPage />} />
+                <Route path="/news" element={<NewsPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+                <Route path="/terms" element={<TermsPage />} />
+                <Route path="/sla" element={<SlaPage />} />
+                <Route path="/cookies" element={<CookiesPage />} />
+                <Route path="/gdpr" element={<GdprPage />} />
+                <Route path="/help" element={<HelpPage />} />
+                <Route path="/docs" element={<DocsPage />} />
+                <Route path="/api-docs" element={<ApiDocsPage />} />
+                <Route path="/status" element={<StatusPage />} />
+                <Route path="/support" element={<SupportPage />} />
+                <Route path="/careers" element={<CareersPage />} />
+                <Route path="/sitemap" element={<SitemapPage />} />
+                <Route path="/cloud-services" element={<CloudServicesPage />} />
+                <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                
+                {/* New AI Services */}
+                <Route path="/ai-smart-contracts" element={<AiSmartContractsPage />} />
+                <Route path="/ai-voice-assistant" element={<AiVoiceAssistantPage />} />
+                <Route path="/ai-predictive-maintenance" element={<AiPredictiveMaintenancePage />} />
+                <Route path="/ai-personalized-learning" element={<AiPersonalizedLearningPage />} />
+                
+                {/* New IT Services */}
+                <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
+                <Route path="/edge-computing-solutions" element={<EdgeComputingSolutionsPage />} />
+                <Route path="*" element={
+                  <div className="container mx-auto px-4 py-16 text-center">
+                    <h1 className="text-4xl font-bold text-white mb-8">404 - Page Not Found</h1>
+                    <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
+                    <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                      Go Home
+                    </a>
+                  </div>
+                } />
+              </Routes>
+            </Suspense>
+          </main>
+          
+          <Footer />
+        </div>
+        </Router>
+      </AccessibilityEnhancer>
     </EnhancedErrorBoundary>
   );
-}
+};
 
 export default App;

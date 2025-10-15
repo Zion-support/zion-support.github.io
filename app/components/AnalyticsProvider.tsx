@@ -1,29 +1,21 @@
-import React, { useEffect, ReactNode } from 'react';
-import { AnalyticsContext } from '../contexts/AnalyticsContext';
-interface AnalyticsProviderProps {
-  children: ReactNode;
-}
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  useEffect(() => {
-    // Initialize analytics
-    console.log('Analytics initialized');
-  }, []);
-  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
-    console.log('Analytics Event:', eventName, properties);
-    // Add your analytics tracking logic here
-  };
-  const trackPageView = (pageName: string, properties?: Record<string, unknown>) => {
-    console.log('Page View:', pageName, properties);
-    // Add your page view tracking logic here
-  };
-  const value = {
-    trackEvent,
-    trackPageView,
-  };
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const AnalyticsProvider: React.FC = () => {
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
+    <>
+      <Helmet>
+        <title>AnalyticsProvider - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">AnalyticsProvider</h1>
+          <p className="text-gray-300 text-center">Coming soon...</p>
+        </div>
+      </div>
+    </>
   );
 };
+
 export default AnalyticsProvider;

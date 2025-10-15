@@ -1,23 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-export default function Sidebar({ isOpen, onClose }: SidebarProps) {
+const Sidebar: React.FC = () => {
   return (
-    <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
-      <button onClick={onClose} className="close-btn">
-        ×
-      </button>
-      <nav>
-        <Link to="/" onClick={onClose}>Home</Link>
-        <Link to="/about" onClick={onClose}>About</Link>
-        <Link to="/services" onClick={onClose}>Services</Link>
-        <Link to="/contact" onClick={onClose}>Contact</Link>
-      </nav>
-    </div>
+    <>
+      <Helmet>
+        <title>Sidebar - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">Sidebar</h1>
+          <p className="text-gray-300 text-center">Coming soon...</p>
+        </div>
+      </div>
+    </>
   );
-}
+};
+
+export default Sidebar;
