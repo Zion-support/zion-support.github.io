@@ -1,7 +1,7 @@
 import React from 'react';
 
-interface LoadingPageProps {};
-  message?: string
+interface LoadingPageProps {},
+      message?: string
   showIcon?: boolean
 }
 };
@@ -41,9 +41,9 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({};
 }
 };
 
-export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {};
-  const getServiceIcon = (_serviceName: string) => {};
-    switch (serviceName.toLowerCase()) {};
+export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {},
+      const getServiceIcon = (_serviceName: string) => {},
+      switch (serviceName.toLowerCase()) {},
       case 'ai':
       case 'ai services':
         return <Brain className="w-8 h-8 text-cyan-400" />
@@ -58,8 +58,9 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {}
         return <Globe className="w-8 h-8 text-orange-400" />
       default:
         return <Brain className="w-8 h-8 text-cyan-400" />
-    };
-  };
+    }
+    },
+    {
   return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -116,8 +117,8 @@ export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = 
         <p className="text-gray-300 mb-6">{error}</p>
         {onRetry && ()
           <button
-            onClick={onRetry};
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            onClick={onRetry},
+      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
           ></button
 >
             Try Again
@@ -135,11 +136,10 @@ export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
     <div className="animate-pulse"></div>
       {Array.from({ length: lines }).map(( index) => (
         <div
-          key={index};
-          className={`h-4 bg-gray-700 rounded mb-2 ${};
-            index === lines - 1 ? 'w-3/4' : 'w-full'
-          }`};
-        />
+          key={index},
+      className={`h-4 bg-gray-700 rounded mb-2 ${},
+      index === lines - 1 ? 'w-3/4' : 'w-full'
+          }`} />
       ))};
     </div>
   )

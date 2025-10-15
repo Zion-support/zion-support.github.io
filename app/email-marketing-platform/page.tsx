@@ -12,109 +12,103 @@ const EmailMarketingPlatformPage = () => {
       icon: <Mail className="w-8 h-8" />;
       benefits: ["Pre-built templates", "Custom designs", "Mobile responsive", "A/B testing"]
     };
-    {};
-      title: "Advanced Segmentation";
-      description: "Target the right audience with powerful segmentation and personalization";
-      icon: <Target className="w-8 h-8" />;
+    {},
+      title: "Advanced Segmentation",
+      description: "Target the right audience with powerful segmentation and personalization",
+      icon: <Target className="w-8 h-8" />,
       benefits: ["Behavioral targeting", "Demographic filters", "Custom segments", "Dynamic content"]
     };
-    {};
-      title: "Automation Workflows";
-      description: "Create sophisticated email automation workflows to nurture leads";
-      icon: <Zap className="w-8 h-8" />;
+    {},
+      title: "Automation Workflows",
+      description: "Create sophisticated email automation workflows to nurture leads",
+      icon: <Zap className="w-8 h-8" />,
       benefits: ["Welcome series", "Drip campaigns", "Abandoned cart", "Birthday emails"]
     };
-    {};
-      title: "Analytics & Reporting";
-      description: "Track performance with detailed analytics and actionable insights";
-      icon: <BarChart3 className="w-8 h-8" />;
+    {},
+      title: "Analytics & Reporting",
+      description: "Track performance with detailed analytics and actionable insights",
+      icon: <BarChart3 className="w-8 h-8" />,
       benefits: ["Open rates", "Click tracking", "Revenue attribution", "ROI analysis"]
     };
-    {};
-      title: "List Management";
-      description: "Manage your subscriber lists with advanced tools and compliance features";
-      icon: <Users className="w-8 h-8" />;
+    {},
+      title: "List Management",
+      description: "Manage your subscriber lists with advanced tools and compliance features",
+      icon: <Users className="w-8 h-8" />,
       benefits: ["Import/Export", "List cleaning", "GDPR compliance", "Unsubscribe management"]
     };
-    {};
-      title: "Integration Hub";
-      description: "Connect with your favorite tools for seamless data flow and automation";
-      icon: <Database className="w-8 h-8" />;
+    {},
+      title: "Integration Hub",
+      description: "Connect with your favorite tools for seamless data flow and automation",
+      icon: <Database className="w-8 h-8" />,
       benefits: ["CRM integration", "E-commerce platforms", "Analytics tools", "API access"]
     };
-  ];
-
-  const pricing = [
-    {};
-      name: "Starter";
-      price: "$39";
-      period: "per month";
-      description: "Perfect for small businesses and startups";
-      features: [
-        "Up to 1,000 subscribers";
-        "Unlimited emails";
-        "Basic templates";
-        "Email support";
+  ],
+      const pricing = [
+    {},
+      name: "Starter",
+      price: "$39",
+      period: "per month",
+      description: "Perfect for small businesses and startups",
+      features: ["Up to 1,000 subscribers",
+        "Unlimited emails",
+        "Basic templates",
+        "Email support",
         "Mobile app access"
-      ];
+      ],
       popular: false
     };
-    {};
-      name: "Professional";
-      price: "$79";
-      period: "per month";
-      description: "Ideal for growing businesses and marketers";
-      features: [
-        "Up to 10,000 subscribers";
-        "Advanced automation";
-        "Custom templates";
-        "Priority support";
-        "A/B testing";
+    {},
+      name: "Professional",
+      price: "$79",
+      period: "per month",
+      description: "Ideal for growing businesses and marketers",
+      features: ["Up to 10,000 subscribers",
+        "Advanced automation",
+        "Custom templates",
+        "Priority support",
+        "A/B testing",
         "Advanced analytics"
-      ];
+      ],
       popular: true
     };
-    {};
-      name: "Enterprise";
-      price: "$199";
-      period: "per month";
-      description: "For large organizations with advanced needs";
-      features: [
-        "Unlimited subscribers";
-        "Advanced automation";
-        "Custom integrations";
-        "Dedicated support";
-        "Advanced security";
+    {},
+      name: "Enterprise",
+      price: "$199",
+      period: "per month",
+      description: "For large organizations with advanced needs",
+      features: ["Unlimited subscribers",
+        "Advanced automation",
+        "Custom integrations",
+        "Dedicated support",
+        "Advanced security",
         "Custom development"
-      ];
+      ],
       popular: false
     };
-  ];
-
-  const benefits = [
-    {};
-      title: "Increase Engagement";
-      description: "Boost email engagement rates by up to 50% with personalization";
+  ],
+      const benefits = [
+    {},
+      title: "Increase Engagement",
+      description: "Boost email engagement rates by up to 50% with personalization",
       icon: <Target className="w-6 h-6" />
     };
-    {};
-      title: "Save Time";
-      description: "Automate your email marketing and save hours every week";
+    {},
+      title: "Save Time",
+      description: "Automate your email marketing and save hours every week",
       icon: <Zap className="w-6 h-6" />
     };
-    {};
-      title: "Better ROI";
-      description: "Track and optimize your email marketing ROI with detailed analytics";
+    {},
+      title: "Better ROI",
+      description: "Track and optimize your email marketing ROI with detailed analytics",
       icon: <BarChart3 className="w-6 h-6" />
     };
-    {};
-      title: "Easy to Use";
-      description: "Intuitive interface that makes email marketing accessible to everyone";
+    {},
+      title: "Easy to Use",
+      description: "Intuitive interface that makes email marketing accessible to everyone",
       icon: <Shield className="w-6 h-6" />
     };
-  ];
-
-  return (
+  ],
+      return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <EnhancedSEO
         title="Email Marketing Platform - Zion Tech Group | Advanced Email Marketing & Automation"
@@ -234,8 +228,8 @@ const EmailMarketingPlatformPage = () => {
                 </ul>
                 <FuturisticButton
                   href="/contact"
-                  variant={plan.popular ? "primary" : "outline"};
-                  size="sm"
+                  variant={plan.popular ? "primary" : "outline"},
+      size="sm"
                   className="w-full"
                 ></FuturisticButton
 >

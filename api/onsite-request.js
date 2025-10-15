@@ -25,6 +25,7 @@ export default async function handler(req, res) {
 }
   
   try {
+<<<<<<< HEAD
     const { name, email, company, message } = req.body;
     
     if (!name || !email || !company || !message) {
@@ -64,6 +65,8 @@ export default async function handler(req, res) {
     res.status(500).json({ error: 'Failed to save request' });
   }
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f3b2
     const { name, email, company, phone, service, message } = req.body;
 
     if (!name || !email || !service) {
@@ -106,5 +109,3 @@ export default async function handler(req, res) {
     res.status(500).json({ error: 'Failed to submit request' });
   }
 }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9

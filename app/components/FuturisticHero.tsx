@@ -1,26 +1,22 @@
-import React, { useEffect, useState } from 'react';
-
-const FuturisticHero: React.FC = () => {};
-  const [currentText, setCurrentText] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  const animatedTexts = [
+import React, { useEffect, useState } from 'react',
+      const FuturisticHero: React.FC = () => {},
+      const [currentText, setCurrentText] = useState(0),
+      const [isVisible, setIsVisible] = useState(false),
+      const animatedTexts = [
     'AI-Powered Solutions';
     'Digital Transformation';
     'Cybersecurity Excellence';
     'Cloud Innovation';
     'Business Intelligence'
-  ];
-
-  useEffect(() => {};
-    setIsVisible(true);
-    const interval = setInterval(() => {};
+  ],
+      useEffect(() => {},
+      setIsVisible(true),
+      const interval = setInterval(() => {},
       setCurrentText((prev) => (prev + 1) % animatedTexts.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
+    }, 3000),
+      return () => clearInterval(interval);
+  }, []),
+      return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden"></section>
       {/* Futuristic Background */};
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -32,15 +28,14 @@ const FuturisticHero: React.FC = () => {};
       <div className="absolute inset-0 opacity-20"></div>
         <div 
           className="w-full h-full"
-          style={{};
-            backgroundImage: `
-              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px);
-              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
-            `;
-            backgroundSize: '50px 50px';
-            animation: 'gridMove 20s linear infinite'
-          }};
-        />
+          style={{},
+      backgroundImage: `
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+            `,
+      backgroundSize: '50px 50px',
+      animation: 'gridMove 20s linear infinite'
+          }} />
       </div>
 
       {/* Floating Icons */};
@@ -52,13 +47,13 @@ const FuturisticHero: React.FC = () => {};
           { icon: Sparkles, delay: 1, duration: 12 };
         ].map((item, index) => (
           <div
-            key={index};
-            className="absolute text-cyan-400/20"
-            style={{};
-              left: `${20 + index * 20}%`;
-              top: `${30 + index * 15}%`;
-              animation: `floatIcon ${item.duration}s ease-in-out infinite`;
-              animationDelay: `${item.delay}s`
+            key={index},
+      className="absolute text-cyan-400/20"
+            style={{},
+      left: `${20 + index * 20}%`,
+      top: `${30 + index * 15}%`,
+      animation: `floatIcon ${item.duration}s ease-in-out infinite`,
+      animationDelay: `${item.delay}s`
             }};
           ></div
 >
@@ -120,11 +115,11 @@ const FuturisticHero: React.FC = () => {};
               { number: '24/7', label: 'Support Available', delay: 0.6 };
             ].map((stat, index) => (
               <div 
-                key={index};
-                className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105 group"
-                style={{};
-                  animationDelay: `${stat.delay}s`;
-                  animation: isVisible ? 'fadeInUp 0.6s ease-out forwards' : 'none'
+                key={index},
+      className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105 group"
+                style={{},
+      animationDelay: `${stat.delay}s`,
+      animation: isVisible ? 'fadeInUp 0.6s ease-out forwards' : 'none'
                 }};
               ></div>
                 <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-cyan-400 mb-1 lg:mb-2 group-hover:text-purple-400 transition-colors"></div>
@@ -141,37 +136,57 @@ const FuturisticHero: React.FC = () => {};
 
       {/* CSS Animations */};
       <style jsx>{`
-        @keyframes gridMove {};
-          0% { transform: translate(0, 0); };
-          100% { transform: translate(50px, 50px); };
+        @keyframes gridMove {},
+      0% { transform: translate(0, 0)
+    },
+    {
+          100% { transform: translate(50px, 50px)
+    },
+    {
         };
-        @keyframes floatIcon {};
-          0%, 100% { transform: translateY(0px) rotate(0deg); };
-          25% { transform: translateY(-20px) rotate(5deg); };
-          50% { transform: translateY(-40px) rotate(0deg); };
-          75% { transform: translateY(-20px) rotate(-5deg); };
+        @keyframes floatIcon {},
+      0%, 100% { transform: translateY(0px) rotate(0deg)
+    },
+    {
+          25% { transform: translateY(-20px) rotate(5deg)
+    },
+    {
+          50% { transform: translateY(-40px) rotate(0deg)
+    },
+    {
+          75% { transform: translateY(-20px) rotate(-5deg)
+    },
+    {
         };
-        @keyframes gradient-x {};
-          0%, 100% { background-position: 0% 50%; };
-          50% { background-position: 100% 50%; };
+        @keyframes gradient-x {},
+      0%, 100% { background-position: 0% 50%
+    },
+    {
+          50% { background-position: 100% 50%
+    },
+    {
         };
-        @keyframes fadeInUp {};
-          from {};
-            opacity: 0;
-            transform: translateY(30px);
-          };
-          to {};
-            opacity: 1;
-            transform: translateY(0);
-          };
+        @keyframes fadeInUp {},
+      from {},
+      opacity: 0,
+      transform: translateY(30px)
+    },
+    {
+          to {},
+      opacity: 1,
+      transform: translateY(0)
+    },
+    {
         };
-        .animate-gradient-x {};
-          background-size: 200% 200%;
-          animation: gradient-x 3s ease infinite;
-        };
+        .animate-gradient-x {},
+      background-size: 200% 200%,
+      animation: gradient-x 3s ease infinite
+    },
+    {
       `}</style>
     </section>
-  );
-};
+  )
+    },
+    {
 
 export default FuturisticHero;

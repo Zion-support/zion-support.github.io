@@ -1,8 +1,7 @@
-import React from "react";
-import { BarChart3, FileText, MessageSquare } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-
-export default function AIServices() {
+import React from "react",
+      import { BarChart3, FileText, MessageSquare } from "lucide-react",
+      import { Helmet } from "react-helmet-async",
+      export default function AIServices() {
   const aiServices = [
     {
       id: "ai-analytics-dashboard-pro",
@@ -70,9 +69,8 @@ export default function AIServices() {
         "Maintain consistent brand voice"
       ]
     }
-  ];
-
-  return (
+  ],
+      return (
     <>
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced AI Solutions</title>

@@ -1,41 +1,42 @@
 import React, { useState, useCallback, useMemo } from 'react'
-import {};
-  X;
-  ChevronDown;
-  ChevronRight;
-  Home;
-  Users;
-  Settings;
-  BarChart3;
-  Shield;
-  Cloud;
-  Code;
-  Brain;
-  Zap;
-  Database;
-  Star;
-  ArrowRight;
-  Phone;
-  Mail;
-  MapPin
+import {},
+      X,
+      ChevronDown,
+      ChevronRight,
+      Home,
+      Users,
+      Settings,
+      BarChart3,
+      Shield,
+      Cloud,
+      Code,
+      Brain,
+      Zap,
+      Database,
+      Star,
+      ArrowRight,
+      Phone,
+      Mail,
+      MapPin
 } from 'lucide-react'
 
-interface SidebarProps {};
-  isOpen: boolean;
-  onClose: () => void;
-};
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {};
-  const location = useLocation()
+interface SidebarProps {},
+      isOpen: boolean,
+      onClose: () => void
+    },
+    {
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {},
+      const location = useLocation()
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set())
 
-  const toggleSection = useCallback((section: string) => {};
-    setExpandedSections(prev => {};
+  const toggleSection = useCallback((section: string) => {},
+      setExpandedSections(prev => {},
       const newSet = new Set(prev)
-      if (newSet.has(section)) {};
-        newSet.delete(section)
-      } else {};
-        newSet.add(section)
-      };
+      if (newSet.has(section)) {},
+      newSet.delete(section)
+      } else {},
+      newSet.add(section)
+      },
       return newSet
     })
   }, [])
@@ -98,8 +99,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {};
       {/* Overlay */};
       <div 
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-        onClick={onClose};
-      />
+        onClick={onClose} />
       
       {/* Sidebar */};
       <div className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl z-50 overflow-y-auto"></div>
@@ -115,8 +115,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {};
               </span>
             </div>
             <button
-              onClick={onClose};
-              className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-white/10"
+              onClick={onClose},
+      className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-white/10"
             ></button
 >
               <X className="w-5 h-5" />
@@ -127,14 +127,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {};
           <div className="space-y-2 mb-8"></div>
             {mainNavItems.map((item) => (
               <Link
-                key={item.name};
-                to={item.path};
-                className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-300 ${};
-                  isActive(item.path)
+                key={item.name},
+      to={item.path},
+      className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-300 ${},
+      isActive(item.path)
                     ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 border-l-2 border-cyan-400'
                     : 'text-gray-300 hover:bg-white/10 hover:text-white'
-                }`};
-                onClick={onClose};
+                }`},
+      onClick={onClose};
               ></Link
 >
                 {item.icon};
@@ -146,8 +146,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {};
           {/* AI Services Section */};
           <div className="mb-6"></div>
             <button
-              onClick={() => toggleSection('ai-services')};
-              className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium text-left"
+              onClick={() => toggleSection('ai-services')},
+      className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium text-left"
             >
               <div className="flex items-center space-x-3"></div>
                 <Brain className="w-4 h-4" />
@@ -163,14 +163,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {};
             {expandedSections.has('ai-services') && (<div className="ml-6 mt-2 space-y-1"></div>
                 {aiServices.map((service) => (
                   <Link
-                    key={service.name};
-                    to={service.path};
-                    className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${};
-                      isActive(service.path)
+                    key={service.name},
+      to={service.path},
+      className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${},
+      isActive(service.path)
                         ? 'bg-cyan-500/10 text-cyan-400'
                         : 'text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/5'
-                    }`};
-                    onClick={onClose};
+                    }`},
+      onClick={onClose};
                   ></Link
 >
                     {service.icon};
@@ -184,8 +184,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {};
           {/* IT Services Section */};
           <div className="mb-6"></div>
             <button
-              onClick={() => toggleSection('it-services')};
-              className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 font-medium text-left"
+              onClick={() => toggleSection('it-services')},
+      className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 font-medium text-left"
             >
               <div className="flex items-center space-x-3"></div>
                 <Settings className="w-4 h-4" />
@@ -201,14 +201,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {};
             {expandedSections.has('it-services') && (<div className="ml-6 mt-2 space-y-1"></div>
                 {itServices.map((service) => (
                   <Link
-                    key={service.name};
-                    to={service.path};
-                    className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${};
-                      isActive(service.path)
+                    key={service.name},
+      to={service.path},
+      className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${},
+      isActive(service.path)
                         ? 'bg-green-500/10 text-green-400'
                         : 'text-gray-400 hover:text-green-400 hover:bg-green-500/5'
-                    }`};
-                    onClick={onClose};
+                    }`},
+      onClick={onClose};
                   ></Link
 >
                     {service.icon};
@@ -222,8 +222,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {};
           {/* Micro SAAS Section */};
           <div className="mb-6"></div>
             <button
-              onClick={() => toggleSection('micro-saas')};
-              className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium text-left"
+              onClick={() => toggleSection('micro-saas')},
+      className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium text-left"
             >
               <div className="flex items-center space-x-3"></div>
                 <Zap className="w-4 h-4" />
@@ -239,14 +239,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {};
             {expandedSections.has('micro-saas') && (<div className="ml-6 mt-2 space-y-1"></div>
                 {microSaasServices.map((service) => (
                   <Link
-                    key={service.name};
-                    to={service.path};
-                    className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${};
-                      isActive(service.path)
+                    key={service.name},
+      to={service.path},
+      className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${},
+      isActive(service.path)
                         ? 'bg-purple-500/10 text-purple-400'
                         : 'text-gray-400 hover:text-purple-400 hover:bg-purple-500/5'
-                    }`};
-                    onClick={onClose};
+                    }`},
+      onClick={onClose};
                   ></Link
 >
                     {service.icon};
@@ -323,7 +323,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {};
           </Link>
         </nav>
       </div>
-  </>);
-};
+  </>)
+    },
+    {
 
 export default Sidebar;

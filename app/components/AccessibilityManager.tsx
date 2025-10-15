@@ -1,12 +1,11 @@
-import React, { useEffect, useState, useCallback } from 'react';
-
-interface AccessibilitySettings {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  focusVisible: boolean;
-  keyboardNavigation: boolean;
+import React, { useEffect, useState, useCallback } from 'react',
+      interface AccessibilitySettings {
+  highContrast: boolean,
+      largeText: boolean,
+      reducedMotion: boolean,
+      screenReader: boolean,
+      focusVisible: boolean,
+      keyboardNavigation: boolean;
 }
 
 interface AccessibilityManagerProps {
@@ -21,13 +20,13 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
     screenReader: false,
     focusVisible: true,
     keyboardNavigation: true
-  });
-  const [isVisible, setIsVisible] = useState(false);
+  }),
+      const [isVisible, setIsVisible] = useState(false);
 
   // Load settings from localStorage
   useEffect(() => {
-    const savedSettings = localStorage.getItem('accessibility-settings');
-    if (savedSettings) {
+    const savedSettings = localStorage.getItem('accessibility-settings'),
+      if (savedSettings) {
       try {
         setSettings(JSON.parse(savedSettings));
       } catch (error) {
@@ -83,8 +82,8 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
     }
     
     // Save to localStorage
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-    setSettings(newSettings);
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings)),
+      setSettings(newSettings);
   }, []);
 
   // Update settings when they change
@@ -94,16 +93,18 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
 
   // Toggle accessibility panel
   const togglePanel = () => {
-    setIsVisible(!isVisible);
-  };
+    setIsVisible(!isVisible)
+    },
+    {
 
   // Update individual setting
   const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
     setSettings(prev => ({
       ...prev,
       [key]: value
-    }));
-  };
+    }))
+    },
+    {
 
   return (
     <>
@@ -198,7 +199,8 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
         </div>
       )}
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AccessibilityManager;

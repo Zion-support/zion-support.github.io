@@ -1,14 +1,14 @@
 
 import { Helmet } from 'react-helmet-async'
-import {};
-  Home;
-  ArrowLeft;
-  Mail;
-  Phone;
-  Zap;
-  Brain;
-  Server;
-  Target
+import {},
+      Home,
+      ArrowLeft,
+      Mail,
+      Phone,
+      Zap,
+      Brain,
+      Server,
+      Target
 } from 'lucide-react'
 const NotFoundPage: React.FC = () => {};
 }const quickLinks = []
@@ -62,8 +62,8 @@ const NotFoundPage: React.FC = () => {};
                 Go Home
               </Link>
               <button
-                onClick={() => window.history.back()};
-                className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
+                onClick={() => window.history.back()},
+      className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
               >
                 <ArrowLeft className="mr-2 w-5 h-5" />
                 Go Back
@@ -76,9 +76,9 @@ const NotFoundPage: React.FC = () => {};
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4"></div>
               {quickLinks.map((link, index) => ()
                 <Link
-                  key={index};
-                  to={link.href};
-                  className="group bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:transform hover:scale-105"
+                  key={index},
+      to={link.href},
+      className="group bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:transform hover:scale-105"
                 ></Link
 >
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
@@ -126,5 +126,5 @@ const NotFoundPage: React.FC = () => {};
       </div>
 </div>
   )
-};
-export default NotFoundPage
+},
+      export default NotFoundPage

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
+import React from 'react',
+      import { Helmet } from 'react-helmet-async',
+      import { 
   CheckCircle, 
   ArrowRight, 
   TrendingUp,
@@ -10,9 +10,8 @@ import {
   Linkedin,
   Youtube,
   Music
-} from 'lucide-react';
-
-const AISocialMediaManagerPage: React.FC = () => {
+} from 'lucide-react',
+      const AISocialMediaManagerPage: React.FC = () => {
   const features = [
     'AI-powered content generation for all platforms',
     'Automated posting across 8+ social networks',
@@ -24,27 +23,24 @@ const AISocialMediaManagerPage: React.FC = () => {
     'Competitor analysis and benchmarking',
     'Influencer collaboration tools',
     'Crisis management and response automation'
-  ];
-
-  const benefits = [
+  ],
+      const benefits = [
     'Increase social media engagement by 85%',
     'Save 25+ hours per week on content creation',
     'Boost follower growth by 200%',
     'Improve brand consistency across platforms',
     'Reduce social media management costs by 60%',
     'Scale content production without additional staff'
-  ];
-
-  const platforms = [
+  ],
+      const platforms = [
     { name: 'Instagram', icon: <Instagram className="w-6 h-6 text-pink-400" />, users: '2B+' },
     { name: 'Facebook', icon: <Facebook className="w-6 h-6 text-blue-400" />, users: '3B+' },
     { name: 'Twitter', icon: <Twitter className="w-6 h-6 text-sky-400" />, users: '450M+' },
     { name: 'LinkedIn', icon: <Linkedin className="w-6 h-6 text-blue-600" />, users: '900M+' },
     { name: 'YouTube', icon: <Youtube className="w-6 h-6 text-red-400" />, users: '2.7B+' },
     { name: 'TikTok', icon: <Music className="w-6 h-6 text-white" />, users: '1B+' }
-  ];
-
-  const pricingPlans = [
+  ],
+      const pricingPlans = [
     {
       name: 'Starter',
       price: '$39/mo',
@@ -94,9 +90,8 @@ const AISocialMediaManagerPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
-  const useCases = [
+  ],
+      const useCases = [
     {
       title: 'E-commerce',
       description: 'Drive sales with product showcases and customer testimonials',
@@ -121,9 +116,8 @@ const AISocialMediaManagerPage: React.FC = () => {
       icon: <Star className="w-6 h-6 text-yellow-400" />,
       results: '200% increase in follower growth'
     }
-  ];
-
-  return (
+  ],
+      return (
     <>
       <Helmet>
         <title>AI Social Media Manager - Automated Social Media Management | Zion Tech Group</title>
@@ -398,7 +392,8 @@ const AISocialMediaManagerPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AISocialMediaManagerPage;

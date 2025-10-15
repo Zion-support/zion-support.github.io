@@ -1,7 +1,6 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
-const AiTranslationServicePage: React.FC = () => {
+import React from 'react',
+      import SEOHead from '../components/SEOHead',
+      const AiTranslationServicePage: React.FC = () => {
   return (
     <>
       <SEOHead 
@@ -15,7 +14,8 @@ const AiTranslationServicePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiTranslationServicePage;

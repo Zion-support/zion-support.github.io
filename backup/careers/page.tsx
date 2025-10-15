@@ -1,13 +1,13 @@
 
 export default function Careers() {};
 }const jobOpenings = []
-    {};
-      title: 'Senior AI Engineer';
-      department: 'AI Solutions';
-      location: 'Remote / Middletown, DE';
-      type: 'Full-time';
-      experience: '5+ years';
-      description: 'Lead development of AI-powered solutions and machine learning models.';
+    {},
+      title: 'Senior AI Engineer',
+      department: 'AI Solutions',
+      location: 'Remote / Middletown, DE',
+      type: 'Full-time',
+      experience: '5+ years',
+      description: 'Lead development of AI-powered solutions and machine learning models.',
       requirements: []
         'Master\'s degree in Computer Science or related field','
         '5+ years experience with Python, TensorFlow, PyTorch';
@@ -15,13 +15,13 @@ export default function Careers() {};
         'Strong understanding of ML algorithms and data structures'
       ]
     };
-    {};
-      title: 'Full Stack Developer';
-      department: 'Web Development';
-      location: 'Remote / Middletown, DE';
-      type: 'Full-time';
-      experience: '3+ years';
-      description: 'Build scalable web applications using modern technologies.';
+    {},
+      title: 'Full Stack Developer',
+      department: 'Web Development',
+      location: 'Remote / Middletown, DE',
+      type: 'Full-time',
+      experience: '3+ years',
+      description: 'Build scalable web applications using modern technologies.',
       requirements: []
         'Bachelor\'s degree in Computer Science or related field','
         '3+ years experience with React, Node.js, TypeScript';
@@ -29,13 +29,13 @@ export default function Careers() {};
         'Knowledge of cloud deployment and DevOps practices'
       ]
     };
-    {};
-      title: 'Cybersecurity Specialist';
-      department: 'Security';
-      location: 'Remote / Middletown, DE';
-      type: 'Full-time';
-      experience: '4+ years';
-      description: 'Protect our systems and client data with advanced security measures.';
+    {},
+      title: 'Cybersecurity Specialist',
+      department: 'Security',
+      location: 'Remote / Middletown, DE',
+      type: 'Full-time',
+      experience: '4+ years',
+      description: 'Protect our systems and client data with advanced security measures.',
       requirements: []
         'Bachelor\'s degree in Cybersecurity or related field','
         '4+ years experience in cybersecurity';

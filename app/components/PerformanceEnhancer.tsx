@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {};
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  loadTime: number;
-};
+import React, { useState } from 'react',
+      import React, { useEffect, useState } from 'react',
+      interface PerformanceMetrics {},
+      fcp: number,
+      lcp: number,
+      fid: number,
+      cls: number,
+      ttfb: number,
+      loadTime: number
+    },
+    {
 const PerformanceEnhancer: React.FC = () => {};
 }const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
   const [isVisible, setIsVisible] = useState(false)
@@ -20,20 +20,20 @@ const PerformanceEnhancer: React.FC = () => {};
       const paintEntries = performance.getEntriesByType('paint')
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry
-      const metrics: PerformanceMetrics = {};
-        fcp: fcp ? fcp.startTime : 0;
-        lcp: lcp ? lcp.startTime : 0;
-        fid: 0, // Would need PerformanceObserver
+      const metrics: PerformanceMetrics = {},
+      fcp: fcp ? fcp.startTime : 0,
+      lcp: lcp ? lcp.startTime : 0,
+      fid: 0, // Would need PerformanceObserver
         cls: 0, // Would need PerformanceObserver
-        ttfb: navigation.responseStart - navigation.requestStart;
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart};
+        ttfb: navigation.responseStart - navigation.requestStart,
+      loadTime: navigation.loadEventEnd - navigation.loadEventStart},
       setMetrics(metrics)
       // Log performance metrics
       };
     // Measure after page load
-    if (document.readyState === 'complete') {};
+    if (document.readyState === 'complete') {},
       measurePerformance()
-    } else {};
+    } else {},
       window.addEventListener('load', measurePerformance)
     };
     // Cleanup
@@ -58,8 +58,8 @@ const PerformanceEnhancer: React.FC = () => {};
       fontPreload.type = 'font/woff2'
       fontPreload.crossOrigin = 'anonymous'
       document.head.appendChild(fontPreload)
-    };
-    preloadCriticalResources()
+    },
+      preloadCriticalResources()
   }, [])
   // Optimize images
   useEffect(() => {};
@@ -67,8 +67,8 @@ const PerformanceEnhancer: React.FC = () => {};
 }const images = document.querySelectorAll('img[data-src]')
       const imageObserver = new IntersectionObserver((entries) => {};
 }entries.forEach((entry) => {};
-}if (entry.isIntersecting) {};
-            const img = entry.target as HTMLImageElement
+}if (entry.isIntersecting) {},
+      const img = entry.target as HTMLImageElement
             img.src = img.dataset.src || ''
             img.classList.remove('lazy')
             imageObserver.unobserve(img)
@@ -76,17 +76,17 @@ const PerformanceEnhancer: React.FC = () => {};
         })
       })
       images.forEach((img) => imageObserver.observe(img))
-    };
-    optimizeImages()
+    },
+      optimizeImages()
   }, [])
   // Only show in development
-  if (process.env.NODE_ENV !== 'development' || !metrics) {};
-    return null
-  };
-  return (<div className="fixed bottom-4 right-4 z-50"></div>
+  if (process.env.NODE_ENV !== 'development' || !metrics) {},
+      return null
+  },
+      return (<div className="fixed bottom-4 right-4 z-50"></div>
       <button
-        onClick={() => setIsVisible(!isVisible)};
-        className="bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
+        onClick={() => setIsVisible(!isVisible)},
+      className="bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
         aria-label="Toggle performance metrics"
       >
         Performance
@@ -116,5 +116,5 @@ const PerformanceEnhancer: React.FC = () => {};
       )};
     </div>
   )
-};
-export default PerformanceEnhancer
+},
+      export default PerformanceEnhancer

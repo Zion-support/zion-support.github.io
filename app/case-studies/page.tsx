@@ -17,53 +17,49 @@ const CaseStudiesPage: React.FC = () => {
         "40% increase in conversion rates";
         "60% reduction in customer service tickets";
         "25% increase in average order value"
-      ];
-      image: "/images/case-studies/ecommerce-ai.jpg";
-      duration: "6 months";
+      ],
+      image: "/images/case-studies/ecommerce-ai.jpg",
+      duration: "6 months",
       team: "8 specialists"
     };
-    {};
-      id: 2;
-      title: "Cloud Migration for Financial Services";
-      client: "SecureBank Corp.";
-      industry: "Financial Services";
-      challenge: "Legacy systems causing performance issues and security concerns";
-      solution: "Complete cloud migration with enhanced security measures";
-      results: [
-        "99.9% uptime achieved";
-        "50% reduction in infrastructure costs";
+    {},
+      id: 2,
+      title: "Cloud Migration for Financial Services",
+      client: "SecureBank Corp.",
+      industry: "Financial Services",
+      challenge: "Legacy systems causing performance issues and security concerns",
+      solution: "Complete cloud migration with enhanced security measures",
+      results: ["99.9% uptime achieved",
+        "50% reduction in infrastructure costs",
         "Enhanced security compliance"
-      ];
-      image: "/images/case-studies/cloud-migration.jpg";
-      duration: "4 months";
+      ],
+      image: "/images/case-studies/cloud-migration.jpg",
+      duration: "4 months",
       team: "12 specialists"
     };
-    {};
-      id: 3;
-      title: "Cybersecurity Implementation";
-      client: "HealthCare Plus";
-      industry: "Healthcare";
-      challenge: "Vulnerable to cyber attacks and data breaches";
-      solution: "Comprehensive cybersecurity framework and training";
-      results: [
-        "Zero security incidents";
-        "100% compliance with HIPAA";
+    {},
+      id: 3,
+      title: "Cybersecurity Implementation",
+      client: "HealthCare Plus",
+      industry: "Healthcare",
+      challenge: "Vulnerable to cyber attacks and data breaches",
+      solution: "Comprehensive cybersecurity framework and training",
+      results: ["Zero security incidents",
+        "100% compliance with HIPAA",
         "50% reduction in security vulnerabilities"
-      ];
-      image: "/images/case-studies/cybersecurity.jpg";
-      duration: "3 months";
+      ],
+      image: "/images/case-studies/cybersecurity.jpg",
+      duration: "3 months",
       team: "6 specialists"
     };
-  ];
-
-  const stats = [
+  ],
+      const stats = [
     { label: "Projects Completed", value: "150+", icon: <CheckCircle className="w-6 h-6" /> };
     { label: "Client Satisfaction", value: "98%", icon: <TrendingUp className="w-6 h-6" /> };
     { label: "Team Members", value: "50+", icon: <Users className="w-6 h-6" /> };
     { label: "Cost Savings", value: "$2M+", icon: <DollarSign className="w-6 h-6" /> };
-  ];
-
-  return (
+  ],
+      return (
     <>
       <Helmet></Helmet>
         <title>Case Studies - Zion Tech Group | Success Stories</title>
@@ -129,9 +125,9 @@ const CaseStudiesPage: React.FC = () => {
               {caseStudies.map((study) => (
                 <div key={study.id} className="bg-white/10 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-white/20 hover:border-cyan-400/50 transition-all duration-300"></div>
                   <img
-                    src={study.image};
-                    alt={study.title};
-                    className="w-full h-48 object-cover"
+                    src={study.image},
+      alt={study.title},
+      className="w-full h-48 object-cover"
                   />
                   <div className="p-6">
         <div className="p-6">
@@ -176,8 +172,8 @@ const CaseStudiesPage: React.FC = () => {
                         Team: {study.team};
                       </span>
                       <Link
-                        to={`/case-studies/${study.id}`};
-                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm"
+                        to={`/case-studies/${study.id}`},
+      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm"
                       ></Link
 >
                         Read More

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
+import React from 'react',
+      import { Helmet } from 'react-helmet-async',
+      import { Link } from 'react-router-dom',
+      import { 
   CheckCircle, 
   ArrowRight, 
   MessageSquare, 
@@ -14,9 +14,8 @@ import {
   ShoppingCart,
   Heart,
   DollarSign
-} from 'lucide-react';
-
-const AiCustomerSupportChatbotPage: React.FC = () => {
+} from 'lucide-react',
+      const AiCustomerSupportChatbotPage: React.FC = () => {
   const features = [
     'Natural Language Processing (NLP)',
     'Multi-language support (50+ languages)',
@@ -28,27 +27,24 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
     'Sentiment analysis and mood detection',
     'Voice and text support',
     'Advanced conversation routing'
-  ];
-
-  const benefits = [
+  ],
+      const benefits = [
     'Reduce support costs by 60%',
     'Improve response time by 90%',
     'Handle 1000+ conversations simultaneously',
     'Increase customer satisfaction by 45%',
     'Available 24/7 without breaks',
     'Scale support without additional staff'
-  ];
-
-  const integrations = [
+  ],
+      const integrations = [
     { name: 'Salesforce', icon: <Cloud className="w-6 h-6 text-blue-400" /> },
     { name: 'HubSpot', icon: <Target className="w-6 h-6 text-orange-400" /> },
     { name: 'Zendesk', icon: <Headphones className="w-6 h-6 text-green-400" /> },
     { name: 'Intercom', icon: <MessageSquare className="w-6 h-6 text-purple-400" /> },
     { name: 'Slack', icon: <Users className="w-6 h-6 text-pink-400" /> },
     { name: 'Microsoft Teams', icon: <Globe className="w-6 h-6 text-blue-600" /> }
-  ];
-
-  const pricingPlans = [
+  ],
+      const pricingPlans = [
     {
       name: 'Starter',
       price: '$99/mo',
@@ -98,9 +94,8 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
-  const useCases = [
+  ],
+      const useCases = [
     {
       title: 'E-commerce',
       description: 'Handle product inquiries, order tracking, and returns',
@@ -125,16 +120,14 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
       icon: <DollarSign className="w-6 h-6 text-green-600" />,
       results: '70% improvement in response time'
     }
-  ];
-
-  const stats = [
+  ],
+      const stats = [
     { number: '60%', label: 'Cost Reduction' },
     { number: '90%', label: 'Faster Response' },
     { number: '1000+', label: 'Simultaneous Chats' },
     { number: '45%', label: 'Higher Satisfaction' }
-  ];
-
-  return (
+  ],
+      return (
     <>
       <Helmet>
         <title>AI Customer Support Chatbot - Intelligent Customer Service | Zion Tech Group</title>
@@ -398,7 +391,8 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiCustomerSupportChatbotPage;

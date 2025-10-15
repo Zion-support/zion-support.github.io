@@ -16,7 +16,8 @@ const G5gEdgeComputingPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default G5gEdgeComputingPage;

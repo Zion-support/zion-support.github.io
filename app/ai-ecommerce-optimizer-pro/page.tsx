@@ -1,8 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
-const AiEcommerceOptimizerProPage: React.FC = () => {
+import React from 'react',
+      import { Helmet } from 'react-helmet-async',
+      import { Link } from 'react-router-dom',
+      const AiEcommerceOptimizerProPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -204,7 +203,8 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiEcommerceOptimizerProPage;

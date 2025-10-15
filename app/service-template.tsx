@@ -1,17 +1,17 @@
 
 import { Helmet } from "react-helmet-async"
-interface ServiceTemplateProps {};
-  title: string
+interface ServiceTemplateProps {},
+      title: string
   description: string
-  features: Array<{};
-    title: string
+  features: Array<{},
+      title: string
     description: string
   }></{};
 >
-};
-const ServiceTemplate: React.FC<ServiceTemplateProps> = ({};
-  title, description, _features, _}) => {};
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+},
+      const ServiceTemplate: React.FC<ServiceTemplateProps> = ({},
+      title, description, _features, _}) => {},
+      return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>{title} | Zion Tech Group</title>
         <meta name="description" content={description} />
@@ -50,8 +50,8 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({};
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {features.map((feature, index) => ()
               <div
-                key={index};
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                key={index},
+      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
               ></div
 >
                 <h3 className="text-xl font-semibold text-white mb-3"></h3>
@@ -65,5 +65,5 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({};
       </div>
     </div>
   )
-};
-export default ServiceTemplate
+},
+      export default ServiceTemplate

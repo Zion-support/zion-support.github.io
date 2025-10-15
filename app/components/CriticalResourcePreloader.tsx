@@ -5,16 +5,16 @@ const CriticalResourcePreloader = () => {};
 }const preloadCriticalResources = () => {};
 }// Critical fonts
       const criticalFonts = []
-        {};
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
-          as: 'style';
-          crossorigin: 'anonymous'
+        {},
+      href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap',
+      as: 'style',
+      crossorigin: 'anonymous'
         };
-        {};
-          href: 'https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2';
-          as: 'font';
-          type: 'font/woff2';
-          crossorigin: 'anonymous'
+        {},
+      href: 'https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2',
+      as: 'font',
+      type: 'font/woff2',
+      crossorigin: 'anonymous'
         };
       ]
       // Critical CSS
@@ -104,14 +104,14 @@ const CriticalResourcePreloader = () => {};
     preconnectDomains()
     dnsPrefetchDomains()
     // Preload next page resources on hover
-    const preloadOnHover = () => {};
+    const preloadOnHover = () => {},
       const links = document.querySelectorAll('a[href^="/"]')
       
-      links.forEach((link => {};
-        link.addEventListener('mouseenter', () => {};
-          const href = link.getAttribute('href')
-          if (href && !document.querySelector(`link[href="${href}"]`)) {};
-            const preloadLink = document.createElement('link')
+      links.forEach((link => {},
+      link.addEventListener('mouseenter', () => {},
+      const href = link.getAttribute('href')
+          if (href && !document.querySelector(`link[href="${href}"]`)) {},
+      const preloadLink = document.createElement('link')
             preloadLink.rel = 'prefetch'
             preloadLink.href = href
             document.head.appendChild(preloadLink)
@@ -123,5 +123,5 @@ const CriticalResourcePreloader = () => {};
     setTimeout(preloadOnHover, 2000)
   }, [])
   return null
-};
-export default CriticalResourcePreloader
+},
+      export default CriticalResourcePreloader

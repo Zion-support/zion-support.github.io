@@ -1,7 +1,6 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
-const AiExpenseTrackerPage: React.FC = () => {
+import React from 'react',
+      import SEOHead from '../components/SEOHead',
+      const AiExpenseTrackerPage: React.FC = () => {
   return (
     <>
       <SEOHead 
@@ -15,7 +14,8 @@ const AiExpenseTrackerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiExpenseTrackerPage;

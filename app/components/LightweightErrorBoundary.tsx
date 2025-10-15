@@ -1,54 +1,61 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface Props {};
-  children: ReactNode;
-  fallback?: ReactNode;
-};
-interface State {};
-  hasError: boolean;
-  error?: Error;
-};
-class LightweightErrorBoundary extends Component<Props, State> {};
-  constructor(props: Props) {};
-    super(props);
-    this.state = { hasError: false };
-  };
-  static getDerivedStateFromError(error: Error): State {};
-    return { hasError: true, error };
-  };
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {};
-    this.setState({ error });
+import React, { Component, ErrorInfo, ReactNode } from 'react',
+      interface Props {},
+      children: ReactNode,
+      fallback?: ReactNode
+    },
+    {
+interface State {},
+      hasError: boolean,
+      error?: Error
+    },
+    {
+class LightweightErrorBoundary extends Component<Props, State> {},
+      constructor(props: Props) {},
+      super(props),
+      this.state = { hasError: false }
+    },
+    {
+  static getDerivedStateFromError(error: Error): State {},
+      return { hasError: true, error }
+    },
+    {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {},
+      this.setState({ error });
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {};
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    };
+    if (process.env.NODE_ENV === 'development') {},
+      console.error('ErrorBoundary caught an error:', error, errorInfo)
+    },
+    {
     // Send error to external service in production
     if (process.env.NODE_ENV === 'production') {};
       // Use fetch to send error data
-      fetch('/api/errors', {};
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
-        body: JSON.stringify({};
-          message: error.message;
-          stack: error.stack;
-          componentStack: errorInfo.componentStack;
-          timestamp: new Date().toISOString();
+      fetch('/api/errors', {},
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({},
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString();
         });
       }).catch(() => {};
         // Silently fail if error reporting fails
-      });
-    };
-  };
-  handleRetry = () => {};
-    this.setState({ hasError: false, error: undefined });
-  };
+      })
+    },
+    {
+  },
+      handleRetry = () => {},
+      this.setState({ hasError: false, error: undefined })
+    },
+    {
 
-  render() {};
-    if (this.state.hasError) {};
-      if (this.props.fallback) {};
-        return this.props.fallback;
-      };
+  render() {},
+      if (this.state.hasError) {},
+      if (this.props.fallback) {},
+      return this.props.fallback
+    },
+    {
       return (
         <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4"></div>
           <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-lg p-6 text-center"></div>
@@ -78,25 +85,27 @@ class LightweightErrorBoundary extends Component<Props, State> {};
             )};
             <div className="space-y-3"></div>
               <button
-                onClick={this.handleRetry};
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                onClick={this.handleRetry},
+      className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
               ></button
 >
                 Try Again
               </button>
               
               <button
-                onClick={() => window.location.href = '/'};
-                className="w-full bg-slate-700 hover:bg-slate-600 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                onClick={() => window.location.href = '/'},
+      className="w-full bg-slate-700 hover:bg-slate-600 text-white font-medium py-2 px-4 rounded-lg transition-colors"
               >
                 Go Home
               </button>
             </div>
           </div>
         </div>
-      );
-    };
-    return this.props.children;
-  };
-};
-export default LightweightErrorBoundary;
+      )
+    },
+    {
+    return this.props.children
+    },
+    {
+},
+      export default LightweightErrorBoundary;

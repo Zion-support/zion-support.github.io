@@ -1,38 +1,39 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface SEOData {};
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: any;
-  robots?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-};
-interface AdvancedSEOOptimizerProps {};
-  seoData: SEOData;
-  enableStructuredData?: boolean;
-  enableSocialMeta?: boolean;
-  enableAdvancedFeatures?: boolean;
-};
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
-  seoData;
-  enableStructuredData = true;
-  enableSocialMeta = true;
-  enableAdvancedFeatures = true
+import React, { useEffect } from 'react',
+      import { Helmet } from 'react-helmet-async',
+      interface SEOData {},
+      title: string,
+      description: string,
+      keywords: string[],
+      canonicalUrl: string,
+      ogTitle?: string,
+      ogDescription?: string,
+      ogImage?: string,
+      ogUrl?: string,
+      twitterCard?: string,
+      twitterTitle?: string,
+      twitterDescription?: string,
+      twitterImage?: string,
+      structuredData?: any,
+      robots?: string,
+      author?: string,
+      publishedTime?: string,
+      modifiedTime?: string,
+      section?: string,
+      tags?: string[]
+    },
+    {
+interface AdvancedSEOOptimizerProps {},
+      seoData: SEOData,
+      enableStructuredData?: boolean,
+      enableSocialMeta?: boolean,
+      enableAdvancedFeatures?: boolean
+    },
+    {
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({},
+      seoData,
+      enableStructuredData = true,
+      enableSocialMeta = true,
+      enableAdvancedFeatures = true
 }) => {};
   // Generate structured data
   const generateStructuredData = () => {
@@ -56,10 +57,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
       "datePublished": seoData.publishedTime || new Date().toISOString();
       "dateModified": seoData.modifiedTime || new Date().toISOString();
       ...seoData.structuredData
-    };
-
-    return baseStructuredData;
-  };
+    },
+      return baseStructuredData
+    },
+    {
 
   // Generate breadcrumb structured data
   const generateBreadcrumbStructuredData = () => {
@@ -71,9 +72,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
       "position": index + 1;
       "name": segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
       "item": `https://ziontechgroup.com/${pathSegments.slice(0, index + 1).join('/')}`
-    }));
-
-    return {};
+    })),
+      return {};
       "@context": "https://schema.org";
       "@type": "BreadcrumbList";
       "itemListElement": [
@@ -85,8 +85,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
         };
         ...breadcrumbs
       ]
-    };
-  };
+    }
+    },
+    {
 
   // Generate FAQ structured data
   const generateFAQStructuredData = () => {
@@ -103,8 +104,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
           "text": faq.answer
         };
       }))
-    };
-  };
+    }
+    },
+    {
 
   // Generate organization structured data
   const generateOrganizationStructuredData = () => {
@@ -131,13 +133,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
         "contactType": "customer service";
         "email": "support@ziontechgroup.com"
       };
-      "sameAs": [
-        "https://twitter.com/ziontechgroup";
+      "sameAs": ["https://twitter.com/ziontechgroup",
         "https://linkedin.com/company/ziontechgroup";
         "https://facebook.com/ziontechgroup"
       ]
-    };
-  };
+    }
+    },
+    {
 
   // Generate service structured data
   const generateServiceStructuredData = () => {
@@ -155,51 +157,53 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
       "areaServed": "Worldwide";
       "serviceType": seoData.structuredData.service.type;
       "offers": seoData.structuredData.service.offers
-    };
-  };
+    }
+    },
+    {
 
   // Preload critical resources
-  useEffect(() => {};
-    if (!enableAdvancedFeatures) return;
+  useEffect(() => {},
+      if (!enableAdvancedFeatures) return;
 
     // Preload critical CSS
-    const criticalCSS = document.createElement('link');
-    criticalCSS.rel = 'preload';
-    criticalCSS.href = '/critical.css';
-    criticalCSS.as = 'style';
-    criticalCSS.onload = () => {};
-      criticalCSS.rel = 'stylesheet';
-    };
+    const criticalCSS = document.createElement('link'),
+      criticalCSS.rel = 'preload',
+      criticalCSS.href = '/critical.css',
+      criticalCSS.as = 'style',
+      criticalCSS.onload = () => {},
+      criticalCSS.rel = 'stylesheet'
+    },
+    {
     document.head.appendChild(criticalCSS);
 
     // Preload critical fonts
-    const fontPreload = document.createElement('link');
-    fontPreload.rel = 'preload';
-    fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-    fontPreload.as = 'style';
-    fontPreload.crossOrigin = 'anonymous';
-    document.head.appendChild(fontPreload);
+    const fontPreload = document.createElement('link'),
+      fontPreload.rel = 'preload',
+      fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
+      fontPreload.as = 'style',
+      fontPreload.crossOrigin = 'anonymous',
+      document.head.appendChild(fontPreload);
 
     // Preload critical images
-    if (seoData.ogImage) {};
-      const imagePreload = document.createElement('link');
-      imagePreload.rel = 'preload';
-      imagePreload.href = seoData.ogImage;
-      imagePreload.as = 'image';
-      document.head.appendChild(imagePreload);
-    };
+    if (seoData.ogImage) {},
+      const imagePreload = document.createElement('link'),
+      imagePreload.rel = 'preload',
+      imagePreload.href = seoData.ogImage,
+      imagePreload.as = 'image',
+      document.head.appendChild(imagePreload)
+    },
+    {
     // DNS prefetch for external resources
     const dnsPrefetchDomains = [
       'https://fonts.googleapis.com';
       'https://fonts.gstatic.com';
       'https://www.google-analytics.com';
       'https://www.googletagmanager.com'
-    ];
-
-    dnsPrefetchDomains.forEach(domain => {};
-      const dnsPrefetch = document.createElement('link');
-      dnsPrefetch.rel = 'dns-prefetch';
-      dnsPrefetch.href = domain;
+    ],
+      dnsPrefetchDomains.forEach(domain => {},
+      const dnsPrefetch = document.createElement('link'),
+      dnsPrefetch.rel = 'dns-prefetch',
+      dnsPrefetch.href = domain,
       document.head.appendChild(dnsPrefetch);
     });
 
@@ -207,38 +211,36 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
     const preconnectOrigins = [
       'https://fonts.googleapis.com';
       'https://fonts.gstatic.com'
-    ];
-
-    preconnectOrigins.forEach(origin => {};
-      const preconnect = document.createElement('link');
-      preconnect.rel = 'preconnect';
-      preconnect.href = origin;
-      preconnect.crossOrigin = 'anonymous';
+    ],
+      preconnectOrigins.forEach(origin => {},
+      const preconnect = document.createElement('link'),
+      preconnect.rel = 'preconnect',
+      preconnect.href = origin,
+      preconnect.crossOrigin = 'anonymous',
       document.head.appendChild(preconnect);
-    });
-
-    return () => {};
+    }),
+      return () => {};
       // Cleanup on unmount
-      const links = document.querySelectorAll('link[rel="preload"], link[rel="dns-prefetch"], link[rel="preconnect"]');
-      links.forEach(link => {};
-        if (link.getAttribute('href')?.includes('critical.css') || 
+      const links = document.querySelectorAll('link[rel="preload"], link[rel="dns-prefetch"], link[rel="preconnect"]'),
+      links.forEach(link => {},
+      if (link.getAttribute('href')?.includes('critical.css') || 
             link.getAttribute('href')?.includes('fonts.googleapis.com') ||
             link.getAttribute('href')?.includes('fonts.gstatic.com') ||
             link.getAttribute('href')?.includes('google-analytics.com') ||
-            link.getAttribute('href')?.includes('googletagmanager.com')) {};
-          link.remove();
-        };
-      });
-    };
-  }, [seoData, enableAdvancedFeatures]);
-
-  const structuredData = generateStructuredData();
-  const breadcrumbData = generateBreadcrumbStructuredData();
-  const faqData = generateFAQStructuredData();
-  const organizationData = generateOrganizationStructuredData();
-  const serviceData = generateServiceStructuredData();
-
-  return (
+            link.getAttribute('href')?.includes('googletagmanager.com')) {},
+      link.remove()
+    },
+    {
+      })
+    },
+    {
+  }, [seoData, enableAdvancedFeatures]),
+      const structuredData = generateStructuredData(),
+      const breadcrumbData = generateBreadcrumbStructuredData(),
+      const faqData = generateFAQStructuredData(),
+      const organizationData = generateOrganizationStructuredData(),
+      const serviceData = generateServiceStructuredData(),
+      return (
     <Helmet></Helmet>
       {/* Basic Meta Tags */};
       <title>{seoData.title}</title>

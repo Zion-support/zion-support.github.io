@@ -79,8 +79,8 @@
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {features.map((feature, index) => (
                 <div
-                  key={index};
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
+                  key={index},
+      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 ></div
 >
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-red-500 to-orange-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform"></div>
@@ -112,8 +112,8 @@
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
               {securityFeatures.map((feature, index) => (
                 <div
-                  key={index};
-                  className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
+                  key={index},
+      className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 ></div
 >
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
@@ -138,9 +138,9 @@
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
               {pricingPlans.map((plan, index) => (
                 <div
-                  key={index};
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${};
-                    plan.popular
+                  key={index},
+      className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${},
+      plan.popular
                       ? 'border-red-400 bg-gradient-to-br from-red-500/10 to-orange-500/10'
                       : 'border-white/20 hover:border-red-400'
                   }`};
@@ -171,8 +171,8 @@
                   </ul>
                   <Link
                     to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${};
-                      plan.popular
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${},
+      plan.popular
                         ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700'
                         : 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900'
                     }`};
@@ -200,8 +200,8 @@
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
               {testimonials.map((testimonial, index) => (
                 <div
-                  key={index};
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                  key={index},
+      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 ></div
 >
                   <div className="flex items-center mb-4"></div>
@@ -250,7 +250,8 @@
         </section>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ZionSecurityShieldPage;

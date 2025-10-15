@@ -12,109 +12,103 @@ const FinancialReportingToolPage = () => {
       icon: <BarChart3 className="w-8 h-8" />;
       benefits: ["Live data updates", "Custom KPIs", "Interactive charts", "Mobile responsive"]
     };
-    {};
-      title: "Automated Report Generation";
-      description: "Generate comprehensive financial reports automatically with customizable templates";
-      icon: <Zap className="w-8 h-8" />;
+    {},
+      title: "Automated Report Generation",
+      description: "Generate comprehensive financial reports automatically with customizable templates",
+      icon: <Zap className="w-8 h-8" />,
       benefits: ["Scheduled reports", "Custom templates", "PDF/Excel export", "Email delivery"]
     };
-    {};
-      title: "Cash Flow Analysis";
-      description: "Track and analyze cash flow patterns to optimize financial planning";
-      icon: <TrendingUp className="w-8 h-8" />;
+    {},
+      title: "Cash Flow Analysis",
+      description: "Track and analyze cash flow patterns to optimize financial planning",
+      icon: <TrendingUp className="w-8 h-8" />,
       benefits: ["Cash flow forecasting", "Trend analysis", "Variance reporting", "Scenario planning"]
     };
-    {};
-      title: "Budget vs Actual Analysis";
-      description: "Compare actual performance against budgets with detailed variance analysis";
-      icon: <Target className="w-8 h-8" />;
+    {},
+      title: "Budget vs Actual Analysis",
+      description: "Compare actual performance against budgets with detailed variance analysis",
+      icon: <Target className="w-8 h-8" />,
       benefits: ["Variance analysis", "Budget tracking", "Performance metrics", "Alert system"]
     };
-    {};
-      title: "Multi-entity Consolidation";
-      description: "Consolidate financial data from multiple entities and subsidiaries";
-      icon: <Database className="w-8 h-8" />;
+    {},
+      title: "Multi-entity Consolidation",
+      description: "Consolidate financial data from multiple entities and subsidiaries",
+      icon: <Database className="w-8 h-8" />,
       benefits: ["Entity management", "Intercompany elimination", "Currency conversion", "Consolidation rules"]
     };
-    {};
-      title: "Compliance & Audit Support";
-      description: "Ensure compliance with accounting standards and support audit processes";
-      icon: <Shield className="w-8 h-8" />;
+    {},
+      title: "Compliance & Audit Support",
+      description: "Ensure compliance with accounting standards and support audit processes",
+      icon: <Shield className="w-8 h-8" />,
       benefits: ["GAAP compliance", "Audit trails", "Documentation", "Regulatory reporting"]
     };
-  ];
-
-  const pricing = [
-    {};
-      name: "Starter";
-      price: "$59";
-      period: "per month";
-      description: "Perfect for small businesses with basic reporting needs";
-      features: [
-        "Up to 5 users";
-        "Basic dashboards";
-        "Standard reports";
-        "Email support";
+  ],
+      const pricing = [
+    {},
+      name: "Starter",
+      price: "$59",
+      period: "per month",
+      description: "Perfect for small businesses with basic reporting needs",
+      features: ["Up to 5 users",
+        "Basic dashboards",
+        "Standard reports",
+        "Email support",
         "Monthly data refresh"
-      ];
+      ],
       popular: false
     };
-    {};
-      name: "Professional";
-      price: "$129";
-      period: "per month";
-      description: "Ideal for growing businesses with advanced reporting requirements";
-      features: [
-        "Up to 25 users";
-        "Advanced analytics";
-        "Custom reports";
-        "API access";
-        "Priority support";
+    {},
+      name: "Professional",
+      price: "$129",
+      period: "per month",
+      description: "Ideal for growing businesses with advanced reporting requirements",
+      features: ["Up to 25 users",
+        "Advanced analytics",
+        "Custom reports",
+        "API access",
+        "Priority support",
         "Real-time data"
-      ];
+      ],
       popular: true
     };
-    {};
-      name: "Enterprise";
-      price: "$299";
-      period: "per month";
-      description: "For large organizations with complex financial reporting needs";
-      features: [
-        "Unlimited users";
-        "Advanced consolidation";
-        "Custom integrations";
-        "Dedicated support";
-        "Advanced security";
+    {},
+      name: "Enterprise",
+      price: "$299",
+      period: "per month",
+      description: "For large organizations with complex financial reporting needs",
+      features: ["Unlimited users",
+        "Advanced consolidation",
+        "Custom integrations",
+        "Dedicated support",
+        "Advanced security",
         "Custom development"
-      ];
+      ],
       popular: false
     };
-  ];
-
-  const benefits = [
-    {};
-      title: "Save Time";
-      description: "Reduce report generation time by up to 80% with automation";
+  ],
+      const benefits = [
+    {},
+      title: "Save Time",
+      description: "Reduce report generation time by up to 80% with automation",
       icon: <Zap className="w-6 h-6" />
     };
-    {};
-      title: "Improve Accuracy";
-      description: "Eliminate manual errors with automated data processing";
+    {},
+      title: "Improve Accuracy",
+      description: "Eliminate manual errors with automated data processing",
       icon: <Shield className="w-6 h-6" />
     };
-    {};
-      title: "Better Insights";
-      description: "Make informed decisions with comprehensive financial analytics";
+    {},
+      title: "Better Insights",
+      description: "Make informed decisions with comprehensive financial analytics",
       icon: <BarChart3 className="w-6 h-6" />
     };
-    {};
-      title: "Ensure Compliance";
-      description: "Stay compliant with automated regulatory reporting";
+    {},
+      title: "Ensure Compliance",
+      description: "Stay compliant with automated regulatory reporting",
       icon: <Target className="w-6 h-6" />
     };
-  ];
-
-  return (
+  ],
+      return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <EnhancedSEO
         title="Financial Reporting Tool - Zion Tech Group | Automated Financial Reports & Analytics"
@@ -132,8 +126,8 @@ const FinancialReportingToolPage = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
-            Streamline your financial reporting with our comprehensive tool. Generate automated reports;
-            track performance, and ensure compliance with advanced analytics and dashboards.
+            Streamline your financial reporting with our comprehensive tool. Generate automated reports,
+      track performance, and ensure compliance with advanced analytics and dashboards.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <FuturisticButton
@@ -234,8 +228,8 @@ const FinancialReportingToolPage = () => {
                 </ul>
                 <FuturisticButton
                   href="/contact"
-                  variant={plan.popular ? "primary" : "outline"};
-                  size="sm"
+                  variant={plan.popular ? "primary" : "outline"},
+      size="sm"
                   className="w-full"
                 ></FuturisticButton
 >

@@ -13,109 +13,103 @@ const InventoryManagementSystemPage = () => {
       icon: <Package className="w-8 h-8" />;
       benefits: ["Live stock levels", "Multi-location support", "Barcode scanning", "Automated updates"]
     };
-    {};
-      title: "Demand Forecasting";
-      description: "AI-powered demand forecasting to optimize inventory levels and reduce costs";
-      icon: <BarChart3 className="w-8 h-8" />;
+    {},
+      title: "Demand Forecasting",
+      description: "AI-powered demand forecasting to optimize inventory levels and reduce costs",
+      icon: <BarChart3 className="w-8 h-8" />,
       benefits: ["Predictive analytics", "Seasonal trends", "Demand patterns", "Reorder alerts"]
     };
-    {};
-      title: "Automated Reordering";
-      description: "Set up automatic reorder points and purchase orders to prevent stockouts";
-      icon: <Zap className="w-8 h-8" />;
+    {},
+      title: "Automated Reordering",
+      description: "Set up automatic reorder points and purchase orders to prevent stockouts",
+      icon: <Zap className="w-8 h-8" />,
       benefits: ["Reorder automation", "Supplier integration", "Purchase orders", "Approval workflows"]
     };
-    {};
-      title: "Multi-channel Management";
-      description: "Manage inventory across online stores, physical locations, and marketplaces";
-      icon: <Globe className="w-8 h-8" />;
+    {},
+      title: "Multi-channel Management",
+      description: "Manage inventory across online stores, physical locations, and marketplaces",
+      icon: <Globe className="w-8 h-8" />,
       benefits: ["Channel sync", "Marketplace integration", "Unified view", "Cross-channel analytics"]
     };
-    {};
-      title: "Reporting & Analytics";
-      description: "Comprehensive reports and analytics to optimize inventory performance";
-      icon: <BarChart3 className="w-8 h-8" />;
+    {},
+      title: "Reporting & Analytics",
+      description: "Comprehensive reports and analytics to optimize inventory performance",
+      icon: <BarChart3 className="w-8 h-8" />,
       benefits: ["Inventory reports", "Turnover analysis", "Cost tracking", "Custom dashboards"]
     };
-    {};
-      title: "Integration Hub";
-      description: "Connect with your existing systems for seamless data flow";
-      icon: <Database className="w-8 h-8" />;
+    {},
+      title: "Integration Hub",
+      description: "Connect with your existing systems for seamless data flow",
+      icon: <Database className="w-8 h-8" />,
       benefits: ["ERP integration", "Accounting software", "E-commerce platforms", "API access"]
     };
-  ];
-
-  const pricing = [
-    {};
-      name: "Starter";
-      price: "$49";
-      period: "per month";
-      description: "Perfect for small businesses with basic inventory needs";
-      features: [
-        "Up to 1,000 SKUs";
-        "Basic reporting";
-        "Email support";
-        "Mobile app access";
+  ],
+      const pricing = [
+    {},
+      name: "Starter",
+      price: "$49",
+      period: "per month",
+      description: "Perfect for small businesses with basic inventory needs",
+      features: ["Up to 1,000 SKUs",
+        "Basic reporting",
+        "Email support",
+        "Mobile app access",
         "1 warehouse location"
-      ];
+      ],
       popular: false
     };
-    {};
-      name: "Professional";
-      price: "$99";
-      period: "per month";
-      description: "Ideal for growing businesses with multiple locations";
-      features: [
-        "Up to 10,000 SKUs";
-        "Advanced analytics";
-        "Multi-location support";
-        "API access";
-        "Priority support";
+    {},
+      name: "Professional",
+      price: "$99",
+      period: "per month",
+      description: "Ideal for growing businesses with multiple locations",
+      features: ["Up to 10,000 SKUs",
+        "Advanced analytics",
+        "Multi-location support",
+        "API access",
+        "Priority support",
         "Automated reordering"
-      ];
+      ],
       popular: true
     };
-    {};
-      name: "Enterprise";
-      price: "$199";
-      period: "per month";
-      description: "For large organizations with complex inventory needs";
-      features: [
-        "Unlimited SKUs";
-        "Advanced forecasting";
-        "Custom integrations";
-        "Dedicated support";
-        "Advanced security";
+    {},
+      name: "Enterprise",
+      price: "$199",
+      period: "per month",
+      description: "For large organizations with complex inventory needs",
+      features: ["Unlimited SKUs",
+        "Advanced forecasting",
+        "Custom integrations",
+        "Dedicated support",
+        "Advanced security",
         "Custom reporting"
-      ];
+      ],
       popular: false
     };
-  ];
-
-  const benefits = [
-    {};
-      title: "Reduce Stockouts";
-      description: "Minimize stockouts by up to 80% with better demand forecasting";
+  ],
+      const benefits = [
+    {},
+      title: "Reduce Stockouts",
+      description: "Minimize stockouts by up to 80% with better demand forecasting",
       icon: <AlertTriangle className="w-6 h-6" />
     };
-    {};
-      title: "Lower Costs";
-      description: "Reduce inventory costs by 15-25% through optimized stock levels";
+    {},
+      title: "Lower Costs",
+      description: "Reduce inventory costs by 15-25% through optimized stock levels",
       icon: <Target className="w-6 h-6" />
     };
-    {};
-      title: "Improve Efficiency";
-      description: "Streamline operations and reduce manual work by 60%";
+    {},
+      title: "Improve Efficiency",
+      description: "Streamline operations and reduce manual work by 60%",
       icon: <Zap className="w-6 h-6" />
     };
-    {};
-      title: "Better Decisions";
-      description: "Make data-driven decisions with comprehensive analytics";
+    {},
+      title: "Better Decisions",
+      description: "Make data-driven decisions with comprehensive analytics",
       icon: <BarChart3 className="w-6 h-6" />
     };
-  ];
-
-  return (
+  ],
+      return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <EnhancedSEO
         title="Inventory Management System - Zion Tech Group | Stock Control & Analytics"
@@ -235,8 +229,8 @@ const InventoryManagementSystemPage = () => {
                 </ul>
                 <FuturisticButton
                   href="/contact"
-                  variant={plan.popular ? "primary" : "outline"};
-                  size="sm"
+                  variant={plan.popular ? "primary" : "outline"},
+      size="sm"
                   className="w-full"
                 ></FuturisticButton
 >

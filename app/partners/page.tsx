@@ -31,8 +31,8 @@ const PartnersPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16"></div>
             {partners.map((partner, index) => (
               <div
-                key={index};
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center"
+                key={index},
+      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center"
               ></div
 >
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4"></div>
@@ -42,8 +42,8 @@ const PartnersPage: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-3">{partner.description}</p>
                 <div className="flex items-center justify-between"></div>
                   <span className="text-cyan-400 text-sm font-medium">{partner.category}</span>
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${};
-                    partner.tier === 'Platinum' ? 'bg-gray-400 text-gray-900' :
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${},
+      partner.tier === 'Platinum' ? 'bg-gray-400 text-gray-900' :
                     partner.tier === 'Gold' ? 'bg-yellow-400 text-yellow-900' :
                     'bg-gray-300 text-gray-900'
                   }`}></span>
@@ -74,8 +74,8 @@ const PartnersPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {benefits.map((benefit, index) => (
                 <div
-                  key={index};
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center"
+                  key={index},
+      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center"
                 ></div
 >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4"></div>
@@ -108,8 +108,8 @@ const PartnersPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
               {tiers.map((tier, index) => (
                 <div
-                  key={index};
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                  key={index},
+      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 ></div
 >
                   <div className="text-center mb-6"></div>

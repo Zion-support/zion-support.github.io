@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface Props {};
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (_error: Error, errorInfo: ErrorInfo) => void;
-};
-interface State {};
-  hasError: boolean
+import React, { useState } from 'react',
+      import React, { Component, ErrorInfo, ReactNode } from 'react',
+      interface Props {},
+      children: ReactNode,
+      fallback?: ReactNode,
+      onError?: (_error: Error, errorInfo: ErrorInfo) => void
+    },
+    {
+interface State {},
+      hasError: boolean
   error: Error | null
   errorInfo: ErrorInfo | null
   retryCount: number
@@ -23,61 +23,66 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
       error: null;
       errorInfo: null;
       retryCount: 0
-    };
-  };
-  static getDerivedStateFromError(error: Error): Partial<State> {};
-    return {};
-      hasError: true;
+    }
+    },
+    {
+  static getDerivedStateFromError(error: Error): Partial<State> {},
+      return {},
+      hasError: true,
       error
-    };
-  };
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {};
-    this.setState({};
-      error;
+    }
+    },
+    {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {},
+      this.setState({},
+      error,
       errorInfo
     })
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {};
-      };
+    if (process.env.NODE_ENV === 'development') {}
+    },
+    {
     // Call custom error handler if provided
-    if (this.props.onError) {};
+    if (this.props.onError) {},
       this.props.onError(error, errorInfo)
     };
     // Log to external service in production
-    if (process.env.NODE_ENV === 'production') {};
+    if (process.env.NODE_ENV === 'production') {},
       this.logErrorToService(error, errorInfo)
-    };
-  };
+    }
+    },
+    {
   private logErrorToService = (_error: Error, errorInfo: ErrorInfo) => {};
     // In a real app, you would send this to an error reporting service
     // like Sentry, LogRocket, or Bugsnag
-    .toISOString();
-      userAgent: navigator.userAgent;
+    .toISOString(),
+      userAgent: navigator.userAgent,
       url: window.location.href
     })
-  };
-  private handleRetry = () => {};
-}if (this.state.retryCount < this.maxRetries) {};
-      this.setState(prevState => ({};
-        hasError: false;
-        error: null;
-        errorInfo: null;
-        retryCount: prevState.retryCount + 1
+  },
+      private handleRetry = () => {};
+}if (this.state.retryCount < this.maxRetries) {},
+      this.setState(prevState => ({},
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      retryCount: prevState.retryCount + 1
       }))
-    };
-  };
+    }
+    },
+    {
   private handleGoHome = () => {};
 }window.location.href = '/'
-  };
-  private handleReload = () => {};
+  },
+      private handleReload = () => {};
 }window.location.reload()
-  };
-  render() {};
-    if (this.state.hasError) {};
+  },
+      render() {},
+      if (this.state.hasError) {};
       // Use custom fallback if provided
-      if (this.props.fallback) {};
-        return this.props.fallback
-      };
+      if (this.props.fallback) {},
+      return this.props.fallback
+      },
       return ()
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
@@ -124,24 +129,24 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               {this.state.retryCount < this.maxRetries && ()
                 <button
-                  onClick={this.handleRetry};
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                  onClick={this.handleRetry},
+      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 ></>
                   <RefreshCw className="w-5 h-5 mr-2" />
                   Try Again ({this.maxRetries - this.state.retryCount} left)
                 </button>
               )};
               <button
-                onClick={this.handleGoHome};
-                className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center border border-white/20"
+                onClick={this.handleGoHome},
+      className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center border border-white/20"
               ></button
 >
                 <Home className="w-5 h-5 mr-2" />
                 Go Home
               </button>
               <button
-                onClick={this.handleReload};
-                className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center border border-white/20"
+                onClick={this.handleReload},
+      className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center border border-white/20"
               ></button
 >
                 <RefreshCw className="w-5 h-5 mr-2" />
@@ -162,32 +167,33 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
           </div>
         </div>
       )
-    };
-    return this.props.children
-  };
-};
+    },
+      return this.props.children
+  }
+    },
+    {
 // Functional error boundary for specific components
-export const ErrorBoundary: React.FC<{};
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (_error: Error) => void;
-}> = ({ children, fallback, _onError }) => {};
-  const [hasError, setHasError] = React.useState(false);
-  const [error, setError] = React.useState<Error | null>(null);
-
-  React.useEffect(() => {};
-    const handleError = (_event: ErrorEvent) => {};
-      setHasError(true);
-      setError(new Error(event.message));
-      if (onError) {};
-        onError(new Error(event.message));
-      };
-    };
-    window.addEventListener('error', handleError)
+export const ErrorBoundary: React.FC<{},
+      children: ReactNode,
+      fallback?: ReactNode,
+      onError?: (_error: Error) => void;
+}> = ({ children, fallback, _onError }) => {},
+      const [hasError, setHasError] = React.useState(false),
+      const [error, setError] = React.useState<Error | null>(null),
+      React.useEffect(() => {},
+      const handleError = (_event: ErrorEvent) => {},
+      setHasError(true),
+      setError(new Error(event.message)),
+      if (onError) {},
+      onError(new Error(event.message))
+    },
+    {
+    },
+      window.addEventListener('error', handleError)
     return () => window.removeEventListener('error', handleError)
   }, [onError])
-  if (hasError) {};
-    return fallback || ()
+  if (hasError) {},
+      return fallback || ()
       <div className="p-4 bg-red-500/20 border border-red-500/30 rounded-lg"></div>
         <p className="text-red-300">Something went wrong: {error?.message}</p>
       </div>

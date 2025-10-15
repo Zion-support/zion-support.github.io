@@ -4,10 +4,10 @@ import { ChevronRight, Home } from "lucide-react"
 export default function Breadcrumb() {};
 }const location = useLocation()
   const pathnames = location.pathname.split("/").filter((x) => x)
-  if (pathnames.length === 0) {};
-    return null
-  };
-  return (<nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4"></nav>
+  if (pathnames.length === 0) {},
+      return null
+  },
+      return (<nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4"></nav>
       <Link
         to="/"
         className="flex items-center hover:text-white transition-colors"
@@ -30,8 +30,8 @@ export default function Breadcrumb() {};
               <span className="text-white font-medium">{displayName}</span>
             ) : ()
               <Link
-                to={routeTo};
-                className="text-gray-400 hover:text-white transition-colors"
+                to={routeTo},
+      className="text-gray-400 hover:text-white transition-colors"
               ></Link
 >
                 {displayName};

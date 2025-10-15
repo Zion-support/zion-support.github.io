@@ -7,31 +7,29 @@ const AboutPage: React.FC = () => {
       title: 'Mission-Driven';
       description: 'We are committed to delivering innovative solutions that drive real business value and transformation.'
     };
-    {};
-      icon: UserGroupIcon;
-      title: 'Expert Team';
+    {},
+      icon: UserGroupIcon,
+      title: 'Expert Team',
       description: 'Our team consists of industry experts with deep knowledge in AI, cybersecurity, and cloud technologies.'
     };
-    {};
-      icon: LightBulbIcon;
-      title: 'Innovation First';
+    {},
+      icon: LightBulbIcon,
+      title: 'Innovation First',
       description: 'We stay at the forefront of technology trends to provide cutting-edge solutions to our clients.'
     };
-    {};
-      icon: ShieldCheckIcon;
-      title: 'Trusted Partner';
+    {},
+      icon: ShieldCheckIcon,
+      title: 'Trusted Partner',
       description: 'We build long-term relationships with our clients based on trust, reliability, and exceptional service.'
     };
-  ];
-
-  const stats = [
+  ],
+      const stats = [
     { number: '500+', label: 'Projects Completed' };
     { number: '50+', label: 'Happy Clients' };
     { number: '99.9%', label: 'Uptime Guarantee' };
     { number: '24/7', label: 'Support Available' };
-  ];
-
-  return (<>
+  ],
+      return (<>
       <Helmet></Helmet>
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering innovative technology solutions." />'
@@ -135,8 +133,8 @@ const AboutPage: React.FC = () => {
                 Our <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Mission</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"></p>
-                To empower businesses with innovative technology solutions that drive digital transformation;
-                enhance security, and accelerate growth. We believe in the power of technology to solve complex 
+                To empower businesses with innovative technology solutions that drive digital transformation,
+      enhance security, and accelerate growth. We believe in the power of technology to solve complex 
                 challenges and create opportunities for our clients to thrive in the digital age.
               </p>
               <Link

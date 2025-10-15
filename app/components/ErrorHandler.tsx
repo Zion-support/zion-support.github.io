@@ -1,80 +1,84 @@
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
-interface Props {};
-  children: ReactNode
+interface Props {},
+      children: ReactNode
   fallback?: ReactNode
-};
-interface State {};
-  hasError: boolean
+},
+      interface State {},
+      hasError: boolean
   error: Error | null
   errorInfo: ErrorInfo | null
-};
-class ErrorHandler extends Component<Props, State> {};
-  constructor(props: Props) {};
-    super(props)
-    this.state = {};
-      hasError: false;
-      error: null;
+},
+      class ErrorHandler extends Component<Props, State> {},
+      constructor(props: Props) {},
+      super(props)
+    this.state = {},
+      hasError: false,
+      error: null,
       errorInfo: null
-    };
-  };
-  static getDerivedStateFromError(error: Error): State {};
-    return {};
-      hasError: true;
-      error;
+    }
+    },
+    {
+  static getDerivedStateFromError(error: Error): State {},
+      return {},
+      hasError: true,
+      error,
       errorInfo: null
-    };
-  };
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {};
-    this.setState({};
-      error;
+    }
+    },
+    {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {},
+      this.setState({},
+      error,
       errorInfo
     })
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {};
+    if (process.env.NODE_ENV === 'development') {},
       console.error('Error caught by handler:', error, errorInfo)
     };
     // Send error to monitoring service in production
     if (process.env.NODE_ENV === 'production') {};
       // You can integrate with services like Sentry, LogRocket, etc.
       this.logErrorToService(error, errorInfo)
-    };
-  };
+    }
+    },
+    {
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {};
 }// Example: Send to monitoring service
     try {};
-} catch (error) {};
-  console.error(error)
+} catch (error) {},
+      console.error(error)
 }// Replace with your actual error reporting service
-      const errorData = {};
-        message: error.message;
-        stack: error.stack;
-        componentStack: errorInfo.componentStack;
-        timestamp: new Date().toISOString()
-      };
+      const errorData = {},
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString()
+      },
       console.log('Error logged:', errorData)
       // Send to your error reporting service here
 
       console.log('Error data prepared for reporting:', errorData);
-    } catch (reportingError) {};
-      console.error('Failed to prepare error data for reporting:', reportingError);
-    };
-  };
-  handleRetry = () => {};
-}this.setState({};
-      hasError: false;
-      error: null;
+    } catch (reportingError) {},
+      console.error('Failed to prepare error data for reporting:', reportingError)
+    },
+    {
+  },
+      handleRetry = () => {};
+}this.setState({},
+      hasError: false,
+      error: null,
       errorInfo: null
     })
-  };
-  handleGoHome = () => {};
+  },
+      handleGoHome = () => {};
 }window.location.href = '/'
-  };
-  render() {};
-    if (this.state.hasError) {};
-      if (this.props.fallback) {};
-        return this.props.fallback
-      };
+  },
+      render() {},
+      if (this.state.hasError) {},
+      if (this.props.fallback) {},
+      return this.props.fallback
+      },
       return ()
         <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>
@@ -113,16 +117,16 @@ class ErrorHandler extends Component<Props, State> {};
             )};
             <div className="flex flex-col sm:flex-row gap-3 justify-center"></div>
               <button
-                onClick={this.handleRetry};
-                className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                onClick={this.handleRetry},
+      className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               ></button
 >
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
               <button
-                onClick={this.handleGoHome};
-                className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+                onClick={this.handleGoHome},
+      className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
               ></button
 >
                 <Home className="w-4 h-4 mr-2" />
@@ -132,8 +136,9 @@ class ErrorHandler extends Component<Props, State> {};
           </div>
         </div>
       )
-    };
-    return this.props.children
-  };
-};
+    },
+      return this.props.children
+  }
+    },
+    {
 export default ErrorHandler

@@ -41,8 +41,8 @@ const AiMarketingAutomationPage: React.FC = () => {
               </h1>
             </div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
-              Transform your marketing with AI-powered automation. From intelligent email campaigns to social media management;
-              our platform helps you engage customers, nurture leads, and drive conversions at scale.
+              Transform your marketing with AI-powered automation. From intelligent email campaigns to social media management,
+      our platform helps you engage customers, nurture leads, and drive conversions at scale.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <Link
@@ -83,8 +83,8 @@ const AiMarketingAutomationPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {features.map((feature, index) => (<div
-                  key={index};
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10 relative overflow-hidden"
+                  key={index},
+      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10 relative overflow-hidden"
                 ></div
 >
                   {/* Animated background effect */};
@@ -147,9 +147,9 @@ const AiMarketingAutomationPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
               {pricing.map((plan, index) => (
                 <div
-                  key={index};
-                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${};
-                    plan.popular 
+                  key={index},
+      className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${},
+      plan.popular 
                       ? 'border-pink-400 hover:shadow-pink-500/25' 
                       : 'border-white/20 hover:shadow-pink-500/10'
                   }`};
@@ -186,8 +186,8 @@ const AiMarketingAutomationPage: React.FC = () => {
                     
                     <Link
                       to="/contact"
-                      className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${};
-                        plan.popular
+                      className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${},
+      plan.popular
                           ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
                           : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900'
                       }`};

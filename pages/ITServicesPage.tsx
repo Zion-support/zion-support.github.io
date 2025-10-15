@@ -1,28 +1,28 @@
 
 import { Helmet } from 'react-helmet-async'
-import {};
-  Server;
-  Shield;
-  Cloud;
-  Database;
-  Code;
-  Network;
-  Settings;
-  Zap;
-  CheckCircle;
-  Star;
-  ArrowRight;
-  Rocket;
-  Users;
-  Clock
+import {},
+      Server,
+      Shield,
+      Cloud,
+      Database,
+      Code,
+      Network,
+      Settings,
+      Zap,
+      CheckCircle,
+      Star,
+      ArrowRight,
+      Rocket,
+      Users,
+      Clock
 } from 'lucide-react'
 const ITServicesPage: React.FC = () => {};
 }const itServices = []
-    {};
-      id: 'cloud-infrastructure-management';
-      name: 'Cloud Infrastructure Management';
-      description: 'Comprehensive cloud solutions with auto-scaling, monitoring, and security compliance';
-      price: '$199/month';
+    {},
+      id: 'cloud-infrastructure-management',
+      name: 'Cloud Infrastructure Management',
+      description: 'Comprehensive cloud solutions with auto-scaling, monitoring, and security compliance',
+      price: '$199/month',
       features: []
         'Auto-scaling Infrastructure';
         '99.9% Uptime Guarantee';
@@ -30,23 +30,23 @@ const ITServicesPage: React.FC = () => {};
         'Security Compliance';
         'Backup & Recovery';
         'Cost Optimization'
-      ];
+      ],
       benefits: []
         'Reduce infrastructure costs by 30%';
         'Improve system reliability';
         'Scale automatically with demand'
-      ];
-      popular: true;
-      rating: 4.8;
-      clients: 180;
-      icon: Cloud;
+      ],
+      popular: true,
+      rating: 4.8,
+      clients: 180,
+      icon: Cloud,
       category: 'Infrastructure'
     };
-    {};
-      id: 'cybersecurity-suite';
-      name: 'Advanced Cybersecurity Suite';
-      description: 'Enterprise-grade security monitoring and protection with real-time threat detection';
-      price: '$499/month';
+    {},
+      id: 'cybersecurity-suite',
+      name: 'Advanced Cybersecurity Suite',
+      description: 'Enterprise-grade security monitoring and protection with real-time threat detection',
+      price: '$499/month',
       features: []
         'Threat Detection & Response';
         'Real-time Security Monitoring';
@@ -54,23 +54,23 @@ const ITServicesPage: React.FC = () => {};
         'Incident Response';
         'Security Training';
         'Penetration Testing'
-      ];
+      ],
       benefits: []
         'Prevent 99.9% of cyber attacks';
         'Meet compliance requirements';
         'Reduce security incidents by 95%'
-      ];
-      popular: true;
-      rating: 4.9;
-      clients: 100;
-      icon: Shield;
+      ],
+      popular: true,
+      rating: 4.9,
+      clients: 100,
+      icon: Shield,
       category: 'Security'
     };
-    {};
-      id: 'devops-automation-platform';
-      name: 'DevOps Automation Platform';
-      description: 'Complete CI/CD pipeline automation with monitoring, testing, and deployment management';
-      price: '$349/month';
+    {},
+      id: 'devops-automation-platform',
+      name: 'DevOps Automation Platform',
+      description: 'Complete CI/CD pipeline automation with monitoring, testing, and deployment management',
+      price: '$349/month',
       features: []
         'CI/CD Pipeline Automation';
         'Automated Testing';
@@ -78,23 +78,23 @@ const ITServicesPage: React.FC = () => {};
         'Performance Monitoring';
         'Rollback Capabilities';
         'Team Collaboration Tools'
-      ];
+      ],
       benefits: []
         'Deploy 10x faster';
         'Reduce deployment errors by 90%';
         'Improve team productivity by 60%'
-      ];
-      popular: false;
-      rating: 4.7;
-      clients: 90;
-      icon: Code;
+      ],
+      popular: false,
+      rating: 4.7,
+      clients: 90,
+      icon: Code,
       category: 'DevOps'
     };
-    {};
-      id: 'database-solutions';
-      name: 'Database Management Solutions';
-      description: 'Advanced database administration with optimization, backup, and performance monitoring';
-      price: '$279/month';
+    {},
+      id: 'database-solutions',
+      name: 'Database Management Solutions',
+      description: 'Advanced database administration with optimization, backup, and performance monitoring',
+      price: '$279/month',
       features: []
         'Database Optimization';
         'Automated Backups';
@@ -102,23 +102,23 @@ const ITServicesPage: React.FC = () => {};
         'Query Optimization';
         'Security Hardening';
         'Disaster Recovery'
-      ];
+      ],
       benefits: []
         'Improve query performance by 80%';
         'Ensure data integrity';
         'Reduce downtime by 95%'
-      ];
-      popular: false;
-      rating: 4.6;
-      clients: 70;
-      icon: Database;
+      ],
+      popular: false,
+      rating: 4.6,
+      clients: 70,
+      icon: Database,
       category: 'Database'
     };
-    {};
-      id: 'network-infrastructure';
-      name: 'Network Infrastructure Services';
-      description: 'Comprehensive network design, implementation, and management for enterprise environments';
-      price: '$229/month';
+    {},
+      id: 'network-infrastructure',
+      name: 'Network Infrastructure Services',
+      description: 'Comprehensive network design, implementation, and management for enterprise environments',
+      price: '$229/month',
       features: []
         'Network Design & Planning';
         'Wireless Solutions';
@@ -126,23 +126,23 @@ const ITServicesPage: React.FC = () => {};
         'Load Balancing';
         'Network Monitoring';
         'Performance Optimization'
-      ];
+      ],
       benefits: []
         'Improve network performance by 50%';
         'Reduce connectivity issues';
         'Enhance security posture'
-      ];
-      popular: false;
-      rating: 4.5;
-      clients: 85;
-      icon: Network;
+      ],
+      popular: false,
+      rating: 4.5,
+      clients: 85,
+      icon: Network,
       category: 'Networking'
     };
-    {};
-      id: 'it-consulting';
-      name: 'IT Consulting & Strategy';
-      description: 'Strategic IT consulting to align technology with business objectives and digital transformation';
-      price: '$150/hour';
+    {},
+      id: 'it-consulting',
+      name: 'IT Consulting & Strategy',
+      description: 'Strategic IT consulting to align technology with business objectives and digital transformation',
+      price: '$150/hour',
       features: []
         'IT Strategy Development';
         'Technology Assessment';
@@ -150,23 +150,22 @@ const ITServicesPage: React.FC = () => {};
         'Vendor Management';
         'Project Planning';
         'Change Management'
-      ];
+      ],
       benefits: []
         'Align IT with business goals';
         'Reduce technology costs';
         'Accelerate digital transformation'
-      ];
-      popular: false;
-      rating: 4.8;
-      clients: 120;
-      icon: Settings;
+      ],
+      popular: false,
+      rating: 4.8,
+      clients: 120,
+      icon: Settings,
       category: 'Consulting'
     };
   ];
 
-  // const categories = ['All', 'Infrastructure', 'Security', 'DevOps', 'Database', 'Networking', 'Consulting'];
-
-  const stats = [
+  // const categories = ['All', 'Infrastructure', 'Security', 'DevOps', 'Database', 'Networking', 'Consulting'],
+      const stats = [
     { number: '500+', label: 'Infrastructure Projects', icon: Server };
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield };
     { number: '24/7', label: 'Support Available', icon: Clock };
@@ -190,8 +189,8 @@ const ITServicesPage: React.FC = () => {};
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
-              Comprehensive IT services designed to optimize your technology infrastructure, enhance security;
-              and drive digital transformation. From cloud migration to cybersecurity, we&apos;ve got you covered.
+              Comprehensive IT services designed to optimize your technology infrastructure, enhance security,
+      and drive digital transformation. From cloud migration to cybersecurity, we&apos;ve got you covered.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <Link
@@ -239,14 +238,14 @@ const ITServicesPage: React.FC = () => {};
               Our IT Service Portfolio
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Choose from our comprehensive range of IT services designed to modernize your infrastructure;
-              enhance security, and optimize performance across all technology platforms.
+              Choose from our comprehensive range of IT services designed to modernize your infrastructure,
+      enhance security, and optimize performance across all technology platforms.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {itServices.map((service) => ()
-              <div key={service.id} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${};
-                service.popular
+              <div key={service.id} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${},
+      service.popular
                   ? 'border-purple-500/60 ring-2 ring-purple-500/20'
                   : 'border-purple-500/20 hover:border-purple-500/40'
               }`}></div>
@@ -302,9 +301,9 @@ const ITServicesPage: React.FC = () => {};
                 </div>
                 <div className="space-y-3"></div>
                   <Link
-                    to={`/service/${service.id}`};
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${};
-                      service.popular
+                    to={`/service/${service.id}`},
+      className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${},
+      service.popular
                         ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600'
                         : 'border border-purple-500 text-purple-300 hover:bg-purple-500/10'
                     }`};
@@ -334,8 +333,8 @@ const ITServicesPage: React.FC = () => {};
               Why Choose Our IT Services?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Our IT solutions are built on enterprise-grade technology and designed to deliver reliable;
-              scalable, and secure infrastructure for your business.
+              Our IT solutions are built on enterprise-grade technology and designed to deliver reliable,
+      scalable, and secure infrastructure for your business.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
@@ -409,5 +408,5 @@ const ITServicesPage: React.FC = () => {};
       </section>
 </div>
   )
-};
-export default ITServicesPage
+},
+      export default ITServicesPage

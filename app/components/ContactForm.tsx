@@ -1,60 +1,60 @@
-import React, { useState } from 'react';
-import React, { useState } from "react";
-
-interface FormData {};
-  name: string;
-  email: string;
-  phone: string;
-  company: string;
-  message: string;
-  service: string;
-};
+import React, { useState } from 'react',
+      import React, { useState } from "react",
+      interface FormData {},
+      name: string,
+      email: string,
+      phone: string,
+      company: string,
+      message: string,
+      service: string
+    },
+    {
 const ContactForm: React.FC = () => {};
-}const [formData, setFormData] = useState<FormData>({};
-    name: "";
-    email: "";
-    phone: "";
-    company: "";
-    message: "";
-    service: "";
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleChange = (_e: React.ChangeEvent<
+}const [formData, setFormData] = useState<FormData>({},
+      name: "",
+      email: "",
+      phone: "",
+      company: "",
+      message: "",
+      service: "",
+      }),
+      const [isSubmitting, setIsSubmitting] = useState(false),
+      const [isSubmitted, setIsSubmitted] = useState(false),
+      const handleChange = (_e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >, ) => {};
-    const { name, value } = e.target;
-    setFormData((prev) => ({};
+    >, ) => {},
+      const { name, value } = e.target,
+      setFormData((prev) => ({};
       ...prev;
       [name]: value;
-    }));
-  };
+    }))
+    },
+    {
 
-  const handleSubmit = async (_e: React.FormEvent) => {};
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {};
+  const handleSubmit = async (_e: React.FormEvent) => {},
+      e.preventDefault(),
+      setIsSubmitting(true),
+      try {};
       // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setIsSubmitted(true);
-      setFormData({};
-        name: "";
-        email: "";
-        phone: "";
-        company: "";
-        message: "";
-        service: "";
+      await new Promise((resolve) => setTimeout(resolve, 1000)),
+      setIsSubmitted(true),
+      setFormData({},
+      name: "",
+      email: "",
+      phone: "",
+      company: "",
+      message: "",
+      service: "",
       });
 
     } catch (error) {};
-      } finally {};
-      setIsSubmitting(false);
-    };
-  };
-  if (isSubmitted) {};
-    return ()
+      } finally {},
+      setIsSubmitting(false)
+    },
+    {
+  },
+      if (isSubmitted) {},
+      return ()
       <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center"></div>
         <MessageSquare className="w-8 h-8 mx-auto mb-2" />
         <h3 className="text-lg font-semibold mb-2">Thank you!</h3>
@@ -63,8 +63,8 @@ const ContactForm: React.FC = () => {};
         </p>
       </div>
     )
-  };
-  return ()
+  },
+      return ()
     <form onSubmit={handleSubmit} className="space-y-6"></form>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
         <div></div>
@@ -79,9 +79,9 @@ const ContactForm: React.FC = () => {};
             type="text"
             id="name"
             name="name"
-            value={formData.name};
-            onChange={handleChange};
-            required
+            value={formData.name},
+      onChange={handleChange},
+      required
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
         </div>
@@ -97,9 +97,9 @@ const ContactForm: React.FC = () => {};
             type="email"
             id="email"
             name="email"
-            value={formData.email};
-            onChange={handleChange};
-            required
+            value={formData.email},
+      onChange={handleChange},
+      required
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
         </div>
@@ -117,9 +117,9 @@ const ContactForm: React.FC = () => {};
             type="tel"
             id="phone"
             name="phone"
-            value={formData.phone};
-            onChange={handleChange};
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            value={formData.phone},
+      onChange={handleChange},
+      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
         </div>
         <div></div>
@@ -134,9 +134,9 @@ const ContactForm: React.FC = () => {};
             type="text"
             id="company"
             name="company"
-            value={formData.company};
-            onChange={handleChange};
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            value={formData.company},
+      onChange={handleChange},
+      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
         </div>
       </div>
@@ -151,9 +151,9 @@ const ContactForm: React.FC = () => {};
         <select
           id="service"
           name="service"
-          value={formData.service};
-          onChange={handleChange};
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+          value={formData.service},
+      onChange={handleChange},
+      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
         ></select
 >
           <option value="">Select a service</option>
@@ -175,23 +175,23 @@ const ContactForm: React.FC = () => {};
         <textarea
           id="message"
           name="message"
-          value={formData.message};
-          onChange={handleChange};
-          required
-          rows={5};
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+          value={formData.message},
+      onChange={handleChange},
+      required
+          rows={5},
+      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           placeholder="Tell us about your project or requirements..."
         />
       </div>
       <button
         type="submit"
-        disabled={isSubmitting};
-        className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        disabled={isSubmitting},
+      className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       ></button
 >
         {isSubmitting ? "Sending..." : "Send Message"};
       </button>
     </form>
   )
-};
-export default ContactForm
+},
+      export default ContactForm

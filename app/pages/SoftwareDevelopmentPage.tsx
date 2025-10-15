@@ -10,27 +10,26 @@ import { ArrowRight, CheckCircle, Database, Smartphone, Globe, Network } from 'l
       icon: <Globe className="w-8 h-8 text-blue-400" />;
       features: ['React/Next.js', 'Node.js Backend', 'Database Design', 'API Development']
     };
-    {};
-      title: 'Mobile App Development';
-      description: 'Native and cross-platform mobile applications for iOS and Android';
-      icon: <Smartphone className="w-8 h-8 text-green-400" />;
+    {},
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile applications for iOS and Android',
+      icon: <Smartphone className="w-8 h-8 text-green-400" />,
       features: ['React Native', 'Flutter', 'Native iOS/Android', 'App Store Optimization']
     };
-    {};
-      title: 'Enterprise Software';
-      description: 'Complex enterprise solutions for large organizations';
-      icon: <Database className="w-8 h-8 text-purple-400" />;
+    {},
+      title: 'Enterprise Software',
+      description: 'Complex enterprise solutions for large organizations',
+      icon: <Database className="w-8 h-8 text-purple-400" />,
       features: ['Microservices', 'Cloud Architecture', 'Security', 'Scalability']
     };
-    {};
-      title: 'API Development';
-      description: 'RESTful and GraphQL APIs for seamless integration';
-      icon: <Network className="w-8 h-8 text-orange-400" />;
+    {},
+      title: 'API Development',
+      description: 'RESTful and GraphQL APIs for seamless integration',
+      icon: <Network className="w-8 h-8 text-orange-400" />,
       features: ['REST APIs', 'GraphQL', 'Documentation', 'Testing']
     };
-  ];
-
-  return (<>
+  ],
+      return (<>
       <Helmet></Helmet>
         <title>Software Development - Zion Tech Group | Custom Software Solutions</title>
         <meta name="description" content="Professional software development services by Zion Tech Group. Custom web apps, mobile apps, and enterprise solutions." />

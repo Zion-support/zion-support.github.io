@@ -1,32 +1,31 @@
-import React, { useState } from 'react';
-import React, { useState } from "react";
-
-interface ContentNewsletterSignupProps {};
-  className?: string;
-};
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({};
-  className = "", }) => {};
-  const [email, setEmail] = useState("");
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (_e: React.FormEvent) => {};
-    e.preventDefault();
-    setIsLoading(true);
-
-    try {};
+import React, { useState } from 'react',
+      import React, { useState } from "react",
+      interface ContentNewsletterSignupProps {},
+      className?: string
+    },
+    {
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({},
+      className = "", }) => {},
+      const [email, setEmail] = useState(""),
+      const [isSubscribed, setIsSubscribed] = useState(false),
+      const [isLoading, setIsLoading] = useState(false),
+      const handleSubmit = async (_e: React.FormEvent) => {},
+      e.preventDefault(),
+      setIsLoading(true),
+      try {};
       // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setIsSubscribed(true);
+      await new Promise((resolve) => setTimeout(resolve, 1000)),
+      setIsSubscribed(true),
       setEmail("");
 
     } catch (error) {};
-      } finally {};
-      setIsLoading(false);
-    };
-  };
-  if (isSubscribed) {};
-    return ()
+      } finally {},
+      setIsLoading(false)
+    },
+    {
+  },
+      if (isSubscribed) {},
+      return ()
       <div
         className={`bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg text-center ${className}`};
       ></div
@@ -38,8 +37,8 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({};
         <p>You'll receive our latest updates and exclusive content.</p>'
       </div>
     )
-  };
-  return (<div
+  },
+      return (<div
       className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`};
     ></div
 >
@@ -54,17 +53,17 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({};
         <div></div>
           <input
             type="email"
-            value={email};
-            onChange={(e) => setEmail(e.target.value)};
-            placeholder="Enter your email address"
+            value={email},
+      onChange={(e) => setEmail(e.target.value)},
+      placeholder="Enter your email address"
             required
             className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
         </div>
         <button
           type="submit"
-          disabled={isLoading};
-          className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          disabled={isLoading},
+      className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
         ></button
 >
           {isLoading ? "Subscribing..." : "Subscribe Now"};
@@ -75,5 +74,5 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({};
       </p>
     </div>
   )
-};
-export default ContentNewsletterSignup
+},
+      export default ContentNewsletterSignup

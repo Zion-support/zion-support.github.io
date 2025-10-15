@@ -1,7 +1,6 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
-const CompliancePage: React.FC = () => {
+import React from 'react',
+      import SEOHead from '../components/SEOHead',
+      const CompliancePage: React.FC = () => {
   return (
     <>
       <SEOHead 
@@ -15,7 +14,8 @@ const CompliancePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default CompliancePage;

@@ -41,8 +41,8 @@ const CustomDevelopmentPage: React.FC = () => {
               </h1>
             </div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
-              Transform your ideas into powerful software solutions. From web applications to mobile apps;
-              we create custom software that perfectly fits your business needs and drives growth.
+              Transform your ideas into powerful software solutions. From web applications to mobile apps,
+      we create custom software that perfectly fits your business needs and drives growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <Link
@@ -83,8 +83,8 @@ const CustomDevelopmentPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {services.map((service, index) => (<div
-                  key={index};
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                  key={index},
+      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 ></div
 >
                   {/* Animated background effect */};
@@ -119,8 +119,8 @@ const CustomDevelopmentPage: React.FC = () => {
                       <div className="flex flex-wrap gap-2 justify-center"></div>
                         {service.features.map((feature, idx) => (
                           <span
-                            key={idx};
-                            className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full border border-cyan-500/30"
+                            key={idx},
+      className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full border border-cyan-500/30"
                           ></span
 >
                             {feature};
@@ -131,8 +131,8 @@ const CustomDevelopmentPage: React.FC = () => {
                     
                     <div className="mt-4 text-center"></div>
                       <Link
-                        to={service.path};
-                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-all duration-300"
+                        to={service.path},
+      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-all duration-300"
                       ></Link
 >
                         Learn More

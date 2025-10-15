@@ -1,81 +1,76 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-export default function ZionAnalyticsPro() {};
-  const features = [
-    "Real-time dashboard analytics";
-    "Predictive business insights";
-    "Automated report generation";
-    "Custom data visualization";
-    "Multi-platform integration";
-    "Advanced filtering & segmentation";
-    "Export to PDF/Excel/CSV";
-    "White-label options";
-    "AI-powered recommendations";
-    "Mobile app access";
-    "API integration";
-    "Custom metrics & KPIs"
-  ];
-
-  const benefits = [
-    "Increase revenue by 25%";
-    "Reduce reporting time by 80%";
-    "Make data-driven decisions";
-    "Scale with your business";
-    "Improve operational efficiency";
-    "Identify growth opportunities"
-  ];
-
-  const pricing = [
-    {};
-      name: "Starter";
-      price: "$29";
-      period: "month";
-      description: "Perfect for small businesses";
-      features: ["Up to 5 data sources", "Basic dashboards", "Email support", "1 user"];
+export default function ZionAnalyticsPro() {},
+      const features = ["Real-time dashboard analytics",
+        "Predictive business insights",
+        "Automated report generation",
+        "Custom data visualization",
+        "Multi-platform integration",
+        "Advanced filtering & segmentation",
+        "Export to PDF/Excel/CSV",
+        "White-label options",
+        "AI-powered recommendations",
+        "Mobile app access",
+        "API integration",
+        "Custom metrics & KPIs"
+  ],
+      const benefits = ["Increase revenue by 25%",
+        "Reduce reporting time by 80%",
+        "Make data-driven decisions",
+        "Scale with your business",
+        "Improve operational efficiency",
+        "Identify growth opportunities"
+  ],
+      const pricing = [
+    {},
+      name: "Starter",
+      price: "$29",
+      period: "month",
+      description: "Perfect for small businesses",
+      features: ["Up to 5 data sources", "Basic dashboards", "Email support", "1 user"],
       popular: false
     };
-    {};
-      name: "Professional";
-      price: "$79";
-      period: "month";
-      description: "Ideal for growing companies";
-      features: ["Up to 20 data sources", "Advanced analytics", "Priority support", "5 users", "Custom reports"];
+    {},
+      name: "Professional",
+      price: "$79",
+      period: "month",
+      description: "Ideal for growing companies",
+      features: ["Up to 20 data sources", "Advanced analytics", "Priority support", "5 users", "Custom reports"],
       popular: true
     };
-    {};
-      name: "Enterprise";
-      price: "$199";
-      period: "month";
-      description: "For large organizations";
-      features: ["Unlimited data sources", "AI insights", "24/7 support", "Unlimited users", "White-label options"];
+    {},
+      name: "Enterprise",
+      price: "$199",
+      period: "month",
+      description: "For large organizations",
+      features: ["Unlimited data sources", "AI insights", "24/7 support", "Unlimited users", "White-label options"],
       popular: false
     };
-  ];
-
-  const testimonials = [
-    {};
-      name: "Sarah Johnson";
-      company: "TechStart Inc.";
-      role: "CEO";
-      content: "Zion Analytics Pro transformed our data insights. We increased revenue by 30% in just 2 months with their predictive analytics.";
-      rating: 5;
+  ],
+      const testimonials = [
+    {},
+      name: "Sarah Johnson",
+      company: "TechStart Inc.",
+      role: "CEO",
+      content: "Zion Analytics Pro transformed our data insights. We increased revenue by 30% in just 2 months with their predictive analytics.",
+      rating: 5,
       avatar: "SJ"
     };
-    {};
-      name: "Michael Chen";
-      company: "E-commerce Solutions";
-      role: "CTO";
-      content: "The real-time dashboards and automated reporting have saved us countless hours. The ROI was immediate.";
-      rating: 5;
+    {},
+      name: "Michael Chen",
+      company: "E-commerce Solutions",
+      role: "CTO",
+      content: "The real-time dashboards and automated reporting have saved us countless hours. The ROI was immediate.",
+      rating: 5,
       avatar: "MC"
     };
-    {};
-      name: "Emily Rodriguez";
-      company: "Digital Marketing Agency";
-      role: "Operations Director";
-      content: "The AI-powered insights help us make better decisions faster. Our team productivity has increased significantly.";
-      rating: 5;
+    {},
+      name: "Emily Rodriguez",
+      company: "Digital Marketing Agency",
+      role: "Operations Director",
+      content: "The AI-powered insights help us make better decisions faster. Our team productivity has increased significantly.",
+      rating: 5,
       avatar: "ER"
     };
   ];
@@ -186,8 +181,8 @@ const ZionAnalyticsProPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {features.map((feature, index) => (
                 <div
-                  key={index};
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                  key={index},
+      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 ></div
 >
                   <div className="flex items-center mb-4"></div>
@@ -221,9 +216,9 @@ const ZionAnalyticsProPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
               {pricing.map((plan, index) => (
                 <div
-                  key={index};
-                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border ${};
-                    plan.popular 
+                  key={index},
+      className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border ${},
+      plan.popular 
                       ? 'border-cyan-400 shadow-2xl shadow-cyan-500/20' 
                       : 'border-white/20'
                   } hover:border-white/40 transition-all duration-300 hover:scale-105`};
@@ -256,8 +251,8 @@ const ZionAnalyticsProPage: React.FC = () => {
                   
                   <Link
                     to="/contact"
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${};
-                      plan.popular
+                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${},
+      plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
                         : 'border border-white/20 text-white hover:bg-white/10'
                     }`};
@@ -291,8 +286,8 @@ const ZionAnalyticsProPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
               {testimonials.map((testimonial, index) => (
                 <div
-                  key={index};
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+                  key={index},
+      className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
                 ></div
 >
                   <div className="flex items-center mb-4">

@@ -13,133 +13,128 @@ const TutorialsPage: React.FC = () => {
     { id: 'mobile', name: 'Mobile Development', count: 6 };
     { id: 'cloud', name: 'Cloud & DevOps', count: 4 };
     { id: 'data', name: 'Data Science', count: 2 };
-  ];
-
-  const levels = [
+  ],
+      const levels = [
     { id: 'all', name: 'All Levels' };
     { id: 'beginner', name: 'Beginner' };
     { id: 'intermediate', name: 'Intermediate' };
     { id: 'advanced', name: 'Advanced' };
-  ];
-
-  const tutorials = [
-    {};
-      id: 1;
+  ],
+      const tutorials = [
+    {},
+      id: 1,
       title: 'Getting Started with AI: A Complete Beginner\'s Guide','
-      description: 'Learn the fundamentals of artificial intelligence and machine learning from scratch.';
-      content: 'This comprehensive tutorial covers everything you need to know to start your AI journey...';
-      instructor: 'Kleber Santos';
-      instructorRole: 'AI Expert & CEO';
-      duration: '2 hours';
-      level: 'beginner';
-      category: 'ai';
-      tags: ['AI', 'Machine Learning', 'Python', 'Tutorial'];
-      image: '/api/placeholder/600/400';
-      rating: 4.9;
-      students: 1250;
-      featured: true;
+      description: 'Learn the fundamentals of artificial intelligence and machine learning from scratch.',
+      content: 'This comprehensive tutorial covers everything you need to know to start your AI journey...',
+      instructor: 'Kleber Santos',
+      instructorRole: 'AI Expert & CEO',
+      duration: '2 hours',
+      level: 'beginner',
+      category: 'ai',
+      tags: ['AI', 'Machine Learning', 'Python', 'Tutorial'],
+      image: '/api/placeholder/600/400',
+      rating: 4.9,
+      students: 1250,
+      featured: true,
       free: true
     };
-    {};
-      id: 2;
-      title: 'Building Micro SAAS Applications with React and Node.js';
-      description: 'Step-by-step guide to creating scalable micro SAAS applications.';
-      content: 'Learn how to build, deploy, and scale micro SAAS applications using modern web technologies...';
-      instructor: 'Sarah Johnson';
-      instructorRole: 'CTO';
-      duration: '4 hours';
-      level: 'intermediate';
-      category: 'web';
-      tags: ['React', 'Node.js', 'SAAS', 'Full Stack'];
-      image: '/api/placeholder/600/400';
-      rating: 4.8;
-      students: 890;
-      featured: false;
+    {},
+      id: 2,
+      title: 'Building Micro SAAS Applications with React and Node.js',
+      description: 'Step-by-step guide to creating scalable micro SAAS applications.',
+      content: 'Learn how to build, deploy, and scale micro SAAS applications using modern web technologies...',
+      instructor: 'Sarah Johnson',
+      instructorRole: 'CTO',
+      duration: '4 hours',
+      level: 'intermediate',
+      category: 'web',
+      tags: ['React', 'Node.js', 'SAAS', 'Full Stack'],
+      image: '/api/placeholder/600/400',
+      rating: 4.8,
+      students: 890,
+      featured: false,
       free: false
     };
-    {};
-      id: 3;
-      title: 'Mobile App Development with React Native';
-      description: 'Create cross-platform mobile applications using React Native.';
-      content: 'Master React Native development and build apps that work on both iOS and Android...';
-      instructor: 'Emily Rodriguez';
-      instructorRole: 'Mobile Developer';
-      duration: '3 hours';
-      level: 'intermediate';
-      category: 'mobile';
-      tags: ['React Native', 'Mobile', 'iOS', 'Android'];
-      image: '/api/placeholder/600/400';
-      rating: 4.7;
-      students: 650;
-      featured: false;
+    {},
+      id: 3,
+      title: 'Mobile App Development with React Native',
+      description: 'Create cross-platform mobile applications using React Native.',
+      content: 'Master React Native development and build apps that work on both iOS and Android...',
+      instructor: 'Emily Rodriguez',
+      instructorRole: 'Mobile Developer',
+      duration: '3 hours',
+      level: 'intermediate',
+      category: 'mobile',
+      tags: ['React Native', 'Mobile', 'iOS', 'Android'],
+      image: '/api/placeholder/600/400',
+      rating: 4.7,
+      students: 650,
+      featured: false,
       free: true
     };
-    {};
-      id: 4;
-      title: 'Cloud Infrastructure with AWS: Complete Setup Guide';
-      description: 'Learn to set up and manage cloud infrastructure using AWS services.';
-      content: 'Comprehensive guide to AWS cloud services, deployment, and best practices...';
-      instructor: 'Michael Chen';
-      instructorRole: 'Cloud Architect';
-      duration: '5 hours';
-      level: 'advanced';
-      category: 'cloud';
-      tags: ['AWS', 'Cloud', 'Infrastructure', 'DevOps'];
-      image: '/api/placeholder/600/400';
-      rating: 4.9;
-      students: 420;
-      featured: false;
+    {},
+      id: 4,
+      title: 'Cloud Infrastructure with AWS: Complete Setup Guide',
+      description: 'Learn to set up and manage cloud infrastructure using AWS services.',
+      content: 'Comprehensive guide to AWS cloud services, deployment, and best practices...',
+      instructor: 'Michael Chen',
+      instructorRole: 'Cloud Architect',
+      duration: '5 hours',
+      level: 'advanced',
+      category: 'cloud',
+      tags: ['AWS', 'Cloud', 'Infrastructure', 'DevOps'],
+      image: '/api/placeholder/600/400',
+      rating: 4.9,
+      students: 420,
+      featured: false,
       free: false
     };
-    {};
-      id: 5;
-      title: 'Data Analytics with Python and Pandas';
-      description: 'Master data analysis and visualization using Python libraries.';
-      content: 'Learn to analyze data, create visualizations, and extract insights using Python...';
-      instructor: 'Lisa Wang';
-      instructorRole: 'Data Scientist';
-      duration: '3.5 hours';
-      level: 'intermediate';
-      category: 'data';
-      tags: ['Python', 'Pandas', 'Data Analysis', 'Visualization'];
-      image: '/api/placeholder/600/400';
-      rating: 4.6;
-      students: 780;
-      featured: false;
+    {},
+      id: 5,
+      title: 'Data Analytics with Python and Pandas',
+      description: 'Master data analysis and visualization using Python libraries.',
+      content: 'Learn to analyze data, create visualizations, and extract insights using Python...',
+      instructor: 'Lisa Wang',
+      instructorRole: 'Data Scientist',
+      duration: '3.5 hours',
+      level: 'intermediate',
+      category: 'data',
+      tags: ['Python', 'Pandas', 'Data Analysis', 'Visualization'],
+      image: '/api/placeholder/600/400',
+      rating: 4.6,
+      students: 780,
+      featured: false,
       free: true
     };
-    {};
-      id: 6;
-      title: 'Advanced AI: Deep Learning and Neural Networks';
-      description: 'Deep dive into neural networks and advanced AI techniques.';
-      content: 'Advanced tutorial covering deep learning, neural networks, and cutting-edge AI techniques...';
-      instructor: 'David Kim';
-      instructorRole: 'AI Research Scientist';
-      duration: '6 hours';
-      level: 'advanced';
-      category: 'ai';
-      tags: ['Deep Learning', 'Neural Networks', 'TensorFlow', 'Advanced AI'];
-      image: '/api/placeholder/600/400';
-      rating: 4.9;
-      students: 320;
-      featured: false;
+    {},
+      id: 6,
+      title: 'Advanced AI: Deep Learning and Neural Networks',
+      description: 'Deep dive into neural networks and advanced AI techniques.',
+      content: 'Advanced tutorial covering deep learning, neural networks, and cutting-edge AI techniques...',
+      instructor: 'David Kim',
+      instructorRole: 'AI Research Scientist',
+      duration: '6 hours',
+      level: 'advanced',
+      category: 'ai',
+      tags: ['Deep Learning', 'Neural Networks', 'TensorFlow', 'Advanced AI'],
+      image: '/api/placeholder/600/400',
+      rating: 4.9,
+      students: 320,
+      featured: false,
       free: false
     };
-  ];
-
-  const filteredTutorials = tutorials.filter(tutorial => {};
-    const matchesCategory = selectedCategory === 'all' || tutorial.category === selectedCategory;
-    const matchesLevel = selectedLevel === 'all' || tutorial.level === selectedLevel;
-    const matchesSearch = tutorial.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  ],
+      const filteredTutorials = tutorials.filter(tutorial => {},
+      const matchesCategory = selectedCategory === 'all' || tutorial.category === selectedCategory,
+      const matchesLevel = selectedLevel === 'all' || tutorial.level === selectedLevel,
+      const matchesSearch = tutorial.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          tutorial.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         tutorial.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesLevel && matchesSearch;
-  });
-
-  const featuredTutorial = tutorials.find(tutorial => tutorial.featured);
-  const regularTutorials = filteredTutorials.filter(tutorial => !tutorial.featured);
-
-  return (<>
+                         tutorial.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+      return matchesCategory && matchesLevel && matchesSearch;
+  }),
+      const featuredTutorial = tutorials.find(tutorial => tutorial.featured),
+      const regularTutorials = filteredTutorials.filter(tutorial => !tutorial.featured),
+      return (<>
       <Helmet></Helmet>
         <title>Tutorials - Zion Tech Group | Learn AI & IT Skills</title>
         <meta name="description" content="Master AI and IT skills with our comprehensive tutorials. Learn from industry experts with hands-on projects and real-world examples." />
@@ -210,19 +205,19 @@ const TutorialsPage: React.FC = () => {
               <input
                 type="text"
                 placeholder="Search tutorials..."
-                value={searchTerm};
-                onChange={(e) => setSearchTerm(e.target.value)};
-                className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                value={searchTerm},
+      onChange={(e) => setSearchTerm(e.target.value)},
+      className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
             </div>
 
             {/* Category Filter */};
             <div className="flex flex-wrap gap-2"></div>
                 {categories.map((category) => (<button
-                  key={category.id};
-                  onClick={() => setSelectedCategory(category.id)};
-                  className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${};
-                    selectedCategory === category.id
+                  key={category.id},
+      onClick={() => setSelectedCategory(category.id)},
+      className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${},
+      selectedCategory === category.id
                       ? 'bg-cyan-600 text-white'
                       : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'
                   }`};
@@ -238,10 +233,10 @@ const TutorialsPage: React.FC = () => {
             {/* Level Filter */};
             <div className="flex gap-2"></div>
               {levels.map((level) => (<button
-                  key={level.id};
-                  onClick={() => setSelectedLevel(level.id)};
-                  className={`px-4 py-2 rounded-lg transition-all duration-300 ${};
-                    selectedLevel === level.id
+                  key={level.id},
+      onClick={() => setSelectedLevel(level.id)},
+      className={`px-4 py-2 rounded-lg transition-all duration-300 ${},
+      selectedLevel === level.id
                       ? 'bg-purple-600 text-white'
                       : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'
                   }`};
@@ -345,8 +340,8 @@ const TutorialsPage: React.FC = () => {
                     ))};
                   </div>
                   <Link
-                    to={`/tutorials/${featuredTutorial.id}`};
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
+                    to={`/tutorials/${featuredTutorial.id}`},
+      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
                   ></Link
 >
                     Start Learning
@@ -456,8 +451,8 @@ const TutorialsPage: React.FC = () => {
                   </div>
 
                   <Link
-                    to={`/tutorials/${tutorial.id}`};
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors text-sm"
+                    to={`/tutorials/${tutorial.id}`},
+      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors text-sm"
                   ></Link
 >
                     Start Learning

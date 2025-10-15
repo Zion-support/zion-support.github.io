@@ -20,24 +20,24 @@ const ITSolutionsPage: React.FC = () => {
         'Migration services';
         'Performance optimization';
         'Backup & recovery solutions'
-      ];
+      ],
       benefits: [
         'Reduce infrastructure costs by 40%';
         'Improve scalability and flexibility';
         'Enhance security and compliance';
         'Increase system reliability'
-      ];
-      category: 'Infrastructure';
-      icon: <Cloud className="w-8 h-8 text-blue-400" />;
+      ],
+      category: 'Infrastructure',
+      icon: <Cloud className="w-8 h-8 text-blue-400" />,
       popular: true
     };
-    {};
-      id: 'cybersecurity-solutions';
-      name: 'Cybersecurity Solutions';
-      price: 'From $1,500/mo';
-      originalPrice: 'From $2,500/mo';
-      description: 'Advanced security solutions to protect your digital assets';
-      longDescription: 'Comprehensive cybersecurity services including threat detection, vulnerability assessment, and security monitoring.';
+    {},
+      id: 'cybersecurity-solutions',
+      name: 'Cybersecurity Solutions',
+      price: 'From $1,500/mo',
+      originalPrice: 'From $2,500/mo',
+      description: 'Advanced security solutions to protect your digital assets',
+      longDescription: 'Comprehensive cybersecurity services including threat detection, vulnerability assessment, and security monitoring.',
       features: [
         'Threat detection & response';
         'Security assessment & auditing';
@@ -49,24 +49,24 @@ const ITSolutionsPage: React.FC = () => {
         'Endpoint protection';
         'Data encryption & backup';
         '24/7 security monitoring'
-      ];
+      ],
       benefits: [
         'Protect against cyber threats';
         'Ensure compliance with regulations';
         'Reduce security risks';
         'Maintain business continuity'
-      ];
-      category: 'Security';
-      icon: <Shield className="w-8 h-8 text-green-400" />;
+      ],
+      category: 'Security',
+      icon: <Shield className="w-8 h-8 text-green-400" />,
       popular: true
     };
-    {};
-      id: 'web-development';
-      name: 'Web Development';
-      price: 'From $5,000';
-      originalPrice: 'From $8,000';
-      description: 'Custom web applications and e-commerce solutions';
-      longDescription: 'Build modern, responsive web applications with cutting-edge technologies and best practices.';
+    {},
+      id: 'web-development',
+      name: 'Web Development',
+      price: 'From $5,000',
+      originalPrice: 'From $8,000',
+      description: 'Custom web applications and e-commerce solutions',
+      longDescription: 'Build modern, responsive web applications with cutting-edge technologies and best practices.',
       features: [
         'Custom web applications';
         'E-commerce platforms';
@@ -78,24 +78,24 @@ const ITSolutionsPage: React.FC = () => {
         'Performance optimization';
         'Security implementation';
         'Maintenance & support'
-      ];
+      ],
       benefits: [
         'Modern, responsive design';
         'Improved user experience';
         'Better search engine ranking';
         'Scalable and maintainable code'
-      ];
-      category: 'Development';
-      icon: <Code className="w-8 h-8 text-purple-400" />;
+      ],
+      category: 'Development',
+      icon: <Code className="w-8 h-8 text-purple-400" />,
       popular: false
     };
-    {};
-      id: 'mobile-development';
-      name: 'Mobile App Development';
-      price: 'From $10,000';
-      originalPrice: 'From $15,000';
-      description: 'Native and cross-platform mobile applications';
-      longDescription: 'Create powerful mobile applications for iOS and Android with our expert development team.';
+    {},
+      id: 'mobile-development',
+      name: 'Mobile App Development',
+      price: 'From $10,000',
+      originalPrice: 'From $15,000',
+      description: 'Native and cross-platform mobile applications',
+      longDescription: 'Create powerful mobile applications for iOS and Android with our expert development team.',
       features: [
         'Native iOS & Android apps';
         'Cross-platform development';
@@ -107,24 +107,24 @@ const ITSolutionsPage: React.FC = () => {
         'Performance optimization';
         'Security implementation';
         'App maintenance & updates'
-      ];
+      ],
       benefits: [
         'Reach mobile users effectively';
         'Improve user engagement';
         'Increase business visibility';
         'Streamline business processes'
-      ];
-      category: 'Mobile';
-      icon: <Mobile className="w-8 h-8 text-orange-400" />;
+      ],
+      category: 'Mobile',
+      icon: <Mobile className="w-8 h-8 text-orange-400" />,
       popular: false
     };
-    {};
-      id: 'database-management';
-      name: 'Database Management';
-      price: 'From $2,000/mo';
-      originalPrice: 'From $3,500/mo';
-      description: 'Comprehensive database solutions and management services';
-      longDescription: 'Optimize, secure, and maintain your databases with our expert database management services.';
+    {},
+      id: 'database-management',
+      name: 'Database Management',
+      price: 'From $2,000/mo',
+      originalPrice: 'From $3,500/mo',
+      description: 'Comprehensive database solutions and management services',
+      longDescription: 'Optimize, secure, and maintain your databases with our expert database management services.',
       features: [
         'Database design & optimization';
         'Performance tuning';
@@ -136,24 +136,24 @@ const ITSolutionsPage: React.FC = () => {
         'Data warehousing';
         'Business intelligence';
         '24/7 support'
-      ];
+      ],
       benefits: [
         'Improve database performance';
         'Ensure data security';
         'Reduce maintenance costs';
         'Scale with business growth'
-      ];
-      category: 'Database';
-      icon: <Database className="w-8 h-8 text-cyan-400" />;
+      ],
+      category: 'Database',
+      icon: <Database className="w-8 h-8 text-cyan-400" />,
       popular: false
     };
-    {};
-      id: 'network-infrastructure';
-      name: 'Network Infrastructure';
-      price: 'From $3,000/mo';
-      originalPrice: 'From $5,000/mo';
-      description: 'Robust network infrastructure design and implementation';
-      longDescription: 'Design, implement, and maintain secure and scalable network infrastructure for your business.';
+    {},
+      id: 'network-infrastructure',
+      name: 'Network Infrastructure',
+      price: 'From $3,000/mo',
+      originalPrice: 'From $5,000/mo',
+      description: 'Robust network infrastructure design and implementation',
+      longDescription: 'Design, implement, and maintain secure and scalable network infrastructure for your business.',
       features: [
         'Network design & planning';
         'Router & switch configuration';
@@ -165,66 +165,63 @@ const ITSolutionsPage: React.FC = () => {
         'Remote access solutions';
         'Network optimization';
         '24/7 monitoring'
-      ];
+      ],
       benefits: [
         'Improve network performance';
         'Enhance security';
         'Reduce downtime';
         'Support business growth'
-      ];
-      category: 'Networking';
-      icon: <Network className="w-8 h-8 text-red-400" />;
+      ],
+      category: 'Networking',
+      icon: <Network className="w-8 h-8 text-red-400" />,
       popular: false
     };
-  ];
-
-  const categories = ['All', 'Infrastructure', 'Security', 'Development', 'Mobile', 'Database', 'Networking'];
-
-  const useCases = [
-    {};
-      title: 'Cloud Migration';
-      description: 'Seamlessly migrate your infrastructure to the cloud';
-      icon: <Cloud className="w-6 h-6 text-blue-400" />;
+  ],
+      const categories = ['All', 'Infrastructure', 'Security', 'Development', 'Mobile', 'Database', 'Networking'],
+      const useCases = [
+    {},
+      title: 'Cloud Migration',
+      description: 'Seamlessly migrate your infrastructure to the cloud',
+      icon: <Cloud className="w-6 h-6 text-blue-400" />,
       benefits: ['Cost Reduction', 'Scalability', 'Reliability', 'Security']
     };
-    {};
-      title: 'Security Hardening';
-      description: 'Strengthen your security posture with comprehensive solutions';
-      icon: <Shield className="w-6 h-6 text-green-400" />;
+    {},
+      title: 'Security Hardening',
+      description: 'Strengthen your security posture with comprehensive solutions',
+      icon: <Shield className="w-6 h-6 text-green-400" />,
       benefits: ['Threat Protection', 'Compliance', 'Risk Mitigation', 'Monitoring']
     };
-    {};
-      title: 'Digital Transformation';
-      description: 'Modernize your technology stack and processes';
-      icon: <Rocket className="w-6 h-6 text-purple-400" />;
+    {},
+      title: 'Digital Transformation',
+      description: 'Modernize your technology stack and processes',
+      icon: <Rocket className="w-6 h-6 text-purple-400" />,
       benefits: ['Efficiency', 'Innovation', 'Competitive Edge', 'Growth']
     };
-    {};
-      title: 'System Integration';
-      description: 'Connect and integrate your existing systems';
-      icon: <Settings className="w-6 h-6 text-orange-400" />;
+    {},
+      title: 'System Integration',
+      description: 'Connect and integrate your existing systems',
+      icon: <Settings className="w-6 h-6 text-orange-400" />,
       benefits: ['Automation', 'Efficiency', 'Data Flow', 'Productivity']
     };
-  ];
-
-  const pricingTiers = [
-    {};
-      name: 'Basic';
-      price: '$2,000/mo';
-      description: 'Perfect for small businesses';
+  ],
+      const pricingTiers = [
+    {},
+      name: 'Basic',
+      price: '$2,000/mo',
+      description: 'Perfect for small businesses',
       features: [
         'Basic IT support';
         'Email & phone support';
         'Standard monitoring';
         'Basic security';
         'Monthly reports'
-      ];
+      ],
       popular: false
     };
-    {};
-      name: 'Professional';
-      price: '$5,000/mo';
-      description: 'Ideal for growing businesses';
+    {},
+      name: 'Professional',
+      price: '$5,000/mo',
+      description: 'Ideal for growing businesses',
       features: [
         'Advanced IT services';
         'Priority support';
@@ -232,13 +229,13 @@ const ITSolutionsPage: React.FC = () => {
         'Advanced security';
         'Custom solutions';
         'API access'
-      ];
+      ],
       popular: true
     };
-    {};
-      name: 'Enterprise';
-      price: 'Custom';
-      description: 'For large organizations';
+    {},
+      name: 'Enterprise',
+      price: 'Custom',
+      description: 'For large organizations',
       features: [
         'Full IT suite';
         'Dedicated support team';
@@ -246,12 +243,11 @@ const ITSolutionsPage: React.FC = () => {
         'White-label solutions';
         'On-premise deployment';
         'SLA guarantees'
-      ];
+      ],
       popular: false
     };
-  ];
-
-  return (
+  ],
+      return (
     <>
       <Helmet></Helmet>
         <title>IT Solutions - Comprehensive Technology Services | Zion Tech Group</title>
@@ -376,8 +372,8 @@ const ITSolutionsPage: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {itServices.map((service) => (
-              <div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10 group relative ${};
-                service.popular ? 'ring-2 ring-blue-500' : ''
+              <div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10 group relative ${},
+      service.popular ? 'ring-2 ring-blue-500' : ''
               }`}></div>
                 {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
@@ -425,8 +421,8 @@ const ITSolutionsPage: React.FC = () => {
 
                 <div className="space-y-4"></div>
                   <Link
-                    to={`/${service.id}`};
-                    className="block w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                    to={`/${service.id}`},
+      className="block w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                   ></Link
 >
                     Learn More
@@ -463,8 +459,8 @@ const ITSolutionsPage: React.FC = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
             {pricingTiers.map((tier) => (
-              <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${};
-                tier.popular ? 'ring-2 ring-blue-500 bg-slate-700/50' : ''
+              <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${},
+      tier.popular ? 'ring-2 ring-blue-500 bg-slate-700/50' : ''
               }`}></div>
                 {tier.popular && (
                   <div className="text-center mb-4"></div>
@@ -490,8 +486,8 @@ const ITSolutionsPage: React.FC = () => {
 
                 <Link
                   to="/contact"
-                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${};
-                    tier.popular
+                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${},
+      tier.popular
                       ? 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white'
                       : 'border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
                   }`};

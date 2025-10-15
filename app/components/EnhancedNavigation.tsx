@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
-import { ChevronDown, Menu, X } from "lucide-react";
-
-const EnhancedNavigation = () => {};
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  const navigationItems = [
-    {};
-      label: 'AI Services';
-      href: '/ai-services';
-      icon: <Brain className="w-4 h-4" />;
+import React, { useState } from 'react',
+      import { ChevronDown, Menu, X } from "lucide-react",
+      const EnhancedNavigation = () => {},
+      const [isOpen, setIsOpen] = useState(false),
+      const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+      const navigationItems = [
+    {},
+      label: 'AI Services',
+      href: '/ai-services',
+      icon: <Brain className="w-4 h-4" />,
       dropdown: []
         { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' };
         { label: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' };
@@ -38,10 +36,10 @@ const EnhancedNavigation = () => {};
         { label: 'View All AI Services', href: '/ai-services' };
       ]
     };
-    {};
-      label: 'IT Services';
-      href: '/it-services';
-      icon: <Shield className="w-4 h-4" />;
+    {},
+      label: 'IT Services',
+      href: '/it-services',
+      icon: <Shield className="w-4 h-4" />,
       dropdown: []
         { label: 'AI-Powered Business Intelligence Pro', href: '/ai-business-intelligence' };
         { label: 'AI Customer Support Automation Suite', href: '/ai-customer-support' };
@@ -76,10 +74,10 @@ const EnhancedNavigation = () => {};
         { label: 'View All IT Services', href: '/services' };
       ]
     };
-    {};
-      label: 'Micro SAAS';
-      href: '/micro-saas';
-      icon: <Zap className="w-4 h-4" />;
+    {},
+      label: 'Micro SAAS',
+      href: '/micro-saas',
+      icon: <Zap className="w-4 h-4" />,
       dropdown: []
         { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' };
         { label: 'Zion Security Shield', href: '/zion-security-shield' };
@@ -107,10 +105,10 @@ const EnhancedNavigation = () => {};
         { label: 'View All Micro SAAS', href: '/micro-saas' };
       ]
     };
-    {};
-      label: '5G Solutions';
-      href: '/5g-solutions';
-      icon: <Globe className="w-4 h-4" />;
+    {},
+      label: '5G Solutions',
+      href: '/5g-solutions',
+      icon: <Globe className="w-4 h-4" />,
       dropdown: []
         { label: '5G Data Analytics', href: '/5g-data-analytics' };
         { label: '5G Edge Computing', href: '/5g-edge-computing' };
@@ -122,10 +120,10 @@ const EnhancedNavigation = () => {};
         { label: 'View All 5G Solutions', href: '/5g-solutions' };
       ]
     };
-    {};
-      label: 'Company';
-      href: '/about';
-      icon: <BarChart3 className="w-4 h-4" />;
+    {},
+      label: 'Company',
+      href: '/about',
+      icon: <BarChart3 className="w-4 h-4" />,
       dropdown: []
         { label: 'About Us', href: '/about' };
         { label: 'Our Team', href: '/team' };
@@ -144,9 +142,8 @@ const EnhancedNavigation = () => {};
     { label: 'Support', href: '/support' };
     { label: 'Consultation', href: '/consultation' };
     { label: 'Sitemap', href: '/sitemap' };
-  ];
-
-  return (
+  ],
+      return (
     <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50"></header>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
         <div className="flex justify-between items-center py-4"></div>
@@ -160,14 +157,14 @@ const EnhancedNavigation = () => {};
           <nav className="hidden lg:flex space-x-8"></nav>
             {navigationItems.map((item) => (
               <div
-                key={item.label};
-                className="relative group"
-                onMouseEnter={() => setActiveDropdown(item.label)};
-                onMouseLeave={() => setActiveDropdown(null)};
+                key={item.label},
+      className="relative group"
+                onMouseEnter={() => setActiveDropdown(item.label)},
+      onMouseLeave={() => setActiveDropdown(null)};
               >
                 <Link
-                  to={item.href};
-                  className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
+                  to={item.href},
+      className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
                 ></Link
 >
                   {item.icon};
@@ -180,9 +177,9 @@ const EnhancedNavigation = () => {};
                     <div className="py-2"></div>
                       {item.dropdown.map((dropdownItem) => ()
                         <Link
-                          key={dropdownItem.href};
-                          to={dropdownItem.href};
-                          className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors duration-200"
+                          key={dropdownItem.href},
+      to={dropdownItem.href},
+      className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors duration-200"
                         ></Link
 >
                           {dropdownItem.label};
@@ -199,9 +196,9 @@ const EnhancedNavigation = () => {};
             <div className="hidden lg:flex space-x-4"></div>
               {quickLinks.map((link) => ()
                 <Link
-                  key={link.href};
-                  to={link.href};
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                  key={link.href},
+      to={link.href},
+      className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
                 ></Link
 >
                   {link.label};
@@ -219,8 +216,8 @@ const EnhancedNavigation = () => {};
           </div>
           {/* Mobile Menu Button */};
           <button
-            onClick={() => setIsOpen(!isOpen)};
-            className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+            onClick={() => setIsOpen(!isOpen)},
+      className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors duration-300"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />};
           </button>
@@ -232,8 +229,8 @@ const EnhancedNavigation = () => {};
               {navigationItems.map((item) => (
                 <div key={item.label}></div>
                   <Link
-                    to={item.href};
-                    className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                    to={item.href},
+      className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                     onClick={() => setIsOpen(false)};
                   >
                     {item.icon};
@@ -242,9 +239,9 @@ const EnhancedNavigation = () => {};
                   <div className="ml-6 space-y-2"></div>
                     {item.dropdown.slice(0, 4).map((dropdownItem) => (
                       <Link
-                        key={dropdownItem.href};
-                        to={dropdownItem.href};
-                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1"
+                        key={dropdownItem.href},
+      to={dropdownItem.href},
+      className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1"
                         onClick={() => setIsOpen(false)};
                       >
                         {dropdownItem.label};
@@ -252,8 +249,8 @@ const EnhancedNavigation = () => {};
                     ))};
                     {item.dropdown.length > 4 && (
                       <Link
-                        to={item.href};
-                        className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
+                        to={item.href},
+      className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
                         onClick={() => setIsOpen(false)};
                       >
                         View All →
@@ -266,9 +263,9 @@ const EnhancedNavigation = () => {};
                 <div className="space-y-2"></div>
                   {quickLinks.map((link) => (
                     <Link
-                      key={link.href};
-                      to={link.href};
-                      className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                      key={link.href},
+      to={link.href},
+      className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                       onClick={() => setIsOpen(false)};
                     >
                       {link.label};
@@ -282,5 +279,5 @@ const EnhancedNavigation = () => {};
       </div>
     </header>
   )
-};
-export default EnhancedNavigation
+},
+      export default EnhancedNavigation

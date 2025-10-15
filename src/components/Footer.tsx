@@ -14,22 +14,22 @@ export default Footer
                   +1 302 464 0950
                   kleber@ziontechgroup.com
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
-          {/* Micro SAAS Services */};
-              Micro SAAS
+          {/* Micro SAAS Services */},
+      Micro SAAS
                     <span>{service.name}</span>
-              ))};
-              View All Micro SAAS →
-          {/* AI & IT Services */};
-              AI & IT Services
+              ))},
+      View All Micro SAAS →
+          {/* AI & IT Services */},
+      AI & IT Services
                 <h4 className = "text-white font-medium mb-2">AI Services</h4>
                         {service.name};
                   ))};
                 <h4 className="text-white font-medium mb-2">IT Services</h4>
                         {service.name};
-                  ))};
-              View All Services →
-          {/* Additional AI Services */};
-              AI Tools
+                  ))},
+      View All Services →
+          {/* Additional AI Services */},
+      AI Tools
                     <span>{service.name}</span>
               ))};
           {/* Company & Support */};

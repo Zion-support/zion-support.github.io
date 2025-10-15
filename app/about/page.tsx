@@ -1,16 +1,14 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Shield, Users, Award } from 'lucide-react';
-
-export default function AboutPage() {
+import { Helmet } from "react-helmet-async",
+      import { Link } from "react-router-dom",
+      import { ArrowRight, Brain, Shield, Users, Award } from 'lucide-react',
+      export default function AboutPage() {
   const stats = [
     { number: "500+", label: "Projects Completed" },
     { number: "100+", label: "Happy Clients" },
     { number: "50+", label: "AI Solutions" },
     { number: "24/7", label: "Support" }
-  ];
-
-  const values = [
+  ],
+      const values = [
     {
       icon: <Brain className="w-8 h-8" />,
       title: "Innovation",
@@ -31,9 +29,8 @@ export default function AboutPage() {
       title: "Excellence",
       description: "We strive for excellence in every project, ensuring the highest quality deliverables."
     }
-  ];
-
-  return (
+  ],
+      return (
     <>
       <Helmet>
         <title>About Us - Zion Tech Group</title>

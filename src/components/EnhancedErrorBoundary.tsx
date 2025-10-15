@@ -12,10 +12,10 @@ export default EnhancedErrorBoundary
   private maxRetries: number
     super(props)
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
-    this.maxRetries = props.maxRetries || 3
+    },
+      this.maxRetries = props.maxRetries || 3
       retryCount: 0
-    };
+    },
       errorInfo
     })
     // Log error to console in development
@@ -41,19 +41,20 @@ export default EnhancedErrorBoundary
   };
     // Get user ID from localStorage, cookies, or context
     return localStorage.getItem('userId') || null
-  };
-    let sessionId = sessionStorage.getItem('sessionId')
+  },
+      let sessionId = sessionStorage.getItem('sessionId')
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
       sessionStorage.setItem('sessionId', sessionId)
     return sessionId
-  };
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined })
-  };
-    window.location.reload()
-  };
-    window.location.href = '/'
-  };
-    };
+  },
+      this.setState({ hasError: false, error: undefined, errorInfo: undefined })
+  },
+      window.location.reload()
+  },
+      window.location.href = '/'
+  }
+    },
+    {
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
         // Show success message
         const button = document.getElementById('copy-error-details')

@@ -1,7 +1,7 @@
 import React from 'react';
 
-interface LoadingPageProps {};
-  message?: string
+interface LoadingPageProps {},
+      message?: string
   showProgress?: boolean
   progress?: number
 }
@@ -81,7 +81,7 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({};
   };
   const getServiceMessage = () => {
 }if (message) return message
-    switch (serviceType) {};
+    switch (serviceType) {},
       case 'ai':
         return "Initializing AI Solutions..."
       case 'it':
@@ -92,8 +92,9 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({};
         return "Connecting to 5G Network..."
       default:
         return "Loading..."
-    };
-  };
+    }
+    },
+    {
   return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -230,8 +231,9 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};
         )
       default:
         return <div className="animate-pulse bg-gray-600 rounded h-4"></div>
-    };
-  };
+    }
+    },
+    {
   return ()
     <div className="space-y-4"></div>
       {Array.from({ length: count }).map(( index) => (
@@ -261,8 +263,8 @@ export const ErrorLoading: React.FC<ErrorLoadingProps> = ({};
         <p className="text-gray-300 mb-6 max-w-md mx-auto">{error}</p>
         {onRetry && ()
           <button
-            onClick={onRetry};
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            onClick={onRetry},
+      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
           ></button
 >
             Try Again
@@ -311,11 +313,11 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};
         <div className="flex justify-center space-x-1"></div>
           {Array.from({ length: 10 }).map(( index) => (
             <div
-              key={index};
-              className={`w-2 h-2 rounded-full animate-pulse ${};
-                index < (progress / 10) ? 'bg-cyan-400' : 'bg-gray-600'
-              }`};
-              style={{ animationDelay: `${index * 0.1}s` }};
+              key={index},
+      className={`w-2 h-2 rounded-full animate-pulse ${},
+      index < (progress / 10) ? 'bg-cyan-400' : 'bg-gray-600'
+              }`},
+      style={{ animationDelay: `${index * 0.1}s` }};
             ></div>
           ))};
         </div>

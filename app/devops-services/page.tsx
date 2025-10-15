@@ -13,95 +13,92 @@ const DevOpsServicesPage = () => {
       features: ["Automated testing", "Deployment automation", "Rollback capabilities", "Multi-environment support"];
       price: "From $2,500/month"
     };
-    {};
-      title: "Infrastructure as Code";
-      description: "Manage and provision infrastructure using code for consistency and scalability";
-      icon: <Code className="w-8 h-8" />;
-      features: ["Terraform/CloudFormation", "Version control", "Environment consistency", "Cost optimization"];
+    {},
+      title: "Infrastructure as Code",
+      description: "Manage and provision infrastructure using code for consistency and scalability",
+      icon: <Code className="w-8 h-8" />,
+      features: ["Terraform/CloudFormation", "Version control", "Environment consistency", "Cost optimization"],
       price: "From $1,800/month"
     };
-    {};
-      title: "Container Orchestration";
-      description: "Kubernetes and Docker container management for scalable applications";
-      icon: <Cloud className="w-8 h-8" />;
-      features: ["Kubernetes setup", "Docker optimization", "Auto-scaling", "Service mesh"];
+    {},
+      title: "Container Orchestration",
+      description: "Kubernetes and Docker container management for scalable applications",
+      icon: <Cloud className="w-8 h-8" />,
+      features: ["Kubernetes setup", "Docker optimization", "Auto-scaling", "Service mesh"],
       price: "From $3,200/month"
     };
-    {};
-      title: "Monitoring & Observability";
-      description: "Comprehensive monitoring solutions for application and infrastructure health";
-      icon: <BarChart3 className="w-8 h-8" />;
-      features: ["Real-time monitoring", "Alerting systems", "Performance metrics", "Log aggregation"];
+    {},
+      title: "Monitoring & Observability",
+      description: "Comprehensive monitoring solutions for application and infrastructure health",
+      icon: <BarChart3 className="w-8 h-8" />,
+      features: ["Real-time monitoring", "Alerting systems", "Performance metrics", "Log aggregation"],
       price: "From $1,500/month"
     };
-    {};
-      title: "Security Automation";
-      description: "Automated security scanning and compliance checks in your CI/CD pipeline";
-      icon: <Shield className="w-8 h-8" />;
-      features: ["Vulnerability scanning", "Compliance checks", "Security testing", "Policy enforcement"];
+    {},
+      title: "Security Automation",
+      description: "Automated security scanning and compliance checks in your CI/CD pipeline",
+      icon: <Shield className="w-8 h-8" />,
+      features: ["Vulnerability scanning", "Compliance checks", "Security testing", "Policy enforcement"],
       price: "From $2,000/month"
     };
-    {};
-      title: "Cloud Migration";
-      description: "Seamless migration to cloud platforms with zero downtime";
-      icon: <Globe className="w-8 h-8" />;
-      features: ["AWS/Azure/GCP migration", "Data migration", "Application modernization", "Cost optimization"];
+    {},
+      title: "Cloud Migration",
+      description: "Seamless migration to cloud platforms with zero downtime",
+      icon: <Globe className="w-8 h-8" />,
+      features: ["AWS/Azure/GCP migration", "Data migration", "Application modernization", "Cost optimization"],
       price: "From $5,000/month"
     };
-  ];
-
-  const benefits = [
-    {};
-      title: "Faster Deployments";
-      description: "Reduce deployment time from hours to minutes";
+  ],
+      const benefits = [
+    {},
+      title: "Faster Deployments",
+      description: "Reduce deployment time from hours to minutes",
       icon: <Clock className="w-6 h-6" />
     };
-    {};
-      title: "Improved Reliability";
-      description: "99.9% uptime with automated failover and recovery";
+    {},
+      title: "Improved Reliability",
+      description: "99.9% uptime with automated failover and recovery",
       icon: <Shield className="w-6 h-6" />
     };
-    {};
-      title: "Cost Optimization";
-      description: "Reduce infrastructure costs by up to 40%";
+    {},
+      title: "Cost Optimization",
+      description: "Reduce infrastructure costs by up to 40%",
       icon: <BarChart3 className="w-6 h-6" />
     };
-    {};
-      title: "Team Productivity";
-      description: "Focus on development, not infrastructure management";
+    {},
+      title: "Team Productivity",
+      description: "Focus on development, not infrastructure management",
       icon: <Users className="w-6 h-6" />
     };
-  ];
-
-  const process = [
-    {};
-      step: "1";
-      title: "Assessment";
+  ],
+      const process = [
+    {},
+      step: "1",
+      title: "Assessment",
       description: "Analyze current infrastructure and identify improvement opportunities"
     };
-    {};
-      step: "2";
-      title: "Strategy";
+    {},
+      step: "2",
+      title: "Strategy",
       description: "Develop a comprehensive DevOps strategy tailored to your needs"
     };
-    {};
-      step: "3";
-      title: "Implementation";
+    {},
+      step: "3",
+      title: "Implementation",
       description: "Set up tools, processes, and automation workflows"
     };
-    {};
-      step: "4";
-      title: "Training";
+    {},
+      step: "4",
+      title: "Training",
       description: "Train your team on new processes and best practices"
     };
-    {};
-      step: "5";
-      title: "Support";
+    {},
+      step: "5",
+      title: "Support",
       description: "Ongoing monitoring, optimization, and support"
     };
-  ];
-
-  return (
+  ],
+      return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <EnhancedSEO
         title="DevOps Services - Zion Tech Group | CI/CD, Infrastructure as Code, Cloud Migration"

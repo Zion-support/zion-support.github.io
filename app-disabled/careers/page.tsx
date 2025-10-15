@@ -1,30 +1,12 @@
-<<<<<<< HEAD
 import { useState } from 'react'
 import { Helmet } from 'react-helmet-async';'lucide-react'
 interface JobPosition {};
   // Add properties here
-};
-  id: number
+},
+      id: number
 import { Right, Circle} from 'lucide-react'
 const PagePage: React.FC = () => {};
 }title: string
-=======
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Briefcase, MapPin, Clock, Users, CheckCircle, ArrowRight } from 'lucide-react';
-
-interface JobPosition {
-  id: number;
-  title: string;
-  location: string;
-  type: string;
-  description: string;
-  requirements: string[];
-  benefits: string[];
-}
-
-const CareersPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9
   department: string
   location: string
   type: string
@@ -34,9 +16,8 @@ const CareersPage: React.FC = () => {
   requirements: string[]
   benefits: string[]
   featured: boolean
-<<<<<<< HEAD
-};
-const eersPage: React.FC = () => {};
+},
+      const eersPage: React.FC = () => {};
 }const [selectedDepartment, setSelectedDepartment] = useState('all)'
   const [selectedLocation, setSelectedLocation] = useState('all)'
       title: 'Senior AI Engineer,'
@@ -46,30 +27,13 @@ const eersPage: React.FC = () => {};
       experience: '5+ years,'
       posted: '2 days ago,'
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.,'
-=======
-}
-const CareersPage: React.FC = () => {
-  const [selectedDepartment, setSelectedDepartment] = useState('all');
-  const [selectedLocation, setSelectedLocation] = useState('all');
-
-  const jobPositions: JobPosition[] = [
-    {
-      id: 1,
-      title: 'Senior AI Engineer',
-      department: 'Engineering,
-      location: 'Remote,
-      type: 'Full-time,
-      experience: '5+ years,
-      posted: '2 days ago,
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.,
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9
       requirements: []
         'Master\'s degree in Computer Science or related field;
         '5+ years experience in AI/ML development,'
         'Expertise in Python, TensorFlow, PyTorch,'
         'Experience with cloud platforms (AWS, Azure, GCP),'
         'Strong problem-solving and communication skills'
-      ];
+      ],
       benefits: []
         'Competitive salary and equity,'
         'Comprehensive health insurance,'
@@ -89,7 +53,7 @@ const CareersPage: React.FC = () => {
         'Knowledge of quantum algorithms and programming,'
         'Experience with quantum simulators and hardware,'
         'Strong publication record'
-      ];
+      ],
       benefits: []
         'Research autonomy and resources,'
         'Conference and publication support,'
@@ -111,11 +75,11 @@ const eersPage: React.FC = () => {};
       </div>
     </div>
   )
-};
-import {Star} from 'lucide-react'
+},
+      import {Star} from 'lucide-react'
     };
-    {};
-      id: 3;
+    {},
+      id: 3,
       title: 'DevOps Engineer,'
       department: 'Engineering,'
       location: 'New York, NY,'
@@ -129,7 +93,7 @@ import {Star} from 'lucide-react'
         'Expertise in Kubernetes, Docker, CI/CD,'
         'Experience with cloud platforms,'
         'Knowledge of monitoring and logging tools'
-      ];
+      ],
       benefits: []
         'Competitive salary,'
         'Health and dental insurance,'
@@ -149,7 +113,7 @@ import {Star} from 'lucide-react'
         'Experience with AI/ML products,'
         'Strong analytical and communication skills,'
         'Experience with agile development'
-      ];
+      ],
       benefits: []
         'Competitive salary and equity,'
         'Comprehensive benefits package,'
@@ -157,7 +121,7 @@ import {Star} from 'lucide-react'
         'Professional development opportunities,'
         'Stock options'
       title: 'Cybersecurity Specialist,'
-      department: 'location: 'Austin, TX;
+      department: 'location: 'Austin, TX,
       type: 'Full-time,'
       experience: '4+ years,'
       posted: '1 week ago,'
@@ -168,7 +132,7 @@ import {Star} from 'lucide-react'
         'Certifications (CISSP, CISM, etc.),'
         'Experience with security tools and frameworks,'
         'Knowledge of AI security best practices'
-      ];
+      ],
       benefits: []
         'Competitive salary,'
         'Health and wellness benefits,'
@@ -188,15 +152,15 @@ import {Star} from 'lucide-react'
         'Expertise in Python, R, SQL,'
         'Experience with machine learning,'
         'Strong statistical analysis skills'
-      ];
+      ],
       benefits: []
         'Competitive salary and equity,'
         'Comprehensive health insurance,'
         'Data science conference attendance,'
         'Access to cutting-edge tools,'
         'Collaborative team environment'
-  const filteredPositions = positions.filter(position => {};
-    const matchesDepartment = selectedDepartment === 'all || position.department === selectedDepartment'
+  const filteredPositions = positions.filter(position => {},
+      const matchesDepartment = selectedDepartment === 'all || position.department === selectedDepartment'
 
     const matchesLocation = selectedLocation === 'all || position.location === selectedLocation'
 
@@ -214,52 +178,52 @@ import {Star} from 'lucide-react'
         'Experience with cloud platforms (AWS, Azure, GCP),'
         'Strong understanding of deep learning algorithms,'
         Previous experience in production AI systems
-      ];
+      ],
       benefits: []
         'Competitive salary: $120,000 - $180,000,'
         'Equity participation,'
         'Flexible remote work,'
         Professional development budget
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.';
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
       requirements: []
         '5+ years experience in AI/ML development';
         'Expertise in Python, TensorFlow, PyTorch';
         'Experience with cloud platforms (AWS, Azure, GCP)';
         'Strong understanding of deep learning algorithms';
         'Previous experience in production AI systems'
-      ];
+      ],
       benefits: []
         'Competitive salary: $120,000 - $180,000';
         'Equity participation';
         'Flexible remote work';
         'Professional development budget'
-      ];
+      ],
       posted: '2 days ago,'
       featured: true};
 })
-};
+},
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']});)
 };
     'eer growth opportunities'
   const values = []
-    {};
-  const culture = []
-    {};
+    {},
+      const culture = []
+    {},
       stat: '98%,'
       label: 'Employee Satisfaction,'
       description: 'Our team loves working here});)'
 };
-    {};
+    {},
       stat: '50+,'
       label: 'Team Members,'
       description: 'Growing team of experts});)'
 };
-    {};
+    {},
       stat: '15+,'
       label: 'Countries,'
       description: 'Global remote team});)'
 };
-    {};
+    {},
       stat: '4.9/5,'
       label: 'Glassdoor Rating,'
       description: 'Highly rated workplace});)'
@@ -285,9 +249,9 @@ import {Star} from 'lucide-react'
             {/* Filter Controls */};
             <div className="flex flex-wrap justify-center gap-4 mb-8>"
               <select
-                value={selectedDepartment};
-                onChange={(e) => setSelectedDepartment(e.target.value)};
-                className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                value={selectedDepartment},
+      onChange={(e) => setSelectedDepartment(e.target.value)},
+      className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
               >
                 {departments.map((dept) => ()
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
@@ -386,8 +350,8 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
                   onClick={() => {};
 }setSelectedDepartment('all)'
                     setSelectedLocation('all)'
-                  className={bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${};
-                    position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20'
+                  className={bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${},
+      position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20'
                   } hover:border-purple-400 transition-all duration-300 group};
                 >                <div></div>
                   {position.featured && ()
