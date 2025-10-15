@@ -88,14 +88,16 @@ export default function App() {
         <Router>
           <div className="min-h-screen bg-gray-50">
             <Navigation />
-            <Sidebar />
             
-            <main className="flex-1">
-              <PerformanceMonitor />
-              <AccessibilityEnhancer />
+            <div className="flex">
+              <Sidebar />
               
-              <Suspense fallback={<LoadingFallback />}>
-                <Routes>
+              <main className="flex-1 min-h-screen">
+                <PerformanceMonitor />
+                <AccessibilityEnhancer />
+                
+                <Suspense fallback={<LoadingFallback />}>
+                  <Routes>
                   {/* Main Pages */}
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
@@ -164,9 +166,10 @@ export default function App() {
                       <a href="/" className="text-blue-600 hover:text-blue-800">Go back home</a>
                     </div>
                   </div>} />
-                </Routes>
-              </Suspense>
-            </main>
+                  </Routes>
+                </Suspense>
+              </main>
+            </div>
             
             <Footer />
           </div>
