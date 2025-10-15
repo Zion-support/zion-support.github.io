@@ -19,7 +19,7 @@ import {
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const serviceCategories = [
+  /* const serviceCategories = [
     {
       title: 'AI Solutions',
       services: [
@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
         { name: 'View All 5G Solutions', path: '/5g-solutions' }
       ]
     }
-  ];
+  ]; */
 
   const quickLinks = [
     { name: 'About Us', path: '/about' },

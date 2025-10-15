@@ -6,14 +6,14 @@ const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
-  const documentationSections = [
+  /* const documentationSections = [
     {
       id: 'getting-started',
       title: 'Getting Started',
       description: 'Learn how to get started with our AI solutions',
       content: 'Comprehensive guide to implementing AI in your business'
     }
-  ];
+  ]; */
   
   const features = [
     {
@@ -73,7 +73,7 @@ const DocsPage: React.FC = () => {
     { title: 'Computer Vision Tutorial', category: 'AI Services', readTime: '12 min', views: '4.7k' }
   ];
 
-  const filteredSections = documentationSections.map(section => ({
+  const filteredSections = features.map(section => ({
     ...section,
     articles: section.articles.filter(article =>
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -168,12 +168,12 @@ const DocsPage: React.FC = () => {
               {filteredSections.map((section) => (
                 <div key={section.id} className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
                   <button
-                    onClick={() => setExpandedSection(expandedSection === section.id ? null : section.id)}
+                    onClick={() => setExpandedSection(expandedSection === section.id ? null : (section.id || null))}
                     className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
                   >
                     <div className="flex items-center">
                       <div className="text-cyan-400 mr-4">
-                        {section.icon}
+                        <Zap className="w-6 h-6" />
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-white">{section.title}</h3>

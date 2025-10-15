@@ -31,11 +31,13 @@ export const createLazyComponent = <P extends object>(
 ) => {
   const LazyComponent = lazy(importFunc);
   
-  return (props: P) => (
+  const WrappedComponent = (props: P) => (
     <LazyWrapper>
-      <LazyComponent {...props} />
+      <LazyComponent {...(props as any)} />
     </LazyWrapper>
   );
+  WrappedComponent.displayName = `withLazyLoading(${LazyComponent.displayName || LazyComponent.name || 'Component'})`;
+  return WrappedComponent;
 };
 
 export default LazyWrapper;

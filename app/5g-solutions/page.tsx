@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3, Star } from 'lucide-react';
+import { Wifi, Shield, CheckCircle, ArrowRight, Network, Cpu, Smartphone, BarChart3, Star } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
   const solutions = [
@@ -68,7 +68,7 @@ const FiveGSolutionsPage: React.FC = () => {
 
   const benefits = [
     {
-      icon: <Clock className="w-6 h-6" />,
+        icon: <Network className="w-6 h-6" />,
       title: "Ultra-Low Latency",
       description: "Achieve sub-millisecond latency for real-time applications"
     },
