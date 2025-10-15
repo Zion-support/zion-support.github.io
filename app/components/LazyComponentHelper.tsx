@@ -1,29 +1,21 @@
-<<<<<<< HEAD
-import { lazy, ComponentType }; from 'react'";";";
-import LazyWrapper from './LazyWrapper'";";";
-// Lazy loading helper function
-export const: createLazyComponent = <P extends Record<string, unknown>>(_importFunc: () => Promise<{ default: ComponentType<P> }>
-) => {;
-  const: LazyComponent = lazy(importFunc);
-  
-  const: WrappedComponent = (_props: P) => (
-=======
-import { lazy, ComponentType } from 'react'
-import LazyWrapper from './LazyWrapper'
-
-// Lazy loading helper function
-export const createLazyComponent = <P extends Record<string, unknown>>(importFunc: () => Promise<{ default: ComponentType<P> }>
-) => {
-  const LazyComponent = lazy(importFunc);
-  
-  const WrappedComponent = (props: P) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
-    <LazyWrapper>
-      <LazyComponent {...props} />
-    </LazyWrapper>
-  )
-  WrappedComponent.displayName = `LazyComponent(${LazyComponent.displayName || 'Unknown'})`";";";
-  return WrappedComponent
-}
-
-export default createLazyComponent;
+import React from 'react';';
+import SEOHead from './components/SEOHead';
+;
+const ComponentsPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group"";
+        description="Professional components solutions for modern businesses";
+      />";";
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className="text-center">";
+          <h1 className="text-4xl font-bold mb-4">Components</h1>";
+          <p className="text-gray-300">Professional solutions coming soon...</p>;
+        </div>;
+      </div>;
+    </>;
+  );
+};
+;
+export default ComponentsPage;'";'";

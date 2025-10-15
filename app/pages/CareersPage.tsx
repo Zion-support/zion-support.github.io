@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/comprehensive-app-audit-and-update-5693
-import SEOHead from '../components/SEOHead';";";";
-
-const CareersPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead: title ="CareersPage - Zion Tech Group - Zion Tech Group"";";
-        description="Zion Tech Group CareersPage page"";";
-      />
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">CareersPage - Zion Tech Group</h1>";";
-          <p: className ="text-gray-300">Coming soon...</p>";";
-<<<<<<< HEAD
-=======
-=======
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
@@ -144,20 +125,10 @@ const CareersPage: React.FC = () => {
               Send Us Your Resume
             </a>
           </div>
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-604b
->>>>>>> cursor/comprehensive-app-audit-and-update-5693
         </div>
       </div>
     </>
   );
 };
 
-<<<<<<< HEAD
 export default CareersPage;
-=======
-<<<<<<< HEAD
-export default CareersPage;
-=======
-export default CareersPage;
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-604b
->>>>>>> cursor/comprehensive-app-audit-and-update-5693
