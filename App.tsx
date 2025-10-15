@@ -70,11 +70,37 @@ export default function App() {
     <GlobalErrorBoundary>
       <HelmetProvider>
         <Router>
-          <div className="min-h-screen bg-gray-50">
+          <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+            {/* Animated Background Elements */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1),transparent_50%)]"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_40%,rgba(236,72,153,0.1),transparent_50%)]"></div>
+            
+            {/* Matrix Rain Effect */}
+            <div className="matrix-bg">
+              {Array.from({ length: 20 }).map((_, i) => (
+                <div
+                  key={i}
+                  className="matrix-rain"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    animationDelay: `${Math.random() * 10}s`,
+                    animationDuration: `${10 + Math.random() * 20}s`
+                  }}
+                >
+                  {Array.from({ length: 20 }).map((_, j) => (
+                    <div key={j} className="opacity-70">
+                      {String.fromCharCode(0x30A0 + Math.random() * 96)}
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            
             <Navigation />
             <Sidebar />
             
-            <main className="flex-1">
+            <main className="flex-1 relative z-10">
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               
