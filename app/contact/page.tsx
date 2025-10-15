@@ -1,21 +1,23 @@
-import React, { useState, useEffect, memo, lazy, Suspense } from "react";
-import { Helmet } from "react-helmet-async";
+import React, { useState} from &quot;react&quot;;
+import { Helmet } from &quot;react-helmet-async&quot;;
+import { CheckCircle, Clock,  Mail, MapPin, Phone, Send } from &apos;lucide-react&apos;;
+
 // Contact information
 const contactInfo = [
-  { icon: <Phone className="w-6 h-6" />, title: "Phone", details: "+1-302-464-0950", description: "Call us for immediate assistance" },
-  { icon: <Mail className="w-6 h-6" />, title: "Email", details: "kleber@ziontechgroup.com", description: "Send us an email anytime" },
-  { icon: <MapPin className="w-6 h-6" />, title: "Location", details: "Delaware, USA", description: "Serving clients globally" },
+  { icon: <Phone className="w-6 h-6" />, title: &quot;Phone&quot;, details: &quot;+1-302-464-0950&quot;, description: &quot;Call us for immediate assistance&quot; },
+  { icon: <Mail className="w-6 h-6" />, title: &quot;Email&quot;, details: &quot;kleber@ziontechgroup.com&quot;, description: &quot;Send us an email anytime&quot; },
+  { icon: <MapPin className="w-6 h-6" />, title: &quot;Location&quot;, details: &quot;Delaware, USA&quot;, description: &quot;Serving clients globally&quot; },
   { icon: <Clock className="w-6 h-6" />, title: "Business Hours", details: "24/7 Support", description: "We're always here to help" }
 ];
 // Contact form data
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
+    name: &apos;&apos;,
+    email: &apos;&apos;,
+    company: &apos;&apos;,
+    phone: &apos;&apos;,
+    service: &apos;&apos;,
+    message: &apos;&apos;
   });
 
 const [isSubmitting, setIsSubmitting] = useState(false);
@@ -38,7 +40,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
-      setFormData({ name: '', email: '', company: '', phone: '', service: '', message: '' });
+      setFormData({ name: &apos;&apos;, email: &apos;&apos;, company: &apos;&apos;, phone: &apos;&apos;, service: &apos;&apos;, message: &apos;&apos; });
     }, 3000);
   };
   return (
@@ -74,9 +76,8 @@ const handleSubmit = async (e: React.FormEvent) => {
             
         <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Get in Touch</h2>
-              
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're here to help you succeed. Choose the best way to reach us.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We&apos;re here to help you succeed. Choose the best way to reach us.
               </p>
             </div>
             
@@ -106,9 +107,8 @@ const handleSubmit = async (e: React.FormEvent) => {
               
         <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold text-white mb-6">Send us a Message</h2>
-                
-          <p className="text-xl text-gray-300">
-                  Fill out the form below and we'll get back to you within 24 hours.
+                <p className="text-xl text-gray-300">
+                  Fill out the form below and we&apos;ll get back to you within 24 hours.
                 </p>
               </div>
               
@@ -118,8 +118,7 @@ const handleSubmit = async (e: React.FormEvent) => {
         <div className="text-center py-12">
                     <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
-                    
-          <p className="text-gray-300">Thank you for contacting us. We'll get back to you soon.</p>
+                    <p className="text-gray-300">Thank you for contacting us. We&apos;ll get back to you soon.</p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit } className="space-y-6">
@@ -201,7 +200,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                         <option value="ai-solutions">AI Solutions</option>
                         <option value="5g-technology">5G Technology</option>
                         <option value="cybersecurity">Cybersecurity</option>
-                        <option value="cloud-solutions">Cloud Solutions</option>
+                        <option value="cloud-solutions">Solutions</option>
                         <option value="data-analytics">Data Analytics</option>
                         <option value="mobile-development">Mobile Development</option>
                         <option value="consultation">Consultation</option>

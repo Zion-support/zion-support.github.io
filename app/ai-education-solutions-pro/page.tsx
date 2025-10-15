@@ -1,9 +1,16 @@
-import React from "react";
+import  { useState } from "react";
 import { Helmet } from "react-helmet-async";
 
 const AIEducationSolutionsProPage = () => {
-  return;
-},
+  const [isVisible, ] = useState(false);
+
+  const features = [
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI-Powered Learning",
+      description: "Personalized learning experiences powered by advanced AI algorithms.",
+      benefits: ["Adaptive curriculum", "Real-time feedback", "Performance analytics"]
+    },
     {
       icon: <BookOpen className="w-8 h-8" />,
       title: "Interactive Content",

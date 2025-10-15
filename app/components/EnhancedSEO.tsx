@@ -18,8 +18,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   ogImage = '/api/placeholder/1200/630',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  structuredData,
-}) => {
+  structuredData}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
 
 const fullDescription = description || 'Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation for modern businesses.';
@@ -87,7 +86,7 @@ const fullDescription = description || 'Leading provider of AI-powered solutions
             "services": [
               "AI Solutions",
               "Cybersecurity",
-              "Cloud Infrastructure",
+              "Infrastructure",
               "Digital Transformation",
               "Micro SAAS",
               "5G Solutions"

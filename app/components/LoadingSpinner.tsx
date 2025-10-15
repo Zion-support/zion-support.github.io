@@ -43,4 +43,5 @@ const spinner = (
   }
   return spinner;
 };
+
 export default LoadingSpinner;

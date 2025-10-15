@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Helmet } from "react-helmet-async";
 
 const AIIoTManagementProPage = () => {
-  return;
-},
+  const [isVisible, ] = useState(false);
+
+  const deviceTypes = [
+    { name: "Sensors", count: "1000+", color: "bg-blue-500", icon: <Brain className="w-6 h-6" /> },
     { name: "Actuators", count: "500+", color: "bg-green-500", icon: <Brain className="w-6 h-6" /> },
     { name: "Gateways", count: "50+", color: "bg-purple-500", icon: <Brain className="w-6 h-6" /> }
   ];

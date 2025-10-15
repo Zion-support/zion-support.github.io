@@ -1,8 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {CheckIcon, UserGroupIcon, LightBulbIcon, ShieldCheckIcon, CpuChipIcon, CloudIcon} from '@heroicons/react/24/outline';
-import { Shield, Cloud } from 'lucide-react';
+import { 
+  CheckIcon, 
+  UserGroupIcon,
+  LightBulbIcon,
+  ShieldCheckIcon,
+  CpuChipIcon,
+  CloudIcon
+} from '@heroicons/react/24/outline';
 
 const About: React.FC = () => {
   return (
@@ -339,7 +345,7 @@ const About: React.FC = () => {
           </h2>
           
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how we can help transform your business with our AI and IT solutions.
+            Let&apos;s discuss how we can help transform your business with our AI and IT solutions.
           </p>
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

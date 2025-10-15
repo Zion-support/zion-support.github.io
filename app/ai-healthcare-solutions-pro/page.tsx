@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Helmet } from "react-helmet-async";
 
 const ShieldIcon = Shield;
 
 const AIHealthcareSolutionsProPage = () => {
-  return;
-},
+  const [isVisible, ] = useState(false);
+
+  const features = [
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Diagnosis",
+      description: "Advanced AI-powered diagnostic tools for accurate medical assessments.",
+      benefits: ["Rapid diagnosis", "Pattern recognition", "Risk assessment"]
+    },
     {
       icon: <Heart className="w-8 h-8" />,
       title: "Patient Monitoring",

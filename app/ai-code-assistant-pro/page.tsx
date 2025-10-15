@@ -2,8 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const AiCodeAssistantProPage = () => {
-  return;
-}, []);
+  const [, setIsVisible] = useState(false);
 
 const features = [
     { icon: <Code className="w-6 h-6" />,

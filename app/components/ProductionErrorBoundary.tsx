@@ -1,1 +1,1 @@
-// This file is intentionally empty - component removed
+import   from &quot;react&quot;;

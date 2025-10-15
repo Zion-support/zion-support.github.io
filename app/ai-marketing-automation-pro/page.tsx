@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Helmet } from "react-helmet-async";
 
 const AIMarketingAutomationProPage = () => {
-  return;
-},
+  const [isVisible] = useState(false);
+
+  const features = [
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Campaigns",
+      description: "Intelligent marketing campaigns that adapt to customer behavior.",
+      benefits: ["Personalized content", "A/B testing", "Performance optimization"]
+    },
     {
       icon: <Mail className="w-8 h-8" />,
       title: "Email Automation",

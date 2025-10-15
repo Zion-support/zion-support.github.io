@@ -16,35 +16,36 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       }
     };
 
-    // Remove keyboard navigation class on mouse use
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
-    };
+    // Apply accessibility settings
+    const root = document.documentElement;
+    
+    // High contrast mode
+    if (isHighContrast) {
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
+    }
 
-    // Add focus indicators for keyboard navigation
-    const addFocusStyles = () => {
-      const style = document.createElement('style');
-      style.textContent = `
-        .keyboard-navigation button:focus,
-        .keyboard-navigation a:focus,
-        .keyboard-navigation input:focus,
-        .keyboard-navigation textarea:focus,
-        .keyboard-navigation select:focus {
-          box-shadow: 0 0 0 2px #8b5cf6 !important;
-          outline: none !important;
-        }
-      `;
-      document.head.appendChild(style);
-    };
+    // Reduced motion mode
+    if (isReducedMotion) {
+      root.classList.add('reduced-motion');
+    } else {
+      root.classList.remove('reduced-motion');
+    }
 
-    // Add ARIA labels to interactive elements
-    const addAriaLabels = () => {
-      const buttons = document.querySelectorAll('button:not([aria-label])');
-      buttons.forEach((button, index) => {
-        if (!button.getAttribute('aria-label')) {
-          button.setAttribute('aria-label', `Button ${index + 1}`);
-        }
-      });
+    // Font size adjustment
+    root.style.setProperty('--font-size-multiplier', 
+      fontSize === 'large' ? '1.2' : 
+      fontSize === 'extra-large' ? '1.4' : 
+      fontSize === 'small' ? '0.9' : '1'
+    );
+
+    // Add ARIA landmarks
+    const addAriaLandmarks = () => {
+      const main = document.querySelector('main');
+      if (main && !main.getAttribute('role')) {
+        main.setAttribute('role', 'main');
+      }
     };
 
     // Add skip links
@@ -174,11 +175,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     return () => {
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut);
-      if (style.parentNode) {
-        style.parentNode.removeChild(style);
-      }
     };
-  }, [handleFocusIn, handleFocusOut, enableFocusIndicators]);
+  }, []);
 
   // Screen reader announcements
   const announceToScreenReader = useCallback((message: string) => {
