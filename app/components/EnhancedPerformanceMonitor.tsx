@@ -1,51 +1,60 @@
-import React, { useEffect, useState } from 'react'
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals'
-interface PerformanceMetrics {}
-  loadTime: number
-  firstContentfulPaint: number
-  largestContentfulPaint: number
-  firstInputDelay: number
-  cumulativeLayoutShift: number
-  timeToFirstByte: number
-  totalBlockingTime: number
+import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  timeToFirstByte: number;
+  totalBlockingTime: number;
 }
 interface PerformanceMonitorProps {}
   showInProduction?: boolean
 }
-const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({}
-  showInProduction = false
-}) => {}
-}const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
-  const [isVisible, setIsVisible] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
-  useEffect(() => {}
-}if (typeof window === 'undefined') return
-    const measurePerformance = async () => {}
-}try {}
-} catch (error) {}
-  console.error(error)
-}// Measure Core Web Vitals
-        const vitals: Partial<PerformanceMetrics> = {}
+
+const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
+  showInProduction = false 
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect() => {
+    if (typeof window === 'undefined') return;
+
+    const measurePerformance = async () => {
+      try {
+        // Measure Core Web Vitals
+        const vitals: Partial<PerformanceMetrics> = {};
+
         // Get FCP
-        onFCP((metric: any) => {}
-}vitals.firstContentfulPaint = metric.value
-        })
+        onFCP((metric: unknown) => {
+          vitals.firstContentfulPaint = metric.value;
+        });
+
         // Get LCP
-        onLCP((metric: any) => {}
-}vitals.largestContentfulPaint = metric.value
-        })
+        onLCP((metric: unknown) => {
+          vitals.largestContentfulPaint = metric.value;
+        });
+
         // Get INP (replaces FID)
-        onINP((metric: any) => {}
-}vitals.firstInputDelay = metric.value
-        })
+        onINP((metric: unknown) => {
+          vitals.firstInputDelay = metric.value;
+        });
+
         // Get CLS
-        onCLS((metric: any) => {}
-}vitals.cumulativeLayoutShift = metric.value
-        })
+        onCLS((metric: unknown) => {
+          vitals.cumulativeLayoutShift = metric.value;
+        });
+
         // Get TTFB
-        onTTFB((metric: any) => {}
-}vitals.timeToFirstByte = metric.value
-        })
+        onTTFB((metric: unknown) => {
+          vitals.timeToFirstByte = metric.value;
+        });
+
         // Measure additional metrics
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
         const paintEntries = performance.getEntriesByType('paint')
@@ -81,9 +90,8 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({}
             }
           })
         }
-      } catch (error) {}
-        console.error('Error measuring performance:', error)
-        setIsLoading(false)
+      } catch (error) {
+        setIsLoading(false);
       }
     }
     // Measure after page load
@@ -100,18 +108,20 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({}
   if ((process.env.NODE_ENV !== 'development' && !showInProduction) || !metrics) {}
     return null
   }
-  const getScoreColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {}
-}if (value <= thresholds.good) return 'text-green-500'
-    if (value <= thresholds.needsImprovement) return 'text-yellow-500'
-    return 'text-red-500'
-  }
-  const getScoreText = (value: number, thresholds: { good: number; needsImprovement: number }) => {}
-}if (value <= thresholds.good) return 'Good'
-    if (value <= thresholds.needsImprovement) return 'Needs Improvement'
-    return 'Poor'
-  }
-  return ()
-    <div className="fixed bottom-4 right-4 z-50">
+
+  const getScoreColor = (_value: number, thresholds: { good: number; needsImprovement: number }) => {
+    if (value <= thresholds.good) return 'text-green-500';
+    if (value <= thresholds.needsImprovement) return 'text-yellow-500';
+    return 'text-red-500';
+  };
+
+  const getScoreText = (_value: number, thresholds: { good: number; needsImprovement: number }) => {
+    if (value <= thresholds.good) return 'Good';
+    if (value <= thresholds.needsImprovement) return 'Needs Improvement';
+    return 'Poor';
+  };
+
+  return (<div className="fixed bottom-4 right-4 z-50">
       <button
         onClick={() => setIsVisible(!isVisible)}
         className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2"
@@ -119,8 +129,8 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({}
         <div className={`w-2 h-2 rounded-full ${isLoading ? 'bg-yellow-400 animate-pulse' : 'bg-green-400'}`}></div>
         <span>Performance</span>
       </button>
-      {isVisible && ()
-        <div className="absolute bottom-14 right-0 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-xl shadow-2xl p-6 w-80 max-h-96 overflow-y-auto">
+      
+      {isVisible && (<div className="absolute bottom-14 right-0 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-xl shadow-2xl p-6 w-80 max-h-96 overflow-y-auto">
           <div className="flex items-center justify-between mb-4">
             <h3 className="font-bold text-gray-900 text-lg">Core Web Vitals</h3>
             <button

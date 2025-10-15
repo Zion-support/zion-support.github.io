@@ -1,27 +1,24 @@
-import React, { useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { useLocation } from 'react-router-dom'
-interface SEOOptimizerProps {}
-  title?: string
-  description?: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  noIndex?: boolean
-  structuredData?: any
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
+
+interface SEOOptimizerProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+  structuredData?: unknown;
 }
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({}
-  title = "Zion Tech Group - Advanced AI and IT Solutions",
-  description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. 99.9% uptime SLA, 24/7 support.",
-  keywords = "AI solutions, IT services, cybersecurity, cloud computing, digital transformation, business automation, technology consulting, Zion Tech Group, machine learning, 5G solutions, micro SaaS, enterprise software",
-  canonical,
-  ogImage = "https://ziontechgroup.com/og-image.jpg",
-  noIndex = false,
-  structuredData
-}) => {}
-}const location = useLocation()
-  const currentUrl = `https://ziontechgroup.com${location.pathname}`
-  const finalCanonical = canonical || currentUrl
+
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title = "Zion Tech Group - Advanced AI and IT Solutions", description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, _and digital transformation expertise. 99.9% uptime SLA, _24/7 support.", keywords = "AI solutions, _IT services, _cybersecurity, _cloud computing, _digital transformation, _business automation, _technology consulting, _Zion Tech Group, _machine learning, _5G solutions, _micro SaaS, _enterprise software", _canonical, ogImage = "https://ziontechgroup.com/og-image.jpg", noIndex = false, _structuredData
+}) => {
+  const location = useLocation();
+  const currentUrl = `https://ziontechgroup.com${location.pathname}`;
+  const finalCanonical = canonical || currentUrl;
+
   // Generate breadcrumb structured data
   const generateBreadcrumbData = () => {}
 }const pathSegments = location.pathname.split('/').filter(Boolean)

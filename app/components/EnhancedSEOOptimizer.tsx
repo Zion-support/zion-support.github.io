@@ -1,19 +1,20 @@
-import React, { useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { useLocation } from 'react-router-dom'
-interface EnhancedSEOOptimizerProps {}
-  title?: string
-  description?: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  noIndex?: boolean
-  structuredData?: any
-  author?: string
-  publishedTime?: string
-  modifiedTime?: string
-  section?: string
-  tags?: string[]
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
+
+interface EnhancedSEOOptimizerProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+  structuredData?: unknown;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
 }
 const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({}
   title = "Zion Tech Group - Advanced AI and IT Solutions",

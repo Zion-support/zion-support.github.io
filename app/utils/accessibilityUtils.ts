@@ -1,9 +1,11 @@
 // Accessibilityutils utility functions
-export const Accessibilityutils = {}
-  init: () => {}
-} },
-  process: (data: any) => {}
-}return data
+
+export const Accessibilityutils = {
+  init: () => {
+    },
+
+  process: (data: unknown) => {
+    return data;
   },
   cleanup: () => {}
 } }}

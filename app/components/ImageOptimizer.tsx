@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import React, { useState, useRef, useEffect } from 'react';
 
 interface ImageOptimizerProps {
@@ -11,38 +12,12 @@ interface ImageOptimizerProps {
 }
 
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
-  src,
-  alt,
-  className = '',
-  width,
-  height,
-  priority = false,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8vPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5YTNhZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+'
+  src, alt, className = '', _width, _height, priority = false, _placeholder, effect = 'blur', threshold = 100, _onLoad, _onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    if (priority) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [priority]);
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -52,32 +27,69 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     setHasError(true);
   };
 
+  // Generate optimized src with WebP support
+  const getOptimizedSrc = (_originalSrc: string) => {
+    if (originalSrc.startsWith('http') || originalSrc.startsWith('/')) {
+      return originalSrc;
+    }
+    
+    // Add WebP support if supported
+    if (typeof window !== 'undefined' && 'WebP' in window) {
+      const webpSrc = originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+      return webpSrc;
+    }
+    
+    return originalSrc;
+  };
+
+  // Generate responsive srcset
+  const generateSrcSet = (_baseSrc: string) => {
+    if (baseSrc.startsWith('http') || baseSrc.startsWith('/')) {
+      return baseSrc;
+    }
+
+    const sizes = [320, 640, 768, 1024, 1280, 1920];
+    const srcSet = sizes
+      .map(size => `${baseSrc}?w=${size} ${size}w`)
+      .join(', ');
+    
+    return srcSet;
+  };
+
+  const optimizedSrc = getOptimizedSrc(src);
+  const srcSet = generateSrcSet(src);
+
+  if (hasError) {
+    return (
+      <div 
+        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        style={{ width, height }}
+      >
+        <span className="text-gray-500 text-sm">Image failed to load</span>
+      </div>
+    );
+  }
+
+  if (priority) {
+    return (
+      <img
+        ref={imgRef}
+        src={optimizedSrc}
+        srcSet={srcSet}
+        alt={alt}
+        className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
+        width={width}
+        height={height}
+        onLoad={handleLoad}
+        onError={handleError}
+        loading="eager"
+        decoding="async"
+      />
+    );
+  }
+
   return (
-<<<<<<< HEAD
-    <div className="relative">
-      {!isLoaded && (
-        <div 
-          className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
-          style={{ width, height }}
-        />
-      )}
-      <LazyLoadImage
-      src={optimizedSrc}
-      srcSet={srcSet}
-      alt={alt}
-      className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
-      width={width}
-      height={height}
-      effect={effect}
-      placeholderSrc={placeholder}
-      threshold={threshold}
-      onLoad={handleLoad}
-      onError={handleError}
-      loading="lazy"
-      decoding="async"
-    />
-=======
-    <div
+<div
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
@@ -111,8 +123,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">
           <span className="text-sm">Failed to load image</span>
         </div>
-      )}
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
+      )}ursor/analyze-improve-and-merge-code-4a9f
     </div>
   );
 };

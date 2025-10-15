@@ -1,31 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Code, 
-  Copy,
-  ExternalLink,
-  Search,
-  Filter,
-  BookOpen,
-  Zap,
-  Shield,
-  Clock,
-  Users,
-  Settings,
-  Database,
-  Globe,
-  Smartphone,
-  BarChart3,
-  MessageSquare,
-  Cpu,
-  Network,
-  FileText,
-  Play,
-  Download
-} from 'lucide-react';
+import { Copy, Search, BookOpen, MessageSquare, Play, Download } from "lucide-react";
 
 const APIDocsPage: React.FC = () => {
   const [selectedAPI, setSelectedAPI] = useState('ai-chatbot');
@@ -221,7 +195,7 @@ const APIDocsPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature) => (
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   {feature.icon}

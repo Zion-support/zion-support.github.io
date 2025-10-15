@@ -1,7 +1,8 @@
-import React, { useEffect } from "react"
-declare global {}
-  interface Window {}
-    gtag: (...args: unknown[]) => void
+import React, { useEffect } from "react";
+
+declare global {
+  interface Window {
+    gtag: (_...args: unknown[]) => void;
   }
 }
 const Analytics: React.FC = () => {}

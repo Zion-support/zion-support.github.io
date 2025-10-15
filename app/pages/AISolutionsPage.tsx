@@ -1,5 +1,7 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
+
+
 
 const AISolutionsPage: React.FC = () => {
   return (
