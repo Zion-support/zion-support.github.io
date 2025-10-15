@@ -91,8 +91,8 @@ export const accessibilityTests = {
 
     const totalIssues = Object.values(results).flat().length;
     
-    console.log('Accessibility Test Results:', results);
-    console.log(`Total Issues Found: ${totalIssues}`);
+    console.warn('Accessibility Test Results:', results);
+    console.warn(`Total Issues Found: ${totalIssues}`);
     
     return { results, totalIssues };
   }

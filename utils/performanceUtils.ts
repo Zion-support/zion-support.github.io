@@ -5,25 +5,26 @@ export const performanceMonitor = {
     const start = performance.now();
     renderFn();
     const end = performance.now();
-    console.log(`${componentName} rendered in ${end - start}ms`);
+    console.warn(`${componentName} rendered in ${end - start}ms`);
   },
 
   // Measure async operations
-  measureAsync: async (operationName: string, operation: () => Promise<any>) => {
+  measureAsync: async (operationName: string, operation: () => Promise<unknown>) => {
     const start = performance.now();
     const result = await operation();
     const end = performance.now();
-    console.log(`${operationName} completed in ${end - start}ms`);
+    console.warn(`${operationName} completed in ${end - start}ms`);
     return result;
   },
 
   // Memory usage monitoring
   getMemoryUsage: () => {
     if ('memory' in performance) {
+      const memory = (performance as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       return {
-        used: (performance as any).memory.usedJSHeapSize,
-        total: (performance as any).memory.totalJSHeapSize,
-        limit: (performance as any).memory.jsHeapSizeLimit
+        used: memory?.usedJSHeapSize || 0,
+        total: memory?.totalJSHeapSize || 0,
+        limit: memory?.jsHeapSizeLimit || 0
       };
     }
     return null;
@@ -45,7 +46,7 @@ export const performanceMonitor = {
 };
 
 // Lazy loading utility
-export const lazyLoad = (importFn: () => Promise<any>) => {
+export const lazyLoad = (importFn: () => Promise<unknown>) => {
   return React.lazy(() => {
     return new Promise(resolve => {
       setTimeout(() => {
