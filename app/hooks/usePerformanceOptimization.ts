@@ -72,13 +72,28 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   );
 
   // Preload critical resources
-  const preloadResource = useCallback((href: string, as: string) => {
+  const preloadResource = useCallback((href: string, as: string, crossorigin?: string) => {
     if (!enablePreloading) return;
+
+    // Check if already preloaded
+    const existingLink = document.querySelector(`link[href="${href}"]`);
+    if (existingLink) return;
 
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = href;
     link.as = as;
+    if (crossorigin) {
+      link.crossOrigin = crossorigin;
+    }
+    
+    // Add error handling
+    link.onerror = () => {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn(`Failed to preload resource: ${href}`);
+      }
+    };
+    
     document.head.appendChild(link);
   }, [enablePreloading]);
 
@@ -89,8 +104,36 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     imageUrls.forEach((url) => {
       const img = new Image();
       img.src = url;
+      img.onload = () => {
+        if (process.env.NODE_ENV === 'development') {
+          console.log(`Preloaded image: ${url}`);
+        }
+      };
+      img.onerror = () => {
+        if (process.env.NODE_ENV === 'development') {
+          console.warn(`Failed to preload image: ${url}`);
+        }
+      };
     });
   }, [enablePreloading]);
+
+  // Preload critical fonts
+  const preloadFonts = useCallback((fontUrls: string[]) => {
+    if (!enablePreloading) return;
+
+    fontUrls.forEach((url) => {
+      preloadResource(url, 'font', 'anonymous');
+    });
+  }, [enablePreloading, preloadResource]);
+
+  // Preload critical scripts
+  const preloadScripts = useCallback((scriptUrls: string[]) => {
+    if (!enablePreloading) return;
+
+    scriptUrls.forEach((url) => {
+      preloadResource(url, 'script');
+    });
+  }, [enablePreloading, preloadResource]);
 
   // Initialize performance optimizations
   useEffect(() => {
@@ -121,5 +164,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     debounce,
     preloadResource,
     preloadImages,
+    preloadFonts,
+    preloadScripts,
   };
 };

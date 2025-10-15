@@ -1,8 +1,8 @@
 // Error handling utilities
 export interface AppError {
   message: string;
-  code?: string;
-  statusCode?: number;
+  code?: string | undefined;
+  statusCode?: number | undefined;
   details?: any;
 }
 
@@ -14,8 +14,8 @@ export class CustomError extends Error {
   constructor(message: string, code?: string, statusCode?: number, details?: any) {
     super(message);
     this.name = 'CustomError';
-    this.code = code;
-    this.statusCode = statusCode;
+    this.code = code ?? undefined;
+    this.statusCode = statusCode ?? undefined;
     this.details = details;
   }
 }
@@ -24,8 +24,8 @@ export const handleError = (error: unknown): AppError => {
   if (error instanceof CustomError) {
     return {
       message: error.message,
-      code: error.code,
-      statusCode: error.statusCode,
+      code: error.code ?? undefined,
+      statusCode: error.statusCode ?? undefined,
       details: error.details,
     };
   }
