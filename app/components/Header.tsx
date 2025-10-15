@@ -40,6 +40,13 @@ const Header: React.FC = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
+      {/* Skip Links for Accessibility */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50 focus:outline-none focus:ring-2 focus:ring-blue-300"
+      >
+        Skip to main content
+      </a>
       {/* Top Contact Bar */}
       <div className="bg-slate-800 text-white py-2 px-4 hidden lg:block">
         <div className="container mx-auto flex justify-between items-center text-sm">
@@ -130,8 +137,11 @@ const Header: React.FC = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden text-white p-2"
+              className="lg:hidden text-white p-2 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-lg"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -140,7 +150,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/20">
+          <div id="mobile-menu" className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/20" role="navigation" aria-label="Mobile navigation">
             <div className="container mx-auto px-4 py-4">
               {navigationItems.map((item) => (
                 <div key={item.name}>

@@ -14,8 +14,8 @@ const Hero: React.FC = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-6xl mx-auto">
-          <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
-            <Star className="w-4 h-4 mr-2" />
+          <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8" role="banner">
+            <Star className="w-4 h-4 mr-2" aria-hidden="true" />
             #1 AI & IT Solutions Provider
           </div>
           
@@ -53,28 +53,28 @@ const Hero: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center group">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                <Users className="w-8 h-8 text-cyan-400" />
+                <Users className="w-8 h-8 text-cyan-400" aria-hidden="true" />
               </div>
               <div className="text-3xl font-bold text-white mb-1">500+</div>
               <div className="text-gray-400 text-sm">Happy Clients</div>
             </div>
             <div className="text-center group">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                <Award className="w-8 h-8 text-green-400" />
+                <Award className="w-8 h-8 text-green-400" aria-hidden="true" />
               </div>
               <div className="text-3xl font-bold text-white mb-1">1000+</div>
               <div className="text-gray-400 text-sm">Projects Completed</div>
             </div>
             <div className="text-center group">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                <Clock className="w-8 h-8 text-purple-400" />
+                <Clock className="w-8 h-8 text-purple-400" aria-hidden="true" />
               </div>
               <div className="text-3xl font-bold text-white mb-1">99.9%</div>
               <div className="text-gray-400 text-sm">Uptime Guarantee</div>
             </div>
             <div className="text-center group">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                <Zap className="w-8 h-8 text-orange-400" />
+                <Zap className="w-8 h-8 text-orange-400" aria-hidden="true" />
               </div>
               <div className="text-3xl font-bold text-white mb-1">24/7</div>
               <div className="text-gray-400 text-sm">Support Available</div>

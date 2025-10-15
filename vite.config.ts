@@ -22,6 +22,7 @@ export default defineConfig({
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
           ui: ['framer-motion', 'lucide-react'],
+          helmet: ['react-helmet-async'],
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
@@ -44,9 +45,14 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        passes: 2,
       },
       mangle: {
         safari10: true,
+        properties: {
+          regex: /^_/,
+        },
       },
       format: {
         comments: false,
@@ -56,6 +62,10 @@ export default defineConfig({
     reportCompressedSize: true,
     cssCodeSplit: true,
     assetsInlineLimit: 4096,
+    target: 'es2020',
+    modulePreload: {
+      polyfill: false,
+    },
   },
   server: {
     port: 3000,
