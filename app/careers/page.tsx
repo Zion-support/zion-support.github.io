@@ -16,14 +16,16 @@ const CareersPage: React.FC = () => {
         'PhD in Computer Science or related field',
         '5+ years experience in AI/ML',
         'Expertise in Python, TensorFlow, PyTorch',
-        'Experience with cloud platforms (AWS, GCP, Azure)']
-        'Strong problem-solving and communication skills'],
+        'Experience with cloud platforms (AWS, GCP, Azure)',
+        'Strong problem-solving and communication skills'
+      ],
       benefits: [
         'Competitive salary and equity',
         'Health, dental, and vision insurance',
         'Flexible work arrangements',
-        'Professional development budget']
-        '401(k) with company matching']
+        'Professional development budget',
+        '401(k) with company matching'
+      ]
     },
     {
       title: 'Full-Stack Developer',
@@ -36,14 +38,16 @@ const CareersPage: React.FC = () => {
         'Bachelor\'s degree in Computer Science',
         '3+ years full-stack development experience',
         'Proficiency in React, Node.js, TypeScript',
-        'Experience with databases (PostgreSQL, MongoDB)']
-        'Knowledge of cloud services and DevOps'],
+        'Experience with databases (PostgreSQL, MongoDB)',
+        'Knowledge of cloud services and DevOps'
+      ],
       benefits: [
         'Competitive salary',
         'Comprehensive health benefits',
         'Remote work flexibility',
-        'Learning and development opportunities']
-        'Team building events']
+        'Learning and development opportunities',
+        'Team building events'
+      ]
     },
     {
       title: 'AI Product Manager',

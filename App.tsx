@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './app/components/Header';
 import Footer from './app/components/Footer';
@@ -44,7 +44,7 @@ const App: React.FC = () => {
                   </>
                 } />
                 <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
+                <Route path="/contact" element={<ContactPage />} />
                 <Route path="/micro-saas" element={<MicroSaasPage />} />
                 <Route path="/ai-services" element={<AiServicesPage />} />
                 <Route path="/it-services" element={<ItServicesPage />} />
