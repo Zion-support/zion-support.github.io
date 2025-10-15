@@ -113,8 +113,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       { name: 'About Us', href: '/about', icon: InformationCircleIcon },
       { name: 'Our Team', href: '/team', icon: UserGroupIcon },
       { name: 'Careers', href: '/careers', icon: UserGroupIcon },
-      { name: 'Contact', href: '/contact', icon: PhoneIcon },
-      { name: 'Partnerships', href: '/partnerships', icon: HandRaisedIcon }
+      { name: 'Partnerships', href: '/partnerships', icon: UserGroupIcon },
+      { name: 'Contact', href: '/contact', icon: PhoneIcon }
     ]},
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
