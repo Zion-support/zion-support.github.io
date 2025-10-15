@@ -1,4 +1,3 @@
-
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
@@ -33,5 +32,5 @@ module.exports = {
     '!src/setupTests.ts'
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  globals: {}
 };
-
