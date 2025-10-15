@@ -33,9 +33,7 @@
     },
     "performance": {
       "issues": [],
-      "recommendations": [
-        "Consider optimizing large files: stats.html (171KB)"
-      ]
+      "recommendations": ["Consider optimizing large files: stats.html (171KB)"]
     }
   },
   "issues": [

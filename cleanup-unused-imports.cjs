@@ -1,125 +1,72 @@
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-function cleanupUnusedImports(filePath) {
+// Function to clean up unused imports in a file
+function cleanupFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    const lines = content.split('\n');
-    const cleanedLines = [];
+    const content = fs.readFileSync(filePath, 'utf8');
     
-    let inImport = false;
-    let importLines = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      // Check if this is an import line
-      if (line.trim().startsWith('import ') && line.includes(' from ')) {
-        inImport = true;
-        importLines = [line];
-      } else if (inImport && (line.trim().startsWith('}') || line.trim().startsWith(')'))) {
-        // End of multi-line import
-        importLines.push(line);
-        inImport = false;
-        
-        // Process the import block
-        const importBlock = importLines.join('\n');
-        const cleanedBlock = cleanImportBlock(importBlock, content);
-        if (cleanedBlock.trim()) {
-          cleanedLines.push(cleanedBlock);
-        }
-        importLines = [];
-      } else if (inImport) {
-        importLines.push(line);
-      } else {
-        cleanedLines.push(line);
-      }
+    // Skip if file doesn't exist or is not a TypeScript/JavaScript file
+    if (!filePath.endsWith('.tsx') && !filePath.endsWith('.ts') && !filePath.endsWith('.jsx') && !filePath.endsWith('.js')) {
+      return;
     }
     
-    const cleanedContent = cleanedLines.join('\n');
-    
-    if (cleanedContent !== content) {
-      fs.writeFileSync(filePath, cleanedContent, 'utf8');
-      console.log(`Cleaned: ${filePath}`);
-      return true;
+    // Skip if file is in node_modules or other build directories
+    if (filePath.includes('node_modules') || filePath.includes('dist') || filePath.includes('.next')) {
+      return;
     }
     
-    return false;
+    console.log(`Processing: ${filePath}`);
+    
+    // Run ESLint with --fix to automatically remove unused imports
+    try {
+      execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"extends": ["@typescript-eslint/recommended"], "parser": "@typescript-eslint/parser", "rules": {"@typescript-eslint/no-unused-vars": "error"}}'`, { stdio: 'pipe' });
+    } catch (error) {
+      // ESLint might fail, but that's okay - we'll continue
+      console.log(`ESLint warning for ${filePath}: ${error.message}`);
+    }
+    
   } catch (error) {
-    console.error(`Error cleaning ${filePath}:`, error.message);
-    return false;
+    console.log(`Error processing ${filePath}: ${error.message}`);
   }
 }
 
-function cleanImportBlock(importBlock, fullContent) {
-  // Extract the imported names
-  const importMatch = importBlock.match(/import\s*\{([^}]+)\}\s*from/);
-  if (!importMatch) {
-    return importBlock; // Not a named import
-  }
-  
-  const importedNames = importMatch[1]
-    .split(',')
-    .map(name => name.trim())
-    .filter(name => name.length > 0);
-  
-  // Check which imports are actually used
-  const usedImports = [];
-  for (const name of importedNames) {
-    // Simple check - look for the name in the content (not in import statements)
-    const contentWithoutImports = fullContent.replace(/import\s*\{[^}]+\}\s*from[^;]+;/g, '');
-    if (contentWithoutImports.includes(name) && !contentWithoutImports.includes(`import ${name}`)) {
-      usedImports.push(name);
-    }
-  }
-  
-  if (usedImports.length === 0) {
-    // No imports are used, remove the entire import
-    return '';
-  } else if (usedImports.length === importedNames.length) {
-    // All imports are used, keep as is
-    return importBlock;
-  } else {
-    // Some imports are used, keep only those
-    const newImportBlock = importBlock.replace(
-      /\{[^}]+\}/,
-      `{ ${usedImports.join(', ')} }`
-    );
-    return newImportBlock;
-  }
-}
-
-function findTsxFiles(dir) {
+// Function to recursively find all TypeScript/JavaScript files
+function findFiles(dir) {
   const files = [];
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  try {
+    const items = fs.readdirSync(dir);
     
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);
+      const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      if (stat.isDirectory()) {
+        // Skip certain directories
+        if (!['node_modules', 'dist', '.next', '.git'].includes(item)) {
+          files.push(...findFiles(fullPath));
+        }
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
         files.push(fullPath);
       }
     }
+  } catch (error) {
+    console.log(`Error reading directory ${dir}: ${error.message}`);
   }
   
-  traverse(dir);
   return files;
 }
 
-// Find all TypeScript/TSX files
-const files = findTsxFiles('./app');
-files.push('./App.tsx');
+// Main execution
+console.log('Starting cleanup of unused imports...');
 
-let cleanedCount = 0;
+const files = findFiles('./app');
+console.log(`Found ${files.length} files to process`);
+
 for (const file of files) {
-  if (cleanupUnusedImports(file)) {
-    cleanedCount++;
-  }
+  cleanupFile(file);
 }
 
-console.log(`Cleaned ${cleanedCount} files`);
+console.log('Cleanup completed!');
