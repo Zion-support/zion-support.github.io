@@ -51,14 +51,19 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       icon: CpuChipIcon,
       submenu: [
         { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: EnvelopeIcon },
-        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },
-        { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot', icon: ChatBubbleLeftRightIcon },
-        { name: 'AI Project Management Pro', href: '/ai-project-management-pro', icon: CogIcon },
-        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', icon: ChartBarIcon },
-        { name: 'AI Content Generation', href: '/ai-content-generation-pro', icon: DocumentTextIcon },
-        { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: EyeIcon },
-        { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon }
+        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
+        { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Document Processor', href: '/ai-document-processor', icon: DocumentTextIcon },
+        { name: 'AI Form Builder', href: '/ai-form-builder', icon: DocumentTextIcon },
+        { name: 'AI Voice Assistant', href: '/ai-voice-assistant', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: ShieldCheckIcon },
+        { name: 'AI Image Recognition', href: '/ai-image-recognition', icon: EyeIcon },
+        { name: 'AI Lead Scoring', href: '/ai-lead-scoring', icon: ChartBarIcon },
+        { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: CogIcon },
+        { name: 'AI Price Optimizer', href: '/ai-price-optimizer', icon: CurrencyDollarIcon },
+        { name: 'AI Scheduling Assistant', href: '/ai-scheduling-assistant', icon: CogIcon },
+        { name: 'AI Content Generator', href: '/ai-content-generator', icon: DocumentTextIcon },
+        { name: 'Data Analytics', href: '/data-analytics', icon: ChartBarIcon }
       ]
     },
     {
@@ -82,12 +87,18 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       submenu: [
         { name: 'IT Solutions Overview', href: '/it-solutions', icon: CogIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-        { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: ShieldCheckIcon },
         { name: 'Web Development', href: '/web-development', icon: CodeBracketIcon },
         { name: 'Mobile App Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
         { name: 'Database Management', href: '/database-management', icon: CircleStackIcon },
         { name: 'Network Infrastructure', href: '/network-infrastructure', icon: SignalIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
+        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
+        { name: 'Blockchain Solutions', href: '/blockchain-solutions', icon: ShieldCheckIcon },
+        { name: 'IoT Solutions', href: '/iot-solutions', icon: SignalIcon },
+        { name: 'DevOps Automation', href: '/devops-automation', icon: CogIcon },
+        { name: 'Data Engineering', href: '/data-engineering', icon: CircleStackIcon },
+        { name: 'API Development', href: '/api-development', icon: CodeBracketIcon },
+        { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon }
       ]
     },
     {

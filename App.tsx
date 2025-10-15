@@ -39,6 +39,35 @@ const DigitalTransformationPage = lazy(() => import('./app/digital-transformatio
 // 5G Solutions Pages
 const FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'));
 
+// Additional AI Services
+const AIChatbotBuilderPage = lazy(() => import('./app/ai-chatbot-builder/page'));
+const AIDocumentProcessorPage = lazy(() => import('./app/ai-document-processor/page'));
+const AIFormBuilderPage = lazy(() => import('./app/ai-form-builder/page'));
+const AIVoiceAssistantPage = lazy(() => import('./app/ai-voice-assistant/page'));
+const AIFraudDetectionPage = lazy(() => import('./app/ai-fraud-detection/page'));
+const AIImageRecognitionPage = lazy(() => import('./app/ai-image-recognition/page'));
+const AILeadScoringPage = lazy(() => import('./app/ai-lead-scoring/page'));
+const AIPredictiveMaintenancePage = lazy(() => import('./app/ai-predictive-maintenance/page'));
+const AIPriceOptimizerPage = lazy(() => import('./app/ai-price-optimizer/page'));
+const AISchedulingAssistantPage = lazy(() => import('./app/ai-scheduling-assistant/page'));
+const BlockchainSolutionsPage = lazy(() => import('./app/blockchain-solutions/page'));
+const IOTSolutionsPage = lazy(() => import('./app/iot-solutions/page'));
+const DevOpsAutomationPage = lazy(() => import('./app/devops-automation/page'));
+const DataEngineeringPage = lazy(() => import('./app/data-engineering/page'));
+const APIDevelopmentPage = lazy(() => import('./app/api-development/page'));
+const SecurityAuditPage = lazy(() => import('./app/security-audit/page'));
+const MicroSAASSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
+const AIContentGeneratorPage = lazy(() => import('./app/ai-content-generator/page'));
+const DataAnalyticsPage = lazy(() => import('./app/data-analytics/page'));
+const WebDevelopmentPage = lazy(() => import('./app/web-development/page'));
+const MobileDevelopmentPage = lazy(() => import('./app/mobile-development/page'));
+const DatabaseManagementPage = lazy(() => import('./app/database-management/page'));
+const NetworkInfrastructurePage = lazy(() => import('./app/network-infrastructure/page'));
+const HelpPage = lazy(() => import('./app/help/page'));
+const AccessibilityPage = lazy(() => import('./app/accessibility/page'));
+const APIDocsPage = lazy(() => import('./app/api-docs/page'));
+const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
+
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -132,6 +161,39 @@ function App() {
                     
                     {/* 5G Solutions */}
                     <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                    
+                    {/* Additional AI Services */}
+                    <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                    <Route path="/ai-document-processor" element={<AIDocumentProcessorPage />} />
+                    <Route path="/ai-form-builder" element={<AIFormBuilderPage />} />
+                    <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
+                    <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
+                    <Route path="/ai-image-recognition" element={<AIImageRecognitionPage />} />
+                    <Route path="/ai-lead-scoring" element={<AILeadScoringPage />} />
+                    <Route path="/ai-predictive-maintenance" element={<AIPredictiveMaintenancePage />} />
+                    <Route path="/ai-price-optimizer" element={<AIPriceOptimizerPage />} />
+                    <Route path="/ai-scheduling-assistant" element={<AISchedulingAssistantPage />} />
+                    
+                    {/* Advanced Solutions */}
+                    <Route path="/blockchain-solutions" element={<BlockchainSolutionsPage />} />
+                    <Route path="/iot-solutions" element={<IOTSolutionsPage />} />
+                    <Route path="/devops-automation" element={<DevOpsAutomationPage />} />
+                    <Route path="/data-engineering" element={<DataEngineeringPage />} />
+                    <Route path="/api-development" element={<APIDevelopmentPage />} />
+                    <Route path="/security-audit" element={<SecurityAuditPage />} />
+                    
+                    {/* Additional Services */}
+                    <Route path="/micro-saas-solutions" element={<MicroSAASSolutionsPage />} />
+                    <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                    <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                    <Route path="/web-development" element={<WebDevelopmentPage />} />
+                    <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                    <Route path="/database-management" element={<DatabaseManagementPage />} />
+                    <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                    <Route path="/help" element={<HelpPage />} />
+                    <Route path="/accessibility" element={<AccessibilityPage />} />
+                    <Route path="/api-docs" element={<APIDocsPage />} />
+                    <Route path="/partnerships" element={<PartnershipsPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
