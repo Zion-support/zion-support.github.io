@@ -45,6 +45,14 @@ import MicroSaaSPage from './app/pages/MicroSaaSPage';
 import FiveGSolutionsPage from './app/5g-solutions/page';
 import TeamPage from './app/pages/TeamPage';
 import DocumentationPage from './app/pages/DocumentationPage';
+import PartnershipsPage from './app/pages/PartnershipsPage';
+import APIDocsPage from './app/pages/APIDocsPage';
+import HelpPage from './app/pages/HelpPage';
+import CommunityPage from './app/pages/CommunityPage';
+import ChatPage from './app/pages/ChatPage';
+import StatusPage from './app/pages/StatusPage';
+import ReportPage from './app/pages/ReportPage';
+import SoftwareDevelopmentPage from './app/pages/SoftwareDevelopmentPage';
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -123,6 +131,14 @@ function App() {
                       {/* Additional Pages */}
                       <Route path="/team" element={<TeamPage />} />
                       <Route path="/docs" element={<DocumentationPage />} />
+                      <Route path="/partnerships" element={<PartnershipsPage />} />
+                      <Route path="/api-docs" element={<APIDocsPage />} />
+                      <Route path="/help" element={<HelpPage />} />
+                      <Route path="/community" element={<CommunityPage />} />
+                      <Route path="/chat" element={<ChatPage />} />
+                      <Route path="/status" element={<StatusPage />} />
+                      <Route path="/report" element={<ReportPage />} />
+                      <Route path="/software-development" element={<SoftwareDevelopmentPage />} />
                       
                       {/* Catch all route */}
                       <Route path="*" element={
