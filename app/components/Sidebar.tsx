@@ -44,31 +44,52 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Home', href: '/', icon: Home },
         { name: 'About', href: '/about', icon: Users },
         { name: 'Contact', href: '/contact', icon: Phone },
-        { name: 'Pricing', href: '/pricing', icon: Star }
+        { name: 'Pricing', href: '/pricing', icon: Star },
+        { name: 'Support', href: '/support', icon: Phone }
       ]
     },
     {
       title: 'AI Services',
       items: [
         { name: 'AI Solutions', href: '/ai-solutions', icon: Settings },
-        { name: 'AI Analytics', href: '/ai-analytics', icon: Code },
-        { name: 'AI Automation', href: '/ai-automation', icon: Settings }
+        { name: 'AI Services', href: '/ai-services', icon: Settings },
+        { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Settings },
+        { name: 'AI Document Processor', href: '/ai-document-processor', icon: Settings },
+        { name: 'AI Voice Assistant', href: '/ai-voice-assistant', icon: Settings },
+        { name: 'AI Content Generator', href: '/ai-content-generator', icon: Settings }
       ]
     },
     {
       title: 'IT Solutions',
       items: [
+        { name: 'IT Solutions', href: '/it-solutions', icon: Settings },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud },
         { name: 'Web Development', href: '/web-development', icon: Code },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: Settings }
+        { name: 'Mobile Development', href: '/mobile-development', icon: Code },
+        { name: 'Database Management', href: '/database-management', icon: Settings },
+        { name: '5G Solutions', href: '/5g-solutions', icon: Settings }
+      ]
+    },
+    {
+      title: 'Micro SaaS',
+      items: [
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: Settings },
+        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: Settings },
+        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: Settings },
+        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: Settings },
+        { name: 'Inventory Manager', href: '/inventory-manager', icon: Settings },
+        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: Settings }
       ]
     },
     {
       title: 'Resources',
       items: [
         { name: 'Blog', href: '/blog', icon: Code },
+        { name: 'Tutorials', href: '/tutorials', icon: Code },
+        { name: 'Documentation', href: '/docs', icon: Code },
         { name: 'Case Studies', href: '/case-studies', icon: Star },
-        { name: 'Documentation', href: '/docs', icon: Code }
+        { name: 'API Documentation', href: '/api-docs', icon: Code },
+        { name: 'Help Center', href: '/help', icon: Code }
       ]
     }
   ], []);

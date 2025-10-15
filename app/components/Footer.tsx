@@ -67,50 +67,26 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">AI Tools</h4>
+            <h4 className="text-md font-semibold mb-4">Micro SaaS Solutions</h4>
             <ul className="space-y-2">
-              <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">Content Moderator</Link></li>
-              <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">Customer Support Pro</Link></li>
-              <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-white">Workflow Automator Pro</Link></li>
-              <li><Link to="/zion-ai-email-marketing-pro" className="text-gray-300 hover:text-white">Email Marketing Pro</Link></li>
-              <li><Link to="/zion-ai-customer-churn-predictor" className="text-gray-300 hover:text-white">Customer Churn Predictor</Link></li>
-              <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-white">Sales Predictor</Link></li>
-              <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
-              <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">Document Analyzer</Link></li>
-              <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
+              <li><Link to="/task-manager-pro" className="text-gray-300 hover:text-white">Task Manager Pro</Link></li>
+              <li><Link to="/analytics-dashboard" className="text-gray-300 hover:text-white">Analytics Dashboard</Link></li>
+              <li><Link to="/customer-support-hub" className="text-gray-300 hover:text-white">Customer Support Hub</Link></li>
+              <li><Link to="/inventory-manager" className="text-gray-300 hover:text-white">Inventory Manager</Link></li>
+              <li><Link to="/social-media-scheduler" className="text-gray-300 hover:text-white">Social Media Scheduler</Link></li>
+              <li><Link to="/expense-tracker-pro" className="text-gray-300 hover:text-white">Expense Tracker Pro</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Advanced AI Services</h4>
+            <h4 className="text-md font-semibold mb-4">Resources</h4>
             <ul className="space-y-2">
-              <li><Link to="/zion-ai-fraud-detection" className="text-gray-300 hover:text-white">AI Fraud Detection</Link></li>
-              <li><Link to="/zion-ai-image-recognition" className="text-gray-300 hover:text-white">AI Image Recognition</Link></li>
-              <li><Link to="/zion-ai-lead-scoring" className="text-gray-300 hover:text-white">AI Lead Scoring</Link></li>
-              <li><Link to="/zion-ai-predictive-maintenance" className="text-gray-300 hover:text-white">AI Predictive Maintenance</Link></li>
-              <li><Link to="/zion-ai-price-optimizer" className="text-gray-300 hover:text-white">AI Price Optimizer</Link></li>
-              <li><Link to="/zion-ai-voice-assistant" className="text-gray-300 hover:text-white">AI Voice Assistant</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-md font-semibold mb-4">Advanced AI Services</h4>
-            <ul className="space-y-2">
-              <li><Link to="/ai-voice-assistant-pro" className="text-gray-300 hover:text-white">AI Voice Assistant Pro</Link></li>
-              <li><Link to="/ai-image-recognition-pro" className="text-gray-300 hover:text-white">AI Image Recognition Pro</Link></li>
-              <li><Link to="/ai-fraud-detection-pro" className="text-gray-300 hover:text-white">AI Fraud Detection Pro</Link></li>
-              <li><Link to="/ai-lead-scoring-pro" className="text-gray-300 hover:text-white">AI Lead Scoring Pro</Link></li>
-              <li><Link to="/ai-predictive-maintenance-pro" className="text-gray-300 hover:text-white">AI Predictive Maintenance Pro</Link></li>
-              <li><Link to="/ai-price-optimizer-pro" className="text-gray-300 hover:text-white">AI Price Optimizer Pro</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-md font-semibold mb-4">Enterprise Solutions</h4>
-            <ul className="space-y-2">
-              <li><Link to="/blockchain-solutions-pro" className="text-gray-300 hover:text-white">Blockchain Solutions Pro</Link></li>
-              <li><Link to="/iot-solutions-pro" className="text-gray-300 hover:text-white">IoT Solutions Pro</Link></li>
-              <li><Link to="/devops-automation-pro" className="text-gray-300 hover:text-white">DevOps Automation Pro</Link></li>
+              <li><Link to="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
+              <li><Link to="/tutorials" className="text-gray-300 hover:text-white">Tutorials</Link></li>
+              <li><Link to="/docs" className="text-gray-300 hover:text-white">Documentation</Link></li>
+              <li><Link to="/case-studies" className="text-gray-300 hover:text-white">Case Studies</Link></li>
+              <li><Link to="/api-docs" className="text-gray-300 hover:text-white">API Documentation</Link></li>
+              <li><Link to="/help" className="text-gray-300 hover:text-white">Help Center</Link></li>
             </ul>
           </div>
           
@@ -133,7 +109,6 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/help" className="text-gray-300 hover:text-white">Help Center</Link></li>
               <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
               <li><Link to="/accessibility" className="text-gray-300 hover:text-white">Accessibility</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
               <li><Link to="/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
               <li><Link to="/terms" className="text-gray-300 hover:text-white">Terms of Service</Link></li>
               <li><Link to="/cookies" className="text-gray-300 hover:text-white">Cookie Policy</Link></li>
