@@ -90,7 +90,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard', icon: Settings },
         { name: 'Smart CRM Automation', href: '/zion-smart-crm-automation', icon: Settings },
         { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager', icon: Settings },
-        { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker', icon: Settings }
+        { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker', icon: Settings },
+        { name: 'AI Project Manager', href: '/ai-project-manager', icon: Settings },
+        { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: Settings },
+        { name: 'AI Time Tracker', href: '/ai-time-tracker', icon: Settings },
+        { name: 'AI Lead Generator', href: '/ai-lead-generator', icon: Settings },
+        { name: 'AI HR Assistant', href: '/ai-hr-assistant', icon: Settings }
       ]
     },
     {
