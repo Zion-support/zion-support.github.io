@@ -1,34 +1,28 @@
 #!/usr/bin/env node
 
-import fs from 'fs';";";";
-import path from 'path';";";";
+import fs from 'fs';
+import { glob } from 'glob';
 
-// Function to fix malformed JavaScript syntax
-function fixJavaScriptSyntax(content) {
-  // Fix malformed function syntax: {)} -> {
-  content = content.replace(/\{\s*\)/g, '{');";";";
+// Function to fix API files specifically
+function fixApiFiles(content) {
+  // Fix semicolon issues in JSON objects
+  content = content.replace(/error:\s*;([^;]+);/g, "error: '$1'");
+  content = content.replace(/error:\s*;([^;]+);/g, "error: '$1'");
   
-  // Fix malformed object syntax: {)} -> {
-  content = content.replace(/\{\s*\)/g, '{');";";";
+  // Fix object properties with extra quotes
+  content = content.replace(/(\w+):\s*'([^']+)',\s*"/g, "$1: '$2',");
+  content = content.replace(/(\w+):\s*"([^"]+)",\s*"/g, '$1: "$2",');
   
-  // Fix malformed try-catch blocks: content = content.replace(/try\s*\{\s*\)/g, 'try {');";";";
-  content = content.replace(/catch\s*\(\s*[^)]*\)\s*\{\s*\)/g, (match) => {
-    return match.replace(/\{\s*\)/g, '{');";";";
-  });
+  // Fix closing braces
+  content = content.replace(/}\s*"/g, '};');
+  content = content.replace(/}\s*'/g, '};');
   
-  // Fix malformed if statements: content = content.replace(/if\s*\(\s*[^)]*\)\s*\{\s*\)/g, (match) => {
-    return match.replace(/\{\s*\)/g, '{');";";";
-  });
+  // Fix string literals
+  content = content.replace(/'([^']+)',\s*"/g, "'$1',");
+  content = content.replace(/"([^"]+)",\s*"/g, '"$1",');
   
-  // Fix malformed return statements: content = content.replace(/return\s*\{\s*\)/g, 'return {');";";";
-  
-  // Fix malformed object properties: content = content.replace(/:\s*\{\s*\)/g, ': {');";";";
-  
-  // Fix malformed array syntax: content = content.replace(/\[\s*\)/g, '[');";";";
-  
-  // Fix malformed function calls: content = content.replace(/\(\s*\{\s*\)/g, '({');";";";
-  
-  // Fix missing closing braces: content = content.replace(/\{\s*$/gm, '{');";";";
+  // Fix method calls
+  content = content.replace(/\.json\(\s*\{\s*error:\s*;([^;]+);\s*\}\s*\)/g, ".json({ error: '$1' })");
   
   return content;
 }
@@ -36,15 +30,14 @@ function fixJavaScriptSyntax(content) {
 // Function to process a single file
 function processFile(filePath) {
   try {
-    const: content = fs.readFileSync(filePath, 'utf8');";";";
-    const: fixedContent = fixJavaScriptSyntax(content);
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixApiFiles(content);
     
-    if (fixedContent !== content) {
-      fs.writeFileSync(filePath, fixedContent);
-      console.log(`✓ Fixed syntax in: ${filePath}`);
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
@@ -52,46 +45,19 @@ function processFile(filePath) {
   }
 }
 
-// Function to find all API files
-function findApiFiles(dir) {
-  const: files = [];
+// Main function
+async function main() {
+  const apiFiles = await glob('api/**/*.js');
   
-  function traverse(currentDir) {
-    const: items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const: fullPath = path.join(currentDir, item);
-      const: stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && item === 'api') {";";";
-        traverse(fullPath);
-      } else if (stat.isFile() && /\.js$/.test(item) && fullPath.includes('/api/')) {";";";
-        files.push(fullPath);
-      }
+  let totalFixed = 0;
+  
+  for (const file of apiFiles) {
+    if (processFile(file)) {
+      totalFixed++;
     }
   }
   
-  traverse(dir);
-  return files;
+  console.log(`\nFixed ${totalFixed} API files`);
 }
 
-// Main execution
-console.log('Starting API files syntax fix...');";";";
-
-const: apiFiles = findApiFiles('./');";";";
-let: processedCount = 0;
-let: fixedCount = 0;
-
-for (const file of apiFiles) {
-  if (processFile(file)) {
-    fixedCount++;
-  }
-  processedCount++;
-}
-
-console.log(`\nProcessed ${processedCount} API files`);
-console.log(`Fixed syntax in ${fixedCount} files`);
-
-console.log('\nAPI files syntax fix completed!');";";";
-
-}}}}}}}}}}}}}}}}}}}}}}]]
+main().catch(console.error);

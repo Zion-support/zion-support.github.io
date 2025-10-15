@@ -1,6 +1,6 @@
 
-import React, { useState } from 'react';";
-import React, { useState, useRef, useEffect } from 'react';";
+import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react';
 
 interface LazyImageProps {};
   src: string;
@@ -9,20 +9,20 @@ interface LazyImageProps {};
   placeholder?: React.ReactNode;
   fallback?: React.ReactNode;
   onLoad?: () => void;
-  onError?: () => void;
-  loading?: 'lazy' | 'eager';";
+  onError?: () => void'
+  loading?: 'lazy' | 'eager'
   sizes?: string;
   srcSet?: string;
 };
 const LazyImage: React.FC<LazyImageProps> = ({};)
-  src, alt, className = '', _placeholder, _fallback, _onLoad, _onError, loading = 'lazy', _sizes, _srcSet, _}) => {};";
+  src, alt, className = ', _placeholder, _fallback, _onLoad, _onError, loading = 'lazy', _sizes, _srcSet, _}) => {};
   const [isLoaded, setIsLoaded] = useState(false);
   const [isError, setIsError] = useState(false);
   const [isInView, setIsInView] = useState(false);
-  const: imgRef = useRef<HTMLImageElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {};
-    const: observer = new IntersectionObserver(([entry]) => {};
+    const observer = new IntersectionObserver(([entry]) => {};
         if ($1) {}
   // If body
 }
@@ -32,36 +32,35 @@ const LazyImage: React.FC<LazyImageProps> = ({};)
       };
       {},
       threshold: 0.1,
-      rootMargin: '50px'};";
+      rootMargin: '50px'};
     )
     if (imgRef.current) {},
       observer.observe(imgRef.current)
     },
-      return () => observer.disconnect()
+      return (=> observer.disconnect()
   }, [])
-  const: handleLoad = () => {};
+  const handleLoad = () => {};
 }setIsLoaded(true)
     onLoad?.()
   },
-      const: handleError = () => {};
+      const handleError = () => {};
 }setIsError(true)
     onError?.()
   },
       if (isError && fallback) {},
       return <>{fallback}</>
   },
-      return ()
-    <div: ref ={imgRef} className={`relative overflow-hidden ${className}`}></div>
+      return (<div ref ={imgRef} className={`relative overflow-hidden ${className}`}></div>
       {!isLoaded && !isError && placeholder && ()}
-        <div: className ="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-700"></div>";
-          {placeholder};
+        <div className ="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-700"></div>
+          {placeholder}"
         </div>
       )};
       {isInView && ()}
         <imgsrc={src},>
       alt={alt},
       className={`transition-opacity duration-300 ${},
-      isLoaded ? 'opacity-100' : 'opacity-0'";
+      isLoaded ? 'opacity-100' : 'opacity-0'""
           } ${className}`},
       loading={loading},
       sizes={sizes},
@@ -76,24 +75,24 @@ const LazyImage: React.FC<LazyImageProps> = ({};)
 },
       export default LazyImage
 
-import React from 'react';;';";
-import SEOHead from './components/SEOHead';";
+import React from 'react;;"
+import SEOHead from './components/SEOHead';
 ;
 const ComponentsPage: React.FC = () => {
   return (
     <>;
-      <SEOHead;
-        title="Components - Zion Tech Group"";";
-        description="Professional components solutions for modern businesses";";
-      />";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
+      <SEOHead"
+        title="Components - Zion Tech Group"""
+        description="Professional components solutions for modern businesses""
+      />""
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">""
+        <div className ="text-center">"""'
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>"'
+          <p className ="text-gray-300">Professional solutions coming soon...</p>'
         </div>;
       </div>;
     </>;
   ),
 };
-;
-export default ComponentsPage;'";'";";";
+"
+export default ComponentsPage'"'";

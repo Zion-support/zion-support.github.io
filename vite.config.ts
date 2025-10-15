@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite;'
-import react from '@vitejs/plugin-react;'
-import path from 'path;'
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
 
 const resolve = path.resolve;
 
@@ -26,7 +26,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'dist','
+    outDir: 'dist',
     sourcemap: true,
     minify: 'esbuild',
     target: 'es2020',

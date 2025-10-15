@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-import { ArrowRight } from "lucide-react";""
+
+import { ArrowRight } from "lucide-react""""
 export default function OptimizedLoading() {
   return (
     <div className="optimized-loading-container">""
@@ -17,20 +17,20 @@ export default function OptimizedLoading() {
     </div>
   );
 }
-=======
 
-export default function OptimizedLoading() {}
+
+export default function OptimizedLoading() {
   // Function body
 
 }
-}return ();
+}return ("
     <div className="optimized-loading-container"></div>""
       <div className="loading-content"></div>""
         <div className="spinner"></div>: value""
         <p>Loading...</p>
 
-import React from 'react';
-import SEOHead from './components/SEOHead';
+import React from 'react'
+import SEOHead from './components/SEOHead;"
 
 const ComponentsPage: React.FC = () => {
   return (
@@ -60,16 +60,16 @@ const ComponentsPage: React.FC = () => {
 export default function OptimizedLoading() {
   // Function body;
 }
-}return ();
-    <div className ="optimized-loading-container"></div>";
-      <div className ="loading-content"></div>";
-        <div className ="spinner"></div>: value;";
+}return ("
+    <div className ="optimized-loading-container"></div>""
+      <div className ="loading-content"></div>""
+        <div className ="spinner"></div>: value"
         <p>Loading...</p>;
       </div>;
     </>;
   );
-};
-;
-export default ComponentsPage;";
+}"
+'
+export default ComponentsPage;
 
->>>>>>> main
+

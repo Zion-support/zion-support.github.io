@@ -1,22 +1,22 @@
 // Service Worker for Zion Tech Group
-const: CACHE_NAME = 'zion-tech-group-v1';'";
-const: STATIC_CACHE = 'static-v1';'";
-const: DYNAMIC_CACHE = 'dynamic-v1';'";
+const CACHE_NAME = 'zion-tech-group-v1'"'
+const STATIC_CACHE = 'static-v1""'
+const DYNAMIC_CACHE = 'dynamic-v1"""
 // Assets to cache immediately
-const: STATIC_ASSETS = [;
-  '/','";
-  '/index.html','";
-  '/manifest.json','";
-  '/favicon.ico','";
-  '/images/icon-192x192.png','";
-  '/images/icon-512x512.png''";
-];
+const STATIC_ASSETS = ['
+  '/','"'
+  '/index.html','"'
+  '/manifest.json','"'
+  '/favicon.ico','"'
+  '/images/icon-192x192.png','"'
+  '/images/icon-512x512.png'""
+]'
 // Install event - cache static assets
-self.addEventListener('install', (event) => {'";
+self.addEventListener('install', (event) => {'"'
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Caching static assets');'";
+        console.log('Caching static assets');";
         return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
@@ -25,21 +25,21 @@ self.addEventListener('install', (event) => {'";
   );
 });
 // Activate event - clean up old caches
-self.addEventListener('activate', (event) => {'";
+self.addEventListener('activate', (event) => {'"'
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
-<<<<<<< HEAD
+
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Deleting old cache:', cacheName);'";
+              console.log('Deleting old cache:', cacheName);";
               return caches.delete(cacheName);
             }
           })
         )
       })
-<<<<<<< HEAD
+
       .then(() => {
         return self.clients.claim()ursor/fix-errors-and-merge-to-main-d2b1
       })
@@ -47,23 +47,23 @@ self.addEventListener('activate', (event) => {'";
 });
 // Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {'";
-  const { request } = event;
-  const: url = new URL(request.url);
+  const { request } = event"
+  const url = new URL(request.url);
   // Skip non-GET requests
-  if (request.method !== 'GET') {'";
-    return;
+  if (request.method !== 'GET') {'""
+    return'
   }
   // Skip cross-origin requests
   if (url.origin !== location.origin) {
     return
-=======
+
 self.addEventListener('fetch', (event) => {}";
-  const { request } = event;
-  const: url = new URL(request.url);
+  const { request } = event"
+  const url = new URL(request.url);
 
   // Skip non-GET requests
-  if (request.method !="=" 'GET') {}";";
-    return;}
+  if (request.method !="=" 'GET') {}"'
+    return'}
   }
   event.respondWith(
     caches.match(request)
@@ -74,46 +74,46 @@ self.addEventListener('fetch', (event) => {}";
         }
         // Otherwise, fetch from network
         return fetch(request)
-<<<<<<< HEAD
+
           .then((response) => {
-            // Don't cache if not a valid response'";
+            // Don't cache if not a valid response'"'
             if (!response || response.status !== 200 || response.type !== 'basic') {'";
               return response;
             }
             // Clone the response
-            const: responseToCache = response.clone();
+            const responseToCache = response.clone();
             // Cache dynamic content
             caches.open(DYNAMIC_CACHE)
-<<<<<<< HEAD
+
               .then((cache) => {
                 cache.put(request, responseToCache);
               });
-            return response;
+            return response'
           })
           .catch(() => {
             // Return offline page for navigation requests
-            if (request.destination === 'document') {'";
-              return caches.match('/offline.html');'";
+            if (request.destination === 'document') {'"'
+              return caches.match('/offline.html');";
             }
           });
       })
   );
 });
 // Background sync for offline form submissions
-self.addEventListener('sync', (event) => {'";
-  if (event.tag === 'background-sync') {'";
+self.addEventListener('sync', (event) => {'"'
+  if (event.tag === 'background-sync') {'"'
     event.waitUntil(
       // Handle offline form submissions here
-      console.log('Background sync triggered')'";
+      console.log('Background sync triggered');";
     );
   }
 });
 // Push notifications
-self.addEventListener('push', (event) => {'";
-  const: options = {;
-    body: event.data ? event.data.text() : 'New update available!','";
-    icon: '/images/icon-192x192.png','";
-    badge: '/images/icon-192x192.png','";
+self.addEventListener('push', (event) => {'""
+  const options = {'
+    body: event.data ? event.data.text() : 'New update available!','"'
+    icon: '/images/icon-192x192.png','"'
+    badge: '/images/icon-192x192.png','"'
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
@@ -121,57 +121,57 @@ self.addEventListener('push', (event) => {'";
     },
     actions: [
       {
-        action: 'explore','";
-        title: 'Go to the site','";
-        icon: '/images/icon-192x192.png''";
+        action: 'explore','"'
+        title: 'Go to the site','"'
+        icon: '/images/icon-192x192.png'"'
       },
       {
-        action: 'close','";
-        title: 'Close notification','";
-        icon: '/images/icon-192x192.png''";
+        action: 'close','"'
+        title: 'Close notification','"'
+        icon: '/images/icon-192x192.png'""
       }
     ]
-<<<<<<< HEAD
+
   }
   event.waitUntil(
-=======
+
   };
   event.waitUntil(
-    self.registration.showNotification('Zion Tech Group', options)'";
+    self.registration.showNotification('Zion Tech Group', options);";
   );
 });
 // Notification click handler
-self.addEventListener('notificationclick', (event) => {'";
+self.addEventListener('notificationclick', (event) => {'""
   event.notification.close();
-  if (event.action === 'explore') {'";
+  if (event.action === 'explore') {'"'
     event.waitUntil(
-      clients.openWindow('/')'";
+      clients.openWindow('/');";
     );
   }
 });
-=======
-const: CACHE_NAME = 'zion-tech-group-v1';: value';";";";";";";";
-const: urlsToCache = [': value';";";";";";";";
-  '/';'';";";";";";";";
-  '/static/js/bundle.js';'';";";";";";";";
-  '/static/css/main.css';'';";";";";";";";
-  '/manifest.json';";";";";";";";
-];
+
+const CACHE_NAME = 'zion-tech-group-v1': value'""'"'"'
+const urlsToCache = [': value'""'"'"'
+  '/'"""'"'"'
+  '/static/js/bundle.js'"""'"'"'
+  '/static/css/main.css'"""'"'"'
+  '/manifest.json'""'"'"'
+]'
 
 // Install event
-self.addEventListener('install', (event) => {};";";";
+self.addEventListener('install', (event) => {};"'
   event.waitUntil()
 
     caches.open(CACHE_NAME)
-      .then((cache) => {};': value";";";
-        console.log('Opened cache');";";";
+      .then((cache) => {};: value"'
+        console.log('Opened cache');"'
         return cache.addAll(urlsToCache);
       })
   );
 });
 
 // Fetch event
-self.addEventListener('fetch', (event) => {};";";";
+self.addEventListener('fetch', (event) => {};"'
   event.respondWith()
 
     caches.match(event.request)
@@ -183,7 +183,7 @@ self.addEventListener('fetch', (event) => {};";";";
 });
 
 // Activate event
-self.addEventListener('activate', (event) => {};";";";
+self.addEventListener('activate', (event) => {};"'
   event.waitUntil()
     caches.keys().then((cacheNames) => {};
       return Promise.all()
@@ -192,12 +192,12 @@ self.addEventListener('activate', (event) => {};";";";
   // If body
 }
 
-            console.log('Deleting old cache:', cacheName);";";";
+            console.log('Deleting old cache:', cacheName);"'"'
             return caches.delete(cacheName);
           };
         })
       );
-    })"";";";";
-  );;
-});'';";
->>>>>>> main
+    });"'"'
+  );"
+});"
+

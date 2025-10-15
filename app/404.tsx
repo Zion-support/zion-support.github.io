@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
 export default function NotFoundPage() {
   return (
@@ -13,7 +13,7 @@ export default function NotFoundPage() {
           <h1 className="text-9xl font-bold text-white mb-8">404</h1>
           <h2 className="text-3xl font-semibold text-gray-300 mb-4">Page Not Found</h2>
           <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-            The page you're looking for doesn't exist or has been moved.
+            The page you're looking for doesn;t exist or has been moved.
           </p>
           <div className="space-y-4">
             <a 

@@ -17,8 +17,8 @@ export interface PerformanceMetrics {;
  * Performance Report Interface;
  */;
 export interface PerformanceReport {
-  webVitals: "Partial<PerformanceMetrics>;""";
-  resources: ResourceStats;
+  webVitals: "Partial<PerformanceMetrics>"""";
+  resources: ResourceStats"
   memor",""";
     y: MemoryStats | null;
   timestam,
@@ -26,11 +26,11 @@ export interface PerformanceReport {
 }
 /**;
  * Resource Statistics Interface;
- */;
+ */"
 export interface ResourceStats {
-  total: "number;""";
+  total: "number"""";
   scripts: number;
-  styles: number;
+  styles: number"
   image",""";
     s: number;
   font,
@@ -38,9 +38,9 @@ export interface ResourceStats {
 }
 /**;
  * Memory Statistics Interface;
- */;
+ */"
 export interface MemoryStats {
-  usedJSHeapSize: "number;""";
+  usedJSHeapSize: "number"""""
   totalJSHeapSiz",""";
     e: number;
   jsHeapSizeLimi,
@@ -55,10 +55,10 @@ export interface LayoutShift extends PerformanceEntry {}
 }
 /**;
  * Performance with Memory Interface;
- */;
+ */"
 export interface PerformanceWithMemory extends Performance {
   memory: "{""";
-    usedJSHeapSize: number;
+    usedJSHeapSize: number"
     totalJSHeapSiz",""";
     e: number;
     jsHeapSizeLimi,
@@ -67,14 +67,14 @@ export interface PerformanceWithMemory extends Performance {
 }
 /**;
  * Service Configuration Interface;
- */;
+ */"
 export interface ServiceConfig {
-  id: "string;""";
+  id: "string"""";
   name: string;
   description: string;
   icon: string;
   category: string;
-  features: string[];
+  features: string[]"
   pricing?: {
     startin",""";
     g: number;
@@ -84,9 +84,9 @@ export interface ServiceConfig {
 }
 /**;
  * Blog Post Interface;
- */;
+ */"
 export interface BlogPost {
-  id: "string;""";
+  id: "string"""";
   title: string;
   slug: string;
   excerpt: string;
@@ -99,7 +99,7 @@ export interface BlogPost {
   featured: boolean;
   readingTime: number;
   seo: {
-    title: string;
+    title: string"
     descriptio",""";
     n: string;
     keyword,
@@ -108,13 +108,13 @@ export interface BlogPost {
 }
 /**;
  * Contact Form Interface;
- */;
+ */"
 export interface ContactForm {
-  name: "string;""";
+  name: "string"""";
   email: string;
   company?: string;
   phone?: string;
-  service: string;
+  service: string"
   messag",""";
     e: string;
   budget?: string;
@@ -134,9 +134,9 @@ export interface ApiResponse<T = any> {
 }
 /**;
  * SEO Metadata Interface;
- */;
+ */"
 export interface SEOMetadata {
-  title: "string;""";
+  title: "string"""""
   descriptio",""";
     n: string;
   keyword,
@@ -162,13 +162,13 @@ export interface NavigationItem {
   }
 /**;
  * Testimonial Interface;
- */;
+ */"
 export interface Testimonial {
-  id: "string;""";
+  id: "string"""";
   name: string;
   company: string;
   position: string;
-  content: string;
+  content: string"
   ratin",""";
     g: number;
   avatar?: string;
@@ -177,9 +177,9 @@ export interface Testimonial {
 }
 /**;
  * Case Study Interface;
- */;
+ */"
 export interface CaseStudy {
-  id: "string;""";
+  id: "string"""";
   title: string;
   slug: string;
   client: string;
@@ -187,16 +187,16 @@ export interface CaseStudy {
   challenge: string;
   solution: string;
   results: {
-    metric: string;
+    metric: string"
     valu",""";
     e: string;
     improvemen,
     t: string;
-  }[];
-  technologies: "string[];""";
+  }[]"
+  technologies: "string[]"""";
   duration: string;
   teamSize: number;
-  featured: boolean;
+  featured: boolean"
   image",""";
     s: string[];
   publishedA,
@@ -204,12 +204,12 @@ export interface CaseStudy {
 }
 /**;
  * Team Member Interface;
- */;
+ */"
 export interface TeamMember {
-  id: "string;""";
+  id: "string"""";
   name: string;
   position: string;
-  bio: string;
+  bio: string"
   avata",""";
     r: string;
   socia,
@@ -224,11 +224,11 @@ export interface TeamMember {
 }
 /**;
  * FAQ Item Interface;
- */;
+ */"
 export interface FAQItem {
-  id: "string;""";
+  id: "string"""";
   question: string;
-  answer: string;
+  answer: string"
   categor",""";
     y: string;
   orde,
@@ -236,11 +236,11 @@ export interface FAQItem {
 }
 /**;
  * Newsletter Subscription Interface;
- */;
+ */"
 export interface NewsletterSubscription {
-  email: "string;""";
+  email: "string"""";
   name?: string;
-  interests: string[];
+  interests: string[]"
   subscribedA",""";
     t: string;
   activ,
@@ -264,12 +264,12 @@ export interface ErrorBoundaryState {
   }
 /**;
  * Theme Configuration Interface;
- */;
+ */"
 export interface ThemeConfig {
-  mode: "'light' | 'dark' | 'system;"'"'"'"";";
+  mode: "'light' | 'dark' | 'system'"'"'"'""'
   primaryColor: string;
   secondaryColor: string;
-  accentColor: string;
+  accentColor: string"
   fontFamil",""";
     y: string;
   borderRadiu,
@@ -288,19 +288,19 @@ export interface AnalyticsEvent {
 }
 /**;
  * User Preferences Interface;
- */;
+ */"
 export interface UserPreferences {
-  theme: "ThemeConfig;""";
+  theme: "ThemeConfig"""";
   language: string;
   notifications: {
-    email: boolean;
+    email: boolean"
     pus",""";
     h: boolean;
     sm,
     s: boolean;
-  };
+  }"
   privacy: "{""";
-    analytics: boolean;
+    analytics: boolean"
     marketin",""";
     g: boolean;
     functiona,
@@ -326,34 +326,34 @@ export type DeepPartial<T> = {
   };
 /**;
  * API Endpoint Types;
- */;
-export type: ApiEndpoint =;
-  | '/api/contact;''";
-  | '/api/newsletter;''";
-  | '/api/analytics;''";
-  | '/api/performance;''";
-  | '/api/health;''";
+ */"
+export type: ApiEndpoint ='
+  | '/api/contact""'
+  | '/api/newsletter""'
+  | '/api/analytics""'
+  | '/api/performance""'
+  | '/api/health"";
 /**;
- * HTTP Method Types;
- */;
-export type: HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH;''";
+ * HTTP Method Types"
+ */'
+export type: HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH"";
 /**;
- * Environment Types;
- */;
-export type: Environment = 'development' | 'staging' | 'production;''";
+ * Environment Types"
+ */'
+export type: Environment = 'development' | 'staging' | 'production"";
 /**;
  * Build Configuration Interface;
- */;
+ */"
 export interface BuildConfig {
-  environment: "Environment;""";
+  environment: "Environment"""";
   version: string;
   buildTime: string;
   features: {
     analytics: boolean;
-    performanceMonitoring: boolean;
+    performanceMonitoring: boolean"
     errorReportin",""";
     g: boolean;
     pw,
-    a: boolean;
+    a: boolean"
   };
 }

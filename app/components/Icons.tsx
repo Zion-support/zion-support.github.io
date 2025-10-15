@@ -1,15 +1,15 @@
-import React from 'react';;';";
-import SEOHead from './components/SEOHead';";
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
-export const: Icon = ({},)
+export const Icon = ({},)
 
       name,;
-      className = "";: value";
+      className = """: value";
 
 ;
-export const: Icon = ({}: value,;
-      name,;
-      className = "";: value;";";
+export const Icon = ({}: value,;
+      name,"
+      className = ""': value'
 
   ...props;
 }: {},;
@@ -18,8 +18,7 @@ export const: Icon = ({}: value,;
 
   [key: string]: unknown;
 }) => {},
-      return ()
-    <span: className ={`icon ${className}`} {...props}></span>
+      return (<span className ={`icon ${className}`} {...props}></span>
       {name};
     </span>
   )
@@ -32,11 +31,11 @@ export default ComponentsPage;
   [key: string]: unknown,
 }) => {}: value,;
       return (
-    <span: className ={`icon ${className}`} {...props}></span>: value;
+    <span className ={`icon ${className}`} {...props}></span>: value;
       {name};
     </span>;
   );
-    };
+    }"
 {
 
-export default ComponentsPage;'";'";";";
+export default ComponentsPage'"'";

@@ -7,8 +7,8 @@ interface PerformanceEnhancerState {
   // Add your state here;
 }
 ;
-export const: PerformanceEnhancer = (options: PerformanceEnhancerOptions = {}) => {
-  const: stateRef = useRef<PerformanceEnhancerState>({;
+export const PerformanceEnhancer = (options: PerformanceEnhancerOptions = {}) => {
+  const stateRef = useRef<PerformanceEnhancerState>({;
     // Initialize your state here;
   });
 ;
@@ -22,4 +22,4 @@ export const: PerformanceEnhancer = (options: PerformanceEnhancerOptions = {}) =
   };
 };
 ;
-export default PerformanceEnhancer;';';";";";
+export default PerformanceEnhancer;"'
