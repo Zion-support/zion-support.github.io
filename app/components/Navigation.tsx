@@ -77,26 +77,22 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       icon: GlobeAltIcon,
       submenu: [
         { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
+        { name: 'AI Project Manager', href: '/ai-project-manager', icon: CheckCircleIcon },
+        { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: DocumentTextIcon },
+        { name: 'AI Time Tracker', href: '/ai-time-tracker', icon: ClockIcon },
+        { name: 'AI Lead Generator', href: '/ai-lead-generator', icon: UserPlusIcon },
+        { name: 'AI HR Assistant', href: '/ai-hr-assistant', icon: UserGroupIcon },
         { name: 'Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard', icon: ChartBarIcon },
         { name: 'Smart CRM Automation', href: '/zion-smart-crm-automation', icon: ChatBubbleLeftRightIcon },
         { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager', icon: CircleStackIcon },
         { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker', icon: CurrencyDollarIcon },
-        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
-        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
-        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
-        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },
         { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },
-        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon },
         { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: CodeBracketIcon },
         { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon },
         { name: 'AI Video Generator', href: '/ai-video-generator', icon: EyeIcon },
-        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: ChatBubbleLeftRightIcon },
-        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: EyeIcon },
         { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: ShieldCheckIcon },
         { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: UserGroupIcon },
-        { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: AcademicCapIcon },
-        { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer', icon: ChartBarIcon },
-        { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: CogIcon }
+        { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: AcademicCapIcon }
       ]
     },
     {
@@ -213,7 +209,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   };
 
   return (
-    <nav className="bg-slate-900/95 backdrop-blur-lg border-b border-cyan-500/30 relative overflow-hidden">
+    <nav className="bg-slate-900/95 backdrop-blur-lg border-b border-cyan-500/30 relative overflow-hidden sticky top-0 z-50">
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
       <div className="absolute inset-0 opacity-30">
@@ -221,19 +217,19 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center group">
-              <div className="h-8 w-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
-                <span className="text-white font-bold text-lg">Z</span>
+              <div className="h-10 w-10 lg:h-12 lg:w-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow shadow-lg">
+                <span className="text-white font-bold text-lg lg:text-xl">Z</span>
               </div>
-              <span className="ml-2 text-white font-bold text-xl group-hover:text-cyan-300 transition-colors holographic-text">Zion Tech Group</span>
+              <span className="ml-3 text-white font-bold text-lg lg:text-2xl group-hover:text-cyan-300 transition-colors holographic-text">Zion Tech Group</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-8">
+          <div className="hidden lg:flex lg:items-center lg:space-x-1">
             {navigation.map((item) => (
               <div key={item.name} className="relative">
                 <Link
@@ -245,30 +241,20 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     else if (item.name === 'Resources') toggleResourcesMenu();
                     else if (item.name === 'Company') toggleCompanyMenu();
                   }}
-                  className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 border-b-2 group hover:scale-105 ${
+                  className={`flex items-center px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 group hover:scale-105 ${
                     isActive(item.href)
-                      ? 'border-cyan-500 text-cyan-300 neon-glow'
-                      : 'border-transparent text-gray-300 hover:border-cyan-300 hover:text-cyan-300 hover:shadow-lg hover:shadow-cyan-500/25'
+                      ? 'bg-cyan-500/20 text-cyan-300 neon-glow shadow-lg shadow-cyan-500/25'
+                      : 'text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-300 hover:shadow-lg hover:shadow-cyan-500/25'
                   }`}
                 >
-                  <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                  <item.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
                   <span className="ml-2">{item.name}</span>
                   {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform" />}
                 </Link>
                 {/* Dropdown Menu */}
                 {item.submenu && (
-                  <div className={`absolute left-0 mt-2 w-56 glass-card py-2 z-50 border border-cyan-500/30 backdrop-blur-lg ${
-                    (item.name === 'AI Services' && isServicesOpen) ||
-                    (item.name === 'Micro SaaS' && isSolutionsOpen) ||
-                    (item.name === 'IT Solutions' && isResourcesOpen) ||
-                    (item.name === 'Resources' && isResourcesOpen) ||
-                    (item.name === 'Company' && isCompanyOpen)
-                      ? 'block' : 'hidden'
-                  }`}>
-                {/* Dropdown Menu */}
-                {item.submenu && (
                   <div 
-                    className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
+                    className={`absolute left-0 mt-2 w-72 bg-slate-800/95 backdrop-blur-lg rounded-xl shadow-2xl py-3 z-50 border border-cyan-500/30 ${
                       (item.name === 'AI Services' && isServicesOpen) ||
                       (item.name === 'Micro SaaS' && isSolutionsOpen) ||
                       (item.name === 'IT Solutions' && isResourcesOpen) ||
@@ -279,17 +265,22 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     role="menu"
                     aria-label={`${item.name} submenu`}
                   >
-                    {item.submenu.map((subItem) => (
-                      <div key={subItem.name} role="none">
-                        <Link
-                          to={subItem.href}
-                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-300 transition-all duration-300 group"
-                        >
-                          <subItem.icon className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span className="group-hover:text-white transition-colors">{subItem.name}</span>
-                        </Link>
-                      </div>
-                    ))}
+                    <div className="px-3 py-2 border-b border-cyan-500/20 mb-2">
+                      <h3 className="text-xs font-semibold text-cyan-400 uppercase tracking-wider">{item.name}</h3>
+                    </div>
+                    <div className="max-h-96 overflow-y-auto">
+                      {item.submenu.map((subItem) => (
+                        <div key={subItem.name} role="none">
+                          <Link
+                            to={subItem.href}
+                            className="flex items-center px-4 py-3 text-sm text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-300 transition-all duration-300 group rounded-lg mx-2"
+                          >
+                            <subItem.icon className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform flex-shrink-0" />
+                            <span className="group-hover:text-white transition-colors truncate">{subItem.name}</span>
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
@@ -300,7 +291,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="lg:hidden flex items-center">
             <button
               onClick={onSidebarToggle}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-cyan-300 hover:bg-cyan-500/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500 transition-all duration-300 neon-glow"
+              className="inline-flex items-center justify-center p-3 rounded-lg text-gray-300 hover:text-cyan-300 hover:bg-cyan-500/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500 transition-all duration-300 neon-glow shadow-lg"
             >
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 w-6 hover:scale-110 transition-transform" />

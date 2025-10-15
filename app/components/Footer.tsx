@@ -12,23 +12,23 @@ const Footer: React.FC = memo(() => {
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500"></div>
       
       <div className="relative z-10 glass-card">
-        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
             <div className="lg:col-span-2">
-              <h3 className="text-2xl font-bold mb-6 holographic-text font-['Orbitron'] cyber-glitch" data-text="ZION TECH GROUP">ZION TECH GROUP</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed matrix-text">
-                Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
+              <h3 className="text-3xl font-bold mb-6 holographic-text font-['Orbitron'] cyber-glitch" data-text="ZION TECH GROUP">ZION TECH GROUP</h3>
+              <p className="text-gray-300 mb-8 leading-relaxed text-lg matrix-text">
+                Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology and innovative micro SAAS solutions.
               </p>
-              <div className="space-y-2 text-sm text-gray-300">
-                <p className="flex items-center"><strong className="text-cyan-400 mr-2">📞</strong> <a href="tel:+13024640950" className="hover:text-cyan-300 transition-colors neon-glow">+1 302 464 0950</a></p>
-                <p className="flex items-center"><strong className="text-cyan-400 mr-2">✉️</strong> <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-300 transition-colors">kleber@ziontechgroup.com</a></p>
-                <p className="flex items-center"><strong className="text-cyan-400 mr-2">📍</strong> 364 E Main St STE 1008<br />Middletown DE 19709</p>
-                <p className="flex items-center"><strong className="text-cyan-400 mr-2">🌐</strong> <a href="https://ziontechgroup.com" className="hover:text-cyan-300 transition-colors">https://ziontechgroup.com</a></p>
+              <div className="space-y-3 text-sm text-gray-300">
+                <p className="flex items-center text-base"><strong className="text-cyan-400 mr-3 text-lg">📞</strong> <a href="tel:+13024640950" className="hover:text-cyan-300 transition-colors neon-glow text-lg">+1 302 464 0950</a></p>
+                <p className="flex items-center text-base"><strong className="text-cyan-400 mr-3 text-lg">✉️</strong> <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-300 transition-colors text-lg">kleber@ziontechgroup.com</a></p>
+                <p className="flex items-center text-base"><strong className="text-cyan-400 mr-3 text-lg">📍</strong> <span className="text-lg">364 E Main St STE 1008<br />Middletown DE 19709</span></p>
+                <p className="flex items-center text-base"><strong className="text-cyan-400 mr-3 text-lg">🌐</strong> <a href="https://ziontechgroup.com" className="hover:text-cyan-300 transition-colors text-lg">https://ziontechgroup.com</a></p>
               </div>
-              <div className="flex space-x-4 mt-4">
-                <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-cyan-300 transition-colors neon-glow p-2 rounded-lg hover:bg-cyan-500/10">
+              <div className="flex space-x-4 mt-6">
+                <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-cyan-300 transition-colors neon-glow p-3 rounded-lg hover:bg-cyan-500/10 hover:scale-110 transform">
                   <span className="sr-only">Website</span>
-                  <svg className="h-6 w-6 hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                   </svg>
                 </a>
@@ -36,7 +36,7 @@ const Footer: React.FC = memo(() => {
             </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-gradient holographic-text">Services</h4>
+            <h4 className="text-xl font-bold mb-6 text-gradient holographic-text">Core Services</h4>
             <ul className="space-y-3">
               <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors group flex items-center"><span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>AI Services</Link></li>
               <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors group flex items-center"><span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>IT Services</Link></li>
@@ -50,7 +50,7 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">AI Services</h4>
+            <h4 className="text-lg font-bold mb-6 text-cyan-400">AI Services</h4>
             <ul className="space-y-2">
               <li><Link to="/ai-chatbot-builder" className="text-gray-300 hover:text-white">AI Chatbot Builder</Link></li>
               <li><Link to="/ai-document-processor" className="text-gray-300 hover:text-white">AI Document Processor</Link></li>
@@ -72,7 +72,7 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Zion AI Tools</h4>
+            <h4 className="text-lg font-bold mb-6 text-purple-400">Zion AI Tools</h4>
             <ul className="space-y-2">
               <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">Content Moderator</Link></li>
               <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">Customer Support Pro</Link></li>
@@ -122,13 +122,18 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Micro SaaS Solutions</h4>
+            <h4 className="text-lg font-bold mb-6 text-green-400">Micro SaaS Solutions</h4>
             <ul className="space-y-2">
               <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SaaS Overview</Link></li>
               <li><Link to="/zion-smart-analytics-dashboard" className="text-gray-300 hover:text-white">Smart Analytics Dashboard</Link></li>
               <li><Link to="/zion-smart-crm-automation" className="text-gray-300 hover:text-white">Smart CRM Automation</Link></li>
               <li><Link to="/zion-smart-inventory-manager" className="text-gray-300 hover:text-white">Smart Inventory Manager</Link></li>
               <li><Link to="/zion-smart-expense-tracker" className="text-gray-300 hover:text-white">Smart Expense Tracker</Link></li>
+              <li><Link to="/ai-project-manager" className="text-gray-300 hover:text-white">AI Project Manager</Link></li>
+              <li><Link to="/ai-invoice-generator" className="text-gray-300 hover:text-white">AI Invoice Generator</Link></li>
+              <li><Link to="/ai-time-tracker" className="text-gray-300 hover:text-white">AI Time Tracker</Link></li>
+              <li><Link to="/ai-lead-generator" className="text-gray-300 hover:text-white">AI Lead Generator</Link></li>
+              <li><Link to="/ai-hr-assistant" className="text-gray-300 hover:text-white">AI HR Assistant</Link></li>
             </ul>
           </div>
           

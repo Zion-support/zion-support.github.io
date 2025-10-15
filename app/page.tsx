@@ -136,53 +136,53 @@ const HomePage: React.FC = () => {
           </div>
           
           {/* Animated Background Elements */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse floating"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000 floating"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/5 rounded-full blur-2xl animate-pulse delay-500 floating"></div>
+          <div className="absolute top-20 left-4 sm:left-10 w-48 sm:w-72 h-48 sm:h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse floating"></div>
+          <div className="absolute bottom-20 right-4 sm:right-10 w-64 sm:w-96 h-64 sm:h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000 floating"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 sm:w-64 h-32 sm:h-64 bg-pink-500/5 rounded-full blur-2xl animate-pulse delay-500 floating"></div>
           
           {/* Holographic Overlay */}
           <div className="absolute inset-0 holographic-card opacity-10"></div>
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-32 w-full">
             <div className="text-center">
-              <div className="relative inline-block mb-6">
-                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold holographic leading-tight neon-text">
+              <div className="relative inline-block mb-6 sm:mb-8">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold holographic leading-tight neon-text px-4">
                   Zion Tech Group
                 </h1>
                 <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-lg blur opacity-30 animate-pulse"></div>
                 <div className="absolute -inset-2 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 rounded-lg blur opacity-20 animate-pulse delay-1000"></div>
               </div>
-              <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed px-4">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 lg:mb-12 max-w-5xl mx-auto leading-relaxed px-4">
                 Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services that drive innovation and growth.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 lg:mb-16 px-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 lg:mb-16 px-4">
                 <Link to="/contact"
-                  className="relative group cyber-button px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"
+                  className="relative group cyber-button px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 w-full sm:w-auto"
                 >
-                  <span className="relative z-10 flex items-center">
+                  <span className="relative z-10 flex items-center justify-center">
                     Get Started Today
                     <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
                 <Link to="/about"
-                  className="border-2 border-purple-400 text-purple-300 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 text-sm sm:text-base hover:shadow-lg hover:shadow-purple-400/25 neon-border-animated"
+                  className="border-2 border-purple-400 text-purple-300 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 text-sm sm:text-base hover:shadow-lg hover:shadow-purple-400/25 neon-border-animated w-full sm:w-auto text-center"
                 >
                   Learn More
                 </Link>
               </div>
               
               {/* Stats */}
-              <div className="grid grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto px-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 lg:gap-6 max-w-6xl mx-auto px-4">
                 {stats.map((stat, index) => (
                   <div key={index} 
-                    className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm hover:bg-slate-700/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group"
+                    className="text-center p-3 sm:p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm hover:bg-slate-700/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group"
                     style={{
                       animationDelay: `${index * 100}ms`
                     }}
                   >
-                    <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-purple-400 mb-1 lg:mb-2 group-hover:text-purple-300 transition-colors">
+                    <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-purple-400 mb-1 lg:mb-2 group-hover:text-purple-300 transition-colors">
                       {stat.number}
                     </div>
-                    <div className="text-gray-300 text-xs sm:text-sm lg:text-base group-hover:text-white transition-colors">
+                    <div className="text-gray-300 text-xs sm:text-sm lg:text-base group-hover:text-white transition-colors leading-tight">
                       {stat.label}
                     </div>
                   </div>
@@ -193,22 +193,22 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Services Section */}
-        <section className="py-16 sm:py-20 bg-slate-800/30">
+        <section className="py-12 sm:py-16 lg:py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+            <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
                 Our <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Services</span>
               </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+              <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto px-4">
                 Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               {services.map((service, index) => (
                 <Link key={index}
                   to={service.href}
-                  className="group relative bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 overflow-hidden"
+                  className="group relative bg-slate-800/50 p-4 sm:p-6 lg:p-8 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 overflow-hidden"
                   style={{
                     animationDelay: `${index * 100}ms`
                   }}
@@ -220,18 +220,18 @@ const HomePage: React.FC = () => {
                   <div className={`absolute -inset-1 bg-gradient-to-r ${service.gradient} rounded-xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
                   
                   <div className="relative z-10">
-                    <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${service.gradient} rounded-lg flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                      <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                    <div className={`w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-r ${service.gradient} rounded-lg flex items-center justify-center mb-3 sm:mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      <service.icon className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
                     </div>
-                    <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-purple-300 transition-colors">
+                    <h3 className="text-base sm:text-lg lg:text-xl font-semibold mb-2 sm:mb-3 lg:mb-4 text-white group-hover:text-purple-300 transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-gray-400 mb-4 group-hover:text-gray-300 transition-colors text-sm sm:text-base">
+                    <p className="text-gray-400 mb-3 sm:mb-4 group-hover:text-gray-300 transition-colors text-xs sm:text-sm lg:text-base leading-relaxed">
                       {service.description}
                     </p>
-                    <div className="mt-4 flex items-center text-purple-400 group-hover:text-purple-300 transition-colors">
-                      <span className="text-sm font-medium">Learn More</span>
-                      <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <div className="mt-3 sm:mt-4 flex items-center text-purple-400 group-hover:text-purple-300 transition-colors">
+                      <span className="text-xs sm:text-sm font-medium">Learn More</span>
+                      <ArrowRightIcon className="w-3 h-3 sm:w-4 sm:h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
                 </Link>
@@ -241,7 +241,7 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Micro SAAS Showcase Section */}
-        <section className="py-16 sm:py-20 bg-slate-800/30 relative overflow-hidden">
+        <section className="py-12 sm:py-16 lg:py-20 bg-slate-800/30 relative overflow-hidden">
           {/* Animated Background */}
           <div className="absolute inset-0 cyber-grid opacity-20"></div>
           <div className="floating-particles">
@@ -255,50 +255,50 @@ const HomePage: React.FC = () => {
           </div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+            <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
                 Featured <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent neon-text">Micro SAAS Solutions</span>
               </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+              <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto px-4">
                 Discover our innovative micro SAAS applications designed to solve specific business challenges with real functionality and AI-powered intelligence.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {/* AI Content Generator */}
-              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
-                    <SparklesIcon className="w-6 h-6 text-white" />
+              <div className="group holographic-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20">
+                <div className="flex items-center justify-between mb-3 sm:mb-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <SparklesIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <span className="text-sm text-cyan-400 font-medium neon-text">AI Content</span>
+                  <span className="text-xs sm:text-sm text-cyan-400 font-medium neon-text">AI Content</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
                   AI Content Generator Pro
                 </h3>
-                <p className="text-gray-400 mb-4 text-sm">
+                <p className="text-gray-400 mb-3 sm:mb-4 text-xs sm:text-sm leading-relaxed">
                   Generate high-quality content for blogs, social media, and marketing materials using advanced AI with 95% accuracy.
                 </p>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-cyan-400 neon-text">$199/mo</span>
-                  <span className="text-sm text-gray-400 line-through">$299/mo</span>
+                <div className="flex items-center justify-between mb-3 sm:mb-4">
+                  <span className="text-xl sm:text-2xl font-bold text-cyan-400 neon-text">$199/mo</span>
+                  <span className="text-xs sm:text-sm text-gray-400 line-through">$299/mo</span>
                 </div>
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                <div className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
+                  <div className="flex items-center text-xs sm:text-sm text-gray-300">
+                    <CheckCircleIcon className="w-3 h-3 sm:w-4 sm:h-4 text-green-400 mr-2 flex-shrink-0" />
                     <span>Unlimited content generation</span>
                   </div>
-                  <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                  <div className="flex items-center text-xs sm:text-sm text-gray-300">
+                    <CheckCircleIcon className="w-3 h-3 sm:w-4 sm:h-4 text-green-400 mr-2 flex-shrink-0" />
                     <span>SEO optimization</span>
                   </div>
-                  <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                  <div className="flex items-center text-xs sm:text-sm text-gray-300">
+                    <CheckCircleIcon className="w-3 h-3 sm:w-4 sm:h-4 text-green-400 mr-2 flex-shrink-0" />
                     <span>Multi-language support</span>
                   </div>
                 </div>
                 <Link to="/ai-content-generator"
-                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                  className="block w-full cyber-button text-center py-2 sm:py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-sm sm:text-base"
                 >
                   Try Free Trial
                 </Link>
