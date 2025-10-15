@@ -60,11 +60,16 @@ import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
+// Import enhanced LoadingSpinner
+import LoadingSpinner from './app/components/LoadingSpinner';
+
 // Loading component
 const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
-  </div>
+  <LoadingSpinner 
+    size="large" 
+    message="Loading Zion Tech Group..." 
+    fullScreen={true} 
+  />
 )
 
 export default function App() {
