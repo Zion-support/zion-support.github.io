@@ -4,14 +4,12 @@ import SEOHead from '../components/SEOHead';
 import { 
   CpuChipIcon, 
   CheckCircleIcon, 
-  ArrowRightIcon,
   SparklesIcon,
-  ClockIcon,
   ShieldCheckIcon,
   DocumentTextIcon,
-  ChatBubbleLeftRightIcon,
   GlobeAltIcon,
-  CogIcon
+  CogIcon,
+  ArrowRightIcon
 } from '@heroicons/react/24/outline';
 
 const QuantumComputingSolutionsPage: React.FC = () => {

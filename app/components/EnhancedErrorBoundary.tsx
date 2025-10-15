@@ -1,5 +1,5 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { RefreshCw, Home, Bug, AlertTriangle } from 'lucide-react';
+import { Component, ErrorInfo, ReactNode } from 'react';
+import { RefreshCw, Home, AlertTriangle } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -33,7 +33,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
@@ -95,15 +95,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   private reportError = (errorReport: any) => {
     // Send to error monitoring service
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
-        description: errorReport.message,
-        fatal: true,
-        custom_map: {
-          error_id: errorReport.errorId,
-          user_id: errorReport.userId,
-          session_id: errorReport.sessionId
-        }
-      });
+      window.gtag('event', 'exception', {});
     }
 
     // Send to custom error endpoint
@@ -135,7 +127,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     window.location.href = '/';
   };
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;

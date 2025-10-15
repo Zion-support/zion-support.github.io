@@ -15,9 +15,9 @@ import {
   GlobeAltIcon,
   CogIcon,
   UserGroupIcon,
-  ShareIcon,
   PhoneIcon,
-  EnvelopeIcon
+  EnvelopeIcon,
+  CurrencyDollarIcon
 } from '@heroicons/react/24/outline';
 
 const HomePage: React.FC = () => {

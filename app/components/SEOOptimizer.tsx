@@ -49,7 +49,7 @@ const SEOOptimizer: React.FC = () => {
     ];
 
     metaTags.forEach(tag => {
-      const selector = Object.keys(tag).map(key => `[${key}="${tag[key]}"]`).join('');
+      const selector = Object.keys(tag).map(key => `[${key}="${tag[key as keyof typeof tag]}"]`).join('');
       const existingMeta = document.querySelector(`meta${selector}`);
       
       if (!existingMeta) {

@@ -4,13 +4,8 @@ import SEOHead from '../components/SEOHead';
 import { 
   ChartBarIcon, 
   EyeIcon, 
-  CogIcon, 
   CheckCircleIcon,
-  ArrowRightIcon,
   StarIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  ShieldCheckIcon,
   SparklesIcon,
   CpuChipIcon,
   GlobeAltIcon

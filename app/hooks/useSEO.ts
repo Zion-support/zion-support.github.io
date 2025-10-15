@@ -61,7 +61,7 @@ export const useSEO = (config: SEOConfig = {}) => {
     // Add page-specific structured data
     addPageStructuredData(location.pathname);
 
-  }, [config, location.pathname]);
+  }, [config, location.pathname, addPageStructuredData, updateOpenGraphTags, updateTwitterTags]);
 
   const updateMetaTag = (name: string, content: string) => {
     let meta = document.querySelector(`meta[name="${name}"]`);
@@ -83,7 +83,7 @@ export const useSEO = (config: SEOConfig = {}) => {
     canonical.setAttribute('href', url);
   };
 
-  const updateOpenGraphTags = (config: SEOConfig) => {
+  const updateOpenGraphTags = useCallback((config: SEOConfig) => {
     const ogTags = [
       { property: 'og:title', content: config.title },
       { property: 'og:description', content: config.description },
@@ -98,9 +98,9 @@ export const useSEO = (config: SEOConfig = {}) => {
         updateMetaTag(property, content);
       }
     });
-  };
+  }, []);
 
-  const updateTwitterTags = (config: SEOConfig) => {
+  const updateTwitterTags = useCallback((config: SEOConfig) => {
     const twitterTags = [
       { name: 'twitter:card', content: config.twitterCard || 'summary_large_image' },
       { name: 'twitter:title', content: config.title },
@@ -113,7 +113,7 @@ export const useSEO = (config: SEOConfig = {}) => {
         updateMetaTag(name, content);
       }
     });
-  };
+  }, []);
 
   const addStructuredData = (data: object) => {
     // Remove existing structured data
@@ -159,25 +159,17 @@ export const useSEO = (config: SEOConfig = {}) => {
     if (pathname === '/contact') {
       pageStructuredData = {
         ...baseStructuredData,
-        '@type': 'ContactPage',
-        'mainEntity': {
-          '@type': 'Organization',
-          ...baseStructuredData
-        }
+        '@type': 'ContactPage'
       };
     } else if (pathname.startsWith('/ai-') || pathname.startsWith('/zion-ai-')) {
       pageStructuredData = {
         ...baseStructuredData,
-        '@type': 'Service',
-        'serviceType': 'AI Solutions',
-        'provider': baseStructuredData
+        '@type': 'Service'
       };
     } else if (pathname.startsWith('/it-') || pathname === '/services') {
       pageStructuredData = {
         ...baseStructuredData,
-        '@type': 'Service',
-        'serviceType': 'IT Services',
-        'provider': baseStructuredData
+        '@type': 'Service'
       };
     }
 

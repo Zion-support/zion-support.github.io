@@ -4,15 +4,13 @@ import SEOHead from '../components/SEOHead';
 import { 
   VideoCameraIcon, 
   CheckCircleIcon, 
-  ArrowRightIcon,
   CpuChipIcon,
-  SparklesIcon,
-  ClockIcon,
   ShieldCheckIcon,
   DocumentTextIcon,
-  ChatBubbleLeftRightIcon,
   MicrophoneIcon,
-  PhotoIcon
+  PhotoIcon,
+  SparklesIcon,
+  ArrowRightIcon
 } from '@heroicons/react/24/outline';
 
 const AIVideoGeneratorPage: React.FC = () => {
