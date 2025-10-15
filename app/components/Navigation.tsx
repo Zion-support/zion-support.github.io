@@ -6,20 +6,20 @@ const Navigation: React.FC = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="futuristic-nav">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-blue-600">Zion Tech Group</h1>
+              <h1 className="text-2xl font-bold neon-text">Zion Tech Group</h1>
             </Link>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/" className="futuristic-nav-link">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/about" className="futuristic-nav-link">
               About
             </Link>
             
@@ -28,7 +28,7 @@ const Navigation: React.FC = () => {
               <button
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center"
+                className="futuristic-nav-link flex items-center"
               >
                 Services
                 <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -39,7 +39,7 @@ const Navigation: React.FC = () => {
                 <div
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
-                  className="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg z-50"
+                  className="absolute left-0 mt-2 w-80 futuristic-glass rounded-md shadow-lg z-50"
                 >
                   <div className="py-1">
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100">AI & Machine Learning</div>
@@ -111,24 +111,38 @@ const Navigation: React.FC = () => {
                     <Link to="/zion-ai-workflow-automator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Workflow Automator
                     </Link>
+                    
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Micro SAAS Solutions</div>
+                    <Link to="/ai-project-manager-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Project Manager Pro
+                    </Link>
+                    <Link to="/ai-customer-analytics-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Customer Analytics Pro
+                    </Link>
+                    <Link to="/ai-content-creator-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Content Creator Pro
+                    </Link>
+                    <Link to="/ai-cybersecurity-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Cybersecurity Pro
+                    </Link>
                   </div>
                 </div>
               )}
             </div>
             
-            <Link to="/pricing" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/pricing" className="futuristic-nav-link">
               Pricing
             </Link>
-            <Link to="/blog" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/blog" className="futuristic-nav-link">
               Blog
             </Link>
-            <Link to="/team" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/team" className="futuristic-nav-link">
               Team
             </Link>
-            <Link to="/careers" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/careers" className="futuristic-nav-link">
               Careers
             </Link>
-            <Link to="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/contact" className="futuristic-nav-link">
               Contact
             </Link>
           </div>
@@ -224,6 +238,20 @@ const Navigation: React.FC = () => {
               </Link>
               <Link to="/zion-ai-workflow-automator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Workflow Automator
+              </Link>
+              
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Micro SAAS Solutions</div>
+              <Link to="/ai-project-manager-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Project Manager Pro
+              </Link>
+              <Link to="/ai-customer-analytics-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Customer Analytics Pro
+              </Link>
+              <Link to="/ai-content-creator-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Content Creator Pro
+              </Link>
+              <Link to="/ai-cybersecurity-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Cybersecurity Pro
               </Link>
             </div>
             <div className="px-3 py-2 text-base font-medium text-gray-700">

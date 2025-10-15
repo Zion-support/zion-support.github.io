@@ -53,6 +53,12 @@ const ZionAIWorkflowAutomatorProPage = lazy(() => import('./app/zion-ai-workflow
 const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-customer-satisfaction-monitor/page'));
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
 
+// New Micro SAAS Services
+const AIProjectManagerProPage = lazy(() => import('./app/ai-project-manager-pro/page'));
+const AICustomerAnalyticsProPage = lazy(() => import('./app/ai-customer-analytics-pro/page'));
+const AIContentCreatorProPage = lazy(() => import('./app/ai-content-creator-pro/page'));
+const AICybersecurityProPage = lazy(() => import('./app/ai-cybersecurity-pro/page'));
+
 // Import components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -152,6 +158,12 @@ export default function App() {
                   <Route path="/zion-ai-workflow-automator-pro" element={<ZionAIWorkflowAutomatorProPage />} />
                   <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
                   <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
+                  
+                  {/* New Micro SAAS Services */}
+                  <Route path="/ai-project-manager-pro" element={<AIProjectManagerProPage />} />
+                  <Route path="/ai-customer-analytics-pro" element={<AICustomerAnalyticsProPage />} />
+                  <Route path="/ai-content-creator-pro" element={<AIContentCreatorProPage />} />
+                  <Route path="/ai-cybersecurity-pro" element={<AICybersecurityProPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">

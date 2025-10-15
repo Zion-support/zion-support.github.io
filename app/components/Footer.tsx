@@ -3,16 +3,21 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = memo(() => {
   return (
-    <footer className="bg-gray-800 text-white">
+    <footer className="futuristic-bg border-t border-gray-700">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
-            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
+            <h3 className="text-lg font-semibold mb-4 neon-text">Zion Tech Group</h3>
             <p className="text-gray-300 mb-4">
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
+            <div className="space-y-2 text-sm text-gray-300">
+              <p><strong>Phone:</strong> +1 302 464 0950</p>
+              <p><strong>Email:</strong> kleber@ziontechgroup.com</p>
+              <p><strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709</p>
+            </div>
+            <div className="flex space-x-4 mt-4">
+              <a href="https://ziontechgroup.com" className="text-gray-300 hover:neon-text transition-colors">
                 <span className="sr-only">Website</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -50,6 +55,16 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">Document Analyzer</Link></li>
               <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
               <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Micro SAAS Solutions</h4>
+            <ul className="space-y-2">
+              <li><Link to="/ai-project-manager-pro" className="text-gray-300 hover:text-white">AI Project Manager Pro</Link></li>
+              <li><Link to="/ai-customer-analytics-pro" className="text-gray-300 hover:text-white">AI Customer Analytics Pro</Link></li>
+              <li><Link to="/ai-content-creator-pro" className="text-gray-300 hover:text-white">AI Content Creator Pro</Link></li>
+              <li><Link to="/ai-cybersecurity-pro" className="text-gray-300 hover:text-white">AI Cybersecurity Pro</Link></li>
             </ul>
           </div>
           
