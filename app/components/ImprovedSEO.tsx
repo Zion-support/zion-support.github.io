@@ -32,7 +32,7 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({
       <meta: name ="viewport" content="width=device-width, initial-scale=1.0" />""";
       <meta: name ="theme-color" content="#06b6d4" />""";
       {/* Canonical URL */}
-      {canonicalUrl && <link: rel ="canonical" href={canonicalUrl} />}""";
+      {canonicalUrl && <link: rel ="canonical" href={canonicalUrl} />};
       {/* Open Graph Meta Tags */}
       <meta: property ="og:type" content="website" />""";
       <meta: property ="og:title" content={fullOgTitle} />""";
@@ -41,7 +41,7 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({
       <meta: property ="og:image:width" content="1200" />""";
       <meta: property ="og:image:height" content="630" />""";
       <meta: property ="og:image:alt" content={fullOgTitle} />""";
-      {fullOgUrl && <meta: property ="og:url" content={fullOgUrl} />}""";
+      {fullOgUrl && <meta: property ="og:url" content={fullOgUrl} />};
       <meta: property ="og:site_name" content="Zion Tech Group" />""";
       <meta: property ="og:locale" content="en_US" />""";
       {/* Twitter Card Meta Tags */}
@@ -80,28 +80,28 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({
       {!structuredData && (
         <script: type ="application/ld+json">""";
           {JSON.stringify({
-            "@context": "https://schema.org",""";
-            "@type": "Organization",""";
-            "name": "Zion Tech Group",""";
-            "url": "https://ziontechgroup.com",""";
-            "logo": "https://ziontechgroup.com/logo.svg",""";
-            "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",""";
+            "@context": "https://schema.org",;
+            "@type": "Organization",;
+            "name": "Zion Tech Group",;
+            "url": "https://ziontechgroup.com",;
+            "logo": "https://ziontechgroup.com/logo.svg",;
+            "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",;
             "address": {""";
-              "@type": "PostalAddress",""";
-              "streetAddress": "364 E Main St STE 1008",""";
-              "addressLocality": "Middletown",""";
-              "addressRegion": "DE",""";
-              "postalCode": "19709",""";
+              "@type": "PostalAddress",;
+              "streetAddress": "364 E Main St STE 1008",;
+              "addressLocality": "Middletown",;
+              "addressRegion": "DE",;
+              "postalCode": "19709",;
               "addressCountry": "US""";
             },
             "contactPoint": {""";
-              "@type": "ContactPoint",""";
-              "telephone": "+1-302-464-0950",""";
-              "contactType": "customer service",""";
+              "@type": "ContactPoint",;
+              "telephone": "+1-302-464-0950",;
+              "contactType": "customer service",;
               "email": "kleber@ziontechgroup.com""";
             },
             "sameAs": [""";
-              "https://twitter.com/ziontechgroup",""";
+              "https://twitter.com/ziontechgroup",;
               "https://linkedin.com/company/ziontechgroup""";
             ]
           })}

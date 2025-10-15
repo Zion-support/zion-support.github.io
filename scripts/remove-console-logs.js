@@ -22,7 +22,6 @@ function removeConsoleLogs(filePath) {
     // Clean up empty lines
     newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
     
-<<<<<<< HEAD
     if (newContent !== originalContent) {
       fs.writeFileSync(filePath, newContent, 'utf8');
       console.log(`Removed console logs from: ${filePath}`);
@@ -39,61 +38,37 @@ function removeConsoleLogs(filePath) {
 /**
  * Process all JavaScript files in the dist directory
  */
-async function processDistFiles() {
+async function processFiles() {
   try {
-    const distPath = path.join(process.cwd(), 'dist');
+    console.log('🧹 Starting console log removal...');
     
-    if (!fs.existsSync(distPath)) {
-      console.log('Dist directory not found, skipping console log removal');
-      return;
-    }
+    // Find all JavaScript files in dist directory
+    const files = await glob('dist/**/*.js');
     
-    // Find all JavaScript files
-    const jsFiles = await glob('**/*.js', { cwd: distPath });
-    
-    if (jsFiles.length === 0) {
+    if (files.length === 0) {
       console.log('No JavaScript files found in dist directory');
       return;
     }
     
-    console.log(`Found ${jsFiles.length} JavaScript files to process`);
-    
     let processedCount = 0;
+    let removedCount = 0;
     
-    for (const file of jsFiles) {
-      const filePath = path.join(distPath, file);
-      if (removeConsoleLogs(filePath)) {
-        processedCount++;
-=======
     for (const file of files) {
-      totalFiles++;
-      
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        
-        // Remove console.log statements (but keep console.error, console.warn, etc.)
-        const cleanedContent = content
-          .replace(/console\.log\([^)]*\);?/g, ')'
-          .replace(/console\.debug\([^)]*\);?/g, ')'
-          .replace(/console\.info\([^)]*\);?/g, ')'
-        
-        if (cleanedContent !== content) {
-          fs.writeFileSync(file, cleanedContent);
-          modifiedFiles++;
-          console.log(`✅ Cleaned: ${file}`);
-        }
-      } catch (error) {
-        console.error(`❌ Error processing ${file}:`, error.message);
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+      if (removeConsoleLogs(file)) {
+        removedCount++;
       }
+      processedCount++;
     }
     
-    console.log(`Console log removal completed!`);
+    console.log(`✅ Processed ${processedCount} files`);
+    console.log(`🗑️  Removed console logs from ${removedCount} files`);
+    console.log('🎉 Console log removal completed!');
     
   } catch (error) {
-    console.error('Error processing dist files:', error.message);
+    console.error('Error processing files:', error.message);
+    process.exit(1);
   }
 }
 
 // Run the script
-processDistFiles();
+processFiles();

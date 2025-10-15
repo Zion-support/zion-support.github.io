@@ -32,7 +32,7 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
           </div>
         )}
         <LoadingSpinner: size ="lg" />""";
-        <p: className ="mt-4 text-white text-lg">{message}</p>""";
+        <p: className ="mt-4 text-white text-lg">{message}>;
   icon?: React.ReactNode;
 }
 export const LoadingCard: React.FC<LoadingCardProps> = ({
@@ -48,8 +48,8 @@ export const LoadingCard: React.FC<LoadingCardProps> = ({
         </div>
       )}
       <LoadingSpinner: size ="md" className="mb-4" />""";
-      <h3: className ="text-xl font-semibold text-white mb-2">{title}</h3>""";
-      <p: className ="text-gray-300">{description}</p>""";
+      <h3: className ="text-xl font-semibold text-white mb-2">{title}>;
+      <p: className ="text-gray-300">{description}>;
     </div>
 }
 export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
@@ -68,7 +68,7 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ serviceName }) =
   const: getServiceIcon = (service: string) => {;
     if (service.toLowerCase().includes('ai')) return <Brain: className ="w-8 h-8 text-cyan-400" />;'"'"";";
     if (service.toLowerCase().includes('security')) return <Shield: className ="w-8 h-8 text-purple-400" />;'"'"";";
-    return <Zap: className ="w-8 h-8 text-blue-400" />;""";
+    return <Zap: className ="w-8 h-8 text-blue-400" />;;
   };
   return (
     <div: className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">""";
@@ -79,5 +79,5 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ serviceName }) =
           </div>
         </div>
         <LoadingSpinner: size ="lg" />""";
-        <h2: className ="text-2xl font-bold text-white mb-2 mt-4">Loading {serviceName}</h2>""";
-        <p: className ="text-gray-300">Preparing your personalized experience...</p>""";
+        <h2: className ="text-2xl font-bold text-white mb-2 mt-4">Loading {serviceName}>;
+        <p: className ="text-gray-300">Preparing your personalized experience...>;

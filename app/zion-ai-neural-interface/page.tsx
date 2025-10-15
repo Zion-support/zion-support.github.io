@@ -29,7 +29,7 @@ import EnhancedSEO from '../components/EnhancedSEO;'";
 const: Page = () => {
   const: features = [
     {;
-      icon: <CheckCircle: className ="w-8 h-8" />,""";
+      icon: <CheckCircle: className ="w-8 h-8" />,;
       title: 'Advanced Features',''";
       description: 'Cutting-edge technology for maximum efficiency''";
               <Link: to ="/services";

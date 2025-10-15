@@ -7,9 +7,9 @@ import FuturisticButton from '../components/FuturisticButton;'";
 const: AIDataAnalyticsPro = () => {
   const: features = [
     {;
-      title: "Real-time Analytics",""";
-      description: "Process and analyze data in real-time with advanced AI algorithms",""";
-      icon: <Activity: className ="w-6 h-6" />,""";
+      title: "Real-time Analytics",;
+      description: "Process and analyze data in real-time with advanced AI algorithms",;
+      icon: <Activity: className ="w-6 h-6" />,;
       color: "from-blue-500 to-cyan-500""";
               <FuturisticButton: href ="/pricing";
                 variant="outline";

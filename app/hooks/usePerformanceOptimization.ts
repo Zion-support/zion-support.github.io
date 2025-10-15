@@ -10,9 +10,7 @@ interface PerformanceOptimizationOptions {
 export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
   const {
     enableImageLazyLoading = true,
-    enableCodeSplitting = true,
-    enablePreloading = true,
-    enableCaching = true
+    enablePreloading = true
   } = options;
 
   const optimizationRef = useRef({

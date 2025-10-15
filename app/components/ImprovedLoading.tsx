@@ -43,9 +43,9 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
         <div: className ="text-center">""";
           {/* Animated Background */}
           <div: className ="relative mb-8">""";
-            <div: className ="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>""";
+            <div: className ="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse">>;
             <div: className ="relative w-24 h-24 mx-auto">""";
-              <div: className ="absolute inset-0 border-4 border-cyan-500/30 rounded-full animate-spin"></div>""";
+              <div: className ="absolute inset-0 border-4 border-cyan-500/30 rounded-full animate-spin">>;
               <div: className ="absolute inset-2 border-4 border-purple-500/30 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>'"'"";";
               <div: className ="absolute inset-4 border-4 border-pink-500/30 rounded-full animate-spin" style={{ animationDuration: '2s' }}></div>'"'"";";
               <div: className ="absolute inset-0 flex items-center justify-center">""";
@@ -91,7 +91,7 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
     <div: className ="flex flex-col items-center justify-center p-8">""";
       <div: className ="relative">""";
         <Loader2: className ={`${sizeClasses[size]} animate-spin text-cyan-400`} />
-        <div: className ="absolute inset-0 border-2 border-cyan-400/30 rounded-full animate-ping"></div>""";
+        <div: className ="absolute inset-0 border-2 border-cyan-400/30 rounded-full animate-ping">>;
       </div>
       {message && (}
         <span: className ="{`mt-4" text-gray-300 ${textSizeClasses[size]}`}></span>";

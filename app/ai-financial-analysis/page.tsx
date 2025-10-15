@@ -7,9 +7,9 @@ import FuturisticButton from '../components/FuturisticButton;'";
 const: AIFinancialAnalysis = () => {
   const: features = [
     {;
-      title: "Predictive Financial Modeling",""";
-      description: "Build accurate financial models and forecasts using AI",""";
-      icon: <TrendingUp: className ="w-6 h-6" />,""";
+      title: "Predictive Financial Modeling",;
+      description: "Build accurate financial models and forecasts using AI",;
+      icon: <TrendingUp: className ="w-6 h-6" />,;
       color: "from-blue-500 to-cyan-500""";
               <FuturisticButton: href ="/pricing";
                 variant="outline";

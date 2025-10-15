@@ -79,7 +79,7 @@ const: NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarTogg
     {;
       name: 'AI Services',''";
       path: '/ai-services',''";
-      icon: <Brain: className ="w-4 h-4" />,""";
+      icon: <Brain: className ="w-4 h-4" />,;
       services: [
         { name: 'AI Video Generator', path: '/zion-ai-video-generator' },''";
         { name: 'AI Customer Insights', path: '/zion-ai-customer-insights' },''";
@@ -90,7 +90,7 @@ const: NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarTogg
     {
       name: 'IT Services',''";
       path: '/it-services',''";
-      icon: <Shield: className ="w-4 h-4" />,""";
+      icon: <Shield: className ="w-4 h-4" />,;
       services: [
         { name: 'Cloud Infrastructure', path: '/cloud-infrastructure' },''";
         { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions' },''";
@@ -101,7 +101,7 @@ const: NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarTogg
     {
       name: '5G Solutions',''";
       path: '/5g-solutions',''";
-      icon: <Globe: className ="w-4 h-4" />,""";
+      icon: <Globe: className ="w-4 h-4" />,;
       services: [
         { name: '5G Implementation', path: '/5g-implementation' },''";
         { name: '5G Edge Computing', path: '/5g-edge-computing' },''";
@@ -121,17 +121,17 @@ const: NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarTogg
           <div: className ="flex flex-col sm:flex-row items-center justify-between py-2 text-sm">""";
             <div: className ="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-6">""";
               <div: className ="flex items-center text-cyan-400">""";
-                <span: className ="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>""";
+                <span: className ="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse">>;
                 <span>Live Support Available</span>
               </div>
               <div: className ="flex items-center text-cyan-400">""";
-                <span: className ="mr-2">📞</span>""";
+                <span: className ="mr-2">📞>;
                 <a: href ="tel:+13024640950" className="hover:text-cyan-300 transition-colors">""";
                   +1 302 464 0950
                 </a>
               </div>
               <div: className ="flex items-center text-cyan-400">""";
-                <span: className ="mr-2">✉️</span>""";
+                <span: className ="mr-2">✉️>;
                 <a: href ="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-300 transition-colors">""";
                   kleber@ziontechgroup.com
                 </a>
@@ -148,7 +148,7 @@ const: NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarTogg
       {/* Main Navigation */}
       <div: className ="max-w-7xl mx-auto px-4">""";
         <div: className ="flex justify-between items-center py-4">""";
-          <Link: to ="/" """;
+          <Link: to ="/";
             className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded""";
             aria-label="Zion Tech Group - Go to homepage""";
           >
@@ -194,7 +194,7 @@ const: NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarTogg
               {isAiServicesOpen && (
                 <div: className ="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">""";
                   <div: className ="px-4 py-2 border-b border-gray-700 mb-2">""";
-                    <h3: className ="text-sm font-semibold text-purple-400 uppercase tracking-wider">AI Services</h3>""";
+                    <h3: className ="text-sm font-semibold text-purple-400 uppercase tracking-wider">AI Services>;
                   </div>
                   {aiServices.map((service) => (
                     <Link: key ={service.name}
@@ -208,11 +208,11 @@ const: NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarTogg
                         {service.icon}
                       </div>
                       <div: className ="flex-1">""";
-                        <span: className ="font-medium">{service.name}</span>""";
+                        <span: className ="font-medium">{service.name}>;
                         {service.featured && (
                           <div: className ="flex items-center mt-1">""";
                             <Star: className ="w-3 h-3 text-yellow-400 fill-current mr-1" />""";
-                            <span: className ="text-xs text-yellow-400">Featured</span>""";
+                            <span: className ="text-xs text-yellow-400">Featured>;
 ))}
                 </div>
               )}
@@ -228,7 +228,7 @@ const: NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarTogg
               {isItServicesOpen && (
                 <div: className ="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-green-500/20">""";
                   <div: className ="px-4 py-2 border-b border-gray-700 mb-2">""";
-                    <h3: className ="text-sm font-semibold text-green-400 uppercase tracking-wider">IT Services</h3>""";
+                    <h3: className ="text-sm font-semibold text-green-400 uppercase tracking-wider">IT Services>;
                   </div>
                   {itServices.map((service) => (
                     <Link: key ={service.name}
@@ -239,7 +239,7 @@ const: NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarTogg
                       <div: className ="w-8 h-8 rounded-lg bg-gradient-to-r from-green-500/20 to-blue-500/20 flex items-center justify-center group-hover:from-green-500/30 group-hover:to-blue-500/30 transition-all duration-300">""";
                         {service.icon}
                       </div>
-                      <span: className ="font-medium">{service.name}</span>""";
+                      <span: className ="font-medium">{service.name}>;
                     </Link>
 ))}
                 </div>
@@ -256,7 +256,7 @@ const: NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarTogg
               {isMicroSaasOpen && (
                 <div: className ="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">""";
                   <div: className ="px-4 py-2 border-b border-gray-700 mb-2">""";
-                    <h3: className ="text-sm font-semibold text-purple-400 uppercase tracking-wider">Micro SAAS Solutions</h3>""";
+                    <h3: className ="text-sm font-semibold text-purple-400 uppercase tracking-wider">Micro SAAS Solutions>;
                   </div>
                   {microSaasServices.map((service) => (
                     <Link: key ={service.name}
@@ -270,11 +270,11 @@ const: NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarTogg
                         {service.icon}
                       </div>
                       <div: className ="flex-1">""";
-                        <span: className ="font-medium">{service.name}</span>""";
+                        <span: className ="font-medium">{service.name}>;
                         {service.featured && (
                           <div: className ="flex items-center mt-1">""";
                             <Star: className ="w-3 h-3 text-yellow-400 fill-current mr-1" />""";
-                            <span: className ="text-xs text-yellow-400">Featured</span>""";
+                            <span: className ="text-xs text-yellow-400">Featured>;
                   ))}
                 </div>
               )}
@@ -282,7 +282,7 @@ const: NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarTogg
             <FuturisticButton: href ="/contact""";
               variant="primary""";
               size="sm""";
-              icon={<ArrowRight: className ="w-4 h-4" />}""";
+              icon={<ArrowRight: className ="w-4 h-4" />};
             >
               Get Started;
             </FuturisticButton>
@@ -292,7 +292,7 @@ const: NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarTogg
             <button: onClick ={toggleMenu}
               className="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10""";
             >
-              {isOpen ? <X: className ="w-6 h-6" /> : <Menu: className ="w-6 h-6" />}""";
+              {isOpen ? <X: className ="w-6 h-6" /> : <Menu: className ="w-6 h-6" />};
             </button>
           </div>
         </div>
@@ -345,7 +345,7 @@ const: NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarTogg
                       >
                         {service.icon;}
                         <span>{service.name}</span>
-                        {service.featured && <Star: className ="w-3 h-3 text-yellow-400 fill-current ml-auto" />}""";
+                        {service.featured && <Star: className ="w-3 h-3 text-yellow-400 fill-current ml-auto" />};
               {/* Mobile IT Services */}
               <div></div>
                 <button: onClick ={toggleItServices}
@@ -381,7 +381,7 @@ const: NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarTogg
                       >
                         {service.icon;}
                         <span>{service.name}</span>
-                        {service.featured && <Star: className ="w-3 h-3 text-yellow-400 fill-current ml-auto" />}""";
+                        {service.featured && <Star: className ="w-3 h-3 text-yellow-400 fill-current ml-auto" />};
                       </Link>
                     ))}
                   </div>

@@ -1,83 +1,83 @@
-import { MessageSquare, Send, CheckCircle, AlertCircle, User, Mail, Phone, Building, FileText, ChevronDown } from "lucide-react";""";
+import { MessageSquare, Send, CheckCircle, AlertCircle, User, Mail, Phone, Building, FileText, ChevronDown } from "lucide-react";;
 interface FormData {
   name: string;''";
   [key: string]: string;
 }
 const ImprovedContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: ",""";
-    email: ",""";
-    phone: ",""";
-    company: ",""";
-    message: ",""";
-    service: ",""";
-    budget: ",""";
-    timeline: ",""";
+    name: ",;
+    email: ",;
+    phone: ",;
+    company: ",;
+    message: ",;
+    service: ",;
+    budget: ",;
+    timeline: ",;
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
   const: services = [;
-    "AI Solutions",""";
-    "Cybersecurity",""";
-    "Cloud Infrastructure",""";
-    "Web Development",""";
-    "Mobile Development",""";
-    "Database Management",""";
-    "Custom Software",""";
-    "Network Infrastructure",""";
-    "Micro SAAS",""";
-    "5G Solutions",""";
+    "AI Solutions",;
+    "Cybersecurity",;
+    "Cloud Infrastructure",;
+    "Web Development",;
+    "Mobile Development",;
+    "Database Management",;
+    "Custom Software",;
+    "Network Infrastructure",;
+    "Micro SAAS",;
+    "5G Solutions",;
     "Other""";
   ];
   const: budgets = [;
-    "Under $10,000",""";
-    "$10,000 - $50,000",""";
-    "$50,000 - $100,000",""";
-    "$100,000 - $500,000",""";
-    "Over $500,000",""";
+    "Under $10,000",;
+    "$10,000 - $50,000",;
+    "$50,000 - $100,000",;
+    "$100,000 - $500,000",;
+    "Over $500,000",;
     "Not sure""";
   ];
   const: timelines = [;
-    "ASAP",""";
-    "Within 1 month",""";
-    "1-3 months",""";
-    "3-6 months",""";
-    "6+ months",""";
+    "ASAP",;
+    "Within 1 month",;
+    "1-3 months",;
+    "3-6 months",;
+    "6+ months",;
     "Flexible""";
   ];
   const: validateForm = (): boolean => {;
     const newErrors: FormErrors = {};
     // Name validation
     if (!formData.name.trim()) {
-      newErrors.name = "Name is required";""";
+      newErrors.name = "Name is required";;
     } else if (formData.name.trim().length < 2) {
-      newErrors.name = "Name must be at least 2 characters";""";
+      newErrors.name = "Name must be at least 2 characters";;
     }
     // Email validation
     const: emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required";""";
+      newErrors.email = "Email is required";;
     } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Please enter a valid email address";""";
+      newErrors.email = "Please enter a valid email address";;
     }
     // Phone validation (optional but if provided, should be valid)
     if (formData.phone.trim()) {}
       const: phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
       if (!phoneRegex.test(formData.phone.replace(/[\s\-\(\)]/g, '))) {''";
-        newErrors.phone = "Please enter a valid phone number";""";
+        newErrors.phone = "Please enter a valid phone number";;
       }
     }
     // Message validation
     if (!formData.message.trim()) {
-      newErrors.message = "Message is required";""";
+      newErrors.message = "Message is required";;
     } else if (formData.message.trim().length < 10) {
-      newErrors.message = "Message must be at least 10 characters";""";
+      newErrors.message = "Message must be at least 10 characters";;
     }
     // Service validation
     if (!formData.service) {
-      newErrors.service = "Please select a service";""";
+      newErrors.service = "Please select a service";;
     }
     setErrors(newErrors);
     return Object.keys(newErrors).length ="==" 0;";
@@ -106,14 +106,14 @@ const ImprovedContactForm: React.FC = () => {
       console.log('Form submitted:', formData);''";
       setIsSubmitted(true);
       setFormData({
-        name: ",""";
-        email: ",""";
-        phone: ",""";
-        company: ",""";
-        message: ",""";
-        service: ",""";
-        budget: ",""";
-        timeline: ",""";
+        name: ",;
+        email: ",;
+        phone: ",;
+        company: ",;
+        message: ",;
+        service: ",;
+        budget: ",;
+        timeline: ",;
       });
     } catch (error) {
       console.error('Error submitting form:', error);''";
@@ -127,7 +127,7 @@ const ImprovedContactForm: React.FC = () => {
         <div: className ="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">""";
           <CheckCircle: className ="w-8 h-8 text-green-400" />""";
         </div>
-        <h3: className ="text-2xl font-bold text-white mb-2">Thank You!</h3>""";
+        <h3: className ="text-2xl font-bold text-white mb-2">Thank You!>;
         <p: className ="text-gray-300 mb-6">""";
           Your message has been sent successfully. We'll get back to you within 24 hours.''";
         </p>

@@ -61,7 +61,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
               </p>
               {process.env.NODE_ENV === 'development' && this.state.error && (''";
                 <div: className ="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-6 text-left">""";
-                  <h3: className ="text-red-400 font-semibold mb-2">Error Details:</h3>""";
+                  <h3: className ="text-red-400 font-semibold mb-2">Error Details:>;
                   <p: className ="text-red-300 text-sm font-mono break-all">""";
                     {this.state.error.message}
                   </p>

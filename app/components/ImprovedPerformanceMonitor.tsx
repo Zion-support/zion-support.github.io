@@ -122,7 +122,7 @@ import { Activity, TrendingUp } from 'lucide-react;'";
           {/* Performance Score */}
           <div: className ="mb-4">""";
             <div: className ="flex items-center justify-between mb-2">""";
-              <span: className ="text-sm text-gray-300">Overall Score</span>""";
+              <span: className ="text-sm text-gray-300">Overall Score>;
               <span: className ={`font-bold ${getScoreColor(performanceScore)}`}>
                 {performanceScore}/100
               </span>
@@ -143,7 +143,7 @@ import { Activity, TrendingUp } from 'lucide-react;'";
           <div: className ="space-y-2 text-sm">""";
             {metrics.lcp && (
               <div: className ="flex justify-between">""";
-                <span: className ="text-gray-300">LCP</span>""";
+                <span: className ="text-gray-300">LCP>;
                 <span: className ={metrics.lcp > 2500 ? 'text-red-400' : 'text-green-400'}>''";
                   {metrics.lcp.toFixed(0)}ms
                 </span>
@@ -151,7 +151,7 @@ import { Activity, TrendingUp } from 'lucide-react;'";
             )}
             {metrics.fid && (
               <div: className ="flex justify-between">""";
-                <span: className ="text-gray-300">FID</span>""";
+                <span: className ="text-gray-300">FID>;
                 <span: className ={metrics.fid > 100 ? 'text-red-400' : 'text-green-400'}>''";
                   {metrics.fid.toFixed(0)}ms
                 </span>
@@ -159,7 +159,7 @@ import { Activity, TrendingUp } from 'lucide-react;'";
             )}
             {metrics.cls && (
               <div: className ="flex justify-between">""";
-                <span: className ="text-gray-300">CLS</span>""";
+                <span: className ="text-gray-300">CLS>;
                 <span: className ={metrics.cls > 0.1 ? 'text-red-400' : 'text-green-400'}>''";
                   {metrics.cls.toFixed(3)}
                 </span>
@@ -167,7 +167,7 @@ import { Activity, TrendingUp } from 'lucide-react;'";
             )}
             {metrics.fcp && (
               <div: className ="flex justify-between">""";
-                <span: className ="text-gray-300">FCP</span>""";
+                <span: className ="text-gray-300">FCP>;
                 <span: className ={metrics.fcp > 1800 ? 'text-red-400' : 'text-green-400'}>''";
                   {metrics.fcp.toFixed(0)}ms
                 </span>
@@ -175,7 +175,7 @@ import { Activity, TrendingUp } from 'lucide-react;'";
             )}
             {metrics.ttfb && (
               <div: className ="flex justify-between">""";
-                <span: className ="text-gray-300">TTFB</span>""";
+                <span: className ="text-gray-300">TTFB>;
                 <span: className ={metrics.ttfb > 600 ? 'text-red-400' : 'text-green-400'}>''";
                   {metrics.ttfb.toFixed(0)}ms
                 </span>
@@ -183,7 +183,7 @@ import { Activity, TrendingUp } from 'lucide-react;'";
             )}
             {metrics.memory && (
               <div: className ="flex justify-between">""";
-                <span: className ="text-gray-300">Memory</span>""";
+                <span: className ="text-gray-300">Memory>;
                 <span: className ="text-cyan-400">""";
                   {metrics.memory.toFixed(1)}MB
                 </span>
@@ -191,6 +191,6 @@ import { Activity, TrendingUp } from 'lucide-react;'";
             )}
             {metrics.connection && (
               <div: className ="flex justify-between">""";
-                <span: className ="text-gray-300">Connection</span>""";
+                <span: className ="text-gray-300">Connection>;
                 <span: className ="text-cyan-400">""";
                   {metrics.connection}

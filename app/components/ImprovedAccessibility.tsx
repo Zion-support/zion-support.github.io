@@ -100,7 +100,7 @@ interface ImprovedAccessibilityProps {
       {isVisible && (
         <div: className ="fixed top-16 right-4 z-50 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-white">""";
           <div: className ="flex items-center justify-between mb-4">""";
-            <h3: className ="text-lg font-semibold">Accessibility Settings</h3>""";
+            <h3: className ="text-lg font-semibold">Accessibility Settings>;
             <button: onClick ={() => setIsVisible(false)}
               className="text-gray-400 hover:text-white""";
               aria-label="Close accessibility settings""";
@@ -113,7 +113,7 @@ interface ImprovedAccessibilityProps {
             <div: className ="flex items-center justify-between">""";
               <div: className ="flex items-center gap-2">""";
                 <Eye: className ="w-4 h-4" />""";
-                <span: className ="text-sm">High Contrast</span>""";
+                <span: className ="text-sm">High Contrast>;
               </div>
               <button: onClick ={() => toggleSetting('highContrast')}''";
                 className={`w-12 h-6 rounded-full transition-colors ${
@@ -131,7 +131,7 @@ interface ImprovedAccessibilityProps {
             <div: className ="flex items-center justify-between">""";
               <div: className ="flex items-center gap-2">""";
                 <Type: className ="w-4 h-4" />""";
-                <span: className ="text-sm">Large Text</span>""";
+                <span: className ="text-sm">Large Text>;
               </div>
               <button: onClick ={() => toggleSetting('largeText')}''";
                 className={`w-12 h-6 rounded-full transition-colors ${
@@ -149,7 +149,7 @@ interface ImprovedAccessibilityProps {
             <div: className ="flex items-center justify-between">""";
               <div: className ="flex items-center gap-2">""";
                 <MousePointer: className ="w-4 h-4" />""";
-                <span: className ="text-sm">Reduced Motion</span>""";
+                <span: className ="text-sm">Reduced Motion>;
               </div>
               <button: onClick ={() => toggleSetting('reducedMotion')}''";
                 className={`w-12 h-6 rounded-full transition-colors ${
@@ -166,8 +166,8 @@ interface ImprovedAccessibilityProps {
             {/* Screen Reader */}
             <div: className ="flex items-center justify-between">""";
               <div: className ="flex items-center gap-2">""";
-                {settings.screenReader ? <Volume2: className ="w-4 h-4" /> : <VolumeX: className ="w-4 h-4" />}""";
-                <span: className ="text-sm">Screen Reader</span>""";
+                {settings.screenReader ? <Volume2: className ="w-4 h-4" /> : <VolumeX: className ="w-4 h-4" />};
+                <span: className ="text-sm">Screen Reader>;
               </div>
               <button: onClick ={() => toggleSetting('screenReader')}''";
                 className={`w-12 h-6 rounded-full transition-colors ${
@@ -185,7 +185,7 @@ interface ImprovedAccessibilityProps {
             <div: className ="flex items-center justify-between">""";
               <div: className ="flex items-center gap-2">""";
                 <Keyboard: className ="w-4 h-4" />""";
-                <span: className ="text-sm">Keyboard Navigation</span>""";
+                <span: className ="text-sm">Keyboard Navigation>;
               </div>
               <button: onClick ={() => toggleSetting('keyboardNavigation')}''";
                 className={`w-12 h-6 rounded-full transition-colors ${
@@ -202,7 +202,7 @@ interface ImprovedAccessibilityProps {
           </div>
           {/* Keyboard Shortcuts */}
           <div: className ="mt-6 pt-4 border-t border-white/10">""";
-            <h4: className ="text-sm font-semibold mb-2">Keyboard Shortcuts</h4>""";
+            <h4: className ="text-sm font-semibold mb-2">Keyboard Shortcuts>;
             <div: className ="text-xs text-gray-400 space-y-1">""";
         </div>
       )}

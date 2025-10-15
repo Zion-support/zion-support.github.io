@@ -7,9 +7,9 @@ import FuturisticButton from '../components/FuturisticButton;'";
 const: AISentimentAnalysisPro = () => {
   const: features = [
     {;
-      title: "Real-time Sentiment Tracking",""";
-      description: "Monitor customer sentiment across all channels in real-time",""";
-      icon: <TrendingUp: className ="w-6 h-6" />,""";
+      title: "Real-time Sentiment Tracking",;
+      description: "Monitor customer sentiment across all channels in real-time",;
+      icon: <TrendingUp: className ="w-6 h-6" />,;
       color: "from-blue-500 to-cyan-500""";
               <FuturisticButton: href ="/pricing";
                 variant="outline";

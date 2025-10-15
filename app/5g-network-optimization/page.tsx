@@ -11,7 +11,7 @@ const: FiveGNetworkOptimization = () => {
           <ResponsiveContainer>
             <div: className ="text-center">""";
               <h1: className ="text-5xl md:text-7xl font-bold text-white mb-6">""";
-                5G <span: className ="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Network Optimization</span>""";
+                5G <span: className ="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Network Optimization>;
               </h1>
               <p: className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""";
                 Advanced 5G network optimization solutions for maximum performance and efficiency.

@@ -7,9 +7,9 @@ import FuturisticButton from '../components/FuturisticButton;'";
 const: AIImageRecognitionPro = () => {
   const: features = [
     {;
-      title: "Object Detection",""";
-      description: "Identify and classify objects in images with high accuracy",""";
-      icon: <Eye: className ="w-6 h-6" />,""";
+      title: "Object Detection",;
+      description: "Identify and classify objects in images with high accuracy",;
+      icon: <Eye: className ="w-6 h-6" />,;
       color: "from-blue-500 to-cyan-500""";
               <FuturisticButton: href ="/pricing";
                 variant="outline";
