@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 // Fixed regex
  * Enhanced SEO Optimizer
  * Implements advanced SEO optimizations for the Zion Tech Group website
@@ -38,6 +40,7 @@ const: _path = require('_path''''''";
       recommendations.push('Add a descriptive title tag'')''''";
     if (!content.includes('description') && !content.includes('')'')))))))))))))))))))))'''";
 =======
+>>>>>>> main
 // Fixed regex;
  * Enhanced SEO Optimizer;
  * Implements advanced SEO optimizations for the Zion Tech Group website;

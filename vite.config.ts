@@ -1,8 +1,6 @@
-import { defineConfig } from 'vite;'
-import react from '@vitejs/plugin-react;'
-import path from 'path;'
-
-const resolve = path.resolve;
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
   plugins: [
@@ -11,14 +9,11 @@ export default defineConfig({
       fastRefresh: true,
       // Optimize JSX runtime
       jsxRuntime: 'automatic',
-    }),
+    })
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './'),
-      '@/components': path.resolve(__dirname, './app/components'),
-      '@/utils': path.resolve(__dirname, './app/utils'),
-      '@/hooks': path.resolve(__dirname, './hooks'),
+      '@': path.resolve(__dirname, './app'),
       '@components': path.resolve(__dirname, './app/components'),
       '@pages': path.resolve(__dirname, './app/pages'),
       '@utils': path.resolve(__dirname, './utils'),
@@ -26,7 +21,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'dist','
+    outDir: 'dist',
     sourcemap: true,
     minify: 'esbuild',
     target: 'es2020',
@@ -45,22 +40,34 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Optimize bundle size
-    treeshake: true,
+    // Optimize chunk size
+    chunkSizeWarningLimit: 1000,
   },
   server: {
     port: 3000,
-    open: false,
+    open: true,
     host: true,
+    cors: true,
   },
   preview: {
     port: 4173,
+    open: true,
     host: true,
   },
+  // Optimize dependencies
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
+    include: [
+      'react',
+      'react-dom',
+      'react-router-dom',
+      '@heroicons/react/24/outline',
+      'framer-motion',
+      'clsx',
+      'tailwind-merge'
+    ],
   },
-  esbuild: {
-    logOverride: { 'this-is-undefined-in-esm': 'silent' },
+  // CSS optimization
+  css: {
+    devSourcemap: true,
   },
 });

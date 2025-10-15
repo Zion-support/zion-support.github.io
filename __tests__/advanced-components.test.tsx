@@ -1,4 +1,43 @@
 <<<<<<< HEAD
+import {render} from "@testing-library/react"
+const  TestComponent = () => {}
+  return <div>Test content</div>
+}
+describe("Advanced Components", () => {}"
+  // Test implementation
+  it("should render without errors", () => {}"
+    expect(true).toBe(true)
+  })
+  
+  it("should render test content", () => {}"
+    render(<TestComponent />)
+    expect(screen.getByText("Test content")).toBeInTheDocument()"
+  })
+  
+  it("should handle console errors", () => {}"
+    const  consoleSpy = jest
+      .spyOn(console, "error")"
+=======
+<<<<<<< HEAD
+import {render} from "@testing-library/react;";";";
+const TestComponent = () => {}";";";
+  return <div>Test content</div>";";";";
+};"
+describe("Advanced Components", () => {}";";";";
+  // Test implementation"
+  it("should render without errors", () => {}";";";
+    expect(true).toBe(true)";";";
+  })"
+  it("should render test content", () => {}";";";";
+    render(<TestComponent />)"
+    expect(screen.getByText("Test content")).toBeInTheDocument()";";";";";
+  })"
+  it("should handle console errors", () => {}";";";";
+    const consoleSpy = jest;"
+      .spyOn(console, "error")";";
+      .mockImplementation(() => {
+=======
+<<<<<<< HEAD
 import React from 'react';'";
 import { render, screen } from '@testing-library/react';'";
 import { HelmetProvider } from 'react-helmet-async';'";
@@ -91,10 +130,15 @@ describe("Advanced Components", () => {}";";
   it("should handle console errors", () => {}";";
     const: consoleSpy = jest;
       .spyOn(console, "error")";";";
+>>>>>>> main
       .mockImplementation(() => {})
     
     // Test implementation
     consoleSpy.mockRestore()
-  })
-})
 >>>>>>> main
+  })
+    // Test implementation
+    consoleSpy.mockRestore()";
+  })";";
+})";";";
+"

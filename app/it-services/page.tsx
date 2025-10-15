@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+'use client',"
+      import { Helmet } from 'react-helmet-async',"
+=======
+<<<<<<< HEAD
+'use client",";";";
+      import { Helmet } from 'react-helmet-async",
+=======
+<<<<<<< HEAD
 import React from 'react;'";
 import { Helmet } from 'react-helmet-async;'";
 'use client;''";
@@ -57,6 +65,8 @@ export default function Page() {
 
 'use client',";
       import { Helmet } from 'react-helmet-async',";
+>>>>>>> main
+>>>>>>> main
       import {},
       Server,
       Cloud,
@@ -79,8 +89,40 @@ export default function Page() {
       FileText,
       MessageSquare,
       ShoppingCart,
+<<<<<<< HEAD
+      Search,";
+      Target,";";
+      Workflow;";";";
+} from 'lucide-react";";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
+
+const ItServicesPage: React.FC  =  () => {
+  return (;";
+    <>;";";
+      <SEOHead;";";";
+        title="It Services - Zion Tech Group"";"
+        description="Professional it services solutions for modern businesses";"
+      />";"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">It Services</$1>"
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;,";
+  ),";";
+};";";";
+;"
+export default ItServicesPage;'";'";";";";
+"
+=======
       Search,
       Target,
+<<<<<<< HEAD
+      Workflow
+} from 'lucide-react'
+=======
       Workflow;
 } from 'lucide-react';";
 
@@ -88,22 +130,30 @@ import React from 'react';;';";
 import SEOHead from './components/SEOHead';";
 ;
 
+>>>>>>> main
 const ItServicesPage: React.FC = () => {
   return (
-    <>;
-      <SEOHead;
-        title="It Services - Zion Tech Group"";";
-        description="Professional it services solutions for modern businesses";";
-      />";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">It Services</h1>";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
-        </div>;
-      </div>;
-    </>;
+    <>
+      <SEOHead
+        title="It Services - Zion Tech Group""
+        description="Professional it services solutions for modern businesses"
+      />"
+      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
+        <div  className ="text-center">"
+          <h1  className ="text-4xl font-bold mb-4">It Services</h1>"
+          <p  className ="text-gray-300">Professional solutions coming soon...</p>;"
+        </div>
+      </div>
+    </>
   ),
+<<<<<<< HEAD
+}
+
+export default ItServicesPage;'";'";"
+=======
 };
 ;
 export default ItServicesPage;'";'";";";
+>>>>>>> main
+>>>>>>> main
 >>>>>>> main

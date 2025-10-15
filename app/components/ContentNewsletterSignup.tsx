@@ -1,3 +1,51 @@
+<<<<<<< HEAD
+import React from 'react';;';";"
+import SEOHead from './components/SEOHead';";"
+
+const ComponentsPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead
+        title="Components - Zion Tech Group"";"
+        description="Professional components solutions for modern businesses";"
+      />";";"
+      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div  className ="text-center">";"
+          <h1  className ="text-4xl font-bold mb-4">Components</h1>";"
+          <p  className ="text-gray-300">Professional solutions coming soon...</p>;";"
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default ComponentsPage;'";'";"
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react",";";";
+      import React, { useState } from "react",
+      interface ContentNewsletterSignupProps {},
+      className?: string";
+    },";";
+    {}";";";
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps>  =  ({},)"
+      className = ""}) => {},"
+      const [email, setEmail] = useState(""),
+      const [isSubscribed, setIsSubscribed] = useState(false),
+      const [isLoading, setIsLoading] = useState(false),
+      const handleSubmit = async (_e: React.FormEvent) => {},
+      e.preventDefault(),;
+      setIsLoading(true),;
+      try {
+  } catch (error) {
+    console.error(error);
+  };
+  };";
+      // Simulate API call";";
+      await new Promise((resolve) => setTimeout(resolve, 1000)),";";";
+      setIsSubscribed(true),"
+      setEmail("");
+=======
 
 <<<<<<< HEAD
 =======
@@ -21,13 +69,57 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({},)
       setIsSubscribed(true),
       setEmail("");";
 
+>>>>>>> main
     } catch (error) {};
       } finally {};
       setIsLoading(false);
     };
   };
-  if ($1) {}
+  if ($1) {};
   // If body
+<<<<<<< HEAD
+};
+    return ()";
+      <divclassName={`bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg text-center ${className}`};>";";
+      ></div";";";
+>"
+        <CheckCircle className="w-8 h-8 mx-auto mb-2" />"
+        <h3 className="text-lg font-semibold mb-2"></h3>";
+          Thank you for subscribing!";";
+        </h3>";";";
+        <p>You'll receive our latest updates and exclusive content.</p>"
+      </div>
+    )
+  },";
+      return (<divclassName={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`};>)";";
+    ></div";";";
+>"
+      <div className="text-center mb-6"></div>"
+        <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
+        <h3 className="text-2xl font-bold text-white mb-2">Stay Updated</h3>"
+        <p className="text-gray-300"></p>";
+          Get the latest AI and tech insights delivered to your inbox.";";
+        </p>";";";
+      </div>"
+      <form onSubmit={handleSubmit} className="space-y-4"></form>";";";
+        <div></div>"
+          <inputtype="email">";";
+            value={email},";";";
+      onChange={(e) => setEmail(e.target.value)},"
+      placeholder="Enter your email address"
+            required"
+            className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+          />";";";
+        </div>"
+        <buttontype="submit">";";";
+          disabled={isLoading},"
+      className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"></button";";";
+>"
+          {isLoading ? "Subscribing..." : "Subscribe Now"};";";
+        </button>";";";
+      </form>"
+      <p className="text-xs text-gray-400 text-center mt-4"></p>
+=======
 }
     return ()
       <divclassName={`bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg text-center ${className}`};>
@@ -69,13 +161,37 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({},)
         </button>
       </form>
       <p: className ="text-xs text-gray-400 text-center mt-4"></p>";
+>>>>>>> main
         We respect your privacy. Unsubscribe at any time.
       </p>
     </div>
-  )
-},
-      export default ContentNewsletterSignup
+  )";
+},";";
+      export default ContentNewsletterSignup";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
+<<<<<<< HEAD
+const ComponentsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
+      <SEOHead;"
+        title="Components - Zion Tech Group"";"
+        description="Professional components solutions for modern businesses";"
+      />";"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Components</$1>"
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;,";
+  ),";";
+};";";";
+;"
+export default ComponentsPage;'";'";";";";
+"
+=======
 import React from 'react';;';";
 import SEOHead from './components/SEOHead';";
 ;
@@ -98,4 +214,6 @@ const ComponentsPage: React.FC = () => {
 ;
 export default ComponentsPage;'";'";";";
 
+>>>>>>> main
+>>>>>>> main
 >>>>>>> main

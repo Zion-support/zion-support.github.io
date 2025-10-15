@@ -1,4 +1,23 @@
 <<<<<<< HEAD
+import React from 'react';;"
+import SEOHead from '../components/SEOHead'
+=======
+<<<<<<< HEAD
+import React from 'react";";";";
+import SEOHead from '../components/SEOHead";
+const AccessibilityPage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
+        title="Page - Zion Tech Group"
+        description="Professional page solutions for modern businesses"
+      />"
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
+        <div className="text-center">"
+          <h1 className="text-4xl font-bold mb-4">Page</h1>"
+          <p className="text-gray-300">Professional solutions coming soon...</p>
+=======
+<<<<<<< HEAD
 import React from 'react;'";
 import { ArrowRight } from 'lucide-react;'";
 import { CheckCircle } from 'lucide-react;'";
@@ -137,24 +156,50 @@ export default page;
 import React from 'react';;";
 import SEOHead from '../components/SEOHead';";
 
+>>>>>>> main
 const AccessibilityPage: React.FC = () => {}
   return ()
     <>{}</>
       <SEOHead>
-        title="Page - Zion Tech Group"";
-        description="Professional page solutions for modern businesses"";
+        title="Page - Zion Tech Group""
+        description="Professional page solutions for modern businesses""
       />
+<<<<<<< HEAD
+      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
+        <div  className ="text-center">"
+          <h1  className ="text-4xl font-bold mb-4">Page</h1>"
+          <p  className ="text-gray-300">Professional solutions coming soon...</p>"
+=======
       <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
         <div: className ="text-center">";
           <h1: className ="text-4xl font-bold mb-4">Page</h1>";
           <p: className ="text-gray-300">Professional solutions coming soon...</p>";
+>>>>>>> main
+>>>>>>> main
         </div>
       </div>
     </>
   )
     },
+<<<<<<< HEAD
     {}
+export default PagePage
+=======
+    {};
 export default PagePage;
+<<<<<<< HEAD
+const AccessibilityPage: React.FC = () => {";
+  ";";
+  return (";";";
+    <>";";";";
+      <SEOHead title ="Accessibility - Zion Tech Group"";"
+        description="Professional accessibility solutions for modern businesses"";";";";
+      />"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Accessibility</$1>"
+          <p className ="text-gray-300">Making digital experiences accessible to everyone</$1>
+=======
 
 const AccessibilityPage: React.FC = () => {
   return (
@@ -166,12 +211,14 @@ const AccessibilityPage: React.FC = () => {
         <div: className ="text-center">";";
           <h1: className ="text-4xl font-bold mb-4">Accessibility</h1>";";
           <p: className ="text-gray-300">Making digital experiences accessible to everyone</p>";";
+>>>>>>> main
         </div>
       </div>
-    </>
+    </>,
   ),
-};
 
-export default AccessibilityPage;
-
+};";
+";";
+export default AccessibilityPage;";";";
+"
 >>>>>>> main

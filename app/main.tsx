@@ -1,3 +1,47 @@
+<<<<<<< HEAD
+import React from "react"";"
+import ReactDOM from "react-dom/client";"
+import { BrowserRouter }; from "react-router-dom"";"
+import { HelmetProvider }; from "react-helmet-async"";"
+import App from "./App"";"
+import "./index.css"";"
+const  root = ReactDOM.createRoot()
+  document.getElementById("root") as HTMLElement,";"
+=======
+<<<<<<< HEAD
+import React from "react"
+import ReactDOM from "react-dom/client"
+import { HelmetProvider } from "react-helmet-async;";";";";
+import App from "./App;";";";";
+import "./index.css"
+;"
+import React from "react";"
+import ReactDOM from "react-dom/client;";";";";
+import { BrowserRouter } from "react-router-dom";"
+import { HelmetProvider } from "react-helmet-async";"
+import App from "./App";"
+import "./index.css";";";";
+const root  =  ReactDOM.createRoot()";";";";
+  document.getElementById("root") as HTMLElement,";
+>>>>>>> main
+)
+root.render()
+  <React.StrictMode></React.StrictMode>
+    <HelmetProvider></Helmet>
+      <></>
+        <App />
+<<<<<<< HEAD
+      </BrowserRouter>
+    </HelmetProvider>
+  </React.StrictMode>,
+)
+=======
+      </>
+    </HelmetProvider>";
+  </React.StrictMode>,;";";
+)";";";
+"
+=======
 import React from 'react';";
 import { Helmet } from 'react-helmet-async';";
 
@@ -64,3 +108,5 @@ const Main: React.FC = () => {
 };
 
 export default Main;
+>>>>>>> main
+>>>>>>> main

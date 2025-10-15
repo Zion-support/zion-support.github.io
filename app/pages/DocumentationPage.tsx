@@ -1,4 +1,27 @@
 <<<<<<< HEAD
+import SEOHead from '../components/SEOHead'
+=======
+<<<<<<< HEAD
+import SEOHead from '../components/SEOHead";
+const DocumentationPage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
+        title="DocumentationPage - Zion Tech Group"
+        description="Zion Tech Group DocumentationPage page"
+const DocumentationPage: React.FC = () => {";
+  ";";
+  return (";";";
+    <>";";";";
+      <SEOHead title ="DocumentationPage - Zion Tech Group - Zion Tech Group"";"
+        description="Zion Tech Group DocumentationPage page"";";";";
+      />"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">DocumentationPage - Zion Tech Group</$1>"
+          <p className ="text-gray-300">Coming soon...</$1>
+=======
+<<<<<<< HEAD
 import React from 'react;;''";
 import { Link } from 'react-router-dom;;''";
 import SEO from '../components/SEO;''";
@@ -273,10 +296,20 @@ console.log(response.data)`}</code>
 =======
 import SEOHead from '../components/SEOHead';";
 
+>>>>>>> main
 const DocumentationPage: React.FC = () => {}
   return ()
     <>{}</>
       <SEOHead>
+<<<<<<< HEAD
+        title="DocumentationPage - Zion Tech Group""
+        description="Zion Tech Group DocumentationPage page""
+      />
+      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
+        <div  className ="text-center">"
+          <h1  className ="text-4xl font-bold mb-4">DocumentationPage - Zion Tech Group</h1>"
+          <p  className ="text-gray-300">Coming soon...</p>"
+=======
         title="DocumentationPage - Zion Tech Group"";
 
         description="Zion Tech Group DocumentationPage page"";
@@ -292,13 +325,26 @@ const DocumentationPage: React.FC = () => {
         <div: className ="text-center">";";
           <h1: className ="text-4xl font-bold mb-4">DocumentationPage - Zion Tech Group</h1>";";
           <p: className ="text-gray-300">Coming soon...</p>";";
+>>>>>>> main
+>>>>>>> main
         </div>
       </div>
-    </>
+    </>,
   ),
-};
+<<<<<<< HEAD
+}
+export default DocumentationPage
+=======
 
+<<<<<<< HEAD
+};";
+";";
+export default DocumentationPage;";";";
+"
+=======
 export default DocumentationPage;
 >>>>>>> main
 
 }
+>>>>>>> main
+>>>>>>> main

@@ -1,4 +1,42 @@
 <<<<<<< HEAD
+import SEOHead from '../components/SEOHead';";"
+const GdprPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead= title ="gdpr - Zion Tech Group - Zion Tech Group"";"
+        description="Zion Tech Group gdpr service page"";"
+      />
+      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div  className ="text-center">";"
+          <h1  className ="text-4xl font-bold mb-4">gdpr - Zion Tech Group</h1>";"
+          <p  className ="text-gray-300">Coming soon...</p>";"
+        </div>
+      </div>
+    </>
+  )
+}
+export default GdprPage
+=======
+<<<<<<< HEAD
+import SEOHead from '../components/SEOHead";
+const PagePage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
+        title="page - Zion Tech Group"
+        description="Zion Tech Group page service page"
+const GdprPage: React.FC = () => {";";
+  return (";";";
+    <>";";";";
+      <SEOHead title ="gdpr - Zion Tech Group - Zion Tech Group"";"
+        description="Zion Tech Group gdpr service page"";";";";
+      />"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">gdpr - Zion Tech Group</$1>"
+          <p className ="text-gray-300">Coming soon...</$1>
+=======
+<<<<<<< HEAD
 import React from 'react;'";
 import { Helmet } from 'react-helmet-async;'";
 'use client;''";
@@ -74,16 +112,15 @@ const GdprPage: React.FC = () => {
         <div: className ="text-center">";";
           <h1: className ="text-4xl font-bold mb-4">gdpr - Zion Tech Group</h1>";";
           <p: className ="text-gray-300">Coming soon...</p>";";
+>>>>>>> main
         </div>
       </div>
     </>
-
-  )
-    },
-    {}
-export default PagePage;
-
   ),
-};
-
+    },
+    {};
+export default PagePage;";
+  ),";";
+};";";";
+"
 >>>>>>> main

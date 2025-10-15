@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 // Fixed regex
  * Enhanced Performance Optimizer
  * Implements advanced performance optimizations for the Zion Tech Group website
@@ -60,6 +62,7 @@ const: _path = require('_path''''''";
 )
     return totalSavings + 'KB'')''))))))))))))))))))))))))))))'''";
 =======
+>>>>>>> main
 // Fixed regex;
  * Enhanced Performance Optimizer;
  * Implements advanced performance optimizations for the Zion Tech Group website;

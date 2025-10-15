@@ -1,10 +1,24 @@
-import { useEffect, useCallback, useRef };; from 'react';";";";";";";";
-
+<<<<<<< HEAD
+import { useEffect, useCallback, useRef };; from 'react';";"
 interface UsePerformanceOptimizationOptions {
   // Add your options here
 }
 
-  };
-};
+  }
+}
+export default UsePerformanceOptimization
+=======
+<<<<<<< HEAD
+import { useEffect, useCallback, useRef }; from 'react';";";";";";
+=======
+import { useEffect, useCallback, useRef };; from 'react';";";";";";";";
 
-export default UsePerformanceOptimization;
+>>>>>>> main
+interface UsePerformanceOptimizationOptions {
+  // Add your options here
+};
+  };";
+};";";
+export default UsePerformanceOptimization;";";";
+"
+>>>>>>> main

@@ -1,4 +1,27 @@
 <<<<<<< HEAD
+import SEOHead from '../components/SEOHead'
+=======
+<<<<<<< HEAD
+import SEOHead from '../components/SEOHead";
+const CloudSolutionsPage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
+        title="CloudSolutionsPage - Zion Tech Group"
+        description="Zion Tech Group CloudSolutionsPage page"
+const CloudSolutionsPage: React.FC = () => {";
+  ";";
+  return (";";";
+    <>";";";";
+      <SEOHead title ="CloudSolutionsPage - Zion Tech Group - Zion Tech Group"";"
+        description="Zion Tech Group CloudSolutionsPage page"";";";";
+      />"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">CloudSolutionsPage - Zion Tech Group</$1>"
+          <p className ="text-gray-300">Coming soon...</$1>
+=======
+<<<<<<< HEAD
 import React from 'react;;''";
 import { Link } from 'react-router-dom;;''";
 import SEO from '../components/SEO;''";
@@ -67,10 +90,20 @@ const CloudSolutionsPage: React.FC = () => {
 =======
 import SEOHead from '../components/SEOHead';";
 
+>>>>>>> main
 const CloudSolutionsPage: React.FC = () => {}
   return ()
     <>{}</>
       <SEOHead>
+<<<<<<< HEAD
+        title="CloudSolutionsPage - Zion Tech Group""
+        description="Zion Tech Group CloudSolutionsPage page""
+      />
+      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
+        <div  className ="text-center">"
+          <h1  className ="text-4xl font-bold mb-4">CloudSolutionsPage - Zion Tech Group</h1>"
+          <p  className ="text-gray-300">Coming soon...</p>"
+=======
         title="CloudSolutionsPage - Zion Tech Group"";
 
         description="Zion Tech Group CloudSolutionsPage page"";
@@ -86,13 +119,26 @@ const CloudSolutionsPage: React.FC = () => {
         <div: className ="text-center">";";
           <h1: className ="text-4xl font-bold mb-4">CloudSolutionsPage - Zion Tech Group</h1>";";
           <p: className ="text-gray-300">Coming soon...</p>";";
+>>>>>>> main
+>>>>>>> main
         </div>
       </div>
-    </>
+    </>,
   ),
-};
+<<<<<<< HEAD
+}
+export default CloudSolutionsPage
+=======
 
+<<<<<<< HEAD
+};";
+";";
+export default CloudSolutionsPage;";";";
+"
+=======
 export default CloudSolutionsPage;
 >>>>>>> main
 
 }
+>>>>>>> main
+>>>>>>> main
