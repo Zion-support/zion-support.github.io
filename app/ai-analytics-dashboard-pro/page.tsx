@@ -1,6 +1,53 @@
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, BarChart3, Brain, CheckCircle, Globe, Mail, Phone, Play, Shield, Star, Target, Zap } from 'lucide-react'; const AiAnalyticsDashboardProPage = () => { const [isVisible, setIsVisible] = useState(false); // const [activeTab, setActiveTab] = useState('overview'); useEffect(() => { setIsVisible(true); }, []); const features = [ { icon: <BarChart3 className="w-6 h-6" />, title: "Real-time Analytics", description: "Monitor your business metrics in real-time with live data streaming and instant updates.", benefits: ["Live data updates", "Instant insights", "Real-time alerts", "Performance monitoring"] }, { icon: <Brain className="w-6 h-6" />, title: "AI-Powered Insights", description: "Leverage machine learning algorithms to uncover hidden patterns and predict future trends.", benefits: ["Predictive analytics", "Pattern recognition", "Anomaly detection", "Smart recommendations"] }, { icon: <Target className="w-6 h-6" />, title: "Custom Dashboards", description: "Create personalized dashboards tailored to your specific business needs and KPIs.", benefits: ["Drag-and-drop builder", "Custom widgets", "Role-based views", "Mobile optimization"] }, { icon: <Globe className="w-6 h-6" />, title: "Multi-Data Source Integration", description: "Connect and analyze data from multiple sources including databases, APIs, and cloud services.", benefits: ["100+ integrations", "Data transformation", "ETL pipelines", "API management"] }, { icon: <Shield className="w-6 h-6" />, title: "Enterprise Security", description: "Bank-level security with encryption, access controls, and compliance management.", benefits: ["End-to-end encryption", "Role-based access", "Audit logs", "GDPR compliance"] }, { icon: <Zap className="w-6 h-6" />, title: "Automated Reporting", description: "Generate and distribute reports automatically with scheduled delivery and custom formats.", benefits: ["Scheduled reports", "Email delivery", "PDF/Excel export", "Custom templates"] } ];
+import { ArrowRight, BarChart3, Brain, CheckCircle, Globe, Mail, Phone, Play, Shield, Star, Target, Zap } from 'lucide-react';
+
+const AiAnalyticsDashboardProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  // const [activeTab, setActiveTab] = useState('overview');
+  
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const features = [
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Real-time Analytics",
+      description: "Monitor your business metrics in real-time with live data streaming and instant updates.",
+      benefits: ["Live data updates", "Instant insights", "Real-time alerts", "Performance monitoring"]
+    },
+    {
+      icon: <Brain className="w-6 h-6" />,
+      title: "AI-Powered Insights",
+      description: "Leverage machine learning algorithms to uncover hidden patterns and predict future trends.",
+      benefits: ["Predictive analytics", "Pattern recognition", "Anomaly detection", "Smart recommendations"]
+    },
+    {
+      icon: <Target className="w-6 h-6" />,
+      title: "Custom Dashboards",
+      description: "Create personalized dashboards tailored to your specific business needs and KPIs.",
+      benefits: ["Drag-and-drop builder", "Custom widgets", "Role-based views", "Mobile optimization"]
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      title: "Multi-Data Source Integration",
+      description: "Connect and analyze data from multiple sources including databases, APIs, and cloud services.",
+      benefits: ["100+ integrations", "Data transformation", "ETL pipelines", "API management"]
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Enterprise Security",
+      description: "Bank-level security with encryption, access controls, and compliance management.",
+      benefits: ["End-to-end encryption", "Role-based access", "Audit logs", "GDPR compliance"]
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: "Automated Reporting",
+      description: "Generate and distribute reports automatically with scheduled delivery and custom formats.",
+      benefits: ["Scheduled reports", "Email delivery", "PDF/Excel export", "Custom templates"]
+    }
+  ];
   const pricingPlans = [
     { name: "Starter",
       price: "$299",
@@ -64,7 +111,7 @@ import { ArrowRight, BarChart3, Brain, CheckCircle, Globe, Mail, Phone, Play, Sh
       rating: 5 }
   ];
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       <Helmet>
         <title>AI Analytics Dashboard Pro - Advanced Business Intelligence | Zion Tech Group</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time analytics, predictive modeling, and custom dashboards for businesses of all sizes." />
@@ -74,7 +121,6 @@ import { ArrowRight, BarChart3, Brain, CheckCircle, Globe, Mail, Phone, Play, Sh
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-analytics-dashboard-pro" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -83,12 +129,13 @@ import { ArrowRight, BarChart3, Brain, CheckCircle, Globe, Mail, Phone, Play, Sh
         </div>
         { /* Grid Pattern */ }
         <div className="absolute inset-0 opacity-20">
-          <div className="h-full w-full" style={ {
+          <div className="h-full w-full" style={{
             backgroundImage: `
               linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
-            backgroundSize: '50px 50px' }}></div>
+            backgroundSize: '50px 50px'
+          }}></div>
         </div>
         <main className="relative z-10">
           { /* Hero Section */ }
@@ -289,8 +336,7 @@ import { ArrowRight, BarChart3, Brain, CheckCircle, Globe, Mail, Phone, Play, Sh
             </div>
           </section>
         </main>
-      </div>
-    </>
+    </div>
   );
 };
 export default AiAnalyticsDashboardProPage;

@@ -1,10 +1,142 @@
-import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, Award, Award as AwardIcon, AwardIcon, Book, BookOpen, Brain, Briefcase, CheckCircle, Download, Download as DownloadIcon, DownloadIcon, GraduationCap, Mail, Monitor, Phone, Play, Shield, Star, Target, Target as TargetIcon, TargetIcon, Users, Users as UsersIcon, UsersIcon } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { ArrowRight, CheckCircle, Mail, Phone, Play, Star } from 'lucide-react';
 
 const AIEducationSolutionsProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const features = [
+    {
+      icon: <CheckCircle className="w-6 h-6" />,
+      title: "AI-Powered Learning",
+      description: "Personalized learning paths powered by advanced AI algorithms that adapt to each student's pace and learning style.",
+      benefits: ["Adaptive curriculum", "Real-time feedback", "Performance tracking", "Personalized recommendations"]
+    },
+    {
+      icon: <Star className="w-6 h-6" />,
+      title: "Interactive Content",
+      description: "Engaging multimedia content including videos, simulations, and interactive exercises to enhance learning.",
+      benefits: ["Video lessons", "Interactive simulations", "Gamified learning", "Progress tracking"]
+    },
+    {
+      icon: <CheckCircle className="w-6 h-6" />,
+      title: "Assessment Tools",
+      description: "Comprehensive assessment tools with AI-powered grading and detailed performance analytics.",
+      benefits: ["Automated grading", "Detailed analytics", "Progress reports", "Skill assessment"]
+    }
+  ];
+
+  const subjects = [
+    { icon: "📚", name: "Mathematics", description: "Algebra, Geometry, Calculus" },
+    { icon: "🔬", name: "Science", description: "Physics, Chemistry, Biology" },
+    { icon: "📝", name: "Language Arts", description: "Reading, Writing, Literature" },
+    { icon: "🏛️", name: "History", description: "World History, Geography" },
+    { icon: "💻", name: "Computer Science", description: "Programming, Algorithms" },
+    { icon: "🎨", name: "Art", description: "Visual Arts, Design" },
+    { icon: "🎵", name: "Music", description: "Theory, Performance" },
+    { icon: "🏃", name: "Physical Education", description: "Fitness, Sports" }
+  ];
+
+  const useCases = [
+    {
+      icon: "🎓",
+      title: "K-12 Education",
+      description: "Comprehensive AI-powered learning platform for primary and secondary education.",
+      benefits: ["Curriculum alignment", "Progress tracking", "Parent dashboard", "Teacher tools"]
+    },
+    {
+      icon: "🏫",
+      title: "Higher Education",
+      description: "Advanced learning management system for universities and colleges.",
+      benefits: ["Course management", "Student analytics", "Assignment grading", "Discussion forums"]
+    },
+    {
+      icon: "🏢",
+      title: "Corporate Training",
+      description: "Professional development and skills training for organizations.",
+      benefits: ["Skill assessment", "Learning paths", "Certification tracking", "Team management"]
+    },
+    {
+      icon: "💻",
+      title: "Online Learning",
+      description: "Scalable platform for online courses and distance learning.",
+      benefits: ["Video streaming", "Interactive content", "Live sessions", "Mobile learning"]
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$99",
+      period: "month",
+      description: "Perfect for small schools and individual educators",
+      features: [
+        "Up to 100 students",
+        "Basic AI features",
+        "Standard support",
+        "5GB storage"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$299",
+      period: "month",
+      description: "Ideal for growing educational institutions",
+      features: [
+        "Up to 500 students",
+        "Advanced AI features",
+        "Priority support",
+        "50GB storage",
+        "Custom branding"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$599",
+      period: "month",
+      description: "Complete solution for large educational organizations",
+      features: [
+        "Unlimited students",
+        "Full AI suite",
+        "24/7 support",
+        "Unlimited storage",
+        "White-label solution"
+      ],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Dr. Sarah Johnson",
+      role: "Principal",
+      company: "Lincoln Elementary",
+      content: "The AI-powered learning platform has transformed how our students learn. Engagement is up 40% and test scores have improved significantly.",
+      rating: 5
+    },
+    {
+      name: "Prof. Michael Chen",
+      role: "Computer Science Department",
+      company: "Stanford University",
+      content: "The adaptive learning algorithms are incredibly sophisticated. Students are mastering complex concepts faster than ever before.",
+      rating: 5
+    },
+    {
+      name: "Lisa Rodriguez",
+      role: "Training Director",
+      company: "TechCorp",
+      content: "Our employee training efficiency has increased by 60% since implementing this platform. The personalized learning paths are game-changing.",
+      rating: 5
+    }
+  ];
+
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -13,12 +145,13 @@ const AIEducationSolutionsProPage = () => {
         </div>
         { /* Grid Pattern */ }
         <div className="absolute inset-0 opacity-20">
-          <div className="h-full w-full" style={ {
+          <div className="h-full w-full" style={{
             backgroundImage: `
               linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
-            backgroundSize: '50px 50px' }}></div>
+            backgroundSize: '50px 50px'
+          }}></div>
         </div>
         <main className="relative z-10">
           { /* Hero Section */ }
@@ -281,8 +414,7 @@ const AIEducationSolutionsProPage = () => {
             </div>
           </section>
         </main>
-      </div>
-    </>
+    </div>
   );
 };
-export default AiEducationSolutionsProPage;
+export default AIEducationSolutionsProPage;

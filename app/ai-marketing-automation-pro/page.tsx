@@ -4,7 +4,7 @@ import { ArrowRight, Brain, Briefcase, CheckCircle, FileText, Mail, Mail as Mail
 
 const AIMarketingAutomationProPage = () => {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -13,12 +13,13 @@ const AIMarketingAutomationProPage = () => {
         </div>
         { /* Grid Pattern */ }
         <div className="absolute inset-0 opacity-20">
-          <div className="h-full w-full" style={ {
+          <div className="h-full w-full" style={{
             backgroundImage: `
               linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
-            backgroundSize: '50px 50px' }}></div>
+            backgroundSize: '50px 50px'
+          }}></div>
         </div>
         <main className="relative z-10">
           { /* Hero Section */ }
@@ -283,8 +284,7 @@ const AIMarketingAutomationProPage = () => {
             </div>
           </section>
         </main>
-      </div>
-    </>
+    </div>
   );
 };
 export default AiMarketingAutomationProPage;
