@@ -39,7 +39,7 @@ export interface ContactFormData {
 export interface AnalyticsEvent {
   name: string;
   timestamp: number;
-  properties?: Record<string, any>;
+  properties?: Record<string, string | number | boolean | null>;
 }
 
 export interface PerformanceMetrics {

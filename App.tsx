@@ -115,7 +115,17 @@ function App() {
       fontPreload.rel = 'preload';
       fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
       fontPreload.as = 'style';
+      fontPreload.crossOrigin = 'anonymous';
       document.head.appendChild(fontPreload);
+
+      // Preload critical pages
+      const criticalPages = ['/about', '/contact', '/services'];
+      criticalPages.forEach(page => {
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = page;
+        document.head.appendChild(link);
+      });
     };
 
     preloadCriticalResources();
@@ -135,7 +145,8 @@ function App() {
                 <SEOOptimizer />
                 
                 <Suspense fallback={<LoadingFallback />}>
-                  <Routes>
+                  <ErrorBoundary>
+                    <Routes>
                     {/* Main Pages */}
                     <Route path="/" element={<HomePage />} />
                     <Route path="/about" element={<AboutPage />} />
@@ -203,7 +214,8 @@ function App() {
                         <a href="/" className="text-blue-600 hover:text-blue-800">Go back home</a>
                       </div>
                     </div>} />
-                  </Routes>
+                    </Routes>
+                  </ErrorBoundary>
                 </Suspense>
               </ErrorBoundary>
             </main>
