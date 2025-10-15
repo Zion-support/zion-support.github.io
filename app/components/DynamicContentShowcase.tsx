@@ -20,12 +20,17 @@ interface DynamicContentShowcaseProps {
 const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
   items = [
     {
-      id: "1", title: "AI-Powered Solutions", _description:
-        "Transform your business with cutting-edge artificial intelligence technology.", _image: "/api/placeholder/400/300", _category: "AI Solutions", _featured: true, _}, _{
-      id: "2", _title: "Cloud Migration", _description:
-        "Seamlessly migrate your infrastructure to the cloud with our expert services.", _image: "/api/placeholder/400/300", _category: "Cloud Services", _}, _{
-      id: "3", _title: "Data Analytics", _description:
-        "Unlock insights from your data with advanced analytics and visualization.", _image: "/api/placeholder/400/300", _category: "Data Services", _}, _], autoPlay = true, interval = 5000, className = "", _}) => {
+      id: "1", title: "AI-Powered Solutions", description:
+        "Transform your business with cutting-edge artificial intelligence technology.", image: "/api/placeholder/400/300", category: "AI Solutions", featured: true
+    }, {
+      id: "2", title: "Cloud Migration", description:
+        "Seamlessly migrate your infrastructure to the cloud with our expert services.", image: "/api/placeholder/400/300", category: "Cloud Services"
+    }, {
+      id: "3", title: "Data Analytics", description:
+        "Unlock insights from your data with advanced analytics and visualization.", image: "/api/placeholder/400/300", category: "Data Services"
+    }
+  ], autoPlay = true, interval = 5000, className = ""
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
 
@@ -40,19 +45,18 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
   }, [isPlaying, interval, items.length]);
 
   const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length,
-    );
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
   };
 
   const goToNext = () => {
-    setCurrentIndex(prevIndex) => (prevIndex + 1) % items.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
   };
 
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
 
-  const goToSlide = (_index: number) => {
+  const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
 

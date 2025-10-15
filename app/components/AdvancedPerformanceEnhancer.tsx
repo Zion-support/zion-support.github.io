@@ -151,7 +151,7 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   }, []);
 
   // Performance monitoring
-  const setupPerformanceMonitoring = useCallback() => {
+  const setupPerformanceMonitoring = useCallback(() => {
     // Monitor Core Web Vitals
     import('web-vitals').then(({ onCLS, onINP, onFCP, _onLCP, _onTTFB }) => {
       onCLS((metric: any) => {

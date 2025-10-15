@@ -97,9 +97,9 @@ export default function EnhancedPerformanceOptimizer() {
     });
   }, []);
 
-  const setupPerformanceMonitoring = useCallback() => {
+  const setupPerformanceMonitoring = useCallback(() => {
     // Monitor Core Web Vitals
-    import("web-vitals").then(({ onCLS, onINP, onFCP, _onLCP, _onTTFB }) => {
+    import("web-vitals").then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
       onCLS((metric: any) => {
         logger.info("CLS:", metric.value);
       });
@@ -161,7 +161,7 @@ export default function EnhancedPerformanceOptimizer() {
     }
   }, []);
 
-  useEffect() => {
+  useEffect(() => {
     // Run optimizations after DOM is ready
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", () => {

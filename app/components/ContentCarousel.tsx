@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Slide {
@@ -64,12 +64,12 @@ export default function ContentCarousel({
     return () => clearInterval(timer);
   }, [autoPlay, interval, slides.length]);
 
-  const goToSlide = (_index: number) => {
+  const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
 
   const goToPrevious = () => {
-    setCurrentSlide(prev) => (prev - 1 + slides.length) % slides.length);
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
   const goToNext = () => {

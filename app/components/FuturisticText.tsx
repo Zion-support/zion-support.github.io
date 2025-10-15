@@ -9,7 +9,7 @@ interface FuturisticTextProps {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div';
 }
 
-const FuturisticText = (_{ 
+const FuturisticText = ({ 
   text, delay = 0, speed = 100, className, as: Component = 'span'
 }: FuturisticTextProps) => {
   const [displayedText, setDisplayedText] = useState('');

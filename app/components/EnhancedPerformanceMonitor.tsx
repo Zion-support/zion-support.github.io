@@ -22,7 +22,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [isVisible, setIsVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect() => {
+  useEffect(() => {
     if (typeof window === 'undefined') return;
 
     const measurePerformance = async () => {
@@ -118,13 +118,13 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return null;
   }
 
-  const getScoreColor = (_value: number, thresholds: { good: number; needsImprovement: number }) => {
+  const getScoreColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {
     if (value <= thresholds.good) return 'text-green-500';
     if (value <= thresholds.needsImprovement) return 'text-yellow-500';
     return 'text-red-500';
   };
 
-  const getScoreText = (_value: number, thresholds: { good: number; needsImprovement: number }) => {
+  const getScoreText = (value: number, thresholds: { good: number; needsImprovement: number }) => {
     if (value <= thresholds.good) return 'Good';
     if (value <= thresholds.needsImprovement) return 'Needs Improvement';
     return 'Poor';

@@ -3,9 +3,9 @@
 import React, { createContext, useContext, useEffect } from "react";
 
 interface AnalyticsContextType {
-  track: (_event: string, properties?: Record<string, _unknown>) => void;
-  identify: (_userId: string, traits?: Record<string, _unknown>) => void;
-  page: (_name: string, properties?: Record<string, _unknown>) => void;
+  track: (event: string, properties?: Record<string, unknown>) => void;
+  identify: (userId: string, traits?: Record<string, unknown>) => void;
+  page: (name: string, properties?: Record<string, unknown>) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
@@ -25,7 +25,8 @@ interface AnalyticsProviderProps {
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children, }) => {
+  children
+}) => {
   useEffect(() => {
     // Initialize analytics
     if (typeof window !== "undefined") {
@@ -47,11 +48,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     }
   }, []);
 
-  const track = (_event: string, properties?: Record<string, _unknown>) => {
+  const track = (event: string, properties?: Record<string, unknown>) => {
     if (typeof window !== "undefined") {
       // Google Analytics
       if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
+        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
           "event",
           event,
           properties,
@@ -59,14 +60,14 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
 
       // Custom analytics
-      }
+    }
   };
 
-  const identify = (_userId: string, traits?: Record<string, _unknown>) => {
+  const identify = (userId: string, traits?: Record<string, unknown>) => {
     if (typeof window !== "undefined") {
       // Google Analytics
       if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
+        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
           "config",
           process.env.REACT_APP_GA_ID,
           {
@@ -77,14 +78,14 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
 
       // Custom analytics
-      }
+    }
   };
 
-  const page = (_name: string, properties?: Record<string, _unknown>) => {
+  const page = (name: string, properties?: Record<string, unknown>) => {
     if (typeof window !== "undefined") {
       // Google Analytics
       if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
+        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
           "event",
           "page_view",
           {
@@ -96,7 +97,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
 
       // Custom analytics
-      }
+    }
   };
 
   const value: AnalyticsContextType = {
@@ -116,6 +117,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 declare global {
   interface Window {
     dataLayer: unknown[];
-    gtag: (_...args: unknown[]) => void;
+    gtag: (...args: unknown[]) => void;
   }
 }

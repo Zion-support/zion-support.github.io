@@ -1,9 +1,13 @@
+import React, { useState } from 'react';
 import { ArrowRight } from "lucide-react";
-
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-  const toggleItem = (_index: number) => {
+const FaqPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [openItems, setOpenItems] = useState<number[]>([]);
+
+  const toggleItem = (index: number) => {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(item => item !== index)
@@ -110,13 +114,14 @@ const faqData = [
     }
   ];
 
-const filteredData = faqData.map(category => ({
+  const filteredData = faqData.map(category => ({
     ...category,
     questions: category.questions.filter(q => 
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     )
   })).filter(category => category.questions.length > 0);
+
   return (
     <>
       <Helmet>
@@ -139,4 +144,6 @@ const filteredData = faqData.map(category => ({
       </div>
     </>
   );
-}
+};
+
+export default FaqPage;

@@ -21,7 +21,6 @@ import NeonButton from '../components/NeonButton';
 import AnimatedCard from '../components/AnimatedCard';
 import { services } from '../data/servicesData';
 
-export default function HomePage() {
 const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Book, Code, Shield, Zap, Search, ChevronDown, ChevronRight, ExternalLink } from 'lucide-react';const DocsPage: React.FC = () => {
+import { Book, Code, Shield, Zap, Search, ChevronDown, ChevronRight, ExternalLink } from 'lucide-react';
+
+const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
@@ -66,14 +68,14 @@ import { Book, Code, Shield, Zap, Search, ChevronDown, ChevronRight, ExternalLin
     { title: 'Computer Vision Tutorial', category: 'AI Services', readTime: '12 min', views: '4.7k' }
   ];
 
-  const filteredSections = documentationSections.map((section => ({
+  const filteredSections = documentationSections.map((section) => ({
     ...section, articles: section.articles?.filter((article: { title: string; description: string }) =>
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.description.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
   })).filter(section => section.articles?.length > 0);
 
-export default function DocsZionTechGroup() {
+export default function DocsPage() {
   return (<>
       <Helmet>
         <title>Docs - Zion Tech Group</title>
