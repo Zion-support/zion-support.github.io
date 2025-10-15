@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface SearchModalProps {};
   children?: React.ReactNode
@@ -15,4 +16,4 @@ const SearchModal: React.FC<SearchModalProps> = ({};
     </div>
   )
 };
-export default SearchModal
+export default SearchModal`

@@ -18,7 +18,7 @@ const DocsPage: React.FC = () => {";"
         { title: 'Account Setup', description: 'Create and configure your account', readTime: '3 min' },";"
         { title: 'First Project', description: 'Create your first AI project', readTime: '10 min' },";"
         { title: 'API Keys', description: 'Generate and manage your API keys', readTime: '2 min' };
-      ]
+      ];
     },";"
     {";"
       id: 'ai-services',";"
@@ -74,7 +74,7 @@ const DocsPage: React.FC = () => {";"
       article.description.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
   })).filter(section => section.articles?.length > 0);
-;
+ {
   return (";"
     <>";"
       <Helmet>";"

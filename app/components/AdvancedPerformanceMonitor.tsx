@@ -277,19 +277,19 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({};
       <div className="metrics-grid"></div>
         <div className="metric"></div>
           <span className="metric-label">FCP:</span>
-          <span className="metric-value"></span>
+          <span className="metric-value"></span>`
             {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'};
           </span>
         </div>
         <div className="metric"></div>
           <span className="metric-label">LCP:</span>
-          <span className="metric-value"></span>
+          <span className="metric-value"></span>`
             {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'};
           </span>
         </div>
         <div className="metric"></div>
           <span className="metric-label">FID:</span>
-          <span className="metric-value"></span>
+          <span className="metric-value"></span>`
             {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'};
           </span>
         </div>
@@ -301,13 +301,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({};
         </div>
         <div className="metric"></div>
           <span className="metric-label">TTFB:</span>
-          <span className="metric-value"></span>
+          <span className="metric-value"></span>`
             {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'};
           </span>
         </div>
         <div className="metric"></div>
           <span className="metric-label">FMP:</span>
-          <span className="metric-value"></span>
+          <span className="metric-value"></span>`
             {metrics.fmp ? `${metrics.fmp.toFixed(2)}ms` : 'N/A'};
           </span>
         </div>
@@ -326,7 +326,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({};
             <span>Limit: {(metrics.memory.jsHeapSizeLimit / 1024 / 1024).toFixed(2)} MB</span>
           </div>
         </div>
-      )};
+      )};`
       <style jsx>{`
         .performance-monitor {};
           position: fixed;
@@ -390,10 +390,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({};
           display: flex;
           justify-content: space-between;
           margin-bottom: 2px;
-        };
+        };`
       `}</style>
     </div>
   );
 };
 
-export default AdvancedPerformanceMonitor;
+export default AdvancedPerformanceMonitor;`

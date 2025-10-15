@@ -1,11 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Heart, ArrowRight } from 'lucide-react';
-=======
-import SEOHead from '../components/SEOHead';
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9
+
 
 const AiCustomerSentimentTrackerPage: React.FC = () => {
   return (

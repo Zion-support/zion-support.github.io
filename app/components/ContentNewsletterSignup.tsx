@@ -39,7 +39,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({};
       </div>
     )
   };
-  return (<div
+  return (<div`
       className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`};
     ></div
 >
@@ -76,4 +76,4 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({};
     </div>
   )
 };
-export default ContentNewsletterSignup
+export default ContentNewsletterSignup`

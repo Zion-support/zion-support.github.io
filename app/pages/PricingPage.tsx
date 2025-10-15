@@ -303,12 +303,12 @@ const PricingPage: React.FC = () => {";"
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')};
                 className="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2";
               >";"
-                <span";"
+                <span";"`
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${";"
-                    billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1';
+                    billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1';`
                   }`};
                 />";"
-              </button>";"
+              </button>";"`
               <span className={`ml-3 ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>";"
                 Yearly";"
                 <span className="ml-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">";"
@@ -326,11 +326,11 @@ const PricingPage: React.FC = () => {";"
             {categories.map((category) => (";"
               <button";"
                 key={category.id};
-                onClick={() => setSelectedCategory(category.id)};
+                onClick={() => setSelectedCategory(category.id)};`
                 className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${";"
                   selectedCategory === category.id";"
                     ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white shadow-lg';
-                    : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white';
+                    : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white';`
                 }`};
               >";"
                 {category.icon};
@@ -344,9 +344,9 @@ const PricingPage: React.FC = () => {";"
       <section className="py-20 bg-slate-900">";"
         <div className="container mx-auto px-4">";"
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">";"
-            {filteredPricing.map((service) => (";"
+            {filteredPricing.map((service) => (";"`
               <div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10 group relative ${";"
-                service.popular ? 'ring-2 ring-purple-500' : '';
+                service.popular ? 'ring-2 ring-purple-500' : '';`
               }`}>";"
                 {service.popular && (";"
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">";"
@@ -392,7 +392,7 @@ const PricingPage: React.FC = () => {";"
                   >";"
                     Get Started";"
                   </Link>";"
-                  <Link";"
+                  <Link";"`
                     to={`/${service.name.toLowerCase().replace(/\s+/g, '-')}`};
                     className="block w-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white text-center py-3 rounded-lg font-semibold transition-all duration-300";
                   >";"
@@ -557,4 +557,4 @@ const PricingPage: React.FC = () => {";"
 };
 ;
 export default PricingPage;
-;
+;`

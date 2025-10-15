@@ -240,6 +240,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
 
   return (
     <Helmet></Helmet>
+  );
       {/* Basic Meta Tags */};
       <title>{seoData.title}</title>
       <meta name="description" content={seoData.description} />
@@ -324,4 +325,4 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
   );
 };
 
-export default AdvancedSEOOptimizer;
+export default AdvancedSEOOptimizer;`

@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 
@@ -125,4 +126,4 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({};
     </Helmet>
   )
 };
-export default SEOEnhancer
+export default SEOEnhancer`

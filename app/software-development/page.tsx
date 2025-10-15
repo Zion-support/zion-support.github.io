@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarChart3, Shield, Zap, Cpu } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -47,7 +48,7 @@ const SoftwareDevelopmentPage = () => {";"
       icon: <Cpu className="w-8 h-8" />,";"
       features: ["Code refactoring", "Database migration", "UI/UX updates", "Performance optimization"],";"
       price: "From $30,000";
-    };
+};
   ];
 ;
   const technologies = [";"
@@ -83,7 +84,7 @@ const SoftwareDevelopmentPage = () => {";"
       step: "5",";"
       title: "Deployment",";"
       description: "Deploy to production with monitoring and support";
-    };
+};
   ];
 ;
   const benefits = [";"
@@ -108,7 +109,7 @@ const SoftwareDevelopmentPage = () => {";"
       icon: <Shield className="w-6 h-6" />";"
     };
   ];
-;
+ {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";"
       <EnhancedSEO";"
         title="Software Development Services - Zion Tech Group | Custom Web & Mobile Apps";

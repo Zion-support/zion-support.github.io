@@ -63,9 +63,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({};
       ) : ()
         <img
           src={imageSrc};
-          alt={alt};
+          alt={alt};`
           className={`transition-opacity duration-300 ${};
-            isLoaded ? 'opacity-100' : 'opacity-0'
+            isLoaded ? 'opacity-100' : 'opacity-0'`
           }`};
           onLoad={handleLoad};
           onError={handleError};
@@ -76,4 +76,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({};
     </div>
   )
 };
-export default OptimizedImage
+export default OptimizedImage`

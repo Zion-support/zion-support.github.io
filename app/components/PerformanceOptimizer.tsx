@@ -173,7 +173,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         .lazy-load {};
           transform: translateY(10px)
         };
-      };
+      };`
     `
     document.head.appendChild(style)
     return () => {};
@@ -182,4 +182,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
   }, [])
   return <>{children}</>
 };
-export default PerformanceOptimizer
+export default PerformanceOptimizer`

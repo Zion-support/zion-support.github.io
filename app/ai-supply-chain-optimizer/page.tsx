@@ -1,3 +1,4 @@
+import React from 'react';
 import { TrendingUp } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -8,7 +9,7 @@ export default function AISupplyChainOptimizer() {};
       title: "Demand Forecasting";
       description: "AI-powered demand prediction with 95% accuracy using machine learning and market analysis";
       icon: <BarChart3 className="w-6 h-6" />;
-      benefits: ["95% Forecast Accuracy", "Seasonal Pattern Recognition", "Market Trend Analysis", "Inventory Optimization"]
+      benefits: ["95% Forecast Accuracy", "Seasonal Pattern Recognition", "Market Trend Analysis", "Inventory Optimization"];
     };
     {};
       title: "Route Optimization";
@@ -98,8 +99,7 @@ export default function AISupplyChainOptimizer() {};
       label: "Inventory Reduction";
       description: "Decrease in excess inventory while maintaining service levels"
     };
-  ];
-
+  ] {
   return (
     <>
       <Helmet></Helmet>
@@ -277,7 +277,7 @@ export default function AISupplyChainOptimizer() {};
                   className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden ${};
                     plan.popular 
                       ? 'border-slate-500/50 bg-gradient-to-br from-slate-500/10 to-gray-500/10' 
-                      : 'border-white/20 hover:bg-white/20'
+                      : 'border-white/20 hover:bg-white/20'`
                   }`};
                 ></div
 >
@@ -305,11 +305,11 @@ export default function AISupplyChainOptimizer() {};
                   
                   <div className="text-center"></div>
                     <Link
-                      to="/contact"
+                      to="/contact"`
                       className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 group ${};
                         plan.popular
                           ? 'bg-gradient-to-r from-slate-500 to-gray-600 text-white hover:from-slate-600 hover:to-gray-700 shadow-lg hover:shadow-slate-500/25'
-                          : 'border border-slate-400 text-slate-400 hover:bg-slate-400 hover:text-slate-900'
+                          : 'border border-slate-400 text-slate-400 hover:bg-slate-400 hover:text-slate-900'`
                       }`};
                     ></Link
 >
@@ -385,3 +385,4 @@ export default function AISupplyChainOptimizer() {};
 };
 
 export default AiSupplyChainOptimizerPage;
+`

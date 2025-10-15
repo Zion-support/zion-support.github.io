@@ -20,13 +20,13 @@ export default function Consultation() {};
       ...prev;
       [name]: value
     }));
-  };
+};
 
   const handleSubmit = (e: React.FormEvent) => {};
     e.preventDefault();
     // Handle form submission
     console.log('Form submitted:', formData);
-  };
+};
 
   const services = [
     'AI Solutions';
@@ -65,8 +65,7 @@ export default function Consultation() {};
       description: "Your information is protected and confidential";
       icon: <Shield className="w-8 h-8" />
     };
-  ];
-
+  ] {
   return (
     <>
       <Helmet></Helmet>

@@ -1,3 +1,4 @@
+import React from 'react';
 import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, MessageSquare, Phone, Mail, TrendingUp, Globe, Clock, Play, Star, Zap, Star} from 'lucide-react';import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 ;
@@ -7,7 +8,7 @@ export default function ZionAiCrmPro() {";"
       title: "AI-Powered Lead Scoring",";"
       description: "Automatically score and prioritize leads using machine learning algorithms that analyze behavior patterns, engagement levels, and conversion probability.",";"
       icon: <Target className="w-6 h-6" />,";"
-      benefits: ["95% accuracy in lead scoring", "Real-time lead prioritization", "Behavioral pattern analysis", "Predictive conversion modeling"]
+      benefits: ["95% accuracy in lead scoring", "Real-time lead prioritization", "Behavioral pattern analysis", "Predictive conversion modeling"];
     },";"
     {";"
       title: "Intelligent Contact Management",";"
@@ -47,14 +48,14 @@ export default function ZionAiCrmPro() {";"
       price: "$199",";"
       period: "/month",";"
       description: "Perfect for small teams",";"
-      features: [";"
-        "Up to 1,000 contacts",";"
-        "Basic AI features",";"
-        "Email integration",";"
-        "Mobile app access",";"
-        "Email support",";"
-        "Basic reporting",";"
-        "5 users included";
+      features: [";",
+    "Up to 1,000 contacts",";",
+    "Basic AI features",";",
+    "Email integration",";",
+    "Mobile app access",";",
+    "Email support",";",
+    "Basic reporting",";",
+    "5 users included";
       ],";"
       popular: false";"
     },";"
@@ -63,15 +64,15 @@ export default function ZionAiCrmPro() {";"
       price: "$399",";"
       period: "/month",";"
       description: "Most popular for growing businesses",";"
-      features: [";"
-        "Up to 10,000 contacts",";"
-        "Advanced AI features",";"
-        "Full integrations",";"
-        "Priority support",";"
-        "Advanced analytics",";"
-        "Custom workflows",";"
-        "25 users included",";"
-        "API access";
+      features: [";",
+    "Up to 10,000 contacts",";",
+    "Advanced AI features",";",
+    "Full integrations",";",
+    "Priority support",";",
+    "Advanced analytics",";",
+    "Custom workflows",";",
+    "25 users included",";",
+    "API access";
       ],";"
       popular: true";"
     },";"
@@ -80,15 +81,15 @@ export default function ZionAiCrmPro() {";"
       price: "$799",";"
       period: "/month",";"
       description: "For large organizations",";"
-      features: [";"
-        "Unlimited contacts",";"
-        "AI-powered insights",";"
-        "Custom integrations",";"
-        "24/7 phone support",";"
-        "Advanced security",";"
-        "White-label options",";"
-        "Unlimited users",";"
-        "Dedicated account manager";
+      features: [";",
+    "Unlimited contacts",";",
+    "AI-powered insights",";",
+    "Custom integrations",";",
+    "24/7 phone support",";",
+    "Advanced security",";",
+    "White-label options",";",
+    "Unlimited users",";",
+    "Dedicated account manager";
       ],";"
       popular: false";"
     };
@@ -118,7 +119,7 @@ export default function ZionAiCrmPro() {";"
       content: "The AI assistant handles 80% of our customer inquiries automatically. Our response time improved from hours to minutes.",";"
       rating: 5,";"
       avatar: "MR";
-    };
+};
   ];
 ;
   const stats = [";"
@@ -290,7 +291,7 @@ const ZionAiCrmProPage: React.FC = () => {";"
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${";"
                     plan.popular";"
                       ? 'border-indigo-500/50 shadow-2xl shadow-indigo-500/25' ";"
-                      : 'border-white/20 hover:border-indigo-500/30';
+                      : 'border-white/20 hover:border-indigo-500/30';`
                   }`};
                 >";"
                   {plan.popular && (";"
@@ -318,11 +319,11 @@ const ZionAiCrmProPage: React.FC = () => {";"
                     ))};
                   </div>";"
                   <Link";"
-                    to="/contact";
+                    to="/contact";`
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${";"
                       plan.popular";"
                         ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700 shadow-lg hover:shadow-indigo-500/25';
-                        : 'border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-slate-900';
+                        : 'border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-slate-900';`
                     }`};
                   >";"
                     Get Started";"
@@ -428,4 +429,4 @@ const ZionAiCrmProPage: React.FC = () => {";"
 };
 ;
 export default ZionAiCrmProPage;
-;
+;`

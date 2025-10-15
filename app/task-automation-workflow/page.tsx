@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Zap, Workflow, BarChart3, CheckCircle, ArrowRight, Target, Users, Shield, Globe, Database, Smartphone } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -10,7 +11,7 @@ const TaskAutomationWorkflowPage = () => {";"
       title: "Visual Workflow Builder",";"
       description: "Create complex automation workflows with our intuitive drag-and-drop interface",";"
       icon: <Workflow className="w-8 h-8" />,";"
-      benefits: ["Drag & drop interface", "Pre-built templates", "Conditional logic", "Multi-step workflows"]
+      benefits: ["Drag & drop interface", "Pre-built templates", "Conditional logic", "Multi-step workflows"];
     },";"
     {";"
       title: "Task Automation",";"
@@ -50,12 +51,12 @@ const TaskAutomationWorkflowPage = () => {";"
       price: "$39",";"
       period: "per month",";"
       description: "Perfect for small teams and simple workflows",";"
-      features: [";"
-        "Up to 5 team members",";"
-        "Basic workflows",";"
-        "Standard integrations",";"
-        "Email support",";"
-        "Mobile app access";
+      features: [";",
+    "Up to 5 team members",";",
+    "Basic workflows",";",
+    "Standard integrations",";",
+    "Email support",";",
+    "Mobile app access";
       ],";"
       popular: false";"
     },";"
@@ -64,13 +65,13 @@ const TaskAutomationWorkflowPage = () => {";"
       price: "$99",";"
       period: "per month",";"
       description: "Ideal for growing businesses with complex needs",";"
-      features: [";"
-        "Up to 25 team members",";"
-        "Advanced workflows",";"
-        "Custom integrations",";"
-        "Priority support",";"
-        "Advanced analytics",";"
-        "API access";
+      features: [";",
+    "Up to 25 team members",";",
+    "Advanced workflows",";",
+    "Custom integrations",";",
+    "Priority support",";",
+    "Advanced analytics",";",
+    "API access";
       ],";"
       popular: true";"
     },";"
@@ -79,13 +80,13 @@ const TaskAutomationWorkflowPage = () => {";"
       price: "$199",";"
       period: "per month",";"
       description: "For large organizations with advanced requirements",";"
-      features: [";"
-        "Unlimited team members",";"
-        "Advanced automation",";"
-        "Custom development",";"
-        "Dedicated support",";"
-        "Advanced security",";"
-        "White-label solution";
+      features: [";",
+    "Unlimited team members",";",
+    "Advanced automation",";",
+    "Custom development",";",
+    "Dedicated support",";",
+    "Advanced security",";",
+    "White-label solution";
       ],";"
       popular: false";"
     };
@@ -113,7 +114,7 @@ const TaskAutomationWorkflowPage = () => {";"
       icon: <BarChart3 className="w-6 h-6" />";"
     };
   ];
-;
+ {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";"
       <EnhancedSEO";"
         title="Task Automation Workflow - Zion Tech Group | Workflow Automation & Process Management";
@@ -294,4 +295,4 @@ const TaskAutomationWorkflowPage = () => {";"
 };
 ;
 export default TaskAutomationWorkflowPage;
-;
+;`

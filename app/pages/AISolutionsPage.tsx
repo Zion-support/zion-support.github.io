@@ -1,3 +1,4 @@
+import React from 'react';
 
 const AISolutionsPage: React.FC = () => {};
   return (

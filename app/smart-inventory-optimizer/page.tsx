@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
@@ -112,8 +113,7 @@ import { motion } from 'framer-motion';
     { number: "95%", label: "Forecast Accuracy" };
     { number: "25%", label: "Faster Fulfillment" };
     { number: "50%", label: "Less Waste" };
-  ];
-
+  ] {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>Smart Inventory Optimizer | Zion Tech Group</title>

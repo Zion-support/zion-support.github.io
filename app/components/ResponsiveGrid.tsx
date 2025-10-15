@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { cn } from '../lib/utils'
 interface ResponsiveGridProps {};
@@ -30,10 +31,10 @@ const ResponsiveGrid = (_{};
     6: 'grid-cols-6'
   };
   const responsiveClasses = []
-    `grid ${gridColsClasses[cols.default]}`;
-    cols.sm && `sm:${gridColsClasses[cols.sm]}`;
-    cols.md && `md:${gridColsClasses[cols.md]}`;
-    cols.lg && `lg:${gridColsClasses[cols.lg]}`;
+    `grid ${gridColsClasses[cols.default]}`;`
+    cols.sm && `sm:${gridColsClasses[cols.sm]}`;`
+    cols.md && `md:${gridColsClasses[cols.md]}`;`
+    cols.lg && `lg:${gridColsClasses[cols.lg]}`;`
     cols.xl && `xl:${gridColsClasses[cols.xl]}`;
     gapClasses[gap]
   ].filter(Boolean).join(' ')
@@ -43,4 +44,4 @@ const ResponsiveGrid = (_{};
     </div>
   )
 };
-export default ResponsiveGrid
+export default ResponsiveGrid`

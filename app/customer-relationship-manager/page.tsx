@@ -1,3 +1,4 @@
+import React from 'react';
 
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -10,7 +11,7 @@ const CustomerRelationshipManagerPage = () => {};
       title: "Contact Management";
       description: "Centralized contact database with detailed customer profiles and interaction history";
       icon: <Users className="w-8 h-8" />;
-      benefits: ["Unified contact view", "Interaction tracking", "Custom fields", "Import/Export"]
+      benefits: ["Unified contact view", "Interaction tracking", "Custom fields", "Import/Export"];
     };
     {};
       title: "Sales Pipeline";
@@ -112,8 +113,7 @@ const CustomerRelationshipManagerPage = () => {};
       description: "Improve team coordination with shared customer information";
       icon: <Globe className="w-6 h-6" />
     };
-  ];
-
+  ] {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <EnhancedSEO
@@ -302,3 +302,4 @@ const CustomerRelationshipManagerPage = () => {};
 };
 
 export default CustomerRelationshipManagerPage;
+`

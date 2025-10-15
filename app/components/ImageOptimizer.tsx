@@ -73,7 +73,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   if (!isInView && !priority) {
     return (
       <div 
-        ref={imgRef}
+        ref={imgRef}`
         className={`bg-gray-200 animate-pulse ${className}`} 
         style={{ width, height }}
       />
@@ -97,3 +97,4 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
 };
 
 export default ImageOptimizer;
+`

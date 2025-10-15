@@ -193,7 +193,7 @@ const AiSolutionsPage: React.FC = () => {
       title: 'Customer Service',
       description: 'Automate customer support with intelligent chatbots',
       icon: <MessageSquare className="w-6 h-6 text-cyan-400" />,
-      benefits: ['24/7 Support', 'Instant Responses', 'Cost Reduction', 'Customer Satisfaction']
+      benefits: ['24/7 Support', 'Instant Responses', 'Cost Reduction', 'Customer Satisfaction'];
     },
     {
       title: 'Content Marketing',
@@ -257,8 +257,7 @@ const AiSolutionsPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ] {
   return (
     <>
       <Helmet>
@@ -363,7 +362,7 @@ const AiSolutionsPage: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
               <div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group relative ${
-                service.popular ? 'ring-2 ring-cyan-500' : ''
+                service.popular ? 'ring-2 ring-cyan-500' : ''`
               }`}>
                 {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -407,7 +406,7 @@ const AiSolutionsPage: React.FC = () => {
                 </ul>
 
                 <div className="space-y-4">
-                  <Link
+                  <Link`
                     to={`/${service.id}`}
                     className="block w-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                   >
@@ -439,9 +438,9 @@ const AiSolutionsPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map((tier, index) => (`
               <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${
-                tier.popular ? 'ring-2 ring-cyan-500 bg-slate-700/50' : ''
+                tier.popular ? 'ring-2 ring-cyan-500 bg-slate-700/50' : ''`
               }`}>
                 {tier.popular && (
                   <div className="text-center mb-4">
@@ -467,11 +466,11 @@ const AiSolutionsPage: React.FC = () => {
                 </ul>
 
                 <Link
-                  to="/contact"
+                  to="/contact"`
                   className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
                     tier.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white'
-                      : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
+                      : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'`
                   }`}
                 >
                   Get Started
@@ -512,3 +511,4 @@ const AiSolutionsPage: React.FC = () => {
 };
 
 export default AISolutionsPage;
+`

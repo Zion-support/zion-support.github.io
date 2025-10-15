@@ -1,3 +1,4 @@
+import React from 'react';
 
 const ITSolutionsPage: React.FC = () => {};
   const itServices = [
@@ -184,7 +185,7 @@ const ITSolutionsPage: React.FC = () => {};
       title: 'Cloud Migration';
       description: 'Seamlessly migrate your infrastructure to the cloud';
       icon: <Cloud className="w-6 h-6 text-blue-400" />;
-      benefits: ['Cost Reduction', 'Scalability', 'Reliability', 'Security']
+      benefits: ['Cost Reduction', 'Scalability', 'Reliability', 'Security'];
     };
     {};
       title: 'Security Hardening';
@@ -248,8 +249,7 @@ const ITSolutionsPage: React.FC = () => {};
       ];
       popular: false
     };
-  ];
-
+  ] {
   return (
     <>
       <Helmet></Helmet>
@@ -356,7 +356,7 @@ const ITSolutionsPage: React.FC = () => {};
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {itServices.map((service) => (
               <div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10 group relative ${};
-                service.popular ? 'ring-2 ring-blue-500' : ''
+                service.popular ? 'ring-2 ring-blue-500' : ''`
               }`}></div>
                 {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
@@ -399,7 +399,7 @@ const ITSolutionsPage: React.FC = () => {};
                 </ul>
 
                 <div className="space-y-4"></div>
-                  <Link
+                  <Link`
                     to={`/${service.id}`};
                     className="block w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                   ></Link
@@ -433,9 +433,9 @@ const ITSolutionsPage: React.FC = () => {};
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
-            {pricingTiers.map((tier) => (
+            {pricingTiers.map((tier) => (`
               <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${};
-                tier.popular ? 'ring-2 ring-blue-500 bg-slate-700/50' : ''
+                tier.popular ? 'ring-2 ring-blue-500 bg-slate-700/50' : ''`
               }`}></div>
                 {tier.popular && (
                   <div className="text-center mb-4"></div>
@@ -460,11 +460,11 @@ const ITSolutionsPage: React.FC = () => {};
                 </ul>
 
                 <Link
-                  to="/contact"
+                  to="/contact"`
                   className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${};
                     tier.popular
                       ? 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white'
-                      : 'border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
+                      : 'border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'`
                   }`};
                 ></Link
 >
@@ -508,3 +508,4 @@ const ITSolutionsPage: React.FC = () => {};
 };
 
 export default ItSolutionsPage;
+`

@@ -66,7 +66,7 @@ export default function ContentCarousel({};
       {/* Carousel Container */};
       <div className="relative overflow-hidden rounded-lg"></div>
         <div
-          className="flex transition-transform duration-500 ease-in-out"
+          className="flex transition-transform duration-500 ease-in-out"`
           style={{ transform: `translateX(-${currentSlide * 100}%)` }};
         ></div
 >
@@ -127,14 +127,14 @@ export default function ContentCarousel({};
         {slides.map((_, index) => ()
           <button
             key={index};
-            onClick={() => goToSlide(index)};
+            onClick={() => goToSlide(index)};`
             className={`w-3 h-3 rounded-full transition-colors ${};
-              index === currentSlide ? "bg-cyan-400" : "bg-gray-600"
-            }`};
+              index === currentSlide ? "bg-cyan-400" : "bg-gray-600"`
+            }`};`
             aria-label={`Go to slide ${index + 1}`};
           />
         ))};
       </div>
     </div>
   )
-};
+};`

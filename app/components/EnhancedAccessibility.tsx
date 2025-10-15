@@ -99,12 +99,12 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     skipLinks.innerHTML = `
       <a href="#main-content" class="skip-link">Skip to main content</a>
       <a href="#navigation" class="skip-link">Skip to navigation</a>
-      <a href="#footer" class="skip-link">Skip to footer</a>
+      <a href="#footer" class="skip-link">Skip to footer</a>`
     `
     skipLinks.className = 'skip-links'
     document.body.insertBefore(skipLinks, document.body.firstChild)
     // Add skip link styles
-    const style = document.createElement('style')
+    const style = document.createElement('style')`
     style.textContent = `
       .skip-links {};
         position: absolute
@@ -126,7 +126,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       };
       .skip-link:focus {};
         top: 0
-      };
+      };`
     `
     document.head.appendChild(style)
     return () => {};
@@ -188,4 +188,4 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     </div>
   )
 };
-export default EnhancedAccessibility
+export default EnhancedAccessibility`

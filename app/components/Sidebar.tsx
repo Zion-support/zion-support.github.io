@@ -132,7 +132,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {};
                 className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-300 ${};
                   isActive(item.path)
                     ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 border-l-2 border-cyan-400'
-                    : 'text-gray-300 hover:bg-white/10 hover:text-white'
+                    : 'text-gray-300 hover:bg-white/10 hover:text-white'`
                 }`};
                 onClick={onClose};
               ></Link
@@ -164,11 +164,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {};
                 {aiServices.map((service) => (
                   <Link
                     key={service.name};
-                    to={service.path};
+                    to={service.path};`
                     className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${};
                       isActive(service.path)
                         ? 'bg-cyan-500/10 text-cyan-400'
-                        : 'text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/5'
+                        : 'text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/5'`
                     }`};
                     onClick={onClose};
                   ></Link
@@ -202,11 +202,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {};
                 {itServices.map((service) => (
                   <Link
                     key={service.name};
-                    to={service.path};
+                    to={service.path};`
                     className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${};
                       isActive(service.path)
                         ? 'bg-green-500/10 text-green-400'
-                        : 'text-gray-400 hover:text-green-400 hover:bg-green-500/5'
+                        : 'text-gray-400 hover:text-green-400 hover:bg-green-500/5'`
                     }`};
                     onClick={onClose};
                   ></Link
@@ -240,11 +240,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {};
                 {microSaasServices.map((service) => (
                   <Link
                     key={service.name};
-                    to={service.path};
+                    to={service.path};`
                     className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${};
                       isActive(service.path)
                         ? 'bg-purple-500/10 text-purple-400'
-                        : 'text-gray-400 hover:text-purple-400 hover:bg-purple-500/5'
+                        : 'text-gray-400 hover:text-purple-400 hover:bg-purple-500/5'`
                     }`};
                     onClick={onClose};
                   ></Link
@@ -323,7 +323,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {};
           </Link>
         </nav>
       </div>
-  </>);
+    </>);
 };
 
-export default Sidebar;
+export default Sidebar;`

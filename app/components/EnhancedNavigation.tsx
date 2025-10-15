@@ -10,7 +10,7 @@ const EnhancedNavigation = () => {};
       label: 'AI Services';
       href: '/ai-services';
       icon: <Brain className="w-4 h-4" />;
-      dropdown: []
+      dropdown: [];
         { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' };
         { label: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' };
         { label: 'AI Content Generation Pro', href: '/ai-content-generation-pro' };

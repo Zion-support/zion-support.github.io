@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface SearchBarProps {};
   children?: React.ReactNode
@@ -15,4 +16,4 @@ const SearchBar: React.FC<SearchBarProps> = ({};
     </div>
   )
 };
-export default SearchBar
+export default SearchBar`

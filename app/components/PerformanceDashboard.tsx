@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface PerformanceDashboardProps {};
   children?: React.ReactNode
@@ -15,4 +16,4 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({};
     </div>
   )
 };
-export default PerformanceDashboard
+export default PerformanceDashboard`

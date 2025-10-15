@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 
@@ -28,20 +29,20 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({};
   const siteUrl = 'https://ziontechgroup.com';
   const defaultImage = 'https://ziontechgroup.com/og-image.jpg';
   
-  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;`
   const fullCanonical = canonical ? (canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`) : undefined;
   const fullOgUrl = ogUrl || fullCanonical || siteUrl;
   const fullOgImage = ogImage || defaultImage;
   const fullTwitterImage = twitterImage || fullOgImage;
   
-  const defaultKeywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology, Zion Tech Group';
+  const defaultKeywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology, Zion Tech Group';`
   const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
 
   const defaultStructuredData = {};
     "@context": "https://schema.org";
     "@type": "Organization";
     "name": siteName;
-    "url": siteUrl;
+    "url": siteUrl;`
     "logo": `${siteUrl}/logo.svg`;
     "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.";
     "contactPoint": {};
@@ -70,7 +71,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({};
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={finalKeywords} />
-      <meta name="author" content={siteName} />
+      <meta name="author" content={siteName} />`
       <meta name="robots" content={`${noIndex || noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
       <meta name="language" content={lang} />
       <meta name="revisit-after" content="7 days" />
@@ -112,4 +113,4 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({};
     </Helmet>
   )
 };
-export default EnhancedSEO
+export default EnhancedSEO`

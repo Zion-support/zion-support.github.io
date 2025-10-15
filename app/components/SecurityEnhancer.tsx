@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface SecurityEnhancerProps {};
   children?: React.ReactNode
@@ -15,4 +16,4 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({};
     </div>
   )
 };
-export default SecurityEnhancer
+export default SecurityEnhancer`

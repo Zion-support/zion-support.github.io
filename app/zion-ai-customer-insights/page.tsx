@@ -1,27 +1,28 @@
+import React from 'react';
 
 import { ArrowRight, CheckCircle, Star, Users, Brain, TrendingUp, Target, MessageSquare, Heart, Award, Globe, Monitor, Map, Phone, Star as StarIcon } from 'lucide-react';import { Link } from "react-router-dom";
 import SEOOptimizer from "../../components/SEOOptimizer";
 ;
 export default function ZionAiCustomerInsights() {";"
-  const features = [";"
-    "AI-powered customer behavior analysis",";"
-    "Real-time sentiment analysis across all channels",";"
-    "Predictive customer lifetime value modeling",";"
-    "Automated customer segmentation",";"
-    "Churn prediction and prevention alerts",";"
-    "Customer journey mapping and optimization",";"
-    "Multi-channel data integration (email, social, web, phone)",";"
-    "Advanced analytics dashboard with custom reports",";"
-    "Automated insight generation and recommendations",";"
-    "ROI tracking and performance metrics",";"
-    "Custom AI model training for your business",";"
+  const features = [";",
+    "AI-powered customer behavior analysis",";",
+    "Real-time sentiment analysis across all channels",";",
+    "Predictive customer lifetime value modeling",";",
+    "Automated customer segmentation",";",
+    "Churn prediction and prevention alerts",";",
+    "Customer journey mapping and optimization",";",
+    "Multi-channel data integration (email, social, web, phone)",";",
+    "Advanced analytics dashboard with custom reports",";",
+    "Automated insight generation and recommendations",";",
+    "ROI tracking and performance metrics",";",
+    "Custom AI model training for your business",";",
     "API integration with 100+ platforms";
   ];
 ;
-  const benefits = [";"
-    "Increase customer retention by 35%",";"
-    "Boost revenue per customer by 40%",";"
-    "Reduce churn rate by 50%",";"
+  const benefits = [";",
+    "Increase customer retention by 35%",";",
+    "Boost revenue per customer by 40%",";",
+    "Reduce churn rate by 50%",";",
     "Improve customer satisfaction scores";
   ];
 ;
@@ -31,14 +32,14 @@ export default function ZionAiCustomerInsights() {";"
       price: "$99",";"
       period: "/month",";"
       description: "Perfect for small businesses getting started with customer insights",";"
-      features: [";"
-        "Up to 10,000 customer profiles",";"
-        "Basic sentiment analysis",";"
-        "Standard segmentation",";"
-        "Monthly reports",";"
-        "Email support",";"
-        "Basic dashboard",";"
-        "5 data source integrations";
+      features: [";",
+    "Up to 10,000 customer profiles",";",
+    "Basic sentiment analysis",";",
+    "Standard segmentation",";",
+    "Monthly reports",";",
+    "Email support",";",
+    "Basic dashboard",";",
+    "5 data source integrations";
       ],";"
       popular: false";"
     },";"
@@ -47,17 +48,17 @@ export default function ZionAiCustomerInsights() {";"
       price: "$299",";"
       period: "/month",";"
       description: "Ideal for growing businesses and marketing teams",";"
-      features: [";"
-        "Up to 100,000 customer profiles",";"
-        "Advanced sentiment analysis",";"
-        "Predictive analytics",";"
-        "Real-time insights",";"
-        "Priority support",";"
-        "Advanced dashboard",";"
-        "20 data source integrations",";"
-        "Custom AI model training",";"
-        "API access",";"
-        "Team collaboration (10 users)";
+      features: [";",
+    "Up to 100,000 customer profiles",";",
+    "Advanced sentiment analysis",";",
+    "Predictive analytics",";",
+    "Real-time insights",";",
+    "Priority support",";",
+    "Advanced dashboard",";",
+    "20 data source integrations",";",
+    "Custom AI model training",";",
+    "API access",";",
+    "Team collaboration (10 users)";
       ],";"
       popular: true";"
     },";"
@@ -66,19 +67,19 @@ export default function ZionAiCustomerInsights() {";"
       price: "$799",";"
       period: "/month",";"
       description: "For large organizations with complex customer data needs",";"
-      features: [";"
-        "Unlimited customer profiles",";"
-        "AI-powered insights engine",";"
-        "Advanced predictive modeling",";"
-        "Real-time alerts and notifications",";"
-        "24/7 dedicated support",";"
-        "Custom dashboard development",";"
-        "Unlimited data integrations",";"
-        "Custom AI model development",";"
-        "Advanced API access",";"
-        "Unlimited team members",";"
-        "White-label solution",";"
-        "Dedicated account manager";
+      features: [";",
+    "Unlimited customer profiles",";",
+    "AI-powered insights engine",";",
+    "Advanced predictive modeling",";",
+    "Real-time alerts and notifications",";",
+    "24/7 dedicated support",";",
+    "Custom dashboard development",";",
+    "Unlimited data integrations",";",
+    "Custom AI model development",";",
+    "Advanced API access",";",
+    "Unlimited team members",";",
+    "White-label solution",";",
+    "Dedicated account manager";
       ],";"
       popular: false";"
     };
@@ -108,7 +109,7 @@ export default function ZionAiCustomerInsights() {";"
       content: "The AI insights help us personalize every customer interaction. Our satisfaction scores have improved dramatically and customer lifetime value is up 45%.",";"
       rating: 5,";"
       avatar: "LT";
-    };
+};
   ];
 ;
   const insights = [";"
@@ -135,7 +136,7 @@ export default function ZionAiCustomerInsights() {";"
       description: "Map and optimize customer journeys for maximum engagement and conversion",";"
       icon: <Map className="w-8 h-8" />,";"
       color: "from-orange-500 to-red-500";
-    };
+};
   ];
 ;
 const ZionAiCustomerInsightsPage: React.FC = () => {";"
@@ -288,9 +289,9 @@ const ZionAiCustomerInsightsPage: React.FC = () => {";"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";"
               {pricingPlans.map((plan, index) => (";"
                 <div";"
-                  key={index};
+                  key={index};`
                   className={`group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative ${";"
-                    plan.popular ? 'ring-2 ring-cyan-400' : '';
+                    plan.popular ? 'ring-2 ring-cyan-400' : '';`
                   }`};
                 >";"
                   {plan.popular && (";"
@@ -318,11 +319,11 @@ const ZionAiCustomerInsightsPage: React.FC = () => {";"
                     ))};
                   </ul>";"
                   <Link";"
-                    to="/contact";
+                    to="/contact";`
                     className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${";"
                       plan.popular";"
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700';
-                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900';
+                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900';`
                     }`};
                   >";"
                     Get Started";"
@@ -428,4 +429,4 @@ const ZionAiCustomerInsightsPage: React.FC = () => {";"
 };
 ;
 export default ZionAiCustomerInsightsPage;
-;
+;`

@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Star, Target, MessageSquare } from "lucide-react";
 
@@ -12,7 +13,7 @@ const PartnershipsPage: React.FC = () => {};
         'Technical support';
         'Co-marketing opportunities';
         'Joint product development'
-      ]
+      ];
     };
     {};
       title: 'Channel Partners';

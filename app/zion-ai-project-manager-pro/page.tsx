@@ -1,3 +1,4 @@
+import React from 'react';
 import {ArrowRight, Calendar, BarChart3, CheckCircle, Star, Users, Target, TrendingUp, Shield, Globe, Clock, Play, Star, Star} from 'lucide-react';import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 ;
@@ -7,7 +8,7 @@ export default function ZionAiProjectManagerPro() {";"
       title: "AI-Powered Task Prioritization",";"
       description: "Automatically prioritize tasks using machine learning algorithms that analyze deadlines, dependencies, team capacity, and project impact to optimize workflow efficiency.",";"
       icon: <Target className="w-6 h-6" />,";"
-      benefits: ["Smart task ranking", "Dependency analysis", "Resource optimization", "Deadline management"]
+      benefits: ["Smart task ranking", "Dependency analysis", "Resource optimization", "Deadline management"];
     },";"
     {";"
       title: "Intelligent Resource Allocation",";"
@@ -47,14 +48,14 @@ export default function ZionAiProjectManagerPro() {";"
       price: "$99",";"
       period: "/month",";"
       description: "Perfect for small teams",";"
-      features: [";"
-        "Up to 10 team members",";"
-        "Basic AI features",";"
-        "Project templates",";"
-        "Basic reporting",";"
-        "Email support",";"
-        "5GB storage",";"
-        "Mobile app access";
+      features: [";",
+    "Up to 10 team members",";",
+    "Basic AI features",";",
+    "Project templates",";",
+    "Basic reporting",";",
+    "Email support",";",
+    "5GB storage",";",
+    "Mobile app access";
       ],";"
       popular: false";"
     },";"
@@ -63,15 +64,15 @@ export default function ZionAiProjectManagerPro() {";"
       price: "$199",";"
       period: "/month",";"
       description: "Most popular for growing teams",";"
-      features: [";"
-        "Up to 50 team members",";"
-        "Advanced AI features",";"
-        "Custom workflows",";"
-        "Advanced analytics",";"
-        "Priority support",";"
-        "50GB storage",";"
-        "API access",";"
-        "Integrations";
+      features: [";",
+    "Up to 50 team members",";",
+    "Advanced AI features",";",
+    "Custom workflows",";",
+    "Advanced analytics",";",
+    "Priority support",";",
+    "50GB storage",";",
+    "API access",";",
+    "Integrations";
       ],";"
       popular: true";"
     },";"
@@ -80,15 +81,15 @@ export default function ZionAiProjectManagerPro() {";"
       price: "$399",";"
       period: "/month",";"
       description: "For large organizations",";"
-      features: [";"
-        "Unlimited team members",";"
-        "AI-powered insights",";"
-        "Custom integrations",";"
-        "24/7 phone support",";"
-        "Advanced security",";"
-        "Unlimited storage",";"
-        "White-label options",";"
-        "Dedicated account manager";
+      features: [";",
+    "Unlimited team members",";",
+    "AI-powered insights",";",
+    "Custom integrations",";",
+    "24/7 phone support",";",
+    "Advanced security",";",
+    "Unlimited storage",";",
+    "White-label options",";",
+    "Dedicated account manager";
       ],";"
       popular: false";"
     };
@@ -118,7 +119,7 @@ export default function ZionAiProjectManagerPro() {";"
       content: "The intelligent resource allocation is a game-changer. It automatically assigns the right people to the right tasks, saving us hours of manual planning every week.",";"
       rating: 5,";"
       avatar: "LM";
-    };
+};
   ];
 ;
   const stats = [";"
@@ -290,7 +291,7 @@ const ZionAiProjectManagerProPage: React.FC = () => {";"
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${";"
                     plan.popular";"
                       ? 'border-emerald-500/50 shadow-2xl shadow-emerald-500/25' ";"
-                      : 'border-white/20 hover:border-emerald-500/30';
+                      : 'border-white/20 hover:border-emerald-500/30';`
                   }`};
                 >";"
                   {plan.popular && (";"
@@ -318,11 +319,11 @@ const ZionAiProjectManagerProPage: React.FC = () => {";"
                     ))};
                   </div>";"
                   <Link";"
-                    to="/contact";
+                    to="/contact";`
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${";"
                       plan.popular";"
                         ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:from-emerald-600 hover:to-teal-700 shadow-lg hover:shadow-emerald-500/25';
-                        : 'border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900';
+                        : 'border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900';`
                     }`};
                   >";"
                     Get Started";"
@@ -428,4 +429,4 @@ const ZionAiProjectManagerProPage: React.FC = () => {";"
 };
 ;
 export default ZionAiProjectManagerProPage;
-;
+;`

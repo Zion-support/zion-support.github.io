@@ -28,7 +28,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({};
   publishedTime;
   modifiedTime = new Date().toISOString();
   section = "Technology";
-  tags = ["AI", "IT Services", "Technology", "Digital Transformation"]
+  tags = ["AI", "IT Services", "Technology", "Digital Transformation"];
 }) => {};
 }const location = useLocation()
   const currentUrl = `https://ziontechgroup.com${location.pathname}`
@@ -270,7 +270,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({};
         };
         "serviceType": "AI and IT Solutions";
         "hasOfferCatalog": {};
-          "@type": "OfferCatalog";
+          "@type": "OfferCatalog";`
           "name": `${title} Services`;
           "itemListElement": []
             {};
@@ -336,7 +336,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({};
       };
     ]
     let currentPath = ''
-    pathSegments.forEach((segment, index) => {};
+    pathSegments.forEach((segment, index) => {};`
 }currentPath += `/${segment}`
       const name = segment
         .split('-')
@@ -345,7 +345,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({};
       breadcrumbs.push({};
         "@type": "ListItem";
         "position": index + 2;
-        "name": name;
+        "name": name;`
         "item": `https://ziontechgroup.com${currentPath}`
       })
     })
@@ -397,7 +397,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({};
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta property="og:image:height" content="630" />`
       <meta property="og:image:alt" content={`${title} - Zion Tech Group`} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
@@ -472,4 +472,4 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({};
     </Helmet>
   )
 };
-export default EnhancedSEOOptimizer
+export default EnhancedSEOOptimizer`

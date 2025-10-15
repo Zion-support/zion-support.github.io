@@ -124,4 +124,4 @@ const CriticalResourcePreloader = () => {};
   }, [])
   return null
 };
-export default CriticalResourcePreloader
+export default CriticalResourcePreloader`

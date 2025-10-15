@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -7,7 +8,7 @@ import { ArrowRight, CheckCircle, Database, Smartphone, Globe, Network } from 'l
       title: 'Custom Web Applications';
       description: 'Build scalable web applications tailored to your business needs';
       icon: <Globe className="w-8 h-8 text-blue-400" />;
-      features: ['React/Next.js', 'Node.js Backend', 'Database Design', 'API Development']
+      features: ['React/Next.js', 'Node.js Backend', 'Database Design', 'API Development'];
     };
     {};
       title: 'Mobile App Development';

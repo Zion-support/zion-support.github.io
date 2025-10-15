@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Globe, Calendar, BarChart3, CheckCircle, ArrowRight, Target, Zap, Users, Image } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -10,7 +11,7 @@ const SocialMediaSchedulerPage = () => {";"
       title: "Multi-Platform Scheduling",";"
       description: "Schedule posts across all major social media platforms from one dashboard",";"
       icon: <Globe className="w-8 h-8" />,";"
-      benefits: ["Facebook", "Twitter", "Instagram", "LinkedIn", "TikTok", "YouTube"]
+      benefits: ["Facebook", "Twitter", "Instagram", "LinkedIn", "TikTok", "YouTube"];
     },";"
     {";"
       title: "Content Calendar",";"
@@ -50,12 +51,12 @@ const SocialMediaSchedulerPage = () => {";"
       price: "$29",";"
       period: "per month",";"
       description: "Perfect for small businesses and individuals",";"
-      features: [";"
-        "Up to 3 social accounts",";"
-        "30 posts per month",";"
-        "Basic analytics",";"
-        "Email support",";"
-        "Mobile app access";
+      features: [";",
+    "Up to 3 social accounts",";",
+    "30 posts per month",";",
+    "Basic analytics",";",
+    "Email support",";",
+    "Mobile app access";
       ],";"
       popular: false";"
     },";"
@@ -64,13 +65,13 @@ const SocialMediaSchedulerPage = () => {";"
       price: "$79",";"
       period: "per month",";"
       description: "Ideal for growing businesses and agencies",";"
-      features: [";"
-        "Up to 10 social accounts",";"
-        "Unlimited posts",";"
-        "Advanced analytics",";"
-        "Team collaboration",";"
-        "Priority support",";"
-        "Content creation tools";
+      features: [";",
+    "Up to 10 social accounts",";",
+    "Unlimited posts",";",
+    "Advanced analytics",";",
+    "Team collaboration",";",
+    "Priority support",";",
+    "Content creation tools";
       ],";"
       popular: true";"
     },";"
@@ -79,13 +80,13 @@ const SocialMediaSchedulerPage = () => {";"
       price: "$199",";"
       period: "per month",";"
       description: "For large organizations with advanced needs",";"
-      features: [";"
-        "Unlimited social accounts",";"
-        "White-label solution",";"
-        "Custom integrations",";"
-        "Dedicated support",";"
-        "Advanced security",";"
-        "Custom development";
+      features: [";",
+    "Unlimited social accounts",";",
+    "White-label solution",";",
+    "Custom integrations",";",
+    "Dedicated support",";",
+    "Advanced security",";",
+    "Custom development";
       ],";"
       popular: false";"
     };
@@ -113,7 +114,7 @@ const SocialMediaSchedulerPage = () => {";"
       icon: <Users className="w-6 h-6" />";"
     };
   ];
-;
+ {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";"
       <EnhancedSEO";"
         title="Social Media Scheduler - Zion Tech Group | Multi-Platform Social Media Management";
@@ -294,4 +295,4 @@ const SocialMediaSchedulerPage = () => {";"
 };
 ;
 export default SocialMediaSchedulerPage;
-;
+;`

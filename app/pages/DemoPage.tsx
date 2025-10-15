@@ -195,14 +195,14 @@ const DemoPage: React.FC = () => {};
                 className={`p-6 rounded-xl border transition-all duration-300 text-left ${};
                   selectedDemo === demo.id
                     ? 'bg-cyan-600 border-cyan-500 text-white'
-                    : 'bg-slate-700/50 border-slate-600/50 text-gray-300 hover:bg-slate-700/70 hover:border-cyan-500/50'
+                    : 'bg-slate-700/50 border-slate-600/50 text-gray-300 hover:bg-slate-700/70 hover:border-cyan-500/50'`
                 }`};
               >
-                <div className="flex items-center mb-4"></div>
+                <div className="flex items-center mb-4"></div>`
                   <div className={`w-12 h-12 rounded-lg flex items-center justify-center mr-4 ${};
                     selectedDemo === demo.id
                       ? 'bg-white/20'
-                      : 'bg-gradient-to-r from-cyan-500 to-purple-600'
+                      : 'bg-gradient-to-r from-cyan-500 to-purple-600'`
                   }`}></div>
                     <demo.icon className="w-6 h-6 text-white" />
                   </div>
@@ -358,3 +358,4 @@ const DemoPage: React.FC = () => {};
 };
 
 export default DemoPage;
+`

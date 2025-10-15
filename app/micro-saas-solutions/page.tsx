@@ -378,7 +378,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {";"
       icon: <Code className="w-8 h-8 text-red-400" />,";"
       popular: false,";"
       link: 'https://ziontechgroup.com/api-management';
-    };
+};
   ];
 ;
   const categories = ['All', 'AI Tools', 'Marketing', 'Productivity', 'Sales', 'E-commerce', 'Support', 'Analytics', 'Storage', 'Web Development', 'Development'];
@@ -453,7 +453,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {";"
   const filteredServices = selectedCategory === 'All' ";"
     ? microSaaSServices";"
     : microSaaSServices.filter(service => service.category === selectedCategory);
-;
+ {
   return (";"
     <>";"
       <Helmet>";"
@@ -530,7 +530,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {";"
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${";"
                   selectedCategory === category";"
                     ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white shadow-lg';
-                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-white';
+                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-white';`
                 }`};
               >";"
                 {category};
@@ -551,9 +551,9 @@ const MicroSaaSSolutionsPage: React.FC = () => {";"
             </p>";"
           </div>";"
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">";"
-            {filteredServices.map((service, index) => (";"
+            {filteredServices.map((service, index) => (";"`
               <div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10 group relative ${";"
-                service.popular ? 'ring-2 ring-purple-500' : '';
+                service.popular ? 'ring-2 ring-purple-500' : '';`
               }`}>";"
                 {service.popular && (";"
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">";"
@@ -648,9 +648,9 @@ const MicroSaaSSolutionsPage: React.FC = () => {";"
             </p>";"
           </div>";"
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">";"
-            {pricingTiers.map((tier, index) => (";"
+            {pricingTiers.map((tier, index) => (";"`
               <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${";"
-                tier.popular ? 'ring-2 ring-purple-500 bg-slate-700/50' : '';
+                tier.popular ? 'ring-2 ring-purple-500 bg-slate-700/50' : '';`
               }`}>";"
                 {tier.popular && (";"
                   <div className="text-center mb-4">";"
@@ -674,11 +674,11 @@ const MicroSaaSSolutionsPage: React.FC = () => {";"
                   ))};
                 </ul>";"
                 <Link";"
-                  to="/contact";
+                  to="/contact";`
                   className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${";"
                     tier.popular";"
                       ? 'bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white';
-                      : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white';
+                      : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white';`
                   }`};
                 >";"
                   Get Started";"
@@ -717,4 +717,4 @@ const MicroSaaSSolutionsPage: React.FC = () => {";"
   );
 };
 ;
-export default MicroSaaSSolutionsPage;
+export default MicroSaaSSolutionsPage;`

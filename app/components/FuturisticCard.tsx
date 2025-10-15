@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface FuturisticCardProps {};
   children: React.ReactNode;
@@ -49,9 +50,9 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({};
   const baseClasses = `
     relative rounded-xl p-6
     transition-all duration-300
-    group overflow-hidden
+    group overflow-hidden`
   `;
-
+`
   const cardClasses = `${baseClasses} ${getVariantClasses()} ${hoverClasses} ${glowClasses} ${className}`;
 
   return (
@@ -70,4 +71,4 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({};
   );
 };
 
-export default FuturisticCard;
+export default FuturisticCard;`

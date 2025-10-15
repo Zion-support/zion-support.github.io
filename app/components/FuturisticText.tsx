@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface FuturisticTextProps {};
   children: React.ReactNode;
@@ -87,7 +88,7 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({};
     ${getSizeClasses()};
     ${getGlowClasses()};
     ${getAnimateClasses()};
-    ${className};
+    ${className};`
   `;
 
   return (
@@ -97,4 +98,4 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({};
   );
 };
 
-export default FuturisticText;
+export default FuturisticText;`

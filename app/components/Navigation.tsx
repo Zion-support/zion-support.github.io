@@ -62,7 +62,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
         { name: 'AI Content Generation', href: '/ai-content-generation-pro', icon: DocumentTextIcon },";"
         { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: EyeIcon },";"
         { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon };
-      ]
+      ];
     },";"
     {";"
       name: 'Micro SaaS',";"
@@ -129,8 +129,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
     { name: 'Digital Transformation', href: '/digital-transformation', icon: RocketLaunchIcon },";"
     { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: CogIcon },";"
     { name: 'IT Solutions', href: '/it-solutions', icon: ServerIcon },";"
-  ]
-
+  ];
   const isActive = (path: string) => {";"
     return location.pathname === path";"
   };
@@ -215,12 +214,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
               {navigation.map((item) => (
                 <div key={item.name} className="relative">
                   <Link
-                    to={item.href}
+                    to={item.href}`
                     className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
 >>>>>>> cursor/fix-errors-and-merge-to-main-13a9
                       isActive(item.href)
                         ? 'border-blue-500 text-white';
-                        : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white';
+                        : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white';`
                     }`};
                   >";"
                     <item.icon className="w-4 h-4" />";"
@@ -228,14 +227,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
                     {item.submenu && <ChevronDownIcon className="w-4 h-4" />};
                   </Link>";"
                   {/* Dropdown Menu */};
-                  {item.submenu && (";"
+                  {item.submenu && (";"`
                     <div className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${";"
                       (item.name === 'AI Services' && isServicesOpen) ||";"
                       (item.name === 'Micro SaaS' && isSolutionsOpen) ||";"
                       (item.name === 'IT Solutions' && isResourcesOpen) ||";"
                       (item.name === 'Resources' && isResourcesOpen) ||";"
                       (item.name === 'Company' && isCompanyOpen)
-                        ? 'block' : 'hidden';
+                        ? 'block' : 'hidden';`
                     }`}>";"
                       {item.submenu.map((subItem) => (";"
                         <div key={subItem.name}>";"
@@ -269,7 +268,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
             </button>";"
           </div>";"
         </div>";"
-        {/* Mobile Navigation */};
+        {/* Mobile Navigation */};`
         <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>";"
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700 max-h-96 overflow-y-auto">";"
             {navigation.map((item) => (";"
@@ -290,7 +289,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
                       <span>{item.name}</span>";"
                       <ChevronDownIcon className="w-4 h-4 ml-auto" />";"
                     </button>";"
-                    {/* Mobile Submenu */};
+                    {/* Mobile Submenu */};`
                     <div className={`pl-6 ${";"
                       (item.name === 'AI Services' && isServicesOpen) ||";"
                       (item.name === 'Micro SaaS' && isSolutionsOpen) ||";"
@@ -298,7 +297,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
                       (item.name === 'Resources' && isResourcesOpen) ||";"
                       (item.name === 'Company' && isCompanyOpen)
 <<<<<<< HEAD
-                        ? 'block' : 'hidden';
+                        ? 'block' : 'hidden';`
                     }`}>";"
                       {item.submenu.map((subItem) => (";"
                         <div key={subItem.name}>";"
@@ -317,7 +316,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
                 ) : (";"
                   <div>";"
                     <Link";"
-                      to={item.href};
+                      to={item.href};`
                       className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${isActive(item.href) ? 'text-white bg-slate-700' : 'text-gray-300 hover:text-white hover:bg-slate-700'}`};
                       onClick={() => setIsOpen(false)};
                     >";"
@@ -333,7 +332,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
       </div>";"
     </nav>";"
 =======
-                        ? 'block' : 'hidden'
+                        ? 'block' : 'hidden'`
                     }`}>
                       {item.submenu.map((subItem) => (
                         <div key={subItem.name}>
@@ -351,11 +350,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
                   </div>
                 ) : (
                   <Link
-                    to={item.href}
+                    to={item.href}`
                     className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${
                       isActive(item.href)
                         ? 'text-white bg-slate-700'
-                        : 'text-gray-300 hover:text-white hover:bg-slate-700'
+                        : 'text-gray-300 hover:text-white hover:bg-slate-700'`
                     }`}
                     onClick={() => setIsOpen(false)}
                   >
@@ -373,4 +372,4 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {";"
   )
 };
 ;
-export default Navigation";"
+export default Navigation";"`

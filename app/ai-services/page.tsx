@@ -70,8 +70,7 @@ export default function AIServices() {
         "Maintain consistent brand voice"
       ]
     }
-  ];
-
+  ] {
   return (
     <>
       <Helmet>
@@ -143,3 +142,4 @@ export default function AIServices() {
     </>
   );
 }
+`

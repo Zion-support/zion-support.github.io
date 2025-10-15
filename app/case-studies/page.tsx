@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -60,8 +61,7 @@ const CaseStudiesPage: React.FC = () => {};
     { label: "Client Satisfaction", value: "98%", icon: <TrendingUp className="w-6 h-6" /> };
     { label: "Team Members", value: "50+", icon: <Users className="w-6 h-6" /> };
     { label: "Cost Savings", value: "$2M+", icon: <DollarSign className="w-6 h-6" /> };
-  ];
-
+  ] {
   return (
     <>
       <Helmet></Helmet>
@@ -204,3 +204,4 @@ const CaseStudiesPage: React.FC = () => {};
 };
 
 export default CaseStudiesPage;
+`

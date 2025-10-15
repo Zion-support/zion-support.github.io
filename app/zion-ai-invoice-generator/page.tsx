@@ -1,27 +1,28 @@
+import React from 'react';
 
 import { ArrowRight, CheckCircle, Star, FileText, Zap, Brain, Award, DollarSign, Globe, Monitor, MessageSquare, Bell, Award as AwardIcon, Phone, Star as StarIcon } from 'lucide-react';import { Link } from "react-router-dom";
 import SEOOptimizer from "../../components/SEOOptimizer";
 ;
 export default function ZionAiInvoiceGenerator() {";"
-  const features = [";"
-    "AI-powered invoice generation from contracts and agreements",";"
-    "Automated data extraction from emails and documents",";"
-    "Smart tax calculation with multiple jurisdictions",";"
-    "Customizable professional templates (50+ designs)",";"
-    "Multi-currency support with real-time exchange rates",";"
-    "Automated payment reminders and follow-ups",";"
-    "Integration with 100+ accounting software",";"
-    "Mobile app for on-the-go invoice creation",";"
-    "Digital signature and approval workflows",";"
-    "Advanced reporting and analytics dashboard",";"
-    "White-label solution for agencies",";"
+  const features = [";",
+    "AI-powered invoice generation from contracts and agreements",";",
+    "Automated data extraction from emails and documents",";",
+    "Smart tax calculation with multiple jurisdictions",";",
+    "Customizable professional templates (50+ designs)",";",
+    "Multi-currency support with real-time exchange rates",";",
+    "Automated payment reminders and follow-ups",";",
+    "Integration with 100+ accounting software",";",
+    "Mobile app for on-the-go invoice creation",";",
+    "Digital signature and approval workflows",";",
+    "Advanced reporting and analytics dashboard",";",
+    "White-label solution for agencies",";",
     "API access for custom integrations";
   ];
 ;
-  const benefits = [";"
-    "Reduce invoice creation time by 90%",";"
-    "Eliminate manual data entry errors",";"
-    "Get paid 30% faster with automated reminders",";"
+  const benefits = [";",
+    "Reduce invoice creation time by 90%",";",
+    "Eliminate manual data entry errors",";",
+    "Get paid 30% faster with automated reminders",";",
     "Save 15+ hours per week on invoicing";
   ];
 ;
@@ -31,14 +32,14 @@ export default function ZionAiInvoiceGenerator() {";"
       price: "$19",";"
       period: "/month",";"
       description: "Perfect for freelancers and solo entrepreneurs",";"
-      features: [";"
-        "Up to 50 invoices per month",";"
-        "Basic templates (10+)",";"
-        "Single currency support",";"
-        "Email support",";"
-        "Mobile app access",";"
-        "Basic reporting",";"
-        "5 client profiles";
+      features: [";",
+    "Up to 50 invoices per month",";",
+    "Basic templates (10+)",";",
+    "Single currency support",";",
+    "Email support",";",
+    "Mobile app access",";",
+    "Basic reporting",";",
+    "5 client profiles";
       ],";"
       popular: false";"
     },";"
@@ -47,17 +48,17 @@ export default function ZionAiInvoiceGenerator() {";"
       price: "$49",";"
       period: "/month",";"
       description: "Ideal for small to medium businesses",";"
-      features: [";"
-        "Up to 500 invoices per month",";"
-        "All templates (50+)",";"
-        "Multi-currency support",";"
-        "Priority support",";"
-        "Advanced reporting",";"
-        "Team collaboration (5 users)",";"
-        "Unlimited client profiles",";"
-        "API access",";"
-        "Custom branding",";"
-        "Automated reminders";
+      features: [";",
+    "Up to 500 invoices per month",";",
+    "All templates (50+)",";",
+    "Multi-currency support",";",
+    "Priority support",";",
+    "Advanced reporting",";",
+    "Team collaboration (5 users)",";",
+    "Unlimited client profiles",";",
+    "API access",";",
+    "Custom branding",";",
+    "Automated reminders";
       ],";"
       popular: true";"
     },";"
@@ -66,18 +67,18 @@ export default function ZionAiInvoiceGenerator() {";"
       price: "$149",";"
       period: "/month",";"
       description: "For large organizations and accounting firms",";"
-      features: [";"
-        "Unlimited invoices",";"
-        "Custom template creation",";"
-        "Advanced tax calculations",";"
-        "24/7 dedicated support",";"
-        "Advanced analytics",";"
-        "Unlimited team members",";"
-        "White-label solution",";"
-        "Advanced API access",";"
-        "Custom integrations",";"
-        "Dedicated account manager",";"
-        "On-premise deployment option";
+      features: [";",
+    "Unlimited invoices",";",
+    "Custom template creation",";",
+    "Advanced tax calculations",";",
+    "24/7 dedicated support",";",
+    "Advanced analytics",";",
+    "Unlimited team members",";",
+    "White-label solution",";",
+    "Advanced API access",";",
+    "Custom integrations",";",
+    "Dedicated account manager",";",
+    "On-premise deployment option";
       ],";"
       popular: false";"
     };
@@ -107,7 +108,7 @@ export default function ZionAiInvoiceGenerator() {";"
       content: "Our clients love the professional templates and automated features. We've increased our invoice processing capacity by 300% without adding staff.",";"
       rating: 5,";"
       avatar: "JW";
-    };
+};
   ];
 ;
   const capabilities = [";"
@@ -134,7 +135,7 @@ export default function ZionAiInvoiceGenerator() {";"
       description: "Track payment trends, client behavior, and cash flow with detailed insights",";"
       icon: <BarChart3 className="w-8 h-8" />,";"
       color: "from-orange-500 to-red-500";
-    };
+};
   ];
 ;
 const ZionAiInvoiceGeneratorPage: React.FC = () => {";"
@@ -287,9 +288,9 @@ const ZionAiInvoiceGeneratorPage: React.FC = () => {";"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";"
               {pricingPlans.map((plan, index) => (";"
                 <div";"
-                  key={index};
+                  key={index};`
                   className={`group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative ${";"
-                    plan.popular ? 'ring-2 ring-cyan-400' : '';
+                    plan.popular ? 'ring-2 ring-cyan-400' : '';`
                   }`};
                 >";"
                   {plan.popular && (";"
@@ -317,11 +318,11 @@ const ZionAiInvoiceGeneratorPage: React.FC = () => {";"
                     ))};
                   </ul>";"
                   <Link";"
-                    to="/contact";
+                    to="/contact";`
                     className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${";"
                       plan.popular";"
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700';
-                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900';
+                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900';`
                     }`};
                   >";"
                     Get Started";"
@@ -427,4 +428,4 @@ const ZionAiInvoiceGeneratorPage: React.FC = () => {";"
 };
 ;
 export default ZionAiInvoiceGeneratorPage;
-;
+;`

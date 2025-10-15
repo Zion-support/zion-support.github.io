@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface ContentPromotionBannerProps {};
   title?: string
@@ -61,4 +62,4 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({};
     </div>
   )
 };
-export default ContentPromotionBanner
+export default ContentPromotionBanner`

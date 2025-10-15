@@ -156,7 +156,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
         .keyboard-navigation textarea:focus;
         .keyboard-navigation a:focus {};
           box-shadow: 0 0 0 2px #3b82f6 !important;
-        };
+        };`
       `;
       document.head.appendChild(style);
     } else {};
@@ -276,14 +276,14 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
     if (skipLinks) return;
 
     const skipLinksDiv = document.createElement('div');
-    skipLinksDiv.className = 'skip-links';
+    skipLinksDiv.className = 'skip-links';`
     skipLinksDiv.innerHTML = `
       <a href="#main-content" class="skip-link">Skip to main content</a>
       <a href="#navigation" class="skip-link">Skip to navigation</a>
-      <a href="#footer" class="skip-link">Skip to footer</a>
+      <a href="#footer" class="skip-link">Skip to footer</a>`
     `;
     
-    const style = document.createElement('style');
+    const style = document.createElement('style');`
     style.textContent = `
       .skip-links {};
         position: absolute;
@@ -304,7 +304,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       };
       .skip-link:focus {};
         top: 6px;
-      };
+      };`
     `;
     
     document.head.appendChild(style);
@@ -402,7 +402,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
       >
         ♿
       </button>
-
+`
       <style jsx>{`
         .accessibility-manager {};
           position: fixed;
@@ -537,10 +537,10 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
           font-size: 12px;
           white-space: nowrap;
           z-index: 1000;
-        };
+        };`
       `}</style>
     </div>
   );
 };
 
-export default EnhancedAccessibilityManager;
+export default EnhancedAccessibilityManager;`

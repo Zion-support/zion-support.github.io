@@ -106,8 +106,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
       icon: <Heart className="w-6 h-6 text-red-400" />,
       results: '50% reduction in no-shows'
     }
-  ];
-
+  ] {
   return (
     <>
       <Helmet>
@@ -282,7 +281,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${
-                plan.popular ? 'ring-2 ring-purple-500 bg-slate-700/50' : ''
+                plan.popular ? 'ring-2 ring-purple-500 bg-slate-700/50' : ''`
               }`}>
                 {plan.popular && (
                   <div className="text-center mb-4">
@@ -311,11 +310,11 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
                 </ul>
 
                 <Link
-                  to="/contact"
+                  to="/contact"`
                   className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white'
-                      : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white'
+                      : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white'`
                   }`}
                 >
                   Start Free Trial
@@ -356,4 +355,4 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
   );
 };
 
-export default AIEmailMarketingAutomationPage;
+export default AIEmailMarketingAutomationPage;`

@@ -121,8 +121,7 @@ const AISocialMediaManagerPage: React.FC = () => {
       icon: <Star className="w-6 h-6 text-yellow-400" />,
       results: '200% increase in follower growth'
     }
-  ];
-
+  ] {
   return (
     <>
       <Helmet>
@@ -327,7 +326,7 @@ const AISocialMediaManagerPage: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${
-                plan.popular ? 'ring-2 ring-blue-500 bg-slate-700/50' : ''
+                plan.popular ? 'ring-2 ring-blue-500 bg-slate-700/50' : ''`
               }`}>
                 {plan.popular && (
                   <div className="text-center mb-4">
@@ -356,11 +355,11 @@ const AISocialMediaManagerPage: React.FC = () => {
                 </ul>
 
                 <Link
-                  to="/contact"
+                  to="/contact"`
                   className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white'
-                      : 'border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
+                      : 'border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'`
                   }`}
                 >
                   Start Free Trial
@@ -401,4 +400,4 @@ const AISocialMediaManagerPage: React.FC = () => {
   );
 };
 
-export default AISocialMediaManagerPage;
+export default AISocialMediaManagerPage;`

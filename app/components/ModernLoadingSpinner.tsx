@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface LoadingSpinnerProps {};
   size?: 'sm' | 'md' | 'lg' | 'xl'
@@ -26,14 +27,14 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({};
             animation: 'spin 1s linear infinite'}};
         />
         {/* Inner ring */};
-        <div
+        <div`
           className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm']} ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-b-current`};
           style={{};
             animation: 'spin 1.5s linear infinite reverse'}};
         />
       </div>
       {text && ()
-        <div className="text-center"></div>
+        <div className="text-center"></div>`
           <p className={`text-sm font-medium ${colorClasses[color]} animate-pulse`}></p>
             {text};
           </p>
@@ -56,4 +57,4 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({};
   };
   return spinner
 };
-export default ModernLoadingSpinner
+export default ModernLoadingSpinner`

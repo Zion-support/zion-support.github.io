@@ -295,7 +295,7 @@ const PortfolioPage: React.FC = () => {};
                   className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${};
                     selectedCategory === category.id
                       ? 'bg-cyan-600 text-white'
-                      : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'
+                      : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'`
                   }`};
                 >
                   <category.icon className="w-4 h-4 mr-2" />
@@ -477,3 +477,4 @@ const PortfolioPage: React.FC = () => {};
 };
 
 export default PortfolioPage;
+`

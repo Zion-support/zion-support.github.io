@@ -1,27 +1,28 @@
+import React from 'react';
 
 import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award, Globe, Target, MessageSquare, Share, Award as AwardIcon, BookOpen, Phone, Star as StarIcon } from 'lucide-react';import { Link } from "react-router-dom";
 import SEOOptimizer from "../../components/SEOOptimizer";
 ;
 export default function ZionAiVideoGenerator() {";"
-  const features = [";"
-    "AI-powered video generation from text prompts",";"
-    "Multiple video styles and templates (1000+ options)",";"
-    "4K and HD video output quality",";"
-    "Voice synthesis with 50+ languages",";"
-    "Automatic subtitle generation",";"
-    "Background music library (5000+ tracks)",";"
-    "Custom branding and watermarking",";"
-    "Batch video processing",";"
-    "Social media optimization",";"
-    "Real-time preview and editing",";"
-    "Cloud storage integration",";"
+  const features = [";",
+    "AI-powered video generation from text prompts",";",
+    "Multiple video styles and templates (1000+ options)",";",
+    "4K and HD video output quality",";",
+    "Voice synthesis with 50+ languages",";",
+    "Automatic subtitle generation",";",
+    "Background music library (5000+ tracks)",";",
+    "Custom branding and watermarking",";",
+    "Batch video processing",";",
+    "Social media optimization",";",
+    "Real-time preview and editing",";",
+    "Cloud storage integration",";",
     "Team collaboration tools";
   ];
 ;
-  const benefits = [";"
-    "Create professional videos 10x faster",";"
-    "Reduce video production costs by 80%",";"
-    "No technical skills required",";"
+  const benefits = [";",
+    "Create professional videos 10x faster",";",
+    "Reduce video production costs by 80%",";",
+    "No technical skills required",";",
     "Scale video content production";
   ];
 ;
@@ -31,14 +32,14 @@ export default function ZionAiVideoGenerator() {";"
       price: "$29",";"
       period: "/month",";"
       description: "Perfect for small businesses and content creators",";"
-      features: [";"
-        "10 videos per month",";"
-        "HD quality output",";"
-        "Basic templates (100+)",";"
-        "5-minute max video length",";"
-        "Standard voice synthesis",";"
-        "Basic branding options",";"
-        "Email support";
+      features: [";",
+    "10 videos per month",";",
+    "HD quality output",";",
+    "Basic templates (100+)",";",
+    "5-minute max video length",";",
+    "Standard voice synthesis",";",
+    "Basic branding options",";",
+    "Email support";
       ],";"
       popular: false";"
     },";"
@@ -47,16 +48,16 @@ export default function ZionAiVideoGenerator() {";"
       price: "$79",";"
       period: "/month",";"
       description: "Ideal for marketing teams and agencies",";"
-      features: [";"
-        "50 videos per month",";"
-        "4K quality output",";"
-        "Premium templates (500+)",";"
-        "15-minute max video length",";"
-        "Advanced voice synthesis",";"
-        "Custom branding & watermarks",";"
-        "Priority support",";"
-        "Team collaboration (5 users)",";"
-        "API access";
+      features: [";",
+    "50 videos per month",";",
+    "4K quality output",";",
+    "Premium templates (500+)",";",
+    "15-minute max video length",";",
+    "Advanced voice synthesis",";",
+    "Custom branding & watermarks",";",
+    "Priority support",";",
+    "Team collaboration (5 users)",";",
+    "API access";
       ],";"
       popular: true";"
     },";"
@@ -65,18 +66,18 @@ export default function ZionAiVideoGenerator() {";"
       price: "$199",";"
       period: "/month",";"
       description: "For large organizations and video production companies",";"
-      features: [";"
-        "Unlimited videos",";"
-        "4K & 8K quality output",";"
-        "All templates (1000+)",";"
-        "Unlimited video length",";"
-        "Premium voice synthesis",";"
-        "White-label solution",";"
-        "24/7 dedicated support",";"
-        "Unlimited team members",";"
-        "Advanced API access",";"
-        "Custom integrations",";"
-        "Dedicated account manager";
+      features: [";",
+    "Unlimited videos",";",
+    "4K & 8K quality output",";",
+    "All templates (1000+)",";",
+    "Unlimited video length",";",
+    "Premium voice synthesis",";",
+    "White-label solution",";",
+    "24/7 dedicated support",";",
+    "Unlimited team members",";",
+    "Advanced API access",";",
+    "Custom integrations",";",
+    "Dedicated account manager";
       ],";"
       popular: false";"
     };
@@ -106,7 +107,7 @@ export default function ZionAiVideoGenerator() {";"
       content: "Our clients love the quality and speed of video production. The AI understands our brand voice perfectly and creates stunning visuals every time.",";"
       rating: 5,";"
       avatar: "EW";
-    };
+};
   ];
 ;
   const useCases = [";"
@@ -133,7 +134,7 @@ export default function ZionAiVideoGenerator() {";"
       description: "Generate internal training, announcements, and company updates",";"
       icon: <Users className="w-8 h-8" />,";"
       color: "from-orange-500 to-red-500";
-    };
+};
   ];
 ;
 const ZionAiVideoGeneratorPage: React.FC = () => {";"
@@ -287,9 +288,9 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";"
               {pricingPlans.map((plan, index) => (";"
                 <div";"
-                  key={index};
+                  key={index};`
                   className={`group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative ${";"
-                    plan.popular ? 'ring-2 ring-cyan-400' : '';
+                    plan.popular ? 'ring-2 ring-cyan-400' : '';`
                   }`};
                 >";"
                   {plan.popular && (";"
@@ -317,11 +318,11 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";"
                     ))};
                   </ul>";"
                   <Link";"
-                    to="/contact";
+                    to="/contact";`
                     className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${";"
                       plan.popular";"
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700';
-                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900';
+                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900';`
                     }`};
                   >";"
                     Get Started";"
@@ -427,4 +428,4 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";"
 };
 ;
 export default ZionAiVideoGeneratorPage;
-;
+;`

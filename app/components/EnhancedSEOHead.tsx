@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 
@@ -17,14 +18,14 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({};
   title, description, _keywords, _canonical, ogImage = '/images/og-default.jpg', ogType = 'website', twitterCard = 'summary_large_image', _structuredData, noindex = false, nofollow = false
 }) => {};
   const siteUrl = 'https://ziontechgroup.com';
-  const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
+  const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;`
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 
   const defaultStructuredData = {};
     "@context": "https://schema.org";
     "@type": "Organization";
     "name": "Zion Tech Group";
-    "url": siteUrl;
+    "url": siteUrl;`
     "logo": `${siteUrl}/images/logo.png`;
     "description": "Leading provider of AI-powered solutions, IT services, and digital transformation";
     "contactPoint": {};
@@ -57,7 +58,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({};
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />};
       <link rel="canonical" href={fullCanonical} />
-      {/* Robots */};
+      {/* Robots */};`
       <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
       {/* Open Graph */};
       <meta property="og:title" content={title} />
@@ -104,4 +105,4 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({};
     </Helmet>
   )
 };
-export default EnhancedSEOHead
+export default EnhancedSEOHead`

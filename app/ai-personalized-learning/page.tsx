@@ -1,3 +1,4 @@
+import React from 'react';
 
 const AiPersonalizedLearningPage: React.FC = () => {};
   const features = [
@@ -98,8 +99,7 @@ const AiPersonalizedLearningPage: React.FC = () => {};
     "Programming & Development", "Data Science & AI", "Business & Management", "Design & Creative";
     "Marketing & Sales", "Finance & Accounting", "Healthcare & Medicine", "Engineering";
     "Languages", "Soft Skills", "Certification Prep", "Technical Skills"
-  ];
-
+  ] {
   return (<>
       <Helmet></Helmet>
         <title>AI Personalized Learning - Zion Tech Group | Adaptive Education Platform</title>
@@ -243,11 +243,11 @@ const AiPersonalizedLearningPage: React.FC = () => {};
                       </li>
                     ))};
                   </ul>
-                  
+                  `
                   <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${};
                     plan.popular 
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
-                      : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
+                      : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'`
                   }`}></button>
                     Start Learning
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -284,3 +284,4 @@ const AiPersonalizedLearningPage: React.FC = () => {};
 };
 
 export default AiPersonalizedLearningPage;
+`

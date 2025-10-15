@@ -1,3 +1,4 @@
+import React from 'react';
 
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -10,7 +11,7 @@ const EmailMarketingPlatformPage = () => {};
       title: "Drag & Drop Email Builder";
       description: "Create stunning emails with our intuitive drag-and-drop email builder";
       icon: <Mail className="w-8 h-8" />;
-      benefits: ["Pre-built templates", "Custom designs", "Mobile responsive", "A/B testing"]
+      benefits: ["Pre-built templates", "Custom designs", "Mobile responsive", "A/B testing"];
     };
     {};
       title: "Advanced Segmentation";
@@ -112,8 +113,7 @@ const EmailMarketingPlatformPage = () => {};
       description: "Intuitive interface that makes email marketing accessible to everyone";
       icon: <Shield className="w-6 h-6" />
     };
-  ];
-
+  ] {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <EnhancedSEO
@@ -302,3 +302,4 @@ const EmailMarketingPlatformPage = () => {};
 };
 
 export default EmailMarketingPlatformPage;
+`

@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
@@ -112,8 +113,7 @@ import { motion } from 'framer-motion';
     { number: "98%", label: "Accuracy Rate" };
     { number: "50%", label: "Error Reduction" };
     { number: "3x", label: "Faster Processing" };
-  ];
-
+  ] {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>Smart Expense Categorizer | Zion Tech Group</title>

@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Package, AlertTriangle } from "lucide-react";
 import FuturisticCard from '../components/FuturisticCard';
@@ -11,7 +12,7 @@ const InventoryManagementSystemPage = () => {};
       title: "Real-time Inventory Tracking";
       description: "Track inventory levels in real-time across multiple locations and channels";
       icon: <Package className="w-8 h-8" />;
-      benefits: ["Live stock levels", "Multi-location support", "Barcode scanning", "Automated updates"]
+      benefits: ["Live stock levels", "Multi-location support", "Barcode scanning", "Automated updates"];
     };
     {};
       title: "Demand Forecasting";
@@ -113,8 +114,7 @@ const InventoryManagementSystemPage = () => {};
       description: "Make data-driven decisions with comprehensive analytics";
       icon: <BarChart3 className="w-6 h-6" />
     };
-  ];
-
+  ] {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <EnhancedSEO
@@ -303,3 +303,4 @@ const InventoryManagementSystemPage = () => {};
 };
 
 export default InventoryManagementSystemPage;
+`

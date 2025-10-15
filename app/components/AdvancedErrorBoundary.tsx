@@ -53,8 +53,8 @@ class AdvancedErrorBoundary extends Component<Props, State> {};
   };
 
   handleReportError = () => {};
-    const { error, errorId } = this.state;
-    const subject = `Error Report - ${errorId}`;
+    const { error, errorId } = this.state;`
+    const subject = `Error Report - ${errorId}`;`
     const body = `
 Error Details:
 - Error ID: ${errorId};
@@ -62,9 +62,9 @@ Error Details:
 - Stack: ${error?.stack};
 - Timestamp: ${new Date().toISOString()};
 - User Agent: ${navigator.userAgent};
-- URL: ${window.location.href};
+- URL: ${window.location.href};`
     `;
-    
+    `
     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.open(mailtoLink);
   };
@@ -96,7 +96,7 @@ Error Details:
                   Error Details (Development Only):
                 </h3>
                 <pre className="text-xs text-red-700 dark:text-red-300 whitespace-pre-wrap"></pre>
-                  {this.state.error.message};
+                  {this.state.error.message};`
                   {this.state.error.stack && `\n\n${this.state.error.stack}`};
                 </pre>
                 {this.state.errorId && (
@@ -150,4 +150,4 @@ Error Details:
     return this.props.children;
   };
 };
-export default AdvancedErrorBoundary;
+export default AdvancedErrorBoundary;`

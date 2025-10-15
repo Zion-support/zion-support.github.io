@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface SystemMonitorProps {};
   children?: React.ReactNode
@@ -15,4 +16,4 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({};
     </div>
   )
 };
-export default SystemMonitor
+export default SystemMonitor`

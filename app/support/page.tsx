@@ -46,7 +46,7 @@ const SupportPage: React.FC = () => {";"
       description: 'Browse our comprehensive guides',";"
       action: 'View Docs',";"
       color: 'from-orange-500 to-red-500';
-    };
+};
   ];
 ;
   const priorityLevels = [";"
@@ -86,7 +86,7 @@ const SupportPage: React.FC = () => {";"
     {";"
       question: 'Is there a cost for support?',";"
       answer: 'Basic support is included with all plans. Premium support features and dedicated account management are available for Professional and Enterprise plans.';
-    };
+};
   ];
 ;
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {";"
@@ -95,7 +95,7 @@ const SupportPage: React.FC = () => {";"
       ...prev,";"
       [name]: value";"
     }));
-  };
+};
 ;
   const handleSubmit = async (e: React.FormEvent) => {";"
     e.preventDefault();
@@ -119,7 +119,7 @@ const SupportPage: React.FC = () => {";"
         description: '';
       });
     }, 3000);
-  };
+};
 ;
 export default function Support() {";"
   return (";"

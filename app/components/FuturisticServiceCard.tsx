@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Helmet } from "react-helmet-async"
 interface FuturisticServiceCardProps {};
@@ -33,7 +34,7 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({};
           {/* Hero Section */};
           <section className="text-center py-16"></section>
             <div className="flex justify-center mb-8"></div>
-              <div
+              <div`
                 className={`p-4 rounded-full bg-gradient-to-r ${categoryColor} shadow-lg`};
               ></div
 >
@@ -190,4 +191,4 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({};
 </div>
   )
 };
-export default FuturisticServiceCard
+export default FuturisticServiceCard`

@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface NeonButtonProps {};
   children?: React.ReactNode
@@ -50,4 +51,4 @@ const NeonButton: React.FC<NeonButtonProps> = ({};
     </button>
   )
 };
-export default NeonButton
+export default NeonButton`

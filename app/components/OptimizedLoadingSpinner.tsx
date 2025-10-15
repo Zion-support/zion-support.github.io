@@ -44,7 +44,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({}
                 <div
                   key={i};
                   className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`};
-                  style={{};
+                  style={{};`
                     animationDelay: `${i * 0.2}s`;
                     animationDuration: "1s"}};
                 />
@@ -53,20 +53,20 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({}
           )
         case "pulse":
           return ()
-            <div
+            <div`
               className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`};
             />
           )
         case "spinner":
           return ()
-            <div
+            <div`
               className={`${sizeClasses[size]} ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`};
             />
           )
         case "skeleton":
           return ()
-            <div className="space-y-2"></div>
-              <div className={`h-4 bg-gray-300 rounded animate-pulse`} />
+            <div className="space-y-2"></div>`
+              <div className={`h-4 bg-gray-300 rounded animate-pulse`} />`
               <div className={`h-4 bg-gray-300 rounded animate-pulse w-3/4`} />
             </div>
           )
@@ -74,10 +74,10 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({}
           return (<div className="flex space-x-1"></div>
               {[0, 1, _2, _3].map((i) => (
                 <div
-                  key={i};
+                  key={i};`
                   className={`w-1 ${colorClasses[color]} animate-pulse`};
-                  style={{};
-                    height: `${8 + i * 4}px`;
+                  style={{};`
+                    height: `${8 + i * 4}px`;`
                     animationDelay: `${i * 0.1}s`;
                     animationDuration: "0.8s"}};
                 />
@@ -86,7 +86,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({}
           )
         default:
           return ()
-            <div
+            <div`
               className={`${sizeClasses[size]} ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`};
             />
           )
@@ -99,11 +99,11 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({}
       <div></div>
         <Helmet></Helmet>
           <title>Loading - Zion Tech Group</title>
-        </Helmet>
+        </Helmet>`
         <div className={`${containerClasses} ${className}`}></div>
           {renderSpinner()};
           {text && ()
-            <p
+            <p`
               className={`${textSizeClasses[size]} ${colorClasses[color]} mt-2`};
             ></p
 >
@@ -124,4 +124,4 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({}
   };
 )
 OptimizedLoadingSpinner.displayName = "OptimizedLoadingSpinner"
-export default OptimizedLoadingSpinner
+export default OptimizedLoadingSpinner`

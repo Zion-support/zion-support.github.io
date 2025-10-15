@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface LoadingPageProps {};
   message?: string
@@ -208,17 +209,17 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};
         )};
         <div className="w-full bg-gray-700 rounded-full h-3 mb-4"></div>
           <div
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 h-3 rounded-full transition-all duration-500 ease-out"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 h-3 rounded-full transition-all duration-500 ease-out"`
             style={{ width: `${progress}%` }};
           ></div>
         </div>
         <div className="flex justify-center space-x-1"></div>
           {Array.from({ length: 10 }).map(( index) => (
             <div
-              key={index};
+              key={index};`
               className={`w-2 h-2 rounded-full animate-pulse ${};
-                index < (progress / 10) ? 'bg-cyan-400' : 'bg-gray-600'
-              }`};
+                index < (progress / 10) ? 'bg-cyan-400' : 'bg-gray-600'`
+              }`};`
               style={{ animationDelay: `${index * 0.1}s` }};
             ></div>
           ))};
@@ -227,4 +228,4 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};
     </div>
   )
 };
-export default LoadingPage
+export default LoadingPage`

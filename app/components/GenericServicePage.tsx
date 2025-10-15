@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Helmet } from "react-helmet-async"
 interface GenericServicePageProps {};
@@ -33,7 +34,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({};
           {/* Hero Section */};
           <section className="text-center py-16"></section>
             <div className="flex justify-center mb-8"></div>
-              <div
+              <div`
                 className={`p-4 rounded-full bg-gradient-to-r ${categoryColor} shadow-lg`};
               ></div
 >
@@ -190,4 +191,4 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({};
 </div>
   )
 };
-export default GenericServicePage
+export default GenericServicePage`

@@ -77,22 +77,22 @@ const APIDocsPage: React.FC = () => {};
     "context": {};
       "user_id": "user_123";
       "language": "en"
-    };
+    };`
   }'`'
     };
     'ai-analytics': {};
       title: 'Get Analytics Data';
       description: 'Retrieve analytics data for your application';
       method: 'GET';
-      endpoint: '/api/v1/analytics/data';
-      code: `curl -X GET "https://api.ziontechgroup.com/v1/analytics/data?start_date=2024-01-01&end_date=2024-01-31" \\
+      endpoint: '/api/v1/analytics/data';`
+      code: `curl -X GET "https://api.ziontechgroup.com/v1/analytics/data?start_date=2024-01-01&end_date=2024-01-31" \\`
   -H "Authorization: Bearer YOUR_API_KEY"`
     };
     'content-generation': {};
       title: 'Generate Content';
       description: 'Generate high-quality content using AI';
       method: 'POST';
-      endpoint: '/api/v3/content/generate';
+      endpoint: '/api/v3/content/generate';`
       code: `curl -X POST "https://api.ziontechgroup.com/v3/content/generate" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
@@ -100,7 +100,7 @@ const APIDocsPage: React.FC = () => {};
     "type": "blog_post";
     "topic": "Artificial Intelligence in Business";
     "length": "1000";
-    "tone": "professional"
+    "tone": "professional"`
   }'`'
     };
   };
@@ -244,11 +244,11 @@ const APIDocsPage: React.FC = () => {};
                 {filteredAPIs.map((api) => (
                   <button
                     key={api.id};
-                    onClick={() => setSelectedAPI(api.id)};
+                    onClick={() => setSelectedAPI(api.id)};`
                     className={`w-full p-4 rounded-lg border transition-all duration-300 text-left ${};
                       selectedAPI === api.id
                         ? 'bg-blue-600 border-blue-500 text-white'
-                        : 'bg-slate-700/50 border-slate-600/50 text-gray-300 hover:bg-slate-700/70 hover:border-blue-500/50'
+                        : 'bg-slate-700/50 border-slate-600/50 text-gray-300 hover:bg-slate-700/70 hover:border-blue-500/50'`
                     }`};
                   >
                     <div className="flex items-center mb-2"></div>
@@ -364,4 +364,4 @@ const APIDocsPage: React.FC = () => {};
   );
 };
 
-export default APIDocsPage;
+export default APIDocsPage;`

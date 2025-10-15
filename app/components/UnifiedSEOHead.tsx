@@ -33,7 +33,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({};
   publishedTime;
   modifiedTime = new Date().toISOString();
   section = "Technology";
-  tags = ["AI", "IT Services", "Technology", "Digital Transformation"]
+  tags = ["AI", "IT Services", "Technology", "Digital Transformation"];
 }) => {};
   const location = useLocation();
   const currentUrl = `https://ziontechgroup.com${location.pathname}`;
@@ -236,7 +236,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({};
     ];
 
     let currentPath = '';
-    pathSegments.forEach((segment, index) => {};
+    pathSegments.forEach((segment, index) => {};`
       currentPath += `/${segment}`;
       const name = segment
         .split('-')
@@ -246,7 +246,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({};
       breadcrumbs.push({};
         '@type': 'ListItem';
         position: index + 2;
-        name;
+        name;`
         item: `https://ziontechgroup.com${currentPath}`
       });
     });
@@ -286,6 +286,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({};
 
   return (
     <Helmet></Helmet>
+  );
       {/* Basic Meta Tags */};
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -304,7 +305,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({};
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta property="og:image:height" content="630" />`
       <meta property="og:image:alt" content={`${title} - Zion Tech Group`} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
@@ -387,4 +388,4 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({};
   );
 };
 
-export default UnifiedSEOHead;
+export default UnifiedSEOHead;`

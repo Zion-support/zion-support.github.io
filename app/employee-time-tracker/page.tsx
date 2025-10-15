@@ -1,3 +1,4 @@
+import React from 'react';
 
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -10,7 +11,7 @@ const EmployeeTimeTrackerPage = () => {};
       title: "Automatic Time Tracking";
       description: "Track time automatically with intelligent time detection and manual entry options";
       icon: <Clock className="w-8 h-8" />;
-      benefits: ["Auto-start/stop", "Idle detection", "Manual entry", "Time rounding"]
+      benefits: ["Auto-start/stop", "Idle detection", "Manual entry", "Time rounding"];
     };
     {};
       title: "Project & Task Management";
@@ -112,8 +113,7 @@ const EmployeeTimeTrackerPage = () => {};
       description: "Simple interface that teams love to use every day";
       icon: <Shield className="w-6 h-6" />
     };
-  ];
-
+  ] {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <EnhancedSEO
@@ -302,3 +302,4 @@ const EmployeeTimeTrackerPage = () => {};
 };
 
 export default EmployeeTimeTrackerPage;
+`

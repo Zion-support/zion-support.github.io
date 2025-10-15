@@ -327,7 +327,7 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${
-                plan.popular ? 'ring-2 ring-green-500 bg-slate-700/50' : ''
+                plan.popular ? 'ring-2 ring-green-500 bg-slate-700/50' : ''`
               }`}>
                 {plan.popular && (
                   <div className="text-center mb-4">

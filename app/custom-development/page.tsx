@@ -1,5 +1,6 @@
+import React from 'react';
 
-const CustomDevelopmentPage: React.FC = () => {};
+const CustomDevelopmentPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
@@ -189,3 +190,4 @@ const CustomDevelopmentPage: React.FC = () => {};
 };
 
 export default CustomDevelopmentPage;
+`

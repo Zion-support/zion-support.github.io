@@ -128,11 +128,11 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
                     ))}
                   </ul>
                   <Link
-                    to="/contact"
+                    to="/contact"`
                     className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
                         ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600"
-                        : "border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10"
+                        : "border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10"`
                     }`}
                   >
                     Get Started
@@ -208,3 +208,4 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
 };
 
 export default AiEcommerceOptimizerProPage;
+`

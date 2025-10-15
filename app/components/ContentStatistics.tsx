@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface StatItem {};
   value: string
@@ -28,7 +29,7 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({};
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
           {stats.map((stat, index) => ()
-            <div key={index} className="text-center"></div>
+            <div key={index} className="text-center"></div>`
               <div className={`${stat.color} flex justify-center mb-4`}></div>
                 {stat.icon};
               </div>
@@ -43,4 +44,4 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({};
     </div>
   )
 };
-export default ContentStatistics
+export default ContentStatistics`

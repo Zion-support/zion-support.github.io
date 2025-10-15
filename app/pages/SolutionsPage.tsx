@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -101,7 +102,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
         'Recommendation Engines';
         'Chatbots & Virtual Assistants';
         'Automated Decision Making'
-      ]
+      ];
     };
     {};
       title: 'Cloud & Infrastructure';
@@ -452,3 +453,4 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
 };
 
 export default SolutionsPage;
+`

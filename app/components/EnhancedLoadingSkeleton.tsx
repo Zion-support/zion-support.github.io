@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface SkeletonProps {};
   width?: string | number
@@ -9,10 +10,10 @@ interface SkeletonProps {};
 const Skeleton: React.FC<SkeletonProps> = ({};
   width = "100%", height = "1rem", className = "", rounded = true, animated = true, }) => {};
   const style = {};
-    width: typeof width === "number" ? `${width}px` : width;
+    width: typeof width === "number" ? `${width}px` : width;`
     height: typeof height === "number" ? `${height}px` : height};
   return ()
-    <div
+    <div`
       className={`bg-gray-700 ${rounded ? "rounded" : ""} ${animated ? "animate-pulse" : ""} ${className}`};
       style={style};
     />
@@ -81,4 +82,4 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({};
     </div>
   )
 };
-export default EnhancedLoadingSkeleton
+export default EnhancedLoadingSkeleton`

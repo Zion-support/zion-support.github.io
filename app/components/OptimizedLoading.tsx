@@ -1,3 +1,4 @@
+import React from 'react';
 export default function OptimizedLoading() {};
 }return ()
     <div className="optimized-loading-container"></div>

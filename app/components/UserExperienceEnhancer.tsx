@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface UserExperienceEnhancerProps {};
   children?: React.ReactNode
@@ -15,4 +16,4 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({};
     </div>
   )
 };
-export default UserExperienceEnhancer
+export default UserExperienceEnhancer`

@@ -100,7 +100,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 
   private getSessionId = (): string => {};
     let sessionId = sessionStorage.getItem('sessionId');
-    if (!sessionId) {};
+    if (!sessionId) {};`
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);
     };
@@ -154,7 +154,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     };
 
     // Open issue reporting page with pre-filled data
-    const params = new URLSearchParams(issueData);
+    const params = new URLSearchParams(issueData);`
     window.open(`/report?${params.toString()}`, '_blank');
   };
 
@@ -242,7 +242,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
               </p>
             </div>
           </div>
-
+`
           <style jsx>{`
             .error-boundary {};
               min-height: 100vh;
@@ -398,7 +398,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
               .error-button {};
                 width: 100%;
               };
-            };
+            };`
           `}</style>
         </div>
       );
@@ -406,4 +406,4 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     return children;
   };
 };
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary;`

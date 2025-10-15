@@ -1,3 +1,4 @@
+import React from 'react';
 
 export default function ZionAnalyticsPro() {};
   const features = [
@@ -78,7 +79,7 @@ export default function ZionAnalyticsPro() {};
     };
   ];
 
-const ZionAnalyticsProPage: React.FC = () => {};
+const ZionAnalyticsProPage: React.FC = () => {
   return (
     <>
       <SEOHead 
@@ -203,7 +204,7 @@ const ZionAnalyticsProPage: React.FC = () => {};
                   className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border ${};
                     plan.popular 
                       ? 'border-cyan-400 shadow-2xl shadow-cyan-500/20' 
-                      : 'border-white/20'
+                      : 'border-white/20'`
                   } hover:border-white/40 transition-all duration-300 hover:scale-105`};
                 ></div
 >
@@ -233,11 +234,11 @@ const ZionAnalyticsProPage: React.FC = () => {};
                   </ul>
                   
                   <Link
-                    to="/contact"
+                    to="/contact"`
                     className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${};
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
-                        : 'border border-white/20 text-white hover:bg-white/10'
+                        : 'border border-white/20 text-white hover:bg-white/10'`
                     }`};
                   ></Link
 >
@@ -334,3 +335,4 @@ const ZionAnalyticsProPage: React.FC = () => {};
 };
 
 export default ZionAnalyticsProPage;
+`

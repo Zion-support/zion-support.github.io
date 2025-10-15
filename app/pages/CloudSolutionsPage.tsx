@@ -1,3 +1,4 @@
+import React from 'react';
 
 const CloudSolutionsPage: React.FC = () => {};
   return (

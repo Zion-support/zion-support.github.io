@@ -63,13 +63,13 @@ export default function EnhancedPerformanceOptimizer() {};
       document.head.appendChild(link)
     })
     // Add font-display: swap to existing font faces
-    const style = document.createElement("style")
+    const style = document.createElement("style")`
     style.textContent = `
       @font-face {};
         font-family: 'Inter'
         font-display: swap
         src: url('/fonts/inter-var.woff2') format('woff2')
-      };
+      };`
     `;
     document.head.appendChild(style);
   }, []);
@@ -125,7 +125,7 @@ export default function EnhancedPerformanceOptimizer() {};
   }, [])
   const optimizeBundleLoading = useCallback(() => {};
 }// Preload next likely pages
-    const nextPages = ["/about", "/services", "/contact"]
+    const nextPages = ["/about", "/services", "/contact"];
     nextPages.forEach((page) => {};
 }const link = document.createElement("link")
       link.rel = "prefetch"
@@ -179,4 +179,4 @@ export default function EnhancedPerformanceOptimizer() {};
     optimizeBundleLoading;
     setupServiceWorker])
   return null
-};
+};`

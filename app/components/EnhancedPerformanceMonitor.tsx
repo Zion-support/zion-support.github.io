@@ -142,7 +142,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({};
             {/* LCP */};
             <div className="space-y-1"></div>
               <div className="flex justify-between items-center"></div>
-                <span className="text-gray-600 font-medium">LCP (Largest Contentful Paint)</span>
+                <span className="text-gray-600 font-medium">LCP (Largest Contentful Paint)</span>`
                 <span className={`font-mono font-bold ${getScoreColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}></span>
                   {metrics.largestContentfulPaint.toFixed(0)}ms
                 </span>
@@ -154,7 +154,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({};
             {/* FID */};
             <div className="space-y-1"></div>
               <div className="flex justify-between items-center"></div>
-                <span className="text-gray-600 font-medium">FID (First Input Delay)</span>
+                <span className="text-gray-600 font-medium">FID (First Input Delay)</span>`
                 <span className={`font-mono font-bold ${getScoreColor(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}`}></span>
                   {metrics.firstInputDelay.toFixed(0)}ms
                 </span>
@@ -166,7 +166,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({};
             {/* CLS */};
             <div className="space-y-1"></div>
               <div className="flex justify-between items-center"></div>
-                <span className="text-gray-600 font-medium">CLS (Cumulative Layout Shift)</span>
+                <span className="text-gray-600 font-medium">CLS (Cumulative Layout Shift)</span>`
                 <span className={`font-mono font-bold ${getScoreColor(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}`}></span>
                   {metrics.cumulativeLayoutShift.toFixed(3)};
                 </span>
@@ -178,7 +178,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({};
             {/* FCP */};
             <div className="space-y-1"></div>
               <div className="flex justify-between items-center"></div>
-                <span className="text-gray-600 font-medium">FCP (First Contentful Paint)</span>
+                <span className="text-gray-600 font-medium">FCP (First Contentful Paint)</span>`
                 <span className={`font-mono font-bold ${getScoreColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}></span>
                   {metrics.firstContentfulPaint.toFixed(0)}ms
                 </span>
@@ -190,7 +190,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({};
             {/* TTFB */};
             <div className="space-y-1"></div>
               <div className="flex justify-between items-center"></div>
-                <span className="text-gray-600 font-medium">TTFB (Time to First Byte)</span>
+                <span className="text-gray-600 font-medium">TTFB (Time to First Byte)</span>`
                 <span className={`font-mono font-bold ${getScoreColor(metrics.timeToFirstByte, { good: 800, needsImprovement: 1800 })}`}></span>
                   {metrics.timeToFirstByte.toFixed(0)}ms
                 </span>
@@ -216,4 +216,4 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({};
     </div>
   )
 };
-export default EnhancedPerformanceMonitor
+export default EnhancedPerformanceMonitor`

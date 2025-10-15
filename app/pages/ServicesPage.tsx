@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 import { Zap, Brain, Cloud, Shield, Code, Database, Users, DollarSign, Globe, Settings, Target, TrendingUp, Cpu, Monitor, Eye, Heart, Award, Mic, Video, Image, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from 'lucide-react';
@@ -17,7 +18,7 @@ const ServicesPage: React.FC = () => {};
         'AI Agricultural Intelligence - $99/mo';
         'AI Business Intelligence Pro - $149/mo';
         'AI Code Assistant Pro - $199/mo'
-      ]
+      ];
     };
     {};
       title: 'AI Services';

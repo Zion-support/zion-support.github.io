@@ -1,5 +1,6 @@
+import React from 'react';
 
-const AiMarketingAutomationPage: React.FC = () => {};
+const AiMarketingAutomationPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
@@ -123,11 +124,11 @@ const AiMarketingAutomationPage: React.FC = () => {};
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
               {pricing.map((plan, index) => (
                 <div
-                  key={index};
+                  key={index};`
                   className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${};
                     plan.popular 
                       ? 'border-pink-400 hover:shadow-pink-500/25' 
-                      : 'border-white/20 hover:shadow-pink-500/10'
+                      : 'border-white/20 hover:shadow-pink-500/10'`
                   }`};
                 ></div
 >
@@ -135,7 +136,7 @@ const AiMarketingAutomationPage: React.FC = () => {};
                     <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-center py-2 text-sm font-semibold"></div>
                       Most Popular
                     </div>
-                  )};
+                  )};`
                   <div className={`${plan.popular ? 'pt-8' : ''}`}></div>
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-6">{plan.description}</p>
@@ -157,11 +158,11 @@ const AiMarketingAutomationPage: React.FC = () => {};
                     </ul>
                     
                     <Link
-                      to="/contact"
+                      to="/contact"`
                       className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${};
                         plan.popular
                           ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
-                          : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900'
+                          : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900'`
                       }`};
                     ></Link
 >
@@ -236,3 +237,4 @@ const AiMarketingAutomationPage: React.FC = () => {};
 };
 
 export default AiMarketingAutomationPage;
+`

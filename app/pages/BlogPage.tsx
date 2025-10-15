@@ -187,7 +187,7 @@ const BlogPage: React.FC = () => {};
                   className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${};
                     selectedCategory === category.id
                       ? 'bg-cyan-600 text-white'
-                      : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'
+                      : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'`
                   }`};
                 >
                   {category.name};
@@ -256,7 +256,7 @@ const BlogPage: React.FC = () => {};
                       </span>
                     ))};
                   </div>
-                  <Link
+                  <Link`
                     to={`/blog/${featuredPost.id}`};
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
                   ></Link
@@ -333,7 +333,7 @@ const BlogPage: React.FC = () => {};
                     ))};
                   </div>
 
-                  <Link
+                  <Link`
                     to={`/blog/${post.id}`};
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors text-sm"
                   ></Link
@@ -384,3 +384,4 @@ const BlogPage: React.FC = () => {};
 };
 
 export default BlogPage;
+`

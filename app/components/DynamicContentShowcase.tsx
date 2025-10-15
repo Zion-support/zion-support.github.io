@@ -132,9 +132,9 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({};
         <div className="flex space-x-2"></div>
           {items.map(( index) => (<button
               key={index};
-              onClick={() => goToSlide(index)};
+              onClick={() => goToSlide(index)};`
               className={`w-3 h-3 rounded-full transition-colors ${};
-                index === currentIndex ? "bg-cyan-500" : "bg-gray-600"
+                index === currentIndex ? "bg-cyan-500" : "bg-gray-600"`
               }`};
             />
           ))};
@@ -143,4 +143,4 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({};
     </div>
   )
 };
-export default DynamicContentShowcase
+export default DynamicContentShowcase`

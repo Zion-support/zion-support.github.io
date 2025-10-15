@@ -1,3 +1,4 @@
+import React from 'react';
 
   return (<>
       <Helmet></Helmet>
@@ -142,7 +143,7 @@
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${};
                     plan.popular
                       ? 'border-blue-400 bg-gradient-to-br from-blue-500/10 to-cyan-500/10'
-                      : 'border-white/20 hover:border-blue-400'
+                      : 'border-white/20 hover:border-blue-400'`
                   }`};
                 ></div
 >
@@ -170,11 +171,11 @@
                     ))};
                   </ul>
                   <Link
-                    to="/contact"
+                    to="/contact"`
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${};
                       plan.popular
                         ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
-                        : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900'
+                        : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900'`
                     }`};
                   ></Link
 >
@@ -254,3 +255,4 @@
 };
 
 export default ZionCloudVaultPage;
+`

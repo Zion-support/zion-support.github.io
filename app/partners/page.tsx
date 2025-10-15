@@ -1,7 +1,8 @@
+import React from 'react';
 
 import SEOHead from '../components/SEOHead';
 
-const PartnersPage: React.FC = () => {};
+const PartnersPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
@@ -40,7 +41,7 @@ const PartnersPage: React.FC = () => {};
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${};
                     partner.tier === 'Platinum' ? 'bg-gray-400 text-gray-900' :
                     partner.tier === 'Gold' ? 'bg-yellow-400 text-yellow-900' :
-                    'bg-gray-300 text-gray-900'
+                    'bg-gray-300 text-gray-900'`
                   }`}></span>
                     {partner.tier};
                   </span>
@@ -99,7 +100,7 @@ const PartnersPage: React.FC = () => {};
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 ></div
 >
-                  <div className="text-center mb-6"></div>
+                  <div className="text-center mb-6"></div>`
                     <h3 className={`text-2xl font-bold bg-gradient-to-r ${tier.color} bg-clip-text text-transparent mb-2`}></h3>
                       {tier.name};
                     </h3>
@@ -153,3 +154,4 @@ const PartnersPage: React.FC = () => {};
 };
 
 export default PartnersPage;
+`

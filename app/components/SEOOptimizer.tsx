@@ -30,7 +30,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({};
       };
     ]
     let currentPath = ''
-    pathSegments.forEach((segment, index) => {};
+    pathSegments.forEach((segment, index) => {};`
 }currentPath += `/${segment}`
       const name = segment
         .split('-')
@@ -39,7 +39,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({};
       breadcrumbs.push({};
         "@type": "ListItem";
         "position": index + 2;
-        "name": name;
+        "name": name;`
         "item": `https://ziontechgroup.com${currentPath}`
       })
     })
@@ -182,7 +182,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({};
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta property="og:image:height" content="630" />`
       <meta property="og:image:alt" content={`${title} - Zion Tech Group`} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
@@ -247,4 +247,4 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({};
     </Helmet>
   )
 };
-export default SEOOptimizer
+export default SEOOptimizer`

@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { BarChart3, Globe, Users, CheckCircle, ArrowRight, Target, Zap, Database, TrendingUp } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -10,7 +11,7 @@ const WebsiteAnalyticsToolPage = () => {";"
       title: "Real-time Analytics",";"
       description: "Track website performance in real-time with live visitor data and metrics",";"
       icon: <BarChart3 className="w-8 h-8" />,";"
-      benefits: ["Live visitor tracking", "Real-time metrics", "Instant alerts", "Live dashboards"]
+      benefits: ["Live visitor tracking", "Real-time metrics", "Instant alerts", "Live dashboards"];
     },";"
     {";"
       title: "Visitor Behavior Analysis",";"
@@ -50,12 +51,12 @@ const WebsiteAnalyticsToolPage = () => {";"
       price: "$29",";"
       period: "per month",";"
       description: "Perfect for small websites and blogs",";"
-      features: [";"
-        "Up to 100,000 page views",";"
-        "Basic analytics",";"
-        "Standard reports",";"
-        "Email support",";"
-        "Mobile app access";
+      features: [";",
+    "Up to 100,000 page views",";",
+    "Basic analytics",";",
+    "Standard reports",";",
+    "Email support",";",
+    "Mobile app access";
       ],";"
       popular: false";"
     },";"
@@ -64,13 +65,13 @@ const WebsiteAnalyticsToolPage = () => {";"
       price: "$79",";"
       period: "per month",";"
       description: "Ideal for growing businesses and e-commerce",";"
-      features: [";"
-        "Up to 1M page views",";"
-        "Advanced analytics",";"
-        "Custom dashboards",";"
-        "Priority support",";"
-        "API access",";"
-        "Conversion tracking";
+      features: [";",
+    "Up to 1M page views",";",
+    "Advanced analytics",";",
+    "Custom dashboards",";",
+    "Priority support",";",
+    "API access",";",
+    "Conversion tracking";
       ],";"
       popular: true";"
     },";"
@@ -79,13 +80,13 @@ const WebsiteAnalyticsToolPage = () => {";"
       price: "$199",";"
       period: "per month",";"
       description: "For large websites with advanced needs",";"
-      features: [";"
-        "Unlimited page views",";"
-        "Advanced features",";"
-        "Custom integrations",";"
-        "Dedicated support",";"
-        "Advanced security",";"
-        "Custom development";
+      features: [";",
+    "Unlimited page views",";",
+    "Advanced features",";",
+    "Custom integrations",";",
+    "Dedicated support",";",
+    "Advanced security",";",
+    "Custom development";
       ],";"
       popular: false";"
     };
@@ -113,7 +114,7 @@ const WebsiteAnalyticsToolPage = () => {";"
       icon: <TrendingUp className="w-6 h-6" />";"
     };
   ];
-;
+ {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";"
       <EnhancedSEO";"
         title="Website Analytics Tool - Zion Tech Group | Advanced Web Analytics & Tracking";
@@ -294,4 +295,4 @@ const WebsiteAnalyticsToolPage = () => {";"
 };
 ;
 export default WebsiteAnalyticsToolPage;
-;
+;`

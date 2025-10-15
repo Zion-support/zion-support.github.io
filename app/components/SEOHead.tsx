@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 
@@ -54,7 +55,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({};
     ]
   };
 
-  return (<Helmet></Helmet>
+  return (
+    <Helmet></Helmet>
+  );
       {/* Basic Meta Tags */};
       <title>{title}</title>
       <meta name="description" content={description} />

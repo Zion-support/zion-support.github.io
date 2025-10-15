@@ -1,3 +1,4 @@
+import React from 'react';
 
 <<<<<<< HEAD
 ;
@@ -12,7 +13,7 @@ const FuturisticBackground: React.FC = () => {
           style={{
             backgroundImage: `
               linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)`
             `,
             backgroundSize: '50px 50px',
             animation: 'gridMove 20s linear infinite'
@@ -26,10 +27,10 @@ const FuturisticBackground: React.FC = () => {
           <div
             key={i}
             className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
+            style={{`
+              left: `${Math.random() * 100}%`,`
+              top: `${Math.random() * 100}%`,`
+              animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,`
               animationDelay: `${Math.random() * 2}s`
             }}
           />
@@ -86,18 +87,18 @@ const FuturisticBackground: React.FC = () => {
       <div className="absolute inset-0">
         <div 
           className="absolute w-full h-full"
-          style={{
+          style={{`
             background: `
               radial-gradient(circle at 20% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
               radial-gradient(circle at 80% 80%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 40% 60%, rgba(236, 72, 153, 0.1) 0%, transparent 50%)
+              radial-gradient(circle at 40% 60%, rgba(236, 72, 153, 0.1) 0%, transparent 50%)`
             `,
             animation: 'neonPulse 6s ease-in-out infinite'
           }}
         />
       </div>
 
-      {/* CSS Animations */}
+      {/* CSS Animations */}`
       <style jsx>{`
         @keyframes gridMove {
           0% { transform: translate(0, 0); }
@@ -124,7 +125,7 @@ const FuturisticBackground: React.FC = () => {
         @keyframes neonPulse {
           0%, 100% { opacity: 0.3; }
           50% { opacity: 0.6; }
-        }
+        }`
       `}</style>
     </div>
   );
@@ -132,3 +133,4 @@ const FuturisticBackground: React.FC = () => {
 
 export default FuturisticBackground;
 >>>>>>> cursor/fix-errors-and-merge-to-main-13a9
+`

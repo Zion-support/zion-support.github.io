@@ -35,7 +35,7 @@ const FuturisticHero: React.FC = () => {};
           style={{};
             backgroundImage: `
               linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px);
-              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)`
             `;
             backgroundSize: '50px 50px';
             animation: 'gridMove 20s linear infinite'
@@ -54,10 +54,10 @@ const FuturisticHero: React.FC = () => {};
           <div
             key={index};
             className="absolute text-cyan-400/20"
-            style={{};
-              left: `${20 + index * 20}%`;
-              top: `${30 + index * 15}%`;
-              animation: `floatIcon ${item.duration}s ease-in-out infinite`;
+            style={{};`
+              left: `${20 + index * 20}%`;`
+              top: `${30 + index * 15}%`;`
+              animation: `floatIcon ${item.duration}s ease-in-out infinite`;`
               animationDelay: `${item.delay}s`
             }};
           ></div
@@ -68,7 +68,7 @@ const FuturisticHero: React.FC = () => {};
       </div>
 
       {/* Main Content */};
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>`
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}></div>
           {/* Company Name with Glow Effect */};
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 leading-tight"></h1>
@@ -122,7 +122,7 @@ const FuturisticHero: React.FC = () => {};
               <div 
                 key={index};
                 className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105 group"
-                style={{};
+                style={{};`
                   animationDelay: `${stat.delay}s`;
                   animation: isVisible ? 'fadeInUp 0.6s ease-out forwards' : 'none'
                 }};
@@ -139,7 +139,7 @@ const FuturisticHero: React.FC = () => {};
         </div>
       </div>
 
-      {/* CSS Animations */};
+      {/* CSS Animations */};`
       <style jsx>{`
         @keyframes gridMove {};
           0% { transform: translate(0, 0); };
@@ -168,10 +168,10 @@ const FuturisticHero: React.FC = () => {};
         .animate-gradient-x {};
           background-size: 200% 200%;
           animation: gradient-x 3s ease infinite;
-        };
+        };`
       `}</style>
     </section>
   );
 };
 
-export default FuturisticHero;
+export default FuturisticHero;`

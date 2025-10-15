@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface ThemeToggleProps {};
   children?: React.ReactNode
@@ -15,4 +16,4 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({};
     </div>
   )
 };
-export default ThemeToggle
+export default ThemeToggle`

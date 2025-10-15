@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Calendar, Users, BarChart3, CheckCircle, ArrowRight, Clock, Target, Zap, Shield, Globe } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -10,7 +11,7 @@ const ProjectManagementToolPage = () => {";"
       title: "Task Management",";"
       description: "Create, assign, and track tasks with drag-and-drop functionality",";"
       icon: <CheckCircle className="w-8 h-8" />,";"
-      benefits: ["Visual task boards", "Priority settings", "Due date tracking", "Progress monitoring"]
+      benefits: ["Visual task boards", "Priority settings", "Due date tracking", "Progress monitoring"];
     },";"
     {";"
       title: "Team Collaboration",";"
@@ -50,12 +51,12 @@ const ProjectManagementToolPage = () => {";"
       price: "$29",";"
       period: "per month",";"
       description: "Perfect for small teams getting started",";"
-      features: [";"
-        "Up to 5 team members",";"
-        "Unlimited projects",";"
-        "Basic task management",";"
-        "Email support",";"
-        "5GB storage";
+      features: [";",
+    "Up to 5 team members",";",
+    "Unlimited projects",";",
+    "Basic task management",";",
+    "Email support",";",
+    "5GB storage";
       ],";"
       popular: false";"
     },";"
@@ -64,13 +65,13 @@ const ProjectManagementToolPage = () => {";"
       price: "$79",";"
       period: "per month",";"
       description: "Ideal for growing teams and businesses",";"
-      features: [";"
-        "Up to 25 team members",";"
-        "Advanced analytics",";"
-        "Time tracking",";"
-        "Priority support",";"
-        "50GB storage",";"
-        "API access";
+      features: [";",
+    "Up to 25 team members",";",
+    "Advanced analytics",";",
+    "Time tracking",";",
+    "Priority support",";",
+    "50GB storage",";",
+    "API access";
       ],";"
       popular: true";"
     },";"
@@ -79,13 +80,13 @@ const ProjectManagementToolPage = () => {";"
       price: "$199",";"
       period: "per month",";"
       description: "For large organizations with advanced needs",";"
-      features: [";"
-        "Unlimited team members",";"
-        "Custom integrations",";"
-        "Advanced security",";"
-        "Dedicated support",";"
-        "Unlimited storage",";"
-        "Custom reporting";
+      features: [";",
+    "Unlimited team members",";",
+    "Custom integrations",";",
+    "Advanced security",";",
+    "Dedicated support",";",
+    "Unlimited storage",";",
+    "Custom reporting";
       ],";"
       popular: false";"
     };
@@ -113,7 +114,7 @@ const ProjectManagementToolPage = () => {";"
       icon: <Globe className="w-6 h-6" />";"
     };
   ];
-;
+ {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";"
       <EnhancedSEO";"
         title="Project Management Tool - Zion Tech Group | Team Collaboration & Task Management";
@@ -294,4 +295,4 @@ const ProjectManagementToolPage = () => {";"
 };
 ;
 export default ProjectManagementToolPage;
-;
+;`

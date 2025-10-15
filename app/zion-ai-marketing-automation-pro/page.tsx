@@ -1,3 +1,4 @@
+import React from 'react';
 import {ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, MessageSquare, Users, TrendingUp, Globe, Play, Star, Zap, Star} from 'lucide-react';import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 ;
@@ -7,7 +8,7 @@ export default function ZionAiMarketingAutomationPro() {";"
       title: "AI-Powered Campaign Optimization",";"
       description: "Automatically optimize your marketing campaigns using machine learning algorithms that analyze performance data and adjust targeting, timing, and content in real-time.",";"
       icon: <Target className="w-6 h-6" />,";"
-      benefits: ["Real-time optimization", "A/B testing automation", "Performance prediction", "ROI maximization"]
+      benefits: ["Real-time optimization", "A/B testing automation", "Performance prediction", "ROI maximization"];
     },";"
     {";"
       title: "Intelligent Audience Segmentation",";"
@@ -47,14 +48,14 @@ export default function ZionAiMarketingAutomationPro() {";"
       price: "$149",";"
       period: "/month",";"
       description: "Perfect for small businesses",";"
-      features: [";"
-        "Up to 5,000 contacts",";"
-        "Basic AI features",";"
-        "Email campaigns",";"
-        "Social media integration",";"
-        "Email support",";"
-        "Basic analytics",";"
-        "5 users included";
+      features: [";",
+    "Up to 5,000 contacts",";",
+    "Basic AI features",";",
+    "Email campaigns",";",
+    "Social media integration",";",
+    "Email support",";",
+    "Basic analytics",";",
+    "5 users included";
       ],";"
       popular: false";"
     },";"
@@ -63,15 +64,15 @@ export default function ZionAiMarketingAutomationPro() {";"
       price: "$299",";"
       period: "/month",";"
       description: "Most popular for growing businesses",";"
-      features: [";"
-        "Up to 25,000 contacts",";"
-        "Advanced AI features",";"
-        "Multi-channel campaigns",";"
-        "Priority support",";"
-        "Advanced analytics",";"
-        "Custom workflows",";"
-        "15 users included",";"
-        "API access";
+      features: [";",
+    "Up to 25,000 contacts",";",
+    "Advanced AI features",";",
+    "Multi-channel campaigns",";",
+    "Priority support",";",
+    "Advanced analytics",";",
+    "Custom workflows",";",
+    "15 users included",";",
+    "API access";
       ],";"
       popular: true";"
     },";"
@@ -80,15 +81,15 @@ export default function ZionAiMarketingAutomationPro() {";"
       price: "$599",";"
       period: "/month",";"
       description: "For large organizations",";"
-      features: [";"
-        "Unlimited contacts",";"
-        "AI-powered insights",";"
-        "Custom integrations",";"
-        "24/7 phone support",";"
-        "Advanced security",";"
-        "White-label options",";"
-        "Unlimited users",";"
-        "Dedicated account manager";
+      features: [";",
+    "Unlimited contacts",";",
+    "AI-powered insights",";",
+    "Custom integrations",";",
+    "24/7 phone support",";",
+    "Advanced security",";",
+    "White-label options",";",
+    "Unlimited users",";",
+    "Dedicated account manager";
       ],";"
       popular: false";"
     };
@@ -118,7 +119,7 @@ export default function ZionAiMarketingAutomationPro() {";"
       content: "The multi-channel orchestration has streamlined our entire marketing operation. Our team productivity increased by 80%.",";"
       rating: 5,";"
       avatar: "MS";
-    };
+};
   ];
 ;
   const stats = [";"
@@ -290,7 +291,7 @@ const ZionAiMarketingAutomationProPage: React.FC = () => {";"
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${";"
                     plan.popular";"
                       ? 'border-pink-500/50 shadow-2xl shadow-pink-500/25' ";"
-                      : 'border-white/20 hover:border-pink-500/30';
+                      : 'border-white/20 hover:border-pink-500/30';`
                   }`};
                 >";"
                   {plan.popular && (";"
@@ -318,11 +319,11 @@ const ZionAiMarketingAutomationProPage: React.FC = () => {";"
                     ))};
                   </div>";"
                   <Link";"
-                    to="/contact";
+                    to="/contact";`
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${";"
                       plan.popular";"
                         ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700 shadow-lg hover:shadow-pink-500/25';
-                        : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900';
+                        : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900';`
                     }`};
                   >";"
                     Get Started";"
@@ -428,4 +429,4 @@ const ZionAiMarketingAutomationProPage: React.FC = () => {";"
 };
 ;
 export default ZionAiMarketingAutomationProPage;
-;
+;`

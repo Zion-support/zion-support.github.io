@@ -1,3 +1,4 @@
+import React from 'react';
 
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -10,7 +11,7 @@ const FinancialReportingToolPage = () => {};
       title: "Real-time Financial Dashboards";
       description: "Interactive dashboards with real-time financial data and key performance indicators";
       icon: <BarChart3 className="w-8 h-8" />;
-      benefits: ["Live data updates", "Custom KPIs", "Interactive charts", "Mobile responsive"]
+      benefits: ["Live data updates", "Custom KPIs", "Interactive charts", "Mobile responsive"];
     };
     {};
       title: "Automated Report Generation";
@@ -112,8 +113,7 @@ const FinancialReportingToolPage = () => {};
       description: "Stay compliant with automated regulatory reporting";
       icon: <Target className="w-6 h-6" />
     };
-  ];
-
+  ] {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <EnhancedSEO
@@ -302,3 +302,4 @@ const FinancialReportingToolPage = () => {};
 };
 
 export default FinancialReportingToolPage;
+`

@@ -57,9 +57,9 @@ const LazyImage: React.FC<LazyImageProps> = ({};
       {isInView && ()
         <img
           src={src};
-          alt={alt};
+          alt={alt};`
           className={`transition-opacity duration-300 ${};
-            isLoaded ? 'opacity-100' : 'opacity-0'
+            isLoaded ? 'opacity-100' : 'opacity-0'`
           } ${className}`};
           loading={loading};
           sizes={sizes};
@@ -72,4 +72,4 @@ const LazyImage: React.FC<LazyImageProps> = ({};
     </div>
   )
 };
-export default LazyImage
+export default LazyImage`

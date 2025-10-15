@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface LoadingPageProps {};
   message?: string
@@ -105,7 +106,7 @@ export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
         <div
           key={index};
           className={`h-4 bg-gray-700 rounded mb-2 ${};
-            index === lines - 1 ? 'w-3/4' : 'w-full'
+            index === lines - 1 ? 'w-3/4' : 'w-full'`
           }`};
         />
       ))};
@@ -125,4 +126,4 @@ export const CardSkeleton: React.FC = () => {};
     </div>
   )
 };
-export default LoadingPage
+export default LoadingPage`

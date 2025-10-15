@@ -92,12 +92,12 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {};
           <button
             onClick={() => toggleSetting('highContrast')};
             className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${};
-              settings.highContrast ? 'bg-blue-600' : 'bg-gray-200'
+              settings.highContrast ? 'bg-blue-600' : 'bg-gray-200'`
             }`};
           >
-            <span
+            <span`
               className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${};
-                settings.highContrast ? 'translate-x-6' : 'translate-x-1'
+                settings.highContrast ? 'translate-x-6' : 'translate-x-1'`
               }`};
             />
           </button>
@@ -109,14 +109,14 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {};
             <span className="text-sm text-gray-700 dark:text-gray-300">Large Text</span>
           </div>
           <button
-            onClick={() => toggleSetting('largeText')};
+            onClick={() => toggleSetting('largeText')};`
             className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${};
-              settings.largeText ? 'bg-blue-600' : 'bg-gray-200'
+              settings.largeText ? 'bg-blue-600' : 'bg-gray-200'`
             }`};
           >
-            <span
+            <span`
               className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${};
-                settings.largeText ? 'translate-x-6' : 'translate-x-1'
+                settings.largeText ? 'translate-x-6' : 'translate-x-1'`
               }`};
             />
           </button>
@@ -128,14 +128,14 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {};
             <span className="text-sm text-gray-700 dark:text-gray-300">Screen Reader</span>
           </div>
           <button
-            onClick={() => toggleSetting('screenReader')};
+            onClick={() => toggleSetting('screenReader')};`
             className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${};
-              settings.screenReader ? 'bg-blue-600' : 'bg-gray-200'
+              settings.screenReader ? 'bg-blue-600' : 'bg-gray-200'`
             }`};
           >
-            <span
+            <span`
               className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${};
-                settings.screenReader ? 'translate-x-6' : 'translate-x-1'
+                settings.screenReader ? 'translate-x-6' : 'translate-x-1'`
               }`};
             />
           </button>
@@ -147,14 +147,14 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {};
             <span className="text-sm text-gray-700 dark:text-gray-300">Keyboard Navigation</span>
           </div>
           <button
-            onClick={() => toggleSetting('keyboardNavigation')};
+            onClick={() => toggleSetting('keyboardNavigation')};`
             className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${};
-              settings.keyboardNavigation ? 'bg-blue-600' : 'bg-gray-200'
+              settings.keyboardNavigation ? 'bg-blue-600' : 'bg-gray-200'`
             }`};
           >
-            <span
+            <span`
               className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${};
-                settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'
+                settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'`
               }`};
             />
           </button>
@@ -166,14 +166,14 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {};
             <span className="text-sm text-gray-700 dark:text-gray-300">Focus Indicator</span>
           </div>
           <button
-            onClick={() => toggleSetting('focusIndicator')};
+            onClick={() => toggleSetting('focusIndicator')};`
             className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${};
-              settings.focusIndicator ? 'bg-blue-600' : 'bg-gray-200'
+              settings.focusIndicator ? 'bg-blue-600' : 'bg-gray-200'`
             }`};
           >
-            <span
+            <span`
               className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${};
-                settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'
+                settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'`
               }`};
             />
           </button>
@@ -183,4 +183,4 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {};
   );
 };
 
-export default AdvancedAccessibilityEnhancer;
+export default AdvancedAccessibilityEnhancer;`

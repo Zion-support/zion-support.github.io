@@ -212,7 +212,7 @@ const TutorialsPage: React.FC = () => {};
                   className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${};
                     selectedCategory === category.id
                       ? 'bg-cyan-600 text-white'
-                      : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'
+                      : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'`
                   }`};
                 >
                   {category.name};
@@ -227,11 +227,11 @@ const TutorialsPage: React.FC = () => {};
             <div className="flex gap-2"></div>
               {levels.map((level) => (<button
                   key={level.id};
-                  onClick={() => setSelectedLevel(level.id)};
+                  onClick={() => setSelectedLevel(level.id)};`
                   className={`px-4 py-2 rounded-lg transition-all duration-300 ${};
                     selectedLevel === level.id
                       ? 'bg-purple-600 text-white'
-                      : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'
+                      : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'`
                   }`};
                 >
                   {level.name};
@@ -308,7 +308,7 @@ const TutorialsPage: React.FC = () => {};
                       </span>
                     ))};
                   </div>
-                  <Link
+                  <Link`
                     to={`/tutorials/${featuredTutorial.id}`};
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
                   ></Link
@@ -399,7 +399,7 @@ const TutorialsPage: React.FC = () => {};
                     ))};
                   </div>
 
-                  <Link
+                  <Link`
                     to={`/tutorials/${tutorial.id}`};
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors text-sm"
                   ></Link
@@ -456,3 +456,4 @@ const TutorialsPage: React.FC = () => {};
 };
 
 export default TutorialsPage;
+`
