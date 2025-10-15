@@ -1,106 +1,101 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-import fs from 'fs';'
-import path from 'path';'
-import { execSync } from 'child_process'
-// Function to resolve merge conflicts by keeping the latest version
-function resolveMergeConflicts(content) {}
-  const  lines = content.split('\n');"
-  const  resolvedLines = []
-  let  inConflict = false
-  let  keepContent = false
-  for (let  i = 0; i < lines.length; i++) {}
-    const  line = lines[i]
-      keepContent = true
-      continue
-=======
-#!/usr/bin/env node;
-import fs from 'fs'"";
-import path from 'path'";
-import { execSync } from 'child_process'";
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
-// Function to resolve merge conflicts by keeping the latest version
-function resolveMergeConflicts(content) {}
-  const lines  = content.split('\n')";
-  const resolvedLines  = [];
-  let: inConflict = false;
-  let: keepContent = false;
+// Function to resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has merge conflicts
+    if (!content.includes('<<<<<<< HEAD')) {
+      return false;
+    }
+    
+    console.log(`Fixing merge conflicts in: ${filePath}`);
+    
+    // Split by merge conflict markers and take the first valid section
+    const sections = content.split(/<<<<<<< HEAD\n?/);
+    let resolvedContent = sections[0];
+    
+    for (let i = 1; i < sections.length; i++) {
+      const section = sections[i];
+      const parts = section.split(/=======\n?/);
+      if (parts.length >= 2) {
+        const middlePart = parts[1].split(/>>>>>>> [^\n]+\n?/);
+        if (middlePart.length >= 1) {
+          resolvedContent += middlePart[0];
+        }
+      }
+    }
+    
+    // Clean up any remaining merge conflict markers
+    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n?/g, '');
+    resolvedContent = resolvedContent.replace(/=======\n?/g, '');
+    resolvedContent = resolvedContent.replace(/>>>>>>> [^\n]+\n?/g, '');
+    
+    // Write the resolved content back
+    fs.writeFileSync(filePath, resolvedContent, 'utf8');
+    return true;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Function to find all files with merge conflicts
+function findFilesWithConflicts(dir) {
+  const files = [];
   
-  for (let: i = 0; i < lines.length; i++) {}
-    const line  = lines[i];
+  function walkDir(currentPath) {
+    const items = fs.readdirSync(currentPath);
     
-      keepContent = true;
-      continue;
-
->>>>>>> main
+    for (const item of items) {
+      const fullPath = path.join(currentPath, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        walkDir(fullPath);
+      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
+        try {
+          const content = fs.readFileSync(fullPath, 'utf8');
+          if (content.includes('<<<<<<< HEAD')) {
+            files.push(fullPath);
+          }
+        } catch (error) {
+          // Skip files that can't be read
+        }
+      }
     }
-    
-      inConflict = false
-      keepContent = false
-      continue
-    }
-    
-    if (inConflict && !keepContent) {}
-      continue
-    }
-    
-    resolvedLines.push(line)
   }
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return resolvedLines.join('\n');"
-=======
-  return resolvedLines.join('\n');";";";
->>>>>>> main
-=======
-  return resolvedLines.join('\n')";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+  walkDir(dir);
+  return files;
 }
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // Fix missing semicolons in imports: content = content.replace(/import\s+([^;]+)\s+from\s+['"]([^'"]+)['"]\s*$/gm, 'import $1 from "$2";');"
-  // Fix unterminated strings: content = content.replace(/import\s+([^;]+)\s+from\s+['"]([^'"]*)\s*$/gm, (match, imports, module) => {}"
-    if (!module.endsWith('"') && !module.endsWith("'")) {}"
-      return `import ${imports} from "${module}";`
-    }
-    return match
-  })
-  // Fix JSX syntax issues: content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*$/gm, '<$1>');"
-  return content
-=======
-  // Fix missing semicolons in imports: content = content.replace(/import\s+([^;]+)\s+from\s+['"]([^'"]+)['"]\s*$/gm, 'import $1 from "$2";');";";";";
-=======
-  // Fix missing semicolons in imports: content = content.replace(/import\s+([^;]+)\s+from\s+['"]([^'"]+)['"]\s*$/gm, 'import $1 from "$2")";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-  
-  // Fix unterminated strings: content = content.replace(/import\s+([^;]+)\s+from\s+['"]([^'"]*)\s*$/gm, (match, imports, module) => {}";
-    if (!module.endsWith('"') && !module.endsWith("'")) {}"'"
-      return `import ${imports} from "${module}";`";
-    }
-    return match;
-  });
-  
-  // Fix JSX syntax issues: content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*$/gm, '<$1>')";
-  
-  return content;
->>>>>>> main
+// Main execution
+console.log('Starting merge conflict resolution...');
+
+const appDir = './app';
+const filesWithConflicts = findFilesWithConflicts(appDir);
+
+console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
+
+let fixedCount = 0;
+for (const file of filesWithConflicts) {
+  if (resolveMergeConflicts(file)) {
+    fixedCount++;
+  }
 }
 
-// Function to process a single file
-function processFile(filePath) {}
-  try {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const  content = fs.readFileSync(filePath, 'utf8');"
-=======
-    const: content = fs.readFileSync(filePath, 'utf8');";";";
-=======
-    const content  = fs.readFileSync(filePath, 'utf8')";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-    
->>>>>>> main
-    // Check if file has merge conflicts
+console.log(`Fixed merge conflicts in ${fixedCount} files`);
+
+// Also check and fix any remaining files in the root
+const rootFiles = ['./App.tsx', './api/create-checkout-session.js', './api/create-payment-intent.js'];
+for (const file of rootFiles) {
+  if (fs.existsSync(file)) {
+    resolveMergeConflicts(file);
+  }
+}
+
+console.log('Merge conflict resolution completed!');

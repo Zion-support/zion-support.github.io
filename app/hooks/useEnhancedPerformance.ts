@@ -1,69 +1,89 @@
+import { useState, useRef, useCallback } from 'react';
 
 interface UseEnhancedPerformanceOptions {
-<<<<<<< HEAD
-  // Add your options here
+  enablePreloading?: boolean;
+  enableLazyLoading?: boolean;
+  enableCodeSplitting?: boolean;
+  enableImageOptimization?: boolean;
 }
 
 interface UseEnhancedPerformanceState {
-  // Add your state here
+  isPreloading: boolean;
+  isLazyLoading: boolean;
+  loadedResources: Set<string>;
 }
 
-export const  UseEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
-  const  stateRef = useRef<UseEnhancedPerformanceState>({
-    // Initialize your state here
-  })
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
+  const {
+    enablePreloading = true,
+    enableLazyLoading = true
+  } = options;
 
-  // Add your hooks logic here
-  useEffect(() => {
-    // Add your effect logic here
-  }, [])
-
-  return {
-    // Return your hook values here
-  }
-}
-
-export default UseEnhancedPerformance;';'
-=======
-  // Add your options here;
-};
-interface UseEnhancedPerformanceState {
-  // Add your state here;
-<<<<<<< HEAD
-};
-export const UseEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {,
-  }) => {;
-    const stateRef = useRef<UseEnhancedPerformanceState>({;
-    // Initialize your state here;
-  
-=======
-}
-;
-export const UseEnhancedPerformance  = (options: UseEnhancedPerformanceOptions = {}) => {
-  const stateRef  = useRef<UseEnhancedPerformanceState>({// Initialize your state here;
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+  const [state, setState] = useState<UseEnhancedPerformanceState>({
+    isPreloading: false,
+    isLazyLoading: false,
+    loadedResources: new Set()
   });
 
-  // Add your hooks logic here;
-  useEffect(() => {
-    // Add your effect logic here;
-  }, [
-  ]);
+  const stateRef = useRef<UseEnhancedPerformanceState>(state);
+
+  const preloadResource = useCallback((url: string, type: 'script' | 'style' | 'image' | 'font' = 'script') => {
+    if (!enablePreloading || stateRef.current.loadedResources.has(url)) {
+      return;
+    }
+
+    setState(prev => ({
+      ...prev,
+      isPreloading: true,
+      loadedResources: new Set([...prev.loadedResources, url])
+    }));
+
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = url;
+    link.as = type;
+    document.head.appendChild(link);
+
+    link.onload = () => {
+      setState(prev => ({
+        ...prev,
+        isPreloading: false
+      }));
+    };
+  }, [enablePreloading]);
+
+  const lazyLoadImage = useCallback((img: HTMLImageElement, src: string) => {
+    if (!enableLazyLoading) {
+      img.src = src;
+      return;
+    }
+
+    setState(prev => ({
+      ...prev,
+      isLazyLoading: true
+    }));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          img.src = src;
+          observer.unobserve(img);
+          setState(prev => ({
+            ...prev,
+            isLazyLoading: false
+          }));
+        }
+      });
+    });
+
+    observer.observe(img);
+  }, [enableLazyLoading]);
 
   return {
-    // Return your hook values here;
+    ...state,
+    preloadResource,
+    lazyLoadImage
   };
 };
-<<<<<<< HEAD
 
-export default UseEnhancedPerformance;';';";";";";
-"
-=======
-;
-<<<<<<< HEAD
-export default UseEnhancedPerformance;';';";";";
->>>>>>> main
->>>>>>> main
-=======
-export default UseEnhancedPerformance''"";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+export default useEnhancedPerformance;

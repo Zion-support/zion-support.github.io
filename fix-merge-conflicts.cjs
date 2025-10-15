@@ -1,82 +1,100 @@
-const lines = content.split('\n');
-    const fixedLines = [];
-    let inConflict = false;
-    let keepContent = false;
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      if (line.includes('')) {
-        keepContent = true;
-        continue;
-      }
-      if (line.includes('ursor/analyze-improve-and-merge-code-b7b5')) {
-        inConflict = false;
-        keepContent = false;
-        continue;
-      }
-      if (!inConflict || keepContent) {
-        fixedLines.push(line);
-      }
-    }
-    const fixedContent = fixedLines.join('\n');
-    fs.writeFileSync(filePath, fixedContent, 'utf8');
-    console.log(`Fixed merge conflicts in ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-}
-// Fix all files
-filesWithConflicts.forEach(fixMergeConflicts);
-console.log('All merge conflicts fixed!');
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-function fixMergeConflicts(filePath) {
+const fs = require('fs');
+const path = require('path');
+
+// Function to resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, "utf8");
+    let content = fs.readFileSync(filePath, 'utf8');
+    
     // Check if file has merge conflicts
-    if (!content.includes(")
-    const lines = content.split("\n");
-    const newLines = [];
-    let inConflict = false;
-    let keepLines = false;
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      if (line.startsWith("")) {
-        keepLines = true;
-        continue;
-      }
-      if (line.startsWith(">>>>>>>")) {
-        inConflict = false;
-        keepLines = false;
-        continue;
-      }
-      if (!inConflict || keepLines) {
-        newLines.push(line);
+    if (!content.includes('<<<<<<< HEAD')) {
+      return false;
+    }
+    
+    console.log(`Fixing merge conflicts in: ${filePath}`);
+    
+    // Split by merge conflict markers and take the first valid section
+    const sections = content.split(/<<<<<<< HEAD\n?/);
+    let resolvedContent = sections[0];
+    
+    for (let i = 1; i < sections.length; i++) {
+      const section = sections[i];
+      const parts = section.split(/=======\n?/);
+      if (parts.length >= 2) {
+        const middlePart = parts[1].split(/>>>>>>> [^\n]+\n?/);
+        if (middlePart.length >= 1) {
+          resolvedContent += middlePart[0];
+        }
       }
     }
-    const newContent = newLines.join("\n");
-    fs.writeFileSync(filePath, newContent, "utf8");
+    
+    // Clean up any remaining merge conflict markers
+    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n?/g, '');
+    resolvedContent = resolvedContent.replace(/=======\n?/g, '');
+    resolvedContent = resolvedContent.replace(/>>>>>>> [^\n]+\n?/g, '');
+    
+    // Write the resolved content back
+    fs.writeFileSync(filePath, resolvedContent, 'utf8');
     return true;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
-// Get all files with merge conflicts
-const { execSync } = require("child_process");
-const files = execSync(
-  'find /workspace/app -name "*.tsx" -exec grep -l "" {} \\;',
-  { encoding: "utf8" },
-)
-  .trim()
-  .split("\n")
-  .filter((f) => f.length > 0);
-console.log(`Found ${files.length} files with merge conflicts`);
+
+// Function to find all files with merge conflicts
+function findFilesWithConflicts(dir) {
+  const files = [];
+  
+  function walkDir(currentPath) {
+    const items = fs.readdirSync(currentPath);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentPath, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        walkDir(fullPath);
+      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
+        try {
+          const content = fs.readFileSync(fullPath, 'utf8');
+          if (content.includes('<<<<<<< HEAD')) {
+            files.push(fullPath);
+          }
+        } catch (error) {
+          // Skip files that can't be read
+        }
+      }
+    }
+  }
+  
+  walkDir(dir);
+  return files;
+}
+
+// Main execution
+console.log('Starting merge conflict resolution...');
+
+const appDir = './app';
+const filesWithConflicts = findFilesWithConflicts(appDir);
+
+console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
+
 let fixedCount = 0;
-files.forEach((file) => {
-  if (fixMergeConflicts(file)) {
+for (const file of filesWithConflicts) {
+  if (resolveMergeConflicts(file)) {
     fixedCount++;
   }
-});
+}
+
 console.log(`Fixed merge conflicts in ${fixedCount} files`);
-ursor/comprehensive-app-audit-and-update-8a56
+
+// Also check and fix any remaining files in the root
+const rootFiles = ['./App.tsx', './api/create-checkout-session.js', './api/create-payment-intent.js'];
+for (const file of rootFiles) {
+  if (fs.existsSync(file)) {
+    resolveMergeConflicts(file);
+  }
+}
+
+console.log('Merge conflict resolution completed!');
