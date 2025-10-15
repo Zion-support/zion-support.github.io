@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, AlertTriangle, XCircle, Clock, RefreshCw, Activity, Server, Database, Globe } from 'lucide-react';
+import { Activity, AlertTriangle, Check, CheckCircle, Clock, Database, Globe, RefreshCw, Server, User, XCircle } from 'lucide-react';
 
 const StatusPage: React.FC = () => {
   const [lastUpdated, setLastUpdated] = useState(new Date());

@@ -1,3 +1,4 @@
+import { CheckCircle, RefreshCw, Target, TrendingUp, Users, Lightbulb } from 'lucide-react';
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from "lucide-react";

@@ -1,3 +1,4 @@
+import { User } from 'lucide-react';
 interface LogLevel { ERROR: 'error';
   WARN: 'warn';
   INFO: 'info';
@@ -32,13 +33,10 @@ class Logger { private isDevelopment = process.env.NODE_ENV === 'development';
     const formattedMessage = this.formatMessage(entry);
     // Console logging
     switch (level) { case 'error':
-        console.error(formattedMessage);
         break;
       case 'warn':
-        console.warn(formattedMessage);
         break;
       case 'info':
-        console.info(formattedMessage);
         break;
       case 'debug':
         if (this.isDevelopment) {

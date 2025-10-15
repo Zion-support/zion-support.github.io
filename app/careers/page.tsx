@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { MapPin, Clock, Users, Award, ArrowRight, CheckCircle, Heart, Zap } from 'lucide-react';
+import { ArrowRight, Award, CheckCircle, Clock, Heart, MapPin, Users, Zap } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   const openPositions = [

@@ -2,16 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Database, 
-  Eye, 
-  Zap, 
-  Shield,
-  ArrowRight,
-  CheckCircle
-} from 'lucide-react';
+import { BarChart3, CheckCircle, Database, Eye, Shield, TrendingUp, Zap } from 'lucide-react';
 
 const AiAnalyticsDashboardPage: React.FC = () => {
   const features = [

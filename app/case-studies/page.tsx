@@ -1,6 +1,6 @@
+import { CheckCircle, ArrowRight, Filter, Award, TrendingUp, Clock, Users } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ExternalLink, ArrowRight, CheckCircle, TrendingUp, Users, Clock, Award } from 'lucide-react';
 
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [

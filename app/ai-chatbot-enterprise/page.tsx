@@ -1,19 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Bot, 
-  MessageCircle, 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  Settings,
-  ArrowRight,
-  CheckCircle,
-  Users,
-  Globe,
-  Clock
-} from 'lucide-react';
+import { BarChart3, Bot, CheckCircle, Globe, MessageCircle, Settings, Shield, Users, Zap } from 'lucide-react';
 
 const AiChatbotEnterprisePage: React.FC = () => {
   const features = [

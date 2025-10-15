@@ -1,21 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Code, 
-  Globe, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Phone, 
-  Mail, 
-  Play, 
-  Terminal, 
-  GitBranch, 
-  Bug, 
-  FileText, 
-  Cpu, 
-  Cloud, 
-  Brain, 
-  Database } from 'lucide-react';
+import { Brain, Bug, CheckCircle, Cloud, Code, Cpu, Database, FileText, GitBranch, Globe, Star, Terminal } from 'lucide-react';
 
 const AiCodeAssistantProPage = () => { const [isVisible, setIsVisible] = useState(false);
 
