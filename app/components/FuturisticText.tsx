@@ -1,6 +1,10 @@
-<<<<<<< HEAD
-
+ursor/fix-errors-and-merge-to-main-234b
+      {children}
+    </div>
+  );
+}
 =======
+<<<<<<< HEAD
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 
@@ -13,6 +17,8 @@ export default function Futuristictext({ className = '', children, ...props }: F
   );
 }
 =======
+=======
+>>>>>>> main
 interface FuturisticTextProps {},
       children: React.ReactNode,
       variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'gradient' | 'neon','

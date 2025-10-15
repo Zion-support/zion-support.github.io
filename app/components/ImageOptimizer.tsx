@@ -10,12 +10,8 @@ import React, { useState, useRef, useEffect } from 'react',
       placeholder?: string;
 }
 
-<<<<<<< HEAD
-export default function ImageOptimizer({
-  src,
-  alt,
-  className = '',
-  lazy = true,
+<<<<<<< HEADursor/fix-errors-and-merge-to-main-234b
+>>>>>>> main
   placeholder
 }: ImageOptimizerProps) {
   return (

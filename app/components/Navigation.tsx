@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+'use client';
+import React, { useState, useCallback } from 'react';
+=======
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 <<<<<<< HEAD
@@ -537,6 +541,7 @@ import React, { useState } from 'react',
   )
 
 import React, { useState } from 'react';
+>>>>>>> main
 import { Link, useLocation } from 'react-router-dom';
 import {
   Bars3Icon,
@@ -603,6 +608,27 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       ]
     },
     {
+<<<<<<< HEAD
+      name: 'About',
+      path: '/about',
+      icon: <Globe className="w-4 h-4" />
+    },
+    {
+      name: 'Services',
+      path: '/services',
+      icon: <Zap className="w-4 h-4" />
+    },
+    {
+      name: 'AI Solutions',
+      path: '/ai-services',
+      icon: <Brain className="w-4 h-4" />
+    },
+    {
+      name: 'Contact',
+      path: '/contact',
+      icon: <Shield className="w-4 h-4" />
+    }
+=======
       name: 'Micro SaaS',";
       href: '/micro-saas-solutions',";
       icon: GlobeAltIcon,
@@ -658,12 +684,27 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },";
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }";
+>>>>>>> main
   ];
+
+  const toggleMobileMenu = useCallback(() => {
+    setIsOpen(prev => !prev);
+  }, []);
 
   const isActive = (path: string) => {
     return location.pathname === path,
   };
 
+<<<<<<< HEAD
+  return (
+    <nav className="bg-slate-900/90 backdrop-blur-sm border-b border-purple-500/20 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link to="/" className="text-2xl font-bold text-white hover:text-purple-400 transition-colors">
+              Zion Tech Group
+=======
   const toggleServicesMenu = () => {
     setIsServicesOpen(!isServicesOpen);
     setIsSolutionsOpen(false);
@@ -703,10 +744,27 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </div>
               <span className ="ml-2 text-white font-bold text-lg">Zion Tech Group</span>",
 >>>>>>> main
+>>>>>>> main
             </Link>
           </div>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
+          <div className="hidden md:flex items-center space-x-8">
+            {navigationItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  isActive(item.path)
+                    ? 'text-purple-400 bg-purple-500/20'
+                    : 'text-gray-300 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                {item.icon}
+                <span>{item.name}</span>
+              </Link>
+=======
 <<<<<<< HEAD
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             {navigation.map((item) => (
@@ -787,10 +845,34 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 >>>>>>> main
                 )}
               </div>
+>>>>>>> main
             ))}
           </div>
 
           {/* Mobile menu button */}
+<<<<<<< HEAD
+          <div className="md:hidden flex items-center space-x-4">
+            {onSidebarToggle && (
+              <button
+                onClick={onSidebarToggle}
+                className="text-gray-300 hover:text-white p-2"
+                aria-label="Toggle sidebar"
+              >
+                <Menu className="h-6 w-6" />
+              </button>
+            )}
+            <button
+              onClick={toggleMobileMenu}
+              className="text-gray-300 hover:text-white p-2"
+              aria-label="Toggle mobile menu"
+            >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+=======
 <<<<<<< HEAD
           <div className="lg:hidden flex items-center">
             <button
@@ -875,7 +957,31 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 >>>>>>> main
           </div>
         </div>
+>>>>>>> main
       </div>
+
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className="md:hidden bg-slate-900/95 backdrop-blur-sm border-t border-purple-500/20">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            {navigationItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                onClick={() => setIsOpen(false)}
+                className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  isActive(item.path)
+                    ? 'text-purple-400 bg-purple-500/20'
+                    : 'text-gray-300 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                {item.icon}
+                <span>{item.name}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
 

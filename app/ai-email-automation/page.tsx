@@ -1,3 +1,5 @@
+import React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -109,6 +111,18 @@ const Page = () => {
                 View Demo
               </Link>
             </div>
+=======
+import { Helmet } from 'react-helmet-async';
+import { Brain, Shield, Zap } from 'lucide-react';
+
+export default function PagePage() {ursor/fix-errors-and-merge-to-main-234b
+        </div>
+      </div>
+    </div>
+  );
+}ursor/fix-errors-and-merge-to-main-234b
+=======
+>>>>>>> main
           </div>
         </section>
         {/* Features Section */}

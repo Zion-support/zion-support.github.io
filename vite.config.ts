@@ -84,6 +84,10 @@ export default defineConfig({
       },
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    // Tree shaking is enabled by default in Vite
+>>>>>>> main
 =======
     // Optimize chunk size
     chunkSizeWarningLimit: 1000,

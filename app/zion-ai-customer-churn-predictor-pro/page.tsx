@@ -16,7 +16,11 @@ import {
   Globe,
   Heart,
   MousePointer
+<<<<<<< HEAD
 } from 'lucide-react';
+=======
+} from 'lucide-react';ursor/fix-errors-and-merge-to-main-234b
+>>>>>>> main
 
 const ZionAICustomerChurnPredictorProPage: React.FC = () => {
   const features = [

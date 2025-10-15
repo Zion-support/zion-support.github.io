@@ -16,7 +16,11 @@ import {
   AlertTriangle,
   ShoppingCart,
   Truck
+<<<<<<< HEAD
 } from 'lucide-react';
+=======
+} from 'lucide-react';ursor/fix-errors-and-merge-to-main-234b
+>>>>>>> main
 
 const ZionAIInventoryOptimizerProPage: React.FC = () => {
   const features = [

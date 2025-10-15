@@ -8,12 +8,20 @@ import {
   CheckCircle, 
   Star, 
   Clock, 
+<<<<<<< HEAD
   Users, 
+=======
+  Users,
+>>>>>>> main
   Target, 
   Sparkles,
   Cpu,
   Globe
+<<<<<<< HEAD
 } from 'lucide-react';
+=======
+} from 'lucide-react';ursor/fix-errors-and-merge-to-main-234b
+>>>>>>> main
 
 const ZionAISocialSchedulerProPage: React.FC = () => {
   const features = [

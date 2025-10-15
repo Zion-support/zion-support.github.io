@@ -14,7 +14,11 @@ import {
   Target,
   Cpu,
   Globe
+<<<<<<< HEAD
 } from 'lucide-react';
+=======
+} from 'lucide-react';ursor/fix-errors-and-merge-to-main-234b
+>>>>>>> main
 
 const ZionAIWorkflowAutomatorProPage: React.FC = () => {
   const features = [

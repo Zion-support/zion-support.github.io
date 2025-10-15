@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -55,6 +56,10 @@ export default function Page() {
                 Our team of experts delivers cutting-edge page solutions.;
               </p>
             </div>
+=======
+ursor/fix-errors-and-merge-to-main-234b
+=======
+>>>>>>> main
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">;""
               <h3 className="text-lg font-semibold text-green-900 mb-2">;""
                 Custom Implementation;

@@ -11,6 +11,7 @@ import {
   Clock, 
   Zap, 
   Sparkles,
+<<<<<<< HEAD
   TrendingUp,
   Cpu,
   Send,
@@ -18,6 +19,11 @@ import {
   MousePointer,
   Shield
 } from 'lucide-react';
+=======
+  MousePointer,
+  Shield
+} from 'lucide-react';ursor/fix-errors-and-merge-to-main-234b
+>>>>>>> main
 
 const ZionAIEmailMarketingProPage: React.FC = () => {
   const features = [
