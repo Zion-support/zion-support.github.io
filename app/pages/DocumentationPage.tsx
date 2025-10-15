@@ -197,7 +197,7 @@ export default function DocumentationPage() {
               Get started quickly with our code examples and sample implementations
             </p>
 
-            <$3 className="bg-slate-800 p-8 rounded-xl border border-slate-600 mb-8">
+            <div className="bg-slate-800 p-8 rounded-xl border border-slate-600 mb-8">
               <h3 className="text-xl font-bold text-white mb-4">Basic API Call Example</h3>
               <pre className="text-left text-green-400 overflow-x-auto">
                 <code>{`// Initialize the client
@@ -214,7 +214,7 @@ console.log(response.data);`}</code>
               </pre>
             </div>
 
-            <$3 className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-slate-800 p-6 rounded-lg border border-slate-600">
                 <h4 className="text-white font-semibold mb-2">JavaScript/Node.js</h4>
                 <p className="text-gray-400 text-sm mb-4">Complete examples for web applications</p>
@@ -252,7 +252,7 @@ console.log(response.data);`}</code>
               Can't find what you're looking for? Our support team is here to help
             </p>
 
-            <$3 className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="flex items-center justify-center gap-4 text-gray-300">
                 <PhoneIcon className="w-6 h-6 text-green-400" />
                 <span>+1-302-464-0950</span>
