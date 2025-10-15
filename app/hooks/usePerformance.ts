@@ -27,44 +27,41 @@ export function usePerformance(componentName: string) {}
     }
   })
   // Debounced function for expensive operations
-  const debounce = useCallback()
-    <T extends (...args: any[]) => any>()
+  const debounce = useCallback(_<T extends (...args: any[]) => any>(
       func: T,
       delay: number
-    ): ((...args: Parameters<T>) => void) => {}
-}let timeoutId: NodeJS.Timeout
-      return (...args: Parameters<T>) => {}
-}clearTimeout(timeoutId)
-        timeoutId = setTimeout(() => func(...args), delay)
-      }
+    ): ((...args: Parameters<T>) => void) => {
+      let timeoutId: NodeJS.Timeout;
+      return (_...args: Parameters<T>) => {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => func(...args), delay);
+      };
     },
     []
   )
   // Throttled function for frequent operations
-  const throttle = useCallback()
-    <T extends (...args: any[]) => any>()
+  const throttle = useCallback(_<T extends (...args: any[]) => any>(
       func: T,
       delay: number
-    ): ((...args: Parameters<T>) => void) => {}
-}let lastCall = 0
-      return (...args: Parameters<T>) => {}
-}const now = Date.now()
-        if (now - lastCall >= delay) {}
-          lastCall = now
-          func(...args)
+    ): ((...args: Parameters<T>) => void) => {
+      let lastCall = 0;
+      return (_...args: Parameters<T>) => {
+        const now = Date.now();
+        if (now - lastCall >= delay) {
+          lastCall = now;
+          func(...args);
         }
       }
     },
     []
   )
   // Memoization helper
-  const memoize = useCallback()
-    <T extends (...args: any[]) => any>(func: T): T => {}
-}const cache = new Map()
-      return ((...args: Parameters<T>) => {}
-}const key = JSON.stringify(args)
-        if (cache.has(key)) {}
-          return cache.get(key)
+  const memoize = useCallback(_<T extends (...args: any[]) => any>(func: T): T => {
+      const cache = new Map();
+      return ((...args: Parameters<T>) => {
+        const key = JSON.stringify(args);
+        if (cache.has(key)) {
+          return cache.get(key);
         }
         const result = func(...args)
         cache.set(key, result)
@@ -75,14 +72,15 @@ export function usePerformance(componentName: string) {}
   )
   // Note: useIntersectionObserver is now a separate hook
   // Performance measurement helper
-  const measurePerformance = useCallback()
-    (operation: string, fn: () => void) => {}
-}const start = performance.now()
-      fn()
-      const end = performance.now()
-      const duration = end - start
-      logger.performance(operation, duration, { componentName })
-      return duration
+  const measurePerformance = useCallback(operation: string, fn: () => void) => {
+      const start = performance.now();
+      fn();
+      const end = performance.now();
+      const duration = end - start;
+
+      logger.performance(operation, duration, { componentName });
+
+      return duration;
     },
     [componentName]
   )

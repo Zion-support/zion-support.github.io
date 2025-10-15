@@ -10,34 +10,28 @@ interface OptimizedLoadingSpinnerProps {}
   color?: "blue" | "gray" | "green" | "red" | "purple"
   fullScreen?: boolean
 }
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo()
-  ({}
-    size = "md",
-    variant = "spinner",
-    text = "Loading...",
-    className = "",
-    color = "blue",
-    fullScreen = false}) => {}
-}const sizeClasses = useMemo()
-      () => ({}
+
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({
+    size = "md", variant = "spinner", text = "Loading...", className = "", color = "blue", fullScreen = false, }) => {
+    const sizeClasses = useMemo(() => ({
         xs: "h-3 w-3",
         sm: "h-4 w-4",
         md: "h-8 w-8",
         lg: "h-12 w-12",
         xl: "h-16 w-16"}),
       [],
-    )
-    const textSizeClasses = useMemo()
-      () => ({}
+    );
+
+    const textSizeClasses = useMemo(() => ({
         xs: "text-xs",
         sm: "text-sm",
         md: "text-base",
         lg: "text-lg",
         xl: "text-xl"}),
       [],
-    )
-    const colorClasses = useMemo()
-      () => ({}
+    );
+
+    const colorClasses = useMemo(() => ({
         blue: "text-blue-500",
         gray: "text-gray-500",
         green: "text-green-500",
@@ -48,9 +42,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo()
     const renderSpinner = () => {}
 }switch (variant) {}
         case "dots":
-          return ()
-            <div className="flex space-x-1">
-              {[0, 1, 2].map((i) => ()
+          return (<div className="flex space-x-1">
+              {[0, 1, _2].map((i) => (
                 <div
                   key={i}
                   className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`}
@@ -81,9 +74,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo()
             </div>
           )
         case "bars":
-          return ()
-            <div className="flex space-x-1">
-              {[0, 1, 2, 3].map((i) => ()
+          return (<div className="flex space-x-1">
+              {[0, 1, _2, _3].map((i) => (
                 <div
                   key={i}
                   className={`w-1 ${colorClasses[color]} animate-pulse`}

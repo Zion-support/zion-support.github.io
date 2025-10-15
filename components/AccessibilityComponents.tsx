@@ -1,5 +1,14 @@
 // Accessibility components
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react';
+
+// Type definitions for better type safety
+
+// Import utilities
+import { focusManagement, ariaUtils, keyboardNavigation } from './utils/accessibilityUtils';
+
+// Re-export utilities
+export { focusManagement, ariaUtils, keyboardNavigation };
+
 // Skip link component
 export const SkipLink: React.FC<{ target: string; children: React.ReactNode }> = ({}
   target,

@@ -5,12 +5,10 @@ interface LoadingSpinnerProps {}
   text?: string
   fullScreen?: boolean
 }
-const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({}
-  size = 'md',
-  color = 'primary',
-  text,
-  fullScreen = false}) => {}
-}const sizeClasses = {}
+
+const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md', color = 'primary', text, fullScreen = false, _}) => {
+  const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',

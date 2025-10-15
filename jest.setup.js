@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Mock TextEncoder and TextDecoder for Node.js environment
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
@@ -36,6 +37,20 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
+=======
+import '@testing-library/jest-dom';
+import React from 'react';
+import { TextEncoder, TextDecoder } from 'util';
+
+// Polyfill for TextEncoder/TextDecoder
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
+// Mock window.matchMedia
+Object.defineProperty(window, "matchMedia", {
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+>>>>>>> cursor/fix-errors-and-merge-to-main-08b8
     matches: false,
     media: query,
     onchange: null,
@@ -59,6 +74,7 @@ const localStorageMock = {
   removeItem: jest.fn(),
   clear: jest.fn(),
 };
+<<<<<<< HEAD
 global.localStorage = localStorageMock;
 
 // Mock sessionStorage
@@ -81,3 +97,23 @@ console.error = (...args) => {
   }
   originalError.call(console, ...args);
 };
+=======
+
+Object.defineProperty(window, 'localStorage', {
+  value: localStorageMock,
+});
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock window.gtag
+global.gtag = jest.fn();
+
+// Mock window.dataLayer
+global.dataLayer = [];
+>>>>>>> cursor/fix-errors-and-merge-to-main-08b8

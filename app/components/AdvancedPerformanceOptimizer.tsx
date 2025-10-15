@@ -6,12 +6,11 @@ interface PerformanceOptimizerProps {}
   enableCaching?: boolean
   enableCompression?: boolean
 }
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({}
-  enableImageOptimization = true,
-  enablePreloading = true,
-  enableCaching = true,
-  enableCompression = true}) => {}
-}const location = useLocation()
+
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  enableImageOptimization = true, enablePreloading = true, enableCaching = true, enableCompression = true, }) => {
+  const location = useLocation();
+
   // Image optimization
   const optimizeImages = useCallback(() => {}
 }if (!enableImageOptimization) return
@@ -62,16 +61,14 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({}
     // Service Worker registration for caching
     if ('serviceWorker' in navigator) {}
       navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {}
-}if (process.env.NODE_ENV === 'development') {}
-            console.log('SW registered: ', registration)
-          }
+        .then((registration) => {
+          if (process.env.NODE_ENV === 'development') {
+            }
         })
-        .catch((registrationError) => {}
-}if (process.env.NODE_ENV === 'development') {}
-            console.log('SW registration failed: ', registrationError)
-          }
-        })
+        .catch((registrationError) => {
+          if (process.env.NODE_ENV === 'development') {
+            }
+        });
     }
     // Set up cache headers for static assets
     const staticAssets = document.querySelectorAll('link[rel="stylesheet"], script[src]')

@@ -1,29 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Search,
-  MessageSquare,
-  Phone,
-  Mail,
-  Calendar,
-  Clock,
-  CheckCircle,
-  Star,
-  Users,
-  Award,
-  Globe,
-  Zap,
-  BookOpen,
-  ExternalLink,
-  HelpCircle,
-  FileText,
-  Video,
-  Download,
-  ChevronDown,
-  ChevronRight
-} from 'lucide-react';
+import { Search, MessageSquare, Star, BookOpen, HelpCircle, Video, Download, ChevronDown, ChevronRight } from "lucide-react";
 
 const HelpPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -257,7 +233,7 @@ const HelpPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {helpCategories.map((category, index) => (
+            {helpCategories.map((category) => (
               <Link
                 key={index}
                 to="/help"
@@ -291,7 +267,7 @@ const HelpPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {supportChannels.map((channel, index) => (
+            {supportChannels.map((channel) => (
               <div key={index} className="group bg-slate-800/50 hover:bg-slate-800/70 p-8 rounded-xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   {channel.icon}
@@ -379,7 +355,7 @@ const HelpPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {resources.map((resource, index) => (
+            {resources.map((resource) => (
               <Link
                 key={index}
                 to="/resources"

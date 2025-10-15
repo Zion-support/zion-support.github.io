@@ -29,71 +29,24 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('GlobalErrorBoundary caught an error:', error, errorInfo);
-    
-    this.setState({
-      error,
-      errorInfo
-    });
-
-    // Send error to monitoring service
-    this.reportError(error, errorInfo);
-  }
-
-  reportError = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to your error monitoring service
-    // like Sentry, LogRocket, or Bugsnag
-    const errorReport = {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      errorId: this.state.errorId,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-      userId: 'anonymous', // You would get this from your auth context
-    };
-
-    // Example: Send to analytics or monitoring service
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          error_id: this.state.errorId
-        }
-      });
-    }
-
-    // Log to console in development
+    // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.group('🚨 Error Report');
-      console.error('Error:', error);
-      console.error('Error Info:', errorInfo);
-      console.error('Error Report:', errorReport);
-      console.groupEnd();
-    }
-  };
+      }
 
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
-
-  handleReload = () => {
-    window.location.reload();
-  };
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Here you would typically send the error to a logging service
+      }
+  }
 
   render() {
     if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      return (
-        <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center p-4">
-          <div className="max-w-2xl w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
-            <div className="flex items-center justify-center w-20 h-20 mx-auto mb-6 bg-red-500/20 rounded-full">
-              <AlertTriangle className="w-10 h-10 text-red-400" />
+      return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center border border-white/20">
+            <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
+              <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
             </div>
             
             <h1 className="text-3xl font-bold text-white mb-4">

@@ -6,13 +6,11 @@ interface FuturisticCardProps {}
   glowColor?: 'cyan' | 'purple' | 'pink' | 'blue' | 'green' | 'orange' | 'red' | 'yellow'
   hover?: boolean
 }
-const FuturisticCard = ({}
-  children,
-  className,
-  glowColor = 'cyan',
-  hover = true
-}: FuturisticCardProps) => {}
-}const glowColors = {}
+
+const FuturisticCard = (_{ 
+  children, className, glowColor = 'cyan', hover = true 
+}: FuturisticCardProps) => {
+  const glowColors = {
     cyan: 'hover:shadow-cyan-500/25',
     purple: 'hover:shadow-purple-500/25',
     pink: 'hover:shadow-pink-500/25',

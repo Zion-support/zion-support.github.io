@@ -1,21 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Users, 
-  MessageSquare, 
-  Star, 
-  Calendar,
-  Globe,
-  Code,
-  BookOpen,
-  Award,
-  TrendingUp,
-  Zap,
-  Shield,
-  Clock
-} from 'lucide-react';
+import { MessageSquare, Star, BookOpen } from "lucide-react";
 
 const CommunityPage: React.FC = () => {
   const communityFeatures = [
@@ -90,7 +74,7 @@ const CommunityPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {communityFeatures.map((feature, index) => (
+            {communityFeatures.map((feature) => (
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   {feature.icon}

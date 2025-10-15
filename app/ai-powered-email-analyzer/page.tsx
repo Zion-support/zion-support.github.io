@@ -1,125 +1,56 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  CheckCircle,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe
-} from 'lucide-react';
-
-const AIPoweredEmailAnalyzerPage = () => {
-  const features = [
-    {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: "AI-Powered Sentiment Analysis",
-      description: "Advanced machine learning algorithms analyze email tone, sentiment, and emotional context to help you craft perfect responses."
-    },
-    {
-      icon: <Target className="w-8 h-8 text-purple-400" />,
-      title: "Smart Response Suggestions",
-      description: "Get intelligent, context-aware response suggestions that match your communication style and business objectives."
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-      title: "Email Performance Analytics",
-      description: "Track open rates, response times, and engagement metrics with detailed analytics and actionable insights."
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      title: "Security & Compliance",
-      description: "Enterprise-grade security with GDPR compliance, data encryption, and secure cloud storage for all email data."
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      title: "Real-time Processing",
-      description: "Instant analysis and suggestions as you type, with lightning-fast processing powered by advanced AI models."
-    },
-    {
-      icon: <Users className="w-8 h-8 text-blue-400" />,
-      title: "Team Collaboration",
-      description: "Share insights across teams, set up approval workflows, and maintain consistent communication standards."
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$29",
-      period: "/month",
-      description: "Perfect for small teams and individuals",
-      features: [
-        "Up to 1,000 emails/month",
-        "Basic sentiment analysis",
-        "Response suggestions",
-        "Email templates",
-        "Basic analytics",
-        "Email support"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$79",
-      period: "/month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 10,000 emails/month",
-        "Advanced AI analysis",
-        "Custom response templates",
-        "Team collaboration",
-        "Advanced analytics",
-        "Priority support",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$199",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited emails",
-        "Custom AI models",
-        "White-label solution",
-        "Advanced security",
-        "Custom integrations",
-        "Dedicated support",
-        "On-premise deployment"
-      ],
-      popular: false
-    }
-  ];
-
-  const stats = [
-    { number: "95%", label: "Accuracy Rate" },
-    { number: "2.5x", label: "Faster Response Time" },
-    { number: "40%", label: "Increase in Engagement" },
-    { number: "10k+", label: "Happy Customers" }
-  ];
-=======
 import SEOHead from '../components/SEOHead';
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
 
 const AiPoweredEmailAnalyzerPage: React.FC = () => {
   return (
-    <>
-      <SEOHead 
-        title="ai-powered-email-analyzer - Zion Tech Group"
-        description="Zion Tech Group ai-powered-email-analyzer service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">ai-powered-email-analyzer</h1>
-          <p className="text-gray-300">Coming soon...</p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AI-Powered Email Analyzer | Zion Tech Group</title>
+        <meta name="description" content="Revolutionize your email communication with our AI-powered email analyzer. Get sentiment analysis, smart suggestions, and performance insights." />
+        <meta name="keywords" content="AI email analyzer, _email sentiment analysis, _email automation, _business communication, email analytics" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6">
+              <Mail className="w-5 h-5 text-cyan-400 mr-2" />
+              <span className="text-cyan-300 font-medium">AI-Powered Email Intelligence</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Transform Your
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Email Communication</span>
+            </h1>
+            
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Leverage advanced AI to analyze, _optimize, _and enhance your email communications with intelligent insights, _sentiment analysis, and smart response suggestions.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 inline" />
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
+              >
+                View Demo
+              </motion.button>
+            </div>
+          </motion.div>
         </div>
       </div>
     </>

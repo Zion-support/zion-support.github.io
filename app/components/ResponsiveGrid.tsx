@@ -12,13 +12,11 @@ interface ResponsiveGridProps {}
   }
   gap?: 'sm' | 'md' | 'lg' | 'xl'
 }
-const ResponsiveGrid = ({}
-  children,
-  className,
-  cols = { default: 1, sm: 2, md: 3, lg: 4 },
-  gap = 'md'
-}: ResponsiveGridProps) => {}
-}const gapClasses = {}
+
+const ResponsiveGrid = (_{ 
+  children, className, cols = { default: 1, _sm: 2, _md: 3, _lg: 4 }, gap = 'md'
+}: ResponsiveGridProps) => {
+  const gapClasses = {
     sm: 'gap-2',
     md: 'gap-4',
     lg: 'gap-6',
