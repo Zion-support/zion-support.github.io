@@ -2,6 +2,9 @@ import { Suspense, useEffect } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
+// Import styles
+import './app/styles/futuristic-theme.css'
+
 // Import pages
 import HomePage from './app/page';
 import AboutPage from './app/about/page';
@@ -41,10 +44,14 @@ import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
-// Loading component
+// Loading component with futuristic design
 const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+  <div className="min-h-screen futuristic-bg flex items-center justify-center">
+    <div className="relative">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 glow-effect"></div>
+      <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-purple-400 animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
+      <div className="absolute inset-2 rounded-full border-2 border-transparent border-r-green-400 animate-spin" style={{ animationDuration: '2s' }}></div>
+    </div>
   </div>
 )
 
@@ -67,11 +74,11 @@ export default function App() {
     <GlobalErrorBoundary>
       <HelmetProvider>
         <Router>
-          <div className="min-h-screen bg-gray-50">
+          <div className="min-h-screen futuristic-bg matrix-bg">
             <Navigation />
             <Sidebar />
             
-            <main className="flex-1">
+            <main className="flex-1 relative">
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               
@@ -117,11 +124,11 @@ export default function App() {
                   <Route path="/accessibility" element={<AccessibilityPage />} />
                   
                   {/* Catch all route */}
-                  <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
-                    <div className="text-center">
-                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>
-                      <p className="text-gray-600 mb-8">Page not found</p>
-                      <a href="/" className="text-blue-600 hover:text-blue-800">Go back home</a>
+                  <Route path="*" element={<div className="min-h-screen futuristic-bg flex items-center justify-center">
+                    <div className="text-center cyber-card">
+                      <h1 className="text-6xl font-bold neon-text mb-4">404</h1>
+                      <p className="text-xl text-gray-300 mb-8">Page not found in the digital realm</p>
+                      <a href="/" className="neon-button">Return to Base</a>
                     </div>
                   </div>} />
                 </Routes>
