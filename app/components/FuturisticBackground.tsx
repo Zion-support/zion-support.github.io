@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 const FuturisticBackground: React.FC = () => {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -130,5 +129,3 @@ const FuturisticBackground: React.FC = () => {
 };
 
 export default FuturisticBackground;
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743

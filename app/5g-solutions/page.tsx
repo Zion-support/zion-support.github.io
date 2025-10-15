@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, Shield, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3 } from 'lucide-react';
+import { Wifi, Network, Cpu, Smartphone } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
   const solutions = [
@@ -42,3 +42,46 @@ const FiveGSolutionsPage: React.FC = () => {
       marketPrice: "$5,999-19,999",
       popular: false,
       icon: <Smartphone className="w-8 h-8" />,
+      benefits: "Deliver ultra-low latency mobile experiences"
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>5G Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive 5G solutions including network implementation, infrastructure, IoT, and mobile applications." />
+      </Helmet>
+      <div className="min-h-screen bg-slate-900 text-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold mb-6">5G Solutions</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your business with cutting-edge 5G technology solutions
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {solutions.map((solution, index) => (
+              <div key={index} className="bg-slate-800 rounded-lg p-6">
+                <div className="text-blue-400 mb-4">
+                  {solution.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{solution.name}</h3>
+                <p className="text-gray-300 mb-4">{solution.description}</p>
+                <div className="text-2xl font-bold text-blue-400 mb-2">{solution.price}</div>
+                <div className="text-sm text-gray-400 mb-4">Market: {solution.marketPrice}</div>
+                <div className="text-sm text-green-400 mb-4">{solution.benefits}</div>
+                <button className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
+                  Learn More
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default FiveGSolutionsPage;

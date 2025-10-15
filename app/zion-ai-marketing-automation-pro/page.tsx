@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-import {ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, MessageSquare, Users, TrendingUp, Globe, Play, Star, Zap, Star} from 'lucide-react';import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 export default function ZionAiMarketingAutomationPro() {
   const features = [

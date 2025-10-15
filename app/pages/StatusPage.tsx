@@ -1,11 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 
 const StatusPage: React.FC = () => {
-=======
-import { CheckCircle, Database } from 'lucide-react';const StatusPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
   const services = [
     { name: 'API Services', status: 'operational', uptime: '99.9%' },
     { name: 'Web Application', status: 'operational', uptime: '99.8%' },

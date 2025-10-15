@@ -1,9 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
-=======
-import {RefreshCw, Home, Bug} from 'lucide-react';
-import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 interface Props {
   children: ReactNode;

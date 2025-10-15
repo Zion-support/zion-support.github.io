@@ -1,61 +1,44 @@
 #!/usr/bin/env python3
-"""
-
-Script to automatically resolve merge conflicts by choosing the HEAD version
-and removing conflict markers.
-ursor/analyze-improve-and-deploy-application-29f3
-"""
-
-ursor/comprehensive-app-audit-and-update-8a56
 import os
 import re
 import glob
 
 def fix_merge_conflicts(file_path):
-
-)"""
-ursor/analyze-improve-and-deploy-application-29f3
-ursor/comprehensive-app-audit-and-update-8a56
+    """Fix merge conflicts in a file by keeping the HEAD version"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
-
- ... ranch
-        pattern = r'\n(.*?)\n>>>>>>> [^\n]+\n'
         
-        def replace_conflict(match):
-            head_content = match.group(1)
-            return head_content + '\n'
+        # Check if file has merge conflicts
+        if '<<<<<<< HEAD' not in content:
+            return False
+            
+        # Split by merge conflict markers
+        lines = content.split('\n')
+        new_lines = []
+        in_head = False
+        in_conflict = False
         
-        # Apply the replacement
-        new_content = re.sub(pattern, replace_conflict, content, flags=re.DOTALL)
+        for line in lines:
+            if line.strip() == '<<<<<<< HEAD':
+                in_head = True
+                in_conflict = True
+                continue
+            elif line.strip() == '=======':
+                in_head = False
+                continue
+            elif line.strip().startswith('>>>>>>>'):
+                in_conflict = False
+                continue
+            elif in_conflict and not in_head:
+                continue
+            else:
+                new_lines.append(line)
         
-        # Also handle cases where there might be extra whitespace or different patterns
-        new_content = re.sub(r'\n.*?\n>>>>>>> [^\n]+\n', '', new_content, flags=re.DOTALL)
-        
-        # Write the cleaned content back
+        # Write the cleaned content
         with open(file_path, 'w', encoding='utf-8') as f:
-
-        # Remove merge conflict markers and keep HEAD version
-        # Pattern to match:  ... ranch-name
-        pattern = r'.*?\n>>>>>>> [^\n]+\n?'
+            f.write('\n'.join(new_lines))
         
-        # Replace with just the HEAD content
-        fixed_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
-        
-        # Also handle cases where there might be multiple conflicts in one file
-        # Remove any remaining conflict markers
-        fixed_content = re.sub(r'\n?', '', fixed_content)
-        fixed_content = re.sub(r'>>>>>>> [^\n]+\n?', '', fixed_content)
-        
-        # Clean up any extra newlines
-        fixed_content = re.sub(r'\n\s*\n\s*\n', '\n\n', fixed_content)
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(fixed_content)
-        
-ursor/enhance-app-with-new-services-and-futuristic-design-cbe3
-ursor/analyze-improve-and-deploy-application-29f3
         print(f"Fixed merge conflicts in: {file_path}")
         return True
         
@@ -64,56 +47,27 @@ ursor/analyze-improve-and-deploy-application-29f3
         return False
 
 def main():
-
-    """Main function to fix all merge conflicts."""
-    # Get all files with merge conflicts
-    files_with_conflicts = []
-    
-    # Search for common file extensions
-    extensions = ['*.tsx', '*.ts', '*.js', '*.jsx', '*.json', '*.md', '*.css', '*.html']
-    
-    for ext in extensions:
-        files_with_conflicts.extend(glob.glob(f'**/{ext}', recursive=True))
-ursor/analyze-improve-and-deploy-application-29f3
-    
-    fixed_count = 0
-    total_conflicts = 0
-
-    """Main function to fix all merge conflicts."""
-    # Get all TypeScript and JavaScript files
+    # Find all files with merge conflicts
     patterns = [
-        'app/**/*.tsx',
-        'app/**/*.ts',
-        'hooks/**/*.ts',
-        'hooks/**/*.tsx',
-        '__tests__/**/*.tsx',
-        '__tests__/**/*.ts'
+        '**/*.tsx',
+        '**/*.ts', 
+        '**/*.js',
+        '**/*.jsx',
+        '**/*.json',
+        '**/*.md'
     ]
     
-    files_to_fix = []
+    files_fixed = 0
     for pattern in patterns:
-        files_to_fix.extend(glob.glob(pattern, recursive=True))
-    
-    print(f"Found {len(files_to_fix)} files to check for merge conflicts...")
-    
-    fixed_count = 0
-    for file_path in files_to_fix:
-        if os.path.exists(file_path):
-            try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
+        for file_path in glob.glob(pattern, recursive=True):
+            # Skip node_modules and dist directories
+            if 'node_modules' in file_path or 'dist' in file_path or '.git' in file_path:
+                continue
                 
-                # Check if file has merge conflicts
-                if '' in content or '>>>>>>> ' in content:
-                    if fix_merge_conflicts(file_path):
-                        fixed_count += 1
-            except Exception as e:
-                print(f"Error reading {file_path}: {e}")
+            if fix_merge_conflicts(file_path):
+                files_fixed += 1
     
-    print(f"Fixed merge conflicts in {fixed_count} files.")
-ursor/enhance-app-with-new-services-and-futuristic-design-cbe3
-ursor/analyze-improve-and-deploy-application-29f3
-ursor/comprehensive-app-audit-and-update-8a56
+    print(f"Fixed merge conflicts in {files_fixed} files")
 
 if __name__ == "__main__":
     main()

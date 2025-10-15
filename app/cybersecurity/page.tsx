@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import SEOHead from '../components/SEOHead';
-import { Link } from 'react-router-dom';
-import {ArrowRight, Shield} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 const CybersecurityPage: React.FC = () => {
   return (

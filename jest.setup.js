@@ -1,4 +1,7 @@
-require('@testing-library/jest-dom');
+// Mock TextEncoder and TextDecoder for Node.js environment
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -30,33 +33,3 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
-
-// Mock performance
-Object.defineProperty(window, 'performance', {
-  writable: true,
-  value: {
-    now: jest.fn(() => Date.now()),
-    mark: jest.fn(),
-    measure: jest.fn(),
-    getEntriesByType: jest.fn(() => []),
-    getEntriesByName: jest.fn(() => []),
-  },
-});
-
-// Mock localStorage
-const localStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
-};
-global.localStorage = localStorageMock;
-
-// Mock sessionStorage
-const sessionStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
-};
-global.sessionStorage = sessionStorageMock;

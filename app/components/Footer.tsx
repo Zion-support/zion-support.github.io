@@ -6,10 +6,6 @@ import {
   ArrowRightIcon,
   HeartIcon
 } from '@heroicons/react/24/outline'
-<<<<<<< HEAD
-=======
-import {Twitter, Linkedin, Github} from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
