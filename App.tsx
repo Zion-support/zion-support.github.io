@@ -2,6 +2,7 @@ import { Suspense, useEffect, lazy } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization'
+import { setupGlobalErrorHandlers } from './app/utils/errorHandler'
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -77,6 +78,9 @@ export default function App() {
   });
 
   useEffect(() => {
+    // Setup global error handlers
+    setupGlobalErrorHandlers();
+    
     // Preload critical resources
     preloadResource('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap', 'style');
   }, [preloadResource])
