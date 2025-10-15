@@ -104,7 +104,9 @@ function App() {
                 </FuturisticBackground>
                 <PerformanceMonitor />
                 <WebVitalsTracker />
-                <AccessibilityManager />
+                <AccessibilityManager>
+                  <div />
+                </AccessibilityManager>
                 <EnhancedSEO 
                   title="Zion Tech Group - Advanced AI and IT Solutions"
                   description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses."

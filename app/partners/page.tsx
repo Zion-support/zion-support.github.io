@@ -112,12 +112,102 @@ export default function Partners() {
               Strategic partnerships that drive innovation and deliver exceptional value to our clients.
             </p>
           </div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">Our Partners</h1>
-          <p className="text-xl text-gray-300 text-center mb-12">
-            Strategic partnerships that drive innovation and growth
-          </p>
+          
+          {/* Partners Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+            {partners.map((partner, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="flex items-center mb-4">
+                  <img 
+                    src={partner.logo} 
+                    alt={`${partner.name} logo`}
+                    className="w-12 h-12 object-contain mr-4"
+                  />
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">{partner.name}</h3>
+                    <span className={`text-sm px-2 py-1 rounded-full ${
+                      partner.tier === 'Platinum' ? 'bg-gray-400 text-gray-900' :
+                      partner.tier === 'Gold' ? 'bg-yellow-400 text-yellow-900' :
+                      'bg-gray-300 text-gray-800'
+                    }`}>
+                      {partner.tier}
+                    </span>
+                  </div>
+                </div>
+                <p className="text-gray-300 text-sm mb-2">{partner.description}</p>
+                <p className="text-cyan-400 text-xs">{partner.category}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Benefits Section */}
+          <div className="mt-20">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Partnership Benefits
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-cyan-400 mb-4 flex justify-center">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                  <p className="text-gray-300 text-sm">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Partnership Tiers */}
+          <div className="mt-20">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Partnership Tiers
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {tiers.map((tier, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                  <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${tier.color} mx-auto mb-4 flex items-center justify-center`}>
+                    <span className="text-white font-bold text-lg">{tier.name[0]}</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white text-center mb-4">{tier.name}</h3>
+                  <p className="text-gray-300 text-sm mb-6 text-center">{tier.requirements}</p>
+                  <ul className="space-y-2">
+                    {tier.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="mt-20 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Ready to Partner with Us?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join our ecosystem of innovative partners and unlock new opportunities for growth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+              >
+                Become a Partner
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </>

@@ -1,22 +1,32 @@
 'use client'
 import { useEffect, useState } from 'react'
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals'
 
-    }
-
-    // Report metrics to analytics
-    const reportMetric = () => {
-      // Analytics reporting would go here
-    }
-
-    measureWebVitals()
-    measureMemory()
-    measureLoadTime()
-
-    </div>
-  )
+interface PerformanceMetrics {
+  fcp: number | null
+  lcp: number | null
+  fid: number | null
+  cls: number | null
+  ttfb: number | null
+  memoryUsage: number | null
+  loadTime: number | null
 }
 
-    try {
+const AdvancedPerformanceMonitor = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    memoryUsage: null,
+    loadTime: null
+  })
+
+  useEffect(() => {
+    // Measure web vitals
+    const measureWebVitals = () => {
+      try {
         onCLS((metric: any) => {
           setMetrics(prev => ({ ...prev, cls: metric.value }))
           reportMetric('CLS', metric.value)
@@ -44,26 +54,26 @@ import { useEffect, useState } from 'react'
       } catch (error) {
         console.error('Failed to measure web vitals:', error);
       }
+    }
 
-      // Measure memory usage
-      const measureMemory = () => {
-        if ('memory' in performance) {
-          const memory = (performance as any).memory
-          setMetrics(prev => ({ ...prev, memoryUsage: memory.usedJSHeapSize }))
-        }
+    // Measure memory usage
+    const measureMemory = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory
+        setMetrics(prev => ({ ...prev, memoryUsage: memory.usedJSHeapSize }))
       }
+    }
 
-      // Measure load time
-      const measureLoadTime = () => {
-        if (performance.timing) {
-          const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart
-          setMetrics(prev => ({ ...prev, loadTime }))
-        }
+    // Measure load time
+    const measureLoadTime = () => {
+      if (performance.timing) {
+        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart
+        setMetrics(prev => ({ ...prev, loadTime }))
       }
+    }
 
-      // Report metrics to analytics
-      const reportMetric = (name: string, value: number) => {
-
+    // Report metrics to analytics
+    const reportMetric = (name: string, value: number) => {
       // Send to Google Analytics
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', 'web_vitals', {
@@ -85,13 +95,12 @@ import { useEffect, useState } from 'react'
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
         console.log(`Performance Metric: ${name} = ${value}`);
-
       }
-
-      measureWebVitals()
-      measureMemory()
-      measureLoadTime()
     }
+
+    measureWebVitals()
+    measureMemory()
+    measureLoadTime()
 
     // Set up performance observer for additional metrics
     if ('PerformanceObserver' in window) {

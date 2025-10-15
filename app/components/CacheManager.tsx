@@ -19,12 +19,15 @@ const CacheManager = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
+    // Register service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
           console.log('Service Worker registered:', registration);
-
-        } catch (error) {
+        })
+        .catch((error) => {
           console.error('Service Worker registration failed:', error);
-        }
-      }
+        });
     }
 
     // Cache API for dynamic caching
@@ -44,6 +47,8 @@ const CacheManager = () => {
         try {
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
+        } catch (error) {
+          console.error('Failed to cache static assets:', error);
         }
       }
 
@@ -58,6 +63,8 @@ const CacheManager = () => {
           }
           
           return response
+        } catch (error) {
+          console.error('Cache error:', error);
           return fetch(request);
         }
       }
@@ -116,8 +123,34 @@ const CacheManager = () => {
             }
           }
         })
-      }
+      }, { threshold: 0.1 });
     }
+
+    const updateStats = () => {
+      if ('caches' in window) {
+        caches.keys().then(cacheNames => {
+          let totalSize = 0;
+          Promise.all(
+            cacheNames.map(cacheName => 
+              caches.open(cacheName).then(cache => 
+                cache.keys().then(keys => 
+                  Promise.all(keys.map(key => 
+                    cache.match(key).then(response => 
+                      response ? response.blob().then(blob => blob.size) : 0
+                    )
+                  )).then(sizes => 
+                    sizes.reduce((sum, size) => sum + size, 0)
+                  )
+                )
+              )
+            )
+          ).then(sizes => {
+            totalSize = sizes.reduce((sum, size) => sum + size, 0);
+            setStats(prev => ({ ...prev, size: totalSize }));
+          });
+        });
+      }
+    };
 
     updateStats()
     const interval = setInterval(updateStats, 5000)
