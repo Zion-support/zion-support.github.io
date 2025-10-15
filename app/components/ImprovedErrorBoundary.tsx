@@ -1,160 +1,121 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react'
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Bug } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 interface Props {
-  children: ReactNode
-  fallback?: ReactNode
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  maxRetries?: number;
 }
 
 interface State {
-  hasError: boolean
-  error: Error | null
-  errorInfo: ErrorInfo | null
-  retryCount: number
+  hasError: boolean;
+  error: Error | null;
+  retryCount: number;
 }
 
 class ImprovedErrorBoundary extends Component<Props, State> {
-  private maxRetries = 3
+  private maxRetries: number;
 
   constructor(props: Props) {
-    super(props)
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      retryCount: 0
-    }
+    super(props);
+    this.maxRetries = props.maxRetries || 3;
+    this.state = { hasError: false, error: null, retryCount: 0 };
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error
-    }
+    return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    })
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo)
-    }
-
-    // Call custom error handler if provided
+    console.error('ImprovedErrorBoundary caught an error:', error, errorInfo);
     if (this.props.onError) {
-      this.props.onError(error, errorInfo)
-    }
-
-    // Log to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send to an error reporting service
-      console.error('Production error:', error, errorInfo)
+      this.props.onError(error, errorInfo);
     }
   }
 
   handleRetry = () => {
-    if (this.state.retryCount < this.maxRetries) {
-      this.setState(prevState => ({
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        retryCount: prevState.retryCount + 1
-      }))
-    }
-  }
-
-  handleReset = () => {
-    this.setState({
+    this.setState(prevState => ({
       hasError: false,
       error: null,
-      errorInfo: null,
-      retryCount: 0
-    })
+      retryCount: prevState.retryCount + 1
+    }));
+  };
+
+  get canRetry(): boolean {
+    return this.state.retryCount < this.maxRetries;
   }
 
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI
       if (this.props.fallback) {
-        return this.props.fallback
+        return this.props.fallback;
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-8 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
-            </div>
-            
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-            
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
-            </p>
-
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="text-cyan-400 cursor-pointer mb-2">
-                  Error Details (Development)
-                </summary>
-                <div className="bg-slate-800/50 rounded-lg p-4 text-sm text-gray-300 overflow-auto max-h-40">
-                  <div className="font-mono">
-                    <div className="text-red-400 font-semibold mb-2">
-                      {this.state.error.name}: {this.state.error.message}
-                    </div>
-                    <div className="text-xs text-gray-400">
-                      {this.state.error.stack}
-                    </div>
-                  </div>
+        <>
+          <Helmet>
+            <title>Application Error - Zion Tech Group</title>
+            <meta name="description" content="An error occurred in the application" />
+          </Helmet>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+            <div className="max-w-md w-full mx-auto p-8">
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
+                <div className="w-16 h-16 bg-red-500/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <AlertTriangle className="w-8 h-8 text-red-400" />
                 </div>
-              </details>
-            )}
+                
+                <h1 className="text-xl font-semibold text-white mb-2">
+                  Application Error
+                </h1>
+                
+                <p className="text-gray-300 mb-6">
+                  {this.canRetry 
+                    ? `Something went wrong. You can try again (${this.state.retryCount}/${this.maxRetries} attempts).`
+                    : 'Something went wrong. Please refresh the page or contact support.'
+                  }
+                </p>
+                
+                <div className="space-y-3">
+                  {this.canRetry && (
+                    <button
+                      onClick={this.handleRetry}
+                      className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-2 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2"
+                    >
+                      <RefreshCw className="w-4 h-4" />
+                      Try Again ({this.state.retryCount}/{this.maxRetries})
+                    </button>
+                  )}
+                  
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="w-full bg-white/10 text-white py-2 px-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
+                  >
+                    <Bug className="w-4 h-4" />
+                    Reload Page
+                  </button>
+                </div>
 
-            <div className="space-y-3">
-              {this.state.retryCount < this.maxRetries && (
-                <button
-                  onClick={this.handleRetry}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
-                >
-                  <RefreshCw className="w-4 h-4" />
-                  Try Again ({this.maxRetries - this.state.retryCount} attempts left)
-                </button>
-              )}
-              
-              <button
-                onClick={this.handleReset}
-                className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                <Home className="w-4 h-4" />
-                Go to Homepage
-              </button>
-
-              <button
-                onClick={() => window.location.reload()}
-                className="w-full border border-gray-400 text-gray-400 px-6 py-3 rounded-lg font-semibold hover:bg-gray-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                <RefreshCw className="w-4 h-4" />
-                Reload Page
-              </button>
-            </div>
-
-            <div className="mt-6 text-xs text-gray-400">
-              Error ID: {Date.now().toString(36)}
+                {process.env.NODE_ENV === 'development' && this.state.error && (
+                  <details className="mt-6 p-4 bg-gray-800/50 rounded-lg text-left">
+                    <summary className="cursor-pointer font-medium text-gray-300 mb-2">
+                      Error Details (Development)
+                    </summary>
+                    <pre className="text-xs text-gray-400 overflow-auto">
+                      {this.state.error.toString()}
+                    </pre>
+                  </details>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-      )
+        </>
+      );
     }
 
-    return this.props.children
+    return this.props.children;
   }
 }
 
-export default ImprovedErrorBoundary
+export default ImprovedErrorBoundary;

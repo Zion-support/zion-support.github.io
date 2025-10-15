@@ -1,20 +1,46 @@
 import React, { useEffect } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
-const WebVitalsTracker: React.FC = () => {
+interface WebVitalsTrackerProps {
+  children: React.ReactNode;
+}
+
+interface WebVitalsData {
+  name: string;
+  value: number;
+  delta: number;
+  id: string;
+  navigationType: string;
+}
+
+const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
   useEffect(() => {
-    // Web Vitals tracking logic
-    if (typeof window !== 'undefined') {
-      // Track Core Web Vitals
-      const trackWebVitals = () => {
-        // This would typically integrate with analytics
-        console.log('Web Vitals tracking initialized');
-      };
+    const sendToAnalytics = (metric: WebVitalsData) => {
+      // Send to Google Analytics or other analytics service
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'web_vitals', {
+          event_category: 'Web Vitals',
+          event_label: metric.name,
+          value: Math.round(metric.value),
+          non_interaction: true,
+        });
+      }
       
-      trackWebVitals();
-    }
+      // Log to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Web Vital:', metric);
+      }
+    };
+
+    // Track Core Web Vitals
+    onCLS(sendToAnalytics);
+    onINP(sendToAnalytics);
+    onFCP(sendToAnalytics);
+    onLCP(sendToAnalytics);
+    onTTFB(sendToAnalytics);
   }, []);
 
-  return null;
+  return <>{children}</>;
 };
 
 export default WebVitalsTracker;

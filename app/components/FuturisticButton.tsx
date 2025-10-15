@@ -1,45 +1,60 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 interface FuturisticButtonProps {
-  href: string;
-  variant?: 'primary' | 'outline' | 'ghost';
-  size?: 'sm' | 'md' | 'lg';
-  icon?: React.ReactNode;
   children: React.ReactNode;
+  onClick?: () => void;
+  variant?: 'primary' | 'secondary' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
+  disabled?: boolean;
   className?: string;
+  icon?: React.ReactNode;
+  iconPosition?: 'left' | 'right';
 }
 
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({
-  href,
+  children,
+  onClick,
   variant = 'primary',
   size = 'md',
+  disabled = false,
+  className = '',
   icon,
-  children,
-  className = ''
+  iconPosition = 'right',
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 group';
+  const baseClasses = 'relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 disabled:opacity-50 disabled:cursor-not-allowed';
   
   const variantClasses = {
-    primary: 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25',
-    outline: 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900',
-    ghost: 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
+    primary: 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 shadow-lg hover:shadow-cyan-500/25',
+    secondary: 'bg-slate-800 text-cyan-400 border border-cyan-500/20 hover:bg-cyan-500/10 hover:border-cyan-500/40',
+    outline: 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 hover:text-white',
   };
   
   const sizeClasses = {
-    sm: 'px-3 py-1.5 text-sm',
-    md: 'px-4 py-2 text-base',
-    lg: 'px-6 py-3 text-lg'
+    sm: 'px-4 py-2 text-sm',
+    md: 'px-6 py-3 text-base',
+    lg: 'px-8 py-4 text-lg',
   };
 
+  const buttonClasses = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+
   return (
-    <Link
-      to={href}
-      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+    <button
+      className={buttonClasses}
+      onClick={onClick}
+      disabled={disabled}
     >
-      {icon && <span className="mr-2 group-hover:scale-110 transition-transform">{icon}</span>}
+      {icon && iconPosition === 'left' && (
+        <span className="mr-2">{icon}</span>
+      )}
       {children}
-    </Link>
+      {icon && iconPosition === 'right' && (
+        <span className="ml-2">{icon}</span>
+      )}
+      {!icon && iconPosition === 'right' && (
+        <ArrowRight className="w-4 h-4 ml-2" />
+      )}
+    </button>
   );
 };
 
