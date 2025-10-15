@@ -21,13 +21,14 @@ import {
   Phone,
   MapPin,
   Envelope,
-  Bot,
+  Cloud,
   Headphones,
   ThumbsUp,
-  RefreshCw
+  RefreshCw,
+  ShoppingCart
 } from 'lucide-react';
 
-const AICustomerSupportChatbotPage: React.FC = () => {
+const AiCustomerSupportChatbotPage: React.FC = () => {
   const features = [
     'Natural Language Processing (NLP)',
     'Multi-language support (50+ languages)',
@@ -59,82 +60,77 @@ const AICustomerSupportChatbotPage: React.FC = () => {
     { name: 'Microsoft Teams', icon: <Globe className="w-6 h-6 text-blue-600" /> }
   ];
 
+  const useCases = [
+    {
+      title: 'E-commerce',
+      description: 'Handle product inquiries, order tracking, and returns',
+      results: '40% reduction in support tickets',
+      icon: <ShoppingCart className="w-8 h-8 text-green-400" />
+    },
+    {
+      title: 'SaaS',
+      description: 'Provide technical support and onboarding assistance',
+      results: '60% faster resolution times',
+      icon: <Settings className="w-8 h-8 text-blue-400" />
+    },
+    {
+      title: 'Healthcare',
+      description: 'Answer patient questions and appointment scheduling',
+      results: '50% improved patient satisfaction',
+      icon: <Shield className="w-8 h-8 text-red-400" />
+    },
+    {
+      title: 'Finance',
+      description: 'Assist with account inquiries and transaction support',
+      results: '70% reduction in call volume',
+      icon: <BarChart3 className="w-8 h-8 text-yellow-400" />
+    }
+  ];
+
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$99/mo',
-      originalPrice: '$149/mo',
+      price: '$299',
+      originalPrice: '$599',
       description: 'Perfect for small businesses',
       features: [
         'Up to 1,000 conversations/month',
-        'Basic AI responses',
+        'Basic NLP capabilities',
         'Email support',
         'Standard integrations',
-        'Basic analytics',
-        'Single language support'
+        'Basic analytics'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$199/mo',
-      originalPrice: '$299/mo',
-      description: 'Ideal for growing businesses',
+      price: '$799',
+      originalPrice: '$1,599',
+      description: 'Ideal for growing companies',
       features: [
         'Up to 10,000 conversations/month',
-        'Advanced AI capabilities',
+        'Advanced NLP and AI',
         'Priority support',
-        'Advanced integrations',
-        'Multi-language support',
+        'All integrations',
         'Advanced analytics',
-        'Custom training',
-        'Human handoff'
+        'Custom training'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$399/mo',
-      originalPrice: '$599/mo',
+      price: 'Custom',
+      originalPrice: '',
       description: 'For large organizations',
       features: [
         'Unlimited conversations',
-        'Full AI suite',
-        'Dedicated account manager',
+        'Custom AI models',
+        'Dedicated support',
         'Custom integrations',
-        'White-label options',
-        'Advanced security',
-        'SLA guarantees',
-        'On-premise deployment'
+        'White-label solution',
+        'SLA guarantee'
       ],
       popular: false
-    }
-  ];
-
-  const useCases = [
-    {
-      title: 'E-commerce',
-      description: 'Handle product inquiries, order tracking, and returns',
-      icon: <ShoppingCart className="w-6 h-6 text-blue-400" />,
-      results: '60% reduction in support tickets'
-    },
-    {
-      title: 'SaaS',
-      description: 'Provide technical support and onboarding assistance',
-      icon: <Cloud className="w-6 h-6 text-green-400" />,
-      results: '80% faster issue resolution'
-    },
-    {
-      title: 'Healthcare',
-      description: 'Answer patient questions and schedule appointments',
-      icon: <Heart className="w-6 h-6 text-red-400" />,
-      results: '50% reduction in call volume'
-    },
-    {
-      title: 'Financial Services',
-      description: 'Handle account inquiries and transaction support',
-      icon: <DollarSign className="w-6 h-6 text-green-600" />,
-      results: '70% improvement in response time'
     }
   ];
 
@@ -145,7 +141,6 @@ const AICustomerSupportChatbotPage: React.FC = () => {
     { number: '45%', label: 'Higher Satisfaction' }
   ];
 
-const AiCustomerSupportChatbotPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -353,7 +348,9 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-center justify-center space-x-2 mb-2">
                     <span className="text-4xl font-bold text-green-400">{plan.price}</span>
-                    <span className="text-lg text-gray-400 line-through">{plan.originalPrice}</span>
+                    {plan.originalPrice && (
+                      <span className="text-lg text-gray-400 line-through">{plan.originalPrice}</span>
+                    )}
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
@@ -413,4 +410,4 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
   );
 };
 
-export default AICustomerSupportChatbotPage;
+export default AiCustomerSupportChatbotPage;

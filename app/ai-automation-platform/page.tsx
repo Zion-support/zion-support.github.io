@@ -1,5 +1,43 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code-4a9f
+import { Helmet } from 'react-helmet-async';
+import { Right, Play, Circle } from 'lucide-react';
+
+const AiAutomationPlatformPage: React.FC = () => {
+  const features = [
+    {
+      icon: <Circle className="w-6 h-6" />,
+      title: "Workflow Automation",
+      description: "Automate complex business processes with intelligent workflow management.",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: <Circle className="w-6 h-6" />,
+      title: "AI Integration",
+      description: "Seamlessly integrate AI capabilities into your existing systems.",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: <Circle className="w-6 h-6" />,
+      title: "Real-time Analytics",
+      description: "Monitor and analyze automation performance in real-time.",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: <Circle className="w-6 h-6" />,
+      title: "Scalable Solutions",
+      description: "Scale your automation as your business grows.",
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+
+  const benefits = [
+    "70% reduction in manual tasks",
+    "50% faster process completion",
+    "90% accuracy improvement",
+    "24/7 automated operations",
+    "Cost savings up to 60%",
+    "Improved employee productivity"
+  ];
 
   return (<>
       <Helmet>

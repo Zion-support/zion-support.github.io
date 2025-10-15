@@ -11,6 +11,8 @@ export default tseslint.config(
       ".next",
       "backup-problematic/**",
       "corrupted-src-backup/**",
+      "app-broken/**",
+      "app-disabled/**",
       "src/**",
       "*.js",
       "scripts/**",

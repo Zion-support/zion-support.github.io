@@ -1,60 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, Shield, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3, Star } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 const G5gSolutionsPage: React.FC = () => {
-  const g5gServices = [
-    {
-      icon: <Wifi className="w-8 h-8" />,
-      title: "5G Network Design",
-      description: "Complete 5G network architecture and infrastructure design for optimal coverage and performance.",
-      features: ["Network Planning", "Coverage Analysis", "Capacity Planning", "Interference Management"]
-    },
-    {
-      name: "5G Network Infrastructure",
-      description: "Robust 5G infrastructure with advanced tower installation and fiber optic connectivity.",
-      features: ["Tower installation", "Fiber optics deployment", "Coverage optimization", "Signal boosting", "Maintenance contracts", "Performance monitoring"],
-      price: "From $8,999",
-      marketPrice: "$15,999-59,999",
-      popular: false,
-      icon: <Network className="w-8 h-8" />,
-      benefits: "99.9% uptime guarantee with enterprise-grade infrastructure"
-    },
-    {
-      name: "5G Edge Computing",
-      description: "Ultra-low latency edge computing solutions for real-time applications and IoT devices.",
-      features: ["Edge server deployment", "Latency optimization", "IoT integration", "Real-time processing", "Data analytics", "Security protocols"],
-      price: "From $6,999",
-      marketPrice: "$12,999-39,999",
-      popular: true,
-      icon: <Cpu className="w-8 h-8" />,
-      benefits: "Reduce latency by 80% with edge computing solutions"
-    },
-    {
-      name: "5G Mobile Applications",
-      description: "High-performance mobile apps optimized for 5G networks with advanced features.",
-      features: ["5G-optimized apps", "Real-time streaming", "AR/VR integration", "Cloud synchronization", "Cross-platform support", "Performance monitoring"],
-      price: "From $4,999",
-      marketPrice: "$9,999-29,999",
-      popular: false,
-      icon: <Smartphone className="w-8 h-8" />,
-      benefits: "Deliver seamless mobile experiences with 5G optimization"
-    }
-  ];
-
-  const features = [
-    "Ultra-fast 5G deployment",
-    "Zero-downtime migration",
-    "24/7 expert support",
-    "Comprehensive testing",
-    "Performance optimization",
-    "Future-proof solutions"
-  ];
-
-  const technologies = [
-    "5G NR", "Network Slicing", "Edge Computing", "IoT Protocols", 
-    "AI/ML Integration", "Cloud-Native", "SDN/NFV", "MEC"
-  ];
 
   return (
     <>
