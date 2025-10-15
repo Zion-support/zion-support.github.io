@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {ArrowRight, CheckCircle, Star, Award, Globe, Package, Heart} from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Award, Globe, Package, Heart, Zap, Settings, BarChart3, Users, Shield} from 'lucide-react';
 import { Clock } from 'lucide-react';
 const MicroSaasPage: React.FC = () => {
   const microSaasProducts = [

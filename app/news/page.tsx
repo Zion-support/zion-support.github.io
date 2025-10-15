@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {ArrowRight, ExternalLink, Filter, User} from 'lucide-react';
+import {ArrowRight, ExternalLink, Filter, User, Calendar} from 'lucide-react';
 
 const NewsPage: React.FC = () => {
   const newsArticles = [

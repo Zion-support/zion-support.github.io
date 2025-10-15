@@ -1,6 +1,6 @@
 import React, { useState, useEffect, memo, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
-import {HelpCircle, Phone, BookOpen, Search, MessageCircle} from 'lucide-react';
+import {HelpCircle, Phone, BookOpen, Search, MessageCircle, Zap} from 'lucide-react';
 import { Users, Mail } from 'lucide-react';
 import { Clock } from 'lucide-react';
 interface FAQ { question: string; answer: string; category: string; }

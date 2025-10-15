@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {X, Menu, Home, Brain, Globe} from 'lucide-react';
+import {X, Menu, Home, Brain, Globe, Users, Shield, Zap, BarChart3, Settings} from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;

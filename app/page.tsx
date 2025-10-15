@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import {Brain, Globe, ArrowRight, Star, Award, Sparkles, Smartphone, Monitor, Target, Package} from "lucide-react";
+import {Brain, Globe, ArrowRight, Star, Award, Sparkles, Smartphone, Monitor, Target, Package, Calendar} from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";

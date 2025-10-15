@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {CheckIcon, UserGroupIcon, LightBulbIcon, ShieldCheckIcon, CpuChipIcon, CloudIcon} from '@heroicons/react/24/outline';
-import { Shield, Cloud } from 'lucide-react';
 
 const About: React.FC = () => {
   return (

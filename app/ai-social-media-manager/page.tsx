@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {TrendingUp, CheckCircle, Star, ArrowRight, Target, MessageSquare, Image, Video, Globe} from 'lucide-react';
+import {TrendingUp, CheckCircle, Star, ArrowRight, Target, MessageSquare, Image, Video, Globe, Hash} from 'lucide-react';
 import { BarChart3, Zap, Users } from 'lucide-react';
 import { Clock } from 'lucide-react';
 const AiSocialMediaManagerPage: React.FC = () => {
