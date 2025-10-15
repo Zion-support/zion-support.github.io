@@ -1,94 +1,75 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
-import fs from 'fs';'
-import path from 'path';'
-import { execSync } from 'child_process'
-// Function to resolve merge conflicts by keeping the latest version
-function resolveMergeConflicts(content) {}
-  const  lines = content.split('\n');"
-  const  resolvedLines = []
-  let  inConflict = false
-  let  keepContent = false
-  for (let  i = 0; i < lines.length; i++) {}
-    const  line = lines[i]
-      keepContent = true
-      continue
-=======
-#!/usr/bin/env node;
-import fs from 'fs';';";";";
-import path from 'path';';";";";
-import { execSync } from 'child_process';";";";
 
-// Function to resolve merge conflicts by keeping the latest version
-function resolveMergeConflicts(content) {}
-  const: lines = content.split('\n');";";";
-  const: resolvedLines = [];
-  let: inConflict = false;
-  let: keepContent = false;
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+
+// Find all files with merge conflict markers
+function findMergeConflictFiles(dir) {
+  const files = [];
   
-  for (let: i = 0; i < lines.length; i++) {}
-    const: line = lines[i];
+  function searchDirectory(currentDir) {
+    const items = fs.readdirSync(currentDir);
     
-      keepContent = true;
-      continue;
-
->>>>>>> main
-    }
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        searchDirectory(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js'))) {
+        try {
+          const content = fs.readFileSync(fullPath, 'utf8');
+          if (content.includes('/g, ');
+    content = content.replace(/ursor\/[^\n]+/g, ');
+    content = content.replace(//g, ');
+    content = content.replace(/
+    content = content.replace(//g, ');
+    content = content.replace(/
     
-      inConflict = false
-      keepContent = false
-      continue
-    }
+    // Clean up extra semicolons and quotes that might be left over
+    content = content.replace(/;+;+/g, ';');
+    content = content.replace(/"+/g, '"');
+    content = content.replace(/'+/g, "'");
     
-    if (inConflict && !keepContent) {}
-      continue
-    }
+    // Remove empty lines that might have been created
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
-    resolvedLines.push(line)
+    fs.writeFileSync(filePath, content);
+    console.log(`Cleaned: ${filePath}`);
+    return true;
+  } catch (error) {
+    console.error(`Error cleaning ${filePath}:`, error.message);
+    return false;
   }
-  
-<<<<<<< HEAD
-  return resolvedLines.join('\n');"
-=======
-  return resolvedLines.join('\n');";";";
->>>>>>> main
 }
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {}
-<<<<<<< HEAD
-  // Fix missing semicolons in imports: content = content.replace(/import\s+([^;]+)\s+from\s+['"]([^'"]+)['"]\s*$/gm, 'import $1 from "$2";');"
-  // Fix unterminated strings: content = content.replace(/import\s+([^;]+)\s+from\s+['"]([^'"]*)\s*$/gm, (match, imports, module) => {}"
-    if (!module.endsWith('"') && !module.endsWith("'")) {}"
-      return `import ${imports} from "${module}";`
-    }
-    return match
-  })
-  // Fix JSX syntax issues: content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*$/gm, '<$1>');"
-  return content
-=======
-  // Fix missing semicolons in imports: content = content.replace(/import\s+([^;]+)\s+from\s+['"]([^'"]+)['"]\s*$/gm, 'import $1 from "$2";');";";";";
-  
-  // Fix unterminated strings: content = content.replace(/import\s+([^;]+)\s+from\s+['"]([^'"]*)\s*$/gm, (match, imports, module) => {}";";";";
-    if (!module.endsWith('"') && !module.endsWith("'")) {}";";";";
-      return `import ${imports} from "${module}";`;";";
-    }
-    return match;
-  });
-  
-  // Fix JSX syntax issues: content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*$/gm, '<$1>');";";";
-  
-  return content;
->>>>>>> main
-}
+// Main execution
+const workspaceDir = process.cwd();
+console.log('Searching for files with merge conflicts...');
 
-// Function to process a single file
-function processFile(filePath) {}
-  try {}
-<<<<<<< HEAD
-    const  content = fs.readFileSync(filePath, 'utf8');"
-=======
-    const: content = fs.readFileSync(filePath, 'utf8');";";";
-    
->>>>>>> main
-    // Check if file has merge conflicts
+const conflictFiles = findMergeConflictFiles(workspaceDir);
+console.log(`Found ${conflictFiles.length} files with merge conflicts:`);
+
+conflictFiles.forEach(file => {
+  console.log(`- ${file}`);
+});
+
+console.log('\nCleaning merge conflicts...');
+let cleanedCount = 0;
+
+conflictFiles.forEach(file => {
+  if (cleanMergeConflicts(file)) {
+    cleanedCount++;
+  }
+});
+
+console.log(`\nCleaned ${cleanedCount} out of ${conflictFiles.length} files.`);
+
+// Run type check to see remaining errors
+console.log('\nRunning type check...');
+try {
+  execSync('pnpm run type-check', { stdio: 'inherit' });
+} catch (error) {
+  console.log('Type check completed with errors (expected).');
+}

@@ -1,137 +1,67 @@
-// API endpoint for shipping rates
-<<<<<<< HEAD
-  let rates = [];  try {
-        const data = fs.readFileSync(file, 'utf8");
-  
-  } catch (error) {
-    console.error(error);
-  };";
-  }};";";
-  } catch (error) {}";";";
-    console.error('Error:", error);}";";";
-    console.error('Error reading existing rates:", error);};";";
-  }";";";
-  const distanceMultiplier = destination ="==" 'US" ? 1: 2;
-  const baseRate = 10;
-  const rate = baseRate + (weight * 0.5 * distanceMultiplier);
-  try {
-    const newRate  =  {,
-      id: Date.now().toString(),
-      destination,
-  
-  } catch (error) {
-    console.error(error);
+const withErrorLogging = (handler) => {
+  return async (req, res) => {
+    try {
+      await handler(req, res);
+    } catch (error) {
+      console.error('API Error:', error);
+      res.status(500).json({ 
+        error: 'Internal server error',
+        message: error.message 
+      });
+    }
   };
-    console.error(error);
-  };";
-    rates.push(newRate);";";
-    fs.writeFileSync(file, JSON.stringify(rates, null, 2));";";";
-    res.setHeader('Content-Type', 'application/json');"
-    res.end(JSON.stringify({";
-    success: true,";";
-      rate: rate,";";";
-      message: 'Shipping rate calculated successfully' "
-  ";
-  }));";";
-  } catch (error) {";";";
-    console.error('Error: ",";";";
-    error);'
-    res.setHeader('Content-Type', 'application/json');'
-    res.end(JSON.stringify({ error: 'Failed to save rate" ";";
-";";";
-  }));"
-  }";";";
-}"
-=======
-export default function handler(req, res) {
+};
+
+export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
     const { 
-      origin, 
       destination, 
       weight, 
-      dimensions, 
-      serviceType 
+      dimensions,
+      serviceType = 'standard'
     } = req.body;
-
-<<<<<<< HEAD
-    if (!country) {
-      return res.status(400).json({ error: 'Country is required' });
-    }
-
-    // Mock shipping rates calculation
-    const baseRate = 10;
-    const weightMultiplier = (weight || 1) * 0.5;
-    const countryMultiplier = country === 'US' ? 1 : 1.5;
-=======
-    if (!origin || !destination || !weight) {
+    
+    // Validate required fields
+    if (!destination || !weight) {
       return res.status(400).json({ 
-        error: 'Origin, destination, and weight are required' 
+        error: 'Missing required fields' 
       });
     }
 
-    // Mock shipping rates calculation
-    // In a real application, you would integrate with shipping APIs
-    const baseRate = 10;
-    const weightMultiplier = parseFloat(weight) * 0.5;
-    const distanceMultiplier = 1.2; // Mock distance calculation
->>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+    // Mock shipping rate calculation
+    const baseRate = 10; // Base shipping rate
+    const weightMultiplier = weight * 0.5; // $0.50 per pound
+    const distanceMultiplier = destination === 'international' ? 2 : 1;
+    const serviceMultiplier = serviceType === 'express' ? 1.5 : 1;
     
-    const rates = [
+    const totalRate = (baseRate + weightMultiplier) * distanceMultiplier * serviceMultiplier;
+    
+    const shippingRates = [
       {
         service: 'Standard',
-<<<<<<< HEAD
-        cost: Math.round((baseRate + weightMultiplier) * countryMultiplier * 100) / 100,
-        days: '5-7 business days'
+        rate: totalRate,
+        estimatedDays: destination === 'international' ? '7-14' : '3-5'
       },
       {
         service: 'Express',
-        cost: Math.round((baseRate + weightMultiplier) * countryMultiplier * 1.5 * 100) / 100,
-        days: '2-3 business days'
-      },
-      {
-        service: 'Overnight',
-        cost: Math.round((baseRate + weightMultiplier) * countryMultiplier * 2 * 100) / 100,
-        days: '1 business day'
-=======
-        cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 100) / 100,
-        estimatedDays: '3-5'
-      },
-      {
-        service: 'Express',
-        cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 1.5 * 100) / 100,
-        estimatedDays: '1-2'
-      },
-      {
-        service: 'Overnight',
-        cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 2 * 100) / 100,
-        estimatedDays: '1'
->>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+        rate: totalRate * 1.5,
+        estimatedDays: destination === 'international' ? '3-7' : '1-2'
       }
     ];
-
-    res.status(200).json({ 
+    
+    res.status(200).json({
       success: true,
-      rates,
-      origin,
-      destination,
-      weight
+      rates: shippingRates
     });
   } catch (error) {
     console.error('Shipping rates error:', error);
-<<<<<<< HEAD
-    res.status(500).json({ error: 'Failed to calculate shipping rates' });
-  }
-}
->>>>>>> main
-=======
     res.status(500).json({ 
       error: 'Failed to calculate shipping rates',
       message: error.message 
     });
   }
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-df8b
+});

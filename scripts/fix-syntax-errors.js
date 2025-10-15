@@ -91,12 +91,12 @@ function fixUnusedImports(content) {
   
   // Remove unused React imports
   if (fixed.includes('import React') && !fixed.includes('React.')) {
-    fixed = fixed.replace(/import React[^;]*;\s*/g, '');
+    fixed = fixed.replace(/import React[^;]*;\s*/g, ');
   }
   
   // Remove unused SEOHead imports
   if (fixed.includes('import SEOHead') && !fixed.includes('SEOHead')) {
-    fixed = fixed.replace(/import SEOHead[^;]*;\s*/g, '');
+    fixed = fixed.replace(/import SEOHead[^;]*;\s*/g, ');
   }
   
   return fixed;
@@ -153,7 +153,7 @@ function processFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file is severely corrupted
-    if (content.length < 100 || content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+    if (content.length < 100 || content.includes('<<<<<<<') || content.includes(') || content.includes('>>>>>>>')) {
       console.log(`🔄 Recreating severely corrupted file: ${filePath}`);
       const newContent = createValidReactComponent(filePath, content);
       fs.writeFileSync(filePath, newContent, 'utf8');
