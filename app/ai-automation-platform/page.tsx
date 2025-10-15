@@ -1,9 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
 import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
-const AIAutomationPlatform: React.FC = () => {
+const AiAutomationPlatformPage: React.FC = () => {
   const features = [
     {
       title: "Workflow Automation",
@@ -39,19 +38,14 @@ const AIAutomationPlatform: React.FC = () => {
     "Scalable workflows",
     "Cost reduction"
   ];
-=======
-import SEOHead from '../components/SEOHead';
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
 
-const AiAutomationPlatformPage: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD
-      <Helmet>
-        <title>AI Automation Platform - Intelligent Process Automation | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with our AI automation platform. Automate workflows, optimize processes, and achieve 70% efficiency gains with intelligent automation solutions." />
-        <meta name="keywords" content="AI automation, process automation, workflow automation, business intelligence, machine learning, AI platform" />
-      </Helmet>
+      <SEOHead 
+        title="AI Automation Platform - Intelligent Process Automation"
+        description="Transform your business with our AI automation platform. Automate workflows, optimize processes, and achieve 70% efficiency gains with intelligent automation solutions."
+        keywords="AI automation, process automation, workflow automation, business intelligence, machine learning, AI platform"
+      />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -106,14 +100,14 @@ const AiAutomationPlatformPage: React.FC = () => {
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Platform</h2>
-              <p className="text-xl text-gray-300">Proven results and measurable impact</p>
+              <p className="text-xl text-gray-300">Proven results and enterprise-grade reliability</p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <Circle className="w-6 h-6 text-cyan-400 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
+                  <span className="text-gray-300 text-lg">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -122,29 +116,16 @@ const AiAutomationPlatformPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI automation platform to streamline operations and boost efficiency.
+          <div className="container mx-auto max-w-7xl text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Automate Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join thousands of businesses already using our AI automation platform to streamline operations and boost productivity.
             </p>
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300">
               Get Started Today
             </button>
           </div>
         </section>
-=======
-      <SEOHead 
-        title="ai-automation-platform - Zion Tech Group"
-        description="Zion Tech Group ai-automation-platform service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">ai-automation-platform</h1>
-          <p className="text-gray-300">Coming soon...</p>
-        </div>
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
       </div>
     </>
   );
