@@ -8,7 +8,7 @@ const AboutPage: React.FC = () => {
         title="About Us - Zion Tech Group"
         description="Learn about Zion Tech Group's mission to provide innovative AI and IT solutions for businesses worldwide."
         keywords="about us, company mission, AI company, IT solutions company, technology leadership"
-        canonicalUrl="https://ziontechgroup.com/about"
+        canonical="https://ziontechgroup.com/about"
       />
       
       <div className="min-h-screen bg-white">

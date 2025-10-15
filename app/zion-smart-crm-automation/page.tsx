@@ -8,7 +8,7 @@ const ZionSmartCRMAutomationPage: React.FC = memo(() => {
         title="Zion Smart CRM Automation - Automate Your CRM with AI"
         description="AI-powered CRM automation platform that streamlines customer relationship management and sales processes with intelligent automation."
         keywords="CRM automation, AI CRM, sales automation, customer relationship management, lead management"
-        canonicalUrl="https://ziontechgroup.com/zion-smart-crm-automation"
+        canonical="https://ziontechgroup.com/zion-smart-crm-automation"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">

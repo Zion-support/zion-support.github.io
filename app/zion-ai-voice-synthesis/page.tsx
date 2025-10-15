@@ -8,7 +8,7 @@ const ZionAIVoiceSynthesisPage: React.FC = memo(() => {
         title="Zion AI Voice Synthesis Pro - Generate Natural-Sounding AI Voices"
         description="High-quality AI voice generation and text-to-speech services with natural-sounding voices in multiple languages for professional audio content."
         keywords="AI voice synthesis, text to speech, voice generation, AI voices, audio content"
-        canonicalUrl="https://ziontechgroup.com/zion-ai-voice-synthesis"
+        canonical="https://ziontechgroup.com/zion-ai-voice-synthesis"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">

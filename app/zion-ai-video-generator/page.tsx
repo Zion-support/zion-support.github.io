@@ -8,7 +8,7 @@ const ZionAIVideoGeneratorPage: React.FC = memo(() => {
         title="Zion AI Video Generator Pro - Create Professional Videos with AI"
         description="Create professional videos from text, images, and audio using advanced AI technology for marketing and content creation."
         keywords="AI video generator, video creation, AI video, marketing videos, content creation"
-        canonicalUrl="https://ziontechgroup.com/zion-ai-video-generator"
+        canonical="https://ziontechgroup.com/zion-ai-video-generator"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">

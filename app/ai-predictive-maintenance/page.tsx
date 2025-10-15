@@ -8,7 +8,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
         title="AI Predictive Maintenance - Zion Tech Group"
         description="AI-powered predictive maintenance solutions. Prevent equipment failures, reduce downtime, and optimize maintenance schedules with machine learning and IoT sensors."
         keywords="AI predictive maintenance, equipment monitoring, IoT sensors, machine learning, maintenance optimization, failure prevention"
-        canonicalUrl="https://ziontechgroup.com/ai-predictive-maintenance"
+        canonical="https://ziontechgroup.com/ai-predictive-maintenance"
       />
       
       <div className="min-h-screen bg-white">

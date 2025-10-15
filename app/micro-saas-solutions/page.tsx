@@ -8,7 +8,7 @@ const MicroSAASSolutionsPage: React.FC = () => {
         title="Micro SaaS Solutions - Zion Tech Group"
         description="Specialized micro SaaS solutions for specific business needs and workflows. Discover our comprehensive suite of intelligent business applications."
         keywords="micro saas, business software, task management, crm, analytics, inventory management, hr software, finance management"
-        canonicalUrl="https://ziontechgroup.com/micro-saas-solutions"
+        canonical="https://ziontechgroup.com/micro-saas-solutions"
       />
       
       <div className="min-h-screen bg-white">

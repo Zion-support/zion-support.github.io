@@ -8,7 +8,7 @@ const ZionDevOpsAutomationPage: React.FC = memo(() => {
         title="Zion DevOps Automation & CI/CD Pipeline - Automate Development Processes"
         description="Complete DevOps automation services including CI/CD pipeline setup, infrastructure as code, and automated deployment solutions for modern development workflows."
         keywords="DevOps automation, CI/CD pipeline, infrastructure as code, deployment automation, development automation"
-        canonicalUrl="https://ziontechgroup.com/zion-devops-automation"
+        canonical="https://ziontechgroup.com/zion-devops-automation"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">

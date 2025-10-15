@@ -8,7 +8,7 @@ const ZionIoTSolutionsPage: React.FC = memo(() => {
         title="Zion IoT Development & Integration - Connect and Manage IoT Devices"
         description="Internet of Things solutions including device development, data collection, analytics, and cloud integration for smart connected systems."
         keywords="IoT development, Internet of Things, smart devices, IoT integration, connected systems, IoT analytics"
-        canonicalUrl="https://ziontechgroup.com/zion-iot-solutions"
+        canonical="https://ziontechgroup.com/zion-iot-solutions"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">

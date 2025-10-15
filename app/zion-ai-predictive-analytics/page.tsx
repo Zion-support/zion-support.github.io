@@ -8,7 +8,7 @@ const ZionAIPredictiveAnalyticsPage: React.FC = memo(() => {
         title="Zion AI Predictive Analytics Pro - Predict the Future with AI"
         description="Advanced predictive analytics platform that uses machine learning to forecast trends, behaviors, and outcomes for data-driven business intelligence."
         keywords="predictive analytics, AI forecasting, business intelligence, machine learning, data prediction"
-        canonicalUrl="https://ziontechgroup.com/zion-ai-predictive-analytics"
+        canonical="https://ziontechgroup.com/zion-ai-predictive-analytics"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">

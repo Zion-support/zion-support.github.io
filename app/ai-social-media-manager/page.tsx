@@ -8,7 +8,7 @@ const AISocialMediaManagerPage: React.FC = () => {
         title="AI Social Media Manager - Zion Tech Group"
         description="Comprehensive social media management with AI-powered content creation, scheduling, and analytics. Manage all social media with AI assistance."
         keywords="AI social media manager, social media automation, content creation, social media scheduling, social media analytics, brand management"
-        canonicalUrl="https://ziontechgroup.com/ai-social-media-manager"
+        canonical="https://ziontechgroup.com/ai-social-media-manager"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">

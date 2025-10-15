@@ -8,7 +8,7 @@ const AIDataVisualizerPage: React.FC = () => {
         title="AI Data Visualizer - Zion Tech Group"
         description="AI-powered data visualization platform with automated chart generation, interactive dashboards, and insights. Transform data into beautiful visualizations."
         keywords="AI data visualizer, data visualization, interactive dashboards, chart generation, data insights, business intelligence"
-        canonicalUrl="https://ziontechgroup.com/ai-data-visualizer"
+        canonical="https://ziontechgroup.com/ai-data-visualizer"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">

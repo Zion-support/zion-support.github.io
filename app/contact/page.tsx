@@ -40,7 +40,7 @@ const ContactPage: React.FC = memo(() => {
       <SEOHead
         title="Contact Us"
         description="Get in touch with Zion Tech Group for your AI and IT solution needs. We're here to help."
-        canonicalUrl="https://ziontechgroup.com/contact"
+        canonical="https://ziontechgroup.com/contact"
       />
       
       <div className="min-h-screen bg-white">

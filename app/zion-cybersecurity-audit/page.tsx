@@ -8,7 +8,7 @@ const ZionCybersecurityAuditPage: React.FC = memo(() => {
         title="Zion Cybersecurity Audit & Protection - Advanced Security Solutions"
         description="Comprehensive cybersecurity assessment and protection services including penetration testing, vulnerability scanning, and security monitoring for enterprise security."
         keywords="cybersecurity audit, penetration testing, security assessment, vulnerability scanning, enterprise security"
-        canonicalUrl="https://ziontechgroup.com/zion-cybersecurity-audit"
+        canonical="https://ziontechgroup.com/zion-cybersecurity-audit"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">

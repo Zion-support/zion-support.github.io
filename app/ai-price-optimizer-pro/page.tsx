@@ -8,7 +8,7 @@ const AIPriceOptimizerProPage: React.FC = () => {
         title="Zion AI Price Optimizer Pro - Dynamic Pricing Solutions"
         description="Maximize revenue with our AI price optimization platform. Analyze market conditions and optimize pricing strategies in real-time."
         keywords="AI price optimization, dynamic pricing, revenue optimization, pricing strategy, market analysis, price elasticity"
-        canonicalUrl="https://ziontechgroup.com/ai-price-optimizer-pro"
+        canonical="https://ziontechgroup.com/ai-price-optimizer-pro"
       />
       
       <div className="min-h-screen bg-gray-50">

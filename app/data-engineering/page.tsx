@@ -8,7 +8,7 @@ const DataEngineeringPage: React.FC = () => {
         title="Data Engineering Services - Zion Tech Group"
         description="Professional data engineering and pipeline development. Build scalable data infrastructure, ETL processes, and real-time data processing systems for your business."
         keywords="data engineering, ETL, data pipelines, data infrastructure, real-time processing, data warehousing, big data"
-        canonicalUrl="https://ziontechgroup.com/data-engineering"
+        canonical="https://ziontechgroup.com/data-engineering"
       />
       
       <div className="min-h-screen bg-white">

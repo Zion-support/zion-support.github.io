@@ -8,7 +8,7 @@ const AIFormBuilderPage: React.FC = () => {
         title="AI Form Builder - Zion Tech Group"
         description="Create intelligent forms with AI-powered features. Smart validation, conditional logic, and automated responses."
         keywords="AI form builder, smart forms, form automation, conditional logic, form validation"
-        canonicalUrl="https://ziontechgroup.com/ai-form-builder"
+        canonical="https://ziontechgroup.com/ai-form-builder"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">

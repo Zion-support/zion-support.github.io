@@ -8,7 +8,7 @@ const ZionBlockchainSolutionsPage: React.FC = memo(() => {
         title="Zion Blockchain Development & Solutions - Leverage Blockchain Technology"
         description="Custom blockchain development services including smart contracts, DeFi applications, and enterprise blockchain solutions for modern business needs."
         keywords="blockchain development, smart contracts, DeFi, NFT, enterprise blockchain, cryptocurrency"
-        canonicalUrl="https://ziontechgroup.com/zion-blockchain-solutions"
+        canonical="https://ziontechgroup.com/zion-blockchain-solutions"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">

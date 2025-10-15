@@ -13,7 +13,7 @@ const ServicesPage: React.FC = () => {
         title="Services - Zion Tech Group"
         description="Explore our comprehensive range of AI and IT services designed to accelerate your business growth. From AI development to cloud infrastructure and micro SaaS solutions."
         keywords="AI services, IT services, cloud solutions, digital transformation, business automation, technology consulting, micro saas, machine learning, data analytics"
-        canonicalUrl="https://ziontechgroup.com/services"
+        canonical="https://ziontechgroup.com/services"
       />
       
       <div className="min-h-screen bg-gray-50">

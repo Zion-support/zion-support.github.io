@@ -8,7 +8,7 @@ const ZionAPIDevelopmentPage: React.FC = memo(() => {
         title="Zion API Development & Integration Services - Build Powerful APIs"
         description="Custom API development, integration, and management services for seamless data exchange between systems and applications with modern API architecture."
         keywords="API development, API integration, RESTful API, GraphQL, API management, system integration"
-        canonicalUrl="https://ziontechgroup.com/zion-api-development"
+        canonical="https://ziontechgroup.com/zion-api-development"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">

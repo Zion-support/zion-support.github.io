@@ -8,7 +8,7 @@ const SecurityAuditPage: React.FC = () => {
         title="Security Audit Services - Zion Tech Group"
         description="Comprehensive security audit and penetration testing services. Identify vulnerabilities, assess security posture, and implement security best practices for your applications and infrastructure."
         keywords="security audit, penetration testing, vulnerability assessment, security consulting, cybersecurity, security testing"
-        canonicalUrl="https://ziontechgroup.com/security-audit"
+        canonical="https://ziontechgroup.com/security-audit"
       />
       
       <div className="min-h-screen bg-white">

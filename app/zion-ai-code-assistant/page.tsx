@@ -8,7 +8,7 @@ const ZionAICodeAssistantPage: React.FC = memo(() => {
         title="Zion AI Code Assistant Pro - Boost Productivity with AI-Powered Coding"
         description="Intelligent coding assistant that helps developers write, debug, and optimize code with AI-powered suggestions and automation for faster development."
         keywords="AI code assistant, coding assistant, AI programming, code generation, developer tools"
-        canonicalUrl="https://ziontechgroup.com/zion-ai-code-assistant"
+        canonical="https://ziontechgroup.com/zion-ai-code-assistant"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">

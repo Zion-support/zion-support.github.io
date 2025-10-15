@@ -29,7 +29,7 @@ const ZionAIImageGeneratorPage: React.FC = memo(() => {
         title="Zion AI Image Generator Pro - Create Stunning Images with AI"
         description="Generate professional images, artwork, and marketing materials with advanced AI technology. Text-to-image, style transfer, and custom training capabilities."
         keywords="AI image generator, text to image, AI art, image creation, marketing visuals, AI design"
-        canonicalUrl="https://ziontechgroup.com/zion-ai-image-generator"
+        canonical="https://ziontechgroup.com/zion-ai-image-generator"
         structuredData={structuredData}
       />
       

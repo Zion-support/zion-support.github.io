@@ -8,7 +8,7 @@ const IoTSolutionsPage: React.FC = () => {
         title="IoT Solutions - Zion Tech Group"
         description="Comprehensive IoT solutions and development services. Build connected devices, sensor networks, and smart systems with our IoT platform and development expertise."
         keywords="IoT solutions, Internet of Things, connected devices, sensor networks, smart systems, IoT platform, embedded systems"
-        canonicalUrl="https://ziontechgroup.com/iot-solutions"
+        canonical="https://ziontechgroup.com/iot-solutions"
       />
       
       <div className="min-h-screen bg-white">

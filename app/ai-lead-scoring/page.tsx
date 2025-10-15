@@ -8,7 +8,7 @@ const AILeadScoringPage: React.FC = () => {
         title="AI Lead Scoring - Zion Tech Group"
         description="Intelligent lead scoring with AI. Automatically score and prioritize leads based on behavior, demographics, and engagement patterns to maximize conversion rates."
         keywords="AI lead scoring, lead qualification, sales automation, lead prioritization, conversion optimization, sales intelligence"
-        canonicalUrl="https://ziontechgroup.com/ai-lead-scoring"
+        canonical="https://ziontechgroup.com/ai-lead-scoring"
       />
       
       <div className="min-h-screen bg-white">

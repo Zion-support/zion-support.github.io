@@ -8,7 +8,7 @@ const ZionAITranslationServicePage: React.FC = memo(() => {
         title="Zion AI Translation Service Pro - Break Language Barriers with AI"
         description="Advanced AI-powered translation service supporting 100+ languages with context-aware translations and real-time processing for global communication."
         keywords="AI translation, language translation, multilingual, global communication, translation service"
-        canonicalUrl="https://ziontechgroup.com/zion-ai-translation-service"
+        canonical="https://ziontechgroup.com/zion-ai-translation-service"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">

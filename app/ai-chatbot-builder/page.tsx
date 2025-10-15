@@ -8,7 +8,7 @@ const AIChatbotBuilderPage: React.FC = () => {
         title="AI Chatbot Builder - Zion Tech Group"
         description="Build intelligent chatbots with our AI-powered platform. No coding required. Start free trial today."
         keywords="AI chatbot, chatbot builder, conversational AI, customer service automation, AI assistant"
-        canonicalUrl="https://ziontechgroup.com/ai-chatbot-builder"
+        canonical="https://ziontechgroup.com/ai-chatbot-builder"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">

@@ -29,7 +29,7 @@ const ZionSmartAnalyticsDashboardPage: React.FC = memo(() => {
         title="Zion Smart Analytics Dashboard - Transform Data into Insights"
         description="Comprehensive business intelligence platform with real-time analytics, custom dashboards, and AI-powered insights for data-driven decisions."
         keywords="business intelligence, analytics dashboard, data visualization, real-time analytics, business insights, data analytics"
-        canonicalUrl="https://ziontechgroup.com/zion-smart-analytics-dashboard"
+        canonical="https://ziontechgroup.com/zion-smart-analytics-dashboard"
         structuredData={structuredData}
       />
       

@@ -1,17 +1,54 @@
 import React from 'react';
 
-const LoadingSpinner: React.FC = () => {
-  return (
-    <div className="flex items-center justify-center min-h-screen" role="status" aria-live="polite">
-      <div className="relative">
-        <div className="w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin" aria-hidden="true"></div>
-        <div className="absolute inset-0 flex items-center justify-center" aria-hidden="true">
-          <div className="w-8 h-8 border-2 border-transparent border-t-purple-600 rounded-full animate-spin"></div>
-        </div>
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  color?: 'primary' | 'secondary' | 'white';
+  text?: string;
+  fullScreen?: boolean;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  color = 'primary',
+  text,
+  fullScreen = false
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
+  const colorClasses = {
+    primary: 'text-blue-600',
+    secondary: 'text-gray-600',
+    white: 'text-white'
+  };
+
+  const spinnerClasses = `animate-spin rounded-full border-2 border-gray-300 border-t-current ${sizeClasses[size]} ${colorClasses[color]}`;
+
+  const content = (
+    <div className="flex flex-col items-center justify-center space-y-4">
+      <div className={spinnerClasses} role="status" aria-label="Loading">
+        <span className="sr-only">Loading...</span>
       </div>
-      <span className="sr-only">Loading content, please wait...</span>
+      {text && (
+        <p className={`text-sm font-medium ${colorClasses[color]}`}>
+          {text}
+        </p>
+      )}
     </div>
   );
+
+  if (fullScreen) {
+    return (
+      <div className="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50">
+        {content}
+      </div>
+    );
+  }
+
+  return content;
 };
 
 export default LoadingSpinner;

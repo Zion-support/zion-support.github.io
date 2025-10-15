@@ -8,7 +8,7 @@ const DevOpsAutomationPage: React.FC = () => {
         title="DevOps Automation Services - Zion Tech Group"
         description="Professional DevOps automation and CI/CD pipeline development. Automate deployments, infrastructure management, and monitoring with modern DevOps tools and practices."
         keywords="DevOps automation, CI/CD, deployment automation, infrastructure as code, monitoring, containerization, cloud DevOps"
-        canonicalUrl="https://ziontechgroup.com/devops-automation"
+        canonical="https://ziontechgroup.com/devops-automation"
       />
       
       <div className="min-h-screen bg-white">

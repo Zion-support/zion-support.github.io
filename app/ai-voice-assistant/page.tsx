@@ -8,7 +8,7 @@ const AIVoiceAssistantPage: React.FC = () => {
         title="AI Voice Assistant - Zion Tech Group"
         description="Custom AI voice assistants for your business. Build intelligent voice interfaces with natural language processing, speech recognition, and conversational AI capabilities."
         keywords="AI voice assistant, voice AI, speech recognition, natural language processing, conversational AI, voice interface"
-        canonicalUrl="https://ziontechgroup.com/ai-voice-assistant"
+        canonical="https://ziontechgroup.com/ai-voice-assistant"
       />
       
       <div className="min-h-screen bg-white">

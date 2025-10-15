@@ -8,7 +8,7 @@ const AIFraudDetectionProPage: React.FC = () => {
         title="Zion AI Fraud Detection Pro - Advanced Fraud Prevention Solutions"
         description="Protect your business with our advanced AI fraud detection system. Real-time fraud prevention using machine learning algorithms and pattern recognition."
         keywords="AI fraud detection, fraud prevention, machine learning, risk scoring, anomaly detection, security, fraud protection"
-        canonicalUrl="https://ziontechgroup.com/ai-fraud-detection-pro"
+        canonical="https://ziontechgroup.com/ai-fraud-detection-pro"
       />
       
       <div className="min-h-screen bg-gray-50">

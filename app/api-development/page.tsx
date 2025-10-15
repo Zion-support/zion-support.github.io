@@ -8,7 +8,7 @@ const APIDevelopmentPage: React.FC = () => {
         title="API Development Services - Zion Tech Group"
         description="Professional API development and integration services. Build robust, scalable APIs with modern technologies, comprehensive documentation, and security best practices."
         keywords="API development, REST API, GraphQL, API integration, microservices, API documentation, API security"
-        canonicalUrl="https://ziontechgroup.com/api-development"
+        canonical="https://ziontechgroup.com/api-development"
       />
       
       <div className="min-h-screen bg-white">

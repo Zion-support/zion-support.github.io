@@ -8,7 +8,7 @@ const AILeadScoringProPage: React.FC = () => {
         title="Zion AI Lead Scoring Pro - Intelligent Lead Qualification Solutions"
         description="Transform your sales process with our AI lead scoring system. Analyze customer behavior and predict conversion probability with machine learning."
         keywords="AI lead scoring, lead qualification, sales optimization, conversion prediction, marketing automation, lead analysis"
-        canonicalUrl="https://ziontechgroup.com/ai-lead-scoring-pro"
+        canonical="https://ziontechgroup.com/ai-lead-scoring-pro"
       />
       
       <div className="min-h-screen bg-gray-50">

@@ -8,7 +8,7 @@ const AIDocumentProcessorPage: React.FC = () => {
         title="AI Document Processor - Zion Tech Group"
         description="Automate document processing with AI. Extract data, classify documents, and automate workflows with our intelligent document processing platform."
         keywords="AI document processing, document automation, OCR, data extraction, document classification, workflow automation"
-        canonicalUrl="https://ziontechgroup.com/ai-document-processor"
+        canonical="https://ziontechgroup.com/ai-document-processor"
       />
       
       <div className="min-h-screen bg-white">

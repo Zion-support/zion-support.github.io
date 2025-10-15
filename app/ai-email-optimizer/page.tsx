@@ -8,7 +8,7 @@ const AIEmailOptimizerPage: React.FC = () => {
         title="AI Email Optimizer - Zion Tech Group"
         description="AI-powered email optimization with subject line generation, send time optimization, and performance analytics. Optimize email campaigns with AI."
         keywords="AI email optimizer, email optimization, subject line generation, send time optimization, email analytics, email marketing"
-        canonicalUrl="https://ziontechgroup.com/ai-email-optimizer"
+        canonical="https://ziontechgroup.com/ai-email-optimizer"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">

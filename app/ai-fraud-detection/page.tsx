@@ -8,7 +8,7 @@ const AIFraudDetectionPage: React.FC = () => {
         title="AI Fraud Detection - Zion Tech Group"
         description="Advanced AI-powered fraud detection system. Real-time monitoring, machine learning algorithms, and 99.9% accuracy."
         keywords="AI fraud detection, fraud prevention, machine learning, real-time monitoring, security AI"
-        canonicalUrl="https://ziontechgroup.com/ai-fraud-detection"
+        canonical="https://ziontechgroup.com/ai-fraud-detection"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-red-900 via-rose-900 to-pink-900">

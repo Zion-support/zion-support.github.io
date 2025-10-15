@@ -8,7 +8,7 @@ const IoTSolutionsProPage: React.FC = () => {
         title="Zion IoT Solutions Pro - Complete IoT Platform & Device Management"
         description="Transform your business with our comprehensive IoT platform. Device management, data analytics, and real-time monitoring for connected devices."
         keywords="IoT platform, device management, IoT analytics, connected devices, industrial IoT, smart devices, IoT monitoring"
-        canonicalUrl="https://ziontechgroup.com/iot-solutions-pro"
+        canonical="https://ziontechgroup.com/iot-solutions-pro"
       />
       
       <div className="min-h-screen bg-gray-50">

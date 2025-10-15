@@ -8,7 +8,7 @@ const AIImageRecognitionPage: React.FC = () => {
         title="AI Image Recognition - Zion Tech Group"
         description="Advanced AI image recognition and computer vision solutions. Object detection, facial recognition, and image analysis."
         keywords="AI image recognition, computer vision, object detection, facial recognition, image analysis, machine learning"
-        canonicalUrl="https://ziontechgroup.com/ai-image-recognition"
+        canonical="https://ziontechgroup.com/ai-image-recognition"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">

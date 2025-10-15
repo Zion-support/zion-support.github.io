@@ -8,7 +8,7 @@ const AIImageRecognitionProPage: React.FC = () => {
         title="Zion AI Image Recognition Pro - Advanced Computer Vision Solutions"
         description="Transform your business with our advanced AI image recognition platform. Object detection, facial recognition, and automated image analysis capabilities."
         keywords="AI image recognition, computer vision, object detection, facial recognition, OCR, image analysis, AI vision"
-        canonicalUrl="https://ziontechgroup.com/ai-image-recognition-pro"
+        canonical="https://ziontechgroup.com/ai-image-recognition-pro"
       />
       
       <div className="min-h-screen bg-gray-50">

@@ -8,7 +8,7 @@ const AIWebsiteAnalyzerPage: React.FC = () => {
         title="AI Website Analyzer - Zion Tech Group"
         description="Comprehensive website analysis with AI-powered insights, performance optimization, and SEO recommendations. Analyze and optimize your website with AI."
         keywords="AI website analyzer, website analysis, performance optimization, SEO analysis, website insights, website optimization"
-        canonicalUrl="https://ziontechgroup.com/ai-website-analyzer"
+        canonical="https://ziontechgroup.com/ai-website-analyzer"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">

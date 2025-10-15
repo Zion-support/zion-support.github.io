@@ -8,7 +8,7 @@ const BlockchainSolutionsProPage: React.FC = () => {
         title="Zion Blockchain Solutions Pro - Enterprise Blockchain Development"
         description="Transform your business with our comprehensive blockchain solutions. Smart contracts, DeFi applications, and enterprise blockchain development services."
         keywords="blockchain development, smart contracts, DeFi, NFT, enterprise blockchain, cryptocurrency, blockchain consulting"
-        canonicalUrl="https://ziontechgroup.com/blockchain-solutions-pro"
+        canonical="https://ziontechgroup.com/blockchain-solutions-pro"
       />
       
       <div className="min-h-screen bg-gray-50">

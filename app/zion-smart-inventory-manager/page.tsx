@@ -8,7 +8,7 @@ const ZionSmartInventoryManagerPage: React.FC = memo(() => {
         title="Zion Smart Inventory Manager - Optimize Inventory with AI"
         description="AI-powered inventory management system with demand forecasting, automated reordering, and real-time tracking for optimal inventory control."
         keywords="inventory management, AI inventory, demand forecasting, inventory optimization, supply chain"
-        canonicalUrl="https://ziontechgroup.com/zion-smart-inventory-manager"
+        canonical="https://ziontechgroup.com/zion-smart-inventory-manager"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">

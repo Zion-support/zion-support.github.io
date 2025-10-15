@@ -8,7 +8,7 @@ const AISchedulingAssistantPage: React.FC = () => {
         title="AI Scheduling Assistant - Zion Tech Group"
         description="Intelligent scheduling assistant powered by AI. Automate appointment booking, optimize schedules, and manage calendar conflicts with smart scheduling algorithms."
         keywords="AI scheduling assistant, appointment booking, calendar management, smart scheduling, meeting optimization, scheduling automation"
-        canonicalUrl="https://ziontechgroup.com/ai-scheduling-assistant"
+        canonical="https://ziontechgroup.com/ai-scheduling-assistant"
       />
       
       <div className="min-h-screen bg-white">

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import {
   Bars3Icon,
-  XMarkIcon,
   HomeIcon,
   InformationCircleIcon,
   PhoneIcon,
@@ -18,7 +17,6 @@ import {
   CpuChipIcon,
   SignalIcon,
   UserGroupIcon,
-  EnvelopeIcon,
   ShareIcon,
   ChatBubbleLeftRightIcon,
   ChartBarIcon,
@@ -35,15 +33,21 @@ interface NavigationProps {
   sidebarOpen?: boolean;
 }
 
+interface NavigationItem {
+  name: string;
+  href: string;
+  icon: React.ComponentType<any>;
+  submenu?: NavigationItem[];
+}
+
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = false }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState<boolean>(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState<boolean>(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState<boolean>(false);
+  const [isCompanyOpen, setIsCompanyOpen] = useState<boolean>(false);
   const location = useLocation();
 
-  const navigation = [
+  const navigation: NavigationItem[] = [
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
     {
@@ -131,36 +135,75 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
   ];
 
-  const isActive = (path: string) => {
+  const isActive = (path: string): boolean => {
     return location.pathname === path;
   };
 
-  const toggleServicesMenu = () => {
+  const toggleServicesMenu = (): void => {
     setIsServicesOpen(!isServicesOpen);
     setIsSolutionsOpen(false);
     setIsResourcesOpen(false);
     setIsCompanyOpen(false);
   };
 
-  const toggleSolutionsMenu = () => {
+  const toggleSolutionsMenu = (): void => {
     setIsSolutionsOpen(!isSolutionsOpen);
     setIsServicesOpen(false);
     setIsResourcesOpen(false);
     setIsCompanyOpen(false);
   };
 
-  const toggleResourcesMenu = () => {
+  const toggleResourcesMenu = (): void => {
     setIsResourcesOpen(!isResourcesOpen);
     setIsServicesOpen(false);
     setIsSolutionsOpen(false);
     setIsCompanyOpen(false);
   };
 
-  const toggleCompanyMenu = () => {
+  const toggleCompanyMenu = (): void => {
     setIsCompanyOpen(!isCompanyOpen);
     setIsServicesOpen(false);
     setIsSolutionsOpen(false);
     setIsResourcesOpen(false);
+  };
+
+  const handleMenuToggle = (itemName: string): void => {
+    switch (itemName) {
+      case 'AI Services':
+        toggleServicesMenu();
+        break;
+      case 'Micro SaaS':
+        toggleSolutionsMenu();
+        break;
+      case 'IT Solutions':
+        toggleResourcesMenu();
+        break;
+      case 'Resources':
+        toggleResourcesMenu();
+        break;
+      case 'Company':
+        toggleCompanyMenu();
+        break;
+      default:
+        break;
+    }
+  };
+
+  const isMenuOpen = (itemName: string): boolean => {
+    switch (itemName) {
+      case 'AI Services':
+        return isServicesOpen;
+      case 'Micro SaaS':
+        return isSolutionsOpen;
+      case 'IT Solutions':
+        return isResourcesOpen;
+      case 'Resources':
+        return isResourcesOpen;
+      case 'Company':
+        return isCompanyOpen;
+      default:
+        return false;
+    }
   };
 
   return (
@@ -183,23 +226,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
               <div key={item.name} className="relative">
                 <Link
                   to={item.href}
-                  onClick={() => {
-                    if (item.name === 'AI Services') toggleServicesMenu();
-                    else if (item.name === 'Micro SaaS') toggleSolutionsMenu();
-                    else if (item.name === 'IT Solutions') toggleResourcesMenu();
-                    else if (item.name === 'Resources') toggleResourcesMenu();
-                    else if (item.name === 'Company') toggleCompanyMenu();
-                  }}
+                  onClick={() => handleMenuToggle(item.name)}
                   className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors border-b-2 ${
                     isActive(item.href)
                       ? 'border-blue-500 text-white'
                       : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white'
                   }`}
-                  aria-expanded={item.submenu ? (item.name === 'AI Services' && isServicesOpen) ||
-                    (item.name === 'Micro SaaS' && isSolutionsOpen) ||
-                    (item.name === 'IT Solutions' && isResourcesOpen) ||
-                    (item.name === 'Resources' && isResourcesOpen) ||
-                    (item.name === 'Company' && isCompanyOpen) : undefined}
+                  aria-expanded={item.submenu ? isMenuOpen(item.name) : undefined}
                   aria-haspopup={item.submenu ? 'true' : undefined}
                 >
                   <item.icon className="w-4 h-4" aria-hidden="true" />
@@ -210,12 +243,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
                 {item.submenu && (
                   <div 
                     className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
-                      (item.name === 'AI Services' && isServicesOpen) ||
-                      (item.name === 'Micro SaaS' && isSolutionsOpen) ||
-                      (item.name === 'IT Solutions' && isResourcesOpen) ||
-                      (item.name === 'Resources' && isResourcesOpen) ||
-                      (item.name === 'Company' && isCompanyOpen)
-                        ? 'block' : 'hidden'
+                      isMenuOpen(item.name) ? 'block' : 'hidden'
                     }`}
                     role="menu"
                     aria-label={`${item.name} submenu`}

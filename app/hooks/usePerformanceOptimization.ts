@@ -1,81 +1,36 @@
 import { useEffect, useCallback, useRef } from 'react';
 
-interface PerformanceOptimizationOptions {
-  enableIntersectionObserver?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableDebouncing?: boolean;
-  debounceDelay?: number;
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
 }
 
-export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
-  const {
-    enableIntersectionObserver = true,
-    enableLazyLoading = true,
-    enablePreloading = true,
-    enableDebouncing = true,
-    debounceDelay = 300,
-  } = options;
+interface UsePerformanceOptimizationReturn {
+  metrics: PerformanceMetrics | null;
+  isOptimized: boolean;
+  optimizeImage: (src: string) => string;
+  preloadResource: (href: string, as: string) => void;
+}
 
-  const observerRef = useRef<IntersectionObserver | null>(null);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+export const usePerformanceOptimization = (): UsePerformanceOptimizationReturn => {
+  const metricsRef = useRef<PerformanceMetrics | null>(null);
+  const isOptimizedRef = useRef<boolean>(false);
 
-  // Intersection Observer for lazy loading
-  const createIntersectionObserver = useCallback(() => {
-    if (!enableIntersectionObserver || !enableLazyLoading) return;
+  const optimizeImage = useCallback((src: string): string => {
+    // Add WebP format support and quality optimization
+    if (src.includes('.')) {
+      const [name] = src.split('.');
+      return `${name}.webp`;
+    }
+    return src;
+  }, []);
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const target = entry.target as HTMLElement;
-            
-            // Lazy load images
-            if (target.tagName === 'IMG' && target.dataset.src) {
-              (target as HTMLImageElement).src = target.dataset.src;
-              target.removeAttribute('data-src');
-              observer.unobserve(target);
-            }
-            
-            // Lazy load background images
-            if (target.dataset.bgSrc) {
-              target.style.backgroundImage = `url(${target.dataset.bgSrc})`;
-              target.removeAttribute('data-bg-src');
-              observer.unobserve(target);
-            }
-          }
-        });
-      },
-      {
-        rootMargin: '50px',
-        threshold: 0.1,
-      }
-    );
+  const preloadResource = useCallback((href: string, as: string): void => {
+    if (typeof window === 'undefined') return;
 
-    observerRef.current = observer;
-    return observer;
-  }, [enableIntersectionObserver, enableLazyLoading]);
-
-  // Debounce function
-  const debounce = useCallback(
-    <T extends (...args: any[]) => any>(func: T): T => {
-      if (!enableDebouncing) return func;
-
-      return ((...args: Parameters<T>) => {
-        if (timeoutRef.current) {
-          clearTimeout(timeoutRef.current);
-        }
-        timeoutRef.current = setTimeout(() => func(...args), debounceDelay);
-      }) as T;
-    },
-    [enableDebouncing, debounceDelay]
-  );
-
-  // Preload critical resources
-  const preloadResource = useCallback((href: string, as: string, crossorigin?: string) => {
-    if (!enablePreloading) return;
-
-    // Check if already preloaded
     const existingLink = document.querySelector(`link[href="${href}"]`);
     if (existingLink) return;
 
@@ -83,88 +38,66 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     link.rel = 'preload';
     link.href = href;
     link.as = as;
-    if (crossorigin) {
-      link.crossOrigin = crossorigin;
-    }
-    
-    // Add error handling
-    link.onerror = () => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn(`Failed to preload resource: ${href}`);
+    document.head.appendChild(link);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    // Monitor Core Web Vitals
+    const measurePerformance = (): void => {
+      if ('performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        
+        if (navigation) {
+          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+          
+          // Get paint metrics
+          const paintEntries = performance.getEntriesByType('paint');
+          const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+          const firstContentfulPaint = fcp ? fcp.startTime : 0;
+
+          // Get LCP
+          const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+          const largestContentfulPaint = lcpEntries.length > 0 ? lcpEntries[lcpEntries.length - 1].startTime : 0;
+
+          metricsRef.current = {
+            loadTime,
+            firstContentfulPaint,
+            largestContentfulPaint,
+            cumulativeLayoutShift: 0, // Would need to be measured with observer
+            firstInputDelay: 0 // Would need to be measured with observer
+          };
+
+          // Check if performance is optimized
+          isOptimizedRef.current = 
+            loadTime < 2000 && 
+            firstContentfulPaint < 1500 && 
+            largestContentfulPaint < 2500;
+        }
       }
     };
-    
-    document.head.appendChild(link);
-  }, [enablePreloading]);
 
-  // Preload critical images
-  const preloadImages = useCallback((imageUrls: string[]) => {
-    if (!enablePreloading) return;
-
-    imageUrls.forEach((url) => {
-      const img = new Image();
-      img.src = url;
-      img.onload = () => {
-        if (process.env.NODE_ENV === 'development') {
-          console.log(`Preloaded image: ${url}`);
-        }
-      };
-      img.onerror = () => {
-        if (process.env.NODE_ENV === 'development') {
-          console.warn(`Failed to preload image: ${url}`);
-        }
-      };
-    });
-  }, [enablePreloading]);
-
-  // Preload critical fonts
-  const preloadFonts = useCallback((fontUrls: string[]) => {
-    if (!enablePreloading) return;
-
-    fontUrls.forEach((url) => {
-      preloadResource(url, 'font', 'anonymous');
-    });
-  }, [enablePreloading, preloadResource]);
-
-  // Preload critical scripts
-  const preloadScripts = useCallback((scriptUrls: string[]) => {
-    if (!enablePreloading) return;
-
-    scriptUrls.forEach((url) => {
-      preloadResource(url, 'script');
-    });
-  }, [enablePreloading, preloadResource]);
-
-  // Initialize performance optimizations
-  useEffect(() => {
-    const observer = createIntersectionObserver();
-    
-    // Observe all lazy-load elements
-    if (observer) {
-      const lazyElements = document.querySelectorAll('[data-src], [data-bg-src]');
-      lazyElements.forEach((el) => observer.observe(el));
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
     }
 
     // Preload critical resources
-    if (enablePreloading) {
-      preloadResource('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap', 'style');
-    }
+    preloadResource('/app/styles/futuristic.css', 'style');
+    preloadResource('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap', 'style');
 
     return () => {
-      if (observer) {
-        observer.disconnect();
-      }
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
+      window.removeEventListener('load', measurePerformance);
     };
-  }, [createIntersectionObserver, enablePreloading, preloadResource]);
+  }, [preloadResource]);
 
   return {
-    debounce,
-    preloadResource,
-    preloadImages,
-    preloadFonts,
-    preloadScripts,
+    metrics: metricsRef.current,
+    isOptimized: isOptimizedRef.current,
+    optimizeImage,
+    preloadResource
   };
 };

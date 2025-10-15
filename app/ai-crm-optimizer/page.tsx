@@ -8,7 +8,7 @@ const AICRMOptimizerPage: React.FC = () => {
         title="AI CRM Optimizer - Zion Tech Group"
         description="AI-powered CRM enhancement with lead scoring, sales forecasting, and automated workflow optimization. Optimize your CRM with AI intelligence."
         keywords="AI CRM optimizer, CRM enhancement, lead scoring, sales forecasting, CRM automation, customer relationship management"
-        canonicalUrl="https://ziontechgroup.com/ai-crm-optimizer"
+        canonical="https://ziontechgroup.com/ai-crm-optimizer"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
