@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Rocket } from "lucide-react";
 import { Link } from "react-router-dom";
-import SEOOptimizer from "../../components/SEOOptimizer";
 
 export default function AiPoweredDevops() {
   const features = [
@@ -140,12 +138,6 @@ export default function AiPoweredDevops() {
       color: "from-orange-500 to-red-500"
     }
   ];
-=======
-import React from 'react';
-import SEOHead from '../components/SEOHead';
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
-
-const AiPoweredDevopsPage: React.FC = () => {
   return (
     <>
       <SEOHead 
