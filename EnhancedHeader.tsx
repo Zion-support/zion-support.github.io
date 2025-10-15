@@ -1,4 +1,4 @@
-import React from 'react';
+// Enhanced Header component
 
 export default function EnhancedHeader() {
   return (

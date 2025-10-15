@@ -1,4 +1,4 @@
-import React from 'react';
+// Test file for components
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 

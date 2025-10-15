@@ -1,4 +1,4 @@
-import React from 'react';
+// Backup App component
 
 export default function AppBackup() {
   return (

@@ -1,4 +1,4 @@
-import React from 'react';
+// Minimal App component
 
 export default function AppMinimal() {
   return (

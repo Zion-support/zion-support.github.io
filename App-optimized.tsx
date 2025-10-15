@@ -1,4 +1,4 @@
-import React from 'react';
+// Optimized App component
 
 export default function AppOptimized() {
   return (

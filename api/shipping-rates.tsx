@@ -1,4 +1,4 @@
-import React from 'react';
+// API shipping rates component
 
 export default function ShippingRates() {
   return (

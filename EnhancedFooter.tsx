@@ -1,4 +1,4 @@
-import React from 'react';
+// Enhanced Footer component
 
 export default function EnhancedFooter() {
   return (

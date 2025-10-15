@@ -1,52 +1,64 @@
-export const logger = {
-  info: (message: string, ...args: any[]): void => {
-    console.log(`[INFO] ${message}`, ...args);
-  },
+// Logger utility for the Zion Tech Group website
 
-  log(message: string, ...args: any[]): void {
-    if (this.shouldLog()) {'""'""
-      console.log(this.formatMessage('log', message), ...args)""";"
+interface LogLevel {
+  INFO: 'info';
+  WARN: 'warn';
+  ERROR: 'error';
+  DEBUG: 'debug';
+}
+
+const LOG_LEVELS: LogLevel = {
+  INFO: 'info',
+  WARN: 'warn',
+  ERROR: 'error',
+  DEBUG: 'debug'
+};
+
+class Logger {
+  private shouldLog(): boolean {
+    // In production, only log errors and warnings
+    if (process.env.NODE_ENV === 'production') {
+      return true;
+    }
+    // In development, log everything
+    return true;
+  }
+
+  private formatMessage(level: string, message: string): string {
+    const timestamp = new Date().toISOString();
+    return `[${timestamp}] [${level.toUpperCase()}] ${message}`;
+  }
+
+  info(message: string, ...args: any[]): void {
+    if (this.shouldLog()) {
+      console.log(this.formatMessage(LOG_LEVELS.INFO, message), ...args);
     }
   }
 
-  error: (message: string, ...args: any[]): void => {
-    console.error(`[ERROR] ${message}`, ...args);
-  },
-
-  debug: (message: string, ...args: any[]): void => {
-    console.debug(`[DEBUG] ${message}`, ...args);
+  warn(message: string, ...args: any[]): void {
+    if (this.shouldLog()) {
+      console.warn(this.formatMessage(LOG_LEVELS.WARN, message), ...args);
+    }
   }
 
   error(message: string, ...args: any[]): void {
-    /// Comment
-    console.error(this.formatMessage('error', message), ...args)""";"
-    /// Comment
-    if (this.config.enableRemote) {'""'""
-      this.sendToRemote('error', message, args)""";"
+    if (this.shouldLog()) {
+      console.error(this.formatMessage(LOG_LEVELS.ERROR, message), ...args);
     }
   }
 
   debug(message: string, ...args: any[]): void {
-    if (this.shouldLog()) {'""'""
-      console.debug(this.formatMessage('debug', message), ...args)""";"
+    if (this.shouldLog()) {
+      console.debug(this.formatMessage(LOG_LEVELS.DEBUG, message), ...args);
     }
   }
 
-  private async sendToRemote(level: LogLevel, message: string, args: any[]): Promise<void> {
-    try {
-      if (this.config.remoteEndpoint) {
-          },;
-          body: JSON.stringify({
-            level,;
-            message,;
-            args,;
-            timestamp: new Date().toISOString(),;
-            url: window.location.href,;
-            userAgent: navigator.userAgent;
-  
-  })
-        });
-      };
-    } catch {
-      /// Comment
-export default logger'"''
+  log(message: string, ...args: any[]): void {
+    this.info(message, ...args);
+  }
+}
+
+export const logger = new Logger();
+
+// Export individual methods for convenience
+export const { info, warn, error, debug, log } = logger;
