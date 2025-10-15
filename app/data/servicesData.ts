@@ -40,6 +40,7 @@ export const servicesData = {
         'Voice assistants'
       ],
       marketPrice: '$5,000 - $50,000',
+      link: 'https://ziontechgroup.com/ai-development',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -86,6 +87,7 @@ export const servicesData = {
         'Order tracking'
       ],
       marketPrice: '$199 - $1,299/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -132,6 +134,7 @@ export const servicesData = {
         'Compliance checking'
       ],
       marketPrice: '$149 - $999/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -178,6 +181,7 @@ export const servicesData = {
         'Performance tracking'
       ],
       marketPrice: '$299 - $1,999/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -224,6 +228,7 @@ export const servicesData = {
         'Compliance monitoring'
       ],
       marketPrice: '$399 - $2,499/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -270,6 +275,7 @@ export const servicesData = {
         'Market research'
       ],
       marketPrice: '$199 - $1,299/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -316,6 +322,7 @@ export const servicesData = {
         'Board meetings'
       ],
       marketPrice: '$99 - $799/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -362,6 +369,7 @@ export const servicesData = {
         'Revenue protection'
       ],
       marketPrice: '$249 - $1,799/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -408,6 +416,7 @@ export const servicesData = {
         'Brand protection'
       ],
       marketPrice: '$199 - $1,499/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -454,6 +463,7 @@ export const servicesData = {
         'Performance tracking'
       ],
       marketPrice: '$79 - $599/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -500,6 +510,7 @@ export const servicesData = {
         'Report generation'
       ],
       marketPrice: '$149 - $999/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -546,6 +557,7 @@ export const servicesData = {
         'Technology modernization'
       ],
       marketPrice: '$2,000 - $25,000',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -592,6 +604,7 @@ export const servicesData = {
         'Multi-channel selling'
       ],
       marketPrice: '$199 - $1,499/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -638,6 +651,7 @@ export const servicesData = {
         'Lead generation'
       ],
       marketPrice: '$299 - $1,999/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -684,6 +698,7 @@ export const servicesData = {
         'Social commerce'
       ],
       marketPrice: '$149 - $999/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -730,6 +745,7 @@ export const servicesData = {
         'Sales automation'
       ],
       marketPrice: '$99 - $799/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -776,6 +792,7 @@ export const servicesData = {
         'Customer success'
       ],
       marketPrice: '$199 - $1,499/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -822,6 +839,7 @@ export const servicesData = {
         'Marketing automation'
       ],
       marketPrice: '$49 - $499/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -868,6 +886,7 @@ export const servicesData = {
         'Lead generation'
       ],
       marketPrice: '$99 - $999/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -916,6 +935,7 @@ export const servicesData = {
         'Client project delivery'
       ],
       marketPrice: '$29 - $199/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -962,6 +982,7 @@ export const servicesData = {
         'Financial reporting'
       ],
       marketPrice: '$19 - $149/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1008,6 +1029,7 @@ export const servicesData = {
         'Revenue growth'
       ],
       marketPrice: '$99 - $799/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1054,6 +1076,7 @@ export const servicesData = {
         'Client reporting'
       ],
       marketPrice: '$39 - $299/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1100,6 +1123,7 @@ export const servicesData = {
         'Client billing'
       ],
       marketPrice: '$29 - $199/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1146,6 +1170,7 @@ export const servicesData = {
         'Business growth'
       ],
       marketPrice: '$49 - $399/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1192,6 +1217,7 @@ export const servicesData = {
         'Strategic planning'
       ],
       marketPrice: '$79 - $599/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1238,6 +1264,7 @@ export const servicesData = {
         'Feedback collection'
       ],
       marketPrice: '$39 - $299/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1284,6 +1311,7 @@ export const servicesData = {
         'Satisfaction surveys'
       ],
       marketPrice: '$49 - $399/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1330,6 +1358,7 @@ export const servicesData = {
         'Client appointments'
       ],
       marketPrice: '$29 - $199/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1376,6 +1405,7 @@ export const servicesData = {
         'Access management'
       ],
       marketPrice: '$19 - $149/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1422,6 +1452,7 @@ export const servicesData = {
         'Client documents'
       ],
       marketPrice: '$39 - $299/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1468,6 +1499,7 @@ export const servicesData = {
         'System recovery'
       ],
       marketPrice: '$49 - $399/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1514,6 +1546,7 @@ export const servicesData = {
         'Uptime monitoring'
       ],
       marketPrice: '$79 - $599/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1560,6 +1593,7 @@ export const servicesData = {
         'Security monitoring'
       ],
       marketPrice: '$99 - $799/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1606,6 +1640,7 @@ export const servicesData = {
         'Security auditing'
       ],
       marketPrice: '$149 - $999/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1652,6 +1687,7 @@ export const servicesData = {
         'Financial reporting'
       ],
       marketPrice: '$19 - $149/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1698,6 +1734,7 @@ export const servicesData = {
         'Sales automation'
       ],
       marketPrice: '$39 - $299/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1744,6 +1781,7 @@ export const servicesData = {
         'Social commerce'
       ],
       marketPrice: '$49 - $399/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1790,6 +1828,7 @@ export const servicesData = {
         'Multi-channel selling'
       ],
       marketPrice: '$79 - $599/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1836,6 +1875,7 @@ export const servicesData = {
         'Report generation'
       ],
       marketPrice: '$59 - $499/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1884,6 +1924,7 @@ export const servicesData = {
         'Hybrid cloud solutions'
       ],
       marketPrice: '$1,000 - $20,000/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1930,6 +1971,7 @@ export const servicesData = {
         'Team collaboration'
       ],
       marketPrice: '$2,000 - $25,000/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -1976,6 +2018,7 @@ export const servicesData = {
         'Service-oriented architecture'
       ],
       marketPrice: '$5,000 - $75,000',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -2022,6 +2065,7 @@ export const servicesData = {
         'API monetization'
       ],
       marketPrice: '$3,000 - $50,000',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -2068,6 +2112,7 @@ export const servicesData = {
         'Machine learning pipelines'
       ],
       marketPrice: '$4,000 - $60,000',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -2114,6 +2159,7 @@ export const servicesData = {
         'Gaming applications'
       ],
       marketPrice: '$8,000 - $100,000',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -2160,6 +2206,7 @@ export const servicesData = {
         'Healthcare monitoring'
       ],
       marketPrice: '$5,000 - $80,000',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -2206,6 +2253,7 @@ export const servicesData = {
         'Automated ML'
       ],
       marketPrice: '$6,000 - $75,000',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -2252,6 +2300,7 @@ export const servicesData = {
         'Security training'
       ],
       marketPrice: '$3,000 - $40,000',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -2298,6 +2347,7 @@ export const servicesData = {
         'User experience improvement'
       ],
       marketPrice: '$2,500 - $35,000',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -2344,6 +2394,7 @@ export const servicesData = {
         'System reliability'
       ],
       marketPrice: '$2,000 - $25,000',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -2390,6 +2441,7 @@ export const servicesData = {
         'Audit preparation'
       ],
       marketPrice: '$3,000 - $40,000',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -2436,6 +2488,7 @@ export const servicesData = {
         'Operational efficiency'
       ],
       marketPrice: '$5,000 - $100,000',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -2482,6 +2535,7 @@ export const servicesData = {
         'Risk management'
       ],
       marketPrice: '$2,000 - $25,000/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -2528,6 +2582,7 @@ export const servicesData = {
         'Strategic planning'
       ],
       marketPrice: '$1,500 - $20,000/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -2574,6 +2629,7 @@ export const servicesData = {
         'IoT applications'
       ],
       marketPrice: '$5,000 - $100,000',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -2620,6 +2676,7 @@ export const servicesData = {
         'Online marketplaces'
       ],
       marketPrice: '$3,000 - $75,000',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -2666,6 +2723,7 @@ export const servicesData = {
         'Maintenance planning'
       ],
       marketPrice: '$1,000 - $15,000/month',
+      link: 'https://ziontechgroup.com',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
