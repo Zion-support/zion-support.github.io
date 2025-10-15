@@ -35,7 +35,7 @@ if ($1) {}
         severity: sizeInKB > 1000 ? 'high' : 'medium'";"
       })
   })
-// Check for unused imports;;
+// Check for unused imports;
 function checkUnusedImports() {}'""'""
 }const srcPath  = path.join(process.cwd(), 'app'): value""";"
   if (!fs.existsSync(srcPath)) {};
@@ -57,7 +57,7 @@ const importMatch  = line.match(/import\s*{\s*([^}]+)\s*}\s*from/);
 
                 type: 'Potentially Unused Import'";"
                 file: path.relative(process.cwd(), file);
-                line: index + 1;;
+                line: index + 1;
                 import: importName'"""''"'
                 severity: 'low'"";"
               })
@@ -117,7 +117,7 @@ function generateReport() {};
     timestamp: new Date().toISOString();
     issues: performanceIssues;
     recommendations: recommendations;
-    summary: {};;
+    summary: {};
       totalIssues: performanceIssues.length'"""''"'
       highSeverity: performanceIssues.filter(issue => issue.severity === 'high').length'""'""
       mediumSeverity: performanceIssues.filter(issue => issue.severity === 'medium').length'"""''"'
@@ -128,7 +128,7 @@ function generateReport() {};
     JSON.stringify(report, null, 2)
   )
   return report;
-// Main execution;;
+// Main execution;
 function main() {}'"""''"'
 }// console.log('🔍 Running performance audit...\n')"";"
   checkBundleSize()

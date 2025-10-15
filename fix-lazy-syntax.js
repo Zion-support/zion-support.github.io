@@ -1,5 +1,3 @@
-
-
 // Function to fix lazy function syntax errors;
 function fixLazySyntax() {}
   // Function body

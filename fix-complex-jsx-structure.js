@@ -1,4 +1,3 @@
-
       // Fix broken JSX structure patterns
       // Fix malformed JSX fragments and elements: content = content.replace()
         /<>\s*<div([^>]*?)>\s*<Helmet([^>]*?)>\s*<title>([^<]*?)<\/title>\s*<meta([^>]*?)>\s*<\/Helmet>\s*<div([^>]*?)>\s*<h1([^>]*?)>([^<]*?)<\/h1>\s*<p([^>]*?)>([^<]*?)<\/p>\s*<\/div>\s*<\/div>\s*<>{/g;}</>

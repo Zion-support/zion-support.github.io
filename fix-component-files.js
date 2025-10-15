@@ -1,4 +1,3 @@
-
 interface fix-component-filesProps {
   className?: string
   children?: React.ReactNode

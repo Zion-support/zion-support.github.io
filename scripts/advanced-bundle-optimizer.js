@@ -1,4 +1,3 @@
-
   maxChunkSize: 200, // KB;
   enableCodeSplitting: true;
   enableTreeShaking: true;

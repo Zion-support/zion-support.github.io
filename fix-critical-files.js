@@ -1,4 +1,3 @@
-
 #!/usr/bin/env node
 // List of critical files that need to be fixed
 ]

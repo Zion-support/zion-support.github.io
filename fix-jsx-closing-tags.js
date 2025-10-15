@@ -1,4 +1,3 @@
-
     // Fix common JSX closing tag issues
     const  fixes = [
       // Fix missing closing tags for self-closing elements

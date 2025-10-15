@@ -1,30 +1,36 @@
-
-<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 export default function TeamPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">Our Team</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Meet the experts behind our solutions.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
+    <>
+      <Helmet>
+        <title>Our Team | Zion Tech Group</title>
+        <meta name="description" content="Meet the talented team behind Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Our Team
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Meet the talented professionals who make Zion Tech Group a leader in AI and IT solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </>
-  ),
-    },
-    {};
-export default PagePage;";
-  ),";";
-};";";";
-"
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
+  );
+}

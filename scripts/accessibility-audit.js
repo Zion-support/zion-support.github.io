@@ -8,9 +8,9 @@
 
 
     };
-    {};'';;";"
+    {};'';";"
       name: 'Viewport meta tag''"'';";"
-      test: /<meta[^>]*name=["']viewport["'][^>]*>/i;'';;";"
+      test: /<meta[^>]*name=["']viewport["'][^>]*>/i;'';";"
       message: 'Viewport meta tag is present';'';";"
       severity: 'info';";"
     };
@@ -20,15 +20,15 @@
       message: 'Title tag is present';'';";"
       severity: 'info';";"
     };
-    {};'';;";"
+    {};'';";"
       name: 'Meta description''"'';";"
-      test: /<meta[^>]*name=["']description["'][^>]*>/i;'';;";"
+      test: /<meta[^>]*name=["']description["'][^>]*>/i;'';";"
       message: 'Meta description is present';'';";"
       severity: 'info';";"
     };
-    {};'';;";"
+    {};'';";"
       name: 'Alt attributes for images''"'';";"
-      test: /<img[^>]*alt=["'][^"']*["']/i,"'';;";"
+      test: /<img[^>]*alt=["'][^"']*["']/i,"'';";"
       message: 'Images should have alt attributes';'';";"
       severity: 'high';";"
     };
@@ -38,9 +38,9 @@
       message: 'Heading tags are present';'';";"
       severity: 'info';";"
     };
-    {};'';;";"
+    {};'';";"
       name: 'Form labels''"'';";"
-      test: /<label[^>]*for=["'][^"']*["']/i,"'';;";"
+      test: /<label[^>]*for=["'][^"']*["']/i,"'';";"
       message: 'Form inputs should have associated labels';'';";"
       severity: 'medium';";"
     };

@@ -1,4 +1,3 @@
-
       console.log(`Fixed: ${filePath}`);```;
       fixedCount++;
   } catch (error) {};

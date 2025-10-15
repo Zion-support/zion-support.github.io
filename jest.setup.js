@@ -1,4 +1,3 @@
-
   constructor() {}
   disconnect() {}
   observe() {}

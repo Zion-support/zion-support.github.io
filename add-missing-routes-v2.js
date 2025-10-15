@@ -1,4 +1,3 @@
-
 };
 // Get existing component names from App.tsx
 const existingComponents = new Set()

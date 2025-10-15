@@ -1,5 +1,3 @@
-
-
 // Function to clean merge conflicts from a file;
 function cleanMergeConflicts() {}
   // Function body

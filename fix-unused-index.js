@@ -1,5 +1,3 @@
-
-
 // Function to fix unused index variables;
 function fixUnusedIndex() {}
   // Function body

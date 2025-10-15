@@ -1,5 +1,3 @@
-
-
 // Function to fix all map function syntax issues;
 function fixMapSyntax() {}
   // Function body

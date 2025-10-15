@@ -1,4 +1,3 @@
-
 interface fix-app-pagesProps {
   className?: string
   children?: React.ReactNode

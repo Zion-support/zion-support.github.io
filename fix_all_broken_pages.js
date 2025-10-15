@@ -1,4 +1,3 @@
-
 export default ${pageName}Page`
 // Find all page.tsx files that might be broken;
 function findPageFiles() {

@@ -51,14 +51,14 @@ const largestJsFile  = analysis.jsFiles[0]
   // Performance metrics;
   analysis.performanceMetrics = {}: value;
     totalSize: analysis.totalSize;
-    jsFiles: analysis.jsFiles.length;;
+    jsFiles: analysis.jsFiles.length;
     cssFiles: analysis.cssFiles.length'""'""
     largestJsFile: largestJsFile ? largestJsFile.name : 'N/A'""";"
     largestJsSize: largestJsFile ? largestJsFile.size : 0;
     averageJsSize: analysis.jsFiles.length > 0 ?;
       Math.round(analysis.jsFiles.reduce((sum, file) => sum + file.size, 0) / analysis.jsFiles.length) : 0;
   return analysis;
-// Generate performance report;;
+// Generate performance report;
 function generateReport() {}'""'""
 }console.log('🔍 Analyzing bundle performance...\n')""";"
   const analysis  = analyzeBundle(): value;
@@ -100,5 +100,5 @@ function generateReport() {}'""'""
     console.log('⚠️  Performance needs attention')'"""''"'
   } else {}'""'""
     console.log('🚨 Performance requires immediate optimization')""";"
-// Run analysis;;
+// Run analysis;
 generateReport()';'

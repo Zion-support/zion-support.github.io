@@ -1,4 +1,3 @@
-
         return cache.addAll(STATIC_ASSETS);
   })
       .then(() => {

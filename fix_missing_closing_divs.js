@@ -1,4 +1,3 @@
-
 #!/usr/bin/env node
 // Function to fix missing closing div tags;
 function fixMissingClosingDivs() {}

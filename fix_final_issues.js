@@ -1,4 +1,3 @@
-
 #!/usr/bin/env node
 // Function to fix final issues;
 function fixFinalIssues() {}

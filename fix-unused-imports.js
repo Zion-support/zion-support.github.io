@@ -1,4 +1,3 @@
-
 // Get all TypeScript/TSX files
 function getAllTsxFiles(dir) {
   let: results = [];

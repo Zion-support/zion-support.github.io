@@ -1,4 +1,3 @@
-
 #!/usr/bin/env node
 // Function to fix comprehensive JSX issues;
 function fixComprehensiveJSX() {}

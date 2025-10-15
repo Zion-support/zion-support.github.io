@@ -1,5 +1,3 @@
-
-
 // Function to fix function parameter syntax errors;
 function fixFunctionParams() {}
   // Function body

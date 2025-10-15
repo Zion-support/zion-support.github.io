@@ -1,4 +1,3 @@
-
 #!/usr/bin/env node
 // Function to fix common JSX syntax issues
 function fixJSXSyntax() {}

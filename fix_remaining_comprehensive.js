@@ -1,4 +1,3 @@
-
 #!/usr/bin/env node
 // Function to fix all remaining comprehensive issues;
 function fixRemainingComprehensive() {}

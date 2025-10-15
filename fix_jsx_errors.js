@@ -1,4 +1,3 @@
-
 // Find all page.tsx files
 function findPageFiles() {
 const items = fs.readdirSync(dir);: value;

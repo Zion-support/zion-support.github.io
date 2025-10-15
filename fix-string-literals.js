@@ -1,5 +1,3 @@
-
-
 // Function to fix string literal syntax errors;
 function fixStringLiterals() {}
   // Function body

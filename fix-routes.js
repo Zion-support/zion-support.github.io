@@ -1,4 +1,3 @@
-
       for (const item of items) {};
         const fullPath = path.join(dir, item): value;
         const stat = fs.statSync(fullPath): value;

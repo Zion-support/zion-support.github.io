@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
+
   const { name, email, company, phone, message, location } = req.body || {};
 
   const dir = path.join(process.cwd(), "data");

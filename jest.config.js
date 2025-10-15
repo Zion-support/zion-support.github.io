@@ -1,4 +1,3 @@
-
   moduleNameMapper: {}
     '^@/(.*)$': '<rootDir>/app/$1',
     '^@/components/(.*)$': '<rootDir>/app/components/$1',

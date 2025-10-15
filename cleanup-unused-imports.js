@@ -1,5 +1,3 @@
-
-
 // Function to remove unused imports from a file;
 function cleanUnusedImports() {}
   // Function body

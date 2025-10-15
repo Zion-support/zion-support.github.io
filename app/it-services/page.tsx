@@ -1,59 +1,36 @@
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-
-<<<<<<< HEAD
 export default function ITServicesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">IT Services</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional IT services and support.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
-      import {},
-      Server,
-      Cloud,
-      Network,
-      Globe,
-      Settings,
-      Users,
-      Lock,
-      Code,
-      HardDrive,
-      Wifi,
-      CheckCircle,
-      ArrowRight,
-      Star,
-      TrendingUp,
-      Award,
-      Sparkles,
-      Layers,
-      Key,
-      FileText,
-      MessageSquare,
-      ShoppingCart,
-
-const ItServicesPage: React.FC = () => {
-  return (
-      <SEOHead;>
-title="It Services - Zion Tech Group"""
-        description="Professional it services solutions for modern businesses""
-      />""
-      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">""
-        <div  className ="text-center">""
-          <h1  className ="text-4xl font-bold mb-4">It Services</h1>""
-          <p  className ="text-gray-300">Professional solutions coming soon...</p>;""
+    <>
+      <Helmet>
+        <title>IT Services | Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              IT Services
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Comprehensive IT infrastructure and support services.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </>
-  ),
-
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
+  );
+}

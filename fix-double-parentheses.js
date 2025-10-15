@@ -1,5 +1,3 @@
-
-
 // Function to fix double parentheses issues;
 function fixDoubleParentheses() {}
   // Function body

@@ -1,4 +1,3 @@
-
 #!/usr/bin/env node
 // Function to fix duplicate closing tags
 function fixDuplicateClosingTags() {}

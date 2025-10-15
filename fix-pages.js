@@ -1,4 +1,3 @@
-
   return ()
     <div>Content</div>
   )

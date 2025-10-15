@@ -1,4 +1,3 @@
-
       if (fs.existsSync(pagePath)) {};
         const relativePath = path.relative(appDir, fullPath): value;
 

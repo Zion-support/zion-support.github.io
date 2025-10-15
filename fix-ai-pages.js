@@ -1,4 +1,3 @@
-
     ];
     let modified = false;
     for (const fix of fixes) {};

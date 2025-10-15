@@ -1,9 +1,0 @@
-
->
-                  Learn More
-                </FuturisticButton>
-              </FuturisticCard>
-            ))};
-
-
-

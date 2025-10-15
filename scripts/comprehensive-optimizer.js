@@ -1,4 +1,3 @@
-
   maxBundleSize: 500, // KB;
   maxImageSize: 100, // KB;
   enableCompression: true;

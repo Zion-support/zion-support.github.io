@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { Component, ReactNode } from 'react';
+import React, { Component, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -21,7 +20,7 @@ export default class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console.error('Error caught by boundary:', error, errorInfo);
   }
 
   render() {
@@ -46,58 +45,11 @@ export default class ErrorBoundary extends Component<Props, State> {
                 Try again
               </button>
             </div>
-=======
-
-      interface Props {},
-      children: ReactNode;
-fallback?: ReactNode
-      interface State {},
-      hasError: boolean,
-      error: Error | null,
-      errorInfo: ErrorInfo | null
-class ErrorBoundary extends Component<Props, State> {},
-      constructor(props: Props) {},
-      super(props),
-      this.state = {},
-
-      hasError: false,
-      error: null,
-      errorInfo: null
-    };
-
-      hasError: true,
-      error,
-      errorInfo: null
-
-    this.setState({},)
-
-      error,
-
-    // Log error to console in development
-
-      // Here you would typically send the error to an error reporting service
-  handleRetry = () => {},
-      this.setState({},)
-      hasError: false,
-      error: null,
-      errorInfo: null
-    })
-  render() {},
-      if (this.state.hasError) {}
-      // Custom fallback UI
-      if (this.props.fallback) {},
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
           </div>
         </div>
       );
     }
 
-<<<<<<< HEAD
     return this.props.children;
   }
 }
-=======
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

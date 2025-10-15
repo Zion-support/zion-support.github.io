@@ -1,4 +1,3 @@
-
 interface fix-all-corrupted-filesProps {
   className?: string
   children?: React.ReactNode

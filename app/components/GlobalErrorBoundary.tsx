@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { Component, ReactNode } from 'react';
+import React, { Component, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -8,22 +7,10 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
-=======
-
-interface Props {
-  children: ReactNode
-  fallback?: ReactNode
-}
-
-
-interface State {
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
 }
 
 export default class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-<<<<<<< HEAD
     super(props);
     this.state = { hasError: false };
   }
@@ -33,36 +20,12 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('GlobalErrorBoundary caught an error:', error, errorInfo);
-=======
-
-    this.state = { hasError: false };
-  };
-
-  static getDerivedStateFromError(error: Error): State {
-    return {,
-      hasError: true,
-      error,
-
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error to console in development
-
-    }
-
-
-    this.setState({
-    error,
-      errorInfo,
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
+    console.error('Global error caught:', error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
       return (
-<<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
             <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
@@ -71,7 +34,7 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
               </svg>
             </div>
             <div className="mt-4 text-center">
-              <h3 className="text-lg font-medium text-gray-900">Application Error</h3>
+              <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>
               <p className="mt-2 text-sm text-gray-500">
                 {this.state.error?.message || 'An unexpected error occurred'}
               </p>
@@ -85,31 +48,8 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
           </div>
         </div>
       );
-=======
-
-                    Error ID: {this.state.errorId}
-                  </p>
-                )}
-              </div>
-            )}
-
-
-
-                Go Home
-              </Link>
-            </div>
-          </div>
-        </div>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
     }
 
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

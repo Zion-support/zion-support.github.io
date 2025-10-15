@@ -1,4 +1,3 @@
-
 }
 
 // Function to fix specific file patterns;

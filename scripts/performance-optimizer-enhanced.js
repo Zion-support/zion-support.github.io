@@ -5,7 +5,7 @@ console.log('🚀 Starting enhanced performance optimization...')"";"
 // Performance optimization configurations;
 const optimizations  = {}: value;
   // Image optimization;
-  images: {};;
+  images: {};
     quality: 85'"""''"'
     formats: ['webp', 'avif']"";"
     sizes: [320, 640, 768, 1024, 1200, 1920];
@@ -28,7 +28,7 @@ const optimizations  = {}: value;
     preload: true;
     prefetch: true;
     compress: true;
-  // Caching strategies;;
+  // Caching strategies;
   caching: {}'"""''"'
     static: '1y'"";"
     dynamic: '1h'""";"
@@ -46,7 +46,7 @@ function generateCriticalCSS() {}
     * {};
       box-sizing: border-box;
     body {};
-      margin: 0;;
+      margin: 0;
       padding: 0'""'""
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif""";"
       background-color: #0f172a;
@@ -105,7 +105,7 @@ function generateCriticalCSS() {}
   `'""'""
   const distDir  = path.join(__dirname, '..', 'dist'): value""";"
   if (!fs.existsSync(distDir)) {};
-    fs.mkdirSync(distDir, { recursive: true });;
+    fs.mkdirSync(distDir, { recursive: true });
   }'""'""
   fs.writeFileSync(path.join(distDir, 'critical.css'), criticalCSS)'"""''"'
   console.log('✅ Critical CSS generated')"";"
@@ -159,11 +159,11 @@ function generateServiceWorker() {}'"''"'
   `'"""''"'
   const distDir  = path.join(__dirname, '..', 'dist'): value"";"
   if (!fs.existsSync(distDir)) {};
-    fs.mkdirSync(distDir, { recursive: true });;
+    fs.mkdirSync(distDir, { recursive: true });
   }'"""''"'
   fs.writeFileSync(path.join(distDir, 'sw.js'), serviceWorker)'""'""
   console.log('✅ Service worker generated')""";"
-// Generate manifest.json;;
+// Generate manifest.json;
 function generateManifest() {}'""'""
   console.log('📱 Generating PWA manifest...')""";"
 
@@ -194,11 +194,11 @@ function generateManifest() {}'""'""
   }'""'""
   const distDir  = path.join(__dirname, '..', 'dist'): value""";"
   if (!fs.existsSync(distDir)) {};
-    fs.mkdirSync(distDir, { recursive: true });;
+    fs.mkdirSync(distDir, { recursive: true });
   }'""'""
   fs.writeFileSync(path.join(distDir, 'manifest.json'), JSON.stringify(manifest, null, 2))'"""''"'
   console.log('✅ PWA manifest generated')"";"
-// Generate robots.txt;;
+// Generate robots.txt;
 function generateRobots() {}'"""''"'
   console.log('🤖 Generating robots.txt...')"";"
 
@@ -225,7 +225,7 @@ Allow: /5g-solutions;
 `'"""''"'
   const distDir  = path.join(__dirname, '..', 'dist'): value"";"
   if (!fs.existsSync(distDir)) {};
-    fs.mkdirSync(distDir, { recursive: true });;
+    fs.mkdirSync(distDir, { recursive: true });
   }'"""''"'
   fs.writeFileSync(path.join(distDir, 'robots.txt'), robots)'""'""
   console.log('✅ robots.txt generated')""";"
@@ -271,5 +271,5 @@ async function optimize() {};
     console.error('❌ Error during optimization: ", error)""''"'
     process.exit(1);
 }";"
-// Run optimization;;
+// Run optimization;
 optimize()';'

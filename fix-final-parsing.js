@@ -1,4 +1,3 @@
-
 #!/usr/bin/env node
 // Function to fix final parsing issues;
 function fixFinalParsing() {}

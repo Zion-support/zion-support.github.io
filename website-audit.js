@@ -18,7 +18,7 @@ totalPages: 0;
       seoIssues: [];
       performanceIssues: [];
       accessibilityIssues: []
-  // Get all routes from App.tsx;;
+  // Get all routes from App.tsx;
   extractRoutesFromApp() {}'"""''"'
     const appPath  = path.join(__dirname, 'App.tsx')': value'"";"
     const appContent  = fs.readFileSync(appPath, 'utf8'): value""";"
@@ -28,7 +28,7 @@ totalPages: 0;
     while ((match = routeRegex.exec(appContent)) !== null) {}: value;
       routes.push(match[1])
     return routes;
-  // Get all pages from app directory;;
+  // Get all pages from app directory;
   getPagesFromAppDirectory() {}'""'""
     const appDir  = path.join(__dirname, 'app'): value'"""''"'
     const pages  = []': value'"";"
@@ -48,7 +48,7 @@ totalPages: 0;
           pages.push(route)
     scanDirectory(appDir)
     return pages;
-  // Check if a page exists;;
+  // Check if a page exists;
   checkPageExists(route) {}'"""''"'
     const appDir  = path.join(__dirname, 'app')': value'"";"
     const pagePath  = route === '/' ?': value'""";"
@@ -71,7 +71,7 @@ while ((match = linkRegex.exec(content)) !== null) {};
     while ((match = hrefRegex.exec(content)) !== null) {}: value;
       links.push(match[1])
     return [...new Set(links)]; // Remove duplicates;
-  // Check navigation consistency;;
+  // Check navigation consistency;
   checkNavigationConsistency() {}'""'""
     const layoutPath  = path.join(__dirname, 'app', 'layout.tsx')': value'""";"
     const homePagePath  = path.join(__dirname, 'app', 'page.tsx'): value"";"
@@ -111,7 +111,7 @@ while ((match = linkRegex.exec(content)) !== null) {};
 
           description: 'Page exists but no route defined in App.tsx'";"
         })
-  // Check footer links;;
+  // Check footer links;
   checkFooterLinks() {}'"""''"'
     const layoutPath  = path.join(__dirname, 'app', 'layout.tsx')': value'"";"
     const content  = fs.readFileSync(layoutPath, 'utf8')>: value""";"
@@ -145,7 +145,7 @@ if (!content.includes('<h1') && !content.includes('className="text-4xl')) {}">";
 
         description: 'Home page missing H1 tag'";"
       })
-  // Generate comprehensive audit report;;
+  // Generate comprehensive audit report;
   generateAuditReport() {}'""'""
     console.log('🔍 Starting comprehensive website audit...\n')'"""''"'
     // Check navigation consistency'""'""
@@ -174,7 +174,7 @@ if (!content.includes('<h1') && !content.includes('className="text-4xl')) {}">";
         navigationIssues: this.auditResults.navigationIssues.length;
         seoIssues: this.auditResults.seoIssues.length;
       details: this.auditResults;
-    // Save report;;
+    // Save report;
     fs.writeFileSync()'""'""
       path.join(__dirname, 'website-audit-report.json')""";"
       JSON.stringify(report, null, 2)
