@@ -85,37 +85,8 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">AI Services</h4>
             <div className="space-y-3">
-<<<<<<< HEAD
               {footerLinks.aiServices.map((link) => (
-                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Micro SAAS */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Micro SAAS</h4>
-            <div className="space-y-3">
-              {footerLinks.microSaas.map((link) => (
-                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* IT Services */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">IT Services</h4>
-            <div className="space-y-3">
-              {footerLinks.itServices.map((link) => (
-                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-=======
-              {footerLinks.services.map((link) => (
                 <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7775
                   {link.name}
                   <span className="block w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300"></span>
                 </Link>
@@ -128,6 +99,19 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold text-white">Micro SAAS</h4>
             <div className="space-y-3">
               {footerLinks.microSaas.map((link) => (
+                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group">
+                  {link.name}
+                  <span className="block w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300"></span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* IT Services */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white">IT Services</h4>
+            <div className="space-y-3">
+              {footerLinks.itServices.map((link) => (
                 <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group">
                   {link.name}
                   <span className="block w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300"></span>

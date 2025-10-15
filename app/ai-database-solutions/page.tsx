@@ -7,21 +7,11 @@ import { BarChart3,
   Database,
   Shield,
   Users,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Zap } from 'lucide-react';
-const AiDatabaseSolutionsPage = () => { const features = [
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-merge-code-636f
   Zap
 } from 'lucide-react';
 
 const AiDatabaseSolutionsPage = () => {
   const features = [
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
     {
       icon: <Database className="w-8 h-8" />,
       title: "AI-Powered Database Optimization",

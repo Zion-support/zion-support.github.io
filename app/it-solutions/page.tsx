@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-merge-code-636f
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -37,10 +31,7 @@ const ITSolutionsPage: React.FC = () => {
     },
     {
       title: "Cybersecurity Solutions",
-<<<<<<< HEAD
       description: "Comprehensive security solutions to protect your business from cyber threats and data breaches.",
-=======
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -51,10 +42,7 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
       href: "/cloud-infrastructure" },
     { title: "Cybersecurity Solutions",
       description: "Comprehensive cybersecurity solutions to protect your digital assets and data.",
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
-=======
       description: "Comprehensive security services to protect your digital assets and ensure compliance.",
->>>>>>> cursor/analyze-improve-and-merge-code-636f
       icon: ShieldCheckIcon,
       features: [
         "Security assessments",
@@ -62,29 +50,16 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
         "Incident response",
         "Compliance management",
         "Security training",
-<<<<<<< HEAD
-        "Compliance auditing"
-      ],
-      color: "from-red-500 to-pink-500",
-      price: "Starting at $3,000/month",
-      benefits: ["Zero breaches", "Compliance ready", "24/7 monitoring"],
-      useCases: ["Data protection", "Network security", "Compliance"],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       href: "/cybersecurity"
     },
     {
       title: "Network Infrastructure",
       description: "Robust network solutions designed for high performance, reliability, and scalability.",
       icon: ServerIcon,
-=======
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
       href: "/cybersecurity" },
     { title: "IT Consulting",
       description: "Strategic IT consulting to help you make informed technology decisions.",
       icon: LightBulbIcon,
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
       features: [
         "Network design & implementation",
         "Wireless solutions",
@@ -94,17 +69,6 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
         "Performance optimization"
       ],
       color: "from-green-500 to-emerald-500",
-<<<<<<< HEAD
-      price: "Starting at $2,000/month",
-      benefits: ["High performance", "Reliable connectivity", "Scalable design"],
-      useCases: ["Office networks", "Remote work", "Data centers"],
-      href: "/network-infrastructure"
-    },
-    {
-      title: "Database Management",
-      description: "Expert database administration and optimization services for maximum performance and reliability.",
-      icon: DatabaseIcon,
-=======
       price: "Starting at $1,200/month",
       benefits: ["Expert guidance", "Cost savings", "Risk reduction"],
       useCases: ["Technology planning", "Digital transformation", "System integration"],
@@ -112,7 +76,6 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
     { title: "Network Solutions",
       description: "Advanced networking solutions for reliable and secure connectivity.",
       icon: GlobeAltIcon,
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
       features: [
         "Database design & optimization",
         "Performance tuning",
@@ -123,9 +86,6 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
       ],
       color: "from-purple-500 to-indigo-500",
       price: "Starting at $1,800/month",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       benefits: ["Optimized performance", "Data integrity", "Automated backups"],
       useCases: ["Business applications", "Data analytics", "E-commerce"],
       href: "/database-management"
@@ -133,8 +93,6 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
     {
       title: "IT Support & Maintenance",
       description: "Comprehensive IT support services to keep your systems running smoothly and efficiently.",
-=======
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
       benefits: ["Reliable connectivity", "Enhanced security", "Performance"],
       useCases: ["Office networking", "Remote work", "Data centers"],
       href: "/network-solutions" },
@@ -156,7 +114,6 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
       href: "/data-management" },
     { title: "IT Support",
       description: "Comprehensive IT support services to keep your systems running smoothly.",
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
       icon: UserGroupIcon,
       features: [
         "24/7 technical support",
@@ -166,24 +123,12 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
         "User training",
         "Help desk services"
       ],
-<<<<<<< HEAD
-      color: "from-orange-500 to-yellow-500",
-      price: "Starting at $1,200/month",
-      benefits: ["24/7 support", "Proactive maintenance", "Fast response"],
-      useCases: ["System maintenance", "User support", "Troubleshooting"],
-      href: "/it-support"
-    },
-    {
-      title: "Digital Transformation",
-      description: "Complete digital transformation services to modernize your business processes and systems.",
-=======
         "Threat monitoring"
       ]
     },
     {
       title: "DevOps & Automation",
       description: "Streamline your development and deployment processes with modern DevOps practices.",
->>>>>>> cursor/analyze-improve-and-merge-code-636f
       icon: CogIcon,
       features: [
         "CI/CD pipeline setup",
@@ -195,41 +140,6 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
       ]
     },
     {
-<<<<<<< HEAD
-      icon: ServerIcon,
-      title: 'Infrastructure Management',
-      description: 'Complete IT infrastructure setup, monitoring, and maintenance services.',
-      features: ['Server Setup', 'Network Configuration', 'Performance Monitoring', '24/7 Support'],
-      pricing: 'Starting at $299/month' },
-    { icon: ShieldCheckIcon,
-      title: 'Cybersecurity Solutions',
-      description: 'Comprehensive security measures to protect your business from cyber threats.',
-      features: ['Firewall Setup', 'Antivirus Management', 'Security Audits', 'Incident Response'],
-      pricing: 'Starting at $199/month' },
-    { icon: CloudIcon,
-      title: 'Cloud Migration',
-      description: 'Seamless migration to cloud platforms with minimal downtime.',
-      features: ['Assessment', 'Migration Planning', 'Data Transfer', 'Post-Migration Support'],
-      pricing: 'Starting at $499/project' },
-    { icon: CogIcon,
-      title: 'System Integration',
-      description: 'Connect and integrate your existing systems for better efficiency.',
-      features: ['API Development', 'Database Integration', 'Workflow Automation', 'Custom Solutions'],
-      pricing: 'Starting at $399/project' },
-    { icon: ChartBarIcon,
-      title: 'IT Consulting',
-      description: 'Strategic IT planning and technology roadmap development.',
-      features: ['Technology Assessment', 'Strategic Planning', 'Vendor Selection', 'Implementation Support'],
-      pricing: 'Starting at $150/hour' },
-    { icon: GlobeAltIcon,
-      title: 'Web Development',
-      description: 'Custom web applications and websites for your business needs.',
-      features: ['Custom Development', 'Responsive Design', 'SEO Optimization', 'Maintenance'],
-      pricing: 'Starting at $2,999/project' }
-<<<<<<< HEAD
-=======
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
   ];
   const benefits = [
     "Expert IT professionals with years of experience",
@@ -239,14 +149,7 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
     "Cost-effective solutions tailored to your needs",
     "Latest technology and best practices"
   ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
-=======
       title: "Database Solutions",
       description: "Optimize your data management with advanced database design and administration.",
       icon: DatabaseIcon,
@@ -284,23 +187,16 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
     }
   ];
 
->>>>>>> cursor/analyze-improve-and-merge-code-636f
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, network management, and digital transformation services." />
         <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, network management, database administration, digital transformation" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-=======
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
         <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, and consulting services." />
         <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, IT consulting, network solutions" />
       </Helmet>
@@ -404,7 +300,6 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
       </Helmet>
       { /* Hero Section */ }
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 gradient-text neon-text">
@@ -416,84 +311,6 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
             <p className="text-lg text-gray-400 max-w-3xl mx-auto">
               From cloud infrastructure to cybersecurity, our expert IT team delivers solutions that keep your business running smoothly and securely.
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
-              >
-=======
-          </div>
-        </div>
-      </section>
-      { /* IT Services Grid */ }
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            { itServices.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <div key={service.title } className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark">
-                  <div className={ `w-16 h-16 bg-gradient-to-r ${service.color } rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform floating`}>
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{ service.title }</h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    { service.description }
-                  </p>
-                  { /* Pricing */ }
-                  <div className="mb-6">
-                    <span className="text-3xl font-bold text-green-400">{ service.price }</span>
-                  </div>
-                  { /* Features */ }
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-400 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      { service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex } className="flex items-center text-gray-300">
-                          <CheckCircleIcon className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                          <span className="text-sm">{ feature }</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  { /* Benefits */ }
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Benefits:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      { service.benefits.map((benefit, benefitIndex) => (
-                        <span key={benefitIndex } className="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded-full">
-                          { benefit }
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  { /* Use Cases */ }
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Perfect for:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      { service.useCases.map((useCase, useCaseIndex) => (
-                        <span key={useCaseIndex } className="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded-full">
-                          { useCase }
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="flex gap-2">
-                    <Link
-                      to={ service.href }
-                      className="flex-1 inline-flex items-center justify-center gap-2 text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg hover:bg-purple-400/10">
-                      Learn More <ArrowRightIcon className="w-4 h-4" />
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 font-semibold">
-                      Get Started
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center">
-<<<<<<< HEAD
-=======
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
                 Get Started Today
                 <ArrowRightIcon className="w-5 h-5 ml-2" />
               </Link>
@@ -507,16 +324,7 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       { /* Solutions Grid */ }
-=======
-<<<<<<< HEAD
-
-      {/* IT Services Grid */}
-=======
-      { /* Solutions Grid */ }
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -528,56 +336,27 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             {itServices.map((service, index) => {
               const Icon = service.icon;
-=======
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
             { solutions.map((solution, index) => {
               const Icon = solution.icon;
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
               return (
                 <div key={index } className="bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="flex items-center mb-6">
                     <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-4`}>
                       <Icon className="w-8 h-8 text-white" />
                     </div>
-<<<<<<< HEAD
                     <h3 className="text-xl font-semibold text-white">{ solution.title }</h3>
                   </div>
                   <p className="text-gray-300 mb-6">{ solution.description }</p>
                   <ul className="space-y-2 mb-6">
                     { solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex } className="text-sm text-gray-400 flex items-center">
-=======
-<<<<<<< HEAD
-                    <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
-=======
-                    <h3 className="text-xl font-semibold text-white">{ solution.title }</h3>
-                  </div>
-                  <p className="text-gray-300 mb-6">{ solution.description }</p>
-                  <ul className="space-y-2 mb-6">
-                    { solution.features.map((feature, featureIndex) => (
-                      <li key={featureIndex } className="text-sm text-gray-400 flex items-center">
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
                         <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
                         { feature }
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   
                   <div className="mb-6">
                     <div className="text-blue-400 font-semibold mb-2">{service.price}</div>
@@ -588,8 +367,6 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
                         </span>
                       ))}
                     </div>
-=======
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
                   <div className="flex items-center justify-between">
                     <span className="text-blue-400 font-semibold">{ solution.pricing }</span>
                     <Link 
@@ -598,7 +375,6 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
                       Learn More
                       <ArrowRightIcon className="w-4 h-4 ml-1" />
                     </Link>
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
                   </div>
                   
                   <Link 
@@ -614,9 +390,6 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
       {/* Benefits Section */}
       <section className="py-20 bg-slate-800">
@@ -638,8 +411,6 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
                   <span className="text-gray-300">{benefit}</span>
                 </div>
               ))}
-=======
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
       { /* Why Choose Our IT Solutions */ }
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
@@ -738,21 +509,12 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
               <p className="text-gray-300">
                 We provide ongoing monitoring, maintenance, and support to keep your systems running optimally.
               </p>
-<<<<<<< HEAD
-=======
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
       {/* CTA Section */}
-=======
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
       { /* CTA Section */ }
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
@@ -794,16 +556,11 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
   );
 }
 export default ITSolutionsPage;
-<<<<<<< HEAD
-=======
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
       <section className="py-20 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your IT Infrastructure?
           </h2>
-=======
         <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, DevOps, and database services. Expert technology consulting for modern businesses." />
         <meta name="keywords" content="IT solutions, cloud computing, cybersecurity, DevOps, database services, technology consulting, infrastructure" />
         <link rel="canonical" href="https://ziontechgroup.com/it-solutions" />
@@ -817,7 +574,6 @@ export default ITSolutionsPage;
               IT Solutions
             </span>
           </h1>
->>>>>>> cursor/analyze-improve-and-merge-code-636f
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Comprehensive IT solutions designed to accelerate your business growth and digital transformation. 
             From cloud infrastructure to cybersecurity, we have everything you need.
@@ -825,12 +581,6 @@ export default ITSolutionsPage;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
-=======
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
             >
               Get Started
@@ -932,7 +682,6 @@ export default ITSolutionsPage;
             <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
->>>>>>> cursor/analyze-improve-and-merge-code-636f
             >
               Start Your IT Journey
               <ArrowRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -941,10 +690,7 @@ export default ITSolutionsPage;
               to="/services"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
-<<<<<<< HEAD
               View Case Studies
-=======
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center">
               Start Your Project
               <ArrowRightIcon className="w-5 h-5 ml-2" />
@@ -953,11 +699,8 @@ export default ITSolutionsPage;
               to="/pricing"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300 flex items-center justify-center">
               View Pricing
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
               <ArrowRightIcon className="w-5 h-5 ml-2" />
-=======
               Explore All Services
->>>>>>> cursor/analyze-improve-and-merge-code-636f
             </Link>
           </div>
         </div>
@@ -965,18 +708,6 @@ export default ITSolutionsPage;
     </div>
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default ITSolutionsPage;
-=======
-<<<<<<< HEAD
 
 export default ITSolutionsPage;
-=======
-export default ITSolutionsPage;
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
-=======
-
-export default ITSolutionsPage;
->>>>>>> cursor/analyze-improve-and-merge-code-636f

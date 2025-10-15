@@ -1,43 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Users, Globe, Settings } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-
-const MicroSaasSolutionsPage: React.FC = () => {
-  const solutions = [
-    {
-      name: "Zion AI Voice Assistant Pro",
-      description: "Revolutionary AI voice assistant with 99.5% accuracy and multi-language support",
-      price: "From $99/month",
-      icon: <Brain className="w-8 h-8" />,
-      link: "/zion-ai-voice-assistant-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Fraud Detection Pro",
-      description: "Advanced AI fraud detection with 99.7% accuracy and real-time monitoring",
-      price: "From $199/month",
-      icon: <Shield className="w-8 h-8" />,
-      link: "/zion-ai-fraud-detection-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Image Recognition Pro",
-      description: "Cutting-edge computer vision with 99.2% object detection accuracy",
-      price: "From $149/month",
-      icon: <Globe className="w-8 h-8" />,
-      link: "/zion-ai-image-recognition-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Predictive Maintenance",
-      description: "AI-powered predictive maintenance reducing downtime by 60%",
-      price: "From $299/month",
-      icon: <Settings className="w-8 h-8" />,
-      link: "/zion-ai-predictive-maintenance",
-      featured: true
-=======
 import { 
   BarChart3Icon,
   ShieldCheckIcon,
@@ -131,23 +93,11 @@ const MicroSaasSolutionsPage: React.FC = () => {
       title: "Easy Integration",
       description: "Seamlessly integrate with your existing tools and workflows.",
       icon: <GlobeAltIcon className="w-6 h-6 text-yellow-500" />
->>>>>>> cursor/analyze-improve-and-merge-code-636f
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-      <EnhancedSEO
-        title="Micro SAAS Solutions - Zion Tech Group"
-        description="Comprehensive micro SAAS solutions for modern businesses. AI-powered tools, analytics, security, and automation solutions."
-        keywords="micro SAAS, software solutions, business tools, AI solutions, automation"
-        canonical="/micro-saas-solutions"
-      />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-16">
-=======
       <Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>
         <meta name="description" content="Ready-to-use micro SAAS solutions including analytics, security, CRM, and cloud services. Deploy immediately and scale with your business." />
@@ -158,17 +108,11 @@ const MicroSaasSolutionsPage: React.FC = () => {
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
->>>>>>> cursor/analyze-improve-and-merge-code-636f
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Micro SAAS Solutions
             </span>
           </h1>
-<<<<<<< HEAD
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive micro SAAS solutions designed to transform your business operations with AI-powered tools and automation.
-          </p>
-=======
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Ready-to-use software solutions that can transform your business operations immediately. 
             Deploy, scale, and grow with our comprehensive micro SAAS platform.
@@ -289,7 +233,6 @@ const MicroSaasSolutionsPage: React.FC = () => {
               View All Solutions
             </Link>
           </div>
->>>>>>> cursor/analyze-improve-and-merge-code-636f
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -20,9 +20,6 @@ utilityFiles.forEach(filePath => {
     let content = fs.readFileSync(fullPath, 'utf8');
     
     // Remove merge conflict markers
-    content = content.replace(/<<<<<<< HEAD\n/g, '');
-    content = content.replace(/=======\n/g, '');
-    content = content.replace(/>>>>>>> [^\n]+\n/g, '');
     
     // Clean up extra whitespace
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
