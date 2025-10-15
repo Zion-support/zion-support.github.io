@@ -155,6 +155,19 @@ const ZionSmartCRMAutomationPage = lazy(() => import('./app/zion-smart-crm-autom
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
 const ZionSmartInventoryManagerPage = lazy(() => import('./app/zion-smart-inventory-manager/page'));
 
+// New AI Services
+const AIProjectManagerProPage = lazy(() => import('./app/ai-project-manager-pro/page'));
+const AICustomerFeedbackAnalyzerPage = lazy(() => import('./app/ai-customer-feedback-analyzer/page'));
+const AIInventoryOptimizerProPage = lazy(() => import('./app/ai-inventory-optimizer-pro/page'));
+const AILegalDocumentAnalyzerPage = lazy(() => import('./app/ai-legal-document-analyzer/page'));
+
+// New IT Solutions
+const QuantumComputingSolutionsPage = lazy(() => import('./app/quantum-computing-solutions/page'));
+const EdgeComputingSolutionsPage = lazy(() => import('./app/edge-computing-solutions/page'));
+
+// New AI Medical Services
+const AIMedicalDiagnosisAssistantPage = lazy(() => import('./app/ai-medical-diagnosis-assistant/page'));
+
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -401,6 +414,19 @@ const App = memo(() => {
                     <Route path="/zion-smart-crm-automation" element={<ZionSmartCRMAutomationPage />} />
                     <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
                     <Route path="/zion-smart-inventory-manager" element={<ZionSmartInventoryManagerPage />} />
+                    
+                    {/* New AI Services */}
+                    <Route path="/ai-project-manager-pro" element={<AIProjectManagerProPage />} />
+                    <Route path="/ai-customer-feedback-analyzer" element={<AICustomerFeedbackAnalyzerPage />} />
+                    <Route path="/ai-inventory-optimizer-pro" element={<AIInventoryOptimizerProPage />} />
+                    <Route path="/ai-legal-document-analyzer" element={<AILegalDocumentAnalyzerPage />} />
+                    
+                    {/* New IT Solutions */}
+                    <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
+                    <Route path="/edge-computing-solutions" element={<EdgeComputingSolutionsPage />} />
+                    
+                    {/* New AI Medical Services */}
+                    <Route path="/ai-medical-diagnosis-assistant" element={<AIMedicalDiagnosisAssistantPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
