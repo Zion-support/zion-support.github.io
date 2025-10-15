@@ -1,92 +1,91 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Zap, Eye, Hand, CheckCircle, ArrowRight, Star, Clock, Users, Cpu } from 'lucide-react';
+import { TrendingUp, Target, Users, BarChart3, CheckCircle, ArrowRight, Star, Clock, DollarSign, Zap } from 'lucide-react';
 
-const AiNeuralInterfacePage: React.FC = () => {
+const AiSalesOptimizerPage: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Direct Neural Control",
-      description: "Control devices and applications through direct brain-computer interface technology"
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Sales Forecasting",
+      description: "AI-powered sales predictions with 95% accuracy using advanced machine learning algorithms"
     },
     {
-      icon: <Eye className="w-6 h-6" />,
-      title: "Eye Tracking Integration",
-      description: "Advanced eye tracking for hands-free navigation and accessibility solutions"
+      icon: <Target className="w-6 h-6" />,
+      title: "Lead Scoring",
+      description: "Intelligent lead qualification and scoring to focus on high-value prospects"
     },
     {
-      icon: <Hand className="w-6 h-6" />,
-      title: "Gesture Recognition",
-      description: "Intelligent gesture recognition for intuitive device control and interaction"
+      icon: <Users className="w-6 h-6" />,
+      title: "Customer Insights",
+      description: "Deep customer behavior analysis and personalized engagement strategies"
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Processing",
-      description: "Ultra-low latency neural signal processing for seamless user experience"
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Performance Analytics",
+      description: "Real-time sales analytics and performance tracking with actionable insights"
     }
   ];
 
-  const applications = [
-    "Accessibility Solutions",
-    "Gaming & Entertainment",
-    "Medical Rehabilitation",
-    "Smart Home Control",
-    "Virtual Reality",
-    "Augmented Reality",
-    "Prosthetic Control",
-    "Communication Aids",
-    "Learning Enhancement",
-    "Workplace Productivity",
-    "Gaming Accessibility",
-    "Research & Development"
+  const capabilities = [
+    "Sales Pipeline Management",
+    "Lead Generation & Qualification",
+    "Customer Segmentation",
+    "Price Optimization",
+    "Churn Prediction",
+    "Cross-sell & Upsell",
+    "Sales Territory Planning",
+    "Commission Optimization",
+    "Customer Lifetime Value",
+    "Sales Performance Tracking",
+    "Market Trend Analysis",
+    "Competitive Intelligence"
   ];
 
   const pricingPlans = [
     {
-      name: "Developer",
-      price: "$299",
+      name: "Starter",
+      price: "$199",
       period: "/month",
-      description: "Perfect for developers and researchers",
+      description: "Perfect for small sales teams",
       features: [
-        "Basic neural interface SDK",
-        "Eye tracking support",
-        "Gesture recognition",
-        "Documentation & examples",
-        "Community support",
-        "Up to 5 devices"
+        "Up to 5 sales reps",
+        "Basic lead scoring",
+        "Sales forecasting",
+        "Email support",
+        "Standard analytics",
+        "CRM integration"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$499",
       period: "/month", 
-      description: "Ideal for businesses and institutions",
+      description: "Ideal for growing sales teams",
       features: [
-        "Advanced neural interface API",
-        "Multi-modal input support",
-        "Custom gesture training",
+        "Up to 25 sales reps",
+        "Advanced lead scoring",
+        "AI-powered forecasting",
         "Priority support",
         "Advanced analytics",
-        "Up to 25 devices",
-        "White-label options",
-        "Custom integrations"
+        "Custom integrations",
+        "Sales coaching insights",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$1,299",
       period: "/month",
-      description: "For large organizations",
+      description: "For large sales organizations",
       features: [
-        "Full neural interface suite",
-        "All input modalities",
-        "Custom neural models",
+        "Unlimited sales reps",
+        "AI-powered optimization",
+        "Custom AI models",
         "24/7 dedicated support",
         "Complete analytics suite",
-        "Unlimited devices",
-        "On-premise deployment",
+        "White-label solutions",
         "SLA guarantee",
         "Custom development"
       ],
@@ -95,24 +94,24 @@ const AiNeuralInterfacePage: React.FC = () => {
   ];
 
   const benefits = [
-    "Revolutionary accessibility solutions",
-    "Hands-free device control",
-    "Enhanced user experience",
-    "Medical rehabilitation support",
-    "Gaming and entertainment innovation",
-    "Research and development tools",
-    "Customizable neural interfaces",
-    "Real-time processing capabilities"
+    "Increase sales by 35% on average",
+    "Reduce sales cycle time by 40%",
+    "Improve lead conversion by 60%",
+    "Optimize pricing strategies",
+    "Predict customer churn",
+    "Automate sales processes",
+    "Enhance customer relationships",
+    "Data-driven decision making"
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Neural Interface - Zion Tech Group | Brain-Computer Interface Solutions</title>
-        <meta name="description" content="Revolutionary AI-powered neural interface technology for brain-computer interaction, eye tracking, and gesture recognition. Transform accessibility and user experience." />
-        <meta name="keywords" content="neural interface, brain computer interface, BCI, eye tracking, gesture recognition, accessibility, AI interface" />
-        <meta property="og:title" content="AI Neural Interface - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary brain-computer interface solutions" />
+        <title>AI Sales Optimizer - Zion Tech Group | Intelligent Sales Solutions</title>
+        <meta name="description" content="AI-powered sales optimization platform with forecasting, lead scoring, and analytics. Boost your sales performance with intelligent automation and insights." />
+        <meta name="keywords" content="ai sales, sales optimization, lead scoring, sales forecasting, sales analytics, crm, sales automation" />
+        <meta property="og:title" content="AI Sales Optimizer - Zion Tech Group" />
+        <meta property="og:description" content="Intelligent sales optimization and automation" />
         <meta property="og:type" content="website" />
       </Helmet>
       
@@ -122,11 +121,11 @@ const AiNeuralInterfacePage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Neural Interface</span>
+                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Sales Optimizer</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Revolutionize human-computer interaction with advanced AI-powered neural interfaces. 
-                Control devices through thought, eye movement, and gestures for unprecedented accessibility and innovation.
+                Transform your sales performance with AI-powered optimization. Increase revenue, 
+                improve conversion rates, and make data-driven decisions with intelligent sales automation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
@@ -144,9 +143,9 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Advanced Neural Interface Features</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">AI Sales Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Cutting-edge AI technology for seamless human-computer interaction
+                Advanced AI technology for intelligent sales optimization
               </p>
             </div>
             
@@ -168,21 +167,21 @@ const AiNeuralInterfacePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Applications Section */}
+        {/* Capabilities Section */}
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Diverse Applications</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Sales Optimization Capabilities</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform industries with neural interface technology across multiple sectors
+                Comprehensive sales intelligence and automation features
               </p>
             </div>
             
             <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {applications.map((application, index) => (
+              {capabilities.map((capability, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300 group">
                   <div className="text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors">
-                    {application}
+                    {capability}
                   </div>
                 </div>
               ))}
@@ -194,9 +193,9 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Neural Interface Benefits</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Sales Optimization Benefits</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Unlock new possibilities with advanced neural interface technology
+                Transform your sales performance with AI-powered optimization
               </p>
             </div>
             
@@ -216,9 +215,9 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Neural Interface Plans</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Sales Optimizer Plans</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your neural interface development needs
+                Choose the perfect sales optimization plan for your team
               </p>
             </div>
             
@@ -271,20 +270,20 @@ const AiNeuralInterfacePage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-                <div className="text-gray-300 text-lg">Accuracy Rate</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">35%</div>
+                <div className="text-gray-300 text-lg">Sales Increase</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">5ms</div>
-                <div className="text-gray-300 text-lg">Response Time</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">95%</div>
+                <div className="text-gray-300 text-lg">Forecast Accuracy</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
-                <div className="text-gray-300 text-lg">Supported Devices</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">60%</div>
+                <div className="text-gray-300 text-lg">Conversion Improvement</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-lg">Expert Support</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">40%</div>
+                <div className="text-gray-300 text-lg">Faster Sales Cycle</div>
               </div>
             </div>
           </div>
@@ -294,16 +293,16 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Revolutionize Human-Computer Interaction?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your Sales Performance?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Experience the future of neural interfaces. Start your free trial today and unlock new possibilities for accessibility and innovation.
+                Transform your sales team with AI-powered optimization. Start your free trial today and see immediate results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
                   Start Free Trial
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
-                  Contact Neural Experts
+                  Contact Sales Experts
                 </button>
               </div>
             </div>
@@ -314,4 +313,4 @@ const AiNeuralInterfacePage: React.FC = () => {
   );
 };
 
-export default AiNeuralInterfacePage;
+export default AiSalesOptimizerPage;

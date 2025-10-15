@@ -32,7 +32,12 @@ const Footer: React.FC = () => {
         { name: 'AI Smart Contracts', path: '/ai-smart-contracts' },
         { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
         { name: 'AI Predictive Maintenance', path: '/ai-predictive-maintenance' },
-        { name: 'AI Personalized Learning', path: '/ai-personalized-learning' }
+        { name: 'AI Personalized Learning', path: '/ai-personalized-learning' },
+        { name: 'AI Neural Interface', path: '/ai-neural-interface' },
+        { name: 'AI Robotics Automation', path: '/ai-robotics-automation' },
+        { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite' },
+        { name: 'AI Sales Optimizer', path: '/ai-sales-optimizer' },
+        { name: 'AI HR Management System', path: '/ai-hr-management-system' }
       ]
     },
     {
@@ -51,22 +56,14 @@ const Footer: React.FC = () => {
       services: [
         { name: 'Cloud Migration', path: '/cloud-migration-services' },
         { name: 'Cybersecurity', path: '/cybersecurity-consulting' },
-<<<<<<< HEAD
-        { name: 'DevOps', path: '/devops-solutions' },
+        { name: 'DevOps Solutions', path: '/devops-solutions' },
         { name: 'Mobile Development', path: '/mobile-development' },
         { name: 'Web Development', path: '/web-development' },
-<<<<<<< HEAD
-=======
-        { name: 'DevOps Solutions', path: '/devops-solutions' },
-        { name: 'Mobile Development', path: '/mobile-app-development' },
-        { name: 'Web Development', path: '/web-application-development' },
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-265e
-        { name: 'Database Solutions', path: '/database-solutions' }
-=======
         { name: 'Database Solutions', path: '/database-solutions' },
         { name: 'Quantum Computing', path: '/quantum-computing-solutions' },
-        { name: 'Edge Computing', path: '/edge-computing-solutions' }
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-06e6
+        { name: 'Edge Computing', path: '/edge-computing-solutions' },
+        { name: 'Blockchain Development', path: '/blockchain-development-solutions' },
+        { name: 'IoT Solutions', path: '/iot-solutions-platform' }
       ]
     },
     {
@@ -77,11 +74,8 @@ const Footer: React.FC = () => {
         { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
         { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions' },
         { name: '5G Edge Computing', path: '/5g-edge-computing' },
-<<<<<<< HEAD
-        { name: '5G Private Networks', path: '/5g-private-networks' }
-=======
+        { name: '5G Private Networks', path: '/5g-private-networks' },
         { name: '5G Security Solutions', path: '/5g-security' }
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-265e
       ]
     }
   ];
@@ -120,13 +114,8 @@ const Footer: React.FC = () => {
       </div>
       
       {/* Main Footer Content */}
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-=======
-      <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 lg:gap-8">
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-265e
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6 group">

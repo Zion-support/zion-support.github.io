@@ -1,118 +1,118 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Zap, Eye, Hand, CheckCircle, ArrowRight, Star, Clock, Users, Cpu } from 'lucide-react';
+import { Bot, Cpu, Eye, Hand, CheckCircle, ArrowRight, Star, Clock, Users, Zap } from 'lucide-react';
 
-const AiNeuralInterfacePage: React.FC = () => {
+const AiRoboticsAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Direct Neural Control",
-      description: "Control devices and applications through direct brain-computer interface technology"
+      icon: <Bot className="w-6 h-6" />,
+      title: "Intelligent Robot Control",
+      description: "AI-powered robot control systems with advanced decision-making capabilities"
     },
     {
       icon: <Eye className="w-6 h-6" />,
-      title: "Eye Tracking Integration",
-      description: "Advanced eye tracking for hands-free navigation and accessibility solutions"
+      title: "Computer Vision Integration",
+      description: "Advanced computer vision for object recognition, navigation, and manipulation"
     },
     {
       icon: <Hand className="w-6 h-6" />,
-      title: "Gesture Recognition",
-      description: "Intelligent gesture recognition for intuitive device control and interaction"
+      title: "Precision Manipulation",
+      description: "High-precision robotic manipulation with force feedback and tactile sensing"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Processing",
-      description: "Ultra-low latency neural signal processing for seamless user experience"
+      title: "Autonomous Operation",
+      description: "Fully autonomous robotic systems that learn and adapt to their environment"
     }
   ];
 
   const applications = [
-    "Accessibility Solutions",
-    "Gaming & Entertainment",
-    "Medical Rehabilitation",
-    "Smart Home Control",
-    "Virtual Reality",
-    "Augmented Reality",
-    "Prosthetic Control",
-    "Communication Aids",
-    "Learning Enhancement",
-    "Workplace Productivity",
-    "Gaming Accessibility",
+    "Manufacturing Automation",
+    "Warehouse Management",
+    "Healthcare Robotics",
+    "Agricultural Automation",
+    "Service Robotics",
+    "Logistics & Delivery",
+    "Quality Inspection",
+    "Assembly Line Automation",
+    "Medical Surgery",
+    "Food Processing",
+    "Construction Robotics",
     "Research & Development"
   ];
 
   const pricingPlans = [
     {
-      name: "Developer",
-      price: "$299",
+      name: "Starter",
+      price: "$1,999",
       period: "/month",
-      description: "Perfect for developers and researchers",
+      description: "Perfect for small manufacturing",
       features: [
-        "Basic neural interface SDK",
-        "Eye tracking support",
-        "Gesture recognition",
-        "Documentation & examples",
-        "Community support",
-        "Up to 5 devices"
+        "Basic robot control system",
+        "Simple automation tasks",
+        "Standard computer vision",
+        "Email support",
+        "Up to 5 robots",
+        "Basic analytics"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$4,999",
       period: "/month", 
-      description: "Ideal for businesses and institutions",
+      description: "Ideal for growing businesses",
       features: [
-        "Advanced neural interface API",
-        "Multi-modal input support",
-        "Custom gesture training",
+        "Advanced robot control",
+        "Complex automation workflows",
+        "Advanced computer vision",
         "Priority support",
+        "Up to 25 robots",
         "Advanced analytics",
-        "Up to 25 devices",
-        "White-label options",
-        "Custom integrations"
+        "Custom integrations",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$12,999",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Full neural interface suite",
-        "All input modalities",
-        "Custom neural models",
+        "Full robotic automation suite",
+        "Custom automation solutions",
+        "AI-powered decision making",
         "24/7 dedicated support",
+        "Unlimited robots",
         "Complete analytics suite",
-        "Unlimited devices",
-        "On-premise deployment",
+        "White-label solutions",
         "SLA guarantee",
-        "Custom development"
+        "On-site deployment"
       ],
       popular: false
     }
   ];
 
   const benefits = [
-    "Revolutionary accessibility solutions",
-    "Hands-free device control",
-    "Enhanced user experience",
-    "Medical rehabilitation support",
-    "Gaming and entertainment innovation",
-    "Research and development tools",
-    "Customizable neural interfaces",
-    "Real-time processing capabilities"
+    "Increased productivity and efficiency",
+    "Reduced operational costs",
+    "Improved quality and consistency",
+    "Enhanced safety in hazardous environments",
+    "24/7 continuous operation",
+    "Scalable automation solutions",
+    "Custom robotic applications",
+    "Advanced AI integration"
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Neural Interface - Zion Tech Group | Brain-Computer Interface Solutions</title>
-        <meta name="description" content="Revolutionary AI-powered neural interface technology for brain-computer interaction, eye tracking, and gesture recognition. Transform accessibility and user experience." />
-        <meta name="keywords" content="neural interface, brain computer interface, BCI, eye tracking, gesture recognition, accessibility, AI interface" />
-        <meta property="og:title" content="AI Neural Interface - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary brain-computer interface solutions" />
+        <title>AI Robotics Automation - Zion Tech Group | Intelligent Robotic Solutions</title>
+        <meta name="description" content="Advanced AI-powered robotics automation solutions for manufacturing, healthcare, logistics, and more. Transform your operations with intelligent robotic systems." />
+        <meta name="keywords" content="ai robotics, robotic automation, manufacturing robots, service robots, computer vision, autonomous systems" />
+        <meta property="og:title" content="AI Robotics Automation - Zion Tech Group" />
+        <meta property="og:description" content="Intelligent robotic automation solutions" />
         <meta property="og:type" content="website" />
       </Helmet>
       
@@ -122,18 +122,18 @@ const AiNeuralInterfacePage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Neural Interface</span>
+                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Robotics Automation</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Revolutionize human-computer interaction with advanced AI-powered neural interfaces. 
-                Control devices through thought, eye movement, and gestures for unprecedented accessibility and innovation.
+                Transform your operations with intelligent robotic automation systems powered by advanced AI. 
+                Increase productivity, reduce costs, and enhance quality across all industries.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                  Start Free Trial
+                  Start Automation Journey
                 </button>
                 <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                  View Demo
+                  View Case Studies
                 </button>
               </div>
             </div>
@@ -144,9 +144,9 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Advanced Neural Interface Features</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Advanced Robotic Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Cutting-edge AI technology for seamless human-computer interaction
+                Cutting-edge AI technology for intelligent robotic automation
               </p>
             </div>
             
@@ -172,9 +172,9 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Diverse Applications</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Industry Applications</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform industries with neural interface technology across multiple sectors
+                Transform industries with intelligent robotic automation solutions
               </p>
             </div>
             
@@ -194,9 +194,9 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Neural Interface Benefits</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Robotic Automation Benefits</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Unlock new possibilities with advanced neural interface technology
+                Unlock new levels of efficiency and productivity with AI-powered robotics
               </p>
             </div>
             
@@ -216,9 +216,9 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Neural Interface Plans</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Robotic Automation Plans</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your neural interface development needs
+                Choose the perfect automation plan for your robotic needs
               </p>
             </div>
             
@@ -271,20 +271,20 @@ const AiNeuralInterfacePage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-4 gap-8 text-center">
               <div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">75%</div>
+                <div className="text-gray-300 text-lg">Cost Reduction</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">300%</div>
+                <div className="text-gray-300 text-lg">Productivity Increase</div>
+              </div>
+              <div>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
                 <div className="text-gray-300 text-lg">Accuracy Rate</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">5ms</div>
-                <div className="text-gray-300 text-lg">Response Time</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
-                <div className="text-gray-300 text-lg">Supported Devices</div>
-              </div>
-              <div>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-lg">Expert Support</div>
+                <div className="text-gray-300 text-lg">Continuous Operation</div>
               </div>
             </div>
           </div>
@@ -294,16 +294,16 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Revolutionize Human-Computer Interaction?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Automate Your Future?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Experience the future of neural interfaces. Start your free trial today and unlock new possibilities for accessibility and innovation.
+                Transform your operations with intelligent robotic automation. Start your automation journey today and unlock new levels of efficiency.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-                  Start Free Trial
+                  Start Automation Trial
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
-                  Contact Neural Experts
+                  Contact Robotics Experts
                 </button>
               </div>
             </div>
@@ -314,4 +314,4 @@ const AiNeuralInterfacePage: React.FC = () => {
   );
 };
 
-export default AiNeuralInterfacePage;
+export default AiRoboticsAutomationPage;

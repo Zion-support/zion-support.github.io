@@ -1,59 +1,59 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Zap, Eye, Hand, CheckCircle, ArrowRight, Star, Clock, Users, Cpu } from 'lucide-react';
+import { Wifi, Cpu, BarChart3, Shield, CheckCircle, ArrowRight, Star, Clock, Users, Zap } from 'lucide-react';
 
-const AiNeuralInterfacePage: React.FC = () => {
+const IotSolutionsPlatformPage: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Direct Neural Control",
-      description: "Control devices and applications through direct brain-computer interface technology"
+      icon: <Wifi className="w-6 h-6" />,
+      title: "Device Connectivity",
+      description: "Seamless connectivity for thousands of IoT devices with real-time data transmission"
     },
     {
-      icon: <Eye className="w-6 h-6" />,
-      title: "Eye Tracking Integration",
-      description: "Advanced eye tracking for hands-free navigation and accessibility solutions"
+      icon: <Cpu className="w-6 h-6" />,
+      title: "Edge Computing",
+      description: "Intelligent edge processing for real-time decision making and reduced latency"
     },
     {
-      icon: <Hand className="w-6 h-6" />,
-      title: "Gesture Recognition",
-      description: "Intelligent gesture recognition for intuitive device control and interaction"
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Data Analytics",
+      description: "Advanced analytics and machine learning for predictive insights and optimization"
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Processing",
-      description: "Ultra-low latency neural signal processing for seamless user experience"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Security & Privacy",
+      description: "End-to-end security with encryption, authentication, and privacy protection"
     }
   ];
 
   const applications = [
-    "Accessibility Solutions",
-    "Gaming & Entertainment",
-    "Medical Rehabilitation",
-    "Smart Home Control",
-    "Virtual Reality",
-    "Augmented Reality",
-    "Prosthetic Control",
-    "Communication Aids",
-    "Learning Enhancement",
-    "Workplace Productivity",
-    "Gaming Accessibility",
-    "Research & Development"
+    "Smart Manufacturing",
+    "Smart Cities",
+    "Healthcare Monitoring",
+    "Agriculture Automation",
+    "Energy Management",
+    "Fleet Tracking",
+    "Environmental Monitoring",
+    "Retail Analytics",
+    "Home Automation",
+    "Supply Chain",
+    "Predictive Maintenance",
+    "Asset Tracking"
   ];
 
   const pricingPlans = [
     {
-      name: "Developer",
+      name: "Starter",
       price: "$299",
       period: "/month",
-      description: "Perfect for developers and researchers",
+      description: "Perfect for small IoT projects",
       features: [
-        "Basic neural interface SDK",
-        "Eye tracking support",
-        "Gesture recognition",
-        "Documentation & examples",
-        "Community support",
-        "Up to 5 devices"
+        "Up to 100 devices",
+        "Basic analytics",
+        "Standard security",
+        "Email support",
+        "Cloud storage (10GB)",
+        "Basic dashboards"
       ],
       popular: false
     },
@@ -61,16 +61,16 @@ const AiNeuralInterfacePage: React.FC = () => {
       name: "Professional",
       price: "$799",
       period: "/month", 
-      description: "Ideal for businesses and institutions",
+      description: "Ideal for growing businesses",
       features: [
-        "Advanced neural interface API",
-        "Multi-modal input support",
-        "Custom gesture training",
-        "Priority support",
+        "Up to 1,000 devices",
         "Advanced analytics",
-        "Up to 25 devices",
-        "White-label options",
-        "Custom integrations"
+        "Enhanced security",
+        "Priority support",
+        "Cloud storage (100GB)",
+        "Custom dashboards",
+        "API access",
+        "Real-time alerts"
       ],
       popular: true
     },
@@ -80,39 +80,39 @@ const AiNeuralInterfacePage: React.FC = () => {
       period: "/month",
       description: "For large organizations",
       features: [
-        "Full neural interface suite",
-        "All input modalities",
-        "Custom neural models",
-        "24/7 dedicated support",
-        "Complete analytics suite",
         "Unlimited devices",
-        "On-premise deployment",
+        "AI-powered analytics",
+        "Enterprise security",
+        "24/7 dedicated support",
+        "Unlimited storage",
+        "White-label platform",
+        "Custom integrations",
         "SLA guarantee",
-        "Custom development"
+        "On-premise deployment"
       ],
       popular: false
     }
   ];
 
   const benefits = [
-    "Revolutionary accessibility solutions",
-    "Hands-free device control",
-    "Enhanced user experience",
-    "Medical rehabilitation support",
-    "Gaming and entertainment innovation",
-    "Research and development tools",
-    "Customizable neural interfaces",
-    "Real-time processing capabilities"
+    "Real-time device monitoring",
+    "Predictive maintenance capabilities",
+    "Reduced operational costs",
+    "Enhanced efficiency and productivity",
+    "Scalable IoT infrastructure",
+    "Advanced data insights",
+    "Secure device management",
+    "Custom IoT solutions"
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Neural Interface - Zion Tech Group | Brain-Computer Interface Solutions</title>
-        <meta name="description" content="Revolutionary AI-powered neural interface technology for brain-computer interaction, eye tracking, and gesture recognition. Transform accessibility and user experience." />
-        <meta name="keywords" content="neural interface, brain computer interface, BCI, eye tracking, gesture recognition, accessibility, AI interface" />
-        <meta property="og:title" content="AI Neural Interface - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary brain-computer interface solutions" />
+        <title>IoT Solutions Platform - Zion Tech Group | Internet of Things Platform</title>
+        <meta name="description" content="Comprehensive IoT solutions platform with device connectivity, edge computing, analytics, and security. Transform your business with intelligent IoT technology." />
+        <meta name="keywords" content="iot platform, internet of things, device connectivity, edge computing, iot analytics, smart devices" />
+        <meta property="og:title" content="IoT Solutions Platform - Zion Tech Group" />
+        <meta property="og:description" content="Comprehensive IoT solutions and platform" />
         <meta property="og:type" content="website" />
       </Helmet>
       
@@ -122,18 +122,18 @@ const AiNeuralInterfacePage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Neural Interface</span>
+                IoT <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions Platform</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Revolutionize human-computer interaction with advanced AI-powered neural interfaces. 
-                Control devices through thought, eye movement, and gestures for unprecedented accessibility and innovation.
+                Connect, monitor, and optimize your devices with our comprehensive IoT platform. 
+                Transform data into actionable insights with advanced analytics and intelligent automation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                  Start Free Trial
+                  Start IoT Journey
                 </button>
                 <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                  View Demo
+                  View Platform Demo
                 </button>
               </div>
             </div>
@@ -144,9 +144,9 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Advanced Neural Interface Features</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">IoT Platform Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Cutting-edge AI technology for seamless human-computer interaction
+                Comprehensive IoT solutions for connected device management
               </p>
             </div>
             
@@ -172,9 +172,9 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Diverse Applications</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">IoT Applications</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform industries with neural interface technology across multiple sectors
+                Transform industries with intelligent IoT solutions
               </p>
             </div>
             
@@ -194,9 +194,9 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Neural Interface Benefits</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">IoT Platform Benefits</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Unlock new possibilities with advanced neural interface technology
+                Unlock the power of connected devices and intelligent automation
               </p>
             </div>
             
@@ -216,9 +216,9 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Neural Interface Plans</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">IoT Platform Plans</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your neural interface development needs
+                Choose the perfect IoT platform plan for your connected device needs
               </p>
             </div>
             
@@ -271,20 +271,20 @@ const AiNeuralInterfacePage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-                <div className="text-gray-300 text-lg">Accuracy Rate</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">10K+</div>
+                <div className="text-gray-300 text-lg">Connected Devices</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">5ms</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+                <div className="text-gray-300 text-lg">Uptime Guarantee</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">50ms</div>
                 <div className="text-gray-300 text-lg">Response Time</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
-                <div className="text-gray-300 text-lg">Supported Devices</div>
-              </div>
-              <div>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-lg">Expert Support</div>
+                <div className="text-gray-300 text-lg">Monitoring</div>
               </div>
             </div>
           </div>
@@ -294,16 +294,16 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Revolutionize Human-Computer Interaction?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Connect Your World?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Experience the future of neural interfaces. Start your free trial today and unlock new possibilities for accessibility and innovation.
+                Transform your business with intelligent IoT solutions. Start your connected device journey today and unlock new possibilities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-                  Start Free Trial
+                  Start IoT Platform
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
-                  Contact Neural Experts
+                  Contact IoT Experts
                 </button>
               </div>
             </div>
@@ -314,4 +314,4 @@ const AiNeuralInterfacePage: React.FC = () => {
   );
 };
 
-export default AiNeuralInterfacePage;
+export default IotSolutionsPlatformPage;

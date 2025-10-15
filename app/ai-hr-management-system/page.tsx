@@ -1,118 +1,117 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Zap, Eye, Hand, CheckCircle, ArrowRight, Star, Clock, Users, Cpu } from 'lucide-react';
+import { Users, FileText, TrendingUp, Clock, CheckCircle, ArrowRight, Star, DollarSign, Zap, Shield } from 'lucide-react';
 
-const AiNeuralInterfacePage: React.FC = () => {
+const AiHrManagementSystemPage: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Direct Neural Control",
-      description: "Control devices and applications through direct brain-computer interface technology"
+      icon: <Users className="w-6 h-6" />,
+      title: "AI Recruitment",
+      description: "Intelligent candidate screening and matching using advanced AI algorithms"
     },
     {
-      icon: <Eye className="w-6 h-6" />,
-      title: "Eye Tracking Integration",
-      description: "Advanced eye tracking for hands-free navigation and accessibility solutions"
+      icon: <FileText className="w-6 h-6" />,
+      title: "Performance Analytics",
+      description: "Comprehensive employee performance tracking and predictive analytics"
     },
     {
-      icon: <Hand className="w-6 h-6" />,
-      title: "Gesture Recognition",
-      description: "Intelligent gesture recognition for intuitive device control and interaction"
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Career Development",
+      description: "AI-powered career path recommendations and skill development planning"
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Processing",
-      description: "Ultra-low latency neural signal processing for seamless user experience"
+      icon: <Clock className="w-6 h-6" />,
+      title: "Workforce Planning",
+      description: "Predictive workforce planning and resource optimization"
     }
   ];
 
-  const applications = [
-    "Accessibility Solutions",
-    "Gaming & Entertainment",
-    "Medical Rehabilitation",
-    "Smart Home Control",
-    "Virtual Reality",
-    "Augmented Reality",
-    "Prosthetic Control",
-    "Communication Aids",
-    "Learning Enhancement",
-    "Workplace Productivity",
-    "Gaming Accessibility",
-    "Research & Development"
+  const capabilities = [
+    "AI-Powered Recruitment",
+    "Employee Onboarding",
+    "Performance Management",
+    "Talent Analytics",
+    "Skills Assessment",
+    "Career Development",
+    "Workforce Planning",
+    "Employee Engagement",
+    "Payroll Management",
+    "Benefits Administration",
+    "Compliance Tracking",
+    "HR Analytics"
   ];
 
   const pricingPlans = [
     {
-      name: "Developer",
-      price: "$299",
+      name: "Small Business",
+      price: "$149",
       period: "/month",
-      description: "Perfect for developers and researchers",
+      description: "Perfect for small teams",
       features: [
-        "Basic neural interface SDK",
-        "Eye tracking support",
-        "Gesture recognition",
-        "Documentation & examples",
-        "Community support",
-        "Up to 5 devices"
+        "Up to 50 employees",
+        "Basic AI recruitment",
+        "Performance tracking",
+        "Email support",
+        "Standard reports",
+        "Basic analytics"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$399",
       period: "/month", 
-      description: "Ideal for businesses and institutions",
+      description: "Ideal for growing companies",
       features: [
-        "Advanced neural interface API",
-        "Multi-modal input support",
-        "Custom gesture training",
+        "Up to 250 employees",
+        "Advanced AI features",
+        "Comprehensive analytics",
         "Priority support",
-        "Advanced analytics",
-        "Up to 25 devices",
-        "White-label options",
-        "Custom integrations"
+        "Custom workflows",
+        "API integration",
+        "Advanced reporting",
+        "Mobile app"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$999",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Full neural interface suite",
-        "All input modalities",
-        "Custom neural models",
+        "Unlimited employees",
+        "Full AI suite",
+        "Custom AI models",
         "24/7 dedicated support",
-        "Complete analytics suite",
-        "Unlimited devices",
-        "On-premise deployment",
+        "White-label options",
         "SLA guarantee",
-        "Custom development"
+        "Custom development",
+        "On-premise deployment"
       ],
       popular: false
     }
   ];
 
   const benefits = [
-    "Revolutionary accessibility solutions",
-    "Hands-free device control",
-    "Enhanced user experience",
-    "Medical rehabilitation support",
-    "Gaming and entertainment innovation",
-    "Research and development tools",
-    "Customizable neural interfaces",
-    "Real-time processing capabilities"
+    "Reduce hiring time by 50%",
+    "Improve employee retention",
+    "Enhance performance management",
+    "Streamline HR processes",
+    "Data-driven HR decisions",
+    "Automated compliance tracking",
+    "Better talent acquisition",
+    "Increased employee satisfaction"
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Neural Interface - Zion Tech Group | Brain-Computer Interface Solutions</title>
-        <meta name="description" content="Revolutionary AI-powered neural interface technology for brain-computer interaction, eye tracking, and gesture recognition. Transform accessibility and user experience." />
-        <meta name="keywords" content="neural interface, brain computer interface, BCI, eye tracking, gesture recognition, accessibility, AI interface" />
-        <meta property="og:title" content="AI Neural Interface - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary brain-computer interface solutions" />
+        <title>AI HR Management System - Zion Tech Group | Intelligent HR Solutions</title>
+        <meta name="description" content="AI-powered HR management system with recruitment, performance analytics, and workforce planning. Transform your human resources with intelligent automation." />
+        <meta name="keywords" content="ai hr, hr management, recruitment, performance management, workforce planning, hr analytics, talent management" />
+        <meta property="og:title" content="AI HR Management System - Zion Tech Group" />
+        <meta property="og:description" content="Intelligent HR management and automation" />
         <meta property="og:type" content="website" />
       </Helmet>
       
@@ -122,11 +121,11 @@ const AiNeuralInterfacePage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Neural Interface</span>
+                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">HR Management System</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Revolutionize human-computer interaction with advanced AI-powered neural interfaces. 
-                Control devices through thought, eye movement, and gestures for unprecedented accessibility and innovation.
+                Revolutionize your human resources with AI-powered management. Streamline recruitment, 
+                optimize performance, and enhance employee experience with intelligent automation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
@@ -144,9 +143,9 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Advanced Neural Interface Features</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">AI HR Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Cutting-edge AI technology for seamless human-computer interaction
+                Advanced AI technology for intelligent human resource management
               </p>
             </div>
             
@@ -168,21 +167,21 @@ const AiNeuralInterfacePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Applications Section */}
+        {/* Capabilities Section */}
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Diverse Applications</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">HR Management Capabilities</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform industries with neural interface technology across multiple sectors
+                Comprehensive HR solutions powered by artificial intelligence
               </p>
             </div>
             
             <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {applications.map((application, index) => (
+              {capabilities.map((capability, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300 group">
                   <div className="text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors">
-                    {application}
+                    {capability}
                   </div>
                 </div>
               ))}
@@ -194,9 +193,9 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Neural Interface Benefits</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">HR Management Benefits</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Unlock new possibilities with advanced neural interface technology
+                Transform your human resources with AI-powered management solutions
               </p>
             </div>
             
@@ -216,9 +215,9 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Neural Interface Plans</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">HR Management Plans</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your neural interface development needs
+                Choose the perfect HR management plan for your organization
               </p>
             </div>
             
@@ -271,20 +270,20 @@ const AiNeuralInterfacePage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-                <div className="text-gray-300 text-lg">Accuracy Rate</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">50%</div>
+                <div className="text-gray-300 text-lg">Faster Hiring</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">5ms</div>
-                <div className="text-gray-300 text-lg">Response Time</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">35%</div>
+                <div className="text-gray-300 text-lg">Better Retention</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
-                <div className="text-gray-300 text-lg">Supported Devices</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">60%</div>
+                <div className="text-gray-300 text-lg">Process Efficiency</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-lg">Expert Support</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">95%</div>
+                <div className="text-gray-300 text-lg">Employee Satisfaction</div>
               </div>
             </div>
           </div>
@@ -294,16 +293,16 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Revolutionize Human-Computer Interaction?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your HR Management?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Experience the future of neural interfaces. Start your free trial today and unlock new possibilities for accessibility and innovation.
+                Revolutionize your human resources with AI-powered management. Start your free trial today and experience the future of HR.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
                   Start Free Trial
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
-                  Contact Neural Experts
+                  Contact HR Experts
                 </button>
               </div>
             </div>
@@ -314,4 +313,4 @@ const AiNeuralInterfacePage: React.FC = () => {
   );
 };
 
-export default AiNeuralInterfacePage;
+export default AiHrManagementSystemPage;

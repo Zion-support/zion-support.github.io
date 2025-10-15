@@ -42,7 +42,9 @@ const Services: React.FC = () => {
         { name: 'Web Development', href: '/web-development', price: 'From $1,299', features: 'React/Next.js, Mobile-first, SEO optimized' },
         { name: 'Mobile App Development', href: '/mobile-development', price: 'From $1,999', features: 'iOS/Android, Cross-platform, App store ready' },
         { name: 'Quantum Computing Solutions', href: '/quantum-computing-solutions', price: 'From $2,999', features: 'Quantum algorithms, Hardware integration, Security solutions' },
-        { name: 'Edge Computing Solutions', href: '/edge-computing-solutions', price: 'From $499', features: 'Ultra-low latency, Real-time processing, Distributed computing' }
+        { name: 'Edge Computing Solutions', href: '/edge-computing-solutions', price: 'From $499', features: 'Ultra-low latency, Real-time processing, Distributed computing' },
+        { name: 'Blockchain Development Solutions', href: '/blockchain-development-solutions', price: 'From $2,999', features: 'Smart contracts, DApp development, Security audits' },
+        { name: 'IoT Solutions Platform', href: '/iot-solutions-platform', price: 'From $299/month', features: 'Device connectivity, Edge computing, Data analytics' }
       ]
     },
     {
@@ -78,7 +80,12 @@ const Services: React.FC = () => {
         { name: 'AI Smart Contracts', href: '/ai-smart-contracts', price: 'From $199/month', features: 'Blockchain automation, Security audit, Auto-execution' },
         { name: 'AI Voice Assistant', href: '/ai-voice-assistant', price: 'From $99/month', features: 'Natural language processing, Voice synthesis, Multi-language' },
         { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', price: 'From $299/month', features: 'Equipment monitoring, Failure prediction, Cost optimization' },
-        { name: 'AI Personalized Learning', href: '/ai-personalized-learning', price: 'From $29/month', features: 'Adaptive learning, Progress tracking, Multi-modal content' }
+        { name: 'AI Personalized Learning', href: '/ai-personalized-learning', price: 'From $29/month', features: 'Adaptive learning, Progress tracking, Multi-modal content' },
+        { name: 'AI Neural Interface', href: '/ai-neural-interface', price: 'From $299/month', features: 'Brain-computer interface, Eye tracking, Gesture recognition' },
+        { name: 'AI Robotics Automation', href: '/ai-robotics-automation', price: 'From $1,999/month', features: 'Intelligent robot control, Computer vision, Autonomous operation' },
+        { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite', price: 'From $499/month', features: 'Threat detection, Behavioral analysis, Automated response' },
+        { name: 'AI Sales Optimizer', href: '/ai-sales-optimizer', price: 'From $199/month', features: 'Sales forecasting, Lead scoring, Performance analytics' },
+        { name: 'AI HR Management System', href: '/ai-hr-management-system', price: 'From $149/month', features: 'AI recruitment, Performance analytics, Workforce planning' }
       ]
     }
   ];

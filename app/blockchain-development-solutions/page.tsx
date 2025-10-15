@@ -1,118 +1,118 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Zap, Eye, Hand, CheckCircle, ArrowRight, Star, Clock, Users, Cpu } from 'lucide-react';
+import { Link, Code, Shield, Zap, CheckCircle, ArrowRight, Star, Clock, Users, Globe } from 'lucide-react';
 
-const AiNeuralInterfacePage: React.FC = () => {
+const BlockchainDevelopmentSolutionsPage: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Direct Neural Control",
-      description: "Control devices and applications through direct brain-computer interface technology"
+      icon: <Link className="w-6 h-6" />,
+      title: "Smart Contract Development",
+      description: "Custom smart contracts for DeFi, NFTs, and enterprise blockchain solutions"
     },
     {
-      icon: <Eye className="w-6 h-6" />,
-      title: "Eye Tracking Integration",
-      description: "Advanced eye tracking for hands-free navigation and accessibility solutions"
+      icon: <Code className="w-6 h-6" />,
+      title: "DApp Development",
+      description: "Decentralized applications with seamless user experience and security"
     },
     {
-      icon: <Hand className="w-6 h-6" />,
-      title: "Gesture Recognition",
-      description: "Intelligent gesture recognition for intuitive device control and interaction"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Security Audits",
+      description: "Comprehensive security audits and penetration testing for blockchain projects"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Processing",
-      description: "Ultra-low latency neural signal processing for seamless user experience"
+      title: "Blockchain Integration",
+      description: "Seamless integration of blockchain technology into existing business systems"
     }
   ];
 
-  const applications = [
-    "Accessibility Solutions",
-    "Gaming & Entertainment",
-    "Medical Rehabilitation",
-    "Smart Home Control",
-    "Virtual Reality",
-    "Augmented Reality",
-    "Prosthetic Control",
-    "Communication Aids",
-    "Learning Enhancement",
-    "Workplace Productivity",
-    "Gaming Accessibility",
-    "Research & Development"
+  const services = [
+    "Smart Contract Development",
+    "DeFi Protocol Development",
+    "NFT Marketplace Creation",
+    "DApp Development",
+    "Blockchain Security Audits",
+    "Token Development",
+    "Wallet Integration",
+    "Cross-chain Solutions",
+    "Enterprise Blockchain",
+    "Consensus Mechanism Design",
+    "Blockchain Consulting",
+    "Web3 Integration"
   ];
 
   const pricingPlans = [
     {
-      name: "Developer",
-      price: "$299",
-      period: "/month",
-      description: "Perfect for developers and researchers",
+      name: "Startup",
+      price: "$2,999",
+      period: "/project",
+      description: "Perfect for new blockchain projects",
       features: [
-        "Basic neural interface SDK",
-        "Eye tracking support",
-        "Gesture recognition",
-        "Documentation & examples",
-        "Community support",
-        "Up to 5 devices"
+        "Basic smart contract development",
+        "Simple DApp creation",
+        "Security audit",
+        "Documentation",
+        "2 weeks delivery",
+        "Email support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
-      period: "/month", 
-      description: "Ideal for businesses and institutions",
+      price: "$7,999",
+      period: "/project", 
+      description: "Ideal for growing businesses",
       features: [
-        "Advanced neural interface API",
-        "Multi-modal input support",
-        "Custom gesture training",
+        "Advanced smart contracts",
+        "Complex DApp development",
+        "Comprehensive security audit",
+        "UI/UX design",
+        "4 weeks delivery",
         "Priority support",
-        "Advanced analytics",
-        "Up to 25 devices",
-        "White-label options",
-        "Custom integrations"
+        "Testing & deployment",
+        "Maintenance included"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
-      period: "/month",
+      price: "$19,999",
+      period: "/project",
       description: "For large organizations",
       features: [
-        "Full neural interface suite",
-        "All input modalities",
-        "Custom neural models",
+        "Custom blockchain solutions",
+        "Enterprise DApp suite",
+        "Full security suite",
+        "Custom UI/UX",
+        "8 weeks delivery",
         "24/7 dedicated support",
-        "Complete analytics suite",
-        "Unlimited devices",
-        "On-premise deployment",
+        "White-label solutions",
         "SLA guarantee",
-        "Custom development"
+        "Ongoing maintenance"
       ],
       popular: false
     }
   ];
 
   const benefits = [
-    "Revolutionary accessibility solutions",
-    "Hands-free device control",
-    "Enhanced user experience",
-    "Medical rehabilitation support",
-    "Gaming and entertainment innovation",
-    "Research and development tools",
-    "Customizable neural interfaces",
-    "Real-time processing capabilities"
+    "Decentralized and secure solutions",
+    "Transparent and immutable records",
+    "Reduced transaction costs",
+    "Enhanced security and trust",
+    "Global accessibility",
+    "Smart contract automation",
+    "Tokenization capabilities",
+    "Future-proof technology"
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Neural Interface - Zion Tech Group | Brain-Computer Interface Solutions</title>
-        <meta name="description" content="Revolutionary AI-powered neural interface technology for brain-computer interaction, eye tracking, and gesture recognition. Transform accessibility and user experience." />
-        <meta name="keywords" content="neural interface, brain computer interface, BCI, eye tracking, gesture recognition, accessibility, AI interface" />
-        <meta property="og:title" content="AI Neural Interface - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary brain-computer interface solutions" />
+        <title>Blockchain Development Solutions - Zion Tech Group | Web3 Development</title>
+        <meta name="description" content="Professional blockchain development services including smart contracts, DApps, DeFi protocols, and NFT marketplaces. Transform your business with Web3 technology." />
+        <meta name="keywords" content="blockchain development, smart contracts, DApp development, DeFi, NFT, Web3, cryptocurrency, token development" />
+        <meta property="og:title" content="Blockchain Development Solutions - Zion Tech Group" />
+        <meta property="og:description" content="Professional blockchain and Web3 development services" />
         <meta property="og:type" content="website" />
       </Helmet>
       
@@ -122,18 +122,18 @@ const AiNeuralInterfacePage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Neural Interface</span>
+                Blockchain <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Development Solutions</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Revolutionize human-computer interaction with advanced AI-powered neural interfaces. 
-                Control devices through thought, eye movement, and gestures for unprecedented accessibility and innovation.
+                Transform your business with cutting-edge blockchain technology. From smart contracts to DeFi protocols, 
+                we build secure, scalable, and innovative Web3 solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                  Start Free Trial
+                  Start Your Project
                 </button>
                 <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                  View Demo
+                  View Portfolio
                 </button>
               </div>
             </div>
@@ -144,9 +144,9 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Advanced Neural Interface Features</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Blockchain Development Services</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Cutting-edge AI technology for seamless human-computer interaction
+                Comprehensive blockchain solutions for the decentralized future
               </p>
             </div>
             
@@ -168,21 +168,21 @@ const AiNeuralInterfacePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Applications Section */}
+        {/* Services Section */}
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Diverse Applications</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Our Blockchain Services</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform industries with neural interface technology across multiple sectors
+                Complete blockchain development and consulting services
               </p>
             </div>
             
             <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {applications.map((application, index) => (
+              {services.map((service, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300 group">
                   <div className="text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors">
-                    {application}
+                    {service}
                   </div>
                 </div>
               ))}
@@ -194,9 +194,9 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Neural Interface Benefits</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Blockchain Benefits</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Unlock new possibilities with advanced neural interface technology
+                Transform your business with blockchain technology advantages
               </p>
             </div>
             
@@ -216,9 +216,9 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Neural Interface Plans</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Development Packages</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your neural interface development needs
+                Choose the perfect blockchain development package for your project
               </p>
             </div>
             
@@ -271,16 +271,16 @@ const AiNeuralInterfacePage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-                <div className="text-gray-300 text-lg">Accuracy Rate</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">5ms</div>
-                <div className="text-gray-300 text-lg">Response Time</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">100+</div>
+                <div className="text-gray-300 text-lg">Blockchain Projects</div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
-                <div className="text-gray-300 text-lg">Supported Devices</div>
+                <div className="text-gray-300 text-lg">Smart Contracts</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+                <div className="text-gray-300 text-lg">Security Score</div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
@@ -294,16 +294,16 @@ const AiNeuralInterfacePage: React.FC = () => {
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Revolutionize Human-Computer Interaction?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Build the Future with Blockchain?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Experience the future of neural interfaces. Start your free trial today and unlock new possibilities for accessibility and innovation.
+                Transform your business with cutting-edge blockchain technology. Start your Web3 journey today and unlock new possibilities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-                  Start Free Trial
+                  Start Your Project
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
-                  Contact Neural Experts
+                  Contact Blockchain Experts
                 </button>
               </div>
             </div>
@@ -314,4 +314,4 @@ const AiNeuralInterfacePage: React.FC = () => {
   );
 };
 
-export default AiNeuralInterfacePage;
+export default BlockchainDevelopmentSolutionsPage;

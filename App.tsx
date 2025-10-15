@@ -41,6 +41,15 @@ const AiPersonalizedLearningPage = React.lazy(() => import('./app/ai-personalize
 // New IT Services
 const QuantumComputingSolutionsPage = React.lazy(() => import('./app/quantum-computing-solutions/page'));
 const EdgeComputingSolutionsPage = React.lazy(() => import('./app/edge-computing-solutions/page'));
+const BlockchainDevelopmentSolutionsPage = React.lazy(() => import('./app/blockchain-development-solutions/page'));
+const IotSolutionsPlatformPage = React.lazy(() => import('./app/iot-solutions-platform/page'));
+
+// New AI Services
+const AiNeuralInterfacePage = React.lazy(() => import('./app/ai-neural-interface/page'));
+const AiRoboticsAutomationPage = React.lazy(() => import('./app/ai-robotics-automation/page'));
+const AiCybersecuritySuitePage = React.lazy(() => import('./app/ai-cybersecurity-suite/page'));
+const AiSalesOptimizerPage = React.lazy(() => import('./app/ai-sales-optimizer/page'));
+const AiHrManagementSystemPage = React.lazy(() => import('./app/ai-hr-management-system/page'));
 
 const App: React.FC = () => {
   // Initialize performance monitoring
@@ -101,6 +110,15 @@ const App: React.FC = () => {
                 {/* New IT Services */}
                 <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
                 <Route path="/edge-computing-solutions" element={<EdgeComputingSolutionsPage />} />
+                <Route path="/blockchain-development-solutions" element={<BlockchainDevelopmentSolutionsPage />} />
+                <Route path="/iot-solutions-platform" element={<IotSolutionsPlatformPage />} />
+                
+                {/* New AI Services */}
+                <Route path="/ai-neural-interface" element={<AiNeuralInterfacePage />} />
+                <Route path="/ai-robotics-automation" element={<AiRoboticsAutomationPage />} />
+                <Route path="/ai-cybersecurity-suite" element={<AiCybersecuritySuitePage />} />
+                <Route path="/ai-sales-optimizer" element={<AiSalesOptimizerPage />} />
+                <Route path="/ai-hr-management-system" element={<AiHrManagementSystemPage />} />
                 <Route path="*" element={
                   <div className="container mx-auto px-4 py-16 text-center">
                     <h1 className="text-4xl font-bold text-white mb-8">404 - Page Not Found</h1>
