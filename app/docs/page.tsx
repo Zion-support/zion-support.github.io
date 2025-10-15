@@ -67,7 +67,7 @@ const DocsPage: React.FC = () => {
 
   const filteredSections = documentationSections.map(section => ({
     ...section,
-    articles: (section.articles || []).filter((article: any) =>
+    articles: (section.articles || []).filter((article: { title: string; description: string }) =>
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
