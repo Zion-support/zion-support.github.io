@@ -301,10 +301,6 @@ function App() {
                     <Route path="/cybersecurity" element={<CybersecurityPage />} />
                     <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
                     
-                    {/* Missing pages */}
-                    <Route path="/tutorials" element={<TutorialsPage />} />
-                    <Route path="/docs" element={<DocsPage />} />
-                    <Route path="/support" element={<SupportPage />} />
                     
                     {/* Micro SaaS pages */}
                     <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
