@@ -1,6 +1,6 @@
-import { Brain, ChevronDown, Cloud, Code, Database, Mail, MapPin, Menu, Network, Phone, Users, Wifi, X, Zap } from 'lucide-react';
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, Phone, Mail, MapPin, Zap, Brain, Code, Cloud, Wifi, Users, ChevronDown } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,58 +28,16 @@ const Header: React.FC = () => {
       icon: <Users className="w-4 h-4" />
     },
     {
-      name: 'Services',
-      href: '/services',
-      icon: <Code className="w-4 h-4" />
-    },
-    {
-      name: 'AI Solutions',
+      name: 'AI Services',
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
       dropdown: [
-        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
-        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
-        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
-        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
-        { name: 'AI Financial Analytics Pro', href: '/ai-financial-analytics-pro' },
-        { name: 'AI Marketing Automation Pro', href: '/ai-marketing-automation-pro' },
-        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
-        { name: 'AI Automation Suite', href: '/ai-automation-suite' },
+        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
+        { name: 'AI Content Generation', href: '/ai-content-generation' },
+        { name: 'AI Automation Platform', href: '/ai-automation-platform' },
         { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
-        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
-        { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure' }
-      ]
-    },
-    {
-      name: '5G Technology',
-      href: '/5g-solutions',
-      icon: <Wifi className="w-4 h-4" />,
-      dropdown: [
-        { name: '5G Implementation', href: '/5g-implementation' },
-        { name: '5G Network Infrastructure', href: '/5g-network-infrastructure' },
-        { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
-        { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
-        { name: '5G Edge Computing', href: '/5g-edge-computing' },
-        { name: '5G Private Networks', href: '/5g-private-networks' },
-        { name: '5G Data Analytics', href: '/5g-data-analytics' },
-        { name: '5G Security', href: '/5g-security' }
-      ]
-    },
-    {
-      name: 'Micro SAAS',
-      href: '/micro-saas',
-      icon: <Cloud className="w-4 h-4" />,
-      dropdown: [
-        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
-        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
-        { name: 'AI Financial Analytics Pro', href: '/ai-financial-analytics-pro' },
-        { name: 'AI Marketing Automation Pro', href: '/ai-marketing-automation-pro' },
-        { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant' },
-        { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro' },
-        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
-        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
-        { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
+        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
+        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' }
       ]
     },
     {
@@ -89,27 +47,36 @@ const Header: React.FC = () => {
       dropdown: [
         { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
         { name: 'API Management', href: '/ai-api-management' },
-        { name: 'Database Solutions', href: '/ai-database-solutions' },
-        { name: 'Advanced Security Suite', href: '/advanced-security-suite' },
-        { name: 'DevOps Solutions', href: '/devops-solutions' },
+        { name: 'Database Solutions', href: '/database-solutions' },
+        { name: 'Security Suite', href: '/advanced-security-suite' },
         { name: 'Performance Monitoring', href: '/performance-monitoring' },
-        { name: 'Data Analytics', href: '/ai-analytics' },
-        { name: 'Mobile Development', href: '/mobile-development' }
+        { name: 'DevOps Solutions', href: '/devops-solutions' }
       ]
     },
     {
-      name: 'Resources',
-      href: '#',
-      icon: <Users className="w-4 h-4" />,
+      name: '5G Solutions',
+      href: '/5g-solutions',
+      icon: <Wifi className="w-4 h-4" />,
       dropdown: [
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Support', href: '/support' },
-        { name: 'Documentation', href: '/documentation' },
-        { name: 'API Reference', href: '/api-reference' },
-        { name: 'Privacy Policy', href: '/privacy' },
-        { name: 'Terms of Service', href: '/terms' }
+        { name: '5G Implementation', href: '/5g-implementation' },
+        { name: '5G Network Infrastructure', href: '/5g-network-infrastructure' },
+        { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
+        { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
+        { name: '5G Edge Computing', href: '/5g-edge-computing' },
+        { name: '5G Private Networks', href: '/5g-private-networks' }
+      ]
+    },
+    {
+      name: 'Micro SAAS',
+      href: '/micro-saas',
+      icon: <Cloud className="w-4 h-4" />,
+      dropdown: [
+        { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant' },
+        { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro' },
+        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
+        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
+        { name: 'AI 3D Generation', href: '/ai-3d-generation' },
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
       ]
     },
     {
