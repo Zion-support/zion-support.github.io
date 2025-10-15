@@ -26,6 +26,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'Home', href: '/', icon: Home },
         { name: 'About', href: '/about', icon: Users },
+        { name: 'Portfolio', href: '/portfolio', icon: Globe },
         { name: 'Contact', href: '/contact', icon: Mail },
         { name: 'Blog', href: '/blog', icon: BarChart3 },
         { name: 'Support', href: '/support', icon: Phone },

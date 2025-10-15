@@ -50,6 +50,7 @@ const Footer: React.FC = () => {
     ],
     company: [
       { name: 'About', href: '/about' },
+      { name: 'Portfolio', href: '/portfolio' },
       { name: 'Contact', href: '/contact' },
       { name: 'Blog', href: '/blog' },
       { name: 'Support', href: '/support' },

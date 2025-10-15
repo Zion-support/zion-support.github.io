@@ -39,10 +39,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       href: '/services', 
       icon: BriefcaseIcon,
       submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'IT Solutions', href: '/it-solutions', icon: CogIcon },
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
+        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
+        { name: 'IT Services', href: '/services', icon: CogIcon },
+        { name: 'Micro SAAS', href: '/micro-saas', icon: CloudIcon },
         { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
       ]
     },
