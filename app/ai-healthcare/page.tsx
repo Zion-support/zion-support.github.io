@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'react-helmet-async';';';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';';'
 ;
@@ -66,9 +65,7 @@ export default function PagePage() {ursor/fix-errors-and-merge-to-main-234b
       </div>
     </div>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }ursor/fix-errors-and-merge-to-main-234b
-=======
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">;""
               <h3 className="text-lg font-semibold text-green-900 mb-2">;""
                 Custom Implementation;
@@ -96,7 +93,6 @@ export default function PagePage() {ursor/fix-errors-and-merge-to-main-234b
     </div>
   );}
 }''
-=======
 import SEOHead from '../components/SEOHead';
 
 const AiHealthcarePage: React.FC = () => {}
@@ -127,5 +123,3 @@ const AiHealthcarePage: React.FC = () => {
   ),
 };
 
->>>>>>> main
->>>>>>> main

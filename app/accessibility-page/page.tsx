@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -127,8 +126,6 @@ const AccessibilityPage: React.FC = () => {
                 <div key={index} className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
-=======
-<<<<<<< HEAD
 import React from 'react;'
 import { ArrowRight } from 'lucide-react;'
 import { CheckCircle } from 'lucide-react;'
@@ -231,12 +228,10 @@ const Page = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
                   <p className="text-gray-300">{feature.description}</p>""
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -265,7 +260,6 @@ const Page = () => {
 };
 
 export default AccessibilityPage;
-=======
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
@@ -299,7 +293,6 @@ export default AccessibilityPage;
 };
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
 import React from 'react';;
 import SEOHead from '../components/SEOHead';
 
@@ -340,5 +333,3 @@ const AccessibilityPagePage: React.FC = () => {
 
 export default AccessibilityPagePage;
 
->>>>>>> main
->>>>>>> main

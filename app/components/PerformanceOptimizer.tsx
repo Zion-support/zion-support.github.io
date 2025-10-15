@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 'use client';
 import React, { useCallback, useEffect, useState } from 'react';
 
-=======
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react;'
->>>>>>> main
 interface PerformanceOptimizerProps {
   children: Node}
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-<<<<<<< HEAD
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [optimizations, setOptimizations] = useState<string[]>([]);
 
@@ -75,7 +70,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 };
 
 export default PerformanceOptimizer;
-=======
   const [isOptimized, setIsOptimized] = useState(false);
   // Preload critical resources
   useEffect(() => {
@@ -299,7 +293,6 @@ img.setAttribute('loading', 'lazy')}''
   );
 };
 export default PerformanceOptimizer;
-=======
 
 import React, { useEffect, useCallback } from "react";
 interface PerformanceOptimizerProps {},
@@ -515,5 +508,3 @@ const ComponentsPage: React.FC = () => {
 ;
 export default ComponentsPage;'";'";
 
->>>>>>> main
->>>>>>> main

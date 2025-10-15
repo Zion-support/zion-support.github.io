@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useEffect, useState } from 'react';
 
@@ -94,7 +93,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 };
 
 export default EnhancedAccessibility;
-=======
 
 import React, { useState } from 'react',
       import React, { useEffect, useState } from 'react',
@@ -314,4 +312,3 @@ const ComponentsPage: React.FC = () => {
 ;
 export default ComponentsPage;'";'";
 
->>>>>>> main

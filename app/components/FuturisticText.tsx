@@ -3,7 +3,6 @@ ursor/fix-errors-and-merge-to-main-234b
     </div>
   );
 }
-=======
 interface FuturisticTextProps {},
       children: React.ReactNode,
       variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'gradient' | 'neon','
@@ -193,5 +192,3 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({},';';
 
 export default ComponentsPage;';';
 
->>>>>>> main
->>>>>>> main

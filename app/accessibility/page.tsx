@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap } from 'lucide-react';
@@ -222,8 +221,6 @@ const AccessibilityPage: React.FC = () => {
 };
 
 export default AccessibilityPage;
-=======
-<<<<<<< HEAD
 import React from 'react;'
 import { ArrowRight } from 'lucide-react;'
 import { CheckCircle } from 'lucide-react;'
@@ -363,7 +360,6 @@ const Page = () => {
 };
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
 import React from 'react';;
 import SEOHead from '../components/SEOHead';
 
@@ -404,5 +400,3 @@ const AccessibilityPage: React.FC = () => {
 
 export default AccessibilityPage;
 
->>>>>>> main
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -125,8 +124,6 @@ export default function PrivacyPage() {
     </div>
   );
 }
-=======
-<<<<<<< HEAD
 import React from 'react;'
 import { Helmet } from 'react-helmet-async;'
 const PrivacyPage: React.FC = () => {
@@ -197,7 +194,6 @@ const PrivacyPage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
 import SEOHead from '../components/SEOHead';
 
 const PagePage: React.FC = () => {}
@@ -219,7 +215,6 @@ const PrivacyPage: React.FC = () => {
           <h1 className ="text-4xl font-bold mb-4">privacy - Zion Tech Group</h1>";
           <p className ="text-gray-300">Coming soon...</p>";
         </div>
->>>>>>> main
       </div>
     </>
 
@@ -230,7 +225,6 @@ export default PagePage;
 
   ),
 };
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">""
           <div className="max-w-7xl mx-auto">""
@@ -294,7 +288,4 @@ export default PagePage;
   )};
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
 
->>>>>>> main
->>>>>>> main

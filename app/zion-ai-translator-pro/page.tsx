@@ -1,5 +1,3 @@
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Zap } from 'lucide-react';
@@ -10,11 +8,6 @@ export default function PagePage() {ursor/fix-errors-and-merge-to-main-234b
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-234b
-=======
           </div>
         </section>
         {/* Features Section */}
@@ -73,7 +66,6 @@ export default function PagePage() {ursor/fix-errors-and-merge-to-main-234b
 };
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
 import SEOHead from '../components/SEOHead';
 
 const ZionAiTranslatorProPage: React.FC = () => {}
@@ -104,5 +96,3 @@ const ZionAiTranslatorProPage: React.FC = () => {
   ),
 };
 
->>>>>>> main
->>>>>>> main

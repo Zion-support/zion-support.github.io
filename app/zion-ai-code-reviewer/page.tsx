@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';';
 import React from 'react';';';
 import { Helmet , Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock, Cpu  } from 'react-helmet-async';';';
@@ -217,11 +216,6 @@ export default ZionAICodeReviewerPage;ursor/fix-errors-and-merge-to-main-234b
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-234b
-=======
           </div>
         </section>
         {/* Features Section */}
@@ -280,7 +274,6 @@ export default ZionAICodeReviewerPage;ursor/fix-errors-and-merge-to-main-234b
 };
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
 import SEOHead from '../components/SEOHead';
 
 const ZionAiCodeReviewerPage: React.FC = () => {}
@@ -311,5 +304,3 @@ const ZionAiCodeReviewerPage: React.FC = () => {
   ),
 };
 
->>>>>>> main
->>>>>>> main

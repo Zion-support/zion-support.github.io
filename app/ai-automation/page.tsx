@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -80,8 +79,6 @@ export default function AiAutomationPage() {
                 Learn More
               </button>
             </div>
-=======
-<<<<<<< HEAD
 import React from 'react;'
 import { Helmet } from 'react-helmet-async;'
 'use client;''
@@ -130,7 +127,6 @@ export default function Page() {
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;""
               Get Started Today;
             </button>
->>>>>>> main
           </div>
         </div>
       </section>
@@ -222,13 +218,10 @@ export default function Page() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
   );}
 }''
-=======
 import SEOHead from '../components/SEOHead';
 
 const AiAutomationPage: React.FC = () => {}
@@ -259,5 +252,3 @@ const AiAutomationPage: React.FC = () => {
   ),
 };
 
->>>>>>> main
->>>>>>> main

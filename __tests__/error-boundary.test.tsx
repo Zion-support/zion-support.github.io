@@ -1,25 +1,27 @@
-import React from 'react';'
-import { render, screen } from '@testing-library/react';'
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
-    throw new Error('Test error');'
-
+    throw new Error('Test error');
+  }
   return <div>No error</div>;
+};
 
-import '@testing-library/jest-dom';'
-
-// Mock error boundary component for testing;
+// Mock error boundary component for testing
 const MockErrorBoundary = ({ children }: { children: React.ReactNode }) => {
-  return <div data-testid="error-boundary">{children}</div>;"
+  return <div data-testid="error-boundary">{children}</div>;
+};
 
-describe('Error Boundary', () => {'
-  test('renders error boundary', () => {'
+describe('Error Boundary', () => {
+  test('renders error boundary', () => {
     render(
       <MockErrorBoundary>
         <div>Test Content</div>
       </MockErrorBoundary>
     );
-    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();'
-    expect(screen.getByText('Test Content')).toBeInTheDocument();'
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
+    expect(screen.getByText('Test Content')).toBeInTheDocument();
   });
 });

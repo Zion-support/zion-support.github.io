@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -38,8 +37,6 @@ export default function SupportPage() {
       question: 'Do you offer training?',
       answer: 'Yes, we provide comprehensive training programs for your team to ensure successful implementation and adoption.',
       category: 'training'
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react;'
 import { Helmet } from "react-helmet-async";""
 import { Link } from "react-router-dom";""
@@ -112,13 +109,11 @@ const SupportPage = () => {
       answer: "Our solutions are built to scale with your business. We can easily adjust capacity, add new features, or expand functionality as your needs grow. We also provide ongoing optimization and performance monitoring.",""
       category: "cloud",""
       featured: false
->>>>>>> main
     }
   ];
 
   const supportChannels = [
     {
-<<<<<<< HEAD
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       icon: <MessageCircle className="w-8 h-8" />,
@@ -179,7 +174,6 @@ const SupportPage = () => {
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
-=======
       title: "Live Chat",""
       description: "Get instant help from our support team",""
       icon: <MessageCircle className="w-8 h-8" />,""
@@ -288,12 +282,10 @@ const SupportPage = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-lg""
               />
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
       {/* Support Channels */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -321,7 +313,6 @@ const SupportPage = () => {
                     {channel.availability}
                   </div>
                   <div>Response: {channel.responseTime}</div>
-=======
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">""
         <div className="max-w-7xl mx-auto">""
@@ -385,14 +376,12 @@ const SupportPage = () => {
                     Get Help
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />""
                   </a>
->>>>>>> main
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
       {/* FAQ Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -422,7 +411,6 @@ const SupportPage = () => {
             <div className="text-center py-12">
               <p className="text-gray-300 text-lg">No results found for your search.</p>
               <p className="text-gray-400">Try different keywords or contact our support team.</p>
-=======
       {/* FAQ Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">""
         <div className="max-w-7xl mx-auto">""
@@ -485,12 +473,10 @@ const SupportPage = () => {
               <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />""
               <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>""
               <p className="text-gray-300">Try searching with different keywords or browse our categories.</p>""
->>>>>>> main
             </div>
           )}
         </div>
       </section>
-<<<<<<< HEAD
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -515,7 +501,6 @@ const SupportPage = () => {
             >
               Schedule Demo
             </Link>
-=======
       {/* Resources Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">""
         <div className="max-w-7xl mx-auto">""
@@ -589,19 +574,15 @@ const SupportPage = () => {
                 Call Us Now
               </a>
             </div>
->>>>>>> main
           </div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
   )};
 };
 export default SupportPage;
-=======
 
 import React, { useState } from 'react',
       import React, { useState } from 'react',
@@ -856,5 +837,3 @@ const SupportPage: React.FC = () => {
 ;
 export default SupportPage;'";'";
 
->>>>>>> main
->>>>>>> main

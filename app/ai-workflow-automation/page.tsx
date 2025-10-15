@@ -1,5 +1,4 @@
 ursor/fix-errors-and-merge-to-main-234b
-=======
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">;""
               <h3 className="text-lg font-semibold text-green-900 mb-2">;""
                 Custom Implementation;
@@ -27,7 +26,6 @@ ursor/fix-errors-and-merge-to-main-234b
     </div>
   );}
 }''
-=======
 import SEOHead from '../components/SEOHead';
 
 const AiWorkflowAutomationPage: React.FC = () => {}
@@ -58,5 +56,3 @@ const AiWorkflowAutomationPage: React.FC = () => {
   ),
 };
 
->>>>>>> main
->>>>>>> main

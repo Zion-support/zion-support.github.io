@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react;'
 import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock  } from 'lucide-react;'
 export default function ContactPage()    {
@@ -222,15 +221,12 @@ export default function ContactPage()    {
       </section>
     </div>
   )}
-=======
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Clock, MapPin, Mail, Phone, Send } from 'lucide-react';
 
 export default function ContactPage() {
-=======
 import SEOHead from '../components/SEOHead';
 import { 
   PhoneIcon,
@@ -242,7 +238,6 @@ import {
 } from '@heroicons/react/24/outline';
 
 const ContactPage: React.FC = () => {
->>>>>>> main
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -309,7 +304,6 @@ const ContactPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
@@ -494,7 +488,6 @@ const ContactPage: React.FC = () => {
     </div>
   );
 }
-=======
     <>
       <SEOHead 
         title="Contact Us - Zion Tech Group | Get in Touch"
@@ -724,5 +717,3 @@ const ContactPage: React.FC = () => {
 };
 
 export default ContactPage;
->>>>>>> main
->>>>>>> main

@@ -1,11 +1,7 @@
 ursor/fix-errors-and-merge-to-main-9be1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-234b
-=======
 };
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
 
         {/* Storage Features List */};
         <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
@@ -166,5 +162,3 @@ const ZionCloudVaultPage: React.FC = () => {
 ;
 export default ZionCloudVaultPage;'";'";
 
->>>>>>> main
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -185,9 +184,7 @@ const AiServicesPage: React.FC = () => {
 
                 <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
                   Get Started
-=======
 
-<<<<<<< HEAD
 const AiServicesPage: React.FC = () => {
   const services = [{
       icon: Brain,''
@@ -351,7 +348,6 @@ const AiServicesPage: React.FC = () => {
 };
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
 import React from "react",
       import { Helmet } from "react-helmet-async",
       export default function AIServices() {}
@@ -477,12 +473,10 @@ import React from "react",
 
                 <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                   Learn More
->>>>>>> main
                 </button>
               </div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -517,7 +511,6 @@ import React from "react",
 };
 
 export default AiServicesPage;
-=======
 
           <div className="text-center">
             <buttonclassName="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
@@ -544,5 +537,3 @@ const AiServicesPage: React.FC = () => {
 ;
 export default AiServicesPage;'";'";
 
->>>>>>> main
->>>>>>> main

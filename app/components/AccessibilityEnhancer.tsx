@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useEffect } from 'react';
 
@@ -75,8 +74,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 };
 
 export default AccessibilityEnhancer;
-=======
-<<<<<<< HEAD
 import React, { useEffect } from 'react;'
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
@@ -144,7 +141,6 @@ const AccessibilityEnhancer: React.FC = () => {
   return null;
 };
 export default AccessibilityEnhancer;
-=======
 import React from 'react';;";
 ;
 interface AccessibilityEnhancerProps {
@@ -164,5 +160,3 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ';',";
 };
 ;
 export default AccessibilityEnhancer;';';";
->>>>>>> main
->>>>>>> main

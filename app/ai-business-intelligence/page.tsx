@@ -1,5 +1,3 @@
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Zap } from 'lucide-react';
@@ -10,8 +8,6 @@ export default function PagePage() {ursor/fix-errors-and-merge-to-main-234b
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1ursor/fix-errors-and-merge-to-main-234b
-=======
 const AiBusinessIntelligencePage: React.FC = () => {}
   return ()
     <>{}</>
@@ -40,5 +36,3 @@ const AiBusinessIntelligencePage: React.FC = () => {
   ),
 };
 
->>>>>>> main
->>>>>>> main

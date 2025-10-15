@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
 
-=======
-<<<<<<< HEAD
 import React from 'react;'
 import { Link, useLocation } from 'react-router-dom;'
 import { ChevronRight, Home } from 'lucide-react;'
->>>>>>> main
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
 import React from 'react;'
@@ -36,7 +32,6 @@ const Breadcrumb: React.FC = () => {
     return nameMap[pathname] || pathname.charAt(0).toUpperCase() + pathname.slice(1);
   };
   return (
-<<<<<<< HEAD
     <nav className="bg-slate-800/50 backdrop-blur-lg border-b border-white/10 py-4">
       <div className="container mx-auto px-4">
         <ol className="flex items-center space-x-2 text-sm">
@@ -72,7 +67,6 @@ const Breadcrumb: React.FC = () => {
           })}
         </ol>
       </div>
-=======
     <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-white/10 py-2" aria-label="Breadcrumb">""
     <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-cyan-500/20 py-3">              <Home className="w-4 h-4" />""
               <span className="sr-only">Home</span>""
@@ -83,7 +77,6 @@ const Breadcrumb: React.FC = () => {
               <ChevronRight className="w-4 h-4 text-gray-500 mx-2" />""
               {segment.isLast ? (
                 <span className="text-cyan-400 font-medium""
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 
@@ -129,14 +122,11 @@ export default function Breadcrumb() {}
           </React.Fragment>
         )
       })};
->>>>>>> main
     </nav>
   )
 };
 
-<<<<<<< HEAD
 export default Breadcrumb;
-=======
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -157,5 +147,3 @@ const ComponentsPage: React.FC = () => {
 ;
 export default ComponentsPage;'";'";
 
->>>>>>> main
->>>>>>> main

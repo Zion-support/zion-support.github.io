@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -67,8 +66,6 @@ export default function DemoPage() {
               </button>
             </div>
           </div>
-=======
-<<<<<<< HEAD
 
 const DemoPage: React.FC = () => {
   const features = [{''
@@ -236,7 +233,6 @@ const DemoPage: React.FC = () => {
           <p className="text-gray-300 text-lg"></p>
             This page is under construction. Please check back later.
           </p>
->>>>>>> main
         </div>
       </section>
 
@@ -347,14 +343,11 @@ const DemoPage: React.FC = () => {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
   )};
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 
@@ -457,5 +450,3 @@ const DemoPage: React.FC = () => {
 ;
 export default DemoPage;'";'";
 
->>>>>>> main
->>>>>>> main

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 ursor/fix-errors-and-merge-to-main-234b
-=======
     return ()
       <>
         to={href},
@@ -44,5 +42,3 @@ const ComponentsPage: React.FC = () => {
 ;
 export default ComponentsPage;'";'";
 
->>>>>>> main
->>>>>>> main

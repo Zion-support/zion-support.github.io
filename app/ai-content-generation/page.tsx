@@ -1,5 +1,3 @@
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Zap } from 'lucide-react';
@@ -28,10 +26,3 @@ ursor/fix-errors-and-merge-to-main-234b
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-234b
-=======
->>>>>>> main
->>>>>>> main

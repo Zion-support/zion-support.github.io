@@ -1,9 +1,7 @@
 ursor/fix-errors-and-merge-to-main-234b
-=======
 };
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
 
         {/* Security Features List */};
         <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
@@ -163,5 +161,3 @@ const ZionSecurityShieldPage: React.FC = () => {
 ;
 export default ZionSecurityShieldPage;'";'";
 
->>>>>>> main
->>>>>>> main

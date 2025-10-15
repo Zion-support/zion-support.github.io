@@ -1,5 +1,3 @@
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Zap } from 'lucide-react';
@@ -10,11 +8,6 @@ export default function PagePage() {ursor/fix-errors-and-merge-to-main-234b
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-234b
-=======
 const ZionContentStudioPage: React.FC = () => {}
   return ()
     <>{}</>
@@ -43,5 +36,3 @@ const ZionContentStudioPage: React.FC = () => {
   ),
 };
 
->>>>>>> main
->>>>>>> main

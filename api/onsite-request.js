@@ -1,20 +1,14 @@
-<<<<<<< HEAD
 // API endpoint for onsite requests
 const path = require('path');
 const fs = require('fs');
 
-=======
-<<<<<<< HEAD
 // API endpoint for onsite service requests
-<<<<<<< HEAD
->>>>>>> main
 export default function handler(req, res) {
   if (req.method !== 'POST') {'
     return res.status(405).json({ error: 'Method not allowed' });'
   }
   try {    const data = fs.readFileSync(file, 'utf8');    const requests = JSON.parse(data);'
     const newRequest = {
-<<<<<<< HEAD
       id: Date.now().toString(),
       ...req.body,
       status: 'pending','
@@ -32,7 +26,6 @@ export default function handler(req, res) {
     console.error('Error saving onsite request:', error)
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ error: 'Failed to save request' }))
-=======
       id: Date.now().toString(),}
       ...req.body,}
       status: 'pending',}
@@ -52,7 +45,6 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ error: 'Failed to save request' }));'
   }
 }
-=======
 import fs from 'fs';";
 import path from 'path';";
 
@@ -66,7 +58,6 @@ export default async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
   const { name, email, company, phone, message, location } = req.body || {};
 
   const dir = path.join(process.cwd(), "data");
@@ -120,7 +111,6 @@ export default async function handler(req, res) {
     }));
   }
 }
-=======
   try {
     const { name, email, company, phone, message, serviceType, preferredDate } = req.body;
 
@@ -169,5 +159,3 @@ export default async function handler(req, res) {
     }));
   }
 }
->>>>>>> main
->>>>>>> main

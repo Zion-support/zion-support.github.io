@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -11,7 +10,6 @@ import {
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-<<<<<<< HEAD
 
   return (
     <footer className="bg-slate-900 border-t border-purple-500/20">
@@ -83,7 +81,6 @@ const Footer: React.FC = () => {
           <p className="text-gray-400 text-sm text-center">
             © {currentYear} Zion Tech Group. All rights reserved.
           </p>
-=======
   const services = [
     { name: 'AI Services', href: '/ai-services' },
     { name: 'AI Solutions', href: '/ai-solutions' },
@@ -107,7 +104,6 @@ const Footer: React.FC = () => {
     { name: 'Terms of Service', href: '/terms' },
     { name: 'Cookie Policy', href: '/cookies' },
     { name: 'GDPR', href: '/gdpr' }
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 
@@ -212,7 +208,6 @@ const Footer: React.FC = () => {"}
         "
     { name: 'edIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin' },";"
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github' };
->>>>>>> main
   ];
 ,
       return (<footer className="bg-slate-900 border-t border-slate-700">";")
@@ -452,7 +447,6 @@ const Footer: React.FC = () => {"}
         "
   )
 
-<<<<<<< HEAD
 
   const socialLinks = ['
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: LinkedinIcon },'
@@ -555,18 +549,14 @@ const Footer: React.FC = () => {"}
               ))}
             </div>
           </div>
->>>>>>> main
         </div>
       </div>
     </footer>
   );
 };
 
-<<<<<<< HEAD
 export default Footer;
-=======
 export default Footer;
-=======
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -587,5 +577,3 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
->>>>>>> main

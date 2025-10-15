@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 'use client';
-=======
-<<<<<<< HEAD
 import React from 'react;'
 import { Helmet } from 'react-helmet-async;'
 'use client;''
@@ -56,8 +53,6 @@ export default function Page() {
     </div>
   );}
 }''
-=======
->>>>>>> main
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Lightbulb, Shield, Users, Target, Award, Globe } from 'lucide-react';
@@ -79,7 +74,6 @@ export default function AboutPage() {
 
   const values = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: "Innovation",
       description: "We constantly push the boundaries of what's possible with AI and technology."
@@ -108,7 +102,6 @@ export default function AboutPage() {
     { number: "24/7", label: "Support Available" }
   ];
 
-=======
 
       icon: <Lightbulb className="w-8 h-8" />,
       title: "Innovation",
@@ -152,23 +145,18 @@ export default function AboutPage() {
     }
   ];
 
->>>>>>> main
   return (
     <>
 
       <Helmet>
         <title>About Us - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Learn about Zion Tech Group, a leading AI and IT solutions company. Meet our team and discover our mission to transform businesses through technology." />
         <meta name="keywords" content="about us, team, AI company, IT solutions, Zion Tech Group" />
-=======
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge AI and IT solutions." />
->>>>>>> main
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
 
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -286,7 +274,6 @@ export default function AboutPage() {
                 <p className="text-sm text-gray-400">{member.bio}</p>
               </div>
             ))}
-=======
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
@@ -387,12 +374,10 @@ export default function AboutPage() {
                 reflect this philosophy in every line of code and every strategic recommendation.
               </p>
             </div>
->>>>>>> main
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -422,10 +407,7 @@ export default function AboutPage() {
     </div>
   );
 }
-=======
       </div>
     </>
   );
 }
->>>>>>> main
->>>>>>> main

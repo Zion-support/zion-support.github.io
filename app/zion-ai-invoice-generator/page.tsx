@@ -1,11 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Zap } from 'lucide-react';
 
 export default function PagePage() {ursor/fix-errors-and-merge-to-main-234b
         </div>
-=======
           </div>
         </section>
         {/* Features Section */}
@@ -58,17 +56,13 @@ export default function PagePage() {ursor/fix-errors-and-merge-to-main-234b
             </div>
           </div>
         </section>
->>>>>>> main
       </div>
     </>
   );
-<<<<<<< HEAD
 }ursor/fix-errors-and-merge-to-main-234b
-=======
 };
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 
@@ -711,5 +705,3 @@ const ZionAiInvoiceGeneratorPage: React.FC = () => {
 ;
 export default ZionAiInvoiceGeneratorPage;'";'";
 
->>>>>>> main
->>>>>>> main

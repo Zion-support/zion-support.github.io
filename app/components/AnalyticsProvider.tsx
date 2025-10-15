@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
@@ -42,8 +41,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     trackPageView
   };
 
-=======
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';'
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
@@ -87,7 +84,6 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
     track,
     identify,
     page};
->>>>>>> main
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
@@ -98,7 +94,6 @@ const  (): AnalyticsContextType => {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')}''
   return context};
 export default AnalyticsProvider;
-=======
 
 import React, { createContext, useContext, useEffect, ReactNode } from "react",
       declare global {},
@@ -126,9 +121,7 @@ export const useAnalytics = () => {}
 }
 };
 
-<<<<<<< HEAD
 export default AnalyticsProvider;
-=======
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};)
   children}) => {};
   useEffect(() => {};
@@ -201,5 +194,3 @@ const ComponentsPage: React.FC = () => {
 ;
 export default ComponentsPage;'";'";
 
->>>>>>> main
->>>>>>> main

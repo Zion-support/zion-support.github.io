@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -198,8 +197,6 @@ export default function AiCustomerServicePage() {
     </div>
   );
 }
-=======
-<<<<<<< HEAD
 import React from 'react;'
 import { ArrowRight } from 'lucide-react;'
 import { CheckCircle } from 'lucide-react;'
@@ -339,7 +336,6 @@ const Page = () => {
 };
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
 import SEOHead from '../components/SEOHead';
 
 const AiCustomerServicePage: React.FC = () => {}
@@ -370,5 +366,3 @@ const AiCustomerServicePage: React.FC = () => {
   ),
 };
 
->>>>>>> main
->>>>>>> main

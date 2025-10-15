@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Brain, Shield, Cloud, BarChart3, Code, Target, Users, TrendingUp, Globe, Zap, Database, Monitor, Lock, Server, Settings, ArrowRight } from 'lucide-react';
-=======
-<<<<<<< HEAD
->>>>>>> main
 
 import EnhancedSEO from '../components/EnhancedSEO;'
 import {
@@ -22,7 +18,6 @@ import {
 const Page = () => {
   const features = [
     {
-<<<<<<< HEAD
       title: 'AI Solutions',
       description: 'Comprehensive AI solutions for your business needs',
       icon: <Brain className="w-8 h-8" />,
@@ -90,7 +85,6 @@ const Page = () => {
       description: 'Harness the power of your data',
       icon: <Database className="w-12 h-12" />,
       services: ['Data Analytics', 'Business Intelligence', 'Data Engineering', 'Visualization']
-=======
       icon: <CheckCircle className="w-8 h-8" />,""
       title: 'Advanced Features',''
       description: 'Cutting-edge technology for maximum efficiency''
@@ -104,11 +98,9 @@ const Page = () => {
       icon: <Users className="w-8 h-8" />,""
       title: 'Expert Support',''
       description: '24/7 support from our team of specialists''
->>>>>>> main
     }
   ]
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Our Services - Zion Tech Group</title>
@@ -129,7 +121,6 @@ const Page = () => {
               Comprehensive AI and IT solutions designed to accelerate your digital transformation and drive business growth.
             </p>
           </div>
-=======
     <></>
       <EnhancedSEO
         title="Page - Zion Tech Group""
@@ -231,7 +222,6 @@ const Icon = category.icon
           <p className="text-gray-300 text-lg"></p>
             This page is under construction. Please check back later.
           </p>
->>>>>>> main
         </div>
       </section>
 
@@ -328,7 +318,6 @@ const Icon = category.icon
   )};
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 
@@ -519,9 +508,7 @@ const ServicesPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default ServicesPage;
-=======
 export default ServicesPage;
 
 ;
@@ -695,5 +682,3 @@ const ServicesPage: React.FC = () => {","";
 
 }}
 
->>>>>>> main
->>>>>>> main

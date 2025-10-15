@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -195,8 +194,6 @@ const MicroSaasServicesPage: React.FC = () => {
             >
               Schedule Demo
             </Link>
-=======
-<<<<<<< HEAD
 import React from 'react;'
 import { ArrowRight } from 'lucide-react;'
 import { CheckCircle } from 'lucide-react;'
@@ -278,7 +275,6 @@ const Page = () => {
                 View Demo
               </Link>
             </div>
->>>>>>> main
           </div>
         </section>
         {/* Features Section */}
@@ -337,7 +333,6 @@ const Page = () => {
 };
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
 import SEOHead from '../components/SEOHead';
 
 const PagePage: React.FC = () => {}
@@ -359,14 +354,12 @@ const MicroSaasServicesPage: React.FC = () => {
           <h1 className ="text-4xl font-bold mb-4">micro-saas-services - Zion Tech Group</h1>";
           <p className ="text-gray-300">Coming soon...</p>";
         </div>
-<<<<<<< HEAD
       </section>
     </div>
   );
 };
 
 export default MicroSaasServicesPage;
-=======
       </div>
     </>
 
@@ -378,5 +371,3 @@ export default PagePage;
   ),
 };
 
->>>>>>> main
->>>>>>> main

@@ -10,21 +10,16 @@ import React, { useState, useRef, useEffect } from 'react',
       placeholder?: string;
 }
 
->>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
 export default function ImageOptimizer({
   src,
   alt,
   className = '',
   lazy = true,
-<<<<<<< HEAD
-<<<<<<< HEAD=======
->>>>>>> cursor/fix-errors-and-merge-to-main-234b
   placeholder
 }: ImageOptimizerProps) {
   return (
     <img
       src={src}
-=======
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({)}
   src, alt, className = '', width, height, priority = false, placeholder
 }) => {}
@@ -93,7 +88,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({)}
   return ()
     <imgref={imgRef}>
       src={getOptimizedSrc(src)}
->>>>>>> main
       alt={alt}
       width={width}
       height={height}

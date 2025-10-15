@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useCallback } from 'react';
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -57,7 +54,6 @@ const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
               <span className="text-2xl font-bold text-white">Zion Tech Group</span>
-=======
 
 import React, { useState } from 'react',
       import {"}
@@ -538,7 +534,6 @@ import React, { useState } from 'react',
   )
 
 import React, { useState } from 'react';
->>>>>>> main
 import { Link, useLocation } from 'react-router-dom';
 import {
   Bars3Icon,
@@ -604,7 +599,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       ]
     },
     {
-<<<<<<< HEAD
       name: 'About',
       path: '/about',
       icon: <Globe className="w-4 h-4" />
@@ -624,7 +618,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       path: '/contact',
       icon: <Shield className="w-4 h-4" />
     }
-=======
       name: 'Micro SaaS',";
       href: '/micro-saas-solutions',";
       icon: GlobeAltIcon,
@@ -680,7 +673,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },";
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }";
->>>>>>> main
   ];
 
   const toggleMobileMenu = useCallback(() => {
@@ -691,7 +683,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     return location.pathname === path,
   };
 
-<<<<<<< HEAD
   return (
     <nav className="bg-slate-900/90 backdrop-blur-sm border-b border-purple-500/20 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -700,7 +691,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="flex items-center">
             <Link to="/" className="text-2xl font-bold text-white hover:text-purple-400 transition-colors">
               Zion Tech Group
-=======
   const toggleServicesMenu = () => {
     setIsServicesOpen(!isServicesOpen);
     setIsSolutionsOpen(false);
@@ -739,13 +729,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 <span className ="text-white font-bold text-sm">Z</span>";
               </div>
               <span className ="ml-2 text-white font-bold text-lg">Zion Tech Group</span>",
->>>>>>> main
->>>>>>> main
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-<<<<<<< HEAD
           <div className="hidden md:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <Link
@@ -760,8 +747,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 {item.icon}
                 <span>{item.name}</span>
               </Link>
-=======
-<<<<<<< HEAD
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative">
@@ -802,7 +787,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   >
                     {item.name}
                   </Link>
-=======
           <div className ="hidden lg: flex lg:items-center lg:space-x-8">",
             {navigation.map((item) => (
               <div key ={item.name} className="relative">";
@@ -838,15 +822,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       </div>
                     ))}
                   </div>
->>>>>>> main
                 )}
               </div>
->>>>>>> main
             ))}
           </div>
 
           {/* Mobile menu button */}
-<<<<<<< HEAD
           <div className="md:hidden flex items-center space-x-4">
             {onSidebarToggle && (
               <button
@@ -868,8 +849,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             </button>
           </div>
         </div>
-=======
-<<<<<<< HEAD
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -881,7 +860,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 <Bars3Icon className="h-6 w-6" />
               )}
             </button>
-=======
           <div className ="lg: hidden flex items-center">",
             <button onClick ={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover: text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"";
@@ -950,10 +928,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 )}
               </div>
             ))}
->>>>>>> main
           </div>
         </div>
->>>>>>> main
       </div>
 
       {/* Mobile Navigation */}

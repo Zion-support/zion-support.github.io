@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -39,8 +38,6 @@ export default function FiveGSolutions() {
               </p>
             </div>
           </div>
-=======
-<<<<<<< HEAD
 import React from 'react;''
 import { Helmet, Right, Wifi, Circle, Zap, Globe, Smartphone, CheckCircle, Shield } from 'lucide-react;''
 const Page = () => {
@@ -143,7 +140,6 @@ const Page = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
                   <p className="text-gray-300">{feature.description}</p>""
-=======
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -270,12 +266,10 @@ const FiveGSolutionsPage: React.FC = () => {
                   <button className ="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">",
                     Get Started
                   </button>
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
@@ -301,7 +295,6 @@ const FiveGSolutionsPage: React.FC = () => {
                 View All Services
               </Link>
             </div>
-=======
         </div>
 
         {/* CTA Section */}
@@ -314,11 +307,9 @@ const FiveGSolutionsPage: React.FC = () => {
             <button className ="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">";
               Contact Us Today
             </button>
->>>>>>> main
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       {/* Features Section */}
       <div className="py-20">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
@@ -397,17 +388,14 @@ const FiveGSolutionsPage: React.FC = () => {
               <p>Description of feature 3</p>
             </div>
           </div>
->>>>>>> main
         </div>
       </div>
     </div>
   )};
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
     </>
   ),
 };
 
 export default FiveGSolutionsPage;
->>>>>>> main

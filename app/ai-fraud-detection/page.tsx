@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'react-helmet-async';';';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';';'
 ;
@@ -141,14 +140,12 @@ return(<>)
 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">"
               Ai Fraud Detection
               <p className="text-xl text-gray-300">Section description</p>"
->>>>>>> origin/main
             </div></div>
 </section>
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>"
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>'"
 <div className="relative max-w-7xl mx-auto text-center"></div>"
 <h1>Ai Fraud Detection;</h1>
->>>>>>> origin/main
             </h1>
 <p>Advanced AI-powered ai fraud detection solution for modern businesses.</p></p>
 <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
@@ -258,26 +255,18 @@ return(<>)
                 </button>
 <button></button>
                   Learn More
->>>>>>> origin/main
                 </button></div>
 </div>
           ))
         </section></div>;
 export default PagePage;
->>>>>>> origin/main
 
 }}
->>>>>>> cursor/delete-records-a75eursor/fix-errors-and-merge-to-main-234b
         </div>
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-234b
-=======
           </div>
         </section>
         {/* Features Section */}
@@ -336,7 +325,6 @@ export default PagePage;
 };
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
 import SEOHead from '../components/SEOHead';
 
 const AiFraudDetectionPage: React.FC = () => {}
@@ -367,5 +355,3 @@ const AiFraudDetectionPage: React.FC = () => {
   ),
 };
 
->>>>>>> main
->>>>>>> main

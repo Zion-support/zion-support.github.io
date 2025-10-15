@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -138,8 +137,6 @@ const HomePage = () => {
                 </Link>
               </div>
             ))}
-=======
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -217,7 +214,6 @@ const HomePage: React.FC = () => {
               >
                 Get Started
               </Link>
-=======
 
 'use client',
 
@@ -402,12 +398,10 @@ const HomePage: React.FC = () => {
                   </div>
                 ))}
               </div>
->>>>>>> main
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -449,7 +443,6 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300">
                   Scalable and secure cloud solutions that grow with your business needs.
                 </p>
-=======
         {/* Services Section */}
         <section className ="py-16 sm: py-20 bg-slate-800/30">";
           <div className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
@@ -626,19 +619,16 @@ const HomePage: React.FC = () => {
                 >
                   Try Free Trial
                 </Link>
->>>>>>> main
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
       </div>
     </>
   )};
 };
 
 export default HomePage;
-=======
 
         {/* Features Section */}
         <section className ="py-16 sm: py-20">";
@@ -668,11 +658,9 @@ export default HomePage;
                 </div>
               ))}
             </div>
->>>>>>> main
           </div>
         </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -696,7 +684,6 @@ export default HomePage;
             >
               Learn About Us
             </Link>
-=======
         {/* CTA Section */}
         <section className ="relative py-16 sm: py-20 bg-gradient-to-r from-purple-900/40 via-slate-900 to-cyan-900/40 overflow-hidden">",
           {/* Animated Background Elements */}
@@ -726,7 +713,6 @@ export default HomePage;
                 Schedule Demo
               </Link>
             </div>
->>>>>>> main
           </div>
         </section>
       </div>
@@ -734,10 +720,6 @@ export default HomePage;
   ),
 };
 
-<<<<<<< HEAD
 export default HomePage;
-=======
 export default HomePage;
 
->>>>>>> main
->>>>>>> main

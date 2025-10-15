@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -154,8 +153,6 @@ export default function BlogPage() {
     </div>
   );
 }
-=======
-<<<<<<< HEAD
 import React from 'react;'
 import { Helmet , Right,  User,  Calendar  } from 'lucide-react;'
 const Page = () => {
@@ -308,7 +305,6 @@ const Page = () => {
   )};
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
 import React from 'react';;
 import SEOHead from '../components/SEOHead';
 
@@ -361,5 +357,3 @@ const BlogPage: React.FC = () => {
 };
 
 export default BlogPage;
->>>>>>> main
->>>>>>> main

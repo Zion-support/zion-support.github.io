@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { X, Menu, Home, Users, Settings, Brain, Cloud, Shield, Code, BarChart, ChevronDown, ChevronRight, Phone, Mail, MapPin } from 'lucide-react';
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -19,7 +16,6 @@ import {
   GlobeAltIcon,
   ChevronDownIcon
 } from '@heroicons/react/24/outline';
-=======
 
 import React, { useState, useCallback, useMemo } from 'react'
 import {},
@@ -299,8 +295,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {},
 
 import React from 'react';;
 import { X, ChevronDown, ChevronRight } from 'lucide-react';
->>>>>>> main
->>>>>>> main
 
 interface SidebarProps {
   isOpen: boolean;
@@ -311,7 +305,6 @@ interface SidebarProps {}
   isOpen: boolean}
   onClose: () => void;}
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-<<<<<<< HEAD
   const location = useLocation();
 
   const navigationItems = [
@@ -403,8 +396,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </li>
             ))}
           </ul>
-=======
-<<<<<<< HEAD
   const location = useLocation();
   const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
   const [isITServicesOpen, setIsITServicesOpen] = useState(false);
@@ -429,7 +420,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     },
     { name: 'Contact', href: '/contact', icon: InformationCircleIcon }
   ];
-=======
   const [expandedSections, setExpandedSections] = React.useState<string[]>([]);
 
   const toggleSection = (section: string) => {
@@ -439,11 +429,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         : [...prev, section]
     );
   };
->>>>>>> main
 
   if (!isOpen) return null;
   return (
-<<<<<<< HEAD
     <div className="fixed inset-0 z-50 lg:hidden">
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
       <div className="fixed inset-y-0 left-0 w-64 bg-slate-900 shadow-xl">
@@ -502,7 +490,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               )}
             </div>
           ))}
->>>>>>> main
         </nav>
 
         {/* Contact Info */}
@@ -526,7 +513,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     </div>
   );
 };
-=======
     <>
       {isOpen && (
         <div className ="fixed inset-0 z-50 lg: hidden">",
@@ -563,9 +549,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 )}
               </div>
 
-<<<<<<< HEAD
 export default Sidebar;
-=======
               <div>
                 <button onClick ={() => toggleSection('solutions')}";
                   className="flex items-center justify-between w-full text-gray-300 hover: text-white py-2 px-3 rounded transition-colors"",
@@ -643,7 +627,5 @@ export default Sidebar;
   </>)
     },
     {}
->>>>>>> main
 
 export default Sidebar'
->>>>>>> main

@@ -1,8 +1,5 @@
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 
 const CybersecuritySolutions = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -95,14 +92,10 @@ const CybersecuritySolutions = () => {
     }
   ];
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 import React from 'react;'
 import { Helmet } from 'react-helmet-async;'
 'use client;''
 export default function Page() {
->>>>>>> main
   return (
     <div className="min-h-screen bg-white">""
       <Helmet>
@@ -153,7 +146,6 @@ export default function Page() {
     </div>
   );}
 }''
-=======
 import SEOHead from '../components/SEOHead';
 
 const CybersecuritySolutionsPage: React.FC = () => {}
@@ -184,4 +176,3 @@ const CybersecuritySolutionsPage: React.FC = () => {
   ),
 };
 
->>>>>>> main

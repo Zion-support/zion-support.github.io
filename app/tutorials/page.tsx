@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -86,8 +85,6 @@ const TutorialsPage: React.FC = () => {
               </button>
             </div>
           </div>
-=======
-<<<<<<< HEAD
 import React from 'react;'
 import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock   } from 'lucide-react;'
 const TutorialsPage: React.FC = () => {
@@ -289,7 +286,6 @@ const Page = () => {
           <p className="text-gray-300 text-lg"></p>
             This page is under construction. Please check back later.
           </p>
->>>>>>> main
         </div>
       </section>
 
@@ -387,16 +383,13 @@ const Page = () => {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
 };
 
 export default TutorialsPage;
-=======
   )};
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
 import SEOHead from '../components/SEOHead';
 
 const PagePage: React.FC = () => {}
@@ -429,5 +422,3 @@ export default PagePage;
   ),
 };
 
->>>>>>> main
->>>>>>> main

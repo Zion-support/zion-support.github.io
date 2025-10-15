@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 'use client';
 import React, { useRef, useEffect } from 'react';
 
-=======
-<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react;'
->>>>>>> main
 interface FuturisticBackgroundProps {
   children: React.ReactNode;
 }
@@ -14,20 +10,16 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-<<<<<<< HEAD
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-=======
     const ctx = canvas.getContext('2d');''
     if (!ctx) return;
->>>>>>> main
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-<<<<<<< HEAD
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -51,7 +43,6 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
-=======
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);''
     // Animated particles
@@ -115,12 +106,10 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
     animate();
     return () => {
       window.removeEventListener('resize', resizeCanvas);''
->>>>>>> main
     };
   }, []);
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
   return (
-<<<<<<< HEAD
     <div className="relative">
       <canvas
         ref={canvasRef}
@@ -128,7 +117,6 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
         style={{ zIndex: -1 }}
       />
       {children}
-=======
     <div className="relative min-h-screen">""
       <canvas
         ref={canvasRef}
@@ -162,11 +150,9 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       <div className="relative z-10">""
         {children}
       </div>
->>>>>>> main
     </div>
   )};
 export default FuturisticBackground;
-=======
 import React from 'react';";
 import SEOHead from '../components/SEOHead';";
 
@@ -186,9 +172,5 @@ const FuturisticBackgroundPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default FuturisticBackground;
-=======
 export default FuturisticBackgroundPage;
->>>>>>> main
->>>>>>> main

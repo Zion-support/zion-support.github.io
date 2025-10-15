@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -205,8 +204,6 @@ const Ai3dGenerationPage: React.FC = () => {
 };
 
 export default Ai3dGenerationPage;
-=======
-<<<<<<< HEAD
 import React from 'react;'
 import { Helmet } from 'react-helmet-async;'
 'use client;''
@@ -261,7 +258,6 @@ export default function Page() {
     </div>
   );}
 }''
-=======
 import React from 'react';;
 import SEOHead from '../components/SEOHead';
 
@@ -297,5 +293,3 @@ const Ai3DGenerationPage: React.FC = () => {
 
 export default Ai3DGenerationPage;
 
->>>>>>> main
->>>>>>> main

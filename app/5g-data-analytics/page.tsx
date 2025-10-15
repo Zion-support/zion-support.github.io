@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Zap } from 'lucide-react';
 
 export default function FiveGDataAnalyticsPage() {
-=======
-<<<<<<< HEAD
 import React from 'react;'
 import { ArrowRight } from 'lucide-react;'
 import { CheckCircle } from 'lucide-react;'
@@ -35,7 +32,6 @@ import { Lightbulb } from 'lucide-react;'
 import { Link } from 'react-router-dom;'
 import EnhancedSEO from '../components/EnhancedSEO;'
 const Page = () => {
->>>>>>> main
   const features = [
     {
       icon: <CheckCircle className="w-8 h-8" />,""
@@ -54,7 +50,6 @@ const Page = () => {
     }
   ];
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
@@ -79,7 +74,6 @@ const Page = () => {
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
-=======
     <>
       <EnhancedSEO
         title="Page - Zion Tech Group""
@@ -113,7 +107,6 @@ const Page = () => {
               >
                 View Demo
               </Link>
->>>>>>> main
             </div>
           </div>
         </section>
@@ -173,7 +166,6 @@ const Page = () => {
 };
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
 import React from 'react';
 
 import SEOHead from '../components/SEOHead';
@@ -207,4 +199,3 @@ const G5gDataAnalyticsPage: React.FC = () => {
 };
 
 export default G5gDataAnalyticsPage;
->>>>>>> main

@@ -1,11 +1,7 @@
 ursor/fix-errors-and-merge-to-main-9be1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-234b
-=======
 };
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
 
         {/* Pricing Section */};
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
@@ -160,5 +156,3 @@ export default page;
   ),
 };
 
->>>>>>> main
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react;'
 import { ArrowRight } from 'lucide-react;'
 import { CheckCircle } from 'lucide-react;'
@@ -138,7 +137,6 @@ const Page = () => {
 };
 const page = React.lazy(() => import('./page'));''
 export default page;
-=======
 import SEOHead from '../components/SEOHead';
 
 const PagePage: React.FC = () => {}
@@ -150,18 +148,14 @@ const PagePage: React.FC = () => {}
 
 const LandingPageBuilderPage: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-=======
     <>
       <SEOHead title ="landing-page-builder - Zion Tech Group - Zion Tech Group"";
         description="Zion Tech Group landing-page-builder service page"";
->>>>>>> main
 
       />
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
@@ -175,4 +169,3 @@ import { ArrowRight } from 'lucide-react';
 };
 
 export default LandingPageBuilderPage;
->>>>>>> main

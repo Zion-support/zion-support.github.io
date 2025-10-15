@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -198,8 +197,6 @@ export default function AiDataAnalyticsPage() {
     </div>
   );
 }
-=======
-<<<<<<< HEAD
 import React from 'react;'
 'use client;''
 export default function AiDataAnalyticsPage() {
@@ -215,7 +212,6 @@ export default function AiDataAnalyticsPage() {
   );}
 }
 ''
-=======
 import SEOHead from '../components/SEOHead';
 
 const AiDataAnalyticsPage: React.FC = () => {}
@@ -246,5 +242,3 @@ const AiDataAnalyticsPage: React.FC = () => {
   ),
 };
 
->>>>>>> main
->>>>>>> main
