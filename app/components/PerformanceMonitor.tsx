@@ -1,92 +1,115 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
-
-export default function PerformanceMonitor() {
-=======
+import { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  fcp: number | null
-  lcp: number | null
-  fid= number | null
-  cls: number | null
-  ttfb: number | null
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
 }
 
-const PerformanceMonitor: React.FC = () => {
+export default function PerformanceMonitor() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
-    fid= null,
+    fid: null,
     cls: null,
     ttfb: null
-  })
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
+  });
+
   useEffect(() => {
-    // Performance monitoring logic
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        console.log('Performance entry:', entry);
+    // Only run in browser environment
+    if (typeof window === 'undefined') return;
+
+    // Monitor Core Web Vitals
+    const observeWebVitals = () => {
+      // First Contentful Paint (FCP)
+      if ('PerformanceObserver' in window) {
+        const fcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+          if (fcpEntry) {
+            setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+          }
+        });
+        
+        try {
+          fcpObserver.observe({ entryTypes: ['paint'] });
+        } catch (e) {
+          console.warn('FCP observer not supported');
+        }
+
+        // Largest Contentful Paint (LCP)
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+        });
+        
+        try {
+          lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        } catch (e) {
+          console.warn('LCP observer not supported');
+        }
+
+        // First Input Delay (FID)
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+          });
+        });
+        
+        try {
+          fidObserver.observe({ entryTypes: ['first-input'] });
+        } catch (e) {
+          console.warn('FID observer not supported');
+        }
+
+        // Cumulative Layout Shift (CLS)
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+              setMetrics(prev => ({ ...prev, cls: clsValue }));
+            }
+          });
+        });
+        
+        try {
+          clsObserver.observe({ entryTypes: ['layout-shift'] });
+        } catch (e) {
+          console.warn('CLS observer not supported');
+        }
       }
-    });
 
-    observer.observe({ entryTypes: ['measure', 'navigation'] });
+      // Time to First Byte (TTFB)
+      if (performance.timing) {
+        const ttfb = performance.timing.responseStart - performance.timing.navigationStart;
+        setMetrics(prev => ({ ...prev, ttfb }));
+      }
+    };
 
-    return () => observer.disconnect();
-  }, []);
+    // Run after page load
+    if (document.readyState === 'complete') {
+      observeWebVitals();
+    } else {
+      window.addEventListener('load', observeWebVitals);
+    }
 
-<<<<<<< HEAD
+    // Log metrics for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      const logMetrics = () => {
+        console.log('Performance Metrics:', metrics);
+      };
+      
+      const timeoutId = setTimeout(logMetrics, 3000);
+      return () => clearTimeout(timeoutId);
+    }
+  }, [metrics]);
+
+  // Don't render anything - this is a monitoring component
   return null;
 }
-=======
-  return (
-    <div  className ="fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4 max-w-sm z-50">"
-      <h3  className ="text-sm font-semibold text-gray-900 mb-2">Performance Monitor</h3>"
-      <div  className ="space-y-1 text-xs">"
-        <div  className ="flex justify-between">"
-          <span>FCP:</span>
-          <span  className ={metrics.fcp && metrics.fcp > 1800 ? 'text-red-600' : 'text-green-600'}>"
-            {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : '...'}"
-          </span>
-        </div>
-        
-        <div  className ="flex justify-between">"
-          <span>LCP:</span>
-          <span  className ={metrics.lcp && metrics.lcp > 2500 ? 'text-red-600' : 'text-green-600'}>"
-            {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : '...'}"
-          </span>
-        </div>
-        
-        <div  className ="flex justify-between">"
-          <span>FID:</span>
-          <span  className ={metrics.fid && metrics.fid > 100 ? 'text-red-600' : 'text-green-600'}>"
-            {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : '...'}"
-          </span>
-        </div>
-        
-        <div  className ="flex justify-between">"
-          <span>CLS:</span>
-          <span  className ={metrics.cls && metrics.cls > 0.1 ? 'text-red-600' : 'text-green-600'}>"
-            {metrics.cls ? metrics.cls.toFixed(3) : '...'}"
-          </span>
-        </div>
-        
-        <div  className ="flex justify-between">"
-          <span>TTFB:</span>
-          <span  className ={metrics.ttfb && metrics.ttfb > 600 ? 'text-red-600' : 'text-green-600'}>"
-            {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : '...'}"
-          </span>
-        </div>
-      </div>
-
-      {warnings.length > 0 && (
-        <div  className ="mt-2 p-2 bg-red-50 rounded text-xs">"
-          <div  className ="font-semibold text-red-800 mb-1">Warnings:</div>"
-          {warnings.map((warning, index) => (
-            <div  key ={index} className="text-red-700">• {warning}</div>"
-          ))}
-        </div>
-      )}
-    </div>
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

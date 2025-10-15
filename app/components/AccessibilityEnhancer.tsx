@@ -1,7 +1,10 @@
-<<<<<<< HEAD
 import { useEffect } from 'react';
 
-export default function AccessibilityEnhancer() {
+interface AccessibilityEnhancerProps {
+  className?: string;
+}
+
+export default function AccessibilityEnhancer({ className }: AccessibilityEnhancerProps) {
   useEffect(() => {
     // Accessibility enhancements
     const enhanceAccessibility = () => {
@@ -17,6 +20,45 @@ export default function AccessibilityEnhancer() {
       if (main && !main.id) {
         main.id = 'main-content';
       }
+
+      // Add ARIA labels to interactive elements
+      const buttons = document.querySelectorAll('button:not([aria-label])');
+      buttons.forEach(button => {
+        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
+          button.setAttribute('aria-label', 'Button');
+        }
+      });
+
+      // Add focus indicators
+      const style = document.createElement('style');
+      style.textContent = `
+        *:focus {
+          outline: 2px solid #3b82f6;
+          outline-offset: 2px;
+        }
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+        .sr-only.focus:not-sr-only {
+          position: static;
+          width: auto;
+          height: auto;
+          padding: 0.5rem;
+          margin: 0;
+          overflow: visible;
+          clip: auto;
+          white-space: normal;
+        }
+      `;
+      document.head.appendChild(style);
     };
 
     enhanceAccessibility();
@@ -24,10 +66,6 @@ export default function AccessibilityEnhancer() {
 
   return null;
 }
-=======
-
-interface AccessibilityEnhancerProps {
-  className?: string
   children?: React.ReactNode
 }
 

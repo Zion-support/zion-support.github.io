@@ -1,13 +1,15 @@
-<<<<<<< HEAD
 import { Component, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
+  fallback?: ReactNode;
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
+  errorInfo?: any;
 }
 
 export default class ErrorBoundary extends Component<Props, State> {
@@ -20,92 +22,83 @@ export default class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  componentDidCatch(error: Error, errorInfo: any) {
+    console.error('Error Boundary caught an error:', error, errorInfo);
+    this.setState({ error, errorInfo });
   }
+
+  handleReset = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
+
+  handleReload = () => {
+    window.location.reload();
+  };
+
+  handleGoHome = () => {
+    window.location.href = '/';
+  };
 
   render() {
     if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
-              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
+            <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-100 rounded-full mb-4">
+              <AlertTriangle className="w-8 h-8 text-red-600" />
             </div>
-            <div className="mt-4 text-center">
-              <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>
-              <p className="mt-2 text-sm text-gray-500">
-                {this.state.error?.message || 'An unexpected error occurred'}
-              </p>
+            
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">
+              Something went wrong
+            </h1>
+            
+            <p className="text-gray-600 mb-6">
+              We're sorry, but something unexpected happened. Please try again.
+            </p>
+
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <div className="mb-6 p-4 bg-gray-100 rounded-md text-left">
+                <h3 className="text-sm font-semibold text-gray-700 mb-2">Error Details:</h3>
+                <pre className="text-xs text-gray-600 overflow-auto">
+                  {this.state.error.toString()}
+                </pre>
+              </div>
+            )}
+
+            <div className="space-y-3">
               <button
-                onClick={() => this.setState({ hasError: false, error: undefined })}
-                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                onClick={this.handleReset}
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center"
               >
-                Try again
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Try Again
+              </button>
+              
+              <button
+                onClick={this.handleReload}
+                className="w-full bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition-colors flex items-center justify-center"
+              >
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Reload Page
+              </button>
+              
+              <button
+                onClick={this.handleGoHome}
+                className="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors flex items-center justify-center"
+              >
+                <Home className="w-4 h-4 mr-2" />
+                Go Home
               </button>
             </div>
-=======
-
-      interface Props {},
-      children: ReactNode
-  fallback?: ReactNode
-},
-      interface State {},
-      hasError: boolean,
-      error: Error | null,
-      errorInfo: ErrorInfo | null
-    },
-    {};
-class ErrorBoundary extends Component<Props, State> {},
-      constructor(props: Props) {},
-      super(props),
-      this.state = {},
-
-      hasError: false,
-      error: null,
-      errorInfo: null
-    };
-
-      hasError: true,
-      error,
-      errorInfo: null
-
-    this.setState({},)
-
-      error,
-
-    // Log error to console in development
-
-      // Here you would typically send the error to an error reporting service
-      };
-    },
-    {};
-  handleRetry = () => {},
-      this.setState({},)
-      hasError: false,
-      error: null,
-      errorInfo: null
-    })
-    },
-    {};
-  render() {},
-      if (this.state.hasError) {}
-      // Custom fallback UI
-      if (this.props.fallback) {},
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
           </div>
         </div>
       );
     }
 
-<<<<<<< HEAD
     return this.props.children;
   }
 }
-=======
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
