@@ -4,11 +4,14 @@ import { Search, HelpCircle, ChevronUp, ChevronDown } from 'lucide-react';
 
 const FAQPage: React.FC = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
-const [searchTerm, setSearchTerm] = useState('');
-
-const toggleItem = () => {
-  return;
+const toggleItem = (index: number) => {
+  setOpenItems(prev => 
+    prev.includes(index) 
+      ? prev.filter(item => item !== index)
+      : [...prev, index]
+  );
 };
 
 const faqData = [

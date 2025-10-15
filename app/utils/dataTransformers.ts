@@ -3,7 +3,7 @@ export const dataTransformers = {
     return data.map((item, index) => {
       const itemObj = item as Record<string, unknown>;
       return {
-        id: itemObj.id || index,
+        id: itemObj['id'] || index,
         ...itemObj 
       };
     });
@@ -28,10 +28,10 @@ export const dataTransformers = {
   },
   transformToKeyValuePairs: (data: Record<string, unknown>[]) => { 
     return data.map((item, index) => ({
-      id: item.id || index,
+      id: item['id'] || index,
       ...item 
     }));
   }
 };
 
-export default NotFoundPage;
+export default dataTransformers;

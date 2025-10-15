@@ -1,5 +1,6 @@
 import { useEffect, useCallback } from 'react';
 
+// Performance metrics interface - used for type checking
 interface PerformanceMetrics {
   fcp?: number;
   lcp?: number;
@@ -7,6 +8,9 @@ interface PerformanceMetrics {
   cls?: number;
   ttfb?: number;
 }
+
+// Export the interface for external use
+export type { PerformanceMetrics };
 
 export const usePerformanceMonitoring = () => {
   const reportMetric = useCallback((name: string, value: number) => {

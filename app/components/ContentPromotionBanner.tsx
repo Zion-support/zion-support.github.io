@@ -83,6 +83,8 @@ const ContentPromotionBanner: React.FC = () => {
 
   const banner = banners[currentBanner];
 
+  if (!banner) return null;
+
   return (
     <div className="relative overflow-hidden">
       {/* Background with gradient */}

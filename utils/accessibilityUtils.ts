@@ -88,14 +88,18 @@ export const screenReader = {
 
   // Focus first focusable element
   focusFirst: (container: HTMLElement) => {
-    const focusableElements = focusManagement.getFocusableElements(container);
+    const focusableElements = container.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
     const firstElement = focusableElements[0] as HTMLElement;
     firstElement?.focus();
   },
 
   // Focus last focusable element
   focusLast: (container: HTMLElement) => {
-    const focusableElements = focusManagement.getFocusableElements(container);
+    const focusableElements = container.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
     lastElement?.focus();
   }
@@ -173,8 +177,8 @@ export const ariaUtils = {
 export const colorContrast = {
   // Check if color meets WCAG AA standards
   meetsWCAGAA: (foreground: string, background: string): boolean => {
-    const fgLuminance = getLuminance(foreground);
-    const bgLuminance = getLuminance(background);
+    const fgLuminance = colorContrast.getLuminance(foreground);
+    const bgLuminance = colorContrast.getLuminance(background);
     const contrast = (Math.max(fgLuminance, bgLuminance) + 0.05) / (Math.min(fgLuminance, bgLuminance) + 0.05);
     return contrast >= 4.5;
   },
@@ -186,11 +190,11 @@ export const colorContrast = {
     
     const { r, g, b } = rgb;
     const [rs, gs, bs] = [r, g, b].map(c => {
-      c = c / 255;
-      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+      const normalized = c / 255;
+      return normalized <= 0.03928 ? normalized / 12.92 : Math.pow((normalized + 0.055) / 1.055, 2.4);
     });
     
-    return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+    return 0.2126 * (rs || 0) + 0.7152 * (gs || 0) + 0.0722 * (bs || 0);
   }
 };
 
@@ -198,15 +202,12 @@ export const colorContrast = {
 function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result ? {
-    r: parseInt(result[1], 16),
-    g: parseInt(result[2], 16),
-    b: parseInt(result[3], 16)
+    r: parseInt(result[1] || '0', 16),
+    g: parseInt(result[2] || '0', 16),
+    b: parseInt(result[3] || '0', 16)
   } : null;
 }
 
-function getLuminance(color: string): number {
-  return colorContrast.getLuminance(color);
-}
 
 // Hook for managing focus trap
 export const useFocusTrap = (isActive: boolean) => {

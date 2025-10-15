@@ -21,4 +21,4 @@ export const seoOptimizer = {
   }
 };
 
-export default NotFoundPage;
+export default seoOptimizer;

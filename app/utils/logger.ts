@@ -21,7 +21,7 @@ interface LogEntry {
   message: string;
   timestamp: string;
   context?: Record<string, unknown>;
-  error?: Error;
+  error?: Error | undefined;
 }
 
 class Logger {
@@ -48,7 +48,7 @@ class Logger {
       level,
       message,
       timestamp: new Date().toISOString(),
-      context,
+      context: context || {},
       error
     };
 

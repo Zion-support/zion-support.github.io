@@ -95,7 +95,7 @@ const AccessibilityEnhancements: React.FC = () => {
       };
       
       mediaQuery.addEventListener('change', handleContrastChange);
-      handleContrastChange(mediaQuery);
+      handleContrastChange({ matches: mediaQuery.matches } as MediaQueryListEvent);
     };
 
     // Add reduced motion detection
@@ -110,7 +110,7 @@ const AccessibilityEnhancements: React.FC = () => {
       };
       
       mediaQuery.addEventListener('change', handleMotionChange);
-      handleMotionChange(mediaQuery);
+      handleMotionChange({ matches: mediaQuery.matches } as MediaQueryListEvent);
     };
 
     // Initialize all accessibility enhancements

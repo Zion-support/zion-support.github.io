@@ -20,7 +20,7 @@ const message = errorWithResponse.response?.data?.message || errorWithResponse.m
       default: return { message: message || 'An error occurred', code: 'UNKNOWN_ERROR' };
     }
   },
-  handleNetworkError: (error: unknown) => { return {
+  handleNetworkError: (_error: unknown) => { return {
 
     message: 'Network error. Please check your connection.',
       code: 'NETWORK_ERROR' };
@@ -35,4 +35,4 @@ const message = errorWithResponse.response?.data?.message || errorWithResponse.m
   }
 };
 
-export default NotFoundPage;
+export default enhancedErrorHandler;

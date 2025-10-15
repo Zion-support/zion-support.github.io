@@ -1,1 +1,4 @@
-import { type ClassValue, clsx } from "clsx";
+// Utility functions for the application
+export const cn = (...classes: (string | undefined | null | false)[]): string => {
+  return classes.filter(Boolean).join(' ');
+};

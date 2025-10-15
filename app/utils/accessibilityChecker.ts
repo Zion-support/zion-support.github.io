@@ -29,4 +29,4 @@ const issues: Array<{ element: HTMLElement; issue: string }> = [];
     return []; }
 };
 
-export default NotFoundPage;
+export default accessibilityChecker;
