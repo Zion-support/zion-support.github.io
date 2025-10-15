@@ -38,6 +38,8 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/ai-document-processor" className="text-gray-300 hover:text-white">AI Document Processor</Link></li>
               <li><Link to="/ai-form-builder" className="text-gray-300 hover:text-white">AI Form Builder</Link></li>
               <li><Link to="/ai-fraud-detection" className="text-gray-300 hover:text-white">AI Fraud Detection</Link></li>
+              <li><Link to="/ai-image-recognition" className="text-gray-300 hover:text-white">AI Image Recognition</Link></li>
+              <li><Link to="/api-development" className="text-gray-300 hover:text-white">API Development</Link></li>
             </ul>
           </div>
           

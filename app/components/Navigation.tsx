@@ -196,6 +196,9 @@ const Navigation: React.FC = () => {
               <Link to="/ai-fraud-detection" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 AI Fraud Detection
               </Link>
+              <Link to="/ai-image-recognition" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Image Recognition
+              </Link>
               <Link to="/data-analytics" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Data Analytics
               </Link>
@@ -215,6 +218,9 @@ const Navigation: React.FC = () => {
               </Link>
               <Link to="/network-infrastructure" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Network Infrastructure
+              </Link>
+              <Link to="/api-development" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                API Development
               </Link>
               
               <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Infrastructure</div>
