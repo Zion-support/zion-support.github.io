@@ -33,6 +33,23 @@ const DatabaseManagementPage = lazy(() => import('./app/database-management/page
 const NetworkInfrastructurePage = lazy(() => import('./app/network-infrastructure/page'));
 const CookiesPage = lazy(() => import('./app/cookies/page'));
 
+// Additional Micro SAAS Services
+const AIDocumentAnalyzerPage = lazy(() => import('./app/zion-ai-document-analyzer/page'));
+const AIMeetingTranscriberPage = lazy(() => import('./app/zion-ai-meeting-transcriber/page'));
+const AIFinancialForecasterPage = lazy(() => import('./app/zion-ai-financial-forecaster/page'));
+const AISalesPredictorPage = lazy(() => import('./app/zion-ai-sales-predictor/page'));
+const AICustomerSentimentTrackerPage = lazy(() => import('./app/zion-ai-customer-sentiment-tracker/page'));
+const AITaskSchedulerPage = lazy(() => import('./app/zion-ai-task-scheduler/page'));
+const AICustomerChurnPredictorPage = lazy(() => import('./app/zion-ai-customer-churn-predictor/page'));
+const AIContentModeratorPage = lazy(() => import('./app/zion-ai-content-moderator/page'));
+const SmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
+const AISocialSchedulerProPage = lazy(() => import('./app/zion-ai-social-scheduler-pro/page'));
+const AIInventoryOptimizerProPage = lazy(() => import('./app/zion-ai-inventory-optimizer-pro/page'));
+const AIWorkflowAutomatorProPage = lazy(() => import('./app/zion-ai-workflow-automator-pro/page'));
+const AIEmailMarketingProPage = lazy(() => import('./app/zion-ai-email-marketing-pro/page'));
+const AICustomerSupportProPage = lazy(() => import('./app/zion-ai-customer-support-pro/page'));
+const CustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-customer-satisfaction-monitor/page'));
+
 // Import components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -118,6 +135,25 @@ export default function App() {
                   <Route path="/partnerships" element={<PartnershipsPage />} />
                   <Route path="/api-docs" element={<APIDocsPage />} />
                   <Route path="/accessibility" element={<AccessibilityPage />} />
+                  
+                  {/* Additional Micro SAAS Services */}
+                  <Route path="/zion-ai-document-analyzer" element={<AIDocumentAnalyzerPage />} />
+                  <Route path="/zion-ai-meeting-transcriber" element={<AIMeetingTranscriberPage />} />
+                  <Route path="/zion-ai-financial-forecaster" element={<AIFinancialForecasterPage />} />
+                  <Route path="/zion-ai-sales-predictor" element={<AISalesPredictorPage />} />
+                  <Route path="/zion-ai-customer-sentiment-tracker" element={<AICustomerSentimentTrackerPage />} />
+                  <Route path="/zion-ai-task-scheduler" element={<AITaskSchedulerPage />} />
+                  <Route path="/zion-ai-customer-churn-predictor" element={<AICustomerChurnPredictorPage />} />
+                  <Route path="/zion-ai-content-moderator" element={<AIContentModeratorPage />} />
+                  <Route path="/zion-smart-expense-tracker" element={<SmartExpenseTrackerPage />} />
+                  <Route path="/zion-ai-social-scheduler-pro" element={<AISocialSchedulerProPage />} />
+                  <Route path="/zion-ai-inventory-optimizer-pro" element={<AIInventoryOptimizerProPage />} />
+                  <Route path="/zion-ai-workflow-automator-pro" element={<AIWorkflowAutomatorProPage />} />
+                  <Route path="/zion-ai-email-marketing-pro" element={<AIEmailMarketingProPage />} />
+                  <Route path="/zion-ai-customer-support-pro" element={<AICustomerSupportProPage />} />
+                  <Route path="/zion-ai-content-generator" element={<AIContentGeneratorPage />} />
+                  <Route path="/zion-customer-satisfaction-monitor" element={<CustomerSatisfactionMonitorPage />} />
+                  
                   {/* Catch all route */}
                   <Route path="*" element={
                     <div className="min-h-screen flex items-center justify-center bg-gray-50">

@@ -1,33 +1,263 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { servicesData } from '../data/servicesData';
 
-export default function ZionaisalespredictorPage() {
+const AISalesPredictorPage: React.FC = () => {
+  const service = servicesData.additionalMicroSaas.find(s => s.id === 'ai-sales-predictor');
+
+  if (!service) {
+    return <div>Service not found</div>;
+  }
+
   return (
     <>
       <Helmet>
-        <title>Zion Ai Sales Predictor - Zion Tech Group</title>
-        <meta name="description" content="Zion Ai Sales Predictor services and solutions from Zion Tech Group." />
+        <title>{service.title} - Zion Tech Group</title>
+        <meta name="description" content={service.description} />
+        <meta name="keywords" content="AI sales forecasting, lead scoring, sales prediction, customer behavior analysis, sales analytics" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-sales-predictor" />
       </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Zion Ai Sales Predictor
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional Zion Ai Sales Predictor services and solutions for your business needs.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
-                Get Started
-              </button>
-              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
-                Learn More
-              </button>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-orange-600 to-red-700 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                {service.title}
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                {service.description}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href={`mailto:${service.contactInfo.email}?subject=Interest in ${service.title}`}
+                  className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Boost Your Sales
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
+                >
+                  Call +1 302 464 0950
+                </a>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Sales Intelligence Features
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Predict and optimize your sales performance with AI
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {service.features.map((feature, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="text-3xl mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 bg-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Sales Success Pricing
+              </h2>
+              <p className="text-xl text-gray-600">
+                Choose the plan that fits your sales team size
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white p-8 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Basic</h3>
+                <div className="text-4xl font-bold text-orange-600 mb-4">
+                  ${service.pricing.basic}
+                  <span className="text-lg text-gray-500">/month</span>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-2">✓</span>
+                    Up to 1,000 leads/month
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-2">✓</span>
+                    Basic lead scoring
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-2">✓</span>
+                    Email support
+                  </li>
+                </ul>
+                <a
+                  href={`mailto:${service.contactInfo.email}?subject=Interest in Basic Plan for ${service.title}`}
+                  className="w-full bg-orange-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-center block"
+                >
+                  Get Started
+                </a>
+              </div>
+
+              <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-orange-600 relative">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-orange-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    Most Popular
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Pro</h3>
+                <div className="text-4xl font-bold text-orange-600 mb-4">
+                  ${service.pricing.pro}
+                  <span className="text-lg text-gray-500">/month</span>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-2">✓</span>
+                    Up to 10,000 leads/month
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-2">✓</span>
+                    Advanced AI models
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-2">✓</span>
+                    CRM integration
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-2">✓</span>
+                    Priority support
+                  </li>
+                </ul>
+                <a
+                  href={`mailto:${service.contactInfo.email}?subject=Interest in Pro Plan for ${service.title}`}
+                  className="w-full bg-orange-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-center block"
+                >
+                  Get Started
+                </a>
+              </div>
+
+              <div className="bg-white p-8 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
+                <div className="text-4xl font-bold text-orange-600 mb-4">
+                  ${service.pricing.enterprise}
+                  <span className="text-lg text-gray-500">/month</span>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-2">✓</span>
+                    Unlimited leads
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-2">✓</span>
+                    Custom AI models
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-2">✓</span>
+                    Dedicated support
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-2">✓</span>
+                    On-premise deployment
+                  </li>
+                </ul>
+                <a
+                  href={`mailto:${service.contactInfo.email}?subject=Interest in Enterprise Plan for ${service.title}`}
+                  className="w-full bg-orange-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-center block"
+                >
+                  Contact Sales
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Boost Your Sales Performance
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Increase conversions and revenue with AI-powered sales insights
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {service.benefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">✓</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-20 bg-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Perfect For Every Sales Team
+              </h2>
+              <p className="text-xl text-gray-600">
+                Ideal for businesses that want to optimize their sales process
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {service.useCases.map((useCase, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{useCase}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-orange-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Ready to Boost Your Sales?
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Join thousands of sales teams already using our AI-powered sales prediction
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href={`mailto:${service.contactInfo.email}?subject=Interest in ${service.title}`}
+                className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Start Free Trial
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
+              >
+                Call +1 302 464 0950
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
-}
+};
+
+export default AISalesPredictorPage;

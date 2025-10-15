@@ -39,7 +39,7 @@ const Navigation: React.FC = () => {
                 <div
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
-                  className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg z-50"
+                  className="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg z-50 max-h-96 overflow-y-auto"
                 >
                   <div className="py-1">
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">Core Services</div>
@@ -74,6 +74,44 @@ const Navigation: React.FC = () => {
                     </Link>
                     <Link to="/zion-ai-email-marketing-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       AI Email Marketing Pro
+                    </Link>
+                    <Link to="/zion-ai-document-analyzer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Document Analyzer Pro
+                    </Link>
+                    <Link to="/zion-ai-meeting-transcriber" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Meeting Transcriber Pro
+                    </Link>
+                    <Link to="/zion-ai-financial-forecaster" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Financial Forecaster Pro
+                    </Link>
+                    <Link to="/zion-ai-sales-predictor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Sales Predictor Pro
+                    </Link>
+                    <Link to="/zion-ai-customer-sentiment-tracker" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Customer Sentiment Tracker Pro
+                    </Link>
+                    <Link to="/zion-ai-task-scheduler" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Task Scheduler Pro
+                    </Link>
+                    <Link to="/zion-ai-customer-churn-predictor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Customer Churn Predictor Pro
+                    </Link>
+                    <Link to="/zion-ai-content-moderator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Content Moderator Pro
+                    </Link>
+                    <div className="border-t border-gray-100 my-1"></div>
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">Micro SAAS</div>
+                    <Link to="/micro-saas-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      All Micro SAAS Solutions
+                    </Link>
+                    <Link to="/zion-smart-expense-tracker" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Smart Expense Tracker
+                    </Link>
+                    <Link to="/zion-ai-social-scheduler-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Social Scheduler Pro
+                    </Link>
+                    <Link to="/zion-ai-inventory-optimizer-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Inventory Optimizer Pro
                     </Link>
                   </div>
                 </div>
@@ -151,6 +189,80 @@ const Navigation: React.FC = () => {
               </Link>
               <Link to="/zion-ai-email-marketing-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 AI Email Marketing Pro
+              </Link>
+              <Link to="/zion-ai-document-analyzer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Document Analyzer Pro
+              </Link>
+              <Link to="/zion-ai-meeting-transcriber" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Meeting Transcriber Pro
+              </Link>
+              <Link to="/zion-ai-financial-forecaster" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Financial Forecaster Pro
+              </Link>
+              <Link to="/zion-ai-sales-predictor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Sales Predictor Pro
+              </Link>
+              <Link to="/zion-ai-customer-sentiment-tracker" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Customer Sentiment Tracker Pro
+              </Link>
+              <Link to="/zion-ai-task-scheduler" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Task Scheduler Pro
+              </Link>
+              <Link to="/zion-ai-customer-churn-predictor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Customer Churn Predictor Pro
+              </Link>
+              <Link to="/zion-ai-content-moderator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Content Moderator Pro
+              </Link>
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Micro SAAS</div>
+              <Link to="/micro-saas-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                All Micro SAAS Solutions
+              </Link>
+              <Link to="/zion-smart-expense-tracker" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Smart Expense Tracker
+              </Link>
+              <Link to="/zion-ai-social-scheduler-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Social Scheduler Pro
+              </Link>
+              <Link to="/zion-ai-inventory-optimizer-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Inventory Optimizer Pro
+              </Link>
+              <Link to="/zion-ai-document-analyzer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Document Analyzer Pro
+              </Link>
+              <Link to="/zion-ai-meeting-transcriber" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Meeting Transcriber Pro
+              </Link>
+              <Link to="/zion-ai-financial-forecaster" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Financial Forecaster Pro
+              </Link>
+              <Link to="/zion-ai-sales-predictor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Sales Predictor Pro
+              </Link>
+              <Link to="/zion-ai-customer-sentiment-tracker" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Customer Sentiment Tracker Pro
+              </Link>
+              <Link to="/zion-ai-task-scheduler" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Task Scheduler Pro
+              </Link>
+              <Link to="/zion-ai-customer-churn-predictor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Customer Churn Predictor Pro
+              </Link>
+              <Link to="/zion-ai-content-moderator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Content Moderator Pro
+              </Link>
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Micro SAAS</div>
+              <Link to="/micro-saas-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                All Micro SAAS Solutions
+              </Link>
+              <Link to="/zion-smart-expense-tracker" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Smart Expense Tracker
+              </Link>
+              <Link to="/zion-ai-social-scheduler-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Social Scheduler Pro
+              </Link>
+              <Link to="/zion-ai-inventory-optimizer-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Inventory Optimizer Pro
               </Link>
             </div>
             <Link to="/pricing" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">

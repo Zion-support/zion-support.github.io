@@ -5,15 +5,16 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-800 text-white">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8">
           <div className="lg:col-span-2">
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
             <p className="text-gray-300 mb-4">
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
             <div className="text-sm text-gray-400 mb-4">
-              <p>Email: contact@ziontechgroup.com</p>
-              <p>Phone: +1 (555) 123-4567</p>
+              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Phone: +1 302 464 0950</p>
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
             <div className="flex space-x-4">
               <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
@@ -44,7 +45,39 @@ const Footer: React.FC = () => {
               <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">AI Customer Support Pro</Link></li>
               <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-white">AI Workflow Automator Pro</Link></li>
               <li><Link to="/zion-ai-email-marketing-pro" className="text-gray-300 hover:text-white">AI Email Marketing Pro</Link></li>
+              <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">AI Document Analyzer Pro</Link></li>
+              <li><Link to="/zion-ai-meeting-transcriber" className="text-gray-300 hover:text-white">AI Meeting Transcriber Pro</Link></li>
+              <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">AI Financial Forecaster Pro</Link></li>
+              <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-white">AI Sales Predictor Pro</Link></li>
               <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Micro SAAS</h4>
+            <ul className="space-y-2">
+              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">All Micro SAAS Solutions</Link></li>
+              <li><Link to="/zion-smart-expense-tracker" className="text-gray-300 hover:text-white">Smart Expense Tracker</Link></li>
+              <li><Link to="/zion-ai-social-scheduler-pro" className="text-gray-300 hover:text-white">AI Social Scheduler Pro</Link></li>
+              <li><Link to="/zion-ai-inventory-optimizer-pro" className="text-gray-300 hover:text-white">AI Inventory Optimizer Pro</Link></li>
+              <li><Link to="/zion-ai-customer-sentiment-tracker" className="text-gray-300 hover:text-white">AI Customer Sentiment Tracker Pro</Link></li>
+              <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">AI Task Scheduler Pro</Link></li>
+              <li><Link to="/zion-ai-customer-churn-predictor" className="text-gray-300 hover:text-white">AI Customer Churn Predictor Pro</Link></li>
+              <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">AI Content Moderator Pro</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Additional AI Services</h4>
+            <ul className="space-y-2">
+              <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">AI Document Analyzer Pro</Link></li>
+              <li><Link to="/zion-ai-meeting-transcriber" className="text-gray-300 hover:text-white">AI Meeting Transcriber Pro</Link></li>
+              <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">AI Financial Forecaster Pro</Link></li>
+              <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-white">AI Sales Predictor Pro</Link></li>
+              <li><Link to="/data-analytics" className="text-gray-300 hover:text-white">Data Analytics</Link></li>
+              <li><Link to="/web-development" className="text-gray-300 hover:text-white">Web Development</Link></li>
+              <li><Link to="/mobile-development" className="text-gray-300 hover:text-white">Mobile Development</Link></li>
+              <li><Link to="/database-management" className="text-gray-300 hover:text-white">Database Management</Link></li>
             </ul>
           </div>
           
