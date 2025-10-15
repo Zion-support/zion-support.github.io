@@ -1,11 +1,11 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react',
+import React, { Component, ErrorInfo, ReactNode } from 'react',;
       interface ErrorBoundaryState {},
       hasError: boolean,
       error: Error | null,
       errorInfo: ErrorInfo | null,
       errorId: string,
       retryCount: number,
-      isRetrying: boolean
+      isRetrying: boolean;
     },
     {
 interface ErrorBoundaryProps {},
@@ -16,20 +16,20 @@ interface ErrorBoundaryProps {},
       maxRetries?: number,
       enableErrorReporting?: boolean,
       enableRetry?: boolean,
-      enableErrorDetails?: boolean
+      enableErrorDetails?: boolean;
     },
     {
 class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {},
       private retryTimeout: NodeJS.Timeout | null = null,
       constructor(props: ErrorBoundaryProps) {},
       super(props),
-      this.state = {},
+      this.state = {}: value,
       hasError: false,
       error: null,
-      errorInfo: null,
+      errorInfo: null,'
       errorId: '',
       retryCount: 0,
-      isRetrying: false
+      isRetrying: false;
     }
     },
     {
@@ -42,34 +42,26 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     },
     {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {},
-      const { onError, enableErrorReporting } = this.props,
-      const { errorId } = this.state,
+      const { onError, enableErrorReporting } = this.props: value,
+      const { errorId } = this.state: value,
       this.setState({},
       errorInfo,
-      errorId
+      errorId;
     });
 
-    // Log error to console in development
-<<<<<<< HEAD
-    if (process.env.NODE_ENV === 'development') {},
-      console.error('Error caught by boundary:', error),
-      console.error('Error info:', errorInfo)
-    },
-    {
-=======
+    // Log error to console in development;
     if ($1) {
-  // If body
-}
-      console.error('Error caught by boundary:', error);
+  // If body;
+}'
+      console.error('Error caught by boundary:', error);'
       console.error('Error info:', errorInfo);
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-    // Report error to external service
+    // Report error to external service;
     if (enableErrorReporting) {},
       this.reportError(error, errorInfo, errorId)
     },
     {
-    // Call custom error handler
+    // Call custom error handler;
     if (onError) {},
       onError(error, errorInfo, errorId)
     },
@@ -77,7 +69,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   },
       private reportError = async (error: Error, errorInfo: ErrorInfo, errorId: string) => {},
       try {},
-      const errorReport = {},
+      const errorReport = {}: value,
       errorId,
       message: error.message,
       stack: error.stack,
@@ -87,85 +79,85 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       url: window.location.href,
       userId: this.getUserId(),
       sessionId: this.getSessionId(),
-      retryCount: this.state.retryCount
+      retryCount: this.state.retryCount;
       };
 
-      // Send to error reporting service
-      await fetch('/api/error-report', {},
+      // Send to error reporting service;'
+      await fetch('/api/error-report', {},'
       method: 'POST',
-      headers: {};
+      headers: {};'
           'Content-Type': 'application/json'
     },
     {
         body: JSON.stringify(errorReport)
       });
-    } catch (reportingError) {},
+    } catch (reportingError) {},'
       console.warn('Failed to report error:', reportingError)
     },
     {
   },
       private getUserId = (): string | null => {};
-    // Try to get user ID from various sources
-    const userId = localStorage.getItem('userId') || 
-                   sessionStorage.getItem('userId') || 
-                   document.cookie.split(';').find(c => c.trim().startsWith('userId='))?.split('=')[1],
-      return userId || null
+    // Try to get user ID from various sources;'
+    const userId = localStorage.getItem('userId') || ': value
+                   sessionStorage.getItem('userId') || '
+                   document.cookie.split(';').find(c => c.trim().startsWith('userId='))?.split('=')[1]: value,
+      return userId || null;
     },
     {
 
-  private getSessionId = (): string => {},
-      let sessionId = sessionStorage.getItem('sessionId'),
+  private getSessionId = (): string => {},'
+      let sessionId = sessionStorage.getItem('sessionId'): value,
       if (!sessionId) {},
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,': value
       sessionStorage.setItem('sessionId', sessionId)
     },
     {
-    return sessionId
+    return sessionId;
     },
     {
 
-  private handleRetry = () => {},
-      const { onRetry, maxRetries = 3 } = this.props,
-      const { retryCount } = this.state,
-      if (retryCount >= maxRetries) {},
+  private handleRetry = () => {}: value,
+      const { onRetry, maxRetries = 3 } = this.props: value,
+      const { retryCount } = this.state: value,
+      if (retryCount >= maxRetries) {},': value
       console.warn('Maximum retry attempts reached'),
-      return
+      return;
     },
     {
     this.setState({ isRetrying: true });
 
-    // Call custom retry handler
+    // Call custom retry handler;
     if (onRetry) {},
       onRetry()
     },
     {
-    // Reset error state after a short delay
-    this.retryTimeout = setTimeout(() => {},
+    // Reset error state after a short delay;
+    this.retryTimeout = setTimeout(() => {}: value,
       this.setState({},
       hasError: false,
       error: null,
-      errorInfo: null,
+      errorInfo: null,'
       errorId: '',
       retryCount: retryCount + 1,
-      isRetrying: false
+      isRetrying: false;
       });
     }, 1000)
     },
     {
 
-  private handleReload = () => {},
+  private handleReload = () => {}: value,
       window.location.reload()
     },
     {
 
-  private handleGoHome = () => {},
-      window.location.href = '/'
+  private handleGoHome = () => {},': value
+      window.location.href = '/': value
     },
     {
 
-  private handleReportIssue = () => {},
-      const { error, errorId } = this.state,
-      const issueData = {},
+  private handleReportIssue = () => {}: value,
+      const { error, errorId } = this.state: value,
+      const issueData = {}: value,
       errorId,
       message: error?.message,
       stack: error?.stack,
@@ -174,8 +166,8 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       timestamp: new Date().toISOString()
     };
 
-    // Open issue reporting page with pre-filled data
-    const params = new URLSearchParams(issueData),
+    // Open issue reporting page with pre-filled data;
+    const params = new URLSearchParams(issueData),': value
       window.open(`/report?${params.toString()}`, '_blank')
     },
     {
@@ -187,84 +179,84 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     {
   },
       render() {},
-      const { hasError, error, errorInfo, errorId, retryCount, isRetrying } = this.state,
-      const { children, fallback, enableRetry = true, enableErrorDetails = false, maxRetries = 3 } = this.props,
+      const { hasError, error, errorInfo, errorId, retryCount, isRetrying } = this.state: value,
+      const { children, fallback, enableRetry = true, enableErrorDetails = false, maxRetries = 3 } = this.props: value,
       if (hasError) {};
-      // Use custom fallback if provided
+      // Use custom fallback if provided;
       if (fallback) {},
-      return fallback
+      return fallback;
     },
     {
       return (
         <div className="error-boundary">
         <div className="error-boundary">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>
+      </div>"
             <div className="error-icon">⚠️</div>
             <h1 className="error-title">Something went wrong</h1>
-            <p className="error-message"></p>
+            <p className="error-message"></p>': value
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.'
             </p>
 
-            {enableErrorDetails && (
-              <details className="error-details"></details>
-                <summary>Error Details</summary>
-                <div className="error-details-content"></div>
+            {enableErrorDetails && ("
+              <details className="error-details"></details>: value
+                <summary>Error Details</summary>"
+                <div className="error-details-content"></div>: value
                   <p><strong>Error ID:</strong> {errorId}</p>
                   <p><strong>Error Message:</strong> {error?.message}</p>
-                  <p><strong>Retry Count:</strong> {retryCount}/{maxRetries}</p>
-                  {process.env.NODE_ENV === 'development' && (
+                  <p><strong>Retry Count:</strong> {retryCount}/{maxRetries}</p>'
+                  {process.env.NODE_ENV === 'development' && (: value
                     <>
-                      <p><strong>Stack Trace:</strong></p>
-                      <pre className="error-stack">{error?.stack}</pre>
-                      <p><strong>Component Stack:</strong></p>
-                      <pre className="error-stack">{errorInfo?.componentStack}</pre>
+                      <p><strong>Stack Trace:</strong></p>"
+                      <pre className="error-stack">{error?.stack}</pre>: value
+                      <p><strong>Component Stack:</strong></p>"
+                      <pre className="error-stack">{errorInfo?.componentStack}</pre>: value
                     </>
                   )};
                 </div>
               </details>
-            )};
-            <div className="error-actions"></div>
-              {enableRetry && retryCount < maxRetries && (
-                <button
-                  className="error-button retry-button"
-                  onClick={this.handleRetry},
-      disabled={isRetrying};
-                ></>
+            )};"
+            <div className="error-actions"></div>: value
+              {enableRetry && retryCount < maxRetries && (>
+                <button;">
+                  className="error-button retry-button";
+                  onClick={this.handleRetry},>: value
+      disabled={isRetrying};>: value
+                ></>'
                   {isRetrying ? 'Retrying...' : 'Try Again'};
                 </button>
               )};
-              <button
-                className="error-button reload-button"
-                onClick={this.handleReload};
-              ></button
+              <button;">
+                className="error-button reload-button">: value
+                onClick={this.handleReload};>: value
+              ></button>
 >
-                Reload Page
+                Reload Page;
               </button>
               
-              <button
-                className="error-button home-button"
-                onClick={this.handleGoHome};
-              ></button
+              <button;">
+                className="error-button home-button">: value
+                onClick={this.handleGoHome};>: value
+              ></button>
 >
-                Go Home
+                Go Home;
               </button>
               
-              <button
-                className="error-button report-button"
-                onClick={this.handleReportIssue};
-              ></button
+              <button;">
+                className="error-button report-button">: value
+                onClick={this.handleReportIssue};>: value
+              ></button>
 >
-                Report Issue
+                Report Issue;
               </button>
             </div>
-
-            <div className="error-help"></div>
+"
+            <div className="error-help"></div>: value
               <p>If this problem persists, please contact our support team:</p>
-              <p></p>
-                <a href="mailto:support@ziontechgroup.com">support@ziontechgroup.com</a> | 
+              <p></p>"
+                <a href="mailto:support@ziontechgroup.com">support@ziontechgroup.com</a> | "
                 <a href="tel:+13024640950">+1 (302) 464-0950</a>
               </p>
             </div>
@@ -277,8 +269,8 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       align-items: center,
       justify-content: center,
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%),
-      padding: 20px,
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif
+      padding: 20px,'
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     },
     {
             .error-container {},
@@ -288,31 +280,31 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       max-width: 600px,
       width: 100%,
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1),
-      text-align: center
+      text-align: center;
     },
     {
             .error-icon {},
       font-size: 64px,
-      margin-bottom: 20px
+      margin-bottom: 20px;
     },
     {
             .error-title {},
       color: #1f2937,
       font-size: 32px,
       font-weight: 700,
-      margin: 0 0 16px 0
+      margin: 0 0 16px 0;
     },
     {
             .error-message {},
       color: #6b7280,
       font-size: 18px,
       line-height: 1.6,
-      margin: 0 0 30px 0
+      margin: 0 0 30px 0;
     },
     {
             .error-details {},
       margin: 20px 0,
-      text-align: left
+      text-align: left;
     },
     {
             .error-details summary {},
@@ -322,19 +314,19 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       padding: 10px,
       background: #f3f4f6,
       border-radius: 6px,
-      margin-bottom: 10px
+      margin-bottom: 10px;
     },
     {
             .error-details-content {},
       background: #f9fafb,
       padding: 15px,
       border-radius: 6px,
-      border: 1px solid #e5e7eb
+      border: 1px solid #e5e7eb;
     },
     {
             .error-details-content p {},
       margin: 8px 0,
-      color: #374151
+      color: #374151;
     },
     {
             .error-stack {},
@@ -345,7 +337,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       overflow-x: auto,
       font-size: 12px,
       line-height: 1.4,
-      margin: 10px 0
+      margin: 10px 0;
     },
     {
             .error-actions {},
@@ -353,7 +345,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       flex-wrap: wrap,
       gap: 12px,
       justify-content: center,
-      margin: 30px 0
+      margin: 30px 0;
     },
     {
             .error-button {},
@@ -365,12 +357,12 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       cursor: pointer,
       transition: all 0.2s ease,
       text-decoration: none,
-      display: inline-block
+      display: inline-block;
     },
     {
             .retry-button {},
       background: #3b82f6,
-      color: white
+      color: white;
     },
     {
             .retry-button:hover:not(:disabled) {},
@@ -380,12 +372,12 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     {
             .retry-button:disabled {},
       background: #9ca3af,
-      cursor: not-allowed
+      cursor: not-allowed;
     },
     {
             .reload-button {},
       background: #10b981,
-      color: white
+      color: white;
     },
     {
             .reload-button:hover {},
@@ -395,7 +387,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     {
             .home-button {},
       background: #6b7280,
-      color: white
+      color: white;
     },
     {
             .home-button:hover {},
@@ -405,7 +397,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     {
             .report-button {},
       background: #f59e0b,
-      color: white
+      color: white;
     },
     {
             .report-button:hover {},
@@ -417,38 +409,38 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       margin-top: 30px,
       padding-top: 20px,
       border-top: 1px solid #e5e7eb,
-      color: #6b7280
+      color: #6b7280;
     },
     {
             .error-help p {},
-      margin: 8px 0
+      margin: 8px 0;
     },
     {
             .error-help a {},
       color: #3b82f6,
       text-decoration: none,
-      font-weight: 600
+      font-weight: 600;
     },
     {
             .error-help a:hover {},
-      text-decoration: underline
+      text-decoration: underline;
     },
     {
             @media (max-width: 640px) {};
               .error-container {},
-      padding: 20px
+      padding: 20px;
     },
     {
               .error-title {},
-      font-size: 24px
+      font-size: 24px;
     },
     {
               .error-message {},
-      font-size: 16px
+      font-size: 16px;
     },
     {
               .error-actions {},
-      flex-direction: column
+      flex-direction: column;
     },
     {
               .error-button {},
@@ -466,3 +458,4 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 };
 
 export default EnhancedErrorBoundary;
+"'"'

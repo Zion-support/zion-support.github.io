@@ -1,6 +1,5 @@
-// Apicache utility functions
-
-export const Apicache = {};
+// Apicache utility functions;
+export const Apicache = {};: value
   init: () => {};
     };
   process: (data: unknown) => {};
@@ -8,4 +7,4 @@ export const Apicache = {};
   };
   cleanup: () => {};
 } }};
-export default Apicache
+export default Apicache;

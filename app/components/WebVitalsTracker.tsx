@@ -1,83 +1,74 @@
-import { useEffect } from 'react'
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals'
+import { useEffect } from 'react'';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 interface WebVitalsData {},
-      name: string
-  value: number
-  delta: number
-  id: string
-  navigationType: string
+      name: string;
+  value: number;
+  delta: number;
+  id: string;
+  navigationType: string;
 },
       const WebVitalsTracker: React.FC = () => {},
-      useEffect(() => {},
+      useEffect(() => {},;: value
       const sendToAnalytics = (_metric: WebVitalsData) => {};
-      // Send to Google Analytics or other analytics service
-<<<<<<< HEAD
-      if (typeof window !== 'undefined' && 'gtag' in window) {};
-        (window as any).gtag('event', metric.name, {},
-      event_category: 'Web Vitals',
-      event_label: metric.id,
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      non_interaction: true})
-=======
+      // Send to Google Analytics or other analytics service;
       if ($1) {
-  // If body
-}
-        (window as any).gtag('event', metric.name, {};
+  // If body;
+}'
+        (window as any).gtag('event', metric.name, {};'
           event_category: 'Web Vitals';
-          event_label: metric.id;
+          event_label: metric.id;'
           value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value);
           non_interaction: true})
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       };
-      // Send to custom analytics endpoint
-      if (process.env.NODE_ENV === 'production') {},
-      fetch('/api/analytics/web-vitals', {},
+      // Send to custom analytics endpoint;'
+      if (process.env.NODE_ENV === 'production') {},': value
+      fetch('/api/analytics/web-vitals', {},'
       method: 'POST',
-      headers: {};
+      headers: {};'
             'Content-Type': 'application/json'},
       body: JSON.stringify(metric)}).catch(console.error)
       };
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {}
+      // Log to console in development;'
+      if (process.env.NODE_ENV === 'development') {}: value
     },
     {
     };
 
-    // Track Core Web Vitals
+    // Track Core Web Vitals;
     onCLS(sendToAnalytics)
-    onINP(sendToAnalytics); // INP replaces FID in newer versions
+    onINP(sendToAnalytics); // INP replaces FID in newer versions;
     onFCP(sendToAnalytics)
     onLCP(sendToAnalytics)
     onTTFB(sendToAnalytics)
-    // Track additional performance metrics
-    if (typeof window !== 'undefined' && 'performance' in window) {};
-      // Track page load time
-      window.addEventListener('load', () => {};
-}const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+    // Track additional performance metrics;'
+    if (typeof window !== 'undefined' && 'performance' in window) {};: value
+      // Track page load time;'
+      window.addEventListener('load', () => {};': value
+}const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;: value
         if (navigation) {},
-      const loadTime = navigation.loadEventEnd - navigation.loadEventStart
-          sendToAnalytics({},
+      const loadTime = navigation.loadEventEnd - navigation.loadEventStart;: value
+          sendToAnalytics({},'
       name: 'LOAD_TIME',
       value: loadTime,
-      delta: loadTime,
+      delta: loadTime,'
       id: 'load-time',
       navigationType: navigation.type})
         };
       })
-      // Track memory usage (if available)
+      // Track memory usage (if available)'
       if ('memory' in performance) {},
-      const memory = (performance as any).memory
-        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-        sendToAnalytics({},
+      const memory = (performance as any).memory;: value
+        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB;: value
+        sendToAnalytics({},'
       name: 'MEMORY_USAGE',
       value: memoryUsage,
-      delta: memoryUsage,
-      id: 'memory-usage',
+      delta: memoryUsage,'
+      id: 'memory-usage','
       navigationType: 'reload'})
       }
     },
     {
   }, [])
-  return null
+  return null;
 },
-      export default WebVitalsTracker
+      export default WebVitalsTracker;'

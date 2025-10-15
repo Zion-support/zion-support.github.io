@@ -4,9 +4,9 @@ const withErrorLogging = (handler) => {
       return await handler(req, res);
     } catch (error) {
       console.error('API Error:', error);
-      res.status(500).json({ 
+      res.status(500).json({
         error: 'Internal server error',
-        message: error.message 
+        message: error.message
       });
     }
   };
@@ -18,24 +18,35 @@ export default withErrorLogging(async (req, res) => {
   }
 
   try {
-    // Placeholder for Stripe checkout session creation
-    const { amount, currency = 'usd' } = req.body;
-    
-    if (!amount) {
-      return res.status(400).json({ error: 'Amount is required' });
+    const { amount, currency = 'usd', success_url, cancel_url } = req.body;
+
+    if (!amount || !success_url || !cancel_url) {
+      return res.status(400).json({
+        error: 'Missing required fields: amount, success_url, cancel_url'
+      });
     }
 
-    // In a real implementation, you would create a Stripe checkout session here
+    // Here you would integrate with your payment processor
+    // For now, we'll return a mock response
     const session = {
       id: 'cs_test_' + Math.random().toString(36).substr(2, 9),
-      url: 'https://checkout.stripe.com/test',
+      url: success_url,
       amount: amount,
       currency: currency
     };
 
-    res.status(200).json({ session });
+    res.status(200).json({
+      sessionId: session.id,
+      url: session.url,
+      amount: session.amount,
+      currency: session.currency
+    });
+
   } catch (error) {
     console.error('Checkout session creation error:', error);
-    res.status(500).json({ error: 'Failed to create checkout session' });
+    res.status(500).json({
+      error: 'Failed to create checkout session',
+      message: error.message
+    });
   }
 });

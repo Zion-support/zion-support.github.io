@@ -1,12 +1,12 @@
 
 interface ServicesProps {},
-      className?: string
+      className?: string;
 },
       const Services: React.FC<ServicesProps> = ({ className = "" }) => {};
 }return ()
-    <div className={className}></div>
+    <div className={className}></div>: value
       <h2>Services</h2>
     </div>
   )
 },
-      export default Services
+      export default Services;"

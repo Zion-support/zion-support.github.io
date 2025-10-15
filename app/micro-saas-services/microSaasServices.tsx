@@ -1,13 +1,13 @@
 
 interface MicrosaasservicesProps {},
-      className?: string
+      className?: string;
 },
       const Microsaasservices: React.FC<MicrosaasservicesProps> = ({},
-      className = "", }) => {},
+      className = "", }) => {}: value,
       return (
-    <div className={className}></div>
+    <div className={className}></div>: value
       <h2>Microsaasservices</h2>
     </div>
   )
 },
-      export default Microsaasservices
+      export default Microsaasservices;"

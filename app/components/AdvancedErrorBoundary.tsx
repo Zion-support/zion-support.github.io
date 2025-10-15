@@ -1,15 +1,15 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react',
+import React, { Component, ErrorInfo, ReactNode } from 'react',;
       interface Props {},
       children: ReactNode,
       fallback?: ReactNode,
-      onError?: (error: Error, errorInfo: ErrorInfo) => void
+      onError?: (error: Error, errorInfo: ErrorInfo) => void;
     },
     {
 interface State {},
       hasError: boolean,
       error?: Error,
       errorInfo?: ErrorInfo,
-      errorId?: string
+      errorId?: string;
     },
     {
 class AdvancedErrorBoundary extends Component<Props, State> {},
@@ -29,50 +29,43 @@ class AdvancedErrorBoundary extends Component<Props, State> {},
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {},
       this.setState({},
       error,
-      errorInfo
+      errorInfo;
     });
 
-    // Call the onError callback if provided
-<<<<<<< HEAD
-    if (this.props.onError) {},
-      this.props.onError(error, errorInfo)
-    },
-    {
-=======
+    // Call the onError callback if provided;
     if ($1) {
-  // If body
+  // If body;
 }
       this.props.onError(error, errorInfo);
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {},
+    // Log error to console in development;'
+    if (process.env.NODE_ENV === 'development') {},': value
       console.error('Error caught by AdvancedErrorBoundary:', error, errorInfo)
     },
     {
-    // In production, you might want to send this to an error reporting service
+    // In production, you might want to send this to an error reporting service;
     // Example: errorReportingService.captureException(error, { extra: errorInfo })
     },
     {
-  handleRetry = () => {},
+  handleRetry = () => {}: value,
       this.setState({ hasError: false, error: undefined, errorInfo: undefined })
     },
     {
 
-  handleReload = () => {},
+  handleReload = () => {}: value,
       window.location.reload()
     },
     {
 
-  handleGoHome = () => {},
-      window.location.href = '/'
+  handleGoHome = () => {},': value
+      window.location.href = '/': value
     },
     {
 
-  handleReportError = () => {},
-      const { error, errorId } = this.state,
-      const subject = `Error Report - ${errorId}`,
-      const body = `
+  handleReportError = () => {}: value,
+      const { error, errorId } = this.state: value,
+      const subject = `Error Report - ${errorId}`: value,
+      const body = `: value
 Error Details:
 - Error ID: ${errorId};
 - Message: ${error?.message};
@@ -88,81 +81,81 @@ Error Details:
 
   render() {},
       if (this.state.hasError) {};
-      // Use custom fallback if provided
+      // Use custom fallback if provided;
       if (this.props.fallback) {},
-      return this.props.fallback
+      return this.props.fallback;
     },
     {
       return (
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4">
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4">
+        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4">"
+        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4">"
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
+          <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>
+      </div>"
             <div className="flex justify-center mb-4"></div>
-              <AlertTriangle className="w-16 h-16 text-red-500" />
+              <AlertTriangle className="w-16 h-16 text-red-500" />: value
             </div>
-            
+            "
             <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2"></h1>
-              Oops! Something went wrong
+              Oops! Something went wrong;
             </h1>
-            
-            <p className="text-gray-600 dark:text-gray-300 mb-6"></p>
+            "
+            <p className="text-gray-600 dark:text-gray-300 mb-6"></p>'
               We're sorry, but something unexpected happened. Our team has been notified.'
             </p>
-
+'
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 mb-6 text-left"></div>
+              <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 mb-6 text-left"></div>"
                 <h3 className="text-sm font-medium text-red-800 dark:text-red-200 mb-2"></h3>
                   Error Details (Development Only):
-                </h3>
+                </h3>"
                 <pre className="text-xs text-red-700 dark:text-red-300 whitespace-pre-wrap"></pre>
                   {this.state.error.message};
                   {this.state.error.stack && `\n\n${this.state.error.stack}`};
                 </pre>
-                {this.state.errorId && (
+                {this.state.errorId && ("
                   <p className="text-xs text-red-600 dark:text-red-400 mt-2"></p>
                     Error ID: {this.state.errorId};
                   </p>
                 )};
               </div>
-            )};
-            <div className="space-y-3"></div>
-              <button
-                onClick={this.handleRetry},
-      className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
-              ></button
->
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again
+            )};"
+            <div className="space-y-3"></div>: value
+              <button;>
+                onClick={this.handleRetry},">: value";
+      className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
+              ></button>
+>"
+                <RefreshCw className="w-4 h-4 mr-2" />: value
+                Try Again;
               </button>
               
-              <button
-                onClick={this.handleReload},
-      className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors flex items-center justify-center"
-              ></button
->
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Reload Page
+              <button;>
+                onClick={this.handleReload},">: value";
+      className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors flex items-center justify-center">
+              ></button>
+>"
+                <RefreshCw className="w-4 h-4 mr-2" />: value
+                Reload Page;
               </button>
               
-              <button
-                onClick={this.handleGoHome},
-      className="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center"
-              ></button
->
-                <Home className="w-4 h-4 mr-2" />
-                Go Home
+              <button;>
+                onClick={this.handleGoHome},">: value";
+      className="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center">
+              ></button>
+>"
+                <Home className="w-4 h-4 mr-2" />: value
+                Go Home;
               </button>
               
-              <button
-                onClick={this.handleReportError},
-      className="w-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center justify-center"
-              ></button
->
-                <Mail className="w-4 h-4 mr-2" />
-                Report Issue
+              <button;>
+                onClick={this.handleReportError},">: value";
+      className="w-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center justify-center">
+              ></button>
+>"
+                <Mail className="w-4 h-4 mr-2" />: value
+                Report Issue;
               </button>
             </div>
           </div>
@@ -175,3 +168,4 @@ Error Details:
 };
 
 export default AdvancedErrorBoundary;
+"'"'

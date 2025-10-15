@@ -1,63 +1,73 @@
-import fs from 'fs';
-import path from 'path';
+const withErrorLogging = (handler) => {
+  return async (req, res) => {
+    try {
+      return await handler(req, res);
+    } catch (error) {
+      console.error('API Error:', error);
+      res.status(500).json({
+        error: 'Internal server error',
+        message: error.message
+      });
+    }
+  };
+};
 
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'onsite-requests.json');
-
-export default async function handler(req, res) {
+export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const { name, email, company, phone, message, serviceType, preferredDate } = req.body;
+    const { 
+      companyName, 
+      contactName, 
+      email, 
+      phone, 
+      projectType, 
+      description, 
+      timeline,
+      budget 
+    } = req.body;
 
-    if (!name || !email || !company) {
-      res.status(400).json({ error: 'Name, email, and company are required' });
-      return;
+    if (!companyName || !contactName || !email) {
+      return res.status(400).json({
+        error: 'Missing required fields: companyName, contactName, email'
+      });
     }
 
-    const requestData = {
-      id: Date.now().toString(),
-      name,
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({
+        error: 'Invalid email format'
+      });
+    }
+
+    // Here you would integrate with your CRM or project management system
+    // For now, we'll just log the request
+    console.log('Onsite request received:', {
+      companyName,
+      contactName,
       email,
-      company,
-      phone: phone || '',
-      message: message || '',
-      serviceType: serviceType || 'General Consultation',
-      preferredDate: preferredDate || '',
-      timestamp: new Date().toISOString(),
-      status: 'pending'
-    };
+      phone,
+      projectType,
+      description,
+      timeline,
+      budget,
+      timestamp: new Date().toISOString()
+    });
 
-    // Ensure data directory exists
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-
-    // Read existing requests
-    let requests = [];
-    if (fs.existsSync(file)) {
-      const fileContent = fs.readFileSync(file, 'utf8');
-      requests = JSON.parse(fileContent);
-    }
-
-    // Add new request
-    requests.push(requestData);
-
-    // Write back to file
-    fs.writeFileSync(file, JSON.stringify(requests, null, 2));
-
-    res.status(200).json({ 
-      success: true, 
+    res.status(200).json({
+      success: true,
       message: 'Onsite request submitted successfully',
-      requestId: requestData.id
+      requestId: 'req_' + Math.random().toString(36).substr(2, 9)
     });
 
   } catch (error) {
-    console.error('Error processing onsite request:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    console.error('Onsite request error:', error);
+    res.status(500).json({
+      error: 'Failed to submit onsite request',
+      message: error.message
+    });
   }
-}
+});

@@ -1,49 +1,49 @@
-  loadTime: number
-  domContentLoaded: number
-  firstContentfulPaint: number
-  largestContentfulPaint: number
-  cumulativeLayoutShift: number
-  firstInputDelay: number
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
-  const [isMonitoring, setIsMonitoring] = useState(false)
-    if (typeof window === 'undefined' || !('performance' in window)) return
-      )[0] as PerformanceNavigationTiming
-      const paintEntries = performance.getEntriesByType('paint')
- entry.name === 'first-contentful-paint')?.startTime || 0
- entry.name === 'largest-contentful-paint')?.startTime || 0
+  loadTime: number;
+  domContentLoaded: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null): value
+  const [isMonitoring, setIsMonitoring] = useState(false): value
+    if (typeof window === 'undefined' || !('performance' in window)) return;: value
+      )[0] as PerformanceNavigationTiming;'
+      const paintEntries = performance.getEntriesByType('paint')': value
+ entry.name === 'first-contentful-paint')?.startTime || 0;': value
+ entry.name === 'largest-contentful-paint')?.startTime || 0;: value
       // Measure CLS (Cumulative, Layout, Shift)
-      let cumulativeLayoutShift = 0
-              cumulativeLayoutShift += (entry as unknown as { value: number }).value
-        })
+      let cumulativeLayoutShift = 0;: value
+              cumulativeLayoutShift += (entry as unknown as { value: number }).value;
+        })'
         observer.observe({ entryTypes: ['layout-shift'] })
       // Measure FID (First, Input, Delay)
-      let firstInputDelay = 0
-                (entry as unknown as { processingStart: number }).processingStart - entry.startTime
-        })
+      let firstInputDelay = 0;: value
+                (entry as unknown as { processingStart: number }).processingStart - entry.startTime;
+        })'
         observer.observe({ entryTypes: ['first-input'] })
         domContentLoaded:
-        firstInputDelay
+        firstInputDelay;
       };
       setMetrics(performanceData)
       setIsMonitoring(false)
-      // Report to analytics using trackTiming
-      analytics.trackTiming('performance', 'load_time', performanceData.loadTime)
+      // Report to analytics using trackTiming;'
+      analytics.trackTiming('performance', 'load_time', performanceData.loadTime)'
       analytics.trackTiming('performance', 'dom_content_loaded', performanceData.domContentLoaded)
-        performanceData.firstContentfulPaint
+        performanceData.firstContentfulPaint;
       )
-        performanceData.largestContentfulPaint
+        performanceData.largestContentfulPaint;
       )
-        performanceData.cumulativeLayoutShift
-      )
+        performanceData.cumulativeLayoutShift;
+      )'
       analytics.trackTiming('performance', 'first_input_delay', performanceData.firstInputDelay)
     };
-    // Start monitoring
+    // Start monitoring;
     setIsMonitoring(true)
-    // Measure performance after page load
-      measurePerformance()
-      window.addEventListener('load', measurePerformance)
+    // Measure performance after page load;
+      measurePerformance()'
+      window.addEventListener('load', measurePerformance)'
       window.removeEventListener('load', measurePerformance)
     };
   }, [])
   return { metrics, isMonitoring };
-};
+};'

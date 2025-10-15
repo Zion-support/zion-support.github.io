@@ -1,6 +1,5 @@
-// Performancemetrics utility functions
-
-export const Performancemetrics = {};
+// Performancemetrics utility functions;
+export const Performancemetrics = {};: value
   init: () => {};
     };
   process: (data: unknown) => {};
@@ -8,4 +7,4 @@ export const Performancemetrics = {};
   };
   cleanup: () => {};
 } }};
-export default Performancemetrics
+export default Performancemetrics;

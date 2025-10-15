@@ -4,20 +4,48 @@ const withErrorLogging = (handler) => {
       return await handler(req, res);
     } catch (error) {
       console.error('API Error:', error);
-      res.status(500).json({ 
+      res.status(500).json({
         error: 'Internal server error',
-        message: error.message 
+        message: error.message
       });
     }
   };
 };
 
 export default withErrorLogging(async (req, res) => {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
   try {
-    // Stripe payment intent creation logic would go here
-    res.status(200).json({ message: 'Payment intent created' });
+    const { amount, currency = 'usd' } = req.body;
+
+    if (!amount) {
+      return res.status(400).json({
+        error: 'Missing required field: amount'
+      });
+    }
+
+    // Here you would integrate with your payment processor
+    // For now, we'll return a mock response
+    const paymentIntent = {
+      id: 'pi_' + Math.random().toString(36).substr(2, 9),
+      amount: amount,
+      currency: currency,
+      status: 'requires_payment_method'
+    };
+
+    res.status(200).json({
+      clientSecret: paymentIntent.id + '_secret_' + Math.random().toString(36).substr(2, 9),
+      amount: paymentIntent.amount,
+      currency: paymentIntent.currency
+    });
+
   } catch (error) {
-    console.error('Payment intent error:', error);
-    res.status(500).json({ error: 'Failed to create payment intent' });
+    console.error('Payment intent creation error:', error);
+    res.status(500).json({
+      error: 'Failed to create payment intent',
+      message: error.message
+    });
   }
 });

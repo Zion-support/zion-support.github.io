@@ -1,64 +1,85 @@
-<<<<<<< HEAD
-// API endpoint for wallet operations
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-import fs from 'fs';
-import path from 'path';
+const withErrorLogging = (handler) => {
+  return async (req, res) => {
+    try {
+      return await handler(req, res);
+    } catch (error) {
+      console.error('API Error:', error);
+      res.status(500).json({
+        error: 'Internal server error',
+        message: error.message
+      });
+    }
+  };
+};
 
-const file = path.join(process.cwd(), 'data', 'wallets.json');
-
-<<<<<<< HEAD
-export default function handler(req, res) {
-  if (req.method !== "POST") {
-=======
-export default async (req, res) => {
+export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-    return res.status(405).json({ error: "Method not allowed" });
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const { action, amount, currency, description } = req.body;
+    const { action, amount, currency = 'USD' } = req.body;
 
     if (!action) {
-      return res.status(400).json({ error: "Action is required" });
+      return res.status(400).json({
+        error: 'Missing required field: action'
+      });
     }
 
-    // Ensure data directory exists
-    const dir = path.dirname(file);
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
+    // Mock wallet operations
+    let result;
+    switch (action) {
+      case 'balance':
+        result = {
+          balance: 1000.00,
+          currency: currency
+        };
+        break;
+      case 'deposit':
+        if (!amount || amount <= 0) {
+          return res.status(400).json({
+            error: 'Invalid amount for deposit'
+          });
+        }
+        result = {
+          success: true,
+          newBalance: 1000.00 + amount,
+          currency: currency
+        };
+        break;
+      case 'withdraw':
+        if (!amount || amount <= 0) {
+          return res.status(400).json({
+            error: 'Invalid amount for withdrawal'
+          });
+        }
+        if (amount > 1000.00) {
+          return res.status(400).json({
+            error: 'Insufficient funds'
+          });
+        }
+        result = {
+          success: true,
+          newBalance: 1000.00 - amount,
+          currency: currency
+        };
+        break;
+      default:
+        return res.status(400).json({
+          error: 'Invalid action. Supported actions: balance, deposit, withdraw'
+        });
     }
 
-    // Load existing wallets
-    let wallets = [];
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
-      wallets = JSON.parse(data);
-    }
+    res.status(200).json({
+      success: true,
+      ...result
+    });
 
-    // Process wallet action
-    const walletAction = {
-      id: Date.now().toString(),
-      action,
-      amount,
-      currency,
-      description,
-      timestamp: new Date().toISOString()
-    };
-
-    wallets.push(walletAction);
-
-    // Save to file
-    fs.writeFileSync(file, JSON.stringify(wallets, null, 2));
-
-    res.status(200).json({ success: true, message: "Wallet action processed successfully" });
   } catch (error) {
-    console.error('Wallet operation error:', error);
-    res.status(500).json({ error: "Failed to process wallet operation" });
+    console.error('Wallet API error:', error);
+    res.status(500).json({
+      error: 'Failed to process wallet operation',
+      message: error.message
+    });
   }
-<<<<<<< HEAD
-}
-=======
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+});

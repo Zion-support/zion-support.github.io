@@ -1,30 +1,50 @@
-<<<<<<< HEAD
-export default function handler(req, res) {
-=======
-export default async (req, res) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+const withErrorLogging = (handler) => {
+  return async (req, res) => {
+    try {
+      return await handler(req, res);
+    } catch (error) {
+      console.error('API Error:', error);
+      res.status(500).json({
+        error: 'Internal server error',
+        message: error.message
+      });
+    }
+  };
+};
+
+export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const { error, stack, userAgent, url } = req.body;
-    
+    const { error, stack, url, userAgent, timestamp } = req.body;
+
+    if (!error) {
+      return res.status(400).json({
+        error: 'Missing required field: error'
+      });
+    }
+
+    // Log the error for debugging
     console.error('Client Error Report:', {
       error,
       stack,
-      userAgent,
       url,
-      timestamp: new Date().toISOString()
+      userAgent,
+      timestamp: timestamp || new Date().toISOString()
     });
 
-    res.status(200).json({ message: 'Error reported successfully' });
+    res.status(200).json({
+      success: true,
+      message: 'Error reported successfully'
+    });
+
   } catch (error) {
-    console.error('Error reporting failed:', error);
-    res.status(500).json({ error: 'Failed to report error' });
+    console.error('Error reporting error:', error);
+    res.status(500).json({
+      error: 'Failed to report error',
+      message: error.message
+    });
   }
-<<<<<<< HEAD
-}
-=======
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+});

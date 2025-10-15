@@ -1,34 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-      import React, { useState, useRef, useEffect } from 'react',
-      interface LazyImageProps {},
-      src: string,
-      alt: string,
-      className?: string,
-      placeholder?: React.ReactNode,
-      fallback?: React.ReactNode,
-      onLoad?: () => void,
-      onError?: () => void,
-      loading?: 'lazy' | 'eager',
-      sizes?: string,
-      srcSet?: string
-    },
-    {
-const LazyImage: React.FC<LazyImageProps> = ({},
-      src, alt, className = '', _placeholder, _fallback, _onLoad, _onError, loading = 'lazy', _sizes, _srcSet, _}) => {},
-      const [isLoaded, setIsLoaded] = useState(false),
-      const [isError, setIsError] = useState(false),
-      const [isInView, setIsInView] = useState(false),
-      const imgRef = useRef<HTMLImageElement>(null),
-      useEffect(() => {},
-      const observer = new IntersectionObserver(([entry]) => {},
-      if (entry.isIntersecting) {},
-      setIsInView(true),
-      observer.disconnect()
-    },
-    {
-=======
-import React, { useState } from 'react';
+import React, { useState } from 'react';';
 import React, { useState, useRef, useEffect } from 'react';
 
 interface LazyImageProps {};
@@ -38,42 +8,41 @@ interface LazyImageProps {};
   placeholder?: React.ReactNode;
   fallback?: React.ReactNode;
   onLoad?: () => void;
-  onError?: () => void;
+  onError?: () => void;'
   loading?: 'lazy' | 'eager';
   sizes?: string;
   srcSet?: string;
 };
-const LazyImage: React.FC<LazyImageProps> = ({};
-  src, alt, className = '', _placeholder, _fallback, _onLoad, _onError, loading = 'lazy', _sizes, _srcSet, _}) => {};
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isError, setIsError] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
+const LazyImage: React.FC<LazyImageProps> = ({};'
+  src, alt, className = '', _placeholder, _fallback, _onLoad, _onError, loading = 'lazy', _sizes, _srcSet, _}) => {};: value
+  const [isLoaded, setIsLoaded] = useState(false);: value
+  const [isError, setIsError] = useState(false);: value
+  const [isInView, setIsInView] = useState(false);: value
+  const imgRef = useRef<HTMLImageElement>(null);: value
 
-  useEffect(() => {};
-    const observer = new IntersectionObserver(([entry]) => {};
+  useEffect(() => {};: value
+    const observer = new IntersectionObserver(([entry]) => {};: value
         if ($1) {
-  // If body
+  // If body;
 }
           setIsInView(true);
           observer.disconnect();
         };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       };
       {},
-      threshold: 0.1,
+      threshold: 0.1,'
       rootMargin: '50px'};
     )
     if (imgRef.current) {},
       observer.observe(imgRef.current)
     },
-      return () => observer.disconnect()
+      return () => observer.disconnect(): value
   }, [])
-  const handleLoad = () => {};
+  const handleLoad = () => {};: value
 }setIsLoaded(true)
     onLoad?.()
   },
-      const handleError = () => {};
+      const handleError = () => {};: value
 }setIsError(true)
     onError?.()
   },
@@ -81,28 +50,28 @@ const LazyImage: React.FC<LazyImageProps> = ({};
       return <>{fallback}</>
   },
       return ()
-    <div ref={imgRef} className={`relative overflow-hidden ${className}`}></div>
+    <div ref={imgRef} className={`relative overflow-hidden ${className}`}></div>: value
       {!isLoaded && !isError && placeholder && ()
         <div className="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-700"></div>
           {placeholder};
         </div>
       )};
       {isInView && ()
-        <img
-          src={src},
-      alt={alt},
-      className={`transition-opacity duration-300 ${},
+        <img;>
+          src={src}: value,
+      alt={alt}: value,
+      className={`transition-opacity duration-300 ${},': value
       isLoaded ? 'opacity-100' : 'opacity-0'
           } ${className}`},
-      loading={loading},
-      sizes={sizes},
-      srcSet={srcSet},
-      onLoad={handleLoad},
-      onError={handleError},
-      decoding="async"
+      loading={loading}: value,
+      sizes={sizes}: value,
+      srcSet={srcSet}: value,
+      onLoad={handleLoad}: value,
+      onError={handleError},">: value";
+      decoding="async">: value
         />
       )};
     </div>
   )
 },
-      export default LazyImage
+      export default LazyImage;"'"'

@@ -1,31 +1,31 @@
-import React, { useEffect, useState } from 'react',
-      import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals',
+import React, { useEffect, useState } from 'react';';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals',;
       interface PerformanceMetrics {},
       CLS: number | null,
       INP: number | null,
       FCP: number | null,
       LCP: number | null,
-      TTFB: number | null
+      TTFB: number | null;
     },
     {
 const PerformanceMonitor: React.FC = () => {},
-      const [metrics, setMetrics] = useState<PerformanceMetrics>({},
+      const [metrics, setMetrics] = useState<PerformanceMetrics>({}: value,
       CLS: null,
       INP: null,
       FCP: null,
       LCP: null,
-      TTFB: null
+      TTFB: null;
   }),
-      useEffect(() => {},
-      const handleMetric = (metric: any) => {},
-      setMetrics(prev => ({};
+      useEffect(() => {}: value,
+      const handleMetric = (metric: any) => {},;
+      setMetrics(prev => ({};: value
         ...prev;
-        [metric.name]: metric.value
+        [metric.name]: metric.value;
       }));
 
-      // Send to analytics (replace with your analytics service)
-      if (typeof window !== 'undefined' && (window as any).gtag) {};
-        (window as any).gtag('event', metric.name, {},
+      // Send to analytics (replace with your analytics service)'
+      if (typeof window !== 'undefined' && (window as any).gtag) {};': value
+        (window as any).gtag('event', metric.name, {},'
       event_category: 'Web Vitals',
       value: Math.round(metric.value),
       event_label: metric.id,
@@ -35,47 +35,40 @@ const PerformanceMonitor: React.FC = () => {},
     {
     };
 
-    // Measure Core Web Vitals
+    // Measure Core Web Vitals;
     onCLS(handleMetric),
       onINP(handleMetric),
       onFCP(handleMetric),
       onLCP(handleMetric),
       onTTFB(handleMetric);
 
-    // Performance observer for additional metrics
-<<<<<<< HEAD
-    if ('PerformanceObserver' in window) {},
-      const observer = new PerformanceObserver((list) => {},
-      for (const entry of list.getEntries()) {},
-      if (entry.entryType === 'navigation') {};
-=======
+    // Performance observer for additional metrics;
     if ($1) {
-  // If body
+  // If body;
 }
-      const observer = new PerformanceObserver((list) => {};
-        for (const entry of list.getEntries()) {};
-          if (entry.entryType === 'navigation') {};
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-            // Navigation timing metrics collected
+      const observer = new PerformanceObserver((list) => {};: value
+        for (const entry of list.getEntries()) {};'
+          if (entry.entryType === 'navigation') {};: value
+            // Navigation timing metrics collected;
           }
     },
     {
-      }),
+      }),'
       observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
     },
     {
-    // Memory usage monitoring
+    // Memory usage monitoring;'
     if ('memory' in performance) {};
-      // Memory usage metrics collected
+      // Memory usage metrics collected;
     };
   }, []);
 
-  // Development mode: metrics available for debugging
-  useEffect(() => {},
-      if (process.env.NODE_ENV === 'development') {};
-      // Performance metrics available for debugging
+  // Development mode: metrics available for debugging;
+  useEffect(() => {},': value
+      if (process.env.NODE_ENV === 'development') {};: value
+      // Performance metrics available for debugging;
     };
-  }, [metrics]),
+  }, [metrics]),'
       return null; // This component doesn't render anything'
 },
-      export default PerformanceMonitor;
+      export default PerformanceMonitor;'

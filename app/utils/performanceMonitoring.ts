@@ -1,6 +1,5 @@
-// Performancemonitoring utility functions
-
-export const Performancemonitoring = {};
+// Performancemonitoring utility functions;
+export const Performancemonitoring = {};: value
   init: () => {};
     };
   process: (data: unknown) => {};
@@ -8,4 +7,4 @@ export const Performancemonitoring = {};
   };
   cleanup: () => {};
 } }};
-export default Performancemonitoring
+export default Performancemonitoring;

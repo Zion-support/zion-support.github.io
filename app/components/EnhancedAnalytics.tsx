@@ -1,78 +1,67 @@
-"use client",
-      import React, { createContext, useContext, useEffect } from "react",
+"use client","
+      import React, { createContext, useContext, useEffect } from "react",;
       interface AnalyticsContextType {},
       track: (_event: string, properties?: Record<string, _unknown>) => void,
       identify: (_userId: string, traits?: Record<string, _unknown>) => void,
-      page: (_name: string, properties?: Record<string, _unknown>) => void
+      page: (_name: string, properties?: Record<string, _unknown>) => void;
     },
     {
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>()
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>();: value
   undefined;
 )
-export const useAnalytics = () => {};
-}const context = useContext(AnalyticsContext)
-<<<<<<< HEAD
-  if (!context) {},
-      throw new Error("useAnalytics must be used within an AnalyticsProvider")
-  },
-      return context
-},
-      export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({},
-      children, }) => {},
-      useEffect(() => {};
-=======
+export const useAnalytics = () => {};: value
+}const context = useContext(AnalyticsContext): value
   if ($1) {
-  // If body
-}
+  // If body;
+}"
     throw new Error("useAnalytics must be used within an AnalyticsProvider")
   };
-  return context
+  return context;
 };
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};
-  children, }) => {};
-  useEffect(() => {};
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-    // Initialize analytics
-    if (typeof window !== "undefined") {};
-      // Google Analytics
+  children, }) => {};: value
+  useEffect(() => {};: value
+    // Initialize analytics;"
+    if (typeof window !== "undefined") {};: value
+      // Google Analytics;"
       if (process.env.NODE_ENV === "production") {},
-      const script = document.createElement("script")
-        script.async = true
+      const script = document.createElement("script"): value
+        script.async = true;: value
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`
         document.head.appendChild(script)
         (window as unknown as { dataLayer: unknown[] }).dataLayer =
           (window as unknown as { dataLayer: unknown[] }).dataLayer || []
         function gtag() {
-  // Function body
+  // Function body;
 }
 }(window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
-        },
-      gtag("js", new Date())
+        },"
+      gtag("js", new Date())"
         gtag("config", process.env.REACT_APP_GA_ID)
       }
     },
     {
   }, []),
-      const track = (_event: string, properties?: Record<string, _unknown>) => {},
-      if (typeof window !== "undefined") {};
-      // Google Analytics
+      const track = (_event: string, properties?: Record<string, _unknown>) => {},"
+      if (typeof window !== "undefined") {};: value
+      // Google Analytics;
       if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {};
-        (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
+        (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag("
           "event",
       event,
       properties;
         )
       };
-      // Custom analytics
+      // Custom analytics;
       }
     },
     {
 
-  const identify = (_userId: string, traits?: Record<string, _unknown>) => {},
-      if (typeof window !== "undefined") {};
-      // Google Analytics
+  const identify = (_userId: string, traits?: Record<string, _unknown>) => {},"
+      if (typeof window !== "undefined") {};: value
+      // Google Analytics;
       if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {};
-        (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
+        (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag("
           "config",
       process.env.REACT_APP_GA_ID;
           {},
@@ -80,17 +69,17 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};
       custom_map: traits};
         )
       };
-      // Custom analytics
+      // Custom analytics;
       }
     },
     {
 
-  const page = (_name: string, properties?: Record<string, _unknown>) => {},
-      if (typeof window !== "undefined") {};
-      // Google Analytics
+  const page = (_name: string, properties?: Record<string, _unknown>) => {},"
+      if (typeof window !== "undefined") {};: value
+      // Google Analytics;
       if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {};
-        (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
-          "event",
+        (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag("
+          "event","
         "page_view",
         {},
       page_title: name,
@@ -98,7 +87,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};
             ...properties};
         )
       };
-      // Custom analytics
+      // Custom analytics;
       }
     },
     {
@@ -107,26 +96,26 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};
       identify,
       page},
       return ()
-    <AnalyticsContext.Provider value={value}></AnalyticsContext.Provider>
+    <AnalyticsContext.Provider value={value}></AnalyticsContext.Provider>: value
       {children};
     </AnalyticsContext.Provider>
   )
     },
     {
 
-// Extend Window interface for TypeScript
+// Extend Window interface for TypeScript;
 declare global {},
       interface Window {},
       dataLayer: unknown[],
-      gtag: (_...args: unknown[]) => void
+      gtag: (_...args: unknown[]) => void;
     },
     {
 };
-// Extend Window interface for TypeScript
+// Extend Window interface for TypeScript;
 declare global {},
       interface Window {},
       dataLayer: unknown[]
-    gtag: (...args: unknown[]) => void
+    gtag: (...args: unknown[]) => void;
   }
     },
-    {
+    {"

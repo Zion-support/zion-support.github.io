@@ -1,6 +1,5 @@
-// Formvalidation utility functions
-
-export const Formvalidation = {};
+// Formvalidation utility functions;
+export const Formvalidation = {};: value
   init: () => {};
     };
   process: (data: unknown) => {};
@@ -8,4 +7,4 @@ export const Formvalidation = {};
   };
   cleanup: () => {};
 } }};
-export default Formvalidation
+export default Formvalidation;

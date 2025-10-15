@@ -1,6 +1,5 @@
-// Logger utility functions
-
-export const Logger = {};
+// Logger utility functions;
+export const Logger = {};: value
   init: () => {};
     };
   process: (data: unknown) => {};
@@ -8,4 +7,4 @@ export const Logger = {};
   };
   cleanup: () => {};
 } }};
-export default Logger
+export default Logger;

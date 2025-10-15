@@ -1,6 +1,5 @@
-// Performanceutils utility functions
-
-export const Performanceutils = {};
+// Performanceutils utility functions;
+export const Performanceutils = {};: value
   init: () => {};
     };
   process: (data: unknown) => {};
@@ -8,4 +7,4 @@ export const Performanceutils = {};
   };
   cleanup: () => {};
 } }};
-export default Performanceutils
+export default Performanceutils;
