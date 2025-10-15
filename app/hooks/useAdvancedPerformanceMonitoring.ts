@@ -168,9 +168,8 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 
         observer.observe({ entryTypes });
         observerRef.current = observer;
-
-
-
+      } catch (error) {
+        console.warn('Performance observer setup failed:', error);
       }
     };
 
@@ -184,19 +183,20 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
         const usedMB = memory.usedJSHeapSize / 1048576;
         const totalMB = memory.totalJSHeapSize / 1048576;
         const limitMB = memory.jsHeapSizeLimit / 1048576;
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
 
-          metricsRef.current.memory = {
-            used: usedMB,
-            total: totalMB,
-            limit: limitMB,
-          };
-          // Alert if memory usage is high
-          if (usedMB / limitMB > memoryThreshold) {
-            reportMetric('HIGH_MEMORY_USAGE', (usedMB / limitMB) * 100, 'Performance');
-          }
+        metricsRef.current.memory = {
+          used: usedMB,
+          total: totalMB,
+          limit: limitMB,
+        };
+        // Alert if memory usage is high
+        if (usedMB / limitMB > memoryThreshold) {
+          reportMetric('HIGH_MEMORY_USAGE', (usedMB / limitMB) * 100, 'Performance');
         }
-      };
+      } catch (error) {
+        console.warn('Memory monitoring failed:', error);
+      }
+    };
 
       checkMemory();
       const interval = setInterval(checkMemory, 10000); // Check every 10 seconds
@@ -210,10 +210,8 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-
+          const metric = entry as any;
           if (!metric.hadRecentInput) {
-
-
             clsValue += metric.value;
             metricsRef.current.cls = clsValue;
           }
@@ -222,8 +220,8 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-
+      } catch (error) {
+        console.warn('Layout shift monitoring failed:', error);
       }
 
       return () => clsObserver.disconnect();

@@ -121,21 +121,21 @@ const CriticalResourcePreloader = () => {
     const preloadOnHover = () => {
       const links = document.querySelectorAll('a[href^="/"]')
       
-      links.forEach((link => {
+      links.forEach((link) => {
         link.addEventListener('mouseenter', () => {
-          const href = link.getAttribute('href')
+          const href = link.getAttribute('href');
           if (href && !document.querySelector(`link[href="${href}"]`)) {
-            const preloadLink = document.createElement('link')
-            preloadLink.rel = 'prefetch'
-            preloadLink.href = href
-            document.head.appendChild(preloadLink)
+            const preloadLink = document.createElement('link');
+            preloadLink.rel = 'prefetch';
+            preloadLink.href = href;
+            document.head.appendChild(preloadLink);
           }
-        })
-      })
-    }
+        });
+      });
+    };
 
     // Initialize hover preloading after a delay
-    setTimeout(preloadOnHover, 2000)
+    setTimeout(preloadOnHover, 2000);
 
   }, [])
 

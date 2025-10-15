@@ -8,7 +8,7 @@ interface FuturisticCardProps {
   hover?: boolean;
 }
 
-const FuturisticCard = (_{ 
+const FuturisticCard = ({ 
   children, className, glowColor = 'cyan', hover = true 
 }: FuturisticCardProps) => {
   const glowColors = {

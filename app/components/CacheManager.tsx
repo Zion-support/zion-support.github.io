@@ -1,6 +1,5 @@
 'use client'
-import React, { useState } from 'react';
-import { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react';
 
 interface CacheStats {
   hits: number
@@ -20,10 +19,16 @@ const CacheManager = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-          } catch (error) {
-          }
+    const initializeCache = () => {
+      try {
+        // Initialize cache logic here
+      } catch (error) {
+        console.error('Cache initialization error:', error);
       }
-    }
+    };
+    
+    initializeCache();
+  }, []);
 
     // Cache API for dynamic caching
     const setupCacheStrategy = () => {
@@ -42,23 +47,27 @@ const CacheManager = () => {
         try {
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
+        } catch (error) {
+          console.error('Failed to cache static assets:', error);
         }
-      }
+      };
 
       // Cache API responses
       const cacheAPIResponses = async (request: Request) => {
         try {
-          const cache = await caches.open(CACHE_NAME)
-          const response = await fetch(request)
+          const cache = await caches.open(CACHE_NAME);
+          const response = await fetch(request);
           
           if (response.ok) {
-            cache.put(request, response.clone())
+            cache.put(request, response.clone());
           }
           
-          return response
+          return response;
+        } catch (error) {
+          console.error('Failed to cache API response:', error);
           return fetch(request);
         }
-      }
+      };
 
       // Initialize caching
       cacheStaticAssets()
@@ -113,27 +122,51 @@ const CacheManager = () => {
               imageObserver.unobserve(img)
             }
           }
-        })
+        });
+      });
+    };
+
+    const updateStats = () => {
+      // Update cache statistics
+      if ('caches' in window) {
+        caches.keys().then(cacheNames => {
+          let totalSize = 0;
+          cacheNames.forEach(cacheName => {
+            caches.open(cacheName).then(cache => {
+              cache.keys().then(requests => {
+                requests.forEach(request => {
+                  cache.match(request).then(response => {
+                    if (response) {
+                      totalSize += response.headers.get('content-length') ? 
+                        parseInt(response.headers.get('content-length')!) : 0;
+                    }
+                  });
+                });
+              });
+            });
+          });
+          setStats(prev => ({ ...prev, size: totalSize }));
+        });
       }
-    }
+    };
 
-    updateStats()
-    const interval = setInterval(updateStats, 5000)
+    updateStats();
+    const interval = setInterval(updateStats, 5000);
 
-    return () => clearInterval(interval)
-  }, [])
+    return () => clearInterval(interval);
+  }, []);
 
   // Toggle visibility with keyboard shortcut (Ctrl+Shift+C)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-        e.preventDefault()
-        setIsVisible(prev => !prev)
+        e.preventDefault();
+        setIsVisible(prev => !prev);
       }
     }
 
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, [])
 
   const clearCache = async () => {
@@ -212,7 +245,7 @@ const CacheManager = () => {
         Press Ctrl+Shift+C to toggle
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CacheManager
+export default CacheManager;

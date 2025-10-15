@@ -92,7 +92,7 @@ const AdvancedSEOOptimizer: React.FC = () => {
     analyzeSEO();
   }, [analyzeSEO]);
 
-  const optimizeSEO = useCallback(_async () => {
+  const optimizeSEO = useCallback(async () => {
     setIsOptimizing(true);
     
     // Simulate optimization process
@@ -129,7 +129,7 @@ const AdvancedSEOOptimizer: React.FC = () => {
     setTimeout(analyzeSEO, 1000);
   }, [settings, analyzeSEO]);
 
-  const toggleSetting = (_key: keyof SEOSettings) => {
+  const toggleSetting = (key: keyof SEOSettings) => {
     setSettings(prev => ({
       ...prev,
       [key]: !prev[key]
