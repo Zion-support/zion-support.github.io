@@ -1,17 +1,15 @@
 import React from 'react';
 
-interface FuturisticTextProps {
+interface ResponsiveTextProps {
   children: React.ReactNode;
   className?: string;
-  variant?: 'default' | 'gradient' | 'glow';
   size?: 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl';
   weight?: 'normal' | 'medium' | 'semibold' | 'bold';
 }
 
-const FuturisticText: React.FC<FuturisticTextProps> = ({ 
+const ResponsiveText: React.FC<ResponsiveTextProps> = ({ 
   children, 
   className = '',
-  variant = 'default',
   size = 'base',
   weight = 'normal'
 }) => {
@@ -34,17 +32,11 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
     bold: 'font-bold',
   };
 
-  const variantClasses = {
-    default: 'text-white',
-    gradient: 'bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent',
-    glow: 'text-cyan-400 drop-shadow-[0_0_10px_rgba(6,182,212,0.5)]',
-  };
-
   return (
-    <div className={`${sizeClasses[size]} ${weightClasses[weight]} ${variantClasses[variant]} ${className}`}>
+    <div className={`${sizeClasses[size]} ${weightClasses[weight]} ${className}`}>
       {children}
     </div>
   );
 };
 
-export default FuturisticText;
+export default ResponsiveText;
