@@ -170,18 +170,46 @@ const Footer: React.FC = () => {
 
         {/* Contact Info */}
         <div className="mt-8 pt-8 border-t border-slate-700">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center text-gray-400 text-sm">
-              <PhoneIcon className="w-4 h-4 mr-2" />
-              <span>+1 302 464 0950</span>
+              <PhoneIcon className="w-4 h-4 mr-2 text-purple-400" />
+              <a href="tel:+13024640950" className="hover:text-white transition-colors">
+                +1 302 464 0950
+              </a>
             </div>
             <div className="flex items-center text-gray-400 text-sm">
-              <EnvelopeIcon className="w-4 h-4 mr-2" />
-              <span>kleber@ziontechgroup.com</span>
+              <EnvelopeIcon className="w-4 h-4 mr-2 text-purple-400" />
+              <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
+                kleber@ziontechgroup.com
+              </a>
             </div>
             <div className="flex items-center text-gray-400 text-sm">
-              <MapPinIcon className="w-4 h-4 mr-2" />
+              <MapPinIcon className="w-4 h-4 mr-2 text-purple-400" />
               <span>364 E Main St STE 1008 Middletown DE 19709</span>
+            </div>
+          </div>
+          
+          {/* Additional Contact Info */}
+          <div className="mt-6 pt-6 border-t border-slate-700">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="text-white font-semibold mb-3">Business Hours</h4>
+                <div className="text-gray-400 text-sm space-y-1">
+                  <div>Monday - Friday: 9:00 AM - 6:00 PM EST</div>
+                  <div>Saturday: 10:00 AM - 4:00 PM EST</div>
+                  <div>Sunday: Closed</div>
+                  <div className="text-purple-400 font-medium">24/7 Emergency Support Available</div>
+                </div>
+              </div>
+              <div>
+                <h4 className="text-white font-semibold mb-3">Quick Links</h4>
+                <div className="text-gray-400 text-sm space-y-1">
+                  <div><a href="https://ziontechgroup.com/support" className="hover:text-white transition-colors">Support Center</a></div>
+                  <div><a href="https://ziontechgroup.com/demo" className="hover:text-white transition-colors">Schedule Demo</a></div>
+                  <div><a href="https://ziontechgroup.com/contact" className="hover:text-white transition-colors">Get Quote</a></div>
+                  <div><a href="https://ziontechgroup.com/blog" className="hover:text-white transition-colors">Latest News</a></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

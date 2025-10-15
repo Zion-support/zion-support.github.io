@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -33,6 +33,8 @@ import {
 } from 'lucide-react';
 
 const AISolutionsPage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
   const aiServices = [
     {
       id: 'ai-chatbot-enterprise',
@@ -62,7 +64,8 @@ const AISolutionsPage: React.FC = () => {
       ],
       category: 'Conversational AI',
       icon: <MessageSquare className="w-8 h-8 text-cyan-400" />,
-      popular: true
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-chatbot-enterprise'
     },
     {
       id: 'ai-computer-vision',
@@ -92,7 +95,8 @@ const AISolutionsPage: React.FC = () => {
       ],
       category: 'Computer Vision',
       icon: <Eye className="w-8 h-8 text-green-400" />,
-      popular: false
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-computer-vision'
     },
     {
       id: 'ai-content-generation-pro',
@@ -122,7 +126,8 @@ const AISolutionsPage: React.FC = () => {
       ],
       category: 'Content Creation',
       icon: <FileText className="w-8 h-8 text-purple-400" />,
-      popular: true
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-content-generation-pro'
     },
     {
       id: 'ai-analytics-dashboard-pro',
@@ -152,7 +157,8 @@ const AISolutionsPage: React.FC = () => {
       ],
       category: 'Analytics',
       icon: <BarChart3 className="w-8 h-8 text-blue-400" />,
-      popular: false
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-analytics-dashboard-pro'
     },
     {
       id: 'ai-automation-platform',
@@ -182,7 +188,8 @@ const AISolutionsPage: React.FC = () => {
       ],
       category: 'Automation',
       icon: <Settings className="w-8 h-8 text-orange-400" />,
-      popular: true
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-automation-platform'
     },
     {
       id: 'ai-blockchain-solutions',
@@ -212,11 +219,198 @@ const AISolutionsPage: React.FC = () => {
       ],
       category: 'Blockchain',
       icon: <Network className="w-8 h-8 text-yellow-400" />,
-      popular: false
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-blockchain-solutions'
+    },
+    {
+      id: 'ai-3d-generation',
+      name: 'AI 3D Generation Studio',
+      price: '$399/mo',
+      originalPrice: '$699/mo',
+      description: 'Generate 3D models and animations with AI',
+      longDescription: 'Create stunning 3D models, animations, and virtual environments using our advanced AI-powered 3D generation platform.',
+      features: [
+        '3D Model Generation',
+        'Texture Synthesis',
+        'Animation Creation',
+        'Virtual Environment Building',
+        'AR/VR Content',
+        'Game Asset Creation',
+        'Architectural Visualization',
+        'Product Prototyping',
+        'Custom Style Transfer',
+        'Export to Multiple Formats'
+      ],
+      benefits: [
+        'Reduce 3D creation time by 90%',
+        'Lower production costs',
+        'Enable rapid prototyping',
+        'Scale content creation',
+        'Democratize 3D design'
+      ],
+      category: 'Creative AI',
+      icon: <Cpu className="w-8 h-8 text-purple-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-3d-generation'
+    },
+    {
+      id: 'ai-cybersecurity-monitor',
+      name: 'AI Cybersecurity Monitor Pro',
+      price: '$499/mo',
+      originalPrice: '$999/mo',
+      description: 'Advanced AI-powered cybersecurity monitoring and threat detection',
+      longDescription: 'Protect your digital assets with our comprehensive AI-powered cybersecurity platform that provides real-time threat detection and response.',
+      features: [
+        'Real-time Threat Detection',
+        'Behavioral Analysis',
+        'Anomaly Detection',
+        'Automated Response',
+        'Threat Intelligence',
+        'Vulnerability Scanning',
+        'Incident Response',
+        'Compliance Monitoring',
+        'Security Analytics',
+        '24/7 Monitoring'
+      ],
+      benefits: [
+        'Detect threats in real-time',
+        'Reduce false positives by 80%',
+        'Automate security responses',
+        'Improve security posture',
+        'Ensure compliance'
+      ],
+      category: 'Cybersecurity',
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-cybersecurity-monitor'
+    },
+    {
+      id: 'ai-climate-prediction',
+      name: 'AI Climate Prediction Engine',
+      price: '$799/mo',
+      originalPrice: '$1499/mo',
+      description: 'Advanced climate modeling and weather prediction using AI',
+      longDescription: 'Predict weather patterns and climate changes with unprecedented accuracy using our AI-powered climate modeling platform.',
+      features: [
+        'Weather Forecasting',
+        'Climate Modeling',
+        'Extreme Event Prediction',
+        'Agricultural Insights',
+        'Energy Demand Forecasting',
+        'Disaster Risk Assessment',
+        'Environmental Monitoring',
+        'Data Integration',
+        'Custom Models',
+        'API Access'
+      ],
+      benefits: [
+        'Improve forecast accuracy by 40%',
+        'Enable better planning',
+        'Reduce weather-related risks',
+        'Optimize resource allocation',
+        'Support climate research'
+      ],
+      category: 'Climate AI',
+      icon: <Globe className="w-8 h-8 text-green-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-climate-prediction'
+    },
+    {
+      id: 'ai-code-assistant-pro',
+      name: 'AI Code Assistant Pro',
+      price: '$149/mo',
+      originalPrice: '$299/mo',
+      description: 'Advanced AI-powered coding assistant and code review tool',
+      longDescription: 'Enhance your coding productivity with our AI-powered assistant that provides intelligent code suggestions, reviews, and optimization.',
+      features: [
+        'Code Generation',
+        'Code Review & Analysis',
+        'Bug Detection',
+        'Performance Optimization',
+        'Documentation Generation',
+        'Test Case Creation',
+        'Refactoring Suggestions',
+        'Multi-language Support',
+        'IDE Integration',
+        'Team Collaboration'
+      ],
+      benefits: [
+        'Increase coding speed by 50%',
+        'Reduce bugs by 70%',
+        'Improve code quality',
+        'Accelerate learning',
+        'Enhance team productivity'
+      ],
+      category: 'Development',
+      icon: <Code className="w-8 h-8 text-blue-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-code-assistant-pro'
+    },
+    {
+      id: 'ai-conversation-analytics',
+      name: 'AI Conversation Analytics',
+      price: '$199/mo',
+      originalPrice: '$399/mo',
+      description: 'Analyze and optimize customer conversations with AI',
+      longDescription: 'Gain deep insights into customer interactions with our AI-powered conversation analytics platform that analyzes sentiment, intent, and outcomes.',
+      features: [
+        'Sentiment Analysis',
+        'Intent Recognition',
+        'Conversation Flow Analysis',
+        'Performance Metrics',
+        'Agent Coaching',
+        'Customer Journey Mapping',
+        'Real-time Insights',
+        'Custom Dashboards',
+        'Integration APIs',
+        'Predictive Analytics'
+      ],
+      benefits: [
+        'Improve customer satisfaction',
+        'Optimize agent performance',
+        'Identify training needs',
+        'Reduce resolution time',
+        'Increase conversion rates'
+      ],
+      category: 'Analytics',
+      icon: <MessageSquare className="w-8 h-8 text-cyan-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-conversation-analytics'
+    },
+    {
+      id: 'ai-autonomous-systems',
+      name: 'AI Autonomous Systems Platform',
+      price: '$999/mo',
+      originalPrice: '$1999/mo',
+      description: 'Build and deploy autonomous systems with AI',
+      longDescription: 'Create intelligent autonomous systems for robotics, drones, and IoT devices using our comprehensive AI platform.',
+      features: [
+        'Autonomous Navigation',
+        'Object Recognition',
+        'Decision Making',
+        'Path Planning',
+        'Sensor Fusion',
+        'Real-time Processing',
+        'Edge Computing',
+        'Simulation Environment',
+        'Deployment Tools',
+        'Monitoring & Analytics'
+      ],
+      benefits: [
+        'Enable autonomous operations',
+        'Reduce human intervention',
+        'Improve efficiency',
+        'Scale automation',
+        'Create intelligent systems'
+      ],
+      category: 'Autonomous Systems',
+      icon: <Rocket className="w-8 h-8 text-orange-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-autonomous-systems'
     }
   ];
 
-  const categories = ['All', 'Conversational AI', 'Computer Vision', 'Content Creation', 'Analytics', 'Automation', 'Blockchain'];
+  const categories = ['All', 'Conversational AI', 'Computer Vision', 'Content Creation', 'Analytics', 'Automation', 'Blockchain', 'Creative AI', 'Cybersecurity', 'Climate AI', 'Development', 'Autonomous Systems'];
 
   const useCases = [
     {
@@ -289,10 +483,13 @@ const AISolutionsPage: React.FC = () => {
     }
   ];
 
+  const filteredServices = selectedCategory === 'All' 
+    ? aiServices 
+    : aiServices.filter(service => service.category === selectedCategory);
+
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>AI Solutions - Advanced Artificial Intelligence Services | Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive AI solutions including chatbots, computer vision, content generation, analytics, and automation. Transform your business with cutting-edge AI technology." />
         <meta name="keywords" content="AI solutions, artificial intelligence, chatbots, computer vision, content generation, analytics, automation, machine learning" />
@@ -307,41 +504,6 @@ const AISolutionsPage: React.FC = () => {
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-=======
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-
-import { Link } from "react-router-dom";
-
-export default function GDataAnalyticsZionTechGroupPage() {
-  return (
-    <>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Ai Solutions</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional ai solutions services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
-=======
-        <title>AI Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">AI Solutions</h1>
-          <p className="text-gray-300 text-center">Discover our comprehensive AI solutions and services.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -414,6 +576,27 @@ export default function GDataAnalyticsZionTechGroupPage() {
         </div>
       </section>
 
+      {/* Category Filter */}
+      <section className="py-8 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                  selectedCategory === category
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg'
+                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-white'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
@@ -427,7 +610,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => (
+            {filteredServices.map((service, index) => (
               <div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group relative ${
                 service.popular ? 'ring-2 ring-cyan-500' : ''
               }`}>
@@ -473,12 +656,14 @@ export default function GDataAnalyticsZionTechGroupPage() {
                 </ul>
 
                 <div className="space-y-4">
-                  <Link
-                    to={`/${service.id}`}
+                  <a
+                    href={service.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block w-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                   >
                     Learn More
-                  </Link>
+                  </a>
                   <Link
                     to="/contact"
                     className="block w-full border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white text-center py-3 rounded-lg font-semibold transition-all duration-300"
@@ -572,12 +757,9 @@ export default function GDataAnalyticsZionTechGroupPage() {
             </Link>
           </div>
         </div>
-      </section>    </>
+      </section>
+    </>
   );
-<<<<<<< HEAD
 };
 
 export default AISolutionsPage;
-=======
-}
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56

@@ -645,46 +645,6 @@ export default function AIServices() {
       featured: false
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      name: "AI Security Solutions",
-      description: "Advanced AI-powered security systems to protect your digital assets and infrastructure.",
-      features: ["Threat detection", "Anomaly detection", "Behavioral analysis", "Incident response", "Zero-day protection", "Compliance monitoring"],
-      icon: <Shield className="w-8 h-8" />,
-      applications: ["Cybersecurity", "Fraud prevention", "Access control", "Network monitoring"],
-      price: "Starting at $2,499/month",
-      benefits: ["Prevent 99.9% of threats", "Reduce false positives by 80%", "Real-time threat response", "Compliance automation"]
-    },
-    {
-      name: "AI Content Generation",
-      description: "Revolutionary AI-powered content creation for marketing, documentation, and creative writing.",
-      features: ["Article generation", "Marketing copy", "Technical documentation", "Creative writing", "SEO optimization", "Multi-language support"],
-      icon: <MessageSquare className="w-8 h-8" />,
-      applications: ["Content marketing", "Technical writing", "Blog creation", "Social media content"],
-      price: "Starting at $799/month",
-      benefits: ["Generate 100+ articles daily", "Maintain brand voice consistency", "SEO-optimized content", "Multi-language support"]
-    },
-    {
-      name: "AI Data Analytics",
-      description: "Advanced data analysis and business intelligence powered by artificial intelligence.",
-      features: ["Data mining", "Pattern recognition", "Statistical analysis", "Visualization", "Real-time insights", "Custom reporting"],
-      icon: <BarChart3 className="w-8 h-8" />,
-      applications: ["Business intelligence", "Market research", "Customer analytics", "Performance tracking"],
-      price: "Starting at $1,299/month",
-      benefits: ["Process big data efficiently", "Generate actionable insights", "Real-time analytics", "Custom dashboards"]
-    },
-    {
-      name: "AI Voice & Speech",
-      description: "Cutting-edge voice recognition, synthesis, and conversational AI solutions.",
-      features: ["Speech recognition", "Voice synthesis", "Conversational AI", "Voice cloning", "Multi-language support", "Real-time processing"],
-      icon: <MessageSquare className="w-8 h-8" />,
-      applications: ["Voice assistants", "Call centers", "Accessibility", "Interactive systems"],
-      price: "Starting at $1,599/month",
-      benefits: ["99% speech accuracy", "Natural voice synthesis", "Real-time processing", "Multi-language support"]
-    },
-    {
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
       name: "AI Blockchain Solutions",
       description: "Intelligent blockchain applications with AI-powered smart contracts and analytics.",
       features: ["Smart contracts", "DeFi analytics", "NFT generation", "Blockchain monitoring", "Cryptocurrency analysis", "Risk assessment"],
@@ -692,68 +652,7 @@ export default function AIServices() {
       applications: ["DeFi platforms", "NFT marketplaces", "Cryptocurrency trading", "Supply chain tracking"],
       price: "Starting at $3,999/month",
       benefits: ["Automated smart contracts", "Real-time blockchain analysis", "Fraud detection", "Optimized transactions"]
-<<<<<<< HEAD
     }  ];
-=======
-      id: "ai-time-series-forecasting",
-      name: "AI Time Series Forecasting",
-      description: "Advanced time series analysis with forecasting, trend detection, and seasonal pattern recognition",
-      price: "From $1,500/month",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
-      features: [
-        "Time series forecasting",
-        "Trend detection & analysis",
-        "Seasonal pattern recognition",
-        "Anomaly detection",
-        "Multiple forecasting models",
-        "Confidence intervals",
-        "Real-time predictions",
-        "Custom model development"
-      ],
-      benefits: [
-        "Improve forecasting accuracy",
-        "Identify trends early",
-        "Optimize resource planning",
-        "Make better predictions"
-      ],
-      category: "Analytics",
-      rating: 4.8,
-      reviews: 876,
-      link: "/ai-time-series-forecasting",
-      featured: false
-    },
-    {
-      id: "ai-nlp-text-analysis",
-      name: "AI NLP Text Analysis",
-      description: "Comprehensive natural language processing with text classification, entity extraction, and semantic analysis",
-      price: "From $1,600/month",
-      icon: <FileText className="w-8 h-8" />,
-      color: "from-indigo-500 to-blue-500",
-      features: [
-        "Text classification & categorization",
-        "Named entity recognition",
-        "Sentiment analysis",
-        "Topic modeling",
-        "Text summarization",
-        "Language detection",
-        "Custom model training",
-        "Batch processing"
-      ],
-      benefits: [
-        "Extract insights from text",
-        "Automate text processing",
-        "Improve content organization",
-        "Enhance search capabilities"
-      ],
-      category: "Language Processing",
-      rating: 4.7,
-      reviews: 1123,
-      link: "/ai-nlp-text-analysis",
-      featured: false
-    }
-  ];
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
   const categories = [
     { name: "All", count: aiServices.length, active: true },
@@ -807,8 +706,6 @@ export default function AIServices() {
       content: "AI Content Generation Pro has transformed our content strategy. We're producing 20x more content with better quality and higher engagement rates.",
       rating: 5,
       avatar: "EW"
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
     }
   ];
 

@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -848,13 +843,227 @@ const ITSolutionsPage: React.FC = () => {
       icon: <FileText className="w-8 h-8 text-amber-400" />,
       popular: false,
       link: 'https://ziontechgroup.com/it-audit-compliance'
+    },
+    {
+      id: 'advanced-security-suite',
+      name: 'Advanced Security Suite',
+      price: '$599/mo',
+      originalPrice: '$1199/mo',
+      description: 'Comprehensive enterprise security solution',
+      longDescription: 'Protect your organization with our all-in-one security suite that includes endpoint protection, network security, and threat intelligence.',
+      features: [
+        'Endpoint Detection & Response',
+        'Network Security Monitoring',
+        'Threat Intelligence Platform',
+        'Identity & Access Management',
+        'Data Loss Prevention',
+        'Security Orchestration',
+        'Incident Response',
+        'Compliance Management',
+        'Security Training',
+        '24/7 SOC Support'
+      ],
+      benefits: [
+        'Comprehensive protection',
+        'Reduce security incidents',
+        'Improve response time',
+        'Ensure compliance',
+        'Lower security costs'
+      ],
+      category: 'Security',
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/advanced-security-suite'
+    },
+    {
+      id: 'ai-devops-automation',
+      name: 'AI DevOps Automation',
+      price: '$399/mo',
+      originalPrice: '$799/mo',
+      description: 'Intelligent DevOps automation and monitoring',
+      longDescription: 'Streamline your DevOps processes with our AI-powered automation platform that optimizes deployments, monitoring, and infrastructure management.',
+      features: [
+        'Automated CI/CD Pipelines',
+        'Intelligent Monitoring',
+        'Auto-scaling Infrastructure',
+        'Performance Optimization',
+        'Error Detection & Recovery',
+        'Deployment Automation',
+        'Resource Management',
+        'Cost Optimization',
+        'Security Scanning',
+        'Compliance Automation'
+      ],
+      benefits: [
+        'Reduce deployment time by 80%',
+        'Improve system reliability',
+        'Optimize resource usage',
+        'Automate routine tasks',
+        'Scale operations efficiently'
+      ],
+      category: 'DevOps',
+      icon: <Settings className="w-8 h-8 text-blue-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-devops-automation'
+    },
+    {
+      id: 'edge-computing-platform',
+      name: 'Edge Computing Platform',
+      price: '$799/mo',
+      originalPrice: '$1599/mo',
+      description: 'Distributed edge computing infrastructure',
+      longDescription: 'Deploy and manage edge computing infrastructure with our comprehensive platform that brings compute power closer to your data sources.',
+      features: [
+        'Edge Node Management',
+        'Distributed Computing',
+        'Real-time Processing',
+        'Data Synchronization',
+        'Load Balancing',
+        'Security & Encryption',
+        'Monitoring & Analytics',
+        'Auto-scaling',
+        'Multi-cloud Integration',
+        'Custom Applications'
+      ],
+      benefits: [
+        'Reduce latency by 90%',
+        'Improve performance',
+        'Lower bandwidth costs',
+        'Enable real-time processing',
+        'Scale globally'
+      ],
+      category: 'Edge Computing',
+      icon: <Wifi className="w-8 h-8 text-green-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/edge-computing-platform'
+    },
+    {
+      id: 'quantum-ready-infrastructure',
+      name: 'Quantum-Ready Infrastructure',
+      price: '$1999/mo',
+      originalPrice: '$3999/mo',
+      description: 'Future-proof infrastructure for quantum computing',
+      longDescription: 'Prepare your infrastructure for the quantum computing era with our specialized platform that bridges classical and quantum systems.',
+      features: [
+        'Quantum Algorithm Development',
+        'Hybrid Classical-Quantum Computing',
+        'Quantum Security Implementation',
+        'Quantum Simulation',
+        'Quantum Network Management',
+        'Cryptographic Migration',
+        'Performance Optimization',
+        'Training & Support',
+        'Research Collaboration',
+        'Future Technology Integration'
+      ],
+      benefits: [
+        'Future-proof your infrastructure',
+        'Prepare for quantum era',
+        'Enhance security',
+        'Gain competitive advantage',
+        'Access cutting-edge technology'
+      ],
+      category: 'Quantum Computing',
+      icon: <Cpu className="w-8 h-8 text-purple-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/quantum-ready-infrastructure'
+    },
+    {
+      id: 'iot-management-platform',
+      name: 'IoT Management Platform',
+      price: '$299/mo',
+      originalPrice: '$599/mo',
+      description: 'Comprehensive IoT device and data management',
+      longDescription: 'Manage and monitor your IoT ecosystem with our comprehensive platform that handles device provisioning, data collection, and analytics.',
+      features: [
+        'Device Management',
+        'Data Collection & Processing',
+        'Real-time Monitoring',
+        'Predictive Maintenance',
+        'Security Management',
+        'Firmware Updates',
+        'Analytics Dashboard',
+        'API Integration',
+        'Custom Applications',
+        'Scalable Infrastructure'
+      ],
+      benefits: [
+        'Centralize IoT management',
+        'Improve device reliability',
+        'Enable predictive maintenance',
+        'Reduce operational costs',
+        'Scale IoT deployments'
+      ],
+      category: 'IoT',
+      icon: <Wifi className="w-8 h-8 text-cyan-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/iot-management-platform'
+    },
+    {
+      id: 'ai-powered-monitoring',
+      name: 'AI-Powered Infrastructure Monitoring',
+      price: '$199/mo',
+      originalPrice: '$399/mo',
+      description: 'Intelligent infrastructure monitoring and alerting',
+      longDescription: 'Monitor your IT infrastructure with AI-powered insights that predict issues before they occur and provide intelligent recommendations.',
+      features: [
+        'Predictive Analytics',
+        'Anomaly Detection',
+        'Intelligent Alerting',
+        'Root Cause Analysis',
+        'Performance Optimization',
+        'Capacity Planning',
+        'Health Scoring',
+        'Custom Dashboards',
+        'Integration APIs',
+        'Mobile Monitoring'
+      ],
+      benefits: [
+        'Prevent outages proactively',
+        'Reduce false alerts by 70%',
+        'Optimize performance',
+        'Improve uptime',
+        'Lower operational costs'
+      ],
+      category: 'Monitoring',
+      icon: <Eye className="w-8 h-8 text-orange-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-powered-monitoring'
+    },
+    {
+      id: 'zero-trust-security',
+      name: 'Zero Trust Security Framework',
+      price: '$499/mo',
+      originalPrice: '$999/mo',
+      description: 'Implement zero trust security architecture',
+      longDescription: 'Transform your security posture with our comprehensive zero trust framework that verifies every user and device before granting access.',
+      features: [
+        'Identity Verification',
+        'Device Trust Assessment',
+        'Network Segmentation',
+        'Micro-segmentation',
+        'Continuous Monitoring',
+        'Policy Enforcement',
+        'Risk Assessment',
+        'Access Control',
+        'Threat Detection',
+        'Compliance Management'
+      ],
+      benefits: [
+        'Enhance security posture',
+        'Reduce attack surface',
+        'Improve compliance',
+        'Enable secure remote work',
+        'Protect sensitive data'
+      ],
+      category: 'Security',
+      icon: <Lock className="w-8 h-8 text-red-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/zero-trust-security'
     }
   ];
-<<<<<<< HEAD
 
-  const categories = ['All', 'Cloud Computing', 'Security', 'Networking', 'Data Center', 'Support', 'Development', 'Database', 'Consulting', 'Backup', 'Mobile', 'Virtualization', 'Compliance'];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
+  const categories = ['All', 'Cloud Computing', 'Security', 'Networking', 'Data Center', 'Support', 'Development', 'Database', 'Consulting', 'Backup', 'Mobile', 'Virtualization', 'Compliance', 'DevOps', 'Edge Computing', 'Quantum Computing', 'IoT', 'Monitoring'];
 
   const features = [
     '24/7 Expert Support',
@@ -930,7 +1139,6 @@ const ITSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>IT Solutions - Comprehensive Technology Services | Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, networking, data center management, and custom software development. Transform your business with our expert IT services." />
         <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, networking, data center, software development, IT support, technology consulting" />
@@ -938,11 +1146,6 @@ const ITSolutionsPage: React.FC = () => {
         <meta property="og:description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, networking, data center management, and custom software development." />
         <meta property="og:url" content="https://ziontechgroup.com/it-solutions" />
         <link rel="canonical" href="https://ziontechgroup.com/it-solutions" />
-=======
-        <title>IT Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT solutions including infrastructure management, cloud migration, network security, and database optimization services." />
-        <meta name="keywords" content="IT solutions, infrastructure management, cloud migration, network security, database management, IT support, Zion Tech Group" />
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
       </Helmet>
 
       {/* Hero Section */}
@@ -981,7 +1184,6 @@ const ITSolutionsPage: React.FC = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -1208,10 +1410,6 @@ const ITSolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
-        </section>
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
     </>
   );
 };

@@ -34,6 +34,8 @@ import ITSolutionsPage from './app/it-solutions/page';
 import AIServicesPage from './app/ai-services/page';
 import ITServicesPage from './app/it-solutions/page';
 import FiveGSolutionsPage from './app/5g-solutions/page';
+import CloudInfrastructurePage from './app/cloud-infrastructure/page';
+import DigitalTransformationPage from './app/digital-transformation/page';
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (

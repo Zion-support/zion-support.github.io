@@ -1,6 +1,5 @@
 import { ArrowRight } from "lucide-react";
 
-<<<<<<< HEAD
 const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
@@ -9,11 +8,6 @@ const DocsPage: React.FC = () => {
     {
       id: 'getting-started',
       title: 'Getting Started',
-<<<<<<< HEAD
-=======
-      description: 'Learn how to get started with our AI solutions',
-      content: 'Comprehensive guide to implementing AI in your business',
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
       icon: <Zap className="w-6 h-6" />,
       articles: [
         { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', readTime: '5 min' },
@@ -51,14 +45,7 @@ const DocsPage: React.FC = () => {
       title: 'API Reference',
       icon: <Book className="w-6 h-6" />,
       description: 'Complete API documentation and examples',
-<<<<<<< HEAD
-<<<<<<< HEAD
       content: 'Detailed API reference with examples and best practices',
-=======
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
-=======
-      content: 'Detailed API reference with examples and best practices',
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
       articles: [
         { title: 'Authentication', description: 'API authentication methods', readTime: '5 min' },
         { title: 'Endpoints', description: 'Complete endpoint reference', readTime: '45 min' },
@@ -78,19 +65,11 @@ const DocsPage: React.FC = () => {
 
   const filteredSections = documentationSections.map(section => ({
     ...section,
-<<<<<<< HEAD
     articles: section.articles?.filter((article: any) =>
-=======
-    articles: section.articles?.filter((article: { title: string; description: string }) =>
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.description.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
   })).filter(section => section.articles?.length > 0);
-=======
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
 export default function DocsZionTechGroup() {
   return (
@@ -180,19 +159,7 @@ export default function DocsZionTechGroup() {
                   >
                     <div className="flex items-center">
                       <div className="text-cyan-400 mr-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                         {(section as any).icon || <Book className="w-6 h-6" />}
-=======
-                        {section.icon || <Book className="w-6 h-6" />}
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
-=======
-                        {section.icon || <Book className="w-6 h-6" />}
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
-=======
-                        {section.icon || <Book className="w-6 h-6" />}
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-white">{section.title}</h3>
