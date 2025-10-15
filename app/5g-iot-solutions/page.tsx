@@ -1,11 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-const FiveGIotSolutions: React.FC = () => {
-=======
 const FiveGIotSolutionsPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-789c
   return (
     <>
       <Helmet>
@@ -53,4 +49,4 @@ const FiveGIotSolutionsPage: React.FC = () => {
   );
 };
 
-export default FiveGIotSolutions;
+export default 5gIotSolutionsPage;

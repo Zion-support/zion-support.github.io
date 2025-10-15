@@ -1,11 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-const FiveGSmartCitySolutions: React.FC = () => {
-=======
 const FiveGSmartCitySolutionsPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-789c
   return (
     <>
       <Helmet>
@@ -53,4 +49,4 @@ const FiveGSmartCitySolutionsPage: React.FC = () => {
   );
 };
 
-export default FiveGSmartCitySolutions;
+export default 5gSmartCitySolutionsPage;

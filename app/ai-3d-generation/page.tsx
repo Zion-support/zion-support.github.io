@@ -53,4 +53,4 @@ constAi 3 dGeneration Page: React.FC = () => {
   );
 };
 
-export default Ai3DGeneration;
+export default Ai3dGenerationPage;
