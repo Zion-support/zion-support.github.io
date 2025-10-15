@@ -13,7 +13,9 @@ import {
   SparklesIcon,
   ChartBarIcon,
   GlobeAltIcon,
-  CogIcon
+  CogIcon,
+  EnvelopeIcon,
+  ShareIcon
 } from '@heroicons/react/24/outline';
 
 const HomePage: React.FC = () => {
@@ -116,33 +118,48 @@ const HomePage: React.FC = () => {
         keywords="AI solutions, cybersecurity, cloud infrastructure, digital transformation, IT services, machine learning, artificial intelligence"
       />
       
-      <div className="min-h-screen bg-slate-900 text-white">
+      <div className="min-h-screen bg-slate-900 text-white relative">
+        {/* Futuristic Background */}
+        <div className="futuristic-bg"></div>
+        
+        {/* Cyber Grid Overlay */}
+        <div className="cyber-grid absolute inset-0 opacity-20"></div>
+        
+        {/* Particle System */}
+        <div className="particles">
+          {[...Array(50)].map((_, i) => (
+            <div
+              key={i}
+              className="particle"
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 10}s`,
+                animationDuration: `${10 + Math.random() * 20}s`
+              }}
+            ></div>
+          ))}
+        </div>
+
         {/* Hero Section */}
         <section className="relative overflow-hidden min-h-screen flex items-center">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-slate-900 to-cyan-900/30"></div>
-          <div className="absolute inset-0 opacity-30" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}></div>
           
           {/* Animated Background Elements */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/5 rounded-full blur-2xl animate-pulse delay-500"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse floating"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000 floating"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/5 rounded-full blur-2xl animate-pulse delay-500 floating"></div>
           
-          {/* Grid Pattern Overlay */}
-          <div className="absolute inset-0 opacity-20" style={{
-            backgroundImage: `linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px)`,
-            backgroundSize: '50px 50px'
-          }}></div>
+          {/* Data Stream Effect */}
+          <div className="absolute top-0 left-0 w-full h-full data-stream opacity-30"></div>
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
             <div className="text-center">
               <div className="relative inline-block mb-6">
-                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent leading-tight animate-pulse">
-                  Zion Tech Group
-                </h1>
-                <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-lg blur opacity-30 animate-pulse"></div>
+              <h1 className="responsive-heading font-bold holographic leading-tight glitch" data-text="Zion Tech Group">
+                Zion Tech Group
+              </h1>
+                <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-lg blur opacity-30 animate-pulse neon-glow"></div>
               </div>
-              <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed px-4">
+              <p className="responsive-text text-gray-300 mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed px-4">
                 Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services that drive innovation and growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 lg:mb-16 px-4">
@@ -185,43 +202,44 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Services Section */}
-        <section className="py-16 sm:py-20 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-16 sm:py-20 bg-slate-800/30 relative overflow-hidden">
+          {/* Animated Background Elements */}
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/5 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-                Our <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Services</span>
+                Our <span className="holographic">Services</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
                 Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            <div className="responsive-grid">
               {services.map((service, index) => (
                 <Link key={index}
                   to={service.href}
-                  className="group relative bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 overflow-hidden"
+                  className="group relative holographic-card p-6 sm:p-8 hover:scale-105 transition-all duration-300 overflow-hidden"
                   style={{
                     animationDelay: `${index * 100}ms`
                   }}
                 >
-                  {/* Animated Background */}
-                  <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
-                  
-                  {/* Glow Effect */}
-                  <div className={`absolute -inset-1 bg-gradient-to-r ${service.gradient} rounded-xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
+                  {/* Data Stream Effect */}
+                  <div className="absolute inset-0 data-stream opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                   
                   <div className="relative z-10">
-                    <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${service.gradient} rounded-lg flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${service.gradient} rounded-lg flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 neon-glow`}>
                       <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
-                    <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-purple-300 transition-colors">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-cyan-300 transition-colors neon-text">
                       {service.title}
                     </h3>
                     <p className="text-gray-400 mb-4 group-hover:text-gray-300 transition-colors text-sm sm:text-base">
                       {service.description}
                     </p>
-                    <div className="mt-4 flex items-center text-purple-400 group-hover:text-purple-300 transition-colors">
+                    <div className="mt-4 flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
                       <span className="text-sm font-medium">Learn More</span>
                       <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -233,31 +251,35 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Micro SAAS Showcase Section */}
-        <section className="py-16 sm:py-20 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-16 sm:py-20 bg-slate-800/30 relative overflow-hidden">
+          {/* Animated Background Elements */}
+          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/5 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-                Featured <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro SAAS Solutions</span>
+                Featured <span className="holographic">Micro SAAS Solutions</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
-                Discover our innovative micro SAAS applications designed to solve specific business challenges with real functionality.
+                Discover our innovative micro SAAS applications designed to solve specific business challenges with real functionality and competitive pricing.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* AI Content Generator */}
-              <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
+            <div className="responsive-grid">
+              {/* AI Content Generator Pro */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-cyan-500/20">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
                     <SparklesIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-cyan-400 font-medium">AI Content</span>
+                  <span className="text-sm text-cyan-400 font-medium neon-text">AI Content</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
                   AI Content Generator Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Generate high-quality content for blogs, social media, and marketing materials using advanced AI.
+                  Generate high-quality content for blogs, social media, and marketing materials using advanced AI with 99.9% accuracy.
                 </p>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-cyan-400">$199/mo</span>
@@ -270,33 +292,37 @@ const HomePage: React.FC = () => {
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>SEO optimization</span>
+                    <span>SEO optimization & keyword research</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Multi-language support</span>
+                    <span>Multi-language support (50+ languages)</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Plagiarism detection included</span>
                   </div>
                 </div>
                 <Link to="/ai-content-generator"
-                  className="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                  className="block w-full btn-futuristic text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
-                  Try Free Trial
+                  Try Free Trial (14 days)
                 </Link>
               </div>
 
-              {/* Analytics Dashboard */}
-              <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
+              {/* Business Analytics Pro */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-purple-500/20">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
                     <ChartBarIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-purple-400 font-medium">Analytics</span>
+                  <span className="text-sm text-purple-400 font-medium neon-text">Analytics</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
                   Business Analytics Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Comprehensive business intelligence and analytics platform with real-time insights and reporting.
+                  Comprehensive business intelligence and analytics platform with real-time insights, predictive analytics, and custom reporting.
                 </p>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-purple-400">$349/mo</span>
@@ -305,37 +331,41 @@ const HomePage: React.FC = () => {
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Real-time dashboards</span>
+                    <span>Real-time dashboards & KPIs</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Predictive analytics</span>
+                    <span>AI-powered predictive analytics</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Custom reports</span>
+                    <span>Custom reports & data visualization</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>API integration & webhooks</span>
                   </div>
                 </div>
                 <Link to="/analytics-dashboard"
-                  className="block w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                  className="block w-full btn-futuristic text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
-                  Try Free Trial
+                  Start Free Trial
                 </Link>
               </div>
 
-              {/* Task Manager */}
-              <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/20">
+              {/* Task Manager Pro */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-green-500/20">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
                     <CheckCircleIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-green-400 font-medium">Productivity</span>
+                  <span className="text-sm text-green-400 font-medium neon-text">Productivity</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
                   Task Manager Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Advanced task management with AI-powered prioritization and team collaboration features.
+                  Advanced task management with AI-powered prioritization, team collaboration, and time tracking for maximum productivity.
                 </p>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-green-400">$29/mo</span>
@@ -344,21 +374,154 @@ const HomePage: React.FC = () => {
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>AI task prioritization</span>
+                    <span>AI task prioritization & scheduling</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Team collaboration</span>
+                    <span>Team collaboration & project management</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Time tracking</span>
+                    <span>Time tracking & productivity analytics</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Mobile app & desktop sync</span>
                   </div>
                 </div>
                 <Link to="/task-manager"
-                  className="block w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                  className="block w-full btn-futuristic text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
-                  Try Free Trial
+                  Get Started Free
+                </Link>
+              </div>
+
+              {/* AI CRM Optimizer */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-orange-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
+                    <CogIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-orange-400 font-medium neon-text">CRM</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-orange-300 transition-colors">
+                  AI CRM Optimizer
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Intelligent CRM system with AI-powered lead scoring, automated follow-ups, and predictive customer insights.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-orange-400">$149/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$199/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>AI lead scoring & qualification</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Automated email sequences</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Sales pipeline optimization</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Integration with 100+ tools</span>
+                  </div>
+                </div>
+                <Link to="/ai-crm-optimizer"
+                  className="block w-full btn-futuristic text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Start Free Trial
+                </Link>
+              </div>
+
+              {/* AI Email Marketing Pro */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-pink-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
+                    <EnvelopeIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-pink-400 font-medium neon-text">Email Marketing</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-pink-300 transition-colors">
+                  AI Email Marketing Pro
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Advanced email marketing platform with AI-powered subject line optimization, send time optimization, and personalization.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-pink-400">$79/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$129/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>AI subject line optimization</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Send time optimization</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Advanced segmentation & personalization</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Unlimited sends & contacts</span>
+                  </div>
+                </div>
+                <Link to="/ai-email-optimizer"
+                  className="block w-full btn-futuristic text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free (30 days)
+                </Link>
+              </div>
+
+              {/* AI Social Media Manager */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-blue-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
+                    <ShareIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-blue-400 font-medium neon-text">Social Media</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                  AI Social Media Manager
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Complete social media management platform with AI content creation, scheduling, analytics, and engagement optimization.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-blue-400">$99/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$149/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>AI content creation & scheduling</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Multi-platform management (10+ networks)</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Advanced analytics & reporting</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Hashtag research & optimization</span>
+                  </div>
+                </div>
+                <Link to="/ai-social-media-manager"
+                  className="block w-full btn-futuristic text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Start Free Trial
                 </Link>
               </div>
             </div>
@@ -366,11 +529,15 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-16 sm:py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-16 sm:py-20 relative overflow-hidden">
+          {/* Animated Background Elements */}
+          <div className="absolute top-20 left-10 w-72 h-72 bg-green-500/5 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-                Why Choose <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Zion Tech Group</span>?
+                Why Choose <span className="holographic">Zion Tech Group</span>?
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
                 We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
@@ -380,16 +547,16 @@ const HomePage: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               {features.map((feature, index) => (
                 <div key={index} 
-                  className="flex items-center space-x-4 p-4 sm:p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-all duration-300 group hover:scale-105 hover:shadow-lg hover:shadow-green-500/10"
+                  className="flex items-center space-x-4 p-4 sm:p-6 glass-card hover:scale-105 transition-all duration-300 group hover:shadow-lg hover:shadow-green-500/10"
                   style={{
                     animationDelay: `${index * 50}ms`
                   }}
                 >
                   <div className="relative">
-                    <CheckCircleIcon className="w-5 h-5 sm:w-6 sm:h-6 text-green-400 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                    <CheckCircleIcon className="w-5 h-5 sm:w-6 sm:h-6 text-green-400 flex-shrink-0 group-hover:scale-110 transition-transform neon-glow" />
                     <div className="absolute inset-0 bg-green-400 rounded-full blur opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
                   </div>
-                  <span className="text-gray-300 font-medium text-sm sm:text-base group-hover:text-white transition-colors">{feature}</span>
+                  <span className="text-gray-300 font-medium text-sm sm:text-base group-hover:text-white transition-colors neon-text">{feature}</span>
                 </div>
               ))}
             </div>
@@ -399,15 +566,18 @@ const HomePage: React.FC = () => {
         {/* CTA Section */}
         <section className="relative py-16 sm:py-20 bg-gradient-to-r from-purple-900/40 via-slate-900 to-cyan-900/40 overflow-hidden">
           {/* Animated Background Elements */}
-          <div className="absolute top-10 left-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-10 right-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-10 left-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse floating"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000 floating"></div>
+          
+          {/* Data Stream Effect */}
+          <div className="absolute inset-0 data-stream opacity-20"></div>
           
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 holographic">
               Ready to Transform Your Business?
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">
-              Let's discuss how our solutions can accelerate your digital transformation and drive growth.";
+              Let's discuss how our solutions can accelerate your digital transformation and drive growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact"

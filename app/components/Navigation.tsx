@@ -163,16 +163,22 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   };
 
   return (
-    <nav className="bg-slate-900 border-b border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="glass-card border-b border-cyan-500/30 relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-slate-900/50 to-cyan-900/20"></div>
+      
+      {/* Data Stream Effect */}
+      <div className="absolute inset-0 data-stream opacity-10"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
-              <div className="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
+            <Link to="/" className="flex-shrink-0 flex items-center group">
+              <div className="h-8 w-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center neon-glow group-hover:scale-110 transition-transform">
+                <span className="text-white font-bold text-lg holographic">Z</span>
               </div>
-              <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
+              <span className="ml-2 text-white font-bold text-xl neon-text group-hover:text-cyan-300 transition-colors">Zion Tech Group</span>
             </Link>
           </div>
 
@@ -189,10 +195,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     else if (item.name === 'Resources') toggleResourcesMenu();
                     else if (item.name === 'Company') toggleCompanyMenu();
                   }}
-                  className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors border-b-2 ${
+                  className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 border-b-2 ${
                     isActive(item.href)
-                      ? 'border-blue-500 text-white'
-                      : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white'
+                      ? 'border-cyan-500 text-cyan-300 neon-text'
+                      : 'border-transparent text-gray-300 hover:border-cyan-300 hover:text-cyan-300 hover:neon-glow'
                   }`}
                 >
                   <item.icon className="w-4 h-4" />
@@ -201,7 +207,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 </Link>
                 {/* Dropdown Menu */}
                 {item.submenu && (
-                  <div className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
+                  <div className={`absolute left-0 mt-2 w-56 glass-card rounded-lg shadow-lg py-2 z-50 border border-cyan-500/30 neon-glow ${
                     (item.name === 'AI Services' && isServicesOpen) ||
                     (item.name === 'Micro SaaS' && isSolutionsOpen) ||
                     (item.name === 'IT Solutions' && isResourcesOpen) ||
@@ -213,10 +219,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       <div key={subItem.name}>
                         <Link
                           to={subItem.href}
-                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white"
+                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-300 transition-all duration-300 group"
                         >
-                          <subItem.icon className="w-4 h-4 mr-3" />
-                          <span>{subItem.name}</span>
+                          <subItem.icon className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span className="group-hover:neon-text">{subItem.name}</span>
                         </Link>
                       </div>
                     ))}
@@ -230,7 +236,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="lg:hidden flex items-center">
             <button
               onClick={onSidebarToggle}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-cyan-300 hover:bg-cyan-500/20 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500 transition-all duration-300 neon-glow"
             >
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 w-6" />
