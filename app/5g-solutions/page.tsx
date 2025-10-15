@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, Shield, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3 } from 'lucide-react';
+import { Wifi, CheckCircle, Network, Cpu, Smartphone } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
   const solutions = [
@@ -42,3 +42,60 @@ const FiveGSolutionsPage: React.FC = () => {
       marketPrice: "$5,999-19,999",
       popular: false,
       icon: <Smartphone className="w-8 h-8" />,
+      benefits: "Achieve ultra-low latency for real-time applications"
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>5G Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive 5G network solutions including implementation, infrastructure, IoT, and mobile applications." />
+        <meta name="keywords" content="5G solutions, 5G implementation, 5G infrastructure, 5G IoT, 5G mobile" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-slate-900 text-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold mb-6">5G Solutions</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your business with cutting-edge 5G technology solutions.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+            {solutions.map((solution, index) => (
+              <div key={index} className="bg-slate-800 p-6 rounded-lg">
+                <div className="flex items-center mb-4">
+                  <div className="text-blue-400 mr-4">{solution.icon}</div>
+                  <h3 className="text-xl font-semibold">{solution.name}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{solution.description}</p>
+                <div className="mb-4">
+                  <span className="text-2xl font-bold text-green-400">{solution.price}</span>
+                  <span className="text-gray-500 line-through ml-2">{solution.marketPrice}</span>
+                </div>
+                <ul className="space-y-2 mb-4">
+                  {solution.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <div className="text-sm text-blue-400 font-medium mb-4">
+                  {solution.benefits}
+                </div>
+                <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+                  Learn More
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default FiveGSolutionsPage;

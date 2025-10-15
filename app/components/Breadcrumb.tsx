@@ -1,39 +1,38 @@
 "use client"
 import React from "react"
 import { ChevronRight, Home } from "lucide-react"
-export default function Breadcrumb() {}
-}const location = useLocation()
+import { useLocation, Link } from "react-router-dom"
+
+export default function Breadcrumb() {
+  const location = useLocation()
   const pathnames = location.pathname.split("/").filter((x) => x)
-  if (pathnames.length === 0) {}
+  
+  if (pathnames.length === 0) {
     return null
   }
 
-  return (<nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
-      <Link
-        to="/"
-        className="flex items-center hover:text-white transition-colors"
-      >
-        <Home className="w-4 h-4 mr-1" />
-        Home
+  return (
+    <nav className="flex items-center space-x-2 text-sm text-gray-500 mb-4">
+      <Link to="/" className="flex items-center hover:text-gray-700">
+        <Home className="w-4 h-4" />
       </Link>
-      {pathnames.map((name, index) => {}
-}const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`
+      {pathnames.map((name, index) => {
+        const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`
         const isLast = index === pathnames.length - 1
-        const displayName = name
-          .split("-")
-          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-          .join(" ")
-        return ()
-          <React.Fragment key={name}>
+        
+        return (
+          <React.Fragment key={routeTo}>
             <ChevronRight className="w-4 h-4" />
-            {isLast ? ()
-              <span className="text-white font-medium">{displayName}</span>
-            ) : ()
-              <Link
-                to={routeTo}
-                className="text-gray-400 hover:text-white transition-colors"
+            {isLast ? (
+              <span className="text-gray-900 font-medium capitalize">
+                {name.replace(/-/g, ' ')}
+              </span>
+            ) : (
+              <Link 
+                to={routeTo} 
+                className="hover:text-gray-700 capitalize"
               >
-                {displayName}
+                {name.replace(/-/g, ' ')}
               </Link>
             )}
           </React.Fragment>

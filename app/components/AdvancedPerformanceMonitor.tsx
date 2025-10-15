@@ -166,7 +166,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch (e) {
+      } catch {
         console.warn('LCP observer not supported');
       }
 
@@ -182,7 +182,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
-      } catch (e) {
+      } catch {
         console.warn('FID observer not supported');
       }
 
@@ -198,7 +198,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           setMetrics(prev => ({ ...prev, cls }));
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (e) {
+      } catch {
         console.warn('CLS observer not supported');
       }
     }
