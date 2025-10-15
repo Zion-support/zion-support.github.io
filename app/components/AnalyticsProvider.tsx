@@ -1,65 +1,29 @@
-import React, { createContext, useContext, useEffect } from 'react';
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
-  trackPageView: (pageName: string, pagePath: string) => void;
-}
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
-}
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  useEffect(() => {
-    // Initialize Google Analytics or other analytics service
-    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
-      // Add Google Analytics script here
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID || 'GA_MEASUREMENT_ID'}`;
-      document.head.appendChild(script);
-      script.onload = () => {
-        (window as any).dataLayer = (window as any).dataLayer || [];
-        function gtag() {
-  return;
-}
-        (window as any).gtag = gtag;
-        gtag('js', new Date());
-        gtag('config', process.env.REACT_APP_GA_ID || 'GA_MEASUREMENT_ID');
-      };
-    }
-  }, []);
+import { ArrowRight, Box, Target, CheckCircle, Globe, Sparkles, Star } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
-const trackEvent = () => {
-  return;
-}
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-          }
-  };
-
-const trackPageView = () => {
-  return;
-});
-    }
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-          }
-  };
-
-const value: AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-  };
+export default function AnalyticsProvider() {
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AnalyticsProvider - Zion Tech Group</title>
+        <meta name="description" content="Advanced AnalyticsProvider solutions powered by AI" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            AnalyticsProvider
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Advanced AI-powered solutions for modern businesses
+          </p>
+        </div>
+        
+        <div className="text-center">
+          <p className="text-gray-300">Content coming soon...</p>
+        </div>
+      </div>
+    </div>
   );
-};
-export const useAnalytics = (): AnalyticsContextType => {
-  const context = useContext(AnalyticsContext);
-  if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
-export default AnalyticsProvider;
+}

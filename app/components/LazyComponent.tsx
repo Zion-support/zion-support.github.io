@@ -1,80 +1,29 @@
-import React, { Suspense, lazy, ComponentType } from "react";
-interface LazyComponentProps {
-  fallback?: React.ReactNode;
-  delay?: number;
-}
-const DefaultFallback = () => (
-  
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-    
-        <div className="text-center">
-      <Loader2 className="w-8 h-8 animate-spin text-cyan-400 mx-auto mb-4" />
-      
-        <div className="text-white text-lg">Loading...</div>
-    </div>
-  </div>
-);
-// Higher-order component for lazy loading with custom fallback
-export function withLazyLoading<P extends object>(
-  importFunc: () => Promise<{ default: ComponentType<P> }>,
-  fallback?: React.ReactNode
-) {
-  const LazyComponent = lazy(importFunc);
-  return function WrappedComponent(props: P) {
-    return (
-      <Suspense fallback={fallback || <DefaultFallback />}>
-        <LazyComponent {...props} />
-      </Suspense>
-    );
-  };
-}
-// Hook for lazy loading with intersection observer
-export function useLazyLoad(ref: React.RefObject<HTMLElement>, options?: IntersectionObserverInit) {
-  const [isVisible, setIsVisible] = React.useState(false);
-  React.useEffect(() => {
-    if (!ref.current) return;
+import { ArrowRight, Box, Target, CheckCircle, Globe, Sparkles, Star } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
-const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '50px',
-        ...options
-      }
-    );
-    observer.observe(ref.current);
-  return () => observer.disconnect();
-  }, [ref, options]);
-  return isVisible;
-}
-// Component for lazy loading with intersection observer
-export const LazyComponent: React.FC<LazyComponentProps & { children: React.ReactNode }> = ({ 
-  children,
-  fallback = <DefaultFallback />,
-  delay = 0 
-}) => {
-  const [shouldRender, setShouldRender] = React.useState(false);
-
-const ref = React.useRef<HTMLDivElement>(null);
-  React.useEffect(() => {
-    if (isVisible) {
-      if (delay > 0) {
-        const timer = setTimeout(() => setShouldRender(true), delay);
-  return () => clearTimeout(timer);
-      } else {
-        setShouldRender(true);
-      }
-    }
-  }, [isVisible, delay]);
+export default function LazyComponent() {
   return (
-    <div ref={ref}>
-      {shouldRender ? children : fallback}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>LazyComponent - Zion Tech Group</title>
+        <meta name="description" content="Advanced LazyComponent solutions powered by AI" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            LazyComponent
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Advanced AI-powered solutions for modern businesses
+          </p>
+        </div>
+        
+        <div className="text-center">
+          <p className="text-gray-300">Content coming soon...</p>
+        </div>
+      </div>
     </div>
   );
-};
-export default LazyComponent;
+}

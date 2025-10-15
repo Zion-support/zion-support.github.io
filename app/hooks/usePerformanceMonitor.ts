@@ -1,31 +1,39 @@
-import { useState, useEffect } from "react";
+import { useEffect, useRef } from 'react';
+
 export const usePerformanceMonitor = () => {
-  return;
-});
-
-const trackMetric = () => {
-  return;
-}));
-  };
+  const startTime = useRef<number>(Date.now());
+  
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        if (entries.length > 0) {
-          setMetrics((prev: Record<string, number>) => ({
-            ...prev,
-            [entries[0].name]: entries[0].startTime
-          }));
-        }
-      });
-      observer.observe({ entryTypes: ['measure', 'navigation'] });
-  return () => {
-        observer.disconnect();
-      };
-    }
-    return undefined;
+    // Monitor page load performance
+    const handleLoad = () => {
+      const loadTime = Date.now() - startTime.current;
+      console.log(`Page loaded in ${loadTime}ms`);
+    };
+    
+    // Monitor memory usage
+    const monitorMemory = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        console.log('Memory usage:', {
+          used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
+          total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
+          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
+        });
+      }
+    };
+    
+    window.addEventListener('load', handleLoad);
+    
+    // Monitor memory every 30 seconds
+    const memoryInterval = setInterval(monitorMemory, 30000);
+    
+    return () => {
+      window.removeEventListener('load', handleLoad);
+      clearInterval(memoryInterval);
+    };
   }, []);
-  return { metrics, trackMetric };
+  
+  return {
+    startTime: startTime.current
+  };
 };
-
-export default NotFoundPage;

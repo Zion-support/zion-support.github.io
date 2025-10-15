@@ -1,32 +1,29 @@
-import React, { useEffect } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-interface WebVitalsTrackerProps {
-  children: React.ReactNode;
+import { ArrowRight, Box, Target, CheckCircle, Globe, Sparkles, Star } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
+export default function WebVitalsTracker() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>WebVitalsTracker - Zion Tech Group</title>
+        <meta name="description" content="Advanced WebVitalsTracker solutions powered by AI" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            WebVitalsTracker
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Advanced AI-powered solutions for modern businesses
+          </p>
+        </div>
+        
+        <div className="text-center">
+          <p className="text-gray-300">Content coming soon...</p>
+        </div>
+      </div>
+    </div>
+  );
 }
-interface WebVitalsData {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
-  navigationType: string;
-}
-const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
-  useEffect(() => {
-    const sendToAnalytics = () => {
-  return;
-});
-      }
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-              }
-    };
-    // Track Core Web Vitals
-    onCLS(sendToAnalytics);
-    onINP(sendToAnalytics);
-    onFCP(sendToAnalytics);
-    onLCP(sendToAnalytics);
-    onTTFB(sendToAnalytics);
-  }, []);
-  return <>{children}</>;
-};
-export default WebVitalsTracker;

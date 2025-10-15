@@ -1,70 +1,29 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { ArrowRight, Box, Target, CheckCircle, Globe, Sparkles, Star } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
-const Breadcrumb: React.FC = () => {
-  const location = useLocation();
-
-const pathnames = location.pathname.split('/').filter((x) => x);
-
-const getBreadcrumbName = () => {
-  return;
-} = {
-      'about': 'About',
-      'services': 'Services',
-      'contact': 'Contact',
-      'blog': 'Blog',
-      'ai-services': 'AI Services',
-      'micro-saas': 'Micro SAAS',
-      '5g-solutions': '5G Solutions',
-      'privacy': 'Privacy Policy',
-      'terms': 'Terms of Service',
-      'support': 'Support',
-      'demo': 'Demo',
-      'tutorials': 'Tutorials',
-    };
-  return breadcrumbMap[path] || path.charAt(0).toUpperCase() + path.slice(1);
-  };
-  if (pathnames.length === 0) {
-    return null;
-  }
+export default function Breadcrumb() {
   return (
-    <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-cyan-500/20 py-2">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Breadcrumb - Zion Tech Group</title>
+        <meta name="description" content="Advanced Breadcrumb solutions powered by AI" />
+      </Helmet>
       
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ol className="flex items-center space-x-2 text-sm">
-          <li>
-            <Link
-              to="/"
-              className="text-gray-400 hover:text-cyan-400 transition-colors flex items-center"
-            >
-              <Home className="w-4 h-4" />
-            </Link>
-          </li>
-          {pathnames.map((path, index) => {
-            const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
-
-const isLast = index === pathnames.length - 1;
-  return (
-              <li key={path} className="flex items-center space-x-2">
-                <ChevronRight className="w-4 h-4 text-gray-500" />
-                {isLast ? (
-                  <span className="text-cyan-400 font-medium">
-                    {getBreadcrumbName(path)}
-                  </span>
-                ) : (
-                  <Link
-                    to={routeTo}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    {getBreadcrumbName(path)}
-                  </Link>
-                )}
-              </li>
-            );
-          })}
-        </ol>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Breadcrumb
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Advanced AI-powered solutions for modern businesses
+          </p>
+        </div>
+        
+        <div className="text-center">
+          <p className="text-gray-300">Content coming soon...</p>
+        </div>
       </div>
-    </nav>
+    </div>
   );
-};
-export default Breadcrumb;
+}
