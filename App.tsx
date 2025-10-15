@@ -1,62 +1,42 @@
 import React, { Suspense, useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
 import Header from './app/components/Header';
 import Footer from './app/components/Footer';
-import Navigation from './app/components/Navigation';
-import SEO from './app/components/SEO';
-import LoadingSpinner from './app/components/LoadingSpinner';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
-// Lazy load main pages for better code splitting
-const HomePage = React.lazy(() => import('./app/page'));
-const AboutPage = React.lazy(() => import('./app/about/page'));
-const ServicesPage = React.lazy(() => import('./app/services/page'));
-const ContactPage = React.lazy(() => import('./app/contact/page'));
-const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
+// Pages
+import HomePage from './app/page';
+import AboutPage from './app/about/page';
+import ServicesPage from './app/services/page';
+import ContactPage from './app/contact/page';
 
-// Dynamic page loader for all other pages
-const DynamicPageLoader: React.FC<{ pagePath: string }> = ({ pagePath }) => {
-  const PageComponent = React.useMemo(() => {
-    try {
-      // Convert path to component path
-      const componentPath = pagePath === '/' ? './app/page' : `./app/${pagePath.replace(/^\//, '').replace(/\//g, '/')}/page`;
-      return React.lazy(() => import(componentPath));
-    } catch (error) {
-      console.error('Error loading page:', error);
-      // Fallback to 404 page
-      return React.lazy(() => import('./app/404/page'));
-    }
-  }, [pagePath]);
-
-  return (
-    <Suspense fallback={<LoadingSpinner size="lg" text="Loading page..." className="min-h-screen" />}>
-      <PageComponent />
-    </Suspense>
-  );
-};
-
-// Main router component - removed as it's not used
-
-// Router content component that has access to location
-const RouterContent: React.FC = () => {
-  const location = useLocation();
-  
-  return (
-    <Suspense fallback={<LoadingSpinner size="lg" text="Loading application..." className="min-h-screen" />}>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/micro-saas" element={<MicroSaasPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="*" element={<DynamicPageLoader pagePath={location.pathname} />} />
-      </Routes>
-    </Suspense>
-  );
-};
+// Service Pages
+import AiAnalyticsDashboardProPage from './app/ai-analytics-dashboard-pro/page';
+import AiContentGenerationProPage from './app/ai-content-generation-pro/page';
+import AiAutomationSuitePage from './app/ai-automation-suite/page';
+import AiBusinessIntelligenceProPage from './app/ai-business-intelligence-pro/page';
+import AiCodeAssistantProPage from './app/ai-code-assistant-pro/page';
+import AiChatbotEnterprisePage from './app/ai-chatbot-enterprise/page';
+import AiCloudInfrastructurePage from './app/ai-cloud-infrastructure/page';
+import AiApiManagementPage from './app/ai-api-management/page';
+import DatabaseSolutionsPage from './app/database-solutions/page';
+import AdvancedSecuritySuitePage from './app/advanced-security-suite/page';
+import PerformanceMonitoringPage from './app/performance-monitoring/page';
+import DevOpsSolutionsPage from './app/devops-solutions/page';
+import FiveGImplementationPage from './app/5g-implementation/page';
+import FiveGNetworkInfrastructurePage from './app/5g-network-infrastructure/page';
+import FiveGIotSolutionsPage from './app/5g-iot-solutions/page';
+import FiveGSmartCitySolutionsPage from './app/5g-smart-city-solutions/page';
+import FiveGEdgeComputingPage from './app/5g-edge-computing/page';
+import FiveGPrivateNetworksPage from './app/5g-private-networks/page';
+import AiAccountingAssistantPage from './app/ai-accounting-assistant/page';
+import AiContentModerationProPage from './app/ai-content-moderation-pro/page';
+import AiClimateSolutionsProPage from './app/ai-climate-solutions-pro/page';
+import AiAgriculturalIntelligenceProPage from './app/ai-agricultural-intelligence-pro/page';
+import Ai3DGenerationPage from './app/ai-3d-generation/page';
+import AiBlockchainSolutionsPage from './app/ai-blockchain-solutions/page';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -71,7 +51,11 @@ const App: React.FC = () => {
   }, []);
 
   if (isLoading) {
-    return <LoadingSpinner size="lg" text="Loading application..." className="min-h-screen" />;
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="text-white text-xl">Loading application...</div>
+      </div>
+    );
   }
 
   return (
@@ -79,16 +63,55 @@ const App: React.FC = () => {
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <AccessibilityEnhancer />
-            <SEO 
-              title="Zion Tech Group - Advanced AI & IT Solutions"
-              description="Leading provider of AI, IT, and 5G solutions. Transform your business with cutting-edge technology, micro SAAS services, and innovative digital solutions."
-              keywords="AI solutions, IT services, 5G technology, micro SAAS, cloud computing, cybersecurity, business automation"
-            />
             <Header />
-            <Navigation />
             <main className="relative z-10 pt-20" id="main-content" role="main">
-              <RouterContent />
+              <Suspense fallback={
+                <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                  <div className="text-center">
+                    <div className="cyber-loading mx-auto mb-4"></div>
+                    <div className="text-white text-xl">Loading application...</div>
+                  </div>
+                </div>
+              }>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  
+                  {/* AI Services */}
+                  <Route path="/ai-analytics-dashboard-pro" element={<AiAnalyticsDashboardProPage />} />
+                  <Route path="/ai-content-generation-pro" element={<AiContentGenerationProPage />} />
+                  <Route path="/ai-automation-suite" element={<AiAutomationSuitePage />} />
+                  <Route path="/ai-business-intelligence-pro" element={<AiBusinessIntelligenceProPage />} />
+                  <Route path="/ai-code-assistant-pro" element={<AiCodeAssistantProPage />} />
+                  <Route path="/ai-chatbot-enterprise" element={<AiChatbotEnterprisePage />} />
+                  
+                  {/* IT Services */}
+                  <Route path="/ai-cloud-infrastructure" element={<AiCloudInfrastructurePage />} />
+                  <Route path="/ai-api-management" element={<AiApiManagementPage />} />
+                  <Route path="/database-solutions" element={<DatabaseSolutionsPage />} />
+                  <Route path="/advanced-security-suite" element={<AdvancedSecuritySuitePage />} />
+                  <Route path="/performance-monitoring" element={<PerformanceMonitoringPage />} />
+                  <Route path="/devops-solutions" element={<DevOpsSolutionsPage />} />
+                  
+                  {/* 5G Solutions */}
+                  <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                  <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
+                  <Route path="/5g-iot-solutions" element={<FiveGIotSolutionsPage />} />
+                  <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
+                  <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
+                  <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
+                  
+                  {/* Micro SAAS */}
+                  <Route path="/ai-accounting-assistant" element={<AiAccountingAssistantPage />} />
+                  <Route path="/ai-content-moderation-pro" element={<AiContentModerationProPage />} />
+                  <Route path="/ai-climate-solutions-pro" element={<AiClimateSolutionsProPage />} />
+                  <Route path="/ai-agricultural-intelligence-pro" element={<AiAgriculturalIntelligenceProPage />} />
+                  <Route path="/ai-3d-generation" element={<Ai3DGenerationPage />} />
+                  <Route path="/ai-blockchain-solutions" element={<AiBlockchainSolutionsPage />} />
+                </Routes>
+              </Suspense>
             </main>
             <Footer />
           </div>
