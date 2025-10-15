@@ -1,33 +1,50 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function ZionaicustomersupportproPage() {
+const AICustomerSupportProPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Zion Ai Customer Support Pro - Zion Tech Group</title>
-        <meta name="description" content="Zion Ai Customer Support Pro services and solutions from Zion Tech Group." />
+        <title>AI Customer Support Pro - Zion Tech Group | 24/7 AI-Powered Support</title>
+        <meta name="description" content="24/7 AI-powered customer support solution with natural language processing and multi-channel integration." />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Zion Ai Customer Support Pro
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              AI Customer Support Pro
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional Zion Ai Customer Support Pro services and solutions for your business needs.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              24/7 AI-powered customer support solution with natural language processing and multi-channel integration.
             </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
-                Get Started
-              </button>
-              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
-                Learn More
-              </button>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Coming Soon</h2>
+            <p className="text-xl text-gray-600 mb-8">
+              We're working on creating an amazing AI customer support experience for you. 
+              In the meantime, please contact us for a free consultation about your support needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/contact" 
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              >
+                Get Free Consultation
+              </a>
+              <a 
+                href="tel:+13024640950" 
+                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors font-medium"
+              >
+                Call +1 302 464 0950
+              </a>
             </div>
           </div>
         </div>
       </div>
     </>
   );
-}
+};
+
+export default AICustomerSupportProPage;
