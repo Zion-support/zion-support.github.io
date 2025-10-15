@@ -352,7 +352,7 @@ const AIIoTManagementProPage = () => {
           </section>
         </main>
       </div>
-      </>
-    );
-  };
+    </>
+  );
+};
 export default AIIoTManagementProPage;

@@ -335,7 +335,7 @@ const AIEducationSolutionsProPage = () => {
           </section>
         </main>
       </div>
-      </>
-    );
-  };
+    </>
+  );
+};
 export default AIEducationSolutionsProPage;

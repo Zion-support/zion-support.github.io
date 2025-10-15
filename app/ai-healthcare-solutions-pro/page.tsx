@@ -339,7 +339,7 @@ const AIHealthcareSolutionsProPage = () => {
           </section>
         </main>
       </div>
-      </>
-    );
-  };
+    </>
+  );
+};
 export default AIHealthcareSolutionsProPage;
