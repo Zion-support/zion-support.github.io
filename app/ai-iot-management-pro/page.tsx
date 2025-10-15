@@ -1,8 +1,54 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, Building, Camera, Car, CheckCircle, Home, Mail, Phone, Play, Star, Thermometer, Wind } from 'lucide-react';
+import { ArrowRight, Brain, CheckCircle, Mail, Phone, Play, Shield, Star } from 'lucide-react';
 
 const AIIoTManagementProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const deviceTypes = [
+    { name: "Sensors", count: "1000+", color: "bg-blue-500", icon: <Brain className="w-6 h-6" /> },
+    { name: "Actuators", count: "500+", color: "bg-green-500", icon: <Brain className="w-6 h-6" /> },
+    { name: "Gateways", count: "50+", color: "bg-purple-500", icon: <Brain className="w-6 h-6" /> }
+  ];
+
+  const features = [
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Analytics",
+      description: "Intelligent data processing and predictive analytics.",
+      benefits: ["Real-time insights", "Predictive maintenance", "Anomaly detection"]
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Security",
+      description: "Advanced security protocols for IoT devices.",
+      benefits: ["Device authentication", "Data encryption", "Threat detection"]
+    }
+  ];
+
+  const metrics = [
+    { name: "Uptime", value: "99.9%", icon: <Brain className="w-6 h-6" />, number: "99.9", label: "Uptime" },
+    { name: "Devices Connected", value: "10,000+", icon: <Brain className="w-6 h-6" />, number: "10,000+", label: "Devices" },
+    { name: "Data Processed", value: "1TB/day", icon: <Brain className="w-6 h-6" />, number: "1TB", label: "per day" }
+  ];
+
+  const protocols = [
+    { name: "MQTT", description: "Lightweight messaging protocol" },
+    { name: "CoAP", description: "Constrained application protocol" },
+    { name: "HTTP/2", description: "Modern web protocol" }
+  ];
+
+  const pricingPlans = [
+    { name: "Starter", price: "$49", features: ["Up to 100 devices", "Basic analytics"], description: "Perfect for small projects", period: "per month", popular: false },
+    { name: "Professional", price: "$149", features: ["Up to 1000 devices", "Advanced AI"], description: "Ideal for growing businesses", period: "per month", popular: true },
+    { name: "Enterprise", price: "Custom", features: ["Unlimited devices", "Custom solutions"], description: "Tailored for large organizations", period: "contact us", popular: false }
+  ];
+
+  const testimonials = [
+    { name: "John Smith", role: "IoT Engineer", content: "Best IoT platform we've used!", rating: 5, company: "Tech Solutions Inc." },
+    { name: "Lisa Chen", role: "CTO", content: "Scalable and reliable solution.", rating: 5, company: "Innovation Labs" }
+  ];
+
   return (
     <>
       { /* Animated Background */ }
@@ -298,8 +344,7 @@ const AIIoTManagementProPage = () => {
             </div>
           </section>
         </main>
-      </div>
     </>
   );
 };
-export default AiIotManagementProPage;
+export default AIIoTManagementProPage;

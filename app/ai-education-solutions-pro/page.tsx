@@ -1,8 +1,54 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Award, Award as AwardIcon, AwardIcon, Book, BookOpen, Brain, Briefcase, CheckCircle, Download, Download as DownloadIcon, DownloadIcon, GraduationCap, Mail, Monitor, Phone, Play, Shield, Star, Target, Target as TargetIcon, TargetIcon, Users, Users as UsersIcon, UsersIcon } from 'lucide-react';
+import { ArrowRight, BookOpen, Brain, CheckCircle, Mail, Phone, Play, Star, Users } from 'lucide-react';
 
 const AIEducationSolutionsProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const features = [
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI-Powered Learning",
+      description: "Personalized learning experiences powered by advanced AI algorithms.",
+      benefits: ["Adaptive curriculum", "Real-time feedback", "Performance analytics"]
+    },
+    {
+      icon: <BookOpen className="w-8 h-8" />,
+      title: "Interactive Content",
+      description: "Engaging multimedia content that adapts to learning styles.",
+      benefits: ["Video lessons", "Interactive quizzes", "Gamified learning"]
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Collaborative Learning",
+      description: "Connect with peers and instructors in virtual classrooms.",
+      benefits: ["Group projects", "Peer reviews", "Live discussions"]
+    }
+  ];
+
+  const subjects = [
+    { name: "Mathematics", level: "Advanced", icon: <Brain className="w-6 h-6" />, description: "Advanced mathematical concepts and problem-solving" },
+    { name: "Science", level: "Intermediate", icon: <Brain className="w-6 h-6" />, description: "Scientific principles and experimentation" },
+    { name: "Programming", level: "Beginner", icon: <Brain className="w-6 h-6" />, description: "Introduction to coding and software development" }
+  ];
+
+  const useCases = [
+    { title: "K-12 Education", description: "Comprehensive learning platform for students", icon: <Brain className="w-6 h-6" />, benefits: ["Age-appropriate content", "Parent monitoring", "Progress tracking"] },
+    { title: "Higher Education", description: "Advanced tools for university students", icon: <Brain className="w-6 h-6" />, benefits: ["Research assistance", "Thesis support", "Academic writing"] },
+    { title: "Professional Development", description: "Skills training for working professionals", icon: <Brain className="w-6 h-6" />, benefits: ["Industry-specific training", "Certification prep", "Career advancement"] }
+  ];
+
+  const pricingPlans = [
+    { name: "Basic", price: "$29", features: ["Basic AI tutoring", "Limited subjects"], description: "Perfect for individual learners", period: "per month", popular: false },
+    { name: "Pro", price: "$59", features: ["Advanced AI", "All subjects", "Analytics"], description: "Ideal for serious students", period: "per month", popular: true },
+    { name: "Enterprise", price: "Custom", features: ["Custom solutions", "Dedicated support"], description: "Tailored for organizations", period: "contact us", popular: false }
+  ];
+
+  const testimonials = [
+    { name: "Sarah Johnson", role: "Teacher", content: "Revolutionary learning platform!", rating: 5, company: "Lincoln High School" },
+    { name: "Mike Chen", role: "Student", content: "AI tutoring changed my grades!", rating: 5, company: "Stanford University" }
+  ];
+
   return (
     <>
       { /* Animated Background */ }
@@ -281,8 +327,7 @@ const AIEducationSolutionsProPage = () => {
             </div>
           </section>
         </main>
-      </div>
     </>
   );
 };
-export default AiEducationSolutionsProPage;
+export default AIEducationSolutionsProPage;

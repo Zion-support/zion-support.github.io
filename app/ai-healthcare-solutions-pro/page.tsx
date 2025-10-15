@@ -1,8 +1,56 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Ambulance, ArrowRight, Brain, CheckCircle, Heart, Hospital, Mail, Microscope, Phone, Pill, Play, Shield, Shield as ShieldIcon, Star, Stethoscope, UserCheck } from 'lucide-react';
+import { ArrowRight, Brain, CheckCircle, Heart, Mail, Phone, Play, Shield, Star } from 'lucide-react';
+
+const ShieldIcon = Shield;
 
 const AIHealthcareSolutionsProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const features = [
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Diagnosis",
+      description: "Advanced AI-powered diagnostic tools for accurate medical assessments.",
+      benefits: ["Rapid diagnosis", "Pattern recognition", "Risk assessment"]
+    },
+    {
+      icon: <Heart className="w-8 h-8" />,
+      title: "Patient Monitoring",
+      description: "Real-time patient monitoring with AI-driven insights.",
+      benefits: ["Continuous monitoring", "Alert systems", "Predictive analytics"]
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Data Security",
+      description: "HIPAA-compliant security measures for patient data protection.",
+      benefits: ["Encrypted storage", "Access controls", "Audit trails"]
+    }
+  ];
+
+  const useCases = [
+    { title: "Hospitals", description: "Comprehensive healthcare management systems", icon: <Brain className="w-6 h-6" />, benefits: ["Patient management", "Staff coordination", "Resource optimization"] },
+    { title: "Clinics", description: "Streamlined patient care workflows", icon: <Brain className="w-6 h-6" />, benefits: ["Appointment scheduling", "Patient records", "Billing integration"] },
+    { title: "Telemedicine", description: "Remote healthcare delivery platforms", icon: <Brain className="w-6 h-6" />, benefits: ["Virtual consultations", "Remote monitoring", "Digital prescriptions"] }
+  ];
+
+  const compliance = [
+    { name: "HIPAA", status: "Compliant", description: "Health Insurance Portability and Accountability Act compliance" },
+    { name: "FDA", status: "Approved", description: "Food and Drug Administration approval for medical devices" },
+    { name: "ISO 27001", status: "Certified", description: "International standard for information security management" }
+  ];
+
+  const pricingPlans = [
+    { name: "Basic", price: "$99", features: ["Basic AI tools", "Standard support"], description: "Perfect for small practices", period: "per month", popular: false },
+    { name: "Professional", price: "$199", features: ["Advanced AI", "Priority support"], description: "Ideal for growing clinics", period: "per month", popular: true },
+    { name: "Enterprise", price: "Custom", features: ["Custom solutions", "Dedicated support"], description: "Tailored for large hospitals", period: "contact us", popular: false }
+  ];
+
+  const testimonials = [
+    { name: "Dr. Sarah Wilson", role: "Chief Medical Officer", content: "Transformed our patient care!", rating: 5, company: "City General Hospital" },
+    { name: "Dr. Michael Brown", role: "Emergency Physician", content: "AI diagnosis saves lives!", rating: 5, company: "Emergency Medical Center" }
+  ];
+
   return (
     <>
       { /* Animated Background */ }
@@ -283,8 +331,7 @@ const AIHealthcareSolutionsProPage = () => {
             </div>
           </section>
         </main>
-      </div>
     </>
   );
 };
-export default AiHealthcareSolutionsProPage;
+export default AIHealthcareSolutionsProPage;

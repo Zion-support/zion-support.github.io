@@ -1,8 +1,42 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, CheckCircle, Mail, Phone, Play, Shield, Star, Users } from 'lucide-react';
+import { ArrowRight, Brain, CheckCircle, Mail, Phone, Play, Star, Users } from 'lucide-react';
 
 const AIProjectManagerProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const features = [
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Planning",
+      description: "Intelligent project planning and resource allocation.",
+      benefits: ["Smart scheduling", "Resource optimization", "Risk prediction"]
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Team Management",
+      description: "Advanced team collaboration and task management.",
+      benefits: ["Team analytics", "Performance tracking", "Communication tools"]
+    }
+  ];
+
+  const integrations = [
+    { name: "Slack", description: "Team communication integration" },
+    { name: "Jira", description: "Issue tracking integration" },
+    { name: "GitHub", description: "Code repository integration" }
+  ];
+
+  const pricingPlans = [
+    { name: "Basic", price: "$29", features: ["Basic project management", "Up to 5 projects"], description: "Perfect for small teams", period: "per month", popular: false },
+    { name: "Professional", price: "$79", features: ["Advanced AI features", "Unlimited projects"], description: "Ideal for growing teams", period: "per month", popular: true },
+    { name: "Enterprise", price: "Custom", features: ["Custom solutions", "Dedicated support"], description: "Tailored for large organizations", period: "contact us", popular: false }
+  ];
+
+  const testimonials = [
+    { name: "Alex Johnson", role: "Project Manager", content: "Revolutionized our project management!", rating: 5, company: "Software Solutions" },
+    { name: "Maria Garcia", role: "Team Lead", content: "Best AI project management tool!", rating: 5, company: "Tech Innovations" }
+  ];
+
   return (
     <>
       { /* Animated Background */ }
@@ -245,8 +279,7 @@ const AIProjectManagerProPage = () => {
             </div>
           </section>
         </main>
-      </div>
     </>
   );
 };
-export default AiProjectManagerProPage;
+export default AIProjectManagerProPage;

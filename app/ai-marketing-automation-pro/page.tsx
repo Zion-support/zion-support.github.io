@@ -1,8 +1,48 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, Briefcase, CheckCircle, FileText, Mail, Mail as MailIcon, Monitor, Phone, Play, Share2, Shield, Star } from 'lucide-react';
+import { ArrowRight, Brain, CheckCircle, Mail, Phone, Play, Star } from 'lucide-react';
 
 const AIMarketingAutomationProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const features = [
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Campaigns",
+      description: "Intelligent marketing campaigns that adapt to customer behavior.",
+      benefits: ["Personalized content", "A/B testing", "Performance optimization"]
+    },
+    {
+      icon: <Mail className="w-8 h-8" />,
+      title: "Email Automation",
+      description: "Automated email sequences based on customer actions.",
+      benefits: ["Triggered emails", "Segmentation", "Analytics"]
+    }
+  ];
+
+  const channels = [
+    { name: "Email", status: "Active", icon: <Brain className="w-6 h-6" />, description: "Email marketing automation" },
+    { name: "Social Media", status: "Active", icon: <Brain className="w-6 h-6" />, description: "Social media management" },
+    { name: "SMS", status: "Inactive", icon: <Brain className="w-6 h-6" />, description: "SMS marketing campaigns" }
+  ];
+
+  const useCases = [
+    { title: "E-commerce", description: "Automated product recommendations and cart abandonment", icon: <Brain className="w-6 h-6" />, benefits: ["Product recommendations", "Cart abandonment", "Upselling"] },
+    { title: "SaaS", description: "User onboarding and retention campaigns", icon: <Brain className="w-6 h-6" />, benefits: ["User onboarding", "Feature adoption", "Churn prevention"] },
+    { title: "B2B", description: "Lead nurturing and sales automation", icon: <Brain className="w-6 h-6" />, benefits: ["Lead scoring", "Nurture sequences", "Sales alignment"] }
+  ];
+
+  const pricingPlans = [
+    { name: "Starter", price: "$79", features: ["Basic automation", "Email campaigns"], description: "Perfect for small businesses", period: "per month", popular: false },
+    { name: "Professional", price: "$199", features: ["Advanced AI", "Multi-channel"], description: "Ideal for growing companies", period: "per month", popular: true },
+    { name: "Enterprise", price: "Custom", features: ["Custom solutions", "Dedicated support"], description: "Tailored for large organizations", period: "contact us", popular: false }
+  ];
+
+  const testimonials = [
+    { name: "Sarah Davis", role: "Marketing Director", content: "Increased our conversion rate by 40%!", rating: 5, company: "Retail Plus" },
+    { name: "Tom Wilson", role: "CEO", content: "Best marketing automation platform!", rating: 5, company: "TechStart Inc." }
+  ];
+
   return (
     <>
       { /* Animated Background */ }
@@ -283,8 +323,7 @@ const AIMarketingAutomationProPage = () => {
             </div>
           </section>
         </main>
-      </div>
     </>
   );
 };
-export default AiMarketingAutomationProPage;
+export default AIMarketingAutomationProPage;
