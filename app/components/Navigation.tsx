@@ -19,7 +19,19 @@ import {
   CloudIcon,
   CpuChipIcon,
   SignalIcon,
-  UserGroupIcon
+  UserGroupIcon,
+  ChatBubbleLeftRightIcon,
+  EyeIcon,
+  ChartBarIcon,
+  WifiIcon,
+  CheckCircleIcon,
+  CircleStackIcon,
+  AdjustmentsHorizontalIcon,
+  RocketLaunchIcon,
+  CodeBracketIcon,
+  ServerIcon,
+  WrenchScrewdriverIcon,
+  HandRaisedIcon
 } from '@heroicons/react/24/outline';
 
 interface NavigationProps {
@@ -38,42 +50,71 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
     { 
-      name: 'Services', 
-      href: '/services', 
-      icon: BriefcaseIcon,
+      name: 'AI Services', 
+      href: '/ai-solutions', 
+      icon: CpuChipIcon,
       submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'IT Solutions', href: '/it-solutions', icon: CogIcon },
-        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
+        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise', icon: ChatBubbleLeftRightIcon },
+        { name: 'Computer Vision', href: '/ai-computer-vision', icon: EyeIcon },
+        { name: 'Content Generation Pro', href: '/ai-content-generation-pro', icon: DocumentTextIcon },
+        { name: 'Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', icon: ChartBarIcon },
+        { name: 'Automation Platform', href: '/ai-automation-platform', icon: CogIcon },
+        { name: 'Blockchain Solutions', href: '/ai-blockchain-solutions', icon: WifiIcon }
       ]
     },
     { 
-      name: 'Solutions', 
-      href: '/solutions', 
+      name: 'IT Services', 
+      href: '/it-solutions', 
       icon: CogIcon,
       submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'IT Solutions', href: '/it-solutions', icon: CogIcon },
-        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon },
+        { name: 'Cloud Infrastructure Pro', href: '/cloud-infrastructure-pro', icon: CloudIcon },
+        { name: 'Cybersecurity Suite Pro', href: '/cybersecurity-suite-pro', icon: ShieldCheckIcon },
+        { name: 'Network Infrastructure', href: '/network-infrastructure', icon: WifiIcon },
+        { name: 'Data Center Solutions', href: '/data-center-solutions', icon: ServerIcon },
+        { name: 'Managed IT Support', href: '/it-support-managed', icon: WrenchScrewdriverIcon },
+        { name: 'Custom Software Development', href: '/software-development', icon: CodeBracketIcon }
+      ]
+    },
+    { 
+      name: 'Micro SaaS', 
+      href: '/micro-saas-solutions', 
+      icon: GlobeAltIcon,
+      submenu: [
+        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
+        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
+        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
+        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },
+        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: GlobeAltIcon },
+        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: TargetIcon }
+      ]
+    },
+    { 
+      name: 'Specialized Solutions', 
+      href: '/solutions', 
+      icon: RocketLaunchIcon,
+      submenu: [
+        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
         { name: 'Cloud Solutions', href: '/cloud-solutions', icon: CloudIcon },
-        { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: ShieldCheckIcon }
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
+        { name: 'Edge Computing', href: '/5g-edge-computing', icon: CpuChipIcon },
+        { name: 'IoT Solutions', href: '/5g-iot-solutions', icon: WifiIcon }
       ]
     },
     { name: 'Resources', href: '#', icon: DocumentTextIcon, submenu: [
       { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
       { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
       { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },
-      { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon }
+      { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
+      { name: 'API Reference', href: '/api-docs', icon: CodeBracketIcon },
+      { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }
     ]},
     { name: 'Company', href: '#', icon: UserGroupIcon, submenu: [
       { name: 'About Us', href: '/about', icon: InformationCircleIcon },
-      { name: 'Team', href: '/team', icon: UserGroupIcon },
+      { name: 'Our Team', href: '/team', icon: UserGroupIcon },
       { name: 'Careers', href: '/careers', icon: UserGroupIcon },
-      { name: 'Contact', href: '/contact', icon: PhoneIcon }
+      { name: 'Contact', href: '/contact', icon: PhoneIcon },
+      { name: 'Partnerships', href: '/partnerships', icon: HandRaisedIcon }
     ]},
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
