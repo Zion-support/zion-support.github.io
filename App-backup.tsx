@@ -3,20 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import LightweightErrorBoundary from './app/components/LightweightErrorBoundary';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import PerformanceDashboard from './app/components/PerformanceDashboard';
 import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization';
-import LoadingSpinner from './app/components/LoadingSpinner';
-import OptimizedLoadingSpinner from './app/components/OptimizedLoadingSpinner';
-import SEOHead from './app/components/SEOHead';
-import EnhancedSEOHead from './app/components/EnhancedSEOHead';
-import OptimizedImage from './app/components/OptimizedImage';
 
 // Page Components - Lazy loaded for better performance
 const HomePage = lazy(() => import('./app/page'));

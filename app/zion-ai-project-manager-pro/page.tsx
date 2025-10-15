@@ -1,5 +1,3 @@
-import { ArrowRight, Calendar, BarChart3, CheckCircle, Star, Zap, Users, Target, TrendingUp, Shield, Globe, Clock, Play, Heart, Star as StarIcon, Moon, Sun, Heart as HeartIcon, Zap as ZapIcon, Space, Sun as SunIcon, Moon as MoonIcon, Star as StarIcon2, Space as SpaceIcon, Development, Progress, Risk, Status, State, Context, Address, State, Street, Road, Avenue, Boulevard, Lane, Drive, Court, Circle, Square, Plaza, Mall, Center, Complex, Building, Tower, Skyscraper, House, Home, Apartment, Condo, Townhouse, Villa, Mansion, Palace, Castle, Fort, Tower, Bridge, Tunnel, Highway, Freeway, Expressway, Parkway, Street, Road, Avenue, Boulevard, Lane, Drive, Court, Circle, Square, Plaza, Mall, Center, Complex, Building, Tower, Skyscraper, House, Home, Apartment, Condo, Townhouse, Villa, Mansion, Palace, Castle, Fort, Tower, Bridge, Tunnel, Highway, Freeway, Expressway, Parkway } from 'lucide-react';import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 export default function ZionAiProjectManagerPro() {
   const features = [

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import React, { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
 
 interface ContentItem {
   id: string;

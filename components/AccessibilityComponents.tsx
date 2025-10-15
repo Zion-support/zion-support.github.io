@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from 'react';
 // Type definitions for better type safety
 
 // Import utilities
-import { focusManagement, ariaUtils, keyboardNavigation } from './utils/accessibilityUtils';
 
 // Re-export utilities
 export { focusManagement, ariaUtils, keyboardNavigation };

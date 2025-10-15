@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Brain, Server, Star, Target, Cloud, Wifi, Monitor, HardDrive, Layers, MessageSquare, X } from "lucide-react";
 
 const PricingPage: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');

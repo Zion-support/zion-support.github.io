@@ -1,5 +1,4 @@
 import React from 'react';
-import { MessageSquare, Star, BookOpen } from "lucide-react";
 
 const CommunityPage: React.FC = () => {
   const communityFeatures = [

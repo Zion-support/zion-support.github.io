@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap, Brain, Shield } from 'lucide-react';
 
 const FuturisticHero: React.FC = () => {
   const [currentText, setCurrentText] = useState(0);

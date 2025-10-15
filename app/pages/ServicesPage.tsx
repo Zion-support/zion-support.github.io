@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Zap, Brain, Server, Globe, Shield, Code, Database, BarChart3, Users, Settings, Award, Clock, Star, TrendingUp, Target, Lightbulb, Rocket, Cloud, Network } from 'lucide-react';const ServicesPage: React.FC = () => {
+import { Zap, Brain, Cloud, Shield, Code, Database, Users, DollarSign, Globe, Settings, Target, TrendingUp, Cpu, Monitor, Eye, Heart, Award, Mic, Video, Image, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from 'lucide-react';
+
+const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
       title: 'Micro SAAS Solutions',

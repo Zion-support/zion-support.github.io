@@ -1,7 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, FileText, Zap, Brain, Award, DollarSign, Globe, Monitor, MessageSquare, Bell, Award as AwardIcon, Phone, Star as StarIcon } from 'lucide-react';import { Link } from "react-router-dom";
-import SEOOptimizer from "../../components/SEOOptimizer";
 
 export default function ZionAiInvoiceGenerator() {
   const features = [
