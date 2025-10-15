@@ -18,11 +18,46 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./app/*"],
+      "@app/*": ["./app/*"],
       "@components/*": ["./app/components/*"],
       "@hooks/*": ["./app/hooks/*"],
       "@utils/*": ["./app/utils/*"]
-    }
+    },
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": false,
+    "removeComments": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": true
   },
-  "include": ["app", "src", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "src/**/*",
+    "app/**/*",
+    "components/**/*",
+    "utils/**/*",
+    "hooks/**/*",
+    "*.ts",
+    "*.tsx",
+    "*.js",
+    "*.jsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    ".next",
+    "out",
+    "vite.config.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

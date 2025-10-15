@@ -27,21 +27,6 @@ import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import Sidebar from './app/components/Sidebar';
 
-// Service Pages
-// import AIServicesPage from './app/pages/AIServicesPage';
-// import ITServicesPage from './app/pages/ITServicesPage';
-// import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
-// import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
-// import CaseStudiesPage from './app/pages/CaseStudiesPage';
-// import CareersPage from './app/pages/CareersPage';
-
-// Additional Pages - commented out until components are created
-// import CybersecurityPage from './app/pages/CybersecurityPage';
-// import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
-// import MicroSaaSPage from './app/pages/MicroSaaSPage';
-// import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
-// import TeamPage from './app/pages/TeamPage';
-// import DocumentationPage from './app/pages/DocumentationPage';
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -98,14 +83,6 @@ function App() {
                   <Route path="/terms" element={<TermsPage />} />
                   <Route path="/pricing" element={<PricingPage />} />
                   
-                  {/* Service Pages */}
-                  {/* <Route path="/ai-services" element={<AIServicesPage />} /> */}
-                  {/* <Route path="/it-services" element={<ITServicesPage />} /> */}
-                  {/* <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} /> */}
-                  {/* <Route path="/digital-transformation" element={<DigitalTransformationPage />} /> */}
-                  {/* <Route path="/case-studies" element={<CaseStudiesPage />} /> */}
-                  {/* <Route path="/careers" element={<CareersPage />} /> */}
-                  
                   {/* Additional Service Pages */}
                   <Route path="/micro-saas" element={<MicroSaasPage />} />
                   
@@ -138,5 +115,4 @@ function App() {
     </ErrorBoundary>
   );
 }
-
 export default App;

@@ -89,16 +89,16 @@ const HomePage = () => {
               </FuturisticButton>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Services Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
-            <p className="text-xl text-gray-300">Comprehensive solutions for modern businesses</p>
-          </div>
+        {/* Services Section */}
+        <section className="mb-16" aria-labelledby="services-heading">
+          <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            Our Services
+          </h2>
+          <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+            Comprehensive AI and IT solutions designed to transform your business operations
+          </p>
           
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (

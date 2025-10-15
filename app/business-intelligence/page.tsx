@@ -1,15 +1,52 @@
-import { Helmet } from "react-helmet-async";
+'use client';
 
-const BusinessIntelligencePage: React.FC = () => { return (
-    <> <Helmet> <title>Business Intelligence</title> <meta name="description" content="Professional business intelligence solutions and services" /> <meta name="keywords" content="business, intelligence" /> </Helmet> 
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        
-        <div className="container mx-auto px-4 py-16">
-          
-        <div className="text-center">
-            
-          <h1 className="text-4xl font-bold text-white mb-8">
-              Business Intelligence
+import React from 'react';
+import { BarChart, TrendingUp, Target, CheckCircle, Star } from 'lucide-react';
+
+const BusinessIntelligencePage: React.FC = () => {
+  const biServices = [
+    {
+      id: 'data-analytics',
+      title: 'Advanced Data Analytics',
+      description: 'Transform raw data into actionable insights with our comprehensive analytics solutions.',
+      features: ['Real-time data processing', 'Predictive analytics', 'Custom dashboards', 'Data visualization'],
+      benefits: ['Data-driven decisions', 'Improved efficiency', 'Better forecasting', 'Competitive advantage'],
+      marketPrice: '$1,200-3,500/month',
+      category: 'Data Analytics',
+      technologies: ['Python', 'R', 'SQL', 'Tableau', 'Power BI']
+    },
+    {
+      id: 'business-intelligence',
+      title: 'Business Intelligence Solutions',
+      description: 'Comprehensive BI platforms that provide insights across all business functions.',
+      features: ['Executive dashboards', 'KPI tracking', 'Report automation', 'Data integration'],
+      benefits: ['360° business view', 'Faster reporting', 'Improved accuracy', 'Better planning'],
+      marketPrice: '$1,800-4,200/month',
+      category: 'BI Platforms',
+      technologies: ['Microsoft BI', 'QlikView', 'Looker', 'Sisense', 'Domo']
+    },
+    {
+      id: 'data-warehousing',
+      title: 'Data Warehousing & ETL',
+      description: 'Centralized data storage and processing solutions for enterprise-scale analytics.',
+      features: ['Data warehousing', 'ETL processes', 'Data quality management', 'Scalable architecture'],
+      benefits: ['Unified data source', 'Improved data quality', 'Better performance', 'Cost optimization'],
+      marketPrice: '$2,500-6,000/month',
+      category: 'Data Infrastructure',
+      technologies: ['Snowflake', 'BigQuery', 'Redshift', 'Azure Synapse', 'Talend']
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Business Intelligence Services
+>>>>>>> cursor/fix-errors-and-merge-to-main-ae67
             </h1>
             
           <p className="text-xl text-gray-300 mb-8">
@@ -165,6 +202,7 @@ const BusinessIntelligencePage: React.FC = () => { return (
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -195,8 +233,7 @@ const BusinessIntelligencePage: React.FC = () => { return (
             </div>
           ))}
         </section>
-      </div>
-    </>
+    </div>
   );
 };
 export default BusinessIntelligencePage;
