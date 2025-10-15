@@ -1,3 +1,4 @@
+import React from 'react';'
 
 interface SitemapGeneratorOptions {
   });
@@ -12,4 +13,4 @@ interface SitemapGeneratorOptions {
     // Return your hook values here;
   };
 };
-export default SitemapGenerator''"";"
+export default SitemapGenerator''"";"'"'"

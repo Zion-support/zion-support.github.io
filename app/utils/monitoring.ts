@@ -1,3 +1,4 @@
+import React from 'react';'
 
 interface MonitoringOptions {
     // Initialize your state here;
@@ -14,4 +15,4 @@ interface MonitoringOptions {
     // Return your hook values here;
   };
 };
-export default Monitoring''"";"
+export default Monitoring''"";"'"'"

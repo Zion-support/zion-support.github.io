@@ -1,3 +1,4 @@
+import React from 'react';'
 
 interface PerformanceOptimizerOptions {
   });
@@ -12,4 +13,4 @@ interface PerformanceOptimizerOptions {
     // Return your hook values here;
   };
 };
-export default PerformanceOptimizer''"";"
+export default PerformanceOptimizer''"";"'"'"

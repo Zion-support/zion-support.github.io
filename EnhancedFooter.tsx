@@ -1,16 +1,19 @@
 
+import React from 'react';
+
 const EnhancedFooter: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white">"
-      <div className="container mx-auto px-4 py-8">"
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">"
+    <footer className="bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            </>
-          </div>
-
-          <div>
-                  AI Solutions
-                </>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="/about" className="text-gray-300 hover:text-white">About Us</a>
+              </li>
+              <li>
+                <a href="/services" className="text-gray-300 hover:text-white">AI Solutions</a>
               </li>
               <li>
                   IT Services

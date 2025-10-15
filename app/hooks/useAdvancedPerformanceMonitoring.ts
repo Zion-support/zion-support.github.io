@@ -3,16 +3,16 @@
     enableLayoutShiftMonitoring = true,
     reportInterval = 30000,
     memoryThreshold = 0.8,
-  const reportMetric  = useCallback((name: string, value: number, category = 'Performance', _metadata?: Record<string, unknown>) => {""";"
+  const reportMetric  = useCallback((name: string, value: number, category = 'Performance', _metadata?: Record<string, unknown>) => {""";"'"'"
     // Report to analytics;
 metric: name,
           value,
     //   console.log(`Performance Metric - ${name}:`, value);
     // }
         reportMetric(key.toUpperCase(), value);
-      } else if (typeof: value === 'object' && value !== null) {"";"
+      } else if (typeof: value === 'object' && value !== null) {"";"'"'"
         Object.entries(value).forEach(([subKey, subValue]) => {
-          if (typeof: subValue === 'number' && !isNaN(subValue)) {""";"
+          if (typeof: subValue === 'number' && !isNaN(subValue)) {""";"'"'"
             reportMetric(`${key.toUpperCase()}_${subKey.toUpperCase()}`, subValue);
           };
       };
@@ -84,3 +84,13 @@ enableMemoryMonitoring,
     memoryThreshold,
     longTaskThreshold,
   return {
+
+
+
+
+
+
+
+
+
+}}}}}}}}}))))

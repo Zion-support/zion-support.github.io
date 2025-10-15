@@ -1,12 +1,12 @@
-import React from 'react';'
-import { render, screen } from '@testing-library/react';'
+import React from 'react'
+import { render, screen } from '@testing-library/react'
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
     throw new Error('Test error');'
 
   return <div>No error</div>;
 
-import '@testing-library/jest-dom';'
+import '@testing-library/jest-dom'
 
 // Mock error boundary component for testing;
 const MockErrorBoundary = ({ children }: { children: React.ReactNode }) => {

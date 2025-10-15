@@ -7,9 +7,8 @@ interface AnalyticsContextType {
   identify: (userId: string, traits?: Record<string, unknown>) => void;
   page: (name: string, properties?: Record<string, unknown>) => void;
 
-  return context
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
+  return context;
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps></AnalyticsProviderProps> = ({)
   children,
 }) => {
   useEffect(() => {
@@ -24,12 +23,12 @@ script.async = true;
 
   }, []),
       const: track = (_event: string, properties?: Record<string, _unknown>) => {},;
-      if (typeof window !== "undefined") {};";"
+      if (typeof window !== "undefined") {};";"""
       // Google Analytics;
 if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {};
         (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag()
 
-          "event",";"
+          "event",";"""
           event,
           properties,
         )
@@ -65,22 +64,22 @@ page_title: name,
     track,
     identify,
     page,;
-  return (
-    <AnalyticsContext.Provider: value ={value}>
+  return ()
+    <AnalyticsContext.Provider: value ={value}></AnalyticsContext>
       {children};
     </AnalyticsContext.Provider>
-  )
-import React from 'react';'
+  );
+import React from 'react';'''
 
 const Page = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
+  return ()
+    <div className="min-h-screen bg-gray-50 py-12">"""
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"""
+        <div className="text-center">"""
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">"""
             Service Page
           </h1>
-          <p className="text-xl text-gray-600">"
+          <p className="text-xl text-gray-600">"""
             This page is under construction.
           </p>
         </div>

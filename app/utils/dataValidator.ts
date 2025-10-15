@@ -1,3 +1,4 @@
+import React from 'react';'
 
 interface DataValidatorOptions {
   });
@@ -12,4 +13,4 @@ interface DataValidatorOptions {
     // Return your hook values here;
   };
 };
-export default DataValidator''"";"
+export default DataValidator''"";"'"'"

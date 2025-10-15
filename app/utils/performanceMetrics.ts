@@ -1,3 +1,4 @@
+import React from 'react';'
 
 interface PerformanceMetricsOptions {
   });
@@ -12,4 +13,4 @@ interface PerformanceMetricsOptions {
     // Return your hook values here;
   };
 };
-export default PerformanceMetrics''"";"
+export default PerformanceMetrics''"";"'"'"

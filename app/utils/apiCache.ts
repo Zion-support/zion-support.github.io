@@ -1,3 +1,4 @@
+import React from 'react';'
 
 interface ApiCacheOptions {
   });
@@ -12,4 +13,4 @@ interface ApiCacheOptions {
     // Return your hook values here;
   };
 };
-export default ApiCache''"";"
+export default ApiCache''"";"'"'"

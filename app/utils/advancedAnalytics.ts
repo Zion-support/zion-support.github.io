@@ -1,3 +1,4 @@
+import React from 'react';'
 
 interface AdvancedAnalyticsOptions {
   });
@@ -12,4 +13,4 @@ interface AdvancedAnalyticsOptions {
     // Return your hook values here;
   };
 };
-export default AdvancedAnalytics''"";"
+export default AdvancedAnalytics''"";"'"'"

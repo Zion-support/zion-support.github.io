@@ -1,3 +1,4 @@
+import React from 'react';'
 
 interface AdvancedCachingOptions {
   });
@@ -12,4 +13,4 @@ interface AdvancedCachingOptions {
     // Return your hook values here;
   };
 };
-export default AdvancedCaching''"";"
+export default AdvancedCaching''"";"'"'"

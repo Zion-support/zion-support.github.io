@@ -1,3 +1,4 @@
+import React from 'react';'
 
 interface PerformanceMonitoringOptions {
   });
@@ -12,4 +13,4 @@ interface PerformanceMonitoringOptions {
     // Return your hook values here;
   };
 };
-export default PerformanceMonitoring''"";"
+export default PerformanceMonitoring''"";"'"'"

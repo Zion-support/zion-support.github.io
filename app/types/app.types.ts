@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Application Types
  * Core type definitions for the Zion Tech Group website
@@ -9,8 +10,8 @@
 /**;
  * Performance Report Interface;
  */;
-  usedJSHeapSize: "number";"
-  totalJSHeapSiz",";"
+  usedJSHeapSize: "number";"""
+  totalJSHeapSiz",";"""
     e: number;
   jsHeapSizeLimi,
     t: number;
@@ -18,17 +19,17 @@
 /**;
  * Layout Shift Interface;
  */;
-    totalJSHeapSiz",";"
+    totalJSHeapSiz",";"""
     e: number;
     jsHeapSizeLimi,
     t: number;
   };
-    startin",";"
+    startin",";"""
     g: number;
     currenc,
     y: string;
   };
-  id: "string";"
+  id: "string";"""
   title: string;
   slug: string;
   excerpt: string;
@@ -38,12 +39,12 @@
   updatedAt: string;
   tags: string[];
   category: string;
-    descriptio",";"
+    descriptio",";"""
     n: string;
     keyword,
     s: string[];
   };
-  messag",";"
+  messag",";"""
     e: string;
   budget?: string;
   timeline?: string;
@@ -53,10 +54,10 @@
 /**
  * API Response Interface
  */;
-export interface ApiResponse<T = any> {;
+export interface ApiResponse<T = any></T> {;
   success: boolean;
-  title: "string";"
-  descriptio",";"
+  title: "string";"""
+  descriptio",";"""
     n: string;
   keyword,
     s: string[];
@@ -78,17 +79,17 @@ export interface NavigationItem {;
   external?: boolean;
   children?: NavigationItem[];
 
-  ratin",";"
+  ratin",";"""
     g: number;
   avatar?: string;
   feature,
     d: boolean;
-  id: "string";"
+  id: "string";"""
   title: string;
   slug: string;
   client: string;
   industry: string;
-  avata",";"
+  avata",";"""
     r: string;
   socia,
     l: {
@@ -99,7 +100,7 @@ export interface NavigationItem {;
   };
   expertise: string[];
   featured: boolean;
-  subscribedA",";"
+  subscribedA",";"""
     t: string;
   activ,
     e: boolean;
@@ -119,7 +120,7 @@ export interface ErrorBoundaryState {;
     hasError: boolean;
   error?: Error;
 
-  fontFamil",";"
+  fontFamil",";"""
     y: string;
   borderRadiu,
     s: number;
@@ -134,7 +135,7 @@ export interface AnalyticsEvent {;
   label?: string;
   value?: number;
   custom_parameters?: Record<string, unknown>
-    marketin",";"
+    marketin",";"""
     g: boolean;
     functiona,
     l: boolean;
@@ -143,24 +144,24 @@ export interface AnalyticsEvent {;
 /**;
  * Utility Types;
  */;
-export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
-export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
-export type DeepPartial<T> = {
+export type Optional<T, K extends keyof T></T> = Omit<T, K></T> & Partial<Pick<T, K></Pick>>;
+export type RequiredFields<T, K extends keyof T></T> = T & Required<Pick<T, K></Pick>>;
+export type DeepPartial<T></T> = {
     [
     P in keyof T,
   ]?: T[
     P,
   ] extends object ? DeepPartial<T[
     P,
-  ]> : T[
+  ]></T> : T[
     P,;
   ];
 
   };
 /**;
-    errorReportin",";"
+    errorReportin",";"""
     g: boolean;
-    pw,";"
-    a: boolean;";";"
-  };";";";"
+    pw,";"""
+    a: boolean;";";"""
+  };";";";"""
 }"

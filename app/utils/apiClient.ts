@@ -1,3 +1,4 @@
+import React from 'react';'
 
 interface ApiClientOptions {
   });
@@ -12,4 +13,4 @@ interface ApiClientOptions {
     // Return your hook values here;
   };
 };
-export default ApiClient''"";"
+export default ApiClient''"";"'"'"

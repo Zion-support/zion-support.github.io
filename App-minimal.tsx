@@ -1,7 +1,7 @@
-import React from 'react';'
-import { BrowserRouter as Router } from 'react-router-dom';'
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-// Minimal working App component;
+// Minimal working App component
 function App() {
   return (
     <Router>

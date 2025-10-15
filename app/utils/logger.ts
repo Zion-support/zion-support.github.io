@@ -1,3 +1,4 @@
+import React from 'react';'
 
 interface LoggerOptions {
   });
@@ -12,4 +13,4 @@ interface LoggerOptions {
     // Return your hook values here;
   };
 };
-export default Logger''"";"
+export default Logger''"";"'"'"

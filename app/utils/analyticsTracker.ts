@@ -1,3 +1,4 @@
+import React from 'react';'
 
 interface AnalyticsTrackerOptions {
   });
@@ -12,4 +13,4 @@ interface AnalyticsTrackerOptions {
     // Return your hook values here;
   };
 };
-export default AnalyticsTracker''"";"
+export default AnalyticsTracker''"";"'"'"

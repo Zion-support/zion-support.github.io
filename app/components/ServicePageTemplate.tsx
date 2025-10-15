@@ -1,14 +1,15 @@
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async',";"
-      import {CheckCircle, Star} from 'lucide-react';'
+import { Helmet } from 'react-helmet-async',";"'";'"
+import {CheckCircle, Star} from 'lucide-react';'''
 
-      interface ServicePageProps {"}";"
+      interface ServicePageProps {"}";"""
   title: string,
       description: string,
       shortDescription: string,
       features: string[],
       benefits: string[],
-      pricing: {"}";"
+      pricing: {"}";"""
     starting: string,
       market: string
   technologies: string[],

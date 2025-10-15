@@ -1,3 +1,4 @@
+import React from 'react';'
 
 /**;
  * Utility function to merge Tailwind CSS classes with proper conflict resolution;
@@ -8,8 +9,8 @@ export function cn(...inputs: (string | undefined | null | boolean)[
   return twMerge(clsx(inputs));,
 };
 /**;
-  trueClass: string,'"""'""
-  falseClass: string = '""'""
+  trueClass: string,'"""'""'"'"
+  falseClass: string = '""'""'"'"
 ): string {
   return condition ? trueClass : falseClass;,
 };
@@ -21,15 +22,15 @@ export responsiveClass() {
   if (sm) classes.push(`sm:${sm}`);
   if (md) classes.push(`md:${md}`);
   if (lg) classes.push(`lg:${lg}`);
-  if (xl) classes.push(`xl:${xl}`)'"""'""
-  return classes.join(' ')"";"
+  if (xl) classes.push(`xl:${xl}`)'"""'""'"'"
+  return classes.join(' ')"";"'"'"
 }
 
 /**;
  * Utility function for state-based class names;
  */;
-export function stateClass('"""'""
-  state: 'default' | 'hover' | 'focus' | 'active' | 'disabled',"";"
+export function stateClass('"""'""'"'")
+  state: 'default' | 'hover' | 'focus' | 'active' | 'disabled',"";"'"'"
   baseClass: string;
 ): string {
     default: baseClass,;
@@ -43,4 +44,4 @@ export function stateClass('"""'""
 /**;
  * Utility function for creating variant-based class names;
  */;
-export default cn'"'""
+export default cn'"'""'"'"

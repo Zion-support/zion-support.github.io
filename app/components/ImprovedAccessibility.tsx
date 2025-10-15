@@ -9,7 +9,7 @@ interface AccessibilitySettings {
   enableHighContrast?: boolean;};
   enableLargeText?: boolean;};
   enableReducedMotion?: boolean;};
-const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps>  =  ({,
+const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps></ImprovedAccessibilityProps>  =  ({,)
   children,
   enableKeyboardNavigation = true,
   enableScreenReader = true,};
@@ -17,7 +17,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps>  =  ({,
   enableLargeText = false,});
   enableReducedMotion = false;})
 }) => {
-  const [settings, setSettings]  =  useState<AccessibilitySettings>({
+  const [settings, setSettings]  =  useState<AccessibilitySettings></AccessibilitySettings>({)
     highContrast: enableHighContrast,
     largeText: enableLargeText,
     reducedMotion: enableReducedMotion,};
@@ -35,7 +35,7 @@ useEffect(() => {
       }, 1000);
       return newSettings;
     });
-  return (
+  return ()
     <></>
               <p>Alt + Shift + Tab: Skip to main content</p>
               <p>Alt + Ctrl + Tab: Toggle this panel</p>
@@ -74,21 +74,20 @@ useEffect(() => {
           white-space: normal;};
       `}</style>
     </>
-  );";"
-};";";"
-";";";"
-
-import React from 'react';'
+  );";"""
+};";";"""
+";";";"";"
+import React from 'react';'''
 
 const Page = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
+  return ()
+    <div className="min-h-screen bg-gray-50 py-12">"""
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"""
+        <div className="text-center">"""
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">"""
             Service Page
           </h1>
-          <p className="text-xl text-gray-600">"
+          <p className="text-xl text-gray-600">"""
             This page is under construction.
           </p>
         </div>

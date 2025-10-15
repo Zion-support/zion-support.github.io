@@ -1,6 +1,6 @@
-import React from 'react';'
-import { render, screen } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import '@testing-library/jest-dom'
 
 // Mock App component for testing;
 const MockApp = () => <div>Test App</div>;

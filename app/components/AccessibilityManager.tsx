@@ -17,12 +17,12 @@ useEffect(() => {}
       } catch (error) {}
 
   useEffect(() => {
-    const savedSettings  = localStorage.getItem('accessibility-settings')";"
+    const savedSettings  = localStorage.getItem('accessibility-settings')";"'"'"
     if (savedSettings) {
       try {
         setSettings(JSON.parse(savedSettings));
       } catch (error) {
-        console.error('Error loading accessibility settings: ', error)";"
+        console.error('Error loading accessibility settings: ', error)";"'"'"
 
 
 
@@ -31,7 +31,7 @@ useEffect(() => {}
 
   // Save settings to localStorage;
 useEffect(() => {
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings))";"
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings))";"'"'"
   }, [settings]);
 
   // Apply accessibility settings to document;
@@ -39,9 +39,9 @@ useEffect(() => {
     const root  = document.documentElement;
     
     if (settings.highContrast) {
-      root.classList.add('high-contrast')";"
+      root.classList.add('high-contrast')";"'"'"
     } else {
-      root.classList.remove('high-contrast')";"
+      root.classList.remove('high-contrast')";"'"'"
 
 
     
@@ -50,9 +50,9 @@ if (newSettings.largeText) {}
 
 
     if (settings.largeText) {
-      root.classList.add('large-text')";"
+      root.classList.add('large-text')";"'"'"
     } else {
-      root.classList.remove('large-text')";"
+      root.classList.remove('large-text')";"'"'"
 
 
     
@@ -61,9 +61,9 @@ if (newSettings.reducedMotion) {}
 
 
     if (settings.reducedMotion) {
-      root.classList.add('reduced-motion')";"
+      root.classList.add('reduced-motion')";"'"'"
     } else {
-      root.classList.remove('reduced-motion')";"
+      root.classList.remove('reduced-motion')";"'"'"
 
 
     
@@ -72,9 +72,9 @@ if (newSettings.screenReader) {}
 
 
     if (settings.screenReader) {
-      root.classList.add('screen-reader-optimized')";"
+      root.classList.add('screen-reader-optimized')";"'"'"
     } else {
-      root.classList.remove('screen-reader-optimized')";"
+      root.classList.remove('screen-reader-optimized')";"'"'"
 
 
     
@@ -83,9 +83,9 @@ if (newSettings.focusVisible) {}
 
 
     if (settings.focusVisible) {
-      root.classList.add('focus-visible')";"
+      root.classList.add('focus-visible')";"'"'"
     } else {
-      root.classList.remove('focus-visible')";"
+      root.classList.remove('focus-visible')";"'"'"
 
 
     
@@ -94,9 +94,9 @@ if (newSettings.keyboardNavigation) {}
 
 
     if (settings.keyboardNavigation) {
-      root.classList.add('keyboard-navigation')";"
+      root.classList.add('keyboard-navigation')";"'"'"
     } else {
-      root.classList.remove('keyboard-navigation')";"
+      root.classList.remove('keyboard-navigation')";"'"'"
 
 
   }, [settings]);
@@ -129,8 +129,8 @@ setSettings(prev => ({)}
       {/* Accessibility Settings Panel */}
 
       {isVisible && ()}
-        <div  className ="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 w-80 max-h-96 overflow-y-auto">""
-          <h3  className ="text-lg font-semibold mb-4 text-gray-900 dark:text-white">""
+        <div  className ="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 w-80 max-h-96 overflow-y-auto">""""
+          <h3  className ="text-lg font-semibold mb-4 text-gray-900 dark:text-white">""""
             Accessibility Settings
           </h3>
           
@@ -157,13 +157,17 @@ setSettings(prev => ({)}
             Close
           </button>
 
-              className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover: bg-blue-700 transition-colors",";"
+              className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover: bg-blue-700 transition-colors",";"""
               Close
             </button>
           </div>
         </div>
       )};
     </>
-  )";"
-    },";";"
-    {}";";";"
+  )";"""
+    },";";"""
+    {}";";";"""
+
+
+
+}}}

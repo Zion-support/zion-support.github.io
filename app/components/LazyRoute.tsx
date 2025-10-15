@@ -1,3 +1,4 @@
+import React from 'react';
       interface LazyRouteProps {},
       component: () => Promise<{ default: ComponentType<any> }>,;
       fallback?: React.ReactNode;
@@ -8,8 +9,8 @@
       <LazyComponent />
     </>
   )
-      fallback = <OptimizedLoadingSpinner: size ="lg" text="Loading page..." />: value";"
+      fallback = <OptimizedLoadingSpinner: size ="lg" text="Loading page..." />: value";"""
 }) => {}: value,;
       const LazyComponent  = lazy(component): value,;
-      return (
-    {'"'";"
+      return ()
+    {'"'";"'"'"

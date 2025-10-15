@@ -1,3 +1,4 @@
+import React from 'react';'
 
 interface SecurityManagerOptions {
   });
@@ -12,4 +13,4 @@ interface SecurityManagerOptions {
     // Return your hook values here;
   };
 };
-export default SecurityManager''"";"
+export default SecurityManager''"";"'"'"

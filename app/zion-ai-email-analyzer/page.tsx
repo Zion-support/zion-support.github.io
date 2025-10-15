@@ -1,142 +1,71 @@
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Brain, Shield, Zap } from 'lucide-react';
+import React from 'react';''
 
-export default function PagePage() {
-  const features = [
-    {
-      title: "Advanced Technology",
-      description: "Cutting-edge solutions powered by the latest technology",
-      icon: <Brain className="w-8 h-8" />
-    },
-    {
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security and reliability for your business",
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-      title: "Fast Implementation",
-      description: "Quick deployment and implementation for immediate results",
-      icon: <Zap className="w-8 h-8" />
-    }
-  ];
-ursor/fix-errors-and-merge-to-main-234b
-=======
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;""
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">;""
-            <h3 className="text-xl font-semibold text-white mb-4">Email Analysis</h3>;""
-            <p className="text-gray-300 mb-4">;""
-              AI-powered email content analysis and sentiment detection.;
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">;""
-              <li>• Sentiment analysis</li>
-              <li>• Content categorization</li>
-              <li>• Priority detection</li>
-            </ul>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">;""
-            <h3 className="text-xl font-semibold text-white mb-4">Smart Filtering</h3>;""
-            <p className="text-gray-300 mb-4">;""
-              Intelligent email filtering and organization capabilities.;
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">;""
-              <li>• Spam detection</li>
-              <li>• Auto-categorization</li>
-              <li>• Smart routing</li>
-            </ul>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">;""
-            <h3 className="text-xl font-semibold text-white mb-4">Response Suggestions</h3>;""
-            <p className="text-gray-300 mb-4">;""
-              AI-generated response suggestions and templates.;
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">;""
-              <li>• Smart replies</li>
-              <li>• Template suggestions</li>
-              <li>• Tone optimization</li>
-            </ul>
-          </div>
-        </div>
-        <div className="text-center">;""
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">;""
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Email Management?</h2>;""
-            <p className="text-gray-300 mb-6">;""
-              Our AI email analyzer experts are ready to help you optimize your email workflow.;
-            </p>
-            <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">;""
-              Get Started Today;
-            </button>
-          </div>
->>>>>>> main
         </div>
       </div>
     </div>
   );}
 }
-''
-=======
-
-import React from 'react';
-import { Helmet } from 'react-helmet-async""use client';
+''';'
+import React from 'react';';'
+import { Helmet } from 'react-helmet-async""use client';'";'"
 export default function ZionAIEmailAnalyzer() {}
   return ()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
-      <Helmet>;
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;""
+      <Helmet></Helmet></Helmet></Helmet>;
         <title>Zion AI Email Analyzer | Zion Tech Group</title>;
-        <meta name="description" content="Professional AI Email Analyzer services by Zion Tech Group. Advanced AI and IT solutions for your business." />;
+        <meta name="description" content="Professional AI Email Analyzer services by Zion Tech Group. Advanced AI and IT solutions for your business." />;""
       </Helmet>;
-      <div className="container mx-auto px-4 py-16">;
-        <div className="text-center mb-16">;
-          <h1 className="text-5xl font-bold text-white mb-6">;
-            Zion AI Email Analyzer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>;
+      <div className="container mx-auto px-4 py-16">;""
+        <div className="text-center mb-16">;""
+          <h1 className="text-5xl font-bold text-white mb-6">;""
+            Zion AI Email Analyzer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>;""
           </h1>;
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;""
             Advanced AI-powered email analysis and management solutions for modern businesses.;
           </p>;
         </div>;
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">;
-            <h3 className="text-xl font-semibold text-white mb-4">Email Analysis</h3>;
-            <p className="text-gray-300 mb-4">;
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;""
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">;""
+            <h3 className="text-xl font-semibold text-white mb-4">Email Analysis</h3>;""
+            <p className="text-gray-300 mb-4">;""
               AI-powered email content analysis and sentiment detection.;
             </p>;
-            <ul className="text-sm text-gray-400 space-y-2">;
+            <ul className="text-sm text-gray-400 space-y-2">;""
               <li>• Sentiment analysis</li>;
               <li>• Content categorization</li>;
               <li>• Priority detection</li>;
             </ul>;
           </div>;
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">;
-            <h3 className="text-xl font-semibold text-white mb-4">Smart ing</h3>;
-            <p className="text-gray-300 mb-4">;
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">;""
+            <h3 className="text-xl font-semibold text-white mb-4">Smart ing</h3>;""
+            <p className="text-gray-300 mb-4">;""
               Intelligent email filtering and organization capabilities.;
             </p>;
-            <ul className="text-sm text-gray-400 space-y-2">;
+            <ul className="text-sm text-gray-400 space-y-2">;""
               <li>• Spam detection</li>;
               <li>• Auto-categorization</li>;
               <li>• Smart routing</li>;
             </ul>;
           </div>;
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">;
-            <h3 className="text-xl font-semibold text-white mb-4">Response Suggestions</h3>;
-            <p className="text-gray-300 mb-4">;
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">;""
+            <h3 className="text-xl font-semibold text-white mb-4">Response Suggestions</h3>;""
+            <p className="text-gray-300 mb-4">;""
               AI-generated response suggestions and templates.;
             </p>;
-            <ul className="text-sm text-gray-400 space-y-2">;
+            <ul className="text-sm text-gray-400 space-y-2">;""
               <li>• Smart replies</li>;
               <li>• Template suggestions</li>;
               <li>• Tone optimization</li>;
             </ul>;
           </div>;
         </div>;
-        <div className="text-center">;
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">;
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Email Management?</h2>;
-            <p className="text-gray-300 mb-6">;
+        <div className="text-center">;""
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">;""
+            <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Email Management?</h2>;""
+            <p className="text-gray-300 mb-6">;""
               Our AI email analyzer experts are ready to help you optimize your email workflow.;
             </p>;
-            <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">;
+            <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">;""
               Get Started Today;
             </button>;
           </div>;
@@ -145,31 +74,5 @@ export default function ZionAIEmailAnalyzer() {}
     </div>;
 
   );
-<<<<<<< HEAD
-}ursor/fix-errors-and-merge-to-main-234b
-=======
 
-import React from 'react';;';
-import SEOHead from './components/SEOHead';
-;
-const ZionAiEmailAnalyzerPage: React.FC = () => {
-  return (
-    <>;
-      <SEOHead;
-        title="Zion Ai Email Analyzer - Zion Tech Group"";
-        description="Professional zion ai email analyzer solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Zion Ai Email Analyzer</h1>";
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
-        </div>;
-      </div>;
-    </>;
-  ),
 
-};
-;
-export default ZionAiEmailAnalyzerPage;'";'";
->>>>>>> main
->>>>>>> main

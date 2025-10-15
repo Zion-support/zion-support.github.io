@@ -1,3 +1,4 @@
+import React from 'react';'
 
 interface PerformanceUtilsOptions {
   });
@@ -12,4 +13,4 @@ interface PerformanceUtilsOptions {
     // Return your hook values here;
   };
 };
-export default PerformanceUtils''"";"
+export default PerformanceUtils''"";"'"'"

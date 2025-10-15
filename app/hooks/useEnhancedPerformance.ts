@@ -1,3 +1,4 @@
+import React from 'react';'
 
 interface UseEnhancedPerformanceOptions {
   });
@@ -12,4 +13,4 @@ interface UseEnhancedPerformanceOptions {
     // Return your hook values here;
   };
 };
-export default UseEnhancedPerformance''"";"
+export default UseEnhancedPerformance''"";"'"'"

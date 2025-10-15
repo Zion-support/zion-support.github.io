@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'";"
+import React from 'react';'
+import { useEffect, useState } from 'react'";"'"'"
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
@@ -8,7 +9,7 @@ interface PerformanceMetrics {
 export const usePerformanceMonitor  = (): PerformanceMetrics => {
     const [
     metrics, setMetrics,
-  ] = useState<PerformanceMetrics>({
+  ] = useState<PerformanceMetrics></PerformanceMetrics>({)
     loadTime: 0,
       });
     };
@@ -18,6 +19,6 @@ export const usePerformanceMonitor  = (): PerformanceMetrics => {
   }, [
   ]);
   return metrics;
-};";"
-export default usePerformanceMonitor;";";"
+};";"";"
+export default usePerformanceMonitor;";";"""
 ";";";

@@ -6,8 +6,8 @@ interface State {},
       hasError: boolean;
 error: Error | null;
 errorInfo: ErrorInfo | null;
-retryCount: number
-export class GlobalErrorBoundary extends Component<Props, State> {};
+retryCount: number;
+export class GlobalErrorBoundary extends Component<Props, State></Props> {};
   private: maxRetries = 3;
 constructor(props: Props) {};
     super(props)
@@ -16,7 +16,7 @@ constructor(props: Props) {};
       error: null;
       errorInfo: null;
       retryCount: 0
-  static getDerivedStateFromError(error: Error): Partial<State> {},
+  static getDerivedStateFromError(error: Error): Partial<State></State> {},
       return {},
       hasError: true,
       error
@@ -63,11 +63,11 @@ export const ErrorBoundary: React.FC<{},
       children: ReactNode,
       fallback?: ReactNode,;
       onError?: (_error: Error) => void;
-}> = ({
+}> = ({)
     children, fallback, _onError 
   }) => {},
       const [hasError, setHasError]  =  React.useState(false),
-      const [error, setError] = React.useState<Error | null>(null),
+      const [error, setError] = React.useState<Error | null></Error>(null),
       React.useEffect(() => {},
       const: handleError = (_event: ErrorEvent) => {},
       setHasError(true),
@@ -77,20 +77,19 @@ export const ErrorBoundary: React.FC<{},
       </div>
     );
   return <>{children}</>
-};";"
-};";";"
+};";"""
+};";";"";"
+import React from 'react';";";";";"'";'"
+import SEOHead from './components/SEOHead";"''"'"
 
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
-
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
+  return ()
+    <div className="min-h-screen bg-gray-50 py-12">"""
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"""
+        <div className="text-center">"""
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">"""
             Service Page
           </h1>
-          <p className="text-xl text-gray-600">"
+          <p className="text-xl text-gray-600">"""
             This page is under construction.
           </p>
         </div>

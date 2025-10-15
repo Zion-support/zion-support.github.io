@@ -1,9 +1,10 @@
-      <Helmet>
+import React from 'react';
+      <Helmet></Helmet></Helmet></Helmet>
         <title>Cloud Solutions - Zion Tech Group</title>
-        <meta: name ="description" content="Cloud Solutions - Zion Tech Group" />";"
+        <meta: name ="description" content="Cloud Solutions - Zion Tech Group" />";"""
       </Helmet>
-      <div: className ="container mx-auto px-4 py-16">";"
-        <div: className ="text-center">";"
+      <div: className ="container mx-auto px-4 py-16">";"""
+        <div: className ="text-center">";"""
           <h1>Cloud Solutions</h1>
           <p>
             This page is under construction. Please check back later.
@@ -20,7 +21,7 @@ import {
   CpuChipIcon,
 
   ]
-  return (
+  return ()
                   View Portfolio
                 </button>
               </div>
@@ -44,7 +45,7 @@ import {
               </p>
             </div>
             
-                      </li>
+                      </li>;
                     ))};
                   </ul>
                 </div>
@@ -55,4 +56,4 @@ import {
         </section>
       </div>
     </>
-const page  = React.lazy(() => import('./page'))";"
+const page  = React.lazy(() => import('./page'))";"'"'"
