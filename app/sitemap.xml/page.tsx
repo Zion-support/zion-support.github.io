@@ -30,11 +30,7 @@ const SitemapXmlPage: React.FC = () => {
                   Custom Implementation
                 </h3>
                 <p className="text-green-700">
-<<<<<<< HEAD
-                  Tailored implementations for your specific requirements.
-=======
                   Tailored sitemap implementations for your specific requirements.
->>>>>>> cursor/analyze-improve-and-merge-code-49c8
                 </p>
               </div>
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
