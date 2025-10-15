@@ -30,6 +30,12 @@ const CookiesPage = lazy(() => import('./app/cookies/page'));
 const AIServicesPage = lazy(() => import('./app/ai-services/page'));
 const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
 
+// Micro SaaS Pages
+const AIContentGeneratorPage = lazy(() => import('./app/ai-content-generator/page'));
+const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
+const TaskManagerPage = lazy(() => import('./app/task-manager/page'));
+const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
+
 // IT Services Pages
 const ITServicesPage = lazy(() => import('./app/it-services/page'));
 const CloudInfrastructurePage = lazy(() => import('./app/cloud-infrastructure/page'));
@@ -120,6 +126,12 @@ function App() {
                     {/* AI Services */}
                     <Route path="/ai-services" element={<AIServicesPage />} />
                     <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                    
+                    {/* Micro SaaS Services */}
+                    <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                    <Route path="/analytics-dashboard" element={<AnalyticsDashboardPage />} />
+                    <Route path="/task-manager" element={<TaskManagerPage />} />
+                    <Route path="/customer-support-hub" element={<CustomerSupportHubPage />} />
                     
                     {/* IT Services */}
                     <Route path="/it-services" element={<ITServicesPage />} />
