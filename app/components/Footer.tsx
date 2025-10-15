@@ -12,10 +12,10 @@ const Footer: React.FC = memo(() => {
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
             <div className="space-y-2 text-sm text-gray-300">
-              <p><strong>Phone:</strong> <a href="tel:+13024640950" className="hover:text-white">+1 302 464 0950</a></p>
-              <p><strong>Email:</strong> <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white">kleber@ziontechgroup.com</a></p>
-              <p><strong>Address:</strong> 364 E Main St STE 1008<br />Middletown DE 19709</p>
-              <p><strong>Website:</strong> <a href="https://ziontechgroup.com" className="hover:text-white">https://ziontechgroup.com</a></p>
+              <p><strong>📞 Phone:</strong> <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">+1 (302) 464-0950</a></p>
+              <p><strong>✉️ Email:</strong> <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">kleber@ziontechgroup.com</a></p>
+              <p><strong>📍 Address:</strong> 364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <p><strong>🌐 Website:</strong> <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">https://ziontechgroup.com</a></p>
             </div>
             <div className="flex space-x-4 mt-4">
               <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
@@ -67,17 +67,17 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">AI Tools</h4>
+            <h4 className="text-md font-semibold mb-4">AI Micro SaaS</h4>
             <ul className="space-y-2">
-              <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">Content Moderator</Link></li>
-              <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">Customer Support Pro</Link></li>
-              <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-white">Workflow Automator Pro</Link></li>
-              <li><Link to="/zion-ai-email-marketing-pro" className="text-gray-300 hover:text-white">Email Marketing Pro</Link></li>
-              <li><Link to="/zion-ai-customer-churn-predictor" className="text-gray-300 hover:text-white">Customer Churn Predictor</Link></li>
-              <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-white">Sales Predictor</Link></li>
-              <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
-              <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">Document Analyzer</Link></li>
-              <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
+              <li><Link to="/ai-crm-optimizer" className="text-gray-300 hover:text-cyan-400 transition-colors">AI CRM Optimizer</Link></li>
+              <li><Link to="/ai-data-visualizer" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Data Visualizer</Link></li>
+              <li><Link to="/ai-email-optimizer" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Email Optimizer</Link></li>
+              <li><Link to="/social-media-scheduler" className="text-gray-300 hover:text-cyan-400 transition-colors">Social Media Scheduler</Link></li>
+              <li><Link to="/expense-tracker-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Expense Tracker Pro</Link></li>
+              <li><Link to="/ai-content-generator" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Content Generator</Link></li>
+              <li><Link to="/ai-chatbot-builder" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Chatbot Builder</Link></li>
+              <li><Link to="/ai-document-processor" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Document Processor</Link></li>
+              <li><Link to="/ai-form-builder" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Form Builder</Link></li>
             </ul>
           </div>
           

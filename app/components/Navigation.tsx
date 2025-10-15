@@ -72,12 +72,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       icon: GlobeAltIcon,
       submenu: [
         { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
-        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
-        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
-        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
-        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },
+        { name: 'AI CRM Optimizer', href: '/ai-crm-optimizer', icon: UserGroupIcon },
+        { name: 'AI Data Visualizer', href: '/ai-data-visualizer', icon: ChartBarIcon },
+        { name: 'AI Email Optimizer', href: '/ai-email-optimizer', icon: EnvelopeIcon },
         { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },
-        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon }
+        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon },
+        { name: 'AI Content Generator', href: '/ai-content-generator', icon: DocumentTextIcon },
+        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon }
       ]
     },
     {

@@ -50,6 +50,11 @@ const AILeadScoringPage = lazy(() => import('./app/ai-lead-scoring/page'));
 const AIPredictiveMaintenancePage = lazy(() => import('./app/ai-predictive-maintenance/page'));
 const AIPriceOptimizerPage = lazy(() => import('./app/ai-price-optimizer/page'));
 const AISchedulingAssistantPage = lazy(() => import('./app/ai-scheduling-assistant/page'));
+const AICRMOptimizerPage = lazy(() => import('./app/ai-crm-optimizer/page'));
+const AIDataVisualizerPage = lazy(() => import('./app/ai-data-visualizer/page'));
+const AIEmailOptimizerPage = lazy(() => import('./app/ai-email-optimizer/page'));
+const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
+const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
 const BlockchainSolutionsPage = lazy(() => import('./app/blockchain-solutions/page'));
 const IOTSolutionsPage = lazy(() => import('./app/iot-solutions/page'));
 const DevOpsAutomationPage = lazy(() => import('./app/devops-automation/page'));
@@ -173,6 +178,11 @@ function App() {
                     <Route path="/ai-predictive-maintenance" element={<AIPredictiveMaintenancePage />} />
                     <Route path="/ai-price-optimizer" element={<AIPriceOptimizerPage />} />
                     <Route path="/ai-scheduling-assistant" element={<AISchedulingAssistantPage />} />
+                    <Route path="/ai-crm-optimizer" element={<AICRMOptimizerPage />} />
+                    <Route path="/ai-data-visualizer" element={<AIDataVisualizerPage />} />
+                    <Route path="/ai-email-optimizer" element={<AIEmailOptimizerPage />} />
+                    <Route path="/social-media-scheduler" element={<SocialMediaSchedulerPage />} />
+                    <Route path="/expense-tracker-pro" element={<ExpenseTrackerProPage />} />
                     
                     {/* Advanced Solutions */}
                     <Route path="/blockchain-solutions" element={<BlockchainSolutionsPage />} />
