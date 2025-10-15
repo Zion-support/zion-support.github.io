@@ -1,15 +1,10 @@
 // Performanceoptimizations utility functions
-
-export const Performanceoptimizations = {
-  init: () => {
-    },
-
-  process: (data: any) => {
-    return data;
+export const Performanceoptimizations = {}
+  init: () => {}
+} },
+  process: (data: any) => {}
+}return data
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Performanceoptimizations;
+  cleanup: () => {}
+} }}
+export default Performanceoptimizations

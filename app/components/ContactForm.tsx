@@ -1,65 +1,57 @@
-import React, { useState } from "react";
-import { MessageSquare } from "lucide-react";
-
-interface FormData {
-  name: string;
-  email: string;
-  phone: string;
-  company: string;
-  message: string;
-  service: string;
+import React, { useState } from "react"
+import { MessageSquare } from "lucide-react"
+interface FormData {}
+  name: string
+  email: string
+  phone: string
+  company: string
+  message: string
+  service: string
 }
-
-const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
+const ContactForm: React.FC = () => {}
+}const [formData, setFormData] = useState<FormData>({}
     name: "",
     email: "",
     phone: "",
     company: "",
     message: "",
-    service: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleChange = (
+    service: ""})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const handleChange = ()
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >,
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
+  ) => {}
+}const { name, value } = e.target
+    setFormData((prev) => ({}
       ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setIsSubmitted(true);
-      setFormData({
+      [name]: value}))
+  }
+  const handleSubmit = async (e: React.FormEvent) => {}
+}e.preventDefault()
+    setIsSubmitting(true)
+    try {}
+} catch (error) {}
+  console.error(error)
+}// Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1000))
+      setIsSubmitted(true)
+      setFormData({}
         name: "",
         email: "",
         phone: "",
         company: "",
         message: "",
-        service: "",
-      });
-
-    } catch (error) {
-      console.error('Failed to submit contact form:', error);
-    } finally {
-      setIsSubmitting(false);
+        service: ""})
+    } catch (error) {}
+      console.error('Failed to submit contact form:', error)
+    } finally {}
+      setIsSubmitting(false)
     }
-  };
-
-  if (isSubmitted) {
-    return (
+  }
+  if (isSubmitted) {}
+    return ()
       <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center">
         <MessageSquare className="w-8 h-8 mx-auto mb-2" />
         <h3 className="text-lg font-semibold mb-2">Thank you!</h3>
@@ -67,10 +59,9 @@ const ContactForm: React.FC = () => {
           Your message has been sent successfully. We'll get back to you soon.
         </p>
       </div>
-    );
+    )
   }
-
-  return (
+  return ()
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
@@ -90,7 +81,6 @@ const ContactForm: React.FC = () => {
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
         </div>
-
         <div>
           <label
             htmlFor="email"
@@ -109,7 +99,6 @@ const ContactForm: React.FC = () => {
           />
         </div>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label
@@ -127,7 +116,6 @@ const ContactForm: React.FC = () => {
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
         </div>
-
         <div>
           <label
             htmlFor="company"
@@ -145,7 +133,6 @@ const ContactForm: React.FC = () => {
           />
         </div>
       </div>
-
       <div>
         <label
           htmlFor="service"
@@ -168,7 +155,6 @@ const ContactForm: React.FC = () => {
           <option value="other">Other</option>
         </select>
       </div>
-
       <div>
         <label
           htmlFor="message"
@@ -187,7 +173,6 @@ const ContactForm: React.FC = () => {
           placeholder="Tell us about your project or requirements..."
         />
       </div>
-
       <button
         type="submit"
         disabled={isSubmitting}
@@ -196,7 +181,6 @@ const ContactForm: React.FC = () => {
         {isSubmitting ? "Sending..." : "Send Message"}
       </button>
     </form>
-  );
-};
-
-export default ContactForm;
+  )
+}
+export default ContactForm

@@ -9,6 +9,7 @@ import Sidebar from './app/components/Sidebar';
 import Header from './app/components/Header';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
+import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
@@ -81,7 +82,7 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
   return (
-    <ErrorBoundary>
+    <GlobalErrorBoundary>
       <HelmetProvider>
         <Router>
           <SEOHead />
@@ -154,7 +155,7 @@ function App() {
           </div>
         </Router>
       </HelmetProvider>
-    </ErrorBoundary>
+    </GlobalErrorBoundary>
   );
 }
 

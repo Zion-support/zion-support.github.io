@@ -1,118 +1,132 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  PhoneIcon, 
-  EnvelopeIcon, 
+import React from 'react'
+import { Link } from 'react-router-dom'
+import {
+  PhoneIcon,
+  EnvelopeIcon,
   MapPinIcon,
-  ArrowRightIcon
-} from '@heroicons/react/24/outline';
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
-import { 
+  ArrowRightIcon,
   HeartIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
+import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react'
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
+  const currentYear = new Date().getFullYear()
+  
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
     { name: 'IT Solutions', href: '/it-solutions' },
     { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Cloud Solutions', href: '/cloud-solutions' },
+    { name: 'Digital Transformation', href: '/digital-transformation' }
+  ]
+
+  const solutions = [
     { name: '5G Solutions', href: '/5g-solutions' },
-    { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'Custom Software Development', href: '/software-development' },
-    { name: 'Edge Computing', href: '/5g-edge-computing' },
-    { name: 'IoT Solutions', href: '/5g-iot-solutions' }
-  ];
+    { name: 'Blockchain', href: '/blockchain' },
+    { name: 'AR/VR Platform', href: '/ar-vr-platform' },
+    { name: 'Automation', href: '/automation' }
+  ]
+
+  const resources = [
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Docs', href: '/api-docs' },
+    { name: 'Partnerships', href: '/partnerships' }
+  ]
 
   const company = [
     { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
+    { name: 'Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'News & Updates', href: '/blog' },
-    { name: 'Partnerships', href: '/partnerships' }
-  ];
-
-  const resources = [
-    { name: 'Documentation', href: '/docs' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'API Reference', href: '/api-docs' },
-    { name: 'Help Center', href: '/help' },
-    { name: 'Community', href: '/community' }
-  ];
-
-  const support = [
-    { name: 'Contact Us', href: '/contact' },
-    { name: 'Support Center', href: '/support' },
-    { name: 'Live Chat', href: '/chat' },
-    { name: 'Schedule Demo', href: '/demo' },
-    { name: 'System Status', href: '/status' },
-    { name: 'Report Issue', href: '/report' },
-    { name: 'Help Center', href: '/help' }
-  ];
+    { name: 'Contact', href: '/contact' }
+  ]
 
   const legal = [
     { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' }
-  ];
-
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: 'facebook' },
-    { name: 'Twitter', href: '#', icon: 'twitter' },
-    { name: 'LinkedIn', href: '#', icon: 'linkedin' },
-    { name: 'GitHub', href: '#', icon: 'github' }
-  ];
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' }
+  ]
 
   return (
     <footer className="bg-slate-900 border-t border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center mb-4">
+          <div className="lg:col-span-2">
+            <Link to="/" className="flex items-center mb-4">
               <div className="h-8 w-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
+                <span className="text-white font-bold text-sm">Z</span>
               </div>
               <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-400 text-sm mb-4">
-              Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services. 
-              Transforming businesses with cutting-edge technology.
+            </Link>
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services.
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  className="text-gray-400 hover:text-white transition-colors"
-                  aria-label={social.name}
-                >
-                  <div className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors">
-                    {social.icon === 'facebook' && <Facebook className="w-4 h-4" />}
-                    {social.icon === 'twitter' && <Twitter className="w-4 h-4" />}
-                    {social.icon === 'linkedin' && <Linkedin className="w-4 h-4" />}
-                    {social.icon === 'github' && <Github className="w-4 h-4" />}
-                  </div>
-                </a>
-              ))}
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Github className="h-5 w-5" />
+              </a>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Our Services</h3>
+            <h3 className="text-white font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
                   <Link
                     to={service.href}
-                    className="text-gray-400 hover:text-white text-sm transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors flex items-center"
                   >
+                    <ArrowRightIcon className="h-3 w-3 mr-2" />
                     {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Solutions */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Solutions</h3>
+            <ul className="space-y-2">
+              {solutions.map((solution) => (
+                <li key={solution.name}>
+                  <Link
+                    to={solution.href}
+                    className="text-gray-300 hover:text-white transition-colors flex items-center"
+                  >
+                    <ArrowRightIcon className="h-3 w-3 mr-2" />
+                    {solution.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              {resources.map((resource) => (
+                <li key={resource.name}>
+                  <Link
+                    to={resource.href}
+                    className="text-gray-300 hover:text-white transition-colors flex items-center"
+                  >
+                    <ArrowRightIcon className="h-3 w-3 mr-2" />
+                    {resource.name}
                   </Link>
                 </li>
               ))}
@@ -127,42 +141,9 @@ const Footer: React.FC = () => {
                 <li key={item.name}>
                   <Link
                     to={item.href}
-                    className="text-gray-400 hover:text-white text-sm transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors flex items-center"
                   >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
-              {resources.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    to={item.href}
-                    className="text-gray-400 hover:text-white text-sm transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Support</h3>
-            <ul className="space-y-2">
-              {support.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    to={item.href}
-                    className="text-gray-400 hover:text-white text-sm transition-colors"
-                  >
+                    <ArrowRightIcon className="h-3 w-3 mr-2" />
                     {item.name}
                   </Link>
                 </li>
@@ -172,31 +153,27 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="mt-8 pt-8 border-t border-slate-700">
-          <div className="text-center mb-6">
-            <h3 className="text-xl font-semibold text-white mb-4">Get in Touch</h3>
-            <p className="text-gray-300 text-sm">Ready to transform your business? Contact us today for a free consultation.</p>
-          </div>
+        <div className="mt-12 pt-8 border-t border-slate-700">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="flex items-center justify-center text-gray-300 text-sm bg-slate-800/50 p-4 rounded-lg hover:bg-slate-700/50 transition-colors group">
-              <PhoneIcon className="w-5 h-5 mr-3 text-purple-400 group-hover:scale-110 transition-transform" />
+            <div className="flex items-center">
+              <PhoneIcon className="h-5 w-5 text-purple-400 mr-3" />
               <div>
-                <div className="font-semibold">+1 302 464 0950</div>
-                <div className="text-xs text-gray-400">Available 24/7</div>
+                <p className="text-white font-medium">+1 302 464 0950</p>
+                <p className="text-gray-400 text-sm">24/7 Support</p>
               </div>
             </div>
-            <div className="flex items-center justify-center text-gray-300 text-sm bg-slate-800/50 p-4 rounded-lg hover:bg-slate-700/50 transition-colors group">
-              <EnvelopeIcon className="w-5 h-5 mr-3 text-cyan-400 group-hover:scale-110 transition-transform" />
+            <div className="flex items-center">
+              <EnvelopeIcon className="h-5 w-5 text-cyan-400 mr-3" />
               <div>
-                <div className="font-semibold">kleber@ziontechgroup.com</div>
-                <div className="text-xs text-gray-400">Response within 2 hours</div>
+                <p className="text-white font-medium">kleber@ziontechgroup.com</p>
+                <p className="text-gray-400 text-sm">Response within 2 hours</p>
               </div>
             </div>
-            <div className="flex items-center justify-center text-gray-300 text-sm bg-slate-800/50 p-4 rounded-lg hover:bg-slate-700/50 transition-colors group">
-              <MapPinIcon className="w-5 h-5 mr-3 text-green-400 group-hover:scale-110 transition-transform" />
+            <div className="flex items-center">
+              <MapPinIcon className="h-5 w-5 text-green-400 mr-3" />
               <div>
-                <div className="font-semibold">364 E Main St STE 1008</div>
-                <div className="text-xs text-gray-400">Middletown DE 19709</div>
+                <p className="text-white font-medium">364 E Main St STE 1008</p>
+                <p className="text-gray-400 text-sm">Middletown DE 19709</p>
               </div>
             </div>
           </div>
@@ -204,10 +181,10 @@ const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="mt-8 pt-8 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-gray-400 text-sm">
-            © {currentYear} Zion Tech Group. All rights reserved.
+          <div className="flex items-center text-gray-400 text-sm mb-4 md:mb-0">
+            <span>© {currentYear} Zion Tech Group. All rights reserved.</span>
           </div>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="flex space-x-6">
             {legal.map((item) => (
               <Link
                 key={item.name}
@@ -219,9 +196,16 @@ const Footer: React.FC = () => {
             ))}
           </div>
         </div>
+
+        {/* Made with love */}
+        <div className="mt-6 text-center">
+          <p className="text-gray-400 text-sm flex items-center justify-center">
+            Made with <HeartIcon className="h-4 w-4 text-red-400 mx-1" /> by Zion Tech Group
+          </p>
+        </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
