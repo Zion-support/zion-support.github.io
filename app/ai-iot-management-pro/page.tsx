@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useEffect } from 'react'
+import {  Helmet  } from 'react-helmet-async'
 import { 
   Wifi, 
   Cpu, 
@@ -73,7 +73,7 @@ import {
   Truck,
   Plane,
   Ship
-} from 'lucide-react';
+} from 'lucide-react'
 
 const AiIotManagementProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

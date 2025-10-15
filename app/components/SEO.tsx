@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import {  Helmet  } from 'react-helmet-async'
 
 interface SEOProps {
   title: string;
@@ -15,14 +15,14 @@ interface SEOProps {
 const SEO: React.FC<SEOProps> = ({
   title,
   description,
-  keywords = '',
+  keywords = ',
   canonicalUrl,
   ogImage = '/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData
 }) => {
-  const siteUrl = process.env.VITE_APP_URL || 'https://ziontechgroup.com';
+  const siteUrl = process.env.VITE_APP_URL || 'https://ziontechgroup.com'
   const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : undefined;
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 

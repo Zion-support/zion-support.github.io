@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Mail, MapPin, Zap, Brain, Code, Cloud, Wifi, Users, ChevronDown } from 'lucide-react';
+import React, { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { Menu, X, Phone, Mail, MapPin, Zap, Brain, Code, Cloud, Wifi, Users, ChevronDown } from 'lucide-react'
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -143,7 +143,7 @@ const Header: React.FC = () => {
                     to={item.href}
                     className={`flex items-center space-x-1 px-4 py-2 rounded-lg transition-all duration-300 ${
                       isActive(item.href)
-                        ? 'bg-cyan-600 text-white shadow-lg shadow-cyan-500/25'
+                          ? 'bg-cyan-600 text-white shadow-lg shadow-cyan-500/25'
                         : 'text-gray-300 hover:text-white hover:bg-slate-800/50'
                     }`}
                     onMouseEnter={() => setActiveDropdown(item.dropdown ? item.name : null)}
@@ -159,7 +159,7 @@ const Header: React.FC = () => {
                     <div className={`absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md border border-cyan-500/20 rounded-lg shadow-2xl transition-all duration-300 ${
                       activeDropdown === item.name 
                         ? 'opacity-100 visible translate-y-0' 
-                        : 'opacity-0 invisible translate-y-2'
+                          : 'opacity-0 invisible translate-y-2'
                     }`}>
                       <div className="py-2">
                         {item.dropdown.map((dropdownItem) => (
@@ -198,7 +198,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu */}
         <div className={`lg:hidden transition-all duration-300 ${
-          isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+            isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
           <div className="bg-slate-800/95 backdrop-blur-md border-t border-cyan-500/20">
             <div className="container mx-auto px-4 py-4 space-y-2">
@@ -208,7 +208,7 @@ const Header: React.FC = () => {
                     to={item.href}
                     className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
                       isActive(item.href)
-                        ? 'bg-cyan-600 text-white'
+                          ? 'bg-cyan-600 text-white'
                         : 'text-gray-300 hover:text-white hover:bg-slate-700/50'
                     }`}
                     onClick={() => setIsMenuOpen(false)}

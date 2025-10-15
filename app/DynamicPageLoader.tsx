@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy } from 'react'
 
 // Loading component
 const PageLoader: React.FC = () => (
@@ -15,7 +15,7 @@ const DynamicPageLoader: React.FC<{ pagePath: string }> = ({ pagePath }) => {
   const PageComponent = React.useMemo(() => {
     try {
       // Convert path to component path
-      const componentPath = pagePath === '/' ? './page' : `./${pagePath.replace(/^\//, '').replace(/\//g, '/')}/page`;
+      const componentPath = pagePath === '/' ? './page' : `./${pagePath.replace(/^\//, ').replace(/\//g, '/')}/page`;
       return lazy(() => import(componentPath));
     } catch (error) {
       console.error('Error loading page:', error);

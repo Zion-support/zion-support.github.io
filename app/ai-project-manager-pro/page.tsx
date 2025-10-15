@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useEffect } from 'react'
+import {  Helmet  } from 'react-helmet-async'
 import { 
   Calendar, 
   Users, 
@@ -35,7 +35,7 @@ import {
   Timer,
   Award,
   DollarSign
-} from 'lucide-react';
+} from 'lucide-react'
 
 const AiProjectManagerProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

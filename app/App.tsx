@@ -1,6 +1,6 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
+import React, { Suspense, lazy } from 'react'
+import {  BrowserRouter, Routes, Route  } from '"react-router-dom";'
+import {  HelmetProvider  } from '"react-helmet-async";'
 
 // Main Pages
 const HomePage = lazy(() => import("./page"));

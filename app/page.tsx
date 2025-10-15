@@ -1,6 +1,6 @@
-import React, { memo, useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, ArrowRight, Shield, Brain, Code, Cloud, Wifi, Star, CheckCircle, Users, Award, TrendingUp, Clock } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import React, { memo, useState, useEffect } from 'react'
+import { Phone, Mail, MapPin, ArrowRight, Shield, Brain, Code, Cloud, Wifi, Star, CheckCircle, Users, Award, TrendingUp, Clock } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -10,7 +10,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-3 bg-gray-300 rounded"></div>
   </div>
 ));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'
 
 const HomePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

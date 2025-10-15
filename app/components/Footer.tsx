@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 import { 
   Phone, 
   Mail, 
@@ -19,7 +19,7 @@ import {
   Brain,
   Cloud,
   Wifi
-} from 'lucide-react';
+} from 'lucide-react'
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

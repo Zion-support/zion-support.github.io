@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useEffect } from 'react'
+import {  Helmet  } from 'react-helmet-async'
 import { 
   Wifi, 
   Zap, 
@@ -36,7 +36,7 @@ import {
   Router,
   Server,
   Network
-} from 'lucide-react';
+} from 'lucide-react'
 
 const FiveGImplementationPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

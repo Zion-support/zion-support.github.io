@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
 interface LoadingState {
   isLoading: boolean;
@@ -25,16 +25,16 @@ const AdvancedLoadingStates: React.FC = () => {
       const interval = setInterval(() => {
         setLoadingState(prev => {
           const newProgress = prev.progress + Math.random() * 20;
-          let message = 'Loading...';
+          let message = 'Loading...'
           
           if (newProgress < 30) {
-            message = 'Loading resources...';
+            message = 'Loading resources...'
           } else if (newProgress < 60) {
-            message = 'Processing data...';
+            message = 'Processing data...'
           } else if (newProgress < 90) {
-            message = 'Finalizing...';
+            message = 'Finalizing...'
           } else {
-            message = 'Almost done...';
+            message = 'Almost done...'
           }
 
           if (newProgress >= 100) {

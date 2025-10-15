@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect } from 'react'
+import {  Helmet  } from 'react-helmet-async'
 
 interface SEOEnhancerProps {
   title?: string;
@@ -22,7 +22,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     // Add structured data to the page
     if (structuredData) {
       const script = document.createElement('script');
-      script.type = 'application/ld+json';
+      script.type = 'application/ld+json'
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
 

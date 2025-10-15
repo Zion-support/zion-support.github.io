@@ -1,6 +1,6 @@
-import { ArrowRight } from 'lucide-react';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import {  ArrowRight  } from 'lucide-react'
+import React, { useState, useEffect } from 'react'
+import {  Helmet  } from 'react-helmet-async'
 import { 
   Heart, 
   Zap, 
@@ -46,7 +46,7 @@ import {
   Thermometer,
   Syringe,
   Bandage
-} from 'lucide-react';
+} from 'lucide-react'
 
 const AiHealthcarePlatformPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

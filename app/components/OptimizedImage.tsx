@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 interface OptimizedImageProps {
   src: string;
@@ -12,7 +12,7 @@ interface OptimizedImageProps {
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
-  className = '',
+  className = ',
   width,
   height,
   priority = false

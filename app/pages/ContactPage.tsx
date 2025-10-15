@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import React from 'react'
+import {  Helmet  } from 'react-helmet-async'
+import {  Phone, Mail, MapPin, Send  } from 'lucide-react'
 
 const ContactPage: React.FC = () => {
   return (

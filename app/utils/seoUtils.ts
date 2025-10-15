@@ -1,31 +1,28 @@
-export constseoUtils= {
-  generate Title: (page Title: string, site Name: string = 'Zion Tech Group') => {
-    return `${page Title} | ${site Name}`
+export const seoUtils = {
+  generateTitle: (pageTitle: string, siteName: string = 'Zion Tech Group') => {
+    return `${pageTitle} | ${siteName}`;
   },
-  generateDescription: (content: string, maxLength: number = 160) => {
-    if (content.length <= max Length) return content
-    return content.substring(0, max Length - 3) + '...'
   
-  generateDescription: (content: string, maxLength: number = 1 6 0) => {
-    if (content.length <= maxLength) return content
+  generateDescription: (content: string, maxLength: number = 160) => {
+    if (content.length <= maxLength) return content;
     return content.substring(0, maxLength - 3) + '...'
   },
   
   generateKeywords: (tags: string[]) => {
-    return tags.join(', ')
+    return tags.join(', ');
   },
   
   generateCanonicalUrl: (path: string, baseUrl: string = 'https://ziontechgroup.com') => {
-    return `${baseUrl}${path}`
+    return `${baseUrl}${path}`;
   },
   
-  generate OgImage: (title: string, description: string) => {
-    const params= new URLSearch Params({
+  generateOgImage: (title: string, description: string) => {
+    const params = new URLSearchParams({
       title,
       description,
       site: 'Zion Tech Group'
-    })
-    return `https://og-image.vercel.app/${encodeURIComponent(title)}?${params.toString()}`
+    });
+    return `https://og-image.vercel.app/${encodeURIComponent(title)}?${params.toString()}`;
   },
   
   generateStructuredData: (data: any) => {
@@ -37,6 +34,6 @@ export constseoUtils= {
       logo: 'https://ziontechgroup.com/logo.png',
       description: 'Leading technology solutions provider',
       ...data
-    }
+    };
   }
 }

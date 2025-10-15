@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useEffect } from 'react'
+import {  Helmet  } from 'react-helmet-async'
 import { 
   Heart, 
   Zap, 
@@ -63,7 +63,7 @@ import {
   Shield as ShieldIcon,
   Lock,
   AlertTriangle
-} from 'lucide-react';
+} from 'lucide-react'
 
 const AiHealthcareSolutionsProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

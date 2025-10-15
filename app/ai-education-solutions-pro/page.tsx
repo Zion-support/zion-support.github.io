@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useEffect } from 'react'
+import {  Helmet  } from 'react-helmet-async'
 import { 
   GraduationCap, 
   Zap, 
@@ -79,7 +79,7 @@ import {
   Minus,
   Check,
   X
-} from 'lucide-react';
+} from 'lucide-react'
 
 const AiEducationSolutionsProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

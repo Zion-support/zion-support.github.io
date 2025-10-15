@@ -1,8 +1,8 @@
 interface LogLevel {
-  ERROR: 'error';
-  WARN: 'warn';
-  INFO: 'info';
-  DEBUG: 'debug';
+  ERROR: 'error'
+  WARN: 'warn'
+  INFO: 'info'
+  DEBUG: 'debug'
 }
 
 const LOG_LEVELS: LogLevel = {
@@ -23,8 +23,8 @@ interface LogEntry {
 }
 
 class Logger {
-  private isDevelopment = process.env.NODE_ENV === 'development';
-  private isProduction = process.env.NODE_ENV === 'production';
+  private isDevelopment = process.env.NODE_ENV === 'development'
+  private isProduction = process.env.NODE_ENV === 'production'
 
   private formatMessage(entry: LogEntry): string {
     const { level, message, timestamp, context, error } = entry;
@@ -117,7 +117,7 @@ class Logger {
 
   // API logging
   apiCall(method: string, url: string, status: number, duration?: number, context?: Record<string, unknown>): void {
-    const level = status >= 400 ? 'error' : 'info';
+    const level = status >= 400 ? 'error' : 'info'
     this.log(level, `API ${method} ${url} - ${status}`, { ...context, duration });
   }
 }

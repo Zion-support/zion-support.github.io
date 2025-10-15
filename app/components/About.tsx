@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const About: React.FC = () => {
   return (
@@ -17,7 +17,7 @@ const About: React.FC = () => {
 
 export default About;
 import React, { Suspense } from 'react'
-import { Helmet } from 'react-helmet-async'
+import {  Helmet  } from 'react-helmet-async'
 
 
 

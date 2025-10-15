@@ -1,4 +1,4 @@
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
+import React, { useState, useEffect, memo, lazy, Suspense } from 'react'
 
 
 const PerformanceOptimizer: React.FC = () => {

@@ -1,5 +1,5 @@
 
-import { Helmet } from "react-helmet-async";
+import {  Helmet  } from '"react-helmet-async";'
 
 const AnalyticsPage: React.FC = () => {
   return (

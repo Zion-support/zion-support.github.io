@@ -1,4 +1,4 @@
-export conststructuredData= {
+export const structuredData = {
   organization: {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -6,7 +6,8 @@ export conststructuredData= {
     url: 'https://ziontechgroup.com',
     description: 'Leading technology solutions provider'
   },
+  
   generate: (type: 'organization' | 'website') => {
-    return structuredData[type]
+    return structuredData[type];
   }
 }

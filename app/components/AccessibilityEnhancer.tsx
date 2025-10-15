@@ -1,4 +1,4 @@
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
+import React, { useState, useEffect, memo, lazy, Suspense } from 'react'
 
 
 const AccessibilityEnhancer: React.FC = () => {
@@ -15,7 +15,7 @@ const AccessibilityEnhancer: React.FC = () => {
 
       // Add focus management
       const focusableElements =
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
       const focusableContent = document.querySelectorAll(focusableElements);
 
       focusableContent.forEach((element) => {

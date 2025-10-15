@@ -1,6 +1,6 @@
-import { ArrowRight } from 'lucide-react';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import {  ArrowRight  } from 'lucide-react'
+import React, { useState, useEffect } from 'react'
+import {  Helmet  } from 'react-helmet-async'
 import { 
   Shield, 
   Zap, 
@@ -39,7 +39,7 @@ import {
   Search,
   Bug,
   Clock
-} from 'lucide-react';
+} from 'lucide-react'
 
 const AiCybersecurityPlatformPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

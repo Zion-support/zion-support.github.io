@@ -1,7 +1,7 @@
-import { ArrowRight, Award, CheckCircle, ExternalLink, TrendingUp, Users } from 'lucide-react';
+import {  ArrowRight, Award, CheckCircle, ExternalLink, TrendingUp, Users  } from 'lucide-react'
 
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import {  Helmet  } from '"react-helmet-async";'
+import {  Link  } from '"react-router-dom";'
 
 interface CaseStudy {
   id: string;

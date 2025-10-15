@@ -1,6 +1,6 @@
 
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
-import { Helmet } from "react-helmet-async";
+import React, { useState, useEffect, memo, lazy, Suspense } from 'react'
+import {  Helmet  } from '"react-helmet-async";'
 
 const AiNeuralMemoryAssistantPage = () => {
   return (

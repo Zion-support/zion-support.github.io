@@ -1,5 +1,5 @@
-import React from 'react';
-import { AlertTriangle, Send } from 'lucide-react';
+import React from 'react'
+import {  AlertTriangle, Send  } from 'lucide-react'
 
 interface ErrorFeedbackProps {
   error: Error;

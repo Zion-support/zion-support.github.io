@@ -1,6 +1,6 @@
-import { ArrowRight } from 'lucide-react';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import {  ArrowRight  } from 'lucide-react'
+import React, { useState, useEffect } from 'react'
+import {  Helmet  } from 'react-helmet-async'
 import { 
   DollarSign, 
   Zap, 
@@ -45,7 +45,7 @@ import {
   PiggyBank,
   ChartLine,
   Coins
-} from 'lucide-react';
+} from 'lucide-react'
 
 const AiFinancialPlatformPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

@@ -1,6 +1,6 @@
 
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useEffect, memo, lazy, Suspense } from 'react'
+import {  Helmet  } from 'react-helmet-async'
 import { 
   Code, 
   Globe, 
@@ -19,7 +19,7 @@ import {
   TrendingUp,
   Brain,
   Database
-} from 'lucide-react';
+} from 'lucide-react'
 
 const AiCodeAssistantProPage = () => {
   const [isVisible, setIsVisible] = useState(false);

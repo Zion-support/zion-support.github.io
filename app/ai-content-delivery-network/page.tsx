@@ -1,6 +1,6 @@
-import { Network } from 'lucide-react';
+import {  Network  } from 'lucide-react'
 
-import { Helmet } from "react-helmet-async";
+import {  Helmet  } from '"react-helmet-async";'
 
 const AiContentDeliveryNetworkPage = () => {
   return (

@@ -1,6 +1,6 @@
 
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useEffect, memo, lazy, Suspense } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { 
   BarChart3, 
   Globe, 
@@ -15,7 +15,7 @@ import {
   Brain,
   Target,
   Zap
-} from 'lucide-react';
+} from 'lucide-react'
 
 const AiAnalyticsDashboardProPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -167,7 +167,7 @@ const AiAnalyticsDashboardProPage = () => {
               linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
-            backgroundSize: '50px 50px'
+              backgroundSize: '50px 50px'
           }}></div>
         </div>
 
@@ -273,7 +273,7 @@ const AiAnalyticsDashboardProPage = () => {
                     className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl ${
                       plan.popular 
                         ? 'border-cyan-400/40 shadow-cyan-500/10' 
-                        : 'border-cyan-500/20 hover:border-cyan-400/40'
+                          : 'border-cyan-500/20 hover:border-cyan-400/40'
                     }`}
                   >
                     {plan.popular && (
