@@ -369,14 +369,14 @@ const HomePage: React.FC = () => {
                   <Star className="w-4 h-4 mr-2" />
                   Trusted by 50,000+ Users Worldwide
                 </div>
-                <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                     Advanced AI & IT
                   </span>
                   <br />
                   <span className="text-white">Solutions</span>
                 </h1>
-                <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
+                <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto px-4">
                   Transform your business with cutting-edge artificial intelligence, 
                   5G technology, and comprehensive IT services. From micro SAAS solutions 
                   to enterprise-grade platforms, we deliver results that matter.
@@ -399,15 +399,15 @@ const HomePage: React.FC = () => {
                 </div>
                 
                 {/* Stats */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto px-4">
                   {stats.map((stat, index) => (
                     <div key={index} className="text-center group">
                       <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                         <div className="text-cyan-400">{stat.icon}</div>
                       </div>
-                      <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
-                      <div className="text-gray-400 text-sm font-semibold">{stat.label}</div>
-                      <div className="text-gray-500 text-xs mt-1">{stat.description}</div>
+                      <div className="text-2xl sm:text-3xl font-bold text-white mb-1">{stat.number}</div>
+                      <div className="text-gray-400 text-xs sm:text-sm font-semibold">{stat.label}</div>
+                      <div className="text-gray-500 text-xs mt-1 hidden sm:block">{stat.description}</div>
                     </div>
                   ))}
                 </div>
@@ -436,7 +436,7 @@ const HomePage: React.FC = () => {
                 </p>
               </div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                 {featuredServices.map((service, index) => (
                   <div 
                     key={index} 
@@ -537,7 +537,7 @@ const HomePage: React.FC = () => {
                 </Link>
               </div>
               
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6">
                 {microSaasServices.map((service, index) => (
                   <Link
                     key={index}
@@ -569,7 +569,7 @@ const HomePage: React.FC = () => {
                 </p>
               </div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="text-center group">
                     <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -597,7 +597,7 @@ const HomePage: React.FC = () => {
               </div>
               
               <div className="max-w-6xl mx-auto">
-                <div className="grid md:grid-cols-3 gap-8 text-center mb-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 text-center mb-12">
                   <div className="flex flex-col items-center group">
                     <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       <Phone className="w-10 h-10 text-white" />

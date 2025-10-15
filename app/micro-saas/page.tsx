@@ -180,7 +180,9 @@ import {
   Wolverine,
   Weasel,
   Ferret,
-  Mink
+  Mink,
+  Truck,
+  Mic
 } from 'lucide-react';
 
 import { Helmet } from "react-helmet-async";
@@ -719,6 +721,108 @@ const MicroSaasPage: React.FC = () => {
       marketPrice: "$100-300/month",
       benefits: ["Increase conversions by 30%", "Reduce wait times by 60%", "Improve customer satisfaction"],
       useCases: ["Online stores", "Service providers", "Consultants", "Agencies"]
+    },
+
+    // New Innovative Services
+    {
+      id: "21",
+      icon: <DollarSign className="w-8 h-8" />,
+      title: "AI Financial Advisor Pro",
+      description: "Intelligent wealth management with AI-powered investment recommendations and portfolio optimization.",
+      features: [
+        "AI investment recommendations",
+        "Real-time portfolio analysis",
+        "Risk assessment & management",
+        "Tax optimization strategies",
+        "Retirement planning tools",
+        "Goal-based financial planning",
+        "Market trend analysis",
+        "Automated rebalancing"
+      ],
+      price: "$199/month",
+      originalPrice: "$299/month",
+      users: "Up to 25 portfolios",
+      popular: true,
+      category: "AI & Analytics",
+      link: "https://ziontechgroup.com/ai-financial-advisor-pro",
+      marketPrice: "$500-1500/month",
+      benefits: ["Increase returns by 25%", "Reduce planning time by 70%", "Optimize tax savings by 30%"],
+      useCases: ["Personal wealth management", "Small business planning", "Investment optimization", "Retirement planning"]
+    },
+    {
+      id: "22",
+      icon: <Truck className="w-8 h-8" />,
+      title: "AI Supply Chain Optimizer Pro",
+      description: "Revolutionary supply chain management with AI-powered optimization and predictive analytics.",
+      features: [
+        "AI demand forecasting",
+        "Automated inventory optimization",
+        "Real-time supply chain monitoring",
+        "Predictive maintenance alerts",
+        "Route optimization algorithms",
+        "Supplier performance analytics",
+        "Risk assessment & mitigation",
+        "Cost reduction recommendations"
+      ],
+      price: "$399/month",
+      originalPrice: "$599/month",
+      users: "Up to 25 warehouses",
+      popular: false,
+      category: "Business & Productivity",
+      link: "https://ziontechgroup.com/ai-supply-chain-optimizer-pro",
+      marketPrice: "$1000-3000/month",
+      benefits: ["Reduce costs by 30%", "Improve turnover by 40%", "Decrease lead times by 50%"],
+      useCases: ["Manufacturing", "Retail management", "E-commerce fulfillment", "Pharmaceutical chains"]
+    },
+    {
+      id: "23",
+      icon: <Zap className="w-8 h-8" />,
+      title: "AI Energy Management Pro",
+      description: "Smart energy optimization with AI-powered consumption analysis and sustainability solutions.",
+      features: [
+        "AI energy consumption analysis",
+        "Real-time energy monitoring",
+        "Predictive maintenance scheduling",
+        "Renewable energy optimization",
+        "Smart grid integration",
+        "Carbon footprint tracking",
+        "Energy cost optimization",
+        "Peak demand management"
+      ],
+      price: "$299/month",
+      originalPrice: "$399/month",
+      users: "Up to 25 buildings",
+      popular: false,
+      category: "Industry-Specific",
+      link: "https://ziontechgroup.com/ai-energy-management-pro",
+      marketPrice: "$800-2000/month",
+      benefits: ["Reduce costs by 35%", "Improve efficiency by 45%", "Decrease carbon footprint by 50%"],
+      useCases: ["Commercial buildings", "Manufacturing facilities", "Data centers", "Retail chains"]
+    },
+    {
+      id: "24",
+      icon: <Mic className="w-8 h-8" />,
+      title: "AI Voice Assistant Pro",
+      description: "Intelligent voice automation with natural language processing and hands-free operations.",
+      features: [
+        "Natural language processing",
+        "Multi-language voice recognition",
+        "Custom voice training",
+        "Real-time conversation analytics",
+        "Voice biometric authentication",
+        "Smart home integration",
+        "Business process automation",
+        "Voice command customization"
+      ],
+      price: "$99/month",
+      originalPrice: "$149/month",
+      users: "Up to 25 users",
+      popular: true,
+      category: "Development & IT",
+      link: "https://ziontechgroup.com/ai-voice-assistant-pro",
+      marketPrice: "$300-800/month",
+      benefits: ["Increase productivity by 40%", "Reduce manual tasks by 60%", "Save 5 hours per week"],
+      useCases: ["Customer service automation", "Office productivity", "Smart home control", "Healthcare assistance"]
     }
   ];
 

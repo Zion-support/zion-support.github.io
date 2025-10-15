@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  TrendingUp, 
-  DollarSign, 
-  PieChart, 
-  BarChart3, 
   Shield, 
+  Lock, 
+  BarChart3, 
   Target, 
-  Users, 
   Clock, 
+  DollarSign, 
   CheckCircle, 
   Star, 
   ArrowRight, 
@@ -16,86 +14,91 @@ import {
   Mail, 
   MapPin,
   Brain,
-  Calculator,
-  CreditCard,
-  Building,
-  Wallet,
-  PiggyBank,
-  LineChart,
+  AlertTriangle,
+  Eye,
   Activity,
+  TrendingUp,
   Zap,
+  Users,
+  Settings,
+  PieChart,
+  LineChart,
+  Building,
   Award,
-  Globe
+  Globe,
+  Smartphone,
+  Database,
+  Server
 } from 'lucide-react';
 
-const AiFinancialAdvisorProPage: React.FC = () => {
+const AiCybersecurityProPage: React.FC = () => {
   const features = [
-    "AI-powered investment recommendations",
-    "Real-time portfolio analysis",
-    "Risk assessment & management",
-    "Tax optimization strategies",
-    "Retirement planning tools",
-    "Goal-based financial planning",
-    "Market trend analysis",
-    "Automated rebalancing",
-    "Expense tracking & budgeting",
-    "Financial goal tracking",
-    "Multi-currency support",
-    "Regulatory compliance monitoring"
+    "AI-powered threat detection",
+    "Real-time security monitoring",
+    "Automated incident response",
+    "Advanced malware analysis",
+    "Vulnerability assessment",
+    "Compliance monitoring",
+    "Security analytics dashboard",
+    "Multi-layer protection",
+    "Zero-trust architecture",
+    "Behavioral analysis",
+    "Threat intelligence integration",
+    "24/7 security operations center"
   ];
 
   const benefits = [
-    "Increase investment returns by 25%",
-    "Reduce financial planning time by 70%",
-    "Optimize tax savings by 30%",
-    "Improve risk management by 40%",
-    "Automate 80% of financial tasks",
-    "Achieve financial goals 2x faster"
+    "Prevent 99.9% of cyber attacks",
+    "Reduce security incidents by 85%",
+    "Decrease response time by 90%",
+    "Ensure 100% compliance",
+    "Save 60% on security costs",
+    "Protect against zero-day threats"
   ];
 
   const useCases = [
-    "Personal wealth management",
-    "Small business financial planning",
-    "Investment portfolio optimization",
-    "Retirement planning",
-    "Tax strategy optimization",
-    "Financial goal tracking"
+    "Enterprise security",
+    "Financial institutions",
+    "Healthcare organizations",
+    "Government agencies",
+    "E-commerce platforms",
+    "Critical infrastructure"
   ];
 
   const pricing = {
-    basic: {
-      price: "$99/month",
-      originalPrice: "$149/month",
-      users: "Up to 5 portfolios",
+    essential: {
+      price: "$199/month",
+      originalPrice: "$299/month",
+      users: "Up to 100 users",
       features: [
-        "Basic AI recommendations",
-        "Portfolio tracking",
-        "Risk assessment",
-        "Goal setting",
+        "Basic threat detection",
+        "Email security",
+        "Web protection",
         "Basic reporting",
-        "Email support"
+        "Email support",
+        "Standard monitoring"
       ]
     },
     professional: {
-      price: "$199/month",
-      originalPrice: "$299/month",
-      users: "Up to 25 portfolios",
+      price: "$499/month",
+      originalPrice: "$699/month",
+      users: "Up to 500 users",
       features: [
-        "Advanced AI algorithms",
-        "Real-time analysis",
-        "Tax optimization",
-        "Automated rebalancing",
-        "Advanced reporting",
+        "Advanced AI detection",
+        "Real-time monitoring",
+        "Incident response",
+        "Compliance tools",
         "Priority support",
-        "Multi-currency support",
-        "API access"
+        "Advanced analytics",
+        "API access",
+        "Custom rules"
       ],
       popular: true
     },
     enterprise: {
-      price: "$399/month",
-      originalPrice: "$599/month",
-      users: "Unlimited portfolios",
+      price: "$999/month",
+      originalPrice: "$1499/month",
+      users: "Unlimited users",
       features: [
         "Custom AI models",
         "White-label solution",
@@ -112,13 +115,13 @@ const AiFinancialAdvisorProPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Financial Advisor Pro - Intelligent Wealth Management | Zion Tech Group</title>
-        <meta name="description" content="Transform your financial planning with AI Financial Advisor Pro. Get intelligent investment recommendations, portfolio optimization, and automated wealth management. Start your free trial today!" />
-        <meta name="keywords" content="AI financial advisor, wealth management, investment optimization, portfolio analysis, financial planning, robo-advisor, AI investment, financial AI" />
-        <meta property="og:title" content="AI Financial Advisor Pro - Intelligent Wealth Management" />
-        <meta property="og:description" content="Revolutionary AI-powered financial advisor that optimizes your investments, manages risk, and helps you achieve your financial goals faster." />
+        <title>AI Cybersecurity Pro - Advanced Threat Protection | Zion Tech Group</title>
+        <meta name="description" content="Protect your business with AI Cybersecurity Pro. Get advanced threat detection, automated response, and comprehensive security monitoring. Start your free trial today!" />
+        <meta name="keywords" content="AI cybersecurity, threat detection, security monitoring, cyber protection, AI security, automated response, compliance, enterprise security" />
+        <meta property="og:title" content="AI Cybersecurity Pro - Advanced Threat Protection" />
+        <meta property="og:description" content="Revolutionary AI-powered cybersecurity platform that protects against advanced threats with intelligent automation and real-time monitoring." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-financial-advisor-pro" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-cybersecurity-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -126,34 +129,34 @@ const AiFinancialAdvisorProPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
-                <Brain className="w-4 h-4 mr-2" />
-                AI-Powered Financial Intelligence
+              <div className="inline-flex items-center px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6">
+                <Shield className="w-4 h-4 mr-2" />
+                AI-Powered Security Intelligence
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  AI Financial
+                <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+                  AI Cybersecurity
                 </span>
                 <br />
-                <span className="text-white">Advisor Pro</span>
+                <span className="text-white">Pro</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                Revolutionize your financial planning with our advanced AI-powered wealth management platform. 
-                Get intelligent investment recommendations, automated portfolio optimization, and personalized 
-                financial strategies that adapt to market conditions.
+                Protect your business with our advanced AI-powered cybersecurity platform. 
+                Detect, prevent, and respond to cyber threats in real-time with intelligent 
+                automation and comprehensive security monitoring.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a
                   href="tel:+13024640950"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
+                  className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25 flex items-center justify-center"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call +1 302 464 0950
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+                  className="border-2 border-red-400 text-red-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Start Free Trial
@@ -163,32 +166,32 @@ const AiFinancialAdvisorProPage: React.FC = () => {
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <div className="w-16 h-16 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Shield className="w-8 h-8 text-red-400" />
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-1">99.9%</div>
+                  <div className="text-gray-400 text-sm font-semibold">Attack Prevention</div>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <TrendingUp className="w-8 h-8 text-green-400" />
                   </div>
-                  <div className="text-3xl font-bold text-white mb-1">25%</div>
-                  <div className="text-gray-400 text-sm font-semibold">Higher Returns</div>
+                  <div className="text-3xl font-bold text-white mb-1">85%</div>
+                  <div className="text-gray-400 text-sm font-semibold">Incident Reduction</div>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Clock className="w-8 h-8 text-blue-400" />
                   </div>
-                  <div className="text-3xl font-bold text-white mb-1">70%</div>
-                  <div className="text-gray-400 text-sm font-semibold">Time Saved</div>
+                  <div className="text-3xl font-bold text-white mb-1">90%</div>
+                  <div className="text-gray-400 text-sm font-semibold">Faster Response</div>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Shield className="w-8 h-8 text-purple-400" />
+                    <DollarSign className="w-8 h-8 text-purple-400" />
                   </div>
-                  <div className="text-3xl font-bold text-white mb-1">40%</div>
-                  <div className="text-gray-400 text-sm font-semibold">Risk Reduction</div>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Target className="w-8 h-8 text-orange-400" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-1">2x</div>
-                  <div className="text-gray-400 text-sm font-semibold">Faster Goals</div>
+                  <div className="text-3xl font-bold text-white mb-1">60%</div>
+                  <div className="text-gray-400 text-sm font-semibold">Cost Savings</div>
                 </div>
               </div>
             </div>
@@ -200,22 +203,22 @@ const AiFinancialAdvisorProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Features</span>
+                Advanced <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">Security Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI Financial Advisor Pro combines cutting-edge artificial intelligence with 
-                proven financial strategies to deliver personalized wealth management solutions.
+                Our AI Cybersecurity Pro combines machine learning, behavioral analysis, 
+                and real-time monitoring to deliver comprehensive protection against all types of threats.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-red-400/50 transition-all duration-300 group">
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center">
                       <CheckCircle className="w-5 h-5 text-white" />
                     </div>
-                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                    <h3 className="text-lg font-semibold text-white group-hover:text-red-400 transition-colors">
                       {feature}
                     </h3>
                   </div>
@@ -230,11 +233,11 @@ const AiFinancialAdvisorProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Choose Your <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Plan</span>
+                Choose Your <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">Security Plan</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing options designed to scale with your financial needs. 
-                Start with our free trial and upgrade as you grow.
+                Flexible pricing options designed to scale with your security needs. 
+                Start with our free trial and protect your business today.
               </p>
             </div>
 
@@ -244,13 +247,13 @@ const AiFinancialAdvisorProPage: React.FC = () => {
                   key={plan}
                   className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                     details.popular
-                      ? "border-purple-400 shadow-2xl shadow-purple-500/25 scale-105"
+                      ? "border-red-400 shadow-2xl shadow-red-500/25 scale-105"
                       : "border-white/20"
-                  } hover:border-purple-400 transition-all duration-300 group`}
+                  } hover:border-red-400 transition-all duration-300 group`}
                 >
                   {details.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                      <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
                         <Star className="w-4 h-4 fill-current" />
                         Most Popular
                       </div>
@@ -281,7 +284,7 @@ const AiFinancialAdvisorProPage: React.FC = () => {
                     href="mailto:kleber@ziontechgroup.com"
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 ${
                       details.popular
-                        ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600"
+                        ? "bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600"
                         : "bg-white/10 text-white border border-white/20 hover:bg-white/20"
                     }`}
                   >
@@ -299,18 +302,18 @@ const AiFinancialAdvisorProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Financial Advisor Pro</span>?
+                Why Choose <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">AI Cybersecurity Pro</span>?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the future of financial planning with our AI-powered platform that delivers 
-                measurable results and personalized strategies.
+                Experience the future of cybersecurity with our AI-powered platform that delivers 
+                measurable results and comprehensive protection.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center group">
-                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-20 h-20 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                     <TrendingUp className="w-10 h-10 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{benefit}</h3>
@@ -325,22 +328,22 @@ const AiFinancialAdvisorProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Perfect For <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Every Need</span>
+                Perfect For <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Every Industry</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Whether you're managing personal wealth or business finances, our AI platform 
-                adapts to your specific requirements and goals.
+                Our AI platform adapts to various industries and security requirements, 
+                delivering optimized protection for your specific business needs.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
                       <Target className="w-5 h-5 text-white" />
                     </div>
-                    <h3 className="text-lg font-semibold text-white group-hover:text-green-400 transition-colors">
+                    <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">
                       {useCase}
                     </h3>
                   </div>
@@ -355,31 +358,31 @@ const AiFinancialAdvisorProPage: React.FC = () => {
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Financial Future?
+                Ready to Secure Your Business?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Join thousands of users who trust AI Financial Advisor Pro to manage their wealth. 
-                Start your free trial today and experience the power of AI-driven financial planning.
+                Join security leaders who trust AI Cybersecurity Pro to protect their 
+                organizations. Start your free trial today.
               </p>
             </div>
 
-            <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-2xl p-8 border border-cyan-500/20">
+            <div className="bg-gradient-to-r from-red-600/20 to-orange-600/20 rounded-2xl p-8 border border-red-500/20">
               <div className="text-center">
                 <h3 className="text-2xl font-bold text-white mb-4">Get Started Today</h3>
                 <p className="text-gray-300 mb-6">
-                  Contact our financial experts to discuss your needs and start your personalized AI financial journey.
+                  Contact our cybersecurity experts to discuss your protection needs and start your secure transformation.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="tel:+13024640950"
-                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                    className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                   >
                     <Phone className="w-5 h-5 mr-2" />
                     Call +1 302 464 0950
                   </a>
                   <a
                     href="mailto:kleber@ziontechgroup.com"
-                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+                    className="border-2 border-red-400 text-red-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                   >
                     <Mail className="w-5 h-5 mr-2" />
                     Start Free Trial
@@ -394,4 +397,4 @@ const AiFinancialAdvisorProPage: React.FC = () => {
   );
 };
 
-export default AiFinancialAdvisorProPage;
+export default AiCybersecurityProPage;

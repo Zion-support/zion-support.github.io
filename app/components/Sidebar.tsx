@@ -163,7 +163,8 @@ import {
   Wolverine,
   Weasel,
   Ferret,
-  Mink
+  Mink,
+  Truck
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -260,7 +261,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI DevOps Automation Pro', href: '/ai-devops-automation-pro', icon: <Server className="w-4 h-4" /> },
         { name: 'AI Database Optimizer Pro', href: '/ai-database-optimizer-pro', icon: <Database className="w-4 h-4" /> },
         { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro', icon: <Headphones className="w-4 h-4" /> },
-        { name: 'AI Live Chat Pro', href: '/ai-live-chat-pro', icon: <MessageCircle className="w-4 h-4" /> }
+        { name: 'AI Live Chat Pro', href: '/ai-live-chat-pro', icon: <MessageCircle className="w-4 h-4" /> },
+        { name: 'AI Financial Advisor Pro', href: '/ai-financial-advisor-pro', icon: <DollarSign className="w-4 h-4" /> },
+        { name: 'AI Supply Chain Optimizer Pro', href: '/ai-supply-chain-optimizer-pro', icon: <Truck className="w-4 h-4" /> },
+        { name: 'AI Energy Management Pro', href: '/ai-energy-management-pro', icon: <Zap className="w-4 h-4" /> },
+        { name: 'AI Voice Assistant Pro', href: '/ai-voice-assistant-pro', icon: <Mic className="w-4 h-4" /> },
+        { name: 'AI Cybersecurity Pro', href: '/ai-cybersecurity-pro', icon: <Shield className="w-4 h-4" /> }
       ]
     }
   ];

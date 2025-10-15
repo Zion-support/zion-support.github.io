@@ -54,6 +54,11 @@ import AiEmailMarketingProPage from './app/ai-email-marketing-pro/page';
 import AiInventoryManagementProPage from './app/ai-inventory-management-pro/page';
 import AiHrAssistantProPage from './app/ai-hr-assistant-pro/page';
 import AiSalesOptimizerProPage from './app/ai-sales-optimizer-pro/page';
+import AiFinancialAdvisorProPage from './app/ai-financial-advisor-pro/page';
+import AiSupplyChainOptimizerProPage from './app/ai-supply-chain-optimizer-pro/page';
+import AiEnergyManagementProPage from './app/ai-energy-management-pro/page';
+import AiVoiceAssistantProPage from './app/ai-voice-assistant-pro/page';
+import AiCybersecurityProPage from './app/ai-cybersecurity-pro/page';
 import MicroSaasPage from './app/micro-saas/page';
 
 const App: React.FC = () => {
@@ -82,7 +87,7 @@ const App: React.FC = () => {
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <Header />
-            <main className="relative z-10 pt-20 lg:ml-80" id="main-content" role="main">
+            <main className="relative z-10 pt-20 lg:ml-80 min-h-screen" id="main-content" role="main">
               <Suspense fallback={
                 <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                   <div className="text-center">
@@ -140,6 +145,13 @@ const App: React.FC = () => {
                   <Route path="/ai-inventory-management-pro" element={<AiInventoryManagementProPage />} />
                   <Route path="/ai-hr-assistant-pro" element={<AiHrAssistantProPage />} />
                   <Route path="/ai-sales-optimizer-pro" element={<AiSalesOptimizerProPage />} />
+                  
+                  {/* New Micro SAAS Services */}
+                  <Route path="/ai-financial-advisor-pro" element={<AiFinancialAdvisorProPage />} />
+                  <Route path="/ai-supply-chain-optimizer-pro" element={<AiSupplyChainOptimizerProPage />} />
+                  <Route path="/ai-energy-management-pro" element={<AiEnergyManagementProPage />} />
+                  <Route path="/ai-voice-assistant-pro" element={<AiVoiceAssistantProPage />} />
+                  <Route path="/ai-cybersecurity-pro" element={<AiCybersecurityProPage />} />
                 </Routes>
               </Suspense>
             </main>

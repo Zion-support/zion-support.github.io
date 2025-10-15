@@ -80,7 +80,12 @@ const Footer: React.FC = () => {
         { name: 'AI Price Optimization Pro', href: '/ai-price-optimization-pro' },
         { name: 'AI Security Monitor Pro', href: '/ai-security-monitor-pro' },
         { name: 'AI Password Manager Pro', href: '/ai-password-manager-pro' },
-        { name: 'AI Compliance Monitor Pro', href: '/ai-compliance-monitor-pro' }
+        { name: 'AI Compliance Monitor Pro', href: '/ai-compliance-monitor-pro' },
+        { name: 'AI Financial Advisor Pro', href: '/ai-financial-advisor-pro' },
+        { name: 'AI Supply Chain Optimizer Pro', href: '/ai-supply-chain-optimizer-pro' },
+        { name: 'AI Energy Management Pro', href: '/ai-energy-management-pro' },
+        { name: 'AI Voice Assistant Pro', href: '/ai-voice-assistant-pro' },
+        { name: 'AI Cybersecurity Pro', href: '/ai-cybersecurity-pro' }
       ]
     }
   ];
