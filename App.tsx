@@ -1,34 +1,6 @@
-<<<<<<< HEAD
 import React, { Suspense, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import './globals.css';
-=======
-"use client";
-import React, { Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
-import "./app/styles/futuristic.css";
-import "./app/styles/futuristic-enhanced.css";
-import Navigation from "./app/components/Navigation";
-import Footer from "./app/components/Footer";
-import HomePage from "./app/page";
-import { LoadingPage } from "./app/components/LoadingStates";
-import ErrorBoundary from "./app/components/ErrorBoundary";
-import Breadcrumb from "./app/components/Breadcrumb";
-import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-import EnhancedSEO from "./app/components/EnhancedSEO";
-import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
-import FuturisticBackground from "./app/components/FuturisticBackground";
-import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
-import SEOOptimizer from "./app/components/SEOOptimizer";
-import ErrorHandler from "./app/components/ErrorHandler";
-import ImageOptimizer from "./app/components/ImageOptimizer";
-import AdvancedPerformanceOptimizer from "./app/components/AdvancedPerformanceOptimizer";
->>>>>>> cursor/analyze-improve-and-deploy-application-a84d
 
 // Components
 import Header from './app/components/Header';
@@ -74,14 +46,6 @@ import AiClimateSolutionsProPage from './app/ai-climate-solutions-pro/page';
 import AiAgriculturalIntelligenceProPage from './app/ai-agricultural-intelligence-pro/page';
 import Ai3DGenerationPage from './app/ai-3d-generation/page';
 import AiBlockchainSolutionsPage from './app/ai-blockchain-solutions/page';
-import AiCustomerInsightsProPage from './app/ai-customer-insights-pro/page';
-import AiProjectManagementProPage from './app/ai-project-management-pro/page';
-import AiSocialMediaManagerProPage from './app/ai-social-media-manager-pro/page';
-import AiEmailMarketingProPage from './app/ai-email-marketing-pro/page';
-import AiInventoryManagementProPage from './app/ai-inventory-management-pro/page';
-import AiHrAssistantProPage from './app/ai-hr-assistant-pro/page';
-import AiSalesOptimizerProPage from './app/ai-sales-optimizer-pro/page';
-import MicroSaasPage from './app/micro-saas/page';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -104,13 +68,12 @@ const App: React.FC = () => {
   }
 
   return (
-<<<<<<< HEAD
     <EnhancedErrorBoundary>
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <Header />
-            <main className="relative z-10 pt-20 lg:ml-80" id="main-content" role="main">
+            <main className="relative z-10 pt-20" id="main-content" role="main">
               <Suspense fallback={
                 <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                   <div className="text-center">
@@ -120,29 +83,12 @@ const App: React.FC = () => {
                 </div>
               }>
                 <Routes>
-=======
-    <ErrorHandler>
-      <ErrorBoundary>
-        <HelmetProvider>
-          <AccessibilityEnhancer>
-            <AdvancedPerformanceOptimizer>
-              <Router>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                  <FuturisticBackground>
-                    <Navigation />
-                    <Breadcrumb />
-                    <main id="main-content" role="main">
-                      <Suspense fallback={<LoadingPage />}>
-                      <Routes>
->>>>>>> cursor/analyze-improve-and-deploy-application-a84d
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/micro-saas" element={<MicroSaasPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/privacy" element={<PrivacyPage />} />
                   <Route path="/terms" element={<TermsPage />} />
-<<<<<<< HEAD
                   <Route path="/blog" element={<BlogPage />} />
                   <Route path="/careers" element={<CareersPage />} />
                   
@@ -177,13 +123,6 @@ const App: React.FC = () => {
                   <Route path="/ai-agricultural-intelligence-pro" element={<AiAgriculturalIntelligenceProPage />} />
                   <Route path="/ai-3d-generation" element={<Ai3DGenerationPage />} />
                   <Route path="/ai-blockchain-solutions" element={<AiBlockchainSolutionsPage />} />
-                  <Route path="/ai-customer-insights-pro" element={<AiCustomerInsightsProPage />} />
-                  <Route path="/ai-project-management-pro" element={<AiProjectManagementProPage />} />
-                  <Route path="/ai-social-media-manager-pro" element={<AiSocialMediaManagerProPage />} />
-                  <Route path="/ai-email-marketing-pro" element={<AiEmailMarketingProPage />} />
-                  <Route path="/ai-inventory-management-pro" element={<AiInventoryManagementProPage />} />
-                  <Route path="/ai-hr-assistant-pro" element={<AiHrAssistantProPage />} />
-                  <Route path="/ai-sales-optimizer-pro" element={<AiSalesOptimizerProPage />} />
                 </Routes>
               </Suspense>
             </main>
@@ -196,243 +135,6 @@ const App: React.FC = () => {
         </Router>
       </HelmetProvider>
     </EnhancedErrorBoundary>
-=======
-                  <Route path="/cookies" element={<CookiesPage />} />
-                  <Route path="/sitemap" element={<SitemapPage />} />
-
-                  {/* AI Service Routes */}
-                  <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
-                  <Route path="/ai-automation" element={<AiAutomationPage />} />
-                  <Route path="/ai-business-intelligence" element={<AiBusinessIntelligencePage />} />
-                  <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
-                  <Route path="/ai-customer-service" element={<AiCustomerServicePage />} />
-                  <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
-                  <Route path="/ai-email-automation" element={<AiEmailAutomationPage />} />
-                  <Route path="/ai-fraud-detection" element={<AiFraudDetectionPage />} />
-                  <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
-                  <Route path="/ai-marketing" element={<AiMarketingPage />} />
-                  <Route path="/ai-predictive-analytics" element={<AiPredictiveAnalyticsPage />} />
-                  <Route path="/ai-project-management" element={<AiProjectManagementPage />} />
-                  <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
-                  <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
-                  <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
-
-                  {/* IT Service Routes */}
-                  <Route
-                    path="/cloud-infrastructure"
-                    element={<CloudInfrastructurePage />}
-                  />
-                  <Route
-                    path="/cybersecurity-solutions"
-                    element={<CybersecuritySolutionsPage />}
-                  />
-                  <Route
-                    path="/web-development"
-                    element={<WebDevelopmentPage />}
-                  />
-                  <Route
-                    path="/mobile-development"
-                    element={<MobileDevelopmentPage />}
-                  />
-                  <Route
-                    path="/database-management"
-                    element={<DatabaseManagementPage />}
-                  />
-                  <Route
-                    path="/custom-software"
-                    element={<CustomSoftwarePage />}
-                  />
-                  <Route
-                    path="/network-infrastructure"
-                    element={<NetworkInfrastructurePage />}
-                  />
-                  <Route
-                    path="/cloud-native-development"
-                    element={<CloudNativeDevelopmentPage />}
-                  />
-                  <Route
-                    path="/blockchain-development"
-                    element={<BlockchainDevelopmentPage />}
-                  />
-                  <Route
-                    path="/e-commerce-development"
-                    element={<ECommerceDevelopmentPage />}
-                  />
-                  <Route
-                    path="/data-engineering"
-                    element={<DataEngineeringPage />}
-                  />
-                  <Route
-                    path="/cybersecurity-advanced"
-                    element={<CybersecurityAdvancedPage />}
-                  />
-                  <Route
-                    path="/cloud-migration-advanced"
-                    element={<CloudMigrationAdvancedPage />}
-                  />
-                  <Route
-                    path="/machine-learning-ops"
-                    element={<MachineLearningOpsPage />}
-                  />
-                  <Route
-                    path="/enterprise-integration"
-                    element={<EnterpriseIntegrationPage />}
-                  />
-                  <Route
-                    path="/performance-optimization"
-                    element={<PerformanceOptimizationPage />}
-                  />
-                  <Route
-                    path="/disaster-recovery-advanced"
-                    element={<DisasterRecoveryAdvancedPage />}
-                  />
-                  <Route
-                    path="/compliance-automation"
-                    element={<ComplianceAutomationPage />}
-                  />
-                  <Route
-                    path="/cloud-cost-optimization"
-                    element={<CloudCostOptimizationPage />}
-                  />
-                  <Route
-                    path="/security-automation"
-                    element={<SecurityAutomationPage />}
-                  />
-                  <Route
-                    path="/data-visualization"
-                    element={<DataVisualizationPage />}
-                  />
-                  <Route
-                    path="/workflow-automation"
-                    element={<WorkflowAutomationPage />}
-                  />
-                  <Route
-                    path="/cloud-native-security"
-                    element={<CloudNativeSecurityPage />}
-                  />
-                  <Route path="/data-analytics" element={<DataAnalyticsPage />} />
-                  <Route path="/iot-solutions" element={<IotSolutionsPage />} />
-                  <Route path="/devops-solutions" element={<DevopsSolutionsPage />} />
-                  <Route path="/blockchain-development" element={<BlockchainDevelopmentPage />} />
-                  <Route path="/machine-learning" element={<MachineLearningPage />} />
-                  <Route path="/quantum-computing" element={<QuantumComputingPage />} />
-                  <Route path="/robotics" element={<RoboticsPage />} />
-
-                  {/* Micro SAAS Routes */}
-                  <Route
-                    path="/zion-analytics-pro"
-                    element={<ZionAnalyticsProPage />}
-                  />
-                  <Route
-                    path="/zion-security-shield"
-                    element={<ZionSecurityShieldPage />}
-                  />
-                  <Route
-                    path="/zion-cloud-vault"
-                    element={<ZionCloudVaultPage />}
-                  />
-                  <Route
-                    path="/zion-content-studio"
-                    element={<ZionContentStudioPage />}
-                  />
-                  <Route
-                    path="/zion-data-sync"
-                    element={<ZionDataSyncPage />}
-                  />
-                  <Route
-                    path="/zion-lead-magnet"
-                    element={<ZionLeadMagnetPage />}
-                  />
-                  <Route
-                    path="/zion-project-master"
-                    element={<ZionProjectMasterPage />}
-                  />
-                  <Route
-                    path="/zion-email-automation"
-                    element={<ZionEmailAutomationPage />}
-                  />
-                  <Route
-                    path="/zion-social-scheduler"
-                    element={<ZionSocialSchedulerPage />}
-                  />
-                  <Route
-                    path="/zion-workflow-automation"
-                    element={<ZionWorkflowAutomationPage />}
-                  />
-                  <Route
-                    path="/zion-invoice-genius"
-                    element={<ZionInvoiceGeniusPage />}
-                  />
-                  <Route
-                    path="/zion-inventory-smart"
-                    element={<ZionInventorySmartPage />}
-                  />
-                  <Route
-                    path="/zion-compliance-manager"
-                    element={<ZionComplianceManagerPage />}
-                  />
-                  <Route
-                    path="/zion-performance-monitor"
-                    element={<ZionPerformanceMonitorPage />}
-                  />
-
-                  {/* 5G Solutions Routes */}
-                  <Route
-                    path="/5g-data-analytics"
-                    element={<FiveGDataAnalyticsPage />}
-                  />
-                  <Route
-                    path="/5g-edge-computing"
-                    element={<FiveGEdgeComputingPage />}
-                  />
-                  <Route
-                    path="/5g-implementation"
-                    element={<FiveGImplementationPage />}
-                  />
-                  <Route
-                    path="/5g-mobile-applications"
-                    element={<FiveGMobileApplicationsPage />}
-                  />
-                  <Route
-                    path="/5g-network-infrastructure"
-                    element={<FiveGNetworkInfrastructurePage />}
-                  />
-                  <Route
-                    path="/5g-private-networks"
-                    element={<FiveGPrivateNetworksPage />}
-                  />
-                  <Route
-                    path="/5g-smart-city-solutions"
-                    element={<FiveGSmartCitySolutionsPage />}
-                  />
-                  <Route
-                    path="/5g-solutions"
-                    element={<FiveGSolutionsPage />}
-                  />
-                      </Routes>
-                    </Suspense>
-                  </main>
-                    <Footer />
-                    <EnhancedAccessibility>
-                      <div></div>
-                    </EnhancedAccessibility>
-                  </FuturisticBackground>
-                  <AnalyticsProvider>
-                    <div>
-                      <PerformanceMonitor />
-                      <PerformanceEnhancer />
-                      <SEOOptimizer />
-                      <EnhancedSEO />
-                    </div>
-                  </AnalyticsProvider>
-                </div>
-              </Router>
-            </AdvancedPerformanceOptimizer>
-          </AccessibilityEnhancer>
-        </HelmetProvider>
-      </ErrorBoundary>
-    </ErrorHandler>
->>>>>>> cursor/analyze-improve-and-deploy-application-a84d
   );
 };
 
