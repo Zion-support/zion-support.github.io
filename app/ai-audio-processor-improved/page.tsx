@@ -1,19 +1,7 @@
 'use client';
 import React from 'react';
 import ServicePageTemplate from '../components/ServicePageTemplate';
-import { 
-  MicrophoneIcon, 
-  CpuChipIcon,
-  ShieldCheckIcon,
-  DocumentTextIcon,
-  SpeakerWaveIcon,
-  MusicalNoteIcon,
-  ClockIcon,
-  CurrencyDollarIcon,
-  UserGroupIcon,
-  EyeIcon,
-  ChartBarIcon
-} from '@heroicons/react/24/outline';
+import { MicrophoneIcon, CpuChipIcon, ShieldCheckIcon, DocumentTextIcon, SpeakerWaveIcon, MusicalNoteIcon } from '@heroicons/react/24/outline';
 
 const AIAudioProcessorPage: React.FC = () => {
   const features = [

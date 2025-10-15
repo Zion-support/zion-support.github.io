@@ -2,32 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from './components/SEOHead';
-import { services, getFeaturedServices } from './data/services';
-import { 
-  CpuChipIcon, 
-  ShieldCheckIcon, 
-  CloudIcon, 
-  RocketLaunchIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  BoltIcon,
-  SparklesIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
-  CogIcon,
-  UserGroupIcon,
-  ShareIcon,
-  CodeBracketIcon,
-  EyeIcon,
-  StarIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  FireIcon
-} from '@heroicons/react/24/outline';
+import { getFeaturedServices } from './data/services';
+import { CpuChipIcon, ShieldCheckIcon, CloudIcon, RocketLaunchIcon, CheckCircleIcon, ArrowRightIcon, SparklesIcon, UserGroupIcon, CodeBracketIcon, CurrencyDollarIcon, ClockIcon } from '@heroicons/react/24/outline';
 
 const HomePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [currentService, setCurrentService] = useState(0);
+  const [, setCurrentService] = useState(0);
   const featuredServices = getFeaturedServices();
 
   useEffect(() => {
@@ -52,7 +32,7 @@ const HomePage: React.FC = () => {
     {
       icon: CpuChipIcon,
       title: 'AI-Powered Solutions',
-      description: 'Cutting-edge artificial intelligence and machine learning services',
+      description: 'Cutting-edge artificial intelligence and machine learning ',
       gradient: 'from-purple-500 to-pink-500'
     },
     {
@@ -64,7 +44,7 @@ const HomePage: React.FC = () => {
     {
       icon: ShieldCheckIcon,
       title: 'Enterprise Security',
-      description: 'Comprehensive cybersecurity and data protection services',
+      description: 'Comprehensive cybersecurity and data protection ',
       gradient: 'from-green-500 to-emerald-500'
     },
     {
@@ -79,8 +59,8 @@ const HomePage: React.FC = () => {
     <div className="min-h-screen">
       <SEOHead 
         title="Zion Tech Group - Advanced AI & IT Solutions"
-        description="Leading provider of AI-powered solutions, cloud infrastructure, and enterprise IT services. Transform your business with cutting-edge technology."
-        keywords="AI solutions, cloud infrastructure, IT services, artificial intelligence, machine learning, cybersecurity, software development"
+        description="Leading provider of AI-powered solutions, cloud infrastructure, and enterprise IT . Transform your business with cutting-edge technology."
+        keywords="AI solutions, cloud infrastructure, IT artificial intelligence, machine learning, cybersecurity, software development"
       />
       
       {/* Enhanced Animated Background */}
@@ -114,7 +94,7 @@ const HomePage: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
               <Link 
-                to="/services" 
+                to="/" 
                 className="btn-neon hover-glow focus-neon px-8 py-4 text-lg font-semibold"
               >
                 Explore Services
@@ -162,7 +142,7 @@ const HomePage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, index) => (
+            {featuredServices.map((service: any, index: number) => (
               <div 
                 key={service.id}
                 className={`glass-card p-8 card-hover transition-all duration-500 ${
@@ -190,7 +170,7 @@ const HomePage: React.FC = () => {
                 </div>
 
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {service.features.slice(0, 3).map((feature, featureIndex) => (
+                  {service.features.slice(0, 3).map((feature: any, featureIndex: number) => (
                     <span 
                       key={featureIndex}
                       className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20"
@@ -220,7 +200,7 @@ const HomePage: React.FC = () => {
 
           <div className="text-center mt-12">
             <Link 
-              to="/services"
+              to="/"
               className="btn-neon hover-glow px-8 py-4 text-lg font-semibold"
             >
               View All Services

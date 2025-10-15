@@ -1,30 +1,6 @@
 import React from 'react';
 import SEOHead from './SEOHead';
-import { 
-  CheckCircleIcon, 
-  ArrowRightIcon,
-  CpuChipIcon,
-  ShieldCheckIcon,
-  DocumentTextIcon,
-  SpeakerWaveIcon,
-  MusicalNoteIcon,
-  ClockIcon,
-  CurrencyDollarIcon,
-  UserGroupIcon,
-  EyeIcon,
-  ChartBarIcon,
-  CogIcon,
-  GlobeAltIcon,
-  CodeBracketIcon,
-  DevicePhoneMobileIcon,
-  CloudIcon,
-  SignalIcon,
-  BoltIcon,
-  StarIcon,
-  SparklesIcon,
-  ChatBubbleLeftRightIcon,
-  TruckIcon
-} from '@heroicons/react/24/outline';
+import { CheckCircleIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 
 interface ServicePageTemplateProps {
   title: string;

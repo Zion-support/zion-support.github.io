@@ -1,48 +1,13 @@
 import React, { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import {
-  Bars3Icon,
-  HomeIcon,
-  InformationCircleIcon,
-  PhoneIcon,
-  DocumentTextIcon,
-  AcademicCapIcon,
-  QuestionMarkCircleIcon,
-  ShieldCheckIcon,
-  CurrencyDollarIcon,
-  CogIcon,
-  ChevronDownIcon,
-  GlobeAltIcon,
-  CloudIcon,
-  CpuChipIcon,
-  SignalIcon,
-  UserGroupIcon,
-  EnvelopeIcon,
-  ShareIcon,
-  ChatBubbleLeftRightIcon,
-  ChartBarIcon,
-  EyeIcon,
-  CircleStackIcon,
-  CodeBracketIcon,
-  DevicePhoneMobileIcon,
-  UserPlusIcon,
-  CheckCircleIcon,
-  XMarkIcon,
-  SparklesIcon,
-  RocketLaunchIcon,
-  FireIcon,
-  StarIcon
-} from '@heroicons/react/24/outline';
+import { Bars3Icon, HomeIcon, InformationCircleIcon, PhoneIcon, DocumentTextIcon, AcademicCapIcon, QuestionMarkCircleIcon, ShieldCheckIcon, CurrencyDollarIcon, CogIcon, ChevronDownIcon, GlobeAltIcon, CloudIcon, CpuChipIcon, SignalIcon, UserGroupIcon, EnvelopeIcon, ShareIcon, ChatBubbleLeftRightIcon, ChartBarIcon, EyeIcon, CircleStackIcon, CodeBracketIcon, DevicePhoneMobileIcon, UserPlusIcon, XMarkIcon, SparklesIcon, RocketLaunchIcon, MicrophoneIcon, ClockIcon, VideoCameraIcon, ScaleIcon, HeartIcon } from '@heroicons/react/24/outline';
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+const Navigation: React.FC<NavigationProps> = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 

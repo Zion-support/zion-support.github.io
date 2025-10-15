@@ -2,28 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
-import { services, getServicesByCategory, getPricingTiers } from '../data/services';
-import { 
-  CpuChipIcon, 
-  CloudIcon, 
-  ShieldCheckIcon, 
-  CodeBracketIcon,
-  CircleStackIcon,
-  SignalIcon,
-  CogIcon,
-  ChartBarIcon,
-  EyeIcon,
-  CurrencyDollarIcon,
-  CheckCircleIcon,
-  StarIcon,
-  FireIcon,
-  ClockIcon,
-  ArrowRightIcon,
-  SparklesIcon,
-  RocketLaunchIcon,
-  FunnelIcon,
-  MagnifyingGlassIcon
-} from '@heroicons/react/24/outline';
+import { services, getServicesByCategory, } from '../data/services';
+import { CpuChipIcon, CloudIcon, ShieldCheckIcon, CodeBracketIcon, CircleStackIcon, SignalIcon, CogIcon, ChartBarIcon, CurrencyDollarIcon, CheckCircleIcon, StarIcon, ClockIcon, SparklesIcon, RocketLaunchIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 
 const ServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

@@ -2,33 +2,19 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
-import { services, getPricingTiers } from '../data/services';
-import { 
-  CheckCircleIcon,
-  XMarkIcon,
-  CurrencyDollarIcon,
-  StarIcon,
-  FireIcon,
-  RocketLaunchIcon,
-  ShieldCheckIcon,
-  ClockIcon,
-  UserGroupIcon,
-  CogIcon,
-  ArrowRightIcon,
-  SparklesIcon,
-  BoltIcon
-} from '@heroicons/react/24/outline';
+import { services } from '../data/services';
+import { CheckCircleIcon, StarIcon, RocketLaunchIcon, ClockIcon, ArrowRightIcon, SparklesIcon } from '@heroicons/react/24/outline';
 
 const PricingPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const [selectedService, setSelectedService] = useState<string | null>(null);
+  const [] = useState<string | null>(null);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const pricingTiers = getPricingTiers();
+  // const pricingTiers = getPricingTiers();
 
   const enterpriseFeatures = [
     'Unlimited API Calls',
