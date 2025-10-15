@@ -42,7 +42,6 @@ export const focusManagement = {
     };
   },
 
-<<<<<<< HEAD
   // Move focus to next focusable element
   moveToNext: (currentElement: HTMLElement) => {
     const focusableElements = document.querySelectorAll(
@@ -68,26 +67,16 @@ export const focusManagement = {
 export const screenReader = {
   // Announce message to screen readers
   announce: (message: string) => {
-=======
-  // Announce changes to screen readers
-  announceToScreenReader: (message: string) => {
->>>>>>> cursor/analyze-improve-and-merge-code-7ff3
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
     announcement.textContent = message;
-<<<<<<< HEAD
-=======
-    
->>>>>>> cursor/analyze-improve-and-merge-code-7ff3
     document.body.appendChild(announcement);
     
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
-<<<<<<< HEAD
-=======
   },
 
   // Get focusable elements
@@ -109,155 +98,12 @@ export const screenReader = {
     const focusableElements = focusManagement.getFocusableElements(container);
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
     lastElement?.focus();
->>>>>>> cursor/analyze-improve-and-merge-code-7ff3
   }
 };
 
 // Keyboard navigation utilities
 export const keyboardNavigation = {
-<<<<<<< HEAD
-  // Handle escape key
-  handleEscape: (callback: () => void) => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        callback();
-      }
-=======
-  // Handle arrow key navigation
-  handleArrowKeys: (e: KeyboardEvent, items: HTMLElement[], currentIndex: number) => {
-    let newIndex = currentIndex;
-    
-    switch (e.key) {
-      case 'ArrowDown':
-      case 'ArrowRight':
-        e.preventDefault();
-        newIndex = (currentIndex + 1) % items.length;
-        break;
-      case 'ArrowUp':
-      case 'ArrowLeft':
-        e.preventDefault();
-        newIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
-        break;
-      case 'Home':
-        e.preventDefault();
-        newIndex = 0;
-        break;
-      case 'End':
-        e.preventDefault();
-        newIndex = items.length - 1;
-        break;
-    }
-    
-    if (newIndex !== currentIndex) {
-      items[newIndex]?.focus();
-      return newIndex;
-    }
-    
-    return currentIndex;
-  },
-
-  // Handle escape key
-  handleEscape: (e: KeyboardEvent, callback: () => void) => {
-    if (e.key === 'Escape') {
-      e.preventDefault();
-      callback();
-    }
-  }
-};
-
-// ARIA utilities
-export const ariaUtils = {
-  // Set ARIA attributes
-  setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>) => {
-    Object.entries(attributes).forEach(([key, value]) => {
-      element.setAttribute(key, value);
-    });
-  },
-
-  // Toggle ARIA expanded
-  toggleExpanded: (element: HTMLElement) => {
-    const isExpanded = element.getAttribute('aria-expanded') === 'true';
-    element.setAttribute('aria-expanded', (!isExpanded).toString());
-  },
-
-  // Set ARIA hidden
-  setHidden: (element: HTMLElement, hidden: boolean) => {
-    element.setAttribute('aria-hidden', hidden.toString());
-  }
-};
-
-// Color contrast utilities
-export const colorContrast = {
-  // Check if color meets WCAG AA standards
-  meetsWCAGAA: (foreground: string, background: string): boolean => {
-    const fgLuminance = getLuminance(foreground);
-    const bgLuminance = getLuminance(background);
-    const contrast = (Math.max(fgLuminance, bgLuminance) + 0.05) / (Math.min(fgLuminance, bgLuminance) + 0.05);
-    return contrast >= 4.5;
-  },
-
-  // Get relative luminance
-  getLuminance: (color: string): number => {
-    const rgb = hexToRgb(color);
-    if (!rgb) return 0;
-    
-    const { r, g, b } = rgb;
-    const [rs, gs, bs] = [r, g, b].map(c => {
-      c = c / 255;
-      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
-    });
-    
-    return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
-  }
-};
-
-// Helper functions
-function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return result ? {
-    r: parseInt(result[1], 16),
-    g: parseInt(result[2], 16),
-    b: parseInt(result[3], 16)
-  } : null;
-}
-
-function getLuminance(color: string): number {
-  return colorContrast.getLuminance(color);
-}
-
-// Hook for managing focus trap
-export const useFocusTrap = (isActive: boolean) => {
-  const containerRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    if (!isActive || !containerRef.current) return;
-
-    const cleanup = focusManagement.trapFocus(containerRef.current);
-    return cleanup;
-  }, [isActive]);
-
-  return containerRef;
-};
-
-// Hook for managing keyboard navigation
-export const useKeyboardNavigation = (items: HTMLElement[], initialIndex = 0) => {
-  const [currentIndex, setCurrentIndex] = useState(initialIndex);
-
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      const newIndex = keyboardNavigation.handleArrowKeys(e, items, currentIndex);
-      setCurrentIndex(newIndex);
->>>>>>> cursor/analyze-improve-and-merge-code-7ff3
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-<<<<<<< HEAD
-  }
-};
-=======
-  }, [items, currentIndex]);
-
-  return [currentIndex, setCurrentIndex] as const;
-};
->>>>>>> cursor/analyze-improve-and-merge-code-7ff3

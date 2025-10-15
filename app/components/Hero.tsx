@@ -27,6 +27,10 @@ const Hero: React.FC = memo(() => {
             <span className="text-white">With AI & IT Solutions</span>
           </h1>
           
+          <h2 className="sr-only">
+            Leading AI and IT Solutions Provider
+          </h2>
+          
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
             Leading provider of cutting-edge AI, IT, and 5G solutions. 
             We transform businesses through innovative technology and 
@@ -52,28 +56,28 @@ const Hero: React.FC = memo(() => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center group">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" role="img" aria-label="Happy clients icon">
                 <Users className="w-8 h-8 text-cyan-400" />
               </div>
               <div className="text-3xl font-bold text-white mb-1">500+</div>
               <div className="text-gray-400 text-sm">Happy Clients</div>
             </div>
             <div className="text-center group">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" role="img" aria-label="Projects completed icon">
                 <Award className="w-8 h-8 text-green-400" />
               </div>
               <div className="text-3xl font-bold text-white mb-1">1000+</div>
               <div className="text-gray-400 text-sm">Projects Completed</div>
             </div>
             <div className="text-center group">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" role="img" aria-label="Uptime guarantee icon">
                 <Clock className="w-8 h-8 text-purple-400" />
               </div>
               <div className="text-3xl font-bold text-white mb-1">99.9%</div>
               <div className="text-gray-400 text-sm">Uptime Guarantee</div>
             </div>
             <div className="text-center group">
-              <div className="w-16 h-16 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" role="img" aria-label="24/7 support icon">
                 <Zap className="w-8 h-8 text-orange-400" />
               </div>
               <div className="text-3xl font-bold text-white mb-1">24/7</div>

@@ -27,7 +27,7 @@ const ServicesOverviewPage: React.FC = () => {
       icon: <Code className="w-8 h-8" />,
       color: "from-purple-500 to-pink-600",
       description: "Comprehensive IT solutions and infrastructure services",
-      services: []
+      services: [
         { name: "Cloud Infrastructure", price: "$499/month", features: ["Auto-scaling", "AI Monitoring", "Cost Optimization"] },
         { name: "API Management", price: "$199/month", features: ["API Gateway", "Rate Limiting", "Analytics"] },
         { name: "Database Solutions", price: "$299/month", features: ["Database Design", "Performance Tuning", "Backup & Recovery"] },
@@ -43,7 +43,7 @@ const ServicesOverviewPage: React.FC = () => {
       icon: <Wifi className="w-8 h-8" />,
       color: "from-green-500 to-emerald-600",
       description: "Next-generation 5G technology and IoT solutions",
-      services: []
+      services: [
         { name: "5G Implementation", price: "$999/month", features: ["5G Network Setup", "IoT Integration", "Edge Computing"] },
         { name: "5G Network Infrastructure", price: "$1,499/month", features: ["Network Design", "Hardware Installation", "Optimization"] },
         { name: "5G IoT Solutions", price: "$799/month", features: ["IoT Platform", "Device Management", "Data Analytics"] },

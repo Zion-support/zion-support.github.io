@@ -24,6 +24,8 @@ export default defineConfig({
           ui: ['framer-motion', 'lucide-react'],
           analytics: ['web-vitals'],
           utils: ['clsx', 'tailwind-merge'],
+          charts: ['recharts'],
+          icons: ['@heroicons/react'],
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',

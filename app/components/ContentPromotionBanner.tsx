@@ -32,8 +32,9 @@ const ContentPromotionBanner: React.FC = () => {
       icon: '💰',
       stats: [
         { value: '$50M+', label: 'Annual Savings' },
-        { value: '95%', label: 'Process Automation' }]
-        { value: '300%', label: 'ROI' }]
+        { value: '95%', label: 'Process Automation' },
+        { value: '300%', label: 'ROI' }
+      ]
     },
     {
       id: 'ai-trends-2026',
@@ -46,8 +47,9 @@ const ContentPromotionBanner: React.FC = () => {
       icon: '🚀',
       stats: [
         { value: '$100B+', label: 'Market Value' },
-        { value: '95%', label: 'Process Automation' }]
-        { value: '10x', label: 'Efficiency Gains' }]
+        { value: '95%', label: 'Process Automation' },
+        { value: '10x', label: 'Efficiency Gains' }
+      ]
     },
     {
       id: 'autonomous-architecture',
@@ -60,8 +62,9 @@ const ContentPromotionBanner: React.FC = () => {
       icon: '🏗️',
       stats: [
         { value: '99.9%', label: 'Uptime' },
-        { value: '90%', label: 'Cost Reduction' }]
-        { value: 'Real-time', label: 'Optimization' }]
+        { value: '90%', label: 'Cost Reduction' },
+        { value: 'Real-time', label: 'Optimization' }
+      ]
     }
   ];
 
@@ -129,7 +132,8 @@ const ContentPromotionBanner: React.FC = () => {
 
             {/* Close button */}
             <button
-    const onClick = {handleClose} className={`ml-6 p-2 rounded-full hover: bg-white hover:bg-opacity-20 transition-colors ${banner.textColor}`}
+              onClick={handleClose} 
+              className={`ml-6 p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-colors ${banner.textColor}`}
               aria-label="Close banner"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

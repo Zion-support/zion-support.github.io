@@ -1,9 +1,11 @@
-export const dataTransformers = { transformToTableData: (data: unknown[]) => {
+export const dataTransformers = { 
+  transformToTableData: (data: unknown[]) => {
     return data.map((item, index) => {
-      const itemObj = item as Record<string unknown>;
-  return {
+      const itemObj = item as Record<string, unknown>;
+      return {
         id: itemObj.id || index,
-        ...itemObj };
+        ...itemObj 
+      };
     });
   },
   transformToChartData: (data: unknown[], xField: string, yField: string) => { return data.map(item => {
