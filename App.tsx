@@ -60,130 +60,81 @@ const App: React.FC = () => {
         <AccessibilityEnhancer>
           <SEOOptimizer>
             <Router>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-x-hidden">
-                    {/* Animated background elements */}
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                      <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse"></div>
-                      <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-                      <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-blue-500/3 rounded-full blur-3xl animate-pulse delay-500"></div>
-                      <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-pink-500/3 rounded-full blur-3xl animate-pulse delay-700"></div>
-                    </div>
-                    
-                    <Navigation />
-                    
-                    <main className="relative z-10" id="main-content" role="main">
-                      <Suspense fallback={<LoadingStates />}>
-                        <Routes>
-                          <Route path="/" element={<HomePage />} />
-                          <Route path="/about" element={<AboutPage />} />
-                          <Route path="/services" element={<ServicesPage />} />
-                          <Route path="/contact" element={<ContactPage />} />
-                          <Route path="/micro-saas" element={<MicroSaasPage />} />
-                          <Route path="/ai-services" element={<AiServicesPage />} />
-                          <Route path="/it-services" element={<ItServicesPage />} />
-                          <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                          <Route path="/pricing" element={<PricingPage />} />
-                          <Route path="/portfolio" element={<PortfolioPage />} />
-                          <Route path="/news" element={<NewsPage />} />
-                          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-                          <Route path="/terms" element={<TermsPage />} />
-                          <Route path="/sla" element={<SlaPage />} />
-                          <Route path="/cookies" element={<CookiesPage />} />
-                          <Route path="/gdpr" element={<GdprPage />} />
-                          <Route path="/help" element={<HelpPage />} />
-                          <Route path="/docs" element={<DocsPage />} />
-                          <Route path="/api-docs" element={<ApiDocsPage />} />
-                          <Route path="/status" element={<StatusPage />} />
-                          <Route path="/support" element={<SupportPage />} />
-                          <Route path="/careers" element={<CareersPage />} />
-                          <Route path="/sitemap" element={<SitemapPage />} />
-                          
-                          {/* New AI Services */}
-                          <Route path="/ai-smart-contracts" element={<AiSmartContractsPage />} />
-                          <Route path="/ai-voice-assistant" element={<AiVoiceAssistantPage />} />
-                          <Route path="/ai-predictive-maintenance" element={<AiPredictiveMaintenancePage />} />
-                          <Route path="/ai-personalized-learning" element={<AiPersonalizedLearningPage />} />
-                          
-                          {/* New IT Services */}
-                          <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
-                          <Route path="/edge-computing-solutions" element={<EdgeComputingSolutionsPage />} />
-                          
-                          {/* 404 Page */}
-                          <Route path="*" element={
-                            <div className="container mx-auto px-4 py-16 text-center">
-                              <h1 className="text-4xl font-bold text-white mb-8">404 - Page Not Found</h1>
-                              <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
-                              <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                Go Home
-                              </a>
-                            </div>
-                          } />
-                        </Routes>
-                      </Suspense>
-                    </main>
-                    
-                    <Footer />
-            <div className="absolute top-40 right-32 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-2000"></div>
-            <div className="absolute bottom-32 left-40 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping delay-3000"></div>
-            <div className="absolute bottom-20 right-20 w-2 h-2 bg-pink-400 rounded-full animate-ping delay-4000"></div>
-            
-            {/* Futuristic lines */}
-            <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-cyan-500/20 via-transparent to-purple-500/20 animate-pulse"></div>
-            <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-purple-500/20 via-transparent to-cyan-500/20 animate-pulse delay-1000"></div>
-          </div>
-          <Header />
-          
-          <main id="main-content" role="main">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={
-                  <>
-                    <Hero />
-                    <Services />
-                  </>
-                } />
-                <Route path="/about" element={<About />} />
-                <Route path="/micro-saas" element={<MicroSaasPage />} />
-                <Route path="/ai-services" element={<AiServicesPage />} />
-                <Route path="/it-services" element={<ItServicesPage />} />
-                <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                <Route path="/pricing" element={<PricingPage />} />
-                <Route path="/portfolio" element={<PortfolioPage />} />
-                <Route path="/news" element={<NewsPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-                <Route path="/terms" element={<TermsPage />} />
-                <Route path="/sla" element={<SlaPage />} />
-                <Route path="/cookies" element={<CookiesPage />} />
-                <Route path="/gdpr" element={<GdprPage />} />
-                <Route path="/help" element={<HelpPage />} />
-                <Route path="/docs" element={<DocsPage />} />
-                <Route path="/api-docs" element={<ApiDocsPage />} />
-                <Route path="/status" element={<StatusPage />} />
-                <Route path="/support" element={<SupportPage />} />
-                <Route path="/careers" element={<CareersPage />} />
-                <Route path="/sitemap" element={<SitemapPage />} />
-                <Route path="/cloud-services" element={<CloudServicesPage />} />
-                <Route path="/cybersecurity" element={<CybersecurityPage />} />
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-x-hidden">
+                {/* Animated background elements */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                  <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse"></div>
+                  <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+                  <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-blue-500/3 rounded-full blur-3xl animate-pulse delay-500"></div>
+                  <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-pink-500/3 rounded-full blur-3xl animate-pulse delay-700"></div>
+                </div>
                 
-                {/* New AI Services */}
-                <Route path="/ai-smart-contracts" element={<AiSmartContractsPage />} />
-                <Route path="/ai-voice-assistant" element={<AiVoiceAssistantPage />} />
-                <Route path="/ai-predictive-maintenance" element={<AiPredictiveMaintenancePage />} />
-                <Route path="/ai-personalized-learning" element={<AiPersonalizedLearningPage />} />
+                <Navigation />
                 
-                {/* New IT Services */}
-                <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
-                <Route path="/edge-computing-solutions" element={<EdgeComputingSolutionsPage />} />
-                <Route path="*" element={
-                  <div className="container mx-auto px-4 py-16 text-center">
-                    <h1 className="text-4xl font-bold text-white mb-8">404 - Page Not Found</h1>
-                    <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
-                    <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                      Go Home
-                    </a>
->>>>>>> fe188260b6cb6aac21730ba9d0de1843e8222b81
-                  </div>
+                <main className="relative z-10" id="main-content" role="main">
+                  <Suspense fallback={<LoadingStates />}>
+                    <Routes>
+                      <Route path="/" element={<HomePage />} />
+                      <Route path="/about" element={<AboutPage />} />
+                      <Route path="/services" element={<ServicesPage />} />
+                      <Route path="/contact" element={<ContactPage />} />
+                      <Route path="/micro-saas" element={<MicroSaasPage />} />
+                      <Route path="/ai-services" element={<AiServicesPage />} />
+                      <Route path="/it-services" element={<ItServicesPage />} />
+                      <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                      <Route path="/cloud-services" element={<CloudServicesPage />} />
+                      <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                      <Route path="/pricing" element={<PricingPage />} />
+                      <Route path="/portfolio" element={<PortfolioPage />} />
+                      <Route path="/news" element={<NewsPage />} />
+                      <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+                      <Route path="/terms" element={<TermsPage />} />
+                      <Route path="/sla" element={<SlaPage />} />
+                      <Route path="/cookies" element={<CookiesPage />} />
+                      <Route path="/gdpr" element={<GdprPage />} />
+                      <Route path="/help" element={<HelpPage />} />
+                      <Route path="/docs" element={<DocsPage />} />
+                      <Route path="/api-docs" element={<ApiDocsPage />} />
+                      <Route path="/status" element={<StatusPage />} />
+                      <Route path="/support" element={<SupportPage />} />
+                      <Route path="/careers" element={<CareersPage />} />
+                      <Route path="/sitemap" element={<SitemapPage />} />
+                      
+                      {/* New AI Services */}
+                      <Route path="/ai-smart-contracts" element={<AiSmartContractsPage />} />
+                      <Route path="/ai-voice-assistant" element={<AiVoiceAssistantPage />} />
+                      <Route path="/ai-predictive-maintenance" element={<AiPredictiveMaintenancePage />} />
+                      <Route path="/ai-personalized-learning" element={<AiPersonalizedLearningPage />} />
+                      
+                      {/* New IT Services */}
+                      <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
+                      <Route path="/edge-computing-solutions" element={<EdgeComputingSolutionsPage />} />
+                      
+                      {/* 404 Page */}
+                      <Route path="*" element={
+                        <div className="container mx-auto px-4 py-16 text-center">
+                          <h1 className="text-4xl font-bold text-white mb-8">404 - Page Not Found</h1>
+                          <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
+                          <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            Go Home
+                          </a>
+                        </div>
+                      } />
+                    </Routes>
+                  </Suspense>
+                </main>
+                
+                <Footer />
+                
+                {/* Decorative elements */}
+                <div className="absolute top-40 right-32 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-2000"></div>
+                <div className="absolute bottom-32 left-40 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping delay-3000"></div>
+                <div className="absolute bottom-20 right-20 w-2 h-2 bg-pink-400 rounded-full animate-ping delay-4000"></div>
+                
+                {/* Futuristic lines */}
+                <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-cyan-500/20 via-transparent to-purple-500/20 animate-pulse"></div>
+                <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-purple-500/20 via-transparent to-cyan-500/20 animate-pulse delay-1000"></div>
+              </div>
             </Router>
           </SEOOptimizer>
         </AccessibilityEnhancer>
