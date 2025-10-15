@@ -2,7 +2,7 @@ export const dataTransformers = { transformToTableData: (data: unknown[]) => {
     return data.map((item, index) => {
       const itemObj = item as Record<string, unknown>;
   return {
-        id: itemObj.id || index,
+        id: itemObj['id'] as string || index.toString(),
         ...itemObj };
     });
   },
@@ -21,9 +21,7 @@ export const dataTransformers = { transformToTableData: (data: unknown[]) => {
     });
   },
   transformToKeyValuePairs: (data: Record<string, unknown>[]) => { return data.map((item, index) => ({
-      id: item.id || index,
+      id: item['id'] as string || index.toString(),
       ...item }));
   }
 };
-
-export default NotFoundPage;

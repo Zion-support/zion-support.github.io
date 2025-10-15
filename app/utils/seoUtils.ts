@@ -27,6 +27,6 @@ export const seoUtils = {
       url: 'https://ziontechgroup.com',
       logo: 'https://ziontechgroup.com/logo.png',
       description: 'Leading technology solutions provider',
-      ...data
+      ...(data as Record<string, unknown> || {})
     })
 }
