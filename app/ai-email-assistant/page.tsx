@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
-export default function AiEmailAssistantPage() {
+export default function AiemailassistantPage() {
   return (
     <>
       <Helmet>
