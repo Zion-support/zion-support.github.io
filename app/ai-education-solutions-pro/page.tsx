@@ -285,4 +285,5 @@ const AIEducationSolutionsProPage = () => {
     </>
   );
 };
+
 export default AiEducationSolutionsProPage;
