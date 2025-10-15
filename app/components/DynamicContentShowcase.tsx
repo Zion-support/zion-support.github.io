@@ -1,146 +1,165 @@
-import React, { useState } from 'react';
 import React, { useState, useEffect } from "react";
 
-interface ContentItem {};
+interface ContentItem {
   id: string;
   title: string;
   description: string;
   image: string;
   category: string;
   featured?: boolean;
-};
-interface DynamicContentShowcaseProps {};
-  items?: ContentItem[]
-  autoPlay?: boolean
-  interval?: number
-  className?: string
-};
-const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({};
+}
+
+interface DynamicContentShowcaseProps {
+  items?: ContentItem[];
+  autoPlay?: boolean;
+  interval?: number;
+  className?: string;
+}
+
+const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
   items = [
-    {};
-      id: "1", title: "AI-Powered Solutions", _description:
-        "Transform your business with cutting-edge artificial intelligence technology.", _image: "/api/placeholder/400/300", _category: "AI Solutions", _featured: true, _}, _{};
-      id: "2", _title: "Cloud Migration", _description:
-        "Seamlessly migrate your infrastructure to the cloud with our expert services.", _image: "/api/placeholder/400/300", _category: "Cloud Services", _}, _{};
-      id: "3", _title: "Data Analytics", _description:
-        "Unlock insights from your data with advanced analytics and visualization.", _image: "/api/placeholder/400/300", _category: "Data Services", _}, _], autoPlay = true, interval = 5000, className = "", _}) => {};
+    {
+      id: "1",
+      title: "AI-Powered Analytics",
+      description: "Transform your data into actionable insights with our advanced AI analytics platform.",
+      image: "/images/ai-analytics.jpg",
+      category: "AI Solutions",
+      featured: true
+    },
+    {
+      id: "2",
+      title: "Cloud Infrastructure",
+      description: "Scalable and secure cloud solutions designed for modern businesses.",
+      image: "/images/cloud-infrastructure.jpg",
+      category: "Cloud Services",
+      featured: false
+    },
+    {
+      id: "3",
+      title: "Cybersecurity Suite",
+      description: "Comprehensive security solutions to protect your digital assets.",
+      image: "/images/cybersecurity.jpg",
+      category: "Security",
+      featured: true
+    },
+    {
+      id: "4",
+      title: "Data Management",
+      description: "Efficient data storage, processing, and analysis solutions.",
+      image: "/images/data-management.jpg",
+      category: "Data Solutions",
+      featured: false
+    }
+  ],
+  autoPlay = true,
+  interval = 5000,
+  className = ""
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(autoPlay);
+  const [filteredItems, setFilteredItems] = useState(items);
 
-  useEffect(() => {};
-    if (!isPlaying) return;
+  useEffect(() => {
+    if (!autoPlay) return;
 
-    const timer = setInterval(() => {};
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % filteredItems.length);
     }, interval);
 
     return () => clearInterval(timer);
-  }, [isPlaying, interval, items.length]);
+  }, [autoPlay, interval, filteredItems.length]);
 
-  const goToPrevious = () => {};
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length;
-    );
-  };
-
-  const goToNext = () => {};
-    setCurrentIndex(prevIndex) => (prevIndex + 1) % items.length);
-  };
-
-  const togglePlayPause = () => {};
-    setIsPlaying(!isPlaying);
-  };
-
-  const goToSlide = (_index: number) => {};
+  const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
 
-  const currentItem = items[currentIndex];
+  const filterByCategory = (category: string) => {
+    if (category === 'all') {
+      setFilteredItems(items);
+    } else {
+      setFilteredItems(items.filter(item => item.category === category));
+    }
+    setCurrentIndex(0);
+  };
+
+  const categories = ['all', ...Array.from(new Set(items.map(item => item.category)))];
 
   return (
-    <div className={`relative ${className}`}></div>
-      <div className="relative overflow-hidden rounded-lg bg-gray-900"></div>
-        <div className="flex transition-transform duration-500 ease-in-out"></div>
-          <div className="w-full flex-shrink-0"></div>
-            <div className="grid md:grid-cols-2 gap-8 p-8"></div>
-              <div className="space-y-6"></div>
-                <div></div>
-                  <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium mb-4"></span>
-                    {currentItem.category};
-                  </span>
-                  <h2 className="text-3xl font-bold text-white mb-4"></h2>
-                    {currentItem.title};
-                  </h2>
-                  <p className="text-gray-300 text-lg"></p>
-                    {currentItem.description};
-                  </p>
-                </div>
-                <div className="flex space-x-4"></div>
-                  <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"></button>
-                    Learn More
-                  </button>
-                  <button className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button>
-                    Get Started
-                  </button>
-                </div>
-              </div>
-              <div className="relative"></div>
-                <img
-                  src={currentItem.image};
-                  alt={currentItem.title};
-                  className="w-full h-64 object-cover rounded-lg"
-                />
-                {currentItem.featured && ()
-                  <div className="absolute top-4 right-4 bg-yellow-500 text-yellow-900 px-2 py-1 rounded text-sm font-semibold"></div>
-                    Featured
+    <div className={`${className}`}>
+      {/* Category Filter */}
+      <div className="flex flex-wrap justify-center gap-2 mb-8">
+        {categories.map((category) => (
+          <button
+            key={category}
+            onClick={() => filterByCategory(category)}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              filteredItems.some(item => 
+                category === 'all' || item.category === category
+              ) && filteredItems[currentIndex]?.category === category
+                ? 'bg-blue-600 text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
+            }`}
+          >
+            {category.charAt(0).toUpperCase() + category.slice(1)}
+          </button>
+        ))}
+      </div>
+
+      {/* Content Carousel */}
+      <div className="relative overflow-hidden rounded-lg">
+        <div
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {filteredItems.map((item) => (
+            <div key={item.id} className="w-full flex-shrink-0">
+              <div className="relative h-96 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+                <div className="absolute inset-0 bg-black/30"></div>
+                <div className="relative h-full flex items-center">
+                  <div className="container mx-auto px-4">
+                    <div className="max-w-2xl">
+                      {item.featured && (
+                        <span className="inline-block bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                          Featured
+                        </span>
+                      )}
+                      <h2 className="text-4xl font-bold mb-4">{item.title}</h2>
+                      <p className="text-xl mb-6 opacity-90">{item.description}</p>
+                      <div className="flex items-center gap-4">
+                        <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+                          {item.category}
+                        </span>
+                        <button className="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                          Learn More
+                        </button>
+                      </div>
+                    </div>
                   </div>
-                )};
+                </div>
               </div>
             </div>
+          ))}
+        </div>
+
+        {/* Navigation Dots */}
+        {filteredItems.length > 1 && (
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            {filteredItems.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-colors ${
+                  index === currentIndex
+                    ? "bg-white"
+                    : "bg-white/50 hover:bg-white/75"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
           </div>
-        </div>
-      </div>
-      {/* Controls */};
-      <div className="flex items-center justify-between mt-6"></div>
-        <div className="flex space-x-2"></div>
-          <button
-            onClick={goToPrevious};
-            className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
-          ></button
->
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <button
-            onClick={togglePlayPause};
-            className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
-          ></button
->
-            {isPlaying ? ()
-              <Pause className="w-5 h-5" />
-            ) : ()
-              <Play className="w-5 h-5" />
-            )};
-          </button>
-          <button
-            onClick={goToNext};
-            className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
-          ></button
->
-            <ChevronRight className="w-5 h-5" />
-          </button>
-        </div>
-        {/* Dots indicator */};
-        <div className="flex space-x-2"></div>
-          {items.map(( index) => (<button
-              key={index};
-              onClick={() => goToSlide(index)};
-              className={`w-3 h-3 rounded-full transition-colors ${};
-                index === currentIndex ? "bg-cyan-500" : "bg-gray-600"
-              }`};
-            />
-          ))};
-        </div>
+        )}
       </div>
     </div>
-  )
+  );
 };
-export default DynamicContentShowcase
+
+export default DynamicContentShowcase;

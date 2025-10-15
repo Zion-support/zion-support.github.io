@@ -1,102 +1,169 @@
-import React, { useState } from 'react';
 import React, { useState, useEffect } from "react";
 
-const CookieConsent: React.FC = () => {};
+const CookieConsent: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  const [preferences, setPreferences] = useState({
+    necessary: true,
+    analytics: false,
+    marketing: false,
+    functional: false
+  });
 
-  useEffect(() => {};
+  useEffect(() => {
     const consent = localStorage.getItem("cookie-consent");
-    if (!consent) {};
+    if (!consent) {
       setIsVisible(true);
-    };
-  }, [])
-  const handleAccept = () => {};
-}localStorage.setItem("cookie-consent", "accepted")
-    setIsVisible(false)
+    }
+  }, []);
+
+  const handleAccept = () => {
+    localStorage.setItem("cookie-consent", "accepted");
+    setIsVisible(false);
   };
-  const handleReject = () => {};
-}localStorage.setItem("cookie-consent", "rejected")
-    setIsVisible(false)
+
+  const handleReject = () => {
+    localStorage.setItem("cookie-consent", "rejected");
+    setIsVisible(false);
   };
-  const handleSettings = () => {};
-}setShowSettings(!showSettings)
+
+  const handleSavePreferences = () => {
+    localStorage.setItem("cookie-consent", "custom");
+    localStorage.setItem("cookie-preferences", JSON.stringify(preferences));
+    setIsVisible(false);
+    setShowSettings(false);
   };
-  if (!isVisible) return null
-  return ()
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-gray-900 border-t border-gray-700 p-4"></div>
-      <div className="max-w-6xl mx-auto"></div>
-        <div className="flex items-start justify-between"></div>
-          <div className="flex items-start space-x-4"></div>
-            <Cookie className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />
-            <div className="flex-1"></div>
-              <h3 className="text-lg font-semibold text-white mb-2"></h3>
+
+  const handlePreferenceChange = (key: keyof typeof preferences) => {
+    setPreferences(prev => ({
+      ...prev,
+      [key]: !prev[key]
+    }));
+  };
+
+  if (!isVisible) return null;
+
+  return (
+    <div className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 p-4 z-50">
+      <div className="max-w-6xl mx-auto">
+        {!showSettings ? (
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex-1">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                 We use cookies
               </h3>
-              <p className="text-gray-300 text-sm mb-4"></p>
-                We use cookies to enhance your browsing experience, serve
-                personalized content, and analyze our traffic. By clicking
-                "Accept All", you consent to our use of cookies.
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. 
+                By clicking "Accept All", you consent to our use of cookies.
               </p>
-              {showSettings && ()
-                <div className="bg-gray-800 rounded-lg p-4 mb-4"></div>
-                  <h4 className="text-white font-semibold mb-3"></h4>
-                    Cookie Preferences
-                  </h4>
-                  <div className="space-y-3"></div>
-                    <label className="flex items-center justify-between"></label>
-                      <span className="text-gray-300">Essential Cookies</span>
-                      <input
-                        type="checkbox"
-                        defaultChecked
-                        disabled
-                        className="rounded"
-                      />
-                    </label>
-                    <label className="flex items-center justify-between"></label>
-                      <span className="text-gray-300">Analytics Cookies</span>
-                      <input
-                        type="checkbox"
-                        defaultChecked
-                        className="rounded"
-                      />
-                    </label>
-                    <label className="flex items-center justify-between"></label>
-                      <span className="text-gray-300">Marketing Cookies</span>
-                      <input type="checkbox" className="rounded" />
-                    </label>
-                  </div>
-                </div>
-              )};
+            </div>
+            <div className="flex flex-col sm:flex-row gap-2">
+              <button
+                onClick={() => setShowSettings(true)}
+                className="px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              >
+                Customize
+              </button>
+              <button
+                onClick={handleReject}
+                className="px-4 py-2 text-sm border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                Reject All
+              </button>
+              <button
+                onClick={handleAccept}
+                className="px-4 py-2 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Accept All
+              </button>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-2 ml-4"></div>
-            <button
-              onClick={handleSettings};
-              className="flex items-center px-4 py-2 text-gray-300 hover:text-white transition-colors"
-            ></button
->
-              <Settings className="w-4 h-4 mr-2" />
-              Settings
-            </button>
-            <button
-              onClick={handleReject};
-              className="px-4 py-2 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-800 transition-colors"
-            ></button
->
-              Reject All
-            </button>
-            <button
-              onClick={handleAccept};
-              className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-            ></button
->
-              Accept All
-            </button>
+        ) : (
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+              Cookie Preferences
+            </h3>
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h4 className="font-medium text-gray-900 dark:text-white">Necessary</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    Essential cookies required for the website to function properly.
+                  </p>
+                </div>
+                <input
+                  type="checkbox"
+                  checked={preferences.necessary}
+                  disabled
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <div>
+                  <h4 className="font-medium text-gray-900 dark:text-white">Analytics</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    Help us understand how visitors interact with our website.
+                  </p>
+                </div>
+                <input
+                  type="checkbox"
+                  checked={preferences.analytics}
+                  onChange={() => handlePreferenceChange('analytics')}
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <div>
+                  <h4 className="font-medium text-gray-900 dark:text-white">Marketing</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    Used to track visitors across websites for advertising purposes.
+                  </p>
+                </div>
+                <input
+                  type="checkbox"
+                  checked={preferences.marketing}
+                  onChange={() => handlePreferenceChange('marketing')}
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <div>
+                  <h4 className="font-medium text-gray-900 dark:text-white">Functional</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    Enable enhanced functionality and personalization.
+                  </p>
+                </div>
+                <input
+                  type="checkbox"
+                  checked={preferences.functional}
+                  onChange={() => handlePreferenceChange('functional')}
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                />
+              </div>
+            </div>
+            
+            <div className="flex justify-end gap-2 mt-6">
+              <button
+                onClick={() => setShowSettings(false)}
+                className="px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleSavePreferences}
+                className="px-4 py-2 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Save Preferences
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
-  )
+  );
 };
-export default CookieConsent
+
+export default CookieConsent;

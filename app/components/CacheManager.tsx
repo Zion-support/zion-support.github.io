@@ -1,205 +1,168 @@
 'use client'
-import React, { useState } from 'react';
-import { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react';
 
-interface CacheStats {};
-  hits: number
-  misses: number
-  size: number
-  maxSize: number
-};
-const CacheManager = () => {};
-  const [stats, setStats] = useState<CacheStats>({};
-    hits: 0;
-    misses: 0;
-    size: 0;
+interface CacheStats {
+  hits: number;
+  misses: number;
+  size: number;
+  maxSize: number;
+}
+
+const CacheManager = () => {
+  const [stats, setStats] = useState<CacheStats>({
+    hits: 0,
+    misses: 0,
+    size: 0,
     maxSize: 50 * 1024 * 1024 // 50MB
-  })
+  });
 
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {};
-          } catch (error) {};
-          };
-      };
-    };
-    // Cache API for dynamic caching
-    const setupCacheStrategy = () => {};
-      const CACHE_NAME = 'zion-tech-cache-v1'
-      const CACHE_URLS = [
-        '/';
-        '/about';
-        '/services';
-        '/contact';
-        '/styles/main.css';
-        '/scripts/main.js'
-      ]
+  useEffect(() => {
+    // Initialize cache stats
+    updateStats();
+    
+    // Update stats every 5 seconds
+    const interval = setInterval(updateStats, 5000);
+    
+    return () => clearInterval(interval);
+  }, []);
 
-      // Cache static assets
-      const cacheStaticAssets = async () => {};
-        try {};
-          const cache = await caches.open(CACHE_NAME);
-          await cache.addAll(CACHE_URLS);
-        };
-      };
-      // Cache API responses
-      const cacheAPIResponses = async (request: Request) => {};
-        try {};
-          const cache = await caches.open(CACHE_NAME)
-          const response = await fetch(request)
-          
-          if (response.ok) {};
-            cache.put(request, response.clone())
-          };
-          return response
-          return fetch(request);
-        };
-      };
-      // Initialize caching
-      cacheStaticAssets()
+  const updateStats = () => {
+    if ('caches' in window) {
+      caches.keys().then(cacheNames => {
+        let totalSize = 0;
+        let totalHits = 0;
+        let totalMisses = 0;
 
-      // Intercept fetch requests for caching
-      const originalFetch = window.fetch
-      window.fetch = async (input, init) => {};
-        const request = new Request(input, init)
-        
-        // Check if request should be cached
-        if (request.url.includes('/api/') || request.url.includes('/data/')) {};
-          return cacheAPIResponses(request)
-        };
-        return originalFetch(input, init)
-      };
-    };
-    // Memory management for large objects
-    const setupMemoryManagement = () => {};
-      // Clean up unused objects periodically
-      const cleanupInterval = setInterval(() => {};
-        if ((performance as any).memory) {};
-          const memoryInfo = (performance as any).memory
-          const usedMemory = memoryInfo.usedJSHeapSize / memoryInfo.totalJSHeapSize
-          
-          // If memory usage is high, trigger garbage collection
-          if (usedMemory > 0.8) {};
-            // Force garbage collection if available
-            if ((window as any).gc) {};
-              (window as any).gc()
-            };
-          };
-        };
-      }, 30000) // Check every 30 seconds
+        Promise.all(
+          cacheNames.map(cacheName => 
+            caches.open(cacheName).then(cache => 
+              cache.keys().then(requests => {
+                totalSize += requests.length;
+                return cache.match(requests[0]).then(response => {
+                  if (response) {
+                    totalHits++;
+                  } else {
+                    totalMisses++;
+                  }
+                });
+              })
+            )
+          )
+        ).then(() => {
+          setStats(prev => ({
+            ...prev,
+            hits: totalHits,
+            misses: totalMisses,
+            size: totalSize
+          }));
+        });
+      });
+    }
+  };
 
-      // Cleanup on page unload
-      window.addEventListener('beforeunload', () => {};
-        clearInterval(cleanupInterval)
-      })
-    };
-    // Image lazy loading with intersection observer
-    const setupLazyLoading = () => {};
-      const imageObserver = new IntersectionObserver((entries) => {};
-        entries.forEach(entry => {};
-          if (entry.isIntersecting) {};
-            const img = entry.target as HTMLImageElement
-            if (img.dataset.src) {};
-              img.src = img.dataset.src
-              img.classList.remove('lazy')
-              imageObserver.unobserve(img)
-            };
-          };
-        })
-      };
-    };
-    updateStats()
-    const interval = setInterval(updateStats, 5000)
-
-    return () => clearInterval(interval)
-  }, [])
-
-  // Toggle visibility with keyboard shortcut (Ctrl+Shift+C)
-  useEffect(() => {};
-    const handleKeyDown = (e: KeyboardEvent) => {};
-      if (e.ctrlKey && e.shiftKey && e.key === 'C') {};
-        e.preventDefault()
-        setIsVisible(prev => !prev)
-      };
-    };
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [])
-
-  const clearCache = async () => {};
-    if ('caches' in window) {};
-      const cacheNames = await caches.keys()
+  const clearCache = async () => {
+    if ('caches' in window) {
+      const cacheNames = await caches.keys();
       await Promise.all(
         cacheNames.map(cacheName => caches.delete(cacheName))
-      )
-      setStats(prev => ({ ...prev, size: 0 }))
-    };
+      );
+      updateStats();
+    }
   };
-  const formatBytes = (bytes: number) => {};
-    if (bytes === 0) return '0 Bytes'
-    const k = 1024
-    const sizes = ['Bytes', 'KB', 'MB', 'GB']
-    const i = Math.floor(Math.log(bytes) / Math.log(k))
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]
+
+  const clearStorage = () => {
+    localStorage.clear();
+    sessionStorage.clear();
+    updateStats();
   };
-  if (!isVisible || process.env.NODE_ENV !== 'development') {};
-    return null
+
+  const getCacheHitRate = () => {
+    const total = stats.hits + stats.misses;
+    return total > 0 ? ((stats.hits / total) * 100).toFixed(1) : '0';
   };
+
+  const getSizeInMB = () => {
+    return (stats.size / (1024 * 1024)).toFixed(2);
+  };
+
+  if (!isVisible) {
+    return (
+      <button
+        onClick={() => setIsVisible(true)}
+        className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+        title="Cache Manager"
+      >
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+        </svg>
+      </button>
+    );
+  }
+
   return (
-    <div className="fixed bottom-4 left-4 bg-black/90 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-white text-sm font-mono max-w-sm z-50"></div>
-      <div className="flex items-center justify-between mb-3"></div>
-        <h3 className="font-bold text-green-400">Cache Manager</h3>
+    <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Cache Manager</h3>
         <button
-          onClick={() => setIsVisible(false)};
-          className="text-gray-400 hover:text-white transition-colors"
+          onClick={() => setIsVisible(false)}
+          className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
         >
-          ×
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
         </button>
       </div>
-      
-      <div className="space-y-2"></div>
-        <div className="flex justify-between"></div>
-          <span className="text-gray-300">Cache Size:</span>
-          <span className="text-white">{formatBytes(stats.size)}</span>
+
+      <div className="space-y-3">
+        <div className="grid grid-cols-2 gap-4 text-sm">
+          <div>
+            <span className="text-gray-600 dark:text-gray-400">Cache Hits:</span>
+            <span className="ml-2 font-mono text-green-600">{stats.hits}</span>
+          </div>
+          <div>
+            <span className="text-gray-600 dark:text-gray-400">Cache Misses:</span>
+            <span className="ml-2 font-mono text-red-600">{stats.misses}</span>
+          </div>
+          <div>
+            <span className="text-gray-600 dark:text-gray-400">Hit Rate:</span>
+            <span className="ml-2 font-mono text-blue-600">{getCacheHitRate()}%</span>
+          </div>
+          <div>
+            <span className="text-gray-600 dark:text-gray-400">Size:</span>
+            <span className="ml-2 font-mono text-purple-600">{getSizeInMB()} MB</span>
+          </div>
         </div>
-        
-        <div className="flex justify-between"></div>
-          <span className="text-gray-300">Max Size:</span>
-          <span className="text-white">{formatBytes(stats.maxSize)}</span>
+
+        <div className="pt-3 border-t border-gray-200 dark:border-gray-700">
+          <div className="flex space-x-2">
+            <button
+              onClick={clearCache}
+              className="flex-1 bg-red-600 text-white px-3 py-2 rounded text-sm hover:bg-red-700 transition-colors"
+            >
+              Clear Cache
+            </button>
+            <button
+              onClick={clearStorage}
+              className="flex-1 bg-orange-600 text-white px-3 py-2 rounded text-sm hover:bg-orange-700 transition-colors"
+            >
+              Clear Storage
+            </button>
+          </div>
         </div>
-        
-        <div className="flex justify-between"></div>
-          <span className="text-gray-300">Usage:</span>
-          <span className="text-white"></span>
-            {((stats.size / stats.maxSize) * 100).toFixed(1)}%
-          </span>
+
+        <div className="pt-2">
+          <button
+            onClick={updateStats}
+            className="w-full bg-blue-600 text-white px-3 py-2 rounded text-sm hover:bg-blue-700 transition-colors"
+          >
+            Refresh Stats
+          </button>
         </div>
-        
-        <div className="flex justify-between"></div>
-          <span className="text-gray-300">Cache Hits:</span>
-          <span className="text-green-400">{stats.hits}</span>
-        </div>
-        
-        <div className="flex justify-between"></div>
-          <span className="text-gray-300">Cache Misses:</span>
-          <span className="text-red-400">{stats.misses}</span>
-        </div>
-      </div>
-      
-      <div className="mt-4 pt-3 border-t border-white/20"></div>
-        <button
-          onClick={clearCache};
-          className="w-full px-3 py-2 bg-red-600 hover:bg-red-700 text-white text-xs rounded transition-colors"
-        ></button
->
-          Clear Cache
-        </button>
-      </div>
-      
-      <div className="mt-3 pt-3 border-t border-white/20 text-xs text-gray-400"></div>
-        Press Ctrl+Shift+C to toggle
       </div>
     </div>
-  )
+  );
 };
-export default CacheManager
+
+export default CacheManager;
