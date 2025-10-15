@@ -1,62 +1,111 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import { resolve } from "path";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+<<<<<<< HEAD
 
-// https://vitejs.dev/config/
+const resolve = path.resolve;
+=======
+>>>>>>> main
+
 export default defineConfig({
   plugins: [
     react({
-      // Enable JSX runtime
-      jsxRuntime: "automatic",
-    }),
+      // Enable React Fast Refresh
+<<<<<<< HEAD
+      fastRefresh: true
+=======
+      fastRefresh: true,
+      // Optimize JSX runtime
+      jsxRuntime: 'automatic',
+>>>>>>> main
+    })
   ],
   resolve: {
     alias: {
-      "@": resolve(__dirname, "./app"),
-      "@/components": resolve(__dirname, "./app/components"),
-      "@/utils": resolve(__dirname, "./app/utils"),
-      "@/hooks": resolve(__dirname, "./hooks"),
+      '@': path.resolve(__dirname, './app'),
+<<<<<<< HEAD
+      '@/components': path.resolve(__dirname, './app/components'),
+      '@/utils': path.resolve(__dirname, './app/utils'),
+      '@/hooks': path.resolve(__dirname, './hooks'),
+=======
+      '@components': path.resolve(__dirname, './app/components'),
+      '@pages': path.resolve(__dirname, './app/pages'),
+      '@utils': path.resolve(__dirname, './utils'),
+      '@types': path.resolve(__dirname, './types'),
+>>>>>>> main
     },
   },
   build: {
-    target: "esnext",
-    minify: "terser",
+    outDir: 'dist',
+<<<<<<< HEAD
+    sourcemap: false,
+    minify: 'esbuild',
+    target: 'es2020',
+=======
     sourcemap: true,
+    minify: 'esbuild',
+    target: 'es2020',
+    cssCodeSplit: true,
+>>>>>>> main
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ["react", "react-dom"],
-          router: ["react-router-dom"],
-          ui: ["framer-motion", "lucide-react"],
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          icons: ['@heroicons/react'],
+          motion: ['framer-motion'],
+          ui: ['clsx', 'tailwind-merge'],
         },
+<<<<<<< HEAD
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
       },
     },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
+    // Optimize bundle size
+    treeshake: true,
+  },
+  server: {
+    port: 3000,
+    open: false,
+    host: true,
+  },
+  preview: {
+    port: 4173,
+=======
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
+    // Optimize chunk size
+    chunkSizeWarningLimit: 1000,
   },
   server: {
     port: 3000,
     open: true,
+    host: true,
     cors: true,
   },
   preview: {
     port: 4173,
     open: true,
+>>>>>>> main
+    host: true,
   },
+  // Optimize dependencies
   optimizeDeps: {
     include: [
-      "react",
-      "react-dom",
-      "react-router-dom",
-      "framer-motion",
-      "lucide-react",
+      'react',
+      'react-dom',
+      'react-router-dom',
+      '@heroicons/react/24/outline',
+      'framer-motion',
+      'clsx',
+      'tailwind-merge'
     ],
   },
-  define: {
-    __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
+  // CSS optimization
+  css: {
+    devSourcemap: true,
   },
 });

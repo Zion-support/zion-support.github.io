@@ -1,0 +1,21 @@
+{
+  "features": {
+    "newHomepageDesign": {
+      "enabled": false,
+      "rolloutPercentage": 0
+    },
+    "advancedAnalytics": {
+      "enabled": true,
+      "rolloutPercentage": 100
+    },
+    "experimentalFeatures": {
+      "enabled": false,
+      "rolloutPercentage": 0
+    },
+    "performanceOptimizations": {
+      "enabled": true,
+      "rolloutPercentage": 100
+    }
+  },
+  "defaultEnabled": false
+}

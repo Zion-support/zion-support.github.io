@@ -1,0 +1,22 @@
+{
+  "siteName": "Zion Tech Group",
+  "defaultTitle": "Zion Tech Group - Advanced AI and IT Solutions",
+  "titleTemplate": "%s | Zion Tech Group",
+  "defaultDescription": "Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.",
+  "siteUrl": "https://ziontechgroup.com",
+  "defaultImage": "/images/og-image.jpg",
+  "twitterHandle": "@ziontechgroup",
+  "facebookAppId": "",
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-600-9898",
+      "contactType": "Customer Service"
+    }
+  }
+}
