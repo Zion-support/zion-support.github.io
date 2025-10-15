@@ -80,8 +80,40 @@ class ErrorHandler {
     
     // Send to external logging service in production
     if (process.env.NODE_ENV === 'production') {
-      // Example: Send to external service like Sentry, LogRocket, etc.
-      // this.sendToExternalService(errorReport);
+      this.sendToExternalService(errorReport);
+    }
+
+    // Store in localStorage for debugging
+    this.storeErrorLocally(errorReport);
+  }
+
+  private async sendToExternalService(errorReport: ErrorReport): Promise<void> {
+    try {
+      // Send to your error monitoring service
+      await fetch('/api/error-report', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(errorReport),
+      });
+    } catch (error) {
+      // Fallback: store in localStorage if external service fails
+      console.warn('Failed to send error to external service:', error);
+      this.storeErrorLocally(errorReport);
+    }
+  }
+
+  private storeErrorLocally(errorReport: ErrorReport): void {
+    try {
+      const existingErrors = JSON.parse(localStorage.getItem('errorLogs') || '[]');
+      existingErrors.push(errorReport);
+      // Keep only the last 50 errors
+      const recentErrors = existingErrors.slice(-50);
+      localStorage.setItem('errorLogs', JSON.stringify(recentErrors));
+    } catch (error) {
+      // Ignore localStorage errors
+      console.warn('Failed to store error locally:', error);
     }
   }
 }

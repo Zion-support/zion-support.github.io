@@ -143,6 +143,117 @@ a:focus-visible {
   }
 }
 
+/* High contrast mode class */
+.high-contrast {
+  filter: contrast(1.5) brightness(1.2);
+}
+
+.high-contrast .text-gray-600 {
+  color: #000 !important;
+}
+
+.high-contrast .text-gray-500 {
+  color: #000 !important;
+}
+
+.high-contrast .border-gray-300 {
+  border-color: #000 !important;
+}
+
+.high-contrast .bg-gray-50 {
+  background-color: #fff !important;
+}
+
+.high-contrast .bg-white {
+  background-color: #fff !important;
+  border: 2px solid #000 !important;
+}
+
+/* Font size variations */
+.font-large {
+  font-size: 1.125rem;
+}
+
+.font-large h1 {
+  font-size: 2.5rem;
+}
+
+.font-large h2 {
+  font-size: 2rem;
+}
+
+.font-large h3 {
+  font-size: 1.5rem;
+}
+
+.font-extra-large {
+  font-size: 1.25rem;
+}
+
+.font-extra-large h1 {
+  font-size: 3rem;
+}
+
+.font-extra-large h2 {
+  font-size: 2.5rem;
+}
+
+.font-extra-large h3 {
+  font-size: 2rem;
+}
+
+/* Keyboard navigation styles */
+.keyboard-user *:focus {
+  outline: 3px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+.keyboard-user button:focus,
+.keyboard-user a:focus,
+.keyboard-user input:focus,
+.keyboard-user textarea:focus,
+.keyboard-user select:focus {
+  outline: 3px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Accessibility controls */
+.accessibility-controls {
+  min-width: 250px;
+}
+
+.accessibility-controls label {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.accessibility-controls input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.accessibility-controls select {
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+.accessibility-toggle {
+  transition: all 0.2s ease-in-out;
+}
+
+.accessibility-toggle:hover {
+  transform: scale(1.1);
+}
+
+.accessibility-toggle:focus {
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
+}
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   *,

@@ -1,4 +1,4 @@
-import { Suspense, useEffect, lazy } from 'react'
+import { Suspense, useEffect, lazy, memo } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -60,17 +60,18 @@ import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
-// Enhanced loading component
-const LoadingFallback = () => (
+// Enhanced loading component with better accessibility
+const LoadingFallback = memo(() => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
+    <div className="text-center" role="status" aria-live="polite">
       <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
       <p className="text-gray-600 animate-pulse">Loading...</p>
+      <span className="sr-only">Loading page content</span>
     </div>
   </div>
-)
+))
 
-export default function App() {
+const App = memo(() => {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
@@ -79,10 +80,44 @@ export default function App() {
       fontPreload.rel = 'preload'
       fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
       fontPreload.as = 'style'
+      fontPreload.crossOrigin = 'anonymous'
       document.head.appendChild(fontPreload)
+
+      // Preload critical CSS
+      const cssPreload = document.createElement('link')
+      cssPreload.rel = 'preload'
+      cssPreload.href = '/assets/index.css'
+      cssPreload.as = 'style'
+      document.head.appendChild(cssPreload)
+
+      // Preload critical JavaScript
+      const jsPreload = document.createElement('link')
+      jsPreload.rel = 'preload'
+      jsPreload.href = '/assets/vendor.js'
+      jsPreload.as = 'script'
+      document.head.appendChild(jsPreload)
     }
 
     preloadCriticalResources()
+
+    // Initialize performance monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      window.addEventListener('load', () => {
+        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        if (perfData) {
+          const loadTime = perfData.loadEventEnd - perfData.loadEventStart
+          const domContentLoaded = perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart
+          
+          // Send to analytics if available
+          if (typeof (window as any).gtag !== 'undefined') {
+            (window as any).gtag('event', 'page_load_time', {
+              event_category: 'Performance',
+              value: Math.round(loadTime)
+            })
+          }
+        }
+      })
+    }
   }, [])
 
   return (
@@ -93,7 +128,7 @@ export default function App() {
             <Navigation />
             <Sidebar />
             
-            <main className="flex-1">
+            <main className="flex-1" id="main-content" role="main">
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               
@@ -199,4 +234,8 @@ export default function App() {
       </HelmetProvider>
     </GlobalErrorBoundary>
   )
-}
+})
+
+App.displayName = 'App'
+
+export default App
