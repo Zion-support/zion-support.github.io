@@ -113,7 +113,7 @@ const Services: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {serviceCategories.map((category, index) => (
             <div key={index} className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-md border border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-400/60 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden group">
               {/* Neon glow effect */}
@@ -129,12 +129,12 @@ const Services: React.FC = () => {
                 </div>
               </div>
               
-              <div className="space-y-3 relative z-10">
+              <div className="space-y-2 relative z-10 max-h-96 overflow-y-auto">
                 {category.services.map((service, serviceIndex) => (
                   <Link
                     key={serviceIndex}
                     to={service.href}
-                    className="block p-4 bg-slate-700/40 rounded-lg hover:bg-slate-600/60 transition-all duration-300 group border border-slate-600/30 hover:border-cyan-500/60 hover:shadow-lg hover:shadow-cyan-500/10"
+                    className="block p-3 bg-slate-700/40 rounded-lg hover:bg-slate-600/60 transition-all duration-300 group border border-slate-600/30 hover:border-cyan-500/60 hover:shadow-lg hover:shadow-cyan-500/10"
                   >
                     <div className="flex items-start justify-between mb-2">
                       <div className="flex items-center space-x-3">

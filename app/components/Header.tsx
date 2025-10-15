@@ -77,7 +77,7 @@ const Header: React.FC = memo(() => {
         isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg shadow-cyan-500/10' : 'bg-transparent'
       }`}>
       {/* Top Contact Bar */}
-      <div className="bg-slate-800 text-white py-2 px-4 hidden md:block">
+      <div className="bg-slate-800 text-white py-2 px-4 hidden lg:block">
         <div className="container mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
@@ -112,7 +112,7 @@ const Header: React.FC = memo(() => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+            <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
                   {item.dropdown ? (
@@ -156,7 +156,7 @@ const Header: React.FC = memo(() => {
             </div>
 
             {/* CTA Button */}
-            <div className="hidden md:flex items-center space-x-4">
+            <div className="hidden lg:flex items-center space-x-4">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 relative overflow-hidden group"
@@ -168,7 +168,7 @@ const Header: React.FC = memo(() => {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden text-white p-2"
+              className="lg:hidden text-white p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMenuOpen}
@@ -183,46 +183,48 @@ const Header: React.FC = memo(() => {
         {isMenuOpen && (
           <div 
             id="mobile-menu"
-            className="md:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/20"
+            className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/20"
             role="navigation"
             aria-label="Mobile navigation"
           >
-            <div className="container mx-auto px-4 py-4">
-              {navigationItems.map((item) => (
-                <div key={item.name}>
-                  {item.dropdown ? (
-                    <div className="py-2">
-                      <div className="text-white font-semibold mb-2">{item.name}</div>
-                      <div className="ml-4 space-y-2">
-                        {item.dropdown.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-gray-300 hover:text-blue-400 py-1 transition-colors"
-                            onClick={() => setIsMenuOpen(false)}
-                          >
-                            {dropdownItem.name}
-                          </Link>
-                        ))}
+            <div className="container mx-auto px-4 py-6">
+              <div className="space-y-4">
+                {navigationItems.map((item) => (
+                  <div key={item.name}>
+                    {item.dropdown ? (
+                      <div className="py-2">
+                        <div className="text-white font-semibold mb-3 text-lg">{item.name}</div>
+                        <div className="ml-4 space-y-2">
+                          {item.dropdown.map((dropdownItem) => (
+                            <Link
+                              key={dropdownItem.name}
+                              to={dropdownItem.path}
+                              className="block text-gray-300 hover:text-cyan-400 py-2 px-3 rounded-lg hover:bg-slate-800/50 transition-all duration-300"
+                              onClick={() => setIsMenuOpen(false)}
+                            >
+                              {dropdownItem.name}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.path}
-                      className={`block py-2 text-white hover:text-blue-400 transition-colors ${
-                        isActive(item.path) ? 'text-blue-400 font-semibold' : ''
-                      }`}
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  )}
-                </div>
-              ))}
-              <div className="pt-4 border-t border-white/20 mt-4">
+                    ) : (
+                      <Link
+                        to={item.path}
+                        className={`block py-3 px-3 text-white hover:text-cyan-400 transition-all duration-300 rounded-lg hover:bg-slate-800/50 ${
+                          isActive(item.path) ? 'text-cyan-400 font-semibold bg-slate-800/30' : ''
+                        }`}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    )}
+                  </div>
+                ))}
+              </div>
+              <div className="pt-6 border-t border-white/20 mt-6">
                 <Link
                   to="/contact"
-                  className="block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold text-center transition-all duration-300"
+                  className="block bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-6 py-4 rounded-lg font-semibold text-center transition-all duration-300 transform hover:scale-105"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Get Started
