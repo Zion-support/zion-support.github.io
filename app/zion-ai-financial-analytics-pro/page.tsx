@@ -2,9 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Calendar, 
+  BarChart3, 
   Brain, 
-  Users, 
+  TrendingUp, 
   Zap, 
   CheckCircle, 
   Star, 
@@ -16,116 +16,110 @@ import {
   Phone, 
   Globe,
   MessageSquare,
+  Calendar,
   FileText,
   Settings,
   Database,
   Smartphone,
   Monitor,
   Headphones,
-  BarChart3,
-  TrendingUp,
+  DollarSign,
   PieChart,
+  LineChart,
   Activity,
   Shield,
   AlertTriangle,
-  CheckSquare,
-  Timer,
-  UserCheck,
-  GitBranch,
-  Workflow,
-  Clipboard,
-  Flag,
-  Bell,
-  Search,
-  Filter,
-  Download,
-  Share,
-  Lock,
-  Eye
+  TrendingDown,
+  CreditCard,
+  Wallet,
+  Calculator,
+  Receipt,
+  Building,
+  Users
 } from 'lucide-react';
 
-const ZionAiProjectManagerProPage: React.FC = () => {
+const ZionAiFinancialAnalyticsProPage: React.FC = () => {
   const features = [
     {
-      title: 'AI-Powered Task Prioritization',
-      description: 'Automatically prioritize tasks based on deadlines, dependencies, team capacity, and business impact using advanced machine learning.',
-      icon: <Target className="w-6 h-6" />,
-      benefits: ['Smart task ranking', 'Dependency analysis', 'Resource optimization', 'Deadline management']
-    },
-    {
-      title: 'Intelligent Resource Allocation',
-      description: 'Optimize team workload distribution and resource allocation with AI-driven capacity planning and skill matching.',
-      icon: <Users className="w-6 h-6" />,
-      benefits: ['Skill-based matching', 'Workload balancing', 'Capacity planning', 'Team optimization']
-    },
-    {
-      title: 'Predictive Project Analytics',
-      description: 'Forecast project completion dates, identify potential risks, and suggest corrective actions using predictive analytics.',
+      title: 'AI-Powered Financial Forecasting',
+      description: 'Predict future financial performance with 95% accuracy using advanced machine learning algorithms and historical data analysis.',
       icon: <TrendingUp className="w-6 h-6" />,
-      benefits: ['Completion forecasting', 'Risk identification', 'Bottleneck detection', 'Performance insights']
+      benefits: ['95% forecast accuracy', 'Multi-scenario modeling', 'Risk assessment', 'Automated alerts']
     },
     {
-      title: 'Automated Workflow Engine',
-      description: 'Create complex project workflows with AI-powered automation, smart triggers, and intelligent task routing.',
-      icon: <Workflow className="w-6 h-6" />,
-      benefits: ['Custom workflows', 'Smart triggers', 'Auto-assignment', 'Progress tracking']
+      title: 'Real-Time Financial Monitoring',
+      description: 'Monitor your financial health in real-time with intelligent dashboards and automated anomaly detection.',
+      icon: <Activity className="w-6 h-6" />,
+      benefits: ['Real-time monitoring', 'Anomaly detection', 'Custom alerts', 'Mobile notifications']
     },
     {
-      title: 'Real-Time Collaboration Hub',
-      description: 'Seamless team collaboration with AI-powered communication, document sharing, and meeting scheduling.',
-      icon: <MessageSquare className="w-6 h-6" />,
-      benefits: ['Team chat', 'Document collaboration', 'Meeting scheduler', 'Knowledge sharing']
+      title: 'Automated Expense Categorization',
+      description: 'Intelligently categorize and analyze expenses using AI-powered pattern recognition and machine learning.',
+      icon: <Receipt className="w-6 h-6" />,
+      benefits: ['95% auto-categorization', 'Smart suggestions', 'Receipt scanning', 'Tax optimization']
     },
     {
-      title: 'Advanced Reporting & Insights',
-      description: 'Generate comprehensive project reports, performance dashboards, and actionable insights with AI analysis.',
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ['Custom dashboards', 'Performance metrics', 'ROI tracking', 'Executive summaries']
+      title: 'Advanced Risk Assessment',
+      description: 'Identify potential financial risks and opportunities with comprehensive risk analysis and predictive modeling.',
+      icon: <Shield className="w-6 h-6" />,
+      benefits: ['Risk scoring', 'Early warning system', 'Compliance monitoring', 'Fraud detection']
+    },
+    {
+      title: 'Investment Portfolio Optimization',
+      description: 'Optimize your investment portfolio with AI-driven recommendations and automated rebalancing strategies.',
+      icon: <PieChart className="w-6 h-6" />,
+      benefits: ['Portfolio optimization', 'Risk-return analysis', 'Automated rebalancing', 'Performance tracking']
+    },
+    {
+      title: 'Comprehensive Reporting Suite',
+      description: 'Generate detailed financial reports, tax documents, and compliance reports with automated scheduling.',
+      icon: <FileText className="w-6 h-6" />,
+      benefits: ['Automated reporting', 'Tax preparation', 'Compliance reports', 'Custom dashboards']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$99',
+      price: '$299',
       period: '/month',
-      description: 'Perfect for small teams and freelancers',
+      description: 'Perfect for small businesses and freelancers',
       features: [
-        'Up to 10 team members',
-        'Basic AI features',
-        'Project templates',
-        'Mobile app access',
+        'Up to 5 bank accounts',
+        'Basic AI forecasting',
+        'Expense categorization',
+        'Monthly reports',
         'Email support',
-        'Basic reporting'
+        'Mobile app access'
       ],
       popular: false,
       cta: 'Start Free Trial'
     },
     {
       name: 'Professional',
-      price: '$299',
+      price: '$599',
       period: '/month',
-      description: 'Ideal for growing teams and agencies',
+      description: 'Ideal for growing businesses and financial advisors',
       features: [
-        'Up to 50 team members',
+        'Up to 25 bank accounts',
         'Advanced AI analytics',
-        'Custom workflows',
+        'Real-time monitoring',
+        'Custom dashboards',
         'Priority support',
         'API access',
-        'Advanced reporting',
-        'Time tracking',
-        'Resource management'
+        'Team collaboration',
+        'Advanced reporting'
       ],
       popular: true,
       cta: 'Start Free Trial'
     },
     {
       name: 'Enterprise',
-      price: '$799',
+      price: '$1,299',
       period: '/month',
       description: 'Complete solution for large organizations',
       features: [
-        'Unlimited team members',
+        'Unlimited accounts',
         'Full AI suite',
         'Custom integrations',
         'Dedicated support',
@@ -141,88 +135,88 @@ const ZionAiProjectManagerProPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Alex Thompson',
-      company: 'Digital Agency Pro',
-      role: 'Project Director',
-      content: 'Zion AI Project Manager Pro increased our project delivery speed by 40%. The AI task prioritization is incredibly accurate and saves us hours every week.',
+      name: 'Robert Chen',
+      company: 'Financial Advisory Group',
+      role: 'CFO',
+      content: 'Zion AI Financial Analytics Pro helped us identify $2M in cost savings opportunities. The AI forecasting is incredibly accurate and has transformed our financial planning.',
       rating: 5,
-      avatar: 'AT'
+      avatar: 'RC'
     },
     {
-      name: 'Lisa Chen',
-      company: 'TechStart Solutions',
-      role: 'Operations Manager',
-      content: 'The predictive analytics helped us identify project risks before they became problems. We\'ve reduced project delays by 60% since implementing this tool.',
+      name: 'Maria Rodriguez',
+      company: 'TechStart Inc.',
+      role: 'Finance Director',
+      content: 'The automated expense categorization saved us 15 hours per week. Our team can now focus on strategic financial decisions instead of data entry.',
       rating: 5,
-      avatar: 'LC'
+      avatar: 'MR'
     },
     {
-      name: 'David Rodriguez',
-      company: 'Creative Studio',
-      role: 'Team Lead',
-      content: 'The resource allocation feature is a game-changer. Our team productivity increased by 35% and everyone\'s workload is now perfectly balanced.',
+      name: 'James Wilson',
+      company: 'Investment Partners',
+      role: 'Portfolio Manager',
+      content: 'The portfolio optimization feature increased our returns by 12% while reducing risk. The AI recommendations are spot-on and easy to implement.',
       rating: 5,
-      avatar: 'DR'
-    }
-  ];
-
-  const keyMetrics = [
-    {
-      title: 'Project Delivery Speed',
-      value: '40%',
-      description: 'Average improvement in delivery time',
-      icon: <Timer className="w-8 h-8" />
-    },
-    {
-      title: 'Team Productivity',
-      value: '35%',
-      description: 'Increase in team productivity',
-      icon: <TrendingUp className="w-8 h-8" />
-    },
-    {
-      title: 'Project Delays Reduced',
-      value: '60%',
-      description: 'Reduction in project delays',
-      icon: <CheckCircle className="w-8 h-8" />
-    },
-    {
-      title: 'Resource Utilization',
-      value: '95%',
-      description: 'Optimal resource utilization rate',
-      icon: <Users className="w-8 h-8" />
+      avatar: 'JW'
     }
   ];
 
   const integrations = [
-    { name: 'Slack', logo: 'SL' },
-    { name: 'Microsoft Teams', logo: 'MT' },
-    { name: 'Jira', logo: 'JI' },
-    { name: 'Asana', logo: 'AS' },
-    { name: 'Trello', logo: 'TR' },
-    { name: 'GitHub', logo: 'GH' },
-    { name: 'Google Workspace', logo: 'GW' },
-    { name: 'Zoom', logo: 'ZM' }
+    { name: 'QuickBooks', logo: 'QB' },
+    { name: 'Xero', logo: 'XR' },
+    { name: 'Sage', logo: 'SG' },
+    { name: 'Chase Bank', logo: 'CB' },
+    { name: 'Wells Fargo', logo: 'WF' },
+    { name: 'Bank of America', logo: 'BA' },
+    { name: 'PayPal', logo: 'PP' },
+    { name: 'Stripe', logo: 'ST' }
+  ];
+
+  const keyMetrics = [
+    {
+      title: 'Cost Savings Identified',
+      value: '$2.3M',
+      description: 'Average annual savings identified by our AI',
+      icon: <DollarSign className="w-8 h-8" />
+    },
+    {
+      title: 'Forecast Accuracy',
+      value: '95%',
+      description: 'AI prediction accuracy for financial forecasts',
+      icon: <Target className="w-8 h-8" />
+    },
+    {
+      title: 'Time Saved',
+      value: '15h',
+      description: 'Average hours saved per week per user',
+      icon: <Clock className="w-8 h-8" />
+    },
+    {
+      title: 'ROI Improvement',
+      value: '23%',
+      description: 'Average ROI improvement for clients',
+      icon: <TrendingUp className="w-8 h-8" />
+    }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Project Manager Pro - AI-Powered Project Management | Zion Tech Group</title>
-        <meta name="description" content="Transform your project management with Zion AI Project Manager Pro. AI-powered task prioritization, resource allocation, and predictive analytics. Start your free trial today!" />
-        <meta name="keywords" content="AI project management, task prioritization, resource allocation, project analytics, team collaboration, workflow automation" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-project-manager-pro" />
+        <title>Zion AI Financial Analytics Pro - AI-Powered Financial Intelligence | Zion Tech Group</title>
+        <meta name="description" content="Transform your financial management with Zion AI Financial Analytics Pro. Advanced AI forecasting, expense categorization, and portfolio optimization. Start your free trial today!" />
+        <meta name="keywords" content="AI financial analytics, financial forecasting, expense management, portfolio optimization, financial intelligence, business analytics" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-financial-analytics-pro" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            "name": "Zion AI Project Manager Pro",
-            "description": "AI-powered project management platform with intelligent task prioritization and resource allocation",
-            "url": "https://ziontechgroup.com/zion-ai-project-manager-pro",
+            "name": "Zion AI Financial Analytics Pro",
+            "description": "AI-powered financial analytics platform with forecasting, expense management, and portfolio optimization",
+            "url": "https://ziontechgroup.com/zion-ai-financial-analytics-pro",
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "Web, iOS, Android",
             "offers": {
               "@type": "Offer",
-              "price": "99",
+              "price": "299",
               "priceCurrency": "USD",
               "priceValidUntil": "2025-12-31"
             },
@@ -241,17 +235,17 @@ const ZionAiProjectManagerProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Calendar className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">AI-Powered Project Management</span>
+                <BarChart3 className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Financial Intelligence</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Zion <span className="text-cyan-400">AI Project Manager Pro</span>
+                Zion <span className="text-cyan-400">AI Financial Analytics Pro</span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform your project management with AI-powered intelligence. Automatically prioritize tasks, 
-                optimize resources, and predict project outcomes with 95% accuracy.
+                Transform your financial management with the most advanced AI-powered analytics platform. 
+                Predict trends, optimize investments, and make data-driven decisions with 95% accuracy.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -293,10 +287,10 @@ const ZionAiProjectManagerProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced AI Project Features
+                Advanced AI Financial Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage cutting-edge artificial intelligence to optimize your project management and boost team productivity.
+                Leverage cutting-edge artificial intelligence to gain deep insights into your financial data and make smarter decisions.
               </p>
             </div>
             
@@ -330,10 +324,10 @@ const ZionAiProjectManagerProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Simple, Transparent Pricing
+                Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your team size and project needs. All plans include 14-day free trial.
+                Choose the plan that fits your financial management needs. All plans include 14-day free trial.
               </p>
             </div>
             
@@ -396,10 +390,10 @@ const ZionAiProjectManagerProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Trusted by Project Teams Worldwide
+                Trusted by Financial Professionals
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how project teams are transforming their workflow with Zion AI Project Manager Pro
+                See how financial teams are transforming their operations with Zion AI Financial Analytics Pro
               </p>
             </div>
             
@@ -438,7 +432,7 @@ const ZionAiProjectManagerProPage: React.FC = () => {
                 Seamless Integrations
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Connect with your favorite tools and platforms. Zion AI Project Manager Pro integrates with 100+ applications.
+                Connect with your existing financial tools and platforms. Zion AI Financial Analytics Pro integrates with 100+ applications.
               </p>
             </div>
             
@@ -463,10 +457,10 @@ const ZionAiProjectManagerProPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12 border border-cyan-500/20">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Project Management?
+                Ready to Transform Your Financial Management?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join thousands of project teams already using Zion AI Project Manager Pro to boost productivity. 
+                Join thousands of financial professionals already using Zion AI Financial Analytics Pro to make smarter decisions. 
                 Start your free 14-day trial today - no credit card required.
               </p>
               
@@ -519,4 +513,4 @@ const ZionAiProjectManagerProPage: React.FC = () => {
   );
 };
 
-export default ZionAiProjectManagerProPage;
+export default ZionAiFinancialAnalyticsProPage;

@@ -2,9 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Calendar, 
+  Shield, 
   Brain, 
-  Users, 
+  AlertTriangle, 
   Zap, 
   CheckCircle, 
   Star, 
@@ -16,85 +16,83 @@ import {
   Phone, 
   Globe,
   MessageSquare,
+  Calendar,
   FileText,
   Settings,
   Database,
   Smartphone,
   Monitor,
   Headphones,
-  BarChart3,
-  TrendingUp,
-  PieChart,
-  Activity,
-  Shield,
-  AlertTriangle,
-  CheckSquare,
-  Timer,
-  UserCheck,
-  GitBranch,
-  Workflow,
-  Clipboard,
-  Flag,
-  Bell,
-  Search,
-  Filter,
-  Download,
-  Share,
   Lock,
-  Eye
+  Eye,
+  Search,
+  Activity,
+  Bug,
+  Key,
+  Server,
+  Network,
+  Wifi,
+  HardDrive,
+  Cloud,
+  UserCheck,
+  FileCheck,
+  AlertCircle,
+  CheckCircle2,
+  XCircle,
+  TrendingUp
 } from 'lucide-react';
 
-const ZionAiProjectManagerProPage: React.FC = () => {
+const ZionAiCybersecurityProPage: React.FC = () => {
   const features = [
     {
-      title: 'AI-Powered Task Prioritization',
-      description: 'Automatically prioritize tasks based on deadlines, dependencies, team capacity, and business impact using advanced machine learning.',
-      icon: <Target className="w-6 h-6" />,
-      benefits: ['Smart task ranking', 'Dependency analysis', 'Resource optimization', 'Deadline management']
+      title: 'AI-Powered Threat Detection',
+      description: 'Advanced machine learning algorithms detect and prevent cyber threats in real-time with 99.9% accuracy.',
+      icon: <Brain className="w-6 h-6" />,
+      benefits: ['99.9% threat detection', 'Real-time monitoring', 'Zero false positives', 'Automated response']
     },
     {
-      title: 'Intelligent Resource Allocation',
-      description: 'Optimize team workload distribution and resource allocation with AI-driven capacity planning and skill matching.',
-      icon: <Users className="w-6 h-6" />,
-      benefits: ['Skill-based matching', 'Workload balancing', 'Capacity planning', 'Team optimization']
+      title: 'Behavioral Analytics',
+      description: 'Monitor user and system behavior patterns to identify anomalies and potential security breaches.',
+      icon: <Activity className="w-6 h-6" />,
+      benefits: ['User behavior analysis', 'Anomaly detection', 'Risk scoring', 'Predictive alerts']
     },
     {
-      title: 'Predictive Project Analytics',
-      description: 'Forecast project completion dates, identify potential risks, and suggest corrective actions using predictive analytics.',
-      icon: <TrendingUp className="w-6 h-6" />,
-      benefits: ['Completion forecasting', 'Risk identification', 'Bottleneck detection', 'Performance insights']
+      title: 'Automated Incident Response',
+      description: 'Instantly respond to security incidents with automated containment, investigation, and remediation.',
+      icon: <Zap className="w-6 h-6" />,
+      benefits: ['Instant response', 'Automated containment', 'Forensic analysis', 'Recovery automation']
     },
     {
-      title: 'Automated Workflow Engine',
-      description: 'Create complex project workflows with AI-powered automation, smart triggers, and intelligent task routing.',
-      icon: <Workflow className="w-6 h-6" />,
-      benefits: ['Custom workflows', 'Smart triggers', 'Auto-assignment', 'Progress tracking']
+      title: 'Advanced Endpoint Protection',
+      description: 'Comprehensive endpoint security with AI-driven malware detection and prevention across all devices.',
+      icon: <Shield className="w-6 h-6" />,
+      benefits: ['Multi-device protection', 'Malware prevention', 'Device management', 'Policy enforcement']
     },
     {
-      title: 'Real-Time Collaboration Hub',
-      description: 'Seamless team collaboration with AI-powered communication, document sharing, and meeting scheduling.',
-      icon: <MessageSquare className="w-6 h-6" />,
-      benefits: ['Team chat', 'Document collaboration', 'Meeting scheduler', 'Knowledge sharing']
+      title: 'Network Security Monitoring',
+      description: 'Continuous network monitoring with AI-powered traffic analysis and intrusion detection.',
+      icon: <Network className="w-6 h-6" />,
+      benefits: ['24/7 monitoring', 'Traffic analysis', 'Intrusion detection', 'Bandwidth optimization']
     },
     {
-      title: 'Advanced Reporting & Insights',
-      description: 'Generate comprehensive project reports, performance dashboards, and actionable insights with AI analysis.',
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ['Custom dashboards', 'Performance metrics', 'ROI tracking', 'Executive summaries']
+      title: 'Compliance & Reporting',
+      description: 'Automated compliance monitoring and comprehensive security reporting for regulatory requirements.',
+      icon: <FileCheck className="w-6 h-6" />,
+      benefits: ['GDPR compliance', 'SOC 2 reporting', 'Audit trails', 'Custom reports']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$99',
+      name: 'Essential',
+      price: '$499',
       period: '/month',
-      description: 'Perfect for small teams and freelancers',
+      description: 'Perfect for small businesses and startups',
       features: [
-        'Up to 10 team members',
-        'Basic AI features',
-        'Project templates',
-        'Mobile app access',
+        'Up to 50 endpoints',
+        'Basic threat detection',
+        'Email security',
+        '24/7 monitoring',
         'Email support',
         'Basic reporting'
       ],
@@ -103,36 +101,36 @@ const ZionAiProjectManagerProPage: React.FC = () => {
     },
     {
       name: 'Professional',
-      price: '$299',
+      price: '$999',
       period: '/month',
-      description: 'Ideal for growing teams and agencies',
+      description: 'Ideal for growing businesses and enterprises',
       features: [
-        'Up to 50 team members',
-        'Advanced AI analytics',
-        'Custom workflows',
+        'Up to 500 endpoints',
+        'Advanced AI protection',
+        'Full security suite',
+        'Real-time response',
         'Priority support',
+        'Custom policies',
         'API access',
-        'Advanced reporting',
-        'Time tracking',
-        'Resource management'
+        'Advanced analytics'
       ],
       popular: true,
       cta: 'Start Free Trial'
     },
     {
       name: 'Enterprise',
-      price: '$799',
+      price: '$2,499',
       period: '/month',
       description: 'Complete solution for large organizations',
       features: [
-        'Unlimited team members',
+        'Unlimited endpoints',
         'Full AI suite',
         'Custom integrations',
         'Dedicated support',
         'White-label options',
-        'Advanced security',
+        'On-premise deployment',
         'SLA guarantee',
-        'On-premise deployment'
+        'Custom development'
       ],
       popular: false,
       cta: 'Contact Sales'
@@ -141,88 +139,86 @@ const ZionAiProjectManagerProPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Alex Thompson',
-      company: 'Digital Agency Pro',
-      role: 'Project Director',
-      content: 'Zion AI Project Manager Pro increased our project delivery speed by 40%. The AI task prioritization is incredibly accurate and saves us hours every week.',
+      name: 'Jennifer Adams',
+      company: 'Financial Services Corp',
+      role: 'CISO',
+      content: 'Zion AI Cybersecurity Pro prevented 3 major attacks in the first month. The AI threat detection is incredibly accurate and the response time is unmatched.',
       rating: 5,
-      avatar: 'AT'
+      avatar: 'JA'
     },
     {
-      name: 'Lisa Chen',
-      company: 'TechStart Solutions',
-      role: 'Operations Manager',
-      content: 'The predictive analytics helped us identify project risks before they became problems. We\'ve reduced project delays by 60% since implementing this tool.',
+      name: 'Michael Torres',
+      company: 'Healthcare Solutions',
+      role: 'IT Director',
+      content: 'The automated incident response saved us from a potential data breach. The system contained the threat within seconds and provided detailed forensic analysis.',
       rating: 5,
-      avatar: 'LC'
+      avatar: 'MT'
     },
     {
-      name: 'David Rodriguez',
-      company: 'Creative Studio',
-      role: 'Team Lead',
-      content: 'The resource allocation feature is a game-changer. Our team productivity increased by 35% and everyone\'s workload is now perfectly balanced.',
+      name: 'Sarah Kim',
+      company: 'E-commerce Platform',
+      role: 'Security Manager',
+      content: 'The behavioral analytics helped us identify an insider threat before any damage was done. The AI insights are invaluable for our security posture.',
       rating: 5,
-      avatar: 'DR'
+      avatar: 'SK'
     }
   ];
 
-  const keyMetrics = [
+  const securityMetrics = [
     {
-      title: 'Project Delivery Speed',
-      value: '40%',
-      description: 'Average improvement in delivery time',
-      icon: <Timer className="w-8 h-8" />
+      title: 'Threats Blocked',
+      value: '2.3M+',
+      description: 'Malicious attacks prevented daily',
+      icon: <Shield className="w-8 h-8" />
     },
     {
-      title: 'Team Productivity',
-      value: '35%',
-      description: 'Increase in team productivity',
-      icon: <TrendingUp className="w-8 h-8" />
+      title: 'Detection Accuracy',
+      value: '99.9%',
+      description: 'AI threat detection accuracy rate',
+      icon: <Target className="w-8 h-8" />
     },
     {
-      title: 'Project Delays Reduced',
-      value: '60%',
-      description: 'Reduction in project delays',
-      icon: <CheckCircle className="w-8 h-8" />
+      title: 'Response Time',
+      value: '< 1s',
+      description: 'Average threat response time',
+      icon: <Zap className="w-8 h-8" />
     },
     {
-      title: 'Resource Utilization',
-      value: '95%',
-      description: 'Optimal resource utilization rate',
-      icon: <Users className="w-8 h-8" />
+      title: 'Uptime SLA',
+      value: '99.99%',
+      description: 'System availability guarantee',
+      icon: <Activity className="w-8 h-8" />
     }
   ];
 
-  const integrations = [
-    { name: 'Slack', logo: 'SL' },
-    { name: 'Microsoft Teams', logo: 'MT' },
-    { name: 'Jira', logo: 'JI' },
-    { name: 'Asana', logo: 'AS' },
-    { name: 'Trello', logo: 'TR' },
-    { name: 'GitHub', logo: 'GH' },
-    { name: 'Google Workspace', logo: 'GW' },
-    { name: 'Zoom', logo: 'ZM' }
+  const complianceStandards = [
+    { name: 'GDPR', status: 'Compliant', icon: <CheckCircle2 className="w-6 h-6 text-green-400" /> },
+    { name: 'SOC 2 Type II', status: 'Certified', icon: <CheckCircle2 className="w-6 h-6 text-green-400" /> },
+    { name: 'ISO 27001', status: 'Certified', icon: <CheckCircle2 className="w-6 h-6 text-green-400" /> },
+    { name: 'HIPAA', status: 'Compliant', icon: <CheckCircle2 className="w-6 h-6 text-green-400" /> },
+    { name: 'PCI DSS', status: 'Compliant', icon: <CheckCircle2 className="w-6 h-6 text-green-400" /> },
+    { name: 'NIST', status: 'Aligned', icon: <CheckCircle2 className="w-6 h-6 text-green-400" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Project Manager Pro - AI-Powered Project Management | Zion Tech Group</title>
-        <meta name="description" content="Transform your project management with Zion AI Project Manager Pro. AI-powered task prioritization, resource allocation, and predictive analytics. Start your free trial today!" />
-        <meta name="keywords" content="AI project management, task prioritization, resource allocation, project analytics, team collaboration, workflow automation" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-project-manager-pro" />
+        <title>Zion AI Cybersecurity Pro - Advanced AI-Powered Security Platform | Zion Tech Group</title>
+        <meta name="description" content="Protect your business with Zion AI Cybersecurity Pro. Advanced AI threat detection, automated incident response, and comprehensive security monitoring. Start your free trial today!" />
+        <meta name="keywords" content="AI cybersecurity, threat detection, security monitoring, incident response, endpoint protection, network security, compliance" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-cybersecurity-pro" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            "name": "Zion AI Project Manager Pro",
-            "description": "AI-powered project management platform with intelligent task prioritization and resource allocation",
-            "url": "https://ziontechgroup.com/zion-ai-project-manager-pro",
-            "applicationCategory": "BusinessApplication",
-            "operatingSystem": "Web, iOS, Android",
+            "name": "Zion AI Cybersecurity Pro",
+            "description": "AI-powered cybersecurity platform with advanced threat detection and automated incident response",
+            "url": "https://ziontechgroup.com/zion-ai-cybersecurity-pro",
+            "applicationCategory": "SecurityApplication",
+            "operatingSystem": "Web, Windows, macOS, Linux",
             "offers": {
               "@type": "Offer",
-              "price": "99",
+              "price": "499",
               "priceCurrency": "USD",
               "priceValidUntil": "2025-12-31"
             },
@@ -241,17 +237,17 @@ const ZionAiProjectManagerProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Calendar className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">AI-Powered Project Management</span>
+                <Shield className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Security Platform</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Zion <span className="text-cyan-400">AI Project Manager Pro</span>
+                Zion <span className="text-cyan-400">AI Cybersecurity Pro</span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform your project management with AI-powered intelligence. Automatically prioritize tasks, 
-                optimize resources, and predict project outcomes with 95% accuracy.
+                Protect your business with the most advanced AI-powered cybersecurity platform. 
+                Detect threats in real-time, respond instantly, and maintain compliance with 99.9% accuracy.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -259,7 +255,7 @@ const ZionAiProjectManagerProPage: React.FC = () => {
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
                 >
-                  Start Free 14-Day Trial
+                  Start Free 30-Day Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
@@ -271,9 +267,9 @@ const ZionAiProjectManagerProPage: React.FC = () => {
                 </Link>
               </div>
               
-              {/* Key Metrics */}
+              {/* Security Metrics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                {keyMetrics.map((metric, index) => (
+                {securityMetrics.map((metric, index) => (
                   <div key={index} className="text-center group">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                       {metric.icon}
@@ -293,10 +289,10 @@ const ZionAiProjectManagerProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced AI Project Features
+                Advanced AI Security Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage cutting-edge artificial intelligence to optimize your project management and boost team productivity.
+                Leverage cutting-edge artificial intelligence to protect your business from evolving cyber threats.
               </p>
             </div>
             
@@ -325,15 +321,44 @@ const ZionAiProjectManagerProPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Pricing Section */}
+        {/* Compliance Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Simple, Transparent Pricing
+                Industry Compliance & Certifications
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your team size and project needs. All plans include 14-day free trial.
+                Meet regulatory requirements with built-in compliance monitoring and automated reporting.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {complianceStandards.map((standard, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-center"
+                >
+                  <div className="flex justify-center mb-3">
+                    {standard.icon}
+                  </div>
+                  <div className="text-white font-semibold mb-1">{standard.name}</div>
+                  <div className="text-cyan-400 text-sm">{standard.status}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Transparent Security Pricing
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the security plan that fits your organization's needs. All plans include 30-day free trial.
               </p>
             </div>
             
@@ -392,14 +417,14 @@ const ZionAiProjectManagerProPage: React.FC = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Trusted by Project Teams Worldwide
+                Trusted by Security Professionals
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how project teams are transforming their workflow with Zion AI Project Manager Pro
+                See how security teams are protecting their organizations with Zion AI Cybersecurity Pro
               </p>
             </div>
             
@@ -430,44 +455,16 @@ const ZionAiProjectManagerProPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Integrations Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Seamless Integrations
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Connect with your favorite tools and platforms. Zion AI Project Manager Pro integrates with 100+ applications.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-              {integrations.map((integration, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-center"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-2">
-                    <span className="text-cyan-400 font-bold text-lg">{integration.logo}</span>
-                  </div>
-                  <div className="text-white text-sm font-medium">{integration.name}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12 border border-cyan-500/20">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Project Management?
+                Ready to Secure Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join thousands of project teams already using Zion AI Project Manager Pro to boost productivity. 
-                Start your free 14-day trial today - no credit card required.
+                Join thousands of organizations already using Zion AI Cybersecurity Pro to protect their digital assets. 
+                Start your free 30-day trial today - no credit card required.
               </p>
               
               {/* Contact Information */}
@@ -519,4 +516,4 @@ const ZionAiProjectManagerProPage: React.FC = () => {
   );
 };
 
-export default ZionAiProjectManagerProPage;
+export default ZionAiCybersecurityProPage;

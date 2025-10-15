@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/accessibility-enhanced.css";
+import "./app/styles/responsive-enhanced.css";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
@@ -86,6 +87,10 @@ const SmartExpenseCategorizerPage = React.lazy(() => import("./app/ai-financial-
 
 // Additional Zion AI Services
 const ZionAIVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
+const ZionAIFinancialAnalyticsProPage = React.lazy(() => import("./app/zion-ai-financial-analytics-pro/page"));
+const ZionAICybersecurityProPage = React.lazy(() => import("./app/zion-ai-cybersecurity-pro/page"));
+const ZionAIMarketingAutomationProPage = React.lazy(() => import("./app/zion-ai-marketing-automation-pro/page"));
+const ZionAIProjectManagerProPage = React.lazy(() => import("./app/zion-ai-project-manager-pro/page"));
 const ZionAIInvoiceGeneratorPage = React.lazy(() => import("./app/zion-ai-invoice-generator/page"));
 const ZionAICustomerInsightsPage = React.lazy(() => import("./app/zion-ai-customer-insights/page"));
 const ZionAIVoiceAssistantProPage = React.lazy(() => import("./app/zion-ai-voice-assistant-pro/page"));
@@ -219,6 +224,10 @@ function App() {
 
                                 {/* Additional Zion AI Services */}
                                 <Route path="/zion-ai-video-generator" element={<ZionAIVideoGeneratorPage />} />
+                                <Route path="/zion-ai-financial-analytics-pro" element={<ZionAIFinancialAnalyticsProPage />} />
+                                <Route path="/zion-ai-cybersecurity-pro" element={<ZionAICybersecurityProPage />} />
+                                <Route path="/zion-ai-marketing-automation-pro" element={<ZionAIMarketingAutomationProPage />} />
+                                <Route path="/zion-ai-project-manager-pro" element={<ZionAIProjectManagerProPage />} />
                                 <Route path="/zion-ai-invoice-generator" element={<ZionAIInvoiceGeneratorPage />} />
                                 <Route path="/zion-ai-customer-insights" element={<ZionAICustomerInsightsPage />} />
                                 <Route path="/zion-ai-voice-assistant-pro" element={<ZionAIVoiceAssistantProPage />} />

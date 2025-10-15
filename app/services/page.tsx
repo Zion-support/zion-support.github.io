@@ -1,7 +1,25 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Zap, Shield, Globe, Brain, Cloud, Database, Smartphone, Lock, ArrowRight, CheckCircle } from "lucide-react"; // Service categories const serviceCategories = [ { icon: <Brain className="w-8 h-8" />, title: "AI & Machine Learning", description: "Advanced artificial intelligence solutions including deep learning, natural language processing, computer vision, and predictive analytics.", services: [ "Machine Learning Model Development", "Natural Language Processing", "Computer Vision Solutions", "Predictive Analytics", "AI Chatbots & Virtual Assistants", "Recommendation Systems" ], color: "from-blue-600 to-cyan-600" },
-  { icon: <Globe className="w-8 h-8" />,
+import { Zap, Shield, Globe, Brain, Cloud, Database, Smartphone, Lock, ArrowRight, CheckCircle } from "lucide-react";
+
+// Service categories
+const serviceCategories = [
+  {
+    icon: <Brain className="w-8 h-8" />,
+    title: "AI & Machine Learning",
+    description: "Advanced artificial intelligence solutions including deep learning, natural language processing, computer vision, and predictive analytics.",
+    services: [
+      "Machine Learning Model Development",
+      "Natural Language Processing",
+      "Computer Vision Solutions",
+      "Predictive Analytics",
+      "AI Chatbots & Virtual Assistants",
+      "Recommendation Systems"
+    ],
+    color: "from-blue-600 to-cyan-600"
+  },
+  {
+    icon: <Globe className="w-8 h-8" />,
     title: "5G Technology",
     description: "Next-generation 5G implementation, optimization, and IoT solutions for ultra-fast connectivity and smart infrastructure.",
     services: [

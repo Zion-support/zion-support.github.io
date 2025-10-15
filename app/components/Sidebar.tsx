@@ -61,12 +61,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     {
       name: 'Micro SAAS',
       items: [
-        { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: BarChart3 },
-        { name: 'Zion Security Shield', href: '/zion-security-shield', icon: Shield },
         { name: 'Zion AI CRM Pro', href: '/zion-ai-crm-pro', icon: Users },
-        { name: 'Project Management Pro', href: '/project-management-pro', icon: Settings },
-        { name: 'Inventory Management', href: '/inventory-management-system', icon: Package },
-        { name: 'Financial Analytics Pro', href: '/ai-financial-analytics-pro', icon: BarChart3 },
+        { name: 'Zion AI Video Generator', href: '/zion-ai-video-generator', icon: Package },
+        { name: 'Zion AI Financial Analytics Pro', href: '/zion-ai-financial-analytics-pro', icon: BarChart3 },
+        { name: 'Zion AI Cybersecurity Pro', href: '/zion-ai-cybersecurity-pro', icon: Shield },
+        { name: 'Zion AI Marketing Automation Pro', href: '/zion-ai-marketing-automation-pro', icon: Zap },
+        { name: 'Zion AI Project Manager Pro', href: '/zion-ai-project-manager-pro', icon: Settings },
       ]
     },
     {

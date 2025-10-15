@@ -41,12 +41,12 @@ const Footer: React.FC = () => {
       { name: 'Web Development', href: '/web-development' },
     ],
     microSaas: [
-      { name: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
-      { name: 'Zion Security Shield', href: '/zion-security-shield' },
       { name: 'Zion AI CRM Pro', href: '/zion-ai-crm-pro' },
-      { name: 'Project Management Pro', href: '/project-management-pro' },
-      { name: 'Inventory Management', href: '/inventory-management-system' },
-      { name: 'Financial Analytics Pro', href: '/ai-financial-analytics-pro' },
+      { name: 'Zion AI Video Generator', href: '/zion-ai-video-generator' },
+      { name: 'Zion AI Financial Analytics Pro', href: '/zion-ai-financial-analytics-pro' },
+      { name: 'Zion AI Cybersecurity Pro', href: '/zion-ai-cybersecurity-pro' },
+      { name: 'Zion AI Marketing Automation Pro', href: '/zion-ai-marketing-automation-pro' },
+      { name: 'Zion AI Project Manager Pro', href: '/zion-ai-project-manager-pro' },
     ],
     company: [
       { name: 'About', href: '/about' },
