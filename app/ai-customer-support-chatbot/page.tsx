@@ -28,3 +28,4 @@ import {
 } from 'lucide-react';
 
 const AICustomerSupportChatbotPage: React.FC = () => {
+  return (

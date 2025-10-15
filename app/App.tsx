@@ -2,6 +2,7 @@
 import { Suspense, lazy } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { HelmetProvider } from "react-helmet-async"
+import { Helmet } from "react-helmet-async"
 import ErrorBoundary from "./components/ErrorBoundary"
 import PerformanceMonitor from "./components/PerformanceMonitor"
 import AccessibilityEnhancer from "./components/AccessibilityEnhancer"
@@ -38,9 +39,9 @@ const FiveGSmartCitySolutionsPage = lazy(() => import("./5g-smart-city-solutions
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
 
 // Main App Component
-function App() {}
-}return ()
-    <HelmetProvider></Helmet>
+function App() {
+  return (
+    <HelmetProvider>
       <BrowserRouter>
         <ErrorBoundary>
           <PerformanceMonitor />
@@ -49,7 +50,7 @@ function App() {}
             <CacheManager />
             <AdvancedPerformanceMonitor />
             <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
+              <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
@@ -97,11 +98,12 @@ function App() {}
               />
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
             </Routes>
-            </Suspense>
-          </AccessibilityEnhancer>
-        </ErrorBoundary>
-      </BrowserRouter>
-    </HelmetProvider>
-  )
-}
-export default App
+              </Suspense>
+            </AccessibilityEnhancer>
+          </ErrorBoundary>
+        </BrowserRouter>
+      </HelmetProvider>
+    )
+  }
+  
+  export default App

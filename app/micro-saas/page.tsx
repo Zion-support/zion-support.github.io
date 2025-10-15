@@ -2,7 +2,7 @@ import React from "react";
 import { DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Video, Calculator, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow } from "lucide-react";
 import SEOOptimizer from "../components/SEOOptimizer";
 
-export default function MicroSaas() {
+const MicroSaasPage: React.FC = () => {
   const microSaasServices = [
     {
       id: "zion-analytics-pro",
@@ -1500,19 +1500,15 @@ export default function MicroSaas() {
     }
   ];
 
-const MicroSaasPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="micro-saas - Zion Tech Group"
-        description="Zion Tech Group micro-saas service page"
+        title="Micro SaaS Solutions - Zion Tech Group"
+        description="Comprehensive micro SaaS solutions for modern businesses. From analytics to automation, we provide scalable software solutions."
+        keywords="micro saas, software solutions, business automation, analytics, productivity tools"
       />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">micro-saas</h1>
-          <p className="text-gray-300">Coming soon...</p>
-        </div>
-
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Stats Section */}
         <div className="py-16 bg-black/20 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
