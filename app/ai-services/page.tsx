@@ -88,7 +88,7 @@ const AIServicesPage: React.FC = () => {
                       <span className="text-gray-400 text-sm ml-1">/month</span>
                     </div>
                     <a 
-                      href={service.link} 
+                      href={service.contactInfo.website} 
                       className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold"
                     >
                       Learn More →
