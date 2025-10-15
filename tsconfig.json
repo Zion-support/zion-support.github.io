@@ -33,6 +33,7 @@
     "backup/**",
     "backup-problematic/**",
     "corrupted-src-backup/**",
+    "src/**",
     "scripts/**",
     "**/*.cjs",
     "**/*.js"

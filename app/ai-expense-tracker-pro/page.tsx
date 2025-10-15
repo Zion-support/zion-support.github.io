@@ -1,0 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function AiExpenseTrackerProPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Ai Expense Tracker Pro - Zion Tech Group</title>
+        <meta name="description" content="Professional ai expense tracker pro solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Ai Expense Tracker Pro</h1>
+          <p className="text-lg text-gray-600">
+            Professional ai expense tracker pro solutions for modern businesses.
+          </p>
+        </div>
+      </div>
+    </>
+  );
+}
