@@ -291,12 +291,89 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  :root {
+    --space-md: 0.875rem;
+    --space-lg: 1.25rem;
+    --space-xl: 1.75rem;
+    --space-2xl: 2.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   :root {
     --space-md: 0.75rem;
     --space-lg: 1rem;
     --space-xl: 1.5rem;
     --space-2xl: 2rem;
+  }
+  
+  .gradient-text {
+    font-size: clamp(2rem, 8vw, 4rem);
+  }
+  
+  .neon-text {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --space-md: 0.5rem;
+    --space-lg: 0.75rem;
+    --space-xl: 1rem;
+    --space-2xl: 1.5rem;
+  }
+  
+  .gradient-text {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+  
+  .neon-text {
+    font-size: clamp(1.25rem, 5vw, 2rem);
+  }
+}
+
+/* Mobile Navigation Improvements */
+@media (max-width: 768px) {
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    overflow-y: auto;
+  }
+  
+  .mobile-nav-content {
+    padding: 2rem 1rem;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+}
+
+/* Tablet Responsive */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tablet-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .tablet-text {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+  }
+}
+
+/* Large Screen Optimizations */
+@media (min-width: 1440px) {
+  .container-xl {
+    max-width: 1400px;
+  }
+  
+  .text-xl-responsive {
+    font-size: clamp(1.125rem, 1.5vw, 1.5rem);
   }
 }
 

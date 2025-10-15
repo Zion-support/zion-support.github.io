@@ -62,59 +62,59 @@ const HomePage: React.FC = () => {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
           <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 gradient-text neon-text">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 gradient-text neon-text">
               Welcome to Zion Tech Group
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 md:mb-12 max-w-4xl mx-auto leading-relaxed px-4">
               We provide cutting-edge AI and IT solutions to help your business thrive in the digital age. 
               Transform your operations with our innovative technology and expert services.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-              <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-4 rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 font-semibold">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 md:mb-16 px-4">
+              <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 font-semibold text-sm sm:text-base">
                 Get Started
               </a>
-              <a href="/about" className="border-2 border-cyan-500 text-cyan-400 px-10 py-4 rounded-xl hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105 font-semibold">
+              <a href="/about" className="border-2 border-cyan-500 text-cyan-400 px-8 sm:px-10 py-3 sm:py-4 rounded-xl hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105 font-semibold text-sm sm:text-base">
                 Learn More
               </a>
             </div>
             
             {/* Featured Services */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
-              <div className="bg-black/40 backdrop-blur-md border border-cyan-500/20 p-8 rounded-2xl shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105 group">
-                <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">🤖</div>
-                <h3 className="text-2xl font-bold text-cyan-400 mb-4">AI Services</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-12 md:mt-20">
+              <div className="bg-black/40 backdrop-blur-md border border-cyan-500/20 p-6 md:p-8 rounded-2xl shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105 group">
+                <div className="text-3xl md:text-4xl mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">🤖</div>
+                <h3 className="text-xl md:text-2xl font-bold text-cyan-400 mb-3 md:mb-4">AI Services</h3>
+                <p className="text-gray-300 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
                   Advanced artificial intelligence solutions including machine learning, NLP, computer vision, and predictive analytics.
                 </p>
-                <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors duration-300 flex items-center">
+                <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors duration-300 flex items-center text-sm md:text-base">
                   Explore AI Services 
                   <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </a>
               </div>
-              <div className="bg-black/40 backdrop-blur-md border border-purple-500/20 p-8 rounded-2xl shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105 group">
-                <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">☁️</div>
-                <h3 className="text-2xl font-bold text-purple-400 mb-4">Cloud Infrastructure</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
+              <div className="bg-black/40 backdrop-blur-md border border-purple-500/20 p-6 md:p-8 rounded-2xl shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105 group">
+                <div className="text-3xl md:text-4xl mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">☁️</div>
+                <h3 className="text-xl md:text-2xl font-bold text-purple-400 mb-3 md:mb-4">Cloud Infrastructure</h3>
+                <p className="text-gray-300 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
                   Scalable cloud solutions that provide reliability, security, and performance for your business operations.
                 </p>
-                <a href="/cloud-infrastructure" className="text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-300 flex items-center">
+                <a href="/cloud-infrastructure" className="text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-300 flex items-center text-sm md:text-base">
                   Explore Cloud Solutions 
                   <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </a>
               </div>
-              <div className="bg-black/40 backdrop-blur-md border border-pink-500/20 p-8 rounded-2xl shadow-2xl hover:shadow-pink-500/25 transition-all duration-300 transform hover:scale-105 group">
-                <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">🚀</div>
-                <h3 className="text-2xl font-bold text-pink-400 mb-4">Digital Transformation</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
+              <div className="bg-black/40 backdrop-blur-md border border-pink-500/20 p-6 md:p-8 rounded-2xl shadow-2xl hover:shadow-pink-500/25 transition-all duration-300 transform hover:scale-105 group sm:col-span-2 lg:col-span-1">
+                <div className="text-3xl md:text-4xl mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">🚀</div>
+                <h3 className="text-xl md:text-2xl font-bold text-pink-400 mb-3 md:mb-4">Digital Transformation</h3>
+                <p className="text-gray-300 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
                   Complete digital transformation services to modernize your business processes and systems.
                 </p>
-                <a href="/digital-transformation" className="text-pink-400 hover:text-pink-300 font-semibold transition-colors duration-300 flex items-center">
+                <a href="/digital-transformation" className="text-pink-400 hover:text-pink-300 font-semibold transition-colors duration-300 flex items-center text-sm md:text-base">
                   Learn More 
                   <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

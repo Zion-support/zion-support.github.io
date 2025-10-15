@@ -8,17 +8,17 @@ const Footer: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent"></div>
       
-      <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-          <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-6 gradient-text">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+      <div className="relative max-w-7xl mx-auto py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 md:gap-8">
+          <div className="sm:col-span-2 lg:col-span-2">
+            <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 gradient-text">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology and innovative solutions.
             </p>
-            <div className="text-sm text-gray-300 mb-6 space-y-2">
+            <div className="text-xs md:text-sm text-gray-300 mb-4 md:mb-6 space-y-2">
               <p className="flex items-center">
                 <span className="text-cyan-400 mr-2">📧</span>
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors break-all">
                   kleber@ziontechgroup.com
                 </a>
               </p>
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
               </p>
               <p className="flex items-start">
                 <span className="text-cyan-400 mr-2 mt-1">📍</span>
-                <span>364 E Main St STE 1008<br />Middletown, DE 19709</span>
+                <span className="text-xs md:text-sm">364 E Main St STE 1008<br />Middletown, DE 19709</span>
               </p>
             </div>
             <div className="flex space-x-6">
@@ -56,95 +56,95 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-cyan-400">AI & ML Services</h4>
-            <ul className="space-y-3">
-              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">AI Services</Link></li>
-              <li><Link to="/ai-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">AI Solutions</Link></li>
-              <li><Link to="/ai-content-generator" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">AI Content Generator</Link></li>
-              <li><Link to="/data-analytics" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Data Analytics</Link></li>
-              <li><Link to="/zion-ai-voice-assistant" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">AI Voice Assistant</Link></li>
-              <li><Link to="/zion-ai-image-recognition" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">AI Image Recognition</Link></li>
+            <h4 className="text-base md:text-lg font-semibold mb-4 md:mb-6 text-cyan-400">AI & ML Services</h4>
+            <ul className="space-y-2 md:space-y-3">
+              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">AI Services</Link></li>
+              <li><Link to="/ai-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">AI Solutions</Link></li>
+              <li><Link to="/ai-content-generator" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">AI Content Generator</Link></li>
+              <li><Link to="/data-analytics" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Data Analytics</Link></li>
+              <li><Link to="/zion-ai-voice-assistant" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">AI Voice Assistant</Link></li>
+              <li><Link to="/zion-ai-image-recognition" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">AI Image Recognition</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-cyan-400">IT Services</h4>
-            <ul className="space-y-3">
-              <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">IT Services</Link></li>
-              <li><Link to="/web-development" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Web Development</Link></li>
-              <li><Link to="/mobile-development" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Mobile Development</Link></li>
-              <li><Link to="/database-management" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Database Management</Link></li>
-              <li><Link to="/network-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Network Infrastructure</Link></li>
-              <li><Link to="/blockchain-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Blockchain Solutions</Link></li>
-              <li><Link to="/iot-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">IoT Solutions</Link></li>
+            <h4 className="text-base md:text-lg font-semibold mb-4 md:mb-6 text-cyan-400">IT Services</h4>
+            <ul className="space-y-2 md:space-y-3">
+              <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">IT Services</Link></li>
+              <li><Link to="/web-development" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Web Development</Link></li>
+              <li><Link to="/mobile-development" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Mobile Development</Link></li>
+              <li><Link to="/database-management" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Database Management</Link></li>
+              <li><Link to="/network-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Network Infrastructure</Link></li>
+              <li><Link to="/blockchain-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Blockchain Solutions</Link></li>
+              <li><Link to="/iot-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">IoT Solutions</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-cyan-400">Infrastructure</h4>
-            <ul className="space-y-3">
-              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Cloud Infrastructure</Link></li>
-              <li><Link to="/5g-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">5G Solutions</Link></li>
-              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Digital Transformation</Link></li>
-              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Micro SaaS Solutions</Link></li>
-              <li><Link to="/devops-automation" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">DevOps & Automation</Link></li>
-              <li><Link to="/api-development" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">API Development</Link></li>
+            <h4 className="text-base md:text-lg font-semibold mb-4 md:mb-6 text-cyan-400">Infrastructure</h4>
+            <ul className="space-y-2 md:space-y-3">
+              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Cloud Infrastructure</Link></li>
+              <li><Link to="/5g-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">5G Solutions</Link></li>
+              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Digital Transformation</Link></li>
+              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Micro SaaS Solutions</Link></li>
+              <li><Link to="/devops-automation" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">DevOps & Automation</Link></li>
+              <li><Link to="/api-development" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">API Development</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-cyan-400">AI Products</h4>
-            <ul className="space-y-3">
-              <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">AI Content Moderator</Link></li>
-              <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">AI Customer Support Pro</Link></li>
-              <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">AI Workflow Automator Pro</Link></li>
-              <li><Link to="/zion-ai-email-marketing-pro" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">AI Email Marketing Pro</Link></li>
-              <li><Link to="/zion-ai-customer-churn-predictor" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Customer Churn Predictor</Link></li>
-              <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Sales Predictor</Link></li>
-              <li><Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Pricing</Link></li>
+            <h4 className="text-base md:text-lg font-semibold mb-4 md:mb-6 text-cyan-400">AI Products</h4>
+            <ul className="space-y-2 md:space-y-3">
+              <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">AI Content Moderator</Link></li>
+              <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">AI Customer Support Pro</Link></li>
+              <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">AI Workflow Automator Pro</Link></li>
+              <li><Link to="/zion-ai-email-marketing-pro" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">AI Email Marketing Pro</Link></li>
+              <li><Link to="/zion-ai-customer-churn-predictor" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Customer Churn Predictor</Link></li>
+              <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Sales Predictor</Link></li>
+              <li><Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Pricing</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-cyan-400">Company</h4>
-            <ul className="space-y-3">
-              <li><Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">About Us</Link></li>
-              <li><Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Our Team</Link></li>
-              <li><Link to="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Careers</Link></li>
-              <li><Link to="/partnerships" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Partnerships</Link></li>
-              <li><Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Case Studies</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Contact</Link></li>
+            <h4 className="text-base md:text-lg font-semibold mb-4 md:mb-6 text-cyan-400">Company</h4>
+            <ul className="space-y-2 md:space-y-3">
+              <li><Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">About Us</Link></li>
+              <li><Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Our Team</Link></li>
+              <li><Link to="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Careers</Link></li>
+              <li><Link to="/partnerships" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Partnerships</Link></li>
+              <li><Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Case Studies</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Contact</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-cyan-400">Resources</h4>
-            <ul className="space-y-3">
-              <li><Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Blog</Link></li>
-              <li><Link to="/api-docs" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">API Docs</Link></li>
-              <li><Link to="/help" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Help Center</Link></li>
-              <li><Link to="/accessibility" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Accessibility</Link></li>
+            <h4 className="text-base md:text-lg font-semibold mb-4 md:mb-6 text-cyan-400">Resources</h4>
+            <ul className="space-y-2 md:space-y-3">
+              <li><Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Blog</Link></li>
+              <li><Link to="/api-docs" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">API Docs</Link></li>
+              <li><Link to="/help" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Help Center</Link></li>
+              <li><Link to="/accessibility" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Accessibility</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-cyan-400">Legal</h4>
-            <ul className="space-y-3">
-              <li><Link to="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Terms of Service</Link></li>
-              <li><Link to="/cookies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Cookie Policy</Link></li>
+            <h4 className="text-base md:text-lg font-semibold mb-4 md:mb-6 text-cyan-400">Legal</h4>
+            <ul className="space-y-2 md:space-y-3">
+              <li><Link to="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Terms of Service</Link></li>
+              <li><Link to="/cookies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm md:text-base">Cookie Policy</Link></li>
             </ul>
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-cyan-500/20">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-center md:text-left text-gray-300">
+        <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-cyan-500/20">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-center md:text-left text-gray-300 text-xs md:text-sm">
               © 2025 Zion Tech Group. All rights reserved. | <a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors duration-300">ziontechgroup.com</a>
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors duration-300">Privacy Policy</Link>
-              <Link to="/terms" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors duration-300">Terms of Service</Link>
+            <div className="flex space-x-4 md:space-x-6">
+              <Link to="/privacy" className="text-gray-300 hover:text-cyan-400 text-xs md:text-sm transition-colors duration-300">Privacy Policy</Link>
+              <Link to="/terms" className="text-gray-300 hover:text-cyan-400 text-xs md:text-sm transition-colors duration-300">Terms of Service</Link>
             </div>
           </div>
         </div>
