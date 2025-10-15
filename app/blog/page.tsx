@@ -1,33 +1,50 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function BlogPage() {
+const BlogPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Professional blog solutions for modern businesses." />
+        <meta name="description" content="Latest insights and updates on AI and IT technology from Zion Tech Group." />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Blog
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional Blog services and solutions for your business needs.
+      <div className="min-h-screen bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">Our Blog</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Stay updated with the latest trends and insights in AI and IT
             </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
-                Get Started
-              </button>
-              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
-                Learn More
-              </button>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-md border">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">The Future of AI in Business</h3>
+              <p className="text-gray-600 mb-4">
+                Exploring how artificial intelligence is transforming modern business operations.
+              </p>
+              <div className="text-sm text-blue-600">Read more →</div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md border">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Migration Best Practices</h3>
+              <p className="text-gray-600 mb-4">
+                Essential tips for successfully migrating your infrastructure to the cloud.
+              </p>
+              <div className="text-sm text-blue-600">Read more →</div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md border">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Digital Transformation Guide</h3>
+              <p className="text-gray-600 mb-4">
+                A comprehensive guide to digital transformation for modern enterprises.
+              </p>
+              <div className="text-sm text-blue-600">Read more →</div>
             </div>
           </div>
         </div>
       </div>
     </>
   );
-}
+};
+
+export default BlogPage;

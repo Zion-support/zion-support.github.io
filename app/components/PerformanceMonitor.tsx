@@ -1,13 +1,19 @@
+import React, { useEffect } from 'react';
 
-interface PerformanceMonitorProps {
-  className?: string;
-}
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    // Monitor Core Web Vitals
+    if ('web-vitals' in window) {
+      import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
+        onCLS(console.log);
+        onFCP(console.log);
+        onLCP(console.log);
+        onTTFB(console.log);
+      });
+    }
+  }, []);
 
-export default function PerformanceMonitor({ className }: PerformanceMonitorProps) {
-  return (
-    <div className={className}>
-      <h2>PerformanceMonitor</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
+  return null;
+};
+
+export default PerformanceMonitor;

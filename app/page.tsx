@@ -1,28 +1,28 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function AppPage() {
+const HomePage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide. Transform your operations with cutting-edge technology." />
+        <meta name="description" content="Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation." />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Welcome to Zion Tech Group
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leading provider of AI and IT solutions for businesses worldwide. 
-              Transform your operations with cutting-edge technology.
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              We provide cutting-edge AI and IT solutions to help your business thrive in the digital age.
             </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 Get Started
               </button>
-              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
+              <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                 Learn More
               </button>
             </div>
@@ -31,4 +31,6 @@ export default function AppPage() {
       </div>
     </>
   );
-}
+};
+
+export default HomePage;

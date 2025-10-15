@@ -1,4 +1,4 @@
-import React, { Component, ReactNode } from 'react';
+import { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -19,16 +19,8 @@ class GlobalErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('GlobalErrorBoundary caught an error:', error, errorInfo);
-    
-    // Log to external service if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-      });
-    }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Global error caught:', error, errorInfo);
   }
 
   render() {
@@ -42,7 +34,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
               </svg>
             </div>
             <div className="mt-4 text-center">
-              <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>
+              <h3 className="text-lg font-medium text-gray-900">Application Error</h3>
               <p className="mt-2 text-sm text-gray-500">
                 {this.state.error?.message || 'An unexpected error occurred'}
               </p>
