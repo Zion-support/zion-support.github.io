@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { TrendingUp } from "lucide-react";
 
-const AISolutionsPage: React.FC = () => {
+const AiSolutionsPage: React.FC = () => {
   const aiServices = [
     {
       id: 'ai-chatbot-enterprise',

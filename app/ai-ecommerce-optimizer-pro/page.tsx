@@ -1,7 +1,10 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-  return (<>
+const AiEcommerceOptimizerProPage: React.FC = () => {
+  return (
+    <>
       <Helmet>
         <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
         <meta

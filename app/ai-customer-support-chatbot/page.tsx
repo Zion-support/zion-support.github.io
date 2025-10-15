@@ -5,29 +5,18 @@ import {
   CheckCircle, 
   ArrowRight, 
   MessageSquare, 
-  BarChart3, 
   Users, 
-  Zap, 
   Target, 
   TrendingUp,
-  Clock,
-  Shield,
-  Smartphone,
   Globe,
-  FileText,
-  Settings,
-  Star,
-  Award,
-  Phone,
-  MapPin,
-  Envelope,
-  Bot,
+  Cloud,
   Headphones,
-  ThumbsUp,
-  RefreshCw
+  ShoppingCart,
+  Heart,
+  DollarSign
 } from 'lucide-react';
 
-const AICustomerSupportChatbotPage: React.FC = () => {
+const AiCustomerSupportChatbotPage: React.FC = () => {
   const features = [
     'Natural Language Processing (NLP)',
     'Multi-language support (50+ languages)',
@@ -145,7 +134,6 @@ const AICustomerSupportChatbotPage: React.FC = () => {
     { number: '45%', label: 'Higher Satisfaction' }
   ];
 
-const AiCustomerSupportChatbotPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -413,4 +401,4 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
   );
 };
 
-export default AICustomerSupportChatbotPage;
+export default AiCustomerSupportChatbotPage;

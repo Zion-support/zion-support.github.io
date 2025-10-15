@@ -1,5 +1,4 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
 
 const AiPersonalizedLearningPage: React.FC = () => {
   const features = [
