@@ -21,7 +21,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
-    minify: 'esbuild',
+    minify: 'terser',
     target: 'es2020',
     cssCodeSplit: true,
     rollupOptions: {
@@ -61,6 +61,13 @@ export default defineConfig({
           if (id.includes('/app/utils/')) {
             return 'utils';
           }
+          // Group similar pages together
+          if (id.includes('/app/ai-') || id.includes('/app/zion-ai-')) {
+            return 'ai-pages';
+          }
+          if (id.includes('/app/') && id.includes('/page.tsx')) {
+            return 'pages';
+          }
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
@@ -68,8 +75,14 @@ export default defineConfig({
       },
     },
     // Optimize chunk size
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: false,
+    chunkSizeWarningLimit: 1000,
+    reportCompressedSize: true,
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
   },
   server: {
     port: 3000,

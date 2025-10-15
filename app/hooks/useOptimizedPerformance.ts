@@ -1,16 +1,16 @@
 import { useEffect, useCallback, useRef } from 'react';
 
-interface PerformanceOptimizationOptions {
-  enableIntersectionObserver?: boolean;
+interface PerformanceOptions {
+  enableWebVitals?: boolean;
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
   enableDebouncing?: boolean;
   debounceDelay?: number;
 }
 
-export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
+export const useOptimizedPerformance = (options: PerformanceOptions = {}) => {
   const {
-    enableIntersectionObserver = true,
+    enableWebVitals = true,
     enableLazyLoading = true,
     enablePreloading = true,
     enableDebouncing = true,
@@ -20,9 +20,32 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   const observerRef = useRef<IntersectionObserver | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
+  // Web Vitals monitoring
+  useEffect(() => {
+    if (!enableWebVitals || typeof window === 'undefined') return;
+
+    import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
+      const handleMetric = (metric: { name: string; value: number }) => {
+        // Store metrics for analytics
+        if (process.env.NODE_ENV === 'production') {
+          // Send to analytics service
+          // analyticsService.track('performance_metric', { metric: metric.name, value: metric.value });
+        }
+      };
+      
+      onCLS(handleMetric);
+      onFCP(handleMetric);
+      onLCP(handleMetric);
+      onTTFB(handleMetric);
+      onINP(handleMetric);
+    }).catch(() => {
+      // Silently fail if web-vitals is not available
+    });
+  }, [enableWebVitals]);
+
   // Intersection Observer for lazy loading
   const createIntersectionObserver = useCallback(() => {
-    if (!enableIntersectionObserver || !enableLazyLoading) return;
+    if (!enableLazyLoading) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -54,7 +77,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
     observerRef.current = observer;
     return observer;
-  }, [enableIntersectionObserver, enableLazyLoading]);
+  }, [enableLazyLoading]);
 
   // Debounce function
   const debounce = useCallback(
@@ -87,47 +110,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       link.crossOrigin = crossorigin;
     }
     
-    // Add error handling
-    link.onerror = () => {
-        // Resource preload failed - handled silently
-    };
-    
     document.head.appendChild(link);
   }, [enablePreloading]);
-
-  // Preload critical images
-  const preloadImages = useCallback((imageUrls: string[]) => {
-    if (!enablePreloading) return;
-
-    imageUrls.forEach((url) => {
-      const img = new Image();
-      img.src = url;
-      img.onload = () => {
-        // Image preloaded successfully
-      };
-      img.onerror = () => {
-        // Image preload failed - handled silently
-      };
-    });
-  }, [enablePreloading]);
-
-  // Preload critical fonts
-  const preloadFonts = useCallback((fontUrls: string[]) => {
-    if (!enablePreloading) return;
-
-    fontUrls.forEach((url) => {
-      preloadResource(url, 'font', 'anonymous');
-    });
-  }, [enablePreloading, preloadResource]);
-
-  // Preload critical scripts
-  const preloadScripts = useCallback((scriptUrls: string[]) => {
-    if (!enablePreloading) return;
-
-    scriptUrls.forEach((url) => {
-      preloadResource(url, 'script');
-    });
-  }, [enablePreloading, preloadResource]);
 
   // Initialize performance optimizations
   useEffect(() => {
@@ -157,8 +141,5 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   return {
     debounce,
     preloadResource,
-    preloadImages,
-    preloadFonts,
-    preloadScripts,
   };
 };
