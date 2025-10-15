@@ -13,7 +13,10 @@ import {
   SparklesIcon,
   ChartBarIcon,
   GlobeAltIcon,
-  CogIcon
+  CogIcon,
+  UserGroupIcon,
+  EnvelopeIcon,
+  EyeIcon
 } from '@heroicons/react/24/outline';
 
 const HomePage: React.FC = () => {
@@ -148,7 +151,7 @@ const HomePage: React.FC = () => {
                 <div className="absolute -inset-2 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-lg blur opacity-20 animate-pulse delay-500"></div>
               </div>
               <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed px-4 digital-pulse">
-                Leading provider of <span className="text-cyan-400 font-semibold">AI-powered solutions</span>, <span className="text-purple-400 font-semibold">cybersecurity</span>, <span className="text-pink-400 font-semibold">cloud infrastructure</span>, and <span className="text-green-400 font-semibold">digital transformation</span> services that drive innovation and growth.
+                Leading provider of <span className="text-cyan-400 font-semibold">AI-powered solutions</span>, <span className="text-purple-400 font-semibold">cybersecurity</span>, <span className="text-pink-400 font-semibold">cloud infrastructure</span>, and <span className="text-green-400 font-semibold">digital transformation</span> services that drive innovation and growth. Contact us at <span className="text-yellow-400 font-semibold">+1 (302) 464-0950</span> or <span className="text-yellow-400 font-semibold">kleber@ziontechgroup.com</span>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 lg:mb-16 px-4">
                 <Link to="/contact"
@@ -238,12 +241,12 @@ const HomePage: React.FC = () => {
                 Featured <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro SAAS Solutions</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
-                Discover our innovative micro SAAS applications designed to solve specific business challenges with real functionality.
+                Discover our innovative micro SAAS applications designed to solve specific business challenges with real functionality and competitive pricing.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* AI Content Generator */}
+              {/* AI Content Generator Pro */}
               <div className="group cyber-card p-6 hover:scale-105 neon-border-animated">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
@@ -255,7 +258,7 @@ const HomePage: React.FC = () => {
                   AI Content Generator Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Generate high-quality content for blogs, social media, and marketing materials using advanced AI.
+                  Generate high-quality content for blogs, social media, and marketing materials using advanced GPT-4 and Claude AI models.
                 </p>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-cyan-400">$199/mo</span>
@@ -268,33 +271,37 @@ const HomePage: React.FC = () => {
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
-                    <span>SEO optimization</span>
+                    <span>SEO optimization & keyword research</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
-                    <span>Multi-language support</span>
+                    <span>Multi-language support (50+ languages)</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Brand voice customization</span>
                   </div>
                 </div>
                 <Link to="/ai-content-generator"
                   className="block w-full btn-cyber text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
-                  Try Free Trial
+                  Start Free Trial
                 </Link>
               </div>
 
-              {/* Analytics Dashboard */}
-              <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
+              {/* Smart Analytics Dashboard */}
+              <div className="group cyber-card p-6 hover:scale-105 neon-border-animated">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
                     <ChartBarIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-purple-400 font-medium">Analytics</span>
+                  <span className="text-sm text-purple-400 font-medium holographic-text">Analytics</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                  Business Analytics Pro
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors holographic-text">
+                  Smart Analytics Dashboard
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Comprehensive business intelligence and analytics platform with real-time insights and reporting.
+                  AI-powered business intelligence platform with real-time insights, predictive analytics, and automated reporting.
                 </p>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-purple-400">$349/mo</span>
@@ -302,38 +309,42 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Real-time dashboards</span>
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Real-time dashboards & KPI tracking</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Predictive analytics</span>
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Predictive analytics & forecasting</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Custom reports</span>
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Custom reports & data visualization</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>API integrations (100+ platforms)</span>
                   </div>
                 </div>
-                <Link to="/data-analytics"
-                  className="block w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                <Link to="/zion-smart-analytics-dashboard"
+                  className="block w-full btn-cyber text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
-                  Try Free Trial
+                  Start Free Trial
                 </Link>
               </div>
 
-              {/* Task Manager */}
-              <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/20">
+              {/* AI Task Manager Pro */}
+              <div className="group cyber-card p-6 hover:scale-105 neon-border-animated">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
                     <CheckCircleIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-green-400 font-medium">Productivity</span>
+                  <span className="text-sm text-green-400 font-medium holographic-text">Productivity</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
-                  Task Manager Pro
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors holographic-text">
+                  AI Task Manager Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Advanced task management with AI-powered prioritization and team collaboration features.
+                  Advanced task management with AI-powered prioritization, team collaboration, and intelligent scheduling.
                 </p>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-green-400">$29/mo</span>
@@ -341,22 +352,271 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>AI task prioritization</span>
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>AI task prioritization & scheduling</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Team collaboration</span>
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Team collaboration & project tracking</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Time tracking</span>
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Time tracking & productivity analytics</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Mobile app & desktop sync</span>
                   </div>
                 </div>
-                <Link to="/micro-saas-solutions"
-                  className="block w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                <Link to="/zion-ai-task-scheduler"
+                  className="block w-full btn-cyber text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
-                  Try Free Trial
+                  Start Free Trial
+                </Link>
+              </div>
+
+              {/* AI CRM Optimizer */}
+              <div className="group cyber-card p-6 hover:scale-105 neon-border-animated">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
+                    <UserGroupIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-orange-400 font-medium holographic-text">CRM</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-orange-300 transition-colors holographic-text">
+                  AI CRM Optimizer
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Intelligent CRM automation with AI-powered lead scoring, customer insights, and sales forecasting.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-orange-400">$149/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$199/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>AI lead scoring & qualification</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Customer sentiment analysis</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Sales pipeline optimization</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Integration with 50+ tools</span>
+                  </div>
+                </div>
+                <Link to="/zion-ai-crm-optimizer"
+                  className="block w-full btn-cyber text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Start Free Trial
+                </Link>
+              </div>
+
+              {/* AI Email Marketing Pro */}
+              <div className="group cyber-card p-6 hover:scale-105 neon-border-animated">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
+                    <EnvelopeIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-pink-400 font-medium holographic-text">Email</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-pink-300 transition-colors holographic-text">
+                  AI Email Marketing Pro
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Advanced email marketing automation with AI-powered personalization, A/B testing, and campaign optimization.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-pink-400">$99/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$149/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>AI-powered email personalization</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Advanced segmentation & targeting</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Automated A/B testing</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Unlimited sends & subscribers</span>
+                  </div>
+                </div>
+                <Link to="/zion-ai-email-marketing-pro"
+                  className="block w-full btn-cyber text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Start Free Trial
+                </Link>
+              </div>
+
+              {/* AI Fraud Detection Pro */}
+              <div className="group cyber-card p-6 hover:scale-105 neon-border-animated">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
+                    <ShieldCheckIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-red-400 font-medium holographic-text">Security</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-red-300 transition-colors holographic-text">
+                  AI Fraud Detection Pro
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Advanced fraud detection system using machine learning to identify and prevent fraudulent activities in real-time.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-red-400">$299/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$399/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Real-time fraud detection</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Machine learning algorithms</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>Custom risk scoring</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 neon-glow" />
+                    <span>API integration & webhooks</span>
+                  </div>
+                </div>
+                <Link to="/zion-ai-fraud-detection"
+                  className="block w-full btn-cyber text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Start Free Trial
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Additional Micro SAAS Services */}
+        <section className="py-16 sm:py-20 bg-slate-900/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+                More <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">AI-Powered Solutions</span>
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+                Explore our comprehensive suite of AI-powered micro SAAS applications designed for modern businesses.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* AI Voice Assistant Pro */}
+              <div className="group cyber-card p-6 hover:scale-105">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <ChatBubbleLeftRightIcon className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="text-xs text-blue-400 font-medium">Voice AI</span>
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                  AI Voice Assistant Pro
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Advanced voice AI with natural language processing and multi-language support.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-bold text-blue-400">$79/mo</span>
+                  <span className="text-xs text-gray-400 line-through">$99/mo</span>
+                </div>
+                <Link to="/zion-ai-voice-assistant"
+                  className="block w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white text-center py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-sm"
+                >
+                  Try Free
+                </Link>
+              </div>
+
+              {/* AI Image Recognition Pro */}
+              <div className="group cyber-card p-6 hover:scale-105">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <EyeIcon className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="text-xs text-purple-400 font-medium">Vision AI</span>
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                  AI Image Recognition Pro
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Advanced computer vision with object detection, facial recognition, and image analysis.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-bold text-purple-400">$129/mo</span>
+                  <span className="text-xs text-gray-400 line-through">$179/mo</span>
+                </div>
+                <Link to="/zion-ai-image-recognition"
+                  className="block w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-center py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-sm"
+                >
+                  Try Free
+                </Link>
+              </div>
+
+              {/* AI Translation Service */}
+              <div className="group cyber-card p-6 hover:scale-105">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <GlobeAltIcon className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="text-xs text-green-400 font-medium">Translation</span>
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
+                  AI Translation Service
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Real-time translation service supporting 100+ languages with context-aware accuracy.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-bold text-green-400">$49/mo</span>
+                  <span className="text-xs text-gray-400 line-through">$79/mo</span>
+                </div>
+                <Link to="/zion-ai-translation-service"
+                  className="block w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white text-center py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-sm"
+                >
+                  Try Free
+                </Link>
+              </div>
+
+              {/* AI Video Generator */}
+              <div className="group cyber-card p-6 hover:scale-105">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <EyeIcon className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="text-xs text-orange-400 font-medium">Video AI</span>
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-orange-300 transition-colors">
+                  AI Video Generator
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Create professional videos from text prompts with AI-powered editing and effects.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-bold text-orange-400">$199/mo</span>
+                  <span className="text-xs text-gray-400 line-through">$299/mo</span>
+                </div>
+                <Link to="/zion-ai-video-generator"
+                  className="block w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-center py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-sm"
+                >
+                  Try Free
                 </Link>
               </div>
             </div>
@@ -405,7 +665,7 @@ const HomePage: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">
-              Let's discuss how our solutions can accelerate your digital transformation and drive growth.";
+              Let's discuss how our solutions can accelerate your digital transformation and drive growth. Call us at <span className="text-cyan-400 font-semibold">+1 (302) 464-0950</span> or email <span className="text-cyan-400 font-semibold">kleber@ziontechgroup.com</span> for a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact"

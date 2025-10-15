@@ -195,16 +195,16 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
   };
 
   return (
-    <nav className="bg-slate-900 border-b border-slate-700">
+    <nav className="bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/30 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
-              <div className="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <Link to="/" className="flex-shrink-0 flex items-center group">
+              <div className="h-8 w-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
-              <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
+              <span className="ml-2 text-white font-bold text-xl group-hover:text-cyan-300 transition-colors holographic-text">Zion Tech Group</span>
             </Link>
           </div>
 
@@ -221,10 +221,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
                     else if (item.name === 'Resources') toggleResourcesMenu();
                     else if (item.name === 'Company') toggleCompanyMenu();
                   }}
-                  className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors border-b-2 ${
+                  className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 border-b-2 group ${
                     isActive(item.href)
-                      ? 'border-blue-500 text-white'
-                      : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white'
+                      ? 'border-cyan-500 text-cyan-300 bg-cyan-500/10'
+                      : 'border-transparent text-gray-300 hover:border-cyan-300 hover:text-cyan-300 hover:bg-cyan-500/5'
                   }`}
                   aria-expanded={item.submenu ? (item.name === 'AI Services' && isServicesOpen) ||
                     (item.name === 'Micro SaaS' && isSolutionsOpen) ||
@@ -240,7 +240,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
                 {/* Dropdown Menu */}
                 {item.submenu && (
                   <div 
-                    className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
+                    className={`absolute left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl py-2 z-50 border border-cyan-500/30 ${
                       (item.name === 'AI Services' && isServicesOpen) ||
                       (item.name === 'Micro SaaS' && isSolutionsOpen) ||
                       (item.name === 'IT Solutions' && isResourcesOpen) ||
@@ -255,7 +255,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
                       <div key={subItem.name} role="none">
                         <Link
                           to={subItem.href}
-                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white"
+                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-300 transition-all duration-200 group"
                           role="menuitem"
                         >
                           <subItem.icon className="w-4 h-4 mr-3" aria-hidden="true" />

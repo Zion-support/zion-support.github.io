@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = memo(() => {
   return (
-    <footer className="glass-card mt-20">
+    <footer className="glass-card mt-20 bg-slate-900/95 backdrop-blur-md">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
@@ -11,11 +11,26 @@ const Footer: React.FC = memo(() => {
             <p className="text-gray-300 mb-6 leading-relaxed">
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
-            <div className="space-y-2 text-sm text-gray-300">
-              <p><strong>Phone:</strong> <a href="tel:+13024640950" className="hover:text-white">+1 302 464 0950</a></p>
-              <p><strong>Email:</strong> <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white">kleber@ziontechgroup.com</a></p>
-              <p><strong>Address:</strong> 364 E Main St STE 1008<br />Middletown DE 19709</p>
-              <p><strong>Website:</strong> <a href="https://ziontechgroup.com" className="hover:text-white">https://ziontechgroup.com</a></p>
+            <div className="space-y-3 text-sm text-gray-300">
+              <div className="flex items-center space-x-2">
+                <span className="text-cyan-400">📞</span>
+                <a href="tel:+13024640950" className="hover:text-cyan-300 transition-colors font-semibold">+1 (302) 464-0950</a>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-cyan-400">✉️</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-300 transition-colors font-semibold">kleber@ziontechgroup.com</a>
+              </div>
+              <div className="flex items-start space-x-2">
+                <span className="text-cyan-400 mt-1">📍</span>
+                <div>
+                  <p className="font-semibold">364 E Main St STE 1008</p>
+                  <p>Middletown DE 19709</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-cyan-400">🌐</span>
+                <a href="https://ziontechgroup.com" className="hover:text-cyan-300 transition-colors font-semibold">https://ziontechgroup.com</a>
+              </div>
             </div>
             <div className="flex space-x-4 mt-4">
               <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
