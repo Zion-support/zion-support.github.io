@@ -1,57 +1,64 @@
 const fs = require('fs');
 const path = require('path');
-// Files with merge conflicts
-const filesWithConflicts = [
-  './app/contact/page.tsx',
-  './app/components/LoadingSpinner.tsx',
-  './scripts/generate-sitemap.js',
-  './app/components/AccessibilityEnhancer.tsx',
-  './app/blog/page.tsx',
-  './app/5g-solutions/page.tsx',
-  './app/ai-automation-platform/page.tsx',
-  './app/services/page.tsx',
-  './app/support/page.tsx',
-  './app/ai-solutions/page.tsx',
-  './api/wallet.js',
-  './api/subscribe.js',
-  './jest.setup.js',
-  './jest.config.js',
-  './app/ai-services/page.tsx',
-  './app/micro-saas-solutions/page.tsx',
-  './app/pages/AboutPage.tsx',
-  './app/pages/HomePage.tsx',
-  './app/demo/page.tsx',
-  './app/it-solutions/page.tsx',
-  './scripts/performance-analysis.js',
-  './scripts/accessibility-audit.js'
-];
+
 function fixMergeConflicts(filePath) {
   try {
-    if (!fs.existsSync(filePath)) {
-      console.log(`File not found: ${filePath}`);
-      return;
-    }
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    // Remove merge conflict markers and keep the HEAD version (first part)
-    content = content.replace(/\n([\s\S]*?)\n>>>>>>> [^\n]+\n?/g, '$1');
-    // Remove any remaining conflict markers
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
-    // Clean up any double newlines that might have been created
-    content = content.replace(/\n\n\n+/g, '\n\n');
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed merge conflicts in: ${filePath}`);
-    } else {
-      console.log(`No conflicts found in: ${filePath}`);
-    }
+    
+    // Remove merge conflict markers and keep the main branch version
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> main/g, '');
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-zA-Z0-9_-]+/g, '');
+    
+    // Clean up any remaining conflict markers
+    content = content.replace(/<<<<<<< HEAD/g, '');
+    content = content.replace(/=======/g, '');
+    content = content.replace(/>>>>>>> main/g, '');
+    content = content.replace(/>>>>>>> [a-f0-9]+/g, '');
+    content = content.replace(/>>>>>>> [a-zA-Z0-9_-]+/g, '');
+    
+    // Clean up any malformed syntax that might have been left behind
+    content = content.replace(/;\s*;\s*/g, ';');
+    content = content.replace(/,\s*,\s*/g, ',');
+    content = content.replace(/{\s*{\s*/g, '{');
+    content = content.replace(/}\s*}\s*/g, '}');
+    content = content.replace(/\(\s*\(\s*/g, '(');
+    content = content.replace(/\)\s*\)\s*/g, ')');
+    
+    // Remove empty lines that might have been left behind
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    fs.writeFileSync(filePath, content);
+    return true;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
+
+function walkDirectory(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      // Skip node_modules and other directories we don't want to process
+      if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {
+        fixedCount += walkDirectory(filePath);
+      }
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
+      if (fixMergeConflicts(filePath)) {
+        fixedCount++;
+      }
+    }
+  }
+  
+  return fixedCount;
+}
+
 console.log('Starting merge conflict resolution...');
-filesWithConflicts.forEach(file => {
-  fixMergeConflicts(file);
-});
-console.log('Merge conflict resolution completed!');
+const fixedCount = walkDirectory('.');
+console.log(`Fixed merge conflicts in ${fixedCount} files`);

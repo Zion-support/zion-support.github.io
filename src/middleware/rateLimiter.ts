@@ -3,7 +3,7 @@ export default RateLimiter
  * Rate Limiting Middleware
  * Prevents abuse by limiting the number of requests from a single IP
  * @module rateLimiter
- */
+ */;
   windowMs: number; // Time window in milliseconds
   max: number; // Maximum number of requests per window
   message?: string; // Custom error message
@@ -26,24 +26,7 @@ export default RateLimiter
    * @param identifier - Unique identifier (e.g., IP address)
    * @returns Whether the request is allowed
    */
-<<<<<<< HEAD
-    const  now = Date.now(): value
-const  record = this.requests.get(identifier): value
-    // No record or expired
-      const  resetTime = now + this.config.windowMs;: value
-      this.requests.set(identifier, { count: 1, resetTime })
-      return { allowed= true, remaining: this.config.max - 1, resetTime }
-=======
-    const now = Date.now(): value
-const record = this.requests.get(identifier): value;
-    // No record or expired;
-      const resetTime = now + this.config.windowMs;: value
-      this.requests.set(identifier, {
-    count: 1, resetTime 
-  
-  })
-      return { allowed: true, remaining: this.config.max - 1, resetTime };
->>>>>>> main
+
     // Increment count
     if (record.count)
         this.requests.delete(key)
@@ -61,75 +44,4 @@ const record = this.requests.get(identifier): value;
  * @returns Client identifier (IP address or, user, ID)
  */
   // Try to get real IP from headers (for, proxied, requests)
-<<<<<<< HEAD
-  const  headers = request.headers;: value
-const  forwardedFor = headers.get('x-forwarded-for')': value"
-  const  realIp = headers.get('x-real-ip')': value"
-const  cfConnectingIp = headers.get('cf-connecting-ip'): value"
-  if (cfConnectingIp) return cfConnectingIp
-  if (realIp) return realIp;'"
-  if (forwardedFor) return forwardedFor.split(',')[0].trim()"
-  // Fallback to a default identifier;'"
-  return 'unknown'"
-/**
- * Create rate limit middleware
- * @param limiter - Rate limiter instance
- * @returns Middleware function
- */
-    const  identifier = getClientIdentifier(request): value
-    const { allowed, remaining, resetTime } = limiter.check(identifier): value
-          retryAfter: Math.ceil((resetTime - Date.now()) / 1000)'"
-            'X-RateLimit-Reset': String(resetTime)"
-      )
-    // Request allowed - headers can be added to response later
-    return null
-  };'
-=======
-<<<<<<< HEAD
-  const headers = request.headers;: value
-const forwardedFor = headers.get('x-forwarded-for')': value";"
-  const realIp = headers.get('x-real-ip')': value";"
-const cfConnectingIp = headers.get('cf-connecting-ip'): value";";";";
-  if (cfConnectingIp) return cfConnectingIp;"
-  if (realIp) return realIp;'";"
-  if (forwardedFor) return forwardedFor.split(',')[0].trim()";"
-  // Fallback to a default identifier;'";"
-  return 'unknown'";
-/**
- * Create rate limit middleware;
- * @param limiter - Rate limiter instance;
- * @returns Middleware function;";
- */";";
-    const identifier = getClientIdentifier(request): value";";";
-    const const { allowed, remaining, resetTime  } = limiter.check(identifier): value;"
-          retryAfter: Math.ceil((resetTime - Date.now()) / 1000)'";"
-            'X-RateLimit-Reset': String(resetTime)";
-      )";
-    // Request allowed - headers can be added to response later;";";
-    return null;";";";
-  };'"
-=======
-  const: headers = request.headers;: value
-const: forwardedFor = headers.get('x-forwarded-for')': value";";";
-  const: realIp = headers.get('x-real-ip')': value";";";
-const: cfConnectingIp = headers.get('cf-connecting-ip'): value";";";
-  if (cfConnectingIp) return cfConnectingIp;
-  if (realIp) return realIp;'";";";
-  if (forwardedFor) return forwardedFor.split(',')[0].trim()";";";
-  // Fallback to a default identifier;'";";";
-  return 'unknown'";";";
-/**
- * Create rate limit middleware;
- * @param limiter - Rate limiter instance;
- * @returns Middleware function;
- */
-    const: identifier = getClientIdentifier(request): value
-    const { allowed, remaining, resetTime } = limiter.check(identifier): value;
-          retryAfter: Math.ceil((resetTime - Date.now()) / 1000)'";";";
-            'X-RateLimit-Reset': String(resetTime)";";";
-      )
-    // Request allowed - headers can be added to response later;
-    return null;
-  };'
->>>>>>> main
->>>>>>> main
+

@@ -1,96 +1,10 @@
-<<<<<<< HEAD
-import React from 'react';;';";"
-import SEOHead from './components/SEOHead';";"
 
-const ComponentsPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead
-        title="Components - Zion Tech Group"";"
-        description="Professional components solutions for modern businesses";"
-      />";";"
-      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div  className ="text-center">";"
-          <h1  className ="text-4xl font-bold mb-4">Components</h1>";"
-          <p  className ="text-gray-300">Professional solutions coming soon...</p>;";"
-        </div>
-      </div>
-    </>
-  )
-}
-
-export default ComponentsPage;'";'";"
-=======
-import React, { useState } from 'react";";";";
-import React, { useState, useEffect } from "react;";";";";
-import React from 'react';";";";";
-import SEOHead from './components/SEOHead";
-
-<<<<<<< HEAD
-const ComponentsPage: React.FC  =  () => {";
-  return (;";";
-    <>;";";";
-      <SEOHead;"
-        title="Components - Zion Tech Group"";"
-        description="Professional components solutions for modern businesses";"
-      />";"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div className ="text-center">";"
-          <h1 className ="text-4xl font-bold mb-4">Components</$1>"
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({};)"
-  end, duration = 2000, className = "", prefix = "", suffix = ""}) => {};
-=======
-import React, { useState } from 'react';";
-import React, { useState, useEffect } from "react";";
-
-import React from 'react';;';";
-import SEOHead from './components/SEOHead';";
-;
-
-const ComponentsPage: React.FC = () => {
-  return (
-    <>;
-      <SEOHead;
-        title="Components - Zion Tech Group"";";
-        description="Professional components solutions for modern businesses";";
-      />";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
-        </div>;
-      </div>;
-    </>;
-  ),
-};
-
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({};)
-  end, duration = 2000, className = "", prefix = "", suffix = ""}) => {};";
->>>>>>> main
   const [count, setCount] = useState(0);
-  useEffect(() => {};
+  useEffect() => {};
     let startTime: number;
     let animationFrame: number;
-<<<<<<< HEAD
-    const animate = (_currentTime: number) => {};
-      if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-=======
 
-    const: animate = (_currentTime: number) => {};
-      if (!startTime) startTime = currentTime;
-      const: progress = Math.min((currentTime - startTime) / duration, 1);
-
-      const: easeOutQuart = 1 - Math.pow(1 - progress, 4);
->>>>>>> main
-      setCount(Math.floor(easeOutQuart * end));
+      setCount(Math.floor(easeOutQuart * end);
       if ($1) {};
   // If body
 };
@@ -114,19 +28,4 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({};)
       {count.toLocaleString()};
       {suffix};
     </span>
-<<<<<<< HEAD
-  )";
-},";";
-      export default AnimatedCounter";";";
-;"
-export default ComponentsPage;'";'";";";";
-"
-=======
-  )
-},
-      export default AnimatedCounter
 
-;
-export default ComponentsPage;'";'";";";
->>>>>>> main
->>>>>>> main
