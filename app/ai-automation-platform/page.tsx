@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
 
-const AIAutomationPlatform: React.FC = () => {
+const AiAutomationPlatformPage: React.FC = () => {
   const features = [
     {
       title: "Workflow Automation",
@@ -38,8 +38,6 @@ const AIAutomationPlatform: React.FC = () => {
     "Scalable workflows",
     "Cost reduction"
   ];
-
-const AiAutomationPlatformPage: React.FC = () => {
   return (
     <>
       <Helmet>
