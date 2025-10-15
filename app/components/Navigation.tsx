@@ -30,6 +30,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   const location = useLocation();
 
   const navigation = [
@@ -41,10 +43,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       icon: BriefcaseIcon,
       submenu: [
         { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
+        { name: 'IT Solutions', href: '/it-solutions', icon: CogIcon },
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon },
         { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
         { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: GlobeAltIcon },
         { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
       ]
     },
@@ -55,15 +58,25 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       submenu: [
         { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
         { name: 'IT Solutions', href: '/it-solutions', icon: CogIcon },
-        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon }
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon },
+        { name: 'Cloud Solutions', href: '/cloud-solutions', icon: CloudIcon },
+        { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: ShieldCheckIcon }
       ]
     },
-    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
-    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
-    { name: 'Demo', href: '/demo', icon: PlayIcon },
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
+    { name: 'Resources', href: '#', icon: DocumentTextIcon, submenu: [
+      { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
+      { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
+      { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },
+      { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon }
+    ]},
+    { name: 'Company', href: '#', icon: UserGroupIcon, submenu: [
+      { name: 'About Us', href: '/about', icon: InformationCircleIcon },
+      { name: 'Team', href: '/team', icon: UserGroupIcon },
+      { name: 'Careers', href: '/careers', icon: UserGroupIcon },
+      { name: 'Contact', href: '/contact', icon: PhoneIcon }
+    ]},
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
-    { name: 'Contact', href: '/contact', icon: PhoneIcon }
+    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
   ];
 
   const isActive = (href: string) => {
@@ -78,6 +91,19 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const toggleSolutionsMenu = () => {
     setIsSolutionsOpen(!isSolutionsOpen);
     setIsServicesOpen(false);
+  };
+
+  const toggleResourcesMenu = () => {
+    setIsResourcesOpen(!isResourcesOpen);
+    setIsServicesOpen(false);
+    setIsSolutionsOpen(false);
+  };
+
+  const toggleCompanyMenu = () => {
+    setIsCompanyOpen(!isCompanyOpen);
+    setIsServicesOpen(false);
+    setIsSolutionsOpen(false);
+    setIsResourcesOpen(false);
   };
 
   return (
@@ -101,8 +127,18 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 <Link
                   to={item.href}
                   className="flex items-center space-x-1 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                  onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                  onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
+                  onMouseEnter={() => {
+                    if (item.name === 'Services') setIsServicesOpen(true);
+                    else if (item.name === 'Solutions') setIsSolutionsOpen(true);
+                    else if (item.name === 'Resources') setIsResourcesOpen(true);
+                    else if (item.name === 'Company') setIsCompanyOpen(true);
+                  }}
+                  onMouseLeave={() => {
+                    if (item.name === 'Services') setIsServicesOpen(false);
+                    else if (item.name === 'Solutions') setIsSolutionsOpen(false);
+                    else if (item.name === 'Resources') setIsResourcesOpen(false);
+                    else if (item.name === 'Company') setIsCompanyOpen(false);
+                  }}
                 >
                   <item.icon className="w-4 h-4" />
                   <span>{item.name}</span>
@@ -110,14 +146,25 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 </Link>
                 
                 {/* Dropdown Menu */}
-                {item.submenu && isServicesOpen && (
-                  <div className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700">
+                {item.submenu && (
+                  <div className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
+                    (item.name === 'Services' && isServicesOpen) ||
+                    (item.name === 'Solutions' && isSolutionsOpen) ||
+                    (item.name === 'Resources' && isResourcesOpen) ||
+                    (item.name === 'Company' && isCompanyOpen)
+                      ? 'block' : 'hidden'
+                  }`}>
                     {item.submenu.map((subItem) => (
                       <Link
                         key={subItem.name}
                         to={subItem.href}
                         className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
-                        onClick={() => setIsServicesOpen(false)}
+                        onClick={() => {
+                          setIsServicesOpen(false);
+                          setIsSolutionsOpen(false);
+                          setIsResourcesOpen(false);
+                          setIsCompanyOpen(false);
+                        }}
                       >
                         <div className="flex items-center">
                           <subItem.icon className="w-4 h-4 mr-3" />
@@ -154,7 +201,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 {item.submenu ? (
                   <div>
                     <button
-                      onClick={item.name === 'Services' ? toggleServicesMenu : toggleSolutionsMenu}
+                      onClick={() => {
+                        if (item.name === 'Services') toggleServicesMenu();
+                        else if (item.name === 'Solutions') toggleSolutionsMenu();
+                        else if (item.name === 'Resources') toggleResourcesMenu();
+                        else if (item.name === 'Company') toggleCompanyMenu();
+                      }}
                       className={`flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-colors ${
                         isActive(item.href) || (item.submenu && item.submenu.some(sub => isActive(sub.href)))
                           ? 'text-white bg-slate-700'
@@ -167,7 +219,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     </button>
                     
                     {/* Mobile Submenu */}
-                    <div className={`pl-6 ${(item.name === 'Services' ? isServicesOpen : isSolutionsOpen) ? 'block' : 'hidden'}`}>
+                    <div className={`pl-6 ${
+                      (item.name === 'Services' && isServicesOpen) ||
+                      (item.name === 'Solutions' && isSolutionsOpen) ||
+                      (item.name === 'Resources' && isResourcesOpen) ||
+                      (item.name === 'Company' && isCompanyOpen)
+                        ? 'block' : 'hidden'
+                    }`}>
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
@@ -177,6 +235,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                             setIsOpen(false);
                             setIsServicesOpen(false);
                             setIsSolutionsOpen(false);
+                            setIsResourcesOpen(false);
+                            setIsCompanyOpen(false);
                           }}
                         >
                           <subItem.icon className="w-4 h-4 mr-3" />
