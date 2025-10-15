@@ -28,7 +28,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     }
 
     // Add focus indicators for keyboard navigation
-    const addFocusStyles = () => {  return (
+    const addFocusStyles = () => {
       const style = document.createElement('style');
       style.textContent = `
         .keyboard-navigation *:focus {
