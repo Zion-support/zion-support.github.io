@@ -34,17 +34,22 @@ const Footer: React.FC = () => {
         { name: 'AI Automation Suite', href: '/ai-automation-suite' },
         { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
-        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' }
+        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+        { name: 'AI Email Marketing Pro', href: '/ai-email-marketing-pro' },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
+        { name: 'AI Video Editor Pro', href: '/ai-video-editor-pro' }
       ]
     },
     {
       title: 'IT Services',
       icon: <Code className="w-5 h-5 text-purple-400" />,
       services: [
-        { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
-        { name: 'API Management', href: '/ai-api-management' },
+        { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
+        { name: 'AI API Management', href: '/ai-api-management' },
         { name: 'Database Solutions', href: '/database-solutions' },
         { name: 'Advanced Security Suite', href: '/advanced-security-suite' },
+        { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite' },
         { name: 'Performance Monitoring', href: '/performance-monitoring' },
         { name: 'DevOps Solutions', href: '/devops-solutions' }
       ]
@@ -70,7 +75,11 @@ const Footer: React.FC = () => {
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
         { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+        { name: 'AI Email Marketing Pro', href: '/ai-email-marketing-pro' },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
+        { name: 'AI Video Editor Pro', href: '/ai-video-editor-pro' }
       ]
     }
   ];
@@ -98,8 +107,8 @@ const Footer: React.FC = () => {
     <footer className="bg-slate-900 text-white relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
-        <div className="absolute inset-0 bg-cyber-grid opacity-10"></div>
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-cyan-500 animate-pulse"></div>
+        <div className="absolute inset-0 cyber-grid opacity-10"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-cyan-500 pulse-slow"></div>
       </div>
 
       <div className="relative z-10">
@@ -109,11 +118,11 @@ const Footer: React.FC = () => {
             {/* Company Info */}
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-2 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center neon-cyan">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
+                  <h3 className="text-xl font-bold text-white text-glow">Zion Tech Group</h3>
                   <p className="text-sm text-cyan-400">Advanced AI & IT Solutions</p>
                 </div>
               </div>

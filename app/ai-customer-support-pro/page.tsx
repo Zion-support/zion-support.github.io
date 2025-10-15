@@ -1,48 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  MessageCircle, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Brain, 
+  Headphones, 
   CheckCircle, 
   ArrowRight, 
   Star,
   Phone,
   Mail,
-  MapPin,
-  Download,
   Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Eye,
-  Filter,
-  Calendar,
-  Target,
-  Users,
-  Award,
-  TrendingUp,
-  Cpu,
-  Database,
-  BarChart3,
   Activity,
-  Headphones,
-  Bot,
+  Shield,
+  Brain,
+  Target,
+  Zap,
+  TrendingUp,
+  Users,
+  MessageSquare,
+  BarChart3,
   Clock,
-  Languages,
-  FileText,
-  Send,
+  Bot,
   ThumbsUp,
-  ThumbsDown,
-  AlertCircle,
-  CheckSquare,
-  XCircle,
-  ShoppingCart
+  AlertCircle
 } from 'lucide-react';
 
-const AiCustomerSupportProPage: React.FC = () => {
+const AiCustomerSupportProPage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -54,87 +35,87 @@ const AiCustomerSupportProPage: React.FC = () => {
       icon: <Bot className="w-6 h-6" />,
       title: "AI-Powered Chatbots",
       description: "Intelligent chatbots that understand context, provide instant responses, and escalate complex issues to human agents.",
-      benefits: ["24/7 availability", "Instant responses", "Context awareness", "Multi-language support"]
+      benefits: ["24/7 availability", "Multi-language support", "Context awareness", "Seamless handoff"]
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "Natural Language Processing",
-      description: "Advanced NLP capabilities that understand customer intent, sentiment, and provide personalized responses.",
-      benefits: ["Intent recognition", "Sentiment analysis", "Personalization", "Emotion detection"]
+      title: "Smart Ticket Routing",
+      description: "AI automatically categorizes and routes tickets to the right agent based on expertise and workload.",
+      benefits: ["Intelligent categorization", "Priority scoring", "Load balancing", "Expertise matching"]
     },
     {
-      icon: <Headphones className="w-6 h-6" />,
+      icon: <MessageSquare className="w-6 h-6" />,
       title: "Omnichannel Support",
-      description: "Unified customer support across all channels including chat, email, phone, and social media.",
-      benefits: ["Multi-channel integration", "Unified inbox", "Consistent experience", "Cross-channel history"]
+      description: "Unified support across email, chat, phone, social media, and self-service portals.",
+      benefits: ["Unified inbox", "Cross-channel history", "Consistent experience", "Channel optimization"]
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Analytics & Insights",
-      description: "Comprehensive analytics dashboard with customer satisfaction metrics, response times, and performance insights.",
-      benefits: ["Real-time metrics", "Customer satisfaction", "Performance tracking", "Trend analysis"]
+      title: "Advanced Analytics",
+      description: "Comprehensive insights into support performance, customer satisfaction, and agent productivity.",
+      benefits: ["Real-time metrics", "Satisfaction tracking", "Performance analytics", "Predictive insights"]
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "Bank-level security with encryption, access controls, and compliance with GDPR and other regulations.",
-      benefits: ["End-to-end encryption", "Role-based access", "GDPR compliance", "Audit logs"]
+      icon: <Target className="w-6 h-6" />,
+      title: "Knowledge Management",
+      description: "AI-powered knowledge base that learns from interactions and provides accurate, up-to-date information.",
+      benefits: ["Auto-updating content", "Smart search", "Content optimization", "Version control"]
     },
     {
       icon: <Zap className="w-6 h-6" />,
       title: "Automated Workflows",
-      description: "Smart automation that routes tickets, assigns agents, and triggers follow-up actions based on predefined rules.",
-      benefits: ["Smart routing", "Auto-assignment", "Escalation rules", "Workflow automation"]
+      description: "Streamline support processes with automated responses, escalations, and follow-ups.",
+      benefits: ["Workflow automation", "Auto-escalation", "Follow-up sequences", "Process optimization"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$99",
+      price: "$39",
       period: "month",
-      description: "Perfect for small businesses starting with AI customer support",
+      description: "Perfect for small businesses and startups",
       features: [
-        "Up to 1,000 conversations/month",
-        "Basic AI chatbot",
+        "Up to 3 agents",
+        "Unlimited tickets",
+        "Basic chatbot",
         "Email & chat support",
         "Basic analytics",
-        "Email support",
-        "5 agents max"
+        "Email support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$99",
       period: "month",
-      description: "Ideal for growing companies with advanced support needs",
+      description: "Ideal for growing businesses and teams",
       features: [
-        "Up to 10,000 conversations/month",
+        "Up to 10 agents",
+        "Unlimited tickets",
         "Advanced AI chatbot",
         "Omnichannel support",
         "Advanced analytics",
         "Priority support",
-        "25 agents max",
-        "Custom integrations",
+        "Custom workflows",
         "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$599",
+      price: "$299",
       period: "month",
-      description: "Complete solution for large organizations with complex requirements",
+      description: "Complete solution for large organizations",
       features: [
-        "Unlimited conversations",
-        "Custom AI training",
-        "All channels supported",
-        "Full analytics suite",
-        "24/7 dedicated support",
         "Unlimited agents",
-        "Custom development",
-        "On-premise deployment"
+        "Unlimited tickets",
+        "Full AI suite",
+        "Custom integrations",
+        "24/7 dedicated support",
+        "Advanced security",
+        "White-label options",
+        "Custom development"
       ],
       popular: false
     }
@@ -142,63 +123,36 @@ const AiCustomerSupportProPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "E-commerce Plus",
+      name: "Jennifer Adams",
+      company: "Tech Solutions Inc.",
       role: "Customer Success Manager",
-      content: "AI Customer Support Pro has reduced our response time by 80% and increased customer satisfaction by 45%. The AI chatbot handles 70% of inquiries automatically.",
+      content: "AI Customer Support Pro has reduced our response time by 70% and increased customer satisfaction by 40%. The AI chatbot handles 80% of inquiries automatically.",
       rating: 5
     },
     {
-      name: "David Thompson",
-      company: "TechStart Inc.",
-      role: "VP of Operations",
-      content: "The omnichannel support and analytics have given us unprecedented visibility into customer interactions. Our team productivity has increased significantly.",
+      name: "Robert Kim",
+      company: "E-commerce Plus",
+      role: "Support Director",
+      content: "The omnichannel support and smart routing have transformed our support operations. We can now handle 3x more tickets with the same team size.",
       rating: 5
     },
     {
-      name: "Sarah Johnson",
-      company: "Global Services Ltd",
-      role: "Head of Support",
-      content: "The AI-powered automation and smart routing have streamlined our support operations. We can now handle 3x more tickets with the same team size.",
+      name: "Maria Garcia",
+      company: "SaaS Solutions",
+      role: "VP of Customer Experience",
+      content: "The analytics and insights have given us unprecedented visibility into our support performance. We've identified and resolved bottlenecks we never knew existed.",
       rating: 5
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "E-commerce Support",
-      description: "Handle order inquiries, product questions, and returns with AI-powered assistance",
-      icon: <ShoppingCart className="w-8 h-8" />,
-      benefits: ["Order tracking", "Product recommendations", "Return processing", "Inventory queries"]
-    },
-    {
-      title: "SaaS Support",
-      description: "Provide technical support and onboarding assistance for software products",
-      icon: <Cpu className="w-8 h-8" />,
-      benefits: ["Technical troubleshooting", "Feature explanations", "Onboarding guidance", "Bug reporting"]
-    },
-    {
-      title: "Financial Services",
-      description: "Secure customer support for banking, insurance, and financial products",
-      icon: <Shield className="w-8 h-8" />,
-      benefits: ["Account inquiries", "Transaction support", "Compliance assistance", "Security alerts"]
-    },
-    {
-      title: "Healthcare Support",
-      description: "HIPAA-compliant patient support and appointment scheduling",
-      icon: <Activity className="w-8 h-8" />,
-      benefits: ["Appointment scheduling", "Insurance verification", "Prescription inquiries", "Emergency routing"]
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Customer Support Pro - Intelligent Support Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform your customer support with AI-powered chatbots, omnichannel support, and intelligent automation. Reduce response times and increase satisfaction." />
-        <meta name="keywords" content="AI customer support, chatbot, omnichannel support, customer service automation, NLP, customer satisfaction" />
+        <title>AI Customer Support Pro - Automated Support Solutions | Zion Tech Group</title>
+        <meta name="description" content="Transform your customer support with AI-powered chatbots, smart ticket routing, and omnichannel support. Reduce response time by 70% and increase satisfaction by 40%." />
+        <meta name="keywords" content="AI customer support, support automation, chatbots, ticket management, omnichannel support, customer service AI" />
         <meta property="og:title" content="AI Customer Support Pro - Zion Tech Group" />
-        <meta property="og:description" content="Intelligent customer support platform with AI-powered chatbots and omnichannel capabilities" />
+        <meta property="og:description" content="AI-powered customer support platform with automated chatbots and smart ticket routing" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-customer-support-pro" />
       </Helmet>
@@ -237,8 +191,8 @@ const AiCustomerSupportProPage: React.FC = () => {
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Revolutionize your customer support with AI-powered chatbots, omnichannel capabilities, 
-                  and intelligent automation. Reduce response times by 80% and increase satisfaction by 45%.
+                  Transform your customer support with AI-powered chatbots, smart ticket routing, 
+                  and omnichannel support. Reduce response time by 70% and increase satisfaction by 40%.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -266,7 +220,7 @@ const AiCustomerSupportProPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Intelligent Support Features
+                    Powerful Features
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -303,47 +257,8 @@ const AiCustomerSupportProPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Use Cases Section */}
-          <section className="py-20 bg-slate-900">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Perfect for Every Industry
-                  </span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Our AI customer support solution adapts to your specific industry needs and requirements.
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {useCases.map((useCase, index) => (
-                  <div 
-                    key={index} 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
-                  >
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
-                      <div className="text-white">{useCase.icon}</div>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
-                    <p className="text-gray-300 mb-6">{useCase.description}</p>
-                    <div className="space-y-2">
-                      {useCase.benefits.map((benefit, benefitIndex) => (
-                        <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
           {/* Pricing Section */}
-          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+          <section className="py-20 bg-slate-900">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -407,16 +322,16 @@ const AiCustomerSupportProPage: React.FC = () => {
           </section>
 
           {/* Testimonials Section */}
-          <section className="py-20 bg-slate-900">
+          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Customer Success Stories
+                    What Our Clients Say
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  See how companies are transforming their customer support with AI Customer Support Pro.
+                  Join thousands of businesses that have transformed their customer support with our AI platform.
                 </p>
               </div>
               
@@ -446,14 +361,15 @@ const AiCustomerSupportProPage: React.FC = () => {
           </section>
 
           {/* CTA Section */}
-          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+          <section className="py-20 bg-slate-900">
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Ready to Transform Your Support?
+                  Ready to Transform Your Customer Support?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Join thousands of companies that have revolutionized their customer support with AI-powered automation and intelligent chatbots.
+                  Start your free trial today and see how AI can revolutionize your support operations. 
+                  No credit card required.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -461,14 +377,14 @@ const AiCustomerSupportProPage: React.FC = () => {
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    Call +1 302 464 0950
+                    Start Free Trial
                   </a>
                   <a
                     href="mailto:kleber@ziontechgroup.com"
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                   >
                     <Mail className="w-5 h-5 mr-2" />
-                    Get Free Trial
+                    Schedule Demo
                   </a>
                 </div>
               </div>

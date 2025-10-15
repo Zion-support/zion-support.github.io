@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Share2, 
+  Video, 
   CheckCircle, 
   ArrowRight, 
   Star,
@@ -17,13 +17,13 @@ import {
   Users,
   Calendar,
   BarChart3,
-  MessageSquare,
-  Image,
-  Video,
-  Hash
+  Scissors,
+  Palette,
+  Music,
+  Camera
 } from 'lucide-react';
 
-const AiSocialMediaManagerPage = () => {
+const AiVideoEditorProPage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -33,72 +33,72 @@ const AiSocialMediaManagerPage = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI Content Generation",
-      description: "Generate engaging posts, captions, and hashtags using advanced AI algorithms tailored to your brand voice.",
-      benefits: ["Brand voice consistency", "Trending hashtag suggestions", "Content calendar automation", "Multi-platform optimization"]
+      title: "AI Auto-Editing",
+      description: "Automatically edit videos with AI that understands pacing, transitions, and visual flow for professional results.",
+      benefits: ["Smart cut detection", "Auto-transitions", "Pacing optimization", "Scene recognition"]
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Analytics & Insights",
-      description: "Comprehensive analytics dashboard with real-time performance metrics and competitor analysis.",
-      benefits: ["Real-time metrics", "Engagement tracking", "ROI analysis", "Competitor benchmarking"]
+      icon: <Scissors className="w-6 h-6" />,
+      title: "Intelligent Cutting",
+      description: "AI-powered cutting that removes filler words, awkward pauses, and unwanted content automatically.",
+      benefits: ["Filler word removal", "Silence detection", "Content filtering", "Smooth cuts"]
     },
     {
-      icon: <Calendar className="w-6 h-6" />,
-      title: "Smart Scheduling",
-      description: "AI-powered optimal posting times based on your audience behavior and platform algorithms.",
-      benefits: ["Optimal timing", "Cross-platform scheduling", "Content queue management", "Automated posting"]
+      icon: <Palette className="w-6 h-6" />,
+      title: "Auto Color Correction",
+      description: "Professional color grading and correction applied automatically based on content analysis.",
+      benefits: ["Auto color grading", "Exposure correction", "White balance", "Style matching"]
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Audience Intelligence",
-      description: "Deep audience insights and segmentation to create targeted content that resonates with your followers.",
-      benefits: ["Audience segmentation", "Demographic analysis", "Interest mapping", "Behavior prediction"]
+      icon: <Music className="w-6 h-6" />,
+      title: "Smart Audio Enhancement",
+      description: "AI-powered audio processing for noise reduction, level balancing, and music synchronization.",
+      benefits: ["Noise reduction", "Audio leveling", "Music sync", "Voice enhancement"]
     },
     {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: "Engagement Automation",
-      description: "Automated responses, comment management, and community engagement to maintain active social presence.",
-      benefits: ["Auto-responses", "Comment moderation", "Community management", "Sentiment analysis"]
+      icon: <Target className="w-6 h-6" />,
+      title: "Content Optimization",
+      description: "Optimize videos for different platforms with AI that adjusts format, length, and style automatically.",
+      benefits: ["Platform optimization", "Format conversion", "Aspect ratio adjustment", "Quality optimization"]
     },
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Growth Optimization",
-      description: "AI-driven strategies to increase followers, engagement rates, and overall social media performance.",
-      benefits: ["Growth strategies", "Engagement optimization", "Viral content prediction", "Performance forecasting"]
+      icon: <Zap className="w-6 h-6" />,
+      title: "One-Click Templates",
+      description: "Professional video templates that adapt to your content with AI-powered customization.",
+      benefits: ["Template library", "Auto-customization", "Brand consistency", "Quick deployment"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$49",
+      price: "$29",
       period: "month",
-      description: "Perfect for small businesses and influencers",
+      description: "Perfect for content creators and small businesses",
       features: [
-        "3 social media accounts",
-        "50 posts per month",
-        "Basic analytics",
-        "Content calendar",
+        "Up to 10 videos/month",
+        "Basic AI editing",
+        "HD export",
+        "Template library",
         "Email support",
-        "5GB media storage"
+        "5GB storage"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$99",
+      price: "$79",
       period: "month",
-      description: "Ideal for growing businesses and agencies",
+      description: "Ideal for professional creators and agencies",
       features: [
-        "10 social media accounts",
-        "Unlimited posts",
-        "Advanced analytics",
-        "AI content generation",
+        "Unlimited videos",
+        "Advanced AI editing",
+        "4K export",
+        "Premium templates",
         "Priority support",
-        "50GB media storage",
+        "100GB storage",
         "Team collaboration",
-        "White-label options"
+        "API access"
       ],
       popular: true
     },
@@ -108,14 +108,14 @@ const AiSocialMediaManagerPage = () => {
       period: "month",
       description: "Complete solution for large organizations",
       features: [
-        "Unlimited accounts",
-        "Unlimited posts",
+        "Unlimited videos",
         "Full AI suite",
-        "Custom integrations",
+        "8K export",
+        "Custom templates",
         "24/7 dedicated support",
         "Unlimited storage",
-        "Advanced security",
-        "API access"
+        "White-label options",
+        "Custom development"
       ],
       popular: false
     }
@@ -123,24 +123,24 @@ const AiSocialMediaManagerPage = () => {
 
   const testimonials = [
     {
-      name: "Jessica Martinez",
-      company: "Digital Marketing Pro",
-      role: "Social Media Manager",
-      content: "AI Social Media Manager has increased our engagement by 300% and saved us 20 hours per week. The AI content suggestions are spot-on!",
+      name: "Alex Thompson",
+      company: "Content Creator Pro",
+      role: "Video Producer",
+      content: "AI Video Editor Pro has cut my editing time by 80%. The AI auto-editing produces results that would take me hours to achieve manually. It's like having a professional editor on demand.",
       rating: 5
     },
     {
-      name: "David Kim",
-      company: "E-commerce Plus",
-      role: "Marketing Director",
-      content: "The analytics and audience insights have helped us understand our customers better than ever. ROI increased by 250% in just 3 months.",
+      name: "Sarah Martinez",
+      company: "Marketing Agency",
+      role: "Creative Director",
+      content: "The platform has revolutionized our video production workflow. We can now produce 5x more content with the same team. The quality is consistently professional.",
       rating: 5
     },
     {
-      name: "Sarah Thompson",
-      company: "Creative Agency Co.",
-      role: "Account Manager",
-      content: "Managing multiple client accounts is now effortless. The automation features and smart scheduling have revolutionized our workflow.",
+      name: "David Chen",
+      company: "E-learning Solutions",
+      role: "Video Production Manager",
+      content: "The AI cutting and audio enhancement features have made our educational videos much more engaging. Students love the improved quality and pacing.",
       rating: 5
     }
   ];
@@ -148,13 +148,13 @@ const AiSocialMediaManagerPage = () => {
   return (
     <>
       <Helmet>
-        <title>AI Social Media Manager - Automated Social Media Management | Zion Tech Group</title>
-        <meta name="description" content="Transform your social media presence with AI-powered content generation, scheduling, analytics, and engagement automation. Grow your audience and increase engagement." />
-        <meta name="keywords" content="AI social media, social media automation, content generation, social media analytics, engagement automation, social media management" />
-        <meta property="og:title" content="AI Social Media Manager - Zion Tech Group" />
-        <meta property="og:description" content="AI-powered social media management platform with automated content generation and analytics" />
+        <title>AI Video Editor Pro - Automated Video Editing | Zion Tech Group</title>
+        <meta name="description" content="Transform your video production with AI-powered editing, auto-cutting, color correction, and audio enhancement. Cut editing time by 80% while maintaining professional quality." />
+        <meta name="keywords" content="AI video editing, video automation, auto-editing, video production, color correction, audio enhancement, video templates" />
+        <meta property="og:title" content="AI Video Editor Pro - Zion Tech Group" />
+        <meta property="og:description" content="AI-powered video editing platform with automated cutting and professional effects" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-social-media-manager" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-video-editor-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -183,16 +183,16 @@ const AiSocialMediaManagerPage = () => {
               <div className={`text-center max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                   <Star className="w-4 h-4 mr-2" />
-                  #1 AI Social Media Platform
+                  #1 AI Video Editing Platform
                 </div>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    AI Social Media Manager
+                    AI Video Editor Pro
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Transform your social media presence with AI-powered content generation, smart scheduling, 
-                  and automated engagement. Grow your audience and increase engagement by 300%.
+                  Transform your video production with AI-powered editing, auto-cutting, color correction, 
+                  and audio enhancement. Cut editing time by 80% while maintaining professional quality.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -224,7 +224,7 @@ const AiSocialMediaManagerPage = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Everything you need to dominate social media with AI-powered automation and insights.
+                  Everything you need to create professional videos with AI-powered automation and effects.
                 </p>
               </div>
               
@@ -267,7 +267,7 @@ const AiSocialMediaManagerPage = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the plan that fits your social media needs. All plans include our core AI features.
+                  Choose the plan that fits your video production needs. All plans include our core AI features.
                 </p>
               </div>
               
@@ -331,7 +331,7 @@ const AiSocialMediaManagerPage = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Join thousands of businesses that have transformed their social media presence with our AI platform.
+                  Join thousands of creators who have transformed their video production with our AI platform.
                 </p>
               </div>
               
@@ -365,10 +365,10 @@ const AiSocialMediaManagerPage = () => {
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Ready to Transform Your Social Media?
+                  Ready to Transform Your Video Production?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Start your free trial today and see how AI can revolutionize your social media strategy. 
+                  Start your free trial today and see how AI can revolutionize your video editing workflow. 
                   No credit card required.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -396,4 +396,4 @@ const AiSocialMediaManagerPage = () => {
   );
 };
 
-export default AiSocialMediaManagerPage;
+export default AiVideoEditorProPage;
