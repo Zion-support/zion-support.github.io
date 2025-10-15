@@ -461,6 +461,374 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/workflow-automator'
       }
+    },
+    {
+      id: 'ai-sales-predictor',
+      title: 'Zion AI Sales Predictor Pro',
+      description: 'Advanced AI-powered sales forecasting and revenue prediction platform with machine learning algorithms',
+      shortDescription: 'Predict sales with AI-powered forecasting',
+      icon: '📈',
+      features: [
+        'Sales Forecasting',
+        'Revenue Prediction',
+        'Customer Behavior Analysis',
+        'Market Trend Analysis',
+        'Lead Scoring',
+        'Pipeline Management',
+        'Performance Analytics',
+        'Custom Models',
+        'Real-time Insights',
+        'Integration APIs'
+      ],
+      pricing: {
+        basic: 199,
+        pro: 499,
+        enterprise: 1299
+      },
+      benefits: [
+        'Accurate sales predictions',
+        'Better resource planning',
+        'Improved revenue forecasting',
+        'Data-driven decisions',
+        'Reduced forecasting errors',
+        'Competitive advantage'
+      ],
+      useCases: [
+        'Sales planning',
+        'Revenue forecasting',
+        'Budget planning',
+        'Resource allocation',
+        'Performance tracking',
+        'Strategic planning'
+      ],
+      marketPrice: '$199 - $1,299/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-sales-predictor'
+      }
+    },
+    {
+      id: 'ai-financial-forecaster',
+      title: 'Zion AI Financial Forecaster',
+      description: 'Intelligent financial forecasting and budgeting platform with AI-powered insights and predictions',
+      shortDescription: 'AI-powered financial forecasting and budgeting',
+      icon: '💰',
+      features: [
+        'Financial Forecasting',
+        'Budget Planning',
+        'Cash Flow Analysis',
+        'Risk Assessment',
+        'Investment Analysis',
+        'Scenario Planning',
+        'Financial Modeling',
+        'Compliance Monitoring',
+        'Real-time Reporting',
+        'Integration Capabilities'
+      ],
+      pricing: {
+        basic: 299,
+        pro: 799,
+        enterprise: 1999
+      },
+      benefits: [
+        'Accurate financial predictions',
+        'Better budget management',
+        'Risk mitigation',
+        'Improved cash flow',
+        'Strategic planning',
+        'Compliance assurance'
+      ],
+      useCases: [
+        'Financial planning',
+        'Budget management',
+        'Investment analysis',
+        'Risk assessment',
+        'Cash flow optimization',
+        'Strategic decision making'
+      ],
+      marketPrice: '$299 - $1,999/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-financial-forecaster'
+      }
+    },
+    {
+      id: 'ai-customer-churn-predictor',
+      title: 'Zion AI Customer Churn Predictor Pro',
+      description: 'Advanced customer retention platform with AI-powered churn prediction and retention strategies',
+      shortDescription: 'Predict and prevent customer churn with AI',
+      icon: '🔄',
+      features: [
+        'Churn Prediction',
+        'Customer Segmentation',
+        'Retention Strategies',
+        'Behavioral Analysis',
+        'Risk Scoring',
+        'Automated Alerts',
+        'Campaign Management',
+        'Performance Tracking',
+        'Integration APIs',
+        'Custom Models'
+      ],
+      pricing: {
+        basic: 149,
+        pro: 399,
+        enterprise: 999
+      },
+      benefits: [
+        'Reduced customer churn',
+        'Improved retention rates',
+        'Better customer insights',
+        'Automated interventions',
+        'Increased revenue',
+        'Data-driven strategies'
+      ],
+      useCases: [
+        'Customer retention',
+        'Churn prevention',
+        'Customer success',
+        'Revenue protection',
+        'Lifetime value optimization',
+        'Subscription management'
+      ],
+      marketPrice: '$149 - $999/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-customer-churn-predictor'
+      }
+    },
+    {
+      id: 'ai-document-analyzer',
+      title: 'Zion AI Document Analyzer Pro',
+      description: 'Intelligent document processing and analysis platform with OCR, NLP, and automated insights',
+      shortDescription: 'AI-powered document analysis and processing',
+      icon: '📄',
+      features: [
+        'OCR Processing',
+        'Document Classification',
+        'Text Extraction',
+        'Sentiment Analysis',
+        'Entity Recognition',
+        'Automated Summarization',
+        'Compliance Checking',
+        'Version Control',
+        'Search & Retrieval',
+        'Integration APIs'
+      ],
+      pricing: {
+        basic: 79,
+        pro: 199,
+        enterprise: 599
+      },
+      benefits: [
+        'Automated document processing',
+        'Improved accuracy',
+        'Time savings',
+        'Better organization',
+        'Compliance assurance',
+        'Enhanced searchability'
+      ],
+      useCases: [
+        'Document management',
+        'Compliance monitoring',
+        'Content analysis',
+        'Legal document review',
+        'Research automation',
+        'Knowledge management'
+      ],
+      marketPrice: '$79 - $599/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-document-analyzer'
+      }
+    },
+    {
+      id: 'ai-meeting-transcriber',
+      title: 'Zion AI Meeting Transcriber Pro',
+      description: 'Advanced meeting transcription and analysis platform with real-time transcription and AI insights',
+      shortDescription: 'AI-powered meeting transcription and analysis',
+      icon: '🎙️',
+      features: [
+        'Real-time Transcription',
+        'Speaker Identification',
+        'Action Item Extraction',
+        'Meeting Summaries',
+        'Sentiment Analysis',
+        'Multi-language Support',
+        'Integration APIs',
+        'Cloud Storage',
+        'Search & Retrieval',
+        'Analytics Dashboard'
+      ],
+      pricing: {
+        basic: 39,
+        pro: 99,
+        enterprise: 299
+      },
+      benefits: [
+        'Accurate transcriptions',
+        'Time savings',
+        'Better meeting insights',
+        'Improved follow-up',
+        'Accessibility features',
+        'Knowledge retention'
+      ],
+      useCases: [
+        'Meeting documentation',
+        'Accessibility support',
+        'Content creation',
+        'Training records',
+        'Legal documentation',
+        'Research analysis'
+      ],
+      marketPrice: '$39 - $299/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-meeting-transcriber'
+      }
+    },
+    {
+      id: 'ai-customer-sentiment-tracker',
+      title: 'Zion AI Customer Sentiment Tracker',
+      description: 'Real-time customer sentiment analysis platform with AI-powered insights and automated monitoring',
+      shortDescription: 'Track customer sentiment with AI insights',
+      icon: '😊',
+      features: [
+        'Sentiment Analysis',
+        'Real-time Monitoring',
+        'Multi-channel Tracking',
+        'Trend Analysis',
+        'Alert System',
+        'Custom Dashboards',
+        'Integration APIs',
+        'Historical Data',
+        'Predictive Insights',
+        'Action Recommendations'
+      ],
+      pricing: {
+        basic: 59,
+        pro: 149,
+        enterprise: 399
+      },
+      benefits: [
+        'Real-time insights',
+        'Proactive customer care',
+        'Improved satisfaction',
+        'Brand reputation management',
+        'Data-driven decisions',
+        'Competitive advantage'
+      ],
+      useCases: [
+        'Customer feedback analysis',
+        'Brand monitoring',
+        'Product feedback',
+        'Service quality tracking',
+        'Market research',
+        'Crisis management'
+      ],
+      marketPrice: '$59 - $399/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-customer-sentiment-tracker'
+      }
+    },
+    {
+      id: 'ai-content-moderator',
+      title: 'Zion AI Content Moderator Pro',
+      description: 'Advanced content moderation platform with AI-powered detection and automated filtering',
+      shortDescription: 'AI-powered content moderation and filtering',
+      icon: '🛡️',
+      features: [
+        'Content Detection',
+        'Automated Filtering',
+        'Multi-language Support',
+        'Image Analysis',
+        'Video Processing',
+        'Custom Rules',
+        'Real-time Monitoring',
+        'Integration APIs',
+        'Analytics Dashboard',
+        'Compliance Reporting'
+      ],
+      pricing: {
+        basic: 89,
+        pro: 229,
+        enterprise: 699
+      },
+      benefits: [
+        'Automated moderation',
+        'Reduced manual work',
+        'Consistent enforcement',
+        'Scalable solution',
+        'Compliance assurance',
+        'Cost efficiency'
+      ],
+      useCases: [
+        'Social media moderation',
+        'User-generated content',
+        'Community management',
+        'Compliance monitoring',
+        'Brand protection',
+        'Platform safety'
+      ],
+      marketPrice: '$89 - $699/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-content-moderator'
+      }
+    },
+    {
+      id: 'ai-task-scheduler',
+      title: 'Zion AI Task Scheduler Pro',
+      description: 'Intelligent task scheduling and project management platform with AI-powered optimization',
+      shortDescription: 'AI-powered task scheduling and optimization',
+      icon: '⏰',
+      features: [
+        'Smart Scheduling',
+        'Resource Optimization',
+        'Deadline Management',
+        'Priority Analysis',
+        'Team Coordination',
+        'Progress Tracking',
+        'Automated Reminders',
+        'Integration APIs',
+        'Analytics Dashboard',
+        'Custom Workflows'
+      ],
+      pricing: {
+        basic: 29,
+        pro: 79,
+        enterprise: 199
+      },
+      benefits: [
+        'Optimized scheduling',
+        'Improved productivity',
+        'Better resource utilization',
+        'Reduced conflicts',
+        'Automated management',
+        'Enhanced efficiency'
+      ],
+      useCases: [
+        'Project management',
+        'Team scheduling',
+        'Resource planning',
+        'Deadline optimization',
+        'Workflow automation',
+        'Productivity enhancement'
+      ],
+      marketPrice: '$29 - $199/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-task-scheduler'
+      }
     }
   ],
   itSolutions: [
@@ -738,6 +1106,282 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/database-management'
+      }
+    },
+    {
+      id: 'blockchain-solutions',
+      title: 'Blockchain & Web3 Solutions',
+      description: 'Comprehensive blockchain development and Web3 solutions including smart contracts, DeFi, and NFT platforms',
+      shortDescription: 'Build the future with blockchain technology',
+      icon: '⛓️',
+      features: [
+        'Smart Contract Development',
+        'DeFi Platform Development',
+        'NFT Marketplace Creation',
+        'Blockchain Integration',
+        'Cryptocurrency Wallets',
+        'DApp Development',
+        'Token Economics',
+        'Security Audits',
+        'Cross-chain Solutions',
+        'Web3 Integration'
+      ],
+      pricing: {
+        basic: 10000,
+        pro: 50000,
+        enterprise: 200000
+      },
+      benefits: [
+        'Decentralized solutions',
+        'Enhanced security',
+        'Transparency & trust',
+        'Reduced intermediaries',
+        'Global accessibility',
+        'Future-proof technology'
+      ],
+      useCases: [
+        'DeFi applications',
+        'NFT marketplaces',
+        'Supply chain tracking',
+        'Digital identity',
+        'Smart contracts',
+        'Tokenization'
+      ],
+      marketPrice: '$10,000 - $200,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/blockchain-solutions'
+      }
+    },
+    {
+      id: 'iot-solutions',
+      title: 'IoT & Smart Device Solutions',
+      description: 'End-to-end IoT solutions including device development, connectivity, data management, and analytics',
+      shortDescription: 'Connect and manage smart devices with IoT',
+      icon: '🌐',
+      features: [
+        'IoT Device Development',
+        'Sensor Integration',
+        'Data Collection & Processing',
+        'Real-time Monitoring',
+        'Predictive Maintenance',
+        'Edge Computing',
+        'Cloud Integration',
+        'Security Implementation',
+        'Analytics Dashboard',
+        'Mobile Applications'
+      ],
+      pricing: {
+        basic: 5000,
+        pro: 25000,
+        enterprise: 100000
+      },
+      benefits: [
+        'Operational efficiency',
+        'Real-time insights',
+        'Predictive maintenance',
+        'Cost reduction',
+        'Automated processes',
+        'Data-driven decisions'
+      ],
+      useCases: [
+        'Smart manufacturing',
+        'Environmental monitoring',
+        'Asset tracking',
+        'Smart cities',
+        'Healthcare monitoring',
+        'Agriculture automation'
+      ],
+      marketPrice: '$5,000 - $100,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/iot-solutions'
+      }
+    },
+    {
+      id: 'devops-automation',
+      title: 'DevOps & Automation Solutions',
+      description: 'Comprehensive DevOps services including CI/CD pipelines, infrastructure automation, and monitoring solutions',
+      shortDescription: 'Automate and optimize your development workflow',
+      icon: '⚙️',
+      features: [
+        'CI/CD Pipeline Setup',
+        'Infrastructure as Code',
+        'Container Orchestration',
+        'Monitoring & Alerting',
+        'Automated Testing',
+        'Deployment Automation',
+        'Security Scanning',
+        'Performance Optimization',
+        'Disaster Recovery',
+        'Team Training'
+      ],
+      pricing: {
+        basic: 2000,
+        pro: 8000,
+        enterprise: 25000
+      },
+      benefits: [
+        'Faster deployments',
+        'Reduced errors',
+        'Improved reliability',
+        'Better collaboration',
+        'Cost optimization',
+        'Scalable operations'
+      ],
+      useCases: [
+        'Software development',
+        'Application deployment',
+        'Infrastructure management',
+        'Quality assurance',
+        'Performance monitoring',
+        'Team productivity'
+      ],
+      marketPrice: '$2,000 - $25,000/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/devops-automation'
+      }
+    },
+    {
+      id: 'api-development',
+      title: 'API Development & Integration',
+      description: 'Custom API development, third-party integrations, and API management solutions for seamless connectivity',
+      shortDescription: 'Build powerful APIs and integrations',
+      icon: '🔗',
+      features: [
+        'RESTful API Development',
+        'GraphQL Implementation',
+        'Third-party Integrations',
+        'API Documentation',
+        'Rate Limiting & Security',
+        'API Gateway Setup',
+        'Webhook Development',
+        'Data Synchronization',
+        'API Testing',
+        'Performance Optimization'
+      ],
+      pricing: {
+        basic: 3000,
+        pro: 12000,
+        enterprise: 40000
+      },
+      benefits: [
+        'Seamless integrations',
+        'Improved efficiency',
+        'Better data flow',
+        'Reduced development time',
+        'Enhanced security',
+        'Scalable architecture'
+      ],
+      useCases: [
+        'System integration',
+        'Data synchronization',
+        'Third-party services',
+        'Mobile app backends',
+        'E-commerce platforms',
+        'Business automation'
+      ],
+      marketPrice: '$3,000 - $40,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/api-development'
+      }
+    },
+    {
+      id: 'network-infrastructure',
+      title: 'Network Infrastructure Solutions',
+      description: 'Comprehensive network design, implementation, and management solutions for optimal connectivity and security',
+      shortDescription: 'Build robust and secure network infrastructure',
+      icon: '🌐',
+      features: [
+        'Network Design & Planning',
+        'Wireless Solutions',
+        'Security Implementation',
+        'Performance Optimization',
+        'Disaster Recovery',
+        'Monitoring & Management',
+        'VPN Solutions',
+        'Load Balancing',
+        'Network Segmentation',
+        '24/7 Support'
+      ],
+      pricing: {
+        basic: 1500,
+        pro: 6000,
+        enterprise: 20000
+      },
+      benefits: [
+        'Reliable connectivity',
+        'Enhanced security',
+        'Improved performance',
+        'Reduced downtime',
+        'Scalable solutions',
+        'Cost optimization'
+      ],
+      useCases: [
+        'Office networks',
+        'Data centers',
+        'Remote work solutions',
+        'Branch connectivity',
+        'Cloud integration',
+        'Security compliance'
+      ],
+      marketPrice: '$1,500 - $20,000/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/network-infrastructure'
+      }
+    },
+    {
+      id: 'digital-transformation',
+      title: 'Digital Transformation Consulting',
+      description: 'Comprehensive digital transformation services to modernize your business processes and technology stack',
+      shortDescription: 'Transform your business for the digital age',
+      icon: '🚀',
+      features: [
+        'Digital Strategy Development',
+        'Process Automation',
+        'Technology Modernization',
+        'Change Management',
+        'Training & Support',
+        'ROI Analysis',
+        'Implementation Planning',
+        'Performance Monitoring',
+        'Continuous Improvement',
+        'Best Practices'
+      ],
+      pricing: {
+        basic: 5000,
+        pro: 20000,
+        enterprise: 75000
+      },
+      benefits: [
+        'Modernized operations',
+        'Improved efficiency',
+        'Competitive advantage',
+        'Better customer experience',
+        'Cost reduction',
+        'Future-ready business'
+      ],
+      useCases: [
+        'Process modernization',
+        'Technology upgrades',
+        'Workflow optimization',
+        'Customer experience',
+        'Operational efficiency',
+        'Strategic planning'
+      ],
+      marketPrice: '$5,000 - $75,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/digital-transformation'
       }
     }
   ]

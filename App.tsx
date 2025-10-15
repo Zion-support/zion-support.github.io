@@ -32,6 +32,8 @@ const MobileDevelopmentPage = lazy(() => import('./app/mobile-development/page')
 const DatabaseManagementPage = lazy(() => import('./app/database-management/page'));
 const NetworkInfrastructurePage = lazy(() => import('./app/network-infrastructure/page'));
 const CookiesPage = lazy(() => import('./app/cookies/page'));
+const AISalesPredictorPage = lazy(() => import('./app/ai-sales-predictor/page'));
+const BlockchainSolutionsPage = lazy(() => import('./app/blockchain-solutions/page'));
 
 // Import components
 import Navigation from './app/components/Navigation';
@@ -100,6 +102,8 @@ export default function App() {
                   <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
                   <Route path="/database-management" element={<DatabaseManagementPage />} />
                   <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                  <Route path="/ai-sales-predictor" element={<AISalesPredictorPage />} />
+                  <Route path="/blockchain-solutions" element={<BlockchainSolutionsPage />} />
                   
                   {/* Company Pages */}
                   <Route path="/team" element={<TeamPage />} />
