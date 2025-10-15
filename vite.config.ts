@@ -1,52 +1,87 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      // Enable React Fast Refresh
+      fastRefresh: true,
+      // Optimize JSX runtime
+      jsxRuntime: 'automatic',
+    })
+  ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './app'),
+      '@components': path.resolve(__dirname, './app/components'),
+      '@pages': path.resolve(__dirname, './app/pages'),
+      '@utils': path.resolve(__dirname, './utils'),
+      '@types': path.resolve(__dirname, './types'),
+    },
+  },
   build: {
     outDir: 'dist',
-    sourcemap: true,
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
+    sourcemap: false,
+    minify: 'esbuild',
+    target: 'es2020',
+    cssCodeSplit: true,
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['@heroicons/react', 'framer-motion', 'lucide-react'],
-          utils: ['clsx', 'tailwind-merge']
-        }
-      }
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react';
+            }
+            if (id.includes('react-router')) {
+              return 'router';
+            }
+            if (id.includes('@heroicons') || id.includes('lucide-react')) {
+              return 'icons';
+            }
+            if (id.includes('framer-motion')) {
+              return 'motion';
+            }
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'utils';
+            }
+            return 'vendor';
+          }
+        },
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
+      },
     },
-    chunkSizeWarningLimit: 1000,
+    // Optimize chunk size
+    chunkSizeWarningLimit: 500,
+    reportCompressedSize: false,
   },
   server: {
     port: 3000,
     open: true,
-    hmr: {
-      overlay: false
-    }
+    host: true,
+    cors: true,
   },
+  preview: {
+    port: 4173,
+    open: true,
+    host: true,
+  },
+  // Optimize dependencies
   optimizeDeps: {
     include: [
-      'react', 
-      'react-dom', 
+      'react',
+      'react-dom',
       'react-router-dom',
-      '@heroicons/react',
+      '@heroicons/react/24/outline',
       'framer-motion',
-      'lucide-react'
-    ]
+      'clsx',
+      'tailwind-merge'
+    ],
   },
-  esbuild: {
-    drop: ['console', 'debugger'],
-  },
+  // CSS optimization
   css: {
     devSourcemap: true,
-  }
-})
+  },
+});

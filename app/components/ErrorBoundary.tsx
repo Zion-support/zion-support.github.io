@@ -1,33 +1,43 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { handleError, logError } from '../utils/errorHandler';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
-  error?: Error;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null
+    };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return {
+      hasError: true,
+      error,
+      errorInfo: null
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    const appError = handleError(error);
-    logError(appError, 'ErrorBoundary');
-    
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+    this.setState({
+      error,
+      errorInfo
+    });
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
   }
 
@@ -50,20 +60,12 @@ class ErrorBoundary extends Component<Props, State> {
               <p className="mt-2 text-sm text-gray-500">
                 {this.state.error?.message || 'An unexpected error occurred'}
               </p>
-              <div className="mt-4 space-x-3">
-                <button
-                  onClick={() => window.location.reload()}
-                  className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                  Reload Page
-                </button>
-                <button
-                  onClick={() => this.setState({ hasError: false, error: undefined })}
-                  className="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                  Try Again
-                </button>
-              </div>
+              <button
+                onClick={() => window.location.reload()}
+                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                Reload Page
+              </button>
             </div>
           </div>
         </div>

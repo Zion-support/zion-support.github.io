@@ -1,277 +1,232 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
+import {
+  Bars3Icon,
+  XMarkIcon,
+  HomeIcon,
+  InformationCircleIcon,
+  PhoneIcon,
+  DocumentTextIcon,
+  AcademicCapIcon,
+  QuestionMarkCircleIcon,
+  ShieldCheckIcon,
+  CurrencyDollarIcon,
+  CogIcon,
+  ChevronDownIcon,
+  GlobeAltIcon,
+  CloudIcon,
+  CpuChipIcon,
+  SignalIcon,
+  UserGroupIcon,
+  EnvelopeIcon,
+  ShareIcon,
+  ChatBubbleLeftRightIcon,
+  ChartBarIcon,
+  EyeIcon,
+  CircleStackIcon,
+  CodeBracketIcon,
+  DevicePhoneMobileIcon,
+  UserPlusIcon,
+  CheckCircleIcon
+} from '@heroicons/react/24/outline';
 
-const Navigation: React.FC = () => {
+interface NavigationProps {
+  onSidebarToggle?: () => void;
+}
+
+const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+  const location = useLocation();
+
+  const navigation = [
+    { name: 'Home', href: '/', icon: HomeIcon },
+    { name: 'About', href: '/about', icon: InformationCircleIcon },
+    {
+      name: 'AI Services',
+      href: '/ai-solutions',
+      icon: CpuChipIcon,
+      submenu: [
+        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon },
+        { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: EnvelopeIcon },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },
+        { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro', icon: CogIcon },
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', icon: ChartBarIcon },
+        { name: 'AI Content Generation', href: '/ai-content-generation-pro', icon: DocumentTextIcon },
+        { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: EyeIcon },
+        { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon }
+      ]
+    },
+    {
+      name: 'Micro SaaS',
+      href: '/micro-saas-solutions',
+      icon: GlobeAltIcon,
+      submenu: [
+        { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
+        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
+        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
+        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
+        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },
+        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },
+        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon }
+      ]
+    },
+    {
+      name: 'IT Solutions',
+      href: '/it-solutions',
+      icon: CogIcon,
+      submenu: [
+        { name: 'IT Solutions Overview', href: '/it-solutions', icon: CogIcon },
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
+        { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: ShieldCheckIcon },
+        { name: 'Web Development', href: '/web-development', icon: CodeBracketIcon },
+        { name: 'Mobile App Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
+        { name: 'Database Management', href: '/database-management', icon: CircleStackIcon },
+        { name: 'Network Infrastructure', href: '/network-infrastructure', icon: SignalIcon },
+        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
+      ]
+    },
+    {
+      name: 'Resources',
+      href: '#',
+      icon: DocumentTextIcon,
+      submenu: [
+        { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
+        { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
+        { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },
+        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
+        { name: 'API Documentation', href: '/api-docs', icon: CodeBracketIcon },
+        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }
+      ]
+    },
+    {
+      name: 'Company',
+      href: '#',
+      icon: UserGroupIcon,
+      submenu: [
+        { name: 'About Us', href: '/about', icon: InformationCircleIcon },
+        { name: 'Our Team', href: '/team', icon: UserGroupIcon },
+        { name: 'Careers', href: '/careers', icon: UserGroupIcon },
+        { name: 'Partnerships', href: '/partnerships', icon: UserPlusIcon },
+        { name: 'Contact', href: '/contact', icon: PhoneIcon }
+      ]
+    },
+    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
+    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
+  ];
+
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
+
+  const toggleServicesMenu = () => {
+    setIsServicesOpen(!isServicesOpen);
+    setIsSolutionsOpen(false);
+    setIsResourcesOpen(false);
+    setIsCompanyOpen(false);
+  };
+
+  const toggleSolutionsMenu = () => {
+    setIsSolutionsOpen(!isSolutionsOpen);
+    setIsServicesOpen(false);
+    setIsResourcesOpen(false);
+    setIsCompanyOpen(false);
+  };
+
+  const toggleResourcesMenu = () => {
+    setIsResourcesOpen(!isResourcesOpen);
+    setIsServicesOpen(false);
+    setIsSolutionsOpen(false);
+    setIsCompanyOpen(false);
+  };
+
+  const toggleCompanyMenu = () => {
+    setIsCompanyOpen(!isCompanyOpen);
+    setIsServicesOpen(false);
+    setIsSolutionsOpen(false);
+    setIsResourcesOpen(false);
+  };
 
   return (
-    <nav className="glass-card fixed top-0 left-0 right-0 z-50 backdrop-blur-md">
+    <nav className="bg-slate-900 border-b border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
+        <div className="flex justify-between h-16">
+          {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
-              <h1 className="text-3xl font-bold text-gradient holographic font-['Orbitron']">ZION TECH</h1>
-            </Link>
-          </div>
-          
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-cyan-400 px-4 py-2 rounded-md text-sm font-medium transition-colors neon-glow">
-              Home
-            </Link>
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 px-4 py-2 rounded-md text-sm font-medium transition-colors">
-              About
-            </Link>
-            
-            {/* Services Dropdown */}
-            <div className="relative">
-              <button
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
-                className="text-gray-300 hover:text-cyan-400 px-4 py-2 rounded-md text-sm font-medium flex items-center transition-colors"
-              >
-                Services
-                <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {servicesOpen && (
-                <div
-                  onMouseEnter={() => setServicesOpen(true)}
-                  onMouseLeave={() => setServicesOpen(false)}
-                  className="absolute left-0 mt-2 w-80 glass-card rounded-lg shadow-lg z-50"
-                >
-                  <div className="py-1">
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100">AI & Machine Learning</div>
-                    <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors">
-                      AI Services
-                    </Link>
-                    <Link to="/ai-solutions" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors">
-                      AI Solutions
-                    </Link>
-                    <Link to="/ai-content-generator" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors">
-                      AI Content Generator
-                    </Link>
-                    <Link to="/data-analytics" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors">
-                      Data Analytics
-                    </Link>
-                    
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">IT Services</div>
-                    <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      IT Services
-                    </Link>
-                    <Link to="/web-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      Web Development
-                    </Link>
-                    <Link to="/mobile-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      Mobile Development
-                    </Link>
-                    <Link to="/database-management" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      Database Management
-                    </Link>
-                    <Link to="/network-infrastructure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      Network Infrastructure
-                    </Link>
-                    
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Infrastructure</div>
-                    <Link to="/cloud-infrastructure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      Cloud Infrastructure
-                    </Link>
-                    <Link to="/5g-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      5G Solutions
-                    </Link>
-                    
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Business Solutions</div>
-                    <Link to="/digital-transformation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      Digital Transformation
-                    </Link>
-                    <Link to="/micro-saas-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      Micro SaaS Solutions
-                    </Link>
-                    
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Micro SAAS Services</div>
-                    <Link to="/ai-chatbot-builder" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      AI Chatbot Builder
-                    </Link>
-                    <Link to="/ai-form-builder" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      AI Form Builder
-                    </Link>
-                    <Link to="/ai-fraud-detection" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      AI Fraud Detection
-                    </Link>
-                    <Link to="/ai-price-optimizer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      AI Price Optimizer
-                    </Link>
-                    
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">AI Tools</div>
-                    <Link to="/zion-ai-content-moderator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      AI Content Moderator
-                    </Link>
-                    <Link to="/zion-ai-customer-churn-predictor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      Customer Churn Predictor
-                    </Link>
-                    <Link to="/zion-ai-customer-sentiment-tracker" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      Customer Sentiment Tracker
-                    </Link>
-                    <Link to="/zion-ai-document-analyzer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      Document Analyzer
-                    </Link>
-                    <Link to="/zion-ai-financial-forecaster" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      Financial Forecaster
-                    </Link>
-                    <Link to="/zion-ai-sales-predictor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      Sales Predictor
-                    </Link>
-                    <Link to="/zion-ai-workflow-automator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      Workflow Automator
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
-            
-            <Link to="/pricing" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-              Pricing
-            </Link>
-            <Link to="/blog" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-              Blog
-            </Link>
-            <Link to="/team" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-              Team
-            </Link>
-            <Link to="/careers" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-              Careers
-            </Link>
-            <Link to="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-              Contact
+            <Link to="/" className="flex-shrink-0 flex items-center">
+              <div className="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">Z</span>
+              </div>
+              <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
             </Link>
           </div>
 
-          <div className="md:hidden flex items-center">
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex lg:items-center lg:space-x-8">
+            {navigation.map((item) => (
+              <div key={item.name} className="relative">
+                <Link
+                  to={item.href}
+                  onClick={() => {
+                    if (item.name === 'AI Services') toggleServicesMenu();
+                    else if (item.name === 'Micro SaaS') toggleSolutionsMenu();
+                    else if (item.name === 'IT Solutions') toggleResourcesMenu();
+                    else if (item.name === 'Resources') toggleResourcesMenu();
+                    else if (item.name === 'Company') toggleCompanyMenu();
+                  }}
+                  className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors border-b-2 ${
+                    isActive(item.href)
+                      ? 'border-blue-500 text-white'
+                      : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white'
+                  }`}
+                >
+                  <item.icon className="w-4 h-4" />
+                  <span>{item.name}</span>
+                  {item.submenu && <ChevronDownIcon className="w-4 h-4" />}
+                </Link>
+                {/* Dropdown Menu */}
+                {item.submenu && (
+                  <div className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
+                    (item.name === 'AI Services' && isServicesOpen) ||
+                    (item.name === 'Micro SaaS' && isSolutionsOpen) ||
+                    (item.name === 'IT Solutions' && isResourcesOpen) ||
+                    (item.name === 'Resources' && isResourcesOpen) ||
+                    (item.name === 'Company' && isCompanyOpen)
+                      ? 'block' : 'hidden'
+                  }`}>
+                    {item.submenu.map((subItem) => (
+                      <div key={subItem.name}>
+                        <Link
+                          to={subItem.href}
+                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white"
+                        >
+                          <subItem.icon className="w-4 h-4 mr-3" />
+                          <span>{subItem.name}</span>
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden flex items-center">
             <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+              onClick={onSidebarToggle}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+              <span className="sr-only">Open main menu</span>
+              <Bars3Icon className="h-6 w-6" />
             </button>
           </div>
         </div>
       </div>
-
-      {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
-              Home
-            </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
-              About
-            </Link>
-            <div className="space-y-1">
-              <div className="text-gray-700 px-3 py-2 text-base font-medium">AI & Machine Learning</div>
-              <Link to="/ai-services" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                AI Services
-              </Link>
-              <Link to="/ai-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                AI Solutions
-              </Link>
-              <Link to="/ai-content-generator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                AI Content Generator
-              </Link>
-              <Link to="/data-analytics" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Data Analytics
-              </Link>
-              
-              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">IT Services</div>
-              <Link to="/it-services" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                IT Services
-              </Link>
-              <Link to="/web-development" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Web Development
-              </Link>
-              <Link to="/mobile-development" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Mobile Development
-              </Link>
-              <Link to="/database-management" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Database Management
-              </Link>
-              <Link to="/network-infrastructure" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Network Infrastructure
-              </Link>
-              
-              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Infrastructure</div>
-              <Link to="/cloud-infrastructure" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Cloud Infrastructure
-              </Link>
-              <Link to="/5g-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                5G Solutions
-              </Link>
-              
-              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Business Solutions</div>
-              <Link to="/digital-transformation" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Digital Transformation
-              </Link>
-              <Link to="/micro-saas-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Micro SaaS Solutions
-              </Link>
-              
-              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Micro SAAS Services</div>
-              <Link to="/ai-chatbot-builder" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                AI Chatbot Builder
-              </Link>
-              <Link to="/ai-form-builder" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                AI Form Builder
-              </Link>
-              <Link to="/ai-fraud-detection" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                AI Fraud Detection
-              </Link>
-              <Link to="/ai-price-optimizer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                AI Price Optimizer
-              </Link>
-              
-              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">AI Tools</div>
-              <Link to="/zion-ai-content-moderator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                AI Content Moderator
-              </Link>
-              <Link to="/zion-ai-customer-churn-predictor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Customer Churn Predictor
-              </Link>
-              <Link to="/zion-ai-customer-sentiment-tracker" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Customer Sentiment Tracker
-              </Link>
-              <Link to="/zion-ai-document-analyzer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Document Analyzer
-              </Link>
-              <Link to="/zion-ai-financial-forecaster" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Financial Forecaster
-              </Link>
-              <Link to="/zion-ai-sales-predictor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Sales Predictor
-              </Link>
-              <Link to="/zion-ai-workflow-automator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Workflow Automator
-              </Link>
-            </div>
-            <Link to="/pricing" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
-              Pricing
-            </Link>
-            <Link to="/blog" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
-              Blog
-            </Link>
-            <Link to="/team" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
-              Team
-            </Link>
-            <Link to="/careers" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
-              Careers
-            </Link>
-            <Link to="/contact" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
-              Contact
-            </Link>
-          </div>
-        </div>
-      )}
     </nav>
   );
 };
