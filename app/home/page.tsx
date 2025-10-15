@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Navigation, Phone, Mail, CheckCircle, Brain, Play, Star } from 'lucide-react';
+import { Navigation, Phone, Mail, CheckCircle, Brain, Play, Star, Cpu, Shield, BarChart, Target, MessageSquare, Users, TrendingUp, Settings, Zap, Globe } from 'lucide-react';
 import Footer from '../components/Footer';
 
 const HomePage: React.FC = () => {
@@ -110,14 +110,14 @@ const HomePage: React.FC = () => {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 mb-8">
                     <a
-    href="tel:+13024640950"
+                      href="tel:+13024640950"
                       className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg"
                     >
                       <Phone className="w-5 h-5 mr-2" />
                       Call (302) 464-0950
                     </a>
                     <a
-    href="mailto:kleber@ziontechgroup.com"
+                      href="mailto:kleber@ziontechgroup.com"
                       className="cyber-button-secondary inline-flex items-center justify-center px-8 py-4 text-lg"
                     >
                       <Mail className="w-5 h-5 mr-2" />
@@ -182,22 +182,84 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Services Section */}
         <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                Our Services
+              </h2>
+              <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+                Comprehensive technology solutions designed to transform your business operations and drive innovation.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <a href="/ai-services" className="cyber-card p-8 text-center group hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Brain className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                  AI Services
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Advanced AI solutions including consulting, automation, and machine learning implementations.
+                </p>
+              </a>
+              
+              <a href="/it-services" className="cyber-card p-8 text-center group hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Settings className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                  IT Services
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Complete IT infrastructure, cloud solutions, cybersecurity, and technical support services.
+                </p>
+              </a>
+              
+              <a href="/micro-saas-services" className="cyber-card p-8 text-center group hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-yellow-500 to-orange-600 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                  Micro SaaS
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Professional micro SAAS solutions with competitive pricing and enterprise features.
+                </p>
+              </a>
+              
+              <a href="/5g-solutions" className="cyber-card p-8 text-center group hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Globe className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                  5G Solutions
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Next-generation 5G infrastructure, IoT solutions, and smart city implementations.
+                </p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-                We combine cutting-edge technology with deep industry expertise to deliver,
-    solutions that transform businesses and drive real results.
+                We combine cutting-edge technology with deep industry expertise to deliver solutions that transform businesses and drive real results.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-8 text-center group hover:scale-105 transition-all duration-300">
-                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${feature.color} flex items-center justify-center mx-auto mb-6 group-hover: scale-110 transition-transform duration-300`}>
+                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${feature.color} flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">

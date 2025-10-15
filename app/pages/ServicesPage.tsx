@@ -82,28 +82,32 @@ const ServicesPage: React.FC = () => {
 
   const serviceCategories = [
     {
-      name: 'Cloud Services',
-      description: 'Scalable cloud solutions for modern businesses',
-      icon: <Cloud className="w-12 h-12 text-cyan-400" />,
-      count: '50+ Projects'
-    },
-    {
-      name: 'Cybersecurity',
-      description: 'Advanced security solutions and compliance',
-      icon: <Shield className="w-12 h-12 text-red-400" />,
-      count: '100+ Clients'
-    },
-    {
-      name: 'AI Solutions',
-      description: 'Cutting-edge artificial intelligence services',
+      name: 'AI Services',
+      description: 'Advanced AI solutions and consulting',
       icon: <Brain className="w-12 h-12 text-purple-400" />,
-      count: '75+ Implementations'
+      count: '75+ Implementations',
+      link: '/ai-services'
+    },
+    {
+      name: 'IT Services',
+      description: 'Comprehensive IT infrastructure and support',
+      icon: <Settings className="w-12 h-12 text-cyan-400" />,
+      count: '100+ Clients',
+      link: '/it-services'
+    },
+    {
+      name: 'Micro SaaS',
+      description: 'Professional micro SAAS solutions',
+      icon: <Zap className="w-12 h-12 text-yellow-400" />,
+      count: '50+ Solutions',
+      link: '/micro-saas-services'
     },
     {
       name: '5G Technology',
       description: 'Next-generation 5G infrastructure and solutions',
-      icon: <Zap className="w-12 h-12 text-yellow-400" />,
-      count: '25+ Deployments'
+      icon: <Globe className="w-12 h-12 text-green-400" />,
+      count: '25+ Deployments',
+      link: '/5g-solutions'
     }
   ];
 
@@ -164,14 +168,14 @@ const ServicesPage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {serviceCategories.map((category, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Link key={index} to={category.link} className="text-center group hover:scale-105 transition-all duration-300">
+                  <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     {category.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{category.name}</h3>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{category.name}</h3>
                   <p className="text-gray-300 mb-2">{category.description}</p>
                   <p className="text-cyan-400 font-semibold">{category.count}</p>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

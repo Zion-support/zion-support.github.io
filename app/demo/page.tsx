@@ -194,9 +194,11 @@ const demoOptions = [
                   <div>
                     <label className="block text-white text-sm font-medium mb-2">Message</label>
                     <textarea
-    name="message"
-                      const value = {formData.message} onChange={handleInputChange}
-                      const rows = {4} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      rows={4}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                       placeholder="Tell us about your specific needs and what you'd like to see in the demo..."
                     />
                   </div>
