@@ -70,7 +70,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         setCurrentSrc(optimizedSrc);
       }
     });
-    return undefined;
   };
 
   useEffect(() => {
@@ -88,6 +87,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     } else if (priority) {
       setCurrentSrc(optimizedSrc);
     }
+    
+    return undefined;
   }, [loading, priority, optimizedSrc, isLoaded, hasError]);
 
   if (hasError) {

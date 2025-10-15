@@ -21,6 +21,7 @@ const ContactPage: React.FC = memo(() => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       // Here you would typically send the data to your backend
+      console.log('Contact form submitted:', data);
       // await apiService.submitContactForm(data);
     },
     validate: (data) => {

@@ -9,9 +9,9 @@ export interface LogContext {
 export interface LogEntry {
   level: 'debug' | 'info' | 'warn' | 'error';
   message: string;
-  context?: LogContext;
+  context?: LogContext | undefined;
   timestamp: number;
-  stack?: string;
+  stack?: string | undefined;
 }
 
 class Logger {
@@ -42,7 +42,7 @@ class Logger {
       const entry: LogEntry = {
         level: 'debug',
         message,
-        context,
+        context: context || undefined,
         timestamp: Date.now(),
       };
       this.addLog(entry);
@@ -55,7 +55,7 @@ class Logger {
       const entry: LogEntry = {
         level: 'info',
         message,
-        context,
+        context: context || undefined,
         timestamp: Date.now(),
       };
       this.addLog(entry);
@@ -68,7 +68,7 @@ class Logger {
       const entry: LogEntry = {
         level: 'warn',
         message,
-        context,
+        context: context || undefined,
         timestamp: Date.now(),
       };
       this.addLog(entry);
@@ -80,7 +80,7 @@ class Logger {
     const entry: LogEntry = {
       level: 'error',
       message,
-      context,
+      context: context || undefined,
       timestamp: Date.now(),
       stack: error?.stack,
     };
