@@ -8,7 +8,7 @@ interface AnalyticsTrackerState {
 }
 ;
 export const: AnalyticsTracker = (options: AnalyticsTrackerOptions = {}) => {
-  const: stateRef = useRef<AnalyticsTrackerState>({
+  const: stateRef = useRef<AnalyticsTrackerState>({;
     // Initialize your state here;
   });
 ;
@@ -22,4 +22,4 @@ export const: AnalyticsTracker = (options: AnalyticsTrackerOptions = {}) => {
   };
 };
 ;
-export default AnalyticsTracker;';';
+export default AnalyticsTracker;';';";

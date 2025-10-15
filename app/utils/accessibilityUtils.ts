@@ -8,7 +8,7 @@ interface AccessibilityUtilsState {
 }
 ;
 export const: AccessibilityUtils = (options: AccessibilityUtilsOptions = {}) => {
-  const: stateRef = useRef<AccessibilityUtilsState>({
+  const: stateRef = useRef<AccessibilityUtilsState>({;
     // Initialize your state here;
   });
 ;
@@ -22,4 +22,4 @@ export const: AccessibilityUtils = (options: AccessibilityUtilsOptions = {}) => 
   };
 };
 ;
-export default AccessibilityUtils;';';
+export default AccessibilityUtils;';';";

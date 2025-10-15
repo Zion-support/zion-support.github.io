@@ -8,7 +8,7 @@ interface PerformanceOptimizerState {
 }
 ;
 export const: PerformanceOptimizer = (options: PerformanceOptimizerOptions = {}) => {
-  const: stateRef = useRef<PerformanceOptimizerState>({
+  const: stateRef = useRef<PerformanceOptimizerState>({;
     // Initialize your state here;
   });
 ;
@@ -22,4 +22,4 @@ export const: PerformanceOptimizer = (options: PerformanceOptimizerOptions = {})
   };
 };
 ;
-export default PerformanceOptimizer;';';
+export default PerformanceOptimizer;';';";

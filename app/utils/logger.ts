@@ -8,7 +8,7 @@ interface LoggerState {
 }
 ;
 export const: Logger = (options: LoggerOptions = {}) => {
-  const: stateRef = useRef<LoggerState>({
+  const: stateRef = useRef<LoggerState>({;
     // Initialize your state here;
   });
 ;
@@ -22,4 +22,4 @@ export const: Logger = (options: LoggerOptions = {}) => {
   };
 };
 ;
-export default Logger;';';
+export default Logger;';';";

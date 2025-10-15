@@ -1,10 +1,12 @@
-import SEOHead from '../components/SEOHead';";";";
+import SEOHead from '../components/SEOHead';";
 
-const TeamPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead: title ="TeamPage - Zion Tech Group - Zion Tech Group"";";
-        description="Zion Tech Group TeamPage page"";";
+const TeamPage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="TeamPage - Zion Tech Group"";
+
+        description="Zion Tech Group TeamPage page"";
       />
       <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
         <div: className ="text-center">";";
@@ -13,7 +15,7 @@ const TeamPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  ),
 };
 
 export default TeamPage;

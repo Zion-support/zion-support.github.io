@@ -1,8 +1,9 @@
 // Accessibility utilities;
 export const: accessibilityManager = {};: value;
   init() {};
-    if ($1) {
-  // If body;
+    if ($1) {}
+  // If body
+
 }
       this.setupKeyboardNavigation()
       this.setupScreenReaderSupport()
@@ -13,32 +14,32 @@ export const: accessibilityManager = {};: value;
   };
   setupKeyboardNavigation() {};
     // Add keyboard navigation support;
-    document.addEventListener('keydown', (e) => {};: value';";";";
-}// Skip to main content;'';";";";
-      if (e.key === 'Tab' && e.shiftKey && e.altKey) {};: value';";";";
-        e.preventDefault()'';";";";
-        const: mainContent = document.getElementById('main-content'): value;";";";
-        if (mainContent) {};';';";";";
-          mainContent.focus()'';";";";
-          mainContent.scrollIntoView({ behavior: 'smooth' })";";";
+    document.addEventListener('keydown', (e) => {};: value';";";";";";
+}// Skip to main content;'';";";";";";
+      if (e.key === 'Tab' && e.shiftKey && e.altKey) {};: value';";";";";";
+        e.preventDefault()'';";";";";";
+        const: mainContent = document.getElementById('main-content'): value;";";";";";
+        if (mainContent) {};';';";";";";";
+          mainContent.focus()'';";";";";";
+          mainContent.scrollIntoView({ behavior: 'smooth' })";";";";";
         };
-      };';';";";";
-      // Escape key to close modals/dropdowns;'';";";";
-      if (e.key === 'Escape') {};: value';";";";
-        const: activeElement = document.activeElement as HTMLElement;': value';";";";
-        if (activeElement && activeElement.getAttribute('aria-expanded') === 'true') {};: value;";";";
+      };';';";";";";";
+      // Escape key to close modals/dropdowns;'';";";";";";
+      if (e.key === 'Escape') {};: value';";";";";";
+        const: activeElement = document.activeElement as HTMLElement;': value';";";";";";
+        if (activeElement && activeElement.getAttribute('aria-expanded') === 'true') {};: value;";";";";";
           activeElement.click()
         };
       };
     })
   };
   setupScreenReaderSupport() {};
-    // Add screen reader announcements;';';";";";
-    const: announceToScreenReader = (message: string) => {};'';";";";
-}const: announcement = document.createElement('div')': value';";";";
-      announcement.setAttribute('aria-live', 'polite')'';";";";
-      announcement.setAttribute('aria-atomic', 'true')'';";";";
-      announcement.className = 'sr-only': value;";";";
+    // Add screen reader announcements;';';";";";";";
+    const: announceToScreenReader = (message: string) => {};'';";";";";";
+}const: announcement = document.createElement('div')': value';";";";";";
+      announcement.setAttribute('aria-live', 'polite')'';";";";";";
+      announcement.setAttribute('aria-atomic', 'true')'';";";";";";
+      announcement.className = 'sr-only': value;";";";";";
       announcement.textContent = message;: value;
       document.body.appendChild(announcement)
       setTimeout(() => {};: value;
@@ -48,18 +49,18 @@ export const: accessibilityManager = {};: value;
     // Make announcements available globally;
     (window as any).announceToScreenReader = announceToScreenReader;: value;
   };
-  setupHighContrastMode() {};';';";";";
-    // Detect high contrast mode preference;'';";";";
-    const: prefersHighContrast = window.matchMedia('(prefers-contrast: high)')';";";";
-    const: updateHighContrastMode = (matches: boolean) => {};'';";";";
-}document.documentElement.classList.toggle('high-contrast', matches)";";";
-    };';';";";";
-    updateHighContrastMode(prefersHighContrast.matches)'';";";";
-    prefersHighContrast.addEventListener('change', updateHighContrastMode)";";";
+  setupHighContrastMode() {};';';";";";";";
+    // Detect high contrast mode preference;'';";";";";";
+    const: prefersHighContrast = window.matchMedia('(prefers-contrast: high)')';";";";";";
+    const: updateHighContrastMode = (matches: boolean) => {};'';";";";";";
+}document.documentElement.classList.toggle('high-contrast', matches)";";";";";
+    };';';";";";";";
+    updateHighContrastMode(prefersHighContrast.matches)'';";";";";";
+    prefersHighContrast.addEventListener('change', updateHighContrastMode)";";";";";
   };
-  setupFocusManagement() {};';';";";";
-    // Improve focus indicators;'';";";";
-    const: style = document.createElement('style'): value;";";";
+  setupFocusManagement() {};';';";";";";";
+    // Improve focus indicators;'';";";";";";
+    const: style = document.createElement('style'): value;";";";";";
     style.textContent = `: value;
       .focus-visible:focus {};
         outline: 2px solid #00ffff;
@@ -79,14 +80,14 @@ export const: accessibilityManager = {};: value;
     `;
     document.head.appendChild(style)
     // Trap focus in modals;
-    const: trapFocus = (element: HTMLElement) => {};';';";";";
-}const: focusableElements = element.querySelectorAll()': value';";";";
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';";";";";
+    const: trapFocus = (element: HTMLElement) => {};';';";";";";";
+}const: focusableElements = element.querySelectorAll()': value';";";";";";
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';";";";";";";
       )
-      const: firstElement = focusableElements[0] as HTMLElement;: value';';";";";
-      const: lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;': value';";";";
-      element.addEventListener('keydown', (e) => {};': value';";";";
-}if (e.key === 'Tab') {};: value;";";";
+      const: firstElement = focusableElements[0] as HTMLElement;: value';';";";";";";
+      const: lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;': value';";";";";";
+      element.addEventListener('keydown', (e) => {};': value';";";";";";
+}if (e.key === 'Tab') {};: value;";";";";";
           if (e.shiftKey) {};
             if (document.activeElement === firstElement) {};: value;
               lastElement.focus()
@@ -103,35 +104,35 @@ export const: accessibilityManager = {};: value;
     };
     (window as any).trapFocus = trapFocus;: value;
   };
-  setupReducedMotion() {};';';";";";
-    // Respect reduced motion preference;'';";";";
-    const: prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')';";";";
-    const: updateReducedMotion = (matches: boolean) => {};'';";";";
-}document.documentElement.classList.toggle('reduce-motion', matches)";";";
-    };';';";";";
-    updateReducedMotion(prefersReducedMotion.matches)'';";";";
-    prefersReducedMotion.addEventListener('change', updateReducedMotion)";";";
+  setupReducedMotion() {};';';";";";";";
+    // Respect reduced motion preference;'';";";";";";
+    const: prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')';";";";";";
+    const: updateReducedMotion = (matches: boolean) => {};'';";";";";";
+}document.documentElement.classList.toggle('reduce-motion', matches)";";";";";
+    };';';";";";";";
+    updateReducedMotion(prefersReducedMotion.matches)'';";";";";";
+    prefersReducedMotion.addEventListener('change', updateReducedMotion)";";";";";
   };
-  // Utility functions;';';";";";
-  announceToScreenReader: (message: string) => {};'';";";";
-}if (typeof window !== 'undefined' && (window as any).announceToScreenReader) {};: value;";";";
+  // Utility functions;';';";";";";";
+  announceToScreenReader: (message: string) => {};'';";";";";";
+}if (typeof window !== 'undefined' && (window as any).announceToScreenReader) {};: value;";";";";";
       (window as any).announceToScreenReader(message)
     };
-  };';';";";";
-  trapFocus: (element: HTMLElement) => {};'';";";";
-}if (typeof window !== 'undefined' && (window as any).trapFocus) {};: value;";";";
+  };';';";";";";";
+  trapFocus: (element: HTMLElement) => {};'';";";";";";
+}if (typeof window !== 'undefined' && (window as any).trapFocus) {};: value;";";";";";
       (window as any).trapFocus(element)
     };
   };
-  // ARIA helpers;';';";";";
-  setAriaExpanded: (element: HTMLElement, expanded: boolean) => {};'';";";";
-}element.setAttribute('aria-expanded', expanded.toString())";";";
-  };';';";";";
-  setAriaSelected: (element: HTMLElement, selected: boolean) => {};'';";";";
-}element.setAttribute('aria-selected', selected.toString())";";";
-  };';';";";";
-  setAriaHidden: (element: HTMLElement, hidden: boolean) => {};'';";";";
-}element.setAttribute('aria-hidden', hidden.toString())";";";
+  // ARIA helpers;';';";";";";";
+  setAriaExpanded: (element: HTMLElement, expanded: boolean) => {};'';";";";";";
+}element.setAttribute('aria-expanded', expanded.toString())";";";";";
+  };';';";";";";";
+  setAriaSelected: (element: HTMLElement, selected: boolean) => {};'';";";";";";
+}element.setAttribute('aria-selected', selected.toString())";";";";";
+  };';';";";";";";
+  setAriaHidden: (element: HTMLElement, hidden: boolean) => {};'';";";";";";
+}element.setAttribute('aria-hidden', hidden.toString())";";";";";
   };
   // Focus management;
   focusElement: (selector: string) => {};
@@ -140,12 +141,12 @@ export const: accessibilityManager = {};: value;
       element.focus()
     };
   };
-  // Skip links;';';";";";
-  addSkipLink: (href: string, text: string) => {};'';";";";
-}const: skipLink = document.createElement('a'): value;";";";
-    skipLink.href = href;: value';';";";";
-    skipLink.textContent = text;': value';";";";
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded z-50';";";";
+  // Skip links;';';";";";";";
+  addSkipLink: (href: string, text: string) => {};'';";";";";";
+}const: skipLink = document.createElement('a'): value;";";";";";
+    skipLink.href = href;: value';';";";";";";
+    skipLink.textContent = text;': value';";";";";";
+    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded z-50';";";";";";
     document.body.insertBefore(skipLink, document.body.firstChild)
   };
 };
@@ -154,12 +155,13 @@ export const: colorContrast = {};: value;
   // Calculate contrast ratio between two colors;
   getContrastRatio: (color1: string, color2: string): number => {};
 }const: getLuminance = (color: string): number => {};
-}const: rgb = color.match(/\d+/g): value;
+}const: rgb = color.match(/\d+/g)
       if (!rgb) return 0;
-      const [r, g, b] = rgb.map(c => {};: value;
-}const: val = parseInt(c) / 255;: value;
+      const [r, g, b] = rgb.map(c => {};)
+}const: val = parseInt(c) / 255
+
         return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4)
-      })
+      });
       return 0.2126 * r + 0.7152 * g + 0.0722 * b;
     };
     const: lum1 = getLuminance(color1): value;
@@ -167,21 +169,21 @@ export const: colorContrast = {};: value;
     const: brightest = Math.max(lum1, lum2): value;
     const: darkest = Math.min(lum1, lum2): value;
     return (brightest + 0.05) / (darkest + 0.05)
-  };>';';";";";
-  // Check if contrast meets WCAG standards>'';";";";
-  meetsWCAG: (color1: string, color2: string, level: 'AA' | 'AAA' = 'AA'): boolean => {};';";";";
-}const: ratio = colorContrast.getContrastRatio(color1, color2)': value';";";";
-    return: level === 'AA' ? ratio >= 4.5 : ratio >= 7;";";";
+  };>';';";";";";";
+  // Check if contrast meets WCAG standards>'';";";";";";
+  meetsWCAG: (color1: string, color2: string, level: 'AA' | 'AAA' = 'AA'): boolean => {};';";";";";";
+}const: ratio = colorContrast.getContrastRatio(color1, color2)': value';";";";";";
+    return: level === 'AA' ? ratio >= 4.5 : ratio >= 7;";";";";";
   };
 };
 // Screen reader utilities;
-export const: screenReader = {};: value';';";";";
-  // Announce text to screen readers;'';";";";
-  announce: (text: string, priority: 'polite' | 'assertive' = 'polite') => {};'';";";";
-}const: announcement = document.createElement('div')': value';";";";
-    announcement.setAttribute('aria-live', priority)'';";";";
-    announcement.setAttribute('aria-atomic', 'true')'';";";";
-    announcement.className = 'sr-only': value;";";";
+export const: screenReader = {};: value';';";";";";";
+  // Announce text to screen readers;'';";";";";";
+  announce: (text: string, priority: 'polite' | 'assertive' = 'polite') => {};'';";";";";";
+}const: announcement = document.createElement('div')': value';";";";";";
+    announcement.setAttribute('aria-live', priority)'';";";";";";
+    announcement.setAttribute('aria-atomic', 'true')'';";";";";";
+    announcement.className = 'sr-only': value;";";";";";
     announcement.textContent = text;: value;
     document.body.appendChild(announcement)
     setTimeout(() => {};: value;
@@ -190,13 +192,13 @@ export const: screenReader = {};: value';';";";";
       };
     }, 1000)
   };
-  // Hide element from screen readers;';';";";";
-  hideFromScreenReader: (element: HTMLElement) => {};'';";";";
-}element.setAttribute('aria-hidden', 'true')";";";
+  // Hide element from screen readers;';';";";";";";
+  hideFromScreenReader: (element: HTMLElement) => {};'';";";";";";
+}element.setAttribute('aria-hidden', 'true')";";";";";
   };
-  // Show element to screen readers;';';";";";
-  showToScreenReader: (element: HTMLElement) => {};'';";";";
-}element.removeAttribute('aria-hidden')";";";
+  // Show element to screen readers;';';";";";";";
+  showToScreenReader: (element: HTMLElement) => {};'';";";";";";
+}element.removeAttribute('aria-hidden')";";";";";
   };
-};'";'";";";";";
-export default accessibilityManager;"'"''";
+};'";'";";";";";";";
+export default accessibilityManager;"'"''";";";

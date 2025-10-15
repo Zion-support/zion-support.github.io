@@ -8,7 +8,7 @@ interface MetadataState {
 }
 ;
 export const: Metadata = (options: MetadataOptions = {}) => {
-  const: stateRef = useRef<MetadataState>({
+  const: stateRef = useRef<MetadataState>({;
     // Initialize your state here;
   });
 ;

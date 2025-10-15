@@ -8,7 +8,7 @@ interface AccessibilityCheckerState {
 }
 ;
 export const: AccessibilityChecker = (options: AccessibilityCheckerOptions = {}) => {
-  const: stateRef = useRef<AccessibilityCheckerState>({
+  const: stateRef = useRef<AccessibilityCheckerState>({;
     // Initialize your state here;
   });
 ;
@@ -22,4 +22,4 @@ export const: AccessibilityChecker = (options: AccessibilityCheckerOptions = {})
   };
 };
 ;
-export default AccessibilityChecker;';';
+export default AccessibilityChecker;';';";

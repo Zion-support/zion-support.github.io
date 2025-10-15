@@ -1,10 +1,12 @@
-import SEOHead from '../components/SEOHead';";";";
+import SEOHead from '../components/SEOHead';";
 
-const AISolutionsPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead: title ="AISolutionsPage - Zion Tech Group - Zion Tech Group"";";
-        description="Zion Tech Group AISolutionsPage page"";";
+const AISolutionsPage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="AISolutionsPage - Zion Tech Group"";
+
+        description="Zion Tech Group AISolutionsPage page"";
       />
       <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
         <div: className ="text-center">";";
@@ -13,7 +15,7 @@ const AISolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  ),
 };
 
 export default AISolutionsPage;

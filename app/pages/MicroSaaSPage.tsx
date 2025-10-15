@@ -1,10 +1,12 @@
-import SEOHead from '../components/SEOHead';";";";
+import SEOHead from '../components/SEOHead';";
 
-const MicroSaaSPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead: title ="MicroSaaSPage - Zion Tech Group - Zion Tech Group"";";
-        description="Zion Tech Group MicroSaaSPage page"";";
+const MicroSaaSPage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="MicroSaaSPage - Zion Tech Group"";
+
+        description="Zion Tech Group MicroSaaSPage page"";
       />
       <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
         <div: className ="text-center">";";
@@ -13,7 +15,7 @@ const MicroSaaSPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  ),
 };
 
 export default MicroSaaSPage;
