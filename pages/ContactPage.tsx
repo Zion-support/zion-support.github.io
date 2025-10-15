@@ -10,10 +10,7 @@ import {
   Star,
   Users,
   Shield,
-  Zap,
-  MessageCircle,
-  Calendar,
-  Globe
+  Zap
 } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
@@ -188,7 +185,7 @@ const ContactPage: React.FC = () => {
                 <div className="text-center py-8">
                   <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-2">Message Sent Successfully!</h3>
-                  <p className="text-gray-300">We'll get back to you within 24 hours.</p>
+                  <p className="text-gray-300">We&apos;ll get back to you within 24 hours.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -385,7 +382,7 @@ const ContactPage: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Don't wait! Contact us today and let's discuss how we can help transform your business 
+            Don&apos;t wait! Contact us today and let&apos;s discuss how we can help transform your business 
             with our cutting-edge AI, IT, and Micro SAAS solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

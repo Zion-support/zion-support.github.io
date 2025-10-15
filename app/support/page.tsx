@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { MessageSquare, Phone, Mail, Clock, CheckCircle, Send, AlertCircle, FileText, Video } from 'lucide-react';
+import { MessageSquare, Phone, Mail, CheckCircle, Send, AlertCircle, FileText, Video } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -137,7 +137,7 @@ const SupportPage: React.FC = () => {
                 Support
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Get expert help and support for all our AI and IT services. We're here to help you succeed.
+                Get expert help and support for all our AI and IT services. We&apos;re here to help you succeed.
               </p>
             </div>
           </div>
@@ -200,7 +200,7 @@ const SupportPage: React.FC = () => {
                   <div className="text-center py-12">
                     <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-white mb-2">Request Submitted!</h3>
-                    <p className="text-gray-300">Thank you for contacting us. We'll get back to you within the specified response time.</p>
+                    <p className="text-gray-300">Thank you for contacting us. We&apos;ll get back to you within the specified response time.</p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">

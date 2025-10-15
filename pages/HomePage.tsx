@@ -10,14 +10,7 @@ import {
   Shield, 
   Brain,
   Server,
-  Target,
-  Rocket,
-  BarChart3,
-  Code,
-  Database,
-  Cloud,
-  Smartphone,
-  Globe
+  Rocket
 } from 'lucide-react';
 
 const HomePage: React.FC = () => {
