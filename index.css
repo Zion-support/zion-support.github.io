@@ -155,18 +155,152 @@ a:focus-visible {
   }
 }
 
+/* Font size utilities */
+.font-small {
+  font-size: 0.875rem;
+}
+
+.font-medium {
+  font-size: 1rem;
+}
+
+.font-large {
+  font-size: 1.125rem;
+}
+
+/* Accessibility controls */
+.accessibility-controls {
+  min-width: 250px;
+}
+
+.accessibility-controls label {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.accessibility-controls input[type="checkbox"] {
+  accent-color: #3b82f6;
+}
+
+.accessibility-controls select {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Enhanced focus styles */
+.keyboard-navigation *:focus {
+  outline: 2px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+/* Skip link improvements */
+[data-skip-to-main] {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #3b82f6;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+[data-skip-to-main]:focus {
+  top: 6px;
+}
+
+/* High contrast mode enhancements */
+.high-contrast {
+  filter: contrast(1.2) brightness(1.1);
+}
+
+.high-contrast .text-gray-600,
+.high-contrast .text-gray-500 {
+  color: #000 !important;
+}
+
+.high-contrast .border-gray-300 {
+  border-color: #000 !important;
+}
+
+.high-contrast .bg-gray-100 {
+  background-color: #f0f0f0 !important;
+}
+
+/* Reduced motion enhancements */
+.reduced-motion *,
+.reduced-motion *::before,
+.reduced-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Performance optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Loading states */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
 /* Print styles */
 @media print {
   .no-print {
     display: none !important;
   }
   
+  .accessibility-controls,
+  .accessibility-toggle {
+    display: none !important;
+  }
+  
   body {
     font-size: 12pt;
     line-height: 1.4;
+    color: #000 !important;
+    background: #fff !important;
   }
   
   h1, h2, h3, h4, h5, h6 {
     page-break-after: avoid;
+    color: #000 !important;
+  }
+  
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+  
+  .bg-gray-800,
+  .bg-blue-600 {
+    background: #f0f0f0 !important;
+    color: #000 !important;
   }
 }

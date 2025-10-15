@@ -80,9 +80,82 @@ class ErrorHandler {
     
     // Send to external logging service in production
     if (process.env.NODE_ENV === 'production') {
-      // Example: Send to external service like Sentry, LogRocket, etc.
-      // this.sendToExternalService(errorReport);
+      this.sendToExternalService(errorReport);
     }
+  }
+
+  private async sendToExternalService(errorReport: ErrorReport): Promise<void> {
+    try {
+      // Send to your preferred error tracking service
+      // Example implementations for different services:
+      
+      // Sentry
+      if (typeof window !== 'undefined' && (window as any).Sentry) {
+        (window as any).Sentry.captureException(new Error(errorReport.message), {
+          tags: {
+            component: errorReport.context.component,
+            action: errorReport.context.action,
+          },
+          extra: errorReport.context,
+        });
+      }
+      
+      // LogRocket
+      if (typeof window !== 'undefined' && (window as any).LogRocket) {
+        (window as any).LogRocket.captureException(new Error(errorReport.message));
+      }
+      
+      // Custom API endpoint
+      await fetch('/api/error-report', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(errorReport),
+      });
+    } catch (error) {
+      console.warn('Failed to send error to external service:', error);
+    }
+  }
+
+  /**
+   * Clear all errors
+   */
+  clearErrors(): void {
+    this.errors = [];
+  }
+
+  /**
+   * Mark an error as resolved
+   * @param errorId - ID of the error to resolve
+   */
+  resolveError(errorId: string): boolean {
+    const error = this.errors.find(e => e.id === errorId);
+    if (error) {
+      error.resolved = true;
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * Get errors by severity
+   * @param severity - Severity level to filter by
+   * @returns Array of errors with the specified severity
+   */
+  getErrorsBySeverity(severity: ErrorSeverity): ErrorReport[] {
+    return this.errors.filter(error => error.severity === severity);
+  }
+
+  /**
+   * Get recent errors (last N errors)
+   * @param count - Number of recent errors to return
+   * @returns Array of recent errors
+   */
+  getRecentErrors(count: number = 10): ErrorReport[] {
+    return this.errors
+      .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+      .slice(0, count);
   }
 }
 
