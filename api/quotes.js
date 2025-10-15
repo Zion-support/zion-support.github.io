@@ -25,7 +25,6 @@ export default async function handler(req, res) {
       status: 'pending',
       createdAt: new Date().toISOString()
     };
-    
     // Here you would typically save the quote to a database
     console.log('Quote request processed:', quote.id);
     res.setHeader('Content-Type', 'application/json');

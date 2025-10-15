@@ -7,7 +7,6 @@ const withErrorLogging = (handler) => {
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Internal server error' }));
     }
-  }
 };
 
 export default withErrorLogging(async (req, res) => {

@@ -50,7 +50,7 @@ import SEOHead from '../components/SEOHead';
             </div>
           </motion.div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

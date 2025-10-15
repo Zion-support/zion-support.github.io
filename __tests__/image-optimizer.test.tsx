@@ -17,10 +17,11 @@ Object.defineProperty(global, 'Image', {
 
 describe('ImageOptimizer', () => {
   beforeEach(() => {
-}jest.clearAllMocks()
+    jest.clearAllMocks()
   })
-  it('renders with correct attributes', () => {}
-}render()
+  
+  it('renders with correct attributes', () => {
+    render()
       <ImageOptimizer
         src="test-image.jpg"
         alt="Test image"

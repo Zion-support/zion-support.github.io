@@ -1,5 +1,4 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Code, Database, Users, DollarSign, Globe, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Eye, Heart, Award, Mic, Video, Image, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
@@ -7,33 +6,6 @@ import SEOOptimizer from "../components/SEOOptimizer";
 export default function AIServices() {
   const aiServices = [
     {
-      id: "ai-analytics-dashboard-pro",
-      name: "AI Analytics Dashboard Pro",
-      description: "Advanced AI-powered business intelligence platform with predictive analytics, real-time insights, and automated reporting",
-      price: "From $2,500/month",
-      icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
-      features: [
-        "Real-time predictive analytics",
-        "Machine learning insights",
-        "Automated report generation",
-        "Custom data visualization",
-        "Multi-platform integration",
-        "Advanced filtering & segmentation",
-        "Export to PDF/Excel/CSV",
-        "White-label options"
-      ],
-      benefits: [
-        "Increase revenue by 35%",
-        "Reduce reporting time by 85%",
-        "Make data-driven decisions",
-        "Scale with your business"
-      ],
-      category: "Analytics",
-      rating: 4.9,
-      reviews: 1247,
-      link: "/ai-analytics-dashboard-pro",
-      featured: true
     },
     {
       id: "ai-cybersecurity-suite-pro",
@@ -842,12 +814,3 @@ export default function AIServices() {
                 AI Services
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our comprehensive suite of AI-powered solutions designed for modern enterprises.
-            </p>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-}

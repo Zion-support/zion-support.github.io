@@ -6,52 +6,64 @@ const file = path.join(process.cwd(), 'data', 'wallets.json');
 
 export default function handler(req, res) {
   if (req.method !== "POST") {
-    return res.status(405).json({ _error: "Method not allowed" });
+    return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { address, type, name, userId } = req.body;
-  if (!address || !type) {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Address and type are required' }));
-    return;
+  const { action, userId, amount } = req.body;
+  
+  if (!action || !userId) {
+    return res.status(400).json({ error: "Action and userId are required" });
   }
-
-  let wallets = [];
-  try {
-    const data = fs.readFileSync(file, 'utf8');
-    wallets = JSON.parse(data);
-  } catch (error) {
-    console.error('Error:', error);
-  }
-
-  if (wallets.find(wallet => wallet.address === address)) {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Wallet address already exists' }));
-    return;
-  }
-
-  const newWallet = {
-    id: Date.now().toString(),
-    address,
-    type,
-    name: name || '',
-    userId: userId || '',
-    status: 'active',
-    createdAt: new Date().toISOString()
-  };
 
   try {
-    wallets.push(newWallet);
+    let wallets = [];
+    try {
+      const data = fs.readFileSync(file, 'utf8');
+      wallets = JSON.parse(data);
+    } catch (error) {
+      // File doesn't exist yet, start with empty array
+    }
+
+    let wallet = wallets.find(w => w.userId === userId);
+    
+    if (!wallet) {
+      wallet = {
+        userId,
+        balance: 0,
+        transactions: [],
+        createdAt: new Date().toISOString()
+      };
+      wallets.push(wallet);
+    }
+
+    if (action === 'add' && amount) {
+      wallet.balance += amount;
+      wallet.transactions.push({
+        type: 'credit',
+        amount,
+        timestamp: new Date().toISOString()
+      });
+    } else if (action === 'subtract' && amount) {
+      if (wallet.balance >= amount) {
+        wallet.balance -= amount;
+        wallet.transactions.push({
+          type: 'debit',
+          amount,
+          timestamp: new Date().toISOString()
+        });
+      } else {
+        return res.status(400).json({ error: 'Insufficient balance' });
+      }
+    }
+
     fs.writeFileSync(file, JSON.stringify(wallets, null, 2));
 
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
+    res.status(200).json({
       success: true,
-      message: 'Wallet added successfully' 
-    }));
+      balance: wallet.balance,
+      message: 'Wallet operation completed'
+    });
   } catch (error) {
-    console.error('Error:', error);
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save wallet' }));
+    console.error('Wallet operation error:', error);
+    res.status(500).json({ error: 'Failed to process wallet operation' });
   }
-}

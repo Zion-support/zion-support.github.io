@@ -1,7 +1,3 @@
-import { ArrowRight, Mail, Smartphone, Globe, Clock, MapPin, Send, CheckCircle } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -73,8 +69,6 @@ export default function Contact() {
       details: ["Mon-Fri: 9AM-6PM EST", "Sat: 10AM-4PM EST"],
       action: "Schedule Call"
     }  ];
-    }
-  ];
 
   const services = [
     "AI Business Intelligence",
@@ -105,7 +99,6 @@ const ContactPage: React.FC = () => {
           <h1 className="text-4xl font-bold mb-4">contact</h1>
           <p className="text-gray-300">Coming soon...</p>
         </div>
-      </div>
     </>
   );
 };

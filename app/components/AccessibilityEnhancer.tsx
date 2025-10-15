@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import React, { useEffect, useState } from 'react';
 interface AccessibilityEnhancerProps {
   isHighContrast?: boolean;
@@ -168,6 +167,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     };
   }, []);
 
+  return (
+    <>
       {/* Accessibility Styles */}
       <style jsx global>{`
         /* High Contrast Mode */

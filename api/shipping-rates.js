@@ -18,10 +18,6 @@ export default async function handler(req, res) {
 
   let rates = [];
   try {
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
-      rates = JSON.parse(data);
-    }
   } catch (error) {
     console.error('Error reading existing rates:', error);
   }
@@ -38,10 +34,6 @@ export default async function handler(req, res) {
       rate,
       createdAt: new Date().toISOString()
     };
-    
-    rates.push(newRate);
-    fs.writeFileSync(file, JSON.stringify(rates, null, 2));
-    
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({
       success: true,
@@ -49,7 +41,6 @@ export default async function handler(req, res) {
       message: 'Shipping rate calculated successfully'
     }));
   } catch (error) {
-    console.error('Error saving rate:', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save rate' }));
   }

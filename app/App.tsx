@@ -38,9 +38,6 @@ const FiveGSmartCitySolutionsPage = lazy(() => import("./5g-smart-city-solutions
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
 
 // Main App Component
-function App() {}
-}return ()
-    <HelmetProvider></Helmet>
       <BrowserRouter>
         <ErrorBoundary>
           <PerformanceMonitor />
@@ -101,7 +98,8 @@ function App() {}
           </AccessibilityEnhancer>
         </ErrorBoundary>
       </BrowserRouter>
+      </Helmet>
     </HelmetProvider>
-  )
+  );
 }
 export default App

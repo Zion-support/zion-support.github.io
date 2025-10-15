@@ -16,24 +16,6 @@ import {
   CheckCircleIcon,
   ArrowRightIcon,
   StarIcon,
-  Brain,
-  Zap,
-  BarChart3,
-  MessageSquare,
-  Eye,
-  Settings,
-  Network,
-  FileText,
-  Database,
-  Smartphone,
-  Globe,
-  Target,
-  Lightbulb,
-  Award,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const services = [
