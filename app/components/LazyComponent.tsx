@@ -1,6 +1,13 @@
 import React, { Suspense, lazy, ComponentType } from "react";
 import { Loader2 } from "lucide-react";
-importFunc: () => Promise<{ default: ComponentType<P> }>, interface LazyComponentProps { fallback?: React.ReactNode; delay?: number; } const DefaultFallback = () => ( <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+interface LazyComponentProps<P = {}> {
+  importFunc: () => Promise<{ default: ComponentType<P> }>;
+  fallback?: React.ReactNode;
+  delay?: number;
+}
+
+const DefaultFallback = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
     <div className="text-center">
       <Loader2 className="w-8 h-8 animate-spin text-cyan-400 mx-auto mb-4" />
       <div className="text-white text-lg">Loading...</div>
