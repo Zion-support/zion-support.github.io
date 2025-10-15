@@ -39,11 +39,11 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     });
 
     // Listen for changes in system preferences
-    const handleHighContrastChange = (e: MediaQueryListEvent) => {
+    const handleHighContrastChange = (_e: MediaQueryListEvent) => {
       setSettings(prev => ({ ...prev, highContrast: e.matches }));
     };
 
-    const handleReducedMotionChange = (e: MediaQueryListEvent) => {
+    const handleReducedMotionChange = (_e: MediaQueryListEvent) => {
       setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
     };
 
@@ -155,7 +155,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 
   // Add keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (_event: KeyboardEvent) => {
       // Escape key to close modals/dropdowns
       if (event.key === 'Escape') {
         const activeElement = document.activeElement as HTMLElement;

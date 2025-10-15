@@ -12,8 +12,7 @@ export default function Breadcrumb() {
     return null;
   }
 
-  return (
-    <nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
+  return (<nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
       <Link
         to="/"
         className="flex items-center hover:text-white transition-colors"

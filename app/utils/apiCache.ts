@@ -4,7 +4,7 @@ export const Apicache = {
   init: () => {
     },
 
-  process: (data: any) => {
+  process: (_data: any) => {
     return data;
   },
 

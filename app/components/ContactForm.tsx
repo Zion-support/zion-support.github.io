@@ -22,11 +22,9 @@ const ContactForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<
+  const handleChange = (_e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
-  ) => {
+    >, ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -34,7 +32,7 @@ const ContactForm: React.FC = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (_e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 

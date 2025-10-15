@@ -4,7 +4,7 @@ export const Accessibilitychecker = {
   init: () => {
     },
 
-  process: (data: any) => {
+  process: (_data: any) => {
     return data;
   },
 

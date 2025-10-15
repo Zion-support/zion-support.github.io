@@ -1,31 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Search,
-  MessageSquare,
-  Phone,
-  Mail,
-  Calendar,
-  Clock,
-  CheckCircle,
-  Star,
-  Users,
-  Award,
-  Globe,
-  Zap,
-  BookOpen,
-  ExternalLink,
-  HelpCircle,
-  FileText,
-  Video,
-  Download,
-  ChevronDown,
-  ChevronRight
-} from 'lucide-react';
-
-const HelpPage: React.FC = () => {
+import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, Star, Users, Award, Globe, Zap, BookOpen, ExternalLink, HelpCircle, FileText, Video, Download, ChevronDown, ChevronRight } from 'lucide-react';const HelpPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
@@ -179,16 +155,15 @@ const HelpPage: React.FC = () => {
     faq.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const toggleFAQ = (id: number) => {
+  const toggleFAQ = (_id: number) => {
     setExpandedFAQ(expandedFAQ === id ? null : id);
   };
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Help Center - Zion Tech Group | Support & Documentation</title>
         <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Find answers, documentation, and contact our expert support team." />
-        <meta name="keywords" content="help center, support, documentation, FAQ, troubleshooting, customer service" />
+        <meta name="keywords" content="help center, _support, _documentation, _FAQ, _troubleshooting, customer service" />
         <link rel="canonical" href="https://ziontechgroup.com/help" />
       </Helmet>
 
@@ -208,7 +183,7 @@ const HelpPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Find answers to your questions, access our documentation, and get the support you need 
+              Find answers to your questions, _access our documentation, and get the support you need 
               to succeed with our AI and IT solutions.
             </p>
             
@@ -218,7 +193,7 @@ const HelpPage: React.FC = () => {
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
-                  placeholder="Search for help articles, FAQs, and documentation..."
+                  placeholder="Search for help articles, _FAQs, and documentation..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg"
@@ -329,8 +304,7 @@ const HelpPage: React.FC = () => {
 
           <div className="max-w-4xl mx-auto">
             <div className="space-y-4">
-              {filteredFAQs.map((faq) => (
-                <div key={faq.id} className="bg-slate-700/50 backdrop-blur-sm border border-slate-600/50 rounded-xl hover:border-purple-500/50 transition-all duration-300">
+              {filteredFAQs.map((faq) => (<div key={faq.id} className="bg-slate-700/50 backdrop-blur-sm border border-slate-600/50 rounded-xl hover:border-purple-500/50 transition-all duration-300">
                   <button
                     onClick={() => toggleFAQ(faq.id)}
                     className="w-full p-6 text-left flex items-center justify-between"

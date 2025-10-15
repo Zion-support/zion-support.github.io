@@ -8,10 +8,7 @@ interface PerformanceEnhancerProps {
 }
 
 const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
-  enableImageOptimization = true,
-  enablePreloading = true,
-  enableCaching = true,
-  enableCompression = true
+  enableImageOptimization = true, enablePreloading = true, enableCaching = true, enableCompression = true
 }) => {
   // Image optimization
   const optimizeImages = useCallback(() => {
@@ -83,7 +80,7 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
 
     // Override fetch to add compression headers
     const originalFetch = window.fetch;
-    window.fetch = async (input, init = {}) => {
+    window.fetch = async (_input, init = {}) => {
       const headers = new Headers(init.headers);
       headers.set('Accept-Encoding', 'gzip, deflate, br');
       
@@ -154,9 +151,9 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   }, []);
 
   // Performance monitoring
-  const setupPerformanceMonitoring = useCallback(() => {
+  const setupPerformanceMonitoring = useCallback() => {
     // Monitor Core Web Vitals
-    import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
+    import('web-vitals').then(({ onCLS, onINP, onFCP, _onLCP, _onTTFB }) => {
       onCLS((metric: any) => {
         console.log('CLS:', metric.value);
       });

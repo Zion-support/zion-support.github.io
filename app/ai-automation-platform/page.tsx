@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
 
 const AIAutomationPlatform: React.FC = () => {
@@ -40,25 +38,12 @@ const AIAutomationPlatform: React.FC = () => {
     "Scalable workflows",
     "Cost reduction"
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 
-  return (
-    <>
+  return (<>
       <Helmet>
-<<<<<<< HEAD
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">Page</h1>
-          <p className="text-gray-300 text-center">Coming soon...</p>
-        </div>
-      </div>    </>
-=======
         <title>AI Automation Platform - Intelligent Process Automation | Zion Tech Group</title>
         <meta name="description" content="Transform your business with our AI automation platform. Automate workflows, optimize processes, and achieve 70% efficiency gains with intelligent automation solutions." />
-        <meta name="keywords" content="AI automation, process automation, workflow automation, business intelligence, machine learning, AI platform" />
+        <meta name="keywords" content="AI automation, _process automation, _workflow automation, _business intelligence, _machine learning, AI platform" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -70,8 +55,7 @@ const AIAutomationPlatform: React.FC = () => {
                 AI Automation Platform
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your business with intelligent automation. Our AI platform automates complex workflows, 
-                optimizes processes, and delivers measurable efficiency gains.
+                Transform your business with intelligent automation. Our AI platform automates complex workflows, _optimizes processes, and delivers measurable efficiency gains.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
@@ -144,7 +128,6 @@ const AIAutomationPlatform: React.FC = () => {
         </section>
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
   );
 };
 

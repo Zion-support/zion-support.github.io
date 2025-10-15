@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';import { MessageSquare, Phone, Mail, CheckCircle, Send, AlertCircle, FileText, Video } from 'lucide-react';
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { MessageSquare, Phone, Mail, CheckCircle, Send, AlertCircle, FileText, Video } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
+import { MessageSquare, Phone, Mail, CheckCircle, Send, AlertCircle, FileText, Video } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -97,7 +92,7 @@ const SupportPage: React.FC = () => {
     }
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (_e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -105,7 +100,7 @@ const SupportPage: React.FC = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (_e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -128,10 +123,6 @@ const SupportPage: React.FC = () => {
       });
     }, 3000);
   };
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
 export default function Support() {
   return (

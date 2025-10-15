@@ -49,7 +49,7 @@ class ErrorHandler extends Component<Props, State> {
     }
   }
 
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+  logErrorToService = (_error: Error, errorInfo: ErrorInfo) => {
     // Example: Send to monitoring service
     try {
       // Replace with your actual error reporting service
@@ -65,10 +65,6 @@ class ErrorHandler extends Component<Props, State> {
       console.log('Error data prepared for reporting:', errorData);
     } catch (reportingError) {
       console.error('Failed to prepare error data for reporting:', reportingError);
-      console.log('Error data prepared for reporting:', errorData);
-    } catch (reportingError) {
-      console.error('Failed to prepare error data for reporting:', reportingError);
-
     }
   }
 

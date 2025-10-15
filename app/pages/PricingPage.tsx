@@ -1,44 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Zap, 
-  Brain, 
-  Server, 
-  Globe, 
-  Shield, 
-  Code, 
-  Database, 
-  Smartphone,
-  BarChart3,
-  Users,
-  Settings,
-  Award,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  TrendingUp,
-  Target,
-  Lightbulb,
-  Rocket,
-  Cloud,
-  Lock,
-  Wifi,
-  Monitor,
-  HardDrive,
-  Layers,
-  MessageSquare,
-  Eye,
-  FileText,
-  Network,
-  X
-} from 'lucide-react';
-
-const PricingPage: React.FC = () => {
+import { CheckCircle, ArrowRight, Zap, Brain, Server, Code, Cloud, Layers } from 'lucide-react';const PricingPage: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
@@ -343,14 +306,13 @@ const PricingPage: React.FC = () => {
     ? allPricing 
     : allPricing.filter(item => item.category === selectedCategory);
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Pricing - Transparent Pricing for AI & IT Solutions | Zion Tech Group</title>
         <meta name="description" content="Transparent pricing for our comprehensive AI and IT solutions. Choose from micro SAAS, AI services, and IT solutions with flexible pricing options." />
-        <meta name="keywords" content="pricing, micro SAAS pricing, AI services pricing, IT services pricing, cloud infrastructure pricing, cybersecurity pricing" />
+        <meta name="keywords" content="pricing, _micro SAAS pricing, _AI services pricing, _IT services pricing, _cloud infrastructure pricing, cybersecurity pricing" />
         <meta property="og:title" content="Pricing - Transparent Pricing for AI & IT Solutions" />
-        <meta property="og:description" content="Transparent pricing for our comprehensive AI and IT solutions. Choose from micro SAAS, AI services, and IT solutions." />
+        <meta property="og:description" content="Transparent pricing for our comprehensive AI and IT solutions. Choose from micro SAAS, _AI services, and IT solutions." />
         <meta property="og:url" content="https://ziontechgroup.com/pricing" />
         <link rel="canonical" href="https://ziontechgroup.com/pricing" />
       </Helmet>
@@ -404,8 +366,7 @@ const PricingPage: React.FC = () => {
       <section className="py-8 bg-slate-800">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
-              <button
+            {categories.map((category) => (<button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${

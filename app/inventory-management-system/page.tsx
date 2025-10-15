@@ -1,20 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Package, 
-  BarChart3, 
-  AlertTriangle, 
-  CheckCircle, 
-  ArrowRight, 
-  Target, 
-  Zap,
-  Shield,
-  Globe,
-  Database,
-  Calendar,
-  Users
-} from 'lucide-react';
-import FuturisticCard from '../components/FuturisticCard';
+import { Package, BarChart3, AlertTriangle, CheckCircle, ArrowRight, Target, Zap, Globe, Database } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -129,12 +115,11 @@ const InventoryManagementSystemPage = () => {
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Inventory Management System - Zion Tech Group | Stock Control & Analytics"
-        description="Advanced inventory management system with real-time tracking, demand forecasting, automated reordering, and multi-channel support. Optimize your inventory operations."
-        keywords="inventory management system, stock control, demand forecasting, automated reordering, multi-channel inventory, inventory analytics"
+        description="Advanced inventory management system with real-time tracking, demand forecasting, _automated reordering, and multi-channel support. Optimize your inventory operations."
+        keywords="inventory management system, _stock control, _demand forecasting, _automated reordering, _multi-channel inventory, inventory analytics"
         canonical="https://ziontechgroup.com/inventory-management-system"
       />
 
@@ -148,7 +133,7 @@ const InventoryManagementSystemPage = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Optimize your inventory operations with our comprehensive management system. 
-            Track stock levels, forecast demand, and automate reordering across all channels.
+            Track stock levels, _forecast demand, and automate reordering across all channels.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
@@ -183,8 +168,7 @@ const InventoryManagementSystemPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <FuturisticCard key={index} className="h-full">
+            {features.map((feature, index) => (<FuturisticCard key={index} className="h-full">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     {feature.icon}

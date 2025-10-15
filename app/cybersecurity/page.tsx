@@ -126,8 +126,7 @@ export default function Cybersecurity() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div
+              {services.map((service, index) => (<div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 relative overflow-hidden"
                 >
@@ -216,7 +215,6 @@ export default function Cybersecurity() {
                 </div>
               </div>
               
-<<<<<<< HEAD
               <div className="grid md:grid-cols-2 gap-12">
                 <div className="space-y-8">
                   <div className="flex items-start space-x-4">
@@ -282,8 +280,6 @@ export default function Cybersecurity() {
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Don&apos;t wait for a security breach. Get comprehensive protection with our advanced cybersecurity solutions.
               </p>
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"

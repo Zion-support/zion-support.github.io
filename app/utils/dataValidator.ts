@@ -4,7 +4,7 @@ export const Datavalidator = {
   init: () => {
     },
 
-  process: (data: any) => {
+  process: (_data: any) => {
     return data;
   },
 

@@ -4,7 +4,7 @@ export const Performanceutils = {
   init: () => {
     },
 
-  process: (data: any) => {
+  process: (_data: any) => {
     return data;
   },
 

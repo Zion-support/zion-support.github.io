@@ -142,8 +142,7 @@ export default function AIExpenseTracker() {
     },
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>AI Expense Tracker - Zion Tech Group</title>
         <meta
@@ -160,7 +159,7 @@ export default function AIExpenseTracker() {
               AI Expense <span className="text-blue-600">Tracker</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Smart expense tracking with AI-powered categorization, receipt
+              Smart expense tracking with AI-powered categorization, _receipt
               scanning, and financial insights to help you manage your money
               better.
             </p>
@@ -287,7 +286,7 @@ export default function AIExpenseTracker() {
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(( i) => (
                       <Star
                         className="w-5 h-5 text-yellow-400 fill-current"
                         key={i}

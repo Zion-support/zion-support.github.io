@@ -6,8 +6,7 @@ import {
   MapPinIcon,
   ArrowRightIcon
 } from '@heroicons/react/24/outline';
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
-import { 
+import { Facebook, Twitter, Linkedin, Github } from 'lucide-react';import { 
   HeartIcon
 } from '@heroicons/react/24/outline';
 
@@ -65,8 +64,7 @@ const Footer: React.FC = () => {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github' }
   ];
 
-  return (
-    <footer className="bg-slate-900 border-t border-slate-700">
+  return (<footer className="bg-slate-900 border-t border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
@@ -78,7 +76,7 @@ const Footer: React.FC = () => {
               <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
             </div>
             <p className="text-gray-400 text-sm mb-4">
-              Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services. 
+              Leading provider of AI solutions, cybersecurity, _cloud infrastructure, and digital transformation services. 
               Transforming businesses with cutting-edge technology.
             </p>
             <div className="flex space-x-4">

@@ -1,14 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { CheckCircle, Brain, Shield, BarChart, Users, Globe, Code, Smartphone, Mail, Phone, Cpu, Target, MessageSquare, TrendingUp, Zap } from 'lucide-react';
-=======
 import { CheckCircle, Brain, Zap, Shield, BarChart, Users, Globe, Code, Smartphone, Mail, Phone, Target, MessageSquare, TrendingUp, Cpu } from 'lucide-react';
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
-=======
 import { CheckCircle, Brain, Zap, Shield, BarChart, Users, Globe, Code, Smartphone, Mail, Phone, Target, MessageSquare, TrendingUp, Cpu } from 'lucide-react';
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
 
 const AISolutionsPage: React.FC = () => {
   const aiServices = [
@@ -250,8 +243,7 @@ const AISolutionsPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-6 border border-slate-700 hover:border-cyan-400 transition-all duration-300">
+              {useCases.map((useCase, index) => (<div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-6 border border-slate-700 hover:border-cyan-400 transition-all duration-300">
                   <div className="mb-4">
                     {useCase.icon}
                   </div>

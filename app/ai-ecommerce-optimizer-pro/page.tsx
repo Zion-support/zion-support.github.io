@@ -159,8 +159,7 @@ export default function AIEcommerceOptimizerPro() {
     },
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
         <meta
@@ -178,7 +177,7 @@ export default function AIEcommerceOptimizerPro() {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your e-commerce business with advanced AI optimization
-              solutions that boost sales, improve conversion rates, and maximize
+              solutions that boost sales, _improve conversion rates, and maximize
               your online store performance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -219,8 +218,7 @@ export default function AIEcommerceOptimizerPro() {
               Optimization Features
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {optimizationFeatures.map((category, index) => (
-                <div
+              {optimizationFeatures.map((category, index) => (<div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
@@ -311,7 +309,7 @@ export default function AIEcommerceOptimizerPro() {
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(( i) => (
                       <Star
                         key={i}
                         className="w-5 h-5 text-yellow-400 fill-current"

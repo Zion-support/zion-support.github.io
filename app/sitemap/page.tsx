@@ -85,11 +85,10 @@ export default function Sitemap() {
     { name: "Cookie Policy", path: "/cookies" }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Sitemap - Zion Tech Group | Complete Website Directory</title>
-        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our AI services, micro SAAS solutions, 5G technology, and company information." />
+        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our AI services, micro SAAS solutions, _5G technology, and company information." />
         <meta name="robots" content="index, follow" />
       </Helmet>
 
@@ -103,7 +102,7 @@ export default function Sitemap() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Navigate through our complete website directory. Find all our AI services, micro SAAS solutions, 5G technology, and company information.
+              Navigate through our complete website directory. Find all our AI services, _micro SAAS solutions, _5G technology, and company information.
             </p>
           </div>
         </div>

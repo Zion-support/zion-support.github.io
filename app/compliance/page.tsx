@@ -73,17 +73,16 @@ export default function Compliance() {
     { icon: <Clock className="w-6 h-6" />, title: 'Time Savings', description: 'Streamline compliance processes with expert guidance and automation' }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Compliance Services - Zion Tech Group | Regulatory Compliance & Security</title>
         <meta
           name="description"
-          content="Ensure regulatory compliance with our comprehensive compliance services. SOC 2, ISO 27001, GDPR, HIPAA, and more. Expert guidance for your compliance journey."
+          content="Ensure regulatory compliance with our comprehensive compliance services. SOC 2, ISO 27001, _GDPR, _HIPAA, and more. Expert guidance for your compliance journey."
         />
         <meta
           name="keywords"
-          content="compliance services, SOC 2, ISO 27001, GDPR, HIPAA, PCI DSS, regulatory compliance, security compliance, audit support"
+          content="compliance services, _SOC 2, _ISO 27001, _GDPR, _HIPAA, _PCI DSS, _regulatory compliance, _security compliance, audit support"
         />
       </Helmet>
 
@@ -158,8 +157,7 @@ export default function Compliance() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+              {services.map((service, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
                   <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   <ul className="space-y-2">

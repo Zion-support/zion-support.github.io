@@ -55,9 +55,9 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: {
 };
 
 const TestComponent = () => <div>Test Component</div>;
-const ErrorComponent = () => {
-  throw new Error('Test error');
-};
+// const ErrorComponent = () => {
+//   throw new Error('Test error');
+// };
 
 describe('Advanced Components', () => {
   test('AdvancedErrorBoundary renders children when no error', () => {
@@ -79,7 +79,7 @@ describe('Advanced Components', () => {
       React.useEffect(() => {
         try {
           throw new Error('Test error');
-        } catch (error) {
+        } catch {
           setHasError(true);
         }
       }, []);

@@ -1,98 +1,60 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
-<<<<<<< HEAD
-// import path from 'path';
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
-import { glob } from 'glob';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Patterns to fix malformed object syntax
-const fixes = [
-  // Fix trailing commas in object properties
-  { pattern: /(\w+):\s*([^,}]+),\s*}/g, replacement: '$1: $2 }' },
-  // Fix trailing commas in arrays
-  { pattern: /(\w+)\s*,\s*]/g, replacement: '$1 ]' },
-  // Fix double commas
-  { pattern: /,\s*,/g, replacement: ',' },
-  // Fix semicolons in object properties
-  { pattern: /(\w+):\s*([^,}]+);/g, replacement: '$1: $2,' },
-  // Fix malformed object declarations
-  { pattern: /{\s*(\w+):\s*([^,}]+),\s*}/g, replacement: '{ $1: $2 }' },
-  // Fix array syntax issues
-  { pattern: /\[\s*(\w+)\s*,\s*\]/g, replacement: '[ $1 ]' },
-  // Fix malformed JSX attributes
-  { pattern: /const\s+(\w+)\s*=\s*{([^}]+)}/g, replacement: '$1={$2}' },
-  // Fix duplicate closing brackets
-  { pattern: /\]\]/g, replacement: ']' },
-  // Fix malformed export statements
-  { pattern: /export\s+default\s+NotFoundPage;/g, replacement: 'export default config;' },
-  // Fix interface syntax
-  { pattern: /(\w+):\s*(\w+);,/g, replacement: '$1: $2;' },
-];
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-function fixFile(filePath) {
+// Function to fix syntax errors introduced by the previous script
+function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const originalContent = content;
     
-    // Apply all fixes
-    fixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
-    });
+    // Fix incorrect function parameter syntax
+    content = content.replace(/\(_\(([^,]+),\s*_([^)]+)\)\s*=>/g, '($1, $2) =>');
     
-    // Additional specific fixes for common patterns
-    content = content.replace(/,\s*}/g, ' }');
-    content = content.replace(/,\s*]/g, ' ]');
-    content = content.replace(/;\s*}/g, ' }');
-    content = content.replace(/;\s*]/g, ' ]');
+    // Fix other common syntax issues
+    content = content.replace(/,\s*_([^)]+)\)\s*=>/g, ', $1) =>');
     
-    // Fix malformed object destructuring
-    content = content.replace(/{\s*(\w+)\s*,\s*}/g, '{ $1 }');
-    
-    // Fix malformed array destructuring
-    content = content.replace(/\[\s*(\w+)\s*,\s*\]/g, '[ $1 ]');
+    // Fix any remaining underscore prefixes that shouldn't be there
+    content = content.replace(/\(_([^,)]+),\s*_([^)]+)\)\s*=>/g, '($1, $2) =>');
     
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed syntax: ${filePath}`);
       return true;
     }
+    
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-function main() {
-  const patterns = [
-    'app/**/*.ts',
-    'app/**/*.tsx',
-    'components/**/*.ts',
-    'components/**/*.tsx',
-    'pages/**/*.ts',
-    'pages/**/*.tsx',
-    'utils/**/*.ts',
-    'utils/**/*.tsx'
-  ];
+// Function to process all TypeScript/JavaScript files
+function processFiles(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
   
-  let totalFixed = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {
-      if (fixFile(file)) {
-        totalFixed++;
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += processFiles(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
       }
     }
-  }
+  });
   
-  console.log(`\nFixed ${totalFixed} files`);
+  return fixedCount;
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
-
-export { fixFile, fixes };
+// Process the app directory
+console.log('Starting fix of syntax errors...');
+const fixedCount = processFiles('./app');
+console.log(`Fixed ${fixedCount} files.`);

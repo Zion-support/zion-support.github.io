@@ -1,20 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  BarChart3, 
-  PieChart, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight, 
-  Target, 
-  Zap,
-  Shield,
-  Globe,
-  Database,
-  Calendar,
-  Users
-} from 'lucide-react';
-import FuturisticCard from '../components/FuturisticCard';
+import { BarChart3, TrendingUp, CheckCircle, ArrowRight, Target, Zap, Shield, Globe, Database } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -129,12 +115,11 @@ const FinancialReportingToolPage = () => {
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Financial Reporting Tool - Zion Tech Group | Automated Financial Reports & Analytics"
-        description="Advanced financial reporting tool with automated report generation, real-time dashboards, cash flow analysis, and compliance support. Streamline your financial reporting."
-        keywords="financial reporting tool, automated reports, financial dashboards, cash flow analysis, budget analysis, compliance reporting"
+        description="Advanced financial reporting tool with automated report generation, real-time dashboards, _cash flow analysis, and compliance support. Streamline your financial reporting."
+        keywords="financial reporting tool, _automated reports, _financial dashboards, _cash flow analysis, _budget analysis, compliance reporting"
         canonical="https://ziontechgroup.com/financial-reporting-tool"
       />
 
@@ -147,8 +132,7 @@ const FinancialReportingToolPage = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Streamline your financial reporting with our comprehensive tool. Generate automated reports, 
-            track performance, and ensure compliance with advanced analytics and dashboards.
+            Streamline your financial reporting with our comprehensive tool. Generate automated reports, _track performance, and ensure compliance with advanced analytics and dashboards.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
@@ -183,8 +167,7 @@ const FinancialReportingToolPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <FuturisticCard key={index} className="h-full">
+            {features.map((feature, index) => (<FuturisticCard key={index} className="h-full">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     {feature.icon}

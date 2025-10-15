@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, Shield, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3, Star } from 'lucide-react';
+import { Wifi, Shield, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3 } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
   const solutions = [
@@ -71,14 +71,13 @@ const FiveGSolutionsPage: React.FC = () => {
     "AI/ML Integration", "Cloud-Native", "SDN/NFV", "MEC"
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>5G Solutions - Advanced 5G Network Services | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with our comprehensive 5G solutions including network implementation, IoT connectivity, edge computing, and smart city solutions." />
-        <meta name="keywords" content="5G solutions, 5G implementation, 5G network, IoT solutions, edge computing, smart city, 5G infrastructure" />
+        <meta name="description" content="Transform your business with our comprehensive 5G solutions including network implementation, IoT connectivity, _edge computing, and smart city solutions." />
+        <meta name="keywords" content="5G solutions, _5G implementation, _5G network, _IoT solutions, _edge computing, _smart city, 5G infrastructure" />
         <meta property="og:title" content="5G Solutions - Advanced 5G Network Services" />
-        <meta property="og:description" content="Transform your business with our comprehensive 5G solutions including network implementation, IoT connectivity, and edge computing." />
+        <meta property="og:description" content="Transform your business with our comprehensive 5G solutions including network implementation, _IoT connectivity, and edge computing." />
         <meta property="og:url" content="https://ziontechgroup.com/5g-solutions" />
         <link rel="canonical" href="https://ziontechgroup.com/5g-solutions" />
       </Helmet>
@@ -99,8 +98,7 @@ const FiveGSolutionsPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Transform your business with ultra-fast 5G networks, IoT connectivity, 
-              and edge computing solutions that deliver unprecedented performance.
+              Transform your business with ultra-fast 5G networks, _IoT connectivity, and edge computing solutions that deliver unprecedented performance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-500/25 flex items-center group">

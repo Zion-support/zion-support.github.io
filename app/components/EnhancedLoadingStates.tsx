@@ -8,9 +8,7 @@ interface LoadingPageProps {
 }
 
 export const LoadingPage: React.FC<LoadingPageProps> = ({ 
-  message = "Loading...", 
-  showProgress = false, 
-  progress = 0 
+  message = "Loading...", showProgress = false, progress = 0 
 }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -52,8 +50,7 @@ interface ServiceLoadingProps {
 }
 
 export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ 
-  serviceType, 
-  message 
+  serviceType, message 
 }) => {
   const getServiceIcon = () => {
     switch (serviceType) {
@@ -130,8 +127,7 @@ interface SkeletonLoadingProps {
 }
 
 export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({ 
-  type, 
-  count = 1 
+  type, count = 1 
 }) => {
   const renderSkeleton = () => {
     switch (type) {
@@ -148,7 +144,7 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({
       case 'list':
         return (
           <div className="space-y-4">
-            {Array.from({ length: count }).map((_, index) => (
+            {Array.from({ length: count }).map(( index) => (
               <div key={index} className="flex items-center space-x-4 animate-pulse">
                 <div className="w-12 h-12 bg-gray-600 rounded-full"></div>
                 <div className="flex-1 space-y-2">
@@ -163,7 +159,7 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({
       case 'text':
         return (
           <div className="space-y-3 animate-pulse">
-            {Array.from({ length: count }).map((_, index) => (
+            {Array.from({ length: count }).map(( index) => (
               <div key={index} className="space-y-2">
                 <div className="h-4 bg-gray-600 rounded"></div>
                 <div className="h-4 bg-gray-600 rounded w-5/6"></div>
@@ -187,7 +183,7 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({
 
   return (
     <div className="space-y-4">
-      {Array.from({ length: count }).map((_, index) => (
+      {Array.from({ length: count }).map(( index) => (
         <div key={index}>
           {renderSkeleton()}
         </div>
@@ -202,8 +198,7 @@ interface ErrorLoadingProps {
 }
 
 export const ErrorLoading: React.FC<ErrorLoadingProps> = ({ 
-  error, 
-  onRetry 
+  error, onRetry 
 }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -235,9 +230,7 @@ interface ProgressLoadingProps {
 }
 
 export const ProgressLoading: React.FC<ProgressLoadingProps> = ({ 
-  progress, 
-  message, 
-  subMessage 
+  progress, message, _subMessage 
 }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -265,7 +258,7 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({
         </div>
         
         <div className="flex justify-center space-x-1">
-          {Array.from({ length: 10 }).map((_, index) => (
+          {Array.from({ length: 10 }).map(( index) => (
             <div
               key={index}
               className={`w-2 h-2 rounded-full animate-pulse ${
