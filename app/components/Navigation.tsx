@@ -118,6 +118,26 @@ const Navigation: React.FC = () => {
                       AI Data Visualizer
                     </Link>
                     
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Advanced AI Services</div>
+                    <Link to="/ai-voice-assistant" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Voice Assistant Pro
+                    </Link>
+                    <Link to="/ai-fraud-detection" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Fraud Detection
+                    </Link>
+                    <Link to="/ai-image-recognition" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Image Recognition
+                    </Link>
+                    <Link to="/ai-lead-scoring" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Lead Scoring
+                    </Link>
+                    <Link to="/ai-predictive-maintenance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Predictive Maintenance
+                    </Link>
+                    <Link to="/ai-price-optimizer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Price Optimizer
+                    </Link>
+                    
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">AI Tools</div>
                     <Link to="/zion-ai-content-moderator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       AI Content Moderator
@@ -262,6 +282,26 @@ const Navigation: React.FC = () => {
                 </Link>
                 <Link to="/zion-ai-data-visualizer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                   AI Data Visualizer
+                </Link>
+                
+                <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Advanced AI Services</div>
+                <Link to="/ai-voice-assistant" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  AI Voice Assistant Pro
+                </Link>
+                <Link to="/ai-fraud-detection" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  AI Fraud Detection
+                </Link>
+                <Link to="/ai-image-recognition" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  AI Image Recognition
+                </Link>
+                <Link to="/ai-lead-scoring" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  AI Lead Scoring
+                </Link>
+                <Link to="/ai-predictive-maintenance" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  AI Predictive Maintenance
+                </Link>
+                <Link to="/ai-price-optimizer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  AI Price Optimizer
                 </Link>
                 
                 <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">AI Tools</div>

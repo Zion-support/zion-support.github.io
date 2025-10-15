@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Sidebar: React.FC = () => {
   return (
     <div className="hidden lg:block lg:w-64 lg:flex-shrink-0">
-      <div className="h-full flex flex-col bg-gray-50 border-r border-gray-200">
+      <div className="h-full flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 border-r border-gray-200 shadow-lg">
         <div className="p-4">
           <h2 className="text-lg font-semibold text-gray-900">Quick Navigation</h2>
         </div>
@@ -79,6 +79,28 @@ const Sidebar: React.FC = () => {
             </Link>
             <Link to="/zion-ai-crm-optimizer" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               AI CRM Optimizer
+            </Link>
+          </div>
+          
+          <div className="space-y-1 mt-6">
+            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Advanced AI Services</div>
+            <Link to="/ai-voice-assistant" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Voice Assistant Pro
+            </Link>
+            <Link to="/ai-fraud-detection" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Fraud Detection
+            </Link>
+            <Link to="/ai-image-recognition" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Image Recognition
+            </Link>
+            <Link to="/ai-lead-scoring" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Lead Scoring
+            </Link>
+            <Link to="/ai-predictive-maintenance" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Predictive Maintenance
+            </Link>
+            <Link to="/ai-price-optimizer" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Price Optimizer
             </Link>
           </div>
           

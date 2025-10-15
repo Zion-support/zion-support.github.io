@@ -113,6 +113,18 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Advanced AI Services</h4>
+            <ul className="space-y-3">
+              <li><Link to="/ai-voice-assistant" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Voice Assistant Pro</Link></li>
+              <li><Link to="/ai-fraud-detection" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Fraud Detection</Link></li>
+              <li><Link to="/ai-image-recognition" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Image Recognition</Link></li>
+              <li><Link to="/ai-lead-scoring" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Lead Scoring</Link></li>
+              <li><Link to="/ai-predictive-maintenance" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Predictive Maintenance</Link></li>
+              <li><Link to="/ai-price-optimizer" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Price Optimizer</Link></li>
+            </ul>
+          </div>
+          
+          <div>
             <h4 className="text-lg font-semibold mb-4 text-cyan-400">Company</h4>
             <ul className="space-y-3">
               <li><Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">About Us</Link></li>

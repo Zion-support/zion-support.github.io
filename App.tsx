@@ -63,6 +63,14 @@ const ZionAIEmailOptimizerPage = lazy(() => import('./app/zion-ai-email-optimize
 const ZionAIWebsiteAnalyzerPage = lazy(() => import('./app/zion-ai-website-analyzer/page'));
 const ZionAIDataVisualizerPage = lazy(() => import('./app/zion-ai-data-visualizer/page'));
 
+// Additional New Micro SaaS Services
+const ZionAIVoiceAssistantPage = lazy(() => import('./app/ai-voice-assistant/page'));
+const ZionAIFraudDetectionPage = lazy(() => import('./app/ai-fraud-detection/page'));
+const ZionAIImageRecognitionPage = lazy(() => import('./app/ai-image-recognition/page'));
+const ZionAILeadScoringPage = lazy(() => import('./app/ai-lead-scoring/page'));
+const ZionAIPredictiveMaintenancePage = lazy(() => import('./app/ai-predictive-maintenance/page'));
+const ZionAIPriceOptimizerPage = lazy(() => import('./app/ai-price-optimizer/page'));
+
 // Import components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -102,13 +110,13 @@ export default function App() {
         <Router>
           <div className="min-h-screen bg-gray-50">
             <Navigation />
-            <Sidebar />
-            
-            <main className="flex-1">
-              <PerformanceMonitor />
-              <AccessibilityEnhancer />
-              
-              <Suspense fallback={<LoadingFallback />}>
+            <div className="flex">
+              <Sidebar />
+              <main className="flex-1 lg:ml-0">
+                <PerformanceMonitor />
+                <AccessibilityEnhancer />
+                
+                <Suspense fallback={<LoadingFallback />}>
                 <Routes>
                   {/* Main Pages */}
                   <Route path="/" element={<HomePage />} />
@@ -179,6 +187,14 @@ export default function App() {
                   <Route path="/zion-ai-website-analyzer" element={<ZionAIWebsiteAnalyzerPage />} />
                   <Route path="/zion-ai-data-visualizer" element={<ZionAIDataVisualizerPage />} />
                   
+                  {/* Additional New Micro SaaS Services */}
+                  <Route path="/ai-voice-assistant" element={<ZionAIVoiceAssistantPage />} />
+                  <Route path="/ai-fraud-detection" element={<ZionAIFraudDetectionPage />} />
+                  <Route path="/ai-image-recognition" element={<ZionAIImageRecognitionPage />} />
+                  <Route path="/ai-lead-scoring" element={<ZionAILeadScoringPage />} />
+                  <Route path="/ai-predictive-maintenance" element={<ZionAIPredictiveMaintenancePage />} />
+                  <Route path="/ai-price-optimizer" element={<ZionAIPriceOptimizerPage />} />
+                  
                   {/* Catch all route */}
                   <Route path="*" element={
                     <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -212,8 +228,9 @@ export default function App() {
                     </div>
                   } />
                 </Routes>
-              </Suspense>
-            </main>
+                </Suspense>
+              </main>
+            </div>
             
             <Footer />
           </div>

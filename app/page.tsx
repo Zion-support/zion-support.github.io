@@ -31,6 +31,7 @@ const HomePage: React.FC = () => {
   };
 
   const featuredMicroSaas = servicesData.microSaas.slice(0, 6);
+  const featuredNewMicroSaas = servicesData.newMicroSaas.slice(0, 6);
 
   return (
     <>
@@ -170,6 +171,47 @@ const HomePage: React.FC = () => {
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 View All Micro SaaS Solutions
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Advanced AI Services */}
+        <div className="bg-gradient-to-br from-purple-50 to-pink-100 py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced AI Services</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Cutting-edge AI solutions that push the boundaries of what's possible with artificial intelligence and machine learning.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {featuredNewMicroSaas.map((service) => (
+                <div key={service.id} className="bg-white p-6 rounded-lg hover:shadow-lg transition-shadow">
+                  <div className="text-3xl mb-3">{service.icon}</div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h3>
+                  <p className="text-sm text-gray-600 mb-3">{service.shortDescription}</p>
+                  <div className="mb-3">
+                    <div className="text-lg font-bold text-purple-600">{service.marketPrice}</div>
+                    <div className="text-xs text-gray-500">Starting from ${service.pricing.basic}/month</div>
+                  </div>
+                  <a 
+                    href={`/contact?service=${service.id}`}
+                    className="text-purple-600 hover:text-purple-800 text-sm font-semibold"
+                  >
+                    Learn More →
+                  </a>
+                </div>
+              ))}
+            </div>
+            
+            <div className="text-center mt-8">
+              <a 
+                href="/ai-services" 
+                className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+              >
+                Explore All AI Services
               </a>
             </div>
           </div>
