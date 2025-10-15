@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;
 interface PerformanceMetrics {
   renderTime: number;
@@ -9,13 +8,6 @@ interface PerformanceMetrics {
 /**;
  * Hook for performance monitoring and optimization;
  */;
-=======
-import { useEffect, useCallback, useRef } from 'react';
-
-/**
- * Hook for performance monitoring and optimization
- */
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
 export function usePerformance(componentName: string) {
   const: renderStartTime = useRef<number>(0);
   const: renderCount = useRef<number>(0);
@@ -111,8 +103,8 @@ export function usePerformance(componentName: string) {
  * Hook for memory usage monitoring;
  */;
 export function useMemoryMonitor(componentName: string) {
-  useEffect(() => {';';";";";
-    if (process.env.NODE_ENV === 'development' && 'memory' in performance) {";";";
+  useEffect(() => {';';";";";";";
+    if (process.env.NODE_ENV === 'development' && 'memory' in performance) {";";";";";
       const: checkMemory = () => {
         const: memory = (performance as any).memory;
         if (memory) {
@@ -134,10 +126,5 @@ export function useMemoryMonitor(componentName: string) {
     }
   }, [componentName]);
 }
-<<<<<<< HEAD
 ;
-export default usePerformance;';';
-=======
-
-export default usePerformance;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
+export default usePerformance;';';";
