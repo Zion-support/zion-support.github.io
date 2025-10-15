@@ -25,6 +25,26 @@ interface PerformanceConfig {
   longTaskThreshold?: number;
 }
 
+interface PerformanceEntry {
+  name: string;
+  startTime: number;
+  duration: number;
+  entryType: string;
+}
+
+interface MemoryInfo {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
+// interface GtagEvent {
+//   event_category: string;
+//   event_label?: string;
+//   value?: number;
+//   custom_parameter?: string;
+// }
+
 export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {}) => {
   const {
     enableMemoryMonitoring = true,
@@ -40,7 +60,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
   const observerRef = useRef<PerformanceObserver | null>(null);
   const reportIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: any) => {
+  const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: Record<string, unknown>) => {
     // Report to analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any)['gtag']('event', name, {
@@ -98,7 +118,11 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       try {
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            const metric = entry as PerformanceEntry & { startTime: number; value?: number; hadRecentInput?: boolean };
+<<<<<<< HEAD
+            const metric = entry as PerformanceEntry;
+=======
+            const metric = entry as PerformanceEntry;
+>>>>>>> cursor/fix-errors-and-merge-to-main-3dff
             
             switch (entry.entryType) {
               case 'paint':
@@ -163,7 +187,9 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
         observerRef.current = observer;
 
       } catch (error) {
-        console.warn('Performance Observer setup failed:', error);
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Performance Observer setup failed:', error);
+        }
       }
     };
 
@@ -171,11 +197,17 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       if (!enableMemoryMonitoring || !('memory' in performance)) return;
 
       const checkMemory = () => {
-        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-        if (memory) {
-          const usedMB = memory.usedJSHeapSize / 1048576;
-          const totalMB = memory.totalJSHeapSize / 1048576;
-          const limitMB = memory.jsHeapSizeLimit / 1048576;
+<<<<<<< HEAD
+        const memory = (performance as any).memory as MemoryInfo;
+        const usedMB = memory.usedJSHeapSize / 1048576;
+        const totalMB = memory.totalJSHeapSize / 1048576;
+        const limitMB = memory.jsHeapSizeLimit / 1048576;
+=======
+        const memory = (performance as any).memory as MemoryInfo;
+        const usedMB = memory.usedJSHeapSize / 1048576;
+        const totalMB = memory.totalJSHeapSize / 1048576;
+        const limitMB = memory.jsHeapSizeLimit / 1048576;
+>>>>>>> cursor/fix-errors-and-merge-to-main-3dff
 
           metricsRef.current.memory = {
             used: usedMB,
@@ -201,7 +233,11 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          const metric = entry as PerformanceEntry & { value: number; hadRecentInput: boolean };
+<<<<<<< HEAD
+          const metric = entry as PerformanceEntry;
+=======
+          const metric = entry as PerformanceEntry;
+>>>>>>> cursor/fix-errors-and-merge-to-main-3dff
           if (!metric.hadRecentInput) {
             clsValue += metric.value;
             metricsRef.current.cls = clsValue;
@@ -212,7 +248,9 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
       } catch (error) {
-        console.warn('Layout shift monitoring not supported:', error);
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Layout shift monitoring not supported:', error);
+        }
       }
 
       return () => clsObserver.disconnect();
@@ -256,6 +294,11 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     reportInterval,
     memoryThreshold,
     longTaskThreshold,
+    reportMetrics,
+<<<<<<< HEAD
+=======
+    reportMetrics,
+>>>>>>> cursor/fix-errors-and-merge-to-main-3dff
     reportMetric,
   ]);
 
