@@ -19,6 +19,9 @@ import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
 import SolutionsPage from './app/pages/SolutionsPage';
+import MicroSaaSPage from './app/pages/MicroSaaSPage';
+import AISolutionsPage from './app/pages/AISolutionsPage';
+import ITServicesPage from './app/pages/ITServicesPage';
 
 // Error fallback component
 
@@ -43,6 +46,9 @@ function App() {
               <Route path="/terms" element={<TermsPage />} />
               <Route path="/pricing" element={<PricingPage />} />
               <Route path="/solutions" element={<SolutionsPage />} />
+              <Route path="/micro-saas" element={<MicroSaaSPage />} />
+              <Route path="/ai-solutions" element={<AISolutionsPage />} />
+              <Route path="/it-services" element={<ITServicesPage />} />
               
               {/* Catch all route */}
               <Route path="*" element={
