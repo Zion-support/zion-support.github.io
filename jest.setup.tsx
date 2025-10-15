@@ -1,5 +1,4 @@
 import '@testing-library/jest-dom';
-import React from 'react';
 
 // Mock React Router
 jest.mock('react-router-dom', () => ({

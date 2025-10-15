@@ -1,5 +1,5 @@
 "use client";
-import React, { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
@@ -7,7 +7,6 @@ import { HelmetProvider } from "react-helmet-async";
 import Navigation from './components/Navigation'
 import Sidebar from './components/Sidebar'
 import Footer from './components/Footer'
-import ErrorBoundary from './components/ErrorBoundary'
 import GlobalErrorBoundary from './components/GlobalErrorBoundary'
 import PerformanceMonitor from './components/PerformanceMonitor'
 import AccessibilityEnhancer from './components/AccessibilityEnhancer'
