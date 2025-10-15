@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+"use client";"""
+";"""
+import React from "react";""
+export default function Page() {
+  return (
+    <div></div>""
+      <h1>Page</h1>
+          <p className="text-gray-300 text-lg">This page is under development.</p>""
+    </div>)
+  );''
+}"""
+=======
 'use client';";
 import React from 'react';";
 import SEOHead from '../components/SEOHead';";
@@ -208,3 +221,4 @@ const SolutionsPage: React.FC = () => {
 };
 
 export default SolutionsPage;
+>>>>>>> main
