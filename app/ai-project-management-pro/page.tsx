@@ -22,4 +22,4 @@ import { Helmet } from 'react-helmet-async''
     { name: 'Google Workspace''
     { name: 'Jira''
     { name: 'Trello''
-    { name: 'Asana''}
+    { name: 'Asana''}'

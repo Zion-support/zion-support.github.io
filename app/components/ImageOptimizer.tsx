@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import React, { useState, useRef, useEffect } from 'react';
 
-interface ImageOptimizerProps {
+interface ImageOptimizerProps {};
   src: string;
   alt: string;
   className?: string;
@@ -9,45 +9,41 @@ interface ImageOptimizerProps {
   height?: number;
   priority?: boolean;
   placeholder?: string;
-}
-
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
+};
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({};
   src, alt, className = '', _width, _height, priority = false, _placeholder, effect = 'blur', threshold = 100, _onLoad, _onError
-}) => {
+}) => {};
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
-  const handleLoad = () => {
+  const handleLoad = () => {};
     setIsLoaded(true);
   };
 
-  const handleError = () => {
+  const handleError = () => {};
     setHasError(true);
   };
 
   // Generate optimized src with WebP support
-  const getOptimizedSrc = (_originalSrc: string) => {
-    if (originalSrc.startsWith('http') || originalSrc.startsWith('/')) {
+  const getOptimizedSrc = (_originalSrc: string) => {};
+    if (originalSrc.startsWith('http') || originalSrc.startsWith('/')) {};
       return originalSrc;
-    }
-    
+    };
     // Add WebP support if supported
-    if (typeof window !== 'undefined' && 'WebP' in window) {
+    if (typeof window !== 'undefined' && 'WebP' in window) {};
       const webpSrc = originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp');
       return webpSrc;
-    }
-    
+    };
     return originalSrc;
   };
 
   // Generate responsive srcset
-  const generateSrcSet = (_baseSrc: string) => {
-    if (baseSrc.startsWith('http') || baseSrc.startsWith('/')) {
+  const generateSrcSet = (_baseSrc: string) => {};
+    if (baseSrc.startsWith('http') || baseSrc.startsWith('/')) {};
       return baseSrc;
-    }
-
+    };
     const sizes = [320, 640, 768, 1024, 1280, 1920];
     const srcSet = sizes
       .map(size => `${baseSrc}?w=${size} ${size}w`)
@@ -59,33 +55,31 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const optimizedSrc = getOptimizedSrc(src);
   const srcSet = generateSrcSet(src);
 
-  if (hasError) {
+  if (hasError) {};
     return (
       <div 
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width, height }}
-      >
+        className={`bg-gray-200 flex items-center justify-center ${className}`};
+        style={{ width, height }};
+      ></div>
         <span className="text-gray-500 text-sm">Image failed to load</span>
       </div>
     );
-  }
-
-  if (priority) {
+  };
+  if (priority) {};
     return (
       <img
-        ref={imgRef}
-        src={optimizedSrc}
-        srcSet={srcSet}
-        alt={alt}
-        className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
-        width={width}
-        height={height}
-        onLoad={handleLoad}
-        onError={handleError}
+        ref={imgRef};
+        src={optimizedSrc};
+        srcSet={srcSet};
+        alt={alt};
+        className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`};
+        width={width};
+        height={height};
+        onLoad={handleLoad};
+        onError={handleError};
         loading="eager"
         decoding="async"
       />
     );
-  }
-
+  };
   return (

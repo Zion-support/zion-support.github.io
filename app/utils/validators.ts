@@ -1,12 +1,11 @@
 // Validators utility functions
 
-export const Validators = {
-  init: () => {
-    },
-
-  process: (data: unknown) => {
+export const Validators = {};
+  init: () => {};
+    };
+  process: (data: unknown) => {};
     return data;
-  },
-  cleanup: () => {}
-} }}
+  };
+  cleanup: () => {};
+} }};
 export default Validators

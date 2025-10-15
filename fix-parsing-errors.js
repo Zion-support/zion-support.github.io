@@ -1,9 +1,9 @@
 import fs from 'fs'
 import path from 'path'
-export { fixFileContent, processFile }
+export { fixFileContent, processFile };
 #!/usr/bin/env node
 // Function to fix common parsing errors
-function fixFileContent(content) {}
+function fixFileContent(content) {};
 }let fixed = content
   // Fix invalid escape sequences in import statements
   fixed = fixed.replace(/import\s+([^']+)from\s+\\'([^']+)\\'/g, "import $1 from '$2'")
@@ -16,7 +16,7 @@ function fixFileContent(content) {}
         match.includes('pt-') || match.includes('pb-') || match.includes('pl-') ||
         match.includes('pr-') || match.includes('gap-') || match.includes('col-') ||
         match.includes('md:') || match.includes('lg:') || match.includes('sm:') ||
-        match.includes('xl:') || match.includes('2xl:')) {}
+        match.includes('xl:') || match.includes('2xl:')) {};
       return p1 + ' ' + p2 + p3
     return match
   })
@@ -31,13 +31,13 @@ function fixFileContent(content) {}
   fixed = fixed.replace(/grid-cols-1 md:grid-cols-4gap-8/g, 'grid-cols-1 md:grid-cols-4 gap-8')
   fixed = fixed.replace(/col-span-1md:col-span-2/g, 'col-span-1 md:col-span-2')
   // Fix malformed JSX - add missing opening tags
-  fixed = fixed.replace(/<div className="[^"]*" \/></div>/g, (match) => {}
-    const className = match.match(/className="([^"]*)"/)[1]
-    return `<div className="${className}
-}"></div>`
+  fixed = fixed.replace(/<div className="[^"]*" \/></div>/g, (match) => {}"
+    const className = match.match(/className="([^"]*)"/)[1]"
+    return `<div className="${className}"
+}"></div>`"
   })
   // Fix self-closing divs that should be opening tags
-  fixed = fixed.replace(/<div className="([^"]*)" \/></div>\s*<([^>]+)>/g, '<div className="$1"></div>\n        <$2>')
+  fixed = fixed.replace(/<div className="([^"]*)" \/></div>\s*<([^>]+)>/g, '<div className="$1"></div>\n        <$2>')"
   // Remove invalid 'use client' directive (this is a Vite project, not Next.js)
   fixed = fixed.replace(/'use client';\s*\n/g, '')
   // Fix JSX expressions that need parent elements
@@ -46,29 +46,29 @@ function fixFileContent(content) {}
   fixed = fixed.replace(/<\/meta>\s*<\/Helmet>/g, '</meta>\n      </Helmet>')
   return fixed
 // Function to process a single file
-function processFile(filePath) {}
-}try {}
-} catch (error) {}
+function processFile(filePath) {};
+}try {};
+} catch (error) {};
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
 const fixed = fixFileContent(content)
-    if (content !== fixed) {}
+    if (content !== fixed) {};
       fs.writeFileSync(filePath, fixed, 'utf8')
       // console.log(`Fixed: ${filePath}`)
       return true
     return false
-  } catch (error) {}
+  } catch (error) {};
     // console.error(`Error processing ${filePath}:`, error.message)
     return false
 // Main function
-async function main() {}
+async function main() {};
 }// console.log('Starting to fix parsing errors...')
   // Get all TypeScript/TSX files
-  const files = await glob('**/*.{ts,tsx}', {}
+  const files = await glob('**/*.{ts,tsx}', {};
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
   })
   let fixedCount = 0
-    if (processFile(file)) {}
+    if (processFile(file)) {};
       fixedCount++
   })
   // console.log(`\nFixed ${fixedCount} files out of ${files.length} total files.`)

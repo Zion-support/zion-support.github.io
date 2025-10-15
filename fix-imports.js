@@ -8,13 +8,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix import statements in a file
-function fixImports(filePath) {
-  try {
+function fixImports(filePath) {};
+  try {};
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
     // Fix malformed import statements with empty braces
-    content = content.replace(/import\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {
+    content = content.replace(/import\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {"
       const cleanImports = imports
         .split(',')
         .map(imp => imp.trim().replace(/;+$/, ''))
@@ -24,7 +24,7 @@ function fixImports(filePath) {
     });
     
     // Fix malformed import statements with empty braces on single line
-    content = content.replace(/import\s*\{\s*([^}]+)\s*;\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {
+    content = content.replace(/import\s*\{\s*([^}]+)\s*;\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {"
       const cleanImports = imports
         .split(',')
         .map(imp => imp.trim().replace(/;+$/, ''))
@@ -34,15 +34,15 @@ function fixImports(filePath) {
     });
     
     // Fix interface definitions
-    content = content.replace(/interface\s+(\w+)\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}/g, (match, name, props) => {
+    content = content.replace(/interface\s+(\w+)\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}/g, (match, name, props) => {};
       const cleanProps = props
         .split('\n')
         .map(prop => prop.trim())
         .filter(prop => prop.length > 0)
-        .map(prop => {
-          if (prop.includes(':')) {
+        .map(prop => {};
+          if (prop.includes(':')) {};
             return prop.replace(/;+$/, '');
-          }
+          };
           return prop;
         })
         .join('\n  ');
@@ -64,48 +64,44 @@ function fixImports(filePath) {
     // Remove trailing whitespace
     content = content.replace(/[ \t]+$/gm, '');
     
-    if (content !== originalContent) {
+    if (content !== originalContent) {};
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed imports in: ${filePath}`);
       return true;
-    }
-    
+    };
     return false;
-  } catch (error) {
+  } catch (error) {};
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
-  }
-}
-
+  };
+};
 // Function to recursively fix files
-function fixDirectory(dirPath) {
+function fixDirectory(dirPath) {};
   let fixedCount = 0;
   
-  try {
+  try {};
     const items = fs.readdirSync(dirPath);
     
-    for (const item of items) {
+    for (const item of items) {};
       const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory()) {
+      if (stat.isDirectory()) {};
         // Skip node_modules and other build directories
-        if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {
+        if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {};
           fixedCount += fixDirectory(fullPath);
-        }
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        if (fixImports(fullPath)) {
+        };
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {};
+        if (fixImports(fullPath)) {};
           fixedCount++;
-        }
-      }
-    }
-  } catch (error) {
+        };
+      };
+    };
+  } catch (error) {};
     console.error(`Error reading directory ${dirPath}:`, error.message);
-  }
-  
+  };
   return fixedCount;
-}
-
+};
 // Main execution
 console.log('Starting import fixes...');
 const fixedCount = fixDirectory('./app/components');

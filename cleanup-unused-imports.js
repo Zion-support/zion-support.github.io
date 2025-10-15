@@ -6,24 +6,24 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to remove unused imports from a file
-function cleanUnusedImports(filePath) {
-  try {
+function cleanUnusedImports(filePath) {};
+  try {};
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
     // Remove unused imports - this is a simplified approach
-    // We'll focus on the most common patterns
+    // We'll focus on the most common patterns'
     
     // Remove unused lucide-react imports
     const lucideImports = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]lucide-react['"];?\s*/g);
-    if (lucideImports) {
-      lucideImports.forEach(importLine => {
+    if (lucideImports) {};
+      lucideImports.forEach(importLine => {};
         // Extract the imports
         const imports = importLine.match(/{\s*([^}]*)\s*}/)[1];
         const importList = imports.split(',').map(imp => imp.trim());
         
         // Check which imports are actually used in the file
-        const usedImports = importList.filter(imp => {
+        const usedImports = importList.filter(imp => {};
           const importName = imp.split(' as ')[0].trim();
           // Simple check - look for the import name in the file
           const regex = new RegExp(`\\b${importName}\\b`, 'g');
@@ -31,61 +31,57 @@ function cleanUnusedImports(filePath) {
           return matches && matches.length > 1; // More than just the import itself
         });
         
-        if (usedImports.length === 0) {
+        if (usedImports.length === 0) {};
           // Remove the entire import line
           content = content.replace(importLine, '');
-        } else if (usedImports.length < importList.length) {
+        } else if (usedImports.length < importList.length) {};
           // Replace with only used imports
           const newImport = `import { ${usedImports.join(', ')} } from 'lucide-react';`;
           content = content.replace(importLine, newImport);
-        }
+        };
       });
-    }
-    
+    };
     // Remove unused variables (simple cases)
-    content = content.replace(/^\s*const\s+(\w+)\s*=.*?;\s*$/gm, (match, varName) => {
+    content = content.replace(/^\s*const\s+(\w+)\s*=.*?;\s*$/gm, (match, varName) => {};
       const regex = new RegExp(`\\b${varName}\\b`, 'g');
       const matches = content.match(regex);
-      if (matches && matches.length === 1) {
+      if (matches && matches.length === 1) {};
         return ''; // Remove unused variable
-      }
+      };
       return match;
     });
     
-    if (content !== originalContent) {
+    if (content !== originalContent) {};
       fs.writeFileSync(filePath, content);
       console.log(`Cleaned: ${filePath}`);
       return true;
-    }
-    
+    };
     return false;
-  } catch (error) {
+  } catch (error) {};
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-}
-
+  };
+};
 // Function to process all TypeScript/JavaScript files
-function processFiles(dir) {
+function processFiles(dir) {};
   const files = fs.readdirSync(dir);
   let cleanedCount = 0;
   
-  files.forEach(file => {
+  files.forEach(file => {};
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {};
       cleanedCount += processFiles(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      if (cleanUnusedImports(filePath)) {
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {};
+      if (cleanUnusedImports(filePath)) {};
         cleanedCount++;
-      }
-    }
+      };
+    };
   });
   
   return cleanedCount;
-}
-
+};
 // Process the app directory
 console.log('Starting cleanup of unused imports...');
 const cleanedCount = processFiles('./app');

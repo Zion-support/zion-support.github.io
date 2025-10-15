@@ -22,4 +22,4 @@ import { Helmet } from 'react-helmet-async''
     { name: 'Zendesk''
     { name: 'Intercom''
     { name: 'Slack''
-    { name: 'Microsoft Teams''}
+    { name: 'Microsoft Teams''}'

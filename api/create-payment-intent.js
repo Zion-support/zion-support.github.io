@@ -1,3 +1,3 @@
-const withErrorLogging = (handler) => {
-  return async (req, res) => {
-    try {
+const withErrorLogging = (handler) => {};
+  return async (req, res) => {};
+    try {};

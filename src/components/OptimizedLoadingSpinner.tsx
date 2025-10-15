@@ -18,7 +18,7 @@ export default OptimizedLoadingSpinner
         case 'skeleton':
   )
         case 'bars':
-              ))}
+              ))};
   )
         case 'spinner':
         default:
@@ -26,9 +26,9 @@ export default OptimizedLoadingSpinner
     }, [size, variant, color, sizeClasses, colorClasses, baseClasses])
       return `${baseClasses} ${fullScreen ? fullScreenClasses : ''} ${className}`
     }, [baseClasses, fullScreen, fullScreenClasses, className])
-          {renderSpinner}
-              {text}
-          )}
+          {renderSpinner};
+              {text};
+          )};
   )
 )
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'

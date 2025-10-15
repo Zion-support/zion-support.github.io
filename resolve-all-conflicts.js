@@ -6,12 +6,12 @@ import {writeFileSync} from 'fs'
       return false; // No conflicts
 // Get list of files with conflicts
     for (let i = 0; i
-        continue}
-        resolvedLines.push(line)}
+        continue};
+        resolvedLines.push(line)};
     // Write the resolved content
     writeFileSync(filePath, resolvedLines.join('\n'))
     // console.log(`✅ Resolved conflicts in ${filePath}`)
     // console.log(`❌ Error resolving ${filePath}: ${error.message}`)
-    return false}
+    return false};
   // Get list of files with conflicts
 // console.log('🎉 Merge conflict resolution completed!');`
