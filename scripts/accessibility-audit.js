@@ -143,14 +143,14 @@ function generateReport() {
   if (!audit) return;
 
   console.log('📊 Accessibility Audit Results:');
-  console.log('==============================');
+  console.log('==');
   console.log(`Total Checks: ${audit.issues.length}`);
   console.log(`Passed: ${audit.issues.filter(i => i.status === 'pass').length}`);
   console.log(`Failed: ${audit.issues.filter(i => i.status === 'fail').length}`);
   console.log(`Score: ${Math.max(0, audit.score)}/100\n`);
 
   console.log('🔍 Detailed Results:');
-  console.log('===================');
+  console.log('=====');
   audit.issues.forEach((issue, index) => {
     const status = issue.status === 'pass' ? '✅' : '❌';
     const severity = issue.severity === 'high' ? '🔴' : issue.severity === 'medium' ? '🟡' : '🟢';
@@ -158,7 +158,7 @@ function generateReport() {
   });
 
   console.log('\n💡 Recommendations:');
-  console.log('==================');
+  console.log('====');
   audit.recommendations.forEach((rec, index) => {
     console.log(`${index + 1}. ${rec}`);
   });

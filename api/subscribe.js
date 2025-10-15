@@ -4,7 +4,6 @@ export default function handler(req, res) {
     return res.status(405).json({ _error: "Method not allowed" });
   }
 
-<<<<<<< HEAD
   const { email, name } = req.body;
 
   if (!email) {
@@ -51,7 +50,3 @@ export default function handler(req, res) {
 res.end(JSON.stringify({ error: 'Failed to save subscription' }));
   }
 }
-=======
-  res.status(200).json({ message: "Subscription successful" });
-}
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5

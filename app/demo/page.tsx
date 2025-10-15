@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Play, Right, Star, BarChart3, Shield } from 'lucide-react';
 
 const DemoPage: React.FC = () => {
@@ -50,8 +49,6 @@ icon: Play,
       rating: 5;
     }
   ];
-=======
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
 
 const Page: React.FC = () => {
   return (

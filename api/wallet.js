@@ -4,7 +4,6 @@ export default function handler(req, res) {
     return res.status(405).json({ _error: "Method not allowed" });
   }
 
-<<<<<<< HEAD
 const { address, type, name, userId } = req.body;
   if (!address || !type) {
     res.setHeader('Content-Type', 'application/json');
@@ -51,7 +50,3 @@ let wallets = [];
 res.end(JSON.stringify({ error: 'Failed to save wallet' }));
   }
 }
-=======
-  res.status(200).json({ message: "Wallet operation successful" });
-}
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5

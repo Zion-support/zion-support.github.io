@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
-<<<<<<< HEAD
 const pages = [
   { url: '/', priority: '1.0', changefreq: 'daily' },
   { url: '/about', priority: '0.8', changefreq: 'monthly' },
@@ -10,97 +9,13 @@ const pages = [
   { url: '/ai-solutions', priority: '0.9', changefreq: 'weekly' },
   { url: '/it-solutions', priority: '0.9', changefreq: 'weekly' },
   { url: '/micro-saas-solutions', priority: '0.8', changefreq: 'weekly' },
-  { url: '/5g-solutions', priority: '0.8', changefreq: 'weekly' },
-=======
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const pages = [
-<<<<<<< HEAD
-  { url: '/', priority: '1.0', changefreq: 'weekly' },
-  { url: '/about', priority: '0.8', changefreq: 'monthly' },
-  { url: '/services', priority: '0.9', changefreq: 'weekly' },
-  { url: '/contact', priority: '0.8', changefreq: 'monthly' },
-  { url: '/solutions', priority: '0.8', changefreq: 'weekly' },
-  { url: '/pricing', priority: '0.7', changefreq: 'monthly' },
-  { url: '/blog', priority: '0.6', changefreq: 'weekly' },
-  { url: '/tutorials', priority: '0.6', changefreq: 'weekly' },
-  { url: '/demo', priority: '0.7', changefreq: 'monthly' },
-  { url: '/support', priority: '0.6', changefreq: 'monthly' },
-  { url: '/privacy', priority: '0.3', changefreq: 'yearly' },
-  { url: '/terms', priority: '0.3', changefreq: 'yearly' },
-  
-  // AI Solutions
-  { url: '/ai-solutions', priority: '0.8', changefreq: 'weekly' },
-  { url: '/ai-services', priority: '0.7', changefreq: 'weekly' },
-  { url: '/ai-analytics', priority: '0.6', changefreq: 'weekly' },
-  { url: '/ai-automation', priority: '0.6', changefreq: 'weekly' },
-  { url: '/ai-content-generation', priority: '0.6', changefreq: 'weekly' },
-  { url: '/ai-cybersecurity', priority: '0.6', changefreq: 'weekly' },
-  { url: '/ai-data-analytics', priority: '0.6', changefreq: 'weekly' },
-  
-  // Micro SaaS Solutions
-  { url: '/micro-saas-solutions', priority: '0.8', changefreq: 'weekly' },
-  { url: '/micro-saas', priority: '0.7', changefreq: 'weekly' },
-  
-  // 5G Solutions
-  { url: '/5g-solutions', priority: '0.7', changefreq: 'weekly' },
-  { url: '/5g-data-analytics', priority: '0.6', changefreq: 'weekly' },
-  { url: '/5g-edge-computing', priority: '0.6', changefreq: 'weekly' },
-  { url: '/5g-iot-solutions', priority: '0.6', changefreq: 'weekly' },
-  { url: '/5g-smart-city-solutions', priority: '0.6', changefreq: 'weekly' },
-// IT Solutions
-  { url: '/it-solutions', priority: '0.8', changefreq: 'weekly' },
-  { url: '/it-services', priority: '0.7', changefreq: 'weekly' },
-  { url: '/cloud-infrastructure', priority: '0.7', changefreq: 'weekly' },
-  { url: '/digital-transformation', priority: '0.7', changefreq: 'weekly' },
-  { url: '/cybersecurity', priority: '0.7', changefreq: 'weekly' },
-  
-  // Other pages
-  { url: '/case-studies', priority: '0.6', changefreq: 'monthly' },
-  { url: '/careers', priority: '0.5', changefreq: 'monthly' },
-];
-
-const baseUrl = 'https://ziontechgroup.com';
-const currentDate = new Date().toISOString();
-
-// Generate sitemap XML
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>${baseUrl}${page.url}</loc>
-    <lastmod>${currentDate}</lastmod>
-=======
-  { url: "/", changefreq: "daily", priority: 1.0 },
-  { url: "/about", changefreq: "monthly", priority: 0.8 },
-  { url: "/services", changefreq: "monthly", priority: 0.9 },
-  { url: "/contact", changefreq: "monthly", priority: 0.7 },
-  { url: "/blog", changefreq: "weekly", priority: 0.8 },
-  { url: "/portfolio", changefreq: "monthly", priority: 0.8 },
-  { url: "/pricing", changefreq: "monthly", priority: 0.8 },
-  { url: "/careers", changefreq: "monthly", priority: 0.6 },
-  { url: "/privacy", changefreq: "yearly", priority: 0.3 },
-  { url: "/terms", changefreq: "yearly", priority: 0.3 },
-];
-
-const generateSitemap = () => {
-  const baseUrl = "https://zion.app";
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages
-  .map(
-    (page) => `  <url>
-    <loc>${baseUrl}${page.url}</loc>
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
-    <changefreq>${page.changefreq}</changefreq>
+  { url: '/5g-solutions', priority: '0.8', changefreq: 'weekly' },    <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
   </url>`,
   )
   .join("\n")}
 </urlset>`;
 
-<<<<<<< HEAD
 // Write sitemap to public directory
 const publicDir = path.join(__dirname, '..', 'public');
 if (!fs.existsSync(publicDir)) {
@@ -141,13 +56,3 @@ fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsTxt);
 console.log('✅ Sitemap and robots.txt generated successfully!');
 console.log(`📄 Generated sitemap with ${pages.length} pages`);
 console.log(`🤖 Generated robots.txt`);
-=======
-  const publicDir = path.join(__dirname, "..", "public");
-  if (!fs.existsSync(publicDir)) {
-    fs.mkdirSync(publicDir, { recursive: true });
-  }
-  fs.writeFileSync(path.join(publicDir, "sitemap.xml"), sitemap);
-};
-
-generateSitemap();
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5

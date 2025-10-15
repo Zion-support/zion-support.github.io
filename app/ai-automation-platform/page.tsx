@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -47,15 +46,9 @@ icon: <div className="w-6 h-6" />,
     "Scalable workflows",
     "Cost reduction"
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
-
 const Page: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD
       <EnhancedSEO
         title="AI Automation Platform - Intelligent Process Automation | Zion Tech Group"
         description="Transform your business with AI-powered automation. Workflow automation, smart decision making, and process optimization for modern enterprises."
@@ -176,19 +169,7 @@ icon={<div className="w-6 h-6" />}
               </FuturisticButton>
             </div>
           </ResponsiveContainer>
-        </section>
-=======
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">Page</h1>
-          <p className="text-gray-300 text-center">Coming soon...</p>
-        </div>
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
-      </div>
+        </section>      </div>
     </>
   );
 };
