@@ -44,6 +44,26 @@ body {
   background: var(--dark-bg);
   color: var(--text-primary);
   overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    font-size: 18px;
+  }
 }
 
 /* Animated Background */
@@ -726,6 +746,134 @@ body {
     background: none !important;
     -webkit-background-clip: unset !important;
     -webkit-text-fill-color: unset !important;
+  }
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .grid-responsive {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+  
+  .holographic-card {
+    padding: 1rem;
+  }
+  
+  .cyber-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .neon-text {
+    font-size: 1.5rem;
+  }
+  
+  .holographic {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .grid-responsive {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .grid-responsive {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  
+  .grid-responsive {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* Responsive Typography */
+.responsive-text {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  line-height: 1.4;
+}
+
+.responsive-heading {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+.responsive-padding {
+  padding: clamp(1rem, 3vw, 3rem);
+}
+
+.responsive-margin {
+  margin: clamp(0.5rem, 2vw, 2rem);
+}
+
+/* Mobile Navigation Improvements */
+@media (max-width: 768px) {
+  .navigation-menu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+  
+  .dropdown-menu li {
+    padding: 0.5rem 0;
+  }
+}
+
+/* Tablet and Desktop Navigation */
+@media (min-width: 769px) {
+  .navigation-menu {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-glow);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-neon);
   }
 }
 

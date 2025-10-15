@@ -20,10 +20,10 @@ const Footer: React.FC = memo(() => {
                 Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
               </p>
               <div className="space-y-2 text-sm text-gray-300">
-                <p className="flex items-center"><strong className="text-cyan-400 mr-2">📞</strong> <a href="tel:+13024640950" className="hover:text-cyan-300 transition-colors neon-glow">+1 302 464 0950</a></p>
+                <p className="flex items-center"><strong className="text-cyan-400 mr-2">📞</strong> <a href="tel:+13024640950" className="hover:text-cyan-300 transition-colors neon-glow">+1 (302) 464-0950</a></p>
                 <p className="flex items-center"><strong className="text-cyan-400 mr-2">✉️</strong> <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-300 transition-colors">kleber@ziontechgroup.com</a></p>
                 <p className="flex items-center"><strong className="text-cyan-400 mr-2">📍</strong> 364 E Main St STE 1008<br />Middletown DE 19709</p>
-                <p className="flex items-center"><strong className="text-cyan-400 mr-2">🌐</strong> <a href="https://ziontechgroup.com" className="hover:text-cyan-300 transition-colors">https://ziontechgroup.com</a></p>
+                <p className="flex items-center"><strong className="text-cyan-400 mr-2">🌐</strong> <a href="https://ziontechgroup.com" className="hover:text-cyan-300 transition-colors" target="_blank" rel="noopener noreferrer">https://ziontechgroup.com</a></p>
               </div>
               <div className="flex space-x-4 mt-4">
                 <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-cyan-300 transition-colors neon-glow p-2 rounded-lg hover:bg-cyan-500/10">
@@ -67,6 +67,10 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/ai-email-optimizer" className="text-gray-300 hover:text-white">AI Email Optimizer</Link></li>
               <li><Link to="/ai-website-analyzer" className="text-gray-300 hover:text-white">AI Website Analyzer</Link></li>
               <li><Link to="/ai-social-media-manager" className="text-gray-300 hover:text-white">AI Social Media Manager</Link></li>
+              <li><Link to="/ai-project-manager-pro" className="text-gray-300 hover:text-white">AI Project Manager Pro</Link></li>
+              <li><Link to="/ai-email-marketing-automation" className="text-gray-300 hover:text-white">AI Email Marketing Automation</Link></li>
+              <li><Link to="/ai-customer-support-automation" className="text-gray-300 hover:text-white">AI Customer Support Automation</Link></li>
+              <li><Link to="/ai-inventory-optimizer-pro" className="text-gray-300 hover:text-white">AI Inventory Optimizer Pro</Link></li>
               <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
             </ul>
           </div>
@@ -187,8 +191,11 @@ const Footer: React.FC = memo(() => {
                 <p className="mb-2">
                   ✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">kleber@ziontechgroup.com</a>
                 </p>
-                <p>
+                <p className="mb-2">
                   📍 364 E Main St STE 1008, Middletown DE 19709
+                </p>
+                <p>
+                  🌐 <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors" target="_blank" rel="noopener noreferrer">https://ziontechgroup.com</a>
                 </p>
               </div>
               <div className="flex space-x-6 mt-4 md:mt-0">

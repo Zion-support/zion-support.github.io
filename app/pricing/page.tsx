@@ -180,6 +180,26 @@ const PricingPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">AI Services Pricing</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Project Manager Pro</h3>
+                <div className="text-2xl font-bold text-blue-600 mb-2">$149<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">AI-powered project management with 40% productivity increase</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Email Marketing Automation</h3>
+                <div className="text-2xl font-bold text-blue-600 mb-2">$99<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">300% higher open rates with AI-powered email campaigns</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Customer Support Automation</h3>
+                <div className="text-2xl font-bold text-blue-600 mb-2">$199<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">90% faster response times with AI chatbots</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Inventory Optimizer Pro</h3>
+                <div className="text-2xl font-bold text-blue-600 mb-2">$299<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">30% cost reduction with AI demand forecasting</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Chatbot Builder Pro</h3>
                 <div className="text-2xl font-bold text-blue-600 mb-2">$199<span className="text-sm text-gray-500">/month</span></div>
                 <p className="text-gray-600 text-sm">Advanced conversational AI with natural language understanding</p>
@@ -200,29 +220,9 @@ const PricingPage: React.FC = () => {
                 <p className="text-gray-600 text-sm">Comprehensive financial forecasting and risk assessment</p>
               </div>
               <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Customer Sentiment Tracker</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Content Generator Pro</h3>
                 <div className="text-2xl font-bold text-blue-600 mb-2">$199<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Real-time customer sentiment analysis</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Meeting Transcriber Pro</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$99<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Advanced meeting transcription and analysis</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Customer Churn Predictor</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$249<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Predict and prevent customer churn</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Content Moderator Pro</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$199<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Automated content moderation with AI</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Task Scheduler Pro</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$79<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Intelligent task scheduling and optimization</p>
+                <p className="text-gray-600 text-sm">AI-powered content generation with 95% accuracy</p>
               </div>
             </div>
           </div>
