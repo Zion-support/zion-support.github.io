@@ -1,9 +1,8 @@
 import { Helmet } from 'react-helmet-async';
-import { Shield, Zap, Users, CheckCircle } from 'lucide-react';
+import { Shield, Zap, Users, CheckCircle, ArrowRight, Target, Globe, BarChart3, Clock } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const AiDatabaseSolutionsPage = () => {
-  return;
-},
+const features = [
     { icon: <Shield className="w-8 h-8" />,
       title: "Advanced Security & Compliance",
       description: "Enterprise-grade security with automated threat detection, encryption, and compliance management for sensitive data." },

@@ -1,7 +1,7 @@
 import { ArrowRight, Target, CheckCircle, Globe, Leaf, BarChart3, Shield, Zap, Clock } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Target, BarChart3, Globe, Shield, Zap, Leaf, Clock, RouterLink, ArrowRight, CheckCircle } from 'lucide-react';
-export default function AIClimateSolutionsPro() {
+
+const features = [
     {
       title: "Carbon Footprint Analysis",
       description: "Advanced AI algorithms that analyze and optimize carbon footprints across organizations and supply chains",

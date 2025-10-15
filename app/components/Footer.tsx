@@ -1,13 +1,13 @@
 import React from 'react';
+import {
   PhoneIcon, 
   EnvelopeIcon, 
   MapPinIcon, 
   ArrowRightIcon,
   HeartIcon
 } from '@heroicons/react/24/outline';
-import { ArrowRight, Facebook, Twitter, Linkedin, Github, ArrowRightIcon, PhoneIcon, EnvelopeIcon, MapPinIcon, HeartIcon } from 'lucide-react';
+import { ArrowRight, Facebook, Twitter, Linkedin, Github, Phone, Envelope, MapPin, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Phone, EnvelopeIcon, MapPinIcon, HeartIcon } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

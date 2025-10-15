@@ -1,8 +1,8 @@
-import EnhancedSEO from '../components/EnhancedSEO';
-import { Shield, Bug, FileText, Zap, EnhancedSEO, Sparkles, FuturisticButton, Code, Terminal, Users, Award, FuturisticCard, Brain, CheckCircle, Star, ArrowRight } from 'lucide-react';
-const AICodeAssistantPage = () => {
-  return;
-},
+import { Shield, Bug, FileText, Zap, Code, Terminal, Users, Award, Brain, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
+const features = [
     {
       title: "Intelligent Code Review",
       description: "Automated code review with security analysis, performance optimization suggestions, and best practice recommendations.",
@@ -168,6 +168,8 @@ const capabilities = [
       speed: "Auto-generated"
     }
   ];
+
+export default function AICodeAssistant() {
   return (
     
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">

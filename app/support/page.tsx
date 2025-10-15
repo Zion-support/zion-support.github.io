@@ -1,15 +1,33 @@
 import React, { useState, useEffect, memo, lazy, Suspense } from "react";
 import { Helmet } from 'react-helmet-async';
-import { React, Suspense } from 'react';
-import { Search, 2min, HelpCircle, BookOpen, Users, Clock, Phone, Mail } from 'lucide-react';
+import { Search, HelpCircle, BookOpen, Users, Clock, Phone, Mail, Zap } from 'lucide-react';
 
-const [selectedCategory, setSelectedCategory] = useState("all");
+const SupportPage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
-const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+  const resources = [
+    { title: "Documentation", description: "Comprehensive guides and API references", icon: BookOpen, link: "/docs" },
+    { title: "Community Forum", description: "Connect with other users and experts", icon: Users, link: "/community" },
+    { title: "Video Tutorials", description: "Step-by-step video guides", icon: Zap, link: "/tutorials" }
+  ];
 
-const resources = [ { title: "Documentation", description: "Comprehensive guides and API references", icon: BookOpen, link: "/docs", }, { title: "Community Forum", description: "Connect with other users and experts", icon: Users, link: "/community", }, { title: "Video Tutorials", description: "Step-by-step video guides", icon: Zap, link: "/tutorials", }, ];
+  interface FAQ {
+    question: string;
+    answer: string;
+    category: string;
+  }
 
-const faqs: FAQ[] = [ { question: "How do I get started with your AI solutions?", answer: "Contact our team for a free consultation where we'll assess your needs and recommend the best AI solutions for your business. We'll guide you through the entire process from planning to implementation.", category: "general", }, { question: "What support do you provide after implementation?", answer: "We provide 24/7 technical support, regular maintenance, updates, and ongoing optimization to ensure your systems run smoothly. Our support includes monitoring, troubleshooting, and performance optimization.", category: "support", }, { question: "How long does implementation typically take?", answer: "Implementation time varies based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise systems may take 3-6 months. We provide detailed timelines during the planning phase.", category: "implementation", }, { question: "Do you offer training for our team?", answer: "Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions. Training includes hands-on workshops, documentation, and ongoing support.", category: "training", }, { question: "What security measures do you have in place?", answer: "We implement enterprise-grade security including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA.", category: "security", }, { question: "Can you integrate with our existing systems?", answer: "Absolutely. We specialize in seamless integration with existing systems and can work with most platforms, databases, and APIs to ensure smooth data flow and functionality.", category: "integration", }, { question: "What happens if we need to scale up?", answer: "Our solutions are designed to scale with your business. We can easily add more capacity, features, or users as your needs grow, with minimal disruption to your operations.", category: "scaling", }, { question: "Do you provide custom development?", answer: "Yes, we offer custom development services to create tailored solutions that meet your specific business requirements and integrate perfectly with your existing workflows.", category: "development", }, ];
+  const faqs: FAQ[] = [
+    { question: "How do I get started with your AI solutions?", answer: "Contact our team for a free consultation where we'll assess your needs and recommend the best AI solutions for your business. We'll guide you through the entire process from planning to implementation.", category: "general" },
+    { question: "What support do you provide after implementation?", answer: "We provide 24/7 technical support, regular maintenance, updates, and ongoing optimization to ensure your systems run smoothly. Our support includes monitoring, troubleshooting, and performance optimization.", category: "support" },
+    { question: "How long does implementation typically take?", answer: "Implementation time varies based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise systems may take 3-6 months. We provide detailed timelines during the planning phase.", category: "implementation" },
+    { question: "Do you offer training for our team?", answer: "Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions. Training includes hands-on workshops, documentation, and ongoing support.", category: "training" },
+    { question: "What security measures do you have in place?", answer: "We implement enterprise-grade security including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA.", category: "security" },
+    { question: "Can you integrate with our existing systems?", answer: "Absolutely. We specialize in seamless integration with existing systems and can work with most platforms, databases, and APIs to ensure smooth data flow and functionality.", category: "integration" },
+    { question: "What happens if we need to scale up?", answer: "Our solutions are designed to scale with your business. We can easily add more capacity, features, or users as your needs grow, with minimal disruption to your operations.", category: "scaling" },
+    { question: "Do you provide custom development?", answer: "Yes, we offer custom development services to create tailored solutions that meet your specific business requirements and integrate perfectly with your existing workflows.", category: "development" }
+  ];
 
 const supportChannels = [
     { name: "Phone Support",
@@ -50,17 +68,22 @@ const categories = [
     "development",
   ];
 
-const filteredFAQs = faqs.filter((faq) => { const matchesSearch =
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredFAQs = faqs.filter((faq) => {
+    const matchesSearch =
       faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
 
-const matchesCategory =
+    const matchesCategory =
       selectedCategory === "all" || faq.category === selectedCategory;
-  return matchesSearch && matchesCategory; });
+    return matchesSearch && matchesCategory;
+  });
 
-const toggleFAQ = () => {
-  return;
-};
+  const toggleFAQ = (index: number) => {
+    setExpandedFAQ(expandedFAQ === index ? null : index);
+  };
+
   return (
     <>
       <Helmet>
@@ -104,7 +127,7 @@ const toggleFAQ = () => {
         <div className="text-center">
                 
         <div className="text-3xl font-bold text-white mb-2">
-                  <2min
+                  2min
                 </div>
                 
         <div className="text-gray-400">Average Response Time</div>

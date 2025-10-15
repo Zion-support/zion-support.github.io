@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Navigation, Phone, Mail, CheckCircle, Brain, Play, Star, Footer } from 'lucide-react';
+import { Navigation, Phone, Mail, CheckCircle, Brain, Play, Star, ArrowRight } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const features = [
