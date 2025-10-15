@@ -2,46 +2,61 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  canonicalUrl?: string;
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
   ogImage?: string;
+  ogUrl?: string;
   ogType?: string;
   twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
   structuredData?: object;
-  noIndex?: boolean;
-  noFollow?: boolean;
+  noindex?: boolean;
+  nofollow?: boolean;
 }
 
 const EnhancedSEO: React.FC<SEOProps> = ({
-  title,
-  description,
-  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions',
-  canonicalUrl,
-  ogImage = '/api/placeholder/1200/630',
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of cutting-edge AI, IT, and 5G solutions. Transform your business through innovative technology and intelligent automation.',
+  keywords = ['AI solutions', 'IT services', '5G technology', 'cloud computing', 'cybersecurity', 'digital transformation'],
+  canonical,
+  ogTitle,
+  ogDescription,
+  ogImage = '/og-image.jpg',
+  ogUrl,
   ogType = 'website',
   twitterCard = 'summary_large_image',
+  twitterTitle,
+  twitterDescription,
+  twitterImage,
   structuredData,
-  noIndex = false,
-  noFollow = false
+  noindex = false,
+  nofollow = false,
 }) => {
-  const siteName = 'Zion Tech Group';
-  const siteUrl = 'https://ziontechgroup.com';
-  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;
+  const siteUrl = process.env['REACT_APP_SITE_URL'] || 'https://ziontechgroup.com';
+  const fullCanonical = canonical ? `${siteUrl}${canonical}` : undefined;
+  const fullOgUrl = ogUrl || fullCanonical || siteUrl;
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+  const fullTwitterImage = twitterImage ? (twitterImage.startsWith('http') ? twitterImage : `${siteUrl}${twitterImage}`) : fullOgImage;
 
   const defaultStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: siteName,
+    name: 'Zion Tech Group',
     url: siteUrl,
     logo: `${siteUrl}/logo.png`,
-    description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
+    description: description,
     address: {
       '@type': 'PostalAddress',
+      streetAddress: '364 E Main St STE 1008',
       addressLocality: 'Middletown',
       addressRegion: 'DE',
+      postalCode: '19709',
       addressCountry: 'US'
     },
     contactPoint: {
@@ -52,64 +67,69 @@ const EnhancedSEO: React.FC<SEOProps> = ({
     },
     sameAs: [
       'https://www.linkedin.com/company/zion-tech-group',
-      'https://github.com/ziontechgroup',
-      'https://twitter.com/ziontechgroup'
+      'https://twitter.com/ziontechgroup',
+      'https://github.com/ziontechgroup'
     ]
   };
 
-  const mergedStructuredData = structuredData || defaultStructuredData;
+  const pageStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: title,
+    description: description,
+    url: fullCanonical || fullOgUrl,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Zion Tech Group',
+      url: siteUrl
+    }
+  };
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={fullCanonicalUrl} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      
+      {/* Canonical URL */}
+      {fullCanonical && <link rel="canonical" href={fullCanonical} />}
       
       {/* Robots */}
-      <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
       
       {/* Open Graph */}
-      <meta property="og:type" content={ogType} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+      <meta property="og:title" content={ogTitle || title} />
+      <meta property="og:description" content={ogDescription || description} />
       <meta property="og:image" content={fullOgImage} />
-      <meta property="og:url" content={fullCanonicalUrl} />
-      <meta property="og:site_name" content={siteName} />
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:url" content={fullOgUrl} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:site_name" content="Zion Tech Group" />
       
       {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullOgImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:title" content={twitterTitle || ogTitle || title} />
+      <meta name="twitter:description" content={twitterDescription || ogDescription || description} />
+      <meta name="twitter:image" content={fullTwitterImage} />
       
-      {/* Additional SEO Meta Tags */}
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="publisher" content="Zion Tech Group" />
-      <meta name="copyright" content="Zion Tech Group" />
-      <meta name="language" content="en" />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="rating" content="general" />
-      <meta name="distribution" content="global" />
+      {/* Additional Meta Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#8b5cf6" />
+      <meta name="msapplication-TileColor" content="#8b5cf6" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       
-      {/* Mobile Optimization */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-      <meta name="theme-color" content="#1e293b" />
-      <meta name="msapplication-TileColor" content="#1e293b" />
-      
-      {/* Performance Hints */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      {/* Language */}
+      <meta httpEquiv="content-language" content="en-US" />
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(mergedStructuredData)}
+        {JSON.stringify(structuredData || defaultStructuredData)}
+      </script>
+      
+      {/* Page-specific structured data */}
+      <script type="application/ld+json">
+        {JSON.stringify(pageStructuredData)}
       </script>
     </Helmet>
   );

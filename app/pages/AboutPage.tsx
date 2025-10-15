@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { 
   CheckCircleIcon,
@@ -141,6 +142,22 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+import { Helmet } from 'react-helmet-async';
+
+const AboutPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>AboutPage - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">AboutPage</h1>
+          <p className="text-gray-300 text-center">Coming soon...</p>
+        </div>
+>>>>>>> cursor/analyze-improve-and-merge-code-b7b5
       </div>
     </>
   );

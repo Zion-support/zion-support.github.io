@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useCallback } from 'react';
+import { cn } from '../utils/cn';
 
 interface OptimizedImageProps {
   src: string;
@@ -8,9 +8,10 @@ interface OptimizedImageProps {
   height?: number;
   className?: string;
   priority?: boolean;
-  placeholder?: string;
-  sizes?: string;
   quality?: number;
+  placeholder?: 'blur' | 'empty';
+  blurDataURL?: string;
+  sizes?: string;
   loading?: 'lazy' | 'eager';
   onLoad?: () => void;
   onError?: () => void;
@@ -21,54 +22,30 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   alt,
   width,
   height,
-  className = '',
+  className,
   priority = false,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+',
+  quality: _quality = 75,
+  placeholder = 'empty',
+  blurDataURL,
   sizes = '100vw',
-  quality = 85,
   loading = 'lazy',
   onLoad,
-  onError
+  onError,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isError, setIsError] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const [hasError, setHasError] = useState(false);
 
-  useEffect(() => {
-    if (priority) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '50px'
-      }
-    );
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [priority]);
-
-  const handleLoad = () => {
+  const handleLoad = useCallback(() => {
     setIsLoaded(true);
     onLoad?.();
-  };
+  }, [onLoad]);
 
-  const handleError = () => {
-    setIsError(true);
+  const handleError = useCallback(() => {
+    setHasError(true);
     onError?.();
-  };
+  }, [onError]);
 
-  // Generate WebP src if supported
+  // Generate optimized src with quality and format
   const getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {
       return originalSrc;
@@ -79,70 +56,77 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       return originalSrc;
     }
     
-    // For local images, you could implement WebP conversion here
+    // For local images, you could add optimization logic here
     return originalSrc;
   };
 
   const optimizedSrc = getOptimizedSrc(src);
 
-  return (
-    <>
-      {priority && (
-        <Helmet>
-          <link rel="preload" as="image" href={optimizedSrc} />
-        </Helmet>
-      )}
-      <div
-        ref={imgRef}
-        className={`relative overflow-hidden ${className}`}
+  if (hasError) {
+    return (
+      <div 
+        className={cn(
+          'flex items-center justify-center bg-gray-200 dark:bg-gray-700 text-gray-400',
+          className
+        )}
         style={{ width, height }}
+        role="img"
+        aria-label={alt}
       >
-        {/* Placeholder */}
-        {!isLoaded && !isError && (
-          <div
-            className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
-            style={{ width, height }}
-          >
-            <div className="text-gray-400 text-sm">Loading...</div>
-          </div>
-        )}
-
-        {/* Error state */}
-        {isError && (
-          <div
-            className="absolute inset-0 bg-gray-100 flex items-center justify-center"
-            style={{ width, height }}
-          >
-            <div className="text-gray-400 text-sm text-center">
-              <div className="text-2xl mb-2">📷</div>
-              <div>Image not available</div>
-            </div>
-          </div>
-        )}
-
-        {/* Actual image */}
-        {isInView && !isError && (
-          <img
-            src={optimizedSrc}
-            alt={alt}
-            width={width}
-            height={height}
-            loading={loading}
-            sizes={sizes}
-            onLoad={handleLoad}
-            onError={handleError}
-            className={`transition-opacity duration-300 ${
-              isLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover'
-            }}
+        <svg
+          className="w-8 h-8"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fillRule="evenodd"
+            d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+            clipRule="evenodd"
           />
-        )}
+        </svg>
       </div>
-    </>
+    );
+  }
+
+  return (
+    <div className={cn('relative overflow-hidden', className)}>
+      {/* Blur placeholder */}
+      {placeholder === 'blur' && blurDataURL && !isLoaded && (
+        <div
+          className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110"
+          style={{
+            backgroundImage: `url(${blurDataURL})`,
+          }}
+        />
+      )}
+      
+      {/* Loading skeleton */}
+      {placeholder === 'empty' && !isLoaded && (
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 animate-pulse" />
+      )}
+
+      <img
+        src={optimizedSrc}
+        alt={alt}
+        width={width}
+        height={height}
+        sizes={sizes}
+        loading={priority ? 'eager' : loading}
+        decoding="async"
+        className={cn(
+          'transition-opacity duration-300',
+          isLoaded ? 'opacity-100' : 'opacity-0',
+          className
+        )}
+        onLoad={handleLoad}
+        onError={handleError}
+        style={{
+          width: width ? `${width}px` : 'auto',
+          height: height ? `${height}px` : 'auto',
+        }}
+      />
+    </div>
   );
 };
 

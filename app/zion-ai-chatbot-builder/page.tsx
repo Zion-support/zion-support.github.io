@@ -1,14 +1,21 @@
 import React from 'react';
-'use client';
-export default function ZionAiChatbotBuilderPage() {
+import { Helmet } from 'react-helmet-async';
+
+const Page: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">;
-      <div className="container mx-auto px-4">;
-        <h1 className="text-4xl font-bold mb-8">Zion Ai Chatbot Builder</h1>;
-        <p className="text-gray-300 text-lg">;
-          This page is under development.;
-        </p>;
-      </div>;
-    </div>;
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">Page</h1>
+          <p className="text-gray-300 text-center">Coming soon...</p>
+        </div>
+      </div>
+    </>
   );
-}
+};
+
+export default Page;

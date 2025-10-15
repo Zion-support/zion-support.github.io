@@ -1,221 +1,230 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home, Bug, Mail } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  showDetails?: boolean;
 }
 
 interface State {
   hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
+  error: Error | undefined;
+  errorInfo: ErrorInfo | undefined;
+  errorId?: string;
+  retryCount: number;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
+  private maxRetries = 3;
+
   constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
+    this.state = { 
+      hasError: false, 
+      error: undefined,
+      errorInfo: undefined,
+      retryCount: 0 
     };
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
+    return { 
+      hasError: true, 
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
     });
 
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+    // Log error to console
+    console.error('Error caught by boundary:', error, errorInfo);
+
+    // Report error to monitoring service
+    this.reportError(error, errorInfo);
 
     // Call custom error handler
     this.props.onError?.(error, errorInfo);
-
-    // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
-    }
   }
 
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to an error tracking service
-    // like Sentry, LogRocket, or Bugsnag
-    try {
-      const errorData = {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        errorId: this.state.errorId,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
-      };
+  private reportError = async (error: Error, errorInfo: ErrorInfo) => {
+    const errorReport = {
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      errorId: this.state.errorId,
+      timestamp: new Date().toISOString(),
+      url: window.location.href,
+      userAgent: navigator.userAgent,
+      retryCount: this.state.retryCount,
+    };
 
-      // Example: Send to error tracking service
-      // errorTrackingService.captureException(error, { extra: errorData });
-      
-      console.error('Error logged to service:', errorData);
-    } catch (loggingError) {
-      console.error('Failed to log error to service:', loggingError);
+    // Report to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      try {
+        await fetch('/api/errors', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(errorReport),
+        });
+      } catch (reportingError) {
+        console.warn('Failed to report error:', reportingError);
+      }
+    }
+
+    // Store error locally for debugging
+    const errors = JSON.parse(localStorage.getItem('app-errors') || '[]');
+    errors.push(errorReport);
+    if (errors.length > 10) {
+      errors.shift(); // Keep only last 10 errors
+    }
+    localStorage.setItem('app-errors', JSON.stringify(errors));
+  };
+
+  handleRetry = () => {
+    if (this.state.retryCount < this.maxRetries) {
+      this.setState(prevState => ({
+        hasError: false,
+        error: undefined as Error | undefined,
+        errorInfo: undefined as ErrorInfo | undefined,
+        retryCount: prevState.retryCount + 1
+      }));
     }
   };
 
-  private handleRetry = () => {
+  handleReset = () => {
     this.setState({
       hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
+      error: undefined as Error | undefined,
+      errorInfo: undefined as ErrorInfo | undefined,
+      retryCount: 0
     });
   };
 
-  private handleReload = () => {
-    window.location.reload();
+  handleReportBug = () => {
+    const errorDetails = {
+      error: this.state.error?.toString(),
+      stack: this.state.error?.stack,
+      componentStack: this.state.errorInfo?.componentStack,
+      errorId: this.state.errorId,
+      url: window.location.href,
+    };
+
+    const subject = `Bug Report - Error ID: ${this.state.errorId}`;
+    const body = `Please describe what you were doing when this error occurred:\n\n\n\nError Details:\n${JSON.stringify(errorDetails, null, 2)}`;
+    
+    const mailtoLink = `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(mailtoLink);
   };
 
-  private handleGoHome = () => {
-    window.location.href = '/';
-  };
-
-  render() {
+  override render() {
     if (this.state.hasError) {
-      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
-      // Default error UI
+      const canRetry = this.state.retryCount < this.maxRetries;
+      const isDevelopment = process.env.NODE_ENV === 'development';
+
       return (
-        <>
-          <Helmet>
-            <title>Error - Zion Tech Group</title>
-            <meta name="robots" content="noindex, nofollow" />
-          </Helmet>
-          
-          <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
-            <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
-              {/* Error Icon */}
-              <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
-                <svg 
-                  className="w-8 h-8 text-red-400" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" 
-                  />
-                </svg>
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <AlertTriangle className="w-10 h-10 text-red-400" />
+            </div>
+            
+            <h1 className="text-3xl font-bold text-white mb-4">
+              Oops! Something went wrong
+            </h1>
+            
+            <p className="text-gray-300 mb-6 text-lg">
+              We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+            </p>
+
+            {this.state.errorId && (
+              <div className="bg-slate-800/50 rounded-lg p-4 mb-6">
+                <p className="text-sm text-gray-400 mb-2">Error ID:</p>
+                <code className="text-cyan-400 font-mono text-sm">{this.state.errorId}</code>
               </div>
+            )}
 
-              {/* Error Title */}
-              <h1 className="text-2xl font-bold text-white mb-4">
-                Oops! Something went wrong
-              </h1>
-
-              {/* Error Message */}
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                We're sorry, but something unexpected happened. Our team has been notified 
-                and is working to fix this issue.
-              </p>
-
-              {/* Error ID for support */}
-              {this.state.errorId && (
-                <div className="bg-slate-700 rounded-lg p-3 mb-6">
-                  <p className="text-sm text-gray-400 mb-1">Error ID:</p>
-                  <code className="text-xs text-cyan-400 font-mono break-all">
-                    {this.state.errorId}
-                  </code>
-                </div>
-              )}
-
-              {/* Action Buttons */}
-              <div className="space-y-3">
-                <button
-                  onClick={this.handleRetry}
-                  className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-800"
-                >
-                  Try Again
-                </button>
-                
-                <div className="flex space-x-3">
-                  <button
-                    onClick={this.handleGoHome}
-                    className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800"
-                  >
-                    Go Home
-                  </button>
-                  
-                  <button
-                    onClick={this.handleReload}
-                    className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800"
-                  >
-                    Reload Page
-                  </button>
-                </div>
-              </div>
-
-              {/* Support Information */}
-              <div className="mt-8 pt-6 border-t border-slate-700">
-                <p className="text-sm text-gray-400 mb-2">
-                  Still having trouble? Contact our support team:
-                </p>
-                <div className="text-sm text-cyan-400">
-                  <p>Email: kleber@ziontechgroup.com</p>
-                  <p>Phone: +1-302-464-0950</p>
-                </div>
-              </div>
-
-              {/* Development Error Details */}
-              {process.env.NODE_ENV === 'development' && this.state.error && (
-                <details className="mt-6 text-left">
-                  <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
-                    Error Details (Development)
-                  </summary>
-                  <div className="mt-2 p-3 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto max-h-40">
-                    <div className="mb-2">
-                      <strong>Error:</strong> {this.state.error.message}
-                    </div>
-                    <div className="mb-2">
-                      <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap mt-1">
+            {isDevelopment && this.state.error && (
+              <details className="mb-6 text-left bg-slate-800/50 rounded-lg p-4">
+                <summary className="cursor-pointer text-sm text-gray-400 mb-4 font-semibold">
+                  <Bug className="w-4 h-4 inline mr-2" />
+                  Error Details (Development Mode)
+                </summary>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="text-sm font-semibold text-red-400 mb-2">Error Message:</h4>
+                    <pre className="bg-slate-900 p-3 rounded text-xs text-red-300 overflow-auto">
+                      {this.state.error.toString()}
+                    </pre>
+                  </div>
+                  {this.state.error.stack && (
+                    <div>
+                      <h4 className="text-sm font-semibold text-red-400 mb-2">Stack Trace:</h4>
+                      <pre className="bg-slate-900 p-3 rounded text-xs text-red-300 overflow-auto">
                         {this.state.error.stack}
                       </pre>
                     </div>
-                    {this.state.errorInfo && (
-                      <div>
-                        <strong>Component Stack:</strong>
-                        <pre className="whitespace-pre-wrap mt-1">
-                          {this.state.errorInfo.componentStack}
-                        </pre>
-                      </div>
-                    )}
-                  </div>
-                </details>
+                  )}
+                  {this.state.errorInfo?.componentStack && (
+                    <div>
+                      <h4 className="text-sm font-semibold text-red-400 mb-2">Component Stack:</h4>
+                      <pre className="bg-slate-900 p-3 rounded text-xs text-red-300 overflow-auto">
+                        {this.state.errorInfo.componentStack}
+                      </pre>
+                    </div>
+                  )}
+                </div>
+              </details>
+            )}
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              {canRetry && (
+                <button
+                  onClick={this.handleRetry}
+                  className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-semibold"
+                >
+                  <RefreshCw className="w-4 h-4 mr-2" />
+                  Try Again ({this.maxRetries - this.state.retryCount} attempts left)
+                </button>
               )}
+              
+              <button
+                onClick={this.handleReset}
+                className="flex items-center justify-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors font-semibold"
+              >
+                <Home className="w-4 h-4 mr-2" />
+                Start Fresh
+              </button>
+              
+              <button
+                onClick={this.handleReportBug}
+                className="flex items-center justify-center px-6 py-3 border border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white rounded-lg transition-colors font-semibold"
+              >
+                <Mail className="w-4 h-4 mr-2" />
+                Report Bug
+              </button>
+            </div>
+
+            <div className="mt-8 text-sm text-gray-400">
+              <p>If this problem persists, please contact our support team with the Error ID above.</p>
+              <p className="mt-2">
+                Email: <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a>
+              </p>
             </div>
           </div>
-        </>
+        </div>
       );
     }
 

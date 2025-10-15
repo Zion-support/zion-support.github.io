@@ -1,133 +1,273 @@
-import React from 'react';
-import { useState } from 'react;
-import { Link } from 'react-router-dom;
-import { Menu, X, ChevronDown } from 'lucide-react;
-const Header: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
+import React, { useState, useEffect, memo } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 
-  const navigationItems = [{ name: 'Home', href: '/' },';
-    { name: 'About', href: '/about' },';
+const Header: React.FC = memo(() => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navigationItems = [
+    { name: 'Home', path: '/' },
     { 
-      name: 'Services',';
-      href: '/services',';
-      submenu: [{ name: 'AI Services', href: '/ai-services' },';
-        { name: 'IT Services', href: '/it-services' },';
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },';
-        { name: 'Digital Transformation', href: '/digital-transformation' }';
-      ];
+      name: 'AI Solutions', 
+      path: '#',
+      dropdown: [
+        { name: 'AI Services Overview', path: '/ai-services' },
+        { name: 'AI Smart Contracts', path: '/ai-smart-contracts' },
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
+        { name: 'AI Predictive Maintenance', path: '/ai-predictive-maintenance' },
+        { name: 'AI Personalized Learning', path: '/ai-personalized-learning' }
+      ]
     },
-    { name: 'Solutions', href: '/solutions' },';
-    { name: 'Case Studies', href: '/case-studies' },';
-    { name: 'Blog', href: '/blog' },';
-    { name: 'Contact', href: '/contact' }';
+    { 
+      name: 'Services', 
+      path: '#',
+      dropdown: [
+        { name: 'Micro SAAS Solutions', path: '/micro-saas' },
+        { name: 'IT Services', path: '/it-services' },
+        { name: '5G Solutions', path: '/5g-solutions' },
+        { name: 'Quantum Computing', path: '/quantum-computing-solutions' },
+        { name: 'Edge Computing', path: '/edge-computing-solutions' }
+      ]
+    },
+    { name: 'About', path: '/about' },
+    { name: 'Portfolio', path: '/portfolio' },
+    { name: 'Pricing', path: '/pricing' },
+    { name: 'News', path: '/news' },
+    { 
+      name: 'Resources', 
+      path: '#',
+      dropdown: [
+        { name: 'Documentation', path: '/docs' },
+        { name: 'API Reference', path: '/api-docs' },
+        { name: 'Help Center', path: '/help' },
+        { name: 'System Status', path: '/status' },
+        { name: 'Support', path: '/support' },
+        { name: 'Sitemap', path: '/sitemap' }
+      ]
+    },
+    { 
+      name: 'Company', 
+      path: '#',
+      dropdown: [
+        { name: 'About Us', path: '/about' },
+        { name: 'Our Team', path: '/about#team' },
+        { name: 'Careers', path: '/careers' },
+        { name: 'News & Updates', path: '/news' },
+        { name: 'Contact Us', path: '/contact' }
+      ]
+    },
+    { 
+      name: 'Legal', 
+      path: '#',
+      dropdown: [
+        { name: 'Privacy Policy', path: '/privacy-policy' },
+        { name: 'Terms of Service', path: '/terms' },
+        { name: 'Service Level Agreement', path: '/sla' },
+        { name: 'Cookie Policy', path: '/cookies' },
+        { name: 'GDPR Compliance', path: '/gdpr' }
+      ]
+    },
+    { name: 'Contact', path: '/contact' }
   ];
 
+  const isActive = (path: string) => location.pathname === path;
+
   return (
-    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">;
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="flex justify-between items-center h-16">;
-          {/* Logo */}
-          <div className="flex-shrink-0">;
-            <Link to="/" className="text-2xl font-bold text-white">;
-              Zion Tech Group;
-            </Link>;
-          </div>;
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">;
-            <div className="ml-10 flex items-baseline space-x-4">;
+    <>
+      {/* Skip to main content link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-200"
+      >
+        Skip to main content
+      </a>
+      
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg shadow-cyan-500/10' : 'bg-transparent'
+      }`}>
+      {/* Top Contact Bar */}
+      <div className="bg-slate-800 text-white py-2 px-4 hidden md:block">
+        <div className="container mx-auto flex justify-between items-center text-sm">
+          <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-2">
+              <Phone className="w-4 h-4" />
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Mail className="w-4 h-4" />
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <MapPin className="w-4 h-4" />
+              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+            </div>
+          </div>
+          <div className="text-sm">
+            <span className="text-blue-400">Free Consultation Available</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation */}
+      <nav className="bg-white/10 backdrop-blur-md border-b border-white/20 relative">
+        {/* Neon glow effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-cyan-500/5"></div>
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center h-16">
+            {/* Logo */}
+            <Link to="/" className="flex items-center space-x-2 text-white font-bold text-xl group relative">
+              <div className="relative">
+                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-500/25 group-hover:shadow-cyan-500/50 transition-all duration-300 group-hover:scale-110">
+                  <span className="text-white font-bold group-hover:text-cyan-200 transition-colors">Z</span>
+                </div>
+                {/* Neon ring effect */}
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-300"></div>
+              </div>
+              <span className="group-hover:text-cyan-300 transition-colors duration-300 relative">
+                Zion Tech Group
+                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></div>
+              </span>
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
               {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">;
-                  <Link;
-                    to={item.href}
-                    className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors";
-                    onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                    onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
-                  >;
-                    {item.name}
-                    {item.submenu && <ChevronDown className="inline w-4 h-4 ml-1" />}
-                  </Link>;
+                <div key={item.name} className="relative group">
+                  {item.dropdown ? (
+                    <div
+                      className="flex items-center space-x-1 text-white hover:text-blue-400 cursor-pointer transition-colors"
+                      onMouseEnter={() => setActiveDropdown(item.name)}
+                      onMouseLeave={() => setActiveDropdown(null)}
+                    >
+                      <span>{item.name}</span>
+                      <ChevronDown className="w-4 h-4" />
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      className={`text-white hover:text-cyan-400 transition-all duration-300 relative group ${
+                        isActive(item.path) ? 'text-cyan-400 font-semibold' : ''
+                      }`}
+                    >
+                      {item.name}
+                      <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></div>
+                    </Link>
+                  )}
+                  
                   {/* Dropdown Menu */}
-                  {item.submenu && isServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">;
-                      {item.submenu.map((subItem) => (
-                        <Link;
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700";
-                        >;
-                          {subItem.name}
-                        </Link>;
+                  {item.dropdown && activeDropdown === item.name && (
+                    <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 py-2 z-50">
+                      {item.dropdown.map((dropdownItem) => (
+                        <Link
+                          key={dropdownItem.name}
+                          to={dropdownItem.path}
+                          className="block px-4 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 transition-all duration-300"
+                          onClick={() => setActiveDropdown(null)}
+                        >
+                          {dropdownItem.name}
+                        </Link>
                       ))}
-                    </div>;
+                    </div>
                   )}
-                </div>;
+                </div>
               ))}
-            </div>;
-          </div>;
-          {/* CTA Button */}
-          <div className="hidden md:block">;
-            <Link;
-              to="/contact";
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300";
-            >;
-              Get Started;
-            </Link>;
-          </div>;
-          {/* Mobile menu button */}
-          <div className="md:hidden">;
-            <button;
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white p-2";
-            >;
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>;
-          </div>;
-        </div>;
+            </div>
+
+            {/* CTA Button */}
+            <div className="hidden md:flex items-center space-x-4">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 relative overflow-hidden group"
+              >
+                <span className="relative z-10">Get Started</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {/* Neon glow effect */}
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover:opacity-30 blur-sm transition-opacity duration-300"></div>
+              </Link>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden text-white p-2"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+
         {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden">;
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">;
+        {isMenuOpen && (
+          <div 
+            id="mobile-menu"
+            className="md:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/20"
+            role="navigation"
+            aria-label="Mobile navigation"
+          >
+            <div className="container mx-auto px-4 py-4">
               {navigationItems.map((item) => (
-                <div key={item.name}>;
-                  <Link;
-                    to={item.href}
-                    className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium";
-                    onClick={() => setIsOpen(false)}
-                  >;
-                    {item.name}
-                  </Link>;
-                  {item.submenu && (
-                    <div className="ml-4 space-y-1">;
-                      {item.submenu.map((subItem) => (
-                        <Link;
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm";
-                          onClick={() => setIsOpen(false)}
-                        >;
-                          {subItem.name}
-                        </Link>;
-                      ))}
-                    </div>;
+                <div key={item.name}>
+                  {item.dropdown ? (
+                    <div className="py-2">
+                      <div className="text-white font-semibold mb-2">{item.name}</div>
+                      <div className="ml-4 space-y-2">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.path}
+                            className="block text-gray-300 hover:text-blue-400 py-1 transition-colors"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      className={`block py-2 text-white hover:text-blue-400 transition-colors ${
+                        isActive(item.path) ? 'text-blue-400 font-semibold' : ''
+                      }`}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
                   )}
-                </div>;
+                </div>
               ))}
-              <div className="pt-4">;
-                <Link;
-                  to="/contact";
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center";
-                  onClick={() => setIsOpen(false)}
-                >;
-                  Get Started;
-                </Link>;
-              </div>;
-            </div>;
-          </div>;
+              <div className="pt-4 border-t border-white/20 mt-4">
+                <Link
+                  to="/contact"
+                  className="block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold text-center transition-all duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          </div>
         )}
-      </div>;
-    </nav>;
+      </nav>
+    </header>
+    </>
   );
-};
+});
+
+Header.displayName = 'Header';
 
 export default Header;

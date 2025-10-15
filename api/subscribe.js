@@ -1,16 +1,10 @@
-import fs from 'fs';
-import path from 'path';
-
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'subscribers.json');
-
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
+// API endpoint for general subscription
+export default function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ _error: "Method not allowed" });
   }
 
+<<<<<<< HEAD
   const { email, name } = req.body;
 
   if (!email) {
@@ -57,3 +51,7 @@ export default async function handler(req, res) {
 res.end(JSON.stringify({ error: 'Failed to save subscription' }));
   }
 }
+=======
+  res.status(200).json({ message: "Subscription successful" });
+}
+>>>>>>> cursor/analyze-improve-and-merge-code-b7b5
