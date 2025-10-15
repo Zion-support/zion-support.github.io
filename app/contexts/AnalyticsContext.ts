@@ -1,33 +1,52 @@
-import { Helmet } from 'react-helmet-async';
+import { createContext, useContext, ReactNode } from 'react';
 
-export default function contextsPage() {
-  return (
-    <>
-      <Helmet>
-        <title>Contexts - Zion Tech Group</title>
-        <meta name="description" content="Contexts services and solutions from Zion Tech Group." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Contexts
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional Contexts services and solutions for your business needs.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
-                Get Started
-              </button>
-              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
+  trackPageView: (pageName: string) => void;
+  setUser: (userId: string, properties?: Record<string, any>) => void;
 }
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
+
+interface AnalyticsProviderProps {
+  children: ReactNode;
+}
+
+export const AnalyticsProvider = ({ children }: AnalyticsProviderProps) => {
+  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+    // Analytics tracking implementation
+    console.log('Analytics Event:', eventName, properties);
+  };
+
+  const trackPageView = (pageName: string) => {
+    // Page view tracking implementation
+    console.log('Page View:', pageName);
+  };
+
+  const setUser = (userId: string, properties?: Record<string, any>) => {
+    // User identification implementation
+    console.log('User Set:', userId, properties);
+  };
+
+  const value = {
+    trackEvent,
+    trackPageView,
+    setUser,
+  };
+
+  return (
+    <AnalyticsContext.Provider value={value}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
+};
+
+export default AnalyticsContext;
