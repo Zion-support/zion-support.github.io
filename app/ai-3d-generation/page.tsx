@@ -1,9 +1,10 @@
-import { ArrowRight, Box, Target, CheckCircle, Globe, Sparkles, Star } from 'lucide-react';
+import React from 'react';
+import { ArrowRight, Box, Target, CheckCircle, Globe, Sparkles, Star, Zap, FileText } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+
 export default function AI3DGeneration() {
-  return;
-},
+  const features = [
     {
       title: "Real-time Rendering",
       description: "Real-time 3D rendering with photorealistic materials, lighting, and textures for instant previews",

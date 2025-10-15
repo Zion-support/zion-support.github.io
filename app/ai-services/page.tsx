@@ -828,19 +828,17 @@ const benefits = [
         </section>
         {/* CTA Section */}
         <section className="px-4 sm:px-6 lg:px-8 pb-20">
-          
-        <div className="max-w-4xl mx-auto text-center">
-            
-        <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12">
               <h2 className="text-3xl font-bold text-white mb-4">
                 Ready to Transform Your Business with AI?
               </h2>
               
-          <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8">
                 Let our AI experts help you identify the best solutions for your specific needs.
               </p>
               
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors flex items-center justify-center space-x-2"
@@ -857,8 +855,7 @@ const benefits = [
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Services Grid */}
       <section className="py-16 px-4">
@@ -969,6 +966,8 @@ const benefits = [
         </div>
       </section>
     </div>
+    </div>
   );
 };
+
 export default AIServicesPage;

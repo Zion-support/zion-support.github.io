@@ -1,78 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { X,  Home, Brain, Shield, Zap, Globe, BarChart3, Users, Settings } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
+
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const navigationItems = [
-    { name: &apos;Home&apos;, href: &apos;/&apos;, icon: Home },
-    { name: &apos;About&apos;, href: &apos;/about&apos;, icon: Users },
-    { name: &apos;AI Services&apos;, href: &apos;/ai-services&apos;, icon: Brain },
-    { name: &apos;IT Services&apos;, href: &apos;/services&apos;, icon: Shield },
-    { name: &apos;Micro SAAS&apos;, href: &apos;/micro-saas&apos;, icon: Zap },
-    { name: &apos;5G Solutions&apos;, href: &apos;/5g-solutions&apos;, icon: Globe },
-    { name: &apos;Portfolio&apos;, href: &apos;/portfolio&apos;, icon: BarChart3 },
-    { name: &apos;Blog&apos;, href: &apos;/blog&apos;, icon: Globe },
-    { name: &apos;Tutorials&apos;, href: &apos;/tutorials&apos;, icon: Settings },
-    { name: &apos;Demo&apos;, href: &apos;/demo&apos;, icon: Settings },
-    { name: &apos;Support&apos;, href: &apos;/support&apos;, icon: Settings },
-    { name: &apos;FAQ&apos;, href: &apos;/faq&apos;, icon: Settings },
-    { name: &apos;Contact&apos;, href: &apos;/contact&apos;, icon: Settings },
-  ];
   return (
-    <>
-      {/* Overlay */}
-      {isOpen && (
-        <div 
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+    <div className={`fixed inset-y-0 left-0 z-50 w-64 bg-slate-800 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+      <div className="flex items-center justify-between h-16 px-4 border-b border-slate-700">
+        <h2 className="text-xl font-semibold text-white">Menu</h2>
+        <button
           onClick={onClose}
-        />
-      )}
-      {/* Sidebar */}
-      <div className={`fixed top-0 left-0 h-full w-64 bg-slate-900/95 backdrop-blur-sm border-r border-white/10 z-50 transform transition-transform duration-300 ease-in-out ${
-        isOpen ? 'translate-x-0' : '-translate-x-full'
-      } lg:translate-x-0`}>
-        
-        <div className="flex items-center justify-between p-4 border-b border-white/10">
-          <h2 className="text-xl font-bold text-white">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              Zion Tech Group
-            </span>
-          </h2>
-          <button
-            onClick={onClose}
-            className="lg:hidden text-gray-300 hover:text-white transition-colors"
-          >
-            <X className="w-6 h-6" />
-          </button>
-        </div>
-        <nav className="p-4 space-y-2">
-          {navigationItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.href}
-              onClick={onClose}
-              className="flex items-center space-x-3 px-3 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 rounded-lg transition-colors duration-200"
-            >
-              <item.icon className="w-5 h-5" />
-              <span>{item.name}</span>
-            </Link>
-          ))}
-        </nav>
-        
-        <div className="absolute bottom-4 left-4 right-4">
-          <Link
-            to="/contact"
-            className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-          >
-            Get Started
-          </Link>
-        </div>
+          className="text-slate-400 hover:text-white transition-colors"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
       </div>
-    </>
+      <nav className="mt-4 px-4">
+        <a href="/" className="block py-2 text-slate-300 hover:text-white transition-colors">Home</a>
+        <a href="/about" className="block py-2 text-slate-300 hover:text-white transition-colors">About</a>
+        <a href="/services" className="block py-2 text-slate-300 hover:text-white transition-colors">Services</a>
+        <a href="/contact" className="block py-2 text-slate-300 hover:text-white transition-colors">Contact</a>
+      </nav>
+    </div>
   );
 };
+
 export default Sidebar;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Brain, Shield, Users, Award, Zap, Globe, Target } from 'lucide-react';
 // Company values
 const values = [
   { icon: <Brain className="w-8 h-8" />,

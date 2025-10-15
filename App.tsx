@@ -1,27 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
-// Lazy load pages for better performance
-const HomePage = React.lazy(() => import('./app/home/page'));
-const AboutPage = React.lazy(() => import('./app/about/page'));
-const ContactPage = React.lazy(() => import('./app/contact/page'));
-const PricingPage = React.lazy(() => import('./app/pricing/page'));
-const AIServicesPage = React.lazy(() => import('./app/ai-services/page'));
-const ITServicesPage = React.lazy(() => import('./app/it-services/page'));
-const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
-const BlogPage = React.lazy(() => import('./app/blog/page'));
-const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
-const TeamPage = React.lazy(() => import('./app/team/page'));
-const CareersPage = React.lazy(() => import('./app/careers/page'));
-const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
-const TermsPage = React.lazy(() => import('./app/terms/page'));
-const CookiesPage = React.lazy(() => import('./app/cookies/page'));
-const DocsPage = React.lazy(() => import('./app/docs/page'));
-const ApiDocsPage = React.lazy(() => import('./app/api-docs/page'));
-const SupportPage = React.lazy(() => import('./app/support/page'));
-const StatusPage = React.lazy(() => import('./app/status/page'));
-const DemoPage = React.lazy(() => import('./app/demo/page'));
-const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
+// Import pages
+import HomePage from './app/page';
+import AboutPage from './app/about/page';
+import ContactPage from './app/contact/page';
+import PricingPage from './app/pricing/page';
+import AIServicesPage from './app/ai-services/page';
+import ITServicesPage from './app/it-services/page';
+import MicroSaasPage from './app/micro-saas/page';
+import BlogPage from './app/blog/page';
+import TeamPage from './app/team/page';
+import PrivacyPage from './app/privacy/page';
+import TermsPage from './app/terms/page';
+import DocsPage from './app/docs/page';
+import SupportPage from './app/support/page';
+import DemoPage from './app/demo/page';
 
 // Components
 import Navigation from './app/components/Navigation';
@@ -29,20 +24,7 @@ import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-
-// Page Components
-import HomePage from './app/page';
-import AboutPage from './app/pages/AboutPage';
-import ContactPage from './app/pages/ContactPage';
-import ServicesPage from './app/pages/ServicesPage';
-import BlogPage from './app/pages/BlogPage';
-import TutorialsPage from './app/pages/TutorialsPage';
-import DemoPage from './app/pages/DemoPage';
-import SupportPage from './app/pages/SupportPage';
-import PrivacyPage from './app/pages/PrivacyPage';
-import TermsPage from './app/pages/TermsPage';
-import PricingPage from './app/pages/PricingPage';
-import AISolutionsPage from './app/ai-solutions/page';
+import Sidebar from './app/components/Sidebar';
 
 // Service Pages
 // import AIServicesPage from './app/pages/AIServicesPage';
@@ -59,6 +41,7 @@ import AISolutionsPage from './app/ai-solutions/page';
 // import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
 // import TeamPage from './app/pages/TeamPage';
 // import DocumentationPage from './app/pages/DocumentationPage';
+
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -105,15 +88,14 @@ function App() {
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
                   <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/tutorials" element={<TutorialsPage />} />
                   <Route path="/demo" element={<DemoPage />} />
                   <Route path="/support" element={<SupportPage />} />
                   <Route path="/privacy" element={<PrivacyPage />} />
                   <Route path="/terms" element={<TermsPage />} />
-                    <Route path="/pricing" element={<PricingPage />} />
+                  <Route path="/pricing" element={<PricingPage />} />
                   
                   {/* Service Pages */}
                   {/* <Route path="/ai-services" element={<AIServicesPage />} /> */}
@@ -124,14 +106,11 @@ function App() {
                   {/* <Route path="/careers" element={<CareersPage />} /> */}
                   
                   {/* Additional Service Pages */}
-                  <Route path="/cybersecurity" element={<CybersecurityPage />} />
-                  <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
-                  <Route path="/micro-saas" element={<MicroSaaSPage />} />
-                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                  <Route path="/micro-saas" element={<MicroSaasPage />} />
                   
                   {/* Additional Pages */}
                   <Route path="/team" element={<TeamPage />} />
-                  <Route path="/docs" element={<DocumentationPage />} />
+                  <Route path="/docs" element={<DocsPage />} />
                   {/* Catch all route */}
                   <Route path="*" element={
                     <div className="min-h-screen flex items-center justify-center bg-slate-900">
@@ -161,82 +140,5 @@ function App() {
   );
 }
 
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-}
-
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: null };
-  }
-
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    // Log error for debugging
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong!</h2>
-            <button
-              onClick={() => this.setState({ hasError: false, error: null })}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-            >
-              Try again
-            </button>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
-// Main App component
-const App: React.FC = () => {
-  return (
-    <ErrorBoundary>
-      <Router>
-        <div className="App">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
-              <Route path="/ai-services" element={<AIServicesPage />} />
-              <Route path="/it-services" element={<ITServicesPage />} />
-              <Route path="/micro-saas" element={<MicroSaasPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/case-studies" element={<CaseStudiesPage />} />
-              <Route path="/team" element={<TeamPage />} />
-              <Route path="/careers" element={<CareersPage />} />
-              <Route path="/privacy" element={<PrivacyPage />} />
-              <Route path="/terms" element={<TermsPage />} />
-              <Route path="/cookies" element={<CookiesPage />} />
-              <Route path="/docs" element={<DocsPage />} />
-              <Route path="/api-docs" element={<ApiDocsPage />} />
-              <Route path="/support" element={<SupportPage />} />
-              <Route path="/status" element={<StatusPage />} />
-              <Route path="/demo" element={<DemoPage />} />
-              <Route path="/consultation" element={<ConsultationPage />} />
-            </Routes>
-          </Suspense>
-        </div>
-      </Router>
-    </ErrorBoundary>
-  );
-};
 
 export default App;
