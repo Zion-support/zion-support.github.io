@@ -26,25 +26,71 @@ const Sidebar: React.FC = () => {
             <Link to="/data-analytics" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Data Analytics
             </Link>
+            <Link to="/web-development" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Web Development
+            </Link>
+            <Link to="/mobile-development" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Mobile Development
+            </Link>
+            <Link to="/database-management" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Database Management
+            </Link>
+            <Link to="/network-infrastructure" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Network Infrastructure
+            </Link>
+            <Link to="/micro-saas-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Micro SaaS Solutions
+            </Link>
+            <Link to="/5g-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              5G Solutions
+            </Link>
           </div>
           
           <div className="mb-4">
             <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">AI Tools</h3>
-            <Link to="/zion-ai-content-moderator" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              Content Moderator
-            </Link>
-            <Link to="/zion-ai-customer-churn-predictor" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              Churn Predictor
-            </Link>
-            <Link to="/zion-ai-sales-predictor" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              Sales Predictor
-            </Link>
-            <Link to="/zion-ai-workflow-automator" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              Workflow Automator
-            </Link>
-            <Link to="/zion-ai-financial-forecaster" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              Financial Forecaster
-            </Link>
+            <div className="space-y-1">
+              <div className="px-3 py-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">Content & Marketing</div>
+              <Link to="/zion-ai-content-moderator" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+                Content Moderator
+              </Link>
+              <Link to="/zion-ai-document-analyzer" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+                Document Analyzer
+              </Link>
+              <Link to="/zion-ai-email-marketing-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+                Email Marketing Pro
+              </Link>
+              <Link to="/zion-ai-social-scheduler-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+                Social Scheduler Pro
+              </Link>
+              
+              <div className="px-3 py-1 text-xs font-semibold text-gray-400 uppercase tracking-wider mt-2">Business Intelligence</div>
+              <Link to="/zion-ai-customer-churn-predictor" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+                Churn Predictor
+              </Link>
+              <Link to="/zion-ai-customer-churn-predictor-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+                Churn Predictor Pro
+              </Link>
+              <Link to="/zion-ai-sales-predictor" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+                Sales Predictor
+              </Link>
+              <Link to="/zion-ai-financial-forecaster" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+                Financial Forecaster
+              </Link>
+              
+              <div className="px-3 py-1 text-xs font-semibold text-gray-400 uppercase tracking-wider mt-2">Operations</div>
+              <Link to="/zion-ai-workflow-automator" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+                Workflow Automator
+              </Link>
+              <Link to="/zion-ai-workflow-automator-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+                Workflow Automator Pro
+              </Link>
+              <Link to="/zion-ai-task-scheduler" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+                Task Scheduler
+              </Link>
+              <Link to="/zion-ai-inventory-optimizer-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+                Inventory Optimizer Pro
+              </Link>
+            </div>
           </div>
           
           <div className="mb-4">

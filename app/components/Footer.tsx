@@ -26,6 +26,11 @@ const Footer: React.FC = () => {
               <li><Link to="/digital-transformation" className="text-gray-300 hover:text-white">Digital Transformation</Link></li>
               <li><Link to="/data-analytics" className="text-gray-300 hover:text-white">Data Analytics</Link></li>
               <li><Link to="/web-development" className="text-gray-300 hover:text-white">Web Development</Link></li>
+              <li><Link to="/mobile-development" className="text-gray-300 hover:text-white">Mobile Development</Link></li>
+              <li><Link to="/database-management" className="text-gray-300 hover:text-white">Database Management</Link></li>
+              <li><Link to="/network-infrastructure" className="text-gray-300 hover:text-white">Network Infrastructure</Link></li>
+              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SaaS Solutions</Link></li>
+              <li><Link to="/5g-solutions" className="text-gray-300 hover:text-white">5G Solutions</Link></li>
             </ul>
           </div>
           
@@ -34,9 +39,12 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">Content Moderator</Link></li>
               <li><Link to="/zion-ai-customer-churn-predictor" className="text-gray-300 hover:text-white">Churn Predictor</Link></li>
+              <li><Link to="/zion-ai-customer-churn-predictor-pro" className="text-gray-300 hover:text-white">Churn Predictor Pro</Link></li>
               <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-white">Sales Predictor</Link></li>
               <li><Link to="/zion-ai-workflow-automator" className="text-gray-300 hover:text-white">Workflow Automator</Link></li>
+              <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-white">Workflow Automator Pro</Link></li>
               <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
+              <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">Document Analyzer</Link></li>
             </ul>
           </div>
           
