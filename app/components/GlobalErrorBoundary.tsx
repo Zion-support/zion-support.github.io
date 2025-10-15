@@ -21,6 +21,36 @@ class GlobalErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Global error caught:', error, errorInfo);
+    
+    // Send error to analytics/monitoring service
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'exception', {
+        description: error.message,
+        fatal: true,
+        custom_map: {
+          error_stack: error.stack,
+          component_stack: errorInfo.componentStack,
+        },
+      });
+    }
+    
+    // Send to error reporting service
+    if (process.env.NODE_ENV === 'production') {
+      fetch('/api/errors', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: error.message,
+          stack: error.stack,
+          componentStack: errorInfo.componentStack,
+          url: window.location.href,
+          userAgent: navigator.userAgent,
+          timestamp: new Date().toISOString(),
+        }),
+      }).catch(console.error);
+    }
   }
 
   render() {

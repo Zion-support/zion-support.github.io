@@ -6,22 +6,47 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    sourcemap: true,
+    sourcemap: process.env.NODE_ENV === 'development',
+    minify: 'esbuild',
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          ui: ['@heroicons/react', 'framer-motion']
+          ui: ['@heroicons/react', 'framer-motion', 'lucide-react'],
+          analytics: ['web-vitals'],
+          helmet: ['react-helmet-async'],
+          charts: ['recharts']
         }
       }
-    }
+    },
+    chunkSizeWarningLimit: 1000,
+    target: 'esnext',
+    cssCodeSplit: true,
   },
   server: {
     port: 3000,
-    open: true
+    open: true,
+    cors: true,
+    hmr: {
+      overlay: true
+    }
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom']
+    include: [
+      'react', 
+      'react-dom', 
+      'react-router-dom',
+      'react-helmet-async',
+      'web-vitals',
+      '@heroicons/react',
+      'framer-motion'
+    ]
+  },
+  esbuild: {
+    target: 'esnext',
+    minifyIdentifiers: true,
+    minifySyntax: true,
+    minifyWhitespace: true,
   }
 })
