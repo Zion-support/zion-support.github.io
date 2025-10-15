@@ -53,6 +53,8 @@ const AISchedulingAssistantPage = lazy(() => import('./app/ai-scheduling-assista
 const AICRMOptimizerPage = lazy(() => import('./app/ai-crm-optimizer/page'));
 const AIDataVisualizerPage = lazy(() => import('./app/ai-data-visualizer/page'));
 const AIEmailOptimizerPage = lazy(() => import('./app/ai-email-optimizer/page'));
+const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
+const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
 const BlockchainSolutionsPage = lazy(() => import('./app/blockchain-solutions/page'));
 const IOTSolutionsPage = lazy(() => import('./app/iot-solutions/page'));
 const DevOpsAutomationPage = lazy(() => import('./app/devops-automation/page'));
@@ -83,8 +85,6 @@ const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
 const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
 const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
 const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
-const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
-const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
 
 // Missing pages
 const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
@@ -130,6 +130,7 @@ const ZionAIPriceOptimizerPage = lazy(() => import('./app/zion-ai-price-optimize
 const ZionAISalesPredictorPage = lazy(() => import('./app/zion-ai-sales-predictor/page'));
 const ZionAISchedulingAssistantPage = lazy(() => import('./app/zion-ai-scheduling-assistant/page'));
 const ZionAISocialMediaManagerPage = lazy(() => import('./app/zion-ai-social-media-manager/page'));
+const ZionTaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
 const ZionAISocialSchedulerProPage = lazy(() => import('./app/zion-ai-social-scheduler-pro/page'));
 const ZionAITaskSchedulerPage = lazy(() => import('./app/zion-ai-task-scheduler/page'));
 const ZionAITranslationServicePage = lazy(() => import('./app/zion-ai-translation-service/page'));
@@ -309,9 +310,9 @@ function App() {
                     <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
                     <Route path="/ai-crm-optimizer" element={<AICRMOptimizerPage />} />
                     <Route path="/ai-email-optimizer" element={<AIEmailOptimizerPage />} />
-                    <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
-                    <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
-                    <Route path="/analytics-dashboard" element={<AnalyticsDashboardPage />} />
+                    <Route path="/ai-social-media-manager" element={<ZionAISocialMediaManagerPage />} />
+                    <Route path="/task-manager-pro" element={<ZionTaskManagerProPage />} />
+                    <Route path="/analytics-dashboard" element={<ZionSmartAnalyticsDashboardPage />} />
                     <Route path="/data-analytics" element={<DataAnalyticsPage />} />
                     <Route path="/web-development" element={<WebDevelopmentPage />} />
                     <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
@@ -330,8 +331,8 @@ function App() {
                     
                     
                     {/* Micro SaaS pages */}
-                    <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
-                    <Route path="/analytics-dashboard" element={<AnalyticsDashboardPage />} />
+                    <Route path="/task-manager-pro" element={<ZionTaskManagerProPage />} />
+                    <Route path="/analytics-dashboard" element={<ZionSmartAnalyticsDashboardPage />} />
                     <Route path="/customer-support-hub" element={<CustomerSupportHubPage />} />
                     <Route path="/inventory-manager" element={<InventoryManagerPage />} />
                     <Route path="/social-media-scheduler" element={<SocialMediaSchedulerPage />} />
@@ -342,8 +343,8 @@ function App() {
                     <Route path="/support" element={<SupportPage />} />
                     <Route path="/tutorials" element={<TutorialsPage />} />
                     <Route path="/docs" element={<DocsPage />} />
-                    <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
-                    <Route path="/analytics-dashboard" element={<AnalyticsDashboardPage />} />
+                    <Route path="/task-manager-pro" element={<ZionTaskManagerProPage />} />
+                    <Route path="/analytics-dashboard" element={<ZionSmartAnalyticsDashboardPage />} />
                     <Route path="/customer-support-hub" element={<CustomerSupportHubPage />} />
                     <Route path="/inventory-manager" element={<InventoryManagerPage />} />
                     <Route path="/social-media-scheduler" element={<SocialMediaSchedulerPage />} />
@@ -359,7 +360,7 @@ function App() {
                     <Route path="/ai-lead-scoring-pro" element={<AILeadScoringProPage />} />
                     <Route path="/ai-predictive-maintenance-pro" element={<AIPredictiveMaintenanceProPage />} />
                     <Route path="/ai-price-optimizer-pro" element={<AIPriceOptimizerProPage />} />
-                    <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
+                    <Route path="/ai-social-media-manager" element={<ZionAISocialMediaManagerPage />} />
                     <Route path="/ai-voice-assistant-pro" element={<AIVoiceAssistantProPage />} />
                     <Route path="/ai-website-analyzer" element={<AIWebsiteAnalyzerPage />} />
                     <Route path="/blockchain-solutions-pro" element={<BlockchainSolutionsProPage />} />
