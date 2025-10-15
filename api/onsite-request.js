@@ -1,1 +1,4 @@
-ursor/analyze-improve-and-merge-code-4a9f
+// Onsite request handler
+export default function handler(req, res) {
+  res.status(200).json({ message: 'Onsite request received' });
+}

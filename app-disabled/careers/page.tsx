@@ -1,15 +1,18 @@
-import { useState } from 'react
-import { Helmet } from 'react-helmet-async';'lucide-react
-interface JobPosition {}
-  // Add properties here
-}
+import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { MapPin, Clock, Users, Briefcase } from 'lucide-react'
+
+interface JobPosition {
   id: number
-import { Right, Circle} from 'lucide-react
-const PagePage: React.FC = () => {}
-}title: string
+  title: string
   department: string
   location: string
   type: string
+}
+
+import { Right, Circle } from 'lucide-react'
+
+const PagePage: React.FC = () => {
   experience: string
   posted: string
   description: string

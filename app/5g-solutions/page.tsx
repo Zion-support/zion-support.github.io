@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, Shield, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3, Star } from 'lucide-react';
+import { Wifi, Clock, Network, Cpu, Smartphone } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
   const solutions = [
@@ -46,28 +46,6 @@ const FiveGSolutionsPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Ultra-Low Latency",
-      description: "Achieve sub-millisecond latency for real-time applications"
-    },
-    {
-      icon: <Network className="w-6 h-6" />,
-      title: "Massive Connectivity",
-      description: "Support millions of devices per square kilometer"
-    },
-    {
-      icon: <Cpu className="w-6 h-6" />,
-      title: "Edge Computing",
-      description: "Process data locally for faster response times"
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Enhanced Security",
-      description: "Advanced encryption and network slicing for secure communications"
-    }
-  ];
 
   return (
     <>
