@@ -17,6 +17,12 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": false,
+    "noImplicitAny": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]

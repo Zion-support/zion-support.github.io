@@ -81,7 +81,7 @@ const LoadingFallback = () => (
 )
 
 export default function App() {
-  const { preloadResource } = usePerformanceOptimization({
+  const { preloadResource, preloadImages } = usePerformanceOptimization({
     enablePreloading: true,
     enableLazyLoading: true,
     enableIntersectionObserver: true,
@@ -90,7 +90,14 @@ export default function App() {
   useEffect(() => {
     // Preload critical resources
     preloadResource('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap', 'style');
-  }, [preloadResource])
+    
+    // Preload critical images
+    const criticalImages = [
+      'https://ziontechgroup.com/logo.png',
+      'https://ziontechgroup.com/og-image.jpg'
+    ];
+    preloadImages(criticalImages);
+  }, [preloadResource, preloadImages])
 
   return (
     <GlobalErrorBoundary>

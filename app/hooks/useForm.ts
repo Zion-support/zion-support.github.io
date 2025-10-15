@@ -26,12 +26,14 @@ export function useForm<T extends Record<string, any>>({
   });
 
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
+    const { name, value, type } = e.target;
+    const checked = type === 'checkbox' ? (e.target as HTMLInputElement).checked : undefined;
+    
     setFormState(prev => ({
       ...prev,
       data: {
         ...prev.data,
-        [name]: value,
+        [name]: type === 'checkbox' ? checked : value,
       },
       errors: {
         ...prev.errors,
