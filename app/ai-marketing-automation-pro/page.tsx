@@ -1,8 +1,155 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, Briefcase, CheckCircle, FileText, Mail, Mail as MailIcon, Monitor, Phone, Play, Share2, Shield, Star } from 'lucide-react';
+import { ArrowRight, Brain, Briefcase, CheckCircle, FileText, Mail, Monitor, Phone, Play, Share2, Shield, Star } from 'lucide-react';
 
 const AIMarketingAutomationProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const features = [
+    {
+      icon: <Brain className="w-6 h-6" />,
+      title: "AI Content Generation",
+      description: "Generate high-quality marketing content automatically using advanced AI algorithms.",
+      benefits: ["Blog posts", "Social media content", "Email campaigns", "Ad copy"]
+    },
+    {
+      icon: <Briefcase className="w-6 h-6" />,
+      title: "Campaign Automation",
+      description: "Automate entire marketing campaigns from creation to execution and optimization.",
+      benefits: ["Multi-channel campaigns", "A/B testing", "Performance tracking", "Auto-optimization"]
+    },
+    {
+      icon: <FileText className="w-6 h-6" />,
+      title: "Email Marketing",
+      description: "Create and send personalized email campaigns with AI-driven content and timing.",
+      benefits: ["Personalization", "Send time optimization", "Subject line testing", "Segmentation"]
+    },
+    {
+      icon: <Monitor className="w-6 h-6" />,
+      title: "Social Media Management",
+      description: "Manage all social media platforms with AI-powered content scheduling and engagement.",
+      benefits: ["Multi-platform posting", "Hashtag optimization", "Engagement tracking", "Content calendar"]
+    },
+    {
+      icon: <Share2 className="w-6 h-6" />,
+      title: "Lead Generation",
+      description: "Identify and nurture leads using AI-powered lead scoring and qualification.",
+      benefits: ["Lead scoring", "Qualification", "Nurturing sequences", "Conversion tracking"]
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Analytics & Insights",
+      description: "Get deep insights into campaign performance with AI-powered analytics and recommendations.",
+      benefits: ["Performance metrics", "ROI tracking", "Predictive analytics", "Optimization suggestions"]
+    }
+  ];
+
+  const channels = [
+    { name: "Email Marketing", icon: "📧", users: "50,000+" },
+    { name: "Social Media", icon: "📱", users: "45,000+" },
+    { name: "Content Marketing", icon: "📝", users: "40,000+" },
+    { name: "Paid Advertising", icon: "💰", users: "35,000+" },
+    { name: "SEO", icon: "🔍", users: "30,000+" },
+    { name: "Webinars", icon: "🎥", users: "25,000+" }
+  ];
+
+  const useCases = [
+    {
+      title: "E-commerce",
+      description: "Boost online sales with AI-powered product recommendations and personalized marketing.",
+      benefits: ["Increased conversions", "Higher AOV", "Better retention", "Reduced cart abandonment"]
+    },
+    {
+      title: "SaaS Companies",
+      description: "Scale user acquisition and retention with automated marketing funnels and nurturing.",
+      benefits: ["Faster growth", "Better retention", "Higher LTV", "Reduced churn"]
+    },
+    {
+      title: "B2B Services",
+      description: "Generate qualified leads and nurture prospects through complex sales cycles.",
+      benefits: ["More qualified leads", "Faster sales cycles", "Higher close rates", "Better targeting"]
+    },
+    {
+      title: "Agencies",
+      description: "Deliver better results for clients with AI-powered campaign optimization and reporting.",
+      benefits: ["Better client results", "Faster execution", "Higher margins", "Scalable operations"]
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$199",
+      period: "month",
+      description: "Perfect for small businesses starting with marketing automation",
+      features: [
+        "Up to 1,000 contacts",
+        "Basic automation",
+        "Email marketing",
+        "Email support",
+        "5GB storage"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$399",
+      period: "month",
+      description: "Ideal for growing businesses with advanced marketing needs",
+      features: [
+        "Up to 10,000 contacts",
+        "Advanced automation",
+        "Multi-channel campaigns",
+        "Priority support",
+        "50GB storage",
+        "Analytics dashboard",
+        "API access"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$799",
+      period: "month",
+      description: "Complete solution for large organizations with complex requirements",
+      features: [
+        "Unlimited contacts",
+        "Full AI suite",
+        "Custom integrations",
+        "24/7 support",
+        "Unlimited storage",
+        "White-label options",
+        "On-premise deployment"
+      ],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "Marketing Director, TechStart Inc",
+      content: "AI Marketing Automation Pro has increased our lead generation by 300% while reducing our marketing costs by 40%.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      role: "CEO, E-commerce Plus",
+      content: "The AI content generation feature has saved us 20 hours per week. Our content quality has improved significantly.",
+      rating: 5
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "VP Marketing, SaaS Solutions",
+      content: "Our email open rates increased by 150% and click-through rates by 200% with the AI-powered personalization.",
+      rating: 5
+    }
+  ];
+
   return (
     <>
       <Helmet>
@@ -147,7 +294,7 @@ const AIMarketingAutomationProPage = () => {
                     key={index } 
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
-                      <div className="text-white">{ useCase.icon }</div>
+                      <div className="text-white text-2xl">📈</div>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-4">{ useCase.title }</h3>
                     <p className="text-gray-300 mb-6">{ useCase.description }</p>
@@ -253,7 +400,6 @@ const AIMarketingAutomationProPage = () => {
                     <div>
                       <div className="font-semibold text-white">{ testimonial.name }</div>
                       <div className="text-cyan-400">{ testimonial.role }</div>
-                      <div className="text-gray-400 text-sm">{ testimonial.company }</div>
                     </div>
                   </div>
                 ))}
@@ -292,4 +438,4 @@ const AIMarketingAutomationProPage = () => {
     </>
   );
 };
-export default AiMarketingAutomationProPage;
+export default AIMarketingAutomationProPage;

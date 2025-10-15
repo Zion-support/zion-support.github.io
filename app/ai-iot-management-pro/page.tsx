@@ -1,8 +1,143 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, Building, Camera, Car, CheckCircle, Home, Mail, Phone, Play, Star, Thermometer, Wind } from 'lucide-react';
+import { ArrowRight, Brain, Building, Camera, Car, CheckCircle, Home, Mail, Phone, Play, Star, Thermometer } from 'lucide-react';
 
 const AIIoTManagementProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const deviceTypes = [
+    { name: "Smart Sensors", icon: "🌡️", count: "10,000+" },
+    { name: "Cameras", icon: "📹", count: "5,000+" },
+    { name: "Actuators", icon: "⚙️", count: "8,000+" },
+    { name: "Gateways", icon: "🌐", count: "2,000+" }
+  ];
+
+  const features = [
+    {
+      icon: <Brain className="w-6 h-6" />,
+      title: "AI Device Management",
+      description: "Intelligent device discovery, configuration, and monitoring with predictive maintenance.",
+      benefits: ["Auto-discovery", "Predictive maintenance", "Remote configuration", "Health monitoring"]
+    },
+    {
+      icon: <Building className="w-6 h-6" />,
+      title: "Smart Building Integration",
+      description: "Connect and manage all building systems including HVAC, lighting, and security.",
+      benefits: ["Energy optimization", "Occupancy tracking", "Climate control", "Security integration"]
+    },
+    {
+      icon: <Camera className="w-6 h-6" />,
+      title: "Video Analytics",
+      description: "AI-powered video analysis for security, monitoring, and business intelligence.",
+      benefits: ["Object detection", "Behavior analysis", "Facial recognition", "Alert generation"]
+    },
+    {
+      icon: <Car className="w-6 h-6" />,
+      title: "Fleet Management",
+      description: "Comprehensive fleet tracking and management with AI-driven insights.",
+      benefits: ["Real-time tracking", "Route optimization", "Driver behavior", "Maintenance scheduling"]
+    },
+    {
+      icon: <Home className="w-6 h-6" />,
+      title: "Smart Home Control",
+      description: "Centralized control of all smart home devices with voice and app interfaces.",
+      benefits: ["Voice control", "Automation", "Energy savings", "Security monitoring"]
+    },
+    {
+      icon: <Thermometer className="w-6 h-6" />,
+      title: "Environmental Monitoring",
+      description: "Monitor temperature, humidity, air quality, and other environmental factors.",
+      benefits: ["Real-time monitoring", "Alert systems", "Data logging", "Trend analysis"]
+    }
+  ];
+
+  const metrics = [
+    { name: "Device Uptime", value: "99.9%", icon: "📊" },
+    { name: "Energy Savings", value: "35%", icon: "⚡" },
+    { name: "Response Time", value: "<100ms", icon: "⚡" },
+    { name: "Data Accuracy", value: "99.8%", icon: "🎯" }
+  ];
+
+  const protocols = [
+    { name: "MQTT", description: "Lightweight messaging protocol" },
+    { name: "CoAP", description: "Constrained Application Protocol" },
+    { name: "HTTP/HTTPS", description: "Web-based communication" },
+    { name: "Modbus", description: "Industrial communication protocol" },
+    { name: "Zigbee", description: "Low-power wireless mesh" },
+    { name: "LoRaWAN", description: "Long-range wide area network" }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$199",
+      period: "month",
+      description: "Perfect for small IoT deployments",
+      features: [
+        "Up to 100 devices",
+        "Basic monitoring",
+        "Email support",
+        "5GB data storage"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$399",
+      period: "month",
+      description: "Ideal for medium-sized IoT networks",
+      features: [
+        "Up to 500 devices",
+        "Advanced analytics",
+        "Priority support",
+        "50GB data storage",
+        "API access",
+        "Custom dashboards"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$799",
+      period: "month",
+      description: "Complete solution for large IoT ecosystems",
+      features: [
+        "Unlimited devices",
+        "Full AI suite",
+        "24/7 support",
+        "Unlimited storage",
+        "Custom development",
+        "On-premise deployment"
+      ],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "John Smith",
+      role: "CTO, SmartCity Corp",
+      content: "AI IoT Management Pro has transformed our smart city infrastructure. Device management is now 10x more efficient.",
+      rating: 5
+    },
+    {
+      name: "Maria Garcia",
+      role: "Operations Director, GreenBuilding Inc",
+      content: "The energy optimization features have reduced our building's energy consumption by 40% while improving comfort.",
+      rating: 5
+    },
+    {
+      name: "David Chen",
+      role: "Fleet Manager, LogisticsPro",
+      content: "Our fleet efficiency improved by 25% with the AI-powered route optimization and predictive maintenance.",
+      rating: 5
+    }
+  ];
+
   return (
     <>
       <Helmet>
@@ -78,7 +213,7 @@ const AIIoTManagementProPage = () => {
                   <div 
                     key={index } 
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 group">
-                    <div className={ `${device.color } mb-3 group-hover:scale-110 transition-transform duration-300 flex justify-center`}>
+                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300 flex justify-center">
                       { device.icon }
                     </div>
                     <div className="text-white font-semibold text-sm">{ device.name }</div>
@@ -146,8 +281,8 @@ const AIIoTManagementProPage = () => {
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                       <div className="text-cyan-400">{ metric.icon }</div>
                     </div>
-                    <div className="text-3xl font-bold text-white mb-1">{ metric.number }</div>
-                    <div className="text-gray-400 text-sm">{ metric.label }</div>
+                    <div className="text-3xl font-bold text-white mb-1">{ metric.value }</div>
+                    <div className="text-gray-400 text-sm">{ metric.name }</div>
                   </div>
                 ))}
               </div>
@@ -267,7 +402,6 @@ const AIIoTManagementProPage = () => {
                     <div>
                       <div className="font-semibold text-white">{ testimonial.name }</div>
                       <div className="text-cyan-400">{ testimonial.role }</div>
-                      <div className="text-gray-400 text-sm">{ testimonial.company }</div>
                     </div>
                   </div>
                 ))}
@@ -307,4 +441,4 @@ const AIIoTManagementProPage = () => {
     </>
   );
 };
-export default AiIotManagementProPage;
+export default AIIoTManagementProPage;

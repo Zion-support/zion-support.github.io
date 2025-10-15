@@ -1,8 +1,155 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { Ambulance, ArrowRight, Brain, CheckCircle, Heart, Hospital, Mail, Microscope, Phone, Pill, Play, Shield, Shield as ShieldIcon, Star, Stethoscope, UserCheck } from 'lucide-react';
+import { ArrowRight, Brain, CheckCircle, Heart, Mail, Microscope, Phone, Play, Shield, Star, Stethoscope, UserCheck } from 'lucide-react';
 
 const AIHealthcareSolutionsProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const features = [
+    {
+      icon: <Brain className="w-6 h-6" />,
+      title: "AI Diagnosis Assistant",
+      description: "Advanced AI system that assists doctors in diagnosing diseases with high accuracy.",
+      benefits: ["95% accuracy rate", "Faster diagnosis", "Reduced errors", "Evidence-based recommendations"]
+    },
+    {
+      icon: <Heart className="w-6 h-6" />,
+      title: "Predictive Analytics",
+      description: "Predict patient outcomes and identify high-risk cases before they become critical.",
+      benefits: ["Early intervention", "Risk stratification", "Outcome prediction", "Resource optimization"]
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Drug Discovery",
+      description: "AI-powered drug discovery and development to accelerate pharmaceutical research.",
+      benefits: ["Faster drug development", "Cost reduction", "Higher success rates", "Personalized medicine"]
+    },
+    {
+      icon: <Stethoscope className="w-6 h-6" />,
+      title: "Remote Monitoring",
+      description: "Continuous patient monitoring using IoT devices and AI analysis.",
+      benefits: ["24/7 monitoring", "Real-time alerts", "Reduced hospital stays", "Better outcomes"]
+    },
+    {
+      icon: <Microscope className="w-6 h-6" />,
+      title: "Medical Imaging",
+      description: "AI-enhanced medical imaging for more accurate and faster analysis.",
+      benefits: ["Improved accuracy", "Faster analysis", "Early detection", "Reduced workload"]
+    },
+    {
+      icon: <UserCheck className="w-6 h-6" />,
+      title: "Patient Management",
+      description: "Comprehensive patient management system with AI-powered insights.",
+      benefits: ["Streamlined workflows", "Better care coordination", "Patient engagement", "Data integration"]
+    }
+  ];
+
+  const useCases = [
+    {
+      title: "Hospitals",
+      description: "Transform hospital operations with AI-powered patient care and management systems.",
+      benefits: ["Improved patient outcomes", "Reduced costs", "Better resource utilization", "Enhanced safety"]
+    },
+    {
+      title: "Clinics",
+      description: "Enhance clinic operations with AI-driven diagnosis and treatment recommendations.",
+      benefits: ["Faster diagnosis", "Better treatment plans", "Improved efficiency", "Patient satisfaction"]
+    },
+    {
+      title: "Research Institutions",
+      description: "Accelerate medical research with AI-powered data analysis and drug discovery.",
+      benefits: ["Faster research", "Better insights", "Cost reduction", "Innovation acceleration"]
+    },
+    {
+      title: "Pharmaceutical Companies",
+      description: "Streamline drug development and clinical trials with AI assistance.",
+      benefits: ["Faster development", "Higher success rates", "Cost reduction", "Better outcomes"]
+    }
+  ];
+
+  const compliance = [
+    "HIPAA Compliance",
+    "FDA Approval Process",
+    "GDPR Data Protection",
+    "SOC 2 Type II",
+    "ISO 27001",
+    "HITECH Act"
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$299",
+      period: "month",
+      description: "Perfect for small clinics and private practices",
+      features: [
+        "Up to 100 patients",
+        "Basic AI diagnosis",
+        "Standard reporting",
+        "Email support",
+        "10GB storage"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$599",
+      period: "month",
+      description: "Ideal for medium-sized hospitals and medical groups",
+      features: [
+        "Up to 500 patients",
+        "Advanced AI features",
+        "Custom integrations",
+        "Priority support",
+        "100GB storage",
+        "Analytics dashboard",
+        "API access"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$999",
+      period: "month",
+      description: "Complete solution for large healthcare systems",
+      features: [
+        "Unlimited patients",
+        "Full AI suite",
+        "Custom development",
+        "24/7 support",
+        "Unlimited storage",
+        "White-label options",
+        "On-premise deployment"
+      ],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Dr. Michael Thompson",
+      role: "Chief Medical Officer, City General Hospital",
+      content: "AI Healthcare Solutions Pro has revolutionized our patient care. Diagnosis accuracy improved by 40% and patient satisfaction increased significantly.",
+      rating: 5
+    },
+    {
+      name: "Dr. Sarah Williams",
+      role: "Director of Research, MedTech Institute",
+      content: "The AI drug discovery platform has accelerated our research by 3x. We've identified promising compounds that would have taken years to find manually.",
+      rating: 5
+    },
+    {
+      name: "Dr. James Rodriguez",
+      role: "Cardiologist, HeartCare Clinic",
+      content: "The predictive analytics system has helped us identify high-risk patients early, preventing several potential cardiac events.",
+      rating: 5
+    }
+  ];
+
   return (
     <>
       <Helmet>
@@ -119,7 +266,7 @@ const AIHealthcareSolutionsProPage = () => {
                     key={index } 
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
-                      <div className="text-white">{ useCase.icon }</div>
+                      <div className="text-white text-2xl">🏥</div>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-4">{ useCase.title }</h3>
                     <p className="text-gray-300 mb-6">{ useCase.description }</p>
@@ -155,10 +302,9 @@ const AIHealthcareSolutionsProPage = () => {
                     key={index } 
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <ShieldIcon className="w-6 h-6 text-white" />
+                      <Shield className="w-6 h-6 text-white" />
                     </div>
-                    <div className="text-white font-semibold mb-2">{ item.name }</div>
-                    <div className="text-cyan-400 text-sm">{ item.description }</div>
+                    <div className="text-white font-semibold mb-2">{ item }</div>
                   </div>
                 ))}
               </div>
@@ -253,7 +399,6 @@ const AIHealthcareSolutionsProPage = () => {
                     <div>
                       <div className="font-semibold text-white">{ testimonial.name }</div>
                       <div className="text-cyan-400">{ testimonial.role }</div>
-                      <div className="text-gray-400 text-sm">{ testimonial.company }</div>
                     </div>
                   </div>
                 ))}
@@ -292,4 +437,4 @@ const AIHealthcareSolutionsProPage = () => {
     </>
   );
 };
-export default AiHealthcareSolutionsProPage;
+export default AIHealthcareSolutionsProPage;

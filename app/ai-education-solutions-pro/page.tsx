@@ -1,8 +1,155 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Award, Award as AwardIcon, AwardIcon, Book, BookOpen, Brain, Briefcase, CheckCircle, Download, Download as DownloadIcon, DownloadIcon, GraduationCap, Mail, Monitor, Phone, Play, Shield, Star, Target, Target as TargetIcon, TargetIcon, Users, Users as UsersIcon, UsersIcon } from 'lucide-react';
+import { ArrowRight, Award, Book, Brain, CheckCircle, Mail, Monitor, Phone, Play, Shield, Star, Target, Users } from 'lucide-react';
 
 const AIEducationSolutionsProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const features = [
+    {
+      icon: <Brain className="w-6 h-6" />,
+      title: "AI-Powered Learning",
+      description: "Personalized learning paths adapted to each student's pace and learning style.",
+      benefits: ["Adaptive curriculum", "Personalized content", "Learning analytics", "Progress tracking"]
+    },
+    {
+      icon: <Monitor className="w-6 h-6" />,
+      title: "Virtual Classrooms",
+      description: "Immersive virtual learning environments with interactive tools and real-time collaboration.",
+      benefits: ["3D learning spaces", "Real-time interaction", "Collaborative tools", "Mobile access"]
+    },
+    {
+      icon: <Target className="w-6 h-6" />,
+      title: "Smart Assessment",
+      description: "AI-driven assessments that provide instant feedback and identify knowledge gaps.",
+      benefits: ["Instant feedback", "Gap analysis", "Adaptive testing", "Performance insights"]
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Content Generation",
+      description: "Automatically generate educational content, quizzes, and study materials.",
+      benefits: ["Auto-generated content", "Custom materials", "Multilingual support", "Quality assurance"]
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Teacher Assistant",
+      description: "AI-powered teaching assistant that helps educators manage classes and track progress.",
+      benefits: ["Class management", "Progress tracking", "Automated grading", "Parent communication"]
+    },
+    {
+      icon: <Award className="w-6 h-6" />,
+      title: "Certification System",
+      description: "Digital badges and certificates with blockchain verification for achievements.",
+      benefits: ["Digital credentials", "Blockchain verification", "Portfolio building", "Career advancement"]
+    }
+  ];
+
+  const subjects = [
+    { name: "Mathematics", icon: <Target className="w-5 h-5" />, students: "50,000+" },
+    { name: "Science", icon: <Brain className="w-5 h-5" />, students: "45,000+" },
+    { name: "Language Arts", icon: <Book className="w-5 h-5" />, students: "40,000+" },
+    { name: "Computer Science", icon: <Monitor className="w-5 h-5" />, students: "35,000+" },
+    { name: "History", icon: <Award className="w-5 h-5" />, students: "30,000+" },
+    { name: "Art & Design", icon: <Star className="w-5 h-5" />, students: "25,000+" }
+  ];
+
+  const useCases = [
+    {
+      title: "K-12 Education",
+      description: "Transform traditional classrooms with AI-powered learning tools and personalized education.",
+      benefits: ["Improved test scores", "Higher engagement", "Reduced dropout rates", "Teacher efficiency"]
+    },
+    {
+      title: "Higher Education",
+      description: "Enhance university courses with advanced AI tutoring and research assistance.",
+      benefits: ["Research acceleration", "Better outcomes", "Cost reduction", "Global reach"]
+    },
+    {
+      title: "Corporate Training",
+      description: "Deliver effective employee training programs with AI-driven content and assessment.",
+      benefits: ["Faster onboarding", "Skill development", "Compliance training", "ROI measurement"]
+    },
+    {
+      title: "Professional Development",
+      description: "Enable continuous learning and skill development for professionals across industries.",
+      benefits: ["Career advancement", "Skill updates", "Certification programs", "Networking"]
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$199",
+      period: "month",
+      description: "Perfect for small schools and individual educators",
+      features: [
+        "Up to 100 students",
+        "Basic AI tutoring",
+        "Standard assessments",
+        "Email support",
+        "5GB storage"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$399",
+      period: "month",
+      description: "Ideal for medium-sized institutions and districts",
+      features: [
+        "Up to 500 students",
+        "Advanced AI features",
+        "Custom assessments",
+        "Priority support",
+        "50GB storage",
+        "Analytics dashboard",
+        "API access"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$799",
+      period: "month",
+      description: "Complete solution for large educational organizations",
+      features: [
+        "Unlimited students",
+        "Full AI suite",
+        "Custom development",
+        "24/7 support",
+        "Unlimited storage",
+        "White-label options",
+        "On-premise deployment"
+      ],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Dr. Sarah Johnson",
+      role: "Principal, Lincoln High School",
+      content: "AI Education Solutions Pro has revolutionized our teaching methods. Student engagement increased by 60% and test scores improved significantly.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      role: "Professor, Stanford University",
+      content: "The AI tutoring system is incredibly sophisticated. It adapts to each student's learning style and provides personalized feedback.",
+      rating: 5
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "Training Director, TechCorp",
+      content: "Our employee training programs are now 3x more effective. The AI-generated content is always up-to-date and relevant.",
+      rating: 5
+    }
+  ];
+
   return (
     <>
       <Helmet>
@@ -120,7 +267,7 @@ const AIEducationSolutionsProPage = () => {
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105">
                     <div className="text-4xl mb-3">{ subject.icon }</div>
                     <div className="text-white font-semibold mb-1 text-sm">{ subject.name }</div>
-                    <div className="text-cyan-400 text-xs">{ subject.description }</div>
+                    <div className="text-cyan-400 text-xs">{ subject.students }</div>
                   </div>
                 ))}
               </div>
@@ -145,7 +292,7 @@ const AIEducationSolutionsProPage = () => {
                     key={index } 
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
-                      <div className="text-white">{ useCase.icon }</div>
+                      <div className="text-white text-2xl">📚</div>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-4">{ useCase.title }</h3>
                     <p className="text-gray-300 mb-6">{ useCase.description }</p>
@@ -251,7 +398,6 @@ const AIEducationSolutionsProPage = () => {
                     <div>
                       <div className="font-semibold text-white">{ testimonial.name }</div>
                       <div className="text-cyan-400">{ testimonial.role }</div>
-                      <div className="text-gray-400 text-sm">{ testimonial.company }</div>
                     </div>
                   </div>
                 ))}
@@ -290,4 +436,4 @@ const AIEducationSolutionsProPage = () => {
     </>
   );
 };
-export default AiEducationSolutionsProPage;
+export default AIEducationSolutionsProPage;
