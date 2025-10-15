@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
       interface AccessibilitySettings {},
       highContrast: boolean,
@@ -68,19 +67,3 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 
 
 
-=======
-import React from 'react';
-
-interface EnhancedAccessibilityProps {
-  className?: string;
-}
-
-export default function EnhancedAccessibility({ className }: EnhancedAccessibilityProps) {
-  return (
-    <div className={className}>
-      <h2>EnhancedAccessibility<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

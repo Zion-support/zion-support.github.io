@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const ImprovedNavigation: React.FC = () => {}
   return ()
     <div  className ="min-h-screen bg-white">;""
@@ -81,19 +80,3 @@ import SEOHead from './components/SEOHead";"'
 ;"
 
 export default ComponentsPage;'";'";"
-=======
-import React from 'react';
-
-interface ImprovedNavigationProps {
-  className?: string;
-}
-
-export default function ImprovedNavigation({ className }: ImprovedNavigationProps) {
-  return (
-    <div className={className}>
-      <h2>ImprovedNavigation<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

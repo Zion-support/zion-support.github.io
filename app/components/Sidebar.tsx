@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Fragment } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -180,19 +179,3 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 };
 
 export default Sidebar;
-=======
-import React from 'react';
-
-interface SidebarProps {
-  className?: string;
-}
-
-export default function Sidebar({ className }: SidebarProps) {
-  return (
-    <div className={className}>
-      <h2>Sidebar<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

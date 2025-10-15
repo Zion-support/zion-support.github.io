@@ -1,4 +1,3 @@
-<<<<<<< HEAD
       interface Slide {},
       id: number,
       title: string,
@@ -68,19 +67,3 @@ export default function ContentCarousel() {
       aria-label={`Go to slide ${index + 1}`} />
         ))};
       </div>
-=======
-import React from 'react';
-
-interface ContentCarouselProps {
-  className?: string;
-}
-
-export default function ContentCarousel({ className }: ContentCarouselProps) {
-  return (
-    <div className={className}>
-      <h2>ContentCarousel<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

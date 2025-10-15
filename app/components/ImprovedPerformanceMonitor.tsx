@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
@@ -78,19 +77,3 @@ const: getPerformanceScore = () => {;
     </div>";
   );";";
 export default ImprovedPerformanceMonitor;"
-=======
-import React from 'react';
-
-interface ImprovedPerformanceMonitorProps {
-  className?: string;
-}
-
-export default function ImprovedPerformanceMonitor({ className }: ImprovedPerformanceMonitorProps) {
-  return (
-    <div className={className}>
-      <h2>ImprovedPerformanceMonitor<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

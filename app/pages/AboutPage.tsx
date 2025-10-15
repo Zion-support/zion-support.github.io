@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -111,15 +110,3 @@ challenges and create opportunities for our clients to thrive in the digital age
         </section>
       </div>
 
-=======
-import React from 'react';
-
-export default function AboutPage() {
-  return (
-    <div>
-      <h1>AboutPage<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

@@ -1,16 +1,10 @@
 import React from 'react';
 
-<<<<<<< HEAD
     },
     {};
 export default ServiceWorker;
 
 
-=======
-interface ServiceWorkerProps {
-  className?: string;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
 
 export default function ServiceWorker({ className }: ServiceWorkerProps) {
   return (

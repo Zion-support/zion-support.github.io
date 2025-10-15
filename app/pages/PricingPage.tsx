@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   ];
   const: addOns = [
     {;
@@ -213,15 +212,3 @@ export default PricingPage;
 ,";
       export default PricingPage;";";
 import SEOHead from './components/SEOHead";
-=======
-import React from 'react';
-
-export default function PricingPage() {
-  return (
-    <div>
-      <h1>PricingPage<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

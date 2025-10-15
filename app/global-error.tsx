@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function AppPage() {
@@ -26,15 +25,5 @@ export default function AppPage() {
         </div>
       </div>
     </>
-=======
-import React from 'react';
-
-export default function globalerror() {
-  return (
-    <div>
-      <h1>global-error<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
   );
 }

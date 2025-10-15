@@ -1,32 +1,12 @@
-<<<<<<< HEAD
-              Get Started Today;
-            </button>;
-          </div>;
-        </div>;
-      </div>;";"
-import SEOHead from './components/SEOHead";"'
-
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-;"
-
-export default ComponentsPage;'";'";"
-=======
 import React from 'react';
 
-interface AdSchedulerProps {
-  className?: string;
-}
-
-export default function AdScheduler({ className }: AdSchedulerProps) {
+export default function AdScheduler() {
   return (
-    <div className={className}>
-      <h2>AdScheduler<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">AdScheduler</h1>
+        <p className="text-gray-600">This component is under construction.</p>
+      </div>
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

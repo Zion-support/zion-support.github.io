@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 
 
     <LazyWrapper>
       <LazyComponent {...(props as P)} />
 
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
 
 interface LazyComponentHelperProps {
   className?: string;

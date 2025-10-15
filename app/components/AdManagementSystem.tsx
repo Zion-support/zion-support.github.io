@@ -1,32 +1,12 @@
-<<<<<<< HEAD
-              Get Started Today;
-            </button>;
-          </div>;
-        </div>;
-      </div>;";"
-import SEOHead from './components/SEOHead";"'
-
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-;"
-
-export default ComponentsPage;'";'";"
-=======
 import React from 'react';
 
-interface AdManagementSystemProps {
-  className?: string;
-}
-
-export default function AdManagementSystem({ className }: AdManagementSystemProps) {
+export default function AdManagementSystem() {
   return (
-    <div className={className}>
-      <h2>AdManagementSystem<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">AdManagementSystem</h1>
+        <p className="text-gray-600">This component is under construction.</p>
+      </div>
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

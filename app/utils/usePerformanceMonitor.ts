@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 
 export const usePerformanceMonitor = () => {
@@ -15,11 +14,3 @@ export const usePerformanceMonitor = () => {
 };
 
 export default usePerformanceMonitor;
-=======
-/// Comment
-
-export function usePerformanceMonitor() {
-  /// Comment
-  return null;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 
 export const useIntersectionObserver = () => {
@@ -15,16 +14,3 @@ export const useIntersectionObserver = () => {
 };
 
 export default useIntersectionObserver;
-=======
-import { useState, useEffect } from 'react';
-
-export function useIntersectionObserver() {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
-    /// Comment
-  }, []);
-  
-  return { state, setState };
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

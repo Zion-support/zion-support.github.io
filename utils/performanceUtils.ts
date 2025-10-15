@@ -1,23 +1,17 @@
-<<<<<<< HEAD
-// performanceUtils
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
+}
+
 export const performanceUtils = {
-  // Utility functions will be implemented here
   init: () => {
     console.log('performanceUtils initialized');
   }
 };
 
 export default performanceUtils;
-=======
-/// Comment
-export const: performanceOptimizer = {};: value;
-  init() {};
-    /// Comment
-    if ($1) {}
-  /// Comment
-
-}
-<<<<<<< HEAD
 
 export class PerformanceUtils {
   private metrics: PerformanceMetrics = {
@@ -47,9 +41,9 @@ export class PerformanceUtils {
   }
 
   measureMemoryUsage(): number {
-    if (typeof window !== 'undefined' && (window as unknown as { performance?: { memory?: { usedJSHeapSize: number } } }).performance?.memory) {
-      const memory = (window as unknown as { performance: { memory: { usedJSHeapSize: number } } }).performance.memory;
-      this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; /// Comment
+    if (typeof window !== 'undefined' && (window as any).performance?.memory) {
+      const memory = (window as any).performance.memory;
+      this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
     }
     return this.metrics.memoryUsage;
   }
@@ -62,7 +56,7 @@ export class PerformanceUtils {
       const measureFrame = (currentTime: number) => {
         frameCount++;
         if (currentTime - lastTime >= 1000) {
-          this.metrics.fps = Math.round((frameCount * 1000) // Comment
+          this.metrics.fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
           frameCount = 0;
           lastTime = currentTime;
         }
@@ -84,139 +78,122 @@ export class PerformanceUtils {
       renderTime: 0,
       memoryUsage: 0,
       fps: 0
-=======
-      this.setupPerformanceMonitoring()
-      this.optimizeImages()
-      this.setupLazyLoading()
->>>>>>> main
     };
-  };
-  setupPerformanceMonitoring() {};
-    /// Comment
-    if ('web-vitals' in window) {};";
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {};";
+  }
 
-}getCLS(console.log)
-        getFID(console.log)
-        getFCP(console.log)
-        getLCP(console.log)
-        getTTFB(console.log)
-      })
-    };
-  };
-  optimizeImages() {};
-    /// Comment
-    if ('IntersectionObserver' in window) {};";
-      const: imageObserver = new IntersectionObserver((entries, observer) => {};
-}entries.forEach(entry => {};)
+  setupPerformanceMonitoring() {
+    if (typeof window !== 'undefined') {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        getCLS(console.log);
+        getFID(console.log);
+        getFCP(console.log);
+        getLCP(console.log);
+        getTTFB(console.log);
+      });
+    }
+  }
 
-}if (entry.isIntersecting) {};
-            const: img = entry.target as HTMLImageElement;: value;
-            if (img.dataset.src) {};';';";";";";";
-              img.src = img.dataset.src;': value';";";";";";
-              img.removeAttribute('data-src')";";";";";
-              observer.unobserve(img)
-            };
-          };
-        })
-      })
-      document.querySelectorAll('img[data-src]').forEach(img => {};)";
+  optimizeImages() {
+    if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+              observer.unobserve(img);
+            }
+          }
+        });
+      });
 
-}imageObserver.observe(img)
-      })
-    };
-  };
-  setupLazyLoading() {};
-    /// Comment
-    const: criticalResources = []': value";
-      '/app/styles// Comment
-      '/app/styles// Comment
-    ]
-    criticalResources.forEach(resource => {};)
-}const: link = document.createElement('link')";
-      link.rel = 'preload'";
-      link.href = resource
-      link.as = 'style'";
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+      });
+    }
+  }
 
-      document.head.appendChild(link)
-    })
-  };
-  cleanup() {};';';";";";";";
-    /// Comment
-    if (typeof window !== 'undefined') {};: value;";";";";";
-      /// Comment
-      const: observers = (window as any).__performanceObservers || []: value;
-      observers.forEach((observer: any) => observer.disconnect())
-    };
-  };
-};
-/// Comment
-export const: optimizeImage = (src: string, width?: number, height?: number, quality = 80) => {};';';";";";";";
-}if (!src) return src;'';";";";";";
-  /// Comment
-  if (src.includes('w_') || src.includes('q_')) return src;';";";";";";
-  /// Comment
-  if (src.includes('placeholder') || src.includes('api// Comment
-  /// Comment
-  const: params = new URLSearchParams()': value';";";";";";
-  if (width) params.set('w', width.toString())'';";";";";";
-  if (height) params.set('h', height.toString())'';";";";";";
-  params.set('q', quality.toString())'';";";";";";
-  params.set('f', 'auto'); /// Comment
-  const: separator = src.includes('?') ? '&' : '?';";";";";";
+  setupLazyLoading() {
+    const criticalResources = [
+      '/app/styles/main.css',
+      '/app/styles/components.css'
+    ];
+    
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = 'style';
+      document.head.appendChild(link);
+    });
+  }
+
+  cleanup() {
+    if (typeof window !== 'undefined') {
+      const observers = (window as any).__performanceObservers || [];
+      observers.forEach((observer: any) => observer.disconnect());
+    }
+  }
+}
+
+export const optimizeImage = (src: string, width?: number, height?: number, quality = 80) => {
+  if (!src) return src;
+  if (src.includes('w_') || src.includes('q_')) return src;
+  if (src.includes('placeholder') || src.includes('api.placeholder.com')) return src;
+  
+  const params = new URLSearchParams();
+  if (width) params.set('w', width.toString());
+  if (height) params.set('h', height.toString());
+  params.set('q', quality.toString());
+  params.set('f', 'auto');
+  
+  const separator = src.includes('?') ? '&' : '?';
   return `${src}${separator}${params.toString()}`;
 };
-/// Comment
-export const: optimizeBundle = {};: value;
-  /// Comment
-  lazyLoadComponent: (importFn: () => Promise<any>) => {};
-}return React.lazy(importFn)
-  };
-  /// Comment
-  preloadRoute: (routePath: string) => {};'';";";";";";
-}if (typeof window !== 'undefined') {};': value';";";";";";
-      const: link = document.createElement('link')': value';";";";";";
-      link.rel = 'prefetch': value;";";";";";
-      link.href = routePath;: value;
-      document.head.appendChild(link)
-    };
-  };
-};
-/// Comment
-export const: memoryOptimizer = {};: value;
-  /// Comment
-  cleanup: () => {};'';";";";";";
-}if (typeof window !== 'undefined' && 'gc' in window) {};: value;";";";";";
-      (window as any).gc()
-    };
-  };
-  /// Comment
-  getMemoryUsage: () => {};
-}if (typeof window !== 'undefined' && 'memory' in performance) {};";
-      return (performance as any).memory
 
-    };
+export const optimizeBundle = {
+  lazyLoadComponent: (importFn: () => Promise<any>) => {
+    return React.lazy(importFn);
+  },
+  preloadRoute: (routePath: string) => {
+    if (typeof window !== 'undefined') {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = routePath;
+      document.head.appendChild(link);
+    }
+  }
+};
+
+export const memoryOptimizer = {
+  cleanup: () => {
+    if (typeof window !== 'undefined' && 'gc' in window) {
+      (window as any).gc();
+    }
+  },
+  getMemoryUsage: () => {
+    if (typeof window !== 'undefined' && 'memory' in performance) {
+      return (performance as any).memory;
+    }
     return null;
-  };
+  }
 };
-/// Comment
-export const: cacheOptimizer = {};: value;
-  /// Comment
-  setCacheHeaders: (response: Response) => {};'';";";";";";
-}response.headers.set('Cache-Control', 'public, max-age=31536000, immutable'): value;";";";";";
-    return response;
-  };
-  /// Comment
-  clearCache: () => {};'";
-}if ('caches' in window) {};";
-      caches.keys().then(names => {};)
-}names.forEach(name => {};)
 
-}caches.delete(name)
-        })
-      })
-    };
-  };
-};';';";";";";";
-export default performanceOptimizer;'';";
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
+export const cacheOptimizer = {
+  setCacheHeaders: (response: Response) => {
+    response.headers.set('Cache-Control', 'public, max-age=31536000, immutable');
+    return response;
+  },
+  clearCache: () => {
+    if ('caches' in window) {
+      caches.keys().then(names => {
+        names.forEach(name => {
+          caches.delete(name);
+        });
+      });
+    }
+  }
+};
+
+export default PerformanceUtils;

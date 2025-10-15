@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Analytics utility functions
 
 interface AnalyticsEvent {
@@ -61,11 +60,3 @@ export const trackError = (error: Error, context?: string) => {
     });
   }
 };
-=======
-/// Comment
-
-export function analytics() {
-  /// Comment
-  return null;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

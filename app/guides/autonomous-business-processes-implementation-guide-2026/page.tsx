@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
 
 export default function page() {
   return (

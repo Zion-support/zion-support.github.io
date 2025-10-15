@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
   ...props;
 }: {},;
       name: string,;
@@ -21,17 +20,3 @@ import React from 'react';
       {name};
 
 
-=======
-interface IconsProps {
-  className?: string;
-}
-
-export default function Icons({ className }: IconsProps) {
-  return (
-    <div className={className}>
-      <h2>Icons<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

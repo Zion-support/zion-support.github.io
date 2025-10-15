@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface AnimatedCardProps {}
   children: React.ReactNode
   className?: string
@@ -55,19 +54,3 @@ const AnimatedCard= React.FC<AnimatedCardProps> = ({)}
 ;"
 
 export default ComponentsPage;'";'";"
-=======
-import React from 'react';
-
-interface AnimatedCardProps {
-  className?: string;
-}
-
-export default function AnimatedCard({ className }: AnimatedCardProps) {
-  return (
-    <div className={className}>
-      <h2>AnimatedCard<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

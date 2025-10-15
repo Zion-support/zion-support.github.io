@@ -1,4 +1,3 @@
-<<<<<<< HEAD
       (entries) => {};
 }entries.forEach((entry) => {};
 }if ($1) {};
@@ -43,19 +42,3 @@ return () => {};
       setupServiceWorker])
   return null";"
 import SEOHead from './components/SEOHead";"'
-=======
-import React from 'react';
-
-interface EnhancedPerformanceOptimizerProps {
-  className?: string;
-}
-
-export default function EnhancedPerformanceOptimizer({ className }: EnhancedPerformanceOptimizerProps) {
-  return (
-    <div className={className}>
-      <h2>EnhancedPerformanceOptimizer<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

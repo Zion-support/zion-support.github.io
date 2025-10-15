@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Suspense, lazy, useEffect } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
@@ -97,15 +96,70 @@ function App() {
 
     preloadCriticalResources()
   }, [])
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
 
-export default function App() {
   return (
-    <div>
-      <h1>App</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
+    <HelmetProvider>
+      <GlobalErrorBoundary>
+        <PerformanceMonitor>
+          <AccessibilityEnhancer>
+            <Router>
+              <div className="min-h-screen bg-gray-50">
+                <Navigation />
+                <Sidebar />
+                <main className="flex-1">
+                  <ErrorBoundary fallback={ErrorFallback}>
+                    <Suspense fallback={<LoadingFallback />}>
+                      <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/services" element={<ServicesPage />} />
+                        <Route path="/pricing" element={<PricingPage />} />
+                        <Route path="/case-studies" element={<CaseStudiesPage />} />
+                        <Route path="/blog" element={<BlogPage />} />
+                        <Route path="/team" element={<TeamPage />} />
+                        <Route path="/careers" element={<CareersPage />} />
+                        <Route path="/privacy" element={<PrivacyPage />} />
+                        <Route path="/terms" element={<TermsPage />} />
+                        <Route path="/cookies" element={<CookiesPage />} />
+                        
+                        {/* AI Services Routes */}
+                        <Route path="/ai-services" element={<AIServicesPage />} />
+                        <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                        
+                        {/* IT Services Routes */}
+                        <Route path="/it-services" element={<ITServicesPage />} />
+                        <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                        <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                        
+                        {/* 5G Solutions Routes */}
+                        <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                        
+                        {/* Micro SaaS Solutions Routes */}
+                        <Route path="/micro-saas-solutions" element={<MicroSAASSolutionsPage />} />
+                        <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                        
+                        {/* Service-specific Routes */}
+                        <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                        <Route path="/web-development" element={<WebDevelopmentPage />} />
+                        <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                        <Route path="/database-management" element={<DatabaseManagementPage />} />
+                        <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                        <Route path="/partnerships" element={<PartnershipsPage />} />
+                        <Route path="/help" element={<HelpPage />} />
+                        <Route path="/api-docs" element={<APIDocsPage />} />
+                      </Routes>
+                    </Suspense>
+                  </ErrorBoundary>
+                </main>
+                <Footer />
+              </div>
+            </Router>
+          </AccessibilityEnhancer>
+        </PerformanceMonitor>
+      </GlobalErrorBoundary>
+    </HelmetProvider>
+  )
 }
+
+export default App

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface LoadingSpinnerProps {},
       size?: 'sm' | 'md' | 'lg' | 'xl'""
   color?: 'primary' | 'secondary' | 'white'""
@@ -50,19 +49,3 @@ fullScreen?: boolean
 ;"
 
 export default ComponentsPage;'";'";"
-=======
-import React from 'react';
-
-interface ModernLoadingSpinnerProps {
-  className?: string;
-}
-
-export default function ModernLoadingSpinner({ className }: ModernLoadingSpinnerProps) {
-  return (
-    <div className={className}>
-      <h2>ModernLoadingSpinner<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

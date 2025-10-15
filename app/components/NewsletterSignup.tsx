@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function NewsletterSignup() {}
   // Function body
 }
@@ -46,19 +45,3 @@ import SEOHead from './components/SEOHead";"'
 ;"
 
 export default ComponentsPage;'";'";"
-=======
-import React from 'react';
-
-interface NewsletterSignupProps {
-  className?: string;
-}
-
-export default function NewsletterSignup({ className }: NewsletterSignupProps) {
-  return (
-    <div className={className}>
-      <h2>NewsletterSignup<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

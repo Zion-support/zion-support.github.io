@@ -2,7 +2,6 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-<<<<<<< HEAD
 // const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
 //   if (shouldThrow) {
 //     throw new Error('Test error');
@@ -24,13 +23,5 @@ describe('Error Boundary', () => {
     );
     expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     expect(screen.getByText('Test Content')).toBeInTheDocument();
-=======
-const MockComponent = () => <div>Test Component</div>;
-
-describe('error-boundary.test', () => {
-  test('should render without crashing', () => {
-    render(<MockComponent />);
-    expect(screen.getByText('Test Component')).toBeInTheDocument();
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
   });
 });

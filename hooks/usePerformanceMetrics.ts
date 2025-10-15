@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 
 export const usePerformanceMetrics = () => {
@@ -6,40 +5,6 @@ export const usePerformanceMetrics = () => {
 
   useEffect(() => {
     // Hook logic will be implemented here
-=======
-import { useState, useEffect  } from 'lucide-react'";"
-    if (typeof: window === 'undefined' || !('PerformanceObserver' in window)) {'"'""
-      return;
-    };
-    setIsSupported(true);
-      const entries  = list.getEntries() as PerformanceEntryExtended[];
-      entries.forEach(entry => {
-        if (entry.processingStart !== undefined && entry.startTime !== undefined) {
-          setMetrics(prev => ({
-            ...prev,
-            fid: entry.processingStart! - entry.startTime;
-    /// Comment
-    let: clsValue = 0;
-    new PerformanceObserver(list => {)
-      entries.forEach(entry => {)}
-        if (!entry.hadRecentInput) {}
-          clsValue += entry.value || 0;}
-        }
-      });
-      setMetrics(prev => ({ ...prev, cls: clsValue }));
-    }).observe({ entryTypes: ['layout-shift'] })'"'""
-    /// Comment
-    new PerformanceObserver(list => {)
-      const entries  = list.getEntries() as PerformanceEntryExtended[];
-      entries.forEach(entry => {
-        if (entry.responseStart !== undefined && entry.requestStart !== undefined) {
-          setMetrics(prev => ({
-            ...prev,
-            ttfb: entry.responseStart! - entry.requestStart!;
-        }
-      });
-    }).observe({ entryTypes: ['navigation'] })'"'""
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
   }, []);
 
   return {

@@ -1,39 +1,52 @@
-<<<<<<< HEAD
-
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void,
-  setUser: (userId: string, properties?: Record<string, any>) => void;
-
-  ] = useState(false)
-  const [];
-    userId, setUserId,]};
-  ] = useState<string | null>(null)};
-  useEffect(() => {};
-    // if analytics is enabled;};
-setIsEnabled(true)}, [
-  ])
-    // if analytics is enabled;
-=======
 import React, { createContext, useContext } from 'react';
 
-interface AnalyticsContextContextType {
-  /// Comment
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
 }
 
-const AnalyticsContextContext = createContext<AnalyticsContextContextType | undefined>(undefined);
+interface AnalyticsContextType {
+  trackEvent: (event: string, properties?: Record<string, any>) => void;
+  trackPageView: (page: string) => void;
+  setUser: (userId: string, properties?: Record<string, any>) => void;
+}
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 export function AnalyticsContextProvider({ children }: { children: React.ReactNode }) {
+  const trackEvent = (event: string, properties?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', event, properties);
+    }
+  };
+
+  const trackPageView = (page: string) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        page_path: page,
+      });
+    }
+  };
+
+  const setUser = (userId: string, properties?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        user_id: userId,
+        custom_map: properties,
+      });
+    }
+  };
+
   return (
-    <AnalyticsContextContext.Provider value={{}}>
+    <AnalyticsContext.Provider value={{ trackEvent, trackPageView, setUser }}>
       {children}
-    <// Comment
+    </AnalyticsContext.Provider>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
 
 export function useAnalyticsContext() {
-  const context = useContext(AnalyticsContextContext);
+  const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalyticsContext must be used within AnalyticsContextProvider');
   }

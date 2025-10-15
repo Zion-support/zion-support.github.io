@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   Brain,
   Shield,
@@ -41,19 +40,3 @@ const EnhancedServicesShowcase: React.FC = () => {
     </div>";
   );";";
 export default EnhancedServicesShowcase;"
-=======
-import React from 'react';
-
-interface EnhancedServicesShowcaseProps {
-  className?: string;
-}
-
-export default function EnhancedServicesShowcase({ className }: EnhancedServicesShowcaseProps) {
-  return (
-    <div className={className}>
-      <h2>EnhancedServicesShowcase<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
