@@ -1,35 +1,21 @@
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import SEOHead from '../components/SEOHead';
 
-import { Link } from "react-router-dom";
-
-export default function PageZionTechGroup() {
+const ApiPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+      <SEOHead 
+        title="api - Zion Tech Group"
+        description="Zion Tech Group api service page"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Page</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional page services coming soon.
-          </p>
-          Contact Us
-          <title>5G Data Analytics - Zion Tech Group</title>
-          <h1 className="text-4 xl font-boldtext-whitemb-6">Api</h1>
-          <p className="text-lgtext-gray-300mb-8">
-            Professional api services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+          <h1 className="text-4xl font-bold mb-4">api</h1>
+          <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
     </>
   );
-}
+};
+
+export default ApiPage;

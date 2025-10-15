@@ -1,7 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
-=======
+import { Helmet } from 'react-helmet-async';
 import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
 
 const AIAutomationPlatform: React.FC = () => {
@@ -40,22 +39,15 @@ const AIAutomationPlatform: React.FC = () => {
     "Scalable workflows",
     "Cost reduction"
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
+=======
+import SEOHead from '../components/SEOHead';
+>>>>>>> cursor/analyze-improve-and-merge-code-4a9f
 
+const AiAutomationPlatformPage: React.FC = () => {
   return (
     <>
-      <Helmet>
 <<<<<<< HEAD
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">Page</h1>
-          <p className="text-gray-300 text-center">Coming soon...</p>
-        </div>
-      </div>    </>
-=======
+      <Helmet>
         <title>AI Automation Platform - Intelligent Process Automation | Zion Tech Group</title>
         <meta name="description" content="Transform your business with our AI automation platform. Automate workflows, optimize processes, and achieve 70% efficiency gains with intelligent automation solutions." />
         <meta name="keywords" content="AI automation, process automation, workflow automation, business intelligence, machine learning, AI platform" />
@@ -142,10 +134,20 @@ const AIAutomationPlatform: React.FC = () => {
             </button>
           </div>
         </section>
+=======
+      <SEOHead 
+        title="ai-automation-platform - Zion Tech Group"
+        description="Zion Tech Group ai-automation-platform service page"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">ai-automation-platform</h1>
+          <p className="text-gray-300">Coming soon...</p>
+        </div>
+>>>>>>> cursor/analyze-improve-and-merge-code-4a9f
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
   );
 };
 
-export default AIAutomationPlatform;
+export default AiAutomationPlatformPage;
