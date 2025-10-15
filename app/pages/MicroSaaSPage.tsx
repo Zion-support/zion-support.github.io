@@ -1,52 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import SEOHead from '../components/SEOHead'
-=======
-<<<<<<< HEAD
-import SEOHead from '../components/SEOHead";
-const MicroSaaSPage: React.FC  =  () => {};
-  return ()";
-    <>{}</>";";
-      <SEOHead>";";";
-        title="MicroSaaSPage - Zion Tech Group"
-        description="Zion Tech Group MicroSaaSPage page"
-const MicroSaaSPage: React.FC = () => {";
-  ";";
-  return (";";";
-    <>";";";";
-      <SEOHead title ="MicroSaaSPage - Zion Tech Group - Zion Tech Group"";"
-        description="Zion Tech Group MicroSaaSPage page"";";";";
-      />"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div className ="text-center">";"
-          <h1 className ="text-4xl font-bold mb-4">MicroSaaSPage - Zion Tech Group</$1>"
-          <p className ="text-gray-300">Coming soon...</$1>
-=======
-<<<<<<< HEAD
-import React from 'react;;''";
-import { Link } from 'react-router-dom;;''";
-import SEO from '../components/SEO;''";
-=======
-import React from 'react'
-import { Link } from 'react-router-dom";
-import SEO from '../components/SEO'";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
 import {
   GlobeAltIcon,
   CpuChipIcon,
   ChartBarIcon,
   RocketLaunchIcon,
   CheckCircleIcon,
-  ArrowRightIcon,;
-  PhoneIcon,;
-  EnvelopeIcon,;
-  MapPinIcon'"'"
-} from '@heroicons/react/24/outline'";
+  ArrowRightIcon, PhoneIcon, EnvelopeIcon, MapPinIcon'"'"} from '@heroicons/react/24/outline';
 export default function MicroSaaSPage() {
   const services  = [
-    {
-      icon: GlobeAltIcon,;
-      title: 'Custom Micro SaaS Development','"'"
+    {      icon: GlobeAltIcon, title: 'Custom Micro SaaS Development','"'"
       description: 'Tailored micro SaaS solutions designed to solve specific business challenges with scalable architecture.','"'"
       features: ['Custom development', 'Scalable architecture', 'API integration', 'Multi-tenant support']'"'"
     },
@@ -82,71 +44,26 @@ const MicroSaaSPage: React.FC = () => {
     <></>
       <Helmet>;
         <title>MicroSaaSPage - Zion Tech Group</title>;
-        <meta: name ="description" content="MicroSaaSPage - Zion Tech Group" />";
+        <meta name ="description" content="MicroSaaSPage - Zion Tech Group" />";
       </Helmet>
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div: className ="text-center">";
-          <h1: className ="text-4xl font-bold mb-4">MicroSaaSPage</h1>";
-          <p: className ="text-gray-300">This page is under construction.</p>";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">MicroSaaSPage</h1>";
+          <p className ="text-gray-300">This page is under construction.</p>";
         </div>
       </div>
     </>
   )}
-<<<<<<< HEAD
-=======
-import SEOHead from '../components/SEOHead';";
 
->>>>>>> main
 const MicroSaaSPage: React.FC = () => {}
   return ()
     <>{}</>
       <SEOHead>
-<<<<<<< HEAD
-        title="MicroSaaSPage - Zion Tech Group""
-        description="Zion Tech Group MicroSaaSPage page""
-      />
-      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
-        <div  className ="text-center">"
-          <h1  className ="text-4xl font-bold mb-4">MicroSaaSPage - Zion Tech Group</h1>"
-          <p  className ="text-gray-300">Coming soon...</p>"
-=======
-        title="MicroSaaSPage - Zion Tech Group"";
 
-        description="Zion Tech Group MicroSaaSPage page"";
-
-const MicroSaaSPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead: title ="MicroSaaSPage - Zion Tech Group - Zion Tech Group"";";
-        description="Zion Tech Group MicroSaaSPage page"";";
-
-      />
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">MicroSaaSPage - Zion Tech Group</h1>";";
-          <p: className ="text-gray-300">Coming soon...</p>";";
->>>>>>> main
->>>>>>> main
         </div>
       </div>
     </>,
   ),
-<<<<<<< HEAD
-}
-export default MicroSaaSPage
-=======
-
-<<<<<<< HEAD
-};";
-";";
-export default MicroSaaSPage;";";";
-"
-=======
-export default MicroSaaSPage;
->>>>>>> main
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
 }
->>>>>>> main
->>>>>>> main
+

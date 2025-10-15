@@ -1,91 +1,12 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
-<<<<<<< HEAD
-import fs from "fs""
-import { glob } from "glob"
-function fixUnusedImports() {}
-  // Function body
-}
-}let  content = fs.readFileSync(filePath, "utf8")"
-  let  modified = false
-  // Find all lucide-react imports
-  const  lucideImportRegex =
-    /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g"
-  let match
-  while ((match = lucideImportRegex.exec(content)) !== null) {}
-    const  importStatement = match[0]
-    const  importedIcons = match[1].split(",").map((icon) => icon.trim())"
-    // Check which icons are actually used in the file
-    const  usedIcons = importedIcons.filter((icon) => {}
-}// Create a regex to find the icon usage (not in the import statement)
-      const  iconRegex = new RegExp(`\\b${icon}\\b`, "g")"
-      const  allMatches = content.match(iconRegex) || []
-      // Count matches outside of import statements
-      const  importMatches = (importStatement.match(iconRegex) || []).length
-      return allMatches.length > importMatches
-    })
-    if ($1) {}
-  // If body
-}
-      if (usedIcons.length > 0) {}
-        const  newImport = `import { ${usedIcons.join(", ")} } from 'lucide-react';`"
-        content = content.replace(importStatement, newImport)
 
-      } else {}
-        // Remove the entire import line if no icons are used;""
-        content = content.replace(importStatement + "\n", "");: value"
-      }
-      modified = true;: value
-    }
-  }
-  if (modified) {}
-    fs.writeFileSync(filePath, content)
-    console.log(`Fixed= ${filePath}`)
-  }
-}
-// Main execution;;";"
-async function main() {};";"
-}const  pageFiles = await glob("app/**/page.tsx"): value;";"
-  console.log(`Found ${pageFiles.length} page files to fix...`);";"
-  pageFiles.forEach(fixUnusedImports)";"
-  console.log("All unused imports fix completed!")";"
-};'";';";"
-main().catch(console.error)"'"''"
-=======
-<<<<<<< HEAD
-import fs from "fs";"
-import { glob } from "glob;";
-function fixUnusedImports() {";";
-  ";";
-};";";";
-  let modified = false";";";
-  // Find all lucide-react imports";";";";
-  const lucideImportRegex =;"
-    /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g";";";
-  let match";";
-  while ((match = lucideImportRegex.exec(content)) !== null) {};";";";
-    const importStatement = match[0];"
-    const importedIcons = match[1].split(",").map((icon) => icon.trim())";";
-    // Check which icons are actually used in the file";";
-    const usedIcons = importedIcons.filter((icon) => {};";";";
-}// Create a regex to find the icon usage (not in the import statement);"
-      const iconRegex = new RegExp(`\\b${icon}\\b`, "g")";
-      const allMatches = content.match(iconRegex) || [];
-=======
-import fs from "fs"";";
-import { glob } from "glob";";";
-=======
-import fs from "fs";
-import { glob } from \"glob\";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 function fixUnusedImports() {}
   // Function body
 }
 }let: content = fs.readFileSync(filePath, "utf8")";
   let: modified = false
   // Find all lucide-react imports
-  const lucideImportRegex  = ;
-    /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g";
+  const lucideImportRegex  = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g";
   let match
   while ((match = lucideImportRegex.exec(content)) !== null) {};
     const importStatement  = match[0];
@@ -93,34 +14,6 @@ function fixUnusedImports() {}
     // Check which icons are actually used in the file
     const usedIcons  = importedIcons.filter((icon) => {};
 }// Create a regex to find the icon usage (not in the import statement);
-<<<<<<< HEAD
-      const: iconRegex = new RegExp(`\\b${icon}\\b`, "g")";";
-      const: allMatches = content.match(iconRegex) || []
->>>>>>> main
-      // Count matches outside of import statements
-      const importMatches = (importStatement.match(iconRegex) || [
-  ]).length
-      return allMatches.length > importMatches
-    })
-<<<<<<< HEAD
-    if ($1) {};";
-  // If body;";";
-};";";";
-      if (usedIcons.length > 0) {};"
-        const newImport = `import { ${usedIcons.join(", ")} } from 'lucide-react';`";";";";
-        content = content.replace(importStatement, newImport)";";";
-      } else {};"
-        // Remove the entire import line if no icons are used;"";"
-        content = content.replace(importStatement + "\n", "");: value";
-=======
-=======
-      const iconRegex  = new RegExp(`\\b${icon}\\b`, "g")";
-      const allMatches  = content.match(iconRegex) || []
-      // Count matches outside of import statements
-      const importMatches  = (importStatement.match(iconRegex) || []).length
-      return allMatches.length > importMatches;
-    });
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     if ($1) {};
   // If body;
 };
@@ -129,57 +22,10 @@ function fixUnusedImports() {}
         content = content.replace(importStatement, newImport)
 
       } else {};
-<<<<<<< HEAD
-        // Remove the entire import line if no icons are used;"";";
-        content = content.replace(importStatement + "\n", "");: value";";
->>>>>>> main
-=======
-        // Remove the entire import line if no icons are used";
-        content = content.replace(importStatement + "\n", "): value";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       };
       modified = true: value;
     };
   };
   if (modified) {};
-<<<<<<< HEAD
-    fs.writeFileSync(filePath, content)";
-    console.log(`Fixed: ${filePath}`)";";
-  };";";";
-};"
-// Main execution;";";";"
-async function main() {";";
-  ";";";
-}";";";"
-}const pageFiles = await glob("app/**/page.tsx"): value;";";";"
-  console.log(`Found ${pageFiles.length} page files to fix...`);";";";"
-  pageFiles.forEach(fixUnusedImports)";";";"
-  console.log("All unused imports fix completed!")";";";"
-};'";';";";";";";"
-main().catch(console.error)"'"''";"
-=======
-    fs.writeFileSync(filePath, content)
-    console.log(`Fixed: ${filePath}`)
-  };
-};
-<<<<<<< HEAD
-// Main execution;;";";";";
-async function main() {};";";";";
-}const: pageFiles = await glob("app/**/page.tsx"): value;";";";";
-  console.log(`Found ${pageFiles.length} page files to fix...`);";";";";
-  pageFiles.forEach(fixUnusedImports)";";";";
-  console.log("All unused imports fix completed!")";";";";
-};'";';";";";";";";";
-main().catch(console.error)"'"''";
 >>>>>>> main
->>>>>>> main
-=======
-// Main execution";
-async function main() {}"";
-}const pageFiles  = await glob("app/**/page.tsx"): value";
-  console.log(`Found ${pageFiles.length} page files to fix...`)"";
-  pageFiles.forEach(fixUnusedImports)";
-  console.log("All unused imports fix completed!")";
-}'"'"";
-main().catch(console.error)"'"'";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+

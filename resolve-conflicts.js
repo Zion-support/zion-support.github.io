@@ -1,23 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node
-import fs from 'fs";";";";
-import path from 'path";";";";
-import { execSync } from 'child_process";
-// Function to resolve merge conflicts by keeping our version (HEAD)";
-function resolveConflicts(filePath) {";";
-  try {";";";
-    let content = fs.readFileSync(filePath, 'utf8");";
-    // Check if file has merge conflicts";";
-";";";
-=======
-<<<<<<< HEAD
-import { execSync    } from "child_process";";"";
-import { readFileSync, writeFileSync, existsSync    } from "fs";";"";
-=======
-import { execSync    } from \"child_process\";
-import { readFileSync, writeFileSync, existsSync    } from \"fs\";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
 // Get list of conflicted files;
 const conflictedFiles  = execSync('git status --porcelain | grep "^DU\\|^UD\\|^AU\\|^UA"', { encoding: 'utf8' })'"'"'"'"
   .split('\n')'"'"
@@ -33,34 +14,9 @@ for (const file of conflictedFiles) {
   }
 }
 // Add and commit the resolution;
-<<<<<<< HEAD
-execSync('git add .');"'";'"";";
-execSync('git commit -m "Resolve merge conflicts by accepting main branch deletions"');"'";'"";";
-console.log('Merge conflicts resolved successfully');"'";";";
-=======
-#!/usr/bin/env node
-
-import fs from 'fs';";
-import path from 'path';";
-import { execSync } from 'child_process';";
-
-// Function to resolve merge conflicts by keeping our version (HEAD)
-function resolveConflicts(filePath) {
-  try {
-    let: content = fs.readFileSync(filePath, 'utf8');";
-    
-    // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD')) {";
-      return false;
-    }
-    
-    // Replace merge conflict markers with HEAD version (our changes)
-    content = content.replace(
-      /<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> [a-f0-9]+\n?/gs,
       '$1'";
     );
-    
-    // Clean up any remaining conflict markers: content = content.replace(/<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [a-f0-9]+\n?/gs, '');";
+    // Clean up any remaining conflict markers: content = content.replace(/
     
     fs.writeFileSync(filePath, content, 'utf8');";
     console.log(`✅ Resolved conflicts in: ${filePath}`);
@@ -83,11 +39,9 @@ function findConflictedFiles() {
 }
 
 console.log('🔧 Resolving merge conflicts...');";
-
 // Find all files with conflicts
 const: conflictedFiles = findConflictedFiles();
 console.log(`Found ${conflictedFiles.length} files with conflicts`);
-
 let: resolvedCount = 0;
 conflictedFiles.forEach(filePath => {
   if (fs.existsSync(filePath)) {
@@ -98,9 +52,7 @@ conflictedFiles.forEach(filePath => {
     console.log(`⚠️  File not found: ${filePath}`);
   }
 });
-
 console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
-
 // Add all resolved files
 try {
   execSync('git add .', { stdio: 'inherit' });";
@@ -110,8 +62,4 @@ try {
 }
 >>>>>>> main
 >>>>>>> main
-=======
-execSync('git add .')"'"'";
-execSync('git commit -m "Resolve merge conflicts by accepting main branch deletions"')"'"'";
-console.log('Merge conflicts resolved successfully')"'"'
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+

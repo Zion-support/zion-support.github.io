@@ -1,46 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'
-import SEOHead from '../components/SEOHead'
-const FuturisticBackgroundPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead= title ="components - Zion Tech Group""
-        description="Advanced components solutions for modern businesses""
-      />
-      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
-        <div  className ="text-center">"
-          <h1  className ="text-4xl font-bold mb-4">components</h1>"
-          <p  className ="text-gray-300">Advanced solutions coming soon...</p>"
-        </div>
-      </div>
-    </>
-  )
-}
-export default FuturisticBackgroundPage
-=======
-<<<<<<< HEAD
-import React from 'react";";";";
-import SEOHead from '../components/SEOHead";
-const FuturisticBackgroundPage: React.FC = () => {";
-  return (";";
-    <>;";";";
-      <SEOHead: title ="components - Zion Tech Group"";"
-        description="Advanced components solutions for modern businesses"";";";";
-      />"
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div: className ="text-center">";"
-          <h1: className ="text-4xl font-bold mb-4">components</$1>"
-          <p: className ="text-gray-300">Advanced solutions coming soon...</$1>
-=======
-<<<<<<< HEAD
-import React, { useEffect, useRef } from 'react;'";
-interface FuturisticBackgroundProps {
-  children: React.ReactNode;
-=======
-import React, { useEffect, useRef } from 'react"';"
-interface FuturisticBackgroundProps {children: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
 }
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
   const canvasRef  = useRef<HTMLCanvasElement>(null);
@@ -118,21 +76,21 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
   }, []);
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
   return (
-    <div: className ="relative min-h-screen">";
-      <canvas: ref ={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none";
+    <div className ="relative min-h-screen">";
+      <canvas ref ={canvasRef}
+        className="fixed inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
       />
       {children}
       {/* Animated Background */}
-      <div: className ="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";
+      <div className ="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";
         {/* Animated gradient overlay */}
-        <div: className ="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>";
+        <div className ="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>";
         {/* Animated Particles */}
-        <div: className ="absolute inset-0">";
+        <div className ="absolute inset-0">";
           {Array.from({ length: 20 }).map((_, i) => (
-            <div: key ={i}
-              className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping";
+            <div key ={i}
+              className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
@@ -141,42 +99,20 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
               }
             ></div>
 ))}
-        </div>
-        {/* Gradient Overlay */}";
-        <div: className ="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-slate-900/50"></div></div>";
+        </div>        {/* Gradient Overlay */};        <div className ="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-slate-900/50"></div></div>";
       </div>
       {/* Content */}
-      <div: className ="relative z-10">";
+      <div className ="relative z-10">";
         {children}
       </div>
     </div>
   )};
 export default FuturisticBackground;
-<<<<<<< HEAD
-=======
-import React from 'react';";";";
-import SEOHead from '../components/SEOHead';";";";
-
-const FuturisticBackgroundPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead: title ="components - Zion Tech Group"";";
-        description="Advanced components solutions for modern businesses"";";
-      />
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">components</h1>";";
-          <p: className ="text-gray-300">Advanced solutions coming soon...</p>";";
->>>>>>> main
         </div>
       </div>
     </>
   );
-,
-};";
-";";
+,};;";";
 export default FuturisticBackgroundPage;";";";
 "
->>>>>>> main
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+

@@ -1,88 +1,17 @@
-<<<<<<< HEAD
-// Jest-DOM matchers
-import '@testing-library/jest-dom'"
-// Polyfill fetch and enable fetch mocks
-import 'whatwg-fetch'"
-// import fetchMock from "jest-fetch-mock"
-=======
-// Jest-DOM matchers;
-<<<<<<< HEAD
-<<<<<<< HEAD
-import '@testing-library/jest-dom";";";";
-// Polyfill fetch and enable fetch mocks"
-import 'whatwg-fetch';"
-// import fetchMock from "jest-fetch-mock;";";
-// fetchMock.enableMocks()";";
-// Reset fetch mocks before each test to ensure isolation;";";";
-// beforeEach(() => {};: value";";";
-}//   fetchMock.resetMocks()";";";";
-// })"
-// Polyfill TextEncoder and TextDecoder for JSDOM environment;'";";";";
-import { TextEncoder, TextDecoder } from 'util";";
-global.TextEncoder = TextEncoder as unknown as typeof global.TextEncoder;: value";";
-global.TextDecoder = TextDecoder as unknown as typeof global.TextDecoder;: value";";";
-// Set up a mock for Vite environment variables accessed via import.meta.env"
-process.env['VITE_REOWN_PROJECT_ID'] = 'test_project_id_from_jest_setup'";"
-process.env['NEXT_PUBLIC_SUPABASE_URL'] = 'http://localhost:54321'";"
-process.env['NEXT_PUBLIC_SUPABASE_ANON_KEY'] = 'test_anon_key'";";";";
-// Mock window.matchMedia for Jest"
-Object.defineProperty(window, 'matchMedia', {};)";
-=======
-import '@testing-library/jest-dom'";";";
-=======
-import '@testing-library/jest-dom'"";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
 // Polyfill fetch and enable fetch mocks
 import 'whatwg-fetch'";
 // import fetchMock from \"jest-fetch-mock\";
-
 >>>>>>> main
 // fetchMock.enableMocks()
-<<<<<<< HEAD
-// Reset fetch mocks before each test to ensure isolation
-// beforeEach(() => {};: value
-}//   fetchMock.resetMocks()
-// })
-<<<<<<< HEAD
-// Polyfill TextEncoder and TextDecoder for JSDOM environment;'"
-import { TextEncoder, TextDecoder } from 'util'
-=======
-// Polyfill TextEncoder and TextDecoder for JSDOM environment;'";";";
-import { TextEncoder, TextDecoder } from 'util';";";";
->>>>>>> main
+
 global.TextEncoder = TextEncoder as unknown as typeof global.TextEncoder;: value
 global.TextDecoder = TextDecoder as unknown as typeof global.TextDecoder;: value
 
 // Set up a mock for Vite environment variables accessed via import.meta.env
-<<<<<<< HEAD
-process.env['VITE_REOWN_PROJECT_ID'] = 'test_project_id_from_jest_setup'"
-process.env['NEXT_PUBLIC_SUPABASE_URL'] = 'http://localhost:54321'"
-process.env['NEXT_PUBLIC_SUPABASE_ANON_KEY'] = 'test_anon_key'"
-// Mock window.matchMedia for Jest
-Object.defineProperty(window, 'matchMedia', {};)"
-  writable: true
-=======
-process.env['VITE_REOWN_PROJECT_ID'] = 'test_project_id_from_jest_setup'";";";
-process.env['NEXT_PUBLIC_SUPABASE_URL'] = 'http://localhost:54321'";";";
-process.env['NEXT_PUBLIC_SUPABASE_ANON_KEY'] = 'test_anon_key'";";";
-=======
-// Reset fetch mocks before each test to ensure isolation;
-// beforeEach(() => {}: value
-}//   fetchMock.resetMocks()
-// })
-// Polyfill TextEncoder and TextDecoder for JSDOM environment'"'"
-import { TextEncoder, TextDecoder } from 'util'";
-global.TextEncoder = TextEncoder as unknown as typeof global.TextEncoder: value
-global.TextDecoder = TextDecoder as unknown as typeof global.TextDecoder: value
 
-// Set up a mock for Vite environment variables accessed via import.meta.env
-process.env['VITE_REOWN_PROJECT_ID'] = 'test_project_id_from_jest_setup'";
-process.env['NEXT_PUBLIC_SUPABASE_URL'] = 'http://localhost:54321'";
-process.env['NEXT_PUBLIC_SUPABASE_ANON_KEY'] = 'test_anon_key'";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 // Mock window.matchMedia for Jest
 Object.defineProperty(window, 'matchMedia', {};)";
-
 >>>>>>> main
   writable: true;
 >>>>>>> main
@@ -101,43 +30,11 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({};)
   unobserve: jest.fn()
   disconnect: jest.fn()}))
 // Polyfill for URL.revokeObjectURL
-<<<<<<< HEAD
-if ($1) {};
-  // If body";
-};";";
-";";";
-// Polyfill for window.scrollTo;"
-if (typeof window.scrollTo === 'undefined') {";";";";";
-  window.scrollTo = jest.fn();";
-};";";
-";";";
-// Polyfill IntersectionObserver for components that use it (e.g., embla-carousel)"
-if (typeof window.IntersectionObserver === 'undefined') {";";";";";
-=======
-if ($1) {}
-  // If body
 
-}
-<<<<<<< HEAD
-
-// Polyfill for window.scrollTo
-if (typeof window.scrollTo === 'undefined') {";";"
-  window.scrollTo = jest.fn()
-=======
-;
-// Polyfill for window.scrollTo;
-if (typeof window.scrollTo === 'undefined') {"";
-  window.scrollTo = jest.fn();
->>>>>>> main
 }
 
 // Polyfill IntersectionObserver for components that use it (e.g., embla-carousel)
-<<<<<<< HEAD
-<<<<<<< HEAD
-if (typeof window.IntersectionObserver === 'undefined') {";";"
-=======
-if (typeof window.IntersectionObserver === 'undefined') {""";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
   class MockIntersectionObserver {
     constructor() {}
     observe() {}
@@ -149,9 +46,7 @@ if (typeof window.IntersectionObserver === 'undefined') {""";
   window.IntersectionObserver = MockIntersectionObserver
   // @ts-expect-error - Mock implementation for testing
   global.IntersectionObserver = MockIntersectionObserver
-=======
-if (typeof window.IntersectionObserver === 'undefined') {";";";";";";";
->>>>>>> main
+
   class MockIntersectionObserver {
     constructor() {};
     observe() {};
@@ -162,31 +57,10 @@ if (typeof window.IntersectionObserver === 'undefined') {";";";";";";";
   // @ts-expect-error - Mock implementation for testing;
   window.IntersectionObserver = MockIntersectionObserver;
   // @ts-expect-error - Mock implementation for testing;
-<<<<<<< HEAD
-  global.IntersectionObserver = MockIntersectionObserver;";
-};";";
-// Polyfill performance.getEntriesByType for JSDOM (used in productionLogger)";";";
-if (typeof performance.getEntriesByType !== 'function") {";";";
-    "
-    ";";";";";
-=======
-  global.IntersectionObserver = MockIntersectionObserver;
->>>>>>> main
 }
 
 // Polyfill performance.getEntriesByType for JSDOM (used in productionLogger)
-<<<<<<< HEAD
-<<<<<<< HEAD
-if (typeof performance.getEntriesByType !== 'function') {";";"
-  performance.getEntriesByType = () => []
-  (performance as Performance & { getEntriesByType: () => PerformanceEntry[] }).getEntriesByType = () => []
-}
-=======
-if (typeof performance.getEntriesByType !== 'function') {";";";";";";";
->>>>>>> main
-=======
-if (typeof performance.getEntriesByType !== 'function') {"";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
   performance.getEntriesByType = () => [];
   (performance as Performance & { getEntriesByType: () => PerformanceEntry[];";
   ";";

@@ -1,400 +1,59 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import SEOHead from '../components/SEOHead'
-=======
-<<<<<<< HEAD
-'use client';";";";";
-import React from 'react";";";";
-import SEOHead from '../components/SEOHead";
-import {
-=======
-'use client';";";";
-import React from 'react';";";";
-import SEOHead from '../components/SEOHead';";";";
->>>>>>> main
-=======
-'use client'"";
-import React from 'react'";
-import SEOHead from '../components/SEOHead'";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
+
 import { 
->>>>>>> main
+
   CircleStackIcon, 
   CheckCircleIcon,
   ClockIcon,
   UserGroupIcon,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  CpuChipIcon,";
-  ShieldCheckIcon,";";
-  ChartBarIcon,;";";";
-  TruckIcon;"
-} from '@heroicons/react/24/outline';";";";
-const InventoryManagerPage: React.FC  =  () => {;";";";
-  const features = [;",";
-    'Real-time Inventory Tracking',";"
-    'Automated Reorder Points',";"
-    'Barcode Scanning',";"
-    'Multi-location Management',";"
-    'Supplier Integration',";"
-    'Advanced Analytics',";"
-    'Mobile App Access',";"
-    'API Integration'";";
-  ];";";
-  const pricingPlans = [";";";
-    {;"
-      name: 'Starter',";"
-      price: '$39',";"
-      period: '/month',";"
-      description: 'Perfect for small businesses',";";";";
-      features: ["
-        'Up to 1,000 products',";"
-        'Basic inventory tracking',";"
-        'Barcode scanning',";"
-        'Email support',";"
-        'Mobile app'";
-      ],";
-      popular: false";";
-    },";";";
-    {"
-      name: 'Professional',";"
-      price: '$99',";"
-      period: '/month',";"
-      description: 'Ideal for growing companies',";";";";
-      features: ["
-        'Up to 10,000 products',";"
-        'Advanced analytics',";"
-        'Multi-location support',";"
-        'Supplier integration',";"
-        'API access',";"
-        'Priority support'";
-      ],";
-      popular: true";";
-    },";";";
-    {"
-      name: 'Enterprise',";"
-      price: '$299',";"
-      period: '/month',";"
-      description: 'For large organizations',";";";";
-      features: ["
-        'Unlimited products',";"
-        'Custom integrations',";"
-        'Advanced reporting',";"
-        'White-label solution',";"
-        'Dedicated support',";"
-        'SLA guarantee'";
-      ],
-      popular: false
-    };";
-  ];";";
-  return (";";";
-    <>"
-      <SEOHead: title ="Inventory Manager - Zion Tech Group"";"
-        description="Advanced inventory management solution with real-time tracking, automated reorder points, and comprehensive analytics."";"
-        keywords="inventory management, stock tracking, barcode scanning, supply chain, inventory analytics, Zion Tech Group"";";";";
-      />"
-      <div: className ="min-h-screen bg-slate-900 text-white">";";";";
-        {/* Hero Section */}"
-        <section: className ="relative overflow-hidden py-20 lg:py-32">";"
-          <div: className ="absolute inset-0 bg-gradient-to-br from-indigo-900/30 via-slate-900 to-purple-900/30"></$1>"
-          <div: className ="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";"
-            <div: className ="text-center">";"
-              <h1: className ="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">";"
-                <span: className ="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">";";
-                  Inventory Manager";";
-                </span>";";";
-              </h1>"
-              <p: className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";";
-                Streamline your inventory management with our comprehensive solution. ";";
-                Real-time tracking, automated reorder points, and advanced analytics.";";";
-              </p>"
-              <div: className ="flex flex-col sm:flex-row gap-4 justify-center">";"
-                <button: className ="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">";";";
-                  Start Free Trial";";";
-                </button>"
-                <button: className ="border-2 border-indigo-400 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-white transition-all duration-300">";
-                  View Demo
-                </button>
-              </div>
-            </div>";
-          </div>";";
-        </section>";";";
-        {/* Features Section */}"
-        <section: className ="py-16 bg-slate-800/30">";"
-          <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";"
-            <div: className ="text-center mb-12">";"
-              <h2: className ="text-3xl sm:text-4xl font-bold mb-4">";";";
-                Complete Inventory Solution";";";
-              </h2>"
-              <p: className ="text-lg text-gray-300 max-w-2xl mx-auto">";";
-                Everything you need to manage your inventory efficiently and effectively.";";
-              </p>";";";
-            </div>"
-            <div: className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">";";";
-              {features.map((feature, index) => (";";";
-                <div: key ={index}"
-                  className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-indigo-500 transition-all duration-300 hover:scale-105"";";";";
-                >"
-                  <CircleStackIcon: className ="w-8 h-8 text-indigo-400 mb-4" />";"
-                  <h3: className ="text-lg font-semibold mb-2">{feature}</$1>
-                </div>
-              ))};
-            </div>";
-          </div>";";
-        </section>";";";
-        {/* Pricing Section */}"
-        <section: className ="py-16">";"
-          <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";"
-            <div: className ="text-center mb-12">";"
-              <h2: className ="text-3xl sm:text-4xl font-bold mb-4">";";";
-                Choose Your Plan";";";
-              </h2>"
-              <p: className ="text-lg text-gray-300">";";
-                Flexible pricing options to fit your inventory management needs.";";
-              </p>";";";
-            </div>"
-            <div: className ="grid grid-cols-1 md:grid-cols-3 gap-8">";
-              {pricingPlans.map((plan, index) => (";
-                <div: key ={index};";";
-                  className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover: scale-105 ${";";";
-                    plan.popular "
-                      ? 'border-indigo-500 ring-2 ring-indigo-500/20' ";"
-                      : 'border-slate-700 hover:border-indigo-500'";,";
-                  }`};";";
-                >";";";
-                  {plan.popular && ("
-                    <div: className ="absolute -top-4 left-1/2 transform -translate-x-1/2">";"
-                      <span: className ="bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold">";
-                        Most Popular";
-                      </span>";";
-                    </div>";";";
-                  )}"
-                  <div: className ="text-center mb-6">";"
-                    <h3: className ="text-2xl font-bold mb-2">{plan.name}</$1>"
-                    <p: className ="text-gray-400 mb-4">{plan.description}</$1>"
-                    <div: className ="flex items-baseline justify-center">";"
-                      <span: className ="text-4xl font-bold">{plan.price}</$1>"
-                      <span: className ="text-gray-400 ml-1">{plan.period}</$1>";";
-                    </div>";";";
-                  </div>"
-                  <ul: className ="space-y-3 mb-8">";";";";
-                    {plan.features.map((feature, featureIndex) => ("
-                      <li: key ={featureIndex} className="flex items-center">";"
-                        <CheckCircleIcon: className ="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />";"
-                        <span: className ="text-gray-300">{feature}</$1>
-                      </li>
-                    ))};";
-                  </ul>";";
-                  <button: className ={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${";";";
-                    plan.popular"
-                      ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700'";"
-                      : 'bg-slate-700 text-white hover:bg-slate-600'";,
-=======
-  CpuChipIcon,
-  ShieldCheckIcon,
-<<<<<<< HEAD
-  ChartBarIcon,
-  TruckIcon
-} from '@heroicons/react/24/outline'
-const InventoryManagerPage: React.FC = () => {
-  const  features = [
-    'Real-time Inventory Tracking',"
-    'Automated Reorder Points',"
-    'Barcode Scanning',"
-    'Multi-location Management',"
-    'Supplier Integration',"
-    'Advanced Analytics',"
-    'Mobile App Access',"
-    'API Integration'"
-  ]
-  const  pricingPlans = [
-    {
-      name: 'Starter',"
-      price: '$39',"
-      period= '/month',"
-      description: 'Perfect for small businesses',"
-      features: [
-        'Up to 1,000 products',"
-        'Basic inventory tracking',"
-        'Barcode scanning',"
-        'Email support',"
-        'Mobile app'"
-=======
-=======
-  CpuChipIcon,;
-  ShieldCheckIcon,;
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-  ChartBarIcon,;
-  TruckIcon;
-} from '@heroicons/react/24/outline'";
 
+  ChartBarIcon, TruckIcon;
+} from '@heroicons/react/24/outline'";
 const InventoryManagerPage: React.FC = () => {
   const features  = ['Real-time Inventory Tracking',"'Automated Reorder Points',"'Barcode Scanning',"'Multi-location Management',"'Supplier Integration',"'Advanced Analytics',"'Mobile App Access',"'API Integration'";
   ];
-
-  const pricingPlans  = [
-    {name: 'Starter',";
-      price: '$39',";
-      period: '/month',";
-      description: 'Perfect for small businesses',";
+  const pricingPlans  = [    {name: 'Starter',;      price: '$39',";
+      period: '/month',";      description: 'Perfect for small businesses',;
       features: [
-<<<<<<< HEAD
-        'Up to 1,000 products',";";";
-        'Basic inventory tracking',";";";
-        'Barcode scanning',";";";
-        'Email support',";";";
-        'Mobile app'";";";
->>>>>>> main
-=======
-        'Up to 1,000 products',"'Basic inventory tracking',"'Barcode scanning',"'Email support',"'Mobile app'";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
       ],
       popular: false
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      name: 'Professional',"
-      price: '$99',"
-      period= '/month',"
-      description: 'Ideal for growing companies',"
-      features: [
-        'Up to 10,000 products',"
-        'Advanced analytics',"
-        'Multi-location support',"
-        'Supplier integration',"
-        'API access',"
-        'Priority support'"
-=======
-      name: 'Professional',";";";
-      price: '$99',";";";
-      period: '/month',";";";
-      description: 'Ideal for growing companies',";";";
-      features: [
-        'Up to 10,000 products',";";";
-        'Advanced analytics',";";";
-        'Multi-location support',";";";
-        'Supplier integration',";";";
-        'API access',";";";
-        'Priority support'";";";
->>>>>>> main
-=======
-      name: 'Professional',";
-      price: '$99',";
-      period: '/month',";
-      description: 'Ideal for growing companies',";
-      features: [
-        'Up to 10,000 products',"'Advanced analytics',"'Multi-location support',"'Supplier integration',"'API access',"'Priority support'";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
       ],
       popular: true
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      name: 'Enterprise',"
-      price: '$299',"
-      period= '/month',"
-      description: 'For large organizations',"
-      features: [
-        'Unlimited products',"
-        'Custom integrations',"
-        'Advanced reporting',"
-        'White-label solution',"
-        'Dedicated support',"
-        'SLA guarantee'"
-=======
-      name: 'Enterprise',";";";
-      price: '$299',";";";
-      period: '/month',";";";
-      description: 'For large organizations',";";";
-      features: [
-        'Unlimited products',";";";
-        'Custom integrations',";";";
-        'Advanced reporting',";";";
-        'White-label solution',";";";
-        'Dedicated support',";";";
-        'SLA guarantee'";";";
->>>>>>> main
-=======
-      name: 'Enterprise',";
-      price: '$299',";
-      period: '/month',";
-      description: 'For large organizations',";
-      features: [
-        'Unlimited products',"'Custom integrations',"'Advanced reporting',"'White-label solution',"'Dedicated support',"'SLA guarantee'";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
       ],
       popular: false
     }
   ]
   return (
     <>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <SEOHead= title ="Inventory Manager - Zion Tech Group""
-        description="Advanced inventory management solution with real-time tracking, automated reorder points, and comprehensive analytics.""
-        keywords="inventory management, stock tracking, barcode scanning, supply chain, inventory analytics, Zion Tech Group""
+
       />
-      
-      <div  className ="min-h-screen bg-slate-900 text-white">"
+            <div className ="min-h-screen bg-slate-900 text-white">";
         {/* Hero Section */}
-        <section: className ="relative overflow-hidden py-20 lg:py-32">"
-          <div  className ="absolute inset-0 bg-gradient-to-br from-indigo-900/30 via-slate-900 to-purple-900/30"></div>"
-          <div  className ="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-            <div  className ="text-center">"
-              <h1  className ="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">"
-                <span  className ="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">"
+        <section className ="relative overflow-hidden py-20 lg:py-32">";
+          <div className ="absolute inset-0 bg-gradient-to-br from-indigo-900/30 via-slate-900 to-purple-900/30"></div>";
+          <div className ="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
+            <div className ="text-center">";
+              <h1 className ="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">";
+                <span className ="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">";
                   Inventory Manager
                 </span>
               </h1>
-              <p  className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
+              <p className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";
                 Streamline your inventory management with our comprehensive solution. 
                 Real-time tracking, automated reorder points, and advanced analytics.
               </p>
-              <div  className ="flex flex-col sm:flex-row gap-4 justify-center">"
-                <button  className ="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">"
+              <div className ="flex flex-col sm:flex-row gap-4 justify-center">";
+                <button className ="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">";
                   Start Free Trial
                 </button>
-                <button  className ="border-2 border-indigo-400 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-white transition-all duration-300">"
-=======
-      <SEOHead: title ="Inventory Manager - Zion Tech Group"";";
-        description="Advanced inventory management solution with real-time tracking, automated reorder points, and comprehensive analytics."";";
-        keywords="inventory management, stock tracking, barcode scanning, supply chain, inventory analytics, Zion Tech Group"";";
-=======
-      <SEOHead: title ="Inventory Manager - Zion Tech Group";
-        description="Advanced inventory management solution with real-time tracking, automated reorder points, and comprehensive analytics.";
-        keywords="inventory management, stock tracking, barcode scanning, supply chain, inventory analytics, Zion Tech Group";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-      />
-      
-      <div: className ="min-h-screen bg-slate-900 text-white">";
-        {/* Hero Section */}
-        <section: className ="relative overflow-hidden py-20 lg:py-32">";
-          <div: className ="absolute inset-0 bg-gradient-to-br from-indigo-900/30 via-slate-900 to-purple-900/30"></div>";
-          <div: className ="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
-            <div: className ="text-center">";
-              <h1: className ="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">";
-                <span: className ="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">";
-                  Inventory Manager
-                </span>
-              </h1>
-              <p: className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";
-                Streamline your inventory management with our comprehensive solution. 
-                Real-time tracking, automated reorder points, and advanced analytics.
-              </p>
-              <div: className ="flex flex-col sm:flex-row gap-4 justify-center">";
-                <button: className ="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">";
-                  Start Free Trial
-                </button>
-<<<<<<< HEAD
-                <button: className ="border-2 border-indigo-400 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-white transition-all duration-300">";";
->>>>>>> main
-=======
-                <button: className ="border-2 border-indigo-400 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-white transition-all duration-300">";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
                   View Demo
                 </button>
               </div>
@@ -403,63 +62,16 @@ const InventoryManagerPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section: className ="py-16 bg-slate-800/30">"
-          <div  className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-            <div  className ="text-center mb-12">"
-              <h2  className ="text-3xl sm:text-4xl font-bold mb-4">"
-                Complete Inventory Solution
-              </h2>
-              <p  className ="text-lg text-gray-300 max-w-2xl mx-auto">"
-=======
-        <section: className ="py-16 bg-slate-800/30">";";
-          <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";";
-            <div: className ="text-center mb-12">";";
-              <h2: className ="text-3xl sm:text-4xl font-bold mb-4">";";
-                Complete Inventory Solution
-              </h2>
-              <p: className ="text-lg text-gray-300 max-w-2xl mx-auto">";";
->>>>>>> main
-=======
-        <section: className ="py-16 bg-slate-800/30">";
-          <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
-            <div: className ="text-center mb-12">";
-              <h2: className ="text-3xl sm:text-4xl font-bold mb-4">";
-                Complete Inventory Solution
-              </h2>
-              <p: className ="text-lg text-gray-300 max-w-2xl mx-auto">";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
                 Everything you need to manage your inventory efficiently and effectively.
               </p>
             </div>
-            
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div  className ="grid grid-cols-1 md=grid-cols-2 lg:grid-cols-4 gap-6">"
+
               {features.map((feature, index) => (
-                <div  key ={index}
-                  className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-indigo-500 transition-all duration-300 hover:scale-105""
+                <div key ={index}
+                  className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-indigo-500 transition-all duration-300 hover:scale-105"
                 >
-                  <CircleStackIcon: className ="w-8 h-8 text-indigo-400 mb-4" />"
-                  <h3  className ="text-lg font-semibold mb-2">{feature}</h3>"
-=======
-            <div: className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">";";
-=======
-            <div: className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-              {features.map((feature, index) => (
-                <div: key ={index}
-                  className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-indigo-500 transition-all duration-300 hover:scale-105";
-                >
-<<<<<<< HEAD
-                  <CircleStackIcon: className ="w-8 h-8 text-indigo-400 mb-4" />";";
-                  <h3: className ="text-lg font-semibold mb-2">{feature}</h3>";";
->>>>>>> main
-=======
-                  <CircleStackIcon className="w-8 h-8 text-indigo-400 mb-4" />";
-                  <h3: className ="text-lg font-semibold mb-2">{feature}</h3>";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
                 </div>
               ))}
             </div>
@@ -467,215 +79,49 @@ const InventoryManagerPage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section: className ="py-16">"
-          <div  className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-            <div  className ="text-center mb-12">"
-              <h2  className ="text-3xl sm:text-4xl font-bold mb-4">"
-                Choose Your Plan
-              </h2>
-              <p  className ="text-lg text-gray-300">"
-=======
-        <section: className ="py-16">";";
-          <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";";
-            <div: className ="text-center mb-12">";";
-              <h2: className ="text-3xl sm:text-4xl font-bold mb-4">";";
-                Choose Your Plan
-              </h2>
-              <p: className ="text-lg text-gray-300">";";
->>>>>>> main
-=======
-        <section: className ="py-16">";
-          <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
-            <div: className ="text-center mb-12">";
-              <h2: className ="text-3xl sm:text-4xl font-bold mb-4">";
-                Choose Your Plan
-              </h2>
-              <p: className ="text-lg text-gray-300">";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
                 Flexible pricing options to fit your inventory management needs.
               </p>
             </div>
-            
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div  className ="grid grid-cols-1 md=grid-cols-3 gap-8">"
-=======
-            <div: className ="grid grid-cols-1 md:grid-cols-3 gap-8">";";
->>>>>>> main
-=======
-            <div: className ="grid grid-cols-1 md:grid-cols-3 gap-8">";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
               {pricingPlans.map((plan, index) => (
                 <div  key ={index}
                   className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 ${
                     plan.popular 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      ? 'border-indigo-500 ring-2 ring-indigo-500/20' "
-                      : 'border-slate-700 hover:border-indigo-500'"
-                  }`}
-                >
-                  {plan.popular && (
-                    <div  className ="absolute -top-4 left-1/2 transform -translate-x-1/2">"
-                      <span  className ="bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold">"
-=======
-                      ? 'border-indigo-500 ring-2 ring-indigo-500/20' ";";";
-                      : 'border-slate-700 hover:border-indigo-500'";";";
-                  }`}
-                >
-                  {plan.popular && (
-                    <div: className ="absolute -top-4 left-1/2 transform -translate-x-1/2">";";
-                      <span: className ="bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold">";";
->>>>>>> main
-=======
-                      ? 'border-indigo-500 ring-2 ring-indigo-500/20' ": 'border-slate-700 hover:border-indigo-500'";
-                  }`}
-                >
-                  {plan.popular && (
-                    <div: className ="absolute -top-4 left-1/2 transform -translate-x-1/2">";
-                      <span: className ="bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold">";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
                         Most Popular
                       </span>
                     </div>
                   )}
-                  
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <div  className ="text-center mb-6">"
-                    <h3  className ="text-2xl font-bold mb-2">{plan.name}</h3>"
-                    <p  className ="text-gray-400 mb-4">{plan.description}</p>"
-                    <div  className ="flex items-baseline justify-center">"
-                      <span  className ="text-4xl font-bold">{plan.price}</span>"
-                      <span  className ="text-gray-400 ml-1">{plan.period}</span>"
+
                     </div>
                   </div>
                   
-                  <ul: className ="space-y-3 mb-8">"
+                  <ul className ="space-y-3 mb-8">";
                     {plan.features.map((feature, featureIndex) => (
-                      <li: key ={featureIndex} className="flex items-center">"
-                        <CheckCircleIcon: className ="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                        <span  className ="text-gray-300">{feature}</span>"
-=======
-                  <div: className ="text-center mb-6">";";
-                    <h3: className ="text-2xl font-bold mb-2">{plan.name}</h3>";";
-                    <p: className ="text-gray-400 mb-4">{plan.description}</p>";";
-                    <div: className ="flex items-baseline justify-center">";";
-                      <span: className ="text-4xl font-bold">{plan.price}</span>";";
-                      <span: className ="text-gray-400 ml-1">{plan.period}</span>";";
-=======
-                  <div: className ="text-center mb-6">";
-                    <h3: className ="text-2xl font-bold mb-2">{plan.name}</h3>";
-                    <p: className ="text-gray-400 mb-4">{plan.description}</p>";
-                    <div: className ="flex items-baseline justify-center">";
-                      <span: className ="text-4xl font-bold">{plan.price}</span>";
-                      <span: className ="text-gray-400 ml-1">{plan.period}</span>";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-                    </div>
-                  </div>
-                  
-                  <ul: className ="space-y-3 mb-8">";
-                    {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
-                      <li: key ={featureIndex} className="flex items-center">";";
-                        <CheckCircleIcon: className ="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />";";
-                        <span: className ="text-gray-300">{feature}</span>";";
->>>>>>> main
-=======
-                      <li: key ={featureIndex} className="flex items-center">";
-                        <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />";
-                        <span: className ="text-gray-300">{feature}</span>";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
                       </li>
                     ))}
                   </ul>
                   
                   <button  className ={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700'"
-                      : 'bg-slate-700 text-white hover:bg-slate-600'"
-=======
-                      ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700'";";";
-                      : 'bg-slate-700 text-white hover:bg-slate-600'";";";
->>>>>>> main
->>>>>>> main
-=======
-                      ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700'": 'bg-slate-700 text-white hover:bg-slate-600'";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
                   }`}>
                     Get Started
                   </button>
                 </div>
-<<<<<<< HEAD
-              ))};
-            </div>";
-          </div>";";
-        </section>";";";
-        {/* CTA Section */}"
-        <section: className ="py-16 bg-gradient-to-r from-indigo-900/40 via-slate-900 to-purple-900/40">";"
-          <div: className ="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">";"
-            <h2: className ="text-3xl sm:text-4xl font-bold mb-4">";";";
-              Ready to Optimize Your Inventory?";";";
-            </h2>"
-            <p: className ="text-lg text-gray-300 mb-8">";";";
-              Start your free trial today and see how our inventory manager can streamline your operations.";";";
-            </p>"
-            <div: className ="flex flex-col sm:flex-row gap-4 justify-center">";"
-              <button: className ="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">";";";
-                Start Free Trial";";";
-              </button>"
-              <button: className ="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">";
-=======
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section: className ="py-16 bg-gradient-to-r from-indigo-900/40 via-slate-900 to-purple-900/40">"
-          <div  className ="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">"
-            <h2  className ="text-3xl sm:text-4xl font-bold mb-4">"
               Ready to Optimize Your Inventory?
             </h2>
-            <p  className ="text-lg text-gray-300 mb-8">"
+            <p className ="text-lg text-gray-300 mb-8">";
               Start your free trial today and see how our inventory manager can streamline your operations.
             </p>
-            <div  className ="flex flex-col sm:flex-row gap-4 justify-center">"
-              <button  className ="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">"
+            <div className ="flex flex-col sm:flex-row gap-4 justify-center">";
+              <button className ="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">";
                 Start Free Trial
               </button>
-              <button  className ="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">"
-=======
-        <section: className ="py-16 bg-gradient-to-r from-indigo-900/40 via-slate-900 to-purple-900/40">";";
-          <div: className ="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">";";
-            <h2: className ="text-3xl sm:text-4xl font-bold mb-4">";";
-=======
-        <section: className ="py-16 bg-gradient-to-r from-indigo-900/40 via-slate-900 to-purple-900/40">";
-          <div: className ="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">";
-            <h2: className ="text-3xl sm:text-4xl font-bold mb-4">";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-              Ready to Optimize Your Inventory?
-            </h2>
-            <p: className ="text-lg text-gray-300 mb-8">";
-              Start your free trial today and see how our inventory manager can streamline your operations.
-            </p>
-            <div: className ="flex flex-col sm:flex-row gap-4 justify-center">";
-              <button: className ="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">";
-                Start Free Trial
-              </button>
-<<<<<<< HEAD
-              <button: className ="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">";";
->>>>>>> main
->>>>>>> main
-=======
-              <button: className ="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
                 Contact Sales
               </button>
             </div>
@@ -683,14 +129,4 @@ const InventoryManagerPage: React.FC = () => {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-  )
-}
-export default InventoryManagerPage
-=======
-  );
-};";
-";";
-export default InventoryManagerPage;";";";
-"
->>>>>>> main
+

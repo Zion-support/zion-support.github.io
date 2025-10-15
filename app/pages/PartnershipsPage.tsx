@@ -1,165 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import SEOHead from '../components/SEOHead'
-=======
-<<<<<<< HEAD
-import SEOHead from '../components/SEOHead";
-const PartnershipsPage: React.FC  =  () => {};";
-  const partnershipTypes = [;";";
-    {};";";";
-      title: 'Technology Partners";";";";
-      description: 'Integrate with leading technology platforms and tools";";
-      icon: <>";";
-      benefits: [";";";
-        'API integrations";";";";
-        'Technical support";";";";
-        'Co-marketing opportunities";";";";
-        'Joint product development"
-      ];";
-    };";";
-    {},";";";
-      title: 'Channel Partners",";";";
-      description: 'Resell and distribute our solutions through your network",";";";
-      icon: <Users className="w-8 h-8 text-green-400" />,";";
-      benefits: [";";";
-        'Competitive margins";";";";
-        'Sales training";";";";
-        'Marketing materials";";";";
-        'Dedicated support"
-      ];";
-    };";";
-    {},";";";
-      title: 'Strategic Partners",";";";
-      description: 'Long-term partnerships for mutual growth and innovation',"
-      icon: <Target className="w-8 h-8 text-purple-400" />,";";
-      benefits: [";";";
-        'Joint ventures";";";";
-        'Shared resources";";";";
-        'Market expansion";";";";
-        'Innovation collaboration"
-      ];";
-    };";";
-    {},";";";
-      title: 'Solution Partners",";";";
-      description: 'Complementary services and solutions integration',"
-      icon: <Settings className="w-8 h-8 text-orange-400" />,";";
-      benefits: [";";";
-        'Solution bundling";";";";
-        'Cross-referrals";";";";
-        'Technical integration";";";";
-        'Shared customer success"
-      ];
-    };";
-  ],";";
-      const requirements  =  [;";";";
-    'Proven track record in your industry";";";";
-    'Strong customer relationships";";";";
-    'Technical expertise in relevant areas";";";";
-    'Commitment to customer success";";";";
-    'Alignment with our values and mission"
-  ],";";
-      const benefits  =  [;";";";
-    'Access to cutting-edge technology";";";";
-    'Comprehensive training and support";";";";
-    'Marketing and sales resources";";";";
-    'Competitive partner program";";";";
-    'Joint go-to-market opportunities";";";";
-    'Technical integration support"
-  ],
-      return ()";
-    <>{}</>";";
-      <Helmet></Helmet>";";";
-        <title>Partnerships - Zion Tech Group | Partner With Us</title>"
-        <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group. Explore partnership opportunities and benefits." />"
-        <meta name="keywords" content="partnerships, partner program, technology partners, channel partners, strategic partnerships" />"
-        <link rel="canonical" href="https://ziontechgroup.com/partnerships" />";";
-      </Helmet>";";";
-      {/* Hero Section */};"
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></section>"
-        <div className="absolute inset-0 overflow-hidden">"
-        <div className="absolute inset-0 overflow-hidden">"
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
-          <p className="text-gray-300">This page is under development...</p>";
-const PartnershipsPage: React.FC  =  () => {";";
-  return (";";";
-    <>";";";";
-      <SEOHead title =" Partnerships Page - Zion Tech Group"";"
-        description="Zion Tech Group  Partnerships Page service page"";";";";
-      />"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div className ="text-center">";"
-          <h1 className ="text-4xl font-bold mb-4"> Partnerships Page</$1>"
-          <p className ="text-gray-300">Coming soon...</$1>";";
-        </div>";";";
-      </div>"
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>";";";
-        </div>"
-        <div className="container mx-auto px-4 relative z-10">"
-        <div className="container mx-auto px-4 relative z-10">"
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
-          <p className="text-gray-300">This page is under development...</p>";";
-        </div>";";";
-      </div>"
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>";";";
-              Partner With"
-              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"></span>";";,";
-                {' "}Us";";
-              </span>";";";
-            </h1>"
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>";
-              Join our growing ecosystem of partners and unlock new opportunities for growth,";";
-      innovation, and mutual success.";";";
-            </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>";";";
-              <>"
-                to="/contact"
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center"></>";";";
-                Become a Partner"
-                <ArrowRight className="w-5 h-5 ml-2" />";";
-              </>";";";
-              <>"
-                to="/contact"
-                className="border-2 border-white/20 hover:border-purple-400 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-white/5 flex items-center"></>"
-                <MessageSquare className="w-5 h-5 mr-2" />
-                Learn More
-              </>
-            </div>
-          </div>";
-        </div>";";
-      </section>";";";
-      {/* Partnership Types */};"
-      <section className="py-20 bg-slate-800"></section>"
-        <div className="container mx-auto px-4">"
-        <div className="container mx-auto px-4">"
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
-          <p className="text-gray-300">This page is under development...</p>";";
-        </div>";";";
-      </div>"
-            <h2 className="text-4xl font-bold text-white mb-4">Partnership Types</h2>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>";
-              Choose the partnership model that best fits your business goals and capabilities.";";
-            </p>";";";
-          </div>"
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>";";";
-            {partnershipTypes.map((type) => ()}"
-              <div key={index} className="bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">"
-        <div key={index} className="bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">"
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
-          <p className="text-gray-300">This page is under development...</p>
-        </div>";
-      </div>";";
-                  {type.icon};";";";
-                </div>"
-                <h3 className="text-xl font-semibold text-white mb-4">{type.title}</h3>"
-                <p className="text-gray-300 mb-6">{type.description}</p>"
-                <ul className="space-y-2 text-left"></ul>";";";
-                  {type.benefits.map((benefit, benefitIndex) => ()}"
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></li>"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-=======
-import SEOHead from '../components/SEOHead';";
 
->>>>>>> main
 const PartnershipsPage: React.FC = () => {}
   const  partnershipTypes = [
     {}
@@ -173,37 +12,30 @@ const PartnershipsPage: React.FC = () => {}
         'Joint product development'"
       ]
     }
-    {},
-      title: 'Channel Partners',"
-      description: 'Resell and distribute our solutions through your network',"
-      icon: <Users: className ="w-8 h-8 text-green-400" />,"
+    {},      title: 'Channel Partners',      description: 'Resell and distribute our solutions through your network',"
+      icon: <Users className ="w-8 h-8 text-green-400" />,"
       benefits: [
         'Competitive margins'
         'Sales training'
-        'Marketing materials'
-        'Dedicated support'"
+        'Marketing materials'        'Dedicated support'
       ]
     }
-    {},
-      title: 'Strategic Partners',"
+    {},      title: 'Strategic Partners',"
       description: 'Long-term partnerships for mutual growth and innovation',"
-      icon: <Target: className ="w-8 h-8 text-purple-400" />,"
+      icon: <Target className ="w-8 h-8 text-purple-400" />,"
       benefits: [
         'Joint ventures'
         'Shared resources'
-        'Market expansion'
-        'Innovation collaboration'"
+        'Market expansion'        'Innovation collaboration'
       ]
     }
-    {},
-      title: 'Solution Partners',"
+    {},      title: 'Solution Partners',"
       description: 'Complementary services and solutions integration',"
-      icon: <Settings: className ="w-8 h-8 text-orange-400" />,"
+      icon: <Settings className ="w-8 h-8 text-orange-400" />,"
       benefits: [
         'Solution bundling'
         'Cross-referrals'
-        'Technical integration'
-        'Shared customer success'"
+        'Technical integration'        'Shared customer success'
       ]
     }
   ],
@@ -211,8 +43,7 @@ const PartnershipsPage: React.FC = () => {}
     'Proven track record in your industry'
     'Strong customer relationships'
     'Technical expertise in relevant areas'
-    'Commitment to customer success'
-    'Alignment with our values and mission'"
+    'Commitment to customer success'    'Alignment with our values and mission'"
   ],
       const  benefits = [
     'Access to cutting-edge technology'
@@ -226,38 +57,11 @@ const PartnershipsPage: React.FC = () => {}
     <>{}</>
       <Helmet></Helmet>
         <title>Partnerships - Zion Tech Group | Partner With Us</title>
-        <meta: name ="description" content="Join our partner ecosystem and grow your business with Zion Tech Group. Explore partnership opportunities and benefits." />"
-        <meta: name ="keywords" content="partnerships, partner program, technology partners, channel partners, strategic partnerships" />"
-        <link: rel ="canonical" href="https://ziontechgroup.com/partnerships" />"
+        <meta name ="description" content="Join our partner ecosystem and grow your business with Zion Tech Group. Explore partnership opportunities and benefits." />"
+        <meta name ="keywords" content="partnerships, partner program, technology partners, channel partners, strategic partnerships" />"
+        <link rel ="canonical" href="https://ziontechgroup.com/partnerships" />"
       </Helmet>
 
-<<<<<<< HEAD
-      {/* Hero Section */}
-      <section: className ="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></section>"
-        <div  className ="absolute inset-0 overflow-hidden">"
-        <div  className ="absolute inset-0 overflow-hidden">"
-          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>"
-          <p  className ="text-gray-300">This page is under development...</p>"
-=======
-      {/* Hero Section */};
-      <section: className ="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></section>";
-        <div: className ="absolute inset-0 overflow-hidden">";
-        <div: className ="absolute inset-0 overflow-hidden">";
-          <h1: className ="text-4xl font-bold mb-4">Coming Soon</h1>";
-          <p: className ="text-gray-300">This page is under development...</p>";
-
-const PartnershipsPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead: title =" Partnerships Page - Zion Tech Group"";";
-        description="Zion Tech Group  Partnerships Page service page"";";
-      />
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4"> Partnerships Page</h1>";";
-          <p: className ="text-gray-300">Coming soon...</p>";";
-
->>>>>>> main
         </div>
       </div>
           <div  className ="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>"
@@ -271,11 +75,9 @@ const PartnershipsPage: React.FC = () => {
       </div>
             <h1  className ="text-5xl md=text-7xl font-bold text-white mb-6 leading-tight"></h1>"
               Partner With
-              <span  className ="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"></span>"
-                {' '}Us"
+              <span  className ="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"></span>"                {' '}Us
               </span>
-            </h1>
-            <p  className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>"
+            </h1>            <p  className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>"
               Join our growing ecosystem of partners and unlock new opportunities for growth,
       innovation, and mutual success.
             </p>
@@ -285,13 +87,13 @@ const PartnershipsPage: React.FC = () => {
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center""
               ></>
                 Become a Partner
-                <ArrowRight: className ="w-5 h-5 ml-2" />"
+                <ArrowRight className ="w-5 h-5 ml-2" />"
               </>
               <>
                 to="/contact""
                 className="border-2 border-white/20 hover:border-purple-400 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-white/5 flex items-center""
               ></>
-                <MessageSquare: className ="w-5 h-5 mr-2" />"
+                <MessageSquare className ="w-5 h-5 mr-2" />"
                 Learn More
               </>
             </div>
@@ -300,7 +102,7 @@ const PartnershipsPage: React.FC = () => {
       </section>
 
       {/* Partnership Types */}
-      <section: className ="py-20 bg-slate-800"></section>"
+      <section className ="py-20 bg-slate-800"></section>"
         <div  className ="container mx-auto px-4">"
         <div  className ="container mx-auto px-4">"
           <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>"
@@ -325,70 +127,21 @@ const PartnershipsPage: React.FC = () => {
                 </div>
                 <h3  className ="text-xl font-semibold text-white mb-4">{type.title}</h3>"
                 <p  className ="text-gray-300 mb-6">{type.description}</p>"
-                <ul: className ="space-y-2 text-left"></ul>"
+                <ul className ="space-y-2 text-left"></ul>"
                   {type.benefits.map((benefit, benefitIndex) => ()}
-<<<<<<< HEAD
-                    <li: key ={benefitIndex} className="flex items-center text-sm text-gray-300"></li>"
-                      <CheckCircle: className ="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />"
-                      {benefit}
-=======
-                    <li: key ={benefitIndex} className="flex items-center text-sm text-gray-300"></li>";
-                      <CheckCircle: className ="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />";
->>>>>>> main
+
                       {benefit};
->>>>>>> main
                     </li>
                   ))}
                 </ul>
               </div>
-<<<<<<< HEAD
-            ))}
-=======
-            ))};
-<<<<<<< HEAD
-          </div>";
-        </div>";";
-      </section>";";";
-      {/* Requirements & Benefits */};"
-      <section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900"></section>"
-        <div className="container mx-auto px-4">"
-        <div className="container mx-auto px-4">"
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
-          <p className="text-gray-300">This page is under development...</p>";
-        </div>";";
-      </div>";";";
-            <div></div>"
-              <h2 className="text-3xl font-bold text-white mb-6">Partnership Requirements</h2>"
-              <p className="text-gray-300 mb-8"></p>";";
-                We look for partners who share our commitment to excellence and customer success.";";";
-              </p>"
-              <ul className="space-y-4"></ul>";";";
-                {requirements.map((requirement) => ()}"
-                  <li key={index} className="flex items-start"></li>"
-                    <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" />"
-                    <span className="text-gray-300">{requirement}</span>
-                  </li>
-                ))};";
-              </ul>";";
-            </div>";";";
-            <div></div>"
-              <h2 className="text-3xl font-bold text-white mb-6">Partner Benefits</h2>"
-              <p className="text-gray-300 mb-8"></p>";";
-                Join our partner program and unlock exclusive benefits and opportunities.";";";
-              </p>"
-              <ul className="space-y-4"></ul>";";";
-                {benefits.map((benefit) => ()}"
-                  <li key={index} className="flex items-start"></li>"
-                    <Star className="w-6 h-6 text-yellow-400 mr-3 flex-shrink-0 mt-1" />"
-                    <span className="text-gray-300">{benefit}</span>
-=======
->>>>>>> main
+
           </div>
         </div>
       </section>
 
       {/* Requirements & Benefits */}
-      <section: className ="py-20 bg-gradient-to-br from-slate-900 to-purple-900"></section>"
+      <section className ="py-20 bg-gradient-to-br from-slate-900 to-purple-900"></section>"
         <div  className ="container mx-auto px-4">"
         <div  className ="container mx-auto px-4">"
           <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>"
@@ -400,10 +153,10 @@ const PartnershipsPage: React.FC = () => {
               <p  className ="text-gray-300 mb-8"></p>"
                 We look for partners who share our commitment to excellence and customer success.
               </p>
-              <ul: className ="space-y-4"></ul>"
+              <ul className ="space-y-4"></ul>"
                 {requirements.map((requirement) => ()}
-                  <li: key ={index} className="flex items-start"></li>"
-                    <CheckCircle: className ="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" />"
+                  <li key ={index} className="flex items-start"></li>"
+                    <CheckCircle className ="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" />"
                     <span  className ="text-gray-300">{requirement}</span>"
                   </li>
                 ))}
@@ -415,102 +168,17 @@ const PartnershipsPage: React.FC = () => {
               <p  className ="text-gray-300 mb-8"></p>"
                 Join our partner program and unlock exclusive benefits and opportunities.
               </p>
-              <ul: className ="space-y-4"></ul>"
+              <ul className ="space-y-4"></ul>"
                 {benefits.map((benefit) => ()}
-<<<<<<< HEAD
-                  <li: key ={index} className="flex items-start"></li>"
-                    <Star: className ="w-6 h-6 text-yellow-400 mr-3 flex-shrink-0 mt-1" />"
-                    <span  className ="text-gray-300">{benefit}</span>"
-=======
-                  <li: key ={index} className="flex items-start"></li>";
-                    <Star: className ="w-6 h-6 text-yellow-400 mr-3 flex-shrink-0 mt-1" />";
-                    <span: className ="text-gray-300">{benefit}</span>";
->>>>>>> main
->>>>>>> main
+
                   </li>
                 ))}
               </ul>
             </div>
-<<<<<<< HEAD
-          </div>";
-        </div>";";
-      </section>";";";
-      {/* CTA Section */};"
-      <section className="py-20 bg-slate-800"></section>"
-        <div className="container mx-auto px-4 text-center"></div>"
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Partner With Us?</h2>"
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>";";
-            Join our partner ecosystem and start growing your business with our innovative solutions.";";";
-          </p>"
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>";";";
-            <>"
-              to="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"></>";
-              Apply Now";";
-            </>";";";
-            <>"
-              to="/contact"
-              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"></>
-=======
-          </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section: className ="py-20 bg-slate-800"></section>"
-        <div  className ="container mx-auto px-4 text-center"></div>"
-          <h2  className ="text-4xl font-bold text-white mb-6">Ready to Partner With Us?</h2>"
-          <p  className ="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>"
-            Join our partner ecosystem and start growing your business with our innovative solutions.
-          </p>
-          <div  className ="flex flex-col sm:flex-row gap-4 justify-center"></div>"
-            <>
-              to="/contact""
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg""
-            ></>
-              Apply Now
-            </>
-            <>
-              to="/contact""
-              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105""
-            ></>
->>>>>>> main
               Contact Sales
             </>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
-    </>
-  ),
-}
-export default PartnershipsPage
-=======
-    </>";
-  ),";";
-};";";";
-export default PartnershipsPage;"
->>>>>>> main
-=======
-import React from 'react';
-
-const Page = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Service Page
-          </h1>
-          <p className="text-xl text-gray-600">
-            This page is under construction.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04

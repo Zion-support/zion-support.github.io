@@ -1,39 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';;"
 
-=======
-<<<<<<< HEAD
-import React from 'react";
-
-interface AccessibilityEnhancerProps {
-  className?: string;
-  children?: React.ReactNode;";
-};";";
-";";";
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>  =  ({";";";,";
-    ';',";"
-  className = '',;";";";
-=======
-<<<<<<< HEAD
-import React, { useEffect } from 'react;'";
-=======
-import React, { useEffect } from 'react"'"
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     // Skip to main content functionality
-    const addSkipLink  = () => {const skipLink  = document.createElement('a')'";
-      skipLink.href = '#main-content'";
-      skipLink.textContent = 'Skip to main content'";
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50'";
-      skipLink.style.zIndex = '9999'";
+    const addSkipLink  = () => {const skipLink  = document.createElement('a')'";      skipLink.href = '#main-content';      skipLink.textContent = 'Skip to main content'";
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50'";      skipLink.style.zIndex = '9999';
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
-    // High contrast mode toggle
-    const addHighContrastToggle  = () => {const toggle  = document.createElement('button')'"'"
-      toggle.textContent = 'Toggle High Contrast'";
-      toggle.className = 'fixed bottom-4 right-4 bg-purple-600 text-white px-4 py-2 rounded z-50'";
+    // High contrast mode toggle    const addHighContrastToggle  = () => {const toggle  = document.createElement('button')'"'"      toggle.textContent = 'Toggle High Contrast';      toggle.className = 'fixed bottom-4 right-4 bg-purple-600 text-white px-4 py-2 rounded z-50'";
       toggle.onclick = () => {
         document.body.classList.toggle('high-contrast')'"'"
       };
@@ -83,55 +56,12 @@ const AccessibilityEnhancer: React.FC = () => {
   return null;
 };
 export default AccessibilityEnhancer;
-<<<<<<< HEAD
-=======
-import React from 'react';;";";";
-;
->>>>>>> main
 interface AccessibilityEnhancerProps {
   className?: string
   children?: React.ReactNode
 }
-<<<<<<< HEAD
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ';',"
-  className = '',;";"
-  children
-}) => {
-  return (
-    <div  className ={`accessibilityenhancer ${className}`}>
-      {children}
-    </div>
-  )
-}
-
-export default AccessibilityEnhancer;';'
-=======
-;
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ';',";";";
-  className = '',;";";";";";
->>>>>>> main
   children;
   }) => {
   return (
-    <div: className ={`accessibilityenhancer ${className}`}>;
-<<<<<<< HEAD
-      {children};
-    </div>;";
-  );";";
-};";";";
-;"
-export default AccessibilityEnhancer;';';";";";";
-"
-=======
-      {children}
-    </div>;
-  );
-};
-;
-export default AccessibilityEnhancer;';';";";";
->>>>>>> main
->>>>>>> main
->>>>>>> main
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+    <div className ={`accessibilityenhancer ${className}`}>;

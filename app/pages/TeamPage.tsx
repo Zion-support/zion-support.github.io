@@ -1,116 +1,59 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import SEOHead from '../components/SEOHead'
-=======
-<<<<<<< HEAD
-import SEOHead from '../components/SEOHead";
-const TeamPage: React.FC  =  () => {};
-  return ()";
-    <>{}</>";";
-      <SEOHead>";";";
-        title="TeamPage - Zion Tech Group"
-        description="Zion Tech Group TeamPage page"
-const TeamPage: React.FC = () => {";
-  ";";
-  return (";";";
-    <>";";";";
-      <SEOHead title ="TeamPage - Zion Tech Group - Zion Tech Group"";"
-        description="Zion Tech Group TeamPage page"";";";";
-      />"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div className ="text-center">";"
-          <h1 className ="text-4xl font-bold mb-4">TeamPage - Zion Tech Group</$1>"
-          <p className ="text-gray-300">Coming soon...</$1>
-=======
-<<<<<<< HEAD
-import React from 'react;;''";
-import { Link } from 'react-router-dom;;''";
-import SEO from '../components/SEO;''";
-=======
-import React from 'react'
-import { Link } from 'react-router-dom";
-import SEO from '../components/SEO'";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
 import {
   UserGroupIcon,
   AcademicCapIcon,
   BriefcaseIcon,
   StarIcon,
-  ArrowRightIcon,;
-  PhoneIcon,;
-  EnvelopeIcon,;
-  MapPinIcon'"'"
-} from '@heroicons/react/24/outline'";
+  ArrowRightIcon, PhoneIcon, EnvelopeIcon, MapPinIcon'"'"} from '@heroicons/react/24/outline';
 export default function TeamPage() {
-  const team  = [
-    {name: 'Kleber Santos','"'"
+  const team  = [    {name: 'Kleber Santos','"'"
       role: 'CEO & Founder','"'"
       bio: 'Technology visionary with over 10 years of experience in AI and IT solutions.','"'"
       image: '/images/team/kleber-santos.jpg','"'"
-      linkedin: 'https://linkedin.com/in/kleber-santos','"'"
-      twitter: 'https://twitter.com/kleber_santos'";
+      linkedin: 'https://linkedin.com/in/kleber-santos','"'"      twitter: 'https://twitter.com/kleber_santos';
     },
-    {
-      name: 'Sarah Johnson','"'"
+    {      name: 'Sarah Johnson','"'"
       role: 'CTO','"'"
       bio: 'Expert in cloud architecture and cybersecurity with a passion for innovation.','"'"
       image: '/images/team/sarah-johnson.jpg','"'"
-      linkedin: 'https://linkedin.com/in/sarah-johnson','"'"
-      twitter: 'https://twitter.com/sarah_johnson'";
+      linkedin: 'https://linkedin.com/in/sarah-johnson','"'"      twitter: 'https://twitter.com/sarah_johnson';
     },
-    {
-      name: 'Michael Chen','"'"
+    {      name: 'Michael Chen','"'"
       role: 'Lead AI Engineer','"'"
       bio: 'Machine learning specialist focused on developing cutting-edge AI solutions.','"'"
       image: '/images/team/michael-chen.jpg','"'"
-      linkedin: 'https://linkedin.com/in/michael-chen','"'"
-      twitter: 'https://twitter.com/michael_chen'";
+      linkedin: 'https://linkedin.com/in/michael-chen','"'"      twitter: 'https://twitter.com/michael_chen';
     },
-    {
-      name: 'Emily Rodriguez','"'"
+    {      name: 'Emily Rodriguez','"'"
       role: 'Head of Design','"'"
       bio: 'Creative director with expertise in user experience and interface design.','"'"
       image: '/images/team/emily-rodriguez.jpg','"'"
-      linkedin: 'https://linkedin.com/in/emily-rodriguez','"'"
-      twitter: 'https://twitter.com/emily_rodriguez'";
+      linkedin: 'https://linkedin.com/in/emily-rodriguez','"'"      twitter: 'https://twitter.com/emily_rodriguez';
     },
-    {
-      name: 'David Kim','"'"
+    {      name: 'David Kim','"'"
       role: 'DevOps Engineer','"'"
       bio: 'Infrastructure specialist ensuring scalable and reliable cloud solutions.','"'"
       image: '/images/team/david-kim.jpg','"'"
-      linkedin: 'https://linkedin.com/in/david-kim','"'"
-      twitter: 'https://twitter.com/david_kim'";
+      linkedin: 'https://linkedin.com/in/david-kim','"'"      twitter: 'https://twitter.com/david_kim';
     },
-    {
-      name: 'Lisa Wang','"'"
+    {      name: 'Lisa Wang','"'"
       role: 'Project Manager','"'"
       bio: 'Experienced project manager ensuring timely delivery of complex solutions.','"'"
       image: '/images/team/lisa-wang.jpg','"'"
-      linkedin: 'https://linkedin.com/in/lisa-wang','"'"
-      twitter: 'https://twitter.com/lisa_wang'";
+      linkedin: 'https://linkedin.com/in/lisa-wang','"'"      twitter: 'https://twitter.com/lisa_wang';
     }
   ]
   const values  = [
-    {
-      icon: StarIcon,;
-      title: 'Excellence','"'"
-      description: 'We strive for excellence in everything we do, delivering the highest quality solutions.'";
+    {      icon: StarIcon, title: 'Excellence','"'"      description: 'We strive for excellence in everything we do, delivering the highest quality solutions.';
     },
     {
-      icon: UserGroupIcon,
-      title: 'Collaboration','"'"
-      description: 'We believe in the power of teamwork and collaboration to achieve great results.'";
+      icon: UserGroupIcon,      title: 'Collaboration','"'"      description: 'We believe in the power of teamwork and collaboration to achieve great results.';
     },
     {
-      icon: AcademicCapIcon,
-      title: 'Innovation','"'"
-      description: 'We continuously innovate and stay ahead of technology trends.'";
+      icon: AcademicCapIcon,      title: 'Innovation','"'"      description: 'We continuously innovate and stay ahead of technology trends.';
     },
     {
-      icon: BriefcaseIcon,
-      title: 'Integrity','"'"
-      description: 'We maintain the highest ethical standards in all our business practices.'";
+      icon: BriefcaseIcon,      title: 'Integrity','"'"      description: 'We maintain the highest ethical standards in all our business practices.';
     }
   ]
 import { Helmet  } from 'react-helmet-async'
@@ -118,72 +61,26 @@ const TeamPage: React.FC = () => {
   return (
     <></>
       <Helmet>;
-        <title>TeamPage - Zion Tech Group</title>;
-        <meta: name ="description" content="TeamPage - Zion Tech Group" />";
+        <title>TeamPage - Zion Tech Group</title>;        <meta name ="description" content="TeamPage - Zion Tech Group" />";
       </Helmet>
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div: className ="text-center">";
-          <h1: className ="text-4xl font-bold mb-4">TeamPage</h1>";
-          <p: className ="text-gray-300">This page is under construction.</p>";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">TeamPage</h1>";
+          <p className ="text-gray-300">This page is under construction.</p>";
         </div>
       </div>
     </>
   )}
-<<<<<<< HEAD
-=======
-import SEOHead from '../components/SEOHead';";
 
->>>>>>> main
 const TeamPage: React.FC = () => {}
   return ()
     <>{}</>
       <SEOHead>
-<<<<<<< HEAD
-        title="TeamPage - Zion Tech Group""
-        description="Zion Tech Group TeamPage page""
-      />
-      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
-        <div  className ="text-center">"
-          <h1  className ="text-4xl font-bold mb-4">TeamPage - Zion Tech Group</h1>"
-          <p  className ="text-gray-300">Coming soon...</p>"
-=======
-        title="TeamPage - Zion Tech Group"";
 
-        description="Zion Tech Group TeamPage page"";
-
-const TeamPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead: title ="TeamPage - Zion Tech Group - Zion Tech Group"";";
-        description="Zion Tech Group TeamPage page"";";
-
-      />
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">TeamPage - Zion Tech Group</h1>";";
-          <p: className ="text-gray-300">Coming soon...</p>";";
->>>>>>> main
->>>>>>> main
         </div>
       </div>
     </>,
   ),
-<<<<<<< HEAD
-}
-export default TeamPage
-=======
-
-<<<<<<< HEAD
-};";
-";";
-export default TeamPage;";";";
-"
-=======
-export default TeamPage;
->>>>>>> main
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 
 }
->>>>>>> main
->>>>>>> main
+
