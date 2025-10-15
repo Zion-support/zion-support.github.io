@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-'use client';";";";
-import React from 'react';;";";";
-import { Link }; from 'react-router-dom';";";";
-import SEOHead from './components/SEOHead';";";";
-=======
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from './components/SEOHead';
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
 import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
@@ -21,22 +14,18 @@ import {
   ChartBarIcon,
   GlobeAltIcon,
 <<<<<<< HEAD
-  CogIcon;
-}; from '@heroicons/react/24/outline';";";";
-=======
   CogIcon
 } from '@heroicons/react/24/outline';
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
 
 const HomePage: React.FC = () => {
-  const: services = [
+  const services = [
     {
       icon: CpuChipIcon,
-      title: 'AI Solutions',";";";
-      description: 'Advanced artificial intelligence and machine learning solutions to transform your business.',";";";
-      href: '/ai-solutions',";";";
-      gradient: 'from-purple-500 to-pink-500',";";";
-      glow: 'shadow-purple-500/25'";";";
+      title: 'AI Solutions',
+      description: 'Advanced artificial intelligence and machine learning solutions to transform your business.',
+      href: '/ai-solutions',
+      gradient: 'from-purple-500 to-pink-500',
+      glow: 'shadow-purple-500/25'
     },
     {
       icon: ShieldCheckIcon,

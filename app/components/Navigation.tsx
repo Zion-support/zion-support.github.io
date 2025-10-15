@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';";";";
-import { Link, useLocation }; from 'react-router-dom';";";";
-=======
 import React, { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
 import {
   Bars3Icon,
   XMarkIcon,
