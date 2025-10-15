@@ -1,9 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, memo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 
-const Navigation: React.FC = () => {
+const Navigation: React.FC = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+
+  const toggleMobileMenu = useCallback(() => {
+    setIsOpen(prev => !prev);
+  }, []);
+
+  const handleServicesMouseEnter = useCallback(() => {
+    setServicesOpen(true);
+  }, []);
+
+  const handleServicesMouseLeave = useCallback(() => {
+    setServicesOpen(false);
+  }, []);
 
   return (
     <nav className="bg-white shadow-lg">
@@ -25,11 +37,13 @@ const Navigation: React.FC = () => {
             
             {/* Services Dropdown */}
             <div className="relative">
-              <button
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center"
-              >
+            <button
+              onMouseEnter={handleServicesMouseEnter}
+              onMouseLeave={handleServicesMouseLeave}
+              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center"
+              aria-expanded={servicesOpen}
+              aria-haspopup="true"
+            >
                 Services
                 <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -37,9 +51,11 @@ const Navigation: React.FC = () => {
               </button>
               {servicesOpen && (
                 <div
-                  onMouseEnter={() => setServicesOpen(true)}
-                  onMouseLeave={() => setServicesOpen(false)}
+                  onMouseEnter={handleServicesMouseEnter}
+                  onMouseLeave={handleServicesMouseLeave}
                   className="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg z-50"
+                  role="menu"
+                  aria-label="Services menu"
                 >
                   <div className="py-1">
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100">AI & Machine Learning</div>
@@ -135,8 +151,10 @@ const Navigation: React.FC = () => {
 
           <div className="md:hidden flex items-center">
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={toggleMobileMenu}
               className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+              aria-expanded={isOpen}
+              aria-label="Toggle mobile menu"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -263,6 +281,8 @@ const Navigation: React.FC = () => {
       )}
     </nav>
   );
-};
+});
+
+Navigation.displayName = 'Navigation';
 
 export default Navigation;

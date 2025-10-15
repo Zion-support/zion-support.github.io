@@ -24,8 +24,7 @@ self.addEventListener('fetch', (event) => {
       .then((response) => {
         // Return cached version or fetch from network
         return response || fetch(event.request);
-      }
-    )
+      })
   );
 });
 

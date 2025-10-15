@@ -1,4 +1,4 @@
-import { Suspense, useEffect, lazy } from 'react'
+import { Suspense, useEffect, lazy, memo } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization'
@@ -61,13 +61,16 @@ import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
+import NotFoundPage from './app/components/NotFoundPage';
 
 // Loading component
-const LoadingFallback = () => (
+const LoadingFallback = memo(() => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
     <LoadingSpinner size="lg" text="Loading..." />
   </div>
-)
+))
+
+LoadingFallback.displayName = 'LoadingFallback'
 
 export default function App() {
   const { preloadResource } = usePerformanceOptimization({
@@ -154,13 +157,7 @@ export default function App() {
                   <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
                   
                   {/* Catch all route */}
-                  <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
-                    <div className="text-center">
-                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>
-                      <p className="text-gray-600 mb-8">Page not found</p>
-                      <a href="/" className="text-blue-600 hover:text-blue-800">Go back home</a>
-                    </div>
-                  </div>} />
+                  <Route path="*" element={<NotFoundPage />} />
                 </Routes>
               </Suspense>
             </main>

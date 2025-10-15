@@ -12,9 +12,13 @@ const Footer: React.FC = memo(() => {
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
             <div className="flex space-x-4">
-              <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
+              <a 
+                href="https://ziontechgroup.com" 
+                className="text-gray-300 hover:text-white transition-colors"
+                aria-label="Visit our website"
+              >
                 <span className="sr-only">Website</span>
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                 </svg>
               </a>

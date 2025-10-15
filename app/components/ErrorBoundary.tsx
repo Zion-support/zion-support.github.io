@@ -26,6 +26,11 @@ class ErrorBoundary extends Component<Props, State> {
     const appError = handleError(error);
     logError(appError, 'ErrorBoundary');
     
+    // Send error to monitoring service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Example: sendToErrorService(error, errorInfo);
+    }
+    
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
