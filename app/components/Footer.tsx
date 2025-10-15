@@ -9,7 +9,15 @@ const Footer: React.FC = () => {
         <div className="absolute top-10 left-10 w-20 h-20 bg-cyan-500 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute top-32 right-20 w-32 h-32 bg-purple-500 rounded-full blur-2xl animate-pulse delay-1000"></div>
         <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-pink-500 rounded-full blur-xl animate-pulse delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 w-40 h-40 bg-blue-500 rounded-full blur-3xl animate-pulse delay-3000"></div>
       </div>
+      
+      {/* Cyber grid overlay */}
+      <div className="absolute inset-0 cyber-grid opacity-5"></div>
+      
+      {/* Scanning lines */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent animate-pulse"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent animate-pulse delay-1000"></div>
       
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">

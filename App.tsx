@@ -70,6 +70,7 @@ import Footer from './app/components/Footer';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import FuturisticBackground from './app/components/FuturisticBackground';
 
 // Enhanced loading component
 const LoadingFallback = () => (
@@ -97,16 +98,17 @@ export default function App() {
   }, [])
 
   return (
-    <GlobalErrorBoundary>
-      <HelmetProvider>
-        <Router>
-          <div className="min-h-screen bg-gray-50">
-            <Navigation />
-            <Sidebar />
-            
-            <main className="flex-1">
-              <PerformanceMonitor />
-              <AccessibilityEnhancer />
+      <GlobalErrorBoundary>
+        <HelmetProvider>
+          <Router>
+            <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative">
+              <FuturisticBackground />
+              <Navigation />
+              <Sidebar />
+              
+              <main className="flex-1 relative z-10">
+                <PerformanceMonitor />
+                <AccessibilityEnhancer />
               
               <Suspense fallback={<LoadingFallback />}>
                 <Routes>
