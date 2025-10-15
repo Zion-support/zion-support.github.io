@@ -1,7 +1,4 @@
-export default {}
-  preset: 'ts-jest',
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+
   moduleNameMapper: {}
     '^@/(.*)$': '<rootDir>/app/$1',
     '^@/components/(.*)$': '<rootDir>/app/components/$1',
@@ -33,8 +30,4 @@ export default {}
         jsx: 'react-jsx'
       }
     }
-  },'
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
-  transformIgnorePatterns: ['
-    'node_modules/(?!(.*\\.mjs$|@testing-library|@heroicons|framer-motion))',
-  ]};
+

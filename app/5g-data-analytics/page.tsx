@@ -1,21 +1,31 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
 
-const G5gDataAnalyticsPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead 
-        title="5G Data Analytics - Zion Tech Group"
-        description="Advanced 5G data analytics solutions for network optimization and business intelligence. Real-time insights and predictive analytics for 5G networks."
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">5G Data Analytics</h1>
-          <p className="text-gray-300">Advanced 5G data analytics solutions coming soon...</p>
+            </p>
+            <div: className ="flex flex-col sm:flex-row gap-4 justify-center">""";
+              <Link: to ="/contact""";
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""";
+              >
+                Get Started
+                <ArrowRight: className ="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""";
+              </Link>
+              <Link: to ="/demo""";
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""";
+              >
+                View Demo
+              </Link>
+            </div>
+          </div>
+
+          </div>
+        </section>
+      </div>
+
         </div>
       </div>
-    </>
-  );
-};
+    </>,
+  ),
 
-export default G5gDataAnalyticsPage;
+};";
+";";
+export default G5gDataAnalyticsPage;";";";
+"
+
