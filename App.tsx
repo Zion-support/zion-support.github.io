@@ -50,6 +50,10 @@ const AILeadScoringPage = lazy(() => import('./app/ai-lead-scoring/page'));
 const AIPredictiveMaintenancePage = lazy(() => import('./app/ai-predictive-maintenance/page'));
 const AIPriceOptimizerPage = lazy(() => import('./app/ai-price-optimizer/page'));
 const AISchedulingAssistantPage = lazy(() => import('./app/ai-scheduling-assistant/page'));
+
+// Micro SaaS Solutions
+const AIContentGeneratorPage = lazy(() => import('./app/ai-content-generator/page'));
+const AIAnalyticsDashboardPage = lazy(() => import('./app/ai-analytics-dashboard/page'));
 const BlockchainSolutionsPage = lazy(() => import('./app/blockchain-solutions/page'));
 const IOTSolutionsPage = lazy(() => import('./app/iot-solutions/page'));
 const DevOpsAutomationPage = lazy(() => import('./app/devops-automation/page'));
@@ -57,7 +61,6 @@ const DataEngineeringPage = lazy(() => import('./app/data-engineering/page'));
 const APIDevelopmentPage = lazy(() => import('./app/api-development/page'));
 const SecurityAuditPage = lazy(() => import('./app/security-audit/page'));
 const MicroSAASSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
-const AIContentGeneratorPage = lazy(() => import('./app/ai-content-generator/page'));
 const DataAnalyticsPage = lazy(() => import('./app/data-analytics/page'));
 const WebDevelopmentPage = lazy(() => import('./app/web-development/page'));
 const MobileDevelopmentPage = lazy(() => import('./app/mobile-development/page'));
@@ -185,6 +188,10 @@ function App() {
                     <Route path="/ai-price-optimizer" element={<AIPriceOptimizerPage />} />
                     <Route path="/ai-scheduling-assistant" element={<AISchedulingAssistantPage />} />
                     
+                    {/* Micro SaaS Solutions */}
+                    <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                    <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
+                    
                     {/* Advanced Solutions */}
                     <Route path="/blockchain-solutions" element={<BlockchainSolutionsPage />} />
                     <Route path="/iot-solutions" element={<IOTSolutionsPage />} />
@@ -195,7 +202,6 @@ function App() {
                     
                     {/* Additional Services */}
                     <Route path="/micro-saas-solutions" element={<MicroSAASSolutionsPage />} />
-                    <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
                     <Route path="/data-analytics" element={<DataAnalyticsPage />} />
                     <Route path="/web-development" element={<WebDevelopmentPage />} />
                     <Route path="/mobile-development" element={<MobileDevelopmentPage />} />

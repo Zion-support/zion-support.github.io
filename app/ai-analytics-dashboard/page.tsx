@@ -8,92 +8,95 @@ import {
   StarIcon,
   ClockIcon,
   ShieldCheckIcon,
-  DocumentTextIcon,
-  SparklesIcon,
-  GlobeAltIcon,
   ChartBarIcon,
+  EyeIcon,
+  CpuChipIcon,
+  GlobeAltIcon,
   UserGroupIcon,
   CogIcon,
-  EyeIcon,
+  DocumentTextIcon,
   AcademicCapIcon,
   CurrencyDollarIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon
+  MapPinIcon,
+  ArrowTrendingUpIcon,
+  ChartPieIcon,
+  TableCellsIcon
 } from '@heroicons/react/24/outline';
 
-const AIContentGeneratorPage: React.FC = () => {
+const AIAnalyticsDashboardPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
 
   const features = [
     {
-      icon: DocumentTextIcon,
-      title: 'Unlimited Content Generation',
-      description: 'Generate unlimited articles, blogs, social media posts, and marketing copy without restrictions.',
-      benefits: ['No word limits', 'Bulk content creation', 'Multiple formats', 'Real-time generation']
+      icon: ChartBarIcon,
+      title: 'Real-Time Dashboards',
+      description: 'Monitor your business performance with live, interactive dashboards that update in real-time.',
+      benefits: ['Live data updates', 'Interactive charts', 'Customizable widgets', 'Mobile responsive']
+    },
+    {
+      icon: CpuChipIcon,
+      title: 'AI-Powered Insights',
+      description: 'Get intelligent insights and recommendations powered by advanced machine learning algorithms.',
+      benefits: ['Predictive analytics', 'Anomaly detection', 'Trend analysis', 'Smart recommendations']
+    },
+    {
+      icon: TableCellsIcon,
+      title: 'Custom Report Builder',
+      description: 'Create custom reports with drag-and-drop functionality and automated scheduling.',
+      benefits: ['Drag-and-drop builder', 'Automated scheduling', 'Custom metrics', 'Export options']
+    },
+    {
+      icon: EyeIcon,
+      title: 'Data Visualization',
+      description: 'Transform complex data into beautiful, easy-to-understand visualizations and charts.',
+      benefits: ['Multiple chart types', 'Interactive elements', 'Color coding', 'Responsive design']
     },
     {
       icon: GlobeAltIcon,
-      title: 'Multi-Language Support',
-      description: 'Create content in 50+ languages with native-level quality and cultural adaptation.',
-      benefits: ['50+ languages', 'Cultural adaptation', 'Native quality', 'Auto-translation']
-    },
-    {
-      icon: ChartBarIcon,
-      title: 'SEO Optimization',
-      description: 'AI-powered SEO optimization ensures your content ranks higher in search results.',
-      benefits: ['Keyword optimization', 'Meta tags', 'Content structure', 'Search analytics']
+      title: 'Multi-Source Integration',
+      description: 'Connect and analyze data from multiple sources including databases, APIs, and cloud services.',
+      benefits: ['100+ integrations', 'Real-time sync', 'Data transformation', 'Error handling']
     },
     {
       icon: UserGroupIcon,
-      title: 'Brand Voice Customization',
-      description: 'Train the AI to match your brand voice, tone, and style across all content.',
-      benefits: ['Brand consistency', 'Tone matching', 'Style adaptation', 'Custom training']
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Plagiarism Detection',
-      description: 'Built-in plagiarism detection ensures all content is original and unique.',
-      benefits: ['100% original', 'Plagiarism checking', 'Citation support', 'Quality assurance']
-    },
-    {
-      icon: CogIcon,
-      title: 'Content Scheduling',
-      description: 'Schedule and automate content publishing across multiple platforms.',
-      benefits: ['Auto-publishing', 'Multi-platform', 'Scheduling', 'Workflow automation']
+      title: 'Team Collaboration',
+      description: 'Share insights and collaborate with your team through comments, annotations, and sharing.',
+      benefits: ['Team sharing', 'Comments & annotations', 'Role-based access', 'Version control']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: 29,
+      price: 49,
       period: 'month',
-      description: 'Perfect for individuals and small businesses',
+      description: 'Perfect for small businesses and startups',
       features: [
-        '10,000 words/month',
-        '5 languages',
-        'Basic SEO optimization',
+        '5 dashboards',
+        'Basic integrations',
+        'Standard reports',
         'Email support',
-        'Standard templates',
-        'Basic analytics'
+        '1 user',
+        '7-day data retention'
       ],
       popular: false,
       cta: 'Start Free Trial'
     },
     {
       name: 'Professional',
-      price: 79,
+      price: 149,
       period: 'month',
-      description: 'Ideal for growing businesses and content teams',
+      description: 'Ideal for growing businesses and teams',
       features: [
-        'Unlimited words',
-        '50+ languages',
-        'Advanced SEO optimization',
+        'Unlimited dashboards',
+        'Advanced integrations',
+        'Custom reports',
         'Priority support',
-        'Premium templates',
-        'Advanced analytics',
-        'Brand voice training',
+        'Up to 10 users',
+        '90-day data retention',
+        'AI insights',
         'API access',
         'Team collaboration'
       ],
@@ -102,18 +105,18 @@ const AIContentGeneratorPage: React.FC = () => {
     },
     {
       name: 'Enterprise',
-      price: 199,
+      price: 399,
       period: 'month',
       description: 'For large organizations with advanced needs',
       features: [
         'Everything in Professional',
-        'Custom AI training',
+        'Custom integrations',
         'White-label options',
         'Dedicated support',
-        'Custom integrations',
-        'Advanced security',
-        'SLA guarantee',
-        'Custom workflows',
+        'Unlimited users',
+        'Unlimited data retention',
+        'Advanced AI models',
+        'Custom training',
         'On-premise deployment'
       ],
       popular: false,
@@ -123,114 +126,114 @@ const AIContentGeneratorPage: React.FC = () => {
 
   const useCases = [
     {
-      title: 'Blog Writing',
-      description: 'Generate engaging blog posts on any topic with proper structure and SEO optimization.',
-      icon: DocumentTextIcon,
-      benefits: ['SEO-optimized', 'Engaging content', 'Proper structure', 'Keyword rich']
+      title: 'Sales Performance Tracking',
+      description: 'Monitor sales metrics, pipeline health, and team performance with real-time dashboards.',
+      icon: ArrowTrendingUpIcon,
+      benefits: ['Sales metrics', 'Pipeline tracking', 'Team performance', 'Goal monitoring']
     },
     {
-      title: 'Social Media Content',
-      description: 'Create compelling social media posts for all platforms with optimal character counts.',
-      icon: GlobeAltIcon,
-      benefits: ['Platform-specific', 'Engaging captions', 'Hashtag optimization', 'Visual descriptions']
+      title: 'Marketing Campaign Analysis',
+      description: 'Analyze marketing campaign performance across all channels and optimize ROI.',
+      icon: ChartPieIcon,
+      benefits: ['Campaign ROI', 'Channel analysis', 'Conversion tracking', 'Budget optimization']
     },
     {
-      title: 'Email Marketing',
-      description: 'Generate personalized email campaigns that drive engagement and conversions.',
-      icon: EnvelopeIcon,
-      benefits: ['Personalized', 'High conversion', 'A/B testing', 'Automated sequences']
-    },
-    {
-      title: 'Product Descriptions',
-      description: 'Create compelling product descriptions that highlight features and drive sales.',
+      title: 'Financial Reporting',
+      description: 'Generate comprehensive financial reports with automated insights and forecasting.',
       icon: CurrencyDollarIcon,
-      benefits: ['Sales-focused', 'Feature highlighting', 'Benefit-driven', 'Conversion optimized']
+      benefits: ['Financial metrics', 'Budget tracking', 'Forecasting', 'Compliance reporting']
     },
     {
-      title: 'Ad Copy Creation',
-      description: 'Generate high-converting ad copy for Google, Facebook, and other advertising platforms.',
-      icon: ChartBarIcon,
-      benefits: ['High conversion', 'Platform optimized', 'A/B testing', 'ROI focused']
+      title: 'Customer Behavior Insights',
+      description: 'Understand customer behavior patterns and preferences to improve engagement.',
+      icon: UserGroupIcon,
+      benefits: ['Behavior analysis', 'Segmentation', 'Engagement metrics', 'Retention tracking']
     },
     {
-      title: 'Press Releases',
-      description: 'Create professional press releases that get media attention and coverage.',
-      icon: AcademicCapIcon,
-      benefits: ['Media-ready', 'Professional tone', 'Newsworthy angle', 'Distribution ready']
+      title: 'Operational Efficiency',
+      description: 'Monitor operational metrics and identify opportunities for process improvement.',
+      icon: CogIcon,
+      benefits: ['Process metrics', 'Efficiency tracking', 'Bottleneck identification', 'Optimization']
+    },
+    {
+      title: 'Predictive Forecasting',
+      description: 'Use AI-powered forecasting to predict future trends and make data-driven decisions.',
+      icon: CpuChipIcon,
+      benefits: ['Trend prediction', 'Demand forecasting', 'Risk analysis', 'Strategic planning']
     }
   ];
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
+      name: 'David Martinez',
+      role: 'VP of Sales',
+      company: 'GrowthCorp',
+      content: 'The AI insights have transformed how we approach sales. We\'ve increased our conversion rate by 45% using the predictive analytics.',
+      rating: 5,
+      avatar: 'DM'
+    },
+    {
+      name: 'Lisa Thompson',
       role: 'Marketing Director',
-      company: 'TechStart Inc.',
-      content: 'Zion AI Content Generator has revolutionized our content marketing. We\'ve increased our content output by 500% while maintaining quality.',
+      company: 'BrandBoost',
+      content: 'Finally, a dashboard that actually helps us understand our marketing performance. The ROI tracking is incredible.',
       rating: 5,
-      avatar: 'SJ'
+      avatar: 'LT'
     },
     {
-      name: 'Michael Chen',
-      role: 'Content Manager',
-      company: 'Digital Agency Pro',
-      content: 'The SEO optimization feature is incredible. Our blog traffic increased by 300% in just 3 months.',
+      name: 'James Wilson',
+      role: 'CFO',
+      company: 'FinanceFirst',
+      content: 'The financial forecasting capabilities have saved us countless hours and improved our accuracy significantly.',
       rating: 5,
-      avatar: 'MC'
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'E-commerce Manager',
-      company: 'ShopSmart',
-      content: 'Product descriptions generated by this AI are so compelling that our conversion rate increased by 40%.',
-      rating: 5,
-      avatar: 'ER'
+      avatar: 'JW'
     }
   ];
 
   return (
     <>
       <SEOHead 
-        title="Zion AI Content Generator Pro - AI-Powered Content Creation"
-        description="Create unlimited high-quality content with our AI Content Generator Pro. Generate blogs, social media posts, emails, and marketing copy in 50+ languages with SEO optimization."
-        keywords="AI content generator, content creation, blog writing, social media content, email marketing, SEO optimization, content automation"
-        canonicalUrl="https://ziontechgroup.com/ai-content-generator"
+        title="Zion AI Analytics Dashboard Pro - Business Intelligence Platform"
+        description="Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time dashboards, predictive analytics, and custom reporting for data-driven decisions."
+        keywords="AI analytics, business intelligence, data visualization, predictive analytics, dashboard, reporting, data insights"
+        canonicalUrl="https://ziontechgroup.com/ai-analytics-dashboard"
       />
       
       <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
         <section className="relative overflow-hidden min-h-screen flex items-center">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-slate-900 to-purple-900/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-green-900/30 via-slate-900 to-teal-900/30"></div>
           <div className="absolute inset-0 opacity-30" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }}></div>
           
           {/* Animated Background Elements */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-green-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
             <div className="text-center">
               <div className="relative inline-block mb-6">
-                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
-                  Zion AI Content Generator Pro
+                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold bg-gradient-to-r from-green-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
+                  Zion AI Analytics Dashboard Pro
                 </h1>
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 rounded-lg blur opacity-30"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-green-600 via-teal-600 to-cyan-600 rounded-lg blur opacity-30"></div>
               </div>
               <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed px-4">
-                Create unlimited high-quality content with AI-powered intelligence. Generate blogs, social media posts, emails, and marketing copy in 50+ languages with advanced SEO optimization.
+                Transform your data into actionable insights with our AI-powered analytics platform. Real-time dashboards, predictive analytics, and custom reporting for data-driven decisions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 lg:mb-16 px-4">
-                <Link to="/contact?service=ai-content-generator"
-                  className="relative group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40"
+                <Link to="/contact?service=ai-analytics-dashboard"
+                  className="relative group bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:from-green-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base shadow-lg shadow-green-500/25 hover:shadow-green-500/40"
                 >
                   <span className="relative z-10 flex items-center">
                     Start Free Trial
                     <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-teal-600 rounded-lg blur opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                 </Link>
                 <Link to="#demo"
-                  className="border-2 border-blue-400 text-blue-300 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300 text-sm sm:text-base hover:shadow-lg hover:shadow-blue-400/25"
+                  className="border-2 border-green-400 text-green-300 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300 text-sm sm:text-base hover:shadow-lg hover:shadow-green-400/25"
                 >
                   View Demo
                 </Link>
@@ -239,19 +242,19 @@ const AIContentGeneratorPage: React.FC = () => {
               {/* Key Stats */}
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4">
                 <div className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm">
-                  <div className="text-2xl sm:text-3xl font-bold text-blue-400 mb-1">50+</div>
-                  <div className="text-gray-300 text-sm">Languages</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-1">100+</div>
+                  <div className="text-gray-300 text-sm">Integrations</div>
                 </div>
                 <div className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm">
-                  <div className="text-2xl sm:text-3xl font-bold text-purple-400 mb-1">500%</div>
-                  <div className="text-gray-300 text-sm">Faster Creation</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-teal-400 mb-1">Real-time</div>
+                  <div className="text-gray-300 text-sm">Data Updates</div>
                 </div>
                 <div className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm">
-                  <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-1">4.9/5</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-1">4.8/5</div>
                   <div className="text-gray-300 text-sm">User Rating</div>
                 </div>
                 <div className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm">
-                  <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-1">10K+</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-blue-400 mb-1">5K+</div>
                   <div className="text-gray-300 text-sm">Active Users</div>
                 </div>
               </div>
@@ -264,26 +267,26 @@ const AIContentGeneratorPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-                Powerful <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Features</span>
+                Powerful <span className="bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">Features</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
-                Everything you need to create, optimize, and manage content at scale with AI-powered intelligence.
+                Everything you need to transform your data into actionable insights with AI-powered intelligence.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index}
-                  className="group relative bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/20 overflow-hidden"
+                  className="group relative bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700 hover:border-green-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-green-500/20 overflow-hidden"
                   style={{
                     animationDelay: `${index * 100}ms`
                   }}
                 >
                   <div className="relative z-10">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
                       <feature.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-300 transition-colors">
                       {feature.title}
                     </h3>
                     <p className="text-gray-400 mb-4 group-hover:text-gray-300 transition-colors">
@@ -309,23 +312,23 @@ const AIContentGeneratorPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-                Perfect For <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Every Use Case</span>
+                Perfect For <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">Every Business</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
-                From blog writing to social media content, our AI adapts to your specific content needs.
+                From sales tracking to financial reporting, our AI analytics adapt to your specific business needs.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
                 <div key={index}
-                  className="group relative bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 overflow-hidden"
+                  className="group relative bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-teal-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-teal-500/20 overflow-hidden"
                 >
                   <div className="relative z-10">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                    <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
                       <useCase.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-teal-300 transition-colors">
                       {useCase.title}
                     </h3>
                     <p className="text-gray-400 mb-4 text-sm group-hover:text-gray-300 transition-colors">
@@ -334,7 +337,7 @@ const AIContentGeneratorPage: React.FC = () => {
                     <div className="space-y-1">
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex} className="flex items-center text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
-                          <ArrowRightIcon className="w-3 h-3 text-purple-400 mr-2 flex-shrink-0" />
+                          <ArrowRightIcon className="w-3 h-3 text-teal-400 mr-2 flex-shrink-0" />
                           <span>{benefit}</span>
                         </div>
                       ))}
@@ -354,7 +357,7 @@ const AIContentGeneratorPage: React.FC = () => {
                 Simple <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Pricing</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
-                Choose the perfect plan for your content creation needs. All plans include a 14-day free trial.
+                Choose the perfect plan for your analytics needs. All plans include a 14-day free trial.
               </p>
             </div>
             
@@ -363,12 +366,12 @@ const AIContentGeneratorPage: React.FC = () => {
                 <div key={index}
                   className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl overflow-hidden ${
                     plan.popular 
-                      ? 'border-purple-500 shadow-purple-500/20' 
-                      : 'border-slate-700 hover:border-blue-500 hover:shadow-blue-500/20'
+                      ? 'border-teal-500 shadow-teal-500/20' 
+                      : 'border-slate-700 hover:border-green-500 hover:shadow-green-500/20'
                   }`}
                 >
                   {plan.popular && (
-                    <div className="absolute top-0 right-0 bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-bl-lg text-sm font-semibold">
+                    <div className="absolute top-0 right-0 bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-4 py-1 rounded-bl-lg text-sm font-semibold">
                       Most Popular
                     </div>
                   )}
@@ -391,11 +394,11 @@ const AIContentGeneratorPage: React.FC = () => {
                     ))}
                   </div>
                   
-                  <Link to={plan.cta === 'Contact Sales' ? '/contact' : '/contact?service=ai-content-generator'}
+                  <Link to={plan.cta === 'Contact Sales' ? '/contact' : '/contact?service=ai-analytics-dashboard'}
                     className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white shadow-lg'
-                        : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white'
+                        ? 'bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white shadow-lg'
+                        : 'bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white'
                     }`}
                   >
                     {plan.cta}
@@ -414,7 +417,7 @@ const AIContentGeneratorPage: React.FC = () => {
                 What Our <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">Customers Say</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
-                Join thousands of satisfied customers who have transformed their content creation process.
+                Join thousands of satisfied customers who have transformed their data analysis process.
               </p>
             </div>
             
@@ -447,26 +450,26 @@ const AIContentGeneratorPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="relative py-16 sm:py-20 bg-gradient-to-r from-blue-900/40 via-slate-900 to-purple-900/40 overflow-hidden">
-          <div className="absolute top-10 left-10 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <section className="relative py-16 sm:py-20 bg-gradient-to-r from-green-900/40 via-slate-900 to-teal-900/40 overflow-hidden">
+          <div className="absolute top-10 left-10 w-64 h-64 bg-green-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
           
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Ready to Transform Your Content Creation?
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">
+              Ready to Transform Your Data Analysis?
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">
-              Start your free trial today and experience the power of AI-driven content creation. No credit card required.
+              Start your free trial today and experience the power of AI-driven analytics. No credit card required.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact?service=ai-content-generator"
-                className="relative group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base shadow-lg shadow-blue-500/25"
+              <Link to="/contact?service=ai-analytics-dashboard"
+                className="relative group bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:from-green-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base shadow-lg shadow-green-500/25"
               >
                 <span className="relative z-10 flex items-center">
                   Start Free Trial
                   <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-teal-600 rounded-lg blur opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </Link>
               <a href="tel:+13024640950"
                 className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base hover:shadow-lg hover:shadow-white/25"
@@ -486,4 +489,4 @@ const AIContentGeneratorPage: React.FC = () => {
   );
 };
 
-export default AIContentGeneratorPage;
+export default AIAnalyticsDashboardPage;

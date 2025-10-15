@@ -1,380 +1,655 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client';
+import React, { useState } from 'react';
+import SEOHead from '../components/SEOHead';
 import { Link } from 'react-router-dom';
+import { 
+  CheckCircleIcon, 
+  ArrowRightIcon,
+  StarIcon,
+  ClockIcon,
+  ShieldCheckIcon,
+  DocumentTextIcon,
+  ChartBarIcon,
+  ChatBubbleLeftRightIcon,
+  CurrencyDollarIcon,
+  CogIcon,
+  EyeIcon,
+  GlobeAltIcon,
+  UserGroupIcon,
+  AcademicCapIcon,
+  PhoneIcon,
+  EnvelopeIcon,
+  MapPinIcon,
+  SparklesIcon,
+  BoltIcon,
+  RocketLaunchIcon
+} from '@heroicons/react/24/outline';
 
 const PricingPage: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('micro-saas');
+
+  const microSaasServices = [
+    {
+      id: 'ai-content-generator',
+      name: 'AI Content Generator Pro',
+      description: 'AI-powered content creation for blogs, social media, and marketing',
+      icon: DocumentTextIcon,
+      gradient: 'from-blue-500 to-purple-500',
+      pricing: {
+        starter: 29,
+        pro: 79,
+        enterprise: 199
+      },
+      features: ['Unlimited content', '50+ languages', 'SEO optimization', 'Brand voice training'],
+      popular: true
+    },
+    {
+      id: 'ai-analytics-dashboard',
+      name: 'AI Analytics Dashboard Pro',
+      description: 'Business intelligence with AI-powered insights and real-time dashboards',
+      icon: ChartBarIcon,
+      gradient: 'from-green-500 to-teal-500',
+      pricing: {
+        starter: 49,
+        pro: 149,
+        enterprise: 399
+      },
+      features: ['Real-time dashboards', 'AI insights', 'Custom reports', '100+ integrations'],
+      popular: false
+    },
+    {
+      id: 'ai-task-manager',
+      name: 'AI Task Manager Pro',
+      description: 'Intelligent task management with AI prioritization and team collaboration',
+      icon: CogIcon,
+      gradient: 'from-orange-500 to-red-500',
+      pricing: {
+        starter: 19,
+        pro: 49,
+        enterprise: 129
+      },
+      features: ['AI prioritization', 'Team collaboration', 'Time tracking', 'Custom workflows'],
+      popular: false
+    },
+    {
+      id: 'ai-customer-support',
+      name: 'AI Customer Support Pro',
+      description: 'Advanced customer support automation with AI chatbots and ticket management',
+      icon: ChatBubbleLeftRightIcon,
+      gradient: 'from-purple-500 to-pink-500',
+      pricing: {
+        starter: 39,
+        pro: 99,
+        enterprise: 249
+      },
+      features: ['AI chatbots', 'Ticket management', 'Multi-channel', 'Sentiment analysis'],
+      popular: false
+    },
+    {
+      id: 'ai-inventory-manager',
+      name: 'AI Inventory Manager Pro',
+      description: 'Intelligent inventory management with demand forecasting and automation',
+      icon: CogIcon,
+      gradient: 'from-indigo-500 to-blue-500',
+      pricing: {
+        starter: 59,
+        pro: 149,
+        enterprise: 349
+      },
+      features: ['Demand forecasting', 'Auto reordering', 'Multi-location', 'Cost optimization'],
+      popular: false
+    },
+    {
+      id: 'ai-social-media-manager',
+      name: 'AI Social Media Manager Pro',
+      description: 'Comprehensive social media management with AI content creation and scheduling',
+      icon: GlobeAltIcon,
+      gradient: 'from-cyan-500 to-blue-500',
+      pricing: {
+        starter: 39,
+        pro: 89,
+        enterprise: 199
+      },
+      features: ['Multi-platform', 'AI content', 'Optimal timing', 'Engagement tracking'],
+      popular: false
+    },
+    {
+      id: 'ai-expense-tracker',
+      name: 'AI Expense Tracker Pro',
+      description: 'Smart expense management with AI categorization and automated reporting',
+      icon: CurrencyDollarIcon,
+      gradient: 'from-emerald-500 to-green-500',
+      pricing: {
+        starter: 15,
+        pro: 35,
+        enterprise: 79
+      },
+      features: ['Receipt scanning', 'AI categorization', 'Automated reporting', 'Tax preparation'],
+      popular: false
+    },
+    {
+      id: 'ai-code-assistant',
+      name: 'AI Code Assistant Pro',
+      description: 'Advanced AI-powered coding assistant with intelligent code completion and debugging',
+      icon: CogIcon,
+      gradient: 'from-violet-500 to-purple-500',
+      pricing: {
+        starter: 29,
+        pro: 69,
+        enterprise: 149
+      },
+      features: ['Code completion', 'Bug detection', 'Multi-language', 'IDE integration'],
+      popular: false
+    },
+    {
+      id: 'ai-translator',
+      name: 'AI Translator Pro',
+      description: 'Professional AI translation service with support for 100+ languages',
+      icon: GlobeAltIcon,
+      gradient: 'from-rose-500 to-pink-500',
+      pricing: {
+        starter: 25,
+        pro: 59,
+        enterprise: 129
+      },
+      features: ['100+ languages', 'Context-aware', 'Real-time', 'Document translation'],
+      popular: false
+    },
+    {
+      id: 'ai-video-generator',
+      name: 'AI Video Generator Pro',
+      description: 'Revolutionary AI video creation platform with advanced editing capabilities',
+      icon: EyeIcon,
+      gradient: 'from-amber-500 to-orange-500',
+      pricing: {
+        starter: 49,
+        pro: 119,
+        enterprise: 299
+      },
+      features: ['Text-to-video', 'AI voice', 'HD/4K output', 'Brand customization'],
+      popular: false
+    },
+    {
+      id: 'ai-legal-assistant',
+      name: 'AI Legal Assistant Pro',
+      description: 'Intelligent legal research and document analysis with compliance checking',
+      icon: ShieldCheckIcon,
+      gradient: 'from-slate-500 to-gray-500',
+      pricing: {
+        starter: 199,
+        pro: 499,
+        enterprise: 1299
+      },
+      features: ['Contract analysis', 'Legal research', 'Compliance checking', 'Risk assessment'],
+      popular: false
+    },
+    {
+      id: 'ai-medical-assistant',
+      name: 'AI Medical Assistant Pro',
+      description: 'Advanced medical AI platform for diagnosis support and patient management',
+      icon: UserGroupIcon,
+      gradient: 'from-red-500 to-pink-500',
+      pricing: {
+        starter: 299,
+        pro: 799,
+        enterprise: 1999
+      },
+      features: ['Symptom analysis', 'Diagnosis support', 'Patient management', 'HIPAA compliance'],
+      popular: false
+    }
+  ];
+
+  const aiServices = [
+    {
+      id: 'ai-development',
+      name: 'AI Development Services',
+      description: 'Custom AI solutions tailored to your business needs',
+      icon: CogIcon,
+      gradient: 'from-purple-500 to-pink-500',
+      pricing: {
+        basic: 5000,
+        pro: 15000,
+        enterprise: 50000
+      },
+      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Custom AI Solutions'],
+      popular: true
+    },
+    {
+      id: 'ai-chatbot-pro',
+      name: 'Zion AI Chatbot Pro',
+      description: 'Advanced conversational AI chatbot with natural language understanding',
+      icon: ChatBubbleLeftRightIcon,
+      gradient: 'from-blue-500 to-cyan-500',
+      pricing: {
+        basic: 199,
+        pro: 499,
+        enterprise: 1299
+      },
+      features: ['Natural Language Understanding', 'Multi-language Support', 'Voice Integration', 'Analytics Dashboard'],
+      popular: false
+    },
+    {
+      id: 'ai-document-analyzer',
+      name: 'Zion AI Document Analyzer Pro',
+      description: 'Intelligent document processing and analysis platform',
+      icon: DocumentTextIcon,
+      gradient: 'from-green-500 to-emerald-500',
+      pricing: {
+        basic: 299,
+        pro: 799,
+        enterprise: 1999
+      },
+      features: ['OCR Technology', 'NLP Processing', 'Data Extraction', 'Automated Analysis'],
+      popular: false
+    }
+  ];
+
+  const itSolutions = [
+    {
+      id: 'cloud-infrastructure',
+      name: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions and infrastructure management',
+      icon: GlobeAltIcon,
+      gradient: 'from-blue-500 to-cyan-500',
+      pricing: {
+        basic: 2000,
+        pro: 8000,
+        enterprise: 25000
+      },
+      features: ['Cloud Migration', 'Infrastructure Management', 'Security Implementation', '24/7 Monitoring'],
+      popular: true
+    },
+    {
+      id: 'web-development',
+      name: 'Web Development',
+      description: 'Custom web applications and e-commerce solutions',
+      icon: CogIcon,
+      gradient: 'from-purple-500 to-pink-500',
+      pricing: {
+        basic: 3000,
+        pro: 12000,
+        enterprise: 35000
+      },
+      features: ['Custom Development', 'E-commerce Solutions', 'Mobile Responsive', 'SEO Optimization'],
+      popular: false
+    },
+    {
+      id: 'mobile-development',
+      name: 'Mobile App Development',
+      description: 'Native and cross-platform mobile applications',
+      icon: EyeIcon,
+      gradient: 'from-indigo-500 to-purple-500',
+      pricing: {
+        basic: 5000,
+        pro: 15000,
+        enterprise: 40000
+      },
+      features: ['Native Development', 'Cross-platform', 'App Store Optimization', 'Push Notifications'],
+      popular: false
+    }
+  ];
+
+  const tabs = [
+    { id: 'micro-saas', name: 'Micro SaaS Solutions', count: microSaasServices.length },
+    { id: 'ai-services', name: 'AI Services', count: aiServices.length },
+    { id: 'it-solutions', name: 'IT Solutions', count: itSolutions.length }
+  ];
+
+  const getCurrentServices = () => {
+    switch (activeTab) {
+      case 'micro-saas':
+        return microSaasServices;
+      case 'ai-services':
+        return aiServices;
+      case 'it-solutions':
+        return itSolutions;
+      default:
+        return microSaasServices;
+    }
+  };
+
+  const getPricingRange = (services: any[]) => {
+    const allPrices = services.flatMap(service => Object.values(service.pricing));
+    const min = Math.min(...allPrices);
+    const max = Math.max(...allPrices);
+    return { min, max };
+  };
+
+  const currentServices = getCurrentServices();
+  const pricingRange = getPricingRange(currentServices);
+
   return (
     <>
-      <Helmet>
-        <title>Pricing - Zion Tech Group | Transparent AI & IT Solutions Pricing</title>
-        <meta name="description" content="Transparent pricing for our AI and IT services. Choose the perfect plan for your business needs with flexible options and no hidden fees." />
-        <meta name="keywords" content="AI pricing, IT services pricing, cloud pricing, AI tools pricing, business solutions pricing" />
-        <link rel="canonical" href="https://ziontechgroup.com/pricing" />
-      </Helmet>
+      <SEOHead 
+        title="Pricing - Zion Tech Group AI & IT Solutions"
+        description="Transparent pricing for our AI services, IT solutions, and micro SaaS applications. Choose the perfect plan for your business needs with flexible pricing options."
+        keywords="pricing, AI services pricing, IT solutions pricing, micro saas pricing, business software pricing, technology services cost"
+        canonicalUrl="https://ziontechgroup.com/pricing"
+      />
       
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Transparent Pricing</h1>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-              Choose the perfect plan for your business needs. All plans include our core AI and IT services 
-              with no hidden fees or long-term contracts.
-            </p>
-          </div>
+      <div className="min-h-screen bg-slate-900 text-white">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden min-h-screen flex items-center">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-slate-900 to-cyan-900/30"></div>
+          <div className="absolute inset-0 opacity-30" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          }}></div>
           
-          {/* Main Pricing Plans */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Starter</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-2">$299<span className="text-lg text-gray-500">/month</span></div>
-              <p className="text-gray-600 mb-6">Perfect for small businesses getting started with AI</p>
-              <ul className="space-y-3 text-gray-600 mb-8">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Up to 3 AI tools
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Basic AI consultation
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Email support
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Monthly reports
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Basic analytics
-                </li>
-              </ul>
-              <Link to="/contact" className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors text-center block font-semibold">
-                Get Started
-              </Link>
+          {/* Animated Background Elements */}
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
+            <div className="text-center">
+              <div className="relative inline-block mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
+                  Simple, Transparent Pricing
+                </h1>
+                <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-lg blur opacity-30"></div>
+              </div>
+              <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed px-4">
+                Choose the perfect plan for your business needs. All plans include a 14-day free trial with no credit card required.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 lg:mb-16 px-4">
+                <Link to="/contact"
+                  className="relative group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"
+                >
+                  <span className="relative z-10 flex items-center">
+                    Get Started Today
+                    <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg blur opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                </Link>
+                <a href="tel:+13024640950"
+                  className="border-2 border-purple-400 text-purple-300 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 text-sm sm:text-base hover:shadow-lg hover:shadow-purple-400/25"
+                >
+                  Call +1 302 464 0950
+                </a>
+              </div>
+              
+              {/* Pricing Range */}
+              <div className="max-w-2xl mx-auto px-4">
+                <div className="bg-slate-800/50 rounded-lg p-6 backdrop-blur-sm">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-purple-400 mb-2">
+                      ${pricingRange.min.toLocaleString()} - ${pricingRange.max.toLocaleString()}
+                    </div>
+                    <div className="text-gray-300">
+                      Starting from ${pricingRange.min.toLocaleString()} per month
+                    </div>
+                    <div className="text-sm text-gray-400 mt-2">
+                      {currentServices.length} {activeTab === 'micro-saas' ? 'Micro SaaS Solutions' : activeTab === 'ai-services' ? 'AI Services' : 'IT Solutions'} available
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Tabs Section */}
+        <section className="py-8 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap justify-center gap-2">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    activeTab === tab.id
+                      ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg'
+                      : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'
+                  }`}
+                >
+                  {tab.name} ({tab.count})
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-16 sm:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+                {activeTab === 'micro-saas' ? 'Micro SaaS Solutions' : activeTab === 'ai-services' ? 'AI Services' : 'IT Solutions'}
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+                {activeTab === 'micro-saas' 
+                  ? 'Choose from our comprehensive collection of AI-powered micro SaaS solutions designed to solve specific business challenges.'
+                  : activeTab === 'ai-services'
+                  ? 'Advanced AI services and solutions to transform your business with cutting-edge artificial intelligence.'
+                  : 'Comprehensive IT solutions and services to build, secure, and optimize your technology infrastructure.'
+                }
+              </p>
             </div>
             
-            <div className="bg-white p-8 rounded-2xl shadow-xl border-2 border-blue-500 relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold">Most Popular</span>
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Professional</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-2">$799<span className="text-lg text-gray-500">/month</span></div>
-              <p className="text-gray-600 mb-6">Ideal for growing businesses with advanced AI needs</p>
-              <ul className="space-y-3 text-gray-600 mb-8">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Up to 10 AI tools
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Advanced AI solutions
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Priority support
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Weekly reports
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Custom integrations
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Advanced analytics
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  API access
-                </li>
-              </ul>
-              <Link to="/contact" className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors text-center block font-semibold">
-                Get Started
-              </Link>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+              {currentServices.map((service, index) => (
+                <div key={service.id}
+                  className={`group relative bg-slate-800/50 p-6 sm:p-8 rounded-xl border transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl overflow-hidden ${
+                    service.popular 
+                      ? 'border-purple-500 shadow-purple-500/20' 
+                      : 'border-slate-700 hover:border-purple-500 hover:shadow-purple-500/20'
+                  }`}
+                  style={{
+                    animationDelay: `${index * 100}ms`
+                  }}
+                >
+                  {service.popular && (
+                    <div className="absolute top-0 right-0 bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-bl-lg text-sm font-semibold">
+                      Most Popular
+                    </div>
+                  )}
+                  
+                  <div className="relative z-10">
+                    {/* Header */}
+                    <div className="flex items-center justify-between mb-4">
+                      <div className={`w-12 h-12 bg-gradient-to-r ${service.gradient} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg`}>
+                        <service.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="text-right">
+                        <div className="text-2xl font-bold text-purple-400 group-hover:text-purple-300 transition-colors">
+                          ${service.pricing.starter}
+                        </div>
+                        <div className="text-sm text-gray-400">starting from</div>
+                      </div>
+                    </div>
+                    
+                    {/* Title and Description */}
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                      {service.name}
+                    </h3>
+                    <p className="text-gray-400 mb-4 text-sm group-hover:text-gray-300 transition-colors">
+                      {service.description}
+                    </p>
+                    
+                    {/* Pricing Tiers */}
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-gray-300 mb-3 text-sm">Pricing Tiers:</h4>
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-400">Starter:</span>
+                          <span className="text-white font-semibold">${service.pricing.starter.toLocaleString()}/mo</span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-400">Professional:</span>
+                          <span className="text-white font-semibold">${service.pricing.pro.toLocaleString()}/mo</span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-400">Enterprise:</span>
+                          <span className="text-white font-semibold">${service.pricing.enterprise.toLocaleString()}/mo</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Key Features */}
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-gray-300 mb-3 text-sm">Key Features:</h4>
+                      <div className="space-y-2">
+                        {service.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-center text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                            <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                            <span>{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {/* Action Buttons */}
+                    <div className="space-y-2">
+                      <Link to={`/contact?service=${service.id}`}
+                        className="block w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+                      >
+                        Get Started
+                      </Link>
+                      <Link to={`/${service.id}`}
+                        className="block w-full border border-purple-400 text-purple-300 text-center py-2 rounded-lg font-medium hover:bg-purple-400 hover:text-white transition-all duration-300 text-sm"
+                      >
+                        Learn More
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Enterprise Section */}
+        <section className="py-16 sm:py-20 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+                Need a <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Custom Solution</span>?
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+                We offer custom enterprise solutions tailored to your specific business requirements and scale.
+              </p>
             </div>
             
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Enterprise</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-2">Custom<span className="text-lg text-gray-500">/month</span></div>
-              <p className="text-gray-600 mb-6">Tailored solutions for large organizations</p>
-              <ul className="space-y-3 text-gray-600 mb-8">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Unlimited AI tools
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Full AI transformation
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  24/7 support
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Real-time monitoring
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Dedicated team
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  White-label solutions
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  SLA guarantee
-                </li>
-              </ul>
-              <Link to="/contact" className="w-full bg-gray-900 text-white py-3 rounded-lg hover:bg-gray-800 transition-colors text-center block font-semibold">
-                Contact Sales
-              </Link>
-            </div>
-          </div>
-
-          {/* AI Services Pricing */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">AI Services Pricing</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Chatbot Builder Pro</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$199<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Advanced conversational AI with natural language understanding</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Document Analyzer Pro</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$149<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Intelligent document processing and analysis</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Sales Predictor Pro</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$299<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Advanced sales forecasting and lead scoring</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Financial Forecaster Pro</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$399<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Comprehensive financial forecasting and risk assessment</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Customer Sentiment Tracker</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$199<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Real-time customer sentiment analysis</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Meeting Transcriber Pro</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$99<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Advanced meeting transcription and analysis</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Customer Churn Predictor</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$249<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Predict and prevent customer churn</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Content Moderator Pro</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$199<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Automated content moderation with AI</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Task Scheduler Pro</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$79<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Intelligent task scheduling and optimization</p>
+            <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-4">Enterprise Solutions</h3>
+                  <p className="text-gray-300 mb-6">
+                    For large organizations with complex requirements, we offer custom enterprise solutions with:
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-center text-gray-300">
+                      <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span>Custom development and integration</span>
+                    </div>
+                    <div className="flex items-center text-gray-300">
+                      <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span>Dedicated support and SLA</span>
+                    </div>
+                    <div className="flex items-center text-gray-300">
+                      <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span>White-label and on-premise options</span>
+                    </div>
+                    <div className="flex items-center text-gray-300">
+                      <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span>Advanced security and compliance</span>
+                    </div>
+                    <div className="flex items-center text-gray-300">
+                      <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span>Custom training and onboarding</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg p-8 mb-6">
+                    <h4 className="text-2xl font-bold text-white mb-2">Contact Sales</h4>
+                    <p className="text-purple-100 mb-4">Get a custom quote for your enterprise needs</p>
+                    <div className="text-3xl font-bold text-white mb-2">Custom Pricing</div>
+                    <div className="text-purple-100">Based on your requirements</div>
+                  </div>
+                  <Link to="/contact"
+                    className="block w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+                  >
+                    Contact Sales Team
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
+        </section>
 
-          {/* Micro SaaS Pricing */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Micro SaaS Solutions Pricing</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Task Manager Pro</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$29<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">AI-powered task management and team collaboration</p>
+        {/* FAQ Section */}
+        <section className="py-16 sm:py-20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+                Frequently Asked <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Questions</span>
+              </h2>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+                <h3 className="text-lg font-semibold text-white mb-2">Do you offer free trials?</h3>
+                <p className="text-gray-300">Yes! All our micro SaaS solutions and AI services come with a 14-day free trial. No credit card required to get started.</p>
               </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Smart Expense Tracker Pro</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$19<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">AI-powered expense tracking and financial management</p>
+              
+              <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+                <h3 className="text-lg font-semibold text-white mb-2">Can I change my plan later?</h3>
+                <p className="text-gray-300">Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing differences.</p>
               </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Lead Generator Pro</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$99<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">AI-powered lead generation and qualification</p>
+              
+              <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+                <h3 className="text-lg font-semibold text-white mb-2">What payment methods do you accept?</h3>
+                <p className="text-gray-300">We accept all major credit cards, PayPal, and bank transfers. Enterprise customers can also pay via invoice.</p>
               </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Time Tracker Pro</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$39<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Comprehensive time tracking and productivity analytics</p>
+              
+              <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+                <h3 className="text-lg font-semibold text-white mb-2">Is there a setup fee?</h3>
+                <p className="text-gray-300">No setup fees for any of our services. You only pay the monthly or annual subscription fee.</p>
               </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Invoice Generator Pro</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$29<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Professional invoice generation and management</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">CRM Pro</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$49<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">AI-powered customer relationship management</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Analytics Dashboard Pro</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$79<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Comprehensive business analytics and reporting</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Form Builder Pro</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$39<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Advanced form builder with AI optimization</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Survey Builder Pro</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$49<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Professional survey creation and analysis</p>
+              
+              <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+                <h3 className="text-lg font-semibold text-white mb-2">Do you offer discounts for annual billing?</h3>
+                <p className="text-gray-300">Yes! Save up to 20% when you choose annual billing instead of monthly billing.</p>
               </div>
             </div>
           </div>
+        </section>
 
-          {/* IT Solutions Pricing */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">IT Solutions Pricing</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Cloud Infrastructure</h3>
-                <div className="text-2xl font-bold text-purple-600 mb-2">$1,000<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Scalable cloud solutions and infrastructure management</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">DevOps Automation</h3>
-                <div className="text-2xl font-bold text-purple-600 mb-2">$2,000<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Comprehensive DevOps solutions with CI/CD pipelines</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">API Development</h3>
-                <div className="text-2xl font-bold text-purple-600 mb-2">$3,000<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Comprehensive API development and integration services</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Data Engineering</h3>
-                <div className="text-2xl font-bold text-purple-600 mb-2">$4,000<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Comprehensive data engineering and ETL solutions</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Blockchain Solutions</h3>
-                <div className="text-2xl font-bold text-purple-600 mb-2">$8,000<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Comprehensive blockchain and Web3 development</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">IoT Solutions</h3>
-                <div className="text-2xl font-bold text-purple-600 mb-2">$5,000<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Comprehensive IoT and edge computing solutions</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Security Audit</h3>
-                <div className="text-2xl font-bold text-purple-600 mb-2">$3,000<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Comprehensive security assessment and penetration testing</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Web Development</h3>
-                <div className="text-2xl font-bold text-purple-600 mb-2">$3,000<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Modern web development with responsive design</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Mobile Development</h3>
-                <div className="text-2xl font-bold text-purple-600 mb-2">$5,000<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Native and cross-platform mobile app development</p>
-              </div>
-            </div>
-          </div>
-
-          {/* FAQ Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Frequently Asked Questions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Can I change my plan anytime?</h3>
-                <p className="text-gray-600">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Is there a free trial?</h3>
-                <p className="text-gray-600">Yes, we offer a 14-day free trial for all our plans with no credit card required.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">What payment methods do you accept?</h3>
-                <p className="text-gray-600">We accept all major credit cards, PayPal, and bank transfers for enterprise plans.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Do you offer custom pricing?</h3>
-                <p className="text-gray-600">Yes, we offer custom pricing for enterprise clients with specific requirements.</p>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-            <p className="text-xl mb-8 opacity-90">
-              Choose the perfect plan for your business and start transforming with AI today.
+        {/* CTA Section */}
+        <section className="relative py-16 sm:py-20 bg-gradient-to-r from-purple-900/40 via-slate-900 to-cyan-900/40 overflow-hidden">
+          <div className="absolute top-10 left-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              Ready to Get Started?
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">
+              Choose your perfect plan and start your free trial today. No credit card required.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Start Free Trial
+              <Link to="/contact"
+                className="relative group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base shadow-lg shadow-purple-500/25"
+              >
+                <span className="relative z-10 flex items-center">
+                  Start Free Trial
+                  <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg blur opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </Link>
-              <Link to="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Contact Sales
-              </Link>
+              <a href="tel:+13024640950"
+                className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base hover:shadow-lg hover:shadow-white/25"
+              >
+                Call +1 302 464 0950
+              </a>
             </div>
-            <div className="mt-8 text-sm opacity-75">
-              <p>📞 <strong>Phone:</strong> +1 302 464 0950</p>
-              <p>✉️ <strong>Email:</strong> kleber@ziontechgroup.com</p>
-              <p>📍 <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
+            <div className="mt-8 text-sm text-gray-400">
+              <p>📞 <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">+1 (302) 464-0950</a></p>
+              <p>✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">kleber@ziontechgroup.com</a></p>
+              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </>
   );
