@@ -47,11 +47,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'About', href: '/about', icon: InformationCircleIcon },
     {
       name: 'AI Services',
-      href: '/ai-solutions',
+      href: '/ai-services',
       icon: CpuChipIcon,
       submenu: [
-        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
+        { name: 'AI Services Overview', href: '/ai-services', icon: CpuChipIcon },
+        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
         { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: ChatBubbleLeftRightIcon },
         { name: 'AI Document Processor', href: '/ai-document-processor', icon: DocumentTextIcon },
         { name: 'AI Form Builder', href: '/ai-form-builder', icon: DocumentTextIcon },
@@ -105,6 +105,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       icon: CogIcon,
       submenu: [
         { name: 'IT Solutions Overview', href: '/it-solutions', icon: CogIcon },
+        { name: 'IT Services', href: '/it-services', icon: CogIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
         { name: 'Web Development', href: '/web-development', icon: CodeBracketIcon },
         { name: 'Mobile App Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },

@@ -67,7 +67,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     {
       title: 'IT Solutions',
       items: [
+        { name: 'IT Solutions', href: '/it-solutions', icon: Settings },
         { name: 'IT Services', href: '/it-services', icon: Settings },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: Settings },
+        { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud },
         { name: 'Web Development', href: '/web-development', icon: Code },
         { name: 'Mobile Development', href: '/mobile-development', icon: Code },
@@ -87,6 +90,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       title: 'Micro SaaS',
       items: [
         { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: Settings },
+        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: Settings },
+        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: Settings },
+        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: Settings },
+        { name: 'Inventory Manager', href: '/inventory-manager', icon: Settings },
         { name: 'Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard', icon: Settings },
         { name: 'Smart CRM Automation', href: '/zion-smart-crm-automation', icon: Settings },
         { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager', icon: Settings },
