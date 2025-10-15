@@ -1,7 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function NotFoundPage() {
   return (
@@ -22,51 +21,24 @@ export default function NotFoundPage() {
           </div>
           
           <div className="space-y-4">
-            <Link 
-              href="/"
-              className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+            <Link
+              to="/"
+              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               Go Home
             </Link>
             
-            <div className="text-gray-400">
+            <div className="text-gray-400 text-sm">
               <p>Or try one of these popular pages:</p>
-              <div className="flex justify-center space-x-6 mt-4">
-                <Link href="/about" className="hover:text-white transition-colors">
-                  About
-                </Link>
-                <Link href="/services" className="hover:text-white transition-colors">
-                  Services
-                </Link>
-                <Link href="/contact" className="hover:text-white transition-colors">
-                  Contact
-                </Link>
+              <div className="mt-2 space-x-4">
+                <Link to="/about" className="hover:text-white transition-colors">About</Link>
+                <Link to="/services" className="hover:text-white transition-colors">Services</Link>
+                <Link to="/contact" className="hover:text-white transition-colors">Contact</Link>
               </div>
             </div>
           </div>
-=======
-import SEOHead from '../../components/SEOHead';
-
-const AppPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead
-        title="App - Zion Tech Group"
-        description="Professional app solutions for modern businesses"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">App</h1>
-          <p className="text-gray-300">Professional solutions coming soon...</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-7017
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
 }
-=======
-};
-
-export default AppPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-7017
