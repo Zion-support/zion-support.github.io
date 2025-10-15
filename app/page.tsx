@@ -341,23 +341,30 @@ const HomePage: React.FC = () => {
         <meta name="twitter:description" content="Leading provider of AI, IT, and 5G solutions. Transform your business with cutting-edge technology." />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden futuristic-bg">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse floating-element"></div>
+          <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000 floating-element"></div>
+          <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000 floating-element"></div>
         </div>
 
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="h-full w-full" style={{
-            backgroundImage: `
-              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px'
-          }}></div>
+        {/* Enhanced Grid Pattern */}
+        <div className="absolute inset-0 opacity-20 cyber-grid-enhanced"></div>
+
+        {/* Particle System */}
+        <div className="particles">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="particle"
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 10}s`,
+                animationDuration: `${10 + Math.random() * 10}s`
+              }}
+            ></div>
+          ))}
         </div>
 
         <main className="relative z-10">
@@ -370,11 +377,11 @@ const HomePage: React.FC = () => {
                   Trusted by 50,000+ Users Worldwide
                 </div>
                 <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
-                  <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  <span className="holographic-text">
                     Advanced AI & IT
                   </span>
                   <br />
-                  <span className="text-white">Solutions</span>
+                  <span className="text-white glitch" data-text="Solutions">Solutions</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
                   Transform your business with cutting-edge artificial intelligence, 
@@ -442,8 +449,8 @@ const HomePage: React.FC = () => {
                     key={index} 
                     className={`group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl ${
                       service.popular 
-                        ? 'border-purple-400/40 hover:border-purple-400/60 shadow-2xl shadow-purple-500/10' 
-                        : 'border-cyan-500/20 hover:border-cyan-400/40 hover:shadow-cyan-500/10'
+                        ? 'border-purple-400/40 hover:border-purple-400/60 shadow-2xl shadow-purple-500/10 neon-glow-purple' 
+                        : 'border-cyan-500/20 hover:border-cyan-400/40 hover:shadow-cyan-500/10 neon-glow'
                     }`}
                   >
                     {service.popular && (

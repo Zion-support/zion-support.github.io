@@ -300,7 +300,7 @@ const Header: React.FC = () => {
           : 'bg-transparent'
       }`}>
         {/* Top Contact Bar */}
-        <div className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-2 px-4">
+        <div className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-2 px-4 neon-glow">
           <div className="container mx-auto flex justify-between items-center text-sm">
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
@@ -322,7 +322,7 @@ const Header: React.FC = () => {
             </div>
             <div className="hidden md:flex items-center space-x-4">
               <span className="text-cyan-200">24/7 Support Available</span>
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse neon-glow"></div>
             </div>
           </div>
         </div>
@@ -333,11 +333,11 @@ const Header: React.FC = () => {
             <div className="flex justify-between items-center h-16">
               {/* Logo */}
               <Link to="/" className="flex items-center space-x-2 group">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 neon-glow">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                  <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors holographic-text">
                     Zion Tech Group
                   </span>
                   <span className="text-xs text-cyan-400 -mt-1">Advanced AI & IT Solutions</span>
@@ -398,14 +398,14 @@ const Header: React.FC = () => {
               <div className="hidden lg:flex items-center space-x-4">
                 <a
                   href="tel:+13024640950"
-                  className="flex items-center space-x-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
+                  className="flex items-center space-x-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25 neon-glow"
                 >
                   <Phone className="w-4 h-4" />
                   Call Now
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
-                  className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                  className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 neon-glow"
                 >
                   Get Quote
                 </a>
