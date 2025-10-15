@@ -66,27 +66,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       ]
     },
     {
-<<<<<<< HEAD
-      name: 'About',
-      path: '/about',
-      icon: <Globe className="w-4 h-4" />
-    },
-    {
-      name: 'Services',
-      path: '/services',
-      icon: <Zap className="w-4 h-4" />
-    },
-    {
-      name: 'AI Solutions',
-      path: '/ai-services',
-      icon: <Brain className="w-4 h-4" />
-    },
-    {
-      name: 'Contact',
-      path: '/contact',
-      icon: <Shield className="w-4 h-4" />
-    }
-=======
       name: 'Micro SaaS',";
       href: '/micro-saas-solutions',";
       icon: GlobeAltIcon,
@@ -142,7 +121,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },";
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }";
->>>>>>> main
   ];
 
   const toggleMobileMenu = useCallback(() => {
@@ -153,16 +131,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     return location.pathname === path,
   };
 
-<<<<<<< HEAD
-  return (
-    <nav className="bg-slate-900/90 backdrop-blur-sm border-b border-purple-500/20 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-white hover:text-purple-400 transition-colors">
-              Zion Tech Group
-=======
   const toggleServicesMenu = () => {
     setIsServicesOpen(!isServicesOpen);
     setIsSolutionsOpen(false);
@@ -322,7 +290,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             ))}
           </div>
         </div>
->>>>>>> main
       </div>
 
       {/* Mobile Navigation */}

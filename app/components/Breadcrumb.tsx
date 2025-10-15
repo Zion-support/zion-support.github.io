@@ -5,7 +5,6 @@
           </React.Fragment>
         )
       })};
->>>>>>> main
     </nav>
   )
 };

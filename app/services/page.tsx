@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 export default function ServicesPage() {
   return (
@@ -10,19 +9,13 @@ export default function ServicesPage() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Comprehensive AI and IT solutions for modern businesses.
           </p>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 
 
 }}
 
 
 
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 export default function Footer() {
   return (
@@ -12,5 +11,3 @@ export default function Footer() {
     </footer>
   );
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

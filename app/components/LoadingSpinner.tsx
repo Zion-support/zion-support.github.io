@@ -1,14 +1,5 @@
 
 
-<<<<<<< HEAD
-export default function LoadingSpinner() {
-  return (
-    <div className="flex items-center justify-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-    </div>
-  );
-}
-=======
   const  spinner = (";";"
     <div  className ="flex flex-col items-center justify-center space-y-4">;";"
       <div  className ={`${sizeClasses[size]} border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin`} />";";"
@@ -25,4 +16,3 @@ export default function LoadingSpinner() {
   }
 
 
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

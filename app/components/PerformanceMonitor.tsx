@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
-
-export default function PerformanceMonitor() {
-=======
 
 interface PerformanceMetrics {
   fcp: number | null
@@ -20,7 +15,6 @@ const PerformanceMonitor: React.FC = () => {
     cls: null,
     ttfb: null
   })
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
   useEffect(() => {
     // Performance monitoring logic
     const observer = new PerformanceObserver((list) => {
@@ -34,10 +28,6 @@ const PerformanceMonitor: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
-<<<<<<< HEAD
-  return null;
-}
-=======
   return (
     <div  className ="fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4 max-w-sm z-50">"
       <h3  className ="text-sm font-semibold text-gray-900 mb-2">Performance Monitor</h3>"
@@ -89,4 +79,3 @@ const PerformanceMonitor: React.FC = () => {
     </div>
 
 
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
