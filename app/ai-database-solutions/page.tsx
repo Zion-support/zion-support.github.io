@@ -1,8 +1,8 @@
-import React from 'react';
+import { ArrowRight, BarChart3, CheckCircle, Cloud, Cpu, Database, Shield, Users, Zap } from 'lucide-react';
+import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Database, Shield, Zap, Users, CheckCircle, ArrowRight, BarChart3, Cloud, Lock, Cpu } from 'lucide-react';
 
-const AIDatabaseSolutionsPage: React.FC = () => {
+const AiDatabaseSolutionsPage = () => {
   const features = [
     {
       icon: <Database className="w-8 h-8" />,
@@ -244,4 +244,4 @@ const AIDatabaseSolutionsPage: React.FC = () => {
   );
 };
 
-export default AIDatabaseSolutionsPage;
+export default AiDatabaseSolutionsPage;

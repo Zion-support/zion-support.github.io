@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import { 
   Phone, 
@@ -18,7 +18,9 @@ import {
   Code,
   Brain,
   Cloud,
-  Wifi
+  Wifi,
+  Database,
+  Network
 } from 'lucide-react';
 
 const Footer: React.FC = () => {

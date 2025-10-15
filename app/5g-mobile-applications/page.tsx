@@ -1,39 +1,25 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
-const Page5gMobileApplicationsPage: React.FC = () => {
-  const services = [
-    {
-      title: 'Expert 5g Mobile Applications Solutions',
-      description: 'Professional 5g mobile applications services tailored to your needs.'
-    },
-    {
-      title: 'Custom Implementation',
-      description: 'Tailored 5g mobile applications implementations for your specific requirements.'
-    },
-    {
-      title: '24/7 Support',
-      description: 'Round-the-clock support for all your 5g mobile applications needs.'
-    }
-  ];
+import { Helmet } from "react-helmet-async";
 
-const FiveGMobileApplications: React.FC = () => {
+const FiveGMobileApplicationsPage = () => {
   return (
     <>
-      <div>
       <Helmet>
-        <title>5g Mobile Applications - Zion Tech Group</title>
-        <meta name="description" content="Professional 5g mobile applications solutions and services" />
+        <title>5G Mobile Applications - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Professional 5G mobile applications solutions and services"
+        />
         <meta name="keywords" content="5g, mobile, applications" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">5g mobile applications</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              5G Mobile Applications
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Professional 5g mobile applications solutions and services
+              Professional 5G mobile applications solutions and services
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
@@ -62,8 +48,11 @@ const FiveGMobileApplications: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
       </div>
-</>
+    </>
   );
 };
+
 export default FiveGMobileApplicationsPage;
+

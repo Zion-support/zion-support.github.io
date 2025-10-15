@@ -1,283 +1,146 @@
-import React from 'react';
+import { Activity, AlertTriangle, ArrowRight, BarChart3, CheckCircle, Database, Zap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Activity, 
-  BarChart3, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Brain,
-  Target,
-  Users,
-  Award,
-  Globe,
-  Smartphone,
-  Database,
-  Cloud,
-  Settings,
-  AlertTriangle,
-  TrendingUp
-} from 'lucide-react';
 
 const PerformanceMonitoringPage: React.FC = () => {
   const features = [
     {
-      icon: <Activity className="w-6 h-6" />,
-      title: "Real-Time Monitoring",
-      description: "Monitor your applications and infrastructure in real-time with instant alerts and notifications."
+      icon: <Activity className="w-8 h-8" />,
+      title: "Real-time Monitoring",
+      description: "24/7 monitoring of your applications and infrastructure with instant alerts.",
+      features: ["Live Dashboards", "Custom Metrics", "Alert Management", "Performance Tracking"]
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Performance Analytics",
-      description: "Comprehensive performance analytics with detailed insights and trend analysis."
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Analytics & Reporting",
+      description: "Comprehensive analytics and detailed reports on system performance.",
+      features: ["Performance Reports", "Trend Analysis", "Capacity Planning", "ROI Metrics"]
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Automated Alerts",
-      description: "Intelligent alerting system that notifies you of performance issues before they impact users."
+      icon: <AlertTriangle className="w-8 h-8" />,
+      title: "Proactive Alerts",
+      description: "Smart alerting system that prevents issues before they impact users.",
+      features: ["Threshold Alerts", "Predictive Analysis", "Escalation Rules", "Notification Channels"]
     },
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Insights",
-      description: "Machine learning algorithms analyze performance data to provide predictive insights."
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
+      icon: <Zap className="w-8 h-8" />,
       title: "Performance Optimization",
-      description: "Automated recommendations for improving application and infrastructure performance."
-    },
-    {
-      icon: <Settings className="w-6 h-6" />,
-      title: "Custom Dashboards",
-      description: "Create custom dashboards to monitor the metrics that matter most to your business."
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Basic",
-      price: "$149",
-      period: "per month",
-      description: "Perfect for small applications with basic monitoring needs",
-      features: [
-        "Up to 10 applications",
-        "Basic monitoring",
-        "Standard alerts",
-        "Email support",
-        "Basic dashboards",
-        "7-day data retention"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$299",
-      period: "per month",
-      description: "Ideal for growing businesses with complex monitoring requirements",
-      features: [
-        "Up to 50 applications",
-        "Advanced monitoring",
-        "Intelligent alerts",
-        "Priority support",
-        "Custom dashboards",
-        "30-day data retention",
-        "Performance optimization",
-        "API access",
-        "Team collaboration"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$599",
-      period: "per month",
-      description: "Complete solution for large organizations",
-      features: [
-        "Unlimited applications",
-        "Premium monitoring",
-        "AI-powered insights",
-        "24/7 dedicated support",
-        "White-label dashboards",
-        "Unlimited data retention",
-        "Custom integrations",
-        "On-premise deployment",
-        "SLA guarantee"
-      ],
-      popular: false
+      description: "Continuous optimization recommendations to improve system performance.",
+      features: ["Bottleneck Detection", "Resource Optimization", "Code Profiling", "Database Tuning"]
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Performance Monitoring | Zion Tech Group - Advanced Application Monitoring</title>
-        <meta name="description" content="Monitor and optimize your applications with our advanced performance monitoring platform. Real-time monitoring, analytics, and AI-powered insights starting at $149/month." />
-        <meta name="keywords" content="performance monitoring, application monitoring, infrastructure monitoring, performance analytics, monitoring dashboards" />
+        <title>Performance Monitoring - Zion Tech Group</title>
+        <meta name="description" content="Advanced performance monitoring solutions with real-time analytics, proactive alerts, and optimization recommendations for your applications." />
+        <meta name="keywords" content="performance monitoring, application monitoring, system monitoring, performance analytics, alerting" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20">
+        <section className="relative py-20 overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
+                <Activity className="w-4 h-4 mr-2" />
                 Performance Monitoring
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  Performance Monitoring
+                </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Monitor and optimize your applications with our advanced performance monitoring platform. 
-                Real-time monitoring, analytics, and AI-powered insights for peak performance.
+                Advanced monitoring solutions that provide real-time insights into your application 
+                performance, helping you maintain optimal system health and user experience.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact" className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                  Start Free Trial
-                </Link>
-                <Link to="/services" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                  View All Services
-                </Link>
+                <a
+                  href="tel:+13024640950"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
+                >
+                  <Activity className="w-5 h-5 mr-2" />
+                  Start Monitoring
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+                >
+                  <ArrowRight className="w-5 h-5 mr-2" />
+                  Learn More
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20 bg-white">
+        {/* Services Section */}
+        <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Advanced Monitoring Features
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our performance monitoring platform provides comprehensive insights into your applications and infrastructure.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-green-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Flexible Monitoring Plans
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Choose the monitoring solution that fits your application needs and budget.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-white rounded-2xl shadow-xl p-8 relative border-2 ${plan.popular ? 'border-green-500 scale-105' : 'border-gray-200'}`}>
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                    <p className="text-gray-600 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                      <span className="text-gray-600 ml-2">{plan.period}</span>
-                    </div>
-                  </div>
-
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Link 
-                    to="/contact" 
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular 
-                        ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700' 
-                        : 'bg-gray-900 text-white hover:bg-gray-800'
-                    }`}
-                  >
-                    Get Started
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-20 bg-gray-900">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Monitor Your Performance?
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Monitoring Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of businesses already using our performance monitoring platform to optimize their applications.
+                Comprehensive monitoring solutions that give you complete visibility 
+                into your application and infrastructure performance.
               </p>
             </div>
-
-            <div className="max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-3 gap-8 text-center">
-                <div className="flex flex-col items-center group">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Phone className="w-8 h-8 text-white" />
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {features.map((feature, index) => (
+                <div 
+                  key={index} 
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                    <div className="text-white">{feature.icon}</div>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-                  <a href="tel:+13024640950" className="text-gray-300 hover:text-cyan-400 transition-colors text-lg">
-                    +1 302 464 0950
-                  </a>
-                  <p className="text-sm text-gray-400 mt-2">24/7 Support Available</p>
-                </div>
-
-                <div className="flex flex-col items-center group">
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Mail className="w-8 h-8 text-white" />
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {feature.description}
+                  </p>
+                  <div className="space-y-2">
+                    {feature.features.map((item, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {item}
+                      </div>
+                    ))}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-cyan-400 transition-colors text-lg">
-                    kleber@ziontechgroup.com
-                  </a>
-                  <p className="text-sm text-gray-400 mt-2">Response within 2 hours</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-                <div className="flex flex-col items-center group">
-                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <MapPin className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-                  <p className="text-gray-300 text-lg">364 E Main St STE 1008</p>
-                  <p className="text-gray-300 text-lg">Middletown DE 19709</p>
-                </div>
-              </div>
-
-              <div className="text-center mt-12">
-                <Link to="/contact" className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-block">
-                  Start Free Trial
-                </Link>
+        {/* CTA Section */}
+        <section className="py-20 bg-gray-900">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-4xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Monitor Your Performance?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact us today to set up comprehensive performance monitoring 
+                for your applications and infrastructure.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="tel:+13024640950"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Call +1 302 464 0950
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                >
+                  Get Quote
+                </a>
               </div>
             </div>
           </div>
