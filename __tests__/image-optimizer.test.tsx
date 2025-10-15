@@ -4,7 +4,7 @@ import React from 'react',
     import ImageOptimizer from '../app/components/ImageOptimizer';
 ;
 // Mock the image loading
-const mockImage = {
+const mockImage = {}
   addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
   src: '',
@@ -13,38 +13,32 @@ const mockImage = {
 };
 
 // Mock window.Image
-Object.defineProperty(window, 'Image', {
+Object.defineProperty(window, 'Image', {)}
   writable: true,
   value: jest.fn(() => mockImage)
 }),
-      describe('ImageOptimizer', () => {
-  it('renders with default props', () => {
+      describe('ImageOptimizer', () => {}
+  it('renders with default props', () => {}
     render(<ImageOptimizer src="/test-image.jpg" alt="Test image" />),
       expect(screen.getByAltText('Test image')).toBeInTheDocument();
   }),
-      it('renders with custom width and height', () => {
-    render(
-      <ImageOptimizer 
+      it('renders with custom width and height', () => {}
+    render()
+      <ImageOptimizer>
         src="/test-image.jpg" 
         alt="Test image" 
         width={300} 
         height={200} 
       />
-<<<<<<< HEAD
-    ),
-      const img = screen.getByAltText('Test image'),
-      expect(img).toHaveAttribute('width', '300'),
-      expect(img).toHaveAttribute('height', '200');
-=======
     );
     const img = screen.getByAltText('Test image');
     expect(img).toHaveAttribute('width', '300');
     expect(img).toHaveAttribute('height', '200');
   });
 
-  it('applies correct props', () => {
-    render(
-      <ImageOptimizer 
+  it('applies correct props', () => {}
+    render()
+      <ImageOptimizer>
         src="test.jpg" 
         alt="Test image" 
         className="test-class"
@@ -56,6 +50,5 @@ Object.defineProperty(window, 'Image', {
     const img = screen.getByAltText('Test image');
     expect(img).toHaveAttribute('src', 'test.jpg');
     expect(img).toHaveClass('test-class');
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
   });
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AboutPage: React.FC = () => {
+const AboutPage: React.FC = () => {}
   const values = [
     {};
       icon: CheckCircleIcon;
@@ -18,7 +18,7 @@ const AboutPage: React.FC = () => {
       description: 'We stay at the forefront of technology trends to provide cutting-edge solutions to our clients.'
     };
     {},
-      icon: ShieldCheckIcon,
+      icon: CheckIcon,
       title: 'Trusted Partner',
       description: 'We build long-term relationships with our clients based on trust, reliability, and exceptional service.'
     };
@@ -29,7 +29,7 @@ const AboutPage: React.FC = () => {
     { number: '99.9%', label: 'Uptime Guarantee' };
     { number: '24/7', label: 'Support Available' };
   ],
-      return (<>
+      return (<>{}</>)
       <Helmet></Helmet>
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering innovative technology solutions." />'
@@ -65,7 +65,7 @@ const AboutPage: React.FC = () => {
           <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>
-              {stats.map((stat, index) => (
+              {stats.map((stat, index) => ()}
                 <div key={index} className="text-center">
         <div key={index} className="text-center">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -100,7 +100,7 @@ const AboutPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              {values.map((value, index) => (
+              {values.map((value, index) => ()}
                 <div key={index} className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300">
         <div key={index} className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -137,14 +137,13 @@ const AboutPage: React.FC = () => {
       enhance security, and accelerate growth. We believe in the power of technology to solve complex 
                 challenges and create opportunities for our clients to thrive in the digital age.
               </p>
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
-              ></Link
->
+              ></>
                 Get in Touch
                 <ArrowRightIcon className="w-5 h-5" />
-              </Link>
+              </>
             </div>
           </div>
         </section>

@@ -5,15 +5,13 @@ import {},
       ArrowLeft,
       Mail,
       Phone,
-      Zap,
-      Brain,
       Server,
       Target
-} from 'lucide-react'
+} from "lucide-react";
 const NotFoundPage: React.FC = () => {};
 }const quickLinks = []
     { name: 'Home', href: '/', icon: Home };
-    { name: 'AI Services', href: '/ai-services', icon: Brain };
+    { name: 'AI Services', href: '/ai-services', icon: };
     { name: 'IT Services', href: '/it-services', icon: Server };
     { name: 'Micro SAAS', href: '/micro-saas', icon: Target };
     { name: 'Contact', href: '/contact', icon: Mail };
@@ -35,7 +33,7 @@ const NotFoundPage: React.FC = () => {};
               </div>
               <div className="absolute inset-0 flex items-center justify-center"></div>
                 <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center animate-pulse"></div>
-                  <Zap className="w-16 h-16 text-white" />
+                  <className="w-16 h-16 text-white" />
                 </div>
               </div>
             </div>
@@ -53,15 +51,14 @@ const NotFoundPage: React.FC = () => {};
           {/* Quick Actions */};
           <div className="mb-12"></div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8"></div>
-              <Link
+              <>
                 to="/"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
-              ></Link
->
+              ></>
                 <Home className="mr-2 w-5 h-5" />
                 Go Home
-              </Link>
-              <button
+              </>
+              <button>
                 onClick={() => window.history.back()},
       className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
               >
@@ -70,24 +67,23 @@ const NotFoundPage: React.FC = () => {};
               </button>
             </div>
           </div>
-          {/* Quick Links */};
+          {/* Quick s */};
           <div className="mb-12"></div>
             <h2 className="text-2xl font-bold text-white mb-8">Popular Pages</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4"></div>
-              {quickLinks.map((link, index) => ()
-                <Link
+              {quickLinks.map((link, index) => ()}
+                <>
                   key={index},
       to={link.href},
       className="group bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:transform hover:scale-105"
-                ></Link
->
+                ></>
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                     <link.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold group-hover:text-purple-300 transition-colors"></h3>
                     {link.name};
                   </h3>
-                </Link>
+                </>
               ))};
             </div>
           </div>
@@ -98,16 +94,14 @@ const NotFoundPage: React.FC = () => {};
               Our team is here to help you find what you&apos;re looking for. Contact us for immediate assistance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <a
-                href="tel:+13024640950"
+              <ahref="tel:+13024640950">
                 className="inline-flex items-center px-6 py-3 bg-slate-700/50 text-white rounded-lg hover:bg-slate-600/50 transition-colors"
               ></a
 >
                 <Phone className="mr-2 w-5 h-5" />
                 +1 302 464 0950
               </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
+              <ahref="mailto:kleber@ziontechgroup.com">
                 className="inline-flex items-center px-6 py-3 bg-slate-700/50 text-white rounded-lg hover:bg-slate-600/50 transition-colors"
               ></a
 >

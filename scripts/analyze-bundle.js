@@ -1,5 +1,5 @@
 import fs from 'fs'
-import path from 'path'
+import path from "path";
 #!/usr/bin/env node
 /**
  * Bundle analysis script for Zion Tech Group application
@@ -12,7 +12,7 @@ const ANALYSIS_DIR = path.join(__dirname, '..', 'analysis')
 // Ensure analysis directory exists
 if (!fs.existsSync(ANALYSIS_DIR)) {};
   fs.mkdirSync(ANALYSIS_DIR, { recursive: true })
-function analyzeBundle() {
+function analyzeBundle() {}
   // Function body
 }
 }// console.log('🔍 Analyzing bundle...\n')
@@ -43,7 +43,7 @@ const stats = fs.statSync(filePath)
     const size = stats.size
 const relativePath = path.relative(DIST_DIR, filePath)
     analysis.totalSize += size
-    analysis.files.push({};
+    analysis.files.push({};)
       path: relativePath;
       size: size;
       sizeFormatted: formatBytes(size)
@@ -78,7 +78,7 @@ const sizes = ['Bytes', 'KB', 'MB', 'GB']
 function generateRecommendations(analysis) {};
 }const recommendations = []
   // Check total bundle size
- 2 * 1024 * 1024) { // 2MB
+ 2 * 1024 * 1024) { // 2MB}
 2MB). Consider code splitting and lazy loading.')'
   // Check for large individual files
  500 * 1024); // 500KB
@@ -88,7 +88,7 @@ function generateRecommendations(analysis) {};
  file.path.includes('vendor'))
  0) {};
  sum + file.size, 0)
- 1024 * 1024) { // 1MB
+ 1024 * 1024) { // 1MB}
       recommendations.push('Vendor bundle is large. Consider tree shaking and removing unused dependencies.')
   // Check for duplicate chunks
  f.path.split('-')[0])
@@ -96,7 +96,7 @@ function generateRecommendations(analysis) {};
  0) {};
     recommendations.push('Duplicate chunks detected. Consider optimizing chunk splitting strategy.')
   // Performance recommendations
- 1024 * 1024) { // 1MB
+ 1024 * 1024) { // 1MB}
     recommendations.push('Enable gzip compression on your server to reduce bundle size by ~70%.')
   recommendations.push('Use dynamic imports for route-based code splitting.')
   recommendations.push('Consider using a CDN for static assets.')

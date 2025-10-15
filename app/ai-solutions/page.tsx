@@ -1,9 +1,9 @@
 import React from 'react',
       import { Helmet } from 'react-helmet-async',
       import { TrendingUp } from "lucide-react",
-      const AiSolutionsPage: React.FC = () => {
+      const AiSolutionsPage: React.FC = () => {}
   const aiServices = [
-    {
+    {}
       id: 'ai-chatbot-enterprise',
       name: 'AI Chatbot Enterprise',
       price: '$299/mo',
@@ -33,7 +33,7 @@ import React from 'react',
       icon: <MessageSquare className="w-8 h-8 text-cyan-400" />,
       popular: true
     },
-    {
+    {}
       id: 'ai-computer-vision',
       name: 'AI Computer Vision',
       price: '$399/mo',
@@ -60,10 +60,10 @@ import React from 'react',
         'Scalable across industries'
       ],
       category: 'Computer Vision',
-      icon: <Eye className="w-8 h-8 text-green-400" />,
+      icon: <className="w-8 h-8 text-green-400" />,
       popular: false
     },
-    {
+    {}
       id: 'ai-content-generation-pro',
       name: 'AI Content Generation Pro',
       price: '$199/mo',
@@ -93,7 +93,7 @@ import React from 'react',
       icon: <FileText className="w-8 h-8 text-purple-400" />,
       popular: true
     },
-    {
+    {}
       id: 'ai-analytics-dashboard-pro',
       name: 'AI Analytics Dashboard Pro',
       price: '$349/mo',
@@ -120,10 +120,10 @@ import React from 'react',
         'Scale with business growth'
       ],
       category: 'Analytics',
-      icon: <BarChart3 className="w-8 h-8 text-blue-400" />,
+      icon: <className="w-8 h-8 text-blue-400" />,
       popular: false
     },
-    {
+    {}
       id: 'ai-automation-platform',
       name: 'AI Automation Platform',
       price: '$499/mo',
@@ -138,7 +138,7 @@ import React from 'react',
         'Email Automation',
         'Data Extraction & Processing',
         'API Integration',
-        'Performance Monitoring',
+        'Performance ing',
         'Error Handling & Recovery',
         'Scalable Infrastructure'
       ],
@@ -153,7 +153,7 @@ import React from 'react',
       icon: <Settings className="w-8 h-8 text-orange-400" />,
       popular: true
     },
-    {
+    {}
       id: 'ai-blockchain-solutions',
       name: 'AI Blockchain Solutions',
       price: '$599/mo',
@@ -187,25 +187,25 @@ import React from 'react',
 
   // const categories = ['All', 'Conversational AI', 'Computer Vision', 'Content Creation', 'Analytics', 'Automation', 'Blockchain'],
       const useCases = [
-    {
+    {}
       title: 'Customer Service',
       description: 'Automate customer support with intelligent chatbots',
       icon: <MessageSquare className="w-6 h-6 text-cyan-400" />,
       benefits: ['24/7 Support', 'Instant Responses', 'Cost Reduction', 'Customer Satisfaction']
     },
-    {
+    {}
       title: 'Content Marketing',
       description: 'Generate high-quality content at scale',
       icon: <FileText className="w-6 h-6 text-purple-400" />,
       benefits: ['Faster Creation', 'SEO Optimization', 'Brand Consistency', 'Scalable Output']
     },
-    {
+    {}
       title: 'Data Analysis',
       description: 'Extract insights from complex datasets',
-      icon: <BarChart3 className="w-6 h-6 text-blue-400" />,
+      icon: <className="w-6 h-6 text-blue-400" />,
       benefits: ['Predictive Insights', 'Real-time Analytics', 'Automated Reports', 'Better Decisions']
     },
-    {
+    {}
       title: 'Process Automation',
       description: 'Streamline business operations with AI',
       icon: <Settings className="w-6 h-6 text-orange-400" />,
@@ -213,7 +213,7 @@ import React from 'react',
     }
   ],
       const pricingTiers = [
-    {
+    {}
       name: 'Starter',
       price: '$199/mo',
       description: 'Perfect for small businesses',
@@ -226,7 +226,7 @@ import React from 'react',
       ],
       popular: false
     },
-    {
+    {}
       name: 'Professional',
       price: '$499/mo',
       description: 'Ideal for growing businesses',
@@ -240,7 +240,7 @@ import React from 'react',
       ],
       popular: true
     },
-    {
+    {}
       name: 'Enterprise',
       price: 'Custom',
       description: 'For large organizations',
@@ -255,8 +255,8 @@ import React from 'react',
       popular: false
     }
   ],
-      return (
-    <>
+      return ()
+    <>{}</>
       <Helmet>
         <title>AI Solutions - Advanced Artificial Intelligence Services | Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive AI solutions including chatbots, computer vision, content generation, analytics, and automation. Transform your business with cutting-edge AI technology." />
@@ -287,20 +287,20 @@ import React from 'react',
               and scale your business with our comprehensive AI solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-500/25 flex items-center group"
               >
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="#pricing"
                 className="border-2 border-white/30 hover:border-cyan-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center group"
               >
                 View Pricing
                 <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </>
             </div>
           </div>
         </div>
@@ -319,7 +319,7 @@ import React from 'react',
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map((useCase, index) => ()}
               <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
                 <div className="mb-4 group-hover:scale-110 transition-transform">
                   {useCase.icon}
@@ -331,7 +331,7 @@ import React from 'react',
                   {useCase.description}
                 </p>
                 <ul className="space-y-2">
-                  {useCase.benefits.map((benefit, benefitIndex) => (
+                  {useCase.benefits.map((benefit, benefitIndex) => ()}
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -357,11 +357,11 @@ import React from 'react',
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => (
-              <div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group relative ${
+            {aiServices.map((service, index) => ()}
+              <divkey={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group relative ${>}
                 service.popular ? 'ring-2 ring-cyan-500' : ''
               }`}>
-                {service.popular && (
+                {service.popular && ()}
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
@@ -389,13 +389,13 @@ import React from 'react',
                 </div>
 
                 <ul className="space-y-3 mb-8">
-                  {service.features.slice(0, 5).map((feature, featureIndex) => (
+                  {service.features.slice(0, 5).map((feature, featureIndex) => ()}
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
-                  {service.features.length > 5 && (
+                  {service.features.length > 5 && ()}
                     <li className="text-sm text-cyan-400 font-medium">
                       +{service.features.length - 5} more features
                     </li>
@@ -403,18 +403,18 @@ import React from 'react',
                 </ul>
 
                 <div className="space-y-4">
-                  <Link
+                  <>
                     to={`/${service.id}`}
                     className="block w-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                   >
                     Learn More
-                  </Link>
-                  <Link
+                  </>
+                  <>
                     to="/contact"
                     className="block w-full border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white text-center py-3 rounded-lg font-semibold transition-all duration-300"
                   >
                     Start Free Trial
-                  </Link>
+                  </>
                 </div>
               </div>
             ))}
@@ -435,11 +435,11 @@ import React from 'react',
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
-              <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+            {pricingTiers.map((tier, index) => ()}
+              <divkey={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${>}
                 tier.popular ? 'ring-2 ring-cyan-500 bg-slate-700/50' : ''
               }`}>
-                {tier.popular && (
+                {tier.popular && ()}
                   <div className="text-center mb-4">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
@@ -454,7 +454,7 @@ import React from 'react',
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
+                  {tier.features.map((feature, featureIndex) => ()}
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -462,16 +462,16 @@ import React from 'react',
                   ))}
                 </ul>
 
-                <Link
+                <>
                   to="/contact"
-                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
+                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${}
                     tier.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white'
                       : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
                   }`}
                 >
                   Get Started
-                </Link>
+                </>
               </div>
             ))}
           </div>
@@ -488,28 +488,12 @@ import React from 'react',
             Transform your business with our cutting-edge AI solutions. Start your free trial today and see the difference AI can make.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <>
               to="/contact"
               className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Start Free Trial
-            </Link>
-            <Link
+            </>
+            <>
               to="/demo"
-<<<<<<< HEAD
               className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-            >
-              Schedule Demo
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-    },
-    {
-
-export default AISolutionsPage;
-=======
-              className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

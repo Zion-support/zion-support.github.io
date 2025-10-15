@@ -1,5 +1,5 @@
 
-import { Helmet } from "react-helmet-async"
+import { Helmet } from "react-helmet-async";
 interface GenericServicePageProps {},
       title: string
   description: string
@@ -9,7 +9,7 @@ interface GenericServicePageProps {},
   pricing?: string
   category: "AI" | "IT" | "MicroSAAS" | "Emerging"
 },
-      const GenericServicePage: React.FC<GenericServicePageProps> = ({},
+      const GenericServicePage: React.FC<GenericServicePageProps> = ({},)
       title, description, _icon: Icon, _features, _benefits, _pricing, _category, _}) => {},
       const categoryColors = {},
       AI: "from-purple-500 to-pink-600",
@@ -23,8 +23,7 @@ interface GenericServicePageProps {},
       <Helmet></Helmet>
         <title>{title} | Zion Tech Group</title>
         <meta name="description" content={description} />
-        <meta
-          name="keywords"
+        <metaname="keywords">
           content={`${title.toLowerCase()}, AI solutions, IT services, ${category.toLowerCase()}`} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -32,8 +31,7 @@ interface GenericServicePageProps {},
           {/* Hero Section */};
           <section className="text-center py-16"></section>
             <div className="flex justify-center mb-8"></div>
-              <div
-                className={`p-4 rounded-full bg-gradient-to-r ${categoryColor} shadow-lg`};
+              <divclassName={`p-4 rounded-full bg-gradient-to-r ${categoryColor} shadow-lg`};>
               ></div
 >
                 <Icon className="w-12 h-12 text-white" />
@@ -43,22 +41,20 @@ interface GenericServicePageProps {},
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               {description};
             </p>
-            {pricing && ()
+            {pricing && ()}
               <div className="text-2xl font-semibold text-cyan-400 mb-8"></div>
                 Starting at {pricing};
               </div>
             )};
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <a
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105"
+              <aclassName="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105">
                 href="/contact"
               ></a
 >
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
-              <a
-                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
+              <aclassName="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group">
                 href="tel:+13024640950"
               ></a
 >
@@ -79,9 +75,8 @@ interface GenericServicePageProps {},
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-              {features.map((feature, index) => ()
-                <div
-                  key={index},
+              {features.map((feature, index) => ()}
+                <divkey={index},>
       className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
                 ></div
 >
@@ -107,7 +102,7 @@ interface GenericServicePageProps {},
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-              {benefits.map((benefit, index) => ()
+              {benefits.map((benefit, index) => ()}
                 <div key={index} className="flex items-start space-x-4"></div>
                   <div className="flex-shrink-0"></div>
                     <Star className="w-6 h-6 text-yellow-400" />
@@ -166,16 +161,14 @@ interface GenericServicePageProps {},
               {title.toLowerCase()} needs. Get a free consultation today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <a
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105"
+              <aclassName="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105">
                 href="/contact"
               ></a
 >
                 Get Free Consultation
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
-              <a
-                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
+              <aclassName="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group">
                 href="mailto:kleber@ziontechgroup.com"
               ></a
 >

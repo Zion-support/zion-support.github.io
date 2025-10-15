@@ -1,5 +1,5 @@
 
-import { cn } from '../lib/utils'
+import { cn } from "../lib/utils";
 interface ResponsiveGridProps {},
       children: React.ReactNode
   className?: string
@@ -12,7 +12,7 @@ interface ResponsiveGridProps {},
   },
       gap?: 'sm' | 'md' | 'lg' | 'xl'
 },
-      const ResponsiveGrid = (_{},
+      const ResponsiveGrid = (_{},)
       children, className, cols = { default: 1, _sm: 2, _md: 3, _lg: 4 }, gap = 'md'
 }: ResponsiveGridProps) => {},
       const gapClasses = {},

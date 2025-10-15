@@ -1,62 +1,25 @@
 
-<<<<<<< HEAD
-import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Video, Calculator, Package, Receipt, ClipboardList, Workflow} from "lucide-react",
-      import SEOOptimizer from "../components/SEOOptimizer";
-,
-      const MicroSaasPage: React.FC = () => {",
-        "
-  const microSaasServices = [",
-        "
-    {",
-        "
-      id: 'zion-analytics-pro',",
-        "
-      name: 'Zion Analytics Pro',",
-        "
-      description: 'Advanced business intelligence and analytics platform with real-time dashboards, predictive analytics, and automated reporting.',",
-        "
-      icon: BarChart3,",
-        "
-      features: [",
-        "
-        'Real-time data visualization',",
-        "
-        'Predictive analytics & forecasting',",
-        "
-        'Custom dashboard builder',",
-        "
-        'Automated report generation',",
-        "
-        'Multi-source data integration',",
-        "
-        'Advanced filtering & segmentation',",
-        "
-        'Export to multiple formats',",
-        "
-=======
-import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Video, Calculator, Package, Receipt, ClipboardList, Workflow} from "lucide-react";
 import SEOOptimizer from "../components/SEOOptimizer";
 ;
-const MicroSaasPage: React.FC = () => {";"
-  const microSaasServices = [";"
-    {";"
-      id: 'zion-analytics-pro',";"
-      name: 'Zion Analytics Pro',";"
-      description: 'Advanced business intelligence and analytics platform with real-time dashboards, predictive analytics, and automated reporting.',";"
-      icon: BarChart3,";"
-      features: [";"
-        'Real-time data visualization',";"
-        'Predictive analytics & forecasting',";"
-        'Custom dashboard builder',";"
-        'Automated report generation',";"
-        'Multi-source data integration',";"
-        'Advanced filtering & segmentation',";"
-        'Export to multiple formats',";"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+const MicroSaasPage: React.FC = () => {""}
+  const microSaasServices = [""
+    {""}
+      id: 'zion-analytics-pro',""
+      name: 'Zion Analytics Pro',""
+      description: 'Advanced business intelligence and analytics platform with real-time dashboards, predictive analytics, and automated reporting.',""
+      icon: ""
+      features: [""
+        'Real-time data visualization',""
+        'Predictive analytics & forecasting',""
+        'Custom dashboard builder',""
+        'Automated report generation',""
+        'Multi-source data integration',""
+        'Advanced filtering & segmentation',""
+        'Export to multiple formats',""
         'API access & webhooks';
       ],",
         "
-      pricing: {",
+      pricing: {"}
         "
         starter: { price: 29, period: 'month', features: ['Up to 5 dashboards', '10 data sources', 'Basic analytics'] },",
         "
@@ -81,15 +44,15 @@ const MicroSaasPage: React.FC = () => {";"
       link: 'https://ziontechgroup.com/zion-analytics-pro';
     },",
         "
-    {",
+    {"}
         "
       id: 'zion-security-shield',",
         "
-      name: 'Zion Security Shield',",
+      name: 'Zion Security ',",
         "
       description: 'Comprehensive cybersecurity monitoring and threat detection platform with automated incident response and compliance reporting.',",
         "
-      icon: Shield,",
+      icon: ",
         "
       features: [",
         "
@@ -110,7 +73,7 @@ const MicroSaasPage: React.FC = () => {";"
         'Custom security policies';
       ],",
         "
-      pricing: {",
+      pricing: {"}
         "
         starter: { price: 49, period: 'month', features: ['Basic threat monitoring', 'Email alerts', 'Monthly reports'] },",
         "
@@ -135,7 +98,7 @@ const MicroSaasPage: React.FC = () => {";"
       link: 'https://ziontechgroup.com/zion-security-shield';
     },",
         "
-    {",
+    {"}
         "
       id: 'zion-cloud-vault',",
         "
@@ -164,7 +127,7 @@ const MicroSaasPage: React.FC = () => {";"
         'Compliance features';
       ],",
         "
-      pricing: {",
+      pricing: {"}
         "
         starter: { price: 19, period: 'month', features: ['100GB storage', '5 users', 'Basic sharing'] },",
         "
@@ -189,7 +152,7 @@ const MicroSaasPage: React.FC = () => {";"
       link: 'https://ziontechgroup.com/zion-cloud-vault';
     },",
         "
-    {",
+    {"}
         "
       id: 'zion-ai-inventory-manager',",
         "
@@ -197,7 +160,7 @@ const MicroSaasPage: React.FC = () => {";"
         "
       description: 'Intelligent inventory management system with AI-powered demand forecasting, automated reordering, and real-time tracking.',",
         "
-      icon: Database,",
+      icon: ",
         "
       features: [",
         "
@@ -218,7 +181,7 @@ const MicroSaasPage: React.FC = () => {";"
         'Integration with e-commerce';
       ],",
         "
-      pricing: {",
+      pricing: {"}
         "
         starter: { price: 39, period: 'month', features: ['Up to 1,000 products', 'Basic forecasting', '1 location'] },",
         "
@@ -243,7 +206,7 @@ const MicroSaasPage: React.FC = () => {";"
       link: 'https://ziontechgroup.com/zion-ai-inventory-manager';
     },",
         "
-    {",
+    {"}
         "
       id: 'zion-hr-assistant-pro',",
         "
@@ -272,7 +235,7 @@ const MicroSaasPage: React.FC = () => {";"
         'Compliance management';
       ],",
         "
-      pricing: {",
+      pricing: {"}
         "
         starter: { price: 25, period: 'month', features: ['Up to 25 employees', 'Basic HR features', 'Email support'] },",
         "
@@ -297,7 +260,7 @@ const MicroSaasPage: React.FC = () => {";"
       link: 'https://ziontechgroup.com/zion-hr-assistant-pro';
     },",
         "
-    {",
+    {"}
         "
       id: 'zion-ai-accounting-suite',",
         "
@@ -326,7 +289,7 @@ const MicroSaasPage: React.FC = () => {";"
         'Integration with banks';
       ],",
         "
-      pricing: {",
+      pricing: {"}
         "
         starter: { price: 35, period: 'month', features: ['Basic bookkeeping', '5 bank accounts', 'Standard reports'] },",
         "
@@ -351,7 +314,7 @@ const MicroSaasPage: React.FC = () => {";"
       link: 'https://ziontechgroup.com/zion-ai-accounting-suite';
     },",
         "
-    {",
+    {"}
         "
       id: 'zion-ecommerce-optimizer',",
         "
@@ -380,7 +343,7 @@ const MicroSaasPage: React.FC = () => {";"
         'Multi-platform integration';
       ],",
         "
-      pricing: {",
+      pricing: {"}
         "
         starter: { price: 49, period: 'month', features: ['Basic optimization', 'Up to 1,000 products', 'Standard analytics'] },",
         "
@@ -405,7 +368,7 @@ const MicroSaasPage: React.FC = () => {";"
       link: 'https://ziontechgroup.com/zion-ecommerce-optimizer';
     },",
         "
-    {",
+    {"}
         "
       id: 'zion-ai-chatbot-builder',",
         "
@@ -434,7 +397,7 @@ const MicroSaasPage: React.FC = () => {";"
         'API access';
       ],",
         "
-      pricing: {",
+      pricing: {"}
         "
         starter: { price: 29, period: 'month', features: ['1 chatbot', '1,000 conversations', 'Basic features'] },",
         "
@@ -459,7 +422,7 @@ const MicroSaasPage: React.FC = () => {";"
       link: 'https://ziontechgroup.com/zion-ai-chatbot-builder';
     },",
         "
-    {",
+    {"}
         "
       id: 'zion-ai-workflow-automation',",
         "
@@ -488,7 +451,7 @@ const MicroSaasPage: React.FC = () => {";"
         'Advanced analytics';
       ],",
         "
-      pricing: {",
+      pricing: {"}
         "
         starter: { price: 39, period: 'month', features: ['10 workflows', '1,000 executions', 'Basic integrations'] },",
         "
@@ -513,7 +476,7 @@ const MicroSaasPage: React.FC = () => {";"
       link: 'https://ziontechgroup.com/zion-ai-workflow-automation';
     },",
         "
-    {",
+    {"}
         "
       id: 'zion-ai-seo-optimizer',",
         "
@@ -542,7 +505,7 @@ const MicroSaasPage: React.FC = () => {";"
         'Automated reporting';
       ],",
         "
-      pricing: {",
+      pricing: {"}
         "
         starter: { price: 45, period: 'month', features: ['1 website', 'Basic SEO tools', 'Monthly reports'] },",
         "
@@ -560,20 +523,10 @@ const MicroSaasPage: React.FC = () => {";"
         'Save SEO management time',",
         "
         'Get actionable insights';
-<<<<<<< HEAD
-      ],",
-        "
-      useCases: ['Website optimization', 'Content marketing', 'Local business SEO', 'E-commerce SEO'],",
-        "
-      link: 'https://ziontechgroup.com/zion-ai-seo-optimizer'
-    },
-    {
-=======
-      ],";"
-      useCases: ['Website optimization', 'Content marketing', 'Local business SEO', 'E-commerce SEO'],";"
+      ],""
+      useCases: ['Website optimization', 'Content marketing', 'Local business SEO', 'E-commerce SEO'],""
       link: 'https://ziontechgroup.com/zion-ai-seo-optimizer';
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
   ];
 ,
       const stats = [",
@@ -586,72 +539,64 @@ const MicroSaasPage: React.FC = () => {";"
         "
     { number: '30-day', label: 'Free Trial' };
   ];
-<<<<<<< HEAD
-,
-      const testimonials = [",
-        "
-=======
 ;
-  const testimonials = [";"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-    {";"
-      name: "Sarah Johnson",";"
-      company: "TechStart Inc.",";"
-      role: "CEO",";"
+  const testimonials = [""
+    {""}
+      name: "Sarah Johnson",""
+      company: "TechStart Inc.",""
+      role: "CEO",""
       content: "Zion Analytics Pro transformed our data insights. We increased revenue by 30% in just 2 months with their predictive analytics.",",
         "
       rating: 5,",
         "
-      avatar: "SJ",
-      },",
+      avatar: "SJ"},",
         "
-    {",
+    {"}
         "
-      name: "Michael Chen",";"
-      company: "E-commerce Solutions",";"
-      role: "CTO",";"
+      name: "Michael Chen",""
+      company: "E-commerce Solutions",""
+      role: "CTO",""
       content: "The micro SAAS solutions are incredibly powerful and easy to implement. We've saved thousands of hours with their automation tools.",",
         "
       rating: 5,",
         "
-      avatar: "MC",
-      },",
+      avatar: "MC"},",
         "
-    {",
+    {"}
         "
-      name: "Emily Rodriguez",";"
-      company: "Digital Marketing Agency",";"
-      role: "Operations Director",";"
-      content: "Zion Security Shield gives us peace of mind. Our security incidents dropped by 95% since implementation.",",
+      name: "Emily Rodriguez",""
+      company: "Digital Marketing Agency",""
+      role: "Operations Director",""
+      content: "Zion Security gives us peace of mind. Our security incidents dropped by 95% since implementation.",",
         "
       rating: 5,",
         "
       avatar: "ER"
     },
-    {
+    {}
   ];
 ,
-      return (",
+      return (",)
         "
-    <>",
+    <>{"}</>
         "
-      <SEOHead";"
+      <SEOHead"">
         title="Micro SAAS Solutions - Zion Tech Group",
       description="Discover our comprehensive suite of micro SAAS solutions designed to streamline your business operations. From AI-powered analytics to automated workflows, we have the tools you need to succeed.",
-      keywords="micro saas, business software, automation tools, AI solutions, productivity software, business intelligence" />";"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">";"
+      keywords="micro saas, business software, automation tools, AI solutions, productivity software, business intelligence" />""
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">""
         {/* Animated Background */};
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>";"
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>";"
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>""
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>""
         {/* Hero Section */};
-        <section className="relative py-20 lg:py-32">";"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";"
-            <div className="text-center">";"
+        <section className="relative py-20 lg:py-32">""
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+            <div className="text-center">""
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent leading-tight">",
         "
                 Micro SAAS Solutions",
         "
-              </h1>";"
+              </h1>""
               <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed px-4">",
         "
                 Powerful, affordable micro SAAS tools designed to streamline your business operations and drive growth.",
@@ -663,9 +608,9 @@ const MicroSaasPage: React.FC = () => {";"
               {/* Stats */};
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4 mb-12">",
         "
-                {stats.map((stat, index) => (",
+                {stats.map((stat, index) => (",)}
         "
-                  <div key={index} className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm">";"
+                  <div key={index} className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm">""
                     <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-cyan-400 mb-1 lg:mb-2">",
         "
                       {stat.number};
@@ -685,22 +630,22 @@ const MicroSaasPage: React.FC = () => {";"
         "
           </div>",
         "
-        </section>";"
+        </section>""
         {/* Services Grid */};
-        <section className="py-16 sm:py-20 relative z-10">";"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";"
+        <section className="py-16 sm:py-20 relative z-10">""
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">",
         "
-              {microSaasServices.map((service, index) => (",
+              {microSaasServices.map((service, index) => (",)}
         "
-                <div key={service.id} className="group bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10">";"
-                  <div className="flex items-start space-x-4 mb-6">";"
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">";"
+                <div key={service.id} className="group bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10">""
+                  <div className="flex items-start space-x-4 mb-6">""
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">""
                       <service.icon className="w-6 h-6 text-white" />",
         "
                     </div>",
         "
-                    <div className="flex-1">";"
+                    <div className="flex-1">""
                       <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-cyan-300 transition-colors">",
         "
                         {service.name};
@@ -716,14 +661,14 @@ const MicroSaasPage: React.FC = () => {";"
                   </div>",
         "
                   {/* Features */};
-                  <div className="mb-6">";"
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features:</h4>";"
+                  <div className="mb-6">""
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features:</h4>""
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">",
         "
-                      {service.features.slice(0, 4).map((feature, featureIndex) => (",
+                      {service.features.slice(0, 4).map((feature, featureIndex) => (",)}
         "
-                        <div key={featureIndex} className="flex items-center space-x-2">";"
-                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />";"
+                        <div key={featureIndex} className="flex items-center space-x-2">""
+                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />""
                           <span className="text-sm text-gray-300">{feature}</span>",
         "
                         </div>",
@@ -734,23 +679,23 @@ const MicroSaasPage: React.FC = () => {";"
                   </div>",
         "
                   {/* Pricing */};
-                  <div className="mb-6">";"
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-3">Pricing:</h4>";"
-                    <div className="grid grid-cols-3 gap-2 text-sm">";"
-                      <div className="text-center p-2 bg-slate-700/50 rounded">";"
-                        <div className="font-semibold text-white">Starter</div>";"
+                  <div className="mb-6">""
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-3">Pricing:</h4>""
+                    <div className="grid grid-cols-3 gap-2 text-sm">""
+                      <div className="text-center p-2 bg-slate-700/50 rounded">""
+                        <div className="font-semibold text-white">Starter</div>""
                         <div className="text-cyan-400">${service.pricing.starter.price}/{service.pricing.starter.period}</div>",
         "
                       </div>",
         "
-                      <div className="text-center p-2 bg-slate-700/50 rounded">";"
-                        <div className="font-semibold text-white">Pro</div>";"
+                      <div className="text-center p-2 bg-slate-700/50 rounded">""
+                        <div className="font-semibold text-white">Pro</div>""
                         <div className="text-cyan-400">${service.pricing.professional.price}/{service.pricing.professional.period}</div>",
         "
                       </div>",
         "
-                      <div className="text-center p-2 bg-slate-700/50 rounded">";"
-                        <div className="font-semibold text-white">Enterprise</div>";"
+                      <div className="text-center p-2 bg-slate-700/50 rounded">""
+                        <div className="font-semibold text-white">Enterprise</div>""
                         <div className="text-cyan-400">${service.pricing.enterprise.price}/{service.pricing.enterprise.period}</div>",
         "
                       </div>",
@@ -760,14 +705,14 @@ const MicroSaasPage: React.FC = () => {";"
                   </div>",
         "
                   {/* Benefits */};
-                  <div className="mb-6">";"
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-3">Benefits:</h4>";"
+                  <div className="mb-6">""
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-3">Benefits:</h4>""
                     <div className="space-y-1">",
         "
-                      {service.benefits.map((benefit, benefitIndex) => (",
+                      {service.benefits.map((benefit, benefitIndex) => (",)}
         "
-                        <div key={benefitIndex} className="flex items-center space-x-2">";"
-                          <TrendingUp className="w-4 h-4 text-green-400 flex-shrink-0" />";"
+                        <div key={benefitIndex} className="flex items-center space-x-2">""
+                          <TrendingUp className="w-4 h-4 text-green-400 flex-shrink-0" />""
                           <span className="text-sm text-gray-300">{benefit}</span>",
         "
                         </div>",
@@ -778,11 +723,11 @@ const MicroSaasPage: React.FC = () => {";"
                   </div>",
         "
                   {/* Use Cases */};
-                  <div className="mb-6">";"
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-3">Use Cases:</h4>";"
+                  <div className="mb-6">""
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-3">Use Cases:</h4>""
                     <div className="flex flex-wrap gap-2">",
         "
-                      {service.useCases.map((useCase, useCaseIndex) => (",
+                      {service.useCases.map((useCase, useCaseIndex) => (",)}
         "
                         <span key={useCaseIndex} className="px-2 py-1 bg-slate-700/50 rounded text-xs text-gray-300">",
         "
@@ -797,7 +742,7 @@ const MicroSaasPage: React.FC = () => {";"
                   {/* CTA */};
                   <div className="flex flex-col sm:flex-row gap-3">",
         "
-                    <a",
+                    <a",>
         "
                       href={service.link},
       target="_blank",
@@ -811,14 +756,14 @@ const MicroSaasPage: React.FC = () => {";"
         "
                     </a>",
         "
-                    <Link";"
+                    <"">
                       to="/contact",
       className="flex-1 border-2 border-cyan-400 text-cyan-300 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 text-center";
                     >",
         "
                       Learn More",
         "
-                    </Link>",
+                    </>",
         "
                   </div>",
         "
@@ -832,84 +777,36 @@ const MicroSaasPage: React.FC = () => {";"
         </section>",
         "
         {/* CTA Section */};
-        <section className="py-16 sm:py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30 relative z-10">";"
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">";"
+        <section className="py-16 sm:py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30 relative z-10">""
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">",
         "
               Ready to Transform Your Business?",
         "
-            </h2>";"
-<<<<<<< HEAD
-            <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">",
-        "
-              Start your free trial today and experience the power of our micro SAAS solutions.",
-        "
-              No credit card required.",
-        "
-            </p>",
-        "
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
-        "
-              <Link",
-        "
-                to="/contact",
-      className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105";
-              >",
-        "
-                Start Free Trial",
-        "
-              </Link>",
-        "
-              <Link",
-        "
-                to="/demo",
-      className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300";
-              >",
-        "
-                Schedule Demo",
-        "
-              </Link>",
-        "
-            </div>",
-        "
-          </div>",
-        "
-        </section>",
-        "
-      </div>",
-        "
-    </>",
-        "
-  )
-    },
-    {
-,
-      export default MicroSaaSPage;
-=======
-            <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">";"
-              Start your free trial today and experience the power of our micro SAAS solutions.";"
-              No credit card required.";"
-            </p>";"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">";"
-              <Link";"
+            </h2>""
+            <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">""
+              Start your free trial today and experience the power of our micro SAAS solutions.""
+              No credit card required.""
+            </p>""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <"">
                 to="/contact";
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105";
-              >";"
-                Start Free Trial";"
-              </Link>";"
-              <Link";"
+              >""
+                Start Free Trial""
+              </>""
+              <"">
                 to="/demo";
                 className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300";
-              >";"
-                Schedule Demo";"
-              </Link>";"
-            </div>";"
-          </div>";"
-        </section>";"
-      </div>";"
-    </>";"
+              >""
+                Schedule Demo""
+              </>""
+            </div>""
+          </div>""
+        </section>""
+      </div>""
+    </>""
   );
 };
 ;
 export default MicroSaaSPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Accessibility audit for HTML files
-function auditAccessibility() {
+function auditAccessibility() {}
   // Function body
 }
 }const distPath = path.join(__dirname, '../dist')
@@ -85,13 +85,13 @@ function auditAccessibility() {
     };
   ]
   // Run accessibility checks
-  checks.forEach(check => {};
+  checks.forEach(check => {};)
 }const found = check.test.test(htmlContent)
-    if ($1) {
+    if ($1) {}
   // If body
 }
       if (check.severity === 'high' || check.severity === 'medium') {};
-        audit.issues.push({};
+        audit.issues.push({};)
           type: check.name;
           severity: check.severity;
           message: check.message;
@@ -100,7 +100,7 @@ function auditAccessibility() {
       };
     } else {};
       if (check.severity === 'high' || check.severity === 'medium') {};
-        audit.issues.push({};
+        audit.issues.push({};)
           type: check.name;
           severity: check.severity;
           message: check.message;
@@ -115,7 +115,7 @@ function auditAccessibility() {
   if (failedChecks.length === 0) {};
     audit.recommendations.push('✅ All basic accessibility checks passed!')
   } else {};
-    failedChecks.forEach(issue => {};
+    failedChecks.forEach(issue => {};)
 }audit.recommendations.push(`🔧 ${issue.message}`)
     })
   };

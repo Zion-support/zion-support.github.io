@@ -1,10 +1,10 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-const FiveGSolutionsPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead 
+const FiveGSolutionsPage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
         title="5GSolutionsPage - Zion Tech Group"
         description="Zion Tech Group 5GSolutionsPage page"
       />

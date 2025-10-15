@@ -1,5 +1,5 @@
 
-import { BrowserRouter } from "react-router-dom",
+,
       import { HelmetProvider } from "react-helmet-async",
       import { AnalyticsProvider } from "./components/AnalyticsProvider";
 // import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import";"
@@ -8,18 +8,18 @@ import { ErrorBoundary } from "react-error-boundary",
       import MobileNavigation from "./components/MobileNavigation",
       import EnhancedNavigation from "./components/EnhancedNavigation";
 ,
-      interface LayoutProps {",
+      interface LayoutProps {"}
         "
   children: React.ReactNode
     },
-    {
+    {}
 const Layout: React.FC<LayoutProps> = ({ children }) => {};
 }return ()
     <ErrorBoundary FallbackComponent={ErrorFallback}>",
         "
       <HelmetProvider>",
         "
-        <BrowserRouter>",
+        <>",
         "
           <AnalyticsProvider>",
         "
@@ -29,11 +29,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {};
         "
               <title>Zion Tech Group - Advanced AI and IT Solutions</title>",
         "
-              <meta";"
+              <meta";">
                 name="description",
       content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />",
         "
-              <meta",
+              <meta",>
         "
                 name="keywords",
       content="AI solutions, IT services, digital transformation, business automation, technology consulting" />",
@@ -87,46 +87,46 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {};
                     <div className="space-y-4">";"
                       <h4 className="text-lg font-semibold text-white">AI Services</h4>";"
                       <div className="space-y-3">";"
-                        <Link to="/ai-business-intelligence" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        <to="/ai-business-intelligence" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Business Intelligence",
         "
-                        </Link>";"
-                        <Link to="/ai-customer-support" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/ai-customer-support" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Customer Support",
         "
-                        </Link>";"
-                        <Link to="/ai-content-generation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/ai-content-generation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Content Generation",
         "
-                        </Link>";"
-                        <Link to="/ai-cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/ai-cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Cybersecurity",
         "
-                        </Link>";"
-                        <Link to="/ai-voice-assistant-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/ai-voice-assistant-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Voice AI Assistant",
         "
-                        </Link>";"
-                        <Link to="/ai-image-recognition-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/ai-image-recognition-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Image Recognition",
         "
-                        </Link>";"
-                        <Link to="/ai-fraud-detection-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/ai-fraud-detection-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Fraud Detection",
         "
-                        </Link>";"
-                        <Link to="/ai-services" className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">",
+                        </>";"
+                        <to="/ai-services" className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">",
         "
                           View All AI Services →",
         "
-                        </Link>",
+                        </>",
         "
                       </div>",
         "
@@ -135,41 +135,41 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {};
                     <div className="space-y-4">";"
                       <h4 className="text-lg font-semibold text-white">IT Services</h4>";"
                       <div className="space-y-2">";"
-                        <Link to="/cloud-infrastructure" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        <to="/cloud-infrastructure" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Cloud Infrastructure",
         "
-                        </Link>";"
-                        <Link to="/blockchain-development" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/blockchain-development" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Blockchain Development",
         "
-                        </Link>";"
-                        <Link to="/iot-solutions" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/iot-solutions" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           IoT Solutions",
         "
-                        </Link>";"
-                        <Link to="/ar-vr-development" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/ar-vr-development" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           AR/VR Development",
         "
-                        </Link>";"
-                        <Link to="/devops-solutions" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/devops-solutions" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           DevOps Solutions",
         "
-                        </Link>";"
-                        <Link to="/mobile-development" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/mobile-development" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Mobile Development",
         "
-                        </Link>";"
-                        <Link to="/services" className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">",
+                        </>";"
+                        <to="/services" className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">",
         "
                           View All IT Services →",
         "
-                        </Link>",
+                        </>",
         "
                       </div>",
         "
@@ -178,41 +178,41 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {};
                     <div className="space-y-4">";"
                       <h4 className="text-lg font-semibold text-white">Micro SAAS</h4>";"
                       <div className="space-y-3">";"
-                        <Link to="/zion-analytics-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        <to="/zion-analytics-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Zion Analytics Pro",
         "
-                        </Link>";"
-                        <Link to="/zion-security-shield" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/zion-security-shield" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
-                          Zion Security Shield",
+                          Zion Security ",
         "
-                        </Link>";"
-                        <Link to="/zion-inventory-manager-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/zion-inventory-manager-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Inventory Manager",
         "
-                        </Link>";"
-                        <Link to="/zion-hr-management-suite" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/zion-hr-management-suite" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           HR Management Suite",
         "
-                        </Link>";"
-                        <Link to="/zion-ecommerce-optimizer" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/zion-ecommerce-optimizer" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           E-commerce Optimizer",
         "
-                        </Link>";"
-                        <Link to="/zion-ai-chatbot-builder" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/zion-ai-chatbot-builder" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           AI Chatbot Builder",
         "
-                        </Link>";"
-                        <Link to="/micro-saas" className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">",
+                        </>";"
+                        <to="/micro-saas" className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">",
         "
                           View All Micro SAAS →",
         "
-                        </Link>",
+                        </>",
         "
                       </div>",
         "
@@ -221,36 +221,36 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {};
                     <div className="space-y-4">";"
                       <h4 className="text-lg font-semibold text-white">Company</h4>";"
                       <div className="space-y-3">";"
-                        <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        <to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           About Us",
         "
-                        </Link>";"
-                        <Link to="/team" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/team" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Our Team",
         "
-                        </Link>";"
-                        <Link to="/careers" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/careers" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Careers",
         "
-                        </Link>";"
-                        <Link to="/case-studies" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/case-studies" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Case Studies",
         "
-                        </Link>";"
-                        <Link to="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Blog",
         "
-                        </Link>";"
-                        <Link to="/contact" className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">",
+                        </>";"
+                        <to="/contact" className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">",
         "
                           Contact Us →",
         "
-                        </Link>",
+                        </>",
         "
                       </div>",
         "
@@ -313,26 +313,26 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {};
         "
                       </p>";"
                       <div className="flex flex-wrap gap-6">";"
-                        <Link to="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        <to="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Privacy Policy",
         "
-                        </Link>";"
-                        <Link to="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Terms of Service",
         "
-                        </Link>";"
-                        <Link to="/cookies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/cookies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Cookie Policy",
         "
-                        </Link>";"
-                        <Link to="/sitemap" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+                        </>";"
+                        <to="/sitemap" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
         "
                           Sitemap",
         "
-                        </Link>",
+                        </>",
         "
                       </div>",
         "
@@ -348,7 +348,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {};
         "
           </AnalyticsProvider>",
         "
-        </BrowserRouter>",
+        </>",
         "
       </HelmetProvider>",
         "

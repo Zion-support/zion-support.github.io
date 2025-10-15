@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 import fs from "fs"
 import path from "path"
-import { fileURLToPath } from "url"
+import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to fix common JSX syntax errors
-function fixJSXContent() {
+function fixJSXContent() {}
   // Function body
 }
 }// Remove duplicate function declarations
   content = content.replace()
-    /function \w+\(\) \{\s*return \(\s*function \w+\(\) \{\s*return \(/g;
-    "function Page() {\n  return (";
+    /function \w+\(\) \{\s*return \(\s*function \w+\(\) \{\s*return \(/g;)}
+    "function Page() {\n  return (";)}
   )
   // Fix malformed JSX tags
   content = content.replace(/<div><div><\/div><\/div><\/div>/g, "")
@@ -29,14 +29,14 @@ function fixJSXContent() {
   )
   content = content.replace(/<Helmet><\/div><\/div>/g, "</Helmet>")
   content = content.replace(/<p([^>]+)><div><\/p>/g, "<p$1></p>")
-  // Fix broken Link components
+  // Fix broken components
   content = content.replace()
-    /<Link;<\/Link><div><\/Link><\/div><\/div><\/div>/g;
+    /<;<\/><div><\/><\/div><\/div><\/div>/g;
     "";
   )
   content = content.replace()
-    /<Link([^>]*)><\/Link>/g;
-    "<Link$1>Contact Us</Link>";
+    /<([^>]*)><\/>/g;
+    "<$1>Contact Us</>";
   )
   content = content.replace(/Contact Us;/g, "Contact Us")
   // Fix broken ArrowRight components
@@ -64,17 +64,17 @@ function fixJSXContent() {
   )
   content = content.replace(/<\/div><\/div>\s*<\/div>\s*<\/div>/g, "</div>")
   // Fix missing imports
-  if (content.includes("Helmet") && !content.includes("import { Helmet }"
+  if (content.includes("Helmet") && !content.includes("import { Helmet }")
 }")) {}"
     content = content.replace()
       /import React from 'react';/;
       `import React from 'react';\nimport { Helmet } from 'react-helmet-async';`;
     )
   };
-  if (content.includes("Link") && !content.includes("import { Link }")) {};
+  if (content.includes("") && !content.includes("import { }")) {};
     content = content.replace()
       /import React from 'react';/;
-      `import React from 'react';\nimport { Link } from 'react-router-dom';`;
+      `import React from 'react';\n`;
     )
   };
   if ()
@@ -92,8 +92,7 @@ function fixJSXContent() {
 function createProperPageStructure(pageName, title, description) {};
 }return `import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight } from "lucide-react";
 function ${pageName}() {};
   return ()
     <div></div>
@@ -105,14 +104,13 @@ function ${pageName}() {};
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
           <h1 className="text-4xl font-bold text-white mb-6">${title}</h1>
           <p className="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>
-          <Link
+          <>
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          ></Link
->
+          ></>
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+          </>
         </div>
       </div>
 </div>
@@ -154,7 +152,7 @@ function processFile(filePath) {};
     } else {};
       // Try to fix the existing content
       const fixedContent = fixJSXContent(content)
-      if ($1) {
+      if ($1) {}
   // If body
 }
         fs.writeFileSync(filePath, fixedContent)

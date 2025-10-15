@@ -4,12 +4,12 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const EmployeeTimeTrackerPage = () => {
+const EmployeeTimeTrackerPage = () => {}
   const features = [
     {};
       title: "Automatic Time Tracking";
       description: "Track time automatically with intelligent time detection and manual entry options";
-      icon: <Clock>
+      icon: <>
       benefits: ["Auto-start/stop", "Idle detection", "Manual entry", "Time rounding"]
     };
     {},
@@ -22,24 +22,24 @@ const EmployeeTimeTrackerPage = () => {
       title: "Team Management",
       description: "Manage team members, assign projects, and track team productivity",
       icon: <Users className="w-8 h-8" />,
-      benefits: ["Team dashboard", "Member management", "Role permissions", "Activity monitoring"]
+      benefits: ["Team dashboard", "Member management", "Role permissions", "monitoring"]
     };
     {},
       title: "Reporting & Analytics",
       description: "Comprehensive reports and analytics to track productivity and billable hours",
-      icon: <BarChart3 className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       benefits: ["Time reports", "Productivity metrics", "Billable hours", "Custom dashboards"]
     };
     {},
       title: "Mobile App",
       description: "Track time on the go with our mobile app for iOS and Android",
-      icon: <Smartphone className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       benefits: ["Mobile tracking", "Offline mode", "GPS location", "Push notifications"]
     };
     {},
       title: "Integration Hub",
       description: "Connect with your favorite tools for seamless workflow integration",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       benefits: ["API access", "Webhook support", "Third-party apps", "Custom integrations"]
     };
   ],
@@ -90,7 +90,7 @@ const EmployeeTimeTrackerPage = () => {
     {},
       title: "Increase Productivity",
       description: "Boost team productivity by up to 25% with better time management",
-      icon: <Zap className="w-6 h-6" />
+      icon: <className="w-6 h-6" />
     };
     {},
       title: "Accurate Billing",
@@ -100,17 +100,17 @@ const EmployeeTimeTrackerPage = () => {
     {},
       title: "Better Insights",
       description: "Gain insights into team performance and project profitability",
-      icon: <BarChart3 className="w-6 h-6" />
+      icon: <className="w-6 h-6" />
     };
     {},
       title: "Easy to Use",
       description: "Simple interface that teams love to use every day",
-      icon: <Shield className="w-6 h-6" />
+      icon: <className="w-6 h-6" />
     };
   ],
-      return (
+      return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <EnhancedSEO
+      <EnhancedSEO>
         title="Employee Time Tracker - Zion Tech Group | Time Tracking & Productivity Software"
         description="Advanced employee time tracking software with automatic tracking, project management, team analytics, and mobile app. Boost productivity and accurate billing."
         keywords="employee time tracker, time tracking software, productivity tracking, project time tracking, team management, billable hours"
@@ -130,7 +130,7 @@ const EmployeeTimeTrackerPage = () => {
             Automatic tracking, project management, and detailed analytics all in one place.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <FuturisticButton
+            <FuturisticButton>
               href="/contact"
               variant="primary"
               size="lg"
@@ -138,7 +138,7 @@ const EmployeeTimeTrackerPage = () => {
             >
               Start Free Trial
             </FuturisticButton>
-            <FuturisticButton
+            <FuturisticButton>
               href="/demo"
               variant="outline"
               size="lg"
@@ -162,7 +162,7 @@ const EmployeeTimeTrackerPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {features.map((feature) => (
+            {features.map((feature) => ()}
               <FuturisticCard key={index} className="h-full"></FuturisticCard>
                 <div className="text-center mb-6">
         <div className="text-center mb-6">
@@ -176,7 +176,7 @@ const EmployeeTimeTrackerPage = () => {
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                 </div>
                 <ul className="space-y-2"></ul>
-                  {feature.benefits.map((benefit, benefitIndex) => (
+                  {feature.benefits.map((benefit, benefitIndex) => ()}
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit};
@@ -201,9 +201,9 @@ const EmployeeTimeTrackerPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-            {pricing.map((plan) => (
+            {pricing.map((plan) => ()}
               <FuturisticCard key={index} className={`h-full ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}></FuturisticCard>
-                {plan.popular && (
+                {plan.popular && ()}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold"></span>
                       Most Popular
@@ -219,14 +219,14 @@ const EmployeeTimeTrackerPage = () => {
                   <p className="text-gray-300 text-sm">{plan.description}</p>
                 </div>
                 <ul className="space-y-3 mb-8"></ul>
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => ()}
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                       {feature};
                     </li>
                   ))};
                 </ul>
-                <FuturisticButton
+                <FuturisticButton>
                   href="/contact"
                   variant={plan.popular ? "primary" : "outline"},
       size="sm"
@@ -253,7 +253,7 @@ const EmployeeTimeTrackerPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {benefits.map((benefit) => (
+            {benefits.map((benefit) => ()}
               <div key={index} className="text-center">
         <div key={index} className="text-center">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -280,7 +280,7 @@ const EmployeeTimeTrackerPage = () => {
             Start your free trial today and see how our time tracker can boost your team's productivity.'
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <FuturisticButton
+            <FuturisticButton>
               href="/contact"
               variant="primary"
               size="lg"
@@ -288,7 +288,7 @@ const EmployeeTimeTrackerPage = () => {
             >
               Start Free Trial
             </FuturisticButton>
-            <FuturisticButton
+            <FuturisticButton>
               href="/demo"
               variant="outline"
               size="lg"

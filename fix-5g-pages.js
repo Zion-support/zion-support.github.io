@@ -2,70 +2,99 @@
 
 import fs from 'fs';
 import path from 'path';
-import { glob } from 'glob';
 
 // Function to fix 5G page syntax
-function fix5GPage(filePath) {
+function fix5GPage(content, pageName) {
+  // Extract the page name from the file path
+  const cleanPageName = pageName.replace(/^5g-/, '').replace(/-/g, ' ');
+  const titleCase = cleanPageName.replace(/\b\w/g, l => l.toUpperCase());
+  
+  // Fix the malformed syntax
+  content = content.replace(/const G5g\w+Page: React\.FC = \(\) => \{\s*return \(\)\s*<>\{\}\s*<SEOHead>\s*title="Page - Zion Tech Group"\s*description="Advanced page solutions for modern businesses"\s*\/>\s*<div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">\s*<div className="text-center">\s*<h1 className="text-4xl font-bold mb-4">Page<\/h1>\s*<p className="text-gray-300">Advanced solutions coming soon\.\.\.<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\)\s*\}\s*,\s*\{\}\s*export default G5g\w+Page;/gs, 
+    `import React from 'react';
+import SEOHead from '../components/SEOHead';
+
+const G5g${titleCase.replace(/\s+/g, '')}Page: React.FC = () => {
+  return (
+    <>
+      <SEOHead
+        title="${titleCase} - Zion Tech Group"
+        description="Advanced ${cleanPageName} solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">${titleCase}</h1>
+          <p className="text-gray-300">Advanced ${cleanPageName} solutions coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default G5g${titleCase.replace(/\s+/g, '')}Page;`);
+  
+  return content;
+}
+
+// Function to process a single file
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
+    const pageName = path.basename(path.dirname(filePath));
+    const fixedContent = fix5GPage(content, pageName);
     
-    // Extract the page name from the file path
-    const pageName = path.basename(filePath, '.tsx');
-    const displayName = pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-    
-    // Fix common patterns
-    const fixes = [
-      // Fix function declaration
-      { pattern: /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\s*\}\s*;/, replacement: 'const $1: React.FC = () => {' },
-      
-      // Fix JSX structure
-      { pattern: /<div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"><\/div>\s*<div className="text-center"><\/div>/, replacement: '<div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">\n        <div className="text-center">' },
-      
-      // Fix title and description
-      { pattern: /title="[^"]*"/, replacement: `title="${displayName} - Zion Tech Group"` },
-      { pattern: /description="[^"]*"/, replacement: `description="Advanced ${displayName.toLowerCase()} solutions for modern businesses"` },
-      
-      // Fix heading
-      { pattern: /<h1 className="text-4xl font-bold mb-4">[^<]*<\/h1>/, replacement: `<h1 className="text-4xl font-bold mb-4">${displayName}</h1>` },
-      
-      // Fix description
-      { pattern: /<p className="text-gray-300">Coming soon\.\.\.<\/p>/, replacement: '<p className="text-gray-300">Advanced solutions coming soon...</p>' }
-    ];
-    
-    let modified = false;
-    for (const fix of fixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    }
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed 5G page: ${filePath}`);
+    if (fixedContent !== content) {
+      fs.writeFileSync(filePath, fixedContent);
+      console.log(`✓ Fixed 5G page: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
+}
+
+// Function to find all 5G page files
+function find5GPages(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && item.startsWith('5g-')) {
+        const pageFile = path.join(fullPath, 'page.tsx');
+        if (fs.existsSync(pageFile)) {
+          files.push(pageFile);
+        }
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
 }
 
 // Main execution
 console.log('Starting 5G pages fix...');
 
-const files = await glob('/workspace/app/5g-*/page.tsx');
-console.log(`Found ${files.length} 5G pages to fix`);
-
+const fiveGPages = find5GPages('./app');
+let processedCount = 0;
 let fixedCount = 0;
-for (const file of files) {
-  if (fix5GPage(file)) {
+
+for (const file of fiveGPages) {
+  if (processFile(file)) {
     fixedCount++;
   }
+  processedCount++;
 }
 
-console.log(`Fixed ${fixedCount} 5G pages`);
-console.log('5G pages fix completed!');
+console.log(`\nProcessed ${processedCount} 5G pages`);
+console.log(`Fixed ${fixedCount} pages`);
+
+console.log('\n5G pages fix completed!');

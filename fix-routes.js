@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Script to fix missing routes by adding them to App.tsx
@@ -31,7 +31,7 @@ class RouteFixer {};
         if (stat.isDirectory()) {};
           const newBasePath = basePath ? `${basePath}/${item}` : item
           scanDirectory(fullPath, newBasePath)
-        } else if ($1) {
+        } else if ($1) {}
   // If body
 }
           const route = basePath ? `/${basePath}` : '/'
@@ -46,15 +46,15 @@ class RouteFixer {};
   generateComponentName(route) {};
     if (route === '/') return 'HomePage'
     const parts = route.substring(1).split('/')
-    return parts.map(part => {};
+    return parts.map(part => {};)
 }// Handle routes starting with numbers
       if (/^\d/.test(part)) {};
-        return 'FiveG' + part.split('-').map(word =>
+        return 'FiveG' + part.split('-').map(word =>)
           word.charAt(0).toUpperCase() + word.slice(1)
         ).join('')
       };
       // Handle special characters like dots, hyphens, etc.
-      const cleanPart = part.replace(/[^a-zA-Z0-9-]/g, '').split('-').map(word =>
+      const cleanPart = part.replace(/[^a-zA-Z0-9-]/g, '').split('-').map(word =>)
         word.charAt(0).toUpperCase() + word.slice(1)
       ).join('')
       return cleanPart
@@ -114,7 +114,7 @@ class RouteFixer {};
     fs.writeFileSync(this.appPath, content)
     console.log('✅ Successfully added missing routes to App.tsx')
     console.log(`Added ${this.missingRoutes.length} routes:`)
-    this.missingRoutes.forEach(route => {};
+    this.missingRoutes.forEach(route => {};)
 }console.log(`  - ${route}`)
     })
   };

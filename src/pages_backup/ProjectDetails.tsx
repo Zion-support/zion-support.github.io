@@ -1,6 +1,6 @@
 
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import Footer from "../components/Footer";
 export default ProjectdetailsPage
 'use client'
         <title>Projectdetails - Zion Tech Group</title>

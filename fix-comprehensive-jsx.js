@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import fs from "fs"
-import { glob } from "glob"
+import { glob } from "glob";
 // Comprehensive fixes for all remaining JSX issues
 const fixes = []
   // Fix malformed className attributes
@@ -69,7 +69,7 @@ for (const file of files) {};
 }content = content.replace(fix.pattern, fix.replacement)
     })
     // Only write if content changed
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(file, content, "utf8")

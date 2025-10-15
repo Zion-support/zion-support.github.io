@@ -1,6 +1,6 @@
 import React from 'react',
       import { Helmet } from 'react-helmet-async',
-      import { 
+      import {}
   CheckCircle, 
   ArrowRight, 
   Users, 
@@ -8,11 +8,11 @@ import React from 'react',
   Instagram,
   Twitter,
   Facebook,
-  Linkedin,
+  edin,
   Youtube,
   Music
 } from 'lucide-react',
-      const AISocialMediaManagerPage: React.FC = () => {
+      const AISocialMediaManagerPage: React.FC = () => {}
   const features = [
     'AI-powered content generation for all platforms',
     'Automated posting across 8+ social networks',
@@ -37,12 +37,12 @@ import React from 'react',
     { name: 'Instagram', icon: <Instagram className="w-6 h-6 text-pink-400" />, users: '2B+' },
     { name: 'Facebook', icon: <Facebook className="w-6 h-6 text-blue-400" />, users: '3B+' },
     { name: 'Twitter', icon: <Twitter className="w-6 h-6 text-sky-400" />, users: '450M+' },
-    { name: 'LinkedIn', icon: <Linkedin className="w-6 h-6 text-blue-600" />, users: '900M+' },
+    { name: 'edIn', icon: <edin className="w-6 h-6 text-blue-600" />, users: '900M+' },
     { name: 'YouTube', icon: <Youtube className="w-6 h-6 text-red-400" />, users: '2.7B+' },
     { name: 'TikTok', icon: <Music className="w-6 h-6 text-white" />, users: '1B+' }
   ],
       const pricingPlans = [
-    {
+    {}
       name: 'Starter',
       price: '$39/mo',
       originalPrice: '$59/mo',
@@ -57,7 +57,7 @@ import React from 'react',
       ],
       popular: false
     },
-    {
+    {}
       name: 'Professional',
       price: '$79/mo',
       originalPrice: '$119/mo',
@@ -74,7 +74,7 @@ import React from 'react',
       ],
       popular: true
     },
-    {
+    {}
       name: 'Enterprise',
       price: '$149/mo',
       originalPrice: '$199/mo',
@@ -93,33 +93,33 @@ import React from 'react',
     }
   ],
       const useCases = [
-    {
+    {}
       title: 'E-commerce',
       description: 'Drive sales with product showcases and customer testimonials',
       icon: <ShoppingCart className="w-6 h-6 text-blue-400" />,
       results: 'Average 150% increase in social sales'
     },
-    {
+    {}
       title: 'SaaS',
       description: 'Build community and showcase product updates',
       icon: <Cloud className="w-6 h-6 text-green-400" />,
       results: '300% increase in user engagement'
     },
-    {
+    {}
       title: 'Agencies',
       description: 'Manage multiple client accounts efficiently',
       icon: <Users className="w-6 h-6 text-purple-400" />,
       results: 'Manage 5x more clients with same team'
     },
-    {
+    {}
       title: 'Personal Brands',
       description: 'Build personal brand and thought leadership',
       icon: <Star className="w-6 h-6 text-yellow-400" />,
       results: '200% increase in follower growth'
     }
   ],
-      return (
-    <>
+      return ()
+    <>{}</>
       <Helmet>
         <title>AI Social Media Manager - Automated Social Media Management | Zion Tech Group</title>
         <meta name="description" content="Transform your social media with AI-powered automation. Increase engagement by 85%, save 25+ hours weekly, and boost follower growth by 200% with our intelligent social media manager." />
@@ -150,20 +150,20 @@ import React from 'react',
               saves 25+ hours weekly, and boosts follower growth by 200%.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-500/25 flex items-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="#pricing"
                 className="border-2 border-white/30 hover:border-blue-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center group"
               >
                 View Pricing
                 <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </>
             </div>
             
             {/* Stats */}
@@ -202,7 +202,7 @@ import React from 'react',
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {platforms.map((platform, index) => (
+            {platforms.map((platform, index) => ()}
               <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
                 <div className="flex items-center justify-between mb-4">
                   <div className="group-hover:scale-110 transition-transform">
@@ -233,7 +233,7 @@ import React from 'react',
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => ()}
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 group">
                 <div className="flex items-center mb-4">
                   <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
@@ -260,7 +260,7 @@ import React from 'react',
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => ()}
               <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
                 <div className="flex items-center mb-4">
                   <TrendingUp className="w-6 h-6 text-blue-400 mr-3 flex-shrink-0" />
@@ -287,7 +287,7 @@ import React from 'react',
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map((useCase, index) => ()}
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 group">
                 <div className="mb-4 group-hover:scale-110 transition-transform">
                   {useCase.icon}
@@ -320,11 +320,11 @@ import React from 'react',
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+            {pricingPlans.map((plan, index) => ()}
+              <divkey={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${>}
                 plan.popular ? 'ring-2 ring-blue-500 bg-slate-700/50' : ''
               }`}>
-                {plan.popular && (
+                {plan.popular && ()}
                   <div className="text-center mb-4">
                     <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
@@ -342,7 +342,7 @@ import React from 'react',
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => ()}
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -350,16 +350,16 @@ import React from 'react',
                   ))}
                 </ul>
 
-                <Link
+                <>
                   to="/contact"
-                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
+                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${}
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white'
                       : 'border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
                   }`}
                 >
                   Start Free Trial
-                </Link>
+                </>
               </div>
             ))}
           </div>
@@ -377,28 +377,12 @@ import React from 'react',
             save time, and grow their social media presence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <>
               to="/contact"
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Start Free Trial
-            </Link>
-            <Link
+            </>
+            <>
               to="/demo"
-<<<<<<< HEAD
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-            >
-              Schedule Demo
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-    },
-    {
-
-export default AISocialMediaManagerPage;
-=======
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

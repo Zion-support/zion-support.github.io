@@ -8,7 +8,7 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
       error: Error | null,
       errorInfo: ErrorInfo | null
     },
-    {
+    {}
 class ErrorBoundary extends Component<Props, State> {},
       constructor(props: Props) {},
       super(props),
@@ -18,7 +18,7 @@ class ErrorBoundary extends Component<Props, State> {},
       errorInfo: null
     }
     },
-    {
+    {}
   static getDerivedStateFromError(error: Error): State {},
       return {},
       hasError: true,
@@ -26,47 +26,40 @@ class ErrorBoundary extends Component<Props, State> {},
       errorInfo: null
     }
     },
-    {
+    {}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {},
       console.error('ErrorBoundary caught an error:', error, errorInfo)
-    this.setState({},
+    this.setState({},)
       error,
       errorInfo
     });
 
     // Log error to console in development
-<<<<<<< HEAD
-    if (process.env.NODE_ENV === 'development') {}
-    },
-    {
-=======
-    if ($1) {
+    if ($1) {}
   // If body
 }
       };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {};
       // Here you would typically send the error to an error reporting service
       }
     },
-    {
+    {}
   handleRetry = () => {},
-      this.setState({},
+      this.setState({},)
       hasError: false,
       error: null,
       errorInfo: null
     })
     },
-    {
-
+    {}
   render() {},
       if (this.state.hasError) {};
       // Custom fallback UI
       if (this.props.fallback) {},
       return this.props.fallback
       },
-      return (
+      return ()
         <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white">
         <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -85,13 +78,13 @@ class ErrorBoundary extends Component<Props, State> {},
               We're sorry, but something unexpected happened. Please try refreshing the page.'
             </p>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === 'development' && this.state.error && ()}
               <div className="mb-6 p-4 bg-slate-700 rounded-lg text-left"></div>
                 <h3 className="text-sm font-semibold text-red-400 mb-2">Error Details:</h3>
                 <pre className="text-xs text-gray-300 whitespace-pre-wrap"></pre>
                   {this.state.error.toString()};
                 </pre>
-                {this.state.errorInfo && (
+                {this.state.errorInfo && ()}
                   <pre className="text-xs text-gray-400 mt-2 whitespace-pre-wrap"></pre>
                     {this.state.errorInfo.componentStack};
                   </pre>
@@ -99,7 +92,7 @@ class ErrorBoundary extends Component<Props, State> {},
               </div>
             )};
             <div className="flex flex-col sm:flex-row gap-3"></div>
-              <button
+              <button>
                 onClick={() => window.location.reload()},
       className="flex items-center justify-center px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors"
               >
@@ -107,33 +100,32 @@ class ErrorBoundary extends Component<Props, State> {},
                 Refresh Page
               </button>
 
-              <Link
+              <>
                 to="/"
                 className="flex items-center justify-center px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors"
-              ></Link
->
+              ></>
                 <Home className="w-4 h-4 mr-2" />
                 Go Home
-              </Link>
+              </>
             </div>
 
             <div className="mt-6 pt-4 border-t border-slate-700"></div>
               <p className="text-sm text-gray-400"></p>
                 If this problem continues, please{' '};
-                <Link to="/contact" className="text-blue-400 hover:text-blue-300 underline"></Link>
+                <to="/contact" className="text-blue-400 hover:text-blue-300 underline"></>
                   contact our support team
-                </Link>
+                </>
               </p>
             </div>
             
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === 'development' && this.state.error && ()}
               <details className="mt-6 text-left"></details>
                 <summary className="text-sm text-gray-400 cursor-pointer hover:text-white"></summary>
                   Error Details (Development)
                 </summary>
                 <div className="mt-2 p-4 bg-slate-800/50 rounded text-xs text-gray-300 overflow-auto"></div>
                   <pre>{this.state.error.toString()}</pre>
-                  {this.state.errorInfo && (
+                  {this.state.errorInfo && ()}
                     <pre className="mt-2">{this.state.errorInfo.componentStack}</pre>
                   )};
                 </div>

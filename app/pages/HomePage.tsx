@@ -1,30 +1,30 @@
 
 import SEOHead from '../components/SEOHead';
 ,
-      export default function HomePage() {",
+      export default function HomePage() {"}
         "
-const structuredData = {",
+const structuredData = {"}
         "
     "@context": "https://schema.org",";"
     "@type": "WebSite",";"
     "name": "Zion Tech Group",";"
     "url": "https://ziontechgroup.com",";"
     "description": "Advanced AI and IT solutions provider specializing in cybersecurity, cloud infrastructure, and digital transformation.",";"
-    "potentialAction": {";"
+    "potentialAction": {";"}
       "@type": "SearchAction",";"
       "target": "https://ziontechgroup.com/search?q={search_term_string}",";"
       "query-input": "required name=search_term_string"
     },
-    {
+    {}
   };
 ,
-      const HomePage: React.FC = () => {",
+      const HomePage: React.FC = () => {"}
         "
-  return (",
+  return (",)
         "
-    <>",
+    <>{"}</>
         "
-      <SEOHead",
+      <SEOHead",>
         "
         title="HomePage - Zion Tech Group",
       description="Zion Tech Group HomePage page" />";"
@@ -41,7 +41,7 @@ const structuredData = {",
         "
   )
     },
-    {
+    {}
 ,
       export default HomePage;
 ;

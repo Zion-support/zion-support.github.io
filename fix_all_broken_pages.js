@@ -1,9 +1,9 @@
 import fs from 'fs'
 import path from 'path'
-import Layout from '../layout'
+import Layout from "../layout";
 export default ${pageName}Page`
 // Find all page.tsx files that might be broken
-function findPageFiles() {
+function findPageFiles() {}
   // Function body
 }
 }const files = []
@@ -13,7 +13,7 @@ const items = fs.readdirSync(dir)
 const stat = fs.statSync(fullPath)
     if (stat.isDirectory()) {};
       files.push(...findPageFiles(fullPath))
-    } else if ($1) {
+    } else if ($1) {}
   // If body
 }
       files.push(fullPath)
@@ -37,7 +37,7 @@ function isBrokenPage(filePath) {};
   } catch (error) {};
     return true
 // Template for a basic page
- `import React from 'react'
+ `import React from "react";
   return ()
     <div>Content</div>
   )

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 'use client';
-export default function Page() {
-  return (
+export default function Page() {}
+  return ()
     <div className="min-h-screen bg-white">;
       <Helmet>;
         <title>Page optimized - Zion Tech Group</title>;

@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-      import React, { useState, useEffect } from "react",
-      const CookieConsent: React.FC = () => {},
-      const [isVisible, setIsVisible] = useState(false),
-      const [showSettings, setShowSettings] = useState(false),
-      useEffect(() => {},
-      const consent = localStorage.getItem("cookie-consent"),
-      if (!consent) {},
-      setIsVisible(true)
-    },
-    {
-=======
 import React, { useState } from 'react';
 import React, { useState, useEffect } from "react";
 
@@ -20,12 +7,11 @@ const CookieConsent: React.FC = () => {};
 
   useEffect(() => {};
     const consent = localStorage.getItem("cookie-consent");
-    if ($1) {
+    if ($1) {}
   // If body
 }
       setIsVisible(true);
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
   }, [])
   const handleAccept = () => {};
 }localStorage.setItem("cookie-consent", "accepted")
@@ -54,7 +40,7 @@ const CookieConsent: React.FC = () => {};
                 personalized content, and analyze our traffic. By clicking
                 "Accept All", you consent to our use of cookies.
               </p>
-              {showSettings && ()
+              {showSettings && ()}
                 <div className="bg-gray-800 rounded-lg p-4 mb-4"></div>
                   <h4 className="text-white font-semibold mb-3"></h4>
                     Cookie Preferences
@@ -62,8 +48,7 @@ const CookieConsent: React.FC = () => {};
                   <div className="space-y-3"></div>
                     <label className="flex items-center justify-between"></label>
                       <span className="text-gray-300">Essential Cookies</span>
-                      <input
-                        type="checkbox"
+                      <inputtype="checkbox">
                         defaultChecked
                         disabled
                         className="rounded"
@@ -71,8 +56,7 @@ const CookieConsent: React.FC = () => {};
                     </label>
                     <label className="flex items-center justify-between"></label>
                       <span className="text-gray-300">Analytics Cookies</span>
-                      <input
-                        type="checkbox"
+                      <inputtype="checkbox">
                         defaultChecked
                         className="rounded"
                       />
@@ -87,23 +71,20 @@ const CookieConsent: React.FC = () => {};
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-2 ml-4"></div>
-            <button
-              onClick={handleSettings},
+            <buttononClick={handleSettings},>
       className="flex items-center px-4 py-2 text-gray-300 hover:text-white transition-colors"
             ></button
 >
               <Settings className="w-4 h-4 mr-2" />
               Settings
             </button>
-            <button
-              onClick={handleReject},
+            <buttononClick={handleReject},>
       className="px-4 py-2 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-800 transition-colors"
             ></button
 >
               Reject All
             </button>
-            <button
-              onClick={handleAccept},
+            <buttononClick={handleAccept},>
       className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
             ></button
 >

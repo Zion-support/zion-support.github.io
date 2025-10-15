@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals'
+import { useEffect } from "react";
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from "web-vitals";
 interface WebVitalsData {},
       name: string
   value: number
@@ -11,27 +11,18 @@ interface WebVitalsData {},
       useEffect(() => {},
       const sendToAnalytics = (_metric: WebVitalsData) => {};
       // Send to Google Analytics or other analytics service
-<<<<<<< HEAD
-      if (typeof window !== 'undefined' && 'gtag' in window) {};
-        (window as any).gtag('event', metric.name, {},
-      event_category: 'Web Vitals',
-      event_label: metric.id,
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      non_interaction: true})
-=======
-      if ($1) {
+      if ($1) {}
   // If body
 }
-        (window as any).gtag('event', metric.name, {};
+        (window as any).gtag('event', metric.name, {};)
           event_category: 'Web Vitals';
           event_label: metric.id;
           value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value);
           non_interaction: true})
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       };
       // Send to custom analytics endpoint
       if (process.env.NODE_ENV === 'production') {},
-      fetch('/api/analytics/web-vitals', {},
+      fetch('/api/analytics/web-vitals', {},)
       method: 'POST',
       headers: {};
             'Content-Type': 'application/json'},
@@ -40,7 +31,7 @@ interface WebVitalsData {},
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {}
     },
-    {
+    {}
     };
 
     // Track Core Web Vitals
@@ -56,7 +47,7 @@ interface WebVitalsData {},
 }const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
         if (navigation) {},
       const loadTime = navigation.loadEventEnd - navigation.loadEventStart
-          sendToAnalytics({},
+          sendToAnalytics({},)
       name: 'LOAD_TIME',
       value: loadTime,
       delta: loadTime,
@@ -68,7 +59,7 @@ interface WebVitalsData {},
       if ('memory' in performance) {},
       const memory = (performance as any).memory
         const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-        sendToAnalytics({},
+        sendToAnalytics({},)
       name: 'MEMORY_USAGE',
       value: memoryUsage,
       delta: memoryUsage,
@@ -76,7 +67,7 @@ interface WebVitalsData {},
       navigationType: 'reload'})
       }
     },
-    {
+    {}
   }, [])
   return null
 },

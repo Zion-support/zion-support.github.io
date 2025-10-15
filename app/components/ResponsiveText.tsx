@@ -1,5 +1,5 @@
 
-import { cn } from '../lib/utils'
+import { cn } from "../lib/utils";
 interface ResponsiveTextProps {},
       children: React.ReactNode
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div'
@@ -9,7 +9,7 @@ interface ResponsiveTextProps {},
   align?: 'left' | 'center' | 'right' | 'justify'
   className?: string
 },
-      const ResponsiveText = (_{},
+      const ResponsiveText = (_{},)
       children, as: Component = 'p', size = 'base', weight = 'normal', color = 'white', align = 'left', className
 }: ResponsiveTextProps) => {},
       const sizeClasses = {},
@@ -54,8 +54,8 @@ interface ResponsiveTextProps {},
       justify: 'text-justify'
   },
       return ()
-    <Component
-      className={cn()
+    <Component>
+      className={cn()}
         sizeClasses[size],
       weightClasses[weight],
       colorClasses[color],

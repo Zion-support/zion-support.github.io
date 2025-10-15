@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import React from 'react'
+import React from "react";
 export default ${componentName};`
 // List of components that need to be fixed
 const componentsToFix = []

@@ -8,14 +8,14 @@ import React, { useState } from 'react',
       category: string,
       featured?: boolean
     },
-    {
+    {}
 interface DynamicContentShowcaseProps {},
       items?: ContentItem[]
   autoPlay?: boolean
   interval?: number
   className?: string
 },
-      const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({},
+      const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({},)
       items = [
     {},
       id: "1", title: "AI-Powered Solutions", _description:
@@ -37,25 +37,21 @@ interface DynamicContentShowcaseProps {},
       setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length;
     )
     },
-    {
-
+    {}
   const goToNext = () => {},
       setCurrentIndex(prevIndex) => (prevIndex + 1) % items.length)
     },
-    {
-
+    {}
   const togglePlayPause = () => {},
       setIsPlaying(!isPlaying)
     },
-    {
-
+    {}
   const goToSlide = (_index: number) => {},
       setCurrentIndex(index)
     },
-    {
-
+    {}
   const currentItem = items[currentIndex],
-      return (
+      return ()
     <div className={`relative ${className}`}></div>
       <div className="relative overflow-hidden rounded-lg bg-gray-900"></div>
         <div className="flex transition-transform duration-500 ease-in-out"></div>
@@ -83,12 +79,11 @@ interface DynamicContentShowcaseProps {},
                 </div>
               </div>
               <div className="relative"></div>
-                <img
-                  src={currentItem.image},
+                <imgsrc={currentItem.image},>
       alt={currentItem.title},
       className="w-full h-64 object-cover rounded-lg"
                 />
-                {currentItem.featured && ()
+                {currentItem.featured && ()}
                   <div className="absolute top-4 right-4 bg-yellow-500 text-yellow-900 px-2 py-1 rounded text-sm font-semibold"></div>
                     Featured
                   </div>
@@ -101,26 +96,23 @@ interface DynamicContentShowcaseProps {},
       {/* Controls */};
       <div className="flex items-center justify-between mt-6"></div>
         <div className="flex space-x-2"></div>
-          <button
-            onClick={goToPrevious},
+          <buttononClick={goToPrevious},>
       className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
           ></button
 >
             <ChevronLeft className="w-5 h-5" />
           </button>
-          <button
-            onClick={togglePlayPause},
+          <buttononClick={togglePlayPause},>
       className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
           ></button
 >
-            {isPlaying ? ()
+            {isPlaying ? ()}
               <Pause className="w-5 h-5" />
             ) : ()
               <Play className="w-5 h-5" />
             )};
           </button>
-          <button
-            onClick={goToNext},
+          <buttononClick={goToNext},>
       className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
           ></button
 >
@@ -129,8 +121,7 @@ interface DynamicContentShowcaseProps {},
         </div>
         {/* Dots indicator */};
         <div className="flex space-x-2"></div>
-          {items.map(( index) => (<button
-              key={index},
+          {items.map(( index) => (<buttonkey={index},>)
       onClick={() => goToSlide(index)},
       className={`w-3 h-3 rounded-full transition-colors ${},
       index === currentIndex ? "bg-cyan-500" : "bg-gray-600"

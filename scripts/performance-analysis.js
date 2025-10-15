@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Analyze bundle size and performance
-function analyzeBundle() {
+function analyzeBundle() {}
   // Function body
 }
 }const distPath = path.join(__dirname, '../dist')
@@ -24,7 +24,7 @@ function analyzeBundle() {
     otherFiles: [];
     recommendations: []
   };
-  files.forEach(file => {};
+  files.forEach(file => {};)
 }const filePath = path.join(assetsPath, file)
     const stats = fs.statSync(filePath)
     const size = stats.size
@@ -42,7 +42,7 @@ function analyzeBundle() {
   analysis.cssFiles.sort((a, b) => b.size - a.size)
   // Generate recommendations
   const largestJsFile = analysis.jsFiles[0]
-  if ($1) {
+  if ($1) {}
   // If body
 }
     analysis.recommendations.push(`Consider splitting large JS file: ${largestJsFile.name} (${(largestJsFile.size / 1024).toFixed(2)}KB)`)

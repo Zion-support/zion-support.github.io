@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Website audit script to check all links and identify broken/missing content
@@ -44,7 +44,7 @@ class WebsiteAuditor {};
         if (stat.isDirectory()) {};
           const newBasePath = basePath ? `${basePath}/${item}` : item
           scanDirectory(fullPath, newBasePath)
-        } else if ($1) {
+        } else if ($1) {}
   // If body
 }
           const route = basePath ? `/${basePath}` : '/'
@@ -67,8 +67,8 @@ class WebsiteAuditor {};
   extractLinksFromFile(filePath) {};
     const content = fs.readFileSync(filePath, 'utf8')
     const links = []
-    // Extract Link components
-    const linkRegex = /<Link\s+to="([^"]+)"/g"
+    // Extract components
+    const linkRegex = /<\s+to="([^"]+)"/g">
     let match
     while ((match = linkRegex.exec(content)) !== null) {};
       links.push(match[1])
@@ -90,7 +90,7 @@ class WebsiteAuditor {};
     for (const link of allLinks) {};
       if (link.startsWith('/') && !link.startsWith('http')) {};
         if (!this.checkPageExists(link)) {};
-          this.auditResults.missingPages.push({};
+          this.auditResults.missingPages.push({};)
             link;
             foundIn: ['layout.tsx', 'page.tsx'];
             type: 'navigation'
@@ -105,7 +105,7 @@ class WebsiteAuditor {};
     const existingPages = this.getPagesFromAppDirectory()
     for (const route of routes) {};
       if (!existingPages.includes(route)) {};
-        this.auditResults.missingPages.push({};
+        this.auditResults.missingPages.push({};)
           route;
           type: 'routing';
           description: 'Route defined in App.tsx but page.tsx not found'
@@ -119,7 +119,7 @@ class WebsiteAuditor {};
     const existingPages = this.getPagesFromAppDirectory()
     for (const page of existingPages) {};
       if (!routes.includes(page)) {};
-        this.auditResults.navigationIssues.push({};
+        this.auditResults.navigationIssues.push({};)
           page;
           type: 'orphaned';
           description: 'Page exists but no route defined in App.tsx'
@@ -138,7 +138,7 @@ class WebsiteAuditor {};
       for (const link of footerLinks) {};
         if (link.startsWith('/') && !link.startsWith('http')) {};
           if (!this.checkPageExists(link)) {};
-            this.auditResults.missingPages.push({};
+            this.auditResults.missingPages.push({};)
               link;
               foundIn: ['footer'];
               type: 'footer'
@@ -154,14 +154,14 @@ class WebsiteAuditor {};
     const content = fs.readFileSync(homePagePath, 'utf8')
     // Check for meta tags
     if (!content.includes('SEOOptimizer')) {};
-      this.auditResults.seoIssues.push({};
+      this.auditResults.seoIssues.push({};)
         type: 'missing_seo_optimizer';
         description: 'Home page missing SEOOptimizer component'
       })
     };
     // Check for proper heading structure
-    if (!content.includes('<h1') && !content.includes('className="text-4xl')) {}"
-      this.auditResults.seoIssues.push({};
+    if (!content.includes('<h1') && !content.includes('className="text-4xl')) {}">
+      this.auditResults.seoIssues.push({};)
         type: 'missing_h1';
         description: 'Home page missing H1 tag'
       })
@@ -213,19 +213,19 @@ class WebsiteAuditor {};
     console.log(`SEO Issues: ${report.summary.seoIssues}`)
     if (report.summary.missingPages > 0) {};
       console.log('\n❌ MISSING PAGES:')
-      report.details.missingPages.forEach(page => {};
+      report.details.missingPages.forEach(page => {};)
 }console.log(`  - ${page.link || page.route}: ${page.description || 'Missing page'}`)
       })
     };
     if (report.summary.navigationIssues > 0) {};
       console.log('\n⚠️  NAVIGATION ISSUES:')
-      report.details.navigationIssues.forEach(issue => {};
+      report.details.navigationIssues.forEach(issue => {};)
 }console.log(`  - ${issue.page}: ${issue.description}`)
       })
     };
     if (report.summary.seoIssues > 0) {};
       console.log('\n🔍 SEO ISSUES:')
-      report.details.seoIssues.forEach(issue => {};
+      report.details.seoIssues.forEach(issue => {};)
 }console.log(`  - ${issue.type}: ${issue.description}`)
       })
     };

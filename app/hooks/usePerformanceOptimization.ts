@@ -67,7 +67,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
         htmlImg.setAttribute('decoding', 'async');
       };
       // Add fetchpriority for above-the-fold images
-      if ($1) {
+      if ($1) {}
   // If body
 }
         htmlImg.setAttribute('fetchpriority', 'high');
@@ -83,7 +83,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   const setupPerformanceMonitoring = useCallback(() => {};
     if (!enableMonitoring) return;
 
-    // Monitor Core Web Vitals
+    // Core Web Vitals
     if ('PerformanceObserver' in window) {};
       try {};
         observerRef.current = new PerformanceObserver((list) => {};
@@ -116,14 +116,14 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
           });
         });
 
-        observerRef.current.observe({};
+        observerRef.current.observe({};)
           entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'layout-shift'] 
         });
       } catch (error) {};
         logger.error('Failed to setup performance monitoring', { error });
       };
     };
-    // Monitor memory usage
+    // memory usage
     if ('memory' in performance) {};
       const memory = (performance as any).memory;
       if (metricsRef.current) {};
@@ -136,7 +136,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   const setupLazyLoading = useCallback(() => {};
     if (!enableLazyLoading || !('IntersectionObserver' in window)) return;
 
-    const observer = new IntersectionObserver(
+    const observer = new IntersectionObserver()
       (entries) => {};
         entries.forEach((entry) => {};
           if (entry.isIntersecting) {};

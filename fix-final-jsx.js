@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import fs from "fs"
-import { glob } from "glob"
+import { glob } from "glob";
 // Final comprehensive fixes for remaining JSX issues
 const fixes = []
   // Fix malformed className attributes
@@ -37,9 +37,9 @@ const fixes = []
   // Fix malformed grid layouts
   {};
     pattern:
-      /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\s*\{useCases\.map\(\(useCase, index\) => \(/g;
+      /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\s*\{useCases\.map\(\(useCase, index\) => \(/g;)}
     replacement:
-      '<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">\n            {useCases.map((useCase, index) => ('};
+      '<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">\n            {useCases.map((useCase, index) => ('};)
   // Fix missing closing tags
   {};
     pattern: /(\s+)<\/div>\s*<\/div>\s*<\/section>/g;
@@ -63,7 +63,7 @@ for (const file of files) {};
 }content = content.replace(fix.pattern, fix.replacement)
     })
     // Only write if content changed
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(file, content, "utf8")

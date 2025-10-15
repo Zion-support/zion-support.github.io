@@ -2,11 +2,11 @@
 
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to fix import statements
-function fixImports() {
+function fixImports() {}
   // Function body
 }
   // Fix malformed import statements
@@ -23,21 +23,21 @@ function fixImports() {
 // Function to fix function declarations
 function fixFunctions(content) {};
   // Fix malformed function declarations
-  content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*\n\s*\}/g, 'const $1: React.FC = () => {')
-  content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*\{\s*\n\s*\}/g, 'function $1() {')
+  content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*\n\s*\}/g, 'const $1: React.FC = () => {')}
+  content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*\{\s*\n\s*\}/g, 'function $1() {')}
   return content
 };
 // Function to fix JSX syntax
 function fixJSX(content) {};
     // Fix malformed JSX fragments
-  content = content.replace(/<>\s*$/gm;
+  content = content.replace(/<>{\s*$/gm;}</>)
     '<div>')
-  content = content.replace(/^\s*<\/>/gm;
+  content = content.replace(/^\s*<\/>/gm;)
     '</div>')
   // Fix malformed JSX elements
   content = content.replace(/<(\w+)[^>]*>\s*$/gm;
     '<$1>')
-  content = content.replace(/^\s*<\/\w+>\s*$/gm;
+  content = content.replace(/^\s*<\/\w+>\s*$/gm;)
     '</$1>')
   return content
   };
@@ -85,7 +85,7 @@ function fixFile(filePath) {};
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n')
     // Remove trailing whitespace
     content = content.replace(/[ \t]+$/gm, '')
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(filePath, content, 'utf8')
@@ -104,12 +104,12 @@ function fixDirectory(dirPath) {};
   try {};
     const items = fs.readdirSync(dirPath)
     for (const item of items) {};
-      const fullPath = path.join(dirPath;
+      const fullPath = path.join(dirPath;)
     item)
       const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {};
         // Skip node_modules and other build directories
-        if (!['node_modules';
+        if (!['node_modules';)
     '.git';
     'dist';
     '.next';

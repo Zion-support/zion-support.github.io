@@ -2,10 +2,10 @@ import React from 'react';
 
 import SEOHead from '../components/SEOHead';
 
-const CareersPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead 
+const CareersPage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
         title="CareersPage - Zion Tech Group"
         description="Zion Tech Group CareersPage page"
       />
@@ -37,7 +37,7 @@ const CareersPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => ()}
               <div key={index} className="text-center">
                 <div className="p-4 bg-blue-100 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                   <benefit.icon className="h-10 w-10 text-blue-600" />
@@ -63,7 +63,7 @@ const CareersPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {positions.map((position, index) => (
+            {positions.map((position, index) => ()}
               <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{position.title}</h3>
                 <div className="flex items-center text-gray-600 mb-4">

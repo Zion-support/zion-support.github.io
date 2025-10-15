@@ -51,13 +51,13 @@ export default defineConfig({
       mangle: {
         safari10: true,
         properties: {
-          regex: /^_/
-        }
+          regex: /^_/,
+        },
       },
       format: {
         comments: false,
-        ascii_only: true
-      }
+        ascii_only: true,
+      },
     },
     // Enhanced build optimizations
     rollupOptions: {

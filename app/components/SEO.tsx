@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOProps {
+interface SEOProps {}
   title?: string;
   description?: string;
   keywords?: string;
@@ -15,7 +15,7 @@ interface SEOProps {
   tags?: string[];
 }
 
-const SEO: React.FC<SEOProps> = ({
+const SEO: React.FC<SEOProps> = ({)}
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.',
   keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions',
@@ -27,25 +27,25 @@ const SEO: React.FC<SEOProps> = ({
   modifiedTime,
   section,
   tags = []
-}) => {
+}) => {}
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
 
-  const structuredData = {
+  const structuredData = {}
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.svg',
     description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
-    address: {
+    address: {}
       '@type': 'PostalAddress',
       addressLocality: 'Middletown',
       addressRegion: 'DE',
       addressCountry: 'US'
     },
-    contactPoint: {
+    contactPoint: {}
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'customer service',
@@ -58,7 +58,7 @@ const SEO: React.FC<SEOProps> = ({
     ]
   };
 
-  return (
+  return ()
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
@@ -87,20 +87,20 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:creator" content="@ziontechgroup" />
 
       {/* Article specific meta tags */}
-      {type === 'article' && publishedTime && (
+      {type === 'article' && publishedTime && ()}
         <meta property="article:published_time" content={publishedTime} />
       )}
-      {type === 'article' && modifiedTime && (
+      {type === 'article' && modifiedTime && ()}
         <meta property="article:modified_time" content={modifiedTime} />
       )}
-      {type === 'article' && author && (
+      {type === 'article' && author && ()}
         <meta property="article:author" content={author} />
       )}
-      {type === 'article' && section && (
+      {type === 'article' && section && ()}
         <meta property="article:section" content={section} />
       )}
-      {type === 'article' && tags.length > 0 && (
-        tags.map((tag, index) => (
+      {type === 'article' && tags.length > 0 && ()}
+        tags.map((tag, index) => ()
           <meta key={index} property="article:tag" content={tag} />
         ))
       )}

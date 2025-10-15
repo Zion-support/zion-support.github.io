@@ -39,7 +39,7 @@ class Logger {};
     // Always log errors, even in production
     console.error(this.formatMessage('error', message), ...args)
     // Send to remote logging service in production
-    if ($1) {
+    if ($1) {}
   // If body
 }
       this.sendToRemote('error', message, args)
@@ -55,11 +55,11 @@ class Logger {};
 } catch (error) {};
   console.error(error)
 }if (this.config.remoteEndpoint) {};
-        await fetch(this.config.remoteEndpoint, {};
+        await fetch(this.config.remoteEndpoint, {};)
           method: 'POST';
           headers: {};
             'Content-Type': 'application/json'};
-          body: JSON.stringify({};
+          body: JSON.stringify({};)
             level;
             message;
             args;
@@ -73,7 +73,7 @@ class Logger {};
   };
 };
 // Create singleton instance
-const logger = new Logger({};
+const logger = new Logger({};)
   enableConsole: process.env.NODE_ENV === 'development';
   enableRemote: process.env.NODE_ENV === 'production';
   remoteEndpoint: process.env.REACT_APP_LOGGING_ENDPOINT})

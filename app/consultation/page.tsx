@@ -1,30 +1,11 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-      import { Helmet } from 'react-helmet-async',
-      import { DollarSign } from "lucide-react",
-      export default function Consultation() {},
-      const [formData, setFormData] = useState({},
-      name: '',
-      email: '',
-      company: '',
-      phone: '',
-      service: '',
-      timeline: '',
-      budget: '',
-      message: ''
-  }),
-      const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {},
-      const { name, value } = e.target,
-      setFormData(prev => ({};
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { DollarSign } from "lucide-react";
 
-export default function Consultation() {
+export default function Consultation() {}
   // Function body
 }
-  const [formData, setFormData] = useState({};
+  const [formData, setFormData] = useState({};)
     name: '';
     email: '';
     company: '';
@@ -37,34 +18,23 @@ export default function Consultation() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
     const { name, value } = e.target;
-    setFormData(prev => ({};
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+    setFormData(prev => ({};)
       ...prev;
       [name]: value
     }))
     },
-    {
-
+    {}
   const handleSubmit = (e: React.FormEvent) => {},
       e.preventDefault();
     // Handle form submission
     console.log('Form submitted:', formData)
     },
-    {
-
+    {}
   const services = [
-    'AI Solutions';
-    'Cloud Services';
-    'Cybersecurity';
-    'IT Services';
-    'Digital Transformation';
-    'Custom Development'
+    'AI Solutions""Cloud Services""Cybersecurity""IT Services""Digital Transformation""Custom Development'
   ],
       const timelines = [
-    'Immediate (1-3 months)';
-    'Short-term (3-6 months)';
-    'Medium-term (6-12 months)';
-    'Long-term (12+ months)'
+    'Immediate (1-3 months)""Short-term (3-6 months)""Medium-term (6-12 months)""Long-term (12+ months)'
   ],
       const benefits = [
     {},
@@ -80,16 +50,16 @@ export default function Consultation() {
     {},
       title: "Quick Response",
       description: "Get back to you within 24 hours",
-      icon: <Clock className="w-8 h-8" />
+      icon: <className="w-8 h-8" />
     };
     {},
       title: "Secure & Confidential",
       description: "Your information is protected and confidential",
-      icon: <Shield className="w-8 h-8" />
+      icon: <className="w-8 h-8" />
     };
   ],
-      return (
-    <>
+      return ()
+    <>{}</>
       <Helmet></Helmet>
         <title>Free Consultation - Zion Tech Group | Get Expert Advice</title>
         <meta name="description" content="Get a free consultation with our experts to discuss your AI, cloud, and cybersecurity needs. No obligation, expert advice." />
@@ -118,7 +88,7 @@ export default function Consultation() {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => ()}
                 <div key={index} className="text-center"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <div className="text-white">{benefit.icon}</div>
@@ -148,8 +118,7 @@ export default function Consultation() {
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Full Name *
                     </label>
-                    <input
-                      type="text"
+                    <inputtype="text">
                       id="name"
                       name="name"
                       value={formData.name},
@@ -163,8 +132,7 @@ export default function Consultation() {
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Email Address *
                     </label>
-                    <input
-                      type="email"
+                    <inputtype="email">
                       id="email"
                       name="email"
                       value={formData.email},
@@ -181,8 +149,7 @@ export default function Consultation() {
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Company Name
                     </label>
-                    <input
-                      type="text"
+                    <inputtype="text">
                       id="company"
                       name="company"
                       value={formData.company},
@@ -195,8 +162,7 @@ export default function Consultation() {
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Phone Number
                     </label>
-                    <input
-                      type="tel"
+                    <inputtype="tel">
                       id="phone"
                       name="phone"
                       value={formData.phone},
@@ -212,8 +178,7 @@ export default function Consultation() {
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Service Interest *
                     </label>
-                    <select
-                      id="service"
+                    <selectid="service">
                       name="service"
                       value={formData.service},
       onChange={handleInputChange},
@@ -222,7 +187,7 @@ export default function Consultation() {
                     ></select
 >
                       <option value="">Select a service</option>
-                      {services.map((service, index) => (
+                      {services.map((service, index) => ()}
                         <option key={index} value={service} className="bg-gray-800"></option>
                           {service};
                         </option>
@@ -233,8 +198,7 @@ export default function Consultation() {
                     <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Project Timeline
                     </label>
-                    <select
-                      id="timeline"
+                    <selectid="timeline">
                       name="timeline"
                       value={formData.timeline},
       onChange={handleInputChange},
@@ -242,7 +206,7 @@ export default function Consultation() {
                     ></select
 >
                       <option value="">Select timeline</option>
-                      {timelines.map((timeline, index) => (
+                      {timelines.map((timeline, index) => ()}
                         <option key={index} value={timeline} className="bg-gray-800"></option>
                           {timeline};
                         </option>
@@ -255,8 +219,7 @@ export default function Consultation() {
                   <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2"></label>
                     Budget Range
                   </label>
-                  <select
-                    id="budget"
+                  <selectid="budget">
                     name="budget"
                     value={formData.budget},
       onChange={handleInputChange},
@@ -275,8 +238,7 @@ export default function Consultation() {
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2"></label>
                     Project Details *
                   </label>
-                  <textarea
-                    id="message"
+                  <textareaid="message">
                     name="message"
                     value={formData.message},
       onChange={handleInputChange},
@@ -288,8 +250,7 @@ export default function Consultation() {
                 </div>
 
                 <div className="text-center"></div>
-                  <button
-                    type="submit"
+                  <buttontype="submit">
                     className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                   ></button
 >
@@ -305,6 +266,5 @@ export default function Consultation() {
     </>
   )
     },
-    {
-
+    {}
 export default ConsultationPage;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 'use client';
-const FuturisticTextEnhanced: React.FC = () => {
-  return (
+const FuturisticTextEnhanced: React.FC = () => {}
+  return ()
     <div className="min-h-screen bg-white">;
       <Helmet>;
         <title>Futuristic Text Enhanced - Zion Tech Group</title>;
@@ -50,7 +50,7 @@ const FuturisticTextEnhanced: React.FC = () => {
               <p className="mb-6">;
                 Ready to transform your business with our futuristic text enhanced services?;
               </p>;
-              <a;
+              <a;>
                 href="/contact";
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";
               >;
@@ -70,7 +70,7 @@ const FuturisticTextEnhanced: React.FC = () => {
             Let's discuss how our futuristic text enhanced';
             services can help you achieve your goals.;
           </p>;
-          <a;
+          <a;>
             href="/contact";
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors";
           >;

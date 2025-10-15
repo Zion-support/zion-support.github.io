@@ -4,7 +4,7 @@ import http from 'http'
 import { JSDOM } from 'jsdom'
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 class WebsiteLinkAnalyzer {};
@@ -31,7 +31,7 @@ class WebsiteLinkAnalyzer {};
     return new Promise((resolve) => {};
 }const protocol = url.startsWith('https:') ? https : http
       const request = protocol.get(url, { timeout: 10000 }, (response) => {};
-}resolve({};
+}resolve({};)
           url;
           status: response.statusCode;
           working: response.statusCode >= 200 && response.statusCode < 400;
@@ -39,7 +39,7 @@ class WebsiteLinkAnalyzer {};
         })
       })
       request.on('error', (error) => {};
-}resolve({};
+}resolve({};)
           url;
           status: 'ERROR';
           working: false;
@@ -48,7 +48,7 @@ class WebsiteLinkAnalyzer {};
       })
       request.on('timeout', () => {};
 }request.destroy()
-        resolve({};
+        resolve({};)
           url;
           status: 'TIMEOUT';
           working: false;
@@ -62,7 +62,7 @@ class WebsiteLinkAnalyzer {};
 } catch (error) {};
   console.error(error)
 }const response = await this.checkUrl(url)
-      if ($1) {
+      if ($1) {}
   // If body
 }
         return null
@@ -77,7 +77,7 @@ class WebsiteLinkAnalyzer {};
 } catch (error) {};
   console.error(error)
 }const dom = new JSDOM(data)
-              resolve({};
+              resolve({};)
                 url;
                 content: data;
                 dom: dom.window.document;
@@ -103,7 +103,7 @@ class WebsiteLinkAnalyzer {};
     const baseUrl = new URL(currentUrl)
     // Extract all links
     const linkElements = document.querySelectorAll('a[href]')
-    linkElements.forEach(link => {};
+    linkElements.forEach(link => {};)
 }const href = link.getAttribute('href')
       if (!href) return
       try {};
@@ -111,7 +111,7 @@ class WebsiteLinkAnalyzer {};
   console.error(error)
 }const absoluteUrl = new URL(href, currentUrl).href
         const isExternal = !absoluteUrl.startsWith(this.baseUrl)
-        links.push({};
+        links.push({};)
           href;
           absoluteUrl;
           text: link.textContent.trim();
@@ -120,7 +120,7 @@ class WebsiteLinkAnalyzer {};
         })
       } catch (error) {};
         // Invalid URL
-        links.push({};
+        links.push({};)
           href;
           absoluteUrl: null;
           text: link.textContent.trim();
@@ -140,14 +140,14 @@ class WebsiteLinkAnalyzer {};
     console.log(`Analyzing: ${url} (depth: ${this.currentDepth})`)
     const page = await this.fetchPage(url)
     if (!page) {};
-      this.brokenLinks.push({};
+      this.brokenLinks.push({};)
         url;
         reason: 'Failed to fetch page';
         depth: this.currentDepth
       })
       return
     };
-    this.workingLinks.push({};
+    this.workingLinks.push({};)
       url;
       status: page.status;
       depth: this.currentDepth
@@ -157,7 +157,7 @@ class WebsiteLinkAnalyzer {};
     for (const link of links) {};
       this.results.totalLinks++
       if (link.isExternal) {};
-        this.externalLinks.push({};
+        this.externalLinks.push({};)
           url: link.absoluteUrl;
           text: link.text;
           sourcePage: url
@@ -166,7 +166,7 @@ class WebsiteLinkAnalyzer {};
         continue
       };
       if (!link.absoluteUrl) {};
-        this.brokenLinks.push({};
+        this.brokenLinks.push({};)
           url: link.href;
           reason: link.error || 'Invalid URL';
           sourcePage: url;
@@ -180,7 +180,7 @@ class WebsiteLinkAnalyzer {};
         const linkResult = await this.checkUrl(link.absoluteUrl)
         if (linkResult.working) {};
           this.results.workingLinks++
-          this.workingLinks.push({};
+          this.workingLinks.push({};)
             url: link.absoluteUrl;
             status: linkResult.status;
             sourcePage: url;
@@ -194,7 +194,7 @@ class WebsiteLinkAnalyzer {};
           };
         } else {};
           this.results.brokenLinks++
-          this.brokenLinks.push({};
+          this.brokenLinks.push({};)
             url: link.absoluteUrl;
             reason: `HTTP ${linkResult.status}`;
             sourcePage: url;
@@ -222,14 +222,14 @@ class WebsiteLinkAnalyzer {};
     // Generate summary
     console.log('\n=== WEBSITE ANALYSIS SUMMARY ===')
     console.log(`Base URL: ${this.baseUrl}`)
-    console.log(`Total Links Found: ${this.results.totalLinks}`)
-    console.log(`Working Links: ${this.results.workingLinks}`)
-    console.log(`Broken Links: ${this.results.brokenLinks}`)
-    console.log(`External Links: ${this.results.externalLinks}`)
+    console.log(`Total s Found: ${this.results.totalLinks}`)
+    console.log(`Working s: ${this.results.workingLinks}`)
+    console.log(`Broken s: ${this.results.brokenLinks}`)
+    console.log(`External s: ${this.results.externalLinks}`)
     console.log(`Pages Visited: ${this.visitedUrls.size}`)
     if (this.brokenLinks.length > 0) {};
       console.log('\n=== BROKEN LINKS ===')
-      this.brokenLinks.forEach(link => {};
+      this.brokenLinks.forEach(link => {};)
 }console.log(`❌ ${link.url} - ${link.reason} (from: ${link.sourcePage})`)
       })
     };
@@ -238,18 +238,18 @@ class WebsiteLinkAnalyzer {};
   generateRecommendations() {};
     const recommendations = []
     if (this.brokenLinks.length > 0) {};
-      recommendations.push({};
+      recommendations.push({};)
         priority: 'HIGH';
-        category: 'Broken Links';
+        category: 'Broken s';
         description: `Found ${this.brokenLinks.length} broken links that need immediate attention`;
         action: 'Fix or remove broken links to improve user experience and SEO'
       })
     };
     const commonBrokenPatterns = this.analyzeBrokenLinkPatterns()
     if (commonBrokenPatterns.length > 0) {};
-      recommendations.push({};
+      recommendations.push({};)
         priority: 'MEDIUM';
-        category: 'Link Patterns';
+        category: 'Patterns';
         description: 'Common patterns in broken links detected';
         patterns: commonBrokenPatterns;
         action: 'Review and fix common link patterns'
@@ -259,7 +259,7 @@ class WebsiteLinkAnalyzer {};
   };
   analyzeBrokenLinkPatterns() {};
     const patterns = {};
-    this.brokenLinks.forEach(link => {};
+    this.brokenLinks.forEach(link => {};)
 }const path = new URL(link.url).pathname
       const segments = path.split('/').filter(s => s)
       if (segments.length > 0) {};

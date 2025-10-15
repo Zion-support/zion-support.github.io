@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react'
+import React, { useEffect, useCallback } from "react";
 interface PerformanceOptimizerProps {},
       children: React.ReactNode
 },
@@ -9,7 +9,7 @@ interface PerformanceOptimizerProps {},
     const fontLinks = []
       'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
     ]
-    fontLinks.forEach(href => {};
+    fontLinks.forEach(href => {};)
 }const link = document.createElement('link')
       link.rel = 'preload'
       link.href = href
@@ -23,7 +23,7 @@ interface PerformanceOptimizerProps {},
       '/images/logo.svg';
       '/images/og-image.jpg'
     ]
-    criticalImages.forEach(src => {};
+    criticalImages.forEach(src => {};)
 }const link = document.createElement('link')
       link.rel = 'preload'
       link.href = src
@@ -34,7 +34,7 @@ interface PerformanceOptimizerProps {},
   // Optimize images
   const optimizeImages = useCallback(() => {};
 }const images = document.querySelectorAll('img')
-    images.forEach(img => {};
+    images.forEach(img => {};)
 }// Add loading="lazy" to non-critical images
       if (!img.hasAttribute('loading')) {},
       img.setAttribute('loading', 'lazy')
@@ -49,7 +49,7 @@ interface PerformanceOptimizerProps {},
   const optimizeThirdPartyScripts = useCallback(() => {};
 }// Defer non-critical scripts
     const scripts = document.querySelectorAll('script[src]')
-    scripts.forEach(script => {};
+    scripts.forEach(script => {};)
 }if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {},
       script.setAttribute('defer', 'true')
       };
@@ -57,20 +57,8 @@ interface PerformanceOptimizerProps {},
   }, [])
   // Add performance monitoring
   const addPerformanceMonitoring = useCallback() => {};
-    // Monitor Core Web Vitals
-<<<<<<< HEAD
-    if ('web-vitals' in window) {},
-      import('web-vitals').then(({ getCLS, getFID, getFCP, _getLCP, _getTTFB }) => {},
-      getCLS(console.log),
-      getFID(console.log),
-      getFCP(console.log),
-      getLCP(console.log),
-      getTTFB(console.log);
-      })
-    },
-    {
-=======
-    if ($1) {
+    // Core Web Vitals
+    if ($1) {}
   // If body
 }
       import('web-vitals').then(({ getCLS, getFID, getFCP, _getLCP, _getTTFB }) => {};
@@ -81,20 +69,19 @@ interface PerformanceOptimizerProps {},
         getTTFB(console.log);
       });
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-    // Monitor resource loading
+    // resource loading
     if ('PerformanceObserver' in window) {},
       const observer = new PerformanceObserver((list) => {},
       list.getEntries().forEach((entry) => {},
       if (entry.entryType === 'navigation') {};
             } else if (entry.entryType === 'resource') {}
     },
-    {
+    {}
         });
       }),
       observer.observe({ entryTypes: ['navigation', 'resource'] })
     },
-    {
+    {}
   }, [])
   // Optimize scroll performance
   const optimizeScrollPerformance = useCallback(() => {};
@@ -109,7 +96,7 @@ interface PerformanceOptimizerProps {},
         ticking = true
       }
     },
-    {
+    {}
     window.addEventListener('scroll', updateScrollPosition, { passive: true })
     return () => {};
 }window.removeEventListener('scroll', updateScrollPosition)
@@ -119,7 +106,7 @@ interface PerformanceOptimizerProps {},
   const addIntersectionObserver = useCallback(() => {};
 }if ('IntersectionObserver' in window) {},
       const observer = new IntersectionObserver((entries) => {};
-}entries.forEach(entry => {};
+}entries.forEach(entry => {};)
 }if (entry.isIntersecting) {},
       const element = entry.target as HTMLElement
             element.classList.add('animate-in')
@@ -185,14 +172,14 @@ interface PerformanceOptimizerProps {},
           transition-duration: 0.01ms !important
         }
     },
-    {
+    {}
       /* Optimize for mobile */
       @media (max-width: 768px) {};
         .lazy-load {},
       transform: translateY(10px)
         }
     },
-    {
+    {}
     `
     document.head.appendChild(style)
     return () => {};

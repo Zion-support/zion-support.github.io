@@ -1,7 +1,6 @@
 import React from 'react',
       import { Helmet } from 'react-helmet-async',
-      import { Link } from 'react-router-dom',
-      import { 
+      import {}
   CheckCircle, 
   ArrowRight, 
   MessageSquare, 
@@ -12,10 +11,9 @@ import React from 'react',
   Cloud,
   Headphones,
   ShoppingCart,
-  Heart,
   DollarSign
 } from 'lucide-react',
-      const AiCustomerSupportChatbotPage: React.FC = () => {
+      const AiCustomerSupportChatbotPage: React.FC = () => {}
   const features = [
     'Natural Language Processing (NLP)',
     'Multi-language support (50+ languages)',
@@ -45,7 +43,7 @@ import React from 'react',
     { name: 'Microsoft Teams', icon: <Globe className="w-6 h-6 text-blue-600" /> }
   ],
       const pricingPlans = [
-    {
+    {}
       name: 'Starter',
       price: '$99/mo',
       originalPrice: '$149/mo',
@@ -60,7 +58,7 @@ import React from 'react',
       ],
       popular: false
     },
-    {
+    {}
       name: 'Professional',
       price: '$199/mo',
       originalPrice: '$299/mo',
@@ -77,7 +75,7 @@ import React from 'react',
       ],
       popular: true
     },
-    {
+    {}
       name: 'Enterprise',
       price: '$399/mo',
       originalPrice: '$599/mo',
@@ -96,25 +94,25 @@ import React from 'react',
     }
   ],
       const useCases = [
-    {
+    {}
       title: 'E-commerce',
       description: 'Handle product inquiries, order tracking, and returns',
       icon: <ShoppingCart className="w-6 h-6 text-blue-400" />,
       results: '60% reduction in support tickets'
     },
-    {
+    {}
       title: 'SaaS',
       description: 'Provide technical support and onboarding assistance',
       icon: <Cloud className="w-6 h-6 text-green-400" />,
       results: '80% faster issue resolution'
     },
-    {
+    {}
       title: 'Healthcare',
       description: 'Answer patient questions and schedule appointments',
-      icon: <Heart className="w-6 h-6 text-red-400" />,
+      icon: <className="w-6 h-6 text-red-400" />,
       results: '50% reduction in call volume'
     },
-    {
+    {}
       title: 'Financial Services',
       description: 'Handle account inquiries and transaction support',
       icon: <DollarSign className="w-6 h-6 text-green-600" />,
@@ -127,8 +125,8 @@ import React from 'react',
     { number: '1000+', label: 'Simultaneous Chats' },
     { number: '45%', label: 'Higher Satisfaction' }
   ],
-      return (
-    <>
+      return ()
+    <>{}</>
       <Helmet>
         <title>AI Customer Support Chatbot - Intelligent Customer Service | Zion Tech Group</title>
         <meta name="description" content="Transform your customer support with AI-powered chatbots. Reduce costs by 60%, improve response time by 90%, and handle 1000+ conversations simultaneously with our intelligent support solution." />
@@ -159,25 +157,25 @@ import React from 'react',
               improve response time by 90%, and handle 1000+ conversations simultaneously.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-green-500/25 flex items-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="#pricing"
                 className="border-2 border-white/30 hover:border-green-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center group"
               >
                 View Pricing
                 <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </>
             </div>
             
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              {stats.map((stat, index) => (
+              {stats.map((stat, index) => ()}
                 <div key={index} className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm">
                   <div className="text-3xl font-bold text-green-400 mb-2">{stat.number}</div>
                   <div className="text-gray-300 text-sm">{stat.label}</div>
@@ -202,7 +200,7 @@ import React from 'react',
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => ()}
               <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
                 <div className="flex items-center mb-4">
                   <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
@@ -229,7 +227,7 @@ import React from 'react',
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {integrations.map((integration, index) => (
+            {integrations.map((integration, index) => ()}
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 group">
                 <div className="flex items-center justify-center mb-4">
                   <div className="group-hover:scale-110 transition-transform">
@@ -258,7 +256,7 @@ import React from 'react',
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => ()}
               <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
                 <div className="flex items-center mb-4">
                   <TrendingUp className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
@@ -285,7 +283,7 @@ import React from 'react',
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map((useCase, index) => ()}
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 group">
                 <div className="mb-4 group-hover:scale-110 transition-transform">
                   {useCase.icon}
@@ -318,11 +316,11 @@ import React from 'react',
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+            {pricingPlans.map((plan, index) => ()}
+              <divkey={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${>}
                 plan.popular ? 'ring-2 ring-green-500 bg-slate-700/50' : ''
               }`}>
-                {plan.popular && (
+                {plan.popular && ()}
                   <div className="text-center mb-4">
                     <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
@@ -340,7 +338,7 @@ import React from 'react',
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => ()}
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -348,16 +346,16 @@ import React from 'react',
                   ))}
                 </ul>
 
-                <Link
+                <>
                   to="/contact"
-                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
+                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${}
                     plan.popular
                       ? 'bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white'
                       : 'border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white'
                   }`}
                 >
                   Start Free Trial
-                </Link>
+                </>
               </div>
             ))}
           </div>
@@ -375,28 +373,12 @@ import React from 'react',
             improve response times, and enhance customer satisfaction.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <>
               to="/contact"
               className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Start Free Trial
-            </Link>
-            <Link
+            </>
+            <>
               to="/demo"
-<<<<<<< HEAD
               className="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-            >
-              Schedule Demo
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-    },
-    {
-
-export default AiCustomerSupportChatbotPage;
-=======
-              className="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

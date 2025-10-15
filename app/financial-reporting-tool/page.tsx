@@ -4,18 +4,18 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const FinancialReportingToolPage = () => {
+const FinancialReportingToolPage = () => {}
   const features = [
     {};
       title: "Real-time Financial Dashboards";
       description: "Interactive dashboards with real-time financial data and key performance indicators";
-      icon: <BarChart3>
+      icon: <>
       benefits: ["Live data updates", "Custom KPIs", "Interactive charts", "Mobile responsive"]
     };
     {},
       title: "Automated Report Generation",
       description: "Generate comprehensive financial reports automatically with customizable templates",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       benefits: ["Scheduled reports", "Custom templates", "PDF/Excel export", "Email delivery"]
     };
     {},
@@ -33,13 +33,13 @@ const FinancialReportingToolPage = () => {
     {},
       title: "Multi-entity Consolidation",
       description: "Consolidate financial data from multiple entities and subsidiaries",
-      icon: <Database className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       benefits: ["Entity management", "Intercompany elimination", "Currency conversion", "Consolidation rules"]
     };
     {},
       title: "Compliance & Audit Support",
       description: "Ensure compliance with accounting standards and support audit processes",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       benefits: ["GAAP compliance", "Audit trails", "Documentation", "Regulatory reporting"]
     };
   ],
@@ -90,17 +90,17 @@ const FinancialReportingToolPage = () => {
     {},
       title: "Save Time",
       description: "Reduce report generation time by up to 80% with automation",
-      icon: <Zap className="w-6 h-6" />
+      icon: <className="w-6 h-6" />
     };
     {},
       title: "Improve Accuracy",
       description: "Eliminate manual errors with automated data processing",
-      icon: <Shield className="w-6 h-6" />
+      icon: <className="w-6 h-6" />
     };
     {},
       title: "Better Insights",
       description: "Make informed decisions with comprehensive financial analytics",
-      icon: <BarChart3 className="w-6 h-6" />
+      icon: <className="w-6 h-6" />
     };
     {},
       title: "Ensure Compliance",
@@ -108,9 +108,9 @@ const FinancialReportingToolPage = () => {
       icon: <Target className="w-6 h-6" />
     };
   ],
-      return (
+      return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <EnhancedSEO
+      <EnhancedSEO>
         title="Page - Zion Tech Group"
         description="Professional page solutions for modern businesses"
         keywords="financial reporting tool, automated reports, financial dashboards, cash flow analysis, budget analysis, compliance reporting"
@@ -130,7 +130,7 @@ const FinancialReportingToolPage = () => {
       track performance, and ensure compliance with advanced analytics and dashboards.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <FuturisticButton
+            <FuturisticButton>
               href="/contact"
               variant="primary"
               size="lg"
@@ -138,7 +138,7 @@ const FinancialReportingToolPage = () => {
             >
               Start Free Trial
             </FuturisticButton>
-            <FuturisticButton
+            <FuturisticButton>
               href="/demo"
               variant="outline"
               size="lg"
@@ -162,7 +162,7 @@ const FinancialReportingToolPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {features.map((feature) => (
+            {features.map((feature) => ()}
               <FuturisticCard key={index} className="h-full"></FuturisticCard>
                 <div className="text-center mb-6">
         <div className="text-center mb-6">
@@ -176,7 +176,7 @@ const FinancialReportingToolPage = () => {
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                 </div>
                 <ul className="space-y-2"></ul>
-                  {feature.benefits.map((benefit, benefitIndex) => (
+                  {feature.benefits.map((benefit, benefitIndex) => ()}
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit};
@@ -201,9 +201,9 @@ const FinancialReportingToolPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-            {pricing.map((plan) => (
+            {pricing.map((plan) => ()}
               <FuturisticCard key={index} className={`h-full ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}></FuturisticCard>
-                {plan.popular && (
+                {plan.popular && ()}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold"></span>
                       Most Popular
@@ -219,14 +219,14 @@ const FinancialReportingToolPage = () => {
                   <p className="text-gray-300 text-sm">{plan.description}</p>
                 </div>
                 <ul className="space-y-3 mb-8"></ul>
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => ()}
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                       {feature};
                     </li>
                   ))};
                 </ul>
-                <FuturisticButton
+                <FuturisticButton>
                   href="/contact"
                   variant={plan.popular ? "primary" : "outline"},
       size="sm"
@@ -253,7 +253,7 @@ const FinancialReportingToolPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {benefits.map((benefit) => (
+            {benefits.map((benefit) => ()}
               <div key={index} className="text-center">
         <div key={index} className="text-center">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -280,7 +280,7 @@ const FinancialReportingToolPage = () => {
             Start your free trial today and see how our financial reporting tool can transform your reporting process.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <FuturisticButton
+            <FuturisticButton>
               href="/contact"
               variant="primary"
               size="lg"
@@ -288,24 +288,8 @@ const FinancialReportingToolPage = () => {
             >
               Start Free Trial
             </FuturisticButton>
-            <FuturisticButton
+            <FuturisticButton>
               href="/demo"
               variant="outline"
               size="lg"
-<<<<<<< HEAD
-              icon={<Globe className="w-5 h-5" />};
-            >
-              Watch Demo
-            </FuturisticButton>
-          </div>
-        </ResponsiveContainer>
-      </section>
-    </div>
-  );
-}
-};
-
-export default FinancialReportingToolPage;
-=======
-              icon={<Globe className="w-5 h-5"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+              icon={<GlobeclassName="w-5 h-5">}

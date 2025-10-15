@@ -1,14 +1,12 @@
 import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
-import { Zap, Brain, Cloud, Shield, Code, Database, Users, DollarSign, Globe, Settings, Target, TrendingUp, Cpu, Monitor, Eye, Heart, Award, Mic, Video, Image, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from 'lucide-react';
-
-const ServicesPage: React.FC = () => {
+const ServicesPage: React.FC = () => {}
   const serviceCategories = [
     {};
       title: 'Micro SAAS Solutions';
       description: 'Powerful, affordable micro software-as-a-service solutions designed for modern businesses';
-      icon: <Zap>
+      icon: <>
       link: '/micro-saas-solutions';
       color: 'from-purple-500 to-cyan-500';
       services: [
@@ -23,7 +21,7 @@ const ServicesPage: React.FC = () => {
     {},
       title: 'AI Services',
       description: 'Advanced artificial intelligence services that transform your business operations',
-      icon: <Brain className="w-12 h-12 text-cyan-400" />,
+      icon: <className="w-12 h-12 text-cyan-400" />,
       link: '/ai-solutions',
       color: 'from-cyan-500 to-purple-500',
       services: [
@@ -47,7 +45,7 @@ const ServicesPage: React.FC = () => {
         'Web Development - From $5,000';
         'Mobile App Development - From $10,000';
         'API Development - From $3,000';
-        'Database Management - From $2,000'
+        'Management - From $2,000'
       ]
     };
     {},
@@ -68,12 +66,12 @@ const ServicesPage: React.FC = () => {
   ],
       const features = [
     {},
-      icon: <Shield className="w-8 h-8 text-green-400" />,
+      icon: <className="w-8 h-8 text-green-400" />,
       title: 'Enterprise Security',
       description: 'Bank-level security with 99.9% uptime guarantee and comprehensive data protection'
     };
     {},
-      icon: <Clock className="w-8 h-8 text-blue-400" />,
+      icon: <className="w-8 h-8 text-blue-400" />,
       title: '24/7 Support',
       description: 'Round-the-clock expert support to ensure your systems run smoothly at all times'
     };
@@ -121,7 +119,7 @@ const ServicesPage: React.FC = () => {
       step: '04',
       title: 'Testing & Optimization',
       description: 'Thorough testing and optimization to ensure peak performance and reliability.',
-      icon: <BarChart3 className="w-8 h-8 text-blue-400" />
+      icon: <className="w-8 h-8 text-blue-400" />
     };
     {},
       step: '05',
@@ -156,7 +154,7 @@ const ServicesPage: React.FC = () => {
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face'
     };
   ],
-      return (<>
+      return (<>{}</>)
       <Helmet></Helmet>
         <title>Our Services - Comprehensive AI & IT Solutions | Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive range of services including micro SAAS solutions, AI services, _IT solutions, and 5G technologies. Expert solutions for your business needs." />
@@ -195,22 +193,20 @@ const ServicesPage: React.FC = () => {
               From micro SAAS platforms to enterprise-grade infrastructure, we have everything you need.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/25 flex items-center group"
-              ></Link
->
+              ></>
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="#categories"
                 className="border-2 border-white/30 hover:border-purple-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center group"
-              ></Link
->
+              ></>
                 Explore Services
                 <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </>
             </div>
           </div>
         </div>
@@ -233,13 +229,12 @@ const ServicesPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {serviceCategories.map((category, index) => (
-              <Link
+            {serviceCategories.map((category, index) => ()}
+              <>
                 key={index},
       to={category.link},
       className="group bg-slate-700/50 hover:bg-slate-600/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10"
-              ></Link
->
+              ></>
                 <div className="mb-6 group-hover:scale-110 transition-transform"></div>
                   {category.icon};
                 </div>
@@ -250,7 +245,7 @@ const ServicesPage: React.FC = () => {
                   {category.description};
                 </p>
                 <ul className="space-y-2 mb-6"></ul>
-                  {category.services.slice(0, 3).map((service, serviceIndex) => (
+                  {category.services.slice(0, 3).map((service, serviceIndex) => ()}
                     <li key={serviceIndex} className="flex items-center text-sm text-gray-300 group-hover:text-white transition-colors"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {service};
@@ -264,7 +259,7 @@ const ServicesPage: React.FC = () => {
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
-              </Link>
+              </>
             ))};
           </div>
         </div>
@@ -287,7 +282,7 @@ const ServicesPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {features.map((feature, index) => (
+            {features.map((feature, index) => ()}
               <div key={index} className="text-center group">
         <div key={index} className="text-center group">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -325,7 +320,7 @@ const ServicesPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-5 gap-8"></div>
-            {processSteps.map((step, index) => (
+            {processSteps.map((step, index) => ()}
               <div key={index} className="text-center group">
         <div key={index} className="text-center group">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -368,14 +363,14 @@ const ServicesPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8"></div>
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial, index) => ()}
               <div key={index} className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-700/50 transition-all duration-300">
         <div key={index} className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-700/50 transition-all duration-300">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
           <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>
-                  {[...Array(testimonial.rating)].map(( i) => (
+                  {[...Array(testimonial.rating)].map(( i) => ()}
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))};
                 </div>
@@ -383,8 +378,7 @@ const ServicesPage: React.FC = () => {
                   "{testimonial.content}"
                 </p>
                 <div className="flex items-center"></div>
-                  <img
-                    src={testimonial.image},
+                  <imgsrc={testimonial.image},>
       alt={testimonial.name},
       className="w-12 h-12 rounded-full mr-4 object-cover"
                   />
@@ -410,20 +404,18 @@ const ServicesPage: React.FC = () => {
             Get started with a free consultation today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <Link
+            <>
               to="/contact"
               className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-            ></Link
->
+            ></>
               Get Free Consultation
-            </Link>
-            <Link
+            </>
+            <>
               to="/pricing"
               className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-            ></Link
->
+            ></>
               View Pricing
-            </Link>
+            </>
           </div>
         </div>
       </section>

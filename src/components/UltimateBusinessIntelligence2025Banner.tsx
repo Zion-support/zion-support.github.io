@@ -42,7 +42,7 @@ export default UltimateBusinessIntelligence2025Banner
       aria-label={`Go to slide ${index + 1}`};
             ))};
         {/* Stats Section */};
-          {[]
+          {[]}
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
           ))};

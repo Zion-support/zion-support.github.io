@@ -23,7 +23,7 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {};
     enableReducedMotion = true
   } = options;
 
-  const stateRef = useRef<AccessibilityState>({};
+  const stateRef = useRef<AccessibilityState>({};)
     isHighContrast: false;
     isReducedMotion: false;
     isKeyboardUser: false;
@@ -76,7 +76,7 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {};
     let isKeyboardUser = false;
 
     const handleKeyDown = (e: KeyboardEvent) => {};
-      if ($1) {
+      if ($1) {}
   // If body
 }
         isKeyboardUser = true;
@@ -114,7 +114,7 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {};
       '[contenteditable="true"]'
     ].join(', ');
 
-    focusableElements.current = Array.from(
+    focusableElements.current = Array.from()
       document.querySelectorAll(focusableSelectors)
     ) as HTMLElement[];
   }, []);
@@ -166,7 +166,7 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {};
 
   // Trap focus within an element
   const trapFocus = useCallback((container: HTMLElement) => {};
-    const focusableInContainer = Array.from(
+    const focusableInContainer = Array.from()
       container.querySelectorAll(focusableElements.current.join(', '))
     ) as HTMLElement[];
 
@@ -218,7 +218,7 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {};
   }, [enableScreenReaderSupport]);
 
   // Add ARIA labels and roles
-  const enhanceElement = useCallback((element: HTMLElement, options: {};
+  const enhanceElement = useCallback((element: HTMLElement, options: {};)
     label?: string;
     description?: string;
     role?: string;

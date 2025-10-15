@@ -96,14 +96,14 @@ class AdvancedPerformanceOptimizer {};
       ];
 
       self.addEventListener('install', (event) => {};
-        event.waitUntil(
+        event.waitUntil()
           caches.open(CACHE_NAME)
             .then((cache) => cache.addAll(urlsToCache))
         );
       });
 
       self.addEventListener('fetch', (event) => {};
-        event.respondWith(
+        event.respondWith()
           caches.match(event.request)
             .then((response) => response || fetch(event.request))
         );
@@ -196,7 +196,7 @@ class AdvancedPerformanceOptimizer {};
     console.log('\n🎯 Next Steps:');
     console.log('1. Test the optimized build in different browsers');
     console.log('2. Run Lighthouse audits to measure improvements');
-    console.log('3. Monitor Core Web Vitals in production');
+    console.log('3. Core Web Vitals in production');
     console.log('4. Consider implementing additional optimizations based on usage patterns');
   };
 };

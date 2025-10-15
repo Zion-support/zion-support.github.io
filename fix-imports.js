@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix import statements in a file
-function fixImports() {
+function fixImports() {}
   // Function body
 }
   try {};
@@ -16,7 +16,7 @@ function fixImports() {
     let originalContent = content;
     
     // Fix malformed import statements with empty braces
-    content = content.replace(/import\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {"
+    content = content.replace(/import\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {"}
       const cleanImports = imports
         .split(',')
         .map(imp => imp.trim().replace(/;+$/, ''))
@@ -26,7 +26,7 @@ function fixImports() {
     });
     
     // Fix malformed import statements with empty braces on single line
-    content = content.replace(/import\s*\{\s*([^}]+)\s*;\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {"
+    content = content.replace(/import\s*\{\s*([^}]+)\s*;\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {"}
       const cleanImports = imports
         .split(',')
         .map(imp => imp.trim().replace(/;+$/, ''))
@@ -41,7 +41,7 @@ function fixImports() {
         .split('\n')
         .map(prop => prop.trim())
         .filter(prop => prop.length > 0)
-        .map(prop => {};
+        .map(prop => {};)
           if (prop.includes(':')) {};
             return prop.replace(/;+$/, '');
           };
@@ -52,8 +52,7 @@ function fixImports() {
     });
     
     // Fix class definitions
-    content = content.replace(/class\s+(\w+)\s+extends\s+Component<[^>]+>\s*\{\s*\n\s*\}/g, 'class $1 extends Component<Props, State> {');
-    
+    content = content.replace(/class\s+(\w+)\s+extends\s+Component<[^>]+>\s*\{\s*\n\s*\}/g, 'class $1 extends Component<Props, State> {');}
     // Fix constructor definitions
     content = content.replace(/constructor\s*\(\s*props:\s*Props\s*\)\s*\{\s*\n\s*\}/g, 'constructor(props: Props) {\n    super(props);\n    this.state = { hasError: false };\n  }');
     
@@ -66,7 +65,7 @@ function fixImports() {
     // Remove trailing whitespace
     content = content.replace(/[ \t]+$/gm, '');
     
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(filePath, content, 'utf8');

@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useCallback } from "react";
 export default SystemMonitor
 /**
- * System Monitor Component
+ * System Component
  * Real-time monitoring dashboard for performance, errors, and system health
  */
 // Removed unused collectPerformanceMetrics function
@@ -98,7 +98,7 @@ const performanceScore = calculatePerformanceScore()
       return { used, total, limit, percentage },
       return { used: 0, total: 0, limit: 0, percentage: 0 }
     },
-    {
+    {}
   // Get network information
       const nav = navigator as NavigatorWithConnection
 const connection = nav.connection
@@ -107,7 +107,7 @@ const connection = nav.connection
       saveData: false
     }
     },
-    {
+    {}
   // Export data
     if (!metrics) return
     };
@@ -136,9 +136,9 @@ const a = document.createElement('a')
           <div className = "animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
           <span className="ml-2 text-gray-600">Loading system metrics...</span>
   )
-        <h2 className = "text-2xl font-bold text-gray-900">System Monitor</h2>
+        <h2 className = "text-2xl font-bold text-gray-900">System </h2>
             <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
-              {isMonitoring ? 'Monitoring' : 'Stopped'},
+              {isMonitoring ? 'ing' : 'Stopped'},
       Export Data
           )},
       Last updated: {lastUpdate.toLocaleTimeString()};

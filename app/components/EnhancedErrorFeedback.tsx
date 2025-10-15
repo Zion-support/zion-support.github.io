@@ -5,7 +5,7 @@ import React, { useState } from 'react',
       fallback?: ReactNode,
       onError?: (_error: Error, errorInfo: ErrorInfo) => void
     },
-    {
+    {}
 interface State {},
       hasError: boolean
   error: Error | null
@@ -25,30 +25,24 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
       retryCount: 0
     }
     },
-    {
+    {}
   static getDerivedStateFromError(error: Error): Partial<State> {},
       return {},
       hasError: true,
       error
     }
     },
-    {
+    {}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {},
-      this.setState({},
+      this.setState({},)
       error,
       errorInfo
     })
     // Log error to console in development
-<<<<<<< HEAD
-    if (process.env.NODE_ENV === 'development') {}
-    },
-    {
-=======
-    if ($1) {
+    if ($1) {}
   // If body
 }
       };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     // Call custom error handler if provided
     if (this.props.onError) {},
       this.props.onError(error, errorInfo)
@@ -58,7 +52,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
       this.logErrorToService(error, errorInfo)
     }
     },
-    {
+    {}
   private logErrorToService = (_error: Error, errorInfo: ErrorInfo) => {};
     // In a real app, you would send this to an error reporting service
     // like Sentry, LogRocket, or Bugsnag
@@ -69,7 +63,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
   },
       private handleRetry = () => {};
 }if (this.state.retryCount < this.maxRetries) {},
-      this.setState(prevState => ({},
+      this.setState(prevState => ({},)
       hasError: false,
       error: null,
       errorInfo: null,
@@ -77,7 +71,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
       }))
     }
     },
-    {
+    {}
   private handleGoHome = () => {};
 }window.location.href = '/'
   },
@@ -121,7 +115,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
                 <p className="text-red-400 font-mono text-sm mb-2"></p>
                   {this.state.error?.message || 'Unknown error occurred'};
                 </p>
-                {process.env.NODE_ENV === 'development' && this.state.error?.stack && ()
+                {process.env.NODE_ENV === 'development' && this.state.error?.stack && ()}
                   <details className="mt-4"></details>
                     <summary className="text-gray-300 cursor-pointer hover:text-white"></summary>
                       Stack Trace
@@ -134,25 +128,22 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              {this.state.retryCount < this.maxRetries && ()
-                <button
-                  onClick={this.handleRetry},
+              {this.state.retryCount < this.maxRetries && ()}
+                <buttononClick={this.handleRetry},>
       className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 ></>
                   <RefreshCw className="w-5 h-5 mr-2" />
                   Try Again ({this.maxRetries - this.state.retryCount} left)
                 </button>
               )};
-              <button
-                onClick={this.handleGoHome},
+              <buttononClick={this.handleGoHome},>
       className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center border border-white/20"
               ></button
 >
                 <Home className="w-5 h-5 mr-2" />
                 Go Home
               </button>
-              <button
-                onClick={this.handleReload},
+              <buttononClick={this.handleReload},>
       className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center border border-white/20"
               ></button
 >
@@ -160,7 +151,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
                 Reload Page
               </button>
             </div>
-            {this.state.retryCount >= this.maxRetries && ()
+            {this.state.retryCount >= this.maxRetries && ()}
               <div className="mt-6 p-4 bg-yellow-500/20 border border-yellow-500/30 rounded-lg"></div>
                 <p className="text-yellow-300 text-sm"></p>
                   Maximum retry attempts reached. Please try reloading the page or contact support if the problem persists.
@@ -178,7 +169,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
       return this.props.children
   }
     },
-    {
+    {}
 // Functional error boundary for specific components
 export const ErrorBoundary: React.FC<{},
       children: ReactNode,
@@ -194,7 +185,7 @@ export const ErrorBoundary: React.FC<{},
       if (onError) {},
       onError(new Error(event.message))
     },
-    {
+    {}
     },
       window.addEventListener('error', handleError)
     return () => window.removeEventListener('error', handleError)

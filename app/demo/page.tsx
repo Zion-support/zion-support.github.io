@@ -2,20 +2,17 @@
 import { Helmet } from 'react-helmet-async',
       const features = [
     {},
-      icon: BarChart3,
-      title: 'AI-Powered Analytics',
+      icon: title: 'AI-Powered Analytics',
       description: 'See how our AI analyzes your data in real-time',
       demo: 'Live Demo'
     };
     {},
-      icon: Shield,
-      title: 'Advanced Security',
+      icon: title: 'Advanced Security',
       description: 'Experience our enterprise-grade security features',
       demo: 'Demo'
     };
     {},
-      icon: BarChart3,
-      title: 'Business Intelligence',
+      icon: title: 'Business Intelligence',
       description: 'Explore our comprehensive BI dashboard',
       demo: 'BI Demo'
     };
@@ -45,8 +42,8 @@ import { Helmet } from 'react-helmet-async',
       rating: 5
     };
   ],
-      return (
-    <>
+      return ()
+    <>{}</>
       <Helmet></Helmet>
         <title>Demo - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="See our AI and IT solutions in action with live demos." />
@@ -60,12 +57,11 @@ import { Helmet } from 'react-helmet-async',
     </>
   )
     },
-    {
-
+    {}
 export default DemoPage,
-      return (
-    <>
-      <SEOHead 
+      return ()
+    <>{}</>
+      <SEOHead>
         title="demo - Zion Tech Group"
         description="Zion Tech Group demo service page"
       />
@@ -78,6 +74,5 @@ export default DemoPage,
     </>
   )
     },
-    {
-
+    {}
 export default Component;

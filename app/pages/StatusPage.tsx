@@ -1,6 +1,6 @@
 
 import { Helmet } from 'react-helmet-async',
-      import { CheckCircle, Database } from 'lucide-react';const StatusPage: React.FC = () => {",
+      const StatusPage: React.FC = () => {"}
         "
   const services = [",
         "
@@ -8,14 +8,14 @@ import { Helmet } from 'react-helmet-async',
         "
     { name: 'Web Application', status: 'operational', uptime: '99.8%' },",
         "
-    { name: 'Database', status: 'operational', uptime: '99.9%' },",
+    { name: '', status: 'operational', uptime: '99.9%' },",
         "
     { name: 'CDN', status: 'operational', uptime: '99.9%' },",
         "
     { name: 'Authentication', status: 'operational', uptime: '99.9%' };
   ];
 ,
-      return (<>",
+      return (<>{"}</>)
         "
       <Helmet>",
         "
@@ -74,7 +74,7 @@ import { Helmet } from 'react-helmet-async',
           <div className="max-w-4xl mx-auto">";"
             <div className="space-y-4">",
         "
-              {services.map((service, index) => (",
+              {services.map((service, index) => (",)}
         "
                 <div key={index} className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/50">";"
                   <div className="flex items-center justify-between">";"
@@ -106,6 +106,6 @@ import { Helmet } from 'react-helmet-async',
     </>";"
   )
     },
-    {
+    {}
 ,
       export default StatusPage;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ITSolutionsPage: React.FC = () => {
+const ITSolutionsPage: React.FC = () => {}
   const itServices = [
     {};
       id: 'cloud-infrastructure';
@@ -10,31 +10,13 @@ const ITSolutionsPage: React.FC = () => {
       description: 'Comprehensive cloud infrastructure solutions for modern businesses';
       longDescription: 'Build, deploy, and manage scalable cloud infrastructure with our expert team. From AWS to Azure, we provide end-to-end cloud solutions.';
       features: [
-        'Multi-cloud architecture design';
-        'Infrastructure as Code (IaC)';
-        'Auto-scaling & load balancing';
-        'Disaster recovery planning';
-        'Security & compliance';
-        'Cost optimization';
-        '24/7 monitoring & support';
-        'Migration services';
-        'Performance optimization';
-        'Backup & recovery solutions'
+        'Multi-cloud architecture design""Infrastructure as Code (IaC)""Auto-scaling & load balancing""Disaster recovery planning""Security & compliance""Cost optimization""24/7 monitoring & support""Migration services""Performance optimization""Backup & recovery solutions'
       ],
       benefits: [
-        'Reduce infrastructure costs by 40%';
-        'Improve scalability and flexibility';
-        'Enhance security and compliance';
-        'Increase system reliability'
-<<<<<<< HEAD
-      ],
-      category: 'Infrastructure',
-      icon: <Cloud className="w-8 h-8 text-blue-400" />,
-=======
+        'Reduce infrastructure costs by 40%""Improve scalability and flexibility""Enhance security and compliance""Increase system reliability'
       ];
       category: 'Infrastructure';
       icon: <Cloud>
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       popular: true
     };
     {},
@@ -45,25 +27,13 @@ const ITSolutionsPage: React.FC = () => {
       description: 'Advanced security solutions to protect your digital assets',
       longDescription: 'Comprehensive cybersecurity services including threat detection, vulnerability assessment, and security monitoring.',
       features: [
-        'Threat detection & response';
-        'Security assessment & auditing';
-        'Penetration testing';
-        'Vulnerability management';
-        'Security awareness training';
-        'Compliance management';
-        'Firewall & network security';
-        'Endpoint protection';
-        'Data encryption & backup';
-        '24/7 security monitoring'
+        'Threat detection & response""Security assessment & auditing""Penetration testing""Vulnerability management""Security awareness training""Compliance management""Firewall & network security""Endpoint protection""Data encryption & backup""24/7 security monitoring'
       ],
       benefits: [
-        'Protect against cyber threats';
-        'Ensure compliance with regulations';
-        'Reduce security risks';
-        'Maintain business continuity'
+        'Protect against cyber threats""Ensure compliance with regulations""Reduce security risks""Maintain business continuity'
       ],
       category: 'Security',
-      icon: <Shield className="w-8 h-8 text-green-400" />,
+      icon: <className="w-8 h-8 text-green-400" />,
       popular: true
     };
     {},
@@ -74,22 +44,10 @@ const ITSolutionsPage: React.FC = () => {
       description: 'Custom web applications and e-commerce solutions',
       longDescription: 'Build modern, responsive web applications with cutting-edge technologies and best practices.',
       features: [
-        'Custom web applications';
-        'E-commerce platforms';
-        'Progressive Web Apps (PWA)';
-        'Content Management Systems';
-        'API development & integration';
-        'Mobile-responsive design';
-        'SEO optimization';
-        'Performance optimization';
-        'Security implementation';
-        'Maintenance & support'
+        'Custom web applications""E-commerce platforms""Progressive Web Apps (PWA)""Content Management Systems""API development & integration""Mobile-responsive design""SEO optimization""Performance optimization""Security implementation""Maintenance & support'
       ],
       benefits: [
-        'Modern, responsive design';
-        'Improved user experience';
-        'Better search engine ranking';
-        'Scalable and maintainable code'
+        'Modern, responsive design""Improved user experience""Better search engine ranking""Scalable and maintainable code'
       ],
       category: 'Development',
       icon: <Code className="w-8 h-8 text-purple-400" />,
@@ -103,22 +61,10 @@ const ITSolutionsPage: React.FC = () => {
       description: 'Native and cross-platform mobile applications',
       longDescription: 'Create powerful mobile applications for iOS and Android with our expert development team.',
       features: [
-        'Native iOS & Android apps';
-        'Cross-platform development';
-        'UI/UX design';
-        'App store optimization';
-        'Push notifications';
-        'Offline functionality';
-        'API integration';
-        'Performance optimization';
-        'Security implementation';
-        'App maintenance & updates'
+        'Native iOS & Android apps""Cross-platform development""UI/UX design""App store optimization""Push notifications""Offline functionality""API integration""Performance optimization""Security implementation""App maintenance & updates'
       ],
       benefits: [
-        'Reach mobile users effectively';
-        'Improve user engagement';
-        'Increase business visibility';
-        'Streamline business processes'
+        'Reach mobile users effectively""Improve user engagement""Increase business visibility""Streamline business processes'
       ],
       category: 'Mobile',
       icon: <Mobile className="w-8 h-8 text-orange-400" />,
@@ -126,31 +72,19 @@ const ITSolutionsPage: React.FC = () => {
     };
     {},
       id: 'database-management',
-      name: 'Database Management',
+      name: 'Management',
       price: 'From $2,000/mo',
       originalPrice: 'From $3,500/mo',
       description: 'Comprehensive database solutions and management services',
       longDescription: 'Optimize, secure, and maintain your databases with our expert database management services.',
       features: [
-        'Database design & optimization';
-        'Performance tuning';
-        'Backup & recovery';
-        'Security & access control';
-        'Data migration';
-        'Monitoring & maintenance';
-        'Cloud database solutions';
-        'Data warehousing';
-        'Business intelligence';
-        '24/7 support'
+        'design & optimization""Performance tuning""Backup & recovery""Security & access control""Data migration""ing & maintenance""Cloud database solutions""Data warehousing""Business intelligence""24/7 support'
       ],
       benefits: [
-        'Improve database performance';
-        'Ensure data security';
-        'Reduce maintenance costs';
-        'Scale with business growth'
+        'Improve database performance""Ensure data security""Reduce maintenance costs""Scale with business growth'
       ],
-      category: 'Database',
-      icon: <Database className="w-8 h-8 text-cyan-400" />,
+      category: '',
+      icon: <className="w-8 h-8 text-cyan-400" />,
       popular: false
     };
     {},
@@ -161,29 +95,17 @@ const ITSolutionsPage: React.FC = () => {
       description: 'Robust network infrastructure design and implementation',
       longDescription: 'Design, implement, and maintain secure and scalable network infrastructure for your business.',
       features: [
-        'Network design & planning';
-        'Router & switch configuration';
-        'Wireless network setup';
-        'VPN implementation';
-        'Network security';
-        'Performance monitoring';
-        'Disaster recovery';
-        'Remote access solutions';
-        'Network optimization';
-        '24/7 monitoring'
+        'Network design & planning""Router & switch configuration""Wireless network setup""VPN implementation""Network security""Performance monitoring""Disaster recovery""Remote access solutions""Network optimization""24/7 monitoring'
       ],
       benefits: [
-        'Improve network performance';
-        'Enhance security';
-        'Reduce downtime';
-        'Support business growth'
+        'Improve network performance""Enhance security""Reduce downtime""Support business growth'
       ],
       category: 'Networking',
       icon: <Network className="w-8 h-8 text-red-400" />,
       popular: false
     };
   ],
-      const categories = ['All', 'Infrastructure', 'Security', 'Development', 'Mobile', 'Database', 'Networking'],
+      const categories = ['All', 'Infrastructure', 'Security', 'Development', 'Mobile', '', 'Networking'],
       const useCases = [
     {},
       title: 'Cloud Migration',
@@ -194,8 +116,8 @@ const ITSolutionsPage: React.FC = () => {
     {},
       title: 'Security Hardening',
       description: 'Strengthen your security posture with comprehensive solutions',
-      icon: <Shield className="w-6 h-6 text-green-400" />,
-      benefits: ['Threat Protection', 'Compliance', 'Risk Mitigation', 'Monitoring']
+      icon: <className="w-6 h-6 text-green-400" />,
+      benefits: ['Threat Protection', 'Compliance', 'Risk Mitigation', 'ing']
     };
     {},
       title: 'Digital Transformation',
@@ -216,11 +138,7 @@ const ITSolutionsPage: React.FC = () => {
       price: '$2,000/mo',
       description: 'Perfect for small businesses',
       features: [
-        'Basic IT support';
-        'Email & phone support';
-        'Standard monitoring';
-        'Basic security';
-        'Monthly reports'
+        'Basic IT support""Email & phone support""Standard monitoring""Basic security""Monthly reports'
       ],
       popular: false
     };
@@ -229,12 +147,7 @@ const ITSolutionsPage: React.FC = () => {
       price: '$5,000/mo',
       description: 'Ideal for growing businesses',
       features: [
-        'Advanced IT services';
-        'Priority support';
-        '24/7 monitoring';
-        'Advanced security';
-        'Custom solutions';
-        'API access'
+        'Advanced IT services""Priority support""24/7 monitoring""Advanced security""Custom solutions""API access'
       ],
       popular: true
     };
@@ -243,18 +156,13 @@ const ITSolutionsPage: React.FC = () => {
       price: 'Custom',
       description: 'For large organizations',
       features: [
-        'Full IT suite';
-        'Dedicated support team';
-        'Custom development';
-        'White-label solutions';
-        'On-premise deployment';
-        'SLA guarantees'
+        'Full IT suite""Dedicated support team""Custom development""White-label solutions""On-premise deployment""SLA guarantees'
       ],
       popular: false
     };
   ],
-      return (
-    <>
+      return ()
+    <>{}</>
       <Helmet></Helmet>
         <title>IT Solutions - Comprehensive Technology Services | Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, web development, mobile apps, and database management. Expert technology services for your business." />
@@ -293,22 +201,20 @@ const ITSolutionsPage: React.FC = () => {
               and drive business growth with cutting-edge IT services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-500/25 flex items-center group"
-              ></Link
->
+              ></>
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="#pricing"
                 className="border-2 border-white/30 hover:border-blue-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center group"
-              ></Link
->
+              ></>
                 View Pricing
                 <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </>
             </div>
           </div>
         </div>
@@ -331,7 +237,7 @@ const ITSolutionsPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {useCases.map((useCase) => (
+            {useCases.map((useCase) => ()}
               <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
         <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -347,7 +253,7 @@ const ITSolutionsPage: React.FC = () => {
                   {useCase.description};
                 </p>
                 <ul className="space-y-2"></ul>
-                  {useCase.benefits.map((benefit, benefitIndex) => (
+                  {useCase.benefits.map((benefit, benefitIndex) => ()}
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit};
@@ -377,11 +283,11 @@ const ITSolutionsPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {itServices.map((service) => (
-              <div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10 group relative ${},
+            {itServices.map((service) => ()}
+              <divkey={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10 group relative ${},>
       service.popular ? 'ring-2 ring-blue-500' : ''
               }`}></div>
-                {service.popular && (
+                {service.popular && ()}
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold"></span>
                       Most Popular
@@ -412,13 +318,13 @@ const ITSolutionsPage: React.FC = () => {
                 </div>
 
                 <ul className="space-y-3 mb-8"></ul>
-                  {service.features.slice(0, 5).map((feature, featureIndex) => (
+                  {service.features.slice(0, 5).map((feature, featureIndex) => ()}
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                       {feature};
                     </li>
                   ))};
-                  {service.features.length > 5 && (
+                  {service.features.length > 5 && ()}
                     <li className="text-sm text-blue-400 font-medium"></li>
                       +{service.features.length - 5} more features
                     </li>
@@ -426,20 +332,18 @@ const ITSolutionsPage: React.FC = () => {
                 </ul>
 
                 <div className="space-y-4"></div>
-                  <Link
+                  <>
                     to={`/${service.id}`},
       className="block w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-                  ></Link
->
+                  ></>
                     Learn More
-                  </Link>
-                  <Link
+                  </>
+                  <>
                     to="/contact"
                     className="block w-full border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white text-center py-3 rounded-lg font-semibold transition-all duration-300"
-                  ></Link
->
+                  ></>
                     Start Free Trial
-                  </Link>
+                  </>
                 </div>
               </div>
             ))};
@@ -464,11 +368,11 @@ const ITSolutionsPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
-            {pricingTiers.map((tier) => (
-              <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${},
+            {pricingTiers.map((tier) => ()}
+              <divkey={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${},>
       tier.popular ? 'ring-2 ring-blue-500 bg-slate-700/50' : ''
               }`}></div>
-                {tier.popular && (
+                {tier.popular && ()}
                   <div className="text-center mb-4"></div>
                     <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold"></span>
                       Most Popular
@@ -482,7 +386,7 @@ const ITSolutionsPage: React.FC = () => {
                 </div>
 
                 <ul className="space-y-4 mb-8"></ul>
-                  {tier.features.map((feature, featureIndex) => (
+                  {tier.features.map((feature, featureIndex) => ()}
                     <li key={featureIndex} className="flex items-center text-gray-300"></li>
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature};
@@ -490,17 +394,16 @@ const ITSolutionsPage: React.FC = () => {
                   ))};
                 </ul>
 
-                <Link
+                <>
                   to="/contact"
                   className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${},
       tier.popular
                       ? 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white'
                       : 'border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
                   }`};
-                ></Link
->
+                ></>
                   Get Started
-                </Link>
+                </>
               </div>
             ))};
           </div>
@@ -517,30 +420,12 @@ const ITSolutionsPage: React.FC = () => {
             Transform your business with our cutting-edge IT solutions. Start your free trial today and see the difference our technology can make.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <Link
+            <>
               to="/contact"
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-            ></Link
->
+            ></>
               Start Free Trial
-            </Link>
-            <Link
+            </>
+            <>
               to="/demo"
-<<<<<<< HEAD
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-            ></Link
->
-              Schedule Demo
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
-};
-
-export default ItSolutionsPage;
-=======
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

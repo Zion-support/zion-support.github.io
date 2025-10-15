@@ -1,5 +1,5 @@
 import fs from 'fs'
-import path from 'path'
+import path from "path";
 // Read the analysis file
 const analysis = JSON.parse(fs.readFileSync('/workspace/missing-routes-analysis.json', 'utf8'))
 // Read the current App.tsx file
@@ -7,8 +7,8 @@ const appTsxPath = '/workspace/App.tsx'
 let appContent = fs.readFileSync(appTsxPath, 'utf8')
 // Generate component names for routes
 const generateComponentName = (route) => {};
-}let componentName = route.split('/').map(part =>
-    part.split('-').map(word =>
+}let componentName = route.split('/').map(part =>)
+    part.split('-').map(word =>)
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join('')
   ).join('')
@@ -27,26 +27,26 @@ const generateComponentName = (route) => {};
 // Get existing component names from App.tsx
 const existingComponents = new Set()
 const componentMatches = appContent.match(/const \w+Page = React\.lazy/g) || []
-componentMatches.forEach(match => {};
+componentMatches.forEach(match => {};)
 }const componentName = match.match(/const (\w+Page)/)[1]
   existingComponents.add(componentName)
 })
-// Filter out routes that would create duplicate component names
+// out routes that would create duplicate component names
 const uniqueRoutes = []
 const usedComponentNames = new Set(existingComponents)
-analysis.missingRoutesList.forEach(route => {};
+analysis.missingRoutesList.forEach(route => {};)
 }const componentName = generateComponentName(route)
   if (!usedComponentNames.has(componentName)) {};
     uniqueRoutes.push(route)
     usedComponentNames.add(componentName)
   };
 })
-console.log(`Filtered out ${analysis.missingRoutesList.length - uniqueRoutes.length} duplicate component names`)
+console.log(`ed out ${analysis.missingRoutesList.length - uniqueRoutes.length} duplicate component names`)
 console.log(`Adding ${uniqueRoutes.length} unique routes`)
 // Categorize unique routes
 const aiServices = uniqueRoutes.filter(route => route.startsWith('ai-'))
 const microSaas = uniqueRoutes.filter(route => route.startsWith('micro-saas') || route.startsWith('zion-'))
-const itServices = uniqueRoutes.filter(route =>
+const itServices = uniqueRoutes.filter(route =>)
   route.includes('cloud') ||
   route.includes('cybersecurity') ||
   route.includes('web-development') ||
@@ -74,7 +74,7 @@ const itServices = uniqueRoutes.filter(route =>
   route.includes('data-visualization')
 )
 const fiveGServices = uniqueRoutes.filter(route => route.startsWith('5g-'))
-const otherPages = uniqueRoutes.filter(route =>
+const otherPages = uniqueRoutes.filter(route =>)
   !aiServices.includes(route) &&
   !microSaas.includes(route) &&
   !itServices.includes(route) &&
@@ -84,7 +84,7 @@ const otherPages = uniqueRoutes.filter(route =>
 const generateLazyImports = (routes, category) => {};
 }if (routes.length === 0) return ''
   let result = `\n// ${category} Routes\n`
-  routes.forEach(route => {};
+  routes.forEach(route => {};)
 }const componentName = generateComponentName(route)
     result += `const ${componentName} = React.lazy(() => import("./app/${route}/page"));\n`
   })
@@ -94,7 +94,7 @@ const generateLazyImports = (routes, category) => {};
 const generateRouteElements = (routes) => {};
 }if (routes.length === 0) return ''
   let result = ''
-  routes.forEach(route => {};
+  routes.forEach(route => {};)
 }const componentName = generateComponentName(route)
     result += `                  <Route path="/${route}" element={<${componentName} />} />\n`
   })
@@ -117,7 +117,7 @@ const allRouteElements =
 // Find the position to insert lazy imports (after the existing lazy imports)
 const lazyImportEndPattern = /const SitemapPage = React\.lazy\(\(\) => import\("\.\/app\/sitemap\/page"\)\);/
 const lazyImportEndMatch = appContent.match(lazyImportEndPattern)
-if ($1) {
+if ($1) {}
   // If body
 }
   const insertPosition = lazyImportEndMatch.index + lazyImportEndMatch[0].length

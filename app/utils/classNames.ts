@@ -1,10 +1,10 @@
 import {clsx} from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import { twMerge } from "tailwind-merge";
 /**
  * Utility function to merge Tailwind CSS classes with proper conflict resolution
  * and conditional class application
  */
-export function cn() {
+export function cn() {}
   // Function body
 }
 }return twMerge(clsx(inputs))

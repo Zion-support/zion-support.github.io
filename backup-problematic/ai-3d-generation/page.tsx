@@ -1,4 +1,4 @@
-export default function Ai3dGenerationPage() {
+export default function Ai3dGenerationPage() {}
   // Function body
 }
 }return ()

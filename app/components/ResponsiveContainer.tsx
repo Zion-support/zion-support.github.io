@@ -1,11 +1,11 @@
 
-import { cn } from '../lib/utils'
+import { cn } from "../lib/utils";
 interface ResponsiveContainerProps {},
       children: React.ReactNode
   className?: string
   maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | 'full'
 },
-      const ResponsiveContainer = (_{},
+      const ResponsiveContainer = (_{},)
       children, className, maxWidth = '7xl'
 }: ResponsiveContainerProps) => {},
       const maxWidthClasses = {},
@@ -22,7 +22,7 @@ interface ResponsiveContainerProps {},
       full: 'max-w-full'
   },
       return ()
-    <div className={cn()
+    <divclassName={cn()>}
       'mx-auto px-4 sm:px-6 lg:px-8',
       maxWidthClasses[maxWidth],
       className

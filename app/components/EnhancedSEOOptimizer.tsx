@@ -15,8 +15,8 @@ import React, { useEffect } from 'react',
       section?: string,
       tags?: string[]
     },
-    {
-const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
+    {}
+const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},)
       title = "Zion Tech Group - Advanced AI and IT Solutions",
       description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. 99.9% uptime SLA, 24/7 support.",'
   keywords = "AI solutions, IT services, cybersecurity, cloud computing, digital transformation, business automation, technology consulting, Zion Tech Group, machine learning, 5G solutions, micro SaaS, enterprise software",
@@ -34,7 +34,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
   const currentUrl = `https://ziontechgroup.com${location.pathname}`
   const finalCanonical = canonical || currentUrl
   // Generate enhanced structured data
-  const generateEnhancedStructuredData = () => {
+  const generateEnhancedStructuredData = () => {}
 }const baseStructuredData = {};
       "@context": "https://schema.org";
       "@type": "Organization";
@@ -96,7 +96,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
             "category": "Technology Services"
           }
     },
-    {
+    {}
         {};
           "@type": "Service";
           "name": "IT Services";
@@ -112,7 +112,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
             "category": "Technology Services"
           }
     },
-    {
+    {}
         {};
           "@type": "Service";
           "name": "5G Implementation";
@@ -128,7 +128,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
             "category": "Technology Services"
           }
     },
-    {
+    {}
         {};
           "@type": "Service";
           "name": "Micro SaaS Solutions";
@@ -144,7 +144,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
             "category": "Software Solutions"
           }
     },
-    {
+    {}
       ];
       "hasOfferCatalog": {};
         "@type": "OfferCatalog";
@@ -158,7 +158,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
               "description": "Advanced AI-powered analytics solutions"
             }
     },
-    {
+    {}
           {};
             "@type": "Offer";
             "itemOffered": {};
@@ -167,7 +167,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
               "description": "Comprehensive cybersecurity protection services"
             }
     },
-    {
+    {}
           {};
             "@type": "Offer";
             "itemOffered": {};
@@ -176,20 +176,16 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
               "description": "Scalable cloud infrastructure solutions"
             }
     },
-    {
+    {}
         ]
       }
     },
-    {
+    {}
     // Add page-specific structured data
     const path = location.pathname
-<<<<<<< HEAD
-    if (path === '/') {},
-=======
-    if ($1) {
+    if ($1) {}
   // If body
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       return {};
         ...baseStructuredData;
         "@type": "WebSite";
@@ -228,7 +224,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
           ]
         }
     },
-    {
+    {}
     },
       if (path === '/about') {},
       return {};
@@ -243,7 +239,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
           "industry": "Technology"
         }
     },
-    {
+    {}
     },
       if (path === '/contact') {},
       return {};
@@ -260,10 +256,10 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
             "areaServed": "US"
           }
     },
-    {
+    {}
       }
     },
-    {
+    {}
     if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-') || path.startsWith('/5g-')) {},
       return {};
         ...baseStructuredData;
@@ -299,16 +295,16 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
                 "description": description
               }
     },
-    {
+    {}
           ]
         }
     },
-    {
+    {}
     },
       return baseStructuredData
   };
   // Generate FAQ structured data
-  const generateFAQStructuredData = () => {
+  const generateFAQStructuredData = () => {}
 }const faqs = []
       {},
       question: "What services does Zion Tech Group offer?",
@@ -334,7 +330,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
     return {};
       "@context": "https://schema.org";
       "@type": "FAQPage";
-      "mainEntity": faqs.map(faq => ({};
+      "mainEntity": faqs.map(faq => ({};)
         "@type": "Question";
         "name": faq.question;
         "acceptedAnswer": {};
@@ -344,9 +340,9 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
       }))
     }
     },
-    {
+    {}
   // Generate breadcrumb structured data
-  const generateBreadcrumbStructuredData = () => {
+  const generateBreadcrumbStructuredData = () => {}
 }const pathSegments = location.pathname.split('/').filter(Boolean)
     const breadcrumbs = []
       {};
@@ -363,7 +359,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ')
-      breadcrumbs.push({};
+      breadcrumbs.push({};)
         "@type": "ListItem";
         "position": index + 2;
         "name": name;
@@ -376,7 +372,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
       "itemListElement": breadcrumbs
     }
     },
-    {
+    {}
   const finalStructuredData = structuredData || generateEnhancedStructuredData()
   const faqStructuredData = generateFAQStructuredData()
   const breadcrumbStructuredData = generateBreadcrumbStructuredData()
@@ -384,7 +380,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
   useEffect(() => {};
 }// Track page view in analytics
     if (typeof window !== 'undefined' && window.gtag) {},
-      window.gtag('config', 'GA_MEASUREMENT_ID', {},
+      window.gtag('config', 'GA_MEASUREMENT_ID', {},)
       page_title: title,
       page_location: currentUrl,
       custom_map: {};
@@ -394,7 +390,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
     };
     // Track SEO performance
     if (typeof window !== 'undefined' && window.gtag) {},
-      window.gtag('event', 'seo_optimization', {},
+      window.gtag('event', 'seo_optimization', {},)
       event_category: 'SEO',
       event_label: 'page_loaded',
       value: 1

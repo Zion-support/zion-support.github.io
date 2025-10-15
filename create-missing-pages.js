@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import React from 'react'
+import React from "react";
 export default ${title}Page;`
 // List of pages that need to be created based on App.tsx imports
 const missingPages = []

@@ -1,23 +1,23 @@
 import fs from 'fs'
-import path from 'path'
+import path from "path";
 #!/usr/bin/env node
 // Function to fix remaining JSX issues
-function fixRemainingJSXIssues() {
+function fixRemainingJSXIssues() {}
   // Function body
 }
 }// Fix missing closing div tags - look for the pattern where we have:
-  // </Link>
+  // </>
   // </div>
   // )
   // };
   // But missing the outer div closing tag
   content = content.replace()
-    /(\s*<\/Link>\s*<\/div>\s*\);\s*})/g;
-    '\n        </Link>\n      </div>\n    </div>\n  );\n}'
+    /(\s*<\/>\s*<\/div>\s*\);\s*})/g;
+    '\n        </>\n      </div>\n    </div>\n  );\n}'
   )
-  // Fix any remaining issues with extra whitespace in Link elements
+  // Fix any remaining issues with extra whitespace in elements
   content = content.replace()
-    /(\s*Contact Us\s*\n\s*
+    /(\s*Contact Us\s*\n\s*)
     '\n          Contact Us\n'
   )
   return content
@@ -28,7 +28,7 @@ function processFile(filePath) {};
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
 const fixedContent = fixRemainingJSXIssues(content)
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(filePath, fixedContent, 'utf8')

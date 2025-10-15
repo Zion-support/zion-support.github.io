@@ -1,5 +1,5 @@
 
-import {",
+import {"}
         "
   PhoneIcon,",
         "
@@ -9,13 +9,13 @@ import {",
         "
   ArrowRightIcon,",
         "
-  HeartIcon",
+  Icon",
         "
 } from '@heroicons/react/24/outline',
-      import {Twitter, Linkedin, Github} from 'lucide-react';
+      import {Twitter, edin, Github} from 'lucide-react';
 ",
         "
-const Footer: React.FC = () => {",
+const Footer: React.FC = () => {"}
         "
   const currentYear = new Date().getFullYear()
   
@@ -98,16 +98,16 @@ const Footer: React.FC = () => {",
         "
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter' },",
         "
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin' },";"
+    { name: 'edIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin' },";"
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github' };
   ];
 ,
-      return (<footer className="bg-slate-900 border-t border-slate-700">";"
+      return (<footer className="bg-slate-900 border-t border-slate-700">";")
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">";"
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">";"
           {/* Company Info */};
           <div className="lg:col-span-2">";"
-            <Link to="/" className="flex items-center mb-4">";"
+            <to="/" className="flex items-center mb-4">";"
               <div className="h-8 w-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">";"
                 <span className="text-white font-bold text-sm">Z</span>",
         "
@@ -115,7 +115,7 @@ const Footer: React.FC = () => {",
         "
               <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>",
         "
-            </Link>",
+            </>",
         "
             <p className="text-gray-400 text-sm mb-4">",
         "
@@ -137,7 +137,7 @@ const Footer: React.FC = () => {",
               </a>",
         "
               <a href="#" className="text-gray-400 hover:text-white transition-colors">";"
-                <Linkedin className="h-5 w-5" />",
+                <edin className="h-5 w-5" />",
         "
               </a>",
         "
@@ -155,11 +155,11 @@ const Footer: React.FC = () => {",
             <h3 className="text-white font-semibold mb-4">Services</h3>";"
             <ul className="space-y-2">",
         "
-              {services.map((service) => (",
+              {services.map((service) => (",)}
         "
                 <li key={service.name}>",
         "
-                  <Link",
+                  <",>
         "
                     to={service.href},
       className="text-gray-300 hover:text-white transition-colors flex items-center";
@@ -167,7 +167,7 @@ const Footer: React.FC = () => {",
                     <ArrowRightIcon className="h-3 w-3 mr-2" />",
         "
                     {service.name};
-                  </Link>",
+                  </>",
         "
                 </li>",
         "
@@ -182,11 +182,11 @@ const Footer: React.FC = () => {",
             <h3 className="text-white font-semibold mb-4">Solutions</h3>";"
             <ul className="space-y-2">",
         "
-              {solutions.map((solution) => (",
+              {solutions.map((solution) => (",)}
         "
                 <li key={solution.name}>",
         "
-                  <Link",
+                  <",>
         "
                     to={solution.href},
       className="text-gray-300 hover:text-white transition-colors flex items-center";
@@ -194,7 +194,7 @@ const Footer: React.FC = () => {",
                     <ArrowRightIcon className="h-3 w-3 mr-2" />",
         "
                     {solution.name};
-                  </Link>",
+                  </>",
         "
                 </li>",
         "
@@ -209,11 +209,11 @@ const Footer: React.FC = () => {",
             <h3 className="text-white font-semibold mb-4">Resources</h3>";"
             <ul className="space-y-2">",
         "
-              {resources.map((resource) => (",
+              {resources.map((resource) => (",)}
         "
                 <li key={resource.name}>",
         "
-                  <Link",
+                  <",>
         "
                     to={resource.href},
       className="text-gray-300 hover:text-white transition-colors flex items-center";
@@ -221,7 +221,7 @@ const Footer: React.FC = () => {",
                     <ArrowRightIcon className="h-3 w-3 mr-2" />",
         "
                     {resource.name};
-                  </Link>",
+                  </>",
         "
                 </li>",
         "
@@ -236,11 +236,11 @@ const Footer: React.FC = () => {",
             <h3 className="text-white font-semibold mb-4">Company</h3>";"
             <ul className="space-y-2">",
         "
-              {company.map((item) => (",
+              {company.map((item) => (",)}
         "
                 <li key={item.name}>",
         "
-                  <Link",
+                  <",>
         "
                     to={item.href},
       className="text-gray-300 hover:text-white transition-colors flex items-center";
@@ -248,7 +248,7 @@ const Footer: React.FC = () => {",
                     <ArrowRightIcon className="h-3 w-3 mr-2" />",
         "
                     {item.name};
-                  </Link>",
+                  </>",
         "
                 </li>",
         "
@@ -308,16 +308,16 @@ const Footer: React.FC = () => {",
           </div>";"
           <div className="flex space-x-6">",
         "
-            {legal.map((item) => (",
+            {legal.map((item) => (",)}
         "
-              <Link";"
+              <";">
                 key={item.name},
       to={item.href},
       className="text-gray-400 hover:text-white text-sm transition-colors";
               >",
         "
                 {item.name};
-              </Link>",
+              </>",
         "
             ))};
           </div>",
@@ -327,7 +327,7 @@ const Footer: React.FC = () => {",
         {/* Made with love */};
         <div className="mt-6 text-center">";"
           <p className="text-gray-400 text-sm flex items-center justify-center">";"
-            Made with <HeartIcon className="h-4 w-4 text-red-400 mx-1" /> by Zion Tech Group",
+            Made with <Icon className="h-4 w-4 text-red-400 mx-1" /> by Zion Tech Group",
         "
           </p>",
         "

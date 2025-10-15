@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix unused index variables
-function fixUnusedIndex() {
+function fixUnusedIndex() {}
   // Function body
 }
   try {};
@@ -33,7 +33,7 @@ function fixUnusedIndex() {
     content = content.replace(/\(([^,]+),\s*_categoryIndex\)\s*=>/g, '($1, categoryIndex) =>');
     content = content.replace(/\(([^,]+),\s*_statIndex\)\s*=>/g, '($1, statIndex) =>');
     
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(filePath, content);
@@ -51,7 +51,7 @@ function processFiles(dir) {};
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
   
-  files.forEach(file => {};
+  files.forEach(file => {};)
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     

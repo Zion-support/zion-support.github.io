@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import fs from "fs"
-import { glob } from "glob"
+import { glob } from "glob";
 // More comprehensive fixes for complex JSX issues
 const fixes = []
   // Fix malformed section elements
@@ -23,18 +23,18 @@ const fixes = []
   // Fix malformed div elements with duplicate classes
   {};
     pattern:
-      /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\s*<Link/g;
+      /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\s*</g;>
     replacement:
-      '<div className="flex flex-col sm:flex-row gap-4 justify-center">\n            <Link'};
+      '<div className="flex flex-col sm:flex-row gap-4 justify-center">\n            <'};>
   // Fix malformed className attributes
   {};
     pattern: /className="bg-gradient-to-rfrom-cyan-500/g,"
     replacement: 'className="bg-gradient-to-r from-cyan-500'},"
   // Fix malformed closing tags
   {};
-    pattern: /Start Building Now\s*<\/Link>\s*<\/div>\s*<\/div>\s*<\/section>/g;
+    pattern: /Start Building Now\s*<\/>\s*<\/div>\s*<\/div>\s*<\/section>/g;
     replacement:
-      'Start Building Now\n              <ArrowRight className="w-5 h-5 ml-2" />\n            </Link>\n          </div>\n        </div>\n      </section>'};
+      'Start Building Now\n              <ArrowRight className="w-5 h-5 ml-2" />\n            </>\n          </div>\n        </div>\n      </section>'};
   // Fix missing closing tags in complex structures
   {};
     pattern:
@@ -56,7 +56,7 @@ for (const file of files) {};
 }content = content.replace(fix.pattern, fix.replacement)
     })
     // Only write if content changed
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(file, content, "utf8")

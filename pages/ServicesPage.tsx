@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from "react-helmet-async";
 import {},
       CheckCircle,
       Star,
       ArrowRight,
-      Brain,
       Server,
       Rocket;
   // Users,
@@ -14,9 +13,9 @@ const ServicesPage: React.FC = () => {};
 }const [selectedCategory, setSelectedCategory] = useState('all')
   const categories = []
     { id: 'all', name: 'All Services', icon: Settings };
-    { id: 'ai', name: 'AI Services', icon: Brain };
+    { id: 'ai', name: 'AI Services', icon: };
     { id: 'it', name: 'IT Services', icon: Server };
-    { id: 'saas', name: 'Micro SAAS', icon: Zap };
+    { id: 'saas', name: 'Micro SAAS', icon: };
   ]
   const services = []
     // AI Services
@@ -122,7 +121,7 @@ const ServicesPage: React.FC = () => {};
       features: []
         'Auto-scaling Infrastructure';
         '99.9% Uptime Guarantee';
-        '24/7 Monitoring';
+        '24/7 ing';
         'Security Compliance';
         'Backup & Recovery';
         'Cost Optimization'
@@ -144,7 +143,7 @@ const ServicesPage: React.FC = () => {};
       price: '$499/month',
       features: []
         'Threat Detection & Response';
-        'Real-time Security Monitoring';
+        'Real-time Security ing';
         'Compliance Reporting';
         'Incident Response';
         'Security Training';
@@ -169,7 +168,7 @@ const ServicesPage: React.FC = () => {};
         'CI/CD Pipeline Automation';
         'Automated Testing';
         'Deployment Management';
-        'Performance Monitoring';
+        'Performance ing';
         'Rollback Capabilities';
         'Team Collaboration Tools'
       ],
@@ -184,14 +183,14 @@ const ServicesPage: React.FC = () => {};
     };
     {},
       id: 'database-solutions',
-      name: 'Database Management Solutions',
+      name: 'Management Solutions',
       category: 'it',
       description: 'Advanced database administration with optimization, backup, and performance monitoring',
       price: '$279/month',
       features: []
-        'Database Optimization';
+        'Optimization';
         'Automated Backups';
-        'Performance Monitoring';
+        'Performance ing';
         'Query Optimization';
         'Security Hardening';
         'Disaster Recovery'
@@ -241,7 +240,7 @@ const ServicesPage: React.FC = () => {};
         'Authentication & Authorization';
         'API Documentation';
         'Developer Portal';
-        'Analytics & Monitoring'
+        'Analytics & ing'
       ],
       benefits: []
         'Secure API access';
@@ -254,12 +253,12 @@ const ServicesPage: React.FC = () => {};
     };
     {},
       id: 'monitoring-suite',
-      name: 'Application Monitoring Suite',
+      name: 'Application ing Suite',
       category: 'saas',
       description: 'Real-time application performance monitoring with alerting and root cause analysis',
       price: '$129/month',
       features: []
-        'Real-time Monitoring';
+        'Real-time ing';
         'Performance Metrics';
         'Error Tracking';
         'Alert Management';
@@ -330,15 +329,13 @@ const ServicesPage: React.FC = () => {};
               Choose from our range of services tailored to meet your specific needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8"></div>
-              <a
-                href="/contact"
+              <ahref="/contact">
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
               ></a
 >
                 Get Started Today
               </a>
-              <a
-                href="tel:+13024640950"
+              <ahref="tel:+13024640950">
                 className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               ></a
 >
@@ -348,13 +345,12 @@ const ServicesPage: React.FC = () => {};
           </div>
         </div>
       </section>
-      {/* Category Filter */};
+      {/* Category */};
       <section className="py-8 bg-slate-800/30"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
           <div className="flex flex-wrap justify-center gap-4"></div>
-            {categories.map((category) => ()
-              <button
-                key={category.id},
+            {categories.map((category) => ()}
+              <buttonkey={category.id},>
       onClick={() => setSelectedCategory(category.id)},
       className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${},
       selectedCategory === category.id
@@ -378,13 +374,13 @@ const ServicesPage: React.FC = () => {};
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"></div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8"></div>
-            {filteredServices.map((service) => ()
-              <div key={service.id} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 lg:p-8 border transition-all duration-300 hover:transform hover:scale-105 ${},
+            {filteredServices.map((service) => ()}
+              <divkey={service.id} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 lg:p-8 border transition-all duration-300 hover:transform hover:scale-105 ${},>
       service.popular
                   ? 'border-purple-500/60 ring-2 ring-purple-500/20'
                   : 'border-purple-500/20 hover:border-purple-500/40'
               }`}></div>
-                {service.popular && ()
+                {service.popular && ()}
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold"></span>
                       Most Popular
@@ -408,7 +404,7 @@ const ServicesPage: React.FC = () => {};
                 <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8"></div>
                   <h4 className="text-white font-semibold text-sm sm:text-base">Key Features:</h4>
                   <ul className="space-y-1.5 sm:space-y-2"></ul>
-                    {service.features.slice(0, 4).map((feature, index) => ()
+                    {service.features.slice(0, 4).map((feature, index) => ()}
                       <li key={index} className="flex items-center text-gray-300 text-xs sm:text-sm"></li>
                         <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature};
@@ -419,7 +415,7 @@ const ServicesPage: React.FC = () => {};
                 <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8"></div>
                   <h4 className="text-white font-semibold text-sm sm:text-base">Benefits:</h4>
                   <ul className="space-y-1.5 sm:space-y-2"></ul>
-                    {service.benefits.map((benefit, index) => ()
+                    {service.benefits.map((benefit, index) => ()}
                       <li key={index} className="text-gray-300 text-xs sm:text-sm"></li>
                         • {benefit};
                       </li>
@@ -427,20 +423,18 @@ const ServicesPage: React.FC = () => {};
                   </ul>
                 </div>
                 <div className="space-y-2 sm:space-y-3"></div>
-                  <Link
+                  <>
                     to={`/service/${service.id}`},
       className={`w-full inline-flex items-center justify-center px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${},
       service.popular
                         ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600'
                         : 'border border-purple-500 text-purple-300 hover:bg-purple-500/10'
                     }`};
-                  ></Link
->
+                  ></>
                     Learn More
                     <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
-                  </Link>
-                  <a
-                    href="/contact"
+                  </>
+                  <ahref="/contact">
                     className="w-full inline-flex items-center justify-center px-4 sm:px-6 py-2.5 sm:py-3 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-700/50 transition-all duration-300 text-sm sm:text-base"
                   ></a
 >
@@ -463,16 +457,14 @@ const ServicesPage: React.FC = () => {};
             Contact us for a free consultation and custom quote.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <a
-              href="/contact"
+            <ahref="/contact">
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
             ></a
 >
               Get Custom Quote
               <Rocket className="ml-2 w-5 h-5" />
             </a>
-            <a
-              href="tel:+13024640950"
+            <ahref="tel:+13024640950">
               className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
             ></a
 >

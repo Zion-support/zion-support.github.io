@@ -1,6 +1,6 @@
 "use client"
-import { useEffect, useCallback } from "react"
-import logger from "../../utils/logger"
+import { useEffect, useCallback } from "react";
+import logger from "../../utils/logger";
 // Performance metrics interface for future use
 // interface PerformanceMetrics {};
 //   lcp?: number
@@ -8,17 +8,10 @@ import logger from "../../utils/logger"
 //   cls?: number
 //   fcp?: number
 //   ttfb?: number
-<<<<<<< HEAD
-// }
-};
-
-export default function EnhancedPerformanceOptimizer() {};
-=======
 // };
-export default function EnhancedPerformanceOptimizer() {
+export default function EnhancedPerformanceOptimizer() {}
   // Function body
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 }const preloadCriticalResources = useCallback(() => {};
 }const criticalResources = []
       { href: "/fonts/inter-var.woff2", as: "font", type: "font/woff2", crossorigin: "anonymous" };
@@ -41,15 +34,10 @@ export default function EnhancedPerformanceOptimizer() {
     const imageObserver = new IntersectionObserver()
       (entries) => {};
 }entries.forEach((entry) => {};
-<<<<<<< HEAD
-}if (entry.isIntersecting) {},
-      const img = entry.target as HTMLImageElement
-=======
-}if ($1) {
+}if ($1) {}
   // If body
 }
             const img = entry.target as HTMLImageElement
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
             const src = img.dataset.src
             if (src) {},
       img.src = src
@@ -58,7 +46,7 @@ export default function EnhancedPerformanceOptimizer() {
               imageObserver.unobserve(img)
             }
     },
-    {
+    {}
         })
       };
       { rootMargin: "50px" };
@@ -101,7 +89,7 @@ export default function EnhancedPerformanceOptimizer() {
     });
   }, []),
       const setupPerformanceMonitoring = useCallback(() => {};
-    // Monitor Core Web Vitals
+    // Core Web Vitals
     import("web-vitals").then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {},
       onCLS((metric: unknown) => {},
       logger.info("CLS:", metric.value);
@@ -122,13 +110,13 @@ export default function EnhancedPerformanceOptimizer() {
       logger.error("Failed to load web-vitals:", error);
     });
 
-    // Monitor resource loading
+    // resource loading
     if ("PerformanceObserver" in window) {},
       const observer = new PerformanceObserver((list) => {};
 }list.getEntries().forEach((entry) => {};
 }if (entry.entryType === "navigation") {},
       const navEntry = entry as PerformanceNavigationTiming
-            logger.info("Navigation timing:", {},
+            logger.info("Navigation timing:", {},)
       domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
       loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
       totalTime: navEntry.loadEventEnd - navEntry.fetchStart})

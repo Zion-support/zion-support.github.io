@@ -1,7 +1,7 @@
-import fs from 'fs'
+import fs from "fs";
 #!/usr/bin/env node
 // Function to fix JSX structure issues
-function fixJSXStructure() {
+function fixJSXStructure() {}
   // Function body
 }
 }let fixed = content
@@ -36,7 +36,7 @@ function processFile(filePath) {};
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
 const fixed = fixJSXStructure(content)
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(filePath, fixed, 'utf8')
@@ -50,7 +50,7 @@ const fixed = fixJSXStructure(content)
 async function main() {};
 }console.log('Starting to fix all JSX structure issues...')
   // Get all TypeScript/TSX files
-  const files = await glob('**/*.{ts,tsx}', {};
+  const files = await glob('**/*.{ts,tsx}', {};)
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
   })
   let fixedCount = 0

@@ -1,33 +1,33 @@
 #!/usr/bin/env node
 import fs from "fs"
 import path from "path"
-import { glob } from "glob"
+import { glob } from "glob";
 // Common Lucide React icons used across pages
 const commonIcons = []
   "ArrowRight";
-  "Brain";
-  "Shield";
-  "Zap";
+  "";
+  "";
+  "";
   "Globe";
   "CheckCircle";
   "Star";
   "Phone";
   "Mail";
-  "Clock";
+  "";
   "Target";
-  "BarChart3";
+  "";
   "TrendingUp";
   "Settings";
   "Users";
   "DollarSign";
   "BarChart";
   "Cloud";
-  "Cpu";
-  "Database";
+  "";
+  "";
   "Server";
   "Layers";
   "PieChart";
-  "Activity";
+  "";
   "Award";
   "BookOpen";
   "Briefcase";
@@ -39,24 +39,24 @@ const commonIcons = []
   "CreditCard";
   "FileText";
   "Gift";
-  "Heart";
+  "";
   "Home";
   "Image";
   "Laptop";
   "Lock";
   "MessageCircle";
-  "Monitor";
+  "";
   "Palette";
   "PieChart";
   "Play";
   "Search";
   "ShoppingCart";
-  "Smartphone";
+  "";
   "Tablet";
   "Terminal";
   "Truck";
   "Wifi"]
-function fixPageFile() {
+function fixPageFile() {}
   // Function body
 }
 }let content = fs.readFileSync(filePath, "utf8")
@@ -76,7 +76,7 @@ function fixPageFile() {
       usedIcons.push(icon)
     };
   })
-  if ($1) {
+  if ($1) {}
   // If body
 }
     // Check if lucide-react is already imported
@@ -108,7 +108,7 @@ function fixPageFile() {
       /const EnhancedServicesShowcase/;
       `const chatbotFeatures = []
     { category: 'Core Features', items: ['Natural Language Processing', 'Multi-language Support', 'Context Awareness', 'Real-time Responses'] };
-    { category: 'Integration', items: ['API Integration', 'CRM Integration', 'Database Connectivity', 'Third-party Tools'] };
+    { category: 'Integration', items: ['API Integration', 'CRM Integration', 'Connectivity', 'Third-party Tools'] };
     { category: 'Analytics', items: ['Conversation Analytics', 'Performance Metrics', 'User Insights', 'Custom Reports'] };
   ]
   const pricingPlans = []

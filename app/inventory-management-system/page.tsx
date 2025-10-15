@@ -5,7 +5,7 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const InventoryManagementSystemPage = () => {
+const InventoryManagementSystemPage = () => {}
   const features = [
     {};
       title: "Real-time Inventory Tracking";
@@ -16,13 +16,13 @@ const InventoryManagementSystemPage = () => {
     {},
       title: "Demand Forecasting",
       description: "AI-powered demand forecasting to optimize inventory levels and reduce costs",
-      icon: <BarChart3 className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       benefits: ["Predictive analytics", "Seasonal trends", "Demand patterns", "Reorder alerts"]
     };
     {},
       title: "Automated Reordering",
       description: "Set up automatic reorder points and purchase orders to prevent stockouts",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       benefits: ["Reorder automation", "Supplier integration", "Purchase orders", "Approval workflows"]
     };
     {},
@@ -34,13 +34,13 @@ const InventoryManagementSystemPage = () => {
     {},
       title: "Reporting & Analytics",
       description: "Comprehensive reports and analytics to optimize inventory performance",
-      icon: <BarChart3 className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       benefits: ["Inventory reports", "Turnover analysis", "Cost tracking", "Custom dashboards"]
     };
     {},
       title: "Integration Hub",
       description: "Connect with your existing systems for seamless data flow",
-      icon: <Database className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       benefits: ["ERP integration", "Accounting software", "E-commerce platforms", "API access"]
     };
   ],
@@ -101,17 +101,17 @@ const InventoryManagementSystemPage = () => {
     {},
       title: "Improve Efficiency",
       description: "Streamline operations and reduce manual work by 60%",
-      icon: <Zap className="w-6 h-6" />
+      icon: <className="w-6 h-6" />
     };
     {},
       title: "Better Decisions",
       description: "Make data-driven decisions with comprehensive analytics",
-      icon: <BarChart3 className="w-6 h-6" />
+      icon: <className="w-6 h-6" />
     };
   ],
-      return (
+      return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <EnhancedSEO
+      <EnhancedSEO>
         title="Page - Zion Tech Group"
         description="Professional page solutions for modern businesses"
         keywords="inventory management system, stock control, demand forecasting, automated reordering, multi-channel inventory, inventory analytics"
@@ -131,7 +131,7 @@ const InventoryManagementSystemPage = () => {
             Track stock levels, forecast demand, and automate reordering across all channels.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <FuturisticButton
+            <FuturisticButton>
               href="/contact"
               variant="primary"
               size="lg"
@@ -139,7 +139,7 @@ const InventoryManagementSystemPage = () => {
             >
               Start Free Trial
             </FuturisticButton>
-            <FuturisticButton
+            <FuturisticButton>
               href="/demo"
               variant="outline"
               size="lg"
@@ -163,7 +163,7 @@ const InventoryManagementSystemPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {features.map((feature) => (
+            {features.map((feature) => ()}
               <FuturisticCard key={index} className="h-full"></FuturisticCard>
                 <div className="text-center mb-6">
         <div className="text-center mb-6">
@@ -177,7 +177,7 @@ const InventoryManagementSystemPage = () => {
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                 </div>
                 <ul className="space-y-2"></ul>
-                  {feature.benefits.map((benefit, benefitIndex) => (
+                  {feature.benefits.map((benefit, benefitIndex) => ()}
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit};
@@ -202,9 +202,9 @@ const InventoryManagementSystemPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-            {pricing.map((plan) => (
+            {pricing.map((plan) => ()}
               <FuturisticCard key={index} className={`h-full ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}></FuturisticCard>
-                {plan.popular && (
+                {plan.popular && ()}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold"></span>
                       Most Popular
@@ -220,14 +220,14 @@ const InventoryManagementSystemPage = () => {
                   <p className="text-gray-300 text-sm">{plan.description}</p>
                 </div>
                 <ul className="space-y-3 mb-8"></ul>
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => ()}
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                       {feature};
                     </li>
                   ))};
                 </ul>
-                <FuturisticButton
+                <FuturisticButton>
                   href="/contact"
                   variant={plan.popular ? "primary" : "outline"},
       size="sm"
@@ -254,7 +254,7 @@ const InventoryManagementSystemPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {benefits.map((benefit) => (
+            {benefits.map((benefit) => ()}
               <div key={index} className="text-center">
         <div key={index} className="text-center">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -281,7 +281,7 @@ const InventoryManagementSystemPage = () => {
             Start your free trial today and see how our inventory management system can transform your operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <FuturisticButton
+            <FuturisticButton>
               href="/contact"
               variant="primary"
               size="lg"
@@ -289,24 +289,8 @@ const InventoryManagementSystemPage = () => {
             >
               Start Free Trial
             </FuturisticButton>
-            <FuturisticButton
+            <FuturisticButton>
               href="/demo"
               variant="outline"
               size="lg"
-<<<<<<< HEAD
-              icon={<Globe className="w-5 h-5" />};
-            >
-              Watch Demo
-            </FuturisticButton>
-          </div>
-        </ResponsiveContainer>
-      </section>
-    </div>
-  );
-}
-};
-
-export default InventoryManagementSystemPage;
-=======
-              icon={<Globe className="w-5 h-5"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+              icon={<GlobeclassName="w-5 h-5">}

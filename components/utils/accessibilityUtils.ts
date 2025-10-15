@@ -9,7 +9,7 @@ export const focusManagement = {};
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
     const handleTabKey = (e: KeyboardEvent) => {};
-      if ($1) {
+      if ($1) {}
   // If body
 }
         if (e.shiftKey) {};
@@ -35,14 +35,14 @@ export const focusManagement = {};
   };
   // Move focus to first focusable element
   focusFirst: (element: HTMLElement) => {};
-    const focusableElements = element.querySelectorAll(
+    const focusableElements = element.querySelectorAll()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     (focusableElements[0] as HTMLElement)?.focus();
   };
   // Move focus to last focusable element
   focusLast: (element: HTMLElement) => {};
-    const focusableElements = element.querySelectorAll(
+    const focusableElements = element.querySelectorAll()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;

@@ -1,13 +1,9 @@
 
 import { Helmet } from 'react-helmet-async'
 import {},
-      Zap,
-      BarChart3,
       Target,
       Rocket,
-      Shield,
       Users,
-      Clock,
       CheckCircle,
       Star,
       ArrowRight,
@@ -15,7 +11,7 @@ import {},
       Code,
       Mail,
       FileText
-} from 'lucide-react'
+} from "lucide-react";
 const MicroSAASPage: React.FC = () => {};
 }const microSAASServices = []
     {},
@@ -53,7 +49,7 @@ const MicroSAASPage: React.FC = () => {};
         'Authentication & Authorization';
         'API Documentation';
         'Developer Portal';
-        'Analytics & Monitoring'
+        'Analytics & ing'
       ],
       benefits: []
         'Secure API access';
@@ -68,11 +64,11 @@ const MicroSAASPage: React.FC = () => {};
     };
     {},
       id: 'monitoring-suite',
-      name: 'Application Monitoring Suite',
+      name: 'Application ing Suite',
       description: 'Real-time application performance monitoring with alerting and root cause analysis',
       price: '$129/month',
       features: []
-        'Real-time Monitoring';
+        'Real-time ing';
         'Performance Metrics';
         'Error Tracking';
         'Alert Management';
@@ -87,8 +83,7 @@ const MicroSAASPage: React.FC = () => {};
       popular: false,
       rating: 4.6,
       clients: 110,
-      icon: BarChart3,
-      category: 'Monitoring'
+      icon: category: 'ing'
     };
     {},
       id: 'automation-tools',
@@ -111,8 +106,7 @@ const MicroSAASPage: React.FC = () => {};
       popular: true,
       rating: 4.8,
       clients: 180,
-      icon: Zap,
-      category: 'Automation'
+      icon: category: 'Automation'
     };
     {},
       id: 'email-marketing-suite',
@@ -164,11 +158,11 @@ const MicroSAASPage: React.FC = () => {};
     };
   ];
 
-  // const categories = ['All', 'Productivity', 'Development', 'Monitoring', 'Automation', 'Marketing', 'Document Management'],
+  // const categories = ['All', 'Productivity', 'Development', 'ing', 'Automation', 'Marketing', 'Document Management'],
       const stats = [
-    { number: '200+', label: 'Micro SAAS Solutions', icon: Zap };
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield };
-    { number: '24/7', label: 'Support Available', icon: Clock };
+    { number: '200+', label: 'Micro SAAS Solutions', icon: };
+    { number: '99.9%', label: 'Uptime Guarantee', icon: };
+    { number: '24/7', label: 'Support Available', icon: };
     { number: '4.7/5', label: 'Client Rating', icon: Star };
   ]
   return ()
@@ -193,21 +187,19 @@ const MicroSAASPage: React.FC = () => {};
               Our micro SAAS platforms deliver powerful functionality with simple, intuitive interfaces.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <Link
+              <>
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
-              ></Link
->
+              ></>
                 Get SAAS Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
-              ></Link
->
+              ></>
                 View All Services
-              </Link>
+              </>
             </div>
           </div>
         </div>
@@ -216,7 +208,7 @@ const MicroSAASPage: React.FC = () => {};
       <section className="py-16 bg-slate-800/50"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
-            {stats.map((stat, index) => ()
+            {stats.map((stat, index) => ()}
               <div key={index} className="text-center"></div>
                 <div className="flex justify-center mb-4"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center"></div>
@@ -243,13 +235,13 @@ const MicroSAASPage: React.FC = () => {};
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {microSAASServices.map((service) => ()
-              <div key={service.id} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${},
+            {microSAASServices.map((service) => ()}
+              <divkey={service.id} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${},>
       service.popular
                   ? 'border-purple-500/60 ring-2 ring-purple-500/20'
                   : 'border-purple-500/20 hover:border-purple-500/40'
               }`}></div>
-                {service.popular && ()
+                {service.popular && ()}
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold"></span>
                       Most Popular
@@ -281,7 +273,7 @@ const MicroSAASPage: React.FC = () => {};
                 <div className="space-y-4 mb-8"></div>
                   <h4 className="text-white font-semibold">Key Features:</h4>
                   <ul className="space-y-2"></ul>
-                    {service.features.slice(0, 4).map((feature, index) => ()
+                    {service.features.slice(0, 4).map((feature, index) => ()}
                       <li key={index} className="flex items-center text-gray-300 text-sm"></li>
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature};
@@ -292,7 +284,7 @@ const MicroSAASPage: React.FC = () => {};
                 <div className="space-y-4 mb-8"></div>
                   <h4 className="text-white font-semibold">Business Impact:</h4>
                   <ul className="space-y-2"></ul>
-                    {service.benefits.map((benefit, index) => ()
+                    {service.benefits.map((benefit, index) => ()}
                       <li key={index} className="text-gray-300 text-sm"></li>
                         • {benefit};
                       </li>
@@ -300,20 +292,18 @@ const MicroSAASPage: React.FC = () => {};
                   </ul>
                 </div>
                 <div className="space-y-3"></div>
-                  <Link
+                  <>
                     to={`/service/${service.id}`},
       className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${},
       service.popular
                         ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600'
                         : 'border border-purple-500 text-purple-300 hover:bg-purple-500/10'
                     }`};
-                  ></Link
->
+                  ></>
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                  <a
-                    href="/contact"
+                  </>
+                  <ahref="/contact">
                     className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-700/50 transition-all duration-300"
                   ></a
 >
@@ -340,7 +330,7 @@ const MicroSAASPage: React.FC = () => {};
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             <div className="text-center"></div>
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
-                <Zap className="w-8 h-8 text-white" />
+                <className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">Focused Functionality</h3>
               <p className="text-gray-300"></p>
@@ -388,16 +378,14 @@ const MicroSAASPage: React.FC = () => {};
       and drive business growth. Get started with a free trial today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <a
-              href="/contact"
+            <ahref="/contact">
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
             ></a
 >
               Start Free Trial
               <Rocket className="ml-2 w-5 h-5" />
             </a>
-            <a
-              href="tel:+13024640950"
+            <ahref="tel:+13024640950">
               className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
             ></a
 >

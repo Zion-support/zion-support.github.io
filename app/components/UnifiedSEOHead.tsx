@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react',
-      import { Helmet } from 'react-helmet-async',
-      import { useLocation } from 'react-router-dom',
-      interface SEOHeadProps {},
-      title?: string,
-      description?: string,
-      keywords?: string,
-      canonical?: string,
-      ogImage?: string,
-      noIndex?: boolean,
-      structuredData?: Record<string, unknown>,
-      author?: string,
-      publishedTime?: string,
-      modifiedTime?: string,
-      section?: string,
-      tags?: string[]
-    },
-    {
-=======
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
@@ -36,14 +16,13 @@ interface SEOHeadProps {};
   section?: string;
   tags?: string[];
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 interface StructuredData {};
   '@context': string;
   '@type': string;
   [key: string]: unknown
     },
-    {
-const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
+    {}
+const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},)
       title = "Zion Tech Group - Advanced AI and IT Solutions",
       description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. 99.9% uptime SLA, 24/7 support.",'
   keywords = "AI solutions, IT services, cybersecurity, cloud computing, digital transformation, business automation, technology consulting, Zion Tech Group, machine learning, 5G solutions, micro SaaS, enterprise software",
@@ -62,7 +41,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
       const finalCanonical = canonical || currentUrl;
 
   // Generate base organization structured data
-  const generateBaseStructuredData = (): StructuredData => ({};
+  const generateBaseStructuredData = (): StructuredData => ({};)
     '@context': 'https://schema.org';
     '@type': 'Organization',
       name: 'Zion Tech Group',
@@ -132,20 +111,13 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
   });
 
   // Generate page-specific structured data
-<<<<<<< HEAD
-  const generatePageStructuredData = (): StructuredData => {},
-      const baseData = generateBaseStructuredData(),
-      const path = location.pathname,
-      if (path === '/') {},
-=======
   const generatePageStructuredData = (): StructuredData => {};
     const baseData = generateBaseStructuredData();
     const path = location.pathname;
 
-    if ($1) {
+    if ($1) {}
   // If body
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       return {};
         ...baseData;
         '@type': 'WebSite',
@@ -155,7 +127,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
           'query-input': 'required name=search_term_string'
         }
     },
-    {
+    {}
     },
       if (path === '/about') {},
       return {};
@@ -170,7 +142,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
       industry: 'Technology'
         }
     },
-    {
+    {}
     },
       if (path === '/contact') {},
       return {};
@@ -187,10 +159,10 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
       areaServed: 'US'
           }
     },
-    {
+    {}
       }
     },
-    {
+    {}
     if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-') || path.startsWith('/5g-')) {},
       return {};
         ...baseData;
@@ -216,11 +188,10 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
       serviceType: 'AI and IT Solutions'
       }
     },
-    {
+    {}
     return baseData
     },
-    {
-
+    {}
   // Generate FAQ structured data
   const generateFAQStructuredData = (): StructuredData => {},
       const faqs = [
@@ -248,7 +219,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
       return {};
       '@context': 'https://schema.org';
       '@type': 'FAQPage',
-      mainEntity: faqs.map(faq => ({};
+      mainEntity: faqs.map(faq => ({};)
         '@type': 'Question',
       name: faq.question,
       acceptedAnswer: {};
@@ -258,8 +229,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
       }))
     }
     },
-    {
-
+    {}
   // Generate breadcrumb structured data
   const generateBreadcrumbStructuredData = (): StructuredData => {},
       const pathSegments = location.pathname.split('/').filter(Boolean),
@@ -278,7 +248,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' '),
-      breadcrumbs.push({};
+      breadcrumbs.push({};)
         '@type': 'ListItem',
       position: index + 2,
       name,
@@ -291,8 +261,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
       itemListElement: breadcrumbs
     }
     },
-    {
-
+    {}
   const finalStructuredData = structuredData || generatePageStructuredData(),
       const faqStructuredData = generateFAQStructuredData(),
       const breadcrumbStructuredData = generateBreadcrumbStructuredData();
@@ -301,7 +270,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
   useEffect(() => {};
     // Track page view in analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {};
-      (window as { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {},
+      (window as { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {},)
       page_title: title,
       page_location: currentUrl,
       custom_map: {};
@@ -309,18 +278,18 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
         };
       })
     },
-    {
+    {}
     // Track SEO performance
     if (typeof window !== 'undefined' && 'gtag' in window) {};
-      (window as { gtag: Function }).gtag('event', 'seo_optimization', {},
+      (window as { gtag: Function }).gtag('event', 'seo_optimization', {},)
       event_category: 'SEO',
       event_label: 'page_loaded',
       value: 1
       })
     },
-    {
+    {}
   }, [title, currentUrl]),
-      return (
+      return ()
     <Helmet></Helmet>
       {/* Basic Meta Tags */};
       <title>{title}</title>

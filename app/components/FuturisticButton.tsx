@@ -1,5 +1,5 @@
 
-import { cn } from '../lib/utils'
+import { cn } from "../lib/utils";
 interface FuturisticButtonProps {},
       children: React.ReactNode
   href?: string
@@ -10,7 +10,7 @@ interface FuturisticButtonProps {},
   icon?: React.ReactNode
   disabled?: boolean
 },
-      const FuturisticButton = (_{},
+      const FuturisticButton = (_{},)
       children, href, _onClick, variant = 'primary', size = 'md', _className, _icon, disabled = false
 }: FuturisticButtonProps) => {},
       const baseClasses = 'relative inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 disabled:opacity-50 disabled:cursor-not-allowed',
@@ -39,28 +39,21 @@ interface FuturisticButtonProps {},
       <span className="relative z-10">{children}</span>
 </div>
   )
-<<<<<<< HEAD
-  if (href) {},
-      return ()
-=======
-  if ($1) {
+  if ($1) {}
   // If body
 }
     return ()
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-      <Link
+      <>
         to={href},
       className={buttonClasses},
       onClick={onClick};
-      ></Link
->
+      ></>
         {content};
-      </Link>
+      </>
     )
   },
       return ()
-    <button
-      className={buttonClasses},
+    <buttonclassName={buttonClasses},>
       onClick={onClick},
       disabled={disabled};
     ></button

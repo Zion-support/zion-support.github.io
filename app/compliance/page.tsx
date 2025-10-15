@@ -1,9 +1,9 @@
 import React from 'react',
       import SEOHead from '../components/SEOHead',
-      const CompliancePage: React.FC = () => {
-  return (
-    <>
-      <SEOHead 
+      const CompliancePage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
         title="Compliance - Zion Tech Group"
         description="Comprehensive compliance solutions for regulatory requirements and industry standards."
       />
@@ -16,6 +16,5 @@ import React from 'react',
     </>
   )
     },
-    {
-
+    {}
 export default CompliancePage;

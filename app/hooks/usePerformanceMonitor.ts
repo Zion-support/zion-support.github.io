@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import {useEffect} from "react";
 interface PerformanceMetrics {};
   loadTime: number
   firstContentfulPaint: number
@@ -8,7 +8,7 @@ interface PerformanceMetrics {};
   timeToInteractive: number
 };
 export const usePerformanceMonitor = () => {};
-}const metricsRef = useRef<PerformanceMetrics>({};
+}const metricsRef = useRef<PerformanceMetrics>({};)
     loadTime: 0;
     firstContentfulPaint: 0;
     largestContentfulPaint: 0;
@@ -21,7 +21,7 @@ export const usePerformanceMonitor = () => {};
 }if (typeof window === 'undefined' || !window.performance) return
       // Measure page load time
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      if ($1) {
+      if ($1) {}
   // If body
 }
         metricsRef.current.loadTime = navigation.loadEventEnd - navigation.loadEventStart
@@ -79,7 +79,7 @@ export const usePerformanceMonitor = () => {};
       const logMetrics = () => {};
 }// Send to analytics service
         if (typeof window !== 'undefined' && (window as any).gtag) {};
-          (window as any).gtag('event', 'performance_metrics', {};
+          (window as any).gtag('event', 'performance_metrics', {};)
             load_time: metricsRef.current.loadTime;
             first_contentful_paint: metricsRef.current.firstContentfulPaint;
             largest_contentful_paint: metricsRef.current.largestContentfulPaint;

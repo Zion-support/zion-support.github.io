@@ -1,11 +1,11 @@
 import React from 'react',
       import { Helmet } from 'react-helmet-async',
-      import { 
+      import {}
   CheckCircle, 
   ArrowRight, 
   TrendingUp
 } from 'lucide-react',
-      const AIEmailMarketingAutomationPage: React.FC = () => {
+      const AIEmailMarketingAutomationPage: React.FC = () => {}
   const features = [
     'AI-powered email content generation',
     'Advanced segmentation & targeting',
@@ -27,7 +27,7 @@ import React from 'react',
     'Scale campaigns without additional resources'
   ],
       const pricingPlans = [
-    {
+    {}
       name: 'Starter',
       price: '$49/mo',
       originalPrice: '$79/mo',
@@ -42,7 +42,7 @@ import React from 'react',
       ],
       popular: false
     },
-    {
+    {}
       name: 'Professional',
       price: '$99/mo',
       originalPrice: '$149/mo',
@@ -59,7 +59,7 @@ import React from 'react',
       ],
       popular: true
     },
-    {
+    {}
       name: 'Enterprise',
       price: '$199/mo',
       originalPrice: '$299/mo',
@@ -78,33 +78,33 @@ import React from 'react',
     }
   ],
       const useCases = [
-    {
+    {}
       title: 'E-commerce',
       description: 'Drive sales with personalized product recommendations and abandoned cart recovery',
       icon: <ShoppingCart className="w-6 h-6 text-blue-400" />,
       results: 'Average 35% increase in revenue'
     },
-    {
+    {}
       title: 'SaaS',
       description: 'Onboard users and reduce churn with targeted email sequences',
       icon: <Cloud className="w-6 h-6 text-green-400" />,
       results: '40% reduction in churn rate'
     },
-    {
+    {}
       title: 'Education',
       description: 'Engage students with course updates and learning reminders',
       icon: <GraduationCap className="w-6 h-6 text-purple-400" />,
       results: '60% improvement in course completion'
     },
-    {
+    {}
       title: 'Healthcare',
       description: 'Send appointment reminders and health tips to patients',
-      icon: <Heart className="w-6 h-6 text-red-400" />,
+      icon: <className="w-6 h-6 text-red-400" />,
       results: '50% reduction in no-shows'
     }
   ],
-      return (
-    <>
+      return ()
+    <>{}</>
       <Helmet>
         <title>AI Email Marketing Automation - Intelligent Email Campaigns | Zion Tech Group</title>
         <meta name="description" content="Transform your email marketing with AI-powered automation. Increase open rates by 65%, boost conversions by 45%, and save 20+ hours weekly with our intelligent email platform." />
@@ -135,20 +135,20 @@ import React from 'react',
               boosts conversions by 45%, and saves you 20+ hours every week.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/25 flex items-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="#pricing"
                 className="border-2 border-white/30 hover:border-purple-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center group"
               >
                 View Pricing
                 <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </>
             </div>
             
             {/* Stats */}
@@ -188,7 +188,7 @@ import React from 'react',
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => ()}
               <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
                 <div className="flex items-center mb-4">
                   <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
@@ -215,7 +215,7 @@ import React from 'react',
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => ()}
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 group">
                 <div className="flex items-center mb-4">
                   <TrendingUp className="w-6 h-6 text-purple-400 mr-3 flex-shrink-0" />
@@ -242,7 +242,7 @@ import React from 'react',
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map((useCase, index) => ()}
               <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
                 <div className="mb-4 group-hover:scale-110 transition-transform">
                   {useCase.icon}
@@ -275,11 +275,11 @@ import React from 'react',
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+            {pricingPlans.map((plan, index) => ()}
+              <divkey={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${>}
                 plan.popular ? 'ring-2 ring-purple-500 bg-slate-700/50' : ''
               }`}>
-                {plan.popular && (
+                {plan.popular && ()}
                   <div className="text-center mb-4">
                     <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
@@ -297,7 +297,7 @@ import React from 'react',
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => ()}
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -305,16 +305,16 @@ import React from 'react',
                   ))}
                 </ul>
 
-                <Link
+                <>
                   to="/contact"
-                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
+                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${}
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white'
                       : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white'
                   }`}
                 >
                   Start Free Trial
-                </Link>
+                </>
               </div>
             ))}
           </div>
@@ -332,28 +332,12 @@ import React from 'react',
             save time, and grow their customer base.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <>
               to="/contact"
               className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Start Free Trial
-            </Link>
-            <Link
+            </>
+            <>
               to="/demo"
-<<<<<<< HEAD
               className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-            >
-              Schedule Demo
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-    },
-    {
-
-export default AIEmailMarketingAutomationPage;
-=======
-              className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

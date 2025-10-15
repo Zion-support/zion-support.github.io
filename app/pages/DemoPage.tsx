@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {Star, Play} from "lucide-react";
 
-const DemoPage: React.FC = () => {
+const DemoPage: React.FC = () => {}
   const [selectedDemo, setSelectedDemo] = useState('ai-solutions');
 
   const demos = [
@@ -9,7 +9,7 @@ const DemoPage: React.FC = () => {
       id: 'ai-solutions';
       title: 'AI Solutions Demo';
       description: 'Experience our AI-powered solutions in action';
-      icon: Brain;
+      icon: ;
       features: [
         'Natural Language Processing';
         'Computer Vision';
@@ -25,8 +25,7 @@ const DemoPage: React.FC = () => {
       id: 'micro-saas',
       title: 'Micro SAAS Platform',
       description: 'Explore our scalable software-as-a-service solutions',
-      icon: Cpu,
-      features: [
+      icon: features: [
         'Project Management';
         'Content Creation';
         'Analytics Dashboard';
@@ -44,7 +43,7 @@ const DemoPage: React.FC = () => {
       icon: Cloud,
       features: [
         'Auto-scaling';
-        'Security Monitoring';
+        'Security ing';
         'Backup Solutions';
         'Performance Analytics';
         'Cost Optimization';
@@ -57,8 +56,7 @@ const DemoPage: React.FC = () => {
       id: 'mobile-apps',
       title: 'Mobile Applications',
       description: 'Test our mobile apps and cross-platform solutions',
-      icon: Smartphone,
-      features: [
+      icon: features: [
         'Native iOS/Android';
         'Cross-platform Development';
         'Offline Functionality';
@@ -123,8 +121,8 @@ const DemoPage: React.FC = () => {
     };
   ],
       const selectedDemoData = demos.find(demo => demo.id === selectedDemo),
-      return (
-    <>
+      return ()
+    <>{}</>
       <Helmet></Helmet>
         <title>Demo - Zion Tech Group | See Our Solutions in Action</title>
         <meta name="description" content="Schedule a personalized demo of our AI and IT solutions. See how our technology can transform your business." />
@@ -160,22 +158,20 @@ const DemoPage: React.FC = () => {
               and see how our technology can transform your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center"
-              ></Link
->
+              ></>
                 Schedule Demo
                 <Calendar className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="/pricing"
                 className="border-2 border-white/20 hover:border-cyan-400 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-white/5 flex items-center"
-              ></Link
->
+              ></>
                 <Rocket className="w-5 h-5 mr-2" />
                 View Pricing
-              </Link>
+              </>
             </div>
           </div>
         </div>
@@ -196,9 +192,8 @@ const DemoPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"></div>
-            {demos.map((demo) => (
-              <button
-                key={demo.id},
+            {demos.map((demo) => ()}
+              <buttonkey={demo.id},>
       onClick={() => setSelectedDemo(demo.id)},
       className={`p-6 rounded-xl border transition-all duration-300 text-left ${},
       selectedDemo === demo.id
@@ -229,7 +224,7 @@ const DemoPage: React.FC = () => {
           </div>
 
           {/* Selected Demo Details */};
-          {selectedDemoData && (
+          {selectedDemoData && ()}
             <div className="bg-slate-700/50 rounded-xl p-8 border border-slate-600/50">
         <div className="bg-slate-700/50 rounded-xl p-8 border border-slate-600/50">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -252,22 +247,21 @@ const DemoPage: React.FC = () => {
                   </div>
                   <p className="text-gray-300 mb-6 text-lg">{selectedDemoData.description}</p>
                   <div className="flex items-center text-gray-300 mb-6"></div>
-                    <Clock className="w-5 h-5 mr-2" />
+                    <className="w-5 h-5 mr-2" />
                     <span>Duration: {selectedDemoData.duration}</span>
                   </div>
-                  <Link
+                  <>
                     to="/contact"
                     className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center w-fit"
-                  ></Link
->
+                  ></>
                     Schedule This Demo
                     <ArrowRight className="w-5 h-5 ml-2" />
-                  </Link>
+                  </>
                 </div>
                 <div></div>
                   <h4 className="text-xl font-semibold text-white mb-4">What You'll See:</h4>'
                   <ul className="space-y-3"></ul>
-                    {selectedDemoData.features.map((feature) => (
+                    {selectedDemoData.features.map((feature) => ()}
                       <li key={index} className="flex items-center text-gray-300"></li>
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature};
@@ -296,7 +290,7 @@ const DemoPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8"></div>
-            {demoSteps.map((step) => (
+            {demoSteps.map((step) => ()}
               <div key={index} className="relative">
         <div key={index} className="relative">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -312,7 +306,7 @@ const DemoPage: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
                   <p className="text-gray-300 text-sm">{step.description}</p>
                 </div>
-                {index < demoSteps.length - 1 && (
+                {index < demoSteps.length - 1 && ()}
                   <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-cyan-500 to-purple-600 transform -translate-x-1/2"></div>
                 )};
               </div>
@@ -336,14 +330,14 @@ const DemoPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-            {testimonials.map((testimonial) => (
+            {testimonials.map((testimonial) => ()}
               <div key={index} className="bg-slate-700/50 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300">
         <div key={index} className="bg-slate-700/50 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
           <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map((_, i) => ()}
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))};
                 </div>
@@ -366,16 +360,14 @@ const DemoPage: React.FC = () => {
             Schedule your personalized demo today and discover how our solutions can transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-            <Link
+            <>
               to="/contact"
               className="bg-white text-cyan-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center"
-            ></Link
->
+            ></>
               <Calendar className="w-5 h-5 mr-2" />
               Schedule Demo
-            </Link>
-            <a
-              href="tel:+13024640950"
+            </>
+            <ahref="tel:+13024640950">
               className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center"
             ></a
 >

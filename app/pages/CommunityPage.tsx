@@ -1,11 +1,11 @@
 
 import {MessageSquare, BookOpen} from "lucide-react";
 ,
-      const CommunityPage: React.FC = () => {",
+      const CommunityPage: React.FC = () => {"}
         "
   const communityFeatures = [",
         "
-    {";"
+    {";"}
       icon: <MessageSquare className="w-8 h-8 text-blue-400" />,",
         "
       title: 'Discussion Forums',",
@@ -13,7 +13,7 @@ import {MessageSquare, BookOpen} from "lucide-react";
       description: 'Connect with other developers and share knowledge';
     },",
         "
-    {",
+    {"}
         "
       icon: <Code className="w-8 h-8 text-green-400" />,",
         "
@@ -22,7 +22,7 @@ import {MessageSquare, BookOpen} from "lucide-react";
       description: 'Share code snippets and collaborate on projects';
     },",
         "
-    {",
+    {"}
         "
       icon: <BookOpen className="w-8 h-8 text-purple-400" />,",
         "
@@ -31,7 +31,7 @@ import {MessageSquare, BookOpen} from "lucide-react";
       description: 'Access tutorials, guides, and best practices';
     },",
         "
-    {",
+    {"}
         "
       icon: <Award className="w-8 h-8 text-yellow-400" />,",
         "
@@ -39,12 +39,12 @@ import {MessageSquare, BookOpen} from "lucide-react";
         "
       description: 'Get recognized for your contributions and expertise'
     },
-    {
+    {}
   ];
 ,
-      return (",
+      return (",)
         "
-    <>",
+    <>{"}</>
         "
       <Helmet>",
         "
@@ -84,7 +84,7 @@ import {MessageSquare, BookOpen} from "lucide-react";
             </p>";"
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">",
         "
-              <Link",
+              <",>
         "
                 to="/contact",
       className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center";
@@ -94,7 +94,7 @@ import {MessageSquare, BookOpen} from "lucide-react";
         "
                 <ArrowRight className="w-5 h-5 ml-2" />",
         "
-              </Link>",
+              </>",
         "
             </div>",
         "
@@ -118,7 +118,7 @@ import {MessageSquare, BookOpen} from "lucide-react";
         "
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
         "
-            {communityFeatures.map((feature) => (",
+            {communityFeatures.map((feature) => (",)}
         "
               <div key={index} className="text-center group">";"
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">",
@@ -148,6 +148,6 @@ import {MessageSquare, BookOpen} from "lucide-react";
     </>";"
   )
     },
-    {
+    {}
 ,
       export default CommunityPage;

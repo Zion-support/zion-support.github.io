@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix function parameter syntax errors
-function fixFunctionParams() {
+function fixFunctionParams() {}
   // Function body
 }
   try {};
@@ -25,7 +25,7 @@ function fixFunctionParams() {
     content = content.replace(/let\s+_([a-zA-Z_][a-zA-Z0-9_]*)\s*=/g, 'let $1 =');
     content = content.replace(/var\s+_([a-zA-Z_][a-zA-Z0-9_]*)\s*=/g, 'var $1 =');
     
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(filePath, content);
@@ -43,7 +43,7 @@ function processFiles(dir) {};
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
   
-  files.forEach(file => {};
+  files.forEach(file => {};)
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     

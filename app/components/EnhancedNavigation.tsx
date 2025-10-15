@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-      import { ChevronDown, Menu, X } from "lucide-react",
-      const EnhancedNavigation = () => {},
-      const [isOpen, setIsOpen] = useState(false),
-      const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
-      const navigationItems = [
-    {},
-      label: 'AI Services',
-      href: '/ai-services',
-      icon: <Brain className="w-4 h-4" />,
-=======
 import React, { useState } from 'react';
 import { ChevronDown, Menu, X } from "lucide-react";
 
@@ -21,8 +9,7 @@ const EnhancedNavigation = () => {};
     {};
       label: 'AI Services';
       href: '/ai-services';
-      icon: <Brain>
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+      icon: <>
       dropdown: []
         { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' };
         { label: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' };
@@ -54,7 +41,7 @@ const EnhancedNavigation = () => {};
     {},
       label: 'IT Services',
       href: '/it-services',
-      icon: <Shield className="w-4 h-4" />,
+      icon: <className="w-4 h-4" />,
       dropdown: []
         { label: 'AI-Powered Business Intelligence Pro', href: '/ai-business-intelligence' };
         { label: 'AI Customer Support Automation Suite', href: '/ai-customer-support' };
@@ -72,8 +59,8 @@ const EnhancedNavigation = () => {};
         { label: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer' };
         { label: 'AI Legal Research Assistant', href: '/ai-legal-research' };
         { label: 'AI Energy Management System', href: '/ai-energy-management' };
-        { label: 'Enterprise Database Management Pro', href: '/database-management' };
-        { label: 'IT Infrastructure Monitoring Suite', href: '/infrastructure-monitoring' };
+        { label: 'Enterprise Management Pro', href: '/database-management' };
+        { label: 'IT Infrastructure ing Suite', href: '/infrastructure-monitoring' };
         { label: 'Advanced Network Security Solutions', href: '/network-security' };
         { label: 'Cloud Migration & Modernization', href: '/cloud-migration' };
         { label: 'DevOps & CI/CD Pipeline Solutions', href: '/devops-solutions' };
@@ -92,10 +79,10 @@ const EnhancedNavigation = () => {};
     {},
       label: 'Micro SAAS',
       href: '/micro-saas',
-      icon: <Zap className="w-4 h-4" />,
+      icon: <className="w-4 h-4" />,
       dropdown: []
         { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' };
-        { label: 'Zion Security Shield', href: '/zion-security-shield' };
+        { label: 'Zion Security ', href: '/zion-security-shield' };
         { label: 'Zion Cloud Vault', href: '/zion-cloud-vault' };
         { label: 'Zion AI Inventory Manager', href: '/zion-ai-inventory-manager' };
         { label: 'Zion HR Assistant Pro', href: '/zion-hr-assistant-pro' };
@@ -138,7 +125,7 @@ const EnhancedNavigation = () => {};
     {},
       label: 'Company',
       href: '/about',
-      icon: <BarChart3 className="w-4 h-4" />,
+      icon: <className="w-4 h-4" />,
       dropdown: []
         { label: 'About Us', href: '/about' };
         { label: 'Our Team', href: '/team' };
@@ -158,47 +145,44 @@ const EnhancedNavigation = () => {};
     { label: 'Consultation', href: '/consultation' };
     { label: 'Sitemap', href: '/sitemap' };
   ],
-      return (
+      return ()
     <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50"></header>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
         <div className="flex justify-between items-center py-4"></div>
           {/* Logo */};
-          <Link to="/" className="text-2xl font-bold text-white group"></Link>
+          <to="/" className="text-2xl font-bold text-white group"></>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:from-cyan-300 group-hover:to-purple-300 transition-all duration-300"></span>
               Zion Tech Group
             </span>
-          </Link>
+          </>
           {/* Desktop Navigation */};
           <nav className="hidden lg:flex space-x-8"></nav>
-            {navigationItems.map((item) => (
-              <div
-                key={item.label},
+            {navigationItems.map((item) => ()}
+              <divkey={item.label},>
       className="relative group"
                 onMouseEnter={() => setActiveDropdown(item.label)},
       onMouseLeave={() => setActiveDropdown(null)};
               >
-                <Link
+                <>
                   to={item.href},
       className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
-                ></Link
->
+                ></>
                   {item.icon};
                   <span>{item.label}</span>
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
-                </Link>
+                </>
                 {/* Dropdown Menu */};
-                {activeDropdown === item.label && (
+                {activeDropdown === item.label && ()}
                   <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50"></div>
                     <div className="py-2"></div>
-                      {item.dropdown.map((dropdownItem) => ()
-                        <Link
+                      {item.dropdown.map((dropdownItem) => ()}
+                        <>
                           key={dropdownItem.href},
       to={dropdownItem.href},
       className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors duration-200"
-                        ></Link
->
+                        ></>
                           {dropdownItem.label};
-                        </Link>
+                        </>
                       ))};
                     </div>
                   </div>
@@ -206,31 +190,29 @@ const EnhancedNavigation = () => {};
               </div>
             ))};
           </nav>
-          {/* Quick Links & CTA */};
+          {/* Quick s & CTA */};
           <div className="hidden md:flex items-center space-x-4"></div>
             <div className="hidden lg:flex space-x-4"></div>
-              {quickLinks.map((link) => ()
-                <Link
+              {quickLinks.map((link) => ()}
+                <>
                   key={link.href},
       to={link.href},
       className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                ></Link
->
+                ></>
                   {link.label};
-                </Link>
+                </>
               ))};
             </div>
-            <Link
+            <>
               to="/contact"
               className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105 flex"
-            ></Link
->
+            ></>
               Contact Us
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </>
           </div>
           {/* Mobile Menu Button */};
-          <button
+          <button>
             onClick={() => setIsOpen(!isOpen)},
       className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors duration-300"
           >
@@ -238,53 +220,53 @@ const EnhancedNavigation = () => {};
           </button>
         </div>
         {/* Mobile Navigation */};
-        {isOpen && (
+        {isOpen && ()}
           <div className="lg:hidden py-4 border-t border-white/10"></div>
             <div className="space-y-4"></div>
-              {navigationItems.map((item) => (
+              {navigationItems.map((item) => ()}
                 <div key={item.label}></div>
-                  <Link
+                  <>
                     to={item.href},
       className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                     onClick={() => setIsOpen(false)};
                   >
                     {item.icon};
                     <span className="font-medium">{item.label}</span>
-                  </Link>
+                  </>
                   <div className="ml-6 space-y-2"></div>
-                    {item.dropdown.slice(0, 4).map((dropdownItem) => (
-                      <Link
+                    {item.dropdown.slice(0, 4).map((dropdownItem) => ()}
+                      <>
                         key={dropdownItem.href},
       to={dropdownItem.href},
       className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1"
                         onClick={() => setIsOpen(false)};
                       >
                         {dropdownItem.label};
-                      </Link>
+                      </>
                     ))};
-                    {item.dropdown.length > 4 && (
-                      <Link
+                    {item.dropdown.length > 4 && ()}
+                      <>
                         to={item.href},
       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
                         onClick={() => setIsOpen(false)};
                       >
                         View All →
-                      </Link>
+                      </>
                     )};
                   </div>
                 </div>
               ))};
               <div className="pt-4 border-t border-white/10"></div>
                 <div className="space-y-2"></div>
-                  {quickLinks.map((link) => (
-                    <Link
+                  {quickLinks.map((link) => ()}
+                    <>
                       key={link.href},
       to={link.href},
       className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                       onClick={() => setIsOpen(false)};
                     >
                       {link.label};
-                    </Link>
+                    </>
                   ))};
                 </div>
               </div>

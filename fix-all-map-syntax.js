@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix all map function syntax issues
-function fixMapSyntax() {
+function fixMapSyntax() {}
   // Function body
 }
   try {};
@@ -27,7 +27,7 @@ function fixMapSyntax() {
     content = content.replace(/\.forEach\(([a-zA-Z_][a-zA-Z0-9_]*)\s*\)\s*=>/g, '.forEach(($1) =>');
     content = content.replace(/\.forEach\(([a-zA-Z_][a-zA-Z0-9_]*),\s*([a-zA-Z_][a-zA-Z0-9_]*)\s*\)\s*=>/g, '.forEach(($1, $2) =>');
     
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(filePath, content);
@@ -45,7 +45,7 @@ function processFiles(dir) {};
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
   
-  files.forEach(file => {};
+  files.forEach(file => {};)
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     

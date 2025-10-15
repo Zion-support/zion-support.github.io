@@ -1,8 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-'use client';
-export default function Page() {
-  return (
+import { Helmet } from 'react-helmet-async""use client';
+export default function Page() {}
+  return ()
     <div className="min-h-screen bg-white">;
       <Helmet>;
         <title>Sitemap page - Zion Tech Group</title>;

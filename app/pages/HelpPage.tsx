@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Search, MessageSquare, Star, BookOpen, HelpCircle, Video, Download, ChevronDown, ChevronRight } from "lucide-react";
 
-const HelpPage: React.FC = () => {
+const HelpPage: React.FC = () => {}
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
   const helpCategories = [
     {};
       title: 'Getting Started';
-      icon: <Zap>
+      icon: <>
       articles: 12;
       description: 'Learn the basics and get up and running quickly'
     };
@@ -145,7 +145,7 @@ const HelpPage: React.FC = () => {
       items: 12
     };
   ],
-      const filteredFAQs = faqs.filter(faq => 
+      const filteredFAQs = faqs.filter(faq =>)
     faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchTerm.toLowerCase()) ||
     faq.category.toLowerCase().includes(searchTerm.toLowerCase())
@@ -153,10 +153,9 @@ const HelpPage: React.FC = () => {
       const toggleFAQ = (id: number) => {},
       setExpandedFAQ(expandedFAQ === id ? null : id)
     },
-    {
-
-  return (
-    <>
+    {}
+  return ()
+    <>{}</>
       <Helmet></Helmet>
         <title>Help Center - Zion Tech Group | Support & Documentation</title>
         <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Find answers, documentation, and contact our expert support team." />'
@@ -200,8 +199,7 @@ const HelpPage: React.FC = () => {
         </div>
       </div>
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
+                <inputtype="text">
                   placeholder="Search for help articles, FAQs, and documentation..."
                   value={searchTerm},
       onChange={(e) => setSearchTerm(e.target.value)},
@@ -211,22 +209,20 @@ const HelpPage: React.FC = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center"
-              ></Link
->
+              ></>
                 Contact Support
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="/demo"
                 className="border-2 border-white/20 hover:border-purple-400 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-white/5 flex items-center"
-              ></Link
->
+              ></>
                 <Calendar className="w-5 h-5 mr-2" />
                 Schedule Demo
-              </Link>
+              </>
             </div>
           </div>
         </div>
@@ -247,13 +243,12 @@ const HelpPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {helpCategories.map((category) => (
-              <Link
+            {helpCategories.map((category) => ()}
+              <>
                 key={index},
       to="/help"
                 className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center"
-              ></Link
->
+              ></>
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform"></div>
                   {category.icon};
                 </div>
@@ -265,7 +260,7 @@ const HelpPage: React.FC = () => {
                   <span className="mr-2">{category.articles} articles</span>
                   <ExternalLink className="w-4 h-4" />
                 </div>
-              </Link>
+              </>
             ))};
           </div>
         </div>
@@ -286,7 +281,7 @@ const HelpPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {supportChannels.map((channel) => (
+            {supportChannels.map((channel) => ()}
               <div key={index} className="group bg-slate-800/50 hover:bg-slate-800/70 p-8 rounded-xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
         <div key={index} className="group bg-slate-800/50 hover:bg-slate-800/70 p-8 rounded-xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -303,11 +298,11 @@ const HelpPage: React.FC = () => {
           <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>
-                    <Clock className="w-4 h-4 mr-2" />
+                    <className="w-4 h-4 mr-2" />
                     {channel.availability};
                   </div>
                   <div className="flex items-center justify-center text-gray-400 text-sm"></div>
-                    <Zap className="w-4 h-4 mr-2" />
+                    <className="w-4 h-4 mr-2" />
                     {channel.responseTime};
                   </div>
                 </div>
@@ -340,9 +335,9 @@ const HelpPage: React.FC = () => {
           <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>
-              {filteredFAQs.map((faq) => (
+              {filteredFAQs.map((faq) => ()}
                 <div key={faq.id} className="bg-slate-700/50 backdrop-blur-sm border border-slate-600/50 rounded-xl hover:border-purple-500/50 transition-all duration-300"></div>
-                  <button
+                  <button>
                     onClick={() => toggleFAQ(faq.id)},
       className="w-full p-6 text-left flex items-center justify-between"
                   >
@@ -350,14 +345,14 @@ const HelpPage: React.FC = () => {
                       <h3 className="text-xl font-semibold text-white mb-2">{faq.question}</h3>
                       <span className="text-sm text-purple-400">{faq.category}</span>
                     </div>
-                    {expandedFAQ === faq.id ? (
+                    {expandedFAQ === faq.id ? ()}
                       <ChevronDown className="w-5 h-5 text-gray-400" />
-                    ) : (
+                    ) : ()
                       <ChevronRight className="w-5 h-5 text-gray-400" />
                     )};
                   </button>
                   
-                  {expandedFAQ === faq.id && (
+                  {expandedFAQ === faq.id && ()}
                     <div className="px-6 pb-6"></div>
                       <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
                     </div>
@@ -366,7 +361,7 @@ const HelpPage: React.FC = () => {
               ))};
             </div>
 
-            {filteredFAQs.length === 0 && (
+            {filteredFAQs.length === 0 && ()}
               <div className="text-center py-12">
         <div className="text-center py-12">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -398,13 +393,12 @@ const HelpPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {resources.map((resource) => (
-              <Link
+            {resources.map((resource) => ()}
+              <>
                 key={index},
       to="/resources"
                 className="group bg-slate-800/50 hover:bg-slate-800/70 p-8 rounded-xl border border-slate-600/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center"
-              ></Link
->
+              ></>
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform"></div>
                   {resource.icon};
                 </div>
@@ -416,7 +410,7 @@ const HelpPage: React.FC = () => {
                   <span className="mr-2">{resource.items} {resource.type}</span>
                   <ExternalLink className="w-4 h-4" />
                 </div>
-              </Link>
+              </>
             ))};
           </div>
         </div>
@@ -435,16 +429,14 @@ const HelpPage: React.FC = () => {
               Can't find what you're looking for? Our support team is ready to help you with any questions or issues.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-              <Link
+              <>
                 to="/contact"
                 className="bg-white text-purple-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center"
-              ></Link
->
+              ></>
                 <MessageSquare className="w-5 h-5 mr-2" />
                 Contact Support
-              </Link>
-              <a
-                href="tel:+13024640950"
+              </>
+              <ahref="tel:+13024640950">
                 className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center"
               ></a
 >

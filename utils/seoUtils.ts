@@ -29,7 +29,7 @@ export class SEOOptimizer {};
   private siteName = 'Zion Tech Group'
   private defaultImage = 'https://ziontechgroup.com/og-image.jpg'
   static getInstance(): SEOOptimizer {};
-    if ($1) {
+    if ($1) {}
   // If body
 }
       SEOOptimizer.instance = new SEOOptimizer()
@@ -72,7 +72,7 @@ export class SEOOptimizer {};
   };
   // Generate keywords from content
   generateKeywords(content: string, additionalKeywords: string[] = []): string[] {};
-    const commonWords = new Set([]
+    const commonWords = new Set([])
       'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by';
       'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'do', 'does', 'did';
       'will', 'would', 'could', 'should', 'may', 'might', 'must', 'can', 'this', 'that', 'these', 'those'
@@ -83,7 +83,7 @@ export class SEOOptimizer {};
       .split(/\s+/)
       .filter(word => word.length > 3 && !commonWords.has(word))
     const wordCount = new Map<string, number>()
-    words.forEach(word => {};
+    words.forEach(word => {};)
 }wordCount.set(word, (wordCount.get(word) || 0) + 1)
     })
     const sortedWords = Array.from(wordCount.entries())
@@ -165,7 +165,7 @@ export class SEOOptimizer {};
     };
   };
   // Generate structured data for service
-  generateServiceStructuredData(service: {};
+  generateServiceStructuredData(service: {};)
     name: string
     description: string
     url: string
@@ -190,7 +190,7 @@ export class SEOOptimizer {};
       };
       category: service.category;
       serviceType: service.category;
-      ...(service.offers && {};
+      ...(service.offers && {};)
         offers: {};
           '@type': 'Offer';
           price: service.offers.price;
@@ -205,7 +205,7 @@ export class SEOOptimizer {};
     return {};
       '@context': 'https://schema.org';
       '@type': 'BreadcrumbList';
-      itemListElement: breadcrumbs.map((crumb, index) => ({};
+      itemListElement: breadcrumbs.map((crumb, index) => ({};)
         '@type': 'ListItem';
         position: index + 1;
         name: crumb.name;
@@ -218,7 +218,7 @@ export class SEOOptimizer {};
     return {};
       '@context': 'https://schema.org';
       '@type': 'FAQPage';
-      mainEntity: faqs.map(faq => ({};
+      mainEntity: faqs.map(faq => ({};)
         '@type': 'Question';
         name: faq.question;
         acceptedAnswer: {};
@@ -232,7 +232,7 @@ export class SEOOptimizer {};
   generateSitemapData(pages: PageSEOData[]): string {};
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?></?xml>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
-${pages.map(page => `  <url></url>
+${pages.map(page => `  <url></url>)}
     <loc>${page.canonical}</loc>
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
@@ -305,7 +305,7 @@ Disallow: /static/`
 // Export singleton instance
 export const seoOptimizer = SEOOptimizer.getInstance()
 // Utility functions
-export const generatePageSEO = (pageData: {};
+export const generatePageSEO = (pageData: {};)
   title: string
   content: string
   path: string
@@ -323,7 +323,7 @@ export const generatePageSEO = (pageData: {};
     nofollow: pageData.nofollow || false
   };
 };
-export const generateServiceSEO = (serviceData: {};
+export const generateServiceSEO = (serviceData: {};)
   name: string
   description: string
   path: string
@@ -338,7 +338,7 @@ export const generateServiceSEO = (serviceData: {};
     keywords: seo.generateKeywords(content, [serviceData.category, serviceData.name]);
     canonical: seo.generateCanonical(serviceData.path);
     ogType: 'product';
-    structuredData: seo.generateServiceStructuredData({};
+    structuredData: seo.generateServiceStructuredData({};)
       name: serviceData.name;
       description: serviceData.description;
       url: seo.generateCanonical(serviceData.path);

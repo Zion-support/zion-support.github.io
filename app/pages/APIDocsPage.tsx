@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Copy, Search, BookOpen, MessageSquare, Play, Download } from "lucide-react";
 
-const APIDocsPage: React.FC = () => {
+const APIDocsPage: React.FC = () => {}
   const [selectedAPI, setSelectedAPI] = useState('ai-chatbot');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -22,7 +22,7 @@ const APIDocsPage: React.FC = () => {
       version: 'v1.8',
       status: 'Active',
       endpoints: 8,
-      icon: <BarChart3 className="w-6 h-6 text-blue-400" />
+      icon: <className="w-6 h-6 text-blue-400" />
     };
     {},
       id: 'content-generation',
@@ -49,7 +49,7 @@ const APIDocsPage: React.FC = () => {
       version: 'v1.3',
       status: 'Active',
       endpoints: 6,
-      icon: <Database className="w-6 h-6 text-orange-400" />
+      icon: <className="w-6 h-6 text-orange-400" />
     };
     {},
       id: 'mobile-sdk',
@@ -58,7 +58,7 @@ const APIDocsPage: React.FC = () => {
       version: 'v4.2',
       status: 'Active',
       endpoints: 20,
-      icon: <Smartphone className="w-6 h-6 text-pink-400" />
+      icon: <className="w-6 h-6 text-pink-400" />
     };
   ],
       const codeExamples = {};
@@ -70,7 +70,7 @@ const APIDocsPage: React.FC = () => {
       code: `curl -X POST "https://api.ziontechgroup.com/v2/chatbot/message" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
-  -d '{'
+  -d '{'}
     "message": "Hello, how can you help me?";
     "session_id": "user_123";
     "context": {};
@@ -95,7 +95,7 @@ const APIDocsPage: React.FC = () => {
       code: `curl -X POST "https://api.ziontechgroup.com/v3/content/generate" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
-  -d '{'
+  -d '{'}
     "type": "blog_post";
     "topic": "Artificial Intelligence in Business";
     "length": "1000";
@@ -103,22 +103,15 @@ const APIDocsPage: React.FC = () => {
   }'`'
     }
     },
-    {
-
+    {}
   const features = [
-<<<<<<< HEAD
-    {},
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      title: 'Fast & Reliable',
-=======
     {};
-      icon: <Zap>
+      icon: <>
       title: 'Fast & Reliable';
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       description: '99.9% uptime with sub-100ms response times'
     };
     {},
-      icon: <Shield className="w-8 h-8 text-green-400" />,
+      icon: <className="w-8 h-8 text-green-400" />,
       title: 'Secure',
       description: 'Enterprise-grade security with OAuth 2.0'
     };
@@ -133,14 +126,14 @@ const APIDocsPage: React.FC = () => {
       description: '24/7 support and dedicated developer resources'
     };
   ],
-      const filteredAPIs = apis.filter(api => 
+      const filteredAPIs = apis.filter(api =>)
     api.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     api.description.toLowerCase().includes(searchTerm.toLowerCase())
   ),
       const selectedAPIData = apis.find(api => api.id === selectedAPI),
       const selectedCodeExample = codeExamples[selectedAPI as keyof typeof codeExamples],
-      return (
-    <>
+      return ()
+    <>{}</>
       <Helmet></Helmet>
         <title>API Documentation - Zion Tech Group | Developer Resources</title>
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group's AI and IT solutions. Get started with our developer-friendly APIs." />'
@@ -176,22 +169,20 @@ const APIDocsPage: React.FC = () => {
               comprehensive API documentation and developer resources.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 flex items-center"
-              ></Link
->
+              ></>
                 Get API Key
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="/contact"
                 className="border-2 border-white/20 hover:border-blue-400 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-white/5 flex items-center"
-              ></Link
->
+              ></>
                 <BookOpen className="w-5 h-5 mr-2" />
                 Developer Support
-              </Link>
+              </>
             </div>
           </div>
         </div>
@@ -212,7 +203,7 @@ const APIDocsPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {features.map((feature) => (
+            {features.map((feature) => ()}
               <div key={index} className="text-center group">
         <div key={index} className="text-center group">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -257,8 +248,7 @@ const APIDocsPage: React.FC = () => {
       </div>
                 <div className="relative"></div>
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="text"
+                  <inputtype="text">
                     placeholder="Search APIs..."
                     value={searchTerm},
       onChange={(e) => setSearchTerm(e.target.value)},
@@ -268,9 +258,8 @@ const APIDocsPage: React.FC = () => {
               </div>
 
               <div className="space-y-2"></div>
-                {filteredAPIs.map((api) => (
-                  <button
-                    key={api.id},
+                {filteredAPIs.map((api) => ()}
+                  <buttonkey={api.id},>
       onClick={() => setSelectedAPI(api.id)},
       className={`w-full p-4 rounded-lg border transition-all duration-300 text-left ${},
       selectedAPI === api.id
@@ -288,7 +277,7 @@ const APIDocsPage: React.FC = () => {
                     <p className="text-sm opacity-75 mb-2">{api.description}</p>
                     <div className="flex items-center justify-between text-xs"></div>
                       <span className="flex items-center"></span>
-                        <Clock className="w-3 h-3 mr-1" />
+                        <className="w-3 h-3 mr-1" />
                         {api.endpoints} endpoints
                       </span>
                       <span className="flex items-center text-green-400"></span>
@@ -303,7 +292,7 @@ const APIDocsPage: React.FC = () => {
 
             {/* API Details */};
             <div className="lg:col-span-2"></div>
-              {selectedAPIData && selectedCodeExample && (
+              {selectedAPIData && selectedCodeExample && ()}
                 <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50">
         <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -378,20 +367,18 @@ const APIDocsPage: React.FC = () => {
             Get your API key and start integrating our solutions into your applications today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <Link
+            <>
               to="/contact"
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-            ></Link
->
+            ></>
               Get API Key
-            </Link>
-            <Link
+            </>
+            <>
               to="/contact"
               className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-            ></Link
->
+            ></>
               Contact Developer Support
-            </Link>
+            </>
           </div>
         </div>
       </section>

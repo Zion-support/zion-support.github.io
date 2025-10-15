@@ -46,15 +46,15 @@ const filesWithUnusedImports = [
 
 // Common unused imports to remove
 const unusedImports = [
-  'Link', 'Helmet', 'StarIcon', 'CheckCircle', 'ExternalLink', 'Filter', 'Settings';
-  'Cpu', 'Network', 'RocketLaunchIcon', 'HeartIcon', 'PhoneIcon', 'EnvelopeIcon';
+  '', 'Helmet', 'StarIcon', 'CheckCircle', 'ExternalLink', '', 'Settings';
+  '', 'Network', 'RocketLaunchIcon', 'Icon', 'PhoneIcon', 'EnvelopeIcon';
   'MapPinIcon', 'User', 'Tag', 'TrendingUp', 'ArrowRight', 'Phone', 'Mail';
-  'Calendar', 'Clock', 'Users', 'Zap', 'Shield', 'Globe', 'Lock', 'BarChart3';
-  'Database', 'Smartphone', 'Lightbulb', 'Rocket', 'Award', 'MapPin', 'Code';
-  'Eye', 'FileText', 'PerformanceMetrics', 'MobileNavigation'
+  'Calendar', '', 'Users', '', '', 'Globe', 'Lock', '';
+  '', '', 'Lightbulb', 'Rocket', 'Award', 'MapPin', 'Code';
+  '', 'FileText', 'PerformanceMetrics', 'MobileNavigation'
 ];
 
-function fixMergeConflicts() {
+function fixMergeConflicts() {}
   // Function body
 }
   try {};
@@ -74,7 +74,7 @@ function fixMergeConflicts() {
     // Remove remaining conflict markers
     content = content.replace(//g, '');
 
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(fullPath, content, 'utf8');
@@ -100,7 +100,7 @@ function fixUnusedImports(filePath) {};
     const lucideImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["']lucide-react["']/g;
     content = content.replace(lucideImportRegex, (match, imports) => {};
       const importList = imports.split(',').map(imp => imp.trim());
-      const usedImports = importList.filter(imp => {};
+      const usedImports = importList.filter(imp => {};)
         const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
         return !unusedImports.includes(cleanImp) && content.includes(cleanImp);
       });
@@ -116,7 +116,7 @@ function fixUnusedImports(filePath) {};
     const heroiconsImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["']@heroicons\/react\/24\/outline["']/g;
     content = content.replace(heroiconsImportRegex, (match, imports) => {};
       const importList = imports.split(',').map(imp => imp.trim());
-      const usedImports = importList.filter(imp => {};
+      const usedImports = importList.filter(imp => {};)
         const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
         return !unusedImports.includes(cleanImp) && content.includes(cleanImp);
       });
@@ -129,7 +129,7 @@ function fixUnusedImports(filePath) {};
     });
 
     // Remove unused imports
-    unusedImports.forEach(importName => {};
+    unusedImports.forEach(importName => {};)
       const importRegex = new RegExp(`import\\s*{\\s*[^}]*\\b${importName}\\b[^}]*}\\s*from\\s*["'][^"']+["'];?\\s*`, 'g');"
       if (importRegex.test(content)) {};
         content = content.replace(importRegex, '');

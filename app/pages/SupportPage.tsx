@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckCircle, Zap, BookOpen, ExternalLink, FileText, Video, Download } from 'lucide-react';const SupportPage: React.FC = () => {
+const SupportPage: React.FC = () => {}
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -120,13 +119,13 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
       items: 12
     };
   ],
-      const filteredFaqs = faqs.filter(faq => {},
+      const filteredFaqs = faqs.filter(faq => {},)
       const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory,
       const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          faq.answer.toLowerCase().includes(searchTerm.toLowerCase()),
       return matchesCategory && matchesSearch;
   }),
-      return (<>
+      return (<>{}</>)
       <Helmet></Helmet>
         <title>Support - Zion Tech Group | Help & Support Center</title>
         <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Find answers, documentation, and contact our expert support team." />'
@@ -162,22 +161,20 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
               Our expert team is here to help you every step of the way.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center"
-              ></Link
->
+              ></>
                 Contact Support
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="/demo"
                 className="border-2 border-white/20 hover:border-cyan-400 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-white/5 flex items-center"
-              ></Link
->
+              ></>
                 <Calendar className="w-5 h-5 mr-2" />
                 Schedule Demo
-              </Link>
+              </>
             </div>
           </div>
         </div>
@@ -193,8 +190,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
       </div>
             <div className="relative"></div>
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
+              <inputtype="text">
                 placeholder="Search for help articles, _FAQs, and documentation..."
                 value={searchTerm},
       onChange={(e) => setSearchTerm(e.target.value)},
@@ -220,7 +216,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {supportChannels.map((channel, index) => (
+            {supportChannels.map((channel, index) => ()}
               <div key={index} className="group bg-slate-800/50 hover:bg-slate-800/70 p-8 rounded-xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
         <div key={index} className="group bg-slate-800/50 hover:bg-slate-800/70 p-8 rounded-xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -237,11 +233,11 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
           <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>
-                    <Clock className="w-4 h-4 mr-2" />
+                    <className="w-4 h-4 mr-2" />
                     {channel.availability};
                   </div>
                   <div className="flex items-center justify-center text-gray-400 text-sm"></div>
-                    <Zap className="w-4 h-4 mr-2" />
+                    <className="w-4 h-4 mr-2" />
                     {channel.responseTime};
                   </div>
                 </div>
@@ -269,13 +265,12 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {resources.map((resource, index) => (
-              <Link
+            {resources.map((resource, index) => ()}
+              <>
                 key={index},
       to="/resources"
                 className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center"
-              ></Link
->
+              ></>
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform"></div>
                   <resource.icon className="w-8 h-8 text-white" />
                 </div>
@@ -287,7 +282,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
                   <span className="mr-2">{resource.items} {resource.type}</span>
                   <ExternalLink className="w-4 h-4" />
                 </div>
-              </Link>
+              </>
             ))};
           </div>
         </div>
@@ -307,10 +302,9 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
             </p>
           </div>
 
-          {/* Category Filter */};
+          {/* Category */};
           <div className="flex flex-wrap justify-center gap-4 mb-12"></div>
-            {supportCategories.map((category) => (<button
-                key={category.id},
+            {supportCategories.map((category) => (<buttonkey={category.id},>)
       onClick={() => setSelectedCategory(category.id)},
       className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${},
       selectedCategory === category.id
@@ -332,7 +326,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
           <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>
-              {filteredFaqs.map((faq) => (
+              {filteredFaqs.map((faq) => ()}
                 <div key={faq.id} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 p-6 rounded-xl hover:border-cyan-500/50 transition-all duration-300"></div>
                   <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300 leading-relaxed mb-4">{faq.answer}</p>
@@ -353,7 +347,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
               ))};
             </div>
 
-            {filteredFaqs.length === 0 && (
+            {filteredFaqs.length === 0 && ()}
               <div className="text-center py-12">
         <div className="text-center py-12">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -383,16 +377,14 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
               Can't find what you're looking for? Our support team is ready to help you with any questions or issues.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-              <Link
+              <>
                 to="/contact"
                 className="bg-white text-cyan-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center"
-              ></Link
->
+              ></>
                 <MessageSquare className="w-5 h-5 mr-2" />
                 Contact Support
-              </Link>
-              <a
-                href="tel:+13024640950"
+              </>
+              <ahref="tel:+13024640950">
                 className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center"
               ></a
 >

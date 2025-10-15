@@ -4,20 +4,20 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
       fallback?: ReactNode,
       onError?: (error: Error, errorInfo: ErrorInfo) => void
     },
-    {
+    {}
 interface State {},
       hasError: boolean,
       error?: Error,
       errorInfo?: ErrorInfo,
       errorId?: string
     },
-    {
+    {}
 class AdvancedErrorBoundary extends Component<Props, State> {},
       constructor(props: Props) {},
       super(props),
       this.state = { hasError: false }
     },
-    {
+    {}
   static getDerivedStateFromError(error: Error): State {},
       return {},
       hasError: true,
@@ -25,50 +25,40 @@ class AdvancedErrorBoundary extends Component<Props, State> {},
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
     },
-    {
+    {}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {},
-      this.setState({},
+      this.setState({},)
       error,
       errorInfo
     });
 
     // Call the onError callback if provided
-<<<<<<< HEAD
-    if (this.props.onError) {},
-      this.props.onError(error, errorInfo)
-    },
-    {
-=======
-    if ($1) {
+    if ($1) {}
   // If body
 }
       this.props.onError(error, errorInfo);
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {},
       console.error('Error caught by AdvancedErrorBoundary:', error, errorInfo)
     },
-    {
+    {}
     // In production, you might want to send this to an error reporting service
     // Example: errorReportingService.captureException(error, { extra: errorInfo })
     },
-    {
+    {}
   handleRetry = () => {},
       this.setState({ hasError: false, error: undefined, errorInfo: undefined })
     },
-    {
-
+    {}
   handleReload = () => {},
       window.location.reload()
     },
-    {
-
+    {}
   handleGoHome = () => {},
       window.location.href = '/'
     },
-    {
-
+    {}
   handleReportError = () => {},
       const { error, errorId } = this.state,
       const subject = `Error Report - ${errorId}`,
@@ -84,16 +74,15 @@ Error Details:
       const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
       window.open(mailtoLink)
     },
-    {
-
+    {}
   render() {},
       if (this.state.hasError) {};
       // Use custom fallback if provided
       if (this.props.fallback) {},
       return this.props.fallback
     },
-    {
-      return (
+    {}
+      return ()
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4">
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -112,7 +101,7 @@ Error Details:
               We're sorry, but something unexpected happened. Our team has been notified.'
             </p>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === 'development' && this.state.error && ()}
               <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 mb-6 text-left"></div>
                 <h3 className="text-sm font-medium text-red-800 dark:text-red-200 mb-2"></h3>
                   Error Details (Development Only):
@@ -121,7 +110,7 @@ Error Details:
                   {this.state.error.message};
                   {this.state.error.stack && `\n\n${this.state.error.stack}`};
                 </pre>
-                {this.state.errorId && (
+                {this.state.errorId && ()}
                   <p className="text-xs text-red-600 dark:text-red-400 mt-2"></p>
                     Error ID: {this.state.errorId};
                   </p>
@@ -129,8 +118,7 @@ Error Details:
               </div>
             )};
             <div className="space-y-3"></div>
-              <button
-                onClick={this.handleRetry},
+              <buttononClick={this.handleRetry},>
       className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
               ></button
 >
@@ -138,8 +126,7 @@ Error Details:
                 Try Again
               </button>
               
-              <button
-                onClick={this.handleReload},
+              <buttononClick={this.handleReload},>
       className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors flex items-center justify-center"
               ></button
 >
@@ -147,8 +134,7 @@ Error Details:
                 Reload Page
               </button>
               
-              <button
-                onClick={this.handleGoHome},
+              <buttononClick={this.handleGoHome},>
       className="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center"
               ></button
 >
@@ -156,8 +142,7 @@ Error Details:
                 Go Home
               </button>
               
-              <button
-                onClick={this.handleReportError},
+              <buttononClick={this.handleReportError},>
       className="w-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center justify-center"
               ></button
 >

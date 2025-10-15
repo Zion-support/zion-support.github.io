@@ -2,10 +2,10 @@ import React from 'react';
 
 import SEOHead from '../components/SEOHead';
 
-const DigitalTransformationPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead 
+const DigitalTransformationPage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
         title="DigitalTransformationPage - Zion Tech Group"
         description="Zion Tech Group DigitalTransformationPage page"
       />
@@ -37,14 +37,14 @@ const DigitalTransformationPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+            {services.map((service, index) => ()}
               <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border border-gray-100">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <div className="mb-4">
                   <h4 className="font-medium text-gray-900 mb-2">Key Features:</h4>
                   <ul className="text-sm text-gray-600 space-y-1">
-                    {service.features.map((feature, idx) => (
+                    {service.features.map((feature, idx) => ()}
                       <li key={idx} className="flex items-center">
                         <CheckCircleIcon className="w-4 h-4 text-green-500 mr-2" />
                         {feature}

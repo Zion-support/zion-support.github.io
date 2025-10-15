@@ -1,8 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-'use client';
-export default function ZionAIEmailAnalyzer() {
-  return (
+import { Helmet } from 'react-helmet-async""use client';
+export default function ZionAIEmailAnalyzer() {}
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
       <Helmet>;
         <title>Zion AI Email Analyzer | Zion Tech Group</title>;
@@ -30,7 +29,7 @@ export default function ZionAIEmailAnalyzer() {
             </ul>;
           </div>;
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">;
-            <h3 className="text-xl font-semibold text-white mb-4">Smart Filtering</h3>;
+            <h3 className="text-xl font-semibold text-white mb-4">Smart ing</h3>;
             <p className="text-gray-300 mb-4">;
               Intelligent email filtering and organization capabilities.;
             </p>;

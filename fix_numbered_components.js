@@ -1,7 +1,7 @@
 import fs from 'fs'
-import path from 'path'
+import path from "path";
 // Find all page.tsx files
-function findPageFiles() {
+function findPageFiles() {}
   // Function body
 }
 }const files = []
@@ -11,7 +11,7 @@ const items = fs.readdirSync(dir)
 const stat = fs.statSync(fullPath)
     if (stat.isDirectory()) {};
       files.push(...findPageFiles(fullPath))
-    } else if ($1) {
+    } else if ($1) {}
   // If body
 }
       files.push(fullPath)
@@ -21,7 +21,7 @@ function fixNumberedComponents(filePath) {};
 }let content = fs.readFileSync(filePath, 'utf8')
   let modified = false
   // Fix component names that start with numbers
- \{/g
+ \{/g}
   const matches = content.match(numberedComponentRegex)
   if (matches) {};
     for (const match, of, matches) {};

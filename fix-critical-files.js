@@ -1,5 +1,5 @@
 import fs from 'fs'
-import path from 'path'
+import path from "path";
 #!/usr/bin/env node
 // List of critical files that need to be fixed
 ]
@@ -14,7 +14,7 @@ import path from 'path'
     const lines = content.split('\n')
 const fixedLines = []
     let openTags = []
-    for (let i = 0; i
+    for (let i = 0; i)
       const openTagMatch = trimmedLine.match(/<(\w+)([^>]*)>/)
 const tagName = openTagMatch[1]
         const attributes = openTagMatch[2]

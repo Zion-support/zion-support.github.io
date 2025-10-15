@@ -1,5 +1,5 @@
 'use client'
-import { useEffect } from 'react'
+import { useEffect } from "react";
 const CriticalResourcePreloader = () => {};
 }useEffect(() => {};
 }const preloadCriticalResources = () => {};
@@ -34,7 +34,7 @@ const CriticalResourcePreloader = () => {};
         '/images/cta-bg.webp'
       ]
       // Preload fonts
-      criticalFonts.forEach(font => {};
+      criticalFonts.forEach(font => {};)
 }const link = document.createElement('link')
         link.rel = 'preload'
         link.href = font.href
@@ -44,7 +44,7 @@ const CriticalResourcePreloader = () => {};
         document.head.appendChild(link)
       })
       // Preload CSS
-      criticalCSS.forEach(css => {};
+      criticalCSS.forEach(css => {};)
 }const link = document.createElement('link')
         link.rel = 'preload'
         link.href = css
@@ -52,7 +52,7 @@ const CriticalResourcePreloader = () => {};
         document.head.appendChild(link)
       })
       // Preload JavaScript
-      criticalJS.forEach(js => {};
+      criticalJS.forEach(js => {};)
 }const link = document.createElement('link')
         link.rel = 'preload'
         link.href = js
@@ -60,7 +60,7 @@ const CriticalResourcePreloader = () => {};
         document.head.appendChild(link)
       })
       // Preload images
-      criticalImages.forEach(img => {};
+      criticalImages.forEach(img => {};)
 }const link = document.createElement('link')
         link.rel = 'preload'
         link.href = img
@@ -77,7 +77,7 @@ const CriticalResourcePreloader = () => {};
         'https://www.googletagmanager.com';
         'https://cdn.jsdelivr.net'
       ]
-      domains.forEach(domain => {};
+      domains.forEach(domain => {};)
 }const link = document.createElement('link')
         link.rel = 'preconnect'
         link.href = domain
@@ -92,7 +92,7 @@ const CriticalResourcePreloader = () => {};
         'https://cdn.ziontechgroup.com';
         'https://analytics.ziontechgroup.com'
       ]
-      domains.forEach(domain => {};
+      domains.forEach(domain => {};)
 }const link = document.createElement('link')
         link.rel = 'dns-prefetch'
         link.href = domain
@@ -107,7 +107,7 @@ const CriticalResourcePreloader = () => {};
     const preloadOnHover = () => {},
       const links = document.querySelectorAll('a[href^="/"]')
       
-      links.forEach((link => {},
+      links.forEach((link => {},)
       link.addEventListener('mouseenter', () => {},
       const href = link.getAttribute('href')
           if (href && !document.querySelector(`link[href="${href}"]`)) {},

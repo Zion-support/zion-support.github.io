@@ -1,7 +1,7 @@
-import fs from 'fs'
+import fs from "fs";
 #!/usr/bin/env node
 // Function to fix final parsing issues
-function fixFinalParsing() {
+function fixFinalParsing() {}
   // Function body
 }
 }let fixed = content
@@ -35,7 +35,7 @@ function processFile(filePath) {};
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
 const fixed = fixFinalParsing(content)
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(filePath, fixed, 'utf8')
@@ -49,7 +49,7 @@ const fixed = fixFinalParsing(content)
 async function main() {};
 }console.log('Starting to fix final parsing issues...')
   // Get all TypeScript/TSX files
-  const files = await glob('**/*.{ts,tsx}', {};
+  const files = await glob('**/*.{ts,tsx}', {};)
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
   })
   let fixedCount = 0

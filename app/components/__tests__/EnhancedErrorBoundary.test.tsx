@@ -4,25 +4,14 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react',
     import EnhancedErrorBoundary from '../EnhancedErrorBoundary';
 
 // Mock component that throws an error
-<<<<<<< HEAD
-const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {},
-    if (shouldThrow) {},
-      throw new Error('Test error')
-    },
-    {
-  return <div>No error</div>
-    },
-    {
-=======
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {};
-  if ($1) {
+  if ($1) {}
   // If body
 }
     throw new Error('Test error');
   };
   return <div>No error</div>;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 
 // Mock fetch for error reporting
 global.fetch = jest.fn(),
@@ -36,7 +25,7 @@ global.fetch = jest.fn(),
       jest.restoreAllMocks();
   }),
       it('renders children when there is no error', () => {},
-      render(
+      render()
       <EnhancedErrorBoundary>
         <div>Test content</div>
       </EnhancedErrorBoundary>
@@ -44,7 +33,7 @@ global.fetch = jest.fn(),
       expect(screen.getByText('Test content')).toBeInTheDocument();
   }),
       it('renders error UI when child component throws', () => {},
-      render(
+      render()
       <EnhancedErrorBoundary></EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
@@ -53,7 +42,7 @@ global.fetch = jest.fn(),
       expect(screen.getByText('We\'re sorry, but something unexpected happened.')).toBeInTheDocument();'
   }),
       it('shows error details when enableErrorDetails is true', () => {},
-      render(
+      render()
       <EnhancedErrorBoundary enableErrorDetails={true}></EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
@@ -61,7 +50,7 @@ global.fetch = jest.fn(),
       expect(screen.getByText('Error Details')).toBeInTheDocument();
   }),
       it('hides error details when enableErrorDetails is false', () => {},
-      render(
+      render()
       <EnhancedErrorBoundary enableErrorDetails={false}></EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
@@ -69,7 +58,7 @@ global.fetch = jest.fn(),
       expect(screen.queryByText('Error Details')).not.toBeInTheDocument();
   }),
       it('shows retry button when enableRetry is true', () => {},
-      render(
+      render()
       <EnhancedErrorBoundary enableRetry={true}></EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
@@ -77,7 +66,7 @@ global.fetch = jest.fn(),
       expect(screen.getByText('Try Again')).toBeInTheDocument();
   }),
       it('hides retry button when enableRetry is false', () => {},
-      render(
+      render()
       <EnhancedErrorBoundary enableRetry={false}></EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
@@ -86,12 +75,12 @@ global.fetch = jest.fn(),
   }),
       it('calls onError when error occurs', () => {},
       const onError = jest.fn(),
-      render(
+      render()
       <EnhancedErrorBoundary onError={onError}></EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
     ),
-      expect(onError).toHaveBeenCalledWith(
+      expect(onError).toHaveBeenCalledWith()
       expect.any(Error),
       expect.any(Object),
       expect.any(String)
@@ -99,7 +88,7 @@ global.fetch = jest.fn(),
   }),
       it('calls onRetry when retry button is clicked', () => {},
       const onRetry = jest.fn(),
-      render(
+      render()
       <EnhancedErrorBoundary onRetry={onRetry} enableRetry={true}></EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
@@ -109,24 +98,24 @@ global.fetch = jest.fn(),
   }),
       it('reports error when enableErrorReporting is true', async () => {};
     (global.fetch as jest.Mock).mockResolvedValueOnce({ ok: true }),
-      render(
+      render()
       <EnhancedErrorBoundary enableErrorReporting={true}></EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
     ),
       await waitFor(() => {},
-      expect(global.fetch).toHaveBeenCalledWith('/api/error-report', {},
+      expect(global.fetch).toHaveBeenCalledWith('/api/error-report', {},)
       method: 'POST',
       headers: {};
           'Content-Type': 'application/json'
     },
-    {
+    {}
         body: expect.stringContaining('"message":"Test error"')
       });
     });
   }),
       it('does not report error when enableErrorReporting is false', async () => {},
-      render(
+      render()
       <EnhancedErrorBoundary enableErrorReporting={false}></EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
@@ -136,7 +125,7 @@ global.fetch = jest.fn(),
     });
   }),
       it('shows retry count in error details', () => {},
-      render(
+      render()
       <EnhancedErrorBoundary enableErrorDetails={true} maxRetries={3}></EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
@@ -144,14 +133,14 @@ global.fetch = jest.fn(),
       expect(screen.getByText('Retry Count: 0/3')).toBeInTheDocument();
   }),
       it('disables retry button when max retries reached', () => {},
-      const { rerender } = render(
+      const { rerender } = render()
       <EnhancedErrorBoundary enableRetry={true} maxRetries={1}></EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
     );
 
     // Simulate reaching max retries
-    rerender(
+    rerender()
       <EnhancedErrorBoundary enableRetry={true} maxRetries={1}></EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
@@ -162,32 +151,32 @@ global.fetch = jest.fn(),
       if (retryButton) {},
       expect(retryButton).toBeDisabled()
     },
-    {
+    {}
   }),
       it('opens report issue page when report button is clicked', () => {},
       const mockOpen = jest.fn(),
-      Object.defineProperty(window, 'open', {},
+      Object.defineProperty(window, 'open', {},)
       value: mockOpen,
       writable: true
     }),
-      render(
+      render()
       <EnhancedErrorBoundary></EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
     ),
       fireEvent.click(screen.getByText('Report Issue')),
-      expect(mockOpen).toHaveBeenCalledWith(
+      expect(mockOpen).toHaveBeenCalledWith()
       expect.stringContaining('/report?');
       '_blank'
     );
   }),
       it('reloads page when reload button is clicked', () => {},
       const mockReload = jest.fn(),
-      Object.defineProperty(window.location, 'reload', {},
+      Object.defineProperty(window.location, 'reload', {},)
       value: mockReload,
       writable: true
     }),
-      render(
+      render()
       <EnhancedErrorBoundary></EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
@@ -197,11 +186,11 @@ global.fetch = jest.fn(),
   }),
       it('navigates to home when go home button is clicked', () => {},
       const mockLocation = jest.fn(),
-      Object.defineProperty(window, 'location', {},
+      Object.defineProperty(window, 'location', {},)
       value: { href: mockLocation },
       writable: true
     }),
-      render(
+      render()
       <EnhancedErrorBoundary></EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
@@ -211,7 +200,7 @@ global.fetch = jest.fn(),
   }),
       it('renders custom fallback when provided', () => {},
       const customFallback = <div>Custom error message</div>,
-      render(
+      render()
       <EnhancedErrorBoundary fallback={customFallback}></EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
@@ -220,7 +209,7 @@ global.fetch = jest.fn(),
       expect(screen.queryByText('Something went wrong')).not.toBeInTheDocument();
   }),
       it('handles multiple errors correctly', () => {},
-      const { rerender } = render(
+      const { rerender } = render()
       <EnhancedErrorBoundary enableErrorDetails={true}></EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
@@ -228,7 +217,7 @@ global.fetch = jest.fn(),
       expect(screen.getByText('Something went wrong')).toBeInTheDocument();
 
     // Reset and throw another error
-    rerender(
+    rerender()
       <EnhancedErrorBoundary enableErrorDetails={true}></EnhancedErrorBoundary>
         <ThrowError shouldThrow={false} />
       </EnhancedErrorBoundary>

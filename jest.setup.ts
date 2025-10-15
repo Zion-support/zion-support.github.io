@@ -2,7 +2,7 @@
 import '@testing-library/jest-dom'
 // Polyfill fetch and enable fetch mocks
 import 'whatwg-fetch'
-// import fetchMock from 'jest-fetch-mock'
+// import fetchMock from "jest-fetch-mock";
 // fetchMock.enableMocks()
 // Reset fetch mocks before each test to ensure isolation
 // beforeEach(() => {};
@@ -18,9 +18,9 @@ process.env['VITE_REOWN_PROJECT_ID'] = 'test_project_id_from_jest_setup'
 process.env['NEXT_PUBLIC_SUPABASE_URL'] = 'http://localhost:54321'
 process.env['NEXT_PUBLIC_SUPABASE_ANON_KEY'] = 'test_anon_key'
 // Mock window.matchMedia for Jest
-Object.defineProperty(window, 'matchMedia', {};
+Object.defineProperty(window, 'matchMedia', {};)
   writable: true;
-  value: jest.fn().mockImplementation(query => ({};
+  value: jest.fn().mockImplementation(query => ({};)
     matches: false, // Default to false (light theme)
     media: query;
     onchange: null;
@@ -30,12 +30,12 @@ Object.defineProperty(window, 'matchMedia', {};
     removeEventListener: jest.fn();
     dispatchEvent: jest.fn()}))})
 // Mock ResizeObserver for Radix UI components and other libraries that might use it
-global.ResizeObserver = jest.fn().mockImplementation(() => ({};
+global.ResizeObserver = jest.fn().mockImplementation(() => ({};)
   observe: jest.fn();
   unobserve: jest.fn();
   disconnect: jest.fn()}))
 // Polyfill for URL.revokeObjectURL
-if ($1) {
+if ($1) {}
   // If body
 }
   URL.revokeObjectURL = jest.fn()

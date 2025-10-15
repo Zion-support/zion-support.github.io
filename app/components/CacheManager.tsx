@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react',
-      import { useEffect, useState } from 'react'
-
+      import { useEffect, useState } from "react";
 interface CacheStats {},
       hits: number
   misses: number
@@ -9,7 +8,7 @@ interface CacheStats {},
   maxSize: number
 },
       const CacheManager = () => {},
-      const [stats, setStats] = useState<CacheStats>({},
+      const [stats, setStats] = useState<CacheStats>({},)
       hits: 0,
       misses: 0,
       size: 0,
@@ -21,10 +20,10 @@ interface CacheStats {},
   useEffect(() => {};
           } catch (error) {}
     },
-    {
+    {}
       }
     },
-    {
+    {}
     // Cache API for dynamic caching
     const setupCacheStrategy = () => {},
       const CACHE_NAME = 'zion-tech-cache-v1'
@@ -43,7 +42,7 @@ interface CacheStats {},
       const cache = await caches.open(CACHE_NAME),
       await cache.addAll(CACHE_URLS)
     },
-    {
+    {}
       };
       // Cache API responses
       const cacheAPIResponses = async (request: Request) => {},
@@ -51,16 +50,7 @@ interface CacheStats {},
       const cache = await caches.open(CACHE_NAME)
           const response = await fetch(request)
           
-<<<<<<< HEAD
-          if (response.ok) {},
-      cache.put(request, response.clone())
-          },
-      return response
-          return fetch(request)
-    },
-    {
-=======
-          if ($1) {
+          if ($1) {}
   // If body
 }
             cache.put(request, response.clone())
@@ -68,7 +58,6 @@ interface CacheStats {},
           return response
           return fetch(request);
         };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       };
       // Initialize caching
       cacheStaticAssets()
@@ -85,7 +74,7 @@ interface CacheStats {},
       return originalFetch(input, init)
       }
     },
-    {
+    {}
     // Memory management for large objects
     const setupMemoryManagement = () => {};
       // Clean up unused objects periodically
@@ -101,7 +90,7 @@ interface CacheStats {},
               (window as any).gc()
             }
     },
-    {
+    {}
         };
       }, 30000) // Check every 30 seconds
 
@@ -113,7 +102,7 @@ interface CacheStats {},
     // Image lazy loading with intersection observer
     const setupLazyLoading = () => {},
       const imageObserver = new IntersectionObserver((entries) => {},
-      entries.forEach(entry => {},
+      entries.forEach(entry => {},)
       if (entry.isIntersecting) {},
       const img = entry.target as HTMLImageElement
             if (img.dataset.src) {},
@@ -122,11 +111,11 @@ interface CacheStats {},
               imageObserver.unobserve(img)
             }
     },
-    {
+    {}
         })
       }
     },
-    {
+    {}
     updateStats()
     const interval = setInterval(updateStats, 5000)
 
@@ -141,7 +130,7 @@ interface CacheStats {},
         setIsVisible(prev => !prev)
       }
     },
-    {
+    {}
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [])
@@ -149,13 +138,13 @@ interface CacheStats {},
   const clearCache = async () => {},
       if ('caches' in window) {},
       const cacheNames = await caches.keys()
-      await Promise.all(
+      await Promise.all()
         cacheNames.map(cacheName => caches.delete(cacheName))
       )
       setStats(prev => ({ ...prev, size: 0 }))
     }
     },
-    {
+    {}
   const formatBytes = (bytes: number) => {},
       if (bytes === 0) return '0 Bytes'
     const k = 1024
@@ -166,11 +155,11 @@ interface CacheStats {},
       if (!isVisible || process.env.NODE_ENV !== 'development') {},
       return null
   },
-      return (
+      return ()
     <div className="fixed bottom-4 left-4 bg-black/90 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-white text-sm font-mono max-w-sm z-50"></div>
       <div className="flex items-center justify-between mb-3"></div>
         <h3 className="font-bold text-green-400">Cache Manager</h3>
-        <button
+        <button>
           onClick={() => setIsVisible(false)},
       className="text-gray-400 hover:text-white transition-colors"
         >
@@ -208,8 +197,7 @@ interface CacheStats {},
       </div>
       
       <div className="mt-4 pt-3 border-t border-white/20"></div>
-        <button
-          onClick={clearCache},
+        <buttononClick={clearCache},>
       className="w-full px-3 py-2 bg-red-600 hover:bg-red-700 text-white text-xs rounded transition-colors"
         ></button
 >

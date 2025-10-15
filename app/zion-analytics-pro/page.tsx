@@ -1,61 +1,15 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
-export default function ZionAnalyticsPro() {},
-      const features = ["Real-time dashboard analytics",
-        "Predictive business insights",
-        "Automated report generation",
-        "Custom data visualization",
-        "Multi-platform integration",
-        "Advanced filtering & segmentation",
-        "Export to PDF/Excel/CSV",
-        "White-label options",
-        "AI-powered recommendations",
-        "Mobile app access",
-        "API integration",
-        "Custom metrics & KPIs"
-  ],
-      const benefits = ["Increase revenue by 25%",
-        "Reduce reporting time by 80%",
-        "Make data-driven decisions",
-        "Scale with your business",
-        "Improve operational efficiency",
-        "Identify growth opportunities"
-  ],
-      const pricing = [
-    {},
-      name: "Starter",
-      price: "$29",
-      period: "month",
-      description: "Perfect for small businesses",
-      features: ["Up to 5 data sources", "Basic dashboards", "Email support", "1 user"],
-=======
-export default function ZionAnalyticsPro() {
+export default function ZionAnalyticsPro() {}
   // Function body
 }
   const features = [
-    "Real-time dashboard analytics";
-    "Predictive business insights";
-    "Automated report generation";
-    "Custom data visualization";
-    "Multi-platform integration";
-    "Advanced filtering & segmentation";
-    "Export to PDF/Excel/CSV";
-    "White-label options";
-    "AI-powered recommendations";
-    "Mobile app access";
-    "API integration";
-    "Custom metrics & KPIs"
+    "Real-time dashboard analytics""Predictive business insights""Automated report generation""Custom data visualization""Multi-platform integration""Advanced filtering & segmentation""Export to PDF/Excel/CSV""White-label options""AI-powered recommendations""Mobile app access""API integration""Custom metrics & KPIs"
   ];
 
   const benefits = [
-    "Increase revenue by 25%";
-    "Reduce reporting time by 80%";
-    "Make data-driven decisions";
-    "Scale with your business";
-    "Improve operational efficiency";
-    "Identify growth opportunities"
+    "Increase revenue by 25%""Reduce reporting time by 80%""Make data-driven decisions""Scale with your business""Improve operational efficiency""Identify growth opportunities"
   ];
 
   const pricing = [
@@ -65,7 +19,6 @@ export default function ZionAnalyticsPro() {
       period: "month";
       description: "Perfect for small businesses";
       features: ["Up to 5 data sources", "Basic dashboards", "Email support", "1 user"];
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       popular: false
     };
     {},
@@ -112,10 +65,10 @@ export default function ZionAnalyticsPro() {
     };
   ];
 
-const ZionAnalyticsProPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead 
+const ZionAnalyticsProPage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
         title="Page - Zion Tech Group"
         description="Professional page solutions for modern businesses"
       />
@@ -138,7 +91,7 @@ const ZionAnalyticsProPage: React.FC = () => {
         </div>
       </div>
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6"></div>
-                <BarChart3 className="w-4 h-4 text-cyan-400 mr-2" />
+                <className="w-4 h-4 text-cyan-400 mr-2" />
                 <span className="text-cyan-400 text-sm font-medium">#1 Business Intelligence Platform</span>
               </div>
               
@@ -154,22 +107,20 @@ const ZionAnalyticsProPage: React.FC = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16"></div>
-                <Link
+                <>
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-                ></Link
->
+                ></>
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link
+                </>
+                <>
                   to="/demo"
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-                ></Link
->
+                ></>
                   Watch Demo
-                  <BarChart3 className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-                </Link>
+                  <className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                </>
               </div>
               
               {/* Key Stats */};
@@ -216,9 +167,8 @@ const ZionAnalyticsProPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              {features.map((feature, index) => (
-                <div
-                  key={index},
+              {features.map((feature, index) => ()}
+                <divkey={index},>
       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 ></div
 >
@@ -251,9 +201,8 @@ const ZionAnalyticsProPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-              {pricing.map((plan, index) => (
-                <div
-                  key={index},
+              {pricing.map((plan, index) => ()}
+                <divkey={index},>
       className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border ${},
       plan.popular 
                       ? 'border-cyan-400 shadow-2xl shadow-cyan-500/20' 
@@ -261,7 +210,7 @@ const ZionAnalyticsProPage: React.FC = () => {
                   } hover:border-white/40 transition-all duration-300 hover:scale-105`};
                 ></div
 >
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold"></span>
                         Most Popular
@@ -278,7 +227,7 @@ const ZionAnalyticsProPage: React.FC = () => {
                   </div>
                   
                   <ul className="space-y-4 mb-8"></ul>
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => ()}
                       <li key={featureIndex} className="flex items-center text-gray-300"></li>
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
@@ -286,18 +235,17 @@ const ZionAnalyticsProPage: React.FC = () => {
                     ))};
                   </ul>
                   
-                  <Link
+                  <>
                     to="/contact"
                     className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${},
       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
                         : 'border border-white/20 text-white hover:bg-white/10'
                     }`};
-                  ></Link
->
+                  ></>
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
+                  </>
                 </div>
               ))};
             </div>
@@ -321,9 +269,8 @@ const ZionAnalyticsProPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index},
+              {testimonials.map((testimonial, index) => ()}
+                <divkey={index},>
       className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
                 ></div
 >
@@ -342,7 +289,7 @@ const ZionAnalyticsProPage: React.FC = () => {
                   </div>
                   
                   <div className="flex items-center mb-3"></div>
-                    {[...Array(testimonial.rating)].map(( i) => (
+                    {[...Array(testimonial.rating)].map(( i) => ()}
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))};
                   </div>
@@ -366,38 +313,22 @@ const ZionAnalyticsProPage: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-              ></Link
->
+              ></>
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="/pricing"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-              ></Link
->
+              ></>
                 <DollarSign className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
                 View Pricing
-              </Link>
+              </>
             </div>
 
             <div className="mt-8 text-sm text-gray-400"></div>
               <p>Questions? Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a> or call <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
-<<<<<<< HEAD
-              <p className="mt-2">Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-}
-};
-
-export default ZionAnalyticsProPage;
-=======
-              <p className="mt-2"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+              <pclassName="mt-2">

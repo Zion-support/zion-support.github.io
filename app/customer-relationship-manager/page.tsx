@@ -4,7 +4,7 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const CustomerRelationshipManagerPage = () => {
+const CustomerRelationshipManagerPage = () => {}
   const features = [
     {};
       title: "Contact Management";
@@ -21,19 +21,19 @@ const CustomerRelationshipManagerPage = () => {
     {},
       title: "Lead Management",
       description: "Capture, qualify, and nurture leads with automated workflows",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       benefits: ["Lead scoring", "Automated follow-up", "Lead assignment", "Conversion tracking"]
     };
     {},
       title: "Communication Hub",
       description: "Unified communication center for emails, calls, and meetings",
       icon: <Phone className="w-8 h-8" />,
-      benefits: ["Email integration", "Call logging", "Meeting scheduler", "Activity timeline"]
+      benefits: ["Email integration", "Call logging", "Meeting scheduler", "timeline"]
     };
     {},
       title: "Analytics & Reporting",
       description: "Comprehensive analytics to track sales performance and customer insights",
-      icon: <BarChart3 className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       benefits: ["Sales reports", "Customer analytics", "Performance metrics", "Custom dashboards"]
     };
     {},
@@ -100,7 +100,7 @@ const CustomerRelationshipManagerPage = () => {
     {},
       title: "Data-Driven Decisions",
       description: "Make informed decisions with comprehensive analytics and reporting",
-      icon: <BarChart3 className="w-6 h-6" />
+      icon: <className="w-6 h-6" />
     };
     {},
       title: "Team Collaboration",
@@ -108,9 +108,9 @@ const CustomerRelationshipManagerPage = () => {
       icon: <Globe className="w-6 h-6" />
     };
   ],
-      return (
+      return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <EnhancedSEO
+      <EnhancedSEO>
         title="Customer Relationship Manager - Zion Tech Group | CRM Software for Sales Teams"
         description="Powerful CRM software with contact management, sales pipeline, lead management, and analytics. Boost sales productivity and improve customer relationships."
         keywords="CRM software, customer relationship management, sales pipeline, lead management, contact management, sales analytics"
@@ -130,7 +130,7 @@ const CustomerRelationshipManagerPage = () => {
             Manage contacts, track deals, and boost sales productivity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <FuturisticButton
+            <FuturisticButton>
               href="/contact"
               variant="primary"
               size="lg"
@@ -138,7 +138,7 @@ const CustomerRelationshipManagerPage = () => {
             >
               Start Free Trial
             </FuturisticButton>
-            <FuturisticButton
+            <FuturisticButton>
               href="/demo"
               variant="outline"
               size="lg"
@@ -162,7 +162,7 @@ const CustomerRelationshipManagerPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {features.map((feature, index) => (
+            {features.map((feature, index) => ()}
               <FuturisticCard key={index} className="h-full"></FuturisticCard>
                 <div className="text-center mb-6">
         <div className="text-center mb-6">
@@ -176,7 +176,7 @@ const CustomerRelationshipManagerPage = () => {
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                 </div>
                 <ul className="space-y-2"></ul>
-                  {feature.benefits.map((benefit, benefitIndex) => (
+                  {feature.benefits.map((benefit, benefitIndex) => ()}
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit};
@@ -201,9 +201,9 @@ const CustomerRelationshipManagerPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-            {pricing.map((plan, index) => (
+            {pricing.map((plan, index) => ()}
               <FuturisticCard key={index} className={`h-full ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}></FuturisticCard>
-                {plan.popular && (
+                {plan.popular && ()}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold"></span>
                       Most Popular
@@ -219,14 +219,14 @@ const CustomerRelationshipManagerPage = () => {
                   <p className="text-gray-300 text-sm">{plan.description}</p>
                 </div>
                 <ul className="space-y-3 mb-8"></ul>
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => ()}
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                       {feature};
                     </li>
                   ))};
                 </ul>
-                <FuturisticButton
+                <FuturisticButton>
                   href="/contact"
                   variant={plan.popular ? "primary" : "outline"},
       size="sm"
@@ -253,7 +253,7 @@ const CustomerRelationshipManagerPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => ()}
               <div key={index} className="text-center">
         <div key={index} className="text-center">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -280,7 +280,7 @@ const CustomerRelationshipManagerPage = () => {
             Start your free trial today and see how our CRM can boost your sales productivity and customer relationships.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <FuturisticButton
+            <FuturisticButton>
               href="/contact"
               variant="primary"
               size="lg"
@@ -288,7 +288,7 @@ const CustomerRelationshipManagerPage = () => {
             >
               Start Free Trial
             </FuturisticButton>
-            <FuturisticButton
+            <FuturisticButton>
               href="/demo"
               variant="outline"
               size="lg"

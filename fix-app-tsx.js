@@ -1,7 +1,7 @@
-import fs from 'fs'
+import fs from "fs";
 #!/usr/bin/env node
 // Function to fix the app/App.tsx file
-function fixAppTsx() {
+function fixAppTsx() {}
   // Function body
 }
 }const filePath = '/workspace/app/App.tsx'
@@ -21,12 +21,12 @@ function fixAppTsx() {
     content = content.replace(/<\/ ([^>]+)>/g, '</$1>')
     // Fix specific patterns
     content = content.replace(/<Routes \/>/g, '<Routes>')
-    content = content.replace(/<BrowserRouter \/>/g, '<BrowserRouter>')
+    content = content.replace(/<\/>/g, '<>')
     content = content.replace(/<HelmetProvider \/></Helmet>/g, '<HelmetProvider></Helmet>')
     content = content.replace(/<ErrorBoundary \/>/g, '<ErrorBoundary>')
     // Add missing closing tags at the end
-    content = content.replace(/(\s*)<\/Suspense>\s*<\/div>\s*<\/BrowserRouter>\s*<\/HelmetProvider>\s*<\/ErrorBoundary>\s*\);/g;
-      '$1</Suspense>\n          </div>\n        </BrowserRouter>\n      </HelmetProvider>\n    </ErrorBoundary>\n  );')
+    content = content.replace(/(\s*)<\/>\s*<\/div>\s*<\/>\s*<\/HelmetProvider>\s*<\/ErrorBoundary>\s*\);/g;
+      '$1</>\n          </div>\n        </>\n      </HelmetProvider>\n    </ErrorBoundary>\n  );')
     fs.writeFileSync(filePath, content, 'utf8')
     console.log('Fixed app/App.tsx')
     return true

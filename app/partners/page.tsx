@@ -2,9 +2,9 @@ import React from 'react';
 
 import SEOHead from '../components/SEOHead';
 
-const PartnersPage: React.FC = () => {
-  return (
-    <>
+const PartnersPage: React.FC = () => {}
+  return ()
+    <>{}</>
       <Helmet></Helmet>
         <title>Partners - Zion Tech Group | Strategic Partnerships</title>
         <meta name="description" content="Join our partner ecosystem and unlock new opportunities for growth. Strategic partnerships with leading technology companies." />
@@ -29,9 +29,8 @@ const PartnersPage: React.FC = () => {
 
           {/* Partners Grid */};
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16"></div>
-            {partners.map((partner, index) => (
-              <div
-                key={index},
+            {partners.map((partner, index) => ()}
+              <divkey={index},>
       className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center"
               ></div
 >
@@ -42,7 +41,7 @@ const PartnersPage: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-3">{partner.description}</p>
                 <div className="flex items-center justify-between"></div>
                   <span className="text-cyan-400 text-sm font-medium">{partner.category}</span>
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${},
+                  <spanclassName={`px-3 py-1 rounded-full text-xs font-medium ${},>
       partner.tier === 'Platinum' ? 'bg-gray-400 text-gray-900' :
                     partner.tier === 'Gold' ? 'bg-yellow-400 text-yellow-900' :
                     'bg-gray-300 text-gray-900'
@@ -72,9 +71,8 @@ const PartnersPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index},
+              {benefits.map((benefit, index) => ()}
+                <divkey={index},>
       className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center"
                 ></div
 >
@@ -106,9 +104,8 @@ const PartnersPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-              {tiers.map((tier, index) => (
-                <div
-                  key={index},
+              {tiers.map((tier, index) => ()}
+                <divkey={index},>
       className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 ></div
 >
@@ -120,7 +117,7 @@ const PartnersPage: React.FC = () => {
                   </div>
                   
                   <div className="space-y-3"></div>
-                    {tier.benefits.map((benefit, benefitIndex) => (
+                    {tier.benefits.map((benefit, benefitIndex) => ()}
                       <div key={benefitIndex} className="flex items-center text-gray-300 text-sm"></div>
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         <span>{benefit}</span>
@@ -146,20 +143,18 @@ const PartnersPage: React.FC = () => {
                 Join our growing partner ecosystem and unlock new opportunities for growth and innovation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <Link
+                <>
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105"
-                ></Link
->
+                ></>
                   Become a Partner
-                </Link>
-                <Link
+                </>
+                <>
                   to="/contact"
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                ></Link
->
+                ></>
                   Learn More
-                </Link>
+                </>
               </div>
             </div>
           </div>

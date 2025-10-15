@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
-    import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',
-    import { HelmetProvider } from 'react-helmet-async';
-    import './app/styles/futuristic.css';
-=======
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './app/styles/futuristic.css';
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 
 // Components
 import Navigation from './app/components/Navigation';
@@ -77,10 +70,12 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
       </div>
     </div>
   </div>
-),
-      function App() {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false),
-      return (
+);
+
+function App() {
+  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  
+  return (
     <GlobalErrorBoundary>
       <HelmetProvider>
         <Router>
@@ -89,9 +84,8 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
             <div className="flex-1 flex flex-col">
               <Navigation onSidebarToggle={() => setSidebarOpen(true)} />
               <main className="relative z-10 flex-1" id="main-content" role="main">
-                <ErrorBoundary>
-                  <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
-                    <Routes>
+                <ErrorBoundary fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
+                  <Routes>
                       {/* Main Pages */}
                       <Route path="/" element={<HomePage />} />
                       <Route path="/about" element={<AboutPage />} />
@@ -139,7 +133,6 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
                         </div>
                       } />
                     </Routes>
-                  </Suspense>
                 </ErrorBoundary>
               </main>
               <Footer />
@@ -153,8 +146,4 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
   );
 }
 
-<<<<<<< HEAD
 export default App;
-=======
-export default App;
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

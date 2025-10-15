@@ -1,9 +1,7 @@
 import { Helmet } from 'react-helmet-async';
-import { Cpu, GitBranch, Shield, Zap, CheckCircle, ArrowRight, Settings, Monitor, Database } from 'lucide-react';
-
-const AiPoweredDevopsPage: React.FC = () => {
+const AiPoweredDevopsPage: React.FC = () => {}
   const services = [
-    {
+    {}
       name: "AI-Powered CI/CD",
       description: "Intelligent continuous integration and deployment with automated testing and optimization.",
       features: ["Automated testing", "Smart deployments", "Performance optimization", "Error prediction", "Rollback automation", "Real-time monitoring"],
@@ -13,7 +11,7 @@ const AiPoweredDevopsPage: React.FC = () => {
       icon: <GitBranch className="w-8 h-8" />,
       benefits: "Reduce deployment time by 70%"
     },
-    {
+    {}
       name: "Intelligent Infrastructure Management",
       description: "AI-driven infrastructure monitoring, scaling, and optimization for cloud environments.",
       features: ["Auto-scaling", "Resource optimization", "Cost management", "Performance tuning", "Predictive maintenance", "Security monitoring"],
@@ -23,19 +21,19 @@ const AiPoweredDevopsPage: React.FC = () => {
       icon: <Settings className="w-8 h-8" />,
       benefits: "Cut infrastructure costs by 40%"
     },
-    {
+    {}
       name: "AI Security Operations",
       description: "Advanced security monitoring and threat detection powered by machine learning.",
       features: ["Threat detection", "Vulnerability scanning", "Incident response", "Compliance monitoring", "Risk assessment", "Security automation"],
       price: "From $5,999",
       marketPrice: "$11,999-34,999",
       popular: true,
-      icon: <Shield className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       benefits: "Detect threats 10x faster than traditional methods"
     }
   ];
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100">
       <Helmet>
         <title>AI-Powered DevOps - Zion Tech Group</title>
@@ -54,9 +52,9 @@ const AiPoweredDevopsPage: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
+          {services.map((service, index) => ()}
             <div key={index} className={`bg-white rounded-2xl shadow-xl p-8 relative ${service.popular ? 'ring-2 ring-purple-500' : ''}`}>
-              {service.popular && (
+              {service.popular && ()}
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                     Most Popular
@@ -81,7 +79,7 @@ const AiPoweredDevopsPage: React.FC = () => {
               </div>
 
               <ul className="space-y-3 mb-8">
-                {service.features.map((feature, featureIndex) => (
+                {service.features.map((feature, featureIndex) => ()}
                   <li key={featureIndex} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" />
                     <span className="text-gray-700">{feature}</span>

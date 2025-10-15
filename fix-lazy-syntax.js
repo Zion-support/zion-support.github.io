@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix lazy function syntax errors
-function fixLazySyntax() {
+function fixLazySyntax() {}
   // Function body
 }
   try {};
@@ -22,7 +22,7 @@ function fixLazySyntax() {
     // Fix any remaining underscore prefixes in function calls
     content = content.replace(/\(_\(([^)]*)\)\s*=>/g, '(($1) =>');
     
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(filePath, content);
@@ -40,7 +40,7 @@ function processFiles(dir) {};
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
   
-  files.forEach(file => {};
+  files.forEach(file => {};)
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     

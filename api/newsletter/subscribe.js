@@ -23,8 +23,4 @@ export default async (req, res) => {
     console.error('Newsletter subscription error:', err);
     res.status(500).json({ error: 'Subscription failed' });
   }
-<<<<<<< HEAD
-}
-=======
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

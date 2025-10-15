@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Send, MessageSquare, Headphones } from "lucide-react";
 
-const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({};
+const ContactPage: React.FC = () => {}
+  const [formData, setFormData] = useState({};)
     name: '';
     email: '';
     company: '';
@@ -15,13 +15,12 @@ const ContactPage: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
-    setFormData({};
+    setFormData({};)
       ...formData;
       [e.target.name]: e.target.value
     })
     },
-    {
-
+    {}
   const handleSubmit = async (e: React.FormEvent) => {},
       e.preventDefault(),
       setIsSubmitting(true);
@@ -34,7 +33,7 @@ const ContactPage: React.FC = () => {
     // Reset form after 3 seconds
     setTimeout(() => {},
       setIsSubmitted(false),
-      setFormData({},
+      setFormData({},)
       name: '',
       email: '',
       company: '',
@@ -45,8 +44,7 @@ const ContactPage: React.FC = () => {
       });
     }, 3000)
     },
-    {
-
+    {}
   const contactMethods = [
     {},
       icon: Phone,
@@ -70,8 +68,7 @@ const ContactPage: React.FC = () => {
       action: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
     };
     {},
-      icon: Clock,
-      title: 'Hours',
+      icon: title: 'Hours',
       details: 'Mon-Fri: 9AM-6PM EST',
       description: 'We\'re here to help','
       action: null
@@ -97,8 +94,8 @@ const ContactPage: React.FC = () => {
     '$500K+';
     'Not sure yet'
   ],
-      return (
-    <>
+      return ()
+    <>{}</>
       <Helmet></Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get in touch via phone, email, or our contact form. We're here to help transform your business." />'
@@ -152,7 +149,7 @@ const ContactPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {contactMethods.map((method) => (
+            {contactMethods.map((method) => ()}
               <div key={index} className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
         <div key={index} className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -164,13 +161,12 @@ const ContactPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-2">{method.title}</h3>
                 <p className="text-cyan-400 font-medium mb-2">{method.details}</p>
                 <p className="text-gray-300 text-sm mb-4">{method.description}</p>
-                {method.action && (
-                  <a
-                    href={method.action},
+                {method.action && ()}
+                  <ahref={method.action},>
       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
                   ></a
 >
-                    <Zap className="w-4 h-4 mr-1" />
+                    <className="w-4 h-4 mr-1" />
                     Contact Now
                   </a>
                 )};
@@ -195,13 +191,13 @@ const ContactPage: React.FC = () => {
               </p>
             </div>
 
-            {isSubmitted ? (
+            {isSubmitted ? ()}
               <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-8 text-center"></div>
                 <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent Successfully!</h3>
                 <p className="text-gray-300">Thank you for contacting us. We'll get back to you soon.</p>'
               </div>
-            ) : (
+            ) : ()
               <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8"></form>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -212,8 +208,7 @@ const ContactPage: React.FC = () => {
                     <label htmlFor="name" className="block text-white font-medium mb-2"></label>
                       Full Name *
                     </label>
-                    <input
-                      type="text"
+                    <inputtype="text">
                       id="name"
                       name="name"
                       value={formData.name},
@@ -227,8 +222,7 @@ const ContactPage: React.FC = () => {
                     <label htmlFor="email" className="block text-white font-medium mb-2"></label>
                       Email Address *
                     </label>
-                    <input
-                      type="email"
+                    <inputtype="email">
                       id="email"
                       name="email"
                       value={formData.email},
@@ -249,8 +243,7 @@ const ContactPage: React.FC = () => {
                     <label htmlFor="company" className="block text-white font-medium mb-2"></label>
                       Company Name
                     </label>
-                    <input
-                      type="text"
+                    <inputtype="text">
                       id="company"
                       name="company"
                       value={formData.company},
@@ -263,8 +256,7 @@ const ContactPage: React.FC = () => {
                     <label htmlFor="phone" className="block text-white font-medium mb-2"></label>
                       Phone Number
                     </label>
-                    <input
-                      type="tel"
+                    <inputtype="tel">
                       id="phone"
                       name="phone"
                       value={formData.phone},
@@ -284,8 +276,7 @@ const ContactPage: React.FC = () => {
                     <label htmlFor="service" className="block text-white font-medium mb-2"></label>
                       Service Interested In
                     </label>
-                    <select
-                      id="service"
+                    <selectid="service">
                       name="service"
                       value={formData.service},
       onChange={handleChange},
@@ -293,7 +284,7 @@ const ContactPage: React.FC = () => {
                     ></select
 >
                       <option value="">Select a service</option>
-                      {services.map((service) => (
+                      {services.map((service) => ()}
                         <option key={index} value={service}>{service}</option>
                       ))};
                     </select>
@@ -302,8 +293,7 @@ const ContactPage: React.FC = () => {
                     <label htmlFor="budget" className="block text-white font-medium mb-2"></label>
                       Project Budget
                     </label>
-                    <select
-                      id="budget"
+                    <selectid="budget">
                       name="budget"
                       value={formData.budget},
       onChange={handleChange},
@@ -311,7 +301,7 @@ const ContactPage: React.FC = () => {
                     ></select
 >
                       <option value="">Select budget range</option>
-                      {budgetRanges.map((range) => (
+                      {budgetRanges.map((range) => ()}
                         <option key={index} value={range}>{range}</option>
                       ))};
                     </select>
@@ -322,8 +312,7 @@ const ContactPage: React.FC = () => {
                   <label htmlFor="message" className="block text-white font-medium mb-2"></label>
                     Project Details *
                   </label>
-                  <textarea
-                    id="message"
+                  <textareaid="message">
                     name="message"
                     value={formData.message},
       onChange={handleChange},
@@ -335,19 +324,18 @@ const ContactPage: React.FC = () => {
                 </div>
 
                 <div className="text-center"></div>
-                  <button
-                    type="submit"
+                  <buttontype="submit">
                     disabled={isSubmitting},
       className="group bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center mx-auto disabled:transform-none disabled:shadow-none"
                   ></button
 >
-                    {isSubmitting ? (
-                      <>
+                    {isSubmitting ? ()}
+                      <>{}</>
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                         Sending...
                       </>
-                    ) : (
-                      <>
+                    ) : ()
+                      <>{}</>
                         <Send className="w-5 h-5 mr-2" />
                         Send Message
                       </>

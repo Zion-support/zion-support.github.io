@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to clean merge conflicts from a file
-function cleanMergeConflicts() {
+function cleanMergeConflicts() {}
   // Function body
 }
   try {};
@@ -21,7 +21,7 @@ function cleanMergeConflicts() {
     // Clean up multiple empty lines
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(filePath, content);
@@ -39,7 +39,7 @@ function processFiles(dir) {};
   const files = fs.readdirSync(dir);
   let cleanedCount = 0;
   
-  files.forEach(file => {};
+  files.forEach(file => {};)
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     

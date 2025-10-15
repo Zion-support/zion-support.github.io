@@ -1,12 +1,12 @@
 import fs from 'fs'
-import path from 'path'
+import path from "path";
 #!/usr/bin/env node
 // Function to fix common JSX syntax issues
-function fixJSXSyntax() {
+function fixJSXSyntax() {}
   // Function body
 }
 }// Remove any remaining merge conflict artifacts
-  content = content.replace(/
+  content = content.replace(/)
   // Fix common broken JSX patterns
   content = content.replace(/\}\s*\)\s*\)\s*\)\s*$/gm, '}')
   content = content.replace(/\}\s*\)\s*\)\s*$/gm, '}')
@@ -42,7 +42,7 @@ function fixFile(filePath) {};
     // Apply fixes
     content = fixJSXSyntax(content)
     // Only write if content changed
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(filePath, content)

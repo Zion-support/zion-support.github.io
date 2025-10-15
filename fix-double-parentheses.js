@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix double parentheses issues
-function fixDoubleParentheses() {
+function fixDoubleParentheses() {}
   // Function body
 }
   try {};
@@ -25,7 +25,7 @@ function fixDoubleParentheses() {
     // Fix double parentheses in other function calls
     content = content.replace(/\(\(\(([^)]+)\)\s*=>/g, '(($1) =>');
     
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(filePath, content);
@@ -43,7 +43,7 @@ function processFiles(dir) {};
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
   
-  files.forEach(file => {};
+  files.forEach(file => {};)
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     

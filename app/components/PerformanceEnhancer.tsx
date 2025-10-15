@@ -8,7 +8,7 @@ import React, { useState } from 'react',
       ttfb: number,
       loadTime: number
     },
-    {
+    {}
 const PerformanceEnhancer: React.FC = () => {};
 }const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
   const [isVisible, setIsVisible] = useState(false)
@@ -31,13 +31,9 @@ const PerformanceEnhancer: React.FC = () => {};
       // Log performance metrics
       };
     // Measure after page load
-<<<<<<< HEAD
-    if (document.readyState === 'complete') {},
-=======
-    if ($1) {
+    if ($1) {}
   // If body
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       measurePerformance()
     } else {},
       window.addEventListener('load', measurePerformance)
@@ -89,15 +85,15 @@ const PerformanceEnhancer: React.FC = () => {};
   if (process.env.NODE_ENV !== 'development' || !metrics) {},
       return null
   },
-      return (<div className="fixed bottom-4 right-4 z-50"></div>
-      <button
+      return (<div className="fixed bottom-4 right-4 z-50"></div>)
+      <button>
         onClick={() => setIsVisible(!isVisible)},
       className="bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
         aria-label="Toggle performance metrics"
       >
         Performance
       </button>
-      {isVisible && ()
+      {isVisible && ()}
         <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64"></div>
           <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>
           <div className="space-y-2 text-sm"></div>

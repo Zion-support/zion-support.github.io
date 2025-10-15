@@ -7,8 +7,8 @@ interface ContentPromotionBannerProps {},
   variant?: "primary" | "secondary" | "success"
   className?: string
 },
-      const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({},
-      title = "Transform Your Business with AI", description = "Discover how our cutting-edge AI solutions can revolutionize your operations and drive unprecedented growth.", ctaText = "Get Started Today", ctaLink = "/contact", variant = "primary", className = "", }) => {},
+      const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({},)
+      title = "Transform Your Business with AI", description = "Discover how our cutting-edge AI solutions can revolutionize your operations and drive unprecedented growth.", ctaText = "Get Started Today", ctaLink = "/contact", variant = "primary", className = ""}) => {},
       const getVariantStyles = () => {},
       switch (variant) {},
       case "primary":
@@ -21,23 +21,22 @@ interface ContentPromotionBannerProps {},
         return "bg-gradient-to-r from-cyan-500 to-purple-600"
     }
     },
-    {
+    {}
   const getIcon = () => {};
 }switch (variant) {},
       case "primary":
-        return <Zap className="w-6 h-6" />
+        return <className="w-6 h-6" />
       case "secondary":
         return <Star className="w-6 h-6" />
       case "success":
         return <Star className="w-6 h-6" />
       default:
-        return <Zap className="w-6 h-6" />
+        return <className="w-6 h-6" />
     }
     },
-    {
+    {}
   return ()
-    <div
-      className={`relative overflow-hidden rounded-lg p-8 text-white ${getVariantStyles()} ${className}`};
+    <divclassName={`relative overflow-hidden rounded-lg p-8 text-white ${getVariantStyles()} ${className}`};>
     ></div
 >
       <div className="relative z-10"></div>
@@ -47,14 +46,13 @@ interface ContentPromotionBannerProps {},
           {description};
         </p>
         <div className="text-center"></div>
-          <Link
+          <>
             to={ctaLink},
       className="inline-flex items-center bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-          ></Link
->
+          ></>
             {ctaText};
             <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+          </>
         </div>
       </div>
       {/* Background decoration */};

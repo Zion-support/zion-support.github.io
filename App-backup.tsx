@@ -1,5 +1,4 @@
-import React, { Suspense, lazy } from 'react',
-      import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',
+import React, { lazy } from 'react',
       import { HelmetProvider } from 'react-helmet-async';
 
 // Components
@@ -57,7 +56,7 @@ const CybersecurityPage = lazy(() => import('./app/pages/CybersecurityPage')),
       const SoftwareDevelopmentPage = lazy(() => import('./app/pages/SoftwareDevelopmentPage'));
 
 // Error fallback component
-export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => ()
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
     <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
       <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
@@ -71,8 +70,7 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
           {error.message}
         </p>
         <div className="mt-6">
-          <button
-            onClick={resetErrorBoundary}
+          <buttononClick={resetErrorBoundary}>
             className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           >
             Try again
@@ -82,23 +80,22 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
     </div>
   </div>
 ),
-      function App() {
+      function App() {}
   const [sidebarOpen, setSidebarOpen] = React.useState(false),
       const [showPerformanceDashboard, setShowPerformanceDashboard] = React.useState(false);
   
   // Initialize performance optimizations
-  usePerformanceOptimization({
+  usePerformanceOptimization({)}
     enableMonitoring: true,
     enablePreloading: true,
     enableLazyLoading: true,
     enableImageOptimization: true,
-    enableBundleAnalysis: true,
-  });
+    enableBundleAnalysis: true});
 
   // Toggle performance dashboard with keyboard shortcut
-  React.useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
+  React.useEffect(() => {}
+    const handleKeyDown = (event: KeyboardEvent) => {}
+      if (event.ctrlKey && event.shiftKey && event.key === 'P') {}
         event.preventDefault(),
       setShowPerformanceDashboard(prev => !prev);
       }
@@ -106,7 +103,7 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
       document.addEventListener('keydown', handleKeyDown),
       return () => document.removeEventListener('keydown', handleKeyDown);
   }, []),
-      return (
+      return ()
     <ErrorBoundary>
       <HelmetProvider>
         <Router>
@@ -117,7 +114,7 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
               <Navigation onSidebarToggle={() => setSidebarOpen(true)} />
               <main className="relative z-10 flex-1" id="main-content" role="main">
                 <LightweightErrorBoundary>
-                  <Suspense fallback={<OptimizedLoadingSpinner size="lg" text="Loading page..." />}>
+                  <fallback={<OptimizedLoadingSpinner size="lg" text="Loading page..." />}>
                     <Routes>
                       {/* Main Pages */}
                       <Route path="/" element={<HomePage />} />
@@ -163,7 +160,7 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
                       <Route path="/software-development" element={<SoftwareDevelopmentPage />} />
                       
                       {/* Catch all route */}
-                      <Route path="*" element={
+                      <Routepath="*" element={>}
                         <div className="min-h-screen flex items-center justify-center bg-slate-900">
                           <div className="text-center">
                             <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
@@ -175,13 +172,13 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
                         </div>
                       } />
                     </Routes>
-                  </Suspense>
+                  </>
                 </LightweightErrorBoundary>
               </main>
               <Footer />
               <PerformanceMonitor />
               <AccessibilityEnhancer />
-              <PerformanceDashboard 
+              <PerformanceDashboard>
                 isVisible={showPerformanceDashboard}
                 onClose={() => setShowPerformanceDashboard(false)}
               />

@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import React from 'react'
+import React from "react";
 export default ${componentName};`
 // Get all AI service pages from App.tsx
 const aiServicePages = []

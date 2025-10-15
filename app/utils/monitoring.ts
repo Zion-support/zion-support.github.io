@@ -1,6 +1,6 @@
-// Monitoring utility functions
+// ing utility functions
 
-export const Monitoring = {};
+export const ing = {};
   init: () => {};
     };
   process: (data: unknown) => {};
@@ -8,4 +8,4 @@ export const Monitoring = {};
   };
   cleanup: () => {};
 } }};
-export default Monitoring
+export default ing

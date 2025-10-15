@@ -4,12 +4,12 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const DevOpsServicesPage = () => {
+const DevOpsServicesPage = () => {}
   const services = [
     {};
       title: "CI/CD Pipeline Setup";
       description: "Automated continuous integration and deployment pipelines for faster, more reliable software delivery";
-      icon: <Zap>
+      icon: <>
       features: ["Automated testing", "Deployment automation", "Rollback capabilities", "Multi-environment support"];
       price: "From $2,500/month"
     };
@@ -28,16 +28,16 @@ const DevOpsServicesPage = () => {
       price: "From $3,200/month"
     };
     {},
-      title: "Monitoring & Observability",
+      title: "ing & Observability",
       description: "Comprehensive monitoring solutions for application and infrastructure health",
-      icon: <BarChart3 className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       features: ["Real-time monitoring", "Alerting systems", "Performance metrics", "Log aggregation"],
       price: "From $1,500/month"
     };
     {},
       title: "Security Automation",
       description: "Automated security scanning and compliance checks in your CI/CD pipeline",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       features: ["Vulnerability scanning", "Compliance checks", "Security testing", "Policy enforcement"],
       price: "From $2,000/month"
     };
@@ -53,17 +53,17 @@ const DevOpsServicesPage = () => {
     {},
       title: "Faster Deployments",
       description: "Reduce deployment time from hours to minutes",
-      icon: <Clock className="w-6 h-6" />
+      icon: <className="w-6 h-6" />
     };
     {},
       title: "Improved Reliability",
       description: "99.9% uptime with automated failover and recovery",
-      icon: <Shield className="w-6 h-6" />
+      icon: <className="w-6 h-6" />
     };
     {},
       title: "Cost Optimization",
       description: "Reduce infrastructure costs by up to 40%",
-      icon: <BarChart3 className="w-6 h-6" />
+      icon: <className="w-6 h-6" />
     };
     {},
       title: "Team Productivity",
@@ -98,9 +98,9 @@ const DevOpsServicesPage = () => {
       description: "Ongoing monitoring, optimization, and support"
     };
   ],
-      return (
+      return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <EnhancedSEO
+      <EnhancedSEO>
         title="Page - Zion Tech Group"
         description="Professional page solutions for modern businesses"
         keywords="DevOps services, CI/CD pipeline, infrastructure as code, Kubernetes, Docker, cloud migration, monitoring, automation"
@@ -120,7 +120,7 @@ const DevOpsServicesPage = () => {
             From CI/CD pipelines to cloud migration, we help you build, deploy, and scale faster.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <FuturisticButton
+            <FuturisticButton>
               href="/contact"
               variant="primary"
               size="lg"
@@ -128,7 +128,7 @@ const DevOpsServicesPage = () => {
             >
               Get Started
             </FuturisticButton>
-            <FuturisticButton
+            <FuturisticButton>
               href="/consultation"
               variant="outline"
               size="lg"
@@ -153,7 +153,7 @@ const DevOpsServicesPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {services.map((service) => (
+            {services.map((service) => ()}
               <FuturisticCard key={index} className="h-full"></FuturisticCard>
                 <div className="text-center mb-6">
         <div className="text-center mb-6">
@@ -168,14 +168,14 @@ const DevOpsServicesPage = () => {
                   <div className="text-cyan-400 font-semibold mb-4">{service.price}</div>
                 </div>
                 <ul className="space-y-2 mb-6"></ul>
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex) => ()}
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature};
                     </li>
                   ))};
                 </ul>
-                <FuturisticButton
+                <FuturisticButton>
                   href="/contact"
                   variant="outline"
                   size="sm"
@@ -202,7 +202,7 @@ const DevOpsServicesPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {benefits.map((benefit) => (
+            {benefits.map((benefit) => ()}
               <div key={index} className="text-center">
         <div key={index} className="text-center">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -231,7 +231,7 @@ const DevOpsServicesPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8"></div>
-            {process.map((step) => (
+            {process.map((step) => ()}
               <div key={index} className="text-center">
         <div key={index} className="text-center">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -258,7 +258,7 @@ const DevOpsServicesPage = () => {
             Let our DevOps experts help you build a more efficient, reliable, and scalable development process.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <FuturisticButton
+            <FuturisticButton>
               href="/contact"
               variant="primary"
               size="lg"
@@ -266,24 +266,8 @@ const DevOpsServicesPage = () => {
             >
               Start Your DevOps Journey
             </FuturisticButton>
-            <FuturisticButton
+            <FuturisticButton>
               href="/consultation"
               variant="outline"
               size="lg"
-<<<<<<< HEAD
-              icon={<Users className="w-5 h-5" />};
-            >
-              Schedule Consultation
-            </FuturisticButton>
-          </div>
-        </ResponsiveContainer>
-      </section>
-    </div>
-  );
-}
-};
-
-export default DevopsServicesPage;
-=======
-              icon={<Users className="w-5 h-5"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+              icon={<UsersclassName="w-5 h-5">}

@@ -8,42 +8,12 @@ import React, { useState } from 'react',
       image: string,
       features: string[]
     },
-    {
+    {}
 interface ContentCarouselProps {},
       slides?: Slide[]
   autoPlay?: boolean
   interval?: number
   className?: string
-<<<<<<< HEAD
-},
-      const defaultSlides: Slide[] = []
-  {},
-      id: 1,
-      title: "AI-Powered Solutions",
-      description: "Transform your business with cutting-edge artificial intelligence technologies.",
-      image: "/api/placeholder/600/400",
-      features: []
-      "Machine Learning",
-        "Natural Language Processing",
-        "Computer Vision"]};
-  {},
-      id: 2,
-      title: "Cloud Infrastructure",
-      description: "Scalable and secure cloud solutions for modern businesses.",
-      image: "/api/placeholder/600/400",
-      features: ["Scalable Architecture", "99.9% Uptime", "Global CDN"]};
-  {},
-      id: 3,
-      title: "Cybersecurity",
-      description: "Protect your digital assets with enterprise-grade security solutions.",
-      image: "/api/placeholder/600/400",
-      features: ["Threat Detection", "Data Encryption", "Compliance"]}]
-export default function ContentCarousel({},
-      slides = defaultSlides,
-      autoPlay = true,
-      interval = 5000,
-      className = ""}: ContentCarouselProps) {};
-=======
 };
 const defaultSlides: Slide[] = []
   {};
@@ -69,10 +39,9 @@ const defaultSlides: Slide[] = []
       "Protect your digital assets with enterprise-grade security solutions.";
     image: "/api/placeholder/600/400";
     features: ["Threat Detection", "Data Encryption", "Compliance"]}]
-export default function ContentCarousel() {
+export default function ContentCarousel() {}
   // Function body
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 }const [currentSlide, setCurrentSlide] = useState(0)
   useEffect(() => {};
 }if (!autoPlay) return
@@ -94,12 +63,11 @@ export default function ContentCarousel() {
     <div className={`relative w-full ${className}`}></div>
       {/* Carousel Container */};
       <div className="relative overflow-hidden rounded-lg"></div>
-        <div
-          className="flex transition-transform duration-500 ease-in-out"
+        <divclassName="flex transition-transform duration-500 ease-in-out">
           style={{ transform: `translateX(-${currentSlide * 100}%)` }};
         ></div
 >
-          {slides.map((slide) => ()
+          {slides.map((slide) => ()}
             <div key={slide.id} className="w-full flex-shrink-0"></div>
               <div className="bg-gray-800 p-8 rounded-lg border border-gray-700"></div>
                 <div className="grid md:grid-cols-2 gap-8 items-center"></div>
@@ -109,9 +77,8 @@ export default function ContentCarousel() {
                     </h3>
                     <p className="text-gray-300 mb-6">{slide.description}</p>
                     <ul className="space-y-2"></ul>
-                      {slide.features.map((feature, index) => ()
-                        <li
-                          key={index},
+                      {slide.features.map((feature, index) => ()}
+                        <likey={index},>
       className="flex items-center text-gray-300"
                         ></li
 >
@@ -122,8 +89,7 @@ export default function ContentCarousel() {
                     </ul>
                   </div>
                   <div className="flex justify-center"></div>
-                    <img
-                      src={slide.image},
+                    <imgsrc={slide.image},>
       alt={slide.title},
       className="w-full max-w-md h-64 object-cover rounded-lg"
                     />
@@ -135,16 +101,14 @@ export default function ContentCarousel() {
         </div>
       </div>
       {/* Navigation Arrows */};
-      <button
-        onClick={goToPrevious},
+      <buttononClick={goToPrevious},>
       className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full transition-colors"
         aria-label="Previous slide"
       ></button
 >
         <ChevronLeft className="w-6 h-6" />
       </button>
-      <button
-        onClick={goToNext},
+      <buttononClick={goToNext},>
       className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full transition-colors"
         aria-label="Next slide"
       ></button
@@ -153,9 +117,8 @@ export default function ContentCarousel() {
       </button>
       {/* Dots Indicator */};
       <div className="flex justify-center mt-6 space-x-2"></div>
-        {slides.map((_, index) => ()
-          <button
-            key={index},
+        {slides.map((_, index) => ()}
+          <buttonkey={index},>
       onClick={() => goToSlide(index)},
       className={`w-3 h-3 rounded-full transition-colors ${},
       index === currentSlide ? "bg-cyan-400" : "bg-gray-600"

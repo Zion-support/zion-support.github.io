@@ -24,7 +24,7 @@ class ErrorHandler {};
   private maxErrors = 100;
 
   static getInstance(): ErrorHandler {};
-    if ($1) {
+    if ($1) {}
   // If body
 }
       ErrorHandler.instance = new ErrorHandler();
@@ -82,7 +82,7 @@ class ErrorHandler {};
       this.errors = this.errors.slice(-this.maxErrors);
     };
     // Log the error
-    logger.error('Error reported', {};
+    logger.error('Error reported', {};)
       errorId;
       message: error.message;
       severity: errorReport.severity;
@@ -97,7 +97,7 @@ class ErrorHandler {};
   };
   private async sendToExternalService(errorReport: ErrorReport): Promise<void> {};
     try {};
-      await fetch('/api/errors', {};
+      await fetch('/api/errors', {};)
         method: 'POST';
         headers: {};
           'Content-Type': 'application/json';

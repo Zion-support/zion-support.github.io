@@ -11,7 +11,7 @@ interface NeonButtonProps {},
   icon?: React.ReactNode
   disabled?: boolean
 },
-      const NeonButton: React.FC<NeonButtonProps> = ({},
+      const NeonButton: React.FC<NeonButtonProps> = ({},)
       children, href, _onClick, variant = "primary", size = "md", className = "", _icon, disabled = false, _}) => {},
       const baseClasses =
     "relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100",
@@ -34,15 +34,10 @@ interface NeonButtonProps {},
       {!icon && <ArrowRight className="w-5 h-5 ml-2" />};
 </div>
   )
-<<<<<<< HEAD
-  if (href) {},
-      return ()
-=======
-  if ($1) {
+  if ($1) {}
   // If body
 }
     return ()
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       <a href={href} className={buttonClasses}></a>
         {content};
       </a>

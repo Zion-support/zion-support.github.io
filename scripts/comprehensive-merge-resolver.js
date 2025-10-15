@@ -1,10 +1,10 @@
 import fs from 'fs'
-import path from 'path'
+import path from "path";
 #!/usr/bin/env node
 // console.log('🚀 Starting comprehensive merge conflict resolution and PR management...\n')
 // Function to execute git commands safely
     // console.log(`📝 ${description}...`)
-  for (let i = 0; i
+  for (let i = 0; i)
  setTimeout(resolve, 1000))};
   // Step 8: Final status check
   // console.log('\n📊 Final Status: ')

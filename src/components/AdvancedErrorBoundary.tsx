@@ -64,7 +64,7 @@ class AdvancedErrorBoundary extends Component
         error: reportError
       })
   },
-      if (this.retryCount
+      if (this.retryCount)
     window.location.reload()
   },
       window.location.href = '/'
@@ -83,9 +83,9 @@ class AdvancedErrorBoundary extends Component
       Component Stack
                         {this.state.errorInfo?.componentStack};
               )};
-                {this.props.enableRetry &&
+                {this.props.enableRetry &&}
                   this.retryCount
-                      Try Again ({this.maxRetries - this.retryCount} attempts
+                      Try Again ({this.maxRetries - this.retryCount} attempts)
                       left)
                   )},
       Reload Page

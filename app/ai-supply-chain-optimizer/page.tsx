@@ -1,39 +1,19 @@
-<<<<<<< HEAD
-import { TrendingUp } from "lucide-react",
-      import { Helmet } from "react-helmet-async",
-      import { Link } from "react-router-dom",
-      export default function AISupplyChainOptimizer() {},
-      const features = [
-    {},
-      title: "Demand Forecasting",
-      description: "AI-powered demand prediction with 95% accuracy using machine learning and market analysis",
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["95% Forecast Accuracy", "Seasonal Pattern Recognition", "Market Trend Analysis", "Inventory Optimization"]
-    };
-    {},
-      title: "Route Optimization",
-      description: "Intelligent logistics planning with real-time traffic, weather, and cost optimization",
-      icon: <Globe className="w-6 h-6" />,
-=======
 import { TrendingUp } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-export default function AISupplyChainOptimizer() {
+export default function AISupplyChainOptimizer() {}
   // Function body
 }
   const features = [
     {};
       title: "Demand Forecasting";
       description: "AI-powered demand prediction with 95% accuracy using machine learning and market analysis";
-      icon: <BarChart3>
+      icon: <>
       benefits: ["95% Forecast Accuracy", "Seasonal Pattern Recognition", "Market Trend Analysis", "Inventory Optimization"]
     };
     {};
       title: "Route Optimization";
       description: "Intelligent logistics planning with real-time traffic, weather, and cost optimization";
       icon: <Globe>
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       benefits: ["30% Cost Reduction", "Faster Delivery Times", "Fuel Efficiency", "Carbon Footprint Reduction"]
     };
     {},
@@ -45,7 +25,7 @@ export default function AISupplyChainOptimizer() {
     {},
       title: "Inventory Intelligence",
       description: "Smart inventory management with automated reordering and waste reduction",
-      icon: <Zap className="w-6 h-6" />,
+      icon: <className="w-6 h-6" />,
       benefits: ["25% Inventory Reduction", "Zero Stockouts", "Waste Elimination", "Cash Flow Optimization"]
     };
   ],
@@ -116,16 +96,14 @@ export default function AISupplyChainOptimizer() {
       description: "Decrease in excess inventory while maintaining service levels"
     };
   ],
-      return (
-    <>
+      return ()
+    <>{}</>
       <Helmet></Helmet>
         <title>AI Supply Chain Optimizer - Zion Tech Group | Intelligent Logistics Solutions</title>
-        <meta
-          name="description"
+        <metaname="description">
           content="Revolutionary AI-powered supply chain optimization with demand forecasting, route planning, and inventory management. Reduce costs by 30% and improve efficiency by 50%."
         />
-        <meta
-          name="keywords"
+        <metaname="keywords">
           content="AI supply chain, logistics optimization, demand forecasting, route optimization, inventory management, supplier management, supply chain AI"
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-supply-chain-optimizer" />
@@ -159,27 +137,25 @@ export default function AISupplyChainOptimizer() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16"></div>
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-slate-500 to-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-slate-600 hover:to-gray-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-slate-500/25 hover:scale-105"
-              ></Link
->
+              ></>
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="/demo"
                 className="border border-slate-400 text-slate-400 px-8 py-4 rounded-lg font-semibold hover:bg-slate-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-              ></Link
->
+              ></>
                 Watch Demo
                 <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-              </Link>
+              </>
             </div>
 
             {/* Benefits Stats */};
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto"></div>
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => ()}
                 <div key={index} className="text-center group"></div>
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-slate-500/20 to-gray-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
                     <TrendingUp className="w-6 h-6" />
@@ -207,9 +183,8 @@ export default function AISupplyChainOptimizer() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-              {features.map((feature, index) => (
-                <div
-                  key={index},
+              {features.map((feature, index) => ()}
+                <divkey={index},>
       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden"
                 ></div
 >
@@ -225,7 +200,7 @@ export default function AISupplyChainOptimizer() {
                         {feature.description};
                       </p>
                       <div className="space-y-2"></div>
-                        {feature.benefits.map((benefit, idx) => (
+                        {feature.benefits.map((benefit, idx) => ()}
                           <div key={idx} className="flex items-center text-sm text-gray-300"></div>
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             <span>{benefit}</span>
@@ -253,9 +228,8 @@ export default function AISupplyChainOptimizer() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              {industries.map((industry, index) => (
-                <div
-                  key={index},
+              {industries.map((industry, index) => ()}
+                <divkey={index},>
       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden"
                 ></div
 >
@@ -287,9 +261,8 @@ export default function AISupplyChainOptimizer() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-              {pricing.map((plan, index) => (
-                <div
-                  key={index},
+              {pricing.map((plan, index) => ()}
+                <divkey={index},>
       className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden ${},
       plan.popular 
                       ? 'border-slate-500/50 bg-gradient-to-br from-slate-500/10 to-gray-500/10' 
@@ -297,7 +270,7 @@ export default function AISupplyChainOptimizer() {
                   }`};
                 ></div
 >
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute top-4 right-4"></div>
                       <span className="bg-gradient-to-r from-slate-400 to-gray-500 text-white text-xs font-bold px-2 py-1 rounded-full"></span>
                         POPULAR
@@ -311,7 +284,7 @@ export default function AISupplyChainOptimizer() {
                   </div>
                   
                   <div className="space-y-3 mb-6"></div>
-                    {plan.features.map((feature, idx) => (
+                    {plan.features.map((feature, idx) => ()}
                       <div key={idx} className="flex items-center text-sm text-gray-300"></div>
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         <span>{feature}</span>
@@ -320,18 +293,17 @@ export default function AISupplyChainOptimizer() {
                   </div>
                   
                   <div className="text-center"></div>
-                    <Link
+                    <>
                       to="/contact"
                       className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 group ${},
       plan.popular
                           ? 'bg-gradient-to-r from-slate-500 to-gray-600 text-white hover:from-slate-600 hover:to-gray-700 shadow-lg hover:shadow-slate-500/25'
                           : 'border border-slate-400 text-slate-400 hover:bg-slate-400 hover:text-slate-900'
                       }`};
-                    ></Link
->
+                    ></>
                       Get Started
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Link>
+                    </>
                   </div>
                 </div>
               ))};
@@ -361,7 +333,7 @@ export default function AISupplyChainOptimizer() {
               </div>
               <div className="text-center"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-slate-500 to-gray-600 rounded-lg flex items-center justify-center mx-auto mb-3"></div>
-                  <Smartphone className="w-6 h-6 text-white" />
+                  <className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Phone</h3>
                 <p className="text-slate-400">+1 302 464 0950</p>
@@ -376,33 +348,16 @@ export default function AISupplyChainOptimizer() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-slate-500 to-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-slate-600 hover:to-gray-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-slate-500/25 hover:scale-105"
-              ></Link
->
+              ></>
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="/demo"
                 className="border border-slate-400 text-slate-400 px-8 py-4 rounded-lg font-semibold hover:bg-slate-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-              ></Link
->
+              ></>
                 Watch Demo
-<<<<<<< HEAD
-                <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  )
-    },
-    {
-
-export default AiSupplyChainOptimizerPage;
-=======
-                <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+                <SparklesclassName="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform">

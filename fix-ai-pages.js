@@ -5,8 +5,8 @@ import path from 'path';
 import { glob } from 'glob';
 
 // Function to fix AI page syntax
-function fixAIPage(filePath) {
-  try {
+function fixAIPage(filePath) {}
+  try {}
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Extract the page name from the file path
@@ -32,7 +32,7 @@ function fixAIPage(filePath) {
       { pattern: /<p className="text-gray-300">Coming soon\.\.\.<\/p>/, replacement: '<p className="text-gray-300">Advanced AI solutions coming soon...</p>' },
       
       // Fix malformed JSX fragments
-      { pattern: /<>\s*;/, replacement: '<>' },
+      { pattern: /<>\s*;/, replacement: '<>{' }}</>
       { pattern: /<\/>\s*;/, replacement: '</>' },
       
       // Fix missing closing tags
@@ -46,22 +46,22 @@ function fixAIPage(filePath) {
     ];
     
     let modified = false;
-    for (const fix of fixes) {
+    for (const fix of fixes) {}
       const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
+      if (newContent !== content) {}
         content = newContent;
         modified = true;
       }
     }
     
-    if (modified) {
+    if (modified) {}
       fs.writeFileSync(filePath, content);
       console.log(`Fixed AI page: ${filePath}`);
       return true;
     }
     
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
@@ -74,8 +74,8 @@ const files = await glob('/workspace/app/ai-*/page.tsx');
 console.log(`Found ${files.length} AI pages to fix`);
 
 let fixedCount = 0;
-for (const file of files) {
-  if (fixAIPage(file)) {
+for (const file of files) {}
+  if (fixAIPage(file)) {}
     fixedCount++;
   }
 }

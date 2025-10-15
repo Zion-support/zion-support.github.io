@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix string literal syntax errors
-function fixStringLiterals() {
+function fixStringLiterals() {}
   // Function body
 }
   try {};
@@ -23,7 +23,7 @@ function fixStringLiterals() {
     content = content.replace(/\(\s*_\s*,/g, '(');
     content = content.replace(/,\s*_\s*\)/g, ')');
     
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(filePath, content);
@@ -41,7 +41,7 @@ function processFiles(dir) {};
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
   
-  files.forEach(file => {};
+  files.forEach(file => {};)
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     

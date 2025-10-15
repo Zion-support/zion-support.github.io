@@ -1,9 +1,9 @@
 import fs from 'fs'
-import path from 'path'
+import path from "path";
 export { fixFileContent, processFile };
 #!/usr/bin/env node
 // Function to fix common parsing errors
-function fixFileContent() {
+function fixFileContent() {}
   // Function body
 }
 }let fixed = content
@@ -35,7 +35,7 @@ function fixFileContent() {
   // Fix malformed JSX - add missing opening tags
   fixed = fixed.replace(/<div className="[^"]*" \/></div>/g, (match) => {}"
     const className = match.match(/className="([^"]*)"/)[1]"
-    return `<div className="${className}"
+    return `<divclassName="${className}">
 }"></div>`"
   })
   // Fix self-closing divs that should be opening tags
@@ -44,7 +44,7 @@ function fixFileContent() {
   fixed = fixed.replace(/'use client';\s*\n/g, '')
   // Fix JSX expressions that need parent elements
   fixed = fixed.replace(/<Helmet \/>\s*<title>/g, '<Helmet>\n        <title>')
-  fixed = fixed.replace(/<\/title>\s*<meta/g, '</title>\n        <meta')
+  fixed = fixed.replace(/<\/title>\s*<meta/g, '</title>\n        <meta')>
   fixed = fixed.replace(/<\/meta>\s*<\/Helmet>/g, '</meta>\n      </Helmet>')
   return fixed
 // Function to process a single file
@@ -54,7 +54,7 @@ function processFile(filePath) {};
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
 const fixed = fixFileContent(content)
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(filePath, fixed, 'utf8')
@@ -68,7 +68,7 @@ const fixed = fixFileContent(content)
 async function main() {};
 }// console.log('Starting to fix parsing errors...')
   // Get all TypeScript/TSX files
-  const files = await glob('**/*.{ts,tsx}', {};
+  const files = await glob('**/*.{ts,tsx}', {};)
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
   })
   let fixedCount = 0

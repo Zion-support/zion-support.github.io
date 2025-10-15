@@ -1,14 +1,12 @@
 import React, { useState } from 'react',
-      import {Brain, Server, Layers} from "lucide-react";
-,
-      const PricingPage: React.FC = () => {",
+      const PricingPage: React.FC = () => {"}
         "
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
       const [selectedCategory, setSelectedCategory] = useState<string>('all');
 ,
       const microSaasPricing = [",
         "
-    {",
+    {"}
         "
       name: 'AI Accounting Assistant',",
         "
@@ -46,7 +44,7 @@ import React, { useState } from 'react',
       category: 'micro-saas';
     },",
         "
-    {",
+    {"}
         "
       name: 'AI Content Moderation Pro',",
         "
@@ -84,7 +82,7 @@ import React, { useState } from 'react',
       category: 'micro-saas';
     },",
         "
-    {",
+    {"}
         "
       name: 'AI Climate Solutions Pro',",
         "
@@ -122,7 +120,7 @@ import React, { useState } from 'react',
       category: 'micro-saas';
     },",
         "
-    {",
+    {"}
         "
       name: 'AI Agricultural Intelligence',",
         "
@@ -159,12 +157,12 @@ import React, { useState } from 'react',
         "
       category: 'micro-saas'
     },
-    {
+    {}
   ];
 ,
       const aiServicesPricing = [",
         "
-    {",
+    {"}
         "
       name: 'AI Chatbot Enterprise',",
         "
@@ -202,7 +200,7 @@ import React, { useState } from 'react',
       category: 'ai-services';
     },",
         "
-    {",
+    {"}
         "
       name: 'AI Computer Vision',",
         "
@@ -240,7 +238,7 @@ import React, { useState } from 'react',
       category: 'ai-services';
     },",
         "
-    {",
+    {"}
         "
       name: 'AI Analytics Dashboard Pro',",
         "
@@ -278,7 +276,7 @@ import React, { useState } from 'react',
       category: 'ai-services';
     },",
         "
-    {",
+    {"}
         "
       name: 'AI Automation Platform',",
         "
@@ -315,12 +313,12 @@ import React, { useState } from 'react',
         "
       category: 'ai-services'
     },
-    {
+    {}
   ];
 ,
       const itServicesPricing = [",
         "
-    {",
+    {"}
         "
       name: 'Cloud Infrastructure',",
         "
@@ -358,7 +356,7 @@ import React, { useState } from 'react',
       category: 'it-services';
     },",
         "
-    {",
+    {"}
         "
       name: 'Cybersecurity Solutions',",
         "
@@ -396,7 +394,7 @@ import React, { useState } from 'react',
       category: 'it-services';
     },",
         "
-    {",
+    {"}
         "
       name: 'Web Development',",
         "
@@ -434,7 +432,7 @@ import React, { useState } from 'react',
       category: 'it-services';
     },",
         "
-    {",
+    {"}
         "
       name: 'Mobile App Development',",
         "
@@ -471,14 +469,14 @@ import React, { useState } from 'react',
         "
       category: 'it-services'
     },
-    {
+    {}
   ];
 ,
       const categories = [",
         "
     { id: 'all', name: 'All Services', icon: <Layers className="w-5 h-5" /> },";"
-    { id: 'micro-saas', name: 'Micro SAAS', icon: <Zap className="w-5 h-5" /> },";"
-    { id: 'ai-services', name: 'AI Services', icon: <Brain className="w-5 h-5" /> },";"
+    { id: 'micro-saas', name: 'Micro SAAS', icon: <className="w-5 h-5" /> },";"
+    { id: 'ai-services', name: 'AI Services', icon: <className="w-5 h-5" /> },";"
     { id: 'it-services', name: 'IT Services', icon: <Server className="w-5 h-5" /> };
   ];
 ,
@@ -489,9 +487,9 @@ import React, { useState } from 'react',
         "
     : allPricing.filter(item => item.category === selectedCategory);
 ,
-      return (",
+      return (",)
         "
-    <>",
+    <>{"}</>
         "
       <Helmet>",
         "
@@ -542,14 +540,14 @@ import React, { useState } from 'react',
         "
               </span>",
         "
-              <button";"
+              <button";">
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')},
       className="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2";
               >",
         "
-                <span",
+                <span",>
         "
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${",
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${"}
         "
                     billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1';
                   }`} />",
@@ -575,18 +573,18 @@ import React, { useState } from 'react',
         "
       </section>",
         "
-      {/* Category Filter */};
+      {/* Category */};
       <section className="py-8 bg-slate-800">";"
         <div className="container mx-auto px-4">";"
           <div className="flex flex-wrap justify-center gap-4">",
         "
-            {categories.map((category) => (",
+            {categories.map((category) => (",)}
         "
-              <button",
+              <button",>
         "
                 key={category.id},
       onClick={() => setSelectedCategory(category.id)},
-      className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${",
+      className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${"}
         "
                   selectedCategory === category.id",
         "
@@ -611,14 +609,14 @@ import React, { useState } from 'react',
         <div className="container mx-auto px-4">";"
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">",
         "
-            {filteredPricing.map((service) => (",
+            {filteredPricing.map((service) => (",)}
         "
-              <div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10 group relative ${",
+              <divkey={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10 group relative ${",>}
         "
                 service.popular ? 'ring-2 ring-purple-500' : '';
               }`}>",
         "
-                {service.popular && (";"
+                {service.popular && (";")}
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">";"
                     <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",
         "
@@ -656,7 +654,7 @@ import React, { useState } from 'react',
                 </div>";"
                 <ul className="space-y-3 mb-8">",
         "
-                  {service.features.slice(0, 6).map((feature, featureIndex) => (",
+                  {service.features.slice(0, 6).map((feature, featureIndex) => (",)}
         "
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">";"
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />",
@@ -665,7 +663,7 @@ import React, { useState } from 'react',
                     </li>",
         "
                   ))};
-                  {service.features.length > 6 && (";"
+                  {service.features.length > 6 && (";")}
                     <li className="text-sm text-purple-400 font-medium">",
         "
                       +{service.features.length - 6} more features",
@@ -677,7 +675,7 @@ import React, { useState } from 'react',
         "
                 <div className="space-y-3">",
         "
-                  <Link",
+                  <",>
         "
                     to="/contact",
       className="block w-full bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105";
@@ -685,9 +683,9 @@ import React, { useState } from 'react',
         "
                     Get Started",
         "
-                  </Link>",
+                  </>",
         "
-                  <Link",
+                  <",>
         "
                     to={`/${service.name.toLowerCase().replace(/\s+/g, '-')}`},
       className="block w-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white text-center py-3 rounded-lg font-semibold transition-all duration-300";
@@ -695,7 +693,7 @@ import React, { useState } from 'react',
         "
                     Learn More",
         "
-                  </Link>",
+                  </>",
         "
                 </div>",
         "
@@ -796,7 +794,7 @@ import React, { useState } from 'react',
         "
             </div>",
         "
-            <Link",
+            <",>
         "
               to="/contact",
       className="inline-flex items-center bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg";
@@ -806,7 +804,7 @@ import React, { useState } from 'react',
         "
               <ArrowRight className="w-5 h-5 ml-2" />",
         "
-            </Link>",
+            </>",
         "
           </div>",
         "
@@ -924,7 +922,7 @@ import React, { useState } from 'react',
         "
           <div className="flex flex-col sm:flex-row gap-4 justify-center">",
         "
-            <Link",
+            <",>
         "
               to="/contact",
       className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg";
@@ -932,9 +930,9 @@ import React, { useState } from 'react',
         "
               Start Free Trial",
         "
-            </Link>",
+            </>",
         "
-            <Link",
+            <",>
         "
               to="/demo",
       className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105";
@@ -942,7 +940,7 @@ import React, { useState } from 'react',
         "
               Schedule Demo",
         "
-            </Link>",
+            </>",
         "
           </div>",
         "
@@ -953,7 +951,7 @@ import React, { useState } from 'react',
     </>";"
   )
     },
-    {
+    {}
 ,
       export default PricingPage;
 ;

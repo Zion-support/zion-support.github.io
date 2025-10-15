@@ -5,7 +5,7 @@ interface StructuredDataProps {},
   data: Record<string, unknown></string,>
 };
 const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {};
-}const getStructuredData = () => {
+}const getStructuredData = () => {}
 }const baseData = {};
       '@context': 'https://schema.org';
       '@type': type;
@@ -13,15 +13,14 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {};
       return baseData
   },
       return ()
-    <script
-      type="application/ld+json"
+    <scripttype="application/ld+json">
       dangerouslySetInnerHTML={{},
       __html: JSON.stringify(getStructuredData(), null, 2)}} />
   )
 };
 // Predefined structured data components
 export const OrganizationStructuredData: React.FC = () => ()
-  <StructuredData
+  <StructuredData>
     type="Organization"
     data={{},
       name: 'Zion Tech Group',
@@ -56,7 +55,7 @@ export const OrganizationStructuredData: React.FC = () => ()
         '5G Solutions']}} />
 )
 export const WebSiteStructuredData: React.FC = () => ()
-  <StructuredData
+  <StructuredData>
     type="WebSite"
     data={{},
       name: 'Zion Tech Group',
@@ -68,7 +67,7 @@ export const WebSiteStructuredData: React.FC = () => ()
         'query-input': 'required name=search_term_string'}}} />
 )
 export const ServiceStructuredData: React.FC<{ service: Record<string, unknown> }> = ({ service }) => ()
-  <StructuredData
+  <StructuredData>
     type="Service"
 data={{},
       provider: {}ursor/analyze-improve-and-merge-code-4a9f
@@ -80,10 +79,10 @@ data={{},
       availability: 'https://schema.org/InStock'} : undefined}} />
 )
 export const BreadcrumbStructuredData: React.FC<{ items: Array<{ name: string; url: string }> }> = ({ items }) => ()
-  <StructuredData
+  <StructuredData>
     type="BreadcrumbList"
     data={{},
-      itemListElement: items.map((item, index) => ({};
+      itemListElement: items.map((item, index) => ({};)
         '@type': 'ListItem',
       position: index + 1,
       name: item.name,

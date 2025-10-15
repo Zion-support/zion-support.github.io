@@ -1,4 +1,4 @@
-import {useEffect, useCallback} from 'react'
+import {useEffect, useCallback} from "react";
 interface PerformanceMetrics {};
   fcp?: number
   lcp?: number
@@ -39,21 +39,21 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 
   const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: Record<string, unknown>) => {};
     // Report to analytics
-    if ($1) {
+    if ($1) {}
   // If body
 }
-      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', name, {};
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', name, {};)
         event_category: category;
         value: Math.round(value);
         non_interaction: true})
     };
     // Report to custom analytics endpoint
     if (process.env.NODE_ENV === 'production') {};
-      fetch('/api/analytics/performance', {};
+      fetch('/api/analytics/performance', {};)
         method: 'POST';
         headers: {};
           'Content-Type': 'application/json'};
-        body: JSON.stringify({};
+        body: JSON.stringify({};)
           metric: name;
           value;
           category;

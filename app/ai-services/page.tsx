@@ -1,14 +1,13 @@
 import React from "react",
-      import { BarChart3, FileText, MessageSquare } from "lucide-react",
       import { Helmet } from "react-helmet-async",
-      export default function AIServices() {
+      export default function AIServices() {}
   const aiServices = [
-    {
+    {}
       id: "ai-analytics-dashboard-pro",
       name: "AI Analytics Dashboard Pro",
       description: "Advanced AI-powered business intelligence platform with predictive analytics, real-time insights, and automated reporting",
       price: "From $2,500/month",
-      icon: <BarChart3 className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
       features: [
         "Real-time predictive analytics",
@@ -25,7 +24,7 @@ import React from "react",
         "Real-time business insights"
       ]
     },
-    {
+    {}
       id: "ai-customer-service-pro",
       name: "AI Customer Service Pro",
       description: "Intelligent customer support system with natural language processing, automated responses, and 24/7 availability",
@@ -47,7 +46,7 @@ import React from "react",
         "24/7 availability"
       ]
     },
-    {
+    {}
       id: "ai-content-generator-pro",
       name: "AI Content Generator Pro",
       description: "Advanced content creation platform with AI writing, image generation, and multi-format output capabilities",
@@ -70,16 +69,14 @@ import React from "react",
       ]
     }
   ],
-      return (
-    <>
+      return ()
+    <>{}</>
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced AI Solutions</title>
-        <meta
-          name="description"
+        <metaname="description">
           content="Transform your business with our comprehensive AI services. From machine learning to natural language processing, we deliver cutting-edge AI solutions."
         />
-        <meta
-          name="keywords"
+        <metaname="keywords">
           content="AI services, artificial intelligence, machine learning, NLP, computer vision, AI consulting, AI development"
         />
       </Helmet>
@@ -97,7 +94,7 @@ import React from "react",
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {aiServices.map((service) => (
+            {aiServices.map((service) => ()}
               <div key={service.id} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
                 <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-4`}>
                   {service.icon}
@@ -109,7 +106,7 @@ import React from "react",
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-gray-300 mb-2">Features:</h4>
                   <ul className="text-sm text-gray-400 space-y-1">
-                    {service.features.map((feature, index) => (
+                    {service.features.map((feature, index) => ()}
                       <li key={index}>• {feature}</li>
                     ))}
                   </ul>
@@ -118,7 +115,7 @@ import React from "react",
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-300 mb-2">Benefits:</h4>
                   <ul className="text-sm text-gray-400 space-y-1">
-                    {service.benefits.map((benefit, index) => (
+                    {service.benefits.map((benefit, index) => ()}
                       <li key={index}>• {benefit}</li>
                     ))}
                   </ul>
@@ -132,4 +129,4 @@ import React from "react",
           </div>
 
           <div className="text-center">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+            <buttonclassName="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">

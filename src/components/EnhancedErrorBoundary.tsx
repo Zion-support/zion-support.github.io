@@ -54,7 +54,7 @@ export default EnhancedErrorBoundary
       window.location.href = '/'
   }
     },
-    {
+    {}
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
         // Show success message
         const button = document.getElementById('copy-error-details')

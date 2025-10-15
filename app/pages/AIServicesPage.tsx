@@ -2,10 +2,10 @@ import React from 'react';
 
 import SEOHead from '../components/SEOHead';
 
-const AIServicesPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead 
+const AIServicesPage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
         title="AIServicesPage - Zion Tech Group"
         description="Zion Tech Group AIServicesPage page"
       />
@@ -37,7 +37,7 @@ const AIServicesPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services.map((service, index) => ()}
               <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border border-gray-100">
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-purple-100 rounded-lg">
@@ -49,7 +49,7 @@ const AIServicesPage: React.FC = () => {
                 <div className="mb-4">
                   <h4 className="font-medium text-gray-900 mb-2">Key Features:</h4>
                   <ul className="text-sm text-gray-600 space-y-1">
-                    {service.features.map((feature, idx) => (
+                    {service.features.map((feature, idx) => ()}
                       <li key={idx} className="flex items-center">
                         <CheckCircleIcon className="w-4 h-4 text-green-500 mr-2" />
                         {feature}
@@ -82,9 +82,9 @@ const AIServicesPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map((tier, index) => ()}
               <div key={index} className={`relative bg-white rounded-xl shadow-lg p-8 ${tier.popular ? 'ring-2 ring-purple-500' : ''}`}>
-                {tier.popular && (
+                {tier.popular && ()}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium flex items-center">
                       <StarIcon className="h-4 w-4 mr-1" />
@@ -101,14 +101,14 @@ const AIServicesPage: React.FC = () => {
                   </div>
                 </div>
                 <ul className="space-y-4 mb-8">
-                  {tier.features.map((feature, idx) => (
+                  {tier.features.map((feature, idx) => ()}
                     <li key={idx} className="flex items-center">
                       <CheckCircleIcon className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
                       <span className="text-gray-600">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 px-4 rounded-lg font-medium transition-colors duration-200 ${
+                <buttonclassName={`w-full py-3 px-4 rounded-lg font-medium transition-colors duration-200 ${>}
                   tier.popular 
                     ? 'bg-purple-600 text-white hover:bg-purple-700' 
                     : 'bg-gray-900 text-white hover:bg-gray-800'

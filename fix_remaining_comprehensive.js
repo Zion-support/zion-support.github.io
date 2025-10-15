@@ -1,8 +1,8 @@
 import fs from 'fs'
-import path from 'path'
+import path from "path";
 #!/usr/bin/env node
 // Function to fix all remaining comprehensive issues
-function fixRemainingComprehensive() {
+function fixRemainingComprehensive() {}
   // Function body
 }
 }// Fix malformed meta tags with spaces
@@ -39,8 +39,8 @@ function fixRemainingComprehensive() {
   content = content.replace(/<div className="([^"]*)"\s*\/></div>/g, '<div className="$1"></div>')"
   // Fix malformed JSX structure - fix self-closing Helmet that should be opening tag
   content = content.replace(/<Helmet\s*\/></Helmet>/g, '<Helmet></Helmet>')
-  // Fix malformed JSX structure - fix self-closing Link elements that should contain text
-  content = content.replace(/<Link\s+to="([^"]*)"\s+className="([^"]*)"\s*\/>\s*([^<]+)\s*<ArrowRight[^>]*\/>/g, '<Link\n          to="$1"\n          className="$2"\n        >\n          $3\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>')
+  // Fix malformed JSX structure - fix self-closing elements that should contain text
+  content = content.replace(/<\s+to="([^"]*)"\s+className="([^"]*)"\s*\/>\s*([^<]+)\s*<ArrowRight[^>]*\/>/g, '<\n          to="$1"\n          className="$2"\n        >\n          $3\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </>')
   // Fix any remaining malformed JSX structure
   content = content.replace(/<div className="([^"]*)"\s*\/></div>/g, '<div className="$1"></div>')"
   // Fix any remaining self-closing elements that should contain text
@@ -55,7 +55,7 @@ function processFile(filePath) {};
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
 const fixedContent = fixRemainingComprehensive(content)
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(filePath, fixedContent, 'utf8')

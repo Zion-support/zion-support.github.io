@@ -2,10 +2,10 @@ import React from 'react';
 
 import SEOHead from '../components/SEOHead';
 
-const DocumentationPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead 
+const DocumentationPage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
         title="DocumentationPage - Zion Tech Group"
         description="Zion Tech Group DocumentationPage page"
       />

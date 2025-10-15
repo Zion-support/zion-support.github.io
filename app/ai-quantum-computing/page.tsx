@@ -1,9 +1,7 @@
 import { Helmet } from 'react-helmet-async';
-import { Atom, Cpu, Zap, CheckCircle, ArrowRight, Brain, Shield, Database, Microscope } from 'lucide-react';
-
-const AiQuantumComputingPage: React.FC = () => {
+const AiQuantumComputingPage: React.FC = () => {}
   const services = [
-    {
+    {}
       name: "Quantum AI Algorithms",
       description: "Advanced quantum machine learning algorithms for solving complex optimization problems.",
       features: ["Quantum ML models", "Optimization algorithms", "Pattern recognition", "Quantum neural networks", "Hybrid classical-quantum", "Performance benchmarking"],
@@ -13,29 +11,29 @@ const AiQuantumComputingPage: React.FC = () => {
       icon: <Atom className="w-8 h-8" />,
       benefits: "Solve problems 1000x faster than classical computers"
     },
-    {
+    {}
       name: "Quantum Security Solutions",
       description: "Quantum-resistant cryptography and secure communication protocols for future-proof security.",
       features: ["Quantum key distribution", "Post-quantum cryptography", "Secure communications", "Quantum random numbers", "Encryption protocols", "Security auditing"],
       price: "From $7,999",
       marketPrice: "$15,999-79,999",
       popular: false,
-      icon: <Shield className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       benefits: "Future-proof security against quantum attacks"
     },
-    {
+    {}
       name: "Quantum Computing Infrastructure",
       description: "Complete quantum computing infrastructure setup and management for research and development.",
       features: ["Quantum hardware setup", "Cryogenic systems", "Control systems", "Quantum software stack", "Maintenance support", "Training programs"],
       price: "From $49,999",
       marketPrice: "$99,999-499,999",
       popular: true,
-      icon: <Cpu className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       benefits: "Deploy quantum infrastructure in 6 months"
     }
   ];
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-100">
       <Helmet>
         <title>AI Quantum Computing - Zion Tech Group</title>
@@ -54,9 +52,9 @@ const AiQuantumComputingPage: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
+          {services.map((service, index) => ()}
             <div key={index} className={`bg-white rounded-2xl shadow-xl p-8 relative ${service.popular ? 'ring-2 ring-indigo-500' : ''}`}>
-              {service.popular && (
+              {service.popular && ()}
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                     Most Popular
@@ -81,7 +79,7 @@ const AiQuantumComputingPage: React.FC = () => {
               </div>
 
               <ul className="space-y-3 mb-8">
-                {service.features.map((feature, featureIndex) => (
+                {service.features.map((feature, featureIndex) => ()}
                   <li key={featureIndex} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-indigo-500 mr-3 flex-shrink-0" />
                     <span className="text-gray-700">{feature}</span>

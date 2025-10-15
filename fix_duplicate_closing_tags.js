@@ -1,12 +1,12 @@
 import fs from 'fs'
-import path from 'path'
+import path from "path";
 #!/usr/bin/env node
 // Function to fix duplicate closing tags
-function fixDuplicateClosingTags() {
+function fixDuplicateClosingTags() {}
   // Function body
 }
-}// Fix duplicate Link closing tags
-  content = content.replace(/<\/Link>\s*<\/Link>/g, '</Link>')
+}// Fix duplicate closing tags
+  content = content.replace(/<\/>\s*<\/>/g, '</>')
   // Fix any other duplicate closing tags
   content = content.replace(/<\/div>\s*<\/div>/g, '</div>')
   content = content.replace(/<\/span>\s*<\/span>/g, '</span>')
@@ -25,7 +25,7 @@ function processFile(filePath) {};
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
 const fixedContent = fixDuplicateClosingTags(content)
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(filePath, fixedContent, 'utf8')

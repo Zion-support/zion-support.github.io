@@ -1,7 +1,7 @@
 
-import {Link} from 'react-router-dom',
+,
       import { Helmet } from 'react-helmet-async',
-      import {",
+      import {"}
         "
   CheckCircle,",
         "
@@ -9,9 +9,9 @@ import {Link} from 'react-router-dom',
         "
   Users,",
         "
-  Shield,",
+  ",
         "
-  // Zap,",
+  // ",
         "
   ArrowRight,",
         "
@@ -25,13 +25,13 @@ import {Link} from 'react-router-dom',
         "
   Target,",
         "
-  BarChart3,",
+  ",
         "
   Code,",
         "
   Cloud,",
         "
-  // Database,",
+  // ",
         "
   Settings",
         "
@@ -88,7 +88,7 @@ import {Link} from 'react-router-dom',
         'Improve team productivity by 50%';
       ],",
         "
-      icon: BarChart3,",
+      icon: ",
         "
       popular: true",
         "
@@ -112,7 +112,7 @@ import {Link} from 'react-router-dom',
         "
         '99.9% Uptime Guarantee',",
         "
-        '24/7 Monitoring',",
+        '24/7 ing',",
         "
         'Security Compliance',",
         "
@@ -126,7 +126,7 @@ import {Link} from 'react-router-dom',
         "
         'SSL Certificates',",
         "
-        'Performance Monitoring';
+        'Performance ing';
       ],",
         "
       benefits: []
@@ -200,7 +200,7 @@ import {Link} from 'react-router-dom',
         "
     }
     },
-    {
+    {}
   const service = serviceData[id as keyof typeof serviceData] || serviceData['ai-analytics-dashboard-pro']
   const relatedServices = []
     {},
@@ -221,7 +221,7 @@ import {Link} from 'react-router-dom',
         "
       category: 'IT Services',",
         "
-      icon: Shield",
+      icon: ",
         "
     },",
         "
@@ -252,9 +252,9 @@ import {Link} from 'react-router-dom',
       <section className="py-8 bg-slate-800/30">";"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";"
           <div className="flex items-center space-x-2 text-sm">";"
-            <Link to="/" className="text-gray-400 hover:text-white">Home</Link>";"
+            <to="/" className="text-gray-400 hover:text-white">Home</>";"
             <span className="text-gray-500">/</span>";"
-            <Link to="/services" className="text-gray-400 hover:text-white">Services</Link>";"
+            <to="/services" className="text-gray-400 hover:text-white">Services</>";"
             <span className="text-gray-500">/</span>";"
             <span className="text-white">{service.name}</span>",
         "
@@ -279,7 +279,7 @@ import {Link} from 'react-router-dom',
         "
                 <div>";"
                   <span className="text-purple-400 font-medium">{service.category}</span>";"
-                  {service.popular && ()
+                  {service.popular && ()}
                     <span className="ml-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">",
         "
                       Most Popular",
@@ -323,7 +323,7 @@ import {Link} from 'react-router-dom',
         "
               <div className="flex flex-col sm:flex-row gap-4">",
         "
-                <a",
+                <a",>
         "
                   href="/contact",
       className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105";
@@ -335,7 +335,7 @@ import {Link} from 'react-router-dom',
         "
                 </a>",
         "
-                <a";"
+                <a";">
                   href="tel:+13024640950",
       className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300";
                 >",
@@ -351,7 +351,7 @@ import {Link} from 'react-router-dom',
               <h3 className="text-2xl font-bold text-white mb-6">Quick Contact</h3>";"
               <div className="space-y-4">",
         "
-                <a",
+                <a",>
         "
                   href="tel:+13024640950",
       className="flex items-center space-x-3 p-4 bg-slate-700/50 rounded-lg hover:bg-slate-600/50 transition-colors";
@@ -367,7 +367,7 @@ import {Link} from 'react-router-dom',
         "
                 </a>",
         "
-                <a",
+                <a",>
         "
                   href="mailto:kleber@ziontechgroup.com",
       className="flex items-center space-x-3 p-4 bg-slate-700/50 rounded-lg hover:bg-slate-600/50 transition-colors";
@@ -383,7 +383,7 @@ import {Link} from 'react-router-dom',
         "
                 </a>",
         "
-                <a",
+                <a",>
         "
                   href="/contact",
       className="flex items-center space-x-3 p-4 bg-slate-700/50 rounded-lg hover:bg-slate-600/50 transition-colors";
@@ -427,7 +427,7 @@ import {Link} from 'react-router-dom',
           </div>",
         "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";"
-            {service.features.map((feature, index) => ()
+            {service.features.map((feature, index) => ()}
               <div key={index} className="flex items-start space-x-3">";"
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />",
         "
@@ -469,7 +469,7 @@ import {Link} from 'react-router-dom',
           </div>",
         "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";"
-            {service.benefits.map((benefit, index) => ()
+            {service.benefits.map((benefit, index) => ()}
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20 text-center">";"
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">";"
                   <Target className="w-8 h-8 text-white" />",
@@ -509,7 +509,7 @@ import {Link} from 'react-router-dom',
           </div>",
         "
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";"
-            {relatedServices.map((relatedService, index) => ()
+            {relatedServices.map((relatedService, index) => ()}
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">";"
                 <div className="flex items-center space-x-3 mb-4">";"
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">";"
@@ -526,7 +526,7 @@ import {Link} from 'react-router-dom',
                 </div>";"
                 <div className="text-2xl font-bold text-white mb-4">{relatedService.price}</div>",
         "
-                <Link",
+                <",>
         "
                   to="/services",
       className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors";
@@ -536,7 +536,7 @@ import {Link} from 'react-router-dom',
         "
                   <ArrowRight className="ml-2 w-4 h-4" />",
         "
-                </Link>",
+                </>",
         "
               </div>",
         "
@@ -565,7 +565,7 @@ import {Link} from 'react-router-dom',
         "
           <div className="flex flex-col sm:flex-row gap-4 justify-center">",
         "
-            <a",
+            <a",>
         "
               href="/contact",
       className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105";
@@ -577,7 +577,7 @@ import {Link} from 'react-router-dom',
         "
             </a>",
         "
-            <a";"
+            <a";">
               href="tel:+13024640950",
       className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300";
             >",

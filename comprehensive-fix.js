@@ -4,149 +4,165 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-// Function to find all problematic files
-function findProblematicFiles() {
-  // Function body
-}
-  try {};
-    return result.trim().split('\n').filter(file => file.length > 0);
-  } catch (error) {};
-    return [];
-  };
-};
-// Function to fix unterminated string literals
-function fixUnterminatedStrings(content) {};
-  const lines = content.split('\n');
-  const fixedLines = [];
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {}
+  // Fix missing semicolons in imports
+  content = content.replace(/import\s+([^;]+)\s+from\s+['"]([^'"]+)['"]\s*$/gm, 'import $1 from "$2";');
   
-  for (let i = 0; i < lines.length; i++) {};
-    let line = lines[i];
-    
-    // Fix unterminated string literals
-      // Skip this line as it's an error message'
-      continue;
-    };
-    // Fix lines that end with unterminated quotes
-    if (line.match(/[^"']\s*$/)) {"
-      // Check if the line should end with a quote
-      const quoteCount = (line.match(/"/g) || []).length;"
-      const singleQuoteCount = (line.match(/'/g) || []).length;'
-      
-      if ($1) {
-  // If body
-}
-        line = line + '"';"
-      } else if (singleQuoteCount % 2 !== 0) {};
-        line = line + "'";'
-      };
-    };
-    // Fix specific patterns
-    line = line.replace(/import\s+.*from\s+['"][^'"]*$/g, (match) => {};
-      if (!match.endsWith('"') && !match.endsWith("'")) {"
-        return match + '"';"
-      };
-      return match;
-    });
-    
-    fixedLines.push(line);
-  };
-  return fixedLines.join('\n');
-};
-// Function to fix unexpected tokens
-function fixUnexpectedTokens(content) {};
-  let fixed = content;
-  
-  // Fix common unexpected token patterns
-  fixed = fixed.replace(/\}\s*$/gm, '};');
-  fixed = fixed.replace(/\{\s*$/gm, '{};');
-  fixed = fixed.replace(/,\s*$/gm, ';');
-  
-  // Fix JSX syntax
-  fixed = fixed.replace(/<([^>]+)>\s*$/gm, (match, tag) => {};
-    if (!match.includes('</') && !match.includes('/>')) {};
-      return match + '</' + tag.split(' ')[0] + '>';
-    };
+  // Fix unterminated strings in imports
+  content = content.replace(/import\s+([^;]+)\s+from\s+['"]([^'"]*)\s*$/gm, (match, imports, module) => {}
+    if (!module.endsWith('"') && !module.endsWith("'")) {}
+      return `import ${imports} from "${module}";`;
+    }
     return match;
   });
   
-  return fixed;
-};
-// Function to clean up error messages and malformed content
-function cleanErrorContent(content) {};
-  const lines = content.split('\n');
-  const cleanedLines = [];
+  // Fix JSX syntax issues - unclosed tags
+  content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*$/gm, '<$1>');
   
-  for (const line of lines) {};
-    // Skip lines that are error messages
-      continue;
-    };
-    // Skip merge conflict markers
-      continue;
-    };
-    cleanedLines.push(line);
-  };
-  return cleanedLines.join('\n');
-};
-// Function to fix specific file types
-function fixFileByType(filePath, content) {};
-  let fixed = content;
+  // Fix JSX fragments
+  content = content.replace(/<>([^<]*?)$/gm, '<>{$1}</>');
   
-  if (filePath.endsWith('.js')) {};
-    // Fix JavaScript files
-    fixed = fixed.replace(/export\s+default\s+function/g, 'function');
-    fixed = fixed.replace(/export\s+const\s+(\w+)\s*=/g, 'const $1 =');
-  };
-  if (filePath.endsWith('.tsx') || filePath.endsWith('.ts')) {};
-    // Fix TypeScript/TSX files
-    fixed = fixed.replace(/import\s+React\s+from\s+['"]react['"];?\s*$/gm, '');
-    fixed = fixed.replace(/import\s+\{\s*\}\s+from\s+['"][^'"]*['"];?\s*$/gm, '');"
-  };
-  return fixed;
-};
-// Main function to fix all files
-function fixAllFiles() {};
-  console.log('🔍 Finding problematic files...');
+  // Fix unclosed JSX elements
+  content = content.replace(/<([a-zA-Z][a-zA-Z0-9]*)\s*([^>]*?)\s*$/gm, '<$1$2>');
   
-  // Get all files that might have issues
-  const allFiles = [];
-  try {};
-    const result = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" | grep -v node_modules', { encoding: 'utf8' });
-    allFiles.push(...result.trim().split('\n').filter(file => file.length > 0));
-  } catch (error) {};
-    console.error('Error finding files:', error.message);
-    return;
-  };
-  console.log(`📁 Found ${allFiles.length} files to check`);
+  // Fix malformed JSX attributes
+  content = content.replace(/className\s*=\s*['"]([^'"]*?)\s*$/gm, 'className="$1"');
   
-  let fixedCount = 0;
+  // Fix missing closing tags for common elements
+  const commonTags = ['div', 'span', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'section', 'article', 'header', 'footer', 'main', 'nav', 'aside'];
   
-  for (const filePath of allFiles) {};
-    try {};
-      const content = fs.readFileSync(filePath, 'utf8');
+  for (const tag of commonTags) {}
+    // Fix unclosed opening tags
+    content = content.replace(new RegExp(`<${tag}([^>]*?)\\s*$`, 'gm'), `<$1$2>`);
+  }
+  
+  // Fix React fragments
+  content = content.replace(/<>([^<]*?)$/gm, '<>{$1}</>');
+  
+  // Fix missing closing parentheses in function calls
+  content = content.replace(/\(([^)]*?)\s*$/gm, '($1)');
+  
+  // Fix missing closing braces
+  content = content.replace(/\{([^}]*?)\s*$/gm, '{$1}');
+  
+  return content;
+}
+
+// Function to fix specific file patterns
+function fixSpecificFiles(filePath, content) {}
+  // Fix 404.tsx specific issues
+  if (filePath.includes('404.tsx')) {}
+    content = content.replace(/return\s*\(\s*$/gm, 'return (');
+    content = content.replace(/<div[^>]*>\s*$/gm, '<div>');
+  }
+  
+  // Fix about page
+  if (filePath.includes('about/page.tsx')) {}
+    content = content.replace(/import\s+([^;]+)\s+from\s+['"]([^'"]*)\s*$/gm, 'import $1 from "$2";');
+  }
+  
+  // Fix ad-management page
+  if (filePath.includes('ad-management/page.tsx')) {}
+    content = content.replace(/return\s*\(\s*$/gm, 'return (');
+  }
+  
+  return content;
+}
+
+// Function to remove unused imports
+function removeUnusedImports(content) {}
+  // Common unused imports to remove
+  const unusedImports = [
+    '', '', '', '', '', '', '',
+    '', '', '', '', '', '', '', '', '', ''
+  ];
+  
+  for (const unused of unusedImports) {}
+    // Remove from import statements
+    content = content.replace(new RegExp(`import\\s*{[^}]*\\b${unused}\\b[^}]*}\\s*from\\s*['"][^'"]+['"];?\\s*`, 'g'), '');
+    // Remove individual unused imports from multi-import statements
+    content = content.replace(new RegExp(`\\b${unused}\\s*,?\\s*`, 'g'), '');
+    content = content.replace(/,\s*,/g, ',');
+    content = content.replace(/{\s*,/g, '{');}
+    content = content.replace(/,\s*}/g, '}');
+  }
+  
+  return content;
+}
+
+// Function to process a single file
+function processFile(filePath) {}
+  try {}
+    const content = fs.readFileSync(filePath, 'utf8');
+    let fixedContent = content;
+    
+    // Apply fixes
+    fixedContent = fixSyntaxErrors(fixedContent);
+    fixedContent = fixSpecificFiles(filePath, fixedContent);
+    fixedContent = removeUnusedImports(fixedContent);
+    
+    // Only write if content changed
+    if (fixedContent !== content) {}
+      fs.writeFileSync(filePath, fixedContent);
+      console.log(`✓ Fixed syntax errors in: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {}
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Function to find all TypeScript/JavaScript files
+function findSourceFiles(dir) {}
+  const files = [];
+  
+  function traverse(currentDir) {}
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {}
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
       
-      // Skip if file is empty or very small
-      if (content.length < 10) {};
-        continue;
-      };
-      let fixedContent = content;
-      
-      // Apply fixes
-      fixedContent = cleanErrorContent(fixedContent);
-      fixedContent = fixUnterminatedStrings(fixedContent);
-      fixedContent = fixUnexpectedTokens(fixedContent);
-      fixedContent = fixFileByType(filePath, fixedContent);
-      
-      // Only write if content changed
-      if (fixedContent !== content) {};
-        fs.writeFileSync(filePath, fixedContent);
-        console.log(`✅ Fixed ${filePath}`);
-        fixedCount++;
-      };
-    } catch (error) {};
-      console.error(`❌ Error processing ${filePath}:`, error.message);
-    };
-  };
-  console.log(`\n🎉 Processed ${allFiles.length} files, fixed ${fixedCount} files!`);
-};
-// Run the fix
-fixAllFiles();
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {}
+        traverse(fullPath);
+      } else if (stat.isFile() && /\.(ts|tsx|js|jsx)$/.test(item)) {}
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+console.log('Starting comprehensive syntax fix...');
+
+const sourceFiles = findSourceFiles('./');
+let processedCount = 0;
+let fixedCount = 0;
+
+for (const file of sourceFiles) {}
+  if (processFile(file)) {}
+    fixedCount++;
+  }
+  processedCount++;
+}
+
+console.log(`\nProcessed ${processedCount} files`);
+console.log(`Fixed syntax errors in ${fixedCount} files`);
+
+// Run lint fix to clean up remaining issues
+console.log('\nRunning ESLint fix...');
+try {}
+  execSync('npm run lint:fix', { stdio: 'inherit' });
+  console.log('✓ ESLint fix completed');
+} catch (error) {}
+  console.log('ESLint fix had some issues, but continuing...');
+}
+
+console.log('\nComprehensive syntax fix completed!');

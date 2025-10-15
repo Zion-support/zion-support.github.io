@@ -1,8 +1,8 @@
 import fs from 'fs'
-import path from 'path'
+import path from "path";
 #!/usr/bin/env node
 // Function to fix common syntax errors in TSX files
-function fixSyntaxErrors() {
+function fixSyntaxErrors() {}
   // Function body
 }
 }// Fix invalid characters in import statements
@@ -55,7 +55,7 @@ function processFile(filePath) {};
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
 const fixedContent = fixSyntaxErrors(content)
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(filePath, fixedContent, 'utf8')

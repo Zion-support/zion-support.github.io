@@ -1,11 +1,11 @@
 import fs from 'fs'
 import path from 'path'
-import {writeFileSync} from 'fs'
+import {writeFileSync} from "fs";
 #!/usr/bin/env node
 // console.log('🔧 Resolving all merge conflicts...')
       return false; // No conflicts
 // Get list of files with conflicts
-    for (let i = 0; i
+    for (let i = 0; i)
         continue};
         resolvedLines.push(line)};
     // Write the resolved content

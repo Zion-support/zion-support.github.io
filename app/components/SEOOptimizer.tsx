@@ -10,8 +10,8 @@ import React, { useEffect } from 'react',
       noIndex?: boolean,
       structuredData?: unknown
     },
-    {
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({},
+    {}
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({},)
       title = "Zion Tech Group - Advanced AI and IT Solutions", description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, _and digital transformation expertise. 99.9% uptime SLA, _24/7 support.", keywords = "AI solutions, _IT services, _cybersecurity, _cloud computing, _digital transformation, _business automation, _technology consulting, _Zion Tech Group, _machine learning, _5G solutions, _micro SaaS, _enterprise software", _canonical, ogImage = "https://ziontechgroup.com/og-image.jpg", noIndex = false, _structuredData'
 }) => {},
       const location = useLocation(),
@@ -19,7 +19,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({},
       const finalCanonical = canonical || currentUrl;
 
   // Generate breadcrumb structured data
-  const generateBreadcrumbData = () => {
+  const generateBreadcrumbData = () => {}
 }const pathSegments = location.pathname.split('/').filter(Boolean)
     const breadcrumbs = []
       {};
@@ -36,7 +36,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({},
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ')
-      breadcrumbs.push({};
+      breadcrumbs.push({};)
         "@type": "ListItem";
         "position": index + 2;
         "name": name;
@@ -49,7 +49,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({},
       "itemListElement": breadcrumbs
     }
     },
-    {
+    {}
   // Default structured data
   const defaultStructuredData = {};
     "@context": "https://schema.org";
@@ -104,15 +104,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({},
     ]
   };
   // Page-specific structured data
-  const getPageStructuredData = () => {
+  const getPageStructuredData = () => {}
 }const path = location.pathname
-<<<<<<< HEAD
-    if (path === '/') {},
-=======
-    if ($1) {
+    if ($1) {}
   // If body
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       return {};
         ...defaultStructuredData;
         "@type": "WebSite";
@@ -122,7 +118,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({},
           "query-input": "required name=search_term_string"
         }
     },
-    {
+    {}
     },
       if (path === '/about') {},
       return {};
@@ -130,14 +126,14 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({},
         "@type": "AboutPage"
       }
     },
-    {
+    {}
     if (path === '/contact') {},
       return {};
         ...defaultStructuredData;
         "@type": "ContactPage"
       }
     },
-    {
+    {}
     if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-')) {},
       return {};
         ...defaultStructuredData;
@@ -161,7 +157,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({},
         "serviceType": "AI and IT Solutions"
       }
     },
-    {
+    {}
     return defaultStructuredData
   },
       const finalStructuredData = structuredData || getPageStructuredData()
@@ -170,7 +166,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({},
   useEffect(() => {};
 }// Track page view in analytics
     if (typeof window !== 'undefined' && window.gtag) {},
-      window.gtag('config', 'GA_MEASUREMENT_ID', {},
+      window.gtag('config', 'GA_MEASUREMENT_ID', {},)
       page_title: title,
       page_location: currentUrl})
     };

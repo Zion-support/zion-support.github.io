@@ -1,21 +1,15 @@
 import React from 'react';
 
-const AiPersonalizedLearningPage: React.FC = () => {
+const AiPersonalizedLearningPage: React.FC = () => {}
   const features = [
     {};
-      icon: <Brain>
+      icon: <>
       title: "Adaptive Learning Paths";
       description: "AI creates personalized learning journeys based on individual strengths and weaknesses"
     };
-<<<<<<< HEAD
-    {},
-      icon: <BookOpen className="w-6 h-6" />,
-      title: "Multi-Modal Content",
-=======
     {};
       icon: <BookOpen>
       title: "Multi-Modal Content";
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       description: "Interactive videos, simulations, quizzes, and hands-on projects for comprehensive learning"
     };
     {},
@@ -92,15 +86,13 @@ const AiPersonalizedLearningPage: React.FC = () => {
     {},
       title: "Language Learning",
       description: "Master new languages with AI-powered pronunciation and conversation practice",
-      icon: <Brain className="w-8 h-8" />
+      icon: <className="w-8 h-8" />
     };
   ],
       const subjects = [
-    "Programming & Development", "Data Science & AI", "Business & Management", "Design & Creative";
-    "Marketing & Sales", "Finance & Accounting", "Healthcare & Medicine", "Engineering";
-    "Languages", "Soft Skills", "Certification Prep", "Technical Skills"
+    "Programming & Development", "Data Science & AI", "Business & Management", "Design & Creative""Marketing & Sales", "Finance & Accounting", "Healthcare & Medicine", "Engineering""Languages", "Soft Skills", "Certification Prep", "Technical Skills"
   ],
-      return (<>
+      return (<>{}</>)
       <Helmet></Helmet>
         <title>AI Personalized Learning - Zion Tech Group | Adaptive Education Platform</title>
         <meta name="description" content="Revolutionary AI-powered personalized learning platform with adaptive curriculum, multi-modal content, and intelligent progress tracking for individuals and organizations." />
@@ -154,7 +146,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              {features.map((feature, index) => (
+              {features.map((feature, index) => ()}
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 text-center">
         <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 text-center">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -186,7 +178,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
             </div>
             
             <div className="flex flex-wrap justify-center gap-4"></div>
-              {subjects.map((subject, index) => (
+              {subjects.map((subject, index) => ()}
                 <span key={index} className="px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover:bg-cyan-500/20 hover:text-cyan-400 transition-all duration-300"></span>
                   {subject};
                 </span>
@@ -210,7 +202,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              {useCases.map((useCase, index) => (
+              {useCases.map((useCase, index) => ()}
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 group">
         <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 group">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -244,9 +236,9 @@ const AiPersonalizedLearningPage: React.FC = () => {
             </div>
             
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => ()}
                 <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-cyan-500 scale-105' : ''}`}></div>
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center"></span>
                         <Star className="w-4 h-4 mr-1" />
@@ -264,7 +256,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
                   </div>
                   
                   <ul className="space-y-4 mb-8"></ul>
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => ()}
                       <li key={featureIndex} className="flex items-center text-gray-300"></li>
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature};
@@ -272,7 +264,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
                     ))};
                   </ul>
                   
-                  <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${},
+                  <buttonclassName={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${},>
       plan.popular 
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
@@ -303,21 +295,4 @@ const AiPersonalizedLearningPage: React.FC = () => {
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300"></button>
                   Start Free Trial
                 </button>
-<<<<<<< HEAD
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"></button>
-                  Contact Sales
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-}
-};
-
-export default AiPersonalizedLearningPage;
-=======
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+                <buttonclassName="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">

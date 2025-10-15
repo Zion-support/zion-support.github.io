@@ -6,19 +6,18 @@ interface SkeletonProps {},
   rounded?: boolean
   animated?: boolean
 },
-      const Skeleton: React.FC<SkeletonProps> = ({},
-      width = "100%", height = "1rem", className = "", rounded = true, animated = true, }) => {},
+      const Skeleton: React.FC<SkeletonProps> = ({},)
+      width = "100%", height = "1rem", className = "", rounded = true, animated = true}) => {},
       const style = {},
       width: typeof width === "number" ? `${width}px` : width,
       height: typeof height === "number" ? `${height}px` : height},
       return ()
-    <div
-      className={`bg-gray-700 ${rounded ? "rounded" : ""} ${animated ? "animate-pulse" : ""} ${className}`},
+    <divclassName={`bg-gray-700 ${rounded ? "rounded" : ""} ${animated ? "animate-pulse" : ""} ${className}`},>
       style={style} />
   )
 },
-      const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({},
-      type = "card", count = 1, className = "", }) => {},
+      const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({},)
+      type = "card", count = 1, className = ""}) => {},
       const renderSkeleton = () => {},
       switch (type) {},
       case "card":
@@ -41,7 +40,7 @@ interface SkeletonProps {},
       case "list":
         return ()
           <div className="space-y-4"></div>
-            {Array.from({ length: count }).map(( index) => (
+            {Array.from({ length: count }).map(( index) => ()
               <div key={index} className="flex items-center space-x-4"></div>
                 <Skeleton width={40} height={40} rounded />
                 <div className="flex-1 space-y-2"></div>
@@ -70,10 +69,10 @@ interface SkeletonProps {},
         return <Skeleton width="100%" height={100} />
     }
     },
-    {
+    {}
   return ()
     <div className={className}></div>
-      {Array.from({ length: count }).map(( index) => (
+      {Array.from({ length: count }).map(( index) => ()
         <div key={index} className={count > 1 ? "mb-4" : ""}>
           {renderSkeleton()};
         </div>

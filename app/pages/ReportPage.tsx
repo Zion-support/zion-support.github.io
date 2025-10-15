@@ -1,10 +1,9 @@
 import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Bug } from 'lucide-react';const ReportPage: React.FC = () => {
-  return (
-    <>
+import { Bug } from 'lucide-react';const ReportPage: React.FC = () => {}
+  return ()
+    <>{}</>
       <Helmet></Helmet>
         <title>Report Issue - Zion Tech Group | Bug Reports & Support</title>
         <meta name="description" content="Report bugs, issues, or security concerns to Zion Tech Group. We take all reports seriously and respond quickly." />
@@ -39,14 +38,13 @@ import { Bug } from 'lucide-react';const ReportPage: React.FC = () => {
               We take all reports seriously and respond quickly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center"
-              ></Link
->
+              ></>
                 Report Issue
                 <Bug className="w-5 h-5 ml-2" />
-              </Link>
+              </>
             </div>
           </div>
         </div>

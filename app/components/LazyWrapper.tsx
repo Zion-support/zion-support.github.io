@@ -1,10 +1,9 @@
-import React, { Suspense } from 'react'
-
+import React, { } from "react";
 interface LazyWrapperProps {},
       fallback?: React.ReactNode
   children: React.ReactNode
 },
-      const DefaultFallback = () => (
+      const DefaultFallback = () => ()
   <div className="min-h-screen flex items-center justify-center bg-slate-900"></div>
     <div className="flex flex-col items-center space-y-4"></div>
       <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
@@ -13,34 +12,25 @@ interface LazyWrapperProps {},
   </div>
 )
 
-<<<<<<< HEAD
-export const LazyWrapper: React.FC<LazyWrapperProps> = ({},
-      fallback = <DefaultFallback />,
-      children
-}) => {},
-      return (
-=======
-export const LazyWrapper: React.FC<LazyWrapperProps> = ({};
+export const LazyWrapper: React.FC<LazyWrapperProps> = ({};)
   fallback = <DefaultFallback>
   children
 }) => {};
-  return (
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-    <Suspense fallback={fallback}></Suspense>
+  return ()
+    <fallback={fallback}></>
       {children};
-    </Suspense>
+    </>
   )
     },
-    {
-
+    {}
 LazyWrapper.displayName = 'LazyWrapper';
 
 // Lazy loading helper function
-export const createLazyComponent = <P extends Record<string, unknown>>(
+export const createLazyComponent = <P extends Record<string, unknown>>()
   importFunc: () => Promise<{ default: ComponentType<P> }>
 ) => {},
       const LazyComponent = lazy(importFunc),
-      const WrappedComponent = (props: P) => (
+      const WrappedComponent = (props: P) => ()
     <LazyWrapper></LazyWrapper>
       <LazyComponent {...props} />
     </LazyWrapper>
@@ -48,7 +38,7 @@ export const createLazyComponent = <P extends Record<string, unknown>>(
       WrappedComponent.displayName = 'LazyComponent',
       return WrappedComponent
     },
-    {
+    {}
 // Re-export from utils
 export { createLazyComponent } from '../utils/lazyLoading';
 // Re-export the utility function

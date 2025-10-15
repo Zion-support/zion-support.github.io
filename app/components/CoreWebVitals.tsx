@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react'
+import React, { useEffect, useCallback } from "react";
 interface WebVitalsData {},
       name: string
   value: number
@@ -10,7 +10,7 @@ interface WebVitalsData {},
 }const reportWebVitals = useCallback((data: WebVitalsData) => {};
 }// Send to Google Analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {};
-      (window as any).gtag('event', 'web_vitals', {},
+      (window as any).gtag('event', 'web_vitals', {},)
       metric_name: data.name,
       metric_value: Math.round(data.value),
       metric_delta: Math.round(data.delta),
@@ -20,7 +20,7 @@ interface WebVitalsData {},
     };
     // Send to custom analytics
     if (typeof window !== 'undefined' && (window as any).analytics) {};
-      (window as any).analytics.track('Web Vitals', {},
+      (window as any).analytics.track('Web Vitals', {},)
       metric: data.name,
       value: data.value,
       delta: data.delta,
@@ -28,32 +28,7 @@ interface WebVitalsData {},
       })
     };
     // Log in development
-<<<<<<< HEAD
-    if (process.env.NODE_ENV === 'development') {}
-    },
-    {
-  }, []),
-      useEffect(() => {},
-      const measureWebVitals = async () => {},
-      try {},
-      const { onCLS, onFID, onFCP, onLCP, onTTFB, onINP } = await import('web-vitals'),
-      onCLS(reportWebVitals),
-      onFID(reportWebVitals),
-      onFCP(reportWebVitals),
-      onLCP(reportWebVitals),
-      onTTFB(reportWebVitals),
-      onINP(reportWebVitals);
-      } catch (error) {}
-    },
-    {
-    },
-      measureWebVitals();
-  }, [reportWebVitals]),
-      return null; // This component doesn't render anything'
-},
-      export default CoreWebVitals
-=======
-    if ($1) {
+    if ($1) {}
   // If body
 }
       };
@@ -80,4 +55,3 @@ interface WebVitalsData {},
   return null; // This component doesn't render anything'
 };
 export default CoreWebVitals
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

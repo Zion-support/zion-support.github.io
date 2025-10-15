@@ -1,5 +1,5 @@
 import React, { useState } from 'react',
-      import {",
+      import {"}
         "
   Bars3Icon,",
         "
@@ -21,7 +21,7 @@ import React, { useState } from 'react',
         "
   QuestionMarkCircleIcon,",
         "
-  ShieldCheckIcon,",
+  CheckIcon,",
         "
   CurrencyDollarIcon,",
         "
@@ -33,7 +33,7 @@ import React, { useState } from 'react',
         "
   CloudIcon,",
         "
-  CpuChipIcon,",
+  ChipIcon,",
         "
   SignalIcon,",
         "
@@ -47,7 +47,7 @@ import React, { useState } from 'react',
         "
   ChartBarIcon,",
         "
-  EyeIcon,",
+  Icon,",
         "
   CircleStackIcon,",
         "
@@ -65,13 +65,13 @@ import React, { useState } from 'react',
         "
 } from '@heroicons/react/24/outline';
 ,
-      interface NavigationProps {",
+      interface NavigationProps {"}
         "
   onSidebarToggle?: () => void",
         "
 };
 ,
-      const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {",
+      const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {"}
         "
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
@@ -86,17 +86,17 @@ import React, { useState } from 'react',
         "
     { name: 'About', href: '/about', icon: InformationCircleIcon },",
         "
-    {",
+    {"}
         "
       name: 'AI Services',",
         "
       href: '/ai-solutions',",
         "
-      icon: CpuChipIcon,",
+      icon: ChipIcon,",
         "
       submenu: [",
         "
-        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon },",
+        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: ChipIcon },",
         "
         { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: EnvelopeIcon },",
         "
@@ -110,13 +110,13 @@ import React, { useState } from 'react',
         "
         { name: 'AI Content Generation', href: '/ai-content-generation-pro', icon: DocumentTextIcon },",
         "
-        { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: EyeIcon },",
+        { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: Icon },",
         "
         { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon };
       ]
     },",
         "
-    {",
+    {"}
         "
       name: 'Micro SaaS',",
         "
@@ -142,7 +142,7 @@ import React, { useState } from 'react',
       ]
     },",
         "
-    {",
+    {"}
         "
       name: 'IT Solutions',",
         "
@@ -156,13 +156,13 @@ import React, { useState } from 'react',
         "
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },",
         "
-        { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: ShieldCheckIcon },",
+        { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: CheckIcon },",
         "
         { name: 'Web Development', href: '/web-development', icon: CodeBracketIcon },",
         "
         { name: 'Mobile App Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },",
         "
-        { name: 'Database Management', href: '/database-management', icon: CircleStackIcon },",
+        { name: 'Management', href: '/database-management', icon: CircleStackIcon },",
         "
         { name: 'Network Infrastructure', href: '/network-infrastructure', icon: SignalIcon },",
         "
@@ -170,7 +170,7 @@ import React, { useState } from 'react',
       ]
     },",
         "
-    {",
+    {"}
         "
       name: 'Resources',",
         "
@@ -194,7 +194,7 @@ import React, { useState } from 'react',
       ]
     },",
         "
-    {",
+    {"}
         "
       name: 'Company',",
         "
@@ -223,9 +223,9 @@ import React, { useState } from 'react',
 
   const mobileNavigation = [",
         "
-    { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },",
+    { name: 'AI Solutions', href: '/ai-solutions', icon: ChipIcon },",
         "
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },",
+    { name: 'Cybersecurity', href: '/cybersecurity', icon: CheckIcon },",
         "
     { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },",
         "
@@ -237,13 +237,13 @@ import React, { useState } from 'react',
         "
   ]
 
-  const isActive = (path: string) => {",
+  const isActive = (path: string) => {"}
         "
     return location.pathname === path",
         "
   };
 ,
-      const toggleServicesMenu = () => {",
+      const toggleServicesMenu = () => {"}
         "
     setIsServicesOpen(!isServicesOpen)
     setIsSolutionsOpen(false)
@@ -251,7 +251,7 @@ import React, { useState } from 'react',
     setIsCompanyOpen(false)
   };
 ,
-      const toggleSolutionsMenu = () => {",
+      const toggleSolutionsMenu = () => {"}
         "
     setIsSolutionsOpen(!isSolutionsOpen)
     setIsServicesOpen(false)
@@ -259,7 +259,7 @@ import React, { useState } from 'react',
     setIsCompanyOpen(false)
   };
 ,
-      const toggleResourcesMenu = () => {",
+      const toggleResourcesMenu = () => {"}
         "
     setIsResourcesOpen(!isResourcesOpen)
     setIsServicesOpen(false)
@@ -267,7 +267,7 @@ import React, { useState } from 'react',
     setIsCompanyOpen(false)
   };
 ,
-      const toggleCompanyMenu = () => {",
+      const toggleCompanyMenu = () => {"}
         "
     setIsCompanyOpen(!isCompanyOpen)
     setIsServicesOpen(false)
@@ -275,13 +275,13 @@ import React, { useState } from 'react',
     setIsResourcesOpen(false)
   };
 ,
-      return (";"
+      return (";")
     <nav className="bg-slate-900 shadow-lg">";"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";"
         <div className="flex justify-between h-16">";"
           <div className="flex">";"
             <div className="flex-shrink-0 flex items-center">";"
-              <Link to="/" className="flex-shrink-0 flex items-center">";"
+              <to="/" className="flex-shrink-0 flex items-center">";"
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">";"
                   <span className="text-white font-bold text-sm">Z</span>",
         "
@@ -289,30 +289,16 @@ import React, { useState } from 'react',
         "
                 <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>",
         "
-              </Link>",
+              </>",
         "
             </div>";"
             {/* Desktop Navigation */};
-<<<<<<< HEAD
-            <div className="hidden lg:ml-6 lg:flex lg:space-x-8">",
-        "
-              {navigation.map((item) => (",
-        "
-                <div key={item.name} className="relative">",
-        "
-                  <Link",
-        "
-                    to={item.href},
-      className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${",
-        "
-=======
             <div className="hidden lg:ml-6 lg:flex lg:space-x-8">";"
-              {navigation.map((item) => (";"
+              {navigation.map((item) => (";")}
                 <div key={item.name} className="relative">";"
-                  <Link";"
+                  <";">
                     to={item.href};
-                    className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${";"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+                    className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${";"}
                       isActive(item.href)
                         ? 'border-blue-500 text-white';
                         : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white';
@@ -324,12 +310,12 @@ import React, { useState } from 'react',
                     <span>{item.name}</span>",
         "
                     {item.submenu && <ChevronDownIcon className="w-4 h-4" />};
-                  </Link>",
+                  </>",
         "
                   {/* Dropdown Menu */};
-                  {item.submenu && (",
+                  {item.submenu && (",)}
         "
-                    <div className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${",
+                    <divclassName={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${",>}
         "
                       (item.name === 'AI Services' && isServicesOpen) ||",
         "
@@ -343,11 +329,11 @@ import React, { useState } from 'react',
                         ? 'block' : 'hidden';
                     }`}>",
         "
-                      {item.submenu.map((subItem) => (",
+                      {item.submenu.map((subItem) => (",)}
         "
                         <div key={subItem.name}>",
         "
-                          <Link";"
+                          <";">
                             to={subItem.href},
       className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white";
                           >";"
@@ -355,7 +341,7 @@ import React, { useState } from 'react',
         "
                             <span>{subItem.name}</span>",
         "
-                          </Link>",
+                          </>",
         "
                         </div>",
         "
@@ -373,18 +359,18 @@ import React, { useState } from 'react',
           {/* Mobile menu button */};
           <div className="lg:hidden flex items-center">",
         "
-            <button",
+            <button",>
         "
               onClick={() => setIsOpen(!isOpen)},
       className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white";
             >";"
               <span className="sr-only">Open main menu</span>",
         "
-              {isOpen ? (",
+              {isOpen ? (",)}
         "
                 <XMarkIcon className="h-6 w-6" />",
         "
-              ) : (",
+              ) : (",)
         "
                 <Bars3Icon className="h-6 w-6" />",
         "
@@ -399,17 +385,17 @@ import React, { useState } from 'react',
         <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>";"
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700 max-h-96 overflow-y-auto">",
         "
-            {navigation.map((item) => (",
+            {navigation.map((item) => (",)}
         "
               <div key={item.name}>",
         "
-                {item.submenu ? (",
+                {item.submenu ? (",)}
         "
                   <div>",
         "
-                    <button",
+                    <button",>
         "
-                      onClick={() => {";"
+                      onClick={() => {";"}
                         if (item.name === 'AI Services') toggleServicesMenu(),
       else if (item.name === 'Micro SaaS') toggleSolutionsMenu(),
       else if (item.name === 'IT Solutions') toggleResourcesMenu(),
@@ -427,7 +413,7 @@ import React, { useState } from 'react',
                     </button>",
         "
                     {/* Mobile Submenu */};
-                    <div className={`pl-6 ${",
+                    <divclassName={`pl-6 ${",>}
         "
                       (item.name === 'AI Services' && isServicesOpen) ||",
         "
@@ -441,11 +427,11 @@ import React, { useState } from 'react',
                         ? 'block' : 'hidden';
                     }`}>",
         "
-                      {item.submenu.map((subItem) => (",
+                      {item.submenu.map((subItem) => (",)}
         "
                         <div key={subItem.name}>",
         "
-                          <Link";"
+                          <";">
                             to={subItem.href},
       className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-slate-700",
       onClick={() => setIsOpen(false)};
@@ -454,7 +440,7 @@ import React, { useState } from 'react',
         "
                             <span>{subItem.name}</span>",
         "
-                          </Link>",
+                          </>",
         "
                         </div>",
         "
@@ -463,11 +449,11 @@ import React, { useState } from 'react',
         "
                   </div>",
         "
-                ) : (",
+                ) : (",)
         "
                   <div>",
         "
-                    <Link",
+                    <",>
         "
                       to={item.href},
       className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${isActive(item.href) ? 'text-white bg-slate-700' : 'text-gray-300 hover:text-white hover:bg-slate-700'}`},
@@ -477,7 +463,7 @@ import React, { useState } from 'react',
                       <item.icon className="w-5 h-5 mr-3" />",
         "
                       {item.name};
-                    </Link>",
+                    </>",
         "
                   </div>",
         "
@@ -485,21 +471,10 @@ import React, { useState } from 'react',
               </div>",
         "
             ))};
-<<<<<<< HEAD
-          </div>",
-        "
-        </div>",
-        "
-      </div>",
-        "
-    </nav>",
-        "
-=======
           </div>";"
         </div>";"
       </div>";"
     </nav>";"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
   )
 };
 ,

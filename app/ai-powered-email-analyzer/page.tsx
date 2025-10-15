@@ -1,9 +1,7 @@
 import { Helmet } from 'react-helmet-async';
-import { Mail, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Filter, Zap, Eye } from 'lucide-react';
-
-const AiPoweredEmailAnalyzerPage: React.FC = () => {
+const AiPoweredEmailAnalyzerPage: React.FC = () => {}
   const features = [
-    {
+    {}
       name: "Smart Email Classification",
       description: "Automatically categorize emails by type, priority, and content using advanced AI algorithms.",
       features: ["Priority scoring", "Category detection", "Sentiment analysis", "Spam filtering", "Auto-tagging", "Smart routing"],
@@ -13,29 +11,29 @@ const AiPoweredEmailAnalyzerPage: React.FC = () => {
       icon: <Mail className="w-8 h-8" />,
       benefits: "Process 10,000+ emails per hour with 98% accuracy"
     },
-    {
+    {}
       name: "Advanced Threat Detection",
       description: "AI-powered security analysis to detect phishing, malware, and other email threats.",
       features: ["Phishing detection", "Malware scanning", "URL analysis", "Attachment inspection", "Sender verification", "Real-time alerts"],
       price: "From $2,999",
       marketPrice: "$5,999-19,999",
       popular: false,
-      icon: <Shield className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       benefits: "Block 99.9% of malicious emails before they reach users"
     },
-    {
+    {}
       name: "Email Analytics & Insights",
       description: "Comprehensive analytics and reporting on email patterns, trends, and performance.",
       features: ["Usage analytics", "Performance metrics", "Trend analysis", "Custom reports", "Data visualization", "Export capabilities"],
       price: "From $1,499",
       marketPrice: "$2,999-9,999",
       popular: true,
-      icon: <BarChart3 className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       benefits: "Gain insights that improve email efficiency by 60%"
     }
   ];
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-100">
       <Helmet>
         <title>AI-Powered Email Analyzer - Zion Tech Group</title>
@@ -54,9 +52,9 @@ const AiPoweredEmailAnalyzerPage: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {features.map((feature, index) => (
+          {features.map((feature, index) => ()}
             <div key={index} className={`bg-white rounded-2xl shadow-xl p-8 relative ${feature.popular ? 'ring-2 ring-orange-500' : ''}`}>
-              {feature.popular && (
+              {feature.popular && ()}
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                     Most Popular
@@ -81,7 +79,7 @@ const AiPoweredEmailAnalyzerPage: React.FC = () => {
               </div>
 
               <ul className="space-y-3 mb-8">
-                {feature.features.map((item, itemIndex) => (
+                {feature.features.map((item, itemIndex) => ()}
                   <li key={itemIndex} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
                     <span className="text-gray-700">{item}</span>

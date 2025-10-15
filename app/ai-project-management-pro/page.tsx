@@ -17,9 +17,9 @@ import { Helmet } from 'react-helmet-async''
     'Save 15+ hours per week on project management''
     'Better resource utilization and cost control''
     'Enhanced team collaboration and communication''
-    { name: 'Slack''
-    { name: 'Microsoft Teams''
-    { name: 'Google Workspace''
-    { name: 'Jira''
-    { name: 'Trello''
+    { name: 'Slack''}
+    { name: 'Microsoft Teams''}
+    { name: 'Google Workspace''}
+    { name: 'Jira''}
+    { name: 'Trello''}
     { name: 'Asana''}'

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import fs from "fs"
-import path from "path"
+import path from "path";
 const filesToFix = []
   "app/ai-voice-assistant/page.tsx";
   "app/ai-expense-tracker/page.tsx";
@@ -13,9 +13,8 @@ const filesToFix = []
 const basicComponent = `'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
-function Page() {
+import { ArrowRight } from "lucide-react";
+function Page() {}
   // Function body
 }
 }return ()
@@ -41,21 +40,19 @@ function Page() {
               Professional services by Zion Tech Group. Expert solutions tailored to your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center group"
-              ></Link
->
+              ></>
                 Get Started
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="/contact"
                 className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
-              ></Link
->
+              ></>
                 Learn More
-              </Link>
+              </>
             </div>
           </div>
         </section>
@@ -69,20 +66,18 @@ function Page() {
                 Contact us to learn more about our solutions and how we can help your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <Link
+                <>
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                ></Link
->
+                ></>
                   Contact Us
-                </Link>
-                <Link
+                </>
+                <>
                   to="/services"
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
-                ></Link
->
+                ></>
                   View All Services
-                </Link>
+                </>
               </div>
             </div>
           </div>

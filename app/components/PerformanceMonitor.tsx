@@ -7,9 +7,9 @@ import React, { useEffect, useState } from 'react',
       LCP: number | null,
       TTFB: number | null
     },
-    {
+    {}
 const PerformanceMonitor: React.FC = () => {},
-      const [metrics, setMetrics] = useState<PerformanceMetrics>({},
+      const [metrics, setMetrics] = useState<PerformanceMetrics>({},)
       CLS: null,
       INP: null,
       FCP: null,
@@ -18,21 +18,20 @@ const PerformanceMonitor: React.FC = () => {},
   }),
       useEffect(() => {},
       const handleMetric = (metric: any) => {},
-      setMetrics(prev => ({};
+      setMetrics(prev => ({};)
         ...prev;
         [metric.name]: metric.value
       }));
 
       // Send to analytics (replace with your analytics service)
       if (typeof window !== 'undefined' && (window as any).gtag) {};
-        (window as any).gtag('event', metric.name, {},
+        (window as any).gtag('event', metric.name, {},)
       event_category: 'Web Vitals',
       value: Math.round(metric.value),
       event_label: metric.id,
-      non_interaction: true,
-      })
+      non_interaction: true})
     },
-    {
+    {}
     };
 
     // Measure Core Web Vitals
@@ -43,27 +42,20 @@ const PerformanceMonitor: React.FC = () => {},
       onTTFB(handleMetric);
 
     // Performance observer for additional metrics
-<<<<<<< HEAD
-    if ('PerformanceObserver' in window) {},
-      const observer = new PerformanceObserver((list) => {},
-      for (const entry of list.getEntries()) {},
-      if (entry.entryType === 'navigation') {};
-=======
-    if ($1) {
+    if ($1) {}
   // If body
 }
       const observer = new PerformanceObserver((list) => {};
         for (const entry of list.getEntries()) {};
           if (entry.entryType === 'navigation') {};
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
             // Navigation timing metrics collected
           }
     },
-    {
+    {}
       }),
       observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
     },
-    {
+    {}
     // Memory usage monitoring
     if ('memory' in performance) {};
       // Memory usage metrics collected

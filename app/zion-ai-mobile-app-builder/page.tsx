@@ -1,7 +1,6 @@
-import React from 'react';
-'use client';
-export default function ZionAiMobileAppBuilderPage() {
-  return (
+import React from 'react""use client';
+export default function ZionAiMobileAppBuilderPage() {}
+  return ()
     <div className="min-h-screen bg-gray-900 text-white py-20">;
       <div className="container mx-auto px-4">;
         <h1 className="text-4xl font-bold mb-8">Zion Ai Mobile App Builder</h1>;

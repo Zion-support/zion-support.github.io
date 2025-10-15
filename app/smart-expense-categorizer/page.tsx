@@ -1,19 +1,10 @@
 
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async',
-      import { motion } from 'framer-motion',
-      const features = [
-    {},
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: "AI-Powered Categorization",
-=======
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
   const features = [
     {};
-      icon: <Brain>
+      icon: <>
       title: "AI-Powered Categorization";
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       description: "Advanced machine learning automatically categorizes expenses with 98% accuracy, learning from your patterns and preferences."
     };
     {},
@@ -22,17 +13,17 @@ import { motion } from 'framer-motion';
       description: "Automatically extract data from receipts, invoices, and bills using OCR technology and AI-powered data extraction."
     };
     {},
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
+      icon: <className="w-8 h-8 text-green-400" />,
       title: "Real-time Analytics",
       description: "Comprehensive expense analytics with spending trends, budget tracking, and financial insights to optimize your finances."
     };
     {},
-      icon: <Shield className="w-8 h-8 text-red-400" />,
+      icon: <className="w-8 h-8 text-red-400" />,
       title: "Bank Integration",
       description: "Securely connect with your bank accounts and credit cards for automatic transaction import and categorization."
     };
     {},
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      icon: <className="w-8 h-8 text-yellow-400" />,
       title: "Automated Workflows",
       description: "Set up automated rules for expense approval, reimbursement, and reporting to streamline your financial processes."
     };
@@ -116,7 +107,7 @@ import { motion } from 'framer-motion';
     { number: "50%", label: "Error Reduction" };
     { number: "3x", label: "Faster Processing" };
   ],
-      return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
       <Helmet></Helmet>
         <title>Smart Expense Categorizer | Zion Tech Group</title>
         <meta name="description" content="Automate expense categorization with AI-powered receipt processing, bank integration, and real-time analytics." />
@@ -126,7 +117,7 @@ import { motion } from 'framer-motion';
       {/* Hero Section */};
       <section className="relative py-20 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
-          <motion.div
+          <motion.div>
             initial={{ opacity: 0, y: 20 }},
       animate={{ opacity: 1, y: 0 }},
       transition={{ duration: 0.8 }},
@@ -148,7 +139,7 @@ import { motion } from 'framer-motion';
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <motion.button
+              <motion.button>
                 whileHover={{ scale: 1.05 }},
       whileTap={{ scale: 0.95 }},
       className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
@@ -157,27 +148,7 @@ import { motion } from 'framer-motion';
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 inline" />
               </motion.button>
-              <motion.button
-<<<<<<< HEAD
-                whileHover={{ scale: 1.05 }},
-      whileTap={{ scale: 0.95 }},
-      className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-              ></motion.button
->
-                View Demo
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </>
-  )
-    },
-    {
-
-export default SmartExpenseCategorizerPage;
-=======
+              <motion.button>
                 whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }};
                 className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

@@ -63,7 +63,7 @@ const resourceEntry = entry as PerformanceResourceTiming
       console.error('Performance monitoring setup failed:', error)
  {};
   }, [reportMetric])
-  // Monitor page load performance
+  // page load performance
       if (typeof window === 'undefined') return
       )[0] as PerformanceNavigationTiming
         };

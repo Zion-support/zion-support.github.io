@@ -1,10 +1,10 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-const CybersecurityPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead 
+const CybersecurityPage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
         title="CybersecurityPage - Zion Tech Group"
         description="Zion Tech Group CybersecurityPage page"
       />

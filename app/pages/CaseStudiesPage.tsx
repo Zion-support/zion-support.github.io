@@ -2,10 +2,10 @@ import React from 'react';
 
 import SEOHead from '../components/SEOHead';
 
-const CaseStudiesPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead 
+const CaseStudiesPage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
         title="CaseStudiesPage - Zion Tech Group"
         description="Zion Tech Group CaseStudiesPage page"
       />
@@ -37,7 +37,7 @@ const CaseStudiesPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
+            {caseStudies.map((study, index) => ()}
               <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                 <div className="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
                   <div className="text-white text-center">
@@ -51,7 +51,7 @@ const CaseStudiesPage: React.FC = () => {
                   <div className="mb-4">
                     <h4 className="font-medium text-gray-900 mb-2">Key Results:</h4>
                     <ul className="text-sm text-gray-600 space-y-1">
-                      {study.results.map((result, idx) => (
+                      {study.results.map((result, idx) => ()}
                         <li key={idx} className="flex items-center">
                           <CheckCircleIcon className="w-4 h-4 text-green-500 mr-2" />
                           {result}

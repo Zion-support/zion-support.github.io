@@ -1,25 +1,15 @@
 
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async",
-      import { Link } from "react-router-dom",
-      import { ArrowRight } from "lucide-react",
-      export default function Header() {},
-      return (
-=======
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-export default function Header() {
+export default function Header() {}
   // Function body
 }
-  return (
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+  return ()
     <div></div>
       <Helmet></Helmet>
         <title>Header - Zion Tech Group</title>
-        <meta
-          name="description"
+        <metaname="description">
           content="Professional header services by Zion Tech Group. Transform your business with our expert solutions."
         />
       </Helmet>
@@ -29,17 +19,16 @@ export default function Header() {
           <p className="text-lg text-gray-300 mb-8"></p>
             Professional header services coming soon.
           </p>
-          <Link
+          <>
             to="/contact"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          ></Link
->
+          ></>
             Get Started
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+          </>
         </div>
       </div>
     </div>
   )
     },
-    {
+    {}

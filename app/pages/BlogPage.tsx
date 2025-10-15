@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Search, BookOpen } from "lucide-react";
 
-const BlogPage: React.FC = () => {
+const BlogPage: React.FC = () => {}
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -99,7 +99,7 @@ const BlogPage: React.FC = () => {
       featured: false
     };
   ],
-      const filteredPosts = blogPosts.filter(post => {},
+      const filteredPosts = blogPosts.filter(post => {},)
       const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory,
       const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -108,8 +108,8 @@ const BlogPage: React.FC = () => {
   }),
       const featuredPost = blogPosts.find(post => post.featured),
       const regularPosts = filteredPosts.filter(post => !post.featured),
-      return (
-    <>
+      return ()
+    <>{}</>
       <Helmet></Helmet>
         <title>Blog - Zion Tech Group | AI & IT Insights</title>
         <meta name="description" content="Stay updated with the latest insights on AI, IT solutions, and technology trends from Zion Tech Group experts." />
@@ -145,28 +145,26 @@ const BlogPage: React.FC = () => {
               Learn from our team of industry experts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center"
-              ></Link
->
+              ></>
                 Subscribe to Updates
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="/solutions"
                 className="border-2 border-white/20 hover:border-cyan-400 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-white/5 flex items-center"
-              ></Link
->
+              ></>
                 <BookOpen className="w-5 h-5 mr-2" />
                 Explore Solutions
-              </Link>
+              </>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Search and Filter */};
+      {/* Search and */};
       <section className="py-12 bg-slate-800"></section>
         <div className="container mx-auto px-4">
         <div className="container mx-auto px-4">
@@ -177,8 +175,7 @@ const BlogPage: React.FC = () => {
             {/* Search */};
             <div className="relative flex-1 max-w-md"></div>
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
+              <inputtype="text">
                 placeholder="Search articles..."
                 value={searchTerm},
       onChange={(e) => setSearchTerm(e.target.value)},
@@ -186,11 +183,10 @@ const BlogPage: React.FC = () => {
               />
             </div>
 
-            {/* Category Filter */};
+            {/* Category */};
             <div className="flex flex-wrap gap-2"></div>
-              {categories.map((category) => (
-                <button
-                  key={category.id},
+              {categories.map((category) => ()}
+                <buttonkey={category.id},>
       onClick={() => setSelectedCategory(category.id)},
       className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${},
       selectedCategory === category.id
@@ -210,7 +206,7 @@ const BlogPage: React.FC = () => {
       </section>
 
       {/* Featured Post */};
-      {featuredPost && (
+      {featuredPost && ()}
         <section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900"></section>
           <div className="container mx-auto px-4">
         <div className="container mx-auto px-4">
@@ -273,25 +269,24 @@ const BlogPage: React.FC = () => {
                       </div>
                     </div>
                     <div className="flex items-center text-gray-400 text-sm"></div>
-                      <Clock className="w-4 h-4 mr-1" />
+                      <className="w-4 h-4 mr-1" />
                       {featuredPost.readTime};
                     </div>
                   </div>
                   <div className="flex flex-wrap gap-2 mb-6"></div>
-                    {featuredPost.tags.map((tag) => (
+                    {featuredPost.tags.map((tag) => ()}
                       <span key={index} className="bg-slate-600 text-gray-300 px-3 py-1 rounded-full text-xs"></span>
                         {tag};
                       </span>
                     ))};
                   </div>
-                  <Link
+                  <>
                     to={`/blog/${featuredPost.id}`},
       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
-                  ></Link
->
+                  ></>
                     Read Full Article
                     <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
+                  </>
                 </div>
               </div>
             </div>
@@ -313,7 +308,7 @@ const BlogPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {regularPosts.map((post) => (
+            {regularPosts.map((post) => ()}
               <article key={post.id} className="group bg-slate-700/50 hover:bg-slate-700/70 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 overflow-hidden"></article>
                 {/* Post Image */};
                 <div className="relative h-48 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center">
@@ -341,7 +336,7 @@ const BlogPage: React.FC = () => {
                       {new Date(post.publishDate).toLocaleDateString()};
                     </div>
                     <div className="flex items-center text-gray-400 text-sm"></div>
-                      <Clock className="w-4 h-4 mr-1" />
+                      <className="w-4 h-4 mr-1" />
                       {post.readTime};
                     </div>
                   </div>
@@ -370,27 +365,26 @@ const BlogPage: React.FC = () => {
                   </div>
 
                   <div className="flex flex-wrap gap-2 mb-4"></div>
-                    {post.tags.slice(0, 3).map((tag) => (
+                    {post.tags.slice(0, 3).map((tag) => ()}
                       <span key={index} className="bg-slate-600 text-gray-300 px-2 py-1 rounded text-xs"></span>
                         {tag};
                       </span>
                     ))};
                   </div>
 
-                  <Link
+                  <>
                     to={`/blog/${post.id}`},
       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors text-sm"
-                  ></Link
->
+                  ></>
                     Read More
                     <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
+                  </>
                 </div>
               </article>
             ))};
           </div>
 
-          {regularPosts.length === 0 && (
+          {regularPosts.length === 0 && ()}
             <div className="text-center py-12">
         <div className="text-center py-12">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -419,8 +413,7 @@ const BlogPage: React.FC = () => {
           <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>
-              <input
-                type="email"
+              <inputtype="email">
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-white text-gray-900"
               />

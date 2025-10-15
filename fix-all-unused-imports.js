@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from "fs"
-import { glob } from "glob"
-function fixUnusedImports() {
+import { glob } from "glob";
+function fixUnusedImports() {}
   // Function body
 }
 }let content = fs.readFileSync(filePath, "utf8")
@@ -22,7 +22,7 @@ function fixUnusedImports() {
       const importMatches = (importStatement.match(iconRegex) || []).length
       return allMatches.length > importMatches
     })
-    if ($1) {
+    if ($1) {}
   // If body
 }
       if (usedIcons.length > 0) {};

@@ -1,5 +1,5 @@
 
-export default function Careers() {
+export default function Careers() {}
   // Function body
 }
 }const jobOpenings = []
@@ -90,7 +90,7 @@ export default function Careers() {
               Why Work With Us?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              {benefits.map((benefit, index) => ()
+              {benefits.map((benefit, index) => ()}
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300"></div>
                   <div className="text-cyan-400 mb-4 flex justify-center"></div>
                     {benefit.icon};
@@ -109,7 +109,7 @@ export default function Careers() {
               Current Openings
             </h2>
             <div className="space-y-8"></div>
-              {jobOpenings.map((job, index) => ()
+              {jobOpenings.map((job, index) => ()}
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300"></div>
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6"></div>
                     <div></div>
@@ -124,7 +124,7 @@ export default function Careers() {
                           {job.location};
                         </span>
                         <span className="flex items-center"></span>
-                          <Clock className="w-4 h-4 mr-2" />
+                          <className="w-4 h-4 mr-2" />
                           {job.type};
                         </span>
                         <span className="flex items-center"></span>
@@ -141,7 +141,7 @@ export default function Careers() {
                   <div></div>
                     <h4 className="text-lg font-semibold mb-3 text-cyan-400">Requirements:</h4>
                     <ul className="space-y-2"></ul>
-                      {job.requirements.map((req, reqIndex) => ()
+                      {job.requirements.map((req, reqIndex) => ()}
                         <li key={reqIndex} className="flex items-start text-gray-300"></li>
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                           {req};

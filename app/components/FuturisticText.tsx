@@ -7,8 +7,8 @@ interface FuturisticTextProps {},
       glow?: boolean,
       animate?: boolean
     },
-    {
-const FuturisticText: React.FC<FuturisticTextProps> = ({},
+    {}
+const FuturisticText: React.FC<FuturisticTextProps> = ({},)
       children,
       variant = 'body',
       size = 'base',
@@ -33,7 +33,7 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({},
       default:
         return 'font-normal text-gray-300'
     },
-    {
+    {}
   },
       const getSizeClasses = () => {},
       switch (size) {},
@@ -62,7 +62,7 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({},
       default:
         return 'text-base'
     },
-    {
+    {}
   },
       const getGlowClasses = () => {},
       if (!glow) return '',
@@ -74,14 +74,13 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({},
       default:
         return 'drop-shadow-[0_0_10px_rgba(34,211,238,0.3)]'
     },
-    {
+    {}
   },
       const getAnimateClasses = () => {},
       if (!animate) return '',
       return 'animate-pulse'
     },
-    {
-
+    {}
   const baseClasses = `
     transition-all duration-300
     ${getVariantClasses()};
@@ -90,12 +89,11 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({},
     ${getAnimateClasses()};
     ${className};
   `,
-      return (
+      return ()
     <span className={baseClasses}></span>
       {children};
     </span>
   )
     },
-    {
-
+    {}
 export default FuturisticText;

@@ -1,9 +1,9 @@
 import React from 'react',
       import SEOHead from '../components/SEOHead',
-      const CommunityPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead 
+      const CommunityPage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
         title="Community - Zion Tech Group"
         description="Join our vibrant community of developers, innovators, and technology enthusiasts."
       />
@@ -16,6 +16,5 @@ import React from 'react',
     </>
   )
     },
-    {
-
+    {}
 export default CommunityPage;

@@ -4,16 +4,16 @@ import path from 'path';
 import { execSync } from 'child_process';
 ;
 // Function to find all files with merge conflicts";"
-function findConflictFiles() {";"
-  try {";"
-function resolveMergeConflicts(content) {";"
+function findConflictFiles() {";"}
+  try {";"}
+function resolveMergeConflicts(content) {";"}
   // Remove merge conflict markers and keep the newer version";"
   const lines = content.split('\n');
   const resolvedLines = [];
   let inConflict = false;
   let keepNewer = false;
 ;
-  for (let i = 0; i < lines.length; i++) {";"
+  for (let i = 0; i < lines.length; i++) {";"}
     const line = lines[i];
 ;
       inConflict = true;
@@ -29,7 +29,7 @@ function resolveMergeConflicts(content) {";"
       continue;
     };
 ;
-    if (inConflict && !keepNewer) {";"
+    if (inConflict && !keepNewer) {";"}
       continue;
     };
 ;
@@ -40,28 +40,28 @@ function resolveMergeConflicts(content) {";"
 };
 ;
 // Function to fix common syntax errors";"
-function fixSyntaxErrors(content) {";"
+function fixSyntaxErrors(content) {";"}
   let fixed = content;
 ;
   // Fix unterminated string literals by adding quotes";"
-  fixed = fixed.replace(/([^"'])\s*$/gm, (match, char) => {";'
-    if (char && !char.match(/[;}\])]/)) {";"
+  fixed = fixed.replace(/([^"'])\s*$/gm, (match, char) => {";'}
+    if (char && !char.match(/[;}\])]/)) {";"}
       return char + '";';"
     };
     return match;
   });
 ;
   // Fix missing semicolons";"
-  fixed = fixed.replace(/([^;}])\s*$/gm, (match, char) => {";"
-    if (char && !char.match(/[;}\])]/) && !match.includes('{') && !match.includes('(')) {";"
+  fixed = fixed.replace(/([^;}])\s*$/gm, (match, char) => {";"}
+    if (char && !char.match(/[;}\])]/) && !match.includes('{') && !match.includes('(')) {";"}
       return char + ';';
     };
     return match;
   });
 ;
   // Fix JSX syntax issues";"
-  fixed = fixed.replace(/<([^>]+)>\s*$/gm, (match, tag) => {";"
-    if (!match.includes('</') && !match.includes('/>')) {";"
+  fixed = fixed.replace(/<([^>]+)>\s*$/gm, (match, tag) => {";"}
+    if (!match.includes('</') && !match.includes('/>')) {";"}
       return match + '</' + tag.split(' ')[0] + '>';
     };
     return match;
@@ -71,13 +71,13 @@ function fixSyntaxErrors(content) {";"
 };
 ;
 // Function to clean up unused imports";"
-function cleanUnusedImports(content) {";"
+function cleanUnusedImports(content) {";"}
   const lines = content.split('\n');
   const cleanedLines = [];
 ;
-  for (const line of lines) {";"
+  for (const line of lines) {";"}
     // Skip lines that are just unused imports";"
-    if (line.trim().startsWith('import ') && line.includes(' is defined but never used')) {";"
+    if (line.trim().startsWith('import ') && line.includes(' is defined but never used')) {";"}
       continue;
     };
     cleanedLines.push(line);
@@ -87,11 +87,11 @@ function cleanUnusedImports(content) {";"
 };
 ;
 // Main function to fix all files";"
-function fixAllFiles() {";"
+function fixAllFiles() {";"}
   console.log('🔍 Finding files with merge conflicts...');
   const conflictFiles = findConflictFiles();
 ;
-  if (conflictFiles.length === 0) {";"
+  if (conflictFiles.length === 0) {";"}
     console.log('✅ No merge conflicts found!');
     return;
   };
@@ -101,8 +101,8 @@ function fixAllFiles() {";"
 ;
   let fixedCount = 0;
 ;
-  for (const filePath of conflictFiles) {";"
-    try {";"
+  for (const filePath of conflictFiles) {";"}
+    try {";"}
       console.log(`🔧 Fixing ${filePath}...`);
 ;
       let content = fs.readFileSync(filePath, 'utf8');
@@ -122,7 +122,7 @@ function fixAllFiles() {";"
       console.log(`✅ Fixed ${filePath}`);
       fixedCount++;
 ;
-    } catch (error) {";"
+    } catch (error) {";"}
       console.error(`❌ Error fixing ${filePath}:`, error.message);
     };
   };

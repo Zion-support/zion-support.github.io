@@ -1,6 +1,6 @@
 
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import Footer from "../components/Footer";
 export default UnauthorizedPage
 'use client'
         <title>Unauthorized - Zion Tech Group</title>

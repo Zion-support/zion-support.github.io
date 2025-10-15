@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import Layout from '../../layout'
+import Layout from "../../layout";
 export default ${pageName}Page`
 // List of all pages that need to be completely rewritten
 const pagesToFix = []
@@ -18,7 +18,7 @@ const pagesToFix = []
   'not-found'
 ]
 // Template for a basic page
- `import React from 'react'
+ `import React from "react";
   return ()
     <div>Content</div>
   )

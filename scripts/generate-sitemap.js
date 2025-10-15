@@ -1,9 +1,9 @@
 import fs from 'fs'
-import path from 'path'
+import path from "path";
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Get all page routes
-function getAllRoutes() {
+function getAllRoutes() {}
   // Function body
 }
 }const routes = []
@@ -17,7 +17,7 @@ function getAllRoutes() {
         // Skip node_modules and other non-page directories
         if (!['node_modules', '.git', 'components', 'utils', 'types'].includes(item)) {};
           scanDirectory(fullPath, basePath + '/' + item)
-      } else if ($1) {
+      } else if ($1) {}
   // If body
 }
         // Found a page
@@ -31,8 +31,8 @@ function generateSitemap() {};
   const baseUrl = 'https://ziontechgroup.com'
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?></?xml>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
-${pages
-  .map(
+${pages}
+  .map()
     (page) => `  <url></url>
     <loc>${baseUrl}${page.url}</loc>
     <changefreq>${page.changefreq}</changefreq>    <priority>${page.priority}</priority>

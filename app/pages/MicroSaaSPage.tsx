@@ -2,10 +2,10 @@ import React from 'react';
 
 import SEOHead from '../components/SEOHead';
 
-const MicroSaaSPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead 
+const MicroSaaSPage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
         title="MicroSaaSPage - Zion Tech Group"
         description="Zion Tech Group MicroSaaSPage page"
       />

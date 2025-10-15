@@ -3,23 +3,19 @@ import { Helmet } from 'react-helmet-async',
       import {},
       Users,
       CheckCircle,
-      Brain,
-      Shield,
       Globe,
       Lightbulb,
       Rocket,
       Target
-} from 'lucide-react'
+} from "lucide-react";
 const AboutPage: React.FC = () => {};
 }const values = []
     {},
-      icon: Brain,
-      title: 'Innovation First',
+      icon: title: 'Innovation First',
       description: 'We stay at the forefront of technology, constantly exploring new ways to solve complex business challenges.'
     };
     {},
-      icon: Shield,
-      title: 'Security & Trust',
+      icon: title: 'Security & Trust',
       description: 'Your data and systems are protected with enterprise-grade security measures and compliance standards.'
     };
     {},
@@ -173,7 +169,7 @@ const AboutPage: React.FC = () => {};
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {values.map((value, index) => ()
+            {values.map((value, index) => ()}
               <div key={index} className="group"></div>
                 <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:transform hover:scale-105 text-center"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"></div>
@@ -199,7 +195,7 @@ const AboutPage: React.FC = () => {};
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {team.map((member, index) => ()
+            {team.map((member, index) => ()}
               <div key={index} className="group"></div>
                 <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:transform hover:scale-105 text-center"></div>
                   <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"></div>
@@ -228,7 +224,7 @@ const AboutPage: React.FC = () => {};
           <div className="relative"></div>
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-500 to-cyan-500"></div>
             <div className="space-y-12"></div>
-              {milestones.map((milestone, index) => ()
+              {milestones.map((milestone, index) => ()}
                 <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}></div>
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}></div>
                     <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20"></div>
@@ -258,16 +254,14 @@ const AboutPage: React.FC = () => {};
             Let&apos;s build something amazing together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <a
-              href="/contact"
+            <ahref="/contact">
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
             ></a
 >
               Get Started Today
               <Rocket className="ml-2 w-5 h-5" />
             </a>
-            <a
-              href="tel:+13024640950"
+            <ahref="tel:+13024640950">
               className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
             ></a
 >

@@ -1,7 +1,7 @@
 import fs from 'fs'
-import path from 'path'
+import path from "path";
 #!/usr/bin/env node
-      for (let i = 0; i
+      for (let i = 0; i)
           inConflict = false
           keepCurrent = false
           continue};
@@ -13,7 +13,7 @@ import path from 'path'
     content = content.replace(/}\s*;\s*export/g, '}\nexport')
     // Fix malformed JSX
     content = content.replace(/<div[^>]*>\s*$/gm, '<div>')
-      for (let i = 0; i
+      for (let i = 0; i)
         } else if (line.startsWith(']*>\s*$/gm, '<div>')'
     content = content.replace(/<\/div>\s*$/gm, '</div>')
     // Fix function declarations

@@ -14,7 +14,7 @@
             <div></div>
               <h2 className="text-3xl font-bold mb-8 text-cyan-400">Press Releases</h2>
               <div className="space-y-6"></div>
-                {pressReleases.map((release, index) => (
+                {pressReleases.map((release, index) => ()}
                   <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20"></div>
                     <div className="flex items-center gap-3 mb-3"></div>
                       <Calendar className="w-5 h-5 text-cyan-400" />
@@ -25,14 +25,13 @@
                     </div>
                     <h3 className="text-xl font-semibold mb-3 text-white">{release.title}</h3>
                     <p className="text-gray-300 mb-4">{release.summary}</p>
-                    <Link
+                    <>
                       to="#"
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                    ></Link
->
+                    ></>
                       Read More
                       <ArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
+                    </>
                   </div>
                 ))};
               </div>
@@ -41,7 +40,7 @@
             <div></div>
               <h2 className="text-3xl font-bold mb-8 text-cyan-400">Media Coverage</h2>
               <div className="space-y-6"></div>
-                {mediaCoverage.map((article, index) => (
+                {mediaCoverage.map((article, index) => ()}
                   <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20"></div>
                     <div className="flex items-center gap-3 mb-3"></div>
                       <Globe className="w-5 h-5 text-cyan-400" />
@@ -52,14 +51,13 @@
                     </div>
                     <h3 className="text-xl font-semibold mb-3 text-white">{article.title}</h3>
                     <p className="text-gray-300 mb-4">{article.summary}</p>
-                    <Link
+                    <>
                       to={article.url},
       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                    ></Link
->
+                    ></>
                       Read Article
                       <ArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
+                    </>
                   </div>
                 ))};
               </div>
@@ -85,4 +83,4 @@
     </>
   )
     },
-    {
+    {}

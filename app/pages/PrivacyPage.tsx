@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckCircle, AlertTriangle } from 'lucide-react';const PrivacyPage: React.FC = () => {
+const PrivacyPage: React.FC = () => {}
   const lastUpdated = 'January 1, 2024';
 
   const sections = [
@@ -54,13 +53,11 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
       description: 'Name, email, phone number, and other identifying information'
     };
     {},
-      icon: Database,
-      title: 'Usage Data',
+      icon: title: 'Usage Data',
       description: 'Information about how you use our services and website'
     };
     {},
-      icon: Eye,
-      title: 'Device Information',
+      icon: title: 'Device Information',
       description: 'IP address, browser type, operating system, and device identifiers'
     };
     {},
@@ -78,7 +75,7 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
     'Withdraw consent';
     'Lodge a complaint with a supervisory authority'
   ],
-      return (<>
+      return (<>{}</>)
       <Helmet></Helmet>
         <title>Privacy Policy - Zion Tech Group | Data Protection & Privacy</title>
         <meta name="description" content="Learn how Zion Tech Group protects your privacy and handles your personal data. Our comprehensive privacy policy explains our data practices." />
@@ -117,22 +114,20 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
               Last updated: {lastUpdated};
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center"
-              ></Link
->
+              ></>
                 Contact Us
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="/terms"
                 className="border-2 border-white/20 hover:border-cyan-400 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-white/5 flex items-center"
-              ></Link
->
-                <Shield className="w-5 h-5 mr-2" />
+              ></>
+                <className="w-5 h-5 mr-2" />
                 Terms of Service
-              </Link>
+              </>
             </div>
           </div>
         </div>
@@ -153,7 +148,7 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {dataTypes.map((dataType, index) => (
+            {dataTypes.map((dataType, index) => ()}
               <div key={index} className="bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
         <div key={index} className="bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -179,7 +174,7 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
         </div>
       </div>
             <div className="space-y-12"></div>
-              {sections.map((section, index) => (
+              {sections.map((section, index) => ()}
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 p-8 rounded-xl"></div>
                   <h2 className="text-2xl font-bold text-white mb-6">{section.title}</h2>
                   <p className="text-gray-300 leading-relaxed text-lg">{section.content}</p>
@@ -210,7 +205,7 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
           <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>
-              {yourRights.map((right, index) => (
+              {yourRights.map((right, index) => ()}
                 <div key={index} className="flex items-center bg-slate-700/50 p-6 rounded-xl border border-slate-600/50"></div>
                   <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0" />
                   <span className="text-white font-medium">{right}</span>
@@ -245,8 +240,7 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
                 <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
                 <p className="text-gray-300 mb-4">Send us an email with your privacy concerns</p>
-                <a
-                  href="mailto:privacy@ziontechgroup.com"
+                <ahref="mailto:privacy@ziontechgroup.com">
                   className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
                 ></a
 >
@@ -258,8 +252,7 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
                 <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
                 <p className="text-gray-300 mb-4">Speak with our privacy team directly</p>
-                <a
-                  href="tel:+13024640950"
+                <ahref="tel:+13024640950">
                   className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
                 ></a
 >
@@ -268,11 +261,10 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
               </div>
 
               <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 text-center"></div>
-                <Shield className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Data Protection Officer</h3>
                 <p className="text-gray-300 mb-4">Contact our DPO for data protection matters</p>
-                <a
-                  href="mailto:dpo@ziontechgroup.com"
+                <ahref="mailto:dpo@ziontechgroup.com">
                   className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
                 ></a
 >

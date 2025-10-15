@@ -1,16 +1,14 @@
 import React from 'react';
 
-const AiMarketingAutomationPage: React.FC = () => {
-  return (
-    <>
+const AiMarketingAutomationPage: React.FC = () => {}
+  return ()
+    <>{}</>
       <Helmet></Helmet>
         <title>AI Marketing Automation - Zion Tech Group | Advanced Marketing Solutions</title>
-        <meta
-          name="description"
+        <metaname="description">
           content="AI-powered marketing automation platform with email campaigns, social media management, lead scoring, and advanced analytics. Transform your marketing with intelligent automation."
         />
-        <meta
-          name="keywords"
+        <metaname="keywords">
           content="AI marketing automation, email marketing, social media automation, lead scoring, marketing analytics, customer segmentation, workflow automation, marketing technology"
         />
       </Helmet>
@@ -45,21 +43,19 @@ const AiMarketingAutomationPage: React.FC = () => {
       our platform helps you engage customers, nurture leads, and drive conversions at scale.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <Link
+              <>
                 to="/contact"
                 className="group bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-pink-500/25 hover:scale-105"
-              ></Link
->
+              ></>
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="/demo"
                 className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
-              ></Link
->
+              ></>
                 Watch Demo
-              </Link>
+              </>
             </div>
           </div>
         </section>
@@ -82,8 +78,7 @@ const AiMarketingAutomationPage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              {features.map((feature, index) => (<div
-                  key={index},
+              {features.map((feature, index) => (<divkey={index},>)
       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10 relative overflow-hidden"
                 ></div
 >
@@ -94,8 +89,7 @@ const AiMarketingAutomationPage: React.FC = () => {
           <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>
-                    <div
-                      className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`};
+                    <divclassName={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`};>
                     ></div
 >
                       {feature.icon};
@@ -109,7 +103,7 @@ const AiMarketingAutomationPage: React.FC = () => {
                     
                     {/* Benefits */};
                     <div className="space-y-2"></div>
-                      {feature.benefits.map((benefit, idx) => (
+                      {feature.benefits.map((benefit, idx) => ()}
                         <div key={idx} className="flex items-center text-sm text-gray-300">
         <div key={idx} className="flex items-center text-sm text-gray-300">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
@@ -145,9 +139,8 @@ const AiMarketingAutomationPage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-              {pricing.map((plan, index) => (
-                <div
-                  key={index},
+              {pricing.map((plan, index) => ()}
+                <divkey={index},>
       className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${},
       plan.popular 
                       ? 'border-pink-400 hover:shadow-pink-500/25' 
@@ -155,7 +148,7 @@ const AiMarketingAutomationPage: React.FC = () => {
                   }`};
                 ></div
 >
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-center py-2 text-sm font-semibold"></div>
                       Most Popular
                     </div>
@@ -170,7 +163,7 @@ const AiMarketingAutomationPage: React.FC = () => {
                     </div>
                     
                     <ul className="space-y-3 mb-8"></ul>
-                      {plan.features.map((feature, idx) => (
+                      {plan.features.map((feature, idx) => ()}
                         <li key={idx} className="flex items-center text-gray-300"></li>
                           <div className="w-5 h-5 bg-pink-400 rounded-full flex items-center justify-center mr-3">
         <div className="w-5 h-5 bg-pink-400 rounded-full flex items-center justify-center mr-3">
@@ -184,17 +177,16 @@ const AiMarketingAutomationPage: React.FC = () => {
                       ))};
                     </ul>
                     
-                    <Link
+                    <>
                       to="/contact"
                       className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${},
       plan.popular
                           ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
                           : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900'
                       }`};
-                    ></Link
->
+                    ></>
                       Get Started
-                    </Link>
+                    </>
                   </div>
                 </div>
               ))};
@@ -236,7 +228,7 @@ const AiMarketingAutomationPage: React.FC = () => {
           <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>
-                    <Smartphone className="w-6 h-6 text-white" />
+                    <className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Phone</h3>
                   <p className="text-pink-400">+1 302 464 0950</p>
@@ -255,33 +247,13 @@ const AiMarketingAutomationPage: React.FC = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <Link
+                <>
                   to="/contact"
                   className="group bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-pink-500/25 hover:scale-105"
-                ></Link
->
+                ></>
                   Start Your Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link
+                </>
+                <>
                   to="/demo"
-<<<<<<< HEAD
                   className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
-                ></Link
->
-                  Watch Demo
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-}
-};
-
-export default AiMarketingAutomationPage;
-=======
-                  className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

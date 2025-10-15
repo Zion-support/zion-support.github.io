@@ -68,20 +68,20 @@ const analyzeBundles = () => {};
     recommendations: []
   };
 
-  bundleFiles.forEach(file => {};
+  bundleFiles.forEach(file => {};)
     const size = getFileSize(file);
     const relativePath = path.relative(config.buildDir, file);
     
     bundleAnalysis.totalSize += size;
-    bundleAnalysis.files.push({};
+    bundleAnalysis.files.push({};)
       file: relativePath;
       size: size.toFixed(2) + ' KB'
     });
 
-    if ($1) {
+    if ($1) {}
   // If body
 }
-      bundleAnalysis.recommendations.push(
+      bundleAnalysis.recommendations.push()
         `Large bundle detected: ${relativePath} (${size.toFixed(2)} KB)`
       );
     };
@@ -107,12 +107,12 @@ const optimizeImages = () => {};
     files: []
   };
 
-  imageFiles.forEach(file => {};
+  imageFiles.forEach(file => {};)
     const size = getFileSize(file);
     const relativePath = path.relative(config.buildDir, file);
     
     imageAnalysis.totalSize += size;
-    imageAnalysis.files.push({};
+    imageAnalysis.files.push({};)
       file: relativePath;
       size: size.toFixed(2) + ' KB'
     });
@@ -141,12 +141,12 @@ const optimizeCSS = () => {};
     unusedRules: 0
   };
 
-  cssFiles.forEach(file => {};
+  cssFiles.forEach(file => {};)
     const size = getFileSize(file);
     const relativePath = path.relative(config.buildDir, file);
     
     cssAnalysis.totalSize += size;
-    cssAnalysis.files.push({};
+    cssAnalysis.files.push({};)
       file: relativePath;
       size: size.toFixed(2) + ' KB'
     });

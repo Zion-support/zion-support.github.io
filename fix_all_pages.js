@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import Layout from '../../layout'
+import Layout from "../../layout";
 export default ${pageName}Page`
 // List of pages that need to be completely rewritten
 const pagesToRewrite = []
@@ -10,7 +10,7 @@ const pagesToRewrite = []
   'task-manager-pro'
 ]
 // Template for a basic page
- `import React from 'react'
+ `import React from "react";
   return ()
     <div>Content</div>
   )

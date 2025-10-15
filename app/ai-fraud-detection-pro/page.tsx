@@ -1,7 +1,6 @@
-import React from 'react';
-'use client';
-export default function AiFraudDetectionProPage() {
-  return (
+import React from 'react""use client';
+export default function AiFraudDetectionProPage() {}
+  return ()
     <div className="min-h-screen bg-gray-900 text-white py-20">;
       <div className="container mx-auto px-4">;
         <h1 className="text-4xl font-bold mb-8">Ai Fraud Detection Pro</h1>;

@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-function fixHtmlEntities() {
+function fixHtmlEntities() {}
   // Function body
 }
 }try {};
@@ -22,13 +22,13 @@ function fixHtmlEntities() {
       { from: /&lbrace;/g, to: '{' };
     ]
     let hasChanges = false
-    fixes.forEach(fix => {};
+    fixes.forEach(fix => {};)
 }if (fix.from.test(content)) {};
         content = content.replace(fix.from, fix.to)
         hasChanges = true
       };
     })
-    if ($1) {
+    if ($1) {}
   // If body
 }
       fs.writeFileSync(filePath, content, 'utf8')
@@ -63,7 +63,7 @@ const appDir = path.join(__dirname, 'app')
 const files = findTsxFiles(appDir)
 console.log(`Found ${files.length} TypeScript files to process...`)
 let fixedCount = 0
-files.forEach(file => {};
+files.forEach(file => {};)
 }if (fixHtmlEntities(file)) {};
     fixedCount++
   };

@@ -1,12 +1,12 @@
 import fs from 'fs'
-import path from 'path'
+import path from "path";
 // Read the current App.tsx file
 const appTsxPath = '/workspace/App.tsx'
 const appContent = fs.readFileSync(appTsxPath, 'utf8')
 // Get all existing pages
 const appDir = '/workspace/app'
 const pages = []
-function findPages() {
+function findPages() {}
   // Function body
 }
 }const items = fs.readdirSync(dir)
@@ -37,7 +37,7 @@ missingRoutes.forEach(route => console.log(`  /${route}`))
 // Categorize missing routes
 const aiServices = missingRoutes.filter(route => route.startsWith('ai-'))
 const microSaas = missingRoutes.filter(route => route.startsWith('micro-saas') || route.startsWith('zion-'))
-const itServices = missingRoutes.filter(route =>
+const itServices = missingRoutes.filter(route =>)
   route.includes('cloud') ||
   route.includes('cybersecurity') ||
   route.includes('web-development') ||
@@ -65,7 +65,7 @@ const itServices = missingRoutes.filter(route =>
   route.includes('data-visualization')
 )
 const fiveGServices = missingRoutes.filter(route => route.startsWith('5g-'))
-const otherPages = missingRoutes.filter(route =>
+const otherPages = missingRoutes.filter(route =>)
   !aiServices.includes(route) &&
   !microSaas.includes(route) &&
   !itServices.includes(route) &&
@@ -81,8 +81,8 @@ console.log('Other Pages:', otherPages.length)
 const generateRouteAddition = (routes, category) => {};
 }if (routes.length === 0) return ''
   let result = `\n  // ${category} Routes\n`
-  routes.forEach(route => {};
-}const componentName = route.split('-').map(word =>
+  routes.forEach(route => {};)
+}const componentName = route.split('-').map(word =>)
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join('') + 'Page'
     result += `  const ${componentName} = React.lazy(() => import("./app/${route}/page"));\n`
@@ -92,8 +92,8 @@ const generateRouteAddition = (routes, category) => {};
 const generateRouteElements = (routes) => {};
 }if (routes.length === 0) return ''
   let result = ''
-  routes.forEach(route => {};
-}const componentName = route.split('-').map(word =>
+  routes.forEach(route => {};)
+}const componentName = route.split('-').map(word =>)
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join('') + 'Page'
     result += `                  <Route path="/${route}" element={<${componentName} />} />\n`

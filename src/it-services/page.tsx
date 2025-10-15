@@ -1,6 +1,6 @@
 
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import Footer from "../components/Footer";
 export default ITServicesPage
   ]
   // Removed unused categories and services variables

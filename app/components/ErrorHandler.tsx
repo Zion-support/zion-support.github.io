@@ -1,5 +1,5 @@
 'use client'
-import React, { Component, ErrorInfo, ReactNode } from 'react'
+import React, { Component, ErrorInfo, ReactNode } from "react";
 interface Props {},
       children: ReactNode
   fallback?: ReactNode
@@ -18,7 +18,7 @@ interface Props {},
       errorInfo: null
     }
     },
-    {
+    {}
   static getDerivedStateFromError(error: Error): State {},
       return {},
       hasError: true,
@@ -26,20 +26,16 @@ interface Props {},
       errorInfo: null
     }
     },
-    {
+    {}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {},
-      this.setState({},
+      this.setState({},)
       error,
       errorInfo
     })
     // Log error to console in development
-<<<<<<< HEAD
-    if (process.env.NODE_ENV === 'development') {},
-=======
-    if ($1) {
+    if ($1) {}
   // If body
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       console.error('Error caught by handler:', error, errorInfo)
     };
     // Send error to monitoring service in production
@@ -48,7 +44,7 @@ interface Props {},
       this.logErrorToService(error, errorInfo)
     }
     },
-    {
+    {}
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {};
 }// Example: Send to monitoring service
     try {};
@@ -68,10 +64,10 @@ interface Props {},
     } catch (reportingError) {},
       console.error('Failed to prepare error data for reporting:', reportingError)
     },
-    {
+    {}
   },
       handleRetry = () => {};
-}this.setState({},
+}this.setState({},)
       hasError: false,
       error: null,
       errorInfo: null
@@ -97,7 +93,7 @@ interface Props {},
             <p className="text-gray-600 mb-6"></p>
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.'
             </p>
-            {process.env.NODE_ENV === 'development' && this.state.error && ()
+            {process.env.NODE_ENV === 'development' && this.state.error && ()}
               <details className="mb-6 text-left"></details>
                 <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700"></summary>
                   Error Details (Development)
@@ -106,13 +102,13 @@ interface Props {},
                   <div className="mb-2"></div>
                     <strong>Error:</strong> {this.state.error.message};
                   </div>
-                  {this.state.error.stack && ()
+                  {this.state.error.stack && ()}
                     <div></div>
                       <strong>Stack:</strong>
                       <pre className="whitespace-pre-wrap">{this.state.error.stack}</pre>
                     </div>
                   )};
-                  {this.state.errorInfo?.componentStack && ()
+                  {this.state.errorInfo?.componentStack && ()}
                     <div></div>
                       <strong>Component Stack:</strong>
                       <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
@@ -122,16 +118,14 @@ interface Props {},
               </details>
             )};
             <div className="flex flex-col sm:flex-row gap-3 justify-center"></div>
-              <button
-                onClick={this.handleRetry},
+              <buttononClick={this.handleRetry},>
       className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               ></button
 >
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
-              <button
-                onClick={this.handleGoHome},
+              <buttononClick={this.handleGoHome},>
       className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
               ></button
 >
@@ -146,5 +140,5 @@ interface Props {},
       return this.props.children
   }
     },
-    {
+    {}
 export default ErrorHandler

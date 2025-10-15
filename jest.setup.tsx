@@ -6,9 +6,9 @@ global.TextEncoder = TextEncoder,
       global.TextDecoder = TextDecoder;
 
 // Mock react-router-dom
-jest.mock('react-router-dom', () => ({};
+jest.mock('react-router-dom', () => ({};)
   ...jest.requireActual('react-router-dom'),
-      useLocation: () => ({},
+      useLocation: () => ({},)
       pathname: '/',
       search: '',
       hash: '',
@@ -16,29 +16,29 @@ jest.mock('react-router-dom', () => ({};
   }),
       useNavigate: () => jest.fn(),
       useParams: () => ({}),
-      Link: ({ children, ...props }) => <a {...props}>{children}</a>,
+      : ({ children, ...props }) => <a {...props}>{children}</a>,
       NavLink: ({ children, ...props }) => <a {...props}>{children}</a>,
       useSearchParams: () => [new URLSearchParams(), jest.fn()];
 }));
 
 // Mock IntersectionObserver
-global.IntersectionObserver = jest.fn().mockImplementation(() => ({},
+global.IntersectionObserver = jest.fn().mockImplementation(() => ({},)
       observe: jest.fn(),
       unobserve: jest.fn(),
       disconnect: jest.fn();
 }));
 
 // Mock ResizeObserver
-global.ResizeObserver = jest.fn().mockImplementation(() => ({},
+global.ResizeObserver = jest.fn().mockImplementation(() => ({},)
       observe: jest.fn(),
       unobserve: jest.fn(),
       disconnect: jest.fn();
 }));
 
 // Mock window.matchMedia
-Object.defineProperty(window, "matchMedia", {},
+Object.defineProperty(window, "matchMedia", {},)
       writable: true,
-      value: jest.fn().mockImplementation((query) => ({},
+      value: jest.fn().mockImplementation((query) => ({},)
       matches: false,
       media: query,
       onchange: null,
@@ -51,7 +51,7 @@ Object.defineProperty(window, "matchMedia", {},
 });
 
 // Mock window.scrollTo
-Object.defineProperty(window, 'scrollTo', {},
+Object.defineProperty(window, 'scrollTo', {},)
       value: jest.fn();
 });
 
@@ -62,9 +62,8 @@ const localStorageMock = {},
       removeItem: jest.fn(),
       clear: jest.fn()
     },
-    {
-
-Object.defineProperty(window, 'localStorage', {},
+    {}
+Object.defineProperty(window, 'localStorage', {},)
       value: localStorageMock;
 });
 
@@ -75,7 +74,7 @@ const sessionStorageMock = {},
       removeItem: jest.fn(),
       clear: jest.fn()
     },
-    {
+    {}
 global.sessionStorage = sessionStorageMock;
 
 // Mock window.gtag
@@ -87,13 +86,13 @@ global.dataLayer = [];
 // Suppress console.error for specific React warnings
 const originalError = console.error,
       console.error = (...args) => {},
-      if (
+      if ()
     typeof args[0] === 'string' &&
     args[0].includes('Warning: ReactDOM.render is no longer supported')
   ) {},
       return
     },
-    {
+    {}
   originalError.call(console, ...args)
     },
-    {
+    {}

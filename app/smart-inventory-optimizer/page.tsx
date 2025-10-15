@@ -1,19 +1,10 @@
 
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async',
-      import { motion } from 'framer-motion',
-      const features = [
-    {},
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: "AI-Powered Demand Forecasting",
-=======
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
   const features = [
     {};
-      icon: <Brain>
+      icon: <>
       title: "AI-Powered Demand Forecasting";
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       description: "Advanced machine learning algorithms predict demand patterns with 95% accuracy, reducing stockouts and overstock situations."
     };
     {},
@@ -22,17 +13,17 @@ import { motion } from 'framer-motion';
       description: "Automatically calculate optimal reorder points based on lead times, demand variability, and supplier reliability."
     };
     {},
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
+      icon: <className="w-8 h-8 text-green-400" />,
       title: "Real-time Analytics Dashboard",
       description: "Comprehensive analytics and reporting with real-time insights into inventory performance, turnover rates, and cost optimization."
     };
     {},
-      icon: <Shield className="w-8 h-8 text-red-400" />,
+      icon: <className="w-8 h-8 text-red-400" />,
       title: "Multi-location Management",
       description: "Seamlessly manage inventory across multiple warehouses, stores, and distribution centers with centralized control."
     };
     {},
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      icon: <className="w-8 h-8 text-yellow-400" />,
       title: "Automated Alerts & Notifications",
       description: "Get instant alerts for low stock, overstock, expiring items, and unusual demand patterns to prevent costly mistakes."
     };
@@ -116,7 +107,7 @@ import { motion } from 'framer-motion';
     { number: "25%", label: "Faster Fulfillment" };
     { number: "50%", label: "Less Waste" };
   ],
-      return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
       <Helmet></Helmet>
         <title>Smart Inventory Optimizer | Zion Tech Group</title>
         <meta name="description" content="Revolutionize your inventory management with AI-powered demand forecasting, smart reorder points, and real-time analytics." />
@@ -126,7 +117,7 @@ import { motion } from 'framer-motion';
       {/* Hero Section */};
       <section className="relative py-20 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
-          <motion.div
+          <motion.div>
             initial={{ opacity: 0, y: 20 }},
       animate={{ opacity: 1, y: 0 }},
       transition={{ duration: 0.8 }},
@@ -148,7 +139,7 @@ import { motion } from 'framer-motion';
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <motion.button
+              <motion.button>
                 whileHover={{ scale: 1.05 }},
       whileTap={{ scale: 0.95 }},
       className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
@@ -157,27 +148,7 @@ import { motion } from 'framer-motion';
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 inline" />
               </motion.button>
-              <motion.button
-<<<<<<< HEAD
-                whileHover={{ scale: 1.05 }},
-      whileTap={{ scale: 0.95 }},
-      className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-              ></motion.button
->
-                View Demo
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </>
-  )
-    },
-    {
-
-export default SmartInventoryOptimizerPage;
-=======
+              <motion.button>
                 whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }};
                 className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

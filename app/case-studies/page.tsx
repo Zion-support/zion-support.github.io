@@ -1,10 +1,9 @@
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { TrendingUp, DollarSign, CheckCircle, Users, ArrowRight } from "lucide-react";
 
-const CaseStudiesPage: React.FC = () => {
+const CaseStudiesPage: React.FC = () => {}
   const caseStudies = [
-    {
+    {}
       id: 1,
       title: "AI-Powered E-commerce Transformation",
       client: "TechRetail Inc.",
@@ -20,7 +19,7 @@ const CaseStudiesPage: React.FC = () => {
       duration: "6 months",
       team: "8 specialists"
     },
-    {
+    {}
       id: 2,
       title: "Cloud Migration for Financial Services",
       client: "SecureBank Corp.",
@@ -36,7 +35,7 @@ const CaseStudiesPage: React.FC = () => {
       duration: "4 months",
       team: "12 specialists"
     },
-    {
+    {}
       id: 3,
       title: "Cybersecurity Implementation",
       client: "HealthCare Plus",
@@ -61,8 +60,8 @@ const CaseStudiesPage: React.FC = () => {
     { label: "Cost Savings", value: "$2M+", icon: <DollarSign className="w-6 h-6" /> }
   ];
 
-  return (
-    <>
+  return ()
+    <>{}</>
       <Helmet>
         <title>Case Studies - Zion Tech Group | Success Stories</title>
         <meta name="description" content="Explore our successful projects and case studies showcasing our expertise in AI, cloud, and cybersecurity solutions." />
@@ -85,7 +84,7 @@ const CaseStudiesPage: React.FC = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+              {stats.map((stat, index) => ()}
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <div className="text-white">{stat.icon}</div>
@@ -109,7 +108,7 @@ const CaseStudiesPage: React.FC = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {caseStudies.map((study) => (
+              {caseStudies.map((study) => ()}
                 <div key={study.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
                   <div className="mb-6">
                     <div className="text-sm text-cyan-400 font-semibold mb-2">{study.industry}</div>
@@ -128,7 +127,7 @@ const CaseStudiesPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Results</h4>
                     <ul className="space-y-2">
-                      {study.results.map((result, index) => (
+                      {study.results.map((result, index) => ()}
                         <li key={index} className="flex items-center text-gray-300 text-sm">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {result}
@@ -160,18 +159,18 @@ const CaseStudiesPage: React.FC = () => {
               Let us help you achieve similar results with our proven expertise and cutting-edge solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200"
               >
                 Get Started Today
-              </Link>
-              <Link
+              </>
+              <>
                 to="/services"
                 className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200"
               >
                 View Our Services
-              </Link>
+              </>
             </div>
           </div>
         </section>

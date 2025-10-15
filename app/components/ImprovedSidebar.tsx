@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 'use client';
-const ImprovedSidebar: React.FC = () => {
-  return (
+const ImprovedSidebar: React.FC = () => {}
+  return ()
     <div className="min-h-screen bg-white">;
       <Helmet>;
         <title>Improved Sidebar - Zion Tech Group</title>;
@@ -50,7 +50,7 @@ const ImprovedSidebar: React.FC = () => {
               <p className="mb-6">;
                 Ready to transform your business with our improved sidebar services?;
               </p>;
-              <a;
+              <a;>
                 href="/contact";
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";
               >;
@@ -70,7 +70,7 @@ const ImprovedSidebar: React.FC = () => {
             Let's discuss how our improved sidebar';
             services can help you achieve your goals.;
           </p>;
-          <a;
+          <a;>
             href="/contact";
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors";
           >;

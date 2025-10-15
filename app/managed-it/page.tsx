@@ -2,10 +2,10 @@ import React from 'react';
 
 import SEOHead from '../components/SEOHead';
 
-const PagePage: React.FC = () => {
-  return (
-    <>
-      <SEOHead 
+const PagePage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
         title="page - Zion Tech Group"
         description="Zion Tech Group page service page"
       />
@@ -18,6 +18,5 @@ const PagePage: React.FC = () => {
     </>
   )
     },
-    {
-
+    {}
 export default PagePage;

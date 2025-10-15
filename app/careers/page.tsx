@@ -1,11 +1,8 @@
 
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Briefcase, MapPin, Clock, Users, CheckCircle, Heart, DollarSign, Home, GraduationCap, Zap, Shield, Brain, Settings, Target } from 'lucide-react';
-
-const CareersPage: React.FC = () => {
+const CareersPage: React.FC = () => {}
   const openPositions = [
-    {
+    {}
       title: "Senior AI Engineer",
       department: "Engineering",
       location: "Remote / San Francisco",
@@ -14,20 +11,20 @@ const CareersPage: React.FC = () => {
       description: "Lead development of cutting-edge AI solutions and machine learning models.",
       requirements: ["PhD in AI/ML or 5+ years experience", "Python, TensorFlow, PyTorch", "Cloud platforms (AWS, GCP, Azure)", "Team leadership experience"],
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work"],
-      icon: <Brain className="w-6 h-6" />
+      icon: <className="w-6 h-6" />
     },
-    {
+    {}
       title: "DevOps Engineer",
       department: "Engineering",
       location: "Remote / New York",
       type: "Full-time",
       experience: "3+ years",
       description: "Build and maintain scalable infrastructure for our AI platform.",
-      requirements: ["Kubernetes, Docker", "CI/CD pipelines", "Cloud infrastructure", "Monitoring tools"],
+      requirements: ["Kubernetes, Docker", "CI/CD pipelines", "Cloud infrastructure", "ing tools"],
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work"],
       icon: <Settings className="w-6 h-6" />
     },
-    {
+    {}
       title: "Product Manager",
       department: "Product",
       location: "San Francisco",
@@ -42,14 +39,14 @@ const CareersPage: React.FC = () => {
 
   const benefits = [
     { icon: <DollarSign className="w-8 h-8" />, title: "Competitive Compensation", description: "Above-market salaries with equity options" },
-    { icon: <Heart className="w-8 h-8" />, title: "Health & Wellness", description: "Comprehensive health, dental, and vision coverage" },
+    { icon: <className="w-8 h-8" />, title: "Health & Wellness", description: "Comprehensive health, dental, and vision coverage" },
     { icon: <Home className="w-8 h-8" />, title: "Flexible Work", description: "Remote-first culture with flexible hours" },
     { icon: <GraduationCap className="w-8 h-8" />, title: "Learning & Development", description: "Annual learning budget and conference attendance" },
-    { icon: <Zap className="w-8 h-8" />, title: "Cutting-Edge Tech", description: "Work with the latest AI and cloud technologies" },
-    { icon: <Shield className="w-8 h-8" />, title: "Job Security", description: "Stable company with strong growth trajectory" }
+    { icon: <className="w-8 h-8" />, title: "Cutting-Edge Tech", description: "Work with the latest AI and cloud technologies" },
+    { icon: <className="w-8 h-8" />, title: "Job Security", description: "Stable company with strong growth trajectory" }
   ];
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Careers - Zion Tech Group</title>
@@ -68,7 +65,7 @@ const CareersPage: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {benefits.map((benefit, index) => (
+          {benefits.map((benefit, index) => ()}
             <div key={index} className="bg-white rounded-2xl shadow-lg p-8 text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
                 {benefit.icon}
@@ -82,7 +79,7 @@ const CareersPage: React.FC = () => {
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Open Positions</h2>
           <div className="space-y-8">
-            {openPositions.map((position, index) => (
+            {openPositions.map((position, index) => ()}
               <div key={index} className="bg-white rounded-2xl shadow-lg p-8">
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex items-center">
@@ -106,7 +103,7 @@ const CareersPage: React.FC = () => {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-3">Requirements</h4>
                     <ul className="space-y-2">
-                      {position.requirements.map((req, reqIndex) => (
+                      {position.requirements.map((req, reqIndex) => ()}
                         <li key={reqIndex} className="flex items-center">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                           <span className="text-gray-700">{req}</span>
@@ -117,7 +114,7 @@ const CareersPage: React.FC = () => {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits</h4>
                     <ul className="space-y-2">
-                      {position.benefits.map((benefit, benefitIndex) => (
+                      {position.benefits.map((benefit, benefitIndex) => ()}
                         <li key={benefitIndex} className="flex items-center">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                           <span className="text-gray-700">{benefit}</span>

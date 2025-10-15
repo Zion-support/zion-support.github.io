@@ -2,9 +2,9 @@ import React from 'react';
 
 import { MessageSquare } from "lucide-react";
 
-const ChatPage: React.FC = () => {
-  return (
-    <>
+const ChatPage: React.FC = () => {}
+  return ()
+    <>{}</>
       <Helmet></Helmet>
         <title>Live Chat - Zion Tech Group | Get Instant Support</title>
         <meta name="description" content="Get instant help with our live chat support. Our expert team is available 24/7 to assist you with any questions or issues." />
@@ -38,14 +38,13 @@ const ChatPage: React.FC = () => {
               Get instant help from our expert support team. Available 24/7 to assist you with any questions or issues.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center"
-              ></Link
->
+              ></>
                 Start Chat
                 <MessageSquare className="w-5 h-5 ml-2" />
-              </Link>
+              </>
             </div>
           </div>
         </div>

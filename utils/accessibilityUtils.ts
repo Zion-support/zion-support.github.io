@@ -1,7 +1,7 @@
 // Accessibility utilities
 export const accessibilityManager = {};
   init() {};
-    if ($1) {
+    if ($1) {}
   // If body
 }
       this.setupKeyboardNavigation()
@@ -156,7 +156,7 @@ export const colorContrast = {};
 }const getLuminance = (color: string): number => {};
 }const rgb = color.match(/\d+/g)
       if (!rgb) return 0
-      const [r, g, b] = rgb.map(c => {};
+      const [r, g, b] = rgb.map(c => {};)
 }const val = parseInt(c) / 255
         return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4)
       })

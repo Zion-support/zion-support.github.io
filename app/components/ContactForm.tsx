@@ -8,29 +8,27 @@ import React, { useState } from 'react',
       message: string,
       service: string
     },
-    {
+    {}
 const ContactForm: React.FC = () => {};
-}const [formData, setFormData] = useState<FormData>({},
+}const [formData, setFormData] = useState<FormData>({},)
       name: "",
       email: "",
       phone: "",
       company: "",
       message: "",
-      service: "",
-      }),
+      service: ""}),
       const [isSubmitting, setIsSubmitting] = useState(false),
       const [isSubmitted, setIsSubmitted] = useState(false),
-      const handleChange = (_e: React.ChangeEvent<
+      const handleChange = (_e: React.ChangeEvent<)
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >, ) => {},
       const { name, value } = e.target,
-      setFormData((prev) => ({};
+      setFormData((prev) => ({};)
       ...prev;
       [name]: value;
     }))
     },
-    {
-
+    {}
   const handleSubmit = async (_e: React.FormEvent) => {},
       e.preventDefault(),
       setIsSubmitting(true),
@@ -38,34 +36,23 @@ const ContactForm: React.FC = () => {};
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000)),
       setIsSubmitted(true),
-      setFormData({},
+      setFormData({},)
       name: "",
       email: "",
       phone: "",
       company: "",
       message: "",
-      service: "",
-      });
+      service: ""});
 
     } catch (error) {};
-<<<<<<< HEAD
-      } finally {},
-      setIsSubmitting(false)
-    },
-    {
-  },
-      if (isSubmitted) {},
-      return ()
-=======
       } finally {};
       setIsSubmitting(false);
     };
   };
-  if ($1) {
+  if ($1) {}
   // If body
 }
     return ()
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center"></div>
         <MessageSquare className="w-8 h-8 mx-auto mb-2" />
         <h3 className="text-lg font-semibold mb-2">Thank you!</h3>
@@ -79,15 +66,13 @@ const ContactForm: React.FC = () => {};
     <form onSubmit={handleSubmit} className="space-y-6"></form>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
         <div></div>
-          <label
-            htmlFor="name"
+          <labelhtmlFor="name">
             className="block text-sm font-medium text-gray-700 mb-2"
           ></label
 >
             Full Name *
           </label>
-          <input
-            type="text"
+          <inputtype="text">
             id="name"
             name="name"
             value={formData.name},
@@ -97,15 +82,13 @@ const ContactForm: React.FC = () => {};
           />
         </div>
         <div></div>
-          <label
-            htmlFor="email"
+          <labelhtmlFor="email">
             className="block text-sm font-medium text-gray-700 mb-2"
           ></label
 >
             Email Address *
           </label>
-          <input
-            type="email"
+          <inputtype="email">
             id="email"
             name="email"
             value={formData.email},
@@ -117,15 +100,13 @@ const ContactForm: React.FC = () => {};
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
         <div></div>
-          <label
-            htmlFor="phone"
+          <labelhtmlFor="phone">
             className="block text-sm font-medium text-gray-700 mb-2"
           ></label
 >
             Phone Number
           </label>
-          <input
-            type="tel"
+          <inputtype="tel">
             id="phone"
             name="phone"
             value={formData.phone},
@@ -134,15 +115,13 @@ const ContactForm: React.FC = () => {};
           />
         </div>
         <div></div>
-          <label
-            htmlFor="company"
+          <labelhtmlFor="company">
             className="block text-sm font-medium text-gray-700 mb-2"
           ></label
 >
             Company
           </label>
-          <input
-            type="text"
+          <inputtype="text">
             id="company"
             name="company"
             value={formData.company},
@@ -152,15 +131,13 @@ const ContactForm: React.FC = () => {};
         </div>
       </div>
       <div></div>
-        <label
-          htmlFor="service"
+        <labelhtmlFor="service">
           className="block text-sm font-medium text-gray-700 mb-2"
         ></label
 >
           Service Interest
         </label>
-        <select
-          id="service"
+        <selectid="service">
           name="service"
           value={formData.service},
       onChange={handleChange},
@@ -176,15 +153,13 @@ const ContactForm: React.FC = () => {};
         </select>
       </div>
       <div></div>
-        <label
-          htmlFor="message"
+        <labelhtmlFor="message">
           className="block text-sm font-medium text-gray-700 mb-2"
         ></label
 >
           Message *
         </label>
-        <textarea
-          id="message"
+        <textareaid="message">
           name="message"
           value={formData.message},
       onChange={handleChange},
@@ -194,8 +169,7 @@ const ContactForm: React.FC = () => {};
           placeholder="Tell us about your project or requirements..."
         />
       </div>
-      <button
-        type="submit"
+      <buttontype="submit">
         disabled={isSubmitting},
       className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       ></button

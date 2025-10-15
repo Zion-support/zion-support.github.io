@@ -1,29 +1,27 @@
 import { Helmet } from 'react-helmet-async';
-import { Brain, Heart, Eye, Activity, Shield, CheckCircle, ArrowRight, Stethoscope, Microscope } from 'lucide-react';
-
-const AiHealthcareDiagnosticsPage: React.FC = () => {
+const AiHealthcareDiagnosticsPage: React.FC = () => {}
   const services = [
-    {
+    {}
       name: "AI Medical Imaging Analysis",
       description: "Advanced AI-powered analysis of medical images including X-rays, MRIs, and CT scans.",
       features: ["Radiology analysis", "Tumor detection", "Fracture identification", "Disease classification", "Real-time processing", "Accuracy reporting"],
       price: "From $2,999",
       marketPrice: "$5,999-19,999",
       popular: true,
-      icon: <Eye className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       benefits: "99.7% accuracy in medical image analysis"
     },
-    {
+    {}
       name: "Predictive Health Analytics",
       description: "Machine learning models to predict health outcomes and disease progression.",
       features: ["Risk assessment", "Early detection", "Treatment optimization", "Patient monitoring", "Data integration", "Predictive modeling"],
       price: "From $3,999",
       marketPrice: "$7,999-24,999",
       popular: false,
-      icon: <Brain className="w-8 h-8" />,
+      icon: <className="w-8 h-8" />,
       benefits: "Reduce readmission rates by 40%"
     },
-    {
+    {}
       name: "AI-Powered Diagnostic Tools",
       description: "Comprehensive diagnostic solutions powered by artificial intelligence.",
       features: ["Symptom analysis", "Disease prediction", "Treatment recommendations", "Patient triage", "Clinical decision support", "Integration APIs"],
@@ -35,7 +33,7 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {
     }
   ];
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-100">
       <Helmet>
         <title>AI Healthcare Diagnostics - Zion Tech Group</title>
@@ -54,9 +52,9 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
+          {services.map((service, index) => ()}
             <div key={index} className={`bg-white rounded-2xl shadow-xl p-8 relative ${service.popular ? 'ring-2 ring-green-500' : ''}`}>
-              {service.popular && (
+              {service.popular && ()}
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                     Most Popular
@@ -81,7 +79,7 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {
               </div>
 
               <ul className="space-y-3 mb-8">
-                {service.features.map((feature, featureIndex) => (
+                {service.features.map((feature, featureIndex) => ()}
                   <li key={featureIndex} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                     <span className="text-gray-700">{feature}</span>

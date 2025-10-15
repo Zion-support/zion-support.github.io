@@ -1,28 +1,27 @@
 
 import { Helmet } from 'react-helmet-async',
-      import { Link } from 'react-router-dom',
       import {CheckCircle, Star} from 'lucide-react';
 ,
-      interface ServicePageProps {",
+      interface ServicePageProps {"}
         "
   title: string,
       description: string,
       shortDescription: string,
       features: string[],
       benefits: string[],
-      pricing: {",
+      pricing: {"}
         "
     starting: string,
       market: string
     },
-    {
+    {}
   technologies: string[],
       icon: React.ReactNode,
       popular?: boolean
     },
-    {
+    {}
 ,
-      const ServicePageTemplate: React.FC<ServicePageProps> = ({",
+      const ServicePageTemplate: React.FC<ServicePageProps> = ({",)}
         "
   title,",
         "
@@ -42,11 +41,11 @@ import { Helmet } from 'react-helmet-async',
         "
   popular = false",
         "
-}) => {",
+}) => {"}
         "
-  return (",
+  return (",)
         "
-    <>",
+    <>{"}</>
         "
       <Helmet>",
         "
@@ -80,7 +79,7 @@ import { Helmet } from 'react-helmet-async',
         "
               <div className="flex flex-col sm:flex-row gap-4 justify-center">",
         "
-                <Link",
+                <",>
         "
                   to="/contact",
       className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105";
@@ -88,9 +87,9 @@ import { Helmet } from 'react-helmet-async',
         "
                   Get Started Today",
         "
-                </Link>",
+                </>",
         "
-                <Link",
+                <",>
         "
                   to="/demo",
       className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300";
@@ -98,7 +97,7 @@ import { Helmet } from 'react-helmet-async',
         "
                   Schedule Demo",
         "
-                </Link>",
+                </>",
         "
               </div>",
         "
@@ -124,7 +123,7 @@ import { Helmet } from 'react-helmet-async',
             </div>";"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
         "
-              {features.map((feature, index) => (",
+              {features.map((feature, index) => (",)}
         "
                 <div key={index} className="flex items-center space-x-4 p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-colors">";"
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";"
@@ -150,7 +149,7 @@ import { Helmet } from 'react-helmet-async',
             </div>";"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
         "
-              {benefits.map((benefit, index) => (",
+              {benefits.map((benefit, index) => (",)}
         "
                 <div key={index} className="text-center p-6">";"
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">";"
@@ -181,7 +180,7 @@ import { Helmet } from 'react-helmet-async',
             </div>";"
             <div className="flex flex-wrap justify-center gap-4">",
         "
-              {technologies.map((tech, index) => (",
+              {technologies.map((tech, index) => (",)}
         "
                 <div key={index} className="bg-slate-800/50 px-6 py-3 rounded-full border border-slate-700 hover:border-cyan-500 transition-colors">";"
                   <span className="text-gray-300 font-medium">{tech}</span>",
@@ -211,7 +210,7 @@ import { Helmet } from 'react-helmet-async',
                 <div className="text-gray-400 mb-6">Market Price: {pricing.market}</div>";"
                 <p className="text-gray-300 mb-8">{description}</p>",
         "
-                <Link",
+                <",>
         "
                   to="/contact",
       className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 inline-block";
@@ -219,7 +218,7 @@ import { Helmet } from 'react-helmet-async',
         "
                   Get Started Now",
         "
-                </Link>",
+                </>",
         "
               </div>",
         "
@@ -243,7 +242,7 @@ import { Helmet } from 'react-helmet-async',
             </p>";"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">",
         "
-              <Link",
+              <",>
         "
                 to="/contact",
       className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105";
@@ -251,9 +250,9 @@ import { Helmet } from 'react-helmet-async',
         "
                 Get Started Today",
         "
-              </Link>",
+              </>",
         "
-              <Link",
+              <",>
         "
                 to="/demo",
       className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300";
@@ -261,7 +260,7 @@ import { Helmet } from 'react-helmet-async',
         "
                 Schedule Demo",
         "
-              </Link>",
+              </>",
         "
             </div>",
         "
@@ -275,7 +274,7 @@ import { Helmet } from 'react-helmet-async',
         "
   )
     },
-    {
+    {}
 ,
       export default ServicePageTemplate;
 ;

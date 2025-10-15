@@ -7,7 +7,7 @@ import { execSync } from 'child_process';
 console.log('🔧 Starting comprehensive remaining error fixing process...');
 
 // Function to fix specific file patterns
-function fixFile() {
+function fixFile() {}
   // Function body
 }
   try {};
@@ -20,7 +20,7 @@ function fixFile() {
     content = content.replace(/import { Helmet } from 'react-helmet-async';']*)/g, "import { Helmet } from 'react-helmet-async';");'
     
     // Fix malformed JSX
-    content = content.replace(/<>/g, '<>');
+    content = content.replace(/<>/g, '<>{');}</>
     content = content.replace(/<\/>;/g, '</>');
     content = content.replace(/<Helmet>/g, '<Helmet>');
     content = content.replace(/<\/Helmet>;/g, '</Helmet>');
@@ -31,8 +31,7 @@ function fixFile() {
     content = content.replace(/'use client';/g, "'use client';");
     
     // Fix malformed function declarations
-    content = content.replace(/function ([^  {]+)\s*{/g, 'function $1   {');
-    
+    content = content.replace(/function ([^  {]+)\s*{/g, 'function $1   {');}
     // Fix missing closing parentheses
     content = content.replace(/return \(\s*<>([\s\S]*?)\s*<\/>;\s*\);/g, 'return (\n    <>\n$1\n    </>\n  );');
     
@@ -43,7 +42,7 @@ function fixFile() {
     // Fix duplicate React imports
     const lines = content.split('\n');
     const reactImports = lines.filter(line => line.trim().startsWith('import React'));
-    if ($1) {
+    if ($1) {}
   // If body
 }
       // Keep only the first React import

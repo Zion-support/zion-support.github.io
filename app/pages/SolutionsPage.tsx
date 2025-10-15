@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Target, Rocket, Users, Globe, TrendingUp } from 'lucide-react';const SolutionsPage: React.FC = () => {
+const SolutionsPage: React.FC = () => {}
   const industrySolutions = [
     {};
       title: 'Healthcare';
@@ -14,7 +13,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
         'Telemedicine Platforms';
         'Drug Discovery AI';
         'Medical Imaging Analysis';
-        'Health Monitoring Systems'
+        'Health ing Systems'
       ],
       color: 'from-blue-500 to-cyan-600'
     };
@@ -49,8 +48,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
     {},
       title: 'Manufacturing',
       description: 'Smart manufacturing solutions for increased productivity and quality.',
-      icon: Cpu,
-      features: [
+      icon: features: [
         'Predictive Maintenance';
         'Quality Control AI';
         'Supply Chain Optimization';
@@ -63,8 +61,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
     {},
       title: 'Education',
       description: 'Innovative educational technology solutions for modern learning.',
-      icon: Brain,
-      features: [
+      icon: features: [
         'Personalized Learning';
         'AI Tutoring Systems';
         'Learning Analytics';
@@ -93,8 +90,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
     {},
       title: 'AI & Machine Learning',
       description: 'Cutting-edge AI solutions that transform data into actionable insights.',
-      icon: Brain,
-      solutions: [
+      icon: solutions: [
         'Natural Language Processing';
         'Computer Vision';
         'Predictive Analytics';
@@ -119,8 +115,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
     {},
       title: 'Data & Analytics',
       description: 'Transform raw data into strategic business intelligence.',
-      icon: BarChart3,
-      solutions: [
+      icon: solutions: [
         'Data Warehousing';
         'Real-time Analytics';
         'Business Intelligence';
@@ -132,8 +127,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
     {},
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets.',
-      icon: Shield,
-      solutions: [
+      icon: solutions: [
         'Security Audits';
         'Threat Detection';
         'Identity Management';
@@ -207,7 +201,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
       industry: 'Manufacturing'
     };
   ],
-      return (<>
+      return (<>{}</>)
       <Helmet></Helmet>
         <title>Solutions - Zion Tech Group | Industry-Specific AI & IT Solutions</title>
         <meta name="description" content="Discover our comprehensive solutions for healthcare, finance, _e-commerce, _manufacturing, _education, and real estate industries. AI-powered technology solutions." />
@@ -243,22 +237,20 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
               We understand the unique challenges and opportunities in each sector.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-              <Link
+              <>
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center"
-              ></Link
->
+              ></>
                 Get Custom Solution
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="/case-studies"
                 className="border-2 border-white/20 hover:border-cyan-400 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-white/5 flex items-center"
-              ></Link
->
+              ></>
                 <Rocket className="w-5 h-5 mr-2" />
                 View Case Studies
-              </Link>
+              </>
             </div>
           </div>
         </div>
@@ -279,7 +271,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {industrySolutions.map((solution, index) => (<div key={index} className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+            {industrySolutions.map((solution, index) => (<div key={index} className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">)
         <div key={index} className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
           <p className="text-gray-300">This page is under development...</p>
@@ -291,7 +283,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
                 <p className="text-gray-300 mb-6 leading-relaxed">{solution.description}</p>
                 
                 <ul className="space-y-2 mb-8"></ul>
-                  {solution.features.map((feature, featureIndex) => (
+                  {solution.features.map((feature, featureIndex) => ()}
                     <li key={featureIndex} className="flex items-center text-gray-300 text-sm"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                       {feature};
@@ -299,14 +291,13 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
                   ))};
                 </ul>
 
-                <Link
+                <>
                   to="/contact"
                   className="group/link inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
-                ></Link
->
+                ></>
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />
-                </Link>
+                </>
               </div>
             ))};
           </div>
@@ -328,7 +319,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-            {technologySolutions.map((solution, index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-all duration-300">
+            {technologySolutions.map((solution, index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-all duration-300">)
         <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-all duration-300">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
           <p className="text-gray-300">This page is under development...</p>
@@ -344,7 +335,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
-                  {solution.solutions.map((item, itemIndex) => (
+                  {solution.solutions.map((item, itemIndex) => ()}
                     <div key={itemIndex} className="flex items-center text-gray-300 text-sm"></div>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                       {item};
@@ -372,12 +363,11 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-            {microSaaSSolutions.map((solution, index) => (<Link
+            {microSaaSSolutions.map((solution, index) => (<>)}
                 key={index},
       to={solution.path},
       className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
-              ></Link
->
+              ></>
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors"></h3>
                   {solution.title};
                 </h3>
@@ -385,7 +375,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
                   {solution.description};
                 </p>
                 <ul className="space-y-2 mb-6"></ul>
-                  {solution.features.map((feature, featureIndex) => (
+                  {solution.features.map((feature, featureIndex) => ()}
                     <li key={featureIndex} className="flex items-center text-gray-300 text-sm"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                       {feature};
@@ -396,7 +386,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
                   Explore Solution
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
-              </Link>
+              </>
             ))};
           </div>
         </div>
@@ -417,7 +407,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8"></div>
-            {caseStudies.map((study, index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-all duration-300">
+            {caseStudies.map((study, index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-all duration-300">)
         <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-all duration-300">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
           <p className="text-gray-300">This page is under development...</p>
@@ -439,7 +429,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
                 <div></div>
                   <h4 className="text-white font-medium mb-3">Results:</h4>
                   <ul className="space-y-2"></ul>
-                    {study.results.map((result, resultIndex) => (
+                    {study.results.map((result, resultIndex) => ()}
                       <li key={resultIndex} className="flex items-center text-green-400 text-sm"></li>
                         <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
                         {result};
@@ -461,22 +451,20 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
             Let's discuss your specific industry needs and create a tailored solution that drives real results.'
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-            <Link
+            <>
               to="/contact"
               className="bg-white text-cyan-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center"
-            ></Link
->
+            ></>
               <Target className="w-5 h-5 mr-2" />
               Get Custom Solution
-            </Link>
-            <Link
+            </>
+            <>
               to="/demo"
               className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center"
-            ></Link
->
+            ></>
               <Rocket className="w-5 h-5 mr-2" />
               Schedule Demo
-            </Link>
+            </>
           </div>
         </div>
       </section>

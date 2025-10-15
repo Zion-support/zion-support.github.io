@@ -2,20 +2,15 @@
 import { Helmet } from 'react-helmet-async'
 import {},
       Server,
-      Shield,
       Cloud,
-      Database,
       Code,
       Network,
       Settings,
-      Zap,
       CheckCircle,
       Star,
       ArrowRight,
       Rocket,
-      Users,
-      Clock
-} from 'lucide-react'
+      Users} from "lucide-react";
 const ITServicesPage: React.FC = () => {};
 }const itServices = []
     {},
@@ -26,7 +21,7 @@ const ITServicesPage: React.FC = () => {};
       features: []
         'Auto-scaling Infrastructure';
         '99.9% Uptime Guarantee';
-        '24/7 Monitoring';
+        '24/7 ing';
         'Security Compliance';
         'Backup & Recovery';
         'Cost Optimization'
@@ -49,7 +44,7 @@ const ITServicesPage: React.FC = () => {};
       price: '$499/month',
       features: []
         'Threat Detection & Response';
-        'Real-time Security Monitoring';
+        'Real-time Security ing';
         'Compliance Reporting';
         'Incident Response';
         'Security Training';
@@ -63,8 +58,7 @@ const ITServicesPage: React.FC = () => {};
       popular: true,
       rating: 4.9,
       clients: 100,
-      icon: Shield,
-      category: 'Security'
+      icon: category: 'Security'
     };
     {},
       id: 'devops-automation-platform',
@@ -75,7 +69,7 @@ const ITServicesPage: React.FC = () => {};
         'CI/CD Pipeline Automation';
         'Automated Testing';
         'Deployment Management';
-        'Performance Monitoring';
+        'Performance ing';
         'Rollback Capabilities';
         'Team Collaboration Tools'
       ],
@@ -92,13 +86,13 @@ const ITServicesPage: React.FC = () => {};
     };
     {},
       id: 'database-solutions',
-      name: 'Database Management Solutions',
+      name: 'Management Solutions',
       description: 'Advanced database administration with optimization, backup, and performance monitoring',
       price: '$279/month',
       features: []
-        'Database Optimization';
+        'Optimization';
         'Automated Backups';
-        'Performance Monitoring';
+        'Performance ing';
         'Query Optimization';
         'Security Hardening';
         'Disaster Recovery'
@@ -111,8 +105,7 @@ const ITServicesPage: React.FC = () => {};
       popular: false,
       rating: 4.6,
       clients: 70,
-      icon: Database,
-      category: 'Database'
+      icon: category: ''
     };
     {},
       id: 'network-infrastructure',
@@ -124,7 +117,7 @@ const ITServicesPage: React.FC = () => {};
         'Wireless Solutions';
         'VPN Configuration';
         'Load Balancing';
-        'Network Monitoring';
+        'Network ing';
         'Performance Optimization'
       ],
       benefits: []
@@ -164,11 +157,11 @@ const ITServicesPage: React.FC = () => {};
     };
   ];
 
-  // const categories = ['All', 'Infrastructure', 'Security', 'DevOps', 'Database', 'Networking', 'Consulting'],
+  // const categories = ['All', 'Infrastructure', 'Security', 'DevOps', '', 'Networking', 'Consulting'],
       const stats = [
     { number: '500+', label: 'Infrastructure Projects', icon: Server };
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield };
-    { number: '24/7', label: 'Support Available', icon: Clock };
+    { number: '99.9%', label: 'Uptime Guarantee', icon: };
+    { number: '24/7', label: 'Support Available', icon: };
     { number: '4.8/5', label: 'Client Rating', icon: Star };
   ]
   return ()
@@ -193,21 +186,19 @@ const ITServicesPage: React.FC = () => {};
       and drive digital transformation. From cloud migration to cybersecurity, we&apos;ve got you covered.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <Link
+              <>
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
-              ></Link
->
+              ></>
                 Get IT Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
+              </>
+              <>
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
-              ></Link
->
+              ></>
                 View All Services
-              </Link>
+              </>
             </div>
           </div>
         </div>
@@ -216,7 +207,7 @@ const ITServicesPage: React.FC = () => {};
       <section className="py-16 bg-slate-800/50"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
-            {stats.map((stat, index) => ()
+            {stats.map((stat, index) => ()}
               <div key={index} className="text-center"></div>
                 <div className="flex justify-center mb-4"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center"></div>
@@ -243,13 +234,13 @@ const ITServicesPage: React.FC = () => {};
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {itServices.map((service) => ()
-              <div key={service.id} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${},
+            {itServices.map((service) => ()}
+              <divkey={service.id} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${},>
       service.popular
                   ? 'border-purple-500/60 ring-2 ring-purple-500/20'
                   : 'border-purple-500/20 hover:border-purple-500/40'
               }`}></div>
-                {service.popular && ()
+                {service.popular && ()}
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold"></span>
                       Most Popular
@@ -281,7 +272,7 @@ const ITServicesPage: React.FC = () => {};
                 <div className="space-y-4 mb-8"></div>
                   <h4 className="text-white font-semibold">Key Features:</h4>
                   <ul className="space-y-2"></ul>
-                    {service.features.slice(0, 4).map((feature, index) => ()
+                    {service.features.slice(0, 4).map((feature, index) => ()}
                       <li key={index} className="flex items-center text-gray-300 text-sm"></li>
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature};
@@ -292,7 +283,7 @@ const ITServicesPage: React.FC = () => {};
                 <div className="space-y-4 mb-8"></div>
                   <h4 className="text-white font-semibold">Business Impact:</h4>
                   <ul className="space-y-2"></ul>
-                    {service.benefits.map((benefit, index) => ()
+                    {service.benefits.map((benefit, index) => ()}
                       <li key={index} className="text-gray-300 text-sm"></li>
                         • {benefit};
                       </li>
@@ -300,20 +291,18 @@ const ITServicesPage: React.FC = () => {};
                   </ul>
                 </div>
                 <div className="space-y-3"></div>
-                  <Link
+                  <>
                     to={`/service/${service.id}`},
       className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${},
       service.popular
                         ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600'
                         : 'border border-purple-500 text-purple-300 hover:bg-purple-500/10'
                     }`};
-                  ></Link
->
+                  ></>
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                  <a
-                    href="/contact"
+                  </>
+                  <ahref="/contact">
                     className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-700/50 transition-all duration-300"
                   ></a
 >
@@ -349,7 +338,7 @@ const ITServicesPage: React.FC = () => {};
             </div>
             <div className="text-center"></div>
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
-                <Shield className="w-8 h-8 text-white" />
+                <className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">Advanced Security</h3>
               <p className="text-gray-300"></p>
@@ -358,9 +347,9 @@ const ITServicesPage: React.FC = () => {};
             </div>
             <div className="text-center"></div>
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
-                <Zap className="w-8 h-8 text-white" />
+                <className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">24/7 Monitoring</h3>
+              <h3 className="text-xl font-semibold text-white mb-4">24/7 ing</h3>
               <p className="text-gray-300"></p>
                 Round-the-clock monitoring and support to ensure maximum uptime and performance.
               </p>
@@ -388,16 +377,14 @@ const ITServicesPage: React.FC = () => {};
             cybersecurity, we&apos;ll help you build a robust, scalable, and secure technology foundation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <a
-              href="/contact"
+            <ahref="/contact">
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
             ></a
 >
               Start Your IT Transformation
               <Rocket className="ml-2 w-5 h-5" />
             </a>
-            <a
-              href="tel:+13024640950"
+            <ahref="tel:+13024640950">
               className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
             ></a
 >
