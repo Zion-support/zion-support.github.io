@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, Award, Award as AwardIcon, AwardIcon, Book, BookOpen, Brain, Briefcase, CheckCircle, Download, Download as DownloadIcon, DownloadIcon, GraduationCap, Mail, Monitor, Phone, Play, Shield, Star, Target, Target as TargetIcon, TargetIcon, Users, Users as UsersIcon, UsersIcon } from 'lucide-react';
+import React from "react";
+import { ArrowRight, CheckCircle, GraduationCap, Mail, Monitor, Phone, Play, Shield, Star, Target, Users } from 'lucide-react';
 
 const AIEducationSolutionsProPage = () => {
   return (
@@ -281,7 +280,6 @@ const AIEducationSolutionsProPage = () => {
             </div>
           </section>
         </main>
-      </div>
     </>
   );
 };
