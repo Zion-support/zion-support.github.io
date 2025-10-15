@@ -35,6 +35,9 @@ import Header from './app/components/Header';
 import Footer from './app/components/Footer';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
+import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import BundleAnalyzer from './app/components/BundleAnalyzer';
 
 // Pages
 import HomePage from './app/page';
@@ -186,6 +189,9 @@ const App: React.FC = () => {
             </main>
             <Footer />
             <PerformanceMonitor />
+            <PerformanceOptimizer />
+            <AccessibilityEnhancer />
+            <BundleAnalyzer />
           </div>
         </Router>
       </HelmetProvider>
