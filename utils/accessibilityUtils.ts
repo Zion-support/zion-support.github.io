@@ -1,16 +1,12 @@
 // Accessibility utilities
-<<<<<<< HEAD
+import { useEffect, useRef, useState } from 'react';
+
 // Type definitions for better type safety
 interface KeyboardEvent extends Event {
   key: string;
   shiftKey: boolean;
   preventDefault(): void;
 }
-
-// Remove unused interface
-=======
-import { useEffect, useRef, useState } from 'react';
->>>>>>> cursor/analyze-improve-and-merge-code-7ff3
 
 // Focus management utilities
 export const focusManagement = {

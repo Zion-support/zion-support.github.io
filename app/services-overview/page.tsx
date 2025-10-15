@@ -9,7 +9,7 @@ const ServicesOverviewPage: React.FC = () => {
       icon: <Brain className="w-8 h-8" />,
       color: "from-cyan-500 to-blue-600",
       description: "Revolutionary AI-powered solutions for modern businesses",
-      services: []
+      services: [
         { name: "AI Analytics Dashboard Pro", price: "$299/month", features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards"] },
         { name: "AI Content Generation Pro", price: "$199/month", features: ["AI Writing", "Content Optimization", "Multi-language Support"] },
         { name: "AI Automation Suite", price: "$399/month", features: ["Workflow Automation", "Process Optimization", "Integration APIs"] },
