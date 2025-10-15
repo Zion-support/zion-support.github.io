@@ -1,56 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface Props {
-  children: ReactNode
-  fallback?: ReactNode
-}
-
-interface State {
-
-}
-
-class GlobalErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-
-    this.state = { hasError: false };
-  };
-
-  static getDerivedStateFromError(error: Error): State {
-    return {,
-      hasError: true,
-      error,
-
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error to console in development
-
-    }
-
-    this.setState({
-    error,
-      errorInfo,
-
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-
-                    Error ID: {this.state.errorId}
-                  </p>
-                )}
-              </div>
-            )}
-
-                Go Home
-              </Link>
-            </div>
+export default function GlobalErrorBoundary() {
+  return (
+    <>
+      <Helmet>
+        <title>GlobalErrorBoundary - Zion Tech Group</title>
+        <meta name="description" content="Professional GlobalErrorBoundary services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              GlobalErrorBoundary
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional GlobalErrorBoundary services delivered with excellence by our expert team.
+            </p>
           </div>
         </div>
-
-    }
-
-    return this.props.children
-  }
+      </div>
+    </>
+  );
 }
-

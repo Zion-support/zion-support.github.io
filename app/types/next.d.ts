@@ -1,7 +1,8 @@
+import { NextPage } from 'next';
 
+declare module 'next' {
   export interface NextPageProps {
-    params: { [key: string]: string }
-    searchParams: { [key: string]: string | string[] | undefined }
+    params: { [key: string]: string };
+    searchParams: { [key: string]: string | string[] | undefined };
   }
 }
-

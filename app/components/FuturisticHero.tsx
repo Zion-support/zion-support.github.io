@@ -1,74 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-            style={{},
-      left: `${20 + index * 20}%`,
-      top: `${30 + index * 15}%`,
-      animation: `floatIcon ${item.duration}s ease-in-out infinite`,
-
-                  {stat.label};
-                </div>
-              </div>
-            ))};
+export default function FuturisticHero() {
+  return (
+    <>
+      <Helmet>
+        <title>FuturisticHero - Zion Tech Group</title>
+        <meta name="description" content="Professional FuturisticHero services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              FuturisticHero
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional FuturisticHero services delivered with excellence by our expert team.
+            </p>
           </div>
         </div>
       </div>
     </>
   );
-};
-      {/* CSS Animations */};
-      <style jsx>{`};
-        @keyframes gridMove {},
-      0% { transform: translate(0, 0)};
-    },
-    {};
-          100% { transform: translate(50px, 50px)};
-    },
-    {};
-        };
-        @keyframes floatIcon {},
-      0%, 100% { transform: translateY(0px) rotate(0deg)};
-    },
-    {};
-          25% { transform: translateY(-20px) rotate(5deg)};
-    },
-    {};
-          50% { transform: translateY(-40px) rotate(0deg)};
-    },
-    {};
-          75% { transform: translateY(-20px) rotate(-5deg)};
-    },
-    {};
-        };
-        @keyframes gradient-x {},
-      0%, 100% { background-position: 0% 50%};
-    },
-    {};
-          50% { background-position: 100% 50%};
-    },
-    {};
-        };
-        @keyframes fadeInUp {},
-      from {},
-      opacity: 0,
-      transform: translateY(30px)
-    },
-    {};
-          to {},
-      opacity: 1,
-      transform: translateY(0)
-    },
-    {};
-        };
-        .animate-gradient-x {},
-      background-size: 200% 200%,
-      animation: gradient-x 3s ease infinite
-    },
-    {};
-      `}</style>
-    </section>
-  )
-    },";
-    {};";";
-export default FuturisticHero;";";";
-import React from 'react';";";";";
-import SEOHead from './components/SEOHead";
-
+}

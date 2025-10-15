@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+// Analytics hook for tracking events and page views
 
 interface AnalyticsEvent {
   action: string;

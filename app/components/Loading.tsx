@@ -1,20 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface LoadingProps {}
-  message?: string
-}
-
-export default function Loading({ message = "Loading..." }: LoadingProps) {}"
-  return ()
-    <div>
+export default function Loading() {
+  return (
+    <>
       <Helmet>
         <title>Loading - Zion Tech Group</title>
-        <meta: name ="description" content="Loading page" />"
+        <meta name="description" content="Professional Loading services by Zion Tech Group" />
       </Helmet>
-
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              Loading
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional Loading services delivered with excellence by our expert team.
+            </p>
+          </div>
         </div>
-      </div>";
-    </>";";
-  );";";";
-import React from 'react';";";";";
-import SEOHead from './components/SEOHead";
-
+      </div>
+    </>
+  );
+}

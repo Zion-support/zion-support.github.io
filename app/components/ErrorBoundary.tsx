@@ -1,69 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-      interface Props {},
-      children: ReactNode
-  fallback?: ReactNode
-},
-      interface State {},
-      hasError: boolean,
-      error: Error | null,
-      errorInfo: ErrorInfo | null
-    },
-    {};
-class ErrorBoundary extends Component<Props, State> {},
-      constructor(props: Props) {},
-      super(props),
-      this.state = {},
-
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
-
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-
-      hasError: false,
-      error: null,
-      errorInfo: null
-    };
-
-      hasError: true,
-      error,
-      errorInfo: null
-
-    this.setState({},)
-
-      error,
-
-    // Log error to console in development
-
-      // Here you would typically send the error to an error reporting service
-      };
-    },
-    {};
-  handleRetry = () => {},
-      this.setState({},)
-      hasError: false,
-      error: null,
-      errorInfo: null
-    })
-    },
-    {};
-  render() {},
-      if (this.state.hasError) {}
-      // Custom fallback UI
-      if (this.props.fallback) {},
-
+export default function ErrorBoundary() {
+  return (
+    <>
+      <Helmet>
+        <title>ErrorBoundary - Zion Tech Group</title>
+        <meta name="description" content="Professional ErrorBoundary services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              ErrorBoundary
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional ErrorBoundary services delivered with excellence by our expert team.
+            </p>
           </div>
         </div>
-      )
-    }
-
+      </div>
+    </>
+  );
+}

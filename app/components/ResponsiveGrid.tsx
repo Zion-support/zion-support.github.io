@@ -1,37 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface ResponsiveGridProps {},
-      children: React.ReactNode
-  className?: string";
-  cols?: {},";
-      default: number";
-    sm?: number";";
-    md?: number";";
-    lg?: number";";";
-    xl?: number";";";
-  },";";";";
-      gap?: 'sm' | 'md' | 'lg' | 'xl"
-},";";
-      const ResponsiveGrid  =  (_{},)";";";
-      children, className, cols = { default: 1, _sm: 2, _md: 3, _lg: 4 }, gap = 'md"
-}: ResponsiveGridProps) => {},";";
-      const gapClasses = {},";";";
-      sm: 'gap-2",";";";
-      md: 'gap-4",";";";
-      lg: 'gap-6",";";";
-      xl: 'gap-8"
-  },";";
-      const gridColsClasses = {},";";";
-      1: 'grid-cols-1",";";";
-      2: 'grid-cols-2",";";";
-      3: 'grid-cols-3",";";";
-      4: 'grid-cols-4",";";";
-      5: 'grid-cols-5",";";";
-      6: 'grid-cols-6"
-  },
-
-      {children};
-    </div>
-  )
-},
-      export default ResponsiveGrid
-
+export default function ResponsiveGrid() {
+  return (
+    <>
+      <Helmet>
+        <title>ResponsiveGrid - Zion Tech Group</title>
+        <meta name="description" content="Professional ResponsiveGrid services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              ResponsiveGrid
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional ResponsiveGrid services delivered with excellence by our expert team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

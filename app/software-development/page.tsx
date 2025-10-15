@@ -1,61 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-  )
-    },
-    {};
-,
-      export default SoftwareDevelopmentPage;
-
-            >
-              Free Consultation
-            </FuturisticButton>
+export default function Page() {
+  return (
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              Page
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional Page services delivered with excellence by our expert team.
+            </p>
           </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Services Section */}
-
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                >
-                  Get Quote
-                </FuturisticButton>
-              </FuturisticCard>
-
-                      {item}
-
-                    </li>
-                  ))};
-                </ul>
-              </div>
-
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Benefits Section */}
-
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* CTA Section */}
-
-            >
-              Schedule Consultation
-            </FuturisticButton>
-          </div>
-        </ResponsiveContainer>
-      </section>
-    </div>
-
+        </div>
+      </div>
+    </>
+  );
 }
-
-]
-

@@ -1,21 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function FuturisticGlow() {}
-  // Function body
-}
-}return ()
-    <div></div>
-      <Helmet></Helmet>
-        <title>Futuristic Glow - Zion Tech Group</title>
+export default function FuturisticGlow() {
+  return (
+    <>
+      <Helmet>
+        <title>FuturisticGlow - Zion Tech Group</title>
+        <meta name="description" content="Professional FuturisticGlow services by Zion Tech Group" />
       </Helmet>
-      <div  className ="futuristic-glow-container"></div>"
-        <>
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        ></>
-          Contact Us
-          <ArrowRight: className ="w-5 h-5 ml-2" />"
-        </>
-
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              FuturisticGlow
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional FuturisticGlow services delivered with excellence by our expert team.
+            </p>
+          </div>
+        </div>
       </div>
     </>
-
+  );
+}

@@ -1,9 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-  const  spinner = (";";"
-    <div  className ="flex flex-col items-center justify-center space-y-4">;";"
-      <div  className ={`${sizeClasses[size]} border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin`} />";";"
-      {text && <p  className ="text-gray-600">{text}</p>}";"
-    </div>
-  )
-
+export default function LoadingSpinner() {
+  return (
+    <>
+      <Helmet>
+        <title>LoadingSpinner - Zion Tech Group</title>
+        <meta name="description" content="Professional LoadingSpinner services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              LoadingSpinner
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional LoadingSpinner services delivered with excellence by our expert team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

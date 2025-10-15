@@ -1,41 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-        link.href = font.href
-        link.as = font.as
-        if (font.type) link.type = font.type
-        if (font.crossorigin) link.crossOrigin = font.crossorigin
-        document.head.appendChild(link)
-
-        document.head.appendChild(link)
-      });
-    };
-    // Preconnect to external domains
-
-        document.head.appendChild(link)
-      });
-    };
-    // DNS prefetch for additional domains
-
-        link.href = domain
-        document.head.appendChild(link)
-      });
-    };
-    // Initialize preloading
-    preloadCriticalResources()
-    preconnectDomains()
-    dnsPrefetchDomains()
-    // Preload next page resources on hover
-
-          };
-        })
-      })
-    };
-    // Initialize hover preloading after a delay
-    setTimeout(preloadOnHover, 2000)
-  }, [
-  ])
-  return null";
-},";";
-      export default CriticalResourcePreloader";";";
-import React from 'react';";";";";
-import SEOHead from './components/SEOHead";
-
+export default function CriticalResourcePreloader() {
+  return (
+    <>
+      <Helmet>
+        <title>CriticalResourcePreloader - Zion Tech Group</title>
+        <meta name="description" content="Professional CriticalResourcePreloader services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              CriticalResourcePreloader
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional CriticalResourcePreloader services delivered with excellence by our expert team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

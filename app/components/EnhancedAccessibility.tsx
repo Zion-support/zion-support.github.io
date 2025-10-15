@@ -1,73 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-      interface AccessibilitySettings {},
-      highContrast: boolean,
-      largeText: boolean,
-      reducedMotion: boolean,
-      screenReader: boolean
-    },
-    {};
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }>  =  ({
-    children ;
-  }) => {};
-}const [settings, setSettings]  =  useState<AccessibilitySettings>({},)
-      highContrast: false,
-      largeText: false,
-      reducedMotion: false,
-
-    };
-  }, [
-  ])
-  useEffect(() => {};
-
-    style.textContent = `
-      .skip-links {},
-      position: absolute
-        top: -100px
-        left: 0
-        z-index: 1000;
-      };
-      .skip-link {},
-      position: absolute
-        top: 0
-        left: 0
-        background: #000
-        color: #fff
-        padding: 8px 16px
-        text-decoration: none
-        font-weight: bold
-        z-index: 1001
-        transition: top 0.3s
-      };
-      .skip-link:focus {},
-      top: 0
-      };
-    `
-    document.head.appendChild(style)
-    return () => {};
-}skipLinks.remove()
-      style.remove()
-    };
-
-    };
-  }, [
-  ])
-  // Add keyboard navigation support
-
-        )
-        const: firstElement = focusableElements[0] as HTMLElement
-        const: lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
-        if (event.shiftKey && document.activeElement === firstElement) {},
-      event.preventDefault()
-          lastElement?.focus()
-        } else if (!event.shiftKey && document.activeElement === lastElement) {},
-      event.preventDefault()
-          firstElement?.focus()
-
-      {children};
-    </div>
-  )";
-},";";
-      export default EnhancedAccessibility";";";
-import React from 'react';";";";";
-import SEOHead from './components/SEOHead";
-
+export default function EnhancedAccessibility() {
+  return (
+    <>
+      <Helmet>
+        <title>EnhancedAccessibility - Zion Tech Group</title>
+        <meta name="description" content="Professional EnhancedAccessibility services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              EnhancedAccessibility
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional EnhancedAccessibility services delivered with excellence by our expert team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

@@ -1,87 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import {
-  Bars3Icon,
-  XMarkIcon,
-  HomeIcon,
-  InformationCircleIcon,
-  PhoneIcon,
-  DocumentTextIcon,
-  AcademicCapIcon,
-  QuestionMarkCircleIcon,
-  ShieldCheckIcon,
-  CurrencyDollarIcon,
-  CogIcon,
-  ChevronDownIcon,
-  GlobeAltIcon,
-  CloudIcon,
-  CpuChipIcon,
-  SignalIcon,
-  UserGroupIcon,
-  EnvelopeIcon,
-  ShareIcon,
-  ChatBubbleLeftRightIcon,
-  ChartBarIcon,
-  EyeIcon,
-  CircleStackIcon,
-  CodeBracketIcon,
-  DevicePhoneMobileIcon,
-  UserPlusIcon,
-  CheckCircleIcon,
-
-interface NavigationProps {
-  onSidebarToggle?: () => void
-}
-
-            </Link>
-          </div>
-
-          {/* Desktop Navigation */}
-
-                          <span>{subItem.name}</span>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Mobile menu button */}
-
-              )}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-
-                    }`}>
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.href}
-
-                          <span>{subItem.name}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ) : (
-                  <Link
-                    to={item.href}
-                    className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                      isActive(item.href)
-
-                    <span>{item.name}</span>
-                  </Link>
-                )}
-              </div>
-            ))}
+export default function Navigation() {
+  return (
+    <>
+      <Helmet>
+        <title>Navigation - Zion Tech Group</title>
+        <meta name="description" content="Professional Navigation services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              Navigation
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional Navigation services delivered with excellence by our expert team.
+            </p>
           </div>
         </div>
       </div>
-    </nav>
-  )
+    </>
+  );
 }
-export default Navigation

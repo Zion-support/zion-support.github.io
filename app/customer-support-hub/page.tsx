@@ -1,80 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import { 
-
-  ChatBubbleLeftRightIcon, 
-  CheckCircleIcon,
-  ClockIcon,
-  UserGroupIcon,
-
-      ],
-      popular: false
-    },
-    {
-
-      ],
-      popular: true
-    },
-    {
-
-      ],
-      popular: false
-    }
-  ]
+export default function Page() {
   return (
     <>
-
-                  View Demo
-                </button>
-              </div>
-            </div>
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              Page
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional Page services delivered with excellence by our expert team.
+            </p>
           </div>
-        </section>
-
-        {/* Features Section */}
-
-                Everything you need to provide world-class customer support.
-              </p>
-            </div>
-
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-
-                Flexible pricing options to fit your support needs.
-              </p>
-            </div>
-
-              {pricingPlans.map((plan, index) => (
-                <div  key ={index}
-                  className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 ${
-                    plan.popular 
-
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <button  className ={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-
-                  }`}>
-                    Get Started
-                  </button>
-                </div>
-
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
     </>
-
+  );
+}

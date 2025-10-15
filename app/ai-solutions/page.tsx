@@ -1,38 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-            </div>
-            <p: className ="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">";
-              Transform Your Business with Artificial Intelligence
+export default function Page() {
+  return (
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              Page
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional Page services delivered with excellence by our expert team.
             </p>
-            <p: className ="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">";
-              Leverage cutting-edge AI technology to automate processes, gain insights, and drive innovation.
-              Our comprehensive AI solutions are designed to solve complex business challenges.
-            </p>
-            <Link: to ="/contact";
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 inline-flex items-center gap-2";
-            >
-              Get Started with AI
-              <ArrowRightIcon: className ="w-5 h-5" />";
-            </Link>
           </div>
         </div>
-      </section>
-
-                    </li>
-                  ))};
-                </ul>
-              </div>
-
-                    </div>
-                    <span: className ="text-sm text-cyan-400 font-medium">{service.category}</span>";
-                  </div>
-
-                    Start Free Trial
-                  </>
-                </div>
-              </div>
-
-                >
-                  Get Started
-                </>
-              </div>
-
+      </div>
+    </>
+  );
+}

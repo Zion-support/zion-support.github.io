@@ -1,33 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function MobileOptimizer() {}
-  // Function body
-}
-}return ()
-    <div></div>
-      <Helmet></Helmet>
-        <title>Mobile Optimizer - Zion Tech Group</title>
+export default function MobileOptimizer() {
+  return (
+    <>
+      <Helmet>
+        <title>MobileOptimizer - Zion Tech Group</title>
+        <meta name="description" content="Professional MobileOptimizer services by Zion Tech Group" />
       </Helmet>
-      <div  className ="mobile-optimizer-container"></div>"
-        <div  className ="mobile-optimization-content"></div>"
-          <h2>Mobile Optimization</h2>
-          <p>Optimizing your mobile experience</p>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              MobileOptimizer
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional MobileOptimizer services delivered with excellence by our expert team.
+            </p>
+          </div>
         </div>
-        <>
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        ></>
-          Contact Us
-          <ArrowRight: className ="w-5 h-5 ml-2" />"
-        </>
-
       </div>
     </>
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-
-export default ComponentsPage;'";'";"
+  );
+}

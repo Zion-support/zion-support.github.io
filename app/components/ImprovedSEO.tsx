@@ -1,28 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface ImprovedSEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonicalUrl?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: any;
-  noindex?: boolean;
-
-  twitterTitle,
-  twitterDescription,
-  twitterImage,
-  structuredData,
-
-        </script>
-      )};
-    </Helmet>";
-  );";";
-};";";";
-export default ImprovedSEO;"
+export default function ImprovedSEO() {
+  return (
+    <>
+      <Helmet>
+        <title>ImprovedSEO - Zion Tech Group</title>
+        <meta name="description" content="Professional ImprovedSEO services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              ImprovedSEO
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional ImprovedSEO services delivered with excellence by our expert team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

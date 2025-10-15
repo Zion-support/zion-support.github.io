@@ -1,21 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface SEOEnhancerProps {};
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: Record<string>
-  noIndex?: boolean;
-
-      };
-    ];
-  },
-
-    </Helmet>
-  )
-},
-      export default SEOEnhancer
-
+export default function SEOEnhancer() {
+  return (
+    <>
+      <Helmet>
+        <title>SEOEnhancer - Zion Tech Group</title>
+        <meta name="description" content="Professional SEOEnhancer services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              SEOEnhancer
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional SEOEnhancer services delivered with excellence by our expert team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

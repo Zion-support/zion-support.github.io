@@ -1,25 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface EnhancedSEOProps {};
-  title: string;
-  description: string;
-  keywords?: string;
-  canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: Record<string>
-  noIndex?: boolean;
-  lang?: string;
-  noindex?: boolean;
-
-    </Helmet>
-  )
-},
-      export default EnhancedSEO
-
+export default function EnhancedSEO() {
+  return (
+    <>
+      <Helmet>
+        <title>EnhancedSEO - Zion Tech Group</title>
+        <meta name="description" content="Professional EnhancedSEO services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              EnhancedSEO
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional EnhancedSEO services delivered with excellence by our expert team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

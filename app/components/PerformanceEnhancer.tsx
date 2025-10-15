@@ -1,55 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-      interface PerformanceMetrics {},
-      fcp: number,
-      lcp: number,
-      fid: number,
-      cls: number,
-      ttfb: number,
-
-      interface $1 { [key: string]: any },;
-      fcp: number,;
-      lcp: number,;
-      fid: number,;
-      cls: number,;
-      ttfb: number,;
-      loadTime: number,
-    },;
-    {;
-
-      const metrics: PerformanceMetrics = {},;
-      fcp: fcp ? fcp.startTime : 0,;
-      lcp: lcp ? lcp.startTime : 0,;
-      fid: 0, // Would need PerformanceObserver;
-        cls: 0, // Would need PerformanceObserver;
-        ttfb: navigation.responseStart - navigation.requestStart,;
-      loadTime: navigation.loadEventEnd - navigation.loadEventStart},;
-      setMetrics(metrics)
-      // Log performance metrics;
-      };
-    // Measure after page load
-
-    };
-  }, [
-  ])
-  // Preload critical resources;
-
-      document.head.appendChild(fontPreload)
-    },
-      preloadCriticalResources()
-  }, [])
-
-            imageObserver.unobserve(img)
-          }
-        })
-      })
-
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </>;";
-  );";";
-};";";";
-;"
-
-export default ComponentsPage;'";'";"
+export default function PerformanceEnhancer() {
+  return (
+    <>
+      <Helmet>
+        <title>PerformanceEnhancer - Zion Tech Group</title>
+        <meta name="description" content="Professional PerformanceEnhancer services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              PerformanceEnhancer
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional PerformanceEnhancer services delivered with excellence by our expert team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

@@ -1,27 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const BlogPage: React.FC = () => {}
-import React from 'react',"
-      import { Helmet } from 'react-helmet-async',"
-      import SEOHead from '../components/SEOHead',"
-      const BlogPage: React.FC = () => {}
-  return ()
-    <>{}</>
+export default function Page() {
+  return (
+    <>
       <Helmet>
-        <title>Blog - Zion Tech Group | AI & IT Solutions</title>
-        <meta: name ="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends." />"
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group" />
       </Helmet>
-
-                Learn More
-              </button>
-            </div>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              Page
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional Page services delivered with excellence by our expert team.
+            </p>
           </div>
         </div>
       </div>
     </>
-  ),
-
-};";
-";";
-export default BlogPage;";";";
-"
-
+  );
+}

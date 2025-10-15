@@ -1,31 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-  const [count, setCount] = useState(0);
-  useEffect(() => {};
-    let startTime: number;
-    let animationFrame: number;
-
-      setCount(Math.floor(easeOutQuart * end));
-      if ($1) {};
-  // If body
-};
-        animationFrame = requestAnimationFrame(animate);
-      };
-    };
-    animationFrame = requestAnimationFrame(animate)
-    return () => {};
-}if (animationFrame) {},
-      cancelAnimationFrame(animationFrame)
-      };
-    },
-    {};
-  }, [
-    end, duration
-  
-  ])
-  return ()
-    <span: className ={className}></span>
-      {prefix};
-      {count.toLocaleString()};
-      {suffix};
-    </span>
-
+export default function AnimatedCounter() {
+  return (
+    <>
+      <Helmet>
+        <title>AnimatedCounter - Zion Tech Group</title>
+        <meta name="description" content="Professional AnimatedCounter services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              AnimatedCounter
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional AnimatedCounter services delivered with excellence by our expert team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

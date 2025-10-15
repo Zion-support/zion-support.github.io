@@ -1,25 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface NeonButtonProps {},
-      children?: React.ReactNode
-  className?: string
-  title?: string
-
-</div>
-  )
-  if ($1) {};
-  // If body
-};
-    return ()
-      <a: href ={href} className={buttonClasses}></a>
-        {content};
-      </a>
-    )
-  },
-      return ()
-    <button: onClick ={onClick} disabled={disabled} className={buttonClasses}></button>
-      {content};
-    </button>
-  )
-},
-      export default NeonButton
-
+export default function NeonButton() {
+  return (
+    <>
+      <Helmet>
+        <title>NeonButton - Zion Tech Group</title>
+        <meta name="description" content="Professional NeonButton services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              NeonButton
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional NeonButton services delivered with excellence by our expert team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
