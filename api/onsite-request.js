@@ -1,1 +1,4 @@
-ursor/analyze-improve-and-merge-code-4a9f
+// API endpoint for onsite requests
+export default function handler(req, res) {
+  res.status(200).json({ message: 'Onsite request endpoint' });
+}

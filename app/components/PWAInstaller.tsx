@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
 import { ArrowRight } from "lucide-react"
-export default function ComponentsPage() {}
-}return ()
+export default function ComponentsPage() {
+  return (
     <div>
       <Helmet>
         <title>Components - Zion Tech Group</title>

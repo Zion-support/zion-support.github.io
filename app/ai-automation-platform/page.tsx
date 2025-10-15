@@ -1,5 +1,5 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code-4a9f
+import SEOHead from '../components/SEOHead';
 
 const AiAutomationPlatformPage: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const AiAutomationPlatformPage: React.FC = () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">ai-automation-platform</h1>
           <p className="text-gray-300">Coming soon...</p>
-        </div>ursor/analyze-improve-and-merge-code-4a9f
+        </div>
       </div>
     </>
   );

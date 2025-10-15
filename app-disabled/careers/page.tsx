@@ -1,6 +1,8 @@
-import { useState } from 'react
-import { Helmet } from 'react-helmet-async';'lucide-react
-interface JobPosition {}
+import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { MapPin, Clock, Users, Briefcase } from 'lucide-react';
+
+interface JobPosition {
   // Add properties here
 }
   id: number
