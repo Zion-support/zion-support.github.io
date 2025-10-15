@@ -2,6 +2,7 @@ import { Suspense, useEffect, lazy } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization'
+import './app/styles/futuristic.css'
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -52,6 +53,26 @@ const ZionAIWorkflowAutomatorPage = lazy(() => import('./app/zion-ai-workflow-au
 const ZionAIWorkflowAutomatorProPage = lazy(() => import('./app/zion-ai-workflow-automator-pro/page'));
 const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-customer-satisfaction-monitor/page'));
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
+
+// New AI Services
+const AIVoiceAssistantPage = lazy(() => import('./app/ai-voice-assistant/page'));
+const AICodeGeneratorPage = lazy(() => import('./app/ai-code-generator/page'));
+const AIImageGeneratorPage = lazy(() => import('./app/ai-image-generator/page'));
+const AITranslatorPage = lazy(() => import('./app/ai-translator/page'));
+
+// New IT Services
+const BlockchainSolutionsPage = lazy(() => import('./app/blockchain-solutions/page'));
+const IoTSolutionsPage = lazy(() => import('./app/iot-solutions/page'));
+const DevOpsAutomationPage = lazy(() => import('./app/devops-automation/page'));
+const APIDevelopmentPage = lazy(() => import('./app/api-development/page'));
+
+// New Micro SaaS
+const AIChatbotBuilderPage = lazy(() => import('./app/ai-chatbot-builder/page'));
+const AIFormBuilderPage = lazy(() => import('./app/ai-form-builder/page'));
+const AIAnalyticsDashboardPage = lazy(() => import('./app/ai-analytics-dashboard/page'));
+const AIDocumentProcessorPage = lazy(() => import('./app/ai-document-processor/page'));
+const AIVideoGeneratorPage = lazy(() => import('./app/ai-video-generator/page'));
+const AISEOOptimizerPage = lazy(() => import('./app/ai-seo-optimizer/page'));
 
 // Import components
 import Navigation from './app/components/Navigation';
@@ -154,6 +175,26 @@ export default function App() {
                   <Route path="/zion-ai-workflow-automator-pro" element={<ZionAIWorkflowAutomatorProPage />} />
                   <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
                   <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
+                  
+                  {/* New AI Services */}
+                  <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
+                  <Route path="/ai-code-generator" element={<AICodeGeneratorPage />} />
+                  <Route path="/ai-image-generator" element={<AIImageGeneratorPage />} />
+                  <Route path="/ai-translator" element={<AITranslatorPage />} />
+                  
+                  {/* New IT Services */}
+                  <Route path="/blockchain-solutions" element={<BlockchainSolutionsPage />} />
+                  <Route path="/iot-solutions" element={<IoTSolutionsPage />} />
+                  <Route path="/devops-automation" element={<DevOpsAutomationPage />} />
+                  <Route path="/api-development" element={<APIDevelopmentPage />} />
+                  
+                  {/* New Micro SaaS */}
+                  <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                  <Route path="/ai-form-builder" element={<AIFormBuilderPage />} />
+                  <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
+                  <Route path="/ai-document-processor" element={<AIDocumentProcessorPage />} />
+                  <Route path="/ai-video-generator" element={<AIVideoGeneratorPage />} />
+                  <Route path="/ai-seo-optimizer" element={<AISEOOptimizerPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={

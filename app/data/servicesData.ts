@@ -756,5 +756,672 @@ export const servicesData = {
         website: 'https://ziontechgroup.com/database-management'
       }
     }
+  ],
+  // New AI Services
+  newAIServices: [
+    {
+      id: 'ai-voice-assistant',
+      title: 'Zion AI Voice Assistant Pro',
+      description: 'Advanced voice AI assistant with natural language processing, multi-language support, and enterprise integration capabilities',
+      shortDescription: 'Intelligent voice assistant for business automation',
+      icon: '🎤',
+      features: [
+        'Natural Language Processing',
+        'Multi-language Support',
+        'Voice Command Recognition',
+        'Enterprise Integration',
+        'Custom Voice Training',
+        'Real-time Transcription',
+        'Voice Analytics',
+        'API Integration',
+        'Mobile & Desktop Support',
+        'Custom Wake Words'
+      ],
+      pricing: {
+        basic: 199,
+        pro: 599,
+        enterprise: 1999
+      },
+      benefits: [
+        'Hands-free operation',
+        'Improved accessibility',
+        'Faster task completion',
+        'Multi-language support',
+        'Enterprise scalability',
+        'Custom voice training'
+      ],
+      useCases: [
+        'Customer service automation',
+        'Meeting transcription',
+        'Voice-controlled workflows',
+        'Accessibility solutions',
+        'Smart office automation',
+        'Voice analytics'
+      ],
+      marketPrice: '$199 - $1,999/month',
+      link: '/ai-voice-assistant',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-voice-assistant'
+      }
+    },
+    {
+      id: 'ai-code-generator',
+      title: 'Zion AI Code Generator Pro',
+      description: 'AI-powered code generation tool that writes, reviews, and optimizes code in multiple programming languages',
+      shortDescription: 'Generate, review, and optimize code with AI',
+      icon: '💻',
+      features: [
+        'Multi-language Code Generation',
+        'Code Review & Optimization',
+        'Bug Detection & Fixing',
+        'Documentation Generation',
+        'Test Case Creation',
+        'Code Refactoring',
+        'Security Analysis',
+        'Performance Optimization',
+        'API Integration',
+        'Custom Templates'
+      ],
+      pricing: {
+        basic: 99,
+        pro: 299,
+        enterprise: 999
+      },
+      benefits: [
+        'Faster development cycles',
+        'Reduced coding errors',
+        'Improved code quality',
+        'Automated testing',
+        'Better documentation',
+        'Security compliance'
+      ],
+      useCases: [
+        'Rapid prototyping',
+        'Code review automation',
+        'Bug fixing',
+        'Documentation generation',
+        'Test automation',
+        'Legacy code modernization'
+      ],
+      marketPrice: '$99 - $999/month',
+      link: '/ai-code-generator',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-code-generator'
+      }
+    },
+    {
+      id: 'ai-image-generator',
+      title: 'Zion AI Image Generator Pro',
+      description: 'Advanced AI image generation and editing platform with style transfer, upscaling, and creative tools',
+      shortDescription: 'Create stunning images with AI technology',
+      icon: '🎨',
+      features: [
+        'Text-to-Image Generation',
+        'Style Transfer',
+        'Image Upscaling',
+        'Background Removal',
+        'Object Detection',
+        'Image Enhancement',
+        'Batch Processing',
+        'API Integration',
+        'Custom Model Training',
+        'Commercial License'
+      ],
+      pricing: {
+        basic: 49,
+        pro: 149,
+        enterprise: 499
+      },
+      benefits: [
+        'Unlimited creativity',
+        'Professional quality',
+        'Time savings',
+        'Cost reduction',
+        'Scalable production',
+        'Commercial rights'
+      ],
+      useCases: [
+        'Marketing materials',
+        'Product photography',
+        'Social media content',
+        'Website graphics',
+        'Print materials',
+        'Creative projects'
+      ],
+      marketPrice: '$49 - $499/month',
+      link: '/ai-image-generator',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-image-generator'
+      }
+    },
+    {
+      id: 'ai-translator',
+      title: 'Zion AI Translator Pro',
+      description: 'Advanced AI translation service with 100+ languages, real-time translation, and context-aware accuracy',
+      shortDescription: 'Professional AI translation in 100+ languages',
+      icon: '🌐',
+      features: [
+        '100+ Language Support',
+        'Real-time Translation',
+        'Context-aware Accuracy',
+        'Document Translation',
+        'Voice Translation',
+        'Website Localization',
+        'API Integration',
+        'Custom Dictionaries',
+        'Quality Assurance',
+        'Bulk Processing'
+      ],
+      pricing: {
+        basic: 29,
+        pro: 99,
+        enterprise: 399
+      },
+      benefits: [
+        'Global communication',
+        'Accurate translations',
+        'Real-time processing',
+        'Cost-effective',
+        'Scalable solution',
+        'Professional quality'
+      ],
+      useCases: [
+        'Website localization',
+        'Document translation',
+        'Customer support',
+        'E-commerce expansion',
+        'Content marketing',
+        'International business'
+      ],
+      marketPrice: '$29 - $399/month',
+      link: '/ai-translator',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-translator'
+      }
+    }
+  ],
+  // New IT Services
+  newITServices: [
+    {
+      id: 'blockchain-solutions',
+      title: 'Blockchain Development Solutions',
+      description: 'Comprehensive blockchain development services including smart contracts, DeFi, NFTs, and enterprise blockchain solutions',
+      shortDescription: 'Build secure blockchain applications and smart contracts',
+      icon: '⛓️',
+      features: [
+        'Smart Contract Development',
+        'DeFi Platform Development',
+        'NFT Marketplace Creation',
+        'Enterprise Blockchain',
+        'Cryptocurrency Wallets',
+        'Token Development',
+        'Blockchain Integration',
+        'Security Audits',
+        'Consensus Mechanisms',
+        'Cross-chain Solutions'
+      ],
+      pricing: {
+        basic: 10000,
+        pro: 50000,
+        enterprise: 200000
+      },
+      benefits: [
+        'Decentralized solutions',
+        'Enhanced security',
+        'Transparent operations',
+        'Reduced intermediaries',
+        'Global accessibility',
+        'Immutable records'
+      ],
+      useCases: [
+        'Supply chain tracking',
+        'Digital identity',
+        'Financial services',
+        'Healthcare records',
+        'Voting systems',
+        'Asset tokenization'
+      ],
+      marketPrice: '$10,000 - $200,000',
+      link: '/blockchain-solutions',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/blockchain-solutions'
+      }
+    },
+    {
+      id: 'iot-solutions',
+      title: 'IoT Development Solutions',
+      description: 'End-to-end IoT development services including device connectivity, data analytics, and smart system integration',
+      shortDescription: 'Connect and manage IoT devices with smart solutions',
+      icon: '📡',
+      features: [
+        'IoT Device Development',
+        'Sensor Integration',
+        'Data Analytics Platform',
+        'Real-time Monitoring',
+        'Edge Computing',
+        'Cloud Integration',
+        'Mobile Applications',
+        'Dashboard Development',
+        'Predictive Maintenance',
+        'Security Implementation'
+      ],
+      pricing: {
+        basic: 15000,
+        pro: 75000,
+        enterprise: 300000
+      },
+      benefits: [
+        'Operational efficiency',
+        'Real-time insights',
+        'Predictive maintenance',
+        'Cost reduction',
+        'Improved safety',
+        'Data-driven decisions'
+      ],
+      useCases: [
+        'Smart manufacturing',
+        'Environmental monitoring',
+        'Asset tracking',
+        'Energy management',
+        'Healthcare monitoring',
+        'Smart cities'
+      ],
+      marketPrice: '$15,000 - $300,000',
+      link: '/iot-solutions',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/iot-solutions'
+      }
+    },
+    {
+      id: 'devops-automation',
+      title: 'DevOps & Automation Solutions',
+      description: 'Complete DevOps transformation with CI/CD pipelines, infrastructure automation, and monitoring solutions',
+      shortDescription: 'Automate and optimize your development workflow',
+      icon: '⚙️',
+      features: [
+        'CI/CD Pipeline Setup',
+        'Infrastructure as Code',
+        'Container Orchestration',
+        'Monitoring & Alerting',
+        'Security Scanning',
+        'Performance Optimization',
+        'Disaster Recovery',
+        'Multi-cloud Deployment',
+        'Team Training',
+        '24/7 Support'
+      ],
+      pricing: {
+        basic: 5000,
+        pro: 25000,
+        enterprise: 100000
+      },
+      benefits: [
+        'Faster deployments',
+        'Reduced errors',
+        'Improved reliability',
+        'Cost optimization',
+        'Better collaboration',
+        'Scalable infrastructure'
+      ],
+      useCases: [
+        'Application deployment',
+        'Infrastructure management',
+        'Quality assurance',
+        'Security compliance',
+        'Performance monitoring',
+        'Team productivity'
+      ],
+      marketPrice: '$5,000 - $100,000',
+      link: '/devops-automation',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/devops-automation'
+      }
+    },
+    {
+      id: 'api-development',
+      title: 'API Development & Integration',
+      description: 'Custom API development, third-party integrations, and API management solutions for seamless data flow',
+      shortDescription: 'Build robust APIs and integrate with third-party services',
+      icon: '🔌',
+      features: [
+        'RESTful API Development',
+        'GraphQL Implementation',
+        'Third-party Integrations',
+        'API Documentation',
+        'Rate Limiting',
+        'Authentication & Security',
+        'API Testing',
+        'Performance Optimization',
+        'Monitoring & Analytics',
+        'Version Management'
+      ],
+      pricing: {
+        basic: 3000,
+        pro: 15000,
+        enterprise: 75000
+      },
+      benefits: [
+        'Seamless integrations',
+        'Improved efficiency',
+        'Better data flow',
+        'Enhanced security',
+        'Scalable architecture',
+        'Developer-friendly'
+      ],
+      useCases: [
+        'System integration',
+        'Mobile app backends',
+        'E-commerce platforms',
+        'Data synchronization',
+        'Third-party services',
+        'Microservices architecture'
+      ],
+      marketPrice: '$3,000 - $75,000',
+      link: '/api-development',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/api-development'
+      }
+    }
+  ],
+  // New Micro SaaS Services
+  newMicroSaas: [
+    {
+      id: 'ai-chatbot-builder',
+      title: 'Zion AI Chatbot Builder Pro',
+      description: 'No-code AI chatbot builder with advanced natural language processing and multi-platform deployment',
+      shortDescription: 'Build intelligent chatbots without coding',
+      icon: '🤖',
+      features: [
+        'No-code Builder',
+        'Multi-platform Deployment',
+        'Natural Language Processing',
+        'Custom Training',
+        'Analytics Dashboard',
+        'Integration APIs',
+        'Multi-language Support',
+        'Voice Integration',
+        'A/B Testing',
+        'White-label Options'
+      ],
+      pricing: {
+        basic: 39,
+        pro: 99,
+        enterprise: 299
+      },
+      benefits: [
+        'No coding required',
+        'Quick deployment',
+        '24/7 customer support',
+        'Scalable solution',
+        'Cost-effective',
+        'Easy customization'
+      ],
+      useCases: [
+        'Customer support',
+        'Lead generation',
+        'Sales qualification',
+        'FAQ automation',
+        'Appointment booking',
+        'E-commerce assistance'
+      ],
+      marketPrice: '$39 - $299/month',
+      link: '/ai-chatbot-builder',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-chatbot-builder'
+      }
+    },
+    {
+      id: 'ai-form-builder',
+      title: 'Zion AI Form Builder Pro',
+      description: 'Intelligent form builder with AI-powered field suggestions, validation, and analytics',
+      shortDescription: 'Create smart forms with AI assistance',
+      icon: '📝',
+      features: [
+        'Drag & Drop Builder',
+        'AI Field Suggestions',
+        'Smart Validation',
+        'Conditional Logic',
+        'Analytics Dashboard',
+        'Integration APIs',
+        'Multi-step Forms',
+        'File Uploads',
+        'Payment Integration',
+        'White-label Options'
+      ],
+      pricing: {
+        basic: 19,
+        pro: 49,
+        enterprise: 149
+      },
+      benefits: [
+        'Easy form creation',
+        'Better user experience',
+        'Higher conversion rates',
+        'Data insights',
+        'Time savings',
+        'Professional forms'
+      ],
+      useCases: [
+        'Lead generation',
+        'Customer feedback',
+        'Event registration',
+        'Survey collection',
+        'Contact forms',
+        'Order forms'
+      ],
+      marketPrice: '$19 - $149/month',
+      link: '/ai-form-builder',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-form-builder'
+      }
+    },
+    {
+      id: 'ai-analytics-dashboard',
+      title: 'Zion AI Analytics Dashboard Pro',
+      description: 'AI-powered analytics dashboard with predictive insights, automated reporting, and custom visualizations',
+      shortDescription: 'Get AI-powered insights from your data',
+      icon: '📊',
+      features: [
+        'AI-Powered Insights',
+        'Automated Reporting',
+        'Custom Visualizations',
+        'Real-time Data',
+        'Predictive Analytics',
+        'Data Integration',
+        'Mobile Dashboard',
+        'Export Options',
+        'Team Collaboration',
+        'API Access'
+      ],
+      pricing: {
+        basic: 59,
+        pro: 149,
+        enterprise: 499
+      },
+      benefits: [
+        'Data-driven decisions',
+        'Automated insights',
+        'Time savings',
+        'Better performance',
+        'Competitive advantage',
+        'Scalable analytics'
+      ],
+      useCases: [
+        'Business intelligence',
+        'Performance monitoring',
+        'Customer analytics',
+        'Financial reporting',
+        'Marketing analytics',
+        'Operational insights'
+      ],
+      marketPrice: '$59 - $499/month',
+      link: '/ai-analytics-dashboard',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-analytics-dashboard'
+      }
+    },
+    {
+      id: 'ai-document-processor',
+      title: 'Zion AI Document Processor Pro',
+      description: 'Intelligent document processing with OCR, data extraction, and automated workflow management',
+      shortDescription: 'Process documents intelligently with AI',
+      icon: '📄',
+      features: [
+        'OCR Technology',
+        'Data Extraction',
+        'Document Classification',
+        'Automated Workflows',
+        'Batch Processing',
+        'API Integration',
+        'Cloud Storage',
+        'Security Features',
+        'Custom Templates',
+        'Analytics Dashboard'
+      ],
+      pricing: {
+        basic: 79,
+        pro: 199,
+        enterprise: 599
+      },
+      benefits: [
+        'Automated processing',
+        'Reduced manual work',
+        'Improved accuracy',
+        'Faster processing',
+        'Cost savings',
+        'Scalable solution'
+      ],
+      useCases: [
+        'Invoice processing',
+        'Contract analysis',
+        'Data entry automation',
+        'Document management',
+        'Compliance checking',
+        'Record digitization'
+      ],
+      marketPrice: '$79 - $599/month',
+      link: '/ai-document-processor',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-document-processor'
+      }
+    },
+    {
+      id: 'ai-video-generator',
+      title: 'Zion AI Video Generator Pro',
+      description: 'AI-powered video creation platform with automated editing, voice synthesis, and multi-format export',
+      shortDescription: 'Create professional videos with AI technology',
+      icon: '🎬',
+      features: [
+        'Text-to-Video Generation',
+        'Automated Editing',
+        'Voice Synthesis',
+        'Multiple Formats',
+        'Template Library',
+        'Brand Customization',
+        'Batch Processing',
+        'API Integration',
+        'Cloud Rendering',
+        'Commercial License'
+      ],
+      pricing: {
+        basic: 99,
+        pro: 299,
+        enterprise: 999
+      },
+      benefits: [
+        'Professional quality',
+        'Time savings',
+        'Cost reduction',
+        'Unlimited creativity',
+        'Scalable production',
+        'Easy customization'
+      ],
+      useCases: [
+        'Marketing videos',
+        'Training content',
+        'Social media posts',
+        'Product demos',
+        'Educational content',
+        'Brand storytelling'
+      ],
+      marketPrice: '$99 - $999/month',
+      link: '/ai-video-generator',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-video-generator'
+      }
+    },
+    {
+      id: 'ai-seo-optimizer',
+      title: 'Zion AI SEO Optimizer Pro',
+      description: 'Advanced SEO optimization tool with AI-powered content analysis, keyword research, and ranking predictions',
+      shortDescription: 'Optimize your website with AI-powered SEO',
+      icon: '🔍',
+      features: [
+        'AI Content Analysis',
+        'Keyword Research',
+        'Ranking Predictions',
+        'Competitor Analysis',
+        'Technical SEO Audit',
+        'Content Optimization',
+        'Link Building',
+        'Performance Tracking',
+        'Automated Reports',
+        'API Integration'
+      ],
+      pricing: {
+        basic: 49,
+        pro: 129,
+        enterprise: 399
+      },
+      benefits: [
+        'Higher search rankings',
+        'Increased organic traffic',
+        'Better content quality',
+        'Competitive advantage',
+        'Time savings',
+        'Data-driven optimization'
+      ],
+      useCases: [
+        'Website optimization',
+        'Content marketing',
+        'E-commerce SEO',
+        'Local SEO',
+        'Technical SEO',
+        'Competitive analysis'
+      ],
+      marketPrice: '$49 - $399/month',
+      link: '/ai-seo-optimizer',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-seo-optimizer'
+      }
+    }
   ]
 };
