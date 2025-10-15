@@ -5,156 +5,112 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// More comprehensive fixes for remaining syntax errors
-const fixes = [
-  // Fix missing spaces in CSS classes
-  {
-    pattern: /bg-gradient-to-rfrom-/g,
-    replacement: 'bg-gradient-to-r from-'
-  },
-  {
-    pattern: /w-8h-8/g,
-    replacement: 'w-8 h-8'
-  },
-  {
-    pattern: /text-white py-20/g,
-    replacement: 'text-white py-20'
-  },
-  
-  // Fix array syntax issues
-  {
-    pattern: /const\s+services\s*=\s*\[\s*\{/g,
-    replacement: 'const services = [\n    {'
-  },
-  {
-    pattern: /const\s+services\s*=\s*\[\s*$/gm,
-    replacement: 'const services = [\n    {'
-  },
-  
-  // Fix missing closing braces in objects
-  {
-    pattern: /icon:\s*<[^>]+>,\s*\{/g,
-    replacement: (match) => {
-      return match.replace(/,\s*\{/, ',\n      title:')
-    }
-  },
-  
-  // Fix malformed array structure
-  {
-    pattern: /const\s+services\s*=\s*\[\s*\]\s*\{/g,
-    replacement: 'const services = [\n    {'
-  },
-  
-  // Fix missing closing braces and brackets
-  {
-    pattern: /description:\s*'[^']*',\s*\{/g,
-    replacement: (match) => {
-      return match.replace(/,\s*\{/, ',\n    },\n    {')
-    }
-  },
-  
-  // Fix duplicate imports
-  {
-    pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'[^']+';\s*import\s*{\s*\1\s*}\s*from\s*'[^']+';/g,
-    replacement: (match, imports) => {
-      return `import { ${imports} } from 'lucide-react';`
-    }
-  },
-  
-  // Fix missing closing tags
-  {
-    pattern: /<section[^>]*>\s*<div[^>]*>\s*<div[^>]*>\s*<h1[^>]*>[^<]*<\/h1>\s*<p[^>]*>[^<]*<\/p>\s*<Link[^>]*>[^<]*<\/Link>\s*<\/div>\s*<\/div>\s*$/gm,
-    replacement: (match) => {
-      return match + '\n      </section>'
-    }
-  }
+// Files to fix
+const filesToFix = [
+  'app/ai-analytics-dashboard-pro/page.tsx',
+  'app/ai-code-assistant-pro/page.tsx',
+  'app/ai-cybersecurity-platform/page.tsx',
+  'app/ai-database-solutions/page.tsx',
+  'app/ai-ecommerce-platform/page.tsx'
 ];
 
-function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Apply fixes
-    fixes.forEach(fix => {
-      const originalContent = content;
-      if (typeof fix.replacement === 'function') {
-        content = content.replace(fix.pattern, fix.replacement);
-      } else {
-        content = content.replace(fix.pattern, fix.replacement);
-      }
-      if (content !== originalContent) {
-        modified = true;
-      }
+// Fix React import issues
+function fixReactImports(content) {
+  // Remove unused React import if only useState and useEffect are used
+  if (content.includes('import React, { useState, useEffect }') && !content.includes('<React.')) {
+    content = content.replace('import React, { useState, useEffect }', 'import { useState, useEffect }');
+  }
+  return content;
+}
+
+// Fix unused imports by checking which icons are actually used
+function fixUnusedImports(content) {
+  // Common patterns to check for icon usage
+  const iconUsagePatterns = [
+    /<[A-Z][a-zA-Z]+ className="w-[0-9]+ h-[0-9]+"/g,
+    /<[A-Z][a-zA-Z]+ className="w-[0-9]+ h-[0-9]+ mr-[0-9]+"/g,
+    /<[A-Z][a-zA-Z]+ className="w-[0-9]+ h-[0-9]+ ml-[0-9]+"/g,
+    /<[A-Z][a-zA-Z]+ className="w-[0-9]+ h-[0-9]+ text-[a-zA-Z0-9-]+"/g
+  ];
+  
+  // Extract all used icon names
+  const usedIcons = new Set();
+  iconUsagePatterns.forEach(pattern => {
+    const matches = content.match(pattern);
+    if (matches) {
+      matches.forEach(match => {
+        const iconName = match.match(/<([A-Z][a-zA-Z]+)/);
+        if (iconName) {
+          usedIcons.add(iconName[1]);
+        }
+      });
+    }
+  });
+  
+  // Find the import statement and replace it
+  const importMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
+  if (importMatch) {
+    const currentImports = importMatch[1].split(',').map(imp => imp.trim());
+    const usedImports = currentImports.filter(imp => {
+      const iconName = imp.trim();
+      return usedIcons.has(iconName) || iconName.includes('ArrowRight') || iconName.includes('CheckCircle') || iconName.includes('Star') || iconName.includes('Phone') || iconName.includes('Mail') || iconName.includes('Play');
     });
     
-    // Additional specific fixes for common patterns
-    // Fix missing closing braces in services arrays
-    if (content.includes('const services = [')) {
-      const servicesMatch = content.match(/const services = \[([\s\S]*?)\]/);
-      if (servicesMatch) {
-        let servicesContent = servicesMatch[1];
-        // Count opening and closing braces
-        const openBraces = (servicesContent.match(/\{/g) || []).length;
-        const closeBraces = (servicesContent.match(/\}/g) || []).length;
-        
-        if (openBraces > closeBraces) {
-          // Add missing closing braces
-          const missingBraces = openBraces - closeBraces;
-          servicesContent += '\n  }'.repeat(missingBraces);
-          content = content.replace(/const services = \[([\s\S]*?)\]/g, `const services = [${servicesContent}]`);
-          modified = true;
-        }
-      }
-    }
-    
-    // Fix missing closing brackets
-    if (content.includes('const services = [') && !content.includes('const services = [\n    {')) {
-      content = content.replace(/const services = \[\s*\]\s*\{/g, 'const services = [\n    {');
-      modified = true;
-    }
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-function findTsxFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files.push(...findTsxFiles(fullPath));
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      files.push(fullPath);
+    if (usedImports.length > 0) {
+      const newImport = `import { \n  ${usedImports.join(',\n  ')}\n} from 'lucide-react';`;
+      content = content.replace(importMatch[0], newImport);
     }
   }
   
-  return files;
+  return content;
 }
 
-// Find all TSX files in the app directory
-const appDir = path.join(__dirname, 'app');
-const tsxFiles = findTsxFiles(appDir);
+// Fix duplicate imports
+function fixDuplicateImports(content) {
+  // Remove duplicate ArrowRight imports
+  const lines = content.split('\n');
+  const seen = new Set();
+  const filteredLines = lines.filter(line => {
+    const trimmed = line.trim();
+    if (trimmed.includes('ArrowRight') && seen.has('ArrowRight')) {
+      return false;
+    }
+    if (trimmed.includes('ArrowRight')) {
+      seen.add('ArrowRight');
+    }
+    return true;
+  });
+  return filteredLines.join('\n');
+}
 
-console.log(`Found ${tsxFiles.length} TSX files to check`);
+// Fix unused variables
+function fixUnusedVariables(content) {
+  // Remove unused activeTab and setActiveTab
+  content = content.replace(/const \[activeTab, setActiveTab\] = useState\('overview'\);/g, '');
+  content = content.replace(/\/\/ const \[activeTab, setActiveTab\] = useState\('overview'\);/g, '');
+  
+  return content;
+}
 
-let fixedCount = 0;
-tsxFiles.forEach(file => {
-  if (fixFile(file)) {
-    fixedCount++;
+// Process each file
+filesToFix.forEach(filePath => {
+  const fullPath = path.join(__dirname, filePath);
+  
+  if (fs.existsSync(fullPath)) {
+    let content = fs.readFileSync(fullPath, 'utf8');
+    
+    // Apply fixes
+    content = fixReactImports(content);
+    content = fixUnusedImports(content);
+    content = fixDuplicateImports(content);
+    content = fixUnusedVariables(content);
+    
+    // Clean up empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    fs.writeFileSync(fullPath, content);
+    console.log(`Fixed ${filePath}`);
   }
 });
 
-console.log(`Fixed ${fixedCount} files`);
+console.log('Fixed all remaining errors');

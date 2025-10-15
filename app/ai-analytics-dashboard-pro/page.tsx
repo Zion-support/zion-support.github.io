@@ -1,25 +1,23 @@
 
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  BarChart3, 
-  Globe, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Phone,
-  Mail,
-  Play,
-  Activity,
-  Shield,
+  BarChart3,
   Brain,
+  CheckCircle,
+  Globe,
+  Mail,
+  Phone,
+  Play,
+  Shield,
+  Star,
   Target,
   Zap
 } from 'lucide-react';
 
 const AiAnalyticsDashboardProPage = () => {
   const [isVisible, setIsVisible] = useState(false);
-  // const [activeTab, setActiveTab] = useState('overview');
+  // 
 
   useEffect(() => {
     setIsVisible(true);
@@ -308,7 +306,6 @@ const AiAnalyticsDashboardProPage = () => {
                       }`}
                     >
                       Get Started
-                      <ArrowRight className="w-4 h-4 ml-2" />
                     </a>
                   </div>
                 ))}

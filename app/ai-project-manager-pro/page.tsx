@@ -1,40 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Calendar, 
-  Users, 
-  Target, 
-  BarChart3, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Brain, 
-  CheckCircle, 
-  ArrowRight, 
+  Users,
+  Target,
+  Zap,
+  Shield,
+  Brain,
+  CheckCircle,
+  ArrowRight,
   Star,
   Phone,
   Mail,
-  MapPin,
-  Download,
-  Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Eye,
-  Filter,
-  Clock,
-  PieChart,
-  LineChart,
-  Activity,
-  TrendingUp,
-  AlertTriangle,
-  CheckSquare,
-  FileText,
-  MessageSquare,
-  GitBranch,
-  Timer,
-  Award,
-  DollarSign
+  Play
 } from 'lucide-react';
 
 const AiProjectManagerProPage: React.FC = () => {

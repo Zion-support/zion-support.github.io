@@ -1,11 +1,10 @@
 
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Code, 
-  Globe, 
-  CheckCircle, 
-  ArrowRight, 
+  Code,
+  Globe,
+  CheckCircle,
   Star,
   Phone,
   Mail,
@@ -16,14 +15,13 @@ import {
   FileText,
   Cpu,
   Cloud,
-  TrendingUp,
   Brain,
   Database
 } from 'lucide-react';
 
 const AiCodeAssistantProPage = () => {
   const [isVisible, setIsVisible] = useState(false);
-  // const [activeTab, setActiveTab] = useState('overview');
+  // 
 
   useEffect(() => {
     setIsVisible(true);
@@ -421,7 +419,6 @@ const AiCodeAssistantProPage = () => {
                       }`}
                     >
                       Get Started
-                      <ArrowRight className="w-4 h-4 ml-2" />
                     </a>
                   </div>
                 ))}

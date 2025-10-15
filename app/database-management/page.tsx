@@ -1,4 +1,4 @@
-import { Database } from 'lucide-react';
+
 import { Helmet } from "react-helmet-async";
 
 const DatabaseManagementPage: React.FC = () => {

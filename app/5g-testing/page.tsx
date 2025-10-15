@@ -52,6 +52,5 @@ const FiveGTesting: React.FC = () => {
   );
 };
 
-export default __5gTestingPage;
-
+export default FiveGTesting;
 
