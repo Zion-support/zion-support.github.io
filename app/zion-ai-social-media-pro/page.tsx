@@ -2,10 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  CheckSquare, 
+  Share2, 
+  TrendingUp, 
   Users, 
-  Calendar, 
-  BarChart3, 
+  Heart, 
+  MessageCircle, 
   Zap, 
   Shield, 
   Globe,
@@ -15,165 +16,183 @@ import {
   Award,
   Clock,
   Brain,
-  Target,
-  FileText,
+  BarChart3,
+  Calendar,
+  Hash,
+  Image,
+  Video,
   Smartphone,
   Monitor,
+  Target,
   Eye,
   Lock,
   Send,
   ThumbsUp,
   Share,
   Bookmark,
-  TrendingUp,
-  Activity,
-  PieChart,
-  LineChart,
-  Database,
-  Settings,
-  Bell,
-  MessageSquare,
-  Upload,
-  Download
+  ShoppingCart,
+  FileText
 } from 'lucide-react';
 
-const ZionAIProjectManagerProPage: React.FC = () => {
+const ZionAISocialMediaProPage: React.FC = () => {
   const features = [
     {
-      title: 'AI Task Management',
-      description: 'Intelligent task prioritization and assignment based on team capacity and project deadlines.',
-      icon: <CheckSquare className="w-6 h-6" />,
-      benefits: ['Smart prioritization', 'Auto-assignment', 'Deadline tracking', 'Progress monitoring']
+      title: 'AI Content Generation',
+      description: 'Generate engaging posts, captions, and hashtags using advanced AI algorithms.',
+      icon: <Brain className="w-6 h-6" />,
+      benefits: ['Auto-generated posts', 'Trending hashtags', 'Content optimization', 'Brand voice matching']
     },
     {
-      title: 'Team Collaboration',
-      description: 'Seamless communication and collaboration tools for distributed teams.',
-      icon: <Users className="w-6 h-6" />,
-      benefits: ['Real-time chat', 'Video conferencing', 'File sharing', 'Comment system']
+      title: 'Multi-Platform Management',
+      description: 'Manage all your social media accounts from one unified dashboard.',
+      icon: <Globe className="w-6 h-6" />,
+      benefits: ['Facebook, Instagram, Twitter', 'LinkedIn, TikTok, YouTube', 'Unified posting', 'Cross-platform analytics']
     },
     {
-      title: 'Project Planning',
-      description: 'AI-powered project planning with Gantt charts, milestones, and resource allocation.',
+      title: 'Smart Scheduling',
+      description: 'AI-powered optimal posting times based on your audience engagement patterns.',
       icon: <Calendar className="w-6 h-6" />,
-      benefits: ['Gantt charts', 'Milestone tracking', 'Resource planning', 'Timeline optimization']
+      benefits: ['Optimal timing', 'Bulk scheduling', 'Time zone management', 'Content calendar']
     },
     {
       title: 'Advanced Analytics',
-      description: 'Comprehensive project analytics and reporting to track performance and productivity.',
+      description: 'Comprehensive insights into your social media performance and audience behavior.',
       icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ['Performance metrics', 'Productivity insights', 'Budget tracking', 'Custom reports']
+      benefits: ['Engagement metrics', 'Audience insights', 'ROI tracking', 'Competitor analysis']
     },
     {
-      title: 'Time Tracking',
-      description: 'Automatic time tracking with AI-powered insights and productivity analysis.',
-      icon: <Clock className="w-6 h-6" />,
-      benefits: ['Auto time tracking', 'Productivity analysis', 'Billable hours', 'Time reports']
+      title: 'Automated Engagement',
+      description: 'AI-powered responses and engagement to keep your audience active and engaged.',
+      icon: <MessageCircle className="w-6 h-6" />,
+      benefits: ['Auto-responses', 'Comment management', 'Mention tracking', 'Sentiment analysis']
     },
     {
-      title: 'Document Management',
-      description: 'Centralized document storage with version control and collaborative editing.',
-      icon: <FileText className="w-6 h-6" />,
-      benefits: ['Version control', 'Collaborative editing', 'Document templates', 'Search & filter']
+      title: 'Visual Content Tools',
+      description: 'Create stunning visuals and videos with our built-in design tools.',
+      icon: <Image className="w-6 h-6" />,
+      benefits: ['Template library', 'AI image generation', 'Video editing', 'Brand consistency']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$19',
+      price: '$29',
       period: '/month',
-      description: 'Perfect for small teams and freelancers',
+      description: 'Perfect for small businesses and influencers',
       features: [
-        'Up to 5 projects',
-        '10 team members',
-        'Basic task management',
-        'Standard reporting',
+        '3 social media accounts',
+        'Basic AI content generation',
+        'Standard scheduling',
+        'Basic analytics',
         'Email support',
-        '5GB storage'
+        '1 user included'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$49',
+      price: '$79',
       period: '/month',
-      description: 'Advanced features for growing teams',
+      description: 'Advanced features for growing businesses',
       features: [
-        'Unlimited projects',
-        '50 team members',
-        'AI-powered features',
+        '10 social media accounts',
+        'Advanced AI features',
+        'Smart scheduling',
         'Advanced analytics',
         'Priority support',
-        '100GB storage',
-        'API access',
-        'Custom integrations'
+        '5 users included',
+        'Team collaboration',
+        'White-label options'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$99',
+      price: '$199',
       period: '/month',
       description: 'Complete solution for large organizations',
       features: [
-        'Everything in Professional',
-        'Unlimited team members',
-        'Advanced security',
-        'Custom reporting',
+        'Unlimited accounts',
+        'All AI features',
+        'Custom integrations',
+        'Advanced reporting',
         'Dedicated support',
-        'Unlimited storage',
-        'White-label options',
-        'On-premise deployment'
+        'Unlimited users',
+        'API access',
+        'Custom branding'
       ],
       popular: false
     }
   ];
 
-  const projectTypes = [
+  const socialPlatforms = [
     {
-      title: 'Software Development',
-      description: 'Agile project management for software development teams',
-      icon: <Monitor className="w-8 h-8" />,
-      features: ['Sprint planning', 'Bug tracking', 'Code review', 'Release management']
+      name: 'Facebook',
+      icon: <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">f</div>,
+      features: ['Page management', 'Story posting', 'Live streaming', 'Ad management']
     },
     {
-      title: 'Marketing Campaigns',
-      description: 'Plan and execute marketing campaigns with precision',
-      icon: <Target className="w-8 h-8" />,
-      features: ['Campaign planning', 'Content calendar', 'Asset management', 'Performance tracking']
+      name: 'Instagram',
+      icon: <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white font-bold">IG</div>,
+      features: ['Feed posts', 'Stories', 'Reels', 'IGTV']
     },
     {
-      title: 'Event Planning',
-      description: 'Organize events from conception to execution',
-      icon: <Calendar className="w-8 h-8" />,
-      features: ['Timeline management', 'Vendor coordination', 'Budget tracking', 'Guest management']
+      name: 'Twitter',
+      icon: <div className="w-8 h-8 bg-blue-400 rounded-lg flex items-center justify-center text-white font-bold">T</div>,
+      features: ['Tweet scheduling', 'Thread management', 'Trend tracking', 'Mention monitoring']
     },
     {
-      title: 'Product Launch',
-      description: 'Coordinate complex product launches across teams',
-      icon: <Zap className="w-8 h-8" />,
-      features: ['Launch planning', 'Cross-team coordination', 'Milestone tracking', 'Go-to-market strategy']
+      name: 'LinkedIn',
+      icon: <div className="w-8 h-8 bg-blue-700 rounded-lg flex items-center justify-center text-white font-bold">in</div>,
+      features: ['Company pages', 'Article posting', 'Event promotion', 'B2B networking']
+    },
+    {
+      name: 'TikTok',
+      icon: <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center text-white font-bold">TT</div>,
+      features: ['Video scheduling', 'Trend analysis', 'Hashtag research', 'Creator tools']
+    },
+    {
+      name: 'YouTube',
+      icon: <div className="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center text-white font-bold">YT</div>,
+      features: ['Video management', 'Thumbnail creation', 'SEO optimization', 'Analytics']
     }
   ];
 
-  const integrations = [
-    { name: 'Slack', icon: <MessageSquare className="w-6 h-6" />, description: 'Team communication' },
-    { name: 'Google Workspace', icon: <Globe className="w-6 h-6" />, description: 'Document collaboration' },
-    { name: 'Microsoft 365', icon: <FileText className="w-6 h-6" />, description: 'Office integration' },
-    { name: 'GitHub', icon: <Database className="w-6 h-6" />, description: 'Code repository' },
-    { name: 'Jira', icon: <CheckSquare className="w-6 h-6" />, description: 'Issue tracking' },
-    { name: 'Trello', icon: <Target className="w-6 h-6" />, description: 'Kanban boards' },
-    { name: 'Asana', icon: <Activity className="w-6 h-6" />, description: 'Task management' },
-    { name: 'Notion', icon: <Bookmark className="w-6 h-6" />, description: 'Documentation' }
+  const useCases = [
+    {
+      title: 'E-commerce Marketing',
+      description: 'Drive sales with product showcases, customer testimonials, and promotional campaigns.',
+      icon: <ShoppingCart className="w-8 h-8" />,
+      metrics: ['Conversion Rate', 'Click-through Rate', 'Sales Attribution', 'Customer Engagement']
+    },
+    {
+      title: 'Brand Awareness',
+      description: 'Build brand recognition and reach new audiences with strategic content.',
+      icon: <Target className="w-8 h-8" />,
+      metrics: ['Brand Mentions', 'Reach Growth', 'Follower Growth', 'Share of Voice']
+    },
+    {
+      title: 'Customer Support',
+      description: 'Provide excellent customer service through social media channels.',
+      icon: <MessageCircle className="w-8 h-8" />,
+      metrics: ['Response Time', 'Resolution Rate', 'Customer Satisfaction', 'Issue Tracking']
+    },
+    {
+      title: 'Content Marketing',
+      description: 'Establish thought leadership and drive traffic to your website.',
+      icon: <FileText className="w-8 h-8" />,
+      metrics: ['Website Traffic', 'Lead Generation', 'Content Engagement', 'Authority Building']
+    }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Project Manager Pro - AI-Powered Project Management | Zion Tech Group</title>
-        <meta name="description" content="Streamline your projects with Zion AI Project Manager Pro. AI-powered task management, team collaboration, and advanced analytics for modern teams." />
-        <meta name="keywords" content="project management, AI task management, team collaboration, project planning, time tracking, project analytics, team productivity" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-project-manager-pro" />
+        <title>Zion AI Social Media Pro - AI-Powered Social Media Management | Zion Tech Group</title>
+        <meta name="description" content="Transform your social media presence with Zion AI Social Media Pro. AI-powered content generation, multi-platform management, and advanced analytics for modern businesses." />
+        <meta name="keywords" content="social media management, AI content generation, social media automation, social media analytics, social media scheduling, social media marketing" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-social-media-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -181,17 +200,17 @@ const ZionAIProjectManagerProPage: React.FC = () => {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <CheckSquare className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Project Management</span>
+              <Share2 className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Social Media Management</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Zion AI Project Manager <span className="text-cyan-400">Pro</span>
+              Zion AI Social Media <span className="text-cyan-400">Pro</span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your project management with AI-powered insights, intelligent task assignment, 
-              and seamless team collaboration. Deliver projects faster and more efficiently.
+              Revolutionize your social media strategy with AI-powered content generation, multi-platform management, 
+              and advanced analytics. Grow your audience and engagement like never before.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -214,60 +233,55 @@ const ZionAIProjectManagerProPage: React.FC = () => {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
-                <div className="text-gray-300 text-sm">Faster Delivery</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">6+</div>
+                <div className="text-gray-300 text-sm">Platforms</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
-                <div className="text-gray-300 text-sm">On-Time Delivery</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Integrations</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">500%</div>
+                <div className="text-gray-300 text-sm">Engagement Boost</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">AI Support</div>
+                <div className="text-gray-300 text-sm">AI Automation</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-cyan-400 mb-2">2min</div>
+                <div className="text-gray-300 text-sm">Setup Time</div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Project Types Section */}
+        {/* Social Platforms Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Perfect for Any Project Type
+                Manage All Your Social Platforms
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From software development to marketing campaigns, our platform adapts to your workflow.
+                Connect and manage all your social media accounts from one powerful dashboard.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {projectTypes.map((type, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {socialPlatforms.map((platform, index) => (
                 <div
                   key={index}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-white/20 rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 group"
+                  className="bg-slate-800/50 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:border-cyan-500/40 transition-all duration-300 group text-center"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    {type.icon}
+                  <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    {platform.icon}
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                    {type.title}
+                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    {platform.name}
                   </h3>
                   
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {type.description}
-                  </p>
-                  
-                  <ul className="space-y-2">
-                    {type.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-2 text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
+                  <ul className="space-y-1">
+                    {platform.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="text-xs text-gray-300">
+                        {feature}
                       </li>
                     ))}
                   </ul>
@@ -282,10 +296,10 @@ const ZionAIProjectManagerProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powerful Project Management Features
+                Powerful AI-Driven Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to plan, execute, and deliver successful projects.
+                Everything you need to create, schedule, and optimize your social media content.
               </p>
             </div>
             
@@ -321,35 +335,43 @@ const ZionAIProjectManagerProPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Integrations Section */}
+        {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Seamless Integrations
+                Perfect for Every Business
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Connect with your favorite tools and streamline your workflow.
+                Whether you're a small business or enterprise, our platform scales with your needs.
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-              {integrations.map((integration, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {useCases.map((useCase, index) => (
                 <div
                   key={index}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:border-cyan-500/40 transition-all duration-300 group text-center"
+                  className="bg-gradient-to-br from-slate-800/50 to-purple-900/50 border border-purple-500/30 rounded-xl p-8 hover:border-cyan-400/50 transition-all duration-300 group"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {integration.icon}
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    {useCase.icon}
                   </div>
                   
-                  <h3 className="text-sm font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {integration.name}
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                    {useCase.title}
                   </h3>
                   
-                  <p className="text-xs text-gray-300">
-                    {integration.description}
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {useCase.description}
                   </p>
+                  
+                  <div className="grid grid-cols-2 gap-4">
+                    {useCase.metrics.map((metric, metricIndex) => (
+                      <div key={metricIndex} className="text-center">
+                        <div className="text-cyan-400 font-semibold text-sm">{metric}</div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
@@ -364,7 +386,7 @@ const ZionAIProjectManagerProPage: React.FC = () => {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Start with our free trial and upgrade as your team grows. No hidden fees, cancel anytime.
+                Start with our free trial and upgrade as you grow. No hidden fees, cancel anytime.
               </p>
             </div>
             
@@ -426,10 +448,10 @@ const ZionAIProjectManagerProPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-cyan-900/30 to-purple-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Project Management?
+                Ready to Transform Your Social Media?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join thousands of teams already using Zion AI Project Manager Pro to deliver projects faster and more efficiently.
+                Join thousands of businesses already using Zion AI Social Media Pro to grow their audience and engagement.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -460,4 +482,4 @@ const ZionAIProjectManagerProPage: React.FC = () => {
   );
 };
 
-export default ZionAIProjectManagerProPage;
+export default ZionAISocialMediaProPage;

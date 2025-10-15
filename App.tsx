@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/accessibility-enhanced.css";
+import "./app/styles/responsive-enhanced.css";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
@@ -95,6 +96,19 @@ const ZionAIContractAnalyzerPage = React.lazy(() => import("./app/zion-ai-contra
 const ZionAISupplyChainOptimizerPage = React.lazy(() => import("./app/zion-ai-supply-chain-optimizer/page"));
 const ZionAITranslatorProPage = React.lazy(() => import("./app/zion-ai-translator-pro/page"));
 const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleaner/page"));
+
+// New Innovative Micro SAAS Services
+const ZionAIBusinessIntelligenceProPage = React.lazy(() => import("./app/zion-ai-business-intelligence-pro/page"));
+const ZionAISocialMediaProPage = React.lazy(() => import("./app/zion-ai-social-media-pro/page"));
+const ZionAIProjectManagerProPage = React.lazy(() => import("./app/zion-ai-project-manager-pro/page"));
+
+// New AI Services
+const AICybersecurityPlatformPage = React.lazy(() => import("./app/ai-cybersecurity-platform/page"));
+const AIDataAnalyticsPlatformPage = React.lazy(() => import("./app/ai-data-analytics-platform/page"));
+
+// New IT Services
+const CloudMigrationSolutionsPage = React.lazy(() => import("./app/cloud-migration-solutions/page"));
+const DevOpsConsultingServicesPage = React.lazy(() => import("./app/devops-consulting-services/page"));
 
 // Additional AI Services Pages
 const AIChatbotBuilderPage = React.lazy(() => import("./app/ai-chatbot-builder/page"));
@@ -229,6 +243,19 @@ function App() {
                                 <Route path="/zion-ai-supply-chain-optimizer" element={<ZionAISupplyChainOptimizerPage />} />
                                 <Route path="/zion-ai-translator-pro" element={<ZionAITranslatorProPage />} />
                                 <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
+
+                                {/* New Innovative Micro SAAS Services */}
+                                <Route path="/zion-ai-business-intelligence-pro" element={<ZionAIBusinessIntelligenceProPage />} />
+                                <Route path="/zion-ai-social-media-pro" element={<ZionAISocialMediaProPage />} />
+                                <Route path="/zion-ai-project-manager-pro" element={<ZionAIProjectManagerProPage />} />
+
+                                {/* New AI Services */}
+                                <Route path="/ai-cybersecurity-platform" element={<AICybersecurityPlatformPage />} />
+                                <Route path="/ai-data-analytics-platform" element={<AIDataAnalyticsPlatformPage />} />
+
+                                {/* New IT Services */}
+                                <Route path="/cloud-migration-solutions" element={<CloudMigrationSolutionsPage />} />
+                                <Route path="/devops-consulting-services" element={<DevOpsConsultingServicesPage />} />
 
                                 {/* Additional AI Services Routes */}
                                 <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />

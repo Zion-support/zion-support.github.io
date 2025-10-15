@@ -2,12 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  CheckSquare, 
-  Users, 
-  Calendar, 
   BarChart3, 
+  TrendingUp, 
+  PieChart, 
+  LineChart, 
   Zap, 
-  Shield, 
   Globe,
   ArrowRight,
   CheckCircle,
@@ -19,161 +18,165 @@ import {
   FileText,
   Smartphone,
   Monitor,
-  Eye,
-  Lock,
-  Send,
-  ThumbsUp,
-  Share,
-  Bookmark,
-  TrendingUp,
   Activity,
-  PieChart,
-  LineChart,
   Database,
   Settings,
   Bell,
   MessageSquare,
   Upload,
-  Download
+  Download,
+  Search,
+  Filter,
+  Users,
+  Key,
+  Bug,
+  Network,
+  Server,
+  Cloud,
+  HardDrive,
+  Eye,
+  Lock,
+  RefreshCw,
+  Play,
+  Pause,
+  Square
 } from 'lucide-react';
 
-const ZionAIProjectManagerProPage: React.FC = () => {
+const AIDataAnalyticsPlatformPage: React.FC = () => {
   const features = [
     {
-      title: 'AI Task Management',
-      description: 'Intelligent task prioritization and assignment based on team capacity and project deadlines.',
-      icon: <CheckSquare className="w-6 h-6" />,
-      benefits: ['Smart prioritization', 'Auto-assignment', 'Deadline tracking', 'Progress monitoring']
+      title: 'AI-Powered Insights',
+      description: 'Advanced machine learning algorithms automatically discover patterns and insights in your data.',
+      icon: <Brain className="w-6 h-6" />,
+      benefits: ['Pattern recognition', 'Anomaly detection', 'Predictive modeling', 'Automated insights']
     },
     {
-      title: 'Team Collaboration',
-      description: 'Seamless communication and collaboration tools for distributed teams.',
+      title: 'Real-Time Analytics',
+      description: 'Process and analyze data in real-time with instant visualizations and alerts.',
+      icon: <Activity className="w-6 h-6" />,
+      benefits: ['Live dashboards', 'Stream processing', 'Real-time alerts', 'Instant updates']
+    },
+    {
+      title: 'Advanced Visualizations',
+      description: 'Create stunning, interactive charts and graphs that tell your data story.',
+      icon: <PieChart className="w-6 h-6" />,
+      benefits: ['Interactive charts', 'Custom visualizations', '3D graphics', 'Mobile responsive']
+    },
+    {
+      title: 'Data Integration',
+      description: 'Connect to any data source with our comprehensive integration platform.',
+      icon: <Database className="w-6 h-6" />,
+      benefits: ['100+ connectors', 'API integration', 'Data transformation', 'ETL pipelines']
+    },
+    {
+      title: 'Collaborative Workspace',
+      description: 'Share insights and collaborate with your team in real-time.',
       icon: <Users className="w-6 h-6" />,
-      benefits: ['Real-time chat', 'Video conferencing', 'File sharing', 'Comment system']
+      benefits: ['Team sharing', 'Comment system', 'Version control', 'Access management']
     },
     {
-      title: 'Project Planning',
-      description: 'AI-powered project planning with Gantt charts, milestones, and resource allocation.',
-      icon: <Calendar className="w-6 h-6" />,
-      benefits: ['Gantt charts', 'Milestone tracking', 'Resource planning', 'Timeline optimization']
-    },
-    {
-      title: 'Advanced Analytics',
-      description: 'Comprehensive project analytics and reporting to track performance and productivity.',
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ['Performance metrics', 'Productivity insights', 'Budget tracking', 'Custom reports']
-    },
-    {
-      title: 'Time Tracking',
-      description: 'Automatic time tracking with AI-powered insights and productivity analysis.',
-      icon: <Clock className="w-6 h-6" />,
-      benefits: ['Auto time tracking', 'Productivity analysis', 'Billable hours', 'Time reports']
-    },
-    {
-      title: 'Document Management',
-      description: 'Centralized document storage with version control and collaborative editing.',
+      title: 'Automated Reporting',
+      description: 'Generate and distribute reports automatically with AI-powered insights.',
       icon: <FileText className="w-6 h-6" />,
-      benefits: ['Version control', 'Collaborative editing', 'Document templates', 'Search & filter']
+      benefits: ['Scheduled reports', 'Custom templates', 'Multi-format export', 'Email delivery']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$19',
+      price: '$149',
       period: '/month',
-      description: 'Perfect for small teams and freelancers',
+      description: 'Perfect for small teams getting started with analytics',
       features: [
-        'Up to 5 projects',
-        '10 team members',
-        'Basic task management',
-        'Standard reporting',
+        'Up to 5 data sources',
+        'Basic visualizations',
+        'Standard reports',
         'Email support',
-        '5GB storage'
+        '1GB data storage',
+        '5 users included'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$49',
+      price: '$399',
       period: '/month',
-      description: 'Advanced features for growing teams',
+      description: 'Advanced features for growing businesses',
       features: [
-        'Unlimited projects',
-        '50 team members',
-        'AI-powered features',
-        'Advanced analytics',
+        'Unlimited data sources',
+        'Advanced AI features',
+        'Custom dashboards',
         'Priority support',
-        '100GB storage',
+        '10GB data storage',
+        '25 users included',
         'API access',
-        'Custom integrations'
+        'White-label options'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$99',
+      price: '$799',
       period: '/month',
       description: 'Complete solution for large organizations',
       features: [
         'Everything in Professional',
-        'Unlimited team members',
+        'Dedicated account manager',
+        'Custom integrations',
+        'Unlimited data storage',
+        'Unlimited users',
         'Advanced security',
-        'Custom reporting',
-        'Dedicated support',
-        'Unlimited storage',
-        'White-label options',
-        'On-premise deployment'
+        'On-premise deployment',
+        '24/7 phone support'
       ],
       popular: false
     }
   ];
 
-  const projectTypes = [
+  const analyticsTypes = [
     {
-      title: 'Software Development',
-      description: 'Agile project management for software development teams',
-      icon: <Monitor className="w-8 h-8" />,
-      features: ['Sprint planning', 'Bug tracking', 'Code review', 'Release management']
+      title: 'Business Intelligence',
+      description: 'Transform raw data into actionable business insights',
+      icon: <TrendingUp className="w-8 h-8" />,
+      features: ['KPI tracking', 'Performance metrics', 'Trend analysis', 'Forecasting']
     },
     {
-      title: 'Marketing Campaigns',
-      description: 'Plan and execute marketing campaigns with precision',
+      title: 'Customer Analytics',
+      description: 'Understand customer behavior and preferences',
+      icon: <Users className="w-8 h-8" />,
+      features: ['Customer segmentation', 'Behavior analysis', 'Churn prediction', 'Lifetime value']
+    },
+    {
+      title: 'Marketing Analytics',
+      description: 'Measure and optimize your marketing campaigns',
       icon: <Target className="w-8 h-8" />,
-      features: ['Campaign planning', 'Content calendar', 'Asset management', 'Performance tracking']
+      features: ['Campaign performance', 'ROI analysis', 'Attribution modeling', 'A/B testing']
     },
     {
-      title: 'Event Planning',
-      description: 'Organize events from conception to execution',
-      icon: <Calendar className="w-8 h-8" />,
-      features: ['Timeline management', 'Vendor coordination', 'Budget tracking', 'Guest management']
-    },
-    {
-      title: 'Product Launch',
-      description: 'Coordinate complex product launches across teams',
-      icon: <Zap className="w-8 h-8" />,
-      features: ['Launch planning', 'Cross-team coordination', 'Milestone tracking', 'Go-to-market strategy']
+      title: 'Financial Analytics',
+      description: 'Monitor financial health and performance',
+      icon: <BarChart3 className="w-8 h-8" />,
+      features: ['Revenue analysis', 'Cost optimization', 'Budget tracking', 'Financial forecasting']
     }
   ];
 
-  const integrations = [
-    { name: 'Slack', icon: <MessageSquare className="w-6 h-6" />, description: 'Team communication' },
-    { name: 'Google Workspace', icon: <Globe className="w-6 h-6" />, description: 'Document collaboration' },
-    { name: 'Microsoft 365', icon: <FileText className="w-6 h-6" />, description: 'Office integration' },
-    { name: 'GitHub', icon: <Database className="w-6 h-6" />, description: 'Code repository' },
-    { name: 'Jira', icon: <CheckSquare className="w-6 h-6" />, description: 'Issue tracking' },
-    { name: 'Trello', icon: <Target className="w-6 h-6" />, description: 'Kanban boards' },
-    { name: 'Asana', icon: <Activity className="w-6 h-6" />, description: 'Task management' },
-    { name: 'Notion', icon: <Bookmark className="w-6 h-6" />, description: 'Documentation' }
+  const dataSources = [
+    { name: 'Google Analytics', icon: <Globe className="w-6 h-6" />, description: 'Web analytics data' },
+    { name: 'Salesforce', icon: <Users className="w-6 h-6" />, description: 'CRM data integration' },
+    { name: 'MySQL', icon: <Database className="w-6 h-6" />, description: 'Database connections' },
+    { name: 'Excel', icon: <FileText className="w-6 h-6" />, description: 'Spreadsheet data' },
+    { name: 'API', icon: <Network className="w-6 h-6" />, description: 'REST API integration' },
+    { name: 'Cloud Storage', icon: <Cloud className="w-6 h-6" />, description: 'Cloud data sources' }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Project Manager Pro - AI-Powered Project Management | Zion Tech Group</title>
-        <meta name="description" content="Streamline your projects with Zion AI Project Manager Pro. AI-powered task management, team collaboration, and advanced analytics for modern teams." />
-        <meta name="keywords" content="project management, AI task management, team collaboration, project planning, time tracking, project analytics, team productivity" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-project-manager-pro" />
+        <title>AI Data Analytics Platform - Advanced Business Intelligence | Zion Tech Group</title>
+        <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Advanced visualizations, real-time analytics, and machine learning for modern businesses." />
+        <meta name="keywords" content="data analytics, business intelligence, AI analytics, data visualization, predictive analytics, data insights, BI platform" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-data-analytics-platform" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -181,17 +184,17 @@ const ZionAIProjectManagerProPage: React.FC = () => {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <CheckSquare className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Project Management</span>
+              <BarChart3 className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Data Analytics</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Zion AI Project Manager <span className="text-cyan-400">Pro</span>
+              AI Data Analytics <span className="text-cyan-400">Platform</span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your project management with AI-powered insights, intelligent task assignment, 
-              and seamless team collaboration. Deliver projects faster and more efficiently.
+              Transform your data into actionable insights with our advanced AI-powered analytics platform. 
+              Discover patterns, predict trends, and make data-driven decisions with confidence.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -214,63 +217,54 @@ const ZionAIProjectManagerProPage: React.FC = () => {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
-                <div className="text-gray-300 text-sm">Faster Delivery</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">100+</div>
+                <div className="text-gray-300 text-sm">Data Sources</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
-                <div className="text-gray-300 text-sm">On-Time Delivery</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">50x</div>
+                <div className="text-gray-300 text-sm">Faster Insights</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Integrations</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
+                <div className="text-gray-300 text-sm">Uptime SLA</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">AI Support</div>
+                <div className="text-gray-300 text-sm">AI Processing</div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Project Types Section */}
+        {/* Data Sources Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Perfect for Any Project Type
+                Connect Any Data Source
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From software development to marketing campaigns, our platform adapts to your workflow.
+                Seamlessly integrate with your existing data sources and systems.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {projectTypes.map((type, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {dataSources.map((source, index) => (
                 <div
                   key={index}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-white/20 rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 group"
+                  className="bg-slate-800/50 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:border-cyan-500/40 transition-all duration-300 group text-center"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    {type.icon}
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    {source.icon}
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                    {type.title}
+                  <h3 className="text-sm font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                    {source.name}
                   </h3>
                   
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {type.description}
+                  <p className="text-xs text-gray-300">
+                    {source.description}
                   </p>
-                  
-                  <ul className="space-y-2">
-                    {type.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-2 text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               ))}
             </div>
@@ -282,10 +276,10 @@ const ZionAIProjectManagerProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powerful Project Management Features
+                Powerful Analytics Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to plan, execute, and deliver successful projects.
+                Everything you need to turn your data into strategic insights.
               </p>
             </div>
             
@@ -321,35 +315,44 @@ const ZionAIProjectManagerProPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Integrations Section */}
+        {/* Analytics Types Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Seamless Integrations
+                Analytics for Every Business Need
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Connect with your favorite tools and streamline your workflow.
+                Specialized analytics solutions for different business functions.
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-              {integrations.map((integration, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {analyticsTypes.map((type, index) => (
                 <div
                   key={index}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:border-cyan-500/40 transition-all duration-300 group text-center"
+                  className="bg-gradient-to-br from-slate-800/50 to-purple-900/50 border border-purple-500/30 rounded-xl p-8 hover:border-cyan-400/50 transition-all duration-300 group"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {integration.icon}
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    {type.icon}
                   </div>
                   
-                  <h3 className="text-sm font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {integration.name}
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                    {type.title}
                   </h3>
                   
-                  <p className="text-xs text-gray-300">
-                    {integration.description}
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {type.description}
                   </p>
+                  
+                  <ul className="space-y-2">
+                    {type.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center space-x-2 text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                        <span className="text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
@@ -361,10 +364,10 @@ const ZionAIProjectManagerProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Choose Your Plan
+                Choose Your Analytics Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Start with our free trial and upgrade as your team grows. No hidden fees, cancel anytime.
+                Flexible pricing options to fit your data analytics needs.
               </p>
             </div>
             
@@ -426,10 +429,10 @@ const ZionAIProjectManagerProPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-cyan-900/30 to-purple-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Project Management?
+                Ready to Transform Your Data?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join thousands of teams already using Zion AI Project Manager Pro to deliver projects faster and more efficiently.
+                Join thousands of businesses already using our AI analytics platform to make data-driven decisions.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -460,4 +463,4 @@ const ZionAIProjectManagerProPage: React.FC = () => {
   );
 };
 
-export default ZionAIProjectManagerProPage;
+export default AIDataAnalyticsPlatformPage;
