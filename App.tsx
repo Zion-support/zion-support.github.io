@@ -21,6 +21,9 @@ const ContactPage = React.lazy(() => import('./app/contact/page'));
 const PrivacyPolicyPage = React.lazy(() => import('./app/privacy-policy/page'));
 const TermsPage = React.lazy(() => import('./app/terms/page'));
 const SlaPage = React.lazy(() => import('./app/sla/page'));
+const FiveGSolutionsPage = React.lazy(() => import('./app/5g-solutions/page'));
+const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'));
+const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'));
 
 const App: React.FC = () => {
   // Initialize performance monitoring
@@ -47,6 +50,9 @@ const App: React.FC = () => {
                 <Route path="/micro-saas" element={<MicroSaasPage />} />
                 <Route path="/ai-services" element={<AiServicesPage />} />
                 <Route path="/it-services" element={<ItServicesPage />} />
+                <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                <Route path="/cloud-services" element={<CloudServicesPage />} />
+                <Route path="/cybersecurity" element={<CybersecurityPage />} />
                 <Route path="/pricing" element={<PricingPage />} />
                 <Route path="/portfolio" element={<PortfolioPage />} />
                 <Route path="/news" element={<NewsPage />} />

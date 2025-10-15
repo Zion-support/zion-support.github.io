@@ -23,31 +23,45 @@ const Footer: React.FC = () => {
     {
       title: 'Micro SAAS Solutions',
       services: [
-        { name: 'AI Content Writer', path: '/micro-saas' },
-        { name: 'Project Manager', path: '/micro-saas' },
-        { name: 'Email Marketing', path: '/micro-saas' },
-        { name: 'Analytics Dashboard', path: '/micro-saas' },
-        { name: 'Document Processor', path: '/micro-saas' }
+        { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro' },
+        { name: 'AI Content Generation Pro', path: '/ai-content-generation-pro' },
+        { name: 'AI Project Manager', path: '/ai-project-manager' },
+        { name: 'AI Customer Support', path: '/ai-customer-support' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing' },
+        { name: 'AI Expense Tracker', path: '/ai-expense-tracker' }
       ]
     },
     {
       title: 'AI Services',
       services: [
-        { name: 'AI Automation', path: '/ai-services' },
-        { name: 'Machine Learning', path: '/ai-services' },
-        { name: 'Computer Vision', path: '/ai-services' },
-        { name: 'Natural Language Processing', path: '/ai-services' },
-        { name: 'Predictive Analytics', path: '/ai-services' }
+        { name: 'AI Business Intelligence Pro', path: '/ai-business-intelligence-pro' },
+        { name: 'AI Code Assistant Pro', path: '/ai-code-assistant-pro' },
+        { name: 'AI Content Moderation Pro', path: '/ai-content-moderation-pro' },
+        { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro' },
+        { name: 'AI Agricultural Intelligence Pro', path: '/ai-agricultural-intelligence-pro' },
+        { name: 'AI 3D Generation', path: '/ai-3d-generation' }
       ]
     },
     {
       title: 'IT Services',
       services: [
-        { name: 'Cloud Migration', path: '/it-services' },
-        { name: 'Cybersecurity', path: '/it-services' },
-        { name: 'DevOps', path: '/it-services' },
-        { name: 'Mobile Development', path: '/it-services' },
-        { name: 'Web Development', path: '/it-services' }
+        { name: 'Cloud Migration Services', path: '/cloud-migration-services' },
+        { name: 'Cybersecurity Consulting', path: '/cybersecurity-consulting' },
+        { name: 'Database Solutions', path: '/database-solutions' },
+        { name: 'DevOps Solutions', path: '/devops-solutions' },
+        { name: 'Mobile App Development', path: '/mobile-app-development' },
+        { name: 'Web Development', path: '/web-development' }
+      ]
+    },
+    {
+      title: '5G Solutions',
+      services: [
+        { name: '5G Implementation', path: '/5g-implementation' },
+        { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
+        { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
+        { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions' },
+        { name: '5G Edge Computing', path: '/5g-edge-computing' },
+        { name: '5G Private Networks', path: '/5g-private-networks' }
       ]
     }
   ];
@@ -91,7 +105,8 @@ const Footer: React.FC = () => {
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered micro SAAS solutions, IT services, and innovative technology solutions. 
-              We help businesses transform and scale with cutting-edge technology.
+              We help businesses transform and scale with cutting-edge technology. Visit us at 
+              <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors font-semibold"> ziontechgroup.com</a>
             </p>
             
             {/* Contact Info */}
@@ -119,19 +134,19 @@ const Footer: React.FC = () => {
 
             {/* Social Links */}
             <div className="flex space-x-4 mt-6">
-              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Facebook className="w-6 h-6" />
               </a>
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Twitter className="w-6 h-6" />
               </a>
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="https://instagram.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://instagram.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Instagram className="w-6 h-6" />
               </a>
             </div>

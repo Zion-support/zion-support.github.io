@@ -22,9 +22,24 @@ const Header: React.FC = memo(() => {
       name: 'Services', 
       path: '#',
       dropdown: [
-        { name: 'Micro SAAS Solutions', path: '/micro-saas' },
-        { name: 'AI Services', path: '/ai-services' },
-        { name: 'IT Services', path: '/it-services' }
+        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: 'Ready-to-use software solutions' },
+        { name: 'AI Services', path: '/ai-services', description: 'Revolutionary AI solutions' },
+        { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT solutions' },
+        { name: '5G Solutions', path: '/5g-solutions', description: 'Next-generation 5G infrastructure' },
+        { name: 'Cloud Services', path: '/cloud-services', description: 'Scalable cloud solutions' },
+        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Advanced security solutions' }
+      ]
+    },
+    { 
+      name: 'Solutions', 
+      path: '#',
+      dropdown: [
+        { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro', description: 'From $299/month' },
+        { name: 'AI Content Generation Pro', path: '/ai-content-generation-pro', description: 'From $199/month' },
+        { name: 'AI Project Manager', path: '/ai-project-manager', description: 'From $99/month' },
+        { name: 'Cloud Migration Services', path: '/cloud-migration-services', description: 'From $2,999' },
+        { name: '5G Implementation', path: '/5g-implementation', description: 'From $5,999' },
+        { name: 'Cybersecurity Consulting', path: '/cybersecurity-consulting', description: 'From $2,999' }
       ]
     },
     { name: 'About', path: '/about' },
@@ -38,7 +53,9 @@ const Header: React.FC = memo(() => {
         { name: 'About Us', path: '/about' },
         { name: 'Our Team', path: '/about#team' },
         { name: 'Careers', path: '/careers' },
-        { name: 'News & Updates', path: '/news' }
+        { name: 'News & Updates', path: '/news' },
+        { name: 'Case Studies', path: '/case-studies' },
+        { name: 'Testimonials', path: '/testimonials' }
       ]
     },
     { name: 'Contact', path: '/contact' }
@@ -65,11 +82,11 @@ const Header: React.FC = memo(() => {
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4" />
-              <span>+1 302 464 0950</span>
+              <a href="tel:+13024640950" className="hover:text-cyan-300 transition-colors">+1 302 464 0950</a>
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4" />
-              <span>kleber@ziontechgroup.com</span>
+              <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-300 transition-colors">kleber@ziontechgroup.com</a>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="w-4 h-4" />
@@ -118,17 +135,29 @@ const Header: React.FC = memo(() => {
                     </Link>
                   )}
                   
-                  {/* Dropdown Menu */}
+                  {/* Enhanced Dropdown Menu */}
                   {item.dropdown && activeDropdown === item.name && (
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                    <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-2xl shadow-2xl border border-cyan-500/20 py-4 z-50">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.name}
                           to={dropdownItem.path}
-                          className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                          className="group block px-6 py-3 text-white hover:bg-cyan-500/10 hover:text-cyan-300 transition-all duration-200 border-l-2 border-transparent hover:border-cyan-400"
                           onClick={() => setActiveDropdown(null)}
                         >
-                          {dropdownItem.name}
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <div className="font-medium group-hover:text-cyan-300 transition-colors">
+                                {dropdownItem.name}
+                              </div>
+                              {dropdownItem.description && (
+                                <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                                  {dropdownItem.description}
+                                </div>
+                              )}
+                            </div>
+                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-200" />
+                          </div>
                         </Link>
                       ))}
                     </div>
