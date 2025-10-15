@@ -11,6 +11,10 @@ const Footer: React.FC = () => {
             <p className="text-gray-300 mb-4">
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
+            <div className="text-sm text-gray-400 mb-4">
+              <p>Email: contact@ziontechgroup.com</p>
+              <p>Phone: +1 (555) 123-4567</p>
+            </div>
             <div className="flex space-x-4">
               <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
                 <span className="sr-only">Website</span>
@@ -24,6 +28,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-md font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
+              <li><Link to="/services" className="text-gray-300 hover:text-white">All Services</Link></li>
               <li><Link to="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
               <li><Link to="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
               <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-white">Cloud Infrastructure</Link></li>
@@ -35,11 +40,12 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-md font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-300 hover:text-white">About</Link></li>
-              <li><Link to="/team" className="text-gray-300 hover:text-white">Team</Link></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-white">About Us</Link></li>
+              <li><Link to="/team" className="text-gray-300 hover:text-white">Our Team</Link></li>
               <li><Link to="/careers" className="text-gray-300 hover:text-white">Careers</Link></li>
               <li><Link to="/partnerships" className="text-gray-300 hover:text-white">Partnerships</Link></li>
               <li><Link to="/case-studies" className="text-gray-300 hover:text-white">Case Studies</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
             </ul>
           </div>
           
@@ -48,9 +54,17 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li><Link to="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
               <li><Link to="/api-docs" className="text-gray-300 hover:text-white">API Docs</Link></li>
-              <li><Link to="/help" className="text-gray-300 hover:text-white">Help</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
+              <li><Link to="/help" className="text-gray-300 hover:text-white">Help Center</Link></li>
               <li><Link to="/accessibility" className="text-gray-300 hover:text-white">Accessibility</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Legal</h4>
+            <ul className="space-y-2">
+              <li><Link to="/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="text-gray-300 hover:text-white">Terms of Service</Link></li>
+              <li><Link to="/cookies" className="text-gray-300 hover:text-white">Cookie Policy</Link></li>
             </ul>
           </div>
         </div>
@@ -58,7 +72,7 @@ const Footer: React.FC = () => {
         <div className="mt-8 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-center md:text-left text-gray-300">
-              © 2024 Zion Tech Group. All rights reserved.
+              © 2025 Zion Tech Group. All rights reserved. | <a href="https://ziontechgroup.com" className="hover:text-white">ziontechgroup.com</a>
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-gray-300 hover:text-white text-sm">Privacy Policy</Link>
