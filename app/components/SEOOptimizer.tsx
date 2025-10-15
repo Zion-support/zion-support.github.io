@@ -1,5 +1,4 @@
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
-
+import React from 'react';
 
 const SEOOptimizer: React.FC = () => {
   useEffect(() => {

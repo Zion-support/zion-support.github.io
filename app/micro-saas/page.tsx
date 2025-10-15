@@ -1,4 +1,3 @@
-import { CheckCircle, Filter, Star, TrendingUp, Users, Zap } from 'lucide-react';
 
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -156,7 +155,7 @@ const MicroSaasPage: React.FC = () => {
       description: "Growing community of satisfied customers",
     },
     {
-      icon: TrendingUp,
+      icon: 
       value: "99.9%",
       label: "Uptime",
       description: "Reliable service you can count on",
@@ -334,7 +333,7 @@ const MicroSaasPage: React.FC = () => {
                 Why Choose Our Micro SaaS Solutions?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We&apos;ve designed our micro SaaS products to be simple,
+                We've designed our micro SaaS products to be simple,
                 powerful, and accessible to businesses of all sizes.
               </p>
             </div>
@@ -398,7 +397,7 @@ const MicroSaasPage: React.FC = () => {
                   Scale & Grow
                 </h3>
                 <p className="text-gray-300">
-                  Upgrade when you&apos;re ready and scale your usage as your
+                  Upgrade when you're ready and scale your usage as your
                   business grows.
                 </p>
               </div>

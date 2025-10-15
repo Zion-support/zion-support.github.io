@@ -1,5 +1,3 @@
-import React from 'react';
-import { AlertTriangle, Send } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 interface ErrorFeedbackProps {
@@ -18,8 +16,7 @@ const EnhancedErrorFeedback: React.FC<ErrorFeedbackProps> = ({
       onReport(error);
     } else {
       // Default behavior: log to console
-      console.error('Error reported:', error);
-    }
+          }
   };
 
   return (

@@ -54,6 +54,5 @@ const FiveGMaintenance: React.FC = () => {
   );
 };
 
-export default __5gMaintenancePage;
-
+export default FiveGMaintenance;
 

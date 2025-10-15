@@ -1,4 +1,3 @@
-import { Network } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 
 const NetworkSecurityPage: React.FC = () => {

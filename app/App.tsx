@@ -1,5 +1,4 @@
-import { Network, Router, Shield } from 'lucide-react';
-import { Suspense, lazy } from 'react';
+import { Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 

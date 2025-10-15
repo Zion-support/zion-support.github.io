@@ -1,21 +1,7 @@
 
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  BarChart3, 
-  Globe, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Phone,
-  Mail,
-  Play,
-  Activity,
-  Shield,
-  Brain,
-  Target,
-  Zap
-} from 'lucide-react';
+import { ArrowRight, Brain, Shield, Zap, Globe, Target, CheckCircle, Star, Phone, Play, Mail, BarChart3 } from 'lucide-react';
 
 const AiAnalyticsDashboardProPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -342,7 +328,7 @@ const AiAnalyticsDashboardProPage = () => {
                       ))}
                     </div>
                     <p className="text-gray-300 mb-6 leading-relaxed">
-                      &ldquo;{testimonial.content}&rdquo;
+                      "{testimonial.content}"
                     </p>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>

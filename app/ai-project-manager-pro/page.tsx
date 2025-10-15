@@ -1,41 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Calendar, 
-  Users, 
-  Target, 
-  BarChart3, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Brain, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  Download,
-  Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Eye,
-  Filter,
-  Clock,
-  PieChart,
-  LineChart,
-  Activity,
-  TrendingUp,
-  AlertTriangle,
-  CheckSquare,
-  FileText,
-  MessageSquare,
-  GitBranch,
-  Timer,
-  Award,
-  DollarSign
-} from 'lucide-react';
+import { ArrowRight, GitBranch, Timer, DollarSign, Brain, Shield, Users, Zap, Target, CheckCircle, Star, Phone, Play, Mail, BarChart3 } from 'lucide-react';
 
 const AiProjectManagerProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -406,7 +371,7 @@ const AiProjectManagerProPage: React.FC = () => {
                       ))}
                     </div>
                     <p className="text-gray-300 mb-6 leading-relaxed">
-                      &ldquo;{testimonial.content}&rdquo;
+                      "{testimonial.content}"
                     </p>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>

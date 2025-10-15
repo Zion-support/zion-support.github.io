@@ -1,42 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Wifi, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Brain, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  Download,
-  Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Eye,
-  Filter,
-  Calendar,
-  Target,
-  Smartphone,
-  Cloud,
-  Lock,
-  Users,
-  Award,
-  TrendingUp,
-  Cpu,
-  Database,
-  BarChart3,
-  Activity,
-  Radio,
-  Antenna,
-  Router,
-  Server,
-  Network
-} from 'lucide-react';
+import { Wifi, ArrowRight, Shield, Globe, CheckCircle, Star, Phone, Play, Mail, BarChart3, Cpu, Activity, Cloud, Smartphone, Settings } from 'lucide-react';
 
 const FiveGImplementationPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -466,7 +430,7 @@ const FiveGImplementationPage: React.FC = () => {
                       ))}
                     </div>
                     <p className="text-gray-300 mb-6 leading-relaxed">
-                      &ldquo;{testimonial.content}&rdquo;
+                      "{testimonial.content}"
                     </p>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
@@ -487,7 +451,7 @@ const FiveGImplementationPage: React.FC = () => {
                   Ready for the 5G Revolution?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Don&apos;t get left behind. Start your 5G transformation today and unlock the full potential of next-generation wireless technology.
+                  Don't get left behind. Start your 5G transformation today and unlock the full potential of next-generation wireless technology.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -514,6 +478,5 @@ const FiveGImplementationPage: React.FC = () => {
   );
 };
 
-export default __5gImplementationPage;
-
+export default FiveGImplementationPage;
 

@@ -1,69 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Heart, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Brain, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  Download,
-  Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Eye,
-  Filter,
-  Target,
-  Users,
-  Award,
-  TrendingUp,
-  Cpu,
-  Database,
-  BarChart3,
-  Activity,
-  Clock,
-  FileText,
-  Send,
-  ThumbsUp,
-  ThumbsDown,
-  AlertCircle,
-  CheckSquare,
-  XCircle,
-  PieChart,
-  LineChart,
-  TrendingDown,
-  Calculator,
-  CreditCard,
-  Banknote,
-  Wallet,
-  Receipt,
-  ChartBar,
-  Percent,
-  Coins,
-  Building2,
-  Briefcase,
-  PiggyBank,
-  HandCoins,
-  Stethoscope,
-  Pill,
-  Microscope,
-  UserCheck,
-  Clipboard,
-  Thermometer,
-  Bandage,
-  Syringe,
-  Hospital,
-  Ambulance,
-  Shield as ShieldIcon,
-  Lock,
-  AlertTriangle
-} from 'lucide-react';
+import { ArrowRight, Briefcase, Hand Stethoscope, Pill, Microscope, UserCheck, Thermometer, Bandage, Syringe, Hospital, Ambulance, Brain, Shield, Zap, CheckCircle, Star, Phone, Play, Mail, BarChart3, Heart } from 'lucide-react';
 
 const AiHealthcareSolutionsProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -495,7 +432,7 @@ const AiHealthcareSolutionsProPage: React.FC = () => {
                       ))}
                     </div>
                     <p className="text-gray-300 mb-6 leading-relaxed">
-                      &ldquo;{testimonial.content}&rdquo;
+                      "{testimonial.content}"
                     </p>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>

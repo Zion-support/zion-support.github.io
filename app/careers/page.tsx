@@ -1,4 +1,4 @@
-import { Brain, CheckCircle, Clock, Heart, MapPin, Rocket, Star, Users, Zap } from 'lucide-react';
+import { Rocket, Brain, Users, Zap, CheckCircle, Star, MapPin, Clock, Heart } from 'lucide-react';
 
 import { Helmet } from "react-helmet-async";
 
@@ -169,7 +169,7 @@ const CareersPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Build the future of technology with us. We&apos;re looking for
+              Build the future of technology with us. We're looking for
               passionate individuals to join our mission of advancing AI,
               quantum computing, and autonomous systems.
             </p>
@@ -350,7 +350,7 @@ const CareersPage: React.FC = () => {
                     Growth Mindset
                   </h3>
                   <p className="text-gray-300">
-                    We invest in our team&apos;s development and provide
+                    We invest in our team's development and provide
                     opportunities to learn and grow.
                   </p>
                 </div>
@@ -364,11 +364,11 @@ const CareersPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
               <h2 className="text-3xl font-bold text-white mb-6">
-                Don&apos;tSee Your Dream Job?
+                Don'tSee Your Dream Job?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                We&apos;re always looking for exceptional talent. Send us your
-                resume and let us know how you&apos;d like to contribute to our
+                We're always looking for exceptional talent. Send us your
+                resume and let us know how you'd like to contribute to our
                 mission.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

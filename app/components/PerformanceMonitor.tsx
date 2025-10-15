@@ -1,5 +1,4 @@
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
-
+import React from 'react';
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
@@ -7,11 +6,9 @@ const PerformanceMonitor: React.FC = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (entry.entryType === "navigation") {
-          console.warn("Navigation timing:", entry);
-        }
+                  }
         if (entry.entryType === "paint") {
-          console.warn("Paint timing:", entry);
-        }
+                  }
       }
     });
 

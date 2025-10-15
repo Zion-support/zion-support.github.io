@@ -16,9 +16,7 @@ export const performanceOptimizations = {
         setTimeout(() => inThrottle = false, limit)
       }
     }) as T
-  },
-  
-  memoize: <T extends (...args: unknown[]) => unknown>(func: T): T => {
+  }ize: <T extends (...args: unknown[]) => unknown>(func: T): T => {
     const cache = new Map()
     return ((...args: unknown[]) => {
       const key = JSON.stringify(args)

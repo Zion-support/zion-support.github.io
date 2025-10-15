@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import {} from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const ServiceWorkerRegistration: React.FC = () => {
@@ -7,11 +7,9 @@ const ServiceWorkerRegistration: React.FC = () => {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
           .then((registration) => {
-            console.log('SW registered: ', registration);
-          })
+                      })
           .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
-          });
+                      });
       });
     }
   }, []);

@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
+import React from 'react';
 import { Helmet } from "react-helmet-async";
 
 const AiNeuralMemoryAssistantPage = () => {
@@ -11,7 +11,7 @@ const AiNeuralMemoryAssistantPage = () => {
           name="description"
           content="Professional ai neural memory assistant solutions and services"
         />
-        <meta name="keywords" content="ai, neural, memory, assistant" />
+        <meta name="keywords" content="ai, neuralry, assistant" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">

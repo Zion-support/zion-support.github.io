@@ -1,4 +1,4 @@
-import { Activity, AlertTriangle, ArrowRight, BarChart3, CheckCircle, Database, Zap } from 'lucide-react';
+import { ArrowRight, Zap, CheckCircle, BarChart3, Activity } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const PerformanceMonitoringPage: React.FC = () => {

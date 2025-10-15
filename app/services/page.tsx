@@ -1,6 +1,5 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Zap, Shield, Globe, Brain, Cloud, Database, Smartphone, Lock, ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, Brain, Shield, Zap, Globe, CheckCircle, Database, Cloud, Smartphone, Lock } from 'lucide-react';
 
 // Service categories
 const serviceCategories = [
@@ -263,7 +262,7 @@ const ServicesPage: React.FC = () => {
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Let&apos;s discuss how our AI and IT solutions can accelerate your success and drive innovation.
+                Let's discuss how our AI and IT solutions can accelerate your success and drive innovation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">

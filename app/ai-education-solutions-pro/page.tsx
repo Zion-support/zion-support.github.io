@@ -1,85 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  GraduationCap, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Brain, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  Download,
-  Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Eye,
-  Filter,
-  Target,
-  Users,
-  Award,
-  TrendingUp,
-  Cpu,
-  Database,
-  BarChart3,
-  Activity,
-  Clock,
-  FileText,
-  Send,
-  ThumbsUp,
-  ThumbsDown,
-  AlertCircle,
-  CheckSquare,
-  XCircle,
-  PieChart,
-  LineChart,
-  TrendingDown,
-  Calculator,
-  CreditCard,
-  Banknote,
-  Wallet,
-  Receipt,
-  ChartBar,
-  Percent,
-  Coins,
-  Building2,
-  Briefcase,
-  PiggyBank,
-  HandCoins,
-  BookOpen,
-  PenTool,
-  Video,
-  Headphones,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Laptop,
-  Wifi,
-  Lock,
-  User,
-  Users as UsersIcon,
-  Award as AwardIcon,
-  Trophy,
-  Target as TargetIcon,
-  Lightbulb,
-  Book,
-  Clipboard,
-  Calendar,
-  MessageSquare,
-  Share2,
-  Download as DownloadIcon,
-  Upload,
-  Edit,
-  Trash2,
-  Plus,
-  Minus,
-  Check,
-  X
-} from 'lucide-react';
+import { GraduationCap, ArrowRight, Briefcase, Hand BookOpen, Monitor, Book, Plus, Minus, Check, X, Brain, Shield, Zap, CheckCircle, Star, Phone, Play, Mail, BarChart3 } from 'lucide-react';
 
 const AiEducationSolutionsProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -511,7 +432,7 @@ const AiEducationSolutionsProPage: React.FC = () => {
                       ))}
                     </div>
                     <p className="text-gray-300 mb-6 leading-relaxed">
-                      &ldquo;{testimonial.content}&rdquo;
+                      "{testimonial.content}"
                     </p>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>

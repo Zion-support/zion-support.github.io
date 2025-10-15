@@ -55,11 +55,9 @@ class Logger {
     // Console logging
     switch (level) {
       case 'error':
-        console.error(formattedMessage);
-        break;
+                break;
       case 'warn':
-        console.warn(formattedMessage);
-        break;
+                break;
       case 'info':
         console.info(formattedMessage);
         break;

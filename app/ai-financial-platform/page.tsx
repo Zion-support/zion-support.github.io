@@ -1,50 +1,27 @@
-import { ArrowRight } from 'lucide-react';
-import React, { useState, useEffect } from 'react';
+import { ArrowRight, Brain, Shield, CheckCircle, Star, Phone, Play, Mail, BarChart3, Eye, CreditCard, TrendingUp } from 'lucide-react';
+import React, {  useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   DollarSign, 
-  Zap, 
   Shield, 
-  Globe, 
   Brain, 
   CheckCircle, 
   ArrowRight, 
   Star,
   Phone,
   Mail,
-  MapPin,
-  Download,
   Play,
-  Pause,
-  RefreshCw,
   Settings,
   Eye,
-  Filter,
-  Calendar,
-  Target,
   CreditCard,
-  TrendingUp,
-  TrendingDown,
-  Users,
-  Award,
-  Clock,
+  TrendingUps,
   Smartphone,
   Search,
   FileText,
   BarChart3,
-  Activity,
-  Lock,
-  Cpu,
-  Database,
-  PieChart,
-  LineChart,
   Calculator,
-  Wallet,
-  Banknote,
   Receipt,
-  PiggyBank,
-  ChartLine,
-  Coins
+  ChartLine
 } from 'lucide-react';
 
 const AiFinancialPlatformPage: React.FC = () => {

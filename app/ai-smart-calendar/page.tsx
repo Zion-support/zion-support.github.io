@@ -1,4 +1,3 @@
-import { Calendar } from 'lucide-react';
 
 import { Helmet } from "react-helmet-async";
 

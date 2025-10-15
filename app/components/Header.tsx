@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Mail, MapPin, Zap, Brain, Code, Cloud, Wifi, Users, ChevronDown } from 'lucide-react';
+import { Menu, X, Code, Wifi, ChevronDown, Brain, Users, Zap, Phone, Mail, Cloud, MapPin } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

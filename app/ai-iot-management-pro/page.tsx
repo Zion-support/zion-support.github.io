@@ -1,79 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Wifi, 
-  Cpu, 
-  Database, 
-  Zap, 
-  Brain, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  Download,
-  Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Filter,
-  Clock,
-  PieChart,
-  LineChart,
-  Activity,
-  Target,
-  Calendar,
-  FileText,
-  Bot,
-  Search,
-  BookOpen,
-  Lightbulb,
-  ThumbsUp,
-  MessageCircle,
-  HelpCircle,
-  Hash,
-  AtSign,
-  Camera,
-  Video,
-  Image,
-  Link,
-  Hashtag,
-  Percent,
-  Graph,
-  PiggyBank,
-  Wallet,
-  Banknote,
-  TrendingDown,
-  Globe,
-  Users,
-  Server,
-  Network,
-  Key,
-  Fingerprint,
-  Scan,
-  Bug,
-  Virus,
-  Cloud,
-  HardDrive,
-  Smartphone,
-  Tablet,
-  Monitor,
-  Printer,
-  Router,
-  Sensor,
-  Thermometer,
-  Droplets,
-  Wind,
-  Sun,
-  Moon,
-  Home,
-  Building,
-  Car,
-  Truck,
-  Plane,
-  Ship
-} from 'lucide-react';
+import { Wifi, ArrowRight, Bot, BookOpen, HelpCircle, Hash, AtSign, Camera, Image, Link, Hashtag, Graph, Fingerprint, Scan, Bug, Virus, HardDrive, Monitor, Printer, Sensor, Thermometer, Droplets, Wind, Sun, Moon, Home, Building, Car, Plane, Ship, Brain, Shield, Zap, CheckCircle, Star, Phone, Play, Mail, Cpu, Database, Activity, Smartphone } from 'lucide-react';
 
 const AiIotManagementProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -520,7 +447,7 @@ const AiIotManagementProPage: React.FC = () => {
                       ))}
                     </div>
                     <p className="text-gray-300 mb-6 leading-relaxed">
-                      &ldquo;{testimonial.content}&rdquo;
+                      "{testimonial.content}"
                     </p>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>

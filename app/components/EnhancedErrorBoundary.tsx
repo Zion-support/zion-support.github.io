@@ -1,5 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw } from 'lucide-react';
+import { RefreshCw } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 interface Props {
@@ -24,8 +24,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    if (this.props.onError) {
+        if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
   }
