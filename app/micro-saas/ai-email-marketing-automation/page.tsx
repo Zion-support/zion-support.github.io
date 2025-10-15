@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function AiemailmarketingautomationPage() {
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function AiEmailMarketingAutomationPage() {
+>>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
   return (
     <>
       <Helmet>
         <title>Ai Email Marketing Automation - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Ai Email Marketing Automation services and solutions from Zion Tech Group." />
       </Helmet>
       
@@ -26,8 +34,23 @@ export default function AiemailmarketingautomationPage() {
               </button>
             </div>
           </div>
+=======
+        <meta name="description" content="Professional ai email marketing automation solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Ai Email Marketing Automation</h1>
+          <p className="text-lg text-gray-600">
+            Professional ai email marketing automation solutions for modern businesses.
+          </p>
+>>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
         </div>
       </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624

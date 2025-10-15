@@ -1,13 +1,21 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function FiveGSolutionsPage() {
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function FiveGsolutionsPagegSolutionsPage() {
+>>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
   return (
     <>
       <Helmet>
         <title>5g Solutions - Zion Tech Group</title>
-        <meta name="description" content="5g Solutions services and solutions from Zion Tech Group." />
+        <meta name="description" content="Professional 5g solutions solutions for modern businesses." />
       </Helmet>
       
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
@@ -26,6 +34,14 @@ export default function FiveGSolutionsPage() {
               </button>
             </div>
           </div>
+=======
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">5g Solutions</h1>
+          <p className="text-lg text-gray-600">
+            Professional 5g solutions solutions for modern businesses.
+          </p>
+>>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
         </div>
       </div>
     </>

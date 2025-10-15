@@ -1,15 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import App from './app/App';
+import './index.css';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-
-root.render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
+<<<<<<< HEAD
 );
 
 // Register service worker for PWA functionality
@@ -24,3 +22,6 @@ if ('serviceWorker' in navigator) {
       });
   });
 }
+=======
+);
+>>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624

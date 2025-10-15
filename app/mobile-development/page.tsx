@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
 import { Helmet } from 'react-helmet-async';
 
 export default function MobiledevelopmentPage() {
@@ -5,9 +9,10 @@ export default function MobiledevelopmentPage() {
     <>
       <Helmet>
         <title>Mobile Development - Zion Tech Group</title>
-        <meta name="description" content="Mobile Development services and solutions from Zion Tech Group." />
+        <meta name="description" content="Professional mobile development solutions for modern businesses." />
       </Helmet>
       
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
@@ -26,6 +31,14 @@ export default function MobiledevelopmentPage() {
               </button>
             </div>
           </div>
+=======
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Mobile Development</h1>
+          <p className="text-lg text-gray-600">
+            Professional mobile development solutions for modern businesses.
+          </p>
+>>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
         </div>
       </div>
     </>

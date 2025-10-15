@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
 import { Helmet } from 'react-helmet-async';
 
 export default function DevopscicdPage() {
@@ -5,6 +9,7 @@ export default function DevopscicdPage() {
     <>
       <Helmet>
         <title>Devops Cicd - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Devops Cicd services and solutions from Zion Tech Group." />
       </Helmet>
       
@@ -26,6 +31,17 @@ export default function DevopscicdPage() {
               </button>
             </div>
           </div>
+=======
+        <meta name="description" content="Professional devops cicd solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Devops Cicd</h1>
+          <p className="text-lg text-gray-600">
+            Professional devops cicd solutions for modern businesses.
+          </p>
+>>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
         </div>
       </div>
     </>
