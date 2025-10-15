@@ -7,6 +7,31 @@ import HomePage from './app/page';
 import AboutPage from './app/about/page';
 import ServicesPage from './app/services/page';
 import ContactPage from './app/contact/page';
+import AIServicesPage from './app/ai-services/page';
+import ITServicesPage from './app/it-services/page';
+import CloudInfrastructurePage from './app/cloud-infrastructure/page';
+import FiveGSolutionsPage from './app/5g-solutions/page';
+import TeamPage from './app/team/page';
+import CareersPage from './app/careers/page';
+import HelpPage from './app/help/page';
+import PrivacyPage from './app/privacy/page';
+import TermsPage from './app/terms/page';
+import PricingPage from './app/pricing/page';
+import BlogPage from './app/blog/page';
+import CaseStudiesPage from './app/case-studies/page';
+import PartnershipsPage from './app/partnerships/page';
+import APIDocsPage from './app/api-docs/page';
+import AccessibilityPage from './app/accessibility/page';
+import AISolutionsPage from './app/ai-solutions/page';
+import DigitalTransformationPage from './app/digital-transformation/page';
+import MicroSAASSolutionsPage from './app/micro-saas-solutions/page';
+import AIContentGeneratorPage from './app/ai-content-generator/page';
+import DataAnalyticsPage from './app/data-analytics/page';
+import WebDevelopmentPage from './app/web-development/page';
+import MobileDevelopmentPage from './app/mobile-development/page';
+import DatabaseManagementPage from './app/database-management/page';
+import NetworkInfrastructurePage from './app/network-infrastructure/page';
+import CookiesPage from './app/cookies/page';
 
 // Import components
 import Navigation from './app/components/Navigation';
@@ -57,6 +82,39 @@ export default function App() {
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/services" element={<ServicesPage />} />
+                  
+                  {/* Service Pages */}
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                  <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                  <Route path="/micro-saas-solutions" element={<MicroSAASSolutionsPage />} />
+                  <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                  <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                  <Route path="/web-development" element={<WebDevelopmentPage />} />
+                  <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                  <Route path="/database-management" element={<DatabaseManagementPage />} />
+                  <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                  
+                  {/* Company Pages */}
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
+                  
+                  {/* Support Pages */}
+                  <Route path="/help" element={<HelpPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="/cookies" element={<CookiesPage />} />
+                  
+                  {/* Additional Pages */}
+                  <Route path="/pricing" element={<PricingPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/case-studies" element={<CaseStudiesPage />} />
+                  <Route path="/partnerships" element={<PartnershipsPage />} />
+                  <Route path="/api-docs" element={<APIDocsPage />} />
+                  <Route path="/accessibility" element={<AccessibilityPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
