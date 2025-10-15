@@ -85,8 +85,6 @@ const CloudSolutionsPage = lazy(() => import('./app/cloud-solutions/page'));
 // Micro SaaS pages
 const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
 const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
-const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
-const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
 
 // Missing pages
 const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
