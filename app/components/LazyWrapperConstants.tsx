@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed unused React import
 
 export const DefaultFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-slate-900">

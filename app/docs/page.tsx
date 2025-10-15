@@ -11,7 +11,12 @@ const DocsPage: React.FC = () => {
       id: 'getting-started',
       title: 'Getting Started',
       description: 'Learn how to get started with our AI solutions',
-      content: 'Comprehensive guide to implementing AI in your business'
+      content: 'Comprehensive guide to implementing AI in your business',
+      articles: [
+        { title: 'Quick Start Guide', description: 'Get up and running quickly', readTime: '5 min' },
+        { title: 'Installation Guide', description: 'Step-by-step installation instructions', readTime: '10 min' }
+      ],
+      icon: <Book className="w-8 h-8" />
     }
   ];
   
@@ -26,7 +31,7 @@ const DocsPage: React.FC = () => {
 
   const filteredSections = documentationSections.map(section => ({
     ...section,
-    articles: section.articles.filter(article =>
+    articles: section.articles.filter((article: { title: string; description: string }) =>
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
@@ -141,7 +146,7 @@ const DocsPage: React.FC = () => {
                   {expandedSection === section.id && (
                     <div className="px-8 pb-6">
                       <div className="grid md:grid-cols-2 gap-4">
-                        {section.articles.map((article, articleIndex) => (
+                        {section.articles.map((article: { title: string; description: string; readTime: string }, articleIndex: number) => (
                           <div key={articleIndex} className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors cursor-pointer group">
                             <div className="flex items-center justify-between mb-2">
                               <h4 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">

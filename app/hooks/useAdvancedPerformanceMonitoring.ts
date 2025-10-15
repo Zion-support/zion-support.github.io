@@ -43,11 +43,14 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
   const reportMetric = useCallback((name: string, value: number, category = 'Performance') => {
     // Report to analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as Record<string, unknown>).gtag('event', name, {
-        event_category: category,
-        value: Math.round(value),
-        non_interaction: true,
-      });
+      const gtag = (window as unknown as Record<string, unknown>)['gtag'];
+      if (typeof gtag === 'function') {
+        gtag('event', name, {
+          event_category: category,
+          value: Math.round(value),
+          non_interaction: true,
+        });
+      }
     }
 
     // Report to custom analytics endpoint
@@ -99,51 +102,51 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       try {
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            const metric = entry as Record<string, unknown>;
+            const metric = entry as unknown as Record<string, unknown>;
             
             switch (entry.entryType) {
               case 'paint':
                 if (entry.name === 'first-contentful-paint') {
-                  metricsRef.current.fcp = metric.startTime;
+                  metricsRef.current.fcp = metric['startTime'] as number;
                 }
                 break;
               
               case 'largest-contentful-paint':
-                metricsRef.current.lcp = metric.startTime;
+                metricsRef.current.lcp = metric['startTime'] as number;
                 break;
               
               case 'first-input':
-                metricsRef.current.fid = metric.processingStart - metric.startTime;
+                metricsRef.current.fid = (metric['processingStart'] as number) - (metric['startTime'] as number);
                 break;
               
               case 'layout-shift':
-                if (!metric.hadRecentInput) {
-                  metricsRef.current.cls = (metricsRef.current.cls || 0) + metric.value;
+                if (!metric['hadRecentInput']) {
+                  metricsRef.current.cls = (metricsRef.current.cls || 0) + (metric['value'] as number);
                 }
                 break;
               
               case 'navigation':
-                metricsRef.current.ttfb = metric.responseStart - metric.requestStart;
+                metricsRef.current.ttfb = (metric['responseStart'] as number) - (metric['requestStart'] as number);
                 break;
               
               case 'measure':
                 if (entry.name === 'time-to-interactive') {
-                  metricsRef.current.tti = metric.duration;
+                  metricsRef.current.tti = metric['duration'] as number;
                 }
                 if (entry.name === 'first-meaningful-paint') {
-                  metricsRef.current.fmp = metric.startTime;
+                  metricsRef.current.fmp = metric['startTime'] as number;
                 }
                 break;
               
               case 'longtask':
-                if (metric.duration > longTaskThreshold) {
-                  reportMetric('LONG_TASK', metric.duration, 'Performance');
+                if ((metric['duration'] as number) > longTaskThreshold) {
+                  reportMetric('LONG_TASK', metric['duration'] as number, 'Performance');
                 }
                 break;
               
               case 'resource':
-                if (enableResourceTiming && metric.duration > 1000) {
-                  reportMetric('SLOW_RESOURCE', metric.duration, 'Performance');
+                if (enableResourceTiming && (metric['duration'] as number) > 1000) {
+                  reportMetric('SLOW_RESOURCE', metric['duration'] as number, 'Performance');
                 }
                 break;
             }
@@ -173,10 +176,10 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       if (!enableMemoryMonitoring || !('memory' in performance)) return;
 
       const checkMemory = () => {
-        const memory = (performance as Record<string, unknown>).memory;
-        const usedMB = memory.usedJSHeapSize / 1048576;
-        const totalMB = memory.totalJSHeapSize / 1048576;
-        const limitMB = memory.jsHeapSizeLimit / 1048576;
+        const memory = (performance as unknown as Record<string, unknown>)['memory'] as Record<string, unknown>;
+        const usedMB = (memory['usedJSHeapSize'] as number) / 1048576;
+        const totalMB = (memory['totalJSHeapSize'] as number) / 1048576;
+        const limitMB = (memory['jsHeapSizeLimit'] as number) / 1048576;
 
         metricsRef.current.memory = {
           used: usedMB,
@@ -202,9 +205,9 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          const metric = entry as Record<string, unknown>;
-          if (!metric.hadRecentInput) {
-            clsValue += metric.value;
+          const metric = entry as unknown as Record<string, unknown>;
+          if (!metric['hadRecentInput']) {
+            clsValue += metric['value'] as number;
             metricsRef.current.cls = clsValue;
           }
         }
