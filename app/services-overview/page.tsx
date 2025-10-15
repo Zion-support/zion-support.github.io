@@ -4,6 +4,7 @@ import { Brain, Code, Wifi, Cloud, Target, Users, TrendingUp, Clock, Zap, Shield
 
 const ServicesOverviewPage: React.FC = () => {
   const serviceCategories = [
+  const features = [
     {
       title: "AI Services",
       icon: <Brain className="w-8 h-8" />,

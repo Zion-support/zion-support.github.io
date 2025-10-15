@@ -10,6 +10,14 @@ const DocsPage: React.FC = () => {
     {
       id: 'getting-started',
       title: 'Getting Started',
+      description: 'Learn how to get started with our AI solutions',
+      content: 'Comprehensive guide to implementing AI in your business'
+    }
+  ];
+  
+  const features = [
+    {
+      title: 'Getting Started',
       icon: <Zap className="w-6 h-6" />,
       description: 'Quick start guides and setup instructions',
       articles: [
