@@ -58,7 +58,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
       {!isLoaded && !hasError && (
         <img
           src={placeholder}
-          alt=""
+          alt="Loading placeholder"
           className="absolute inset-0 w-full h-full object-cover blur-sm"
         />
       )}

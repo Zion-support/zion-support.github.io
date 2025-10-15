@@ -10,17 +10,15 @@ interface PerformanceMetrics {
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
+    let performanceObserver: PerformanceObserver | null = null;
+    
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined') {
       import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
         const metrics: PerformanceMetrics = {};
         
-        const handleMetric = (metric: any) => {
+        const handleMetric = (metric: { name: string; value: number }) => {
           metrics[metric.name.toLowerCase() as keyof PerformanceMetrics] = metric.value;
-          
-          if (process.env.NODE_ENV === 'development') {
-            console.log(`Performance metric ${metric.name}:`, metric.value);
-          }
           
           // Store metrics for analytics
           if (process.env.NODE_ENV === 'production') {
@@ -40,21 +38,26 @@ const PerformanceMonitor: React.FC = () => {
     }
 
     // Monitor performance metrics
-    if ('performance' in window) {
-      const observer = new PerformanceObserver((list) => {
+    if ('performance' in window && 'PerformanceObserver' in window) {
+      performanceObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
-            if (process.env.NODE_ENV === 'development') {
-              console.log('Navigation timing:', entry);
+            // Store navigation timing for analytics
+            if (process.env.NODE_ENV === 'production') {
+              // analyticsService.track('navigation_timing', entry);
             }
           }
         }
       });
-      observer.observe({ entryTypes: ['navigation'] });
-      
-      // Cleanup observer on unmount
-      return () => observer.disconnect();
+      performanceObserver.observe({ entryTypes: ['navigation'] });
     }
+    
+    // Cleanup function
+    return () => {
+      if (performanceObserver) {
+        performanceObserver.disconnect();
+      }
+    };
   }, []);
 
   return null;

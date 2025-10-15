@@ -68,7 +68,7 @@ export default defineConfig({
       },
     },
     // Optimize chunk size
-    chunkSizeWarningLimit: 500,
+    chunkSizeWarningLimit: 1000,
     reportCompressedSize: false,
   },
   server: {
