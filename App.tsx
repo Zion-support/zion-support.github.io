@@ -1,6 +1,7 @@
 import { Suspense, useEffect } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import './app/styles/futuristic.css'
 
 // Import pages
 import HomePage from './app/page';
