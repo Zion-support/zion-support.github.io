@@ -22,12 +22,31 @@ const Header: React.FC = memo(() => {
       name: 'Services', 
       path: '#',
       dropdown: [
+        { name: 'All Services', path: '/services' },
         { name: 'Micro SAAS Solutions', path: '/micro-saas' },
         { name: 'AI Services', path: '/ai-services' },
         { name: 'IT Services', path: '/it-services' },
         { name: '5G Solutions', path: '/5g-solutions' },
         { name: 'Cloud Services', path: '/cloud-services' },
-        { name: 'Cybersecurity', path: '/cybersecurity' }
+        { name: 'Cybersecurity', path: '/cybersecurity' },
+        { name: 'Blockchain Solutions', path: '/blockchain-solutions' },
+        { name: 'IoT Development', path: '/iot-solutions' },
+        { name: 'AR/VR Solutions', path: '/ar-vr-solutions' }
+      ]
+    },
+    { 
+      name: 'Solutions', 
+      path: '#',
+      dropdown: [
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro' },
+        { name: 'AI Content Generator', path: '/ai-content-generation-pro' },
+        { name: 'AI Document Processor', path: '/ai-document-processor' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
+        { name: 'AI Lead Generator', path: '/ai-lead-generator' },
+        { name: 'AI Inventory Manager', path: '/ai-inventory-manager' },
+        { name: 'AI HR Assistant', path: '/ai-hr-assistant' },
+        { name: 'AI Financial Advisor', path: '/ai-financial-advisor' },
+        { name: 'Business Automation', path: '/business-automation-tools' }
       ]
     },
     { name: 'About', path: '/about' },
@@ -42,7 +61,10 @@ const Header: React.FC = memo(() => {
         { name: 'API Reference', path: '/api-docs' },
         { name: 'Help Center', path: '/help' },
         { name: 'System Status', path: '/status' },
-        { name: 'Support', path: '/support' }
+        { name: 'Support', path: '/support' },
+        { name: 'Blog', path: '/news' },
+        { name: 'Case Studies', path: '/portfolio' },
+        { name: 'White Papers', path: '/docs' }
       ]
     },
     { 
@@ -53,7 +75,9 @@ const Header: React.FC = memo(() => {
         { name: 'Our Team', path: '/about#team' },
         { name: 'Careers', path: '/careers' },
         { name: 'News & Updates', path: '/news' },
-        { name: 'Contact Us', path: '/contact' }
+        { name: 'Contact Us', path: '/contact' },
+        { name: 'Partnership', path: '/contact' },
+        { name: 'Investor Relations', path: '/about' }
       ]
     },
     { name: 'Contact', path: '/contact' }
@@ -110,7 +134,7 @@ const Header: React.FC = memo(() => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden xl:flex items-center space-x-6">
+            <div className="hidden lg:flex items-center space-x-6">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
                   {item.dropdown ? (
@@ -136,12 +160,12 @@ const Header: React.FC = memo(() => {
                   
                   {/* Dropdown Menu */}
                   {item.dropdown && activeDropdown === item.name && (
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 py-2 z-50">
+                    <div className="absolute top-full left-0 mt-2 w-72 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 py-2 z-50 max-h-96 overflow-y-auto">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.name}
                           to={dropdownItem.path}
-                          className="block px-4 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 transition-all duration-300"
+                          className="block px-4 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 transition-all duration-300 text-sm"
                           onClick={() => setActiveDropdown(null)}
                         >
                           {dropdownItem.name}
@@ -154,10 +178,10 @@ const Header: React.FC = memo(() => {
             </div>
 
             {/* CTA Button */}
-            <div className="hidden xl:flex items-center space-x-4">
+            <div className="hidden lg:flex items-center space-x-4">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 relative overflow-hidden group"
+                className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 relative overflow-hidden group text-sm"
               >
                 <span className="relative z-10">Get Started</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -166,7 +190,7 @@ const Header: React.FC = memo(() => {
 
             {/* Mobile Menu Button */}
             <button
-              className="xl:hidden text-white p-2"
+              className="lg:hidden text-white p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMenuOpen}
@@ -181,22 +205,22 @@ const Header: React.FC = memo(() => {
         {isMenuOpen && (
           <div 
             id="mobile-menu"
-            className="xl:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/20"
+            className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/20 max-h-screen overflow-y-auto"
             role="navigation"
             aria-label="Mobile navigation"
           >
             <div className="container mx-auto px-4 py-4">
               {navigationItems.map((item) => (
-                <div key={item.name}>
+                <div key={item.name} className="mb-4">
                   {item.dropdown ? (
                     <div className="py-2">
-                      <div className="text-white font-semibold mb-2">{item.name}</div>
+                      <div className="text-white font-semibold mb-2 text-lg">{item.name}</div>
                       <div className="ml-4 space-y-2">
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
                             to={dropdownItem.path}
-                            className="block text-gray-300 hover:text-blue-400 py-1 transition-colors"
+                            className="block text-gray-300 hover:text-cyan-400 py-2 transition-colors text-sm border-l-2 border-transparent hover:border-cyan-400 pl-3"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {dropdownItem.name}
@@ -207,8 +231,8 @@ const Header: React.FC = memo(() => {
                   ) : (
                     <Link
                       to={item.path}
-                      className={`block py-2 text-white hover:text-blue-400 transition-colors ${
-                        isActive(item.path) ? 'text-blue-400 font-semibold' : ''
+                      className={`block py-3 text-white hover:text-cyan-400 transition-colors text-lg font-medium ${
+                        isActive(item.path) ? 'text-cyan-400 font-semibold' : ''
                       }`}
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -217,14 +241,19 @@ const Header: React.FC = memo(() => {
                   )}
                 </div>
               ))}
-              <div className="pt-4 border-t border-white/20 mt-4">
+              <div className="pt-6 border-t border-white/20 mt-6">
                 <Link
                   to="/contact"
-                  className="block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold text-center transition-all duration-300"
+                  className="block bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-6 py-4 rounded-lg font-semibold text-center transition-all duration-300 transform hover:scale-105"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Get Started
                 </Link>
+                <div className="mt-4 text-center">
+                  <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm">
+                    Call +1 302 464 0950
+                  </a>
+                </div>
               </div>
             </div>
           </div>

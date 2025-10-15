@@ -24,11 +24,14 @@ const Footer: React.FC = () => {
       title: 'Micro SAAS Solutions',
       services: [
         { name: 'AI Content Writer Pro', path: '/ai-content-generation-pro' },
-        { name: 'AI Project Manager', path: '/ai-project-manager' },
-        { name: 'AI Email Marketing', path: '/ai-email-marketing' },
-        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro' },
-        { name: 'AI Document Processor', path: '/ai-document-processor' },
-        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' }
+        { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro' },
+        { name: 'AI Document Processor Pro', path: '/ai-document-processor' },
+        { name: 'AI Social Media Manager Pro', path: '/ai-social-media-manager' },
+        { name: 'AI Lead Generator Pro', path: '/ai-lead-generator' },
+        { name: 'AI Inventory Manager Pro', path: '/ai-inventory-manager' },
+        { name: 'AI HR Assistant Pro', path: '/ai-hr-assistant' },
+        { name: 'AI Financial Advisor Pro', path: '/ai-financial-advisor' },
+        { name: 'Business Automation Tools', path: '/business-automation-tools' }
       ]
     },
     {
@@ -39,18 +42,23 @@ const Footer: React.FC = () => {
         { name: 'Computer Vision', path: '/ai-computer-vision' },
         { name: 'Natural Language Processing', path: '/ai-services' },
         { name: 'Predictive Analytics', path: '/ai-analytics' },
-        { name: 'AI Security Solutions', path: '/ai-security-solutions' }
+        { name: 'AI Security Solutions', path: '/ai-security-solutions' },
+        { name: 'AI Content Generation', path: '/ai-content-generation' },
+        { name: 'AI Customer Support', path: '/ai-customer-support' }
       ]
     },
     {
       title: 'IT Services',
       services: [
-        { name: 'Cloud Migration', path: '/cloud-migration-services' },
-        { name: 'Cybersecurity', path: '/cybersecurity-consulting' },
-        { name: 'DevOps Solutions', path: '/devops-solutions' },
-        { name: 'Mobile Development', path: '/mobile-app-development' },
-        { name: 'Web Development', path: '/web-application-development' },
-        { name: 'Database Solutions', path: '/database-solutions' }
+        { name: 'Cloud Infrastructure', path: '/cloud-infrastructure' },
+        { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions' },
+        { name: 'Web Development', path: '/web-development' },
+        { name: 'Mobile Development', path: '/mobile-development' },
+        { name: 'Database Management', path: '/database-management' },
+        { name: 'DevOps & CI/CD', path: '/devops-ci-cd' },
+        { name: 'Blockchain Solutions', path: '/blockchain-solutions' },
+        { name: 'IoT Development', path: '/iot-solutions' },
+        { name: 'AR/VR Solutions', path: '/ar-vr-solutions' }
       ]
     },
     {
@@ -61,7 +69,9 @@ const Footer: React.FC = () => {
         { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
         { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions' },
         { name: '5G Edge Computing', path: '/5g-edge-computing' },
-        { name: '5G Security Solutions', path: '/5g-security' }
+        { name: '5G Security Solutions', path: '/5g-security' },
+        { name: '5G Private Networks', path: '/5g-private-networks' },
+        { name: '5G Performance Optimization', path: '/5g-performance' }
       ]
     }
   ];
@@ -101,7 +111,7 @@ const Footer: React.FC = () => {
       
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 lg:gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6 group">
@@ -112,7 +122,7 @@ const Footer: React.FC = () => {
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered micro SAAS solutions, IT services, and innovative technology solutions. 
-              We help businesses transform and scale with cutting-edge technology. Visit us at <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">ziontechgroup.com</a>
+              We help businesses transform and scale with cutting-edge technology. Visit us at <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors" target="_blank" rel="noopener noreferrer">ziontechgroup.com</a>
             </p>
             
             {/* Contact Info */}
@@ -140,19 +150,19 @@ const Footer: React.FC = () => {
 
             {/* Social Links */}
             <div className="flex space-x-4 mt-6">
-              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110" target="_blank" rel="noopener noreferrer">
+              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">
                 <Facebook className="w-6 h-6" />
               </a>
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110" target="_blank" rel="noopener noreferrer">
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">
                 <Twitter className="w-6 h-6" />
               </a>
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110" target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110" target="_blank" rel="noopener noreferrer" aria-label="Connect with us on LinkedIn">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110" target="_blank" rel="noopener noreferrer" aria-label="Check out our GitHub">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="https://instagram.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110" target="_blank" rel="noopener noreferrer">
+              <a href="https://instagram.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
                 <Instagram className="w-6 h-6" />
               </a>
             </div>
