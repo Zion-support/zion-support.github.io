@@ -610,7 +610,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
                 <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
-            </div>
           </div>
         </div>
       </section>
