@@ -44,7 +44,9 @@ const Header: React.FC = () => {
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
         { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
         { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
-        { name: 'AI Database Solutions', href: '/ai-database-solutions' }
+        { name: 'AI Database Solutions', href: '/ai-database-solutions' },
+        { name: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' },
+        { name: 'AI IoT Management Pro', href: '/ai-iot-management-pro' }
       ]
     },
     {

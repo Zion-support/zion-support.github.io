@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
+  Wifi, 
+  Cpu, 
+  Database, 
   Zap, 
   Brain, 
   CheckCircle, 
@@ -48,7 +47,6 @@ import {
   TrendingDown,
   Globe,
   Users,
-  Database,
   Server,
   Network,
   Key,
@@ -56,12 +54,28 @@ import {
   Scan,
   Bug,
   Virus,
-  Wifi,
   Cloud,
-  HardDrive
+  HardDrive,
+  Smartphone,
+  Tablet,
+  Monitor,
+  Printer,
+  Router,
+  Sensor,
+  Thermometer,
+  Droplets,
+  Wind,
+  Sun,
+  Moon,
+  Home,
+  Building,
+  Car,
+  Truck,
+  Plane,
+  Ship
 } from 'lucide-react';
 
-const AiCybersecuritySuiteProPage: React.FC = () => {
+const AiIotManagementProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -71,106 +85,106 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI Threat Detection",
-      description: "Advanced machine learning algorithms detect and prevent cyber threats in real-time with 99.9% accuracy.",
-      benefits: ["Real-time monitoring", "Behavioral analysis", "Anomaly detection", "Predictive threat modeling"]
+      title: "AI Device Intelligence",
+      description: "Advanced AI algorithms analyze device behavior, predict failures, and optimize performance across your entire IoT ecosystem.",
+      benefits: ["Predictive maintenance", "Behavioral analysis", "Performance optimization", "Anomaly detection"]
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Zero Trust Security",
-      description: "Implement zero trust architecture with continuous verification and least privilege access controls.",
-      benefits: ["Identity verification", "Access controls", "Network segmentation", "Continuous monitoring"]
+      icon: <Wifi className="w-6 h-6" />,
+      title: "Universal Connectivity",
+      description: "Connect and manage devices across all major IoT protocols including WiFi, Bluetooth, Zigbee, LoRaWAN, and cellular.",
+      benefits: ["Multi-protocol support", "Seamless integration", "Real-time sync", "Protocol translation"]
     },
     {
-      icon: <Lock className="w-6 h-6" />,
-      title: "Advanced Encryption",
-      description: "Military-grade encryption for data at rest, in transit, and in use with quantum-resistant algorithms.",
-      benefits: ["AES-256 encryption", "Quantum-resistant", "Key management", "Compliance ready"]
-    },
-    {
-      icon: <Eye className="w-6 h-6" />,
-      title: "Security Monitoring",
-      description: "24/7 security operations center with AI-powered monitoring and incident response automation.",
-      benefits: ["24/7 SOC", "Automated response", "Threat hunting", "Incident management"]
-    },
-    {
-      icon: <Bug className="w-6 h-6" />,
-      title: "Vulnerability Management",
-      description: "Automated vulnerability scanning, assessment, and remediation with AI-powered prioritization.",
-      benefits: ["Automated scanning", "Risk assessment", "Patch management", "Compliance tracking"]
+      icon: <Database className="w-6 h-6" />,
+      title: "Edge Computing",
+      description: "Process data locally at the edge for faster response times, reduced latency, and improved reliability.",
+      benefits: ["Local processing", "Reduced latency", "Offline capability", "Bandwidth optimization"]
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Incident Response",
-      description: "Automated incident response with AI-driven forensics and rapid threat containment.",
-      benefits: ["Auto-containment", "Forensic analysis", "Recovery planning", "Lessons learned"]
+      title: "Automated Management",
+      description: "Intelligent automation for device provisioning, firmware updates, configuration management, and troubleshooting.",
+      benefits: ["Auto-provisioning", "Firmware updates", "Config management", "Auto-troubleshooting"]
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Security & Compliance",
+      description: "Enterprise-grade security with device authentication, data encryption, and compliance management for IoT deployments.",
+      benefits: ["Device authentication", "Data encryption", "Compliance tracking", "Security monitoring"]
+    },
+    {
+      icon: <Activity className="w-6 h-6" />,
+      title: "Real-time Analytics",
+      description: "Comprehensive analytics and monitoring with real-time dashboards, alerts, and insights for your IoT infrastructure.",
+      benefits: ["Real-time monitoring", "Custom dashboards", "Smart alerts", "Performance insights"]
     }
   ];
 
-  const securityLayers = [
-    { name: "Network Security", icon: <Network className="w-8 h-8" />, color: "text-blue-500" },
-    { name: "Endpoint Protection", icon: <HardDrive className="w-8 h-8" />, color: "text-green-500" },
-    { name: "Cloud Security", icon: <Cloud className="w-8 h-8" />, color: "text-cyan-500" },
-    { name: "Data Protection", icon: <Database className="w-8 h-8" />, color: "text-purple-500" },
-    { name: "Identity Management", icon: <Fingerprint className="w-8 h-8" />, color: "text-orange-500" },
-    { name: "Application Security", icon: <Server className="w-8 h-8" />, color: "text-red-500" },
-    { name: "Email Security", icon: <Mail className="w-8 h-8" />, color: "text-indigo-500" },
-    { name: "Mobile Security", icon: <Wifi className="w-8 h-8" />, color: "text-pink-500" }
+  const deviceTypes = [
+    { name: "Sensors", icon: <Thermometer className="w-8 h-8" />, color: "text-blue-500" },
+    { name: "Cameras", icon: <Camera className="w-8 h-8" />, color: "text-green-500" },
+    { name: "Smart Home", icon: <Home className="w-8 h-8" />, color: "text-cyan-500" },
+    { name: "Industrial", icon: <Building className="w-8 h-8" />, color: "text-purple-500" },
+    { name: "Vehicles", icon: <Car className="w-8 h-8" />, color: "text-orange-500" },
+    { name: "Wearables", icon: <Smartphone className="w-8 h-8" />, color: "text-red-500" },
+    { name: "Environmental", icon: <Wind className="w-8 h-8" />, color: "text-indigo-500" },
+    { name: "Medical", icon: <Activity className="w-8 h-8" />, color: "text-pink-500" }
   ];
 
   const pricingPlans = [
     {
-      name: "Essential",
-      price: "$199",
+      name: "Starter",
+      price: "$149",
       period: "month",
-      description: "Perfect for small businesses starting their security journey",
+      description: "Perfect for small IoT deployments and pilot projects",
       features: [
-        "Basic threat detection",
-        "Email security",
-        "Endpoint protection",
-        "24/7 monitoring",
+        "Up to 100 devices",
+        "Basic AI features",
+        "Standard protocols",
         "Email support",
-        "5GB log storage",
+        "10GB data storage",
         "Mobile app access",
-        "Basic reporting"
+        "Basic analytics",
+        "Cloud deployment"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$399",
+      price: "$299",
       period: "month",
-      description: "Ideal for growing companies with advanced security needs",
+      description: "Ideal for growing businesses with complex IoT needs",
       features: [
-        "Advanced AI threat detection",
-        "Zero trust architecture",
-        "All security layers",
-        "Comprehensive monitoring",
+        "Up to 1,000 devices",
+        "Advanced AI features",
+        "All protocols",
         "Priority support",
-        "50GB log storage",
+        "100GB data storage",
         "API access",
         "Advanced analytics",
-        "Compliance reporting",
+        "Edge computing",
+        "Custom integrations",
         "White-label options"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$599",
       period: "month",
-      description: "Complete solution for large organizations",
+      description: "Complete solution for large-scale IoT deployments",
       features: [
-        "Full AI security suite",
-        "Custom security policies",
-        "Dedicated SOC team",
-        "Advanced forensics",
+        "Unlimited devices",
+        "Full AI suite",
+        "Custom protocols",
         "24/7 dedicated support",
-        "Unlimited log storage",
+        "Unlimited storage",
         "Advanced security",
         "On-premise deployment",
-        "Custom integrations",
-        "Training & onboarding"
+        "Custom development",
+        "Training & onboarding",
+        "SLA guarantee"
       ],
       popular: false
     }
@@ -178,56 +192,56 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "Financial Services Corp",
-      role: "CISO",
-      content: "AI Cybersecurity Suite Pro has transformed our security posture. The AI threat detection has prevented 15 major attacks in the last 6 months, and our incident response time has improved by 80%.",
+      name: "Michael Rodriguez",
+      company: "Smart City Initiative",
+      role: "IoT Director",
+      content: "AI IoT Management Pro has revolutionized our smart city infrastructure. We're managing 50,000+ devices across the city with 99.9% uptime and 60% reduction in maintenance costs.",
       rating: 5
     },
     {
-      name: "David Chen",
+      name: "Sarah Kim",
+      company: "Manufacturing Corp",
+      role: "Operations Manager",
+      content: "The predictive maintenance and edge computing features have been game-changers. We've reduced equipment downtime by 75% and improved production efficiency by 40%.",
+      rating: 5
+    },
+    {
+      name: "David Thompson",
       company: "Healthcare Systems",
-      role: "IT Security Director",
-      content: "The zero trust implementation and automated vulnerability management have been game-changers. We've achieved 100% compliance with healthcare regulations and reduced security incidents by 90%.",
-      rating: 5
-    },
-    {
-      name: "Sarah Johnson",
-      company: "E-commerce Platform",
-      role: "VP of Security",
-      content: "The AI-powered monitoring and automated incident response have saved us millions in potential breaches. The 24/7 SOC team provides peace of mind, and ROI was achieved within 3 months.",
+      role: "IT Director",
+      content: "The AI-powered device management and security features have helped us maintain HIPAA compliance while managing thousands of medical devices. The ROI was achieved within 4 months.",
       rating: 5
     }
   ];
 
   const metrics = [
-    { number: "99.9%", label: "Threat Detection Accuracy", icon: <Target className="w-6 h-6" /> },
-    { number: "80%", label: "Faster Response Time", icon: <Zap className="w-6 h-6" /> },
-    { number: "90%", label: "Reduced Security Incidents", icon: <Shield className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Monitoring", icon: <Activity className="w-6 h-6" /> }
+    { number: "1M+", label: "Devices Managed", icon: <Cpu className="w-6 h-6" /> },
+    { number: "99.9%", label: "Uptime Guarantee", icon: <Activity className="w-6 h-6" /> },
+    { number: "75%", label: "Reduced Downtime", icon: <Zap className="w-6 h-6" /> },
+    { number: "24/7", label: "AI Monitoring", icon: <Brain className="w-6 h-6" /> }
   ];
 
-  const complianceStandards = [
-    { name: "SOC 2", description: "Security compliance" },
-    { name: "ISO 27001", description: "Information security" },
-    { name: "GDPR", description: "Data protection" },
-    { name: "HIPAA", description: "Healthcare compliance" },
-    { name: "PCI DSS", description: "Payment security" },
-    { name: "NIST", description: "Cybersecurity framework" },
-    { name: "CIS", description: "Security controls" },
-    { name: "FedRAMP", description: "Government compliance" }
+  const protocols = [
+    { name: "WiFi", description: "Wireless networking" },
+    { name: "Bluetooth", description: "Short-range communication" },
+    { name: "Zigbee", description: "Mesh networking" },
+    { name: "LoRaWAN", description: "Long-range IoT" },
+    { name: "Cellular", description: "Mobile connectivity" },
+    { name: "Ethernet", description: "Wired connection" },
+    { name: "Z-Wave", description: "Home automation" },
+    { name: "Thread", description: "IPv6 networking" }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Cybersecurity Suite Pro - Advanced Security Solutions | Zion Tech Group</title>
-        <meta name="description" content="Protect your business with AI-powered cybersecurity solutions. Advanced threat detection, zero trust security, and 24/7 monitoring for comprehensive protection." />
-        <meta name="keywords" content="AI cybersecurity, threat detection, zero trust security, security monitoring, vulnerability management, incident response, compliance" />
-        <meta property="og:title" content="AI Cybersecurity Suite Pro - Zion Tech Group" />
-        <meta property="og:description" content="Advanced AI-powered cybersecurity solutions with comprehensive protection" />
+        <title>AI IoT Management Pro - Intelligent IoT Platform | Zion Tech Group</title>
+        <meta name="description" content="Manage your IoT ecosystem with AI-powered intelligence. Device management, edge computing, and real-time analytics for connected devices." />
+        <meta name="keywords" content="AI IoT management, IoT platform, device management, edge computing, IoT analytics, connected devices, smart infrastructure" />
+        <meta property="og:title" content="AI IoT Management Pro - Zion Tech Group" />
+        <meta property="og:description" content="Intelligent IoT management platform with AI-powered device intelligence" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-cybersecurity-suite-pro" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-iot-management-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -256,16 +270,16 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
               <div className={`text-center max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                   <Star className="w-4 h-4 mr-2" />
-                  #1 AI Cybersecurity Platform
+                  #1 AI IoT Management Platform
                 </div>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    AI Cybersecurity Suite Pro
+                    AI IoT Management Pro
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Protect your business with the most advanced AI-powered cybersecurity solutions. 
-                  Comprehensive threat detection, zero trust security, and 24/7 monitoring for complete protection.
+                  Transform your IoT ecosystem with AI-powered device intelligence, edge computing, 
+                  and comprehensive management for connected devices across all industries.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -273,7 +287,7 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    Get Security Assessment
+                    Get IoT Assessment
                   </a>
                   <a
                     href="#demo"
@@ -287,30 +301,30 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Security Layers Section */}
+          {/* Device Types Section */}
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Comprehensive Security Layers
+                    All Device Types Supported
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Multi-layered security approach covering all aspects of your digital infrastructure.
+                  Manage any type of connected device across all industries and use cases.
                 </p>
               </div>
               
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-                {securityLayers.map((layer, index) => (
+                {deviceTypes.map((device, index) => (
                   <div 
                     key={index} 
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 group"
                   >
-                    <div className={`${layer.color} mb-3 group-hover:scale-110 transition-transform duration-300 flex justify-center`}>
-                      {layer.icon}
+                    <div className={`${device.color} mb-3 group-hover:scale-110 transition-transform duration-300 flex justify-center`}>
+                      {device.icon}
                     </div>
-                    <div className="text-white font-semibold text-sm">{layer.name}</div>
+                    <div className="text-white font-semibold text-sm">{device.name}</div>
                   </div>
                 ))}
               </div>
@@ -323,11 +337,11 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    AI-Powered Security Features
+                    AI-Powered IoT Features
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Everything you need to protect your business with intelligent cybersecurity solutions.
+                  Everything you need to manage your IoT ecosystem with intelligent automation and insights.
                 </p>
               </div>
               
@@ -366,11 +380,11 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Proven Security Results
+                    Proven IoT Results
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Join thousands of organizations achieving remarkable security improvements with our AI platform.
+                  Join thousands of organizations achieving remarkable IoT success with our AI platform.
                 </p>
               </div>
               
@@ -388,28 +402,28 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Compliance Section */}
+          {/* Protocols Section */}
           <section className="py-20 bg-slate-900">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Compliance & Standards
+                    Universal Protocol Support
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Meet industry standards and regulatory requirements with our comprehensive compliance framework.
+                  Connect devices using any major IoT protocol with seamless integration and management.
                 </p>
               </div>
               
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-                {complianceStandards.map((standard, index) => (
+                {protocols.map((protocol, index) => (
                   <div 
                     key={index} 
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
                   >
-                    <div className="text-cyan-400 font-bold text-lg mb-2">{standard.name}</div>
-                    <div className="text-gray-300 text-sm">{standard.description}</div>
+                    <div className="text-cyan-400 font-bold text-lg mb-2">{protocol.name}</div>
+                    <div className="text-gray-300 text-sm">{protocol.description}</div>
                   </div>
                 ))}
               </div>
@@ -422,11 +436,11 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Flexible Security Plans
+                    Scalable IoT Plans
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the security plan that fits your organization's needs and risk profile.
+                  Choose the plan that fits your IoT deployment size and complexity.
                 </p>
               </div>
               
@@ -486,11 +500,11 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Security Success Stories
+                    IoT Success Stories
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  See how organizations are protecting their assets with our AI cybersecurity platform.
+                  See how organizations are transforming their operations with our AI IoT platform.
                 </p>
               </div>
               
@@ -524,11 +538,11 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Ready to Secure Your Business?
+                  Ready to Transform Your IoT Infrastructure?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Start your security assessment today and discover how our AI-powered cybersecurity 
-                  solutions can protect your organization from evolving threats.
+                  Start your IoT assessment today and discover how our AI-powered management 
+                  platform can optimize your connected device ecosystem.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -543,7 +557,7 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                   >
                     <Mail className="w-5 h-5 mr-2" />
-                    Get Security Assessment
+                    Get IoT Assessment
                   </a>
                 </div>
               </div>
@@ -555,4 +569,4 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
   );
 };
 
-export default AiCybersecuritySuiteProPage;
+export default AiIotManagementProPage;

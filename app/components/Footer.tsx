@@ -34,7 +34,9 @@ const Footer: React.FC = () => {
         { name: 'AI Automation Suite', href: '/ai-automation-suite' },
         { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
-        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' }
+        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
+        { name: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' },
+        { name: 'AI IoT Management Pro', href: '/ai-iot-management-pro' }
       ]
     },
     {
