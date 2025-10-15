@@ -13,6 +13,18 @@ const Footer: React.FC = () => {
       { name: '5G Solutions', href: '/5g-solutions' },
       { name: 'Cloud Migration', href: '/cloud-migration' },
       { name: 'Cybersecurity', href: '/network-security' },
+      { name: 'DevOps Services', href: '/devops-services' },
+      { name: 'Data Analytics', href: '/data-analytics' },
+    ],
+    microSaas: [
+      { name: 'AI Analytics Pro', href: '/zion-ai-analytics-pro' },
+      { name: 'AI Security Suite', href: '/zion-ai-security-suite' },
+      { name: 'AI CRM Enterprise', href: '/zion-ai-crm-enterprise' },
+      { name: 'AI Marketing Automation', href: '/zion-ai-marketing-automation' },
+      { name: 'AI Project Management', href: '/zion-ai-project-management-pro' },
+      { name: 'AI Content Studio', href: '/zion-ai-content-studio' },
+      { name: 'AI Financial Analytics', href: '/zion-ai-financial-analytics' },
+      { name: 'AI Inventory Optimizer', href: '/zion-ai-inventory-optimizer' },
     ],
     company: [
       { name: 'About Us', href: '/about' },
@@ -21,6 +33,8 @@ const Footer: React.FC = () => {
       { name: 'Contact', href: '/contact' },
       { name: 'Portfolio', href: '/portfolio' },
       { name: 'Demo', href: '/demo' },
+      { name: 'Partners', href: '/partners' },
+      { name: 'News', href: '/news' },
     ],
     resources: [
       { name: 'Blog', href: '/blog' },
@@ -29,23 +43,27 @@ const Footer: React.FC = () => {
       { name: 'Documentation', href: '/docs' },
       { name: 'Tutorials', href: '/tutorials' },
       { name: 'FAQ', href: '/faq' },
+      { name: 'API Documentation', href: '/api-docs' },
+      { name: 'Status Page', href: '/status' },
     ],
     legal: [
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
       { name: 'Cookie Policy', href: '/cookies' },
       { name: 'Sitemap', href: '/sitemap' },
+      { name: 'GDPR Compliance', href: '/gdpr' },
+      { name: 'Security Policy', href: '/security' },
     ]
   };
 
   return (
     <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 py-16 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <h3 className="text-2xl font-bold text-white">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 holographic-text">
                 Zion Tech Group
               </span>
             </h3>
@@ -53,7 +71,7 @@ const Footer: React.FC = () => {
               Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology.
             </p>
             <div className="flex space-x-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center neon-border">
                 <span className="text-white text-sm font-bold">Z</span>
               </div>
               <div className="flex flex-col justify-center">
@@ -68,8 +86,22 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold text-white">Services</h4>
             <div className="space-y-3">
               {footerLinks.services.map((link) => (
-                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group">
                   {link.name}
+                  <span className="block w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300"></span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Micro SAAS */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white">Micro SAAS</h4>
+            <div className="space-y-3">
+              {footerLinks.microSaas.map((link) => (
+                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group">
+                  {link.name}
+                  <span className="block w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300"></span>
                 </Link>
               ))}
             </div>
@@ -80,8 +112,9 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold text-white">Company</h4>
             <div className="space-y-3">
               {footerLinks.company.map((link) => (
-                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group">
                   {link.name}
+                  <span className="block w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300"></span>
                 </Link>
               ))}
             </div>
@@ -92,8 +125,9 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold text-white">Resources</h4>
             <div className="space-y-3">
               {footerLinks.resources.map((link) => (
-                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group">
                   {link.name}
+                  <span className="block w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300"></span>
                 </Link>
               ))}
             </div>

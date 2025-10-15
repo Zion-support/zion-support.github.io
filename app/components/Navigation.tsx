@@ -8,32 +8,37 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   return (
-    <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
+    <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50 cyber-grid-enhanced">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link to="/" className="text-2xl font-bold text-white">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+          <Link to="/" className="text-2xl font-bold text-white group">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:from-purple-400 group-hover:to-cyan-400 transition-all duration-300 holographic-text">
               Zion Tech Group
             </span>
           </Link>
           
           <nav className="hidden md:flex space-x-8">
-            <Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors">
+            <Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors relative group">
               AI Services
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">
+            <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors relative group">
               IT Services
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <Link to="/micro-saas" className="text-gray-300 hover:text-cyan-400 transition-colors">
+            <Link to="/micro-saas" className="text-gray-300 hover:text-cyan-400 transition-colors relative group">
               Micro SAAS
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <Link to="/5g-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">
+            <Link to="/5g-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors relative group">
               5G Solutions
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors relative group">
               About
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all">
+            <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all cyber-button">
               Contact Us
             </Link>
           </nav>
@@ -41,7 +46,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           {/* Mobile menu button */}
           <button
             onClick={onSidebarToggle}
-            className="md:hidden text-gray-300 hover:text-white transition-colors p-2"
+            className="md:hidden text-gray-300 hover:text-white transition-colors p-2 neon-border rounded-lg"
             aria-label="Toggle menu"
           >
             <Menu className="w-6 h-6" />
