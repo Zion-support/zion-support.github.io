@@ -487,6 +487,161 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       icon: <Code className="w-8 h-8 text-red-400" />,
       popular: false,
       link: 'https://ziontechgroup.com/api-management'
+    },
+    {
+      id: 'ai-content-writer',
+      name: 'AI Content Writer Pro',
+      price: '$39/mo',
+      originalPrice: '$79/mo',
+      description: 'AI-powered content creation for blogs, articles, and marketing',
+      longDescription: 'Create high-quality, SEO-optimized content at scale with our advanced AI writing assistant that understands your brand voice.',
+      features: [
+        'Blog Post Generation',
+        'Article Writing',
+        'SEO Optimization',
+        'Brand Voice Training',
+        'Content Templates',
+        'Plagiarism Detection',
+        'Multi-language Support',
+        'Content Calendar',
+        'Performance Analytics',
+        'Team Collaboration'
+      ],
+      benefits: [
+        'Save 80% writing time',
+        'Improve SEO rankings',
+        'Maintain brand consistency',
+        'Scale content production',
+        'Reduce content costs'
+      ],
+      category: 'AI Tools',
+      icon: <FileText className="w-8 h-8 text-green-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-content-writer'
+    },
+    {
+      id: 'social-media-manager',
+      name: 'Social Media Manager Pro',
+      price: '$49/mo',
+      originalPrice: '$99/mo',
+      description: 'Complete social media management and analytics platform',
+      longDescription: 'Manage all your social media accounts from one dashboard with advanced scheduling, analytics, and engagement tools.',
+      features: [
+        'Multi-platform Scheduling',
+        'Content Calendar',
+        'Auto-posting',
+        'Analytics Dashboard',
+        'Hashtag Research',
+        'Competitor Analysis',
+        'Team Collaboration',
+        'Content Library',
+        'Engagement Tracking',
+        'ROI Measurement'
+      ],
+      benefits: [
+        'Save 10+ hours per week',
+        'Increase engagement by 60%',
+        'Track performance metrics',
+        'Streamline social workflow',
+        'Improve brand presence'
+      ],
+      category: 'Marketing',
+      icon: <Share className="w-8 h-8 text-pink-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/social-media-manager'
+    },
+    {
+      id: 'customer-feedback-manager',
+      name: 'Customer Feedback Manager',
+      price: '$29/mo',
+      originalPrice: '$59/mo',
+      description: 'Collect, analyze, and act on customer feedback',
+      longDescription: 'Gather feedback from multiple channels and turn insights into actionable improvements for your business.',
+      features: [
+        'Multi-channel Collection',
+        'Sentiment Analysis',
+        'Feedback Categorization',
+        'Response Management',
+        'Analytics Dashboard',
+        'Team Notifications',
+        'Integration APIs',
+        'Custom Surveys',
+        'NPS Tracking',
+        'Action Planning'
+      ],
+      benefits: [
+        'Improve customer satisfaction',
+        'Identify pain points',
+        'Increase retention rates',
+        'Make data-driven decisions',
+        'Streamline feedback process'
+      ],
+      category: 'Support',
+      icon: <MessageSquare className="w-8 h-8 text-blue-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/customer-feedback-manager'
+    },
+    {
+      id: 'expense-tracker',
+      name: 'Business Expense Tracker',
+      price: '$19/mo',
+      originalPrice: '$39/mo',
+      description: 'Track and manage business expenses with AI insights',
+      longDescription: 'Automatically categorize expenses, generate reports, and get AI-powered insights to optimize your spending.',
+      features: [
+        'Receipt Scanning',
+        'Auto-categorization',
+        'Expense Reports',
+        'Budget Tracking',
+        'Tax Preparation',
+        'Team Management',
+        'Mobile App',
+        'Integration APIs',
+        'AI Insights',
+        'Compliance Tools'
+      ],
+      benefits: [
+        'Save 5+ hours per month',
+        'Reduce expense errors',
+        'Improve budget control',
+        'Simplify tax preparation',
+        'Track spending patterns'
+      ],
+      category: 'Productivity',
+      icon: <CreditCard className="w-8 h-8 text-yellow-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/expense-tracker'
+    },
+    {
+      id: 'lead-scoring-engine',
+      name: 'AI Lead Scoring Engine',
+      price: '$79/mo',
+      originalPrice: '$159/mo',
+      description: 'Automatically score and prioritize leads with AI',
+      longDescription: 'Use machine learning to identify high-quality leads and focus your sales efforts on prospects most likely to convert.',
+      features: [
+        'AI Lead Scoring',
+        'Behavioral Tracking',
+        'Predictive Analytics',
+        'CRM Integration',
+        'Custom Scoring Models',
+        'Lead Nurturing',
+        'Performance Analytics',
+        'A/B Testing',
+        'Real-time Updates',
+        'Team Collaboration'
+      ],
+      benefits: [
+        'Increase conversion by 40%',
+        'Reduce sales cycle time',
+        'Improve lead quality',
+        'Optimize sales efforts',
+        'Boost revenue growth'
+      ],
+      category: 'Sales',
+      icon: <Target className="w-8 h-8 text-orange-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/lead-scoring-engine'
     }
   ];
 
