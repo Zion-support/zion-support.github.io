@@ -53,31 +53,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   };
 
   return (
-<<<<<<< HEAD
-    <div className="relative">
-      {!isLoaded && (
-        <div 
-          className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
-          style={{ width, height }}
-        />
-      )}
-      <LazyLoadImage
-      src={optimizedSrc}
-      srcSet={srcSet}
-      alt={alt}
-      className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
-      width={width}
-      height={height}
-      effect={effect}
-      placeholderSrc={placeholder}
-      threshold={threshold}
-      onLoad={handleLoad}
-      onError={handleError}
-      loading="lazy"
-      decoding="async"
-    />
-=======
-    <div
+<div
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
@@ -111,8 +87,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">
           <span className="text-sm">Failed to load image</span>
         </div>
-      )}
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
+      )}ursor/analyze-improve-and-merge-code-4a9f
     </div>
   );
 };

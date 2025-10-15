@@ -72,15 +72,8 @@ export const WebSiteStructuredData: React.FC = () => ()
 export const ServiceStructuredData: React.FC<{ service: Record<string, unknown> }> = ({ service }) => ()
   <StructuredData
     type="Service"
-<<<<<<< HEAD
-    data={{
-      name: service['name'] as string,
-      description: service['description'] as string,
-      provider: {
-=======
-    data={{}
-      provider: {}
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
+data={{}
+      provider: {}ursor/analyze-improve-and-merge-code-4a9f
         '@type': 'Organization',
         name: 'Zion Tech Group',
         url: 'https://ziontechgroup.com'},

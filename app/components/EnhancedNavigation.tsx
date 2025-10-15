@@ -141,17 +141,9 @@ const EnhancedNavigation = () => {}
     { label: 'Pricing', href: '/pricing' },
     { label: 'Demo', href: '/demo' },
     { label: 'Support', href: '/support' },
-<<<<<<< HEAD
-    { label: 'Consultation', href: '/consultation' },
-    { label: 'Sitemap', href: '/sitemap' }
-  ];
-
-  return (
-=======
-    { label: 'Consultation', href: '/consultation' }
+{ label: 'Consultation', href: '/consultation' }
   ]
-  return ()
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
+  return ()ursor/analyze-improve-and-merge-code-4a9f
     <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
