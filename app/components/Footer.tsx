@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = memo(() => {
   return (
-    <footer className="bg-gray-800 text-white">
+    <footer className="bg-gray-800 text-white" role="contentinfo">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
@@ -11,10 +11,10 @@ const Footer: React.FC = memo(() => {
             <p className="text-gray-300 mb-4">
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
+            <div className="flex space-x-4" role="list" aria-label="Social media links">
+              <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white" aria-label="Visit our website">
                 <span className="sr-only">Website</span>
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                 </svg>
               </a>
@@ -23,7 +23,7 @@ const Footer: React.FC = memo(() => {
           
           <div>
             <h4 className="text-md font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2" role="list">
               <li><Link to="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
               <li><Link to="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
               <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-white">Cloud Infrastructure</Link></li>
@@ -39,7 +39,7 @@ const Footer: React.FC = memo(() => {
           
           <div>
             <h4 className="text-md font-semibold mb-4">AI Tools</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2" role="list">
               <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">Content Moderator</Link></li>
               <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">Customer Support Pro</Link></li>
               <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-white">Workflow Automator Pro</Link></li>
@@ -55,7 +55,7 @@ const Footer: React.FC = memo(() => {
           
           <div>
             <h4 className="text-md font-semibold mb-4">Company</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2" role="list">
               <li><Link to="/about" className="text-gray-300 hover:text-white">About</Link></li>
               <li><Link to="/team" className="text-gray-300 hover:text-white">Team</Link></li>
               <li><Link to="/careers" className="text-gray-300 hover:text-white">Careers</Link></li>
@@ -66,7 +66,7 @@ const Footer: React.FC = memo(() => {
           
           <div>
             <h4 className="text-md font-semibold mb-4">Resources</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2" role="list">
               <li><Link to="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
               <li><Link to="/api-docs" className="text-gray-300 hover:text-white">API Docs</Link></li>
               <li><Link to="/help" className="text-gray-300 hover:text-white">Help Center</Link></li>

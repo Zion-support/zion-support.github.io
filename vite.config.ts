@@ -6,12 +6,13 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    sourcemap: true,
+    sourcemap: false, // Disable sourcemaps in production for smaller bundle
     minify: 'terser',
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
       },
     },
     rollupOptions: {
@@ -20,11 +21,13 @@ export default defineConfig({
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
           ui: ['@heroicons/react', 'framer-motion', 'lucide-react'],
-          utils: ['clsx', 'tailwind-merge']
+          utils: ['clsx', 'tailwind-merge'],
+          analytics: ['web-vitals']
         }
       }
     },
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500, // Reduced warning threshold
+    target: 'es2020', // Modern target for better optimization
   },
   server: {
     port: 3000,
@@ -40,8 +43,10 @@ export default defineConfig({
       'react-router-dom',
       '@heroicons/react',
       'framer-motion',
-      'lucide-react'
-    ]
+      'lucide-react',
+      'web-vitals'
+    ],
+    exclude: ['@vite/client', '@vite/env']
   },
   esbuild: {
     drop: ['console', 'debugger'],
