@@ -115,6 +115,18 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
+            <h4 className="text-md font-semibold mb-4">Micro SaaS</h4>
+            <ul className="space-y-2">
+              <li><Link to="/task-manager-pro" className="text-gray-300 hover:text-white">Task Manager Pro</Link></li>
+              <li><Link to="/analytics-dashboard" className="text-gray-300 hover:text-white">Analytics Dashboard</Link></li>
+              <li><Link to="/customer-support-hub" className="text-gray-300 hover:text-white">Customer Support Hub</Link></li>
+              <li><Link to="/inventory-manager" className="text-gray-300 hover:text-white">Inventory Manager</Link></li>
+              <li><Link to="/social-media-scheduler" className="text-gray-300 hover:text-white">Social Media Scheduler</Link></li>
+              <li><Link to="/expense-tracker-pro" className="text-gray-300 hover:text-white">Expense Tracker Pro</Link></li>
+            </ul>
+          </div>
+          
+          <div>
             <h4 className="text-md font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-300 hover:text-white">About</Link></li>
@@ -129,8 +141,11 @@ const Footer: React.FC = memo(() => {
             <h4 className="text-md font-semibold mb-4">Resources</h4>
             <ul className="space-y-2">
               <li><Link to="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
+              <li><Link to="/tutorials" className="text-gray-300 hover:text-white">Tutorials</Link></li>
+              <li><Link to="/docs" className="text-gray-300 hover:text-white">Documentation</Link></li>
               <li><Link to="/api-docs" className="text-gray-300 hover:text-white">API Docs</Link></li>
               <li><Link to="/help" className="text-gray-300 hover:text-white">Help Center</Link></li>
+              <li><Link to="/support" className="text-gray-300 hover:text-white">Support</Link></li>
               <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
               <li><Link to="/accessibility" className="text-gray-300 hover:text-white">Accessibility</Link></li>
               <li><Link to="/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
