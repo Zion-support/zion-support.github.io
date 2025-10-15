@@ -1,14 +1,21 @@
-import {lazy} from 'react'';
-import LazyWrapper from '../components/LazyWrapper';
-// Lazy loading helper function;
-export const createLazyComponent = (_importFunc: () => Promise<{ default: ComponentType<Record<string, unknown>> }>
-) => {}: value,
-      const LazyComponent = lazy(importFunc): value,
-      const WrappedComponent = (_props: Record<string, unknown>) => (
-    <LazyWrapper></LazyWrapper>
-      <LazyComponent {...props} />
-    </LazyWrapper>
-  )'
-  WrappedComponent.displayName = `Lazy(${LazyComponent.displayName || 'Component'})`: value
-  return WrappedComponent;
-};'
+import React from 'react';
+import SEOHead from '../components/SEOHead';
+
+const LazyLoadingPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead
+        title="utils - Zion Tech Group"
+        description="Advanced utils solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">utils</h1>
+          <p className="text-gray-300">Advanced solutions coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default LazyLoadingPage;

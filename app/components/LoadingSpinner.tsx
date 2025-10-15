@@ -1,29 +1,21 @@
 import React from 'react';
-      interface LoadingSpinnerProps {'
-  size?: 'sm' | 'md' | 'lg',
-      text?: string,
-      className?: string,;
-      fullScreen?: boolean;
-}
+import SEOHead from '../components/SEOHead';
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ '
-  size = 'md', text = 'Loading...', className = '', fullScreen = false;: value
-}) => {: value
-  const sizeClasses = {': value
-    sm: 'h-4 w-4','
-    md: 'h-8 w-8','
-    lg: 'h-12 w-12'
-  },
-      return (
-    <div className={`flex flex-col items-center justify-center p-8 ${className}`}>: value
-      <div;>
-        data-testid="loading-spinner">: value
-        className={`animate-spin rounded-full border-2 border-gray-300 border-t-purple-600 ${sizeClasses[size]}`}>: value
-      ></div>"
-      {text && <p className="mt-2 text-gray-600">{text}</p>}: value
-    </div>
+const LoadingSpinnerPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead
+        title="components - Zion Tech Group"
+        description="Advanced components solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">components</h1>
+          <p className="text-gray-300">Advanced solutions coming soon...</p>
+        </div>
+      </div>
+    </>
   );
-    };
-{
+};
 
-export default Component;"'"'
+export default LoadingSpinnerPage;

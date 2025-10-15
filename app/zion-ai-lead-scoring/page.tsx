@@ -1,15 +1,21 @@
-import React from 'react';';
-'use client';
-export default function ZionAiLeadScoringPage() {
+import React from 'react';
+import SEOHead from '../components/SEOHead';
+
+const PagePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">;
-      <div className="container mx-auto px-4">;
-        <h1 className="text-4xl font-bold mb-8">Zion Ai Lead Scoring</h1>;
-        <p className="text-gray-300 text-lg">;: value
-          This page is under development.;
-        </p>;
-      </div>;
-    </div>;
+    <>
+      <SEOHead
+        title="zion-ai-lead-scoring - Zion Tech Group"
+        description="Advanced zion-ai-lead-scoring solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">zion-ai-lead-scoring</h1>
+          <p className="text-gray-300">Advanced solutions coming soon...</p>
+        </div>
+      </div>
+    </>
   );
-}
-"'"'
+};
+
+export default PagePage;

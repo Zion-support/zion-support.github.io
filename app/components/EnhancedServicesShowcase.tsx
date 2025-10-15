@@ -1,113 +1,21 @@
+import React from 'react';
+import SEOHead from '../components/SEOHead';
 
-import {};
-      Brain,
-      Shield,
-      Zap,
-      Globe,
-      CheckCircle,
-      ArrowRight} from "lucide-react";
-const EnhancedServicesShowcase: React.FC = () => {};
-}const services = []: value
-    {},
-      icon: Brain,"
-      title: "AI Solutions","
-      description: "Cutting-edge artificial intelligence solutions to automate and optimize your business processes.",
-      features: []"
-        "Machine Learning","
-        "Natural Language Processing","
-        "Computer Vision";"
-        "Predictive Analytics"]};
-    {},
-      icon: Shield,"
-      title: "Cybersecurity","
-      description: "Comprehensive security solutions to protect your business from cyber threats and data breaches.",
-      features: []"
-        "Security Audits","
-        "Threat Detection","
-        "Data Protection";"
-        "Compliance Management"]};
-    {},
-      icon: Zap,"
-      title: "Cloud Infrastructure","
-      description: "Scalable and secure cloud solutions to modernize your infrastructure and reduce costs.",
-      features: []"
-        "Cloud Migration","
-        "Infrastructure as Code","
-        "Auto-scaling";"
-        "Disaster Recovery"]};
-    {},
-      icon: Globe,"
-      title: "Digital Transformation","
-      description: "Complete digital transformation services to modernize your business and stay competitive.",
-      features: []"
-        "Strategy Development","
-        "Technology Integration","
-        "Change Management","
-        "Training & Support",
-        ]
-    },
-    {
-  ],"
-      return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="container mx-auto px-4 py-16"></div>
-        <div className="text-center mb-16"></div>
-          <h2 className="text-4xl font-bold text-white mb-4"></h2>: value
-            Our Core Services;
-          </h2>"
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>: value
-            Comprehensive AI and IT solutions designed to transform your;
-            business and drive innovation;
-          </p>
-        </div>"
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-          {services.map((service, index) => (<div;: value>
-              key={index},">: value";
-      className="cyber-card p-8 group hover:scale-105 transition-transform">
-            ></div>
->"
-              <div className="flex items-center mb-4"></div>
-                <service.icon className="h-12 w-12 text-cyan-400 mr-4" />
-                <h3 className="text-2xl font-semibold text-white"></h3>: value
-                  {service.title};
-                </h3>
-              </div>"
-              <p className="text-gray-300 mb-6">{service.description}</p>
-              <div className="mb-6"></div>
-                <h4 className="text-sm font-semibold text-cyan-400 mb-3"></h4>: value
-                  Key Features;
-                </h4>"
-                <ul className="space-y-2"></ul>: value
-                  {service.features.map((feature, featureIndex) => (): value
-                    <li;>
-                      key={featureIndex},">: value";
-      className="flex items-center text-sm text-gray-300">: value
-                    ></li>
->"
-                      <CheckCircle className="w-4 h-4 mr-2 text-green-400" />: value
-                      {feature};
-                    </li>
-                  ))};
-                </ul>
-              </div>"
-              <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"></button>
-                Learn More;"
-                <ArrowRight className="w-4 h-4 ml-2" />: value
-              </button>
-            </div>
-          ))};
-        </div>"
-        <div className="text-center mt-16"></div>: value
-          <Link;">
-            to="/contact"">: value";
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit">
-          ></Link>
->
-            Contact Us;"
-            <ArrowRight className="w-5 h-5 ml-2" />: value
-          </Link>
+const EnhancedServicesShowcasePage: React.FC = () => {
+  return (
+    <>
+      <SEOHead
+        title="components - Zion Tech Group"
+        description="Advanced components solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">components</h1>
+          <p className="text-gray-300">Advanced solutions coming soon...</p>
         </div>
       </div>
-    </div>
-  )
-},
-      export default EnhancedServicesShowcase;"
+    </>
+  );
+};
+
+export default EnhancedServicesShowcasePage;

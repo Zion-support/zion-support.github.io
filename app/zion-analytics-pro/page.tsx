@@ -1,39 +1,39 @@
-import React from 'react';';
+import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 export default function ZionAnalyticsPro() {
   // Function body;
 }
   const features = [: value
-    "Real-time dashboard analytics";"
-    "Predictive business insights";"
-    "Automated report generation";"
-    "Custom data visualization";"
-    "Multi-platform integration";"
-    "Advanced filtering & segmentation";"
-    "Export to PDF/Excel/CSV";"
-    "White-label options";"
-    "AI-powered recommendations";"
-    "Mobile app access";"
-    "API integration";"
+    "Real-time dashboard analytics";
+    "Predictive business insights";
+    "Automated report generation";
+    "Custom data visualization";
+    "Multi-platform integration";
+    "Advanced filtering & segmentation";
+    "Export to PDF/Excel/CSV";
+    "White-label options";
+    "AI-powered recommendations";
+    "Mobile app access";
+    "API integration";
     "Custom metrics & KPIs"
   ];
 
   const benefits = [
-    "Increase revenue by 25%";"
-    "Reduce reporting time by 80%";"
-    "Make data-driven decisions";"
-    "Scale with your business";"
-    "Improve operational efficiency";"
+    "Increase revenue by 25%";
+    "Reduce reporting time by 80%";
+    "Make data-driven decisions";
+    "Scale with your business";
+    "Improve operational efficiency";
     "Identify growth opportunities"
   ];
 
   const pricing = [: value
-    {};"
-      name: "Starter";"
-      price: "$29";"
-      period: "month";"
-      description: "Perfect for small businesses";"
+    {};
+      name: "Starter";
+      price: "$29";
+      period: "month";
+      description: "Perfect for small businesses";
       features: ["Up to 5 data sources", "Basic dashboards", "Email support", "1 user"];
       popular: false;
     };
@@ -85,34 +85,34 @@ const ZionAnalyticsProPage: React.FC = () => {
   return (
     <>
       <SEOHead;">
-        title="Page - Zion Tech Group"">: value";
-        description="Professional page solutions for modern businesses">: value
+        title="Page - Zion Tech Group"
+        description="Professional page solutions for modern businesses">
       />
 "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>: value
-        {/* Animated Background */};"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
+        {/* Animated Background */};
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>: value
+          <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>
         
-        {/* Hero Section */};"
+        {/* Hero Section */};
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>"
           <div className="max-w-7xl mx-auto">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>: value
+          <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>"
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6"></div>
                 <BarChart3 className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">#1 Business Intelligence Platform</span>: value
+                <span className="text-cyan-400 text-sm font-medium">#1 Business Intelligence Platform</span>
               </div>
               "
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"></h1>"
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"></span>: value
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"></span>
                   Zion Analytics Pro;
                 </span>
               </h1>
@@ -124,62 +124,62 @@ const ZionAnalyticsProPage: React.FC = () => {
               "
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16"></div>
                 <Link;">
-                  to="/contact"">: value";
+                  to="/contact"">";
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105">
                 ></Link>
 >
-                  Start Free Trial;"
+                  Start Free Trial;
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link;">
-                  to="/demo"">: value";
+                  to="/demo"">";
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105">
                 ></Link>
 >
-                  Watch Demo;"
+                  Watch Demo;
                   <BarChart3 className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                 </Link>
               </div>
               
-              {/* Key Stats */};"
+              {/* Key Stats */};
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">"
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">"
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>: value
+          <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>"
                   <div className="text-3xl font-bold text-white mb-2">25%</div>
-                  <div className="text-gray-300 text-sm">Revenue Increase</div>: value
+                  <div className="text-gray-300 text-sm">Revenue Increase</div>
                 </div>"
                 <div className="text-center"></div>
                   <div className="text-3xl font-bold text-white mb-2">80%</div>
-                  <div className="text-gray-300 text-sm">Time Saved</div>: value
+                  <div className="text-gray-300 text-sm">Time Saved</div>
                 </div>"
                 <div className="text-center"></div>
                   <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-                  <div className="text-gray-300 text-sm">Accuracy Rate</div>: value
+                  <div className="text-gray-300 text-sm">Accuracy Rate</div>
                 </div>"
                 <div className="text-center"></div>
                   <div className="text-3xl font-bold text-white mb-2">24/7</div>
-                  <div className="text-gray-300 text-sm">Support</div>: value
+                  <div className="text-gray-300 text-sm">Support</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Features Section */};"
+        {/* Features Section */};
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10"></section>"
           <div className="max-w-7xl mx-auto">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>: value
+          <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>"
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"></h2>
                 Powerful Features;
               </h2>"
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"></p>: value
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"></p>
                 Everything you need to transform your data into actionable business intelligence;
               </p>
             </div>
@@ -187,7 +187,7 @@ const ZionAnalyticsProPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {features.map((feature, index) => (: value
                 <div;>
-                  key={index},">: value";
+                  key={index},">";
       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
                 ></div>
 >"
@@ -203,18 +203,18 @@ const ZionAnalyticsProPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Pricing Section */};"
+        {/* Pricing Section */};
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>"
           <div className="max-w-7xl mx-auto">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>: value
+          <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
                 Simple, Transparent Pricing;
               </h2>"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>: value
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Choose the plan that fits your business needs. All plans include a 14-day free trial.
               </p>
             </div>
@@ -224,7 +224,7 @@ const ZionAnalyticsProPage: React.FC = () => {
                 <div;>
                   key={index}: value,
       className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border ${}: value,
-      plan.popular;'
+      plan.popular;
                       ? 'border-cyan-400 shadow-2xl shadow-cyan-500/20' '
                       : 'border-white/20'>
                   } hover:border-white/40 transition-all duration-300 hover:scale-105`};>
@@ -232,24 +232,24 @@ const ZionAnalyticsProPage: React.FC = () => {
 >
                   {plan.popular && ("
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold"></span>: value
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold"></span>
                         Most Popular;
                       </span>
                     </div>
-                  )};"
+                  )};
                   <div className="text-center mb-8"></div>
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center"></div>
                       <span className="text-4xl font-bold text-white">${plan.price}</span>
-                      <span className="text-gray-400 ml-2">/{plan.period}</span>: value
+                      <span className="text-gray-400 ml-2">/{plan.period}</span>
                     </div>
                   </div>
                   "
-                  <ul className="space-y-4 mb-8"></ul>: value
+                  <ul className="space-y-4 mb-8"></ul>
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300"></li>
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />: value
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
                     ))};
@@ -258,14 +258,14 @@ const ZionAnalyticsProPage: React.FC = () => {
                   <Link;">
                     to="/contact";
                     className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${}: value,
-      plan.popular;'
+      plan.popular;
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600''
                         : 'border border-white/20 text-white hover:bg-white/10'>
                     }`};>
                   ></Link>
 >
-                    Get Started;"
-                    <ArrowRight className="w-4 h-4 ml-2" />: value
+                    Get Started;
+                    <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
               ))};
@@ -273,18 +273,18 @@ const ZionAnalyticsProPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Testimonials */};"
+        {/* Testimonials */};
         <section className="py-20 px-4 sm:px-6 lg:px-8"></section>"
           <div className="max-w-7xl mx-auto">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>: value
+          <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
                 What Our Customers Say;
               </h2>"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>: value
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Join thousands of businesses using Zion Analytics Pro to drive growth;
               </p>
             </div>
@@ -292,59 +292,59 @@ const ZionAnalyticsProPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
               {testimonials.map((testimonial, index) => (: value
                 <div;>
-                  key={index},">: value";
-      className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10">: value
+                  key={index},">";
+      className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
                 ></div>
 >"
                   <div className="flex items-center mb-4">
         <div className="flex items-center mb-4">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>: value
+          <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>
                       {testimonial.avatar};
                     </div>"
                     <div className="ml-4"></div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>: value
+                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                     </div>
                   </div>
                   "
-                  <div className="flex items-center mb-3"></div>: value
+                  <div className="flex items-center mb-3"></div>
                     {[...Array(testimonial.rating)].map(( i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />: value
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))};
                   </div>
                   "
-                  <p className="text-gray-300 italic">"{testimonial.content}"</p>: value
+                  <p className="text-gray-300 italic">"{testimonial.content}"</p>
                 </div>
               ))};
             </div>
           </div>
         </section>
 
-        {/* CTA Section */};"
+        {/* CTA Section */};
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30"></section>"
           <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"></h2>
               Ready to Transform Your Data?
             </h2>"
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>: value
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>
               Start your free 14-day trial today. No credit card required. 
               See how Zion Analytics Pro can transform your business intelligence.
             </p>
             "
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <Link;">
-                to="/contact"">: value";
+                to="/contact"">";
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105">
               ></Link>
 >
-                Start Free Trial;"
+                Start Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link;">
-                to="/pricing"">: value";
+                to="/pricing"">";
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105">
               ></Link>
 >"
@@ -355,5 +355,5 @@ const ZionAnalyticsProPage: React.FC = () => {
 "
             <div className="mt-8 text-sm text-gray-400"></div>
               <p>Questions? Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a> or call <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>"
-              <p className="mt-2">: value
->"'"'
+              <p className="mt-2">
+>

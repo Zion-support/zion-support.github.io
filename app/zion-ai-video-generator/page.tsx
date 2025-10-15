@@ -1,7 +1,7 @@
 
-import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award, Globe, Target, MessageSquare, Share, Award as AwardIcon, BookOpen, Phone, Star as StarIcon } from 'lucide-react';import { Link } from "react-router-dom",;";";
+import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award, Globe, Target, MessageSquare, Share, Award as AwardIcon, BookOpen, Phone, Star as StarIcon } from 'lucide-react';import { Link } from "react-router-dom",;
       import SEOOptimizer from "../../components/SEOOptimizer";
-;"
+;
       export default function ZionAiVideoGenerator() {","
         ""
   const features = [",";
@@ -20,7 +20,7 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
     "Team collaboration tools";
   ];
 ,"
-      const benefits = [";"
+      const benefits = [";
     "Create professional videos 10x faster",";""
     "Reduce video production costs by 80%",";""
     "No technical skills required",";""
@@ -44,7 +44,7 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
         "5-minute max video length",";""
         "Standard voice synthesis",";""
         "Basic branding options",";""
-        "Email support";"
+        "Email support";
       ],","
         ""
       popular: false","
@@ -68,7 +68,7 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
         "Custom branding & watermarks",";""
         "Priority support",";""
         "Team collaboration (5 users)",";""
-        "API access";"
+        "API access";
       ],","
         ""
       popular: true","
@@ -94,7 +94,7 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
         "Unlimited team members",";""
         "Advanced API access",";""
         "Custom integrations",";""
-        "Dedicated account manager";"
+        "Dedicated account manager";
       ],","
         ""
       popular: false","
@@ -177,22 +177,22 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
     },
     {
   ];
-;"
+;
 const ZionAiVideoGeneratorPage: React.FC = () => {";""
   return (";""
     <>";""
       <SEOHead";"">
-        title="Page - Zion Tech Group";">: value";
+        title="Page - Zion Tech Group";">";
         description="Professional page solutions for modern businesses";>
-      />";""
+      />;""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";";
-        {/* Hero Section */};"
+        {/* Hero Section */};
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">";""
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>";"
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>";"
-          <div className="max-w-7xl mx-auto text-center relative z-10">";"
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">";"
-              <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />";"
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>";
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>";
+          <div className="max-w-7xl mx-auto text-center relative z-10">";
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">";
+              <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />;
               <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Creation</span>",";
         ""
             </div>","
@@ -201,7 +201,7 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";""
         ""
               Zion AI","
         ""
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">";"
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">";
                 {" "}Video Generator","
         ""
               </span>","
@@ -219,33 +219,33 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";""
         ""
               <Link",">
         ""
-                to="/contact",">: value";
+                to="/contact",">";
       className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105";>"
               >","
         ""
                 Start Free Trial","
         ""
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />","
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />,"
         ""
               </Link>","
         ""
               <Link";"">
-                to="/demo",">: value";
+                to="/demo",">";
       className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105";>"
               >","
         ""
                 Watch Demo","
         ""
-                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />","
+                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />,"
         ""
               </Link>","
         ""
-            </div>";"
-            {/* Stats */};"
+            </div>";
+            {/* Stats */};
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">";""
-              <div className="text-center group">";"
+              <div className="text-center group">";
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">";""
-                  <Video className="w-8 h-8 text-cyan-400" />",";
+                  <Video className="w-8 h-8 text-cyan-400" />,";
         ""
                 </div>","
         ""
@@ -254,9 +254,9 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";""
         ""
               </div>","
         ""
-              <div className="text-center group">";"
+              <div className="text-center group">";
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">";""
-                  <Zap className="w-8 h-8 text-cyan-400" />",";
+                  <Zap className="w-8 h-8 text-cyan-400" />,";
         ""
                 </div>","
         ""
@@ -265,9 +265,9 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";""
         ""
               </div>","
         ""
-              <div className="text-center group">";"
+              <div className="text-center group">";
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">";""
-                  <Users className="w-8 h-8 text-cyan-400" />",";
+                  <Users className="w-8 h-8 text-cyan-400" />,";
         ""
                 </div>","
         ""
@@ -276,9 +276,9 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";""
         ""
               </div>","
         ""
-              <div className="text-center group">";"
+              <div className="text-center group">";
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">";""
-                  <Award className="w-8 h-8 text-cyan-400" />",";
+                  <Award className="w-8 h-8 text-cyan-400" />,";
         ""
                 </div>","
         ""
@@ -291,11 +291,11 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";""
         ""
           </div>","
         ""
-        </section>";"
-        {/* Features Section */};"
+        </section>";
+        {/* Features Section */};
         <section className="py-20 px-4 sm:px-6 lg:px-8">";""
-          <div className="max-w-7xl mx-auto">";"
-            <div className="text-center mb-16">";"
+          <div className="max-w-7xl mx-auto">";
+            <div className="text-center mb-16">";
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">","
         ""
                 Powerful AI Video Creation Features","
@@ -315,28 +315,28 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";""
               {features.map((feature, index) => (",";
         ""
                 <div";">
-                  key={index},">: value";
+                  key={index},">";
       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10";>"
                 >";""
-                  <div className="flex items-center mb-4">";"
-                    <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />";"
+                  <div className="flex items-center mb-4">";
+                    <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />;
                     <span className="text-white font-medium">{feature}</span>",";
         ""
                   </div>","
         ""
                 </div>","
         "
-              ))};"
+              ))};
             </div>","
         ""
           </div>","
         ""
         </section>","
         "
-        {/* Use Cases */};"
+        {/* Use Cases */};
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">";""
-          <div className="max-w-7xl mx-auto">";"
-            <div className="text-center mb-16">";"
+          <div className="max-w-7xl mx-auto">";
+            <div className="text-center mb-16">";
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">","
         ""
                 Perfect for Every Use Case","
@@ -356,7 +356,7 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";""
               {useCases.map((useCase, index) => (",";
         ""
                 <div";">
-                  key={index},">: value";
+                  key={index},">";
       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center";>"
                 >","
         ""
@@ -365,32 +365,31 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";""
                     className={`w-16 h-16 rounded-lg bg-gradient-to-r ${useCase.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`};>"
                   >","
         "
-                    {useCase.icon};"
+                    {useCase.icon};
                   </div>","
         ""
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">","
         "
-                    {useCase.title};"
+                    {useCase.title};
                   </h3>","
         ""
                   <p className="text-gray-300 leading-relaxed">",";
-        "
-                    {useCase.description};"
+                    {useCase.description};
                   </p>","
         ""
                 </div>","
         "
-              ))};"
+              ))};
             </div>","
         ""
           </div>","
         ""
         </section>","
         "
-        {/* Pricing Section */};"
+        {/* Pricing Section */};
         <section className="py-20 px-4 sm:px-6 lg:px-8">";""
-          <div className="max-w-7xl mx-auto">";"
-            <div className="text-center mb-16">";"
+          <div className="max-w-7xl mx-auto">";
+            <div className="text-center mb-16">";
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">","
         ""
                 Simple, Transparent Pricing","
@@ -419,7 +418,7 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";""
         ""
                   {plan.popular && (","
         ""
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">";"
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">";
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">",";
         ""
                         Most Popular","
@@ -429,12 +428,12 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";""
                     </div>","
         "
                   )};
-;"
-                  <div className="text-center mb-6">";"
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>";"
-                    <p className="text-gray-300 mb-4">{plan.description}</p>";"
-                    <div className="flex items-baseline justify-center">";"
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>";"
+;
+                  <div className="text-center mb-6">";
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>";
+                    <p className="text-gray-300 mb-4">{plan.description}</p>";
+                    <div className="flex items-baseline justify-center">";
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>";
                       <span className="text-gray-400 ml-1">{plan.period}</span>",";
         ""
                     </div>","
@@ -444,14 +443,14 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";""
         ""
                     {plan.features.map((feature, featureIndex) => (",";
         ""
-                      <li key={featureIndex} className="flex items-center text-gray-300">";"
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />",";
+                      <li key={featureIndex} className="flex items-center text-gray-300">";
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />,";
         ""
                         <span>{feature}</span>","
         ""
                       </li>","
         "
-                    ))};"
+                    ))};
                   </ul>","
         ""
                   <Link";"">
@@ -460,30 +459,30 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";""
         ""
                       plan.popular","
         "'"'
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700';'
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700';
                         : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900';>
                     }`};>"
                   >","
         ""
                     Get Started","
         ""
-                    <ArrowRight className="w-4 h-4 ml-2" />",";
+                    <ArrowRight className="w-4 h-4 ml-2" />,";
         ""
                   </Link>","
         ""
                 </div>","
         "
-              ))};"
+              ))};
             </div>","
         ""
           </div>","
         ""
         </section>","
         "
-        {/* Testimonials */};"
+        {/* Testimonials */};
         <section className="py-20 px-4 sm:px-6 lg:px-8">";""
-          <div className="max-w-7xl mx-auto">";"
-            <div className="text-center mb-16">";"
+          <div className="max-w-7xl mx-auto">";
+            <div className="text-center mb-16">";
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">","
         ""
                 What Our Customers Say","
@@ -502,27 +501,25 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";""
               {testimonials.map((testimonial, index) => (",";
         ""
                 <div";">
-                  key={index},">: value";
+                  key={index},">";
       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10";>"
                 >";""
                   <div className="flex items-center mb-4">",";
         ""
                     {[...Array(testimonial.rating)].map(( i) => (",";
         ""
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />",";
-        "
-                    ))};"
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />,";
+                    ))};
                   </div>","
         ""
-                  <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>";"
-                  <div className="flex items-center">";"
+                  <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>";
+                  <div className="flex items-center">";
                     <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">",";
-        "
-                      {testimonial.avatar};"
+                      {testimonial.avatar};
                     </div>","
         ""
                     <div>";""
-                      <div className="font-semibold text-white">{testimonial.name}</div>";"
+                      <div className="font-semibold text-white">{testimonial.name}</div>";
                       <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>",";
         ""
                     </div>","
@@ -531,15 +528,15 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";""
         ""
                 </div>","
         "
-              ))};"
+              ))};
             </div>","
         ""
           </div>","
         ""
-        </section>";"
-        {/* CTA Section */};"
+        </section>";
+        {/* CTA Section */};
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">";""
-          <div className="max-w-4xl mx-auto text-center">";"
+          <div className="max-w-4xl mx-auto text-center">";
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">","
         ""
               Ready to Create Amazing Videos with AI?","
@@ -553,37 +550,37 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";""
         ""
             </p>","
         "
-            {/* Contact Information */};"
+            {/* Contact Information */};
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">";""
-              <div className="text-center">";"
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">";"
-                  <MessageSquare className="w-6 h-6 text-white" />",";
+              <div className="text-center">";
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">";
+                  <MessageSquare className="w-6 h-6 text-white" />,";
         ""
                 </div>","
         ""
-                <h3 className="text-white font-semibold mb-2">Email</h3>";"
+                <h3 className="text-white font-semibold mb-2">Email</h3>";
                 <p className="text-cyan-400">kleber@ziontechgroup.com</p>",";
         ""
               </div>","
         ""
-              <div className="text-center">";"
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">";"
-                  <Phone className="w-6 h-6 text-white" />",";
+              <div className="text-center">";
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">";
+                  <Phone className="w-6 h-6 text-white" />,";
         ""
                 </div>","
         ""
-                <h3 className="text-white font-semibold mb-2">Phone</h3>";"
+                <h3 className="text-white font-semibold mb-2">Phone</h3>";
                 <p className="text-cyan-400">+1 302 464 0950</p>",";
         ""
               </div>","
         ""
-              <div className="text-center">";"
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">";"
-                  <Globe className="w-6 h-6 text-white" />",";
+              <div className="text-center">";
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">";
+                  <Globe className="w-6 h-6 text-white" />,";
         ""
                 </div>","
         ""
-                <h3 className="text-white font-semibold mb-2">Address</h3>";"
+                <h3 className="text-white font-semibold mb-2">Address</h3>";
                 <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>",";
         ""
               </div>","
@@ -593,33 +590,32 @@ const ZionAiVideoGeneratorPage: React.FC = () => {";""
         ""
               <Link",">
         ""
-                to="/contact",">: value";
+                to="/contact",">";
       className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105";>"
               >","
         ""
                 Start Free Trial","
         ""
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />","
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />,"
         ""
               </Link>","
         ""
               <Link";"">
-                to="/contact";">: value";
+                to="/contact";">";
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105";>"
               >";""
                 Start Free Trial";""
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />";""
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />;""
               </Link>";""
               <Link";"">
-                to="/demo";">: value";
+                to="/demo";">";
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105";>"
               >";""
                 Watch Demo";""
-                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />";""
+                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />;""
               </Link>";""
             </div>";""
           </div>";""
         </section>";""
       </div>";""
-    </>";"
-"'"'
+    </>;

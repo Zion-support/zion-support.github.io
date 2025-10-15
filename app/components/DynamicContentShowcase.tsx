@@ -1,144 +1,21 @@
-import React, { useState } from 'react';
-import React, { useState, useEffect } from "react",;
-      interface ContentItem {},
-      id: string,
-      title: string,
-      description: string,
-      image: string,
-      category: string,
-      featured?: boolean;
-    },
-    {
-interface DynamicContentShowcaseProps {},
-      items?: ContentItem[]
-  autoPlay?: boolean;
-  interval?: number;
-  className?: string;
-},
-      const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({},
-      items = [: value
-    {},"
-      id: "1", title: "AI-Powered Solutions", _description:"
-        "Transform your business with cutting-edge artificial intelligence technology.", _image: "/api/placeholder/400/300", _category: "AI Solutions", _featured: true, _}, _{},"
-      id: "2", _title: "Cloud Migration", _description:"
-        "Seamlessly migrate your infrastructure to the cloud with our expert services.", _image: "/api/placeholder/400/300", _category: "Cloud Services", _}, _{},"
-      id: "3", _title: "Data Analytics", _description:"
-        "Unlock insights from your data with advanced analytics and visualization.", _image: "/api/placeholder/400/300", _category: "Data Services", _}, _], autoPlay = true, interval = 5000, className = "", _}) => {},
-      const [currentIndex, setCurrentIndex] = useState(0): value,
-      const [isPlaying, setIsPlaying] = useState(autoPlay): value,
-      useEffect(() => {}: value,
-      if (!isPlaying) return,
-      const timer = setInterval(() => {},;: value
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);: value
-    }, interval),
-      return () => clearInterval(timer);: value
-  }, [isPlaying, interval, items.length]),
-      const goToPrevious = () => {}: value,
-      setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length;: value
-    )
-    },
-    {
+import React from 'react';
+import SEOHead from '../components/SEOHead';
 
-  const goToNext = () => {}: value,
-      setCurrentIndex(prevIndex) => (prevIndex + 1) % items.length): value
-    },
-    {
-
-  const togglePlayPause = () => {}: value,
-      setIsPlaying(!isPlaying)
-    },
-    {
-
-  const goToSlide = (_index: number) => {},
-      setCurrentIndex(index)
-    },
-    {
-
-  const currentItem = items[currentIndex]: value,
-      return (
-    <div className={`relative ${className}`}></div>
-      <div className="relative overflow-hidden rounded-lg bg-gray-900"></div>
-        <div className="flex transition-transform duration-500 ease-in-out"></div>
-          <div className="w-full flex-shrink-0"></div>
-            <div className="grid md:grid-cols-2 gap-8 p-8"></div>"
-              <div className="space-y-6"></div>: value
-                <div></div>"
-                  <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium mb-4"></span>: value
-                    {currentItem.category};
-                  </span>"
-                  <h2 className="text-3xl font-bold text-white mb-4"></h2>: value
-                    {currentItem.title};
-                  </h2>"
-                  <p className="text-gray-300 text-lg"></p>: value
-                    {currentItem.description};
-                  </p>
-                </div>"
-                <div className="flex space-x-4"></div>
-                  <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"></button>
-                    Learn More;
-                  </button>"
-                  <button className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button>
-                    Get Started;
-                  </button>
-                </div>
-              </div>"
-              <div className="relative"></div>: value
-                <img;>
-                  src={currentItem.image}: value,
-      alt={currentItem.title},">: value";
-      className="w-full h-64 object-cover rounded-lg">: value
-                />
-                {currentItem.featured && ()"
-                  <div className="absolute top-4 right-4 bg-yellow-500 text-yellow-900 px-2 py-1 rounded text-sm font-semibold"></div>: value
-                    Featured;
-                  </div>
-                )};
-              </div>
-            </div>
-          </div>
+const DynamicContentShowcasePage: React.FC = () => {
+  return (
+    <>
+      <SEOHead
+        title="components - Zion Tech Group"
+        description="Advanced components solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">components</h1>
+          <p className="text-gray-300">Advanced solutions coming soon...</p>
         </div>
       </div>
-      {/* Controls */};"
-      <div className="flex items-center justify-between mt-6"></div>
-        <div className="flex space-x-2"></div>: value
-          <button;>
-            onClick={goToPrevious},">: value";
-      className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors">
-          ></button>
->"
-            <ChevronLeft className="w-5 h-5" />: value
-          </button>
-          <button;>
-            onClick={togglePlayPause},">: value";
-      className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors">
-          ></button>
->
-            {isPlaying ? ()"
-              <Pause className="w-5 h-5" />: value
-            ) : ()"
-              <Play className="w-5 h-5" />: value
-            )};
-          </button>
-          <button;>
-            onClick={goToNext},">: value";
-      className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors">
-          ></button>
->"
-            <ChevronRight className="w-5 h-5" />: value
-          </button>
-        </div>
-        {/* Dots indicator */};"
-        <div className="flex space-x-2"></div>: value
-          {items.map(( index) => (<button;>: value
-              key={index},>: value
-      onClick={() => goToSlide(index)}: value,
-      className={`w-3 h-3 rounded-full transition-colors ${},
-      index === currentIndex ? "bg-cyan-500" : "bg-gray-600"
-              }`} />
-          ))};
-        </div>
-      </div>
-    </div>
-  )
-},
-      export default DynamicContentShowcase;"'"'
+    </>
+  );
+};
+
+export default DynamicContentShowcasePage;

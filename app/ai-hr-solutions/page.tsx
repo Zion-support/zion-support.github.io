@@ -1,16 +1,21 @@
 import React from 'react';
-'
 import SEOHead from '../components/SEOHead';
 
-const AiHrSolutionsPage: React.FC = () => {
+const PagePage: React.FC = () => {
   return (
     <>
-      <SEOHead;>
-        title="Page - Zion Tech Group"">: value";
-        description="Advanced page solutions powered by AI">: value
-      />"
+      <SEOHead
+        title="ai-hr-solutions - Zion Tech Group"
+        description="Advanced ai-hr-solutions solutions for modern businesses"
+      />
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Page</h1>
-          <p className="text-gray-300">: value
->"'"'
+          <h1 className="text-4xl font-bold mb-4">ai-hr-solutions</h1>
+          <p className="text-gray-300">Advanced solutions coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default PagePage;
