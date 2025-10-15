@@ -33,6 +33,25 @@ import DatabaseManagementPage from './app/database-management/page';
 import NetworkInfrastructurePage from './app/network-infrastructure/page';
 import CookiesPage from './app/cookies/page';
 
+// Micro SaaS Solutions
+import ZionaicontentmoderatorPage from './app/zion-ai-content-moderator/page';
+import ZionaicustomerchurnpredictorPage from './app/zion-ai-customer-churn-predictor/page';
+import ZionaicustomerchurnpredictorproPage from './app/zion-ai-customer-churn-predictor-pro/page';
+import ZionaicustomersentimenttrackerPage from './app/zion-ai-customer-sentiment-tracker/page';
+import ZionaicustomersupportproPage from './app/zion-ai-customer-support-pro/page';
+import ZionaidocumentanalyzerPage from './app/zion-ai-document-analyzer/page';
+import ZionaemailmarketingproPage from './app/zion-ai-email-marketing-pro/page';
+import ZionaifinancialforecasterPage from './app/zion-ai-financial-forecaster/page';
+import ZionaiinventoryoptimizerproPage from './app/zion-ai-inventory-optimizer-pro/page';
+import ZionaimeetingtranscriberPage from './app/zion-ai-meeting-transcriber/page';
+import ZionaisalespredictorPage from './app/zion-ai-sales-predictor/page';
+import ZionaisocialschedulerproPage from './app/zion-ai-social-scheduler-pro/page';
+import ZionaitaskschedulerPage from './app/zion-ai-task-scheduler/page';
+import ZionaiaworkflowautomatorPage from './app/zion-ai-workflow-automator/page';
+import ZionaiaworkflowautomatorproPage from './app/zion-ai-workflow-automator-pro/page';
+import ZioncustomersatisfactionmonitorPage from './app/zion-customer-satisfaction-monitor/page';
+import ZionsmartexpensetrackerPage from './app/zion-smart-expense-tracker/page';
+
 // Import components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -97,6 +116,25 @@ export default function App() {
                   <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
                   <Route path="/database-management" element={<DatabaseManagementPage />} />
                   <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                  
+                  {/* Micro SaaS Solutions */}
+                  <Route path="/zion-ai-content-moderator" element={<ZionaicontentmoderatorPage />} />
+                  <Route path="/zion-ai-customer-churn-predictor" element={<ZionaicustomerchurnpredictorPage />} />
+                  <Route path="/zion-ai-customer-churn-predictor-pro" element={<ZionaicustomerchurnpredictorproPage />} />
+                  <Route path="/zion-ai-customer-sentiment-tracker" element={<ZionaicustomersentimenttrackerPage />} />
+                  <Route path="/zion-ai-customer-support-pro" element={<ZionaicustomersupportproPage />} />
+                  <Route path="/zion-ai-document-analyzer" element={<ZionaidocumentanalyzerPage />} />
+                  <Route path="/zion-ai-email-marketing-pro" element={<ZionaemailmarketingproPage />} />
+                  <Route path="/zion-ai-financial-forecaster" element={<ZionaifinancialforecasterPage />} />
+                  <Route path="/zion-ai-inventory-optimizer-pro" element={<ZionaiinventoryoptimizerproPage />} />
+                  <Route path="/zion-ai-meeting-transcriber" element={<ZionaimeetingtranscriberPage />} />
+                  <Route path="/zion-ai-sales-predictor" element={<ZionaisalespredictorPage />} />
+                  <Route path="/zion-ai-social-scheduler-pro" element={<ZionaisocialschedulerproPage />} />
+                  <Route path="/zion-ai-task-scheduler" element={<ZionaitaskschedulerPage />} />
+                  <Route path="/zion-ai-workflow-automator" element={<ZionaiaworkflowautomatorPage />} />
+                  <Route path="/zion-ai-workflow-automator-pro" element={<ZionaiaworkflowautomatorproPage />} />
+                  <Route path="/zion-customer-satisfaction-monitor" element={<ZioncustomersatisfactionmonitorPage />} />
+                  <Route path="/zion-smart-expense-tracker" element={<ZionsmartexpensetrackerPage />} />
                   
                   {/* Company Pages */}
                   <Route path="/team" element={<TeamPage />} />
