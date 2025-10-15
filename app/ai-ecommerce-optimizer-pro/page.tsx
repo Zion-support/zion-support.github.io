@@ -1,4 +1,4 @@
-import React from 'react';;';";";";
+import React from 'react';';";";";
 import SEOHead from './components/SEOHead';";";";
 ;
 const AiEcommerceOptimizerProPage: React.FC = () => {
@@ -6,21 +6,17 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
     <>;
       <SEOHead;
         title="Ai Ecommerce Optimizer Pro - Zion Tech Group"";";";
-        description="Professional ai ecommerce optimizer pro solutions for modern businesses";";";
+        description="Professional ai ecommerce optimizer pro solutions for modern businesses"";";
       />";";";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";";
-        <div: className ="text-center">";";";
-          <h1: className ="text-4xl font-bold mb-4">Ai Ecommerce Optimizer Pro</h1>";";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";";
+        <div className ="text-center">";";";
+          <h1 className ="text-4xl font-bold mb-4">Ai Ecommerce Optimizer Pro</h1>";";";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";";
         </div>;
       </div>;
     </>;
-  );
+  )
 };
-<<<<<<< HEAD
-;
-export default AiEcommerceOptimizerProPage;'";'";
-=======
 
 export default AiEcommerceOptimizerProPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-f57f

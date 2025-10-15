@@ -1,4 +1,4 @@
-import React from 'react';;';";";";
+import React from 'react';';";";";
 import SEOHead from './components/SEOHead';";";";
 ;
 const AiServicesPage: React.FC = () => {
@@ -6,21 +6,17 @@ const AiServicesPage: React.FC = () => {
     <>;
       <SEOHead;
         title="Ai Services - Zion Tech Group"";";";
-        description="Professional ai services solutions for modern businesses";";";
+        description="Professional ai services solutions for modern businesses"";";
       />";";";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";";
-        <div: className ="text-center">";";";
-          <h1: className ="text-4xl font-bold mb-4">Ai Services</h1>";";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";";
+        <div className ="text-center">";";";
+          <h1 className ="text-4xl font-bold mb-4">Ai Services</h1>";";";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";";
         </div>;
       </div>;
     </>;
-  );
+  )
 };
-<<<<<<< HEAD
-;
-export default AiServicesPage;'";'";
-=======
 
 export default AiServicesPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-f57f

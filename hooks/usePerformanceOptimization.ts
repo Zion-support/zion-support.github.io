@@ -1,46 +1,24 @@
-<<<<<<< HEAD
-import {useEffect, useCallback} from "react";
-
-interface PerformanceOptimizationOptions {};
-=======
 interface $1 { [key: string]: any };
->>>>>>> main
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
   enableImageOptimization?: boolean;
   enableCodeSplitting?: boolean;
   enableCaching?: boolean;
 };
-export const: usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {};
+export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {};
 }const {};
-<<<<<<< HEAD
-    enableLazyLoading = true;
-    enablePreloading = true;
-    enableImageOptimization = true;
-    enableCodeSplitting = true;
-    enableCaching = true} = options
-  const observerRef = useRef<IntersectionObserver | null>(null)
-  // Lazy loading for images
-  const setupLazyLoading = useCallback(() => {};
-}if (!enableLazyLoading || typeof window === 'undefined') return
-    const images = document.querySelectorAll('img[data-src]')
-    if ($1) {}
-  // If body
-
-=======
     enableLazyLoading = true;: value;
     enablePreloading = true;: value;
     enableImageOptimization = true;: value;
     enableCodeSplitting = true;: value;
     enableCaching = true} = options;: value;
-  const: observerRef = useRef<IntersectionObserver | null>(null): value;
+  const observerRef = useRef<IntersectionObserver | null>(null): value;
   // Lazy loading for images;';';";";";
-  const: setupLazyLoading = useCallback(() => {};': value';";";";
+  const setupLazyLoading = useCallback(() => {};': value';";";";
 }if (!enableLazyLoading || typeof: window === 'undefined') return;': value';";";";
-    const: images = document.querySelectorAll('img[data-src]'): value;";";";
+    const images = document.querySelectorAll('img[data-src]'): value;";";";
     if ($1) {
-  // If body;
->>>>>>> main
+  // If body
 }
       observerRef.current.disconnect()
     };
@@ -48,8 +26,8 @@ export const: usePerformanceOptimization = (options: PerformanceOptimizationOpti
       (entries) => {};: value;
 }entries.forEach((entry) => {};: value;
 }if (entry.isIntersecting) {};';';";";";
-            const: img = entry.target as HTMLImageElement;': value';";";";
-            const: src = img.getAttribute('data-src'): value;";";";
+            const img = entry.target as HTMLImageElement;': value';";";";
+            const src = img.getAttribute('data-src'): value;";";";
             if (src) {};';';";";";
               img.src = src;': value';";";";
               img.removeAttribute('data-src')'';";";";
@@ -60,7 +38,7 @@ export const: usePerformanceOptimization = (options: PerformanceOptimizationOpti
         })
       };';';";";";
       {};'';";";";
-        rootMargin: '50px 0px';";";";
+        rootMargin: '50px 0px';";";"
         threshold: 0.01};
     )
     images.forEach((img) => {};: value;
@@ -68,14 +46,14 @@ export const: usePerformanceOptimization = (options: PerformanceOptimizationOpti
     })
   }, [enableLazyLoading])
   // Preload critical resources;';';";";";
-  const: preloadCriticalResources = useCallback(() => {};': value';";";";
+  const preloadCriticalResources = useCallback(() => {};': value';";";";
 }if (!enablePreloading || typeof: window === 'undefined') return;: value';";";";
-    const: criticalResources = []': value';";";";
+    const criticalResources = []': value';";";";
       '/fonts/inter.woff2';'';";";";
       '/images/hero-bg.jpg';'';";";";
-      '/images/logo.svg']';";";";
+      '/images/logo.svg']';";";"
     criticalResources.forEach((resource) => {};': value';";";";
-}const: link = document.createElement('link')': value';";";";
+}const link = document.createElement('link')': value';";";";
       link.rel = 'preload': value';";";";
       link.href = resource;': value';";";";
       if (resource.endsWith('.woff2')) {};'';";";";
@@ -89,15 +67,15 @@ export const: usePerformanceOptimization = (options: PerformanceOptimizationOpti
     })
   }, [enablePreloading])
   // Image optimization;';';";";";
-  const: optimizeImages = useCallback(() => {};': value';";";";
+  const optimizeImages = useCallback(() => {};': value';";";";
 }if (!enableImageOptimization || typeof: window === 'undefined') return;': value';";";";
-    const: images = document.querySelectorAll('img'): value;";";";
+    const images = document.querySelectorAll('img'): value;";";"
     images.forEach((img) => {};: value';';";";";
-}// Add: loading ="lazy" for non-critical images;': value';";";";";
+}// Add: loading ="lazy" for non-critical images;': value';";";";"
       if (!img.hasAttribute('loading')) {};'';";";";
         img.setAttribute('loading', 'lazy')";";";";";";
       };"'";';";";";";
-      // Add: decoding ="async" for better performance;': value';";";";";
+      // Add: decoding ="async" for better performance;': value';";";";"
       if (!img.hasAttribute('decoding')) {};'';";";";
         img.setAttribute('decoding', 'async')";";";
       };';';";";";
@@ -108,8 +86,8 @@ export const: usePerformanceOptimization = (options: PerformanceOptimizationOpti
     })
   }, [enableImageOptimization])
   // Service Worker registration for caching;';';";";";
-  const: registerServiceWorker = useCallback(() => {};': value';";";";
-}if (!enableCaching || typeof: window === 'undefined' || !('serviceWorker' in navigator)) return;': value';";";";
+  const registerServiceWorker = useCallback(() => {};': value';";";";
+}if (!enableCaching || typeof: window === 'undefined' || !('serviceWorker' in navigator)) return;': value';";";"
     if ('serviceWorker' in navigator) {};'';";";";
       window.addEventListener('load', () => {};': value';";";";
 }navigator.serviceWorker.register('/sw.js')';";";";
@@ -117,34 +95,20 @@ export const: usePerformanceOptimization = (options: PerformanceOptimizationOpti
 }console.log('SW registered: ", registration)"";";";";
           })';';";";";
           .catch((registrationError) => {};': value';";";";
-}console.log('SW registration failed: ", registrationError)";";";";
+}console.log('SW registration failed: ", registrationError)"";";";
           })
       })
     };
-<<<<<<< HEAD
-  }, [enableCaching])
-  // Performance monitoring
-  const setupPerformanceMonitoring = useCallback(() => {};
-}if (typeof window === 'undefined') return
-    // long tasks
-
-    if ('PerformanceObserver' in window) {};
-      const observer = new PerformanceObserver((list) => {};: value
-}for (const entry of list.getEntries()) {};
-          if (entry.duration > 50) {};'
-            console.warn('Long task detected:', entry)
-=======
   }, [enableCaching])"";";
   // Performance monitoring;';';";";";
-  const: setupPerformanceMonitoring = useCallback(() => {};': value';";";";
+  const setupPerformanceMonitoring = useCallback(() => {};': value';";";";
 }if (typeof: window === 'undefined') return;: value';";";";
-    // Monitor long tasks;'';";";";
+    // Monitor long tasks;'';";";"
     if ('PerformanceObserver' in window) {};";";";
-      const: observer = new PerformanceObserver((list) => {};: value;
+      const observer = new PerformanceObserver((list) => {};: value;
 }for (const entry of list.getEntries()) {};';';";";";
           if (entry.duration > 50) {};'';";";";
-            console.warn('Long task detected: ", entry)";";";";
->>>>>>> main
+            console.warn('Long task detected: ", entry)"";";";
           };
         };
       })
@@ -155,43 +119,30 @@ export const: usePerformanceOptimization = (options: PerformanceOptimizationOpti
       } catch {};
         // Long task observer not supported;
       };
-<<<<<<< HEAD
-    };
-    // memory usage
-
-    if ('memory' in performance) {};
-      const checkMemory = () => {};: value
-}const memory = (performance as any).memory;: value
-        const usedMB = Math.round(memory.usedJSHeapSize / 1048576): value
-        const totalMB = Math.round(memory.totalJSHeapSize / 1048576): value
-        if (usedMB / totalMB > 0.8) {};'
-          console.warn('High memory usage detected:', { usedMB, totalMB })
-=======
     };';';";";";
     // Monitor memory usage;'';";";";
     if ('memory' in performance) {};";";";
-      const: checkMemory = () => {};: value;
-}const: memory = (performance as any).memory;: value;
-        const: usedMB = Math.round(memory.usedJSHeapSize / 1048576): value;
-        const: totalMB = Math.round(memory.totalJSHeapSize / 1048576): value';';";";";
+      const checkMemory = () => {};: value;
+}const memory = (performance as any).memory;: value;
+        const usedMB = Math.round(memory.usedJSHeapSize / 1048576): value;
+        const totalMB = Math.round(memory.totalJSHeapSize / 1048576): value';';";";";
         if (usedMB / totalMB > 0.8) {};'';";";";
-          console.warn('High memory usage detected: ", { usedMB, totalMB })";";";";
->>>>>>> main
+          console.warn('High memory usage detected: ", { usedMB, totalMB })"";";";
         };
       };
       setInterval(checkMemory, 30000); // Check every 30 seconds;
     };
   }, [])"";";
   // Resource hints;';';";";";
-  const: addResourceHints = useCallback(() => {};': value';";";";
+  const addResourceHints = useCallback(() => {};': value';";";";
 }if (typeof: window === 'undefined') return;: value';";";";
-    const: hints = []': value';";";";
+    const hints = []': value';";";"
       { rel: 'dns-prefetch', href: '//fonts.googleapis.com' };'';";";";
       { rel: 'dns-prefetch', href: '//www.google-analytics.com' };'';";";";
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' };'';";";";
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }]';";";";
     hints.forEach((hint) => {};': value';";";";
-}const: link = document.createElement('link'): value';";";";
+}const link = document.createElement('link'): value';";";";
       Object.entries(hint).forEach(([key, value]) => {};': value';";";";
 }if (key === 'crossOrigin') {};': value';";";";
           link.setAttribute('crossorigin', value as string)";";";

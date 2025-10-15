@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import { useEffect, useCallback, useRef };; from 'react';";";";
-
-interface UsePerformanceOptimizationOptions {
-  // Add your options here
-}
-
-=======
 import { useEffect } from 'react';
 
 export const UsePerformanceOptimization = () => {

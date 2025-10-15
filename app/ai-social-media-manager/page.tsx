@@ -1,4 +1,4 @@
-import React from 'react';;';";";";
+import React from 'react';';";";";
 import SEOHead from './components/SEOHead';";";";
 ;
 const AiSocialMediaManagerPage: React.FC = () => {
@@ -6,21 +6,17 @@ const AiSocialMediaManagerPage: React.FC = () => {
     <>;
       <SEOHead;
         title="Ai Social Media Manager - Zion Tech Group"";";";
-        description="Professional ai social media manager solutions for modern businesses";";";
+        description="Professional ai social media manager solutions for modern businesses"";";
       />";";";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";";
-        <div: className ="text-center">";";";
-          <h1: className ="text-4xl font-bold mb-4">Ai Social Media Manager</h1>";";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";";
+        <div className ="text-center">";";";
+          <h1 className ="text-4xl font-bold mb-4">Ai Social Media Manager</h1>";";";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";";
         </div>;
       </div>;
     </>;
-  );
+  )
 };
-<<<<<<< HEAD
-;
-export default AiSocialMediaManagerPage;'";'";
-=======
 
 export default AiSocialMediaManagerPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-f57f

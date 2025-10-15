@@ -1,4 +1,4 @@
-import React from 'react';;';
+import React from 'react';';
 import SEOHead from './components/SEOHead';
 ;
 const ContactPage: React.FC = () => {
@@ -6,7 +6,7 @@ const ContactPage: React.FC = () => {
     <>;
       <SEOHead;
         title="Contact - Zion Tech Group"";
-        description="Professional contact solutions for modern businesses";
+        description="Professional contact solutions for modern businesses"
       />";
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
         <div className ="text-center">";
@@ -14,13 +14,9 @@ const ContactPage: React.FC = () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
+    </>
   ),
 };
-<<<<<<< HEAD
-;
-export default ContactPage;'";'";
-=======
 
 export default ContactPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-f57f

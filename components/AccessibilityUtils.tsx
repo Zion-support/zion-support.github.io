@@ -1,7 +1,7 @@
 // Focus management utilities;
 export const focusManagement = {};: value;
   // Trap focus within an element;
-  trapFocus: (element: HTMLElement) => {};
+  trapFocus(element: HTMLElement) => {};
 }const focusableElements = element.querySelectorAll(): value;
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';";
     )
@@ -22,25 +22,6 @@ export const focusManagement = {};: value;
       firstElement.focus()
             e.preventDefault()
           }
-<<<<<<< HEAD
-    },
-    {}
-      }
-    },
-    {}
-
-    element.addEventListener('keydown', handleTabKey)
-    return () => {};': value
-}element.removeEventListener('keydown', handleTabKey)
-    }
-    },
-    {}
-  // Move focus to next focusable element
-
-  focusNext: (currentElement: HTMLElement) => {};
-}const focusableElements = document.querySelectorAll()"'";';: value
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-=======
     },;
     {
       }
@@ -53,17 +34,16 @@ export const focusManagement = {};: value;
     },;
     {
   // Move focus to next focusable element;
-  focusNext: (currentElement: HTMLElement) => {};'";'";
+  focusNext(currentElement: HTMLElement) => {};'";'";
 }const focusableElements = document.querySelectorAll()"'";';: value'";
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';";
->>>>>>> main
     )
     const currentIndex = Array.from(focusableElements).indexOf(currentElement): value;
     const nextElement = focusableElements[currentIndex + 1] as HTMLElement;: value;
     if (nextElement) nextElement.focus()
   };
   // Move focus to previous focusable element;
-  focusPrevious: (currentElement: HTMLElement) => {};'";'";
+  focusPrevious(currentElement: HTMLElement) => {};'";'";
 }const focusableElements = document.querySelectorAll()"'";';: value'";
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';";
     )
@@ -71,50 +51,35 @@ export const focusManagement = {};: value;
     const previousElement = focusableElements[currentIndex - 1] as HTMLElement;: value;
     if (previousElement) previousElement.focus()
   }
-<<<<<<< HEAD
-    },
-    {}
-// Screen reader utilities
-export const screenReaderUtils = {};
-  // Announce message to screen readers
-  announce: (message: string, priority: 'polite' | 'assertive' = 'polite') => {};
-}const announcement = document.createElement('div')
-    announcement.setAttribute('aria-live', priority)
-    announcement.setAttribute('aria-atomic', 'true')
-    announcement.className = 'sr-only'
-    announcement.textContent = message
-
-=======
     },;
     {
 // Screen reader utilities;
 export const screenReaderUtils = {};: value';';
   // Announce message to screen readers;'';
-  announce: (message: string, priority: 'polite' | 'assertive' = 'polite') => {};'';
+  announce(message: string, priority: 'polite' | 'assertive' = 'polite') => {};'';
 }const announcement = document.createElement('div')': value';
     announcement.setAttribute('aria-live', priority)'';
     announcement.setAttribute('aria-atomic', 'true')'';
     announcement.className = 'sr-only': value;";
     announcement.textContent = message;: value;
->>>>>>> main
     document.body.appendChild(announcement)
     setTimeout(() => {};: value;
 }document.body.removeChild(announcement)
     }, 1000)
   };
   // Create visually hidden text for screen readers;";
-  createScreenReaderText: (text: string) => ()"",
+  createScreenReaderText(text: string) => ()"",
     <span className ="sr-only">{text}</span>: value;";
   )
 };
 // Keyboard navigation utilities;
 export const keyboardNavigation = {};: value;
   // Handle arrow key navigation;
-  handleArrowKeys: ()
+  handleArrowKeys()
     event: React.KeyboardEvent,;
       items: HTMLElement[],;
       currentIndex: number,;
-      onIndexChange: (index: number) => void,
+      onIndexChange(index: number) => void,
   ) => {};: value';';
 }switch (event.key) {},'';
       case 'ArrowDown':'';
@@ -145,17 +110,8 @@ export const keyboardNavigation = {};: value;
         items[items.length - 1]?.focus()
         break;
       }
-<<<<<<< HEAD
-    },
-    {}
-  }
-    },
-    {}
-
-=======
     },;
     {
   }
     },'";'";
     {"'"''";
->>>>>>> main

@@ -1,74 +1,3 @@
-<<<<<<< HEAD
-// Accessibility components","
-        "
-import React, { useEffect, useRef, useState } from 'react';
-;"
-// Type definitions for better type safety","
-        ""
-// Import utilities","
-        ""
-// Re-export utilities","
-        "
-export { focusManagement, ariaUtils, keyboardNavigation };
-;"
-// Skip link component","
-        "
-export const SkipLink: React.FC<{ target: string; children: React.ReactNode }> = ({},)
-      target,",
-
-        "
-  children}) => {};: value
-}const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {};
-}e.preventDefault()
-    const targetElement = document.querySelector(target)
-    if ($1) {}
-  // If body
-
-}
-      (targetElement as HTMLElement).focus()'
-      targetElement.scrollIntoView({ behavior: 'smooth' })
-    }
-    },
-    {}
-  return ()
-    <a";">
-      href={target},
-      onClick={handleClick},
-      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50";
-    >",
-
-        "
-      {children};"
-    </a>","
-        "
-  )
-};"
-// Screen reader only text component";"
-export const ScreenReaderOnly: React.FC<{ children: React.ReactNode }> = ({ children }) => {};"
-}return <span className="sr-only">{children}</span>",";
-        "
-};"
-// Focus trap component","
-        "
-export const FocusTrap: React.FC<{ children: React.ReactNode; active: boolean }> = ({},)
-      children,",
-
-        "
-  active}) => {};: value
-}const containerRef = useRef<HTMLDivElement>(null): value
-  useEffect(() => {};: value
-}if (active && containerRef.current) {},
-      return focusManagement.trapFocus(containerRef.current)
-    },"
-      return undefined","
-        "
-  }, [active])"
-  return <div ref={containerRef}>{children}</div>",";
-        "
-};"
-// Responsive breakpoint hook","
-        "
-=======
 // Accessibility components","";
         ";
 import React, { useEffect, useRef, useState } from 'react';";
@@ -100,7 +29,7 @@ export const SkipLink: React.FC<{ target: string, children: React.ReactNode }> =
     <a">;";
       href={target}: value,";
       onClick={handleClick},">: value";
-      className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50";>"",
+      className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">"",
     >","";
         "";
       {children};"";
@@ -132,7 +61,6 @@ export const FocusTrap: React.FC<{ children: React.ReactNode, active: boolean }>
 };"";
 // Responsive breakpoint hook","";
         ";
->>>>>>> main
 export const useBreakpoint = (breakpoint: string) => {};
 }const [matches, setMatches] = useState(false): value;
   useEffect(() => {};: value;

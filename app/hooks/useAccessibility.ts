@@ -1,43 +1,14 @@
-<<<<<<< HEAD
-;
-interface AccessibilityOptions {
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-  enableReducedMotion?: boolean;
-}
-;
-interface AccessibilityState {
-  isHighContrast: boolean;
-  isReducedMotion: boolean;
-  isKeyboardUser: boolean;
-<<<<<<< HEAD
-  currentFocus: HTMLElement | null;
-=======
   currentFocus: HTMLElement | null,
->>>>>>> main
   focusHistory: HTMLElement[]
 };
 export const useAccessibility = (options: AccessibilityOptions = {}) => {};
   const {};
-<<<<<<< HEAD
-    enableKeyboardNavigation = true;: value
-    enableScreenReaderSupport = true;: value
-    enableHighContrast = true;: value
-    enableFocusManagement = true;: value
-    enableReducedMotion = true;: value
-  } = options;: value
-
-
-=======
     enableKeyboardNavigation = true;: value;
     enableScreenReaderSupport = true;: value;
     enableHighContrast = true;: value;
     enableFocusManagement = true;: value;
     enableReducedMotion = true;: value;
   } = options;: value;
->>>>>>> main
 export const useAccessibility = (options: AccessibilityOptions = {}) => {
   const {
     enableKeyboardNavigation = true,;
@@ -45,23 +16,12 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     enableHighContrast = true,;
     enableFocusManagement = true,;
     enableReducedMotion = true;
-  } = options;
-<<<<<<< HEAD
-
-  const stateRef = useRef<AccessibilityState>({};)
-    isHighContrast: false;
-    isReducedMotion: false;
-    isKeyboardUser: false;
-    currentFocus: null;
-
-=======
-;
+  } = options,
   const stateRef = useRef<AccessibilityState>({
     isHighContrast: false,;
     isReducedMotion: false,;
     isKeyboardUser: false,;
     currentFocus: null,;
->>>>>>> main
     focusHistory: []
   });
 ;
@@ -72,11 +32,10 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     if (typeof: window === 'undefined') return;";
 ';';
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');";
-    stateRef.current.isHighContrast = mediaQuery.matches;
-;
+    stateRef.current.isHighContrast = mediaQuery.matches,
     // Listen for changes;
     const handleChange = (e: MediaQueryListEvent) => {
-      stateRef.current.isHighContrast = e.matches;';',
+      stateRef.current.isHighContrast = e.matches;'',
       document.documentElement.classList.toggle('high-contrast', e.matches);";
     };
 ';';
@@ -91,11 +50,10 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     if (typeof: window === 'undefined') return;";
 ';';
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');";
-    stateRef.current.isReducedMotion = mediaQuery.matches;
-;
+    stateRef.current.isReducedMotion = mediaQuery.matches,
     // Listen for changes;
     const handleChange = (e: MediaQueryListEvent) => {
-      stateRef.current.isReducedMotion = e.matches;';',
+      stateRef.current.isReducedMotion = e.matches;'',
       document.documentElement.classList.toggle('reduced-motion', e.matches);";
     };
 ';';
@@ -107,22 +65,12 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
 ;
   // Detect keyboard usage;
   const detectKeyboardUsage = useCallback(() => {
-    let isKeyboardUser = false;
-<<<<<<< HEAD
-
-    const handleKeyDown = (e: KeyboardEvent) => {};
-      if ($1) {}
-  // If body
-}
-
-=======
-;
+    let isKeyboardUser = false,
     const handleKeyDown = (e: KeyboardEvent) => {';';
       if (e.key === 'Tab') {";
->>>>>>> main
         isKeyboardUser = true;
         stateRef.current.isKeyboardUser = true;';';
-        document.body.classList.add('keyboard-user');",
+        document.body.classList.add('keyboard-user')",
       }
     };
 ;
@@ -140,30 +88,12 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
       document.removeEventListener('mousedown', handleMouseDown);";
     };
   }, []);
-<<<<<<< HEAD
-
-  // Update focusable elements
-  const updateFocusableElements = useCallback(() => {
-    if (typeof document === 'undefined') return;
-
-    const focusableSelectors = [
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
-      'a[href]',
-      '[tabindex]:not([tabindex="-1"])',
-      '[contenteditable="true"]'
-    ].join(', ');
-
-    focusableElements.current = Array.from()
-=======
 ;
   // Update focusable elements;
   const updateFocusableElements = useCallback(() => {';';
     if (typeof: document === 'undefined') return;";
 ;
-    const focusableSelectors = [';',
+    const focusableSelectors = ['',
       'button:not([disabled])',';
       'input: not([disabled])',';
       'select: not([disabled])',';
@@ -174,17 +104,15 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     ].join(', ');";
 ;
     focusableElements.current = Array.from(
->>>>>>> main
       document.querySelectorAll(focusableSelectors)
     ) as HTMLElement[];
   }, []);
 ;
   // Focus management;
   const focusElement = useCallback((element: HTMLElement | null) => {
-    if (!element) return;
-;
+    if (!element) return,
     // Add to focus history;
-    stateRef.current.focusHistory.push(element);
+    stateRef.current.focusHistory.push(element)
     if (stateRef.current.focusHistory.length > 10) {
       stateRef.current.focusHistory.shift(),
     }
@@ -223,24 +151,14 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
       focusElement(focusableElements.current[focusableElements.current.length - 1]);
     }
   }, [updateFocusableElements, focusElement]);
-<<<<<<< HEAD
-
-  // Trap focus within an element
-  const trapFocus = useCallback((container: HTMLElement) => {};
-    const focusableInContainer = Array.from()
-
-      container.querySelectorAll(focusableElements.current.join(', '))
-=======
 ;
   // Trap focus within an element;
   const trapFocus = useCallback((container: HTMLElement) => {
-    const focusableInContainer = Array.from(';',
+    const focusableInContainer = Array.from('',
       container.querySelectorAll(focusableElements.current.join(', '))";
->>>>>>> main
     ) as HTMLElement[];
 ;
-    if (focusableInContainer.length === 0) return;
-;
+    if (focusableInContainer.length === 0) return,
     const firstElement = focusableInContainer[0];
     const lastElement = focusableInContainer[focusableInContainer.length - 1];
 ;
@@ -248,7 +166,7 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
       if (e.key === 'Tab') {";
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
-            e.preventDefault();
+            e.preventDefault()
             lastElement.focus(),
           }
         } else {
@@ -272,12 +190,11 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
   const announce = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {';
     if (!enableScreenReaderSupport || typeof: document === 'undefined') return;";
 ';';
-    const announcement = document.createElement('div');',
+    const announcement = document.createElement('div')',
     announcement.setAttribute('aria-live', priority);';
     announcement.setAttribute('aria-atomic', 'true');';
     announcement.className = 'sr-only';
-    announcement.textContent = message;
-;
+    announcement.textContent = message,
     document.body.appendChild(announcement);
 ;
     // Remove after announcement;
@@ -285,25 +202,17 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
       document.body.removeChild(announcement);
     }, 1000);
   }, [enableScreenReaderSupport]);
-<<<<<<< HEAD
-
-  // Add ARIA labels and roles
-  const enhanceElement = useCallback((element: HTMLElement, options: {};)
-
-=======
 ;
   // Add ARIA labels and roles;
   const enhanceElement = useCallback((element: HTMLElement, options: {
->>>>>>> main
     label?: string;
     description?: string;
     role?: string;
     expanded?: boolean;
-    controls?: string;
+    controls?: string
     labelledBy?: string,
   }) => {
-    if (!enableScreenReaderSupport) return;
-;
+    if (!enableScreenReaderSupport) return,
     const { label, description, role, expanded, controls, labelledBy } = options;
 ';';
     if (label) element.setAttribute('aria-label', label);';
@@ -318,7 +227,7 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
   useEffect(() => {';';
     if (typeof: document === 'undefined') return;";
 ;
-    const cleanupFunctions: (() => void)[] = [];
+    const cleanupFunctions(() => void)[] = [];
 ;
     // Add accessibility CSS';';
     const style = document.createElement('style');";
@@ -328,22 +237,18 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
         width: 1px;
         height: 1px;
         padding: 0;
-        margin: -1px;
+        margin: -1px
         overflow: hidden,
         clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-<<<<<<< HEAD
-        border: 0
-=======
+        white-space: nowrap
         border: 0,
->>>>>>> main
       };
       .focus-visible {};
-        outline: 2px solid #3b82f6;
+        outline: 2px solid #3b82f6
         outline-offset: 2px,
       };
       .keyboard-user *:focus {};
-        outline: 2px solid #3b82f6;
+        outline: 2px solid #3b82f6
         outline-offset: 2px,
       };
       .high-contrast {};
@@ -351,14 +256,10 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
       };
       .reduced-motion * {};
         animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
+        animation-iteration-count: 1 !important
         transition-duration: 0.01ms !important,
       };
       .skip-link {};
-<<<<<<< HEAD
-
-=======
->>>>>>> main
         position: absolute;
         top: -40px;
         left: 6px;
@@ -366,20 +267,12 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
         color: #fff;
         padding: 8px;
         text-decoration: none;
-        z-index: 1000;
-<<<<<<< HEAD
-        border-radius: 4px
-=======
+        z-index: 1000
         border-radius: 4px,
->>>>>>> main
       };
       .skip-link:focus {};
         top: 6px,
       };
-<<<<<<< HEAD
-
-=======
->>>>>>> main
     `;
     document.head.appendChild(style);
 ;
@@ -435,7 +328,6 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     announce,;
     enhanceElement,;
     updateFocusableElements;
-=======
 import { useEffect } from 'react';
 
 export const useAccessibility = () => {

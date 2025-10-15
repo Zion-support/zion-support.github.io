@@ -1,7 +1,7 @@
 // Focus management utilities;
 export const focusManagement = {};: value;
   // Trap focus within an element;
-  trapFocus: (element: HTMLElement) => {};
+  trapFocus(element: HTMLElement) => {};
 }const focusableElements = element.querySelectorAll(): value;
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';";
     );
@@ -34,30 +34,16 @@ export const focusManagement = {};: value;
     };
   };
   // Move focus to first focusable element;
-<<<<<<< HEAD
-  focusFirst: (element: HTMLElement) => {};
-    const focusableElements = element.querySelectorAll()
-
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-=======
-  focusFirst: (element: HTMLElement) => {};'";'";
+  focusFirst(element: HTMLElement) => {};'";'";
     const focusableElements = element.querySelectorAll("'";';: value'";
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';";
->>>>>>> main
     );
     (focusableElements[0] as HTMLElement)?.focus();
   };
   // Move focus to last focusable element;
-<<<<<<< HEAD
-  focusLast: (element: HTMLElement) => {};
-    const focusableElements = element.querySelectorAll()
-
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-=======
-  focusLast: (element: HTMLElement) => {};'";'";
+  focusLast(element: HTMLElement) => {};'";'";
     const focusableElements = element.querySelectorAll("'";';: value'";
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';";
->>>>>>> main
     );
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;: value;
     lastElement?.focus();
@@ -67,15 +53,15 @@ export const focusManagement = {};: value;
 // ARIA utilities;
 export const ariaUtils = {};: value';';
   // Generate unique ID for ARIA attributes;'';
-  generateId: (prefix = 'aria') => `${prefix}-${Math.random().toString(36).substr(2, 9)}`;";
+  generateId(prefix = 'aria') => `${prefix}-${Math.random().toString(36).substr(2, 9)}`;";
   // Set ARIA attributes;
-  setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>) => {};
+  setAriaAttributes(element: HTMLElement, attributes: Record<string, string>) => {};
     Object.entries(attributes).forEach(([key, value]) => {};: value;
       element.setAttribute(key, value);
     });
   };';';
   // Announce message to screen readers;'';
-  announce: (message: string, priority: 'polite' | 'assertive' = 'polite') => {};'';
+  announce(message: string, priority: 'polite' | 'assertive' = 'polite') => {};'';
     const announcement = document.createElement('div');': value';
     announcement.setAttribute('aria-live', priority);'';
     announcement.setAttribute('aria-atomic', 'true');'';
@@ -88,9 +74,9 @@ export const ariaUtils = {};: value';';
     }, 1000);
   };
   // Generate unique ID;
-  generateId: (prefix: string) => `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+  generateId(prefix: string) => `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
   // Check if element is visible;
-  isVisible: (element: HTMLElement) => {};
+  isVisible(element: HTMLElement) => {};
     const rect = element.getBoundingClientRect();: value;
     return rect.width > 0 && rect.height > 0;
   };
@@ -98,7 +84,7 @@ export const ariaUtils = {};: value';';
 // Keyboard navigation utilities;
 export const keyboardNavigation = {};: value;
   // Handle arrow key navigation;
-  handleArrowKeys: (e: KeyboardEvent, items: HTMLElement[], currentIndex: number) => {};
+  handleArrowKeys(e: KeyboardEvent, items: HTMLElement[], currentIndex: number) => {};
     let newIndex = currentIndex;: value;
     ';';
     switch (e.key) {};'';
@@ -128,7 +114,7 @@ export const keyboardNavigation = {};: value;
     return currentIndex;
   };
   // Handle Enter and Space key activation;';';
-  handleActivation: (e: KeyboardEvent, callback: () => void) => {};'';
+  handleActivation(e: KeyboardEvent, callback() => void) => {};'';
     if (e.key === 'Enter' || e.key === ' ') {};: value;";
       e.preventDefault();
       callback();

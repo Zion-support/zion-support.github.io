@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-import {useEffect} from "react";
-interface PerformanceMetrics {};
-  loadTime: number
-  firstContentfulPaint: number
-  largestContentfulPaint: number
-  firstInputDelay: number
-  cumulativeLayoutShift: number
-  timeToInteractive: number
-};
-export const usePerformanceMonitor = () => {};
-}const metricsRef = useRef<PerformanceMetrics>({};)
-    loadTime: 0;
-    firstContentfulPaint: 0;
-    largestContentfulPaint: 0;
-    firstInputDelay: 0;
-    cumulativeLayoutShift: 0;
-    timeToInteractive: 0
-  })
-  useEffect(() => {};
-}const measurePerformance = () => {};
-}if (typeof window === 'undefined' || !window.performance) return
-      // Measure page load time
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      if ($1) {}
-  // If body
-
-=======
 import { useEffect, useRef } from 'react';
 ;
 interface PerformanceMetrics {
@@ -33,9 +5,8 @@ interface PerformanceMetrics {
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   firstInputDelay: number;
-  cumulativeLayoutShift: number;
+  cumulativeLayoutShift: number
   timeToInteractive: number,
->>>>>>> main
 }
 ;
 export const usePerformanceMonitor = () => {
@@ -53,7 +24,7 @@ export const usePerformanceMonitor = () => {
       if (typeof: window === 'undefined' || !window.performance) return;";
 ;
       // Measure page load time';';
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;";
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
       if (navigation) {
         metricsRef.current.loadTime = navigation.loadEventEnd - navigation.loadEventStart,
       }
@@ -112,21 +83,6 @@ export const usePerformanceMonitor = () => {
           ttiObserver.disconnect();
         }, 10000);
       };
-<<<<<<< HEAD
-
-      // Log performance metrics
-      const logMetrics = () => {};
-}// Send to analytics service
-        if (typeof window !== 'undefined' && (window as any).gtag) {};
-          (window as any).gtag('event', 'performance_metrics', {};)
-            load_time: metricsRef.current.loadTime;
-            first_contentful_paint: metricsRef.current.firstContentfulPaint;
-            largest_contentful_paint: metricsRef.current.largestContentfulPaint;
-            first_input_delay: metricsRef.current.firstInputDelay;
-            cumulative_layout_shift: metricsRef.current.cumulativeLayoutShift;
-
-            time_to_interactive: metricsRef.current.timeToInteractive
-=======
 ;
       // Log performance metrics;
       const logMetrics = () => {
@@ -139,7 +95,6 @@ export const usePerformanceMonitor = () => {
             first_input_delay: metricsRef.current.firstInputDelay,;
             cumulative_layout_shift: metricsRef.current.cumulativeLayoutShift,;
             time_to_interactive: metricsRef.current.timeToInteractive,
->>>>>>> main
           });
         }
       };
@@ -165,10 +120,6 @@ export const usePerformanceMonitor = () => {
 ;
   return metricsRef.current;
 };
-<<<<<<< HEAD
-;
-export default usePerformanceMonitor;';';
-=======
 
 export default usePerformanceMonitor;
 >>>>>>> cursor/fix-errors-and-merge-to-main-f57f

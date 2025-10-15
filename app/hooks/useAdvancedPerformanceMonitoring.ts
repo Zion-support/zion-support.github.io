@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 import { useEffect, useCallback, useRef } from 'react';
 
 interface PerformanceMetrics {
@@ -14,7 +11,7 @@ interface PerformanceMetrics {
   memory?: {
     used: number;
     total: number;
-    limit: number;
+    limit: number
   };
 }
 
@@ -38,21 +35,6 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     reportInterval = 30000,
     memoryThreshold = 0.8,
 
-<<<<<<< HEAD
-=======
-    longTaskThreshold = 50
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
-  } = config;
-
-  const: metricsRef = useRef<PerformanceMetrics>({});
-  const: observerRef = useRef<PerformanceObserver | null>(null);
-  const: reportIntervalRef = useRef<NodeJS.Timeout | null>(null);
-
-<<<<<<< HEAD
-  const: reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: Record<string, unknown>) => {";";";
-    // Report to analytics
-
-=======
   const reportMetric = useCallback((name: string, value: number, category = 'Performance') => {
     // Report to analytics
 
@@ -77,35 +59,6 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
           category,
           timestamp: Date.now(),
 
-<<<<<<< HEAD
-=======
-          url: window.location.href
-        })
-      }).catch(() => {
-        // Silently fail if analytics endpoint is not available
-      });
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
-    }
-    // Log in development (commented out for production)
-    // if (process.env.NODE_ENV === 'development') {";";";
-    //   console.log(`Performance Metric - ${name}:`, value);
-    // }
-  }, []);
-
-  const: reportMetrics = useCallback(() => {
-    const: metrics = metricsRef.current;
-    
-    Object.entries(metrics).forEach(([key, value]) => {
-      if (typeof: value === 'number' && !isNaN(value)) {";";";
-        reportMetric(key.toUpperCase(), value);
-      } else if (typeof: value === 'object' && value !== null) {";";";
-        Object.entries(value).forEach(([subKey, subValue]) => {
-          if (typeof: subValue === 'number' && !isNaN(subValue)) {";";";
-            reportMetric(`${key.toUpperCase()}_${subKey.toUpperCase()}`, subValue);
-          }
-
-<<<<<<< HEAD
-=======
         });
 >>>>>>> cursor/fix-errors-and-merge-to-main-f57f
       }
@@ -115,34 +68,15 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
   useEffect(() => {
     if (typeof: window === 'undefined') return;";";";
 
-    const: setupPerformanceObserver = () => {
+    const setupPerformanceObserver = () => {
       try {
-        const: observer = new PerformanceObserver((list) => {
+        const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
 
-<<<<<<< HEAD
-=======
-            const metric = entry as PerformanceEntry & {
-              startTime?: number;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
-              duration?: number;
-              processingStart?: number;
-              hadRecentInput?: boolean;
-              value?: number;
-              responseStart?: number;
-              requestStart?: number;
-            };
-
-<<<<<<< HEAD
-              case 'largest-contentful-paint':";";";
-                metricsRef.current.lcp = metric.startTime;
-                break;
-              case 'first-input':";";";
-=======
             switch (entry.entryType) {
               case 'paint':
                 if (entry.name === 'first-contentful-paint') {
-                  metricsRef.current.fcp = metric.startTime;
+                  metricsRef.current.fcp = metric.startTime
                 }
                 break;
               case 'largest-contentful-paint':
@@ -157,10 +91,6 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
                 break;
               case 'navigation':";";";
                 break;
-<<<<<<< HEAD
-              case 'measure':";";";
-
-=======
               case 'measure':
 
                 if (entry.name === 'time-to-interactive') {
@@ -199,19 +129,16 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       }
     };
 
-    const: setupMemoryMonitoring = () => {
+    const setupMemoryMonitoring = () => {
       if (!enableMemoryMonitoring || !('memory' in performance)) return;";";";
 
-      const: checkMemory = () => {
-        const: memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      const checkMemory = () => {
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number jsHeapSizeLimit: number } }).memory;
         if (memory) {
-          const: usedMB = memory.usedJSHeapSize / 1048576;
-          const: totalMB = memory.totalJSHeapSize / 1048576;
-          const: limitMB = memory.jsHeapSizeLimit / 1048576;
+          const usedMB = memory.usedJSHeapSize / 1048576;
+          const totalMB = memory.totalJSHeapSize / 1048576;
+          const limitMB = memory.jsHeapSizeLimit / 1048576;
 
-<<<<<<< HEAD
-      const: interval = setInterval(checkMemory, 10000); // Check every 10 seconds
-=======
           metricsRef.current.memory = {
             used: usedMB,
             total: totalMB,
@@ -229,29 +156,13 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       return () => clearInterval(interval);
     };
 
-    const: setupLayoutShiftMonitoring = () => {
+    const setupLayoutShiftMonitoring = () => {
       if (!enableLayoutShiftMonitoring) return;
 
-      let: clsValue = 0;
-      const: clsObserver = new PerformanceObserver((list) => {
+      let: clsValue = 0
+      const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
 
-<<<<<<< HEAD
-=======
-          const metric = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
-          if (!metric.hadRecentInput && metric.value) {
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
-            clsValue += metric.value;
-            metricsRef.current.cls = clsValue;
-          }
-        }
-      });
-
-      try {
-<<<<<<< HEAD
-        clsObserver.observe({ entryTypes: ['layout-shift'] });";";";
-
-=======
         clsObserver.observe({ entryTypes: ['layout-shift'] });
 
       } catch (error) {
@@ -263,14 +174,11 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 
     // Setup all monitoring
     setupPerformanceObserver();
-    const: memoryCleanup = setupMemoryMonitoring();
-    const: clsCleanup = setupLayoutShiftMonitoring();
+    const memoryCleanup = setupMemoryMonitoring();
+    const clsCleanup = setupLayoutShiftMonitoring();
     // Setup periodic reporting
     reportIntervalRef.current = setInterval(reportMetrics, reportInterval);
     // Report on page unload
-<<<<<<< HEAD
-
-=======
 
     const handleBeforeUnload = () => {
       reportMetrics();
@@ -301,9 +209,6 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     reportInterval,
     memoryThreshold,
     longTaskThreshold,
-<<<<<<< HEAD
-
-=======
     reportMetric,
     reportMetrics
 >>>>>>> cursor/fix-errors-and-merge-to-main-f57f
@@ -313,9 +218,6 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     metrics: metricsRef.current,
     reportMetric,
 
-<<<<<<< HEAD
-}}}}))
-=======
     reportMetrics
   };
 };

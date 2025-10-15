@@ -1,16 +1,6 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
-  ];
-;
-  const: stats = [";"";";
-    { number: '10,000+', label: 'Active Users' },";"";";";";
-    { number: '99.9%', label: 'Uptime Guarantee' },";"";";";";
-    { number: '24/7', label: 'Support Available' },";"";";";";
-    { number: '30-day', label: 'Free Trial' };";";";
-  ];
-=======
 const MicroSaas: React.FC = () => {
   return (
     <>
@@ -26,7 +16,7 @@ const MicroSaas: React.FC = () => {
       </div>
     </>
 >>>>>>> cursor/fix-errors-and-merge-to-main-f57f
-  );
+  )
 };
 
 export default MicroSaas;
