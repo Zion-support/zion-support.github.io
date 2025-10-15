@@ -1,140 +1,134 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  ShoppingCart, 
-  TrendingUp, 
-  Target, 
-  BarChart3, 
-  Users, 
-  Zap, 
+  Scale, 
+  FileText, 
+  Search, 
+  Shield, 
+  Clock, 
   CheckCircle, 
   Star,
   ArrowRight,
   Phone,
   Mail,
   MapPin,
+  BookOpen,
+  Gavel,
+  Users,
   Award,
-  Clock,
-  Shield,
-  DollarSign,
-  Eye,
-  MousePointer
+  Building,
+  Home,
+  Heart
 } from 'lucide-react';
 
-const AiEcommerceOptimizerProPage: React.FC = () => {
+const AiLegalAssistantProPage: React.FC = () => {
   const features = [
-    "AI-Powered Product Recommendations",
-    "Dynamic Pricing Optimization",
-    "Customer Behavior Analysis",
-    "Inventory Management AI",
-    "Personalized Shopping Experience",
-    "Conversion Rate Optimization",
-    "A/B Testing Automation",
-    "Customer Lifetime Value Prediction",
-    "Fraud Detection & Prevention",
-    "Real-time Analytics Dashboard"
+    "AI-Powered Document Analysis",
+    "Contract Review & Generation",
+    "Legal Research Automation",
+    "Case Law Analysis",
+    "Compliance Monitoring",
+    "Document Template Library",
+    "Client Communication Tools",
+    "Billing & Time Tracking",
+    "Court Filing Assistance",
+    "Multi-Jurisdiction Support"
   ];
 
-  const optimizationAreas = [
+  const practiceAreas = [
     {
-      name: "Product Discovery",
-      description: "AI-powered search and recommendation engines to help customers find products",
-      icon: <Target className="w-8 h-8" />,
-      metrics: ["+35% Product Views", "+28% Add to Cart", "+22% Purchase Rate"]
+      name: "Corporate Law",
+      description: "Contract drafting, M&A support, corporate governance",
+      icon: <Building className="w-8 h-8" />
     },
     {
-      name: "Pricing Strategy",
-      description: "Dynamic pricing optimization based on demand, competition, and customer behavior",
-      icon: <DollarSign className="w-8 h-8" />,
-      metrics: ["+18% Revenue", "+12% Profit Margin", "+25% Price Competitiveness"]
+      name: "Litigation Support", 
+      description: "Case analysis, discovery assistance, motion drafting",
+      icon: <Gavel className="w-8 h-8" />
     },
     {
-      name: "Customer Experience",
-      description: "Personalized shopping experience with AI-driven content and recommendations",
-      icon: <Users className="w-8 h-8" />,
-      metrics: ["+40% Engagement", "+30% Session Duration", "+45% Return Visits"]
+      name: "Real Estate",
+      description: "Property transactions, lease agreements, title research",
+      icon: <Home className="w-8 h-8" />
     },
     {
-      name: "Conversion Optimization",
-      description: "AI-powered A/B testing and conversion funnel optimization",
-      icon: <TrendingUp className="w-8 h-8" />,
-      metrics: ["+32% Conversion Rate", "+28% Checkout Completion", "+35% Revenue per Visitor"]
+      name: "Employment Law",
+      description: "HR policies, employment contracts, compliance",
+      icon: <Users className="w-8 h-8" />
     },
     {
-      name: "Inventory Management",
-      description: "Predictive inventory management with demand forecasting and stock optimization",
-      icon: <BarChart3 className="w-8 h-8" />,
-      metrics: ["-25% Stockouts", "-30% Overstock", "+20% Inventory Turnover"]
+      name: "Intellectual Property",
+      description: "Patent research, trademark filing, IP protection",
+      icon: <Shield className="w-8 h-8" />
     },
     {
-      name: "Marketing Automation",
-      description: "AI-driven email campaigns, retargeting, and customer segmentation",
-      icon: <Zap className="w-8 h-8" />,
-      metrics: ["+50% Email Open Rate", "+38% Click-through Rate", "+42% Campaign ROI"]
+      name: "Family Law",
+      description: "Divorce proceedings, custody agreements, estate planning",
+      icon: <Heart className="w-8 h-8" />
     }
   ];
 
   const pricingTiers = [
     {
-      name: "Starter",
-      price: "$99",
+      name: "Solo Practitioner",
+      price: "$199",
       period: "/month",
-      description: "Perfect for small online stores",
+      description: "Perfect for individual lawyers",
       features: [
-        "Basic AI Recommendations",
-        "Product Analytics",
-        "Email Support",
-        "Up to 1,000 products"
+        "Document Analysis (100/month)",
+        "Contract Templates",
+        "Basic Research Tools",
+        "Email Support"
       ]
     },
     {
-      name: "Professional",
-      price: "$299",
+      name: "Small Firm",
+      price: "$499", 
       period: "/month",
-      description: "Ideal for growing e-commerce businesses",
+      description: "Ideal for small law firms",
       features: [
-        "Advanced AI Features",
-        "Dynamic Pricing",
+        "Document Analysis (500/month)",
+        "Advanced Research",
+        "Team Collaboration",
         "Priority Support",
-        "Up to 10,000 products",
-        "Custom Integrations"
+        "Custom Templates"
       ]
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$1,299",
       period: "/month",
-      description: "For large e-commerce platforms",
+      description: "For large law firms",
       features: [
+        "Unlimited Analysis",
         "Full AI Suite",
-        "Custom AI Models",
+        "API Integration",
         "Dedicated Support",
-        "Unlimited Products",
-        "White-label Options"
+        "Custom Development"
       ]
     }
   ];
 
   const testimonials = [
     {
-      name: "Sarah Martinez",
-      role: "E-commerce Director",
-      company: "Fashion Forward",
-      content: "AI E-commerce Optimizer Pro increased our conversion rate by 32% and revenue by 28% in just 3 months. The AI recommendations are incredibly accurate.",
+      name: "Jennifer Martinez",
+      role: "Senior Partner",
+      company: "Martinez & Associates",
+      content: "AI Legal Assistant Pro reduced our document review time by 70%. The accuracy is remarkable and it's saved us thousands of billable hours.",
       rating: 5
     },
     {
-      name: "David Kim",
-      role: "CEO",
-      company: "TechGadgets Pro",
-      content: "The dynamic pricing feature alone increased our profit margins by 12%. The AI understands market trends better than our previous manual approach.",
+      name: "David Thompson",
+      role: "Corporate Attorney",
+      company: "Thompson Legal Group",
+      content: "The contract analysis feature is incredibly sophisticated. It catches clauses I would have missed and suggests improvements.",
       rating: 5
     },
     {
-      name: "Emily Johnson",
-      role: "Marketing Manager",
-      company: "Home & Garden Co",
-      content: "Our customer engagement increased by 40% with personalized recommendations. The AI creates a shopping experience that feels tailored to each customer.",
+      name: "Lisa Chen",
+      role: "Managing Partner",
+      company: "Chen & Partners LLP",
+      content: "Our firm's efficiency has increased dramatically. The AI research tools are faster and more comprehensive than traditional methods.",
       rating: 5
     }
   ];
@@ -142,9 +136,9 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI E-commerce Optimizer Pro - Intelligent Online Store Optimization | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered e-commerce optimization platform with dynamic pricing, personalized recommendations, and conversion optimization. Starting at $99/month." />
-        <meta name="keywords" content="AI e-commerce optimization, online store optimization, dynamic pricing, product recommendations, conversion optimization, e-commerce AI" />
+        <title>AI Legal Assistant Pro - Intelligent Legal Technology | Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered legal assistant with document analysis, contract review, legal research automation, and compliance monitoring. Starting at $199/month." />
+        <meta name="keywords" content="AI legal assistant, legal technology, document analysis, contract review, legal research, law firm software, legal AI" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -154,19 +148,19 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
-                <ShoppingCart className="w-4 h-4 mr-2" />
-                AI-Powered E-commerce Intelligence
+                <Scale className="w-4 h-4 mr-2" />
+                AI-Powered Legal Intelligence
               </div>
               
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  AI E-commerce Optimizer Pro
+                  AI Legal Assistant Pro
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Maximize your online store's potential with AI-powered optimization, 
-                dynamic pricing, and intelligent customer personalization.
+                Revolutionize your legal practice with AI-powered document analysis, 
+                contract review, and intelligent legal research automation.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -189,20 +183,20 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">32%</div>
-                  <div className="text-gray-400 text-sm">Conversion Increase</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">70%</div>
+                  <div className="text-gray-400 text-sm">Time Savings</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">28%</div>
-                  <div className="text-gray-400 text-sm">Revenue Growth</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
+                  <div className="text-gray-400 text-sm">Accuracy Rate</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-green-400 mb-2">2,500+</div>
-                  <div className="text-gray-400 text-sm">Online Stores</div>
+                  <div className="text-gray-400 text-sm">Law Firms</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-orange-400 mb-2">$50M+</div>
-                  <div className="text-gray-400 text-sm">Revenue Generated</div>
+                  <div className="text-3xl font-bold text-orange-400 mb-2">1M+</div>
+                  <div className="text-gray-400 text-sm">Documents Processed</div>
                 </div>
               </div>
             </div>
@@ -219,8 +213,8 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI algorithms analyze customer behavior, optimize pricing, 
-                and personalize shopping experiences to maximize conversions and revenue.
+                Advanced AI algorithms analyze legal documents, conduct research, 
+                and provide intelligent insights to enhance your legal practice.
               </p>
             </div>
 
@@ -239,23 +233,23 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Optimization Areas Section */}
+        {/* Practice Areas Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  Optimization Areas
+                  Practice Areas
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive AI optimization across all aspects of your e-commerce 
-                business to maximize performance and profitability.
+                Comprehensive AI support across all major legal practice areas 
+                with specialized tools and templates.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {optimizationAreas.map((area, index) => (
+              {practiceAreas.map((area, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <div className="text-white">{area.icon}</div>
@@ -263,17 +257,9 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
                     {area.name}
                   </h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed">
                     {area.description}
                   </p>
-                  <div className="space-y-2">
-                    {area.metrics.map((metric, metricIndex) => (
-                      <div key={metricIndex} className="flex items-center text-sm text-green-400">
-                        <TrendingUp className="w-4 h-4 mr-2" />
-                        {metric}
-                      </div>
-                    ))}
-                  </div>
                 </div>
               ))}
             </div>
@@ -290,7 +276,7 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your e-commerce business size. 
+                Choose the perfect plan for your legal practice. 
                 All plans include 24/7 support and regular updates.
               </p>
             </div>
@@ -298,7 +284,7 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingTiers.map((tier, index) => (
                 <div key={index} className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-                  tier.name === 'Professional' 
+                  tier.name === 'Small Firm' 
                     ? 'border-cyan-400/40 shadow-2xl shadow-cyan-500/10 scale-105' 
                     : 'border-cyan-500/20'
                 }`}>
@@ -321,11 +307,11 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
                   </ul>
 
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    tier.name === 'Professional'
+                    tier.name === 'Small Firm'
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 transform hover:scale-105'
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                   }`}>
-                    {tier.name === 'Professional' ? 'Get Started' : 'Choose Plan'}
+                    {tier.name === 'Small Firm' ? 'Get Started' : 'Choose Plan'}
                   </button>
                 </div>
               ))}
@@ -369,11 +355,11 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-12 text-center">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Optimize Your E-commerce Store?
+                Ready to Transform Your Legal Practice?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join thousands of online retailers who trust AI E-commerce Optimizer Pro 
-                to maximize their sales and customer satisfaction.
+                Join thousands of legal professionals who trust AI Legal Assistant Pro 
+                to enhance their practice efficiency and client service.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -399,4 +385,4 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
   );
 };
 
-export default AiEcommerceOptimizerProPage;
+export default AiLegalAssistantProPage;

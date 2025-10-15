@@ -43,6 +43,13 @@ import AiClimateSolutionsProPage from './app/ai-climate-solutions-pro/page';
 import AiAgriculturalIntelligenceProPage from './app/ai-agricultural-intelligence-pro/page';
 import Ai3DGenerationPage from './app/ai-3d-generation/page';
 import AiBlockchainSolutionsPage from './app/ai-blockchain-solutions/page';
+import AiFinancialAdvisorProPage from './app/ai-financial-advisor-pro/page';
+import AiLegalAssistantProPage from './app/ai-legal-assistant-pro/page';
+import AiHrManagementProPage from './app/ai-hr-management-pro/page';
+import AiEcommerceOptimizerProPage from './app/ai-ecommerce-optimizer-pro/page';
+import AiCybersecuritySuiteProPage from './app/ai-cybersecurity-suite-pro/page';
+import AiCloudMigrationProPage from './app/ai-cloud-migration-pro/page';
+import AiPredictiveAnalyticsProPage from './app/ai-predictive-analytics-pro/page';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -120,6 +127,13 @@ const App: React.FC = () => {
                   <Route path="/ai-agricultural-intelligence-pro" element={<AiAgriculturalIntelligenceProPage />} />
                   <Route path="/ai-3d-generation" element={<Ai3DGenerationPage />} />
                   <Route path="/ai-blockchain-solutions" element={<AiBlockchainSolutionsPage />} />
+                  <Route path="/ai-financial-advisor-pro" element={<AiFinancialAdvisorProPage />} />
+                  <Route path="/ai-legal-assistant-pro" element={<AiLegalAssistantProPage />} />
+                  <Route path="/ai-hr-management-pro" element={<AiHrManagementProPage />} />
+                  <Route path="/ai-ecommerce-optimizer-pro" element={<AiEcommerceOptimizerProPage />} />
+                  <Route path="/ai-cybersecurity-suite-pro" element={<AiCybersecuritySuiteProPage />} />
+                  <Route path="/ai-cloud-migration-pro" element={<AiCloudMigrationProPage />} />
+                  <Route path="/ai-predictive-analytics-pro" element={<AiPredictiveAnalyticsProPage />} />
                 </Routes>
               </Suspense>
             </main>

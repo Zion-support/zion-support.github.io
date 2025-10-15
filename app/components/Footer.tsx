@@ -34,7 +34,8 @@ const Footer: React.FC = () => {
         { name: 'AI Automation Suite', href: '/ai-automation-suite' },
         { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
-        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' }
+        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
+        { name: 'AI Predictive Analytics Pro', href: '/ai-predictive-analytics-pro' }
       ]
     },
     {
@@ -46,7 +47,9 @@ const Footer: React.FC = () => {
         { name: 'Database Solutions', href: '/database-solutions' },
         { name: 'Advanced Security Suite', href: '/advanced-security-suite' },
         { name: 'Performance Monitoring', href: '/performance-monitoring' },
-        { name: 'DevOps Solutions', href: '/devops-solutions' }
+        { name: 'DevOps Solutions', href: '/devops-solutions' },
+        { name: 'Cloud Migration Pro', href: '/ai-cloud-migration-pro' },
+        { name: 'Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' }
       ]
     },
     {
@@ -70,7 +73,12 @@ const Footer: React.FC = () => {
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
         { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Financial Advisor Pro', href: '/ai-financial-advisor-pro' },
+        { name: 'AI Legal Assistant Pro', href: '/ai-legal-assistant-pro' },
+        { name: 'AI HR Management Pro', href: '/ai-hr-management-pro' },
+        { name: 'AI E-commerce Optimizer Pro', href: '/ai-ecommerce-optimizer-pro' },
+        { name: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' }
       ]
     }
   ];
@@ -120,8 +128,27 @@ const Footer: React.FC = () => {
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Leading provider of cutting-edge AI, IT, and 5G solutions. 
                 We transform businesses through innovative technology and 
-                intelligent automation.
+                intelligent automation. Trusted by 500+ companies worldwide.
               </p>
+              
+              {/* Business Hours */}
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-white mb-3">Business Hours</h4>
+                <div className="space-y-1 text-sm text-gray-300">
+                  <div className="flex justify-between">
+                    <span>Monday - Friday:</span>
+                    <span className="text-cyan-400">8:00 AM - 6:00 PM EST</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Saturday:</span>
+                    <span className="text-cyan-400">9:00 AM - 4:00 PM EST</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Sunday:</span>
+                    <span className="text-cyan-400">Emergency Support Only</span>
+                  </div>
+                </div>
+              </div>
               
               {/* Contact Info */}
               <div className="space-y-3">

@@ -37,7 +37,8 @@ const Header: React.FC = () => {
         { name: 'AI Automation Platform', href: '/ai-automation-platform' },
         { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
-        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' }
+        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
+        { name: 'AI Predictive Analytics Pro', href: '/ai-predictive-analytics-pro' }
       ]
     },
     {
@@ -50,7 +51,9 @@ const Header: React.FC = () => {
         { name: 'Database Solutions', href: '/database-solutions' },
         { name: 'Security Suite', href: '/advanced-security-suite' },
         { name: 'Performance Monitoring', href: '/performance-monitoring' },
-        { name: 'DevOps Solutions', href: '/devops-solutions' }
+        { name: 'DevOps Solutions', href: '/devops-solutions' },
+        { name: 'Cloud Migration Pro', href: '/ai-cloud-migration-pro' },
+        { name: 'Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' }
       ]
     },
     {
@@ -76,7 +79,12 @@ const Header: React.FC = () => {
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
         { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Financial Advisor Pro', href: '/ai-financial-advisor-pro' },
+        { name: 'AI Legal Assistant Pro', href: '/ai-legal-assistant-pro' },
+        { name: 'AI HR Management Pro', href: '/ai-hr-management-pro' },
+        { name: 'AI E-commerce Optimizer Pro', href: '/ai-ecommerce-optimizer-pro' },
+        { name: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' }
       ]
     },
     {
@@ -156,22 +164,27 @@ const Header: React.FC = () => {
 
                   {/* Dropdown Menu */}
                   {item.dropdown && (
-                    <div className={`absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md border border-cyan-500/20 rounded-lg shadow-2xl transition-all duration-300 ${
+                    <div className={`absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md border border-cyan-500/20 rounded-lg shadow-2xl transition-all duration-300 z-50 ${
                       activeDropdown === item.name 
                         ? 'opacity-100 visible translate-y-0' 
                         : 'opacity-0 invisible translate-y-2'
                     }`}>
                       <div className="py-2">
-                        {item.dropdown.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.href}
-                            className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors duration-200"
-                          >
-                            <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                            <span className="text-sm">{dropdownItem.name}</span>
-                          </Link>
-                        ))}
+                        <div className="px-4 py-2 border-b border-cyan-500/20">
+                          <h3 className="text-sm font-semibold text-cyan-400">{item.name}</h3>
+                        </div>
+                        <div className="grid grid-cols-1 gap-1">
+                          {item.dropdown.map((dropdownItem) => (
+                            <Link
+                              key={dropdownItem.name}
+                              to={dropdownItem.href}
+                              className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors duration-200 group"
+                            >
+                              <div className="w-2 h-2 bg-cyan-500 rounded-full group-hover:scale-125 transition-transform"></div>
+                              <span className="text-sm group-hover:text-cyan-400 transition-colors">{dropdownItem.name}</span>
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   )}
@@ -217,26 +230,42 @@ const Header: React.FC = () => {
                     <span className="font-medium">{item.name}</span>
                   </Link>
                   {item.dropdown && (
-                    <div className="ml-8 space-y-1">
+                    <div className="ml-8 space-y-1 mt-2">
+                      <div className="px-4 py-2 border-l-2 border-cyan-500/30">
+                        <h4 className="text-xs font-semibold text-cyan-400 uppercase tracking-wide">{item.name}</h4>
+                      </div>
                       {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.name}
                           to={dropdownItem.href}
-                          className="flex items-center space-x-3 px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/30 rounded-lg transition-colors"
+                          className="flex items-center space-x-3 px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/30 rounded-lg transition-colors group"
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full"></div>
-                          <span>{dropdownItem.name}</span>
+                          <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full group-hover:scale-125 transition-transform"></div>
+                          <span className="group-hover:text-cyan-400 transition-colors">{dropdownItem.name}</span>
                         </Link>
                       ))}
                     </div>
                   )}
                 </div>
               ))}
-              <div className="pt-4 border-t border-cyan-500/20">
-                <button className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300">
-                  Get Quote
-                </button>
+              <div className="pt-4 border-t border-cyan-500/20 mt-6">
+                <div className="space-y-3">
+                  <a
+                    href="tel:+13024640950"
+                    className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                  >
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call +1 302 464 0950
+                  </a>
+                  <a
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="w-full border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+                  >
+                    <Mail className="w-5 h-5 mr-2" />
+                    Get Quote
+                  </a>
+                </div>
               </div>
             </div>
           </div>

@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  ShoppingCart, 
   TrendingUp, 
-  Target, 
   BarChart3, 
-  Users, 
-  Zap, 
+  Target, 
+  Brain, 
   CheckCircle, 
   Star,
   ArrowRight,
@@ -15,101 +13,108 @@ import {
   MapPin,
   Award,
   Clock,
-  Shield,
-  DollarSign,
-  Eye,
-  MousePointer
+  Zap,
+  Users,
+  Database,
+  PieChart,
+  LineChart
 } from 'lucide-react';
 
-const AiEcommerceOptimizerProPage: React.FC = () => {
+const AiPredictiveAnalyticsProPage: React.FC = () => {
   const features = [
-    "AI-Powered Product Recommendations",
-    "Dynamic Pricing Optimization",
+    "Advanced Machine Learning Models",
+    "Real-time Data Processing",
+    "Predictive Forecasting",
+    "Anomaly Detection",
     "Customer Behavior Analysis",
-    "Inventory Management AI",
-    "Personalized Shopping Experience",
-    "Conversion Rate Optimization",
-    "A/B Testing Automation",
-    "Customer Lifetime Value Prediction",
-    "Fraud Detection & Prevention",
-    "Real-time Analytics Dashboard"
+    "Sales Forecasting",
+    "Risk Assessment",
+    "Demand Planning",
+    "Performance Optimization",
+    "Custom Model Training"
   ];
 
-  const optimizationAreas = [
+  const analyticsModules = [
     {
-      name: "Product Discovery",
-      description: "AI-powered search and recommendation engines to help customers find products",
-      icon: <Target className="w-8 h-8" />,
-      metrics: ["+35% Product Views", "+28% Add to Cart", "+22% Purchase Rate"]
-    },
-    {
-      name: "Pricing Strategy",
-      description: "Dynamic pricing optimization based on demand, competition, and customer behavior",
-      icon: <DollarSign className="w-8 h-8" />,
-      metrics: ["+18% Revenue", "+12% Profit Margin", "+25% Price Competitiveness"]
-    },
-    {
-      name: "Customer Experience",
-      description: "Personalized shopping experience with AI-driven content and recommendations",
-      icon: <Users className="w-8 h-8" />,
-      metrics: ["+40% Engagement", "+30% Session Duration", "+45% Return Visits"]
-    },
-    {
-      name: "Conversion Optimization",
-      description: "AI-powered A/B testing and conversion funnel optimization",
+      name: "Sales Forecasting",
+      description: "Predict future sales with AI-powered forecasting models",
       icon: <TrendingUp className="w-8 h-8" />,
-      metrics: ["+32% Conversion Rate", "+28% Checkout Completion", "+35% Revenue per Visitor"]
+      accuracy: "95%",
+      useCases: ["Revenue Prediction", "Inventory Planning", "Market Analysis", "Seasonal Trends"]
     },
     {
-      name: "Inventory Management",
-      description: "Predictive inventory management with demand forecasting and stock optimization",
-      icon: <BarChart3 className="w-8 h-8" />,
-      metrics: ["-25% Stockouts", "-30% Overstock", "+20% Inventory Turnover"]
+      name: "Customer Analytics",
+      description: "Analyze customer behavior and predict future actions",
+      icon: <Users className="w-8 h-8" />,
+      accuracy: "92%",
+      useCases: ["Churn Prediction", "Lifetime Value", "Segmentation", "Personalization"]
     },
     {
-      name: "Marketing Automation",
-      description: "AI-driven email campaigns, retargeting, and customer segmentation",
+      name: "Financial Risk",
+      description: "Assess and predict financial risks and opportunities",
+      icon: <Target className="w-8 h-8" />,
+      accuracy: "98%",
+      useCases: ["Credit Risk", "Market Risk", "Fraud Detection", "Investment Analysis"]
+    },
+    {
+      name: "Operational Intelligence",
+      description: "Optimize operations with predictive maintenance and efficiency",
       icon: <Zap className="w-8 h-8" />,
-      metrics: ["+50% Email Open Rate", "+38% Click-through Rate", "+42% Campaign ROI"]
+      accuracy: "94%",
+      useCases: ["Maintenance Scheduling", "Resource Optimization", "Quality Control", "Supply Chain"]
+    },
+    {
+      name: "Marketing Analytics",
+      description: "Predict campaign performance and customer response",
+      icon: <BarChart3 className="w-8 h-8" />,
+      accuracy: "89%",
+      useCases: ["Campaign ROI", "Lead Scoring", "Conversion Prediction", "Ad Optimization"]
+    },
+    {
+      name: "Healthcare Analytics",
+      description: "Predict patient outcomes and optimize healthcare delivery",
+      icon: <Brain className="w-8 h-8" />,
+      accuracy: "96%",
+      useCases: ["Patient Risk", "Treatment Outcomes", "Resource Planning", "Disease Prediction"]
     }
   ];
 
   const pricingTiers = [
     {
       name: "Starter",
-      price: "$99",
+      price: "$199",
       period: "/month",
-      description: "Perfect for small online stores",
+      description: "Perfect for small businesses",
       features: [
-        "Basic AI Recommendations",
-        "Product Analytics",
+        "Basic Predictive Models",
+        "Up to 10,000 records",
         "Email Support",
-        "Up to 1,000 products"
+        "Standard Reports"
       ]
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$599",
       period: "/month",
-      description: "Ideal for growing e-commerce businesses",
+      description: "Ideal for growing companies",
       features: [
-        "Advanced AI Features",
-        "Dynamic Pricing",
+        "Advanced AI Models",
+        "Up to 100,000 records",
         "Priority Support",
-        "Up to 10,000 products",
-        "Custom Integrations"
+        "Custom Dashboards",
+        "API Access"
       ]
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$1,499",
       period: "/month",
-      description: "For large e-commerce platforms",
+      description: "For large organizations",
       features: [
         "Full AI Suite",
-        "Custom AI Models",
+        "Unlimited Records",
         "Dedicated Support",
-        "Unlimited Products",
+        "Custom Models",
         "White-label Options"
       ]
     }
@@ -117,24 +122,24 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Sarah Martinez",
-      role: "E-commerce Director",
-      company: "Fashion Forward",
-      content: "AI E-commerce Optimizer Pro increased our conversion rate by 32% and revenue by 28% in just 3 months. The AI recommendations are incredibly accurate.",
+      name: "Michael Rodriguez",
+      role: "Data Science Director",
+      company: "RetailMax Corp",
+      content: "AI Predictive Analytics Pro increased our sales forecast accuracy by 40% and helped us optimize inventory management. The ROI was immediate.",
       rating: 5
     },
     {
-      name: "David Kim",
-      role: "CEO",
-      company: "TechGadgets Pro",
-      content: "The dynamic pricing feature alone increased our profit margins by 12%. The AI understands market trends better than our previous manual approach.",
+      name: "Sarah Chen",
+      role: "VP of Marketing",
+      company: "TechStart Industries",
+      content: "The customer analytics module helped us reduce churn by 35% and increase customer lifetime value by 28%. The insights are incredibly valuable.",
       rating: 5
     },
     {
-      name: "Emily Johnson",
-      role: "Marketing Manager",
-      company: "Home & Garden Co",
-      content: "Our customer engagement increased by 40% with personalized recommendations. The AI creates a shopping experience that feels tailored to each customer.",
+      name: "David Johnson",
+      role: "CFO",
+      company: "Financial Services Group",
+      content: "The financial risk assessment module saved us millions by identifying potential risks early. The accuracy is remarkable.",
       rating: 5
     }
   ];
@@ -142,9 +147,9 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI E-commerce Optimizer Pro - Intelligent Online Store Optimization | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered e-commerce optimization platform with dynamic pricing, personalized recommendations, and conversion optimization. Starting at $99/month." />
-        <meta name="keywords" content="AI e-commerce optimization, online store optimization, dynamic pricing, product recommendations, conversion optimization, e-commerce AI" />
+        <title>AI Predictive Analytics Pro - Advanced Data Intelligence | Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered predictive analytics platform with machine learning models, forecasting, and business intelligence. Starting at $199/month." />
+        <meta name="keywords" content="AI predictive analytics, machine learning, data science, forecasting, business intelligence, predictive modeling" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -154,19 +159,19 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
-                <ShoppingCart className="w-4 h-4 mr-2" />
-                AI-Powered E-commerce Intelligence
+                <Brain className="w-4 h-4 mr-2" />
+                AI-Powered Predictive Intelligence
               </div>
               
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  AI E-commerce Optimizer Pro
+                  AI Predictive Analytics Pro
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Maximize your online store's potential with AI-powered optimization, 
-                dynamic pricing, and intelligent customer personalization.
+                Transform your data into actionable insights with advanced AI-powered 
+                predictive analytics, machine learning, and intelligent forecasting.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -189,20 +194,20 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">32%</div>
-                  <div className="text-gray-400 text-sm">Conversion Increase</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
+                  <div className="text-gray-400 text-sm">Forecast Accuracy</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">28%</div>
-                  <div className="text-gray-400 text-sm">Revenue Growth</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
+                  <div className="text-gray-400 text-sm">Better Decisions</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">2,500+</div>
-                  <div className="text-gray-400 text-sm">Online Stores</div>
+                  <div className="text-3xl font-bold text-green-400 mb-2">800+</div>
+                  <div className="text-gray-400 text-sm">Organizations</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-orange-400 mb-2">$50M+</div>
-                  <div className="text-gray-400 text-sm">Revenue Generated</div>
+                  <div className="text-3xl font-bold text-orange-400 mb-2">$10M+</div>
+                  <div className="text-gray-400 text-sm">Value Generated</div>
                 </div>
               </div>
             </div>
@@ -215,12 +220,12 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  Powerful Features
+                  Advanced Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI algorithms analyze customer behavior, optimize pricing, 
-                and personalize shopping experiences to maximize conversions and revenue.
+                Powerful AI algorithms analyze your data and provide accurate predictions 
+                to help you make better business decisions.
               </p>
             </div>
 
@@ -239,41 +244,44 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Optimization Areas Section */}
+        {/* Analytics Modules Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  Optimization Areas
+                  Analytics Modules
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive AI optimization across all aspects of your e-commerce 
-                business to maximize performance and profitability.
+                Specialized AI modules designed for different business functions 
+                with industry-leading accuracy rates.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {optimizationAreas.map((area, index) => (
+              {analyticsModules.map((module, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-white">{area.icon}</div>
+                    <div className="text-white">{module.icon}</div>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                    {area.name}
-                  </h3>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                      {module.name}
+                    </h3>
+                    <span className="text-cyan-400 text-sm font-medium">{module.accuracy} Accuracy</span>
+                  </div>
                   <p className="text-gray-300 mb-6 leading-relaxed">
-                    {area.description}
+                    {module.description}
                   </p>
-                  <div className="space-y-2">
-                    {area.metrics.map((metric, metricIndex) => (
-                      <div key={metricIndex} className="flex items-center text-sm text-green-400">
-                        <TrendingUp className="w-4 h-4 mr-2" />
-                        {metric}
-                      </div>
+                  <ul className="space-y-2">
+                    {module.useCases.map((useCase, useCaseIndex) => (
+                      <li key={useCaseIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {useCase}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               ))}
             </div>
@@ -290,7 +298,7 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your e-commerce business size. 
+                Choose the perfect plan for your data analytics needs. 
                 All plans include 24/7 support and regular updates.
               </p>
             </div>
@@ -369,11 +377,11 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-12 text-center">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Optimize Your E-commerce Store?
+                Ready to Predict the Future?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join thousands of online retailers who trust AI E-commerce Optimizer Pro 
-                to maximize their sales and customer satisfaction.
+                Join hundreds of organizations who trust AI Predictive Analytics Pro 
+                to make data-driven decisions and stay ahead of the competition.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -399,4 +407,4 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
   );
 };
 
-export default AiEcommerceOptimizerProPage;
+export default AiPredictiveAnalyticsProPage;
