@@ -19,7 +19,7 @@ export interface Service {
   };
   benefits: string[];
   useCases: string[];
-  link: string;
+  link?: string;
 }
 
 export interface ContactFormData {
