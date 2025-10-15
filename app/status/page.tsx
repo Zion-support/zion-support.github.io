@@ -371,7 +371,7 @@ const refreshStatus = async () => {
               </button>
             </div>
           </div>
-        </div>
+        </section>
         <Footer />
       </div>
     </>

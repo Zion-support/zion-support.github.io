@@ -1,4 +1,8 @@
-import { Helmet } from "react-helmet-async";
+const fs = require('fs');
+const path = require('path');
+
+// Common imports that all pages need
+const commonImports = `import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { 
   Zap, 
@@ -175,14 +179,36 @@ import {
   Flag as FlagIcon,
   Bookmark as BookmarkIcon,
   BookmarkCheck as BookmarkCheckIcon
-} from "lucide-react";
+} from "lucide-react";`;
 
-export default function AIAPIManagement() {
+// Function to fix a single page file
+function fixPageFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has the malformed structure
+    if (content.includes('export default function') && content.includes('return;')) {
+      console.log(`Fixing ${filePath}...`);
+      
+      // Extract the function name from the export
+      const functionNameMatch = content.match(/export default function (\w+)/);
+      if (!functionNameMatch) return;
+      
+      const functionName = functionNameMatch[1];
+      
+      // Find the title from the content (look for title in quotes)
+      const titleMatch = content.match(/title:\s*"([^"]+)"/);
+      const title = titleMatch ? titleMatch[1] : functionName.replace(/([A-Z])/g, ' $1').trim();
+      
+      // Create a basic page structure
+      const newContent = `${commonImports}
+
+export default function ${functionName}() {
   return (
     <>
       <Helmet>
-        <title>Smart Analytics - Zion Tech Group</title>
-        <meta name="description" content="Discover our smart analytics solutions powered by advanced AI technology." />
+        <title>${title} - Zion Tech Group</title>
+        <meta name="description" content="Discover our ${title.toLowerCase()} solutions powered by advanced AI technology." />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -193,11 +219,11 @@ export default function AIAPIManagement() {
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                  Smart Analytics
+                  ${title}
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Discover our advanced smart analytics solutions powered by cutting-edge AI technology.
+                Discover our advanced ${title.toLowerCase()} solutions powered by cutting-edge AI technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -273,7 +299,7 @@ export default function AIAPIManagement() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Contact us today to learn more about our smart analytics solutions
+              Contact us today to learn more about our ${title.toLowerCase()} solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -294,4 +320,28 @@ export default function AIAPIManagement() {
       </div>
     </>
   );
+}`;
+
+      fs.writeFileSync(filePath, newContent);
+      console.log(`Fixed ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
 }
+
+// Get all page files in the app directory
+const appDir = path.join(__dirname, 'app');
+const files = fs.readdirSync(appDir, { recursive: true });
+
+// Filter for page.tsx files
+const pageFiles = files
+  .filter(file => file.endsWith('page.tsx'))
+  .map(file => path.join(appDir, file));
+
+console.log(`Found ${pageFiles.length} page files to check...`);
+
+// Fix each page file
+pageFiles.forEach(fixPageFile);
+
+console.log('Done fixing page files!');
