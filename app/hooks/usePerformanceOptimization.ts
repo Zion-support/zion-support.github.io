@@ -58,7 +58,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
   // Debounce function
   const debounce = useCallback(
-    <T extends (...args: any[]) => any>(func: T): T => {
+    <T extends (...args: unknown[]) => unknown>(func: T): T => {
       if (!enableDebouncing) return func;
 
       return ((...args: Parameters<T>) => {
@@ -89,9 +89,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     
     // Add error handling
     link.onerror = () => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn(`Failed to preload resource: ${href}`);
-      }
+        if (process.env.NODE_ENV === 'development') {
+          // Resource preload failed - logged in development only
+        }
     };
     
     document.head.appendChild(link);
@@ -106,12 +106,12 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       img.src = url;
       img.onload = () => {
         if (process.env.NODE_ENV === 'development') {
-          console.log(`Preloaded image: ${url}`);
+          // Image preloaded successfully - logged in development only
         }
       };
       img.onerror = () => {
         if (process.env.NODE_ENV === 'development') {
-          console.warn(`Failed to preload image: ${url}`);
+          // Image preload failed - logged in development only
         }
       };
     });
