@@ -1,10 +1,8 @@
-import { ArrowRight, Target, CheckCircle, Globe, Brain } from 'lucide-react';
+import { ArrowRight, BarChart3, Brain, CheckCircle, Clock, Globe, Target, Zap } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
 export default function AIBusinessIntelligencePro() {
-  return;
-},
-    {
+  const features = {
       title: "Real-time Dashboards",
       description: "Interactive dashboards that update in real-time with AI-powered insights and predictive analytics",
       icon: <BarChart3 className="w-6 h-6" />,
@@ -87,6 +85,7 @@ const pricingPlans = [
       popular: false
     }
   ];
+
 
 const biStats = [
     { number: "95%", label: "Prediction Accuracy", icon: <Brain className="w-6 h-6" /> },

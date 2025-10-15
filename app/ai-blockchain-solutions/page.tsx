@@ -1,10 +1,8 @@
-import { ArrowRight, Link, Target, CheckCircle, Globe, Coins } from 'lucide-react';
+import { ArrowRight, BarChart3, CheckCircle, Clock, Coins, Globe, Link, Shield, Target, Zap } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
 export default function AIBlockchainSolutions() {
-  return;
-},
-    {
+  const features = {
       title: "Decentralized AI Networks",
       description: "Build and deploy AI models on blockchain networks with decentralized computing and data sharing",
       icon: <Zap className="w-6 h-6" />,
@@ -87,6 +85,7 @@ const pricingPlans = [
       popular: false
     }
   ];
+
 
 const blockchainStats = [
     { number: "99.9%", label: "Smart Contract Uptime", icon: <Link className="w-6 h-6" /> },

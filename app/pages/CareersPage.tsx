@@ -1,5 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { MapPin } from 'lucide-react';
+
 
 const CareersPage: React.FC = () => {
   const benefits = [

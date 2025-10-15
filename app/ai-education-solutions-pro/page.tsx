@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, Brain, CheckCircle, Phone, Play, Star } from 'lucide-react';
+import { ArrowRight, BookOpen, Brain, CheckCircle, Mail, Phone, Play, Star, Users } from 'lucide-react';
 
 const AIEducationSolutionsProPage = () => {
   const features = [

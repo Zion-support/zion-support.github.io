@@ -1,10 +1,8 @@
-import { ArrowRight, Target, CheckCircle, Globe, Leaf } from 'lucide-react';
+import { ArrowRight, BarChart3, CheckCircle, Clock, Globe, Leaf, Shield, Target, Zap } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
 export default function AIClimateSolutionsPro() {
-  return;
-},
-    {
+  const features = {
       title: "Carbon Footprint Analysis",
       description: "Advanced AI algorithms that analyze and optimize carbon footprints across organizations and supply chains",
       icon: <Target className="w-6 h-6" />,
@@ -87,6 +85,7 @@ const pricingPlans = [
       popular: false
     }
   ];
+
 
 const climateStats = [
     { number: "40%", label: "Carbon Reduction", icon: <Leaf className="w-6 h-6" /> },

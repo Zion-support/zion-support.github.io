@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { ArrowRight, BarChart3, CheckCircle, Clock, FileText, Mail, Settings, Target, Users, Zap } from 'lucide-react';
+
 export default function ZionEmailAutomation() {
-  return;
-},
-    {
+  const features = {
       title: "Automated Workflows",
       description: "Set up complex email automation workflows with triggers, conditions, and actions",
       icon: <Zap className="w-6 h-6" />,
@@ -86,6 +86,7 @@ const pricingPlans = [
       popular: false
     }
   ];
+
 
 const emailStats = [
     { number: "300%", label: "Higher Open Rates", icon: <Mail className="w-6 h-6" /> },

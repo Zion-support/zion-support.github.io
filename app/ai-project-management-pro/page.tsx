@@ -13,9 +13,7 @@ import {
   CloudIcon} from '@heroicons/react/24/outline';
 
 export default function AiProjectManagementProPage() {
-  return;
-},
-    {
+  const features = {
       icon: ChartBarIcon,
       title: 'Predictive Analytics',
       description: 'Advanced forecasting to predict project timelines, resource needs, and potential bottlenecks.',
@@ -46,6 +44,7 @@ export default function AiProjectManagementProPage() {
       benefits: ['Unified workflow', 'No data silos', 'Enhanced collaboration']
     }
   ];
+
 
 const pricingPlans = [
     {

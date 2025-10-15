@@ -1,6 +1,8 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Globe, Mail, Users } from 'lucide-react';
+
 
 const TeamPage: React.FC = () => {
   const teamMembers = [

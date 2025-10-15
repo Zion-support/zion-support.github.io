@@ -1,7 +1,7 @@
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
-import {Zap, Users, FileText} from 'lucide-react';
+import { ArrowRight, Bug, CheckCircle, FileText, Shield, Star, Users, Zap } from 'lucide-react';
 import { Shield } from 'lucide-react';
 const AICodeAssistantPage = () => {
   return;

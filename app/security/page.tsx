@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Eye, FileText, Lock, Shield, Users } from 'lucide-react';
+
 
 const SecurityPage: React.FC = () => {
   const securityFeatures = [

@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { ArrowRight, BarChart3, CheckCircle, Clock, Globe, Settings, Target, Zap } from 'lucide-react';
+
 export default function ZionInventorySmart() {
-  return;
-},
-    {
+  const features = {
       title: "Automated Reordering",
       description: "Set up automatic reorder points and let the system handle your purchasing decisions",
       icon: <Zap className="w-6 h-6" />,
@@ -86,6 +86,7 @@ const pricingPlans = [
       popular: false
     }
   ];
+
 
 const inventoryStats = [
     { number: "60%", label: "Reduction in Stockouts", icon: <Package className="w-6 h-6" /> },

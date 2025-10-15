@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { ArrowRight, CheckCircle, Clock, Cloud, Lock, Share, Shield, Users, Zap } from 'lucide-react';
+
 export default function ZionCloudVault() {
-  return;
-},
-    {
+  const features = {
       title: "Real-time Sync",
       description: "Automatic synchronization across all your devices with conflict resolution and version control",
       icon: <Zap className="w-6 h-6" />,
@@ -87,6 +87,7 @@ const pricingPlans = [
       popular: false
     }
   ];
+
 
 const storageStats = [
     { number: "99.99%", label: "Uptime SLA", icon: <Cloud className="w-6 h-6" /> },

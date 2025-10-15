@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { ArrowRight, BarChart3, Calendar, CheckCircle, Clock, Settings, Target, Users } from 'lucide-react';
+
 export default function ZionProjectMaster() {
-  return;
-},
-    {
+  const features = {
       title: "Team Collaboration",
       description: "Real-time collaboration with team members, comments, and file sharing capabilities",
       icon: <Users className="w-6 h-6" />,
@@ -86,6 +86,7 @@ const pricingPlans = [
       popular: false
     }
   ];
+
 
 const projectStats = [
     { number: "40%", label: "Faster Project Delivery", icon: <CheckSquare className="w-6 h-6" /> },

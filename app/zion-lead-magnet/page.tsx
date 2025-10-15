@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { ArrowRight, BarChart3, CheckCircle, Clock, Mail, Target, TrendingUp, Users, Zap } from 'lucide-react';
+
 export default function ZionLeadMagnet() {
-  return;
-},
-    {
+  const features = {
       title: "Email Automation",
       description: "Automated email sequences that nurture leads from first contact to conversion",
       icon: <Mail className="w-6 h-6" />,
@@ -86,6 +86,7 @@ const pricingPlans = [
       popular: false
     }
   ];
+
 
 const leadStats = [
     { number: "300%", label: "Average Lead Increase", icon: <Target className="w-6 h-6" /> },

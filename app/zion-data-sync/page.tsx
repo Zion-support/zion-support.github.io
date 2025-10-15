@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { ArrowRight, BarChart3, CheckCircle, Clock, Database, RefreshCw, Shield, Users, Zap } from 'lucide-react';
+
 export default function ZionDataSync() {
-  return;
-},
-    {
+  const features = {
       title: "Multi-platform Integration",
       description: "Connect and sync data between 100+ platforms including CRM, ERP, marketing tools, and databases",
       icon: <Database className="w-6 h-6" />,
@@ -86,6 +86,7 @@ const pricingPlans = [
       popular: false
     }
   ];
+
 
 const syncStats = [
     { number: "99.9%", label: "Sync Success Rate", icon: <RefreshCw className="w-6 h-6" /> },

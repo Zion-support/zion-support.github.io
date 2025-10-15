@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Calculator, Target, CheckCircle, Globe, FileText, BarChart3, Shield, Clock } from 'lucide-react';
+import { ArrowRight, BarChart3, Calculator, CheckCircle, Clock, FileText, Globe, Shield, Target } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 

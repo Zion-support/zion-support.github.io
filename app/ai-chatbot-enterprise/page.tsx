@@ -1,10 +1,8 @@
-import { ArrowRight, Target, CheckCircle, Globe, Bot } from 'lucide-react';
+import { ArrowRight, BarChart3, Bot, CheckCircle, Clock, Globe, MessageCircle, Shield, Target } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
 export default function AIChatbotEnterprise() {
-  return;
-},
-    {
+  const features = {
       title: "Advanced Natural Language Processing",
       description: "State-of-the-art NLP that understands complex queries, context, and enterprise terminology",
       icon: <MessageCircle className="w-6 h-6" />,
@@ -87,6 +85,7 @@ const pricingPlans = [
       popular: false
     }
   ];
+
 
 const enterpriseStats = [
     { number: "99.9%", label: "Uptime SLA", icon: <Bot className="w-6 h-6" /> },

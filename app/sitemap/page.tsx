@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Search } from 'lucide-react';
+
 
 const SitemapPage: React.FC = () => {
   const sitemapSections = [

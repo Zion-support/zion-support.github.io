@@ -1,9 +1,8 @@
-import { ArrowRight, Target, CheckCircle, Globe, Brain } from 'lucide-react';
+import { ArrowRight, BarChart3, Brain, CheckCircle, Clock, Globe, Shield, Target, Users, Zap } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 export default function AIAutonomousSystems() {
-  return;
-},
+  const features = [
     {
       title: "Self-Learning Systems",
       description: "Systems that continuously learn and adapt from their environment and performance data",

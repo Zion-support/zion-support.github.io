@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Database } from 'lucide-react';
+import { CheckCircle, Database, Shield, Users, Zap } from 'lucide-react';
 
 const AiDatabaseSolutionsPage = () => {
   return;

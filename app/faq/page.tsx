@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { HelpCircle, Search } from 'lucide-react';
+
 
 const FAQPage: React.FC = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);

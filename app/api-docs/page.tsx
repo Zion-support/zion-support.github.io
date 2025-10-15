@@ -1,4 +1,6 @@
 import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Key, Star, Zap } from 'lucide-react';
+
 
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);

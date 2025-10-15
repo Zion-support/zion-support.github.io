@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Cloud, Globe, Mail, MapPin, Menu, Phone, Search, Users, Wifi, X, Zap } from 'lucide-react';
+
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

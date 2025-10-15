@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
-import { BarChart3, Users } from 'lucide-react';
+import { ArrowRight, BarChart3, CheckCircle, Clock, Eye, Star, Target, TrendingUp, Users } from 'lucide-react';
 import { Clock } from 'lucide-react';
 const ZionAICustomerInsightsPage = () => {
   return;

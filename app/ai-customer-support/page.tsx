@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Clock, Globe, Mail, MessageCircle, Phone, Shield, Star, TrendingUp, Users, Zap } from 'lucide-react';
+
 
 const AiCustomerSupportPage: React.FC = () => {
   const features = [

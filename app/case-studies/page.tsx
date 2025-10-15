@@ -1,6 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { ArrowRight, CheckCircle, Clock, TrendingUp, Users } from 'lucide-react';
+
 
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [

@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { ArrowRight, BarChart3, Calendar, CheckCircle, Clock, Globe, Target, Users, Zap } from 'lucide-react';
+
 export default function ZionSocialScheduler() {
-  return;
-},
-    {
+  const features = {
       title: "Content Calendar",
       description: "Visual content calendar with drag-and-drop scheduling and content planning tools",
       icon: <Calendar className="w-6 h-6" />,
@@ -86,6 +86,7 @@ const pricingPlans = [
       popular: false
     }
   ];
+
 
 const socialStats = [
     { number: "500%", label: "Increase in Engagement", icon: <Share2 className="w-6 h-6" /> },

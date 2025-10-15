@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, CheckCircle, Phone, Play, Star } from 'lucide-react';
+import { ArrowRight, Brain, CheckCircle, Mail, Phone, Play, Star } from 'lucide-react';
 
 const AIMarketingAutomationProPage = () => {
   const features = [

@@ -3,11 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { 
-  ArrowRight, Play, CheckCircle, Star, Shield, Award, 
-  Brain, Cpu, Target, BarChart, MessageSquare, Phone, Mail,
-  Users, Globe, Zap, TrendingUp, Clock, DollarSign
-} from 'lucide-react';
+import { ArrowRight, Award, BarChart, Brain, CheckCircle, Clock, Cpu, DollarSign, Globe, Mail, MessageSquare, Phone, Play, Shield, Star, Target, TrendingUp, Users, Zap } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const features = [

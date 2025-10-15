@@ -1,9 +1,8 @@
-import { ArrowRight, Link, Target, CheckCircle, Globe, Coins } from 'lucide-react';
+import { ArrowRight, BarChart3, CheckCircle, Clock, Coins, Globe, Link, Shield, Target, Zap } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
 export default function AIBlockchainAnalytics() {
-  return;
-},
+  const features = [
     {
       title: "Smart Contract Intelligence",
       description: "Intelligent analysis of smart contracts with vulnerability detection and optimization suggestions",
@@ -87,6 +86,7 @@ const pricingPlans = [
       popular: false
     }
   ];
+
 
 const blockchainStats = [
     { number: "99.9%", label: "Data Accuracy", icon: <Link className="w-6 h-6" /> },

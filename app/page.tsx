@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Shield, Zap, Brain, Cloud, Database, Globe, Users, BarChart3, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import { ArrowRight, BarChart3, Brain, CheckCircle, Cloud, Database, Globe, Shield, Star, Users, Zap } from 'lucide-react';
 import FuturisticButton from './components/FuturisticButton';
 
 const HomePage = () => {
@@ -161,7 +161,7 @@ const HomePage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss how our AI services and IT solutions can help you achieve your goals.
+            Let's discuss how our AI services and IT solutions can help you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton href="/contact" variant="secondary" size="lg">

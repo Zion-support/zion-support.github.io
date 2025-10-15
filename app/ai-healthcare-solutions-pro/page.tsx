@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, CheckCircle, Heart, Phone, Play, Star } from 'lucide-react';
+import { ArrowRight, Brain, CheckCircle, Heart, Mail, Phone, Play, Shield, Star } from 'lucide-react';
 
 const ShieldIcon = Shield;
 

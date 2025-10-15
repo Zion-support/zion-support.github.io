@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Globe, Star, Users } from 'lucide-react';
+
 
 const PartnersPage: React.FC = () => {
   const partners = [

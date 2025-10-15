@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { ArrowRight, BarChart3, CheckCircle, Clock, FileText, Globe, Target, Users, Zap } from 'lucide-react';
+
 export default function ZionPerformanceMonitor() {
-  return;
-},
-    {
+  const features = {
       title: "AI-Powered Analytics",
       description: "Advanced AI analytics that predict issues before they occur and provide actionable insights",
       icon: <BarChart3 className="w-6 h-6" />,
@@ -86,6 +86,7 @@ const pricingPlans = [
       popular: false
     }
   ];
+
 
 const performanceStats = [
     { number: "99.9%", label: "Uptime Monitoring", icon: <Activity className="w-6 h-6" /> },

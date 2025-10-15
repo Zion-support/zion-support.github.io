@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { AlertTriangle, ArrowRight, CheckCircle, Clock, Eye, Globe, Lock, Shield, Zap } from 'lucide-react';
+
 export default function ZionSecurityShield() {
-  return;
-},
-    {
+  const features = {
       title: "Zero Trust Architecture",
       description: "Implement zero trust security model with continuous verification and least privilege access",
       icon: <Lock className="w-6 h-6" />,
@@ -86,6 +86,7 @@ const pricingPlans = [
       popular: false
     }
   ];
+
 
 const securityStats = [
     { number: "99.9%", label: "Threat Detection Accuracy", icon: <Shield className="w-6 h-6" /> },

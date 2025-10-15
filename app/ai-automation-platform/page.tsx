@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { BarChart3, CheckCircle, Settings, Shield, Zap } from 'lucide-react';
+
 
 const AiAutomationPlatformPage: React.FC = () => {
   const features = [

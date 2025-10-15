@@ -1,5 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { AlertTriangle, Home, RefreshCw } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
