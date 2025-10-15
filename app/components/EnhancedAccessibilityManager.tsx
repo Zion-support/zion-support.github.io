@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface AccessibilityManagerProps {
@@ -69,7 +70,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
       // Voice navigation started
     };
 
-    recognition.onresult = (event: any) => {
+    recognition.onresult = (event: unknown) => {
       const command = event.results[event.results.length - 1][0].transcript.toLowerCase().trim();
       
       // Navigation commands
@@ -95,7 +96,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
       }
     };
 
-    recognition.onerror = (event: any) => {
+    recognition.onerror = (event: unknown) => {
       // Speech recognition error handled silently
     };
 

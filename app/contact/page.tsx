@@ -43,14 +43,11 @@ export default function Contact() {
 
   const contactInfo = [
     {
-<<<<<<< HEAD
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
       details: ["+1 302 464 0950", "Mon-Fri 9AM-6PM EST"],
       action: "Call Now"
     },    {
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
       details: "kleber@ziontechgroup.com",
@@ -71,16 +68,9 @@ export default function Contact() {
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Business Hours",
-<<<<<<< HEAD
       details: ["Mon-Fri: 9AM-6PM EST", "Sat: 10AM-4PM EST"],
       action: "Schedule Call"
     }  ];
-=======
-      details: "Mon - Fri: 9:00 AM - 6:00 PM",
-      description: "EST Time Zone"
-    }
-  ];
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
   const services = [
     "AI Business Intelligence",

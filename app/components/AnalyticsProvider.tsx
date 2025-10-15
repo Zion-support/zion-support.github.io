@@ -41,7 +41,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 
         window.gtag =
           window.gtag ||
-          function (...args: any[]) {
+          function (...args: unknown[]) {
             (window.gtag as any).q = (window.gtag as any).q || [];
             (window.gtag as any).q.push(args);
           };

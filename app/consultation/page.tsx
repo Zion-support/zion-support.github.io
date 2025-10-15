@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Clock, Users, DollarSign, Shield } from 'lucide-react';
 
@@ -25,8 +26,7 @@ export default function Consultation() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formData);
-  };
+    };
 
   const services = [
     'AI Solutions',

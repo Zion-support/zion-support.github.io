@@ -194,7 +194,6 @@ export default function CloudServices() {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
@@ -210,30 +209,6 @@ export default function CloudServices() {
                   Get Free Assessment
                 </button>
               </div>
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business with Cloud?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let our cloud experts help you migrate, optimize, and manage your cloud infrastructure for maximum efficiency and growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Start Your Cloud Journey
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/consultation"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
-                Schedule Consultation
-              </Link>
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
             </div>
           </div>
         </section>

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+import React, { useState } from 'react';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';import { MessageSquare, Phone, Mail, CheckCircle, Send, AlertCircle, FileText, Video } from 'lucide-react';
 
@@ -122,10 +122,6 @@ const SupportPage: React.FC = () => {
       });
     }, 3000);
   };
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
 export default function Support() {
   return (

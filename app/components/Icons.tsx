@@ -5,7 +5,7 @@ export const Icon = ({
 }: {
   name: string;
   className?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }) => {
   return (
     <span className={`icon ${className}`} {...props}>

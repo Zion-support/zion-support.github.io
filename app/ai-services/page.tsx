@@ -645,7 +645,6 @@ export default function AIServices() {
       featured: false
     },
     {
-<<<<<<< HEAD
       name: "AI Blockchain Solutions",
       description: "Intelligent blockchain applications with AI-powered smart contracts and analytics.",
       features: ["Smart contracts", "DeFi analytics", "NFT generation", "Blockchain monitoring", "Cryptocurrency analysis", "Risk assessment"],
@@ -654,66 +653,6 @@ export default function AIServices() {
       price: "Starting at $3,999/month",
       benefits: ["Automated smart contracts", "Real-time blockchain analysis", "Fraud detection", "Optimized transactions"]
     }  ];
-=======
-      id: "ai-time-series-forecasting",
-      name: "AI Time Series Forecasting",
-      description: "Advanced time series analysis with forecasting, trend detection, and seasonal pattern recognition",
-      price: "From $1,500/month",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
-      features: [
-        "Time series forecasting",
-        "Trend detection & analysis",
-        "Seasonal pattern recognition",
-        "Anomaly detection",
-        "Multiple forecasting models",
-        "Confidence intervals",
-        "Real-time predictions",
-        "Custom model development"
-      ],
-      benefits: [
-        "Improve forecasting accuracy",
-        "Identify trends early",
-        "Optimize resource planning",
-        "Make better predictions"
-      ],
-      category: "Analytics",
-      rating: 4.8,
-      reviews: 876,
-      link: "/ai-time-series-forecasting",
-      featured: false
-    },
-    {
-      id: "ai-nlp-text-analysis",
-      name: "AI NLP Text Analysis",
-      description: "Comprehensive natural language processing with text classification, entity extraction, and semantic analysis",
-      price: "From $1,600/month",
-      icon: <FileText className="w-8 h-8" />,
-      color: "from-indigo-500 to-blue-500",
-      features: [
-        "Text classification & categorization",
-        "Named entity recognition",
-        "Sentiment analysis",
-        "Topic modeling",
-        "Text summarization",
-        "Language detection",
-        "Custom model training",
-        "Batch processing"
-      ],
-      benefits: [
-        "Extract insights from text",
-        "Automate text processing",
-        "Improve content organization",
-        "Enhance search capabilities"
-      ],
-      category: "Language Processing",
-      rating: 4.7,
-      reviews: 1123,
-      link: "/ai-nlp-text-analysis",
-      featured: false
-    }
-  ];
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
   const categories = [
     { name: "All", count: aiServices.length, active: true },

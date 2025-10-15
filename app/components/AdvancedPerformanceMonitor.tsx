@@ -1,4 +1,5 @@
 'use client'
+import React, { useState } from 'react';
 import { useEffect, useState } from 'react'
 
     }
@@ -17,33 +18,32 @@ import { useEffect, useState } from 'react'
 }
 
     try {
-        onCLS((metric: any) => {
+        onCLS((metric: unknown) => {
           setMetrics(prev => ({ ...prev, cls: metric.value }))
           reportMetric('CLS', metric.value)
         })
 
-        onINP((metric: any) => {
+        onINP((metric: unknown) => {
           setMetrics(prev => ({ ...prev, fid: metric.value }))
           reportMetric('INP', metric.value)
         })
 
-        onFCP((metric: any) => {
+        onFCP((metric: unknown) => {
           setMetrics(prev => ({ ...prev, fcp: metric.value }))
           reportMetric('FCP', metric.value)
         })
 
-        onLCP((metric: any) => {
+        onLCP((metric: unknown) => {
           setMetrics(prev => ({ ...prev, lcp: metric.value }))
           reportMetric('LCP', metric.value)
         })
 
-        onTTFB((metric: any) => {
+        onTTFB((metric: unknown) => {
           setMetrics(prev => ({ ...prev, ttfb: metric.value }))
           reportMetric('TTFB', metric.value)
         })
       } catch (error) {
-        console.error('Failed to measure web vitals:', error);
-      }
+        }
 
       // Measure memory usage
       const measureMemory = () => {
@@ -84,9 +84,7 @@ import { useEffect, useState } from 'react'
 
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
-        console.log(`Performance Metric: ${name} = ${value}`);
-
-      }
+        }
 
       measureWebVitals()
       measureMemory()
@@ -98,8 +96,7 @@ import { useEffect, useState } from 'react'
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'measure') {
-            console.log('Custom Performance Measure:', entry.name, entry.duration)
-          }
+            }
         }
       })
       observer.observe({ entryTypes: ['measure'] })

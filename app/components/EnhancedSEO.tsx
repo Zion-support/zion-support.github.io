@@ -15,7 +15,7 @@ interface EnhancedSEOProps {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-  structuredData?: object;
+  structuredData?: Record<string, unknown>;
   noIndex?: boolean;
   lang?: string;
   noindex?: boolean;

@@ -1,18 +1,5 @@
-<<<<<<< HEAD
+import React, { useState } from 'react';
 import React, { useEffect, useState } from 'react';
-=======
-import React, { useEffect, useState, useCallback } from 'react';
-
-interface AccessibilitySettings {
-  enableKeyboard: boolean;
-  enableScreenReader: boolean;
-  enableHighContrast: boolean;
-  enableFocusManagement: boolean;
-  enableLargeText: boolean;
-  enableReducedMotion: boolean;
-}
-
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 interface AccessibilityEnhancerProps {
   isHighContrast?: boolean;
   isReducedMotion?: boolean;
@@ -38,8 +25,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       try {
         setSettings(JSON.parse(savedSettings));
       } catch (error) {
-        console.error('Error loading accessibility settings:', error);
-      }
+        }
     }
   }, []);
 

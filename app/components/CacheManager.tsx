@@ -1,4 +1,5 @@
 'use client'
+import React, { useState } from 'react';
 import { useEffect, useState } from 'react'
 
 interface CacheStats {
@@ -19,11 +20,8 @@ const CacheManager = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-          console.log('Service Worker registered:', registration);
-
-        } catch (error) {
-          console.error('Service Worker registration failed:', error);
-        }
+          } catch (error) {
+          }
       }
     }
 

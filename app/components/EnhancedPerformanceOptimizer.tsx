@@ -101,19 +101,19 @@ export default function EnhancedPerformanceOptimizer() {
   const setupPerformanceMonitoring = useCallback(() => {
     // Monitor Core Web Vitals
     import("web-vitals").then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
-      onCLS((metric: any) => {
+      onCLS((metric: unknown) => {
         logger.info("CLS:", metric.value);
       });
-      onINP((metric: any) => {
+      onINP((metric: unknown) => {
         logger.info("INP:", metric.value);
       });
-      onFCP((metric: any) => {
+      onFCP((metric: unknown) => {
         logger.info("FCP:", metric.value);
       });
-      onLCP((metric: any) => {
+      onLCP((metric: unknown) => {
         logger.info("LCP:", metric.value);
       });
-      onTTFB((metric: any) => {
+      onTTFB((metric: unknown) => {
         logger.info("TTFB:", metric.value);
       });
     }).catch((error) => {

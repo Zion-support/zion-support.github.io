@@ -26,7 +26,6 @@ function generateSitemap() {
   const routes = getAllRoutes()
   const baseUrl = 'https://ziontechgroup.com'
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages
   .map(
@@ -36,28 +35,13 @@ ${pages
   </url>`,
   )
   .join("\n")}
-=======
- `
-    <loc>${baseUrl}${route}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>`).join('')}
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 </urlset>`;
   // Write to public directory;
 const publicDir = path.join(__dirname, '../public')
   if (!fs.existsSync(publicDir)) {
-<<<<<<< HEAD
     fs.mkdirSync(publicDir, { recursive: true });
   }
   fs.writeFileSync(path.join(publicDir, "sitemap.xml"), sitemap);
 };
 
-=======
-    fs.mkdirSync(publicDir, { recursive: true })
-  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap)
-  // console.log('Sitemap generated successfully!')
-  // console.log(`Found ${routes.length} routes`);
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 generateSitemap();
