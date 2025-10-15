@@ -7,9 +7,12 @@ import {
   TrendingUp, 
   Target, 
   Database,
+<<<<<<< HEAD
   Cloud,
   ShoppingCart,
   DollarSign
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-13a9
 } from 'lucide-react';
 
 const AIAnalyticsDashboardProPage: React.FC = () => {

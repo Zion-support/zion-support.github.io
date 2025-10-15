@@ -4,14 +4,19 @@ const withErrorLogging = (handler) => {
       await handler(req, res);
     } catch (error) {
       console.error('API Error:', error);
+<<<<<<< HEAD
       res.status(500).json({ 
         error: 'Internal server error',
         message: error.message 
       });
+=======
+      res.status(500).json({ error: 'Internal server error' });
+>>>>>>> cursor/fix-errors-and-merge-to-main-13a9
     }
   };
 };
 
+<<<<<<< HEAD
 export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -38,3 +43,6 @@ export default withErrorLogging(async (req, res) => {
     res.status(500).json({ error: 'Failed to create payment intent' });
   }
 });
+=======
+export default withErrorLogging;
+>>>>>>> cursor/fix-errors-and-merge-to-main-13a9
