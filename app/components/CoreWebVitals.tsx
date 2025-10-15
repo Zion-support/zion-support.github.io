@@ -5,6 +5,11 @@ interface CoreWebVitalsProps {
   children: React.ReactNode;
 }
 
+declare global {
+  interface Window {
+    gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
+  }
+}
 export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
   useEffect(() => {
     // Track Core Web Vitals
@@ -19,7 +24,6 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
         });
       }
     });
-
     onINP((metric) => {
       // INP metric logged for performance monitoring
       if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -30,7 +34,6 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
         });
       }
     });
-
     onFCP((metric) => {
       // FCP metric logged for performance monitoring
       if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -41,7 +44,6 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
         });
       }
     });
-
     onLCP((metric) => {
       // LCP metric logged for performance monitoring
       if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -52,7 +54,6 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
         });
       }
     });
-
     onTTFB((metric) => {
       // TTFB metric logged for performance monitoring
       if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -64,8 +65,6 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
       }
     });
   }, []);
-
   return <>{children}</>;
 };
-
 export default CoreWebVitals;

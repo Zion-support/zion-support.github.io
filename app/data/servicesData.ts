@@ -1,4 +1,3 @@
-import { Cloud } from 'lucide-react';
 export interface ServiceData { id: string;
   name: string;
   description: string;

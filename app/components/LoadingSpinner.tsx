@@ -1,55 +1,21 @@
 import React from 'react';
-import { Loader2 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'white' | 'gray';
-  text?: string;
-  fullScreen?: boolean;
-  className?: string;
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  color = 'primary',
-  text = 'Loading...',
-  fullScreen = false,
-  className = ''
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-    xl: 'w-12 h-12'
-  };
-
-  const colorClasses = {
-    primary: 'text-cyan-500',
-    secondary: 'text-purple-500',
-    white: 'text-white',
-    gray: 'text-gray-400'
-  };
-
-  const spinner = (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <Loader2 className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`} />
-      {text && (
-        <p className={`mt-2 text-sm ${colorClasses[color]}`}>
-          {text}
-        </p>
-      )}
-    </div>
-  );
-
-  if (fullScreen) {
-    return (
-      <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
-        {spinner}
+const LoadingSpinner: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>LoadingSpinner - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">LoadingSpinner</h1>
+          <p className="text-gray-300 text-center">Coming soon...</p>
+        </div>
       </div>
-    );
-  }
-
-  return spinner;
+    </>
+  );
 };
 
 export default LoadingSpinner;

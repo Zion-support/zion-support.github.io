@@ -1,87 +1,20 @@
-import { Database, Activity, Clock, Zap } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-interface PerformanceMetrics {
-  loadTime: number;
-  memoryUsage: number;
-  renderTime: number;
-  networkLatency: number;
-}
-
-interface PerformanceMonitorProps {
-  children: React.ReactNode;
-  showDetails?: boolean;
-}
-
-export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
-  children, 
-  showDetails = false 
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    memoryUsage: 0,
-    renderTime: 0,
-    networkLatency: 0,
-  });
-
-  useEffect(() => {
-    const startTime = performance.now();
-    
-    const measurePerformance = () => {
-      const loadTime = performance.now() - startTime;
-      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
-      const renderTime = performance.now() - startTime;
-      
-      setMetrics({
-        loadTime,
-        memoryUsage: memoryUsage / 1024 / 1024, // Convert to MB
-        renderTime,
-        networkLatency: 0, // This would be measured from actual network requests
-      });
-    };
-
-    // Measure after component mount
-    const timeoutId = setTimeout(measurePerformance, 100);
-    
-    return () => clearTimeout(timeoutId);
-  }, []);
-
-  if (!showDetails) {
-    return <>{children}</>;
-  }
-
+const PerformanceMonitor: React.FC = () => {
   return (
-    <div className="relative">
-      {children}
-      
-      {/* Performance Overlay - Only in development */}
-      {process.env.NODE_ENV === 'development' && (
-        <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-4 text-xs text-white z-50">
-          <div className="flex items-center space-x-2 mb-2">
-            <Activity className="w-4 h-4 text-cyan-400" />
-            <span className="font-semibold">Performance Monitor</span>
-          </div>
-          
-          <div className="space-y-1">
-            <div className="flex items-center space-x-2">
-              <Clock className="w-3 h-3 text-green-400" />
-              <span>Load: {metrics.loadTime.toFixed(2)}ms</span>
-            </div>
-            
-            <div className="flex items-center space-x-2">
-              <Database className="w-3 h-3 text-blue-400" />
-              <span>Memory: {metrics.memoryUsage.toFixed(2)}MB</span>
-            </div>
-            
-            <div className="flex items-center space-x-2">
-              <Zap className="w-3 h-3 text-yellow-400" />
-              <span>Render: {metrics.renderTime.toFixed(2)}ms</span>
-            </div>
-          </div>
+    <>
+      <Helmet>
+        <title>PerformanceMonitor - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">PerformanceMonitor</h1>
+          <p className="text-gray-300 text-center">Coming soon...</p>
         </div>
-      )}
-    </div>
+      </div>
+    </>
   );
 };
 

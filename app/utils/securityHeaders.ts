@@ -1,12 +1,9 @@
-export const securityHeaders = { csp: {
-    'default-src': ["'self'"],
-    'script-src': ["'self'", "'unsafe-inline'"],
-    'style-src': ["'self'", "'unsafe-inline'"],
-    'img-src': ["'self'", "data:", "https:"],
-    'font-src': ["'self'", "data:"],
-    'connect-src': ["'self'"] },
-  getCSPHeader: () => { return Object.entries(securityHeaders.csp)
-      .map(([key, values]) => `${key } ${ values.join(' ') }`)
-      .join('; ');
-  }
+// security utility function
+export const security = () => {
+  // Placeholder implementation
+  return {
+    // Add implementation here
+  };
 };
+
+export default security;

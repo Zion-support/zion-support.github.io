@@ -1,8 +1,9 @@
-export const securityConfig = { csp: {
-    'default-src': ["'self'"],
-    'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
-    'style-src': ["'self'", "'unsafe-inline'"],
-    'img-src': ["'self'", "data:", "https:"],
-    'font-src': ["'self'", "data:"],
-    'connect-src': ["'self'", "https:"] }
+// security utility function
+export const security = () => {
+  // Placeholder implementation
+  return {
+    // Add implementation here
+  };
 };
+
+export default security;

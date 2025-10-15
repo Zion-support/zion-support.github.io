@@ -1,13 +1,9 @@
-export const registerServiceWorker = () => { if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          if (process.env.NODE_ENV === 'development') {
-            }
-        })
-        .catch((registrationError) => { if (process.env.NODE_ENV === 'development') {
-            }
-        });
-    });
-  }
+// registerServiceWorker utility function
+export const registerServiceWorker = () => {
+  // Placeholder implementation
+  return {
+    // Add implementation here
+  };
 };
+
+export default registerServiceWorker;
