@@ -54,5 +54,5 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 };
 
 
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
+export default LoadingSpinner;
 
