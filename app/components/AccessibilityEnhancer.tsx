@@ -1,52 +1,7 @@
 import React, { useEffect } from 'react';
 
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
-    // Skip to main content functionality
-    const addSkipLink = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50';
-      skipLink.style.zIndex = '9999';
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    };
-
-    // Focus management for keyboard navigation
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-      }
-    };
-
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
-    };
-
-    // Add focus indicators for keyboard navigation
-    const addFocusStyles = () => {
-      const style = document.createElement('style');
-      style.textContent = `
-        .keyboard-navigation *:focus {
-          outline: 2px solid #8b5cf6 !important;
-          outline-offset: 2px !important;
-        }
-        
-        .keyboard-navigation button:focus,
-        .keyboard-navigation a:focus,
-        .keyboard-navigation input:focus,
-        .keyboard-navigation textarea:focus,
-        .keyboard-navigation select:focus {
-          box-shadow: 0 0 0 2px #8b5cf6 !important;
-        }
-      `;
-      document.head.appendChild(style);
-    };
-
     // Add ARIA landmarks
     const addAriaLandmarks = () => {
       const main = document.querySelector('main');
@@ -54,80 +9,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         main.setAttribute('role', 'main');
       }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Reduced motion mode
-    if (isReducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-
-    // Font size adjustment
-    root.style.setProperty('--font-size-multiplier', 
-      fontSize === 'large' ? '1.2' : 
-      fontSize === 'extra-large' ? '1.4' : 
-      fontSize === 'small' ? '0.9' : '1'
-    );
-  }, [isHighContrast, isReducedMotion, fontSize]);
-
-  // Keyboard navigation enhancement
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Skip to main content
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
-        e.preventDefault();
-        const mainContent = document.getElementById('main-content');
-        if (mainContent) {
-          mainContent.focus();
-        }
-      }
-
-      // Escape key to close modals/dropdowns
-      if (e.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.blur) {
-          activeElement.blur();
-        }
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  // Focus management
-  useEffect(() => {
-    const handleFocusIn = (e: FocusEvent) => {
-      const target = e.target as HTMLElement;
-      if (target) {
-        target.classList.add('focus-visible');
-      }
-    };
-
-    const handleFocusOut = (e: FocusEvent) => {
-      const target = e.target as HTMLElement;
-      if (target) {
-        target.classList.remove('focus-visible');
-      }
-    };
-
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-
-<<<<<<< HEAD
-    return () => {
-<<<<<<< HEAD
-      focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus);
-        element.removeEventListener('blur', handleBlur);
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
       const nav = document.querySelector('nav');
-=======
-const nav = document.querySelector('nav');
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');
       }
@@ -145,34 +27,61 @@ const nav = document.querySelector('nav');
         if (!img.getAttribute('alt')) {
           img.setAttribute('alt', `Image ${index + 1}`);
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
       });
     };
 
+    // Add skip links
+    const addSkipLinks = () => {
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-blue-600 focus:text-white focus:underline';
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    };
+
+    // Enhance focus management
+    const enhanceFocusManagement = () => {
+      const focusableElements = document.querySelectorAll(
+        'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+      );
+
+      const handleFocus = (e: FocusEvent) => {
+        const target = e.target as HTMLElement;
+        target.classList.add('focus-visible');
+      };
+
+      const handleBlur = (e: FocusEvent) => {
+        const target = e.target as HTMLElement;
+        target.classList.remove('focus-visible');
+      };
+
+      focusableElements.forEach(element => {
+        element.addEventListener('focus', handleFocus);
+        element.addEventListener('blur', handleBlur);
+      });
+
+      return () => {
+        focusableElements.forEach(element => {
+          element.removeEventListener('focus', handleFocus);
+          element.removeEventListener('blur', handleBlur);
+        });
+      };
+    };
+
     // Initialize accessibility enhancements
-    addSkipLink();
-    addFocusStyles();
     addAriaLandmarks();
     addAltText();
+    addSkipLinks();
+    const cleanup = enhanceFocusManagement();
 
-    // Add event listeners
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
-    // Cleanup
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
+      if (cleanup) {
+        cleanup();
+      }
     };
   }, []);
 
-  return <>{children}</>;
+  return null;
 };
 
 export default AccessibilityEnhancer;
