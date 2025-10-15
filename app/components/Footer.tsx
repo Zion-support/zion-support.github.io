@@ -5,20 +5,36 @@ const Footer: React.FC = memo(() => {
   return (
     <footer className="glass-card mt-20">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bold mb-6 text-gradient font-['Orbitron']">ZION TECH GROUP</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
+              Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services. 
+              We help businesses transform through cutting-edge technology and innovative micro SAAS solutions.
             </p>
-            <div className="space-y-2 text-sm text-gray-300">
-              <p><strong>Phone:</strong> <a href="tel:+13024640950" className="hover:text-white">+1 302 464 0950</a></p>
-              <p><strong>Email:</strong> <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white">kleber@ziontechgroup.com</a></p>
-              <p><strong>Address:</strong> 364 E Main St STE 1008<br />Middletown DE 19709</p>
-              <p><strong>Website:</strong> <a href="https://ziontechgroup.com" className="hover:text-white">https://ziontechgroup.com</a></p>
+            <div className="space-y-3 text-sm text-gray-300">
+              <div className="flex items-center">
+                <span className="text-cyan-400 mr-2">📞</span>
+                <a href="tel:+13024640950" className="hover:text-cyan-300 transition-colors">+1 (302) 464-0950</a>
+              </div>
+              <div className="flex items-center">
+                <span className="text-cyan-400 mr-2">✉️</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-300 transition-colors">kleber@ziontechgroup.com</a>
+              </div>
+              <div className="flex items-start">
+                <span className="text-cyan-400 mr-2 mt-1">📍</span>
+                <div>
+                  <p>364 E Main St STE 1008</p>
+                  <p>Middletown DE 19709</p>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <span className="text-cyan-400 mr-2">🌐</span>
+                <a href="https://ziontechgroup.com" className="hover:text-cyan-300 transition-colors">https://ziontechgroup.com</a>
+              </div>
             </div>
-            <div className="flex space-x-4 mt-4">
-              <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
+            <div className="flex space-x-4 mt-6">
+              <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 <span className="sr-only">Website</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -28,160 +44,111 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-gradient">Services</h4>
+            <h4 className="text-lg font-semibold mb-6 text-gradient">Core Services</h4>
             <ul className="space-y-3">
               <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Services</Link></li>
-              <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">IT Services</Link></li>
+              <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">IT Solutions</Link></li>
+              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">Micro SaaS Solutions</Link></li>
               <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors">Cloud Infrastructure</Link></li>
               <li><Link to="/digital-transformation" className="text-gray-300 hover:text-cyan-400 transition-colors">Digital Transformation</Link></li>
               <li><Link to="/data-analytics" className="text-gray-300 hover:text-cyan-400 transition-colors">Data Analytics</Link></li>
-              <li><Link to="/web-development" className="text-gray-300 hover:text-cyan-400 transition-colors">Web Development</Link></li>
-              <li><Link to="/mobile-development" className="text-gray-300 hover:text-cyan-400 transition-colors">Mobile Development</Link></li>
-              <li><Link to="/database-management" className="text-gray-300 hover:text-cyan-400 transition-colors">Database Management</Link></li>
-              <li><Link to="/network-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors">Network Infrastructure</Link></li>
-              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">Micro SaaS Solutions</Link></li>
-              <li><Link to="/blockchain-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">Blockchain Solutions</Link></li>
-              <li><Link to="/iot-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">IoT Solutions</Link></li>
-              <li><Link to="/devops-automation" className="text-gray-300 hover:text-cyan-400 transition-colors">DevOps Automation</Link></li>
-              <li><Link to="/data-engineering" className="text-gray-300 hover:text-cyan-400 transition-colors">Data Engineering</Link></li>
-              <li><Link to="/api-development" className="text-gray-300 hover:text-cyan-400 transition-colors">API Development</Link></li>
-              <li><Link to="/security-audit" className="text-gray-300 hover:text-cyan-400 transition-colors">Security Audit</Link></li>
+              <li><Link to="/cybersecurity-operations" className="text-gray-300 hover:text-cyan-400 transition-colors">Cybersecurity Operations</Link></li>
+              <li><Link to="/managed-it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">Managed IT Services</Link></li>
+              <li><Link to="/cloud-migration" className="text-gray-300 hover:text-cyan-400 transition-colors">Cloud Migration</Link></li>
+              <li><Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors">Pricing Plans</Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-md font-semibold mb-4">AI Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/ai-chatbot-builder" className="text-gray-300 hover:text-white">AI Chatbot Builder</Link></li>
-              <li><Link to="/ai-document-processor" className="text-gray-300 hover:text-white">AI Document Processor</Link></li>
-              <li><Link to="/ai-form-builder" className="text-gray-300 hover:text-white">AI Form Builder</Link></li>
-              <li><Link to="/ai-voice-assistant" className="text-gray-300 hover:text-white">AI Voice Assistant</Link></li>
-              <li><Link to="/ai-fraud-detection" className="text-gray-300 hover:text-white">AI Fraud Detection</Link></li>
-              <li><Link to="/ai-image-recognition" className="text-gray-300 hover:text-white">AI Image Recognition</Link></li>
-              <li><Link to="/ai-lead-scoring" className="text-gray-300 hover:text-white">AI Lead Scoring</Link></li>
-              <li><Link to="/ai-predictive-maintenance" className="text-gray-300 hover:text-white">AI Predictive Maintenance</Link></li>
-              <li><Link to="/ai-price-optimizer" className="text-gray-300 hover:text-white">AI Price Optimizer</Link></li>
-              <li><Link to="/ai-scheduling-assistant" className="text-gray-300 hover:text-white">AI Scheduling Assistant</Link></li>
-              <li><Link to="/ai-crm-optimizer" className="text-gray-300 hover:text-white">AI CRM Optimizer</Link></li>
-              <li><Link to="/ai-data-visualizer" className="text-gray-300 hover:text-white">AI Data Visualizer</Link></li>
-              <li><Link to="/ai-email-optimizer" className="text-gray-300 hover:text-white">AI Email Optimizer</Link></li>
-              <li><Link to="/ai-website-analyzer" className="text-gray-300 hover:text-white">AI Website Analyzer</Link></li>
-              <li><Link to="/ai-social-media-manager" className="text-gray-300 hover:text-white">AI Social Media Manager</Link></li>
-              <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-md font-semibold mb-4">Zion AI Tools</h4>
-            <ul className="space-y-2">
-              <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">Content Moderator</Link></li>
-              <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">Customer Support Pro</Link></li>
-              <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-white">Workflow Automator Pro</Link></li>
-              <li><Link to="/zion-ai-email-marketing-pro" className="text-gray-300 hover:text-white">Email Marketing Pro</Link></li>
-              <li><Link to="/zion-ai-customer-churn-predictor" className="text-gray-300 hover:text-white">Customer Churn Predictor</Link></li>
-              <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-white">Sales Predictor</Link></li>
-              <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
-              <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">Document Analyzer</Link></li>
-              <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
-              <li><Link to="/zion-ai-translation-service" className="text-gray-300 hover:text-white">Translation Service</Link></li>
-              <li><Link to="/zion-ai-video-generator" className="text-gray-300 hover:text-white">Video Generator</Link></li>
-              <li><Link to="/ai-code-assistant" className="text-gray-300 hover:text-white">AI Code Assistant</Link></li>
-              <li><Link to="/ai-translator" className="text-gray-300 hover:text-white">AI Translator</Link></li>
-              <li><Link to="/ai-audio-processor" className="text-gray-300 hover:text-white">AI Audio Processor</Link></li>
-              <li><Link to="/ai-3d-model-generator" className="text-gray-300 hover:text-white">AI 3D Model Generator</Link></li>
-              <li><Link to="/ai-legal-assistant" className="text-gray-300 hover:text-white">AI Legal Assistant</Link></li>
-              <li><Link to="/ai-medical-assistant" className="text-gray-300 hover:text-white">AI Medical Assistant</Link></li>
-              <li><Link to="/ai-education-tutor" className="text-gray-300 hover:text-white">AI Education Tutor</Link></li>
-              <li><Link to="/ai-real-estate-analyzer" className="text-gray-300 hover:text-white">AI Real Estate Analyzer</Link></li>
-              <li><Link to="/ai-supply-chain-optimizer" className="text-gray-300 hover:text-white">AI Supply Chain Optimizer</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-md font-semibold mb-4">Advanced AI Services</h4>
-            <ul className="space-y-2">
-              <li><Link to="/zion-ai-fraud-detection" className="text-gray-300 hover:text-white">AI Fraud Detection</Link></li>
-              <li><Link to="/zion-ai-image-recognition" className="text-gray-300 hover:text-white">AI Image Recognition</Link></li>
-              <li><Link to="/zion-ai-lead-scoring" className="text-gray-300 hover:text-white">AI Lead Scoring</Link></li>
-              <li><Link to="/zion-ai-predictive-maintenance" className="text-gray-300 hover:text-white">AI Predictive Maintenance</Link></li>
-              <li><Link to="/zion-ai-price-optimizer" className="text-gray-300 hover:text-white">AI Price Optimizer</Link></li>
-              <li><Link to="/zion-ai-voice-assistant" className="text-gray-300 hover:text-white">AI Voice Assistant</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-md font-semibold mb-4">Pro AI Services</h4>
-            <ul className="space-y-2">
-              <li><Link to="/ai-voice-assistant-pro" className="text-gray-300 hover:text-white">AI Voice Assistant Pro</Link></li>
-              <li><Link to="/ai-image-recognition-pro" className="text-gray-300 hover:text-white">AI Image Recognition Pro</Link></li>
-              <li><Link to="/ai-fraud-detection-pro" className="text-gray-300 hover:text-white">AI Fraud Detection Pro</Link></li>
-              <li><Link to="/ai-lead-scoring-pro" className="text-gray-300 hover:text-white">AI Lead Scoring Pro</Link></li>
-              <li><Link to="/ai-predictive-maintenance-pro" className="text-gray-300 hover:text-white">AI Predictive Maintenance Pro</Link></li>
-              <li><Link to="/ai-price-optimizer-pro" className="text-gray-300 hover:text-white">AI Price Optimizer Pro</Link></li>
+              <li><Link to="/ai-chatbot-builder" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Chatbot Builder</Link></li>
+              <li><Link to="/ai-document-processor" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Document Processor</Link></li>
+              <li><Link to="/ai-form-builder" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Form Builder</Link></li>
+              <li><Link to="/ai-voice-assistant" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Voice Assistant</Link></li>
+              <li><Link to="/ai-fraud-detection" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Fraud Detection</Link></li>
+              <li><Link to="/ai-image-recognition" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Image Recognition</Link></li>
+              <li><Link to="/ai-lead-scoring" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Lead Scoring</Link></li>
+              <li><Link to="/ai-predictive-maintenance" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Predictive Maintenance</Link></li>
+              <li><Link to="/ai-price-optimizer" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Price Optimizer</Link></li>
+              <li><Link to="/ai-scheduling-assistant" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Scheduling Assistant</Link></li>
+              <li><Link to="/ai-code-assistant-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Code Assistant Pro</Link></li>
+              <li><Link to="/ai-video-analyzer-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Video Analyzer Pro</Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-md font-semibold mb-4">Micro SaaS Solutions</h4>
             <ul className="space-y-2">
-              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SaaS Overview</Link></li>
-              <li><Link to="/zion-smart-analytics-dashboard" className="text-gray-300 hover:text-white">Smart Analytics Dashboard</Link></li>
-              <li><Link to="/zion-smart-crm-automation" className="text-gray-300 hover:text-white">Smart CRM Automation</Link></li>
-              <li><Link to="/zion-smart-inventory-manager" className="text-gray-300 hover:text-white">Smart Inventory Manager</Link></li>
-              <li><Link to="/zion-smart-expense-tracker" className="text-gray-300 hover:text-white">Smart Expense Tracker</Link></li>
+              <li><Link to="/ai-project-manager-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Project Manager Pro</Link></li>
+              <li><Link to="/smart-invoice-generator-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Smart Invoice Generator Pro</Link></li>
+              <li><Link to="/ai-customer-feedback-analyzer" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Customer Feedback Analyzer</Link></li>
+              <li><Link to="/smart-contract-manager-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Smart Contract Manager Pro</Link></li>
+              <li><Link to="/ai-hr-assistant-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI HR Assistant Pro</Link></li>
+              <li><Link to="/smart-inventory-optimizer-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Smart Inventory Optimizer Pro</Link></li>
+              <li><Link to="/ai-social-media-scheduler-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Social Media Scheduler Pro</Link></li>
+              <li><Link to="/smart-email-marketing-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Smart Email Marketing Pro</Link></li>
+              <li><Link to="/ai-customer-support-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Customer Support Pro</Link></li>
+              <li><Link to="/smart-analytics-dashboard-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Smart Analytics Dashboard Pro</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Enterprise Solutions</h4>
+            <h4 className="text-md font-semibold mb-4">IT Solutions</h4>
             <ul className="space-y-2">
-              <li><Link to="/blockchain-solutions-pro" className="text-gray-300 hover:text-white">Blockchain Solutions Pro</Link></li>
-              <li><Link to="/iot-solutions-pro" className="text-gray-300 hover:text-white">IoT Solutions Pro</Link></li>
-              <li><Link to="/devops-automation-pro" className="text-gray-300 hover:text-white">DevOps Automation Pro</Link></li>
-              <li><Link to="/quantum-computing-solutions" className="text-gray-300 hover:text-white">Quantum Computing</Link></li>
-              <li><Link to="/edge-computing-solutions" className="text-gray-300 hover:text-white">Edge Computing</Link></li>
-              <li><Link to="/augmented-reality-solutions" className="text-gray-300 hover:text-white">AR Solutions</Link></li>
-              <li><Link to="/virtual-reality-solutions" className="text-gray-300 hover:text-white">VR Solutions</Link></li>
-              <li><Link to="/robotic-process-automation" className="text-gray-300 hover:text-white">RPA Solutions</Link></li>
-              <li><Link to="/low-code-platform" className="text-gray-300 hover:text-white">Low-Code Platform</Link></li>
-              <li><Link to="/serverless-architecture" className="text-gray-300 hover:text-white">Serverless Architecture</Link></li>
-              <li><Link to="/container-orchestration" className="text-gray-300 hover:text-white">Container Orchestration</Link></li>
-              <li><Link to="/ai-infrastructure" className="text-gray-300 hover:text-white">AI Infrastructure</Link></li>
-              <li><Link to="/data-lake-solutions" className="text-gray-300 hover:text-white">Data Lake Solutions</Link></li>
+              <li><Link to="/web-development" className="text-gray-300 hover:text-cyan-400 transition-colors">Web Development</Link></li>
+              <li><Link to="/mobile-development" className="text-gray-300 hover:text-cyan-400 transition-colors">Mobile Development</Link></li>
+              <li><Link to="/database-management" className="text-gray-300 hover:text-cyan-400 transition-colors">Database Management</Link></li>
+              <li><Link to="/network-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors">Network Infrastructure</Link></li>
+              <li><Link to="/5g-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">5G Solutions</Link></li>
+              <li><Link to="/blockchain-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">Blockchain Solutions</Link></li>
+              <li><Link to="/iot-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">IoT Solutions</Link></li>
+              <li><Link to="/devops-automation" className="text-gray-300 hover:text-cyan-400 transition-colors">DevOps Automation</Link></li>
+              <li><Link to="/data-engineering" className="text-gray-300 hover:text-cyan-400 transition-colors">Data Engineering</Link></li>
+              <li><Link to="/api-development" className="text-gray-300 hover:text-cyan-400 transition-colors">API Development</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Advanced Technologies</h4>
+            <ul className="space-y-2">
+              <li><Link to="/edge-computing" className="text-gray-300 hover:text-cyan-400 transition-colors">Edge Computing</Link></li>
+              <li><Link to="/quantum-computing" className="text-gray-300 hover:text-cyan-400 transition-colors">Quantum Computing</Link></li>
+              <li><Link to="/augmented-reality" className="text-gray-300 hover:text-cyan-400 transition-colors">Augmented Reality</Link></li>
+              <li><Link to="/virtual-reality" className="text-gray-300 hover:text-cyan-400 transition-colors">Virtual Reality</Link></li>
+              <li><Link to="/robotic-process-automation" className="text-gray-300 hover:text-cyan-400 transition-colors">Robotic Process Automation</Link></li>
+              <li><Link to="/artificial-intelligence-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Infrastructure & MLOps</Link></li>
+              <li><Link to="/cybersecurity-operations" className="text-gray-300 hover:text-cyan-400 transition-colors">Cybersecurity Operations</Link></li>
+              <li><Link to="/cloud-migration" className="text-gray-300 hover:text-cyan-400 transition-colors">Cloud Migration</Link></li>
+              <li><Link to="/managed-it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">Managed IT Services</Link></li>
+              <li><Link to="/security-audit" className="text-gray-300 hover:text-cyan-400 transition-colors">Security Audit</Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-md font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-300 hover:text-white">About</Link></li>
-              <li><Link to="/team" className="text-gray-300 hover:text-white">Team</Link></li>
-              <li><Link to="/careers" className="text-gray-300 hover:text-white">Careers</Link></li>
-              <li><Link to="/partnerships" className="text-gray-300 hover:text-white">Partnerships</Link></li>
-              <li><Link to="/case-studies" className="text-gray-300 hover:text-white">Case Studies</Link></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">About Us</Link></li>
+              <li><Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors">Our Team</Link></li>
+              <li><Link to="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors">Careers</Link></li>
+              <li><Link to="/partnerships" className="text-gray-300 hover:text-cyan-400 transition-colors">Partnerships</Link></li>
+              <li><Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors">Case Studies</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact Us</Link></li>
+              <li><Link to="/help" className="text-gray-300 hover:text-cyan-400 transition-colors">Help Center</Link></li>
+              <li><Link to="/api-docs" className="text-gray-300 hover:text-cyan-400 transition-colors">API Documentation</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Resources</h4>
+            <h4 className="text-md font-semibold mb-4">Resources & Legal</h4>
             <ul className="space-y-2">
-              <li><Link to="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
-              <li><Link to="/tutorials" className="text-gray-300 hover:text-white">Tutorials</Link></li>
-              <li><Link to="/docs" className="text-gray-300 hover:text-white">Documentation</Link></li>
-              <li><Link to="/api-docs" className="text-gray-300 hover:text-white">API Docs</Link></li>
-              <li><Link to="/help" className="text-gray-300 hover:text-white">Help Center</Link></li>
-              <li><Link to="/support" className="text-gray-300 hover:text-white">Support</Link></li>
-              <li><Link to="/demo" className="text-gray-300 hover:text-white">Live Demos</Link></li>
-              <li><Link to="/accessibility" className="text-gray-300 hover:text-white">Accessibility</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-md font-semibold mb-4">Legal</h4>
-            <ul className="space-y-2">
-              <li><Link to="/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="text-gray-300 hover:text-white">Terms of Service</Link></li>
-              <li><Link to="/cookies" className="text-gray-300 hover:text-white">Cookie Policy</Link></li>
+              <li><Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors">Blog</Link></li>
+              <li><Link to="/api-docs" className="text-gray-300 hover:text-cyan-400 transition-colors">API Documentation</Link></li>
+              <li><Link to="/help" className="text-gray-300 hover:text-cyan-400 transition-colors">Help Center</Link></li>
+              <li><Link to="/accessibility" className="text-gray-300 hover:text-cyan-400 transition-colors">Accessibility</Link></li>
+              <li><Link to="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors">Terms of Service</Link></li>
+              <li><Link to="/cookies" className="text-gray-300 hover:text-cyan-400 transition-colors">Cookie Policy</Link></li>
             </ul>
           </div>
         </div>
