@@ -2,12 +2,48 @@ import { Suspense, lazy, useEffect } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
+// Import components
+import GlobalErrorBoundary from './app/components/GlobalErrorBoundary'
+import Navigation from './app/components/Navigation'
+import Sidebar from './app/components/Sidebar'
+import PerformanceMonitor from './app/components/PerformanceMonitor'
+import AccessibilityEnhancer from './app/components/EnhancedAccessibilityEnhancer'
+import LoadingFallback from './app/components/LoadingStates'
+import Footer from './app/components/Footer'
+import ErrorBoundary from './app/components/ErrorBoundary'
+
 // Import pages
 import HomePage from './app/pages/HomePage';
 import AboutPage from './app/pages/AboutPage';
 import ServicesPage from './app/pages/ServicesPage';
 import ContactPage from './app/pages/ContactPage';
 import NotFoundPage from './app/pages/NotFoundPage';
+
+// Lazy load additional pages
+const PricingPage = lazy(() => import('./app/pages/PricingPage'))
+const CaseStudiesPage = lazy(() => import('./app/pages/CaseStudiesPage'))
+const BlogPage = lazy(() => import('./app/pages/BlogPage'))
+const TeamPage = lazy(() => import('./app/pages/TeamPage'))
+const CareersPage = lazy(() => import('./app/pages/CareersPage'))
+const PrivacyPage = lazy(() => import('./app/pages/PrivacyPage'))
+const TermsPage = lazy(() => import('./app/pages/TermsPage'))
+const CookiesPage = lazy(() => import('./app/pages/CookiesPage'))
+const AIServicesPage = lazy(() => import('./app/pages/AIServicesPage'))
+const AISolutionsPage = lazy(() => import('./app/pages/AISolutionsPage'))
+const ITServicesPage = lazy(() => import('./app/pages/ITServicesPage'))
+const CloudInfrastructurePage = lazy(() => import('./app/pages/CloudInfrastructurePage'))
+const DigitalTransformationPage = lazy(() => import('./app/pages/DigitalTransformationPage'))
+const FiveGSolutionsPage = lazy(() => import('./app/pages/FiveGSolutionsPage'))
+const MicroSAASSolutionsPage = lazy(() => import('./app/pages/MicroSAASSolutionsPage'))
+const AIContentGeneratorPage = lazy(() => import('./app/pages/AIContentGeneratorPage'))
+const DataAnalyticsPage = lazy(() => import('./app/pages/DataAnalyticsPage'))
+const WebDevelopmentPage = lazy(() => import('./app/pages/WebDevelopmentPage'))
+const MobileDevelopmentPage = lazy(() => import('./app/pages/MobileDevelopmentPage'))
+const DatabaseManagementPage = lazy(() => import('./app/pages/DatabaseManagementPage'))
+const NetworkInfrastructurePage = lazy(() => import('./app/pages/NetworkInfrastructurePage'))
+const PartnershipsPage = lazy(() => import('./app/pages/PartnershipsPage'))
+const HelpPage = lazy(() => import('./app/pages/HelpPage'))
+const APIDocsPage = lazy(() => import('./app/pages/APIDocsPage'))
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -96,13 +132,7 @@ function App() {
                     <Route path="/api-docs" element={<APIDocsPage />} />
                     
                     {/* Catch all route */}
-                    <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
-                      <div className="text-center">
-                        <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>
-                        <p className="text-gray-600 mb-8">Page not found</p>
-                        <a href="/" className="text-blue-600 hover:text-blue-800">Go back home</a>
-                      </div>
-                    </div>} />
+                    <Route path="*" element={<NotFoundPage />} />
                   </Routes>
                 </Suspense>
               </ErrorBoundary>
