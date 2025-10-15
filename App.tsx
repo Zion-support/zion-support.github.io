@@ -5,11 +5,13 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
+import Header from './app/components/Header';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
+import SEOHead from './app/components/SEOHead';
 
 // Page Components
 import HomePage from './app/page';
@@ -78,13 +80,14 @@ function App() {
     <ErrorBoundary>
       <HelmetProvider>
         <Router>
+          <SEOHead />
           <div className="min-h-screen bg-slate-900 flex">
             <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
             <div className="flex-1 flex flex-col">
               <Navigation onSidebarToggle={() => setSidebarOpen(true)} />
               <main className="relative z-10 flex-1" id="main-content" role="main">
                 <ErrorBoundary>
-                  <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
+                  <Suspense fallback={<LoadingSpinner size="lg" text="Loading page..." />}>
                     <Routes>
                       {/* Main Pages */}
                       <Route path="/" element={<HomePage />} />
