@@ -351,7 +351,8 @@ const AIIoTManagementProPage = () => {
             </div>
           </section>
         </main>
-    </>
-  );
-};
+      </div>
+      </>
+    );
+  };
 export default AIIoTManagementProPage;

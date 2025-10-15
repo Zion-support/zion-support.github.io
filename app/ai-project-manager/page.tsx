@@ -15,7 +15,8 @@ import {
   MessageSquare,
   FileText,
   PieChart,
-  Settings
+  Settings,
+  Shield
 } from 'lucide-react';
 
 const AiProjectManagerPage: React.FC = () => {

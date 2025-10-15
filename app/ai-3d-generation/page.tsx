@@ -1,4 +1,4 @@
-import { ArrowRight, Box, Zap, Target, CheckCircle, Clock, Globe, FileText, Sparkles, Users } from "lucide-react";
+import { ArrowRight, Box, Zap, Target, CheckCircle, Clock, Globe, FileText, Sparkles, Users, Star } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
