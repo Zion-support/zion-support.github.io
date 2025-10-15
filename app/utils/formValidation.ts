@@ -1,14 +1,12 @@
 
 interface FormValidationOptions {
   // Add your options here;
-}
-
+};
 interface FormValidationState {
   // Add your state here;
-}
-
-export const FormValidation = (options: FormValidationOptions = {
-  }) => {
+};
+export const FormValidation = (options: FormValidationOptions = {,
+  }) => {;
     const stateRef = useRef<FormValidationState>({;
     // Initialize your state here;
   
@@ -18,7 +16,6 @@ export const FormValidation = (options: FormValidationOptions = {
   useEffect(() => {
     // Add your effect logic here;
   }, [
-    
   ]);
 
   return {
@@ -26,5 +23,5 @@ export const FormValidation = (options: FormValidationOptions = {
   };
 };
 
-export default FormValidation;';';";
+export default FormValidation;';';";";";";
 "

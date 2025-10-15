@@ -1,14 +1,12 @@
 
 interface LoggerOptions {
   // Add your options here;
-}
-
+};
 interface LoggerState {
   // Add your state here;
-}
-
-export const Logger = (options: LoggerOptions = {
-  }) => {
+};
+export const Logger = (options: LoggerOptions = {,
+  }) => {;
     const stateRef = useRef<LoggerState>({;
     // Initialize your state here;
   
@@ -18,7 +16,6 @@ export const Logger = (options: LoggerOptions = {
   useEffect(() => {
     // Add your effect logic here;
   }, [
-    
   ]);
 
   return {
@@ -26,5 +23,5 @@ export const Logger = (options: LoggerOptions = {
   };
 };
 
-export default Logger;';';";
+export default Logger;';';";";";";
 "

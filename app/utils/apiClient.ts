@@ -1,14 +1,12 @@
 
 interface ApiClientOptions {
   // Add your options here;
-}
-
+};
 interface ApiClientState {
   // Add your state here;
-}
-
-export const ApiClient = (options: ApiClientOptions = {
-  }) => {
+};
+export const ApiClient = (options: ApiClientOptions = {,
+  }) => {;
     const stateRef = useRef<ApiClientState>({;
     // Initialize your state here;
   
@@ -18,7 +16,6 @@ export const ApiClient = (options: ApiClientOptions = {
   useEffect(() => {
     // Add your effect logic here;
   }, [
-    
   ]);
 
   return {
@@ -26,5 +23,5 @@ export const ApiClient = (options: ApiClientOptions = {
   };
 };
 
-export default ApiClient;';';";
+export default ApiClient;';';";";";";
 "

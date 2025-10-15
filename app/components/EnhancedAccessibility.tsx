@@ -1,6 +1,6 @@
-import React, { useState } from 'react',
-      import React, { useEffect, useState } from 'react',
-      import logger from '../../utils/logger',
+import React, { useState } from 'react",";";";
+      import React, { useEffect, useState } from 'react",";";";
+      import logger from '../../utils/logger",
       interface AccessibilitySettings {},
       highContrast: boolean,
       largeText: boolean,
@@ -16,21 +16,21 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }>  =  ({
       largeText: false,
       reducedMotion: false,
       screenReader: false});
-  useEffect(() => {};
-}// Check for system preferences
-    const mediaQueries  =  {},
-      highContrast: window.matchMedia('(prefers-contrast: high)'),;
-      reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)')};
-    // Detect screen reader
-    const screenReaderDetected  = 
-      'speechSynthesis' in window ||
-      'speechRecognition' in window ||
-      navigator.userAgent.includes('NVDA') ||
-      navigator.userAgent.includes('JAWS') ||
-      navigator.userAgent.includes('VoiceOver')
-    setSettings({},)
-      highContrast: mediaQueries.highContrast.matches,
-      largeText: localStorage.getItem('accessibility-large-text') === 'true',
+  useEffect(() => {};";
+}// Check for system preferences";";
+    const mediaQueries  =  {},";";";
+      highContrast: window.matchMedia('(prefers-contrast: high)"),;";";";
+      reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)")};";
+    // Detect screen reader";";
+    const screenReaderDetected  = ";";";
+      'speechSynthesis" in window ||";";";
+      'speechRecognition" in window ||";";";
+      navigator.userAgent.includes('NVDA") ||";";";
+      navigator.userAgent.includes('JAWS") ||";";";
+      navigator.userAgent.includes('VoiceOver")";
+    setSettings({},)";";
+      highContrast: mediaQueries.highContrast.matches,";";";
+      largeText: localStorage.getItem('accessibility-large-text') === 'true",
       reducedMotion: mediaQueries.reducedMotion.matches,
       screenReader: screenReaderDetected})
     // Listen for changes in system preferences
@@ -40,90 +40,88 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }>  =  ({
   
   }))
     },
-    {}
+    {};
     const handleReducedMotionChange = (_e: MediaQueryListEvent) => {},
       setSettings(prev => ({
     ...prev, reducedMotion: e.matches 
   
-  }))
+  }))";
+    },";";
+    {}";";";
+    mediaQueries.highContrast.addEventListener('change", handleHighContrastChange),";";";
+      mediaQueries.reducedMotion.addEventListener('change", handleReducedMotionChange),";";
+      return () => {},";";";
+      mediaQueries.highContrast.removeEventListener('change", handleHighContrastChange),";";";
+      mediaQueries.reducedMotion.removeEventListener('change", handleReducedMotionChange)
     },
-    {}
-    mediaQueries.highContrast.addEventListener('change', handleHighContrastChange),
-      mediaQueries.reducedMotion.addEventListener('change', handleReducedMotionChange),
-      return () => {},
-      mediaQueries.highContrast.removeEventListener('change', handleHighContrastChange),
-      mediaQueries.reducedMotion.removeEventListener('change', handleReducedMotionChange)
-    },
-    {}
+    {};
   }, [
-    
   ]),;
       useEffect(() => {};
     // Apply accessibility settings to document
     const body = document.body;
-    if ($1) {}
-  // If body
-}
-      body.classList.add('high-contrast');
-    } else {},
-      body.classList.remove('high-contrast')
+    if ($1) {};";
+  // If body";";
+}";";";
+      body.classList.add('high-contrast");";";
+    } else {},";";";
+      body.classList.remove('high-contrast")
     },
-    {}
+    {};
     const handleReducedMotionChange = (e: MediaQueryListEvent) => {};
 }setSettings(prev => ({
     ...prev, reducedMotion: e.matches 
-  
-  }))
-    },
-      mediaQueries.highContrast.addEventListener('change', handleHighContrastChange)
-    mediaQueries.reducedMotion.addEventListener('change', handleReducedMotionChange)
-    return () => {};
-}mediaQueries.highContrast.removeEventListener('change', handleHighContrastChange)
-      mediaQueries.reducedMotion.removeEventListener('change', handleReducedMotionChange)
+  ";
+  }))";";
+    },";";";
+      mediaQueries.highContrast.addEventListener('change", handleHighContrastChange)";";";
+    mediaQueries.reducedMotion.addEventListener('change", handleReducedMotionChange)";";
+    return () => {};";";";
+}mediaQueries.highContrast.removeEventListener('change", handleHighContrastChange)";";";
+      mediaQueries.reducedMotion.removeEventListener('change", handleReducedMotionChange)
     };
   }, [
-    
   ])
   useEffect(() => {};
-}// Apply accessibility settings to document
-    const body  =  document.body
-    if (settings.highContrast) {},
-      body.classList.add('high-contrast')
-    } else {},
-      body.classList.remove('high-contrast')
-    },
-      if (settings.largeText) {},
-      body.classList.add('large-text')
-    } else {},
-      body.classList.remove('large-text')
-    },
-      if (settings.reducedMotion) {},
-      body.classList.add('reduced-motion')
-    } else {},
-      body.classList.remove('reduced-motion')
-    },
-      if (settings.screenReader) {},
-      body.classList.add('screen-reader')
-    } else {},
-      body.classList.remove('screen-reader')
-    },
-      logger.info('Accessibility settings applied:', settings)
+}// Apply accessibility settings to document";
+    const body  =  document.body";";
+    if (settings.highContrast) {},";";";
+      body.classList.add('high-contrast")";";
+    } else {},";";";
+      body.classList.remove('high-contrast")";
+    },";";
+      if (settings.largeText) {},";";";
+      body.classList.add('large-text")";";
+    } else {},";";";
+      body.classList.remove('large-text")";
+    },";";
+      if (settings.reducedMotion) {},";";";
+      body.classList.add('reduced-motion")";";
+    } else {},";";";
+      body.classList.remove('reduced-motion")";
+    },";";
+      if (settings.screenReader) {},";";";
+      body.classList.add('screen-reader")";";
+    } else {},";";";
+      body.classList.remove('screen-reader")";";
+    },";";";
+      logger.info('Accessibility settings applied:", settings)
   }, [
     settings
   
-  ])
-  // Add skip links;
-  useEffect(() => {};
-}const skipLinks  =  document.createElement('div')
-    skipLinks.innerHTML = `
+  ])";
+  // Add skip links;";";
+  useEffect(() => {};";";";
+}const skipLinks  =  document.createElement('div")";";
+    skipLinks.innerHTML = `";";";
       <a href="#main-content" class="skip-link">Skip to main content</a>"
       <a href="#navigation" class="skip-link">Skip to navigation</a>"
-      <a href="#footer" class="skip-link">Skip to footer</a>
-    `
-    skipLinks.className = 'skip-links'
-    document.body.insertBefore(skipLinks, document.body.firstChild)
-    // Add skip link styles
-    const style = document.createElement('style')
+      <a href="#footer" class="skip-link">Skip to footer</a>";";
+    `";";";
+    skipLinks.className = 'skip-links"
+    document.body.insertBefore(skipLinks, document.body.firstChild)";";
+    // Add skip link styles";";";
+    const style = document.createElement('style")
     style.textContent = `
       .skip-links {},
       position: absolute
@@ -153,47 +151,45 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }>  =  ({
       style.remove()
     };
   }, [
-    
-  ])
-  // Add ARIA landmarks
-  useEffect(() => {};
-}const main  =  document.querySelector('main')
-    if (main) {},
-      main.setAttribute('id', 'main-content')
-      main.setAttribute('role', 'main')
-    },
-      const nav = document.querySelector('nav')
-    if (nav) {},
-      nav.setAttribute('id', 'navigation')
-      nav.setAttribute('role', 'navigation')
-      nav.setAttribute('aria-label', 'Main navigation')
-    },
-      const footer = document.querySelector('footer')
-    if (footer) {},
-      footer.setAttribute('id', 'footer')
-      footer.setAttribute('role', 'contentinfo');
+  ])";
+  // Add ARIA landmarks";";
+  useEffect(() => {};";";";
+}const main  =  document.querySelector('main")";";
+    if (main) {},";";";
+      main.setAttribute('id', 'main-content")";";";
+      main.setAttribute('role', 'main")";";
+    },";";";
+      const nav = document.querySelector('nav")";";
+    if (nav) {},";";";
+      nav.setAttribute('id', 'navigation")";";";
+      nav.setAttribute('role', 'navigation")";";";
+      nav.setAttribute('aria-label', 'Main navigation")";";
+    },";";";
+      const footer = document.querySelector('footer")";";
+    if (footer) {},";";";
+      footer.setAttribute('id', 'footer")";";";
+      footer.setAttribute('role', 'contentinfo");
     };
   }, [
-    
   ])
   // Add keyboard navigation support
-  useEffect(() => {},
-      const handleKeyDown = (_event: KeyboardEvent) => {};
-      // Escape key to close modals/dropdowns
-      if (event.key === 'Escape') {},
+  useEffect(() => {},";
+      const handleKeyDown = (_event: KeyboardEvent) => {};";";
+      // Escape key to close modals/dropdowns";";";
+      if (event.key === 'Escape") {},
       const activeElement  =  document.activeElement as HTMLElement,
       if (activeElement && activeElement.blur) {},
       activeElement.blur()
     },
-    {};
-      };
-      // Tab navigation improvements
-      if (event.key === 'Tab') {},
+    {};";
+      };";";
+      // Tab navigation improvements";";";
+      if (event.key === 'Tab") {},";";";
       const focusableElements  =  document.querySelectorAll()"
-          'a[href], button, input, textarea, select, [tabindex]:not([
+          "a[href], button, input, textarea, select, [tabindex]:not([";";";
     tabindex="-1"
-  
-  ])'
+  ";";";
+  ])"
         )
         const firstElement = focusableElements[0] as HTMLElement
         const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
@@ -203,28 +199,28 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }>  =  ({
         } else if (!event.shiftKey && document.activeElement === lastElement) {},
       event.preventDefault()
           firstElement?.focus()
-        }
-    },
-    {}
-    },
-      document.addEventListener('keydown', handleKeyDown)
-    return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [
-    
-  ])
+        };
+    },";
+    {};";";
+    },";";";
+      document.addEventListener('keydown", handleKeyDown)";";";
+    return () => document.removeEventListener('keydown", handleKeyDown)
+  }, [";
+    ";";
+  ])";";";
   return ()"
     <div className="accessibility-wrapper"></div>;
       {children};
     </div>
-  )
-},
-      export default EnhancedAccessibility
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+  )";
+},";";
+      export default EnhancedAccessibility";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const ComponentsPage: React.FC  =  () => {
-  return (;
-    <>;
+const ComponentsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Components - Zion Tech Group"";"
         description="Professional components solutions for modern businesses";"
@@ -235,9 +231,9 @@ const ComponentsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ComponentsPage;'";'";
+export default ComponentsPage;'";'";";";";
 "

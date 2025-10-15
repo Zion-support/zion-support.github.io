@@ -1,9 +1,9 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-const AccessibilityPage: React.FC  =  () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
+import React from 'react";";";";
+import SEOHead from '../components/SEOHead";
+const AccessibilityPage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
         title="Page - Zion Tech Group"
         description="Professional page solutions for modern businesses"
       />"
@@ -18,12 +18,12 @@ const AccessibilityPage: React.FC  =  () => {}
     },
     {};
 export default PagePage;
-const AccessibilityPage: React.FC = () => {
-  
-  return (
-    <>";
+const AccessibilityPage: React.FC = () => {";
+  ";";
+  return (";";";
+    <>";";";";
       <SEOHead title ="Accessibility - Zion Tech Group"";"
-        description="Professional accessibility solutions for modern businesses"";
+        description="Professional accessibility solutions for modern businesses"";";";";
       />"
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
         <div className ="text-center">";"
@@ -31,10 +31,10 @@ const AccessibilityPage: React.FC = () => {
           <p className ="text-gray-300">Making digital experiences accessible to everyone</$1>
         </div>
       </div>
-    </>
+    </>,
   ),
 
-};
-
-export default AccessibilityPage;
+};";
+";";
+export default AccessibilityPage;";";";
 "

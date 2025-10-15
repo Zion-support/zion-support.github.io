@@ -1,10 +1,10 @@
-import React from 'react';';
-import SEOHead from './components/SEOHead';
-import SEOHead from '../components/SEOHead';
-,
-      export default function HomePage() {
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";";";";
+import SEOHead from '../components/SEOHead";";
+,";";
+      export default function HomePage() {";";";
   "
-}
+}";";";
     "@context": "https://schema.org",";"
     "@type": "WebSite",";"
     "name": "Zion Tech Group",";"
@@ -14,9 +14,9 @@ import SEOHead from '../components/SEOHead';
       "@type": "SearchAction",";"
       "target": "https://ziontechgroup.com/search?q={search_term_string}",";"
       "query-input": "required name=search_term_string"
-    },
-    {}
-  };
+    },";
+    {};";";
+  };";";";
 ,"
       const HomePage: React.FC  =  () => {"}"
         "
@@ -26,7 +26,7 @@ import SEOHead from '../components/SEOHead';
         "
       <SEOHead",>"
         "
-        title="HomePage - Zion Tech Group",";
+        title="HomePage - Zion Tech Group",";";";";
       description="Zion Tech Group HomePage page" />";"
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
         <div className="text-center">";"
@@ -46,13 +46,13 @@ import SEOHead from '../components/SEOHead';
     </>","
         "
   )
-    },
-    {}
-,
+    },";
+    {};";";
+,";";";
       export default HomePage;"
 ;"'"'
 ';';"
-      export default function HomePage() {
+      export default function HomePage() {";";";
   ","";"
         """;"
 const structuredData = {",";"
@@ -64,10 +64,10 @@ const structuredData = {",";"
     "description": "Advanced AI and IT solutions provider specializing in cybersecurity, cloud infrastructure, and digital transformation.",""";"
     "potentialAction": {""";"
       "@type": "SearchAction",""";"
-      "target": "https://ziontechgroup.com/search?q={search_term_string
+      "target": "https: //ziontechgroup.com/search?q={search_term_string";";,";
 }"
-      "query-input": "required: name =search_term_string",
-    };
+      "query-input": "required: name =search_term_string",";";
+    };";";";
 {"
   };";"
 ,"";"
@@ -92,11 +92,11 @@ const structuredData = {",";"
         """;"
     </>","";"
         ";
-  );
-    };
-{
+  );";
+    };";";
+{";";";
 ,;"
       export default HomePage;'";'";'"';";"
-'";'";
-}}}
+'";'";";";
+}}}";";";
 "

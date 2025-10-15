@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async;'
+import { Helmet } from "react-helmet-async;";
 interface ImprovedSEOProps {
   title?: string;
   description?: string;
@@ -14,26 +14,26 @@ interface ImprovedSEOProps {
   twitterImage?: string;
   structuredData?: any;
   noindex?: boolean;
-  nofollow?: boolean;
-}
-const ImprovedSEO: React.FC<ImprovedSEOProps>  =  ({
+  nofollow?: boolean;";
+};";";
+const ImprovedSEO: React.FC<ImprovedSEOProps>  =  ({";";,";
     title = 'Zion Tech Group - Advanced AI and IT Solutions',''
   description = 'Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.',''
-  keywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting',''
-  canonicalUrl,
-  ogTitle,
-  ogDescription,
-  ogImage = '/images/og-image.jpg',''
-  ogUrl,
-  twitterCard = 'summary_large_image',''
+  keywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting','"
+  canonicalUrl,";
+  ogTitle,";";
+  ogDescription,";";";
+  ogImage = '/images/og-image.jpg','"
+  ogUrl,";";";
+  twitterCard = 'summary_large_image','"
   twitterTitle,
   twitterDescription,
   twitterImage,
   structuredData,
-  noindex = false,
-  nofollow = false
-  }) => {;
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;''
+  noindex = false,";
+  nofollow = false";";
+  }) => {;";";";
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;'"
   const fullOgTitle = ogTitle || fullTitle;
   const fullOgDescription = ogDescription || description;
   const fullTwitterTitle = twitterTitle || fullOgTitle;
@@ -41,9 +41,9 @@ const ImprovedSEO: React.FC<ImprovedSEOProps>  =  ({
   const fullTwitterImage = twitterImage || ogImage;
   const fullOgUrl = ogUrl || canonicalUrl;
   return (
-    <Helmet></Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+    <Helmet></Helmet>";
+      {/* Basic Meta Tags */};";";
+      <title>{fullTitle}</title>";";";
       <meta name="description" content={description} />""
       <meta name="keywords" content={keywords} />""
       <meta name="author" content="Zion Tech Group" />""
@@ -89,13 +89,13 @@ const ImprovedSEO: React.FC<ImprovedSEOProps>  =  ({
       {/* DNS Prefetch for performance */}"
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />""
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />""
-      {/* Structured Data */}
+      {/* Structured Data */}";";";
       {structuredData && ("
         <script type="application/ld+json">""
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
-      {/* Default Organization Structured Data */}
+          {JSON.stringify(structuredData)};
+        </script>";
+      )};";";
+      {/* Default Organization Structured Data */}";";";
       {!structuredData && ("
         <script type="application/ld+json">""
           {JSON.stringify({"
@@ -122,11 +122,11 @@ const ImprovedSEO: React.FC<ImprovedSEOProps>  =  ({
             "sameAs": [""
               "https://twitter.com/ziontechgroup",""
               "https://linkedin.com/company/ziontechgroup""
-            ]
-          })}
+            ];
+          })};
         </script>
-      )}
-    </Helmet>
-  );
-};
+      )};
+    </Helmet>";
+  );";";
+};";";";
 export default ImprovedSEO;"

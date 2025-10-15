@@ -1,8 +1,8 @@
-import React, { useState } from 'react',
+import React, { useState } from 'react",";";";
       const PricingPage: React.FC  =  () => {"}"
-        ";
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),;
-      const [selectedCategory, setSelectedCategory] = useState<string>('all');
+        ";";";";
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly"),;";";";
+      const [selectedCategory, setSelectedCategory] = useState<string>('all");";";";
 ,"
       const microSaasPricing  =  [","
         "
@@ -35,7 +35,7 @@ import React, { useState } from 'react',
         'Mobile app access',","
         "
         'Email support',","
-        ";
+        ";";";";
         'Basic integrations';"
       ],","
         "
@@ -155,10 +155,10 @@ import React, { useState } from 'react',
         "
       popular: false,","
         "
-      category: 'micro-saas'
-    },
-    {}
-  ];
+      category: 'micro-saas"
+    },";
+    {};";";
+  ];";";";
 ,"
       const aiServicesPricing  =  [","
         "
@@ -191,7 +191,7 @@ import React, { useState } from 'react',
         'Multi-language support',","
         "
         'Sentiment analysis',","
-        ";
+        ";";";";
         'Escalation to human agents';"
       ],","
         "
@@ -311,10 +311,10 @@ import React, { useState } from 'react',
         "
       popular: false,","
         "
-      category: 'ai-services'
-    },
-    {}
-  ];
+      category: 'ai-services"
+    },";
+    {};";";
+  ];";";";
 ,"
       const itServicesPricing  =  [","
         "
@@ -347,7 +347,7 @@ import React, { useState } from 'react',
         'Migration services',","
         "
         'Performance optimization',","
-        ";
+        ";";";";
         'Backup & recovery solutions';"
       ],","
         "
@@ -467,25 +467,25 @@ import React, { useState } from 'react',
         "
       popular: false,","
         "
-      category: 'it-services'
-    },
-    {}
-  ];
+      category: 'it-services"
+    },";
+    {};";";
+  ];";";";
 ,"
       const categories  =  [","
-        ";
+        ";";";";
     { id: 'all', name: 'All Services', icon: <Layers className="w-5 h-5" /> },";"
     { id: 'micro-saas', name: 'Micro SAAS', icon: <className="w-5 h-5" /> },";"
     { id: 'ai-services', name: 'AI Services', icon: <className="w-5 h-5" /> },";"
-    { id: 'it-services', name: 'IT Services', icon: <Server className="w-5 h-5" /> };
-  ];
-,
+    { id: 'it-services', name: 'IT Services', icon: <Server className="w-5 h-5" /> };";
+  ];";";
+,";";";
       const allPricing  =  [...microSaasPricing, ...aiServicesPricing, ...itServicesPricing],"
       const filteredPricing = selectedCategory === 'all' ","
         "
     ? allPricing","
-        ";
-    : allPricing.filter(item => item.category === selectedCategory);
+        ";";";
+    : allPricing.filter(item => item.category === selectedCategory);";";";
 ,"
       return (",)"
         "
@@ -540,7 +540,7 @@ import React, { useState } from 'react',
         "
               </span>","
         "
-              <button";">
+              <button";">";";";
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')},"
       className="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2";"
               >","
@@ -582,14 +582,14 @@ import React, { useState } from 'react',
         "
               <button",>"
         "
-                key={category.id},
+                key={category.id},";";";
       onClick={() => setSelectedCategory(category.id)},"
       className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${"}"
         "
                   selectedCategory === category.id","
         "
-                    ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white shadow-lg';
-                    : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white';
+                    ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white shadow-lg";";";";
+                    : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white";";";";
                 }`};"
               >","
         "
@@ -626,7 +626,7 @@ import React, { useState } from 'react',
         "
                   </div>","
         "
-                )};
+                )};";";";
 ;"
                 <div className="mb-6">";"
                   <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">","
@@ -951,16 +951,16 @@ import React, { useState } from 'react',
     </>";"
   )
     },
-    {}
-,
-      export default PricingPage;
+    {};
+,";
+      export default PricingPage;";";
+";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-import React from 'react';';
-import SEOHead from './components/SEOHead';
-
-const PagesPage: React.FC  =  () => {
-  return (;
-    <>;
+const PagesPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Pages - Zion Tech Group"";"
         description="Professional pages solutions for modern businesses";"
@@ -971,9 +971,9 @@ const PagesPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default PagesPage;'";'";
+export default PagesPage;'";'";";";";
 "

@@ -1,15 +1,13 @@
 
 interface MonitoringOptions {
   // Add your options here;
-}
-
+};
 interface MonitoringState {
   // Add your state here;
-}
-
-export const Monitoring = (options: MonitoringOptions = {
+};
+export const Monitoring = (options: MonitoringOptions = {,
   }) => {
-    const stateRef = useRef<MonitoringState>({
+    const stateRef = useRef<MonitoringState>({;
     // Initialize your state here;
   
   });
@@ -18,7 +16,6 @@ export const Monitoring = (options: MonitoringOptions = {
   useEffect(() => {
     // Add your effect logic here;
   }, [
-    
   ]);
 
   return {
@@ -26,5 +23,5 @@ export const Monitoring = (options: MonitoringOptions = {
   };
 };
 
-export default Monitoring;';';";
+export default Monitoring;';';";";";";
 "

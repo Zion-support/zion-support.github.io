@@ -1,22 +1,22 @@
-import React from 'react';
-'use client';
-export default function UtilsPage() {
-  
+import React from 'react";";";";
+'use client";";
+export default function UtilsPage() {;";";
+  ";";";
 }"
       <div className="container mx-auto px-4">;"
         <h1 className="text-4xl font-bold mb-8">Utils</h1>;"
         <p className="text-gray-300 text-lg">;
           This page is under development.;
         </p>;
-      </div>;
-    </div>;
-  );
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+      </div>;";
+    </div>;";";
+  );";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const UtilsPage: React.FC  =  () => {
-  return (;
-    <>;
+const UtilsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Utils - Zion Tech Group"";"
         description="Professional utils solutions for modern businesses";"
@@ -27,8 +27,8 @@ const UtilsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
 export default UtilsPage;'";'";"

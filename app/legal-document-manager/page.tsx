@@ -1,21 +1,21 @@
-import React from 'react';
-export default function LegalDocumentManagerPage() {
-  
+import React from 'react";";
+export default function LegalDocumentManagerPage() {;";";
+  ";";";
 }"
       <div className="container mx-auto px-4">;"
         <h1 className="text-4xl font-bold mb-8">Legal Document Manager</h1>;"
         <p className="text-gray-300 text-lg">;
           This page is under development.;
         </p>;
-      </div>;
-    </div>;
-  );
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+      </div>;";
+    </div>;";";
+  );";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const LegalDocumentManagerPage: React.FC  =  () => {
-  return (;
-    <>;
+const LegalDocumentManagerPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Legal Document Manager - Zion Tech Group"";"
         description="Professional legal document manager solutions for modern businesses";"
@@ -26,9 +26,9 @@ const LegalDocumentManagerPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default LegalDocumentManagerPage;'";'";
+export default LegalDocumentManagerPage;'";'";";";";
 "

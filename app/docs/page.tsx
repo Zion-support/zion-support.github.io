@@ -1,9 +1,9 @@
-import React, { useState } from 'react',
+import React, { useState } from 'react",";";";
       import { Helmet } from "react-helmet-async","
       const DocsPage: React.FC  =  () => {"}"
-        ";
-  const [searchQuery, setSearchQuery] = useState(''),;
-      const [expandedSection, setExpandedSection] = useState<string | null>(null);
+        ";";";";
+  const [searchQuery, setSearchQuery] = useState('"),;";";
+      const [expandedSection, setExpandedSection] = useState<string | null>(null);";";";
 ,"
       const documentationSections  =  [","
         "
@@ -25,8 +25,8 @@ import React, { useState } from 'react',
         { title: 'Account Setup', description: 'Create and configure your account', readTime: '3 min' },","
         "
         { title: 'First Project', description: 'Create your first AI project', readTime: '10 min' },","
-        ";
-        { title: 'API Keys', description: 'Generate and manage your API keys', readTime: '2 min' };
+        ";";";";
+        { title: 'API Keys', description: 'Generate and manage your API keys', readTime: '2 min" };";";";
       ]"
     },","
         "
@@ -47,7 +47,7 @@ import React, { useState } from 'react',
         "
         { title: 'Natural Language Processing', description: 'Text analysis and generation', readTime: '8 min' },","
         "
-        { title: 'Predictive Analytics', description: 'Building predictive models', readTime: '20 min' };
+        { title: 'Predictive Analytics', description: 'Building predictive models', readTime: '20 min" };";";";
       ]"
     },","
         "
@@ -69,7 +69,7 @@ import React, { useState } from 'react',
         "
         { title: 'Web Development', description: 'Building modern web applications', readTime: '30 min' },","
         "
-        { title: 'Mobile Development', description: 'iOS and Android app development', readTime: '35 min' };
+        { title: 'Mobile Development', description: 'iOS and Android app development', readTime: '35 min" };";";";
       ]"
     },","
         "
@@ -93,10 +93,10 @@ import React, { useState } from 'react',
         "
         { title: 'SDKs', description: 'Software development kits', readTime: '10 min' },","
         "
-        { title: 'Webhooks', description: 'Real-time event notifications', readTime: '8 min' };
-      ]
-    };
-  ];
+        { title: 'Webhooks', description: 'Real-time event notifications', readTime: '8 min" };
+      ];";
+    };";";
+  ];";";";
 ,"
       const popularArticles  =  [","
         "
@@ -107,24 +107,24 @@ import React, { useState } from 'react',
     { title: 'Authentication Guide', category: 'API Reference', readTime: '5 min', views: '6.8k' },","
         "
     { title: 'Cloud Infrastructure Setup', category: 'IT Services', readTime: '25 min', views: '5.1k' },","
-        ";
-    { title: 'Computer Vision Tutorial', category: 'AI Services', readTime: '12 min', views: '4.7k' };
-  ];
+        ";";";";
+    { title: 'Computer Vision Tutorial', category: 'AI Services', readTime: '12 min', views: '4.7k" };";";
+  ];";";";
 ,"
       const filteredSections  =  documentationSections.map(section => ({",)}"
         "
     ...section,","
         "
-    articles: section.articles?.filter((article: {;
+    articles: section.articles?.filter((article: {;";";";
     title: string; description: string "
-  
+  ";";,";
   }) =>","
         "
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||","
         "
-      article.description.toLowerCase().includes(searchQuery.toLowerCase())
-    ) || []
-  })).filter(section => section.articles?.length > 0);
+      article.description.toLowerCase().includes(searchQuery.toLowerCase())";
+    ) || []";";
+  })).filter(section => section.articles?.length > 0);";";";
 ,"
       return (",)"
         "
@@ -159,8 +159,8 @@ import React, { useState } from 'react',
                   <input",>"
         "
                     type="text","
-      placeholder="Search documentation...",
-      value={searchQuery},
+      placeholder="Search documentation...",";";
+      value={searchQuery},";";";
       onChange={(e) => setSearchQuery(e.target.value)},"
       className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent" />","
         "
@@ -413,15 +413,15 @@ import React, { useState } from 'react',
         "
   )
     },
-    {}
-,
-      export default DocsPage;
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+    {};";
+,";";
+      export default DocsPage;";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const DocsPage: React.FC  =  () => {
-  return (;
-    <>;
+const DocsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Docs - Zion Tech Group"";"
         description="Professional docs solutions for modern businesses";"
@@ -432,9 +432,9 @@ const DocsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default DocsPage;'";'";
+export default DocsPage;'";'";";";";
 "

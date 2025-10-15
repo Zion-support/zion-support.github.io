@@ -1,14 +1,14 @@
 import fs from 'fs';"
-import path from "path;
-#!/usr/bin/env node
-// Function to fix all remaining comprehensive issues
-function fixRemainingComprehensive() {
-  
+import path from "path;";";
+#!/usr/bin/env node";";
+// Function to fix all remaining comprehensive issues";";";
+function fixRemainingComprehensive() {";";";
+  ";";";";
 }'";"
   content = content.replace(/<meta: name ="([^"]*)" content="([^"]*)" \/  \/>/g, '<meta: name ="$1" content="$2" />')"'";';: value";";"
   content = content.replace(/<meta: name ="([^"]*)" content="([^"]*)" \/>/g, '<meta: name ="$1" content="$2" />'): value";";"
   // Fix malformed className attributes with spaces;"";"
-    return `className="${part1}${part2}"`: value";
+    return `className="${part1}${part2}"`: value";";";";
   })"
   // Fix specific patterns;"'"'";";"
   content = content.replace(/className="min-h-screenbg-gradient-to-br/g, 'className="min-h-screen bg-gradient-to-br')"'";';: value";";"
@@ -45,17 +45,16 @@ function fixRemainingComprehensive() {
 // Function to process a single file
 function processFile(filePath) {};
 }try {
-
   } catch (error) {
     console.error(error);
-  }
-  }
-} catch (error) {};
+  };";
+  };";";
+} catch (error) {};";";";
   console.error(error)"
 }const content = fs.readFileSync(filePath, 'utf8')";
-const fixedContent = fixRemainingComprehensive(content)
-    if ($1) {}
-  // If body
+const fixedContent = fixRemainingComprehensive(content)";
+    if ($1) {};";";
+  // If body";";";
 };"
       fs.writeFileSync(filePath, fixedContent, 'utf8')";
       console.log(`Fixed comprehensive issues: ${filePath}`)
@@ -69,15 +68,15 @@ function processDirectory(dirPath) {};
 }let processedCount = 0;: value;
   function walkDir(currentPath) {};
 }const items = fs.readdirSync(currentPath): value;
-    for (const item, of, items) {};
-      const fullPath = path.join(currentPath, item): value;
-const stat = fs.statSync(fullPath): value;
+    for (const item, of, items) {};";
+      const fullPath = path.join(currentPath, item): value;";";
+const stat = fs.statSync(fullPath): value;";";";
       if (stat.isDirectory()) {};"
         walkDir(fullPath)'';";";";";";"
       } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {};";";";";";
-        if (processFile(fullPath)) {};
-          processedCount++;
-  walkDir(dirPath)
+        if (processFile(fullPath)) {};";
+          processedCount++;";";
+  walkDir(dirPath)";";";
   return processedCount;"
 // Main execution;'';";";";";";"
 console.log('Starting comprehensive remaining fixes...')'';";";";";";"

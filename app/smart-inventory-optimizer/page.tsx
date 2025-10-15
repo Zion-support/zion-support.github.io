@@ -1,30 +1,30 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { Package, TrendingUp, AlertTriangle, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe, DollarSign, Truck, Shield } from 'lucide-react';const SmartInventoryOptimizerPage = () => {
+import React from 'react";";";";
+import { Helmet } from 'react-helmet-async";";";";
+import { motion } from 'framer-motion";";";";
+import { Package, TrendingUp, AlertTriangle, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe, DollarSign, Truck, Shield } from 'lucide-react";const SmartInventoryOptimizerPage = () => {";";";
   ";
-  const features  =  [;
-    {
-};
+  const features  =  [;";
+    {";";
+};";";";
       icon: <>"
       title: "AI-Powered Demand Forecasting";"
       description: "Advanced machine learning algorithms predict demand patterns with 95% accuracy, reducing stockouts and overstock situations."
-    },
+    },";";";
     {"
       icon: <Target className="w-8 h-8 text-purple-400" />,"
       title: "Smart Reorder Points","
       description: "Automatically calculate optimal reorder points based on lead times, demand variability, and supplier reliability."
-    };
+    };";";";
     {},"
       icon: <className="w-8 h-8 text-green-400" />,"
       title: "Real-time Analytics Dashboard","
       description: "Comprehensive analytics and reporting with real-time insights into inventory performance, turnover rates, and cost optimization."
-    };
+    };";";";
     {},"
       icon: <className="w-8 h-8 text-red-400" />,"
       title: "Multi-location Management","
       description: "Seamlessly manage inventory across multiple warehouses, stores, and distribution centers with centralized control."
-    };
+    };";";";
     {},"
       icon: <className="w-8 h-8 text-yellow-400" />,"
       title: "Automated Alerts & Notifications","
@@ -32,40 +32,40 @@ import { Package, TrendingUp, AlertTriangle, Zap, BarChart3, Users, CheckCircle,
     {"
       icon: <Brain className ="w-8 h-8 text-cyan-400" />,";"
       title: "AI-Powered Demand Forecasting",";"
-      description: "Advanced machine learning algorithms predict demand patterns with 95% accuracy, reducing stockouts and overstock situations."";
-    },
+      description: "Advanced machine learning algorithms predict demand patterns with 95% accuracy, reducing stockouts and overstock situations."";";";
+    },";";";
     {"
       icon: <Target className ="w-8 h-8 text-purple-400" />,";"
       title: "Smart Reorder Points",";"
-      description: "Automatically calculate optimal reorder points based on lead times, demand variability, and supplier reliability."";
-    },
+      description: "Automatically calculate optimal reorder points based on lead times, demand variability, and supplier reliability."";";";
+    },";";";
     {"
       icon: <BarChart3 className ="w-8 h-8 text-green-400" />,";"
       title: "Real-time Analytics Dashboard",";"
-      description: "Comprehensive analytics and reporting with real-time insights into inventory performance, turnover rates, and cost optimization."";
-    },
+      description: "Comprehensive analytics and reporting with real-time insights into inventory performance, turnover rates, and cost optimization."";";";
+    },";";";
     {"
       icon: <Shield className ="w-8 h-8 text-red-400" />,";"
       title: "Multi-location Management",";"
-      description: "Seamlessly manage inventory across multiple warehouses, stores, and distribution centers with centralized control."";
-    },
+      description: "Seamlessly manage inventory across multiple warehouses, stores, and distribution centers with centralized control."";";";
+    },";";";
     {"
       icon: <Zap className ="w-8 h-8 text-yellow-400" />,";"
       title: "Automated Alerts & Notifications",";"
-      description: "Get instant alerts for low stock, overstock, expiring items, and unusual demand patterns to prevent costly mistakes."";
-    },
+      description: "Get instant alerts for low stock, overstock, expiring items, and unusual demand patterns to prevent costly mistakes."";";";
+    },";";";
     {"
       icon: <Users className ="w-8 h-8 text-blue-400" />,";"
       title: "Supplier Integration",";"
       description: "Connect with suppliers for automated ordering, real-time stock updates, and seamless supply chain management."";
-    }
-  ];
-  const pricingPlans  =  [
-    {";
+    };";
+  ];";";
+  const pricingPlans  =  [";";";
+    {";";";";
       name: "Starter",";"
       price: "$49",";"
       period: "/month",";"
-      description: "Perfect for small businesses",";
+      description: "Perfect for small businesses",";";";";
       features: ["
         "Up to 1,000 SKUs",";"
         "Basic demand forecasting",";"
@@ -73,14 +73,14 @@ import { Package, TrendingUp, AlertTriangle, Zap, BarChart3, Users, CheckCircle,
         "Basic analytics",";"
         "Email support",";"
         "1 warehouse location"";
-      ],
-      popular: false
-    },
+      ],";
+      popular: false";";
+    },";";";
     {"
       name: "Professional",";"
       price: "$149",";"
       period: "/month",";"
-      description: "Ideal for growing businesses",";
+      description: "Ideal for growing businesses",";";";";
       features: ["
         "Up to 10,000 SKUs",";"
         "Advanced AI forecasting",";"
@@ -89,14 +89,14 @@ import { Package, TrendingUp, AlertTriangle, Zap, BarChart3, Users, CheckCircle,
         "Priority support",";"
         "API access",";"
         "Supplier integration"";
-      ],
-      popular: true
-    },
+      ],";
+      popular: true";";
+    },";";";
     {"
       name: "Enterprise",";"
       price: "$399",";"
       period: "/month",";"
-      description: "For large organizations",";
+      description: "For large organizations",";";";";
       features: ["
         "Unlimited SKUs",";"
         "Custom AI models",";"
@@ -107,109 +107,109 @@ import { Package, TrendingUp, AlertTriangle, Zap, BarChart3, Users, CheckCircle,
         "On-premise deployment"";
       ],
       popular: false
-    }
-  ];
-  const benefits  =  [
-    {";
+    };";
+  ];";";
+  const benefits  =  [";";";
+    {";";";";
       icon: <DollarSign className ="w-12 h-12 text-green-400" />,";"
       title: "Reduce Inventory Costs",";"
-      description: "Save up to 30% on inventory costs through optimized stock levels and reduced carrying costs."",
-    },
+      description: "Save up to 30% on inventory costs through optimized stock levels and reduced carrying costs."",";";
+    },";";";
     {"
       icon: <Truck className ="w-12 h-12 text-blue-400" />,";"
       title: "Improve Order Fulfillment",";"
-      description: "Increase order fulfillment rates by 25% with better stock availability and demand prediction."",
-    },
+      description: "Increase order fulfillment rates by 25% with better stock availability and demand prediction."",";";
+    },";";";
     {"
       icon: <AlertTriangle className ="w-12 h-12 text-yellow-400" />,";"
       title: "Prevent Stockouts",";"
-      description: "Eliminate stockouts and lost sales with intelligent demand forecasting and automated reordering."",
-    },
+      description: "Eliminate stockouts and lost sales with intelligent demand forecasting and automated reordering."",";";
+    },";";";
     {"
       icon: <TrendingUp className="w-12 h-12 text-purple-400" />,"
       title: "Increase Profitability","
       description: "Boost profit margins by 15-20% through optimized inventory management and reduced waste."
-    };
-  ],
-      const stats  =  [";
+    };";";
+  ],";";";
+      const stats  =  [";";";";
     { number: "30%", label: "Cost Reduction" };"
     { number: "95%", label: "Forecast Accuracy" };"
     { number: "25%", label: "Faster Fulfillment" };"
-    { number: "50%", label: "Less Waste" };
+    { number: "50%", label: "Less Waste" };";";";
   ],"
-      return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
+      return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)";";";
       <Helmet></Helmet>"
       icon: <TrendingUp className ="w-12 h-12 text-purple-400" />,";"
       title: "Increase Profitability",";"
-      description: "Boost profit margins by 15-20% through optimized inventory management and reduced waste."",
-    }
-  ];
-  const stats  =  [";
+      description: "Boost profit margins by 15-20% through optimized inventory management and reduced waste."",";
+    };";";
+  ];";";";
+  const stats  =  [";";";";
     { number: "30%", label: "Cost Reduction" },";"
     { number: "95%", label: "Forecast Accuracy" },";"
     { number: "25%", label: "Faster Fulfillment" },";"
     { number: "50%", label: "Less Waste" }";
-  ];
-const ComponentName = () => {
-  
-  return (";
-    <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";
-      <Helmet>
+  ];";
+const ComponentName = () => {";";
+  ";";";
+  return (";";";";
+    <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";";";
+      <Helmet>";";";
         <title>Smart Inventory Optimizer | Zion Tech Group</title>"
         <meta name ="description" content="Revolutionize your inventory management with AI-powered demand forecasting, smart reorder points, and real-time analytics." />";"
-        <meta name ="keywords" content="inventory management, _demand forecasting, _supply chain, _inventory optimization, AI inventory" />";
-      </Helmet>
-      {/* Hero Section */
+        <meta name ="keywords" content="inventory management, _demand forecasting, _supply chain, _inventory optimization, AI inventory" />";";
+      </Helmet>";";
+      {/* Hero Section */";";";
 };"
       <section className="relative py-20 px-4"></section>"
         <div className="max-w-7xl mx-auto"></div>
-          <motion.div>
-            initial={{ opacity: 0, y: 20 }},
-      animate={{ opacity: 1, y: 0 }},
+          <motion.div>";
+            initial={{ opacity: 0, y: 20 }},";";
+      animate={{ opacity: 1, y: 0 }},";";";
       transition={{ duration: 0.8 }},"
-      className="text-center"></motion.div
+      className="text-center"></motion.div";";";
 >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6"></div>"
               <Package className="w-5 h-5 text-cyan-400 mr-2" />"
-              <span className="text-cyan-300 font-medium">AI-Powered Inventory Intelligence</span>
+              <span className="text-cyan-300 font-medium">AI-Powered Inventory Intelligence</span>";";";
       {/* Hero Section */}"
       <section className ="relative py-20 px-4">";"
-        <div className ="max-w-7xl mx-auto">";
-          <motion.div: initial ={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+        <div className ="max-w-7xl mx-auto">";";
+          <motion.div: initial ={{ opacity: 0, y: 20 }};";";
+            animate={{ opacity: 1, y: 0 }}";";";
             transition={{ duration: 0.8 }}"
-            className="text-center"";
+            className="text-center"";";";";
           >"
             <div className ="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6">";"
               <Package className ="w-5 h-5 text-cyan-400 mr-2" />";"
-              <span className ="text-cyan-300 font-medium">AI-Powered Inventory Intelligence</$1>
+              <span className ="text-cyan-300 font-medium">AI-Powered Inventory Intelligence</$1>";";";
             </div>"
-            <h1 className ="text-5xl md: text-7xl font-bold text-white mb-6">";
+            <h1 className ="text-5xl md: text-7xl font-bold text-white mb-6">";";";";
               Optimize Your"
-              <span className ="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Inventory Management</$1>
+              <span className ="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Inventory Management</$1>";";";
             </h1>"
-            <p className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">",
-              Transform your inventory operations with AI-powered demand forecasting, _smart reorder points, and real-time analytics that reduce costs and improve efficiency.
+            <p className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">",";";
+              Transform your inventory operations with AI-powered demand forecasting, _smart reorder points, and real-time analytics that reduce costs and improve efficiency.";";";
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <motion.button>
-                whileHover={{ scale: 1.05 }},
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>";
+              <motion.button>";";
+                whileHover={{ scale: 1.05 }},";";";
       whileTap={{ scale: 0.95 }},"
-      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"></motion.button
+      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"></motion.button";";";
 >"
-            <div className ="flex flex-col sm: flex-row gap-4 justify-center">",
-              <motion.button: whileHover ={{ scale: 1.05 }}
+            <div className ="flex flex-col sm: flex-row gap-4 justify-center">",";";
+              <motion.button: whileHover ={{ scale: 1.05 }}";";";
                 whileTap={{ scale: 0.95 }}"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"";
-              >
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"";";";
+              >";";";
                 Start Free Trial"
                 <ArrowRight className ="w-5 h-5 ml-2 inline" />",
-              </motion.button>
-              <motion.button>
-                whileHover={{ scale: 1.05 }};
+              </motion.button>";
+              <motion.button>";";
+                whileHover={{ scale: 1.05 }};";";";
                 whileTap={{ scale: 0.95 }};"
                 className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-              <motion.button: whileHover ={{ scale: 1.05 }}
+              <motion.button: whileHover ={{ scale: 1.05 }}";";";
                 whileTap={{ scale: 0.95 }}"
                 className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: bg-white/10 transition-all duration-300"";
               >
@@ -221,7 +221,7 @@ const ComponentName = () => {
       </div>
     </>
   ),
-};
-export default SmartInventoryOptimizerPage;
-}
+};";
+export default SmartInventoryOptimizerPage;";";
+}";";";
 "

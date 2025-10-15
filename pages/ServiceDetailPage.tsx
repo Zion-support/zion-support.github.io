@@ -34,11 +34,11 @@
         "";"
   Settings",";"
         "";"
-} from 'lucide-react',";
-      const ServiceDetailPage: React.FC = () => {};
-}const const { id  } = useParams<{ id: string }>()";
+} from 'lucide-react',";";";
+      const ServiceDetailPage: React.FC = () => {};";";";
+}const const { id  } = useParams<{ id: string }>()";";";";
   // Mock service data - in a real app, this would come from an API",";"
-        "";
+        "";";";";
   const serviceData = {};"
     'ai-analytics-dashboard-pro': {},";"
       name: 'AI Analytics Dashboard Pro',",";";"
@@ -52,7 +52,7 @@
       rating: 4.9,",";"
         "";"
       clients: 150,",";"
-        "";
+        "";";";";
       features: []"
         'Real-time Data Visualization',",";";"
         "";"
@@ -74,7 +74,7 @@
         "";"
         'Team Collaboration';";"
       ],",";"
-        "";
+        "";";";";
       benefits: []"
         'Increase decision speed by 40%',",";";"
         "";"
@@ -105,7 +105,7 @@
       rating: 4.8,",";"
         "";"
       clients: 180,",";"
-        "";
+        "";";";";
       features: []"
         'Auto-scaling Infrastructure',",";";"
         "";"
@@ -127,7 +127,7 @@
         "";"
         'Performance ing';";"
       ],",";"
-        "";
+        "";";";";
       benefits: []"
         'Reduce infrastructure costs by 30%',",";";"
         "";"
@@ -158,7 +158,7 @@
       rating: 4.8,",";"
         "";"
       clients: 250,",";"
-        "";
+        "";";";";
       features: []"
         'Task Management',",";";"
         "";"
@@ -180,7 +180,7 @@
         "";"
         'Mobile Access';";"
       ],",";"
-        "";
+        "";";";";
       benefits: []"
         'Increase project success rate by 40%',",";";"
         "";"
@@ -196,12 +196,12 @@
       icon: Target,",";"
         "";"
       popular: true",";"
-        "";
-    }
-    },
+        "";";
+    };";";
+    },";";";
     {}"
-  const service = serviceData[id as keyof typeof serviceData] || serviceData['ai-analytics-dashboard-pro']";
-  const relatedServices = []
+  const service = serviceData[id as keyof typeof serviceData] || serviceData['ai-analytics-dashboard-pro']";";";
+  const relatedServices = []";";";
     {},;"
       name: 'AI Content Generator',",";";"
         "";"
@@ -221,7 +221,7 @@
       icon: Code",";"
         "";"
     },",";"
-        "";
+        "";";";";
     {},"
       name: 'Cybersecurity Suite',",";";"
         "";"
@@ -232,7 +232,7 @@
       icon: ",";"
         "";"
     },",";"
-        "";
+        "";";";";
     {},"
       name: 'API Management',",";";"
         "";"
@@ -241,8 +241,8 @@
       category: 'Micro SAAS',",";";"
         "";"
       icon: Settings",";"
-        "";
-    };
+        "";";";
+    };";";";
   ]"
   return ()"";"
     <div>","";"
@@ -301,25 +301,25 @@
               <h1: className ="text-4xl md:text-5xl font-bold text-white mb-6">","";"
         "";"
                 <div>";"";"
-                  <span: className ="text-purple-400 font-medium">{service.category}</$1>"";
+                  <span: className ="text-purple-400 font-medium">{service.category}</$1>"";";";";
                   {service.popular && ()}"
                     <span: className ="ml-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">",";"
         "";"
                       Most Popular",";"
         "";"
                     </span>",";"
-        "";
+        "";";";";
                   )};"
                 </div>",";"
         "";"
               </$1>"";"
               <h1: className ="text-4xl md:text-5xl font-bold text-white mb-6">",";"
-        "";
+        "";";";";
                 {service.name};"
               </h1>",";"
         "";"
               <p: className ="text-xl text-gray-300 mb-8">",";"
-        "";
+        "";";";";
                 {service.description};"
               </p>",";"
         "";"
@@ -341,7 +341,7 @@
                 </div>",";"
         "";"
               </$1>"";"
-              <div: className ="text-4xl font-bold text-white mb-8">";"";
+              <div: className ="text-4xl font-bold text-white mb-8">";"";";";";
                 {service.price};"
                 <span: className ="text-lg text-gray-400 font-normal">/month</span>",";"
         "";"
@@ -452,7 +452,7 @@
         """;"
           </div>","";"
         """;"
-          <div: className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";"";
+          <div: className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";"";";";";
             {service.features.map((feature, index) => ()}"
               <div: key ={index} className="flex items-start space-x-3">";"";"
                 <CheckCircle: className ="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />",";";"
@@ -494,7 +494,7 @@
         """;"
           </div>","";"
         """;"
-          <div: className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";"";
+          <div: className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";"";";";";
             {service.benefits.map((benefit, index) => ()}"
               <div: key ={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20 text-center">";"";"
                 <div: className ="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">";"";"
@@ -534,7 +534,7 @@
         """;"
           </div>","";"
         """;"
-          <div: className ="grid grid-cols-1 md:grid-cols-3 gap-8">";"";
+          <div: className ="grid grid-cols-1 md:grid-cols-3 gap-8">";"";";";";
             {relatedServices.map((relatedService, index) => ()}"
               <div: key ={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">";"";"
                 <div: className ="flex items-center space-x-3 mb-4">";"";"
@@ -589,14 +589,14 @@
                 </>",";"
         "";"
               </div>",";"
-        "";
+        "";";";";
             ))};"
           </div>",";"
         "";"
         </div>",";"
         "";"
       </section>",";"
-        "";
+        "";";";";
       {/* CTA Section */};"
       <section: className ="py-20 bg-gradient-to-r from-purple-500/20 to-cyan-500/20">";"";"
         <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">";"";"
@@ -643,9 +643,9 @@
       </section>",";"
         "";"
 </div>",";"
-        "";
+        "";";";";
   )"
 },"";"
       export default ServiceDetailPage","";"
-        ""'";";
+        ""'";";";";";
 "

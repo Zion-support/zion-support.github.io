@@ -1,9 +1,9 @@
-import { Helmet }; from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async',
-      export default function AiEmailAssistantPage() {
+import { Helmet }; from 'react-helmet-async";";";";
+import { Link } from 'react-router-dom";";";";
+import { Helmet } from 'react-helmet-async",";";
+      export default function AiEmailAssistantPage() {";";";
   "
-}
+}";";";
         {/* Hero Section */};"
         <div className="container mx-auto px-4 py-20">""
           <div className="text-center mb-16">""
@@ -51,7 +51,7 @@ import { Helmet } from 'react-helmet-async',
         "
             {features.map((feature, index) => (",)}"
         "
-              <div"">
+              <div"">";";";
                 key={index},"
       className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center";"
               >""
@@ -78,7 +78,7 @@ import { Helmet } from 'react-helmet-async',
         "
               {useCases.map((useCase, index) => (",)}"
         "
-                <div"">
+                <div"">";";";
                   key={index},"
       className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center";"
                 >""
@@ -108,7 +108,7 @@ import { Helmet } from 'react-helmet-async',
         "
               {pricingPlans.map((plan, index) => (",)}"
         "
-                <div"">
+                <div"">";";";
                   key={index},"
       className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 relative ${plan.popular ? "ring-2 ring-cyan-500" : ""}`};"
                 >","
@@ -147,7 +147,7 @@ import { Helmet } from 'react-helmet-async',
         "
                     {plan.features.map((feature, featureIndex) => (",)}"
         "
-                      <li"">
+                      <li"">";";";
                         key={featureIndex},"
       className="text-gray-300 flex items-center";"
                       >""
@@ -167,7 +167,7 @@ import { Helmet } from 'react-helmet-async',
                       plan.popular","
         "
                         ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600";"
-                        : "border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10";
+                        : "border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10";";";";
                     }`};"
                   >","
         "
@@ -193,7 +193,7 @@ import { Helmet } from 'react-helmet-async',
         "
               {testimonials.map((testimonial, index) => (",)}"
         "
-                <div"">
+                <div"">";";";
                   key={index},"
       className="bg-white/10 backdrop-blur-sm rounded-lg p-6";"
                 >""
@@ -201,7 +201,7 @@ import { Helmet } from 'react-helmet-async',
         "
                     {[...Array(testimonial.rating)].map(( i) => (",)}"
         "
-                      <Star"">
+                      <Star"">";";";
                         key={i},"
       className="w-5 h-5 text-yellow-400 fill-current" />","
         "
@@ -244,7 +244,7 @@ import { Helmet } from 'react-helmet-async',
               Contact us to learn more about our AI email solutions and how we""
               can help your business communicate more effectively.""
             </p>""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">""
               <"">"
                 to="/contact";"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25";"
@@ -263,76 +263,75 @@ import { Helmet } from 'react-helmet-async',
       </div>""
     </>""
 export default function AiEmailAssistantPage() {
-  
-  return (
-    <>
-      <Helmet>
+  return (";
+    <>;";";
+      <Helmet>";";";
         <title>AI Email Assistant - Zion Tech Group</title>"
-        <meta name ="description"";"
-          content="Transform your email management with AI-powered automation, smart classification, and intelligent responses."";
-        />
+        <meta name ="description"";",";
+          content="Transform your email management with AI-powered automation, smart classification, and intelligent responses."";";";
+        />";";";
       </Helmet>"
-      <div className ="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">";
-        {/* Hero Section */
+      <div className ="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">";";";
+        {/* Hero Section */";";";
 }"
           <div className ="text-center mb-16">";"
             <h1 className ="text-5xl font-bold text-white mb-6">";"
-              AI Email <span className ="text-blue-600">Assistant</$1>
+              AI Email <span className ="text-blue-600">Assistant</$1>";";";
             </h1>"
             <p className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";
-              Transform your email management with AI-powered automation, smart
-              classification, and intelligent responses that boost productivity
-              and improve communication.
+              Transform your email management with AI-powered automation, smart";
+              classification, and intelligent responses that boost productivity";";
+              and improve communication.";";";
             </p>"
             <div className ="flex flex-col sm: flex-row gap-4 justify-center">";"
               <Link to ="/contact"";"
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"";
-              >
-                Get Started
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"";";
+              >";";
+                Get Started";";";
               </Link>"
               <Link to ="/demo"";"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"",
               >
                 View Demo
               </Link>
-            </div>
-          </div>
-        </div>
+            </div>";
+          </div>";";
+        </div>";";";
         {/* Features Section */}"
         <div className ="container mx-auto px-4 py-16">";"
           <div className ="text-center mb-12">";"
             <h2 className ="text-3xl font-bold text-white mb-4">Key Features</$1>"
-            <p className ="text-gray-300 max-w-2xl mx-auto">";
-              Our AI Email Assistant provides comprehensive email management solutions
-            </p>
+            <p className ="text-gray-300 max-w-2xl mx-auto">";";
+              Our AI Email Assistant provides comprehensive email management solutions";";
+            </p>";";";
           </div>"
           <div className ="grid md: grid-cols-2 lg:grid-cols-3 gap-8">";"
             <div className ="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">";"
               <h3 className ="text-xl font-semibold text-white mb-3">Smart Classification</$1>"
-              <p className ="text-gray-300">",
-                Automatically categorize emails by priority, sender, and content type
-              </p>
+              <p className ="text-gray-300">",";
+                Automatically categorize emails by priority, sender, and content type";";
+              </p>";";";
             </div>"
             <div className ="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">";"
               <h3 className ="text-xl font-semibold text-white mb-3">Auto-Responses</$1>"
-              <p className ="text-gray-300">";
-                Generate intelligent responses based on email content and context
-              </p>
+              <p className ="text-gray-300">";";
+                Generate intelligent responses based on email content and context";";
+              </p>";";";
             </div>"
             <div className ="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">";"
               <h3 className ="text-xl font-semibold text-white mb-3">Email Analytics</$1>"
               <p className ="text-gray-300">";
                 Track email performance and communication patterns
               </p>
-            </div>
-          </div>
-        </div>
+            </div>";
+          </div>";";
+        </div>";";";
         {/* CTA Section */}"
         <div className ="container mx-auto px-4 py-16">";"
           <div className ="text-center">";"
             <h2 className ="text-3xl font-bold text-white mb-4">Ready to Transform Your Email Management?</$1>"
-            <p className ="text-gray-300 mb-8 max-w-2xl mx-auto">";
-              Join thousands of professionals who have revolutionized their email workflow
+            <p className ="text-gray-300 mb-8 max-w-2xl mx-auto">";";";
+              Join thousands of professionals who have revolutionized their email workflow";";";
             </p>"
             <Link to ="/contact"";"
               className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"";
@@ -342,7 +341,7 @@ export default function AiEmailAssistantPage() {
           </div>
         </div>
       </div>
-    </>
-  ),
-}
+    </>";
+  ),";";
+}";";";
 "

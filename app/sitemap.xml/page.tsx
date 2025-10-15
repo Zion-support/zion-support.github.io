@@ -1,10 +1,10 @@
-import React from 'react';';
-import SEOHead from './components/SEOHead';
-import SEOHead from '../components/SEOHead';
-const PagePage: React.FC  =  () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";";";";
+import SEOHead from '../components/SEOHead";
+const PagePage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
         title="page - Zion Tech Group"
         description="Zion Tech Group page service page"
       />"
@@ -20,9 +20,9 @@ const PagePage: React.FC  =  () => {}
     {};
 export default PagePage;
 
-const SitemapXmlPage: React.FC  =  () => {
-  return (;
-    <>;
+const SitemapXmlPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Sitemap.xml - Zion Tech Group"";"
         description="Professional sitemap.xml solutions for modern businesses";"
@@ -33,9 +33,9 @@ const SitemapXmlPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default SitemapXmlPage;'";'";
+export default SitemapXmlPage;'";'";";";";
 "

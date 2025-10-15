@@ -1,5 +1,5 @@
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";";";";
 import {"}"
         "
   PhoneIcon,","
@@ -12,7 +12,7 @@ import {"}"
         "
   Icon","
         "
-} from '@heroicons/react/24/outline',;
+} from '@heroicons/react/24/outline",;";";";
       import {Twitter, edin, Github} from 'lucide-react';"
 ","
         "
@@ -34,9 +34,9 @@ const Footer: React.FC  =  () => {"}"
     { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },","
         "
     { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },","
-        ";
-    { name: 'IT Solutions', href: '/it-solutions' };
-  ];
+        ";";";";
+    { name: 'IT Solutions', href: '/it-solutions" };";";
+  ];";";";
 ,"
       const company  =  [","
         "
@@ -51,9 +51,9 @@ const Footer: React.FC  =  () => {"}"
     { name: 'News & Updates', href: '/blog' },","
         "
     { name: 'Partnerships', href: '/partnerships' },","
-        ";
-    { name: 'Contact Us', href: '/contact' };
-  ];
+        ";";";";
+    { name: 'Contact Us', href: '/contact" };";";
+  ];";";";
 ,"
       const resources  =  [","
         "
@@ -66,9 +66,9 @@ const Footer: React.FC  =  () => {"}"
     { name: 'API Reference', href: '/api-docs' },","
         "
     { name: 'Help Center', href: '/help' },","
-        ";
-    { name: 'Community', href: '/community' };
-  ];
+        ";";";";
+    { name: 'Community', href: '/community" };";";
+  ];";";";
 ,"
       const support  =  [","
         "
@@ -81,26 +81,26 @@ const Footer: React.FC  =  () => {"}"
     { name: 'Schedule Demo', href: '/demo' },","
         "
     { name: 'System Status', href: '/status' },","
-        ";
-    { name: 'Report Issue', href: '/report' };
-  ];
+        ";";";";
+    { name: 'Report Issue', href: '/report" };";";
+  ];";";";
 ,"
       const legal  =  [","
         "
     { name: 'Privacy Policy', href: '/privacy' },","
-        ";
-    { name: 'Terms of Service', href: '/terms' };
-  ];
+        ";";";";
+    { name: 'Terms of Service', href: '/terms" };";";
+  ];";";";
 ,"
       const socialLinks  =  [","
         "
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: 'facebook' },","
         "
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter' },","
-        ";
+        ";";";";
     { name: 'edIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin' },";"
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github' };
-  ];
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github" };";";
+  ];";";";
 ,"
       return (<footer className="bg-slate-900 border-t border-slate-700">";")"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">";"
@@ -310,8 +310,8 @@ const Footer: React.FC  =  () => {"}"
         "
             {legal.map((item) => (",)}"
         "
-              <";">
-                key={item.name},
+              <";">";";
+                key={item.name},";";";
       to={item.href},"
       className="text-gray-400 hover:text-white text-sm transition-colors";"
               >","
@@ -339,9 +339,9 @@ const Footer: React.FC  =  () => {"}"
         "
   )
 
-const ComponentsPage: React.FC  =  () => {
-  return (;
-    <>;
+const ComponentsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Components - Zion Tech Group"";"
         description="Professional components solutions for modern businesses";"
@@ -352,9 +352,9 @@ const ComponentsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ComponentsPage;'";'";
+export default ComponentsPage;'";'";";";";
 "

@@ -1,5 +1,5 @@
-'use client',
-      import { Helmet } from 'react-helmet-async',
+'use client",";";";
+      import { Helmet } from 'react-helmet-async",
       import {},
       Server,
       Cloud,
@@ -22,17 +22,17 @@
       FileText,
       MessageSquare,
       ShoppingCart,
-      Search,
-      Target,
-      Workflow;
-} from 'lucide-react';
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+      Search,";
+      Target,";";
+      Workflow;";";";
+} from 'lucide-react";";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
 const ItServicesPage: React.FC  =  () => {
-  return (;
-    <>;
-      <SEOHead;
+  return (;";
+    <>;";";
+      <SEOHead;";";";
         title="It Services - Zion Tech Group"";"
         description="Professional it services solutions for modern businesses";"
       />";"
@@ -42,9 +42,9 @@ const ItServicesPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ItServicesPage;'";'";
+export default ItServicesPage;'";'";";";";
 "

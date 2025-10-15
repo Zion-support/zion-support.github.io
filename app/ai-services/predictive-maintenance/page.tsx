@@ -1,15 +1,15 @@
-import SEOHead from '../components/SEOHead';
-const PagePage: React.FC  =  () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
+import SEOHead from '../components/SEOHead";
+const PagePage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
         title="page - Zion Tech Group"
         description="Zion Tech Group page service page"
-const PredictiveMaintenancePage: React.FC = () => {
-  return (
-    <>";
+const PredictiveMaintenancePage: React.FC = () => {";";
+  return (";";";
+    <>";";";";
       <SEOHead title ="predictive-maintenance - Zion Tech Group - Zion Tech Group"";"
-        description="Zion Tech Group predictive-maintenance service page"";
+        description="Zion Tech Group predictive-maintenance service page"";";";";
       />"
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
         <div className ="text-center">";"
@@ -18,10 +18,10 @@ const PredictiveMaintenancePage: React.FC = () => {
         </div>
       </div>
     </>
-  )
-    },
-    {}
-export default PagePage;
   ),
-};
+    },
+    {};
+export default PagePage;";
+  ),";";
+};";";";
 "

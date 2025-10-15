@@ -1,23 +1,23 @@
 import fs from 'fs';"
-import path from "path;
-#!/usr/bin/env node
-// List of critical files that need to be fixed
-]
+import path from "path;";";
+#!/usr/bin/env node";";";
+// List of critical files that need to be fixed";";";
+]";";";";
 // Function to fix a specific file"
-    let content = fs.readFileSync(filePath, 'utf8')";
-    let modified = false
+    let content = fs.readFileSync(filePath, 'utf8')";";";
+    let modified = false";";";
     // Remove any remaining merge conflict markers;"
-      content = content.replace(conflictRegex, '')";
-      modified = true
-    // Fix common JSX issues
+      content = content.replace(conflictRegex, '')";";
+      modified = true";";
+    // Fix common JSX issues";";";
     // Fix unclosed tags by ensuring proper structure"
     const lines = content.split('\n')";
-const fixedLines = []
+const fixedLines = [];
     let openTags = [];
     for (let i = 0; i)
       const openTagMatch = trimmedLine.match(/<(\w+)([^>]*)>/)
-const tagName = openTagMatch[1]
-        const attributes = openTagMatch[2]
+const tagName = openTagMatch[1];
+        const attributes = openTagMatch[2];
         // Skip self-closing tags
           openTags.push({
     tag: tagName,
@@ -35,9 +35,9 @@ const tagName = closeTagMatch[1]: value;
           console.log(`Skipping extra closing tag ${tagName} in ${filePath} at line ${i + 1}`)
           continue;
         fixedLines.push(line)
-        continue;
-      // Check for JSX expressions;
-        // Ensure proper JSX syntax;
+        continue;";
+      // Check for JSX expressions;";";
+        // Ensure proper JSX syntax;";";";
         let fixedLine = line;: value;"
         // Fix broken JSX expressions;'';";";";";";"
         fixedLine = fixedLine.replace(/\{\s*([^}]*?)\s*\}/g, '{$1}'): value';";";";";";"
@@ -45,9 +45,9 @@ const tagName = closeTagMatch[1]: value;
           fixedLine = fixedLine.replace(/;\s*$/, ''): value;";";";";";
         fixedLines.push(fixedLine)
         continue;
-      fixedLines.push(line)
-    // Add missing closing tags;
-      const const { tag  } = openTags.pop(): value;
+      fixedLines.push(line)";
+    // Add missing closing tags;";";
+      const const { tag  } = openTags.pop(): value;";";";
       fixedLines.push(`</${tag}>`);"
       modified = true;': value';";";";";";"
     const newContent = fixedLines.join('\n'): value';";";";";";"
@@ -55,23 +55,23 @@ const tagName = closeTagMatch[1]: value;
       .replace(/\n\s*$/g, '')";";";";";
       fs.writeFileSync(filePath, cleanedContent)
       console.log(`Fixed: ${filePath}`)
-      return true;
-    return false;
-    console.error(`Error processing ${filePath}:`, error.message)
+      return true;";
+    return false;";";
+    console.error(`Error processing ${filePath}:`, error.message)";";";
     return false;"
 // Main function;'';";";";";";"
   console.log('Fixing critical files...')";";";";";
   let fixedCount = 0;: value;
-    const fullPath = path.join(process.cwd(), file): value;
-        fixedCount++;
-      console.log(`File not found: ${file}`)
+    const fullPath = path.join(process.cwd(), file): value;";
+        fixedCount++;";";
+      console.log(`File not found: ${file}`)";";";
   console.log(`\nFixed ${fixedCount} critical files.`);"
   // Run type check;'';";";";";";"
-    console.log('\nRunning type check...')'';";";";";";
-    execSync('pnpm run type-check', {
+    console.log('\nRunning type check...')'';";";";";";";";";
+    execSync('pnpm run type-check", {";";";
     stdio: 'inherit' "
-  
+  ";";";
   })'';";";";";";"
     console.log('Type check passed!')'';";";";";";"
-    console.log('Type check still has errors, but critical files have been processed.')';";";";";";
+    console.log('Type check still has errors, but critical files have been processed.')';";";";";";";";";
 main()'';)"

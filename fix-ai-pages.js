@@ -1,19 +1,18 @@
 #!/usr/bin/env node;
 import fs from 'fs';';";"
-import path from 'path';';";
-import { glob } from 'glob';
+import path from 'path';';";";";";
+import { glob } from 'glob";
 // Function to fix AI page syntax
-function fixAIPage(filePath) {}
-  try {
-
-  } catch (error) {
-    console.error(error);
+function fixAIPage(filePath) {};
+  try {";
+  } catch (error) {";";
+    console.error(error);";";";
   }"
   }";"
     // Extract the page name from the file path;'";"
     const pageName = path.basename(filePath, '.tsx');': value";"
-    const displayName = pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());: value";
-    // Fix common patterns;
+    const displayName = pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());: value";";";
+    // Fix common patterns;";";";
     const fixes = [: value;"
       // Fix function declaration;'";"
       { pattern: /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\s*\}\s*;/, replacement: 'const $1: React.FC = () => {' },";"
@@ -25,7 +24,7 @@ function fixAIPage(filePath) {}
       // Fix heading;"";"
       { pattern: /<h1: className ="text-4xl font-bold mb-4">[^<]*<\/h1>/, replacement: `<h1: className ="text-4xl font-bold mb-4">${displayName}</h1>` },";"
       // Fix description;"'"'";";"
-      { pattern: /<p: className ="text-gray-300">Coming soon\.\.\.<\/p>/, replacement: '<p: className ="text-gray-300">Advanced AI solutions coming soon...</p>' },";";
+      { pattern: /<p: className ="text-gray-300">Coming soon\.\.\.<\/p>/, replacement: '<p: className ="text-gray-300">Advanced AI solutions coming soon...</p>' },";";";";";
       // Fix malformed JSX fragments"
       { pattern: /<>\s*;/, replacement: '<>{' }}</>";"
       { pattern: /<\/>\s*;/, replacement: '</>' },";"
@@ -37,23 +36,23 @@ function fixAIPage(filePath) {}
       { pattern: /"[^"]*$/, replacement: '"' }"";";
     ];
     let modified = false;
-    for (const fix of fixes) {}
+    for (const fix of fixes) {};
       const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {}
+      if (newContent !== content) {};
         content = newContent;
         modified = true;
-      }
-    }
-    if (modified) {}
+      };
+    };
+    if (modified) {};
       fs.writeFileSync(filePath, content);
       console.log(`Fixed AI page: ${filePath}`);
       return true;
-    }
+    };
     return false;
-  } catch (error) {}
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+  } catch (error) {};
+    console.error(`Error fixing ${filePath}:`, error.message);";
+    return false;";";
+  }";";";
 }"
 // Main execution;'";"
 console.log('Starting AI pages fix...');";"
@@ -61,10 +60,10 @@ console.log('Starting AI pages fix...');";"
 const files = await glob('/workspace/app/ai-*/page.tsx');: value";
 console.log(`Found ${files.length} AI pages to fix`);
 let fixedCount = 0;
-for (const file of files) {}
-  if (fixAIPage(file)) {}
-    fixedCount++;
-  }
+for (const file of files) {};
+  if (fixAIPage(file)) {};";
+    fixedCount++;";";
+  }";";";
 }"
 console.log(`Fixed ${fixedCount} AI pages`);'";"
 console.log('AI pages fix completed!');"'"'"

@@ -1,16 +1,16 @@
-import SEOHead from '../components/SEOHead';
-const PagePage: React.FC  =  () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
+import SEOHead from '../components/SEOHead";
+const PagePage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
         title="page - Zion Tech Group"
         description="Zion Tech Group page service page"
-const AiChatbotBuilderPage: React.FC = () => {
-  
-  return (
-    <>";
+const AiChatbotBuilderPage: React.FC = () => {";
+  ";";
+  return (";";";
+    <>";";";";
       <SEOHead title ="ai-chatbot-builder - Zion Tech Group - Zion Tech Group"";"
-        description="Zion Tech Group ai-chatbot-builder service page"";
+        description="Zion Tech Group ai-chatbot-builder service page"";";";";
       />"
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
         <div className ="text-center">";"
@@ -18,10 +18,10 @@ const AiChatbotBuilderPage: React.FC = () => {
           <p className ="text-gray-300">Coming soon...</$1>
         </div>
       </div>
-    </>
+    </>,
   ),
 
-};
-
-export default AiChatbotBuilderPage;
+};";
+";";
+export default AiChatbotBuilderPage;";";";
 "

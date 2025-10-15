@@ -1,13 +1,13 @@
-import { Helmet } from "react-helmet-async;
-const ErrorboundaryconfigPage = () => {
-  
-};
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+import { Helmet } from "react-helmet-async;";";
+const ErrorboundaryconfigPage = () => {";";";
+  ";";";
+};";";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const ConfigPage: React.FC  =  () => {
-  return (;
-    <>;
+const ConfigPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Config - Zion Tech Group"";"
         description="Professional config solutions for modern businesses";"
@@ -18,8 +18,8 @@ const ConfigPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
 export default ConfigPage;'";'";"

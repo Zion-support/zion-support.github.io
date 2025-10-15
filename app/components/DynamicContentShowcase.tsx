@@ -1,4 +1,4 @@
-import React, { useState } from 'react',
+import React, { useState } from 'react",";";";
       import React, { useState, useEffect } from "react",
       interface ContentItem {},
       id: string,
@@ -8,15 +8,15 @@ import React, { useState } from 'react',
       category: string,
       featured?: boolean
     },
-    {}
+    {};
 interface DynamicContentShowcaseProps {},
-      items?: ContentItem[]
+      items?: ContentItem[];
   autoPlay?: boolean
   interval?: number
   className?: string
-},
-      const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps>  =  ({},)
-      items = [
+},";
+      const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps>  =  ({},)";";
+      items = [";";";
     {},"
       id: "1", title: "AI-Powered Solutions", _description:"
         "Transform your business with cutting-edge artificial intelligence technology.", _image: "/api/placeholder/400/300", _category: "AI Solutions", _featured: true, _}, _{},"
@@ -37,38 +37,36 @@ interface DynamicContentShowcaseProps {},
   
   ]),
       const goToPrevious = () => {
-  
 };
       setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length;
     )
     },
-    {}
-  const goToNext = () => {
-  
-};
-                    {currentItem.category};
+    {};
+  const goToNext = () => {";
+};";";
+                    {currentItem.category};";";";
                   </span>"
-                  <h2 className="text-3xl font-bold text-white mb-4"></h2>
-                    {currentItem.title};
+                  <h2 className="text-3xl font-bold text-white mb-4"></h2>";";
+                    {currentItem.title};";";";
                   </h2>"
-                  <p className="text-gray-300 text-lg"></p>
-                    {currentItem.description};
-                  </p>
+                  <p className="text-gray-300 text-lg"></p>";
+                    {currentItem.description};";";
+                  </p>";";";
                 </div>"
                 <div className="flex space-x-4"></div>"
-                  <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"></button>
-                    Learn More
+                  <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"></button>";";
+                    Learn More";";";
                   </button>"
                   <button className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button>
-                    Get Started
-                  </button>
-                </div>
+                    Get Started";
+                  </button>";";
+                </div>";";";
               </div>"
-              <div className="relative"></div>
-                <imgsrc={currentItem.image},>
+              <div className="relative"></div>";";
+                <imgsrc={currentItem.image},>";";";
       alt={currentItem.title},"
       className="w-full h-64 object-cover rounded-lg"
-                />
+                />";";";
                 {currentItem.featured && ()}"
                   <div className="absolute top-4 right-4 bg-yellow-500 text-yellow-900 px-2 py-1 rounded text-sm font-semibold"></div>
                     Featured
@@ -76,36 +74,36 @@ interface DynamicContentShowcaseProps {},
                 )};
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </div>";
+        </div>";";
+      </div>";";";
       {/* Controls */};"
       <div className="flex items-center justify-between mt-6"></div>"
-        <div className="flex space-x-2"></div>
+        <div className="flex space-x-2"></div>";";";
           <buttononClick={goToPrevious},>"
-      className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"></button
+      className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"></button";";";
 >"
-            <ChevronLeft className="w-5 h-5" />
-          </button>
+            <ChevronLeft className="w-5 h-5" />";";
+          </button>";";";
           <buttononClick={togglePlayPause},>"
-      className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"></button
->
+      className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"></button";";
+>";";";
             {isPlaying ? ()}"
-              <Pause className="w-5 h-5" />
+              <Pause className="w-5 h-5" />";";";
             ) : ()"
-              <Play className="w-5 h-5" />
-            )};
-          </button>
+              <Play className="w-5 h-5" />";
+            )};";";
+          </button>";";";
           <buttononClick={goToNext},>"
-      className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"></button
+      className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"></button";";";
 >"
-            <ChevronRight className="w-5 h-5" />
-          </button>
-        </div>
+            <ChevronRight className="w-5 h-5" />";
+          </button>";";
+        </div>";";";
         {/* Dots indicator */};"
-        <div className="flex space-x-2"></div>
-          {items.map(( index) => (<buttonkey={index},>)
-      onClick={() => goToSlide(index)},
+        <div className="flex space-x-2"></div>";
+          {items.map(( index) => (<buttonkey={index},>)";";
+      onClick={() => goToSlide(index)},";";";
       className={`w-3 h-3 rounded-full transition-colors ${},"
       index === currentIndex ? "bg-cyan-500" : "bg-gray-600"
               }`} />
@@ -113,15 +111,15 @@ interface DynamicContentShowcaseProps {},
         </div>
       </div>
     </div>
-  )
-},
-      export default DynamicContentShowcase
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+  )";
+},";";
+      export default DynamicContentShowcase";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const ComponentsPage: React.FC  =  () => {
-  return (;
-    <>;
+const ComponentsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Components - Zion Tech Group"";"
         description="Professional components solutions for modern businesses";"
@@ -132,9 +130,9 @@ const ComponentsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ComponentsPage;'";'";
+export default ComponentsPage;'";'";";";";
 "

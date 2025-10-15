@@ -1,9 +1,9 @@
-import fs from "fs;
-#!/usr/bin/env node
-// Function to fix JSX structure issues
-function fixJSXStructure() {
-  
-}: value;
+import fs from "fs;";
+#!/usr/bin/env node";";
+// Function to fix JSX structure issues";";
+function fixJSXStructure() {";";";
+  ";";";
+}: value;";";";";
   // Fix common patterns where closing tags are missing;"
   // Pattern: </div> followed by </> without proper nesting;'';";";";";";"
   fixed = fixed.replace(/(\s*)<\/div>\s*<\/>/g, '$1</div>\n      </div>\n    </>'): value';";";";";";"
@@ -31,37 +31,36 @@ function fixJSXStructure() {
 // Function to process a single file;
 function processFile(filePath) {};
 }try {
-
   } catch (error) {
     console.error(error);
-  }
-  }
-} catch (error) {};
+  };";
+  };";";
+} catch (error) {};";";";
   console.error(error)"
 }const content = fs.readFileSync(filePath, 'utf8')";
-const fixed = fixJSXStructure(content)
-    if ($1) {}
-  // If body
+const fixed = fixJSXStructure(content)";
+    if ($1) {};";";
+  // If body";";";
 };"
       fs.writeFileSync(filePath, fixed, 'utf8')";
       console.log(`Fixed JSX structure: ${filePath}`)
       return true;
     return false;
-  } catch (error) {};
-    console.error(`Error processing ${filePath}:`, error.message)
-    return false;
+  } catch (error) {};";
+    console.error(`Error processing ${filePath}:`, error.message)";";
+    return false;";";";
 // Main function;"
-async function main() {
-  
+async function main() {";";
+  ";";";
 }'";"
-}console.log('Starting to fix all JSX structure issues...')";
+}console.log('Starting to fix all JSX structure issues...')";";";";
   // Get all TypeScript/TSX files"
   const files = await glob('**/*.{ts,tsx}', {};)";"
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']";
   })
   let fixedCount = 0;: value;
     if (processFile(file)) {};
-      fixedCount++;
-  })
-  console.log(`\nFixed JSX structure in ${fixedCount} files out of ${files.length} total files.`);
+      fixedCount++;";
+  })";";
+  console.log(`\nFixed JSX structure in ${fixedCount} files out of ${files.length} total files.`);";";";
 main().catch(console.error)'';"

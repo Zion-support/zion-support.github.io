@@ -1,5 +1,5 @@
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";";";";
 const ServicesPage: React.FC  =  () => {"}"
         "
   const serviceCategories = [","
@@ -25,8 +25,8 @@ const ServicesPage: React.FC  =  () => {"}"
         { name: 'Computer Vision', price: '$1,800/month', description: 'Image and video analysis solutions for object detection and recognition', features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition'] },","
         "
         { name: 'AI Automation', price: '$1,400/month', description: 'Intelligent process automation with decision-making capabilities', features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'] },","
-        ";
-        { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support', features: ['24/7 Support', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard'] };
+        ";";";";
+        { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support', features: ['24/7 Support', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard"] };";";";
       ]"
     },","
         "
@@ -48,7 +48,7 @@ const ServicesPage: React.FC  =  () => {"}"
         "
         { name: 'Identity & Access Management', price: '$1,500/month', description: 'Secure user authentication and authorization systems', features: ['Single Sign-On', 'Multi-Factor Auth', 'User Provisioning', 'Access Control'] },","
         "
-        { name: 'Data Protection', price: '$1,800/month', description: 'Comprehensive data encryption and backup solutions', features: ['Data Encryption', 'Backup Solutions', 'Data Recovery', 'Privacy Compliance'] };
+        { name: 'Data Protection', price: '$1,800/month', description: 'Comprehensive data encryption and backup solutions', features: ['Data Encryption', 'Backup Solutions', 'Data Recovery', 'Privacy Compliance"] };";";";
       ]"
     },","
         "
@@ -70,7 +70,7 @@ const ServicesPage: React.FC  =  () => {"}"
         "
         { name: 'DevOps & CI/CD', price: '$2,000/month', description: 'Automated deployment and continuous integration pipelines', features: ['CI/CD Setup', 'Automated Testing', 'Deployment Automation', 'ing Setup'] },","
         "
-        { name: 'Cloud Management', price: '$1,500/month', description: 'Ongoing cloud infrastructure management and optimization', features: ['24/7 ing', 'Performance Tuning', 'Cost Management', 'Security Updates'] };
+        { name: 'Cloud Management', price: '$1,500/month', description: 'Ongoing cloud infrastructure management and optimization', features: ['24/7 ing', 'Performance Tuning', 'Cost Management', 'Security Updates"] };";";";
       ]"
     },","
         "
@@ -92,7 +92,7 @@ const ServicesPage: React.FC  =  () => {"}"
         "
         { name: 'Data Analytics', price: '$2,200/month', description: 'Advanced analytics and business intelligence solutions', features: ['Data Visualization', 'Predictive Analytics', 'Dashboard Development', 'Insight Generation'] },","
         "
-        { name: 'Mobile Solutions', price: '$1,600/month', description: 'Custom mobile applications and responsive web solutions', features: ['Mobile App Development', 'Responsive Design', 'Cross-Platform Solutions', 'Performance Optimization'] };
+        { name: 'Mobile Solutions', price: '$1,600/month', description: 'Custom mobile applications and responsive web solutions', features: ['Mobile App Development', 'Responsive Design', 'Cross-Platform Solutions', 'Performance Optimization"] };";";";
       ]"
     },","
         "
@@ -114,7 +114,7 @@ const ServicesPage: React.FC  =  () => {"}"
         "
         { name: 'API Development', price: '$1,500/month', description: 'RESTful and GraphQL API development and management', features: ['API Design', 'Documentation', 'Rate Limiting', 'Analytics'] },","
         "
-        { name: 'Integration Services', price: '$1,200/month', description: 'Third-party integrations and system connectivity', features: ['System Integration', 'Data Synchronization', 'API Connections', 'Error Handling'] };
+        { name: 'Integration Services', price: '$1,200/month', description: 'Third-party integrations and system connectivity', features: ['System Integration', 'Data Synchronization', 'API Connections', 'Error Handling"] };";";";
       ]"
     },","
         "
@@ -136,10 +136,10 @@ const ServicesPage: React.FC  =  () => {"}"
         "
         { name: 'Edge Computing', price: '$3,000/month', description: 'Edge computing solutions for ultra-low latency applications', features: ['Edge Infrastructure', 'Data Processing', 'Latency Optimization', 'Scalability'] },","
         "
-        { name: '5G Applications', price: '$2,200/month', description: 'Custom applications designed for 5G networks', features: ['App Development', '5G Optimization', 'Performance Tuning', 'User Experience'] };
-      ]
-    };
-  ];
+        { name: '5G Applications', price: '$2,200/month', description: 'Custom applications designed for 5G networks', features: ['App Development', '5G Optimization', 'Performance Tuning', 'User Experience"] };
+      ];";
+    };";";
+  ];";";";
 ,"
       const ServicesPage: React.FC  =  () => {ursor/analyze-improve-and-merge-code-4a9f"}"
         "
@@ -162,15 +162,14 @@ const ServicesPage: React.FC  =  () => {"}"
     </>","
         "
   )
-    },
-    {}
-,;
+    },";
+    {};";";
+,;";";";
       export default ServicesPage;"
-;"'"'
-const ServicesPage: React.FC = () => {
-  
-  return (
-    <>
+;"'""
+const ServicesPage: React.FC = () => {";
+  return (";";
+    <>";";";
       <SEOHead"
         title="Services - Zion Tech Group"
         description="Professional services solutions for modern businesses"
@@ -183,10 +182,10 @@ const ServicesPage: React.FC = () => {
       </div>
     </>;
   );
-
-};
-
-export default ServicesPage;
+,
+};";
+";";
+export default ServicesPage;";";";
 ;"
 const ServicesPage: React.FC = () => {","";"
         """;"
@@ -324,8 +323,8 @@ const ServicesPage: React.FC = () => {","";"
         ""''";"
         { name: 'Edge Computing', price: '$3,000/month', description: 'Edge computing solutions for ultra-low latency applications', features: ['Edge Infrastructure', 'Data Processing', 'Latency Optimization', 'Scalability'] },","'";"
         "'"'';";"
-        { name: '5G Applications', price: '$2,200/month', description: 'Custom applications designed for 5G networks', features: ['App Development', '5G Optimization', 'Performance Tuning', 'User Experience'] };";
-      ]
+        { name: '5G Applications', price: '$2,200/month', description: 'Custom applications designed for 5G networks', features: ['App Development', '5G Optimization', 'Performance Tuning', 'User Experience'] };";";";
+      ]";";";
     };"
   ];";"
 ,"";"
@@ -349,11 +348,11 @@ const ServicesPage: React.FC = () => {","";"
         """;"
     </>","";"
         ";
-  );
-    };
-{
+  );";
+    };";";
+{";";";
 ,;"
       export default ServicesPage;'";'";'"';";"
-'";'";
-}}
+'";'";";";
+}}";";";
 "

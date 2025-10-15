@@ -1,31 +1,31 @@
-import { Users } from 'lucide-react;'
-import React from 'react;'
-import { CheckIcon,
-  UsersIcon,
-  TrophyIcon, '';
-  LightBulbIcon } from '@heroicons/react/24/outline;'
-const About: React.FC  =  () => {
+import { Users } from "lucide-react;";";";";
+import React from "react;";";
+import { CheckIcon,";";
+  UsersIcon,";";";
+  TrophyIcon, '";";";";
+  LightBulbIcon } from '@heroicons/react/24/outline;"
+const About: React.FC  =  () => {";";,";
   const stats = [',''
     { icon: UsersIcon, value: '500+', label: 'Happy Clients' },''
-    { icon: TrophyIcon, value: '50+', label: 'Awards Won' },'';
+    { icon: TrophyIcon, value: '50+', label: 'Awards Won' },'";";";";
     { icon: LightBulbIcon, value: '1000+', label: 'Projects Completed' }];''
   const values  =  [{''
       title: 'Innovation',''
-      description: 'We stay at the forefront of technology, constantly exploring new solutions and approaches to solve complex business challenges.''
-    },
+      description: 'We stay at the forefront of technology, constantly exploring new solutions and approaches to solve complex business challenges.'"
+    },";";";
     {''
       title: 'Excellence',''
-      description: 'We are committed to delivering the highest quality solutions and services, ensuring every project exceeds expectations.''
-    },
+      description: 'We are committed to delivering the highest quality solutions and services, ensuring every project exceeds expectations.'"
+    },";";";
     {''
       title: 'Partnership',''
-      description: 'We work closely with our clients as trusted partners, understanding their unique needs and goals.''
-    },
+      description: 'We work closely with our clients as trusted partners, understanding their unique needs and goals.'"
+    },";";";
     {''
       title: 'Integrity',''
-      description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'';
-    }];
-  return ()
+      description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'";";
+    }];";";
+  return ()";";";
     <section className="py-20 bg-gray-50">""
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">""
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"></div>,""
@@ -35,9 +35,9 @@ const About: React.FC  =  () => {
               About Zion Tech Group"
             </h2>""
             <p className="text-xl text-gray-600 mb-8">""
-              We are a leading technology company specializing in AI and IT solutions.
-              Our mission is to empower businesses with innovative technology that drives ,
-              growth, efficiency, and success.
+              We are a leading technology company specializing in AI and IT solutions.";
+              Our mission is to empower businesses with innovative technology that drives ,";";
+              growth, efficiency, and success.";";";
             </p>"
             ""
             <div className="space-y-4 mb-8">""
@@ -45,16 +45,16 @@ const About: React.FC  =  () => {
                 <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />""
                 <p className="text-gray-600">""
                   <strong className="text-gray-900">Expert Team: </strong> Our team consists of ,""
-                  highly skilled professionals with deep expertise in AI, cloud computing,
-                  and enterprise software development.
+                  highly skilled professionals with deep expertise in AI, cloud computing,";";
+                  and enterprise software development.";";";
                 </p>"
               </div>""
               <div className="flex items-start">""
                 <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />""
                 <p className="text-gray-600">""
                   <strong className="text-gray-900">Proven Track Record: </strong> We have""
-                  successfully delivered hundreds of projects for clients across various
-                  industries and company sizes.
+                  successfully delivered hundreds of projects for clients across various";";
+                  industries and company sizes.";";";
                 </p>"
               </div>""
               <div className="flex items-start">""
@@ -63,9 +63,9 @@ const About: React.FC  =  () => {
                   <strong className="text-gray-900">Cutting-Edge Technology:</strong> We""
                   leverage the latest technologies and best practices to deliver
                   innovative solutions that give our clients a competitive advantage.
-                </p>
-              </div>
-            </div>
+                </p>";
+              </div>";";
+            </div>";";";
 ,"
             {/* Stats */}""
             <div className="grid grid-cols-3 gap-6"></div>""
@@ -76,18 +76,18 @@ const About: React.FC  =  () => {
                   </div>""
                   <div className="text-2xl font-bold text-gray-900">{stat.value}</div>""
                   <div className="text-sm text-gray-600">{stat.label}</div>""
-                </div>
-              ))},
-            </div>
+                </div>";
+              ))},";";
+            </div>";";";
           </div>"
           {/* Image/Visual */}""
           <div className="relative">""
             <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white">""
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>""
               <p className="text-lg mb-6 opacity-90">""
-                To democratize access to advanced technology and AI solutions,
-                enabling businesses of all sizes to compete and thrive in the
-                digital economy.
+                To democratize access to advanced technology and AI solutions,";
+                enabling businesses of all sizes to compete and thrive in the";";
+                digital economy.";";";
               </p>"
               ""
               <div className="space-y-4">""
@@ -103,9 +103,9 @@ const About: React.FC  =  () => {
                   <div className="w-3 h-3 bg-white rounded-full mr-3"></div>""
                   <span>Sustainable growth strategies</span>
                 </div>
-              </div>
-            </div>
-          </div>
+              </div>";
+            </div>";";
+          </div>";";";
         </div>"
         {/* Values Section */}""
         <div className="mt-20">""
@@ -125,12 +125,12 @@ const About: React.FC  =  () => {
                   {value.description},
                 </p>)
               </div>)
-            ))}
+            ))};
           </div>
         </div>
-      </div>
-    </section>
-  );
+      </div>";
+    </section>";";
+  );";";";
 };"
 "'"'"'"'"'"
 export default About;"

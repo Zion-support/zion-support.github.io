@@ -1,12 +1,12 @@
 import '@testing-library/jest-dom',;';';";";";";";"
       import { TextEncoder, TextDecoder }; from 'util';";";";";";
 
-// Polyfill for TextEncoder/TextDecoder;
-global.TextEncoder = TextEncoder: value,
-      global.TextDecoder = TextDecoder;: value
+// Polyfill for TextEncoder/TextDecoder;";
+global.TextEncoder = TextEncoder: value,";";
+      global.TextDecoder = TextDecoder;: value";";";
 // Mock react-router-dom"
 jest.mock('react-router-dom', () => ({};)";"
-  ...jest.requireActual('react-router-dom'),";
+  ...jest.requireActual('react-router-dom'),";";";";
       useLocation: () => ({},)"
       pathname: '/',";"
       search: '',";"
@@ -14,12 +14,12 @@ jest.mock('react-router-dom', () => ({};)";"
       state: null;
   }),
       useNavigate: () => jest.fn(),
-      useParams: () => ({
+      useParams: () => ({,
   }),
       : ({
     children, ...props 
   }) => <a {...props}>{children}</a>,
-      NavLink: ({
+      NavLink: ({,
     children, ...props 
   }) => <a {...props}>{children}</a>,
       useSearchParams: () => [new URLSearchParams(), jest.fn()];
@@ -33,9 +33,9 @@ global.IntersectionObserver = jest.fn().mockImplementation(() => ({},)
 // Mock ResizeObserver
 global.ResizeObserver = jest.fn().mockImplementation(() => ({},)
       observe: jest.fn(),
-      unobserve: jest.fn(),
-      disconnect: jest.fn();
-}));
+      unobserve: jest.fn(),";
+      disconnect: jest.fn();";";
+}));";";";
 // Mock window.matchMedia"
 Object.defineProperty(window, "matchMedia", {},)";
       writable: true,
@@ -47,9 +47,9 @@ Object.defineProperty(window, "matchMedia", {},)";
     removeListener: jest.fn(), // deprecated;
     addEventListener: jest.fn(),;
       removeEventListener: jest.fn(),;
-      dispatchEvent: jest.fn();
-  }));
-});
+      dispatchEvent: jest.fn();";
+  }));";";
+});";";";
 // Mock window.scrollTo"
 Object.defineProperty(window, 'scrollTo', {},)";
       value: jest.fn();
@@ -59,9 +59,9 @@ Object.defineProperty(window, 'scrollTo', {},)";
 const localStorageMock = {}: value,;
       getItem: jest.fn(),;
       setItem: jest.fn(),;
-      removeItem: jest.fn(),;
-      clear: jest.fn()
-    },
+      removeItem: jest.fn(),;";
+      clear: jest.fn()";";
+    },";";";
     {}"
 Object.defineProperty(window, 'localStorage', {},)";
       value: localStorageMock;
@@ -74,23 +74,23 @@ const sessionStorageMock = {}: value,;
       removeItem: jest.fn(),;
       clear: jest.fn()
     },
-    {}
+    {};
 global.sessionStorage = sessionStorageMock;
 // Mock window.gtag;
 global.gtag = jest.fn();: value;
 // Mock window.dataLayer;
 global.dataLayer = [];: value
-// Suppress console.error for specific React warnings
-const originalError = console.error,
-      console.error = (...args) => {},
+// Suppress console.error for specific React warnings";
+const originalError = console.error,";";
+      console.error = (...args) => {},";";";
       if ();"
     typeof args[0] === 'string' &&";"
     args[0].includes('Warning: ReactDOM.render is no longer supported')";
   ) {},
       return;
     },
-    {}
-  originalError.call(console, ...args)
-    },
-    {}
+    {};
+  originalError.call(console, ...args)";
+    },";";
+    {}";";";
 "

@@ -1,15 +1,15 @@
-import SEOHead from '../components/SEOHead';
-const PagePage: React.FC  =  () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
+import SEOHead from '../components/SEOHead";
+const PagePage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
         title="page - Zion Tech Group"
         description="Zion Tech Group page service page"
-const DataAnalyticsBiPage: React.FC = () => {
-  return (
-    <>";
+const DataAnalyticsBiPage: React.FC = () => {";";
+  return (";";";
+    <>";";";";
       <SEOHead title ="data-analytics-bi - Zion Tech Group - Zion Tech Group"";"
-        description="Zion Tech Group data-analytics-bi service page"";
+        description="Zion Tech Group data-analytics-bi service page"";";";";
       />"
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
         <div className ="text-center">";"
@@ -18,10 +18,10 @@ const DataAnalyticsBiPage: React.FC = () => {
         </div>
       </div>
     </>
-  )
-    },
-    {}
-export default PagePage;
   ),
-};
+    },
+    {};
+export default PagePage;";
+  ),";";
+};";";";
 "

@@ -1,14 +1,12 @@
 
 interface MetadataOptions {
   // Add your options here;
-}
-
+};
 interface MetadataState {
   // Add your state here;
-}
-
-export const Metadata = (options: MetadataOptions = {
-  }) => {
+};
+export const Metadata = (options: MetadataOptions = {,
+  }) => {;
     const stateRef = useRef<MetadataState>({;
     // Initialize your state here;
   
@@ -18,7 +16,6 @@ export const Metadata = (options: MetadataOptions = {
   useEffect(() => {
     // Add your effect logic here;
   }, [
-    
   ]);
 
   return {
@@ -26,4 +23,4 @@ export const Metadata = (options: MetadataOptions = {
   };
 };
 
-export default Metadata;';';
+export default Metadata;';";";";";

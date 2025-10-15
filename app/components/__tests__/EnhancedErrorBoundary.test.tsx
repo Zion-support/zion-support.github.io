@@ -1,11 +1,10 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-const __tests__Page: React.FC = () => {
-  
-  return (
-    <>;
+import React from 'react";";";";
+import SEOHead from '../components/SEOHead";
+const __tests__Page: React.FC = () => {";
+  return (";";
+    <>;";";";
       <SEOHead: title ="__tests__ - Zion Tech Group"";"
-        description="Professional __tests__ solutions for modern businesses"";
+        description="Professional __tests__ solutions for modern businesses"";";";";
       />"
       <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
         <div: className ="text-center">";"
@@ -15,8 +14,8 @@ const __tests__Page: React.FC = () => {
       </div>
     </>
   );
-
-};
-
-export default __tests__Page;
+,
+};";
+";";
+export default __tests__Page;";";";
 "

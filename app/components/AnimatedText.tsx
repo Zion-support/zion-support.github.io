@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import React, { useState, useEffect } from "react;
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+import React, { useState } from 'react";";";";
+import React, { useState, useEffect } from "react;";";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const ComponentsPage: React.FC  =  () => {
-  return (;
-    <>;
+const ComponentsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Components - Zion Tech Group"";"
         description="Professional components solutions for modern businesses";"
@@ -16,17 +16,17 @@ const ComponentsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 const AnimatedText: React.FC<AnimatedTextProps> = ({};)"
   text, className = "", delay = 0, speed = 100}) => {};"
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {};
-    if ($1) {}
+    if ($1) {};
   // If body
-}
+};
       const timeout = setTimeout(() => {};
         setDisplayedText((prev) => prev + text[
     currentIndex
@@ -41,9 +41,9 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({};)"
     currentIndex, text, delay, speed
   
   ])
-  return <span className={className}>{displayedText}</span>
-},
-      export default AnimatedText
+  return <span className={className}>{displayedText}</span>";
+},";";
+      export default AnimatedText";";";
 ;"
-export default ComponentsPage;'";'";
+export default ComponentsPage;'";'";";";";
 "

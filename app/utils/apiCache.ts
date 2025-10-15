@@ -1,14 +1,12 @@
 
 interface ApiCacheOptions {
   // Add your options here;
-}
-
+};
 interface ApiCacheState {
   // Add your state here;
-}
-
-export const ApiCache = (options: ApiCacheOptions = {
-  }) => {
+};
+export const ApiCache = (options: ApiCacheOptions = {,
+  }) => {;
     const stateRef = useRef<ApiCacheState>({;
     // Initialize your state here;
   
@@ -18,7 +16,6 @@ export const ApiCache = (options: ApiCacheOptions = {
   useEffect(() => {
     // Add your effect logic here;
   }, [
-    
   ]);
 
   return {
@@ -26,5 +23,5 @@ export const ApiCache = (options: ApiCacheOptions = {
   };
 };
 
-export default ApiCache;';';";
+export default ApiCache;';';";";";";
 "

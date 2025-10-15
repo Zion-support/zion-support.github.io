@@ -1,10 +1,10 @@
 import React from "react;""
 import { Helmet } from "react-helmet-async;""
-const StructuredDataPage = () => {
-  
+const StructuredDataPage = () => {";";
+  ";";";
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
-      <Helmet>
+      <Helmet>";";";
         <title>StructuredData - Zion Tech Group</title>"
         <meta name="description" content="StructuredData - Zion Tech Group" />""
       </Helmet>"
@@ -14,11 +14,11 @@ const StructuredDataPage = () => {
           <p className="text-gray-300 text-lg">""
             This page is under construction. Please check back later.
           </p>
-        </div>
-      </div>
-    </div>;
-  )';''
-
-};
-export default structureddata
+        </div>";
+      </div>";";
+    </div>;";";";
+  )';'"
+";
+};";";
+export default structureddata";";";
 "

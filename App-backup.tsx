@@ -1,17 +1,17 @@
-import React, { lazy } from 'react',;
-      import { HelmetProvider } from 'react-helmet-async';
-// Components
-import Navigation from './app/components/Navigation';
-    import Sidebar from './app/components/Sidebar';
-    import Footer from './app/components/Footer';
-    import ErrorBoundary from './app/components/ErrorBoundary';
-    import LightweightErrorBoundary from './app/components/LightweightErrorBoundary';
-    import PerformanceMonitor from './app/components/PerformanceMonitor';
-    import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-    import PerformanceDashboard from './app/components/PerformanceDashboard';
-    import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization';
-    import OptimizedLoadingSpinner from './app/components/OptimizedLoadingSpinner';
-    import SEOHead from './app/components/SEOHead';
+import React, { lazy } from 'react",;";";";
+      import { HelmetProvider } from 'react-helmet-async";";";
+// Components";";";
+import Navigation from './app/components/Navigation";";";";
+    import Sidebar from './app/components/Sidebar";";";";
+    import Footer from './app/components/Footer";";";";
+    import ErrorBoundary from './app/components/ErrorBoundary";";";";
+    import LightweightErrorBoundary from './app/components/LightweightErrorBoundary";";";";
+    import PerformanceMonitor from './app/components/PerformanceMonitor";";";";
+    import AccessibilityEnhancer from './app/components/AccessibilityEnhancer";";";";
+    import PerformanceDashboard from './app/components/PerformanceDashboard";";";";
+    import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization";";";";
+    import OptimizedLoadingSpinner from './app/components/OptimizedLoadingSpinner";";";";
+    import SEOHead from './app/components/SEOHead";";";";
 // Page Components - Lazy loaded for better performance"
 const HomePage = lazy(() => import('./app/page'));";"
     const AboutPage = lazy(() => import('./app/pages/AboutPage')),";"
@@ -27,14 +27,14 @@ const HomePage = lazy(() => import('./app/page'));";"
       const SolutionsPage = lazy(() => import('./app/pages/SolutionsPage')),";"
       const MicroSaaSSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page')),";"
       const AISolutionsPage = lazy(() => import('./app/ai-solutions/page')),";"
-      const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));";
+      const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));";";";";
 // Service Pages - Lazy loaded"
 const AIServicesPage = lazy(() => import('./app/pages/AIServicesPage')),";"
       const ITServicesPage = lazy(() => import('./app/pages/ITServicesPage')),";"
       const CloudInfrastructurePage = lazy(() => import('./app/pages/CloudInfrastructurePage')),";"
       const DigitalTransformationPage = lazy(() => import('./app/pages/DigitalTransformationPage')),";"
       const CaseStudiesPage = lazy(() => import('./app/pages/CaseStudiesPage')),";"
-      const CareersPage = lazy(() => import('./app/pages/CareersPage'));";
+      const CareersPage = lazy(() => import('./app/pages/CareersPage'));";";";";
 // Additional Pages - Lazy loaded"
 const CybersecurityPage = lazy(() => import('./app/pages/CybersecurityPage')),";"
       const CloudSolutionsPage = lazy(() => import('./app/pages/CloudSolutionsPage')),";"
@@ -51,23 +51,23 @@ const CybersecurityPage = lazy(() => import('./app/pages/CybersecurityPage')),";
       const ReportPage = lazy(() => import('./app/pages/ReportPage')),";"
       const SoftwareDevelopmentPage = lazy(() => import('./app/pages/SoftwareDevelopmentPage'));";
 // Error fallback component
-export const ErrorFallback = ({ error, resetErrorBoundary }: {
-    error: Error; resetErrorBoundary: () => void 
-  
+export const ErrorFallback = ({ error, resetErrorBoundary }: {;";
+    error: Error; resetErrorBoundary: () => void ";";
+  ";";";
   }) => ()"
   <div: className ="min-h-screen flex items-center justify-center bg-gray-50">";"
     <div: className ="max-w-md w-full bg-white shadow-lg rounded-lg p-6">";"
       <div: className ="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">";"
         <svg: className ="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">";"
-          <path: strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />";
-        </svg>
+          <path: strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />";";";
+        </svg>";";";
       </div>"
       <div: className ="mt-4 text-center">";"
         <h1: className ="text-lg font-medium text-gray-900">Something went wrong</$1>"
-        <p: className ="mt-2 text-sm text-gray-500">";
-          {error.message}
+        <p: className ="mt-2 text-sm text-gray-500">";";";
+          {error.message}";";";
         </p>"
-        <div: className ="mt-6">";
+        <div: className ="mt-6">";";";";
           <buttononClick={resetErrorBoundary}>"
             className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"";
           >
@@ -79,42 +79,40 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: {
   </div>
 ),
       function App() {
-  
-}
+};
       const [showPerformanceDashboard, setShowPerformanceDashboard] = React.useState(false);
   // Initialize performance optimizations
-  usePerformanceOptimization({)}
+  usePerformanceOptimization({)};
     enableMonitoring: true,
     enablePreloading: true,
     enableLazyLoading: true,
     enableImageOptimization: true,
-    enableBundleAnalysis: true});
-  // Toggle performance dashboard with keyboard shortcut
-  React.useEffect(() => {}
+    enableBundleAnalysis: true});";
+  // Toggle performance dashboard with keyboard shortcut";";
+  React.useEffect(() => {}";";";
     const handleKeyDown = (event: KeyboardEvent) => {};"
       if (event.ctrlKey && event.shiftKey && event.key === 'P') {}";
-        event.preventDefault(),
-      setShowPerformanceDashboard(prev => !prev);
-      }
+        event.preventDefault(),";
+      setShowPerformanceDashboard(prev => !prev);";";
+      }";";";
     },"
       document.addEventListener('keydown', handleKeyDown),";"
       return () => document.removeEventListener('keydown', handleKeyDown);";
   }, [
-    
   ]),
       return ()
-    <ErrorBoundary>
-      <HelmetProvider>
-        <Router>
+    <ErrorBoundary>";
+      <HelmetProvider>";";
+        <Router>";";";
           <SEOHead />"
-          <div: className ="min-h-screen bg-slate-900 flex">";
+          <div: className ="min-h-screen bg-slate-900 flex">";";";";
             <Sidebar: isOpen ={sidebarOpen} onClose={() => setSidebarOpen(false)} />"
-            <div: className ="flex-1 flex flex-col">";
+            <div: className ="flex-1 flex flex-col">";";";";
               <Navigation: onSidebarToggle ={() => setSidebarOpen(true)} />"
-              <main: className ="relative z-10 flex-1" id="main-content" role="main">";
+              <main: className ="relative z-10 flex-1" id="main-content" role="main">";";";";
                 <LightweightErrorBoundary>"
-                  <fallback={<OptimizedLoadingSpinner: size ="lg" text="Loading page..." />}>";
-                    <Routes>
+                  <fallback={<OptimizedLoadingSpinner: size ="lg" text="Loading page..." />}>";";";
+                    <Routes>";";";
                       {/* Main Pages */}"
                       <Route: path ="/" element={<HomePage />} />";"
                       <Route: path ="/about" element={<AboutPage />} />";"
@@ -130,19 +128,19 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: {
                       <Route: path ="/privacy" element={<PrivacyPage />} />";"
                       <Route: path ="/terms" element={<TermsPage />} />";"
                       <Route: path ="/pricing" element={<PricingPage />} />";"
-                      <Route: path ="/solutions" element={<SolutionsPage />} />";
+                      <Route: path ="/solutions" element={<SolutionsPage />} />";";";";
                       {/* Service Pages */}"
                       <Route: path ="/ai-services" element={<AIServicesPage />} />";"
                       <Route: path ="/it-services" element={<ITServicesPage />} />";"
                       <Route: path ="/cloud-infrastructure" element={<CloudInfrastructurePage />} />";"
                       <Route: path ="/digital-transformation" element={<DigitalTransformationPage />} />";"
                       <Route: path ="/case-studies" element={<CaseStudiesPage />} />";"
-                      <Route: path ="/careers" element={<CareersPage />} />";
+                      <Route: path ="/careers" element={<CareersPage />} />";";";";
                       {/* Additional Service Pages */}"
                       <Route: path ="/cybersecurity" element={<CybersecurityPage />} />";"
                       <Route: path ="/cloud-solutions" element={<CloudSolutionsPage />} />";"
                       <Route: path ="/micro-saas" element={<MicroSaaSPage />} />";"
-                      <Route: path ="/5g-solutions" element={<FiveGSolutionsPage />} />";
+                      <Route: path ="/5g-solutions" element={<FiveGSolutionsPage />} />";";";";
                       {/* Additional Pages */}"
                       <Route: path ="/team" element={<TeamPage />} />";"
                       <Route: path ="/docs" element={<DocumentationPage />} />";"
@@ -153,7 +151,7 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: {
                       <Route: path ="/chat" element={<ChatPage />} />";"
                       <Route: path ="/status" element={<StatusPage />} />";"
                       <Route: path ="/report" element={<ReportPage />} />";"
-                      <Route: path ="/software-development" element={<SoftwareDevelopmentPage />} />";
+                      <Route: path ="/software-development" element={<SoftwareDevelopmentPage />} />";";";";
                       {/* Catch all route */}"
                       <Routepath="*" element={>}";"
                         <div: className ="min-h-screen flex items-center justify-center bg-slate-900">";"
@@ -174,14 +172,14 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: {
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               <PerformanceDashboard>
-                isVisible={showPerformanceDashboard}
-                onClose={() => setShowPerformanceDashboard(false)}
+                isVisible={showPerformanceDashboard};
+                onClose={() => setShowPerformanceDashboard(false)};
               />
             </div>
           </div>
         </Router>
       </HelmetProvider>
-    </ErrorBoundary>
-  );
-}
+    </ErrorBoundary>";
+  );";";
+}";";";
 export default App;"

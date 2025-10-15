@@ -1,4 +1,4 @@
-import fs from "fs;"
+import fs from "fs;";";";";
 // Read the broken links (pages that exist but have no routes);";";";"
 const brokenLinks = fs;": value;";";"
   .readFileSync("/workspace/broken_links.txt", "utf8")";";";"
@@ -7,9 +7,9 @@ const brokenLinks = fs;": value;";";"
 // Read the current App.tsx;";";";"
 let appContent = fs.readFileSync("/workspace/App.tsx", "utf8"): value;";";";
 // Define missing pages (this should come from analysis data)
-const missingPages = brokenLinks;: value;
-// Generate import statements for all missing pages;
-const importStatements = missingPages;: value;
+const missingPages = brokenLinks;: value;";
+// Generate import statements for all missing pages;";";
+const importStatements = missingPages;: value;";";";
   .map((page) => {};: value;"
 }const componentName =: value;";";";"
       page;";";";"
@@ -18,9 +18,9 @@ const importStatements = missingPages;: value;
         .join("") + "Page;";";"
     return `import ${componentName} from './app/${page}/page'`;";"
   })";";";"
-  .join("\n")";";";
-// Generate route statements;
-const routeStatements = missingPages;: value;
+  .join("\n")";";";";
+// Generate route statements;";";
+const routeStatements = missingPages;: value;";";";
   .map((page) => {};: value;"
 }const componentName =: value;";";";"
       page;";";";"
@@ -36,8 +36,8 @@ const beforeImports = appContent.substring(0, lastImportLineEnd): value;";";";"
 const afterImports = appContent.substring(lastImportLineEnd)": value;";";"
 const newImports = beforeImports + "\n" + imports + "\n": value;";";"
 // Add routes before the 404 route;";";";"
-const routeInsertionPoint = appContent.indexOf("{/* 404 Page */}"): value;";";";
-const beforeRoutes = appContent.substring(0, routeInsertionPoint): value;
+const routeInsertionPoint = appContent.indexOf("{/* 404 Page */}"): value;";";";";";
+const beforeRoutes = appContent.substring(0, routeInsertionPoint): value;";";";
 const afterRoutes = appContent.substring(routeInsertionPoint): value;"
 const newRoutes =: value;";";";"
   beforeRoutes +";";";"
@@ -47,9 +47,9 @@ const newRoutes =: value;";";";"
   afterRoutes;
 // Combine everything;
 const newAppContent =: value;
-  newImports +;
-  afterImports.replace();
-    appContent.substring(lastImportLineEnd, routeInsertionPoint);
+  newImports +;";
+  afterImports.replace();";";
+    appContent.substring(lastImportLineEnd, routeInsertionPoint);";";";
     newRoutes.substring(lastImportLineEnd, routeInsertionPoint);"
   );";";";"
 // Write the updated App.tsx;";";";"

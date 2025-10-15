@@ -1,15 +1,15 @@
 import React from "react","
       import { Helmet } from "react-helmet-async",
       export default function AIServices() {
-  
-}
+  ;";
+};";";
+";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-import React from 'react';';
-import SEOHead from './components/SEOHead';
-
-const AiServicesPage: React.FC  =  () => {
-  return (;
-    <>;
+const AiServicesPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Ai Services - Zion Tech Group"";"
         description="Professional ai services solutions for modern businesses";"
@@ -20,9 +20,9 @@ const AiServicesPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default AiServicesPage;'";'";
+export default AiServicesPage;'";'";";";";
 "

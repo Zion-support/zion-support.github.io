@@ -1,16 +1,16 @@
-import SEOHead from '../components/SEOHead';
-const CybersecurityPage: React.FC  =  () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
+import SEOHead from '../components/SEOHead";
+const CybersecurityPage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
         title="CybersecurityPage - Zion Tech Group"
         description="Zion Tech Group CybersecurityPage page"
-const CybersecurityPage: React.FC = () => {
-  
-  return (
-    <>";
+const CybersecurityPage: React.FC = () => {";
+  ";";
+  return (";";";
+    <>";";";";
       <SEOHead title ="CybersecurityPage - Zion Tech Group - Zion Tech Group"";"
-        description="Zion Tech Group CybersecurityPage page"";
+        description="Zion Tech Group CybersecurityPage page"";";";";
       />"
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
         <div className ="text-center">";"
@@ -18,10 +18,10 @@ const CybersecurityPage: React.FC = () => {
           <p className ="text-gray-300">Coming soon...</$1>
         </div>
       </div>
-    </>
+    </>,
   ),
 
-};
-
-export default CybersecurityPage;
+};";
+";";
+export default CybersecurityPage;";";";
 "

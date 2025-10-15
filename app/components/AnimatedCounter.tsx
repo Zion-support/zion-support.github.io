@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import React, { useState, useEffect } from "react;
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+import React, { useState } from 'react";";";";
+import React, { useState, useEffect } from "react;";";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const ComponentsPage: React.FC  =  () => {
-  return (;
-    <>;
+const ComponentsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Components - Zion Tech Group"";"
         description="Professional components solutions for modern businesses";"
@@ -16,9 +16,9 @@ const ComponentsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({};)"
   end, duration = 2000, className = "", prefix = "", suffix = ""}) => {};
   const [count, setCount] = useState(0);
@@ -30,9 +30,9 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({};)"
       const progress = Math.min((currentTime - startTime) / duration, 1);
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       setCount(Math.floor(easeOutQuart * end));
-      if ($1) {}
+      if ($1) {};
   // If body
-}
+};
         animationFrame = requestAnimationFrame(animate);
       };
     };
@@ -40,9 +40,9 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({};)"
     return () => {};
 }if (animationFrame) {},
       cancelAnimationFrame(animationFrame)
-      }
+      };
     },
-    {}
+    {};
   }, [
     end, duration
   
@@ -53,9 +53,9 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({};)"
       {count.toLocaleString()};
       {suffix};
     </span>
-  )
-},
-      export default AnimatedCounter
+  )";
+},";";
+      export default AnimatedCounter";";";
 ;"
-export default ComponentsPage;'";'";
+export default ComponentsPage;'";'";";";";
 "

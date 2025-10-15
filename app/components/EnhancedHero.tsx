@@ -1,6 +1,6 @@
-import React from 'react';';
-import SEOHead from './components/SEOHead';
-import {ArrowRight, CheckCircle} from "lucide-react",
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";";";";
+import {ArrowRight, CheckCircle} from "lucide-react",";";";
       interface EnhancedHeroProps {},"
       title?: string","
         "
@@ -13,22 +13,22 @@ import {ArrowRight, CheckCircle} from "lucide-react",
         "
     href: string","
         "
-  },
+  },";";";
       secondaryCta?: {},"
       text: string","
         "
     href: string","
         "
-  },
+  },";";";
       benefits?: string[]"
   backgroundImage?: string","
         "
   className?: string","
-
-};
+";";
+};";";";
 ,"
       const EnhancedHero: React.FC<EnhancedHeroProps>  =  ({",)}"
-        ";
+        ";";";";
   title = "Transform Your Business with AI", subtitle = "Leading Provider of AI Solutions", description = "Revolutionize your operations with cutting-edge artificial intelligence technology. Our advanced solutions deliver measurable results and drive unprecedented growth.", primaryCta = {";"}"
     text: "Get Started", href: "/contact", _}, secondaryCta = {";"}"
     text: "Learn More", _href: "/about", _}, benefits = [";"
@@ -39,7 +39,7 @@ import {ArrowRight, CheckCircle} from "lucide-react",
     {"}"
         "
       icon: Phone,","
-        ";
+        ";";";";
       title: "Call Us",";"
       details: "+1 (555) 123-4567",";"
       description: "Mon-Fri 9 AM-6 PM PST"},","
@@ -56,7 +56,7 @@ import {ArrowRight, CheckCircle} from "lucide-react",
         "
       title: "Visit Us",";"
       details: "123 Tech Street, San Francisco, CA",";"
-      description: "Schedule a meeting"}]
+      description: "Schedule a meeting"}]";";";
   return ()"
     <div",>"
         "
@@ -69,10 +69,10 @@ import {ArrowRight, CheckCircle} from "lucide-react",
         {backgroundImage && ()}"
           <div",>"
         "
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20",
-      style={
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20",";";
+      style={";";";
     { backgroundImage: `url(${backgroundImage"
-  
+  ";";,";
   })` }} />","
         "
         )};"
@@ -113,7 +113,7 @@ import {ArrowRight, CheckCircle} from "lucide-react",
         "
               </>","
         "
-              <";">
+              <";">";";";
                 to={secondaryCta.href},"
       className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300";"
               >","
@@ -199,14 +199,14 @@ import {ArrowRight, CheckCircle} from "lucide-react",
         "
     </div>","
         "
-  )
+  )";";";
 },"
       export default EnhancedHero","
         "
 
-const ComponentsPage: React.FC  =  () => {
-  return (;
-    <>;
+const ComponentsPage: React.FC  =  () => {;";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Components - Zion Tech Group"";"
         description="Professional components solutions for modern businesses";"
@@ -217,9 +217,9 @@ const ComponentsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ComponentsPage;'";'";
+export default ComponentsPage;'";'";";";";
 "

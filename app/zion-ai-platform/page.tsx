@@ -1,10 +1,9 @@
-import ResponsiveContainer from '../components/ResponsiveContainer;'
+import ResponsiveContainer from "../components/ResponsiveContainer;";
 const ZionAIPlatform = () => {
-  
   return (
-    <>
-      <Helmet>
-        <title>Zion AI Platform - Zion Tech Group</title>
+    <>";
+      <Helmet>";";
+        <title>Zion AI Platform - Zion Tech Group</title>";";";
         <meta name="description" content="Comprehensive AI platform powered by Zion technology." />""
       </Helmet>"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
@@ -15,7 +14,7 @@ const ZionAIPlatform = () => {
                 Zion <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI Platform</span>""
               </h1>"
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
-                Comprehensive AI platform powered by Zion technology for enterprise solutions.
+                Comprehensive AI platform powered by Zion technology for enterprise solutions.";";";
               </p>"
               <Link to="/contact">""
                 <FuturisticButton size="lg">""
@@ -26,7 +25,7 @@ const ZionAIPlatform = () => {
             </div>
           </ResponsiveContainer>
         </section>
-};
-  );}
-};
+};";
+  );};";";
+};";";";
 export default ZionAIPlatform;"

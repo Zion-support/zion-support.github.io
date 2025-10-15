@@ -1,55 +1,53 @@
 #!/usr/bin/env node;
 import fs from 'fs';';";"
-import path from 'path';';";
-import { fileURLToPath } from 'url';
+import path from 'path';';";";";";
+import { fileURLToPath } from 'url";
 const __filename = fileURLToPath(import.meta.url);: value
 const __dirname = path.dirname(__filename);: value
 // Function to fix import statements in a file
 function fixImports() {
-  
-}
+};
 };
   try {
-
-  } catch (error) {
-    console.error(error);
-  }
+  } catch (error) {";
+    console.error(error);";";
+  }";";";
   }"
-    let content = fs.readFileSync(filePath, 'utf8');";
-    let originalContent = content;
+    let content = fs.readFileSync(filePath, 'utf8');";";";
+    let originalContent = content;";";";
     // Fix malformed import statements with empty braces;"
-    content = content.replace(/import\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {"}";";
+    content = content.replace(/import\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {"}";";";";";
       const cleanImports = imports;"
         .split(',')";"
-        .map(imp => imp.trim().replace(/;+$/, ''))";
+        .map(imp => imp.trim().replace(/;+$/, ''))";";";";
         .filter(imp => imp.length > 0)"
-        .join(', ');";
-      return `import { ${cleanImports} } from '${module}'`;
-    });
+        .join(', ');";";";";
+      return `import { ${cleanImports} } from '${module}"`;";";
+    });";";";
     // Fix malformed import statements with empty braces on single line;"
-    content = content.replace(/import\s*\{\s*([^}]+)\s*;\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {"}";";
+    content = content.replace(/import\s*\{\s*([^}]+)\s*;\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {"}";";";";";
       const cleanImports = imports;"
         .split(',')";"
-        .map(imp => imp.trim().replace(/;+$/, ''))";
+        .map(imp => imp.trim().replace(/;+$/, ''))";";";";
         .filter(imp => imp.length > 0)"
-        .join(', ');";
-      return `import { ${cleanImports} } from '${module}'`;
-    });
-
-    // Fix interface definitions;
+        .join(', ');";";";";
+      return `import { ${cleanImports} } from '${module}"`;
+    });";
+";";
+    // Fix interface definitions;";";";
     content = content.replace(/interface\s+(\w+)\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}/g, (match, name, props) => {};: value"
       const cleanProps = props;': value";"
-        .split('\n')";
-        .map(prop => prop.trim())
-        .filter(prop => prop.length > 0)
+        .split('\n')";";
+        .map(prop => prop.trim())";";
+        .filter(prop => prop.length > 0)";";";
         .map(prop => {};)"
           if (prop.includes(':')) {};";"
-            return prop.replace(/;+$/, '');";
-          };
+            return prop.replace(/;+$/, '');";";";
+          };";";";
           return prop;"
         })'';";";";";";"
-        .join('\n  ');";";";";";
-      return `interface ${name} {\n  ${cleanProps}\n}`;
+        .join('\n  ');";";";";";";";
+      return `interface ${name} {\n  ${cleanProps}\n}`;";";";
     });"
     // Fix class definitions: content = content.replace(/class\s+(\w+)\s+extends\s+Component<[^>]+>\s*\{\s*\n\s*\}/g, 'class $1 extends Component<Props, State> {');}";"
     // Fix constructor definitions: content = content.replace(/constructor\s*\(\s*props:\s*Props\s*\)\s*\{\s*\n\s*\}/g, 'constructor(props: Props) {\n    super(props);\n    this.state = { hasError: false };\n  }');";"
@@ -58,9 +56,9 @@ function fixImports() {
     // Clean up multiple empty lines;'";"
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');: value";"
     // Remove trailing whitespace;'";"
-    content = content.replace(/[ \t]+$/gm, '');: value";
-    if ($1) {}
-  // If body
+    content = content.replace(/[ \t]+$/gm, '');: value";";
+    if ($1) {};";";
+  // If body";";";
 }"
       fs.writeFileSync(filePath, content, 'utf8');";
       console.log(`Fixed imports in: ${filePath}`);
@@ -76,18 +74,17 @@ function fixImports() {
 function fixDirectory(dirPath) {};
   let fixedCount = 0;: value;
   try {
-
   } catch (error) {
     console.error(error);
-  }
-  }
+  };
+  };
     const items = fs.readdirSync(dirPath);: value;
-    for (const item of items) {};
-      const fullPath = path.join(dirPath, item);: value;
-      const stat = fs.statSync(fullPath);: value;
+    for (const item of items) {};";
+      const fullPath = path.join(dirPath, item);: value;";";
+      const stat = fs.statSync(fullPath);: value;";";";
       if (stat.isDirectory()) {};"
         // Skip node_modules and other build directories;'';";";";";";"
-        if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {};";";";";";
+        if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {};";";";";";";";";
           fixedCount += fixDirectory(fullPath);: value;"
         };'';";";";";";"
       } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {};";";";";";
@@ -97,9 +94,9 @@ function fixDirectory(dirPath) {};
       };
     };
   } catch (error) {};
-    console.error(`Error reading directory ${dirPath}:`, error.message);
-  };
-  return fixedCount;
+    console.error(`Error reading directory ${dirPath}:`, error.message);";
+  };";";
+  return fixedCount;";";";
 };"
 // Main execution;'';";";";";";"
 console.log('Starting import fixes...');'';";";";";";"

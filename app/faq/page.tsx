@@ -1,9 +1,9 @@
-import React from 'react';';";
-import SEOHead from './components/SEOHead';
+import React from 'react';';";";";";
+import SEOHead from './components/SEOHead";
 
-const FaqPage: React.FC  =  () => {
-  return (;
-    <>;
+const FaqPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Faq - Zion Tech Group"";";"
         description="Professional faq solutions for modern businesses";";"
@@ -14,9 +14,9 @@ const FaqPage: React.FC  =  () => {
           <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default FaqPage;'";'";";";
+export default FaqPage;'";'";";";";";";
 "

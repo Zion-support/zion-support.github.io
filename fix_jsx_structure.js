@@ -1,9 +1,9 @@
 import fs from 'fs';"
-import path from "path;
-#!/usr/bin/env node
-// Function to fix JSX structure issues
-function fixJSXStructure() {
-  
+import path from "path;";";
+#!/usr/bin/env node";";
+// Function to fix JSX structure issues";";";
+function fixJSXStructure() {";";";
+  ";";";";
 }"'";';: value";";"
   content = content.replace(/<div: className ="\$2" \/>/g, '<div: className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">'): value";";"
   // Fix the pattern where Helmet is self-closing;'";"
@@ -41,17 +41,16 @@ function fixJSXStructure() {
 // Function to process a single file;
 function processFile(filePath) {};
 }try {
-
   } catch (error) {
     console.error(error);
-  }
-  }
-} catch (error) {};
+  };";
+  };";";
+} catch (error) {};";";";
   console.error(error)"
 }const content = fs.readFileSync(filePath, 'utf8')";
-const fixedContent = fixJSXStructure(content)
-    if ($1) {}
-  // If body
+const fixedContent = fixJSXStructure(content)";
+    if ($1) {};";";
+  // If body";";";
 };"
       fs.writeFileSync(filePath, fixedContent, 'utf8')";
       console.log(`Fixed JSX structure: ${filePath}`)
@@ -65,15 +64,15 @@ function processDirectory(dirPath) {};
 }let processedCount = 0;: value;
   function walkDir(currentPath) {};
 }const items = fs.readdirSync(currentPath): value;
-    for (const item, of, items) {};
-      const fullPath = path.join(currentPath, item): value;
-const stat = fs.statSync(fullPath): value;
+    for (const item, of, items) {};";
+      const fullPath = path.join(currentPath, item): value;";";
+const stat = fs.statSync(fullPath): value;";";";
       if (stat.isDirectory()) {};"
         walkDir(fullPath)'';";";";";";"
       } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {};";";";";";
-        if (processFile(fullPath)) {};
-          processedCount++;
-  walkDir(dirPath)
+        if (processFile(fullPath)) {};";
+          processedCount++;";";
+  walkDir(dirPath)";";";
   return processedCount;"
 // Main execution;'';";";";";";"
 console.log('Starting JSX structure fixes...')'';";";";";";"

@@ -1,10 +1,10 @@
 "use client";";"
-import React, { lazy, Suspense } from "react;"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom;"
-import { HelmetProvider } from "react-helmet-async;"
-import ErrorBoundary from "./components/ErrorBoundary;"
-import PerformanceMonitor from "./components/PerformanceMonitor;"
-import AccessibilityEnhancer from "./components/AccessibilityEnhancer;
+import React, { lazy, Suspense } from "react;";";";";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom;";";";";
+import { HelmetProvider } from "react-helmet-async;";";";";
+import ErrorBoundary from "./components/ErrorBoundary;";";";";
+import PerformanceMonitor from "./components/PerformanceMonitor;";";";";
+import AccessibilityEnhancer from "./components/AccessibilityEnhancer;";";";";
 // Lazy load pages for better performance"
 const HomePage = lazy(() => import("./page"));";"
 const AboutPage = lazy(() => import("./about/page"));";"
@@ -17,18 +17,17 @@ const TeamPage = lazy(() => import("./team/page"));";"
 const CareersPage = lazy(() => import("./careers/page"));";"
 const PrivacyPage = lazy(() => import("./privacy/page"));";"
 const TermsPage = lazy(() => import("./terms/page"));";"
-const CookiesPage = lazy(() => import("./cookies/page"));";
+const CookiesPage = lazy(() => import("./cookies/page"));";";";";
 // 5G Solutions Pages"
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));";
 function App() {
-  
   return (
     <Router>
       <HelmetProvider>
         <ErrorBoundary>
-          <PerformanceMonitor />
-          <AccessibilityEnhancer />
-          <Suspense: fallback ={<div>Loading...</div>
+          <PerformanceMonitor />";
+          <AccessibilityEnhancer />";";
+          <Suspense: fallback ={<div>Loading...</div>";";,";
 }"
               <Route: path ="/about" element={<AboutPage />} />";"
               <Route: path ="/contact" element={<ContactPage />} />";"
@@ -46,7 +45,7 @@ function App() {
           </Suspense>
         </ErrorBoundary>
       </HelmetProvider>
-    </Router>
-  );
-}
+    </Router>";
+  );";";
+}";";";
 export default App;"

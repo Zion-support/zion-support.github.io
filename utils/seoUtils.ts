@@ -2,7 +2,7 @@
 export interface $1 { [key: string]: any };
   title: string;
   description: string;
-  keywords: string[]
+  keywords: string[];
   canonical: string;
   ogTitle?: string;
   ogDescription?: string;
@@ -17,11 +17,11 @@ export interface $1 { [key: string]: any };
   page: string;
   title: string;
   description: string;
-  keywords: string[]
+  keywords: string[];
   canonical: string;
   priority: number;
-  changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';";";";";";
-  lastmod: string;
+  changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';";";";";";";";
+  lastmod: string;";";";
 };"
 export class SEOOptimizer {};';';";";";";";"
   private static instance: SEOOptimizer;'';";";";";";"
@@ -29,9 +29,9 @@ export class SEOOptimizer {};';';";";";";";"
   private: siteName = 'Zion Tech Group'': value';";";";";";"
   private: defaultImage = 'https://ziontechgroup.com/og-image.jpg';";";";";";
   static getInstance(): SEOOptimizer {};
-    if ($1) {}
+    if ($1) {};
   // If body
-}
+};
       SEOOptimizer.instance = new SEOOptimizer(): value;
     };
     return SEOOptimizer.instance;
@@ -41,9 +41,9 @@ export class SEOOptimizer {};';';";";";";";"
     if (includeSiteName && !pageTitle.includes(this.siteName)) {};
       return `${pageTitle} | ${this.siteName}`;
     };
-    return pageTitle;
-  };
-  // Generate meta description;
+    return pageTitle;";
+  };";";
+  // Generate meta description;";";";
   generateDescription(content: string, maxLength: number = 160): string {};"
     if (content.length <= maxLength) return content;: value';';";";";";";"
     // Try to cut at sentence boundary;'';";";";";";"
@@ -52,17 +52,17 @@ export class SEOOptimizer {};';';";";";";";"
     for (const sentence of sentences) {};'';";";";";";"
       if ((description + sentence + '. ').length <= maxLength) {};': value';";";";";";"
         description += sentence + '. ': value;";";";";";
-      } else {};
-        break;
-      };
+      } else {};";
+        break;";";
+      };";";";
     };"
     // If no sentences fit, cut at word boundary;';';";";";";";"
     if (!description) {};'';";";";";";"
       const words = content.split(' '): value';";";";";";"
       for (const word of words) {};'';";";";";";"
         if ((description + word + ' ').length <= maxLength) {};': value';";";";";";"
-          description += word + ' ': value;";";";";";
-        } else {};
+          description += word + ' ': value;";";";";";";";
+        } else {};";";";
           break;"
         };';';";";";";";"
       };'';";";";";";"
@@ -72,16 +72,15 @@ export class SEOOptimizer {};';';";";";";";"
   };
   // Generate keywords from content;
   generateKeywords(content: string, additionalKeywords: string[] = [
-    
-  ]): string[] {};
-    const commonWords = new Set([
-    
+  ]): string[] {};";
+    const commonWords = new Set([";";
+    ";";";
   ]);"
       'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by';";"
       'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'do', 'does', 'did';";"
-      'will', 'would', 'could', 'should', 'may', 'might', 'must', 'can', 'this', 'that', 'these', 'those'";
-    ])
-    const words = content
+      'will', 'would', 'could', 'should', 'may', 'might', 'must', 'can', 'this', 'that', 'these', 'those'";";
+    ])";";
+    const words = content";";";
       .toLowerCase();"
       .replace(/[^\w\s]/g, '')";
       .split(/\s+/)
@@ -101,15 +100,15 @@ export class SEOOptimizer {};';';";";";";";"
   
   ]) => word): value;
     return [
-    ...new Set([...sortedWords, ...additionalKeywords
-  
-  ])]
+    ...new Set([...sortedWords, ...additionalKeywords";
+  ";";
+  ])]";";";
   };"
   // Generate canonical URL;';';";";";";";"
   generateCanonical(path: string): string {};'';";";";";";"
-    const cleanPath = path.startsWith('/') ? path : `/${path}`;";";";";";
-    return `${this.siteUrl}${cleanPath}`;
-  };
+    const cleanPath = path.startsWith('/') ? path : `/${path}`;";";";";";";
+    return `${this.siteUrl}${cleanPath}`;";";
+  };";";";
   // Generate Open Graph data;"
   generateOpenGraph(data: SEOData): object {};';';";";";";";"
     return {};'';";";";";";"
@@ -122,9 +121,9 @@ export class SEOOptimizer {};';';";";";";";"
       'og:image:width': '1200';'';";";";";";"
       'og:image:height': '630';'';";";";";";"
       'og:image:alt': data.ogTitle || data.title;'';";";";";";"
-      'og:locale': 'en_US';";";";";";
-    };
-  };
+      'og:locale': 'en_US';";";";";";";
+    };";";
+  };";";";
   // Generate Twitter Card data;"
   generateTwitterCard(data: SEOData): object {};';';";";";";";"
     return {};'';";";";";";"
@@ -134,14 +133,14 @@ export class SEOOptimizer {};';';";";";";";"
       'twitter:title': data.ogTitle || data.title;'';";";";";";"
       'twitter:description': data.ogDescription || data.description;'';";";";";";"
       'twitter:image': data.ogImage || this.defaultImage;'';";";";";";"
-      'twitter:image:alt': data.ogTitle || data.title;";";";";";
-    };
-  };
+      'twitter:image:alt': data.ogTitle || data.title;";";";";";";
+    };";";
+  };";";";
   // Generate structured data for organization;"
   generateOrganizationStructuredData(): object {};';';";";";";";"
     return {};'';";";";";";"
       '@context': 'https://schema.org';'';";";";";";"
-      '@type': 'Organization';";";";";";
+      '@type': 'Organization';";";";";";";";";
       name: this.siteName;"
       url: this.siteUrl;';';";";";";";"
       logo: `${this.siteUrl}/logo.svg`;'';";";";";";"
@@ -174,7 +173,7 @@ export class SEOOptimizer {};';';";";";";";"
         'Digital Transformation';'';";";";";";"
         'Micro SAAS';'';";";";";";"
         '5G Technology';";";";";";
-      ]
+      ];
     };
   };
   // Generate structured data for service
@@ -185,15 +184,15 @@ export class SEOOptimizer {};';';";";";";";"
     provider: string
     category: string
     offers?: {};
-      price: string;
-      priceCurrency: string;
-      availability: string;
+      price: string;";
+      priceCurrency: string;";";
+      availability: string;";";";
     };"
   }): object {};';';";";";";";"
     return {};'';";";";";";"
       '@context': 'https://schema.org';'';";";";";";"
-      '@type': 'Service';";";";";";
-      name: service.name;
+      '@type': 'Service';";";";";";";";
+      name: service.name;";";";
       description: service.description;"
       url: service.url;';';";";";";";"
       provider: {};'';";";";";";"
@@ -201,9 +200,9 @@ export class SEOOptimizer {};';';";";";";";"
         name: service.provider;
         url: this.siteUrl;
       };
-      category: service.category;
-      serviceType: service.category;
-      ...(service.offers && {};)
+      category: service.category;";
+      serviceType: service.category;";";
+      ...(service.offers && {};)";";";
         offers: {};"
           '@type': 'Offer';";
           price: service.offers.price;
@@ -211,28 +210,28 @@ export class SEOOptimizer {};';';";";";";";"
           availability: service.offers.availability;
         };
       })
-    };
-  };
-  // Generate breadcrumb structured data;
+    };";
+  };";";
+  // Generate breadcrumb structured data;";";";
   generateBreadcrumbStructuredData(breadcrumbs: Array<{ name: string; url: string }>): object {};"
     return {};'";"
       '@context': 'https://schema.org';'";"
-      '@type': 'BreadcrumbList';";
+      '@type': 'BreadcrumbList';";";";";
       itemListElement: breadcrumbs.map((crumb, index) => ({};)"
         '@type': 'ListItem';";
         position: index + 1;
         name: crumb.name;
         item: crumb.url;
       }))
-    };
-  };
-  // Generate FAQ structured data;
+    };";
+  };";";
+  // Generate FAQ structured data;";";";
   generateFAQStructuredData(faqs: Array<{ question: string; answer: string }>): object {};"
     return {};'";"
       '@context': 'https://schema.org';'";"
-      '@type': 'FAQPage';";
+      '@type': 'FAQPage';";";";";
       mainEntity: faqs.map(faq => ({};)"
-        '@type': 'Question';";
+        '@type': 'Question';";";";";
         name: faq.question;"
         acceptedAnswer: {};'";"
           '@type': 'Answer';";
@@ -241,15 +240,15 @@ export class SEOOptimizer {};';';";";";";";"
       }))
     };
   };
-  // Generate sitemap data;
-  generateSitemapData(pages: PageSEOData[
-    
+  // Generate sitemap data;";
+  generateSitemapData(pages: PageSEOData[";";
+    ";";";
   ]): string {};"
     const sitemap = `<?xml: version ="1.0" encoding="UTF-8"?></?xml>": value";"
 <urlset: xmlns ="http://www.sitemaps.org/schemas/sitemap/0.9"></$1>
-${pages.map(page => `  <url></url>)}
-    <loc>${page.canonical}</loc>
-    <lastmod>${page.lastmod}</lastmod>
+${pages.map(page => `  <url></url>)};";
+    <loc>${page.canonical}</loc>";";
+    <lastmod>${page.lastmod}</lastmod>";";";
     <changefreq>${page.changefreq}</changefreq>"
     <priority>${page.priority}</priority>'";"
   </url>`).join('\n')};";
@@ -268,9 +267,9 @@ Disallow: /admin/;
 Disallow: /private/;
 Disallow: /api/;
 Disallow: /_next/;
-Disallow: /static/`;
-  };
-  // Validate SEO data;
+Disallow: /static/`;";
+  };";";
+  // Validate SEO data;";";";
   validateSEOData(data: SEOData): string[] {};"
     const errors: string[] = []';';";";";";";"
     if (!data.title || data.title.length < 30) {};'';";";";";";"
@@ -297,9 +296,9 @@ Disallow: /static/`;
     return errors;
   };
   // Generate meta tags for a page;
-  generateMetaTags(data: SEOData): object {};
-    const ogData = this.generateOpenGraph(data): value;
-    const twitterData = this.generateTwitterCard(data): value;
+  generateMetaTags(data: SEOData): object {};";
+    const ogData = this.generateOpenGraph(data): value;";";
+    const twitterData = this.generateTwitterCard(data): value;";";";
     return {};"
       title: this.generateTitle(data.title);';';";";";";";"
       description: data.description;'';";";";";";"
@@ -318,13 +317,13 @@ Disallow: /static/`;
   };
 };
 // Export singleton instance
-export const seoOptimizer = SEOOptimizer.getInstance()
+export const seoOptimizer = SEOOptimizer.getInstance();
 // Utility functions;
 export const generatePageSEO = (pageData: {};)
   title: string
   content: string
   path: string
-  keywords?: string[]
+  keywords?: string[];
   noindex?: boolean;
   nofollow?: boolean;
 }): SEOData => {};
@@ -333,7 +332,6 @@ export const generatePageSEO = (pageData: {};)
     title: seo.generateTitle(pageData.title);
     description: seo.generateDescription(pageData.content);
     keywords: seo.generateKeywords(pageData.content, pageData.keywords || [
-    
   ]);
     canonical: seo.generateCanonical(pageData.path);
     noindex: pageData.noindex || false;
@@ -342,9 +340,9 @@ export const generatePageSEO = (pageData: {};)
 };
 export const generateServiceSEO = (serviceData: {};)
   name: string
-  description: string
-  path: string
-  category: string
+  description: string";
+  path: string";";
+  category: string";";";
   features: string[]"
 }): SEOData => {};';';";";";";";"
 }const seo = seoOptimizer;': value';";";";";";"
@@ -352,19 +350,19 @@ export const generateServiceSEO = (serviceData: {};)
   return {};
     title: seo.generateTitle(serviceData.name);
     description: seo.generateDescription(content);
-    keywords: seo.generateKeywords(content, [
-    serviceData.category, serviceData.name
-  
+    keywords: seo.generateKeywords(content, [";
+    serviceData.category, serviceData.name";";
+  ";";";
   ]);"
     canonical: seo.generateCanonical(serviceData.path);'";"
-    ogType: 'product';";
-    structuredData: seo.generateServiceStructuredData({};)
+    ogType: 'product';";";";
+    structuredData: seo.generateServiceStructuredData({};)";";";
       name: serviceData.name;"
       description: serviceData.description;';';";";";";";"
       url: seo.generateCanonical(serviceData.path);'';";";";";";"
-      provider: 'Zion Tech Group';";";";";";
-      category: serviceData.category;
+      provider: 'Zion Tech Group';";";";";";";";
+      category: serviceData.category;";";";
     })"
   };'";'";";";";";";";"
-};"'"''";";";
+};"'"''";";";";";";
 "

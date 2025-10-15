@@ -1,17 +1,16 @@
 #!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
+import fs from 'fs";";";";
+import path from 'path";";";";
+import { execSync } from 'child_process";";";";
 console.log('Starting comprehensive merge conflict resolution...');";
 // Function to resolve merge conflicts by keeping our version
 function resolveConflicts() {
-  
-    try {
-
-    // Get list of conflicted files
-    const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' 
-
-}
+    try {";
+";";
+    // Get list of conflicted files";";";
+    const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8" ";
+";";
+}";";";
   }"
   }";
     console.log(`Found ${conflictedFiles.length} conflicted files`);
@@ -19,17 +18,16 @@ function resolveConflicts() {
       if (!file) continue;
       console.log(`Resolving conflicts in: ${file}`);
       try {
-
         // Check if file exists
         if (!fs.existsSync(file)) {
           console.log(`  File ${file
   
   } catch (error) {
     console.error(error);
-  }
-  }
-          continue;
-        }
+  };
+  };";
+          continue;";";
+        }";";";
         // Read the file content"
         let content = fs.readFileSync(file, 'utf8');";
         // Remove conflict markers and keep our version (HEAD)
@@ -39,57 +37,55 @@ function resolveConflicts() {
         console.log(`  ✓ Resolved conflicts in ${file}`);
       } catch (error) {
         console.error(`  ✗ Error resolving ${file}:`, error.message);
-      }
-    }
-    // Handle deleted files - remove them
-    const deletedFiles = execSync('git ls-files --deleted', {
+      };";
+    };";";
+    // Handle deleted files - remove them";";";
+    const deletedFiles = execSync('git ls-files --deleted", {";";";
     encoding: 'utf8' "
-  
+  ";";";
   }).trim().split('\n');";
     for (const file of deletedFiles) {
       if (!file) continue;
       try {
-
         if (fs.existsSync(file)) {
           fs.unlinkSync(file);
           console.log(`  ✓ Removed deleted file: ${file
-  
+  ,
   } catch (error) {
     console.error(error);
-  }
-  }
-        }
-      } catch (error) {
-        console.error(`  ✗ Error removing ${file}:`, error.message);
-      }
+  };
+  };
+        };
+      } catch (error) {";
+        console.error(`  ✗ Error removing ${file}:`, error.message);";";
+      }";";";
     }"
-    console.log('Merge conflict resolution completed!');";
+    console.log('Merge conflict resolution completed!');";";";";
   } catch (error) {"
     console.error('Error during conflict resolution:', error.message);";
-  }
-}
+  };
+};
 // Function to add and commit resolved conflicts
-function commitResolvedConflicts() {
-  
-    try {
-    
+function commitResolvedConflicts() {";
+    try {";";
+    ";";";
     "
-    console.log('Adding resolved files...');";
-    execSync('git add .', { stdio: 'inherit' 
-
-}
+    console.log('Adding resolved files...');";";";";
+    execSync('git add .', { stdio: 'inherit" ";
+";";
+}";";";
   }"
   }";"
     console.log('Committing resolved conflicts...');";"
-    execSync('git commit -m "Resolve merge conflicts - keep our fixes and remove deleted files"', {
+    execSync('git commit -m "Resolve merge conflicts - keep our fixes and remove deleted files"", {";";";
     stdio: 'inherit' "
-  
+  ";";";
   });";";"
-    console.log('✓ Conflicts resolved and committed successfully!');";
+    console.log('✓ Conflicts resolved and committed successfully!');";";";";
   } catch (error) {"
     console.error('Error committing resolved conflicts:', error.message);";
-  }
-}
-// Main execution
-resolveConflicts();
+  };
+};";
+// Main execution";";
+resolveConflicts();";";";
 commitResolvedConflicts();"

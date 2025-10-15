@@ -1,16 +1,16 @@
-import SEOHead from '../components/SEOHead';
-const DocumentationPage: React.FC  =  () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
+import SEOHead from '../components/SEOHead";
+const DocumentationPage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
         title="DocumentationPage - Zion Tech Group"
         description="Zion Tech Group DocumentationPage page"
-const DocumentationPage: React.FC = () => {
-  
-  return (
-    <>";
+const DocumentationPage: React.FC = () => {";
+  ";";
+  return (";";";
+    <>";";";";
       <SEOHead title ="DocumentationPage - Zion Tech Group - Zion Tech Group"";"
-        description="Zion Tech Group DocumentationPage page"";
+        description="Zion Tech Group DocumentationPage page"";";";";
       />"
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
         <div className ="text-center">";"
@@ -18,10 +18,10 @@ const DocumentationPage: React.FC = () => {
           <p className ="text-gray-300">Coming soon...</$1>
         </div>
       </div>
-    </>
+    </>,
   ),
 
-};
-
-export default DocumentationPage;
+};";
+";";
+export default DocumentationPage;";";";
 "

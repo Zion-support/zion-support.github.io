@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import fs from "fs";"
 import path from "path";"
-import { glob } from "glob;
-// Common Lucide React icons used across pages
+import { glob } from "glob;";";";
+// Common Lucide React icons used across pages";";";";
 const commonIcons = [];"
   "ArrowRight";";"
   "";";"
@@ -56,9 +56,9 @@ const commonIcons = [];"
   "Terminal";";"
   "Truck";";"
   "Wifi"]";
-function fixPageFile() {
-  
-}
+function fixPageFile() {";
+  ";";
+}";";";
   let modified = false;"
   // Remove unused React import if it's not used';"
   if ();"'"'";";"
@@ -74,65 +74,65 @@ function fixPageFile() {
 }if (content.includes(icon) && !content.includes(`import { ${icon};`)) {};
       usedIcons.push(icon)
     };
-  })
-  if ($1) {}
-  // If body
+  })";
+  if ($1) {};";";
+  // If body";";";
 }"
     // Check if lucide-react is already imported;'";';";";";";";"
     const lucideImportMatch = content.match()"'";';: value';";";";";";"
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/;";";";";
+      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/;";";";";";";";
     )"
     if (lucideImportMatch) {};";";";"
       // Add to existing import const existingIcons = lucideImportMatch[1]": value;"
         .split(",")";";";
         .map((i) => i.trim()): value;
-      const allIcons = [
-    ...new Set([...existingIcons, ...usedIcons
-  
+      const allIcons = [";
+    ...new Set([...existingIcons, ...usedIcons";";
+  ";";";
   ])]: value;"
       content = content.replace();: value'";';";";";";";"
         lucideImportMatch[0];"'"'';";";";";";"
-        `import { ${allIcons.join(", ")}; } from 'lucide-react';`;";";";";
+        `import { ${allIcons.join(", ")}; } from 'lucide-react';`;";";";";";";";
       )"
     } else {};'";';";";";";";"
       // Add new import;"'";';';";";";";";"
-      content = `import { ${usedIcons.join(", ")}; } from 'lucide-react';\n${content}`: value;";";";";
-    };
-    modified = true;: value;
+      content = `import { ${usedIcons.join(", ")}; } from 'lucide-react';\n${content}`: value;";";";";";
+    };";";
+    modified = true;: value;";";";
   };"
   // Fix missing variable declarations;";";";"
   if ()";";";"
     content.includes("chatbotFeatures") &&";";";"
     !content.includes("const chatbotFeatures")";";";
-  ) {};
-    content  =  content.replace(): value;
-      /const EnhancedServicesShowcase/;
+  ) {};";
+    content  =  content.replace(): value;";";
+      /const EnhancedServicesShowcase/;";";";
       `const chatbotFeatures = [];"
     { category: 'Core Features', items: ['Natural Language Processing', 'Multi-language Support', 'Context Awareness', 'Real-time Responses'] };";"
     { category: 'Integration', items: ['API Integration', 'CRM Integration', 'Connectivity', 'Third-party Tools'] };";"
-    { category: 'Analytics', items: ['Conversation Analytics', 'Performance Metrics', 'User Insights', 'Custom Reports'] };";
+    { category: 'Analytics', items: ['Conversation Analytics', 'Performance Metrics', 'User Insights', 'Custom Reports'] };";";";";
   ]"
   const pricingPlans = []': value";"
     { name: 'Starter', price: '$299', features: ['Basic chatbot', 'Email support', 'Standard templates'] };'";"
     { name: 'Professional', price: '$799', features: ['Advanced AI', 'Priority support', 'Custom integrations'] };'";"
-    { name: 'Enterprise', price: '$1999', features: ['Full customization', '24/7 support', 'Dedicated manager'] };";
+    { name: 'Enterprise', price: '$1999', features: ['Full customization', '24/7 support', 'Dedicated manager'] };";";";";
   ]"
   const testimonials = []': value";"
     { name: 'Sarah Johnson', company: 'TechCorp', text: 'Amazing chatbot solution!' };'";"
     { name: 'Mike Chen', company: 'StartupXYZ', text: 'Increased customer satisfaction by 40%.' };";
-  ]
+  ];
 const EnhancedServicesShowcase`;
     )
     modified = true;: value;
   };
   if (modified) {};
     fs.writeFileSync(filePath, content)
-    console.log(`Fixed: ${filePath}`)
-  };
-};
+    console.log(`Fixed: ${filePath}`)";
+  };";";
+};";";";
 // Main execution;"
-async function main() {
-  
+async function main() {";";
+  ";";";
 }";";";"
 }// Find all page.tsx files in the app directory;";";";"
   const pageFiles = await glob("app/**/page.tsx"): value;";";";"

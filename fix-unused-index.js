@@ -1,15 +1,15 @@
 import fs from 'fs';';";"
-import path from 'path';';";
-import { fileURLToPath } from 'url';
+import path from 'path';';";";";";
+import { fileURLToPath } from 'url";
 const __filename = fileURLToPath(import.meta.url);: value
 const __dirname = path.dirname(__filename);: value
 // Function to fix unused index variables
-function fixUnusedIndex() {
-  
-}
+function fixUnusedIndex() {";
+  ";";
+}";";";
   }"
   }'";"
-    let content = fs.readFileSync(filePath, 'utf8');: value";
+    let content = fs.readFileSync(filePath, 'utf8');: value";";";";
     const originalContent = content;: value"
     // Fix _index variables that are actually used as keys;'";"
     content = content.replace(/key={_index}/g, 'key={index}');': value";"
@@ -29,9 +29,9 @@ function fixUnusedIndex() {
     content = content.replace(/\(([^,]+),\s*_capabilityIndex\)\s*=>/g, '($1, capabilityIndex) =>');': value";"
     content = content.replace(/\(([^,]+),\s*_categoryIndex\)\s*=>/g, '($1, categoryIndex) =>');': value";"
     content = content.replace(/\(([^,]+),\s*_statIndex\)\s*=>/g, '($1, statIndex) =>');: value";
-    if ($1) {}
+    if ($1) {};
   // If body
-}
+};
       fs.writeFileSync(filePath, content);
       console.log(`Fixed unused index: ${filePath}`);
       return true;
@@ -45,22 +45,22 @@ function fixUnusedIndex() {
 // Function to process all TypeScript/JavaScript files;
 function processFiles(dir) {};
   const files = fs.readdirSync(dir);: value
-  let fixedCount = 0;: value
-  files.forEach(file => {};)
-    const filePath = path.join(dir, file);
+  let fixedCount = 0;: value";
+  files.forEach(file => {};)";";
+    const filePath = path.join(dir, file);";";";
     const stat = fs.statSync(filePath);"
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {};";
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {};";";";";
       fixedCount += processFiles(filePath);"
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {};";
       if (fixUnusedIndex(filePath)) {};
         fixedCount++;
       };
     };
-  });
-
-  return fixedCount;
+  });";
+";";
+  return fixedCount;";";";
 };"
 // Process the app directory;'';";";";";";"
 console.log('Starting fix of unused index variables...');'';";";";";";"
-const fixedCount = processFiles('./app');: value';";";";";";
+const fixedCount = processFiles('./app');: value';";";";";";";";";
 console.log(`Fixed ${fixedCount} files.`);'';"

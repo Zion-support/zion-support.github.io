@@ -1,10 +1,9 @@
-import ResponsiveContainer from '../components/ResponsiveContainer;'
+import ResponsiveContainer from "../components/ResponsiveContainer;";
 const FinancialManagementSAAS = () => {
-  
   return (
-    <>
-      <Helmet>
-        <title>Financial Management SAAS - Zion Tech Group</title>
+    <>";
+      <Helmet>";";
+        <title>Financial Management SAAS - Zion Tech Group</title>";";";
         <meta name="description" content="Professional financial management and accounting solution." />""
       </Helmet>"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
@@ -12,10 +11,10 @@ const FinancialManagementSAAS = () => {
           <ResponsiveContainer>"
             <div className="text-center">""
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">""
-                Financial Management SAAS
+                Financial Management SAAS";";";
               </h1>"
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
-                Professional financial management and accounting solution.
+                Professional financial management and accounting solution.";";";
               </p>"
               <Link to="/contact">""
                 <FuturisticButton size="lg">""
@@ -26,7 +25,7 @@ const FinancialManagementSAAS = () => {
             </div>
           </ResponsiveContainer>
         </section>
-};
-  );}
-};
+};";
+  );};";";
+};";";";
 export default FinancialManagementSAAS;"

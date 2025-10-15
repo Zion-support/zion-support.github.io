@@ -1,13 +1,13 @@
-import React from 'react';';
-import SEOHead from './components/SEOHead';
-import { Helmet } from "react-helmet-async;"
-import { ArrowRight } from "lucide-react;
-export default function Header() {
-  
-}
-const ComponentsPage: React.FC  =  () => {
-  return (;
-    <>;
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";";";";
+import { Helmet } from "react-helmet-async;";";";";
+import { ArrowRight } from "lucide-react;";
+export default function Header() {";
+  ;";";
+};";";
+const ComponentsPage: React.FC  =  () => {";";";
+  return (;";";";
+    <>;";";";";
       <SEOHead;"
         title="Components - Zion Tech Group"";"
         description="Professional components solutions for modern businesses";"
@@ -18,9 +18,9 @@ const ComponentsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ComponentsPage;'";'";
+export default ComponentsPage;'";'";";";";
 "

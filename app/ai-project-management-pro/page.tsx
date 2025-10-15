@@ -17,21 +17,20 @@ import { Helmet } from 'react-helmet-async''
     'Save 15+ hours per week on project management''
     'Better resource utilization and cost control''
     'Enhanced team collaboration and communication''
-    { name: 'Slack''}
-    { name: 'Microsoft Teams''}
-    { name: 'Google Workspace''}
-    { name: 'Jira''}
-    { name: 'Trello''}
-    { name: 'Asana''}'
-
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-const AiProjectManagementProPage: React.FC = () => {
-  
-  return (
-    <>
-      <SEOHead title ="AI Project Management Pro - Zion Tech Group"",";
-        description="Advanced AI project management solution with intelligent task prioritization, resource allocation, and automated workflow optimization."";
+    { name: 'Slack'"}";";";
+    { name: 'Microsoft Teams'"}";";";
+    { name: 'Google Workspace'"}";";";
+    { name: 'Jira'"}";";";
+    { name: 'Trello'"}";";";
+    { name: 'Asana''}"
+";";";
+import React from 'react";";";";
+import SEOHead from '../components/SEOHead";
+const AiProjectManagementProPage: React.FC = () => {";
+  return (";";
+    <>";";,";
+      <SEOHead title ="AI Project Management Pro - Zion Tech Group"",";";";";
+        description="Advanced AI project management solution with intelligent task prioritization, resource allocation, and automated workflow optimization."";";";";
       />"
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
         <div className ="text-center">";"
@@ -42,7 +41,7 @@ const AiProjectManagementProPage: React.FC = () => {
     </>
   );
 
-};
-
-export default AiProjectManagementProPage;
+};";
+";";
+export default AiProjectManagementProPage;";";";
 "

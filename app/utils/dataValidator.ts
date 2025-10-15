@@ -1,14 +1,12 @@
 
 interface DataValidatorOptions {
   // Add your options here;
-}
-
+};
 interface DataValidatorState {
   // Add your state here;
-}
-
-export const DataValidator = (options: DataValidatorOptions = {
-  }) => {
+};
+export const DataValidator = (options: DataValidatorOptions = {,
+  }) => {;
     const stateRef = useRef<DataValidatorState>({;
     // Initialize your state here;
   
@@ -18,7 +16,6 @@ export const DataValidator = (options: DataValidatorOptions = {
   useEffect(() => {
     // Add your effect logic here;
   }, [
-    
   ]);
 
   return {
@@ -26,5 +23,5 @@ export const DataValidator = (options: DataValidatorOptions = {
   };
 };
 
-export default DataValidator;';';";
+export default DataValidator;';';";";";";
 "

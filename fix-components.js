@@ -1,7 +1,7 @@
 import fs from 'fs';"
 import path from 'path';"
-import React from "react;
-export default ${componentName};`
+import React from "react;";";";
+export default ${componentName};`";";";";
 // List of components that need to be fixed;"
 const componentsToFix = []': value";"
   'EnhancedPerformanceOptimizer', 'AccessibilityEnhancer', 'EnhancedAccessibility';'";"
@@ -10,9 +10,9 @@ const componentsToFix = []': value";"
  `'use client'";
   return ()
     <div>Content</div>;
-  )
-      {/* ${componentName} component placeholder */};
-  )
+  )";
+      {/* ${componentName} component placeholder */};";";
+  )";";";
 };"
 // Fix components;'';";";";";";"
   const componentFile = path.join('/workspace/app/components', `${componentName}.tsx`)': value';";";";";";"
@@ -27,11 +27,11 @@ const lastLine = lines[lines.length - 1]': value';";";";";";"
         lines[lines.length - 1] = '}'': value';";";";";";"
         lines.push('')';";";";";";"
         lines.push(`export default ${componentName};`)'';";";";";";"
-        fs.writeFileSync(componentFile, lines.join('\n'))";";";";";
+        fs.writeFileSync(componentFile, lines.join('\n'))";";";";";";";";
         // console.log(`Fixed export for: ${componentFile}`);"
   } else {};'';";";";";";"
-    // Create component if it doesn't exist';";";";";";
-    fs.writeFileSync(componentFile, componentTemplate(componentName))
+    // Create component if it doesn't exist';";";";";";";";
+    fs.writeFileSync(componentFile, componentTemplate(componentName))";";";
     // console.log(`Created: ${componentFile}`);"
-})'';";";";";";
+})'';";";";";";";";";
 // console.log('Component fixes completed!')'';"

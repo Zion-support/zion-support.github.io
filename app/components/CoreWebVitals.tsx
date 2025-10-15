@@ -1,26 +1,26 @@
 import React, { useEffect, useCallback } from "react;
 interface WebVitalsData {},
       name: string
-  value: number
-  delta: number
-  id: string
-  navigationType: string
-},
-      const CoreWebVitals: React.FC = () => {};
-}const reportWebVitals = useCallback((data: WebVitalsData) => {};
-}// Send to Google Analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {};
-      (window as any).gtag('event', 'web_vitals', {},)
+  value: number";
+  delta: number";
+  id: string";
+  navigationType: string";";
+},";";
+      const CoreWebVitals: React.FC = () => {};";";";
+}const reportWebVitals = useCallback((data: WebVitalsData) => {};";";";
+}// Send to Google Analytics if available";";";";
+    if (typeof window !== 'undefined" && (window as any).gtag) {};";";";
+      (window as any).gtag('event', 'web_vitals", {},)
       metric_name: data.name,
       metric_value: Math.round(data.value),
       metric_delta: Math.round(data.delta),
       metric_id: data.id,
       metric_navigation_type: data.navigationType
-      })
-    };
-    // Send to custom analytics
-    if (typeof window !== 'undefined' && (window as any).analytics) {};
-      (window as any).analytics.track('Web Vitals', {},)
+      })";
+    };";";
+    // Send to custom analytics";";";
+    if (typeof window !== 'undefined" && (window as any).analytics) {};";";";
+      (window as any).analytics.track('Web Vitals", {},)
       metric: data.name,
       value: data.value,
       delta: data.delta,
@@ -28,19 +28,19 @@ interface WebVitalsData {},
       })
     };
     // Log in development
-    if ($1) {}
+    if ($1) {};
   // If body
-}
+};
       };
-  }, [
-    
-  ]);
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+  }, [";
+    ";";
+  ]);";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const ComponentsPage: React.FC  =  () => {
-  return (;
-    <>;
+const ComponentsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Components - Zion Tech Group"";"
         description="Professional components solutions for modern businesses";"
@@ -51,10 +51,10 @@ const ComponentsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
-export default CoreWebVitals
+    </>;,
+  ),";
+};";";
+export default CoreWebVitals";";";
 ;"
-export default ComponentsPage;'";'";
+export default ComponentsPage;'";'";";";";
 "

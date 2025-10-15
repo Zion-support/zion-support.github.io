@@ -1,15 +1,13 @@
 import { useEffect, useRef }; from 'react';";";";";";
 
-export function useIntersectionObserver(
-  callback: IntersectionObserverCallback,;
-  options?: IntersectionObserverInit;
+export useIntersectionObserver() {
 ) {
     const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const element = ref.current;
-    if (!element) return;
-
+    const element = ref.current;";
+    if (!element) return;";";
+";";";
     const observer = new IntersectionObserver(callback, {"
       threshold: 0.1,';';";";";";";"
       rootMargin: '50px',;";";";";";
@@ -26,9 +24,9 @@ export function useIntersectionObserver(
     callback, options
   
   ]);
-
-  return ref;
-}
+";
+  return ref;";";
+}";";";
 ;"
-export default useIntersectionObserver;';';";
+export default useIntersectionObserver;';';";";";";
 "

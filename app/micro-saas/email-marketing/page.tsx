@@ -1,15 +1,15 @@
-import SEOHead from '../components/SEOHead';
-const PagePage: React.FC  =  () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
+import SEOHead from '../components/SEOHead";
+const PagePage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
         title="page - Zion Tech Group"
         description="Zion Tech Group page service page"
-const EmailMarketingPage: React.FC = () => {
-  return (
-    <>";
+const EmailMarketingPage: React.FC = () => {";";
+  return (";";";
+    <>";";";";
       <SEOHead title ="email-marketing - Zion Tech Group - Zion Tech Group"";"
-        description="Zion Tech Group email-marketing service page"";
+        description="Zion Tech Group email-marketing service page"";";";";
       />"
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
         <div className ="text-center">";"
@@ -18,10 +18,10 @@ const EmailMarketingPage: React.FC = () => {
         </div>
       </div>
     </>
-  )
-    },
-    {}
-export default PagePage;
   ),
-};
+    },
+    {};
+export default PagePage;";
+  ),";";
+};";";";
 "

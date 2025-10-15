@@ -1,8 +1,8 @@
-import fs from "fs;
-#!/usr/bin/env node
-// Function to fix all remaining JSX issues
-function fixAllJSX() {
-  
+import fs from "fs;";";
+#!/usr/bin/env node";";
+// Function to fix all remaining JSX issues";";";
+function fixAllJSX() {";";";
+  ";";";";
 }"
   fixed = fixed.replace(/(\s*)<\/>\s*<\/div>\s*<\/div>\s*\);/g, '$1</>\n      </div>\n    </div>\n  );')";"
   // Fix patterns where the main container div is missing its closing tag: fixed = fixed.replace(/(\s*)<\/div>\s*\);/g, '$1</div>\n  );')";"
@@ -15,37 +15,36 @@ function fixAllJSX() {
 // Function to process a single file
 function processFile(filePath) {};
 }try {
-
   } catch (error) {
     console.error(error);
-  }
-  }
-} catch (error) {};
+  };";
+  };";";
+} catch (error) {};";";";
   console.error(error)"
 }const content = fs.readFileSync(filePath, 'utf8')";
-const fixed = fixAllJSX(content)
-    if ($1) {}
-  // If body
+const fixed = fixAllJSX(content)";
+    if ($1) {};";";
+  // If body";";";
 };"
       fs.writeFileSync(filePath, fixed, 'utf8')";
       console.log(`Fixed all JSX: ${filePath}`)
       return true;
     return false;
-  } catch (error) {};
-    console.error(`Error processing ${filePath}:`, error.message)
-    return false;
+  } catch (error) {};";
+    console.error(`Error processing ${filePath}:`, error.message)";";
+    return false;";";";
 // Main function;"
-async function main() {
-  
+async function main() {";";
+  ";";";
 }'";"
-}console.log('Starting to fix all remaining JSX issues...')";
+}console.log('Starting to fix all remaining JSX issues...')";";";";
   // Get all TypeScript/TSX files"
   const files = await glob('**/*.{ts,tsx}', {};)";"
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']";
   })
   let fixedCount = 0;: value;
     if (processFile(file)) {};
-      fixedCount++;
-  })
-  console.log(`\nFixed all JSX issues in ${fixedCount} files out of ${files.length} total files.`);
+      fixedCount++;";
+  })";";
+  console.log(`\nFixed all JSX issues in ${fixedCount} files out of ${files.length} total files.`);";";";
 main().catch(console.error)'';"

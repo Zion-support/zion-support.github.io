@@ -1,22 +1,22 @@
-import React from 'react';';
-import SEOHead from '../../components/SEOHead';
-,
+import React from 'react';";";";";
+import SEOHead from '../../components/SEOHead";";";
+,";";";
       import { HelmetProvider } from "react-helmet-async",;"
-      import { AnalyticsProvider } from "./components/AnalyticsProvider;"
+      import { AnalyticsProvider } from "./components/AnalyticsProvider;";";";";
 // import LoadingSpinner from "./components/LoadingSpinner; // Removed unused import";"
 import { ErrorBoundary } from "react-error-boundary","
       import ErrorFallback from "./components/ErrorFallback","
       import MobileNavigation from "./components/MobileNavigation",;"
-      import EnhancedNavigation from "./components/EnhancedNavigation;
+      import EnhancedNavigation from "./components/EnhancedNavigation;";";";";
 ,"
       interface LayoutProps {"}"
         "
   children: React.ReactNode
     },
-    {}
-const Layout: React.FC<LayoutProps>  =  ({
-    children ;
-  }) => {};
+    {};
+const Layout: React.FC<LayoutProps>  =  ({";
+    children ;";,";
+  }) => {};";";";
 }return ()"
     <ErrorBoundary FallbackComponent={ErrorFallback}>","
         "
@@ -357,14 +357,14 @@ const Layout: React.FC<LayoutProps>  =  ({
         "
     </ErrorBoundary>","
         "
-  )
+  )";";";
 },"
       export default Layout","
         "
 
-const AppPage: React.FC  =  () => {
-  return (;
-    <>;
+const AppPage: React.FC  =  () => {;";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="App - Zion Tech Group"";"
         description="Professional app solutions for modern businesses";"
@@ -375,9 +375,9 @@ const AppPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default AppPage;'";'";
+export default AppPage;'";'";";";";
 "

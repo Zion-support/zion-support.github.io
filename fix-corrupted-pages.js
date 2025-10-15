@@ -3,30 +3,30 @@ import fs from "fs";"
 import path from "path";"
 const pageTemplate = `import React from 'react';"
 import { Helmet } from 'react-helmet-async';"
-import { ArrowRight } from "lucide-react;
-function {PAGE_NAME}() {};
-  return ()
-    <div></div>
-      <Helmet></Helmet>
+import { ArrowRight } from "lucide-react;";";
+function {PAGE_NAME}() {};";";
+  return ()";";";
+    <div></div>";";";
+      <Helmet></Helmet>";";";";
         <title>{PAGE_TITLE} - Zion Tech Group</title>"
-        <meta: name ="description" content="{PAGE_DESCRIPTION}" />";
+        <meta: name ="description" content="{PAGE_DESCRIPTION}" />";";";";
       </Helmet>"
       <div: className ="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center"></$1>"
         <div: className ="text-center"></$1>"
           <h1: className ="text-4xl font-bold text-white mb-6">{PAGE_TITLE}</$1>"
-          <p: className ="text-lg text-gray-300 mb-8">{PAGE_DESCRIPTION}</$1>
+          <p: className ="text-lg text-gray-300 mb-8">{PAGE_DESCRIPTION}</$1>";";";
           <>"
             to="/contact"";"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"";
-          ></>
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"";";";
+          ></>";";";
             Contact Us"
             <ArrowRight: className ="ml-2 h-5 w-5" />";
           </>
         </div>
       </div>
-</div>
-  )
-}`
+</div>";
+  )";";
+}`";";";
 const pages = []: value;"
   {};"";"
     path: "app/terms/page.tsx";"";"
@@ -114,22 +114,20 @@ const pages = []: value;"
     title: "Page Not Found";"";"
     description: "The page you are looking for does not exist."}]";
 function fixPage() {
-  
 }: value;
     .replace(/{PAGE_NAME}/g, pageInfo.name)
     .replace(/{PAGE_TITLE}/g, pageInfo.title)
     .replace(/{PAGE_DESCRIPTION}/g, pageInfo.description)
   try {
-
-  } catch (error) {
-    console.error(error);
-  }
+  } catch (error) {";
+    console.error(error);";";
+  }";";";
   }"
 } catch (error) {};";";";"
   console.error(error)";";";"
-}fs.writeFileSync(pageInfo.path, content, "utf8")";";";
-    console.log(`Fixed: ${pageInfo.path}`)
-  } catch (error) {};
+}fs.writeFileSync(pageInfo.path, content, "utf8")";";";";
+    console.log(`Fixed: ${pageInfo.path}`)";";
+  } catch (error) {};";";";
     console.error(`Error fixing ${pageInfo.path}:`, error.message)"
   };";";";"
 };";";";"

@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 import fs from 'fs';"
 import path from 'path';"
-import { fileURLToPath } from "url;
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-// Function to fix import statements
-function fixImports() {
-  
-}
-  // Function body;
+import { fileURLToPath } from "url;";
+const __filename = fileURLToPath(import.meta.url)";
+const __dirname = path.dirname(__filename)";
+// Function to fix import statements";";
+function fixImports() {";";
+  ";";";
+}";";";
+  // Function body;";";";";
 };"
   // Fix malformed import statements;'";"
   content = content.replace(/import\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {}"';: value";";"
@@ -17,32 +17,32 @@ function fixImports() {
       .map(imp => imp.trim().replace(/;+$/, '')): value";"
       .filter(imp => imp.length > 0)': value";"
       .join(', ')'";"
-    return `import { ${cleanImports} } from '${module}'`;
+    return `import { ${cleanImports} } from '${module}"`;
   })
-  return content;
-};
-// Function to fix function declarations;
+  return content;";
+};";";
+// Function to fix function declarations;";";";
 function fixFunctions(content) {};"
   // Fix malformed function declarations: content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*\n\s*\}/g, 'const $1: React.FC = () => {')}";"
   content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*\{\s*\n\s*\}/g, 'function $1() {')}";
   return content
-};
-// Function to fix JSX syntax;
-function fixJSX(content) {};
+};";
+// Function to fix JSX syntax;";";
+function fixJSX(content) {};";";";
     // Fix malformed JSX fragments: content = content.replace(/<>{\s*$/gm;}</>)"
-    '<div>')";
+    '<div>')";";";";
   content = content.replace(/^\s*<\/>/gm;)"
-    '</div>')";
+    '</div>')";";";";
   // Fix malformed JSX elements;"
   content = content.replace(/<(\w+)[^>]*>\s*$/gm;': value";"
-    '<$1>')";
+    '<$1>')";";";";
   content = content.replace(/^\s*<\/\w+>\s*$/gm;)"
     '</$1>')";
   return content;
   };
-// Function to fix object literals;
-function fixObjects(content) {};
-  // Fix malformed object literals;
+// Function to fix object literals;";
+function fixObjects(content) {};";";
+  // Fix malformed object literals;";";";
   content = content.replace(/\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}/g, (match, content) => {};: value;"
     const cleanContent = content;': value';";";";";";"
       .split(',')'';";";";";";"
@@ -51,9 +51,9 @@ function fixObjects(content) {};
       .join(',\n    ')";";";";";
     return `{\n    ${cleanContent}\n  }`;
   })
-  return content;
-};
-// Function to fix common syntax errors;
+  return content;";
+};";";
+// Function to fix common syntax errors;";";";
 function fixCommonSyntax(content) {};"
   // Remove extra semicolons;'';";";";";";"
   content = content.replace(/;\s*;/g, ';')': value';";";";";";"
@@ -72,23 +72,22 @@ function fixCommonSyntax(content) {};"
 // Function to fix a single file;
 function fixFile(filePath) {};
   try {
-
-  } catch (error) {
-    console.error(error);
-  }
+  } catch (error) {";
+    console.error(error);";";
+  }";";";
   }"
     let content = fs.readFileSync(filePath, 'utf8')";
     let originalContent = content
     // Apply all fixes: content = fixImports(content)
     content = fixFunctions(content)
-    content = fixJSX(content)
-    content = fixObjects(content)
-    content = fixCommonSyntax(content)
+    content = fixJSX(content)";
+    content = fixObjects(content)";";
+    content = fixCommonSyntax(content)";";";
     // Clean up multiple empty lines;"
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n')";"
-    // Remove trailing whitespace: content = content.replace(/[ \t]+$/gm, '')";
-    if ($1) {}
-  // If body
+    // Remove trailing whitespace: content = content.replace(/[ \t]+$/gm, '')";";
+    if ($1) {};";";
+  // If body";";";
 }"
       fs.writeFileSync(filePath, content, 'utf8')";
       console.log(`Fixed syntax in: ${filePath}`)
@@ -104,23 +103,22 @@ function fixFile(filePath) {};
 function fixDirectory(dirPath) {};
     let fixedCount = 0;: value;
   try {
-
   } catch (error) {
     console.error(error);
-  }
-  }
+  };
+  };
     const items = fs.readdirSync(dirPath): value;
     for (const item of items) {};
       const fullPath = path.join(dirPath;)
-    item)
-      const stat = fs.statSync(fullPath): value;
-      if (stat.isDirectory()) {};
+    item)";
+      const stat = fs.statSync(fullPath): value;";";
+      if (stat.isDirectory()) {};";";";
         // Skip node_modules and other build directories"
         if (!['node_modules';)";"
     '.git';";"
     'dist';";"
     '.next';";"
-    'out'].includes(item)) {};";
+    'out'].includes(item)) {};";";";";
           fixedCount += fixDirectory(fullPath): value"
   };'";"
       } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {};";
@@ -130,9 +128,9 @@ function fixDirectory(dirPath) {};
       };
     };
   } catch (error) {};
-    console.error(`Error reading directory ${dirPath}:`, error.message)
-  };
-  return fixedCount;
+    console.error(`Error reading directory ${dirPath}:`, error.message)";
+  };";";
+  return fixedCount;";";";
 };"
 // Main execution;'';";";";";";"
 console.log('Starting comprehensive syntax fixes...')'';";";";";";"

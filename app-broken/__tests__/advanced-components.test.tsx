@@ -1,112 +1,109 @@
 import React from 'react',;"
-    import { render, screen } from '@testing-library/react',;
-    import { Helmet, HelmetProvider } from 'react-helmet-async';
+    import { render, screen } from '@testing-library/react",;";";";
+    import { Helmet, HelmetProvider } from 'react-helmet-async";
 // Mock components
-const AdvancedErrorBoundary = ({)}
+const AdvancedErrorBoundary = ({)};
   children, 
   enableRetry, 
   onError 
-}: {}
+}: {};
   children: React.ReactNode,
       enableRetry?: boolean,;
       onError?: (error: Error) => void;
-}) => {}
+}) => {};
   const [hasError, setHasError]  =  React.useState(false),
       const [error, setError] = React.useState<Error | null>(null),
-      React.useEffect(() => {}
-    const handleError = (error: Error) => {}
+      React.useEffect(() => {};
+    const handleError = (error: Error) => {};
       setHasError(true),
       setError(error),;
       if (onError) {};
         onError(error);
-      }
+      };
     };
     // Simulate error boundary behavior
     try {
-
   } catch (error) {
     console.error(error);
-  }
-  }
-    }
+  };
+  };
+    };
   }, [
     onError
-  
-  ]),
-      if (hasError) {}
+  ";
+  ]),";";
+      if (hasError) {}";";";
     return ()"
       <div data-testid="error-boundary">";
-        <h2>Unexpected Application Error!</h2>
-        <p>Oops! Something went wrong</p>
-        {error && ()}
+        <h2>Unexpected Application Error!</h2>";
+        <p>Oops! Something went wrong</p>";";
+        {error && ()}";";";
           <div>"
             <h3: style ={{ fontStyle: 'italic' }}>{error.message}</$1>"
             <pre: style ={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)' }}>";
-              {error.stack}
+              {error.stack};
             </pre>
           </div>
-        )}
-        {enableRetry && ()}
+        )};
+        {enableRetry && ()};
           <div>
             <button>Try Again</button>
             <button>Reload Page</button>
           </div>
-        )}
+        )};
       </div>
     );
-  }
-  return <>{children}</>
-};
+  };";
+  return <>{children}</>";";
+};";";";
 const TestComponent = () => <div>Test Component</div>,;"
       describe('Advanced Components', () => {}";"
   test('AdvancedErrorBoundary renders children when no error', () => {}";
     render()
-      <AdvancedErrorBoundary>
-        <TestComponent />
-      </AdvancedErrorBoundary>
+      <AdvancedErrorBoundary>";
+        <TestComponent />";";
+      </AdvancedErrorBoundary>";";";
     ),"
-      expect(screen.getByText('Test Component')).toBeInTheDocument();";
+      expect(screen.getByText('Test Component')).toBeInTheDocument();";";";";
   }),"
-      test('AdvancedErrorBoundary shows error UI when error occurs', () => {}";
+      test('AdvancedErrorBoundary shows error UI when error occurs', () => {}";";";";
     const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {"
   });";
     // Mock the error boundary to actually catch errors
-    const ErrorBoundaryWrapper = () => {}
+    const ErrorBoundaryWrapper = () => {};
       const [hasError, setHasError]  =  React.useState(false),
-      React.useEffect(() => {}
+      React.useEffect(() => {};
         try {
-
   } catch (error) {
-    console.error(error);
-  }
-    console.error(error);
+    console.error(error);";
+  };";";
+    console.error(error);";";";
   }"
           throw new Error('Test error');";
-        } catch {}
+        } catch {};
           setHasError(true);
-        }
-      }, [
-    
-  ]),
-      if (hasError) {}
+        };
+      }, [";
+  ]),";";
+      if (hasError) {}";";";
         return ()"
           <div data-testid="error-boundary">";
             <h2>Unexpected Application Error!</h2>
             <p>Oops! Something went wrong</p>
           </div>
         );
-      }
-      return <div>No error</div>
-    },
-    {}
+      };
+      return <div>No error</div>";
+    },";";
+    {}";";";
     render(<ErrorBoundaryWrapper />),"
       expect(screen.getByTestId('error-boundary')).toBeInTheDocument(),";"
-      expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument(),";
-      consoleSpy.mockRestore();
+      expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument(),";";";
+      consoleSpy.mockRestore();";";";
   }),"
-      test('SEOEnhancer works with HelmetProvider', () => {}";
-    const SEOEnhancer = () => ()
-      <Helmet>
+      test('SEOEnhancer works with HelmetProvider', () => {}";";
+    const SEOEnhancer = () => ()";";
+      <Helmet>";";";
         <title>Test Title</title>;"
         <meta: name ="description" content="Test description" />";
       </Helmet>
@@ -114,11 +111,11 @@ const TestComponent = () => <div>Test Component</div>,;"
       render()
       <HelmetProvider>
         <SEOEnhancer />
-      </HelmetProvider>
-    );
-    // Wait for Helmet to update the document title
+      </HelmetProvider>";
+    );";";
+    // Wait for Helmet to update the document title";";";
     setTimeout(() => {}"
-      expect(document.title).toBe('Test Title');";
-    }, 100);
-  });
+      expect(document.title).toBe('Test Title');";";
+    }, 100);";";
+  });";";";
 });"

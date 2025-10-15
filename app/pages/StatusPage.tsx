@@ -1,6 +1,6 @@
-import React from 'react';';
-import SEOHead from './components/SEOHead';
-import { Helmet } from 'react-helmet-async',
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";";";";
+import { Helmet } from 'react-helmet-async",";";";
       const StatusPage: React.FC  =  () => {"}"
         "
   const services = [","
@@ -11,10 +11,10 @@ import { Helmet } from 'react-helmet-async',
         "
     { name: '', status: 'operational', uptime: '99.9%' },","
         "
-    { name: 'CDN', status: 'operational', uptime: '99.9%' },",";
-
-    { name: 'Authentication', status: 'operational', uptime: '99.9%' };
-  ];
+    { name: 'CDN', status: 'operational', uptime: '99.9%' },",";";";
+";";";
+    { name: 'Authentication', status: 'operational', uptime: '99.9%" };";";
+  ];";";";
 ,"
       return (<>{"}</>)"
         "
@@ -107,13 +107,13 @@ import { Helmet } from 'react-helmet-async',
     </>";"
   )
     },
-    {}
+    {};
 ,
       export default StatusPage;
 
-const PagesPage: React.FC  =  () => {
-  return (;
-    <>;
+const PagesPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Pages - Zion Tech Group"";"
         description="Professional pages solutions for modern businesses";"
@@ -124,9 +124,9 @@ const PagesPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default PagesPage;'";'";
+export default PagesPage;'";'";";";";
 "

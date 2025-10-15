@@ -1,21 +1,21 @@
-import React from 'react""use client';
-export default function ZionAiLeadScoringPage() {
-  
+import React from 'react""use client";";
+export default function ZionAiLeadScoringPage() {;";";
+  ";";";
 }"
       <div className="container mx-auto px-4">;"
         <h1 className="text-4xl font-bold mb-8">Zion Ai Lead Scoring</h1>;"
         <p className="text-gray-300 text-lg">;
           This page is under development.;
         </p>;
-      </div>;
-    </div>;
-  );
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+      </div>;";
+    </div>;";";
+  );";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const ZionAiLeadScoringPage: React.FC  =  () => {
-  return (;
-    <>;
+const ZionAiLeadScoringPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Zion Ai Lead Scoring - Zion Tech Group"";"
         description="Professional zion ai lead scoring solutions for modern businesses";"
@@ -26,9 +26,9 @@ const ZionAiLeadScoringPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ZionAiLeadScoringPage;'";'";
+export default ZionAiLeadScoringPage;'";'";";";";
 "

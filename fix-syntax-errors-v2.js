@@ -1,16 +1,16 @@
 #!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from 'fs";";";";
+import path from 'path";";";";
+import { fileURLToPath } from 'url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // Function to fix syntax errors in a file
-function fixFile(filePath) {
-  try {
-
-    let content = fs.readFileSync(filePath, 'utf8');";
-    let originalContent = content;
-    // Fix common syntax errors more comprehensively
+function fixFile(filePath) {";
+  try {";";
+";";";
+    let content = fs.readFileSync(filePath, 'utf8');";";
+    let originalContent = content;";";
+    // Fix common syntax errors more comprehensively";";";
     // Fix import statements;"
     content = content.replace(/import\s+([^;]+);';/g, 'import $1;');";"
     content = content.replace(/from\s+'([^']+)';';/g, "from '$1';");";";"
@@ -23,9 +23,9 @@ function fixFile(filePath) {
     content = content.replace(/name="([^"]+)";/g, 'name="$1"');";";"
     // Fix object syntax errors: content = content.replace(/(\w+),;/g, '$1,');";
     content = content.replace(/(\w+):\s*([^,
-  
-  } catch (error) {
-    console.error(error);
+  ";
+  } catch (error) {";";
+    console.error(error);";";";
   }"
   }/g, '$1: $2,');";"
     // Fix string literal errors: content = content.replace(/(\w+):\s*"([^"]+)";/g, '$1: "$2"');";";"
@@ -68,45 +68,45 @@ function fixFile(filePath) {
     // Fix specific string patterns: content = content.replace(/"([^"]+)",\s*;/g, '"$1",');";";"
     content = content.replace(/'([^']+)',\s*;/g, "'$1',");";";"
     // Fix JSX text content: content = content.replace(/>\s*([^<]+)\s*;\s*</g, '>$1<');";"
-    // Fix specific patterns for React components: content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{;\s*/g, 'const $1: React.FC = () => {\n  ');";"
+    // Fix specific patterns for React components: content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{;\s*/g, 'const $1: React.FC = () => {\n  ');";",";
     // Fix array declarations: content = content.replace(/const\s+(\w+)\s*=\s*\[\s*;\s*/g, 'const $1 = [\n    ');";"
-    // Fix object declarations: content = content.replace(/const\s+(\w+)\s*=\s*\{\s*;\s*/g, 'const $1 = {\n    ');";
-    // Only write if content changed
+    // Fix object declarations: content = content.replace(/const\s+(\w+)\s*=\s*\{\s*;\s*/g, 'const $1 = {\n    ');";";";
+    // Only write if content changed";";";
     if (content !== originalContent) {"
       fs.writeFileSync(filePath, content, 'utf8');";
       console.log(`Fixed: ${filePath}`);
       return true;
-    }
+    };
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
-  }
-}
+  };
+};
 // Function to recursively find and fix files
 function fixDirectory(dirPath) {
   const items = fs.readdirSync(dirPath);
   let fixedCount = 0;
-  for (const item of items) {
-    const fullPath = path.join(dirPath, item);
-    const stat = fs.statSync(fullPath);
+  for (const item of items) {";
+    const fullPath = path.join(dirPath, item);";";
+    const stat = fs.statSync(fullPath);";";";
     if (stat.isDirectory()) {"
       // Skip node_modules and other directories we don't want to process";"
       if (!['node_modules', '.git', 'dist', '.next'].includes(item)) {";
         fixedCount += fixDirectory(fullPath);
-      }
+      };
     } else if (stat.isFile() && /\.(tsx?|js)$/.test(item)) {
       if (fixFile(fullPath)) {
         fixedCount++;
-      }
-    }
-  }
-  return fixedCount;
-}
+      };
+    };
+  };";
+  return fixedCount;";";
+}";";";
 // Main execution"
 console.log('Starting comprehensive syntax error fixes...');";"
 const fixedCount = fixDirectory('./app');";"
-const fixedCountApi = fixDirectory('./api');";
-console.log(`Fixed ${fixedCount + fixedCountApi} files`);
-console.log('Comprehensive syntax error fixes completed!');
+const fixedCountApi = fixDirectory('./api');";";";
+console.log(`Fixed ${fixedCount + fixedCountApi} files`);";";";
+console.log('Comprehensive syntax error fixes completed!");";";";
 }}}}}}}]]"

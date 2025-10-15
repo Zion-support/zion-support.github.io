@@ -1,10 +1,10 @@
-import React from 'react';';
-import SEOHead from './components/SEOHead';
-export const Icon  =  ({},)
-      name,;
-      className = "";: value
-
-export const Icon = ({}: value,;
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";";
+export const Icon  =  ({},);";";
+      name,;";";";
+      className = "";: value";
+";";
+export const Icon = ({}: value,;";";";
       name,;"
       className = "";: value;";
   ...props;
@@ -19,7 +19,7 @@ export const Icon = ({}: value,;
     </span>
   )
     },
-    {}
+    {};
 export default Icon;
 export default ComponentsPage;
   [key: string]: unknown,
@@ -27,9 +27,9 @@ export default ComponentsPage;
       return (
     <span className ={`icon ${className}`} {...props}></span>: value;
       {name};
-    </span>;
-  );
-    };
+    </span>;";
+  );";";
+    };";";";
 {"
-export default ComponentsPage;'";'";
+export default ComponentsPage;'";'";";";";
 "

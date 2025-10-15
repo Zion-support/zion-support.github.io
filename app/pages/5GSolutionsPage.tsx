@@ -1,16 +1,16 @@
-import SEOHead from '../components/SEOHead';
-const FiveGSolutionsPage: React.FC  =  () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
+import SEOHead from '../components/SEOHead";
+const FiveGSolutionsPage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
         title="5GSolutionsPage - Zion Tech Group"
         description="Zion Tech Group 5GSolutionsPage page"
-const FiveGSolutionsPage: React.FC = () => {
-  
-  return (
-    <>";
+const FiveGSolutionsPage: React.FC = () => {";
+  ";";
+  return (";";";
+    <>";";";";
       <SEOHead title ="5GSolutionsPage - Zion Tech Group - Zion Tech Group"";"
-        description="Zion Tech Group 5GSolutionsPage page"";
+        description="Zion Tech Group 5GSolutionsPage page"";";";";
       />"
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
         <div className ="text-center">";"
@@ -18,10 +18,10 @@ const FiveGSolutionsPage: React.FC = () => {
           <p className ="text-gray-300">Coming soon...</$1>
         </div>
       </div>
-    </>
+    </>,
   ),
 
-};
-
-export default FiveGSolutionsPage;
+};";
+";";
+export default FiveGSolutionsPage;";";";
 "

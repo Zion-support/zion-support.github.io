@@ -1,13 +1,13 @@
-import { Helmet } from "react-helmet-async;
-export default function UtilsPage() {
-  
-}
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+import { Helmet } from "react-helmet-async;";";
+export default function UtilsPage() {";";";
+  ";";";
+}";";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const UtilsPage: React.FC  =  () => {
-  return (;
-    <>;
+const UtilsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Utils - Zion Tech Group"";"
         description="Professional utils solutions for modern businesses";"
@@ -18,8 +18,8 @@ const UtilsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
 export default UtilsPage;'";'";"

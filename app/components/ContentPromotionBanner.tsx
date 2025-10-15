@@ -1,47 +1,46 @@
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 interface ContentPromotionBannerProps {},
       title?: string
-  description?: string
-  ctaText?: string
-  ctaLink?: string
+  description?: string";
+  ctaText?: string";";
+  ctaLink?: string";";";
   variant?: "primary" | "secondary" | "success"
-  className?: string
-},
+  className?: string";";
+},";";";
       const ContentPromotionBanner: React.FC<ContentPromotionBannerProps>  =  ({},)"
       title = "Transform Your Business with AI", description = "Discover how our cutting-edge AI solutions can revolutionize your operations and drive unprecedented growth.", ctaText = "Get Started Today", ctaLink = "/contact", variant = "primary", className = ""}) => {},
       const getVariantStyles = () => {
-  
 };
-  const getIcon = () => {
-  
-};
+  const getIcon = () => {";
+  ";";
+};";";";
 }switch (variant) {},"
       case "primary":"
         return <className="w-6 h-6" />"
       case "secondary":"
         return <Star className="w-6 h-6" />"
       case "success":"
-        return <Star className="w-6 h-6" />
+        return <Star className="w-6 h-6" />";";";
       default:"
         return <className="w-6 h-6" />
-    }
+    };
     },
-    {}
-  return ()
-    <divclassName={`relative overflow-hidden rounded-lg p-8 text-white ${getVariantStyles()} ${className}`};>
-    ></div
+    {};
+  return ()";
+    <divclassName={`relative overflow-hidden rounded-lg p-8 text-white ${getVariantStyles()} ${className}`};>";";
+    ></div";";";
 >"
       <div className="relative z-10"></div>"
         <div className="flex items-center justify-center mb-4">{getIcon()}</div>"
         <h2 className="text-3xl font-bold text-center mb-4">{title}</h2>"
-        <p className="text-lg text-center mb-6 opacity-90 max-w-2xl mx-auto"></p>
-          {description};
+        <p className="text-lg text-center mb-6 opacity-90 max-w-2xl mx-auto"></p>";";
+          {description};";";";
         </p>"
-        <div className="text-center"></div>
-          <>
+        <div className="text-center"></div>";";
+          <>";";";
             to={ctaLink},"
-      className="inline-flex items-center bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"></>
+      className="inline-flex items-center bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"></>";";";
             {ctaText};"
             <ArrowRight className="w-5 h-5 ml-2" />
           </>
@@ -50,9 +49,9 @@ interface ContentPromotionBannerProps {},
     </>
   );
 
-const ComponentsPage: React.FC  =  () => {
-  return (;
-    <>;
+const ComponentsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Components - Zion Tech Group"";"
         description="Professional components solutions for modern businesses";"
@@ -63,9 +62,9 @@ const ComponentsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ComponentsPage;'";'";
+export default ComponentsPage;'";'";";";";
 "

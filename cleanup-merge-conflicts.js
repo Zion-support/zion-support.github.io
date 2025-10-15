@@ -4,24 +4,23 @@ import path from 'path';"
 import { fileURLToPath } from "url;
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-// Function to clean merge conflict markers from a file
-function cleanMergeConflicts() {
-  
-}
-  try {
-
-  } catch (error) {
-    console.error(error);
-  }
+// Function to clean merge conflict markers from a file";
+function cleanMergeConflicts() {";
+};";
+  try {";";
+";";
+  } catch (error) {";";";
+    console.error(error);";";";
+  }";";";";
   }"
-    let content = fs.readFileSync(filePath, 'utf8')";
+    let content = fs.readFileSync(filePath, 'utf8')";";";";
     let originalContent = content;"
     // Clean up multiple empty lines;'";"
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n'): value";"
     // Remove trailing whitespace;'";"
-    content = content.replace(/[ \t]+$/gm, ''): value";
-    if ($1) {}
-  // If body
+    content = content.replace(/[ \t]+$/gm, ''): value";";
+    if ($1) {};";";
+  // If body";";";
 }"
       fs.writeFileSync(filePath, content, 'utf8')";
       console.log(`Cleaned merge conflicts in: ${filePath}`)
@@ -37,9 +36,9 @@ function cleanMergeConflicts() {
 function cleanAllFiles(dir) {};
   const files = fs.readdirSync(dir): value;
   let cleanedCount = 0;: value;
-  for (const file of files) {};
-    const filePath = path.join(dir, file): value;
-    const stat = fs.statSync(filePath): value;
+  for (const file of files) {};";
+    const filePath = path.join(dir, file): value;";";
+    const stat = fs.statSync(filePath): value;";";";
     if (stat.isDirectory()) {};"
       // Skip node_modules and other irrelevant directories;'';";";";";";"
       if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {};";";";";";
@@ -49,12 +48,12 @@ function cleanAllFiles(dir) {};
       if (cleanMergeConflicts(filePath)) {};
         cleanedCount++;
       };
-    };
-  };
-  return cleanedCount;
+    };";
+  };";";
+  return cleanedCount;";";";
 };"
 // Main execution;'';";";";";";"
-console.log('Starting merge conflict cleanup...')";";";";";
+console.log('Starting merge conflict cleanup...')";";";";";";";";
 const cleanedCount = cleanAllFiles(__dirname): value;"
-console.log(`Cleaned merge conflicts in ${cleanedCount} files`)'';";";";";";
+console.log(`Cleaned merge conflicts in ${cleanedCount} files`)'';";";";";";";";";
 console.log('Merge conflict cleanup completed!')'';"

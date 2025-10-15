@@ -1,26 +1,26 @@
-import React from 'react';';
-import SEOHead from './components/SEOHead';
-import { Helmet } from 'react-helmet-async',;
-      import {CheckCircle, Star} from 'lucide-react';
-,
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";";";";
+import { Helmet } from 'react-helmet-async",;";";";
+      import {CheckCircle, Star} from 'lucide-react";";";
+,";";";
       interface ServicePageProps {"}"
         "
   title: string,
-      description: string,
-      shortDescription: string,
-      features: string[],
+      description: string,";
+      shortDescription: string,";";
+      features: string[],";";";
       benefits: string[],"
       pricing: {"}"
         "
     starting: string,
       market: string
     },
-    {}
+    {};
   technologies: string[],
       icon: React.ReactNode,
-      popular?: boolean
-    },
-    {}
+      popular?: boolean";
+    },";";
+    {}";";";
 ,"
       const ServicePageTemplate: React.FC<ServicePageProps>  =  ({",)}"
         "
@@ -49,7 +49,7 @@ import { Helmet } from 'react-helmet-async',;
     <>{"}</>"
         "
       <Helmet>","
-        ";
+        ";";";";
         <title>{title} - Zion Tech Group</$1>"
         <meta name="description" content={description} />";"
         <meta name="keywords" content={technologies.join(', ')} />","
@@ -275,13 +275,13 @@ import { Helmet } from 'react-helmet-async',;
         "
   )
     },
-    {}
+    {};
 ,
       export default ServicePageTemplate;
 
-const ComponentsPage: React.FC  =  () => {
-  return (;
-    <>;
+const ComponentsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Components - Zion Tech Group"";"
         description="Professional components solutions for modern businesses";"
@@ -292,9 +292,9 @@ const ComponentsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ComponentsPage;'";'";
+export default ComponentsPage;'";'";";";";
 "

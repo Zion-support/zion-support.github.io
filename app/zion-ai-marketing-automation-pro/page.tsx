@@ -1,10 +1,10 @@
 import { Helmet } from "react-helmet-async","
-      export default function ZionAiMarketingAutomationPro() {
+      export default function ZionAiMarketingAutomationPro() {";";";
   "
-}
-      benefits: ["Behavioral triggers", "Personalized sequences", "Lead scoring integration", "Conversion optimization"];
-    };
-  ];
+}";";";
+      benefits: ["Behavioral triggers", "Personalized sequences", "Lead scoring integration", "Conversion optimization"];";
+    };";";
+  ];";";";
 ,"
       const pricingPlans  =  [","
         "
@@ -22,7 +22,7 @@ import { Helmet } from "react-helmet-async","
         "Email campaigns",""
         "Social media integration",""
         "Email support",""
-        "Basic analytics","";
+        "Basic analytics","";";";";
         "5 users included";"
       ],","
         "
@@ -74,8 +74,8 @@ import { Helmet } from "react-helmet-async","
         "
       popular: false","
         "
-    };
-  ];
+    };";";
+  ];";";";
 ,"
       const testimonials  =  [","
         "
@@ -111,16 +111,16 @@ import { Helmet } from "react-helmet-async","
       rating: 5,","
         "
       avatar: "MS"
-    },
-    {};
-  ];
+    },";
+    {};";";
+  ];";";";
 ,"
       const stats  =  [""
     { number: "25,000+", label: "Active Marketers", icon: <Users className="w-6 h-6" /> },""
     { number: "67%", label: "Average ROI Increase", icon: <TrendingUp className="w-6 h-6" /> },""
-    { number: "95%", label: "Campaign Success Rate", icon: <Target className="w-6 h-6" /> },"";
-    { number: "10x", label: "Content Generation Speed", icon: <className="w-6 h-6" /> };
-  ];
+    { number: "95%", label: "Campaign Success Rate", icon: <Target className="w-6 h-6" /> },"";";";";
+    { number: "10x", label: "Content Generation Speed", icon: <className="w-6 h-6" /> };";";
+  ];";";";
 ,"
       const ZionAiMarketingAutomationProPage: React.FC  =  () => {"}"
         "
@@ -144,7 +144,7 @@ import { Helmet } from "react-helmet-async","
         "
       </Helmet>","
         "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900 relative overflow-hidden">"";
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900 relative overflow-hidden">"";";";";
         {/* Animated Background */};"
         <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-indigo-500/10 animate-pulse"></div>""
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.3),transparent_50%)]"></div>""
@@ -380,7 +380,7 @@ import { Helmet } from "react-helmet-async","
         "
                       ? 'border-pink-500/50 shadow-2xl shadow-pink-500/25' ","
         "
-                      : 'border-white/20 hover:border-pink-500/30';
+                      : 'border-white/20 hover:border-pink-500/30";";";";
                   }`};"
                 >","
         "
@@ -395,7 +395,7 @@ import { Helmet } from "react-helmet-async","
         "
                     </div>","
         "
-                  )};
+                  )};";";";
 ;"
                   <div className="text-center mb-6">""
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
@@ -427,8 +427,8 @@ import { Helmet } from "react-helmet-async","
         "
                       plan.popular","
         "
-                        ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700 shadow-lg hover:shadow-pink-500/25';
-                        : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900';
+                        ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700 shadow-lg hover:shadow-pink-500/25";";";";
+                        : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900";";";";
                     }`};"
                   >","
         "
@@ -468,7 +468,7 @@ import { Helmet } from "react-helmet-async","
         "
               {testimonials.map((testimonial, index) => (",)}"
         "
-                <div"">
+                <div"">";";";
                   key={index},"
       className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105";"
                 >""
@@ -570,7 +570,7 @@ import { Helmet } from "react-helmet-async","
         "
                 <"">"
                   to="/contact";"
-                  className="group bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-pink-500/25 hover:scale-105";"
+                  className="group bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-pink-500/25 hover:scale-105";"
                 >""
                   Start Free Trial""
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />""
@@ -587,12 +587,12 @@ import { Helmet } from "react-helmet-async","
         </section>""
       </div>""
     </>""
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const ZionAiMarketingAutomationProPage: React.FC  =  () => {
-  return (;
-    <>;
+const ZionAiMarketingAutomationProPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Zion Ai Marketing Automation Pro - Zion Tech Group"";"
         description="Professional zion ai marketing automation pro solutions for modern businesses";"
@@ -603,9 +603,9 @@ const ZionAiMarketingAutomationProPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ZionAiMarketingAutomationProPage;'";'";
+export default ZionAiMarketingAutomationProPage;'";'";";";";
 "

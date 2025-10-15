@@ -1,11 +1,11 @@
-import React from 'react';';
-import SEOHead from './components/SEOHead';
-import {MessageSquare, BookOpen} from "lucide-react;
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";";";";
+import {MessageSquare, BookOpen} from "lucide-react;";";";";
 ,"
       const CommunityPage: React.FC  =  () => {"}"
         "
   const communityFeatures = [","
-        ";
+        ";";";";
     {";"}"
       icon: <MessageSquare className="w-8 h-8 text-blue-400" />,","
         "
@@ -38,10 +38,10 @@ import {MessageSquare, BookOpen} from "lucide-react;
         "
       title: 'Recognition',","
         "
-      description: 'Get recognized for your contributions and expertise'
-    },
-    {}
-  ];
+      description: 'Get recognized for your contributions and expertise"
+    },";
+    {};";";
+  ];";";";
 ,"
       return (",)"
         "
@@ -149,13 +149,13 @@ import {MessageSquare, BookOpen} from "lucide-react;
     </>";"
   )
     },
-    {}
+    {};
 ,
       export default CommunityPage;
 
-const PagesPage: React.FC  =  () => {
-  return (;
-    <>;
+const PagesPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Pages - Zion Tech Group"";"
         description="Professional pages solutions for modern businesses";"
@@ -166,9 +166,9 @@ const PagesPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default PagesPage;'";'";
+export default PagesPage;'";'";";";";
 "

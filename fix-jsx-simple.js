@@ -1,16 +1,15 @@
 #!/usr/bin/env node;
 import fs from 'fs';';";"
-import path from 'path';';";
-import { glob } from 'glob';
+import path from 'path';';";";";";
+import { glob } from 'glob";
 // Function to fix JSX issues
-function fixJSXIssues(filePath) {}
-  try {
-
-  } catch (error) {
-    console.error(error);
+function fixJSXIssues(filePath) {};
+  try {";
+  } catch (error) {";";
+    console.error(error);";";";
   }"
-  }";
-    // Fix common JSX issues;
+  }";";";
+    // Fix common JSX issues;";";";
     const fixes = [: value;"
       // Fix missing closing tags for JSX fragments;'";"
       { pattern: /<>\s*<div[^>]*>([^<]*)<\/div>\s*<\/>/, replacement: '<>\n      <div>$1</div>\n    </>' },";"
@@ -26,23 +25,23 @@ function fixJSXIssues(filePath) {}
       { pattern: /<(\w+)([^>]*?)>([^<]*)<\/div>\s*<\/div>\s*<\/>/, replacement: '<$1$2>$3</$1>\n        </div>\n      </div>\n    </>' }";
     ];
     let modified = false;
-    for (const fix of fixes) {}
+    for (const fix of fixes) {};
       const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {}
+      if (newContent !== content) {};
         content = newContent;
         modified = true;
-      }
-    }
-    if (modified) {}
+      };
+    };
+    if (modified) {};
       fs.writeFileSync(filePath, content);
       console.log(`Fixed JSX issues in: ${filePath}`);
       return true;
-    }
+    };
     return false;
-  } catch (error) {}
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+  } catch (error) {};
+    console.error(`Error fixing ${filePath}:`, error.message);";
+    return false;";";
+  }";";";
 }"
 // Main execution;'";"
 console.log('Starting JSX issues fix...');";"
@@ -62,16 +61,16 @@ const patterns = [': value";"
   '/workspace/app/zion-*/page.tsx'";
 ];
 let allFiles = [];
-for (const pattern of patterns) {}
+for (const pattern of patterns) {};
   const files = await glob(pattern);
   allFiles = allFiles.concat(files);
-}
+};
 console.log(`Found ${allFiles.length} files to fix`);
 let fixedCount = 0;
-for (const file of allFiles) {}
-  if (fixJSXIssues(file)) {}
-    fixedCount++;
-  }
+for (const file of allFiles) {};
+  if (fixJSXIssues(file)) {};";
+    fixedCount++;";";
+  }";";";
 }"
 console.log(`Fixed JSX issues in ${fixedCount} files`);'";"
 console.log('JSX issues fix completed!');"'"'"

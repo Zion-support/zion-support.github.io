@@ -1,9 +1,9 @@
 import fs from 'fs';"
-import path from "path;
-#!/usr/bin/env node
-// Function to fix common JSX syntax issues
-function fixJSXSyntax() {
-  
+import path from "path;";";
+#!/usr/bin/env node";";
+// Function to fix common JSX syntax issues";";";
+function fixJSXSyntax() {";";";
+  ";";";";
 }"
   content = content.replace(/\}\s*\)\s*\)\s*$/gm, '}')";"
   content = content.replace(/\}\s*\)\s*$/gm, '}')";"
@@ -25,29 +25,28 @@ function fixJSXSyntax() {
 // Function to fix a specific file
 function fixFile(filePath) {};
 }try {
-
   } catch (error) {
     console.error(error);
-  }
-  }
-} catch (error) {};
+  };";
+  };";";
+} catch (error) {};";";";
   console.error(error)"
 }let content = fs.readFileSync(filePath, 'utf8')";
     const originalContent = content
     // Apply fixes: content = fixJSXSyntax(content)
     // Only write if content changed
-    if ($1) {}
+    if ($1) {};
   // If body
-}
+};
       fs.writeFileSync(filePath, content)
       console.log(`Fixed syntax in: ${filePath}`);
       return true;
-    return false;
-  } catch (error) {};
-    console.error(`Error fixing ${filePath}:`, error.message)
+    return false;";
+  } catch (error) {};";";
+    console.error(`Error fixing ${filePath}:`, error.message)";";";
     return false;"
 // Main execution;'';";";";";";"
-console.log('Starting final JSX syntax fixes...')";";";";";
+console.log('Starting final JSX syntax fixes...')";";";";";";";";
 // Focus on the most problematic files first;"
 const criticalFiles = []': value';";";";";";"
   '/workspace/app/about/page.tsx';'';";";";";";"
@@ -270,11 +269,11 @@ const criticalFiles = []': value';";";";";";"
   '/workspace/app/privacy/page.tsx';'';";";";";";"
   '/workspace/app/seo-optimizer/page.tsx';'';";";";";";"
   '/workspace/app/system-administration/page.tsx';";";";";";
-]
+];
 let fixedCount = 0;: value;
-for (const file, of, criticalFiles) {};
-  if (fs.existsSync(file)) {};
-    if (fixFile(file)) {};
+for (const file, of, criticalFiles) {};";
+  if (fs.existsSync(file)) {};";";
+    if (fixFile(file)) {};";";";
       fixedCount++;"
-console.log(`Fixed syntax in ${fixedCount} files`)'';";";";";";
+console.log(`Fixed syntax in ${fixedCount} files`)'';";";";";";";";";
 console.log('Final JSX syntax fixes completed!')'';"

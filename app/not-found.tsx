@@ -1,13 +1,13 @@
-import { Helmet } from "react-helmet-async;
-const NotFoundPage = () => {
-  
-};
-import React from 'react';';
-import SEOHead from '../../components/SEOHead';
+import { Helmet } from "react-helmet-async;";";
+const NotFoundPage = () => {";";";
+  ";";";
+};";";";";
+import React from 'react';";";";";
+import SEOHead from '../../components/SEOHead";
 
-const AppPage: React.FC  =  () => {
-  return (;
-    <>;
+const AppPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="App - Zion Tech Group"";"
         description="Professional app solutions for modern businesses";"
@@ -18,8 +18,8 @@ const AppPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
 export default AppPage;'";'";"

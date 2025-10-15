@@ -1,13 +1,13 @@
-import { Helmet } from "react-helmet-async;
-const Pagebroken2Page = () => {
-  
-};
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+import { Helmet } from "react-helmet-async;";";
+const Pagebroken2Page = () => {";";";
+  ";";";
+};";";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const ContactPage: React.FC  =  () => {
-  return (;
-    <>;
+const ContactPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Contact - Zion Tech Group"";"
         description="Professional contact solutions for modern businesses";"
@@ -18,9 +18,9 @@ const ContactPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ContactPage;'";'";
+export default ContactPage;'";'";";";";
 "

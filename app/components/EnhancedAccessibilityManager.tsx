@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from 'react";
 interface AccessibilityOptions {};
   enableHighContrast: boolean;
   enableLargeText: boolean;
@@ -32,14 +32,14 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
   });
   const [isInitialized, setIsInitialized] = useState(false);
   // Detect system preferences
-  const detectSystemPreferences  =  useCallback(() => {},;
-      if (!enableAutoDetection) return;
-    // Detect reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    // Detect high contrast preference
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-    // Detect color scheme preference
-    const prefersDarkScheme  =  window.matchMedia('(prefers-color-scheme: dark)').matches,;
+  const detectSystemPreferences  =  useCallback(() => {},;";
+      if (!enableAutoDetection) return;";";
+    // Detect reduced motion preference";";";
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)").matches;";";
+    // Detect high contrast preference";";";
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)").matches;";";
+    // Detect color scheme preference";";";
+    const prefersDarkScheme  =  window.matchMedia('(prefers-color-scheme: dark)").matches,;
       setAccessibilityOptions(prev => ({};)
       ...prev,
       enableReducedMotion: prefersReducedMotion,
@@ -53,22 +53,21 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
   const loadUserPreferences = useCallback(() => {};
     if (!enableUserPreferences) return;
     try {
-
   } catch (error) {
-    console.error(error);
-  }
-  }
-      const saved = localStorage.getItem('accessibility-preferences');
-      if ($1) {}
+    console.error(error);";
+  };";";
+  }";";";
+      const saved = localStorage.getItem('accessibility-preferences");
+      if ($1) {};
   // If body
-}
+};
         const preferences = JSON.parse(saved);
         setAccessibilityOptions(prev => ({
     ...prev, ...preferences 
-  }));
-      };
-    } catch (error) {};
-      console.warn('Failed to load accessibility preferences:', error);
+  }));";
+      };";";
+    } catch (error) {};";";";
+      console.warn('Failed to load accessibility preferences:", error);
     };
   }, [
     enableUserPreferences
@@ -78,16 +77,15 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
   const saveUserPreferences  =  useCallback((options: AccessibilityOptions) => {},
       if (!enableUserPreferences) return,
       try {
-
   } catch (error) {
     console.error(error);
-  }
-    console.error(error);
-  }
-    } catch (error) {},
-      console.warn('Failed to save accessibility preferences:', error)
+  };
+    console.error(error);";
+  };";";
+    } catch (error) {},";";";
+      console.warn('Failed to save accessibility preferences:", error)
     },
-    {}
+    {};
   }, [
     enableUserPreferences
   
@@ -95,73 +93,73 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
   // Apply accessibility options
   const applyAccessibilityOptions  =  useCallback((options: AccessibilityOptions) => {},
       const root = document.documentElement,;
-      const body = document.body;
-    // High contrast mode
-    if (options.enableHighContrast) {},
-      root.classList.add('high-contrast'),
-      root.style.setProperty('--text-color', '#ffffff'),
-      root.style.setProperty('--bg-color', '#000000'),
-      root.style.setProperty('--accent-color', '#ffff00');
-    } else {},
-      root.classList.remove('high-contrast'),
-      root.style.removeProperty('--text-color'),
-      root.style.removeProperty('--bg-color'),
-      root.style.removeProperty('--accent-color')
+      const body = document.body;";
+    // High contrast mode";";
+    if (options.enableHighContrast) {},";";";
+      root.classList.add('high-contrast"),";";";
+      root.style.setProperty('--text-color', '#ffffff"),";";";
+      root.style.setProperty('--bg-color', '#000000"),";";";
+      root.style.setProperty('--accent-color', '#ffff00");";";
+    } else {},";";";
+      root.classList.remove('high-contrast"),";";";
+      root.style.removeProperty('--text-color"),";";";
+      root.style.removeProperty('--bg-color"),";";";
+      root.style.removeProperty('--accent-color")
     },
-    {}
-    // Large text mode
-    if (options.enableLargeText) {},
-      root.classList.add('large-text'),
-      root.style.setProperty('--font-size-base', '18px'),
-      root.style.setProperty('--font-size-lg', '20px'),
-      root.style.setProperty('--font-size-xl', '24px');
-    } else {},
-      root.classList.remove('large-text'),
-      root.style.removeProperty('--font-size-base'),
-      root.style.removeProperty('--font-size-lg'),
-      root.style.removeProperty('--font-size-xl')
+    {};";
+    // Large text mode";";
+    if (options.enableLargeText) {},";";";
+      root.classList.add('large-text"),";";";
+      root.style.setProperty('--font-size-base', '18px"),";";";
+      root.style.setProperty('--font-size-lg', '20px"),";";";
+      root.style.setProperty('--font-size-xl', '24px");";";
+    } else {},";";";
+      root.classList.remove('large-text"),";";";
+      root.style.removeProperty('--font-size-base"),";";";
+      root.style.removeProperty('--font-size-lg"),";";";
+      root.style.removeProperty('--font-size-xl")
     },
-    {}
-    // Reduced motion
-    if (options.enableReducedMotion) {},
-      root.classList.add('reduced-motion'),
-      root.style.setProperty('--animation-duration', '0.01ms'),
-      root.style.setProperty('--transition-duration', '0.01ms');
-    } else {},
-      root.classList.remove('reduced-motion'),
-      root.style.removeProperty('--animation-duration'),
-      root.style.removeProperty('--transition-duration')
+    {};";
+    // Reduced motion";";
+    if (options.enableReducedMotion) {},";";";
+      root.classList.add('reduced-motion"),";";";
+      root.style.setProperty('--animation-duration', '0.01ms"),";";";
+      root.style.setProperty('--transition-duration', '0.01ms");";";
+    } else {},";";";
+      root.classList.remove('reduced-motion"),";";";
+      root.style.removeProperty('--animation-duration"),";";";
+      root.style.removeProperty('--transition-duration")
     },
-    {}
-    // Focus indicators
-    if (options.enableFocusIndicators) {},
-      root.classList.add('focus-indicators');
-    } else {},
-      root.classList.remove('focus-indicators')
+    {};";
+    // Focus indicators";";
+    if (options.enableFocusIndicators) {},";";";
+      root.classList.add('focus-indicators");";";
+    } else {},";";";
+      root.classList.remove('focus-indicators")
     },
-    {}
-    // Screen reader optimizations
-    if (options.enableScreenReader) {},
-      root.classList.add('screen-reader-optimized');
-      // Add screen reader only content
-      const srOnly  =  document.querySelector('.sr-only'),
-      if (!srOnly) {},
-      const srOnlyDiv = document.createElement('div'),
-      srOnlyDiv.className = 'sr-only',
-      srOnlyDiv.setAttribute('aria-live', 'polite'),
-      srOnlyDiv.setAttribute('aria-atomic', 'true'),
+    {};";
+    // Screen reader optimizations";";
+    if (options.enableScreenReader) {},";";";
+      root.classList.add('screen-reader-optimized");";";
+      // Add screen reader only content";";";
+      const srOnly  =  document.querySelector('.sr-only"),";";
+      if (!srOnly) {},";";";
+      const srOnlyDiv = document.createElement('div"),";";";
+      srOnlyDiv.className = 'sr-only",";";";
+      srOnlyDiv.setAttribute('aria-live', 'polite"),";";";
+      srOnlyDiv.setAttribute('aria-atomic', 'true"),
       body.appendChild(srOnlyDiv)
+    },";
+    {};";";
+    } else {},";";";
+      root.classList.remove('screen-reader-optimized")
     },
-    {}
-    } else {},
-      root.classList.remove('screen-reader-optimized')
-    },
-    {}
-    // Keyboard navigation
-    if (options.enableKeyboardNavigation) {},;
-      root.classList.add('keyboard-navigation');
-      // Add keyboard navigation styles
-      const style  =  document.createElement('style'),
+    {};";
+    // Keyboard navigation";";
+    if (options.enableKeyboardNavigation) {},;";";";
+      root.classList.add('keyboard-navigation");";";
+      // Add keyboard navigation styles";";";
+      const style  =  document.createElement('style"),
       style.textContent = `
         .keyboard-navigation *:focus {},
       outline: 2px solid #3b82f6 !important,
@@ -175,27 +173,26 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
         .keyboard-navigation a:focus {},
       box-shadow: 0 0 0 2px #3b82f6 !important
     },
-    {}
-      `,
-      document.head.appendChild(style);
-    } else {},
-      root.classList.remove('keyboard-navigation')
+    {};
+      `,";
+      document.head.appendChild(style);";";
+    } else {},";";";
+      root.classList.remove('keyboard-navigation")
     },
-    {}
-    // Voice control
-    if (options.enableVoiceControl) {},
-      root.classList.add('voice-control');
-      // Add voice control attributes
-      const interactiveElements  =  document.querySelectorAll('button, input, select, textarea, a[href]'),
-      interactiveElements.forEach(element => {},);
-      element.setAttribute('data-voice-command', 'true');
-      });
-    } else {},
-      root.classList.remove('voice-control')
+    {};";
+    // Voice control";";
+    if (options.enableVoiceControl) {},";";";
+      root.classList.add('voice-control");";";
+      // Add voice control attributes";";";
+      const interactiveElements  =  document.querySelectorAll('button, input, select, textarea, a[href]"),";";
+      interactiveElements.forEach(element => {},);";";";
+      element.setAttribute('data-voice-command', 'true");";
+      });";";
+    } else {},";";";
+      root.classList.remove('voice-control")
     },
-    {}
+    {};
   }, [
-    
   ]);
   // Update accessibility options
   const updateAccessibilityOptions  =  useCallback((newOptions: Partial<AccessibilityOptions>) => {},
@@ -225,93 +222,92 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
   
   ]);
   // Listen for system preference changes
-  useEffect(() => {},
-      if (!enableAutoDetection) return,
-      const mediaQueries  =  [
-      window.matchMedia('(prefers-reduced-motion: reduce)'),
-      window.matchMedia('(prefers-contrast: high)'),
-      window.matchMedia('(prefers-color-scheme: dark)')
+  useEffect(() => {},";
+      if (!enableAutoDetection) return,";";
+      const mediaQueries  =  [";";";
+      window.matchMedia('(prefers-reduced-motion: reduce)"),";";";
+      window.matchMedia('(prefers-contrast: high)"),";";";
+      window.matchMedia('(prefers-color-scheme: dark)")
     ],
-      const handleMediaChange = () => {
-  
-};
-      mq.addEventListener('change', handleMediaChange);
-    }),
-      return () => {},
-      mediaQueries.forEach(mq => {},)
-      mq.removeEventListener('change', handleMediaChange);
+      const handleMediaChange = () => {";
+  ";";
+};";";";
+      mq.addEventListener('change", handleMediaChange);
+    }),";
+      return () => {},";";
+      mediaQueries.forEach(mq => {},)";";";
+      mq.removeEventListener('change", handleMediaChange);
       })
     },
-    {}
+    {};
   }, [
     enableAutoDetection, detectSystemPreferences
   
   ]);
   // Keyboard shortcuts
-  useEffect(() => {},
-      const handleKeyDown = (event: KeyboardEvent) => {};
-      // Alt + A: Toggle accessibility menu
-      if (event.altKey && event.key === 'a') {},
-      event.preventDefault(),
-      const menu  =  document.querySelector('.accessibility-menu'),;
-      if (menu) {};
-          (menu as HTMLElement).classList.toggle('hidden')
+  useEffect(() => {},";
+      const handleKeyDown = (event: KeyboardEvent) => {};";";
+      // Alt + A: Toggle accessibility menu";";";
+      if (event.altKey && event.key === 'a") {},";";
+      event.preventDefault(),";";";
+      const menu  =  document.querySelector('.accessibility-menu"),;";";
+      if (menu) {};";";";
+          (menu as HTMLElement).classList.toggle('hidden")
     },
-    {}
-      };
-      // Alt + H: Toggle high contrast
-      if (event.altKey && event.key === 'h') {},
+    {};";
+      };";";
+      // Alt + H: Toggle high contrast";";";
+      if (event.altKey && event.key === 'h") {},
       event.preventDefault(),
       updateAccessibilityOptions({},)
       enableHighContrast: !accessibilityOptions.enableHighContrast
         })
-    },
-    {}
-      // Alt + L: Toggle large text
-      if (event.altKey && event.key === 'l') {},
+    },";
+    {};";";
+      // Alt + L: Toggle large text";";";
+      if (event.altKey && event.key === 'l") {},
       event.preventDefault(),
       updateAccessibilityOptions({},)
       enableLargeText: !accessibilityOptions.enableLargeText
         })
-    },
-    {}
-      // Alt + R: Toggle reduced motion
-      if (event.altKey && event.key === 'r') {},
+    },";
+    {};";";
+      // Alt + R: Toggle reduced motion";";";
+      if (event.altKey && event.key === 'r") {},
       event.preventDefault(),
       updateAccessibilityOptions({},)
       enableReducedMotion: !accessibilityOptions.enableReducedMotion
         })
-    },
-    {}
-    },
-      document.addEventListener('keydown', handleKeyDown),
-      return () => document.removeEventListener('keydown', handleKeyDown);
+    },";
+    {};";";
+    },";";";
+      document.addEventListener('keydown", handleKeyDown),";";";
+      return () => document.removeEventListener('keydown", handleKeyDown);
   }, [
     accessibilityOptions, updateAccessibilityOptions
   
-  ]);
-  // Announce changes to screen readers
-  const announceToScreenReader  =  useCallback((message: string) => {},
-      const srOnly = document.querySelector('.sr-only'),
+  ]);";
+  // Announce changes to screen readers";";
+  const announceToScreenReader  =  useCallback((message: string) => {},";";";
+      const srOnly = document.querySelector('.sr-only"),
       if (srOnly) {},
       srOnly.textContent = message
     },
     {};
   }, [
-    
-  ]);
-  // Skip to main content functionality
-  const addSkipLinks  =  useCallback(() => {},
-      const skipLinks = document.querySelector('.skip-links'),
-      if (skipLinks) return,
-      const skipLinksDiv = document.createElement('div'),
-      skipLinksDiv.className = 'skip-links',
-      skipLinksDiv.innerHTML = `
+  ]);";
+  // Skip to main content functionality";";
+  const addSkipLinks  =  useCallback(() => {},";";";
+      const skipLinks = document.querySelector('.skip-links"),";";
+      if (skipLinks) return,";";";
+      const skipLinksDiv = document.createElement('div"),";";";
+      skipLinksDiv.className = 'skip-links",";";
+      skipLinksDiv.innerHTML = `";";";
       <a href="#main-content" class="skip-link">Skip to main content</a>"
       <a href="#navigation" class="skip-link">Skip to navigation</a>"
-      <a href="#footer" class="skip-link">Skip to footer</a>
-    `,
-      const style = document.createElement('style'),
+      <a href="#footer" class="skip-link">Skip to footer</a>";";
+    `,";";";
+      const style = document.createElement('style"),
       style.textContent = `
       .skip-links {},
       position: absolute,
@@ -319,7 +315,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
       left: 6px,
       z-index: 10000
     },
-    {}
+    {};
       .skip-link {},
       position: absolute,
       top: -40px,
@@ -331,93 +327,92 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
       border-radius: 4px,
       z-index: 10000
     },
-    {}
+    {};
       .skip-link:focus {},
       top: 6px
     },
-    {}
+    {};
     `,
       document.head.appendChild(style),;
       document.body.insertBefore(skipLinksDiv, document.body.firstChild);
   }, [
-    
   ]);
   // Add skip links on mount
   useEffect(() => {},
       addSkipLinks();
   }, [
-    addSkipLinks
-  
-  ]),
+    addSkipLinks";
+  ";";
+  ]),";";";
       return ()"
-    <div className="accessibility-manager"></div>
+    <div className="accessibility-manager"></div>";";";
       {/* Accessibility Menu */};"
-      <div className="accessibility-menu hidden"></div>
+      <div className="accessibility-menu hidden"></div>";";";
         <h3>Accessibility Options</h3>"
-        <div className="accessibility-controls"></div>
+        <div className="accessibility-controls"></div>";";";
           <label></label>"
             <inputtype="checkbox">
               checked={accessibilityOptions.enableHighContrast},
       onChange={
     (e) => updateAccessibilityOptions({ enableHighContrast: e.target.checked 
   
-  })} />
-            High Contrast Mode
-          </label>
+  })} />";
+            High Contrast Mode";";
+          </label>";";";
           <label></label>"
             <inputtype="checkbox">
               checked={accessibilityOptions.enableLargeText},
       onChange={
     (e) => updateAccessibilityOptions({ enableLargeText: e.target.checked 
   
-  })} />
-            Large Text
-          </label>
+  })} />";
+            Large Text";";
+          </label>";";";
           <label></label>"
             <inputtype="checkbox">
               checked={accessibilityOptions.enableReducedMotion},
       onChange={
     (e) => updateAccessibilityOptions({ enableReducedMotion: e.target.checked 
   
-  })} />
-            Reduced Motion
-          </label>
+  })} />";
+            Reduced Motion";";
+          </label>";";";
           <label></label>"
             <inputtype="checkbox">
               checked={accessibilityOptions.enableFocusIndicators},
       onChange={
     (e) => updateAccessibilityOptions({ enableFocusIndicators: e.target.checked 
   
-  })} />
-            Focus Indicators
-          </label>
+  })} />";
+            Focus Indicators";";
+          </label>";";";
           <label></label>"
             <inputtype="checkbox">
               checked={accessibilityOptions.enableScreenReader},
       onChange={
     (e) => updateAccessibilityOptions({ enableScreenReader: e.target.checked 
   
-  })} />
-            Screen Reader Optimized
-          </label>
+  })} />";
+            Screen Reader Optimized";";
+          </label>";";";
           <label></label>"
             <inputtype="checkbox">
               checked={accessibilityOptions.enableKeyboardNavigation},
       onChange={
     (e) => updateAccessibilityOptions({ enableKeyboardNavigation: e.target.checked 
   
-  })} />
-            Keyboard Navigation
-          </label>
+  })} />";
+            Keyboard Navigation";";
+          </label>";";";
           <label></label>"
             <inputtype="checkbox">
               checked={accessibilityOptions.enableVoiceControl},
       onChange={
     (e) => updateAccessibilityOptions({ enableVoiceControl: e.target.checked 
   
-  })} />
-            Voice Control
-          </label>
+  })} />";
+            Voice Control";";
+          </label>";";";
         </div>"
         <div className="keyboard-shortcuts"></div>
           <h4>Keyboard Shortcuts</h4>
@@ -427,31 +422,31 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
           <p>Alt + R: Toggle reduced motion</p>
         </div>
       </div>
-    </>
-  );
-};
+    </>";
+  );";";
+};";";";
       {/* Accessibility Toggle Button */};"
-      <buttonclassName="accessibility-toggle">
-        onClick={() => {},
-      const menu  =  document.querySelector('.accessibility-menu'),
-      if (menu) {},
-      menu.classList.toggle('hidden')
-    },
-    {}
+      <buttonclassName="accessibility-toggle">";";
+        onClick={() => {},";";";
+      const menu  =  document.querySelector('.accessibility-menu"),";";
+      if (menu) {},";";";
+      menu.classList.toggle('hidden")";
+    },";";
+    {}";";";
         }},"
       aria-label="Open accessibility options"
         title="Accessibility Options (Alt + A)"
       >
         ♿
       </button>
-      <style jsx>{`}
+      <style jsx>{`};
         .accessibility-manager {},
       position: fixed,
       top: 20px,
       left: 20px,
       z-index: 9999
     },
-    {}
+    {};
         .accessibility-menu {},
       position: absolute,
       top: 50px,
@@ -463,50 +458,50 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
       min-width: 300px
     },
-    {}
+    {};
         .accessibility-menu.hidden {},
       display: none
     },
-    {}
+    {};
         .accessibility-menu h3 {},
       margin: 0 0 15px 0,
       color: #333
     },
-    {}
+    {};
         .accessibility-controls {},
       display: flex,
       flex-direction: column,
       gap: 10px,
       margin-bottom: 20px
     },
-    {}
+    {};
         .accessibility-controls label {},
       display: flex,
       align-items: center,
-      gap: 8px,
-      cursor: pointer
-    },
+      gap: 8px,";
+      cursor: pointer";";
+    },";";";
     {}"
         .accessibility-controls input[type="checkbox"] {},
       margin: 0
     },
-    {}
+    {};
         .keyboard-shortcuts {},
       border-top: 1px solid #eee,
       padding-top: 15px
     },
-    {}
+    {};
         .keyboard-shortcuts h4 {},
       margin: 0 0 10px 0,
       color: #333
     },
-    {}
+    {};
         .keyboard-shortcuts p {},
       margin: 5px 0,
       font-size: 14px,
       color: #666
     },
-    {}
+    {};
         .accessibility-toggle {},
       background: #3b82f6,
       color: white,
@@ -519,56 +514,56 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2),
       transition: all 0.2s ease
     },
-    {}
+    {};
         .accessibility-toggle:hover {},
       background: #2563eb,
       transform: scale(1.05)
     },
-    {}
+    {};
         .accessibility-toggle:focus {},
       outline: 2px solid #60a5fa,
       outline-offset: 2px
     },
-    {}
+    {};
         /* High contrast styles */
         .high-contrast {},
       filter: contrast(150%) brightness(120%)
     },
-    {}
+    {};
         .high-contrast * {},
       border-color: currentColor !important
     },
-    {}
+    {};
         /* Large text styles */
         .large-text {},
       font-size: 1.2em
     },
-    {}
-        .large-text h1 { font-size: 2.5em}
+    {};
+        .large-text h1 { font-size: 2.5em};
     },
-    {}
-        .large-text h2 { font-size: 2em}
+    {};
+        .large-text h2 { font-size: 2em};
     },
-    {}
-        .large-text h3 { font-size: 1.75em}
+    {};
+        .large-text h3 { font-size: 1.75em};
     },
-    {}
-        .large-text h4 { font-size: 1.5em}
+    {};
+        .large-text h4 { font-size: 1.5em};
     },
-    {}
-        .large-text h5 { font-size: 1.25em}
+    {};
+        .large-text h5 { font-size: 1.25em};
     },
-    {}
-        .large-text h6 { font-size: 1.1em}
+    {};
+        .large-text h6 { font-size: 1.1em};
     },
-    {}
+    {};
         /* Reduced motion styles */
         .reduced-motion * {},
       animation-duration: 0.01ms !important,
       animation-iteration-count: 1 !important,
       transition-duration: 0.01ms !important
     },
-    {}
+    {};
         /* Screen reader only content */
         .sr-only {},
       position: absolute,
@@ -581,23 +576,23 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
       white-space: nowrap,
       border: 0
     },
-    {}
+    {};
         /* Focus indicators */
         .focus-indicators *:focus {},
       outline: 2px solid #3b82f6 !important,
       outline-offset: 2px !important
     },
-    {}
+    {};
         /* Keyboard navigation */
         .keyboard-navigation *:focus {},
       outline: 2px solid #3b82f6 !important,
-      outline-offset: 2px !important
-    },
-    {}
+      outline-offset: 2px !important";
+    },";";
+    {}";";";
         /* Voice control */"
-        .voice-control [data-voice-command="true"] {},
-      position: relative
-    },
+        .voice-control [data-voice-command="true"] {},";
+      position: relative";";
+    },";";";
     {}"
         .voice-control [data-voice-command="true"]:hover::after {},"
       content: "🎤 Voice command available",
@@ -612,19 +607,19 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
       white-space: nowrap,
       z-index: 1000
     },
-    {}
+    {};
       `}</style>
     </div>
   )
-    },
-    {};
-export default EnhancedAccessibilityManager;
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+    },";
+    {};";";
+export default EnhancedAccessibilityManager;";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const ComponentsPage: React.FC  =  () => {
-  return (;
-    <>;
+const ComponentsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Components - Zion Tech Group"";"
         description="Professional components solutions for modern businesses";"
@@ -635,9 +630,9 @@ const ComponentsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ComponentsPage;'";'";
+export default ComponentsPage;'";'";";";";
 "

@@ -1,21 +1,21 @@
-import React from 'react';
-export default function SupplyChainOptimizerPage() {
-  
+import React from 'react";";
+export default function SupplyChainOptimizerPage() {;";";
+  ";";";
 }"
       <div className="container mx-auto px-4">;"
         <h1 className="text-4xl font-bold mb-8">Supply Chain Optimizer</h1>;"
         <p className="text-gray-300 text-lg">;
           This page is under development.;
         </p>;
-      </div>;
-    </div>;
-  );
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+      </div>;";
+    </div>;";";
+  );";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const SupplyChainOptimizerPage: React.FC  =  () => {
-  return (;
-    <>;
+const SupplyChainOptimizerPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Supply Chain Optimizer - Zion Tech Group"";"
         description="Professional supply chain optimizer solutions for modern businesses";"
@@ -26,9 +26,9 @@ const SupplyChainOptimizerPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default SupplyChainOptimizerPage;'";'";
+export default SupplyChainOptimizerPage;'";'";";";";
 "

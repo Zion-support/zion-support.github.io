@@ -1,6 +1,6 @@
-import React from 'react';';
-import SEOHead from './components/SEOHead';
-import SEOHead from '../components/SEOHead',
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";";";";
+import SEOHead from '../components/SEOHead",";";";
       const CybersecurityPage: React.FC  =  () => {"}"
         "
   return (",)"
@@ -10,8 +10,8 @@ import SEOHead from '../components/SEOHead',
       <SEOHead",>"
         "
         title="Cybersecurity Solutions - Zion Tech Group","
-      description="Advanced cybersecurity solutions including threat detection, vulnerability assessment, and security consulting services.",";
-      keywords="cybersecurity, security solutions, threat detection, vulnerability assessment, security consulting" />";
+      description="Advanced cybersecurity solutions including threat detection, vulnerability assessment, and security consulting services.",";";";";
+      keywords="cybersecurity, security solutions, threat detection, vulnerability assessment, security consulting" />";";";";
       {/* Hero Section */};"
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center">""
         <div className="absolute inset-0 bg-black/50"></div>""
@@ -239,13 +239,13 @@ import SEOHead from '../components/SEOHead',
     </>""
   )
     },
-    {}
+    {};
 ,
       export default CybersecurityPage;
 
-const CybersecurityPage: React.FC  =  () => {
-  return (;
-    <>;
+const CybersecurityPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Cybersecurity - Zion Tech Group"";"
         description="Professional cybersecurity solutions for modern businesses";"
@@ -256,9 +256,9 @@ const CybersecurityPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default CybersecurityPage;'";'";
+export default CybersecurityPage;'";'";";";";
 "

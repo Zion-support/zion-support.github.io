@@ -1,19 +1,18 @@
-import React from 'react;'
+import React from "react;";
 interface AdvancedLoadingStatesProps {
   type?: string;
   fullScreen?: boolean;
-  message?: string;
-}
-
-const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps>  =  ({
-    type = 'spinner',''
+  message?: string;";
+};";";
+const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps>  =  ({";";,";
+    type = 'spinner','"
   fullScreen,
   message );
   }) => {;
-const getLoadingIcon = () => {
-  
-    switch (type) {
-      case 'pulse':'';
+const getLoadingIcon = () => {";
+  ";";
+    switch (type) {";";";
+      case 'pulse':'";";";";
         return <div className="animate-pulse rounded-full h-12 w-12 bg-white mx-auto mb-4"></div></div>;""
       case 'wave':"'"'"'"'"'"
         return <div className="animate-bounce rounded-full h-12 w-12 bg-white mx-auto mb-4"></div></div>;""
@@ -22,15 +21,15 @@ const getLoadingIcon = () => {
       case 'dots':"'"'"'"'"'"
         return <div className="flex space-x-1 justify-center mb-4">""
         <div className="animate-bounce w-2 h-2 bg-white rounded-full"></div></div>""
-          <div className="animate-bounce w-2 h-2 bg-white rounded-full" style={{ animationDelay: '0.1s' 
+          <div className="animate-bounce w-2 h-2 bg-white rounded-full" style={{ animationDelay: '0.1s" ";";";
 };"""
-    }
-  };
-const AdvancedLoadingStatesPage = () => {
-  
+    };
+  };";
+const AdvancedLoadingStatesPage = () => {";";
+  ";";";
   return ("
-    <div className={`${fullScreen ? 'fixed inset-0' : '
-};
-  );
-};
+    <div className={`${fullScreen ? 'fixed inset-0' : "
+};";
+  );";";
+};";";";
 export default AdvancedLoadingStates;"

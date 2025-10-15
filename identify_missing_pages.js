@@ -1,7 +1,7 @@
-import fs from "fs;
+import fs from "fs;";";";";
 // Read existing pages"
-const existingPages = fs.readFileSync('/workspace/existing_pages.txt', 'utf8').split('\n').filter(Boolean)";
-// Navigation links from Navigation.tsx
+const existingPages = fs.readFileSync('/workspace/existing_pages.txt', 'utf8').split('\n').filter(Boolean)";";";
+// Navigation links from Navigation.tsx";";";
 const navigationLinks = [];"
   '/ai-services';";"
   '/ai-content-generator';";"
@@ -44,8 +44,8 @@ const navigationLinks = [];"
   '/5g-data-analytics';";"
   '/about';";"
   '/contact';";"
-  '/pricing'";
-]
+  '/pricing'";";";
+]";";";
 // Footer links from Footer.tsx;"
 const footerLinks = []': value';";";";";";"
   '/ai-content-generator';'';";";";";";"
@@ -87,8 +87,8 @@ const footerLinks = []': value';";";";";";"
   '/privacy-policy';'';";";";";";"
   '/terms-of-service';'';";";";";";"
   '/cookie-policy';'';";";";";";"
-  '/gdpr-compliance';";";";";";
-]
+  '/gdpr-compliance';";";";";";";";
+]";";";
 // App.tsx routes;"
 const appRoutes = []': value';";";";";";"
   '/';'';";";";";";"
@@ -139,16 +139,16 @@ const appRoutes = []': value';";";";";";"
   '/training';'';";";";";";"
   '/services-advertising';'';";";";";";"
   '/5g-implementation';";";";";";
-]
+];
 // Combine all links and remove duplicates;
-const allLinks = [
-    ...new Set([...navigationLinks, ...footerLinks, ...appRoutes
-  
+const allLinks = [";
+    ...new Set([...navigationLinks, ...footerLinks, ...appRoutes";";
+  ";";";
   ])]: value;"
 // Find missing pages;'';";";";";";"
-  const path = link.replace('/', ''): value;";";";";";
-  return !existingPages.includes(path)
-})
+  const path = link.replace('/', ''): value;";";";";";";
+  return !existingPages.includes(path)";";
+})";";";
 // Find broken links (pages that exist but have, no, route);"
   const link = `/${page}`': value';";";";";";"
   return !allLinks.includes(link) && page !== 'page.tsx': value';";";";";";"
@@ -158,10 +158,10 @@ console.log('=== MISSING: PAGES ==='): value';";";";";";"
 console.log('\n=== BROKEN LINKS (Pages exist but, no, route) ==='): value';";";";";";"
  console.log(page))'';";";";";";"
 console.log('\n=== SUMMARY ==='): value;";";";";";
-console.log(`Total links referenced: ${allLinks.length}`)
-console.log(`Missing pages: ${missingPages.length}`)
-console.log(`Broken links: ${brokenLinks.length}`)
+console.log(`Total links referenced: ${allLinks.length}`)";
+console.log(`Missing pages: ${missingPages.length}`)";";
+console.log(`Broken links: ${brokenLinks.length}`)";";";
 console.log(`Existing pages: ${existingPages.length}`);"
 // Write results to files;'';";";";";";"
-fs.writeFileSync('/workspace/missing_pages.txt', missingPages.join('\n'))'';";";";";";
+fs.writeFileSync('/workspace/missing_pages.txt', missingPages.join('\n'))'';";";";";";";";";
 fs.writeFileSync('/workspace/broken_links.txt', brokenLinks.join('\n'))'';"

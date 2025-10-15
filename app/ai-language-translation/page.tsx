@@ -1,21 +1,21 @@
-import React from 'react""use client';
-export default function AiLanguageTranslationPage() {
-  
+import React from 'react""use client";";
+export default function AiLanguageTranslationPage() {;";";
+  ";";";
 }"
       <div className="container mx-auto px-4">;"
         <h1 className="text-4xl font-bold mb-8">Ai Language Translation</h1>;"
         <p className="text-gray-300 text-lg">;
           This page is under development.;
         </p>;
-      </div>;
-    </div>;
-  );
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+      </div>;";
+    </div>;";";
+  );";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const AiLanguageTranslationPage: React.FC  =  () => {
-  return (;
-    <>;
+const AiLanguageTranslationPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Ai Language Translation - Zion Tech Group"";"
         description="Professional ai language translation solutions for modern businesses";"
@@ -26,9 +26,9 @@ const AiLanguageTranslationPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default AiLanguageTranslationPage;'";'";
+export default AiLanguageTranslationPage;'";'";";";";
 "

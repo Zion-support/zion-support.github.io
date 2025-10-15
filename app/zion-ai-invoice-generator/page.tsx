@@ -1,20 +1,20 @@
-import React from 'react';';
-import SEOHead from './components/SEOHead';
-,
-      import SEOOptimizer from "../../components/SEOOptimizer;
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";";";
+,";";";
+      import SEOOptimizer from "../../components/SEOOptimizer;";";";";
 ,"
-      export default function ZionAiInvoiceGenerator() {
+      export default function ZionAiInvoiceGenerator() {";";";
   "
-}
-    "API access for custom integrations";
-  ];
+}";";";
+    "API access for custom integrations";";";
+  ];";";";
 ,"
       const benefits  =  [""
     "Reduce invoice creation time by 90%",""
     "Eliminate manual data entry errors",""
-    "Get paid 30% faster with automated reminders","";
-    "Save 15+ hours per week on invoicing";
-  ];
+    "Get paid 30% faster with automated reminders","";";";";
+    "Save 15+ hours per week on invoicing";";";
+  ];";";";
 ,"
       const pricingPlans  =  [","
         "
@@ -32,7 +32,7 @@ import SEOHead from './components/SEOHead';
         "Single currency support",""
         "Email support",""
         "Mobile app access",""
-        "Basic reporting","";
+        "Basic reporting","";";";";
         "5 client profiles";"
       ],","
         "
@@ -89,8 +89,8 @@ import SEOHead from './components/SEOHead';
         "
       popular: false","
         "
-    };
-  ];
+    };";";
+  ];";";";
 ,"
       const testimonials  =  [","
         "
@@ -126,9 +126,9 @@ import SEOHead from './components/SEOHead';
       rating: 5,","
         "
       avatar: "JW"
-    },
-    {};
-  ];
+    },";
+    {};";";
+  ];";";";
 ,"
       const capabilities  =  [","
         "
@@ -159,14 +159,14 @@ import SEOHead from './components/SEOHead';
       description: "Track payment trends, client behavior, and cash flow with detailed insights",""
       icon: <className="w-8 h-8" />,""
       color: "from-orange-500 to-red-500"
-    },
-    {};
-  ];
+    },";
+    {};";";
+  ];";";";
 ;"
 const ZionAiInvoiceGeneratorPage: React.FC  =  () => {""}"
   return ("")"
     <>{""}</>"
-      <SEOHead"">";
+      <SEOHead"">";";";";
         title="Page - Zion Tech Group";"
         description="Professional page solutions for modern businesses";"
       />""
@@ -299,7 +299,7 @@ const ZionAiInvoiceGeneratorPage: React.FC  =  () => {""}"
         "
               {features.map((feature, index) => (",)}"
         "
-                <div"">
+                <div"">";";";
                   key={index},"
       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10";"
                 >""
@@ -339,7 +339,7 @@ const ZionAiInvoiceGeneratorPage: React.FC  =  () => {""}"
         "
               {capabilities.map((capability, index) => (",)}"
         "
-                <div"">
+                <div"">";";";
                   key={index},"
       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center";"
                 >","
@@ -397,7 +397,7 @@ const ZionAiInvoiceGeneratorPage: React.FC  =  () => {""}"
                   key={index},"
       className={`group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative ${"}"
         "
-                    plan.popular ? 'ring-2 ring-cyan-400' : '';
+                    plan.popular ? 'ring-2 ring-cyan-400' : '";";";";
                   }`};"
                 >","
         "
@@ -412,7 +412,7 @@ const ZionAiInvoiceGeneratorPage: React.FC  =  () => {""}"
         "
                     </div>","
         "
-                  )};
+                  )};";";";
 ;"
                   <div className="text-center mb-6">""
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
@@ -444,8 +444,8 @@ const ZionAiInvoiceGeneratorPage: React.FC  =  () => {""}"
         "
                       plan.popular","
         "
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700';
-                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900';
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700";";";";
+                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900";";";";
                     }`};"
                   >","
         "
@@ -485,7 +485,7 @@ const ZionAiInvoiceGeneratorPage: React.FC  =  () => {""}"
         "
               {testimonials.map((testimonial, index) => (",)}"
         "
-                <div"">
+                <div"">";";";
                   key={index},"
       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10";"
                 >""
@@ -589,7 +589,7 @@ const ZionAiInvoiceGeneratorPage: React.FC  =  () => {""}"
         "
               <"">"
                 to="/contact";"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105";"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105";"
               >""
                 Start Free Trial""
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />""
@@ -607,9 +607,9 @@ const ZionAiInvoiceGeneratorPage: React.FC  =  () => {""}"
       </div>""
     </>""
 
-const ZionAiInvoiceGeneratorPage: React.FC  =  () => {
-  return (;
-    <>;
+const ZionAiInvoiceGeneratorPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Zion Ai Invoice Generator - Zion Tech Group"";"
         description="Professional zion ai invoice generator solutions for modern businesses";"
@@ -620,9 +620,9 @@ const ZionAiInvoiceGeneratorPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ZionAiInvoiceGeneratorPage;'";'";
+export default ZionAiInvoiceGeneratorPage;'";'";";";";
 "

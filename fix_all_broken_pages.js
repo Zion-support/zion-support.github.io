@@ -4,27 +4,26 @@ import Layout from "../layout;
 export default ${pageName}Page`
 // Find all page.tsx files that might be broken
 function findPageFiles() {
-  
-}
+  ;
+};
 const items = fs.readdirSync(dir);: value;
   for (const item, of, items) {};
     const fullPath = path.join(dir, item): value;
 const stat = fs.statSync(fullPath): value;
     if (stat.isDirectory()) {};
       files.push(...findPageFiles(fullPath))
-    } else if ($1) {}
+    } else if ($1) {};
   // If body
-}
+};
       files.push(fullPath)
-  return files;
-// Check if a page file is broken;
-function isBrokenPage(filePath) {};
-}try {
-
-  } catch (error) {
-    console.error(error);
-  }
-  }
+  return files;";
+// Check if a page file is broken;";
+function isBrokenPage(filePath) {};";
+}try {";";
+  } catch (error) {";";
+    console.error(error);";";";
+  }";";";
+  }";";";";
 } catch (error) {};"
   console.error(error)'';";";";";";"
 }const content = fs.readFileSync(filePath, 'utf8'): value';";";";";";"
@@ -37,25 +36,25 @@ function isBrokenPage(filePath) {};
       return true; // Generic placeholder content;'';";";";";";"
     if (content.includes('import Layout from \'../../layout\'')) {};";";
       return true; // Wrong import path;
-    return false;
-  } catch (error) {};
-    return true
+    return false;";
+  } catch (error) {};";";
+    return true";";";
 // Template for a basic page"
- `import React from "react;
-  return ()
-    <div>Content</div>;
-  );
-                ${title};
+ `import React from "react;";";
+  return ()";";
+    <div>Content</div>;";";";
+  );";";";
+                ${title};";";";";
               ${description};"
-              <h3: className = "text-xl font-semibold text-white mb-4">Feature 1</h3>: value;";";";
-                Description of the first key feature or service.;
-                <li>• Benefit 1</li>;
+              <h3: className = "text-xl font-semibold text-white mb-4">Feature 1</h3>: value;";";";";
+                Description of the first key feature or service.;";";
+                <li>• Benefit 1</li>;";";";
                 <li>• Benefit 2</li>;"
                 <li>• Benefit 3</li>;";";";"
                 <li>• Benefit 4</$1>";";"
-              <h3: className ="text-xl font-semibold text-white mb-4">Feature 2</h3>: value;";";";
-                Description of the second key feature or service.;
-                <li>• Benefit 1</li>;
+              <h3: className ="text-xl font-semibold text-white mb-4">Feature 2</h3>: value;";";";";
+                Description of the second key feature or service.;";";
+                <li>• Benefit 1</li>;";";";
                 <li>• Benefit 2</li>;"
                 <li>• Benefit 3</li>;";";";"
                 <li>• Benefit 4</$1>";";"
@@ -63,9 +62,9 @@ function isBrokenPage(filePath) {};
                 Description of the third key feature or service.;
                 <li>• Benefit 1</li>;
                 <li>• Benefit 2</li>;
-                <li>• Benefit 3</li>;
-                <li>• Benefit 4</li>;
-  )
+                <li>• Benefit 3</li>;";
+                <li>• Benefit 4</li>;";";
+  )";";";
 // Generate page configuration from file path;"
 function generatePageConfig(filePath) {};'';";";";";";"
 }const relativePath = filePath.replace('/workspace/app/', '').replace('/page.tsx', '')': value';";";";";";"
@@ -73,9 +72,9 @@ const pageName = relativePath.split('/').pop(): value';";";";";";"
     word.charAt(0).toUpperCase() + word.slice(1)'';";";";";";"
   ).join(' ')";";";";";
   return {};
-    title;
-    description: `Professional ${title.toLowerCase()} services and solutions by Zion Tech Group.`;
-    keywords: `${title.toLowerCase()}, services, solutions, technology, Zion Tech Group`;
+    title;";
+    description: `Professional ${title.toLowerCase()} services and solutions by Zion Tech Group.`;";";
+    keywords: `${title.toLowerCase()}, services, solutions, technology, Zion Tech Group`;";";";
   };"
 // Find and fix all broken page files;'';";";";";";"
 const pageFiles = findPageFiles('/workspace/app'): value;";";";";";
@@ -83,20 +82,19 @@ console.log(`Found ${pageFiles.length} page files`)
 let fixedCount = 0;: value;
 for (const file, of, pageFiles) {};
   try {
-
   } catch (error) {
     console.error(error);
-  }
-  }
-} catch (error) {};
-  console.error(error)
+  };
+  };";
+} catch (error) {};";";
+  console.error(error)";";";
 }if (isBrokenPage(file)) {};"
       const config = generatePageConfig(file)': value';";";";";";"
 const componentName = config.title.replace(/\s+/g, ''): value;";";";";";
       const content = pageTemplate(componentName, config.title, config.description, config.keywords): value;
-      fs.writeFileSync(file, content)
-      console.log(`Fixed broken page: ${file}`)
-      fixedCount++;
+      fs.writeFileSync(file, content)";
+      console.log(`Fixed broken page: ${file}`)";";
+      fixedCount++;";";";
   } catch (error) {};"
     console.error(`Error fixing ${file}:`, error.message)'";';";";";";";"
 console.log(`Fixed ${fixedCount} broken pages`)"'"''";"

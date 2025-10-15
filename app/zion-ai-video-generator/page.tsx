@@ -1,20 +1,20 @@
-import React from 'react';';
-import SEOHead from './components/SEOHead';
-,
-      import SEOOptimizer from "../../components/SEOOptimizer;
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";";";
+,";";";
+      import SEOOptimizer from "../../components/SEOOptimizer;";";";";
 ,"
-      export default function ZionAiVideoGenerator() {
+      export default function ZionAiVideoGenerator() {";";";
   "
-}
-    "Team collaboration tools";
-  ];
+}";";";
+    "Team collaboration tools";";";
+  ];";";";
 ,"
       const benefits  =  [""
     "Create professional videos 10x faster",""
     "Reduce video production costs by 80%",""
-    "No technical skills required","";
-    "Scale video content production";
-  ];
+    "No technical skills required","";";";";
+    "Scale video content production";";";
+  ];";";";
 ,"
       const pricingPlans  =  [","
         "
@@ -32,7 +32,7 @@ import SEOHead from './components/SEOHead';
         "Basic templates (100+)",""
         "5-minute max video length",""
         "Standard voice synthesis",""
-        "Basic branding options","";
+        "Basic branding options","";";";";
         "Email support";"
       ],","
         "
@@ -88,8 +88,8 @@ import SEOHead from './components/SEOHead';
         "
       popular: false","
         "
-    };
-  ];
+    };";";
+  ];";";";
 ,"
       const testimonials  =  [","
         "
@@ -125,9 +125,9 @@ import SEOHead from './components/SEOHead';
       rating: 5,","
         "
       avatar: "EW"
-    },
-    {};
-  ];
+    },";
+    {};";";
+  ];";";";
 ,"
       const useCases  =  [","
         "
@@ -158,14 +158,14 @@ import SEOHead from './components/SEOHead';
       description: "Generate internal training, announcements, and company updates",""
       icon: <Users className="w-8 h-8" />,""
       color: "from-orange-500 to-red-500"
-    },
-    {};
-  ];
+    },";
+    {};";";
+  ];";";";
 ;"
 const ZionAiVideoGeneratorPage: React.FC  =  () => {""}"
   return ("")"
     <>{""}</>"
-      <SEOHead"">";
+      <SEOHead"">";";";";
         title="Page - Zion Tech Group";"
         description="Professional page solutions for modern businesses";"
       />""
@@ -298,7 +298,7 @@ const ZionAiVideoGeneratorPage: React.FC  =  () => {""}"
         "
               {features.map((feature, index) => (",)}"
         "
-                <div"">
+                <div"">";";";
                   key={index},"
       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10";"
                 >""
@@ -339,7 +339,7 @@ const ZionAiVideoGeneratorPage: React.FC  =  () => {""}"
         "
               {useCases.map((useCase, index) => (",)}"
         "
-                <div"">
+                <div"">";";";
                   key={index},"
       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center";"
                 >","
@@ -397,7 +397,7 @@ const ZionAiVideoGeneratorPage: React.FC  =  () => {""}"
                   key={index},"
       className={`group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative ${"}"
         "
-                    plan.popular ? 'ring-2 ring-cyan-400' : '';
+                    plan.popular ? 'ring-2 ring-cyan-400' : '";";";";
                   }`};"
                 >","
         "
@@ -412,7 +412,7 @@ const ZionAiVideoGeneratorPage: React.FC  =  () => {""}"
         "
                     </div>","
         "
-                  )};
+                  )};";";";
 ;"
                   <div className="text-center mb-6">""
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
@@ -444,8 +444,8 @@ const ZionAiVideoGeneratorPage: React.FC  =  () => {""}"
         "
                       plan.popular","
         "
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700';
-                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900';
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700";";";";
+                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900";";";";
                     }`};"
                   >","
         "
@@ -485,7 +485,7 @@ const ZionAiVideoGeneratorPage: React.FC  =  () => {""}"
         "
               {testimonials.map((testimonial, index) => (",)}"
         "
-                <div"">
+                <div"">";";";
                   key={index},"
       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10";"
                 >""
@@ -589,7 +589,7 @@ const ZionAiVideoGeneratorPage: React.FC  =  () => {""}"
         "
               <"">"
                 to="/contact";"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105";"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105";"
               >""
                 Start Free Trial""
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />""
@@ -607,9 +607,9 @@ const ZionAiVideoGeneratorPage: React.FC  =  () => {""}"
       </div>""
     </>""
 
-const ZionAiVideoGeneratorPage: React.FC  =  () => {
-  return (;
-    <>;
+const ZionAiVideoGeneratorPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Zion Ai Video Generator - Zion Tech Group"";"
         description="Professional zion ai video generator solutions for modern businesses";"
@@ -620,9 +620,9 @@ const ZionAiVideoGeneratorPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ZionAiVideoGeneratorPage;'";'";
+export default ZionAiVideoGeneratorPage;'";'";";";";
 "

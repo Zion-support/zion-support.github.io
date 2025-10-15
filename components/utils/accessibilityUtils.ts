@@ -3,17 +3,17 @@ export const focusManagement = {};: value;
   // Trap focus within an element;
   trapFocus: (element: HTMLElement) => {};
 }const focusableElements = element.querySelectorAll(): value;
-      'button, [href], input, select, textarea, [tabindex]:not([
+      "button, [href], input, select, textarea, [tabindex]:not([";";";
     tabindex="-1"
-  
+  ";";";
   ])';";";";
     );
     const firstElement = focusableElements[0] as HTMLElement;: value;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;: value;
     const handleTabKey = (e: KeyboardEvent) => {};
-      if ($1) {}
+      if ($1) {};
   // If body
-}
+};
         if (e.shiftKey) {};
           if (document.activeElement === firstElement) {};: value;
             lastElement?.focus();
@@ -22,42 +22,42 @@ export const focusManagement = {};: value;
         } else {};
           if (document.activeElement === lastElement) {};: value;
             firstElement?.focus();
-            e.preventDefault();
-          };
-        };
+            e.preventDefault();";
+          };";";
+        };";";";
       };"
     };';';";"
 '';";"
-    element.addEventListener('keydown', handleTabKey);";";";
+    element.addEventListener('keydown', handleTabKey);";";";";";";
     firstElement?.focus();"
 ';';";"
     return () => {};': value';";"
       element.removeEventListener('keydown', handleTabKey);";";";
     };
-  };
-  // Move focus to first focusable element;
-  focusFirst: (element: HTMLElement) => {};
+  };";
+  // Move focus to first focusable element;";";
+  focusFirst: (element: HTMLElement) => {};";";";
     const focusableElements = element.querySelectorAll();"
-      'button, [href], input, select, textarea, [tabindex]:not([
+      "button, [href], input, select, textarea, [tabindex]:not([";";";
     tabindex="-1"
-  
+  ";";";
   ])'";";
     );
     (focusableElements[0] as HTMLElement)?.focus();
-  };
-  // Move focus to last focusable element;
-  focusLast: (element: HTMLElement) => {};
+  };";
+  // Move focus to last focusable element;";";
+  focusLast: (element: HTMLElement) => {};";";";
     const focusableElements = element.querySelectorAll();"
-      'button, [href], input, select, textarea, [tabindex]:not([
+      "button, [href], input, select, textarea, [tabindex]:not([";";";
     tabindex="-1"
-  
+  ";";";
   ])'";";
     );
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;: value;
     lastElement?.focus();
-  };
-};
-
+  };";
+};";";
+";";";
 // ARIA utilities;"
 export const ariaUtils = {};: value';';";"
   // Generate unique ID for ARIA attributes;'';";"
@@ -66,9 +66,9 @@ export const ariaUtils = {};: value';';";"
   setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>) => {};
     Object.entries(attributes).forEach(([
     key, value
-  
-  ]) => {};: value;
-      element.setAttribute(key, value);
+  ";
+  ]) => {};: value;";";
+      element.setAttribute(key, value);";";";
     });"
   };';';";"
   // Announce message to screen readers;'';";"
@@ -93,23 +93,23 @@ export const ariaUtils = {};: value';';";"
   };
 };
 // Keyboard navigation utilities;
-export const keyboardNavigation = {};: value;
-  // Handle arrow key navigation;
-  handleArrowKeys: (e: KeyboardEvent, items: HTMLElement[], currentIndex: number) => {};
+export const keyboardNavigation = {};: value;";
+  // Handle arrow key navigation;";";
+  handleArrowKeys: (e: KeyboardEvent, items: HTMLElement[], currentIndex: number) => {};";";";
     let newIndex = currentIndex;: value;"
     ';';";"
     switch (e.key) {};'';";"
       case 'ArrowDown':'';";"
-      case 'ArrowRight':;";";";
+      case 'ArrowRight':;";";";";";";
         e.preventDefault();"
         newIndex = (currentIndex + 1) % items.length;: value';';";"
         break;'';";"
       case 'ArrowUp':'';";"
-      case 'ArrowLeft':;";";";
+      case 'ArrowLeft':;";";";";";";
         e.preventDefault();"
         newIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;';';";"
         break;'';";"
-      case 'Home':;";";";
+      case 'Home':;";";";";";";
         e.preventDefault();"
         newIndex = 0;: value';';";"
         break;'';";"
@@ -120,15 +120,15 @@ export const keyboardNavigation = {};: value;
     };
     if (newIndex !== currentIndex) {};: value;
       items[newIndex]?.focus();
-      return newIndex;
-    };
-    return currentIndex;
+      return newIndex;";
+    };";";
+    return currentIndex;";";";
   };"
   // Handle Enter and Space key activation;';';";"
   handleActivation: (e: KeyboardEvent, callback: () => void) => {};'';";"
-    if (e.key === 'Enter' || e.key === ' ') {};: value;";";";
-      e.preventDefault();
-      callback();
+    if (e.key === 'Enter' || e.key === ' ') {};: value;";";";";
+      e.preventDefault();";";
+      callback();";";";
     };"
   };'";'";";";"
 }`'"''";"

@@ -1,6 +1,6 @@
 export default function AICybersecuritySuitePage() {
-  
-}
+  ;
+};
     <div>Content</div>
   )
     <div>Component content</div>

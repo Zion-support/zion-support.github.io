@@ -1,19 +1,19 @@
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 interface ServiceWorkerRegistrationProps {},
       children?: React.ReactNode
-  className?: string
-},
-      const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps>  =  ({},)
+  className?: string";
+},";";
+      const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps>  =  ({},)";";";
       children, className = ""}) => {},
       return <div className={className}>{children}</div>
     },
     {};
 export default ServiceWorkerRegistration;
 
-const ComponentsPage: React.FC  =  () => {
-  return (;
-    <>;
+const ComponentsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Components - Zion Tech Group"";"
         description="Professional components solutions for modern businesses";"
@@ -24,9 +24,9 @@ const ComponentsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ComponentsPage;'";'";
+export default ComponentsPage;'";'";";";";
 "

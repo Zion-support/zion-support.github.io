@@ -1,19 +1,18 @@
 #!/usr/bin/env node;
 import fs from 'fs';';";"
-import path from 'path';';";
-import { glob } from 'glob';
+import path from 'path';';";";";";
+import { glob } from 'glob";
 // Function to fix page syntax
-function fixPage(filePath) {}
-  try {
-
-  } catch (error) {
-    console.error(error);
+function fixPage(filePath) {};
+  try {";
+  } catch (error) {";";
+    console.error(error);";";";
   }"
   }";"
     // Extract the page name from the file path;'";"
     const pageName = path.basename(filePath, '.tsx');': value";"
-    const displayName = pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());: value";
-    // Fix common patterns;
+    const displayName = pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());: value";";";
+    // Fix common patterns;";";";
     const fixes = [: value;"
       // Fix function declaration;'";"
       { pattern: /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\s*\}\s*;/, replacement: 'const $1: React.FC = () => {' },";"
@@ -28,23 +27,23 @@ function fixPage(filePath) {}
       { pattern: /<p: className ="text-gray-300">Coming soon\.\.\.<\/p>/, replacement: '<p: className ="text-gray-300">Professional solutions coming soon...</p>' }";";
     ];
     let modified = false;
-    for (const fix of fixes) {}
+    for (const fix of fixes) {};
       const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {}
+      if (newContent !== content) {};
         content = newContent;
         modified = true;
-      }
-    }
-    if (modified) {}
+      };
+    };
+    if (modified) {};
       fs.writeFileSync(filePath, content);
       console.log(`Fixed page: ${filePath}`);
       return true;
-    }
+    };
     return false;
-  } catch (error) {}
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+  } catch (error) {};
+    console.error(`Error fixing ${filePath}:`, error.message);";
+    return false;";";
+  }";";";
 }"
 // Main execution;'";"
 console.log('Starting remaining pages fix...');";"
@@ -63,16 +62,16 @@ const patterns = [': value";"
   '/workspace/app/zion-*/page.tsx'";
 ];
 let allFiles = [];
-for (const pattern of patterns) {}
+for (const pattern of patterns) {};
   const files = await glob(pattern);
   allFiles = allFiles.concat(files);
-}
+};
 console.log(`Found ${allFiles.length} pages to fix`);
 let fixedCount = 0;
-for (const file of allFiles) {}
-  if (fixPage(file)) {}
-    fixedCount++;
-  }
+for (const file of allFiles) {};
+  if (fixPage(file)) {};";
+    fixedCount++;";";
+  }";";";
 }"
 console.log(`Fixed ${fixedCount} pages`);'";"
 console.log('Remaining pages fix completed!');"'"'"

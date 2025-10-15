@@ -1,7 +1,7 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-// Core components - keep these synchronous for critical path
+import React, { Suspense, lazy } from 'react";";";";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom";";";";
+import { HelmetProvider } from 'react-helmet-async";";";
+// Core components - keep these synchronous for critical path";";";
 import Navigation from './app/components/Navigation';";";"
 import Sidebar from './app/components/Sidebar';";";"
 import Footer from './app/components/Footer';";";"
@@ -9,7 +9,7 @@ import LightweightErrorBoundary from './app/components/LightweightErrorBoundary'
 import PerformanceMonitor from './app/components/PerformanceMonitor';";";"
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';";";"
 import OptimizedLoadingSpinner from './app/components/OptimizedLoadingSpinner';";";"
-import SEOHead from './app/components/SEOHead';";";
+import SEOHead from './app/components/SEOHead';";";";";";
 // Lazy load all page components"
 const HomePage = lazy(() => import('./app/page'));";";";";";"
 const AboutPage = lazy(() => import('./app/pages/AboutPage'));";";";";";"
@@ -22,14 +22,14 @@ const SupportPage = lazy(() => import('./app/pages/SupportPage'));";";";";";"
 const PrivacyPage = lazy(() => import('./app/pages/PrivacyPage'));";";";";";"
 const TermsPage = lazy(() => import('./app/pages/TermsPage'));";";";";";"
 const PricingPage = lazy(() => import('./app/pages/PricingPage'));";";";";";"
-const SolutionsPage = lazy(() => import('./app/pages/SolutionsPage'));";";";";";
+const SolutionsPage = lazy(() => import('./app/pages/SolutionsPage'));";";";";";";";";
 // Service pages"
 const AIServicesPage = lazy(() => import('./app/pages/AIServicesPage'));";";";";";"
 const ITServicesPage = lazy(() => import('./app/pages/ITServicesPage'));";";";";";"
 const CloudInfrastructurePage = lazy(() => import('./app/pages/CloudInfrastructurePage'));";";";";";"
 const DigitalTransformationPage = lazy(() => import('./app/pages/DigitalTransformationPage'));";";";";";"
 const CaseStudiesPage = lazy(() => import('./app/pages/CaseStudiesPage'));";";";";";"
-const CareersPage = lazy(() => import('./app/pages/CareersPage'));";";";";";
+const CareersPage = lazy(() => import('./app/pages/CareersPage'));";";";";";";";";
 // Additional pages"
 const CybersecurityPage = lazy(() => import('./app/pages/CybersecurityPage'));";";";";";"
 const CloudSolutionsPage = lazy(() => import('./app/pages/CloudSolutionsPage'));";";";";";"
@@ -43,32 +43,32 @@ const CommunityPage = lazy(() => import('./app/pages/CommunityPage'));";";";";";
 const ChatPage = lazy(() => import('./app/pages/ChatPage'));";";";";";"
 const StatusPage = lazy(() => import('./app/pages/StatusPage'));";";";";";"
 const ReportPage = lazy(() => import('./app/pages/ReportPage'));";";";";";"
-const SoftwareDevelopmentPage = lazy(() => import('./app/pages/SoftwareDevelopmentPage'));";";";";";
+const SoftwareDevelopmentPage = lazy(() => import('./app/pages/SoftwareDevelopmentPage'));";";";";";";";";
 // Solution pages - lazy load these separately"
 const MicroSaaSSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));";";";";";"
 const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));";";";";";"
 const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));";";";";";"
 const FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'));";";";";";
 // Error fallback component
-export const ErrorFallback = ({ error, resetErrorBoundary }: {
-    error: Error; resetErrorBoundary: () => void 
-  
+export const ErrorFallback = ({ error, resetErrorBoundary }: {;";
+    error: Error; resetErrorBoundary: () => void ";";
+  ";";";
   }) => ("
   <div: className ="min-h-screen flex items-center justify-center bg-gray-50">";";";"
     <div: className ="max-w-md w-full bg-white shadow-lg rounded-lg p-6">";";";"
       <div: className ="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">";";";"
         <svg: className ="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">";";";"
-          <path: strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />";";";
-        </svg>
+          <path: strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />";";";";";
+        </svg>";";";
       </div>"
       <div: className ="mt-4 text-center">";";";"
         <h1: className ="text-lg font-medium text-gray-900">Something went wrong</$1>";";"
-        <p: className ="mt-2 text-sm text-gray-500">";";";
-          {error.message}
+        <p: className ="mt-2 text-sm text-gray-500">";";";";";
+          {error.message}";";";
         </p>"
-        <div: className ="mt-6">";";";
+        <div: className ="mt-6">";";";";";";
           <button: onClick ={resetErrorBoundary}"
-            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"";";";
+            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"";";";
           >
             Try again
           </button>
@@ -77,22 +77,21 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: {
     </div>
   </div>
 );
-function App() {
-  
+function App() {,
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
   return (
-    <LightweightErrorBoundary>
-      <HelmetProvider>
-        <Router>
+    <LightweightErrorBoundary>";
+      <HelmetProvider>";";
+        <Router>";";";
           <SEOHead />"
-          <div: className ="min-h-screen bg-slate-900 flex">";";";
-            <Sidebar: isOpen ={sidebarOpen
-}";";
+          <div: className ="min-h-screen bg-slate-900 flex">";";";";";
+            <Sidebar: isOpen ={sidebarOpen";";,";
+}";";";";";
               <Navigation: onSidebarToggle ={() => setSidebarOpen(true)} />"
-              <main: className ="relative z-10 flex-1" id="main-content" role="main">";";";
+              <main: className ="relative z-10 flex-1" id="main-content" role="main">";";";";";";
                 <LightweightErrorBoundary>"
-                  <Suspense: fallback ={<OptimizedLoadingSpinner: size ="lg" text="Loading page..." />}>";";";
-                    <Routes>
+                  <Suspense: fallback ={<OptimizedLoadingSpinner: size ="lg" text="Loading page..." />}>";";";";";
+                    <Routes>";";";
                       {/* Main Pages */}"
                       <Route: path ="/" element={<HomePage />} />";";";"
                       <Route: path ="/about" element={<AboutPage />} />";";";"
@@ -108,19 +107,19 @@ function App() {
                       <Route: path ="/privacy" element={<PrivacyPage />} />";";";"
                       <Route: path ="/terms" element={<TermsPage />} />";";";"
                       <Route: path ="/pricing" element={<PricingPage />} />";";";"
-                      <Route: path ="/solutions" element={<SolutionsPage />} />";";";
+                      <Route: path ="/solutions" element={<SolutionsPage />} />";";";";";";
                       {/* Service Pages */}"
                       <Route: path ="/ai-services" element={<AIServicesPage />} />";";";"
                       <Route: path ="/it-services" element={<ITServicesPage />} />";";";"
                       <Route: path ="/cloud-infrastructure" element={<CloudInfrastructurePage />} />";";";"
                       <Route: path ="/digital-transformation" element={<DigitalTransformationPage />} />";";";"
                       <Route: path ="/case-studies" element={<CaseStudiesPage />} />";";";"
-                      <Route: path ="/careers" element={<CareersPage />} />";";";
+                      <Route: path ="/careers" element={<CareersPage />} />";";";";";";
                       {/* Additional Service Pages */}"
                       <Route: path ="/cybersecurity" element={<CybersecurityPage />} />";";";"
                       <Route: path ="/cloud-solutions" element={<CloudSolutionsPage />} />";";";"
                       <Route: path ="/micro-saas" element={<MicroSaaSPage />} />";";";"
-                      <Route: path ="/5g-solutions" element={<FiveGSolutionsPage />} />";";";
+                      <Route: path ="/5g-solutions" element={<FiveGSolutionsPage />} />";";";";";";
                       {/* Additional Pages */}"
                       <Route: path ="/team" element={<TeamPage />} />";";";"
                       <Route: path ="/docs" element={<DocumentationPage />} />";";";"
@@ -131,7 +130,7 @@ function App() {
                       <Route: path ="/chat" element={<ChatPage />} />";";";"
                       <Route: path ="/status" element={<StatusPage />} />";";";"
                       <Route: path ="/report" element={<ReportPage />} />";";";"
-                      <Route: path ="/software-development" element={<SoftwareDevelopmentPage />} />";";";
+                      <Route: path ="/software-development" element={<SoftwareDevelopmentPage />} />";";";";";";
                       {/* Catch all route */}"
                       <Route: path ="*" element={";";";"
                         <div: className ="min-h-screen flex items-center justify-center bg-slate-900">";";";"
@@ -142,7 +141,7 @@ function App() {
                               Go Home
                             </a>
                           </div>
-                        </div>
+                        </div>,
                       } />
                     </Routes>
                   </Suspense>
@@ -155,7 +154,7 @@ function App() {
           </div>
         </Router>
       </HelmetProvider>
-    </LightweightErrorBoundary>
-  );
-}
+    </LightweightErrorBoundary>";
+  );";";
+}";";";
 export default App;"

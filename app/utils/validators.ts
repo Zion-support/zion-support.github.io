@@ -1,14 +1,12 @@
 
 interface ValidatorsOptions {
   // Add your options here;
-}
-
+};
 interface ValidatorsState {
   // Add your state here;
-}
-
-export const Validators = (options: ValidatorsOptions = {
-  }) => {
+};
+export const Validators = (options: ValidatorsOptions = {,
+  }) => {;
     const stateRef = useRef<ValidatorsState>({;
     // Initialize your state here;
   
@@ -18,7 +16,6 @@ export const Validators = (options: ValidatorsOptions = {
   useEffect(() => {
     // Add your effect logic here;
   }, [
-    
   ]);
 
   return {
@@ -26,5 +23,5 @@ export const Validators = (options: ValidatorsOptions = {
   };
 };
 
-export default Validators;';';";
+export default Validators;';';";";";";
 "

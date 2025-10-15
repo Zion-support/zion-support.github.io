@@ -1,5 +1,5 @@
 import fs from 'fs';"
-import path from "path;
+import path from "path;";";";";
 #!/usr/bin// Fixed regex"
   ''";"
   ''";"
@@ -19,5 +19,5 @@ import path from "path;
   console.error('Error:'')";"
     const content = fs.readFileSync(filePath, 'utf8'')";"
 console.log('Starting merge conflict resolution...'')";"
-console.log('Merge conflict resolution completed!'')";
+console.log('Merge conflict resolution completed!'')";";";";
 "

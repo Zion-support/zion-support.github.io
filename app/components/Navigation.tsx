@@ -1,4 +1,4 @@
-import React, { useState } from 'react',
+import React, { useState } from 'react",";";";
       import {"}"
         "
   Bars3Icon,","
@@ -62,24 +62,24 @@ import React, { useState } from 'react',
   RocketLaunchIcon,","
         "
   ServerIcon","
-
-} from '@heroicons/react/24/outline';
+";";";
+} from '@heroicons/react/24/outline";";";";
 ,"
       interface NavigationProps {"}"
         "
   onSidebarToggle?: () => void","
         "
-};
-,
-      const Navigation: React.FC<NavigationProps>  =  ({
-    onSidebarToggle "
+};";
+,";";
+      const Navigation: React.FC<NavigationProps>  =  ({";";";
+    onSidebarToggle ",";
   }) => {"}"
         "
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false)
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false)
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)";
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false)";";
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false)";";";
   const location = useLocation()"
   const navigation = [","
         "
@@ -112,8 +112,8 @@ import React, { useState } from 'react',
         { name: 'AI Content Generation', href: '/ai-content-generation-pro', icon: DocumentTextIcon },","
         "
         { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: Icon },","
-        ";
-        { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon };
+        ";";";";
+        { name: 'AI Automation Platform', href: '/ai-automation-platform", icon: CogIcon };";";";
       ]"
     },","
         "
@@ -139,7 +139,7 @@ import React, { useState } from 'react',
         "
         { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },","
         "
-        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon };
+        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro", icon: CurrencyDollarIcon };";";";
       ]"
     },","
         "
@@ -167,7 +167,7 @@ import React, { useState } from 'react',
         "
         { name: 'Network Infrastructure', href: '/network-infrastructure', icon: SignalIcon },","
         "
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon };
+        { name: '5G Solutions', href: '/5g-solutions", icon: SignalIcon };";";";
       ]"
     },","
         "
@@ -191,7 +191,7 @@ import React, { useState } from 'react',
         "
         { name: 'API Documentation', href: '/api-docs', icon: CodeBracketIcon },","
         "
-        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon };
+        { name: 'Help Center', href: '/help", icon: QuestionMarkCircleIcon };";";";
       ]"
     },","
         "
@@ -213,11 +213,11 @@ import React, { useState } from 'react',
         "
         { name: 'Partnerships', href: '/partnerships', icon: UserPlusIcon },","
         "
-        { name: 'Contact', href: '/contact', icon: PhoneIcon };
+        { name: 'Contact', href: '/contact", icon: PhoneIcon };";";";
       ]"
     },";"
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },";"
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon };
+    { name: 'Support', href: '/support", icon: QuestionMarkCircleIcon };";";";
   ]"
   const mobileNavigation  =  [","
         "
@@ -237,28 +237,28 @@ import React, { useState } from 'react',
   const isActive = (path: string) => {"}"
         "
     return location.pathname === path","
-        ";
-  };
+        ";";";
+  };";";";
 ,"
-      const toggleServicesMenu = () => {
+      const toggleServicesMenu = () => {";";";
   "
-};
-  };
+};";";
+  };";";";
 ,"
-      const toggleSolutionsMenu = () => {
+      const toggleSolutionsMenu = () => {";";";
   "
-};
-  };
+};";";
+  };";";";
 ,"
-      const toggleResourcesMenu = () => {
+      const toggleResourcesMenu = () => {";";";
   "
-};
-  };
+};";";
+  };";";";
 ,"
-      const toggleCompanyMenu = () => {
+      const toggleCompanyMenu = () => {";";";
   "
-};
-  };
+};";";
+  };";";";
 ,"
       return (";")"
     <nav className="bg-slate-900 shadow-lg">";"
@@ -281,12 +281,12 @@ import React, { useState } from 'react',
             <div className="hidden lg:ml-6 lg:flex lg:space-x-8">";"
               {navigation.map((item) => (";")}"
                 <div key={item.name} className="relative">";"
-                  <";">
+                  <";">";";";
                     to={item.href};"
-                    className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${";"}
-                      isActive(item.href)
-                        ? 'border-blue-500 text-white';
-                        : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white';
+                    className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${";"};";";
+                      isActive(item.href)";";";
+                        ? 'border-blue-500 text-white";";";";
+                        : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white";";";";
                     }`};"
                   >";"
                     <item.icon className="w-4 h-4" />";"
@@ -307,7 +307,7 @@ import React, { useState } from 'react',
         "
                       (item.name === 'Resources' && isResourcesOpen) ||","
         "
-                      (item.name === 'Company' && isCompanyOpen)
+                      (item.name === 'Company" && isCompanyOpen)";";";
                         ? 'block' : 'hidden';"
                     }`}>","
         "
@@ -315,7 +315,7 @@ import React, { useState } from 'react',
         "
                         <div key={subItem.name}>","
         "
-                          <";">
+                          <";">";";";
                             to={subItem.href},"
       className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white";"
                           >";"
@@ -373,12 +373,12 @@ import React, { useState } from 'react',
         "
                     <button",>"
         "
-                      onClick={() => {";"}
-                        if (item.name === 'AI Services') toggleServicesMenu(),
-      else if (item.name === 'Micro SaaS') toggleSolutionsMenu(),
-      else if (item.name === 'IT Solutions') toggleResourcesMenu(),
-      else if (item.name === 'Resources') toggleResourcesMenu(),
-      else if (item.name === 'Company') toggleCompanyMenu();
+                      onClick={() => {";"}";";";
+                        if (item.name === 'AI Services") toggleServicesMenu(),";";";
+      else if (item.name === 'Micro SaaS") toggleSolutionsMenu(),";";";
+      else if (item.name === 'IT Solutions") toggleResourcesMenu(),";";";
+      else if (item.name === 'Resources") toggleResourcesMenu(),";";";
+      else if (item.name === 'Company") toggleCompanyMenu();";";";
                       }},"
       className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-300 hover:text-white hover:bg-slate-700";"
                     >";"
@@ -401,7 +401,7 @@ import React, { useState } from 'react',
         "
                       (item.name === 'Resources' && isResourcesOpen) ||","
         "
-                      (item.name === 'Company' && isCompanyOpen)
+                      (item.name === 'Company" && isCompanyOpen)";";";
                         ? 'block' : 'hidden';"
                     }`}>","
         "
@@ -409,9 +409,9 @@ import React, { useState } from 'react',
         "
                         <div key={subItem.name}>","
         "
-                          <";">
+                          <";">";";";
                             to={subItem.href},"
-      className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-slate-700",
+      className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-slate-700",";";";
       onClick={() => setIsOpen(false)};"
                           >";"
                             <subItem.icon className="w-4 h-4 mr-3" />","
@@ -433,8 +433,8 @@ import React, { useState } from 'react',
         "
                     <",>"
         "
-                      to={item.href},
-      className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${isActive(item.href) ? 'text-white bg-slate-700' : 'text-gray-300 hover:text-white hover:bg-slate-700'}`},
+                      to={item.href},";";";
+      className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${isActive(item.href) ? 'text-white bg-slate-700' : 'text-gray-300 hover:text-white hover:bg-slate-700"}`},";";";
       onClick={() => setIsOpen(false)};"
                     >","
         "
@@ -453,9 +453,9 @@ import React, { useState } from 'react',
         </$1>"
       </$1>"
     </$1>"
-  )
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+  )";";";
+import React, { useState } from 'react";";";";
+import { Link, useLocation } from 'react-router-dom";
 import {
   Bars3Icon,
   XMarkIcon,
@@ -483,29 +483,29 @@ import {
   CodeBracketIcon,
   DevicePhoneMobileIcon,
   UserPlusIcon,
-  CheckCircleIcon,
-  RocketLaunchIcon,;
-  ServerIcon;
-}; from '@heroicons/react/24/outline';
+  CheckCircleIcon,";
+  RocketLaunchIcon,;";";
+  ServerIcon;";";";
+}; from '@heroicons/react/24/outline";
 interface NavigationProps {
   onSidebarToggle?: () => void;
-}
+};
 const Navigation: React.FC<NavigationProps>  =  ({
-    onSidebarToggle 
+    onSidebarToggle ,
   }) => {;
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-  const location = useLocation();
-  const navigation  =  [";
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);";
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false);";";
+  const location = useLocation();";";";
+  const navigation  =  [";";";";
     { name: 'Home', href: '/', icon: HomeIcon },";"
-    { name: 'About', href: '/about', icon: InformationCircleIcon },";
+    { name: 'About', href: '/about', icon: InformationCircleIcon },";";";";
     {"
       name: 'AI Services',";"
-      href: '/ai-solutions',";
-      icon: CpuChipIcon,
+      href: '/ai-solutions',";";";
+      icon: CpuChipIcon,";";";
       submenu: ["
         { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon },";"
         { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: EnvelopeIcon },";"
@@ -515,13 +515,13 @@ const Navigation: React.FC<NavigationProps>  =  ({
         { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', icon: ChartBarIcon },";"
         { name: 'AI Content Generation', href: '/ai-content-generation-pro', icon: DocumentTextIcon },";"
         { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: EyeIcon },";"
-        { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon }";
-      ]
-    },
+        { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon }";";
+      ]";";
+    },";";";
     {"
       name: 'Micro SaaS',";"
-      href: '/micro-saas-solutions',";
-      icon: GlobeAltIcon,
+      href: '/micro-saas-solutions',";";";
+      icon: GlobeAltIcon,";";";
       submenu: ["
         { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },";"
         { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },";"
@@ -529,13 +529,13 @@ const Navigation: React.FC<NavigationProps>  =  ({
         { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },";"
         { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },";"
         { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },";"
-        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon }";
-      ]
-    },
+        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon }";";
+      ]";";
+    },";";";
     {"
       name: 'IT Solutions',";"
-      href: '/it-solutions',";
-      icon: CogIcon,
+      href: '/it-solutions',";";";
+      icon: CogIcon,";";";
       submenu: ["
         { name: 'IT Solutions Overview', href: '/it-solutions', icon: CogIcon },";"
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },";"
@@ -544,42 +544,41 @@ const Navigation: React.FC<NavigationProps>  =  ({
         { name: 'Mobile App Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },";"
         { name: 'Database Management', href: '/database-management', icon: CircleStackIcon },";"
         { name: 'Network Infrastructure', href: '/network-infrastructure', icon: SignalIcon },";"
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }";
-      ]
-    },
+        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }";";
+      ]";";
+    },";";";
     {"
       name: 'Resources',";"
-      href: '#',";
-      icon: DocumentTextIcon,
+      href: '#',";";";
+      icon: DocumentTextIcon,";";";
       submenu: ["
         { name: 'Blog', href: '/blog', icon: DocumentTextIcon },";"
         { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },";"
         { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },";"
         { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },";"
         { name: 'API Documentation', href: '/api-docs', icon: CodeBracketIcon },";"
-        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }";
-      ]
-    },
+        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }";";
+      ]";";
+    },";";";
     {"
       name: 'Company',";"
-      href: '#',";
-      icon: UserGroupIcon,
+      href: '#',";";";
+      icon: UserGroupIcon,";";";
       submenu: ["
         { name: 'About Us', href: '/about', icon: InformationCircleIcon },";"
         { name: 'Our Team', href: '/team', icon: UserGroupIcon },";"
         { name: 'Careers', href: '/careers', icon: UserGroupIcon },";"
         { name: 'Partnerships', href: '/partnerships', icon: UserPlusIcon },";"
-        { name: 'Contact', href: '/contact', icon: PhoneIcon }";
-      ]
+        { name: 'Contact', href: '/contact', icon: PhoneIcon }";";";
+      ]";";";
     },"
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },";"
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }";
   ];
-  const isActive  =  (path: string) => {
+  const isActive  =  (path: string) => {,
     return location.pathname === path,;
   };
   const toggleServicesMenu = () => {
-
     setIsServicesOpen(!isServicesOpen);
     setIsSolutionsOpen(false);
     setIsResourcesOpen(false);
@@ -587,7 +586,6 @@ const Navigation: React.FC<NavigationProps>  =  ({
   
 };
   const toggleSolutionsMenu = () => {
-
     setIsSolutionsOpen(!isSolutionsOpen);
     setIsServicesOpen(false);
     setIsResourcesOpen(false);
@@ -595,7 +593,6 @@ const Navigation: React.FC<NavigationProps>  =  ({
   
 };
   const toggleResourcesMenu = () => {
-
     setIsResourcesOpen(!isResourcesOpen);
     setIsServicesOpen(false);
     setIsSolutionsOpen(false);
@@ -603,13 +600,12 @@ const Navigation: React.FC<NavigationProps>  =  ({
   
 };
   const toggleCompanyMenu = () => {
-
     setIsCompanyOpen(!isCompanyOpen);
     setIsServicesOpen(false);
     setIsSolutionsOpen(false);
-    setIsResourcesOpen(false);
-  
-};
+    setIsResourcesOpen(false);";
+  ";";
+};";";";
   return ("
     <nav className ="bg-slate-800 border-b border-slate-700">";"
       <div className ="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";"
@@ -617,28 +613,28 @@ const Navigation: React.FC<NavigationProps>  =  ({
           <div className ="flex items-center">";"
             <Link to ="/" className="flex-shrink-0 flex items-center">";"
               <div className ="h-8 w-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center">";"
-                <span className ="text-white font-bold text-sm">Z</$1>
+                <span className ="text-white font-bold text-sm">Z</$1>";";";
               </div>"
-              <span className ="ml-2 text-white font-bold text-lg">Zion Tech Group</span>",
-            </Link>
-          </div>
+              <span className ="ml-2 text-white font-bold text-lg">Zion Tech Group</span>",";
+            </Link>";";
+          </div>";";";
           {/* Desktop Navigation */}"
-          <div className ="hidden lg: flex lg:items-center lg:space-x-8">",
+          <div className ="hidden lg: flex lg:items-center lg:space-x-8">",";";";
             {navigation.map((item) => ("
-              <div key ={item.name} className="relative">";
-                <Link to ={item.href}
-                  className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors border-b-2 ${
+              <div key ={item.name} className="relative">";";
+                <Link to ={item.href};";";
+                  className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors border-b-2 ${";";";
                     isActive(item.href)"
                       ? 'border-blue-500 text-white'";"
-                       'border-transparent text-gray-300 hover: border-gray-300 hover:text-white'",
-                  }`}
+                       'border-transparent text-gray-300 hover: border-gray-300 hover:text-white'",";";
+                  }`}";";";
                 >"
-                  <item.icon: className ="w-4 h-4" />",
+                  <item.icon: className ="w-4 h-4" />",";";";
                   <span>{item.name}</span>"
                   {item.submenu && <ChevronDownIcon className ="w-4 h-4" />}";
-                </Link>
-                {/* Dropdown Menu */}
-                {item.submenu && (
+                </Link>";
+                {/* Dropdown Menu */};";";
+                {item.submenu && (";";";
                   <div className ={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${"
                     (item.name === 'AI Services' && isServicesOpen) ||";"
                     (item.name === 'Micro SaaS' && isSolutionsOpen) ||";"
@@ -646,57 +642,57 @@ const Navigation: React.FC<NavigationProps>  =  ({
                     (item.name === 'Resources' && isResourcesOpen) ||";"
                     (item.name === 'Company' && isCompanyOpen)";"
                       ? 'block'  'hidden'";
-                  }`}>
-                    {item.submenu.map((subItem) => (
-                      <div key ={subItem.name}>
+                  }`}>";
+                    {item.submenu.map((subItem) => (";";
+                      <div key ={subItem.name}>";";";
                         <Link to ={subItem.href}"
-                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover: bg-slate-700 hover:text-white"";
+                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover: bg-slate-700 hover:text-white"";";";";
                         >"
                           <subItem.icon: className ="w-4 h-4 mr-3" />",
                           <span>{subItem.name}</span>
                         </Link>
                       </div>
-                    ))}
+                    ))};
                   </div>
-                )}
-              </div>
-            ))}
-          </div>
+                )};
+              </div>";
+            ))};";";
+          </div>";";";
           {/* Mobile menu button */}"
-          <div className ="lg: hidden flex items-center">",
+          <div className ="lg: hidden flex items-center">",";";";
             <button onClick ={() => setIsOpen(!isOpen)}"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover: text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"";
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover: text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"";";";";
             >"
-              <span className ="sr-only">Open main menu</$1>
+              <span className ="sr-only">Open main menu</$1>";";";
               {isOpen ? ("
-                <XMarkIcon className ="h-6 w-6" />";
-              ) : ("
+                <XMarkIcon className ="h-6 w-6" />";";";";
+              ) : (",";
                 <Bars3Icon className ="h-6 w-6" />",
-              )}
-            </button>
-          </div>
-        </div>
+              )};
+            </button>";
+          </div>";";
+        </div>";";";
         {/* Mobile Navigation */}"
         <div className ={`lg:hidden ${isOpen ? 'block'  'hidden'}`}>";"
           <div className ="px-2 pt-2 pb-3 space-y-1 sm: px-3 bg-slate-800 border-t border-slate-700 max-h-96 overflow-y-auto">",
             {navigation.map((item) => (
-              <div key ={item.name}>
-                {item.submenu ? (
-                  <div>
+              <div key ={item.name}>";
+                {item.submenu ? (";";
+                  <div>";";";
                     <button onClick ={() => {"
                         if (item.name === 'AI Services') toggleServicesMenu();";"
                         else if (item.name === 'Micro SaaS') toggleSolutionsMenu();";"
                         else if (item.name === 'IT Solutions') toggleResourcesMenu();";"
-                        else if (item.name === 'Resources') toggleResourcesMenu();";
-                        else if (item.name === 'Company') toggleCompanyMenu()`;
+                        else if (item.name === 'Resources') toggleResourcesMenu();";";";";
+                        else if (item.name === 'Company") toggleCompanyMenu()`;";";";
                       }}"
-                      className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-300 hover: text-white hover:bg-slate-700"";
+                      className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-300 hover: text-white hover:bg-slate-700"";";";";
                     >"
-                      <item.icon: className ="w-5 h-5 mr-3" />",
+                      <item.icon: className ="w-5 h-5 mr-3" />",";";";
                       <span>{item.name}</span>"
-                      <ChevronDownIcon className ="w-4 h-4 ml-auto" />";
-                    </button>
-                    {/* Mobile Submenu */}
+                      <ChevronDownIcon className ="w-4 h-4 ml-auto" />";";
+                    </button>";";
+                    {/* Mobile Submenu */}";";";
                     <div className ={`pl-6 ${"
                       (item.name === 'AI Services' && isServicesOpen) ||";"
                       (item.name === 'Micro SaaS' && isSolutionsOpen) ||";"
@@ -704,36 +700,36 @@ const Navigation: React.FC<NavigationProps>  =  ({
                       (item.name === 'Resources' && isResourcesOpen) ||";"
                       (item.name === 'Company' && isCompanyOpen)";"
                         ? 'block'  'hidden'";
-                    }`}>
-                      {item.submenu.map((subItem) => (
-                        <Link key ={subItem.name}
+                    }`}>";
+                      {item.submenu.map((subItem) => (";";
+                        <Link key ={subItem.name}";";";
                           to={subItem.href}"
-                          className="flex items-center px-3 py-2 text-sm text-gray-300 hover: text-white hover:bg-slate-700"";
+                          className="flex items-center px-3 py-2 text-sm text-gray-300 hover: text-white hover:bg-slate-700"";";";";
                         >"
                           <subItem.icon: className ="w-4 h-4 mr-3" />",
                           <span>{subItem.name}</span>
                         </Link>
-                      ))}
+                      ))};
                     </div>
                   </div>
-                ) : (
-                  <Link to ={item.href}
-                    className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                ) : (";
+                  <Link to ={item.href};";";
+                    className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${";";";
                       isActive(item.href)"
                         ? 'bg-slate-700 text-white'";"
-                         'text-gray-300 hover: text-white hover:bg-slate-700'",
-                    }`}
+                         'text-gray-300 hover: text-white hover:bg-slate-700'",";";
+                    }`}";";";
                   >"
                     <item.icon: className ="w-5 h-5 mr-3" />",
                     <span>{item.name}</span>
                   </Link>
-                )}
+                )};
               </div>
-            ))}
+            ))};
           </div>
         </div>
       </div>
-    </nav>
-  );
-};
+    </nav>";
+  );";";
+};";";";
 export default Navigation;"

@@ -1,4 +1,4 @@
-import { useEffect } from "react;"
+import { useEffect } from "react;";";";";
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from "web-vitals;
 interface WebVitalsData {},
       name: string
@@ -6,79 +6,78 @@ interface WebVitalsData {},
   delta: number
   id: string
   navigationType: string
-},
-      const WebVitalsTracker: React.FC  =  () => {},
-      useEffect(() => {},;
-      const sendToAnalytics = (_metric: WebVitalsData) => {};
-      // Send to Google Analytics or other analytics service
-      if ($1) {}
-  // If body
-}
-        (window as any).gtag('event', metric.name, {};)
-          event_category: 'Web Vitals';
-          event_label: metric.id;
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value);
-          non_interaction: true})
-      };
-      // Send to custom analytics endpoint
-      if (process.env.NODE_ENV === 'production') {},
-      fetch('/api/analytics/web-vitals', {},)
-      method: 'POST',
-      headers: {};
-            'Content-Type': 'application/json'},
-      body: JSON.stringify(metric)}).catch(console.error)
-      };
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {}
+},";
+      const WebVitalsTracker: React.FC  =  () => {},";
+      useEffect(() => {},;";
+      const sendToAnalytics = (_metric: WebVitalsData) => {};";";
+      // Send to Google Analytics or other analytics service";";
+      if ($1) {};";";";
+  // If body";";";
+}";";";";
+        (window as any).gtag('event", metric.name, {};)";";";
+          event_category: 'Web Vitals";";";
+          event_label: metric.id;";";";
+          value: Math.round(metric.name === 'CLS" ? metric.value * 1000 : metric.value);
+          non_interaction: true})";
+      };";";
+      // Send to custom analytics endpoint";";";
+      if (process.env.NODE_ENV === 'production") {},";";";
+      fetch('/api/analytics/web-vitals", {},)";";";
+      method: 'POST",";";
+      headers: {};";";";
+            'Content-Type': 'application/json"},
+      body: JSON.stringify(metric)}).catch(console.error)";
+      };";";
+      // Log to console in development";";";
+      if (process.env.NODE_ENV === 'development") {};
     },
-    {}
+    {};
     };
     // Track Core Web Vitals
     onCLS(sendToAnalytics)
     onINP(sendToAnalytics); // INP replaces FID in newer versions
     onFCP(sendToAnalytics)
-    onLCP(sendToAnalytics)
-    onTTFB(sendToAnalytics)
-    // Track additional performance metrics
-    if (typeof window !== 'undefined' && 'performance' in window) {};
-      // Track page load time
-      window.addEventListener('load', () => {};
-}const navigation  =  performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-        if (navigation) {},
-      const loadTime = navigation.loadEventEnd - navigation.loadEventStart
-          sendToAnalytics({},)
-      name: 'LOAD_TIME',
-      value: loadTime,
-      delta: loadTime,
-      id: 'load-time',
+    onLCP(sendToAnalytics)";
+    onTTFB(sendToAnalytics)";";
+    // Track additional performance metrics";";";
+    if (typeof window !== 'undefined' && 'performance" in window) {};";";
+      // Track page load time";";";
+      window.addEventListener('load", () => {};";";";
+}const navigation  =  performance.getEntriesByType('navigation")[0] as PerformanceNavigationTiming
+        if (navigation) {},";
+      const loadTime = navigation.loadEventEnd - navigation.loadEventStart";";
+          sendToAnalytics({},)";";";
+      name: 'LOAD_TIME",";
+      value: loadTime,";";
+      delta: loadTime,";";";
+      id: 'load-time",
       navigationType: navigation.type});
-        };
-      })
-      // Track memory usage (if available)
-      if ('memory' in performance) {},
-      const memory  =  (performance as any).memory;
-        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-        sendToAnalytics({},)
-      name: 'MEMORY_USAGE',
-      value: memoryUsage,
-      delta: memoryUsage,
-      id: 'memory-usage',
-      navigationType: 'reload'})
-      }
+        };";
+      })";";
+      // Track memory usage (if available)";";";
+      if ('memory" in performance) {},
+      const memory  =  (performance as any).memory;";
+        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB";";
+        sendToAnalytics({},)";";";
+      name: 'MEMORY_USAGE",";
+      value: memoryUsage,";";
+      delta: memoryUsage,";";";
+      id: 'memory-usage",";";";
+      navigationType: 'reload"})
+      };
     },
-    {}
+    {};
   }, [
-    
   ])
-  return null
-},
-      export default WebVitalsTracker
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+  return null";
+},";";
+      export default WebVitalsTracker";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const ComponentsPage: React.FC  =  () => {
-  return (;
-    <>;
+const ComponentsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Components - Zion Tech Group"";"
         description="Professional components solutions for modern businesses";"
@@ -89,9 +88,9 @@ const ComponentsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ComponentsPage;'";'";
+export default ComponentsPage;'";'";";";";
 "

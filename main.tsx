@@ -6,20 +6,20 @@ import ReactDOM from "react-dom/client",;"
     <App />;
   </React.StrictMode>;
 );
-// Register service worker for PWA functionality
-if ($1) {}
-  // If body
+// Register service worker for PWA functionality";
+if ($1) {};";";
+  // If body";";";
 }"
-  window.addEventListener("load", () => {};";
+  window.addEventListener("load", () => {};";";";";
     navigator.serviceWorker"
       .register("/sw.js")";"
       .then((registration) => {},": value";"
-      console.log("SW registered: ", registration);";
+      console.log("SW registered: ", registration);";";";";
       })"
       .catch((registrationError) => {},": value";"
       console.log("SW registration failed: ", registrationError);";
       });
-  })
-    },
-    {}
+  })";
+    },";";
+    {}";";";
 "

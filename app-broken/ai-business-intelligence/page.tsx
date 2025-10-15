@@ -1,8 +1,8 @@
 import React from 'react',;"
-      import { Helmet } from 'react-helmet-async',;
-      export default function AiBusinessIntelligence() {
-  
-}
+      import { Helmet } from 'react-helmet-async",;
+      export default function AiBusinessIntelligence() {";
+  ;";";
+}";";";
       <Helmet>"
         <title>AiBusinessIntelligence - Zion Tech Group</title>"";"
         <meta: name ="description" content="Advanced aibusinessintelligence solutions" />: value";"
@@ -12,14 +12,14 @@ import React from 'react',;"
           <h1: className ="text-5xl font-bold text-white mb-6">": value";"
             Ai Business Intelligence <span: className ="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>: value";"
           </h1>"";"
-          <p: className ="text-xl text-gray-300 max-w-3xl mx-auto">: value";
+          <p: className ="text-xl text-gray-300 max-w-3xl mx-auto">: value";";";";
             Discover our comprehensive aibusinessintelligence solutions designed to transform your business;"
           </$1>";";";";"
         </div>"";";";";"
         <div: className ="text-center">": value";";";";"
-<p: className ="text-gray-300">Coming Soon - AI Business Intelligence Solutions</p>: value;";";";
-        </div>;
-      </div>;
+<p: className ="text-gray-300">Coming Soon - AI Business Intelligence Solutions</p>: value;";";";";
+        </div>;";";
+      </div>;";";";
     </div>;"
   )'";'";";";";";";";"
 };"'"''";"

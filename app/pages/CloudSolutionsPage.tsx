@@ -1,16 +1,16 @@
-import SEOHead from '../components/SEOHead';
-const CloudSolutionsPage: React.FC  =  () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
+import SEOHead from '../components/SEOHead";
+const CloudSolutionsPage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
         title="CloudSolutionsPage - Zion Tech Group"
         description="Zion Tech Group CloudSolutionsPage page"
-const CloudSolutionsPage: React.FC = () => {
-  
-  return (
-    <>";
+const CloudSolutionsPage: React.FC = () => {";
+  ";";
+  return (";";";
+    <>";";";";
       <SEOHead title ="CloudSolutionsPage - Zion Tech Group - Zion Tech Group"";"
-        description="Zion Tech Group CloudSolutionsPage page"";
+        description="Zion Tech Group CloudSolutionsPage page"";";";";
       />"
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
         <div className ="text-center">";"
@@ -18,10 +18,10 @@ const CloudSolutionsPage: React.FC = () => {
           <p className ="text-gray-300">Coming soon...</$1>
         </div>
       </div>
-    </>
+    </>,
   ),
 
-};
-
-export default CloudSolutionsPage;
+};";
+";";
+export default CloudSolutionsPage;";";";
 "

@@ -1,9 +1,9 @@
-import React from 'react';';";
-import SEOHead from './components/SEOHead';
+import React from 'react';';";";";";
+import SEOHead from './components/SEOHead";
 
-const MicroSaasServicesPage: React.FC  =  () => {
-  return (;
-    <>;
+const MicroSaasServicesPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Micro Saas Services - Zion Tech Group"";";"
         description="Professional micro saas services solutions for modern businesses";";"
@@ -14,9 +14,9 @@ const MicroSaasServicesPage: React.FC  =  () => {
           <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default MicroSaasServicesPage;'";'";";";
+export default MicroSaasServicesPage;'";'";";";";";";
 "

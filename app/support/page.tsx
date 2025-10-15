@@ -1,4 +1,4 @@
-import React, { useState } from 'react',
+import React, { useState } from 'react",";";";
       const SupportPage: React.FC  =  () => {"}"
         "
   const [formData, setFormData] = useState({",)}"
@@ -11,12 +11,12 @@ import React, { useState } from 'react',
         "
     priority: '',","
         "
-    category: '',",";
-
-    description: '';
-  }),
-      const [isSubmitting, setIsSubmitting]  =  useState(false),;
-      const [isSubmitted, setIsSubmitted] = useState(false);
+    category: '',",";";";
+";";";
+    description: '";
+  }),";
+      const [isSubmitting, setIsSubmitting]  =  useState(false),;";";
+      const [isSubmitted, setIsSubmitted] = useState(false);";";";
 ,"
       const supportChannels  =  [","
         "
@@ -32,7 +32,7 @@ import React, { useState } from 'react',
       responseTime: 'Immediate',","
         "
       action: 'Start Chat',","
-        ";
+        ";";";";
       color: 'from-blue-500 to-cyan-500';"
     },","
         "
@@ -80,10 +80,10 @@ import React, { useState } from 'react',
         "
       action: 'View Docs',","
         "
-      color: 'from-orange-500 to-red-500'
-    },
-    {}
-  ];
+      color: 'from-orange-500 to-red-500"
+    },";
+    {};";";
+  ];";";";
 ,"
       const priorityLevels  =  [","
         "
@@ -92,9 +92,9 @@ import React, { useState } from 'react',
     { value: 'medium', label: 'Medium', description: 'Minor issues, configuration help' },","
         "
     { value: 'high', label: 'High', description: 'Service degradation, performance issues' },","
-        ";
-    { value: 'critical', label: 'Critical', description: 'Service down, security issues' };
-  ];
+        ";";";";
+    { value: 'critical', label: 'Critical', description: 'Service down, security issues" };";";
+  ];";";";
 ,"
       const categories  =  [","
         "
@@ -109,16 +109,16 @@ import React, { useState } from 'react',
     'Bug Report',","
         "
     'Security Issue',","
-        ";
-    'General Inquiry';
-  ];
+        ";";";";
+    'General Inquiry";";";
+  ];";";";
 ,"
       const faqs  =  [","
         "
     {"}"
         "
       question: 'How do I report a technical issue?',","
-        ";
+        ";";";";
       answer: 'You can report technical issues through our support portal, live chat, or by calling our support line. Please provide as much detail as possible including error messages, steps to reproduce, and your system information.';"
     },","
         "
@@ -147,10 +147,10 @@ import React, { useState } from 'react',
         "
       question: 'Is there a cost for support?',","
         "
-      answer: 'Basic support is included with all plans. Premium support features and dedicated account management are available for Professional and Enterprise plans.'
-    },
-    {}
-  ];
+      answer: 'Basic support is included with all plans. Premium support features and dedicated account management are available for Professional and Enterprise plans."
+    },";
+    {};";";
+  ];";";";
 ,"
       const handleInputChange  =  (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {"}"
         "
@@ -161,21 +161,21 @@ import React, { useState } from 'react',
         "
       [name]: value","
         "
-    }))
-    },
-    {}
+    }))";
+    },";";
+    {}";";";
 ,"
       const handleSubmit = async (e: React.FormEvent) => {"}"
         "
-    e.preventDefault(),;
-      setIsSubmitting(true);
+    e.preventDefault(),;";";
+      setIsSubmitting(true);";";";
 ;"
     // Simulate form submission","
         "
     await new Promise(resolve => setTimeout(resolve, 2000));
-,
-      setIsSubmitting(false),
-      setIsSubmitted(true);
+,";
+      setIsSubmitting(false),";";
+      setIsSubmitted(true);";";";
 ;"
     // Reset form after 3 seconds","
         "
@@ -194,22 +194,22 @@ import React, { useState } from 'react',
         "
         category: '',","
         "
-        description: '';
+        description: '";
       });
-    }, 3000)
-    },
-    {}
+    }, 3000)";
+    },";";
+    {}";";";
 ,"
-      export default function Support() {
+      export default function Support() {";";";
   "
-}
+};";";
+";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-import React from 'react';';
-import SEOHead from './components/SEOHead';
-
-const SupportPage: React.FC  =  () => {
-  return (;
-    <>;
+const SupportPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Support - Zion Tech Group"";"
         description="Professional support solutions for modern businesses";"
@@ -220,9 +220,9 @@ const SupportPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default SupportPage;'";'";
+export default SupportPage;'";'";";";";
 "

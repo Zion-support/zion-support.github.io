@@ -1,10 +1,10 @@
 import React from "react;""
 import { Helmet } from "react-helmet-async;""
-const SeoDataPage = () => {
-  
+const SeoDataPage = () => {";";
+  ";";";
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
-      <Helmet>
+      <Helmet>";";";
         <title>SeoData - Zion Tech Group</title>"
         <meta name="description" content="SeoData - Zion Tech Group" />""
       </Helmet>"
@@ -14,11 +14,11 @@ const SeoDataPage = () => {
           <p className="text-gray-300 text-lg">""
             This page is under construction. Please check back later.
           </p>
-        </div>
-      </div>
-    </div>;
-  )';''
-
-};
-export default seodata
+        </div>";
+      </div>";";
+    </div>;";";";
+  )';'"
+";
+};";";
+export default seodata";";";
 "

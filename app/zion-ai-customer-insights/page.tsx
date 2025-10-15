@@ -1,20 +1,20 @@
-import React from 'react';';
-import SEOHead from './components/SEOHead';
-,
-      import SEOOptimizer from "../../components/SEOOptimizer;
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";";";
+,";";";
+      import SEOOptimizer from "../../components/SEOOptimizer;";";";";
 ,"
-      export default function ZionAiCustomerInsights() {
+      export default function ZionAiCustomerInsights() {";";";
   "
-}
-    "API integration with 100+ platforms";
-  ];
+}";";";
+    "API integration with 100+ platforms";";";
+  ];";";";
 ,"
       const benefits  =  [""
     "Increase customer retention by 35%",""
     "Boost revenue per customer by 40%",""
-    "Reduce churn rate by 50%","";
-    "Improve customer satisfaction scores";
-  ];
+    "Reduce churn rate by 50%","";";";";
+    "Improve customer satisfaction scores";";";
+  ];";";";
 ,"
       const pricingPlans  =  [","
         "
@@ -32,7 +32,7 @@ import SEOHead from './components/SEOHead';
         "Standard segmentation",""
         "Monthly reports",""
         "Email support",""
-        "Basic dashboard","";
+        "Basic dashboard","";";";";
         "5 data source integrations";"
       ],","
         "
@@ -90,8 +90,8 @@ import SEOHead from './components/SEOHead';
         "
       popular: false","
         "
-    };
-  ];
+    };";";
+  ];";";";
 ,"
       const testimonials  =  [","
         "
@@ -127,9 +127,9 @@ import SEOHead from './components/SEOHead';
       rating: 5,","
         "
       avatar: "LT"
-    },
-    {};
-  ];
+    },";
+    {};";";
+  ];";";";
 ,"
       const insights  =  [","
         "
@@ -160,14 +160,14 @@ import SEOHead from './components/SEOHead';
       description: "Map and optimize customer journeys for maximum engagement and conversion",""
       icon: <Map className="w-8 h-8" />,""
       color: "from-orange-500 to-red-500"
-    },
-    {};
-  ];
+    },";
+    {};";";
+  ];";";";
 ;"
 const ZionAiCustomerInsightsPage: React.FC  =  () => {""}"
   return ("")"
     <>{""}</>"
-      <SEOHead"">";
+      <SEOHead"">";";";";
         title="Page - Zion Tech Group";"
         description="Professional page solutions for modern businesses";"
       />""
@@ -300,7 +300,7 @@ const ZionAiCustomerInsightsPage: React.FC  =  () => {""}"
         "
               {features.map((feature, index) => (",)}"
         "
-                <div"">
+                <div"">";";";
                   key={index},"
       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10";"
                 >""
@@ -340,7 +340,7 @@ const ZionAiCustomerInsightsPage: React.FC  =  () => {""}"
         "
               {insights.map((insight, index) => (",)}"
         "
-                <div"">
+                <div"">";";";
                   key={index},"
       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center";"
                 >","
@@ -398,7 +398,7 @@ const ZionAiCustomerInsightsPage: React.FC  =  () => {""}"
                   key={index},"
       className={`group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative ${"}"
         "
-                    plan.popular ? 'ring-2 ring-cyan-400' : '';
+                    plan.popular ? 'ring-2 ring-cyan-400' : '";";";";
                   }`};"
                 >","
         "
@@ -413,7 +413,7 @@ const ZionAiCustomerInsightsPage: React.FC  =  () => {""}"
         "
                     </div>","
         "
-                  )};
+                  )};";";";
 ;"
                   <div className="text-center mb-6">""
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
@@ -445,8 +445,8 @@ const ZionAiCustomerInsightsPage: React.FC  =  () => {""}"
         "
                       plan.popular","
         "
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700';
-                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900';
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700";";";";
+                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900";";";";
                     }`};"
                   >","
         "
@@ -486,7 +486,7 @@ const ZionAiCustomerInsightsPage: React.FC  =  () => {""}"
         "
               {testimonials.map((testimonial, index) => (",)}"
         "
-                <div"">
+                <div"">";";";
                   key={index},"
       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10";"
                 >""
@@ -590,7 +590,7 @@ const ZionAiCustomerInsightsPage: React.FC  =  () => {""}"
         "
               <"">"
                 to="/contact";"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105";"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105";"
               >""
                 Start Free Trial""
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />""
@@ -608,9 +608,9 @@ const ZionAiCustomerInsightsPage: React.FC  =  () => {""}"
       </div>""
     </>""
 
-const ZionAiCustomerInsightsPage: React.FC  =  () => {
-  return (;
-    <>;
+const ZionAiCustomerInsightsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Zion Ai Customer Insights - Zion Tech Group"";"
         description="Professional zion ai customer insights solutions for modern businesses";"
@@ -621,9 +621,9 @@ const ZionAiCustomerInsightsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ZionAiCustomerInsightsPage;'";'";
+export default ZionAiCustomerInsightsPage;'";'";";";";
 "

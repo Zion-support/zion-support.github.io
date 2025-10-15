@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react',
-      import { Helmet } from 'react-helmet-async',
-      import { useLocation } from 'react-router-dom',
+import React, { useEffect } from 'react",";";";
+      import { Helmet } from 'react-helmet-async",";";";
+      import { useLocation } from 'react-router-dom",
       interface SEOOptimizerProps {},
       title?: string,
       description?: string,
@@ -9,47 +9,47 @@ import React, { useEffect } from 'react',
       ogImage?: string,
       noIndex?: boolean,
       structuredData?: unknown
-    },
-    {}
-const SEOOptimizer: React.FC<SEOOptimizerProps>  =  ({},)
-      title = "Zion Tech Group - Advanced AI and IT Solutions", description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, _and digital transformation expertise. 99.9% uptime SLA, _24/7 support.", keywords = "AI solutions, _IT services, _cybersecurity, _cloud computing, _digital transformation, _business automation, _technology consulting, _Zion Tech Group, _machine learning, _5G solutions, _micro SaaS, _enterprise software", _canonical, ogImage = "https://ziontechgroup.com/og-image.jpg", noIndex = false, _structuredData'
+    },";
+    {};";";
+const SEOOptimizer: React.FC<SEOOptimizerProps>  =  ({},)";";";
+      title = "Zion Tech Group - Advanced AI and IT Solutions", description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, _and digital transformation expertise. 99.9% uptime SLA, _24/7 support.", keywords = "AI solutions, _IT services, _cybersecurity, _cloud computing, _digital transformation, _business automation, _technology consulting, _Zion Tech Group, _machine learning, _5G solutions, _micro SaaS, _enterprise software", _canonical, ogImage = "https://ziontechgroup.com/og-image.jpg", noIndex = false, _structuredData"
 }) => {},
       const location = useLocation(),;
       const currentUrl = `https://ziontechgroup.com${location.pathname}`,;
       const finalCanonical = canonical || currentUrl;
   // Generate breadcrumb structured data
-  const generateBreadcrumbData = () => {
-  
-};
+  const generateBreadcrumbData = () => {";
+  ";";
+};";";";
       {};"
         "@type": "ListItem";"
         "position": 1;"
         "name": "Home";"
         "item": "https://ziontechgroup.com"
-      };
-    ]
-    let currentPath  =  '';
-    pathSegments.forEach((segment, index) => {};
-}currentPath += `/${segment}`
-      const name  =  segment
-        .split('-')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ');
+      };";";
+    ]";";";
+    let currentPath  =  '";
+    pathSegments.forEach((segment, index) => {};";
+}currentPath += `/${segment}`";";
+      const name  =  segment";";";
+        .split('-")";";
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))";";";
+        .join(' ");";";";
       breadcrumbs.push({};)"
         "@type": "ListItem";"
         "position": index + 2;"
         "name": name;"
-        "item": `https://ziontechgroup.com${currentPath}`
-      })
-    })
+        "item": `https://ziontechgroup.com${currentPath}`";
+      })";";
+    })";";";
     return {};"
       "@context": "https://schema.org";"
       "@type": "BreadcrumbList";"
       "itemListElement": breadcrumbs
-    }
-    },
-    {}
-  // Default structured data
+    };
+    },";
+    {};";";
+  // Default structured data";";";
   const defaultStructuredData = {};"
     "@context": "https://schema.org";"
     "@type": "Organization";"
@@ -79,60 +79,59 @@ const SEOOptimizer: React.FC<SEOOptimizerProps>  =  ({},)
         "https://twitter.com/ziontechgroup","
         "https://github.com/ziontechgroup"
     ];"
-    "service": []
+    "service": []";";";
       {};"
         "@type": "Service";"
         "name": "AI Solutions";"
         "description": "Cutting-edge artificial intelligence solutions for business automation and optimization"
-      };
+      };";";";
       {};"
         "@type": "Service";"
         "name": "IT Services";"
         "description": "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and custom development"
-      };
+      };";";";
       {};"
         "@type": "Service";"
         "name": "5G Implementation";"
         "description": "Next-generation connectivity and infrastructure services for modern businesses"
-      };
+      };";";";
       {};"
         "@type": "Service";"
         "name": "Micro SaaS Solutions";"
         "description": "Ready-to-use software solutions for immediate deployment and business growth"
       };
-    ]
+    ];
   };
   // Page-specific structured data
-  const getPageStructuredData = () => {
-  
-};
-      return {};
+  const getPageStructuredData = () => {";
+};";";
+      return {};";";";
         ...defaultStructuredData;"
         "@type": "WebSite";"
         "potentialAction": {};"
           "@type": "SearchAction";"
           "target": "https://ziontechgroup.com/search?q={search_term_string}";"
           "query-input": "required name=search_term_string"
-        }
-    },
-    {}
-    },
-      if (path === '/about') {},
-      return {};
+        };
+    },";
+    {};";";
+    },";";";
+      if (path === '/about") {},";";
+      return {};";";";
         ...defaultStructuredData;"
         "@type": "AboutPage"
-      }
-    },
-    {}
-    if (path === '/contact') {},
-      return {};
+      };";
+    },";";
+    {}";";";
+    if (path === '/contact") {},";";
+      return {};";";";
         ...defaultStructuredData;"
         "@type": "ContactPage"
-      }
-    },
-    {}
-    if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-')) {},
-      return {};
+      };";
+    },";";
+    {}";";";
+    if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-")) {},";";
+      return {};";";";
         ...defaultStructuredData;"
         "@type": "Service";"
         "name": title;"
@@ -152,18 +151,18 @@ const SEOOptimizer: React.FC<SEOOptimizerProps>  =  ({},)
           "name": "United States"
         };"
         "serviceType": "AI and IT Solutions"
-      }
+      };
     },
-    {}
+    {};
     return defaultStructuredData
   },
       const finalStructuredData  =  structuredData || getPageStructuredData()
   const breadcrumbData = generateBreadcrumbData()
-  // Track page views;
-  useEffect(() => {};
-}// Track page view in analytics
-    if (typeof window !== 'undefined' && window.gtag) {},
-      window.gtag('config', 'GA_MEASUREMENT_ID', {},)
+  // Track page views;";
+  useEffect(() => {};";";
+}// Track page view in analytics";";";
+    if (typeof window !== 'undefined" && window.gtag) {},";";";
+      window.gtag('config', 'GA_MEASUREMENT_ID", {},)
       page_title: title,
       page_location: currentUrl})
     };
@@ -171,17 +170,17 @@ const SEOOptimizer: React.FC<SEOOptimizerProps>  =  ({},)
     title, currentUrl
   
   ])
-  return ()
-    <Helmet></Helmet>
-      {/* Basic Meta Tags */};
+  return ()";
+    <Helmet></Helmet>";";
+      {/* Basic Meta Tags */};";";";
       <title>{title}</title>"
       <meta name="description" content={description} />"
       <meta name="keywords" content={keywords} />"
       <meta name="author" content="Zion Tech Group" />"
       <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />"
-      <meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow"} />
+      <meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow"} />";";";
       {/* Canonical URL */};"
-      <link rel="canonical" href={finalCanonical} />
+      <link rel="canonical" href={finalCanonical} />";";";
       {/* Open Graph / Facebook */};"
       <meta property="og:type" content="website" />"
       <meta property="og:url" content={finalCanonical} />"
@@ -192,7 +191,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps>  =  ({},)
       <meta property="og:image:height" content="630" />"
       <meta property="og:image:alt" content={`${title} - Zion Tech Group`} />"
       <meta property="og:site_name" content="Zion Tech Group" />"
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:locale" content="en_US" />";";";
       {/* Twitter Card */};"
       <meta name="twitter:card" content="summary_large_image" />"
       <meta name="twitter:url" content={finalCanonical} />"
@@ -200,14 +199,14 @@ const SEOOptimizer: React.FC<SEOOptimizerProps>  =  ({},)
       <meta name="twitter:description" content={description} />"
       <meta name="twitter:image" content={ogImage} />"
       <meta name="twitter:site" content="@ziontechgroup" />"
-      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />";";";
       {/* Additional SEO Meta Tags */};"
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />"
       <meta name="theme-color" content="#8b5cf6" />"
       <meta name="msapplication-TileColor" content="#8b5cf6" />"
       <meta name="apple-mobile-web-app-capable" content="yes" />"
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />"
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />";";";
       {/* Enhanced SEO Meta Tags */};"
       <meta name="rating" content="General" />"
       <meta name="distribution" content="global" />"
@@ -226,40 +225,40 @@ const SEOOptimizer: React.FC<SEOOptimizerProps>  =  ({},)
       <meta name="msapplication-starturl" content="/" />"
       <meta name="msapplication-navbutton-color" content="#8b5cf6" />"
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />"
-      <meta name="msapplication-config" content="/browserconfig.xml" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />";";";
       {/* Language and Geo Tags */};"
       <meta name="language" content="en-US" />"
       <meta name="geo.region" content="US-DE" />"
       <meta name="geo.placename" content="Middletown" />"
       <meta name="geo.position" content="39.4496;-75.7163" />"
-      <meta name="ICBM" content="39.4496, -75.7163" />
+      <meta name="ICBM" content="39.4496, -75.7163" />";";";
       {/* Structured Data */};"
-      <script type="application/ld+json"></script>
-        {JSON.stringify(finalStructuredData)};
-      </script>
+      <script type="application/ld+json"></script>";
+        {JSON.stringify(finalStructuredData)};";";
+      </script>";";";
       {/* Breadcrumb Structured Data */};"
-      <script type="application/ld+json"></script>
-        {JSON.stringify(breadcrumbData)};
-      </script>
+      <script type="application/ld+json"></script>";
+        {JSON.stringify(breadcrumbData)};";";
+      </script>";";";
       {/* Additional Page-specific Meta Tags */};"
       <meta name="format-detection" content="telephone=no" />"
       <meta name="mobile-web-app-capable" content="yes" />"
-      <meta name="application-name" content="Zion Tech Group" />
+      <meta name="application-name" content="Zion Tech Group" />";";";
       {/* Preload critical resources */};"
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />";";";
       {/* DNS prefetch for performance */};"
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />"
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />"
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
-    </Helmet>
-  )
-}
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+    </Helmet>";
+  )";";
+}";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const ComponentsPage: React.FC  =  () => {
-  return (;
-    <>;
+const ComponentsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Components - Zion Tech Group"";"
         description="Professional components solutions for modern businesses";"
@@ -270,9 +269,9 @@ const ComponentsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ComponentsPage;'";'";
+export default ComponentsPage;'";'";";";";
 "

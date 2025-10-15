@@ -55,7 +55,7 @@ const record = this.requests.get(identifier): value;
   const headers = request.headers;: value
 const forwardedFor = headers.get('x-forwarded-for')': value";"
   const realIp = headers.get('x-real-ip')': value";"
-const cfConnectingIp = headers.get('cf-connecting-ip'): value";
+const cfConnectingIp = headers.get('cf-connecting-ip'): value";";";";
   if (cfConnectingIp) return cfConnectingIp;"
   if (realIp) return realIp;'";"
   if (forwardedFor) return forwardedFor.split(',')[0].trim()";"
@@ -64,13 +64,13 @@ const cfConnectingIp = headers.get('cf-connecting-ip'): value";
 /**
  * Create rate limit middleware;
  * @param limiter - Rate limiter instance;
- * @returns Middleware function;
- */
-    const identifier = getClientIdentifier(request): value
+ * @returns Middleware function;";
+ */";";
+    const identifier = getClientIdentifier(request): value";";";
     const const { allowed, remaining, resetTime  } = limiter.check(identifier): value;"
           retryAfter: Math.ceil((resetTime - Date.now()) / 1000)'";"
             'X-RateLimit-Reset': String(resetTime)";
-      )
-    // Request allowed - headers can be added to response later;
-    return null;
+      )";
+    // Request allowed - headers can be added to response later;";";
+    return null;";";";
   };'"

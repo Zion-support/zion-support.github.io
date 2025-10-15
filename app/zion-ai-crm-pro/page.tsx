@@ -1,10 +1,10 @@
 import { Helmet } from "react-helmet-async","
-      export default function ZionAiCrmPro() {
+      export default function ZionAiCrmPro() {";";";
   "
-}
-      benefits: ["Custom dashboards", "Real-time insights", "Automated reports", "Data visualization"];
-    };
-  ];
+}";";";
+      benefits: ["Custom dashboards", "Real-time insights", "Automated reports", "Data visualization"];";
+    };";";
+  ];";";";
 ,"
       const pricingPlans  =  [","
         "
@@ -22,7 +22,7 @@ import { Helmet } from "react-helmet-async","
         "Email integration",""
         "Mobile app access",""
         "Email support",""
-        "Basic reporting","";
+        "Basic reporting","";";";";
         "5 users included";"
       ],","
         "
@@ -74,8 +74,8 @@ import { Helmet } from "react-helmet-async","
         "
       popular: false","
         "
-    };
-  ];
+    };";";
+  ];";";";
 ,"
       const testimonials  =  [","
         "
@@ -111,16 +111,16 @@ import { Helmet } from "react-helmet-async","
       rating: 5,","
         "
       avatar: "MR"
-    },
-    {};
-  ];
+    },";
+    {};";";
+  ];";";";
 ,"
       const stats  =  [""
     { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },""
     { number: "45%", label: "Average Conversion Increase", icon: <TrendingUp className="w-6 h-6" /> },""
-    { number: "95%", label: "AI Accuracy Rate", icon: <className="w-6 h-6" /> },"";
-    { number: "24/7", label: "AI Support Available", icon: <className="w-6 h-6" /> };
-  ];
+    { number: "95%", label: "AI Accuracy Rate", icon: <className="w-6 h-6" /> },"";";";";
+    { number: "24/7", label: "AI Support Available", icon: <className="w-6 h-6" /> };";";
+  ];";";";
 ,"
       const ZionAiCrmProPage: React.FC  =  () => {"}"
         "
@@ -144,7 +144,7 @@ import { Helmet } from "react-helmet-async","
         "
       </Helmet>","
         "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden">"";
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden">"";";";";
         {/* Animated Background */};"
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>""
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.3),transparent_50%)]"></div>""
@@ -380,7 +380,7 @@ import { Helmet } from "react-helmet-async","
         "
                       ? 'border-indigo-500/50 shadow-2xl shadow-indigo-500/25' ","
         "
-                      : 'border-white/20 hover:border-indigo-500/30';
+                      : 'border-white/20 hover:border-indigo-500/30";";";";
                   }`};"
                 >","
         "
@@ -395,7 +395,7 @@ import { Helmet } from "react-helmet-async","
         "
                     </div>","
         "
-                  )};
+                  )};";";";
 ;"
                   <div className="text-center mb-6">""
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
@@ -427,8 +427,8 @@ import { Helmet } from "react-helmet-async","
         "
                       plan.popular","
         "
-                        ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700 shadow-lg hover:shadow-indigo-500/25';
-                        : 'border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-slate-900';
+                        ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700 shadow-lg hover:shadow-indigo-500/25";";";";
+                        : 'border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-slate-900";";";";
                     }`};"
                   >","
         "
@@ -468,7 +468,7 @@ import { Helmet } from "react-helmet-async","
         "
               {testimonials.map((testimonial, index) => (",)}"
         "
-                <div"">
+                <div"">";";";
                   key={index},"
       className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105";"
                 >""
@@ -570,7 +570,7 @@ import { Helmet } from "react-helmet-async","
         "
                 <"">"
                   to="/contact";"
-                  className="group bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-indigo-500/25 hover:scale-105";"
+                  className="group bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-indigo-500/25 hover:scale-105";"
                 >""
                   Start Free Trial""
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />""
@@ -587,12 +587,12 @@ import { Helmet } from "react-helmet-async","
         </section>""
       </div>""
     </>""
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const ZionAiCrmProPage: React.FC  =  () => {
-  return (;
-    <>;
+const ZionAiCrmProPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Zion Ai Crm Pro - Zion Tech Group"";"
         description="Professional zion ai crm pro solutions for modern businesses";"
@@ -603,9 +603,9 @@ const ZionAiCrmProPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ZionAiCrmProPage;'";'";
+export default ZionAiCrmProPage;'";'";";";";
 "

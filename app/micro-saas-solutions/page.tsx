@@ -1,9 +1,9 @@
-'use client',
-      import React, { useState } from 'react',
-      import { Helmet } from 'react-helmet-async',
-      const MicroSaaSSolutionsPage: React.FC  =  () => {"}";
-
-  const [selectedCategory, setSelectedCategory] = useState('All');
+'use client",";";";
+      import React, { useState } from 'react",";";";
+      import { Helmet } from 'react-helmet-async",";";";
+      const MicroSaaSSolutionsPage: React.FC  =  () => {"}";";";
+";";";
+  const [selectedCategory, setSelectedCategory] = useState('All");";";";
 ,"
       const microSaaSServices  =  [","
         "
@@ -40,7 +40,7 @@
         'Multi-language Support',","
         "
         'Custom Branding',","
-        ";
+        ";";";";
         'API Access';"
       ],","
         "
@@ -711,12 +711,12 @@
         "
       popular: false,","
         "
-      link: 'https://ziontechgroup.com/api-management'
+      link: 'https://ziontechgroup.com/api-management"
     },
-    {}
-  ];
-,
-      const categories = ['All', 'AI Tools', 'Marketing', 'Productivity', 'Sales', 'E-commerce', 'Support', 'Analytics', 'Storage', 'Web Development', 'Development'];
+    {};";
+  ];";";
+,";";";
+      const categories = ['All', 'AI Tools', 'Marketing', 'Productivity', 'Sales', 'E-commerce', 'Support', 'Analytics', 'Storage', 'Web Development', 'Development"];";";";
 ,"
       const features  =  [","
         "
@@ -737,9 +737,9 @@
     'White-label Options',","
         "
     'Mobile Apps',","
-        ";
-    'Analytics Dashboard';
-  ];
+        ";";";";
+    'Analytics Dashboard";";";
+  ];";";";
 ,"
       const stats  =  [","
         "
@@ -748,9 +748,9 @@
     { number: '500+', label: 'Happy Customers' },","
         "
     { number: '99.9%', label: 'Uptime' },","
-        ";
-    { number: '24/7', label: 'Support' };
-  ];
+        ";";";";
+    { number: '24/7', label: 'Support" };";";
+  ];";";";
 ,"
       const pricingTiers  =  [","
         "
@@ -773,7 +773,7 @@
         'Standard integrations',","
         "
         '1GB storage',","
-        ";
+        ";";";";
         'Basic analytics';"
       ],","
         "
@@ -837,14 +837,14 @@
         "
       popular: false","
         "
-    };
-  ];
+    };";";
+  ];";";";
 ,"
       const filteredServices  =  selectedCategory === 'All' ","
         "
     ? microSaaSServices","
-        ";
-    : microSaaSServices.filter(service => service.category === selectedCategory);
+        ";";";
+    : microSaaSServices.filter(service => service.category === selectedCategory);";";";
 ,"
       return (",)"
         "
@@ -961,14 +961,14 @@
         "
               <button",>"
         "
-                key={category},
+                key={category},";";";
       onClick={() => setSelectedCategory(category)},"
       className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${"}"
         "
                   selectedCategory === category","
         "
-                    ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white shadow-lg';
-                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-white';
+                    ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white shadow-lg";";";";
+                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-white";";";";
                 }`};"
               >","
         "
@@ -1018,7 +1018,7 @@
         "
                   </div>","
         "
-                )};
+                )};";";";
 ;"
                 <div className="mb-6">""
                   <div className="flex items-center justify-between mb-4">""
@@ -1173,7 +1173,7 @@
         "
                   </div>","
         "
-                )};
+                )};";";";
 ;"
                 <div className="text-center mb-8">""
                   <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>""
@@ -1202,8 +1202,8 @@
         "
                     tier.popular","
         "
-                      ? 'bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white';
-                      : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white';
+                      ? 'bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white";";";";
+                      : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white";";";";
                   }`};"
                 >","
         "
@@ -1263,15 +1263,15 @@
     </>""
   )
     },
-    {}
-,
-      export default MicroSaaSSolutionsPage;
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+    {};";
+,";";
+      export default MicroSaaSSolutionsPage;";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const MicroSaasSolutionsPage: React.FC  =  () => {
-  return (;
-    <>;
+const MicroSaasSolutionsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Micro Saas Solutions - Zion Tech Group"";"
         description="Professional micro saas solutions solutions for modern businesses";"
@@ -1282,9 +1282,9 @@ const MicroSaasSolutionsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default MicroSaasSolutionsPage;'";'";
+export default MicroSaasSolutionsPage;'";'";";";";
 "

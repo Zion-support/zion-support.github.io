@@ -8,88 +8,87 @@
  */;
 export interface PerformanceMetrics {;
   fcp?: number; // First Contentful Paint;
-  lcp?: number; // Largest Contentful Paint;}
-  fid?: number; // First Input Delay;}
-  cls?: number; // Cumulative Layout Shift;}
-  ttfb?: number; // Time to First Byte}
-}
+  lcp?: number; // Largest Contentful Paint;};
+  fid?: number; // First Input Delay;};
+  cls?: number; // Cumulative Layout Shift;};
+  ttfb?: number; // Time to First Byte};
+};
 /**;
  * Performance Report Interface;
  */;
-export interface PerformanceReport {
+export interface PerformanceReport {;
   webVitals: "Partial<PerformanceMetrics>;""
   resources: ResourceStats;"
   memor",""
     y: MemoryStats | null;
   timestam,
     p: number;
-}
-/**;
- * Resource Statistics Interface;
- */;
-export interface ResourceStats {"
+};
+/**;";
+ * Resource Statistics Interface;";";
+ */;";";";
+export interface ResourceStats {";";";
   total: "number;""
-  scripts: number;
+  scripts: number;";";";
   styles: number;"
   image",""
     s: number;
   font,
     s: number;
-}
-/**;
- * Memory Statistics Interface;
- */;
-export interface MemoryStats {"
+};
+/**;";
+ * Memory Statistics Interface;";";
+ */;";";";
+export interface MemoryStats {";";";
   usedJSHeapSize: "number;""
   totalJSHeapSiz",""
     e: number;
   jsHeapSizeLimi,
     t: number;
-}
+};
 /**;
  * Layout Shift Interface;
  */;
 export interface LayoutShift extends PerformanceEntry {
-
-  } catch (error) {
+  } catch (error) {;
     console.error(error);
-  }
-  }}
-  hadRecentInput: boolean;}
-}
-/**;
- * Performance with Memory Interface;
- */;
+  };
+  }};
+  hadRecentInput: boolean;};
+};
+/**;";
+ * Performance with Memory Interface;";";
+ */;";";";
 export interface PerformanceWithMemory extends Performance {"
-  memory: "{""
-    usedJSHeapSize: number;"
+  memory: "{"";";";
+    usedJSHeapSize: number;",";
     totalJSHeapSiz",""
     e: number;
     jsHeapSizeLimi,
     t: number;
   };
-}
-/**;
- * Service Configuration Interface;
- */;
-export interface ServiceConfig {"
+};
+/**;";
+ * Service Configuration Interface;";";
+ */;";";";
+export interface ServiceConfig {";";";
   id: "string;""
   name: string;
   description: string;
-  icon: string;
-  category: string;
-  features: string[];
-  pricing?: {"
+  icon: string;";
+  category: string;";";
+  features: string[];";";";
+  pricing?: {",";
     startin",""
     g: number;
     currenc,
     y: string;
   };
-}
-/**;
- * Blog Post Interface;
- */;
-export interface BlogPost {"
+};
+/**;";
+ * Blog Post Interface;";";
+ */;";";";
+export interface BlogPost {";";";
   id: "string;""
   title: string;
   slug: string;
@@ -100,24 +99,24 @@ export interface BlogPost {"
   updatedAt: string;
   tags: string[];
   category: string;
-  featured: boolean;
-  readingTime: number;
-  seo: {
-    title: string;"
+  featured: boolean;";
+  readingTime: number;";";
+  seo: {";";";
+    title: string;",";
     descriptio",""
     n: string;
     keyword,
     s: string[];
   };
-}
-/**;
- * Contact Form Interface;
- */;
-export interface ContactForm {"
+};
+/**;";
+ * Contact Form Interface;";";
+ */;";";";
+export interface ContactForm {";";";
   name: "string;""
-  email: string;
-  company?: string;
-  phone?: string;
+  email: string;";
+  company?: string;";";
+  phone?: string;";";";
   service: string;"
   messag",""
     e: string;
@@ -125,21 +124,21 @@ export interface ContactForm {"
   timeline?: string;
   consen,
     t: boolean;
-}
+};
 /**
  * API Response Interface
  */;
-export interface ApiResponse<T = any> {
+export interface ApiResponse<T = any> {;
   success: boolean;
-  data?: T;}
-  error?: string;}
-  message?: string;}
-  timestamp: number;}
-}
-/**;
- * SEO Metadata Interface;
- */;
-export interface SEOMetadata {"
+  data?: T;};
+  error?: string;};
+  message?: string;};
+  timestamp: number;};
+};
+/**;";
+ * SEO Metadata Interface;";";
+ */;";";";
+export interface SEOMetadata {";";";
   title: "string;""
   descriptio",""
     n: string;
@@ -152,67 +151,67 @@ export interface SEOMetadata {"
   noindex?: boolean;
   nofollow?: boolean;
 ,
-  }
+  };
 /**;
  * Navigation Item Interface;
  */;
-export interface NavigationItem {
+export interface NavigationItem {;
   label: string;
   hre,
     f: string;
   external?: boolean;
   children?: NavigationItem[];
 ,
-  }
-/**;
- * Testimonial Interface;
- */;
-export interface Testimonial {"
+  };
+/**;";
+ * Testimonial Interface;";";
+ */;";";";
+export interface Testimonial {";";";
   id: "string;""
-  name: string;
-  company: string;
-  position: string;
+  name: string;";
+  company: string;";";
+  position: string;";";";
   content: string;"
   ratin",""
     g: number;
   avatar?: string;
   feature,
     d: boolean;
-}
-/**;
- * Case Study Interface;
- */;
-export interface CaseStudy {"
+};
+/**;";
+ * Case Study Interface;";";
+ */;";";";
+export interface CaseStudy {";";";
   id: "string;""
   title: string;
   slug: string;
   client: string;
   industry: string;
-  challenge: string;
-  solution: string;
-  results: {
-    metric: string;"
+  challenge: string;";
+  solution: string;";";
+  results: {";";";
+    metric: string;",";
     valu",""
-    e: string;
-    improvemen,
-    t: string;
+    e: string;";
+    improvemen,";";
+    t: string;";";";
   }[];"
   technologies: "string[];""
-  duration: string;
-  teamSize: number;
+  duration: string;";";
+  teamSize: number;";";";
   featured: boolean;"
   image",""
     s: string[];
   publishedA,
     t: string;
-}
-/**;
- * Team Member Interface;
- */;
-export interface TeamMember {"
+};
+/**;";
+ * Team Member Interface;";";
+ */;";";";
+export interface TeamMember {";";";
   id: "string;""
-  name: string;
-  position: string;
+  name: string;";";
+  position: string;";";";
   bio: string;"
   avata",""
     r: string;
@@ -220,97 +219,97 @@ export interface TeamMember {"
     l: {
     linkedin?: string;
     twitter?: string;
-    github?: string;
+    github?: string;,
   ,
   };
   expertise: string[];
   featured: boolean;
-}
-/**;
- * FAQ Item Interface;
- */;
-export interface FAQItem {"
+};
+/**;";
+ * FAQ Item Interface;";";
+ */;";";";
+export interface FAQItem {";";";
   id: "string;""
-  question: string;
+  question: string;";";";
   answer: string;"
   categor",""
     y: string;
   orde,
     r: number;
-}
-/**;
- * Newsletter Subscription Interface;
- */;
-export interface NewsletterSubscription {"
+};
+/**;";
+ * Newsletter Subscription Interface;";";
+ */;";";";
+export interface NewsletterSubscription {";";";
   email: "string;""
-  name?: string;
+  name?: string;";";";
   interests: string[];"
   subscribedA",""
     t: string;
   activ,
     e: boolean;
-}
+};
 /**;
  * Error Boundary Props Interface;
  */;
-export interface ErrorBoundaryProps {}
-  children: React.ReactNode;}
+export interface ErrorBoundaryProps {};
+  children: React.ReactNode;};
   fallback?: React.ComponentType<{ error: Error; resetError: () => void }>;
   onError?: (error: Error, errorInfo: React.ErrorInfo) => void;
-}
+};
 /**;
  * Error Boundary State Interface;
  */;
-export interface ErrorBoundaryState {
+export interface ErrorBoundaryState {;
     hasError: boolean;
   error?: Error;
 ,
-  }
-/**;
- * Theme Configuration Interface;
- */;
-export interface ThemeConfig {"
+  };
+/**;";
+ * Theme Configuration Interface;";";
+ */;";";";
+export interface ThemeConfig {";";";
   mode: "'light' | 'dark' | 'system;"'"'"'"
-  primaryColor: string;
-  secondaryColor: string;
+  primaryColor: string;";";
+  secondaryColor: string;";";";
   accentColor: string;"
   fontFamil",""
     y: string;
   borderRadiu,
     s: number;
-}
+};
 /**;
  * Analytics Event Interface;
  */;
-export interface AnalyticsEvent {
+export interface AnalyticsEvent {;
   action: string;
   categor,
     y: string;
   label?: string;
   value?: number;
   custom_parameters?: Record<string, unknown>
-}
-/**;
- * User Preferences Interface;
- */;
-export interface UserPreferences {"
+};
+/**;";
+ * User Preferences Interface;";";
+ */;";";";
+export interface UserPreferences {";";";
   theme: "ThemeConfig;""
-  language: string;
-  notifications: {
-    email: boolean;"
+  language: string;";";
+  notifications: {";";";
+    email: boolean;",";
     pus",""
-    h: boolean;
-    sm,
-    s: boolean;
+    h: boolean;";
+    sm,";";
+    s: boolean;";";";
   };"
   privacy: "{""
-    analytics: boolean;"
+    analytics: boolean;",";
     marketin",""
     g: boolean;
     functiona,
     l: boolean;
   };
-}
+};
 /**;
  * Utility Types;
  */;
@@ -324,40 +323,40 @@ export type DeepPartial<T> = {
   ] extends object ? DeepPartial<T[
     P,
   ]> : T[
-    P,
+    P,;
   ];
 ,
   };
 /**;
- * API Endpoint Types;
- */;
-export type ApiEndpoint =;
+ * API Endpoint Types;";
+ */;";";
+export type ApiEndpoint =;";";";
   | '/api/contact;''
   | '/api/newsletter;''
   | '/api/analytics;''
   | '/api/performance;''
-  | '/api/health;''
-/**;
- * HTTP Method Types;
- */;
-export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH;''
-/**;
- * Environment Types;
- */;
-export type Environment = 'development' | 'staging' | 'production;''
-/**;
- * Build Configuration Interface;
- */;
-export interface BuildConfig {"
+  | '/api/health;'"
+/**;";
+ * HTTP Method Types;";";
+ */;";";";
+export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH;'"
+/**;";
+ * Environment Types;";";
+ */;";";";
+export type Environment = 'development' | 'staging' | 'production;'"
+/**;";
+ * Build Configuration Interface;";";
+ */;";";";
+export interface BuildConfig {";";";
   environment: "Environment;""
   version: string;
-  buildTime: string;
-  features: {
-    analytics: boolean;
-    performanceMonitoring: boolean;"
+  buildTime: string;";
+  features: {";";
+    analytics: boolean;";";";
+    performanceMonitoring: boolean;",";
     errorReportin",""
     g: boolean;
-    pw,
-    a: boolean;
-  };
+    pw,";
+    a: boolean;";";
+  };";";";
 }"

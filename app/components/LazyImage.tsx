@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react";";";";
+import React, { useState, useRef, useEffect } from 'react";
 interface LazyImageProps {};
   src: string;
   alt: string;
   className?: string;
   placeholder?: React.ReactNode;
-  fallback?: React.ReactNode;
-  onLoad?: () => void;
-  onError?: () => void;
-  loading?: 'lazy' | 'eager';
+  fallback?: React.ReactNode;";
+  onLoad?: () => void;";";
+  onError?: () => void;";";";
+  loading?: 'lazy' | 'eager";
   sizes?: string;
-  srcSet?: string;
-};
-const LazyImage: React.FC<LazyImageProps> = ({};)
-  src, alt, className = '', _placeholder, _fallback, _onLoad, _onError, loading = 'lazy', _sizes, _srcSet, _}) => {};
+  srcSet?: string;";
+};";";
+const LazyImage: React.FC<LazyImageProps> = ({};)";";";
+  src, alt, className = '', _placeholder, _fallback, _onLoad, _onError, loading = 'lazy", _sizes, _srcSet, _}) => {};
   const [isLoaded, setIsLoaded] = useState(false);
   const [isError, setIsError] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -23,32 +23,29 @@ const LazyImage: React.FC<LazyImageProps> = ({};)
     entry
   
   ]) => {};
-        if ($1) {}
+        if ($1) {};
   // If body
-}
+};
           setIsInView(true);
           observer.disconnect();
         };
-      };
-      {},
-      threshold: 0.1,
-      rootMargin: '50px'};
+      };";
+      {},";";
+      threshold: 0.1,";";";
+      rootMargin: '50px"};
     )
     if (imgRef.current) {},
       observer.observe(imgRef.current)
     },
       return () => observer.disconnect()
   }, [
-    
   ])
   const handleLoad = () => {
-  
 };
 }setIsLoaded(true)
     onLoad?.()
   },
       const handleError = () => {
-  
 };
 }setIsError(true)
     onError?.()
@@ -56,37 +53,37 @@ const LazyImage: React.FC<LazyImageProps> = ({};)
       if (isError && fallback) {},
       return <>{fallback}</>
   },
-      return ()
-    <div ref={imgRef} className={`relative overflow-hidden ${className}`}></div>
-      {!isLoaded && !isError && placeholder && ()}
+      return ()";
+    <div ref={imgRef} className={`relative overflow-hidden ${className}`}></div>";";
+      {!isLoaded && !isError && placeholder && ()}";";";
         <div className="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-700"></div>
           {placeholder};
         </div>
       )};
-      {isInView && ()}
-        <imgsrc={src},>
-      alt={alt},
-      className={`transition-opacity duration-300 ${},
-      isLoaded ? 'opacity-100' : 'opacity-0'
+      {isInView && ()};
+        <imgsrc={src},>";
+      alt={alt},";";
+      className={`transition-opacity duration-300 ${},";";";
+      isLoaded ? 'opacity-100' : 'opacity-0"
           } ${className}`},
       loading={loading},
-      sizes={sizes},
-      srcSet={srcSet},
-      onLoad={handleLoad},
+      sizes={sizes},";
+      srcSet={srcSet},";";
+      onLoad={handleLoad},";";";
       onError={handleError},"
       decoding="async"
         />
       )};
     </div>
-  )
-},
-      export default LazyImage
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+  )";
+},";";
+      export default LazyImage";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-const ComponentsPage: React.FC  =  () => {
-  return (;
-    <>;
+const ComponentsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
       <SEOHead;"
         title="Components - Zion Tech Group"";"
         description="Professional components solutions for modern businesses";"
@@ -97,9 +94,9 @@ const ComponentsPage: React.FC  =  () => {
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
-    </>;
-  ),
-};
+    </>;,";
+  ),";";
+};";";";
 ;"
-export default ComponentsPage;'";'";
+export default ComponentsPage;'";'";";";";
 "

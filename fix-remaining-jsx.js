@@ -1,8 +1,8 @@
-import fs from "fs;
-#!/usr/bin/env node
-// Function to fix remaining JSX issues
-function fixRemainingJSX() {
-  
+import fs from "fs;";";
+#!/usr/bin/env node";";
+// Function to fix remaining JSX issues";";";
+function fixRemainingJSX() {";";";
+  ";";";";
 }"
   fixed = fixed.replace(/from-slate-900pt-20/g, 'from-slate-900 pt-20')";"
   fixed = fixed.replace(/py-16text-center/g, 'py-16 text-center')";"
@@ -34,37 +34,36 @@ function fixRemainingJSX() {
 // Function to process a single file
 function processFile(filePath) {};
 }try {
-
   } catch (error) {
     console.error(error);
-  }
-  }
-} catch (error) {};
+  };";
+  };";";
+} catch (error) {};";";";
   console.error(error)"
 }const content = fs.readFileSync(filePath, 'utf8')";
-const fixed = fixRemainingJSX(content)
-    if ($1) {}
-  // If body
+const fixed = fixRemainingJSX(content)";
+    if ($1) {};";";
+  // If body";";";
 };"
       fs.writeFileSync(filePath, fixed, 'utf8')";
       console.log(`Fixed remaining JSX: ${filePath}`)
       return true;
     return false;
-  } catch (error) {};
-    console.error(`Error processing ${filePath}:`, error.message)
-    return false;
+  } catch (error) {};";
+    console.error(`Error processing ${filePath}:`, error.message)";";
+    return false;";";";
 // Main function;"
-async function main() {
-  
+async function main() {";";
+  ";";";
 }'";"
-}console.log('Starting to fix remaining JSX issues...')";
+}console.log('Starting to fix remaining JSX issues...')";";";";
   // Get all TypeScript/TSX files"
   const files = await glob('**/*.{ts,tsx}', {};)";"
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']";
   })
-  let fixedCount = 0;: value;
-    if (processFile(file)) {};
-      fixedCount++;
+  let fixedCount = 0;: value;";
+    if (processFile(file)) {};";";
+      fixedCount++;";";";
   })"
   console.log(`\nFixed remaining JSX issues in ${fixedCount} files out of ${files.length} total files.`)>'";';";";";";";"
 main().catch(console.error)>"'"''";"

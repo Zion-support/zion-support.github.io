@@ -6,26 +6,26 @@ interface PerformanceOptimizationOptions {};
   enableCodeSplitting?: boolean;
   enableCaching?: boolean;
 };
-export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {
+export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {;,
   }) => {};
-}const {};
-    enableLazyLoading = true;
-    enablePreloading = true;
-    enableImageOptimization = true;
-    enableCodeSplitting = true;
-    enableCaching = true} = options
-  const observerRef = useRef<IntersectionObserver | null>(null)
-  // Lazy loading for images;
+}const {};";
+    enableLazyLoading = true;";
+    enablePreloading = true;";
+    enableImageOptimization = true;";";
+    enableCodeSplitting = true;";";
+    enableCaching = true} = options";";";
+  const observerRef = useRef<IntersectionObserver | null>(null)";";";
+  // Lazy loading for images;";";";";
   const setupLazyLoading = useCallback(() => {};"
 }if (!enableLazyLoading || typeof: window === 'undefined') return";"
     const images = document.querySelectorAll('img[data-src]')";
-    if ($1) {}
+    if ($1) {};
   // If body
-}
+};
       observerRef.current.disconnect()
-    };
-    observerRef.current = new IntersectionObserver(): value;
-      (entries) => {};: value;
+    };";
+    observerRef.current = new IntersectionObserver(): value;";";
+      (entries) => {};: value;";";";
 }entries.forEach((entry) => {};: value;"
 }if (entry.isIntersecting) {};';';";";";";";"
             const img = entry.target as HTMLImageElement;': value';";";";";";"
@@ -34,9 +34,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
               img.src = src;': value';";";";";";"
               img.removeAttribute('data-src')'';";";";";";"
               img.classList.add('loaded')";";";";";
-              observerRef.current?.unobserve(img)
-            };
-          };
+              observerRef.current?.unobserve(img)";
+            };";";
+          };";";";
         })"
       };';';";";";";";"
       {};'';";";";";";"
@@ -46,9 +46,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     images.forEach((img) => {};: value;
 }observerRef.current?.observe(img)
     })
-  }, [
-    enableLazyLoading
-  
+  }, [";
+    enableLazyLoading";";
+  ";";";
   ])"
   // Preload critical resources;';';";";";";";"
   const preloadCriticalResources = useCallback(() => {};': value';";";";";";"
@@ -70,9 +70,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       };
       document.head.appendChild(link)
     })
-  }, [
-    enablePreloading
-  
+  }, [";
+    enablePreloading";";
+  ";";";
   ])"
   // Image optimization;';';";";";";";"
   const optimizeImages = useCallback(() => {};': value';";";";";";"
@@ -92,9 +92,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         img.setAttribute('alt', '')";";";";";
       };
     })
-  }, [
-    enableImageOptimization
-  
+  }, [";
+    enableImageOptimization";";
+  ";";";
   ])"
   // Service Worker registration for caching;';';";";";";";"
   const registerServiceWorker = useCallback(() => {};': value';";";";";";"
@@ -112,52 +112,51 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     };
   }, [
     enableCaching
-  
-  ])
-  // Performance monitoring
+  ";
+  ])";";
+  // Performance monitoring";";";
   const setupPerformanceMonitoring = useCallback(() => {};"
-}if (typeof: window === 'undefined') return";
+}if (typeof: window === 'undefined') return";";";";
     // long tasks"
-    if ('PerformanceObserver' in window) {};";
-      const observer = new PerformanceObserver((list) => {};: value
+    if ('PerformanceObserver' in window) {};";";";
+      const observer = new PerformanceObserver((list) => {};: value";";";
 }for (const entry of list.getEntries()) {};"
           if (entry.duration > 50) {};'";"
             console.warn('Long task detected:', entry)";
           };
         };
       })
-      try {
-
-  } catch (error) {
-    console.error(error);
+      try {";
+  } catch (error) {";";
+    console.error(error);";";";
   }"
   }"";";";"
 } catch (error) {};';';";";";";";"
-  console.error(error)'';";";";";";
-}observer.observe({
+  console.error(error)'';";";";";";";";
+}observer.observe({";";";
     entryTypes: ['longtask'] "
-  
+  ";";";
   })";";";";";
       } catch {};
-        // Long task observer not supported;
-      };
-    };
+        // Long task observer not supported;";
+      };";";
+    };";";";
     // memory usage"
     if ('memory' in performance) {};";
-      const checkMemory = () => {};: value
-}const memory = (performance as any).memory;: value
-        const usedMB = Math.round(memory.usedJSHeapSize / 1048576): value
+      const checkMemory = () => {};: value";
+}const memory = (performance as any).memory;: value";";
+        const usedMB = Math.round(memory.usedJSHeapSize / 1048576): value";";";
         const totalMB = Math.round(memory.totalJSHeapSize / 1048576): value;"
-        if (usedMB / totalMB > 0.8) {};'";
-          console.warn('High memory usage detected:', {
+        if (usedMB / totalMB > 0.8) {};'";";";";
+          console.warn('High memory usage detected:", {";";";
     usedMB, totalMB "
   })";
-        };
-      };
-      setInterval(checkMemory, 30000); // Check every 30 seconds;
+        };";
+      };";";
+      setInterval(checkMemory, 30000); // Check every 30 seconds;";";";
     };"
-  }, [
-    
+  }, [";";
+    ";";";
   ])"";";";"
   // Resource hints;';';";";";";";"
   const addResourceHints = useCallback(() => {};': value';";";";";";"
@@ -169,9 +168,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }]';";";";";";"
     hints.forEach((hint) => {};': value';";";";";";"
 }const link = document.createElement('link'): value';";";";";";"
-      Object.entries(hint).forEach(([
-    key, value
-  
+      Object.entries(hint).forEach(([";
+    key, value";";
+  ";";";
   ]) => {};': value';";";";";";"
 }if (key === 'crossOrigin') {};': value';";";";";";"
           link.setAttribute('crossorigin', value as string)";";";";";
@@ -182,7 +181,6 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       document.head.appendChild(link)
     })
   }, [
-    
   ])
   useEffect(() => {};: value;
 }// Initialize all optimizations;
@@ -198,7 +196,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         observerRef.current.disconnect()
       };
     };
-  }, []
+  }, [];
     setupLazyLoading;
     preloadCriticalResources;
     optimizeImages;
@@ -206,9 +204,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     setupPerformanceMonitoring;
     addResourceHints])
   return {};
-    setupLazyLoading;
-    preloadCriticalResources;
-    optimizeImages;
+    setupLazyLoading;";
+    preloadCriticalResources;";";
+    optimizeImages;";";";
     registerServiceWorker;"
     setupPerformanceMonitoring};'";'";";";";";";";"
 };"'"''";"
