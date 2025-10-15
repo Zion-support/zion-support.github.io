@@ -79,53 +79,127 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
       icon: <Users className="w-4 h-4" />
     },
     {
-      name: 'Services',
-      path: '/services',
-      icon: <Award className="w-4 h-4" />,
+      name: 'AI Services',
+      path: '/ai-services',
+      icon: <Brain className="w-4 h-4" />,
       hasDropdown: true,
       dropdownItems: [
         {
-          name: 'AI Services',
-          icon: <Brain className="w-4 h-4" />,
+          name: 'Featured AI Services',
+          icon: <Star className="w-4 h-4" />,
           items: [
-            { name: 'AI Analytics', path: '/ai-analytics', icon: <BarChart3 className="w-4 h-4" /> },
-            { name: 'AI Content Generation', path: '/ai-content-generation', icon: <Code className="w-4 h-4" /> },
-            { name: 'AI Customer Support', path: '/ai-customer-support', icon: <Users className="w-4 h-4" /> },
-            { name: 'AI Cybersecurity', path: '/ai-cybersecurity', icon: <Shield className="w-4 h-4" /> },
-            { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <Database className="w-4 h-4" /> },
-            { name: 'AI Document Processing', path: '/ai-document-processing', icon: <FileText className="w-4 h-4" /> },
-            { name: 'AI Marketing Automation', path: '/ai-marketing-automation', icon: <TrendingUp className="w-4 h-4" /> },
-            { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', icon: <BarChart3 className="w-4 h-4" /> },
-            { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <Smartphone className="w-4 h-4" /> },
-            { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: <Zap className="w-4 h-4" /> }
+            { name: 'AI Business Intelligence Pro', path: '/ai-business-intelligence-pro', icon: <BarChart3 className="w-4 h-4" /> },
+            { name: 'AI Cybersecurity Suite Pro', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
+            { name: 'AI Content Generation Pro', path: '/ai-content-generation-pro', icon: <Code className="w-4 h-4" /> },
+            { name: 'AI Customer Support Pro', path: '/ai-customer-support-pro', icon: <Users className="w-4 h-4" /> }
           ]
         },
         {
-          name: 'IT Services',
-          icon: <Monitor className="w-4 h-4" />,
+          name: 'Specialized AI',
+          icon: <Cpu className="w-4 h-4" />,
           items: [
-            { name: 'Cloud Migration', path: '/cloud-migration', icon: <Cloud className="w-4 h-4" /> },
-            { name: 'DevOps Services', path: '/devops-services', icon: <Code className="w-4 h-4" /> },
-            { name: 'IT Consulting', path: '/it-consulting', icon: <Users className="w-4 h-4" /> },
-            { name: 'Network Security', path: '/network-security', icon: <Shield className="w-4 h-4" /> },
-            { name: 'Software Development', path: '/software-development', icon: <Code className="w-4 h-4" /> },
-            { name: 'System Integration', path: '/system-integration', icon: <Database className="w-4 h-4" /> },
-            { name: 'Web Development', path: '/web-development', icon: <Globe className="w-4 h-4" /> }
+            { name: 'AI Voice Assistant Pro', path: '/ai-voice-assistant-pro', icon: <Mic className="w-4 h-4" /> },
+            { name: 'AI Computer Vision Pro', path: '/ai-computer-vision-pro', icon: <Camera className="w-4 h-4" /> },
+            { name: 'AI Fraud Detection Pro', path: '/ai-fraud-detection-pro', icon: <Shield className="w-4 h-4" /> },
+            { name: 'AI Medical Diagnosis', path: '/ai-medical-diagnosis', icon: <Heart className="w-4 h-4" /> },
+            { name: 'AI Legal Assistant', path: '/ai-legal-assistant', icon: <FileText className="w-4 h-4" /> },
+            { name: 'AI Blockchain Auditor', path: '/ai-blockchain-auditor', icon: <Shield className="w-4 h-4" /> }
+          ]
+        }
+      ]
+    },
+    {
+      name: 'IT Services',
+      path: '/it-services',
+      icon: <Monitor className="w-4 h-4" />,
+      hasDropdown: true,
+      dropdownItems: [
+        {
+          name: 'Featured IT Services',
+          icon: <Star className="w-4 h-4" />,
+          items: [
+            { name: 'Cloud Infrastructure Pro', path: '/cloud-infrastructure-pro', icon: <Cloud className="w-4 h-4" /> },
+            { name: 'Cybersecurity Suite Enterprise', path: '/cybersecurity-suite-enterprise', icon: <Shield className="w-4 h-4" /> },
+            { name: 'DevOps Automation Pro', path: '/devops-automation-pro', icon: <Settings className="w-4 h-4" /> },
+            { name: 'Data Analytics Platform', path: '/data-analytics-platform', icon: <BarChart3 className="w-4 h-4" /> }
           ]
         },
         {
-          name: '5G Solutions',
-          icon: <Network className="w-4 h-4" />,
+          name: 'Development Services',
+          icon: <Code className="w-4 h-4" />,
           items: [
-            { name: '5G Solutions', path: '/5g-solutions', icon: <Network className="w-4 h-4" /> },
+            { name: 'Web Development Enterprise', path: '/web-development-enterprise', icon: <Globe className="w-4 h-4" /> },
+            { name: 'Mobile App Development', path: '/mobile-app-development', icon: <Smartphone className="w-4 h-4" /> },
+            { name: 'Blockchain Development', path: '/blockchain-development', icon: <Shield className="w-4 h-4" /> },
+            { name: 'AR/VR Development', path: '/ar-vr-development', icon: <Video className="w-4 h-4" /> },
+            { name: 'API Development & Management', path: '/api-development-management', icon: <Code className="w-4 h-4" /> }
+          ]
+        },
+        {
+          name: 'Infrastructure & Support',
+          icon: <Database className="w-4 h-4" />,
+          items: [
+            { name: 'Database Management Pro', path: '/database-management-pro', icon: <Database className="w-4 h-4" /> },
+            { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Wifi className="w-4 h-4" /> },
+            { name: 'Managed IT Services', path: '/managed-it-services', icon: <Monitor className="w-4 h-4" /> },
+            { name: 'Backup & Disaster Recovery', path: '/backup-disaster-recovery', icon: <HardDrive className="w-4 h-4" /> },
+            { name: 'System Integration', path: '/system-integration', icon: <Workflow className="w-4 h-4" /> }
+          ]
+        }
+      ]
+    },
+    {
+      name: 'Micro SAAS',
+      path: '/micro-saas',
+      icon: <Package className="w-4 h-4" />,
+      hasDropdown: true,
+      dropdownItems: [
+        {
+          name: 'Featured Micro SAAS',
+          icon: <Star className="w-4 h-4" />,
+          items: [
+            { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" /> },
+            { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" /> },
+            { name: 'Zion AI Voice Assistant Pro', path: '/zion-ai-voice-assistant-pro', icon: <Mic className="w-4 h-4" /> },
+            { name: 'Zion AI Image Recognition Pro', path: '/zion-ai-image-recognition-pro', icon: <Camera className="w-4 h-4" /> }
+          ]
+        },
+        {
+          name: 'Business Tools',
+          icon: <BarChart3 className="w-4 h-4" />,
+          items: [
+            { name: 'Zion AI Inventory Manager', path: '/zion-ai-inventory-manager', icon: <Package className="w-4 h-4" /> },
+            { name: 'Zion HR Assistant Pro', path: '/zion-hr-assistant-pro', icon: <Users className="w-4 h-4" /> },
+            { name: 'Zion AI Accounting Suite', path: '/zion-ai-accounting-suite', icon: <Calculator className="w-4 h-4" /> },
+            { name: 'Zion E-commerce Optimizer', path: '/zion-ecommerce-optimizer', icon: <ShoppingCart className="w-4 h-4" /> }
+          ]
+        }
+      ]
+    },
+    {
+      name: '5G Solutions',
+      path: '/5g-solutions',
+      icon: <Network className="w-4 h-4" />,
+      hasDropdown: true,
+      dropdownItems: [
+        {
+          name: '5G Infrastructure',
+          icon: <Cpu className="w-4 h-4" />,
+          items: [
             { name: '5G Network Infrastructure', path: '/5g-network-infrastructure', icon: <Cpu className="w-4 h-4" /> },
             { name: '5G Edge Computing', path: '/5g-edge-computing', icon: <Cloud className="w-4 h-4" /> },
+            { name: '5G Private Networks', path: '/5g-private-networks', icon: <Shield className="w-4 h-4" /> },
+            { name: '5G Implementation', path: '/5g-implementation', icon: <Zap className="w-4 h-4" /> }
+          ]
+        },
+        {
+          name: '5G Applications',
+          icon: <Smartphone className="w-4 h-4" />,
+          items: [
             { name: '5G IoT Solutions', path: '/5g-iot-solutions', icon: <Smartphone className="w-4 h-4" /> },
             { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions', icon: <Globe className="w-4 h-4" /> },
-            { name: '5G Private Networks', path: '/5g-private-networks', icon: <Shield className="w-4 h-4" /> },
             { name: '5G Mobile Applications', path: '/5g-mobile-applications', icon: <Smartphone className="w-4 h-4" /> },
-            { name: '5G Data Analytics', path: '/5g-data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
-            { name: '5G Implementation', path: '/5g-implementation', icon: <Zap className="w-4 h-4" /> }
+            { name: '5G Data Analytics', path: '/5g-data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
           ]
         }
       ]

@@ -46,13 +46,13 @@ const Footer = React.memo(() => {
 
   const services = useMemo(() => [
     { name: "AI Services", path: "/ai-services", icon: <Brain className="w-4 h-4" /> },
-    { name: "IT Services", path: "/it-services", icon: <Shield className="w-4 h-4" /> },
-    { name: "Micro SAAS", path: "/micro-saas", icon: <Zap className="w-4 h-4" /> },
-    { name: "5G Solutions", path: "/5g-solutions", icon: <Globe className="w-4 h-4" /> },
-    { name: "Cloud Services", path: "/cloud-services", icon: <Cloud className="w-4 h-4" /> },
-    { name: "Cybersecurity", path: "/cybersecurity", icon: <Shield className="w-4 h-4" /> },
-    { name: "Web Development", path: "/web-development", icon: <Code className="w-4 h-4" /> },
-    { name: "Data Analytics", path: "/data-analytics", icon: <BarChart3 className="w-4 h-4" /> }
+    { name: "IT Services", path: "/it-services", icon: <Monitor className="w-4 h-4" /> },
+    { name: "Micro SAAS", path: "/micro-saas", icon: <Package className="w-4 h-4" /> },
+    { name: "5G Solutions", path: "/5g-solutions", icon: <Network className="w-4 h-4" /> },
+    { name: "Cloud Infrastructure", path: "/cloud-infrastructure-pro", icon: <Cloud className="w-4 h-4" /> },
+    { name: "Cybersecurity", path: "/cybersecurity-suite-enterprise", icon: <Shield className="w-4 h-4" /> },
+    { name: "DevOps", path: "/devops-automation-pro", icon: <Settings className="w-4 h-4" /> },
+    { name: "Data Analytics", path: "/data-analytics-platform", icon: <BarChart3 className="w-4 h-4" /> }
   ], []);
 
   const companyLinks = useMemo(() => [
@@ -83,8 +83,8 @@ const Footer = React.memo(() => {
   ], []);
 
   const stats = useMemo(() => [
-    { number: "500+", label: "Projects Completed", icon: <Award className="w-5 h-5" /> },
-    { number: "10,000+", label: "Happy Clients", icon: <Users className="w-5 h-5" /> },
+    { number: "1,000+", label: "Projects Completed", icon: <Award className="w-5 h-5" /> },
+    { number: "25,000+", label: "Happy Clients", icon: <Users className="w-5 h-5" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-5 h-5" /> },
     { number: "24/7", label: "Support", icon: <Clock className="w-5 h-5" /> }
   ], []);
@@ -461,6 +461,39 @@ const Footer = React.memo(() => {
           </div>
         </div>
 
+        {/* Contact Information */}
+        <div className="border-t border-gray-800 pt-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white text-sm">@</span>
+              </div>
+              <div>
+                <p className="text-white text-sm font-medium">Email</p>
+                <p className="text-gray-300 text-sm">kleber@ziontechgroup.com</p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white text-sm">📞</span>
+              </div>
+              <div>
+                <p className="text-white text-sm font-medium">Phone</p>
+                <p className="text-gray-300 text-sm">+1 302 464 0950</p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-3">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mt-0.5">
+                <span className="text-white text-sm">📍</span>
+              </div>
+              <div>
+                <p className="text-white text-sm font-medium">Address</p>
+                <p className="text-gray-300 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -485,6 +518,12 @@ const Footer = React.memo(() => {
                 className="text-gray-400 hover:text-white transition-colors text-sm"
               >
                 Cookie Policy
+              </Link>
+              <Link
+                to="/sitemap"
+                className="text-gray-400 hover:text-white transition-colors text-sm"
+              >
+                Sitemap
               </Link>
             </div>
           </div>
