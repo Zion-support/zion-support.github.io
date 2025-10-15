@@ -62,10 +62,22 @@ import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
 // Enhanced loading component
 const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
-      <p className="text-gray-600 animate-pulse">Loading...</p>
+  <div className="min-h-screen flex items-center justify-center bg-black relative overflow-hidden">
+    {/* Futuristic Background */}
+    <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20"></div>
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent"></div>
+    
+    <div className="text-center relative z-10">
+      <div className="relative">
+        <div className="animate-spin rounded-full h-20 w-20 border-4 border-cyan-500/30 mx-auto mb-6"></div>
+        <div className="animate-spin rounded-full h-20 w-20 border-4 border-purple-500/30 mx-auto absolute top-0 left-1/2 transform -translate-x-1/2" style={{animationDirection: 'reverse', animationDuration: '1.5s'}}></div>
+      </div>
+      <p className="text-cyan-400 text-xl font-semibold animate-pulse">Loading...</p>
+      <div className="mt-4 flex justify-center space-x-1">
+        <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
+        <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
+        <div className="w-2 h-2 bg-pink-400 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+      </div>
     </div>
   </div>
 )
@@ -89,7 +101,18 @@ export default function App() {
     <GlobalErrorBoundary>
       <HelmetProvider>
         <Router>
-          <div className="min-h-screen bg-gray-50">
+          <div className="min-h-screen bg-black relative overflow-hidden">
+            {/* Futuristic Background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-purple-900/10 to-pink-900/10"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/5 via-transparent to-transparent"></div>
+            
+            {/* Animated Background Elements */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/3 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/3 rounded-full blur-3xl animate-pulse delay-1000"></div>
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-500/3 rounded-full blur-3xl animate-pulse delay-2000"></div>
+            </div>
+            
             <Navigation />
             <Sidebar />
             
@@ -159,29 +182,33 @@ export default function App() {
                   
                   {/* Catch all route */}
                   <Route path="*" element={
-                    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-                      <div className="text-center max-w-md mx-auto px-4">
-                        <div className="mb-8">
-                          <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
-                          <h2 className="text-2xl font-semibold text-gray-700 mb-4">Page Not Found</h2>
-                          <p className="text-gray-600 mb-8">
+                    <div className="min-h-screen flex items-center justify-center bg-black relative overflow-hidden">
+                      {/* Futuristic Background */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20"></div>
+                      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent"></div>
+                      
+                      <div className="text-center max-w-2xl mx-auto px-4 relative z-10">
+                        <div className="mb-12">
+                          <h1 className="text-8xl font-bold gradient-text neon-text mb-6">404</h1>
+                          <h2 className="text-3xl font-semibold text-cyan-400 mb-6">Page Not Found</h2>
+                          <p className="text-gray-300 text-lg mb-12 leading-relaxed">
                             Sorry, we couldn't find the page you're looking for. 
                             It might have been moved, deleted, or doesn't exist.
                           </p>
                         </div>
-                        <div className="space-y-4">
+                        <div className="space-y-6">
                           <a 
                             href="/" 
-                            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                            className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 font-semibold"
                           >
                             Go Back Home
                           </a>
-                          <div className="text-sm text-gray-500">
-                            <a href="/contact" className="text-blue-600 hover:text-blue-800">
+                          <div className="text-sm text-gray-400 space-x-4">
+                            <a href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
                               Contact Support
                             </a>
-                            {' • '}
-                            <a href="/services" className="text-blue-600 hover:text-blue-800">
+                            <span className="text-gray-600">•</span>
+                            <a href="/services" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
                               Browse Services
                             </a>
                           </div>
