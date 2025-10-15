@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Footer } from 'lucide-react';
+import Footer from '../components/Footer';
 
 const PricingPage: React.FC = () => { return (
     <> <Helmet> <title>Pricing</title> <meta name="description" content="Professional pricing solutions and services" /> <meta name="keywords" content="pricing" /> </Helmet> 

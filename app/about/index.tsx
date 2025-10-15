@@ -338,7 +338,7 @@ const About: React.FC = () => {
           </h2>
           
           <p className="text-xl text-gray-300 mb-8">
-            Let&apos;s discuss how we can help transform your business with our AI and IT solutions.
+            Let's discuss how we can help transform your business with our AI and IT solutions.
           </p>
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -326,7 +326,7 @@ const benefits = [
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                   }`}>
-                    {plan.popular ? &apos;Get Started&apos; : &apos;Choose Plan&apos;}
+                    {plan.popular ? 'Get Started' : 'Choose Plan'}
                     <ArrowRight className="w-4 h-4 ml-2 inline" />
                   </button>
                 </div>

@@ -1,13 +1,16 @@
 import React from 'react';
-  PhoneIcon, 
-  EnvelopeIcon, 
-  MapPinIcon, 
-  ArrowRightIcon,
-  HeartIcon
-} from '@heroicons/react/24/outline';
-import { ArrowRight, Facebook, Twitter, Linkedin, Github, ArrowRightIcon, PhoneIcon, EnvelopeIcon, MapPinIcon, HeartIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Phone, EnvelopeIcon, MapPinIcon, HeartIcon } from 'lucide-react';
+import { 
+  ArrowRight, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Github, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Heart 
+} from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -131,11 +134,11 @@ const Footer: React.FC = () => {
               <span className="text-gray-300">+1 (555) 123-4567</span>
             </div>
             <div className="flex items-center">
-              <EnvelopeIcon className="h-5 w-5 text-purple-400 mr-3" />
+              <Mail className="h-5 w-5 text-purple-400 mr-3" />
               <span className="text-gray-300">info@ziontechgroup.com</span>
             </div>
             <div className="flex items-center">
-              <MapPinIcon className="h-5 w-5 text-purple-400 mr-3" />
+              <MapPin className="h-5 w-5 text-purple-400 mr-3" />
               <span className="text-gray-300">San Francisco, CA</span>
             </div>
           </div>
@@ -147,7 +150,7 @@ const Footer: React.FC = () => {
             © {currentYear} Zion Tech Group. All rights reserved.
           </p>
           <p className="text-gray-400 text-sm flex items-center mt-4 md:mt-0">
-            Made with <HeartIcon className="h-4 w-4 text-red-500 mx-1" /> by Zion Tech Group
+            Made with <Heart className="h-4 w-4 text-red-500 mx-1" /> by Zion Tech Group
           </p>
         </div>
       </div>

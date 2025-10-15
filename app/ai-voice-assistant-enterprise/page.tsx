@@ -134,7 +134,7 @@ const testimonials = [
       name: &quot;Jennifer Martinez&quot;,
       company: &quot;CustomerFirst Corp&quot;,
       role: &quot;VP of Customer Experience&quot;,
-      content: &quot;The AI Voice Assistant has transformed our customer service. We&apos;ve seen a 70% reduction in wait times and 95% customer satisfaction.&quot;,
+      content: &quot;The AI Voice Assistant has transformed our customer service. We've seen a 70% reduction in wait times and 95% customer satisfaction.&quot;,
       rating: 5
     },
     {

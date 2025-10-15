@@ -1,11 +1,10 @@
 import React, { useState, useEffect, memo, lazy, Suspense } from "react";
 import { Helmet } from 'react-helmet-async';
-import { React, Suspense } from 'react';
-import { Search, 2min, HelpCircle, BookOpen, Users, Clock, Phone, Mail } from 'lucide-react';
+import { Search, Clock, HelpCircle, BookOpen, Users, Phone, Mail, Zap } from 'lucide-react';
 
-const [selectedCategory, setSelectedCategory] = useState("all");
-
-const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+const SupportPage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
 const resources = [ { title: "Documentation", description: "Comprehensive guides and API references", icon: BookOpen, link: "/docs", }, { title: "Community Forum", description: "Connect with other users and experts", icon: Users, link: "/community", }, { title: "Video Tutorials", description: "Step-by-step video guides", icon: Zap, link: "/tutorials", }, ];
 
@@ -104,7 +103,7 @@ const toggleFAQ = () => {
         <div className="text-center">
                 
         <div className="text-3xl font-bold text-white mb-2">
-                  <2min
+                  2min
                 </div>
                 
         <div className="text-gray-400">Average Response Time</div>
