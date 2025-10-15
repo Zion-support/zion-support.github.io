@@ -1,8 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 export default function ZionComplianceManager() {
-  return;
-},
+  const features = [
     {
       title: "Regulatory Framework Support",
       description: "Support for GDPR, HIPAA, SOC 2, PCI DSS, and 50+ other regulatory frameworks",

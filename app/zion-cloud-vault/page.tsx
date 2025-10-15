@@ -1,8 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 export default function ZionCloudVault() {
-  return;
-},
+  const features = [
     {
       title: "Real-time Sync",
       description: "Automatic synchronization across all your devices with conflict resolution and version control",

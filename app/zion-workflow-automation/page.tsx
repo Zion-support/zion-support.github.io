@@ -1,8 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 export default function ZionWorkflowAutomation() {
-  return;
-},
+  const features = [
     {
       title: "AI-Powered Automation",
       description: "Intelligent automation that learns from your patterns and suggests optimizations",

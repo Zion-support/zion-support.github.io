@@ -5,8 +5,7 @@ import FuturisticButton from '../components/FuturisticButton';
 import { BarChart3, Users } from 'lucide-react';
 import { Clock } from 'lucide-react';
 const ZionAICustomerInsightsPage = () => {
-  return;
-},
+  const features = [
     {
       title: "Real-Time Sentiment Analysis",
       description: "Monitor customer sentiment across all touchpoints with real-time analysis of reviews, social media, and support tickets.",

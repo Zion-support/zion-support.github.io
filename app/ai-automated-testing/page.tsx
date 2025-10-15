@@ -1,9 +1,8 @@
-import { ArrowRight, TestTube, Target, CheckCircle, Globe, Bug } from 'lucide-react';
+import { ArrowRight, TestTube, Target, CheckCircle, Globe, Bug, BarChart3, Zap, Clock } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 export default function AIAutomatedTesting() {
-  return;
-},
+  const features = [
     {
       title: "Intelligent Test Execution",
       description: "Smart test execution with parallel processing, intelligent retry logic, and automatic test prioritization",

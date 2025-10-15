@@ -4,8 +4,7 @@ import FuturisticButton from '../components/FuturisticButton';
 import {Zap, Users, FileText} from 'lucide-react';
 import { Shield } from 'lucide-react';
 const AICodeAssistantPage = () => {
-  return;
-},
+  const features = [
     {
       title: "Intelligent Code Review",
       description: "Automated code review with security analysis, performance optimization suggestions, and best practice recommendations.",

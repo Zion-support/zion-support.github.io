@@ -5,8 +5,7 @@ import FuturisticButton from '../components/FuturisticButton';
 import { Users, FileText } from 'lucide-react';
 import { Clock } from 'lucide-react';
 const ZionAIVideoGeneratorPage = () => {
-  return;
-},
+  const features = [
     {
       title: "Multiple Video Formats",
       description: "Support for all major video formats including MP4, MOV, AVI, and WebM. Optimized for social media platforms.",

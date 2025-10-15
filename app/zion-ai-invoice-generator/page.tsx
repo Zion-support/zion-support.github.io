@@ -5,8 +5,7 @@ import FuturisticButton from '../components/FuturisticButton';
 import {Users, FileText, DollarSign} from 'lucide-react';
 import { Shield, Clock } from 'lucide-react';
 const ZionAIInvoiceGeneratorPage = () => {
-  return;
-},
+  const features = [
     {
       title: "Smart Data Extraction",
       description: "Automatically extract billing information from emails, contracts, and project management tools to populate invoices.",

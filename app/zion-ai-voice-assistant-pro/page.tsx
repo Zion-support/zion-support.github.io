@@ -3,8 +3,7 @@ import EnhancedSEO from '../components/EnhancedSEO';
 import { Settings, Zap, Users, Mail } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 const ZionAIVoiceAssistantPro = () => {
-  return;
-},
+  const features = [
     {
       title: "Multi-Language Support",
       description: "Supports 50+ languages with accurate pronunciation and cultural context understanding",

@@ -1,9 +1,8 @@
-import { ArrowRight, Target, CheckCircle, Globe, Leaf } from 'lucide-react';
+import { ArrowRight, Target, CheckCircle, Globe, Leaf, BarChart3, Clock, Shield, Cloud } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
 export default function AIClimatePredictionEngine() {
-  return;
-},
+  const features = [
     {
       title: "Predictive Weather Analytics",
       description: "Long-term weather predictions with climate change impact analysis and extreme weather event forecasting",

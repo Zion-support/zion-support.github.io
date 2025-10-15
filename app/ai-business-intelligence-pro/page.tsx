@@ -1,9 +1,8 @@
-import { ArrowRight, Target, CheckCircle, Globe, Brain } from 'lucide-react';
+import { ArrowRight, Target, CheckCircle, Globe, Brain, BarChart3, Zap, Clock } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
 export default function AIBusinessIntelligencePro() {
-  return;
-},
+  const features = [
     {
       title: "Real-time Dashboards",
       description: "Interactive dashboards that update in real-time with AI-powered insights and predictive analytics",

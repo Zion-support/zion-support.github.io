@@ -1,8 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 export default function ZionEmailAutomation() {
-  return;
-},
+  const features = [
     {
       title: "Automated Workflows",
       description: "Set up complex email automation workflows with triggers, conditions, and actions",
