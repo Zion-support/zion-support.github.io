@@ -1,20 +1,20 @@
+import React from 'react';
 export const errorHandler = {
   handle: (error: Error, context?: string) => {
     // Log to external service
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: context ? { context } : {}
+        description: error.message;
+        fatal: false;
+        custom_map: context ? { context } : { /* empty */ }
       });
     }
     
     return {
-      message: 'Something went wrong. Please try again.',
+      message: 'Something went wrong. Please try again.';
       code: 'GENERIC_ERROR'
     };
-  },
-  
+  };
   handleApiError: (error: unknown) => {
     const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
     const status = errorWithResponse.response?.status;
@@ -34,15 +34,11 @@ export const errorHandler = {
       default:
         return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' };
     }
-  },
-  
+  };
   log: (error: Error, context?: Record<string, unknown>) => {
     // Error logging logic
-    console.error('Error logged:', error, context);
-  },
-  
+      };
   report: (error: Error, context?: Record<string, unknown>) => {
     // Error reporting logic
-    console.error('Error reported:', error, context);
-  }
+      }
 };

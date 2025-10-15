@@ -7,13 +7,12 @@ interface CacheItem {
 export const advancedCaching = {
   setCache: (key: string, value: unknown, ttl: number = 3600) => {
     const item: CacheItem = {
-      value,
-      timestamp: Date.now(),
+      value;
+      timestamp: Date.now();
       ttl: ttl * 1000
     };
     localStorage.setItem(key, JSON.stringify(item));
-  },
-  
+  };
   getCache: (key: string): unknown | null => {
     const item = localStorage.getItem(key);
     if (!item) return null;
@@ -27,12 +26,10 @@ export const advancedCaching = {
       }
       return parsed.value;
     } catch (error) {
-      console.error('Error parsing cached item:', error);
-      localStorage.removeItem(key);
+            localStorage.removeItem(key);
       return null;
     }
-  },
-  
+  };
   clearCache: (pattern?: string) => {
     if (pattern) {
       const keys = Object.keys(localStorage);

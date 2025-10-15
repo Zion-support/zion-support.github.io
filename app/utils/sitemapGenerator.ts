@@ -1,3 +1,4 @@
+import React from 'react';
 export const sitemapGenerator = {
   generate: (pages: Array<{ path: string; lastModified?: string; priority?: number }>) => {
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -10,8 +11,7 @@ ${pages.map(page => `  <url>
 </urlset>`;
     
     return sitemap;
-  },
-  
+  };
   generateRobotsTxt: (sitemapUrl: string = 'https://ziontechgroup.com/sitemap.xml') => {
     return `User-agent: *
 Allow: /

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -22,8 +23,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Uncaught error:', error, errorInfo);
-    
+        
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);

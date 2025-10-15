@@ -1,20 +1,7 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  BarChart3,
-  Brain,
-  Bug,
-  CheckCircle,
-  Eye,
-  Lock,
-  Mail,
-  Network,
-  Phone,
-  Play,
-  Shield,
-  Star,
-  Users
-} from 'lucide-react';
+import { BarChart3, Brain, Bug, CheckCircle, Eye, Lock, Mail, Network, Phone, Play, Shield, Users, Star, Shield, Users } from 'lucide-react';
 
 const AiCybersecurityPlatformPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

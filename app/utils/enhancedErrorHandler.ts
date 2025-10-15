@@ -1,20 +1,19 @@
+import React from 'react';
 export const enhancedErrorHandler = {
   handleError: (error: Error, context?: string) => {
-    console.error('Error occurred: ', error);
-    
+        
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
-        description: error.message,
+        description: error.message;
         context: context
       });
     }
     
     return {
-      message: 'Something went wrong. Please try again.',
+      message: 'Something went wrong. Please try again.';
       code: 'GENERIC_ERROR'
     };
-  },
-  
+  };
   handleApiError: (error: unknown) => {
     const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
     const status = errorWithResponse.response?.status;
@@ -34,21 +33,18 @@ export const enhancedErrorHandler = {
       default:
         return { message: message || 'An error occurred', code: 'UNKNOWN_ERROR' };
     }
-  },
-  
+  };
   handleNetworkError: (error: unknown) => {
-    console.error('Network error: ', error);
-    return {
-      message: 'Network error. Please check your connection.',
+        return {
+      message: 'Network error. Please check your connection.';
       code: 'NETWORK_ERROR'
     };
-  },
-  
+  };
   handleValidationError: (errors: Record<string, string[]>) => {
     const errorMessages = Object.values(errors).flat();
     return {
-      message: errorMessages.join(', '),
-      code: 'VALIDATION_ERROR',
+      message: errorMessages.join(', ');
+      code: 'VALIDATION_ERROR';
       details: errors
     };
   }

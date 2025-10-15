@@ -1,5 +1,5 @@
-import { Mail, MapPin, Menu, Phone, X, Zap } from 'lucide-react';
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
+import { Mail, Menu, Phone, X, Zap } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navigation: React.FC = () => {

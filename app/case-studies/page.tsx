@@ -1,3 +1,4 @@
+import React from 'react';
 import { 
   ArrowRight,
   CheckCircle,
@@ -182,7 +183,7 @@ const CaseStudiesPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-              Discover how we&apos;ve helped businesses across industries
+              Discover how we've helped businesses across industries
               transform their operations with cutting-edge AI and IT solutions.
             </p>
 
@@ -301,7 +302,7 @@ const CaseStudiesPage: React.FC = () => {
                 Ready toWrite Your Success Story?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Let&apos;s discuss how we can help transform your business with
+                Let's discuss how we can help transform your business with
                 our AI and IT solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

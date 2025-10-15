@@ -1,3 +1,4 @@
+import React from 'react';
 declare global {
   interface Window {
     gtag: (
@@ -9,4 +10,4 @@ declare global {
   }
 }
 
-export {};
+export { /* empty */ };

@@ -7,28 +7,21 @@ interface AnalyticsProviderProps {
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = useCallback((eventName: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.warn('Event tracked:', eventName, properties);
-    }
+    if (process.env.NODE_ENV === 'development') { /* empty */ }
     // Add your analytics tracking logic here
   }, []);
 
   const trackPageView = useCallback((page: string) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.warn('Page view tracked:', page);
-    }
+    if (process.env.NODE_ENV === 'development') { /* empty */ }
     // Add your page view tracking logic here
   }, []);
   
   const identifyUser = useCallback((userId: string, properties?: Record<string, unknown>) => {
-    console.warn('User set:', userId, properties);
-    // Add your user identification logic here
+        // Add your user identification logic here
   }, []);
 
   const setUser = useCallback((userId: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.warn('User set:', userId, properties);
-    }
+    if (process.env.NODE_ENV === 'development') { /* empty */ }
     // Add your user setting logic here
   }, []);
 

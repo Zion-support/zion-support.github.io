@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
+import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Shield } from 'lucide-react';
 
 const TermsPage: React.FC = () => {
   const termsSections = [

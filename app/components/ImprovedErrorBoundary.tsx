@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React from 'react';
 import { AlertTriangle, RefreshCw, Bug } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
@@ -29,8 +29,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ImprovedErrorBoundary caught an error:', error, errorInfo);
-    if (this.props.onError) {
+        if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
   }
