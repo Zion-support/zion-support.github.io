@@ -1,4 +1,4 @@
-export const cacheManager = { cache: new Map<string, { data: unknown; timestamp: number; ttl: number }>(),
+export const cacheManager = { cache: new Map<string { data: unknown; timestamp: number; ttl: number }>(),
   set: (key: string, data: unknown, ttl: number = 300000) => { cacheManager.cache.set(key, {
       data,
       timestamp: Date.now(),
@@ -6,13 +6,16 @@ export const cacheManager = { cache: new Map<string, { data: unknown; timestamp:
   },
   get: (key: string) => { const item = cacheManager.cache.get(key);
     if (!item) return null;
-    const now = Date.now();
+
+const now = Date.now();
     if (now - item.timestamp > item.ttl) {
       cacheManager.cache.delete(key);
-      return null; }
+  return null; }
     return item.data;
   },
   clear: () => { cacheManager.cache.clear(); },
   delete: (key: string) => { cacheManager.cache.delete(key); },
   has: (key: string) => { return cacheManager.cache.has(key); }
 };
+
+export default NotFoundPage;

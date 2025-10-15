@@ -1,32 +1,25 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 export const usePerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState<Record<string, number>>({});
-
-  const trackMetric = (name: string, value: number) => {
-    setMetrics((prev) => ({ ...prev, [name]: value }));
-  };
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        if (entries.length > 0) {
-          setMetrics((prev: Record<string, number>) => ({
-            ...prev,
-            [entries[0].name]: entries[0].startTime
-          }));
-        }
-      });
+    // Performance monitoring logic here,
+    const observer = new PerformanceObserver((list) => {
+      // Handle performance, entries});
 
-      observer.observe({ entryTypes: ['measure', 'navigation'] });
+    observer.observe({ entryTypes: ['measure', 'navigation'] });
 
-      return () => {
-        observer.disconnect();
-      };
-    }
-    return undefined;
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
-  return { metrics, trackMetric };
+  return {
+    isLoading,
+    error,
+    setIsLoading,
+    setError
+  };
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { AlertTriangle, CheckCircle, Cookie, Eye, Settings, Shield, User } from 'lucide-react';
+import { Cookie, Settings, Eye, Shield, CheckCircle, AlertTriangle } from 'lucide-react';
 
 const CookiesPage: React.FC = () => {
   const cookieTypes = [
@@ -11,9 +11,8 @@ const CookiesPage: React.FC = () => {
       examples: [
         'Authentication cookies',
         'Security cookies',
-        'Load balancing cookies',
-        'User interface customization'
-      ],
+        'Load balancing cookies']
+        'User interface customization']],
       required: true
     },
     {
@@ -23,9 +22,8 @@ const CookiesPage: React.FC = () => {
       examples: [
         'Language preferences',
         'Region settings',
-        'User preferences',
-        'Accessibility options'
-      ],
+        'User preferences']
+        'Accessibility options']],
       required: false
     },
     {
@@ -35,9 +33,8 @@ const CookiesPage: React.FC = () => {
       examples: [
         'Google Analytics',
         'Page view tracking',
-        'User behavior analysis',
-        'Performance monitoring'
-      ],
+        'User behavior analysis']
+        'Performance monitoring']],
       required: false
     },
     {
@@ -47,14 +44,13 @@ const CookiesPage: React.FC = () => {
       examples: [
         'Social media tracking',
         'Advertising cookies',
-        'Remarketing pixels',
-        'Conversion tracking'
-      ],
+        'Remarketing pixels']
+        'Conversion tracking']],
       required: false
     }
   ];
 
-  const cookieDetails = [
+const cookieDetails = [
     {
       name: 'session_id',
       purpose: 'Maintains user session state',
@@ -91,7 +87,6 @@ const CookiesPage: React.FC = () => {
       provider: 'Zion Tech Group'
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -102,53 +97,67 @@ const CookiesPage: React.FC = () => {
         <meta property="og:description" content="Our cookie policy and how we use cookies on our website" />
         <meta property="og:type" content="website" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="text-center max-w-4xl mx-auto">
+              
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Cookie <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Policy</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+              
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                 This policy explains how we use cookies and similar technologies on our website to enhance your experience and provide our services.
               </p>
-              <div className="text-sm text-gray-400">
+              
+        <div className="text-sm text-gray-400">
                 Last updated: {new Date().toLocaleDateString()}
               </div>
             </div>
           </div>
         </section>
-
         {/* What Are Cookies */}
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6">What Are Cookies?</h2>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20">
-                <p className="text-gray-300 leading-relaxed mb-6">
+              
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20">
+                
+          <p className="text-gray-300 leading-relaxed mb-6">
                   Cookies are small text files that are placed on your device when you visit our website. They help us provide you with a better experience by remembering your preferences and enabling certain functionality.
                 </p>
-                <p className="text-gray-300 leading-relaxed">
-                  We use both session cookies (which expire when you close your browser) and persistent cookies (which remain on your device for a set period of time) to enhance your experience on our website.
+                
+          <p className="text-gray-300 leading-relaxed">
+                  We use both session cookies (which expire when you close your, browser) and persistent cookies (which remain on your device for a set period of, time) to enhance your experience on our website.
                 </p>
               </div>
             </div>
           </div>
         </section>
-
         {/* Cookie Types */}
         <section className="py-20 bg-white/5 backdrop-blur-sm">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-12 text-center">Types of Cookies We Use</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {cookieTypes.map((type, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
-                    <div className="flex items-center mb-6">
-                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
-                        <div className="text-white">{type.icon}</div>
+                    
+        <div className="flex items-center mb-6">
+                      
+        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                        
+        <div className="text-white">{type.icon}</div>
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white">{type.title}</h3>
@@ -160,8 +169,7 @@ const CookiesPage: React.FC = () => {
                       </div>
                     </div>
                     
-                    <p className="text-gray-300 mb-6">{type.description}</p>
-                    
+          <p className="text-gray-300 mb-6">{type.description}</p>
                     <div>
                       <h4 className="text-sm font-semibold text-cyan-400 mb-3">Examples:</h4>
                       <ul className="space-y-2">
@@ -179,13 +187,15 @@ const CookiesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Cookie Details */}
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Cookie Details</h2>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 overflow-x-auto">
+              
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 overflow-x-auto">
                 <table className="w-full">
                   <thead>
                     <tr className="border-b border-cyan-500/20">
@@ -220,17 +230,20 @@ const CookiesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Managing Cookies */}
         <section className="py-20 bg-white/5 backdrop-blur-sm">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Managing Your Cookie Preferences</h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20">
                   <h3 className="text-xl font-bold text-white mb-4">Browser Settings</h3>
-                  <p className="text-gray-300 mb-6">
+                  
+          <p className="text-gray-300 mb-6">
                     You can control and delete cookies through your browser settings. Most browsers allow you to:
                   </p>
                   <ul className="space-y-2">
@@ -253,9 +266,10 @@ const CookiesPage: React.FC = () => {
                   </ul>
                 </div>
                 
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20">
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20">
                   <h3 className="text-xl font-bold text-white mb-4">Our Cookie Banner</h3>
-                  <p className="text-gray-300 mb-6">
+                  
+          <p className="text-gray-300 mb-6">
                     When you first visit our website, you'll see a cookie banner where you can:
                   </p>
                   <ul className="space-y-2">
@@ -281,14 +295,17 @@ const CookiesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Third-Party Cookies */}
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6">Third-Party Cookies</h2>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20">
-                <p className="text-gray-300 leading-relaxed mb-6">
+              
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20">
+                
+          <p className="text-gray-300 leading-relaxed mb-6">
                   We may use third-party services that set their own cookies on your device. These include:
                 </p>
                 <ul className="space-y-3">
@@ -314,31 +331,35 @@ const CookiesPage: React.FC = () => {
                     </div>
                   </li>
                 </ul>
-                <p className="text-gray-300 leading-relaxed mt-6">
+                
+          <p className="text-gray-300 leading-relaxed mt-6">
                   These third-party cookies are subject to their respective privacy policies. We recommend reviewing their policies to understand how they use your data.
                 </p>
               </div>
             </div>
           </div>
         </section>
-
         {/* Contact */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-white mb-6">Questions About Cookies?</h2>
-              <p className="text-xl text-gray-300 mb-8">
+              
+          <p className="text-xl text-gray-300 mb-8">
                 If you have any questions about our use of cookies, please contact us.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="mailto:privacy@ziontechgroup.com"
+    href="mailto:privacy@ziontechgroup.com"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Contact Privacy Team
                 </a>
                 <a
-                  href="/contact"
+    href="/contact"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   General Contact
@@ -351,5 +372,4 @@ const CookiesPage: React.FC = () => {
     </>
   );
 };
-
 export default CookiesPage;

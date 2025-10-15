@@ -1,1 +1,25 @@
-import { useEffect } from "react"; interface UseSEOProps { title: string; description: string; keywords?: string; } export const useSEO = ({ title, description, keywords }: UseSEOProps) => { useEffect(() => { if (typeof document !== 'undefined') { const metaDescription = document.querySelector('meta[name="description"]'); const metaKeywords = document.querySelector('meta[name="keywords"]'); if (metaDescription) { metaDescription.setAttribute('content', description); } if (metaKeywords && keywords) { metaKeywords.setAttribute('content', keywords); } document.title = title; } }, [title, description, keywords]); };
+import { useState, useEffect } from 'react';
+
+export const usePerformanceMonitor = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Performance monitoring logic here,
+    const observer = new PerformanceObserver((list) => {
+      // Handle performance, entries});
+
+    observer.observe({ entryTypes: ['measure', 'navigation'] });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  return {
+    isLoading,
+    error,
+    setIsLoading,
+    setError
+  };
+};

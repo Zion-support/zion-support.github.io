@@ -1,6 +1,4 @@
 import { useContext } from "react";
-import { AnalyticsContext } from "../contexts/AnalyticsContext";
-
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
   if (!context) {
@@ -8,3 +6,5 @@ export const useAnalytics = () => {
   }
   return context;
 };
+
+export default NotFoundPage;

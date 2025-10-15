@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BarChart3, Brain, ChevronDown, Cloud, Database, Globe, Menu, Shield, Video, X, Zap } from 'lucide-react';
+import { Brain, Shield, Zap, Globe, BarChart3, ChevronDown, ArrowRight, Menu } from 'lucide-react';
 
 const EnhancedNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,11 +33,10 @@ const EnhancedNavigation = () => {
         { label: 'AI Language Translation', href: '/ai-language-translation' },
         { label: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
         { label: 'AI Data Mining Pro', href: '/ai-data-mining-pro' },
-        { label: 'AI Video Analysis', href: '/ai-video-analysis' },
+        { label: 'AI Analysis', href: '/ai-video-analysis' },
         { label: 'AI Time Series Forecasting', href: '/ai-time-series-forecasting' },
-        { label: 'AI NLP Text Analysis', href: '/ai-nlp-text-analysis' },
-        { label: 'View All AI Services', href: '/ai-services' }
-      ]
+        { label: 'AI NLP Text Analysis', href: '/ai-nlp-text-analysis' }]
+        { label: 'View All AI Services', href: '/ai-services' }]]
     },
     {
       label: 'IT Services',
@@ -49,7 +48,7 @@ const EnhancedNavigation = () => {
         { label: 'AI Content Generation Studio', href: '/ai-content-generation' },
         { label: 'AI Cybersecurity Defense Matrix', href: '/ai-cybersecurity' },
         { label: '5G Network Infrastructure Solutions', href: '/5g-solutions' },
-        { label: 'Cloud Infrastructure Management Pro', href: '/cloud-infrastructure' },
+        { label: 'Infrastructure Management Pro', href: '/cloud-infrastructure' },
         { label: 'AI-Powered Data Analytics Platform', href: '/ai-data-analytics' },
         { label: 'AI Code Assistant Pro', href: '/ai-code-assistant' },
         { label: 'AI Marketing Automation Hub', href: '/ai-marketing-automation' },
@@ -60,10 +59,10 @@ const EnhancedNavigation = () => {
         { label: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer' },
         { label: 'AI Legal Research Assistant', href: '/ai-legal-research' },
         { label: 'AI Energy Management System', href: '/ai-energy-management' },
-        { label: 'Enterprise Database Management Pro', href: '/database-management' },
+        { label: 'Enterprise Management Pro', href: '/database-management' },
         { label: 'IT Infrastructure Monitoring Suite', href: '/infrastructure-monitoring' },
         { label: 'Advanced Network Security Solutions', href: '/network-security' },
-        { label: 'Cloud Migration & Modernization', href: '/cloud-migration' },
+        { label: 'Migration & Modernization', href: '/cloud-migration' },
         { label: 'DevOps & CI/CD Pipeline Solutions', href: '/devops-solutions' },
         { label: 'Enterprise Backup & Disaster Recovery', href: '/backup-disaster-recovery' },
         { label: 'Mobile App Development Services', href: '/mobile-development' },
@@ -73,9 +72,8 @@ const EnhancedNavigation = () => {
         { label: 'IT Consulting & Strategy', href: '/it-consulting' },
         { label: 'Cybersecurity Audit & Compliance', href: '/cybersecurity-audit' },
         { label: 'Data Center Services & Colocation', href: '/data-center-services' },
-        { label: 'IT Asset Management Solutions', href: '/asset-management' },
-        { label: 'View All IT Services', href: '/services' }
-      ]
+        { label: 'IT Asset Management Solutions', href: '/asset-management' }]
+        { label: 'View All IT Services', href: '/services' }]]
     },
     {
       label: 'Micro SAAS',
@@ -84,7 +82,7 @@ const EnhancedNavigation = () => {
       dropdown: [
         { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
         { label: 'Zion Security Shield', href: '/zion-security-shield' },
-        { label: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
+        { label: 'Zion Vault', href: '/zion-cloud-vault' },
         { label: 'Zion AI Voice Assistant Pro', href: '/zion-ai-voice-assistant-pro' },
         { label: 'Zion AI Fraud Detection Pro', href: '/zion-ai-fraud-detection-pro' },
         { label: 'Zion AI Image Recognition Pro', href: '/zion-ai-image-recognition-pro' },
@@ -108,9 +106,8 @@ const EnhancedNavigation = () => {
         { label: 'Zion AI Mobile App Builder', href: '/zion-ai-mobile-app-builder' },
         { label: 'Zion AI API Manager', href: '/zion-ai-api-manager' },
         { label: 'Zion AI Backup Manager', href: '/zion-ai-backup-manager' },
-        { label: 'Zion AI Testing Automation', href: '/zion-ai-testing-automation' },
-        { label: 'View All Micro SAAS', href: '/micro-saas' }
-      ]
+        { label: 'Zion AI Testing Automation', href: '/zion-ai-testing-automation' }]
+        { label: 'View All Micro SAAS', href: '/micro-saas' }]]
     },
     {
       label: '5G Solutions',
@@ -123,9 +120,8 @@ const EnhancedNavigation = () => {
         { label: '5G Mobile Applications', href: '/5g-mobile-applications' },
         { label: '5G Network Infrastructure', href: '/5g-network-infrastructure' },
         { label: '5G Private Networks', href: '/5g-private-networks' },
-        { label: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
-        { label: 'View All 5G Solutions', href: '/5g-solutions' }
-      ]
+        { label: '5G Smart City Solutions', href: '/5g-smart-city-solutions' }]
+        { label: 'View All 5G Solutions', href: '/5g-solutions' }]]
     },
     {
       label: 'Company',
@@ -138,9 +134,8 @@ const EnhancedNavigation = () => {
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'Blog', href: '/blog' },
         { label: 'News', href: '/news' },
-        { label: 'Press', href: '/press' },
-        { label: 'Partners', href: '/partners' }
-      ]
+        { label: 'Press', href: '/press' }]
+        { label: 'Partners', href: '/partners' }]]
     }
   ];
 
@@ -150,10 +145,11 @@ const EnhancedNavigation = () => {
     { label: 'Support', href: '/support' },
     { label: 'Consultation', href: '/consultation' }
   ];
-
   return (
     <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold text-white group">
@@ -161,33 +157,29 @@ const EnhancedNavigation = () => {
               Zion Tech Group
             </span>
           </Link>
-
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">
             {navigationItems.map((item) => (
               <div
-                key={item.label}
-                className="relative group"
-                onMouseEnter={() => setActiveDropdown(item.label)}
-                onMouseLeave={() => setActiveDropdown(null)}
+    const key = {item.label} className="relative group"
+                const onMouseEnter = {() => setActiveDropdown(item.label)} onMouseLeave={() => setActiveDropdown(null)}
               >
                 <Link
-                  to={item.href}
-                  className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
+    const to = {item.href} className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
                 >
                   {item.icon}
                   <span>{item.label}</span>
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                 </Link>
-                
-                {/* Dropdown Menu */}
+                {/* Dropdown Menu */},
                 {activeDropdown === item.label && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50">
-                    <div className="py-2">
+                  
+        <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50">
+                    
+        <div className="py-2">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
-                          key={dropdownItem.href}
-                          to={dropdownItem.href}
+    const key = {dropdownItem.href} to={dropdownItem.href}
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors duration-200"
                         >
                           {dropdownItem.label}
@@ -199,14 +191,14 @@ const EnhancedNavigation = () => {
               </div>
             ))}
           </nav>
-
           {/* Quick Links & CTA */}
-          <div className="hidden md:flex items-center space-x-4">
-            <div className="hidden lg:flex space-x-4">
+          
+        <div className="hidden md:flex items-center space-x-4">
+            
+        <div className="hidden lg:flex space-x-4">
               {quickLinks.map((link) => (
                 <Link
-                  key={link.href}
-                  to={link.href}
+    const key = {link.href} to={link.href}
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
                 >
                   {link.label}
@@ -214,53 +206,50 @@ const EnhancedNavigation = () => {
               ))}
             </div>
             <Link
-              to="/contact"
+    to="/contact"
               className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105 flex"
             >
               Contact Us
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+    const onClick = {() => setIsOpen(!isOpen)} className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors duration-300"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation */},
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-white/10">
-            <div className="space-y-4">
+          
+        <div className="lg:hidden py-4 border-t border-white/10">
+            
+        <div className="space-y-4">
               {navigationItems.map((item) => (
                 <div key={item.label}>
                   <Link
-                    to={item.href}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                    onClick={() => setIsOpen(false)}
+    const to = {item.href} className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                    const onClick = {() => setIsOpen(false)}
                   >
                     {item.icon}
                     <span className="font-medium">{item.label}</span>
                   </Link>
-                  <div className="ml-6 space-y-2">
+                  
+        <div className="ml-6 space-y-2">
                     {item.dropdown.slice(0, 4).map((dropdownItem) => (
                       <Link
-                        key={dropdownItem.href}
-                        to={dropdownItem.href}
+    const key = {dropdownItem.href} to={dropdownItem.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1"
-                        onClick={() => setIsOpen(false)}
+                        const onClick = {() => setIsOpen(false)}
                       >
                         {dropdownItem.label}
                       </Link>
-                    ))}
+                    ))},
                     {item.dropdown.length > 4 && (
                       <Link
-                        to={item.href}
-                        className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
-                        onClick={() => setIsOpen(false)}
+    const to = {item.href} className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
+                        const onClick = {() => setIsOpen(false)}
                       >
                         View All →
                       </Link>
@@ -269,14 +258,14 @@ const EnhancedNavigation = () => {
                 </div>
               ))}
               
-              <div className="pt-4 border-t border-white/10">
-                <div className="space-y-2">
+        <div className="pt-4 border-t border-white/10">
+                
+        <div className="space-y-2">
                   {quickLinks.map((link) => (
                     <Link
-                      key={link.href}
-                      to={link.href}
+    const key = {link.href} to={link.href}
                       className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                      onClick={() => setIsOpen(false)}
+                      const onClick = {() => setIsOpen(false)}
                     >
                       {link.label}
                     </Link>
@@ -290,5 +279,4 @@ const EnhancedNavigation = () => {
     </header>
   );
 };
-
 export default EnhancedNavigation;
