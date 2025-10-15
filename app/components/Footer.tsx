@@ -12,7 +12,7 @@ const Footer: React.FC = memo(() => {
       </div>
       
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bold gradient-text mb-4">Zion Tech Group</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -43,26 +43,38 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Services</h4>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400">AI Services</h4>
             <ul className="space-y-3">
-              <li><Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">All Services</Link></li>
-              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Services</Link></li>
-              <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">IT Services</Link></li>
-              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Micro SAAS Solutions</Link></li>
-              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Cloud Infrastructure</Link></li>
-              <li><Link to="/5g-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">5G Solutions</Link></li>
-              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Digital Transformation</Link></li>
+              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Development</Link></li>
+              <li><Link to="/ai-content-generator" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Content Generator</Link></li>
+              <li><Link to="/ai-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Solutions</Link></li>
+              <li><Link to="/zion-ai-customer-churn-predictor" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Churn Predictor</Link></li>
+              <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Sales Predictor</Link></li>
+              <li><Link to="/zion-ai-workflow-automator" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Workflow Automator</Link></li>
               <li><Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Pricing</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-cyan-400">AI Tools</h4>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400">IT Services</h4>
             <ul className="space-y-3">
-              <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Content Moderator</Link></li>
-              <li><Link to="/zion-ai-customer-churn-predictor" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Churn Predictor</Link></li>
-              <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Sales Predictor</Link></li>
-              <li><Link to="/zion-ai-workflow-automator" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Workflow Automator</Link></li>
+              <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">IT Solutions</Link></li>
+              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Cloud Infrastructure</Link></li>
+              <li><Link to="/web-development" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Web Development</Link></li>
+              <li><Link to="/mobile-development" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Mobile Development</Link></li>
+              <li><Link to="/database-management" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Database Management</Link></li>
+              <li><Link to="/network-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Network Infrastructure</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">All Services</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Micro SAAS</h4>
+            <ul className="space-y-3">
+              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Micro SAAS Solutions</Link></li>
+              <li><Link to="/data-analytics" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Data Analytics</Link></li>
+              <li><Link to="/zion-smart-expense-tracker" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Expense Tracker</Link></li>
+              <li><Link to="/zion-customer-satisfaction-monitor" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Satisfaction Monitor</Link></li>
               <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Financial Forecaster</Link></li>
               <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Document Analyzer</Link></li>
               <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Task Scheduler</Link></li>
@@ -88,8 +100,8 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/api-docs" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">API Docs</Link></li>
               <li><Link to="/help" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Help Center</Link></li>
               <li><Link to="/accessibility" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Accessibility</Link></li>
-              <li><Link to="/data-analytics" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Data Analytics</Link></li>
-              <li><Link to="/web-development" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Web Development</Link></li>
+              <li><Link to="/5g-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">5G Solutions</Link></li>
+              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Digital Transformation</Link></li>
             </ul>
           </div>
           
@@ -103,7 +115,6 @@ const Footer: React.FC = memo(() => {
           </div>
         </div>
         
-<<<<<<< HEAD
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-center md:text-left text-gray-300 mb-4 md:mb-0">

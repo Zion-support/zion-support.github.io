@@ -1,6 +1,7 @@
 import React, { memo, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from './components/SEOHead';
+import { servicesData } from './data/servicesData';
 
 const HomePage: React.FC = memo(() => {
   const structuredData = useMemo(() => ({
@@ -81,6 +82,135 @@ const HomePage: React.FC = memo(() => {
               <a href="/contact" className="px-8 py-3 border-2 border-cyan-500 text-cyan-400 rounded-full font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 hover:scale-105">
                 Get Quote
               </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Services Overview Section */}
+        <div className="py-20 bg-gradient-to-b from-gray-900 to-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Our <span className="gradient-text">Comprehensive Solutions</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                From AI-powered automation to enterprise IT solutions, we provide everything your business needs to succeed
+              </p>
+            </div>
+
+            {/* AI Services Preview */}
+            <div className="mb-16">
+              <h3 className="text-2xl font-bold text-cyan-400 mb-8 text-center">AI Services</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {servicesData.aiServices.slice(0, 6).map((service) => (
+                  <div key={service.id} className="glass-dark rounded-lg p-6 hover-lift">
+                    <div className="text-3xl mb-4">{service.icon}</div>
+                    <h4 className="text-lg font-semibold text-white mb-2">{service.title}</h4>
+                    <p className="text-gray-300 text-sm mb-4">{service.shortDescription}</p>
+                    <div className="text-cyan-400 font-semibold">{service.marketPrice}</div>
+                  </div>
+                ))}
+              </div>
+              <div className="text-center mt-8">
+                <a href="/ai-services" className="btn-futuristic">
+                  View All AI Services
+                </a>
+              </div>
+            </div>
+
+            {/* IT Services Preview */}
+            <div className="mb-16">
+              <h3 className="text-2xl font-bold text-cyan-400 mb-8 text-center">IT Services</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {servicesData.itSolutions.slice(0, 6).map((service) => (
+                  <div key={service.id} className="glass-dark rounded-lg p-6 hover-lift">
+                    <div className="text-3xl mb-4">{service.icon}</div>
+                    <h4 className="text-lg font-semibold text-white mb-2">{service.title}</h4>
+                    <p className="text-gray-300 text-sm mb-4">{service.shortDescription}</p>
+                    <div className="text-cyan-400 font-semibold">{service.marketPrice}</div>
+                  </div>
+                ))}
+              </div>
+              <div className="text-center mt-8">
+                <a href="/it-services" className="btn-futuristic">
+                  View All IT Services
+                </a>
+              </div>
+            </div>
+
+            {/* Micro SAAS Preview */}
+            <div className="mb-16">
+              <h3 className="text-2xl font-bold text-cyan-400 mb-8 text-center">Micro SAAS Solutions</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {servicesData.microSaas.slice(0, 6).map((service) => (
+                  <div key={service.id} className="glass-dark rounded-lg p-6 hover-lift">
+                    <div className="text-3xl mb-4">{service.icon}</div>
+                    <h4 className="text-lg font-semibold text-white mb-2">{service.title}</h4>
+                    <p className="text-gray-300 text-sm mb-4">{service.shortDescription}</p>
+                    <div className="text-cyan-400 font-semibold">{service.marketPrice}</div>
+                  </div>
+                ))}
+              </div>
+              <div className="text-center mt-8">
+                <a href="/micro-saas-solutions" className="btn-futuristic">
+                  View All Micro SAAS Solutions
+                </a>
+              </div>
+            </div>
+
+            {/* Why Choose Us */}
+            <div className="glass-dark rounded-2xl p-8 text-center">
+              <h3 className="text-3xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                  <div className="text-4xl mb-4">🚀</div>
+                  <h4 className="text-lg font-semibold text-cyan-400 mb-2">Fast Implementation</h4>
+                  <p className="text-gray-300 text-sm">Quick deployment and setup in days, not months</p>
+                </div>
+                <div>
+                  <div className="text-4xl mb-4">🤖</div>
+                  <h4 className="text-lg font-semibold text-cyan-400 mb-2">AI-Powered</h4>
+                  <p className="text-gray-300 text-sm">Cutting-edge AI technology in every solution</p>
+                </div>
+                <div>
+                  <div className="text-4xl mb-4">🔒</div>
+                  <h4 className="text-lg font-semibold text-cyan-400 mb-2">Secure & Reliable</h4>
+                  <p className="text-gray-300 text-sm">Enterprise-grade security and 99.9% uptime</p>
+                </div>
+                <div>
+                  <div className="text-4xl mb-4">💡</div>
+                  <h4 className="text-lg font-semibold text-cyan-400 mb-2">Expert Support</h4>
+                  <p className="text-gray-300 text-sm">24/7 expert support and consultation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Contact CTA Section */}
+        <div className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-white opacity-90 mb-8">
+              Get started with our comprehensive AI and IT solutions today. Contact us for a free consultation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="tel:+13024640950" 
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Call +1 302 464 0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="bg-transparent text-white px-8 py-3 rounded-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                Email kleber@ziontechgroup.com
+              </a>
+            </div>
+            <div className="mt-6 text-sm text-white opacity-75">
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p>Website: <a href="https://ziontechgroup.com" className="underline hover:no-underline">https://ziontechgroup.com</a></p>
             </div>
           </div>
         </div>
