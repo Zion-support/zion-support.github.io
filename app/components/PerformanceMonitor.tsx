@@ -1,129 +1,153 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 interface PerformanceMetrics {
-  fcp: number | null;
   lcp: number | null;
   fid: number | null;
   cls: number | null;
+  fcp: number | null;
   ttfb: number | null;
-  fmp: number | null;
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    fmp: null,
-  });
-
   useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
+    const metrics: PerformanceMetrics = {
+      lcp: null,
+      fid: null,
+      cls: null,
+      fcp: null,
+      ttfb: null
+    };
 
-    // Web Vitals measurement
+    // Measure Core Web Vitals
     const measureWebVitals = () => {
-      // First Contentful Paint (FCP)
+      // LCP - Largest Contentful Paint
       if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-            }
-          }
-        });
-        observer.observe({ entryTypes: ['paint'] });
-      }
-
-      // Largest Contentful Paint (LCP)
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
+        const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+          metrics.lcp = lastEntry.startTime;
         });
-        observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      }
+        
+        try {
+          lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        } catch (e) {
+          console.warn('LCP observer not supported');
+        }
 
-      // Cumulative Layout Shift (CLS)
-      if ('PerformanceObserver' in window) {
+        // FID - First Input Delay
+        const fidObserver = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry: any) => {
+            metrics.fid = entry.processingStart - entry.startTime;
+          });
+        });
+        
+        try {
+          fidObserver.observe({ entryTypes: ['first-input'] });
+        } catch (e) {
+          console.warn('FID observer not supported');
+        }
+
+        // CLS - Cumulative Layout Shift
         let clsValue = 0;
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value;
+        const clsObserver = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry: any) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+            }
+          });
+          metrics.cls = clsValue;
+        });
+        
+        try {
+          clsObserver.observe({ entryTypes: ['layout-shift'] });
+        } catch (e) {
+          console.warn('CLS observer not supported');
+        }
+
+        // FCP - First Contentful Paint
+        const fcpObserver = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry) => {
+            if (entry.name === 'first-contentful-paint') {
+              metrics.fcp = entry.startTime;
+            }
+          });
+        });
+        
+        try {
+          fcpObserver.observe({ entryTypes: ['paint'] });
+        } catch (e) {
+          console.warn('FCP observer not supported');
+        }
+      }
+
+      // TTFB - Time to First Byte
+      if ('performance' in window && 'timing' in performance) {
+        const timing = performance.timing;
+        metrics.ttfb = timing.responseStart - timing.navigationStart;
+      }
+
+      // Send metrics to analytics after page load
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          // Send to Google Analytics if available
+          if (typeof window !== 'undefined' && (window as any).gtag) {
+            if (metrics.lcp !== null) {
+              (window as any).gtag('event', 'web_vitals', {
+                event_category: 'Performance',
+                event_label: 'LCP',
+                value: Math.round(metrics.lcp)
+              });
+            }
+            if (metrics.fid !== null) {
+              (window as any).gtag('event', 'web_vitals', {
+                event_category: 'Performance',
+                event_label: 'FID',
+                value: Math.round(metrics.fid)
+              });
+            }
+            if (metrics.cls !== null) {
+              (window as any).gtag('event', 'web_vitals', {
+                event_category: 'Performance',
+                event_label: 'CLS',
+                value: Math.round(metrics.cls * 1000) / 1000
+              });
             }
           }
-          setMetrics(prev => ({ ...prev, cls: clsValue }));
-        });
-        observer.observe({ entryTypes: ['layout-shift'] });
-      }
 
-      // First Input Delay (FID)
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
-          }
-        });
-        observer.observe({ entryTypes: ['first-input'] });
-      }
+          // Log metrics for debugging
+          console.log('Performance Metrics:', metrics);
+        }, 2000);
+      });
     };
 
-    // Time to First Byte (TTFB)
-    const measureTTFB = () => {
-      if ('PerformanceNavigationTiming' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const ttfb = navigation.responseStart - navigation.requestStart;
-        setMetrics(prev => ({ ...prev, ttfb }));
-      }
-    };
-
-    // First Meaningful Paint (FMP) - approximation
-    const measureFMP = () => {
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.name === 'first-meaningful-paint') {
-              setMetrics(prev => ({ ...prev, fmp: entry.startTime }));
-            }
-          }
-        });
-        observer.observe({ entryTypes: ['paint'] });
-      }
-    };
-
-    // Start measurements
     measureWebVitals();
-    measureTTFB();
-    measureFMP();
 
-    // Send metrics to analytics (if available)
-    const sendMetrics = () => {
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        Object.entries(metrics).forEach(([key, value]) => {
-          if (value !== null) {
-            (window as any).gtag('event', 'web_vitals', {
-              metric_name: key.toUpperCase(),
-              metric_value: Math.round(value),
-              metric_delta: Math.round(value),
-            });
-          }
+    // Monitor resource loading
+    const monitorResources = () => {
+      if ('PerformanceObserver' in window) {
+        const resourceObserver = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry) => {
+            if (entry.duration > 1000) { // Log slow resources
+              console.warn('Slow resource:', entry.name, entry.duration + 'ms');
+            }
+          });
         });
+        
+        try {
+          resourceObserver.observe({ entryTypes: ['resource'] });
+        } catch (e) {
+          console.warn('Resource observer not supported');
+        }
       }
     };
 
-    // Send metrics after a delay to ensure all measurements are complete
-    const timeoutId = setTimeout(sendMetrics, 5000);
+    monitorResources();
 
     return () => {
-      clearTimeout(timeoutId);
+      // Cleanup observers if needed
     };
-  }, [metrics]);
+  }, []);
 
-  // Don't render anything in the UI
   return null;
 };
 
