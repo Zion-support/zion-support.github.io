@@ -4,26 +4,18 @@ import { Brain, Shield, Users, Award, Zap, Globe, Target, CheckCircle } from 'lu
 
 // Company values
 const values = [
-  {
-    icon: <Brain className="w-8 h-8" />,
+  { icon: <Brain className="w-8 h-8" />,
     title: "Innovation First",
-    description: "We constantly push the boundaries of what's possible with cutting-edge technology and creative solutions."
-  },
-  {
-    icon: <Shield className="w-8 h-8" />,
+    description: "We constantly push the boundaries of what's possible with cutting-edge technology and creative solutions." },
+  { icon: <Shield className="w-8 h-8" />,
     title: "Security & Trust",
-    description: "We prioritize the security and privacy of our clients' data with enterprise-grade protection measures."
-  },
-  {
-    icon: <Users className="w-8 h-8" />,
+    description: "We prioritize the security and privacy of our clients' data with enterprise-grade protection measures." },
+  { icon: <Users className="w-8 h-8" />,
     title: "Client Success",
-    description: "Our success is measured by our clients' success. We're committed to delivering exceptional results."
-  },
-  {
-    icon: <Award className="w-8 h-8" />,
+    description: "Our success is measured by our clients' success. We're committed to delivering exceptional results." },
+  { icon: <Award className="w-8 h-8" />,
     title: "Excellence",
-    description: "We maintain the highest standards of quality in everything we do, from code to customer service."
-  }
+    description: "We maintain the highest standards of quality in everything we do, from code to customer service." }
 ];
 
 // Company stats
@@ -36,58 +28,41 @@ const stats = [
 
 // Team members
 const team = [
-  {
-    name: "Sarah Johnson",
+  { name: "Sarah Johnson",
     role: "CEO & Founder",
     description: "Visionary leader with 15+ years in tech innovation",
-    image: "/api/placeholder/300/300"
-  },
-  {
-    name: "Michael Chen",
+    image: "/api/placeholder/300/300" },
+  { name: "Michael Chen",
     role: "CTO",
     description: "Technical architect specializing in AI and cloud solutions",
-    image: "/api/placeholder/300/300"
-  },
-  {
-    name: "Emily Rodriguez",
+    image: "/api/placeholder/300/300" },
+  { name: "Emily Rodriguez",
     role: "Head of Design",
     description: "Creative director focused on user experience and interface design",
-    image: "/api/placeholder/300/300"
-  },
-  {
-    name: "David Kim",
+    image: "/api/placeholder/300/300" },
+  { name: "David Kim",
     role: "Lead Developer",
     description: "Full-stack developer with expertise in modern web technologies",
-    image: "/api/placeholder/300/300"
-  }
+    image: "/api/placeholder/300/300" }
 ];
 
 // Services we offer
 const services = [
-  {
-    icon: <Zap className="w-6 h-6" />,
+  { icon: <Zap className="w-6 h-6" />,
     title: "AI Solutions",
-    description: "Custom AI implementations for business automation and intelligence"
-  },
-  {
-    icon: <Globe className="w-6 h-6" />,
+    description: "Custom AI implementations for business automation and intelligence" },
+  { icon: <Globe className="w-6 h-6" />,
     title: "Web Development",
-    description: "Modern, responsive websites and web applications"
-  },
-  {
-    icon: <Target className="w-6 h-6" />,
+    description: "Modern, responsive websites and web applications" },
+  { icon: <Target className="w-6 h-6" />,
     title: "Digital Transformation",
-    description: "Complete digital transformation strategies and implementation"
-  },
-  {
-    icon: <Shield className="w-6 h-6" />,
+    description: "Complete digital transformation strategies and implementation" },
+  { icon: <Shield className="w-6 h-6" />,
     title: "Cybersecurity",
-    description: "Comprehensive security solutions to protect your business"
-  }
+    description: "Comprehensive security solutions to protect your business" }
 ];
 
-const AboutPage: React.FC = () => {
-  return (
+const AboutPage: React.FC = () => { return (
     <>
       <Helmet>
         <title>About Us - Zion Tech Group | Leading Technology Solutions</title>
@@ -99,7 +74,7 @@ const AboutPage: React.FC = () => {
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+        {/* Hero Section */ }
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
@@ -114,17 +89,17 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Stats Section */}
+        { /* Stats Section */ }
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
+              { stats.map((stat, index) => (
+                <div key={index } className="text-center">
                   <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
-                    {stat.number}
+                    { stat.number }
                   </div>
                   <div className="text-gray-300 text-lg">
-                    {stat.label}
+                    { stat.label }
                   </div>
                 </div>
               ))}
@@ -132,7 +107,7 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Values Section */}
+        { /* Values Section */ }
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -142,20 +117,20 @@ const AboutPage: React.FC = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+              { values.map((value, index) => (
+                <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                   <div className="text-cyan-400 mb-4 flex justify-center">
-                    {value.icon}
+                    { value.icon }
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{ value.title }</h3>
+                  <p className="text-gray-300">{ value.description }</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Services Section */}
+        { /* Services Section */ }
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -165,20 +140,20 @@ const AboutPage: React.FC = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              { services.map((service, index) => (
+                <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                   <div className="text-cyan-400 mb-4">
-                    {service.icon}
+                    { service.icon }
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300">{service.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{ service.title }</h3>
+                  <p className="text-gray-300">{ service.description }</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Team Section */}
+        { /* Team Section */ }
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -188,23 +163,23 @@ const AboutPage: React.FC = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {team.map((member, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+              { team.map((member, index) => (
+                <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                   <div className="w-24 h-24 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-2xl font-bold text-white">
-                      {member.name.split(' ').map(n => n[0]).join('')}
+                      { member.name.split(' ').map(n => n[0]).join('') }
                     </span>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
-                  <div className="text-cyan-400 mb-3">{member.role}</div>
-                  <p className="text-gray-300 text-sm">{member.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{ member.name }</h3>
+                  <div className="text-cyan-400 mb-3">{ member.role }</div>
+                  <p className="text-gray-300 text-sm">{ member.description }</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
+        { /* CTA Section */ }
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">

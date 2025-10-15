@@ -1,1 +1,22 @@
-import React, { useState, useEffect, memo, lazy, Suspense } from "react"; const PerformanceOptimizer: React.FC = () => { useEffect(() => { // Preload critical resources const preloadCriticalResources = () => { // Preload critical CSS const criticalCSS = document.createElement("link"); criticalCSS.rel = "preload"; criticalCSS.href = "/critical.css"; criticalCSS.as = "style"; criticalCSS.onload = () => { criticalCSS.rel = "stylesheet"; }; document.head.appendChild(criticalCSS); // Preload critical fonts const fontPreload = document.createElement("link"); fontPreload.rel = "preload"; fontPreload.href = "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"; fontPreload.as = "style"; document.head.appendChild(fontPreload); }; // Optimize images const optimizeImages = () => { const images = document.querySelectorAll("img"); images.forEach((img) => { if (!img.loading) { img.loading = "lazy"; } if (!img.decoding) { img.decoding = "async"; } }); }; // Initialize performance optimizations preloadCriticalResources(); optimizeImages(); // Cleanup function return () => { // Cleanup if needed }; }, []); return null; // This component doesn't render anything }; export default PerformanceOptimizer;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const PerformanceOptimizer = () => {
+  return (
+    <>
+      <Helmet>
+        <title>PerformanceOptimizer - Zion Tech Group</title>
+        <meta name="description" content="PerformanceOptimizer page - Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">PerformanceOptimizer</h1>
+          <p className="text-gray-300">This page is under construction.</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default PerformanceOptimizer;
