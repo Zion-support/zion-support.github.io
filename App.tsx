@@ -53,6 +53,28 @@ const ZionAIWorkflowAutomatorProPage = lazy(() => import('./app/zion-ai-workflow
 const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-customer-satisfaction-monitor/page'));
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
 
+// New Micro SAAS Services
+const ZionAIChatbotBuilderPage = lazy(() => import('./app/zion-ai-chatbot-builder/page'));
+const ZionSmartAnalyticsDashboardPage = lazy(() => import('./app/zion-smart-analytics-dashboard/page'));
+const ZionAIDocumentProcessorPage = lazy(() => import('./app/zion-ai-document-processor/page'));
+const ZionSmartCRMAutomationPage = lazy(() => import('./app/zion-smart-crm-automation/page'));
+const ZionAIVideoGeneratorPage = lazy(() => import('./app/zion-ai-video-generator/page'));
+const ZionSmartInventoryManagerPage = lazy(() => import('./app/zion-smart-inventory-manager/page'));
+
+// New AI Services
+const ZionAIImageGeneratorPage = lazy(() => import('./app/zion-ai-image-generator/page'));
+const ZionAIVoiceSynthesisPage = lazy(() => import('./app/zion-ai-voice-synthesis/page'));
+const ZionAICodeAssistantPage = lazy(() => import('./app/zion-ai-code-assistant/page'));
+const ZionAITranslationServicePage = lazy(() => import('./app/zion-ai-translation-service/page'));
+const ZionAIPredictiveAnalyticsPage = lazy(() => import('./app/zion-ai-predictive-analytics/page'));
+
+// New IT Services
+const ZionCybersecurityAuditPage = lazy(() => import('./app/zion-cybersecurity-audit/page'));
+const ZionDevOpsAutomationPage = lazy(() => import('./app/zion-devops-automation/page'));
+const ZionAPIDevelopmentPage = lazy(() => import('./app/zion-api-development/page'));
+const ZionBlockchainSolutionsPage = lazy(() => import('./app/zion-blockchain-solutions/page'));
+const ZionIoTSolutionsPage = lazy(() => import('./app/zion-iot-solutions/page'));
+
 // Import components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -152,6 +174,28 @@ export default function App() {
                   <Route path="/zion-ai-workflow-automator-pro" element={<ZionAIWorkflowAutomatorProPage />} />
                   <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
                   <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
+                  
+                  {/* New Micro SAAS Services */}
+                  <Route path="/zion-ai-chatbot-builder" element={<ZionAIChatbotBuilderPage />} />
+                  <Route path="/zion-smart-analytics-dashboard" element={<ZionSmartAnalyticsDashboardPage />} />
+                  <Route path="/zion-ai-document-processor" element={<ZionAIDocumentProcessorPage />} />
+                  <Route path="/zion-smart-crm-automation" element={<ZionSmartCRMAutomationPage />} />
+                  <Route path="/zion-ai-video-generator" element={<ZionAIVideoGeneratorPage />} />
+                  <Route path="/zion-smart-inventory-manager" element={<ZionSmartInventoryManagerPage />} />
+                  
+                  {/* New AI Services */}
+                  <Route path="/zion-ai-image-generator" element={<ZionAIImageGeneratorPage />} />
+                  <Route path="/zion-ai-voice-synthesis" element={<ZionAIVoiceSynthesisPage />} />
+                  <Route path="/zion-ai-code-assistant" element={<ZionAICodeAssistantPage />} />
+                  <Route path="/zion-ai-translation-service" element={<ZionAITranslationServicePage />} />
+                  <Route path="/zion-ai-predictive-analytics" element={<ZionAIPredictiveAnalyticsPage />} />
+                  
+                  {/* New IT Services */}
+                  <Route path="/zion-cybersecurity-audit" element={<ZionCybersecurityAuditPage />} />
+                  <Route path="/zion-devops-automation" element={<ZionDevOpsAutomationPage />} />
+                  <Route path="/zion-api-development" element={<ZionAPIDevelopmentPage />} />
+                  <Route path="/zion-blockchain-solutions" element={<ZionBlockchainSolutionsPage />} />
+                  <Route path="/zion-iot-solutions" element={<ZionIoTSolutionsPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
