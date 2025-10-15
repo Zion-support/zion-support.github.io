@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Navigation, Phone, Mail, CheckCircle, Brain, Play, Star } from 'lucide-react';
+import { Phone, Mail, CheckCircle, Brain, Play, Star, Cpu, Shield, BarChart, Target, MessageSquare, Users, TrendingUp } from 'lucide-react';
 import Footer from '../components/Footer';
 
 const HomePage: React.FC = () => {
@@ -88,7 +88,6 @@ const HomePage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
         
         {/* Hero Section */}
         <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">

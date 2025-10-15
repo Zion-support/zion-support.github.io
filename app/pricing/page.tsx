@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from "react-helmet-async";
 import Footer from '../components/Footer';
 
@@ -9,7 +10,7 @@ const PricingPage: React.FC = () => { return (
           
         <div className="text-center">
             
-          <h1 className="text-4 xlfont-bold text-white mb-8">Pricing</h1>
+          <h1 className="text-4xl font-bold text-white mb-8">Pricing</h1>
             
           <p className="text-xl text-gray-300 mb-8">
               Professional pricing solutions and services

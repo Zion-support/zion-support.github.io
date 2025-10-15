@@ -7,18 +7,18 @@ const Footer: React.FC = () => {
 
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'IT Solutions', href: '/it-solutions' },
-    { name: 'Micro SaaS', href: '/micro-saas-solutions' },
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-    { name: 'Digital Transformation', href: '/digital-transformation' },
+    { name: 'IT Services', href: '/services' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'Cloud Solutions', href: '/cloud-solutions' },
+    { name: '5G Solutions', href: '/5g-solutions' },
     { name: 'Cybersecurity', href: '/cybersecurity' }
   ];
 
   const company = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Demo', href: '/demo' },
     { name: 'Contact', href: '/contact' }
   ];
 
@@ -69,7 +69,8 @@ const Footer: React.FC = () => {
               {services.map((service) => (
                 <li key={service.name}>
                     <Link
-    const to = {service.href} className="text-gray-300 hover:text-white transition-colors flex items-center group"
+                      to={service.href}
+                      className="text-gray-300 hover:text-white transition-colors flex items-center group"
                     >
                     <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {service.name}
@@ -85,7 +86,8 @@ const Footer: React.FC = () => {
               {company.map((item) => (
                 <li key={item.name}>
                     <Link
-    const to = {item.href} className="text-gray-300 hover:text-white transition-colors flex items-center group"
+                      to={item.href}
+                      className="text-gray-300 hover:text-white transition-colors flex items-center group"
                     >
                     <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
@@ -102,7 +104,8 @@ const Footer: React.FC = () => {
               {resources.map((resource) => (
                 <li key={resource.name}>
                     <Link
-    const to = {resource.href} className="text-gray-300 hover:text-white transition-colors flex items-center group"
+                      to={resource.href}
+                      className="text-gray-300 hover:text-white transition-colors flex items-center group"
                     >
                     <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {resource.name}
