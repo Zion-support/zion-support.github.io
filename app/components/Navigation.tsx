@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import {
-  Bars3Icon, 
-  XMarkIcon,
-  ChevronDownIcon
-} from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 
 interface NavigationProps {
   onSidebarToggle: () => void;
@@ -18,6 +14,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
+    { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: '5G Solutions', href: '/5g-solutions' },
     { name: 'Contact', href: '/contact' }
   ];
 
@@ -37,8 +36,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
-                key={item.name}
-                to={item.href}
+    key={item.name} to={item.href}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive(item.href)
                     ? 'bg-purple-600 text-white'
@@ -53,8 +51,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
-              onClick={onSidebarToggle}
-              className="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+    onClick={onSidebarToggle} className="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             >
               <Bars3Icon className="h-6 w-6" />
             </button>

@@ -2,6 +2,26 @@ import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 import { Image, Video, Palette, Users, Clock, FileText, PenTool, Zap, Sparkles, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionContentStudio() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          ZionContentStudio
+        </h1>
+      </div>
+    </div>
+  );
+}
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          ZionContentStudio
+        </h1>
+      </div>
+    </div>
+  );
+}
   const features = [
     {
       title: "Visual Design Tools",
@@ -35,7 +55,7 @@ export default function ZionContentStudio() {
     }
   ];
 
-const pricingPlans = [
+  const pricingPlans = [
     {
       name: "Creator",
       price: 19,
@@ -46,8 +66,8 @@ const pricingPlans = [
         "Basic templates",
         "1 brand profile",
         "Email support",
-        "Standard export formats",
-        "Basic analytics"
+        "Standard export formats",]
+        "Basic analytics"]
       ],
       popular: false
     },
@@ -63,8 +83,8 @@ const pricingPlans = [
         "Priority support",
         "All export formats",
         "Advanced analytics",
-        "Team collaboration",
-        "API access"
+        "Team collaboration",]
+        "API access"]
       ],
       popular: true
     },
@@ -80,21 +100,21 @@ const pricingPlans = [
         "Dedicated support",
         "White-label solution",
         "Advanced analytics",
-        "Custom integrations",
-        "SSO integration"
+        "Custom integrations",]
+        "SSO integration"]
       ],
       popular: false
     }
   ];
 
-const contentStats = [
+  const contentStats = [
     { number: "10M+", label: "Content Pieces Created", icon: <FileText className="w-6 h-6" /> },
     { number: "500+", label: "Templates Available", icon: <PenTool className="w-6 h-6" /> },
     { number: "95%", label: "Time Saved", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "AI Assistance", icon: <Sparkles className="w-6 h-6" /> }
   ];
 
-const testimonials = [
+  const testimonials = [
     {
       name: "Alex Thompson",
       company: "Marketing Agency",
@@ -120,16 +140,17 @@ const testimonials = [
       avatar: "JW"
     }
   ];
+
   return (
     <>
       <Helmet>
         <title>Zion Content Studio - AI-Powered Content Creation Platform | Zion Tech Group</title>
         <meta
-          name="description"
+    name="description"
           content="Create amazing content with Zion Content Studio - the ultimate AI-powered content creation platform. Generate text, images, videos, and maintain brand consistency. Starting at $19/month."
         />
         <meta
-          name="keywords"
+    name="keywords"
           content="content creation, AI writing, design tools, video creation, brand consistency, content marketing, Zion Content Studio"
         />
       </Helmet>
@@ -165,14 +186,14 @@ const testimonials = [
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
-                to="/contact"
+    to="/contact"
                 className="group bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-purple-500/25 hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/demo"
+    to="/demo"
                 className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
                 Watch Demo
@@ -216,8 +237,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 relative overflow-hidden"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 relative overflow-hidden"
                 >
                   
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -265,11 +285,10 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
-                  key={index}
-                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
+    key={index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
                     plan.popular 
                       ? 'border-purple-500/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10' 
-                      : 'border-white/20 hover:border-purple-500/30'
+                      : 'border-white/20 hover: border-purple-500/30'
                   }`}
                 >
                   {plan.popular && (
@@ -301,11 +320,11 @@ const testimonials = [
                     ))}
                   </ul>
                   <Link
-                    to="/contact"
+    to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
                       plan.popular
                         ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 shadow-lg hover:shadow-purple-500/25'
-                        : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
+                        : 'border border-purple-400 text-purple-400 hover: bg-purple-400 hover:text-slate-900'
                     }`}
                   >
                     Get Started
@@ -333,8 +352,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 relative overflow-hidden"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 relative overflow-hidden"
                 >
                   
         <div className="flex items-center mb-4">
@@ -377,14 +395,14 @@ const testimonials = [
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+    to="/contact"
                 className="group bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-purple-500/25 hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/demo"
+    to="/demo"
                 className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
                 Watch Demo

@@ -1,33 +1,14 @@
 import React, { useState, useEffect, memo, lazy, Suspense } from "react";
 import { Helmet } from 'react-helmet-async';
-import { Search, HelpCircle, BookOpen, Users, Clock, Phone, Mail, Zap } from 'lucide-react';
+import { Search, Clock, HelpCircle, BookOpen, Users, Phone, Mail, Zap } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
-  const resources = [
-    { title: "Documentation", description: "Comprehensive guides and API references", icon: BookOpen, link: "/docs" },
-    { title: "Community Forum", description: "Connect with other users and experts", icon: Users, link: "/community" },
-    { title: "Video Tutorials", description: "Step-by-step video guides", icon: Zap, link: "/tutorials" }
-  ];
+const resources = [ { title: "Documentation", description: "Comprehensive guides and API references", icon: BookOpen, link: "/docs", }, { title: "Community Forum", description: "Connect with other users and experts", icon: Users, link: "/community", }, { title: "Video Tutorials", description: "Step-by-step video guides", icon: Zap, link: "/tutorials", }, ];
 
-  interface FAQ {
-    question: string;
-    answer: string;
-    category: string;
-  }
-
-  const faqs: FAQ[] = [
-    { question: "How do I get started with your AI solutions?", answer: "Contact our team for a free consultation where we'll assess your needs and recommend the best AI solutions for your business. We'll guide you through the entire process from planning to implementation.", category: "general" },
-    { question: "What support do you provide after implementation?", answer: "We provide 24/7 technical support, regular maintenance, updates, and ongoing optimization to ensure your systems run smoothly. Our support includes monitoring, troubleshooting, and performance optimization.", category: "support" },
-    { question: "How long does implementation typically take?", answer: "Implementation time varies based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise systems may take 3-6 months. We provide detailed timelines during the planning phase.", category: "implementation" },
-    { question: "Do you offer training for our team?", answer: "Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions. Training includes hands-on workshops, documentation, and ongoing support.", category: "training" },
-    { question: "What security measures do you have in place?", answer: "We implement enterprise-grade security including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA.", category: "security" },
-    { question: "Can you integrate with our existing systems?", answer: "Absolutely. We specialize in seamless integration with existing systems and can work with most platforms, databases, and APIs to ensure smooth data flow and functionality.", category: "integration" },
-    { question: "What happens if we need to scale up?", answer: "Our solutions are designed to scale with your business. We can easily add more capacity, features, or users as your needs grow, with minimal disruption to your operations.", category: "scaling" },
-    { question: "Do you provide custom development?", answer: "Yes, we offer custom development services to create tailored solutions that meet your specific business requirements and integrate perfectly with your existing workflows.", category: "development" }
-  ];
+const faqs: FAQ[] = [ { question: "How do I get started with your AI solutions?", answer: "Contact our team for a free consultation where we'll assess your needs and recommend the best AI solutions for your business. We'll guide you through the entire process from planning to implementation.", category: "general", }, { question: "What support do you provide after implementation?", answer: "We provide 24/7 technical support, regular maintenance, updates, and ongoing optimization to ensure your systems run smoothly. Our support includes monitoring, troubleshooting, and performance optimization.", category: "support", }, { question: "How long does implementation typically take?", answer: "Implementation time varies based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise systems may take 3-6 months. We provide detailed timelines during the planning phase.", category: "implementation", }, { question: "Do you offer training for our team?", answer: "Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions. Training includes hands-on workshops, documentation, and ongoing support.", category: "training", }, { question: "What security measures do you have in place?", answer: "We implement enterprise-grade security including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA.", category: "security", }, { question: "Can you integrate with our existing systems?", answer: "Absolutely. We specialize in seamless integration with existing systems and can work with most platforms, databases, and APIs to ensure smooth data flow and functionality.", category: "integration", }, { question: "What happens if we need to scale up?", answer: "Our solutions are designed to scale with your business. We can easily add more capacity, features, or users as your needs grow, with minimal disruption to your operations.", category: "scaling", }, { question: "Do you provide custom development?", answer: "Yes, we offer custom development services to create tailored solutions that meet your specific business requirements and integrate perfectly with your existing workflows.", category: "development", }, ];
 
 const supportChannels = [
     { name: "Phone Support",
@@ -68,22 +49,17 @@ const categories = [
     "development",
   ];
 
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const filteredFAQs = faqs.filter((faq) => {
-    const matchesSearch =
+const filteredFAQs = faqs.filter((faq) => { const matchesSearch =
       faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
 
-    const matchesCategory =
+const matchesCategory =
       selectedCategory === "all" || faq.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+  return matchesSearch && matchesCategory; });
 
-  const toggleFAQ = (index: number) => {
-    setExpandedFAQ(expandedFAQ === index ? null : index);
-  };
-
+const toggleFAQ = () => {
+  return;
+};
   return (
     <>
       <Helmet>
@@ -105,18 +81,17 @@ const categories = [
             </h1>
             
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-              Get the help you need, when you need it. Our expert support team
-              is available 24/7 to assist with all your AI and IT solutions.
+              Get the help you need, when you need it. Our expert support team,
+    is available 24/7 to assist with all your AI and IT solutions.
             </p>
             { /* Search Bar */ }
             
         <div className="max-w-2xl mx-auto relative mb-8">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search for help..."
-                value={ searchTerm }
-                onChange={ (e) => setSearchTerm(e.target.value) }
+                <input
+    type="text"
+                  placeholder="Search for help..."
+                value={ searchTerm } onChange={ (e) => setSearchTerm(e.target.value) }
                 className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
@@ -160,18 +135,17 @@ const categories = [
               </h2>
               
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the support channel that works best for you. All channels
-                are monitored by our expert team.
+                Choose the support channel that works best for you. All channels,
+    are monitored by our expert team.
               </p>
             </div>
             
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               { supportChannels.map((channel, index) => (
                 <div
-                  key={index }
-                  className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center">
+    key={index } className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center">
                   <div
-                    className={ `w-16 h-16 ${channel.color } bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center`}
+    className={ `w-16 h-16 ${channel.color } bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center`}
                   >
                     <channel.icon className="w-8 h-8" />
                   </div>
@@ -203,8 +177,7 @@ const categories = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               { resources.map((resource, index) => (
                 <div
-                  key={index }
-                  className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 group">
+    key={index } className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 group">
                   
         <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center mb-4">
                     <resource.icon className="w-6 h-6 text-slate-900" />
@@ -215,8 +188,7 @@ const categories = [
                   
           <p className="text-gray-300 mb-4">{ resource.description }</p>
                   <a
-                    href={ resource.link }
-                    className="text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
+    href={ resource.link } className="text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
                     Access Resource →
                   </a>
                 </div>
@@ -242,12 +214,11 @@ const categories = [
         <div className="flex flex-wrap justify-center gap-4 mb-8">
                 { categories.map((category) => (
                   <button
-                    key={category }
-                    onClick={ () => setSelectedCategory(category) }
+    key={category } onClick={ () => setSelectedCategory(category) }
                     className={ `px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                       selectedCategory === category
                         ? "bg-gradient-to-r from-purple-500 to-blue-500 text-white"
-                        : "bg-white/10 text-gray-300 hover:bg-white/20" }`}
+                        : "bg-white/10 text-gray-300 hover: bg-white/20" }`}
                   >
                     { category === "all"
                       ? "All Questions"
@@ -260,16 +231,14 @@ const categories = [
         <div className="space-y-4">
               { filteredFAQs.map((faq, index) => (
                 <div
-                  key={index }
-                  className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden">
+    key={index } className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden">
                   <button
-                    onClick={ () => toggleFAQ(index) }
-                    className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+    onClick={ () => toggleFAQ(index) } className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
                     <h3 className="text-lg font-semibold text-white pr-4">
                       { faq.question }
                     </h3>
                     <div
-                      className={ `transform transition-transform ${expandedFAQ === index ? "rotate-180" : "" }`}
+    className={ `transform transition-transform ${expandedFAQ === index ? "rotate-180" : "" }`}
                     >
                       <HelpCircle className="w-6 h-6 text-purple-400" />
                     </div>
@@ -309,8 +278,8 @@ const categories = [
               </h2>
               
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Explore our comprehensive documentation, tutorials, and
-                community resources.
+                Explore our comprehensive documentation, tutorials, and,
+    community resources.
               </p>
             </div>
             
@@ -323,8 +292,8 @@ const categories = [
                 </h3>
                 
           <p className="text-gray-300 mb-6">
-                  Comprehensive guides and API documentation for all our
-                  solutions.
+                  Comprehensive guides and API documentation for all our,
+    solutions.
                 </p>
                 <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
                   View Docs
@@ -372,8 +341,8 @@ const categories = [
               </h2>
               
           <p className="text-xl text-gray-300 mb-8">
-                Can't find what you're looking for? Our expert team is
-                here to help with any questions or issues.
+                Can't find what you're looking for? Our expert team is,
+    here to help with any questions or issues.
               </p>
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

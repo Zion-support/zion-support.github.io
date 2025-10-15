@@ -10,24 +10,24 @@ interface AccessibilityEnhancerProps {
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   useEffect(() => {
-    // Focus management for keyboard navigation
+    // Focus management for keyboard navigation,
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
       }
     };
 
-    // Apply accessibility settings
+    // Apply accessibility settings,
     const root = document.documentElement;
     
-    // High contrast mode
+    // High contrast mode,
     if (isHighContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
 
-    // Add focus indicators for keyboard navigation
+    // Add focus indicators for keyboard navigation,
     const addFocusStyles = () => {
       const style = document.createElement('style');
       style.textContent = `
@@ -36,10 +36,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           outline-offset: 2px !important;
         }
         
-        .keyboard-navigation button:focus,
-        .keyboard-navigation a:focus,
-        .keyboard-navigation input:focus,
-        .keyboard-navigation textarea:focus,
+        .keyboard-navigation button: focus,
+        .keyboard-navigation a: focus,
+        .keyboard-navigation input: focus,
+        .keyboard-navigation textarea: focus,
         .keyboard-navigation select:focus {
           box-shadow: 0 0 0 2px #8b5cf6 !important;
         }
@@ -47,7 +47,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       document.head.appendChild(style);
     };
 
-    // Add ARIA landmarks
+    // Add ARIA landmarks,
     const addAriaLandmarks = () => {
       const main = document.querySelector('main');
       if (main && !main.getAttribute('role')) {
@@ -65,8 +65,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       }
     };
 
-    // Add high contrast mode support
+    // Add high contrast mode support,
     const addHighContrastSupport = () => {
+      const style = document.createElement('style');
       style.textContent = `
         @media (prefers-contrast: high) {
           * {
@@ -81,8 +82,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       document.head.appendChild(style);
     };
 
-    // Add reduced motion support
+    // Add reduced motion support,
     const addReducedMotionSupport = () => {
+      const style = document.createElement('style');
       style.textContent = `
         @media (prefers-reduced-motion: reduce) {
           *, *::before, *::after {
@@ -96,14 +98,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       document.head.appendChild(style);
     };
 
-    // Initialize accessibility features
+    // Initialize accessibility features,
     addSkipLink();
     addFocusStyles();
     addAriaLandmarks();
     addHighContrastSupport();
     addReducedMotionSupport();
 
-    // Add event listeners
+    // Add event listeners,
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
     
@@ -113,24 +115,26 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     };
   }, [enableKeyboardNav]);
 
-  // Focus management
-  const handleFocusIn = useCallback((event: FocusEvent) => {
+  // Focus management,
+    const handleFocusIn = useCallback((event: FocusEvent) => {
     const target = event.target as HTMLElement;
     
-    // Add focus ring for keyboard navigation
+    // Add focus ring for keyboard navigation,
     if (target.matches('button, a, input, textarea, select, [tabindex]')) {
       target.classList.add('keyboard-focus');
     }
   }, []);
 
   const handleFocusOut = useCallback((event: FocusEvent) => {
+    const target = event.target as HTMLElement;
     target.classList.remove('keyboard-focus');
   }, []);
 
   useEffect(() => {
     if (!enableFocusIndicators) return;
 
-    // Add custom focus styles
+    // Add custom focus styles,
+    const style = document.createElement('style');
     style.textContent = `
       .keyboard-navigation *:focus {
         outline: 3px solid #3B82F6 !important;
@@ -138,43 +142,43 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       }
 
       .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
+        position: absolute;,
+    width: 1px;,
+    height: 1px;,
+    padding: 0;,
+    margin: -1px;,
+    overflow: hidden;,
+    clip: rect(0, 0, 0, 0);
         white-space: nowrap;
         border-width: 0;
       }
 
-      .sr-only-focusable:focus,
-      .sr-only-focusable:active {
-        position: static;
-        width: auto;
-        height: auto;
-        overflow: visible;
-        clip: auto;
+      .sr-only-focusable: focus,
+      .sr-only-focusable: active {,
+    position: static;,
+    width: auto;,
+    height: auto;,
+    overflow: visible;,
+    clip: auto;
         white-space: normal;
       }
 
       /* Skip link styles */
       .skip-link {
-        position: absolute;
-        top: -40px;
-        left: 0;
-        background: #3B82F6;
-        color: white;
-        padding: 8px 16px;
+        position: absolute;,
+    top: -40px;,
+    left: 0;,
+    background: #3B82F6;,
+    color: white;,
+    padding: 8px 16px;
         text-decoration: none;
         z-index: 100;
         font-weight: 600;
         border-radius: 0 0 4px 0;
       }
 
-      .skip-link:focus {
-        top: 0;
+      .skip-link: focus {,
+    top: 0;
       }
 
       /* High contrast mode support */
@@ -197,8 +201,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       }
 
       /* Focus visible polyfill */
-      *:focus:not(:focus-visible) {
-        outline: none;
+      *:focus: not(:focus-visible) {,
+    outline: none;
       }
 
       *:focus-visible {
@@ -217,8 +221,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     };
   }, []);
 
-  // Screen reader announcements
-  const announceToScreenReader = useCallback((message: string) => {
+  // Screen reader announcements,
+    const announceToScreenReader = useCallback((message: string) => {
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');

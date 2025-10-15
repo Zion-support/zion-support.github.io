@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Brain, Eye, BarChart3, Globe, Shield, CreditCard, Users, Lock, Coins, AlertTriangle, Heart, EnhancedSEO, ArrowRight, Play, Zap, CheckCircle, Star, Mail, Phone, MapPin, Calendar } from 'lucide-react';
-const ZionAIFraudDetectionPro = () => {  return (
-  return;
-},
+const ZionAIFraudDetectionPro = () => {
   const features = [
     {
       title: "Machine Learning Models",
@@ -36,7 +34,7 @@ const ZionAIFraudDetectionPro = () => {  return (
     }
   ];
 
-const detectionTypes = [
+  const detectionTypes = [
     {
       title: "Payment Fraud",
       description: "Detect unauthorized credit card transactions, chargebacks, and payment fraud",
@@ -75,7 +73,7 @@ const detectionTypes = [
     }
   ];
 
-const pricing = [
+  const pricing = [
     {
       name: "Starter",
       price: "$199",
@@ -85,8 +83,8 @@ const pricing = [
         "Up to 10,000 transactions/month",
         "Basic fraud detection",
         "Email alerts",
-        "Standard support",
-        "Basic reporting"
+        "Standard support",]
+        "Basic reporting"]
       ],
       popular: false
     },
@@ -101,8 +99,8 @@ const pricing = [
         "Real-time alerts",
         "Priority support",
         "Advanced analytics",
-        "Custom rules engine",
-        "API access"
+        "Custom rules engine",]
+        "API access"]
       ],
       popular: true
     },
@@ -118,14 +116,14 @@ const pricing = [
         "Dedicated support",
         "Custom ML models",
         "White-label options",
-        "SLA guarantee",
-        "On-premise deployment"
+        "SLA guarantee",]
+        "On-premise deployment"]
       ],
       popular: false
     }
   ];
 
-const testimonials = [
+  const testimonials = [
     {
       name: "David Kim",
       company: "FinTech Solutions",
@@ -151,11 +149,12 @@ const testimonials = [
       avatar: "RJ"
     }
   ];
+
   return (
     
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Fraud Detection Pro - Advanced Fraud Prevention | Zion Tech Group"
+    title="Zion AI Fraud Detection Pro - Advanced Fraud Prevention | Zion Tech Group"
         description="Cutting-edge AI fraud detection with real-time monitoring, machine learning models, and 99.7% accuracy. Protect your business from financial fraud and cyber threats."
         keywords="AI fraud detection, fraud prevention, machine learning fraud, real-time fraud monitoring, payment fraud, identity theft protection, risk management"
         canonical="/zion-ai-fraud-detection-pro"
@@ -191,14 +190,14 @@ const testimonials = [
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
-              to="/contact"
+    to="/contact"
               className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-red-500/25 hover:scale-105"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              to="/demo"
+    to="/demo"
               className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Watch Demo
@@ -266,19 +265,18 @@ const testimonials = [
             </h2>
             
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Cutting-edge AI and machine learning algorithms that continuously learn and adapt 
-              to detect the most sophisticated fraud attempts in real-time.
+              Cutting-edge AI and machine learning algorithms that continuously learn and adapt,
+    to detect the most sophisticated fraud attempts in real-time.
             </p>
           </div>
           
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
               >
                 <div
-                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}
+    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover: scale-110 transition-transform duration-300`}
                 >
                   {feature.icon}
                 </div>
@@ -312,8 +310,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {detectionTypes.map((type, index) => (
               <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
               >
                 
         <div className="flex items-center justify-between mb-4">
@@ -362,11 +359,10 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <div
-                key={index}
-                className={`relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
+    key={index} className={`relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
                   plan.popular
                     ? 'border-red-500/50 shadow-red-500/25'
-                    : 'border-white/20 hover:border-white/30'
+                    : 'border-white/20 hover: border-white/30'
                 }`}
               >
                 {plan.popular && (
@@ -398,11 +394,11 @@ const testimonials = [
                   ))}
                 </div>
                 <Link
-                  to="/contact"
+    to="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white hover:from-red-400 hover:to-pink-400'
-                      : 'border border-white/20 text-white hover:bg-white/10'
+                      : 'border border-white/20 text-white hover: bg-white/10'
                   }`}
                 >
                   Get Started
@@ -431,8 +427,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
               >
                 
         <div className="flex items-center mb-4">
@@ -469,8 +464,8 @@ const testimonials = [
           </h2>
           
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Don't wait for fraud to happen. Join thousands of businesses already using 
-            Zion AI Fraud Detection Pro to protect their revenue and reputation.
+            Don't wait for fraud to happen. Join thousands of businesses already using,
+    Zion AI Fraud Detection Pro to protect their revenue and reputation.
           </p>
           {/* Contact Information */}
           
@@ -509,14 +504,14 @@ const testimonials = [
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+    to="/contact"
               className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-red-500/25 hover:scale-105"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              to="/demo"
+    to="/demo"
               className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Schedule Demo

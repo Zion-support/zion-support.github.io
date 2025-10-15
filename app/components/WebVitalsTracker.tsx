@@ -4,11 +4,11 @@ interface WebVitalsTrackerProps {
   children: React.ReactNode;
 }
 interface WebVitalsData {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
-  navigationType: string;
+  name: string;,
+    value: number;,
+    delta: number;,
+    id: string;,
+    navigationType: string;
 }
 const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
   useEffect(() => {
@@ -16,11 +16,11 @@ const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
   return;
 });
       }
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
+      // Log to console in development,
+    if (process.env.NODE_ENV === 'development') {
               }
     };
-    // Track Core Web Vitals
+    // Track Core Web Vitals,
     onCLS(sendToAnalytics);
     onINP(sendToAnalytics);
     onFCP(sendToAnalytics);

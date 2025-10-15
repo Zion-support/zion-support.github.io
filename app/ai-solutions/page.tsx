@@ -30,8 +30,8 @@ const AISolutionsPage: React.FC = () => {
         "Real-time model training",
         "A/B testing framework",
         "Model performance monitoring",
-        "Automated retraining",
-        "Edge deployment"
+        "Automated retraining",]
+        "Edge deployment"]
       ],
       color: "from-purple-500 to-pink-500",
       price: "Starting at $3,500/month",
@@ -46,8 +46,8 @@ const AISolutionsPage: React.FC = () => {
         "Sentiment analysis",
         "Language translation",
         "Chatbot development",
-        "Voice recognition",
-        "Document summarization"
+        "Voice recognition",]
+        "Document summarization"]
       ],
       color: "from-blue-500 to-cyan-500",
       price: "Starting at $2,800/month",
@@ -62,8 +62,8 @@ const AISolutionsPage: React.FC = () => {
         "Facial recognition",
         "Image classification",
         "Video analysis",
-        "OCR (Optical Character Recognition)",
-        "Medical imaging analysis"
+        "OCR (Optical Character, Recognition)",]
+        "Medical imaging analysis"]
       ],
       color: "from-green-500 to-teal-500",
       price: "Starting at $4,200/month",
@@ -78,8 +78,8 @@ const AISolutionsPage: React.FC = () => {
         "Predictive modeling",
         "Trend analysis",
         "Risk assessment",
-        "Performance optimization",
-        "Custom dashboards"
+        "Performance optimization",]
+        "Custom dashboards"]
       ],
       color: "from-orange-500 to-red-500",
       price: "Starting at $3,000/month",
@@ -94,8 +94,8 @@ const AISolutionsPage: React.FC = () => {
         "Workflow optimization",
         "Task automation",
         "Data processing",
-        "Report generation",
-        "System integration"
+        "Report generation",]
+        "System integration"]
       ],
       color: "from-indigo-500 to-purple-500",
       price: "Starting at $2,500/month",
@@ -109,8 +109,8 @@ const AISolutionsPage: React.FC = () => {
       features: [
         "Workflow Automation",
         "Data Processing",
-        "Customer Service Bots",
-        "Smart Scheduling"
+        "Customer Service Bots",]
+        "Smart Scheduling"]
       ]
     },
     {
@@ -120,8 +120,8 @@ const AISolutionsPage: React.FC = () => {
       features: [
         "Real-time Dashboards",
         "Predictive Insights",
-        "Data Visualization",
-        "Trend Analysis"
+        "Data Visualization",]
+        "Trend Analysis"]
       ]
     },
     {
@@ -131,8 +131,8 @@ const AISolutionsPage: React.FC = () => {
       features: [
         "Threat Detection",
         "Anomaly Detection",
-        "Automated Response",
-        "Security Monitoring"
+        "Automated Response",]
+        "Security Monitoring"]
       ]
     }
   ];
@@ -272,9 +272,8 @@ const industries = [
                       ))}
                     </div>
                   </div>
-                  <Link 
-                    to={ service.href || '#' }
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold"
+                  <Link
+    to={ service.href || '#' } className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold"
                   >
                     Learn More
                     <ArrowRight className="w-5 h-5 ml-2" />

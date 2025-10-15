@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-  PhoneIcon, 
-  EnvelopeIcon, 
-  MapPinIcon, 
-  ArrowRightIcon,
-  HeartIcon
-} from '@heroicons/react/24/outline';
-import { ArrowRight, Facebook, Twitter, Linkedin, Github, Phone, Envelope, MapPin, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Facebook, Twitter, Linkedin, Github, Phone, Mail, MapPin, Heart } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -75,10 +68,9 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
-                  <Link 
-                    to={service.href} 
-                    className="text-gray-300 hover:text-white transition-colors flex items-center group"
-                  >
+                    <Link
+    to={service.href} className="text-gray-300 hover:text-white transition-colors flex items-center group"
+                    >
                     <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {service.name}
                   </Link>
@@ -92,10 +84,9 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {company.map((item) => (
                 <li key={item.name}>
-                  <Link 
-                    to={item.href} 
-                    className="text-gray-300 hover:text-white transition-colors flex items-center group"
-                  >
+                    <Link
+    to={item.href} className="text-gray-300 hover:text-white transition-colors flex items-center group"
+                    >
                     <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
                   </Link>
@@ -110,10 +101,9 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {resources.map((resource) => (
                 <li key={resource.name}>
-                  <Link 
-                    to={resource.href} 
-                    className="text-gray-300 hover:text-white transition-colors flex items-center group"
-                  >
+                    <Link
+    to={resource.href} className="text-gray-300 hover:text-white transition-colors flex items-center group"
+                    >
                     <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {resource.name}
                   </Link>
@@ -128,15 +118,15 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center">
               <Phone className="h-5 w-5 text-purple-400 mr-3" />
-              <span className="text-gray-300">+1 (555) 123-4567</span>
+              <span className="text-gray-300">+1 302 464 0950</span>
             </div>
             <div className="flex items-center">
-              <EnvelopeIcon className="h-5 w-5 text-purple-400 mr-3" />
-              <span className="text-gray-300">info@ziontechgroup.com</span>
+              <Mail className="h-5 w-5 text-purple-400 mr-3" />
+              <span className="text-gray-300">kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center">
-              <MapPinIcon className="h-5 w-5 text-purple-400 mr-3" />
-              <span className="text-gray-300">San Francisco, CA</span>
+              <MapPin className="h-5 w-5 text-purple-400 mr-3" />
+              <span className="text-gray-300">364 E Main St STE 1008 Middletown DE 19709</span>
             </div>
           </div>
         </div>
@@ -147,7 +137,7 @@ const Footer: React.FC = () => {
             © {currentYear} Zion Tech Group. All rights reserved.
           </p>
           <p className="text-gray-400 text-sm flex items-center mt-4 md:mt-0">
-            Made with <HeartIcon className="h-4 w-4 text-red-500 mx-1" /> by Zion Tech Group
+            Made with <Heart className="h-4 w-4 text-red-500 mx-1" /> by Zion Tech Group
           </p>
         </div>
       </div>

@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Calculator, DollarSign, Send, Users, TrendingUp, Award, Shield, EnhancedSEO, Sparkles, FuturisticButton, FileText, Clock, FuturisticCard, CheckCircle, Star } from 'lucide-react';
-const ZionAIInvoiceGeneratorPage = () => {  return (
-  return;
-},
+const ZionAIInvoiceGeneratorPage = () => {
   const features = [
     {
       title: "Smart Data Extraction",
@@ -24,7 +22,7 @@ const ZionAIInvoiceGeneratorPage = () => {  return (
     }
   ];
 
-const pricingPlans = [
+  const pricingPlans = [
     {
       name: "Solo",
       price: "$19",
@@ -36,8 +34,8 @@ const pricingPlans = [
         "PDF generation",
         "Email delivery",
         "Payment tracking",
-        "Basic reporting",
-        "Email support"
+        "Basic reporting",]
+        "Email support"]
       ],
       popular: false
     },
@@ -53,8 +51,8 @@ const pricingPlans = [
         "Multi-currency support",
         "Automated reminders",
         "Advanced reporting",
-        "API access",
-        "Priority support"
+        "API access",]
+        "Priority support"]
       ],
       popular: true
     },
@@ -72,14 +70,14 @@ const pricingPlans = [
         "Advanced analytics",
         "24/7 support",
         "Custom integrations",
-        "Bulk operations",
-        "Compliance tools"
+        "Bulk operations",]
+        "Compliance tools"]
       ],
       popular: false
     }
   ];
 
-const testimonials = [
+  const testimonials = [
     {
       name: "David Kim",
       company: "Freelance Designer",
@@ -106,7 +104,7 @@ const testimonials = [
     }
   ];
 
-const useCases = [
+  const useCases = [
     {
       title: "Freelancers & Consultants",
       description: "Streamline billing for project-based work with automated invoice generation",
@@ -133,7 +131,7 @@ const useCases = [
     }
   ];
 
-const integrations = [
+  const integrations = [
     { name: "QuickBooks", logo: "QB" },
     { name: "Xero", logo: "X" },
     { name: "FreshBooks", logo: "FB" },
@@ -143,11 +141,12 @@ const integrations = [
     { name: "HubSpot", logo: "HS" },
     { name: "Salesforce", logo: "SF" }
   ];
+
   return (
     
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
-        title="Zion AI Invoice Generator - Automated Professional Invoicing | Zion Tech Group"
+    title="Zion AI Invoice Generator - Automated Professional Invoicing | Zion Tech Group"
         description="Generate professional invoices automatically with AI. Multi-currency support, automated follow-ups, and seamless integrations. Start billing smarter today!"
         keywords="AI invoice generator, automated invoicing, professional invoices, billing software, invoice automation, payment tracking, financial management"
         canonical="https://ziontechgroup.com/zion-ai-invoice-generator"
@@ -180,7 +179,7 @@ const integrations = [
           
         <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <FuturisticButton
-              href="/contact"
+    href="/contact"
               variant="primary"
               size="lg"
               icon={<FileText className="w-5 h-5" />}
@@ -188,7 +187,7 @@ const integrations = [
               Start Creating Invoices
             </FuturisticButton>
             <FuturisticButton
-              href="#demo"
+    href="#demo"
               variant="outline"
               size="lg"
               icon={<Receipt className="w-5 h-5" />}
@@ -206,7 +205,7 @@ const integrations = [
                 <FileText className="w-6 h-6 text-green-400" />
               </div>
               
-        <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 holographic-text">50,000+</div>
+        <div className="text-xl md: text-2xl lg:text-3xl font-bold text-white mb-2 holographic-text">50,000+</div>
               
         <div className="text-gray-300 text-xs md:text-sm">Invoices Generated</div>
             </div>
@@ -228,7 +227,7 @@ const integrations = [
                 <Users className="w-6 h-6 text-purple-400" />
               </div>
               
-        <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 holographic-text">8,000+</div>
+        <div className="text-xl md: text-2xl lg:text-3xl font-bold text-white mb-2 holographic-text">8,000+</div>
               
         <div className="text-gray-300 text-xs md:text-sm">Happy Customers</div>
             </div>
@@ -407,9 +406,8 @@ const integrations = [
                   ))}
                 </div>
                 <FuturisticButton
-                  href="/contact"
-                  variant={plan.popular ? "primary" : "outline"}
-                  className="w-full"
+    href="/contact"
+                  variant={plan.popular ? "primary" : "outline"} className="w-full"
                   icon={<ArrowRight className="w-4 h-4" />}
                 >
                   Get Started
@@ -478,7 +476,7 @@ const integrations = [
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
-              href="/contact"
+    href="/contact"
               variant="primary"
               size="lg"
               icon={<FileText className="w-5 h-5" />}
@@ -486,7 +484,7 @@ const integrations = [
               Start Free Trial
             </FuturisticButton>
             <FuturisticButton
-              href="/demo"
+    href="/demo"
               variant="outline"
               size="lg"
               icon={<Receipt className="w-5 h-5" />}

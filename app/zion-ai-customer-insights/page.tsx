@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MessageSquare, TrendingUp, BarChart3, Target, Eye, EnhancedSEO, Sparkles, FuturisticButton, Users, Award, Clock, FuturisticCard, Brain, CheckCircle, Star } from 'lucide-react';
-const ZionAICustomerInsightsPage = () => {  return (
-  return;
-},
+const ZionAICustomerInsightsPage = () => {
   const features = [
     {
       title: "Real-Time Sentiment Analysis",
@@ -24,7 +22,7 @@ const ZionAICustomerInsightsPage = () => {  return (
     }
   ];
 
-const pricingPlans = [
+  const pricingPlans = [
     {
       name: "Starter",
       price: "$39",
@@ -35,8 +33,8 @@ const pricingPlans = [
         "Basic sentiment analysis",
         "Standard reports",
         "Email support",
-        "API access",
-        "Data export"
+        "API access",]
+        "Data export"]
       ],
       popular: false
     },
@@ -52,8 +50,8 @@ const pricingPlans = [
         "Custom dashboards",
         "Priority support",
         "Advanced API",
-        "Team collaboration",
-        "White-label options"
+        "Team collaboration",]
+        "White-label options"]
       ],
       popular: true
     },
@@ -71,14 +69,14 @@ const pricingPlans = [
         "Dedicated account manager",
         "Custom reporting",
         "On-premise deployment",
-        "Advanced security",
-        "SLA guarantee"
+        "Advanced security",]
+        "SLA guarantee"]
       ],
       popular: false
     }
   ];
 
-const testimonials = [
+  const testimonials = [
     {
       name: "Rachel Thompson",
       company: "E-commerce Platform",
@@ -105,7 +103,7 @@ const testimonials = [
     }
   ];
 
-const useCases = [
+  const useCases = [
     {
       title: "Customer Retention",
       description: "Identify at-risk customers and implement targeted retention strategies",
@@ -132,7 +130,7 @@ const useCases = [
     }
   ];
 
-const insights = [
+  const insights = [
     {
       title: "Customer Lifetime Value Prediction",
       description: "Predict how much each customer will spend over their lifetime",
@@ -158,11 +156,12 @@ const insights = [
       impact: "Increase conversions by 50%"
     }
   ];
+
   return (
     
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
-        title="Zion AI Customer Insights - Advanced Customer Analytics & Intelligence | Zion Tech Group"
+    title="Zion AI Customer Insights - Advanced Customer Analytics & Intelligence | Zion Tech Group"
         description="Unlock deep customer insights with AI-powered analytics. Sentiment analysis, predictive modeling, and automated reporting. Transform your customer understanding today!"
         keywords="AI customer insights, customer analytics, sentiment analysis, predictive analytics, customer intelligence, behavioral analysis, customer data platform"
         canonical="https://ziontechgroup.com/zion-ai-customer-insights"
@@ -195,7 +194,7 @@ const insights = [
           
         <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <FuturisticButton
-              href="/contact"
+    href="/contact"
               variant="primary"
               size="lg"
               icon={<Brain className="w-5 h-5" />}
@@ -203,7 +202,7 @@ const insights = [
               Start Analyzing Customers
             </FuturisticButton>
             <FuturisticButton
-              href="#demo"
+    href="#demo"
               variant="outline"
               size="lg"
               icon={<Eye className="w-5 h-5" />}
@@ -439,9 +438,8 @@ const insights = [
                   ))}
                 </div>
                 <FuturisticButton
-                  href="/contact"
-                  variant={plan.popular ? "primary" : "outline"}
-                  className="w-full"
+    href="/contact"
+                  variant={plan.popular ? "primary" : "outline"} className="w-full"
                   icon={<ArrowRight className="w-4 h-4" />}
                 >
                   Get Started
@@ -510,7 +508,7 @@ const insights = [
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
-              href="/contact"
+    href="/contact"
               variant="primary"
               size="lg"
               icon={<Brain className="w-5 h-5" />}
@@ -518,7 +516,7 @@ const insights = [
               Start Free Trial
             </FuturisticButton>
             <FuturisticButton
-              href="/demo"
+    href="/demo"
               variant="outline"
               size="lg"
               icon={<Eye className="w-5 h-5" />}

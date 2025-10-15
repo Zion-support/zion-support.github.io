@@ -35,7 +35,7 @@ const getBreadcrumbName = () => {  return (
         <ol className="flex items-center space-x-2 text-sm">
           <li>
             <Link
-              to="/"
+    to="/"
               className="text-gray-400 hover:text-cyan-400 transition-colors flex items-center"
             >
               <Home className="w-4 h-4" />
@@ -54,8 +54,7 @@ const isLast = index === pathnames.length - 1;
                   </span>
                 ) : (
                   <Link
-                    to={routeTo}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
+    to={routeTo} className="text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     {getBreadcrumbName(path)}
                   </Link>

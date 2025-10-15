@@ -5,15 +5,15 @@ const AISocialMediaManagerProPage = () => {
   const features = [
     {
       icon: <Brain className="w-8 h-8" />,
-      title: &quot;AI Content Creation&quot;,
-      description: &quot;Intelligent content generation for all social media platforms.&quot;,
-      benefits: [&quot;Auto-generated posts&quot;, &quot;Trend analysis&quot;, &quot;Content optimization&quot;]
+      title: "AI Content Creation",
+      description: "Intelligent content generation for all social media platforms.",
+      benefits: ["Auto-generated posts", "Trend analysis", "Content optimization"]
     },
     {
       icon: <Camera className="w-8 h-8" />,
-      title: &quot;Visual Content&quot;,
-      description: &quot;AI-powered image and video creation tools.&quot;,
-      benefits: [&quot;Auto-generated visuals&quot;, &quot;Brand consistency&quot;, &quot;Template library&quot;]
+      title: "Visual Content",
+      description: "AI-powered image and video creation tools.",
+      benefits: ["Auto-generated visuals", "Brand consistency", "Template library"]
     }
   ];
 
@@ -31,14 +31,14 @@ const AISocialMediaManagerProPage = () => {
   ];
 
   const pricingPlans = [
-    { name: &quot;Starter&quot;, price: &quot;$39&quot;, features: [&quot;Basic posting&quot;, &quot;1 platform&quot;], description: &quot;Perfect for individuals&quot;, period: &quot;per month&quot;, popular: false },
-    { name: &quot;Professional&quot;, price: &quot;$99&quot;, features: [&quot;All platforms&quot;, &quot;AI content&quot;], description: &quot;Ideal for businesses&quot;, period: &quot;per month&quot;, popular: true },
-    { name: &quot;Enterprise&quot;, price: &quot;Custom&quot;, features: [&quot;Custom solutions&quot;, &quot;Dedicated support&quot;], description: &quot;Tailored for agencies&quot;, period: &quot;contact us&quot;, popular: false }
+    { name: "Starter", price: "$39", features: ["Basic posting", "1 platform"], description: "Perfect for individuals", period: "per month", popular: false },
+    { name: "Professional", price: "$99", features: ["All platforms", "AI content"], description: "Ideal for businesses", period: "per month", popular: true },
+    { name: "Enterprise", price: "Custom", features: ["Custom solutions", "Dedicated support"], description: "Tailored for agencies", period: "contact us", popular: false }
   ];
 
   const testimonials = [
-    { name: &quot;Jennifer Lee&quot;, role: &quot;Social Media Manager&quot;, content: &quot;Increased our engagement by 300%!&quot;, rating: 5, company: &quot;Digital Marketing Co.&quot; },
-    { name: &quot;David Kim&quot;, role: &quot;Marketing Director&quot;, content: &quot;Best social media management tool!&quot;, rating: 5, company: &quot;Brand Solutions&quot; }
+    { name: "Jennifer Lee", role: "Social Media Manager", content: "Increased our engagement by 300%!", rating: 5, company: "Digital Marketing Co." },
+    { name: "David Kim", role: "Marketing Director", content: "Best social media management tool!", rating: 5, company: "Brand Solutions" }
   ];
 
   return (
@@ -91,13 +91,13 @@ const AISocialMediaManagerProPage = () => {
                 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
-                    href="tel:+13024640950"
+    href="tel:+13024640950"
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center">
                     <Phone className="w-5 h-5 mr-2" />
                     Start Free Trial
                   </a>
                   <a
-                    href="#demo"
+    href="#demo"
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center">
                     <Play className="w-5 h-5 mr-2" />
                     Watch Demo
@@ -125,10 +125,9 @@ const AISocialMediaManagerProPage = () => {
               
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
                 { platforms.map((platform, index) => (
-                  <div 
-                    key={index } 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 group">
-                    <div className={ `${platform.color } mb-3 group-hover:scale-110 transition-transform duration-300 flex justify-center`}>
+                  <div
+    key={index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 group">
+                    <div className={ `${platform.color } mb-3 group-hover: scale-110 transition-transform duration-300 flex justify-center`}>
                       { platform.icon }
                     </div>
                     
@@ -157,9 +156,8 @@ const AISocialMediaManagerProPage = () => {
               
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 { features.map((feature, index) => (
-                  <div 
-                    key={index } 
-                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
+                  <div
+    key={index } className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
                     
         <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       
@@ -239,12 +237,11 @@ const AISocialMediaManagerProPage = () => {
               
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 { pricingPlans.map((plan, index) => (
-                  <div 
-                    key={index } 
-                    className={ `relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl ${
+                  <div
+    key={index } className={ `relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl ${
                       plan.popular 
                         ? 'border-cyan-400/40 shadow-cyan-500/10' 
-                        : 'border-cyan-500/20 hover:border-cyan-400/40' }`}
+                        : 'border-cyan-500/20 hover: border-cyan-400/40' }`}
                   >
                     { plan.popular && (
                       
@@ -276,11 +273,11 @@ const AISocialMediaManagerProPage = () => {
                       ))}
                     </div>
                     <a
-                      href="tel:+13024640950"
+    href="tel:+13024640950"
                       className={ `w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
                         plan.popular
                           ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                          : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900' }`}
+                          : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900' }`}
                     >
                       Get Started
                       <ArrowRight className="w-4 h-4 ml-2" />
@@ -309,9 +306,8 @@ const AISocialMediaManagerProPage = () => {
               
         <div className="grid md:grid-cols-3 gap-8">
                 { testimonials.map((testimonial, index) => (
-                  <div 
-                    key={index } 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300">
+                  <div
+    key={index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300">
                     
         <div className="flex items-center mb-4">
                       { [...Array(testimonial.rating)].map((_, i) => (
@@ -352,13 +348,13 @@ const AISocialMediaManagerProPage = () => {
                 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                    href="tel:+13024640950"
+    href="tel:+13024640950"
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center">
                     <Phone className="w-5 h-5 mr-2" />
                     Call +1 302 464 0950
                   </a>
                   <a
-                    href="mailto:kleber@ziontechgroup.com"
+    href="mailto:kleber@ziontechgroup.com"
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center">
                     <Mail className="w-5 h-5 mr-2" />
                     Get Free Consultation

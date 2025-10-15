@@ -1,9 +1,9 @@
 declare global { interface Window {
-    gtag: (
-      command: 'config' | 'event' | 'js' | 'set',
+    gtag: (,
+    command: 'config' | 'event' | 'js' | 'set',
       targetId: string,
-      config?: Record<string, unknown></string></string>
-    ) => void;}
+      config?: Record<string unknown>
+    ) => void;
     dataLayer: unknown[]; }
 }
 export {};

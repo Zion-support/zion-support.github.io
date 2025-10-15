@@ -162,7 +162,7 @@ const HomePage = () => {  return (
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss how our AI services and IT solutions can help you achieve your goals.
+            Let's discuss how our AI services and IT solutions can help you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton href="/contact" variant="secondary" size="lg">

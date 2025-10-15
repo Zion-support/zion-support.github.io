@@ -20,8 +20,8 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', readTime: '5 min' },
         { title: 'Installation Guide', description: 'Step-by-step installation instructions', readTime: '10 min' },
-        { title: 'Configuration', description: 'Configure your services and settings', readTime: '15 min' },
-        { title: 'First Steps', description: 'Your first project with our platform', readTime: '20 min' }
+        { title: 'Configuration', description: 'Configure your services and settings', readTime: '15 min' },]
+        { title: 'First Steps', description: 'Your first project with our platform', readTime: '20 min' }]
       ]
     },
     {
@@ -31,8 +31,8 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'API Overview', description: 'Introduction to our REST API', readTime: '10 min' },
         { title: 'Authentication', description: 'API keys and authentication methods', readTime: '8 min' },
-        { title: 'Rate Limits', description: 'Understanding API rate limits', readTime: '5 min' },
-        { title: 'Error Handling', description: 'Common errors and how to handle them', readTime: '12 min' }
+        { title: 'Rate Limits', description: 'Understanding API rate limits', readTime: '5 min' },]
+        { title: 'Error Handling', description: 'Common errors and how to handle them', readTime: '12 min' }]
       ]
     },
     {
@@ -42,8 +42,8 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'AI Analytics', description: 'Using our AI analytics platform', readTime: '25 min' },
         { title: 'Content Generation', description: 'AI-powered content creation tools', readTime: '20 min' },
-        { title: 'Machine Learning', description: 'ML model training and deployment', readTime: '30 min' },
-        { title: 'Natural Language Processing', description: 'NLP services and capabilities', readTime: '18 min' }
+        { title: 'Machine Learning', description: 'ML model training and deployment', readTime: '30 min' },]
+        { title: 'Natural Language Processing', description: 'NLP services and capabilities', readTime: '18 min' }]
       ]
     },
     {
@@ -53,8 +53,8 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'Cloud Migration', description: 'Migrating to our cloud platform', readTime: '45 min' },
         { title: 'Container Services', description: 'Docker and Kubernetes deployment', readTime: '35 min' },
-        { title: 'Database Management', description: 'Managing databases in the cloud', readTime: '25 min' },
-        { title: 'Monitoring & Logging', description: 'System monitoring and log analysis', readTime: '20 min' }
+        { title: 'Database Management', description: 'Managing databases in the cloud', readTime: '25 min' },]
+        { title: 'Monitoring & Logging', description: 'System monitoring and log analysis', readTime: '20 min' }]
       ]
     },
     {
@@ -64,8 +64,8 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'Security Overview', description: 'Our security measures and protocols', readTime: '15 min' },
         { title: 'Data Protection', description: 'Protecting sensitive data and privacy', readTime: '20 min' },
-        { title: 'Compliance', description: 'SOC 2, GDPR, and other compliance standards', readTime: '30 min' },
-        { title: 'Access Control', description: 'User permissions and access management', readTime: '12 min' }
+        { title: 'Compliance', description: 'SOC 2, GDPR, and other compliance standards', readTime: '30 min' },]
+        { title: 'Access Control', description: 'User permissions and access management', readTime: '12 min' }]
       ]
     },
     {
@@ -75,8 +75,8 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'Building Your First App', description: 'Complete tutorial for beginners', readTime: '60 min' },
         { title: 'Advanced Features', description: 'Exploring advanced platform features', readTime: '45 min' },
-        { title: 'Integration Examples', description: 'Real-world integration examples', readTime: '40 min' },
-        { title: 'Best Practices', description: 'Industry best practices and tips', readTime: '25 min' }
+        { title: 'Integration Examples', description: 'Real-world integration examples', readTime: '40 min' },]
+        { title: 'Best Practices', description: 'Industry best practices and tips', readTime: '25 min' }]
       ]
     }
   ];
@@ -117,7 +117,7 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
         <div className="relative max-w-2xl mx-auto mb-8">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
-                  type="text"
+    type="text"
                   placeholder="Search documentation..."
                   className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-transparent"
                 />
@@ -133,11 +133,10 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
         <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
                 <button
-                  key={category}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+    key={category} className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
                     category === 'All'
                       ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400'
+                      : 'bg-slate-800/50 text-gray-300 hover: bg-cyan-500/20 hover:text-cyan-400'
                   }`}
                 >
                   {category}
@@ -171,8 +170,7 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
         <div className="space-y-3">
                     {section.articles.map((article, articleIndex) => (
                       <a
-                        key={articleIndex}
-                        href={`/docs/${section.title.toLowerCase().replace(/\s+/g, '-')}/${article.title.toLowerCase().replace(/\s+/g, '-')}`}
+    key={articleIndex} href={`/docs/${section.title.toLowerCase().replace(/\s+/g, '-')}/${article.title.toLowerCase().replace(/\s+/g, '-')}`}
                         className="block p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors group"
                       >
                         
@@ -212,8 +210,7 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {popularArticles.map((article, index) => (
                 <a
-                  key={index}
-                  href={`/docs/${article.category.toLowerCase().replace(/\s+/g, '-')}/${article.title.toLowerCase().replace(/\s+/g, '-')}`}
+    key={index} href={`/docs/${article.category.toLowerCase().replace(/\s+/g, '-')}/${article.title.toLowerCase().replace(/\s+/g, '-')}`}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group"
                 >
                   
@@ -255,7 +252,7 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
                 
           <p className="text-gray-300 mb-6">Complete REST API reference with examples and interactive testing</p>
                 <a
-                  href="/docs/api/rest"
+    href="/docs/api/rest"
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   View REST API Docs
@@ -269,7 +266,7 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
                 
           <p className="text-gray-300 mb-6">Official SDKs for Python, JavaScript, Java, and more</p>
                 <a
-                  href="/docs/sdks"
+    href="/docs/sdks"
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   View SDKs
@@ -283,7 +280,7 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
                 
           <p className="text-gray-300 mb-6">Import our Postman collection for easy API testing</p>
                 <a
-                  href="/docs/postman"
+    href="/docs/postman"
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   Download Collection
@@ -305,13 +302,13 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/support"
+    href="/support"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Contact Support
               </a>
               <a
-                href="/contact"
+    href="/contact"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 Get in Touch

@@ -37,8 +37,8 @@ const ApiDocsPage: React.FC = () => {
           example: `curl -X POST "https://api.ziontechgroup.com/v1/ai/train" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
-  -d '{
-    "model_name": "custom-classifier",
+  -d '{]
+    "model_name": "custom-classifier",]
     "training_data": [...],
     "model_type": "classification"
   }'`
@@ -62,8 +62,8 @@ const ApiDocsPage: React.FC = () => {
           description: 'Process and transform data',
           example: `curl -X POST "https://api.ziontechgroup.com/v1/data/process" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json" \\
-  -d '{
+  -H "Content-Type: application/json" \\]
+  -d '{]
     "data": [...],
     "operations": ["clean", "normalize", "aggregate"]
   }'`
@@ -97,8 +97,8 @@ const ApiDocsPage: React.FC = () => {
           path: '/api/v1/auth/refresh',
           description: 'Refresh access token',
           example: `curl -X POST "https://api.ziontechgroup.com/v1/auth/refresh" \\
-  -H "Authorization: Bearer YOUR_REFRESH_TOKEN"`
-        }
+  -H "Authorization: Bearer YOUR_REFRESH_TOKEN"`]
+        }]
       ]
     }
   ];
@@ -107,10 +107,10 @@ const sdkExamples = [
     {
       language: 'Python',
       code: `import ziontech
-# Initialize the client
-client = ziontech.Client(api_key='your_api_key')
-# Generate AI content
-content = client.ai.content.generate(
+# Initialize the client,
+    client = ziontech.Client(api_key='your_api_key')
+# Generate AI content,
+    content = client.ai.content.generate(
     prompt="Write about machine learning",
     type="blog",
     tone="professional"
@@ -121,12 +121,12 @@ print(content.data.content)`,
     {
       language: 'JavaScript',
       code: `const ziontech = require('ziontech-sdk');
-// Initialize the client
-const client = new ziontech.Client({
+// Initialize the client,
+    const client = new ziontech.Client({
   apiKey: 'your_api_key'
 });
-// Generate AI content
-client.ai.content.generate({
+// Generate AI content,
+    client.ai.content.generate({
   prompt: 'Write about machine learning',
   type: 'blog',
   tone: 'professional'
@@ -171,6 +171,26 @@ const features = [
 
 export default function Page() {
   return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          Page
+        </h1>
+      </div>
+    </div>
+  );
+}
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          Page
+        </h1>
+      </div>
+    </div>
+  );
+}
+  return (
     <>
       <Helmet>
         <title>API Documentation - Zion Tech Group | Developer API Reference</title>
@@ -199,13 +219,13 @@ export default function Page() {
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="#getting-started"
+    href="#getting-started"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
                 </a>
                 <a
-                  href="#endpoints"
+    href="#endpoints"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   View Endpoints
@@ -214,8 +234,8 @@ export default function Page() {
               <p className="text-gray-600 mb-4">
                 Use our REST API or SDKs to make your first API call.
               </p>
-              <Link 
-                to="#examples"
+              <Link
+    to="#examples"
                 className="inline-flex items-center text-green-600 hover:text-green-800 font-semibold"
               >
                 View Examples
@@ -230,8 +250,8 @@ export default function Page() {
               <p className="text-gray-600 mb-4">
                 Integrate AI into your applications and scale with confidence.
               </p>
-              <Link 
-                to="/docs"
+              <Link
+    to="/docs"
                 className="inline-flex items-center text-purple-600 hover:text-purple-800 font-semibold"
               >
                 Full Documentation
@@ -281,7 +301,7 @@ export default function Page() {
                   Sign up for an account and generate your API key from the dashboard.
                 </p>
                 <a
-                  href="/contact"
+    href="/contact"
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   Get API Key
@@ -296,7 +316,7 @@ export default function Page() {
                   We provide SDKs for Python, JavaScript, Java, and more languages.
                 </p>
                 <a
-                  href="#sdks"
+    href="#sdks"
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   View SDKs
@@ -424,13 +444,13 @@ export default function Page() {
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/support"
+    href="/support"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Contact Support
               </a>
               <a
-                href="/docs"
+    href="/docs"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 View Full Docs
@@ -496,14 +516,14 @@ export default function Page() {
             Get your API key and start building with our AI platform today
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact"
+            <Link
+    to="/contact"
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               Get API Key
             </Link>
-            <Link 
-              to="/docs"
+            <Link
+    to="/docs"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               View Full Docs

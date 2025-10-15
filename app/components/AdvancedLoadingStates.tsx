@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { LoadingState } from 'lucide-react';
 interface LoadingState {
-  isLoading: boolean;
-  progress: number;
-  message: string;
+  isLoading: boolean;,
+    progress: number;,
+    message: string;
 }
 const AdvancedLoadingStates: React.FC = () => {
   const [loadingState, setLoadingState] = useState<LoadingState>({
@@ -12,8 +12,8 @@ const AdvancedLoadingStates: React.FC = () => {
     message: 'Loading...'
   });
   useEffect(() => {
-    // Simulate loading states for different scenarios
-    const simulateLoading = () => {  return (
+    // Simulate loading states for different scenarios,
+    const simulateLoading = () => {
   return;
 });
 
@@ -70,8 +70,8 @@ const timeout = setTimeout(simulateLoading, 1000);
             </div>
             
         <div className="w-full bg-gray-700 rounded-full h-2">
-              <div 
-                className="bg-gradient-to-r from-cyan-400 to-purple-400 h-2 rounded-full transition-all duration-300 ease-out"
+              <div
+    className="bg-gradient-to-r from-cyan-400 to-purple-400 h-2 rounded-full transition-all duration-300 ease-out"
                 style={{ width: `${loadingState.progress}%` }}
               ></div>
             </div>

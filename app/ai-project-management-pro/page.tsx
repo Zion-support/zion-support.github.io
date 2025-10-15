@@ -2,17 +2,29 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Star, CheckCircleIcon } from 'lucide-react';
-import { 
-  CpuChipIcon, 
-  ChartBarIcon, 
-  ClockIcon,
-  UsersIcon,
-  StarIcon,
-  ShieldCheckIcon,
-  CloudIcon
-} from '@heroicons/react/24/outline';
+import { CpuChipIcon, ChartBarIcon, ClockIcon, UsersIcon, CheckCircleIcon, StarIcon, ShieldCheckIcon, CloudIcon } from '@heroicons/react/24/outline';
 
 export default function AiProjectManagementProPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          AiProjectManagementProPage
+        </h1>
+      </div>
+    </div>
+  );
+}
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          AiProjectManagementProPage
+        </h1>
+      </div>
+    </div>
+  );
+}
   const features = [
     {
       icon: ChartBarIcon,
@@ -46,7 +58,7 @@ export default function AiProjectManagementProPage() {
     }
   ];
 
-const pricingPlans = [
+  const pricingPlans = [
     {
       name: 'Starter',
       price: '$199',
@@ -56,8 +68,8 @@ const pricingPlans = [
         'Up to 10 team members',
         'Basic AI task automation',
         'Project templates',
-        'Email support',
-        'Basic analytics'
+        'Email support',]
+        'Basic analytics']
       ],
       popular: false
     },
@@ -71,8 +83,8 @@ const pricingPlans = [
         'Advanced AI features',
         'Predictive analytics',
         'Custom integrations',
-        'Priority support',
-        'Advanced reporting'
+        'Priority support',]
+        'Advanced reporting']
       ],
       popular: true
     },
@@ -86,14 +98,14 @@ const pricingPlans = [
         'Full AI suite',
         'Custom AI models',
         'White-label options',
-        'Dedicated support',
-        'Advanced security'
+        'Dedicated support',]
+        'Advanced security']
       ],
       popular: false
     }
   ];
 
-const testimonials = [
+  const testimonials = [
     {
       name: 'Sarah Johnson',
       role: 'Project Manager',
@@ -116,6 +128,7 @@ const testimonials = [
       rating: 5
     }
   ];
+
   return (
     <>
       <Helmet>
@@ -123,7 +136,7 @@ const testimonials = [
         <meta name="description" content="Advanced AI-powered project management solution with intelligent task automation, resource optimization, and predictive analytics. Starting at $199/month." />
         <meta name="keywords" content="AI project management, task automation, predictive analytics, team management, project planning, business software" />
         <script
-          type="application/ld+json"
+    type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </Helmet>
@@ -164,14 +177,14 @@ const testimonials = [
             </div>
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+    to="/contact" 
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
               </Link>
-              <Link 
-                to="/demo" 
+              <Link
+    to="/demo" 
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
@@ -247,7 +260,7 @@ const testimonials = [
               <div key={index} className={`relative bg-gradient-to-br from-slate-800/90 to-slate-700/90 p-8 rounded-xl border transition-all duration-500 hover-lift ${
                 plan.popular 
                   ? 'border-cyan-500/70 shadow-lg shadow-cyan-500/25' 
-                  : 'border-slate-600/50 hover:border-cyan-500/50'
+                  : 'border-slate-600/50 hover: border-cyan-500/50'
               }`}>
                 {plan.popular && (
                   
@@ -278,11 +291,11 @@ const testimonials = [
                   ))}
                 </ul>
                 <Link
-                  to="/contact"
+    to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-600 to-purple-600 text-white hover:from-cyan-700 hover:to-purple-700'
-                      : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                      : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900'
                   }`}
                 >
                   Get Started
@@ -352,13 +365,13 @@ const testimonials = [
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+    to="/contact"
               className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
             >
               Start Free Trial
             </Link>
             <Link
-              to="/demo"
+    to="/demo"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
               Schedule Demo

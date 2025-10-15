@@ -1,8 +1,5 @@
-import React from 'react';
-import { Shield, Bug, FileText, Zap, Code, Terminal, Users, Award, Brain, CheckCircle, Star, ArrowRight } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 
+import { Shield, Bug, FileText, Zap, EnhancedSEO, Sparkles, FuturisticButton, Code, Terminal, Users, Award, FuturisticCard, Brain, CheckCircle, Star, ArrowRight } from 'lucide-react';
 const AICodeAssistantPage = () => {
   const features = [
     {
@@ -25,7 +22,7 @@ const AICodeAssistantPage = () => {
     }
   ];
 
-const pricingPlans = [
+  const pricingPlans = [
     {
       name: "Developer",
       price: "$29",
@@ -36,8 +33,8 @@ const pricingPlans = [
         "Basic code review",
         "5 programming languages",
         "Standard documentation",
-        "Email support",
-        "Git integration"
+        "Email support",]
+        "Git integration"]
       ],
       popular: false
     },
@@ -53,8 +50,8 @@ const pricingPlans = [
         "AI-powered debugging",
         "Team collaboration",
         "Priority support",
-        "API access",
-        "Custom models"
+        "API access",]
+        "Custom models"]
       ],
       popular: true
     },
@@ -72,14 +69,14 @@ const pricingPlans = [
         "24/7 support",
         "On-premise deployment",
         "Custom integrations",
-        "Dedicated support",
-        "SLA guarantee"
+        "Dedicated support",]
+        "SLA guarantee"]
       ],
       popular: false
     }
   ];
 
-const testimonials = [
+  const testimonials = [
     {
       name: "Alex Rodriguez",
       company: "Tech Startup",
@@ -106,7 +103,7 @@ const testimonials = [
     }
   ];
 
-const useCases = [
+  const useCases = [
     {
       title: "Rapid Prototyping",
       description: "Quickly build prototypes and MVPs with AI-generated code",
@@ -133,7 +130,7 @@ const useCases = [
     }
   ];
 
-const languages = [
+  const languages = [
     { name: "Python", logo: "🐍", popularity: "95%" },
     { name: "JavaScript", logo: "🟨", popularity: "98%" },
     { name: "TypeScript", logo: "🔷", popularity: "92%" },
@@ -144,7 +141,7 @@ const languages = [
     { name: "C#", logo: "🔷", popularity: "87%" }
   ];
 
-const capabilities = [
+  const capabilities = [
     {
       title: "Code Generation",
       description: "Generate complete functions, classes, and modules from natural language",
@@ -171,16 +168,15 @@ const capabilities = [
     }
   ];
 
-const AICodeAssistantPage = () => {
   return (
     
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <Helmet>
-        <title>Zion AI Code Assistant - Intelligent Code Generation & Review | Zion Tech Group</title>
-        <meta name="description" content="Boost your development with AI-powered code generation, review, and debugging. Support for 50+ languages, automated testing, and intelligent documentation. Code smarter today!" />
-        <meta name="keywords" content="AI code assistant, code generation, automated code review, AI programming, code debugging, software development, AI coding tools, code quality" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-code-assistant" />
-      </Helmet>
+      <EnhancedSEO
+    title="Zion AI Code Assistant - Intelligent Code Generation & Review | Zion Tech Group"
+        description="Boost your development with AI-powered code generation, review, and debugging. Support for 50+ languages, automated testing, and intelligent documentation. Code smarter today!"
+        keywords="AI code assistant, code generation, automated code review, AI programming, code debugging, software development, AI coding tools, code quality"
+        canonical="https://ziontechgroup.com/ai-code-assistant"
+      />
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden cyber-grid-enhanced quantum-dots">
         
@@ -194,7 +190,7 @@ const AICodeAssistantPage = () => {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           
         <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-8 neon-border">
-            <Star className="w-5 h-5 text-blue-400 mr-2 animate-pulse" />
+            <Sparkles className="w-5 h-5 text-blue-400 mr-2 animate-pulse" />
             <span className="text-blue-400 text-sm font-medium">#1 AI Code Assistant 2024</span>
           </div>
           
@@ -208,20 +204,20 @@ const AICodeAssistantPage = () => {
           </p>
           
         <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <button
-              onClick={() => window.open("https://zion.app/contact", "_blank")}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 flex items-center gap-2"
+            <FuturisticButton
+    onClick={() => window.open("https: //zion.app/contact", "_blank")} variant="primary"
+              size="lg"
+              icon={<Code className="w-5 h-5" />}
             >
-              <Code className="w-5 h-5" />
               Start Coding with AI
-            </button>
-            <button
-              onClick={() => window.open("https://zion.app/contact", "_blank")}
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2"
+            </FuturisticButton>
+            <FuturisticButton
+    onClick={() => window.open("https: //zion.app/contact", "_blank")} variant="secondary"
+              size="lg"
+              icon={<Terminal className="w-5 h-5" />}
             >
-              <Terminal className="w-5 h-5" />
               Try Live Demo
-            </button>
+            </FuturisticButton>
           </div>
           {/* Stats */}
           
@@ -255,7 +251,7 @@ const AICodeAssistantPage = () => {
                 <Users className="w-6 h-6 text-purple-400" />
               </div>
               
-        <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 holographic-text">25,000+</div>
+        <div className="text-xl md: text-2xl lg:text-3xl font-bold text-white mb-2 holographic-text">25,000+</div>
               
         <div className="text-gray-300 text-xs md:text-sm">Developers Using</div>
             </div>
@@ -290,8 +286,9 @@ const AICodeAssistantPage = () => {
           
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="group hover:scale-105 transition-all duration-300 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+              <FuturisticCard key={index} className="group hover:scale-105 transition-all duration-300">
+                
+        <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
@@ -307,7 +304,7 @@ const AICodeAssistantPage = () => {
                     {feature.stats}
                   </span>
                 </div>
-              </div>
+              </FuturisticCard>
             ))}
           </div>
         </div>
@@ -329,7 +326,7 @@ const AICodeAssistantPage = () => {
           
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {capabilities.map((capability, index) => (
-              <div key={index} className="group hover:scale-105 transition-all duration-300 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
+              <FuturisticCard key={index} className="group hover:scale-105 transition-all duration-300">
                 
         <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
                   <Brain className="w-8 h-8" />
@@ -354,7 +351,7 @@ const AICodeAssistantPage = () => {
                     <span className="text-sm text-blue-400">{capability.speed}</span>
                   </div>
                 </div>
-              </div>
+              </FuturisticCard>
             ))}
           </div>
         </div>
@@ -376,7 +373,7 @@ const AICodeAssistantPage = () => {
           
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
             {languages.map((language, index) => (
-              <div key={index} className="group hover:scale-110 transition-all duration-300 text-center">
+              <FuturisticCard key={index} className="group hover:scale-110 transition-all duration-300 text-center">
                 
         <div className="text-4xl mb-3">{language.logo}</div>
                 <h3 className="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors mb-2">
@@ -386,7 +383,7 @@ const AICodeAssistantPage = () => {
         <div className="text-xs text-gray-400">
                   {language.popularity} accuracy
                 </div>
-              </div>
+              </FuturisticCard>
             ))}
           </div>
         </div>
@@ -408,7 +405,7 @@ const AICodeAssistantPage = () => {
           
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
-              <div key={index} className="group hover:scale-105 transition-all duration-300 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
+              <FuturisticCard key={index} className="group hover:scale-105 transition-all duration-300">
                 
         <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
                   {useCase.icon}
@@ -429,7 +426,7 @@ const AICodeAssistantPage = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </FuturisticCard>
             ))}
           </div>
         </div>
@@ -451,7 +448,7 @@ const AICodeAssistantPage = () => {
           
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}>
+              <FuturisticCard key={index} className={`relative ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}>
                 {plan.popular && (
                   
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -481,18 +478,14 @@ const AICodeAssistantPage = () => {
                     </div>
                   ))}
                 </div>
-                <button
-                  onClick={() => window.open("https://zion.app/contact", "_blank")}
-                  className={`w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
-                    plan.popular 
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white' 
-                      : 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600'
-                  }`}
+                <FuturisticButton
+    onClick={() => window.open("https: //zion.app/contact", "_blank")} variant={plan.popular ? "primary" : "outline"}
+                  className="w-full"
+                  icon={<ArrowRight className="w-4 h-4" />}
                 >
-                  <ArrowRight className="w-4 h-4" />
                   Get Started
-                </button>
-              </div>
+                </FuturisticButton>
+              </FuturisticCard>
             ))}
           </div>
         </div>
@@ -514,7 +507,7 @@ const AICodeAssistantPage = () => {
           
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="group hover:scale-105 transition-all duration-300 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
+              <FuturisticCard key={index} className="group hover:scale-105 transition-all duration-300">
                 
         <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -536,7 +529,7 @@ const AICodeAssistantPage = () => {
         <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
-              </div>
+              </FuturisticCard>
             ))}
           </div>
         </div>
@@ -555,20 +548,20 @@ const AICodeAssistantPage = () => {
           </p>
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={() => window.open("https://zion.app/contact", "_blank")}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 flex items-center gap-2"
+            <FuturisticButton
+    onClick={() => window.open("https: //zion.app/contact", "_blank")} variant="primary"
+              size="lg"
+              icon={<Code className="w-5 h-5" />}
             >
-              <Code className="w-5 h-5" />
               Start Free Trial
-            </button>
-            <button
-              onClick={() => window.open("https://zion.app/contact", "_blank")}
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2"
+            </FuturisticButton>
+            <FuturisticButton
+    onClick={() => window.open("https: //zion.app/contact", "_blank")} variant="secondary"
+              size="lg"
+              icon={<Terminal className="w-5 h-5" />}
             >
-              <Terminal className="w-5 h-5" />
               Try Live Demo
-            </button>
+            </FuturisticButton>
           </div>
           
         <div className="mt-8 text-sm text-gray-400">

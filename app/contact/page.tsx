@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React, { useState} from "react"
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, CheckCircle, Send } from 'lucide-react';
 
-// Contact information
-const contactInfo = [
+// Contact information,
+    const contactInfo = [
   { icon: <Phone className="w-6 h-6" />, title: "Phone", details: "+1-302-464-0950", description: "Call us for immediate assistance" },
   { icon: <Mail className="w-6 h-6" />, title: "Email", details: "kleber@ziontechgroup.com", description: "Send us an email anytime" },
   { icon: <MapPin className="w-6 h-6" />, title: "Location", details: "Delaware, USA", description: "Serving clients globally" },
   { icon: <Clock className="w-6 h-6" />, title: "Business Hours", details: "24/7 Support", description: "We're always here to help" }
 ];
-// Contact form data
-const ContactPage: React.FC = () => {
+// Contact form data,
+    const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,19 +24,19 @@ const [isSubmitting, setIsSubmitting] = useState(false);
 
 const [isSubmitted, setIsSubmitted] = useState(false);
 
-const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+      const { name, value } = e.target;
+      setFormData(prev => ({ ...prev, [name]: value }));
+    };
 
 const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission
+    // Simulate form submission,
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsSubmitting(false);
     setIsSubmitted(true);
-    // Reset form after 3 seconds
+    // Reset form after 3 seconds,
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({ name: '', email: '', company: '', phone: '', service: '', message: '' });
@@ -62,8 +62,8 @@ const handleSubmit = async (e: React.FormEvent) => {
               </h1>
               
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Ready to transform your business? Get in touch with our experts for a consultation 
-                on AI solutions, IT services, and 5G technology.
+                Ready to transform your business? Get in touch with our experts for a consultation,
+    on AI solutions, IT services, and 5G technology.
               </p>
             </div>
           </div>
@@ -127,12 +127,11 @@ const handleSubmit = async (e: React.FormEvent) => {
                         <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                           Full Name *
                         </label>
-                        <input
-                          type="text"
-                          id="name"
+                          <input
+    type="text"
+                            id="name"
                           name="name"
-                          value={ formData.name }
-                          onChange={ handleInputChange }
+                          value={ formData.name } onChange={ handleInputChange }
                           required
                           className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                           placeholder="Your full name"
@@ -143,11 +142,10 @@ const handleSubmit = async (e: React.FormEvent) => {
                           Email Address *
                         </label>
                         <input
-                          type="email"
+    type="email"
                           id="email"
                           name="email"
-                          value={ formData.email }
-                          onChange={ handleInputChange }
+                          value={ formData.email } onChange={ handleInputChange }
                           required
                           className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                           placeholder="your.email@example.com"
@@ -161,11 +159,10 @@ const handleSubmit = async (e: React.FormEvent) => {
                           Company
                         </label>
                         <input
-                          type="text"
+    type="text"
                           id="company"
                           name="company"
-                          value={ formData.company }
-                          onChange={ handleInputChange }
+                          value={ formData.company } onChange={ handleInputChange }
                           className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                           placeholder="Your company name"
                         />
@@ -175,11 +172,10 @@ const handleSubmit = async (e: React.FormEvent) => {
                           Phone Number
                         </label>
                         <input
-                          type="tel"
+    type="tel"
                           id="phone"
                           name="phone"
-                          value={ formData.phone }
-                          onChange={ handleInputChange }
+                          value={ formData.phone } onChange={ handleInputChange }
                           className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                           placeholder="+1 (555) 123-4567"
                         />
@@ -190,10 +186,9 @@ const handleSubmit = async (e: React.FormEvent) => {
                         Service Interest
                       </label>
                       <select
-                        id="service"
+    id="service"
                         name="service"
-                        value={ formData.service }
-                        onChange={ handleInputChange }
+                        value={ formData.service } onChange={ handleInputChange }
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                         <option value="">Select a service</option>
                         <option value="ai-solutions">AI Solutions</option>
@@ -211,22 +206,19 @@ const handleSubmit = async (e: React.FormEvent) => {
                         Message *
                       </label>
                       <textarea
-                        id="message"
+    id="message"
                         name="message"
-                        value={ formData.message }
-                        onChange={ handleInputChange }
+                        value={ formData.message } onChange={ handleInputChange }
                         required
-                        rows={ 6 }
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                          rows={ 6 } className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Tell us about your project or how we can help you..."
                       />
                     </div>
                     
         <div className="text-center">
                       <button
-                        type="submit"
-                        disabled={ isSubmitting }
-                        className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center mx-auto">
+    type="submit"
+                        disabled={ isSubmitting } className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center mx-auto">
                         { isSubmitting ? (
                           <>
                             

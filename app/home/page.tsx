@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Navigation, Phone, Mail, CheckCircle, Brain, Play, Star, ArrowRight } from 'lucide-react';
+import { Navigation, Phone, Mail, CheckCircle, Brain, Play, Star } from 'lucide-react';
+import Footer from '../components/Footer';
 
 const HomePage: React.FC = () => {
   const features = [
@@ -81,7 +82,7 @@ const HomePage: React.FC = () => {
         <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services" />
         <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
+        <meta property="og: description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
       </Helmet>
@@ -109,14 +110,14 @@ const HomePage: React.FC = () => {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 mb-8">
                     <a
-                      href="tel:+13024640950"
+    href="tel:+13024640950"
                       className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg"
                     >
                       <Phone className="w-5 h-5 mr-2" />
                       Call (302) 464-0950
                     </a>
                     <a
-                      href="mailto:kleber@ziontechgroup.com"
+    href="mailto:kleber@ziontechgroup.com"
                       className="cyber-button-secondary inline-flex items-center justify-center px-8 py-4 text-lg"
                     >
                       <Mail className="w-5 h-5 mr-2" />
@@ -189,14 +190,14 @@ const HomePage: React.FC = () => {
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-                We combine cutting-edge technology with deep industry expertise to deliver 
-                solutions that transform businesses and drive real results.
+                We combine cutting-edge technology with deep industry expertise to deliver,
+    solutions that transform businesses and drive real results.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-8 text-center group hover:scale-105 transition-all duration-300">
-                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${feature.color} flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${feature.color} flex items-center justify-center mx-auto mb-6 group-hover: scale-110 transition-transform duration-300`}>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
@@ -263,14 +264,14 @@ const HomePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+13024640950"
+    href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call (302) 464-0950
               </a>
               <a
-                href="mailto:kleber@ziontechgroup.com"
+    href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
               >
                 <Mail className="w-5 h-5 mr-2" />

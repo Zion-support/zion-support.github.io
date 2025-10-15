@@ -28,15 +28,15 @@ const CareersPage: React.FC = () => {
         'PhD in Computer Science or related field',
         '5+ years experience in AI/ML',
         'Expertise in Python, TensorFlow, PyTorch',
-        'Experience with cloud platforms (AWS, GCP, Azure)',
-        'Strong problem-solving and communication skills'
+        'Experience with cloud platforms (AWS, GCP, Azure)',]
+        'Strong problem-solving and communication skills']
       ],
       benefits: [
         'Competitive salary and equity',
         'Health, dental, and vision insurance',
         'Flexible work arrangements',
-        'Professional development budget',
-        '401(k) with company matching'
+        'Professional development budget',]
+        '401(k) with company matching']
       ]
     },
     {
@@ -50,15 +50,15 @@ const CareersPage: React.FC = () => {
         'Bachelor\'s degree in Computer Science',
         '3+ years full-stack development experience',
         'Proficiency in React, Node.js, TypeScript',
-        'Experience with databases (PostgreSQL, MongoDB)',
-        'Knowledge of cloud services and DevOps'
+        'Experience with databases (PostgreSQL, MongoDB)',]
+        'Knowledge of cloud services and DevOps']
       ],
       benefits: [
         'Competitive salary',
         'Comprehensive health benefits',
         'Remote work flexibility',
-        'Learning and development opportunities',
-        'Team building events'
+        'Learning and development opportunities',]
+        'Team building events']
       ]
     },
     {
@@ -72,15 +72,15 @@ const CareersPage: React.FC = () => {
         'Bachelor\'s degree in Business or Technical field',
         '4+ years product management experience',
         'Experience with AI/ML products',
-        'Strong analytical and communication skills',
-        'MBA preferred'
+        'Strong analytical and communication skills',]
+        'MBA preferred']
       ],
       benefits: [
         'Competitive salary and bonus',
         'Health and wellness benefits',
         'Flexible PTO policy',
-        'Professional development opportunities',
-        'Stock options'
+        'Professional development opportunities',]
+        'Stock options']
       ]
     },
     {
@@ -94,20 +94,20 @@ const CareersPage: React.FC = () => {
         '3+ years DevOps experience',
         'Expertise in AWS, Docker, Kubernetes',
         'Experience with CI/CD pipelines',
-        'Knowledge of monitoring and logging tools',
-        'Scripting skills (Python, Bash)'
+        'Knowledge of monitoring and logging tools',]
+        'Scripting skills (Python, Bash)']
       ],
       benefits: [
         'Competitive salary',
         'Health insurance',
         'Remote work options',
-        'Certification reimbursement',
-        'Performance bonuses'
+        'Certification reimbursement',]
+        'Performance bonuses']
       ]
     }
   ];
 
-const benefits = [
+  const benefits = [
     {
       icon: '🚀',
       title: 'Innovation',
@@ -130,12 +130,13 @@ const benefits = [
     }
   ];
 
-const stats = [
+  const stats = [
     { number: "50+", label: "Team Members" },
     { number: "15+", label: "Countries" },
     { number: "4.9/5", label: "Employee Satisfaction" },
     { number: "100%", label: "Remote Team" }
   ];
+
   return (
     <>
       <Helmet>
@@ -165,13 +166,13 @@ const stats = [
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="#open-positions"
+    href="#open-positions"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
                   View Open Positions
                 </a>
                 <a
-                  href="/contact"
+    href="/contact"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   Contact Us
@@ -275,7 +276,7 @@ const stats = [
                     
         <div className="lg:ml-6">
                       <a
-                        href={`/contact?position=${encodeURIComponent(position.title)}`}
+    href={`/contact?position=${encodeURIComponent(position.title)}`}
                         className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center group"
                       >
                         Apply Now
@@ -327,13 +328,13 @@ const stats = [
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/contact"
+    href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Send Your Resume
                 </a>
                 <a
-                  href="mailto:careers@ziontechgroup.com"
+    href="mailto:careers@ziontechgroup.com"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   Email Us
@@ -354,14 +355,14 @@ const stats = [
             We're always looking for talented individuals. Send us your resume and let's talk!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact"
+            <Link
+    to="/contact"
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               Send Your Resume
             </Link>
-            <Link 
-              to="/about"
+            <Link
+    to="/about"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               Learn About Us

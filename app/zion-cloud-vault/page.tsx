@@ -2,6 +2,26 @@ import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 import { Zap, Share, Users, Shield, CheckCircle, Cloud, Lock, Clock, ArrowRight } from 'lucide-react';
 export default function ZionCloudVault() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          ZionCloudVault
+        </h1>
+      </div>
+    </div>
+  );
+}
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          ZionCloudVault
+        </h1>
+      </div>
+    </div>
+  );
+}
   const features = [
     {
       title: "Real-time Sync",
@@ -35,7 +55,7 @@ export default function ZionCloudVault() {
     }
   ];
 
-const pricingPlans = [
+  const pricingPlans = [
     {
       name: "Personal",
       price: 9,
@@ -46,8 +66,8 @@ const pricingPlans = [
         "5 devices",
         "Basic sharing",
         "Email support",
-        "30-day version history",
-        "Standard encryption"
+        "30-day version history",]
+        "Standard encryption"]
       ],
       popular: false
     },
@@ -63,8 +83,8 @@ const pricingPlans = [
         "Priority support",
         "1-year version history",
         "Advanced encryption",
-        "Team collaboration",
-        "API access"
+        "Team collaboration",]
+        "API access"]
       ],
       popular: true
     },
@@ -81,21 +101,21 @@ const pricingPlans = [
         "Unlimited version history",
         "Military-grade encryption",
         "Advanced admin controls",
-        "SSO integration",
-        "Compliance reporting"
+        "SSO integration",]
+        "Compliance reporting"]
       ],
       popular: false
     }
   ];
 
-const storageStats = [
+  const storageStats = [
     { number: "99.99%", label: "Uptime SLA", icon: <Cloud className="w-6 h-6" /> },
     { number: "256-bit", label: "AES Encryption", icon: <Lock className="w-6 h-6" /> },
     { number: "5x", label: "Faster Sync", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support", icon: <Clock className="w-6 h-6" /> }
   ];
 
-const testimonials = [
+  const testimonials = [
     {
       name: "Jennifer Adams",
       company: "Creative Agency",
@@ -121,16 +141,17 @@ const testimonials = [
       avatar: "SC"
     }
   ];
+
   return (
     <>
       <Helmet>
         <title>Zion Cloud Vault - Secure Cloud Storage & File Sharing | Zion Tech Group</title>
         <meta
-          name="description"
+    name="description"
           content="Secure your files with Zion Cloud Vault - the ultimate cloud storage solution. Military-grade encryption, real-time sync, team collaboration, and compliance features. Starting at $9/month."
         />
         <meta
-          name="keywords"
+    name="keywords"
           content="cloud storage, file sharing, secure storage, team collaboration, file sync, data backup, encryption, compliance, Zion Cloud Vault"
         />
       </Helmet>
@@ -166,14 +187,14 @@ const testimonials = [
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
-                to="/contact"
+    to="/contact"
                 className="group bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-blue-500/25 hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/demo"
+    to="/demo"
                 className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
                 Watch Demo
@@ -217,8 +238,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 relative overflow-hidden"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 relative overflow-hidden"
                 >
                   
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -266,11 +286,10 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
-                  key={index}
-                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
+    key={index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
                     plan.popular 
                       ? 'border-blue-500/50 bg-gradient-to-br from-blue-500/10 to-cyan-500/10' 
-                      : 'border-white/20 hover:border-blue-500/30'
+                      : 'border-white/20 hover: border-blue-500/30'
                   }`}
                 >
                   {plan.popular && (
@@ -302,11 +321,11 @@ const testimonials = [
                     ))}
                   </ul>
                   <Link
-                    to="/contact"
+    to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
                       plan.popular
                         ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700 shadow-lg hover:shadow-blue-500/25'
-                        : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900'
+                        : 'border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-slate-900'
                     }`}
                   >
                     Get Started
@@ -334,8 +353,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 relative overflow-hidden"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 relative overflow-hidden"
                 >
                   
         <div className="flex items-center mb-4">
@@ -378,14 +396,14 @@ const testimonials = [
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+    to="/contact"
                 className="group bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-blue-500/25 hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/demo"
+    to="/demo"
                 className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
                 Watch Demo

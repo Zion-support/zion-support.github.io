@@ -8,6 +8,26 @@ const features = [ { icon: <Brain className="w-6 h-6" />, title: "AI Product Rec
 
 
 export default function Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          Page
+        </h1>
+      </div>
+    </div>
+  );
+}
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          Page
+        </h1>
+      </div>
+    </div>
+  );
+}
 const aiFeatures = [ { title: "Dynamic Pricing", description: "AI-powered pricing optimization based on demand, competition, and market conditions", icon: <Percent className="w-8 h-8" />, benefit: "Increase revenue by 15-25%" }, { title: "Inventory Prediction", description: "Predictive analytics to optimize stock levels and reduce overstock/understock issues", icon: <Package className="w-8 h-8" />, benefit: "Reduce inventory costs by 30%" }, { title: "Customer Segmentation", description: "AI-driven customer segmentation for targeted marketing and personalized experiences", icon: <Users className="w-8 h-8" />, benefit: "Improve conversion by 40%" }, { title: "Chatbot Support", description: "24/7 AI-powered customer support with natural language understanding", icon: <MessageSquare className="w-8 h-8" />, benefit: "Reduce support costs by 60%" } ];
 
 const pricingPlans = [ { name: "Starter", price: "$199", period: "month", description: "Perfect for small online stores and startups", features: [ "Up to 1,000 products", "Basic AI recommendations", "Standard analytics", "Email support", "Mobile responsive", "SSL certificate", "Basic integrations" ], popular: false }, { name: "Professional", price: "$499", period: "month", description: "Ideal for growing e-commerce businesses", features: [ "Up to 10,000 products", "Advanced AI features", "Advanced analytics", "Priority support", "PWA capabilities", "Custom integrations", "Multi-language support", "Advanced SEO tools" ], popular: true }, { name: "Enterprise", price: "$999", period: "month", description: "Complete solution for large e-commerce operations", features: [ "Unlimited products", "Full AI capabilities", "Custom analytics", "24/7 dedicated support", "Custom development", "White-label options", "Advanced security", "On-premise deployment" ], popular: false } ];
@@ -53,13 +73,13 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
                 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
-                    href="tel:+13024640950"
+    href="tel:+13024640950"
                     className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25 flex items-center justify-center">
                     <Phone className="w-5 h-5 mr-2" />
                     Start Free Trial
                   </a>
                   <a
-                    href="#demo"
+    href="#demo"
                     className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center">
                     <Play className="w-5 h-5 mr-2" />
                     Watch Demo
@@ -87,9 +107,8 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
               
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 { features.map((feature, index) => (
-                  <div 
-                    key={index } 
-                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-green-500/20 rounded-2xl p-8 hover:border-green-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10 neon-card">
+                  <div
+    key={index } className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-green-500/20 rounded-2xl p-8 hover:border-green-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10 neon-card">
                     
         <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       
@@ -135,9 +154,8 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
               
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 { aiFeatures.map((feature, index) => (
-                  <div 
-                    key={index } 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-green-500/20 rounded-2xl p-8 hover:border-green-400/40 transition-all duration-300 hover:transform hover:scale-105">
+                  <div
+    key={index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-green-500/20 rounded-2xl p-8 hover:border-green-400/40 transition-all duration-300 hover:transform hover:scale-105">
                     
         <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
                       
@@ -175,9 +193,8 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
               
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 { integrations.map((integration, index) => (
-                  <div 
-                    key={index } 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-green-500/20 rounded-xl p-6 text-center hover:border-green-400/40 transition-all duration-300 hover:transform hover:scale-105">
+                  <div
+    key={index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-green-500/20 rounded-xl p-6 text-center hover:border-green-400/40 transition-all duration-300 hover:transform hover:scale-105">
                     
         <div className="text-4xl mb-3">{ integration.logo }</div>
                     
@@ -206,12 +223,11 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
               
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 { pricingPlans.map((plan, index) => (
-                  <div 
-                    key={index } 
-                    className={ `relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl ${
+                  <div
+    key={index } className={ `relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl ${
                       plan.popular 
                         ? 'border-green-400/40 shadow-green-500/10' 
-                        : 'border-green-500/20 hover:border-green-400/40' }`}
+                        : 'border-green-500/20 hover: border-green-400/40' }`}
                   >
                     { plan.popular && (
                       
@@ -243,11 +259,11 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
                       ))}
                     </div>
                     <a
-                      href="tel:+13024640950"
+    href="tel:+13024640950"
                       className={ `w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
                         plan.popular
                           ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-600 hover:to-blue-700'
-                          : 'border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900' }`}
+                          : 'border-2 border-green-400 text-green-400 hover: bg-green-400 hover:text-slate-900' }`}
                     >
                       Get Started
                     </a>
@@ -275,9 +291,8 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
               
         <div className="grid md:grid-cols-3 gap-8">
                 { testimonials.map((testimonial, index) => (
-                  <div 
-                    key={index } 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-green-500/20 rounded-2xl p-8 hover:border-green-400/40 transition-all duration-300">
+                  <div
+    key={index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-green-500/20 rounded-2xl p-8 hover:border-green-400/40 transition-all duration-300">
                     
         <div className="flex items-center mb-4">
                       { [...Array(testimonial.rating)].map((_, i) => (
@@ -317,13 +332,13 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
                 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                    href="tel:+13024640950"
+    href="tel:+13024640950"
                     className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25 flex items-center justify-center">
                     <Phone className="w-5 h-5 mr-2" />
                     Call +1 302 464 0950
                   </a>
                   <a
-                    href="mailto:kleber@ziontechgroup.com"
+    href="mailto:kleber@ziontechgroup.com"
                     className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center">
                     <Mail className="w-5 h-5 mr-2" />
                     Get Free Demo

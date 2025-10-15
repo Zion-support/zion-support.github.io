@@ -36,6 +36,26 @@ const features = [
 
 
 export default function Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          Page
+        </h1>
+      </div>
+    </div>
+  );
+}
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          Page
+        </h1>
+      </div>
+    </div>
+  );
+}
 const aiCapabilities = [
     { title: "Drug Interaction Checker",
       description: "AI-powered system that identifies potential drug interactions and adverse effects",
@@ -66,8 +86,8 @@ const pricingPlans = [
         "EHR system",
         "Telemedicine",
         "Email support",
-        "Basic analytics",
-        "HIPAA compliance"
+        "Basic analytics",]
+        "HIPAA compliance"]
       ],
       popular: false },
     { name: "Hospital",
@@ -81,8 +101,8 @@ const pricingPlans = [
         "Advanced telemedicine",
         "Priority support",
         "Advanced analytics",
-        "Custom integrations",
-        "Multi-location support"
+        "Custom integrations",]
+        "Multi-location support"]
       ],
       popular: true },
     { name: "Enterprise",
@@ -96,8 +116,8 @@ const pricingPlans = [
         "Enterprise telemedicine",
         "24/7 dedicated support",
         "Custom development",
-        "On-premise deployment",
-        "White-label options"
+        "On-premise deployment",]
+        "White-label options"]
       ],
       popular: false }
   ];
@@ -279,7 +299,7 @@ const testimonials = [
                   <button className={ `w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular 
                       ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300' 
-                      : 'bg-white/20 text-white hover:bg-white/30' }`}>
+                      : 'bg-white/20 text-white hover: bg-white/30' }`}>
                     Get Started
                   </button>
                 </div>
