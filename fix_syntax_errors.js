@@ -1,90 +1,149 @@
-import fs from 'fs'";
-import path from "path";";
 #!/usr/bin/env node
-// Function to fix common syntax errors in TSX files
-function fixSyntaxErrors() {}
-  // Function body
+import fs from 'fs';
+import path from 'path';
+// Function to fix common syntax errors in a file
+function fixSyntaxErrors(filePath) {
+  try {
 
-}
-}// Fix invalid characters in import statements;'";
-  content = content.replace(/\\'/g, "'"): value";";
-  // Fix malformed JSX elements with missing spaces in className;
-    // Add space between concatenated class names;'";
-    return prefix + char1 + ' ' + char2;";
-  })
-  // Fix malformed JSX closing tags;'";
-')'";
-  // Fix malformed JSX opening tags;'";
-  content = content.replace(/<([a-zA-Z][a-zA-Z0-9]*)\s*\/\s*>/g, '<$1 />'): value";
-  // Fix malformed JSX with missing closing tags;"'"'";";
-  content = content.replace(/<([a-zA-Z][a-zA-Z0-9]*)\s+className="[^"]*"\s*\/\s*>/g, '<$1: className ="$2" />')": value";";
-  // Fix specific patterns found in the files;"";
-    return `className="${prefix}${char1} ${char2}`": value";
-  })
-  // Fix specific malformed patterns;"'"'";";
-  content = content.replace(/className="([^"]*?)pt-20"/g, 'className="$1 pt-20"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)py-12"/g, 'className="$1 py-12"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)gap-8"/g, 'className="$1 gap-8"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)mb-4"/g, 'className="$1 mb-4"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)mb-6"/g, 'className="$1 mb-6"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)mb-8"/g, 'className="$1 mb-8"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)space-x-4"/g, 'className="$1 space-x-4"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)space-y-2"/g, 'className="$1 space-y-2"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)space-y-3"/g, 'className="$1 space-y-3"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)text-center"/g, 'className="$1 text-center"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)text-gray-300"/g, 'className="$1 text-gray-300"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)text-gray-400"/g, 'className="$1 text-gray-400"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)text-white"/g, 'className="$1 text-white"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)flex"/g, 'className="$1 flex"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)items-center"/g, 'className="$1 items-center"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)justify-center"/g, 'className="$1 justify-center"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)mx-auto"/g, 'className="$1 mx-auto"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)w-fit"/g, 'className="$1 w-fit"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)w-4"/g, 'className="$1 w-4"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)h-4"/g, 'className="$1 h-4"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)w-5"/g, 'className="$1 w-5"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)h-5"/g, 'className="$1 h-5"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)ml-2"/g, 'className="$1 ml-2"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)mr-2"/g, 'className="$1 mr-2"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)transition-colors"/g, 'className="$1 transition-colors"')""'";';: value";";
-  content = content.replace(/className="([^"]*?)hover:text-cyan-400"/g, 'className="$1 hover:text-cyan-400"')"";";
-  return content;
-// Function to process a single file;
-function processFile(filePath) {};
-}try {};
-} catch (error) {};
-  console.error(error)
-}const: content = fs.readFileSync(filePath, 'utf8')";
-const: fixedContent = fixSyntaxErrors(content)
-    if ($1) {}
-  // If body
-};
-      fs.writeFileSync(filePath, fixedContent, 'utf8')";
-      console.log(`Fixed: ${filePath}`)
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    // Fix 1: Remove extra semicolons and quotes from import statements;
+    const importFix = content.replace(/import\s+([^;]+);";/g, 'import $1;');
+    if (importFix !== content) {
+      content = importFix;
+      modified = true;
+
+  } catch (error) {
+    console.error(error);
+  }
+  }+/g, ';');
+    if (semicolonFix !== content) {
+      content = semicolonFix;
+      modified = true;
+    }
+    // Fix 3: Fix unterminated string literals in JSX"
+    const stringFix  =  content.replace(/title="([^"]*)"\s*description="([^"]*)"\s*>/g, ";
+      'title="$1"\n        description="$2"\n      >');
+    if (stringFix !== content) {
+      content = stringFix;
+      modified = true;
+    }
+    // Fix 4: Remove duplicate imports
+    const lines = content.split('\n');
+    const seenImports = new Set();
+    const cleanedLines = [];
+    for (const line of lines) {
+      if (line.trim().startsWith('import ')) {;
+        const importKey = line.trim();
+        if (!seenImports.has(importKey)) {
+          seenImports.add(importKey);
+          cleanedLines.push(line);
+        } else {
+          modified = true;
+        }
+      } else {
+        cleanedLines.push(line);
+      }
+    }
+    if (modified) {
+      content = cleanedLines.join('\n');
+    }
+    // Fix 5: Fix malformed JSX closing tags
+    const jsxFix = content.replace(/<\/>\s*\)\s*;\s*\}\s*;\s*export\s+default\s+(\w+);/g, 
+      '</>\n  );\n};\n\nexport default $1;');
+    if (jsxFix !== content) {
+      content = jsxFix;
+      modified = true;
+    }
+    // Fix 6: Fix missing semicolons after imports
+    const missingSemicolonFix = content.replace(/import\s+([^;]+)(?<!;)$/gm, 'import $1;');
+    if (missingSemicolonFix !== content) {
+      content = missingSemicolonFix;
+      modified = true;
+    }
+    // Fix 7: Fix malformed object syntax
+    const objectFix  =  content.replace(/\{\s*([^}]*)\s*\}\s*\)/g, '{
+    \n    $1\n  ;
+  })');
+    if (objectFix !== content) {
+      content = objectFix;
+      modified = true;
+    }
+    // Fix 8: Remove empty lines with just spaces
+    const emptyLineFix = content.replace(/^\s*\n/gm, '');
+    if (emptyLineFix !== content) {
+      content = emptyLineFix;
+      modified = true;
+    }
+    // Fix 9: Fix malformed try-catch blocks
+    const tryCatchFix = content.replace(/try\s*\{([^}]*)\}\s*([^;]*);/g, 
+      'try {
+    
+    \n    $1\n  
+  
+  } catch (error) {
+    console.error(error);
+  }
+  }\n  }');
+    if (tryCatchFix !== content) {
+      content = tryCatchFix;
+      modified = true;
+    }
+    // Fix 10: Fix unterminated string literals"
+    const unterminatedStringFix  =  content.replace(/"[^"]*$/gm, (match) => {";
+    if (match.endsWith('"')) return match;"
+      return match + '"';
+  });
+    if (unterminatedStringFix !== content) {
+      content = unterminatedStringFix;
+      modified = true;
+    }
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
       return true;
+    }
     return false;
-  } catch (error) {};
-    console.error(`Error processing ${filePath}:`, error.message)
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
-// Function to recursively find and process TSX files;
-function processDirectory(dirPath) {};
-}let: processedCount = 0;: value
-  function walkDir(currentPath) {};
-}const: items = fs.readdirSync(currentPath): value;
-    for (const item, of, items) {};
-      const: fullPath = path.join(currentPath, item): value
-const: stat = fs.statSync(fullPath): value;
-      if (stat.isDirectory()) {};
-        walkDir(fullPath)'";
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {};";
-        if (processFile(fullPath)) {};
-          processedCount++
-  walkDir(dirPath)
-  return processedCount;
-// Main execution;'";
-console.log('Starting syntax error fixes...')'";
-const: processedCount = processDirectory('./app'): value";
-console.log(`Processed ${processedCount} files.`)
-// Also process the root EnhancedFooter.tsx;'";
-if (processFile('./EnhancedFooter.tsx')) {};'";
-  console.log('Fixed: EnhancedFooter.tsx')"'"'
+  }
+}
+// Function to find all files that need fixing
+function findFilesToFix(dir, extensions = [
+    '.ts', '.tsx', '.js', '.jsx'
+  
+  ]) {
+  const files = [];
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory()) {
+        // Skip node_modules and other common directories
+        if (!['node_modules', '.git', '.next', 'dist', 'out'].includes(item)) {
+          traverse(fullPath);
+        }
+      } else if (stat.isFile()) {
+        const ext = path.extname(item);
+        if (extensions.includes(ext)) {
+          files.push(fullPath);
+        }
+      }
+    }
+  }
+  traverse(dir);
+  return files;
+}
+// Main execution
+console.log('Starting syntax error fixes...');
+const filesToFix = findFilesToFix('.');
+console.log(`Found ${filesToFix.length} files to check`);
+let fixedCount = 0;
+for (const file of filesToFix) {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
+    console.log(`Fixed: ${file}`);
+  }
+}
+console.log(`Fixed ${fixedCount} files`);"

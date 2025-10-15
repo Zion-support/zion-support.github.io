@@ -19,7 +19,7 @@ export interface Service {
     website: string;}
   };
 }
-export const services: Service[] = [
+export const services: Service[]  =  [
   {
     id: 'ai-solutions',''
     title: 'AI Solutions',''
@@ -32,7 +32,7 @@ export const services: Service[] = [
       'Natural Language Processing',''
       'Computer Vision',''
       'Predictive Analytics',''
-      'AI Chatbots',''
+      'AI Chatbots','';
       'Automated Decision Making;''
     ],
     pricing: {}
@@ -334,7 +334,10 @@ export const services: Service[] = [
     href: '/micro-saas-solutions;''
   }
 ];
-export const getServicesByCategory = (category: Service['category']) => {''
+export const getServicesByCategory  =  (category: Service[
+    'category'
+  
+  ]) => {'';
   return services.filter(service => service.category === category)};
-export const getServiceById = (id: string) => {
+export const getServiceById  =  (id: string) => {;
   return services.find(service => service.id === id)};

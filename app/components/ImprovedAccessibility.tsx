@@ -15,20 +15,20 @@ interface ImprovedAccessibilityProps {
   enableLargeText?: boolean;}
   enableReducedMotion?: boolean;}
 }
-const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
+const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps>  =  ({
   children,
   enableKeyboardNavigation = true,
   enableScreenReader = true,}
   enableHighContrast = false,}
-  enableLargeText = false,})
+  enableLargeText = false,});
   enableReducedMotion = false;})
 }) => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
+  const [settings, setSettings]  =  useState<AccessibilitySettings>({
     highContrast: enableHighContrast,
     largeText: enableLargeText,
     reducedMotion: enableReducedMotion,}
     screenReader: enableScreenReader,}
-    keyboardNavigation: enableKeyboardNavigation,})
+    keyboardNavigation: enableKeyboardNavigation,});
     focusVisible: false;})
   });
   const [isVisible, setIsVisible] = useState(false);
@@ -71,18 +71,23 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
     } else {
       root.classList.remove('focus-visible');''
     }
-  }, [settings]);
+  }, [
+    settings
+  
+  ]);
   // Handle keyboard navigation
   useEffect(() => {
     if (!settings.keyboardNavigation) return;
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown  =  (event: KeyboardEvent) => {
       // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.altKey) {''
+      if (event.key === 'Tab' && event.shiftKey && event.altKey) {'';
         event.preventDefault();
         const mainContent = document.getElementById('main-content');''
         if (mainContent) {
           mainContent.focus();
-          mainContent.scrollIntoView({ behavior: 'smooth' });''
+          mainContent.scrollIntoView({ behavior: 'smooth' 
+  
+  });''
         }
       }
       // Toggle accessibility panel
@@ -91,12 +96,18 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
         setIsVisible(!isVisible);
       }
       // Focus visible
-      if (event.key === 'Tab') {''
-        setSettings(prev => ({ ...prev, focusVisible: true }));
+      if (event.key === 'Tab') {
+    ''
+        setSettings(prev => ({ ...prev, focusVisible: true 
+  
+  }));
       }
     };
     const handleMouseDown = () => {
-      setSettings(prev => ({ ...prev, focusVisible: false }));
+  
+    setSettings(prev => ({ ...prev, focusVisible: false 
+
+};
     };
     document.addEventListener('keydown', handleKeyDown);''
     document.addEventListener('mousedown', handleMouseDown);''
@@ -104,10 +115,13 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
       document.removeEventListener('keydown', handleKeyDown);''
       document.removeEventListener('mousedown', handleMouseDown);''
     };
-  }, [settings.keyboardNavigation, isVisible]);
+  }, [
+    settings.keyboardNavigation, isVisible
+  
+  ]);
   // Announce changes to screen readers
-  const announceToScreenReader = useCallback((message: string) => {
-    if (settings.screenReader) {
+  const announceToScreenReader  =  useCallback((message: string) => {
+    if (settings.screenReader) {;
       const announcement = document.createElement('div');''
       announcement.setAttribute('aria-live', 'polite');''
       announcement.setAttribute('aria-atomic', 'true');''
@@ -118,9 +132,12 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
         document.body.removeChild(announcement);
       }, 1000);
     }
-  }, [settings.screenReader]);
-  const toggleSetting = (key: keyof AccessibilitySettings) => {
-    setSettings(prev => {
+  }, [
+    settings.screenReader
+  
+  ]);
+  const toggleSetting  =  (key: keyof AccessibilitySettings) => {
+    setSettings(prev => {;
       const newSettings = { ...prev, [key]: !prev[key] };
       announceToScreenReader(`${key} ${newSettings[key] ? 'enabled' : 'disabled'}`);''
       return newSettings;
@@ -135,24 +152,24 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
         className="fixed top-4 right-4 z-50 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-3 text-white hover:bg-slate-700/90 transition-colors""
         title="Accessibility Settings""
         aria-label="Open accessibility settings""
-      >
+      >"
         <Eye className="w-5 h-5" />""
       </button>
       {/* Accessibility Panel */}
-      {isVisible && (
+      {isVisible && ("
         <div className="fixed top-16 right-4 z-50 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-white">""
           <div className="flex items-center justify-between mb-4">""
             <h3 className="text-lg font-semibold">Accessibility Settings</h3>""
             <button
-              onClick={() => setIsVisible(false)}
+              onClick={() => setIsVisible(false)}"
               className="text-gray-400 hover:text-white""
               aria-label="Close accessibility settings""
             >
               ×
             </button>
-          </div>
+          </div>"
           <div className="space-y-4">""
-            {/* High Contrast */}
+            {/* High Contrast */}"
             <div className="flex items-center justify-between">""
               <div className="flex items-center gap-2">""
                 <Eye className="w-4 h-4" />""
@@ -172,7 +189,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                 /></div>
               </button>
             </div>
-            {/* Large Text */}
+            {/* Large Text */}"
             <div className="flex items-center justify-between">""
               <div className="flex items-center gap-2">""
                 <Type className="w-4 h-4" />""
@@ -192,7 +209,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                 /></div>
               </button>
             </div>
-            {/* Reduced Motion */}
+            {/* Reduced Motion */}"
             <div className="flex items-center justify-between">""
               <div className="flex items-center gap-2">""
                 <MousePointer className="w-4 h-4" />""
@@ -212,7 +229,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                 /></div>
               </button>
             </div>
-            {/* Screen Reader */}
+            {/* Screen Reader */}"
             <div className="flex items-center justify-between">""
               <div className="flex items-center gap-2">""
                 {settings.screenReader ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}""
@@ -232,7 +249,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                 /></div>
               </button>
             </div>
-            {/* Keyboard Navigation */}
+            {/* Keyboard Navigation */}"
             <div className="flex items-center justify-between">""
               <div className="flex items-center gap-2">""
                 <Keyboard className="w-4 h-4" />""
@@ -253,7 +270,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
               </button>
             </div>
           </div>
-          {/* Keyboard Shortcuts */}
+          {/* Keyboard Shortcuts */}"
           <div className="mt-6 pt-4 border-t border-white/10">""
             <h4 className="text-sm font-semibold mb-2">Keyboard Shortcuts</h4>""
             <div className="text-xs text-gray-400 space-y-1">""
@@ -266,15 +283,18 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
         </div>
       )}
       {/* Skip to main content link */}
-      <a
+      <a"
         href="#main-content""
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50""
-        onClick={(e) => {
+        onClick={
+    (e) => {
           e.preventDefault();
           const mainContent = document.getElementById('main-content');''
           if (mainContent) {
             mainContent.focus();
-            mainContent.scrollIntoView({ behavior: 'smooth' });''
+            mainContent.scrollIntoView({ behavior: 'smooth' 
+  
+  });''
           }
         }}
       >
@@ -338,4 +358,5 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
     </>
   );
 };
-export default ImprovedAccessibility;
+
+export default ImprovedAccessibility;"

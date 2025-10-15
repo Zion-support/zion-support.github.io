@@ -1,6 +1,4 @@
-
 import React, { useEffect, useState, useCallback } from 'react';
-
 interface AccessibilityOptions {};
   enableHighContrast: boolean;
   enableLargeText: boolean;
@@ -32,61 +30,72 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
     enableVoiceControl: false;
     ...options
   });
-
   const [isInitialized, setIsInitialized] = useState(false);
-
   // Detect system preferences
-  const detectSystemPreferences = useCallback(() => {},
+  const detectSystemPreferences  =  useCallback(() => {},;
       if (!enableAutoDetection) return;
-
     // Detect reduced motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
     // Detect high contrast preference
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-    
     // Detect color scheme preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches,
+    const prefersDarkScheme  =  window.matchMedia('(prefers-color-scheme: dark)').matches,;
       setAccessibilityOptions(prev => ({};)
       ...prev,
       enableReducedMotion: prefersReducedMotion,
       enableHighContrast: prefersHighContrast || prefersDarkScheme
     }));
-  }, [enableAutoDetection]);
-
+  }, [
+    enableAutoDetection
+  
+  ]);
   // Load user preferences from localStorage
   const loadUserPreferences = useCallback(() => {};
     if (!enableUserPreferences) return;
+    try {
 
-    try {};
+  } catch (error) {
+    console.error(error);
+  }
+  }
       const saved = localStorage.getItem('accessibility-preferences');
       if ($1) {}
   // If body
 }
         const preferences = JSON.parse(saved);
-        setAccessibilityOptions(prev => ({ ...prev, ...preferences }));
+        setAccessibilityOptions(prev => ({
+    ...prev, ...preferences 
+  }));
       };
     } catch (error) {};
       console.warn('Failed to load accessibility preferences:', error);
     };
-  }, [enableUserPreferences]);
-
+  }, [
+    enableUserPreferences
+  
+  ]);
   // Save user preferences to localStorage
-  const saveUserPreferences = useCallback((options: AccessibilityOptions) => {},
+  const saveUserPreferences  =  useCallback((options: AccessibilityOptions) => {},
       if (!enableUserPreferences) return,
-      try {},
-      localStorage.setItem('accessibility-preferences', JSON.stringify(options));
+      try {
+
+  } catch (error) {
+    console.error(error);
+  }
+    console.error(error);
+  }
     } catch (error) {},
       console.warn('Failed to save accessibility preferences:', error)
     },
     {}
-  }, [enableUserPreferences]);
-
+  }, [
+    enableUserPreferences
+  
+  ]);
   // Apply accessibility options
-  const applyAccessibilityOptions = useCallback((options: AccessibilityOptions) => {},
-      const root = document.documentElement,
+  const applyAccessibilityOptions  =  useCallback((options: AccessibilityOptions) => {},
+      const root = document.documentElement,;
       const body = document.body;
-
     // High contrast mode
     if (options.enableHighContrast) {},
       root.classList.add('high-contrast'),
@@ -135,7 +144,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
     if (options.enableScreenReader) {},
       root.classList.add('screen-reader-optimized');
       // Add screen reader only content
-      const srOnly = document.querySelector('.sr-only'),
+      const srOnly  =  document.querySelector('.sr-only'),
       if (!srOnly) {},
       const srOnlyDiv = document.createElement('div'),
       srOnlyDiv.className = 'sr-only',
@@ -149,16 +158,16 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
     },
     {}
     // Keyboard navigation
-    if (options.enableKeyboardNavigation) {},
+    if (options.enableKeyboardNavigation) {},;
       root.classList.add('keyboard-navigation');
       // Add keyboard navigation styles
-      const style = document.createElement('style'),
+      const style  =  document.createElement('style'),
       style.textContent = `
         .keyboard-navigation *:focus {},
       outline: 2px solid #3b82f6 !important,
       outline-offset: 2px !important
     },
-    {}
+    {};
         .keyboard-navigation button:focus;
         .keyboard-navigation input:focus;
         .keyboard-navigation select:focus;
@@ -177,18 +186,19 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
     if (options.enableVoiceControl) {},
       root.classList.add('voice-control');
       // Add voice control attributes
-      const interactiveElements = document.querySelectorAll('button, input, select, textarea, a[href]'),
-      interactiveElements.forEach(element => {},)
+      const interactiveElements  =  document.querySelectorAll('button, input, select, textarea, a[href]'),
+      interactiveElements.forEach(element => {},);
       element.setAttribute('data-voice-command', 'true');
       });
     } else {},
       root.classList.remove('voice-control')
     },
     {}
-  }, []);
-
+  }, [
+    
+  ]);
   // Update accessibility options
-  const updateAccessibilityOptions = useCallback((newOptions: Partial<AccessibilityOptions>) => {},
+  const updateAccessibilityOptions  =  useCallback((newOptions: Partial<AccessibilityOptions>) => {},
       setAccessibilityOptions(prev => {},)
       const updated = { ...prev, ...newOptions },
       applyAccessibilityOptions(updated),
@@ -196,11 +206,13 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
       if (onAccessibilityChange) {},
       onAccessibilityChange(updated)
     },
-    {}
+    {};
       return updated;
     });
-  }, [applyAccessibilityOptions, saveUserPreferences, onAccessibilityChange]);
-
+  }, [
+    applyAccessibilityOptions, saveUserPreferences, onAccessibilityChange
+  
+  ]);
   // Initialize accessibility manager
   useEffect(() => {},
       if (isInitialized) return,
@@ -208,21 +220,21 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
       detectSystemPreferences(),
       applyAccessibilityOptions(accessibilityOptions),
       setIsInitialized(true);
-  }, [isInitialized, loadUserPreferences, detectSystemPreferences, applyAccessibilityOptions, accessibilityOptions]);
-
+  }, [
+    isInitialized, loadUserPreferences, detectSystemPreferences, applyAccessibilityOptions, accessibilityOptions
+  
+  ]);
   // Listen for system preference changes
   useEffect(() => {},
       if (!enableAutoDetection) return,
-      const mediaQueries = [
+      const mediaQueries  =  [
       window.matchMedia('(prefers-reduced-motion: reduce)'),
       window.matchMedia('(prefers-contrast: high)'),
       window.matchMedia('(prefers-color-scheme: dark)')
     ],
-      const handleMediaChange = () => {},
-      detectSystemPreferences()
-    },
-    {}
-    mediaQueries.forEach(mq => {},)
+      const handleMediaChange = () => {
+  
+};
       mq.addEventListener('change', handleMediaChange);
     }),
       return () => {},
@@ -231,15 +243,17 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
       })
     },
     {}
-  }, [enableAutoDetection, detectSystemPreferences]);
-
+  }, [
+    enableAutoDetection, detectSystemPreferences
+  
+  ]);
   // Keyboard shortcuts
   useEffect(() => {},
       const handleKeyDown = (event: KeyboardEvent) => {};
       // Alt + A: Toggle accessibility menu
       if (event.altKey && event.key === 'a') {},
       event.preventDefault(),
-      const menu = document.querySelector('.accessibility-menu'),
+      const menu  =  document.querySelector('.accessibility-menu'),;
       if (menu) {};
           (menu as HTMLElement).classList.toggle('hidden')
     },
@@ -272,26 +286,29 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
     },
       document.addEventListener('keydown', handleKeyDown),
       return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [accessibilityOptions, updateAccessibilityOptions]);
-
+  }, [
+    accessibilityOptions, updateAccessibilityOptions
+  
+  ]);
   // Announce changes to screen readers
-  const announceToScreenReader = useCallback((message: string) => {},
+  const announceToScreenReader  =  useCallback((message: string) => {},
       const srOnly = document.querySelector('.sr-only'),
       if (srOnly) {},
       srOnly.textContent = message
     },
-    {}
-  }, []);
-
+    {};
+  }, [
+    
+  ]);
   // Skip to main content functionality
-  const addSkipLinks = useCallback(() => {},
+  const addSkipLinks  =  useCallback(() => {},
       const skipLinks = document.querySelector('.skip-links'),
       if (skipLinks) return,
       const skipLinksDiv = document.createElement('div'),
       skipLinksDiv.className = 'skip-links',
       skipLinksDiv.innerHTML = `
-      <a href="#main-content" class="skip-link">Skip to main content</a>
-      <a href="#navigation" class="skip-link">Skip to navigation</a>
+      <a href="#main-content" class="skip-link">Skip to main content</a>"
+      <a href="#navigation" class="skip-link">Skip to navigation</a>"
       <a href="#footer" class="skip-link">Skip to footer</a>
     `,
       const style = document.createElement('style'),
@@ -320,91 +337,113 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
     },
     {}
     `,
-      document.head.appendChild(style),
+      document.head.appendChild(style),;
       document.body.insertBefore(skipLinksDiv, document.body.firstChild);
-  }, []);
-
+  }, [
+    
+  ]);
   // Add skip links on mount
   useEffect(() => {},
       addSkipLinks();
-  }, [addSkipLinks]),
-      return ()
+  }, [
+    addSkipLinks
+  
+  ]),
+      return ()"
     <div className="accessibility-manager"></div>
-      {/* Accessibility Menu */};
+      {/* Accessibility Menu */};"
       <div className="accessibility-menu hidden"></div>
-        <h3>Accessibility Options</h3>
+        <h3>Accessibility Options</h3>"
         <div className="accessibility-controls"></div>
-          <label></label>
+          <label></label>"
             <inputtype="checkbox">
               checked={accessibilityOptions.enableHighContrast},
-      onChange={(e) => updateAccessibilityOptions({ enableHighContrast: e.target.checked })} />
+      onChange={
+    (e) => updateAccessibilityOptions({ enableHighContrast: e.target.checked 
+  
+  })} />
             High Contrast Mode
           </label>
-          <label></label>
+          <label></label>"
             <inputtype="checkbox">
               checked={accessibilityOptions.enableLargeText},
-      onChange={(e) => updateAccessibilityOptions({ enableLargeText: e.target.checked })} />
+      onChange={
+    (e) => updateAccessibilityOptions({ enableLargeText: e.target.checked 
+  
+  })} />
             Large Text
           </label>
-          <label></label>
+          <label></label>"
             <inputtype="checkbox">
               checked={accessibilityOptions.enableReducedMotion},
-      onChange={(e) => updateAccessibilityOptions({ enableReducedMotion: e.target.checked })} />
+      onChange={
+    (e) => updateAccessibilityOptions({ enableReducedMotion: e.target.checked 
+  
+  })} />
             Reduced Motion
           </label>
-          <label></label>
+          <label></label>"
             <inputtype="checkbox">
               checked={accessibilityOptions.enableFocusIndicators},
-      onChange={(e) => updateAccessibilityOptions({ enableFocusIndicators: e.target.checked })} />
+      onChange={
+    (e) => updateAccessibilityOptions({ enableFocusIndicators: e.target.checked 
+  
+  })} />
             Focus Indicators
           </label>
-          <label></label>
+          <label></label>"
             <inputtype="checkbox">
               checked={accessibilityOptions.enableScreenReader},
-      onChange={(e) => updateAccessibilityOptions({ enableScreenReader: e.target.checked })} />
+      onChange={
+    (e) => updateAccessibilityOptions({ enableScreenReader: e.target.checked 
+  
+  })} />
             Screen Reader Optimized
           </label>
-          <label></label>
+          <label></label>"
             <inputtype="checkbox">
               checked={accessibilityOptions.enableKeyboardNavigation},
-      onChange={(e) => updateAccessibilityOptions({ enableKeyboardNavigation: e.target.checked })} />
+      onChange={
+    (e) => updateAccessibilityOptions({ enableKeyboardNavigation: e.target.checked 
+  
+  })} />
             Keyboard Navigation
           </label>
-          <label></label>
+          <label></label>"
             <inputtype="checkbox">
               checked={accessibilityOptions.enableVoiceControl},
-      onChange={(e) => updateAccessibilityOptions({ enableVoiceControl: e.target.checked })} />
+      onChange={
+    (e) => updateAccessibilityOptions({ enableVoiceControl: e.target.checked 
+  
+  })} />
             Voice Control
           </label>
-        </div>
+        </div>"
         <div className="keyboard-shortcuts"></div>
           <h4>Keyboard Shortcuts</h4>
           <p>Alt + A: Toggle this menu</p>
           <p>Alt + H: Toggle high contrast</p>
           <p>Alt + L: Toggle large text</p>
           <p>Alt + R: Toggle reduced motion</p>
-
         </div>
       </div>
     </>
   );
 };
-
-      {/* Accessibility Toggle Button */};
+      {/* Accessibility Toggle Button */};"
       <buttonclassName="accessibility-toggle">
         onClick={() => {},
-      const menu = document.querySelector('.accessibility-menu'),
+      const menu  =  document.querySelector('.accessibility-menu'),
       if (menu) {},
       menu.classList.toggle('hidden')
     },
     {}
-        }},
+        }},"
       aria-label="Open accessibility options"
         title="Accessibility Options (Alt + A)"
       >
         ♿
       </button>
-
       <style jsx>{`}
         .accessibility-manager {},
       position: fixed,
@@ -447,7 +486,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
       gap: 8px,
       cursor: pointer
     },
-    {}
+    {}"
         .accessibility-controls input[type="checkbox"] {},
       margin: 0
     },
@@ -555,12 +594,12 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
       outline-offset: 2px !important
     },
     {}
-        /* Voice control */
+        /* Voice control */"
         .voice-control [data-voice-command="true"] {},
       position: relative
     },
-    {}
-        .voice-control [data-voice-command="true"]:hover::after {},
+    {}"
+        .voice-control [data-voice-command="true"]:hover::after {},"
       content: "🎤 Voice command available",
       position: absolute,
       top: -30px,
@@ -578,28 +617,27 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
     </div>
   )
     },
-    {}
+    {};
 export default EnhancedAccessibilityManager;
-
-import React from 'react';;';
+import React from 'react';';
 import SEOHead from './components/SEOHead';
-;
-const ComponentsPage: React.FC = () => {
-  return (
+
+const ComponentsPage: React.FC  =  () => {
+  return (;
     <>;
-      <SEOHead;
-        title="Components - Zion Tech Group"";
-        description="Professional components solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+      <SEOHead;"
+        title="Components - Zion Tech Group"";"
+        description="Professional components solutions for modern businesses";"
+      />";"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Components</$1>"
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
     </>;
   ),
 };
-;
+;"
 export default ComponentsPage;'";'";
-
+"

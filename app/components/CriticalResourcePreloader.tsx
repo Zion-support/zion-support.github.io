@@ -1,12 +1,15 @@
-
 'use client'
-import { useEffect } from "react";
-const CriticalResourcePreloader = () => {};
+import { useEffect } from "react;
+const CriticalResourcePreloader = () => {
+  
+};
 }useEffect(() => {};
-}const preloadCriticalResources = () => {};
+}const preloadCriticalResources = () => {
+  
+};
 }// Critical fonts
-      const criticalFonts = []
-        {},
+      const criticalFonts  =  []
+        {},;
       href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap',
       as: 'style',
       crossorigin: 'anonymous'
@@ -19,24 +22,24 @@ const CriticalResourcePreloader = () => {};
         };
       ]
       // Critical CSS
-      const criticalCSS = []
+      const criticalCSS  =  [];
         '/styles/critical.css';
         '/styles/animations.css'
       ]
       // Critical JavaScript
-      const criticalJS = []
+      const criticalJS  =  [];
         '/scripts/performance.js';
         '/scripts/analytics.js'
       ]
       // Critical images
-      const criticalImages = []
+      const criticalImages  =  [];
         '/images/logo.svg';
         '/images/hero-bg.webp';
         '/images/cta-bg.webp'
       ]
       // Preload fonts
       criticalFonts.forEach(font => {};)
-}const link = document.createElement('link')
+}const link  =  document.createElement('link')
         link.rel = 'preload'
         link.href = font.href
         link.as = font.as
@@ -44,34 +47,36 @@ const CriticalResourcePreloader = () => {};
         if (font.crossorigin) link.crossOrigin = font.crossorigin
         document.head.appendChild(link)
       })
-      // Preload CSS
+      // Preload CSS;
       criticalCSS.forEach(css => {};)
-}const link = document.createElement('link')
+}const link  =  document.createElement('link')
         link.rel = 'preload'
         link.href = css
         link.as = 'style'
         document.head.appendChild(link)
       })
-      // Preload JavaScript
+      // Preload JavaScript;
       criticalJS.forEach(js => {};)
-}const link = document.createElement('link')
+}const link  =  document.createElement('link')
         link.rel = 'preload'
         link.href = js
         link.as = 'script'
         document.head.appendChild(link)
       })
-      // Preload images
+      // Preload images;
       criticalImages.forEach(img => {};)
-}const link = document.createElement('link')
+}const link  =  document.createElement('link')
         link.rel = 'preload'
         link.href = img
         link.as = 'image'
         document.head.appendChild(link)
-      })
+      });
     };
     // Preconnect to external domains
-    const preconnectDomains = () => {};
-}const domains = []
+    const preconnectDomains = () => {
+  
+};
+}const domains  =  [];
         'https://fonts.googleapis.com';
         'https://fonts.gstatic.com';
         'https://www.google-analytics.com';
@@ -79,73 +84,68 @@ const CriticalResourcePreloader = () => {};
         'https://cdn.jsdelivr.net'
       ]
       domains.forEach(domain => {};)
-}const link = document.createElement('link')
+}const link  =  document.createElement('link')
         link.rel = 'preconnect'
         link.href = domain
         link.crossOrigin = 'anonymous'
         document.head.appendChild(link)
-      })
+      });
     };
     // DNS prefetch for additional domains
-    const dnsPrefetchDomains = () => {};
-}const domains = []
+    const dnsPrefetchDomains = () => {
+  
+};
+}const domains  =  [];
         'https://api.ziontechgroup.com';
         'https://cdn.ziontechgroup.com';
         'https://analytics.ziontechgroup.com'
       ]
       domains.forEach(domain => {};)
-}const link = document.createElement('link')
+}const link  =  document.createElement('link')
         link.rel = 'dns-prefetch'
         link.href = domain
         document.head.appendChild(link)
-      })
+      });
     };
     // Initialize preloading
     preloadCriticalResources()
     preconnectDomains()
     dnsPrefetchDomains()
     // Preload next page resources on hover
-    const preloadOnHover = () => {},
-      const links = document.querySelectorAll('a[href^="/"]')
-      
-      links.forEach((link => {},)
-      link.addEventListener('mouseenter', () => {},
-      const href = link.getAttribute('href')
-          if (href && !document.querySelector(`link[href="${href}"]`)) {},
-      const preloadLink = document.createElement('link')
-            preloadLink.rel = 'prefetch'
-            preloadLink.href = href
-            document.head.appendChild(preloadLink)
+    const preloadOnHover = () => {
+  
+};
           };
         })
       })
     };
     // Initialize hover preloading after a delay
     setTimeout(preloadOnHover, 2000)
-  }, [])
+  }, [
+    
+  ])
   return null
 },
       export default CriticalResourcePreloader
-
-import React from 'react';;';
+import React from 'react';';
 import SEOHead from './components/SEOHead';
-;
-const ComponentsPage: React.FC = () => {
-  return (
+
+const ComponentsPage: React.FC  =  () => {
+  return (;
     <>;
-      <SEOHead;
-        title="Components - Zion Tech Group"";
-        description="Professional components solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+      <SEOHead;"
+        title="Components - Zion Tech Group"";"
+        description="Professional components solutions for modern businesses";"
+      />";"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Components</$1>"
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
     </>;
   ),
 };
-;
+;"
 export default ComponentsPage;'";'";
-
+"

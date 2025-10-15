@@ -22,9 +22,18 @@ function getAllTsxFiles(dir) {
 // Fix unused imports in a file
 function fixUnusedImports(filePath) {
   try {
-    console.log(`Fixing ${filePath}...`);
+
+    console.log(`Fixing ${filePath
+  
+  } catch (error) {
+    console.error(error);
+  }
+  }
     // Use ESLint to fix unused imports
-    execSync(`npx eslint "${filePath}" --fix --quiet`, { stdio: 'pipe' });'"
+    execSync(`npx eslint "${filePath}" --fix --quiet`, {
+    stdio: 'pipe' "
+  
+  });'"
     console.log(`✓ Fixed ${filePath}`);
   } catch (error) {}
     console.log(`⚠ Could not auto-fix ${filePath}: ${error.message}`);
@@ -35,3 +44,4 @@ const files = getAllTsxFiles('./app');'
 console.log(`Found ${files.length} TypeScript files to process...`);
 files.forEach(fixUnusedImports);
 console.log('Done fixing unused imports!');'
+"

@@ -1,693 +1,501 @@
-<<<<<<< HEAD
-import React from 'react;'
-import { ArrowRight } from 'lucide-react;'
-import { CheckCircle } from 'lucide-react;'
-import { Star } from 'lucide-react;'
-import { Users } from 'lucide-react;'
-import { Clock } from 'lucide-react;'
-import { DollarSign } from 'lucide-react;'
-import { Shield } from 'lucide-react;'
-import { Code } from 'lucide-react;'
-import { Database } from 'lucide-react;'
-import { Mail } from 'lucide-react;'
-import { Settings } from 'lucide-react;'
-import { Target } from 'lucide-react;'
-import { TrendingUp } from 'lucide-react;'
-import { PieChart } from 'lucide-react;'
-import { MessageSquare } from 'lucide-react;'
-import { Heart } from 'lucide-react;'
-import { Globe } from 'lucide-react;'
-import { Smartphone } from 'lucide-react;'
-import { Network } from 'lucide-react;'
-import { Lock } from 'lucide-react;'
-import { Cpu } from 'lucide-react;'
-import { Wifi } from 'lucide-react;'
-import { Building2 } from 'lucide-react;'
-import { Briefcase } from 'lucide-react;'
-import { Lightbulb } from 'lucide-react;'
-import { Link } from 'react-router-dom;'
-import EnhancedSEO from '../components/EnhancedSEO;'
-const Page = () => {
-  const features = [
-    {
-      icon: <CheckCircle className="w-8 h-8" />,""
-      title: 'Advanced Features',''
-      description: 'Cutting-edge technology for maximum efficiency''
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,""
-      title: 'Secure & Reliable',''
-      description: 'Enterprise-grade security and 99.9% uptime''
-    },
-    {
-      icon: <Users className="w-8 h-8" />,""
-      title: 'Expert Support',''
-      description: '24/7 support from our team of specialists''
-    }
-  ];
-  return (
-    <>
-      <EnhancedSEO
-        title="Page - Zion Tech Group""
-        description="Professional page services by Zion Tech Group. Expert solutions for your business needs.""
-        keywords="page, business solutions, technology services, professional services""
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
-          <div className="max-w-7xl mx-auto text-center">""
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
-              Page
-              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">""
-                Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
-              Professional page services designed to help your business succeed and grow.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <Link
-                to="/contact""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
-              </Link>
-              <Link
-                to="/demo""
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
-              >
-                View Demo
-              </Link>
-            </div>
-          </div>
-        </section>
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">""
-          <div className="max-w-7xl mx-auto">""
-            <div className="text-center mb-16">""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
-                Why Choose Our Page Services?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">""
-                We deliver exceptional results with cutting-edge technology and expert knowledge.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
-              {features.map((feature, index) => (
-                <div key={index} className="text-center">""
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
-                  <p className="text-gray-300">{feature.description}</p>""
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
-          <div className="max-w-4xl mx-auto text-center">""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">""
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">""
-              Let's discuss how our page services can help your business succeed.''
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <Link
-                to="/contact""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
-              >
-                Contact Us
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
-              </Link>
-              <Link
-                to="/services""
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
-              >
-                View All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-};
-const page = React.lazy(() => import('./page'));''
-export default page;
-=======
-import React from 'react';;
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { BarChart3, Globe, Users, CheckCircle, ArrowRight, Target, Zap, Database, TrendingUp } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
-
 import FuturisticCard from '../components/FuturisticCard',
       import FuturisticButton from '../components/FuturisticButton',
       import ResponsiveContainer from '../components/ResponsiveContainer',
-      import EnhancedSEO from '../components/EnhancedSEO';
 ,
-      const WebsiteAnalyticsToolPage = () => {"}
-        "
-  const features = [",
-        "
-    {""}
-      title: "Real-time Analytics",""
-      description: "Track website performance in real-time with live visitor data and metrics",""
-      icon: <className="w-8 h-8" />,""
-      benefits: ["Live visitor tracking", "Real-time metrics", "Instant alerts", "Live dashboards"]
-    },",
-        "
-    {"}
-        "
-      title: "Visitor Behavior Analysis",""
-      description: "Understand how visitors interact with your website with detailed behavior analytics",""
-      icon: <Users className="w-8 h-8" />,""
-      benefits: ["Heatmaps", "Session recordings", "Click tracking", "Scroll analysis"]
-    },",
-        "
-    {"}
-        "
-      title: "Conversion Tracking",""
-      description: "Track and optimize conversions with detailed funnel analysis and goal tracking",""
-      icon: <Target className="w-8 h-8" />,""
-      benefits: ["Goal setup", "Funnel analysis", "Conversion paths", "ROI tracking"]
-    },",
-        "
-    {"}
-        "
-      title: "Traffic Sources",""
-      description: "Analyze where your traffic comes from and optimize your marketing efforts",""
-      icon: <Globe className="w-8 h-8" />,""
-      benefits: ["Source analysis", "Campaign tracking", "Referral tracking", "UTM parameters"]
-    },",
-        "
-    {"}
-        "
-      title: "Custom Dashboards",""
-      description: "Create personalized dashboards with the metrics that matter most to you",""
-      icon: <className="w-8 h-8" />,""
-      benefits: ["Custom widgets", "Drag & drop", "Multiple dashboards", "Team sharing"]
-    },",
-        "
-    {"}
-        "
-      title: "Advanced Reporting",""
-      description: "Generate comprehensive reports with automated scheduling and delivery",""
-      icon: <TrendingUp className="w-8 h-8" />,""
-      benefits: ["Scheduled reports", "Custom reports", "PDF export", "Email delivery"]
+      const WebsiteAnalyticsToolPage = () => {
+  "
+};
+      benefits: ["Scheduled reports", "Custom reports", "PDF export", "Email delivery"];
     };
   ];
-,
-      const pricing = [",
+,"
+      const pricing  =  [","
         "
-    {"}
+    {"}"
         "
       name: "Starter",""
       price: "$29",""
       period: "per month",""
-      description: "Perfect for small websites and blogs",",
+      description: "Perfect for small websites and blogs",","
         "
-      features: [",
+      features: [","
         "
         "Up to 100,000 page views",""
         "Basic analytics",""
         "Standard reports",""
-        "Email support",""
-        "Mobile app access";
-      ],",
+        "Email support","";
+        "Mobile app access";"
+      ],","
         "
-      popular: false",
+      popular: false","
         "
-    },",
+    },","
         "
-    {"}
+    {"}"
         "
       name: "Professional",""
       price: "$79",""
       period: "per month",""
-      description: "Ideal for growing businesses and e-commerce",",
+      description: "Ideal for growing businesses and e-commerce",","
         "
-      features: [",
+      features: [","
         "
         "Up to 1M page views",""
         "Advanced analytics",""
         "Custom dashboards",""
         "Priority support",""
         "API access",""
-        "Conversion tracking";
-      ],",
+        "Conversion tracking";"
+      ],","
         "
-      popular: true",
+      popular: true","
         "
-    },",
+    },","
         "
-    {"}
+    {"}"
         "
       name: "Enterprise",""
       price: "$199",""
       period: "per month",""
-      description: "For large websites with advanced needs",",
+      description: "For large websites with advanced needs",","
         "
-      features: [",
+      features: [","
         "
         "Unlimited page views",""
         "Advanced features",""
         "Custom integrations",""
         "Dedicated support",""
         "Advanced security",""
-        "Custom development";
-      ],",
+        "Custom development";"
+      ],","
         "
-      popular: false",
+      popular: false","
         "
     };
   ];
-,
-      const benefits = [",
+,"
+      const benefits  =  [","
         "
-    {"}
+    {"}"
         "
       title: "Better Insights",""
       description: "Gain deeper insights into your website performance and user behavior",""
-      icon: <className="w-6 h-6" />",
+      icon: <className="w-6 h-6" />","
         "
-    },",
+    },","
         "
-    {""}
+    {""}"
       title: "Increase Conversions",""
       description: "Optimize your website to increase conversions by up to 30%",""
-      icon: <Target className="w-6 h-6" />",
+      icon: <Target className="w-6 h-6" />","
         "
-    },",
+    },","
         "
-    {""}
+    {""}"
       title: "Save Time",""
       description: "Automate reporting and get insights without manual analysis",""
-      icon: <className="w-6 h-6" />",
+      icon: <className="w-6 h-6" />","
         "
-    },",
+    },","
         "
-    {""}
+    {""}"
       title: "Data-Driven Decisions",""
       description: "Make informed decisions based on real data and analytics",""
-      icon: <TrendingUp className="w-6 h-6" />""
+      icon: <TrendingUp className="w-6 h-6" />"";
     };
-
 const WebsiteAnalyticsToolPage = () => {
+  
   const features = [
-    {
-      title: "Real-time Analytics",";
-      description: "Track website performance in real-time with live visitor data and metrics",";
-      icon: <BarChart3 className ="w-8 h-8" />,";
+    {";
+      title: "Real-time Analytics",";"
+      description: "Track website performance in real-time with live visitor data and metrics",";"
+      icon: <BarChart3 className ="w-8 h-8" />,";"
       benefits: ["Live visitor tracking", "Real-time metrics", "Instant alerts", "Live dashboards"]";
-    },
-    {
-      title: "Visitor Behavior Analysis",";
-      description: "Understand how visitors interact with your website with detailed behavior analytics",";
-      icon: <Users className ="w-8 h-8" />,";
+    
+};"
+      description: "Understand how visitors interact with your website with detailed behavior analytics",";"
+      icon: <Users className ="w-8 h-8" />,";"
       benefits: ["Heatmaps", "Session recordings", "Click tracking", "Scroll analysis"]";
     },
-    {
-      title: "Conversion Tracking",";
-      description: "Track and optimize conversions with detailed funnel analysis and goal tracking",";
-      icon: <Target className ="w-8 h-8" />,";
+    {"
+      title: "Conversion Tracking",";"
+      description: "Track and optimize conversions with detailed funnel analysis and goal tracking",";"
+      icon: <Target className ="w-8 h-8" />,";"
       benefits: ["Goal setup", "Funnel analysis", "Conversion paths", "ROI tracking"]";
     },
-    {
-      title: "Traffic Sources",";
-      description: "Analyze where your traffic comes from and optimize your marketing efforts",";
-      icon: <Globe className ="w-8 h-8" />,";
+    {"
+      title: "Traffic Sources",";"
+      description: "Analyze where your traffic comes from and optimize your marketing efforts",";"
+      icon: <Globe className ="w-8 h-8" />,";"
       benefits: ["Source analysis", "Campaign tracking", "Referral tracking", "UTM parameters"]";
     },
-    {
-      title: "Custom Dashboards",";
-      description: "Create personalized dashboards with the metrics that matter most to you",";
-      icon: <Database className ="w-8 h-8" />,";
+    {"
+      title: "Custom Dashboards",";"
+      description: "Create personalized dashboards with the metrics that matter most to you",";"
+      icon: <Database className ="w-8 h-8" />,";"
       benefits: ["Custom widgets", "Drag & drop", "Multiple dashboards", "Team sharing"]";
     },
-    {
-      title: "Advanced Reporting",";
-      description: "Generate comprehensive reports with automated scheduling and delivery",";
-      icon: <TrendingUp className ="w-8 h-8" />,";
+    {"
+      title: "Advanced Reporting",";"
+      description: "Generate comprehensive reports with automated scheduling and delivery",";"
+      icon: <TrendingUp className ="w-8 h-8" />,";"
       benefits: ["Scheduled reports", "Custom reports", "PDF export", "Email delivery"]";
     }
   ];
-
-  const pricing = [
-    {
-      name: "Starter",";
-      price: "$29",";
-      period: "per month",";
+  const pricing  =  [
+    {";
+      name: "Starter",";"
+      price: "$29",";"
+      period: "per month",";"
       description: "Perfect for small websites and blogs",";
-      features: [
-        "Up to 100,000 page views",";
-        "Basic analytics",";
-        "Standard reports",";
-        "Email support",";
+      features: ["
+        "Up to 100,000 page views",";"
+        "Basic analytics",";"
+        "Standard reports",";"
+        "Email support",";"
         "Mobile app access"";
       ],
       popular: false
     },
-    {
-      name: "Professional",";
-      price: "$79",";
-      period: "per month",";
+    {"
+      name: "Professional",";"
+      price: "$79",";"
+      period: "per month",";"
       description: "Ideal for growing businesses and e-commerce",";
-      features: [
-        "Up to 1M page views",";
-        "Advanced analytics",";
-        "Custom dashboards",";
-        "Priority support",";
-        "API access",";
+      features: ["
+        "Up to 1M page views",";"
+        "Advanced analytics",";"
+        "Custom dashboards",";"
+        "Priority support",";"
+        "API access",";"
         "Conversion tracking"";
       ],
       popular: true
     },
-    {
-      name: "Enterprise",";
-      price: "$199",";
-      period: "per month",";
+    {"
+      name: "Enterprise",";"
+      price: "$199",";"
+      period: "per month",";"
       description: "For large websites with advanced needs",";
-      features: [
-        "Unlimited page views",";
-        "Advanced features",";
-        "Custom integrations",";
-        "Dedicated support",";
-        "Advanced security",";
+      features: ["
+        "Unlimited page views",";"
+        "Advanced features",";"
+        "Custom integrations",";"
+        "Dedicated support",";"
+        "Advanced security",";"
         "Custom development"";
       ],
       popular: false
     }
   ];
-
-  const benefits = [
-    {
-      title: "Better Insights",";
-      description: "Gain deeper insights into your website performance and user behavior",";
+  const benefits  =  [
+    {";
+      title: "Better Insights",";"
+      description: "Gain deeper insights into your website performance and user behavior",";"
       icon: <BarChart3 className ="w-6 h-6" />",
     },
-    {
-      title: "Increase Conversions",";
-      description: "Optimize your website to increase conversions by up to 30%",";
+    {"
+      title: "Increase Conversions",";"
+      description: "Optimize your website to increase conversions by up to 30%",";"
       icon: <Target className ="w-6 h-6" />",
     },
-    {
-      title: "Save Time",";
-      description: "Automate reporting and get insights without manual analysis",";
+    {"
+      title: "Save Time",";"
+      description: "Automate reporting and get insights without manual analysis",";"
       icon: <Zap className ="w-6 h-6" />",
     },
-    {
-      title: "Data-Driven Decisions",";
-      description: "Make informed decisions based on real data and analytics",";
+    {"
+      title: "Data-Driven Decisions",";"
+      description: "Make informed decisions based on real data and analytics",";"
       icon: <TrendingUp className ="w-6 h-6" />",
     }
-
   ];
-,
-      return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">",)
+,"
+      return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">",)"
         "
-      <EnhancedSEO",>
+      <EnhancedSEO",>"
         "
-        title="Website Analytics Tool - Zion Tech Group | Advanced Web Analytics & Tracking",
-      description="Powerful website analytics tool with real-time tracking, visitor behavior analysis, _conversion tracking, and custom dashboards. Optimize your website performance.",
-      keywords="website analytics tool, _web analytics, _visitor tracking, _conversion tracking, _behavior analysis, website optimization",
+        title="Website Analytics Tool - Zion Tech Group | Advanced Web Analytics & Tracking","
+      description="Powerful website analytics tool with real-time tracking, visitor behavior analysis, _conversion tracking, and custom dashboards. Optimize your website performance.","
+      keywords="website analytics tool, _web analytics, _visitor tracking, _conversion tracking, _behavior analysis, website optimization","
       canonical="https://ziontechgroup.com/website-analytics-tool" />""
-      {/* Hero Section */};
+      {/* Hero Section */};"
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">""
         <ResponsiveContainer className="text-center">""
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">",
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">","
         "
-              Website Analytics Tool",
+              Website Analytics Tool","
         "
-            </span>",
+            </span>","
         "
-          </h1>",
+          </h1>","
         "
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">",
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">","
         "
-            Understand your website performance with our comprehensive analytics tool.",
+            Understand your website performance with our comprehensive analytics tool.","
         "
-            Track visitors, _analyze behavior, and optimize conversions with detailed insights.",
+            Track visitors, _analyze behavior, and optimize conversions with detailed insights.","
         "
-          </p>",
+          </p>","
         "
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">","
         "
-            <FuturisticButton",>
+            <FuturisticButton",>"
         "
-              href="/contact",
-      variant="primary",
-      size="lg",
-      icon={<ArrowRight className="w-5 h-5" />};
-            >",
+              href="/contact","
+      variant="primary","
+      size="lg","
+      icon={<ArrowRight className="w-5 h-5" />};"
+            >","
         "
-              Start Free Trial",
+              Start Free Trial","
         "
-            </FuturisticButton>",
+            </FuturisticButton>","
         "
-            <FuturisticButton",>
+            <FuturisticButton",>"
         "
-              href="/demo",
-      variant="outline",
-      size="lg",
-      icon={<Globe className="w-5 h-5" />};
-            >",
+              href="/demo","
+      variant="outline","
+      size="lg","
+      icon={<Globe className="w-5 h-5" />};"
+            >","
         "
-              Watch Demo",
+              Watch Demo","
         "
-            </FuturisticButton>",
+            </FuturisticButton>","
         "
-          </div>",
+          </div>","
         "
-        </ResponsiveContainer>",
+        </ResponsiveContainer>","
         "
-      </section>",
+      </section>","
         "
-      {/* Features Section */};
-      <section className="py-20 px-4 sm:px-6 lg:px-8">",
+      {/* Features Section */};"
+      <section className="py-20 px-4 sm:px-6 lg:px-8">","
         "
-        <ResponsiveContainer>",
+        <ResponsiveContainer>","
         "
           <div className="text-center mb-16">""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">",
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">","
         "
-              Powerful Analytics Features",
+              Powerful Analytics Features","
         "
             </h2>""
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">",
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">","
         "
-              Everything you need to understand and optimize your website performance.",
+              Everything you need to understand and optimize your website performance.","
         "
-            </p>",
+            </p>","
         "
-          </div>",
+          </div>","
         "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
-            {features.map((feature, index) => (<FuturisticCard key={index} className="h-full">"")
+            {features.map((feature, index) => (<FuturisticCard key={index} className="h-full">"")"
                 <div className="text-center mb-6">""
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">",
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">","
         "
-                    {feature.icon};
-                  </div>",
+                    {feature.icon};"
+                  </div>","
         "
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
-                  <p className="text-gray-300 mb-4">{feature.description}</p>",
+                  <p className="text-gray-300 mb-4">{feature.description}</p>","
         "
-                </div>",
+                </div>","
         "
-                <ul className="space-y-2">",
+                <ul className="space-y-2">","
         "
-                  {feature.benefits.map((benefit, benefitIndex) => (",)}
+                  {feature.benefits.map((benefit, benefitIndex) => (",)}"
         "
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-300">""
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />",
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />","
         "
-                      {benefit};
-                    </li>",
+                      {benefit};"
+                    </li>","
         "
-                  ))};
-                </ul>",
+                  ))};"
+                </ul>","
         "
-              </FuturisticCard>",
+              </FuturisticCard>","
         "
-            ))};
-          </div>",
+            ))};"
+          </div>","
         "
-        </ResponsiveContainer>",
+        </ResponsiveContainer>","
         "
       </section>""
-      {/* Pricing Section */};
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">",
+      {/* Pricing Section */};"
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">","
         "
-        <ResponsiveContainer>",
+        <ResponsiveContainer>","
         "
           <div className="text-center mb-16">""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">",
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">","
         "
-              Simple, Transparent Pricing",
+              Simple, Transparent Pricing","
         "
             </h2>""
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">",
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">","
         "
-              Choose the plan that fits your website size and analytics needs. No hidden fees, no surprises.",
+              Choose the plan that fits your website size and analytics needs. No hidden fees, no surprises.","
         "
-            </p>",
+            </p>","
         "
-          </div>",
+          </div>","
         "
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">",
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">","
         "
-            {pricing.map((plan, index) => (",)}
+            {pricing.map((plan, index) => (",)}"
         "
-              <FuturisticCard key={index} className={`h-full ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>",
+              <FuturisticCard key={index} className={`h-full ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>","
         "
-                {plan.popular && (",)}
+                {plan.popular && (",)}"
         "
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">",
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">","
         "
-                      Most Popular",
+                      Most Popular","
         "
-                    </span>",
+                    </span>","
         "
-                  </div>",
+                  </div>","
         "
-                )};
+                )};"
                 <div className="text-center mb-6">""
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
                   <div className="text-4xl font-bold text-cyan-400 mb-2">""
-                    {plan.price};
-                    <span className="text-lg text-gray-400">{plan.period}</span>",
+                    {plan.price};"
+                    <span className="text-lg text-gray-400">{plan.period}</span>","
         "
-                  </div>",
+                  </div>","
         "
-                  <p className="text-gray-300 text-sm">{plan.description}</p>",
+                  <p className="text-gray-300 text-sm">{plan.description}</p>","
         "
-                </div>",
+                </div>","
         "
-                <ul className="space-y-3 mb-8">",
+                <ul className="space-y-3 mb-8">","
         "
-                  {plan.features.map((feature, featureIndex) => (",)}
+                  {plan.features.map((feature, featureIndex) => (",)}"
         "
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">""
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />",
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />","
         "
-                      {feature};
-                    </li>",
+                      {feature};"
+                    </li>","
         "
-                  ))};
-                </ul>",
+                  ))};"
+                </ul>","
         "
-                <FuturisticButton",>
+                <FuturisticButton",>"
         "
-                  href="/contact",
-      variant={plan.popular ? "primary" : "outline"},
-      size="sm",
-      className="w-full";
-                >",
+                  href="/contact","
+      variant={plan.popular ? "primary" : "outline"},"
+      size="sm","
+      className="w-full";"
+                >","
         "
-                  Get Started",
+                  Get Started","
         "
-                </FuturisticButton>",
+                </FuturisticButton>","
         "
-              </FuturisticCard>",
+              </FuturisticCard>","
         "
-            ))};
-          </div>",
+            ))};"
+          </div>","
         "
-        </ResponsiveContainer>",
+        </ResponsiveContainer>","
         "
       </section>""
-      {/* Benefits Section */};
-      <section className="py-20 px-4 sm:px-6 lg:px-8">",
+      {/* Benefits Section */};"
+      <section className="py-20 px-4 sm:px-6 lg:px-8">","
         "
-        <ResponsiveContainer>",
+        <ResponsiveContainer>","
         "
           <div className="text-center mb-16">""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">",
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">","
         "
-              Why Choose Our Analytics Tool?",
+              Why Choose Our Analytics Tool?","
         "
             </h2>""
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">",
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">","
         "
-              Join thousands of websites who have optimized their performance with our analytics tool.",
+              Join thousands of websites who have optimized their performance with our analytics tool.","
         "
-            </p>",
+            </p>","
         "
-          </div>",
+          </div>","
         "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">",
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">","
         "
-            {benefits.map((benefit, index) => (",)}
+            {benefits.map((benefit, index) => (",)}"
         "
               <div key={index} className="text-center">""
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">",
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">","
         "
-                  {benefit.icon};
-                </div>",
+                  {benefit.icon};"
+                </div>","
         "
                 <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>""
-                <p className="text-gray-300 text-sm">{benefit.description}</p>",
+                <p className="text-gray-300 text-sm">{benefit.description}</p>","
         "
-              </div>",
+              </div>","
         "
-            ))};
-          </div>",
+            ))};"
+          </div>","
         "
-        </ResponsiveContainer>",
+        </ResponsiveContainer>","
         "
       </section>""
-      {/* CTA Section */};
+      {/* CTA Section */};"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">""
         <ResponsiveContainer className="text-center">""
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">",
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">","
         "
-            Ready to Optimize Your Website?",
+            Ready to Optimize Your Website?","
         "
           </h2>""
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">",
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">","
         "
-            Start your free trial today and see how our analytics tool can improve your website performance.",
+            Start your free trial today and see how our analytics tool can improve your website performance.","
         "
           </p>""
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">","
         "
-            <FuturisticButton",>
+            <FuturisticButton",>"
         "
-              href="/contact",
-      variant="primary",
-      size="lg",
-      icon={<ArrowRight className="w-5 h-5" />};
-            >",
+              href="/contact","
+      variant="primary","
+      size="lg","
+      icon={<ArrowRight className="w-5 h-5" />};"
+            >","
         "
-              Start Free Trial",
+              Start Free Trial","
         "
-            </FuturisticButton>",
+            </FuturisticButton>","
         "
-            <FuturisticButton",>
+            <FuturisticButton",>"
         "
-              href="/demo",
-      variant="outline",
-      size="lg",
-      icon={<Globe className="w-5 h-5" />};
-            >",
+              href="/demo","
+      variant="outline","
+      size="lg","
+      icon={<Globe className="w-5 h-5" />};"
+            >","
         "
-              Watch Demo",
+              Watch Demo","
         "
-            </FuturisticButton>",
+            </FuturisticButton>","
         "
-          </div>",
+          </div>","
         "
-        </ResponsiveContainer>",
+        </ResponsiveContainer>","
         "
-      </section>",
+      </section>","
         "
     </div>""
   )
@@ -695,40 +503,39 @@ const WebsiteAnalyticsToolPage = () => {
     {}
 ,
       export default WebsiteAnalyticsToolPage;
-;
 
 const ComponentName = () => {
-  return (
-    <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";
-      <EnhancedSEO title ="Website Analytics Tool - Zion Tech Group | Advanced Web Analytics & Tracking"";
-        description="Powerful website analytics tool with real-time tracking, visitor behavior analysis, _conversion tracking, and custom dashboards. Optimize your website performance."";
-        keywords="website analytics tool, _web analytics, _visitor tracking, _conversion tracking, _behavior analysis, website optimization"";
+  
+  return (";
+    <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";"
+      <EnhancedSEO title ="Website Analytics Tool - Zion Tech Group | Advanced Web Analytics & Tracking"";"
+        description="Powerful website analytics tool with real-time tracking, visitor behavior analysis, _conversion tracking, and custom dashboards. Optimize your website performance."";"
+        keywords="website analytics tool, _web analytics, _visitor tracking, _conversion tracking, _behavior analysis, website optimization"";"
         canonical="https: //ziontechgroup.com/website-analytics-tool"",
       />
-
-      {/* Hero Section */}
-      <section className ="pt-20 pb-16 px-4 sm: px-6 lg:px-8">";
-        <ResponsiveContainer className ="text-center">";
-          <h1 className ="text-4xl md:text-6xl font-bold text-white mb-6">";
+      {/* Hero Section */
+};"
+        <ResponsiveContainer className ="text-center">";"
+          <h1 className ="text-4xl md:text-6xl font-bold text-white mb-6">";"
             <span className ="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">";
               Website Analytics Tool
             </span>
-          </h1>
+          </h1>"
           <p className ="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">",
             Understand your website performance with our comprehensive analytics tool. 
             Track visitors, _analyze behavior, and optimize conversions with detailed insights.
-          </p>
-          <div className ="flex flex-col sm: flex-row gap-4 justify-center">";
-            <FuturisticButton href ="/contact"";
-              variant="primary"";
-              size="lg"",
+          </p>"
+          <div className ="flex flex-col sm: flex-row gap-4 justify-center">";"
+            <FuturisticButton href ="/contact"";"
+              variant="primary"";"
+              size="lg"","
               icon={<ArrowRight className ="w-5 h-5" />}";
             >
               Start Free Trial
-            </FuturisticButton>
-            <FuturisticButton href ="/demo"";
-              variant="outline"";
-              size="lg"";
+            </FuturisticButton>"
+            <FuturisticButton href ="/demo"";"
+              variant="outline"";"
+              size="lg"";"
               icon={<Globe className ="w-5 h-5" />}";
             >
               Watch Demo
@@ -736,30 +543,29 @@ const ComponentName = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
-      {/* Features Section */}
+      {/* Features Section */}"
       <section className ="py-20 px-4 sm: px-6 lg:px-8">";
-        <ResponsiveContainer>
-          <div className ="text-center mb-16">";
+        <ResponsiveContainer>"
+          <div className ="text-center mb-16">";"
             <h2 className ="text-3xl md:text-4xl font-bold text-white mb-6">";
               Powerful Analytics Features
-            </h2>
+            </h2>"
             <p className ="text-xl text-gray-300 max-w-4xl mx-auto">";
               Everything you need to understand and optimize your website performance.
             </p>
-          </div>
-          <div className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
-            {features.map((feature, index) => (<FuturisticCard key ={index} className="h-full">";
-                <div className ="text-center mb-6">";
+          </div>"
+          <div className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">","
+            {features.map((feature, index) => (<FuturisticCard key ={index} className="h-full">";"
+                <div className ="text-center mb-6">";"
                   <div className ="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">";
                     {feature.icon}
-                  </div>
-                  <h3 className ="text-xl font-semibold text-white mb-3">{feature.title}</h3>";
-                  <p className ="text-gray-300 mb-4">{feature.description}</p>";
-                </div>
+                  </div>"
+                  <h3 className ="text-xl font-semibold text-white mb-3">{feature.title}</$1>"
+                  <p className ="text-gray-300 mb-4">{feature.description}</$1>
+                </div>"
                 <ul className ="space-y-2">";
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key ={benefitIndex} className="flex items-center text-sm text-gray-300">";
+                  {feature.benefits.map((benefit, benefitIndex) => ("
+                    <li key ={benefitIndex} className="flex items-center text-sm text-gray-300">";"
                       <CheckCircle className ="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />";
                       {benefit}
                     </li>
@@ -770,47 +576,46 @@ const ComponentName = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
-      {/* Pricing Section */}
+      {/* Pricing Section */}"
       <section className ="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">";
-        <ResponsiveContainer>
-          <div className ="text-center mb-16">";
+        <ResponsiveContainer>"
+          <div className ="text-center mb-16">";"
             <h2 className ="text-3xl md:text-4xl font-bold text-white mb-6">",
               Simple, Transparent Pricing
-            </h2>
+            </h2>"
             <p className ="text-xl text-gray-300 max-w-4xl mx-auto">";
               Choose the plan that fits your website size and analytics needs. No hidden fees, no surprises.
             </p>
-          </div>
+          </div>"
           <div className ="grid grid-cols-1 md: grid-cols-3 gap-8">",
-            {pricing.map((plan, index) => (
+            {pricing.map((plan, index) => ("
               <FuturisticCard key ={index} className={`h-full ${plan.popular ? 'ring-2 ring-cyan-400'  ''}`}>";
-                {plan.popular && (
-                  <div className ="absolute -top-4 left-1/2 transform -translate-x-1/2">";
+                {plan.popular && ("
+                  <div className ="absolute -top-4 left-1/2 transform -translate-x-1/2">";"
                     <span className ="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">";
                       Most Popular
                     </span>
                   </div>
-                )}
-                <div className ="text-center mb-6">";
-                  <h3 className ="text-2xl font-bold text-white mb-2">{plan.name}</h3>";
+                )}"
+                <div className ="text-center mb-6">";"
+                  <h3 className ="text-2xl font-bold text-white mb-2">{plan.name}</$1>"
                   <div className ="text-4xl font-bold text-cyan-400 mb-2">";
-                    {plan.price}
-                    <span className ="text-lg text-gray-400">{plan.period}</span>";
-                  </div>
-                  <p className ="text-gray-300 text-sm">{plan.description}</p>";
-                </div>
+                    {plan.price}"
+                    <span className ="text-lg text-gray-400">{plan.period}</$1>
+                  </div>"
+                  <p className ="text-gray-300 text-sm">{plan.description}</$1>
+                </div>"
                 <ul className ="space-y-3 mb-8">";
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key ={featureIndex} className="flex items-center text-sm text-gray-300">";
+                  {plan.features.map((feature, featureIndex) => ("
+                    <li key ={featureIndex} className="flex items-center text-sm text-gray-300">";"
                       <CheckCircle className ="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />";
                       {feature}
                     </li>
                   ))}
-                </ul>
-                <FuturisticButton href ="/contact"";
-                  variant={plan.popular ? "primary"  "outline"}";
-                  size="sm"";
+                </ul>"
+                <FuturisticButton href ="/contact"";"
+                  variant={plan.popular ? "primary"  "outline"}";"
+                  size="sm"";"
                   className="w-full"";
                 >
                   Get Started
@@ -820,52 +625,50 @@ const ComponentName = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
-      {/* Benefits Section */}
+      {/* Benefits Section */}"
       <section className ="py-20 px-4 sm: px-6 lg:px-8">";
-        <ResponsiveContainer>
-          <div className ="text-center mb-16">";
+        <ResponsiveContainer>"
+          <div className ="text-center mb-16">";"
             <h2 className ="text-3xl md:text-4xl font-bold text-white mb-6">";
               Why Choose Our Analytics Tool?
-            </h2>
+            </h2>"
             <p className ="text-xl text-gray-300 max-w-4xl mx-auto">";
               Join thousands of websites who have optimized their performance with our analytics tool.
             </p>
-          </div>
+          </div>"
           <div className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">",
-            {benefits.map((benefit, index) => (
-              <div key ={index} className="text-center">";
+            {benefits.map((benefit, index) => ("
+              <div key ={index} className="text-center">";"
                 <div className ="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">";
                   {benefit.icon}
-                </div>
-                <h3 className ="text-lg font-semibold text-white mb-2">{benefit.title}</h3>";
-                <p className ="text-gray-300 text-sm">{benefit.description}</p>";
+                </div>"
+                <h3 className ="text-lg font-semibold text-white mb-2">{benefit.title}</$1>"
+                <p className ="text-gray-300 text-sm">{benefit.description}</$1>
               </div>
             ))}
           </div>
         </ResponsiveContainer>
       </section>
-
-      {/* CTA Section */}
-      <section className ="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">";
-        <ResponsiveContainer className ="text-center">";
+      {/* CTA Section */}"
+      <section className ="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">";"
+        <ResponsiveContainer className ="text-center">";"
           <h2 className ="text-3xl md:text-4xl font-bold text-white mb-6">";
             Ready to Optimize Your Website?
-          </h2>
+          </h2>"
           <p className ="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">";
             Start your free trial today and see how our analytics tool can improve your website performance.
-          </p>
-          <div className ="flex flex-col sm:flex-row gap-4 justify-center">";
-            <FuturisticButton href ="/contact"";
-              variant="primary"";
-              size="lg"",
+          </p>"
+          <div className ="flex flex-col sm:flex-row gap-4 justify-center">";"
+            <FuturisticButton href ="/contact"";"
+              variant="primary"";"
+              size="lg"","
               icon={<ArrowRight className ="w-5 h-5" />}";
             >
               Start Free Trial
-            </FuturisticButton>
-            <FuturisticButton href ="/demo"";
-              variant="outline"";
-              size="lg"";
+            </FuturisticButton>"
+            <FuturisticButton href ="/demo"";"
+              variant="outline"";"
+              size="lg"";"
               icon={<Globe className ="w-5 h-5" />}";
             >
               Watch Demo
@@ -876,9 +679,6 @@ const ComponentName = () => {
     </div>
   );
 };
-
 export default WebsiteAnalyticsToolPage;
-
 }
-
->>>>>>> main
+"

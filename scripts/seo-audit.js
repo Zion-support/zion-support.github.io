@@ -10,6 +10,7 @@ const __dirname = path.dirname(__filename);
 console.log('🔍 Starting SEO audit...');''
 // Check HTML structure;
 function auditHTMLStructure() {
+  
   console.log('📄 Auditing HTML structure...');''
   const issues = [];
   const recommendations = [];
@@ -17,7 +18,8 @@ function auditHTMLStructure() {
   const indexPath = path.join(__dirname, '../dist/index.html');''
   if (!fs.existsSync(indexPath)) {
     issues.push('Main index.html file not found');''
-    return { issues, recommendations };
+    return { issues, recommendations 
+}
   }
   const html = fs.readFileSync(indexPath, 'utf8');''
   // Check for essential meta tags;
@@ -41,14 +43,14 @@ function auditHTMLStructure() {
   });
   // Check for Open Graph tags;
   const ogTags = ['og:title', 'og:description', 'og:image', 'og:url'];''
-  ogTags.forEach(tag => {
+  ogTags.forEach(tag => {"
     if (!html.includes(`property="${tag}"`)) {""
       issues.push(`Missing Open Graph ${tag} tag`);
     }
   });
   // Check for Twitter Card tags;
   const twitterTags = ['twitter:card', 'twitter:title', 'twitter:description', 'twitter:image'];''
-  twitterTags.forEach(tag => {
+  twitterTags.forEach(tag => {"
     if (!html.includes(`name="${tag}"`)) {""
       issues.push(`Missing Twitter Card ${tag} tag`);
     }
@@ -69,12 +71,12 @@ function auditHTMLStructure() {
   if (headings.length === 0) {
     issues.push('No heading tags found');''
   }
-  // Check for internal links;
+  // Check for internal links;"
   const internalLinks = html.match(/href="[^"]*"/g) || [];""
   if (internalLinks.length === 0) {
     recommendations.push('Consider adding internal links for better SEO');''
   }
-  // Check for external links;
+  // Check for external links;"
   const externalLinks = html.match(/href="https?:\/\/[^"]*"/g) || [];""
   if (externalLinks.length === 0) {
     recommendations.push('Consider adding external links to authoritative sources');''
@@ -83,13 +85,15 @@ function auditHTMLStructure() {
 }
 // Check sitemap;
 function auditSitemap() {
+  
   console.log('🗺️ Auditing sitemap...');''
   const issues = [];
   const recommendations = [];
   const sitemapPath = path.join(__dirname, '../public/sitemap.xml');''
   if (!fs.existsSync(sitemapPath)) {
     issues.push('Sitemap.xml not found');''
-    return { issues, recommendations };
+    return { issues, recommendations 
+}
   }
   const sitemap = fs.readFileSync(sitemapPath, 'utf8');''
   // Check for essential sitemap elements;
@@ -100,7 +104,9 @@ function auditSitemap() {
     issues.push('Sitemap missing url elements');''
   }
   // Count URLs;
-  const urlCount = (sitemap.match(/<////url>/g) || []).length;
+  const urlCount = (sitemap.match(/<////url>/g) || [
+    
+  ]).length;
   if (urlCount === 0) {
     issues.push('Sitemap contains no URLs');''
   } else if (urlCount < 5) {
@@ -110,13 +116,15 @@ function auditSitemap() {
 }
 // Check robots.txt;
 function auditRobots() {
+  
   console.log('🤖 Auditing robots.txt...');''
   const issues = [];
   const recommendations = [];
   const robotsPath = path.join(__dirname, '../public/robots.txt');''
   if (!fs.existsSync(robotsPath)) {
     issues.push('robots.txt not found');''
-    return { issues, recommendations };
+    return { issues, recommendations 
+}
   }
   const robots = fs.readFileSync(robotsPath, 'utf8');''
   if (!robots.includes('User-agent: *')) {''
@@ -132,7 +140,8 @@ function auditRobots() {
 }
 // Check performance metrics;
 function auditPerformance() {
-  console.log('⚡ Auditing performance...');''
+  
+    console.log('⚡ Auditing performance...');''
   const issues = [];
   const recommendations = [];
   const distDir = path.join(__dirname, '../dist');''
@@ -146,7 +155,9 @@ function auditPerformance() {
       const sizeKB = stats.size / 1024;
       totalSize += stats.size;
       if (sizeKB > 100) { // Files larger than 100KB;
-        largeFiles.push({ file, sizeKB: Math.round(sizeKB) });
+        largeFiles.push({ file, sizeKB: Math.round(sizeKB) 
+
+}
       }
     }
   });
@@ -174,7 +185,7 @@ function generateSEOReport(htmlAudit, sitemapAudit, robotsAudit, performanceAudi
     ...robotsAudit.recommendations,;]
     ...performanceAudit.recommendations;]
   ];
-  const report = {
+  const report  =  {;
     timestamp: new Date().toISOString(),;
     summary: {}
       totalIssues: allIssues.length,;}
@@ -204,28 +215,9 @@ function generateSEOReport(htmlAudit, sitemapAudit, robotsAudit, performanceAudi
 }
 // Main audit function;
 async function audit() {
+  
   try {
-<<<<<<< HEAD
-    const htmlAudit = auditHTMLStructure()
-    const sitemapAudit = auditSitemap()
-    const robotsAudit = auditRobots()
-    const performanceAudit = auditPerformance()
-    const report = generateSEOReport(htmlAudit, sitemapAudit, robotsAudit, performanceAudit)
-    console.log('🎉 SEO audit completed successfully!')
-    if (report.summary.totalIssues > 0) {
-      console.log('\n❌ Issues to fix:')
-      report.issues.forEach(issue => console.log(`   - ${issue}`))
-    }
 
-    if (report.summary.totalRecommendations > 0) {
-      console.log('\n💡 Recommendations:')
-      report.recommendations.forEach(rec => console.log(`   - ${rec}`))
-    }
-
-  } catch (error) {
-    console.error('❌ Error during SEO audit:', error)
-    process.exit(1)
-=======
     const htmlAudit = auditHTMLStructure();
     const sitemapAudit = auditSitemap();
     const robotsAudit = auditRobots();
@@ -234,7 +226,11 @@ async function audit() {
     console.log('🎉 SEO audit completed successfully!');''
     if (report.summary.totalIssues > 0) {
       console.log('\n❌ Issues to fix:');''
-      report.issues.forEach(issue => console.log(`   - ${issue}`));
+      report.issues.forEach(issue => console.log(`   - ${issue
+
+}
+  }
+  }
     }
     if (report.summary.totalRecommendations > 0) {
       console.log('\n💡 Recommendations:');''
@@ -246,4 +242,4 @@ async function audit() {
   }
 }
 // Run audit;
-audit();
+audit();"

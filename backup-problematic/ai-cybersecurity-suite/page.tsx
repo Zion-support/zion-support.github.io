@@ -1,9 +1,6 @@
-
-export default function AICybersecuritySuitePage() {}
-  // Function body
-
+export default function AICybersecuritySuitePage() {
+  
 }
-}return ();
     <div>Content</div>
   )
     <div>Component content</div>

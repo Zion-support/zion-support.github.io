@@ -6,16 +6,19 @@ interface PerformanceMetrics {
   firstInputDelay: number;
   cumulativeLayoutShift: number;
 }
-export const usePerformanceMonitor = (): PerformanceMetrics => {
+export const usePerformanceMonitor  =  (): PerformanceMetrics => {
     const [
     metrics, setMetrics,
   ] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
+
   });
   useEffect(() => {}
     const startTime = performance.now();}
-    const measurePerformance = () => {}
+    const measurePerformance = () => {
+  
+};
       const loadTime = performance.now() - startTime;}
       const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize;
       setMetrics({)}
@@ -27,7 +30,9 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {
     // Measure after component mount;
     const timeoutId = setTimeout(measurePerformance, 100);
     return () => clearTimeout(timeoutId);
-  }, []);
+  }, [
+    
+  ]);
   return metrics;
 };
 export default usePerformanceMonitor

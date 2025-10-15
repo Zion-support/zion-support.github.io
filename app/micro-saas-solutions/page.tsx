@@ -1,742 +1,715 @@
-<<<<<<< HEAD
-import React from 'react;
-
-import React from 'react;'
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
-      <Helmet>
-        <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive micro SaaS solutions for modern businesses. AI-powered tools, automation platforms, and specialized software services with competitive pricing." />""
-        <meta name="keywords" content="micro SaaS, AI tools, business automation, software solutions, SaaS pricing, business software" />""
-        <meta property="og:title" content="Micro SaaS Solutions - Zion Tech Group" />""
-        <meta property="og:description" content="Comprehensive micro SaaS solutions for modern businesses. AI-powered tools, automation platforms, and specialized software services." />""
-        <meta property="og:type" content="website" />""
-        <meta property="og:url" content="https://ziontechgroup.com/micro-saas-solutions" />""
-        <script
-          type="application/ld+json""
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      </Helmet>
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">""
-        {/* Animated Background */}
-        <div className="absolute inset-0 opacity-20">""
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>""
-        </div>
-=======
-
 'use client',
       import React, { useState } from 'react',
       import { Helmet } from 'react-helmet-async',
-      const MicroSaaSSolutionsPage: React.FC = () => {"}
-        "
+      const MicroSaaSSolutionsPage: React.FC  =  () => {"}";
+
   const [selectedCategory, setSelectedCategory] = useState('All');
-,
-      const microSaaSServices = [",
+,"
+      const microSaaSServices  =  [","
         "
-    {"}
+    {"}"
         "
-      id: 'ai-chatbot-builder',",
+      id: 'ai-chatbot-builder',","
         "
-      name: 'AI Chatbot Builder Pro',",
+      name: 'AI Chatbot Builder Pro',","
         "
-      price: '$29/mo',",
+      price: '$29/mo',","
         "
-      originalPrice: '$49/mo',",
+      originalPrice: '$49/mo',","
         "
-      description: 'Build intelligent chatbots without coding',",
+      description: 'Build intelligent chatbots without coding',","
         "
-      longDescription: 'Create sophisticated AI-powered chatbots for your website, social media, and messaging platforms with our drag-and-drop builder.',",
+      longDescription: 'Create sophisticated AI-powered chatbots for your website, social media, and messaging platforms with our drag-and-drop builder.',","
         "
-      features: [",
+      features: [","
         "
-        'Drag-and-Drop Interface',",
+        'Drag-and-Drop Interface',","
         "
-        'Natural Language Processing',",
+        'Natural Language Processing',","
         "
-        'Multi-platform Integration',",
+        'Multi-platform Integration',","
         "
-        'Custom Training & Learning',",
+        'Custom Training & Learning',","
         "
-        'Analytics Dashboard',",
+        'Analytics Dashboard',","
         "
-        'A/B Testing',",
+        'A/B Testing',","
         "
-        'Voice & Text Support',",
+        'Voice & Text Support',","
         "
-        'Multi-language Support',",
+        'Multi-language Support',","
         "
-        'Custom Branding',",
+        'Custom Branding',","
+        ";
+        'API Access';"
+      ],","
         "
-        'API Access';
-      ],",
+      benefits: [","
         "
-      benefits: [",
+        'Reduce support costs by 70%',","
         "
-        'Reduce support costs by 70%',",
+        'Improve response time by 90%',","
         "
-        'Improve response time by 90%',",
+        'Handle 500+ conversations simultaneously',","
         "
-        'Handle 500+ conversations simultaneously',",
+        '24/7 availability',","
         "
-        '24/7 availability',",
-        "
-        'Easy setup in minutes';
-      ],",
+        'Easy setup in minutes';"
+      ],","
         "
       category: 'AI Tools',""
-      icon: <MessageSquare className="w-8 h-8 text-cyan-400" />,",
+      icon: <MessageSquare className="w-8 h-8 text-cyan-400" />,","
         "
-      popular: true,",
+      popular: true,","
         "
-      link: 'https://ziontechgroup.com/ai-chatbot-builder';
-    },",
+      link: 'https://ziontechgroup.com/ai-chatbot-builder';"
+    },","
         "
-    {"}
+    {"}"
         "
-      id: 'social-media-scheduler',",
+      id: 'social-media-scheduler',","
         "
-      name: 'Social Media Scheduler',",
+      name: 'Social Media Scheduler',","
         "
-      price: '$19/mo',",
+      price: '$19/mo',","
         "
-      originalPrice: '$39/mo',",
+      originalPrice: '$39/mo',","
         "
-      description: 'Schedule and manage social media posts',",
+      description: 'Schedule and manage social media posts',","
         "
-      longDescription: 'Streamline your social media management with our comprehensive scheduling and analytics platform.',",
+      longDescription: 'Streamline your social media management with our comprehensive scheduling and analytics platform.',","
         "
-      features: [",
+      features: [","
         "
-        'Multi-platform Scheduling',",
+        'Multi-platform Scheduling',","
         "
-        'Content Calendar',",
+        'Content Calendar',","
         "
-        'Auto-posting',",
+        'Auto-posting',","
         "
-        'Analytics & Insights',",
+        'Analytics & Insights',","
         "
-        'Team Collaboration',",
+        'Team Collaboration',","
         "
-        'Content Library',",
+        'Content Library',","
         "
-        'Hashtag Suggestions',",
+        'Hashtag Suggestions',","
         "
-        'Best Time Optimization',",
+        'Best Time Optimization',","
         "
-        'Bulk Upload',",
+        'Bulk Upload',","
         "
-        'Mobile App';
-      ],",
+        'Mobile App';"
+      ],","
         "
-      benefits: [",
+      benefits: [","
         "
-        'Save 10+ hours per week',",
+        'Save 10+ hours per week',","
         "
-        'Increase engagement by 40%',",
+        'Increase engagement by 40%',","
         "
-        'Post at optimal times',",
+        'Post at optimal times',","
         "
-        'Track performance metrics',",
+        'Track performance metrics',","
         "
-        'Collaborate with team';
-      ],",
+        'Collaborate with team';"
+      ],","
         "
-      category: 'Marketing',",
+      category: 'Marketing',","
         "
-      icon: <Share className="w-8 h-8 text-purple-400" />,",
+      icon: <Share className="w-8 h-8 text-purple-400" />,","
         "
-      popular: false,",
+      popular: false,","
         "
-      link: 'https://ziontechgroup.com/social-media-scheduler';
-    },",
+      link: 'https://ziontechgroup.com/social-media-scheduler';"
+    },","
         "
-    {"}
+    {"}"
         "
-      id: 'email-marketing-automation',",
+      id: 'email-marketing-automation',","
         "
-      name: 'Email Marketing Automation',",
+      name: 'Email Marketing Automation',","
         "
-      price: '$39/mo',",
+      price: '$39/mo',","
         "
-      originalPrice: '$79/mo',",
+      originalPrice: '$79/mo',","
         "
-      description: 'Automate email campaigns and nurture leads',",
+      description: 'Automate email campaigns and nurture leads',","
         "
-      longDescription: 'Create sophisticated email marketing campaigns with our powerful automation platform and drag-and-drop editor.',",
+      longDescription: 'Create sophisticated email marketing campaigns with our powerful automation platform and drag-and-drop editor.',","
         "
-      features: [",
+      features: [","
         "
-        'Drag-and-Drop Editor',",
+        'Drag-and-Drop Editor',","
         "
-        'Email Automation Workflows',",
+        'Email Automation Workflows',","
         "
-        'A/B Testing',",
+        'A/B Testing',","
         "
-        'Advanced Segmentation',",
+        'Advanced Segmentation',","
         "
-        'Personalization Engine',",
+        'Personalization Engine',","
         "
-        'Analytics Dashboard',",
+        'Analytics Dashboard',","
         "
-        'Template Library',",
+        'Template Library',","
         "
-        'List Management',",
+        'List Management',","
         "
-        'Deliverability Optimization',",
+        'Deliverability Optimization',","
         "
-        'Mobile Optimization';
-      ],",
+        'Mobile Optimization';"
+      ],","
         "
-      benefits: [",
+      benefits: [","
         "
-        'Increase open rates by 60%',",
+        'Increase open rates by 60%',","
         "
-        'Automate lead nurturing',",
+        'Automate lead nurturing',","
         "
-        'Personalize at scale',",
+        'Personalize at scale',","
         "
-        'Track detailed metrics',",
+        'Track detailed metrics',","
         "
-        'Improve deliverability';
-      ],",
+        'Improve deliverability';"
+      ],","
         "
-      category: 'Marketing',",
+      category: 'Marketing',","
         "
-      icon: <Mail className="w-8 h-8 text-green-400" />,",
+      icon: <Mail className="w-8 h-8 text-green-400" />,","
         "
-      popular: true,",
+      popular: true,","
         "
-      link: 'https://ziontechgroup.com/email-marketing-automation';
-    },",
+      link: 'https://ziontechgroup.com/email-marketing-automation';"
+    },","
         "
-    {"}
+    {"}"
         "
-      id: 'project-management-tool',",
+      id: 'project-management-tool',","
         "
-      name: 'Project Management Pro',",
+      name: 'Project Management Pro',","
         "
-      price: '$49/mo',",
+      price: '$49/mo',","
         "
-      originalPrice: '$99/mo',",
+      originalPrice: '$99/mo',","
         "
-      description: 'Complete project management solution',",
+      description: 'Complete project management solution',","
         "
-      longDescription: 'Manage projects, teams, and deadlines with our comprehensive project management platform designed for modern teams.',",
+      longDescription: 'Manage projects, teams, and deadlines with our comprehensive project management platform designed for modern teams.',","
         "
-      features: [",
+      features: [","
         "
-        'Kanban Boards',",
+        'Kanban Boards',","
         "
-        'Gantt Charts',",
+        'Gantt Charts',","
         "
-        'Time Tracking',",
+        'Time Tracking',","
         "
-        'Team Collaboration',",
+        'Team Collaboration',","
         "
-        'File Sharing',",
+        'File Sharing',","
         "
-        'Task Dependencies',",
+        'Task Dependencies',","
         "
-        'Resource Management',",
+        'Resource Management',","
         "
-        'Budget Tracking',",
+        'Budget Tracking',","
         "
-        'Reporting & Analytics',",
+        'Reporting & Analytics',","
         "
-        'Mobile App';
-      ],",
+        'Mobile App';"
+      ],","
         "
-      benefits: [",
+      benefits: [","
         "
-        'Improve team productivity by 50%',",
+        'Improve team productivity by 50%',","
         "
-        'Better project visibility',",
+        'Better project visibility',","
         "
-        'Streamline communication',",
+        'Streamline communication',","
         "
-        'Track progress in real-time',",
+        'Track progress in real-time',","
         "
-        'Meet deadlines consistently';
-      ],",
+        'Meet deadlines consistently';"
+      ],","
         "
-      category: 'Productivity',",
+      category: 'Productivity',","
         "
-      icon: <Target className="w-8 h-8 text-blue-400" />,",
+      icon: <Target className="w-8 h-8 text-blue-400" />,","
         "
-      popular: false,",
+      popular: false,","
         "
-      link: 'https://ziontechgroup.com/project-management-tool';
-    },",
+      link: 'https://ziontechgroup.com/project-management-tool';"
+    },","
         "
-    {"}
+    {"}"
         "
-      id: 'crm-sales-pipeline',",
+      id: 'crm-sales-pipeline',","
         "
-      name: 'CRM Sales Pipeline',",
+      name: 'CRM Sales Pipeline',","
         "
-      price: '$59/mo',",
+      price: '$59/mo',","
         "
-      originalPrice: '$119/mo',",
+      originalPrice: '$119/mo',","
         "
-      description: 'Manage leads and close more deals',",
+      description: 'Manage leads and close more deals',","
         "
-      longDescription: 'Streamline your sales process with our comprehensive CRM that helps you track leads, manage pipelines, and close more deals.',",
+      longDescription: 'Streamline your sales process with our comprehensive CRM that helps you track leads, manage pipelines, and close more deals.',","
         "
-      features: [",
+      features: [","
         "
-        'Lead Management',",
+        'Lead Management',","
         "
-        'Sales Pipeline Tracking',",
+        'Sales Pipeline Tracking',","
         "
-        'Contact Management',",
+        'Contact Management',","
         "
-        'Deal Forecasting',",
+        'Deal Forecasting',","
         "
-        'Email Integration',",
+        'Email Integration',","
         "
-        'Task Automation',",
+        'Task Automation',","
         "
-        'Reporting & Analytics',",
+        'Reporting & Analytics',","
         "
-        'Mobile CRM',",
+        'Mobile CRM',","
         "
-        'Team Collaboration',",
+        'Team Collaboration',","
         "
-        'Custom Fields';
-      ],",
+        'Custom Fields';"
+      ],","
         "
-      benefits: [",
+      benefits: [","
         "
-        'Increase sales by 35%',",
+        'Increase sales by 35%',","
         "
-        'Better lead tracking',",
+        'Better lead tracking',","
         "
-        'Improve follow-up process',",
+        'Improve follow-up process',","
         "
-        'Forecast sales accurately',",
+        'Forecast sales accurately',","
         "
-        'Streamline sales operations';
-      ],",
+        'Streamline sales operations';"
+      ],","
         "
-      category: 'Sales',",
+      category: 'Sales',","
         "
-      icon: <TrendingUp className="w-8 h-8 text-orange-400" />,",
+      icon: <TrendingUp className="w-8 h-8 text-orange-400" />,","
         "
-      popular: true,",
+      popular: true,","
         "
-      link: 'https://ziontechgroup.com/crm-sales-pipeline';
-    },",
+      link: 'https://ziontechgroup.com/crm-sales-pipeline';"
+    },","
         "
-    {"}
+    {"}"
         "
-      id: 'inventory-management',",
+      id: 'inventory-management',","
         "
-      name: 'Inventory Management System',",
+      name: 'Inventory Management System',","
         "
-      price: '$79/mo',",
+      price: '$79/mo',","
         "
-      originalPrice: '$159/mo',",
+      originalPrice: '$159/mo',","
         "
-      description: 'Track inventory and optimize stock levels',",
+      description: 'Track inventory and optimize stock levels',","
         "
-      longDescription: 'Manage your inventory efficiently with our comprehensive system that helps you track stock, prevent shortages, and optimize ordering.',",
+      longDescription: 'Manage your inventory efficiently with our comprehensive system that helps you track stock, prevent shortages, and optimize ordering.',","
         "
-      features: [",
+      features: [","
         "
-        'Real-time Inventory Tracking',",
+        'Real-time Inventory Tracking',","
         "
-        'Low Stock Alerts',",
+        'Low Stock Alerts',","
         "
-        'Purchase Order Management',",
+        'Purchase Order Management',","
         "
-        'Supplier Management',",
+        'Supplier Management',","
         "
-        'Barcode Scanning',",
+        'Barcode Scanning',","
         "
-        'Multi-location Support',",
+        'Multi-location Support',","
         "
-        'Reporting & Analytics',",
+        'Reporting & Analytics',","
         "
-        'Mobile App',",
+        'Mobile App',","
         "
-        'Integration APIs',",
+        'Integration APIs',","
         "
-        'Automated Reordering';
-      ],",
+        'Automated Reordering';"
+      ],","
         "
-      benefits: [",
+      benefits: [","
         "
-        'Reduce stockouts by 80%',",
+        'Reduce stockouts by 80%',","
         "
-        'Optimize inventory levels',",
+        'Optimize inventory levels',","
         "
-        'Improve cash flow',",
+        'Improve cash flow',","
         "
-        'Streamline ordering process',",
+        'Streamline ordering process',","
         "
-        'Better supplier relationships';
-      ],",
+        'Better supplier relationships';"
+      ],","
         "
-      category: 'E-commerce',",
+      category: 'E-commerce',","
         "
-      icon: <Package className="w-8 h-8 text-indigo-400" />,",
+      icon: <Package className="w-8 h-8 text-indigo-400" />,","
         "
-      popular: false,",
+      popular: false,","
         "
-      link: 'https://ziontechgroup.com/inventory-management';
-    },",
+      link: 'https://ziontechgroup.com/inventory-management';"
+    },","
         "
-    {"}
+    {"}"
         "
-      id: 'customer-support-ticket',",
+      id: 'customer-support-ticket',","
         "
-      name: 'Customer Support Ticket System',",
+      name: 'Customer Support Ticket System',","
         "
-      price: '$39/mo',",
+      price: '$39/mo',","
         "
-      originalPrice: '$79/mo',",
+      originalPrice: '$79/mo',","
         "
-      description: 'Streamline customer support operations',",
+      description: 'Streamline customer support operations',","
         "
-      longDescription: 'Manage customer inquiries efficiently with our comprehensive ticketing system that helps you provide excellent customer service.',",
+      longDescription: 'Manage customer inquiries efficiently with our comprehensive ticketing system that helps you provide excellent customer service.',","
         "
-      features: [",
+      features: [","
         "
-        'Ticket Management',",
+        'Ticket Management',","
         "
-        'Multi-channel Support',",
+        'Multi-channel Support',","
         "
-        'Knowledge Base',",
+        'Knowledge Base',","
         "
-        'SLA Management',",
+        'SLA Management',","
         "
-        'Team Collaboration',",
+        'Team Collaboration',","
         "
-        'Automation Rules',",
+        'Automation Rules',","
         "
-        'Customer Portal',",
+        'Customer Portal',","
         "
-        'Reporting & Analytics',",
+        'Reporting & Analytics',","
         "
-        'Mobile App',",
+        'Mobile App',","
         "
-        'Integration APIs';
-      ],",
+        'Integration APIs';"
+      ],","
         "
-      benefits: [",
+      benefits: [","
         "
-        'Improve response times by 60%',",
+        'Improve response times by 60%',","
         "
-        'Better ticket organization',",
+        'Better ticket organization',","
         "
-        'Reduce support costs',",
+        'Reduce support costs',","
         "
-        'Increase customer satisfaction',",
+        'Increase customer satisfaction',","
         "
-        'Streamline support workflow';
-      ],",
+        'Streamline support workflow';"
+      ],","
         "
-      category: 'Support',",
+      category: 'Support',","
         "
-      icon: <Headphones className="w-8 h-8 text-pink-400" />,",
+      icon: <Headphones className="w-8 h-8 text-pink-400" />,","
         "
-      popular: false,",
+      popular: false,","
         "
-      link: 'https://ziontechgroup.com/customer-support-ticket';
-    },",
+      link: 'https://ziontechgroup.com/customer-support-ticket';"
+    },","
         "
-    {"}
+    {"}"
         "
-      id: 'analytics-dashboard',",
+      id: 'analytics-dashboard',","
         "
-      name: 'Business Analytics Dashboard',",
+      name: 'Business Analytics Dashboard',","
         "
-      price: '$49/mo',",
+      price: '$49/mo',","
         "
-      originalPrice: '$99/mo',",
+      originalPrice: '$99/mo',","
         "
-      description: 'Visualize data and make informed decisions',",
+      description: 'Visualize data and make informed decisions',","
         "
-      longDescription: 'Transform your business data into actionable insights with our comprehensive analytics platform and customizable dashboards.',",
+      longDescription: 'Transform your business data into actionable insights with our comprehensive analytics platform and customizable dashboards.',","
         "
-      features: [",
+      features: [","
         "
-        'Custom Dashboards',",
+        'Custom Dashboards',","
         "
-        'Real-time Data Visualization',",
+        'Real-time Data Visualization',","
         "
-        'Automated Reports',",
+        'Automated Reports',","
         "
-        'KPI Tracking',",
+        'KPI Tracking',","
         "
-        'Data Integration',",
+        'Data Integration',","
         "
-        'Mobile Analytics',",
+        'Mobile Analytics',","
         "
-        'Team Collaboration',",
+        'Team Collaboration',","
         "
-        'Custom Metrics',",
+        'Custom Metrics',","
         "
-        'Alert System',",
+        'Alert System',","
         "
-        'Export Capabilities';
-      ],",
+        'Export Capabilities';"
+      ],","
         "
-      benefits: [",
+      benefits: [","
         "
-        'Make data-driven decisions',",
+        'Make data-driven decisions',","
         "
-        'Identify trends and opportunities',",
+        'Identify trends and opportunities',","
         "
-        'Improve operational efficiency',",
+        'Improve operational efficiency',","
         "
-        'Reduce reporting time by 90%',",
+        'Reduce reporting time by 90%',","
         "
-        'Scale with business growth';
-      ],",
+        'Scale with business growth';"
+      ],","
         "
-      category: 'Analytics',",
+      category: 'Analytics',","
         "
-      icon: <className="w-8 h-8 text-cyan-400" />,",
+      icon: <className="w-8 h-8 text-cyan-400" />,","
         "
-      popular: true,",
+      popular: true,","
         "
-      link: 'https://ziontechgroup.com/analytics-dashboard';
-    },",
+      link: 'https://ziontechgroup.com/analytics-dashboard';"
+    },","
         "
-    {"}
+    {"}"
         "
-      id: 'file-storage-collaboration',",
+      id: 'file-storage-collaboration',","
         "
-      name: 'File Storage & Collaboration',",
+      name: 'File Storage & Collaboration',","
         "
-      price: '$29/mo',",
+      price: '$29/mo',","
         "
-      originalPrice: '$59/mo',",
+      originalPrice: '$59/mo',","
         "
-      description: 'Secure file storage and team collaboration',",
+      description: 'Secure file storage and team collaboration',","
         "
-      longDescription: 'Store, share, and collaborate on files with our secure cloud storage platform designed for modern teams.',",
+      longDescription: 'Store, share, and collaborate on files with our secure cloud storage platform designed for modern teams.',","
         "
-      features: [",
+      features: [","
         "
-        'Secure Cloud Storage',",
+        'Secure Cloud Storage',","
         "
-        'File Sharing & Permissions',",
+        'File Sharing & Permissions',","
         "
-        'Version Control',",
+        'Version Control',","
         "
-        'Team Collaboration',",
+        'Team Collaboration',","
         "
-        'Mobile Access',",
+        'Mobile Access',","
         "
-        'Sync Across Devices',",
+        'Sync Across Devices',","
         "
-        'Advanced Security',",
+        'Advanced Security',","
         "
-        'Integration APIs',",
+        'Integration APIs',","
         "
-        'Backup & Recovery',",
+        'Backup & Recovery',","
         "
-        'Custom Branding';
-      ],",
+        'Custom Branding';"
+      ],","
         "
-      benefits: [",
+      benefits: [","
         "
-        'Centralize file management',",
+        'Centralize file management',","
         "
-        'Improve team collaboration',",
+        'Improve team collaboration',","
         "
-        'Secure file sharing',",
+        'Secure file sharing',","
         "
-        'Access files anywhere',",
+        'Access files anywhere',","
         "
-        'Reduce storage costs';
-      ],",
+        'Reduce storage costs';"
+      ],","
         "
-      category: 'Storage',",
+      category: 'Storage',","
         "
-      icon: <Cloud className="w-8 h-8 text-blue-400" />,",
+      icon: <Cloud className="w-8 h-8 text-blue-400" />,","
         "
-      popular: false,",
+      popular: false,","
         "
-      link: 'https://ziontechgroup.com/file-storage-collaboration';
-    },",
+      link: 'https://ziontechgroup.com/file-storage-collaboration';"
+    },","
         "
-    {"}
+    {"}"
         "
-      id: 'time-tracking-productivity',",
+      id: 'time-tracking-productivity',","
         "
-      name: 'Time Tracking & Productivity',",
+      name: 'Time Tracking & Productivity',","
         "
-      price: '$19/mo',",
+      price: '$19/mo',","
         "
-      originalPrice: '$39/mo',",
+      originalPrice: '$39/mo',","
         "
-      description: 'Track time and boost team productivity',",
+      description: 'Track time and boost team productivity',","
         "
-      longDescription: 'time spent on projects and tasks with our comprehensive time tracking and productivity analytics platform.',",
+      longDescription: 'time spent on projects and tasks with our comprehensive time tracking and productivity analytics platform.',","
         "
-      features: [",
+      features: [","
         "
-        'Time Tracking',",
+        'Time Tracking',","
         "
-        'Project Time Allocation',",
+        'Project Time Allocation',","
         "
-        'Productivity Analytics',",
+        'Productivity Analytics',","
         "
-        'Team Management',",
+        'Team Management',","
         "
-        'Invoicing Integration',",
+        'Invoicing Integration',","
         "
-        'Mobile App',",
+        'Mobile App',","
         "
-        'Offline Tracking',",
+        'Offline Tracking',","
         "
-        'Reporting & Insights',",
+        'Reporting & Insights',","
         "
-        'Integration APIs',",
+        'Integration APIs',","
         "
-        'Custom Categories';
-      ],",
+        'Custom Categories';"
+      ],","
         "
-      benefits: [",
+      benefits: [","
         "
-        'Improve time management',",
+        'Improve time management',","
         "
-        'Track project profitability',",
+        'Track project profitability',","
         "
-        'Identify productivity patterns',",
+        'Identify productivity patterns',","
         "
-        'Streamline invoicing',",
+        'Streamline invoicing',","
         "
-        'Better resource allocation';
-      ],",
+        'Better resource allocation';"
+      ],","
         "
-      category: 'Productivity',",
+      category: 'Productivity',","
         "
-      icon: <className="w-8 h-8 text-green-400" />,",
+      icon: <className="w-8 h-8 text-green-400" />,","
         "
-      popular: false,",
+      popular: false,","
         "
-      link: 'https://ziontechgroup.com/time-tracking-productivity';
-    },",
+      link: 'https://ziontechgroup.com/time-tracking-productivity';"
+    },","
         "
-    {"}
+    {"}"
         "
-      id: 'website-builder',",
+      id: 'website-builder',","
         "
-      name: 'AI Website Builder',",
+      name: 'AI Website Builder',","
         "
-      price: '$39/mo',",
+      price: '$39/mo',","
         "
-      originalPrice: '$79/mo',",
+      originalPrice: '$79/mo',","
         "
-      description: 'Build professional websites with AI assistance',",
+      description: 'Build professional websites with AI assistance',","
         "
-      longDescription: 'Create stunning websites without coding using our AI-powered website builder with drag-and-drop functionality.',",
+      longDescription: 'Create stunning websites without coding using our AI-powered website builder with drag-and-drop functionality.',","
         "
-      features: [",
+      features: [","
         "
-        'AI-Powered Design',",
+        'AI-Powered Design',","
         "
-        'Drag-and-Drop Editor',",
+        'Drag-and-Drop Editor',","
         "
-        'Mobile Responsive',",
+        'Mobile Responsive',","
         "
-        'SEO Optimization',",
+        'SEO Optimization',","
         "
-        'E-commerce Integration',",
+        'E-commerce Integration',","
         "
-        'Custom Domains',",
+        'Custom Domains',","
         "
-        'SSL Certificates',",
+        'SSL Certificates',","
         "
-        'Analytics Integration',",
+        'Analytics Integration',","
         "
-        'Template Library',",
+        'Template Library',","
         "
-        '24/7 Support';
-      ],",
+        '24/7 Support';"
+      ],","
         "
-      benefits: [",
+      benefits: [","
         "
-        'Build websites in minutes',",
+        'Build websites in minutes',","
         "
-        'No coding required',",
+        'No coding required',","
         "
-        'Professional results',",
+        'Professional results',","
         "
-        'SEO optimized',",
+        'SEO optimized',","
         "
-        'Mobile responsive';
-      ],",
+        'Mobile responsive';"
+      ],","
         "
-      category: 'Web Development',",
+      category: 'Web Development',","
         "
-      icon: <Globe className="w-8 h-8 text-purple-400" />,",
+      icon: <Globe className="w-8 h-8 text-purple-400" />,","
         "
-      popular: true,",
+      popular: true,","
         "
-      link: 'https://ziontechgroup.com/website-builder';
-    },",
+      link: 'https://ziontechgroup.com/website-builder';"
+    },","
         "
-    {"}
+    {"}"
         "
-      id: 'api-management',",
+      id: 'api-management',","
         "
-      name: 'API Management Platform',",
+      name: 'API Management Platform',","
         "
-      price: '$99/mo',",
+      price: '$99/mo',","
         "
-      originalPrice: '$199/mo',",
+      originalPrice: '$199/mo',","
         "
-      description: 'Manage and monetize your APIs',",
+      description: 'Manage and monetize your APIs',","
         "
-      longDescription: 'Build, deploy, and manage APIs with our comprehensive platform that includes analytics, security, and monetization features.',",
+      longDescription: 'Build, deploy, and manage APIs with our comprehensive platform that includes analytics, security, and monetization features.',","
         "
-      features: [",
+      features: [","
         "
-        'API Gateway',",
+        'API Gateway',","
         "
-        'Rate Limiting',",
+        'Rate Limiting',","
         "
-        'Authentication & Authorization',",
+        'Authentication & Authorization',","
         "
-        'Analytics & ing',",
+        'Analytics & ing',","
         "
-        'Documentation Generator',",
+        'Documentation Generator',","
         "
-        'Developer Portal',",
+        'Developer Portal',","
         "
-        'Monetization Tools',",
+        'Monetization Tools',","
         "
-        'Version Management',",
+        'Version Management',","
         "
-        'Security Policies',",
+        'Security Policies',","
         "
-        'Integration APIs';
-      ],",
+        'Integration APIs';"
+      ],","
         "
-      benefits: [",
+      benefits: [","
         "
-        'Secure API management',",
+        'Secure API management',","
         "
-        'API performance',",
+        'API performance',","
         "
-        'Generate revenue from APIs',",
+        'Generate revenue from APIs',","
         "
-        'Improve developer experience',",
+        'Improve developer experience',","
         "
-        'Scale API infrastructure';
-      ],",
+        'Scale API infrastructure';"
+      ],","
         "
-      category: 'Development',",
+      category: 'Development',","
         "
-      icon: <Code className="w-8 h-8 text-red-400" />,",
+      icon: <Code className="w-8 h-8 text-red-400" />,","
         "
-      popular: false,",
+      popular: false,","
         "
       link: 'https://ziontechgroup.com/api-management'
     },
@@ -744,140 +717,140 @@ import React from 'react;'
   ];
 ,
       const categories = ['All', 'AI Tools', 'Marketing', 'Productivity', 'Sales', 'E-commerce', 'Support', 'Analytics', 'Storage', 'Web Development', 'Development'];
-,
-      const features = [",
+,"
+      const features  =  [","
         "
-    'Scalable Architecture',",
+    'Scalable Architecture',","
         "
-    '24/7 Expert Support',",
+    '24/7 Expert Support',","
         "
-    'Easy Integration',",
+    'Easy Integration',","
         "
-    'Custom Development',",
+    'Custom Development',","
         "
-    'Enterprise Security',",
+    'Enterprise Security',","
         "
-    'Performance ing',",
+    'Performance ing',","
         "
-    'API Access',",
+    'API Access',","
         "
-    'White-label Options',",
+    'White-label Options',","
         "
-    'Mobile Apps',",
-        "
+    'Mobile Apps',","
+        ";
     'Analytics Dashboard';
   ];
-,
-      const stats = [",
+,"
+      const stats  =  [","
         "
-    { number: '100+', label: 'Micro SaaS Solutions' },",
+    { number: '100+', label: 'Micro SaaS Solutions' },","
         "
-    { number: '500+', label: 'Happy Customers' },",
+    { number: '500+', label: 'Happy Customers' },","
         "
-    { number: '99.9%', label: 'Uptime' },",
-        "
+    { number: '99.9%', label: 'Uptime' },","
+        ";
     { number: '24/7', label: 'Support' };
   ];
-,
-      const pricingTiers = [",
+,"
+      const pricingTiers  =  [","
         "
-    {"}
+    {"}"
         "
-      name: 'Starter',",
+      name: 'Starter',","
         "
-      price: '$29/mo',",
+      price: '$29/mo',","
         "
-      description: 'Perfect for small businesses',",
+      description: 'Perfect for small businesses',","
         "
-      features: [",
+      features: [","
         "
-        'Up to 5 team members',",
+        'Up to 5 team members',","
         "
-        'Basic features',",
+        'Basic features',","
         "
-        'Email support',",
+        'Email support',","
         "
-        'Standard integrations',",
+        'Standard integrations',","
         "
-        '1GB storage',",
+        '1GB storage',","
+        ";
+        'Basic analytics';"
+      ],","
         "
-        'Basic analytics';
-      ],",
+      popular: false","
         "
-      popular: false",
+    },","
         "
-    },",
+    {"}"
         "
-    {"}
+      name: 'Professional',","
         "
-      name: 'Professional',",
+      price: '$79/mo',","
         "
-      price: '$79/mo',",
+      description: 'Ideal for growing businesses',","
         "
-      description: 'Ideal for growing businesses',",
+      features: [","
         "
-      features: [",
+        'Up to 25 team members',","
         "
-        'Up to 25 team members',",
+        'Advanced features',","
         "
-        'Advanced features',",
+        'Priority support',","
         "
-        'Priority support',",
+        'Custom integrations',","
         "
-        'Custom integrations',",
+        '10GB storage',","
         "
-        '10GB storage',",
+        'Advanced analytics',","
         "
-        'Advanced analytics',",
+        'API access';"
+      ],","
         "
-        'API access';
-      ],",
+      popular: true","
         "
-      popular: true",
+    },","
         "
-    },",
+    {"}"
         "
-    {"}
+      name: 'Enterprise',","
         "
-      name: 'Enterprise',",
+      price: 'Custom',","
         "
-      price: 'Custom',",
+      description: 'For large organizations',","
         "
-      description: 'For large organizations',",
+      features: [","
         "
-      features: [",
+        'Unlimited team members',","
         "
-        'Unlimited team members',",
+        'Full feature suite',","
         "
-        'Full feature suite',",
+        '24/7 dedicated support',","
         "
-        '24/7 dedicated support',",
+        'Custom development',","
         "
-        'Custom development',",
+        'Unlimited storage',","
         "
-        'Unlimited storage',",
+        'White-label solutions',","
         "
-        'White-label solutions',",
+        'On-premise deployment';"
+      ],","
         "
-        'On-premise deployment';
-      ],",
-        "
-      popular: false",
+      popular: false","
         "
     };
   ];
-,
-      const filteredServices = selectedCategory === 'All' ",
+,"
+      const filteredServices  =  selectedCategory === 'All' ","
         "
-    ? microSaaSServices",
-        "
+    ? microSaaSServices","
+        ";
     : microSaaSServices.filter(service => service.category === selectedCategory);
-,
-      return (",)
+,"
+      return (",)"
         "
-    <>{"}</>
+    <>{"}</>"
         "
-      <Helmet>",
+      <Helmet>","
         "
         <title>Micro SaaS Solutions - Innovative Software as a Service | Zion Tech Group</title>""
         <meta name="description" content="Discover our comprehensive suite of micro SaaS solutions including AI tools, marketing automation, project management, CRM, and more. Transform your business with our innovative software solutions." />""
@@ -885,407 +858,407 @@ import React from 'react;'
         <meta property="og:title" content="Micro SaaS Solutions - Innovative Software as a Service" />""
         <meta property="og:description" content="Discover our comprehensive suite of micro SaaS solutions including AI tools, marketing automation, project management, CRM, and more." />""
         <meta property="og:url" content="https://ziontechgroup.com/micro-saas-solutions" />""
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas-solutions" />",
+        <link rel="canonical" href="https://ziontechgroup.com/micro-saas-solutions" />","
         "
-      </Helmet>",
+      </Helmet>","
         "
-      {/* Hero Section */};
+      {/* Hero Section */};"
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">""
         <div className="absolute inset-0 overflow-hidden">""
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>""
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>",
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>","
         "
-        </div>",
+        </div>","
         "
         <div className="container mx-auto px-4 relative z-10">""
           <div className="text-center max-w-4xl mx-auto">""
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">",
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">","
         "
-              Micro SaaS Solutions",
+              Micro SaaS Solutions","
         "
-              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">",
+              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">","
         "
-                {' '}That Scale",
+                {' '}That Scale","
         "
-              </span>",
+              </span>","
         "
-            </h1>",
+            </h1>","
         "
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">",
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">","
         "
-              Discover our comprehensive suite of innovative micro SaaS solutions designed to",
+              Discover our comprehensive suite of innovative micro SaaS solutions designed to","
         "
-              streamline your business operations and drive growth.",
+              streamline your business operations and drive growth.","
         "
-            </p>",
+            </p>","
         "
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">","
         "
-              <",>
+              <",>"
         "
-                to="/contact",
-      className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/25 flex items-center group";
-              >",
+                to="/contact","
+      className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/25 flex items-center group";"
+              >","
         "
-                Get Started",
+                Get Started","
         "
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />",
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />","
         "
-              </>",
+              </>","
         "
-              <"">
-                to="#pricing",
-      className="border-2 border-white/30 hover:border-purple-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center group";
-              >",
+              <"">"
+                to="#pricing","
+      className="border-2 border-white/30 hover:border-purple-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center group";"
+              >","
         "
-                View Pricing",
+                View Pricing","
         "
-                <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />",
+                <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />","
         "
-              </>",
+              </>","
         "
-            </div>",
+            </div>","
         "
-          </div>",
+          </div>","
         "
-        </div>",
+        </div>","
         "
-      </section>",
+      </section>","
         "
-      {/* Stats Section */};
+      {/* Stats Section */};"
       <section className="py-16 bg-slate-800">""
         <div className="container mx-auto px-4">""
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">",
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">","
         "
-            {stats.map((stat, index) => (",)}
+            {stats.map((stat, index) => (",)}"
         "
               <div key={index} className="text-center">""
-                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">",
+                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">","
         "
-                  {stat.number};
-                </div>",
+                  {stat.number};"
+                </div>","
         "
-                <div className="text-gray-300 text-sm md:text-base">",
+                <div className="text-gray-300 text-sm md:text-base">","
         "
-                  {stat.label};
-                </div>",
+                  {stat.label};"
+                </div>","
         "
-              </div>",
+              </div>","
         "
-            ))};
-          </div>",
+            ))};"
+          </div>","
         "
-        </div>",
+        </div>","
         "
-      </section>",
+      </section>","
         "
-      {/* Category */};
+      {/* Category */};"
       <section className="py-8 bg-slate-900">""
         <div className="container mx-auto px-4">""
-          <div className="flex flex-wrap justify-center gap-4">",
+          <div className="flex flex-wrap justify-center gap-4">","
         "
-            {categories.map((category) => (",)}
+            {categories.map((category) => (",)}"
         "
-              <button",>
+              <button",>"
         "
                 key={category},
-      onClick={() => setSelectedCategory(category)},
-      className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${"}
+      onClick={() => setSelectedCategory(category)},"
+      className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${"}"
         "
-                  selectedCategory === category",
+                  selectedCategory === category","
         "
                     ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white shadow-lg';
                     : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-white';
-                }`};
-              >",
+                }`};"
+              >","
         "
-                {category};
-              </button>",
+                {category};"
+              </button>","
         "
-            ))};
-          </div>",
+            ))};"
+          </div>","
         "
-        </div>",
+        </div>","
         "
-      </section>",
+      </section>","
         "
-      {/* Services Grid */};
+      {/* Services Grid */};"
       <section className="py-20 bg-slate-900">""
         <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">",
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">","
         "
-              Our Micro SaaS Solutions",
+              Our Micro SaaS Solutions","
         "
             </h2>""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">",
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">","
         "
-              Choose from our comprehensive suite of micro SaaS solutions designed to solve specific business challenges.",
+              Choose from our comprehensive suite of micro SaaS solutions designed to solve specific business challenges.","
         "
-            </p>",
+            </p>","
         "
-          </div>",
+          </div>","
         "
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">",
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">","
         "
-            {filteredServices.map((service, index) => (",)}
+            {filteredServices.map((service, index) => (",)}"
         "
-              <divkey={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10 group relative ${",>}
+              <divkey={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10 group relative ${",>}"
         "
-                service.popular ? 'ring-2 ring-purple-500' : '';
-              }`}>",
+                service.popular ? 'ring-2 ring-purple-500' : '';"
+              }`}>","
         "
-                {service.popular && ("")}
+                {service.popular && ("")}"
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">""
-                    <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",
+                    <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">","
         "
-                      Popular",
+                      Popular","
         "
-                    </span>",
+                    </span>","
         "
-                  </div>",
+                  </div>","
         "
                 )};
-;
+;"
                 <div className="mb-6">""
                   <div className="flex items-center justify-between mb-4">""
-                    <div className="group-hover:scale-110 transition-transform">",
+                    <div className="group-hover:scale-110 transition-transform">","
         "
-                      {service.icon};
-                    </div>",
+                      {service.icon};"
+                    </div>","
         "
-                    <span className="text-sm text-purple-400 font-medium">{service.category}</span>",
+                    <span className="text-sm text-purple-400 font-medium">{service.category}</span>","
         "
-                  </div>",
+                  </div>","
         "
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">",
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">","
         "
-                    {service.name};
-                  </h3>",
+                    {service.name};"
+                  </h3>","
         "
                   <div className="flex items-center space-x-2 mb-3">""
                     <span className="text-2xl font-bold text-purple-400">{service.price}</span>""
-                    <span className="text-sm text-gray-400 line-through">{service.originalPrice}</span>",
+                    <span className="text-sm text-gray-400 line-through">{service.originalPrice}</span>","
         "
-                  </div>",
+                  </div>","
         "
-                  <p className="text-gray-300 mb-4 text-sm">",
+                  <p className="text-gray-300 mb-4 text-sm">","
         "
-                    {service.description};
-                  </p>",
+                    {service.description};"
+                  </p>","
         "
                 </div>""
-                <ul className="space-y-2 mb-6">",
+                <ul className="space-y-2 mb-6">","
         "
-                  {service.features.slice(0, 4).map((feature, featureIndex) => (",)}
+                  {service.features.slice(0, 4).map((feature, featureIndex) => (",)}"
         "
                     <li key={featureIndex} className="flex items-center text-xs text-gray-300">""
-                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />",
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />","
         "
-                      {feature};
-                    </li>",
+                      {feature};"
+                    </li>","
         "
-                  ))};
-                  {service.features.length > 4 && ("")}
-                    <li className="text-xs text-purple-400 font-medium">",
+                  ))};"
+                  {service.features.length > 4 && ("")}"
+                    <li className="text-xs text-purple-400 font-medium">","
         "
-                      +{service.features.length - 4} more features",
+                      +{service.features.length - 4} more features","
         "
-                    </li>",
+                    </li>","
         "
-                  )};
-                </ul>",
+                  )};"
+                </ul>","
         "
-                <div className="space-y-3">",
+                <div className="space-y-3">","
         "
-                  <a",>
+                  <a",>"
         "
-                    href={service.link},
-      target="_blank",
-      rel="noopener noreferrer",
-      className="block w-full bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white text-center py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-sm";
-                  >",
+                    href={service.link},"
+      target="_blank","
+      rel="noopener noreferrer","
+      className="block w-full bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white text-center py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-sm";"
+                  >","
         "
-                    Learn More",
+                    Learn More","
         "
-                  </a>",
+                  </a>","
         "
-                  <",>
+                  <",>"
         "
-                    to="/contact",
-      className="block w-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white text-center py-2 rounded-lg font-semibold transition-all duration-300 text-sm";
-                  >",
+                    to="/contact","
+      className="block w-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white text-center py-2 rounded-lg font-semibold transition-all duration-300 text-sm";"
+                  >","
         "
-                    Start Free Trial",
+                    Start Free Trial","
         "
-                  </>",
+                  </>","
         "
-                </div>",
+                </div>","
         "
-              </div>",
+              </div>","
         "
-            ))};
-          </div>",
+            ))};"
+          </div>","
         "
-        </div>",
+        </div>","
         "
-      </section>",
+      </section>","
         "
-      {/* Features Section */};
+      {/* Features Section */};"
       <section className="py-20 bg-slate-800">""
         <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">",
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">","
         "
-              Why Choose Our Micro SaaS Solutions?",
+              Why Choose Our Micro SaaS Solutions?","
         "
             </h2>""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">",
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">","
         "
-              Our micro SaaS solutions are designed with modern businesses in mind, offering powerful features and seamless integration.",
+              Our micro SaaS solutions are designed with modern businesses in mind, offering powerful features and seamless integration.","
         "
-            </p>",
+            </p>","
         "
-          </div>",
+          </div>","
         "
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">",
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">","
         "
-            {features.map((feature, index) => (",)}
+            {features.map((feature, index) => (",)}"
         "
               <div key={index} className="flex items-center space-x-4 p-6 bg-slate-700/30 rounded-lg hover:bg-slate-600/30 transition-colors group">""
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 group-hover:scale-110 transition-transform" />""
-                <span className="text-gray-300 font-medium group-hover:text-white transition-colors">{feature}</span>",
+                <span className="text-gray-300 font-medium group-hover:text-white transition-colors">{feature}</span>","
         "
-              </div>",
+              </div>","
         "
-            ))};
-          </div>",
+            ))};"
+          </div>","
         "
-        </div>",
+        </div>","
         "
       </section>""
-      {/* Pricing Section */};
+      {/* Pricing Section */};"
       <section id="pricing" className="py-20 bg-slate-900">""
         <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">",
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">","
         "
-              Micro SaaS Solutions Pricing",
+              Micro SaaS Solutions Pricing","
         "
             </h2>""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">",
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">","
         "
-              Choose the perfect plan for your business. All plans include 14-day free trial and no setup fees.",
+              Choose the perfect plan for your business. All plans include 14-day free trial and no setup fees.","
         "
-            </p>",
+            </p>","
         "
-          </div>",
+          </div>","
         "
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">",
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">","
         "
-            {pricingTiers.map((tier, index) => (",)}
+            {pricingTiers.map((tier, index) => (",)}"
         "
-              <divkey={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${",>}
+              <divkey={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${",>}"
         "
-                tier.popular ? 'ring-2 ring-purple-500 bg-slate-700/50' : '';
-              }`}>",
+                tier.popular ? 'ring-2 ring-purple-500 bg-slate-700/50' : '';"
+              }`}>","
         "
-                {tier.popular && ("")}
+                {tier.popular && ("")}"
                   <div className="text-center mb-4">""
-                    <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",
+                    <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">","
         "
-                      Most Popular",
+                      Most Popular","
         "
-                    </span>",
+                    </span>","
         "
-                  </div>",
+                  </div>","
         "
                 )};
-;
+;"
                 <div className="text-center mb-8">""
                   <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>""
                   <div className="text-4xl font-bold text-purple-400 mb-2">{tier.price}</div>""
-                  <p className="text-gray-300">{tier.description}</p>",
+                  <p className="text-gray-300">{tier.description}</p>","
         "
-                </div>",
+                </div>","
         "
-                <ul className="space-y-4 mb-8">",
+                <ul className="space-y-4 mb-8">","
         "
-                  {tier.features.map((feature, featureIndex) => (",)}
+                  {tier.features.map((feature, featureIndex) => (",)}"
         "
                     <li key={featureIndex} className="flex items-center text-gray-300">""
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />",
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />","
         "
-                      {feature};
-                    </li>",
+                      {feature};"
+                    </li>","
         "
-                  ))};
-                </ul>",
+                  ))};"
+                </ul>","
         "
-                <",>
+                <",>"
         "
-                  to="/contact",
-      className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${"}
+                  to="/contact","
+      className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${"}"
         "
-                    tier.popular",
+                    tier.popular","
         "
                       ? 'bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white';
                       : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white';
-                  }`};
-                >",
+                  }`};"
+                >","
         "
-                  Get Started",
+                  Get Started","
         "
-                </>",
+                </>","
         "
-              </div>",
+              </div>","
         "
-            ))};
-          </div>",
+            ))};"
+          </div>","
         "
-        </div>",
+        </div>","
         "
       </section>""
-      {/* CTA Section */};
+      {/* CTA Section */};"
       <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600">""
         <div className="container mx-auto px-4 text-center">""
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">",
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">","
         "
-            Ready to Transform Your Business?",
+            Ready to Transform Your Business?","
         "
           </h2>""
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">",
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">","
         "
-            Start your free trial today and discover how our micro SaaS solutions can streamline your operations and drive growth.",
+            Start your free trial today and discover how our micro SaaS solutions can streamline your operations and drive growth.","
         "
           </p>""
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">","
         "
-            <",>
+            <",>"
         "
-              to="/contact",
-      className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg";
-            >",
+              to="/contact","
+      className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg";"
+            >","
         "
-              Start Free Trial",
+              Start Free Trial","
         "
-            </>",
+            </>","
         "
-            <",>
+            <",>"
         "
-              to="/demo",
-      className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105";
-            >",
+              to="/demo","
+      className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105";"
+            >","
         "
-              Schedule Demo",
+              Schedule Demo","
         "
-            </>",
+            </>","
         "
-          </div>",
+          </div>","
         "
-        </div>",
+        </div>","
         "
-      </section>",
+      </section>","
         "
     </>""
   )
@@ -1293,27 +1266,25 @@ import React from 'react;'
     {}
 ,
       export default MicroSaaSSolutionsPage;
-
-import React from 'react';;';
+import React from 'react';';
 import SEOHead from './components/SEOHead';
-;
-const MicroSaasSolutionsPage: React.FC = () => {
-  return (
+
+const MicroSaasSolutionsPage: React.FC  =  () => {
+  return (;
     <>;
-      <SEOHead;
-        title="Micro Saas Solutions - Zion Tech Group"";
-        description="Professional micro saas solutions solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Micro Saas Solutions</h1>";
+      <SEOHead;"
+        title="Micro Saas Solutions - Zion Tech Group"";"
+        description="Professional micro saas solutions solutions for modern businesses";"
+      />";"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Micro Saas Solutions</$1>"
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
     </>;
   ),
 };
-;
+;"
 export default MicroSaasSolutionsPage;'";'";
-
->>>>>>> main
+"

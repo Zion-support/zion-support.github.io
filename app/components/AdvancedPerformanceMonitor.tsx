@@ -1,6 +1,5 @@
-import React from 'react';;';
+import React from 'react';';
 import SEOHead from './components/SEOHead';
-
 interface PerformanceMetrics {}
   fcp: number | null;
   lcp: number | null;
@@ -20,14 +19,12 @@ interface PerformanceMetrics {}
     loadEventStart: number;
   } | null;
 }
-
 interface PerformanceMonitorProps {}
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enableRealTimeMonitoring?: boolean;
   logToConsole?: boolean;
 }
-
-const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({)}
+const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({)}
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
   logToConsole = false
@@ -40,15 +37,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({)}
     ttfb: null,
     fmp: null,
     memory: null,
-    navigation: null
+    navigation: null;
   });
-
-  const measurePerformance = useCallback(() => {}
-    if (typeof window === 'undefined' || !('performance' in window)) {}
+  const measurePerformance  =  useCallback(() => {}
+    if (typeof window === 'undefined' || !('performance' in window)) {};
       return;
     }
-
-    const newMetrics: PerformanceMetrics = {}
+    const newMetrics: PerformanceMetrics  =  {}
       fcp: null,
       lcp: null,
       fid: null,
@@ -56,28 +51,24 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({)}
       ttfb: null,
       fmp: null,
       memory: null,
-      navigation: null
+      navigation: null;
     };
-
     // First Contentful Paint (FCP)
     const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
     if (fcpEntry) {}
       newMetrics.fcp = fcpEntry.startTime;
     }
-
     // Largest Contentful Paint (LCP)
     const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
     if (lcpEntries.length > 0) {}
       newMetrics.lcp = lcpEntries[lcpEntries.length - 1].startTime;
     }
-
     // First Input Delay (FID)
     const fidEntries = performance.getEntriesByType('first-input');
     if (fidEntries.length > 0) {}
       const fidEntry = fidEntries[0] as any;
       newMetrics.fid = fidEntry.processingStart - fidEntry.startTime;
     }
-
     // Cumulative Layout Shift (CLS)
     let clsValue = 0;
     const clsEntries = performance.getEntriesByType('layout-shift');
@@ -87,7 +78,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({)}
       }
     });
     newMetrics.cls = clsValue;
-
     // Time to First Byte (TTFB)
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {}
@@ -99,14 +89,12 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({)}
         loadEventStart: navigationEntry.loadEventStart
       };
     }
-
     // First Meaningful Paint (FMP) - approximated
     const paintEntries = performance.getEntriesByType('paint');
     const fmpEntry = paintEntries.find(entry => entry.name === 'first-meaningful-paint');
     if (fmpEntry) {}
       newMetrics.fmp = fmpEntry.startTime;
     }
-
     // Memory usage
     if ('memory' in performance) {}
       const memoryInfo = (performance as any).memory;
@@ -116,66 +104,64 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({)}
         jsHeapSizeLimit: memoryInfo.jsHeapSizeLimit
       };
     }
-
     setMetrics(newMetrics);
-
     if (onMetricsUpdate) {}
       onMetricsUpdate(newMetrics);
     }
-
     if (logToConsole) {}
       console.log('Performance Metrics:', newMetrics);
     }
-  }, [onMetricsUpdate, logToConsole]);
-
+  }, [
+    onMetricsUpdate, logToConsole
+  
+  ]);
   useEffect(() => {}
     // Initial measurement
     measurePerformance();
-
     if (enableRealTimeMonitoring) {}
       // Set up real-time monitoring
-      const observer = new PerformanceObserver((list) => {}
+      const observer  =  new PerformanceObserver((list) => {}
         list.getEntries().forEach((entry) => {}
           if (entry.entryType === 'largest-contentful-paint' ||)
               entry.entryType === 'first-input' || 
-              entry.entryType === 'layout-shift') {}
+              entry.entryType === 'layout-shift') {};
             measurePerformance();
           }
         });
       });
-
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-
+      observer.observe({
+    entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] 
+  
+  });
       // Periodic monitoring
       const interval = setInterval(measurePerformance, 5000);
-
       return () => {}
         observer.disconnect();
         clearInterval(interval);
       };
     }
-  }, [measurePerformance, enableRealTimeMonitoring]);
-
+  }, [
+    measurePerformance, enableRealTimeMonitoring
+  
+  ]);
   // This component doesn't render anything visible
   return null;
 
-;
-const ComponentsPage: React.FC = () => {
-  return (
+const ComponentsPage: React.FC  =  () => {
+  return (;
     <>;
       <SEOHead;
-        title="Components - Zion Tech Group"";
-        description="Professional components solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+        title="Components - Zion Tech Group"";"
+        description="Professional components solutions for modern businesses";"
+      />";"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Components</$1>"
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
     </>;
   ),
-
 };
-;
-export default ComponentsPage;'";'";
+;"
+export default ComponentsPage;'";'";"

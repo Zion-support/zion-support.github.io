@@ -1,1232 +1,952 @@
-
-<<<<<<< HEAD
-import React from 'react;'
-import { Helmet } from 'react-helmet-async;'
-import { Link } from 'react-router-dom;'
-import {
-  CurrencyDollarIcon,
-  CheckIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  CpuChipIcon,
-  ShieldCheckIcon,
-  CloudIcon
-} from '@heroicons/react/24/outline;'
-const PricingPage: React.FC = () => {
-  const plans = [
-    {
-      name: 'Starter',''
-      price: '$2,999',''
-      period: '/month',''
-      description: 'Perfect for small businesses getting started with technology solutions',''
-      features: [
-        'Basic AI Solutions',''
-        'Standard Security',''
-        'Cloud Infrastructure',''
-        'Email Support',''
-        'Monthly Reports',''
-        'Basic Analytics''
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',''
-      price: '$7,999',''
-      period: '/month',''
-      description: 'Ideal for growing businesses that need comprehensive technology solutions',''
-      features: [
-        'Advanced AI Solutions',''
-        'Enhanced Security',''
-        'Scalable Cloud Infrastructure',''
-        'Priority Support',''
-        'Weekly Reports',''
-        'Advanced Analytics',''
-        'Custom Integrations',''
-        '24/7 Monitoring''
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',''
-      price: 'Custom',''
-      period: ',''
-      description: 'Tailored solutions for large organizations with complex requirements',''
-      features: [
-        'Custom AI Solutions',''
-        'Enterprise Security',''
-        'Multi-cloud Infrastructure',''
-        'Dedicated Support',''
-        'Real-time Reports',''
-        'Custom Analytics',''
-        'Full Customization',''
-        '24/7 Dedicated Support',''
-        'On-site Consulting',''
-        'SLA Guarantees''
-      ],
-      popular: false
-    }
->>>>>>> origin/main
-  ];
-  const addOns = [
-    {
-      name: 'AI Development',''
-      price: '$1,500',''
-      period: '/month',''
-      description: 'Additional AI model development and training''
-    },
-    {
-      name: 'Security Audit',''
-      price: '$2,500',''
-      period: '/audit',''
-      description: 'Comprehensive security assessment and recommendations''
-    },
-    {
-      name: 'Cloud Migration',''
-      price: '$5,000',''
-      period: '/project',''
-      description: 'Complete cloud infrastructure migration service''
-    },
-    {
-      name: 'Training & Support',''
-      price: '$800',''
-      period: '/hour',''
-      description: 'Custom training sessions for your team''
-    }
-  ];
-  return (
-    <></>
-      <Helmet>
-        <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Transparent pricing for our AI, cybersecurity, cloud infrastructure, and IT solutions. Choose the plan that fits your business needs." />""
-        <meta name="keywords" content="pricing, AI solutions pricing, cybersecurity pricing, cloud infrastructure pricing, IT services pricing" />""
-      </Helmet>
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">""
-        <div className="absolute inset-0 opacity-20">""
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>""
-        </div>
-        <div className="relative z-10 container mx-auto px-4 text-center">""
-          <div className="max-w-4xl mx-auto">""
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">""
-              Transparent Pricing
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">""
-              Choose the Plan That Fits Your Business
-            </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">""
-              Our pricing is designed to scale with your business. Start with our Starter plan
-              and upgrade as your needs grow, or go straight to Enterprise for comprehensive solutions.
-            </p>
-          </div>
-        </section>
-      {/* Pricing Plans */}
-      <section className="py-20 bg-slate-900">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
-          <div className="text-center mb-16">""
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">""
-              Our Pricing Plans
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">""
-              Flexible pricing options to meet your business needs
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">""
-            {plans.map((plan, index) => (
-              <div key={index} className={`bg-slate-800 rounded-xl p-8 relative ${plan.popular ? 'ring-2 ring-purple-500' : '}`}>''
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
-                    <span className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">""
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <div className="text-center mb-8">""
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
-                  <div className="flex items-baseline justify-center mb-4">""
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>""
-                    <span className="text-gray-400 ml-2">{plan.period}</span>""
-                  </div>
-                  <p className="text-gray-300">{plan.description}</p>""
-                </div>
-                <ul className="space-y-4 mb-8">""
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">""
-                      <CheckIcon className="w-5 h-5 text-green-400 mr-3" />""
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  to="/contact""
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700''
-                      : 'border-2 border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white''
-                  }`}
-                >
-                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}''
-                </Link>
-              </div>
-            ))}
-          </div>
-        </section>
-      {/* Add-ons Section */}
-      <section className="py-20 bg-slate-800/50">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
-          <div className="text-center mb-16">""
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">""
-              Additional Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">""
-              Enhance your plan with these additional services
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">""
-            {addOns.map((addOn, index) => (
-              <div key={index} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300">""
-                <h3 className="text-xl font-bold text-white mb-2">{addOn.name}</h3>""
-                <div className="flex items-baseline mb-4">""
-                  <span className="text-2xl font-bold text-purple-400">{addOn.price}</span>""
-                  <span className="text-gray-400 ml-1">{addOn.period}</span>""
-                </div>
-                <p className="text-gray-300 text-sm">{addOn.description}</p>""
-              </div>
-            ))}
-          </div>
-        </section>
-      {/* FAQ Section */}
-      <section className="py-20 bg-slate-900">""
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">""
-          <div className="text-center mb-16">""
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">""
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-gray-300">""
-              Common questions about our pricing and services
-            </p>
-          </div>
-          <div className="space-y-8">""
-            <div className="bg-slate-800 rounded-xl p-6">""
-              <h3 className="text-xl font-bold text-white mb-4">Can I change my plan anytime?</h3>""
-              <p className="text-gray-300">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing differences.</p>'"'"'"'"'"
-            </div>
-            <div className="bg-slate-800 rounded-xl p-6">""
-              <h3 className="text-xl font-bold text-white mb-4">Do you offer custom solutions?</h3>""
-              <p className="text-gray-300">Absolutely! Our Enterprise plan includes fully customized solutions tailored to your specific business requirements.</p>""
-            </div>
-            <div className="bg-slate-800 rounded-xl p-6">""
-              <h3 className="text-xl font-bold text-white mb-4">What's included in support?</h3>'"'"'"'"'"
-              <p className="text-gray-300">All plans include email support. Professional and Enterprise plans include priority support with faster response times and additional communication channels.</p>""
-            </div>
-            <div className="bg-slate-800 rounded-xl p-6">""
-              <h3 className="text-xl font-bold text-white mb-4">Is there a setup fee?</h3>""
-              <p className="text-gray-300">No setup fees for Starter and Professional plans. Enterprise plans may include setup costs depending on the complexity of your requirements.</p>""
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900">""
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">""
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">""
-            Contact us to discuss your specific needs and get a personalized quote
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-            <Link
-              to="/contact""
-              className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300""
-            >
-              Contact Sales
-            </Link>
-            <Link
-              to="/demo""
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300""
-            >
-              Schedule Demo
-            </Link>
-          </div>
-        </section>
-        {/* Contact Info */}
-        <section className="py-16 px-4 bg-gray-50">""
-          <div className="max-w-4xl mx-auto text-center">""
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">""
-              Need Help Choosing a Plan?
-            </h3>
-            <div className="grid md:grid-cols-3 gap-8">""
-              <div className="flex items-center justify-center space-x-3 text-gray-600">""
-                <PhoneIcon className="w-6 h-6 text-blue-600" />""
-                <span>+1-302-464-0950</span>
-              </div>
-              <div className="flex items-center justify-center space-x-3 text-gray-600">""
-                <EnvelopeIcon className="w-6 h-6 text-blue-600" />""
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center justify-center space-x-3 text-gray-600">""
-                <MapPinIcon className="w-6 h-6 text-blue-600" />""
-                <span>Middletown, DE</span>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-};
-export default PricingPage;
-=======
 import React, { useState } from 'react',
-      const PricingPage: React.FC = () => {"}
-        "
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
+      const PricingPage: React.FC  =  () => {"}"
+        ";
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),;
       const [selectedCategory, setSelectedCategory] = useState<string>('all');
-,
-      const microSaasPricing = [",
+,"
+      const microSaasPricing  =  [","
         "
-    {"}
+    {"}"
         "
-      name: 'AI Accounting Assistant',",
+      name: 'AI Accounting Assistant',","
         "
-      monthlyPrice: '$29',",
+      monthlyPrice: '$29',","
         "
-      yearlyPrice: '$290',",
+      yearlyPrice: '$290',","
         "
-      description: 'Automated bookkeeping and financial analysis',",
+      description: 'Automated bookkeeping and financial analysis',","
         "
-      features: [",
+      features: [","
         "
-        'Up to 1,000 transactions/month',",
+        'Up to 1,000 transactions/month',","
         "
-        'Automated invoice processing',",
+        'Automated invoice processing',","
         "
-        'Real-time expense tracking',",
+        'Real-time expense tracking',","
         "
-        'Tax preparation & filing',",
+        'Tax preparation & filing',","
         "
-        'Financial report generation',",
+        'Financial report generation',","
         "
-        'Bank reconciliation',",
+        'Bank reconciliation',","
         "
-        'Multi-currency support',",
+        'Multi-currency support',","
         "
-        'Mobile app access',",
+        'Mobile app access',","
         "
-        'Email support',",
+        'Email support',","
+        ";
+        'Basic integrations';"
+      ],","
         "
-        'Basic integrations';
-      ],",
+      popular: true,","
         "
-      popular: true,",
+      category: 'micro-saas';"
+    },","
         "
-      category: 'micro-saas';
-    },",
+    {"}"
         "
-    {"}
+      name: 'AI Content Moderation Pro',","
         "
-      name: 'AI Content Moderation Pro',",
+      monthlyPrice: '$49',","
         "
-      monthlyPrice: '$49',",
+      yearlyPrice: '$490',","
         "
-      yearlyPrice: '$490',",
+      description: 'Advanced content filtering and moderation',","
         "
-      description: 'Advanced content filtering and moderation',",
+      features: [","
         "
-      features: [",
+        'Up to 10,000 posts/month',","
         "
-        'Up to 10,000 posts/month',",
+        'Real-time content monitoring',","
         "
-        'Real-time content monitoring',",
+        'Multi-language support (50+ languages)',","
         "
-        'Multi-language support (50+ languages)',",
+        'Image & video analysis',","
         "
-        'Image & video analysis',",
+        'Custom moderation rules',","
         "
-        'Custom moderation rules',",
+        'Analytics dashboard',","
         "
-        'Analytics dashboard',",
+        'API integration',","
         "
-        'API integration',",
+        'Bulk content processing',","
         "
-        'Bulk content processing',",
+        'Priority support',","
         "
-        'Priority support',",
+        'Custom integrations';"
+      ],","
         "
-        'Custom integrations';
-      ],",
+      popular: false,","
         "
-      popular: false,",
+      category: 'micro-saas';"
+    },","
         "
-      category: 'micro-saas';
-    },",
+    {"}"
         "
-    {"}
+      name: 'AI Climate Solutions Pro',","
         "
-      name: 'AI Climate Solutions Pro',",
+      monthlyPrice: '$79',","
         "
-      monthlyPrice: '$79',",
+      yearlyPrice: '$790',","
         "
-      yearlyPrice: '$790',",
+      description: 'Environmental monitoring and sustainability tracking',","
         "
-      description: 'Environmental monitoring and sustainability tracking',",
+      features: [","
         "
-      features: [",
+        'Carbon footprint analysis',","
         "
-        'Carbon footprint analysis',",
+        'Sustainability reporting',","
         "
-        'Sustainability reporting',",
+        'Compliance monitoring',","
         "
-        'Compliance monitoring',",
+        'Green initiative tracking',","
         "
-        'Green initiative tracking',",
+        'Energy usage optimization',","
         "
-        'Energy usage optimization',",
+        'Waste management analytics',","
         "
-        'Waste management analytics',",
+        'Supply chain sustainability',","
         "
-        'Supply chain sustainability',",
+        'ESG reporting tools',","
         "
-        'ESG reporting tools',",
+        'Environmental risk assessment',","
         "
-        'Environmental risk assessment',",
+        'Green certification support';"
+      ],","
         "
-        'Green certification support';
-      ],",
+      popular: true,","
         "
-      popular: true,",
+      category: 'micro-saas';"
+    },","
         "
-      category: 'micro-saas';
-    },",
+    {"}"
         "
-    {"}
+      name: 'AI Agricultural Intelligence',","
         "
-      name: 'AI Agricultural Intelligence',",
+      monthlyPrice: '$99',","
         "
-      monthlyPrice: '$99',",
+      yearlyPrice: '$990',","
         "
-      yearlyPrice: '$990',",
+      description: 'Smart farming and crop optimization',","
         "
-      description: 'Smart farming and crop optimization',",
+      features: [","
         "
-      features: [",
+        'Crop health monitoring',","
         "
-        'Crop health monitoring',",
+        'Weather pattern analysis',","
         "
-        'Weather pattern analysis',",
+        'Yield prediction models',","
         "
-        'Yield prediction models',",
+        'Resource optimization',","
         "
-        'Resource optimization',",
+        'Pest & disease detection',","
         "
-        'Pest & disease detection',",
+        'Soil analysis',","
         "
-        'Soil analysis',",
+        'Irrigation management',","
         "
-        'Irrigation management',",
+        'Harvest planning',","
         "
-        'Harvest planning',",
+        'Market price tracking',","
         "
-        'Market price tracking',",
+        'Farm equipment integration';"
+      ],","
         "
-        'Farm equipment integration';
-      ],",
-        "
-      popular: false,",
+      popular: false,","
         "
       category: 'micro-saas'
     },
     {}
   ];
-,
-      const aiServicesPricing = [",
+,"
+      const aiServicesPricing  =  [","
         "
-    {"}
+    {"}"
         "
-      name: 'AI Chatbot Enterprise',",
+      name: 'AI Chatbot Enterprise',","
         "
-      monthlyPrice: '$299',",
+      monthlyPrice: '$299',","
         "
-      yearlyPrice: '$2,990',",
+      yearlyPrice: '$2,990',","
         "
-      description: 'Advanced conversational AI for customer service',",
+      description: 'Advanced conversational AI for customer service',","
         "
-      features: [",
+      features: [","
         "
-        'Up to 100,000 conversations/month',",
+        'Up to 100,000 conversations/month',","
         "
-        'Natural language processing',",
+        'Natural language processing',","
         "
-        'Multi-channel support',",
+        'Multi-channel support',","
         "
-        'Custom training & learning',",
+        'Custom training & learning',","
         "
-        'Advanced analytics dashboard',",
+        'Advanced analytics dashboard',","
         "
-        'CRM integration',",
+        'CRM integration',","
         "
-        'Voice & text support',",
+        'Voice & text support',","
         "
-        'Multi-language support',",
+        'Multi-language support',","
         "
-        'Sentiment analysis',",
+        'Sentiment analysis',","
+        ";
+        'Escalation to human agents';"
+      ],","
         "
-        'Escalation to human agents';
-      ],",
+      popular: true,","
         "
-      popular: true,",
+      category: 'ai-services';"
+    },","
         "
-      category: 'ai-services';
-    },",
+    {"}"
         "
-    {"}
+      name: 'AI Computer Vision',","
         "
-      name: 'AI Computer Vision',",
+      monthlyPrice: '$399',","
         "
-      monthlyPrice: '$399',",
+      yearlyPrice: '$3,990',","
         "
-      yearlyPrice: '$3,990',",
+      description: 'Advanced image and video analysis solutions',","
         "
-      description: 'Advanced image and video analysis solutions',",
+      features: [","
         "
-      features: [",
+        'Up to 50,000 images/month',","
         "
-        'Up to 50,000 images/month',",
+        'Object detection & recognition',","
         "
-        'Object detection & recognition',",
+        'Facial recognition & analysis',","
         "
-        'Facial recognition & analysis',",
+        'Quality control & inspection',","
         "
-        'Quality control & inspection',",
+        'Real-time video processing',","
         "
-        'Real-time video processing',",
+        'Image classification',","
         "
-        'Image classification',",
+        'OCR capabilities',","
         "
-        'OCR capabilities',",
+        'Medical image analysis',","
         "
-        'Medical image analysis',",
+        'Security & surveillance',","
         "
-        'Security & surveillance',",
+        'Custom model training';"
+      ],","
         "
-        'Custom model training';
-      ],",
+      popular: false,","
         "
-      popular: false,",
+      category: 'ai-services';"
+    },","
         "
-      category: 'ai-services';
-    },",
+    {"}"
         "
-    {"}
+      name: 'AI Analytics Dashboard Pro',","
         "
-      name: 'AI Analytics Dashboard Pro',",
+      monthlyPrice: '$349',","
         "
-      monthlyPrice: '$349',",
+      yearlyPrice: '$3,490',","
         "
-      yearlyPrice: '$3,490',",
+      description: 'Advanced business intelligence and predictive analytics',","
         "
-      description: 'Advanced business intelligence and predictive analytics',",
+      features: [","
         "
-      features: [",
+        'Up to 1M data points/month',","
         "
-        'Up to 1M data points/month',",
+        'Predictive analytics & forecasting',","
         "
-        'Predictive analytics & forecasting',",
+        'Custom dashboard builder',","
         "
-        'Custom dashboard builder',",
+        'Real-time data visualization',","
         "
-        'Real-time data visualization',",
+        'Automated report generation',","
         "
-        'Automated report generation',",
+        'KPI tracking & alerts',","
         "
-        'KPI tracking & alerts',",
+        'Data integration (100+ sources)',","
         "
-        'Data integration (100+ sources)',",
+        'Machine learning models',","
         "
-        'Machine learning models',",
+        'Collaborative workspaces',","
         "
-        'Collaborative workspaces',",
+        'Mobile analytics app';"
+      ],","
         "
-        'Mobile analytics app';
-      ],",
+      popular: true,","
         "
-      popular: true,",
+      category: 'ai-services';"
+    },","
         "
-      category: 'ai-services';
-    },",
+    {"}"
         "
-    {"}
+      name: 'AI Automation Platform',","
         "
-      name: 'AI Automation Platform',",
+      monthlyPrice: '$499',","
         "
-      monthlyPrice: '$499',",
+      yearlyPrice: '$4,990',","
         "
-      yearlyPrice: '$4,990',",
+      description: 'End-to-end business process automation',","
         "
-      description: 'End-to-end business process automation',",
+      features: [","
         "
-      features: [",
+        'Unlimited workflows',","
         "
-        'Unlimited workflows',",
+        'RPA integration',","
         "
-        'RPA integration',",
+        'Custom bot development',","
         "
-        'Custom bot development',",
+        'Document processing',","
         "
-        'Document processing',",
+        'Email automation',","
         "
-        'Email automation',",
+        'Data extraction & processing',","
         "
-        'Data extraction & processing',",
+        'API integration',","
         "
-        'API integration',",
+        'Performance monitoring',","
         "
-        'Performance monitoring',",
+        'Error handling & recovery',","
         "
-        'Error handling & recovery',",
+        'Scalable infrastructure';"
+      ],","
         "
-        'Scalable infrastructure';
-      ],",
-        "
-      popular: false,",
+      popular: false,","
         "
       category: 'ai-services'
     },
     {}
   ];
-,
-      const itServicesPricing = [",
+,"
+      const itServicesPricing  =  [","
         "
-    {"}
+    {"}"
         "
-      name: 'Cloud Infrastructure',",
+      name: 'Cloud Infrastructure',","
         "
-      monthlyPrice: '$2,500',",
+      monthlyPrice: '$2,500',","
         "
-      yearlyPrice: '$25,000',",
+      yearlyPrice: '$25,000',","
         "
-      description: 'Comprehensive cloud infrastructure solutions',",
+      description: 'Comprehensive cloud infrastructure solutions',","
         "
-      features: [",
+      features: [","
         "
-        'Multi-cloud architecture design',",
+        'Multi-cloud architecture design',","
         "
-        'Infrastructure as Code (IaC)',",
+        'Infrastructure as Code (IaC)',","
         "
-        'Auto-scaling & load balancing',",
+        'Auto-scaling & load balancing',","
         "
-        'Disaster recovery planning',",
+        'Disaster recovery planning',","
         "
-        'Security & compliance',",
+        'Security & compliance',","
         "
-        'Cost optimization',",
+        'Cost optimization',","
         "
-        '24/7 monitoring & support',",
+        '24/7 monitoring & support',","
         "
-        'Migration services',",
+        'Migration services',","
         "
-        'Performance optimization',",
+        'Performance optimization',","
+        ";
+        'Backup & recovery solutions';"
+      ],","
         "
-        'Backup & recovery solutions';
-      ],",
+      popular: true,","
         "
-      popular: true,",
+      category: 'it-services';"
+    },","
         "
-      category: 'it-services';
-    },",
+    {"}"
         "
-    {"}
+      name: 'Cybersecurity Solutions',","
         "
-      name: 'Cybersecurity Solutions',",
+      monthlyPrice: '$1,500',","
         "
-      monthlyPrice: '$1,500',",
+      yearlyPrice: '$15,000',","
         "
-      yearlyPrice: '$15,000',",
+      description: 'Comprehensive security solutions',","
         "
-      description: 'Comprehensive security solutions',",
+      features: [","
         "
-      features: [",
+        'Threat detection & response',","
         "
-        'Threat detection & response',",
+        'Security assessment & auditing',","
         "
-        'Security assessment & auditing',",
+        'Penetration testing',","
         "
-        'Penetration testing',",
+        'Vulnerability management',","
         "
-        'Vulnerability management',",
+        'Security awareness training',","
         "
-        'Security awareness training',",
+        'Compliance management',","
         "
-        'Compliance management',",
+        'Firewall & network security',","
         "
-        'Firewall & network security',",
+        'Endpoint protection',","
         "
-        'Endpoint protection',",
+        'Data encryption & backup',","
         "
-        'Data encryption & backup',",
+        '24/7 security monitoring';"
+      ],","
         "
-        '24/7 security monitoring';
-      ],",
+      popular: true,","
         "
-      popular: true,",
+      category: 'it-services';"
+    },","
         "
-      category: 'it-services';
-    },",
+    {"}"
         "
-    {"}
+      name: 'Web Development',","
         "
-      name: 'Web Development',",
+      monthlyPrice: 'From $5,000',","
         "
-      monthlyPrice: 'From $5,000',",
+      yearlyPrice: 'From $50,000',","
         "
-      yearlyPrice: 'From $50,000',",
+      description: 'Custom web applications and e-commerce solutions',","
         "
-      description: 'Custom web applications and e-commerce solutions',",
+      features: [","
         "
-      features: [",
+        'Custom web applications',","
         "
-        'Custom web applications',",
+        'E-commerce platforms',","
         "
-        'E-commerce platforms',",
+        'Progressive Web Apps (PWA)',","
         "
-        'Progressive Web Apps (PWA)',",
+        'Content Management Systems',","
         "
-        'Content Management Systems',",
+        'API development & integration',","
         "
-        'API development & integration',",
+        'Mobile-responsive design',","
         "
-        'Mobile-responsive design',",
+        'SEO optimization',","
         "
-        'SEO optimization',",
+        'Performance optimization',","
         "
-        'Performance optimization',",
+        'Security implementation',","
         "
-        'Security implementation',",
+        'Maintenance & support';"
+      ],","
         "
-        'Maintenance & support';
-      ],",
+      popular: false,","
         "
-      popular: false,",
+      category: 'it-services';"
+    },","
         "
-      category: 'it-services';
-    },",
+    {"}"
         "
-    {"}
+      name: 'Mobile App Development',","
         "
-      name: 'Mobile App Development',",
+      monthlyPrice: 'From $10,000',","
         "
-      monthlyPrice: 'From $10,000',",
+      yearlyPrice: 'From $100,000',","
         "
-      yearlyPrice: 'From $100,000',",
+      description: 'Native and cross-platform mobile applications',","
         "
-      description: 'Native and cross-platform mobile applications',",
+      features: [","
         "
-      features: [",
+        'Native iOS & Android apps',","
         "
-        'Native iOS & Android apps',",
+        'Cross-platform development',","
         "
-        'Cross-platform development',",
+        'UI/UX design',","
         "
-        'UI/UX design',",
+        'App store optimization',","
         "
-        'App store optimization',",
+        'Push notifications',","
         "
-        'Push notifications',",
+        'Offline functionality',","
         "
-        'Offline functionality',",
+        'API integration',","
         "
-        'API integration',",
+        'Performance optimization',","
         "
-        'Performance optimization',",
+        'Security implementation',","
         "
-        'Security implementation',",
+        'App maintenance & updates';"
+      ],","
         "
-        'App maintenance & updates';
-      ],",
-        "
-      popular: false,",
+      popular: false,","
         "
       category: 'it-services'
     },
     {}
   ];
-,
-      const categories = [",
-        "
+,"
+      const categories  =  [","
+        ";
     { id: 'all', name: 'All Services', icon: <Layers className="w-5 h-5" /> },";"
     { id: 'micro-saas', name: 'Micro SAAS', icon: <className="w-5 h-5" /> },";"
     { id: 'ai-services', name: 'AI Services', icon: <className="w-5 h-5" /> },";"
     { id: 'it-services', name: 'IT Services', icon: <Server className="w-5 h-5" /> };
   ];
 ,
-      const allPricing = [...microSaasPricing, ...aiServicesPricing, ...itServicesPricing],
-      const filteredPricing = selectedCategory === 'all' ",
+      const allPricing  =  [...microSaasPricing, ...aiServicesPricing, ...itServicesPricing],"
+      const filteredPricing = selectedCategory === 'all' ","
         "
-    ? allPricing",
-        "
+    ? allPricing","
+        ";
     : allPricing.filter(item => item.category === selectedCategory);
-,
-      return (",)
+,"
+      return (",)"
         "
-    <>{"}</>
+    <>{"}</>"
         "
-      <Helmet>",
+      <Helmet>","
         "
-        <title>Pricing - Transparent Pricing for AI & IT Solutions | Zion Tech Group</title>",
+        <title>Pricing - Transparent Pricing for AI & IT Solutions | Zion Tech Group</title>","
         "
         <meta name="description" content="Transparent pricing for our comprehensive AI and IT solutions. Choose from micro SAAS, AI services, and IT solutions with flexible pricing options." />";"
         <meta name="keywords" content="pricing, micro SAAS pricing, AI services pricing, IT services pricing, cloud infrastructure pricing, cybersecurity pricing" />";"
         <meta property="og:title" content="Pricing - Transparent Pricing for AI & IT Solutions" />";"
         <meta property="og:description" content="Transparent pricing for our comprehensive AI and IT solutions. Choose from micro SAAS, AI services, and IT solutions." />";"
         <meta property="og:url" content="https://ziontechgroup.com/pricing" />";"
-        <link rel="canonical" href="https://ziontechgroup.com/pricing" />",
+        <link rel="canonical" href="https://ziontechgroup.com/pricing" />","
         "
-      </Helmet>",
+      </Helmet>","
         "
-      {/* Hero Section */};
+      {/* Hero Section */};"
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">";"
         <div className="absolute inset-0 overflow-hidden">";"
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>";"
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>",
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></$1>"
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>","
         "
-        </div>",
+        </div>","
         "
         <div className="container mx-auto px-4 relative z-10">";"
           <div className="text-center max-w-4xl mx-auto">";"
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">",
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">","
         "
-              Transparent",
+              Transparent","
         "
-              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">",
+              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">","
         "
-                {' '}Pricing",
+                {' '}Pricing","
         "
-              </span>",
+              </span>","
         "
-            </h1>",
+            </h1>","
         "
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">",
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">","
         "
-              Choose the perfect plan for your business. All plans include 14-day free trial and no setup fees.",
+              Choose the perfect plan for your business. All plans include 14-day free trial and no setup fees.","
         "
-            </p>";"
-            {/* Billing Toggle */};
-            <div className="flex items-center justify-center mb-8">",
+            </$1>"
+            {/* Billing Toggle */};"
+            <div className="flex items-center justify-center mb-8">","
         "
-              <span className={`mr-3 ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>",
+              <span className={`mr-3 ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>","
         "
-                Monthly",
+                Monthly","
         "
-              </span>",
+              </span>","
         "
               <button";">
-                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')},
-      className="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2";
-              >",
+                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')},"
+      className="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2";"
+              >","
         "
-                <span",>
+                <span",>"
         "
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${"}
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${"}"
         "
-                    billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1';
-                  }`} />",
+                    billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1';"
+                  }`} />","
         "
-              </button>",
+              </button>","
         "
-              <span className={`ml-3 ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>",
+              <span className={`ml-3 ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>","
         "
                 Yearly";"
-                <span className="ml-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">",
+                <span className="ml-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">","
         "
-                  Save 20%",
+                  Save 20%","
         "
-                </span>",
+                </span>","
         "
-              </span>",
+              </span>","
         "
-            </div>",
+            </div>","
         "
-          </div>",
+          </div>","
         "
-        </div>",
+        </div>","
         "
-      </section>",
+      </section>","
         "
-      {/* Category */};
+      {/* Category */};"
       <section className="py-8 bg-slate-800">";"
         <div className="container mx-auto px-4">";"
-          <div className="flex flex-wrap justify-center gap-4">",
+          <div className="flex flex-wrap justify-center gap-4">","
         "
-            {categories.map((category) => (",)}
+            {categories.map((category) => (",)}"
         "
-              <button",>
+              <button",>"
         "
                 key={category.id},
-      onClick={() => setSelectedCategory(category.id)},
-      className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${"}
+      onClick={() => setSelectedCategory(category.id)},"
+      className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${"}"
         "
-                  selectedCategory === category.id",
+                  selectedCategory === category.id","
         "
                     ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white shadow-lg';
                     : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white';
-                }`};
-              >",
+                }`};"
+              >","
         "
-                {category.icon};
-                <span>{category.name}</span>",
+                {category.icon};"
+                <span>{category.name}</span>","
         "
-              </button>",
+              </button>","
         "
-            ))};
-          </div>",
+            ))};"
+          </div>","
         "
-        </div>",
+        </div>","
         "
-      </section>";"
-      {/* Pricing Grid */};
+      </$1>"
+      {/* Pricing Grid */};"
       <section className="py-20 bg-slate-900">";"
         <div className="container mx-auto px-4">";"
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">",
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">","
         "
-            {filteredPricing.map((service) => (",)}
+            {filteredPricing.map((service) => (",)}"
         "
-              <divkey={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10 group relative ${",>}
+              <divkey={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10 group relative ${",>}"
         "
-                service.popular ? 'ring-2 ring-purple-500' : '';
-              }`}>",
+                service.popular ? 'ring-2 ring-purple-500' : '';"
+              }`}>","
         "
-                {service.popular && (";")}
+                {service.popular && (";")}"
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">";"
-                    <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",
+                    <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">","
         "
-                      Most Popular",
+                      Most Popular","
         "
-                    </span>",
+                    </span>","
         "
-                  </div>",
+                  </div>","
         "
                 )};
-;
+;"
                 <div className="mb-6">";"
-                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">",
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">","
         "
-                    {service.name};
-                  </h3>",
+                    {service.name};"
+                  </h3>","
         "
                   <div className="flex items-baseline mb-3">";"
-                    <span className="text-4xl font-bold text-purple-400">",
+                    <span className="text-4xl font-bold text-purple-400">","
         "
-                      {billingCycle === 'monthly' ? service.monthlyPrice : service.yearlyPrice};
-                    </span>",
+                      {billingCycle === 'monthly' ? service.monthlyPrice : service.yearlyPrice};"
+                    </span>","
         "
-                    <span className="text-gray-400 ml-2">",
+                    <span className="text-gray-400 ml-2">","
         "
-                      /{billingCycle === 'monthly' ? 'mo' : 'yr'};
-                    </span>",
+                      /{billingCycle === 'monthly' ? 'mo' : 'yr'};"
+                    </span>","
         "
-                  </div>";"
-                  <p className="text-gray-300 text-sm">",
+                  </$1>"
+                  <p className="text-gray-300 text-sm">","
         "
-                    {service.description};
-                  </p>",
+                    {service.description};"
+                  </p>","
         "
-                </div>";"
-                <ul className="space-y-3 mb-8">",
+                </$1>"
+                <ul className="space-y-3 mb-8">","
         "
-                  {service.features.slice(0, 6).map((feature, featureIndex) => (",)}
+                  {service.features.slice(0, 6).map((feature, featureIndex) => (",)}"
         "
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">";"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />",
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />","
         "
-                      {feature};
-                    </li>",
+                      {feature};"
+                    </li>","
         "
-                  ))};
-                  {service.features.length > 6 && (";")}
-                    <li className="text-sm text-purple-400 font-medium">",
+                  ))};"
+                  {service.features.length > 6 && (";")}"
+                    <li className="text-sm text-purple-400 font-medium">","
         "
-                      +{service.features.length - 6} more features",
+                      +{service.features.length - 6} more features","
         "
-                    </li>",
+                    </li>","
         "
-                  )};
-                </ul>",
+                  )};"
+                </ul>","
         "
-                <div className="space-y-3">",
+                <div className="space-y-3">","
         "
-                  <",>
+                  <",>"
         "
-                    to="/contact",
-      className="block w-full bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105";
-                  >",
+                    to="/contact","
+      className="block w-full bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105";"
+                  >","
         "
-                    Get Started",
+                    Get Started","
         "
-                  </>",
+                  </>","
         "
-                  <",>
+                  <",>"
         "
-                    to={`/${service.name.toLowerCase().replace(/\s+/g, '-')}`},
-      className="block w-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white text-center py-3 rounded-lg font-semibold transition-all duration-300";
-                  >",
+                    to={`/${service.name.toLowerCase().replace(/\s+/g, '-')}`},"
+      className="block w-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white text-center py-3 rounded-lg font-semibold transition-all duration-300";"
+                  >","
         "
-                    Learn More",
+                    Learn More","
         "
-                  </>",
+                  </>","
         "
-                </div>",
+                </div>","
         "
-              </div>",
+              </div>","
         "
-            ))};
-          </div>",
+            ))};"
+          </div>","
         "
-        </div>",
+        </div>","
         "
-      </section>",
+      </section>","
         "
-      {/* Enterprise Section */};
+      {/* Enterprise Section */};"
       <section className="py-20 bg-slate-800">";"
         <div className="container mx-auto px-4">";"
           <div className="max-w-4xl mx-auto text-center">";"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">",
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">","
         "
-              Need Custom Solutions?",
+              Need Custom Solutions?","
         "
-            </h2>";"
-            <p className="text-xl text-gray-300 mb-8">",
+            </$1>"
+            <p className="text-xl text-gray-300 mb-8">","
         "
-              For large enterprises with specific requirements, we offer custom solutions tailored to your needs.",
+              For large enterprises with specific requirements, we offer custom solutions tailored to your needs.","
         "
-            </p>";"
+            </$1>"
             <div className="bg-slate-700/50 rounded-xl p-8 mb-8">";"
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise Solutions</h3>";"
-              <div className="grid md:grid-cols-2 gap-6 text-left">",
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise Solutions</$1>"
+              <div className="grid md:grid-cols-2 gap-6 text-left">","
         "
-                <div>",
+                <div>","
         "
-                  <h4 className="text-lg font-semibold text-purple-400 mb-3">What's Included:</h4>";"
+                  <h4 className="text-lg font-semibold text-purple-400 mb-3">What's Included:</$1>"
                   <ul className="space-y-2 text-gray-300">";"
                     <li className="flex items-center">";"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />",
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />","
         "
-                      Custom development and integration",
+                      Custom development and integration","
         "
-                    </li>";"
+                    </$1>"
                     <li className="flex items-center">";"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />",
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />","
         "
-                      Dedicated account manager",
+                      Dedicated account manager","
         "
-                    </li>";"
+                    </$1>"
                     <li className="flex items-center">";"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />",
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />","
         "
-                      24/7 priority support",
+                      24/7 priority support","
         "
-                    </li>";"
+                    </$1>"
                     <li className="flex items-center">";"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />",
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />","
         "
-                      On-premise deployment options",
+                      On-premise deployment options","
         "
-                    </li>",
+                    </li>","
         "
-                  </ul>",
+                  </ul>","
         "
-                </div>",
+                </div>","
         "
-                <div>",
+                <div>","
         "
-                  <h4 className="text-lg font-semibold text-purple-400 mb-3">Benefits:</h4>";"
+                  <h4 className="text-lg font-semibold text-purple-400 mb-3">Benefits:</$1>"
                   <ul className="space-y-2 text-gray-300">";"
                     <li className="flex items-center">";"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />",
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />","
         "
-                      Scalable to any size",
+                      Scalable to any size","
         "
-                    </li>";"
+                    </$1>"
                     <li className="flex items-center">";"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />",
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />","
         "
-                      White-label solutions",
+                      White-label solutions","
         "
-                    </li>";"
+                    </$1>"
                     <li className="flex items-center">";"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />",
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />","
         "
-                      Custom training and onboarding",
+                      Custom training and onboarding","
         "
-                    </li>";"
+                    </$1>"
                     <li className="flex items-center">";"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />",
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />","
         "
-                      Flexible payment terms",
+                      Flexible payment terms","
         "
-                    </li>",
+                    </li>","
         "
-                  </ul>",
+                  </ul>","
         "
-                </div>",
+                </div>","
         "
-              </div>",
+              </div>","
         "
-            </div>",
+            </div>","
         "
-            <",>
+            <",>"
         "
-              to="/contact",
-      className="inline-flex items-center bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg";
-            >",
+              to="/contact","
+      className="inline-flex items-center bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg";"
+            >","
         "
-              Contact Sales",
+              Contact Sales","
         "
-              <ArrowRight className="w-5 h-5 ml-2" />",
+              <ArrowRight className="w-5 h-5 ml-2" />","
         "
-            </>",
+            </>","
         "
-          </div>",
+          </div>","
         "
-        </div>",
+        </div>","
         "
-      </section>";"
-      {/* FAQ Section */};
+      </$1>"
+      {/* FAQ Section */};"
       <section className="py-20 bg-slate-900">";"
         <div className="container mx-auto px-4">";"
           <div className="text-center mb-16">";"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">",
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">","
         "
-              Frequently Asked Questions",
+              Frequently Asked Questions","
         "
-            </h2>";"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">",
+            </$1>"
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">","
         "
-              Get answers to common questions about our pricing and services.",
+              Get answers to common questions about our pricing and services.","
         "
-            </p>",
+            </p>","
         "
-          </div>",
+          </div>","
         "
           <div className="max-w-4xl mx-auto space-y-6">";"
             <div className="bg-slate-800/50 rounded-xl p-6">";"
-              <h3 className="text-xl font-semibold text-white mb-3">",
+              <h3 className="text-xl font-semibold text-white mb-3">","
         "
-                Do you offer a free trial?",
+                Do you offer a free trial?","
         "
-              </h3>";"
-              <p className="text-gray-300">",
+              </$1>"
+              <p className="text-gray-300">","
         "
-                Yes! All our services come with a 14-day free trial. No credit card required to get started.",
+                Yes! All our services come with a 14-day free trial. No credit card required to get started.","
         "
-              </p>",
+              </p>","
         "
-            </div>",
-        "
-            <div className="bg-slate-800/50 rounded-xl p-6">";"
-              <h3 className="text-xl font-semibold text-white mb-3">",
-        "
-                Can I change my plan anytime?",
-        "
-              </h3>";"
-              <p className="text-gray-300">",
-        "
-                Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect immediately.",
-        "
-              </p>",
-        "
-            </div>",
+            </div>","
         "
             <div className="bg-slate-800/50 rounded-xl p-6">";"
-              <h3 className="text-xl font-semibold text-white mb-3">",
+              <h3 className="text-xl font-semibold text-white mb-3">","
         "
-                What payment methods do you accept?",
+                Can I change my plan anytime?","
         "
-              </h3>";"
-              <p className="text-gray-300">",
+              </$1>"
+              <p className="text-gray-300">","
         "
-                We accept all major credit cards, PayPal, and bank transfers. Enterprise customers can also pay via invoice.",
+                Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect immediately.","
         "
-              </p>",
+              </p>","
         "
-            </div>",
-        "
-            <div className="bg-slate-800/50 rounded-xl p-6">";"
-              <h3 className="text-xl font-semibold text-white mb-3">",
-        "
-                Is there a setup fee?",
-        "
-              </h3>";"
-              <p className="text-gray-300">",
-        "
-                No setup fees! We believe in transparent pricing with no hidden costs.",
-        "
-              </p>",
-        "
-            </div>",
+            </div>","
         "
             <div className="bg-slate-800/50 rounded-xl p-6">";"
-              <h3 className="text-xl font-semibold text-white mb-3">",
+              <h3 className="text-xl font-semibold text-white mb-3">","
         "
-                Do you offer discounts for annual billing?",
+                What payment methods do you accept?","
         "
-              </h3>";"
-              <p className="text-gray-300">",
+              </$1>"
+              <p className="text-gray-300">","
         "
-                Yes! Save 20% when you choose annual billing instead of monthly.",
+                We accept all major credit cards, PayPal, and bank transfers. Enterprise customers can also pay via invoice.","
         "
-              </p>",
+              </p>","
         "
-            </div>",
+            </div>","
         "
-          </div>",
+            <div className="bg-slate-800/50 rounded-xl p-6">";"
+              <h3 className="text-xl font-semibold text-white mb-3">","
         "
-        </div>",
+                Is there a setup fee?","
         "
-      </section>";"
-      {/* CTA Section */};
+              </$1>"
+              <p className="text-gray-300">","
+        "
+                No setup fees! We believe in transparent pricing with no hidden costs.","
+        "
+              </p>","
+        "
+            </div>","
+        "
+            <div className="bg-slate-800/50 rounded-xl p-6">";"
+              <h3 className="text-xl font-semibold text-white mb-3">","
+        "
+                Do you offer discounts for annual billing?","
+        "
+              </$1>"
+              <p className="text-gray-300">","
+        "
+                Yes! Save 20% when you choose annual billing instead of monthly.","
+        "
+              </p>","
+        "
+            </div>","
+        "
+          </div>","
+        "
+        </div>","
+        "
+      </$1>"
+      {/* CTA Section */};"
       <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600">";"
         <div className="container mx-auto px-4 text-center">";"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">",
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">","
         "
-            Ready to Get Started?",
+            Ready to Get Started?","
         "
-          </h2>";"
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">",
+          </$1>"
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">","
         "
-            Choose your plan and start transforming your business today.",
+            Choose your plan and start transforming your business today.","
         "
-            All plans include 14-day free trial and no setup fees.",
+            All plans include 14-day free trial and no setup fees.","
         "
-          </p>",
+          </p>","
         "
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">","
         "
-            <",>
+            <",>"
         "
-              to="/contact",
-      className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg";
-            >",
+              to="/contact","
+      className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg";"
+            >","
         "
-              Start Free Trial",
+              Start Free Trial","
         "
-            </>",
+            </>","
         "
-            <",>
+            <",>"
         "
-              to="/demo",
-      className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105";
-            >",
+              to="/demo","
+      className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105";"
+            >","
         "
-              Schedule Demo",
+              Schedule Demo","
         "
-            </>",
+            </>","
         "
-          </div>",
+          </div>","
         "
-        </div>",
+        </div>","
         "
-      </section>",
+      </section>","
         "
     </>";"
   )
@@ -1234,28 +954,26 @@ import React, { useState } from 'react',
     {}
 ,
       export default PricingPage;
-;
 
-import React from 'react';;';
+import React from 'react';';
 import SEOHead from './components/SEOHead';
-;
-const PagesPage: React.FC = () => {
-  return (
+
+const PagesPage: React.FC  =  () => {
+  return (;
     <>;
-      <SEOHead;
-        title="Pages - Zion Tech Group"";
-        description="Professional pages solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Pages</h1>";
+      <SEOHead;"
+        title="Pages - Zion Tech Group"";"
+        description="Professional pages solutions for modern businesses";"
+      />";"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Pages</$1>"
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
     </>;
   ),
 };
-;
+;"
 export default PagesPage;'";'";
-
->>>>>>> main
+"

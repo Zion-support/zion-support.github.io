@@ -1,4 +1,3 @@
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
         { /* CTA Section */ }
@@ -6,10 +5,10 @@ const __dirname = path.dirname(__filename);
           <div className="max-w-4xl mx-auto text-center">""
             <h2 className="text-4xl font-bold text-white mb-6">""
               Ready to Get Started?
-            </h2>
+            </h2>"
             <p className="text-xl text-gray-300 mb-8">""
               Contact us today to learn more about our services and how they can benefit your organization.
-            </p>
+            </p>"
             <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">""
               Get Started
             </button>
@@ -22,29 +21,29 @@ export default function performance-optimizer.js() {
   return (}
     <>
       <Helmet ></Helmet>
-        <title>performance-optimizer.js - Zion Tech Group</title>
+        <title>performance-optimizer.js - Zion Tech Group</title>"
         <meta name="description" content="Professional performance-optimizer.js services by Zion Tech Group." />""
       <div className="min-h-screen bg-white">""
         <div className="container mx-auto px-4 py-16">""
           <div className="text-center">""
             <h1 className="text-4xl font-bold text-gray-900 mb-8">""
-              performance-optimizer.js
+              performance-optimizer.js"
             <p className="text-xl text-gray-600 mb-8">""
-              Professional performance-optimizer.js services by Zion Tech Group.
+              Professional performance-optimizer.js services by Zion Tech Group."
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">""
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">""
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">""
-                  Expert Solutions
+                  Expert Solutions"
                 <p className="text-blue-700">""
-                  Our team of experts delivers cutting-edge solutions.
+                  Our team of experts delivers cutting-edge solutions."
               <div className="bg-green-50 border border-green-200 rounded-lg p-6">""
                 <h3 className="text-lg font-semibold text-green-900 mb-2">""
-                  Custom Implementation
+                  Custom Implementation"
                 <p className="text-green-700">""
-                  Tailored implementations for your specific requirements.
+                  Tailored implementations for your specific requirements."
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">""
                 <h3 className="text-lg font-semibold text-purple-900 mb-2">""
-                  24/7 Support
+                  24/7 Support"
                 <p className="text-purple-700">""
                   Round-the-clock support for all your needs.
     </>
@@ -61,11 +60,11 @@ console.log('Running performance optimizations...');''
 const viteConfigPath = path.join(__dirname, '../vite.config.ts');''
 let viteConfig = fs.readFileSync(viteConfigPath, 'utf8');''
 // Enhanced chunk splitting strategy
-const optimizedChunkConfig = `
+const optimizedChunkConfig  =  `
         manualChunks: (id) => {
           // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {''
-            if (id.includes('react') || id.includes('react-dom')) {''
+            if (id.includes('react') || id.includes('react-dom')) {'';
               return 'vendor-react';''
             }
             if (id.includes('react-router')) {''
@@ -112,7 +111,7 @@ viteConfig = viteConfig.replace()
   optimizedChunkConfig
 );
 // Add performance optimizations
-const performanceOptimizations = `
+const performanceOptimizations  =  `
   // Performance optimizations
   build: {
     outDir: 'dist',''
@@ -130,7 +129,7 @@ const performanceOptimizations = `
         ${optimizedChunkConfig}
         chunkFileNames: 'assets/[name]-[hash].js',''
         entryFileNames: 'assets/[name]-[hash].js',''
-        assetFileNames: (assetInfo) => {
+        assetFileNames: (assetInfo) => {;
           const ext = assetInfo.name?.split('.').pop();''
           if (/\.(css)$/i.test(assetInfo.name || ')) {''
             return \`assets/css/[name]-[hash].\${ext}\`;
@@ -189,9 +188,10 @@ ursor/fix-errors-and-merge-to-main-d2b1
     getLCP(sendToAnalytics);
     getTTFB(sendToAnalytics);
     // Measure additional performance metrics
-    if (typeof window !== 'undefined') {''
+    if (typeof window !== 'undefined') {
+    ''
       // First Contentful Paint
-      const observer = new PerformanceObserver((list) => {
+      const observer  =  new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === 'first-contentful-paint') {''
             sendToAnalytics({
@@ -199,14 +199,20 @@ ursor/fix-errors-and-merge-to-main-d2b1
               value: entry.startTime,
               delta: entry.startTime,
               id: 'fcp-custom''
-            });
+
+  });
 >>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
           }
         }
       });
-      observer.observe({ entryTypes: ['paint'] });''
+      observer.observe({
+    entryTypes: ['paint'] 
+  
+  });''
     }
-  }, []);
+  }, [
+    
+  ]);
   return null;
 };
 export default PerformanceMonitor;`;
@@ -220,12 +226,13 @@ const path = require('path');''
  * Analyzes the built bundle for optimization opportunities
  */
 function analyzeBundle() {
+  
   const distPath = path.join(__dirname, '../dist');''
   if (!fs.existsSync(distPath)) {
     console.log('❌ Dist folder not found. Run npm run build first.');''
     return;
-  }
-  const assetsPath = path.join(distPath, 'assets');''
+  
+}''
   const files = fs.readdirSync(assetsPath);
   const jsFiles = files.filter(file => file.endsWith('.js'));''
   const cssFiles = files.filter(file => file.endsWith('.css'));''
@@ -275,46 +282,19 @@ packageJson.scripts['analyze:bundle'] = 'node scripts/analyze-bundle.js';''
 packageJson.scripts['perf:audit'] = 'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html';''
 packageJson.scripts['perf:check'] = 'npm run build && npm run analyze:bundle';''
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-console.log('✅ Performance optimizations completed!');''
+console.log('✅ Performance optimizations completed!');''"
 console.log('📊 Run "npm run analyze:bundle" to analyze your bundle');'"'"
 console.log('🔍 Run "npm run perf:audit" to run Lighthouse audit');'"'"
 const optimizePerformance = () => {
+
   console.log('🚀 Starting performance optimization...');''
   // Create optimized CSS
-  const cssOptimizations = `
+  const cssOptimizations  =  `
 /* Performance optimizations */
 * {
   box-sizing: border-box
-}
-html {
-  scroll-behavior: smooth
-}
-body {
-  font-display: swap
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-}
-/* Critical CSS for above-the-fold content */
-.hero-section {
-  contain: layout style paintursor/fix-errors-and-merge-to-main-d2b1
-}
-/* Optimize animations */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important
-    animation-iteration-count: 1 !important
-    transition-duration: 0.01ms !importantursor/fix-errors-and-merge-to-main-d2b1
-  }
-}
-/* Optimize images */
-img {
-  loading: lazy
-  decoding: asyncursor/fix-errors-and-merge-to-main-d2b1
-}
-/* Optimize fonts */
-@font-face {
+
+};
   font-family: 'Inter';''
   font-display: swap;
   src: url('/fonts/inter-var.woff2') format('woff2-variations');''
@@ -326,35 +306,35 @@ img {
   fs.writeFileSync(cssPath, cssOptimizations);
   console.log('✅ Performance CSS created')''
   // Create preload hints
-  const preloadHints = `
-<!-- Preload critical resources -->
+  const preloadHints  =  `
+<!-- Preload critical resources -->"
 <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>""
 <link rel="preload" href="/assets/css/critical.css" as="style">""
 <link rel="preload" href="/assets/js/vendor.js" as="script">""
 <link rel="preload" href="/assets/js/main.js" as="script">""
-<!-- DNS prefetch for external resources -->
+<!-- DNS prefetch for external resources -->"
 <link rel="dns-prefetch" href="//fonts.googleapis.com">""
 <link rel="dns-prefetch" href="//fonts.gstatic.com">""
 <link rel="dns-prefetch" href="//www.google-analytics.com">""
-<!-- Preconnect to external domains -->
+<!-- Preconnect to external domains -->"
 <link rel="preconnect" href="https://fonts.googleapis.com">""
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>""
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>"";
 `;
   const preloadPath = path.join(__dirname, '..', 'public', 'preload-hints.html');''
   fs.writeFileSync(preloadPath, preloadHints);
   console.log('✅ Preload hints created');''
   // Create service worker for caching
-  const serviceWorkerContent = `
+  const serviceWorkerContent  =  `;
 const CACHE_NAME = 'zion-tech-group-v2';''
-const urlsToCache = [
+const urlsToCache  =  [
   '/',''
   '/static/css/main.css',''
   '/static/js/main.js',''
-  '/manifest.json''
+  '/manifest.json'';
 ];
 self.addEventListener('install', (event) => {''
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(urlsToCache))
   );
-}
+}"

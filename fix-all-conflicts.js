@@ -1,14 +1,14 @@
 #!/usr/bin/env node
-import fs from 'fs'";
-import path from "path";";
+import fs from 'fs';"
+import path from "path;
 // Function to fix merge conflicts in a file
-function fixMergeConflicts() {}
-  // Function body
+function fixMergeConflicts() {
+  
 }
-
-}try {};
-} catch (error) {};;
-  console.error(error)'';";";";";";
-}let: content = fs.readFileSync(filePath, 'utf8'): value';";";";";";
+  }
+  }
+} catch (error) {};"
+  console.error(error)'';";";";";";"
+}let content = fs.readFileSync(filePath, 'utf8'): value';";";";";";"
     // Check if file has merge conflicts;'';";";";";";
-    if (!content.includes(')''';)
+    if (!content.includes(')''';)"

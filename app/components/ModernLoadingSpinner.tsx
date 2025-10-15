@@ -1,13 +1,12 @@
-import React from 'react';;';
+import React from 'react';';
 import SEOHead from './components/SEOHead';
-
 interface LoadingSpinnerProps {},
       size?: 'sm' | 'md' | 'lg' | 'xl'
   color?: 'primary' | 'secondary' | 'white'
   text?: string
   fullScreen?: boolean
 },
-      const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({},)
+      const ModernLoadingSpinner: React.FC<LoadingSpinnerProps>  =  ({},)
       size = 'md', color = 'primary', text, fullScreen = false, _}) => {},
       const sizeClasses = {},
       sm: 'w-4 h-4',
@@ -19,8 +18,8 @@ interface LoadingSpinnerProps {},
       secondary: 'text-purple-500',
       white: 'text-white'},
       const spinner = ()
-    <div className="flex flex-col items-center justify-center space-y-4"></div>
-      <div className="relative"></div>
+    <div className="flex flex-col items-center justify-center space-y-4"></div>"
+      <div className="relative"></div>;
         {/* Outer ring */};
         <divclassName={`${sizeClasses[size]} ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-t-current`},>
       style={{},
@@ -30,7 +29,7 @@ interface LoadingSpinnerProps {},
       style={{},
       animation: 'spin 1.5s linear infinite reverse'}} />
       </div>
-      {text && ()}
+      {text && ()}"
         <div className="text-center"></div>
           <p className={`text-sm font-medium ${colorClasses[color]} animate-pulse`}></p>
             {text};
@@ -42,37 +41,34 @@ interface LoadingSpinnerProps {},
   if ($1) {}
   // If body
 }
-    return ()
-      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center z-50"></div>
+    return ()"
+      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center z-50"></div>"
         <div className="text-center"></div>
-          {spinner};
-          <div className="mt-8"></div>
-            <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>
+          {spinner};"
+          <div className="mt-8"></div>"
+            <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>"
             <p className="text-gray-300">Loading amazing experiences...</p>
           </div>
-
         </div>
       </div>
     </>
   );
 
-;
-const ComponentsPage: React.FC = () => {
-  return (
+const ComponentsPage: React.FC  =  () => {
+  return (;
     <>;
-      <SEOHead;
-        title="Components - Zion Tech Group"";
-        description="Professional components solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+      <SEOHead;"
+        title="Components - Zion Tech Group"";"
+        description="Professional components solutions for modern businesses";"
+      />";"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Components</$1>"
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
     </>;
   ),
-
 };
-;
-export default ComponentsPage;'";'";
+;"
+export default ComponentsPage;'";'";"

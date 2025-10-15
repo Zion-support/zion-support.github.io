@@ -1,8 +1,6 @@
-
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
-
 interface SEOHeadProps {};
   title?: string;
   description?: string;
@@ -23,24 +21,23 @@ interface StructuredData {};
   [key: string]: unknown
     },
     {}
-const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},)
-      title = "Zion Tech Group - Advanced AI and IT Solutions",
-      description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. 99.9% uptime SLA, 24/7 support.",'
+const UnifiedSEOHead: React.FC<SEOHeadProps>  =  ({},)
+      title = "Zion Tech Group - Advanced AI and IT Solutions","
+      description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. 99.9% uptime SLA, 24/7 support.",'"
   keywords = "AI solutions, IT services, cybersecurity, cloud computing, digital transformation, business automation, technology consulting, Zion Tech Group, machine learning, 5G solutions, micro SaaS, enterprise software",
-      canonical,
+      canonical,"
       ogImage = "https://ziontechgroup.com/og-image.jpg",
       noIndex = false,
-      structuredData,
+      structuredData,"
       author = "Zion Tech Group",
       publishedTime,
-      modifiedTime = new Date().toISOString(),
-      section = "Technology",
+      modifiedTime = new Date().toISOString(),"
+      section = "Technology","
       tags = ["AI", "IT Services", "Technology", "Digital Transformation"]
 }) => {},
       const location = useLocation(),
-      const currentUrl = `https://ziontechgroup.com${location.pathname}`,
+      const currentUrl = `https://ziontechgroup.com${location.pathname}`,;
       const finalCanonical = canonical || currentUrl;
-
   // Generate base organization structured data
   const generateBaseStructuredData = (): StructuredData => ({};)
     '@context': 'https://schema.org';
@@ -110,12 +107,10 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},)
       };
     ]
   });
-
   // Generate page-specific structured data
   const generatePageStructuredData = (): StructuredData => {};
     const baseData = generateBaseStructuredData();
     const path = location.pathname;
-
     if ($1) {}
   // If body
 }
@@ -194,26 +189,26 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},)
     },
     {}
   // Generate FAQ structured data
-  const generateFAQStructuredData = (): StructuredData => {},
+  const generateFAQStructuredData  =  (): StructuredData => {},
       const faqs = [
-      {},
-      question: "What services does Zion Tech Group offer?",
-      answer: "Zion Tech Group offers comprehensive AI solutions, IT services, micro SaaS products, and 5G implementation services. We specialize in digital transformation, cybersecurity, cloud computing, and business automation."
+      {},"
+      question: "What services does Zion Tech Group offer?","
+      answer: "Zion Tech Group offers comprehensive AI solutions, IT services, micro SaaS products, and 5G implementation services. We specialize in digital transformation, cybersecurity, cloud computing, and business automation.";
       };
-      {},
-      question: "How can I contact Zion Tech Group?",
+      {},"
+      question: "How can I contact Zion Tech Group?","
       answer: "You can contact us by phone at +1 (302) 464-0950, email at kleber@ziontechgroup.com, or visit our office at 364 E Main St STE 1008, Middletown, DE 19709."
       };
-      {},
-      question: "What is the uptime guarantee for your services?",
+      {},"
+      question: "What is the uptime guarantee for your services?","
       answer: "We provide a 99.9% uptime SLA guarantee for all our services, ensuring maximum reliability and availability for your business operations."
       };
-      {},
-      question: "Do you offer 24/7 support?",
+      {},"
+      question: "Do you offer 24/7 support?","
       answer: "Yes, we provide 24/7 technical support to ensure your systems are always running smoothly and any issues are resolved quickly."
       };
-      {},
-      question: "What makes Zion Tech Group different?",
+      {},"
+      question: "What makes Zion Tech Group different?","
       answer: "We combine cutting-edge AI technology with proven IT expertise to deliver innovative solutions that drive real business results. Our team of experts provides personalized service and ongoing support."
       };
     ],
@@ -232,9 +227,9 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},)
     },
     {}
   // Generate breadcrumb structured data
-  const generateBreadcrumbStructuredData = (): StructuredData => {},
+  const generateBreadcrumbStructuredData  =  (): StructuredData => {},
       const pathSegments = location.pathname.split('/').filter(Boolean),
-      const breadcrumbs = [
+      const breadcrumbs = [;
       {};
         '@type': 'ListItem',
       position: 1,
@@ -242,13 +237,13 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},)
       item: 'https://ziontechgroup.com'
       };
     ],
-      let currentPath = '',
+      let currentPath  =  '',
       pathSegments.forEach((segment, index) => {},
       currentPath += `/${segment}`,
       const name = segment
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' '),
+        .join(' '),;
       breadcrumbs.push({};)
         '@type': 'ListItem',
       position: index + 2,
@@ -263,15 +258,17 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},)
     }
     },
     {}
-  const finalStructuredData = structuredData || generatePageStructuredData(),
-      const faqStructuredData = generateFAQStructuredData(),
+  const finalStructuredData  =  structuredData || generatePageStructuredData(),
+      const faqStructuredData = generateFAQStructuredData(),;
       const breadcrumbStructuredData = generateBreadcrumbStructuredData();
-
   // Track page views and SEO metrics
   useEffect(() => {};
     // Track page view in analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {};
-      (window as { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {},)
+      (window as {
+    gtag: Function 
+  
+  }).gtag('config', 'GA_MEASUREMENT_ID', {},)
       page_title: title,
       page_location: currentUrl,
       custom_map: {};
@@ -282,136 +279,128 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},)
     {}
     // Track SEO performance
     if (typeof window !== 'undefined' && 'gtag' in window) {};
-      (window as { gtag: Function }).gtag('event', 'seo_optimization', {},)
+      (window as {
+    gtag: Function 
+  
+  }).gtag('event', 'seo_optimization', {},)
       event_category: 'SEO',
       event_label: 'page_loaded',
       value: 1
       })
     },
     {}
-  }, [title, currentUrl]),
+  }, [
+    title, currentUrl
+  
+  ]),
       return ()
     <Helmet></Helmet>
       {/* Basic Meta Tags */};
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
+      <title>{title}</title>"
+      <meta name="description" content={description} />"
+      <meta name="keywords" content={keywords} />"
+      <meta name="author" content={author} />"
+      <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />"
       <meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow"} />
-      
-      {/* Canonical URL */};
+      {/* Canonical URL */};"
       <link rel="canonical" href={finalCanonical} />
-      
-      {/* Open Graph / Facebook */};
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={finalCanonical} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={`${title} - Zion Tech Group`} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />};
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />};
-      {author && <meta property="article:author" content={author} />};
-      {section && <meta property="article:section" content={section} />};
+      {/* Open Graph / Facebook */};"
+      <meta property="og:type" content="website" />"
+      <meta property="og:url" content={finalCanonical} />"
+      <meta property="og:title" content={title} />"
+      <meta property="og:description" content={description} />"
+      <meta property="og:image" content={ogImage} />"
+      <meta property="og:image:width" content="1200" />"
+      <meta property="og:image:height" content="630" />"
+      <meta property="og:image:alt" content={`${title} - Zion Tech Group`} />"
+      <meta property="og:site_name" content="Zion Tech Group" />"
+      <meta property="og:locale" content="en_US" />"
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />};"
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />};"
+      {author && <meta property="article:author" content={author} />};"
+      {section && <meta property="article:section" content={section} />};"
       {tags.map(tag => <meta key={tag} property="article:tag" content={tag} />)};
-      {/* Twitter Card */};
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={finalCanonical} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
+      {/* Twitter Card */};"
+      <meta name="twitter:card" content="summary_large_image" />"
+      <meta name="twitter:url" content={finalCanonical} />"
+      <meta name="twitter:title" content={title} />"
+      <meta name="twitter:description" content={description} />"
+      <meta name="twitter:image" content={ogImage} />"
+      <meta name="twitter:site" content="@ziontechgroup" />"
       <meta name="twitter:creator" content="@ziontechgroup" />
-      
-      {/* Enhanced SEO Meta Tags */};
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-      <meta name="theme-color" content="#8b5cf6" />
-      <meta name="msapplication-TileColor" content="#8b5cf6" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      {/* Enhanced SEO Meta Tags */};"
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />"
+      <meta name="theme-color" content="#8b5cf6" />"
+      <meta name="msapplication-TileColor" content="#8b5cf6" />"
+      <meta name="apple-mobile-web-app-capable" content="yes" />"
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />"
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
-      {/* Additional SEO Meta Tags */};
-      <meta name="rating" content="General" />
-      <meta name="distribution" content="global" />
-      <meta name="revisit-after" content="1 days" />
-      <meta name="expires" content="never" />
-      <meta name="coverage" content="worldwide" />
-      <meta name="target" content="all" />
-      <meta name="HandheldFriendly" content="true" />
-      <meta name="MobileOptimized" content="320" />
-      <meta name="apple-touch-fullscreen" content="yes" />
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="application-name" content="Zion Tech Group" />
-      <meta name="msapplication-tooltip" content="Zion Tech Group - Advanced AI and IT Solutions" />
-      <meta name="msapplication-starturl" content="/" />
-      <meta name="msapplication-navbutton-color" content="#8b5cf6" />
-      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+      {/* Additional SEO Meta Tags */};"
+      <meta name="rating" content="General" />"
+      <meta name="distribution" content="global" />"
+      <meta name="revisit-after" content="1 days" />"
+      <meta name="expires" content="never" />"
+      <meta name="coverage" content="worldwide" />"
+      <meta name="target" content="all" />"
+      <meta name="HandheldFriendly" content="true" />"
+      <meta name="MobileOptimized" content="320" />"
+      <meta name="apple-touch-fullscreen" content="yes" />"
+      <meta name="format-detection" content="telephone=no" />"
+      <meta name="mobile-web-app-capable" content="yes" />"
+      <meta name="application-name" content="Zion Tech Group" />"
+      <meta name="msapplication-tooltip" content="Zion Tech Group - Advanced AI and IT Solutions" />"
+      <meta name="msapplication-starturl" content="/" />"
+      <meta name="msapplication-navbutton-color" content="#8b5cf6" />"
+      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />"
       <meta name="msapplication-config" content="/browserconfig.xml" />
-      
-      {/* Language and Geo Tags */};
-      <meta name="language" content="en-US" />
-      <meta name="geo.region" content="US-DE" />
-      <meta name="geo.placename" content="Middletown" />
-      <meta name="geo.position" content="39.4496;-75.7163" />
+      {/* Language and Geo Tags */};"
+      <meta name="language" content="en-US" />"
+      <meta name="geo.region" content="US-DE" />"
+      <meta name="geo.placename" content="Middletown" />"
+      <meta name="geo.position" content="39.4496;-75.7163" />"
       <meta name="ICBM" content="39.4496, -75.7163" />
-      
-      {/* Structured Data */};
+      {/* Structured Data */};"
       <script type="application/ld+json"></script>
         {JSON.stringify(finalStructuredData)};
       </script>
-      
-      {/* FAQ Structured Data */};
+      {/* FAQ Structured Data */};"
       <script type="application/ld+json"></script>
         {JSON.stringify(faqStructuredData)};
       </script>
-      
-      {/* Breadcrumb Structured Data */};
+      {/* Breadcrumb Structured Data */};"
       <script type="application/ld+json"></script>
         {JSON.stringify(breadcrumbStructuredData)};
       </script>
-      
-      {/* Preload critical resources */};
+      {/* Preload critical resources */};"
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      
-      {/* DNS prefetch for performance */};
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      {/* DNS prefetch for performance */};"
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />"
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />"
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />"
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-      
-      {/* Preconnect to external domains */};
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      {/* Preconnect to external domains */};"
+      <link rel="preconnect" href="https://fonts.googleapis.com" />"
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
     </Helmet>
-
   );
-
-import React from 'react';;';
+import React from 'react';';
 import SEOHead from './components/SEOHead';
-;
-const ComponentsPage: React.FC = () => {
-  return (
+
+const ComponentsPage: React.FC  =  () => {
+  return (;
     <>;
-      <SEOHead;
-        title="Components - Zion Tech Group"";
-        description="Professional components solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+      <SEOHead;"
+        title="Components - Zion Tech Group"";"
+        description="Professional components solutions for modern businesses";"
+      />";"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Components</$1>"
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
     </>;
   ),
-
 };
-;
-export default ComponentsPage;'";'";
+;"
+export default ComponentsPage;'";'";"

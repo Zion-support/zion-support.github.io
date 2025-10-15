@@ -1,7 +1,5 @@
-
 import React, { useState } from 'react';
 import React, { useState, useRef, useEffect } from 'react';
-
 interface LazyImageProps {};
   src: string;
   alt: string;
@@ -20,9 +18,11 @@ const LazyImage: React.FC<LazyImageProps> = ({};)
   const [isError, setIsError] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
-
   useEffect(() => {};
-    const observer = new IntersectionObserver(([entry]) => {};
+    const observer = new IntersectionObserver(([
+    entry
+  
+  ]) => {};
         if ($1) {}
   // If body
 }
@@ -38,12 +38,18 @@ const LazyImage: React.FC<LazyImageProps> = ({};)
       observer.observe(imgRef.current)
     },
       return () => observer.disconnect()
-  }, [])
-  const handleLoad = () => {};
+  }, [
+    
+  ])
+  const handleLoad = () => {
+  
+};
 }setIsLoaded(true)
     onLoad?.()
   },
-      const handleError = () => {};
+      const handleError = () => {
+  
+};
 }setIsError(true)
     onError?.()
   },
@@ -67,7 +73,7 @@ const LazyImage: React.FC<LazyImageProps> = ({};)
       sizes={sizes},
       srcSet={srcSet},
       onLoad={handleLoad},
-      onError={handleError},
+      onError={handleError},"
       decoding="async"
         />
       )};
@@ -75,26 +81,25 @@ const LazyImage: React.FC<LazyImageProps> = ({};)
   )
 },
       export default LazyImage
-
-import React from 'react';;';
+import React from 'react';';
 import SEOHead from './components/SEOHead';
-;
-const ComponentsPage: React.FC = () => {
-  return (
+
+const ComponentsPage: React.FC  =  () => {
+  return (;
     <>;
-      <SEOHead;
-        title="Components - Zion Tech Group"";
-        description="Professional components solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+      <SEOHead;"
+        title="Components - Zion Tech Group"";"
+        description="Professional components solutions for modern businesses";"
+      />";"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Components</$1>"
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
     </>;
   ),
 };
-;
+;"
 export default ComponentsPage;'";'";
-
+"

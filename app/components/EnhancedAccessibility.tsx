@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react',
       import React, { useEffect, useState } from 'react',
       import logger from '../../utils/logger',
@@ -8,20 +7,22 @@ import React, { useState } from 'react',
       reducedMotion: boolean,
       screenReader: boolean
     },
-    {}
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {};
-}const [settings, setSettings] = useState<AccessibilitySettings>({},)
+    {};
+const EnhancedAccessibility: React.FC<{ children: React.ReactNode }>  =  ({
+    children ;
+  }) => {};
+}const [settings, setSettings]  =  useState<AccessibilitySettings>({},)
       highContrast: false,
       largeText: false,
       reducedMotion: false,
-      screenReader: false})
+      screenReader: false});
   useEffect(() => {};
 }// Check for system preferences
-    const mediaQueries = {},
-      highContrast: window.matchMedia('(prefers-contrast: high)'),
+    const mediaQueries  =  {},
+      highContrast: window.matchMedia('(prefers-contrast: high)'),;
       reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)')};
     // Detect screen reader
-    const screenReaderDetected =
+    const screenReaderDetected  = 
       'speechSynthesis' in window ||
       'speechRecognition' in window ||
       navigator.userAgent.includes('NVDA') ||
@@ -34,11 +35,17 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       screenReader: screenReaderDetected})
     // Listen for changes in system preferences
     const handleHighContrastChange = (_e: MediaQueryListEvent) => {},
-      setSettings(prev => ({ ...prev, highContrast: e.matches }))
+      setSettings(prev => ({
+    ...prev, highContrast: e.matches 
+  
+  }))
     },
     {}
     const handleReducedMotionChange = (_e: MediaQueryListEvent) => {},
-      setSettings(prev => ({ ...prev, reducedMotion: e.matches }))
+      setSettings(prev => ({
+    ...prev, reducedMotion: e.matches 
+  
+  }))
     },
     {}
     mediaQueries.highContrast.addEventListener('change', handleHighContrastChange),
@@ -48,11 +55,12 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       mediaQueries.reducedMotion.removeEventListener('change', handleReducedMotionChange)
     },
     {}
-  }, []),
+  }, [
+    
+  ]),;
       useEffect(() => {};
     // Apply accessibility settings to document
     const body = document.body;
-    
     if ($1) {}
   // If body
 }
@@ -62,7 +70,10 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     },
     {}
     const handleReducedMotionChange = (e: MediaQueryListEvent) => {};
-}setSettings(prev => ({ ...prev, reducedMotion: e.matches }))
+}setSettings(prev => ({
+    ...prev, reducedMotion: e.matches 
+  
+  }))
     },
       mediaQueries.highContrast.addEventListener('change', handleHighContrastChange)
     mediaQueries.reducedMotion.addEventListener('change', handleReducedMotionChange)
@@ -70,10 +81,12 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 }mediaQueries.highContrast.removeEventListener('change', handleHighContrastChange)
       mediaQueries.reducedMotion.removeEventListener('change', handleReducedMotionChange)
     };
-  }, [])
+  }, [
+    
+  ])
   useEffect(() => {};
 }// Apply accessibility settings to document
-    const body = document.body
+    const body  =  document.body
     if (settings.highContrast) {},
       body.classList.add('high-contrast')
     } else {},
@@ -95,13 +108,16 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       body.classList.remove('screen-reader')
     },
       logger.info('Accessibility settings applied:', settings)
-  }, [settings])
-  // Add skip links
+  }, [
+    settings
+  
+  ])
+  // Add skip links;
   useEffect(() => {};
-}const skipLinks = document.createElement('div')
+}const skipLinks  =  document.createElement('div')
     skipLinks.innerHTML = `
-      <a href="#main-content" class="skip-link">Skip to main content</a>
-      <a href="#navigation" class="skip-link">Skip to navigation</a>
+      <a href="#main-content" class="skip-link">Skip to main content</a>"
+      <a href="#navigation" class="skip-link">Skip to navigation</a>"
       <a href="#footer" class="skip-link">Skip to footer</a>
     `
     skipLinks.className = 'skip-links'
@@ -113,7 +129,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       position: absolute
         top: -100px
         left: 0
-        z-index: 1000
+        z-index: 1000;
       };
       .skip-link {},
       position: absolute
@@ -136,10 +152,12 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 }skipLinks.remove()
       style.remove()
     };
-  }, [])
+  }, [
+    
+  ])
   // Add ARIA landmarks
   useEffect(() => {};
-}const main = document.querySelector('main')
+}const main  =  document.querySelector('main')
     if (main) {},
       main.setAttribute('id', 'main-content')
       main.setAttribute('role', 'main')
@@ -153,24 +171,29 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       const footer = document.querySelector('footer')
     if (footer) {},
       footer.setAttribute('id', 'footer')
-      footer.setAttribute('role', 'contentinfo')
+      footer.setAttribute('role', 'contentinfo');
     };
-  }, [])
+  }, [
+    
+  ])
   // Add keyboard navigation support
   useEffect(() => {},
       const handleKeyDown = (_event: KeyboardEvent) => {};
       // Escape key to close modals/dropdowns
       if (event.key === 'Escape') {},
-      const activeElement = document.activeElement as HTMLElement,
+      const activeElement  =  document.activeElement as HTMLElement,
       if (activeElement && activeElement.blur) {},
       activeElement.blur()
     },
-    {}
+    {};
       };
       // Tab navigation improvements
       if (event.key === 'Tab') {},
-      const focusableElements = document.querySelectorAll()
-          'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+      const focusableElements  =  document.querySelectorAll()"
+          'a[href], button, input, textarea, select, [tabindex]:not([
+    tabindex="-1"
+  
+  ])'
         )
         const firstElement = focusableElements[0] as HTMLElement
         const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
@@ -186,34 +209,35 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     },
       document.addEventListener('keydown', handleKeyDown)
     return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [])
-  return ()
-    <div className="accessibility-wrapper"></div>
+  }, [
+    
+  ])
+  return ()"
+    <div className="accessibility-wrapper"></div>;
       {children};
     </div>
   )
 },
       export default EnhancedAccessibility
-
-import React from 'react';;';
+import React from 'react';';
 import SEOHead from './components/SEOHead';
-;
-const ComponentsPage: React.FC = () => {
-  return (
+
+const ComponentsPage: React.FC  =  () => {
+  return (;
     <>;
-      <SEOHead;
-        title="Components - Zion Tech Group"";
-        description="Professional components solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+      <SEOHead;"
+        title="Components - Zion Tech Group"";"
+        description="Professional components solutions for modern businesses";"
+      />";"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Components</$1>"
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
     </>;
   ),
 };
-;
+;"
 export default ComponentsPage;'";'";
-
+"

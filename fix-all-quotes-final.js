@@ -5,11 +5,11 @@ let content = fs.readFileSync(file, 'utf8');'
 // Fix all malformed quote patterns
 content = content.replace(/";"/g, ';);'"
 content = content.replace(/';/g, ';);'
-content = content.replace(/';/g, ';);'
+content = content.replace(/';/g, ';);'"
 content = content.replace(/'";"/g, ';);'"
 content = content.replace(/"/g, '"');'"
 content = content.replace(/'/g, "'");'"
-// Fix specific patterns that are still problematic
+// Fix specific patterns that are still problematic"
 content = content.replace(/from "([^"]*?)";"/g, 'from "$1';);'"
 content = content.replace(/from '([^']*?)';"/g, "from '$1';");'"
 content = content.replace(/import ([^;]*?)";"/g, 'import $1';);'"
@@ -18,11 +18,11 @@ content = content.replace(/import ([^;]*?)';"/g, "import $1';");'"
 content = content.replace(/;/g, ';');'
 content = content.replace(/';/g, ';');'
 content = content.replace(/;/g, ';');'
-// Fix unterminated strings
+// Fix unterminated strings"
 content = content.replace(/'([^']*?)\n/g, "'$1'\n");'"
 content = content.replace(/"([^"]*?)\n/g, '"$1"\n');'"
 // Clean up extra whitespace
 content = content.replace(/\n\s*\n\s*\n/g, '\n\n');'
 content = content.replace(/\s+\n/g, '\n');'
 fs.writeFileSync(file, content);
-console.log('Fixed App.tsx');
+console.log('Fixed App.tsx');"

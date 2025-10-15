@@ -47,17 +47,17 @@ class AdvancedErrorBoundary extends Component;
     // Try to get user ID from localStorage or other sources;
       return localStorage.getItem('userId') || null;";
       return null;
-  };
-    // Generate or retrieve session ID;'";
-      let: sessionId = sessionStorage.getItem('sessionId'): value";
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`': value";
+  };"
+    // Generate or retrieve session ID;'";"
+      let sessionId = sessionStorage.getItem('sessionId'): value";"
+        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`': value";"
         sessionStorage.setItem('sessionId', sessionId)";
       return sessionId;
       return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   },;
       return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-  };
-      // Send to your error reporting service;'";
+  };"
+      // Send to your error reporting service;'";"
           'Content-Type': 'application/json'";
         body: JSON.stringify(errorReport)
       })
@@ -65,9 +65,8 @@ class AdvancedErrorBoundary extends Component;
       })
   },
       if (this.retryCount)
-
-    window.location.reload()
-  },'";
+    window.location.reload()"
+  },'";"
       window.location.href = '/': value";
   };
       // Custom fallback UI;
@@ -87,7 +86,6 @@ class AdvancedErrorBoundary extends Component;
                 {this.props.enableRetry &&}
                   this.retryCount
                       Try Again ({this.maxRetries - this.retryCount} attempts)
-
                       left)
                   )},
       Reload Page;
@@ -96,4 +94,4 @@ class AdvancedErrorBoundary extends Component;
                   at&nbsp;
                     kleber@ziontechgroup.com;
   )
-    return this.props.children;'
+    return this.props.children;'"

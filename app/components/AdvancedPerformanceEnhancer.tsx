@@ -1,45 +1,43 @@
-import React from 'react';;';
+import React from 'react';';
 import SEOHead from './components/SEOHead';
-
 interface PerformanceEnhancerProps {}
   enableImageOptimization?: boolean;
   enablePreloading?: boolean;
   enableCaching?: boolean;
   enableCompression?: boolean;
 }
-
-const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({)}
+const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps>  =  ({)}
   enableImageOptimization = true,
   enablePreloading = true,
   enableCaching = true,
   enableCompression = true
 }) => {}
   // Image optimization
-  const optimizeImages = useCallback(() => {}
+  const optimizeImages = useCallback(() => {};
     if (!enableImageOptimization) return;
-    
     const images = document.querySelectorAll('img');
     images.forEach((img) => {}
       // Add loading="lazy" if not already present
       if (!img.hasAttribute('loading')) {}
         img.setAttribute('loading', 'lazy');
-      }
+      }"
       // Add decoding="async" for better performance
       if (!img.hasAttribute('decoding')) {}
         img.setAttribute('decoding', 'async');
-      }
+      }"
       // Add fetchpriority="auto" for above-the-fold images
       if (img.getBoundingClientRect().top < window.innerHeight) {}
         img.setAttribute('fetchpriority', 'high');
       }
     });
-  }, [enableImageOptimization]);
-
+  }, [
+    enableImageOptimization
+  
+  ]);
   // Resource preloading
-  const preloadCriticalResources = useCallback(() => {}
+  const preloadCriticalResources  =  useCallback(() => {};
     if (!enablePreloading) return;
-
-    // Preload critical CSS
+    // Preload critical CSS"
     const criticalCSS = document.querySelector('link[rel="stylesheet"]');
     if (criticalCSS) {}
       const preloadLink = document.createElement('link');
@@ -48,8 +46,7 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({)}
       preloadLink.as = 'style';
       document.head.appendChild(preloadLink);
     }
-
-    // Preload critical fonts
+    // Preload critical fonts"
     const fontLinks = document.querySelectorAll('link[href*="font"]');
     fontLinks.forEach((link) => {}
       const preloadLink = document.createElement('link');
@@ -59,25 +56,27 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({)}
       preloadLink.crossOrigin = 'anonymous';
       document.head.appendChild(preloadLink);
     });
-  }, [enablePreloading]);
-
+  }, [
+    enablePreloading
+  
+  ]);
   // Caching optimization
-  const optimizeCaching = useCallback(() => {}
+  const optimizeCaching  =  useCallback(() => {};
     if (!enableCaching) return;
-
-    // Set cache headers for static assets
+    // Set cache headers for static assets"
     const staticAssets = document.querySelectorAll('img, script, link[rel="stylesheet"]');
     staticAssets.forEach((asset) => {}
       if (asset instanceof HTMLElement) {}
         asset.style.cacheControl = 'max-age=31536000';
       }
     });
-  }, [enableCaching]);
-
+  }, [
+    enableCaching
+  
+  ]);
   // Compression optimization
-  const optimizeCompression = useCallback(() => {}
+  const optimizeCompression  =  useCallback(() => {};
     if (!enableCompression) return;
-
     // Enable gzip compression for text content
     const textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');
     textElements.forEach((element) => {}
@@ -85,15 +84,17 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({)}
         element.style.textCompression = 'gzip';
       }
     });
-  }, [enableCompression]);
-
+  }, [
+    enableCompression
+  
+  ]);
   // Performance monitoring
-  const monitorPerformance = useCallback(() => {}
+  const monitorPerformance  =  useCallback(() => {}
     if (typeof window !== 'undefined' && 'performance' in window) {}
       // Core Web Vitals
       const observer = new PerformanceObserver((list) => {}
         list.getEntries().forEach((entry) => {}
-          if (entry.entryType === 'largest-contentful-paint') {}
+          if (entry.entryType === 'largest-contentful-paint') {};
             console.log('LCP:', entry.startTime);
           }
           if (entry.entryType === 'first-input') {}
@@ -104,11 +105,14 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({)}
           }
         });
       });
-
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+      observer.observe({
+    entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] 
+  
+  });
     }
-  }, []);
-
+  }, [
+    
+  ]);
   useEffect(() => {}
     // Run optimizations on mount
     optimizeImages();
@@ -116,41 +120,38 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({)}
     optimizeCaching();
     optimizeCompression();
     monitorPerformance();
-
     // Re-run optimizations when DOM changes
-    const observer = new MutationObserver(() => {}
+    const observer  =  new MutationObserver(() => {};
       optimizeImages();
     });
-
     observer.observe(document.body, {)}
       childList: true,
       subtree: true
     });
-
     return () => {}
       observer.disconnect();
     };
-  }, [optimizeImages, preloadCriticalResources, optimizeCaching, optimizeCompression, monitorPerformance]);
-
+  }, [
+    optimizeImages, preloadCriticalResources, optimizeCaching, optimizeCompression, monitorPerformance
+  
+  ]);
   return null; // This component doesn't render anything
 
-;
-const ComponentsPage: React.FC = () => {
-  return (
+const ComponentsPage: React.FC  =  () => {
+  return (;
     <>;
-      <SEOHead;
-        title="Components - Zion Tech Group"";
-        description="Professional components solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+      <SEOHead;"
+        title="Components - Zion Tech Group"";"
+        description="Professional components solutions for modern businesses";"
+      />";"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Components</$1>"
           <p className ="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
     </>;
   ),
-
 };
-;
-export default ComponentsPage;'";'";
+;"
+export default ComponentsPage;'";'";"
