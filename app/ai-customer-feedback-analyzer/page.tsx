@@ -2,15 +2,12 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 import { 
   CheckCircleIcon, 
-  ChartBarIcon, 
-  UserGroupIcon, 
-  ChatBubbleLeftRightIcon,
+  ChartBarIcon,
   SparklesIcon,
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
   GlobeAltIcon,
-  EyeIcon,
   ArrowTrendingUpIcon
 } from '@heroicons/react/24/outline';
 
