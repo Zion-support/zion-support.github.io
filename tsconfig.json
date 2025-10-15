@@ -8,6 +8,15 @@
       "DOM",
       "DOM.Iterable"
     ],
+<<<<<<< HEAD
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+=======
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+=======
+>>>>>>> main
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "bundler",
@@ -16,13 +25,19 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": false,
 >>>>>>> main
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+<<<<<<< HEAD
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": false,
+=======
     "jsxImportSource": "react",
     "strict": true,
 <<<<<<< HEAD
@@ -37,6 +52,7 @@
 >>>>>>> main
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
 <<<<<<< HEAD
@@ -44,6 +60,7 @@
         "src/*"
       ],
       "@/components/*": [
+<<<<<<< HEAD
         "src/components/*"
       ],
       "@/pages/*": [
@@ -69,6 +86,32 @@
       ]
     },
     "incremental": true,
+=======
+        "components/*"
+      ],
+      "@/pages/*": [
+        "pages/*"
+      ],
+      "@/utils/*": [
+        "utils/*"
+      ],
+      "@/types/*": [
+        "types/*"
+      ],
+      "@/hooks/*": [
+        "hooks/*"
+      ],
+      "@/config/*": [
+        "config/*"
+      ],
+      "@/data/*": [
+        "data/*"
+      ],
+      "@/content/*": [
+        "content/*"
+      ]
+    },
+>>>>>>> main
     "allowJs": true,
     "noImplicitAny": false,
     "noImplicitReturns": false,
@@ -110,6 +153,12 @@
     "src/**/*",
     "App.tsx",
     "components/**/*",
+<<<<<<< HEAD
+=======
+    "utils/**/*",
+    "hooks/**/*",
+    "pages/**/*",
+>>>>>>> main
     "*.ts",
     "*.tsx"
 =======
