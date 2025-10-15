@@ -8,7 +8,7 @@ interface KeyboardEvent extends Event {
   preventDefault(): void;
 }
 
-// Remove unused interface
+// Focus management utilities moved to separate file
 
 // Focus management utilities
 export const focusManagement = {
