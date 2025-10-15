@@ -7,17 +7,10 @@ import {
   Brain, 
   CheckCircle, 
   Star,
-  ArrowRight,
   Phone,
   Mail,
-  MapPin,
-  Award,
-  Clock,
   Zap,
-  Users,
-  Database,
-  PieChart,
-  LineChart
+  Users
 } from 'lucide-react';
 
 const AiPredictiveAnalyticsProPage: React.FC = () => {
@@ -360,7 +353,7 @@ const AiPredictiveAnalyticsProPage: React.FC = () => {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                  <p className="text-gray-300 mb-6 italic">&quot;{testimonial.content}&quot;</p>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-cyan-400 text-sm">{testimonial.role}</div>

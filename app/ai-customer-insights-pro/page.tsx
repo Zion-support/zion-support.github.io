@@ -1,21 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Brain, 
   Users, 
   TrendingUp, 
-  BarChart3, 
   Target, 
   CheckCircle, 
   Star,
-  ArrowRight,
   Phone,
   Mail,
-  MapPin,
-  Zap,
-  Shield,
-  Clock,
-  Award
+  MapPin
 } from 'lucide-react';
 
 const AiCustomerInsightsProPage: React.FC = () => {

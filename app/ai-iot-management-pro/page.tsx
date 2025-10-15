@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, Cpu, Database, Zap, Brain, CheckCircle, ArrowRight, Star, Phone, Mail, Play, Activity, Camera, Smartphone, Thermometer, Wind, Home, Building, Car, Star, Shield } from 'lucide-react';
+import { Wifi, Cpu, Database, Zap, Brain, CheckCircle, ArrowRight, Star, Phone, Mail, Play, Activity, Camera, Smartphone, Thermometer, Wind, Home, Building, Car, Shield } from 'lucide-react';
 
 const AiIotManagementProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

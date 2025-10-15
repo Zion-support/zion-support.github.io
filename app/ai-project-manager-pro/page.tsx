@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Users, Target, BarChart3, Zap, Shield, Brain, CheckCircle, ArrowRight, Star, Phone, Mail, Play, Star, Shield, BarChart3 } from 'lucide-react';
+import { Users, Target, BarChart3, Zap, Shield, Brain, CheckCircle, ArrowRight, Star, Phone, Mail, Play } from 'lucide-react';
 
 const AiProjectManagerProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

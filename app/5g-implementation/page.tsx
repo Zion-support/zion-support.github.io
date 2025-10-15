@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, Shield, Globe, CheckCircle, ArrowRight, Star, Phone, Mail, Play, Settings, Smartphone, Cloud, Cpu, BarChart3, Activity, Star, Shield, BarChart3 } from 'lucide-react';
+import { Wifi, Shield, Globe, CheckCircle, ArrowRight, Star, Phone, Mail, Play, Settings, Smartphone, Cloud, Cpu, BarChart3, Activity } from 'lucide-react';
 
 const FiveGImplementationPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -451,7 +451,7 @@ const FiveGImplementationPage: React.FC = () => {
                   Ready for the 5G Revolution?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Don't get left behind. Start your 5G transformation today and unlock the full potential of next-generation wireless technology.
+                  Don&apos;t get left behind. Start your 5G transformation today and unlock the full potential of next-generation wireless technology.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a

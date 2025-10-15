@@ -1,23 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Brain, 
   Calendar, 
   Users, 
   Target, 
   CheckCircle, 
   Star,
-  ArrowRight,
   Phone,
   Mail,
   MapPin,
-  Zap,
   Shield,
   Clock,
-  Award,
-  BarChart3,
-  TrendingUp,
-  AlertTriangle
+  TrendingUp
 } from 'lucide-react';
 
 const AiProjectManagementProPage: React.FC = () => {
@@ -299,7 +293,7 @@ const AiProjectManagementProPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Revolutionize Your Project Management?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Contact us today to schedule a free demo and see how AI Project Management Pro can transform your team's productivity.
+                Contact us today to schedule a free demo and see how AI Project Management Pro can transform your team&apos;s productivity.
               </p>
             </div>
             
