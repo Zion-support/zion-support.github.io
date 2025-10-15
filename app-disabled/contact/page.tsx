@@ -1,4 +1,4 @@
-import React from 'react';';
+import React from 'react';
 import { Helmet   } from 'react-helmet-async';
 use client;
 const ContactPage: React.FC = () => {const [formData, setFormData] = useState({;

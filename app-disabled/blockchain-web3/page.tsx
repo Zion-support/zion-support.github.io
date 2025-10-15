@@ -1,4 +1,4 @@
-import { Helmet   } from 'react-helmet-async';';
+import { Helmet   } from 'react-helmet-async';
 import { Circle, Right,   } from 'lucide-react';
       icon: "title: Global Reach",;
       description: "Worldwide deployment and support for international businesses",;

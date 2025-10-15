@@ -197,7 +197,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
       {/* Sidebar */}
       <div
-        className={`fixed' inset-y-0 left-0 z-50 w-64 bg-slate-800 transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0 ${
+        className={`fixed''' inset-y-0 left-0 z-50 w-64 bg-slate-800 transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0 ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -223,7 +223,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`flex' items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                    className={`flex''' items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                       isActive
                         ? 'bg-slate-700 text-white'
                         : 'text-slate-300 hover:bg-slate-700 hover:text-white'
@@ -256,7 +256,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                           {section.name}
                         </div>
                         <DropdownIcon
-                          className={`h-4' w-4 transition-transform ${
+                          className={`h-4''' w-4 transition-transform ${
                             isExpanded ? 'rotate-180' : ''
                           }`}
                         />
@@ -269,7 +269,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                               <Link
                                 key={item.name}
                                 to={item.href}
-                                className={`block' px-3 py-2 text-sm rounded-md transition-colors ${
+                                className={`block''' px-3 py-2 text-sm rounded-md transition-colors ${
                                   isActive
                                     ? 'bg-slate-700 text-white'
                                     : 'text-slate-400 hover:bg-slate-700 hover:text-white'

@@ -92,8 +92,8 @@ function findProblematicFiles(dir) {;
         if (!['node_modules', .git, dist, build, '.next', out].includes(item)) {;
           searchDirectory(fullPath);
         }
-      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {;
-        try {;
+      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {>
+        try {>
           const content = fs.readFileSync(fullPath, utf8)>
           if (content.includes() ||>
               content.includes('') ||>

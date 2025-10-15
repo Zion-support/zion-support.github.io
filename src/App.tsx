@@ -1,4 +1,4 @@
-import React from 'react';';
+import React from 'react';
 import ./components/ from './components/';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';

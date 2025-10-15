@@ -1,4 +1,4 @@
-import React from 'react';';
+import React from 'react';
 import React from 'react';
 import { Helmet   } from 'react-helmet-async';
 use client;
@@ -15,7 +15,7 @@ const AIServicesPagePage: React.FC = () => {const features = [;,,;
     n: "title: 'AI-Powered Intelligence",;
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.,;
       benefits: '[Smart recommendations', Predictive analytics, Automated insights, 'Real-time analysis];
-import { Helmet   } from 'react-helmet-async';';
+import { Helmet   } from 'react-helmet-async';
 import { Box, Mic,   } from 'lucide-react';
 import ../components/ from '../components/';
 import Footer from '../components/Footer';

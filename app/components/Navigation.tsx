@@ -93,7 +93,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`px-3' py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`px-3''' py-2 rounded-md text-sm font-medium transition-colors ${
                     isActive
                       ? 'bg-slate-700 text-white'
                       : 'text-slate-300 hover:bg-slate-700 hover:text-white'

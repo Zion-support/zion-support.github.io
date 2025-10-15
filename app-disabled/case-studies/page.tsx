@@ -1,4 +1,4 @@
-import React from 'react';';
+import React from 'react';
 import react;';
 import from 'from react';
 import from 'react';

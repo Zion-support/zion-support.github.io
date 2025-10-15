@@ -1,4 +1,4 @@
-import React from 'react';';
+import React from 'react';
 import { render, screen   } from '@testing-library/react';
 import OptimizedImage from '../../app/components/OptimizedImage';
 // Mock framer-motion;

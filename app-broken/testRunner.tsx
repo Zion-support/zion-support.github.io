@@ -1,4 +1,4 @@
-import React from 'react';';
+import React from 'react';
 import { render, RenderOptions, RenderResult   } from '@testing-library/react';
 import { BrowserRouter   } from 'react-router-dom';
 // Custom render function with providers;

@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-
 export default defineConfig({
   plugins: [
     react({
@@ -71,22 +70,22 @@ export default defineConfig({
         entryFileNames: 'assets/js/[name]-[hash].js',
       },
     },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: true,
+    chunkSizeWarningLimit: '500',
+    reportCompressedSize: 'true',
     // Enable tree shaking
-    treeshake: true,
+    treeshake: 'true',
   },
   server: {
     port: 3000,
-    open: false, // Disable auto-open for CI/CD
-    cors: true,
+    open: 'false', // Disable auto-open for CI/CD
+    cors: 'true',
     hmr: {
       overlay: true,
     },
   },
   preview: {
     port: 4173,
-    open: false,
+    open: 'false',
   },
   optimizeDeps: {
     include: [
@@ -107,7 +106,7 @@ export default defineConfig({
   // Performance optimizations
   define: {
     __VUE_OPTIONS_API__: false,
-    __VUE_PROD_DEVTOOLS__: false,
+    __VUE_PROD_DEVTOOLS__: 'false',
   },
   // CSS optimizations
   css: {

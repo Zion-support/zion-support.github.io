@@ -1,4 +1,4 @@
-import {Helmet}}from 'react-helmet-async';';
+import {Helmet}}from 'react-helmet-async';
 import ../components/ from '../components/';
 import Footer from '../components/Footer';
 import {Circle, Right, Star, }}from 'lucide-react';
