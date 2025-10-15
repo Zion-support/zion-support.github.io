@@ -44,7 +44,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-development'
+        website: 'https://ziontechgroup.com/ai-development',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
       }
     },
     {
@@ -91,7 +92,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-consulting'
+        website: 'https://ziontechgroup.com/ai-consulting',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
       }
     },
     {
@@ -138,7 +140,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-content-generator'
+        website: 'https://ziontechgroup.com/ai-content-generator',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
       }
     },
     {
@@ -185,11 +188,529 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-customer-support'
+        website: 'https://ziontechgroup.com/ai-customer-support',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-code-assistant',
+      title: 'Zion AI Code Assistant Pro',
+      description: 'Advanced AI-powered coding assistant with intelligent code completion, debugging, and optimization suggestions',
+      shortDescription: 'Enhance your coding with AI assistance',
+      icon: '💻',
+      features: [
+        'Intelligent Code Completion',
+        'Bug Detection & Fixing',
+        'Code Optimization',
+        'Multi-language Support',
+        'Real-time Suggestions',
+        'Code Review',
+        'Documentation Generation',
+        'Refactoring Assistance',
+        'IDE Integration',
+        'Learning Mode'
+      ],
+      pricing: {
+        basic: 29,
+        pro: 79,
+        enterprise: 199
+      },
+      benefits: [
+        '50% faster development',
+        'Reduced bugs',
+        'Better code quality',
+        'Learning acceleration',
+        'Time savings',
+        'Improved productivity'
+      ],
+      useCases: [
+        'Software development',
+        'Code review',
+        'Bug fixing',
+        'Learning programming',
+        'Code optimization',
+        'Documentation'
+      ],
+      marketPrice: '$29 - $199/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-code-assistant',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-data-scientist',
+      title: 'Zion AI Data Scientist Pro',
+      description: 'Automated data science platform with AI-powered model building, feature engineering, and predictive analytics',
+      shortDescription: 'Democratize data science with AI',
+      icon: '🔬',
+      features: [
+        'Automated Model Building',
+        'Feature Engineering',
+        'Data Preprocessing',
+        'Model Selection',
+        'Hyperparameter Tuning',
+        'Model Validation',
+        'Deployment Automation',
+        'Performance Monitoring',
+        'Visualization Tools',
+        'API Integration'
+      ],
+      pricing: {
+        basic: 99,
+        pro: 299,
+        enterprise: 999
+      },
+      benefits: [
+        'Faster model development',
+        'Reduced expertise requirements',
+        'Better model performance',
+        'Automated optimization',
+        'Scalable solutions',
+        'Cost efficiency'
+      ],
+      useCases: [
+        'Predictive analytics',
+        'Machine learning',
+        'Data modeling',
+        'Business intelligence',
+        'Research & development',
+        'Process optimization'
+      ],
+      marketPrice: '$99 - $999/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-data-scientist',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-translator',
+      title: 'Zion AI Translator Pro',
+      description: 'Advanced AI-powered translation platform with real-time translation, context understanding, and multi-modal support',
+      shortDescription: 'Break language barriers with AI',
+      icon: '🌐',
+      features: [
+        'Real-time Translation',
+        '100+ Languages',
+        'Context Understanding',
+        'Document Translation',
+        'Voice Translation',
+        'Image Translation',
+        'API Integration',
+        'Custom Models',
+        'Batch Processing',
+        'Quality Assurance'
+      ],
+      pricing: {
+        basic: 19,
+        pro: 49,
+        enterprise: 149
+      },
+      benefits: [
+        '99% accuracy rate',
+        'Real-time processing',
+        'Multi-modal support',
+        'Cost-effective',
+        'Scalable solution',
+        'Easy integration'
+      ],
+      useCases: [
+        'Global communication',
+        'Document translation',
+        'Website localization',
+        'Customer support',
+        'Content creation',
+        'E-commerce'
+      ],
+      marketPrice: '$19 - $149/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-translator',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
       }
     }
   ],
   microSaas: [
+    {
+      id: 'ai-document-analyzer',
+      title: 'Zion AI Document Analyzer Pro',
+      description: 'Advanced AI-powered document analysis and processing platform with OCR, NLP, and intelligent data extraction',
+      shortDescription: 'Extract insights from documents with AI',
+      icon: '📄',
+      features: [
+        'OCR Text Recognition',
+        'Smart Data Extraction',
+        'Document Classification',
+        'Multi-language Support',
+        'Batch Processing',
+        'API Integration',
+        'Custom Templates',
+        'Real-time Analysis',
+        'Cloud Storage Sync',
+        'Security & Compliance'
+      ],
+      pricing: {
+        basic: 39,
+        pro: 99,
+        enterprise: 299
+      },
+      benefits: [
+        '90% faster document processing',
+        'Reduced manual data entry',
+        'Improved accuracy',
+        'Cost savings',
+        'Scalable processing',
+        'Automated workflows'
+      ],
+      useCases: [
+        'Invoice processing',
+        'Contract analysis',
+        'Legal document review',
+        'Insurance claims',
+        'Financial reporting',
+        'Compliance monitoring'
+      ],
+      marketPrice: '$39 - $299/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-document-analyzer',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-sales-predictor',
+      title: 'Zion AI Sales Predictor Pro',
+      description: 'Intelligent sales forecasting and lead scoring platform with machine learning algorithms and predictive analytics',
+      shortDescription: 'Predict sales outcomes with AI precision',
+      icon: '📈',
+      features: [
+        'Sales Forecasting',
+        'Lead Scoring',
+        'Pipeline Analysis',
+        'Revenue Prediction',
+        'Customer Lifetime Value',
+        'Churn Prediction',
+        'Market Analysis',
+        'ROI Optimization',
+        'Custom Models',
+        'Real-time Insights'
+      ],
+      pricing: {
+        basic: 49,
+        pro: 129,
+        enterprise: 399
+      },
+      benefits: [
+        '25% increase in sales accuracy',
+        'Better lead qualification',
+        'Reduced sales cycles',
+        'Higher conversion rates',
+        'Data-driven decisions',
+        'Competitive advantage'
+      ],
+      useCases: [
+        'Sales forecasting',
+        'Lead qualification',
+        'Revenue planning',
+        'Customer retention',
+        'Market analysis',
+        'Performance optimization'
+      ],
+      marketPrice: '$49 - $399/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-sales-predictor',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-financial-forecaster',
+      title: 'Zion AI Financial Forecaster Pro',
+      description: 'Advanced financial forecasting and budgeting platform with AI-powered predictions and risk analysis',
+      shortDescription: 'Smart financial planning with AI',
+      icon: '💰',
+      features: [
+        'Budget Forecasting',
+        'Cash Flow Analysis',
+        'Risk Assessment',
+        'Investment Optimization',
+        'Expense Prediction',
+        'Revenue Modeling',
+        'Scenario Planning',
+        'Compliance Monitoring',
+        'Real-time Alerts',
+        'Custom Dashboards'
+      ],
+      pricing: {
+        basic: 59,
+        pro: 149,
+        enterprise: 499
+      },
+      benefits: [
+        'Improved financial planning',
+        'Better risk management',
+        'Optimized cash flow',
+        'Reduced financial risks',
+        'Data-driven budgeting',
+        'Competitive insights'
+      ],
+      useCases: [
+        'Financial planning',
+        'Budget management',
+        'Risk assessment',
+        'Investment analysis',
+        'Cash flow optimization',
+        'Compliance reporting'
+      ],
+      marketPrice: '$59 - $499/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-financial-forecaster',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-customer-sentiment-tracker',
+      title: 'Zion AI Customer Sentiment Tracker Pro',
+      description: 'Real-time customer sentiment analysis and feedback monitoring platform with AI-powered insights',
+      shortDescription: 'Monitor customer satisfaction with AI',
+      icon: '😊',
+      features: [
+        'Sentiment Analysis',
+        'Real-time Monitoring',
+        'Multi-channel Tracking',
+        'Trend Analysis',
+        'Alert System',
+        'Custom Dashboards',
+        'API Integration',
+        'Historical Data',
+        'Competitor Analysis',
+        'Actionable Insights'
+      ],
+      pricing: {
+        basic: 29,
+        pro: 79,
+        enterprise: 199
+      },
+      benefits: [
+        'Real-time customer insights',
+        'Improved satisfaction scores',
+        'Proactive issue resolution',
+        'Better customer retention',
+        'Data-driven improvements',
+        'Competitive advantage'
+      ],
+      useCases: [
+        'Customer feedback analysis',
+        'Brand monitoring',
+        'Product development',
+        'Customer service optimization',
+        'Market research',
+        'Reputation management'
+      ],
+      marketPrice: '$29 - $199/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-customer-sentiment-tracker',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-meeting-transcriber',
+      title: 'Zion AI Meeting Transcriber Pro',
+      description: 'Advanced meeting transcription and analysis platform with AI-powered insights and action item extraction',
+      shortDescription: 'Transform meetings into actionable insights',
+      icon: '🎤',
+      features: [
+        'Real-time Transcription',
+        'Multi-language Support',
+        'Speaker Identification',
+        'Action Item Extraction',
+        'Meeting Summaries',
+        'Search & Analytics',
+        'Integration APIs',
+        'Cloud Storage',
+        'Mobile App',
+        'Security & Privacy'
+      ],
+      pricing: {
+        basic: 19,
+        pro: 49,
+        enterprise: 149
+      },
+      benefits: [
+        '100% meeting accuracy',
+        'Time savings',
+        'Better follow-up',
+        'Improved productivity',
+        'Searchable records',
+        'Actionable insights'
+      ],
+      useCases: [
+        'Meeting documentation',
+        'Action item tracking',
+        'Knowledge management',
+        'Compliance recording',
+        'Training materials',
+        'Client meetings'
+      ],
+      marketPrice: '$19 - $149/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-meeting-transcriber',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-inventory-optimizer',
+      title: 'Zion AI Inventory Optimizer Pro',
+      description: 'AI-powered inventory management solution with demand forecasting and automated reordering',
+      shortDescription: 'Smart inventory management with AI',
+      icon: '📦',
+      features: [
+        'Demand Forecasting',
+        'Automated Reordering',
+        'Stock Level Optimization',
+        'Supplier Management',
+        'Cost Analysis',
+        'Multi-location Support',
+        'Integration APIs',
+        'Reporting Dashboard',
+        'Mobile Access',
+        'Alert System'
+      ],
+      pricing: {
+        basic: 79,
+        pro: 199,
+        enterprise: 599
+      },
+      benefits: [
+        'Reduced stockouts',
+        'Lower inventory costs',
+        'Improved cash flow',
+        'Better supplier relationships',
+        'Data-driven decisions',
+        'Operational efficiency'
+      ],
+      useCases: [
+        'E-commerce inventory',
+        'Retail management',
+        'Manufacturing',
+        'Distribution',
+        'Supply chain optimization',
+        'Multi-channel selling'
+      ],
+      marketPrice: '$79 - $599/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-inventory-optimizer',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-content-moderator',
+      title: 'Zion AI Content Moderator Pro',
+      description: 'Advanced content moderation platform with AI-powered detection of inappropriate content across multiple formats',
+      shortDescription: 'Automate content moderation with AI',
+      icon: '🛡️',
+      features: [
+        'Image Content Detection',
+        'Text Moderation',
+        'Video Analysis',
+        'Real-time Processing',
+        'Custom Rules Engine',
+        'Multi-language Support',
+        'API Integration',
+        'Dashboard Analytics',
+        'Bulk Processing',
+        'Compliance Reporting'
+      ],
+      pricing: {
+        basic: 39,
+        pro: 99,
+        enterprise: 299
+      },
+      benefits: [
+        '99.9% accuracy rate',
+        'Reduced manual review',
+        'Faster content processing',
+        'Consistent moderation',
+        'Cost savings',
+        'Scalable operations'
+      ],
+      useCases: [
+        'Social media moderation',
+        'E-commerce platforms',
+        'User-generated content',
+        'Community forums',
+        'Content platforms',
+        'Compliance monitoring'
+      ],
+      marketPrice: '$39 - $299/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-content-moderator',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-customer-churn-predictor',
+      title: 'Zion AI Customer Churn Predictor Pro',
+      description: 'Predictive analytics platform that identifies customers at risk of churning and provides retention strategies',
+      shortDescription: 'Predict and prevent customer churn',
+      icon: '📉',
+      features: [
+        'Churn Prediction Models',
+        'Risk Scoring',
+        'Retention Strategies',
+        'Behavioral Analysis',
+        'Early Warning System',
+        'Campaign Automation',
+        'A/B Testing',
+        'ROI Tracking',
+        'Custom Alerts',
+        'Integration APIs'
+      ],
+      pricing: {
+        basic: 49,
+        pro: 129,
+        enterprise: 399
+      },
+      benefits: [
+        '30% reduction in churn rate',
+        'Improved customer retention',
+        'Higher lifetime value',
+        'Proactive interventions',
+        'Data-driven strategies',
+        'Competitive advantage'
+      ],
+      useCases: [
+        'Customer retention',
+        'Subscription management',
+        'SaaS businesses',
+        'E-commerce',
+        'Customer success',
+        'Loyalty programs'
+      ],
+      marketPrice: '$49 - $399/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-customer-churn-predictor',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
+      }
+    },
     {
       id: 'task-manager',
       title: 'Zion Task Manager Pro',
@@ -234,7 +755,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/task-manager'
+        website: 'https://ziontechgroup.com/task-manager',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
       }
     },
     {
@@ -281,7 +803,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/expense-tracker'
+        website: 'https://ziontechgroup.com/expense-tracker',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
       }
     },
     {
@@ -328,7 +851,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/email-marketing'
+        website: 'https://ziontechgroup.com/email-marketing',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
       }
     },
     {
@@ -375,7 +899,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/social-scheduler'
+        website: 'https://ziontechgroup.com/social-scheduler',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
       }
     },
     {
@@ -422,7 +947,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/inventory-optimizer'
+        website: 'https://ziontechgroup.com/inventory-optimizer',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
       }
     },
     {
@@ -469,7 +995,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/workflow-automator'
+        website: 'https://ziontechgroup.com/workflow-automator',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
       }
     }
   ],
@@ -518,7 +1045,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/cloud-infrastructure'
+        website: 'https://ziontechgroup.com/cloud-infrastructure',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
       }
     },
     {
@@ -565,7 +1093,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/cybersecurity'
+        website: 'https://ziontechgroup.com/cybersecurity',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
       }
     },
     {
@@ -612,7 +1141,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/data-analytics'
+        website: 'https://ziontechgroup.com/data-analytics',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
       }
     },
     {
@@ -659,7 +1189,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/mobile-development'
+        website: 'https://ziontechgroup.com/mobile-development',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
       }
     },
     {
@@ -706,7 +1237,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/web-development'
+        website: 'https://ziontechgroup.com/web-development',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
       }
     },
     {
@@ -753,7 +1285,196 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/database-management'
+        website: 'https://ziontechgroup.com/database-management',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
+      }
+    },
+    {
+      id: 'devops-automation',
+      title: 'DevOps & Automation Solutions',
+      description: 'Comprehensive DevOps services including CI/CD pipelines, infrastructure automation, and monitoring solutions',
+      shortDescription: 'Streamline your development operations',
+      icon: '⚙️',
+      features: [
+        'CI/CD Pipeline Setup',
+        'Infrastructure as Code',
+        'Container Orchestration',
+        'Monitoring & Alerting',
+        'Automated Testing',
+        'Deployment Automation',
+        'Security Scanning',
+        'Performance Optimization',
+        'Disaster Recovery',
+        'Team Training'
+      ],
+      pricing: {
+        basic: 2000,
+        pro: 8000,
+        enterprise: 25000
+      },
+      benefits: [
+        'Faster deployments',
+        'Reduced errors',
+        'Improved reliability',
+        'Better collaboration',
+        'Cost optimization',
+        'Scalable operations'
+      ],
+      useCases: [
+        'Software development',
+        'Infrastructure management',
+        'Deployment automation',
+        'Monitoring & alerting',
+        'Team productivity',
+        'Quality assurance'
+      ],
+      marketPrice: '$2,000 - $25,000/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/devops-automation',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
+      }
+    },
+    {
+      id: 'api-development',
+      title: 'API Development & Integration',
+      description: 'Custom API development, integration services, and API management solutions for modern applications',
+      shortDescription: 'Build powerful APIs and integrations',
+      icon: '🔌',
+      features: [
+        'RESTful API Development',
+        'GraphQL APIs',
+        'API Gateway Setup',
+        'Third-party Integrations',
+        'API Documentation',
+        'Rate Limiting',
+        'Authentication & Security',
+        'Performance Optimization',
+        'Monitoring & Analytics',
+        'Version Management'
+      ],
+      pricing: {
+        basic: 1500,
+        pro: 6000,
+        enterprise: 20000
+      },
+      benefits: [
+        'Faster integration',
+        'Better performance',
+        'Enhanced security',
+        'Scalable architecture',
+        'Developer experience',
+        'Cost efficiency'
+      ],
+      useCases: [
+        'System integration',
+        'Mobile app backends',
+        'Third-party services',
+        'Data synchronization',
+        'Microservices',
+        'Platform development'
+      ],
+      marketPrice: '$1,500 - $20,000/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/api-development',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
+      }
+    },
+    {
+      id: 'blockchain-solutions',
+      title: 'Blockchain & Web3 Solutions',
+      description: 'Comprehensive blockchain development services including smart contracts, DeFi, and Web3 applications',
+      shortDescription: 'Build the future with blockchain',
+      icon: '⛓️',
+      features: [
+        'Smart Contract Development',
+        'DeFi Applications',
+        'NFT Marketplaces',
+        'Web3 Integration',
+        'Token Development',
+        'Blockchain Consulting',
+        'Security Audits',
+        'DApp Development',
+        'Cross-chain Solutions',
+        'Compliance & Legal'
+      ],
+      pricing: {
+        basic: 5000,
+        pro: 25000,
+        enterprise: 100000
+      },
+      benefits: [
+        'Future-proof technology',
+        'Decentralized solutions',
+        'Enhanced security',
+        'Transparent operations',
+        'Innovation leadership',
+        'Competitive advantage'
+      ],
+      useCases: [
+        'Cryptocurrency projects',
+        'DeFi platforms',
+        'NFT marketplaces',
+        'Supply chain tracking',
+        'Identity management',
+        'Financial services'
+      ],
+      marketPrice: '$5,000 - $100,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/blockchain-solutions',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
+      }
+    },
+    {
+      id: 'iot-solutions',
+      title: 'IoT & Edge Computing Solutions',
+      description: 'End-to-end IoT solutions including device development, edge computing, and data analytics',
+      shortDescription: 'Connect and analyze IoT devices',
+      icon: '🌐',
+      features: [
+        'IoT Device Development',
+        'Edge Computing',
+        'Data Analytics',
+        'Real-time Monitoring',
+        'Predictive Maintenance',
+        'Cloud Integration',
+        'Security Implementation',
+        'Scalable Architecture',
+        'Custom Dashboards',
+        'API Development'
+      ],
+      pricing: {
+        basic: 3000,
+        pro: 15000,
+        enterprise: 75000
+      },
+      benefits: [
+        'Operational efficiency',
+        'Real-time insights',
+        'Predictive capabilities',
+        'Cost optimization',
+        'Scalable solutions',
+        'Competitive advantage'
+      ],
+      useCases: [
+        'Smart manufacturing',
+        'Asset tracking',
+        'Environmental monitoring',
+        'Predictive maintenance',
+        'Smart cities',
+        'Healthcare IoT'
+      ],
+      marketPrice: '$3,000 - $75,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/iot-solutions',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
       }
     }
   ]
