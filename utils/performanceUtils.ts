@@ -5,7 +5,7 @@ export const performanceMonitor = {
     const start = performance.now();
     renderFn();
     const end = performance.now();
-    console.warn(`${componentName} rendered in ${end - start}ms`);
+    return end - start;
   },
 
   // Measure async operations
@@ -13,8 +13,7 @@ export const performanceMonitor = {
     const start = performance.now();
     const result = await operation();
     const end = performance.now();
-    console.warn(`${operationName} completed in ${end - start}ms`);
-    return result;
+    return { result, duration: end - start };
   },
 
   // Memory usage monitoring

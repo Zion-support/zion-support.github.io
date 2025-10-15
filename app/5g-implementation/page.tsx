@@ -1,42 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Wifi, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Brain, 
-  CheckCircle, 
+  Wifi,Shield, 
+  Globe,CheckCircle, 
   ArrowRight, 
   Star,
   Phone,
-  Mail,
-  MapPin,
-  Download,
-  Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Eye,
-  Filter,
-  Calendar,
-  Target,
-  Smartphone,
-  Cloud,
-  Lock,
-  Users,
-  Award,
-  TrendingUp,
-  Cpu,
-  Database,
-  BarChart3,
-  Activity,
-  Radio,
-  Antenna,
-  Router,
-  Server,
-  Network
-} from 'lucide-react';
+  Mail,Play,Settings,Smartphone,
+  Cloud,Cpu,BarChart3,
+  Activity} from 'lucide-react';
 
 const FiveGImplementationPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -49,9 +21,9 @@ const FiveGImplementationPage: React.FC = () => {
   const features = [
     {
       icon: <Wifi className="w-6 h-6" />,
-      title: "Ultra-Fast 5G Networks",
+      title: "Ultra-Fast 5Gs",
       description: "Deploy cutting-edge 5G infrastructure with speeds up to 10 Gbps and ultra-low latency under 1ms.",
-      benefits: ["10 Gbps speeds", "Sub-1ms latency", "Massive connectivity", "Network slicing"]
+      benefits: ["10 Gbps speeds", "Sub-1ms latency", "Massive connectivity", "slicing"]
     },
     {
       icon: <Cloud className="w-6 h-6" />,
@@ -73,7 +45,7 @@ const FiveGImplementationPage: React.FC = () => {
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Network Analytics",
+      title: "Analytics",
       description: "Monitor and optimize your 5G network performance with real-time analytics and insights.",
       benefits: ["Real-time monitoring", "Performance optimization", "Predictive analytics", "Custom dashboards"]
     },
@@ -189,8 +161,8 @@ const FiveGImplementationPage: React.FC = () => {
   ];
 
   const technologies = [
-    { name: "5G NR", description: "New Radio technology" },
-    { name: "Network Slicing", description: "Virtual network segments" },
+    { name: "5G NR", description: "Newtechnology" },
+    { name: "Slicing", description: "Virtual network segments" },
     { name: "Edge Computing", description: "Distributed processing" },
     { name: "IoT Platforms", description: "Device management" },
     { name: "AI/ML", description: "Intelligent optimization" },
@@ -514,6 +486,6 @@ const FiveGImplementationPage: React.FC = () => {
   );
 };
 
-export default __5gImplementationPage;
+export default FiveGImplementationPage;
 
 

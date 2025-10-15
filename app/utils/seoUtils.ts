@@ -1,42 +1,27 @@
-export constseoUtils= {
-  generate Title: (page Title: string, site Name: string = 'Zion Tech Group') => {
-    return `${page Title} | ${site Name}`
+export const seoUtils = {
+  generateTitle: (pageTitle: string, siteName: string = 'Zion Tech Group') => {
+    return `${pageTitle} | ${siteName}`;
   },
-  generateDescription: (content: string, maxLength: number = 160) => {
-    if (content.length <= max Length) return content
-    return content.substring(0, max Length - 3) + '...'
   
-  generateDescription: (content: string, maxLength: number = 1 6 0) => {
-    if (content.length <= maxLength) return content
-    return content.substring(0, maxLength - 3) + '...'
+  generateDescription: (content: string, maxLength: number = 160) => {
+    if (content.length <= maxLength) return content;
+    return content.substring(0, maxLength - 3) + '...';
   },
   
   generateKeywords: (tags: string[]) => {
-    return tags.join(', ')
+    return tags.join(', ');
   },
   
   generateCanonicalUrl: (path: string, baseUrl: string = 'https://ziontechgroup.com') => {
-    return `${baseUrl}${path}`
+    return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`;
   },
   
-  generate OgImage: (title: string, description: string) => {
-    const params= new URLSearch Params({
-      title,
-      description,
-      site: 'Zion Tech Group'
-    })
-    return `https://og-image.vercel.app/${encodeURIComponent(title)}?${params.toString()}`
-  },
-  
-  generateStructuredData: (data: any) => {
+  generateMetaTags: (data: { title: string; description: string; keywords: string; canonical?: string }) => {
     return {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
-      description: 'Leading technology solutions provider',
-      ...data
-    }
+      title: data.title,
+      description: data.description,
+      keywords: data.keywords,
+      canonical: data.canonical || seoUtils.generateCanonicalUrl(window.location.pathname)
+    };
   }
-}
+};

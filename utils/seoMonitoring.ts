@@ -6,14 +6,18 @@ export const seoMetrics = {
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       const lastEntry = entries[entries.length - 1];
-      console.warn('LCP:', lastEntry.startTime);
-    }).observe({ entryTypes: ['largest-contentful-paint'] });
+      if (lastEntry) {
+        // Process LCP entry
+        return lastEntry.startTime;
+      }
+      }).observe({ entryTypes: ['largest-contentful-paint'] });
 
     // FID - First Input Delay
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       entries.forEach(entry => {
-        console.warn('FID:', entry.processingStart - entry.startTime);
+        // Process FID entry
+        return entry.processingStart - entry.startTime;
       });
     }).observe({ entryTypes: ['first-input'] });
 
@@ -26,15 +30,15 @@ export const seoMetrics = {
           clsValue += entry.value;
         }
       });
-      console.warn('CLS:', clsValue);
-    }).observe({ entryTypes: ['layout-shift'] });
+      return clsValue;
+      }).observe({ entryTypes: ['layout-shift'] });
   },
 
   // Page load time monitoring
   measurePageLoad: () => {
     window.addEventListener('load', () => {
       const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-      console.warn('Page Load Time:', loadTime + 'ms');
+      return loadTime;
     });
   },
 
@@ -49,7 +53,6 @@ export const seoMetrics = {
       structuredData: !!document.querySelector('script[type="application/ld+json"]')
     };
     
-    console.warn('SEO Elements Check:', checks);
     return checks;
   },
 
@@ -70,7 +73,6 @@ export const seoMetrics = {
       }
     });
     
-    console.warn('Image Optimization Issues:', issues);
     return issues;
   }
 };

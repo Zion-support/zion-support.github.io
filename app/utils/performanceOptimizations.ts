@@ -30,7 +30,4 @@ export const performanceOptimizations = {
       return result
     }) as T
   }
-}
-</T>
-</T>
-</T>
+};

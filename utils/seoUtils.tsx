@@ -1,44 +1,40 @@
-<<<<<<< HEAD
 interface SEOConfig {
-  
-  title: string,
-  description: string,
+  title: string;
+  description: string;
   keywords: string[];
-  canonicalUrl: string,
-  ogImage: string,
-  ogType: string,
-  twitterCard: string,
+  canonicalUrl: string;
+  ogImage: string;
+  ogType: string;
+  twitterCard: string;
   robots: string;
-author?: string;
-publishedTime?: string;
-modifiedTime?: string;
-section?: string;
-tags?: string[]
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
   viewport?: string;
-charset?: string;
-publisher?: string;
-language?: string;
-ogTitle?: string;
-ogDescription?: string;
-twitterTitle?: string;
-twitterDescription?: string;
-twitterImage?: string;
-geo?: {
+  charset?: string;
+  publisher?: string;
+  language?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  geo?: {
     latitude?: string;
-longitude?: string;
-region?: string;
-placename?: string;
-  
-}
+    longitude?: string;
+    region?: string;
+    placename?: string;
+  };
   alternate?: Array<{
-    href: string,
-  hreflang: string;
-  }>
-  structuredData?: Record<string, unknown>
+    href: string;
+    hreflang: string;
+  }>;
+  structuredData?: Record<string, unknown>;
 }
 
-export const,
-  defaultSEOConfig: SEOConfig = {
+export const defaultSEOConfig: SEOConfig = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of advanced AI and IT solutions for businesses worldwide. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation.',
   keywords: [
@@ -100,7 +96,7 @@ export const defaultMeta = {
   viewport: 'width=device-width, initial-scale=1',
   charset: 'UTF-8'
 };
-=======
+
 // Enhanced SEO meta tags utility
 import { Helmet } from 'react-helmet-async';
 
@@ -270,4 +266,3 @@ export const generateBreadcrumbSchema = (items: Array<{name: string, url: string
     "item": `https://ziontechgroup.com${item.url}`
   }))
 });
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
