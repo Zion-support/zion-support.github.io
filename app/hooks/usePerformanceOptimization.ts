@@ -73,13 +73,20 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
   // Preload critical resources
   const preloadResource = useCallback((href: string, as: string) => {
-    if (!enablePreloading) return;
+    if (!enablePreloading || typeof window === 'undefined') return;
 
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = href;
-    link.as = as;
-    document.head.appendChild(link);
+    try {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = href;
+      link.as = as;
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link);
+    } catch (error) {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('Failed to preload resource:', href, error);
+      }
+    }
   }, [enablePreloading]);
 
   // Preload critical images

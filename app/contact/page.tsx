@@ -22,7 +22,9 @@ const ContactPage: React.FC = memo(() => {
       
       // Here you would typically send the data to your backend
       if (process.env.NODE_ENV === 'development') {
-        console.log('Form submitted:', data);
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Form submitted:', data);
+        }
       }
     },
     validate: (data) => {

@@ -18,13 +18,14 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   return (
-    <div className={`flex items-center justify-center ${className}`}>
+    <div className={`flex items-center justify-center ${className}`} role="status" aria-label="Loading">
       <div className="flex flex-col items-center space-y-2">
         <div
-          className={`animate-spin rounded-full border-b-2 border-blue-600 ${sizeClasses[size]}`}
+          className={`animate-spin rounded-full border-b-2 border-cyan-500 ${sizeClasses[size]}`}
+          aria-hidden="true"
         />
         {text && (
-          <p className="text-sm text-gray-600 animate-pulse">{text}</p>
+          <p className="text-sm text-gray-300 animate-pulse">{text}</p>
         )}
       </div>
     </div>

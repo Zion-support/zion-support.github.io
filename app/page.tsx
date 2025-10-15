@@ -1,5 +1,4 @@
 import React, { memo, useMemo } from 'react';
-import { Link } from 'react-router-dom';
 import SEOHead from './components/SEOHead';
 
 const HomePage: React.FC = memo(() => {
