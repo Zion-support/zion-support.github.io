@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';;";";";
 import { Link }; from 'react-router-dom';";";";
 import { Zap, Workflow, BarChart3, CheckCircle, ArrowRight, Target, Users, Shield, Globe, Database, Smartphone }; from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';";";";
@@ -298,3 +299,26 @@ const: ComponentName = () => {
 export default TaskAutomationWorkflowPage;
 
 }
+=======
+import React from 'react';
+import SEOHead from '../components/SEOHead';
+
+const TaskAutomationWorkflow: React.FC = () => {
+  return (
+    <>
+      <SEOHead 
+        title="Task Automation Workflow - Zion Tech Group"
+        description="Professional task automation workflow solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Task Automation Workflow</h1>
+          <p className="text-gray-300">Professional task automation workflow solutions for modern businesses</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default TaskAutomationWorkflow;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;
 interface PerformanceOptimizerOptions {
   // Add your options here;
@@ -23,3 +24,12 @@ export const: PerformanceOptimizer = (options: PerformanceOptimizerOptions = {})
 };
 ;
 export default PerformanceOptimizer;';';
+=======
+// Utility functions
+export const utility = () => {
+  // Add utility functions here
+  return {};
+};
+
+export default utility;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

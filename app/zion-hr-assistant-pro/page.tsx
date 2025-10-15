@@ -17,5 +17,10 @@ const ZionHrAssistantProPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default ZionHrAssistantProPage;'";'";
+=======
+
+export default ZionHrAssistantProPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

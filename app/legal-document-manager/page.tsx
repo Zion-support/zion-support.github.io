@@ -17,5 +17,10 @@ const LegalDocumentManagerPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default LegalDocumentManagerPage;'";'";
+=======
+
+export default LegalDocumentManagerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

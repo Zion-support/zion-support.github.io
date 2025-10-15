@@ -17,5 +17,10 @@ const CreateAdPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default CreateAdPage;'";'";
+=======
+
+export default CreateAdPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

@@ -17,5 +17,10 @@ const SupplyChainOptimizerPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default SupplyChainOptimizerPage;'";'";
+=======
+
+export default SupplyChainOptimizerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

@@ -17,5 +17,10 @@ const AiDataMiningProPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default AiDataMiningProPage;'";'";
+=======
+
+export default AiDataMiningProPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

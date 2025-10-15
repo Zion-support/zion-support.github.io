@@ -17,6 +17,7 @@ const ComponentsPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {},;
       const: getServiceIcon = (_serviceName: string) => {},';';";";";
@@ -153,3 +154,7 @@ export const CardSkeleton: React.FC = () => {
 '";'";";";";";
 export default LoadingPage;"'"';";";";";
 '";'";
+=======
+
+export default ComponentsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

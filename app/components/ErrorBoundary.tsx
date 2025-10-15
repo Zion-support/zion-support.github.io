@@ -46,5 +46,10 @@ class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 ;
 export default ErrorBoundary;'";'";
+=======
+
+export default ErrorBoundary;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

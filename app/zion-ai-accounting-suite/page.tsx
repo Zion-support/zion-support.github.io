@@ -17,5 +17,10 @@ const ZionAiAccountingSuitePage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default ZionAiAccountingSuitePage;'";'";
+=======
+
+export default ZionAiAccountingSuitePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

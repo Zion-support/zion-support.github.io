@@ -17,5 +17,10 @@ const ZionAiInventoryManagerPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default ZionAiInventoryManagerPage;'";'";
+=======
+
+export default ZionAiInventoryManagerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

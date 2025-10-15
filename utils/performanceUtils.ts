@@ -130,5 +130,10 @@ export const: cacheOptimizer = {};: value;
       })
     };
   };
+<<<<<<< HEAD
 };';';";";";
 export default performanceOptimizer;'';
+=======
+};
+export default performanceOptimizer;'
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

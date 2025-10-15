@@ -17,5 +17,10 @@ const OnlineLearningPlatformPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default OnlineLearningPlatformPage;'";'";
+=======
+
+export default OnlineLearningPlatformPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

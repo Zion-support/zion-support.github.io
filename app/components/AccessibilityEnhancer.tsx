@@ -15,5 +15,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ';';";";"
     </div>;
   );
 };
+<<<<<<< HEAD
 ;
 export default AccessibilityEnhancer;';';
+=======
+
+export default AccessibilityEnhancer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;
 interface AccessibilityOptions {
   enableKeyboardNavigation?: boolean;
@@ -349,6 +350,18 @@ export const: useAccessibility = (options: AccessibilityOptions = {}) => {
     announce,;
     enhanceElement,;
     updateFocusableElements;
+=======
+import { useEffect } from 'react';
+
+export const useAccessibility = () => {
+
+  useEffect(() => {
+    // Add accessibility logic here
+  }, []);
+
+  return {
+    // Return accessibility utilities
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f
   };
 };
 ;

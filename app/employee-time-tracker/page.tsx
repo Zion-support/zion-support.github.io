@@ -17,5 +17,10 @@ const EmployeeTimeTrackerPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default EmployeeTimeTrackerPage;'";'";
+=======
+
+export default EmployeeTimeTrackerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

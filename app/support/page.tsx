@@ -17,5 +17,10 @@ const SupportPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default SupportPage;'";'";
+=======
+
+export default SupportPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

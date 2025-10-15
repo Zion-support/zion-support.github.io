@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';;";";";
 import { Helmet }; from 'react-helmet-async';";";";
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f
 import { 
   CheckCircle, 
   ArrowRight, 

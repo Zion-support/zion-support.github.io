@@ -17,5 +17,10 @@ const AiFraudDetectionProPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default AiFraudDetectionProPage;'";'";
+=======
+
+export default AiFraudDetectionProPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

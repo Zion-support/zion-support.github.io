@@ -17,5 +17,10 @@ const PropertyManagementAiPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default PropertyManagementAiPage;'";'";
+=======
+
+export default PropertyManagementAiPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

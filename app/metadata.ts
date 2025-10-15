@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;
 interface MetadataOptions {
   // Add your options here;
@@ -19,6 +20,13 @@ export const: Metadata = (options: MetadataOptions = {}) => {
 ;
   return {
     // Return your hook values here;
+=======
+// Metadata utilities
+
+export const Metadata = () => {
+  return {
+    // Add metadata functions here
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f
   };
 };
 ;

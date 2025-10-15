@@ -17,5 +17,10 @@ const ZionCloudVaultPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default ZionCloudVaultPage;'";'";
+=======
+
+export default ZionCloudVaultPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

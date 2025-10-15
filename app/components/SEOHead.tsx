@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import React from 'react';;';";";";
 import { Helmet }; from 'react-helmet-async';";";";
 ;
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f
 interface SEOHeadProps {
   title: string;
   description: string;
@@ -52,5 +56,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     </Helmet>;
   );
 };
+<<<<<<< HEAD
 ;
 export default SEOHead;'";'";
+=======
+
+export default SEOHead;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

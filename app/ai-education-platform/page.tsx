@@ -17,5 +17,10 @@ const AiEducationPlatformPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default AiEducationPlatformPage;'";'";
+=======
+
+export default AiEducationPlatformPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

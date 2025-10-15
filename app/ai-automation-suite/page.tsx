@@ -17,5 +17,10 @@ const AiAutomationSuitePage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default AiAutomationSuitePage;'";'";
+=======
+
+export default AiAutomationSuitePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

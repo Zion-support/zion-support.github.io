@@ -17,5 +17,10 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default AiEmailMarketingAutomationPage;'";'";
+=======
+
+export default AiEmailMarketingAutomationPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

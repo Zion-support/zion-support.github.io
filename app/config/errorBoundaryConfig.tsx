@@ -17,5 +17,10 @@ const ConfigPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default ConfigPage;'";'";
+=======
+
+export default ConfigPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

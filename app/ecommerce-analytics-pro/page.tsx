@@ -17,5 +17,10 @@ const EcommerceAnalyticsProPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default EcommerceAnalyticsProPage;'";'";
+=======
+
+export default EcommerceAnalyticsProPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

@@ -17,5 +17,10 @@ const AiSolutionsPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default AiSolutionsPage;'";'";
+=======
+
+export default AiSolutionsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

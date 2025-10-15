@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React from 'react';;";";";
 import { Helmet }; from 'react-helmet-async';";";";
 import { Link }; from 'react-router-dom';";";";
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f
 
 export default function NotFoundPage() {
   return (

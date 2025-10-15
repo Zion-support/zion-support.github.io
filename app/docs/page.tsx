@@ -17,5 +17,10 @@ const DocsPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default DocsPage;'";'";
+=======
+
+export default DocsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

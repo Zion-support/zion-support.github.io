@@ -17,5 +17,10 @@ const WebinarsPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default WebinarsPage;'";'";
+=======
+
+export default WebinarsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

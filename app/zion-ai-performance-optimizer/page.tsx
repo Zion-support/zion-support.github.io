@@ -17,5 +17,10 @@ const ZionAiPerformanceOptimizerPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default ZionAiPerformanceOptimizerPage;'";'";
+=======
+
+export default ZionAiPerformanceOptimizerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

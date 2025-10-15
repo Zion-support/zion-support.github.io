@@ -17,5 +17,10 @@ const ZionSmartInventoryOptimizerPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default ZionSmartInventoryOptimizerPage;'";'";
+=======
+
+export default ZionSmartInventoryOptimizerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

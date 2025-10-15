@@ -17,5 +17,10 @@ const AdManagementPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default AdManagementPage;'";'";
+=======
+
+export default AdManagementPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

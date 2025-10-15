@@ -17,5 +17,10 @@ const AiExpenseTrackerPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default AiExpenseTrackerPage;'";'";
+=======
+
+export default AiExpenseTrackerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

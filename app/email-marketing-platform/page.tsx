@@ -17,5 +17,10 @@ const EmailMarketingPlatformPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default EmailMarketingPlatformPage;'";'";
+=======
+
+export default EmailMarketingPlatformPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

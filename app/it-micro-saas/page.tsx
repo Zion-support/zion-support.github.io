@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import React from 'react';;';";";";
 import SEOHead from './components/SEOHead';";";";
 ;
+=======
+import React from 'react';
+import React from 'react';
+import SEOHead from './components/SEOHead';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f
 const ItMicroSaasPage: React.FC = () => {
   return (
     <>;
@@ -17,5 +24,10 @@ const ItMicroSaasPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default ItMicroSaasPage;'";'";
+=======
+
+export default ItMicroSaasPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

@@ -17,5 +17,10 @@ const CustomerRelationshipManagerPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default CustomerRelationshipManagerPage;'";'";
+=======
+
+export default CustomerRelationshipManagerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

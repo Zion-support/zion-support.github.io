@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { Helmet }; from "react-helmet-async";";";
 import { Brain, Shield, Users, Award }; from 'lucide-react';";";";
+=======
+import { Brain, Shield, Users, Award } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f
 
 const: SEOHead = ({ title, description }: { title: string; description: string }) => (
   <Helmet>

@@ -17,5 +17,10 @@ const AiTimeSeriesForecastingPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default AiTimeSeriesForecastingPage;'";'";
+=======
+
+export default AiTimeSeriesForecastingPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

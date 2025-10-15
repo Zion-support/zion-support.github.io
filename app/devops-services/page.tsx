@@ -17,5 +17,10 @@ const DevopsServicesPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default DevopsServicesPage;'";'";
+=======
+
+export default DevopsServicesPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f
