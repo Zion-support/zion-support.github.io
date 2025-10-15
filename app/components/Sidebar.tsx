@@ -57,11 +57,16 @@ const Sidebar: React.FC = () => {
             <Link to="/zion-ai-task-scheduler" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Task Scheduler
             </Link>
+            <Link to="/zion-ai-customer-support-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Customer Support Pro
+            </Link>
+            <Link to="/zion-ai-email-marketing-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Email Marketing Pro
+            </Link>
           </div>
           
           <div className="mb-4">
             <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Company</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-bd72
             <Link to="/about" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               About Us
             </Link>
@@ -77,11 +82,7 @@ const Sidebar: React.FC = () => {
           </div>
           
           <div className="mb-4">
-<<<<<<< HEAD
-            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Resources</h3>
-=======
             <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Resources</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-bd72
             <Link to="/blog" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Blog
             </Link>
@@ -94,12 +95,9 @@ const Sidebar: React.FC = () => {
             <Link to="/api-docs" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               API Docs
             </Link>
-<<<<<<< HEAD
-=======
             <Link to="/help" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Help Center
             </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-bd72
           </div>
           
           <div>
