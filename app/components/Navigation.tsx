@@ -156,7 +156,7 @@ const Navigation: React.FC = () => {
               About
             </Link>
             
-            {/* Mobile Services Menu */}
+            {/* Mobile Services Section */}
             <div className="px-3 py-2">
               <div className="space-y-1">
                 <div className="text-gray-700 px-3 py-2 text-base font-medium">AI & Machine Learning</div>
