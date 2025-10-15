@@ -52,6 +52,10 @@ const ZionAIWorkflowAutomatorProPage = lazy(() => import('./app/zion-ai-workflow
 const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-customer-satisfaction-monitor/page'));
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
 
+// New Micro SAAS Services
+const AIChatbotBuilderPage = lazy(() => import('./app/ai-chatbot-builder/page'));
+const AIFormBuilderPage = lazy(() => import('./app/ai-form-builder/page'));
+
 // Import components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -156,6 +160,10 @@ export default function App() {
                   <Route path="/zion-ai-workflow-automator-pro" element={<ZionAIWorkflowAutomatorProPage />} />
                   <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
                   <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
+                  
+                  {/* New Micro SAAS Services */}
+                  <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                  <Route path="/ai-form-builder" element={<AIFormBuilderPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/futuristic.css';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,20 +8,20 @@ const Navigation: React.FC = () => {
   const [zionAIOpen, setZionAIOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="futuristic-bg border-b border-gray-800 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-blue-600">Zion Tech Group</h1>
+              <h1 className="text-2xl font-bold neon-text">Zion Tech Group</h1>
             </Link>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/" className="text-gray-300 hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/about" className="text-gray-300 hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">
               About
             </Link>
             
@@ -29,7 +30,7 @@ const Navigation: React.FC = () => {
               <button
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center"
+                className="text-gray-300 hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors"
               >
                 Services
                 <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -40,14 +41,14 @@ const Navigation: React.FC = () => {
                 <div
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
-                  className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50"
+                  className="absolute left-0 mt-2 w-48 futuristic-card rounded-md shadow-lg z-50"
                 >
                   <div className="py-1">
-                    <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">All Services</Link>
-                    <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">AI Services</Link>
-                    <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">IT Services</Link>
-                    <Link to="/cloud-infrastructure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cloud Infrastructure</Link>
-                    <Link to="/5g-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">5G Solutions</Link>
+                    <Link to="/services" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-blue hover:bg-gray-800 transition-colors">All Services</Link>
+                    <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-blue hover:bg-gray-800 transition-colors">AI Services</Link>
+                    <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-blue hover:bg-gray-800 transition-colors">IT Services</Link>
+                    <Link to="/cloud-infrastructure" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-blue hover:bg-gray-800 transition-colors">Cloud Infrastructure</Link>
+                    <Link to="/5g-solutions" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-blue hover:bg-gray-800 transition-colors">5G Solutions</Link>
                   </div>
                 </div>
               )}
@@ -58,7 +59,7 @@ const Navigation: React.FC = () => {
               <button
                 onMouseEnter={() => setZionAIOpen(true)}
                 onMouseLeave={() => setZionAIOpen(false)}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center"
+                className="text-gray-300 hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors"
               >
                 Zion AI Products
                 <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -69,7 +70,7 @@ const Navigation: React.FC = () => {
                 <div
                   onMouseEnter={() => setZionAIOpen(true)}
                   onMouseLeave={() => setZionAIOpen(false)}
-                  className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg z-50 max-h-96 overflow-y-auto"
+                  className="absolute left-0 mt-2 w-64 futuristic-card rounded-md shadow-lg z-50 max-h-96 overflow-y-auto"
                 >
                   <div className="py-1">
                     <Link to="/zion-ai-content-moderator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Content Moderator</Link>
@@ -94,19 +95,19 @@ const Navigation: React.FC = () => {
               )}
             </div>
             
-            <Link to="/pricing" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/pricing" className="text-gray-300 hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Pricing
             </Link>
-            <Link to="/blog" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/blog" className="text-gray-300 hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Blog
             </Link>
-            <Link to="/team" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/team" className="text-gray-300 hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Team
             </Link>
-            <Link to="/careers" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/careers" className="text-gray-300 hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Careers
             </Link>
-            <Link to="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/contact" className="text-gray-300 hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Contact
             </Link>
           </div>
@@ -114,7 +115,7 @@ const Navigation: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+              className="text-gray-300 hover:text-neon-blue focus:outline-none focus:text-neon-blue transition-colors"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -125,12 +126,12 @@ const Navigation: React.FC = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden">
+        <div className="md:hidden futuristic-card mx-4 mt-2">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+            <Link to="/" className="text-gray-300 hover:text-neon-blue block px-3 py-2 rounded-md text-base font-medium transition-colors">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+            <Link to="/about" className="text-gray-300 hover:text-neon-blue block px-3 py-2 rounded-md text-base font-medium transition-colors">
               About
             </Link>
             <div className="px-3 py-2">
