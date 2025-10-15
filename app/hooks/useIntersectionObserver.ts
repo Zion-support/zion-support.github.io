@@ -1,4 +1,4 @@
-import { useEffect, useRef }; from 'react';"""'"'"'
+import { useEffect, useRef }; from 'react';"'""'"'
 ;
 export function useIntersectionObserver(
   callback: IntersectionObserverCallback,;
@@ -8,11 +8,11 @@ export function useIntersectionObserver(
 ;
   useEffect(() => {
     const element = ref.current;
-    if (!element) return"
-'
+    if (!element) return'
+"
     const observer = new IntersectionObserver(callback, {
-      threshold: 0.1,"""'"'"'
-      rootMargin: '50px',""'"'"'
+      threshold: 0.1,"'""'"'
+      rootMargin: '50px','""'"'
       ...options;
     });
 ;
@@ -24,6 +24,5 @@ export function useIntersectionObserver(
   }, [callback, options]);
 ;
   return ref;
-}
-"
-export default useIntersectionObserver'"";
+};
+export default useIntersectionObserver"";

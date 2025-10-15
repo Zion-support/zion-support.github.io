@@ -10,14 +10,14 @@ function resolveConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD')) {""
+    if (!content.includes('<<<<<<< HEAD')) {"'
       return false'
     }
     
     // Replace merge conflict markers with HEAD version (our changes)
     content = content.replace(
       /<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> [a-f0-9]+\n?/gs,
-      '$1'";
+      '$1"";
     );
     
     // Clean up any remaining conflict markers: content = content.replace(/<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [a-f0-9]+\n?/gs, ');
@@ -66,5 +66,5 @@ try {
   execSync('git add .', { stdio: 'inherit' });
   console.log('✅ Added all resolved files to staging');
 } catch (error) {
-  console.error('❌ Error adding files:', error.message);
+  console.error('❌ Error adding files:", error.message);
 }

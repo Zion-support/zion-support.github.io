@@ -22,4 +22,4 @@ export const PerformanceEnhancer = (options: PerformanceEnhancerOptions = {}) =>
   };
 };
 ;
-export default PerformanceEnhancer;"'
+export default PerformanceEnhancer;

@@ -22,4 +22,4 @@ export const PerformanceUtils = (options: PerformanceUtilsOptions = {}) => {
   };
 };
 ;
-export default PerformanceUtils;"'
+export default PerformanceUtils;

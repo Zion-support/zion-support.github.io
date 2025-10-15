@@ -22,4 +22,4 @@ export const AccessibilityUtils = (options: AccessibilityUtilsOptions = {}) => {
   };
 };
 ;
-export default AccessibilityUtils;"'
+export default AccessibilityUtils;

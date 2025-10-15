@@ -1,12 +1,11 @@
-import React from 'react';;"""'"'"'
+import React from 'react';;"'""'"'
 ;
 interface fix-component-filesProps {
   className?: string;
   children?: React.ReactNode;
-}
-"
+};
 const fix-component-files: React.FC<fix-component-filesProps> = ({ '
-  className = ',""'"'"'
+  className = ','""'"'
   children;
 }) => {
   return (
@@ -15,5 +14,4 @@ const fix-component-files: React.FC<fix-component-filesProps> = ({ '
     </div>;
   );
 };
-"
-export default fix-component-files;"
+export default fix-component-files;

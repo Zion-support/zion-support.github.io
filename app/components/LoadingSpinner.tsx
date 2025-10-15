@@ -32,18 +32,17 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       {text && <p className="mt-2 text-gray-600">{text}</p>}
     </div>
   );
-}"
+};
 
-  const spinner = (""""
-    <div className ="flex flex-col items-center justify-center space-y-4">"""
-      <div className ={`${sizeClasses[size]} border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin`} />""""
-      {text && <p className ="text-gray-600">{text}</p>}""
+  const spinner = ("""
+    <div className="flex flex-col items-center justify-center space-y-4">""
+      <div className ={`${sizeClasses[size]} border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin`} />"""
+      {text && <p className="text-gray-600">{text}</p>};
     </div>;
   );
-"
   if (fullScreen) {
-    return ("""'"'
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">'"'
+    return ("'""'
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center'>""'
         {spinner}
       </div>;
     );
@@ -51,5 +50,4 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 ;
   return spinner;
 };
-"
-export default LoadingSpinner'"'";
+export default LoadingSpinner""'";

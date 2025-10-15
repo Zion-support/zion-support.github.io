@@ -64,7 +64,7 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
 );
 // Loading component
 const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center">
+  <div className="min-h-screen flex items-center justify-center'>
     <LoadingSpinner />
   </div>
 );

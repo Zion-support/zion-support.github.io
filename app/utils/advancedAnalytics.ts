@@ -22,4 +22,4 @@ export const AdvancedAnalytics = (options: AdvancedAnalyticsOptions = {}) => {
   };
 };
 ;
-export default AdvancedAnalytics;"'
+export default AdvancedAnalytics;

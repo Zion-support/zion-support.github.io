@@ -22,4 +22,4 @@ export const PerformanceMonitoring = (options: PerformanceMonitoringOptions = {}
   };
 };
 ;
-export default PerformanceMonitoring;"'
+export default PerformanceMonitoring;

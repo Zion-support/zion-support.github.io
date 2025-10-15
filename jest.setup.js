@@ -1,7 +1,7 @@
-require('@testing-library/jest-dom');"'
+require('@testing-library/jest-dom');'
 
 // Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {)}"'
+Object.defineProperty(window, 'matchMedia', {)};'
 
   writable: true,
   value: jest.fn().mockImplementation(query => ({)}
@@ -21,7 +21,7 @@ global.IntersectionObserver = class IntersectionObserver {}
   disconnect() {}
   observe() {}
   unobserve() {}
-}"
+};
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {}
@@ -33,7 +33,7 @@ global.ResizeObserver = class ResizeObserver {}
 };
 
 // Mock performance
-Object.defineProperty(window, 'performance', {)}"'
+Object.defineProperty(window, 'performance', {)};'
 
   writable: true,
   value: {}
@@ -56,5 +56,5 @@ const sessionStorageMock = {}
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),;
-  clear: jest.fn()}"
+  clear: jest.fn()};
 global.sessionStorage = sessionStorageMock'

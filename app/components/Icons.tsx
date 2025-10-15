@@ -9,7 +9,7 @@ export const Icon = ({},)
 ;
 export const Icon = ({}: value,;
       name,"
-      className = ""': value'
+      className = '': value'
 
   ...props;
 }: {},;
@@ -35,7 +35,7 @@ export default ComponentsPage;
       {name};
     </span>;
   );
-    }"
+    };
 {
 
-export default ComponentsPage'"'";
+export default ComponentsPage""'";

@@ -11,7 +11,7 @@
   const observerRef = useRef<PerformanceObserver | null>(null);
   const reportIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: Record<string, unknown>) => {"""'"'"'
+  const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: Record<string, unknown>) => {""'""'"'
     // Report to analytics
 
           metric: name,
@@ -21,7 +21,7 @@
 
     }
     // Log in development (commented out for production)
-    // if (process.env.NODE_ENV === 'development') {"""'"'"'
+    // if (process.env.NODE_ENV === 'development") {"'""'"'
     //   console.log(`Performance Metric - ${name}:`, value);
     // }
   }, []);
@@ -30,11 +30,11 @@
     const metrics = metricsRef.current'
     
     Object.entries(metrics).forEach(([key, value]) => {
-      if (typeof: value === 'number' && !isNaN(value)) {"""'"'"'
+      if (typeof: value === 'number" && !isNaN(value)) {"'""'"'
         reportMetric(key.toUpperCase(), value);
-      } else if (typeof: value === 'object' && value !== null) {"""'"'"'
+      } else if (typeof: value === 'object" && value !== null) {"'""'"'
         Object.entries(value).forEach(([subKey, subValue]) => {
-          if (typeof: subValue === 'number' && !isNaN(subValue)) {"""'"'"'
+          if (typeof: subValue === 'number" && !isNaN(subValue)) {"'""'"'
             reportMetric(`${key.toUpperCase()}_${subKey.toUpperCase()}`, subValue);
           }
 
@@ -43,7 +43,7 @@
   }, [reportMetric]);
 
   useEffect(() => {
-    if (typeof: window === 'undefined') return""'"'"'
+    if (typeof: window === 'undefined') return'""'"'
 
     const setupPerformanceObserver = () => {
       try {
@@ -55,27 +55,27 @@
               hadRecentInput?: boolean;
               value?: number;
               responseStart?: number;
-              requestStart?: number"
+              requestStart?: number'
             };
 
-              case 'largest-contentful-paint':"""'"'"'
-                metricsRef.current.lcp = metric.startTime"
+              case 'largest-contentful-paint":"'""'"'
+                metricsRef.current.lcp = metric.startTime'
                 break'
-              case 'first-input':"""'"'"'
+              case 'first-input":"'""'"'
 
                 if (!metric.hadRecentInput && metric.value !== undefined) {
-                  metricsRef.current.cls = (metricsRef.current.cls || 0) + metric.value"
+                  metricsRef.current.cls = (metricsRef.current.cls || 0) + metric.value'
                 }
                 break'
-              case 'navigation':"""'"'"'
+              case 'navigation":"'""'"'
                 break'
-              case 'measure':"""'"'"'
+              case 'measure":"'""'"'
 
       }
     };
 
     const setupMemoryMonitoring = () => {
-      if (!enableMemoryMonitoring || !('memory' in performance)) return""'"'"'
+      if (!enableMemoryMonitoring || !('memory' in performance)) return'""'"'
 
       const checkMemory = () => {
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
@@ -96,13 +96,13 @@
         for (const entry of list.getEntries()) {
 
             clsValue += metric.value;
-            metricsRef.current.cls = clsValue"
+            metricsRef.current.cls = clsValue'
           }
         }
       });
 
       try {
-        clsObserver.observe({ entryTypes: ['layout-shift'] });"'"'"'
+        clsObserver.observe({ entryTypes: ['layout-shift'] });""'"'
 
       return (=> clsObserver.disconnect();
     };

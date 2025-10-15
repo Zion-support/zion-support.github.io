@@ -50,7 +50,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
     if (enableSocialMeta) {}
       // Open Graph tags
       if (seoData.ogTitle) {}
-        const ogTitle = document.querySelector('meta[property="og:title"]');
+        const ogTitle = document.querySelector('meta[property="og:title']');
         if (ogTitle) {}
           ogTitle.setAttribute('content', seoData.ogTitle);
         } else {}
@@ -62,7 +62,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
       }
 
       if (seoData.ogDescription) {}
-        const ogDescription = document.querySelector('meta[property="og:description"]');
+        const ogDescription = document.querySelector("meta[property="og:description']');
         if (ogDescription) {}
           ogDescription.setAttribute('content', seoData.ogDescription);
         } else {}
@@ -74,7 +74,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
       }
 
       if (seoData.ogImage) {}
-        const ogImage = document.querySelector('meta[property="og:image"]');
+        const ogImage = document.querySelector("meta[property="og:image']');
         if (ogImage) {}
           ogImage.setAttribute('content', seoData.ogImage);
         } else {}
@@ -86,7 +86,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
       }
 
       if (seoData.ogUrl) {}
-        const ogUrl = document.querySelector('meta[property="og:url"]');
+        const ogUrl = document.querySelector("meta[property="og:url']');
         if (ogUrl) {}
           ogUrl.setAttribute('content', seoData.ogUrl);
         } else {}
@@ -99,7 +99,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
 
       // Twitter Card tags
       if (seoData.twitterCard) {}
-        const twitterCard = document.querySelector('meta[name="twitter:card"]');
+        const twitterCard = document.querySelector("meta[name="twitter:card']');
         if (twitterCard) {}
           twitterCard.setAttribute('content', seoData.twitterCard);
         } else {}
@@ -111,7 +111,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
       }
 
       if (seoData.twitterTitle) {}
-        const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+        const twitterTitle = document.querySelector("meta[name="twitter:title']');
         if (twitterTitle) {}
           twitterTitle.setAttribute('content', seoData.twitterTitle);
         } else {}
@@ -123,7 +123,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
       }
 
       if (seoData.twitterDescription) {}
-        const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+        const twitterDescription = document.querySelector("meta[name="twitter:description']');
         if (twitterDescription) {}
           twitterDescription.setAttribute('content', seoData.twitterDescription);
         } else {}
@@ -135,7 +135,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
       }
 
       if (seoData.twitterImage) {}
-        const twitterImage = document.querySelector('meta[name="twitter:image"]');
+        const twitterImage = document.querySelector("meta[name="twitter:image']');
         if (twitterImage) {}
           twitterImage.setAttribute('content', seoData.twitterImage);
         } else {}
@@ -150,7 +150,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
     // Advanced SEO features
     if (enableAdvancedFeatures) {}
       // Set canonical URL
-      let canonical = document.querySelector('link[rel="canonical"]');
+      let canonical = document.querySelector("link[rel="canonical']');
       if (canonical) {}
         canonical.setAttribute('href', seoData.canonicalUrl);
       } else {}
@@ -162,7 +162,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
 
       // Set robots meta tag
       if (seoData.robots) {}
-        let robots = document.querySelector('meta[name="robots"]');
+        let robots = document.querySelector("meta[name="robots']');
         if (robots) {}
           robots.setAttribute('content', seoData.robots);
         } else {}
@@ -175,7 +175,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
 
       // Set author meta tag
       if (seoData.author) {}
-        let author = document.querySelector('meta[name="author"]');
+        let author = document.querySelector("meta[name="author']');
         if (author) {}
           author.setAttribute('content', seoData.author);
         } else {}
@@ -188,7 +188,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
 
       // Set published time
       if (seoData.publishedTime) {}
-        let publishedTime = document.querySelector('meta[property="article:published_time"]');
+        let publishedTime = document.querySelector("meta[property="article:published_time']');
         if (publishedTime) {}
           publishedTime.setAttribute('content', seoData.publishedTime);
         } else {}
@@ -201,7 +201,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
 
       // Set modified time
       if (seoData.modifiedTime) {}
-        let modifiedTime = document.querySelector('meta[property="article:modified_time"]');
+        let modifiedTime = document.querySelector("meta[property="article:modified_time']');
         if (modifiedTime) {}
           modifiedTime.setAttribute('content', seoData.modifiedTime);
         } else {}
@@ -214,7 +214,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
 
       // Set section
       if (seoData.section) {}
-        let section = document.querySelector('meta[property="article:section"]');
+        let section = document.querySelector("meta[property="article:section']');
         if (section) {}
           section.setAttribute('content', seoData.section);
         } else {}
@@ -230,7 +230,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
         seoData.tags.forEach((tag) => {}
           const tagMeta = document.createElement('meta');
           tagMeta.setAttribute('property', 'article:tag');
-          tagMeta.setAttribute('content', tag);
+          tagMeta.setAttribute('content", tag);
           document.head.appendChild(tagMeta);
         });
       }
@@ -239,31 +239,30 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
 
   return (<Helmet>
       <title>{seoData.title}</title>
-      <meta name ="description" content={seoData.description} />"'
-      <meta name ="keywords" content={seoData.keywords.join(', ')} />"'
+      <meta name ="description" content={seoData.description} />'"
+      <meta name ="keywords' content={seoData.keywords.join(', ')} />''
     </Helmet>
 
   );
 
-import React from 'react';"
-import SEOHead from './components/SEOHead';
+import React from 'react';
+import SEOHead from './components/SEOHead";
 ;
 const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead"
-        title="Components - Zion Tech Group"""
-        description="Professional components solutions for modern businesses""
+        title="Components - Zion Tech Group""
+        description="Professional components solutions for modern businesses"
       />""
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">""
-        <div className ="text-center">"""'
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>"'
-          <p className ="text-gray-300">Professional solutions coming soon...</p>'
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
+        <div className="text-center">"'"
+          <h1 className="text-4xl font-bold mb-4">Components</h1>'"
+          <p className="text-gray-300'>Professional solutions coming soon...</p>'
         </div>;
       </div>;
     </>;
   ),
 
 };
-"
-export default ComponentsPage'"'";
+export default ComponentsPage""'";

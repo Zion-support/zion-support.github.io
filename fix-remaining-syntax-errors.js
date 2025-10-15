@@ -11,8 +11,8 @@ async function fixRemainingSyntaxErrors() {
     console.log('🔧 Starting comprehensive syntax error fixes...');
     
     // Find all TypeScript and JavaScript files
-    const files = await glob('**/*.{ts,tsx,js,jsx};, {"'
-      ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**']";
+    const files = await glob('**/*.{ts,tsx,js,jsx};, {''
+      ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**']';
     });
     
     console.log(`Found ${files.length} files to process`);
@@ -47,28 +47,28 @@ async function fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content'
     
-    // Fix unterminated string literals: content = content.replace(/"([^"]*?)\n/g, '"$1"'\n');
-    content = content.replace(/'([^']*?)\n/g, (match, p1) => "'" + p1 + '"'\n');
+    // Fix unterminated string literals: content = content.replace(/"([^']*?)\n/g, ""$1''\n');
+    content = content.replace(/'([^']*?)\n/g, (match, p1) => '"" + p1 + ""'\n');
     
     // Fix missing semicolons after import statements;
-    content = content.replace(/import\s+[^"]+(?!')\n/g, (match) => {
-      if (!match.trim().endsWith(")) {"'
-        return match.trim() + '\n"
+    content = content.replace(/import\s+[^']+(?!")\n/g, (match) => {
+      if (!match.trim().endsWith(")) {''
+        return match.trim() + "\n"
       }
       return match;
     });
     
-    // Fix missing semicolons after variable declarations: content = content.replace(/(const|let|var)\s+\w+\s*=\s*[^"]+(?!')\n/g, (match) => {
-      if (!match.trim().endsWith(")) {"'
-        return match.trim() + '\n"
+    // Fix missing semicolons after variable declarations: content = content.replace(/(const|let|var)\s+\w+\s*=\s*[^']+(?!")\n/g, (match) => {
+      if (!match.trim().endsWith(")) {''
+        return match.trim() + "\n"
       }
-      return match"
+      return match'
     });
     
     // Fix missing colons in object properties: content = content.replace(/(\w+)\s+(\w+)\s*=/g, '$1: $2 =');
     
     // Fix missing commas in object literals: content = content.replace(/(\w+)\s*(\w+)\s*(\w+)/g, (match, p1, p2, p3) => {
-      if (p2 === ':' && !match.includes(',')) {"'
+      if (p2 === ':' && !match.includes(',')) {''
         return p1 + ' ' + p2 + ' ' + p3 + ','
       }
       return match;

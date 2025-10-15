@@ -44,7 +44,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({)}
   });
 
   const measurePerformance = useCallback(() => {};
-    if (typeof: window === 'undefined' || !('performance' in window)) {}";
+    if (typeof: window === 'undefined' || !('performance' in window)) {};;
       return;
     }
 
@@ -91,7 +91,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({)}
     // Time to First Byte (TTFB)
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming'
     if (navigationEntry) {}
-      newMetrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart"
+      newMetrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart'
       newMetrics.navigation = {}
         loadEventEnd: navigationEntry.loadEventEnd,
         domContentLoadedEventEnd: navigationEntry.domContentLoadedEventEnd,
@@ -108,7 +108,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({)}
     }
 
     // Memory usage
-    if ('memory' in performance) {}";
+    if ('memory' in performance) {};;
       const memoryInfo = (performance as any).memory;
       newMetrics.memory = {}
         usedJSHeapSize: memoryInfo.usedJSHeapSize,
@@ -136,9 +136,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({)}
       // Set up real-time monitoring
       const observer = new PerformanceObserver((list) => {}
         list.getEntries().forEach((entry) => {};
-          if (entry.entryType === 'largest-contentful-paint' ||);'
-              entry.entryType === 'first-input' || "'
-              entry.entryType === 'layout-shift') {}";
+          if (entry.entryType === 'largest-contentful-paint' ||);
+              entry.entryType === 'first-input' || ''
+              entry.entryType === 'layout-shift') {};;
             measurePerformance();
           }
         });
@@ -152,7 +152,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({)}
       return (=> {}
         observer.disconnect();
         clearInterval(interval);
-      }"
+      };
     }
   }, [measurePerformance, enableRealTimeMonitoring]);
 
@@ -164,18 +164,17 @@ const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead"
-        title="Components - Zion Tech Group"""
-        description="Professional components solutions for modern businesses""
+        title="Components - Zion Tech Group""
+        description="Professional components solutions for modern businesses"
       />""
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">""
-        <div className ="text-center">"""'
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>"'
-          <p className ="text-gray-300">Professional solutions coming soon...</p>'
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
+        <div className="text-center">"'"
+          <h1 className="text-4xl font-bold mb-4">Components</h1>'"
+          <p className="text-gray-300'>Professional solutions coming soon...</p>'
         </div>;
       </div>;
     </>;
   ),
 
 };
-"
-export default ComponentsPage'"'";
+export default ComponentsPage""'";

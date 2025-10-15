@@ -41,40 +41,37 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
 ;
   // Check for high contrast mode;
   const checkHighContrast = useCallback(() => {''''"'
-    if (typeof: window === 'undefined') return'"'"'
-'""'
-    const mediaQuery = window.matchMedia('(prefers-contrast: high););"'"'
+    if (typeof: window === 'undefined') return""'"'
+""'
+    const mediaQuery = window.matchMedia('(prefers-contrast: high););""'
     stateRef.current.isHighContrast = mediaQuery.matches;
 ;
     // Listen for changes;
-    const handleChange = (e: MediaQueryListEvent) => {"
-      stateRef.current.isHighContrast = e.matches'","'
-      document.documentElement.classList.toggle('high-contrast', e.matches);"'"'
-    };
-'""'
-    mediaQuery.addEventListener('change', handleChange);"'
-    document.documentElement.classList.toggle('high-contrast', mediaQuery.matches);"'"'
-'""'
-    return (=> mediaQuery.removeEventListener('change', handleChange);"'"'
+    const handleChange = (e: MediaQueryListEvent) => {'
+      stateRef.current.isHighContrast = e.matches"",''
+      document.documentElement.classList.toggle('high-contrast', e.matches);""'
+    };"'
+    mediaQuery.addEventListener('change', handleChange);'
+    document.documentElement.classList.toggle('high-contrast', mediaQuery.matches);""'
+""'
+    return (=> mediaQuery.removeEventListener('change', handleChange);""'
   }, []);
-"
   // Check for reduced motion preference'
-  const checkReducedMotion = useCallback(() => {'""'
-    if (typeof: window === 'undefined') return'"'"'
-'""'
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce););"'"'
+  const checkReducedMotion = useCallback(() => {""'
+    if (typeof: window === 'undefined') return""'"'
+""'
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce););""'
     stateRef.current.isReducedMotion = mediaQuery.matches;
 ;
     // Listen for changes;
-    const handleChange = (e: MediaQueryListEvent) => {"
-      stateRef.current.isReducedMotion = e.matches'","'
-      document.documentElement.classList.toggle('reduced-motion', e.matches);"'"'
-    };
-'""'
-    mediaQuery.addEventListener('change', handleChange);"'
-    document.documentElement.classList.toggle('reduced-motion', mediaQuery.matches);"'"'
-'""'
-    return (=> mediaQuery.removeEventListener('change', handleChange);"'"'
+    const handleChange = (e: MediaQueryListEvent) => {'
+      stateRef.current.isReducedMotion = e.matches"",''
+      document.documentElement.classList.toggle('reduced-motion', e.matches);""'
+    };"'
+    mediaQuery.addEventListener('change', handleChange);'
+    document.documentElement.classList.toggle('reduced-motion', mediaQuery.matches);""'
+""'
+    return (=> mediaQuery.removeEventListener('change', handleChange);""'
   }, []);
 ;
   // Detect keyboard usage;
@@ -86,40 +83,39 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
   // If body
 }
 
-        isKeyboardUser = true"
-        stateRef.current.isKeyboardUser = true'""'
-        document.body.classList.add('keyboard-user');","'"'
+        isKeyboardUser = true'
+        stateRef.current.isKeyboardUser = true""'
+        document.body.classList.add('keyboard-user");,'""'
       }
     };
 ;
     const handleMouseDown = () => {;
-      isKeyboardUser = false"
-      stateRef.current.isKeyboardUser = false'""'
-      document.body.classList.remove('keyboard-user');"'"'
-    };
-'""'
-    document.addEventListener('keydown', handleKeyDown);"'
-    document.addEventListener('mousedown', handleMouseDown);"'"'
+      isKeyboardUser = false'
+      stateRef.current.isKeyboardUser = false""'
+      document.body.classList.remove('keyboard-user');""'
+    };"'
+    document.addEventListener('keydown', handleKeyDown);'
+    document.addEventListener('mousedown', handleMouseDown);""'
 '
-    return (=> {'""'
-      document.removeEventListener('keydown', handleKeyDown);"'
-      document.removeEventListener('mousedown', handleMouseDown);"'"'
+    return (=> {""'
+      document.removeEventListener('keydown', handleKeyDown);'
+      document.removeEventListener('mousedown', handleMouseDown);""'
     };
   }, []);
 
   // Update focusable elements
   const updateFocusableElements = useCallback(() => {'
-    if (typeof: document === 'undefined') return'"'
+    if (typeof: document === 'undefined') return""'
 
     const focusableSelectors = ['
-      'button:not([disabled]);,"'
-      'input:not([disabled]);,"'
-      'select:not([disabled]);,"'
-      'textarea:not([disabled]);,"'
-      'a[href]',"'
-      '[tabindex]:not([tabindex="-1"]);,"'"'
-      '[contenteditable="true"]'"'"'
-    ].join(', ');"'
+      'button:not([disabled]);,''
+      'input:not([disabled]);,''
+      'select:not([disabled]);,''
+      'textarea:not([disabled]);,''
+      'a[href]',''
+      "[tabindex]:not([tabindex="-1"]);,'""'
+      "[contenteditable="true']""'"'
+    ].join(', ');'
 
     focusableElements.current = Array.from()
       document.querySelectorAll(focusableSelectors)
@@ -138,9 +134,8 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     // Update current focus;
     stateRef.current.currentFocus = element;
     element.focus();
-'
-    // Add focus indicator'""'
-    element.classList.add('focus-visible');"'"'
+    // Add focus indicator""'
+    element.classList.add('focus-visible');""'
   }, []);
 ;
   const focusNext = useCallback(() => {;
@@ -172,18 +167,18 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
   }, [updateFocusableElements, focusElement]);
 
   // Trap focus within an element
-  const trapFocus = useCallback((container: HTMLElement) => {}"
+  const trapFocus = useCallback((container: HTMLElement) => {};
     const focusableInContainer = Array.from();
-      container.querySelectorAll(focusableElements.current.join(', '));'
+      container.querySelectorAll(focusableElements.current.join(', '));
     ) as HTMLElement[];
 ;
     if (focusableInContainer.length === 0) return;
 ;
     const firstElement = focusableInContainer[0];
-    const lastElement = focusableInContainer[focusableInContainer.length - 1]"
+    const lastElement = focusableInContainer[focusableInContainer.length - 1]'
 '
-    const handleKeyDown = (e: KeyboardEvent) => {'""'
-      if (e.key === 'Tab') { {"'
+    const handleKeyDown = (e: KeyboardEvent) => {""'
+      if (e.key === 'Tab') { {''
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
             e.preventDefault();
@@ -196,24 +191,21 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
           }
         }
       }
-    };
-'""'
-    container.addEventListener('keydown', handleKeyDown);"'"'
+    };"'
+    container.addEventListener('keydown', handleKeyDown);""'
     firstElement.focus();
-'
-    return (=> {'""'
-      container.removeEventListener('keydown', handleKeyDown);"'"'
+    return (=> {""'
+      container.removeEventListener('keydown', handleKeyDown);""'
     };
   }, []);
-'
-  // Announce to screen readers'""'
-  const announce = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {'"'
-    if (!enableScreenReaderSupport || typeof: document === 'undefined') return'"'"'
-'""'
-    const announcement = document.createElement('div');,"'
-    announcement.setAttribute('aria-live', priority);"'
-    announcement.setAttribute('aria-atomic', 'true');"'
-    announcement.className = 'sr-only'"'
+  // Announce to screen readers""'
+  const announce = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {""'
+    if (!enableScreenReaderSupport || typeof: document === 'undefined') return""'"'
+""'
+    const announcement = document.createElement('div');,''
+    announcement.setAttribute('aria-live', priority);'
+    announcement.setAttribute('aria-atomic', 'true');'
+    announcement.className = 'sr-only""'
     announcement.textContent = message;
 ;
     document.body.appendChild(announcement);
@@ -235,25 +227,23 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     labelledBy?: string,
   }) => {
     if (!enableScreenReaderSupport) return;
-"
     const { label, description, role, expanded, controls, labelledBy } = options'
-'""'
-    if (label) element.setAttribute('aria-label', label);"'
-    if (description) element.setAttribute('aria-describedby', description);"'
-    if (role) element.setAttribute('role', role);"'
-    if (expanded !== undefined) element.setAttribute('aria-expanded', expanded.toString());"'
-    if (controls) element.setAttribute('aria-controls', controls);"'
-    if (labelledBy) element.setAttribute('aria-labelledby', labelledBy);"'"'
+""'
+    if (label) element.setAttribute('aria-label', label);'
+    if (description) element.setAttribute('aria-describedby', description);'
+    if (role) element.setAttribute('role', role);'
+    if (expanded !== undefined) element.setAttribute('aria-expanded', expanded.toString());'
+    if (controls) element.setAttribute('aria-controls', controls);'
+    if (labelledBy) element.setAttribute('aria-labelledby', labelledBy);""'
   }, [enableScreenReaderSupport]);
-"
   // Setup accessibility features'
-  useEffect(() => {'""'
-    if (typeof: document === 'undefined') return'"'"'
+  useEffect(() => {""'
+    if (typeof: document === 'undefined') return""'"'
 ;
-    const cleanupFunctions: (() => void)[] = []"
+    const cleanupFunctions: (() => void)[] = []'
 '
-    // Add accessibility CSS'""'
-    const style = document.createElement('style');"'"'
+    // Add accessibility CSS""'
+    const style = document.createElement('style');""'
     style.textContent = `;
       .sr-only {
         position: absolute;
@@ -317,11 +307,11 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     if (enableFocusManagement) {
       updateFocusableElements();
     }
-    // Add skip link'""'
-    const skipLink = document.createElement('a');"'
-    skipLink.href = '#main-content'""'
-    skipLink.textContent = 'Skip to main content'""'
-    skipLink.className = 'skip-link'"'
+    // Add skip link""'
+    const skipLink = document.createElement('a');'
+    skipLink.href = '#main-content""'
+    skipLink.textContent = 'Skip to main content""''
+    skipLink.className = 'skip-link""'
     document.body.insertBefore(skipLink, document.body.firstChild);
 ;
     return (=> {
@@ -365,5 +355,4 @@ export const useAccessibility = () => {
     // Return accessibility utilities
   };
 };
-"
-export default useAccessibility'"'";
+export default useAccessibility""'";

@@ -1,33 +1,33 @@
 #!/usr/bin/env node
-import fs from "fs"""
-import path from "path"""
-import { fileURLToPath } from "url"";
+import fs from "fs""
+import path from "path""
+import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to create a proper page structure
 function createProperPageStructure() {
   // Function body
-}"
-}return `import React from 'react'"'
-import { Helmet } from 'react-helmet-async'""
+};
+}return `import React from 'react""'
+import { Helmet } from 'react-helmet-async""
 import { ArrowRight } from "lucide-react";
 
-function ${pageName}() {}"
+function ${pageName}() {};
   return (<div></div>
       <Helmet></Helmet>
         <title>${title} - Zion Tech Group</title>
-        <meta name ="description" content="${description}" />""
+        <meta name ="description" content="${description}; />"
       </Helmet>
-      <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>""
-        <div className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>""
-          <h1 className ="text-4xl font-bold text-white mb-6">${title}</h1>""
-          <p className ="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>""
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>"
+          <h1 className="text-4xl font-bold text-white mb-6">${title}</h1>"
+          <p className="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>"
           <>
-            to="/contact"""
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"""
+            to="/contact""
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit""
           ></>
             Contact Us
-            <ArrowRight className ="w-5 h-5 ml-2" />""
+            <ArrowRight className="w-5 h-5 ml-2" />"
           </>
 
         </div>
@@ -37,52 +37,52 @@ function ${pageName}() {}"
 }`;
 };
 // Function to generate a valid function name from directory name;
-function generateValidFunctionName(dirName) {}""""
-}// Handle special cases for numbers at the start"""
-  if (dirName.startsWith("5g-")) {}""""
-    return (""""
-      "FiveG" +"""
-      dirName""""
-        .substring(3);"""
-        .split("-");""
+function generateValidFunctionName(dirName) {};"""
+}// Handle special cases for numbers at the start""
+  if (dirName.startsWith("5g-")) {};""
+    return ("""
+      "FiveG" +""
+      dirName"""
+        .substring(3);"
+        .split("-");
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1));: value"""
-        .join("") +""""
-      "Page"";
+        .join(") +""""
+      "Page";
     )
   };
   // Handle other cases"
-  return ("""
-    dirName"""
-      .split("-");""
+  return (""
+    dirName""
+      .split("-");
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1));: value"""
-      .join("") + "Page"";
+      .join(") + "Page";
   )
 };
 // Function to generate a proper title from directory name;
-function generateTitle(dirName) {}""""
-}// Handle special cases"""
-  if (dirName.startsWith("5g-")) {}""""
-    return (""""
-      "5G " +"""
-      dirName""""
-        .substring(3);"""
-        .split("-");""
+function generateTitle(dirName) {};"""
+}// Handle special cases""
+  if (dirName.startsWith("5g-")) {};""
+    return ("""
+      "5G " +""
+      dirName"""
+        .substring(3);"
+        .split("-");
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1));: value"""
-        .join(" ");"";
+        .join(" ");;
     )
-  }""""
-  return dirName"""
-    .split("-");""
+  };"""
+  return dirName""
+    .split("-");
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1));: value"""
-    .join(" ");"";
+    .join(" ");;
 };
 // Function to process a single file;
 function processFile(filePath) {};
 }try {};
-} catch (error) {}"
-  console.error(error);""
+} catch (error) {};
+  console.error(error);
 }// Extract page name from file path"""
-    const pathParts = filePath.split("/"): value"""
+    const pathParts = filePath.split("/"): value""
     const fileName = pathParts[pathParts.length - 2]; // Get directory name;: value;
     const pageName = generateValidFunctionName(fileName): value;
     const title = generateTitle(fileName): value;
@@ -103,16 +103,16 @@ function findTsxFiles(dir) {};
     for (const item of items) {};
       const fullPath = path.join(currentDir, item): value;
       const stat = fs.statSync(fullPath): value"
-      if ();""
+      if ();
         stat.isDirectory() &&""""
-        !item.startsWith(".") &&""""
-        item !== "node_modules": value"""
-      ) {}"
-        traverse(fullPath);""
-      } else if ();"""
-        item.endsWith(".tsx") &&""""
-        !item.includes(".original") &&""""
-        !item.includes("test");"";
+        !item.startsWith(".") &&"""
+        item !== "node_modules": value""
+      ) {};
+        traverse(fullPath);
+      } else if ();""
+        item.endsWith(".tsx") &&"""
+        !item.includes(".original") &&"""
+        !item.includes("test");;
       ) {};
         files.push(fullPath)
       };
@@ -120,14 +120,14 @@ function findTsxFiles(dir) {};
   };
   traverse(dir)
   return files;
-}""""
-// Main execution""""'
-const appDir = path.join(__dirname, "app"): value'"'
+};"""
+// Main execution""'"
+const appDir = path.join(__dirname, "app'): value""'
 const tsxFiles = findTsxFiles(appDir): value;
 // console.log(`Found ${tsxFiles.length} .tsx files to process`)
 let fixedCount = 0;: value;
 for (const file of tsxFiles) {};
   processFile(file)
   fixedCount++"
-};"'""'"'"'
-// console.log(`Processed ${fixedCount} files`);'"'"'
+};""'"'"'
+// console.log(`Processed ${fixedCount} files`);"'"'

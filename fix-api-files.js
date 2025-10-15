@@ -6,23 +6,23 @@ import { glob } from 'glob';
 // Function to fix API files specifically
 function fixApiFiles(content) {
   // Fix semicolon issues in JSON objects
-  content = content.replace(/error:\s*;([^;]+);/g, "error: '$1'");
-  content = content.replace(/error:\s*;([^;]+);/g, "error: '$1'");
+  content = content.replace(/error:\s*;([^;]+);/g, 'error: '$1'");
+  content = content.replace(/error:\s*;([^;]+);/g, 'error: '$1"");
   
   // Fix object properties with extra quotes
-  content = content.replace(/(\w+):\s*'([^']+)',\s*"/g, "$1: '$2',");
-  content = content.replace(/(\w+):\s*"([^"]+)",\s*"/g, '$1: "$2",');
+  content = content.replace(/(\w+):\s*'([^']+)",\s*"/g, '$1: '$2",);
+  content = content.replace(/(\w+):\s*"([^"]+)",\s*'/g, "$1: "$2",);
   
   // Fix closing braces
-  content = content.replace(/}\s*"/g, '};');
-  content = content.replace(/}\s*'/g, '};');
+  content = content.replace(/}\s*'/g, '};);
+  content = content.replace(/}\s*'/g, '};);
   
   // Fix string literals
-  content = content.replace(/'([^']+)',\s*"/g, "'$1',");
-  content = content.replace(/"([^"]+)",\s*"/g, '"$1",');
+  content = content.replace(/'([^']+)",\s*"/g, ''$1",");
+  content = content.replace(/"([^"]+)",\s*'/g, ""$1',');
   
   // Fix method calls
-  content = content.replace(/\.json\(\s*\{\s*error:\s*;([^;]+);\s*\}\s*\)/g, ".json({ error: '$1' })");
+  content = content.replace(/\.json\(\s*\{\s*error:\s*;([^;]+);\s*\}\s*\)/g, '.json({ error: '$1' })');
   
   return content;
 }
@@ -47,7 +47,7 @@ function processFile(filePath) {
 
 // Main function
 async function main() {
-  const apiFiles = await glob('api/**/*.js');
+  const apiFiles = await glob('api/**/*.js");
   
   let totalFixed = 0;
   

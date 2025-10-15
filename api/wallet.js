@@ -11,14 +11,14 @@ if (!fs.existsSync(path.dirname(file))) {
 
 export default function handler(req, res) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed; });
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
     const { address, type, name, userId } = req.body;
 
     if (!address || !type) {
-      return res.status(400).json({ error: 'Address and type are required; });
+      return res.status(400).json({ error: 'Address and type are required' });
     }
 
     // Read existing wallets
@@ -31,9 +31,9 @@ export default function handler(req, res) {
     const newWallet = {
       id: Date.now().toString(),
       address,
-      type,'
-      name: name || ','
-      userId: userId || ','
+      type,
+      name: name || '',
+      userId: userId || '',
       status: 'active',
       createdAt: new Date().toISOString()
     };

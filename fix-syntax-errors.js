@@ -7,7 +7,7 @@ import { glob } from 'glob';
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
   // Remove extra semicolons and quotes from import statements
-  content = content.replace(/import\s+([^;]+);"'/g, 'import $1;);
+  content = content.replace(/import\s+([^;]+);'/g, 'import $1;);
   content = content.replace(/import\s+([^']+);/g, 'import $1;);
   content = content.replace(/import\s+([^']+);/g, 'import $1;);
   
@@ -23,19 +23,19 @@ function fixSyntaxErrors(content) {
   content = content.replace(/return\s*\(\s*\)\s*/g, 'return (');
   
   // Fix JSX className attributes
-  content = content.replace(/className\s*=\s*"([^"]+);'/g, 'className="$1"');
-  content = content.replace(/className\s*=\s*"([^"]+);'/g, 'className="$1"');
+  content = content.replace(/className\s*=\s*"([^']+);/g, "className="$1'");
+  content = content.replace(/className\s*=\s*"([^']+);/g, "className="$1'');
   
   // Fix JSX div attributes
   content = content.replace(/<div:\s+className/g, '<div className');
   
   // Fix unterminated string literals in common patterns
-  content = content.replace(/'([^']*);/g, "'$1'");
-  content = content.replace(/'([^']*);/g, "'$1'");
-  content = content.replace(/'([^']*);/g, "'$1'");
-  content = content.replace(/"([^"]*);/g, '"$1"');
-  content = content.replace(/"([^"]*);/g, '"$1"');
-  content = content.replace(/"([^"]*);/g, '"$1"');
+  content = content.replace(/'([^']*);/g, ''$1"");
+  content = content.replace(/'([^']*);/g, ''$1"");
+  content = content.replace(/'([^']*);/g, ''$1"");
+  content = content.replace(/"([^']*);/g, ""$1'");
+  content = content.replace(/"([^']*);/g, ""$1'");
+  content = content.replace(/"([^']*);/g, ""$1'');
   
   // Fix merge conflict markers
   content = content.replace(/^<<<<<<< HEAD.*$/gm, ');
@@ -44,8 +44,8 @@ function fixSyntaxErrors(content) {
   
   // Fix common JSX syntax errors
   content = content.replace(/<(\w+):\s+/g, '<$1 ');
-  content = content.replace(/>"'/g, '>');
-  content = content.replace(/>"'/g, '>');
+  content = content.replace(/>''/g, '>');
+  content = content.replace(/>''/g, '>');
   
   // Fix object property syntax
   content = content.replace(/(\w+):\s*=/g, '$1: ');
@@ -90,7 +90,7 @@ async function main() {
   
   for (const pattern of patterns) {
     const files = await glob(pattern, {
-      ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**']
+      ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**"]
     });
     
     for (const file of files) {

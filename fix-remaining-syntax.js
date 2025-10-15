@@ -6,8 +6,8 @@ import { glob } from 'glob';
 // Function to fix remaining syntax errors
 function fixRemainingSyntax(content) {
   // Fix import statements with extra quotes
-  content = content.replace(/import\s+([^']+);/g, 'import $1;');
-  content = content.replace(/import\s+([^']+);/g, 'import $1;');
+  content = content.replace(/import\s+([^']+);/g, 'import $1;);
+  content = content.replace(/import\s+([^']+);/g, 'import $1;);
   
   // Fix lazy import statements
   content = content.replace(/lazy\(\(\)\s*=>\s*import\(([^)]+)\)\);/g, 'lazy(() => import($1)));
@@ -17,12 +17,12 @@ function fixRemainingSyntax(content) {
   content = content.replace(/const\s+(\w+)\s*=\s*lazy\([^)]+\);/g, 'const $1 = lazy(() => import($2)));
   
   // Fix JSX attributes with extra quotes
-  content = content.replace(/className\s*=\s*"([^"]+);/g, 'className="$1"');
-  content = content.replace(/className\s*=\s*"([^"]+);/g, 'className="$1"');
+  content = content.replace(/className\s*=\s*"([^']+);/g, "className="$1'");
+  content = content.replace(/className\s*=\s*"([^']+);/g, "className="$1'');
   
   // Fix string literals with extra quotes
-  content = content.replace(/'([^']+);/g, "'$1'");
-  content = content.replace(/"([^"]+);/g, '"$1"');
+  content = content.replace(/'([^']+);/g, ''$1"");
+  content = content.replace(/"([^']+);/g, ""$1'');
   
   // Fix function declarations
   content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*\{\s*\}/g, 'function $1() {');
@@ -45,8 +45,8 @@ function fixRemainingSyntax(content) {
   content = content.replace(/\(\s*\)\s*\{\s*\}/g, '() {};);
   
   // Fix common patterns
-  content = content.replace(/;\s*'/g, ';');
-  content = content.replace(/;\s*';/g, ';');
+  content = content.replace(/;\s*'/g, ';);
+  content = content.replace(/;\s*';/g, ';);
   
   return content;
 }
@@ -82,7 +82,7 @@ async function main() {
   
   for (const pattern of patterns) {
     const files = await glob(pattern, {
-      ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**']
+      ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**"]
     });
     
     for (const file of files) {

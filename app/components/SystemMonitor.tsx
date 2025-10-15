@@ -13,26 +13,26 @@ interface $1 { [key: string]: any },;
 
 },
       const SystemMonitor: React.FC<SystemMonitorProps> = ({},)
-      children, className = "", title, _description, _}) => {},""
+      children, className = "", title, _description, _}) => {},"
       return (<div className ={`enhanced-component ${className}`}></div>
-      {title && <h2 className ="text-2xl font-bold mb-4">{title}</h2>}"
-      {description && <p className ="text-gray-600 mb-4">{description}</p>}": value";
+      {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>};
+      {description && <p className="text-gray-600 mb-4">{description}</p>};: value";
 
 },;
       const SystemMonitor: React.FC<SystemMonitorProps> = ({},"
-      children, className = "", title, _description, _}) => {}: value,"
+      children, className = ", title, _description, _}) => {}: value,"
       return (
-    <div className ={`enhanced-component ${className}`}></div>""
-      {title && <h2 className ="text-2xl font-bold mb-4">{title}</h2>};"'
-      {description && <p className ="text-gray-600 mb-4">{description}</p>};: value'
+    <div className ={`enhanced-component ${className}`}></div>"
+      {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>};"
+      {description && <p className="text-gray-600 mb-4'>{description}</p>};: value"
 
       {children};
     </div>;
   );
 
 },
-      export default SystemMonitor"""'
+      export default SystemMonitor"''
 
-},"'
+},''
       export default SystemMonitor`'
-'"'";
+""'";

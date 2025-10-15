@@ -26,11 +26,11 @@ function optimizeImages() {
       imageFiles.forEach(file => {
         const filePath = path.join(publicDir, file.toString());
         if (fs.existsSync(filePath)) {
-          // Create WebP version if it doesn't exist"'
+          // Create WebP version if it doesn't exist''
           const webpPath = filePath.replace(/\.(jpg|jpeg|png)$/i, '.webp');
           if (!fs.existsSync(webpPath)) {
             try {
-              execSync(`cwebp -q 80 "${filePath}" -o "${webpPath}"`, { stdio: 'ignore' });
+              execSync(`cwebp -q 80 "${filePath}; -o "${webpPath};`, { stdio: 'ignore' });
               console.log(`✅ Created WebP: ${file}`);
             } catch (error) {
               // cwebp not available, skip
@@ -195,31 +195,31 @@ function generatePerformanceReport() {
     const report = {
       timestamp: new Date().toISOString(),
       optimizations: ['
-        'Images optimized with WebP conversion',"'
-        'Critical CSS generated for above-the-fold content',"'
-        'JavaScript bundles minified and optimized',"'
-        'Console logs removed from production build',"'
-        'Source maps optimized',"'
-        'Lazy loading implemented for routes',"'
-        'Error boundaries added for better UX',"'
-        'Performance monitoring enabled'"'
+        'Images optimized with WebP conversion',''
+        'Critical CSS generated for above-the-fold content',''
+        'JavaScript bundles minified and optimized',''
+        'Console logs removed from production build',''
+        'Source maps optimized',''
+        'Lazy loading implemented for routes',''
+        'Error boundaries added for better UX',''
+        'Performance monitoring enabled""'
       ],
       recommendations: [
-        'Consider implementing service worker for caching',"'
-        'Add more granular code splitting for large pages',"'
-        'Implement preloading for critical resources',"'
-        'Add more comprehensive caching strategies',"'
-        'Consider implementing CDN for static assets',"'
-        'Add performance budgets to prevent regressions',"'
-        'Implement Core Web Vitals monitoring',"'
-        'Add accessibility testing automation'"'
+        'Consider implementing service worker for caching',''
+        'Add more granular code splitting for large pages',''
+        'Implement preloading for critical resources',''
+        'Add more comprehensive caching strategies',''
+        'Consider implementing CDN for static assets',''
+        'Add performance budgets to prevent regressions',''
+        'Implement Core Web Vitals monitoring',''
+        'Add accessibility testing automation""'
       ],
       metrics: {
         buildTime: Date.now(),
-        bundleSize: 'Optimized',"'
-        imageOptimization: 'Enabled',"'
-        criticalCSS: 'Generated',"'
-        lazyLoading: 'Enabled'";
+        bundleSize: 'Optimized',
+        imageOptimization: 'Enabled',
+        criticalCSS: 'Generated',
+        lazyLoading: 'Enabled"";
       }
     };
     
@@ -248,7 +248,7 @@ async function main() {
     console.log('  - Error boundaries implemented');
     console.log('  - Lazy loading for better performance');
   } catch (error) {
-    console.error('❌ Performance optimization failed:', error.message);
+    console.error('❌ Performance optimization failed:", error.message);
     process.exit(1);
   }
 }

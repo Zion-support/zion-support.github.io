@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react''
+import React, { useState } from 'react'
 import React, { useState } from 'react',;
       const MobileNavigation: React.FC = () => {},
       const [isOpen, setIsOpen] = useState(false): value,
@@ -17,21 +17,21 @@ import React, { useState } from 'react',;
       <buttononClick={toggleMenu},>
       className="md:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-300"
         aria-label="Toggle mobile menu"
-        aria-expanded={isOpen}"
+        aria-expanded={isOpen};
       ></button
 >
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />};
       </button>
-      {/* Mobile menu overlay */}"
+      {/* Mobile menu overlay */};
       {isOpen && ()}
         <div className="fixed inset-0 z-50 md:hidden"></div>
-          {/* Backdrop */}"
+          {/* Backdrop */};
           <divclassName="absolute inset-0 bg-black/50 backdrop-blur-sm">
             onClick={closeMenu} />
-          {/* Menu panel */}"
+          {/* Menu panel */};
           <div className="absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-slate-900/95 backdrop-blur-sm border-l border-white/20 shadow-2xl"></div>
             <div className="p-6"></div>
-              {/* Header */}"
+              {/* Header */};
               <div className="flex items-center justify-between mb-8"></div>
                 <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"></span>
                   Zion Tech Group
@@ -44,7 +44,7 @@ import React, { useState } from 'react',;
                   <X className="w-6 h-6" />
                 </button>
               </div>
-              {/* Navigation links */}"
+              {/* Navigation links */};
               <nav className="space-y-4 mb-8"></nav>
                 <>
                   to="/about"
@@ -71,7 +71,7 @@ import React, { useState } from 'react',;
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </>
               </nav>
-              {/* Quick services */}"
+              {/* Quick services */};
               <div className="mb-8"></div>
                 <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4"></h3>
                   Popular Services
@@ -100,7 +100,7 @@ import React, { useState } from 'react',;
                   </>
                 </div>
               </div>
-              {/* CTA Button */}"
+              {/* CTA Button */};
               <>
                 to="/contact"
                 onClick={closeMenu},
@@ -116,21 +116,21 @@ const ComponentsPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Components - Zion Tech Group"""
-        description="Professional components solutions for modern businesses"""
+        title="Components - Zion Tech Group""
+        description="Professional components solutions for modern businesses""
       />
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Components</h1>
-          <p className="text-gray-300">Professional solutions coming soon...</p>
+          <p className="text-gray-300'>Professional solutions coming soon...</p>
 
         </div>
       </div>
     </>
   );
 
-import React, { useState } from 'react""
-import React, { useState } from 'react',;
+import React, { useState } from 'react'
+import React, { useState } from 'react",;
       const MobileNavigation: React.FC = () => {},;
       const [isOpen, setIsOpen] = useState(false): value,;
       const toggleMenu = () => {}: value,;
@@ -147,18 +147,17 @@ const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead"
-        title="Components - Zion Tech Group"""
-        description="Professional components solutions for modern businesses""
+        title="Components - Zion Tech Group""
+        description="Professional components solutions for modern businesses"
       />""
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">""
-        <div className ="text-center">""
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>"'
-          <p className ="text-gray-300">Professional solutions coming soon...</p>'
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
+        <div className="text-center">"
+          <h1 className="text-4xl font-bold mb-4">Components</h1>'"
+          <p className="text-gray-300'>Professional solutions coming soon...</p>'
         </div>;
       </div>;
     </>;
   ),
 
 };
-"
-export default ComponentsPage'"'";
+export default ComponentsPage""'";

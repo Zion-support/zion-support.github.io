@@ -1,6 +1,6 @@
 import fs from 'fs'"'
-import path from 'path""'
-import { execSync } from 'child_process"";
+import path from 'path''
+import { execSync } from "child_process"';
 // Get all TypeScript/TSX files
 function getAllTsxFiles(dir) {
   let results = [];
@@ -10,10 +10,10 @@ function getAllTsxFiles(dir) {
     const stat = fs.statSync(filePath);
     if (stat && stat.isDirectory()) {
       // Skip node_modules and other directories
-      if (!['node_modules', '.git', 'dist', 'build'].includes(file)) {'""
+      if (!['node_modules', '.git', 'dist', 'build'].includes(file)) {""
         results = results.concat(getAllTsxFiles(filePath));
       }
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {'";
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {"";
       results.push(filePath);
     }
   });
@@ -24,14 +24,14 @@ function fixUnusedImports(filePath) {
   try {
     console.log(`Fixing ${filePath}...`);
     // Use ESLint to fix unused imports
-    execSync(`npx eslint "${filePath}" --fix --quiet`, { stdio: 'pipe' });""'
+    execSync(`npx eslint "${filePath}; --fix --quiet`, { stdio: 'pipe' });'
     console.log(`✓ Fixed ${filePath}`);
   } catch (error) {}
     console.log(`⚠ Could not auto-fix ${filePath}: ${error.message}`);
   }
 }
 // Main execution
-const files = getAllTsxFiles('./app');";
+const files = getAllTsxFiles('./app');;
 console.log(`Found ${files.length} TypeScript files to process...`);
 files.forEach(fixUnusedImports);
-console.log('Done fixing unused imports!');"'
+console.log('Done fixing unused imports!');"

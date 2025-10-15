@@ -1,78 +1,77 @@
 
 import React from 'react'"'
-import { ArrowRight } from 'lucide-react'"'
-import { CheckCircle } from 'lucide-react'"'
-import { Star } from 'lucide-react'"'
-import { Users } from 'lucide-react'"'
-import { Clock } from 'lucide-react'"'
-import { DollarSign } from 'lucide-react'"'
-import { Shield } from 'lucide-react'"'
-import { Code } from 'lucide-react'"'
-import { Database } from 'lucide-react'"'
-import { Mail } from 'lucide-react'"'
-import { Settings } from 'lucide-react'"'
-import { Target } from 'lucide-react'"'
-import { TrendingUp } from 'lucide-react'"'
-import { PieChart } from 'lucide-react'"'
-import { MessageSquare } from 'lucide-react'"'
-import { Heart } from 'lucide-react'"'
-import { Globe } from 'lucide-react'"'
-import { Smartphone } from 'lucide-react'"'
-import { Network } from 'lucide-react'"'
-import { Lock } from 'lucide-react'"'
-import { Cpu } from 'lucide-react'"'
-import { Wifi } from 'lucide-react'"'
-import { Building2 } from 'lucide-react'"'
-import { Briefcase } from 'lucide-react'"'
-import { Lightbulb } from 'lucide-react'"'
-import { Link } from 'react-router-dom'"'
-import EnhancedSEO from '../components/EnhancedSEO'";
+import { ArrowRight } from 'lucide-react""'
+import { CheckCircle } from 'lucide-react""'
+import { Star } from 'lucide-react""'
+import { Users } from 'lucide-react""'
+import { Clock } from 'lucide-react""'
+import { DollarSign } from 'lucide-react""'
+import { Shield } from 'lucide-react""'
+import { Code } from 'lucide-react""'
+import { Database } from 'lucide-react""'
+import { Mail } from 'lucide-react""'
+import { Settings } from 'lucide-react""'
+import { Target } from 'lucide-react""'
+import { TrendingUp } from 'lucide-react""'
+import { PieChart } from 'lucide-react""'
+import { MessageSquare } from 'lucide-react""'
+import { Heart } from 'lucide-react""'
+import { Globe } from 'lucide-react""'
+import { Smartphone } from 'lucide-react""'
+import { Network } from 'lucide-react""'
+import { Lock } from 'lucide-react""'
+import { Cpu } from 'lucide-react""'
+import { Wifi } from 'lucide-react""'
+import { Building2 } from 'lucide-react""'
+import { Briefcase } from 'lucide-react""'
+import { Lightbulb } from 'lucide-react""'
+import { Link } from 'react-router-dom""'
+import EnhancedSEO from '../components/EnhancedSEO"";
 const Page = () => {
-  const features = [
-    {"
-      icon: <CheckCircle className ="w-8 h-8" />,"""'
-      title: 'Advanced Features','"'
-      description: 'Cutting-edge technology for maximum efficiency'""
+  const features = [{
+      icon: <CheckCircle className="w-8 h-8" />,"''
+      title: 'Advanced Features',''
+      description: 'Cutting-edge technology for maximum efficiency""
     },
     {
-      icon: <Shield className ="w-8 h-8" />,"""'
-      title: 'Secure & Reliable','"'
-      description: 'Enterprise-grade security and 99.9% uptime'""
+      icon: <Shield className="w-8 h-8" />,"''
+      title: 'Secure & Reliable',''
+      description: 'Enterprise-grade security and 99.9% uptime""
     },
     {
-      icon: <Users className ="w-8 h-8" />,"""'
-      title: 'Expert Support','"'
-      description: '24/7 support from our team of specialists'";
+      icon: <Users className="w-8 h-8" />,"''
+      title: 'Expert Support',''
+      description: '24/7 support from our team of specialists"";
     }
   ]"
   return (
     <>
-      <EnhancedSEO title ="Page - Zion Tech Group""""
-        description="Professional page services by Zion Tech Group. Expert solutions for your business needs.""""
-        keywords="page, business solutions, technology services, professional services""""
+      <EnhancedSEO title ="Page - Zion Tech Group"""
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs."""
+        keywords="page, business solutions, technology services, professional services"""
       />
-      <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""""
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"""
         {/* Hero Section */}
-        <section className ="relative py-20 px-4 sm:px-6 lg:px-8">""""
-          <div className ="max-w-7xl mx-auto text-center">""""
-            <h1 className ="text-4xl md:text-6xl font-bold text-white mb-6">""""
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">"""
+          <div className="max-w-7xl mx-auto text-center">"""
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"""
               Page
-              <span className ="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">""""
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">"""
                 Solutions
               </span>
             </h1>
-            <p className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""""
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"""
               Professional page services designed to help your business succeed and grow.
             </p>
-            <div className ="flex flex-col sm:flex-row gap-4 justify-center">""""
-              <Link to ="/contact""""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
+              <Link to ="/contact"""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"""
               >
                 Get Started
-                <ArrowRight className ="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""""
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />"""
               </Link>
-              <Link to ="/demo""""
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""""
+              <Link to ="/demo"""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"""
               >
                 View Demo
               </Link>
@@ -80,47 +79,47 @@ const Page = () => {
           </div>
         </section>
         {/* Features Section */}
-        <section className ="py-20 px-4 sm:px-6 lg:px-8">""""
-          <div className ="max-w-7xl mx-auto">""""
-            <div className ="text-center mb-16">""""
-              <h2 className ="text-3xl md:text-4xl font-bold text-white mb-4">""""
+        <section className="py-20 px-4 sm:px-6 lg:px-8">"""
+          <div className="max-w-7xl mx-auto">"""
+            <div className="text-center mb-16">"""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"""
                 Why Choose Our Page Services?
               </h2>
-              <p className ="text-xl text-gray-300 max-w-2xl mx-auto">""""
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">"""
                 We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
-            <div className ="grid grid-cols-1 md:grid-cols-3 gap-8">""""
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"""
               {features.map((feature, index) => (
-                <div key ={index} className="text-center">""""
-                  <div className ="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""""
+                <div key ={index} className="text-center">"""
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">"""
                     {feature.icon}
                   </div>
-                  <h3 className ="text-xl font-semibold text-white mb-3">{feature.title}</h3>""""
-                  <p className ="text-gray-300">{feature.description}</p>""""
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"""
+                  <p className="text-gray-300">{feature.description}</p>"""
                 </div>
               ))}
             </div>
           </div>
         </section>
         {/* CTA Section */}
-        <section className ="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""""
-          <div className ="max-w-4xl mx-auto text-center">""""
-            <h2 className ="text-3xl md:text-4xl font-bold text-white mb-6">""""
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">"""
+          <div className="max-w-4xl mx-auto text-center">"""
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">"""
               Ready to Get Started?
             </h2>
-            <p className ="text-xl text-gray-300 mb-8">"""'
-              Let's discuss how our page services can help your business succeed.'""
+            <p className="text-xl text-gray-300 mb-8">"''
+              Let's discuss how our page services can help your business succeed.""
             </p>
-            <div className ="flex flex-col sm:flex-row gap-4 justify-center">""""
-              <Link to ="/contact""""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
+              <Link to ="/contact"""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"""
               >
                 Contact Us
-                <ArrowRight className ="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""""
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />"""
               </Link>
-              <Link to ="/services""""
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""";
+              <Link to ="/services"""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"';
               >
                 View All Services
               </Link>
@@ -131,446 +130,445 @@ const Page = () => {
     </>
   );
 };
-const page = React.lazy(() => import('./page'));"
+const page = React.lazy(() => import('./page'));
 export default page'
 
 
-import React, { useState } from 'react',""
-      import { Helmet } from "react-helmet-async",""
-      const DocsPage: React.FC = () => {"}""
-        ""'
+import React, { useState } from 'react","
+      import { Helmet } from "react-helmet-async","
+      const DocsPage: React.FC = () => {"};
+        "'"
   const [searchQuery, setSearchQuery] = useState(;),";
       const [expandedSection, setExpandedSection] = useState<string | null>(null);
 ,
-      const documentationSections = [",""
+      const documentationSections = [","
         """
-    {"}""
-        ""'
-      id: 'getting-started',","'
-        ""'
-      title: 'Getting Started',","'
-        ""'
-      description: 'Learn how to get started with our AI solutions',","'
-        ""'
-      content: 'Comprehensive guide to implementing AI in your business',"""'
-      icon: <className="w-6 h-6" />,",""
+    {"};
+        "''
+      id: 'getting-started',,''
+        ''
+      title: 'Getting Started',,''
+        ''
+      description: 'Learn how to get started with our AI solutions',,''
+        ''
+      content: 'Comprehensive guide to implementing AI in your business","'"
+      icon: <className="w-6 h-6" />,","
         """
-      articles: [",""
-        ""'
-        { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', readTime: '5 min' },","'
-        ""'
-        { title: 'Account Setup', description: 'Create and configure your account', readTime: '3 min' },","'
-        ""'
-        { title: 'First Project', description: 'Create your first AI project', readTime: '10 min' },","'
-        ""'
-        { title: 'API Keys', description: 'Generate and manage your API keys', readTime: '2 min' };
+      articles: [","
+        "''
+        { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', readTime: '5 min" },",''
+        ''
+        { title: 'Account Setup', description: 'Create and configure your account', readTime: '3 min" },",''
+        ''
+        { title: 'First Project', description: 'Create your first AI project', readTime: '10 min" },",''
+        ''
+        { title: 'API Keys', description: 'Generate and manage your API keys', readTime: '2 min" };
       ]
-    },",""
+    },","
         """
-    {"}""
-        ""'
-      id: 'ai-services',","'
-        ""'
-      title: 'AI Services',"""'
-      icon: <Code className ="w-6 h-6" />,",""
-        ""'
-      description: 'Comprehensive guides for our AI services',","'
-        """
-      articles: [",""
-        ""'
-        { title: 'Machine Learning API', description: 'Complete ML API reference', readTime: '15 min' },","'
-        ""'
-        { title: 'Computer Vision', description: 'Image and video processing guides', readTime: '12 min' },","'
-        ""'
-        { title: 'Natural Language Processing', description: 'Text analysis and generation', readTime: '8 min' },","'
-        ""'
-        { title: 'Predictive Analytics', description: 'Building predictive models', readTime: '20 min' };
+    {"};
+        "''
+      id: 'ai-services',,''
+        ''
+      title: 'AI Services","'"
+      icon: <Code className="w-6 h-6" />,","
+        "''
+      description: 'Comprehensive guides for our AI services',,'"
+        ""
+      articles: [","
+        "''
+        { title: 'Machine Learning API', description: 'Complete ML API reference', readTime: '15 min" },",''
+        ''
+        { title: 'Computer Vision', description: 'Image and video processing guides', readTime: '12 min" },",''
+        ''
+        { title: 'Natural Language Processing', description: 'Text analysis and generation', readTime: '8 min" },",''
+        ''
+        { title: 'Predictive Analytics', description: 'Building predictive models', readTime: '20 min" };
       ]
-    },",""
+    },","
         """
-    {"}""
-        ""'
-      id: 'it-services',","'
-        ""'
-      title: 'IT Services',","'
-        """
-      icon: <className="w-6 h-6" />,",""
-        ""'
-      description: 'Documentation for our IT solutions',","'
-        """
-      articles: [",""
-        ""'
-        { title: 'Cloud Infrastructure', description: 'Setting up cloud environments', readTime: '25 min' },","'
-        ""'
-        { title: 'Cybersecurity Setup', description: 'Security best practices', readTime: '18 min' },","'
-        ""'
-        { title: 'Web Development', description: 'Building modern web applications', readTime: '30 min' },","'
-        ""'
-        { title: 'Mobile Development', description: 'iOS and Android app development', readTime: '35 min' };
+    {"};
+        "''
+      id: 'it-services',,''
+        ''
+      title: 'IT Services',,'"
+        ""
+      icon: <className="w-6 h-6" />,","
+        "''
+      description: 'Documentation for our IT solutions',,'"
+        ""
+      articles: [","
+        "''
+        { title: 'Cloud Infrastructure', description: 'Setting up cloud environments', readTime: '25 min" },",''
+        ''
+        { title: 'Cybersecurity Setup', description: 'Security best practices', readTime: '18 min" },",''
+        ''
+        { title: 'Web Development', description: 'Building modern web applications', readTime: '30 min" },",''
+        ''
+        { title: 'Mobile Development', description: 'iOS and Android app development', readTime: '35 min" };
       ]
-    },",""
+    },","
         """
-    {"}""
-        ""'
-      id: 'api-reference',","'
-        ""'
-      title: 'API Reference',","'
-        """
-      icon: <Book className ="w-6 h-6" />,",""
-        ""'
-      description: 'Complete API documentation and examples',","'
-        ""'
-      content: 'Detailed API reference with examples and best practices',","'
-        """
-      articles: [",""
-        ""'
-        { title: 'Authentication', description: 'API authentication methods', readTime: '5 min' },","'
-        ""'
-        { title: 'Endpoints', description: 'Complete endpoint reference', readTime: '45 min' },","'
-        ""'
-        { title: 'SDKs', description: 'Software development kits', readTime: '10 min' },","'
-        ""'
-        { title: 'Webhooks', description: 'Real-time event notifications', readTime: '8 min' };
+    {"};
+        "''
+      id: 'api-reference',,''
+        ''
+      title: 'API Reference',,'"
+        ""
+      icon: <Book className="w-6 h-6" />,","
+        "''
+      description: 'Complete API documentation and examples',,''
+        ''
+      content: 'Detailed API reference with examples and best practices',,'"
+        ""
+      articles: [","
+        "''
+        { title: 'Authentication', description: 'API authentication methods', readTime: '5 min" },",''
+        ''
+        { title: 'Endpoints', description: 'Complete endpoint reference', readTime: '45 min" },",''
+        ''
+        { title: 'SDKs', description: 'Software development kits', readTime: '10 min" },",''
+        ''
+        { title: 'Webhooks', description: 'Real-time event notifications', readTime: '8 min" };
       ]
     };
   ]"
 ,
-      const popularArticles = [",""
-        ""'
-    { title: 'Quick Start Guide', category: 'Getting Started', readTime: '5 min', views: '12.5k' },","'
-        ""'
-    { title: 'Machine Learning API', category: 'AI Services', readTime: '15 min', views: '8.2k' },","'
-        ""'
-    { title: 'Authentication Guide', category: 'API Reference', readTime: '5 min', views: '6.8k' },","'
-        ""'
-    { title: 'Cloud Infrastructure Setup', category: 'IT Services', readTime: '25 min', views: '5.1k' },","'
-        ""'
-    { title: 'Computer Vision Tutorial', category: 'AI Services', readTime: '12 min', views: '4.7k' }"
+      const popularArticles = [","
+        "''
+    { title: 'Quick Start Guide', category: 'Getting Started', readTime: '5 min', views: '12.5k" },",''
+        ''
+    { title: 'Machine Learning API', category: 'AI Services', readTime: '15 min', views: '8.2k" },",''
+        ''
+    { title: 'Authentication Guide', category: 'API Reference', readTime: '5 min', views: '6.8k" },",''
+        ''
+    { title: 'Cloud Infrastructure Setup', category: 'IT Services', readTime: '25 min', views: '5.1k" },",''
+        ''
+    { title: 'Computer Vision Tutorial', category: 'AI Services', readTime: '12 min', views: '4.7k" };
   ]"
 ,
-      const filteredSections = documentationSections.map(section => ({",)}""
+      const filteredSections = documentationSections.map(section => ({",)};
         """
-    ...section,",""
+    ...section,","
         "";
-    articles: section.articles?.filter((article: { title: string" description: string }) =>",""
+    articles: section.articles?.filter((article: { title: string" description: string }) =>","
         """
-      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||",""
+      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||","
         "";
       article.description.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
   })).filter(section => section.articles?.length > 0);
 ,
-      return (",);"
+      return (",);
+        ""
+    <>{"}</>"
         """
-    <>{"}</>""
+      <Helmet>","
         """
-      <Helmet>",""
+        <title>Docs - Zion Tech Group</title>","
         """
-        <title>Docs - Zion Tech Group</title>",""
+      </Helmet>"""
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"";
+        {/* Hero Section */};
+        <section className="py-20">"""
+          <div className="container mx-auto px-4">"""
+            <div className="text-center max-w-4xl mx-auto">"""
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"""
+                <Book className="w-16 h-16 inline-block mr-4 text-cyan-400" />","
         """
-      </Helmet>""""
-      <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""";
-        {/* Hero Section */}"
-        <section className ="py-20">""""
-          <div className ="container mx-auto px-4">""""
-            <div className ="text-center max-w-4xl mx-auto">""""
-              <h1 className ="text-5xl md:text-6xl font-bold text-white mb-6">""""
-                <Book className ="w-16 h-16 inline-block mr-4 text-cyan-400" />",""
+                Documentation","
         """
-                Documentation",""
+              </h1>"""
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">","
         """
-              </h1>""""
-              <p className ="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">",""
+                Complete guides, tutorials, and API references to help you build amazing solutions with our platform.","
         """
-                Complete guides, tutorials, and API references to help you build amazing solutions with our platform.",""
+              </p>"";
+              {/* Search Bar */};
+              <div className="max-w-2xl mx-auto">"""
+                <div className="relative">"""
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />","
         """
-              </p>""";
-              {/* Search Bar */}"
-              <div className ="max-w-2xl mx-auto">""""
-                <div className ="relative">""""
-                  <Search className ="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />",""
+                  <input",>"
         """
-                  <input",>""
-        """
-                    type="text",""
-      placeholder="Search documentation...",""
+                    type="text","
+      placeholder="Search documentation...","
       value={searchQuery},
       onChange={(e) => setSearchQuery(e.target.value)},
-      className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent" />",""
+      className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent" />","
         """
-                </div>",""
+                </div>","
         """
-              </div>",""
+              </div>","
         """
-            </div>",""
+            </div>","
         """
-          </div>",""
+          </div>","
         """
-        </section>",""
+        </section>","
         "";
-        {/* Popular Articles */}"
-        <section className ="py-16">""""
-          <div className ="container mx-auto px-4">""""
-            <div className ="text-center mb-16">""""
-              <h2 className ="text-4xl font-bold text-white mb-6">Popular Articles</h2>""""
-              <p className ="text-xl text-gray-300 max-w-3xl mx-auto">",""
+        {/* Popular Articles */};
+        <section className="py-16">"""
+          <div className="container mx-auto px-4">"""
+            <div className="text-center mb-16">"""
+              <h2 className="text-4xl font-bold text-white mb-6">Popular Articles</h2>"""
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">","
         """
-                Most viewed and helpful documentation articles",""
+                Most viewed and helpful documentation articles","
         """
-              </p>",""
+              </p>","
         """
-            </div>",""
+            </div>","
         """
-            <div className ="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">",""
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">","
         """
-              {popularArticles.map((article, index) => (",)}""
+              {popularArticles.map((article, index) => (",)};
         """
-                <div key ={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 group">""""
-                  <div className ="flex items-center justify-between mb-4">""""
-                    <span className ="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">",""
+                <div key ={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 group">"""
+                  <div className="flex items-center justify-between mb-4">"""
+                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">","
         "";
-                      {article.category}"
-                    </span>",""
+                      {article.category};
+                    </span>","
         """
-                    <span className ="text-gray-400 text-sm">{article.readTime}</span>",""
+                    <span className="text-gray-400 text-sm">{article.readTime}</span>","
         """
-                  </div>",""
+                  </div>","
         """
-                  <h3 className ="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">",""
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">","
         "";
-                    {article.title}"
-                  </h3>",""
+                    {article.title};
+                  </h3>","
         """
-                  <div className ="flex items-center justify-between text-sm text-gray-400">",""
+                  <div className="flex items-center justify-between text-sm text-gray-400">","
         """
-                    <span>{article.views} views</span>",""
+                    <span>{article.views} views</span>","
         """
-                    <ExternalLink className ="w-4 h-4" />",""
+                    <ExternalLink className="w-4 h-4" />","
         """
-                  </div>",""
+                  </div>","
         """
-                </div>",""
+                </div>","
         "";
-              ))}"
-            </div>",""
+              ))};
+            </div>","
         """
-          </div>",""
+          </div>","
         """
-        </section>",""
+        </section>","
         "";
-        {/* Documentation Sections */}"
-        <section className ="py-16 bg-white/5">""""
-          <div className ="container mx-auto px-4">""""
-            <div className ="text-center mb-16">""""
-              <h2 className ="text-4xl font-bold text-white mb-6">Documentation Sections</h2>""""
-              <p className ="text-xl text-gray-300 max-w-3xl mx-auto">",""
+        {/* Documentation Sections */};
+        <section className="py-16 bg-white/5">"""
+          <div className="container mx-auto px-4">"""
+            <div className="text-center mb-16">"""
+              <h2 className="text-4xl font-bold text-white mb-6">Documentation Sections</h2>"""
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">","
         """
-                Browse our comprehensive documentation organized by topic",""
+                Browse our comprehensive documentation organized by topic","
         """
-              </p>",""
+              </p>","
         """
-            </div>",""
+            </div>","
         """
-            <div className ="max-w-6xl mx-auto space-y-6">",""
+            <div className="max-w-6xl mx-auto space-y-6">","
         """
-              {filteredSections.map((section) => (",)}""
+              {filteredSections.map((section) => (",)};
         """
-                <div key ={section.id} className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">",""
+                <div key ={section.id} className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">","
         """
-                  <button",>""
+                  <button",>"
         """
                     onClick={() => setExpandedSection(expandedSection === section.id ? null : section.id)},
       className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
-                  >""""
-                    <div className ="flex items-center">""""
-                      <div className ="text-cyan-400 mr-4">"""'
-                        {section.icon || <Book className ="w-6 h-6" />};
-                      </div>",""
+                  >"""
+                    <div className="flex items-center">"""
+                      <div className="text-cyan-400 mr-4">"'"
+                        {section.icon || <Book className="w-6 h-6" />};
+                      </div>","
         """
-                      <div>",""
+                      <div>","
         """
-                        <h3 className ="text-2xl font-bold text-white">{section.title}</h3>""""
-                        <p className ="text-gray-300">{section.description}</p>",""
+                        <h3 className="text-2xl font-bold text-white">{section.title}</h3>"""
+                        <p className="text-gray-300">{section.description}</p>","
         """
-                      </div>",""
+                      </div>","
         """
-                    </div>",""
+                    </div>","
         """
-                    {expandedSection === section.id ? (",)}""
+                    {expandedSection === section.id ? (",)};
         """
-                      <ChevronDown className ="w-6 h-6 text-cyan-400" />",""
+                      <ChevronDown className="w-6 h-6 text-cyan-400" />","
         """
-                    ) : (",);"
-        """
-                      <ChevronRight className ="w-6 h-6 text-cyan-400" />",""
+                    ) : (",);
+        ""
+                      <ChevronRight className="w-6 h-6 text-cyan-400" />","
         "";
-                    )}"
-                  </button>",""
+                    )};
+                  </button>","
         """
-                  {expandedSection === section.id && ("")}""
-                    <div className ="px-8 pb-6">""""
-                      <div className ="grid md:grid-cols-2 gap-4">",""
+                  {expandedSection === section.id && (")};"
+                    <div className="px-8 pb-6">"""
+                      <div className="grid md:grid-cols-2 gap-4">","
         "";
-                        {section.articles?.map((article: { title: string; readTime: string" description: string }, articleIndex: number) => (",);"
-        """
-                          <div key ={articleIndex} className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors cursor-pointer group">""""
-                            <div className ="flex items-center justify-between mb-2">""""
-                              <h4 className ="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">",""
+                        {section.articles?.map((article: { title: string; readTime: string" description: string }, articleIndex: number) => (",);
+        ""
+                          <div key ={articleIndex} className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors cursor-pointer group">"""
+                            <div className="flex items-center justify-between mb-2">"""
+                              <h4 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">","
         "";
-                                {article.title}"
-                              </h4>",""
+                                {article.title};
+                              </h4>","
         """
-                              <span className ="text-gray-400 text-sm">{article.readTime}</span>",""
+                              <span className="text-gray-400 text-sm">{article.readTime}</span>","
         """
-                            </div>",""
+                            </div>","
         """
-                            <p className ="text-gray-300 text-sm mb-2">{article.description}</p>""""
-                            <div className ="flex items-center text-cyan-400 text-sm">",""
+                            <p className="text-gray-300 text-sm mb-2">{article.description}</p>"""
+                            <div className="flex items-center text-cyan-400 text-sm">","
         """
-                              <span>Read more</span>",""
+                              <span>Read more</span>","
         """
-                              <ExternalLink className ="w-3 h-3 ml-1" />",""
+                              <ExternalLink className="w-3 h-3 ml-1" />","
         """
-                            </div>",""
+                            </div>","
         """
-                          </div>",""
+                          </div>","
         "";
-                        ))}"
-                      </div>",""
+                        ))};
+                      </div>","
         """
-                    </div>",""
+                    </div>","
         "";
-                  )}"
-                </div>",""
+                  )};
+                </div>","
         "";
-              ))}"
-            </div>",""
+              ))};
+            </div>","
         """
-          </div>",""
+          </div>","
         """
-        </section>""";
-        {/* Quick Start */}"
-        <section className ="py-16">""""
-          <div className ="container mx-auto px-4">""""
-            <div className ="max-w-4xl mx-auto">""""
-              <div className ="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-xl p-12 text-center">""""
-                <h2 className ="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>""""
-                <p className ="text-xl text-white/90 mb-8">",""
+        </section>"";
+        {/* Quick Start */};
+        <section className="py-16">"""
+          <div className="container mx-auto px-4">"""
+            <div className="max-w-4xl mx-auto">"""
+              <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-xl p-12 text-center">"""
+                <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>"""
+                <p className="text-xl text-white/90 mb-8">","
         """
-                  Follow our quick start guide to begin building with our platform in just a few minutes.",""
+                  Follow our quick start guide to begin building with our platform in just a few minutes.","
         """
-                </p>""""
-                <div className ="flex flex-col sm:flex-row gap-4 justify-center">""""
-                  <button className ="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">",""
+                </p>"""
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
+                  <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">","
         """
-                    Start Building",""
+                    Start Building","
         """
-                  </button>""""
-                  <button className ="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">",""
+                  </button>"""
+                  <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">","
         """
-                    View Examples",""
+                    View Examples","
         """
-                  </button>",""
+                  </button>","
         """
-                </div>",""
+                </div>","
         """
-              </div>",""
+              </div>","
         """
-            </div>",""
+            </div>","
         """
-          </div>",""
+          </div>","
         """
-        </section>",""
+        </section>","
         "";
-        {/* Additional Resources */}"
-        <section className ="py-16 bg-white/5">""""
-          <div className ="container mx-auto px-4">""""
-            <div className ="max-w-6xl mx-auto">""""
-              <div className ="text-center mb-16">""""
-                <h2 className ="text-4xl font-bold text-white mb-6">Additional Resources</h2>""""
-                <p className ="text-xl text-gray-300 max-w-3xl mx-auto">",""
+        {/* Additional Resources */};
+        <section className="py-16 bg-white/5">"""
+          <div className="container mx-auto px-4">"""
+            <div className="max-w-6xl mx-auto">"""
+              <div className="text-center mb-16">"""
+                <h2 className="text-4xl font-bold text-white mb-6">Additional Resources</h2>"""
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">","
         """
-                  More tools and resources to help you succeed",""
+                  More tools and resources to help you succeed","
         """
-                </p>",""
+                </p>","
         """
-              </div>",""
+              </div>","
         """
-              <div className ="grid md:grid-cols-3 gap-8">""""
-                <div className ="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">""""
-                  <Code className ="w-12 h-12 text-cyan-400 mx-auto mb-6" />""""
-                  <h3 className ="text-xl font-bold text-white mb-4">Code Examples</h3>""""
-                  <p className ="text-gray-300 mb-6">Real-world code examples and snippets for common use cases</p>""""
-                  <button className ="text-cyan-400 hover:text-cyan-300 font-semibold">",""
+              <div className="grid md:grid-cols-3 gap-8">"""
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">"""
+                  <Code className="w-12 h-12 text-cyan-400 mx-auto mb-6" />"""
+                  <h3 className="text-xl font-bold text-white mb-4">Code Examples</h3>"""
+                  <p className="text-gray-300 mb-6">Real-world code examples and snippets for common use cases</p>"""
+                  <button className="text-cyan-400 hover:text-cyan-300 font-semibold">","
         """
-                    Browse Examples",""
+                    Browse Examples","
         """
-                  </button>",""
+                  </button>","
         """
-                </div>",""
+                </div>","
         """
-                <div className ="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">""""
-                  <className="w-12 h-12 text-cyan-400 mx-auto mb-6" />""""
-                  <h3 className ="text-xl font-bold text-white mb-4">Tutorials</h3>""""
-                  <p className ="text-gray-300 mb-6">Step-by-step tutorials for building complete solutions</p>""""
-                  <button className ="text-cyan-400 hover:text-cyan-300 font-semibold">",""
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">"""
+                  <className="w-12 h-12 text-cyan-400 mx-auto mb-6" />"""
+                  <h3 className="text-xl font-bold text-white mb-4">Tutorials</h3>"""
+                  <p className="text-gray-300 mb-6">Step-by-step tutorials for building complete solutions</p>"""
+                  <button className="text-cyan-400 hover:text-cyan-300 font-semibold">","
         """
-                    View Tutorials",""
+                    View Tutorials","
         """
-                  </button>",""
+                  </button>","
         """
-                </div>",""
+                </div>","
         """
-                <div className ="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">""""
-                  <className="w-12 h-12 text-cyan-400 mx-auto mb-6" />""""
-                  <h3 className ="text-xl font-bold text-white mb-4">Best Practices</h3>""""
-                  <p className ="text-gray-300 mb-6">Security, performance, and architecture best practices</p>""""
-                  <button className ="text-cyan-400 hover:text-cyan-300 font-semibold">",""
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">"""
+                  <className="w-12 h-12 text-cyan-400 mx-auto mb-6" />"""
+                  <h3 className="text-xl font-bold text-white mb-4">Best Practices</h3>"""
+                  <p className="text-gray-300 mb-6">Security, performance, and architecture best practices</p>"""
+                  <button className="text-cyan-400 hover:text-cyan-300 font-semibold">","
         """
-                    Learn More",""
+                    Learn More","
         """
-                  </button>",""
+                  </button>","
         """
-                </div>",""
+                </div>","
         """
-              </div>",""
+              </div>","
         """
-            </div>",""
+            </div>","
         """
-          </div>",""
+          </div>","
         """
-        </section>",""
+        </section>","
         """
-      </div>",""
+      </div>","
         """
-    </>",""
-        "";
+    </>","
+        "';
   )
     },
     {}
 ,
       export default DocsPage'
 
-import React from 'react;;"
-import SEOHead from './components/SEOHead';
+import React from 'react;;
+import SEOHead from './components/SEOHead";
 ;
 const DocsPage: React.FC = () => {
   return (
     <>;
       <SEOHead"
-        title="Docs - Zion Tech Group"""
-        description="Professional docs solutions for modern businesses""
+        title="Docs - Zion Tech Group""
+        description="Professional docs solutions for modern businesses"
       />""
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">""
-        <div className ="text-center">"""'
-          <h1 className ="text-4xl font-bold mb-4">Docs</h1>"'
-          <p className ="text-gray-300">Professional solutions coming soon...</p>'
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
+        <div className="text-center">"'"
+          <h1 className="text-4xl font-bold mb-4">Docs</h1>'"
+          <p className="text-gray-300'>Professional solutions coming soon...</p>'
         </div>;
       </div>;
     </>;
   ),
 };
-"
-export default DocsPage'"'";
+export default DocsPage""'";
 
 

@@ -9,44 +9,44 @@ function fixFinalSyntax(content) {
   content = content.replace(/try\s*\{\s*;/g, 'try {');
   
   // Fix console.error statements
-  content = content.replace(/console\.error\([^)]+\);/g, (match) => match.slice(0, -1) + ';');
+  content = content.replace(/console\.error\([^)]+\);/g, (match) => match.slice(0, -1) + ';);
   
   // Fix closing braces with extra quotes
-  content = content.replace(/}\s*'/g, '};');
+  content = content.replace(/}\s*'/g, '};);
   
   // Fix if statements with extra quotes
-  content = content.replace(/if\s*\([^)]+\)\s*\{\s*"'\s*/g, (match) => match.replace(/"'\s*$/, ' {'));
+  content = content.replace(/if\s*\([^)]+\)\s*\{\s*''\s*/g, (match) => match.replace(/''\s*$/, ' {'));
   
   // Fix return statements
-  content = content.replace(/return\s+[^;]+\);/g, (match) => match.slice(0, -1) + ';');
+  content = content.replace(/return\s+[^;]+\);/g, (match) => match.slice(0, -1) + ';);
   
   // Fix variable declarations
-  content = content.replace(/const\s+[^=]+=\s*[^;]+\);/g, (match) => match.slice(0, -1) + ';');
+  content = content.replace(/const\s+[^=]+=\s*[^;]+\);/g, (match) => match.slice(0, -1) + ';);
   
   // Fix object destructuring
-  content = content.replace(/const\s+\{[^}]+\}\s*=\s*[^;]+\);/g, (match) => match.slice(0, -1) + ';');
+  content = content.replace(/const\s+\{[^}]+\}\s*=\s*[^;]+\);/g, (match) => match.slice(0, -1) + ';);
   
   // Fix function calls
-  content = content.replace(/\([^)]+\)\s*\{\s*"'\s*/g, (match) => match.replace(/"'\s*$/, ' {'));
+  content = content.replace(/\([^)]+\)\s*\{\s*''\s*/g, (match) => match.replace(/''\s*$/, ' {'));
   
   // Fix string literals with extra quotes
-  content = content.replace(/'([^']+);/g, "'$1'");
-  content = content.replace(/"([^"]+);/g, '"$1"');
+  content = content.replace(/'([^']+);/g, ''$1'");
+  content = content.replace(/"([^']+);/g, ""$1'');
   
   // Fix semicolons
-  content = content.replace(/;\s*'/g, ';');
-  content = content.replace(/;\s*';/g, ';');
+  content = content.replace(/;\s*'/g, ';);
+  content = content.replace(/;\s*';/g, ';);
   
   // Fix closing parentheses
-  content = content.replace(/\)\s*'/g, ');');
-  content = content.replace(/\)\s*';/g, ');');
+  content = content.replace(/\)\s*'/g, '););
+  content = content.replace(/\)\s*';/g, '););
   
   // Fix export statements
-  content = content.replace(/export\s+default\s+[^;]+'/g, (match) => match.slice(0, -1) + ';');
+  content = content.replace(/export\s+default\s+[^;]+'/g, (match) => match.slice(0, -1) + ';);
   
   // Fix JSX closing tags
-  content = content.replace(/\)\s*"/g, ');');
-  content = content.replace(/\)\s*'/g, ');');
+  content = content.replace(/\)\s*'/g, '););
+  content = content.replace(/\)\s*'/g, '););
   
   return content;
 }
@@ -83,7 +83,7 @@ async function main() {
   
   for (const pattern of patterns) {
     const files = await glob(pattern, {
-      ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**']
+      ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**"]
     });
     
     for (const file of files) {

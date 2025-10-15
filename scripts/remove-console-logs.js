@@ -13,9 +13,9 @@ function removeConsoleLogs(filePath) {
     
     // Remove console.log, console.warn, console.error statements
     let newContent = content;
-      .replace(/console\.log\([^)]*\);?/g, ');"
-      .replace(/console\.warn\([^)]*\);?/g, ');"
-      .replace(/console\.error\([^)]*\);?/g, ');"
+      .replace(/console\.log\([^)]*\);?/g, ');
+      .replace(/console\.warn\([^)]*\);?/g, ');
+      .replace(/console\.error\([^)]*\);?/g, ');
       .replace(/console\.debug\([^)]*\);?/g, ');;
       .replace(/console\.info\([^)]*\);?/g, ');
     
@@ -61,7 +61,7 @@ async function processDistFiles() {
     for (const file of jsFiles) {
       const filePath = path.join(distPath, file);
       if (removeConsoleLogs(filePath)) {
-        processedCount++"
+        processedCount++'
       }
     }
     

@@ -22,4 +22,4 @@ export const PerformanceOptimizer = (options: PerformanceOptimizerOptions = {}) 
   };
 };
 ;
-export default PerformanceOptimizer;"'
+export default PerformanceOptimizer;

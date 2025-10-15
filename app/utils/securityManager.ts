@@ -22,4 +22,4 @@ export const SecurityManager = (options: SecurityManagerOptions = {}) => {
   };
 };
 ;
-export default SecurityManager;"'
+export default SecurityManager;

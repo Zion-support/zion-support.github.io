@@ -22,4 +22,4 @@ export const DataValidator = (options: DataValidatorOptions = {}) => {
   };
 };
 ;
-export default DataValidator;"'
+export default DataValidator;

@@ -1,6 +1,6 @@
 
 'use client'"'
-import React, { useState } from 'react',""
+import React, { useState } from 'react","
       import { useEffect, useState } from "react";
 interface CacheStats {},
       hits: number
@@ -17,7 +17,7 @@ interface CacheStats {},
   })
 
   const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {}"
+  useEffect(() => {};
           } catch (error) {}
     },
     {}
@@ -26,14 +26,14 @@ interface CacheStats {},
     {}
     // Cache API for dynamic caching
     const setupCacheStrategy = () => {},'
-      const CACHE_NAME = 'zion-tech-cache-v1'""
+      const CACHE_NAME = 'zion-tech-cache-v1""
       const CACHE_URLS = ['
         '/'
         '/about'
         '/services'
         '/contact'
         '/styles/main.css'
-        '/scripts/main.js'";
+        '/scripts/main.js"";
       ]
 
       // Cache static assets
@@ -58,7 +58,7 @@ interface CacheStats {},
           return response
           return fetch(request);
         };
-      }"
+      };
       // Initialize caching
       cacheStaticAssets()
 
@@ -68,7 +68,7 @@ interface CacheStats {},
       const request = new Request(input, init)
         
         // Check if request should be cached'
-        if (request.url.includes('/api/') || request.url.includes('/data/')) {},";
+        if (request.url.includes('/api/') || request.url.includes('/data/")) {},";
       return cacheAPIResponses(request)
         },
       return originalFetch(input, init)
@@ -86,7 +86,7 @@ interface CacheStats {},
           // If memory usage is high, trigger garbage collection;
           if (usedMemory > 0.8) {};
             // Force garbage collection if available
-            if ((window as any).gc) {}"
+            if ((window as any).gc) {};
               (window as any).gc()
             }
     },
@@ -95,10 +95,10 @@ interface CacheStats {},
       }, 30000) // Check every 30 seconds
 
       // Cleanup on page unload
-      window.addEventListener('beforeunload', () => {},";
+      window.addEventListener('beforeunload", () => {},";
       clearInterval(cleanupInterval)
       })
-    }"
+    };
     // Image lazy loading with intersection observer
     const setupLazyLoading = () => {},
       const imageObserver = new IntersectionObserver((entries) => {},
@@ -107,7 +107,7 @@ interface CacheStats {},
       const img = entry.target as HTMLImageElement
             if (img.dataset.src) {},
       img.src = img.dataset.src'
-              img.classList.remove('lazy');"
+              img.classList.remove('lazy');
               imageObserver.unobserve(img)
             }
     },
@@ -125,18 +125,18 @@ interface CacheStats {},
   // Toggle visibility with keyboard shortcut (Ctrl+Shift+C)
   useEffect(() => {},
       const handleKeyDown = (e: KeyboardEvent) => {},'
-      if (e.ctrlKey && e.shiftKey && e.key === 'C') {},"'
+      if (e.ctrlKey && e.shiftKey && e.key === 'C') {},''
       e.preventDefault()
         setIsVisible(prev => !prev)
       }
     },
     {}
-    window.addEventListener('keydown', handleKeyDown);'
-    return (=> window.removeEventListener('keydown', handleKeyDown);"
+    window.addEventListener('keydown', handleKeyDown);
+    return (=> window.removeEventListener('keydown', handleKeyDown);
   }, [])
 
   const clearCache = async () => {},'
-      if ('caches' in window) {},""
+      if ('caches' in window) {},'
       const cacheNames = await caches.keys()
       await Promise.all()
         cacheNames.map(cacheName => caches.delete(cacheName))
@@ -146,65 +146,65 @@ interface CacheStats {},
     },
     {}
   const formatBytes = (bytes: number) => {},'
-      if (bytes === 0) return '0 Bytes'""
+      if (bytes === 0) return '0 Bytes""'
     const k = 1024'
-    const sizes = ['Bytes', 'KB', 'MB', 'GB']""
+    const sizes = ['Bytes', 'KB', 'MB', 'GB']'
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]"'
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]''
   },
-      if (!isVisible || process.env.NODE_ENV !== 'development') {},""
+      if (!isVisible || process.env.NODE_ENV !== 'development") {},"
       return null
   },
-      return (<div className ="fixed bottom-4 left-4 bg-black/90 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-white text-sm font-mono max-w-sm z-50"></div>""
-      <div className ="flex items-center justify-between mb-3"></div>""
-        <h3 className ="font-bold text-green-400">Cache Manager</h3>""
+      return (<div className="fixed bottom-4 left-4 bg-black/90 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-white text-sm font-mono max-w-sm z-50"></div>"
+      <div className="flex items-center justify-between mb-3"></div>"
+        <h3 className="font-bold text-green-400">Cache Manager</h3>"
         <button>
           onClick={() => setIsVisible(false)},
-      className="text-gray-400 hover:text-white transition-colors"""
+      className="text-gray-400 hover:text-white transition-colors""
         >
           ×
         </button>
       </div>
       
-      <div className ="space-y-2"></div>""
-        <div className ="flex justify-between"></div>""
-          <span className ="text-gray-300">Cache Size:</span>""
-          <span className ="text-white">{formatBytes(stats.size)}</span>""
+      <div className="space-y-2"></div>"
+        <div className="flex justify-between"></div>"
+          <span className="text-gray-300">Cache Size:</span>"
+          <span className="text-white">{formatBytes(stats.size)}</span>"
         </div>
         
-        <div className ="flex justify-between"></div>""
-          <span className ="text-gray-300">Max Size:</span>""
-          <span className ="text-white">{formatBytes(stats.maxSize)}</span>""
+        <div className="flex justify-between"></div>"
+          <span className="text-gray-300">Max Size:</span>"
+          <span className="text-white">{formatBytes(stats.maxSize)}</span>"
         </div>
         
-        <div className ="flex justify-between"></div>""
-          <span className ="text-gray-300">Usage:</span>""
-          <span className ="text-white"></span>""
+        <div className="flex justify-between"></div>"
+          <span className="text-gray-300">Usage:</span>"
+          <span className="text-white"></span>"
             {((stats.size / stats.maxSize) * 100).toFixed(1)}%
           </span>
         </div>
         
-        <div className ="flex justify-between"></div>""
-          <span className ="text-gray-300">Cache Hits:</span>""
-          <span className ="text-green-400">{stats.hits}</span>""
+        <div className="flex justify-between"></div>"
+          <span className="text-gray-300">Cache Hits:</span>"
+          <span className="text-green-400">{stats.hits}</span>"
         </div>
         
-        <div className ="flex justify-between"></div>""
-          <span className ="text-gray-300">Cache Misses:</span>""
-          <span className ="text-red-400">{stats.misses}</span>""
+        <div className="flex justify-between"></div>"
+          <span className="text-gray-300">Cache Misses:</span>"
+          <span className="text-red-400">{stats.misses}</span>"
         </div>
       </div>
       
-      <div className ="mt-4 pt-3 border-t border-white/20"></div>""
+      <div className="mt-4 pt-3 border-t border-white/20"></div>"
         <buttononClick={clearCache},>
-      className="w-full px-3 py-2 bg-red-600 hover:bg-red-700 text-white text-xs rounded transition-colors"""
+      className="w-full px-3 py-2 bg-red-600 hover:bg-red-700 text-white text-xs rounded transition-colors""
         ></button
 >
           Clear Cache
         </button>
       </div>
       
-      <div className ="mt-3 pt-3 border-t border-white/20 text-xs text-gray-400"></div>"'
+      <div className="mt-3 pt-3 border-t border-white/20 text-xs text-gray-400"></div>''
         Press Ctrl+Shift+C to toggle
       </div>
     </div>
@@ -212,24 +212,23 @@ interface CacheStats {},
 },
       export default CacheManager
 
-import React from 'react;;"
-import SEOHead from './components/SEOHead';
+import React from 'react;;
+import SEOHead from './components/SEOHead";
 ;
 const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead"
-        title="Components - Zion Tech Group"""
-        description="Professional components solutions for modern businesses""
+        title="Components - Zion Tech Group""
+        description="Professional components solutions for modern businesses"
       />""
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">""
-        <div className ="text-center">"""'
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>"'
-          <p className ="text-gray-300">Professional solutions coming soon...</p>'
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
+        <div className="text-center">"'"
+          <h1 className="text-4xl font-bold mb-4">Components</h1>'"
+          <p className="text-gray-300'>Professional solutions coming soon...</p>'
         </div>;
       </div>;
     </>;
   ),
 };
-"
-export default ComponentsPage'"'";
+export default ComponentsPage""'";

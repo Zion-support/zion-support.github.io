@@ -22,4 +22,4 @@ export const UseEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   };
 };
 ;
-export default UseEnhancedPerformance;"'
+export default UseEnhancedPerformance;

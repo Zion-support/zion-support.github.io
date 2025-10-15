@@ -22,4 +22,4 @@ export const ApiClient = (options: ApiClientOptions = {}) => {
   };
 };
 ;
-export default ApiClient;"'
+export default ApiClient;

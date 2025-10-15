@@ -22,4 +22,4 @@ export const PerformanceOptimizations = (options: PerformanceOptimizationsOption
   };
 };
 ;
-export default PerformanceOptimizations;"'
+export default PerformanceOptimizations;

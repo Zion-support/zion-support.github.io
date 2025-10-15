@@ -43,4 +43,4 @@ export function createLazyComponent<T extends ComponentType<any>>()
       <LazyComponent {...(props as any)} />
     </Suspense>
   );,
-};"'
+};"

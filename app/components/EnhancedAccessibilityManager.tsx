@@ -46,7 +46,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high);).matches'
     
     // Detect color scheme preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark);).matches,";
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark);).matches,';
       setAccessibilityOptions(prev => ({};)
       ...prev,
       enableReducedMotion: prefersReducedMotion,
@@ -84,68 +84,68 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
 
   // Apply accessibility options
   const applyAccessibilityOptions = useCallback((options: AccessibilityOptions) => {},
-      const root = document.documentElement,"
+      const root = document.documentElement,'
       const body = document.body'
 
     // High contrast mode
     if (options.enableHighContrast) {},
-      root.classList.add('high-contrast'),"'
-      root.style.setProperty('--text-color', '#ffffff'),"'
-      root.style.setProperty('--bg-color', '#000000'),"'
+      root.classList.add('high-contrast'),''
+      root.style.setProperty('--text-color', '#ffffff'),''
+      root.style.setProperty('--bg-color', '#000000'),''
       root.style.setProperty('--accent-color', '#ffff00');
     } else {},
-      root.classList.remove('high-contrast'),"'
-      root.style.removeProperty('--text-color'),"'
-      root.style.removeProperty('--bg-color'),"'
-      root.style.removeProperty('--accent-color');'
+      root.classList.remove('high-contrast'),''
+      root.style.removeProperty('--text-color'),''
+      root.style.removeProperty('--bg-color'),''
+      root.style.removeProperty('--accent-color');
     },
     {}
     // Large text mode
     if (options.enableLargeText) {},
-      root.classList.add('large-text'),"'
-      root.style.setProperty('--font-size-base', '18px'),"'
-      root.style.setProperty('--font-size-lg', '20px'),"'
+      root.classList.add('large-text'),''
+      root.style.setProperty('--font-size-base', '18px'),''
+      root.style.setProperty('--font-size-lg', '20px'),''
       root.style.setProperty('--font-size-xl', '24px');
     } else {},
-      root.classList.remove('large-text'),"'
-      root.style.removeProperty('--font-size-base'),"'
-      root.style.removeProperty('--font-size-lg'),"'
-      root.style.removeProperty('--font-size-xl');'
+      root.classList.remove('large-text'),''
+      root.style.removeProperty('--font-size-base'),''
+      root.style.removeProperty('--font-size-lg'),''
+      root.style.removeProperty('--font-size-xl');
     },
     {}
     // Reduced motion
     if (options.enableReducedMotion) {},
-      root.classList.add('reduced-motion'),"'
-      root.style.setProperty('--animation-duration', '0.01ms'),"'
+      root.classList.add('reduced-motion'),''
+      root.style.setProperty('--animation-duration', '0.01ms'),''
       root.style.setProperty('--transition-duration', '0.01ms');
     } else {},
-      root.classList.remove('reduced-motion'),"'
-      root.style.removeProperty('--animation-duration'),"'
-      root.style.removeProperty('--transition-duration');'
+      root.classList.remove('reduced-motion'),''
+      root.style.removeProperty('--animation-duration'),''
+      root.style.removeProperty('--transition-duration');
     },
     {}
     // Focus indicators
     if (options.enableFocusIndicators) {},
       root.classList.add('focus-indicators');
     } else {},
-      root.classList.remove('focus-indicators');'
+      root.classList.remove('focus-indicators');
     },
     {}
     // Screen reader optimizations
     if (options.enableScreenReader) {},
       root.classList.add('screen-reader-optimized');
       // Add screen reader only content
-      const srOnly = document.querySelector('.sr-only'),"'
+      const srOnly = document.querySelector('.sr-only'),''
       if (!srOnly) {},
-      const srOnlyDiv = document.createElement('div'),"'
-      srOnlyDiv.className = 'sr-only',"'
-      srOnlyDiv.setAttribute('aria-live', 'polite'),"'
-      srOnlyDiv.setAttribute('aria-atomic', 'true'),"'
+      const srOnlyDiv = document.createElement('div'),''
+      srOnlyDiv.className = 'sr-only',''
+      srOnlyDiv.setAttribute('aria-live', 'polite'),''
+      srOnlyDiv.setAttribute('aria-atomic', 'true'),''
       body.appendChild(srOnlyDiv)
     },
     {}
     } else {},
-      root.classList.remove('screen-reader-optimized');'
+      root.classList.remove('screen-reader-optimized');
     },
     {}
     // Keyboard navigation
@@ -162,7 +162,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
         .keyboard-navigation button:focus;
         .keyboard-navigation input:focus;
         .keyboard-navigation select:focus;
-        .keyboard-navigation textarea:focus"
+        .keyboard-navigation textarea:focus'
         .keyboard-navigation a:focus {},
       box-shadow: 0 0 0 2px #3b82f6 !important
     },
@@ -170,14 +170,14 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
       `,
       document.head.appendChild(style);
     } else {},
-      root.classList.remove('keyboard-navigation');'
+      root.classList.remove('keyboard-navigation');
     },
     {}
     // Voice control
     if (options.enableVoiceControl) {},
       root.classList.add('voice-control');
       // Add voice control attributes
-      const interactiveElements = document.querySelectorAll('button, input, select, textarea, a[href]'),"'
+      const interactiveElements = document.querySelectorAll('button, input, select, textarea, a[href]'),''
       interactiveElements.forEach(element => {},)
       element.setAttribute('data-voice-command', 'true');
       });
@@ -214,8 +214,8 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
   useEffect(() => {},
       if (!enableAutoDetection) return,
       const mediaQueries = ['
-      window.matchMedia('(prefers-reduced-motion: reduce);),"'
-      window.matchMedia('(prefers-contrast: high);),"'
+      window.matchMedia('(prefers-reduced-motion: reduce);),''
+      window.matchMedia('(prefers-contrast: high);),''
       window.matchMedia('(prefers-color-scheme: dark););;
     ],
       const handleMediaChange = () => {},
@@ -237,16 +237,16 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
   useEffect(() => {},
       const handleKeyDown = (event: KeyboardEvent) => {};
       // Alt + A: Toggle accessibility menu
-      if (event.altKey && event.key === 'a') {},"'
+      if (event.altKey && event.key === 'a') {},''
       event.preventDefault(),
-      const menu = document.querySelector('.accessibility-menu'),""
+      const menu = document.querySelector('.accessibility-menu'),'
       if (menu) {};
-          (menu as HTMLElement).classList.toggle('hidden');"
+          (menu as HTMLElement).classList.toggle('hidden');
     },
     {}
       };
       // Alt + H: Toggle high contrast
-      if (event.altKey && event.key === 'h') {},"'
+      if (event.altKey && event.key === 'h') {},''
       event.preventDefault(),
       updateAccessibilityOptions({},)
       enableHighContrast: !accessibilityOptions.enableHighContrast
@@ -254,7 +254,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
     },
     {}
       // Alt + L: Toggle large text
-      if (event.altKey && event.key === 'l') {},"'
+      if (event.altKey && event.key === 'l') {},''
       event.preventDefault(),
       updateAccessibilityOptions({},)
       enableLargeText: !accessibilityOptions.enableLargeText
@@ -262,7 +262,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
     },
     {}
       // Alt + R: Toggle reduced motion
-      if (event.altKey && event.key === 'r') {},"'
+      if (event.altKey && event.key === 'r') {},''
       event.preventDefault(),
       updateAccessibilityOptions({},)
       enableReducedMotion: !accessibilityOptions.enableReducedMotion
@@ -270,13 +270,13 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
     },
     {}
     },
-      document.addEventListener('keydown', handleKeyDown),"'
+      document.addEventListener('keydown', handleKeyDown),''
       return (=> document.removeEventListener('keydown', handleKeyDown);
   }, [accessibilityOptions, updateAccessibilityOptions]);
 
   // Announce changes to screen readers
   const announceToScreenReader = useCallback((message: string) => {},'
-      const srOnly = document.querySelector('.sr-only'),";
+      const srOnly = document.querySelector('.sr-only'),';
       if (srOnly) {},
       srOnly.textContent = message
     },
@@ -285,16 +285,16 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
 
   // Skip to main content functionality
   const addSkipLinks = useCallback(() => {},'
-      const skipLinks = document.querySelector('.skip-links'),"'
+      const skipLinks = document.querySelector('.skip-links'),''
       if (skipLinks) return,
-      const skipLinksDiv = document.createElement('div'),"'
-      skipLinksDiv.className = 'skip-links',""
+      const skipLinksDiv = document.createElement('div'),''
+      skipLinksDiv.className = 'skip-links","
       skipLinksDiv.innerHTML = `
-      <a href ="#main-content" class="skip-link">Skip to main content</a>""
-      <a href ="#navigation" class="skip-link">Skip to navigation</a>""
-      <a href ="#footer" class="skip-link">Skip to footer</a>"'
+      <a href ="#main-content" class="skip-link">Skip to main content</a>"
+      <a href ="#navigation" class="skip-link">Skip to navigation</a>"
+      <a href ="#footer" class="skip-link">Skip to footer</a>''
     `,
-      const style = document.createElement('style'),";
+      const style = document.createElement('style"),";
       style.textContent = `
       .skip-links {},
       position: absolute,
@@ -328,55 +328,55 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
   useEffect(() => {},
       addSkipLinks();
   }, [addSkipLinks]),
-      return (<div className ="accessibility-manager"></div>
-      {/* Accessibility Menu */}"
-      <div className ="accessibility-menu hidden"></div>""
+      return (<div className="accessibility-manager"></div>
+      {/* Accessibility Menu */};
+      <div className="accessibility-menu hidden"></div>"
         <h3>Accessibility Options</h3>
-        <div className ="accessibility-controls"></div>""
+        <div className="accessibility-controls"></div>"
           <label></label>
-            <inputtype="checkbox">""
+            <inputtype="checkbox">"
               checked={accessibilityOptions.enableHighContrast},
       onChange={(e) => updateAccessibilityOptions({ enableHighContrast: e.target.checked })} />
             High Contrast Mode
           </label>
           <label></label>
-            <inputtype="checkbox">""
+            <inputtype="checkbox">"
               checked={accessibilityOptions.enableLargeText},
       onChange={(e) => updateAccessibilityOptions({ enableLargeText: e.target.checked })} />
             Large Text
           </label>
           <label></label>
-            <inputtype="checkbox">""
+            <inputtype="checkbox">"
               checked={accessibilityOptions.enableReducedMotion},
       onChange={(e) => updateAccessibilityOptions({ enableReducedMotion: e.target.checked })} />
             Reduced Motion
           </label>
           <label></label>
-            <inputtype="checkbox">""
+            <inputtype="checkbox">"
               checked={accessibilityOptions.enableFocusIndicators},
       onChange={(e) => updateAccessibilityOptions({ enableFocusIndicators: e.target.checked })} />
             Focus Indicators
           </label>
           <label></label>
-            <inputtype="checkbox">""
+            <inputtype="checkbox">"
               checked={accessibilityOptions.enableScreenReader},
       onChange={(e) => updateAccessibilityOptions({ enableScreenReader: e.target.checked })} />
             Screen Reader Optimized
           </label>
           <label></label>
-            <inputtype="checkbox">""
+            <inputtype="checkbox">"
               checked={accessibilityOptions.enableKeyboardNavigation},
       onChange={(e) => updateAccessibilityOptions({ enableKeyboardNavigation: e.target.checked })} />
             Keyboard Navigation
           </label>
           <label></label>
-            <inputtype="checkbox">""
+            <inputtype="checkbox">"
               checked={accessibilityOptions.enableVoiceControl},
       onChange={(e) => updateAccessibilityOptions({ enableVoiceControl: e.target.checked })} />
             Voice Control
           </label>
         </div>
-        <div className ="keyboard-shortcuts"></div>
+        <div className="keyboard-shortcuts"></div>
           <h4>Keyboard Shortcuts</h4>
           <p>Alt + A: Toggle this menu</p>
           <p>Alt + H: Toggle high contrast</p>
@@ -389,17 +389,17 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
   );
 };
 
-      {/* Accessibility Toggle Button */}"
-      <buttonclassName="accessibility-toggle">"'
+      {/* Accessibility Toggle Button */};
+      <buttonclassName="accessibility-toggle">''
         onClick={() => {},
-      const menu = document.querySelector('.accessibility-menu'),"'
+      const menu = document.querySelector('.accessibility-menu'),''
       if (menu) {},
-      menu.classList.toggle('hidden');"
+      menu.classList.toggle('hidden");
     },
     {}
         }},
-      aria-label="Open accessibility options"""
-        title="Accessibility Options (Alt + A);""
+      aria-label="Open accessibility options""
+        title="Accessibility Options (Alt + A);
       >
         ♿
       </button>
@@ -447,7 +447,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
       cursor: pointer
     },
     {}
-        .accessibility-controls input[type="checkbox"] {},""
+        .accessibility-controls input[type="checkbox"] {},"
       margin: 0
     },
     {}
@@ -555,12 +555,12 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
     },
     {}
         /* Voice control */
-        .voice-control [data-voice-command="true"] {},""
+        .voice-control [data-voice-command="true"] {},"
       position: relative
     },
     {}
-        .voice-control [data-voice-command="true"]:hover::after {},""
-      content: "🎤 Voice command available",";
+        .voice-control [data-voice-command="true"]:hover::after {},"
+      content: "🎤 Voice command available',;
       position: absolute,
       top: -30px,
       left: 0,
@@ -580,24 +580,23 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
     {}
 export default EnhancedAccessibilityManager'
 
-import React from 'react;;"
-import SEOHead from './components/SEOHead';
+import React from 'react;;
+import SEOHead from './components/SEOHead";
 ;
 const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead"
-        title="Components - Zion Tech Group"""
-        description="Professional components solutions for modern businesses""
+        title="Components - Zion Tech Group""
+        description="Professional components solutions for modern businesses"
       />""
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">""
-        <div className ="text-center">"""'
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>"'
-          <p className ="text-gray-300">Professional solutions coming soon...</p>'
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
+        <div className="text-center">"'"
+          <h1 className="text-4xl font-bold mb-4">Components</h1>'"
+          <p className="text-gray-300'>Professional solutions coming soon...</p>'
         </div>;
       </div>;
     </>;
   ),
 };
-"
-export default ComponentsPage'"'";
+export default ComponentsPage""'";

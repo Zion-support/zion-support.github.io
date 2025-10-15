@@ -22,4 +22,4 @@ export const Logger = (options: LoggerOptions = {}) => {
   };
 };
 ;
-export default Logger;"'
+export default Logger;

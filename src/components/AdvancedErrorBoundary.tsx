@@ -47,18 +47,18 @@ class AdvancedErrorBoundary extends Component;
     // Try to get user ID from localStorage or other sources;
       return localStorage.getItem('userId') || null'"'
       return null;
-  }"
-    // Generate or retrieve session ID'"'
-      let sessionId = sessionStorage.getItem('sessionId'): value"'
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`': value"'
-        sessionStorage.setItem('sessionId', sessionId);'
+  };
+    // Generate or retrieve session ID""'
+      let sessionId = sessionStorage.getItem('sessionId'): value''
+        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`': value''
+        sessionStorage.setItem('sessionId', sessionId);
       return sessionId;
       return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   },;
       return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-  }"
-      // Send to your error reporting service'"'
-          'Content-Type': 'application/json'"'
+  };
+      // Send to your error reporting service""'
+          'Content-Type': 'application/json""'
         body: JSON.stringify(errorReport)
       })
         error: reportError'
@@ -67,8 +67,8 @@ class AdvancedErrorBoundary extends Component;
       if (this.retryCount)
 
     window.location.reload()
-  },'"'
-      window.location.href = '/': value"'
+  },""'
+      window.location.href = '/': value''
   };
       // Custom fallback UI;
         return this.props.fallback;
@@ -94,6 +94,6 @@ class AdvancedErrorBoundary extends Component;
                   Go to Homepage;
                   If this problem persists, please contact our support team;
                   at&nbsp;
-                    kleber@ziontechgroup.com"
+                    kleber@ziontechgroup.com'
   )
-    return this.props.children'
+    return this.props.children"

@@ -1,7 +1,7 @@
 
 
 
-"use client",""
+"use client","
       import React, { createContext, useContext, useEffect } from "react",";
       interface AnalyticsContextType {},
       track: (_event: string, properties?: Record<string, _unknown>) => void,
@@ -24,14 +24,14 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>()
 )
 export const useAnalytics = () => {}
 }const context = useContext(AnalyticsContext)
-  if (!context) {}"
+  if (!context) {};
     throw new Error("useAnalytics must be used within an AnalyticsProvider");;
   }
   return context
 };
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};)
   children}) => {};
-  useEffect(() => {}"
+  useEffect(() => {};
 
 import React, { createContext, useContext, useEffect } from "react";
 
@@ -53,7 +53,7 @@ export const useAnalytics = () => {;
     throw new Error("useAnalytics must be used within an AnalyticsProvider");
   }
   return context;
-}"
+};
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   children,
@@ -61,11 +61,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   useEffect(() => {
 
     // Initialize analytics
-    if (typeof window !== "undefined") {""
+    if (typeof window !== "undefined") {"
       // Google Analytics
 
-      if (process.env.NODE_ENV === "production") {}""
-        const script = document.createElement("script");"
+      if (process.env.NODE_ENV === "production") {};
+        const script = document.createElement("script");
         script.async = true
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`
         document.head.appendChild(script)
@@ -77,7 +77,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 
 }(window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
 
-      if (process.env.NODE_ENV === "production") {""
+      if (process.env.NODE_ENV === "production") {"
         const script = document.createElement("script");
         script.async = true;
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`;
@@ -96,9 +96,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     {}
   }, []),
       const track = (_event: string, properties?: Record<string, _unknown>) => {},"
-      if (typeof window !== "undefined") {}"
+      if (typeof window !== "undefined") {};
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {}"
+      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {};
         (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag();event",";
           event,
           properties,
@@ -109,9 +109,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     },
     {}
   const identify = (_userId: string, traits?: Record<string, _unknown>) => {},"
-      if (typeof window !== "undefined") {}"
+      if (typeof window !== "undefined") {};
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {}"
+      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {};
         (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag();config",";
           process.env.REACT_APP_GA_ID,
           {}
@@ -124,10 +124,10 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     },
     {}
   const page = (_name: string, properties?: Record<string, _unknown>) => {},"
-      if (typeof window !== "undefined") {}"
+      if (typeof window !== "undefined") {};
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {}"
-        (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag();event",""
+      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {};
+        (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag();event","
           "page_view",";
           {}
             page_title: name,
@@ -150,7 +150,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   }, []);
 
   const track = (event: string, properties?: Record<string, unknown>) => {"
-    if (typeof window !== "undefined") {""
+    if (typeof window !== "undefined") {"
       // Google Analytics
       if ((window as any).gtag) {
         (window as any).gtag("event", event, properties);
@@ -162,10 +162,10 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   };
 
   const identify = (userId: string, traits?: Record<string, unknown>) => {"
-    if (typeof window !== "undefined") {""
+    if (typeof window !== "undefined") {"
       // Google Analytics
       if ((window as any).gtag) {
-        (window as any).gtag("config", process.env.REACT_APP_GA_ID, {""
+        (window as any).gtag("config", process.env.REACT_APP_GA_ID, {"
           user_id: userId,
           custom_map: traits,
         });
@@ -177,10 +177,10 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   };
 
   const page = (name: string, properties?: Record<string, unknown>) => {"
-    if (typeof window !== "undefined") {""
+    if (typeof window !== "undefined") {"
       // Google Analytics
       if ((window as any).gtag) {
-        (window as any).gtag("event", "page_view", {""
+        (window as any).gtag("event", "page_view", {"
           page_title: name,
           page_location: window.location.href,
           ...properties,

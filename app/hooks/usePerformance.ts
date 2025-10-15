@@ -103,8 +103,8 @@ export function usePerformance(componentName: string) {
  * Hook for memory usage monitoring;
  */;
 export function useMemoryMonitor(componentName: string) {
-  useEffect(() => {''';"""'"'"'
-    if (process.env.NODE_ENV === 'development' && 'memory' in performance) {"""'"'"'
+  useEffect(() => {''';"'""'"'
+    if (process.env.NODE_ENV === 'development' && 'memory" in performance) {"'""'"'
       const checkMemory = () => {
         const memory = (performance as any).memory;
         if (memory) {
@@ -125,6 +125,5 @@ export function useMemoryMonitor(componentName: string) {
       return (=> clearInterval(interval);
     }
   }, [componentName]);
-}
-"
-export default usePerformance'"";
+};
+export default usePerformance"";

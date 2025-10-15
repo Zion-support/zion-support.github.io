@@ -11,7 +11,7 @@ async function processAllPRs() {
     
     // Get all open PRs in batches
     console.log('📋 Fetching all open PRs...');
-    const prsResponse = execSync('curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100"', { encoding: 'utf8' });
+    const prsResponse = execSync('curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100'', { encoding: 'utf8' });
     const prs = JSON.parse(prsResponse);
     
     console.log(`Found ${prs.length} open PRs`);
@@ -34,7 +34,7 @@ async function processAllPRs() {
       for (const pr of nonDraftPRs) {
         const result = await processPR(pr);
         if (result.success) successCount++;
-        else errorCount++"
+        else errorCount++'
         processedCount++'
       }
     }
@@ -44,7 +44,7 @@ async function processAllPRs() {
     const uniqueTitles = new Set();
     
     for (const pr of draftPRs) {
-      // Skip duplicate titles unless they're very recent";
+      // Skip duplicate titles unless they're very recent';
       if (uniqueTitles.has(pr.title) && pr.number < 33000) {
         console.log(`⏭️  Skipping older duplicate PR #${pr.number}: ${pr.title}`);
         continue;
@@ -95,30 +95,30 @@ async function processPR(pr) {
     // Attempt to merge
     console.log(`   🔀 Attempting merge...`);
     try {
-      execSync(`git merge origin/${pr.head.ref} --no-commit`, { stdio: 'pipe' });
+      execSync(`git merge origin/${pr.head.ref} --no-commit`, { stdio: 'pipe" });
       console.log(`   ✅ Merge successful without conflicts`);
     } catch (mergeError) {
       console.log(`   ⚠️  Merge conflicts detected, resolving...`);
       
       // Handle modify/delete conflicts first
       try {
-        execSync(`git status --porcelain | grep "^DU\\|^UD" | cut -c4- | xargs -r git rm`, { stdio: 'pipe' });
+        execSync(`git status --porcelain | grep "^DU\\|^UD' | cut -c4- | xargs -r git rm`, { stdio: 'pipe' });
       } catch (e) {
         // Ignore if no modify/delete conflicts
       }
       
       // Resolve conflicts by keeping our version
       execSync(`git checkout --ours .`, { stdio: 'pipe' });
-      execSync(`git add .`, { stdio: 'pipe' });
+      execSync(`git add .`, { stdio: 'pipe" });
       console.log(`   🔧 Conflicts resolved`);
     }
     
     // Commit the merge
-    execSync(`git commit -m "Merge PR #${pr.number}: ${pr.title}"'
+    execSync(`git commit -m "Merge PR #${pr.number}: ${pr.title};'
 
 - Automatically merged and resolved conflicts
 - PR #${pr.number} successfully integrated
-- All conflicts resolved by keeping working version"`, { stdio: 'pipe' });
+- All conflicts resolved by keeping working version'`, { stdio: 'pipe' });
     
     console.log(`   ✅ PR #${pr.number} merged successfully`);
     return { success: true };
@@ -133,7 +133,7 @@ async function processPR(pr) {
       // Ignore abort errors
     }
     
-    return { success: false, error: error.message }"
+    return { success: false, error: error.message };
   }
 }
 

@@ -1,10 +1,10 @@
-"use client""
-import React, { lazy, Suspense } from "react""
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom""
-import { HelmetProvider } from "react-helmet-async""
-import ErrorBoundary from "./components/ErrorBoundary""
-import PerformanceMonitor from "./components/PerformanceMonitor""
-import AccessibilityEnhancer from "./components/AccessibilityEnhancer""
+"use client"
+import React, { lazy, Suspense } from "react"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { HelmetProvider } from "react-helmet-async"
+import ErrorBoundary from "./components/ErrorBoundary"
+import PerformanceMonitor from "./components/PerformanceMonitor"
+import AccessibilityEnhancer from "./components/AccessibilityEnhancer"
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import("./page"));
@@ -32,19 +32,19 @@ function App() {
           <AccessibilityEnhancer />
           <Suspense fallback ={<div>Loading...</div>}>
             <Routes>
-              <Route path ="/" element={<HomePage />} />""
-              <Route path ="/about" element={<AboutPage />} />""
-              <Route path ="/contact" element={<ContactPage />} />""
-              <Route path ="/services" element={<ServicesPage />} />""
-              <Route path ="/pricing" element={<PricingPage />} />""
-              <Route path ="/case-studies" element={<CaseStudiesPage />} />""
-              <Route path ="/blog" element={<BlogPage />} />""
-              <Route path ="/team" element={<TeamPage />} />""
-              <Route path ="/careers" element={<CareersPage />} />""
-              <Route path ="/privacy" element={<PrivacyPage />} />""
-              <Route path ="/terms" element={<TermsPage />} />""
-              <Route path ="/cookies" element={<CookiesPage />} />""
-              <Route path ="/5g-solutions" element={<FiveGSolutionsPage />} />""
+              <Route path ="/" element={<HomePage />} />"
+              <Route path ="/about" element={<AboutPage />} />"
+              <Route path ="/contact" element={<ContactPage />} />"
+              <Route path ="/services" element={<ServicesPage />} />"
+              <Route path ="/pricing" element={<PricingPage />} />"
+              <Route path ="/case-studies" element={<CaseStudiesPage />} />"
+              <Route path ="/blog" element={<BlogPage />} />"
+              <Route path ="/team" element={<TeamPage />} />"
+              <Route path ="/careers" element={<CareersPage />} />"
+              <Route path ="/privacy" element={<PrivacyPage />} />"
+              <Route path ="/terms" element={<TermsPage />} />"
+              <Route path ="/cookies" element={<CookiesPage />} />"
+              <Route path ="/5g-solutions" element={<FiveGSolutionsPage />} />"
             </Routes>
           </Suspense>
         </ErrorBoundary>
