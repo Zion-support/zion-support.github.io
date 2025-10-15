@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';import { MessageSquare, Phone, Mail, CheckCircle, Send, AlertCircle, FileText, Video } from 'lucide-react';
+=======
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { MessageSquare, Phone, Mail, CheckCircle, Send, AlertCircle, FileText, Video } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 
 const SupportPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -43,7 +49,7 @@ const SupportPage: React.FC = () => {
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: BookOpen,
+      icon: <FileText className="w-8 h-8" />,
       title: 'Documentation',
       description: 'Browse our comprehensive guides',
       action: 'View Docs',

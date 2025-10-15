@@ -646,6 +646,45 @@ export default function AIServices() {
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      name: "AI Security Solutions",
+      description: "Advanced AI-powered security systems to protect your digital assets and infrastructure.",
+      features: ["Threat detection", "Anomaly detection", "Behavioral analysis", "Incident response", "Zero-day protection", "Compliance monitoring"],
+      icon: <Shield className="w-8 h-8" />,
+      applications: ["Cybersecurity", "Fraud prevention", "Access control", "Network monitoring"],
+      price: "Starting at $2,499/month",
+      benefits: ["Prevent 99.9% of threats", "Reduce false positives by 80%", "Real-time threat response", "Compliance automation"]
+    },
+    {
+      name: "AI Content Generation",
+      description: "Revolutionary AI-powered content creation for marketing, documentation, and creative writing.",
+      features: ["Article generation", "Marketing copy", "Technical documentation", "Creative writing", "SEO optimization", "Multi-language support"],
+      icon: <MessageSquare className="w-8 h-8" />,
+      applications: ["Content marketing", "Technical writing", "Blog creation", "Social media content"],
+      price: "Starting at $799/month",
+      benefits: ["Generate 100+ articles daily", "Maintain brand voice consistency", "SEO-optimized content", "Multi-language support"]
+    },
+    {
+      name: "AI Data Analytics",
+      description: "Advanced data analysis and business intelligence powered by artificial intelligence.",
+      features: ["Data mining", "Pattern recognition", "Statistical analysis", "Visualization", "Real-time insights", "Custom reporting"],
+      icon: <BarChart3 className="w-8 h-8" />,
+      applications: ["Business intelligence", "Market research", "Customer analytics", "Performance tracking"],
+      price: "Starting at $1,299/month",
+      benefits: ["Process big data efficiently", "Generate actionable insights", "Real-time analytics", "Custom dashboards"]
+    },
+    {
+      name: "AI Voice & Speech",
+      description: "Cutting-edge voice recognition, synthesis, and conversational AI solutions.",
+      features: ["Speech recognition", "Voice synthesis", "Conversational AI", "Voice cloning", "Multi-language support", "Real-time processing"],
+      icon: <MessageSquare className="w-8 h-8" />,
+      applications: ["Voice assistants", "Call centers", "Accessibility", "Interactive systems"],
+      price: "Starting at $1,599/month",
+      benefits: ["99% speech accuracy", "Natural voice synthesis", "Real-time processing", "Multi-language support"]
+    },
+    {
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec45
       name: "AI Blockchain Solutions",
       description: "Intelligent blockchain applications with AI-powered smart contracts and analytics.",
       features: ["Smart contracts", "DeFi analytics", "NFT generation", "Blockchain monitoring", "Cryptocurrency analysis", "Risk assessment"],
@@ -653,6 +692,7 @@ export default function AIServices() {
       applications: ["DeFi platforms", "NFT marketplaces", "Cryptocurrency trading", "Supply chain tracking"],
       price: "Starting at $3,999/month",
       benefits: ["Automated smart contracts", "Real-time blockchain analysis", "Fraud detection", "Optimized transactions"]
+<<<<<<< HEAD
     }  ];
 =======
       id: "ai-time-series-forecasting",
@@ -767,6 +807,8 @@ export default function AIServices() {
       content: "AI Content Generation Pro has transformed our content strategy. We're producing 20x more content with better quality and higher engagement rates.",
       rating: 5,
       avatar: "EW"
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec45
     }
   ];
 

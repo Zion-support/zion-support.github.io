@@ -292,6 +292,7 @@ const AISolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>AI Solutions - Advanced Artificial Intelligence Services | Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive AI solutions including chatbots, computer vision, content generation, analytics, and automation. Transform your business with cutting-edge AI technology." />
         <meta name="keywords" content="AI solutions, artificial intelligence, chatbots, computer vision, content generation, analytics, automation, machine learning" />
@@ -332,6 +333,15 @@ export default function GDataAnalyticsZionTechGroupPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
 >>>>>>> cursor/comprehensive-app-audit-and-update-8a56
+=======
+        <title>AI Solutions - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">AI Solutions</h1>
+          <p className="text-gray-300 text-center">Discover our comprehensive AI solutions and services.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec45
         </div>
 
         <div className="container mx-auto px-4 relative z-10">

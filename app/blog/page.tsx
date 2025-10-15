@@ -97,12 +97,15 @@ export default function Blog() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="container mx-auto px-4 py-16">
           <h1 className="text-4xl font-bold text-white text-center mb-8">Page</h1>
           <p className="text-gray-300 text-center">Coming soon...</p>
         </div>
       </div>    </>
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec45
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
@@ -250,6 +253,31 @@ export default function Blog() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+        {/* Newsletter Signup */}
+        <section className="py-20 px-4 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Stay Updated
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Subscribe to our newsletter for the latest tech insights and updates.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              />
+              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec45
       </div>
     </>
 >>>>>>> cursor/comprehensive-app-audit-and-update-8a56

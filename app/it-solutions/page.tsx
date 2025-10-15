@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -845,8 +850,11 @@ const ITSolutionsPage: React.FC = () => {
       link: 'https://ziontechgroup.com/it-audit-compliance'
     }
   ];
+<<<<<<< HEAD
 
   const categories = ['All', 'Cloud Computing', 'Security', 'Networking', 'Data Center', 'Support', 'Development', 'Database', 'Consulting', 'Backup', 'Mobile', 'Virtualization', 'Compliance'];
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 
   const features = [
     '24/7 Expert Support',
@@ -922,6 +930,7 @@ const ITSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>IT Solutions - Comprehensive Technology Services | Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, networking, data center management, and custom software development. Transform your business with our expert IT services." />
         <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, networking, data center, software development, IT support, technology consulting" />
@@ -929,6 +938,11 @@ const ITSolutionsPage: React.FC = () => {
         <meta property="og:description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, networking, data center management, and custom software development." />
         <meta property="og:url" content="https://ziontechgroup.com/it-solutions" />
         <link rel="canonical" href="https://ziontechgroup.com/it-solutions" />
+=======
+        <title>IT Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT solutions including infrastructure management, cloud migration, network security, and database optimization services." />
+        <meta name="keywords" content="IT solutions, infrastructure management, cloud migration, network security, database management, IT support, Zion Tech Group" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec45
       </Helmet>
 
       {/* Hero Section */}
@@ -967,6 +981,7 @@ const ITSolutionsPage: React.FC = () => {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -1193,6 +1208,10 @@ const ITSolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
+=======
+        </section>
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec45
     </>
   );
 };

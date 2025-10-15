@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 import React, { useEffect, useState } from 'react';
 =======
 import React, { useEffect, useState, useCallback } from 'react';
@@ -20,6 +23,7 @@ interface AccessibilityEnhancerProps {
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+<<<<<<< HEAD
   const [settings, setSettings] = useState<AccessibilitySettings>({
     enableKeyboard: true,
     enableScreenReader: true,
@@ -28,17 +32,30 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     enableLargeText: false,
     enableReducedMotion: false
   });
+=======
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [fontSize, setFontSize] = useState(16);
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 
   const [isVisible, setIsVisible] = useState(false);
 
   // Load settings from localStorage
   useEffect(() => {
+<<<<<<< HEAD
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
       try {
         setSettings(JSON.parse(savedSettings));
       } catch (error) {
         console.error('Error loading accessibility settings:', error);
+=======
+    // Add ARIA roles to semantic elements
+    const addAriaRoles = () => {
+      const nav = document.querySelector('nav');
+      if (nav && !nav.getAttribute('role')) {
+        nav.setAttribute('role', 'navigation');
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec45
       }
     }
   }, []);
@@ -91,6 +108,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     applyAccessibilitySettings(settings);
   }, [settings, applyAccessibilitySettings]);
 
+<<<<<<< HEAD
   // Keyboard navigation enhancement
   useEffect(() => {
     if (!settings.enableKeyboard) return;
@@ -99,6 +117,85 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       // Skip link functionality
       if (event.key === 'Tab' && event.shiftKey) {
         const skipLink = document.querySelector('.skip-link');
+=======
+    // Check for high contrast mode
+    const checkHighContrast = () => {
+      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+      setIsHighContrast(mediaQuery.matches);
+      
+      mediaQuery.addEventListener('change', (e) => {
+        setIsHighContrast(e.matches);
+      });
+    };
+
+    // Check for reduced motion preference
+    const checkReducedMotion = () => {
+      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      setIsReducedMotion(mediaQuery.matches);
+      
+      mediaQuery.addEventListener('change', (e) => {
+        setIsReducedMotion(e.matches);
+      });
+    };
+
+    // Check for font size preference
+    const checkFontSize = () => {
+      const savedFontSize = localStorage.getItem('accessibility-font-size');
+      if (savedFontSize) {
+        setFontSize(parseInt(savedFontSize, 10));
+      }
+    };
+
+    // Initialize accessibility enhancements
+    addAriaRoles();
+    addAltText();
+    addFocusManagement();
+    addKeyboardNavigation();
+    checkHighContrast();
+    checkReducedMotion();
+    checkFontSize();
+
+    // Apply accessibility settings
+    const applyAccessibilitySettings = () => {
+      const root = document.documentElement;
+      
+      // High contrast mode
+      if (isHighContrast) {
+        root.classList.add('high-contrast');
+      } else {
+        root.classList.remove('high-contrast');
+      }
+      
+      // Reduced motion
+      if (isReducedMotion) {
+        root.classList.add('reduced-motion');
+      } else {
+        root.classList.remove('reduced-motion');
+      }
+      
+      // Font size
+      root.style.fontSize = `${fontSize}px`;
+    };
+
+    applyAccessibilitySettings();
+
+    // Re-run on DOM changes
+    const observer = new MutationObserver(() => {
+      addAriaRoles();
+      addAltText();
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    // Keyboard navigation enhancement
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Skip to main content
+      if (e.key === 'Tab' && e.shiftKey && document.activeElement === document.body) {
+        const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec45
         if (skipLink) {
           (skipLink as HTMLElement).focus();
         }
@@ -115,6 +212,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [settings.enableKeyboard, isVisible]);
 
+<<<<<<< HEAD
   // Focus management
   useEffect(() => {
     if (!settings.enableFocusManagement) return;
@@ -134,8 +232,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           element.classList.remove('focus-visible');
         });
       });
+=======
+    return () => {
+      observer.disconnect();
+      document.removeEventListener('keydown', handleKeyDown);
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec45
     };
 
+<<<<<<< HEAD
     manageFocus();
   }, [settings.enableFocusManagement]);
 
@@ -144,6 +248,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       ...prev,
       [key]: value
     }));
+=======
+  // Font size controls
+  const increaseFontSize = () => {
+    const newSize = Math.min(fontSize + 2, 24);
+    setFontSize(newSize);
+    localStorage.setItem('accessibility-font-size', newSize.toString());
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec45
   };
 
   const resetSettings = () => {
@@ -239,6 +350,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
               Reset to Defaults
             </button>
           </div>
+<<<<<<< HEAD
 
           <div className="mt-2 text-xs text-gray-500">
             <p>Press Alt + A to toggle this panel</p>
@@ -314,4 +426,54 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     </>
   );};
 
+=======
+          
+          {/* High Contrast Toggle */}
+          <button
+            onClick={() => {
+              const newState = !isHighContrast;
+              setIsHighContrast(newState);
+              if (newState) {
+                document.documentElement.classList.add('high-contrast');
+              } else {
+                document.documentElement.classList.remove('high-contrast');
+              }
+            }}
+            className={`px-3 py-1 text-xs rounded ${
+              isHighContrast 
+                ? 'bg-yellow-600 text-black' 
+                : 'bg-gray-600 text-white hover:bg-gray-700'
+            }`}
+            aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
+          >
+            {isHighContrast ? 'High Contrast ON' : 'High Contrast'}
+          </button>
+          
+          {/* Reduced Motion Toggle */}
+          <button
+            onClick={() => {
+              const newState = !isReducedMotion;
+              setIsReducedMotion(newState);
+              if (newState) {
+                document.documentElement.classList.add('reduced-motion');
+              } else {
+                document.documentElement.classList.remove('reduced-motion');
+              }
+            }}
+            className={`px-3 py-1 text-xs rounded ${
+              isReducedMotion 
+                ? 'bg-green-600 text-white' 
+                : 'bg-gray-600 text-white hover:bg-gray-700'
+            }`}
+            aria-label={`${isReducedMotion ? 'Disable' : 'Enable'} reduced motion`}
+          >
+            {isReducedMotion ? 'Motion OFF' : 'Motion ON'}
+          </button>
+        </div>
+      </div>
+    </>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 export default AccessibilityEnhancer;
