@@ -172,7 +172,6 @@ const CloudMigrationServicesPage: React.FC = () => {
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                 <Star className="w-4 h-4 mr-2" />
                 #1 Cloud Migration Experts
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-df60
               </div>
               
               <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">

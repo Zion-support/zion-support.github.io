@@ -149,7 +149,6 @@ const AiEmailMarketingPage: React.FC = () => {
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                 <Star className="w-4 h-4 mr-2" />
                 #1 AI Email Marketing Platform
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-df60
               </div>
               
               <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
@@ -350,11 +349,6 @@ const AiEmailMarketingPage: React.FC = () => {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-  ); };
-=======
   );
 };
-
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-df60
 export default AiEmailMarketingPage;
