@@ -1,5 +1,5 @@
-import React, { Suspense, lazy } from 'react',;
-      import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',;
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
       import { HelmetProvider } from 'react-helmet-async';
 
 // Core components - keep these synchronous for critical path
@@ -89,13 +89,13 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
   React.useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.ctrlKey && event.shiftKey && event.key === 'P') {
-        event.preventDefault(),
-      setShowPerformanceDashboard(prev => !prev);
+        event.preventDefault();
+        setShowPerformanceDashboard(prev => !prev);
       }
-    },
-      document.addEventListener('keydown', handleKeyDown),
-      return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []),
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
       return (
     <LightweightErrorBoundary>
       <HelmetProvider>

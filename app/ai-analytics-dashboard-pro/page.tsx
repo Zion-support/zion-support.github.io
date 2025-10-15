@@ -1,5 +1,5 @@
-import React from 'react',
-      import { Helmet } from 'react-helmet-async',
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
       import { 
   CheckCircle, 
   ArrowRight, 
@@ -10,8 +10,9 @@ import React from 'react',
   Cloud,
   ShoppingCart,
   DollarSign
-} from 'lucide-react',
-      const AIAnalyticsDashboardProPage: React.FC = () => {
+} from 'lucide-react';
+
+const AIAnalyticsDashboardProPage: React.FC = () => {
   const features = [
     'AI-powered data analysis and insights',
     'Real-time dashboard customization',
@@ -32,14 +33,14 @@ import React from 'react',
     'Save 20+ hours weekly on data analysis',
     'Scale analytics with business growth'
   ],
-      const integrations = [
-    { name: 'Google Analytics', icon: <BarChart3 className="w-6 h-6 text-orange-400" /> };
-{ name: 'Salesforce', icon: <Cloud className="w-6 h-6 text-blue-400" /> };
-{ name: 'HubSpot', icon: <Target className="w-6 h-6 text-orange-400" /> };
-{ name: 'MySQL', icon: <Database className="w-6 h-6 text-blue-600" /> };
-{ name: 'PostgreSQL', icon: <Database className="w-6 h-6 text-indigo-400" /> };
-{ name: 'MongoDB', icon: <Database className="w-6 h-6 text-green-400" /> }
-  ],
+  const integrations = [
+    { name: 'Google Analytics', icon: <BarChart3 className="w-6 h-6 text-orange-400" /> },
+    { name: 'Salesforce', icon: <Cloud className="w-6 h-6 text-blue-400" /> },
+    { name: 'HubSpot', icon: <Target className="w-6 h-6 text-orange-400" /> },
+    { name: 'MySQL', icon: <Database className="w-6 h-6 text-blue-600" /> },
+    { name: 'PostgreSQL', icon: <Database className="w-6 h-6 text-indigo-400" /> },
+    { name: 'MongoDB', icon: <Database className="w-6 h-6 text-green-400" /> }
+  ];
       const pricingPlans = [
     {
       name: 'Starter',
@@ -55,8 +56,8 @@ import React from 'react',
         'Monthly reports'
       ],
       popular: false
-    };
-{
+    },
+    {
       name: 'Professional',
       price: '$149/mo',
       originalPrice: '$249/mo',
@@ -72,8 +73,8 @@ import React from 'react',
         'API access'
       ],
       popular: true
-    };
-{
+    },
+    {
       name: 'Enterprise',
       price: '$299/mo',
       originalPrice: '$499/mo',

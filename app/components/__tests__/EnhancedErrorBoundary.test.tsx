@@ -1,6 +1,6 @@
 
-import { render, screen, fireEvent, waitFor } from '@testing-library/react',;
-    import '@testing-library/jest-dom',;
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import '@testing-library/jest-dom';
     import EnhancedErrorBoundary from '../EnhancedErrorBoundary';
 
 // Mock component that throws an error

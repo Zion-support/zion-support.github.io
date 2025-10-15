@@ -1,94 +1,93 @@
 import React from "react";
 import { Link } from "react-router-dom";
-    import { ArrowRight, Mail, Phone, MapPin } from "lucide-react",
-      const EnhancedFooter: React.FC = () => {},
-      return (
+import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
+
+const EnhancedFooter: React.FC = () => {
+  return (
     <>
       <footer className="bg-slate-900 text-white">
-
-        <>
-      <>
-      <h3 className="text-2xl font-bold text-white mb-4">;
-              Zion Tech Group;
+        <div className="max-w-7xl mx-auto px-4 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Zion Tech Group
             
 <p className="text-gray-300 mb-4">
 
-              Leading provider of AI and IT solutions for businesses worldwide.;
-            <>
-      <Link to="/contact",
-      className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              Leading provider of AI and IT solutions for businesses worldwide.
+            </p>
+            <Link 
+              to="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
             >
-              Get Started;
+              Get Started
 
-            <>
-      <h4 className="text-lg font-semibold text-white mb-4">Services
-<ul className="space-y-2">
-
-              <>
-      <li>
-<Link to="/ai-solutions",
-      className="text-gray-300 hover:text-cyan-400 transition-colors"
-                >
-
-                  AI Solutions;
-                <>
-      <li>
-
-                <>
-      <Link to="/it-services",
-      className="text-gray-300 hover:text-cyan-400 transition-colors"
-                >
-                  IT Services;
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link 
+                    to="/ai-solutions"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    AI Solutions
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/it-services"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    IT Services
+                  </Link>
+                </li>
 
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-2">
               <li>
-
-                <>
-      <Link to="/cloud-solutions",
-      className="text-gray-300 hover:text-cyan-400 transition-colors"
-                >
-                  AI Solutions
-                </Link>
-              </li>
-              <li>
-
-                <>
-      <Link to="/cybersecurity",
-      className="text-gray-300 hover:text-cyan-400 transition-colors"
-                >
-                  Cybersecurity;
-
-          <>
-      <h4 className="text-lgfont-semibold text-white mb-4">Company
-
-            <>
-      <ul className="space-y-2">
-<li>
-
-                <>
-      <Link to="/about",
-      className="text-gray-300 hover:text-cyan-400 transition-colors"
-                >
-                  About Us;
-
-              <li>
-
-                <>
-      <Link to="/team",
-      className="text-gray-300 hover:text-cyan-400 transition-colors"
+                <Link 
+                  to="/cloud-solutions"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
                   Cloud Solutions
                 </Link>
               </li>
               <li>
-
-                <>
-      <Link to="/careers",
-      className="text-gray-300 hover:text-cyan-400 transition-colors"
+                <Link 
+                  to="/cybersecurity"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
                   Cybersecurity
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link 
+                  to="/about"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/team"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
+                >
+                  Our Team
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/careers"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
+                >
+                  Careers
                 </Link>
               </li>
             </ul>
@@ -98,12 +97,11 @@ import { Link } from "react-router-dom";
             <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
             <ul className="space-y-2">
               <li>
-
-                <>
-      <Link to="/contact",
-      className="text-gray-300 hover:text-cyan-400 transition-colors"
+                <Link 
+                  to="/contact"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
-                  About Us
+                  Contact Us
                 </Link>
               </li>
               <li>
@@ -138,20 +136,26 @@ import { Link } from "react-router-dom";
 
               Contact Info;
             <>
-      <>
-      <span className="text-gray-300">info@ziontechgroup.com
+              <div className="flex items-center space-x-2">
+                <span className="text-gray-300">info@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-gray-300">+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-gray-300">San Francisco, CA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="text-center">
+          <p className="text-gray-400">
+            © 2024 Zion Tech Group. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </>
+  );
+};
 
-                <>
-      <span className="text-gray-300">+1 (555) 123-4567
-
-                <>
-      <span className="text-gray-300">San Francisco, CA
-
-          <>
-      <>
-      <p className="text-gray-400">
-            © 2024 Zion Tech Group. All rights reserved.;
-
-  )
-},
-      export default EnhancedFooter;
+export default EnhancedFooter;

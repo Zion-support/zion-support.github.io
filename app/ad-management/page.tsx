@@ -1,13 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-'use client';
+
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white">;
-      <Helmet>;
+    <div className="min-h-screen bg-white">
+      <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
-      </Helmet>;
+      </Helmet>
       <div className="container mx-auto px-4 py-16">;
         <div className="text-center">;
           <h1 className="text-4xl font-bold text-gray-900 mb-8">;
@@ -42,13 +42,13 @@ export default function Page() {
               </p>;
             </div>;
           </div>;
-          <div className="mt-12">;
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
-              Get Started Today;
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
