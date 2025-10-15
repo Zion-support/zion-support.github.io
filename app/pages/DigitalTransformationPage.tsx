@@ -65,8 +65,8 @@ const DigitalTransformationPage: React.FC = () => {
             Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">Transformation</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with cutting-edge digital solutions that drive growth, efficiency, and innovation.
-            Let us guide you through your digital transformation journey.
+            Transform your business with comprehensive digital solutions that drive growth, 
+            efficiency, and innovation across all operations.
           </p>
         </div>
 
@@ -98,12 +98,14 @@ const DigitalTransformationPage: React.FC = () => {
 
         {/* Benefits Section */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Transformation Benefits</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Why Choose Our Digital Transformation Services?
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
                 <div className="flex items-center">
-                  <CheckCircle className="w-6 h-6 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
                 </div>
               </div>
@@ -114,13 +116,13 @@ const DigitalTransformationPage: React.FC = () => {
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Start Your Digital Transformation Journey</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
             <p className="text-gray-300 mb-6">
-              Ready to modernize your business? Let's discuss how we can help you achieve your digital transformation goals.
+              Let's work together to modernize your operations and unlock your business's full potential.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
-                Get Started Today
+                Start Your Transformation
               </button>
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Schedule Consultation

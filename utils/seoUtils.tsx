@@ -761,7 +761,6 @@ export const generateSEOTags = (config: SEOConfig) => {
     aws_cloud_map,
     aws_service_discovery,
     aws_app_mesh,
-    aws_x_ray,
     aws_distro_for_opentelemetry,
     aws_opentelemetry,
     aws_observability,

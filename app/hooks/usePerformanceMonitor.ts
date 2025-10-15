@@ -4,10 +4,7 @@ export const usePerformanceMonitor = () => {
   const [metrics, setMetrics] = useState<Record<string, number>>({});
 
   const trackMetric = (name: string, value: number) => {
-    setMetrics((prev) => ({
-      ...prev,
-      [name]: value
-    }));
+    setMetrics((prev) => ({ ...prev, [name]: value }));
   };
 
   useEffect(() => {

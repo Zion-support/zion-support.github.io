@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { CheckCircleIcon, UserGroupIcon, LightBulbIcon, ShieldCheckIcon, RocketLaunchIcon, HeartIcon, ArrowRightIcon, StarIcon, PhoneIcon, EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/outline";
 
-const AboutPage: React.FC = () => {
+export default function AboutPage() {
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
@@ -84,7 +84,9 @@ const AboutPage: React.FC = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
+                  <div className="text-4xl font-bold text-blue-600 mb-2">
+                    {stat.number}
+                  </div>
                   <div className="text-gray-600">{stat.label}</div>
                 </div>
               ))}
@@ -93,42 +95,41 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Values Section */}
-        <section className="py-16 px-4 bg-gray-50">
+        <section className="py-20 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
-              <p className="text-lg text-gray-600">The principles that guide everything we do</p>
-            </div>
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Our Values
+            </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => {
-                const Icon = value.icon;
-                return (
-                  <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Icon className="w-8 h-8 text-blue-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{value.title}</h3>
-                    <p className="text-gray-600">{value.description}</p>
+              {values.map((value, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <value.icon className="w-8 h-8 text-blue-600" />
                   </div>
-                );
-              })}
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {value.title}
+                  </h3>
+                  <p className="text-gray-600">{value.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* Team Section */}
-        <section className="py-16 px-4">
+        <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
-              <p className="text-lg text-gray-600">The experts behind our success</p>
-            </div>
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Meet Our Team
+            </h2>
             <div className="grid md:grid-cols-3 gap-8">
               {team.map((member, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
-                  <p className="text-blue-600 mb-2">{member.role}</p>
+                  <div className="w-32 h-32 mx-auto bg-gray-200 rounded-full mb-4"></div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {member.name}
+                  </h3>
+                  <p className="text-blue-600 font-medium mb-2">{member.role}</p>
                   <p className="text-gray-600">{member.description}</p>
                 </div>
               ))}
@@ -137,20 +138,22 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4 bg-blue-600">
+        <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Work With Us?</h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Let's discuss how we can help transform your business with cutting-edge technology.
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Work With Us?</h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Let's discuss how our technology solutions can help transform your business 
+              and drive growth in the digital age.
             </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <a
+              href="/contact"
+              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+            >
               Get In Touch
-            </button>
+            </a>
           </div>
         </section>
       </div>
     </>
   );
-};
-
-export default AboutPage;
+}

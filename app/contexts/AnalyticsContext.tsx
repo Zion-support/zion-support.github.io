@@ -1,5 +1,13 @@
-import React, { ReactNode, useCallback, useContext } from "react";
-import { AnalyticsContext, AnalyticsContextType } from "./AnalyticsContextDefinition";
+import React, { createContext, useContext, ReactNode, useCallback } from "react";
+
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (page: string) => void;
+  identifyUser: (userId: string, properties?: Record<string, unknown>) => void;
+  setUser: (userId: string, properties?: Record<string, unknown>) => void;
+}
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 interface AnalyticsProviderProps {
   children: ReactNode;

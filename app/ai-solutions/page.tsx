@@ -34,15 +34,15 @@ const AISolutionsPage: React.FC = () => {
     },
     {
       title: "Natural Language Processing",
-      description: "Advanced NLP solutions for text analysis, sentiment detection, and automated content generation.",
+      description: "Advanced NLP solutions for text analysis, sentiment detection, and automated content processing.",
       icon: ChatBubbleLeftRightIcon,
       features: [
-        "Text analysis and processing",
+        "Text analysis and classification",
         "Sentiment analysis",
         "Language translation",
         "Content generation",
         "Chatbot development",
-        "Voice recognition"
+        "Document processing"
       ],
       color: "from-blue-500 to-cyan-500",
       price: "Starting at $1,800/month",
@@ -53,16 +53,64 @@ const AISolutionsPage: React.FC = () => {
       description: "Image and video analysis solutions for quality control, security, and enhanced user experiences.",
       icon: EyeIcon,
       features: [
-        "Image recognition",
-        "Object detection",
-        "Facial recognition",
-        "Quality inspection",
-        "Video analytics",
+        "Object detection and recognition",
+        "Facial recognition systems",
+        "Quality control automation",
+        "Medical image analysis",
+        "Security monitoring",
         "Augmented reality"
       ],
       color: "from-green-500 to-emerald-500",
-      price: "Starting at $2,200/month",
+      price: "Starting at $3,200/month",
       href: "/computer-vision"
+    },
+    {
+      title: "Process Automation",
+      description: "Intelligent automation solutions to streamline workflows and reduce manual tasks.",
+      icon: CogIcon,
+      features: [
+        "Workflow automation",
+        "Document processing",
+        "Data entry automation",
+        "Quality control",
+        "Customer service automation",
+        "Business process optimization"
+      ],
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $2,000/month",
+      href: "/process-automation"
+    },
+    {
+      title: "Predictive Analytics",
+      description: "Data-driven insights and forecasting to help you make better business decisions.",
+      icon: ChartBarIcon,
+      features: [
+        "Sales forecasting",
+        "Risk assessment",
+        "Customer behavior analysis",
+        "Market trend prediction",
+        "Performance optimization",
+        "Real-time dashboards"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $2,800/month",
+      href: "/predictive-analytics"
+    },
+    {
+      title: "AI Security Solutions",
+      description: "Advanced security measures to protect your AI systems and sensitive data.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Threat detection and prevention",
+        "Data privacy protection",
+        "Model security auditing",
+        "Compliance management",
+        "Access control systems",
+        "Security monitoring"
+      ],
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $2,200/month",
+      href: "/ai-security"
     }
   ];
 
@@ -109,7 +157,7 @@ const AISolutionsPage: React.FC = () => {
           </p>
         </div>
 
-        {/* AI Services Grid */}
+        {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {aiServices.map((service, index) => {
             const Icon = service.icon;
@@ -135,7 +183,8 @@ const AISolutionsPage: React.FC = () => {
                   to={service.href}
                   className="inline-flex items-center text-white hover:text-blue-400 transition-colors"
                 >
-                  Learn More <ArrowRightIcon className="w-4 h-4 ml-2" />
+                  Learn More
+                  <ArrowRightIcon className="w-4 h-4 ml-2" />
                 </Link>
               </div>
             );
@@ -143,16 +192,21 @@ const AISolutionsPage: React.FC = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="text-center">
-              <div className="mb-4 flex justify-center">
-                {benefit.icon}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Why Choose Our AI Solutions?
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-4">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-              <p className="text-gray-300">{benefit.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* CTA Section */}

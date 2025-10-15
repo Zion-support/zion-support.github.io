@@ -129,44 +129,51 @@ const CaseStudiesPage: React.FC = () => {
       </section>
 
       {/* Case Studies Grid */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8">
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">
-                    {study.industry}
+              <div key={index} className="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
+                <div className="h-48 bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center">
+                  <span className="text-4xl font-bold text-white">
+                    {study.client.split(' ').map(word => word[0]).join('')}
                   </span>
-                  <span className="text-gray-400 text-sm">{study.duration}</span>
                 </div>
-                
-                <h3 className="text-2xl font-bold text-white mb-2">{study.title}</h3>
-                <p className="text-gray-400 mb-4">{study.client}</p>
-                
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
-                  <p className="text-gray-300 mb-4">{study.challenge}</p>
-                  
-                  <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
-                  <p className="text-gray-300 mb-4">{study.solution}</p>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Results</h4>
-                  <div className="grid grid-cols-2 gap-2">
-                    {study.results.map((result, resultIndex) => (
-                      <div key={resultIndex} className="flex items-center text-sm text-gray-300">
-                        <TrendingUp className="w-4 h-4 text-green-400 mr-2" />
-                        {result}
-                      </div>
-                    ))}
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">
+                      {study.industry}
+                    </span>
+                    <span className="text-gray-400 text-sm flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {study.duration}
+                    </span>
                   </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{study.title}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{study.client}</p>
+                  <div className="mb-4">
+                    <h4 className="text-white font-semibold mb-2">Challenge:</h4>
+                    <p className="text-gray-300 text-sm">{study.challenge}</p>
+                  </div>
+                  <div className="mb-4">
+                    <h4 className="text-white font-semibold mb-2">Solution:</h4>
+                    <p className="text-gray-300 text-sm">{study.solution}</p>
+                  </div>
+                  <div className="mb-4">
+                    <h4 className="text-white font-semibold mb-2">Results:</h4>
+                    <ul className="text-sm text-gray-300 space-y-1">
+                      {study.results.slice(0, 3).map((result, resultIndex) => (
+                        <li key={resultIndex} className="flex items-center">
+                          <TrendingUp className="w-3 h-3 text-green-400 mr-2" />
+                          {result}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <button className="w-full bg-gradient-to-r from-purple-500 to-cyan-500 text-white py-2 px-4 rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-600 transition-all duration-300">
+                    Read Full Case Study
+                  </button>
                 </div>
-
-                <button className="w-full bg-gradient-to-r from-purple-500 to-cyan-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-600 transition-all duration-300">
-                  Read Full Case Study
-                </button>
               </div>
             ))}
           </div>
@@ -174,19 +181,23 @@ const CaseStudiesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-900 to-cyan-900">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Start Your Success Story?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help transform your business with our proven technology solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Get Started Today
-            </button>
-            <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-              Schedule Consultation
-            </button>
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Start Your Success Story?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Let's discuss how we can help transform your business with our proven solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+                Get Started Today
+              </button>
+              <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+                Schedule Consultation
+              </button>
+            </div>
           </div>
         </div>
       </section>
