@@ -44,23 +44,48 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Home', href: '/', icon: Home },
         { name: 'About', href: '/about', icon: Users },
         { name: 'Contact', href: '/contact', icon: Phone },
-        { name: 'Pricing', href: '/pricing', icon: Star }
+        { name: 'Pricing', href: '/pricing', icon: Star },
+        { name: 'Team', href: '/team', icon: Users },
+        { name: 'Careers', href: '/careers', icon: Users }
       ]
     },
     {
       title: 'AI Services',
       items: [
-        { name: 'AI Solutions', href: '/ai-solutions', icon: Settings },
-        { name: 'AI Analytics', href: '/ai-analytics', icon: Code },
-        { name: 'AI Automation', href: '/ai-automation', icon: Settings }
+        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: Settings },
+        { name: 'AI Services', href: '/ai-services', icon: Settings },
+        { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Settings },
+        { name: 'AI Content Generator', href: '/ai-content-generator', icon: Settings },
+        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro', icon: Code },
+        { name: 'AI Translator Pro', href: '/ai-translator-pro', icon: Settings },
+        { name: 'AI Video Analyzer Pro', href: '/ai-video-analyzer-pro', icon: Settings },
+        { name: 'AI Personalization Engine', href: '/ai-personalization-engine-pro', icon: Settings }
+      ]
+    },
+    {
+      title: 'Micro SaaS',
+      items: [
+        { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: Settings },
+        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: Settings },
+        { name: 'CRM Pro', href: '/crm-pro', icon: Users },
+        { name: 'Analytics Dashboard Pro', href: '/analytics-dashboard-pro', icon: Settings },
+        { name: 'AI Meeting Scheduler Pro', href: '/ai-meeting-scheduler-pro', icon: Settings },
+        { name: 'AI Content Calendar Pro', href: '/ai-content-calendar-pro', icon: Settings },
+        { name: 'Lead Generator Pro', href: '/lead-generator-pro', icon: Settings },
+        { name: 'Time Tracker Pro', href: '/time-tracker-pro', icon: Settings }
       ]
     },
     {
       title: 'IT Solutions',
       items: [
+        { name: 'IT Services Overview', href: '/it-services', icon: Settings },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud },
         { name: 'Web Development', href: '/web-development', icon: Code },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: Settings }
+        { name: 'Mobile Development', href: '/mobile-development', icon: Settings },
+        { name: 'Edge Computing', href: '/edge-computing-solutions', icon: Settings },
+        { name: 'Quantum Computing', href: '/quantum-computing-services', icon: Settings },
+        { name: 'AR/VR Solutions', href: '/augmented-reality-solutions', icon: Settings },
+        { name: 'RPA Solutions', href: '/robotic-process-automation', icon: Settings }
       ]
     },
     {
@@ -68,7 +93,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'Blog', href: '/blog', icon: Code },
         { name: 'Case Studies', href: '/case-studies', icon: Star },
-        { name: 'Documentation', href: '/docs', icon: Code }
+        { name: 'API Documentation', href: '/api-docs', icon: Code },
+        { name: 'Help Center', href: '/help', icon: Settings },
+        { name: 'Partnerships', href: '/partnerships', icon: Users },
+        { name: 'Accessibility', href: '/accessibility', icon: Settings }
       ]
     }
   ], []);

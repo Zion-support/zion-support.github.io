@@ -64,6 +64,15 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
         { name: 'AI Price Optimizer', href: '/ai-price-optimizer', icon: CurrencyDollarIcon },
         { name: 'AI Scheduling Assistant', href: '/ai-scheduling-assistant', icon: CogIcon },
         { name: 'AI Content Generator', href: '/ai-content-generator', icon: DocumentTextIcon },
+        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro', icon: CodeBracketIcon },
+        { name: 'AI Translator Pro', href: '/ai-translator-pro', icon: GlobeAltIcon },
+        { name: 'AI Video Analyzer Pro', href: '/ai-video-analyzer-pro', icon: EyeIcon },
+        { name: 'AI Personalization Engine Pro', href: '/ai-personalization-engine-pro', icon: ChartBarIcon },
+        { name: 'AI Voice Synthesizer Pro', href: '/ai-voice-synthesizer-pro', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Data Cleaner Pro', href: '/ai-data-cleaner-pro', icon: CircleStackIcon },
+        { name: 'AI Test Generator Pro', href: '/ai-test-generator-pro', icon: ShieldCheckIcon },
+        { name: 'AI Knowledge Base Pro', href: '/ai-knowledge-base-pro', icon: DocumentTextIcon },
+        { name: 'AI Email Analyzer Pro', href: '/ai-email-analyzer-pro', icon: EnvelopeIcon },
         { name: 'Data Analytics', href: '/data-analytics', icon: ChartBarIcon }
       ]
     },
@@ -74,11 +83,30 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
       submenu: [
         { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
         { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
-        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
-        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
-        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },
-        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },
-        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon }
+        { name: 'CRM Pro', href: '/crm-pro', icon: UserGroupIcon },
+        { name: 'Analytics Dashboard Pro', href: '/analytics-dashboard-pro', icon: ChartBarIcon },
+        { name: 'AI Meeting Scheduler Pro', href: '/ai-meeting-scheduler-pro', icon: CogIcon },
+        { name: 'AI Content Calendar Pro', href: '/ai-content-calendar-pro', icon: DocumentTextIcon },
+        { name: 'AI Customer Feedback Pro', href: '/ai-customer-feedback-pro', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Inventory Forecaster Pro', href: '/ai-inventory-forecaster-pro', icon: CircleStackIcon },
+        { name: 'AI Employee Scheduler Pro', href: '/ai-employee-scheduler-pro', icon: UserGroupIcon },
+        { name: 'AI Project Estimator Pro', href: '/ai-project-estimator-pro', icon: ChartBarIcon },
+        { name: 'AI Social Listener Pro', href: '/ai-social-listener-pro', icon: ShareIcon },
+        { name: 'AI Contract Analyzer Pro', href: '/ai-contract-analyzer-pro', icon: DocumentTextIcon },
+        { name: 'AI Expense Optimizer Pro', href: '/ai-expense-optimizer-pro', icon: CurrencyDollarIcon },
+        { name: 'Smart Expense Tracker Pro', href: '/smart-expense-tracker-pro', icon: CurrencyDollarIcon },
+        { name: 'Lead Generator Pro', href: '/lead-generator-pro', icon: ChartBarIcon },
+        { name: 'Time Tracker Pro', href: '/time-tracker-pro', icon: CogIcon },
+        { name: 'Invoice Generator Pro', href: '/invoice-generator-pro', icon: DocumentTextIcon },
+        { name: 'Form Builder Pro', href: '/form-builder-pro', icon: DocumentTextIcon },
+        { name: 'Survey Builder Pro', href: '/survey-builder-pro', icon: DocumentTextIcon },
+        { name: 'Appointment Scheduler Pro', href: '/appointment-scheduler-pro', icon: CogIcon },
+        { name: 'Password Manager Pro', href: '/password-manager-pro', icon: ShieldCheckIcon },
+        { name: 'File Manager Pro', href: '/file-manager-pro', icon: DocumentTextIcon },
+        { name: 'Backup Manager Pro', href: '/backup-manager-pro', icon: CircleStackIcon },
+        { name: 'Monitoring Dashboard Pro', href: '/monitoring-dashboard-pro', icon: ChartBarIcon },
+        { name: 'API Manager Pro', href: '/api-manager-pro', icon: CodeBracketIcon },
+        { name: 'Security Scanner Pro', href: '/security-scanner-pro', icon: ShieldCheckIcon }
       ]
     },
     {
@@ -99,7 +127,16 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
         { name: 'DevOps Automation', href: '/devops-automation', icon: CogIcon },
         { name: 'Data Engineering', href: '/data-engineering', icon: CircleStackIcon },
         { name: 'API Development', href: '/api-development', icon: CodeBracketIcon },
-        { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon }
+        { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon },
+        { name: 'Edge Computing Solutions', href: '/edge-computing-solutions', icon: SignalIcon },
+        { name: 'Quantum Computing Services', href: '/quantum-computing-services', icon: CpuChipIcon },
+        { name: 'Augmented Reality Solutions', href: '/augmented-reality-solutions', icon: EyeIcon },
+        { name: 'Virtual Reality Platforms', href: '/virtual-reality-platforms', icon: EyeIcon },
+        { name: 'Robotic Process Automation', href: '/robotic-process-automation', icon: CogIcon },
+        { name: 'Low-Code Platforms', href: '/low-code-platforms', icon: CodeBracketIcon },
+        { name: 'Serverless Architecture', href: '/serverless-architecture', icon: CloudIcon },
+        { name: 'Container Orchestration', href: '/container-orchestration', icon: CircleStackIcon },
+        { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: CpuChipIcon }
       ]
     },
     {
