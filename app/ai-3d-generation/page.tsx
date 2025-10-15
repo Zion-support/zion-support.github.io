@@ -1,23 +1,11 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
-const Ai3dGenerationPage: React.FC = () => {
-=======
 const Ai3DGenerationPage: React.FC = () => {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
   return (
     <>
       <SEOHead 
         title="AI 3D Generation - Zion Tech Group"
-<<<<<<< HEAD
-        description="Advanced AI-powered 3D generation services for creating stunning 3D models, animations, and visualizations."
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">AI 3D Generation</h1>
-          <p className="text-gray-300">Coming soon...</p>
-=======
         description="Revolutionary AI-powered 3D generation technology. Create stunning 3D models, animations, and visualizations with our advanced AI platform."
         keywords="AI 3D generation, 3D modeling, 3D animation, AI visualization, 3D technology"
       />
@@ -40,15 +28,10 @@ const Ai3DGenerationPage: React.FC = () => {
               </button>
             </div>
           </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
         </div>
       </div>
     </>
   );
 };
 
-<<<<<<< HEAD
-export default Ai3dGenerationPage;
-=======
 export default Ai3DGenerationPage;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743

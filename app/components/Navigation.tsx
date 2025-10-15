@@ -158,21 +158,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   }
 
   const toggleCompanyMenu = () => {
-<<<<<<< HEAD
     setIsCompanyOpen(!isCompanyOpen);
     setIsServicesOpen(false);
     setIsSolutionsOpen(false);
     setIsResourcesOpen(false);
   };
 
-  const isActive = (path: string) => location.pathname === path
-=======
-    setIsCompanyOpen(!isCompanyOpen)
-    setIsServicesOpen(false)
-    setIsSolutionsOpen(false)
-    setIsResourcesOpen(false)
-  }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <nav className="bg-slate-900 shadow-lg">
@@ -295,7 +287,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     </div>
                   </div>
                 ) : (
-<<<<<<< HEAD
                   <Link
                     to={item.href}
                     className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${
@@ -308,18 +299,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     <item.icon className="w-5 h-5 mr-3" />
                     {item.name}
                   </Link>
-=======
-                  <div>
-                    <Link
-                      to={item.href}
-                      className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${isActive(item.href) ? 'text-white bg-slate-700' : 'text-gray-300 hover:text-white hover:bg-slate-700'}`}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <item.icon className="w-5 h-5 mr-3" />
-                      {item.name}
-                    </Link>
-                  </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
                 )}
               </div>
             ))}

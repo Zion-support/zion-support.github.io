@@ -36,11 +36,7 @@ import {
   Key
 } from 'lucide-react';
 
-<<<<<<< HEAD
-const MicroSaaSPage: React.FC = () => {
-=======
 const MicroSaasPage: React.FC = () => {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
   const microSaasServices = [
     {
       id: 'zion-analytics-pro',
@@ -341,8 +337,6 @@ const MicroSaasPage: React.FC = () => {
     { number: '30-day', label: 'Free Trial' }
   ];
 
-<<<<<<< HEAD
-=======
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -369,8 +363,6 @@ const MicroSaasPage: React.FC = () => {
       avatar: "ER"
     }
   ];
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
   return (
     <>
       <SEOHead 

@@ -8,11 +8,6 @@ import {
   TrendingUp, 
   Target, 
   Database,
-  Zap,
-  Eye,
-  MessageSquare,
-  Users,
-  RefreshCw
 } from 'lucide-react';
 
 const AIAnalyticsDashboardProPage: React.FC = () => {

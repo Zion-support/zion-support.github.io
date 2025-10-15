@@ -1,12 +1,18 @@
-import { useState } from 'react
-import { Helmet } from 'react-helmet-async';'lucide-react
-interface JobPosition {}
-  // Add properties here
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Briefcase, MapPin, Clock, Users, CheckCircle, ArrowRight } from 'lucide-react';
+
+interface JobPosition {
+  id: number;
+  title: string;
+  location: string;
+  type: string;
+  description: string;
+  requirements: string[];
+  benefits: string[];
 }
-  id: number
-import { Right, Circle} from 'lucide-react
-const PagePage: React.FC = () => {}
-}title: string
+
+const CareersPage: React.FC = () => {
   department: string
   location: string
   type: string
@@ -17,10 +23,14 @@ const PagePage: React.FC = () => {}
   benefits: string[]
   featured: boolean
 }
-const eersPage: React.FC = () => {}
-}const [selectedDepartment, setSelectedDepartment] = useState('all)
-  const [selectedLocation, setSelectedLocation] = useState('all)
-      title: 'Senior AI Engineer,
+const CareersPage: React.FC = () => {
+  const [selectedDepartment, setSelectedDepartment] = useState('all');
+  const [selectedLocation, setSelectedLocation] = useState('all');
+
+  const jobPositions: JobPosition[] = [
+    {
+      id: 1,
+      title: 'Senior AI Engineer',
       department: 'Engineering,
       location: 'Remote,
       type: 'Full-time,
