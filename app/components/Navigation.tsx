@@ -6,20 +6,20 @@ const Navigation: React.FC = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="nav-futuristic">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-blue-600">Zion Tech Group</h1>
+              <h1 className="text-2xl font-bold gradient-text hologram">Zion Tech Group</h1>
             </Link>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/" className="nav-link-futuristic">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/about" className="nav-link-futuristic">
               About
             </Link>
             
@@ -28,7 +28,7 @@ const Navigation: React.FC = () => {
               <button
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center"
+                className="nav-link-futuristic flex items-center"
               >
                 Services
                 <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -39,37 +39,37 @@ const Navigation: React.FC = () => {
                 <div
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
-                  className="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg z-50"
+                  className="absolute left-0 mt-2 w-80 card-futuristic z-50"
                 >
                   <div className="py-1">
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100">AI & Machine Learning</div>
-                    <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <div className="px-4 py-2 text-xs font-semibold neon-text-cyan uppercase tracking-wider border-b border-gray-600">AI & Machine Learning</div>
+                    <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-cyan hover:bg-gray-800 transition-all duration-300">
                       AI Services
                     </Link>
-                    <Link to="/ai-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/ai-solutions" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-cyan hover:bg-gray-800 transition-all duration-300">
                       AI Solutions
                     </Link>
-                    <Link to="/ai-content-generator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/ai-content-generator" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-cyan hover:bg-gray-800 transition-all duration-300">
                       AI Content Generator
                     </Link>
-                    <Link to="/data-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/data-analytics" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-cyan hover:bg-gray-800 transition-all duration-300">
                       Data Analytics
                     </Link>
                     
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">IT Services</div>
-                    <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <div className="px-4 py-2 text-xs font-semibold neon-text-purple uppercase tracking-wider border-b border-gray-600 mt-2">IT Services</div>
+                    <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-purple hover:bg-gray-800 transition-all duration-300">
                       IT Services
                     </Link>
-                    <Link to="/web-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/web-development" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-purple hover:bg-gray-800 transition-all duration-300">
                       Web Development
                     </Link>
-                    <Link to="/mobile-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/mobile-development" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-purple hover:bg-gray-800 transition-all duration-300">
                       Mobile Development
                     </Link>
-                    <Link to="/database-management" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/database-management" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-purple hover:bg-gray-800 transition-all duration-300">
                       Database Management
                     </Link>
-                    <Link to="/network-infrastructure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/network-infrastructure" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-purple hover:bg-gray-800 transition-all duration-300">
                       Network Infrastructure
                     </Link>
                     
@@ -116,19 +116,19 @@ const Navigation: React.FC = () => {
               )}
             </div>
             
-            <Link to="/pricing" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/pricing" className="nav-link-futuristic">
               Pricing
             </Link>
-            <Link to="/blog" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/blog" className="nav-link-futuristic">
               Blog
             </Link>
-            <Link to="/team" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/team" className="nav-link-futuristic">
               Team
             </Link>
-            <Link to="/careers" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/careers" className="nav-link-futuristic">
               Careers
             </Link>
-            <Link to="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/contact" className="nav-link-futuristic">
               Contact
             </Link>
           </div>
@@ -147,12 +147,12 @@ const Navigation: React.FC = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden">
+        <div className="md:hidden card-futuristic mx-4 mt-2">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+            <Link to="/" className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-neon-cyan transition-all duration-300">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+            <Link to="/about" className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-neon-cyan transition-all duration-300">
               About
             </Link>
             <div className="space-y-1">

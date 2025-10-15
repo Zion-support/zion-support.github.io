@@ -64,6 +64,22 @@ const ZionAIEmailOptimizerPage = lazy(() => import('./app/zion-ai-email-optimize
 const ZionAIWebsiteAnalyzerPage = lazy(() => import('./app/zion-ai-website-analyzer/page'));
 const ZionAIDataVisualizerPage = lazy(() => import('./app/zion-ai-data-visualizer/page'));
 
+// New AI Services
+const AIFraudDetectionPage = lazy(() => import('./app/ai-fraud-detection/page'));
+const AIImageRecognitionPage = lazy(() => import('./app/ai-image-recognition/page'));
+const AIVoiceAssistantPage = lazy(() => import('./app/ai-voice-assistant/page'));
+const AILeadScoringPage = lazy(() => import('./app/ai-lead-scoring/page'));
+const AIPredictiveMaintenancePage = lazy(() => import('./app/ai-predictive-maintenance/page'));
+const AIPriceOptimizerPage = lazy(() => import('./app/ai-price-optimizer/page'));
+
+// New IT Services
+const BlockchainSolutionsPage = lazy(() => import('./app/blockchain-solutions/page'));
+const IoTSolutionsPage = lazy(() => import('./app/iot-solutions/page'));
+const APIDevelopmentPage = lazy(() => import('./app/api-development/page'));
+const DevOpsAutomationPage = lazy(() => import('./app/devops-automation/page'));
+const DataEngineeringPage = lazy(() => import('./app/data-engineering/page'));
+const SecurityAuditPage = lazy(() => import('./app/security-audit/page'));
+
 // Import components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -174,6 +190,22 @@ export default function App() {
                   <Route path="/zion-ai-email-optimizer" element={<ZionAIEmailOptimizerPage />} />
                   <Route path="/zion-ai-website-analyzer" element={<ZionAIWebsiteAnalyzerPage />} />
                   <Route path="/zion-ai-data-visualizer" element={<ZionAIDataVisualizerPage />} />
+                  
+                  {/* New AI Services */}
+                  <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
+                  <Route path="/ai-image-recognition" element={<AIImageRecognitionPage />} />
+                  <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
+                  <Route path="/ai-lead-scoring" element={<AILeadScoringPage />} />
+                  <Route path="/ai-predictive-maintenance" element={<AIPredictiveMaintenancePage />} />
+                  <Route path="/ai-price-optimizer" element={<AIPriceOptimizerPage />} />
+                  
+                  {/* New IT Services */}
+                  <Route path="/blockchain-solutions" element={<BlockchainSolutionsPage />} />
+                  <Route path="/iot-solutions" element={<IoTSolutionsPage />} />
+                  <Route path="/api-development" element={<APIDevelopmentPage />} />
+                  <Route path="/devops-automation" element={<DevOpsAutomationPage />} />
+                  <Route path="/data-engineering" element={<DataEngineeringPage />} />
+                  <Route path="/security-audit" element={<SecurityAuditPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
