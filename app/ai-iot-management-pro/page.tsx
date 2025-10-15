@@ -1,11 +1,95 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, Building, Camera, Car, CheckCircle, Home, Mail, Phone, Play, Star, Thermometer, Wind } from 'lucide-react';
+import { ArrowRight, CheckCircle, Mail, Phone, Play, Star, Users } from 'lucide-react';
 
-const AIIoTManagementProPage = () => {
-  return (
+const PagePage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  
+  
+  const features = [
+    {
+      icon: <Star className="w-8 h-8" />,
+      title: "AI-Powered Features",
+      description: "Advanced AI capabilities that enhance productivity and efficiency.",
+      benefits: ["Improved efficiency", "Better insights", "Enhanced automation"]
+    },
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: "Real-time Analytics",
+      description: "Comprehensive insights and monitoring for better decision making.",
+      benefits: ["Live monitoring", "Instant feedback", "Data-driven decisions"]
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Collaborative Tools",
+      description: "Enhanced team collaboration and communication features.",
+      benefits: ["Team collaboration", "Better communication", "Shared workflows"]
+    }
+  ];
+
+  
+
+  
+
+  const pricingPlans = [
+    {
+      name: "Basic",
+      price: "$99",
+      period: "month",
+      description: "Perfect for getting started",
+      features: ["Basic features", "Email support", "Standard SLA"],
+      popular: false
+    },
+    {
+      name: "Professional", 
+      price: "$299",
+      period: "month",
+      description: "For growing businesses",
+      features: ["Advanced features", "Priority support", "Enhanced SLA"],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "Custom",
+      period: "",
+      description: "For large organizations",
+      features: ["Full feature set", "Dedicated support", "Custom SLA"],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "John Smith",
+      role: "CEO, Tech Company",
+      company: "Tech Corp",
+      content: "This solution has transformed our business operations.",
+      rating: 5
+    }
+  ];
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+return (
     <>
-      { /* Animated Background */ }
+      <div className="relative min-h-screen">
+        { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -302,4 +386,4 @@ const AIIoTManagementProPage = () => {
     </>
   );
 };
-export default AiIotManagementProPage;
+export default PagePage;

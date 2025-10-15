@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Activity, Brain, CheckCircle, Globe, Headphones, Languages, Mic, Settings, Shield, Smartphone, Star, Users, Volume2 } from 'lucide-react';
+import { Brain, CheckCircle, Globe, Headphones, Mic, Settings, Smartphone, Star, Users, Volume2 } from 'lucide-react';
 
 const AiVoiceAssistantEnterprisePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,7 +34,7 @@ const AiVoiceAssistantEnterprisePage: React.FC = () => {
       benefits: ["Auto-translation", "Cultural adaptation", "Regional accents", "Language switching"]
     },
     {
-      icon: <Shield className="w-6 h-6" />,
+      icon: <Star className="w-6 h-6" />,
       title: "Enterprise Security",
       description: "Bank-level encryption, compliance with GDPR/CCPA, and secure voice data processing.",
       benefits: ["End-to-end encryption", "GDPR compliance", "Data privacy", "Secure processing"]
@@ -58,7 +57,7 @@ const AiVoiceAssistantEnterprisePage: React.FC = () => {
     {
       title: "Healthcare",
       description: "Voice-enabled patient care and medical documentation",
-      icon: <Activity className="w-8 h-8" />,
+      icon: <Star className="w-6 h-6" />,
       benefits: ["Patient monitoring", "Medical transcription", "Appointment scheduling", "HIPAA compliance"]
     },
     {
@@ -282,7 +281,7 @@ const AiVoiceAssistantEnterprisePage: React.FC = () => {
         <section className="relative py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">50+ Languages Supported</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">50+ Supported</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Global voice AI with exceptional accuracy across languages
               </p>

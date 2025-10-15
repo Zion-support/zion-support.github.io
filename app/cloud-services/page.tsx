@@ -1,9 +1,8 @@
-import { Cloud } from 'lucide-react';
-import { Helmet } from "react-helmet-async"; const CloudServicesPage: React.FC = () => { return ( <> <Helmet> <title>Cloud Services</title> <meta name="description" content="Professional cloud services solutions and services" /> <meta name="keywords" content="cloud, services" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+import { Helmet } from "react-helmet-async"; const CloudServicesPage: React.FC = () => { return ( <> <Helmet> <title>Services</title> <meta name="description" content="Professional cloud services solutions and services" /> <meta name="keywords" content="cloud, services" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">
-              Cloud Services
+              Services
             </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional cloud services solutions and services

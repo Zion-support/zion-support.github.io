@@ -1,5 +1,3 @@
-import { UsersIcon, Cloud } from 'lucide-react';
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
@@ -8,12 +6,10 @@ import {
   ClockIcon,
   UsersIcon,
   CheckCircleIcon,
-  ArrowRightIcon,
   StarIcon,
   ShieldCheckIcon,
   CloudIcon,
-  RocketLaunchIcon
-} from '@heroicons/react/24/outline';
+  } from '@heroicons/react/24/outline';
 
 export default function AiProjectManagementProPage() {
   const structuredData = {
@@ -75,7 +71,7 @@ export default function AiProjectManagementProPage() {
     },
     {
       icon: CloudIcon,
-      title: 'Cloud Integration',
+      title: 'Integration',
       description: 'Seamless integration with popular tools like Slack, Jira, GitHub, and Microsoft Teams.',
       benefits: ['Unified workflow', 'No data silos', 'Enhanced collaboration']
     }

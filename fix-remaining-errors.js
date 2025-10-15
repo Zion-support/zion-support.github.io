@@ -1,116 +1,132 @@
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Files to fix
 const filesToFix = [
-  'app/ai-analytics-dashboard-pro/page.tsx',
-  'app/ai-code-assistant-pro/page.tsx',
-  'app/ai-cybersecurity-platform/page.tsx',
-  'app/ai-database-solutions/page.tsx',
-  'app/ai-ecommerce-platform/page.tsx'
+  'app/ai-education-solutions-pro/page.tsx',
+  'app/ai-healthcare-solutions-pro/page.tsx', 
+  'app/ai-iot-management-pro/page.tsx',
+  'app/ai-marketing-automation-pro/page.tsx',
+  'app/ai-project-manager-pro/page.tsx',
+  'app/ai-social-media-manager-pro/page.tsx'
 ];
 
-// Fix React import issues
-function fixReactImports(content) {
-  // Remove unused React import if only useState and useEffect are used
-  if (content.includes('import React, { useState, useEffect }') && !content.includes('<React.')) {
-    content = content.replace('import React, { useState, useEffect }', 'import { useState, useEffect }');
-  }
-  return content;
-}
+const fixFile = (filePath) => {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Extract component name from file path
+    const componentName = filePath.split('/').pop().replace('.tsx', '').split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join('') + 'Page';
+    
+    // Fix imports - remove unused ones
+    content = content.replace(
+      /import React, \{ useState, useEffect \} from "react";\s+import \{ Helmet \} from "react-helmet-async";\s+import \{ [^}]+ \} from 'lucide-react';/,
+      'import React, { useState, useEffect } from "react";\nimport { Helmet } from "react-helmet-async";\nimport { ArrowRight, CheckCircle, Mail, Phone, Play, Star, Users } from \'lucide-react\';'
+    );
 
-// Fix unused imports by checking which icons are actually used
-function fixUnusedImports(content) {
-  // Common patterns to check for icon usage
-  const iconUsagePatterns = [
-    /<[A-Z][a-zA-Z]+ className="w-[0-9]+ h-[0-9]+"/g,
-    /<[A-Z][a-zA-Z]+ className="w-[0-9]+ h-[0-9]+ mr-[0-9]+"/g,
-    /<[A-Z][a-zA-Z]+ className="w-[0-9]+ h-[0-9]+ ml-[0-9]+"/g,
-    /<[A-Z][a-zA-Z]+ className="w-[0-9]+ h-[0-9]+ text-[a-zA-Z0-9-]+"/g
-  ];
-  
-  // Extract all used icon names
-  const usedIcons = new Set();
-  iconUsagePatterns.forEach(pattern => {
-    const matches = content.match(pattern);
-    if (matches) {
-      matches.forEach(match => {
-        const iconName = match.match(/<([A-Z][a-zA-Z]+)/);
-        if (iconName) {
-          usedIcons.add(iconName[1]);
-        }
-      });
+    // Add missing isVisible state if not present
+    if (!content.includes('const [isVisible, setIsVisible] = useState(false);')) {
+      content = content.replace(
+        /const [A-Za-z]+Page = \(\) => \{/,
+        `const ${componentName} = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);`
+      );
     }
-  });
-  
-  // Find the import statement and replace it
-  const importMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
-  if (importMatch) {
-    const currentImports = importMatch[1].split(',').map(imp => imp.trim());
-    const usedImports = currentImports.filter(imp => {
-      const iconName = imp.trim();
-      return usedIcons.has(iconName) || iconName.includes('ArrowRight') || iconName.includes('CheckCircle') || iconName.includes('Star') || iconName.includes('Phone') || iconName.includes('Mail') || iconName.includes('Play');
+
+    // Fix export statement
+    content = content.replace(
+      /export default [A-Za-z]+Page;/,
+      `export default ${componentName};`
+    );
+
+    // Remove unused data arrays that are not used in the template
+    const unusedArrays = ['deviceTypes', 'channels', 'platforms', 'metrics', 'protocols', 'integrations', 'compliance', 'benefits', 'useCases'];
+    unusedArrays.forEach(arrayName => {
+      const regex = new RegExp(`const ${arrayName} = \\[[\\s\\S]*?\\];`, 'g');
+      content = content.replace(regex, '');
     });
-    
-    if (usedImports.length > 0) {
-      const newImport = `import { \n  ${usedImports.join(',\n  ')}\n} from 'lucide-react';`;
-      content = content.replace(importMatch[0], newImport);
-    }
-  }
-  
-  return content;
-}
 
-// Fix duplicate imports
-function fixDuplicateImports(content) {
-  // Remove duplicate ArrowRight imports
-  const lines = content.split('\n');
-  const seen = new Set();
-  const filteredLines = lines.filter(line => {
-    const trimmed = line.trim();
-    if (trimmed.includes('ArrowRight') && seen.has('ArrowRight')) {
-      return false;
+    // Add missing subjects array for education page
+    if (filePath.includes('education') && !content.includes('const subjects = [')) {
+      const subjectsArray = `
+  const subjects = [
+    "Mathematics and Sciences",
+    "Language Arts and Literature", 
+    "History and Social Studies",
+    "Computer Science and Technology"
+  ];`;
+      
+      content = content.replace(
+        /const features = \[[\s\S]*?\];/,
+        `const features = [
+    {
+      icon: <Star className="w-8 h-8" />,
+      title: "AI-Powered Features",
+      description: "Advanced AI capabilities that enhance productivity and efficiency.",
+      benefits: ["Improved efficiency", "Better insights", "Enhanced automation"]
+    },
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: "Real-time Analytics", 
+      description: "Comprehensive insights and monitoring for better decision making.",
+      benefits: ["Live monitoring", "Instant feedback", "Data-driven decisions"]
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Collaborative Tools",
+      description: "Enhanced team collaboration and communication features.",
+      benefits: ["Team collaboration", "Better communication", "Shared workflows"]
     }
-    if (trimmed.includes('ArrowRight')) {
-      seen.add('ArrowRight');
+  ];${subjectsArray}`
+      );
     }
-    return true;
-  });
-  return filteredLines.join('\n');
-}
 
-// Fix unused variables
-function fixUnusedVariables(content) {
-  // Remove unused activeTab and setActiveTab
-  content = content.replace(/const \[activeTab, setActiveTab\] = useState\('overview'\);/g, '');
-  content = content.replace(/\/\/ const \[activeTab, setActiveTab\] = useState\('overview'\);/g, '');
-  
-  return content;
-}
+    // Fix the template to use correct data structure
+    content = content.replace(
+      /\{features\.map\(\(feature, index\) => \([\s\S]*?\)\)\}/g,
+      `{features.map((feature, index) => (
+                  <div 
+                    key={index} 
+                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                      <div className="text-white">{feature.icon}</div>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                    <p className="text-gray-300 mb-6 leading-relaxed">{feature.description}</p>
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}`
+    );
 
-// Process each file
-filesToFix.forEach(filePath => {
-  const fullPath = path.join(__dirname, filePath);
-  
-  if (fs.existsSync(fullPath)) {
-    let content = fs.readFileSync(fullPath, 'utf8');
-    
-    // Apply fixes
-    content = fixReactImports(content);
-    content = fixUnusedImports(content);
-    content = fixDuplicateImports(content);
-    content = fixUnusedVariables(content);
-    
-    // Clean up empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    fs.writeFileSync(fullPath, content);
+    // Fix subjects mapping if it exists
+    if (content.includes('subjects.map')) {
+      content = content.replace(
+        /\{subjects\.map\(\(subject, index\) => \([\s\S]*?\)\)\}/g,
+        `{subjects.map((subject, index) => (
+                  <div key={index} className="text-center">
+                    <h3 className="text-xl font-semibold text-white mb-2">{subject}</h3>
+                  </div>
+                ))}`
+      );
+    }
+
+    fs.writeFileSync(filePath, content);
     console.log(`Fixed ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
-});
+};
 
-console.log('Fixed all remaining errors');
+filesToFix.forEach(fixFile);
+console.log('All remaining errors fixed');
