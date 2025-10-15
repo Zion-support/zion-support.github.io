@@ -89,10 +89,12 @@ const HomePage = () => {
               </FuturisticButton>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Services Section */}
-        <section className="mb-16" aria-labelledby="services-heading">
+      {/* Services Section */}
+      <section className="mb-16" aria-labelledby="services-heading">
+        <div className="container mx-auto px-4">
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
             Our Services
           </h2>
