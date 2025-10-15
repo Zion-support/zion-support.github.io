@@ -103,15 +103,14 @@ const Footer: React.FC = memo(() => {
           </div>
         </div>
         
-<<<<<<< HEAD
-        <div className="mt-12 pt-8 border-t border-gray-700">
+        <div className="mt-8 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-center md:text-left text-gray-300 mb-4 md:mb-0">
-              © 2025 Zion Tech Group. All rights reserved. | <a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">ziontechgroup.com</a>
+            <p className="text-center md:text-left text-gray-300">
+              © 2025 Zion Tech Group. All rights reserved. | <a href="https://ziontechgroup.com" className="hover:text-white">ziontechgroup.com</a>
             </p>
-            <div className="flex space-x-6">
-              <Link to="/privacy" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">Privacy Policy</Link>
-              <Link to="/terms" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">Terms of Service</Link>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link to="/privacy" className="text-gray-300 hover:text-white text-sm">Privacy Policy</Link>
+              <Link to="/terms" className="text-gray-300 hover:text-white text-sm">Terms of Service</Link>
             </div>
           </div>
         </div>
