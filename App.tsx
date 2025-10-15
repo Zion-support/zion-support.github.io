@@ -115,7 +115,6 @@ export default function App() {
                   <Route path="/partnerships" element={<PartnershipsPage />} />
                   <Route path="/api-docs" element={<APIDocsPage />} />
                   <Route path="/accessibility" element={<AccessibilityPage />} />
-                  
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
                     <div className="text-center">

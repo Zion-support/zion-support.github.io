@@ -6,11 +6,14 @@ const Sidebar: React.FC = () => {
     <div className="hidden lg:block lg:w-64 lg:flex-shrink-0">
       <div className="h-full flex flex-col bg-gray-50 border-r border-gray-200">
         <div className="p-4">
-          <h2 className="text-lg font-semibold text-gray-900">Quick Links</h2>
+          <h2 className="text-lg font-semibold text-gray-900">Quick Navigation</h2>
         </div>
         <nav className="flex-1 px-4 pb-4 space-y-1">
-          <div className="space-y-1">
-            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Services</div>
+          <div className="mb-4">
+            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Services</h3>
+            <Link to="/services" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              All Services
+            </Link>
             <Link to="/ai-services" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               AI Services
             </Link>
@@ -25,13 +28,13 @@ const Sidebar: React.FC = () => {
             </Link>
           </div>
           
-          <div className="space-y-1 mt-6">
-            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Company</div>
+          <div className="mb-4">
+            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Company</h3>
             <Link to="/about" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              About
+              About Us
             </Link>
             <Link to="/team" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              Team
+              Our Team
             </Link>
             <Link to="/careers" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Careers
@@ -41,8 +44,8 @@ const Sidebar: React.FC = () => {
             </Link>
           </div>
           
-          <div className="space-y-1 mt-6">
-            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Resources</div>
+          <div className="mb-4">
+            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Resources</h3>
             <Link to="/blog" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Blog
             </Link>
@@ -57,13 +60,13 @@ const Sidebar: React.FC = () => {
             </Link>
           </div>
           
-          <div className="space-y-1 mt-6">
-            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Support</div>
-            <Link to="/help" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              Help
-            </Link>
+          <div>
+            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Support</h3>
             <Link to="/contact" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Contact
+            </Link>
+            <Link to="/help" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Help Center
             </Link>
             <Link to="/accessibility" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Accessibility
