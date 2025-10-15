@@ -38,11 +38,10 @@ function fixMergeConflicts(filePath) {
     let originalContent = content;
 
     // Remove merge conflict markers and keep the HEAD version (first part)
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n?/g, '$1');
+    content = content.replace(/\n([\s\S]*?)\n>>>>>>> [^\n]+\n?/g, '$1');
     
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD\n?/g, '');
-    content = content.replace(/=======\n?/g, '');
+    content = content.replace(/\n?/g, '');
     content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
 
     // Clean up any double newlines that might have been created

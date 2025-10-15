@@ -54,7 +54,7 @@ for branch in "${branches[@]}"; do
             echo "🔧 Attempting to resolve conflicts..."
             
             # Check for conflict markers
-            if git grep -l "<<<<<<< HEAD" -- .; then
+            if git grep -l "" -- .; then
                 echo "🔍 Found conflict markers, attempting resolution..."
                 
                 # Try to resolve common conflicts automatically

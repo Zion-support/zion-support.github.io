@@ -13,13 +13,13 @@ function cleanMergeConflicts(filePath) {
     let originalContent = content
     
     // Remove merge conflict markers
-    content = content.replace(/^<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+$/gm, '')
-    content = content.replace(/^<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+$/gm, '')
+    content = content.replace(/^[\s\S]*?>>>>>>> [^\n]+$/gm, '')
+    content = content.replace(/^<<<<<<< [^\n]+[\s\S]*?[\s\S]*?>>>>>>> [^\n]+$/gm, '')
     content = content.replace(/^<<<<<<< [^\n]+[\s\S]*?>>>>>>> [^\n]+$/gm, '')
     
     // Remove any remaining conflict markers
     content = content.replace(/^<<<<<<< [^\n]+$/gm, '')
-    content = content.replace(/^=======$/gm, '')
+    content = content.replace(/^$/gm, '')
     content = content.replace(/^>>>>>>> [^\n]+$/gm, '')
     
     // Clean up multiple empty lines

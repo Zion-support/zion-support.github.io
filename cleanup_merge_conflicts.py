@@ -10,13 +10,12 @@ def clean_merge_conflicts(file_path):
             content = f.read()
         
         # Remove merge conflict markers and keep the HEAD version
-        # Pattern to match merge conflicts and keep the content between <<<<<<< HEAD and =======
-        pattern = r'<<<<<<< HEAD\n(.*?)\n=======.*?>>>>>>> [^\n]+\n'
+        # Pattern to match merge conflicts and keep the content between 
+        pattern = r'.*?>>>>>>> [^\n]+\n'
         cleaned_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
         
         # Remove any remaining merge conflict markers
-        cleaned_content = re.sub(r'<<<<<<< HEAD\n?', '', cleaned_content)
-        cleaned_content = re.sub(r'=======\n?', '', cleaned_content)
+        cleaned_content = re.sub(r'\n?', '', cleaned_content)
         cleaned_content = re.sub(r'>>>>>>> [^\n]+\n?', '', cleaned_content)
         
         # Clean up multiple empty lines

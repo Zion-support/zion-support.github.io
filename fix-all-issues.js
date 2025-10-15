@@ -66,16 +66,15 @@ function fixMergeConflicts(filePath) {
     let modified = false;
 
     // Remove merge conflict markers
-    const conflictRegex = /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g;
+    const conflictRegex = /[\s\S]*?>>>>>>> [^\n]+/g;
     if (conflictRegex.test(content)) {
       content = content.replace(conflictRegex, '');
       modified = true;
     }
 
     // Remove remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
+    content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(//g, '');
 
     if (modified) {
       fs.writeFileSync(fullPath, content, 'utf8');

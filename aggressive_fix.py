@@ -10,12 +10,7 @@ def aggressive_fix_conflicts(file_path):
             content = f.read()
         
         # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
-            return False
-        
-        # Remove all conflict markers and keep all content
-        content = re.sub(r'<<<<<<< HEAD\n', '', content)
-        content = re.sub(r'=======\n', '', content)
+        if '\n', '', content)
         content = re.sub(r'>>>>>>> [^\n]+\n?', '', content)
         
         # Clean up any double newlines
