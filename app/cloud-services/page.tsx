@@ -6,137 +6,215 @@ import { ArrowRight, Cloud, Shield, Zap, Globe, Database, Server, CheckCircle, T
 export default function CloudServices() {
   const services = [
     {
-      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Cloud Migration",
+      description: "Seamlessly migrate your infrastructure to the cloud with minimal downtime and maximum efficiency.",
+      icon: <Cloud className="w-8 h-8" />,
+      features: [
+        "Zero-downtime migration",
+        "Data integrity assurance",
+        "Cost optimization",
+        "Security compliance"
+      ]
+    },
+    {
+      title: "Cloud Infrastructure Management",
+      description: "Comprehensive management of your cloud infrastructure with 24/7 monitoring and support.",
+      icon: <Server className="w-8 h-8" />,
+      features: [
+        "24/7 monitoring",
+        "Automated scaling",
+        "Performance optimization",
+        "Disaster recovery"
+      ]
+    },
+    {
+      title: "Cloud Security",
+      description: "Advanced security solutions to protect your cloud environment from threats and vulnerabilities.",
+      icon: <Shield className="w-8 h-8" />,
+      features: [
+        "Multi-layered security",
+        "Compliance management",
+        "Threat detection",
+        "Data encryption"
+      ]
+    },
+    {
+      title: "Cloud Cost Optimization",
+      description: "Optimize your cloud spending with intelligent resource management and cost analysis.",
+      icon: <TrendingUp className="w-8 h-8" />,
+      features: [
+        "Cost analysis & reporting",
+        "Resource optimization",
+        "Budget management",
+        "Savings recommendations"
+      ]
+    },
+    {
+      title: "Cloud Backup & Recovery",
+      description: "Reliable backup and disaster recovery solutions to ensure business continuity.",
+      icon: <Database className="w-8 h-8" />,
+      features: [
+        "Automated backups",
+        "Point-in-time recovery",
+        "Cross-region replication",
+        "RTO/RPO optimization"
+      ]
+    },
+    {
+      title: "Cloud Performance Monitoring",
+      description: "Real-time monitoring and optimization of your cloud applications and infrastructure.",
+      icon: <Zap className="w-8 h-8" />,
+      features: [
+        "Real-time monitoring",
+        "Performance analytics",
+        "Alert management",
+        "Capacity planning"
+      ]
+    }
+  ];
+
+  const benefits = [
+    {
       title: "Scalability",
-      description: "Scale your infrastructure up or down based on demand"
+      description: "Scale your infrastructure up or down based on demand",
+      icon: <Globe className="w-8 h-8" />
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Security",
-      description: "Enterprise-grade security with advanced threat protection"
+      title: "Cost Efficiency",
+      description: "Reduce operational costs with pay-as-you-use pricing",
+      icon: <TrendingUp className="w-8 h-8" />
     },
     {
-      icon: <Clock className="w-6 h-6" />,
       title: "Reliability",
-      description: "99.9% uptime guarantee with redundant systems"
+      description: "99.9% uptime guarantee with redundant systems",
+      icon: <Shield className="w-8 h-8" />
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Performance",
-      description: "Optimized performance with global content delivery"
+      title: "Security",
+      description: "Enterprise-grade security with compliance standards",
+      icon: <CheckCircle className="w-8 h-8" />
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Cloud Services - Zion Tech Group | Enterprise Cloud Solutions</title>
-        <meta name="description" content="Comprehensive cloud services including migration, security, storage, and infrastructure management. Transform your business with our enterprise cloud solutions." />
-        <meta name="keywords" content="cloud services, cloud migration, cloud security, cloud infrastructure, AWS, Azure, Google Cloud" />
+        <title>Cloud Services - Zion Tech Group | Cloud Migration & Infrastructure</title>
+        <meta
+          name="description"
+          content="Transform your business with our comprehensive cloud services. Expert cloud migration, infrastructure management, and security solutions from Zion Tech Group."
+        />
+        <meta
+          name="keywords"
+          content="cloud services, cloud migration, cloud infrastructure, cloud security, AWS, Azure, Google Cloud, cloud consulting"
+        />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
-        <div className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Cloud className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Cloud Solutions</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Cloud Services</span>
-              <br />That Scale With You
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                Cloud Services
+              </span>
             </h1>
-            
-            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your business with our comprehensive cloud solutions. From migration to optimization, 
-              we provide end-to-end cloud services that drive growth, enhance security, and reduce costs.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our comprehensive cloud solutions. From migration to management,
+              we provide end-to-end cloud services that drive growth and efficiency.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+                to="/consultation"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
-                Schedule Demo
-                <Cloud className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                Free Consultation
               </Link>
             </div>
           </div>
         </section>
 
-        {/* Key Benefits */}
+        {/* Services Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our Cloud Services?
-              </h2>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Cloud Services</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We deliver cloud solutions that provide real business value through innovation, security, and scalability.
+                Comprehensive cloud solutions tailored to meet your business needs and drive digital transformation.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                  <div className="text-cyan-400 mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+        {/* Benefits Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Cloud Services?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of cloud transformation with our expert guidance and cutting-edge solutions.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="text-white">{benefit.icon}</div>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with Cloud?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Let our cloud experts help you migrate, optimize, and scale your infrastructure. 
-              Get started with a free consultation today.
+            <p className="text-xl text-gray-300 mb-8">
+              Let our cloud experts help you migrate, optimize, and manage your cloud infrastructure for maximum efficiency and growth.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Cloud Journey
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                to="/demo"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+                to="/consultation"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
-                Schedule Demo
-                <Cloud className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                Schedule Consultation
               </Link>
             </div>
           </div>
