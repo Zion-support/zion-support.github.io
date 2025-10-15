@@ -16,11 +16,34 @@ export default defineConfig({
     },
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['@heroicons/react', 'framer-motion', 'lucide-react'],
-          utils: ['clsx', 'tailwind-merge']
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-vendor';
+            }
+            if (id.includes('react-router')) {
+              return 'router-vendor';
+            }
+            if (id.includes('framer-motion') || id.includes('@heroicons') || id.includes('lucide-react')) {
+              return 'ui-vendor';
+            }
+            if (id.includes('web-vitals') || id.includes('react-helmet')) {
+              return 'analytics-vendor';
+            }
+            return 'vendor';
+          }
+          
+          // App chunks
+          if (id.includes('servicesData')) {
+            return 'services-data';
+          }
+          if (id.includes('components/SEOHead')) {
+            return 'seo';
+          }
+          if (id.includes('components/PerformanceMonitor') || id.includes('components/AccessibilityEnhancer')) {
+            return 'monitoring';
+          }
         }
       }
     },

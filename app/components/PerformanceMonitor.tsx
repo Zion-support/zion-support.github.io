@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface WebVitalMetric {
   name: string;
@@ -8,10 +8,34 @@ interface WebVitalMetric {
   navigationType: string;
 }
 
+interface PerformanceMetrics {
+  fcp: number | null;
+  lcp: number | null;
+  cls: number | null;
+  fid: number | null;
+  ttfb: number | null;
+  inp: number | null;
+}
+
 const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    cls: null,
+    fid: null,
+    ttfb: null,
+    inp: null
+  });
+
   useEffect(() => {
     // Monitor Core Web Vitals with proper analytics
     const sendToAnalytics = (metric: WebVitalMetric) => {
+      // Update local state
+      setMetrics(prev => ({
+        ...prev,
+        [metric.name.toLowerCase()]: metric.value
+      }));
+
       // Send to analytics service (replace with your analytics provider)
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', metric.name, {
