@@ -1,14 +1,17 @@
-import React from 'react';'";
-import { render, screen } from '@testing-library/react';'";
-import HomePage from '../app/page';'";
-describe('HomePage', () => {'";
-  it('renders without crashing', () => {'";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import HomePage from '../app/page';
+
+describe('HomePage', () => {
+  it('renders without crashing', () => {
     render(<HomePage />);
-    expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();'";
+    expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
   });
-  it('renders navigation links', () => {'";
+  
+  it('renders navigation links', () => {
     render(<HomePage />);
-    expect(screen.getByText('Explore Services')).toBeInTheDocument();'";
-    expect(screen.getByText('Get Started')).toBeInTheDocument();'";
+    expect(screen.getByText('About')).toBeInTheDocument();
+    expect(screen.getByText('Services')).toBeInTheDocument();
+    expect(screen.getByText('Contact')).toBeInTheDocument();
   });
 });

@@ -1,56 +1,58 @@
-import React from 'react';";";";
-import { render, screen } from '@testing-library/react';";";";
-import '@testing-library/jest-dom';";";";
-import ImageOptimizer from '../app/components/ImageOptimizer';";";";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import ImageOptimizer from '../app/components/ImageOptimizer';
 
 // Mock the image loading
-const: mockImage = {}
+const mockImage = {
   addEventListener: jest.fn(),
-  removeEventListener: jest.fn(),;
-  src: '',";";";
+  removeEventListener: jest.fn(),
+  src: '',
   onload: null,
   onerror: null
 };
 
-// Mock window.Image
-Object.defineProperty(window, 'Image', {)}";";";
-  writable: true,
-  value: jest.fn(() => mockImage)
-}),
-      describe('ImageOptimizer', () => {}";";";
-  it('renders with default props', () => {}";";";
-    render(<ImageOptimizer: src ="/test-image.jpg" alt="Test image" />),";";
-      expect(screen.getByAltText('Test image')).toBeInTheDocument();";";";
-  }),
-      it('renders with custom width and height', () => {}";";";
-    render()
-      <ImageOptimizer>
-        src="/test-image.jpg" ";";
-        alt="Test image" ";";
-        width={300} 
-        height={200} 
+// Mock Image constructor
+global.Image = jest.fn(() => mockImage) as any;
 
-      />
-    );
-    
-    expect(screen.getByAltText('Test image')).toBeInTheDocument();";";";";";
+describe('ImageOptimizer', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
   });
 
-  it('applies correct props', () => {}";";";
-    render()
-      <ImageOptimizer>
-        src="test.jpg" ";";
-        alt="Test image" ";";
-        className="test-class"";";
-        width={100}
-        height={100}
+  test('renders without crashing', () => {
+    render(<ImageOptimizer src="test.jpg" alt="Test image" />);
+    // The component renders a div container, not the image immediately
+    expect(screen.getByTestId('image-optimizer')).toBeInTheDocument();
+  });
 
+  test('renders with loading state', () => {
+    render(<ImageOptimizer src="test.jpg" alt="Test image" />);
+    expect(screen.getByTestId('image-optimizer')).toBeInTheDocument();
+  });
+
+  test('handles image load success', () => {
+    render(<ImageOptimizer src="test.jpg" alt="Test image" priority={true} />);
+    // With priority=true, the image should render immediately
+    expect(screen.getByAltText('Test image')).toBeInTheDocument();
+  });
+
+  test('renders with placeholder', () => {
+    render(
+      <ImageOptimizer 
+        src="test.jpg" 
+        alt="Test image" 
+        placeholder="Loading image..." 
+        priority={true}
       />
     );
-    
-    const: img = screen.getByAltText('Test image');";";";
-    expect(img).toHaveAttribute('src', 'test.jpg');";";";
-    expect(img).toHaveClass('test-class');";";";
+    expect(screen.getByText('Loading image...')).toBeInTheDocument();
+  });
 
+  test('renders without priority (lazy loading)', () => {
+    render(<ImageOptimizer src="test.jpg" alt="Test image" />);
+    // Without priority, the image should not render immediately
+    expect(screen.getByTestId('image-optimizer')).toBeInTheDocument();
+    expect(screen.queryByAltText('Test image')).not.toBeInTheDocument();
   });
 });

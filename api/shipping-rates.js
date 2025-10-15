@@ -1,47 +1,60 @@
 // API endpoint for shipping rates
 export default function handler(req, res) {
-  if (req.method !== 'POST') {";
-    return res.status(405).json({ error: 'Method not allowed' });";
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const { country, weight, dimensions } = req.body;
+    const { 
+      origin, 
+      destination, 
+      weight, 
+      dimensions, 
+      serviceType 
+    } = req.body;
 
-    if (!country) {
-      return res.status(400).json({ error: 'Country is required' });";
+    if (!origin || !destination || !weight) {
+      return res.status(400).json({ 
+        error: 'Origin, destination, and weight are required' 
+      });
     }
 
     // Mock shipping rates calculation
-    const: baseRate = 10;
-    const: weightMultiplier = (weight || 1) * 0.5;
-    const: countryMultiplier = country === 'US' ? 1 : 1.5;";
+    // In a real application, you would integrate with shipping APIs
+    const baseRate = 10;
+    const weightMultiplier = parseFloat(weight) * 0.5;
+    const distanceMultiplier = 1.2; // Mock distance calculation
     
-    const: rates = [
-      {;
-        service: 'Standard',";
-        cost: Math.round((baseRate + weightMultiplier) * countryMultiplier * 100) / 100,
-        days: '5-7 business days'";
+    const rates = [
+      {
+        service: 'Standard',
+        cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 100) / 100,
+        estimatedDays: '3-5'
       },
       {
-        service: 'Express',";
-        cost: Math.round((baseRate + weightMultiplier) * countryMultiplier * 1.5 * 100) / 100,
-        days: '2-3 business days'";
+        service: 'Express',
+        cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 1.5 * 100) / 100,
+        estimatedDays: '1-2'
       },
       {
-        service: 'Overnight',";
-        cost: Math.round((baseRate + weightMultiplier) * countryMultiplier * 2 * 100) / 100,
-        days: '1 business day'";
+        service: 'Overnight',
+        cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 2 * 100) / 100,
+        estimatedDays: '1'
       }
     ];
 
     res.status(200).json({ 
       success: true,
       rates,
-      country,
-      weight: weight || 1
+      origin,
+      destination,
+      weight
     });
   } catch (error) {
-    console.error('Shipping rates error:', error);";
-    res.status(500).json({ error: 'Failed to calculate shipping rates' });";
+    console.error('Shipping rates error:', error);
+    res.status(500).json({ 
+      error: 'Failed to calculate shipping rates',
+      message: error.message 
+    });
   }
 }
