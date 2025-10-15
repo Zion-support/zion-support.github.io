@@ -4,7 +4,6 @@ export default function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-<<<<<<< HEAD:api/shipping-rates.js
   try {
     // Mock shipping rates data
     const shippingRates = {
@@ -20,33 +19,14 @@ export default function handler(req, res) {
       },
       overnight: {
         name: 'Overnight Shipping',
-        price: 29.99,
+        price: 39.99,
         estimatedDays: 'Next business day'
       }
     };
 
-    res.status(200).json(shippingRates);
+    res.status(200).json({ shippingRates });
   } catch (error) {
-    console.error('Error fetching shipping rates:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    console.error('Shipping rates error:', error);
+    res.status(500).json({ error: 'Failed to fetch shipping rates' });
   }
 }
-=======
-interface ShippingRatesProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ShippingRates: React.FC<ShippingRatesProps> = ({ 
-  className = '', 
-  children 
-}) => {
-  return (
-    <div className={`shipping-rates ${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default ShippingRates;
->>>>>>> cursor/fix-errors-and-merge-to-main-7017:api/shipping-rates.tsx

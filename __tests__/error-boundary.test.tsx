@@ -25,6 +25,7 @@ describe('ErrorBoundary', () => {
     expect(screen.getByText('No error')).toBeInTheDocument();
   });
 
+  it('renders error fallback when there is an error', () => {
     render(
       <BrowserRouter>
         <ErrorBoundary>
@@ -33,5 +34,6 @@ describe('ErrorBoundary', () => {
       </BrowserRouter>
     );
     
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();
   });
 });
