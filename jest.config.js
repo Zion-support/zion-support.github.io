@@ -20,4 +20,9 @@ export default {
   testPathIgnorePatterns: ["<rootDir>/out/", "<rootDir>/node_modules/"],
   transformIgnorePatterns: [
     'node_modules/(?!(.*\\.mjs$|@testing-library|@heroicons|framer-motion))',
+<<<<<<< HEAD
   ],};
+=======
+  ],
+};
+>>>>>>> f048edc658df511510b6d6cf5ec06236e4602d9e

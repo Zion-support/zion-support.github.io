@@ -52,6 +52,8 @@
     "perf:analyze:full": "pnpm run build:analyze && pnpm run perf:monitor",
     "perf:optimize": "node scripts/advanced-performance-optimizer.cjs && pnpm run perf:monitor",
     "optimize:final": "node scripts/final-optimization.cjs",
+    "optimize:comprehensive": "node scripts/comprehensive-optimizer.js",
+    "optimize:bundle": "node scripts/advanced-bundle-optimizer.js",
     "optimize:production": "npm run build:production && npm run analyze:bundle",
     "optimize:performance-final": "node scripts/final-performance-optimizer.js",
     "enhance:performance": "node scripts/performance-enhancer.js",
