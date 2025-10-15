@@ -82,21 +82,27 @@ export default defineConfig({
         manualChunks: (id: string) => {
           // Split vendor chunks for better caching
           if (id.includes('node_modules')) {
-            // React ecosystem
-            if (
-              id.includes('react') ||
-              id.includes('react-dom') ||
-              id.includes('react-router')
-            ) {
-              return 'react-vendor';
+            // React core
+            if (id.includes('react/') || id.includes('react-dom/')) {
+              return 'react-core';
+            }
+            // React router
+            if (id.includes('react-router')) {
+              return 'react-router';
             }
             // UI libraries
-            if (id.includes("lucide-react") || id.includes("framer-motion")) {
-              return "ui-vendor";
+            if (id.includes("lucide-react")) {
+              return "icons";
+            }
+            if (id.includes("framer-motion")) {
+              return "animations";
             }
             // Large libraries
-            if (id.includes('recharts') || id.includes('gray-matter')) {
-              return 'large-vendor';
+            if (id.includes('recharts')) {
+              return 'charts';
+            }
+            if (id.includes('gray-matter')) {
+              return 'content';
             }
             // Other vendor libraries
             return "vendor";
@@ -104,8 +110,11 @@ export default defineConfig({
           // App chunks - split by feature
           if (id.includes('/app/')) {
             // Split by page categories
-            if (id.includes('/ai-') || id.includes('/5g-')) {
-              return 'feature-pages';
+            if (id.includes('/ai-')) {
+              return 'ai-pages';
+            }
+            if (id.includes('/5g-')) {
+              return '5g-pages';
             }
             // Main app pages
             if (id.includes('/page.tsx') && !id.includes('/ai-') && !id.includes('/5g-')) {
@@ -138,7 +147,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
+    include: ['react', 'react-dom', 'react-router-dom', 'lucide-react'],
     exclude: ['@heroicons/react', 'framer-motion', 'recharts'],
   },
   esbuild: {

@@ -1,8 +1,8 @@
 export const errorHandler = {
   handle: (error: Error, context?: string) => {
     // Log to external service
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: context ? { context } : {}
@@ -37,6 +37,10 @@ export const errorHandler = {
   },
   
   log: (error: Error, context?: Record<string, unknown>) => {
+<<<<<<< HEAD
+=======
+    // Error logging logic
+>>>>>>> cursor/analyze-improve-and-merge-code-49c8
     console.error('Error logged:', error, context);
   },
   

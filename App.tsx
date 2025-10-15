@@ -11,6 +11,10 @@ import HomePage from './app/page';
 import AboutPage from './app/about/page';
 import ServicesPage from './app/services/page';
 import ContactPage from './app/contact/page';
+import PrivacyPage from './app/privacy/page';
+import TermsPage from './app/terms/page';
+import BlogPage from './app/blog/page';
+import CareersPage from './app/careers/page';
 
 // Service Pages
 import AiAnalyticsDashboardProPage from './app/ai-analytics-dashboard-pro/page';
@@ -78,6 +82,10 @@ const App: React.FC = () => {
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/services" element={<ServicesPage />} />
                   <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
                   
                   {/* AI Services */}
                   <Route path="/ai-analytics-dashboard-pro" element={<AiAnalyticsDashboardProPage />} />

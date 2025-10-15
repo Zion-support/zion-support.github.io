@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { Network, Router, Shield } from 'lucide-react';
 import { Suspense, lazy } from 'react';
+=======
+import React, { Suspense, lazy } from 'react';
+>>>>>>> cursor/analyze-improve-and-merge-code-49c8
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
