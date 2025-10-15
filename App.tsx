@@ -26,6 +26,8 @@ const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
 const DigitalTransformationPage = lazy(() => import('./app/digital-transformation/page'));
 const MicroSAASSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
 const AIContentGeneratorPage = lazy(() => import('./app/ai-content-generator/page'));
+const AITranslatorPage = lazy(() => import('./app/ai-translator/page'));
+const DevOpsAutomationPage = lazy(() => import('./app/devops-automation/page'));
 const DataAnalyticsPage = lazy(() => import('./app/data-analytics/page'));
 const WebDevelopmentPage = lazy(() => import('./app/web-development/page'));
 const MobileDevelopmentPage = lazy(() => import('./app/mobile-development/page'));
@@ -116,6 +118,7 @@ export default function App() {
                   <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
                   <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
                   <Route path="/web-development" element={<WebDevelopmentPage />} />
+                  <Route path="/devops-automation" element={<DevOpsAutomationPage />} />
                   <Route path="/micro-saas-solutions" element={<MicroSAASSolutionsPage />} />
                   <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
                   
@@ -139,6 +142,7 @@ export default function App() {
                   
                   {/* AI Tools Pages */}
                   <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                  <Route path="/ai-translator" element={<AITranslatorPage />} />
                   
                   {/* Zion AI Tools */}
                   <Route path="/zion-ai-content-moderator" element={<ZionAIContentModeratorPage />} />

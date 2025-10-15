@@ -44,10 +44,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors">All AI Services</Link></li>
               <li><Link to="/ai-content-generator" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Content Generator</Link></li>
-              <li><Link to="/ai-customer-support-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Customer Support</Link></li>
-              <li><Link to="/ai-document-analyzer" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Document Analyzer</Link></li>
-              <li><Link to="/ai-sales-predictor" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Sales Predictor</Link></li>
               <li><Link to="/ai-translator" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Translator</Link></li>
+              <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Customer Support Pro</Link></li>
+              <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Document Analyzer</Link></li>
+              <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Sales Predictor</Link></li>
+              <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Workflow Automator Pro</Link></li>
             </ul>
           </div>
 
@@ -60,6 +61,8 @@ const Footer: React.FC = () => {
               <li><Link to="/mobile-development" className="text-gray-300 hover:text-cyan-400 transition-colors">Mobile Development</Link></li>
               <li><Link to="/database-management" className="text-gray-300 hover:text-cyan-400 transition-colors">Database Management</Link></li>
               <li><Link to="/devops-automation" className="text-gray-300 hover:text-cyan-400 transition-colors">DevOps & Automation</Link></li>
+              <li><Link to="/data-analytics" className="text-gray-300 hover:text-cyan-400 transition-colors">Data Analytics</Link></li>
+              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-cyan-400 transition-colors">Digital Transformation</Link></li>
             </ul>
           </div>
           

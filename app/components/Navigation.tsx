@@ -47,15 +47,22 @@ const Navigation: React.FC = () => {
                 <div
                   onMouseEnter={() => setAiServicesOpen(true)}
                   onMouseLeave={() => setAiServicesOpen(false)}
-                  className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl z-50 border border-gray-200"
+                  className="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-xl z-50 border border-gray-200"
                 >
                   <div className="py-2">
-                    <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">All AI Services</Link>
-                    <Link to="/ai-content-generator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">AI Content Generator</Link>
-                    <Link to="/ai-customer-support-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">AI Customer Support</Link>
-                    <Link to="/ai-document-analyzer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">AI Document Analyzer</Link>
-                    <Link to="/ai-sales-predictor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">AI Sales Predictor</Link>
-                    <Link to="/ai-translator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">AI Translator</Link>
+                    <Link to="/ai-services" className="block px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-cyan-50 hover:text-cyan-600 border-b border-gray-100">All AI Services</Link>
+                    <div className="px-4 py-2">
+                      <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Core AI Tools</div>
+                      <Link to="/ai-content-generator" className="block px-2 py-1 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">AI Content Generator</Link>
+                      <Link to="/ai-translator" className="block px-2 py-1 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">AI Translator</Link>
+                    </div>
+                    <div className="px-4 py-2">
+                      <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Zion AI Suite</div>
+                      <Link to="/zion-ai-customer-support-pro" className="block px-2 py-1 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">AI Customer Support Pro</Link>
+                      <Link to="/zion-ai-document-analyzer" className="block px-2 py-1 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">AI Document Analyzer</Link>
+                      <Link to="/zion-ai-sales-predictor" className="block px-2 py-1 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">AI Sales Predictor</Link>
+                      <Link to="/zion-ai-workflow-automator-pro" className="block px-2 py-1 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">AI Workflow Automator Pro</Link>
+                    </div>
                   </div>
                 </div>
               )}
@@ -77,15 +84,28 @@ const Navigation: React.FC = () => {
                 <div
                   onMouseEnter={() => setItServicesOpen(true)}
                   onMouseLeave={() => setItServicesOpen(false)}
-                  className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl z-50 border border-gray-200"
+                  className="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-xl z-50 border border-gray-200"
                 >
                   <div className="py-2">
-                    <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">All IT Services</Link>
-                    <Link to="/cloud-infrastructure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">Cloud Infrastructure</Link>
-                    <Link to="/web-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">Web Development</Link>
-                    <Link to="/mobile-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">Mobile Development</Link>
-                    <Link to="/database-management" className="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">Database Management</Link>
-                    <Link to="/devops-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">DevOps & Automation</Link>
+                    <Link to="/it-services" className="block px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-cyan-50 hover:text-cyan-600 border-b border-gray-100">All IT Services</Link>
+                    <div className="px-4 py-2">
+                      <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Infrastructure</div>
+                      <Link to="/cloud-infrastructure" className="block px-2 py-1 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">Cloud Infrastructure</Link>
+                      <Link to="/network-infrastructure" className="block px-2 py-1 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">Network Infrastructure</Link>
+                      <Link to="/5g-solutions" className="block px-2 py-1 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">5G Solutions</Link>
+                    </div>
+                    <div className="px-4 py-2">
+                      <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Development</div>
+                      <Link to="/web-development" className="block px-2 py-1 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">Web Development</Link>
+                      <Link to="/mobile-development" className="block px-2 py-1 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">Mobile Development</Link>
+                      <Link to="/database-management" className="block px-2 py-1 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">Database Management</Link>
+                      <Link to="/devops-automation" className="block px-2 py-1 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">DevOps & Automation</Link>
+                    </div>
+                    <div className="px-4 py-2">
+                      <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Analytics</div>
+                      <Link to="/data-analytics" className="block px-2 py-1 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">Data Analytics</Link>
+                      <Link to="/digital-transformation" className="block px-2 py-1 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600">Digital Transformation</Link>
+                    </div>
                   </div>
                 </div>
               )}
@@ -99,6 +119,9 @@ const Navigation: React.FC = () => {
             </Link>
             <Link to="/case-studies" className="text-white hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Case Studies
+            </Link>
+            <Link to="/blog" className="text-white hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              Blog
             </Link>
             <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105">
               Contact Us
@@ -133,9 +156,11 @@ const Navigation: React.FC = () => {
               <div className="ml-4 space-y-1">
                 <Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm">All AI Services</Link>
                 <Link to="/ai-content-generator" className="text-gray-300 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm">AI Content Generator</Link>
-                <Link to="/ai-customer-support-pro" className="text-gray-300 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm">AI Customer Support</Link>
-                <Link to="/ai-document-analyzer" className="text-gray-300 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm">AI Document Analyzer</Link>
-                <Link to="/ai-sales-predictor" className="text-gray-300 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm">AI Sales Predictor</Link>
+                <Link to="/ai-translator" className="text-gray-300 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm">AI Translator</Link>
+                <Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm">AI Customer Support Pro</Link>
+                <Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm">AI Document Analyzer</Link>
+                <Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm">AI Sales Predictor</Link>
+                <Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm">AI Workflow Automator Pro</Link>
               </div>
             </div>
 
@@ -147,6 +172,8 @@ const Navigation: React.FC = () => {
                 <Link to="/web-development" className="text-gray-300 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm">Web Development</Link>
                 <Link to="/mobile-development" className="text-gray-300 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm">Mobile Development</Link>
                 <Link to="/database-management" className="text-gray-300 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm">Database Management</Link>
+                <Link to="/devops-automation" className="text-gray-300 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm">DevOps & Automation</Link>
+                <Link to="/data-analytics" className="text-gray-300 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm">Data Analytics</Link>
               </div>
             </div>
 
@@ -158,6 +185,12 @@ const Navigation: React.FC = () => {
             </Link>
             <Link to="/case-studies" className="text-white hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">
               Case Studies
+            </Link>
+            <Link to="/blog" className="text-white hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">
+              Blog
+            </Link>
+            <Link to="/team" className="text-white hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">
+              Team
             </Link>
             <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center">
               Contact Us
