@@ -1,53 +1,71 @@
 const fs = require('fs');
 const path = require('path');
 
-const baseUrl = 'https://zion.app';
+// Define the pages to include in the sitemap
 const pages = [
-  { url: '/', changefreq: 'daily', priority: '1.0' },
-  { url: '/ai-solutions', changefreq: 'weekly', priority: '0.9' },
-  { url: '/it-solutions', changefreq: 'weekly', priority: '0.9' },
-  { url: '/micro-saas-solutions', changefreq: 'weekly', priority: '0.9' },
-  { url: '/ai-business-intelligence-pro', changefreq: 'weekly', priority: '0.8' },
-  { url: '/ai-cybersecurity-suite-pro', changefreq: 'weekly', priority: '0.8' },
-  // 5G Services
-  { url: '/5g-consulting', changefreq: 'weekly', priority: '0.8' },
-  { url: '/5g-deployment', changefreq: 'weekly', priority: '0.8' },
-  { url: '/5g-integration', changefreq: 'weekly', priority: '0.8' },
-  { url: '/5g-maintenance', changefreq: 'weekly', priority: '0.8' },
-  { url: '/5g-migration', changefreq: 'weekly', priority: '0.8' },
-  { url: '/5g-modernization', changefreq: 'weekly', priority: '0.8' },
-  { url: '/5g-monitoring', changefreq: 'weekly', priority: '0.8' },
-  { url: '/5g-optimization', changefreq: 'weekly', priority: '0.8' },
-  { url: '/5g-performance', changefreq: 'weekly', priority: '0.8' },
-  { url: '/5g-reliability', changefreq: 'weekly', priority: '0.8' },
-  { url: '/5g-scalability', changefreq: 'weekly', priority: '0.8' },
-  { url: '/5g-security', changefreq: 'weekly', priority: '0.8' },
-  { url: '/5g-support', changefreq: 'weekly', priority: '0.8' },
-  { url: '/5g-testing', changefreq: 'weekly', priority: '0.8' },
-  { url: '/5g-training', changefreq: 'weekly', priority: '0.8' },
-  { url: '/5g-transformation', changefreq: 'weekly', priority: '0.8' },
-  { url: '/5g-upgrade', changefreq: 'weekly', priority: '0.8' },
+  { url: '/', priority: '1.0', changefreq: 'daily' },
+  { url: '/about', priority: '0.8', changefreq: 'monthly' },
+  { url: '/services', priority: '0.9', changefreq: 'weekly' },
+  { url: '/contact', priority: '0.7', changefreq: 'monthly' },
+  { url: '/accessibility', priority: '0.6', changefreq: 'monthly' },
+  { url: '/404', priority: '0.1', changefreq: 'yearly' }
 ];
 
+// Generate sitemap XML
 const generateSitemap = () => {
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(
-  page => `  <url>
+  const baseUrl = 'https://ziontechgroup.com';
+  const currentDate = new Date().toISOString();
+
+  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+
+  pages.forEach(page => {
+    sitemap += `
+  <url>
     <loc>${baseUrl}${page.url}</loc>
+    <lastmod>${currentDate}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
-  </url>`
-).join('\n')}
+  </url>`;
+  });
+
+  sitemap += `
 </urlset>`;
 
-  const distDir = path.join(__dirname, '..', 'dist');
-  if (!fs.existsSync(distDir)) {
-    fs.mkdirSync(distDir, { recursive: true });
-  }
-
-  fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap);
-  console.log('Sitemap generated successfully');
+  return sitemap;
 };
 
-generateSitemap();
+// Write sitemap to public directory
+const writeSitemap = () => {
+  const sitemap = generateSitemap();
+  const publicDir = path.join(__dirname, '..', 'public');
+  
+  // Ensure public directory exists
+  if (!fs.existsSync(publicDir)) {
+    fs.mkdirSync(publicDir, { recursive: true });
+  }
+  
+  const sitemapPath = path.join(publicDir, 'sitemap.xml');
+  fs.writeFileSync(sitemapPath, sitemap);
+  console.log('Sitemap generated successfully at:', sitemapPath);
+};
+
+// Generate robots.txt
+const generateRobotsTxt = () => {
+  const robotsTxt = `User-agent: *
+Allow: /
+
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay for better server performance
+Crawl-delay: 1`;
+
+  const publicDir = path.join(__dirname, '..', 'public');
+  const robotsPath = path.join(publicDir, 'robots.txt');
+  fs.writeFileSync(robotsPath, robotsTxt);
+  console.log('Robots.txt generated successfully at:', robotsPath);
+};
+
+// Run the generation
+writeSitemap();
+generateRobotsTxt();
