@@ -12,16 +12,16 @@ const HomePage: React.FC = memo(() => {
     "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
+      "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "contact@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com"
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Tech Street",
-      "addressLocality": "Innovation City",
-      "addressRegion": "IC",
-      "postalCode": "12345",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
       "addressCountry": "US"
     },
     "sameAs": [
@@ -40,80 +40,142 @@ const HomePage: React.FC = memo(() => {
         structuredData={structuredData}
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      {/* Matrix Rain Background */}
+      <div className="matrix-bg">
+        {Array.from({ length: 50 }).map((_, i) => (
+          <div
+            key={i}
+            className="matrix-rain"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 10}s`,
+              animationDuration: `${10 + Math.random() * 20}s`
+            }}
+          >
+            {Array.from({ length: 20 }).map((_, j) => (
+              <div key={j} style={{ opacity: Math.random() }}>
+                {String.fromCharCode(0x30A0 + Math.random() * 96)}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+
+      <div className="min-h-screen relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text">
               Welcome to Zion Tech Group
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              We provide cutting-edge AI and IT solutions to help your business thrive in the digital age.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              We provide cutting-edge AI and IT solutions to help your business thrive in the digital age. 
+              Experience the future of technology with our innovative micro SAAS services and intelligent automation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Link to="/contact" className="btn-futuristic hover-lift">
                 Get Started
               </Link>
-              <Link to="/about" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors text-center">
+              <Link to="/about" className="glass-effect px-8 py-3 rounded-lg text-center text-cyan-400 hover:text-white transition-all duration-300 hover:border-cyan-400">
                 Learn More
               </Link>
             </div>
           </div>
           
           {/* Services Preview */}
-          <div className="mt-20">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Services</h2>
+          <div className="mt-32">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 gradient-text">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto">
+              Discover our comprehensive range of AI and IT solutions designed to transform your business
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Services</h3>
-                <p className="text-gray-600 mb-4">
+              <div className="card-futuristic hover-lift group">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🤖</div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">AI Services</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
                   Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
                 </p>
-                <Link to="/ai-services" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+                <Link to="/ai-services" className="inline-flex items-center text-cyan-400 hover:text-white font-medium transition-colors group-hover:translate-x-2 duration-300">
+                  Learn More <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                </Link>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Infrastructure</h3>
-                <p className="text-gray-600 mb-4">
+              <div className="card-futuristic hover-lift group">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">☁️</div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">Cloud Infrastructure</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
                   Scalable cloud solutions that provide reliability, security, and performance for your business applications.
                 </p>
-                <Link to="/cloud-infrastructure" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+                <Link to="/cloud-infrastructure" className="inline-flex items-center text-cyan-400 hover:text-white font-medium transition-colors group-hover:translate-x-2 duration-300">
+                  Learn More <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                </Link>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
-                <p className="text-gray-600 mb-4">
+              <div className="card-futuristic hover-lift group">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🚀</div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">Digital Transformation</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
                   Complete digital transformation services to modernize your business processes and systems.
                 </p>
-                <Link to="/digital-transformation" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+                <Link to="/digital-transformation" className="inline-flex items-center text-cyan-400 hover:text-white font-medium transition-colors group-hover:translate-x-2 duration-300">
+                  Learn More <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                </Link>
               </div>
             </div>
           </div>
           
           {/* AI Tools Preview */}
-          <div className="mt-20">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI-Powered Tools</h2>
+          <div className="mt-32">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 gradient-text">
+              AI-Powered Tools
+            </h2>
+            <p className="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto">
+              Experience the power of artificial intelligence with our cutting-edge micro SAAS solutions
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Content Moderator</h3>
-                <p className="text-gray-600 text-sm mb-3">Automated content moderation using AI</p>
-                <Link to="/zion-ai-content-moderator" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              <div className="card-futuristic hover-lift group">
+                <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">🛡️</div>
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Content Moderator</h3>
+                <p className="text-gray-300 text-sm mb-3">Automated content moderation using AI</p>
+                <Link to="/zion-ai-content-moderator" className="text-cyan-400 hover:text-white text-sm font-medium transition-colors group-hover:translate-x-1 duration-300 inline-flex items-center">
+                  Try Now <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
+                </Link>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Sales Predictor</h3>
-                <p className="text-gray-600 text-sm mb-3">Predict sales trends with AI</p>
-                <Link to="/zion-ai-sales-predictor" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              <div className="card-futuristic hover-lift group">
+                <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">📈</div>
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Sales Predictor</h3>
+                <p className="text-gray-300 text-sm mb-3">Predict sales trends with AI</p>
+                <Link to="/zion-ai-sales-predictor" className="text-cyan-400 hover:text-white text-sm font-medium transition-colors group-hover:translate-x-1 duration-300 inline-flex items-center">
+                  Try Now <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
+                </Link>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Workflow Automator</h3>
-                <p className="text-gray-600 text-sm mb-3">Automate business workflows</p>
-                <Link to="/zion-ai-workflow-automator" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              <div className="card-futuristic hover-lift group">
+                <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">⚡</div>
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Workflow Automator</h3>
+                <p className="text-gray-300 text-sm mb-3">Automate business workflows</p>
+                <Link to="/zion-ai-workflow-automator" className="text-cyan-400 hover:text-white text-sm font-medium transition-colors group-hover:translate-x-1 duration-300 inline-flex items-center">
+                  Try Now <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
+                </Link>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Financial Forecaster</h3>
-                <p className="text-gray-600 text-sm mb-3">AI-powered financial predictions</p>
-                <Link to="/zion-ai-financial-forecaster" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              <div className="card-futuristic hover-lift group">
+                <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">💰</div>
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Financial Forecaster</h3>
+                <p className="text-gray-300 text-sm mb-3">AI-powered financial predictions</p>
+                <Link to="/zion-ai-financial-forecaster" className="text-cyan-400 hover:text-white text-sm font-medium transition-colors group-hover:translate-x-1 duration-300 inline-flex items-center">
+                  Try Now <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
+                </Link>
               </div>
             </div>
-            <div className="text-center mt-8">
-              <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium">View All Services →</Link>
+            <div className="text-center mt-12">
+              <Link to="/services" className="btn-futuristic hover-lift">
+                View All Services
+              </Link>
             </div>
           </div>
         </div>
