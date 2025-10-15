@@ -33,6 +33,25 @@ import DatabaseManagementPage from './app/database-management/page';
 import NetworkInfrastructurePage from './app/network-infrastructure/page';
 import CookiesPage from './app/cookies/page';
 
+// Import Micro SaaS Solutions
+import ZionAITaskSchedulerPage from './app/zion-ai-task-scheduler/page';
+import ZionAICustomerSupportProPage from './app/zion-ai-customer-support-pro/page';
+import ZionAIWorkflowAutomatorProPage from './app/zion-ai-workflow-automator-pro/page';
+import ZionAIContentModeratorPage from './app/zion-ai-content-moderator/page';
+import ZionAIEmailMarketingProPage from './app/zion-ai-email-marketing-pro/page';
+import ZionAIFinancialForecasterPage from './app/zion-ai-financial-forecaster/page';
+import ZionAICustomerChurnPredictorPage from './app/zion-ai-customer-churn-predictor/page';
+import ZionAICustomerChurnPredictorProPage from './app/zion-ai-customer-churn-predictor-pro/page';
+import ZionAICustomerSentimentTrackerPage from './app/zion-ai-customer-sentiment-tracker/page';
+import ZionAIDocumentAnalyzerPage from './app/zion-ai-document-analyzer/page';
+import ZionAIInventoryOptimizerProPage from './app/zion-ai-inventory-optimizer-pro/page';
+import ZionAIMeetingTranscriberPage from './app/zion-ai-meeting-transcriber/page';
+import ZionAISalesPredictorPage from './app/zion-ai-sales-predictor/page';
+import ZionAISocialSchedulerProPage from './app/zion-ai-social-scheduler-pro/page';
+import ZionAIWorkflowAutomatorPage from './app/zion-ai-workflow-automator/page';
+import ZionCustomerSatisfactionMonitorPage from './app/zion-customer-satisfaction-monitor/page';
+import ZionSmartExpenseTrackerPage from './app/zion-smart-expense-tracker/page';
+
 // Import components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -115,6 +134,26 @@ export default function App() {
                   <Route path="/partnerships" element={<PartnershipsPage />} />
                   <Route path="/api-docs" element={<APIDocsPage />} />
                   <Route path="/accessibility" element={<AccessibilityPage />} />
+                  
+                  {/* Micro SaaS Solutions */}
+                  <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
+                  <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+                  <Route path="/zion-ai-workflow-automator-pro" element={<ZionAIWorkflowAutomatorProPage />} />
+                  <Route path="/zion-ai-content-moderator" element={<ZionAIContentModeratorPage />} />
+                  <Route path="/zion-ai-email-marketing-pro" element={<ZionAIEmailMarketingProPage />} />
+                  <Route path="/zion-ai-financial-forecaster" element={<ZionAIFinancialForecasterPage />} />
+                  <Route path="/zion-ai-customer-churn-predictor" element={<ZionAICustomerChurnPredictorPage />} />
+                  <Route path="/zion-ai-customer-churn-predictor-pro" element={<ZionAICustomerChurnPredictorProPage />} />
+                  <Route path="/zion-ai-customer-sentiment-tracker" element={<ZionAICustomerSentimentTrackerPage />} />
+                  <Route path="/zion-ai-document-analyzer" element={<ZionAIDocumentAnalyzerPage />} />
+                  <Route path="/zion-ai-inventory-optimizer-pro" element={<ZionAIInventoryOptimizerProPage />} />
+                  <Route path="/zion-ai-meeting-transcriber" element={<ZionAIMeetingTranscriberPage />} />
+                  <Route path="/zion-ai-sales-predictor" element={<ZionAISalesPredictorPage />} />
+                  <Route path="/zion-ai-social-scheduler-pro" element={<ZionAISocialSchedulerProPage />} />
+                  <Route path="/zion-ai-workflow-automator" element={<ZionAIWorkflowAutomatorPage />} />
+                  <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
+                  <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
+                  
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
                     <div className="text-center">

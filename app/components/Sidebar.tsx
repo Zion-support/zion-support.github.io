@@ -10,21 +10,53 @@ const Sidebar: React.FC = () => {
         </div>
         <nav className="flex-1 px-4 pb-4 space-y-1">
           <div className="mb-4">
-            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Services</h3>
-            <Link to="/services" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              All Services
-            </Link>
+            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">AI Services</h3>
             <Link to="/ai-services" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              AI Services
+              AI Development
             </Link>
+            <Link to="/ai-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Solutions
+            </Link>
+            <Link to="/ai-content-generator" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Content Generator
+            </Link>
+            <Link to="/data-analytics" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Data Analytics
+            </Link>
+          </div>
+          
+          <div className="mb-4">
+            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">IT Services</h3>
             <Link to="/it-services" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               IT Services
             </Link>
             <Link to="/cloud-infrastructure" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Cloud Infrastructure
             </Link>
+            <Link to="/network-infrastructure" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Network Infrastructure
+            </Link>
+            <Link to="/database-management" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Database Management
+            </Link>
             <Link to="/5g-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               5G Solutions
+            </Link>
+          </div>
+          
+          <div className="mb-4">
+            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Micro SaaS</h3>
+            <Link to="/micro-saas-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Micro SaaS Solutions
+            </Link>
+            <Link to="/zion-ai-task-scheduler" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Task Scheduler
+            </Link>
+            <Link to="/zion-ai-customer-support-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Customer Support
+            </Link>
+            <Link to="/zion-ai-workflow-automator-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Workflow Automator
             </Link>
           </div>
           

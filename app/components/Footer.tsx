@@ -12,8 +12,9 @@ const Footer: React.FC = () => {
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
             <div className="text-sm text-gray-400 mb-4">
-              <p>Email: contact@ziontechgroup.com</p>
-              <p>Phone: +1 (555) 123-4567</p>
+              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Phone: +1 302 464 0950</p>
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
             <div className="flex space-x-4">
               <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
@@ -26,13 +27,33 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Services</h4>
+            <h4 className="text-md font-semibold mb-4">AI Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-gray-300 hover:text-white">All Services</Link></li>
-              <li><Link to="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
+              <li><Link to="/ai-services" className="text-gray-300 hover:text-white">AI Development</Link></li>
+              <li><Link to="/ai-solutions" className="text-gray-300 hover:text-white">AI Solutions</Link></li>
+              <li><Link to="/ai-content-generator" className="text-gray-300 hover:text-white">AI Content Generator</Link></li>
+              <li><Link to="/data-analytics" className="text-gray-300 hover:text-white">Data Analytics</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">IT Services</h4>
+            <ul className="space-y-2">
               <li><Link to="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
               <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-white">Cloud Infrastructure</Link></li>
+              <li><Link to="/network-infrastructure" className="text-gray-300 hover:text-white">Network Infrastructure</Link></li>
+              <li><Link to="/database-management" className="text-gray-300 hover:text-white">Database Management</Link></li>
               <li><Link to="/5g-solutions" className="text-gray-300 hover:text-white">5G Solutions</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Micro SaaS</h4>
+            <ul className="space-y-2">
+              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SaaS Solutions</Link></li>
+              <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">AI Task Scheduler</Link></li>
+              <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">AI Customer Support</Link></li>
+              <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-white">AI Workflow Automator</Link></li>
               <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
             </ul>
           </div>
