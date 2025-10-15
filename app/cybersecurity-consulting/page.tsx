@@ -13,7 +13,8 @@ const CybersecurityConsultingPage: React.FC = () => {
     "Threat intelligence and monitoring",
     "Identity and access management (IAM)",
     "Network security and firewall configuration",
-    "Data protection and encryption solutions"];
+    "Data protection and encryption solutions"
+  ];
 
 const services = [
     { name: "Security Assessment", icon: <Shield className="w-6 h-6" />, color: "text-blue-600" },
@@ -35,8 +36,9 @@ const pricingPlans = [
         "Vulnerability scanning",
         "Risk analysis report",
         "Security recommendations",
-        "Compliance check"]
-        "Executive summary"],
+        "Compliance check",
+        "Executive summary"
+      ],
       popular: false
     },
     {
@@ -49,8 +51,9 @@ const pricingPlans = [
         "Incident response support",
         "Security training sessions",
         "Compliance monitoring",
-        "Threat intelligence updates"]
-        "24/7 emergency support"],
+        "Threat intelligence updates",
+        "24/7 emergency support"
+      ],
       popular: true
     },
     {
@@ -63,8 +66,9 @@ const pricingPlans = [
         "Dedicated security team",
         "Custom security solutions",
         "Advanced threat protection",
-        "Security operations center"]
-        "Ongoing optimization"],
+        "Security operations center",
+        "Ongoing optimization"
+      ],
       popular: false
     }
   ];
@@ -139,8 +143,7 @@ const benefits = [
               
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
                 Protect your business with expert cybersecurity consulting. Reduce risks by 50%, 
-                ensure compliance, and maintain 99.9% security uptime with our comprehensive,
-    security solutions.
+                ensure compliance, and maintain 99.9% security uptime with our                 comprehensive security solutions.
               </p>
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -282,7 +285,7 @@ const benefits = [
                   plan.popular 
                     ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/10' 
                     : 'border-cyan-500/20 hover: border-cyan-400/40'
-                } transition-all duration-300 hover: transform hover:scale-105`}>
+                } transition-all duration-300 hover:transform hover:scale-105`}>
                   {plan.popular && (
                     
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -315,7 +318,7 @@ const benefits = [
                   <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                      : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900'
+                      : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                   }`}>
                     {plan.popular ? 'Get Started' : 'Choose Plan'}
                     <ArrowRight className="w-4 h-4 ml-2 inline" />

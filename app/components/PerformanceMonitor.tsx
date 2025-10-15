@@ -9,7 +9,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
   useEffect(() => {
     // Monitor Core Web Vitals
     onCLS((metric) => {
-      console.log('CLS:', metric);
+      // CLS metric logged
       // Send to analytics service
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'web_vitals', {
@@ -21,7 +21,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
     });
 
     onINP((metric) => {
-      console.log('INP:', metric);
+      // INP metric logged
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'web_vitals', {
           event_category: 'Performance',
@@ -32,7 +32,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
     });
 
     onFCP((metric) => {
-      console.log('FCP:', metric);
+      // FCP metric logged
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'web_vitals', {
           event_category: 'Performance',
@@ -43,7 +43,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
     });
 
     onLCP((metric) => {
-      console.log('LCP:', metric);
+      // LCP metric logged
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'web_vitals', {
           event_category: 'Performance',
@@ -54,7 +54,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
     });
 
     onTTFB((metric) => {
-      console.log('TTFB:', metric);
+      // TTFB metric logged
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'web_vitals', {
           event_category: 'Performance',

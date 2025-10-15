@@ -32,8 +32,9 @@ const ContentPromotionBanner: React.FC = () => {
       icon: '💰',
       stats: [
         { value: '$50M+', label: 'Annual Savings' },
-        { value: '95%', label: 'Process Automation' }]
-        { value: '300%', label: 'ROI' }]
+        { value: '95%', label: 'Process Automation' },
+        { value: '300%', label: 'ROI' }
+      ]
     },
     {
       id: 'ai-trends-2026',
@@ -46,8 +47,9 @@ const ContentPromotionBanner: React.FC = () => {
       icon: '🚀',
       stats: [
         { value: '$100B+', label: 'Market Value' },
-        { value: '95%', label: 'Process Automation' }]
-        { value: '10x', label: 'Efficiency Gains' }]
+        { value: '95%', label: 'Process Automation' },
+        { value: '10x', label: 'Efficiency Gains' }
+      ]
     },
     {
       id: 'autonomous-architecture',
@@ -60,15 +62,16 @@ const ContentPromotionBanner: React.FC = () => {
       icon: '🏗️',
       stats: [
         { value: '99.9%', label: 'Uptime' },
-        { value: '90%', label: 'Cost Reduction' }]
-        { value: 'Real-time', label: 'Optimization' }]
+        { value: '90%', label: 'Cost Reduction' },
+        { value: 'Real-time', label: 'Optimization' }
+      ]
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBanner((prev) => (prev + 1) % banners.length);
-    }, 8000); // Change banner every 8 seconds,
+    }, 8000); // Change banner every 8 seconds
     return () => clearInterval(interval);
   }, [banners.length]);
 
@@ -100,7 +103,7 @@ const ContentPromotionBanner: React.FC = () => {
                 </div>
               </div>
 
-              {/* Stats */},
+              {/* Stats */}
               {banner.stats && (
                 <div className="flex space-x-8 mb-6">
                   {banner.stats.map((stat, index) => (
@@ -115,10 +118,10 @@ const ContentPromotionBanner: React.FC = () => {
                   ))}
                 </div>
               )}
-,
+
               {/* CTA Button */}
               <Link
-    const to = {banner.ctaLink} className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+                to={banner.ctaLink} className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
               >
                 {banner.ctaText}
                 <svg className="ml-2 w-4 h-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -129,7 +132,7 @@ const ContentPromotionBanner: React.FC = () => {
 
             {/* Close button */}
             <button
-    const onClick = {handleClose} className={`ml-6 p-2 rounded-full hover: bg-white hover:bg-opacity-20 transition-colors ${banner.textColor}`}
+              onClick={handleClose} className={`ml-6 p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-colors ${banner.textColor}`}
               aria-label="Close banner"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -144,8 +147,8 @@ const ContentPromotionBanner: React.FC = () => {
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {banners.map((_, index) => (
           <button
-    const key = {index} onClick={() => setCurrentBanner(index)}
-            const className = {`w-3 h-3 rounded-full transition-colors ${
+            key={index} onClick={() => setCurrentBanner(index)}
+            className={`w-3 h-3 rounded-full transition-colors ${
               index === currentBanner ? 'bg-white' : 'bg-white bg-opacity-50'
             }`}
             aria-label={`Go to banner ${index + 1}`}

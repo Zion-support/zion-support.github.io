@@ -29,7 +29,13 @@ class ErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to monitoring service
-    console.error('Error caught by boundary:', error, errorInfo);
+    // Log error to external service
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'exception', {
+        description: error.message,
+        fatal: false
+      });
+    }
   }
 
   handleRetry = () => {
