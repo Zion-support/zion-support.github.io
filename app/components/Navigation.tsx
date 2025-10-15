@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, memo, useCallback, useMemo } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import {
   Bars3Icon,
@@ -35,7 +35,7 @@ interface NavigationProps {
   sidebarOpen?: boolean;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = false }) => {
+const Navigation: React.FC<NavigationProps> = memo(({ onSidebarToggle, sidebarOpen = false }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -43,7 +43,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   const location = useLocation();
 
-  const navigation = [
+  const navigation = useMemo(() => [
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
     {
@@ -160,39 +160,39 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
     },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
-  ];
+  ], []);
 
-  const isActive = (path: string) => {
+  const isActive = useCallback((path: string) => {
     return location.pathname === path;
-  };
+  }, [location.pathname]);
 
-  const toggleServicesMenu = () => {
-    setIsServicesOpen(!isServicesOpen);
+  const toggleServicesMenu = useCallback(() => {
+    setIsServicesOpen(prev => !prev);
     setIsSolutionsOpen(false);
     setIsResourcesOpen(false);
     setIsCompanyOpen(false);
-  };
+  }, []);
 
-  const toggleSolutionsMenu = () => {
-    setIsSolutionsOpen(!isSolutionsOpen);
+  const toggleSolutionsMenu = useCallback(() => {
+    setIsSolutionsOpen(prev => !prev);
     setIsServicesOpen(false);
     setIsResourcesOpen(false);
     setIsCompanyOpen(false);
-  };
+  }, []);
 
-  const toggleResourcesMenu = () => {
-    setIsResourcesOpen(!isResourcesOpen);
+  const toggleResourcesMenu = useCallback(() => {
+    setIsResourcesOpen(prev => !prev);
     setIsServicesOpen(false);
     setIsSolutionsOpen(false);
     setIsCompanyOpen(false);
-  };
+  }, []);
 
-  const toggleCompanyMenu = () => {
-    setIsCompanyOpen(!isCompanyOpen);
+  const toggleCompanyMenu = useCallback(() => {
+    setIsCompanyOpen(prev => !prev);
     setIsServicesOpen(false);
     setIsSolutionsOpen(false);
     setIsResourcesOpen(false);
-  };
+  }, []);
 
   return (
     <nav className="bg-slate-900 border-b border-slate-700">
@@ -286,6 +286,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
       </div>
     </nav>
   );
-};
+});
+
+Navigation.displayName = 'Navigation';
 
 export default Navigation;

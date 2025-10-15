@@ -1,170 +1,135 @@
 import { useEffect, useCallback, useRef } from 'react';
 
-interface PerformanceOptimizationOptions {
-  enableIntersectionObserver?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableDebouncing?: boolean;
-  debounceDelay?: number;
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  timeToInteractive: number;
 }
 
-export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
-  const {
-    enableIntersectionObserver = true,
-    enableLazyLoading = true,
-    enablePreloading = true,
-    enableDebouncing = true,
-    debounceDelay = 300,
-  } = options;
+interface UsePerformanceOptimizationReturn {
+  metrics: PerformanceMetrics | null;
+  isSlowConnection: boolean;
+  optimizeImages: () => void;
+  preloadCriticalResources: () => void;
+  reportWebVitals: (metric: any) => void;
+}
 
-  const observerRef = useRef<IntersectionObserver | null>(null);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+export const usePerformanceOptimization = (): UsePerformanceOptimizationReturn => {
+  const metricsRef = useRef<PerformanceMetrics | null>(null);
+  const isSlowConnectionRef = useRef(false);
 
-  // Intersection Observer for lazy loading
-  const createIntersectionObserver = useCallback(() => {
-    if (!enableIntersectionObserver || !enableLazyLoading) return;
+  // Check connection speed
+  const checkConnectionSpeed = useCallback(() => {
+    if ('connection' in navigator) {
+      const connection = (navigator as any).connection;
+      isSlowConnectionRef.current = connection.effectiveType === 'slow-2g' || 
+                                   connection.effectiveType === '2g' ||
+                                   connection.saveData === true;
+    }
+  }, []);
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const target = entry.target as HTMLElement;
-            
-            // Lazy load images
-            if (target.tagName === 'IMG' && target.dataset.src) {
-              (target as HTMLImageElement).src = target.dataset.src;
-              target.removeAttribute('data-src');
-              observer.unobserve(target);
-            }
-            
-            // Lazy load background images
-            if (target.dataset.bgSrc) {
-              target.style.backgroundImage = `url(${target.dataset.bgSrc})`;
-              target.removeAttribute('data-bg-src');
-              observer.unobserve(target);
-            }
-          }
-        });
-      },
-      {
-        rootMargin: '50px',
-        threshold: 0.1,
+  // Collect performance metrics
+  const collectMetrics = useCallback(() => {
+    if (typeof window === 'undefined' || !window.performance) return;
+
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paintEntries = performance.getEntriesByType('paint');
+    
+    const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+    const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
+
+    const metrics: PerformanceMetrics = {
+      loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+      firstContentfulPaint: fcp ? fcp.startTime : 0,
+      largestContentfulPaint: lcp ? lcp.startTime : 0,
+      firstInputDelay: 0, // Would need to be measured with PerformanceObserver
+      cumulativeLayoutShift: 0, // Would need to be measured with PerformanceObserver
+      timeToInteractive: navigation.domContentLoadedEventEnd - navigation.navigationStart
+    };
+
+    metricsRef.current = metrics;
+  }, []);
+
+  // Optimize images
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img[data-src]');
+    images.forEach((img: Element) => {
+      const imageElement = img as HTMLImageElement;
+      if (imageElement.dataset.src) {
+        imageElement.src = imageElement.dataset.src;
+        imageElement.removeAttribute('data-src');
       }
-    );
-
-    observerRef.current = observer;
-    return observer;
-  }, [enableIntersectionObserver, enableLazyLoading]);
-
-  // Debounce function
-  const debounce = useCallback(
-    <T extends (...args: unknown[]) => unknown>(func: T): T => {
-      if (!enableDebouncing) return func;
-
-      return ((...args: Parameters<T>) => {
-        if (timeoutRef.current) {
-          clearTimeout(timeoutRef.current);
-        }
-        timeoutRef.current = setTimeout(() => func(...args), debounceDelay);
-      }) as T;
-    },
-    [enableDebouncing, debounceDelay]
-  );
+    });
+  }, []);
 
   // Preload critical resources
-  const preloadResource = useCallback((href: string, as: string, crossorigin?: string) => {
-    if (!enablePreloading) return;
+  const preloadCriticalResources = useCallback(() => {
+    const criticalResources = [
+      '/app/styles/futuristic.css',
+      'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
+    ];
 
-    // Check if already preloaded
-    const existingLink = document.querySelector(`link[href="${href}"]`);
-    if (existingLink) return;
-
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = href;
-    link.as = as;
-    if (crossorigin) {
-      link.crossOrigin = crossorigin;
-    }
-    
-    // Add error handling
-    link.onerror = () => {
-        if (process.env.NODE_ENV === 'development') {
-          // Resource preload failed - logged in development only
-        }
-    };
-    
-    document.head.appendChild(link);
-  }, [enablePreloading]);
-
-  // Preload critical images
-  const preloadImages = useCallback((imageUrls: string[]) => {
-    if (!enablePreloading) return;
-
-    imageUrls.forEach((url) => {
-      const img = new Image();
-      img.src = url;
-      img.onload = () => {
-        if (process.env.NODE_ENV === 'development') {
-          // Image preloaded successfully - logged in development only
-        }
-      };
-      img.onerror = () => {
-        if (process.env.NODE_ENV === 'development') {
-          // Image preload failed - logged in development only
-        }
-      };
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'font';
+      if (resource.includes('fonts.googleapis.com')) {
+        link.crossOrigin = 'anonymous';
+      }
+      document.head.appendChild(link);
     });
-  }, [enablePreloading]);
+  }, []);
 
-  // Preload critical fonts
-  const preloadFonts = useCallback((fontUrls: string[]) => {
-    if (!enablePreloading) return;
+  // Report web vitals
+  const reportWebVitals = useCallback((metric: any) => {
+    // In a real app, you would send this to your analytics service
+    console.log('Web Vital:', metric);
+  }, []);
 
-    fontUrls.forEach((url) => {
-      preloadResource(url, 'font', 'anonymous');
-    });
-  }, [enablePreloading, preloadResource]);
-
-  // Preload critical scripts
-  const preloadScripts = useCallback((scriptUrls: string[]) => {
-    if (!enablePreloading) return;
-
-    scriptUrls.forEach((url) => {
-      preloadResource(url, 'script');
-    });
-  }, [enablePreloading, preloadResource]);
-
-  // Initialize performance optimizations
   useEffect(() => {
-    const observer = createIntersectionObserver();
-    
-    // Observe all lazy-load elements
-    if (observer) {
-      const lazyElements = document.querySelectorAll('[data-src], [data-bg-src]');
-      lazyElements.forEach((el) => observer.observe(el));
+    checkConnectionSpeed();
+    collectMetrics();
+
+    // Set up performance observer for CLS and FID
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'layout-shift') {
+            const clsEntry = entry as any;
+            if (!clsEntry.hadRecentInput) {
+              // Update CLS metric
+              if (metricsRef.current) {
+                metricsRef.current.cumulativeLayoutShift += clsEntry.value;
+              }
+            }
+          }
+        }
+      });
+
+      try {
+        observer.observe({ entryTypes: ['layout-shift'] });
+      } catch (e) {
+        // CLS not supported
+      }
     }
 
-    // Preload critical resources
-    if (enablePreloading) {
-      preloadResource('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap', 'style');
-    }
+    // Preload critical resources on mount
+    preloadCriticalResources();
 
     return () => {
-      if (observer) {
-        observer.disconnect();
-      }
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
+      // Cleanup if needed
     };
-  }, [createIntersectionObserver, enablePreloading, preloadResource]);
+  }, [checkConnectionSpeed, collectMetrics, preloadCriticalResources]);
 
   return {
-    debounce,
-    preloadResource,
-    preloadImages,
-    preloadFonts,
-    preloadScripts,
+    metrics: metricsRef.current,
+    isSlowConnection: isSlowConnectionRef.current,
+    optimizeImages,
+    preloadCriticalResources,
+    reportWebVitals
   };
 };

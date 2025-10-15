@@ -39,6 +39,7 @@
     "optimize:css": "node scripts/optimize-css.cjs",
     "optimize:assets": "node scripts/optimize-assets.js",
     "analyze:bundle": "vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html",
+    "analyze:size": "node scripts/analyze-bundle.js",
     "test:performance": "lighthouse http://localhost:4173 --output=html --output-path=./performance-report.html",
     "audit:security": "npm audit --audit-level=moderate",
     "security:check": "npm audit --audit-level=moderate && npm run audit:security",
@@ -105,7 +106,11 @@
     "lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
     "postbuild": "npm run generate:sitemap && npm run optimize:performance && node scripts/remove-console-logs.cjs && echo \"Build completed successfully\"",
     "analyze:full": "npm run build && npm run analyze:bundle",
-    "debug:performance": "localStorage.setItem('debug-performance', 'true') && npm run dev"
+    "debug:performance": "localStorage.setItem('debug-performance', 'true') && npm run dev",
+    "analyze:bundle-size": "node scripts/analyze-bundle.js",
+    "optimize:images": "node scripts/optimize-images.js",
+    "preload:critical": "echo \"Preloading critical resources...\"",
+    "performance:audit": "npm run build && npm run analyze:bundle-size && npm run performance:check"
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",

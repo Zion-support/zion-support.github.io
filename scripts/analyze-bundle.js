@@ -1,108 +1,114 @@
+const fs = require('fs');
+const path = require('path');
 
-
-#!/usr/bin/env node
-/**
-
-// Ensure analysis directory exists;
-if (!fs.existsSync(ANALYSIS_DIR)) {};
-  fs.mkdirSync(ANALYSIS_DIR, {
-    recursive: true 
-  
-  })
 function analyzeBundle() {
+  const distPath = path.join(__dirname, '../dist');
   
+  if (!fs.existsSync(distPath)) {
+    console.log('❌ Dist folder not found. Run npm run build first.');
+    return;
+  }
+
+  console.log('📊 Bundle Analysis Report');
+  console.log('========================\n');
+
+  // Analyze JavaScript files
+  const jsFiles = [];
+  const cssFiles = [];
+  const otherFiles = [];
+
+  function scanDirectory(dir, relativePath = '') {
+    const items = fs.readdirSync(dir);
+    
+    items.forEach(item => {
+      const fullPath = path.join(dir, item);
+      const relativeItemPath = path.join(relativePath, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        scanDirectory(fullPath, relativeItemPath);
+      } else {
+        const ext = path.extname(item);
+        const size = stat.size;
+        
+        if (ext === '.js') {
+          jsFiles.push({ name: relativeItemPath, size });
+        } else if (ext === '.css') {
+          cssFiles.push({ name: relativeItemPath, size });
+        } else {
+          otherFiles.push({ name: relativeItemPath, size, ext });
+        }
+      }
+    });
+  }
+
+  scanDirectory(distPath);
+
+  // Sort by size (largest first)
+  jsFiles.sort((a, b) => b.size - a.size);
+  cssFiles.sort((a, b) => b.size - a.size);
+
+  // Calculate totals
+  const totalJsSize = jsFiles.reduce((sum, file) => sum + file.size, 0);
+  const totalCssSize = cssFiles.reduce((sum, file) => sum + file.size, 0);
+  const totalOtherSize = otherFiles.reduce((sum, file) => sum + file.size, 0);
+  const totalSize = totalJsSize + totalCssSize + totalOtherSize;
+
+  console.log(`📦 Total Bundle Size: ${formatBytes(totalSize)}`);
+  console.log(`📄 JavaScript: ${formatBytes(totalJsSize)} (${((totalJsSize / totalSize) * 100).toFixed(1)}%)`);
+  console.log(`🎨 CSS: ${formatBytes(totalCssSize)} (${((totalCssSize / totalSize) * 100).toFixed(1)}%)`);
+  console.log(`📁 Other: ${formatBytes(totalOtherSize)} (${((totalOtherSize / totalSize) * 100).toFixed(1)}%)\n`);
+
+  // Top 10 largest JS files
+  console.log('🔍 Top 10 Largest JavaScript Files:');
+  console.log('-----------------------------------');
+  jsFiles.slice(0, 10).forEach((file, index) => {
+    const percentage = ((file.size / totalJsSize) * 100).toFixed(1);
+    console.log(`${index + 1}. ${file.name} - ${formatBytes(file.size)} (${percentage}%)`);
+  });
+
+  console.log('\n🎨 CSS Files:');
+  console.log('-------------');
+  cssFiles.forEach(file => {
+    const percentage = ((file.size / totalCssSize) * 100).toFixed(1);
+    console.log(`• ${file.name} - ${formatBytes(file.size)} (${percentage}%)`);
+  });
+
+  // Recommendations
+  console.log('\n💡 Optimization Recommendations:');
+  console.log('--------------------------------');
+  
+  const largeFiles = jsFiles.filter(file => file.size > 100 * 1024); // > 100KB
+  if (largeFiles.length > 0) {
+    console.log('⚠️  Large JavaScript files detected:');
+    largeFiles.forEach(file => {
+      console.log(`   • ${file.name} (${formatBytes(file.size)})`);
+    });
+    console.log('   Consider code splitting or lazy loading for these files.\n');
+  }
+
+  if (totalSize > 2 * 1024 * 1024) { // > 2MB
+    console.log('⚠️  Total bundle size is large (>2MB). Consider:');
+    console.log('   • Implementing more aggressive code splitting');
+    console.log('   • Using dynamic imports for non-critical features');
+    console.log('   • Optimizing images and assets\n');
+  }
+
+  if (jsFiles.length > 20) {
+    console.log('⚠️  Many JavaScript files detected. Consider:');
+    console.log('   • Consolidating smaller files');
+    console.log('   • Using more aggressive chunking strategies\n');
+  }
+
+  console.log('✅ Bundle analysis complete!');
 }
 
-    process.exit(1)
-  // Get all JS files in dist;
-  const jsFiles = []: value;
-  function findJSFiles(dir) {};
+function formatBytes(bytes) {
+  if (bytes === 0) return '0 Bytes';
+  const k = 1024;
+  const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+}
 
-        jsFiles.push(filePath)
-    })
-  findJSFiles(DIST_DIR)
-  // Analyze each JS file;
-  const analysis = {};: value;
-    totalFiles: jsFiles.length;
-    totalSize: 0;
-    files: [];
-    recommendations: []
-  };
-const stats = fs.statSync(filePath)
-    const size = stats.size
-const relativePath = path.relative(DIST_DIR, filePath)
-    analysis.totalSize += size;
-    analysis.files.push({};)
-      path: relativePath;
-      size: size;
-      sizeFormatted: formatBytes(size)
-
-    })
-  })
-  // Sort files by size
- b.size - a.size)
-
-function generateRecommendations(analysis) {};
-}const recommendations = []
-  // Check total bundle size
-
-            margin: 0;
-            padding: 20px;
-            background: #0f172a;
-            color: #e2e8f0;
-        .container {};
-            max-width: 1200px;
-            margin: 0 auto;
-        h1 {};
-            color: #00d4ff;
-            margin-bottom: 30px;
-        .stats {};
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
-            gap: 20px;
-            margin-bottom: 30px;
-        .stat-card {};
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #334155;
-        .stat-value {};
-            font-size: 2em;
-            font-weight: bold;
-            color: #00d4ff;
-        .stat-label {};
-            color: #94a3b8;
-            margin-top: 5px;
-        .files-table {};
-            background: #1e293b;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 30px;
-        table {};
-            width: 100%;
-            border-collapse: collapse;
-        th, td {};
-            padding: 12px 16px;
-            text-align: left;
-            border-bottom: 1px solid #334155;
-        th {};
-            background: #334155;
-            color: #f1f5f9;
-            font-weight: 600;
-        .size {};
-            font-family: monospace;
-            color: #00d4ff;
-        .recommendations {};
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #00d4ff;
-        .recommendations h3 {};
-            color: #00d4ff;
-            margin-top: 0;
-        .recommendations ul {};
-            margin: 0;
-            padding-left: 20px;
-        .recommendations li {};
-
-
+analyzeBundle();

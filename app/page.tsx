@@ -1,7 +1,8 @@
 'use client';
-import React from 'react';
+import React, { memo, useMemo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from './components/SEOHead';
+import OptimizedImage from './components/OptimizedImage';
 import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
@@ -18,8 +19,8 @@ import {
   ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline';
 
-const HomePage: React.FC = () => {
-  const services = [
+const HomePage: React.FC = memo(() => {
+  const services = useMemo(() => [
     {
       icon: CpuChipIcon,
       title: 'AI Solutions',
@@ -84,9 +85,9 @@ const HomePage: React.FC = () => {
       gradient: 'from-pink-500 to-rose-500',
       glow: 'shadow-pink-500/25'
     }
-  ];
+  ], []);
 
-  const features = [
+  const features = useMemo(() => [
     '24/7 Expert Support',
     'Cutting-edge Technology',
     'Scalable Solutions',
@@ -99,16 +100,16 @@ const HomePage: React.FC = () => {
     'Cloud-Native Architecture',
     'Mobile-First Design',
     'API-First Approach'
-  ];
+  ], []);
 
-  const stats = [
+  const stats = useMemo(() => [
     { number: '1000+', label: 'Projects Completed' },
     { number: '200+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' },
     { number: '50+', label: 'AI Models Deployed' },
     { number: '10M+', label: 'API Calls Processed' }
-  ];
+  ], []);
 
   return (
     <>
@@ -471,6 +472,8 @@ const HomePage: React.FC = () => {
       </div>
     </>
   );
-};
+});
+
+HomePage.displayName = 'HomePage';
 
 export default HomePage;

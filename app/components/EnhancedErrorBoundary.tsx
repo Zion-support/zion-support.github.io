@@ -1,30 +1,30 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { RefreshCw, Home, Bug, AlertTriangle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  resetOnPropsChange?: boolean;
-  resetKeys?: Array<string | number>;
+  showDetails?: boolean;
 }
 
 interface State {
   hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+  errorId?: string;
+  retryCount: number;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-  private resetTimeoutId: NodeJS.Timeout | null = null;
+  private retryTimeoutId?: NodeJS.Timeout;
 
   constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
+    this.state = { 
+      hasError: false, 
+      retryCount: 0 
     };
   }
 
@@ -37,156 +37,148 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    });
-
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
+    const { onError } = this.props;
+    
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('EnhancedErrorBoundary caught an error:', error, errorInfo);
+      console.error('Enhanced Error Boundary caught an error:', error, errorInfo);
     }
 
-    // Send error to monitoring service in production
+    // Call custom error handler
+    if (onError) {
+      onError(error, errorInfo);
+    }
+
+    // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
-      this.reportError(error, errorInfo);
-    }
-  }
-
-  componentDidUpdate(prevProps: Props) {
-    const { resetKeys, resetOnPropsChange } = this.props;
-    const { hasError } = this.state;
-
-    if (hasError && prevProps.resetKeys !== resetKeys) {
-      if (resetOnPropsChange && resetKeys) {
-        this.resetErrorBoundary();
-      }
-    }
-  }
-
-  componentWillUnmount() {
-    if (this.resetTimeoutId) {
-      clearTimeout(this.resetTimeoutId);
-    }
-  }
-
-  private reportError = (error: Error, errorInfo: ErrorInfo): void => {
-    // Example: Send to error reporting service
-    // errorReportingService.captureException(error, {
-    //   extra: errorInfo,
-    //   tags: {
-    //     component: 'ErrorBoundary',
-    //     errorId: this.state.errorId
-    //   }
-    // });
-    
-    // For now, we'll just log it
-    console.error('Error reported:', {
-      error: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      errorId: this.state.errorId
-    });
-  };
-
-  private resetErrorBoundary = (): void => {
-    if (this.resetTimeoutId) {
-      clearTimeout(this.resetTimeoutId);
+      // Here you would typically send the error to a logging service
+      console.error('Production error:', {
+        error: error.message,
+        stack: error.stack,
+        componentStack: errorInfo.componentStack,
+        errorId: this.state.errorId
+      });
     }
 
     this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
+      error,
+      errorInfo,
     });
+  }
+
+  handleRetry = () => {
+    const { retryCount } = this.state;
+    
+    if (retryCount < 3) {
+      this.setState(prevState => ({
+        hasError: false,
+        error: undefined,
+        errorInfo: undefined,
+        retryCount: prevState.retryCount + 1
+      }));
+    } else {
+      // After 3 retries, reload the page
+      window.location.reload();
+    }
   };
 
-  private handleRetry = (): void => {
-    this.resetErrorBoundary();
-  };
-
-  private handleReload = (): void => {
+  handleReload = () => {
     window.location.reload();
   };
 
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
+  componentWillUnmount() {
+    if (this.retryTimeoutId) {
+      clearTimeout(this.retryTimeoutId);
+    }
+  }
 
+  render() {
+    const { hasError, error, errorInfo, errorId, retryCount } = this.state;
+    const { children, showDetails = process.env.NODE_ENV === 'development' } = this.props;
+
+    if (hasError) {
       return (
-        <div 
-          className="min-h-screen flex items-center justify-center bg-gray-50" 
-          role="alert" 
-          aria-live="polite"
-          aria-labelledby="error-title"
-        >
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full" aria-hidden="true">
-              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
-            </div>
-            <div className="mt-4 text-center">
-              <h1 id="error-title" className="text-lg font-medium text-gray-900">
-                Something went wrong
-              </h1>
-              <p className="mt-2 text-sm text-gray-500">
-                {this.state.error?.message || 'An unexpected error occurred'}
-              </p>
-              
-              {process.env.NODE_ENV === 'development' && this.state.error && (
-                <details className="mt-4 text-left">
-                  <summary className="cursor-pointer text-sm text-gray-600 hover:text-gray-800">
-                    Error Details
-                  </summary>
-                  <pre className="mt-2 text-xs text-gray-500 bg-gray-100 p-2 rounded overflow-auto max-h-32">
-                    {this.state.error.stack}
-                  </pre>
-                </details>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-lg w-full bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center border border-white/20">
+            <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
+              {retryCount > 0 ? (
+                <AlertTriangle className="w-8 h-8 text-yellow-400" />
+              ) : (
+                <Bug className="w-8 h-8 text-red-400" />
               )}
-              
-              <div className="mt-6 space-y-3">
-                <button
-                  onClick={this.handleRetry}
-                  className="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
-                  aria-label="Try to continue without reloading"
-                >
-                  Try Again
-                </button>
-                <button
-                  onClick={this.handleReload}
-                  className="w-full px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors"
-                  aria-label="Reload the page to try again"
-                >
-                  Reload Page
-                </button>
-                <button
-                  onClick={() => window.history.back()}
-                  className="w-full px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors"
-                  aria-label="Go back to the previous page"
-                >
-                  Go Back
-                </button>
+            </div>
+            
+            <h1 className="text-2xl font-bold text-white mb-4">
+              {retryCount > 0 ? 'Retrying...' : 'Oops! Something went wrong'}
+            </h1>
+            
+            <p className="text-gray-300 mb-6">
+              {retryCount > 0 
+                ? `Attempt ${retryCount + 1} of 3. We're trying to fix this automatically.`
+                : "We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue."
+              }
+            </p>
+
+            {showDetails && error && (
+              <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-left">
+                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
+                <p className="text-red-200 text-sm font-mono break-all mb-2">
+                  {error.message}
+                </p>
+                {error.stack && (
+                  <details className="text-xs text-gray-400">
+                    <summary className="cursor-pointer text-red-300 mb-2">Stack Trace</summary>
+                    <pre className="whitespace-pre-wrap break-all">
+                      {error.stack}
+                    </pre>
+                  </details>
+                )}
+                {errorId && (
+                  <p className="text-gray-400 text-xs mt-2">
+                    Error ID: {errorId}
+                  </p>
+                )}
+                {errorInfo && (
+                  <details className="text-xs text-gray-400 mt-2">
+                    <summary className="cursor-pointer text-red-300 mb-2">Component Stack</summary>
+                    <pre className="whitespace-pre-wrap break-all">
+                      {errorInfo.componentStack}
+                    </pre>
+                  </details>
+                )}
               </div>
+            )}
+
+            <div className="flex flex-col sm:flex-row gap-3">
+              <button
+                onClick={this.handleRetry}
+                className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+              >
+                <RefreshCw className="w-4 h-4" />
+                {retryCount < 3 ? 'Try Again' : 'Reload Page'}
+              </button>
               
-              <div className="mt-4 text-xs text-gray-400">
-                Error ID: {this.state.errorId}
-              </div>
+              <Link
+                to="/"
+                className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-white/20"
+              >
+                <Home className="w-4 h-4" />
+                Go Home
+              </Link>
+            </div>
+
+            <div className="mt-6 text-xs text-gray-400">
+              {retryCount > 0 
+                ? `If this problem persists after ${3 - retryCount} more attempts, the page will reload automatically.`
+                : 'If this problem persists, please contact our support team.'
+              }
             </div>
           </div>
         </div>
       );
     }
 
-    return this.props.children;
+    return children;
   }
 }
 

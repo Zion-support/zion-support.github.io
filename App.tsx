@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, lazy, useEffect, memo, useCallback } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './app/styles/futuristic.css';
@@ -9,6 +9,7 @@ import Footer from './app/components/Footer';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
+import PerformanceMetrics from './app/components/PerformanceMetrics';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import SEOOptimizer from './app/components/SEOOptimizer';
@@ -201,8 +202,16 @@ const LoadingFallback = () => (
   </div>
 );
 
-function App() {
+const App = memo(() => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
+
+  const handleSidebarToggle = useCallback(() => {
+    setSidebarOpen(prev => !prev);
+  }, []);
+
+  const handleSidebarClose = useCallback(() => {
+    setSidebarOpen(false);
+  }, []);
 
   useEffect(() => {
     // Preload critical resources
@@ -239,12 +248,13 @@ function App() {
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-gray-50">
-            <Navigation onSidebarToggle={() => setSidebarOpen(!sidebarOpen)} />
-            <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+            <Navigation onSidebarToggle={handleSidebarToggle} />
+            <Sidebar isOpen={sidebarOpen} onClose={handleSidebarClose} />
             
             <main className="flex-1">
               <EnhancedErrorBoundary>
                 <PerformanceMonitor />
+                <PerformanceMetrics />
                 <AccessibilityEnhancer />
                 <SEOOptimizer />
                 
@@ -455,6 +465,8 @@ function App() {
       </HelmetProvider>
     </GlobalErrorBoundary>
   );
-}
+});
+
+App.displayName = 'App';
 
 export default App;
