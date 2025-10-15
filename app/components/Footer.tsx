@@ -5,20 +5,20 @@ const Footer: React.FC = memo(() => {
   return (
     <footer className="glass-card mt-20">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-6 text-gradient font-['Orbitron']">ZION TECH GROUP</h3>
+            <h3 className="text-2xl font-bold mb-6 text-gradient font-['Orbitron'] holographic-text">ZION TECH GROUP</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
+              Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology, innovative micro SAAS solutions, and comprehensive digital transformation services.
             </p>
             <div className="space-y-2 text-sm text-gray-300">
-              <p><strong>Phone:</strong> <a href="tel:+13024640950" className="hover:text-white">+1 302 464 0950</a></p>
-              <p><strong>Email:</strong> <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white">kleber@ziontechgroup.com</a></p>
-              <p><strong>Address:</strong> 364 E Main St STE 1008<br />Middletown DE 19709</p>
-              <p><strong>Website:</strong> <a href="https://ziontechgroup.com" className="hover:text-white">https://ziontechgroup.com</a></p>
+              <p><strong className="text-cyan-400">Phone:</strong> <a href="tel:+13024640950" className="hover:text-cyan-300 transition-colors">+1 302 464 0950</a></p>
+              <p><strong className="text-cyan-400">Email:</strong> <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-300 transition-colors">kleber@ziontechgroup.com</a></p>
+              <p><strong className="text-cyan-400">Address:</strong> 364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <p><strong className="text-cyan-400">Website:</strong> <a href="https://ziontechgroup.com" className="hover:text-cyan-300 transition-colors">https://ziontechgroup.com</a></p>
             </div>
             <div className="flex space-x-4 mt-4">
-              <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
+              <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-cyan-400 transition-colors neon-glow">
                 <span className="sr-only">Website</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -28,7 +28,7 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-gradient">Services</h4>
+            <h4 className="text-lg font-semibold mb-6 text-gradient holographic-text">Core Services</h4>
             <ul className="space-y-3">
               <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Services</Link></li>
               <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">IT Services</Link></li>
@@ -50,19 +50,35 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">AI Services</h4>
+            <h4 className="text-md font-semibold mb-4 text-gradient holographic-text">AI Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/ai-chatbot-builder" className="text-gray-300 hover:text-white">AI Chatbot Builder</Link></li>
-              <li><Link to="/ai-document-processor" className="text-gray-300 hover:text-white">AI Document Processor</Link></li>
-              <li><Link to="/ai-form-builder" className="text-gray-300 hover:text-white">AI Form Builder</Link></li>
-              <li><Link to="/ai-voice-assistant" className="text-gray-300 hover:text-white">AI Voice Assistant</Link></li>
-              <li><Link to="/ai-fraud-detection" className="text-gray-300 hover:text-white">AI Fraud Detection</Link></li>
-              <li><Link to="/ai-image-recognition" className="text-gray-300 hover:text-white">AI Image Recognition</Link></li>
-              <li><Link to="/ai-lead-scoring" className="text-gray-300 hover:text-white">AI Lead Scoring</Link></li>
-              <li><Link to="/ai-predictive-maintenance" className="text-gray-300 hover:text-white">AI Predictive Maintenance</Link></li>
-              <li><Link to="/ai-price-optimizer" className="text-gray-300 hover:text-white">AI Price Optimizer</Link></li>
-              <li><Link to="/ai-scheduling-assistant" className="text-gray-300 hover:text-white">AI Scheduling Assistant</Link></li>
-              <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
+              <li><Link to="/ai-chatbot-builder" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Chatbot Builder</Link></li>
+              <li><Link to="/ai-document-processor" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Document Processor</Link></li>
+              <li><Link to="/ai-form-builder" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Form Builder</Link></li>
+              <li><Link to="/ai-voice-assistant" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Voice Assistant</Link></li>
+              <li><Link to="/ai-fraud-detection" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Fraud Detection</Link></li>
+              <li><Link to="/ai-image-recognition" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Image Recognition</Link></li>
+              <li><Link to="/ai-lead-scoring" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Lead Scoring</Link></li>
+              <li><Link to="/ai-predictive-maintenance" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Predictive Maintenance</Link></li>
+              <li><Link to="/ai-price-optimizer" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Price Optimizer</Link></li>
+              <li><Link to="/ai-scheduling-assistant" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Scheduling Assistant</Link></li>
+              <li><Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors">Pricing</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4 text-gradient holographic-text">Innovative AI Solutions</h4>
+            <ul className="space-y-2">
+              <li><Link to="/ai-video-generator-pro" className="text-gray-300 hover:text-purple-400 transition-colors">AI Video Generator Pro</Link></li>
+              <li><Link to="/ai-code-assistant-pro" className="text-gray-300 hover:text-purple-400 transition-colors">AI Code Assistant Pro</Link></li>
+              <li><Link to="/ai-customer-insights-pro" className="text-gray-300 hover:text-purple-400 transition-colors">AI Customer Insights Pro</Link></li>
+              <li><Link to="/ai-supply-chain-optimizer-pro" className="text-gray-300 hover:text-purple-400 transition-colors">AI Supply Chain Optimizer</Link></li>
+              <li><Link to="/ai-hr-assistant-pro" className="text-gray-300 hover:text-purple-400 transition-colors">AI HR Assistant Pro</Link></li>
+              <li><Link to="/ai-energy-optimizer-pro" className="text-gray-300 hover:text-purple-400 transition-colors">AI Energy Optimizer Pro</Link></li>
+              <li><Link to="/ai-legal-assistant-pro" className="text-gray-300 hover:text-purple-400 transition-colors">AI Legal Assistant Pro</Link></li>
+              <li><Link to="/ai-healthcare-assistant-pro" className="text-gray-300 hover:text-purple-400 transition-colors">AI Healthcare Assistant</Link></li>
+              <li><Link to="/ai-real-estate-optimizer-pro" className="text-gray-300 hover:text-purple-400 transition-colors">AI Real Estate Optimizer</Link></li>
+              <li><Link to="/ai-education-platform-pro" className="text-gray-300 hover:text-purple-400 transition-colors">AI Education Platform</Link></li>
             </ul>
           </div>
           
@@ -82,14 +98,18 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Advanced AI Services</h4>
+            <h4 className="text-md font-semibold mb-4 text-gradient holographic-text">Advanced Technologies</h4>
             <ul className="space-y-2">
-              <li><Link to="/zion-ai-fraud-detection" className="text-gray-300 hover:text-white">AI Fraud Detection</Link></li>
-              <li><Link to="/zion-ai-image-recognition" className="text-gray-300 hover:text-white">AI Image Recognition</Link></li>
-              <li><Link to="/zion-ai-lead-scoring" className="text-gray-300 hover:text-white">AI Lead Scoring</Link></li>
-              <li><Link to="/zion-ai-predictive-maintenance" className="text-gray-300 hover:text-white">AI Predictive Maintenance</Link></li>
-              <li><Link to="/zion-ai-price-optimizer" className="text-gray-300 hover:text-white">AI Price Optimizer</Link></li>
-              <li><Link to="/zion-ai-voice-assistant" className="text-gray-300 hover:text-white">AI Voice Assistant</Link></li>
+              <li><Link to="/ai-cybersecurity-pro" className="text-gray-300 hover:text-green-400 transition-colors">AI Cybersecurity Pro</Link></li>
+              <li><Link to="/ai-blockchain-optimizer-pro" className="text-gray-300 hover:text-green-400 transition-colors">AI Blockchain Optimizer</Link></li>
+              <li><Link to="/ai-space-tech-pro" className="text-gray-300 hover:text-green-400 transition-colors">AI Space Tech Pro</Link></li>
+              <li><Link to="/ai-quantum-computing-pro" className="text-gray-300 hover:text-green-400 transition-colors">AI Quantum Computing</Link></li>
+              <li><Link to="/ai-manufacturing-optimizer-pro" className="text-gray-300 hover:text-green-400 transition-colors">AI Manufacturing Optimizer</Link></li>
+              <li><Link to="/ai-insurance-optimizer-pro" className="text-gray-300 hover:text-green-400 transition-colors">AI Insurance Optimizer</Link></li>
+              <li><Link to="/ai-travel-optimizer-pro" className="text-gray-300 hover:text-green-400 transition-colors">AI Travel Optimizer</Link></li>
+              <li><Link to="/ai-environmental-monitor-pro" className="text-gray-300 hover:text-green-400 transition-colors">AI Environmental Monitor</Link></li>
+              <li><Link to="/ai-construction-optimizer-pro" className="text-gray-300 hover:text-green-400 transition-colors">AI Construction Optimizer</Link></li>
+              <li><Link to="/ai-transportation-optimizer-pro" className="text-gray-300 hover:text-green-400 transition-colors">AI Transportation Optimizer</Link></li>
             </ul>
           </div>
           
@@ -115,27 +135,28 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Company</h4>
+            <h4 className="text-md font-semibold mb-4 text-gradient holographic-text">Company</h4>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-300 hover:text-white">About</Link></li>
-              <li><Link to="/team" className="text-gray-300 hover:text-white">Team</Link></li>
-              <li><Link to="/careers" className="text-gray-300 hover:text-white">Careers</Link></li>
-              <li><Link to="/partnerships" className="text-gray-300 hover:text-white">Partnerships</Link></li>
-              <li><Link to="/case-studies" className="text-gray-300 hover:text-white">Case Studies</Link></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-pink-400 transition-colors">About Us</Link></li>
+              <li><Link to="/team" className="text-gray-300 hover:text-pink-400 transition-colors">Our Team</Link></li>
+              <li><Link to="/careers" className="text-gray-300 hover:text-pink-400 transition-colors">Careers</Link></li>
+              <li><Link to="/partnerships" className="text-gray-300 hover:text-pink-400 transition-colors">Partnerships</Link></li>
+              <li><Link to="/case-studies" className="text-gray-300 hover:text-pink-400 transition-colors">Case Studies</Link></li>
+              <li><Link to="/pricing" className="text-gray-300 hover:text-pink-400 transition-colors">Pricing</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Resources</h4>
+            <h4 className="text-md font-semibold mb-4 text-gradient holographic-text">Resources</h4>
             <ul className="space-y-2">
-              <li><Link to="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
-              <li><Link to="/api-docs" className="text-gray-300 hover:text-white">API Docs</Link></li>
-              <li><Link to="/help" className="text-gray-300 hover:text-white">Help Center</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
-              <li><Link to="/accessibility" className="text-gray-300 hover:text-white">Accessibility</Link></li>
-              <li><Link to="/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="text-gray-300 hover:text-white">Terms of Service</Link></li>
-              <li><Link to="/cookies" className="text-gray-300 hover:text-white">Cookie Policy</Link></li>
+              <li><Link to="/blog" className="text-gray-300 hover:text-yellow-400 transition-colors">Blog</Link></li>
+              <li><Link to="/api-docs" className="text-gray-300 hover:text-yellow-400 transition-colors">API Documentation</Link></li>
+              <li><Link to="/help" className="text-gray-300 hover:text-yellow-400 transition-colors">Help Center</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-yellow-400 transition-colors">Contact Us</Link></li>
+              <li><Link to="/accessibility" className="text-gray-300 hover:text-yellow-400 transition-colors">Accessibility</Link></li>
+              <li><Link to="/privacy" className="text-gray-300 hover:text-yellow-400 transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="text-gray-300 hover:text-yellow-400 transition-colors">Terms of Service</Link></li>
+              <li><Link to="/cookies" className="text-gray-300 hover:text-yellow-400 transition-colors">Cookie Policy</Link></li>
             </ul>
           </div>
         </div>
