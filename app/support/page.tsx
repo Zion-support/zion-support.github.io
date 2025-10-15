@@ -87,7 +87,7 @@ import { HelpCircle, Mail, Phone, BookOpen, Users, Zap } from 'lucide-react'; in
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-white mb-2">
-                  <2min
+                  &lt;2min
                 </div>
                 <div className="text-gray-400">Average Response Time</div>
               </div>

@@ -250,11 +250,7 @@ function App() {
                                 <Route path="/technology-consulting" element={<TechnologyConsultingPage />} />
                                 <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
                                 <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
-<<<<<<< HEAD
-                                <Route path="/5g-iot-solutions" element={<FiveGIotSolutionsPage />} />
-=======
                                 <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
 
                                 {/* Catch all route */}
                                 <Route path="*" element={
