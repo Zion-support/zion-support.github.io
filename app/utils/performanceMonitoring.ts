@@ -1,4 +1,4 @@
-export const performanceMonitoring = { 
+export const performanceMonitoring = {
   measure: (name: string) => {
     const start = performance.now()
     return {
@@ -6,10 +6,10 @@ export const performanceMonitoring = {
         const duration = performance.now() - start
         console.log(`${name}: ${duration}ms`)
         // Send to analytics
-        if (typeof window !== 'undefined' && window.gtag) { 
+        if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'performance_measurement', {
             name: name,
-            duration: duration 
+            duration: duration
           })
         }
       }

@@ -1,49 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, CheckCircle, Mail, Phone, Play, Star, Users } from 'lucide-react';
+import { ArrowRight, Brain, CheckCircle, Mail, Phone, Play, Shield, Star, Users } from 'lucide-react';
 
 const AIProjectManagerProPage = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const features = [
-    {
-      icon: <Brain className="w-8 h-8" />,
-      title: "AI Planning",
-      description: "Intelligent project planning and resource allocation.",
-      benefits: ["Smart scheduling", "Resource optimization", "Risk prediction"]
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Team Management",
-      description: "Advanced team collaboration and task management.",
-      benefits: ["Team analytics", "Performance tracking", "Communication tools"]
-    }
-  ];
-
-  const integrations = [
-    { name: "Slack", description: "Team communication integration" },
-    { name: "Jira", description: "Issue tracking integration" },
-    { name: "GitHub", description: "Code repository integration" }
-  ];
-
-  const pricingPlans = [
-    { name: "Basic", price: "$29", features: ["Basic project management", "Up to 5 projects"], description: "Perfect for small teams", period: "per month", popular: false },
-    { name: "Professional", price: "$79", features: ["Advanced AI features", "Unlimited projects"], description: "Ideal for growing teams", period: "per month", popular: true },
-    { name: "Enterprise", price: "Custom", features: ["Custom solutions", "Dedicated support"], description: "Tailored for large organizations", period: "contact us", popular: false }
-  ];
-
-  const testimonials = [
-    { name: "Alex Johnson", role: "Project Manager", content: "Revolutionized our project management!", rating: 5, company: "Software Solutions" },
-    { name: "Maria Garcia", role: "Team Lead", content: "Best AI project management tool!", rating: 5, company: "Tech Innovations" }
-  ];
-
   return (
     <>
       <Helmet>
-        <title>AI Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered solutions for your business." />
+        <title>AI Project Manager Pro - Zion Tech Group | Advanced Project Management</title>
+        <meta name="description" content="Revolutionary AI-powered project management solutions. Optimize workflows, predict risks, and maximize team productivity with intelligent automation." />
+        <meta name="keywords" content="AI project management, project automation, workflow optimization, risk prediction, team productivity" />
       </Helmet>
-      <div className="min-h-screen bg-slate-900 relative overflow-hidden">
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -52,7 +20,7 @@ const AIProjectManagerProPage = () => {
         </div>
         { /* Grid Pattern */ }
         <div className="absolute inset-0 opacity-20">
-          <div className="h-full w-full" style={{
+          <div className="h-full w-full" style={ {
             backgroundImage: `
               linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
@@ -288,4 +256,4 @@ const AIProjectManagerProPage = () => {
     </>
   );
 };
-export default AIProjectManagerProPage;
+export default AiProjectManagerProPage;
