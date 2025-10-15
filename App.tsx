@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
+import "./app/styles/accessibility.css";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
@@ -10,6 +11,8 @@ import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import Breadcrumb from "./app/components/Breadcrumb";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 
@@ -40,36 +43,39 @@ function App() {
     <GlobalErrorBoundary>
       <EnhancedErrorBoundary>
         <HelmetProvider>
-          <Router>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-              <FuturisticBackground>
-                <Navigation onSidebarToggle={toggleSidebar} />
-                <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-                <Breadcrumb />
-                <main id="main-content" role="main">
-                  <Suspense fallback={<LoadingPage />}>
-                    <Routes>
-                      <Route path="/" element={<HomePage />} />
-                      <Route path="/about" element={<AboutPage />} />
-                      <Route path="/contact" element={<ContactPage />} />
-                      <Route path="/services" element={<ServicesPage />} />
-                      <Route path="/pricing" element={<PricingPage />} />
-                      <Route path="/blog" element={<BlogPage />} />
-                      <Route path="/ai-services" element={<AIServicesPage />} />
-                      <Route path="/tutorials" element={<TutorialsPage />} />
-                      <Route path="/demo" element={<DemoPage />} />
-                      <Route path="/support" element={<SupportPage />} />
-                      <Route path="/privacy" element={<PrivacyPage />} />
-                      <Route path="/terms" element={<TermsPage />} />
-                      <Route path="/cookies" element={<CookiesPage />} />
-                      <Route path="/sitemap" element={<SitemapPage />} />
-                    </Routes>
-                  </Suspense>
-                </main>
-                <Footer />
-              </FuturisticBackground>
-            </div>
-          </Router>
+          <AccessibilityEnhancer>
+            <Router>
+              <PerformanceMonitor />
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                <FuturisticBackground>
+                  <Navigation onSidebarToggle={toggleSidebar} />
+                  <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+                  <Breadcrumb />
+                  <main id="main-content" role="main">
+                    <Suspense fallback={<LoadingPage />}>
+                      <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/services" element={<ServicesPage />} />
+                        <Route path="/pricing" element={<PricingPage />} />
+                        <Route path="/blog" element={<BlogPage />} />
+                        <Route path="/ai-services" element={<AIServicesPage />} />
+                        <Route path="/tutorials" element={<TutorialsPage />} />
+                        <Route path="/demo" element={<DemoPage />} />
+                        <Route path="/support" element={<SupportPage />} />
+                        <Route path="/privacy" element={<PrivacyPage />} />
+                        <Route path="/terms" element={<TermsPage />} />
+                        <Route path="/cookies" element={<CookiesPage />} />
+                        <Route path="/sitemap" element={<SitemapPage />} />
+                      </Routes>
+                    </Suspense>
+                  </main>
+                  <Footer />
+                </FuturisticBackground>
+              </div>
+            </Router>
+          </AccessibilityEnhancer>
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </GlobalErrorBoundary>
