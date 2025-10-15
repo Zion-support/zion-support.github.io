@@ -2,14 +2,9 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 import { 
-  EnvelopeIcon, 
   ChartBarIcon, 
-  CogIcon, 
   CheckCircleIcon,
-  ArrowRightIcon,
   StarIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
   ShieldCheckIcon,
   SparklesIcon,
   CpuChipIcon,

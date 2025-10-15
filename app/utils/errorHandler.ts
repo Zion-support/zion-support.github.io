@@ -1,8 +1,8 @@
 // Error handling utilities
 export interface AppError {
   message: string;
-  code?: string | undefined;
-  statusCode?: number | undefined;
+  code?: string;
+  statusCode?: number;
   details?: any;
 }
 

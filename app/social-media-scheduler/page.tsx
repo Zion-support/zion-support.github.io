@@ -4,16 +4,10 @@ import SEOHead from '../components/SEOHead';
 import { 
   ShareIcon, 
   ChartBarIcon, 
-  CogIcon, 
   CheckCircleIcon,
-  ArrowRightIcon,
   StarIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  ShieldCheckIcon,
   SparklesIcon,
   CpuChipIcon,
-  EyeIcon,
   CalendarIcon
 } from '@heroicons/react/24/outline';
 

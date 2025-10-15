@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Activity, Zap, Clock, TrendingUp, AlertCircle } from 'lucide-react';
+import { Activity, Zap, TrendingUp, AlertCircle } from 'lucide-react';
 
 interface PerformanceMetrics {
   lcp?: number;
@@ -143,7 +143,7 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
                       <span className="text-gray-400 uppercase">{key}:</span>
                       <div className="flex items-center space-x-2">
                         <span className="text-white">{formatValue(key, value)}</span>
-                        <span className={`text-xs ${color}`}>({label})</span>
+                        <span className={`text-xs ${color}`}>({label} - {score}%)</span>
                       </div>
                     </div>
                   );
