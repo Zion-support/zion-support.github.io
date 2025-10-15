@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -12,49 +11,19 @@ export default async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
-  const { name, email, company, phone, message, location } = req.body || {};
-
-  const dir = path.join(process.cwd(), "data");
-  const file = path.join(dir, "onsite-requests.json");
-
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-
-  const requestData = {
-    id: Date.now().toString(),
-    name,
-    email,
-    company,
-    phone,
-    message,
-    location,
-    timestamp: new Date().toISOString(),
-    status: 'pending'
-  };
-
-  let requests = [];
-  if (fs.existsSync(file)) {
-    try {
-      const data = fs.readFileSync(file, 'utf8');
-      requests = JSON.parse(data);
-    } catch (error) {
-      console.error('Error reading requests file:', error);
-    }
-  }
-
-  requests.push(requestData);
-
   try {
-    const { name, email, company, phone, message, serviceType, preferredDate } = req.body;
-    
+    const { name, email, company, phone, message, location } = req.body || {};
+
+    if (!name || !email) {
+      return res.status(400).json({ error: 'Name and email are required' });
+    }
+
     // Ensure data directory exists
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
 
-    // Load existing requests
+    // Read existing requests
     let requests = [];
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
@@ -63,52 +32,28 @@ export default async function handler(req, res) {
 
     // Add new request
     const newRequest = {
-      id: Date.now().toString(),
-=======
-
-    if (fs.existsSync(file)) {
-      const  data = fs.readFileSync(file, 'utf8');"
-      requests = JSON.parse(data)
-    }
-
-
-      id: Date.now().toString(),
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
+      id: `onsite_${Date.now()}`,
       name,
       email,
-      company,
-      phone,
-<<<<<<< HEAD
-      message,
-      serviceType,
-      preferredDate,
-      timestamp: new Date().toISOString(),
+      company: company || 'Not provided',
+      phone: phone || 'Not provided',
+      message: message || 'No message provided',
+      location: location || 'Not specified',
+      createdAt: new Date().toISOString(),
       status: 'pending'
     };
-    
+
     requests.push(newRequest);
-    
+
     // Save to file
     fs.writeFileSync(file, JSON.stringify(requests, null, 2));
-    
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true, 
+
+    res.status(200).json({ 
       message: 'Onsite request submitted successfully',
-      requestId: newRequest.id
-    }));
+      requestId: newRequest.id 
+    });
   } catch (error) {
     console.error('Onsite request error:', error);
-    res.setHeader('Content-Type', 'application/json');
-    res.status(500).end(JSON.stringify({ 
-      error: 'Failed to submit onsite request' 
-    }));
+    res.status(500).json({ error: 'Internal server error' });
   }
 }
-=======
-
-  }
-}
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const isValidEmail = (email) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
@@ -7,9 +6,6 @@ const isValidEmail = (email) => {
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
   }
 
   try {
@@ -20,18 +16,15 @@ export default async function handler(req, res) {
     }
 
     // Here you would typically save to a database
+    // For now, we'll just return success
     console.log('Newsletter subscription:', email);
+    
     res.status(200).json({ 
-      success: true, 
-      message: 'Successfully subscribed!' 
+      message: 'Successfully subscribed to newsletter',
+      email: email 
     });
-  } catch (err) {
-    console.error('Newsletter subscription error:', err);
-    res.status(500).json({ error: 'Subscription failed' });
+  } catch (error) {
+    console.error('Newsletter subscription error:', error);
+    res.status(500).json({ error: 'Internal server error' });
   }
-<<<<<<< HEAD
 }
-=======
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

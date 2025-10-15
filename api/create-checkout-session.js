@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
@@ -19,33 +18,36 @@ export default withErrorLogging(async (req, res) => {
   }
 
   try {
-    const { amount, currency = 'usd' } = req.body;
-    
+    const { 
+      priceId, 
+      quantity = 1, 
+      successUrl, 
+      cancelUrl,
+      customerEmail 
+    } = req.body;
+
+    if (!priceId) {
+      return res.status(400).json({ error: 'Price ID is required' });
+    }
+
     // Mock checkout session creation
-    const session = {
+    // In a real implementation, you would use Stripe or another payment processor
+    const checkoutSession = {
       id: `cs_${Date.now()}`,
-      amount,
-      currency,
-      status: 'open',
-      payment_intent: `pi_${Date.now()}`,
-      url: `https://checkout.stripe.com/pay/cs_${Date.now()}`
+      url: `https://checkout.example.com/session/${Date.now()}`,
+      payment_status: 'unpaid',
+      amount_total: 10000, // $100.00 in cents
+      currency: 'usd',
+      customer_email: customerEmail || null,
+      success_url: successUrl || `${req.headers.origin}/success`,
+      cancel_url: cancelUrl || `${req.headers.origin}/cancel`
     };
-    
-    res.status(200).json({ session });
+
+    res.status(200).json({ 
+      checkoutSession 
+    });
   } catch (error) {
-    console.error('Checkout session creation failed:', error);
-    res.status(500).json({ error: 'Failed to create checkout session' });
+    console.error('Checkout session creation error:', error);
+    res.status(500).json({ error: 'Internal server error' });
   }
 });
-=======
-
-  return async (req, res) => {
-    try {
-      await handler(req, res)
-    } catch (error) {
-
-  }
-  try {
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
