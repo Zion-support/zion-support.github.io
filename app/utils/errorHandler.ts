@@ -15,7 +15,7 @@ class ErrorHandler {
         userAgent: context.userAgent || navigator.userAgent,
         timestamp: context.timestamp || new Date().toISOString()
       },
-      severity: this.determineSeverity(error, context),
+      severity: this.determineSeverity(error),
       resolved: false,
       createdAt: new Date().toISOString()
     };

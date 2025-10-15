@@ -1,19 +1,28 @@
-import { ReactNode } from 'react';
+import React, { useEffect } from 'react';
 
-interface AccessibilityEnhancerProps {
-  children: ReactNode;
-  className?: string;
-}
+const AccessibilityEnhancer: React.FC = () => {
+  useEffect(() => {
+    // Add keyboard navigation support
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    };
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
-  children, 
-  className = '' 
-}) => {
-  return (
-    <div className={`accessibility-enhancer ${className}`}>
-      {children}
-    </div>
-  );
+    const handleMouseDown = () => {
+      document.body.classList.remove('keyboard-navigation');
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+    };
+  }, []);
+
+  return null;
 };
 
 export default AccessibilityEnhancer;
