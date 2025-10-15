@@ -97,6 +97,22 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Micro SaaS Tools</h4>
+            <ul className="space-y-3">
+              <li><Link to="/zion-ai-chatbot-builder" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Chatbot Builder</Link></li>
+              <li><Link to="/zion-ai-form-builder" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Form Builder</Link></li>
+              <li><Link to="/zion-ai-document-processor" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Document Processor</Link></li>
+              <li><Link to="/zion-ai-scheduling-assistant" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Scheduling Assistant</Link></li>
+              <li><Link to="/zion-ai-social-media-manager" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Social Media Manager</Link></li>
+              <li><Link to="/zion-ai-crm-optimizer" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI CRM Optimizer</Link></li>
+              <li><Link to="/zion-ai-email-optimizer" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Email Optimizer</Link></li>
+              <li><Link to="/zion-ai-website-analyzer" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Website Analyzer</Link></li>
+              <li><Link to="/zion-ai-data-visualizer" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Data Visualizer</Link></li>
+              <li><Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Pricing</Link></li>
+            </ul>
+          </div>
+          
+          <div>
             <h4 className="text-lg font-semibold mb-4 text-cyan-400">Company</h4>
             <ul className="space-y-3">
               <li><Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">About Us</Link></li>

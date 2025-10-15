@@ -3,7 +3,7 @@ export const servicesData = {
     {
       id: 'ai-development',
       title: 'AI Development Services',
-      description: 'Custom AI solutions tailored to your business needs with cutting-edge machine learning and deep learning technologies',
+      description: 'Custom AI solutions tailored to your business needs with cutting-edge machine learning and deep learning technologies. We build intelligent applications that transform your business operations and drive growth.',
       shortDescription: 'Build intelligent applications with our AI expertise',
       icon: '🤖',
       features: [
@@ -16,7 +16,9 @@ export const servicesData = {
         'Deep Learning Implementation',
         'Neural Network Architecture',
         'AI Model Training & Optimization',
-        'Real-time AI Processing'
+        'Real-time AI Processing',
+        'AI Model Deployment',
+        'Continuous Learning Systems'
       ],
       pricing: {
         basic: 5000,
@@ -29,7 +31,9 @@ export const servicesData = {
         'Better customer insights',
         'Reduced operational costs',
         'Enhanced accuracy',
-        'Scalable AI solutions'
+        'Scalable AI solutions',
+        'Competitive advantage',
+        'Data-driven insights'
       ],
       useCases: [
         'Customer service automation',
@@ -37,13 +41,16 @@ export const servicesData = {
         'Fraud detection',
         'Content generation',
         'Image recognition',
-        'Voice assistants'
+        'Voice assistants',
+        'Process optimization',
+        'Quality control'
       ],
       marketPrice: '$5,000 - $50,000',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-development'
+        website: 'https://ziontechgroup.com/ai-development',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     },
     {
@@ -549,7 +556,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-consulting'
+        website: 'https://ziontechgroup.com/ai-consulting',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     },
     {
@@ -825,7 +833,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-content-generator'
+        website: 'https://ziontechgroup.com/ai-content-generator',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     },
     {
@@ -871,7 +880,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-customer-support'
+        website: 'https://ziontechgroup.com/ai-customer-support',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     }
   ],
@@ -879,7 +889,7 @@ export const servicesData = {
     {
       id: 'task-manager',
       title: 'Zion Task Manager Pro',
-      description: 'Comprehensive task and project management solution with AI-powered insights and automation',
+      description: 'Comprehensive task and project management solution with AI-powered insights and automation. Streamline your workflow, boost team productivity, and achieve better project outcomes with our intelligent platform.',
       shortDescription: 'Streamline your workflow with our task management platform',
       icon: '✅',
       features: [
@@ -892,7 +902,11 @@ export const servicesData = {
         'AI-Powered Insights',
         'Automated Workflows',
         'Mobile App',
-        'API Access'
+        'API Access',
+        'Gantt Charts',
+        'Resource Management',
+        'Budget Tracking',
+        'Risk Assessment'
       ],
       pricing: {
         basic: 29,
@@ -905,7 +919,9 @@ export const servicesData = {
         'Real-time visibility',
         'Scalable solution',
         'Data-driven decisions',
-        'Reduced overhead'
+        'Reduced overhead',
+        'Faster project delivery',
+        'Better resource utilization'
       ],
       useCases: [
         'Project management',
@@ -913,13 +929,493 @@ export const servicesData = {
         'Workflow optimization',
         'Performance tracking',
         'Remote work management',
-        'Client project delivery'
+        'Client project delivery',
+        'Agile development',
+        'Event planning'
       ],
       marketPrice: '$29 - $199/month',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/task-manager'
+        website: 'https://ziontechgroup.com/task-manager',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-chatbot-builder',
+      title: 'Zion AI Chatbot Builder Pro',
+      description: 'Create intelligent chatbots without coding using our advanced AI-powered platform. Build, deploy, and manage conversational AI solutions for customer support, sales, and engagement.',
+      shortDescription: 'Build intelligent chatbots without coding',
+      icon: '💬',
+      features: [
+        'No-Code Builder',
+        'Natural Language Processing',
+        'Multi-language Support',
+        'Voice Integration',
+        'Analytics Dashboard',
+        'A/B Testing',
+        'Integration APIs',
+        'Custom Training',
+        'Live Chat Handoff',
+        'Sentiment Analysis',
+        'Conversation Flow Designer',
+        'Knowledge Base Integration'
+      ],
+      pricing: {
+        basic: 39,
+        pro: 99,
+        enterprise: 299
+      },
+      benefits: [
+        '24/7 customer support',
+        'Reduced support costs',
+        'Improved response times',
+        'Scalable solutions',
+        'Better customer satisfaction',
+        'Data collection insights',
+        'Easy deployment',
+        'Customizable responses'
+      ],
+      useCases: [
+        'Customer support',
+        'Lead qualification',
+        'FAQ automation',
+        'E-commerce assistance',
+        'Appointment booking',
+        'Order tracking',
+        'Technical support',
+        'Sales qualification'
+      ],
+      marketPrice: '$39 - $299/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-chatbot-builder',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-form-builder',
+      title: 'Zion AI Form Builder Pro',
+      description: 'Create intelligent, dynamic forms with AI-powered features including smart validation, conditional logic, and automated responses. Perfect for surveys, applications, and data collection.',
+      shortDescription: 'Build intelligent forms with AI features',
+      icon: '📝',
+      features: [
+        'Drag & Drop Builder',
+        'AI-Powered Validation',
+        'Conditional Logic',
+        'Smart Field Suggestions',
+        'Auto-Complete',
+        'Multi-step Forms',
+        'Payment Integration',
+        'Analytics & Insights',
+        'Custom Styling',
+        'Mobile Optimization',
+        'Spam Protection',
+        'Data Export'
+      ],
+      pricing: {
+        basic: 19,
+        pro: 49,
+        enterprise: 149
+      },
+      benefits: [
+        'Higher conversion rates',
+        'Better data quality',
+        'Reduced form abandonment',
+        'Automated validation',
+        'Mobile-friendly design',
+        'Easy customization',
+        'Real-time analytics',
+        'Integration capabilities'
+      ],
+      useCases: [
+        'Lead generation',
+        'Customer surveys',
+        'Job applications',
+        'Event registration',
+        'Contact forms',
+        'Feedback collection',
+        'Order forms',
+        'Support tickets'
+      ],
+      marketPrice: '$19 - $149/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-form-builder',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-document-processor',
+      title: 'Zion AI Document Processor Pro',
+      description: 'Automate document processing with AI-powered extraction, classification, and analysis. Handle invoices, contracts, forms, and other documents with intelligent automation.',
+      shortDescription: 'Automate document processing with AI',
+      icon: '📄',
+      features: [
+        'OCR Technology',
+        'Data Extraction',
+        'Document Classification',
+        'Template Matching',
+        'Batch Processing',
+        'API Integration',
+        'Custom Rules Engine',
+        'Quality Validation',
+        'Export Options',
+        'Audit Trail',
+        'Multi-format Support',
+        'Cloud Storage Integration'
+      ],
+      pricing: {
+        basic: 79,
+        pro: 199,
+        enterprise: 599
+      },
+      benefits: [
+        'Reduced manual work',
+        'Faster processing',
+        'Improved accuracy',
+        'Cost savings',
+        'Scalable operations',
+        'Better compliance',
+        'Error reduction',
+        'Time efficiency'
+      ],
+      useCases: [
+        'Invoice processing',
+        'Contract analysis',
+        'Form data extraction',
+        'Receipt management',
+        'Insurance claims',
+        'Legal document review',
+        'Financial reporting',
+        'Compliance checking'
+      ],
+      marketPrice: '$79 - $599/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-document-processor',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-scheduling-assistant',
+      title: 'Zion AI Scheduling Assistant Pro',
+      description: 'Intelligent scheduling solution that automates meeting coordination, calendar management, and appointment booking with AI-powered optimization and conflict resolution.',
+      shortDescription: 'Automate scheduling with AI intelligence',
+      icon: '📅',
+      features: [
+        'Smart Scheduling',
+        'Calendar Integration',
+        'Conflict Resolution',
+        'Time Zone Handling',
+        'Meeting Optimization',
+        'Automated Reminders',
+        'Resource Booking',
+        'Custom Rules',
+        'Analytics Dashboard',
+        'Mobile App',
+        'API Access',
+        'Team Coordination'
+      ],
+      pricing: {
+        basic: 29,
+        pro: 79,
+        enterprise: 199
+      },
+      benefits: [
+        'Reduced scheduling conflicts',
+        'Time savings',
+        'Better meeting efficiency',
+        'Automated coordination',
+        'Improved productivity',
+        'Professional appearance',
+        'Reduced no-shows',
+        'Optimized time usage'
+      ],
+      useCases: [
+        'Meeting scheduling',
+        'Appointment booking',
+        'Resource management',
+        'Event coordination',
+        'Interview scheduling',
+        'Client meetings',
+        'Team coordination',
+        'Service booking'
+      ],
+      marketPrice: '$29 - $199/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-scheduling-assistant',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-social-media-manager',
+      title: 'Zion AI Social Media Manager Pro',
+      description: 'Comprehensive social media management platform with AI-powered content creation, scheduling, analytics, and engagement optimization across all major platforms.',
+      shortDescription: 'AI-powered social media management',
+      icon: '📱',
+      features: [
+        'AI Content Generation',
+        'Multi-platform Publishing',
+        'Hashtag Optimization',
+        'Engagement Analytics',
+        'Content Calendar',
+        'Team Collaboration',
+        'Brand Monitoring',
+        'Influencer Tracking',
+        'Competitor Analysis',
+        'Automated Responses',
+        'Performance Insights',
+        'ROI Tracking'
+      ],
+      pricing: {
+        basic: 49,
+        pro: 129,
+        enterprise: 399
+      },
+      benefits: [
+        'Increased engagement',
+        'Time savings',
+        'Better content performance',
+        'Consistent posting',
+        'Data-driven insights',
+        'Brand growth',
+        'Automated workflows',
+        'Competitive advantage'
+      ],
+      useCases: [
+        'Social media marketing',
+        'Brand management',
+        'Content strategy',
+        'Community building',
+        'Influencer marketing',
+        'Social commerce',
+        'Customer engagement',
+        'Lead generation'
+      ],
+      marketPrice: '$49 - $399/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-social-media-manager',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-crm-optimizer',
+      title: 'Zion AI CRM Optimizer Pro',
+      description: 'Enhance your existing CRM with AI-powered insights, lead scoring, automated follow-ups, and predictive analytics to maximize sales performance and customer relationships.',
+      shortDescription: 'AI-powered CRM enhancement',
+      icon: '🎯',
+      features: [
+        'Lead Scoring',
+        'Predictive Analytics',
+        'Automated Follow-ups',
+        'Sales Forecasting',
+        'Customer Segmentation',
+        'Churn Prediction',
+        'Opportunity Identification',
+        'Performance Insights',
+        'Integration APIs',
+        'Custom Dashboards',
+        'Automated Workflows',
+        'ROI Tracking'
+      ],
+      pricing: {
+        basic: 59,
+        pro: 149,
+        enterprise: 499
+      },
+      benefits: [
+        'Higher conversion rates',
+        'Better lead quality',
+        'Improved sales performance',
+        'Reduced manual work',
+        'Data-driven decisions',
+        'Enhanced customer relationships',
+        'Automated processes',
+        'Competitive advantage'
+      ],
+      useCases: [
+        'Sales optimization',
+        'Lead management',
+        'Customer retention',
+        'Pipeline management',
+        'Performance tracking',
+        'Forecasting',
+        'Automation',
+        'Analytics'
+      ],
+      marketPrice: '$59 - $499/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-crm-optimizer',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-email-optimizer',
+      title: 'Zion AI Email Optimizer Pro',
+      description: 'Optimize email campaigns with AI-powered subject line generation, content optimization, send time prediction, and performance analytics to maximize open rates and conversions.',
+      shortDescription: 'AI-powered email optimization',
+      icon: '📧',
+      features: [
+        'Subject Line Optimization',
+        'Content Enhancement',
+        'Send Time Prediction',
+        'A/B Testing',
+        'Performance Analytics',
+        'Personalization',
+        'Spam Score Analysis',
+        'Template Optimization',
+        'Deliverability Monitoring',
+        'Engagement Tracking',
+        'ROI Analysis',
+        'Automated Testing'
+      ],
+      pricing: {
+        basic: 39,
+        pro: 99,
+        enterprise: 299
+      },
+      benefits: [
+        'Higher open rates',
+        'Better click-through rates',
+        'Improved deliverability',
+        'Reduced spam complaints',
+        'Better engagement',
+        'Data-driven optimization',
+        'Time savings',
+        'Higher ROI'
+      ],
+      useCases: [
+        'Email marketing',
+        'Newsletter optimization',
+        'Transactional emails',
+        'Lead nurturing',
+        'Customer retention',
+        'Product announcements',
+        'Event promotion',
+        'Sales follow-up'
+      ],
+      marketPrice: '$39 - $299/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-email-optimizer',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-website-analyzer',
+      title: 'Zion AI Website Analyzer Pro',
+      description: 'Comprehensive website analysis tool with AI-powered insights on performance, SEO, user experience, and conversion optimization recommendations.',
+      shortDescription: 'AI-powered website analysis and optimization',
+      icon: '🔍',
+      features: [
+        'Performance Analysis',
+        'SEO Optimization',
+        'User Experience Insights',
+        'Conversion Rate Analysis',
+        'Competitor Analysis',
+        'Technical Audits',
+        'Content Optimization',
+        'Speed Optimization',
+        'Mobile Analysis',
+        'Accessibility Checks',
+        'Security Analysis',
+        'Recommendation Engine'
+      ],
+      pricing: {
+        basic: 49,
+        pro: 129,
+        enterprise: 399
+      },
+      benefits: [
+        'Better website performance',
+        'Improved SEO rankings',
+        'Higher conversion rates',
+        'Better user experience',
+        'Competitive insights',
+        'Technical optimization',
+        'Data-driven recommendations',
+        'Time savings'
+      ],
+      useCases: [
+        'Website optimization',
+        'SEO improvement',
+        'Performance monitoring',
+        'Conversion optimization',
+        'Competitive analysis',
+        'Technical audits',
+        'User experience enhancement',
+        'Mobile optimization'
+      ],
+      marketPrice: '$49 - $399/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-website-analyzer',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-data-visualizer',
+      title: 'Zion AI Data Visualizer Pro',
+      description: 'Transform complex data into beautiful, interactive visualizations with AI-powered insights and automated chart generation for better decision making.',
+      shortDescription: 'AI-powered data visualization and insights',
+      icon: '📊',
+      features: [
+        'Automated Chart Generation',
+        'Interactive Dashboards',
+        'AI-Powered Insights',
+        'Custom Visualizations',
+        'Real-time Data',
+        'Export Options',
+        'Collaboration Tools',
+        'Mobile Responsive',
+        'API Integration',
+        'Template Library',
+        'Advanced Analytics',
+        'Sharing Capabilities'
+      ],
+      pricing: {
+        basic: 39,
+        pro: 99,
+        enterprise: 299
+      },
+      benefits: [
+        'Better data understanding',
+        'Faster insights',
+        'Professional presentations',
+        'Improved decision making',
+        'Time savings',
+        'Easy sharing',
+        'Interactive reports',
+        'Automated analysis'
+      ],
+      useCases: [
+        'Business intelligence',
+        'Performance reporting',
+        'Financial analysis',
+        'Marketing analytics',
+        'Sales reporting',
+        'Operational insights',
+        'Client presentations',
+        'Research visualization'
+      ],
+      marketPrice: '$39 - $299/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-data-visualizer',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     },
     {
@@ -1655,7 +2151,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/expense-tracker'
+        website: 'https://ziontechgroup.com/expense-tracker',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     },
     {
@@ -1701,7 +2198,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/email-marketing'
+        website: 'https://ziontechgroup.com/email-marketing',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     },
     {
@@ -1747,7 +2245,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/social-scheduler'
+        website: 'https://ziontechgroup.com/social-scheduler',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     },
     {
@@ -1793,7 +2292,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/inventory-optimizer'
+        website: 'https://ziontechgroup.com/inventory-optimizer',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     },
     {
@@ -1839,7 +2339,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/workflow-automator'
+        website: 'https://ziontechgroup.com/workflow-automator',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     }
   ],
@@ -1887,7 +2388,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/cloud-infrastructure'
+        website: 'https://ziontechgroup.com/cloud-infrastructure',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     },
     {
@@ -2485,7 +2987,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/cybersecurity'
+        website: 'https://ziontechgroup.com/cybersecurity',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     },
     {
@@ -2531,7 +3034,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/data-analytics'
+        website: 'https://ziontechgroup.com/data-analytics',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     },
     {
@@ -2577,7 +3081,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/mobile-development'
+        website: 'https://ziontechgroup.com/mobile-development',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     },
     {
@@ -2623,7 +3128,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/web-development'
+        website: 'https://ziontechgroup.com/web-development',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     },
     {
@@ -2669,7 +3175,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/database-management'
+        website: 'https://ziontechgroup.com/database-management',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     }
   ],
