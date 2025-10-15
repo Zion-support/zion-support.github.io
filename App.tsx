@@ -7,6 +7,12 @@ import HomePage from './app/page';
 import AboutPage from './app/about/page';
 import ServicesPage from './app/services/page';
 import ContactPage from './app/contact/page';
+import PricingPage from './app/pricing/page';
+import BlogPage from './app/blog/page';
+import AIServicesPage from './app/ai-services/page';
+import MicroSAASPage from './app/micro-saas-solutions/page';
+import ITServicesPage from './app/it-services/page';
+import AIContentGeneratorPage from './app/ai-content-generator/page';
 
 // Import components
 import Navigation from './app/components/Navigation';
@@ -57,6 +63,16 @@ export default function App() {
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/pricing" element={<PricingPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  
+                  {/* Service Categories */}
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/micro-saas-solutions" element={<MicroSAASPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  
+                  {/* Individual Services */}
+                  <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
