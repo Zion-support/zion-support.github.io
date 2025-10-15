@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
@@ -8,8 +8,7 @@ import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
-import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import UnifiedErrorBoundary from "./app/components/UnifiedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
@@ -151,8 +150,7 @@ function App() {
   }, []);
 
   return (
-    <GlobalErrorBoundary>
-      <EnhancedErrorBoundary>
+    <UnifiedErrorBoundary maxRetries={3} showDetails={process.env.NODE_ENV === 'development'}>
         <HelmetProvider>
           <AnalyticsProvider>
             <PerformanceMonitor>
@@ -296,8 +294,7 @@ function App() {
             </PerformanceMonitor>
           </AnalyticsProvider>
         </HelmetProvider>
-      </EnhancedErrorBoundary>
-    </GlobalErrorBoundary>
+    </UnifiedErrorBoundary>
   );
 }
 
