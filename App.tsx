@@ -63,6 +63,11 @@ const APIDevelopmentPage = lazy(() => import('./app/api-development/page'));
 const SecurityAuditPage = lazy(() => import('./app/security-audit/page'));
 const MicroSAASSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
 const AIContentGeneratorPage = lazy(() => import('./app/ai-content-generator/page'));
+const AICRMOptimizerPage = lazy(() => import('./app/ai-crm-optimizer/page'));
+const AIEmailOptimizerPage = lazy(() => import('./app/ai-email-optimizer/page'));
+const AISocialMediaManagerPage = lazy(() => import('./app/ai-social-media-manager/page'));
+const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
+const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
 const DataAnalyticsPage = lazy(() => import('./app/data-analytics/page'));
 const WebDevelopmentPage = lazy(() => import('./app/web-development/page'));
 const MobileDevelopmentPage = lazy(() => import('./app/mobile-development/page'));
@@ -302,6 +307,11 @@ function App() {
                     {/* Additional Services */}
                     <Route path="/micro-saas-solutions" element={<MicroSAASSolutionsPage />} />
                     <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                    <Route path="/ai-crm-optimizer" element={<AICRMOptimizerPage />} />
+                    <Route path="/ai-email-optimizer" element={<AIEmailOptimizerPage />} />
+                    <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
+                    <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
+                    <Route path="/analytics-dashboard" element={<AnalyticsDashboardPage />} />
                     <Route path="/data-analytics" element={<DataAnalyticsPage />} />
                     <Route path="/web-development" element={<WebDevelopmentPage />} />
                     <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
