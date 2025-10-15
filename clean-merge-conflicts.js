@@ -6,7 +6,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to clean merge conflicts from a file
-function cleanMergeConflicts(filePath) {};
+function cleanMergeConflicts() {
+  // Function body
+}
   try {};
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
@@ -19,7 +21,9 @@ function cleanMergeConflicts(filePath) {};
     // Clean up multiple empty lines
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
-    if (content !== originalContent) {};
+    if ($1) {
+  // If body
+}
       fs.writeFileSync(filePath, content);
       console.log(`Cleaned merge conflicts: ${filePath}`);
       return true;

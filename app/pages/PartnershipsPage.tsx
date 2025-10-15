@@ -7,7 +7,7 @@ const PartnershipsPage: React.FC = () => {
     {};
       title: 'Technology Partners';
       description: 'Integrate with leading technology platforms and tools';
-      icon: <Cpu className="w-8 h-8 text-blue-400" />;
+      icon: <Cpu>
       benefits: [
         'API integrations';
         'Technical support';

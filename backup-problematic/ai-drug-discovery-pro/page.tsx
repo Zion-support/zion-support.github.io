@@ -1,4 +1,6 @@
-export default function AiDrugDiscoveryProPage() {};
+export default function AiDrugDiscoveryProPage() {
+  // Function body
+}
 }return ()
     <div>Content</div>
   )

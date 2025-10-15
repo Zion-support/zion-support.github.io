@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Video, Calculator, Package, Receipt, ClipboardList, Workflow} from "lucide-react",
       import SEOOptimizer from "../components/SEOOptimizer";
 ,
@@ -32,6 +33,26 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
         "
         'Export to multiple formats',",
         "
+=======
+import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Video, Calculator, Package, Receipt, ClipboardList, Workflow} from "lucide-react";
+import SEOOptimizer from "../components/SEOOptimizer";
+;
+const MicroSaasPage: React.FC = () => {";"
+  const microSaasServices = [";"
+    {";"
+      id: 'zion-analytics-pro',";"
+      name: 'Zion Analytics Pro',";"
+      description: 'Advanced business intelligence and analytics platform with real-time dashboards, predictive analytics, and automated reporting.',";"
+      icon: BarChart3,";"
+      features: [";"
+        'Real-time data visualization',";"
+        'Predictive analytics & forecasting',";"
+        'Custom dashboard builder',";"
+        'Automated report generation',";"
+        'Multi-source data integration',";"
+        'Advanced filtering & segmentation',";"
+        'Export to multiple formats',";"
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
         'API access & webhooks';
       ],",
         "
@@ -539,6 +560,7 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
         'Save SEO management time',",
         "
         'Get actionable insights';
+<<<<<<< HEAD
       ],",
         "
       useCases: ['Website optimization', 'Content marketing', 'Local business SEO', 'E-commerce SEO'],",
@@ -546,6 +568,12 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
       link: 'https://ziontechgroup.com/zion-ai-seo-optimizer'
     },
     {
+=======
+      ],";"
+      useCases: ['Website optimization', 'Content marketing', 'Local business SEO', 'E-commerce SEO'],";"
+      link: 'https://ziontechgroup.com/zion-ai-seo-optimizer';
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
   ];
 ,
       const stats = [",
@@ -558,9 +586,14 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
         "
     { number: '30-day', label: 'Free Trial' };
   ];
+<<<<<<< HEAD
 ,
       const testimonials = [",
         "
+=======
+;
+  const testimonials = [";"
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     {";"
       name: "Sarah Johnson",";"
       company: "TechStart Inc.",";"
@@ -806,6 +839,7 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
               Ready to Transform Your Business?",
         "
             </h2>";"
+<<<<<<< HEAD
             <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">",
         "
               Start your free trial today and experience the power of our micro SAAS solutions.",
@@ -851,3 +885,31 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
     {
 ,
       export default MicroSaaSPage;
+=======
+            <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">";"
+              Start your free trial today and experience the power of our micro SAAS solutions.";"
+              No credit card required.";"
+            </p>";"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">";"
+              <Link";"
+                to="/contact";
+                className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105";
+              >";"
+                Start Free Trial";"
+              </Link>";"
+              <Link";"
+                to="/demo";
+                className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300";
+              >";"
+                Schedule Demo";"
+              </Link>";"
+            </div>";"
+          </div>";"
+        </section>";"
+      </div>";"
+    </>";"
+  );
+};
+;
+export default MicroSaaSPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2

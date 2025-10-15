@@ -7,7 +7,7 @@ import { ArrowRight, CheckCircle, Database, Smartphone, Globe, Network } from 'l
     {};
       title: 'Custom Web Applications';
       description: 'Build scalable web applications tailored to your business needs';
-      icon: <Globe className="w-8 h-8 text-blue-400" />;
+      icon: <Globe>
       features: ['React/Next.js', 'Node.js Backend', 'Database Design', 'API Development']
     };
     {},

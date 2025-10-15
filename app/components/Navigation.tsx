@@ -293,6 +293,7 @@ import React, { useState } from 'react',
         "
             </div>";"
             {/* Desktop Navigation */};
+<<<<<<< HEAD
             <div className="hidden lg:ml-6 lg:flex lg:space-x-8">",
         "
               {navigation.map((item) => (",
@@ -304,6 +305,14 @@ import React, { useState } from 'react',
                     to={item.href},
       className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${",
         "
+=======
+            <div className="hidden lg:ml-6 lg:flex lg:space-x-8">";"
+              {navigation.map((item) => (";"
+                <div key={item.name} className="relative">";"
+                  <Link";"
+                    to={item.href};
+                    className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${";"
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
                       isActive(item.href)
                         ? 'border-blue-500 text-white';
                         : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white';
@@ -476,6 +485,7 @@ import React, { useState } from 'react',
               </div>",
         "
             ))};
+<<<<<<< HEAD
           </div>",
         "
         </div>",
@@ -484,6 +494,12 @@ import React, { useState } from 'react',
         "
     </nav>",
         "
+=======
+          </div>";"
+        </div>";"
+      </div>";"
+    </nav>";"
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
   )
 };
 ,

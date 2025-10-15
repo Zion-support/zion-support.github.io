@@ -1,4 +1,6 @@
-export default function EnhancedSkipLink() {};
+export default function EnhancedSkipLink() {
+  // Function body
+}
 }return ()
     <div className="skip-link-container"></div>
       <Link

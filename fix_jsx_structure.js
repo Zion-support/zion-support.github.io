@@ -2,7 +2,9 @@ import fs from 'fs'
 import path from 'path'
 #!/usr/bin/env node
 // Function to fix JSX structure issues
-function fixJSXStructure(content) {};
+function fixJSXStructure() {
+  // Function body
+}
 }// Fix the specific pattern where div has className="$2" and is self-closing
   content = content.replace(/<div className="\$2" \/>/g, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">')
   // Fix the pattern where Helmet is self-closing
@@ -44,7 +46,9 @@ function processFile(filePath) {};
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
 const fixedContent = fixJSXStructure(content)
-    if (content !== fixedContent) {};
+    if ($1) {
+  // If body
+}
       fs.writeFileSync(filePath, fixedContent, 'utf8')
       console.log(`Fixed JSX structure: ${filePath}`)
       return true

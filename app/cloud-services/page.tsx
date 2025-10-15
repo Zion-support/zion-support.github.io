@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { Helmet } from 'react-helmet-async';
 
@@ -28,6 +27,7 @@ const CloudServicesPage: React.FC = () => {
               Cloud Services
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+<<<<<<< HEAD
               Transform your business with our comprehensive cloud services. Expert cloud migration,
       infrastructure management, and security solutions.
             </p>
@@ -40,6 +40,15 @@ const CloudServicesPage: React.FC = () => {
           <p className="text-gray-300">This page is under development...</p>
         </div>
       </div>
+=======
+              Transform your business with our comprehensive cloud services. Expert cloud migration;
+              infrastructure management, and security solutions.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
               <h3 className="text-xl font-semibold mb-4 text-cyan-400">Cloud Migration</h3>
               <p className="text-gray-300 mb-4"></p>
                 Seamless migration to cloud platforms with zero downtime and maximum efficiency.
@@ -78,6 +87,7 @@ const CloudServicesPage: React.FC = () => {
               </ul>
             </div>
           </div>
+<<<<<<< HEAD
           <div className="text-center"></div>
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"></button>
               Get Started with Cloud Services
@@ -98,3 +108,8 @@ export default CloudServicesPage;
 
 export default CloudServicesPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-f3b2
+=======
+
+          <div className="text-center"></div>
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2

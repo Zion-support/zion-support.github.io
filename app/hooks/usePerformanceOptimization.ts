@@ -67,7 +67,9 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
         htmlImg.setAttribute('decoding', 'async');
       };
       // Add fetchpriority for above-the-fold images
-      if (htmlImg.offsetTop < window.innerHeight) {};
+      if ($1) {
+  // If body
+}
         htmlImg.setAttribute('fetchpriority', 'high');
       };
       // Mark as optimized

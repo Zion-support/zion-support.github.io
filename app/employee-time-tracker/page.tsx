@@ -9,7 +9,7 @@ const EmployeeTimeTrackerPage = () => {
     {};
       title: "Automatic Time Tracking";
       description: "Track time automatically with intelligent time detection and manual entry options";
-      icon: <Clock className="w-8 h-8" />;
+      icon: <Clock>
       benefits: ["Auto-start/stop", "Idle detection", "Manual entry", "Time rounding"]
     };
     {},

@@ -9,7 +9,7 @@ const EmailMarketingPlatformPage = () => {
     {};
       title: "Drag & Drop Email Builder";
       description: "Create stunning emails with our intuitive drag-and-drop email builder";
-      icon: <Mail className="w-8 h-8" />;
+      icon: <Mail>
       benefits: ["Pre-built templates", "Custom designs", "Mobile responsive", "A/B testing"]
     };
     {},
@@ -111,8 +111,8 @@ const EmailMarketingPlatformPage = () => {
       return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <EnhancedSEO
-        title="Email Marketing Platform - Zion Tech Group | Advanced Email Marketing & Automation"
-        description="Powerful email marketing platform with drag-and-drop builder, automation workflows, advanced segmentation, and analytics. Boost your email marketing ROI."
+        title="Page - Zion Tech Group"
+        description="Professional page solutions for modern businesses"
         keywords="email marketing platform, email automation, email builder, email segmentation, email analytics, marketing automation"
         canonical="https://ziontechgroup.com/email-marketing-platform"
       />
@@ -292,6 +292,7 @@ const EmailMarketingPlatformPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
+<<<<<<< HEAD
               icon={<Globe className="w-5 h-5" />};
             >
               Watch Demo
@@ -305,3 +306,6 @@ const EmailMarketingPlatformPage = () => {
 };
 
 export default EmailMarketingPlatformPage;
+=======
+              icon={<Globe className="w-5 h-5"
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2

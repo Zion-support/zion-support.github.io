@@ -3,18 +3,16 @@ const isValidEmail = (email) => {
   return emailRegex.test(email);
 };
 
-export default function handler(req, res) {
+export default async (req, res) => {
   if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
     const { email } = req.body;
 
     if (!email || !isValidEmail(email)) {
-      res.status(400).json({ error: 'Valid email is required' });
-      return;
+      return res.status(400).json({ error: 'Valid email is required' });
     }
 
     // Here you would typically save to a database
@@ -25,4 +23,8 @@ export default function handler(req, res) {
     console.error('Newsletter subscription error:', err);
     res.status(500).json({ error: 'Subscription failed' });
   }
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2

@@ -19,7 +19,9 @@ export const SkipLink: React.FC<{ target: string; children: React.ReactNode }> =
 }const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {};
 }e.preventDefault()
     const targetElement = document.querySelector(target)
-    if (targetElement) {};
+    if ($1) {
+  // If body
+}
       (targetElement as HTMLElement).focus()
       targetElement.scrollIntoView({ behavior: 'smooth' })
     }

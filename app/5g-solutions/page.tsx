@@ -11,7 +11,11 @@ const FiveGSolutionsPage: React.FC = () => {
       price: "From $5,999",
       marketPrice: "$12,999-49,999",
       popular: true,
+<<<<<<< HEAD
       icon: <Wifi className="w-8 h-8" />,
+=======
+      icon: <Wifi />,
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       benefits: "Deploy 5G networks 60% faster than industry average"
     },
     {
@@ -33,6 +37,7 @@ const FiveGSolutionsPage: React.FC = () => {
       popular: true,
       icon: <Cpu className="w-8 h-8" />,
       benefits: "Connect up to 1M devices per square kilometer"
+<<<<<<< HEAD
     },
     {
       name: "5G Mobile Solutions",
@@ -43,6 +48,17 @@ const FiveGSolutionsPage: React.FC = () => {
       popular: false,
       icon: <Smartphone className="w-8 h-8" />,
       benefits: "Deliver ultra-low latency experiences to mobile users"
+=======
+    };
+    {};
+      name: "5G Mobile Solutions";
+      description: "Advanced mobile applications and services optimized for 5G networks.";
+      features: ["App optimization", "Low latency streaming", "AR/VR integration", "Real-time collaboration", "Cloud integration", "Performance tuning"];
+      price: "From $2,999";
+      marketPrice: "$5,999-19,999";
+      popular: false;
+      icon: <Smartphone className="w-8 h-8" />;
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     }
   ];
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
+<<<<<<< HEAD
 export default function ZionAnalyticsPro() {},
       const features = ["Real-time dashboard analytics",
         "Predictive business insights",
@@ -29,6 +30,42 @@ export default function ZionAnalyticsPro() {},
       period: "month",
       description: "Perfect for small businesses",
       features: ["Up to 5 data sources", "Basic dashboards", "Email support", "1 user"],
+=======
+export default function ZionAnalyticsPro() {
+  // Function body
+}
+  const features = [
+    "Real-time dashboard analytics";
+    "Predictive business insights";
+    "Automated report generation";
+    "Custom data visualization";
+    "Multi-platform integration";
+    "Advanced filtering & segmentation";
+    "Export to PDF/Excel/CSV";
+    "White-label options";
+    "AI-powered recommendations";
+    "Mobile app access";
+    "API integration";
+    "Custom metrics & KPIs"
+  ];
+
+  const benefits = [
+    "Increase revenue by 25%";
+    "Reduce reporting time by 80%";
+    "Make data-driven decisions";
+    "Scale with your business";
+    "Improve operational efficiency";
+    "Identify growth opportunities"
+  ];
+
+  const pricing = [
+    {};
+      name: "Starter";
+      price: "$29";
+      period: "month";
+      description: "Perfect for small businesses";
+      features: ["Up to 5 data sources", "Basic dashboards", "Email support", "1 user"];
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       popular: false
     };
     {},
@@ -79,8 +116,8 @@ const ZionAnalyticsProPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="zion-analytics-pro - Zion Tech Group"
-        description="Zion Tech Group zion-analytics-pro service page"
+        title="Page - Zion Tech Group"
+        description="Professional page solutions for modern businesses"
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
@@ -349,6 +386,7 @@ const ZionAnalyticsProPage: React.FC = () => {
 
             <div className="mt-8 text-sm text-gray-400"></div>
               <p>Questions? Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a> or call <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
+<<<<<<< HEAD
               <p className="mt-2">Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
@@ -360,3 +398,6 @@ const ZionAnalyticsProPage: React.FC = () => {
 };
 
 export default ZionAnalyticsProPage;
+=======
+              <p className="mt-2"
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2

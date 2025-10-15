@@ -11,6 +11,7 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>()
 )
 export const useAnalytics = () => {};
 }const context = useContext(AnalyticsContext)
+<<<<<<< HEAD
   if (!context) {},
       throw new Error("useAnalytics must be used within an AnalyticsProvider")
   },
@@ -19,6 +20,18 @@ export const useAnalytics = () => {};
       export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({},
       children, }) => {},
       useEffect(() => {};
+=======
+  if ($1) {
+  // If body
+}
+    throw new Error("useAnalytics must be used within an AnalyticsProvider")
+  };
+  return context
+};
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};
+  children, }) => {};
+  useEffect(() => {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     // Initialize analytics
     if (typeof window !== "undefined") {};
       // Google Analytics
@@ -29,7 +42,9 @@ export const useAnalytics = () => {};
         document.head.appendChild(script)
         (window as unknown as { dataLayer: unknown[] }).dataLayer =
           (window as unknown as { dataLayer: unknown[] }).dataLayer || []
-        function gtag(...args: unknown[]) {};
+        function gtag() {
+  // Function body
+}
 }(window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
         },
       gtag("js", new Date())

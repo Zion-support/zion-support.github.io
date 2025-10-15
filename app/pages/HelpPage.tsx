@@ -8,7 +8,7 @@ const HelpPage: React.FC = () => {
   const helpCategories = [
     {};
       title: 'Getting Started';
-      icon: <Zap className="w-6 h-6 text-yellow-400" />;
+      icon: <Zap>
       articles: 12;
       description: 'Learn the basics and get up and running quickly'
     };

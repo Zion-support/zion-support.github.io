@@ -28,6 +28,7 @@ interface WebVitalsData {},
       })
     };
     // Log in development
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {}
     },
     {
@@ -51,3 +52,32 @@ interface WebVitalsData {},
       return null; // This component doesn't render anything'
 },
       export default CoreWebVitals
+=======
+    if ($1) {
+  // If body
+}
+      };
+  }, []);
+
+  useEffect(() => {};
+    const measureWebVitals = async () => {};
+      try {};
+        const { onCLS, onFID, onFCP, onLCP, onTTFB, onINP } = await import('web-vitals');
+
+        onCLS(reportWebVitals);
+        onFID(reportWebVitals);
+        onFCP(reportWebVitals);
+        onLCP(reportWebVitals);
+        onTTFB(reportWebVitals);
+        onINP(reportWebVitals);
+      } catch (error) {};
+        };
+    };
+
+    measureWebVitals();
+  }, [reportWebVitals]);
+
+  return null; // This component doesn't render anything'
+};
+export default CoreWebVitals
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2

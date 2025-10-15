@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
       import React, { useState, useEffect } from "react",
       const CookieConsent: React.FC = () => {},
@@ -9,6 +10,22 @@ import React, { useState } from 'react',
       setIsVisible(true)
     },
     {
+=======
+import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
+
+const CookieConsent: React.FC = () => {};
+  const [isVisible, setIsVisible] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
+
+  useEffect(() => {};
+    const consent = localStorage.getItem("cookie-consent");
+    if ($1) {
+  // If body
+}
+      setIsVisible(true);
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
   }, [])
   const handleAccept = () => {};
 }localStorage.setItem("cookie-consent", "accepted")

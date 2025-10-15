@@ -2,7 +2,9 @@
 import fs from 'fs'
 import path from 'path'
 // Function to fix merge conflicts in a file
-function fixMergeConflicts(filePath) {};
+function fixMergeConflicts() {
+  // Function body
+}
 }try {};
 } catch (error) {};
   console.error(error)

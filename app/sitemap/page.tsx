@@ -1,13 +1,5 @@
 
-  return (<>
-      <Helmet></Helmet>
-        <title>Sitemap - Zion Tech Group | Complete Website Directory</title>
-        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our AI services, micro SAAS solutions, _5G technology, and company information." />
-        <meta name="robots" content="index, follow" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        {/* Hero Section */};
+  // return statement
         <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></div>
           <div className="max-w-7xl mx-auto text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>

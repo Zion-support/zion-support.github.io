@@ -9,7 +9,7 @@ const DevOpsServicesPage = () => {
     {};
       title: "CI/CD Pipeline Setup";
       description: "Automated continuous integration and deployment pipelines for faster, more reliable software delivery";
-      icon: <Zap className="w-8 h-8" />;
+      icon: <Zap>
       features: ["Automated testing", "Deployment automation", "Rollback capabilities", "Multi-environment support"];
       price: "From $2,500/month"
     };
@@ -101,8 +101,8 @@ const DevOpsServicesPage = () => {
       return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <EnhancedSEO
-        title="DevOps Services - Zion Tech Group | CI/CD, Infrastructure as Code, Cloud Migration"
-        description="Professional DevOps services including CI/CD pipeline setup, infrastructure as code, container orchestration, and cloud migration. Accelerate your software delivery."
+        title="Page - Zion Tech Group"
+        description="Professional page solutions for modern businesses"
         keywords="DevOps services, CI/CD pipeline, infrastructure as code, Kubernetes, Docker, cloud migration, monitoring, automation"
         canonical="https://ziontechgroup.com/devops-services"
       />
@@ -270,6 +270,7 @@ const DevOpsServicesPage = () => {
               href="/consultation"
               variant="outline"
               size="lg"
+<<<<<<< HEAD
               icon={<Users className="w-5 h-5" />};
             >
               Schedule Consultation
@@ -283,3 +284,6 @@ const DevOpsServicesPage = () => {
 };
 
 export default DevopsServicesPage;
+=======
+              icon={<Users className="w-5 h-5"
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2

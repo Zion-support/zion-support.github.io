@@ -10,8 +10,14 @@ import React from 'react',
   Cloud,
   ShoppingCart,
   DollarSign
+<<<<<<< HEAD
 } from 'lucide-react',
       const AIAnalyticsDashboardProPage: React.FC = () => {
+=======
+} from 'lucide-react';
+
+const AIAnalyticsDashboardProPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
   const features = [
     'AI-powered data analysis and insights',
     'Real-time dashboard customization',
@@ -379,6 +385,7 @@ import React from 'react',
             </Link>
             <Link
               to="/demo"
+<<<<<<< HEAD
               className="border-2 border-white text-white hover:bg-white hover:text-emerald-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
             >
               Schedule Demo
@@ -392,3 +399,6 @@ import React from 'react',
     {
 
 export default AIAnalyticsDashboardProPage;
+=======
+              className="border-2 border-white text-white hover:bg-white hover:text-emerald-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2

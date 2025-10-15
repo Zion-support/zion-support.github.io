@@ -57,7 +57,13 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({},
       if (!enableCaching) return;
     
     // Set cache headers for static assets
+<<<<<<< HEAD
     if ('serviceWorker' in navigator) {},
+=======
+    if ($1) {
+  // If body
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {},
       console.log('Service Worker registered:', registration);

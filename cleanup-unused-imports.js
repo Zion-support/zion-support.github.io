@@ -6,7 +6,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to remove unused imports from a file
-function cleanUnusedImports(filePath) {};
+function cleanUnusedImports() {
+  // Function body
+}
   try {};
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
@@ -16,7 +18,9 @@ function cleanUnusedImports(filePath) {};
     
     // Remove unused lucide-react imports
     const lucideImports = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]lucide-react['"];?\s*/g);
-    if (lucideImports) {};
+    if ($1) {
+  // If body
+}
       lucideImports.forEach(importLine => {};
         // Extract the imports
         const imports = importLine.match(/{\s*([^}]*)\s*}/)[1];

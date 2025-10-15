@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async',
       import { Link } from 'react-router-dom',
       import { ArrowRight, Briefcase, MapPin, Clock, Users, CheckCircle, Heart, DollarSign, Home, GraduationCap, Zap, Shield } from 'lucide-react';
@@ -11,6 +12,16 @@ import { Helmet } from 'react-helmet-async',
         "
       <Helmet>",
         "
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Briefcase, MapPin, Clock, Users, CheckCircle, Heart, DollarSign, Home, GraduationCap, Zap, Shield } from 'lucide-react';
+;
+const CareersPage: React.FC = () => {";"
+  return (";"
+    <>";"
+      <Helmet>";"
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
         <title>Careers - Zion Tech Group | Join Our Team</title>";"
         <meta name="description" content="Join our team of experts in AI, cloud, and cybersecurity. Explore career opportunities at Zion Tech Group." />",
         "
@@ -208,6 +219,7 @@ import { Helmet } from 'react-helmet-async',
               </Link>",
         "
               <Link";"
+<<<<<<< HEAD
                 to="/consultation",
       className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300";
               >",
@@ -231,3 +243,26 @@ import { Helmet } from 'react-helmet-async',
     {
 ,
       export default CareersPage;
+=======
+                to="/contact";
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105";
+              >";"
+                Send Resume";"
+                <ArrowRight className="w-5 h-5 ml-2" />";"
+              </Link>";"
+              <Link";"
+                to="/consultation";
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300";
+              >";"
+                Learn More";"
+              </Link>";"
+            </div>";"
+          </div>";"
+        </section>";"
+      </div>";"
+    </>";"
+  );
+};
+;
+export default CareersPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2

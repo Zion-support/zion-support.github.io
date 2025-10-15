@@ -55,7 +55,9 @@ const allRouteElements =
 // Find the position to insert lazy imports (after the existing lazy imports)
 const lazyImportEndPattern = /const SitemapPage = React\.lazy\(\(\) => import\("\.\/app\/sitemap\/page"\)\);/
 const lazyImportEndMatch = appContent.match(lazyImportEndPattern)
-if (lazyImportEndMatch) {};
+if ($1) {
+  // If body
+}
   const insertPosition = lazyImportEndMatch.index + lazyImportEndMatch[0].length
   appContent = appContent.slice(0, insertPosition) + allLazyImports + appContent.slice(insertPosition)
 };

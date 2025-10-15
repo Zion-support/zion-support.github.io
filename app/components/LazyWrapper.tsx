@@ -13,11 +13,19 @@ interface LazyWrapperProps {},
   </div>
 )
 
+<<<<<<< HEAD
 export const LazyWrapper: React.FC<LazyWrapperProps> = ({},
       fallback = <DefaultFallback />,
       children
 }) => {},
       return (
+=======
+export const LazyWrapper: React.FC<LazyWrapperProps> = ({};
+  fallback = <DefaultFallback>
+  children
+}) => {};
+  return (
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     <Suspense fallback={fallback}></Suspense>
       {children};
     </Suspense>

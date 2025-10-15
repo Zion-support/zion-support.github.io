@@ -52,8 +52,16 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   }, []),
       useEffect(() => {};
     // Apply accessibility settings to document
+<<<<<<< HEAD
     const body = document.body,
       if (settings.highContrast) {},
+=======
+    const body = document.body;
+    
+    if ($1) {
+  // If body
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       body.classList.add('high-contrast');
     } else {},
       body.classList.remove('high-contrast')

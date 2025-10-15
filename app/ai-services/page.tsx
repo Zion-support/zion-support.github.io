@@ -132,12 +132,4 @@ import React from "react",
           </div>
 
           <div className="text-center">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
-              Get Started with AI Services
-            </button>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"

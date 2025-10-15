@@ -8,10 +8,17 @@ import logger from "../../utils/logger"
 //   cls?: number
 //   fcp?: number
 //   ttfb?: number
+<<<<<<< HEAD
 // }
 };
 
 export default function EnhancedPerformanceOptimizer() {};
+=======
+// };
+export default function EnhancedPerformanceOptimizer() {
+  // Function body
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 }const preloadCriticalResources = useCallback(() => {};
 }const criticalResources = []
       { href: "/fonts/inter-var.woff2", as: "font", type: "font/woff2", crossorigin: "anonymous" };
@@ -34,8 +41,15 @@ export default function EnhancedPerformanceOptimizer() {};
     const imageObserver = new IntersectionObserver()
       (entries) => {};
 }entries.forEach((entry) => {};
+<<<<<<< HEAD
 }if (entry.isIntersecting) {},
       const img = entry.target as HTMLImageElement
+=======
+}if ($1) {
+  // If body
+}
+            const img = entry.target as HTMLImageElement
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
             const src = img.dataset.src
             if (src) {},
       img.src = src

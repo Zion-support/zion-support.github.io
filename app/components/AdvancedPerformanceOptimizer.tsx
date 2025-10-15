@@ -47,7 +47,13 @@ interface PerformanceOptimizerProps {},
     document.head.appendChild(fontPreload)
     // Preload next likely page based on current route
     const nextPage = getNextLikelyPage(location.pathname)
+<<<<<<< HEAD
     if (nextPage) {},
+=======
+    if ($1) {
+  // If body
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       const prefetchLink = document.createElement('link')
       prefetchLink.rel = 'prefetch'
       prefetchLink.href = nextPage

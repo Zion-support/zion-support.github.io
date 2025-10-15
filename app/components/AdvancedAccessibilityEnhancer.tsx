@@ -21,6 +21,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {},
       const [isVisible, setIsVisible] = useState(false),
       useEffect(() => {};
     // Load saved settings from localStorage
+<<<<<<< HEAD
     const savedSettings = localStorage.getItem('accessibilitySettings'),
       if (savedSettings) {},
       setSettings(JSON.parse(savedSettings))
@@ -28,6 +29,17 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {},
     {
   }, []),
       useEffect(() => {};
+=======
+    const savedSettings = localStorage.getItem('accessibilitySettings');
+    if ($1) {
+  // If body
+}
+      setSettings(JSON.parse(savedSettings));
+    };
+  }, []);
+
+  useEffect(() => {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     // Apply accessibility settings
     if (settings.highContrast) {},
       document.documentElement.classList.add('high-contrast');

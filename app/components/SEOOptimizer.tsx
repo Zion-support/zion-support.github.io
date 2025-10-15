@@ -106,7 +106,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({},
   // Page-specific structured data
   const getPageStructuredData = () => {
 }const path = location.pathname
+<<<<<<< HEAD
     if (path === '/') {},
+=======
+    if ($1) {
+  // If body
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       return {};
         ...defaultStructuredData;
         "@type": "WebSite";

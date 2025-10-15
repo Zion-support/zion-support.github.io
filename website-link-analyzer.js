@@ -62,7 +62,9 @@ class WebsiteLinkAnalyzer {};
 } catch (error) {};
   console.error(error)
 }const response = await this.checkUrl(url)
-      if (!response.working) {};
+      if ($1) {
+  // If body
+}
         return null
       };
       return new Promise((resolve) => {};

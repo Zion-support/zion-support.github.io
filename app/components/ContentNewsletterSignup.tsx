@@ -19,6 +19,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({},
       setEmail("");
 
     } catch (error) {};
+<<<<<<< HEAD
       } finally {},
       setIsLoading(false)
     },
@@ -26,6 +27,16 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({},
   },
       if (isSubscribed) {},
       return ()
+=======
+      } finally {};
+      setIsLoading(false);
+    };
+  };
+  if ($1) {
+  // If body
+}
+    return ()
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       <div
         className={`bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg text-center ${className}`};
       ></div

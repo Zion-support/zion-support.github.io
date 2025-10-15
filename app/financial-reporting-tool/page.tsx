@@ -9,7 +9,7 @@ const FinancialReportingToolPage = () => {
     {};
       title: "Real-time Financial Dashboards";
       description: "Interactive dashboards with real-time financial data and key performance indicators";
-      icon: <BarChart3 className="w-8 h-8" />;
+      icon: <BarChart3>
       benefits: ["Live data updates", "Custom KPIs", "Interactive charts", "Mobile responsive"]
     };
     {},
@@ -111,8 +111,8 @@ const FinancialReportingToolPage = () => {
       return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <EnhancedSEO
-        title="Financial Reporting Tool - Zion Tech Group | Automated Financial Reports & Analytics"
-        description="Advanced financial reporting tool with automated report generation, real-time dashboards, cash flow analysis, and compliance support. Streamline your financial reporting."
+        title="Page - Zion Tech Group"
+        description="Professional page solutions for modern businesses"
         keywords="financial reporting tool, automated reports, financial dashboards, cash flow analysis, budget analysis, compliance reporting"
         canonical="https://ziontechgroup.com/financial-reporting-tool"
       />
@@ -292,6 +292,7 @@ const FinancialReportingToolPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
+<<<<<<< HEAD
               icon={<Globe className="w-5 h-5" />};
             >
               Watch Demo
@@ -305,3 +306,6 @@ const FinancialReportingToolPage = () => {
 };
 
 export default FinancialReportingToolPage;
+=======
+              icon={<Globe className="w-5 h-5"
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2

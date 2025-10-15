@@ -16,8 +16,13 @@ const PagePage: React.FC = () => {};
   requirements: string[]
   benefits: string[]
   featured: boolean
+<<<<<<< HEAD
 },
       const eersPage: React.FC = () => {};
+=======
+};
+const eersPage: React.FC = () => {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 }const [selectedDepartment, setSelectedDepartment] = useState('all)'
   const [selectedLocation, setSelectedLocation] = useState('all)'
       title: 'Senior AI Engineer,'

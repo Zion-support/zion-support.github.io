@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
       import { Helmet } from 'react-helmet-async',
       import { DollarSign } from "lucide-react",
@@ -15,6 +16,29 @@ import React, { useState } from 'react',
       const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {},
       const { name, value } = e.target,
       setFormData(prev => ({};
+=======
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { DollarSign } from "lucide-react";
+
+export default function Consultation() {
+  // Function body
+}
+  const [formData, setFormData] = useState({};
+    name: '';
+    email: '';
+    company: '';
+    phone: '';
+    service: '';
+    timeline: '';
+    budget: '';
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
+    const { name, value } = e.target;
+    setFormData(prev => ({};
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       ...prev;
       [name]: value
     }))

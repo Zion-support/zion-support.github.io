@@ -1,9 +1,20 @@
 
+<<<<<<< HEAD
 import { Helmet } from "react-helmet-async",
       import { Link } from "react-router-dom",
       import { ArrowRight } from "lucide-react",
       export default function Header() {},
       return (
+=======
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+
+export default function Header() {
+  // Function body
+}
+  return (
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     <div></div>
       <Helmet></Helmet>
         <title>Header - Zion Tech Group</title>

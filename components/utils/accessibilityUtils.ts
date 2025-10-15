@@ -9,7 +9,9 @@ export const focusManagement = {};
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
     const handleTabKey = (e: KeyboardEvent) => {};
-      if (e.key === 'Tab') {};
+      if ($1) {
+  // If body
+}
         if (e.shiftKey) {};
           if (document.activeElement === firstElement) {};
             lastElement?.focus();

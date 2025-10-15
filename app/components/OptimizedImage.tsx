@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
       import React, { useState, useRef, useEffect } from 'react',
       interface OptimizedImageProps {},
@@ -26,6 +27,39 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({},
       observer.disconnect()
     },
     {
+=======
+import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+
+interface OptimizedImageProps {};
+  src: string;
+  alt: string;
+  className?: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  placeholder?: string;
+  onLoad?: () => void;
+  onError?: () => void;
+};
+const OptimizedImage: React.FC<OptimizedImageProps> = ({};
+  src, alt, className = '', _width, _height, priority = false, placeholder = 'data:image/svg+xml;base64, _PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+', _onLoad, _onError, _}) => {};
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(priority);
+  const [hasError, setHasError] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {};
+    if (priority) return;
+
+    const observer = new IntersectionObserver(([entry]) => {};
+        if ($1) {
+  // If body
+}
+          setIsInView(true);
+          observer.disconnect();
+        };
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       };
       { threshold: 0.1 };
     )

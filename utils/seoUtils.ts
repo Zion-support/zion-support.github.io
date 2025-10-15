@@ -29,7 +29,9 @@ export class SEOOptimizer {};
   private siteName = 'Zion Tech Group'
   private defaultImage = 'https://ziontechgroup.com/og-image.jpg'
   static getInstance(): SEOOptimizer {};
-    if (!SEOOptimizer.instance) {};
+    if ($1) {
+  // If body
+}
       SEOOptimizer.instance = new SEOOptimizer()
     };
     return SEOOptimizer.instance

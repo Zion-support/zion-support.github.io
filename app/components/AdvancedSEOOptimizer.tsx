@@ -185,6 +185,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({},
       document.head.appendChild(fontPreload);
 
     // Preload critical images
+<<<<<<< HEAD
     if (seoData.ogImage) {},
       const imagePreload = document.createElement('link'),
       imagePreload.rel = 'preload',
@@ -193,6 +194,17 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({},
       document.head.appendChild(imagePreload)
     },
     {
+=======
+    if ($1) {
+  // If body
+}
+      const imagePreload = document.createElement('link');
+      imagePreload.rel = 'preload';
+      imagePreload.href = seoData.ogImage;
+      imagePreload.as = 'image';
+      document.head.appendChild(imagePreload);
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     // DNS prefetch for external resources
     const dnsPrefetchDomains = [
       'https://fonts.googleapis.com';

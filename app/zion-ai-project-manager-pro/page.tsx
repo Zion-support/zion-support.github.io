@@ -618,6 +618,7 @@ import {ArrowRight, Calendar, BarChart3, CheckCircle, Star, Users, Target, Trend
                 </Link>",
         "
                 <Link";"
+<<<<<<< HEAD
                   to="/demo",
       className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300 hover:scale-105";
                 >",
@@ -643,3 +644,23 @@ import {ArrowRight, Calendar, BarChart3, CheckCircle, Star, Users, Target, Trend
 ,
       export default ZionAiProjectManagerProPage;
 ;
+=======
+                  to="/contact";
+                  className="group bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-emerald-500/25 hover:scale-105";
+                >";"
+                  Start Free Trial";"
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />";"
+                </Link>";"
+                <Link";"
+                  to="/demo";
+                  className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300 hover:scale-105";
+                >";"
+                  Schedule Demo";"
+                </Link>";"
+              </div>";"
+            </div>";"
+          </div>";"
+        </section>";"
+      </div>";"
+    </>";"
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2

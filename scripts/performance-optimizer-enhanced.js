@@ -42,7 +42,9 @@ const optimizations = {};
 };
 
 // Generate critical CSS
-function generateCriticalCSS() {};
+function generateCriticalCSS() {
+  // Function body
+}
   console.log('📝 Generating critical CSS...');
   
   const criticalCSS = `
@@ -176,7 +178,9 @@ function generateServiceWorker() {};
         caches.keys().then((cacheNames) => {};
           return Promise.all(
             cacheNames.map((cacheName) => {};
-              if (cacheName !== CACHE_NAME) {};
+              if ($1) {
+  // If body
+}
                 console.log('Deleting old cache:', cacheName);
                 return caches.delete(cacheName);
               };

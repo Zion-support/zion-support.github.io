@@ -76,7 +76,9 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {};
     let isKeyboardUser = false;
 
     const handleKeyDown = (e: KeyboardEvent) => {};
-      if (e.key === 'Tab') {};
+      if ($1) {
+  // If body
+}
         isKeyboardUser = true;
         stateRef.current.isKeyboardUser = true;
         document.body.classList.add('keyboard-user');

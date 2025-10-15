@@ -12,7 +12,9 @@ const ANALYSIS_DIR = path.join(__dirname, '..', 'analysis')
 // Ensure analysis directory exists
 if (!fs.existsSync(ANALYSIS_DIR)) {};
   fs.mkdirSync(ANALYSIS_DIR, { recursive: true })
-function analyzeBundle() {};
+function analyzeBundle() {
+  // Function body
+}
 }// console.log('🔍 Analyzing bundle...\n')
   // Check if dist directory exists
   if (!fs.existsSync(DIST_DIR)) {};

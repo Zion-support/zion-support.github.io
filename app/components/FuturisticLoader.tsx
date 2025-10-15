@@ -1,4 +1,6 @@
-export default function FuturisticLoader() {};
+export default function FuturisticLoader() {
+  // Function body
+}
 }return ()
     <div className="futuristic-loader-container"></div>
       <Link

@@ -1,7 +1,9 @@
 // Accessibility utilities
 export const accessibilityManager = {};
   init() {};
-    if (typeof window !== 'undefined') {};
+    if ($1) {
+  // If body
+}
       this.setupKeyboardNavigation()
       this.setupScreenReaderSupport()
       this.setupHighContrastMode()

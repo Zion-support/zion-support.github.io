@@ -9,6 +9,7 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
+<<<<<<< HEAD
   }
 
   try {
@@ -68,9 +69,18 @@ export default async function handler(req, res) {
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-f3b2
     const { name, email, company, phone, service, message } = req.body;
+=======
+  }
 
-    if (!name || !email || !service) {
-      res.status(400).json({ error: 'Name, email, and service are required' });
+  try {
+    const { name, email, company, phone, address, service, message, preferredDate } = req.body;
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+
+    if (!name || !email || !company || !phone || !address) {
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ 
+        error: 'Name, email, company, phone, and address are required' 
+      }));
       return;
     }
 
@@ -93,9 +103,12 @@ export default async function handler(req, res) {
       email,
       company,
       phone,
-      service,
-      message,
-      timestamp: new Date().toISOString()
+      address,
+      service: service || 'General Consultation',
+      message: message || '',
+      preferredDate: preferredDate || '',
+      timestamp: new Date().toISOString(),
+      status: 'pending'
     };
 
     requests.push(newRequest);
@@ -103,9 +116,21 @@ export default async function handler(req, res) {
     // Save to file
     fs.writeFileSync(file, JSON.stringify(requests, null, 2));
 
-    res.status(200).json({ success: true, message: 'Request submitted successfully' });
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({
+      success: true,
+      message: 'Onsite request submitted successfully',
+      requestId: newRequest.id
+    }));
   } catch (error) {
     console.error('Onsite request error:', error);
-    res.status(500).json({ error: 'Failed to submit request' });
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      error: 'Failed to submit onsite request' 
+    }));
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2

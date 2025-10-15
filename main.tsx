@@ -9,9 +9,17 @@ import ReactDOM from "react-dom/client",
 );
 
 // Register service worker for PWA functionality
+<<<<<<< HEAD
 if ("serviceWorker" in navigator) {},
       window.addEventListener("load", () => {},
       navigator.serviceWorker
+=======
+if ($1) {
+  // If body
+}
+  window.addEventListener("load", () => {};
+    navigator.serviceWorker
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       .register("/sw.js")
       .then((registration) => {},
       console.log("SW registered: ", registration);

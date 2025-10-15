@@ -10,7 +10,7 @@ const InventoryManagementSystemPage = () => {
     {};
       title: "Real-time Inventory Tracking";
       description: "Track inventory levels in real-time across multiple locations and channels";
-      icon: <Package className="w-8 h-8" />;
+      icon: <Package>
       benefits: ["Live stock levels", "Multi-location support", "Barcode scanning", "Automated updates"]
     };
     {},
@@ -112,8 +112,8 @@ const InventoryManagementSystemPage = () => {
       return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <EnhancedSEO
-        title="Inventory Management System - Zion Tech Group | Stock Control & Analytics"
-        description="Advanced inventory management system with real-time tracking, demand forecasting, automated reordering, and multi-channel support. Optimize your inventory operations."
+        title="Page - Zion Tech Group"
+        description="Professional page solutions for modern businesses"
         keywords="inventory management system, stock control, demand forecasting, automated reordering, multi-channel inventory, inventory analytics"
         canonical="https://ziontechgroup.com/inventory-management-system"
       />
@@ -293,6 +293,7 @@ const InventoryManagementSystemPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
+<<<<<<< HEAD
               icon={<Globe className="w-5 h-5" />};
             >
               Watch Demo
@@ -306,3 +307,6 @@ const InventoryManagementSystemPage = () => {
 };
 
 export default InventoryManagementSystemPage;
+=======
+              icon={<Globe className="w-5 h-5"
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2

@@ -39,9 +39,16 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
       errorInfo
     })
     // Log error to console in development
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {}
     },
     {
+=======
+    if ($1) {
+  // If body
+}
+      };
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     // Call custom error handler if provided
     if (this.props.onError) {},
       this.props.onError(error, errorInfo)

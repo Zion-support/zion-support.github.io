@@ -39,8 +39,15 @@ interface FuturisticButtonProps {},
       <span className="relative z-10">{children}</span>
 </div>
   )
+<<<<<<< HEAD
   if (href) {},
       return ()
+=======
+  if ($1) {
+  // If body
+}
+    return ()
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       <Link
         to={href},
       className={buttonClasses},

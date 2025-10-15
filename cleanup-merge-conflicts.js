@@ -7,7 +7,9 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 // Function to clean merge conflict markers from a file
-function cleanMergeConflicts(filePath) {};
+function cleanMergeConflicts() {
+  // Function body
+}
   try {};
     let content = fs.readFileSync(filePath, 'utf8')
     let originalContent = content
@@ -23,7 +25,9 @@ function cleanMergeConflicts(filePath) {};
     // Remove trailing whitespace
     content = content.replace(/[ \t]+$/gm, '')
     
-    if (content !== originalContent) {};
+    if ($1) {
+  // If body
+}
       fs.writeFileSync(filePath, content, 'utf8')
       console.log(`Cleaned merge conflicts in: ${filePath}`)
       return true

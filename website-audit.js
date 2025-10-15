@@ -44,7 +44,9 @@ class WebsiteAuditor {};
         if (stat.isDirectory()) {};
           const newBasePath = basePath ? `${basePath}/${item}` : item
           scanDirectory(fullPath, newBasePath)
-        } else if (item === 'page.tsx') {};
+        } else if ($1) {
+  // If body
+}
           const route = basePath ? `/${basePath}` : '/'
           pages.push(route)
         };

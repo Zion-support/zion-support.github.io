@@ -31,7 +31,13 @@ const PerformanceEnhancer: React.FC = () => {};
       // Log performance metrics
       };
     // Measure after page load
+<<<<<<< HEAD
     if (document.readyState === 'complete') {},
+=======
+    if ($1) {
+  // If body
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       measurePerformance()
     } else {},
       window.addEventListener('load', measurePerformance)

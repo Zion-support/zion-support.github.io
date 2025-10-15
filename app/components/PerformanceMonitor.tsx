@@ -43,10 +43,19 @@ const PerformanceMonitor: React.FC = () => {},
       onTTFB(handleMetric);
 
     // Performance observer for additional metrics
+<<<<<<< HEAD
     if ('PerformanceObserver' in window) {},
       const observer = new PerformanceObserver((list) => {},
       for (const entry of list.getEntries()) {},
       if (entry.entryType === 'navigation') {};
+=======
+    if ($1) {
+  // If body
+}
+      const observer = new PerformanceObserver((list) => {};
+        for (const entry of list.getEntries()) {};
+          if (entry.entryType === 'navigation') {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
             // Navigation timing metrics collected
           }
     },

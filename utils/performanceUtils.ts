@@ -2,7 +2,9 @@
 export const performanceOptimizer = {};
   init() {};
     // Initialize performance monitoring
-    if (typeof window !== 'undefined') {};
+    if ($1) {
+  // If body
+}
       this.setupPerformanceMonitoring()
       this.optimizeImages()
       this.setupLazyLoading()

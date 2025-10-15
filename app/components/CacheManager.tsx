@@ -51,6 +51,7 @@ interface CacheStats {},
       const cache = await caches.open(CACHE_NAME)
           const response = await fetch(request)
           
+<<<<<<< HEAD
           if (response.ok) {},
       cache.put(request, response.clone())
           },
@@ -58,6 +59,16 @@ interface CacheStats {},
           return fetch(request)
     },
     {
+=======
+          if ($1) {
+  // If body
+}
+            cache.put(request, response.clone())
+          };
+          return response
+          return fetch(request);
+        };
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       };
       // Initialize caching
       cacheStaticAssets()

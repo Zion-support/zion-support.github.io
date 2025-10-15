@@ -21,7 +21,9 @@ export const usePerformanceMonitor = () => {};
 }if (typeof window === 'undefined' || !window.performance) return
       // Measure page load time
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      if (navigation) {};
+      if ($1) {
+  // If body
+}
         metricsRef.current.loadTime = navigation.loadEventEnd - navigation.loadEventStart
       };
       // Measure Core Web Vitals

@@ -35,9 +35,16 @@ class ErrorBoundary extends Component<Props, State> {},
     });
 
     // Log error to console in development
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {}
     },
     {
+=======
+    if ($1) {
+  // If body
+}
+      };
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {};
       // Here you would typically send the error to an error reporting service

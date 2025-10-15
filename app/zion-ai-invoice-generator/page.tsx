@@ -178,6 +178,7 @@ import { ArrowRight, CheckCircle, Star, FileText, Zap, Brain, Award, DollarSign,
     },
     {
   ];
+<<<<<<< HEAD
 ,
       const ZionAiInvoiceGeneratorPage: React.FC = () => {",
         "
@@ -189,6 +190,16 @@ import { ArrowRight, CheckCircle, Star, FileText, Zap, Brain, Award, DollarSign,
         "
         title="zion-ai-invoice-generator - Zion Tech Group",
       description="Zion Tech Group zion-ai-invoice-generator service page" />";"
+=======
+;
+const ZionAiInvoiceGeneratorPage: React.FC = () => {";"
+  return (";"
+    <>";"
+      <SEOHead";"
+        title="Page - Zion Tech Group";
+        description="Professional page solutions for modern businesses";
+      />";"
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";"
         {/* Hero Section */};
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">";"
@@ -607,6 +618,7 @@ import { ArrowRight, CheckCircle, Star, FileText, Zap, Brain, Award, DollarSign,
               </Link>",
         "
               <Link";"
+<<<<<<< HEAD
                 to="/demo",
       className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105";
               >",
@@ -632,3 +644,23 @@ import { ArrowRight, CheckCircle, Star, FileText, Zap, Brain, Award, DollarSign,
 ,
       export default ZionAiInvoiceGeneratorPage;
 ;
+=======
+                to="/contact";
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105";
+              >";"
+                Start Free Trial";"
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />";"
+              </Link>";"
+              <Link";"
+                to="/demo";
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105";
+              >";"
+                View Demo";"
+                <Monitor className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />";"
+              </Link>";"
+            </div>";"
+          </div>";"
+        </section>";"
+      </div>";"
+    </>";"
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2

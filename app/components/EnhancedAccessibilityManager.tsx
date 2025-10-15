@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react',
       interface AccessibilityOptions {},
       enableHighContrast: boolean,
@@ -33,6 +34,43 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({},
       ...options
   }),
       const [isInitialized, setIsInitialized] = useState(false);
+=======
+import React, { useEffect, useState, useCallback } from 'react';
+
+interface AccessibilityOptions {};
+  enableHighContrast: boolean;
+  enableLargeText: boolean;
+  enableReducedMotion: boolean;
+  enableFocusIndicators: boolean;
+  enableScreenReader: boolean;
+  enableKeyboardNavigation: boolean;
+  enableVoiceControl: boolean;
+};
+interface AccessibilityManagerProps {};
+  options?: Partial<AccessibilityOptions>
+  enableAutoDetection?: boolean;
+  enableUserPreferences?: boolean;
+  onAccessibilityChange?: (options: AccessibilityOptions) => void;
+};
+const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
+  options = {};
+  enableAutoDetection = true;
+  enableUserPreferences = true;
+  onAccessibilityChange
+}) => {};
+  const [accessibilityOptions, setAccessibilityOptions] = useState<AccessibilityOptions>({};
+    enableHighContrast: false;
+    enableLargeText: false;
+    enableReducedMotion: false;
+    enableFocusIndicators: true;
+    enableScreenReader: false;
+    enableKeyboardNavigation: true;
+    enableVoiceControl: false;
+    ...options
+  });
+
+  const [isInitialized, setIsInitialized] = useState(false);
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 
   // Detect system preferences
   const detectSystemPreferences = useCallback(() => {},
@@ -54,6 +92,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({},
   }, [enableAutoDetection]);
 
   // Load user preferences from localStorage
+<<<<<<< HEAD
   const loadUserPreferences = useCallback(() => {},
       if (!enableUserPreferences) return,
       try {},
@@ -67,6 +106,22 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({},
       console.warn('Failed to load accessibility preferences:', error)
     },
     {
+=======
+  const loadUserPreferences = useCallback(() => {};
+    if (!enableUserPreferences) return;
+
+    try {};
+      const saved = localStorage.getItem('accessibility-preferences');
+      if ($1) {
+  // If body
+}
+        const preferences = JSON.parse(saved);
+        setAccessibilityOptions(prev => ({ ...prev, ...preferences }));
+      };
+    } catch (error) {};
+      console.warn('Failed to load accessibility preferences:', error);
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
   }, [enableUserPreferences]);
 
   // Save user preferences to localStorage

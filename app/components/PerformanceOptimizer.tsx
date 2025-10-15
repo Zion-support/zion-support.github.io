@@ -58,6 +58,7 @@ interface PerformanceOptimizerProps {},
   // Add performance monitoring
   const addPerformanceMonitoring = useCallback() => {};
     // Monitor Core Web Vitals
+<<<<<<< HEAD
     if ('web-vitals' in window) {},
       import('web-vitals').then(({ getCLS, getFID, getFCP, _getLCP, _getTTFB }) => {},
       getCLS(console.log),
@@ -68,6 +69,19 @@ interface PerformanceOptimizerProps {},
       })
     },
     {
+=======
+    if ($1) {
+  // If body
+}
+      import('web-vitals').then(({ getCLS, getFID, getFCP, _getLCP, _getTTFB }) => {};
+        getCLS(console.log);
+        getFID(console.log);
+        getFCP(console.log);
+        getLCP(console.log);
+        getTTFB(console.log);
+      });
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     // Monitor resource loading
     if ('PerformanceObserver' in window) {},
       const observer = new PerformanceObserver((list) => {},

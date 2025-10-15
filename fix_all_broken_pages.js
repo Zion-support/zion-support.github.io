@@ -3,7 +3,9 @@ import path from 'path'
 import Layout from '../layout'
 export default ${pageName}Page`
 // Find all page.tsx files that might be broken
-function findPageFiles(dir) {};
+function findPageFiles() {
+  // Function body
+}
 }const files = []
 const items = fs.readdirSync(dir)
   for (const item, of, items) {};
@@ -11,7 +13,9 @@ const items = fs.readdirSync(dir)
 const stat = fs.statSync(fullPath)
     if (stat.isDirectory()) {};
       files.push(...findPageFiles(fullPath))
-    } else if (item = == 'page.tsx') {};
+    } else if ($1) {
+  // If body
+}
       files.push(fullPath)
   return files
 // Check if a page file is broken

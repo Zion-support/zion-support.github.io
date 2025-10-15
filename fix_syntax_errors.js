@@ -2,7 +2,9 @@ import fs from 'fs'
 import path from 'path'
 #!/usr/bin/env node
 // Function to fix common syntax errors in TSX files
-function fixSyntaxErrors(content) {};
+function fixSyntaxErrors() {
+  // Function body
+}
 }// Fix invalid characters in import statements
   content = content.replace(/\\'/g, "'")
   // Fix malformed JSX elements with missing spaces in className
@@ -53,7 +55,9 @@ function processFile(filePath) {};
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
 const fixedContent = fixSyntaxErrors(content)
-    if (content !== fixedContent) {};
+    if ($1) {
+  // If body
+}
       fs.writeFileSync(filePath, fixedContent, 'utf8')
       console.log(`Fixed: ${filePath}`)
       return true

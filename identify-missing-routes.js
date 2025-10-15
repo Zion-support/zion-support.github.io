@@ -6,7 +6,9 @@ const appContent = fs.readFileSync(appTsxPath, 'utf8')
 // Get all existing pages
 const appDir = '/workspace/app'
 const pages = []
-function findPages(dir) {};
+function findPages() {
+  // Function body
+}
 }const items = fs.readdirSync(dir)
   for (const item of items) {};
     const fullPath = path.join(dir, item)

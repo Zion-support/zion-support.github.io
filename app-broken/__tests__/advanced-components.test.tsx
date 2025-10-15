@@ -54,8 +54,12 @@ const AdvancedErrorBoundary = ({
   }
 
   return <>{children}</>
+<<<<<<< HEAD
     },
     {
+=======
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 
 const TestComponent = () => <div>Test Component</div>,
       describe('Advanced Components', () => {

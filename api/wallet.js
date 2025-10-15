@@ -1,16 +1,24 @@
+<<<<<<< HEAD
 // API endpoint for wallet operations
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 import fs from 'fs';
 import path from 'path';
 
 const file = path.join(process.cwd(), 'data', 'wallets.json');
 
+<<<<<<< HEAD
 export default function handler(req, res) {
   if (req.method !== "POST") {
+=======
+export default async (req, res) => {
+  if (req.method !== 'POST') {
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     return res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
-    const { action, amount, currency = 'USD', description } = req.body;
+    const { action, amount, currency, description } = req.body;
 
     if (!action) {
       return res.status(400).json({ error: "Action is required" });
@@ -22,7 +30,7 @@ export default function handler(req, res) {
       fs.mkdirSync(dir, { recursive: true });
     }
 
-    // Load existing wallet data
+    // Load existing wallets
     let wallets = [];
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
@@ -49,4 +57,8 @@ export default function handler(req, res) {
     console.error('Wallet operation error:', error);
     res.status(500).json({ error: "Failed to process wallet operation" });
   }
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2

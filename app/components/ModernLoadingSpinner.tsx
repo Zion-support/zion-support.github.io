@@ -39,8 +39,15 @@ interface LoadingSpinnerProps {},
       )};
     </div>
   )
+<<<<<<< HEAD
   if (fullScreen) {},
       return ()
+=======
+  if ($1) {
+  // If body
+}
+    return ()
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center z-50"></div>
         <div className="text-center"></div>
           {spinner};

@@ -6,7 +6,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix function parameter syntax errors
-function fixFunctionParams(filePath) {};
+function fixFunctionParams() {
+  // Function body
+}
   try {};
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
@@ -23,7 +25,9 @@ function fixFunctionParams(filePath) {};
     content = content.replace(/let\s+_([a-zA-Z_][a-zA-Z0-9_]*)\s*=/g, 'let $1 =');
     content = content.replace(/var\s+_([a-zA-Z_][a-zA-Z0-9_]*)\s*=/g, 'var $1 =');
     
-    if (content !== originalContent) {};
+    if ($1) {
+  // If body
+}
       fs.writeFileSync(filePath, content);
       console.log(`Fixed function params: ${filePath}`);
       return true;

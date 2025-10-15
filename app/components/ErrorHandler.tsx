@@ -33,7 +33,13 @@ interface Props {},
       errorInfo
     })
     // Log error to console in development
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {},
+=======
+    if ($1) {
+  // If body
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       console.error('Error caught by handler:', error, errorInfo)
     };
     // Send error to monitoring service in production

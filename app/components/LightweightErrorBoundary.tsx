@@ -23,10 +23,18 @@ class LightweightErrorBoundary extends Component<Props, State> {},
       this.setState({ error });
 
     // Log error to console in development
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {},
       console.error('ErrorBoundary caught an error:', error, errorInfo)
     },
     {
+=======
+    if ($1) {
+  // If body
+}
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     // Send error to external service in production
     if (process.env.NODE_ENV === 'production') {};
       // Use fetch to send error data

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react',
       import { Helmet } from 'react-helmet-async',
       import { useLocation } from 'react-router-dom',
@@ -16,6 +17,26 @@ import React, { useEffect } from 'react',
       tags?: string[]
     },
     {
+=======
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
+
+interface SEOHeadProps {};
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+  structuredData?: Record<string>
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 interface StructuredData {};
   '@context': string;
   '@type': string;
@@ -111,10 +132,20 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
   });
 
   // Generate page-specific structured data
+<<<<<<< HEAD
   const generatePageStructuredData = (): StructuredData => {},
       const baseData = generateBaseStructuredData(),
       const path = location.pathname,
       if (path === '/') {},
+=======
+  const generatePageStructuredData = (): StructuredData => {};
+    const baseData = generateBaseStructuredData();
+    const path = location.pathname;
+
+    if ($1) {
+  // If body
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       return {};
         ...baseData;
         '@type': 'WebSite',

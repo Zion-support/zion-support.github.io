@@ -1,19 +1,5 @@
 
-  return (<>
-      <Helmet></Helmet>
-        <title>Zion Security Shield - Advanced Cybersecurity Platform | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Protect your business with Zion Security Shield - the ultimate AI-powered cybersecurity platform. Advanced threat detection, real-time monitoring, and automated incident response."
-        />
-        <meta
-          name="keywords"
-          content="cybersecurity, _threat detection, _security monitoring, _AI security, _zero trust, _compliance, _SOC 2, _GDPR, security platform"
-        />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>
-        {/* Hero Section */};
+  // return statement
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
           <div className="max-w-7xl mx-auto text-center"></div>
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 mb-6"></div>
@@ -240,6 +226,7 @@
               </Link>
               <Link
                 to="/demo"
+<<<<<<< HEAD
                 className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
               ></Link
 >
@@ -255,3 +242,6 @@
     {
 
 export default ZionSecurityShieldPage;
+=======
+                className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2

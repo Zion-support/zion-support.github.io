@@ -4,6 +4,7 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react',
     import EnhancedErrorBoundary from '../EnhancedErrorBoundary';
 
 // Mock component that throws an error
+<<<<<<< HEAD
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {},
     if (shouldThrow) {},
       throw new Error('Test error')
@@ -12,6 +13,16 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {},
   return <div>No error</div>
     },
     {
+=======
+const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {};
+  if ($1) {
+  // If body
+}
+    throw new Error('Test error');
+  };
+  return <div>No error</div>;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 
 // Mock fetch for error reporting
 global.fetch = jest.fn(),

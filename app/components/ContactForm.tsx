@@ -48,6 +48,7 @@ const ContactForm: React.FC = () => {};
       });
 
     } catch (error) {};
+<<<<<<< HEAD
       } finally {},
       setIsSubmitting(false)
     },
@@ -55,6 +56,16 @@ const ContactForm: React.FC = () => {};
   },
       if (isSubmitted) {},
       return ()
+=======
+      } finally {};
+      setIsSubmitting(false);
+    };
+  };
+  if ($1) {
+  // If body
+}
+    return ()
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
       <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center"></div>
         <MessageSquare className="w-8 h-8 mx-auto mb-2" />
         <h3 className="text-lg font-semibold mb-2">Thank you!</h3>

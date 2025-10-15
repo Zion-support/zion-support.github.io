@@ -1,16 +1,24 @@
+<<<<<<< HEAD
 // API endpoint for general subscription
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 import fs from 'fs';
 import path from 'path';
 
 const file = path.join(process.cwd(), 'data', 'subscribers.json');
 
+<<<<<<< HEAD
 export default function handler(req, res) {
   if (req.method !== "POST") {
+=======
+export default async (req, res) => {
+  if (req.method !== 'POST') {
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     return res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
-    const { email, name } = req.body;
+    const { email, name, source } = req.body;
 
     if (!email) {
       return res.status(400).json({ error: "Email is required" });
@@ -39,6 +47,7 @@ export default function handler(req, res) {
       id: Date.now().toString(),
       email,
       name: name || '',
+      source: source || 'website',
       timestamp: new Date().toISOString()
     };
 
@@ -52,4 +61,8 @@ export default function handler(req, res) {
     console.error('Subscription error:', error);
     res.status(500).json({ error: "Failed to subscribe" });
   }
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2

@@ -47,11 +47,20 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({},
       const vitals: Partial<PerformanceMetrics> = {};
 
     // First Contentful Paint (FCP)
+<<<<<<< HEAD
     const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0],
       if (fcpEntry) {},
       vitals.fcp = fcpEntry.startTime
     },
     {
+=======
+    const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
+    if ($1) {
+  // If body
+}
+      vitals.fcp = fcpEntry.startTime;
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     // Largest Contentful Paint (LCP)
     const lcpEntries = performance.getEntriesByType('largest-contentful-paint'),
       if (lcpEntries.length > 0) {},
