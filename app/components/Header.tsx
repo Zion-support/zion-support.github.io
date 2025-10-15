@@ -25,9 +25,13 @@ const Header: React.FC = memo(() => {
         { name: 'Micro SAAS Solutions', path: '/micro-saas' },
         { name: 'AI Services', path: '/ai-services' },
         { name: 'IT Services', path: '/it-services' },
-        { name: '5G Solutions', path: '/5g-solutions' },
-        { name: 'Cloud Services', path: '/cloud-services' },
-        { name: 'Cybersecurity', path: '/cybersecurity' }
+        { name: 'Cloud Migration', path: '/cloud-migration-services' },
+        { name: 'Cybersecurity Consulting', path: '/cybersecurity-consulting' },
+        { name: 'DevOps Solutions', path: '/devops-solutions' },
+        { name: 'Mobile App Development', path: '/mobile-app-development' },
+        { name: 'Web Development', path: '/web-application-development' },
+        { name: 'Database Solutions', path: '/database-solutions' },
+        { name: '5G Solutions', path: '/5g-solutions' }
       ]
     },
     { name: 'About', path: '/about' },
