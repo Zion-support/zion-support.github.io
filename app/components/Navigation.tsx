@@ -40,6 +40,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+  const [isEnterpriseOpen, setIsEnterpriseOpen] = useState(false);
+  const [isZionAIOpen, setIsZionAIOpen] = useState(false);
   const location = useLocation();
 
   const navigation = [
@@ -68,6 +70,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Email Optimizer', href: '/ai-email-optimizer', icon: EnvelopeIcon },
         { name: 'AI Website Analyzer', href: '/ai-website-analyzer', icon: EyeIcon },
         { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },
+        { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: ShieldCheckIcon },
+        { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: UserGroupIcon },
+        { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: AcademicCapIcon },
+        { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer', icon: ChartBarIcon },
+        { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: CogIcon },
+        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: EyeIcon },
+        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: ChatBubbleLeftRightIcon },
         { name: 'Data Analytics', href: '/data-analytics', icon: ChartBarIcon }
       ]
     },
@@ -77,26 +86,21 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       icon: GlobeAltIcon,
       submenu: [
         { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
+        { name: 'AI Meeting Transcriber', href: '/zion-ai-meeting-transcriber', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Customer Satisfaction Monitor', href: '/zion-customer-satisfaction-monitor', icon: UserGroupIcon },
+        { name: 'AI Inventory Optimizer', href: '/zion-ai-inventory-optimizer-pro', icon: CircleStackIcon },
+        { name: 'AI Email Marketing Automation', href: '/zion-ai-email-marketing-pro', icon: EnvelopeIcon },
+        { name: 'AI Workflow Automation', href: '/zion-ai-workflow-automator-pro', icon: CogIcon },
+        { name: 'AI Social Media Scheduler', href: '/zion-ai-social-scheduler-pro', icon: ShareIcon },
+        { name: 'AI Video Generator', href: '/zion-ai-video-generator', icon: EyeIcon },
+        { name: 'AI Translation Service', href: '/zion-ai-translation-service', icon: GlobeAltIcon },
         { name: 'Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard', icon: ChartBarIcon },
         { name: 'Smart CRM Automation', href: '/zion-smart-crm-automation', icon: ChatBubbleLeftRightIcon },
         { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager', icon: CircleStackIcon },
         { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker', icon: CurrencyDollarIcon },
         { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
-        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
-        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
-        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },
         { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },
-        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon },
-        { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: CodeBracketIcon },
-        { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon },
-        { name: 'AI Video Generator', href: '/ai-video-generator', icon: EyeIcon },
-        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: ChatBubbleLeftRightIcon },
-        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: EyeIcon },
-        { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: ShieldCheckIcon },
-        { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: UserGroupIcon },
-        { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: AcademicCapIcon },
-        { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer', icon: ChartBarIcon },
-        { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: CogIcon }
+        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon }
       ]
     },
     {
@@ -105,6 +109,16 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       icon: CogIcon,
       submenu: [
         { name: 'IT Solutions Overview', href: '/it-solutions', icon: CogIcon },
+        { name: 'Quantum Computing', href: '/quantum-computing-solutions', icon: CpuChipIcon },
+        { name: 'Edge Computing', href: '/edge-computing-solutions', icon: CloudIcon },
+        { name: 'Augmented Reality', href: '/augmented-reality-solutions', icon: EyeIcon },
+        { name: 'Virtual Reality', href: '/virtual-reality-solutions', icon: EyeIcon },
+        { name: 'Robotic Process Automation', href: '/robotic-process-automation', icon: CogIcon },
+        { name: 'Low-Code Platform', href: '/low-code-platform', icon: CodeBracketIcon },
+        { name: 'Serverless Architecture', href: '/serverless-architecture', icon: CloudIcon },
+        { name: 'Container Orchestration', href: '/container-orchestration', icon: CircleStackIcon },
+        { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: CpuChipIcon },
+        { name: 'Data Lake Solutions', href: '/data-lake-solutions', icon: CircleStackIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
         { name: 'Web Development', href: '/web-development', icon: CodeBracketIcon },
         { name: 'Mobile App Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
@@ -117,17 +131,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'DevOps Automation', href: '/devops-automation', icon: CogIcon },
         { name: 'Data Engineering', href: '/data-engineering', icon: CircleStackIcon },
         { name: 'API Development', href: '/api-development', icon: CodeBracketIcon },
-        { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon },
-        { name: 'Quantum Computing', href: '/quantum-computing-solutions', icon: CpuChipIcon },
-        { name: 'Edge Computing', href: '/edge-computing-solutions', icon: CloudIcon },
-        { name: 'AR Solutions', href: '/augmented-reality-solutions', icon: EyeIcon },
-        { name: 'VR Solutions', href: '/virtual-reality-solutions', icon: EyeIcon },
-        { name: 'RPA Solutions', href: '/robotic-process-automation', icon: CogIcon },
-        { name: 'Low-Code Platform', href: '/low-code-platform', icon: CodeBracketIcon },
-        { name: 'Serverless Architecture', href: '/serverless-architecture', icon: CloudIcon },
-        { name: 'Container Orchestration', href: '/container-orchestration', icon: CircleStackIcon },
-        { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: CpuChipIcon },
-        { name: 'Data Lake Solutions', href: '/data-lake-solutions', icon: CircleStackIcon }
+        { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon }
       ]
     },
     {
@@ -168,7 +172,36 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Document Analyzer', href: '/zion-ai-document-analyzer', icon: DocumentTextIcon },
         { name: 'AI Task Scheduler', href: '/zion-ai-task-scheduler', icon: CogIcon },
         { name: 'AI Translation Service', href: '/zion-ai-translation-service', icon: GlobeAltIcon },
-        { name: 'AI Video Generator', href: '/zion-ai-video-generator', icon: EyeIcon }
+        { name: 'AI Video Generator', href: '/zion-ai-video-generator', icon: EyeIcon },
+        { name: 'AI Meeting Transcriber', href: '/zion-ai-meeting-transcriber', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Customer Satisfaction Monitor', href: '/zion-customer-satisfaction-monitor', icon: UserGroupIcon },
+        { name: 'AI Inventory Optimizer Pro', href: '/zion-ai-inventory-optimizer-pro', icon: CircleStackIcon },
+        { name: 'AI Social Scheduler Pro', href: '/zion-ai-social-scheduler-pro', icon: ShareIcon },
+        { name: 'AI Code Assistant', href: '/zion-ai-code-assistant', icon: CodeBracketIcon },
+        { name: 'AI Voice Assistant', href: '/zion-ai-voice-assistant', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Image Generator', href: '/zion-ai-image-generator', icon: EyeIcon },
+        { name: 'AI Voice Synthesis', href: '/zion-ai-voice-synthesis', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Website Analyzer', href: '/zion-ai-website-analyzer', icon: EyeIcon },
+        { name: 'AI Predictive Analytics', href: '/zion-ai-predictive-analytics', icon: ChartBarIcon }
+      ]
+    },
+    {
+      name: 'Enterprise Solutions',
+      href: '#',
+      icon: ShieldCheckIcon,
+      submenu: [
+        { name: 'Blockchain Solutions Pro', href: '/blockchain-solutions-pro', icon: ShieldCheckIcon },
+        { name: 'IoT Solutions Pro', href: '/iot-solutions-pro', icon: SignalIcon },
+        { name: 'DevOps Automation Pro', href: '/devops-automation-pro', icon: CogIcon },
+        { name: 'AI Fraud Detection Pro', href: '/ai-fraud-detection-pro', icon: ShieldCheckIcon },
+        { name: 'AI Image Recognition Pro', href: '/ai-image-recognition-pro', icon: EyeIcon },
+        { name: 'AI Lead Scoring Pro', href: '/ai-lead-scoring-pro', icon: ChartBarIcon },
+        { name: 'AI Predictive Maintenance Pro', href: '/ai-predictive-maintenance-pro', icon: CogIcon },
+        { name: 'AI Price Optimizer Pro', href: '/ai-price-optimizer-pro', icon: CurrencyDollarIcon },
+        { name: 'AI Voice Assistant Pro', href: '/ai-voice-assistant-pro', icon: ChatBubbleLeftRightIcon },
+        { name: 'Customer Churn Predictor Pro', href: '/zion-ai-customer-churn-predictor-pro', icon: UserGroupIcon },
+        { name: 'Cybersecurity Audit', href: '/zion-cybersecurity-audit', icon: ShieldCheckIcon },
+        { name: 'API Development', href: '/zion-api-development', icon: CodeBracketIcon }
       ]
     },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
@@ -189,6 +222,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     setIsSolutionsOpen(false);
     setIsResourcesOpen(false);
     setIsCompanyOpen(false);
+    setIsEnterpriseOpen(false);
+    setIsZionAIOpen(false);
   };
 
   const toggleSolutionsMenu = () => {
@@ -196,6 +231,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     setIsServicesOpen(false);
     setIsResourcesOpen(false);
     setIsCompanyOpen(false);
+    setIsEnterpriseOpen(false);
+    setIsZionAIOpen(false);
   };
 
   const toggleResourcesMenu = () => {
@@ -203,6 +240,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     setIsServicesOpen(false);
     setIsSolutionsOpen(false);
     setIsCompanyOpen(false);
+    setIsEnterpriseOpen(false);
+    setIsZionAIOpen(false);
   };
 
   const toggleCompanyMenu = () => {
@@ -210,6 +249,26 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     setIsServicesOpen(false);
     setIsSolutionsOpen(false);
     setIsResourcesOpen(false);
+    setIsEnterpriseOpen(false);
+    setIsZionAIOpen(false);
+  };
+
+  const toggleEnterpriseMenu = () => {
+    setIsEnterpriseOpen(!isEnterpriseOpen);
+    setIsServicesOpen(false);
+    setIsSolutionsOpen(false);
+    setIsResourcesOpen(false);
+    setIsCompanyOpen(false);
+    setIsZionAIOpen(false);
+  };
+
+  const toggleZionAIMenu = () => {
+    setIsZionAIOpen(!isZionAIOpen);
+    setIsServicesOpen(false);
+    setIsSolutionsOpen(false);
+    setIsResourcesOpen(false);
+    setIsCompanyOpen(false);
+    setIsEnterpriseOpen(false);
   };
 
   return (
@@ -244,6 +303,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     else if (item.name === 'IT Solutions') toggleResourcesMenu();
                     else if (item.name === 'Resources') toggleResourcesMenu();
                     else if (item.name === 'Company') toggleCompanyMenu();
+                    else if (item.name === 'Enterprise Solutions') toggleEnterpriseMenu();
+                    else if (item.name === 'Zion AI Tools') toggleZionAIMenu();
                   }}
                   className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 border-b-2 group hover:scale-105 ${
                     isActive(item.href)
@@ -263,7 +324,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       (item.name === 'Micro SaaS' && isSolutionsOpen) ||
                       (item.name === 'IT Solutions' && isResourcesOpen) ||
                       (item.name === 'Resources' && isResourcesOpen) ||
-                      (item.name === 'Company' && isCompanyOpen)
+                      (item.name === 'Company' && isCompanyOpen) ||
+                      (item.name === 'Enterprise Solutions' && isEnterpriseOpen) ||
+                      (item.name === 'Zion AI Tools' && isZionAIOpen)
                         ? 'block' : 'hidden'
                     }`}
                     role="menu"

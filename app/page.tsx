@@ -15,7 +15,9 @@ import {
   GlobeAltIcon,
   CogIcon,
   UserGroupIcon,
-  ShareIcon
+  ShareIcon,
+  PhoneIcon,
+  EnvelopeIcon
 } from '@heroicons/react/24/outline';
 
 const HomePage: React.FC = () => {
@@ -152,7 +154,9 @@ const HomePage: React.FC = () => {
                 <div className="absolute -inset-2 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 rounded-lg blur opacity-20 animate-pulse delay-1000"></div>
               </div>
               <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed px-4">
-                Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services that drive innovation and growth.
+                Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services that drive innovation and growth. 
+                <br className="hidden sm:block" />
+                <span className="text-cyan-400 font-semibold">Contact us at +1 302 464 0950 or kleber@ziontechgroup.com</span>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 lg:mb-16 px-4">
                 <Link to="/contact"
@@ -171,7 +175,7 @@ const HomePage: React.FC = () => {
               </div>
               
               {/* Stats */}
-              <div className="grid grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto px-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto px-4">
                 {stats.map((stat, index) => (
                   <div key={index} 
                     className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm hover:bg-slate-700/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group"
@@ -179,7 +183,7 @@ const HomePage: React.FC = () => {
                       animationDelay: `${index * 100}ms`
                     }}
                   >
-                    <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-purple-400 mb-1 lg:mb-2 group-hover:text-purple-300 transition-colors">
+                    <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-purple-400 mb-1 lg:mb-2 group-hover:text-purple-300 transition-colors">
                       {stat.number}
                     </div>
                     <div className="text-gray-300 text-xs sm:text-sm lg:text-base group-hover:text-white transition-colors">
@@ -204,11 +208,11 @@ const HomePage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               {services.map((service, index) => (
                 <Link key={index}
                   to={service.href}
-                  className="group relative bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 overflow-hidden"
+                  className="group relative bg-slate-800/50 p-4 sm:p-6 lg:p-8 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 overflow-hidden"
                   style={{
                     animationDelay: `${index * 100}ms`
                   }}
@@ -264,9 +268,9 @@ const HomePage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               {/* AI Content Generator */}
-              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20">
+              <div className="group holographic-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
                     <SparklesIcon className="w-6 h-6 text-white" />
@@ -436,10 +440,10 @@ const HomePage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
               {features.map((feature, index) => (
                 <div key={index} 
-                  className="flex items-center space-x-4 p-4 sm:p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-all duration-300 group hover:scale-105 hover:shadow-lg hover:shadow-green-500/10"
+                  className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 lg:p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-all duration-300 group hover:scale-105 hover:shadow-lg hover:shadow-green-500/10"
                   style={{
                     animationDelay: `${index * 50}ms`
                   }}
@@ -455,6 +459,49 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
+        {/* Contact Information Section */}
+        <section className="py-16 sm:py-20 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+                Get in <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Touch</span>
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+                Ready to transform your business? Contact our expert team for a free consultation and discover how our solutions can drive your success.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <PhoneIcon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
+                <p className="text-cyan-400 font-semibold text-lg">+1 302 464 0950</p>
+                <p className="text-gray-400 text-sm mt-2">Available 24/7 for support</p>
+              </div>
+              
+              <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <EnvelopeIcon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Email</h3>
+                <p className="text-purple-400 font-semibold text-lg">kleber@ziontechgroup.com</p>
+                <p className="text-gray-400 text-sm mt-2">Quick response guaranteed</p>
+              </div>
+              
+              <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-green-500 transition-all duration-300 hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <GlobeAltIcon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Address</h3>
+                <p className="text-green-400 font-semibold text-lg">364 E Main St STE 1008</p>
+                <p className="text-gray-400 text-sm mt-2">Middletown DE 19709</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="relative py-16 sm:py-20 bg-gradient-to-r from-purple-900/40 via-slate-900 to-cyan-900/40 overflow-hidden">
           {/* Animated Background Elements */}
@@ -466,7 +513,9 @@ const HomePage: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">
-              Let's discuss how our solutions can accelerate your digital transformation and drive growth.";
+              Let's discuss how our solutions can accelerate your digital transformation and drive growth.
+              <br className="hidden sm:block" />
+              <span className="text-cyan-400 font-semibold">Get in touch: +1 302 464 0950 | kleber@ziontechgroup.com</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact"
@@ -478,11 +527,11 @@ const HomePage: React.FC = () => {
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg blur opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </Link>
-              <Link to="/demo"
+              <a href="tel:+13024640950"
                 className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base hover:shadow-lg hover:shadow-white/25"
               >
-                Schedule Demo
-              </Link>
+                Call Now
+              </a>
             </div>
           </div>
         </section>
