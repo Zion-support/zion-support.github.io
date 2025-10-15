@@ -1,12 +1,12 @@
-// Formvalidation utility functions
+// Formvalidation utility functions;,;,;,;,
 
-export const Formvalidation = {
+export const Formvalidation = {;
   init: () => {
-    },
+    },;,;,;,;,
 
-  process: (data: any) => {
+  process: (data: any) => {;,;,;,;,
     return data;
-  },
+  },;
 
   cleanup: () => {
     },

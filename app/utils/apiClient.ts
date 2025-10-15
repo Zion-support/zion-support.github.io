@@ -1,12 +1,12 @@
-// Apiclient utility functions
+// Apiclient utility functions;,;,;,;,
 
-export const Apiclient = {
+export const Apiclient = {;
   init: () => {
-    },
+    },;,;,;,;,
 
-  process: (data: any) => {
+  process: (data: any) => {;,;,;,;,
     return data;
-  },
+  },;
 
   cleanup: () => {
     },

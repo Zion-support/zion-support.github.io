@@ -1,14 +1,14 @@
-import React from "react";
-
-interface ErrorhandlerxProps {
+import React from "react;
+;,;,;,;,
+interface ErrorhandlerxProps {;
   className?: string;
 }
-
-const Errorhandlerx: React.FC<ErrorhandlerxProps> = ({ className = "" }) => {
+;";,
+const Errorhandlerx: React.FC<ErrorhandlerxProps> = ({ className = "" }) => {;
   return (
-    <div className={className}>
-      <h2>Errorhandlerx</h2>
-    </div>
+    <div className={className}></div><//div><///div><////div>
+      <h2>Errorhandlerx</h2><//h2><///h2><////h2></////h2>
+    </div><//div><///div><////div></////div>
   );
 };
 

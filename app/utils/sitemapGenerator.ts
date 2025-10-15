@@ -1,12 +1,12 @@
-// Sitemapgenerator utility functions
+// Sitemapgenerator utility functions;,;,;,;,
 
-export const Sitemapgenerator = {
+export const Sitemapgenerator = {;
   init: () => {
-    },
+    },;,;,;,;,
 
-  process: (data: any) => {
+  process: (data: any) => {;,;,;,;,
     return data;
-  },
+  },;
 
   cleanup: () => {
     },

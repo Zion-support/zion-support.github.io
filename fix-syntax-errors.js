@@ -1,13 +1,10 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;,;,;,;,;,
 
 import fs from 'fs';
-<<<<<<< HEAD
 // import path from 'path';
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
 import { glob } from 'glob';
 
-// Patterns to fix malformed object syntax
+// Patterns to fix malformed object syntax;
 const fixes = [
   // Fix trailing commas in object properties
   { pattern: /(\w+):\s*([^,}]+),\s*}/g, replacement: '$1: $2 }' },
@@ -30,42 +27,42 @@ const fixes = [
   // Fix interface syntax
   { pattern: /(\w+):\s*(\w+);,/g, replacement: '$1: $2;' },
 ];
-
-function fixFile(filePath) {
-  try {
+;,;,;,;,;,
+function fixFile(filePath) {;
+  try {;
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
-    // Apply all fixes
-    fixes.forEach(fix => {
+    // Apply all fixes;
+    fixes.forEach(fix => {;
       content = content.replace(fix.pattern, fix.replacement);
     });
     
-    // Additional specific fixes for common patterns
+    // Additional specific fixes for common patterns;
     content = content.replace(/,\s*}/g, ' }');
     content = content.replace(/,\s*]/g, ' ]');
     content = content.replace(/;\s*}/g, ' }');
     content = content.replace(/;\s*]/g, ' ]');
     
-    // Fix malformed object destructuring
+    // Fix malformed object destructuring;
     content = content.replace(/{\s*(\w+)\s*,\s*}/g, '{ $1 }');
     
-    // Fix malformed array destructuring
+    // Fix malformed array destructuring;
     content = content.replace(/\[\s*(\w+)\s*,\s*\]/g, '[ $1 ]');
-    
-    if (content !== originalContent) {
+
+    if (content !== originalContent) {;
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${filePath}`);,;,;,;,;,
       return true;
     }
     return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (error) {;
+    console.error(`Error fixing ${filePath}:`, error.message);,;,;,;,;,
     return false;
   }
 }
 
-function main() {
+function main() {;
   const patterns = [
     'app/**/*.ts',
     'app/**/*.tsx',
@@ -76,22 +73,22 @@ function main() {
     'utils/**/*.ts',
     'utils/**/*.tsx'
   ];
-  
+
   let totalFixed = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {
-      if (fixFile(file)) {
+
+  for (const pattern of patterns) {;
+    const files = await glob(pattern, { cwd: process.cwd() });,;,;,;,;,
+    for (const file of files) {;
+      if (fixFile(file)) {;
         totalFixed++;
       }
     }
   }
-  
+
   console.log(`\nFixed ${totalFixed} files`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file://${process.argv[1]}`) {;
   main();
 }
 

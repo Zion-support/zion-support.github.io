@@ -2,20 +2,20 @@
  * useForm Hook;
  * Provides form state management and validation;
  */
-// } from '../utils/formValidation';
-  initialValues: T;
-  validationSchema?: Partial<Record<keyof T, ValidationRule[]>>;
-  onSubmit: (values: T) => void | Promise<void>;
-  validateOnChange?: boolean;
-  validateOnBlur?: boolean;
-  values: T;
-  errors: Record<keyof T, string[]>;
-  touched: Record<keyof T, boolean>;
-  isSubmitting: boolean;
-  isValid: boolean;
-  handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
-  handleBlur: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
-  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+// } from '../utils/formValidation';,;,;,;,
+  initialValues: T;,;,;,;,
+  validationSchema?: Partial<Record<keyof T, ValidationRule[]>>;,;,;,;,
+  onSubmit: (values: T) => void | Promise<void>;,;,;,;,
+  validateOnChange?: boolean;,;,;,;,
+  validateOnBlur?: boolean;,;,;,;,
+  values: T;,;,;,;,
+  errors: Record<keyof T, string[]>;,;,;,;,
+  touched: Record<keyof T, boolean>;,;,;,;,
+  isSubmitting: boolean;,;,;,;,
+  isValid: boolean;,;,;,;,
+  handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;,;,;,;,
+  handleBlur: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;,;,;,;,
+  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;,;,;,;,
  void;
  void;
  void;
@@ -36,7 +36,7 @@ const rules = validationSchema[field];
       }));
     [values, validationSchema]
   );
-  // Validate all fields;
+  // Validate all fields;,;,;,;,
     if (Object.keys(validationSchema).length === 0) return true;
     const validationResults = validateForm(values, validationSchema as Record<keyof T, ValidationRule[]>);
 const formErrors = getFormErrors(validationResults);
@@ -47,11 +47,11 @@ const formErrors = getFormErrors(validationResults);
       const { name, value, type } = e.target;
       const fieldName = name as keyof T;
       // Handle checkbox inputs;
-      let fieldValue: unknown = value;
+      let fieldValue: unknown = value;,;,;,;,
         fieldValue = (e.target, as, HTMLInputElement).checked;
         [fieldName]: fieldValue;
       }));
-      // Validate on change if enabled;
+      // Validate on change if enabled;,;,;,;,
  validateSingleField(fieldName), 0);
     [validateOnChange, touched, validateSingleField]
   );
@@ -59,7 +59,7 @@ const formErrors = getFormErrors(validationResults);
       const fieldName = e.target.name as keyof T;
         [fieldName]: true;
       }));
-      // Validate on blur if enabled;
+      // Validate on blur if enabled;,;,;,;,
         validateSingleField(fieldName);
     [validateOnBlur, validateSingleField]
   );

@@ -1,201 +1,207 @@
-import React, { useState } from "react";
-import { MessageSquare } from "lucide-react";
+import React, { useState } from "react;";,
+import { MessageSquare } from "lucide-react;
 
-interface FormData {
-  name: string;
-  email: string;
-  phone: string;
-  company: string;
-  message: string;
+interface FormData {;
+  name: string;,;,;,;,
+  email: string;,;,;,;,
+  phone: string;,;,;,;,
+  company: string;,;,;,;,
+  message: string;,;,;,;,
   service: string;
 }
-
-const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    message: "",
+;,;,;,;,
+const ContactForm: React.FC = () => {;,;,;,;,
+  const [formData, setFormData] = useState<FormData>({;";
+    name: "",;";,
+    email: "",;";,
+    phone: "",;";,
+    company: "",;";,
+    message: "",;";,
     service: "",
-  });
+  });,;,;,;,
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<
+  const handleChange = (;
+    e: React.ChangeEvent<;,;,;,;,
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >,
-  ) => {
+  ) => {;
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
   };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+;,;,;,;,
+  const handleSubmit = async (e: React.FormEvent) => {;,;,;,;,
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      // Simulate API call
+      // Simulate API call;
       await new Promise((resolve) => setTimeout(resolve, 1000));
       setIsSubmitted(true);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        message: "",
+      setFormData({;";
+        name: "",;";,
+        email: "",;";,
+        phone: "",;";,
+        company: "",;";,
+        message: "",;";,
         service: "",
       });
 
-    } catch (error) {
+    } catch (error) {;,;,;,;,
       console.error('Failed to submit contact form:', error);
-    } finally {
+    } finally {;,;,;,;,
       setIsSubmitting(false);
     }
   };
 
-  if (isSubmitted) {
-    return (
-      <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center">
-        <MessageSquare className="w-8 h-8 mx-auto mb-2" />
-        <h3 className="text-lg font-semibold mb-2">Thank you!</h3>
-        <p>
+  if (isSubmitted) {;";
+    return ("
+      <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center">"
+        <MessageSquare className="w-8 h-8 mx-auto mb-2" />"
+        <h3 className="text-lg font-semibold mb-2">Thank you!</h3><//h3><///h3><////h3></////h3>
+        <p></p>;
           Your message has been sent successfully. We'll get back to you soon.
-        </p>
-      </div>
+        </p><//p><///p><////p></////p>
+      </div><//div><///div><////div></////div>
     );
   }
-
-  return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <label
-            htmlFor="name"
+;";
+  return ("
+    <form onSubmit={handleSubmit} className="space-y-6">"
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div><//div><///div><////div>
+        <div></div><//div><///div><////div>
+          <label;";,
+            htmlFor="name;";
             className="block text-sm font-medium text-gray-700 mb-2"
-          >
+          ></label"
+>;
             Full Name *
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
+          </label><//label><///label><////label></////label>
+          <input;";
+            type="text;";
+            id="name;";
+            name="name;
             value={formData.name}
             onChange={handleChange}
-            required
+            required;";
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
-        </div>
+        </div><//div><///div><////div></////div>
 
-        <div>
-          <label
-            htmlFor="email"
+        <div></div><//div><///div><////div>
+          <label;";,
+            htmlFor="email;";
             className="block text-sm font-medium text-gray-700 mb-2"
-          >
+          ></label"
+>;
             Email Address *
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
+          </label><//label><///label><////label></////label>
+          <input;";
+            type="email;";
+            id="email;";
+            name="email;
             value={formData.email}
             onChange={handleChange}
-            required
+            required;";
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
-        </div>
-      </div>
+        </div><//div><///div><////div></////div>
+      </div><//div><///div><////div></////div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <label
-            htmlFor="phone"
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div><//div><///div><////div>
+        <div></div><//div><///div><////div>
+          <label;";,
+            htmlFor="phone;";
             className="block text-sm font-medium text-gray-700 mb-2"
-          >
+          ></label"
+>;
             Phone Number
-          </label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
+          </label><//label><///label><////label></////label>
+          <input;";
+            type="tel;";
+            id="phone;";
+            name="phone;
             value={formData.phone}
-            onChange={handleChange}
+            onChange={handleChange};";
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
-        </div>
+        </div><//div><///div><////div></////div>
 
-        <div>
-          <label
-            htmlFor="company"
+        <div></div><//div><///div><////div>
+          <label;";,
+            htmlFor="company;";
             className="block text-sm font-medium text-gray-700 mb-2"
-          >
+          ></label"
+>;
             Company
-          </label>
-          <input
-            type="text"
-            id="company"
-            name="company"
+          </label><//label><///label><////label></////label>
+          <input;";
+            type="text;";
+            id="company;";
+            name="company;
             value={formData.company}
-            onChange={handleChange}
+            onChange={handleChange};";
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
-        </div>
-      </div>
+        </div><//div><///div><////div></////div>
+      </div><//div><///div><////div></////div>
 
-      <div>
-        <label
-          htmlFor="service"
+      <div></div><//div><///div><////div>
+        <label;";,
+          htmlFor="service;";
           className="block text-sm font-medium text-gray-700 mb-2"
-        >
+        ></label"
+>;
           Service Interest
-        </label>
-        <select
-          id="service"
-          name="service"
+        </label><//label><///label><////label></////label>
+        <select;";
+          id="service;";
+          name="service;
           value={formData.service}
-          onChange={handleChange}
+          onChange={handleChange};";
           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-        >
-          <option value="">Select a service</option>
-          <option value="ai-solutions">AI Solutions</option>
-          <option value="it-services">IT Services</option>
-          <option value="micro-saas">Micro SAAS</option>
-          <option value="consulting">Consulting</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
+        >"
+          <option value="">Select a service</option>"
+          <option value="ai-solutions">AI Solutions</option>"
+          <option value="it-services">IT Services</option>"
+          <option value="micro-saas">Micro SAAS</option>"
+          <option value="consulting">Consulting</option>"
+          <option value="other">Other</option><//option><///option><////option></////option>
+        </select><//select><///select><////select></////select>
+      </div><//div><///div><////div></////div>
 
-      <div>
-        <label
-          htmlFor="message"
+      <div></div><//div><///div><////div>
+        <label;";,
+          htmlFor="message;";
           className="block text-sm font-medium text-gray-700 mb-2"
-        >
+        ></label"
+>;
           Message *
-        </label>
-        <textarea
-          id="message"
-          name="message"
+        </label><//label><///label><////label></////label>
+        <textarea;";
+          id="message;";
+          name="message;
           value={formData.message}
           onChange={handleChange}
-          required
-          rows={5}
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+          required;
+          rows={5};";
+          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent;";,
           placeholder="Tell us about your project or requirements..."
         />
-      </div>
+      </div><//div><///div><////div></////div>
 
-      <button
-        type="submit"
-        disabled={isSubmitting}
+      <button;";
+        type="submit;
+        disabled={isSubmitting};";
         className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-      >
+      >"
         {isSubmitting ? "Sending..." : "Send Message"}
-      </button>
-    </form>
+      </button><//button><///button><////button></////button>
+    </form><//form><///form><////form></////form>
   );
 };
 

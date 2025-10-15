@@ -1,12 +1,12 @@
-// Performancemonitoring utility functions
+// Performancemonitoring utility functions;,;,;,;,
 
-export const Performancemonitoring = {
+export const Performancemonitoring = {;
   init: () => {
-    },
+    },;,;,;,;,
 
-  process: (data: any) => {
+  process: (data: any) => {;,;,;,;,
     return data;
-  },
+  },;
 
   cleanup: () => {
     },

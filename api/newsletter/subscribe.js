@@ -1,40 +1,40 @@
-const isValidEmail = (email) => {
+const isValidEmail = (email) => {;,;,;,;,
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 };
 
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
+export default async function handler(req, res) {;
+  if (req.method !== 'POST') {;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    res.end(JSON.stringify({ error: 'Method not allowed' }));,;,;,;,
     return;
   }
 
 const { email } = req.body;
-  if (!email) {
+  if (!email) {;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Email is required' }));
+    res.end(JSON.stringify({ error: 'Email is required' }));,;,;,;,
     return;
   }
 
-  if (!isValidEmail(email)) {
+  if (!isValidEmail(email)) {;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Invalid email format' }));
+    res.end(JSON.stringify({ error: 'Invalid email format' }));,;,;,;,
     return;
   }
 
-  try {
-console.log('Newsletter subscription:', email);
+  try {;
+console.log('Newsletter subscription:', email);,;,;,;,
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true, 
+    res.end(JSON.stringify({ ;
+      success: true, ;,;,;,;,
       message: 'Successfully subscribed to newsletter' 
     }));
-  } catch (error) {
-console.error('Newsletter subscription error:', error);
+  } catch (error) {;,;,;,;,
+console.error('Newsletter subscription error:', error);,;,;,;,
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      error: 'Failed to subscribe to newsletter',
+    res.end(JSON.stringify({ ;
+      error: 'Failed to subscribe to newsletter',;,;,;,;,
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
     }));
   }

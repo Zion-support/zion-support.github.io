@@ -1,35 +1,35 @@
 export default AdvancedErrorBoundary;
 // Simple logger implementation;
       // console.error(message, context);
-};
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
-  children: ReactNode;
-  fallback?: ReactNode;
+};,;,;,;,
+  hasError: boolean;,;,;,;,
+  error: Error | null;,;,;,;,
+  errorInfo: ErrorInfo | null;,;,;,;,
+  errorId: string | null;,;,;,;,
+  children: ReactNode;,;,;,;,
+  fallback?: ReactNode;,;,;,;,
  void;
-  enableErrorReporting?: boolean;
-  enableRetry?: boolean;
-  errorId: string | null;
-  error: Error;
-  errorInfo: ErrorInfo;
-  message: string;
-  stack: string | undefined;
-  componentStack: string | null | undefined;
-  timestamp: string;
-  userAgent: string;
-  url: string;
-  userId: string | null;
-  sessionId: string;
+  enableErrorReporting?: boolean;,;,;,;,
+  enableRetry?: boolean;,;,;,;,
+  errorId: string | null;,;,;,;,
+  error: Error;,;,;,;,
+  errorInfo: ErrorInfo;,;,;,;,
+  message: string;,;,;,;,
+  stack: string | undefined;,;,;,;,
+  componentStack: string | null | undefined;,;,;,;,
+  timestamp: string;,;,;,;,
+  userAgent: string;,;,;,;,
+  url: string;,;,;,;,
+  userId: string | null;,;,;,;,
+  sessionId: string;,;,;,;,
 class AdvancedErrorBoundary extends Component;
   private retryCount = 0;
   private maxRetries = 3;
     super(props);
       errorId: null;
-    };
+    };,;,;,;,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+    };,;,;,;,
       errorInfo;
     });
     // Log error to console in development;
@@ -41,7 +41,7 @@ class AdvancedErrorBoundary extends Component;
       this.reportError(error, errorInfo);
       sessionId: this.getSessionId()
     };
-    // Send to error reporting service;
+    // Send to error reporting service;,;,;,;,
     this.sendErrorReport(errorReport);
   };
     // Try to get user ID from localStorage or other sources;
@@ -58,12 +58,12 @@ class AdvancedErrorBoundary extends Component;
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   };
       // Send to your error reporting service;
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json';,;,;,;,
         body: JSON.stringify(errorReport)
-      });
+      });,;,;,;,
         error: reportError;
       });
-  };
+  };,;,;,;,
     if (this.retryCount;
     window.location.reload();
   };
@@ -74,7 +74,7 @@ class AdvancedErrorBoundary extends Component;
       // Default error UI;
                   Oops! Something went wrong;
                   We&apos;re sorry, but something unexpected happened. Our team;
-                  has been notified.
+                  has been notified.;
                     Error Details:
                       <strong>Error ID:</strong> {this.state.errorId}
                       <strong>Message:</strong> {this.state.error?.message}
@@ -83,7 +83,7 @@ class AdvancedErrorBoundary extends Component;
                         Component Stack;
                         {this.state.errorInfo?.componentStack}
               )}
-                {this.props.enableRetry &&
+                {this.props.enableRetry &&;
                   this.retryCount;
                       Try Again ({this.maxRetries - this.retryCount} attempts;
                       left)

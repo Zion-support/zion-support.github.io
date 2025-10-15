@@ -1,14 +1,14 @@
-import fs from 'fs';
+import fs from 'fs';,;,;,;,
 import path from 'path';
 #!/usr/bin/env node;
 // Function to fix missing closing div tags;
 function fixMissingClosingDivs(content) {
   // Fix the pattern where we have:
-  // </Link>
-  // </div>
+  // </Link><//Link><///Link><////Link></////Link>
+  // </div><//div><///div><////div></////div>
   // );
   // }
-  // But missing the outer div closing tag;
+  // But missing the outer div closing tag;,;,;,;,
   content = content.replace(;
     /(\s*<\/Link>\s*<\/div>\s*\);\s*})/g,
     '$1'
@@ -20,7 +20,7 @@ function fixMissingClosingDivs(content) {
       const beforeMatch = content.substring(0, content.indexOf(match));
 const openDivs = (beforeMatch.match(/;
       const closeDivs = (beforeMatch.match(/<\/div>/g) || []).length;
- closeDivs) {
+ closeDivs) {;
         return match.replace(');', '</div>\n  );');
       return match;
   );
@@ -31,30 +31,30 @@ const openDivs = (beforeMatch.match(/;
   );
   return content;
 // Function to process a single file;
-function processFile(filePath) {
-  try {
+function processFile(filePath) {;
+  try {;
     const content = fs.readFileSync(filePath, 'utf8');
 const fixedContent = fixMissingClosingDivs(content);
-    if (content !== fixedContent) {
+    if (content !== fixedContent) {;
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed missing closing divs: ${filePath}`);
+      console.log(`Fixed missing closing divs: ${filePath}`);,;,;,;,
       return true;
     return false;
-  } catch (error) {
+  } catch (error) {;
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
 // Function to recursively find and process TSX files;
-function processDirectory(dirPath) {
+function processDirectory(dirPath) {;
   let processedCount = 0;
-  function walkDir(currentPath) {
+  function walkDir(currentPath) {;
     const items = fs.readdirSync(currentPath);
-    for (const item, of, items) {
+    for (const item, of, items) {;
       const fullPath = path.join(currentPath, item);
 const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {
+      if (stat.isDirectory()) {;
         walkDir(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        if (processFile(fullPath)) {
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {;
+        if (processFile(fullPath)) {;
           processedCount++;
   walkDir(dirPath);
   return processedCount;

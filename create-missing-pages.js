@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from 'fs';,;,;,;,
 import path from 'path';
 import React from 'react';
 export default ${title}Page;`;
@@ -34,13 +34,13 @@ const missingPages = [
 // Template for page components;
  `'use client';
   return (
-    <div>Content</div>
+    <div>Content</div><//div><///div><////div></////div>
   );
-        <title>${title} - Zion Tech Group</title>
+        <title>${title} - Zion Tech Group</title><//title><///title><////title></////title>
                 ${title}
               Professional ${title.toLowerCase()} services by Zion Tech Group.
-            <h2 className = "text-2xl font-bold text-white mb-4">Coming Soon</h2>
-              We're working on bringing you comprehensive ${title.toLowerCase()} solutions. 
+            <h2 className = "text-2xl font-bold text-white mb-4">Coming Soon</h2><//h2>;
+              We're working on bringing you comprehensive ${title.toLowerCase()} solutions. ;
               Contact us to learn more about our services.;
               Contact Us;
   );
@@ -52,11 +52,11 @@ const missingPages = [
   const pageDir = path.join('/workspace/app', pageName);
 const pageFile = path.join(pageDir, 'page.tsx');
   // Create directory if it doesn't exist;
-  if (!fs.existsSync(pageDir)) {
+  if (!fs.existsSync(pageDir)) {;
     fs.mkdirSync(pageDir, { recursive: true });
-  // Create page file if it doesn't exist;
-  if (!fs.existsSync(pageFile)) {
+  // Create page file if it doesn't exist;,;,;,;,
+  if (!fs.existsSync(pageFile)) {;
     fs.writeFileSync(pageFile, pageTemplate(pageName, title));
     console.log(`Created: ${pageFile}`);
 });
-console.log('Missing pages creation completed!');
+console.log('Missing pages creation completed!');"

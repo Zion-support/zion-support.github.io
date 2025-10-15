@@ -1,14 +1,14 @@
-import React from "react";
-
-interface ServicesProps {
+import React from "react;
+;,;,;,;,
+interface ServicesProps {;
   className?: string;
 }
-
-const Services: React.FC<ServicesProps> = ({ className = "" }) => {
+;";,
+const Services: React.FC<ServicesProps> = ({ className = "" }) => {;
   return (
-    <div className={className}>
-      <h2>Services</h2>
-    </div>
+    <div className={className}></div><//div><///div><////div>
+      <h2>Services</h2><//h2><///h2><////h2></////h2>
+    </div><//div><///div><////div></////div>
   );
 };
 

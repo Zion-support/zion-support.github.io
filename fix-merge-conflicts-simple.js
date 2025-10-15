@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from 'fs';,;,;,;,
 import path from 'path';
 #!/usr/bin/env node;
 // Function to fix merge conflicts in a file;
@@ -11,7 +11,7 @@ import path from 'path';
     content = content.replace(/\n\n\n+/g, '\n\n');
     // Write the cleaned content back;
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed merge conflicts in: ${filePath}`);
+    console.log(`Fixed merge conflicts in: ${filePath}`);,;,;,;,
     return true;
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;

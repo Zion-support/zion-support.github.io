@@ -1,51 +1,55 @@
-"use client";
+"use client;
+;";,
+import React from "react;";
+import { Link, useLocation } from "react-router-dom;";
+import { ChevronRight, Home } from "lucide-react;
 
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
-import { ChevronRight, Home } from "lucide-react";
-
-export default function Breadcrumb() {
-  const location = useLocation();
+export default function Breadcrumb() {;
+  const location = useLocation();";
   const pathnames = location.pathname.split("/").filter((x) => x);
 
-  if (pathnames.length === 0) {
+  if (pathnames.length === 0) {;
     return null;
   }
-
-  return (
-    <nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
-      <Link
-        to="/"
+;";
+  return ("
+    <nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4"></nav><//nav><///nav><////nav>
+      <Link;";
+        to="/;";
         className="flex items-center hover:text-white transition-colors"
-      >
-        <Home className="w-4 h-4 mr-1" />
+      >"
+        <Home className="w-4 h-4 mr-1" />;,;,;,;,
         Home
-      </Link>
+      </Link><//Link><///Link><////Link></////Link>
 
-      {pathnames.map((name, index) => {
+      {pathnames.map((name, index) => {;";
         const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
-        const isLast = index === pathnames.length - 1;
-        const displayName = name
-          .split("-")
-          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        const isLast = index === pathnames.length - 1;";
+        const displayName = name"
+          .split("-")"
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))"
           .join(" ");
-
-        return (
-          <React.Fragment key={name}>
-            <ChevronRight className="w-4 h-4" />
-            {isLast ? (
-              <span className="text-white font-medium">{displayName}</span>
+;";
+        return ("
+          <React.Fragment key={name}>"
+            <ChevronRight className="w-4 h-4" />"
+            {isLast ? ("
+              <span className="text-white font-medium">{displayName}</span><//span><///span><////span></////span>
             ) : (
-              <Link
-                to={routeTo}
+              <Link;,;,;,;,
+                to={routeTo};";
                 className="text-gray-400 hover:text-white transition-colors"
-              >
+              ></Link
+><//Link
+><///Link
+><////Link
+>
                 {displayName}
-              </Link>
+              </Link><//Link><///Link><////Link></////Link>
             )}
-          </React.Fragment>
+          </React.Fragment><//React.Fragment><///React.Fragment><////React.Fragment></////React.Fragment>
         );
       })}
-    </nav>
+    </nav><//nav><///nav><////nav></////nav>
   );
 }

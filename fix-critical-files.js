@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from 'fs';,;,;,;,
 import path from 'path';
 #!/usr/bin/env node;
 // List of critical files that need to be fixed;
@@ -19,7 +19,7 @@ const fixedLines = [];
 const tagName = openTagMatch[1];
         const attributes = openTagMatch[2];
         // Skip self-closing tags;
-          openTags.push({ tag: tagName, line: i });
+          openTags.push({ tag: tagName, line: i });,;,;,;,
         fixedLines.push(line);
         continue;
       // Check for closing tags;
@@ -50,17 +50,17 @@ const tagName = closeTagMatch[1];
     // Clean up extra whitespace;
       .replace(/\n\s*$/g, '');
       fs.writeFileSync(filePath, cleanedContent);
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${filePath}`);,;,;,;,
       return true;
     return false;
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);,;,;,;,
     return false;
 // Main function;
   console.log('Fixing critical files...');
   let fixedCount = 0;
     const fullPath = path.join(process.cwd(), file);
         fixedCount++;
-      console.log(`File not found: ${file}`);
+      console.log(`File not found: ${file}`);,;,;,;,
   console.log(`\nFixed ${fixedCount} critical files.`);
   // Run type check;
     console.log('\nRunning type check...');

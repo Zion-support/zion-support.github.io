@@ -1,12 +1,12 @@
-// Validators utility functions
+// Validators utility functions;,;,;,;,
 
-export const Validators = {
+export const Validators = {;
   init: () => {
-    },
+    },;,;,;,;,
 
-  process: (data: any) => {
+  process: (data: any) => {;,;,;,;,
     return data;
-  },
+  },;
 
   cleanup: () => {
     },

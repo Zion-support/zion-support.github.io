@@ -1,12 +1,12 @@
-// Datavalidator utility functions
+// Datavalidator utility functions;,;,;,;,
 
-export const Datavalidator = {
+export const Datavalidator = {;
   init: () => {
-    },
+    },;,;,;,;,
 
-  process: (data: any) => {
+  process: (data: any) => {;,;,;,;,
     return data;
-  },
+  },;
 
   cleanup: () => {
     },

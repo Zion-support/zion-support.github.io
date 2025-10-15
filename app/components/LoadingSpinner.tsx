@@ -1,31 +1,31 @@
-import React from 'react';
+import React from 'react';,;,;,;,
 import { Loader2 } from 'lucide-react';
 
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  text?: string;
+interface LoadingSpinnerProps {;
+  size?: 'sm' | 'md' | 'lg' | 'xl';,;,;,;,
+  text?: string;,;,;,;,
   className?: string;
 }
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  text,
+;,;,;,;,
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ ;,;,;,;,
+  size = 'md', ;
+  text,;
   className = '' 
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
+}) => {;
+  const sizeClasses = {;
+    sm: 'w-4 h-4',;,;,;,;,
+    md: 'w-6 h-6',;,;,;,;,
+    lg: 'w-8 h-8',;,;,;,;,
     xl: 'w-12 h-12'
   };
 
   return (
-    <div className={`flex flex-col items-center justify-center space-y-2 ${className}`}>
-      <Loader2 data-testid="loading-spinner" className={`${sizeClasses[size]} animate-spin text-cyan-400`} />
-      {text && (
-        <p className="text-gray-300 text-sm animate-pulse">{text}</p>
+    <div className={`flex flex-col items-center justify-center space-y-2 ${className}`}></div><//div><///div><////div>
+      <Loader2 data-testid="loading-spinner" className={`${sizeClasses[size]} animate-spin text-cyan-400`} />"
+      {text && ("
+        <p className="text-gray-300 text-sm animate-pulse">{text}</p><//p><///p><////p></////p>
       )}
-    </div>
+    </div><//div><///div><////div></////div>
   );
 };
-export default LoadingSpinner;
+export default LoadingSpinner;"

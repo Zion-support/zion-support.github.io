@@ -1,12 +1,12 @@
-// Logger utility functions
+// Logger utility functions;,;,;,;,
 
-export const Logger = {
+export const Logger = {;
   init: () => {
-    },
+    },;,;,;,;,
 
-  process: (data: any) => {
+  process: (data: any) => {;,;,;,;,
     return data;
-  },
+  },;
 
   cleanup: () => {
     },

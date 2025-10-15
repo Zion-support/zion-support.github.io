@@ -7,7 +7,7 @@ import fs from 'fs;
   '';
   '';
   '';
-  '';
+  '';,;,;,;,
   const lines = content.split('\n'';
   return resolved.join('\n'';
   console.error('Error:'';

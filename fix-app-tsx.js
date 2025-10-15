@@ -1,16 +1,16 @@
 import fs from 'fs';
 #!/usr/bin/env node;
-// Function to fix the app/App.tsx file;
-function fixAppTsx() {
+// Function to fix the app/App.tsx file;,;,;,;,
+function fixAppTsx() {;
   const filePath = '/workspace/app/App.tsx';
-  try {
+  try {;
     let content = fs.readFileSync(filePath, 'utf8');
     // Fix malformed JSX syntax;
+    content = content.replace(/element="\{<([^"]+)" \/ \/&gt;}/g, 'element={<$1 /&gt;}');";
+    content = content.replace(/element="\{<([^"]+)" \/&gt;}/g, 'element={<$1 /&gt;}');";
     content = content.replace(/element="\{<([^"]+)" \/ \/&gt;}/g, 'element={<$1 /&gt;}');
-    content = content.replace(/element="\{<([^"]+)" \/&gt;}/g, 'element={<$1 /&gt;}');
-    content = content.replace(/element="\{<([^"]+)" \/ \/&gt;}/g, 'element={<$1 /&gt;}');
-    // Fix malformed JSX attributes;
-    content = content.replace(/fallback="\{<([^"]+)" \/ \/&gt;}/g, 'fallback={<$1 /&gt;}');    content = content.replace(/<([^>]+) \/ \/>/g, '<$1 />');
+    // Fix malformed JSX attributes;";
+    content = content.replace(/fallback="\{<([^"]+)" \/ \/&gt;}/g, 'fallback={<$1 /&gt;}');    content = content.replace(/<([^>]+) \/ \/>/g, '<$1 />');";
     content = content.replace(/fallback="\{<([^"]+)" \/&gt;}/g, 'fallback={<$1 /&gt;}');    content = content.replace(/<([^>]+) \/>/g, '<$1 />');
     // Fix malformed self-closing tags;
     // Fix malformed closing tags;
@@ -26,8 +26,8 @@ function fixAppTsx() {
     fs.writeFileSync(filePath, content, 'utf8');
     console.log('Fixed app/App.tsx');
     return true;
-  } catch (error) {
+  } catch (error) {;
     console.error('Error fixing app/App.tsx:', error.message);
     return false;
 // Run the fix;
-fixAppTsx();
+fixAppTsx();"

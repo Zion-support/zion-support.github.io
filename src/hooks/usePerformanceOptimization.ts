@@ -1,39 +1,39 @@
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  loadTime: number;,;,;,;,
+  firstContentfulPaint: number;,;,;,;,
+  largestContentfulPaint: number;,;,;,;,
+  cumulativeLayoutShift: number;,;,;,;,
+  firstInputDelay: number;,;,;,;,
       return null;
     )[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
       loadTime: navigation;
-        ? navigation.loadEventEnd - navigation.loadEventStart;
-      firstContentfulPaint:
+        ? navigation.loadEventEnd - navigation.loadEventStart;,;,;,;,
+      firstContentfulPaint:;,;,;,;,
  entry.name = == 'first-contentful-paint');
       firstInputDelay: 0;
     };
-    // Measure LCP;
+    // Measure LCP;,;,;,;,
       const entries = list.getEntries();
 const lastEntry = entries[entries.length - 1];
         metrics.largestContentfulPaint = lastEntry.startTime;
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-    // Measure CLS;
+    // Measure CLS;,;,;,;,
     let clsValue = 0;
-          hadRecentInput?: boolean;
+          hadRecentInput?: boolean;,;,;,;,
           value?: number;
-        };
+        };,;,;,;,
           clsValue += layoutShiftEntry.value || 0;
       metrics.cumulativeLayoutShift = clsValue;
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
-    // Measure FID;
+    // Measure FID;,;,;,;,
           processingStart?: number;
         };
           (fidEntry.processingStart || 0) - entry.startTime;
-    });
+    });,;,;,;,
     fidObserver.observe({ entryTypes: ['first-input'] });
-    // Cleanup observers after a delay;
+    // Cleanup observers after a delay;,;,;,;,
       lcpObserver.disconnect();
       clsObserver.disconnect();
       fidObserver.disconnect();
@@ -53,7 +53,7 @@ const img = entry.target as HTMLImageElement;
 const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 'style';
+      link.as = resource.endsWith('.woff2') ? 'font' : 'style';,;,;,;,
         link.crossOrigin = 'anonymous';
       document.head.appendChild(link);
     });

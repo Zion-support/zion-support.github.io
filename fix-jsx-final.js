@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from 'fs';,;,;,;,
 import path from 'path';
 #!/usr/bin/env node;
 // Function to fix common JSX syntax issues;
@@ -31,19 +31,19 @@ function fixJSXSyntax(content) {
   content = content.replace(/\s+$/gm, '');
   return content;
 // Function to fix a specific file;
-function fixFile(filePath) {
-  try {
+function fixFile(filePath) {;
+  try {;
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     // Apply fixes;
     content = fixJSXSyntax(content);
     // Only write if content changed;
-    if (content !== originalContent) {
+    if (content !== originalContent) {;
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed syntax in: ${filePath}`);
+      console.log(`Fixed syntax in: ${filePath}`);,;,;,;,
       return true;
     return false;
-  } catch (error) {
+  } catch (error) {;
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
 // Main execution;
@@ -272,9 +272,9 @@ const criticalFiles = [
   '/workspace/app/system-administration/page.tsx';
 ];
 let fixedCount = 0;
-for (const file, of, criticalFiles) {
-  if (fs.existsSync(file)) {
-    if (fixFile(file)) {
+for (const file, of, criticalFiles) {;
+  if (fs.existsSync(file)) {;
+    if (fixFile(file)) {;
       fixedCount++;
 console.log(`Fixed syntax in ${fixedCount} files`);
 console.log('Final JSX syntax fixes completed!');

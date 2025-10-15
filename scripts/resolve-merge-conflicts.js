@@ -1,5 +1,5 @@
-import { execSync } from 'child_process'
-import fs from 'fs'
+import { execSync } from 'child_process';
+import fs from 'fs';
 import path from 'path'
 #!/usr/bin/env node;
 // console.log('🔧 Starting merge conflict resolution and PR management...\n')

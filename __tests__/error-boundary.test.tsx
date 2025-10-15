@@ -1,46 +1,46 @@
-import React from 'react';
+import React from 'react';,;,;,;,
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { BrowserRouter } from 'react-router-dom';
 import ErrorBoundary from '../app/components/ErrorBoundary';
 
-// Mock component that throws an error
-const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
-  if (shouldThrow) {
+// Mock component that throws an error;
+const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {;
+  if (shouldThrow) {;
     throw new Error('Test error');
   }
   return <div>No error</div>;
 };
 
-describe('ErrorBoundary', () => {
+describe('ErrorBoundary', () => {;
   beforeEach(() => {
-    // Suppress console.error for these tests
+    // Suppress console.error for these tests;
     jest.spyOn(console, 'error').mockImplementation(() => {});
   });
 
-  afterEach(() => {
+  afterEach(() => {;
     jest.restoreAllMocks();
   });
 
-  it('renders children when there is no error', () => {
+  it('renders children when there is no error', () => {;
     render(
-      <BrowserRouter>
-        <ErrorBoundary>
+      <BrowserRouter></BrowserRouter><//BrowserRouter><///BrowserRouter><////BrowserRouter>
+        <ErrorBoundary></ErrorBoundary><//ErrorBoundary><///ErrorBoundary><////ErrorBoundary>
           <ThrowError shouldThrow={false} />
-        </ErrorBoundary>
-      </BrowserRouter>
+        </ErrorBoundary><//ErrorBoundary><///ErrorBoundary><////ErrorBoundary></////ErrorBoundary>
+      </BrowserRouter><//BrowserRouter><///BrowserRouter><////BrowserRouter></////BrowserRouter>
     );
 
     expect(screen.getByText('No error')).toBeInTheDocument();
   });
 
-  it('renders error UI when there is an error', () => {
+  it('renders error UI when there is an error', () => {;
     render(
-      <BrowserRouter>
-        <ErrorBoundary>
+      <BrowserRouter></BrowserRouter><//BrowserRouter><///BrowserRouter><////BrowserRouter>
+        <ErrorBoundary></ErrorBoundary><//ErrorBoundary><///ErrorBoundary><////ErrorBoundary>
           <ThrowError shouldThrow={true} />
-        </ErrorBoundary>
-      </BrowserRouter>
+        </ErrorBoundary><//ErrorBoundary><///ErrorBoundary><////ErrorBoundary></////ErrorBoundary>
+      </BrowserRouter><//BrowserRouter><///BrowserRouter><////BrowserRouter></////BrowserRouter>
     );
 
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
@@ -48,13 +48,13 @@ describe('ErrorBoundary', () => {
     expect(screen.getByText('Go Home')).toBeInTheDocument();
   });
 
-  it('has clickable reset button', () => {
+  it('has clickable reset button', () => {;
     render(
-      <BrowserRouter>
-        <ErrorBoundary>
+      <BrowserRouter></BrowserRouter><//BrowserRouter><///BrowserRouter><////BrowserRouter>
+        <ErrorBoundary></ErrorBoundary><//ErrorBoundary><///ErrorBoundary><////ErrorBoundary>
           <ThrowError shouldThrow={true} />
-        </ErrorBoundary>
-      </BrowserRouter>
+        </ErrorBoundary><//ErrorBoundary><///ErrorBoundary><////ErrorBoundary></////ErrorBoundary>
+      </BrowserRouter><//BrowserRouter><///BrowserRouter><////BrowserRouter></////BrowserRouter>
     );
 
     const tryAgainButton = screen.getByText('Try Again');
@@ -62,15 +62,15 @@ describe('ErrorBoundary', () => {
     expect(tryAgainButton).toBeEnabled();
   });
 
-  it('renders custom fallback when provided', () => {
+  it('renders custom fallback when provided', () => {;
     const customFallback = <div>Custom error message</div>;
-    
+
     render(
-      <BrowserRouter>
-        <ErrorBoundary fallback={customFallback}>
+      <BrowserRouter></BrowserRouter><//BrowserRouter><///BrowserRouter><////BrowserRouter>
+        <ErrorBoundary fallback={customFallback}></ErrorBoundary><//ErrorBoundary><///ErrorBoundary><////ErrorBoundary>
           <ThrowError shouldThrow={true} />
-        </ErrorBoundary>
-      </BrowserRouter>
+        </ErrorBoundary><//ErrorBoundary><///ErrorBoundary><////ErrorBoundary></////ErrorBoundary>
+      </BrowserRouter><//BrowserRouter><///BrowserRouter><////BrowserRouter></////BrowserRouter>
     );
 
     expect(screen.getByText('Custom error message')).toBeInTheDocument();

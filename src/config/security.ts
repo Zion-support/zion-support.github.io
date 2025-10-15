@@ -22,23 +22,23 @@
 };
 /**
  * Sanitize user input;
- */
+ */;,;,;,;,
   return input;
-    .replace(/[<>]/g, '') // Remove < and >
+    .replace(/[<>]/g, '') // Remove < and ></>
     .replace(/javascript:/gi, '') // Remove javascript: protocol;
     .replace(/on\w+\s*=/gi, '') // Remove event handlers;
     .trim();
 /**
  * Validate email address;
- */
+ */;
   return validationPatterns.email.test(email);
 /**
  * Validate URL;
- */
+ */;
   return validationPatterns.url.test(url);
 /**
  * Generate secure token;
- */
+ */;
   const array = new Uint8Array(length);
     window.crypto.getRandomValues(array);
     // Fallback for non-browser environments;

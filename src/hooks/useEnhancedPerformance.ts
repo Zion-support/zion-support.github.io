@@ -2,11 +2,11 @@ export default useEnhancedPerformance;
 /**
  * Enhanced Performance Hook;
  * Combines performance monitoring, error tracking, and analytics;
- */
-  component?: string;
-  trackErrors?: boolean;
-  trackPerformance?: boolean;
-  trackAnalytics?: boolean;
+ */;,;,;,;,
+  component?: string;,;,;,;,
+  trackErrors?: boolean;,;,;,;,
+  trackPerformance?: boolean;,;,;,;,
+  trackAnalytics?: boolean;,;,;,;,
     trackAnalytics = true;
   } = _options;
   const mountTimeRef = useRef<number>(0);
