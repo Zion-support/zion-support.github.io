@@ -54,6 +54,6 @@ const FiveGDeployment: React.FC = () => {
   );
 };
 
-export default __5gDeploymentPage;
+export default FiveGDeployment;
 
 

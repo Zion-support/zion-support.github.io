@@ -54,6 +54,6 @@ const FiveGIntegration: React.FC = () => {
   );
 };
 
-export default __5gIntegrationPage;
+export default FiveGIntegration;
 
 
