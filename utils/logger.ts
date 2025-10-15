@@ -7,7 +7,7 @@ export interface LogContext {
 }
 
 export interface LogEntry {
-  level: 'debug' | 'info' | 'warn' | 'error';
+  level: "debug" | "info" | "warn" | "error";
   message: string;
   context?: LogContext;
   timestamp: number;
@@ -15,18 +15,22 @@ export interface LogEntry {
 }
 
 class Logger {
-  private isDevelopment = process.env.NODE_ENV === 'development';
+  private isDevelopment = process.env.NODE_ENV === "development";
   private logs: LogEntry[] = [];
   private maxLogs = 1000;
 
   private shouldLog(level: string): boolean {
     if (this.isDevelopment) return true;
-    return level === 'error' || level === 'warn';
+    return level === "error" || level === "warn";
   }
 
-  private formatMessage(level: string, message: string, context?: LogContext): string {
+  private formatMessage(
+    level: string,
+    message: string,
+    context?: LogContext,
+  ): string {
     const timestamp = new Date().toISOString();
-    const contextStr = context ? ` [${JSON.stringify(context)}]` : '';
+    const contextStr = context ? ` [${JSON.stringify(context)}]` : "";
     return `[${timestamp}] [${level.toUpperCase()}]${contextStr} ${message}`;
   }
 
@@ -38,54 +42,54 @@ class Logger {
   }
 
   debug(message: string, context?: LogContext): void {
-    if (this.shouldLog('debug')) {
+    if (this.shouldLog("debug")) {
       const entry: LogEntry = {
-        level: 'debug',
+        level: "debug",
         message,
         context,
         timestamp: Date.now(),
       };
       this.addLog(entry);
-      console.debug(this.formatMessage('debug', message, context));
+      console.debug(this.formatMessage("debug", message, context));
     }
   }
 
   info(message: string, context?: LogContext): void {
-    if (this.shouldLog('info')) {
+    if (this.shouldLog("info")) {
       const entry: LogEntry = {
-        level: 'info',
+        level: "info",
         message,
         context,
         timestamp: Date.now(),
       };
       this.addLog(entry);
-      console.info(this.formatMessage('info', message, context));
+      console.info(this.formatMessage("info", message, context));
     }
   }
 
   warn(message: string, context?: LogContext): void {
-    if (this.shouldLog('warn')) {
+    if (this.shouldLog("warn")) {
       const entry: LogEntry = {
-        level: 'warn',
+        level: "warn",
         message,
         context,
         timestamp: Date.now(),
       };
       this.addLog(entry);
-      console.warn(this.formatMessage('warn', message, context));
+      console.warn(this.formatMessage("warn", message, context));
     }
   }
 
   error(message: string, error?: Error, context?: LogContext): void {
     const entry: LogEntry = {
-      level: 'error',
+      level: "error",
       message,
       context,
       timestamp: Date.now(),
       stack: error?.stack,
     };
     this.addLog(entry);
-    console.error(this.formatMessage('error', message, context), error);
+    console.error(this.formatMessage("error", message, context), error);
   }
 
   getLogs(): LogEntry[] {

@@ -1,13 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     sourcemap: true,
-    minify: 'terser',
+    minify: "terser",
     terserOptions: {
       compress: {
         drop_console: true,
@@ -17,12 +17,12 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['@heroicons/react', 'framer-motion', 'lucide-react'],
-          utils: ['clsx', 'tailwind-merge']
-        }
-      }
+          vendor: ["react", "react-dom"],
+          router: ["react-router-dom"],
+          ui: ["@heroicons/react", "framer-motion", "lucide-react"],
+          utils: ["clsx", "tailwind-merge"],
+        },
+      },
     },
     chunkSizeWarningLimit: 1000,
   },
@@ -30,23 +30,23 @@ export default defineConfig({
     port: 3000,
     open: true,
     hmr: {
-      overlay: false
-    }
+      overlay: false,
+    },
   },
   optimizeDeps: {
     include: [
-      'react', 
-      'react-dom', 
-      'react-router-dom',
-      '@heroicons/react',
-      'framer-motion',
-      'lucide-react'
-    ]
+      "react",
+      "react-dom",
+      "react-router-dom",
+      "@heroicons/react",
+      "framer-motion",
+      "lucide-react",
+    ],
   },
   esbuild: {
-    drop: ['console', 'debugger'],
+    drop: ["console", "debugger"],
   },
   css: {
     devSourcemap: true,
-  }
-})
+  },
+});

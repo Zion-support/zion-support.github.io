@@ -24,6 +24,9 @@ export interface AnalyticsContextType {
 }
 
 export type AnalyticsAction =
-  | { type: 'TRACK_EVENT'; payload: { name: string; properties?: Record<string, any> } }
-  | { type: 'TRACK_PAGE_VIEW'; payload: { path: string } }
-  | { type: 'SET_USER'; payload: AnalyticsUser };
+  | {
+      type: "TRACK_EVENT";
+      payload: { name: string; properties?: Record<string, any> };
+    }
+  | { type: "TRACK_PAGE_VIEW"; payload: { path: string } }
+  | { type: "SET_USER"; payload: AnalyticsUser };

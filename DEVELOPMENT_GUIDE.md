@@ -3,11 +3,13 @@
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js 18+
 - npm 9+
 - Git
 
 ### Installation
+
 ```bash
 # Clone the repository
 git clone https://github.com/Zion-Holdings/zion.app.git
@@ -64,29 +66,32 @@ zion.app/
 ### Core Components
 
 #### 1. AdvancedPerformanceMonitor
+
 Real-time performance monitoring with Core Web Vitals tracking.
 
 ```tsx
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import AdvancedPerformanceMonitor from "./components/AdvancedPerformanceMonitor";
 
 <AdvancedPerformanceMonitor
   onMetricsUpdate={(metrics) => console.log(metrics)}
   enableRealTimeMonitoring={true}
   logToConsole={false}
-/>
+/>;
 ```
 
 **Features:**
+
 - FCP, LCP, FID, CLS tracking
 - Memory usage monitoring
 - Performance scoring
 - Real-time updates
 
 #### 2. AdvancedSEOOptimizer
+
 Comprehensive SEO optimization with structured data.
 
 ```tsx
-import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+import AdvancedSEOOptimizer from "./components/AdvancedSEOOptimizer";
 
 const seoData = {
   title: "Page Title",
@@ -96,17 +101,18 @@ const seoData = {
   structuredData: {
     "@type": "WebPage",
     // ... structured data
-  }
+  },
 };
 
 <AdvancedSEOOptimizer
   seoData={seoData}
   enableStructuredData={true}
   enableSocialMeta={true}
-/>
+/>;
 ```
 
 **Features:**
+
 - Meta tags optimization
 - Open Graph and Twitter Cards
 - Structured data (JSON-LD)
@@ -115,23 +121,25 @@ const seoData = {
 - Organization schema
 
 #### 3. EnhancedAccessibilityManager
+
 Comprehensive accessibility features and user preferences.
 
 ```tsx
-import EnhancedAccessibilityManager from './components/EnhancedAccessibilityManager';
+import EnhancedAccessibilityManager from "./components/EnhancedAccessibilityManager";
 
 <EnhancedAccessibilityManager
   options={{
     enableHighContrast: false,
     enableLargeText: false,
-    enableReducedMotion: false
+    enableReducedMotion: false,
   }}
   enableAutoDetection={true}
   enableUserPreferences={true}
-/>
+/>;
 ```
 
 **Features:**
+
 - High contrast mode
 - Large text support
 - Reduced motion
@@ -141,10 +149,11 @@ import EnhancedAccessibilityManager from './components/EnhancedAccessibilityMana
 - Voice control support
 
 #### 4. EnhancedErrorBoundary
+
 Advanced error handling with reporting and recovery.
 
 ```tsx
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import EnhancedErrorBoundary from "./components/EnhancedErrorBoundary";
 
 <EnhancedErrorBoundary
   onError={(error, errorInfo, errorId) => {
@@ -158,10 +167,11 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
   enableErrorDetails={true}
 >
   <YourComponent />
-</EnhancedErrorBoundary>
+</EnhancedErrorBoundary>;
 ```
 
 **Features:**
+
 - Error reporting to external services
 - Retry mechanism with limits
 - User-friendly error UI
@@ -171,6 +181,7 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 ## 🎨 Styling Guidelines
 
 ### Tailwind CSS
+
 The project uses Tailwind CSS for styling. Follow these guidelines:
 
 ```tsx
@@ -192,6 +203,7 @@ The project uses Tailwind CSS for styling. Follow these guidelines:
 ```
 
 ### Custom CSS
+
 For complex styles, use CSS modules or styled-jsx:
 
 ```tsx
@@ -208,6 +220,7 @@ For complex styles, use CSS modules or styled-jsx:
 ## 🧪 Testing
 
 ### Running Tests
+
 ```bash
 # Run all tests
 npm test
@@ -223,23 +236,24 @@ npm test EnhancedErrorBoundary.test.tsx
 ```
 
 ### Writing Tests
+
 Follow these patterns for testing:
 
 ```tsx
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import YourComponent from './YourComponent';
+import { render, screen, fireEvent } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import YourComponent from "./YourComponent";
 
-describe('YourComponent', () => {
-  it('renders correctly', () => {
+describe("YourComponent", () => {
+  it("renders correctly", () => {
     render(<YourComponent />);
-    expect(screen.getByText('Expected text')).toBeInTheDocument();
+    expect(screen.getByText("Expected text")).toBeInTheDocument();
   });
 
-  it('handles user interaction', () => {
+  it("handles user interaction", () => {
     render(<YourComponent />);
-    fireEvent.click(screen.getByRole('button'));
-    expect(screen.getByText('Updated text')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button"));
+    expect(screen.getByText("Updated text")).toBeInTheDocument();
   });
 });
 ```
@@ -247,12 +261,13 @@ describe('YourComponent', () => {
 ## 🚀 Performance Optimization
 
 ### Code Splitting
+
 Use dynamic imports for large components:
 
 ```tsx
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense } from "react";
 
-const HeavyComponent = lazy(() => import('./HeavyComponent'));
+const HeavyComponent = lazy(() => import("./HeavyComponent"));
 
 function App() {
   return (
@@ -264,10 +279,11 @@ function App() {
 ```
 
 ### Image Optimization
+
 Use optimized images with lazy loading:
 
 ```tsx
-import { LazyImage } from './components/LazyImage';
+import { LazyImage } from "./components/LazyImage";
 
 <LazyImage
   src="/images/hero.jpg"
@@ -275,10 +291,11 @@ import { LazyImage } from './components/LazyImage';
   width={800}
   height={600}
   placeholder="/images/placeholder.jpg"
-/>
+/>;
 ```
 
 ### Bundle Analysis
+
 Analyze bundle size:
 
 ```bash
@@ -289,6 +306,7 @@ npm run analyze
 ## 🔧 Development Tools
 
 ### VS Code Extensions
+
 Recommended extensions for development:
 
 - ES7+ React/Redux/React-Native snippets
@@ -299,11 +317,12 @@ Recommended extensions for development:
 - GitLens
 
 ### Debugging
+
 Use React Developer Tools and browser dev tools:
 
 ```tsx
 // Add debug logging
-console.log('Debug info:', { data, props });
+console.log("Debug info:", { data, props });
 
 // Use React DevTools Profiler
 // Enable in browser dev tools
@@ -312,20 +331,24 @@ console.log('Debug info:', { data, props });
 ## 📱 Responsive Design
 
 ### Breakpoints
+
 Use Tailwind's responsive breakpoints:
 
 ```tsx
 // Mobile first approach
-<div className="
+<div
+  className="
   w-full           // Mobile: full width
   md:w-1/2         // Tablet: half width
   lg:w-1/3         // Desktop: third width
-">
+"
+>
   Content
 </div>
 ```
 
 ### Testing Responsive Design
+
 Test on different screen sizes:
 
 ```bash
@@ -337,6 +360,7 @@ Test on different screen sizes:
 ## ♿ Accessibility
 
 ### WCAG Guidelines
+
 Follow WCAG 2.1 AA guidelines:
 
 ```tsx
@@ -355,6 +379,7 @@ Follow WCAG 2.1 AA guidelines:
 ```
 
 ### Testing Accessibility
+
 Use accessibility testing tools:
 
 ```bash
@@ -369,11 +394,12 @@ expect.extend(toHaveNoViolations);
 ## 🔒 Security
 
 ### Best Practices
+
 Follow security best practices:
 
 ```tsx
 // Sanitize user input
-import DOMPurify from 'dompurify';
+import DOMPurify from "dompurify";
 
 const sanitizedHTML = DOMPurify.sanitize(userInput);
 
@@ -383,6 +409,7 @@ const sanitizedHTML = DOMPurify.sanitize(userInput);
 ```
 
 ### Environment Variables
+
 Store sensitive data in environment variables:
 
 ```bash
@@ -394,40 +421,42 @@ VITE_ANALYTICS_ID=GA_MEASUREMENT_ID
 ## 📊 Analytics and Monitoring
 
 ### Google Analytics
+
 Track user interactions:
 
 ```tsx
-import { trackEvent } from './utils/analytics';
+import { trackEvent } from "./utils/analytics";
 
 // Track page views
 useEffect(() => {
-  trackEvent('page_view', {
+  trackEvent("page_view", {
     page_title: document.title,
-    page_location: window.location.href
+    page_location: window.location.href,
   });
 }, []);
 
 // Track user interactions
 const handleClick = () => {
-  trackEvent('button_click', {
-    button_name: 'cta_button',
-    page_location: window.location.href
+  trackEvent("button_click", {
+    button_name: "cta_button",
+    page_location: window.location.href,
   });
 };
 ```
 
 ### Error Monitoring
+
 Monitor errors in production:
 
 ```tsx
-import { reportError } from './utils/errorReporting';
+import { reportError } from "./utils/errorReporting";
 
 try {
   // Risky operation
 } catch (error) {
   reportError(error, {
-    context: 'user_action',
-    userId: getCurrentUserId()
+    context: "user_action",
+    userId: getCurrentUserId(),
   });
 }
 ```
@@ -435,6 +464,7 @@ try {
 ## 🚀 Deployment
 
 ### Build Process
+
 The build process includes:
 
 1. TypeScript compilation
@@ -445,15 +475,16 @@ The build process includes:
 6. Service worker generation
 
 ### Environment Configuration
+
 Configure for different environments:
 
 ```typescript
 // vite.config.ts
 export default defineConfig({
   define: {
-    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-    __VERSION__: JSON.stringify(process.env.npm_package_version)
-  }
+    __DEV__: JSON.stringify(process.env.NODE_ENV === "development"),
+    __VERSION__: JSON.stringify(process.env.npm_package_version),
+  },
 });
 ```
 
@@ -477,6 +508,7 @@ export default defineConfig({
 ## 📞 Support
 
 For questions or support:
+
 - Email: support@ziontechgroup.com
 - Phone: +1 (302) 464-0950
 - Documentation: https://docs.ziontechgroup.com

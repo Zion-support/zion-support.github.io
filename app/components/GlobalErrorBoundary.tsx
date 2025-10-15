@@ -1,4 +1,4 @@
-import { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ErrorInfo, ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
@@ -21,12 +21,12 @@ class GlobalErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Global error caught:', error, errorInfo);
+    if (process.env.NODE_ENV === "development") {
+      console.error("Global error caught:", error, errorInfo);
     }
-    
+
     // Send error to monitoring service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === "production") {
       // Replace with your error monitoring service (e.g., Sentry, LogRocket, etc.)
       this.reportError(error, errorInfo);
     }
@@ -42,19 +42,24 @@ class GlobalErrorBoundary extends Component<Props, State> {
       userAgent: navigator.userAgent,
       url: window.location.href,
     };
-    
+
     // Send to your error monitoring service
     // Example: fetch('/api/error-report', { method: 'POST', body: JSON.stringify(errorData) });
-    
+
     // For now, store in localStorage for debugging
     try {
-      const existingErrors = JSON.parse(localStorage.getItem('errorLogs') || '[]');
+      const existingErrors = JSON.parse(
+        localStorage.getItem("errorLogs") || "[]",
+      );
       existingErrors.push(errorData);
-      localStorage.setItem('errorLogs', JSON.stringify(existingErrors.slice(-10))); // Keep last 10 errors
+      localStorage.setItem(
+        "errorLogs",
+        JSON.stringify(existingErrors.slice(-10)),
+      ); // Keep last 10 errors
     } catch (e) {
       // Ignore localStorage errors
     }
-  }
+  };
 
   render() {
     if (this.state.hasError) {
@@ -62,14 +67,26 @@ class GlobalErrorBoundary extends Component<Props, State> {
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
             <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
-              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z" />
+              <svg
+                className="w-6 h-6 text-red-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z"
+                />
               </svg>
             </div>
             <div className="mt-4 text-center">
-              <h3 className="text-lg font-medium text-gray-900">Application Error</h3>
+              <h3 className="text-lg font-medium text-gray-900">
+                Application Error
+              </h3>
               <p className="mt-2 text-sm text-gray-500">
-                {this.state.error?.message || 'An unexpected error occurred'}
+                {this.state.error?.message || "An unexpected error occurred"}
               </p>
               <button
                 onClick={() => window.location.reload()}

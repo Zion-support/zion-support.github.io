@@ -39,12 +39,12 @@ export class AccessibilityManager {
   }
 
   private setupKeyboardNavigation() {
-    document.addEventListener('keydown', (event) => {
+    document.addEventListener("keydown", (event) => {
       // Handle keyboard navigation
-      if (event.key === 'Tab') {
+      if (event.key === "Tab") {
         this.handleTabNavigation(event);
       }
-      if (event.key === 'Enter' || event.key === ' ') {
+      if (event.key === "Enter" || event.key === " ") {
         this.handleActivation(event);
       }
     });
@@ -58,8 +58,8 @@ export class AccessibilityManager {
 
   private setupHighContrastMode() {
     // Check for high contrast mode preference
-    if (window.matchMedia('(prefers-contrast: high)').matches) {
-      document.body.classList.add('high-contrast');
+    if (window.matchMedia("(prefers-contrast: high)").matches) {
+      document.body.classList.add("high-contrast");
     }
   }
 

@@ -49,40 +49,40 @@ export class PerformanceOptimizer {
   }
 
   private setupPerformanceMonitoring() {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      window.addEventListener('load', () => {
+    if (typeof window !== "undefined" && "performance" in window) {
+      window.addEventListener("load", () => {
         this.captureMetrics();
       });
     }
   }
 
   private optimizeImages() {
-    const images = document.querySelectorAll('img[data-src]');
+    const images = document.querySelectorAll("img[data-src]");
     images.forEach((img) => {
       const imageElement = img as HTMLImageElement;
       if (imageElement.dataset.src) {
         imageElement.src = imageElement.dataset.src;
-        imageElement.removeAttribute('data-src');
+        imageElement.removeAttribute("data-src");
       }
     });
   }
 
   private setupLazyLoading() {
-    if ('IntersectionObserver' in window) {
+    if ("IntersectionObserver" in window) {
       const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
               img.src = img.dataset.src;
-              img.removeAttribute('data-src');
+              img.removeAttribute("data-src");
               imageObserver.unobserve(img);
             }
           }
         });
       });
 
-      document.querySelectorAll('img[data-src]').forEach((img) => {
+      document.querySelectorAll("img[data-src]").forEach((img) => {
         imageObserver.observe(img);
       });
     }
@@ -94,19 +94,23 @@ export class PerformanceOptimizer {
   }
 
   private setupCaching() {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js');
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js");
     }
   }
 
   private captureMetrics() {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      
+    if (typeof window !== "undefined" && "performance" in window) {
+      const navigation = performance.getEntriesByType(
+        "navigation",
+      )[0] as PerformanceNavigationTiming;
+      const paint = performance.getEntriesByType("paint");
+
       this.metrics = {
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+        firstContentfulPaint:
+          paint.find((entry) => entry.name === "first-contentful-paint")
+            ?.startTime || 0,
         largestContentfulPaint: 0, // Would need to be measured with LCP API
         firstInputDelay: 0, // Would need to be measured with FID API
         cumulativeLayoutShift: 0, // Would need to be measured with CLS API
@@ -121,7 +125,7 @@ export class PerformanceOptimizer {
 
   reportMetrics(): void {
     if (this.metrics) {
-      console.log('Performance Metrics:', this.metrics);
+      console.log("Performance Metrics:", this.metrics);
     }
   }
 }

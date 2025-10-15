@@ -4,27 +4,27 @@ const isValidEmail = (email) => {
 };
 
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
     const { email } = req.body;
-    
+
     if (!email || !isValidEmail(email)) {
-      return res.status(400).json({ error: 'Valid email is required' });
+      return res.status(400).json({ error: "Valid email is required" });
     }
 
     // Here you would typically save to a database
     // For now, we'll just return success
-    console.log('Newsletter subscription:', email);
-    
-    res.status(200).json({ 
-      message: 'Successfully subscribed to newsletter',
-      email: email 
+    console.log("Newsletter subscription:", email);
+
+    res.status(200).json({
+      message: "Successfully subscribed to newsletter",
+      email: email,
     });
   } catch (error) {
-    console.error('Newsletter subscription error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    console.error("Newsletter subscription error:", error);
+    res.status(500).json({ error: "Internal server error" });
   }
 }

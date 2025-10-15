@@ -1,6 +1,6 @@
 // Next.js type declarations
 
-declare module 'next' {
+declare module "next" {
   interface NextPageContext {
     query: {
       [key: string]: string | string[] | undefined;

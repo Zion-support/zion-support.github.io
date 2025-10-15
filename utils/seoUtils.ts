@@ -18,7 +18,7 @@ export interface PageSEO {
   keywords?: string[];
   image?: string;
   url?: string;
-  type?: 'website' | 'article' | 'product' | 'profile';
+  type?: "website" | "article" | "product" | "profile";
   publishedTime?: string;
   modifiedTime?: string;
   author?: string;
@@ -40,7 +40,7 @@ class SEOOptimizer {
       keywords,
       image,
       url,
-      type = 'website',
+      type = "website",
       publishedTime,
       modifiedTime,
       author,
@@ -48,69 +48,71 @@ class SEOOptimizer {
       tags,
     } = pageSEO;
 
-    const fullTitle = title ? `${title} | ${this.config.siteName}` : this.config.defaultTitle;
+    const fullTitle = title
+      ? `${title} | ${this.config.siteName}`
+      : this.config.defaultTitle;
     const fullDescription = description || this.config.defaultDescription;
     const fullImage = image || this.config.defaultImage;
     const fullUrl = url ? `${this.config.siteUrl}${url}` : this.config.siteUrl;
 
     const metaTags: Record<string, string> = {
       // Basic meta tags
-      'title': fullTitle,
-      'description': fullDescription,
-      'viewport': 'width=device-width, initial-scale=1.0',
-      'robots': 'index, follow',
-      'language': 'en',
-      'revisit-after': '7 days',
+      title: fullTitle,
+      description: fullDescription,
+      viewport: "width=device-width, initial-scale=1.0",
+      robots: "index, follow",
+      language: "en",
+      "revisit-after": "7 days",
 
       // Open Graph tags
-      'og:title': fullTitle,
-      'og:description': fullDescription,
-      'og:image': fullImage,
-      'og:url': fullUrl,
-      'og:type': type,
-      'og:site_name': this.config.siteName,
-      'og:locale': 'en_US',
+      "og:title": fullTitle,
+      "og:description": fullDescription,
+      "og:image": fullImage,
+      "og:url": fullUrl,
+      "og:type": type,
+      "og:site_name": this.config.siteName,
+      "og:locale": "en_US",
 
       // Twitter Card tags
-      'twitter:card': 'summary_large_image',
-      'twitter:title': fullTitle,
-      'twitter:description': fullDescription,
-      'twitter:image': fullImage,
+      "twitter:card": "summary_large_image",
+      "twitter:title": fullTitle,
+      "twitter:description": fullDescription,
+      "twitter:image": fullImage,
     };
 
     // Add Twitter handle if available
     if (this.config.twitterHandle) {
-      metaTags['twitter:site'] = `@${this.config.twitterHandle}`;
-      metaTags['twitter:creator'] = `@${this.config.twitterHandle}`;
+      metaTags["twitter:site"] = `@${this.config.twitterHandle}`;
+      metaTags["twitter:creator"] = `@${this.config.twitterHandle}`;
     }
 
     // Add Facebook App ID if available
     if (this.config.facebookAppId) {
-      metaTags['fb:app_id'] = this.config.facebookAppId;
+      metaTags["fb:app_id"] = this.config.facebookAppId;
     }
 
     // Add keywords if provided
     if (keywords && keywords.length > 0) {
-      metaTags['keywords'] = keywords.join(', ');
+      metaTags["keywords"] = keywords.join(", ");
     }
 
     // Add article-specific tags
-    if (type === 'article') {
+    if (type === "article") {
       if (publishedTime) {
-        metaTags['article:published_time'] = publishedTime;
-        metaTags['og:article:published_time'] = publishedTime;
+        metaTags["article:published_time"] = publishedTime;
+        metaTags["og:article:published_time"] = publishedTime;
       }
       if (modifiedTime) {
-        metaTags['article:modified_time'] = modifiedTime;
-        metaTags['og:article:modified_time'] = modifiedTime;
+        metaTags["article:modified_time"] = modifiedTime;
+        metaTags["og:article:modified_time"] = modifiedTime;
       }
       if (author) {
-        metaTags['article:author'] = author;
-        metaTags['og:article:author'] = author;
+        metaTags["article:author"] = author;
+        metaTags["og:article:author"] = author;
       }
       if (section) {
-        metaTags['article:section'] = section;
-        metaTags['og:article:section'] = section;
+        metaTags["article:section"] = section;
+        metaTags["og:article:section"] = section;
       }
       if (tags && tags.length > 0) {
         tags.forEach((tag, index) => {
@@ -134,35 +136,39 @@ class SEOOptimizer {
       author,
     } = pageSEO;
 
-    const fullTitle = title ? `${title} | ${this.config.siteName}` : this.config.defaultTitle;
+    const fullTitle = title
+      ? `${title} | ${this.config.siteName}`
+      : this.config.defaultTitle;
     const fullDescription = description || this.config.defaultDescription;
     const fullImage = image || this.config.defaultImage;
     const fullUrl = url ? `${this.config.siteUrl}${url}` : this.config.siteUrl;
 
     const baseStructuredData = {
-      '@context': 'https://schema.org',
-      '@type': type === 'article' ? 'Article' : 'WebPage',
+      "@context": "https://schema.org",
+      "@type": type === "article" ? "Article" : "WebPage",
       name: fullTitle,
       description: fullDescription,
       url: fullUrl,
       image: fullImage,
       publisher: {
-        '@type': 'Organization',
+        "@type": "Organization",
         name: this.config.siteName,
         url: this.config.siteUrl,
       },
     };
 
-    if (type === 'article' && publishedTime) {
+    if (type === "article" && publishedTime) {
       return {
         ...baseStructuredData,
-        '@type': 'Article',
+        "@type": "Article",
         datePublished: publishedTime,
         dateModified: modifiedTime || publishedTime,
-        author: author ? {
-          '@type': 'Person',
-          name: author,
-        } : undefined,
+        author: author
+          ? {
+              "@type": "Person",
+              name: author,
+            }
+          : undefined,
         headline: title,
       };
     }
@@ -170,15 +176,26 @@ class SEOOptimizer {
     return baseStructuredData;
   }
 
-  generateSitemap(pages: Array<{ url: string; lastmod?: string; changefreq?: string; priority?: number }>): string {
+  generateSitemap(
+    pages: Array<{
+      url: string;
+      lastmod?: string;
+      changefreq?: string;
+      priority?: number;
+    }>,
+  ): string {
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
+${pages
+  .map(
+    (page) => `  <url>
     <loc>${this.config.siteUrl}${page.url}</loc>
-    ${page.lastmod ? `    <lastmod>${page.lastmod}</lastmod>` : ''}
-    ${page.changefreq ? `    <changefreq>${page.changefreq}</changefreq>` : ''}
-    ${page.priority ? `    <priority>${page.priority}</priority>` : ''}
-  </url>`).join('\n')}
+    ${page.lastmod ? `    <lastmod>${page.lastmod}</lastmod>` : ""}
+    ${page.changefreq ? `    <changefreq>${page.changefreq}</changefreq>` : ""}
+    ${page.priority ? `    <priority>${page.priority}</priority>` : ""}
+  </url>`,
+  )
+  .join("\n")}
 </urlset>`;
 
     return sitemap;
@@ -186,9 +203,9 @@ ${pages.map(page => `  <url>
 
   generateRobotsTxt(allowAll: boolean = true, sitemapUrl?: string): string {
     const robotsTxt = `User-agent: *
-${allowAll ? 'Allow: /' : 'Disallow: /'}
+${allowAll ? "Allow: /" : "Disallow: /"}
 
-${sitemapUrl ? `Sitemap: ${sitemapUrl}` : ''}`;
+${sitemapUrl ? `Sitemap: ${sitemapUrl}` : ""}`;
 
     return robotsTxt;
   }
@@ -197,25 +214,25 @@ ${sitemapUrl ? `Sitemap: ${sitemapUrl}` : ''}`;
   slugify(text: string): string {
     return text
       .toLowerCase()
-      .replace(/[^\w\s-]/g, '')
-      .replace(/[\s_-]+/g, '-')
-      .replace(/^-+|-+$/g, '');
+      .replace(/[^\w\s-]/g, "")
+      .replace(/[\s_-]+/g, "-")
+      .replace(/^-+|-+$/g, "");
   }
 
   truncateText(text: string, maxLength: number): string {
     if (text.length <= maxLength) return text;
-    return text.substring(0, maxLength).replace(/\s+\S*$/, '') + '...';
+    return text.substring(0, maxLength).replace(/\s+\S*$/, "") + "...";
   }
 
   extractKeywords(text: string, maxKeywords: number = 10): string[] {
     const words = text
       .toLowerCase()
-      .replace(/[^\w\s]/g, '')
+      .replace(/[^\w\s]/g, "")
       .split(/\s+/)
-      .filter(word => word.length > 3);
+      .filter((word) => word.length > 3);
 
     const wordCount: Record<string, number> = {};
-    words.forEach(word => {
+    words.forEach((word) => {
       wordCount[word] = (wordCount[word] || 0) + 1;
     });
 
@@ -228,12 +245,13 @@ ${sitemapUrl ? `Sitemap: ${sitemapUrl}` : ''}`;
 
 // Default SEO configuration
 const defaultSEOConfig: SEOConfig = {
-  siteName: 'Zion Tech Group',
-  siteUrl: 'https://ziontechgroup.com',
-  defaultTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
-  defaultDescription: 'Leading provider of AI and IT solutions for businesses worldwide. Expert consulting, development, and implementation services.',
-  defaultImage: 'https://ziontechgroup.com/og-image.jpg',
-  twitterHandle: 'ziontechgroup',
+  siteName: "Zion Tech Group",
+  siteUrl: "https://ziontechgroup.com",
+  defaultTitle: "Zion Tech Group - Advanced AI and IT Solutions",
+  defaultDescription:
+    "Leading provider of AI and IT solutions for businesses worldwide. Expert consulting, development, and implementation services.",
+  defaultImage: "https://ziontechgroup.com/og-image.jpg",
+  twitterHandle: "ziontechgroup",
 };
 
 // Create default SEO optimizer instance
@@ -248,11 +266,21 @@ export const generateStructuredData = (pageSEO: PageSEO): object => {
   return seoOptimizer.generateStructuredData(pageSEO);
 };
 
-export const generateSitemap = (pages: Array<{ url: string; lastmod?: string; changefreq?: string; priority?: number }>): string => {
+export const generateSitemap = (
+  pages: Array<{
+    url: string;
+    lastmod?: string;
+    changefreq?: string;
+    priority?: number;
+  }>,
+): string => {
   return seoOptimizer.generateSitemap(pages);
 };
 
-export const generateRobotsTxt = (allowAll: boolean = true, sitemapUrl?: string): string => {
+export const generateRobotsTxt = (
+  allowAll: boolean = true,
+  sitemapUrl?: string,
+): string => {
   return seoOptimizer.generateRobotsTxt(allowAll, sitemapUrl);
 };
 
@@ -264,7 +292,10 @@ export const truncateText = (text: string, maxLength: number): string => {
   return seoOptimizer.truncateText(text, maxLength);
 };
 
-export const extractKeywords = (text: string, maxKeywords: number = 10): string[] => {
+export const extractKeywords = (
+  text: string,
+  maxKeywords: number = 10,
+): string[] => {
   return seoOptimizer.extractKeywords(text, maxKeywords);
 };
 

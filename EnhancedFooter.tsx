@@ -1,4 +1,3 @@
-
 export default function EnhancedFooter() {
   return (
     <div>
