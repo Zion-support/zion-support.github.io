@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wrench, AlertTriangle, BarChart3, CheckCircle, ArrowRight, Star, Clock, Users, Award, TrendingUp, Shield } from 'lucide-react';
+import { Wrench, AlertTriangle, BarChart3, CheckCircle, ArrowRight, Star, Award, TrendingUp, Shield } from 'lucide-react';
 
 const AiPredictiveMaintenancePage: React.FC = () => {
   const features = [
