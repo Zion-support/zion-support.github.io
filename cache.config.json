@@ -1,0 +1,14 @@
+{
+  "staticAssets": {
+    "maxAge": 31536000,
+    "immutable": true
+  },
+  "apiResponses": {
+    "maxAge": 300,
+    "staleWhileRevalidate": 60
+  },
+  "pages": {
+    "maxAge": 3600,
+    "staleWhileRevalidate": 86400
+  }
+}
