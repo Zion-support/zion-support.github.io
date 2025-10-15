@@ -5,12 +5,12 @@
 // } from '../utils/formValidation'
   initialValues: T
   validationSchema?: Partial<Record<keyof T, ValidationRule[]>>
-  onSubmit: (values: T) => void | Promise<void>
+  onSubmit: (values: T) => void | Promise<void></void>
   validateOnChange?: boolean
   validateOnBlur?: boolean
   values: T
-  errors: Record<keyof T, string[]>
-  touched: Record<keyof T, boolean>
+  errors: Record<keyof T, string[]></keyof>
+  touched: Record<keyof T, boolean></keyof>
   isSubmitting: boolean
   isValid: boolean
   handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void
@@ -98,4 +98,4 @@ const formErrors = getFormErrors(validationResults)
   // Check if form is valid
  errorArray.length === 0)
     validateAllFields
-  }
+  };

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 export default ProjectdetailsPage
@@ -8,4 +8,4 @@ export default ProjectdetailsPage
             <p className="text-gray-300 mb-8">This page is under construction.</p>
               Learn More
   )
-}
+};

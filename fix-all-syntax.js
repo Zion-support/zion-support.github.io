@@ -6,9 +6,9 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to fix import statements
-function fixImports(content) {}
+function fixImports(content) {};
   // Fix malformed import statements
-  content = content.replace(/import\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {}
+  content = content.replace(/import\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {}"
     const cleanImports = imports
       .split(',')
       .map(imp => imp.trim().replace(/;+$/, ''))
@@ -17,32 +17,32 @@ function fixImports(content) {}
     return `import { ${cleanImports} } from '${module}'`
   })
   return content
-}
+};
 // Function to fix function declarations
-function fixFunctions(content) {}
+function fixFunctions(content) {};
   // Fix malformed function declarations
   content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*\n\s*\}/g, 'const $1: React.FC = () => {')
   content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*\{\s*\n\s*\}/g, 'function $1() {')
   return content
-}
+};
 // Function to fix JSX syntax
-function fixJSX(content) {}
+function fixJSX(content) {};
     // Fix malformed JSX fragments
-  content = content.replace(/<>\s*$/gm,
+  content = content.replace(/<>\s*$/gm;
     '<div>')
-  content = content.replace(/^\s*<\/>/gm,
+  content = content.replace(/^\s*<\/>/gm;
     '</div>')
   // Fix malformed JSX elements
-  content = content.replace(/<(\w+)[^>]*>\s*$/gm,
+  content = content.replace(/<(\w+)[^>]*>\s*$/gm;
     '<$1>')
-  content = content.replace(/^\s*<\/\w+>\s*$/gm,
+  content = content.replace(/^\s*<\/\w+>\s*$/gm;
     '</$1>')
   return content
-  }
+  };
 // Function to fix object literals
-function fixObjects(content) {}
+function fixObjects(content) {};
   // Fix malformed object literals
-  content = content.replace(/\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}/g, (match, content) => {}
+  content = content.replace(/\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}/g, (match, content) => {};
     const cleanContent = content
       .split(',')
       .map(item => item.trim().replace(/;+$/, ''))
@@ -51,9 +51,9 @@ function fixObjects(content) {}
     return `{\n    ${cleanContent}\n  }`
   })
   return content
-}
+};
 // Function to fix common syntax errors
-function fixCommonSyntax(content) {}
+function fixCommonSyntax(content) {};
   // Remove extra semicolons
   content = content.replace(/;\s*;/g, ';')
   content = content.replace(/;\s*$/gm, '')
@@ -67,10 +67,10 @@ function fixCommonSyntax(content) {}
   content = content.replace(/\{\s*$/gm, '{}')
   content = content.replace(/\}\s*$/gm, '}')
   return content
-}
+};
 // Function to fix a single file
-function fixFile(filePath) {}
-  try {}
+function fixFile(filePath) {};
+  try {};
     let content = fs.readFileSync(filePath, 'utf8')
     let originalContent = content
     // Apply all fixes
@@ -83,46 +83,46 @@ function fixFile(filePath) {}
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n')
     // Remove trailing whitespace
     content = content.replace(/[ \t]+$/gm, '')
-    if (content !== originalContent) {}
+    if (content !== originalContent) {};
       fs.writeFileSync(filePath, content, 'utf8')
       console.log(`Fixed syntax in: ${filePath}`)
       return true
-    }
+    };
     return false
-  } catch (error) {}
+  } catch (error) {};
     console.error(`Error fixing ${filePath}:`, error.message)
     return false
-  }
-}
+  };
+};
 // Function to recursively fix files
-function fixDirectory(dirPath) {}
+function fixDirectory(dirPath) {};
     let fixedCount = 0
-  try {}
+  try {};
     const items = fs.readdirSync(dirPath)
-    for (const item of items) {}
-      const fullPath = path.join(dirPath,
+    for (const item of items) {};
+      const fullPath = path.join(dirPath;
     item)
       const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {}
+      if (stat.isDirectory()) {};
         // Skip node_modules and other build directories
-        if (!['node_modules',
-    '.git',
-    'dist',
-    '.next',
-    'out'].includes(item)) {}
+        if (!['node_modules';
+    '.git';
+    'dist';
+    '.next';
+    'out'].includes(item)) {};
           fixedCount += fixDirectory(fullPath)
-  }
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {}
-    if (fixFile(fullPath)) {}
+  };
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {};
+    if (fixFile(fullPath)) {};
           fixedCount++
-  }
-      }
-    }
-  } catch (error) {}
+  };
+      };
+    };
+  } catch (error) {};
     console.error(`Error reading directory ${dirPath}:`, error.message)
-  }
+  };
   return fixedCount
-}
+};
 // Main execution
 console.log('Starting comprehensive syntax fixes...')
 const fixedCount = fixDirectory('./')

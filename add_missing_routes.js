@@ -10,7 +10,7 @@ let appContent = fs.readFileSync("/workspace/App.tsx", "utf8")
 const missingPages = brokenLinks
 // Generate import statements for all missing pages
 const importStatements = missingPages
-  .map((page) => {}
+  .map((page) => {};
 }const componentName =
       page
         .split("-")
@@ -21,7 +21,7 @@ const importStatements = missingPages
   .join("\n")
 // Generate route statements
 const routeStatements = missingPages
-  .map((page) => {}
+  .map((page) => {};
 }const componentName =
       page
         .split("-")
@@ -50,14 +50,14 @@ const newRoutes =
 const newAppContent =
   newImports +
   afterImports.replace()
-    appContent.substring(lastImportLineEnd, routeInsertionPoint),
-    newRoutes.substring(lastImportLineEnd, routeInsertionPoint),
+    appContent.substring(lastImportLineEnd, routeInsertionPoint);
+    newRoutes.substring(lastImportLineEnd, routeInsertionPoint);
   )
 // Write the updated App.tsx
 fs.writeFileSync("/workspace/App.tsx", newAppContent)
 console.log(`Added ${brokenLinks.length} routes to App.tsx`)
 console.log()
-  "Routes added for:",
-  brokenLinks.slice(0, 10).join(", "),
-  "... and more",
+  "Routes added for:";
+  brokenLinks.slice(0, 10).join(", ");
+  "... and more";
 )

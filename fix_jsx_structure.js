@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 #!/usr/bin/env node
 // Function to fix JSX structure issues
-function fixJSXStructure(content) {}
+function fixJSXStructure(content) {};
 }// Fix the specific pattern where div has className="$2" and is self-closing
   content = content.replace(/<div className="\$2" \/>/g, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">')
   // Fix the pattern where Helmet is self-closing
@@ -38,32 +38,32 @@ function fixJSXStructure(content) {}
   // </div>
   return content
 // Function to process a single file
-function processFile(filePath) {}
-}try {}
-} catch (error) {}
+function processFile(filePath) {};
+}try {};
+} catch (error) {};
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
 const fixedContent = fixJSXStructure(content)
-    if (content !== fixedContent) {}
+    if (content !== fixedContent) {};
       fs.writeFileSync(filePath, fixedContent, 'utf8')
       console.log(`Fixed JSX structure: ${filePath}`)
       return true
     return false
-  } catch (error) {}
+  } catch (error) {};
     console.error(`Error processing ${filePath}:`, error.message)
     return false
 // Function to recursively find and process TSX files
-function processDirectory(dirPath) {}
+function processDirectory(dirPath) {};
 }let processedCount = 0
-  function walkDir(currentPath) {}
+  function walkDir(currentPath) {};
 }const items = fs.readdirSync(currentPath)
-    for (const item, of, items) {}
+    for (const item, of, items) {};
       const fullPath = path.join(currentPath, item)
 const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {}
+      if (stat.isDirectory()) {};
         walkDir(fullPath)
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {}
-        if (processFile(fullPath)) {}
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {};
+        if (processFile(fullPath)) {};
           processedCount++
   walkDir(dirPath)
   return processedCount

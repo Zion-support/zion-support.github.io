@@ -23,7 +23,7 @@ const stat = fs.statSync(fullPath)
         walkDir(fullPath)
           const content = fs.readFileSync(fullPath, 'utf8')
             files.push(fullPath)
-          // Skip files that can't be read
+          // Skip files that can't be read'
   walkDir(dir)
   return files
 // Main execution

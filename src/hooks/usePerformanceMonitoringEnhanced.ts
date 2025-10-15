@@ -9,5 +9,5 @@ const url = '/api/analytics'
       observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
  observer.disconnect()
   }, [reportWebVitals])
-  return { reportWebVitals }
-}
+  return { reportWebVitals };
+};

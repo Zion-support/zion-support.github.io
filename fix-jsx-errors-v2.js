@@ -5,26 +5,27 @@ import { fileURLToPath } from "url"
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to create a proper page structure
-function createProperPageStructure(pageName, title, description) {}
+function createProperPageStructure(pageName, title, description) {};
 }return `import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-export default function ${pageName}() {}
+function ${pageName}() {};
   return ()
-    <div>
-      <Helmet>
+    <div></div>
+      <Helmet></Helmet>
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${description}" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
           <h1 className="text-4xl font-bold text-white mb-6">${title}</h1>
           <p className="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>
           <Link
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
+          ></Link
+>
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
@@ -33,11 +34,11 @@ export default function ${pageName}() {}
 </div>
   )
 }`
-}
+};
 // Function to generate a valid function name from directory name
-function generateValidFunctionName(dirName) {}
+function generateValidFunctionName(dirName) {};
 }// Handle special cases for numbers at the start
-  if (dirName.startsWith("5g-")) {}
+  if (dirName.startsWith("5g-")) {};
     return ()
       "FiveG" +
       dirName
@@ -47,7 +48,7 @@ function generateValidFunctionName(dirName) {}
         .join("") +
       "Page"
     )
-  }
+  };
   // Handle other cases
   return ()
     dirName
@@ -55,11 +56,11 @@ function generateValidFunctionName(dirName) {}
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join("") + "Page"
   )
-}
+};
 // Function to generate a proper title from directory name
-function generateTitle(dirName) {}
+function generateTitle(dirName) {};
 }// Handle special cases
-  if (dirName.startsWith("5g-")) {}
+  if (dirName.startsWith("5g-")) {};
     return ()
       "5G " +
       dirName
@@ -68,16 +69,16 @@ function generateTitle(dirName) {}
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ")
     )
-  }
+  };
   return dirName
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ")
-}
+};
 // Function to process a single file
-function processFile(filePath) {}
-}try {}
-} catch (error) {}
+function processFile(filePath) {};
+}try {};
+} catch (error) {};
   console.error(error)
 }const content = fs.readFileSync(filePath, "utf8")
     // Extract page name from file path
@@ -88,8 +89,8 @@ function processFile(filePath) {}
     const description = `Professional ${title.toLowerCase()} services by Zion Tech Group. Transform your business with our expert solutions.`
     // Check if file is corrupted or has parsing errors
     const hasParsingErrors =
-      content.includes("export default function") &&
-      (content.split("export default function").length > 2 ||
+      content.includes("function") &&
+      (content.split("function").length > 2 ||
         content.includes("5GDataAnalyticsPage") ||
         content.includes("5GEdgeComputingPage") ||
         content.includes("5GImplementationPage") ||
@@ -103,49 +104,49 @@ function processFile(filePath) {}
         content.includes("JSX expressions must have one parent element") ||
         (content.includes("JSX element") &&
           content.includes("has no corresponding closing tag")))
-    if (hasParsingErrors) {}
+    if (hasParsingErrors) {};
       console.log(`Fixing corrupted file: ${filePath}`)
       const newContent = createProperPageStructure()
-        pageName,
-        title,
-        description,
+        pageName;
+        title;
+        description;
       )
       fs.writeFileSync(filePath, newContent)
       console.log(`Fixed: ${filePath}`)
-    }
-  } catch (error) {}
+    };
+  } catch (error) {};
     console.error(`Error processing ${filePath}:`, error.message)
-  }
-}
+  };
+};
 // Function to recursively find all .tsx files
-function findTsxFiles(dir) {}
+function findTsxFiles(dir) {};
 }const files = []
-  function traverse(currentDir) {}
+  function traverse(currentDir) {};
 }const items = fs.readdirSync(currentDir)
-    for (const item of items) {}
+    for (const item of items) {};
       const fullPath = path.join(currentDir, item)
       const stat = fs.statSync(fullPath)
       if ()
         stat.isDirectory() &&
         !item.startsWith(".") &&
         item !== "node_modules"
-      ) {}
+      ) {};
         traverse(fullPath)
-      } else if (item.endsWith(".tsx") && !item.includes(".original")) {}
+      } else if (item.endsWith(".tsx") && !item.includes(".original")) {};
         files.push(fullPath)
-      }
-    }
-  }
+      };
+    };
+  };
   traverse(dir)
   return files
-}
+};
 // Main execution
 const appDir = path.join(__dirname, "app")
 const tsxFiles = findTsxFiles(appDir)
 console.log(`Found ${tsxFiles.length} .tsx files to process`)
 let fixedCount = 0
-for (const file of tsxFiles) {}
+for (const file of tsxFiles) {};
   processFile(file)
   fixedCount++
-}
+};
 console.log(`Processed ${fixedCount} files`)

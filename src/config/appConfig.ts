@@ -6,32 +6,32 @@ export default config
     name: string
     version: string
     environment: 'development' | 'production' | 'test'
-  }
+  };
     baseUrl: string
     timeout: number
     retryAttempts: number
-  }
+  };
     analytics: boolean
     monitoring: boolean
     errorTracking: boolean
     performanceOptimization: boolean
-  }
+  };
     enableLazyLoading: boolean
     imageLazyLoadThreshold: number
     componentLazyLoadThreshold: number
     cacheMaxAge: number
-  }
+  };
     enableCSP: boolean
     enableHSTS: boolean
     enableXSSProtection: boolean
-  }
+  };
     environment:
       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
     retryAttempts: 3
     performanceOptimization: true
     cacheMaxAge: 3600000, // 1 hour in milliseconds
     enableXSSProtection: true
-}
+};
 /**
  * Get configuration value by key path
  'Zion Tech Group'

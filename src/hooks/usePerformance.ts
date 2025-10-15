@@ -23,7 +23,7 @@
         observer.observe({ entryTypes: ['first-input'] })
         domContentLoaded:
         firstInputDelay
-      }
+      };
       setMetrics(performanceData)
       setIsMonitoring(false)
       // Report to analytics using trackTiming
@@ -36,14 +36,14 @@
         performanceData.cumulativeLayoutShift
       )
       analytics.trackTiming('performance', 'first_input_delay', performanceData.firstInputDelay)
-    }
+    };
     // Start monitoring
     setIsMonitoring(true)
     // Measure performance after page load
       measurePerformance()
       window.addEventListener('load', measurePerformance)
       window.removeEventListener('load', measurePerformance)
-    }
+    };
   }, [])
-  return { metrics, isMonitoring }
-}
+  return { metrics, isMonitoring };
+};
