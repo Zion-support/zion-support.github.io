@@ -1,10 +1,10 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-<<<<<<< HEAD
 const baseUrl = 'https://ziontechgroup.com';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const pages = [
   { url: '/', priority: '1.0', changefreq: 'daily' },
   { url: '/about', priority: '0.8', changefreq: 'monthly' },
