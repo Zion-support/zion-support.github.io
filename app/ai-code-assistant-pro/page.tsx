@@ -1,7 +1,6 @@
-
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Code, Globe, CheckCircle, ArrowRight, Star, Phone, Mail, Play, Terminal, GitBranch, Bug, FileText, Cpu, Cloud, TrendingUp, Brain, Database } from 'lucide-react';
+import { Code, Globe, CheckCircle, ArrowRight, Star, Phone, Mail, Play, Terminal, GitBranch, Bug, FileText, Cpu, Cloud, Brain, Database, Star } from 'lucide-react';
 
 const AiCodeAssistantProPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,7 +38,7 @@ const AiCodeAssistantProPage = () => {
     {
       icon: <Cpu className="w-6 h-6" />,
       title: "Performance Optimization",
-      description: "Analyze and optimize your code for better performance, memory usage, and execution speed.",
+      description: "Analyze and optimize your code for better performancery usage, and execution speed.",
       benefits: ["Performance analysis", "Memory optimization", "Algorithm suggestions", "Bottleneck detection"]
     },
     {

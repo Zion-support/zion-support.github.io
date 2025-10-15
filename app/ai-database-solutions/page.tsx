@@ -1,3 +1,4 @@
+import React from 'react';
 import { 
   BarChart3,
   CheckCircle,
@@ -8,7 +9,7 @@ import {
   Users,
   Zap
 } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const AiDatabaseSolutionsPage = () => {

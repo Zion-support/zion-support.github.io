@@ -13,7 +13,7 @@ export const seoOptimizer = {
     }
     
     return optimized;
-  },
+  };
   validate: (data: { title?: string; description?: string; keywords?: string }) => {
     const errors: string[] = []
     if (!data.title) errors.push('Title is required')

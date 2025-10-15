@@ -1,3 +1,4 @@
+import React from 'react';
 interface LogLevel {
   ERROR: 'error';
   WARN: 'warn';
@@ -6,9 +7,9 @@ interface LogLevel {
 }
 
 const LOG_LEVELS: LogLevel = {
-  ERROR: 'error',
-  WARN: 'warn',
-  INFO: 'info',
+  ERROR: 'error';
+  WARN: 'warn';
+  INFO: 'info';
   DEBUG: 'debug'
 };
 
@@ -43,10 +44,10 @@ class Logger {
 
   private log(level: LogLevelType, message: string, context?: Record<string, unknown>, error?: Error): void {
     const entry: LogEntry = {
-      level,
-      message,
-      timestamp: new Date().toISOString(),
-      context,
+      level;
+      message;
+      timestamp: new Date().toISOString();
+      context;
       error
     };
 
@@ -55,18 +56,13 @@ class Logger {
     // Console logging
     switch (level) {
       case 'error':
-        console.error(formattedMessage);
-        break;
+                break;
       case 'warn':
-        console.warn(formattedMessage);
-        break;
+                break;
       case 'info':
-        console.info(formattedMessage);
-        break;
+                break;
       case 'debug':
-        if (this.isDevelopment) {
-          console.debug(formattedMessage);
-        }
+        if (this.isDevelopment) { /* empty */ }
         break;
     }
 
@@ -81,9 +77,9 @@ class Logger {
     // like Sentry, LogRocket, or your own logging API
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'error', {
-        error_message: entry.message,
-        error_level: entry.level,
-        error_context: entry.context ? JSON.stringify(entry.context) : undefined,
+        error_message: entry.message;
+        error_level: entry.level;
+        error_context: entry.context ? JSON.stringify(entry.context) : undefined;
         error_stack: entry.error?.stack
       });
     }

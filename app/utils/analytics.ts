@@ -1,3 +1,4 @@
+import React from 'react';
 // Global gtag function declaration
 declare global {
   interface Window {
@@ -6,13 +7,12 @@ declare global {
 }
 
 export const analytics = {
-  track: (event: string, properties: Record<string, unknown> = {}) => {
+  track: (event: string, properties: Record<string, unknown> = { /* empty */ }) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', event, properties)
       window.gtag('event', event, properties);
     }
-  },
-  
+  };
   page: (page: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {

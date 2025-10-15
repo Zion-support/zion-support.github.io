@@ -18,8 +18,7 @@ const EnhancedErrorFeedback: React.FC<ErrorFeedbackProps> = ({
       onReport(error);
     } else {
       // Default behavior: log to console
-      console.error('Error reported:', error);
-    }
+          }
   };
 
   return (

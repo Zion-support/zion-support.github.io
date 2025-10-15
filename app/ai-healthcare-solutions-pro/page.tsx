@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Heart, Zap, Shield, Globe, Brain, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin, Download, Play, Pause, RefreshCw, Settings, Eye, Filter, Target, Users, Award, TrendingUp, Cpu, Database, BarChart3, Activity, Clock, FileText, Send, ThumbsUp, ThumbsDown, AlertCircle, CheckSquare, XCircle, PieChart, LineChart, TrendingDown, Calculator, CreditCard, Banknote, Wallet, Receipt, ChartBar, Percent, Coins, Building2, Briefcase, PiggyBank, HandCoins, Stethoscope, Pill, Microscope, UserCheck, Clipboard, Thermometer, Bandage, Syringe, Hospital, Ambulance, Shield as ShieldIcon, Lock, AlertTriangle } from 'lucide-react';
+import { Heart, Zap, Shield, Brain, CheckCircle, ArrowRight, Star, Phone, Mail, Play, BarChart3, Stethoscope, Pill, Microscope, UserCheck, Ambulance, Shield as ShieldIcon, Star, Shield, BarChart3 } from 'lucide-react';
 
 const AiHealthcareSolutionsProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

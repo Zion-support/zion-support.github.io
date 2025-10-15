@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Activity, Zap, Clock, Database } from 'lucide-react';
+import { Activity, Zap, Clock, Database, Clock } from 'lucide-react';
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -88,7 +88,7 @@ const PerformanceMonitor: React.FC = () => {
       if ('memory' in performance) {
         const memory = (performance as any).memory;
         setMetrics(prev => ({ 
-          ...prev, 
+          ...prev,
           memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024) 
         }));
       }
