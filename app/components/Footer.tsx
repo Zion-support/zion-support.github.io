@@ -4,12 +4,26 @@ import { Link } from 'react-router-dom';
 const Footer: React.FC = memo(() => {
   return (
     <footer className="relative mt-20 overflow-hidden">
-      {/* Animated background */}
+      {/* Enhanced Animated background */}
       <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-800 to-slate-900"></div>
       <div className="absolute inset-0 opacity-20">
-        <div className="cyber-grid"></div>
+        <div className="cyber-grid-enhanced"></div>
       </div>
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500"></div>
+      
+      {/* Quantum Particles */}
+      <div className="quantum-particles">
+        {[...Array(20)].map((_, i) => (
+          <div key={i} className="quantum-particle" style={{
+            left: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 20}s`,
+            animationDuration: `${20 + Math.random() * 10}s`
+          }}></div>
+        ))}
+      </div>
+      
+      {/* Scan Lines */}
+      <div className="scan-lines"></div>
       
       <div className="relative z-10 glass-card">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
