@@ -1,25 +1,14 @@
+import React from 'react';
 
-interface NeonButtonProps {},
-      children?: React.ReactNode
-  className?: string
-  title?: string
+interface NeonbuttonProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-</div>
-  )
-  if ($1) {};
-  // If body
-    return ()
-      <a: href ={href} className={buttonClasses}></a>
-        {content};
-      </a>
-    )
-      return ()
-    <button: onClick ={onClick} disabled={disabled} className={buttonClasses}></button>
-      {content};
-    </button>
-  )
-},
-      export default NeonButton
-
-
-
+export default function Neonbutton({ className = '', children }: NeonbuttonProps) {
+  return (
+    <div className={`NeonButton-component ${className}`}>
+      {children}
+    </div>
+  );
+}

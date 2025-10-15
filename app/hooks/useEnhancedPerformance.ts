@@ -1,4 +1,16 @@
+// Useenhancedperformance utilities and types
 
-interface UseEnhancedPerformanceOptions {
+export interface UseenhancedperformanceConfig {
+  enabled: boolean;
+  options: Record<string, any>;
+}
 
+export const defaultUseenhancedperformanceConfig: UseenhancedperformanceConfig = {
+  enabled: true,
+  options: {}
+};
 
+export function initializeUseenhancedperformance(config: UseenhancedperformanceConfig) {
+  // Implementation here
+  return config;
+}

@@ -1,20 +1,14 @@
+import React from 'react';
 
-              Get Started Today;
-            </button>;
-          </div>;
-        </div>;
-      </div>;";"
-    </div>;";";"
-  );";";";"
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
+interface AdschedulerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-
-export default ComponentsPage;'";'";"
+export default function Adscheduler({ className = '', children }: AdschedulerProps) {
+  return (
+    <div className={`AdScheduler-component ${className}`}>
+      {children}
+    </div>
+  );
+}

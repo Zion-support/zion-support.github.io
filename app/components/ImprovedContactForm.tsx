@@ -1,29 +1,14 @@
+import React from 'react';
 
-  email: string;
-  phone: string;
-  company: string;
-  message: string;
-  service: string;
-  budget: string;
-  timeline: string;
-interface FormErrors {
+interface ImprovedcontactformProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-    e.preventDefault();
-    if (!validateForm()) {
-      return;,
-    setIsSubmitting(true);
-    try {
-
-                </option>
-              ))};
-            </select>
-
-              Send Message
-            </>,
-          )};
-        </button>
-      </form>
-    </div>";
-  );";";
-};";";";
-export default ImprovedContactForm;"
+export default function Improvedcontactform({ className = '', children }: ImprovedcontactformProps) {
+  return (
+    <div className={`ImprovedContactForm-component ${className}`}>
+      {children}
+    </div>
+  );
+}

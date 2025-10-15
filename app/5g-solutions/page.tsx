@@ -1,63 +1,23 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-
-export default function FiveGSolutionsPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">5G Solutions</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Next-generation 5G network solutions.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
-    }
-  ];
-
+export default function G5gSolutionsPage() {
   return (
     <>
-
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Solutions Section */}
-
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-
-
-                    Get Started
-                  </button>
->>>>>>> main
-                </div>
-
-
-              Contact Us Today
-            </button>
->>>>>>> main
+      <Helmet>
+        <title>5g Solutions | Zion Tech Group</title>
+        <meta name="description" content="5g Solutions solutions and services from Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">5g Solutions</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our 5g solutions solutions and services designed to help your business grow.
+            </p>
           </div>
         </div>
       </div>
-
-)
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
+    </>
+  );
+}

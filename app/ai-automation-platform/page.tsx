@@ -1,39 +1,23 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+export default function AiAutomationPlatformPage() {
   return (
     <>
-
       <Helmet>
-        <title>AI Automation Platform - Intelligent Process Automation | Zion Tech Group</title>
-
-
-                  Watch Demo
-                </button>
-              </div>
-
-
-                </div>
-              ))}
-            </div>
-          </ResponsiveContainer>
-        </section>
-
-                </div>
-              ))}
-            </div>
+        <title>Ai Automation Platform | Zion Tech Group</title>
+        <meta name="description" content="Ai Automation Platform solutions and services from Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">Ai Automation Platform</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our ai automation platform solutions and services designed to help your business grow.
+            </p>
           </div>
-        </section>
-
-        {/* CTA Section */}
-
-
-              Get Started Today
-            </button>
-          </div>
-        </section>
+        </div>
       </div>
     </>
-
-
+  );
 }
-
-

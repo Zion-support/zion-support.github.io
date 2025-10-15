@@ -1,20 +1,14 @@
+import React from 'react';
 
-              Get Started Today;
-            </button>;
-          </div>;
-        </div>;
-      </div>;";"
-    </div>;";";"
-  );";";";"
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
+interface NewcontentadvertisingbannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-
-export default ComponentsPage;'";'";"
+export default function Newcontentadvertisingbanner({ className = '', children }: NewcontentadvertisingbannerProps) {
+  return (
+    <div className={`NewContentAdvertisingBanner-component ${className}`}>
+      {children}
+    </div>
+  );
+}

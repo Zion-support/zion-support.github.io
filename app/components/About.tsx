@@ -1,8 +1,14 @@
+import React from 'react';
 
-                  {value.description},
-                </p>)
-              </div>)
-            ))};
-          </div>
-        </div>
+interface AboutProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
+export default function About({ className = '', children }: AboutProps) {
+  return (
+    <div className={`About-component ${className}`}>
+      {children}
+    </div>
+  );
+}

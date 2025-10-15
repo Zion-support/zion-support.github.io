@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Script to fix all remaining TypeScript/React syntax errors.
+Script to fix function names that start with numbers.
 """
 
 import os
@@ -8,8 +8,11 @@ import glob
 import re
 
 def fix_file(file_path):
-    """Fix a single file by replacing it with a basic working version."""
+    """Fix a file by replacing numbered function names with valid ones."""
     try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
         # Extract page name from path
         path_parts = file_path.split('/')
         if path_parts[-1] == 'page.tsx':
@@ -20,10 +23,14 @@ def fix_file(file_path):
         # Convert kebab-case to Title Case
         title = ' '.join(word.capitalize() for word in page_name.split('-'))
         
+        # Create a valid function name (replace numbers at start)
+        valid_page_name = re.sub(r'^(\d+)', r'G\1', page_name)
+        function_name = ''.join(word.capitalize() for word in valid_page_name.split('-'))
+        
         # Determine if it's a component or page
         if 'components' in file_path:
             # Create a basic component
-            component_name = ''.join(word.capitalize() for word in page_name.split('-'))
+            component_name = function_name
             content = f'''import React from 'react';
 
 interface {component_name}Props {{
@@ -58,11 +65,10 @@ export function initialize{title.replace(' ', '')}(config: {title.replace(' ', '
 }}'''
         else:
             # Create a basic page
-            page_component_name = ''.join(word.capitalize() for word in page_name.split('-'))
             content = f'''import React from 'react';
 import {{ Helmet }} from 'react-helmet-async';
 
-export default function {page_component_name}Page() {{
+export default function {function_name}Page() {{
   return (
     <>
       <Helmet>
@@ -94,7 +100,7 @@ export default function {page_component_name}Page() {{
         return False
 
 def main():
-    """Main function to fix all remaining errors."""
+    """Main function to fix all files with numbered function names."""
     # Get all TypeScript/React files
     patterns = [
         'app/**/*.tsx',

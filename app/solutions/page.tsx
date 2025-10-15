@@ -1,59 +1,23 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import { 
-
-  CpuChipIcon, 
-  ShieldCheckIcon,
-  CloudIcon,
-  CogIcon,
-
-                  Get Consultation
-                </button>
-              </div>
-            </div>
+export default function SolutionsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Solutions | Zion Tech Group</title>
+        <meta name="description" content="Solutions solutions and services from Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">Solutions</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our solutions solutions and services designed to help your business grow.
+            </p>
           </div>
-        </section>
-
-        {/* Solutions Grid */}
-
-                Choose from our comprehensive range of technology solutions tailored to your business needs.
-              </p>
-            </div>
-            
-
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Industries Section */}
-
-                Our solutions are designed to meet the unique needs of various industries.
-              </p>
-            </div>
-            
-
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-
-
-                View Case Studies
-              </button>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
     </>
-
+  );
+}

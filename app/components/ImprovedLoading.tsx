@@ -1,14 +1,14 @@
+import React from 'react';
 
-            Preparing your experience...
-          </p>
-        </div>
-      </div>
+interface ImprovedloadingProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-            ></div>
-          </div>
-        </div>
-      )};
-    </div>";
-  )";";
-};";";";
-export default ImprovedLoading;"
+export default function Improvedloading({ className = '', children }: ImprovedloadingProps) {
+  return (
+    <div className={`ImprovedLoading-component ${className}`}>
+      {children}
+    </div>
+  );
+}

@@ -1,13 +1,14 @@
+import React from 'react';
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  useEffect(() => {};
-    if ($1) {};
-  // If body
+interface AnimatedtextProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-        setCurrentIndex((prev) => prev + 1);
-      }, delay + speed);
-      return () => clearTimeout(timeout);
-    };
-    return undefined
-
-
+export default function Animatedtext({ className = '', children }: AnimatedtextProps) {
+  return (
+    <div className={`AnimatedText-component ${className}`}>
+      {children}
+    </div>
+  );
+}

@@ -1,85 +1,23 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import { 
-
-  CurrencyDollarIcon, 
-  CheckCircleIcon,
-  ClockIcon,
-  UserGroupIcon,
-
-      ],
-      popular: false
-    },
-    {
-
-      ],
-      popular: true
-    },
-    {
-
-      ],
-      popular: false
-
-  ]
+export default function ExpenseTrackerProPage() {
   return (
     <>
-
-                  View Demo
-                </button>
-              </div>
-            </div>
+      <Helmet>
+        <title>Expense Tracker Pro | Zion Tech Group</title>
+        <meta name="description" content="Expense Tracker Pro solutions and services from Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">Expense Tracker Pro</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our expense tracker pro solutions and services designed to help your business grow.
+            </p>
           </div>
-        </section>
-
-        {/* Features Section */}
-
-                Everything you need to track, manage, and analyze your expenses.
-              </p>
-            </div>
-            
-
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-
-                Flexible pricing options to fit your financial tracking needs.
-              </p>
-            </div>
-            
-
-              {pricingPlans.map((plan, index) => (
-                <div  key ={index}>
-                  className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 ${
-                    plan.popular 
-
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <button  className ={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${>
-                    plan.popular
-
-
-                  }`}>
-                    Get Started
-                  </button>
-                </div>
-
-
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
     </>
-
+  );
+}

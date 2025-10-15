@@ -1,42 +1,23 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-  CheckCircle, 
-  ArrowRight, 
-  MessageSquare, 
-  Users, 
-  Target, 
-  TrendingUp,
-  Globe,
-  Cloud,
-
-            </div>
-            <div: className ="bg-green-50 border border-green-200 rounded-lg p-6">;""";
-              <h3: className ="text-lg font-semibold text-green-900 mb-2">;""";
-                Custom Implementation;
-              </h3>
-              <p: className ="text-green-700">;""";
-                Tailored page implementations for your specific requirements.;
-              </p>
-            </div>
-            <div: className ="bg-purple-50 border border-purple-200 rounded-lg p-6">;""";
-              <h3: className ="text-lg font-semibold text-purple-900 mb-2">;""";
-                24/7 Support;
-              </h3>
-              <p: className ="text-purple-700">;""";
-                Round-the-clock support for all your page needs.;
-              </p>
-            </div>
-          </div>
-          <div: className ="mt-12">;""";
-            <button: className ="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;""";
-              Get Started Today;
-            </button>
+export default function AiCustomerSupportChatbotPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Ai Customer Support Chatbot | Zion Tech Group</title>
+        <meta name="description" content="Ai Customer Support Chatbot solutions and services from Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">Ai Customer Support Chatbot</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our ai customer support chatbot solutions and services designed to help your business grow.
+            </p>
           </div>
         </div>
-
-                >
-                  Start Free Trial
-                </>
-              </div>
-
-
-
+      </div>
+    </>
+  );
+}

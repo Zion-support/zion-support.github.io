@@ -1,28 +1,14 @@
+import React from 'react';
 
-interface ImprovedSEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonicalUrl?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: any;
-  noindex?: boolean;
+interface ImprovedseoProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-  twitterTitle,
-  twitterDescription,
-  twitterImage,
-  structuredData,
-
-        </script>
-      )};
-    </Helmet>";
-  );";";
-};";";";
-export default ImprovedSEO;"
+export default function Improvedseo({ className = '', children }: ImprovedseoProps) {
+  return (
+    <div className={`ImprovedSEO-component ${className}`}>
+      {children}
+    </div>
+  );
+}

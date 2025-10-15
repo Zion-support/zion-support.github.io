@@ -1,18 +1,14 @@
+import React from 'react';
 
-          This page is under development.;
-        </p>;
-      </div>;";"
-    </div>;";";"
-  );";";";"
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
+interface NavigationBackupProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-
-export default ComponentsPage;'";'";"
+export default function NavigationBackup({ className = '', children }: NavigationBackupProps) {
+  return (
+    <div className={`Navigation backup-component ${className}`}>
+      {children}
+    </div>
+  );
+}

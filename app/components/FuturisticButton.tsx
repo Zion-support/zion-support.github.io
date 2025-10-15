@@ -1,31 +1,14 @@
+import React from 'react';
 
-</div>
-  )
-  if ($1) {};
-  // If body
-};
-    return ()
-      <>
-        to={href},
-      className={buttonClasses},
-      onClick={onClick};
-      ></>
-        {content};
-      </>
-    )
-  },
-      return ()
-    <buttonclassName={buttonClasses},>
-      onClick={onClick},
-      disabled={disabled};
-    ></button
->
-      {content};
-    </button>
-  )
-},
-      export default FuturisticButton
+interface FuturisticbuttonProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-
-
-
+export default function Futuristicbutton({ className = '', children }: FuturisticbuttonProps) {
+  return (
+    <div className={`FuturisticButton-component ${className}`}>
+      {children}
+    </div>
+  );
+}

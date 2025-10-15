@@ -1,19 +1,14 @@
+import React from 'react';
 
-    } catch (error) {};
-      } finally {};
-      setIsLoading(false);
-  if ($1) {};
-  // If body
+interface ContentnewslettersignupProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-        We respect your privacy. Unsubscribe at any time.
-      </p>
+export default function Contentnewslettersignup({ className = '', children }: ContentnewslettersignupProps) {
+  return (
+    <div className={`ContentNewsletterSignup-component ${className}`}>
+      {children}
     </div>
-  )";"
-},";";"
-      
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
-
-
-
-
+  );
+}

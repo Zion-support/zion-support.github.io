@@ -1,9 +1,14 @@
+import React from 'react';
 
-interface SecurityEnhancerProps {},
-
-interface $1 { [key: string]: any },;
-      children?: React.ReactNode;
+interface SecurityenhancerProps {
   className?: string;
-  title?: string;
+  children?: React.ReactNode;
+}
 
-
+export default function Securityenhancer({ className = '', children }: SecurityenhancerProps) {
+  return (
+    <div className={`SecurityEnhancer-component ${className}`}>
+      {children}
+    </div>
+  );
+}

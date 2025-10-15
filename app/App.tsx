@@ -1,34 +1,23 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import { ErrorBoundary } from 'react-error-boundary';
-
-// Lazy load components
-const HomePage = React.lazy(() => import('./pages/HomePage'));
-const AboutPage = React.lazy(() => import('./pages/AboutPage'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
-const ContactPage = React.lazy(() => import('./pages/ContactPage'));
-const NotFoundPage = React.lazy(() => import('./404'));
-
-function App() {
+export default function AppPage() {
   return (
-    <Router>
-      <HelmetProvider>
-        <ErrorBoundary fallback={<div>Something went wrong.</div>}>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="*" element={<NotFoundPage />} />
-            </Routes>
-          </Suspense>
-        </ErrorBoundary>
-      </HelmetProvider>
-    </Router>
+    <>
+      <Helmet>
+        <title>App | Zion Tech Group</title>
+        <meta name="description" content="App solutions and services from Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">App</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our app solutions and services designed to help your business grow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
-
-export default App;

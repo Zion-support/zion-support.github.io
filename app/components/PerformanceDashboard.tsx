@@ -1,9 +1,14 @@
+import React from 'react';
 
-interface PerformanceDashboardProps {},
-
-interface $1 { [key: string]: any },;
-      children?: React.ReactNode;
+interface PerformancedashboardProps {
   className?: string;
-  title?: string;
+  children?: React.ReactNode;
+}
 
-
+export default function Performancedashboard({ className = '', children }: PerformancedashboardProps) {
+  return (
+    <div className={`PerformanceDashboard-component ${className}`}>
+      {children}
+    </div>
+  );
+}

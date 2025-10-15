@@ -1,21 +1,14 @@
+import React from 'react';
 
-  ...props;
-}: {},;
-      name: string,;
-      className?: string;
-  [key: string]: unknown;
-}) => {},
-      return ()
-    <span: className ={`icon ${className}`} {...props}></span>
-      {name};
-    </span>
-  )
+interface IconsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-
-  [key: string]: unknown,
-}) => {}: value,;
-      return (
-    <span: className ={`icon ${className}`} {...props}></span>: value;
-      {name};
-
-
+export default function Icons({ className = '', children }: IconsProps) {
+  return (
+    <div className={`Icons-component ${className}`}>
+      {children}
+    </div>
+  );
+}

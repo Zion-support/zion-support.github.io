@@ -1,20 +1,14 @@
+import React from 'react';
 
-              Get Started Today;
-            </button>;
-          </div>;
-        </div>;
-      </div>;";"
-    </div>;";";"
-  );";";";"
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
+interface Advancedseooptimizer_newProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-
-export default ComponentsPage;'";'";"
+export default function Advancedseooptimizer_new({ className = '', children }: Advancedseooptimizer_newProps) {
+  return (
+    <div className={`AdvancedSEOOptimizer_new-component ${className}`}>
+      {children}
+    </div>
+  );
+}

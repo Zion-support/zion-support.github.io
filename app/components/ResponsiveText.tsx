@@ -1,21 +1,14 @@
+import React from 'react';
 
-  },
-      return ()
-    <Component>
-      className={cn()};
-        sizeClasses[size],
-      weightClasses[weight],
-      colorClasses[color],
-      alignClasses[align],
-      className;
-      )};
-    ></Component
-      {children};
-    </Component>
-  )
-},
-      export default ResponsiveText
+interface ResponsivetextProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-
-
-
+export default function Responsivetext({ className = '', children }: ResponsivetextProps) {
+  return (
+    <div className={`ResponsiveText-component ${className}`}>
+      {children}
+    </div>
+  );
+}

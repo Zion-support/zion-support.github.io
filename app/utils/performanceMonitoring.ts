@@ -1,4 +1,16 @@
+// Performancemonitoring utilities and types
 
-interface PerformanceMonitoringOptions {
+export interface PerformancemonitoringConfig {
+  enabled: boolean;
+  options: Record<string, any>;
+}
 
+export const defaultPerformancemonitoringConfig: PerformancemonitoringConfig = {
+  enabled: true,
+  options: {}
+};
 
+export function initializePerformancemonitoring(config: PerformancemonitoringConfig) {
+  // Implementation here
+  return config;
+}

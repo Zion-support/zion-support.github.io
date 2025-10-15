@@ -1,55 +1,23 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-const AccessibilityPagePage: React.FC = () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
-        title="Page - Zion Tech Group"
-        description="Professional page solutions for modern businesses"
-      />
-
-
-        </div>
-      </div>
-    </>
-  )
-    },
-
-        </div>
-      </div>
-    </>
-  ),
-};
-
-export default AccessibilityPagePage;
-
-};";
-";";
-export default AccessibilityPagePage;";";";
-"
-=======
-const AccessibilityPage: React.FC = () => {
+export default function AccessibilityPagePage() {
   return (
     <>
       <Helmet>
-        <title>Accessibility - Zion Tech Group</title>
-        <meta name="description" content="Accessibility solutions for modern businesses" />
+        <title>Accessibility Page | Zion Tech Group</title>
+        <meta name="description" content="Accessibility Page solutions and services from Zion Tech Group." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">Accessibility</h1>
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">Accessibility Page</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Making technology accessible to everyone.
+              Discover our accessibility page solutions and services designed to help your business grow.
             </p>
           </div>
         </div>
       </div>
     </>
   );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-5b1b
-
-export default AccessibilityPage;
+}

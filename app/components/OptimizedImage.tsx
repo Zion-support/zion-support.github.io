@@ -1,12 +1,14 @@
+import React from 'react';
 
-  // If body
-          setIsInView(true);
-          observer.disconnect();
-      { threshold: 0.1 };
-    )
-    if (imgRef.current) {},
-      observer.observe(imgRef.current)
-      return () => observer.disconnect()
+interface OptimizedimageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-
-
+export default function Optimizedimage({ className = '', children }: OptimizedimageProps) {
+  return (
+    <div className={`OptimizedImage-component ${className}`}>
+      {children}
+    </div>
+  );
+}

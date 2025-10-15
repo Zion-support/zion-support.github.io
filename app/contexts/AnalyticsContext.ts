@@ -1,8 +1,16 @@
-import { createContext } from 'react';
+// Analyticscontext utilities and types
 
-export interface AnalyticsContextType {ursor/fix-errors-and-merge-to-main-234b
-  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
+export interface AnalyticscontextConfig {
+  enabled: boolean;
+  options: Record<string, any>;
 }
 
-export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);ursor/fix-errors-and-merge-to-main-234b
+export const defaultAnalyticscontextConfig: AnalyticscontextConfig = {
+  enabled: true,
+  options: {}
+};
+
+export function initializeAnalyticscontext(config: AnalyticscontextConfig) {
+  // Implementation here
+  return config;
+}

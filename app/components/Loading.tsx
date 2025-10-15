@@ -1,23 +1,14 @@
+import React from 'react';
 
-interface LoadingProps {}
-  message?: string
+interface LoadingProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-
-
-  return ()
-    <div>
-      <Helmet>
-        <title>Loading - Zion Tech Group</title>
-        <meta: name ="description" content="Loading page" />""
-      </Helmet>
-
-        </div>
-      </div>";
-    </>";";
-  );";";";
-import React from 'react';";";";";
-import SEOHead from './components/SEOHead";
-
-
-
-
+export default function Loading({ className = '', children }: LoadingProps) {
+  return (
+    <div className={`Loading-component ${className}`}>
+      {children}
+    </div>
+  );
+}

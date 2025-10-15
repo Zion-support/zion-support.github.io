@@ -1,20 +1,14 @@
+import React from 'react';
 
-              Get Started Today;
-            </button>;
-          </div>;
-        </div>;
-      </div>;";"
-    </div>;";";"
-  );";";";"
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
+interface AdanalyticsdashboardProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-
-export default ComponentsPage;'";'";"
+export default function Adanalyticsdashboard({ className = '', children }: AdanalyticsdashboardProps) {
+  return (
+    <div className={`AdAnalyticsDashboard-component ${className}`}>
+      {children}
+    </div>
+  );
+}

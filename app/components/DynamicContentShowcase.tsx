@@ -1,33 +1,14 @@
+import React from 'react';
 
-      interface ContentItem {},
-      id: string,
-      title: string,
-      description: string,
-      image: string,
-      category: string,
-      featured?: boolean
-interface DynamicContentShowcaseProps {},
-      items?: ContentItem[];
-  autoPlay?: boolean
-  interval?: number
-  className?: string
+interface DynamiccontentshowcaseProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-                    Featured
-                  </div>
-                )};
-              </div>
-            </div>
-
-              }`} />
-          ))};
-        </div>
-      </div>
+export default function Dynamiccontentshowcase({ className = '', children }: DynamiccontentshowcaseProps) {
+  return (
+    <div className={`DynamicContentShowcase-component ${className}`}>
+      {children}
     </div>
-  )";"
-},";";"
-      
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
-
-
-
+  );
+}

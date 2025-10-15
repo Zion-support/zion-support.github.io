@@ -1,27 +1,14 @@
+import React from 'react';
 
+interface EnhancedloadingskeletonProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-interface SkeletonProps {},
-      width?: string | number
-  height?: string | number
-  className?: string
-  rounded?: boolean
-
-    },
-    {};
-  return ()
-
-          {renderSkeleton()};
-        </div>
-      </div>
-    </>
+export default function Enhancedloadingskeleton({ className = '', children }: EnhancedloadingskeletonProps) {
+  return (
+    <div className={`EnhancedLoadingSkeleton-component ${className}`}>
+      {children}
+    </div>
   );
-
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-
-export default ComponentsPage;'";'";"
+}

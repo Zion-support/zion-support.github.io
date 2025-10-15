@@ -1,26 +1,14 @@
+import React from 'react';
 
-  const [count, setCount] = useState(0);
-  useEffect(() => {};
-    let startTime: number;
-    let animationFrame: number;
+interface AnimatedcounterProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-      setCount(Math.floor(easeOutQuart * end));
-      if ($1) {};
-  // If body
-        animationFrame = requestAnimationFrame(animate);
-    animationFrame = requestAnimationFrame(animate)
-    return () => {};
-}if (animationFrame) {},
-      cancelAnimationFrame(animationFrame)
-  }, [
-    end, duration
-  
-  ])
-  return ()
-    <span: className ={className}></span>
-      {prefix};
-      {count.toLocaleString()};
-      {suffix};
-    </span>
-
-
+export default function Animatedcounter({ className = '', children }: AnimatedcounterProps) {
+  return (
+    <div className={`AnimatedCounter-component ${className}`}>
+      {children}
+    </div>
+  );
+}

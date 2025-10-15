@@ -1,24 +1,16 @@
+// Useperformancemonitor utilities and types
 
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
+export interface UseperformancemonitorConfig {
+  enabled: boolean;
+  options: Record<string, any>;
+}
 
-    const [
-    metrics, setMetrics,
-  ] = useState<PerformanceMetrics>({
-    loadTime: 0,
+export const defaultUseperformancemonitorConfig: UseperformancemonitorConfig = {
+  enabled: true,
+  options: {}
+};
 
-      });
-    };
-    // Measure after component mount;
-    const: timeoutId = setTimeout(measurePerformance, 100);
-    return () => clearTimeout(timeoutId);
-  }, [
-  ]);
-  return metrics;
-};";"
-export default usePerformanceMonitor;";";"
-";";";
+export function initializeUseperformancemonitor(config: UseperformancemonitorConfig) {
+  // Implementation here
+  return config;
+}

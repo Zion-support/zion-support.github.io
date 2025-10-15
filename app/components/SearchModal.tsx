@@ -1,9 +1,14 @@
+import React from 'react';
 
-interface SearchModalProps {},
-
-interface $1 { [key: string]: any },;
-      children?: React.ReactNode;
+interface SearchmodalProps {
   className?: string;
-  title?: string;
+  children?: React.ReactNode;
+}
 
-
+export default function Searchmodal({ className = '', children }: SearchmodalProps) {
+  return (
+    <div className={`SearchModal-component ${className}`}>
+      {children}
+    </div>
+  );
+}

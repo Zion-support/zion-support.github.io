@@ -1,4 +1,16 @@
+// Securitymanager utilities and types
 
-interface SecurityManagerOptions {
+export interface SecuritymanagerConfig {
+  enabled: boolean;
+  options: Record<string, any>;
+}
 
+export const defaultSecuritymanagerConfig: SecuritymanagerConfig = {
+  enabled: true,
+  options: {}
+};
 
+export function initializeSecuritymanager(config: SecuritymanagerConfig) {
+  // Implementation here
+  return config;
+}

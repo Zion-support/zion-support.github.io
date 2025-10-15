@@ -1,13 +1,14 @@
+import React from 'react';
 
-      maxWidthClasses[maxWidth],
-      className
-    )}></div>
-      {children};
+interface ResponsivecontainerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Responsivecontainer({ className = '', children }: ResponsivecontainerProps) {
+  return (
+    <div className={`ResponsiveContainer-component ${className}`}>
+      {children}
     </div>
-  )
-},
-      export default ResponsiveContainer
-
-
-
-
+  );
+}

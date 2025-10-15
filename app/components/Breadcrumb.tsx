@@ -1,15 +1,14 @@
+import React from 'react';
 
-                {displayName};
-              </>
-            )};
-          </React.Fragment>
-        )
-      })};
->>>>>>> main
-    </nav>
-  )
-};
+interface BreadcrumbProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-
-
-
+export default function Breadcrumb({ className = '', children }: BreadcrumbProps) {
+  return (
+    <div className={`Breadcrumb-component ${className}`}>
+      {children}
+    </div>
+  );
+}

@@ -1,15 +1,16 @@
+// Useseo utilities and types
 
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);};
-      return () => {};
-        if (document.head.contains(script)) {};
-          document.head.removeChild(script);};
-        };
-      };
-    };
-    return undefined;
-  }, [
-    structuredData";"
-  ";";"
-  ]);";";";"
-}"
+export interface UseseoConfig {
+  enabled: boolean;
+  options: Record<string, any>;
+}
+
+export const defaultUseseoConfig: UseseoConfig = {
+  enabled: true,
+  options: {}
+};
+
+export function initializeUseseo(config: UseseoConfig) {
+  // Implementation here
+  return config;
+}

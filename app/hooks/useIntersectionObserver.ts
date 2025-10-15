@@ -1,17 +1,16 @@
+// Useintersectionobserver utilities and types
 
-) {
-    const ref = useRef<HTMLElement>(null);
+export interface UseintersectionobserverConfig {
+  enabled: boolean;
+  options: Record<string, any>;
+}
 
-  useEffect(() => {
+export const defaultUseintersectionobserverConfig: UseintersectionobserverConfig = {
+  enabled: true,
+  options: {}
+};
 
-      ...options;
-  
-  });
-
-    observer.observe(element);
-
-    return () => {
-      observer.unobserve(element);
-    };
-
-
+export function initializeUseintersectionobserver(config: UseintersectionobserverConfig) {
+  // Implementation here
+  return config;
+}

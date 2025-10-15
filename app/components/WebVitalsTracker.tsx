@@ -1,29 +1,14 @@
+import React from 'react';
 
-interface WebVitalsData {},
-      name: string,
-  value: number
-  delta: number,
-  id: string
-  navigationType: string
+interface WebvitalstrackerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-    },
-    {};
-    };
-    // Track Core Web Vitals
-    onCLS(sendToAnalytics)
-    onINP(sendToAnalytics); // INP replaces FID in newer versions
-    onFCP(sendToAnalytics)
-
-    },
-    {};
-  }, [
-  ])
-  return null";"
-},";";"
-      
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
-
-
-
-
+export default function Webvitalstracker({ className = '', children }: WebvitalstrackerProps) {
+  return (
+    <div className={`WebVitalsTracker-component ${className}`}>
+      {children}
+    </div>
+  );
+}

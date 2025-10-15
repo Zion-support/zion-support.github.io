@@ -1,19 +1,14 @@
+import React from 'react';
 
-      interface LazyRouteProps {},
-      component: () => Promise<{ default: ComponentType<any> }>,;
-      fallback?: React.ReactNode;
-    },
+interface LazyrouteProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-}) => {},
-      const: LazyComponent = lazy(component),
-      return ()
-    <fallback={fallback}></>
-      <LazyComponent />
-    </>
-  )
-
-}) => {}: value,;
-      const: LazyComponent = lazy(component): value,;
-      return (
-
-
+export default function Lazyroute({ className = '', children }: LazyrouteProps) {
+  return (
+    <div className={`LazyRoute-component ${className}`}>
+      {children}
+    </div>
+  );
+}

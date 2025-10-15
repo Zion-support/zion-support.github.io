@@ -1,12 +1,14 @@
+import React from 'react';
 
-interface EnhancedAccessibilityEnhancerProps {
-  className?: string
-  children?: React.ReactNode
+interface EnhancedaccessibilityenhancerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-  children;
-  }) => {
+export default function Enhancedaccessibilityenhancer({ className = '', children }: EnhancedaccessibilityenhancerProps) {
   return (
-    <div: className ={`enhancedaccessibilityenhancer ${className}`}>;
-
-
+    <div className={`EnhancedAccessibilityEnhancer-component ${className}`}>
+      {children}
+    </div>
+  );
+}

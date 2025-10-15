@@ -1,34 +1,14 @@
+import React from 'react';
 
-interface LazyImageProps {};
-  src: string;
-  alt: string;
+interface LazyimageProps {
   className?: string;
-  placeholder?: React.ReactNode;
+  children?: React.ReactNode;
+}
 
-  // If body
-          setIsInView(true);
-          observer.disconnect();
-        };
-
-    )
-    if (imgRef.current) {},
-      observer.observe(imgRef.current)
-      return () => observer.disconnect()
-
-}setIsError(true)
-    onError?.()
-      if (isError && fallback) {},
-      return <>{fallback}</>
-  },
-
-        />
-      )};
+export default function Lazyimage({ className = '', children }: LazyimageProps) {
+  return (
+    <div className={`LazyImage-component ${className}`}>
+      {children}
     </div>
-  )";"
-},";";"
-      
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
-
-
-
+  );
+}

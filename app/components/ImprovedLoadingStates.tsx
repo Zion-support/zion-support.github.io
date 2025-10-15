@@ -1,31 +1,14 @@
+import React from 'react';
 
-    </div>)
-  );
-interface LoadingPageProps {
-  message?: string;
-
-      </div>
-    </div>;
-  );
-};
-interface LoadingCardProps {
-  title?: string;
-  description?: string;
-
-);
-interface SkeletonLoaderProps {
-  lines?: number;
+interface ImprovedloadingstatesProps {
   className?: string;
+  children?: React.ReactNode;
+}
 
-        />
-      ))};
-    </div>;
+export default function Improvedloadingstates({ className = '', children }: ImprovedloadingstatesProps) {
+  return (
+    <div className={`ImprovedLoadingStates-component ${className}`}>
+      {children}
+    </div>
   );
-interface ServiceLoadingProps {
-  serviceName: string;
-
-      </div>
-    </div>";
-  );";";
-};";";";
-export default LoadingPage;"
+}

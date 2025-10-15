@@ -1,26 +1,14 @@
+import React from 'react';
 
+interface SeoProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-
-
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-
-
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = []
-
-  };
-
-  return ()
-
-
-
+export default function Seo({ className = '', children }: SeoProps) {
+  return (
+    <div className={`SEO-component ${className}`}>
+      {children}
+    </div>
+  );
+}

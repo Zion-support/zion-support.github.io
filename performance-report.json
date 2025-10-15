@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-10-15T14:02:34.155Z",
-=======
-  "timestamp": "2025-10-15T14:03:44.291Z",
->>>>>>> cursor/fix-errors-and-merge-to-main-5b1b
+  "timestamp": "2025-10-15T14:15:05.385Z",
   "optimizations": {
     "criticalCSS": true,
     "imageOptimization": true,

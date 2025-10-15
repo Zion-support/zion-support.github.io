@@ -1,13 +1,14 @@
+import React from 'react';
 
-      declare global {},
-      interface Window {},
-      gtag: (_...args: unknown[
-  ]) => void
-      const Analytics: React.FC = () => {};
-}useEffect(() => {};
+interface AnalyticsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-          page_title: document.title;
-          page_location: window.location.href})
-    initAnalytics()
-
-
+export default function Analytics({ className = '', children }: AnalyticsProps) {
+  return (
+    <div className={`Analytics-component ${className}`}>
+      {children}
+    </div>
+  );
+}

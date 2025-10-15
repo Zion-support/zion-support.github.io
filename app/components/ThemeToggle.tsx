@@ -1,9 +1,14 @@
+import React from 'react';
 
-interface ThemeToggleProps {},
-
-interface $1 { [key: string]: any },;
-      children?: React.ReactNode;
+interface ThemetoggleProps {
   className?: string;
-  title?: string;
+  children?: React.ReactNode;
+}
 
-
+export default function Themetoggle({ className = '', children }: ThemetoggleProps) {
+  return (
+    <div className={`ThemeToggle-component ${className}`}>
+      {children}
+    </div>
+  );
+}

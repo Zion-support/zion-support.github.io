@@ -1,20 +1,23 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-              Get Started Today;
-            </button>;
-          </div>;
-        </div>;
-      </div>;";"
-    </div>;";";"
-  );";";";"
-import React from 'react';";";";";"
-import SEOHead from '../../components/SEOHead";"'
-
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-
-export default AppPage;'";'";"
+export default function PageBackupPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Page Backup | Zion Tech Group</title>
+        <meta name="description" content="Page Backup solutions and services from Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">Page Backup</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our page backup solutions and services designed to help your business grow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

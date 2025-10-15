@@ -1,24 +1,14 @@
+import React from 'react';
 
-      metric_name: data.name,
-      metric_value: Math.round(data.value),
-      metric_delta: Math.round(data.delta),
-      metric_id: data.id,
-      metric_navigation_type: data.navigationType
+interface CorewebvitalsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-      metric: data.name,
-      value: data.value,
-      delta: data.delta,
-      id: data.id
-      })
-    // Log in development;
-if ($1) {};
-  // If body
-  }, [";"
-    ";";"
-  ]);";";";"
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
-
-
-
-
+export default function Corewebvitals({ className = '', children }: CorewebvitalsProps) {
+  return (
+    <div className={`CoreWebVitals-component ${className}`}>
+      {children}
+    </div>
+  );
+}

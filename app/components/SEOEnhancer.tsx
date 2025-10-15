@@ -1,24 +1,14 @@
+import React from 'react';
 
-interface SEOEnhancerProps {};
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: Record<string>
-  noIndex?: boolean;
+interface SeoenhancerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-      };
-    ];
-  },
-
-    </Helmet>
-  )
-},
-      export default SEOEnhancer
-
-
-
-
+export default function Seoenhancer({ className = '', children }: SeoenhancerProps) {
+  return (
+    <div className={`SEOEnhancer-component ${className}`}>
+      {children}
+    </div>
+  );
+}

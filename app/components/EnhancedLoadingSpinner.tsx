@@ -1,18 +1,14 @@
+import React from 'react';
 
-          This page is under development.;
-        </p>;
-      </div>;";"
-    </div>;";";"
-  );";";";"
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
+interface EnhancedloadingspinnerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-
-export default ComponentsPage;'";'";"
+export default function Enhancedloadingspinner({ className = '', children }: EnhancedloadingspinnerProps) {
+  return (
+    <div className={`EnhancedLoadingSpinner-component ${className}`}>
+      {children}
+    </div>
+  );
+}

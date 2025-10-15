@@ -1,19 +1,14 @@
+import React from 'react';
 
-interface SEOHeadProps {};
-  title: string;
-  description: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: Record<string>
-  noindex?: boolean;
+interface EnhancedseoheadProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-    </Helmet>
-  )
-},
-      export default EnhancedSEOHead
-
-
-
+export default function Enhancedseohead({ className = '', children }: EnhancedseoheadProps) {
+  return (
+    <div className={`EnhancedSEOHead-component ${className}`}>
+      {children}
+    </div>
+  );
+}

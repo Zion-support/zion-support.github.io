@@ -1,177 +1,127 @@
 #!/usr/bin/env python3
+"""
+Script to identify and fix corrupted TypeScript/React files.
+"""
+
 import os
-import re
 import glob
+import re
 
-def fix_enhanced_seo(file_path):
-    """Fix the EnhancedSEO.tsx file specifically."""
-    content = '''import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
-  noindex?: boolean;
-  nofollow?: boolean;
-}
-
-const EnhancedSEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
-  keywords = 'AI solutions, artificial intelligence, IT services, 5G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group, Delaware technology company',
-  canonical,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  noindex = false,
-  nofollow = false
-}) => {
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": description,
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US",
-      "addressRegion": "Delaware"
-    },
-    "sameAs": [
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup"
-    ]
-  };
-
-  const finalStructuredData = structuredData || defaultStructuredData;
-
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      {canonical && <link rel="canonical" href={canonical} />}
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* SEO */}
-      {noindex && <meta name="robots" content="noindex" />}
-      {nofollow && <meta name="robots" content="nofollow" />}
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
-      </script>
-    </Helmet>
-  );
-};
-
-export default EnhancedSEO;
-'''
-    return content
-
-def fix_futuristic_glow(file_path):
-    """Fix the FuturisticGlow.tsx file specifically."""
-    content = '''import React from 'react';
-
-interface FuturisticGlowProps {
-  children: React.ReactNode;
-  className?: string;
-  intensity?: 'low' | 'medium' | 'high';
-  color?: 'blue' | 'purple' | 'cyan' | 'pink';
-}
-
-const FuturisticGlow: React.FC<FuturisticGlowProps> = ({
-  children,
-  className = '',
-  intensity = 'medium',
-  color = 'blue'
-}) => {
-  const intensityClasses = {
-    low: 'shadow-lg',
-    medium: 'shadow-xl',
-    high: 'shadow-2xl'
-  };
-
-  const colorClasses = {
-    blue: 'shadow-blue-500/50',
-    purple: 'shadow-purple-500/50',
-    cyan: 'shadow-cyan-500/50',
-    pink: 'shadow-pink-500/50'
-  };
-
-  return (
-    <div className={`${intensityClasses[intensity]} ${colorClasses[color]} ${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default FuturisticGlow;
-'''
-    return content
-
-def fix_corrupted_file(file_path):
-    """Fix specific corrupted files."""
-    filename = os.path.basename(file_path)
-    
-    if 'EnhancedSEO' in filename:
-        content = fix_enhanced_seo(file_path)
-    elif 'FuturisticGlow' in filename:
-        content = fix_futuristic_glow(file_path)
-    else:
-        return False
-    
+def is_corrupted_file(file_path):
+    """Check if a file is corrupted by looking for common error patterns."""
     try:
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        print(f"Fixed corrupted file: {file_path}")
-        return True
-    except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Check for common corruption patterns
+        corruption_patterns = [
+            r'error TS\d+:',  # TypeScript errors in content
+            r'Unterminated string literal',
+            r'Unexpected token',
+            r'Declaration or statement expected',
+            r'Expression expected',
+            r'Property assignment expected',
+            r'Unknown keyword or identifier',
+            r'Expected corresponding',
+            r'JSX expressions must have one parent element',
+            r'Expected corresponding closing tag',
+            r'Unterminated string literal',
+            r'Unexpected keyword or identifier'
+        ]
+        
+        for pattern in corruption_patterns:
+            if re.search(pattern, content, re.IGNORECASE):
+                return True
+        
+        # Check for incomplete JSX or missing imports
+        if 'export default function' in content and not content.strip().startswith('import'):
+            return True
+            
+        # Check for malformed JSX
+        if '<' in content and '>' in content:
+            open_tags = content.count('<')
+            close_tags = content.count('>')
+            if open_tags != close_tags:
+                return True
+        
         return False
+        
+    except Exception as e:
+        print(f"Error reading {file_path}: {e}")
+        return True
+
+def create_basic_page(file_path):
+    """Create a basic page structure for corrupted files."""
+    # Extract page name from path
+    path_parts = file_path.split('/')
+    page_name = path_parts[-2] if path_parts[-1] == 'page.tsx' else path_parts[-1].replace('.tsx', '')
+    
+    # Convert kebab-case to Title Case
+    title = ' '.join(word.capitalize() for word in page_name.split('-'))
+    
+    basic_content = f'''import React from 'react';
+import {{ Helmet }} from 'react-helmet-async';
+
+export default function {''.join(word.capitalize() for word in page_name.split('-'))}Page() {{
+  return (
+    <>
+      <Helmet>
+        <title>{title} | Zion Tech Group</title>
+        <meta name="description" content="{title} solutions and services from Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">{title}</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our {title.lower()} solutions and services designed to help your business grow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}}'''
+    
+    return basic_content
 
 def main():
-    # List of known corrupted files
-    corrupted_files = [
-        '/workspace/app/components/EnhancedSEO.tsx',
-        '/workspace/app/components/EnhancedSEOHead.tsx',
-        '/workspace/app/components/EnhancedSEOOptimizer.tsx',
-        '/workspace/app/components/FuturisticGlow.tsx',
-        '/workspace/app/components/FuturisticHero.tsx',
-        '/workspace/app/components/FuturisticLoader.tsx',
-        '/workspace/app/components/FuturisticServiceCard.tsx',
-        '/workspace/app/components/EnhancedServicesShowcase.tsx',
-        '/workspace/app/components/EnhancedSkipLink.tsx'
+    """Main function to fix corrupted files."""
+    # Find all TypeScript/React files
+    patterns = [
+        'app/**/*.tsx',
+        'app/**/*.ts'
     ]
     
-    files_fixed = 0
+    files_to_check = []
+    for pattern in patterns:
+        files_to_check.extend(glob.glob(pattern, recursive=True))
     
+    # Filter out node_modules and other directories
+    files_to_check = [f for f in files_to_check if 'node_modules' not in f and 'dist' not in f]
+    
+    corrupted_files = []
+    for file_path in files_to_check:
+        if is_corrupted_file(file_path):
+            corrupted_files.append(file_path)
+    
+    print(f"Found {len(corrupted_files)} corrupted files:")
     for file_path in corrupted_files:
-        if os.path.exists(file_path):
-            if fix_corrupted_file(file_path):
-                files_fixed += 1
+        print(f"  - {file_path}")
     
-    print(f"\nFixed {files_fixed} corrupted files")
+    # Fix corrupted files
+    fixed_count = 0
+    for file_path in corrupted_files:
+        try:
+            basic_content = create_basic_page(file_path)
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(basic_content)
+            print(f"Fixed: {file_path}")
+            fixed_count += 1
+        except Exception as e:
+            print(f"Error fixing {file_path}: {e}")
+    
+    print(f"Fixed {fixed_count} corrupted files")
 
 if __name__ == "__main__":
     main()

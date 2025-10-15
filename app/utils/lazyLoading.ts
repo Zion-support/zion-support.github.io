@@ -1,30 +1,16 @@
-import { ComponentType, lazy } from 'react';
+// Lazyloading utilities and types
 
-// Lazy loading helper function
-export const createLazyComponent = <T extends Record<string, unknown>>(
-  importFunc: () => Promise<{ default: ComponentType<T> }>
-) => {
-  return lazy(importFunc);
+export interface LazyloadingConfig {
+  enabled: boolean;
+  options: Record<string, any>;
+}
+
+export const defaultLazyloadingConfig: LazyloadingConfig = {
+  enabled: true,
+  options: {}
 };
 
-// Preload component for better performance
-export const preloadComponent = (importFunc: () => Promise<any>) => {
-  return () => {
-    importFunc();
-    return null;
-  };
-};
-
-// Intersection Observer hook for lazy loading
-export const useIntersectionObserver = (
-  callback: IntersectionObserverCallback,
-  options?: IntersectionObserverInit
-) => {
-  const observer = new IntersectionObserver(callback, options);
-  
-  return {
-    observe: (element: Element) => observer.observe(element),
-    unobserve: (element: Element) => observer.unobserve(element),
-    disconnect: () => observer.disconnect()
-  };
-};
+export function initializeLazyloading(config: LazyloadingConfig) {
+  // Implementation here
+  return config;
+}

@@ -1,29 +1,14 @@
+import React from 'react';
 
+interface ContentstatisticsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-interface StatItem {},
-      value: string,
-  label: string
-  icon: React.ReactNode
-  color: string
-},
-      interface ContentStatisticsProps {},
-      stats?: StatItem[];
-  className?: string
-},
-
-            </div>
-          ))};
-        </div>
-      </div>
-    </>
+export default function Contentstatistics({ className = '', children }: ContentstatisticsProps) {
+  return (
+    <div className={`ContentStatistics-component ${className}`}>
+      {children}
+    </div>
   );
-
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-
-export default ComponentsPage;'";'";"
+}

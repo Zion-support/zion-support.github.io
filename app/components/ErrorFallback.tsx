@@ -1,17 +1,14 @@
+import React from 'react';
 
-interface ErrorFallbackProps {},
-      error: Error,
-  resetErrorBoundary: () => void
-},
+interface ErrorfallbackProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-          Try Again
-        </button>
-      </div>";
-    </div>";";
-  );";";";
-},"
-      export default ErrorFallback;"'""
-
-
-
-
+export default function Errorfallback({ className = '', children }: ErrorfallbackProps) {
+  return (
+    <div className={`ErrorFallback-component ${className}`}>
+      {children}
+    </div>
+  );
+}
