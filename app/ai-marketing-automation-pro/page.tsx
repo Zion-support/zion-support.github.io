@@ -1,8 +1,179 @@
-import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, Briefcase, CheckCircle, FileText, Mail, Mail as MailIcon, Monitor, Phone, Play, Share2, Shield, Star } from 'lucide-react';
+import { ArrowRight, CheckCircle, Mail, Phone, Play, Star } from 'lucide-react';
 
 const AIMarketingAutomationProPage = () => {
+  const isVisible = true;
+  
+  const features = [
+    {
+      title: "AI-Powered Campaigns",
+      description: "Automated marketing campaigns that adapt and optimize based on customer behavior and engagement.",
+      icon: "🤖",
+      benefits: ["Behavioral targeting", "Dynamic content", "A/B testing", "Performance optimization"]
+    },
+    {
+      title: "Customer Segmentation",
+      description: "Advanced AI algorithms to segment customers and personalize marketing messages.",
+      icon: "👥",
+      benefits: ["Smart segmentation", "Personalization", "Customer insights", "Targeted messaging"]
+    },
+    {
+      title: "Email Marketing",
+      description: "Intelligent email campaigns with automated triggers and personalized content.",
+      icon: "📧",
+      benefits: ["Automated triggers", "Personalized content", "Send time optimization", "Engagement tracking"]
+    },
+    {
+      title: "Social Media Management",
+      description: "AI-powered social media scheduling, content creation, and engagement optimization.",
+      icon: "📱",
+      benefits: ["Content scheduling", "Engagement optimization", "Trend analysis", "Multi-platform management"]
+    },
+    {
+      title: "Lead Scoring",
+      description: "Automated lead qualification and scoring based on behavior and engagement patterns.",
+      icon: "🎯",
+      benefits: ["Behavioral scoring", "Lead qualification", "Conversion prediction", "Sales alignment"]
+    },
+    {
+      title: "Analytics & Reporting",
+      description: "Comprehensive analytics dashboard with AI-powered insights and recommendations.",
+      icon: "📊",
+      benefits: ["Real-time analytics", "AI insights", "Performance tracking", "ROI optimization"]
+    }
+  ];
+
+  const channels = [
+    {
+      name: "Email Marketing",
+      description: "Automated email campaigns with personalization and optimization",
+      icon: "📧"
+    },
+    {
+      name: "Social Media",
+      description: "Multi-platform social media management and engagement",
+      icon: "📱"
+    },
+    {
+      name: "SMS Marketing",
+      description: "Text message campaigns with high open rates",
+      icon: "💬"
+    },
+    {
+      name: "Push Notifications",
+      description: "Mobile and web push notifications for engagement",
+      icon: "🔔"
+    },
+    {
+      name: "Web Personalization",
+      description: "Dynamic website content based on visitor behavior",
+      icon: "🌐"
+    },
+    {
+      name: "Retargeting",
+      description: "Display ads targeting previous website visitors",
+      icon: "🎯"
+    }
+  ];
+
+  const useCases = [
+    {
+      title: "E-commerce",
+      description: "Complete marketing automation for online stores with personalized product recommendations.",
+      features: ["Product recommendations", "Abandoned cart recovery", "Customer lifecycle", "Purchase tracking"],
+      icon: "🛒",
+      benefits: ["Increased sales", "Higher conversion", "Customer retention", "Personalized experience"]
+    },
+    {
+      title: "SaaS Companies",
+      description: "Lead nurturing and customer onboarding automation for software companies.",
+      features: ["Lead nurturing", "Onboarding sequences", "Feature adoption", "Churn prevention"],
+      icon: "💻",
+      benefits: ["Higher trial conversion", "Reduced churn", "Feature adoption", "Customer success"]
+    },
+    {
+      title: "B2B Services",
+      description: "Account-based marketing and lead qualification for service businesses.",
+      features: ["Account-based marketing", "Lead scoring", "Sales alignment", "Content personalization"],
+      icon: "🏢",
+      benefits: ["Better lead quality", "Sales efficiency", "Account engagement", "Revenue growth"]
+    },
+    {
+      title: "Content Marketing",
+      description: "Content distribution and engagement automation for content creators.",
+      features: ["Content scheduling", "Audience targeting", "Engagement tracking", "Content optimization"],
+      icon: "📝",
+      benefits: ["Increased reach", "Higher engagement", "Content performance", "Audience growth"]
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$99",
+      period: "month",
+      description: "Perfect for small businesses and startups",
+      features: [
+        "Up to 1,000 contacts",
+        "Basic automation",
+        "Email marketing",
+        "Email support"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$299",
+      period: "month",
+      description: "Ideal for growing businesses",
+      features: [
+        "Up to 10,000 contacts",
+        "Advanced automation",
+        "All channels",
+        "Priority support",
+        "Custom integrations"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "Custom",
+      period: "contact",
+      description: "Complete solution for large organizations",
+      features: [
+        "Unlimited contacts",
+        "Full AI suite",
+        "White-label options",
+        "Dedicated support",
+        "Custom development",
+        "Advanced analytics"
+      ],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "Marketing Director",
+      company: "TechStart Inc.",
+      content: "AI Marketing Automation Pro has increased our lead conversion by 300% and reduced our marketing workload by 60%.",
+      rating: 5
+    },
+    {
+      name: "Mike Chen",
+      role: "CEO",
+      company: "E-commerce Solutions",
+      content: "The personalized campaigns have dramatically improved our customer engagement and sales. ROI increased by 250%.",
+      rating: 5
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "Marketing Manager",
+      company: "SaaS Platform",
+      content: "The automation features have streamlined our entire marketing process. We can now focus on strategy instead of execution.",
+      rating: 5
+    }
+  ];
   return (
     <>
       { /* Animated Background */ }
@@ -283,8 +454,7 @@ const AIMarketingAutomationProPage = () => {
             </div>
           </section>
         </main>
-      </div>
     </>
   );
 };
-export default AiMarketingAutomationProPage;
+export default AIMarketingAutomationProPage;

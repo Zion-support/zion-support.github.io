@@ -1,4 +1,4 @@
-import { Code, Zap, Brain, Shield, CheckCircle, Terminal, Bug, FileText, Sparkles, Award, Users, Star, ArrowRight } from 'lucide-react';
+import { Code, Zap, Brain, Shield, CheckCircle, ArrowRight, Terminal, Bug, FileText, Sparkles, Award, Users, Star } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';

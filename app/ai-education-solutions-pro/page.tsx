@@ -1,8 +1,190 @@
-import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, Award, Award as AwardIcon, AwardIcon, Book, BookOpen, Brain, Briefcase, CheckCircle, Download, Download as DownloadIcon, DownloadIcon, GraduationCap, Mail, Monitor, Phone, Play, Shield, Star, Target, Target as TargetIcon, TargetIcon, Users, Users as UsersIcon, UsersIcon } from 'lucide-react';
+import { ArrowRight, CheckCircle, Mail, Phone, Play, Star } from 'lucide-react';
 
 const AIEducationSolutionsProPage = () => {
+  const isVisible = true;
+  
+  const features = [
+    {
+      title: "AI-Powered Learning Paths",
+      description: "Personalized curriculum based on individual learning patterns and performance analytics.",
+      icon: "🎯",
+      benefits: ["Adaptive learning", "Performance tracking", "Personalized content", "Progress monitoring"]
+    },
+    {
+      title: "Virtual Classrooms",
+      description: "Immersive 3D learning environments with real-time collaboration tools.",
+      icon: "🏫",
+      benefits: ["3D environments", "Real-time collaboration", "Interactive tools", "Virtual labs"]
+    },
+    {
+      title: "Smart Assessment",
+      description: "Automated grading and feedback with detailed performance insights.",
+      icon: "📊",
+      benefits: ["Automated grading", "Detailed feedback", "Performance analytics", "Adaptive testing"]
+    },
+    {
+      title: "Content Generation",
+      description: "AI-generated educational content tailored to specific subjects and difficulty levels.",
+      icon: "📝",
+      benefits: ["AI content creation", "Subject-specific materials", "Difficulty adaptation", "Multimedia support"]
+    },
+    {
+      title: "Progress Tracking",
+      description: "Comprehensive analytics dashboard for students, teachers, and administrators.",
+      icon: "📈",
+      benefits: ["Real-time analytics", "Progress dashboards", "Performance reports", "Goal tracking"]
+    },
+    {
+      title: "Accessibility Tools",
+      description: "Built-in support for students with learning disabilities and special needs.",
+      icon: "♿",
+      benefits: ["Screen readers", "Voice commands", "Text-to-speech", "Visual aids"]
+    }
+  ];
+
+
+  const subjects = [
+    {
+      name: "Mathematics & Statistics",
+      description: "Advanced mathematical concepts and statistical analysis",
+      icon: "📊"
+    },
+    {
+      name: "Science & Engineering",
+      description: "STEM subjects with hands-on experiments and projects",
+      icon: "🔬"
+    },
+    {
+      name: "Language Arts & Literature",
+      description: "Reading, writing, and literary analysis",
+      icon: "📚"
+    },
+    {
+      name: "History & Social Studies",
+      description: "Historical analysis and social science research",
+      icon: "🏛️"
+    },
+    {
+      name: "Computer Science & Programming",
+      description: "Coding, algorithms, and software development",
+      icon: "💻"
+    },
+    {
+      name: "Arts & Creative Writing",
+      description: "Creative expression and artistic development",
+      icon: "🎨"
+    },
+    {
+      name: "Business & Economics",
+      description: "Economic principles and business management",
+      icon: "💼"
+    },
+    {
+      name: "Health & Physical Education",
+      description: "Physical fitness and health education",
+      icon: "🏃"
+    }
+  ];
+
+  const useCases = [
+    {
+      title: "K-12 Education",
+      description: "Comprehensive AI-powered learning platform for primary and secondary education.",
+      features: ["Adaptive learning paths", "Parent-teacher communication", "Progress tracking"],
+      icon: "🎓",
+      benefits: ["Age-appropriate content", "Parent engagement", "Teacher tools"]
+    },
+    {
+      title: "Higher Education",
+      description: "Advanced AI tools for universities and colleges with research capabilities.",
+      features: ["Research assistance", "Thesis support", "Academic integrity tools"],
+      icon: "🎓",
+      benefits: ["Research support", "Academic integrity", "Advanced analytics"]
+    },
+    {
+      title: "Corporate Training",
+      description: "Professional development and skill enhancement for employees.",
+      features: ["Skill assessment", "Custom training modules", "Certification tracking"],
+      icon: "💼",
+      benefits: ["Professional development", "Skill tracking", "Certification management"]
+    },
+    {
+      title: "Special Education",
+      description: "Specialized tools for students with learning disabilities and special needs.",
+      features: ["Accessibility features", "Individualized support", "Progress monitoring"],
+      icon: "♿",
+      benefits: ["Accessibility tools", "Individualized learning", "Specialized support"]
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$99",
+      period: "month",
+      description: "Perfect for small schools and individual educators",
+      features: [
+        "Up to 100 students",
+        "Basic AI learning paths",
+        "Standard assessment tools",
+        "Email support"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$299",
+      period: "month",
+      description: "Ideal for medium-sized institutions",
+      features: [
+        "Up to 500 students",
+        "Advanced AI features",
+        "Virtual classroom tools",
+        "Priority support",
+        "Custom content generation"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "Custom",
+      period: "contact",
+      description: "Complete solution for large educational organizations",
+      features: [
+        "Unlimited students",
+        "Full AI suite",
+        "White-label options",
+        "Dedicated support",
+        "Custom integrations",
+        "Advanced analytics"
+      ],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Dr. Sarah Johnson",
+      role: "Principal",
+      company: "Lincoln High School",
+      content: "AI Education Solutions Pro has transformed our teaching methods. Student engagement has increased by 60% and test scores are up 40%.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      role: "Computer Science Professor",
+      company: "MIT",
+      content: "The AI-powered content generation saves me hours every week. The quality of generated materials is exceptional.",
+      rating: 5
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "Special Education Teacher",
+      company: "Inclusive Learning Center",
+      content: "The accessibility features have made learning accessible to all my students. It's truly inclusive education.",
+      rating: 5
+    }
+  ];
   return (
     <>
       { /* Animated Background */ }
@@ -281,8 +463,7 @@ const AIEducationSolutionsProPage = () => {
             </div>
           </section>
         </main>
-      </div>
     </>
   );
 };
-export default AiEducationSolutionsProPage;
+export default AIEducationSolutionsProPage;
