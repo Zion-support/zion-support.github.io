@@ -3,7 +3,7 @@
 """
 Comprehensive script to fix all remaining issues in TSX/TS files
 """
-
+>>>>>>> origin/main
 import os
 import re
 import glob
@@ -141,7 +141,7 @@ def fix_missing_closing_braces(content):
 
 def fix_file(file_path):
     """Fix a single file"""
-
+>>>>>>> origin/main
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -163,7 +163,8 @@ def fix_file(file_path):
         else:
             print(f"No changes needed: {file_path}")
             return False
-
+            
+>>>>>>> origin/main
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
         return False
@@ -191,6 +192,7 @@ def main():
             fixed_count += 1
     
     print(f"Fixed {fixed_count} files")
+>>>>>>> origin/main
 
 if __name__ == "__main__":
     main()

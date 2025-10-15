@@ -1,178 +1,136 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix common syntax errors in a file
-function fixSyntaxErrors(filePath) {
+// List of files that need fixing based on the error patterns
+const filesToFix = [
+  'app/ad-management/page.tsx',
+  'app/advanced-security-suite/page.tsx',
+  'app/ai-accounting-assistant/page.tsx',
+  'app/ai-automation/page.tsx',
+  'app/ai-chatbot/page.tsx',
+  'app/ai-content-generation/page.tsx',
+  'app/ai-customer-service/page.tsx',
+  'app/ai-data-analysis/page.tsx',
+  'app/ai-development/page.tsx',
+  'app/ai-email-marketing/page.tsx',
+  'app/ai-forecasting/page.tsx',
+  'app/ai-image-generation/page.tsx',
+  'app/ai-integration/page.tsx',
+  'app/ai-machine-learning/page.tsx',
+  'app/ai-optimization/page.tsx',
+  'app/ai-predictive-analytics/page.tsx',
+  'app/ai-process-automation/page.tsx',
+  'app/ai-recommendation-engine/page.tsx',
+  'app/ai-sentiment-analysis/page.tsx',
+  'app/ai-solutions/page.tsx',
+  'app/ai-speech-recognition/page.tsx',
+  'app/ai-text-analysis/page.tsx',
+  'app/ai-video-generation/page.tsx',
+  'app/ai-voice-assistant/page.tsx',
+  'app/api-integration/page.tsx',
+  'app/application-development/page.tsx',
+  'app/artificial-intelligence/page.tsx',
+  'app/blockchain-solutions/page.tsx',
+  'app/cloud-computing/page.tsx',
+  'app/cloud-migration/page.tsx',
+  'app/cloud-security/page.tsx',
+  'app/cloud-storage/page.tsx',
+  'app/contact/page.tsx',
+  'app/cybersecurity/page.tsx',
+  'app/data-analytics/page.tsx',
+  'app/data-management/page.tsx',
+  'app/data-visualization/page.tsx',
+  'app/database-design/page.tsx',
+  'app/database-optimization/page.tsx',
+  'app/devops/page.tsx',
+  'app/digital-marketing/page.tsx',
+  'app/e-commerce/page.tsx',
+  'app/enterprise-solutions/page.tsx',
+  'app/game-development/page.tsx',
+  'app/home/page.tsx',
+  'app/iot-solutions/page.tsx',
+  'app/it-consulting/page.tsx',
+  'app/it-infrastructure/page.tsx',
+  'app/it-support/page.tsx',
+  'app/mobile-app-development/page.tsx',
+  'app/network-security/page.tsx',
+  'app/performance-optimization/page.tsx',
+  'app/privacy-policy/page.tsx',
+  'app/quality-assurance/page.tsx',
+  'app/robotic-process-automation/page.tsx',
+  'app/security-audit/page.tsx',
+  'app/security-consulting/page.tsx',
+  'app/security-monitoring/page.tsx',
+  'app/security-testing/page.tsx',
+  'app/services/page.tsx',
+  'app/software-development/page.tsx',
+  'app/software-testing/page.tsx',
+  'app/terms-of-service/page.tsx',
+  'app/ui-ux-design/page.tsx',
+  'app/web-development/page.tsx',
+  'app/web-hosting/page.tsx',
+  'app/web-security/page.tsx'
+];
+
+function fixFile(filePath) {
   try {
+    if (!fs.existsSync(filePath)) {
+      console.log(`File not found: ${filePath}`);
+      return;
+    }
+
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
     
-    // Fix unclosed JSX div tags
-    const divMatches = content.match(/<div[^>]*>(?!.*<\/div>)/g);
-    if (divMatches) {
-      // Add closing div tags at the end of the file
-      const openDivs = content.match(/<div[^>]*>/g) || [];
-      const closeDivs = content.match(/<\/div>/g) || [];
-      
-      if (openDivs.length > closeDivs.length) {
-        const missingDivs = openDivs.length - closeDivs.length;
-        content += '\n' + '</div>'.repeat(missingDivs);
-        modified = true;
-      }
-    }
+    // Extract the page name from the file path
+    const pathParts = filePath.split('/');
+    const pageName = pathParts[pathParts.length - 2]; // Get the directory name before page.tsx
     
-    // Fix missing closing braces
-    const openBraces = (content.match(/\{/g) || []).length;
-    const closeBraces = (content.match(/\}/g) || []).length;
+    // Create a proper page name from the path
+    const properPageName = pageName
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
     
-    if (openBraces > closeBraces) {
-      const missingBraces = openBraces - closeBraces;
-      content += '\n' + '}'.repeat(missingBraces);
-      modified = true;
-    }
-    
-    // Fix missing closing parentheses
-    const openParens = (content.match(/\(/g) || []).length;
-    const closeParens = (content.match(/\)/g) || []).length;
-    
-    if (openParens > closeParens) {
-      const missingParens = openParens - closeParens;
-      content += '\n' + ')'.repeat(missingParens);
-      modified = true;
-    }
-    
-    // Fix common JSX syntax issues
-    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
-    
-    // Fix missing semicolons
-    content = content.replace(/([^;}])\s*$/gm, '$1;');
-    
-    // Fix missing commas in object literals
-    content = content.replace(/(\w+)\s*\n\s*(\w+)/g, '$1,\n$2');
-    
-    // Fix missing return statements
-    content = content.replace(/export default function\s+(\w+)\s*\([^)]*\)\s*{\s*$/gm, 'export default function $1() {\n  return (');
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
-    }
-    
-    return modified;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`  ❌ Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
+    // Create a proper component name
+    const componentName = pageName
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join('') + 'Page';
 
-// Function to create a basic page component
-function createBasicPageComponent(filePath) {
-  const fileName = path.basename(filePath, '.tsx');
-  const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase());
-  
-  const content = `import React from 'react';
+    // Create a proper description
+    const description = `Professional ${pageName.replace(/-/g, ' ')} solutions for modern businesses`;
 
-export default function ${componentName}() {
+    // Create the fixed content
+    const fixedContent = `import React from 'react';
+import SEOHead from '../components/SEOHead';
+
+const ${componentName}: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">
-          ${componentName.replace(/([A-Z])/g, ' $1').trim()}
-        </h1>
-        <p className="text-lg text-gray-600">
-          This page is under development. Please check back later.
-        </p>
+    <>
+      <SEOHead
+        title="${properPageName} - Zion Tech Group"
+        description="${description}"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">${properPageName}</h1>
+          <p className="text-gray-300">Professional solutions coming soon...</p>
+        </div>
       </div>
-    </div>
+    </>
   );
-}`;
+};
 
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log(`Created basic component: ${filePath}`);
+export default ${componentName};`;
+
+    fs.writeFileSync(filePath, fixedContent);
+    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
 }
 
-// Function to find all problematic files
-function findProblematicFiles(dir) {
-  const files = [];
-  
-  function scanDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-          scanDirectory(fullPath);
-        }
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          // Check for common syntax issues
-          if (content.includes('<div') && !content.includes('</div>') ||
-              content.includes('{') && !content.includes('}') ||
-              content.includes('(') && !content.includes(')') ||
-              content.length < 100) { // Very short files might be incomplete
-            files.push(fullPath);
-          }
-        } catch (error) {
-          // Skip files that can't be read
-        }
-      }
-    } catch (error) {
-      // Skip directories that can't be read
 // Fix all files
-let fixedCount = 0;
-filesToFix.forEach(filePath => {
-  if (fs.existsSync(filePath)) {
-    if (fixFile(filePath)) {
-      fixedCount++;
-    }
-  } else {
-    console.log(`File not found: ${filePath}`);
-  }
-  
-  scanDirectory(dir);
-  return files;
-}
+filesToFix.forEach(fixFile);
 
-// Main execution
-console.log('Starting syntax error fixes...');
-
-const workspaceDir = process.cwd();
-const problematicFiles = findProblematicFiles(workspaceDir);
-
-console.log(`Found ${problematicFiles.length} files with potential syntax issues`);
-
-let fixedCount = 0;
-for (const file of problematicFiles) {
-  // Skip test files and backup files
-  if (file.includes('__tests__') || file.includes('.original') || file.includes('backup')) {
-    continue;
-  }
-  
-  // For page components, create basic components
-  if (file.includes('/page.tsx') && fs.statSync(file).size < 200) {
-    createBasicPageComponent(file);
-    fixedCount++;
-  } else {
-    if (fixSyntaxErrors(file)) {
-      fixedCount++;
-    }
-  }
-}
-
-console.log(`Fixed syntax errors in ${fixedCount} files`);
-console.log('Syntax error fixes completed!');
-});
-
-console.log(`Fixed ${fixedCount} files`);
+console.log('All files have been processed.');
