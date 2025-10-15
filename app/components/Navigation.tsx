@@ -2,7 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
-const Navigation = () => {
+interface NavigationProps {
+  onSidebarToggle: () => void;
+}
+
+const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   return (
     <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,6 +37,15 @@ const Navigation = () => {
               Contact Us
             </Link>
           </nav>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={onSidebarToggle}
+            className="md:hidden text-gray-300 hover:text-white transition-colors p-2"
+            aria-label="Toggle menu"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
         </div>
       </div>
     </header>

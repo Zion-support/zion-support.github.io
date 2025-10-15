@@ -35,6 +35,7 @@ const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
 const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
+const FAQPage = React.lazy(() => import("./app/faq/page"));
 
 // AI Services Pages
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
@@ -169,6 +170,7 @@ function App() {
                                 <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
                                 <Route path="/tutorials" element={<TutorialsPage />} />
                                 <Route path="/support" element={<SupportPage />} />
+                                <Route path="/faq" element={<FAQPage />} />
 
                                 {/* AI Services */}
                                 <Route path="/ai-analytics" element={<AIAnalyticsPage />} />

@@ -15,6 +15,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Micro SAAS', href: '/micro-saas', icon: Zap },
     { name: '5G Solutions', href: '/5g-solutions', icon: Globe },
     { name: 'About', href: '/about', icon: Users },
+    { name: 'Portfolio', href: '/portfolio', icon: BarChart3 },
+    { name: 'Blog', href: '/blog', icon: Globe },
+    { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
+    { name: 'Support', href: '/support', icon: Settings },
     { name: 'Contact', href: '/contact', icon: Settings },
   ];
 
