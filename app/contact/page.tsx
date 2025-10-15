@@ -21,6 +21,7 @@ const ContactPage: React.FC = memo(() => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       // Here you would typically send the data to your backend
+      // In development, log the form data for debugging
       if (process.env.NODE_ENV === 'development') {
         console.log('Form submitted:', data);
       }

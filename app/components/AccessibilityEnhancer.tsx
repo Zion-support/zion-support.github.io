@@ -72,7 +72,7 @@ const AccessibilityEnhancer: React.FC = memo(() => {
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
 
-    // Add CSS for keyboard focus
+    // Add CSS for keyboard focus and accessibility
     const style = document.createElement('style');
     style.textContent = `
       .keyboard-focus {
@@ -101,6 +101,23 @@ const AccessibilityEnhancer: React.FC = memo(() => {
         overflow: visible !important;
         clip: auto !important;
         white-space: normal !important;
+      }
+      
+      /* High contrast mode support */
+      @media (prefers-contrast: high) {
+        .keyboard-focus {
+          outline: 3px solid #000000 !important;
+          outline-offset: 3px !important;
+        }
+      }
+      
+      /* Reduced motion support */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
       }
     `;
     document.head.appendChild(style);

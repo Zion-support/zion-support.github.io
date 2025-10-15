@@ -48,8 +48,11 @@ export const logError = (error: AppError, context?: string) => {
     console.error(`[${context || 'App'}] Error:`, error);
   }
   
-  // In production, you would send this to your error monitoring service
-  // Example: sendToErrorService(error, context);
+  // In production, send to error monitoring service
+  if (process.env.NODE_ENV === 'production') {
+    // Example: sendToErrorService(error, context);
+    // You can integrate with services like Sentry, LogRocket, etc.
+  }
 };
 
 export const createError = (message: string, code?: string, statusCode?: number, details?: any): CustomError => {

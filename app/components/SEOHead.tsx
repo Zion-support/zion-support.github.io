@@ -60,6 +60,17 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="distribution" content="global" />
       <meta name="rating" content="general" />
       
+      {/* Enhanced SEO meta tags */}
+      <meta name="theme-color" content="#3b82f6" />
+      <meta name="msapplication-TileColor" content="#3b82f6" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      
       {/* Structured Data */}
       {structuredData && (
         <script type="application/ld+json">
