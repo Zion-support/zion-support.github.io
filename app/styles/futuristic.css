@@ -1,227 +1,387 @@
-/* Futuristic Design System */
+/* Futuristic Design System for Zion Tech Group */
+
+/* CSS Variables for Futuristic Theme */
 :root {
-  /* Neon Color Palette */
-  --neon-cyan: #00ffff;
+  /* Neon Colors */
+  --neon-blue: #00f5ff;
   --neon-purple: #bf00ff;
-  --neon-pink: #ff0080;
   --neon-green: #00ff41;
-  --neon-blue: #0080ff;
-  --neon-orange: #ff8000;
+  --neon-pink: #ff0080;
+  --neon-cyan: #00ffff;
+  --neon-orange: #ff6600;
   
   /* Dark Theme Colors */
   --dark-bg: #0a0a0a;
   --dark-surface: #1a1a1a;
-  --dark-card: #2a2a2a;
-  --dark-border: #3a3a3a;
+  --dark-surface-2: #2a2a2a;
+  --dark-text: #ffffff;
+  --dark-text-secondary: #b0b0b0;
   
-  /* Gradient Backgrounds */
+  /* Gradients */
   --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-neon: linear-gradient(135deg, #00ffff 0%, #bf00ff 50%, #ff0080 100%);
-  --gradient-dark: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%);
-  --gradient-cyber: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  --gradient-neon: linear-gradient(135deg, #00f5ff 0%, #bf00ff 50%, #ff0080 100%);
+  --gradient-cyber: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%);
+  --gradient-matrix: linear-gradient(135deg, #00ff41 0%, #00f5ff 50%, #bf00ff 100%);
   
-  /* Animation Variables */
+  /* Shadows */
+  --shadow-neon: 0 0 20px rgba(0, 245, 255, 0.5);
+  --shadow-neon-purple: 0 0 20px rgba(191, 0, 255, 0.5);
+  --shadow-neon-green: 0 0 20px rgba(0, 255, 65, 0.5);
+  --shadow-glow: 0 0 30px rgba(0, 245, 255, 0.3);
+  
+  /* Animations */
   --animation-duration: 0.3s;
   --animation-easing: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Neon Glow Effects */
-.neon-glow {
-  box-shadow: 
-    0 0 5px var(--neon-cyan),
-    0 0 10px var(--neon-cyan),
-    0 0 15px var(--neon-cyan),
-    0 0 20px var(--neon-cyan);
+/* Global Futuristic Styles */
+* {
+  box-sizing: border-box;
 }
 
-.neon-glow-purple {
-  box-shadow: 
+body {
+  font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--dark-bg);
+  color: var(--dark-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Animated Background */
+.cyber-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--dark-bg);
+  z-index: -1;
+}
+
+.cyber-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(0, 245, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(191, 0, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(0, 255, 65, 0.05) 0%, transparent 50%);
+  animation: cyberPulse 8s ease-in-out infinite;
+}
+
+@keyframes cyberPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+/* Neon Text Effects */
+.neon-text {
+  color: var(--neon-blue);
+  text-shadow: 
+    0 0 5px var(--neon-blue),
+    0 0 10px var(--neon-blue),
+    0 0 15px var(--neon-blue),
+    0 0 20px var(--neon-blue);
+  animation: neonFlicker 2s infinite alternate;
+}
+
+.neon-text-purple {
+  color: var(--neon-purple);
+  text-shadow: 
     0 0 5px var(--neon-purple),
     0 0 10px var(--neon-purple),
     0 0 15px var(--neon-purple),
     0 0 20px var(--neon-purple);
 }
 
-.neon-glow-pink {
-  box-shadow: 
-    0 0 5px var(--neon-pink),
-    0 0 10px var(--neon-pink),
-    0 0 15px var(--neon-pink),
-    0 0 20px var(--neon-pink);
+.neon-text-green {
+  color: var(--neon-green);
+  text-shadow: 
+    0 0 5px var(--neon-green),
+    0 0 10px var(--neon-green),
+    0 0 15px var(--neon-green),
+    0 0 20px var(--neon-green);
 }
 
-/* Animated Background */
-.cyber-grid {
-  background-image: 
-    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: grid-move 20s linear infinite;
+@keyframes neonFlicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 
+      0 0 5px var(--neon-blue),
+      0 0 10px var(--neon-blue),
+      0 0 15px var(--neon-blue),
+      0 0 20px var(--neon-blue);
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
 }
 
-@keyframes grid-move {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(50px, 50px); }
-}
-
-/* Floating Particles */
-.particles {
-  position: relative;
-  overflow: hidden;
-}
-
-.particles::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    radial-gradient(2px 2px at 20px 30px, var(--neon-cyan), transparent),
-    radial-gradient(2px 2px at 40px 70px, var(--neon-purple), transparent),
-    radial-gradient(1px 1px at 90px 40px, var(--neon-pink), transparent),
-    radial-gradient(1px 1px at 130px 80px, var(--neon-green), transparent);
-  background-repeat: repeat;
-  background-size: 200px 200px;
-  animation: particles-float 20s linear infinite;
-  opacity: 0.6;
-}
-
-@keyframes particles-float {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(-200px, -200px); }
-}
-
-/* Holographic Effect */
-.holographic {
-  background: linear-gradient(
-    45deg,
-    var(--neon-cyan) 0%,
-    var(--neon-purple) 25%,
-    var(--neon-pink) 50%,
-    var(--neon-orange) 75%,
-    var(--neon-cyan) 100%
-  );
-  background-size: 400% 400%;
-  animation: holographic-shift 3s ease-in-out infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-@keyframes holographic-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-/* Cyber Button */
-.cyber-button {
-  position: relative;
-  display: inline-block;
-  padding: 12px 24px;
+/* Glowing Buttons */
+.btn-neon {
   background: transparent;
-  border: 2px solid var(--neon-cyan);
-  color: var(--neon-cyan);
+  border: 2px solid var(--neon-blue);
+  color: var(--neon-blue);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
   text-transform: uppercase;
-  font-weight: bold;
   letter-spacing: 1px;
-  transition: all 0.3s ease;
-  overflow: hidden;
-}
-
-.cyber-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: var(--neon-cyan);
-  transition: left 0.3s ease;
-  z-index: -1;
-}
-
-.cyber-button:hover::before {
-  left: 0;
-}
-
-.cyber-button:hover {
-  color: var(--dark-bg);
-  box-shadow: 
-    0 0 10px var(--neon-cyan),
-    0 0 20px var(--neon-cyan),
-    0 0 30px var(--neon-cyan);
-}
-
-/* Glass Morphism */
-.glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-}
-
-.glass-dark {
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
-}
-
-/* Animated Gradient Text */
-.gradient-text {
-  background: var(--gradient-neon);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradient-shift 3s ease-in-out infinite;
-}
-
-@keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-/* Card Hover Effects */
-.card-cyber {
+  transition: all var(--animation-duration) var(--animation-easing);
   position: relative;
-  background: var(--dark-card);
-  border: 1px solid var(--dark-border);
-  border-radius: 12px;
-  padding: 24px;
-  transition: all 0.3s ease;
   overflow: hidden;
 }
 
-.card-cyber::before {
+.btn-neon::before {
   content: '';
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
-  transition: left 0.5s ease;
+  background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.2), transparent);
+  transition: left 0.5s;
 }
 
-.card-cyber:hover::before {
+.btn-neon:hover::before {
   left: 100%;
 }
 
-.card-cyber:hover {
-  border-color: var(--neon-cyan);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-  transform: translateY(-5px);
+.btn-neon:hover {
+  background: var(--neon-blue);
+  color: var(--dark-bg);
+  box-shadow: var(--shadow-neon);
+  transform: translateY(-2px);
+}
+
+.btn-neon-purple {
+  border-color: var(--neon-purple);
+  color: var(--neon-purple);
+}
+
+.btn-neon-purple:hover {
+  background: var(--neon-purple);
+  box-shadow: var(--shadow-neon-purple);
+}
+
+.btn-neon-green {
+  border-color: var(--neon-green);
+  color: var(--neon-green);
+}
+
+.btn-neon-green:hover {
+  background: var(--neon-green);
+  box-shadow: var(--shadow-neon-green);
+}
+
+/* Card Animations */
+.card-futuristic {
+  background: var(--dark-surface);
+  border: 1px solid rgba(0, 245, 255, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--animation-duration) var(--animation-easing);
+}
+
+.card-futuristic::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-neon);
+  transform: scaleX(0);
+  transition: transform var(--animation-duration) var(--animation-easing);
+}
+
+.card-futuristic:hover::before {
+  transform: scaleX(1);
+}
+
+.card-futuristic:hover {
+  border-color: var(--neon-blue);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-8px);
+}
+
+/* Grid Animations */
+.grid-futuristic {
+  display: grid;
+  gap: 24px;
+  perspective: 1000px;
+}
+
+.grid-item {
+  transform-style: preserve-3d;
+  transition: transform var(--animation-duration) var(--animation-easing);
+}
+
+.grid-item:hover {
+  transform: rotateY(5deg) rotateX(5deg);
+}
+
+/* Loading Animations */
+.loading-cyber {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(0, 245, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--neon-blue);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Matrix Rain Effect */
+.matrix-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.matrix-rain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 98px,
+      var(--neon-green) 100px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 98px,
+      var(--neon-green) 100px
+    );
+  animation: matrixMove 20s linear infinite;
+}
+
+@keyframes matrixMove {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100px); }
+}
+
+/* Holographic Effects */
+.holographic {
+  background: linear-gradient(45deg, 
+    var(--neon-blue) 0%, 
+    var(--neon-purple) 25%, 
+    var(--neon-pink) 50%, 
+    var(--neon-orange) 75%, 
+    var(--neon-cyan) 100%);
+  background-size: 400% 400%;
+  animation: holographicShift 3s ease-in-out infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes holographicShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Glitch Effect */
+.glitch {
+  position: relative;
+  animation: glitch 2s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  animation: glitch-1 0.5s infinite;
+  color: var(--neon-pink);
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitch-2 0.5s infinite;
+  color: var(--neon-cyan);
+  z-index: -2;
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitch-1 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(2px, -2px); }
+  40% { transform: translate(-2px, 2px); }
+  60% { transform: translate(-2px, -2px); }
+  80% { transform: translate(2px, 2px); }
+}
+
+@keyframes glitch-2 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(-2px, -2px); }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .cyber-grid {
-    background-size: 25px 25px;
+  .neon-text {
+    font-size: 1.5rem;
   }
   
-  .particles::before {
-    background-size: 100px 100px;
+  .btn-neon {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .card-futuristic {
+    padding: 16px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --neon-blue: #00ffff;
+    --neon-purple: #ff00ff;
+    --neon-green: #00ff00;
   }
 }

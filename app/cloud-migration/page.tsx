@@ -3,8 +3,8 @@ import SEOHead from '../components/SEOHead';
 import { enhancedServicesData } from '../data/enhancedServicesData';
 import '../styles/futuristic.css';
 
-const ZionAIFraudDetectionPage: React.FC = () => {
-  const service = enhancedServicesData.aiServices.find(s => s.id === 'ai-fraud-detection');
+const CloudMigrationPage: React.FC = () => {
+  const service = enhancedServicesData.itServices.find(s => s.id === 'cloud-migration');
 
   if (!service) {
     return <div>Service not found</div>;
@@ -15,14 +15,14 @@ const ZionAIFraudDetectionPage: React.FC = () => {
       <SEOHead
         title={`${service.title} - Zion Tech Group`}
         description={service.description}
-        keywords="AI fraud detection, fraud prevention, machine learning fraud, real-time fraud detection, payment fraud"
+        keywords="cloud migration, AWS migration, Azure migration, Google Cloud migration, cloud infrastructure"
         canonicalUrl={`https://ziontechgroup.com/${service.id}`}
       />
       
       <div className="cyber-bg"></div>
       <div className="min-h-screen relative z-10">
         {/* Hero Section */}
-        <div className="bg-gradient-to-r from-red-600 to-orange-700 text-white py-20">
+        <div className="bg-gradient-to-r from-blue-600 to-cyan-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="text-6xl mb-6">{service.icon}</div>
@@ -54,7 +54,7 @@ const ZionAIFraudDetectionPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold neon-text-purple mb-4">Key Features</h2>
               <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-                Advanced AI-powered fraud detection system that protects your business in real-time.
+                Seamless cloud migration with zero downtime and enhanced security.
               </p>
             </div>
 
@@ -77,7 +77,7 @@ const ZionAIFraudDetectionPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold neon-text mb-4">Benefits</h2>
               <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-                Protect your business from fraud with advanced AI technology.
+                Transform your infrastructure with cloud migration benefits.
               </p>
             </div>
 
@@ -85,7 +85,7 @@ const ZionAIFraudDetectionPage: React.FC = () => {
               {service.benefits.map((benefit, index) => (
                 <div key={index} className="card-futuristic">
                   <div className="text-center">
-                    <div className="text-4xl mb-4">🛡️</div>
+                    <div className="text-4xl mb-4">☁️</div>
                     <h3 className="text-xl font-semibold neon-text-green mb-2">{benefit}</h3>
                   </div>
                 </div>
@@ -100,7 +100,7 @@ const ZionAIFraudDetectionPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold neon-text-purple mb-4">Use Cases</h2>
               <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-                Perfect for various industries and business types.
+                Perfect for various migration scenarios.
               </p>
             </div>
 
@@ -108,7 +108,7 @@ const ZionAIFraudDetectionPage: React.FC = () => {
               {service.useCases.map((useCase, index) => (
                 <div key={index} className="card-futuristic">
                   <div className="text-center">
-                    <div className="text-3xl mb-3">🔍</div>
+                    <div className="text-3xl mb-3">🚀</div>
                     <h3 className="text-lg font-semibold neon-text-green">{useCase}</h3>
                   </div>
                 </div>
@@ -123,7 +123,7 @@ const ZionAIFraudDetectionPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold neon-text mb-4">Pricing</h2>
               <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your security needs.
+                Transparent pricing for cloud migration services.
               </p>
             </div>
 
@@ -137,7 +137,7 @@ const ZionAIFraudDetectionPage: React.FC = () => {
                 </div>
               </div>
               
-              <div className="card-futuristic border-2 border-red-400">
+              <div className="card-futuristic border-2 border-blue-400">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold neon-text mb-4">Pro</h3>
                   <div className="text-4xl font-bold neon-text-purple mb-4">${service.pricing.pro.toLocaleString()}</div>
@@ -159,22 +159,22 @@ const ZionAIFraudDetectionPage: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-red-600 to-orange-700 text-white py-20">
+        <div className="bg-gradient-to-r from-blue-600 to-cyan-700 text-white py-20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-4">Ready to Protect Your Business?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready to Migrate to the Cloud?</h2>
             <p className="text-xl mb-8 text-gray-200">
-              Don't let fraud damage your business. Get advanced AI protection today.
+              Let our experts help you migrate to the cloud with zero downtime and maximum security.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/contact" 
-                className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Get Free Security Audit
+                Get Free Migration Assessment
               </a>
               <a 
                 href="tel:+13024640950" 
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Call +1 302 464 0950
               </a>
@@ -190,4 +190,4 @@ const ZionAIFraudDetectionPage: React.FC = () => {
   );
 };
 
-export default ZionAIFraudDetectionPage;
+export default CloudMigrationPage;
