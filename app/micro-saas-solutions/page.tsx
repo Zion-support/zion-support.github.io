@@ -120,9 +120,8 @@ const MicroSAASSolutionsPage: React.FC = () => {
     <>
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive collection of specialized micro SaaS solutions for modern businesses. AI-powered tools for marketing, operations, analytics, and productivity." />
-        <meta name="keywords" content="micro saas, business tools, ai solutions, productivity software, marketing automation, business intelligence" />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas-solutions" />
+        <meta name="description" content="Specialized micro SaaS solutions for specific business needs and workflows. Discover our comprehensive suite of intelligent business applications." />
+        <meta name="keywords" content="micro saas, business software, task management, crm, analytics, inventory management, hr software, finance management" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -252,10 +251,9 @@ const MicroSAASSolutionsPage: React.FC = () => {
                 View Pricing
               </Link>
             </div>
-            <div className="mt-8 text-sm opacity-75">
-              <p>📞 <strong>Phone:</strong> +1 302 464 0950</p>
-              <p>✉️ <strong>Email:</strong> kleber@ziontechgroup.com</p>
-              <p>📍 <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
+            <div className="mt-6 text-sm opacity-75">
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p>Website: <a href="https://ziontechgroup.com" className="underline hover:no-underline">https://ziontechgroup.com</a></p>
             </div>
           </div>
         </div>

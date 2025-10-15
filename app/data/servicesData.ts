@@ -44,7 +44,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-development'
-      }
+}
 
     },
     {
@@ -551,7 +551,6 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-consulting'
-
 }
     },
     {
@@ -1063,11 +1062,9 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-content-generator'
-
-      },
+},
 
       }
-
     },
     {
       id: 'ai-customer-support',
@@ -1113,11 +1110,9 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-customer-support'
-
-      },
+},
 
       }
-
     }
   ],
   microSaas: [
@@ -2592,11 +2587,9 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/expense-tracker'
-
-      },
+},
 
       }
-
     },
     {
       id: 'email-marketing',
@@ -2642,11 +2635,9 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/email-marketing'
-
-      },
+},
 
       }
-
     },
     {
       id: 'social-scheduler',
@@ -2692,11 +2683,9 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/social-scheduler'
-
-      },
+},
 
       }
-
     },
     {
       id: 'inventory-optimizer',
@@ -2742,11 +2731,9 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/inventory-optimizer'
-
-      },
+},
 
       }
-
     },
     {
       id: 'workflow-automator',
@@ -2792,11 +2779,9 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/workflow-automator'
-
-      },
+},
 
       }
-
     }
   ],
   itSolutions: [
@@ -3995,11 +3980,9 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/cybersecurity'
-
-      },
+},
 
       }
-
     },
     {
       id: 'data-analytics',
@@ -4045,11 +4028,9 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/data-analytics'
-
-      },
+},
 
       }
-
     },
     {
       id: 'mobile-development',
@@ -4095,11 +4076,9 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/mobile-development'
-
-      },
+},
 
       }
-
     },
     {
       id: 'web-development',
@@ -4145,11 +4124,9 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/web-development'
-
-      },
+},
 
       }
-
     },
     {
       id: 'database-management',
@@ -4195,8 +4172,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/database-management'
-
-      },
+},
     }
   ],
   // New AI Services
