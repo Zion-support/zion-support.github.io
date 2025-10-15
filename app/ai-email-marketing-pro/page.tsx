@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Share2, TrendingUp, Users, BarChart3, CheckCircle, ArrowRight, Star, Phone, Mail, Play, Calendar, MessageSquare, Image, Video, Hash, Globe, Zap, Target, Clock, DollarSign } from 'lucide-react';
+import { Mail, Target, BarChart3, CheckCircle, ArrowRight, Star, Phone, Play, Users, Send, TrendingUp, Zap, Clock, DollarSign, Palette, MousePointer, Database, Shield } from 'lucide-react';
 
-const AiSocialMediaManagerPage = () => {
+const AiEmailMarketingProPage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -11,55 +11,55 @@ const AiSocialMediaManagerPage = () => {
 
   const features = [
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "AI Content Scheduling",
-      description: "Intelligent posting schedule optimization based on audience engagement patterns and optimal timing analysis.",
-      benefits: ["Optimal posting times", "Engagement prediction", "Multi-platform sync", "Content calendar"]
-    },
-    {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: "Smart Content Generation",
-      description: "AI-powered content creation for posts, captions, and hashtags tailored to your brand voice and audience.",
-      benefits: ["Brand voice consistency", "Hashtag optimization", "Content variety", "Trend integration"]
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Advanced Analytics",
-      description: "Comprehensive social media analytics with AI insights, competitor analysis, and performance predictions.",
-      benefits: ["ROI tracking", "Audience insights", "Competitor analysis", "Growth predictions"]
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Community Management",
-      description: "Automated community engagement with AI-powered responses, sentiment analysis, and customer service.",
-      benefits: ["Auto-responses", "Sentiment tracking", "Crisis management", "Customer support"]
-    },
-    {
       icon: <Target className="w-6 h-6" />,
-      title: "Audience Targeting",
-      description: "AI-driven audience segmentation and targeting for maximum engagement and conversion rates.",
-      benefits: ["Demographic analysis", "Interest mapping", "Behavior prediction", "Custom audiences"]
+      title: "AI Audience Segmentation",
+      description: "Intelligent audience segmentation using machine learning to identify high-value customers and optimize targeting.",
+      benefits: ["Behavioral analysis", "Purchase prediction", "Lifecycle stage detection", "Custom segments"]
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Automated Campaigns",
-      description: "Set-and-forget campaign management with AI optimization and real-time adjustments.",
-      benefits: ["Campaign automation", "A/B testing", "Budget optimization", "Performance scaling"]
+      icon: <Palette className="w-6 h-6" />,
+      title: "Smart Email Design",
+      description: "AI-powered email template generation with responsive design, A/B testing, and brand consistency.",
+      benefits: ["Auto-responsive design", "Brand template matching", "A/B test optimization", "Mobile optimization"]
+    },
+    {
+      icon: <Send className="w-6 h-6" />,
+      title: "Send Time Optimization",
+      description: "AI determines the optimal send times for each subscriber based on their engagement patterns and behavior.",
+      benefits: ["Personalized timing", "Engagement prediction", "Time zone optimization", "Open rate maximization"]
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Predictive Analytics",
+      description: "Advanced analytics with predictive insights to forecast campaign performance and subscriber behavior.",
+      benefits: ["Performance forecasting", "Churn prediction", "Revenue optimization", "Trend analysis"]
+    },
+    {
+      icon: <MousePointer className="w-6 h-6" />,
+      title: "Subject Line AI",
+      description: "AI-generated subject lines optimized for maximum open rates using natural language processing.",
+      benefits: ["Open rate optimization", "A/B testing", "Emotional analysis", "Spam score reduction"]
+    },
+    {
+      icon: <Database className="w-6 h-6" />,
+      title: "Advanced Automation",
+      description: "Sophisticated email automation workflows triggered by user behavior and engagement patterns.",
+      benefits: ["Behavioral triggers", "Drip campaigns", "Welcome sequences", "Re-engagement flows"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$49",
+      price: "$29",
       period: "month",
-      description: "Perfect for small businesses and influencers",
+      description: "Perfect for small businesses and startups",
       features: [
-        "3 social media accounts",
-        "50 posts per month",
-        "Basic analytics",
-        "Content calendar",
-        "Hashtag suggestions",
+        "Up to 1,000 subscribers",
+        "Unlimited emails",
+        "Basic AI features",
+        "Email templates",
+        "Analytics dashboard",
         "Email support",
         "1 user account"
       ],
@@ -67,35 +67,35 @@ const AiSocialMediaManagerPage = () => {
     },
     {
       name: "Professional",
-      price: "$149",
+      price: "$79",
       period: "month",
       description: "Ideal for growing businesses and agencies",
       features: [
-        "10 social media accounts",
-        "Unlimited posts",
-        "Advanced analytics",
-        "AI content generation",
-        "Community management",
+        "Up to 10,000 subscribers",
+        "Advanced AI features",
+        "A/B testing",
+        "Automation workflows",
         "Priority support",
         "5 user accounts",
+        "API access",
         "White-label options"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$199",
       period: "month",
       description: "Complete solution for large organizations",
       features: [
-        "Unlimited accounts",
-        "Unlimited posts",
+        "Unlimited subscribers",
         "Full AI suite",
         "Custom integrations",
         "24/7 dedicated support",
         "Unlimited users",
-        "API access",
-        "Custom reporting"
+        "Advanced analytics",
+        "Custom development",
+        "On-premise deployment"
       ],
       popular: false
     }
@@ -103,24 +103,24 @@ const AiSocialMediaManagerPage = () => {
 
   const testimonials = [
     {
-      name: "Jessica Martinez",
-      company: "Digital Marketing Pro",
-      role: "Social Media Director",
-      content: "This AI social media manager has increased our engagement by 300% and saved us 20 hours per week. The AI content suggestions are spot-on!",
+      name: "Jennifer Adams",
+      company: "E-commerce Solutions",
+      role: "Marketing Director",
+      content: "Our email open rates increased by 180% and revenue from email campaigns grew by 300%. The AI subject line optimization is incredible!",
       rating: 5
     },
     {
-      name: "David Kim",
-      company: "E-commerce Plus",
-      role: "Marketing Manager",
-      content: "The automated scheduling and analytics have transformed our social media strategy. ROI increased by 250% in just 3 months.",
+      name: "Robert Chen",
+      company: "SaaS Startup",
+      role: "Growth Manager",
+      content: "The AI audience segmentation helped us identify our most valuable customers. Our conversion rates improved by 250% in just 2 months.",
       rating: 5
     },
     {
-      name: "Sarah Thompson",
-      company: "Creative Agency",
-      role: "Account Director",
-      content: "Managing 20+ client accounts is now effortless. The AI insights help us deliver better results and justify our value to clients.",
+      name: "Maria Rodriguez",
+      company: "Digital Agency",
+      role: "Email Marketing Specialist",
+      content: "Managing 50+ client campaigns is now effortless. The AI automation and predictive analytics help us deliver exceptional results.",
       rating: 5
     }
   ];
@@ -128,13 +128,13 @@ const AiSocialMediaManagerPage = () => {
   return (
     <>
       <Helmet>
-        <title>AI Social Media Manager - Automated Social Media Management | Zion Tech Group</title>
-        <meta name="description" content="Revolutionize your social media with AI-powered management. Automated posting, content generation, analytics, and community management for all platforms." />
-        <meta name="keywords" content="AI social media manager, social media automation, content generation, social media analytics, community management, social media scheduling" />
-        <meta property="og:title" content="AI Social Media Manager - Zion Tech Group" />
-        <meta property="og:description" content="Automate and optimize your social media presence with AI-powered management tools" />
+        <title>AI Email Marketing Pro - Intelligent Email Automation | Zion Tech Group</title>
+        <meta name="description" content="Revolutionize your email marketing with AI-powered automation. Smart segmentation, subject line optimization, send time optimization, and predictive analytics." />
+        <meta name="keywords" content="AI email marketing, email automation, email segmentation, subject line optimization, email analytics, email campaigns" />
+        <meta property="og:title" content="AI Email Marketing Pro - Zion Tech Group" />
+        <meta property="og:description" content="Transform your email marketing with AI-powered automation and optimization" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-social-media-manager" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-email-marketing-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -152,16 +152,16 @@ const AiSocialMediaManagerPage = () => {
               <div className={`text-center max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                   <Star className="w-4 h-4 mr-2" />
-                  #1 AI Social Media Platform
+                  #1 AI Email Marketing Platform
                 </div>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    AI Social Media Manager
+                    AI Email Marketing Pro
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Transform your social media presence with AI-powered automation. Schedule posts, generate content, 
-                  manage communities, and analyze performance across all platforms with intelligent automation.
+                  Transform your email marketing with AI-powered automation. Smart segmentation, subject line optimization, 
+                  send time optimization, and predictive analytics for maximum engagement and ROI.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -189,11 +189,11 @@ const AiSocialMediaManagerPage = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Powerful AI Features
+                    AI-Powered Features
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Everything you need to automate and optimize your social media presence across all platforms.
+                  Everything you need to create, send, and optimize high-performing email campaigns with AI.
                 </p>
               </div>
               
@@ -236,7 +236,7 @@ const AiSocialMediaManagerPage = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the plan that fits your social media needs. All plans include our core AI features.
+                  Choose the plan that fits your email marketing needs. All plans include our core AI features.
                 </p>
               </div>
               
@@ -296,11 +296,11 @@ const AiSocialMediaManagerPage = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    What Our Users Say
+                    Success Stories
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Join thousands of businesses that have transformed their social media with AI automation.
+                  Join thousands of businesses that have transformed their email marketing with AI automation.
                 </p>
               </div>
               
@@ -334,10 +334,10 @@ const AiSocialMediaManagerPage = () => {
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Ready to Automate Your Social Media?
+                  Ready to Transform Your Email Marketing?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Start your free trial today and see how AI can transform your social media strategy. 
+                  Start your free trial today and see how AI can revolutionize your email campaigns. 
                   No credit card required.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -365,4 +365,4 @@ const AiSocialMediaManagerPage = () => {
   );
 };
 
-export default AiSocialMediaManagerPage;
+export default AiEmailMarketingProPage;

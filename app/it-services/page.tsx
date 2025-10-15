@@ -23,6 +23,13 @@ const ItServicesPage: React.FC = () => {
     },
     {
       icon: <Shield className="w-8 h-8" />,
+      title: "AI Cybersecurity Suite",
+      description: "Advanced AI-powered cybersecurity solutions with intelligent threat detection and automated response.",
+      href: "/ai-cybersecurity-suite",
+      features: ["AI Threat Detection", "Intelligent Firewall", "Security Monitoring", "Incident Response"]
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
       title: "Advanced Security Suite",
       description: "Comprehensive cybersecurity solutions to protect your digital assets.",
       href: "/advanced-security-suite",

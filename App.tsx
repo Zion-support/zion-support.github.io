@@ -1,6 +1,7 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import './globals.css';
 
 // Components
 import Header from './app/components/Header';
@@ -49,6 +50,10 @@ import AiClimateSolutionsProPage from './app/ai-climate-solutions-pro/page';
 import AiAgriculturalIntelligenceProPage from './app/ai-agricultural-intelligence-pro/page';
 import Ai3DGenerationPage from './app/ai-3d-generation/page';
 import AiBlockchainSolutionsPage from './app/ai-blockchain-solutions/page';
+import AiSocialMediaManagerPage from './app/ai-social-media-manager/page';
+import AiEmailMarketingProPage from './app/ai-email-marketing-pro/page';
+import AiProjectManagementProPage from './app/ai-project-management-pro/page';
+import AiCybersecuritySuitePage from './app/ai-cybersecurity-suite/page';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -76,7 +81,7 @@ const App: React.FC = () => {
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <Header />
-            <main className="relative z-10 pt-20" id="main-content" role="main">
+            <main className="relative z-10 pt-20 lg:pl-0" id="main-content" role="main">
               <Suspense fallback={
                 <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                   <div className="text-center">
@@ -134,6 +139,10 @@ const App: React.FC = () => {
                   <Route path="/ai-agricultural-intelligence-pro" element={<AiAgriculturalIntelligenceProPage />} />
                   <Route path="/ai-3d-generation" element={<Ai3DGenerationPage />} />
                   <Route path="/ai-blockchain-solutions" element={<AiBlockchainSolutionsPage />} />
+                  <Route path="/ai-social-media-manager" element={<AiSocialMediaManagerPage />} />
+                  <Route path="/ai-email-marketing-pro" element={<AiEmailMarketingProPage />} />
+                  <Route path="/ai-project-management-pro" element={<AiProjectManagementProPage />} />
+                  <Route path="/ai-cybersecurity-suite" element={<AiCybersecuritySuitePage />} />
                 </Routes>
               </Suspense>
             </main>

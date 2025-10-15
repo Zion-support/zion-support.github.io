@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail, MapPin, Zap, Brain, Code, Cloud, Wifi, Users, ChevronDown, Search } from 'lucide-react';
+import Sidebar from './Sidebar';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -34,12 +36,15 @@ const Header: React.FC = () => {
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
       dropdown: [
-        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
-        { name: 'AI Content Generation', href: '/ai-content-generation' },
-        { name: 'AI Automation Platform', href: '/ai-automation-platform' },
+        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard-pro' },
+        { name: 'AI Content Generation', href: '/ai-content-generation-pro' },
+        { name: 'AI Automation Suite', href: '/ai-automation-suite' },
         { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
-        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' }
+        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+        { name: 'AI Email Marketing Pro', href: '/ai-email-marketing-pro' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' }
       ]
     },
     {
@@ -50,7 +55,8 @@ const Header: React.FC = () => {
         { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
         { name: 'API Management', href: '/ai-api-management' },
         { name: 'Database Solutions', href: '/database-solutions' },
-        { name: 'Security Suite', href: '/advanced-security-suite' },
+        { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite' },
+        { name: 'Advanced Security Suite', href: '/advanced-security-suite' },
         { name: 'Performance Monitoring', href: '/performance-monitoring' },
         { name: 'DevOps Solutions', href: '/devops-solutions' }
       ]
@@ -78,7 +84,10 @@ const Header: React.FC = () => {
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
         { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+        { name: 'AI Email Marketing Pro', href: '/ai-email-marketing-pro' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' }
       ]
     },
     {
@@ -91,11 +100,13 @@ const Header: React.FC = () => {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20 shadow-2xl' 
-        : 'bg-transparent'
-    }`}>
+    <>
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20 shadow-2xl' 
+          : 'bg-transparent'
+      }`}>
       {/* Top Contact Bar */}
       <div className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-2 px-4">
         <div className="container mx-auto flex justify-between items-center text-sm">
@@ -215,13 +226,21 @@ const Header: React.FC = () => {
               </button>
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 text-gray-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            {/* Mobile Menu Buttons */}
+            <div className="flex items-center space-x-2">
+              <button
+                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                className="lg:hidden p-2 text-gray-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
+              >
+                <Menu className="w-6 h-6" />
+              </button>
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="lg:hidden p-2 text-gray-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
+              >
+                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
 
@@ -272,6 +291,7 @@ const Header: React.FC = () => {
         </div>
       </nav>
     </header>
+    </>
   );
 };
 

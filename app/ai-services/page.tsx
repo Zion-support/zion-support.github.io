@@ -9,7 +9,10 @@ import {
   Database, 
   Smartphone,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  Users,
+  Mail,
+  CheckSquare
 } from 'lucide-react';
 
 const AiServicesPage: React.FC = () => {
@@ -55,6 +58,27 @@ const AiServicesPage: React.FC = () => {
       description: "Enterprise-grade AI chatbot solutions for customer service, support, and engagement.",
       href: "/ai-chatbot-enterprise",
       features: ["Natural Language Processing", "Multi-channel Support", "Integration APIs", "Analytics"]
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "AI Social Media Manager",
+      description: "Automated social media management with AI-powered content generation and scheduling.",
+      href: "/ai-social-media-manager",
+      features: ["Content Automation", "Smart Scheduling", "Analytics", "Multi-platform Support"]
+    },
+    {
+      icon: <Mail className="w-8 h-8" />,
+      title: "AI Email Marketing Pro",
+      description: "Intelligent email marketing automation with AI-powered segmentation and optimization.",
+      href: "/ai-email-marketing-pro",
+      features: ["Smart Segmentation", "Subject Line AI", "Send Time Optimization", "Predictive Analytics"]
+    },
+    {
+      icon: <CheckSquare className="w-8 h-8" />,
+      title: "AI Project Management Pro",
+      description: "AI-powered project management with intelligent task prioritization and resource allocation.",
+      href: "/ai-project-management-pro",
+      features: ["Task Prioritization", "Team Analytics", "Predictive Planning", "Risk Management"]
     }
   ];
 
