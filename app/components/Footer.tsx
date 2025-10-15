@@ -6,8 +6,7 @@ import {
   MapPinIcon,
   ArrowRightIcon
 } from '@heroicons/react/24/outline';
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
-import { 
+import { Facebook, Twitter, Linkedin, Github } from 'lucide-react';import { 
   HeartIcon
 } from '@heroicons/react/24/outline';
 
@@ -16,25 +15,41 @@ const Footer: React.FC = () => {
 
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'IT Solutions', href: '/it-solutions' },
+    { name: 'AI Email Marketing', href: '/ai-email-marketing-automation' },
+    { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+    { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot' },
+    { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
+    { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
     { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Cloud Solutions', href: '/cloud-solutions' },
-    { name: '5G Solutions', href: '/5g-solutions' }
+    { name: 'IT Solutions', href: '/it-solutions' }
   ];
 
   const company = [
     { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Team', href: '/team' },
-    { name: 'Case Studies', href: '/case-studies' }
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'News & Updates', href: '/blog' },
+    { name: 'Partnerships', href: '/partnerships' },
+    { name: 'Contact Us', href: '/contact' }
+  ];
+
+  const resources = [
+    { name: 'Documentation', href: '/docs' },
+    { name: 'Tutorials', href: '/tutorials' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'API Reference', href: '/api-docs' },
+    { name: 'Help Center', href: '/help' },
+    { name: 'Community', href: '/community' }
   ];
 
   const support = [
-    { name: 'Contact', href: '/contact' },
-    { name: 'Support', href: '/support' },
-    { name: 'Documentation', href: '/docs' },
-    { name: 'Tutorials', href: '/tutorials' }
+    { name: 'Contact Us', href: '/contact' },
+    { name: 'Support Center', href: '/support' },
+    { name: 'Live Chat', href: '/chat' },
+    { name: 'Schedule Demo', href: '/demo' },
+    { name: 'System Status', href: '/status' },
+    { name: 'Report Issue', href: '/report' }
   ];
 
   const legal = [
@@ -43,16 +58,15 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', href: '#', icon: 'facebook' },
-    { name: 'Twitter', href: '#', icon: 'twitter' },
-    { name: 'LinkedIn', href: '#', icon: 'linkedin' },
-    { name: 'GitHub', href: '#', icon: 'github' }
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: 'facebook' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter' },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin' },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github' }
   ];
 
-  return (
-    <footer className="bg-slate-900 border-t border-slate-700">
+  return (<footer className="bg-slate-900 border-t border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-4">
@@ -62,7 +76,8 @@ const Footer: React.FC = () => {
               <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
             </div>
             <p className="text-gray-400 text-sm mb-4">
-              Leading provider of AI solutions, cybersecurity, and digital transformation services.
+              Leading provider of AI solutions, cybersecurity, _cloud infrastructure, and digital transformation services. 
+              Transforming businesses with cutting-edge technology.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -85,7 +100,7 @@ const Footer: React.FC = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Services</h3>
+            <h3 className="text-white font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
@@ -105,6 +120,23 @@ const Footer: React.FC = () => {
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               {company.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    to={item.href}
+                    className="text-gray-400 hover:text-white text-sm transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              {resources.map((item) => (
                 <li key={item.name}>
                   <Link
                     to={item.href}
@@ -140,15 +172,15 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="flex items-center text-gray-400 text-sm">
               <PhoneIcon className="w-4 h-4 mr-2" />
-              <span>+1 (555) 123-4567</span>
+              <span>+1 302 464 0950</span>
             </div>
             <div className="flex items-center text-gray-400 text-sm">
               <EnvelopeIcon className="w-4 h-4 mr-2" />
-              <span>info@ziontechgroup.com</span>
+              <span>kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center text-gray-400 text-sm">
               <MapPinIcon className="w-4 h-4 mr-2" />
-              <span>San Francisco, CA</span>
+              <span>364 E Main St STE 1008 Middletown DE 19709</span>
             </div>
           </div>
         </div>

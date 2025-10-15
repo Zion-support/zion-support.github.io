@@ -2,20 +2,7 @@ import React, { useState } from 'react';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Calendar,
-  Clock,
-  User,
-  Tag,
-  Search,
-  Filter,
-  TrendingUp,
-  BookOpen,
-  ExternalLink
-} from 'lucide-react';
-
-const BlogPage: React.FC = () => {
+import { ArrowRight, Calendar, Clock, User, Search, Filter, BookOpen } from 'lucide-react';const BlogPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -126,12 +113,11 @@ const BlogPage: React.FC = () => {
   const featuredPost = blogPosts.find(post => post.featured);
   const regularPosts = filteredPosts.filter(post => !post.featured);
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Blog - Zion Tech Group | AI & IT Insights</title>
         <meta name="description" content="Stay updated with the latest insights on AI, IT solutions, and technology trends from Zion Tech Group experts." />
-        <meta name="keywords" content="blog, AI insights, IT trends, technology news, micro SAAS, cloud computing, mobile development" />
+        <meta name="keywords" content="blog, _AI insights, _IT trends, _technology news, _micro SAAS, _cloud computing, mobile development" />
         <link rel="canonical" href="https://ziontechgroup.com/blog" />
       </Helmet>
 
@@ -151,7 +137,7 @@ const BlogPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Stay ahead of the curve with expert insights on AI, IT solutions, and emerging technologies. 
+              Stay ahead of the curve with expert insights on AI, _IT solutions, and emerging technologies. 
               Learn from our team of industry experts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -192,8 +178,7 @@ const BlogPage: React.FC = () => {
 
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
+              {categories.map((category) => (<button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${

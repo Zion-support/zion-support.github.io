@@ -8,11 +8,7 @@ interface SystemMonitorProps {
 }
 
 const SystemMonitor: React.FC<SystemMonitorProps> = ({
-  children,
-  className = "",
-  title,
-  description,
-}) => {
+  children, className = "", title, _description, _}) => {
   return (
     <div className={`enhanced-component ${className}`}>
       {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>}

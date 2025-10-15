@@ -20,7 +20,16 @@ import {
   CloudIcon,
   CpuChipIcon,
   SignalIcon,
-  UserGroupIcon
+  UserGroupIcon,
+  EnvelopeIcon,
+  ShareIcon,
+  ChatBubbleLeftRightIcon,
+  ChartBarIcon,
+  EyeIcon,
+  CircleStackIcon,
+  CodeBracketIcon,
+  DevicePhoneMobileIcon,
+  UserPlusIcon
 } from '@heroicons/react/24/outline';
 
 interface NavigationProps {
@@ -31,40 +40,75 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   const location = useLocation();
 
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
     { 
-      name: 'Services', 
-      href: '/services', 
-      icon: BriefcaseIcon,
+      name: 'AI Services', 
+      href: '/ai-solutions', 
+      icon: CpuChipIcon,
       submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: GlobeAltIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
+        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon },
+        { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: EnvelopeIcon },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },
+        { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro', icon: CogIcon },
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', icon: ChartBarIcon },
+        { name: 'AI Content Generation', href: '/ai-content-generation-pro', icon: DocumentTextIcon },
+        { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: EyeIcon },
+        { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon }
       ]
     },
     { 
-      name: 'Solutions', 
-      href: '/solutions', 
-      icon: CogIcon,
+      name: 'Micro SaaS', 
+      href: '/micro-saas-solutions', 
+      icon: GlobeAltIcon,
       submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'IT Solutions', href: '/it-solutions', icon: CogIcon },
-        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon }
+        { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
+        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
+        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
+        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
+        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },
+        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },
+        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon }
       ]
     },
-    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
-    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
-    { name: 'Demo', href: '/demo', icon: PlayIcon },
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
+    { 
+      name: 'IT Solutions', 
+      href: '/it-solutions', 
+      icon: CogIcon,
+      submenu: [
+        { name: 'IT Solutions Overview', href: '/it-solutions', icon: CogIcon },
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
+        { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: ShieldCheckIcon },
+        { name: 'Web Development', href: '/web-development', icon: CodeBracketIcon },
+        { name: 'Mobile App Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
+        { name: 'Database Management', href: '/database-management', icon: CircleStackIcon },
+        { name: 'Network Infrastructure', href: '/network-infrastructure', icon: SignalIcon },
+        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
+      ]
+    },
+    { name: 'Resources', href: '#', icon: DocumentTextIcon, submenu: [
+      { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
+      { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
+      { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },
+      { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
+      { name: 'API Documentation', href: '/api-docs', icon: CodeBracketIcon },
+      { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }
+    ]},
+    { name: 'Company', href: '#', icon: UserGroupIcon, submenu: [
+      { name: 'About Us', href: '/about', icon: InformationCircleIcon },
+      { name: 'Our Team', href: '/team', icon: UserGroupIcon },
+      { name: 'Careers', href: '/careers', icon: UserGroupIcon },
+      { name: 'Partnerships', href: '/partnerships', icon: UserPlusIcon },
+      { name: 'Contact', href: '/contact', icon: PhoneIcon }
+    ]},
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
-    { name: 'Contact', href: '/contact', icon: PhoneIcon }
+    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
   ];
 
   const isActive = (href: string) => {
@@ -74,11 +118,29 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const toggleServicesMenu = () => {
     setIsServicesOpen(!isServicesOpen);
     setIsSolutionsOpen(false);
+    setIsResourcesOpen(false);
+    setIsCompanyOpen(false);
   };
 
   const toggleSolutionsMenu = () => {
     setIsSolutionsOpen(!isSolutionsOpen);
     setIsServicesOpen(false);
+    setIsResourcesOpen(false);
+    setIsCompanyOpen(false);
+  };
+
+  const toggleResourcesMenu = () => {
+    setIsResourcesOpen(!isResourcesOpen);
+    setIsServicesOpen(false);
+    setIsSolutionsOpen(false);
+    setIsCompanyOpen(false);
+  };
+
+  const toggleCompanyMenu = () => {
+    setIsCompanyOpen(!isCompanyOpen);
+    setIsServicesOpen(false);
+    setIsSolutionsOpen(false);
+    setIsResourcesOpen(false);
   };
 
   return (
@@ -102,8 +164,20 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 <Link
                   to={item.href}
                   className="flex items-center space-x-1 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                  onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                  onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
+                  onMouseEnter={() => {
+                    if (item.name === 'AI Services') setIsServicesOpen(true);
+                    else if (item.name === 'Micro SaaS') setIsSolutionsOpen(true);
+                    else if (item.name === 'IT Solutions') setIsResourcesOpen(true);
+                    else if (item.name === 'Resources') setIsResourcesOpen(true);
+                    else if (item.name === 'Company') setIsCompanyOpen(true);
+                  }}
+                  onMouseLeave={() => {
+                    if (item.name === 'AI Services') setIsServicesOpen(false);
+                    else if (item.name === 'Micro SaaS') setIsSolutionsOpen(false);
+                    else if (item.name === 'IT Solutions') setIsResourcesOpen(false);
+                    else if (item.name === 'Resources') setIsResourcesOpen(false);
+                    else if (item.name === 'Company') setIsCompanyOpen(false);
+                  }}
                 >
                   <item.icon className="w-4 h-4" />
                   <span>{item.name}</span>
@@ -111,14 +185,26 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 </Link>
                 
                 {/* Dropdown Menu */}
-                {item.submenu && isServicesOpen && (
-                  <div className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700">
+                {item.submenu && (
+                  <div className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
+                    (item.name === 'AI Services' && isServicesOpen) ||
+                    (item.name === 'Micro SaaS' && isSolutionsOpen) ||
+                    (item.name === 'IT Solutions' && isResourcesOpen) ||
+                    (item.name === 'Resources' && isResourcesOpen) ||
+                    (item.name === 'Company' && isCompanyOpen)
+                      ? 'block' : 'hidden'
+                  }`}>
                     {item.submenu.map((subItem) => (
                       <Link
                         key={subItem.name}
                         to={subItem.href}
                         className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
-                        onClick={() => setIsServicesOpen(false)}
+                        onClick={() => {
+                          setIsServicesOpen(false);
+                          setIsSolutionsOpen(false);
+                          setIsResourcesOpen(false);
+                          setIsCompanyOpen(false);
+                        }}
                       >
                         <div className="flex items-center">
                           <subItem.icon className="w-4 h-4 mr-3" />
@@ -149,13 +235,19 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 
         {/* Mobile Navigation */}
         <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700 max-h-96 overflow-y-auto">
             {navigation.map((item) => (
               <div key={item.name}>
                 {item.submenu ? (
                   <div>
                     <button
-                      onClick={item.name === 'Services' ? toggleServicesMenu : toggleSolutionsMenu}
+                      onClick={() => {
+                        if (item.name === 'AI Services') toggleServicesMenu();
+                        else if (item.name === 'Micro SaaS') toggleSolutionsMenu();
+                        else if (item.name === 'IT Solutions') toggleResourcesMenu();
+                        else if (item.name === 'Resources') toggleResourcesMenu();
+                        else if (item.name === 'Company') toggleCompanyMenu();
+                      }}
                       className={`flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-colors ${
                         isActive(item.href) || (item.submenu && item.submenu.some(sub => isActive(sub.href)))
                           ? 'text-white bg-slate-700'
@@ -168,7 +260,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     </button>
                     
                     {/* Mobile Submenu */}
-                    <div className={`pl-6 ${(item.name === 'Services' ? isServicesOpen : isSolutionsOpen) ? 'block' : 'hidden'}`}>
+                    <div className={`pl-6 ${
+                      (item.name === 'AI Services' && isServicesOpen) ||
+                      (item.name === 'Micro SaaS' && isSolutionsOpen) ||
+                      (item.name === 'IT Solutions' && isResourcesOpen) ||
+                      (item.name === 'Resources' && isResourcesOpen) ||
+                      (item.name === 'Company' && isCompanyOpen)
+                        ? 'block' : 'hidden'
+                    }`}>
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
@@ -178,6 +277,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                             setIsOpen(false);
                             setIsServicesOpen(false);
                             setIsSolutionsOpen(false);
+                            setIsResourcesOpen(false);
+                            setIsCompanyOpen(false);
                           }}
                         >
                           <subItem.icon className="w-4 h-4 mr-3" />

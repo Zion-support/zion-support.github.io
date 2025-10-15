@@ -100,8 +100,7 @@ export default function AISmartScheduler() {
     },
   ];
 
-  return (
-    <Layout>
+  return (<Layout>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 min-h-screen flex items-center">
         <div className="container mx-auto px-4 py-20">
@@ -235,7 +234,7 @@ export default function AISmartScheduler() {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-gray-800 p-6 rounded-lg">
                 <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map(( i) => (
                     <Clock key={i} className="w-5 h-5 text-yellow-400" />
                   ))}
                 </div>

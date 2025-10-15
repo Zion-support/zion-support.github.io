@@ -2,31 +2,7 @@ import React, { useState } from 'react';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Zap,
-  Brain,
-  Cpu,
-  Cloud,
-  Shield,
-  Smartphone,
-  BarChart3,
-  Target,
-  Rocket,
-  Users,
-  Award,
-  Clock,
-  Globe,
-  Lock,
-  ExternalLink,
-  Github,
-  Filter,
-  Search
-} from 'lucide-react';
-
-const PortfolioPage: React.FC = () => {
+import { ArrowRight, CheckCircle, Star, Zap, Brain, Cpu, Cloud, Smartphone, Target, Rocket, Globe, ExternalLink, Github, Filter, Search } from 'lucide-react';const PortfolioPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -231,12 +207,11 @@ const PortfolioPage: React.FC = () => {
     { number: '24/7', label: 'Support Available' }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Portfolio - Zion Tech Group | Our Work & Success Stories</title>
         <meta name="description" content="Explore our portfolio of successful AI and IT projects. See how we've helped businesses transform with cutting-edge technology solutions." />
-        <meta name="keywords" content="portfolio, projects, case studies, AI solutions, web development, mobile apps, cloud solutions" />
+        <meta name="keywords" content="portfolio, projects, _case studies, _AI solutions, _web development, _mobile apps, cloud solutions" />
         <link rel="canonical" href="https://ziontechgroup.com/portfolio" />
       </Helmet>
 
@@ -304,15 +279,14 @@ const PortfolioPage: React.FC = () => {
                 type="text"
                 placeholder="Search projects..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(_e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
             </div>
 
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
+              {categories.map((category) => (<button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${

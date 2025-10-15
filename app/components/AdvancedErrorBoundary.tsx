@@ -4,7 +4,7 @@ import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (_error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
@@ -49,7 +49,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     }
   }
 
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+  logErrorToService = (_error: Error, errorInfo: ErrorInfo) => {
     // You can integrate with services like Sentry, LogRocket, etc.
     const errorData = {
       message: error.message,

@@ -5,12 +5,11 @@ interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   text?: string;
   className?: string;
+  fullScreen?: boolean;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  text,
-  className = '' 
+  size = 'md', text = 'Loading...', className = '', fullScreen = false
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -19,8 +18,12 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     xl: 'w-12 h-12'
   };
 
+  const containerClasses = fullScreen 
+    ? `min-h-screen flex flex-col items-center justify-center space-y-2 ${className}`
+    : `flex flex-col items-center justify-center space-y-2 ${className}`;
+
   return (
-    <div className={`flex flex-col items-center justify-center space-y-2 ${className}`}>
+    <div className={containerClasses}>
       <Loader2 data-testid="loading-spinner" className={`${sizeClasses[size]} animate-spin text-cyan-400`} />
       {text && (
         <p className="text-gray-300 text-sm animate-pulse">{text}</p>
@@ -28,4 +31,5 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     </div>
   );
 };
+
 export default LoadingSpinner;

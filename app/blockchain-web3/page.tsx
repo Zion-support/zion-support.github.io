@@ -66,8 +66,7 @@ export default function BlockchainWeb3() {
     },
   ];
 
-  return (
-    <Layout>
+  return (<Layout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
@@ -100,8 +99,7 @@ export default function BlockchainWeb3() {
               Our Services
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="text-center">
+              {services.map((service, index) => (<div key={index} className="text-center">
                   <h3 className="text-xl font-semibold text-purple-400 mb-4">
                     {service.category}
                   </h3>

@@ -96,17 +96,16 @@ export default function ItServices() {
     }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>IT Services - Zion Tech Group | Professional IT Solutions</title>
         <meta
           name="description"
-          content="Professional IT services including infrastructure management, network security, system administration, and cloud solutions from Zion Tech Group."
+          content="Professional IT services including infrastructure management, network security, _system administration, and cloud solutions from Zion Tech Group."
         />
         <meta
           name="keywords"
-          content="IT services, IT support, network security, system administration, cloud solutions, IT consulting, infrastructure management"
+          content="IT services, _IT support, _network security, _system administration, _cloud solutions, _IT consulting, infrastructure management"
         />
       </Helmet>
 
@@ -151,8 +150,7 @@ export default function ItServices() {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+              {itServices.map((service, index) => (<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="text-cyan-400 mb-4">{service.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>

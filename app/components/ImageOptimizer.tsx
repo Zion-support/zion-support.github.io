@@ -18,22 +18,13 @@ interface ImageOptimizerProps {
 }
 
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
-  src,
-  alt,
-  className = '',
-  width,
-  height,
-  priority = false,
-  placeholder,
-  effect = 'blur',
-  threshold = 100,
-  onLoad,
-  onError
+  src, alt, className = '', _width, _height, priority = false, _placeholder, effect = 'blur', threshold = 100, _onLoad, _onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
+  const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
   };
@@ -44,7 +35,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   };
 
   // Generate optimized src with WebP support
-  const getOptimizedSrc = (originalSrc: string) => {
+  const getOptimizedSrc = (_originalSrc: string) => {
     if (originalSrc.startsWith('http') || originalSrc.startsWith('/')) {
       return originalSrc;
     }
@@ -59,7 +50,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   };
 
   // Generate responsive srcset
-  const generateSrcSet = (baseSrc: string) => {
+  const generateSrcSet = (_baseSrc: string) => {
     if (baseSrc.startsWith('http') || baseSrc.startsWith('/')) {
       return baseSrc;
     }
@@ -105,15 +96,14 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   }
 
   return (
+    <div className="relative">
+      {!isLoaded && (
         <div 
           className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
           style={{ width, height }}
-        >
-          style={{ width, height }}
         />
       )}
-    </div>
-    <LazyLoadImage
+      <LazyLoadImage
       src={optimizedSrc}
       srcSet={srcSet}
       alt={alt}
@@ -128,6 +118,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       loading="lazy"
       decoding="async"
     />
+    </div>
   );
 };
 

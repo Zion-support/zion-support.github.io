@@ -1,37 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Brain, 
-  Star, 
-  Users, 
-  Shield, 
-  Clock, 
-  TrendingUp,
-  BarChart3,
-  Database,
-  Smartphone,
-  Globe,
-  Target,
-  Lightbulb,
-  Rocket,
-  Award,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Code,
-  Eye,
-  MessageSquare,
-  Cpu,
-  Network,
-  FileText,
-  Settings
-} from 'lucide-react';
-
-const AISolutionsPage: React.FC = () => {
+import { CheckCircle, ArrowRight, TrendingUp, BarChart3, Eye, MessageSquare, Network, FileText, Settings } from 'lucide-react';const AISolutionsPage: React.FC = () => {
   const aiServices = [
     {
       id: 'ai-chatbot-enterprise',
@@ -215,8 +185,6 @@ const AISolutionsPage: React.FC = () => {
     }
   ];
 
-  const categories = ['All', 'Conversational AI', 'Computer Vision', 'Content Creation', 'Analytics', 'Automation', 'Blockchain'];
-
   const useCases = [
     {
       title: 'Customer Service',
@@ -288,14 +256,13 @@ const AISolutionsPage: React.FC = () => {
     }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>AI Solutions - Advanced Artificial Intelligence Services | Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive AI solutions including chatbots, computer vision, content generation, analytics, and automation. Transform your business with cutting-edge AI technology." />
-        <meta name="keywords" content="AI solutions, artificial intelligence, chatbots, computer vision, content generation, analytics, automation, machine learning" />
+        <meta name="description" content="Discover our comprehensive AI solutions including chatbots, computer vision, _content generation, _analytics, and automation. Transform your business with cutting-edge AI technology." />
+        <meta name="keywords" content="AI solutions, _artificial intelligence, _chatbots, _computer vision, _content generation, _analytics, _automation, machine learning" />
         <meta property="og:title" content="AI Solutions - Advanced Artificial Intelligence Services" />
-        <meta property="og:description" content="Discover our comprehensive AI solutions including chatbots, computer vision, content generation, analytics, and automation." />
+        <meta property="og:description" content="Discover our comprehensive AI solutions including chatbots, _computer vision, _content generation, _analytics, and automation." />
         <meta property="og:url" content="https://ziontechgroup.com/ai-solutions" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-solutions" />
       </Helmet>
@@ -316,8 +283,7 @@ const AISolutionsPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Harness the power of artificial intelligence to automate processes, gain insights, 
-              and scale your business with our comprehensive AI solutions.
+              Harness the power of artificial intelligence to automate processes, _gain insights, and scale your business with our comprehensive AI solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
@@ -352,8 +318,7 @@ const AISolutionsPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
+            {useCases.map((useCase, index) => (<div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
                 <div className="mb-4 group-hover:scale-110 transition-transform">
                   {useCase.icon}
                 </div>
@@ -535,7 +500,8 @@ const AISolutionsPage: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>    </>
+      </section>
+    </>
   );
 };
 

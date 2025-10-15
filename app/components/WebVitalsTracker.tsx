@@ -11,7 +11,7 @@ interface WebVitalsData {
 
 const WebVitalsTracker: React.FC = () => {
   useEffect(() => {
-    const sendToAnalytics = (metric: WebVitalsData) => {
+    const sendToAnalytics = (_metric: WebVitalsData) => {
       // Send to Google Analytics or other analytics service
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('event', metric.name, {

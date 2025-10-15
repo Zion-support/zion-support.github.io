@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Clock, Users, DollarSign, Shield } from 'lucide-react';
-
-export default function Consultation() {
+import { ArrowRight, Clock, Users, DollarSign, Shield } from 'lucide-react';export default function Consultation() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,7 +13,7 @@ export default function Consultation() {
     message: ''
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (_e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -23,7 +21,7 @@ export default function Consultation() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (_e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
     };
@@ -67,11 +65,10 @@ export default function Consultation() {
     }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Free Consultation - Zion Tech Group | Get Expert Advice</title>
-        <meta name="description" content="Get a free consultation with our experts to discuss your AI, cloud, and cybersecurity needs. No obligation, expert advice." />
+        <meta name="description" content="Get a free consultation with our experts to discuss your AI, cloud, _and cybersecurity needs. No obligation, expert advice." />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">

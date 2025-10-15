@@ -40,7 +40,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
     localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
   }, [settings]);
 
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
+  const applyAccessibilitySettings = (_newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     
     if (newSettings.highContrast) {
@@ -68,7 +68,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
     }
   };
 
-  const toggleSetting = (key: keyof AccessibilitySettings) => {
+  const toggleSetting = (_key: keyof AccessibilitySettings) => {
     setSettings(prev => ({
       ...prev,
       [key]: !prev[key]
@@ -115,8 +115,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
   ];
 
   if (!isVisible) {
-    return (
-      <button
+    return (<button
         onClick={() => setIsVisible(true)}
         className="fixed bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
         aria-label="Open accessibility settings"
@@ -126,8 +125,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
     );
   }
 
-  return (
-    <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6 w-80 z-50">
+  return (<div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6 w-80 z-50">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
           Accessibility Settings
@@ -144,8 +142,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
       <div className="space-y-4">
         {accessibilityFeatures.map((feature) => {
           const Icon = feature.icon;
-          return (
-            <div key={feature.key} className="flex items-center justify-between">
+          return (<div key={feature.key} className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
                 <Icon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
                 <div>

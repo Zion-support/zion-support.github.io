@@ -103,8 +103,7 @@ export default function Careers() {
     }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join our team of experts in AI, cloud, and cybersecurity. Explore career opportunities at Zion Tech Group." />
@@ -156,8 +155,7 @@ export default function Careers() {
               </p>
             </div>
             <div className="space-y-8">
-              {openPositions.map((position) => (
-                <div key={position.id} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+              {openPositions.map((position) => (<div key={position.id} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-2">{position.title}</h3>

@@ -9,11 +9,7 @@ interface PerformanceOptimizerProps {
 }
 
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableImageOptimization = true,
-  enablePreloading = true,
-  enableCaching = true,
-  enableCompression = true,
-}) => {
+  enableImageOptimization = true, enablePreloading = true, enableCaching = true, enableCompression = true, }) => {
   const location = useLocation();
 
   // Image optimization

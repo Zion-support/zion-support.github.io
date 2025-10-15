@@ -1,26 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { 
-  Package, 
-  TrendingUp, 
-  AlertTriangle, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Clock, 
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe,
-  DollarSign,
-  Truck,
-  Shield
-} from 'lucide-react';
-
-const SmartInventoryOptimizerPage = () => {
+import { Package, TrendingUp, AlertTriangle, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe, DollarSign, Truck, Shield } from 'lucide-react';const SmartInventoryOptimizerPage = () => {
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
@@ -134,12 +115,11 @@ const SmartInventoryOptimizerPage = () => {
     { number: "50%", label: "Less Waste" }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Smart Inventory Optimizer | Zion Tech Group</title>
         <meta name="description" content="Revolutionize your inventory management with AI-powered demand forecasting, smart reorder points, and real-time analytics." />
-        <meta name="keywords" content="inventory management, demand forecasting, supply chain, inventory optimization, AI inventory" />
+        <meta name="keywords" content="inventory management, _demand forecasting, _supply chain, _inventory optimization, AI inventory" />
       </Helmet>
 
       {/* Hero Section */}
@@ -162,8 +142,7 @@ const SmartInventoryOptimizerPage = () => {
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your inventory operations with AI-powered demand forecasting, smart reorder points, 
-              and real-time analytics that reduce costs and improve efficiency.
+              Transform your inventory operations with AI-powered demand forecasting, _smart reorder points, and real-time analytics that reduce costs and improve efficiency.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

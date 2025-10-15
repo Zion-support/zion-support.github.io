@@ -125,8 +125,7 @@ export default function ZionCloudVault() {
     }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Zion Cloud Vault - Secure Cloud Storage Platform | Zion Tech Group</title>
         <meta
@@ -135,7 +134,7 @@ export default function ZionCloudVault() {
         />
         <meta
           name="keywords"
-          content="cloud storage, secure file sharing, data encryption, cloud backup, file synchronization, enterprise storage, data security"
+          content="cloud storage, _secure file sharing, _data encryption, _cloud backup, _file synchronization, _enterprise storage, data security"
         />
       </Helmet>
 
@@ -154,7 +153,7 @@ export default function ZionCloudVault() {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Secure your most valuable data with the world's most advanced cloud storage platform. 
-              End-to-end encryption, unlimited storage, and enterprise-grade security for modern businesses.
+              End-to-end encryption, _unlimited storage, and enterprise-grade security for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
@@ -183,7 +182,7 @@ export default function ZionCloudVault() {
                 <div className="text-gray-300">Encryption Standard</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">50,000+</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">50, 000+</div>
                 <div className="text-gray-300">Businesses Trust Us</div>
               </div>
             </div>
@@ -198,7 +197,7 @@ export default function ZionCloudVault() {
                 Advanced Cloud Storage Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to store, sync, and secure your data in the cloud.
+                Everything you need to store, _sync, and secure your data in the cloud.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -325,7 +324,7 @@ export default function ZionCloudVault() {
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(( i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>

@@ -1,20 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  BarChart3, 
-  Globe, 
-  Users, 
-  CheckCircle, 
-  ArrowRight, 
-  Target, 
-  Zap,
-  Shield,
-  Database,
-  Calendar,
-  Smartphone,
-  TrendingUp
-} from 'lucide-react';
-import FuturisticCard from '../components/FuturisticCard';
+import { BarChart3, Globe, Users, CheckCircle, ArrowRight, Target, Zap, Database, TrendingUp } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -129,12 +115,11 @@ const WebsiteAnalyticsToolPage = () => {
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Website Analytics Tool - Zion Tech Group | Advanced Web Analytics & Tracking"
-        description="Powerful website analytics tool with real-time tracking, visitor behavior analysis, conversion tracking, and custom dashboards. Optimize your website performance."
-        keywords="website analytics tool, web analytics, visitor tracking, conversion tracking, behavior analysis, website optimization"
+        description="Powerful website analytics tool with real-time tracking, visitor behavior analysis, _conversion tracking, and custom dashboards. Optimize your website performance."
+        keywords="website analytics tool, _web analytics, _visitor tracking, _conversion tracking, _behavior analysis, website optimization"
         canonical="https://ziontechgroup.com/website-analytics-tool"
       />
 
@@ -148,7 +133,7 @@ const WebsiteAnalyticsToolPage = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Understand your website performance with our comprehensive analytics tool. 
-            Track visitors, analyze behavior, and optimize conversions with detailed insights.
+            Track visitors, _analyze behavior, and optimize conversions with detailed insights.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
@@ -183,8 +168,7 @@ const WebsiteAnalyticsToolPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <FuturisticCard key={index} className="h-full">
+            {features.map((feature, index) => (<FuturisticCard key={index} className="h-full">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     {feature.icon}

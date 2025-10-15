@@ -2,209 +2,212 @@ import React, { useState } from 'react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Zap, 
-  Brain, 
-  Server, 
-  Globe, 
-  Shield, 
-  Code, 
-  Database, 
-  Smartphone,
-  BarChart3,
-  Users,
-  Settings,
-  Award,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  TrendingUp,
-  Target,
-  Lightbulb,
-  Rocket,
-  Cloud,
-  Lock,
-  Wifi,
-  Monitor,
-  HardDrive,
-  Layers,
-  MessageSquare,
-  Eye,
-  FileText,
-  Network,
-  X
-} from 'lucide-react';
-
-const PricingPage: React.FC = () => {
+import { CheckCircle, ArrowRight, Zap, Brain, Server, Code, Cloud, Layers } from 'lucide-react';const PricingPage: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const microSaasPricing = [
     {
-      name: 'AI Accounting Assistant',
-      monthlyPrice: '$29',
-      yearlyPrice: '$290',
-      description: 'Automated bookkeeping and financial analysis',
-      features: [
-        'Up to 1,000 transactions/month',
-        'Automated invoice processing',
-        'Real-time expense tracking',
-        'Tax preparation & filing',
-        'Financial report generation',
-        'Bank reconciliation',
-        'Multi-currency support',
-        'Mobile app access',
-        'Email support',
-        'Basic integrations'
-      ],
-      popular: true,
-      category: 'micro-saas'
-    },
-    {
-      name: 'AI Content Moderation Pro',
+      name: 'AI Email Marketing Automation',
       monthlyPrice: '$49',
       yearlyPrice: '$490',
-      description: 'Advanced content filtering and moderation',
+      description: 'AI-powered email marketing that increases open rates by 65%',
       features: [
-        'Up to 10,000 posts/month',
-        'Real-time content monitoring',
-        'Multi-language support (50+ languages)',
-        'Image & video analysis',
-        'Custom moderation rules',
-        'Analytics dashboard',
-        'API integration',
-        'Bulk content processing',
-        'Priority support',
-        'Custom integrations'
-      ],
-      popular: false,
-      category: 'micro-saas'
-    },
-    {
-      name: 'AI Climate Solutions Pro',
-      monthlyPrice: '$79',
-      yearlyPrice: '$790',
-      description: 'Environmental monitoring and sustainability tracking',
-      features: [
-        'Carbon footprint analysis',
-        'Sustainability reporting',
-        'Compliance monitoring',
-        'Green initiative tracking',
-        'Energy usage optimization',
-        'Waste management analytics',
-        'Supply chain sustainability',
-        'ESG reporting tools',
-        'Environmental risk assessment',
-        'Green certification support'
+        'Up to 10,000 emails/month',
+        'AI content generation',
+        'Advanced segmentation',
+        'Automated drip campaigns',
+        'A/B testing with AI optimization',
+        'Real-time personalization',
+        'Multi-channel campaigns',
+        'Advanced analytics',
+        '100+ platform integrations',
+        '24/7 support'
       ],
       popular: true,
       category: 'micro-saas'
     },
     {
-      name: 'AI Agricultural Intelligence',
-      monthlyPrice: '$99',
-      yearlyPrice: '$990',
-      description: 'Smart farming and crop optimization',
+      name: 'AI Social Media Manager',
+      monthlyPrice: '$39',
+      yearlyPrice: '$390',
+      description: 'Automated social media management across 8+ platforms',
       features: [
-        'Crop health monitoring',
-        'Weather pattern analysis',
-        'Yield prediction models',
-        'Resource optimization',
-        'Pest & disease detection',
-        'Soil analysis',
-        'Irrigation management',
-        'Harvest planning',
-        'Market price tracking',
-        'Farm equipment integration'
+        'Up to 3 social accounts',
+        'AI content generation',
+        '30 posts per month',
+        'Smart hashtag optimization',
+        'Real-time engagement monitoring',
+        'Content calendar',
+        'Basic analytics',
+        'Email support',
+        'Standard scheduling',
+        'Multi-platform posting'
       ],
       popular: false,
+      category: 'micro-saas'
+    },
+    {
+      name: 'AI Customer Support Chatbot',
+      monthlyPrice: '$99',
+      yearlyPrice: '$990',
+      description: 'Intelligent customer support that reduces costs by 60%',
+      features: [
+        'Up to 1,000 conversations/month',
+        'Natural language processing',
+        'Multi-language support',
+        '24/7 automated support',
+        'Human handoff capability',
+        'CRM integration',
+        'Real-time analytics',
+        'Custom knowledge base',
+        'Sentiment analysis',
+        'Email support'
+      ],
+      popular: true,
+      category: 'micro-saas'
+    },
+    {
+      name: 'AI Project Management Pro',
+      monthlyPrice: '$59',
+      yearlyPrice: '$590',
+      description: 'AI-powered project management that increases completion by 40%',
+      features: [
+        'Up to 25 team members',
+        'AI task prioritization',
+        'Unlimited projects',
+        'Resource allocation',
+        'Timeline generation',
+        'Real-time collaboration',
+        'Advanced analytics',
+        '100+ tool integrations',
+        'Mobile app access',
+        'Priority support'
+      ],
+      popular: false,
+      category: 'micro-saas'
+    },
+    {
+      name: 'AI Analytics Dashboard Pro',
+      monthlyPrice: '$149',
+      yearlyPrice: '$1,490',
+      description: 'Business intelligence that makes decisions 3x faster',
+      features: [
+        'Up to 25 data sources',
+        'AI-powered insights',
+        'Custom dashboards',
+        'Predictive analytics',
+        'Real-time visualization',
+        'Automated reports',
+        'KPI tracking & alerts',
+        'Advanced integrations',
+        'Mobile analytics app',
+        'Priority support'
+      ],
+      popular: true,
       category: 'micro-saas'
     }
   ];
 
   const aiServicesPricing = [
     {
-      name: 'AI Chatbot Enterprise',
-      monthlyPrice: '$299',
-      yearlyPrice: '$2,990',
-      description: 'Advanced conversational AI for customer service',
+      name: 'AI Email Marketing Enterprise',
+      monthlyPrice: '$199',
+      yearlyPrice: '$1,990',
+      description: 'Enterprise-grade AI email marketing automation',
       features: [
-        'Up to 100,000 conversations/month',
-        'Natural language processing',
-        'Multi-channel support',
-        'Custom training & learning',
-        'Advanced analytics dashboard',
-        'CRM integration',
-        'Voice & text support',
-        'Multi-language support',
-        'Sentiment analysis',
-        'Escalation to human agents'
+        'Unlimited emails',
+        'Advanced AI features',
+        'Custom automation workflows',
+        'White-label options',
+        'Dedicated account manager',
+        'Custom integrations',
+        'Advanced compliance tools',
+        'SLA guarantees',
+        'Multi-brand management',
+        '24/7 priority support'
       ],
       popular: true,
       category: 'ai-services'
     },
     {
-      name: 'AI Computer Vision',
+      name: 'AI Social Media Enterprise',
+      monthlyPrice: '$149',
+      yearlyPrice: '$1,490',
+      description: 'Enterprise social media management with AI',
+      features: [
+        'Unlimited social accounts',
+        'Full AI suite',
+        'Team collaboration tools',
+        'White-label options',
+        'Dedicated account manager',
+        'Custom integrations',
+        'Advanced reporting',
+        'SLA guarantees',
+        'Multi-brand management',
+        '24/7 priority support'
+      ],
+      popular: false,
+      category: 'ai-services'
+    },
+    {
+      name: 'AI Customer Support Enterprise',
       monthlyPrice: '$399',
       yearlyPrice: '$3,990',
-      description: 'Advanced image and video analysis solutions',
+      description: 'Enterprise-grade AI customer support solution',
       features: [
-        'Up to 50,000 images/month',
-        'Object detection & recognition',
-        'Facial recognition & analysis',
-        'Quality control & inspection',
-        'Real-time video processing',
-        'Image classification',
-        'OCR capabilities',
-        'Medical image analysis',
-        'Security & surveillance',
-        'Custom model training'
-      ],
-      popular: false,
-      category: 'ai-services'
-    },
-    {
-      name: 'AI Analytics Dashboard Pro',
-      monthlyPrice: '$349',
-      yearlyPrice: '$3,490',
-      description: 'Advanced business intelligence and predictive analytics',
-      features: [
-        'Up to 1M data points/month',
-        'Predictive analytics & forecasting',
-        'Custom dashboard builder',
-        'Real-time data visualization',
-        'Automated report generation',
-        'KPI tracking & alerts',
-        'Data integration (100+ sources)',
-        'Machine learning models',
-        'Collaborative workspaces',
-        'Mobile analytics app'
+        'Unlimited conversations',
+        'Full AI suite',
+        'Dedicated account manager',
+        'Custom integrations',
+        'White-label options',
+        'Advanced security',
+        'SLA guarantees',
+        'On-premise deployment',
+        'Multi-language support',
+        '24/7 dedicated support'
       ],
       popular: true,
       category: 'ai-services'
     },
     {
-      name: 'AI Automation Platform',
-      monthlyPrice: '$499',
-      yearlyPrice: '$4,990',
-      description: 'End-to-end business process automation',
+      name: 'AI Project Management Enterprise',
+      monthlyPrice: '$199',
+      yearlyPrice: '$1,990',
+      description: 'Enterprise AI project management platform',
       features: [
-        'Unlimited workflows',
-        'RPA integration',
-        'Custom bot development',
-        'Document processing',
-        'Email automation',
-        'Data extraction & processing',
-        'API integration',
-        'Performance monitoring',
-        'Error handling & recovery',
-        'Scalable infrastructure'
+        'Unlimited team members',
+        'Full AI suite',
+        'Dedicated account manager',
+        'Custom integrations',
+        'White-label options',
+        'Advanced security',
+        'SLA guarantees',
+        'On-premise deployment',
+        'Custom workflows',
+        '24/7 dedicated support'
       ],
       popular: false,
+      category: 'ai-services'
+    },
+    {
+      name: 'AI Analytics Enterprise',
+      monthlyPrice: '$299',
+      yearlyPrice: '$2,990',
+      description: 'Enterprise AI analytics and business intelligence',
+      features: [
+        'Unlimited data sources',
+        'Full AI suite',
+        'White-label options',
+        'Dedicated account manager',
+        'Custom integrations',
+        'Advanced security',
+        'SLA guarantees',
+        'On-premise deployment',
+        'Custom reporting',
+        '24/7 dedicated support'
+      ],
+      popular: true,
       category: 'ai-services'
     }
   ];
@@ -304,14 +307,13 @@ const PricingPage: React.FC = () => {
     ? allPricing 
     : allPricing.filter(item => item.category === selectedCategory);
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Pricing - Transparent Pricing for AI & IT Solutions | Zion Tech Group</title>
         <meta name="description" content="Transparent pricing for our comprehensive AI and IT solutions. Choose from micro SAAS, AI services, and IT solutions with flexible pricing options." />
-        <meta name="keywords" content="pricing, micro SAAS pricing, AI services pricing, IT services pricing, cloud infrastructure pricing, cybersecurity pricing" />
+        <meta name="keywords" content="pricing, _micro SAAS pricing, _AI services pricing, _IT services pricing, _cloud infrastructure pricing, cybersecurity pricing" />
         <meta property="og:title" content="Pricing - Transparent Pricing for AI & IT Solutions" />
-        <meta property="og:description" content="Transparent pricing for our comprehensive AI and IT solutions. Choose from micro SAAS, AI services, and IT solutions." />
+        <meta property="og:description" content="Transparent pricing for our comprehensive AI and IT solutions. Choose from micro SAAS, _AI services, and IT solutions." />
         <meta property="og:url" content="https://ziontechgroup.com/pricing" />
         <link rel="canonical" href="https://ziontechgroup.com/pricing" />
       </Helmet>
@@ -365,8 +367,7 @@ const PricingPage: React.FC = () => {
       <section className="py-8 bg-slate-800">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
-              <button
+            {categories.map((category) => (<button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${

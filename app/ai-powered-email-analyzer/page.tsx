@@ -3,14 +3,11 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
   Mail, 
-  TrendingUp, 
   Shield, 
   Zap, 
   BarChart3, 
   Users, 
-  Clock, 
   CheckCircle,
-  Star,
   ArrowRight,
   Brain,
   Target,
@@ -108,12 +105,11 @@ const AIPoweredEmailAnalyzerPage = () => {
     { number: "10k+", label: "Happy Customers" }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI-Powered Email Analyzer | Zion Tech Group</title>
         <meta name="description" content="Revolutionize your email communication with our AI-powered email analyzer. Get sentiment analysis, smart suggestions, and performance insights." />
-        <meta name="keywords" content="AI email analyzer, email sentiment analysis, email automation, business communication, email analytics" />
+        <meta name="keywords" content="AI email analyzer, _email sentiment analysis, _email automation, _business communication, email analytics" />
       </Helmet>
 
       {/* Hero Section */}
@@ -136,8 +132,7 @@ const AIPoweredEmailAnalyzerPage = () => {
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leverage advanced AI to analyze, optimize, and enhance your email communications with intelligent insights, 
-              sentiment analysis, and smart response suggestions.
+              Leverage advanced AI to analyze, _optimize, _and enhance your email communications with intelligent insights, _sentiment analysis, and smart response suggestions.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

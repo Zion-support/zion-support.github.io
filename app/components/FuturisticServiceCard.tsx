@@ -13,14 +13,7 @@ interface FuturisticServiceCardProps {
 }
 
 const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
-  title,
-  description,
-  icon: Icon,
-  features,
-  benefits,
-  pricing,
-  category,
-}) => {
+  title, description, _icon: Icon, _features, _benefits, _pricing, _category, _}) => {
   const categoryColors = {
     AI: "from-purple-500 to-pink-600",
     IT: "from-blue-500 to-cyan-600",
