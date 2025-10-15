@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-    import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',
-    import { HelmetProvider } from 'react-helmet-async';
-    import './app/styles/futuristic.css';
-=======
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import './app/styles/futuristic.css';
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 
 // Components
 import Navigation from './app/components/Navigation';
@@ -153,8 +142,3 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
   );
 }
 
-<<<<<<< HEAD
-export default App;
-=======
-export default App;
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

@@ -8,19 +8,6 @@ export const focusManagement = {};
     const firstElement = focusableElements[0] as HTMLElement
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
     const handleTabKey = (e: KeyboardEvent) => {};
-<<<<<<< HEAD
-}if (e.key === 'Tab') {},
-      if (e.shiftKey) {},
-      if (document.activeElement === firstElement) {},
-      lastElement.focus()
-=======
-}if ($1) {
-  // If body
-}
-        if (e.shiftKey) {};
-          if (document.activeElement === firstElement) {};
-            lastElement.focus()
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
             e.preventDefault()
           };
         } else {},
