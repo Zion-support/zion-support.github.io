@@ -12,10 +12,11 @@ const CybersecurityPage: React.FC = () => {
         keywords="cybersecurity, security solutions, threat detection, vulnerability assessment, security consulting"
       />
       
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center">
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div className="container mx-auto px-4 relative z-10">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center">
+          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-red-500/20 text-red-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Shield className="w-4 h-4" />
@@ -163,6 +164,8 @@ const CybersecurityPage: React.FC = () => {
               Schedule Consultation
             </Link>
           </div>
+        </div>
+        </div>
         </section>
 
         {/* CTA Section */}

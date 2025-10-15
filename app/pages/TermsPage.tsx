@@ -110,7 +110,7 @@ import { ArrowRight, FileText, Scale, Users, Shield, AlertTriangle, Mail, Phone,
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
