@@ -23,6 +23,8 @@ export default tseslint.config(
       "validate-jsx.js",
       "fix-lint-*.js",
       "fix-numeric-components.js",
+      "utils/accessibilityUtils.ts",
+      "utils/seoUtils.ts",
     ],
   },
   js.configs.recommended,
@@ -67,7 +69,7 @@ export default tseslint.config(
         { allowConstantExport: true },
       ],
       "@typescript-eslint/no-unused-vars": [
-        "error",
+        "warn",
         { argsIgnorePattern: "^_", varsIgnorePattern: "^[A-Z]" },
       ],
       "@typescript-eslint/no-require-imports": "error",

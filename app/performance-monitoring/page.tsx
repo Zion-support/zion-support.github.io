@@ -152,5 +152,3 @@ const PerformanceMonitoringPage: React.FC = () => {
 };
 
 export default PerformanceMonitoringPage;
-
-export default PerformanceMonitoringPage;

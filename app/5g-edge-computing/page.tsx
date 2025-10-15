@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const FiveGEdgeComputingPage: React.FC = () => {
+const FiveGedgeComputingPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,6 +54,6 @@ const FiveGEdgeComputingPage: React.FC = () => {
   );
 };
 
-export default FiveGedgecomputingPage;
+export default FiveGedgeComputingPage;
 
 

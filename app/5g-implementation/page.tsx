@@ -18,7 +18,7 @@ import {
   Activity
 } from 'lucide-react';
 
-const FiveGImplementationPage: React.FC = () => {
+const FiveGimplementationPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   // const [activeTab, setActiveTab] = useState('overview');
 

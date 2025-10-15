@@ -42,13 +42,14 @@ function fixPage(pageName) {
 
   let content = fs.readFileSync(filePath, 'utf8');
   
-  // Convert kebab-case to PascalCase for component name
+  // Convert kebab-case to PascalCase for component name, handling 5g prefix
   const componentName = pageName
+    .replace('5g-', 'FiveG')
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join('') + 'Page';
   
-  // Fix the component declaration
+  // Fix the component declaration - look for any const declaration
   const componentRegex = /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*{/;
   const match = content.match(componentRegex);
   
@@ -70,7 +71,7 @@ function fixPage(pageName) {
   content = content.replace(/import\s+{\s*Lock\s*}\s+from\s+['"][^'"]+['"];\s*\n/, '');
   
   fs.writeFileSync(filePath, content);
-  console.log(`Fixed: ${filePath}`);
+  console.log(`Fixed: ${filePath} -> ${componentName}`);
 }
 
 // Fix all pages

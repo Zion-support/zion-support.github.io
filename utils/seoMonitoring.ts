@@ -5,36 +5,36 @@ export const seoMetrics = {
     // LCP - Largest Contentful Paint
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      console.log('LCP:', lastEntry.startTime);
+      const LastEntry = entries[entries.length - 1];
+      // LCP: ${LastEntry.startTime}
     }).observe({ entryTypes: ['largest-contentful-paint'] });
 
     // FID - First Input Delay
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
-      entries.forEach(entry => {
-        console.log('FID:', entry.processingStart - entry.startTime);
+      entries.forEach(_entry => {
+        // FID: ${_entry.processingStart - _entry.startTime}
       });
     }).observe({ entryTypes: ['first-input'] });
 
     // CLS - Cumulative Layout Shift
-    let clsValue = 0;
+    let ClsValue = 0;
     new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       entries.forEach(entry => {
         if (!entry.hadRecentInput) {
-          clsValue += entry.value;
+          ClsValue += entry.value;
         }
       });
-      console.log('CLS:', clsValue);
+        // CLS: ${ClsValue}
     }).observe({ entryTypes: ['layout-shift'] });
   },
 
   // Page load time monitoring
   measurePageLoad: () => {
     window.addEventListener('load', () => {
-      const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-      console.log('Page Load Time:', loadTime + 'ms');
+      const LoadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+      // Page Load Time: ${LoadTime}ms
     });
   },
 
@@ -49,7 +49,7 @@ export const seoMetrics = {
       structuredData: !!document.querySelector('script[type="application/ld+json"]')
     };
     
-    console.log('SEO Elements Check:', checks);
+    // SEO Elements Check: ${checks}
     return checks;
   },
 
@@ -70,7 +70,7 @@ export const seoMetrics = {
       }
     });
     
-    console.log('Image Optimization Issues:', issues);
+    // Image Optimization Issues: ${issues}
     return issues;
   }
 };

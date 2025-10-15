@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Database, Shield, Zap, Users, CheckCircle, ArrowRight, BarChart3, Cloud, Lock, Cpu } from 'lucide-react';
+import { Database, Shield, Zap, Users, CheckCircle, ArrowRight, BarChart3, Cloud, Cpu } from 'lucide-react';
 
 const AIDatabaseSolutionsPage: React.FC = () => {
   const features = [

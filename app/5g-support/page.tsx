@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const FiveGSupport: React.FC = () => {
+const FiveGsupportPage: React.FC = () => {
   return (
     <>
       <Helmet>

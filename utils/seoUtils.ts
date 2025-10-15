@@ -24,7 +24,7 @@ export const generateSEOTags = ({
   structuredData,
   noIndex = false
 }: SEOProps) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullTitle = title.includes('Zion Tech Group') ? title : title + ' | Zion Tech Group';
   const defaultKeywords = [
     'AI solutions',
     '5G technology', 
@@ -85,12 +85,12 @@ export const generateSEOTags = ({
       
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
       <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
       
       {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
     </Helmet>
   );
 };
