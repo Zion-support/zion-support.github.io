@@ -39,6 +39,27 @@ class ErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
+    
+    // Send error to monitoring service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Enhanced error reporting with more context
+      const errorReport = {
+        message: error.message,
+        stack: error.stack,
+        componentStack: errorInfo.componentStack,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        url: window.location.href
+      };
+      
+      // Send to error monitoring service (e.g., Sentry, LogRocket, etc.)
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'exception', {
+          description: error.message,
+          fatal: false
+        });
+      }
+    }
 
     // In production, you might want to send this to an error reporting service
     if (process.env.NODE_ENV === 'production') {

@@ -60,6 +60,40 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           {JSON.stringify(structuredData)}
         </script>
       )}
+      
+      {/* Default Organization Structured Data */}
+      {!structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "url": "https://ziontechgroup.com",
+            "logo": "https://ziontechgroup.com/logo.png",
+            "description": "Advanced AI and IT Solutions for modern businesses",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-302-464-0950",
+              "contactType": "customer service",
+              "email": "kleber@ziontechgroup.com"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "364 E Main St STE 1008",
+              "addressLocality": "Middletown",
+              "addressRegion": "DE",
+              "postalCode": "19709",
+              "addressCountry": "US"
+            },
+            "sameAs": [
+              "https://ziontechgroup.com"
+            ],
+            "foundingDate": "2020",
+            "numberOfEmployees": "50-100",
+            "industry": "Information Technology"
+          })}
+        </script>
+      )}
     </Helmet>
   );
 };

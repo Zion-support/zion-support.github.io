@@ -24,8 +24,16 @@ const PerformanceMonitor: React.FC = () => {
           
           // Store metrics for analytics
           if (process.env.NODE_ENV === 'production') {
-            // Send to analytics service
-            // analyticsService.track('performance_metric', { metric: metric.name, value: metric.value });
+            // Send to analytics service with enhanced tracking
+            if (typeof window !== 'undefined' && window.gtag) {
+              window.gtag('event', 'performance_metric', {
+                metric_name: metric.name,
+                metric_value: metric.value,
+                metric_delta: metric.delta,
+                metric_id: metric.id,
+                metric_navigationType: metric.navigationType
+              });
+            }
           }
         };
         
@@ -46,6 +54,17 @@ const PerformanceMonitor: React.FC = () => {
           if (entry.entryType === 'navigation') {
             if (process.env.NODE_ENV === 'development') {
               console.log('Navigation timing:', entry);
+            }
+            
+            // Track navigation performance in production
+            if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && window.gtag) {
+              const navEntry = entry as PerformanceNavigationTiming;
+              window.gtag('event', 'navigation_timing', {
+                dom_content_loaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
+                load_complete: navEntry.loadEventEnd - navEntry.loadEventStart,
+                first_byte: navEntry.responseStart - navEntry.requestStart,
+                dom_processing: navEntry.domComplete - navEntry.domLoading
+              });
             }
           }
         }

@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, lazy, useEffect, memo } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './app/styles/futuristic.css';
@@ -12,6 +12,8 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import SEOOptimizer from './app/components/SEOOptimizer';
+// Hooks
+import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -164,8 +166,17 @@ const LoadingFallback = () => (
   </div>
 );
 
-function App() {
+const App = memo(() => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
+
+  // Initialize performance optimizations
+  usePerformanceOptimization({
+    enableLazyLoading: true,
+    enablePreloading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableBundleAnalysis: process.env.NODE_ENV === 'development'
+  });
 
   useEffect(() => {
     // Preload critical resources
@@ -362,6 +373,8 @@ function App() {
       </HelmetProvider>
     </GlobalErrorBoundary>
   );
-}
+});
+
+App.displayName = 'App';
 
 export default App;
