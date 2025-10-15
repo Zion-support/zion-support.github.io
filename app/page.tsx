@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import UnifiedSEOHead from './components/UnifiedSEOHead';
 import { 
@@ -10,7 +9,6 @@ import {
   RocketLaunchIcon,
   CheckCircleIcon,
   ArrowRightIcon,
-  StarIcon,
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
