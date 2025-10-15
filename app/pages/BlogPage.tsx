@@ -1,14 +1,4 @@
-
-import { Helmet } from "react-helmet-async";
-
-const BlogPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Blog - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Latestinsights and updates fromZion Tech Group"
+import { Helmet } from "react-helmet-async"; const BlogPage: React.FC = () => { return ( <> <Helmet> <title>Blog - Zion Tech Group</title> <meta name="description" content="Latestinsights and updates fromZion Tech Group"
         />
         <meta name="keywords" content="blog,tech insights, AI, IT solutions" />
       </Helmet>
@@ -23,6 +13,5 @@ const BlogPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  ); };
 export default BlogPage;

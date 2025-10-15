@@ -1,18 +1,4 @@
-
-import { Helmet } from "react-helmet-async";
-
-const CookiePolicyPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Cookie Policy</title>
-        <meta
-          name="description"
-          content="Professional cookie policy solutions and services"
-        />
-        <meta name="keywords" content="cookie, policy" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+import { Helmet } from "react-helmet-async"; const CookiePolicyPage: React.FC = () => { return ( <> <Helmet> <title>Cookie Policy</title> <meta name="description" content="Professional cookie policy solutions and services" /> <meta name="keywords" content="cookie, policy" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">
@@ -51,8 +37,5 @@ const CookiePolicyPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
+  ); };
 export default CookiePolicyPage;
-

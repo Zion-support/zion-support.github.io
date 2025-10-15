@@ -1,18 +1,4 @@
-
-import { Helmet } from "react-helmet-async";
-
-const AiEnterpriseTransformation2025Page = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Ai Enterprise Transformation 2025</title>
-        <meta
-          name="description"
-          content="Professional ai enterprise transformation 2025 solutions and services"
-        />
-        <meta name="keywords" content="ai, enterprise, transformation, 2025" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+import { Helmet } from "react-helmet-async"; const AiEnterpriseTransformation2025Page = () => { return ( <> <Helmet> <title>Ai Enterprise Transformation 2025</title> <meta name="description" content="Professional ai enterprise transformation 2025 solutions and services" /> <meta name="keywords" content="ai, enterprise, transformation, 2025" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">
@@ -52,8 +38,5 @@ const AiEnterpriseTransformation2025Page = () => {
         </div>
       </div>
     </>
-  );
-};
-
+  ); };
 export default AiEnterpriseTransformation2025Page;
-

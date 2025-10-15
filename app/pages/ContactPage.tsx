@@ -1,18 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
-
-const ContactPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for your AI and IT needs." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-slate-900 text-white">
-        {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Phone, Mail, MapPin, Send } from "lucide-react"; const ContactPage: React.FC = () => { return ( <> <Helmet> <title>Contact Us - Zion Tech Group</title> <meta name="description" content="Get in touch with Zion Tech Group for your AI and IT needs." /> </Helmet> <div className="min-h-screen bg-slate-900 text-white"> {/* Hero Section */ } <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Contact Us
@@ -22,8 +10,7 @@ const ContactPage: React.FC = () => {
             </p>
           </div>
         </section>
-
-        {/* Contact Info */}
+        { /* Contact Info */ }
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -43,8 +30,7 @@ const ContactPage: React.FC = () => {
                 <p className="text-gray-300">Wilmington, DE, USA</p>
               </div>
             </div>
-
-            {/* Contact Form */}
+            { /* Contact Form */ }
             <div className="max-w-2xl mx-auto">
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border border-slate-700">
                 <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
@@ -68,15 +54,14 @@ const ContactPage: React.FC = () => {
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
                     <textarea
-                      rows={4}
+                      rows={ 4 }
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-purple-500"
                       placeholder="Your message..."
                     />
                   </div>
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
-                  >
+                    className="w-full inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                     Send Message
                     <Send className="ml-2 w-5 h-5" />
                   </button>
@@ -89,5 +74,4 @@ const ContactPage: React.FC = () => {
     </>
   );
 };
-
 export default ContactPage;

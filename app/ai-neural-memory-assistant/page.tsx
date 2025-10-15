@@ -1,19 +1,5 @@
-
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
-import { Helmet } from "react-helmet-async";
-
-const AiNeuralMemoryAssistantPage = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Ai Neural Memory Assistant</title>
-        <meta
-          name="description"
-          content="Professional ai neural memory assistant solutions and services"
-        />
-        <meta name="keywords" content="ai, neural, memory, assistant" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+import React, { useState, useEffect, memo, lazy, Suspense } from "react";
+import { Helmet } from "react-helmet-async"; const AiNeuralMemoryAssistantPage = () => { return ( <> <Helmet> <title>Ai Neural Memory Assistant</title> <meta name="description" content="Professional ai neural memory assistant solutions and services" /> <meta name="keywords" content="ai, neural, memory, assistant" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">
@@ -52,8 +38,5 @@ const AiNeuralMemoryAssistantPage = () => {
         </div>
       </div>
     </>
-  );
-};
-
+  ); };
 export default AiNeuralMemoryAssistantPage;
-

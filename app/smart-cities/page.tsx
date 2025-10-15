@@ -1,18 +1,4 @@
-
-import { Helmet } from "react-helmet-async";
-
-const SmartCitiesPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Smart Cities</title>
-        <meta
-          name="description"
-          content="Professional smart cities solutions and services"
-        />
-        <meta name="keywords" content="smart, cities" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+import { Helmet } from "react-helmet-async"; const SmartCitiesPage: React.FC = () => { return ( <> <Helmet> <title>Smart Cities</title> <meta name="description" content="Professional smart cities solutions and services" /> <meta name="keywords" content="smart, cities" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">Smart Cities</h1>
@@ -49,8 +35,5 @@ const SmartCitiesPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
+  ); };
 export default SmartCitiesPage;
-

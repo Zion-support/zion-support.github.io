@@ -1,76 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Cloud, 
-  Shield, 
-  Database, 
-  Monitor, 
-  Settings, 
-  Server,
-  ArrowRight,
-  CheckCircle
-} from 'lucide-react';
-
-const ItServicesPage: React.FC = () => {
-  const itServices = [
-    {
-      icon: <Cloud className="w-8 h-8" />,
-      title: "Cloud Infrastructure",
-      description: "Scalable and secure cloud infrastructure solutions for modern businesses.",
-      href: "/ai-cloud-infrastructure",
-      features: ["Cloud Migration", "Multi-Cloud Management", "Serverless Architecture", "Cost Optimization"]
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Advanced Security Suite",
-      description: "Comprehensive cybersecurity solutions to protect your digital assets.",
-      href: "/advanced-security-suite",
-      features: ["Threat Detection", "Data Encryption", "Compliance Management", "Security Auditing"]
-    },
-    {
-      icon: <Database className="w-8 h-8" />,
-      title: "Database Solutions",
-      description: "Robust database management and optimization services for data-driven businesses.",
-      href: "/database-solutions",
-      features: ["Database Design", "Performance Optimization", "Data Migration", "Backup & Recovery"]
-    },
-    {
-      icon: <Monitor className="w-8 h-8" />,
-      title: "Performance Monitoring",
-      description: "Real-time monitoring and optimization of your IT infrastructure and applications.",
-      href: "/performance-monitoring",
-      features: ["Real-time Monitoring", "Performance Analytics", "Alert Management", "Capacity Planning"]
-    },
-    {
-      icon: <Settings className="w-8 h-8" />,
-      title: "DevOps Solutions",
-      description: "Streamlined development and deployment processes with modern DevOps practices.",
-      href: "/devops-solutions",
-      features: ["CI/CD Pipelines", "Infrastructure as Code", "Container Orchestration", "Automated Testing"]
-    },
-    {
-      icon: <Server className="w-8 h-8" />,
-      title: "API Management",
-      description: "Comprehensive API management and integration solutions for seamless connectivity.",
-      href: "/ai-api-management",
-      features: ["API Gateway", "Rate Limiting", "Authentication", "Analytics & Monitoring"]
-    }
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>IT Services - Zion Tech Group | Information Technology Solutions</title>
-        <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, database solutions, performance monitoring, DevOps, and API management." />
-        <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, database solutions, DevOps, API management, performance monitoring" />
-        <meta property="og:title" content="IT Services - Zion Tech Group" />
-        <meta property="og:description" content="Transform your IT infrastructure with our comprehensive technology solutions." />
-        <meta property="og:type" content="website" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { Cloud, Shield, Database, Monitor, Settings, Server, ArrowRight, CheckCircle } from "lucide-react"; const ItServicesPage: React.FC = () => { const itServices = [ { icon: <Cloud className="w-8 h-8" />, title: "Cloud Infrastructure", description: "Scalable and secure cloud infrastructure solutions for modern businesses.", href: "/ai-cloud-infrastructure", features: ["Cloud Migration", "Multi-Cloud Management", "Serverless Architecture", "Cost Optimization"] }, { icon: <Shield className="w-8 h-8" />, title: "Advanced Security Suite", description: "Comprehensive cybersecurity solutions to protect your digital assets.", href: "/advanced-security-suite", features: ["Threat Detection", "Data Encryption", "Compliance Management", "Security Auditing"] }, { icon: <Database className="w-8 h-8" />, title: "Database Solutions", description: "Robust database management and optimization services for data-driven businesses.", href: "/database-solutions", features: ["Database Design", "Performance Optimization", "Data Migration", "Backup & Recovery"] }, { icon: <Monitor className="w-8 h-8" />, title: "Performance Monitoring", description: "Real-time monitoring and optimization of your IT infrastructure and applications.", href: "/performance-monitoring", features: ["Real-time Monitoring", "Performance Analytics", "Alert Management", "Capacity Planning"] }, { icon: <Settings className="w-8 h-8" />, title: "DevOps Solutions", description: "Streamlined development and deployment processes with modern DevOps practices.", href: "/devops-solutions", features: ["CI/CD Pipelines", "Infrastructure as Code", "Container Orchestration", "Automated Testing"] }, { icon: <Server className="w-8 h-8" />, title: "API Management", description: "Comprehensive API management and integration solutions for seamless connectivity.", href: "/ai-api-management", features: ["API Gateway", "Rate Limiting", "Authentication", "Analytics & Monitoring"] } ]; return ( <> <Helmet> <title>IT Services - Zion Tech Group | Information Technology Solutions</title> <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, database solutions, performance monitoring, DevOps, and API management." /> <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, database solutions, DevOps, API management, performance monitoring" /> <meta property="og:title" content="IT Services - Zion Tech Group" /> <meta property="og:description" content="Transform your IT infrastructure with our comprehensive technology solutions." /> <meta property="og:type" content="website" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        { /* Hero Section */ }
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
@@ -84,8 +16,7 @@ const ItServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* IT Services Grid */}
+        { /* IT Services Grid */ }
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -94,33 +25,28 @@ const ItServicesPage: React.FC = () => {
                 End-to-end IT services designed to transform your technology infrastructure
               </p>
             </div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.map((service, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/50 border border-purple-500/30 rounded-xl p-8 hover:border-cyan-400/50 transition-all duration-300 group">
+              { itServices.map((service, index) => (
+                <div key={index } className="bg-gradient-to-br from-slate-800/50 to-purple-900/50 border border-purple-500/30 rounded-xl p-8 hover:border-cyan-400/50 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <div className="text-white">
-                      {service.icon}
+                      { service.icon }
                     </div>
                   </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                  
+                  <h3 className="text-2xl font-bold text-white mb-4">{ service.title }</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">{ service.description }</p>
                   <div className="space-y-2 mb-6">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features:</h4>
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center space-x-2">
+                    { service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex } className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                        <span className="text-sm text-gray-300">{feature}</span>
+                        <span className="text-sm text-gray-300">{ feature }</span>
                       </div>
                     ))}
                   </div>
-                  
                   <Link 
-                    to={service.href}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all"
-                  >
+                    to={ service.href }
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all">
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
@@ -128,8 +54,7 @@ const ItServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* CTA Section */}
+        { /* CTA Section */ }
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
@@ -140,14 +65,12 @@ const ItServicesPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact"
-                  className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                >
+                  className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                   Get Started Today
                 </Link>
                 <Link 
                   to="/demo"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   Schedule Demo
                 </Link>
               </div>
@@ -158,5 +81,4 @@ const ItServicesPage: React.FC = () => {
     </>
   );
 };
-
 export default ItServicesPage;

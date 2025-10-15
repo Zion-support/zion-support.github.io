@@ -1,65 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  CpuChipIcon,
-  EnvelopeIcon,
-  PhoneIcon,
-  MapPinIcon,
-  ArrowRightIcon,
-  HeartIcon
-} from '@heroicons/react/24/outline';
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
-
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
-  const footerLinks = {
-    services: [
-      { name: 'AI Solutions', href: '/ai-services' },
-      { name: 'IT Solutions', href: '/it-services' },
-      { name: '5G Solutions', href: '/5g-solutions' },
-      { name: 'Micro SAAS', href: '/micro-saas' },
-      { name: 'Cybersecurity', href: '/advanced-security-suite' },
-      { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
-      { name: 'Digital Transformation', href: '/services' },
-    ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/about' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Case Studies', href: '/blog' },
-      { name: 'Contact', href: '/contact' },
-    ],
-    resources: [
-      { name: 'Blog', href: '/blog' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'Support', href: '/contact' },
-      { name: 'FAQ', href: '/contact' },
-      { name: 'Tutorials', href: '/blog' },
-    ],
-    legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/privacy' },
-      { name: 'GDPR', href: '/privacy' },
-      { name: 'Security', href: '/advanced-security-suite' },
-    ]
-  };
-
-  const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
-  ];
-
-  return (
-    <footer className="bg-slate-900 border-t border-slate-700/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight, Facebook, Twitter, Linkedin, Github } from "lucide-react"; CpuChipIcon, EnvelopeIcon, PhoneIcon, MapPinIcon, ArrowRightIcon, HeartIcon } from '@heroicons/react/24/outline'; const Footer: React.FC = () => { const currentYear = new Date().getFullYear(); const footerLinks = { services: [ { name: 'AI Solutions', href: '/ai-services' }, { name: 'IT Solutions', href: '/it-services' }, { name: '5G Solutions', href: '/5g-solutions' }, { name: 'Micro SAAS', href: '/micro-saas' }, { name: 'Cybersecurity', href: '/advanced-security-suite' }, { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' }, { name: 'Digital Transformation', href: '/services' }, ], company: [ { name: 'About Us', href: '/about' }, { name: 'Our Team', href: '/about' }, { name: 'Careers', href: '/careers' }, { name: 'Case Studies', href: '/blog' }, { name: 'Contact', href: '/contact' }, ], resources: [ { name: 'Blog', href: '/blog' }, { name: 'Documentation', href: '/docs' }, { name: 'Support', href: '/contact' }, { name: 'FAQ', href: '/contact' }, { name: 'Tutorials', href: '/blog' }, ], legal: [ { name: 'Privacy Policy', href: '/privacy' }, { name: 'Terms of Service', href: '/terms' }, { name: 'Cookie Policy', href: '/privacy' }, { name: 'GDPR', href: '/privacy' }, { name: 'Security', href: '/advanced-security-suite' }, ] }; const socialLinks = [ { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin }, { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }, { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github } ]; return ( <footer className="bg-slate-900 border-t border-slate-700/50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8"> { /* Company Info */ } <div className="lg:col-span-2"> <div className="flex items-center space-x-2 mb-4"> <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
                 <CpuChipIcon className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
@@ -68,8 +9,7 @@ const Footer: React.FC = () => {
               Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, 
               and digital transformation services for businesses worldwide.
             </p>
-            
-            {/* Contact Info */}
+            { /* Contact Info */ }
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3 text-gray-400">
                 <PhoneIcon className="w-4 h-4" />
@@ -84,77 +24,69 @@ const Footer: React.FC = () => {
                 <span>364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
             </div>
-
-            {/* Social Links */}
+            { /* Social Links */ }
             <div className="flex space-x-4">
-              {socialLinks.map((social) => (
+              { socialLinks.map((social) => (
                 <a
-                  key={social.name}
-                  href={social.href}
+                  key={social.name }
+                  href={ social.href }
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
-                  aria-label={social.name}
+                  aria-label={ social.name }
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
             </div>
           </div>
-
-          {/* Services */}
+          { /* Services */ }
           <div>
             <h3 className="text-white font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              {footerLinks.services.map((link) => (
-                <li key={link.name}>
+              { footerLinks.services.map((link) => (
+                <li key={link.name }>
                   <Link
-                    to={link.href}
-                    className="text-gray-400 hover:text-purple-400 transition-colors"
-                  >
-                    {link.name}
+                    to={ link.href }
+                    className="text-gray-400 hover:text-purple-400 transition-colors">
+                    { link.name }
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Company */}
+          { /* Company */ }
           <div>
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
+              { footerLinks.company.map((link) => (
+                <li key={link.name }>
                   <Link
-                    to={link.href}
-                    className="text-gray-400 hover:text-purple-400 transition-colors"
-                  >
-                    {link.name}
+                    to={ link.href }
+                    className="text-gray-400 hover:text-purple-400 transition-colors">
+                    { link.name }
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Resources */}
+          { /* Resources */ }
           <div>
             <h3 className="text-white font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
-              {footerLinks.resources.map((link) => (
-                <li key={link.name}>
+              { footerLinks.resources.map((link) => (
+                <li key={link.name }>
                   <Link
-                    to={link.href}
-                    className="text-gray-400 hover:text-purple-400 transition-colors"
-                  >
-                    {link.name}
+                    to={ link.href }
+                    className="text-gray-400 hover:text-purple-400 transition-colors">
+                    { link.name }
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
         </div>
-
-        {/* Newsletter Signup */}
+        { /* Newsletter Signup */ }
         <div className="mt-16 pt-8 border-t border-slate-700/50">
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-2xl font-bold text-white mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Stay Updated</h3>
@@ -174,8 +106,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Bottom Section */}
+        { /* Bottom Section */ }
         <div className="mt-12 pt-8 border-t border-slate-700/50">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 text-gray-400 mb-4 md:mb-0">
@@ -183,16 +114,14 @@ const Footer: React.FC = () => {
               <HeartIcon className="w-4 h-4 text-red-400" />
               <span>by Zion Tech Group</span>
             </div>
-            
-            {/* Legal Links */}
+            { /* Legal Links */ }
             <div className="flex space-x-6 mt-4 md:mt-0">
-              {footerLinks.legal.map((link) => (
+              { footerLinks.legal.map((link) => (
                 <Link
-                  key={link.name}
-                  to={link.href}
-                  className="text-gray-400 hover:text-purple-400 text-sm transition-colors"
-                >
-                  {link.name}
+                  key={link.name }
+                  to={ link.href }
+                  className="text-gray-400 hover:text-purple-400 text-sm transition-colors">
+                  { link.name }
                 </Link>
               ))}
             </div>
@@ -202,5 +131,4 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-
 export default Footer;

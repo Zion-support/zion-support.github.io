@@ -1,21 +1,4 @@
-
-import { Helmet } from "react-helmet-async";
-
-const Ai2025Sept30OperationalTrustScorecardsV3Page = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Ai 2025 Sept 30 Operational Trust Scorecards V3</title>
-        <meta
-          name="description"
-          content="Professional ai 2025 sept 30 operational trust scorecards v3 solutions and services"
-        />
-        <meta
-          name="keywords"
-          content="ai, 2025, sept, 30, operational, trust, scorecards, v3"
-        />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+import { Helmet } from "react-helmet-async"; const Ai2025Sept30OperationalTrustScorecardsV3Page = () => { return ( <> <Helmet> <title>Ai 2025 Sept 30 Operational Trust Scorecards V3</title> <meta name="description" content="Professional ai 2025 sept 30 operational trust scorecards v3 solutions and services" /> <meta name="keywords" content="ai, 2025, sept, 30, operational, trust, scorecards, v3" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">
@@ -55,8 +38,5 @@ const Ai2025Sept30OperationalTrustScorecardsV3Page = () => {
         </div>
       </div>
     </>
-  );
-};
-
+  ); };
 export default Ai2025Sept30OperationalTrustScorecardsV3Page;
-
