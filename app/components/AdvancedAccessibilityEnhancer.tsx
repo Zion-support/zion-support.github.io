@@ -1,5 +1,4 @@
 'use client';
-import React, { useState } from 'react';
 import React, { useEffect, useState } from 'react';
 import { Eye, Volume2, MousePointer, Keyboard, Contrast, ZoomIn } from 'lucide-react';
 
@@ -11,23 +10,26 @@ interface AccessibilitySettings {
   reducedMotion: boolean;
   focusIndicator: boolean;
 }
-const AdvancedAccessibilityEnhancer: React.FC = () => {}
-}const [settings, setSettings] = useState<AccessibilitySettings>({}
+
+const AdvancedAccessibilityEnhancer: React.FC = () => {
+  const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     largeText: false,
     screenReader: false,
     keyboardNavigation: false,
     reducedMotion: false,
     focusIndicator: false
-  })
-  const [isVisible, setIsVisible] = useState(false)
-  useEffect(() => {}
-}// Load saved settings from localStorage
-    const savedSettings = localStorage.getItem('accessibilitySettings')
-    if (savedSettings) {}
-      setSettings(JSON.parse(savedSettings))
+  });
+  
+  const [isVisible, setIsVisible] = useState(false);
+  
+  useEffect(() => {
+    // Load saved settings from localStorage
+    const savedSettings = localStorage.getItem('accessibilitySettings');
+    if (savedSettings) {
+      setSettings(JSON.parse(savedSettings));
     }
-  }, [])
+  }, []);
   useEffect(() => {}
 }// Apply accessibility settings
     applyAccessibilitySettings(settings)

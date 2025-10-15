@@ -11,6 +11,7 @@ export default async function handler(req, res) {
     return;
   }
 
+  try {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true,

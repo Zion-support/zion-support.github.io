@@ -5,26 +5,9 @@ import {
   CheckCircle, 
   ArrowRight, 
   BarChart3, 
-  PieChart, 
   TrendingUp, 
   Target, 
-  Clock,
-  Shield,
-  Smartphone,
-  Globe,
-  FileText,
-  Settings,
-  Star,
-  Award,
-  Phone,
-  MapPin,
-  Envelope,
-  Database,
-  Zap,
-  Eye,
-  MessageSquare,
-  Users,
-  RefreshCw
+  Database
 } from 'lucide-react';
 
 const AIAnalyticsDashboardProPage: React.FC = () => {
