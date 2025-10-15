@@ -989,3 +989,235 @@ body {
   backface-visibility: hidden;
   perspective: 1000px;
 }
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 640px) {
+  .holographic-text {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+  
+  .neon-text {
+    font-size: 1.25rem;
+  }
+  
+  .cyber-button {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.8125rem;
+  }
+  
+  .holographic-card {
+    padding: 0.875rem;
+    margin: 0.25rem;
+  }
+  
+  /* Mobile Grid Improvements */
+  .mobile-grid-1 {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .mobile-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  /* Mobile Spacing */
+  .mobile-p-4 {
+    padding: 1rem;
+  }
+  
+  .mobile-p-6 {
+    padding: 1.5rem;
+  }
+  
+  .mobile-mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .mobile-mb-6 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Ultra Mobile (320px and below) */
+@media (max-width: 320px) {
+  .holographic-text {
+    font-size: 1.5rem;
+  }
+  
+  .neon-text {
+    font-size: 1.125rem;
+  }
+  
+  .cyber-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+  
+  .holographic-card {
+    padding: 0.75rem;
+    margin: 0.125rem;
+  }
+}
+
+/* Enhanced Hover Effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 245, 255, 0.2);
+}
+
+/* Improved Focus States */
+.focus-ring {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus-ring:focus {
+  outline: 2px solid var(--neon-cyan);
+  outline-offset: 2px;
+}
+
+/* Better Button States */
+.button-pressed {
+  transform: scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+/* Enhanced Loading States */
+.loading-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Improved Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .holographic-card {
+    border: 2px solid var(--neon-cyan);
+  }
+  
+  .cyber-button {
+    border: 2px solid var(--neon-cyan);
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .floating-particles .particle {
+    animation: none;
+  }
+  
+  .holographic-card {
+    animation: none;
+  }
+  
+  .neon-glow {
+    animation: none;
+  }
+  
+  .cyber-grid {
+    animation: none;
+  }
+}
+
+/* Enhanced Navigation Responsiveness */
+@media (max-width: 1024px) {
+  .navigation .nav-links {
+    display: none;
+  }
+  
+  .mobile-menu-button {
+    display: block;
+  }
+}
+
+/* Improved Footer Responsiveness */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-section {
+    text-align: center;
+  }
+  
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Enhanced Card Responsiveness */
+@media (max-width: 640px) {
+  .service-card {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .feature-card {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .pricing-card {
+    margin: 0.5rem;
+    padding: 1.5rem;
+  }
+}
+
+/* Better Text Responsiveness */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.4;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+  
+  .card-description {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+}

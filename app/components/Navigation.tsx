@@ -86,10 +86,17 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       icon: GlobeAltIcon,
       submenu: [
         { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
+        { name: 'AI Project Manager', href: '/ai-project-manager', icon: CogIcon },
+        { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: DocumentTextIcon },
+        { name: 'AI Time Tracker', href: '/ai-time-tracker', icon: ClockIcon },
+        { name: 'AI Lead Generator', href: '/ai-lead-generator', icon: UserGroupIcon },
+        { name: 'AI HR Assistant', href: '/ai-hr-assistant', icon: UserGroupIcon },
         { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
         { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
         { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
         { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },
+        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },
+        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon },
         { name: 'AI Meeting Transcriber', href: '/zion-ai-meeting-transcriber', icon: ChatBubbleLeftRightIcon },
         { name: 'AI Customer Satisfaction Monitor', href: '/zion-customer-satisfaction-monitor', icon: UserGroupIcon },
         { name: 'AI Inventory Optimizer', href: '/zion-ai-inventory-optimizer-pro', icon: CircleStackIcon },
@@ -101,10 +108,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard', icon: ChartBarIcon },
         { name: 'Smart CRM Automation', href: '/zion-smart-crm-automation', icon: ChatBubbleLeftRightIcon },
         { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager', icon: CircleStackIcon },
-        { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker', icon: CurrencyDollarIcon },
-        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
-        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },
-        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon }
+        { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker', icon: CurrencyDollarIcon }
       ]
     },
     {
@@ -308,7 +312,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     else if (item.name === 'IT Solutions') toggleResourcesMenu();
                     else if (item.name === 'Resources') toggleResourcesMenu();
                     else if (item.name === 'Company') toggleCompanyMenu();
-                    else if (item.name === 'Zion AI Tools') toggleCompanyMenu();
+                    else if (item.name === 'Zion AI Tools') toggleZionAIMenu();
+                    else if (item.name === 'Enterprise Solutions') toggleEnterpriseMenu();
                   }}
                   className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 border-b-2 group hover:scale-105 ${
                     isActive(item.href)
@@ -329,7 +334,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       (item.name === 'IT Solutions' && isResourcesOpen) ||
                       (item.name === 'Resources' && isResourcesOpen) ||
                       (item.name === 'Company' && isCompanyOpen) ||
-                      (item.name === 'Zion AI Tools' && isCompanyOpen)
+                      (item.name === 'Zion AI Tools' && isZionAIOpen) ||
+                      (item.name === 'Enterprise Solutions' && isEnterpriseOpen)
                         ? 'block' : 'hidden'
                     }`}
                     role="menu"

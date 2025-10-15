@@ -90,19 +90,21 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       title: 'Micro SaaS',
       items: [
         { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: Settings },
-        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: Settings },
-        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: Settings },
-        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: Settings },
-        { name: 'Inventory Manager', href: '/inventory-manager', icon: Settings },
-        { name: 'Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard', icon: Settings },
-        { name: 'Smart CRM Automation', href: '/zion-smart-crm-automation', icon: Settings },
-        { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager', icon: Settings },
-        { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker', icon: Settings },
         { name: 'AI Project Manager', href: '/ai-project-manager', icon: Settings },
         { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: Settings },
         { name: 'AI Time Tracker', href: '/ai-time-tracker', icon: Settings },
         { name: 'AI Lead Generator', href: '/ai-lead-generator', icon: Settings },
-        { name: 'AI HR Assistant', href: '/ai-hr-assistant', icon: Settings }
+        { name: 'AI HR Assistant', href: '/ai-hr-assistant', icon: Settings },
+        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: Settings },
+        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: Settings },
+        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: Settings },
+        { name: 'Inventory Manager', href: '/inventory-manager', icon: Settings },
+        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: Settings },
+        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: Settings },
+        { name: 'Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard', icon: Settings },
+        { name: 'Smart CRM Automation', href: '/zion-smart-crm-automation', icon: Settings },
+        { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager', icon: Settings },
+        { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker', icon: Settings }
       ]
     },
     {

@@ -154,10 +154,17 @@ const Footer: React.FC = memo(() => {
             <h4 className="text-md font-semibold mb-4">Micro SaaS Solutions</h4>
             <ul className="space-y-2">
               <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SaaS Overview</Link></li>
-              <li><Link to="/zion-smart-analytics-dashboard" className="text-gray-300 hover:text-white">Smart Analytics Dashboard</Link></li>
-              <li><Link to="/zion-smart-crm-automation" className="text-gray-300 hover:text-white">Smart CRM Automation</Link></li>
-              <li><Link to="/zion-smart-inventory-manager" className="text-gray-300 hover:text-white">Smart Inventory Manager</Link></li>
-              <li><Link to="/zion-smart-expense-tracker" className="text-gray-300 hover:text-white">Smart Expense Tracker</Link></li>
+              <li><Link to="/ai-project-manager" className="text-gray-300 hover:text-white">AI Project Manager</Link></li>
+              <li><Link to="/ai-invoice-generator" className="text-gray-300 hover:text-white">AI Invoice Generator</Link></li>
+              <li><Link to="/ai-time-tracker" className="text-gray-300 hover:text-white">AI Time Tracker</Link></li>
+              <li><Link to="/ai-lead-generator" className="text-gray-300 hover:text-white">AI Lead Generator</Link></li>
+              <li><Link to="/ai-hr-assistant" className="text-gray-300 hover:text-white">AI HR Assistant</Link></li>
+              <li><Link to="/task-manager-pro" className="text-gray-300 hover:text-white">Task Manager Pro</Link></li>
+              <li><Link to="/analytics-dashboard" className="text-gray-300 hover:text-white">Analytics Dashboard</Link></li>
+              <li><Link to="/customer-support-hub" className="text-gray-300 hover:text-white">Customer Support Hub</Link></li>
+              <li><Link to="/inventory-manager" className="text-gray-300 hover:text-white">Inventory Manager</Link></li>
+              <li><Link to="/social-media-scheduler" className="text-gray-300 hover:text-white">Social Media Scheduler</Link></li>
+              <li><Link to="/expense-tracker-pro" className="text-gray-300 hover:text-white">Expense Tracker Pro</Link></li>
             </ul>
           </div>
           

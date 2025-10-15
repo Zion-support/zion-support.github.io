@@ -12,6 +12,7 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import SEOOptimizer from './app/components/SEOOptimizer';
+import Analytics from './app/components/Analytics';
 // Hooks
 import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization';
 
@@ -87,9 +88,6 @@ const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
 
 // Additional missing pages
 const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
-const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
-const CloudSolutionsPage = lazy(() => import('./app/cloud-solutions/page'));
-const DemoPage = lazy(() => import('./app/demo/page'));
 const AIFraudDetectionProPage = lazy(() => import('./app/ai-fraud-detection-pro/page'));
 const AIImageRecognitionProPage = lazy(() => import('./app/ai-image-recognition-pro/page'));
 const AILeadScoringProPage = lazy(() => import('./app/ai-lead-scoring-pro/page'));
@@ -255,6 +253,7 @@ const App = memo(() => {
                 <PerformanceMonitor />
                 <AccessibilityEnhancer />
                 <SEOOptimizer />
+                <Analytics />
                 
                 <Suspense fallback={<LoadingFallback />}>
                   <ErrorBoundary>
@@ -335,12 +334,6 @@ const App = memo(() => {
                     
                     {/* Additional missing pages */}
                     <Route path="/accessibility-page" element={<AccessibilityPagePage />} />
-                    <Route path="/cybersecurity" element={<CybersecurityPage />} />
-                    <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
-                    <Route path="/demo" element={<DemoPage />} />
-                    <Route path="/ai-crm-optimizer" element={<AICRMOptimizerPage />} />
-                    <Route path="/ai-data-visualizer" element={<AIDataVisualizerPage />} />
-                    <Route path="/ai-email-optimizer" element={<AIEmailOptimizerPage />} />
                     <Route path="/ai-fraud-detection-pro" element={<AIFraudDetectionProPage />} />
                     <Route path="/ai-image-recognition-pro" element={<AIImageRecognitionProPage />} />
                     <Route path="/ai-lead-scoring-pro" element={<AILeadScoringProPage />} />
