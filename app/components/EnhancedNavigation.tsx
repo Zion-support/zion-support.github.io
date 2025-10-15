@@ -144,7 +144,8 @@ const EnhancedNavigation = () => {
     { label: 'Pricing', href: '/pricing' },
     { label: 'Demo', href: '/demo' },
     { label: 'Support', href: '/support' },
-    { label: 'Consultation', href: '/consultation' }
+    { label: 'Consultation', href: '/consultation' },
+    { label: 'Sitemap', href: '/sitemap' }
   ];
 
   return (
