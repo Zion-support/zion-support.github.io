@@ -1,6 +1,7 @@
 import { Suspense, useEffect } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import './app/styles/futuristic.css'
 
 // Import pages
 import HomePage from './app/page';
@@ -43,8 +44,9 @@ import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
 // Loading component
 const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+  <div className="min-h-screen flex items-center justify-center futuristic-bg">
+    <div className="futuristic-loading"></div>
+    <div className="ml-4 neon-text">Loading...</div>
   </div>
 )
 
@@ -67,11 +69,11 @@ export default function App() {
     <GlobalErrorBoundary>
       <HelmetProvider>
         <Router>
-          <div className="min-h-screen bg-gray-50">
+          <div className="min-h-screen futuristic-bg dark-theme">
             <Navigation />
             <Sidebar />
             
-            <main className="flex-1">
+            <main className="flex-1 relative">
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               
