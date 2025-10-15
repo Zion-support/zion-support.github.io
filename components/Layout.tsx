@@ -279,6 +279,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   <li><Link to="/ai-services" className="text-gray-300 hover:text-white text-sm transition-colors">AI Solutions</Link></li>
                   <li><Link to="/it-services" className="text-gray-300 hover:text-white text-sm transition-colors">IT Services</Link></li>
                   <li><Link to="/micro-saas" className="text-gray-300 hover:text-white text-sm transition-colors">Micro SAAS</Link></li>
+                  <li><Link to="/contact" className="text-gray-300 hover:text-white text-sm transition-colors">Contact Us</Link></li>
                 </ul>
               </div>
 
@@ -326,10 +327,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <p className="text-gray-400 text-sm">
                   © 2024 Zion Tech Group. All rights reserved.
                 </p>
-                <div className="flex space-x-6 mt-4 md:mt-0">
-                  <a href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
-                  <a href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
-                  <a href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a>
+                <div className="flex flex-wrap justify-center md:justify-end gap-4 mt-4 md:mt-0">
+                  <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</Link>
+                  <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</Link>
+                  <Link to="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</Link>
                 </div>
               </div>
             </div>

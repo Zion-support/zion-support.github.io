@@ -11,6 +11,9 @@ import ITServicesPage from './pages/ITServicesPage';
 import MicroSAASPage from './pages/MicroSAASPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import NotFoundPage from './pages/NotFoundPage';
+import PrivacyPage from './pages/PrivacyPage';
+import TermsPage from './pages/TermsPage';
+import CookiesPage from './pages/CookiesPage';
 
 const App: React.FC = () => {
   return (
@@ -27,6 +30,9 @@ const App: React.FC = () => {
               <Route path="/micro-saas" element={<MicroSAASPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/service/:id" element={<ServiceDetailPage />} />
+              <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/terms" element={<TermsPage />} />
+              <Route path="/cookies" element={<CookiesPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </Layout>
