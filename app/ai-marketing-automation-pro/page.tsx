@@ -330,7 +330,8 @@ const AIMarketingAutomationProPage = () => {
             </div>
           </section>
         </main>
-    </>
-  );
-};
+      </div>
+      </>
+    );
+  };
 export default AIMarketingAutomationProPage;
