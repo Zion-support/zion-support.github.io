@@ -1,5 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { usePerformanceOptimization } from '../hooks/usePerformanceOptimization';
+import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 
 interface OptimizedImageProps {
   src: string;
@@ -14,6 +13,11 @@ interface OptimizedImageProps {
   loading?: 'lazy' | 'eager';
   onLoad?: () => void;
   onError?: () => void;
+  blurDataURL?: string;
+  objectFit?: 'cover' | 'contain' | 'fill' | 'scale-down' | 'none';
+  objectPosition?: string;
+  draggable?: boolean;
+  decoding?: 'sync' | 'async' | 'auto';
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -29,100 +33,168 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   loading = 'lazy',
   onLoad,
   onError,
+  blurDataURL,
+  objectFit = 'cover',
+  objectPosition = 'center',
+  draggable = false,
+  decoding = 'async',
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [currentSrc, setCurrentSrc] = useState(placeholder || '');
+  const [isInView, setIsInView] = useState(priority);
   const imgRef = useRef<HTMLImageElement>(null);
-  const { preloadImages } = usePerformanceOptimization();
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
-  // Generate optimized image URL (you can integrate with your image optimization service)
-  const getOptimizedSrc = (originalSrc: string, _w?: number, _h?: number, _q: number = quality) => {
-    // For now, return original src. In production, integrate with services like:
+  // Generate optimized image URL with better optimization
+  const getOptimizedSrc = useCallback((originalSrc: string, w?: number, h?: number, q: number = quality) => {
+    // Check if it's already an optimized URL
+    if (originalSrc.includes('w_') || originalSrc.includes('q_') || originalSrc.includes('f_auto')) {
+      return originalSrc;
+    }
+
+    // For production, integrate with services like:
     // - Cloudinary: `https://res.cloudinary.com/your-cloud/image/fetch/w_${w},h_${h},q_${q},f_auto/${originalSrc}`
     // - Next.js Image Optimization: `/api/image?url=${encodeURIComponent(originalSrc)}&w=${w}&h=${h}&q=${q}`
     // - Vercel Image Optimization: `/_next/image?url=${encodeURIComponent(originalSrc)}&w=${w}&h=${h}&q=${q}`
-    return originalSrc;
-  };
-
-  const optimizedSrc = getOptimizedSrc(src, width, height, quality);
-
-  useEffect(() => {
-    if (priority) {
-      preloadImages([optimizedSrc]);
-      setCurrentSrc(optimizedSrc);
+    // - ImageKit: `https://ik.imagekit.io/your-id/tr:w-${w},h-${h},q-${q},f-auto/${originalSrc}`
+    
+    // For now, return original src with basic optimization
+    if (w && h) {
+      return `${originalSrc}?w=${w}&h=${h}&q=${q}&f=auto`;
     }
-  }, [optimizedSrc, priority, preloadImages]);
+    return originalSrc;
+  }, [quality]);
 
-  const handleLoad = () => {
+  const optimizedSrc = useMemo(() => getOptimizedSrc(src, width, height, quality), [src, width, height, getOptimizedSrc]);
+
+  // Preload critical images
+  useEffect(() => {
+    if (priority && optimizedSrc) {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = optimizedSrc;
+      document.head.appendChild(link);
+
+      return () => {
+        document.head.removeChild(link);
+      };
+    }
+  }, [priority, optimizedSrc]);
+
+  const handleLoad = useCallback(() => {
     setIsLoaded(true);
     onLoad?.();
-  };
+  }, [onLoad]);
 
-  const handleError = () => {
+  const handleError = useCallback(() => {
     setHasError(true);
     onError?.();
-  };
+  }, [onError]);
 
-  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+  const handleIntersection = useCallback((entries: IntersectionObserverEntry[]) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting && !isLoaded && !hasError) {
-        setCurrentSrc(optimizedSrc);
+      if (entry.isIntersecting) {
+        setIsInView(true);
+        if (!isLoaded && !hasError) {
+          setCurrentSrc(optimizedSrc);
+        }
+        // Disconnect observer once image is in view
+        if (observerRef.current) {
+          observerRef.current.disconnect();
+        }
       }
     });
-    return undefined;
-  };
+  }, [isLoaded, hasError, optimizedSrc]);
 
+  // Set up intersection observer for lazy loading
   useEffect(() => {
-    if (loading === 'lazy' && !priority) {
-      const observer = new IntersectionObserver(handleIntersection, {
+    if (loading === 'lazy' && !priority && !isInView) {
+      observerRef.current = new IntersectionObserver(handleIntersection, {
         rootMargin: '50px',
         threshold: 0.1,
       });
 
       if (imgRef.current) {
-        observer.observe(imgRef.current);
+        observerRef.current.observe(imgRef.current);
       }
 
-      return () => observer.disconnect();
-    } else if (priority) {
+      return () => {
+        if (observerRef.current) {
+          observerRef.current.disconnect();
+        }
+      };
+    } else if (priority || isInView) {
       setCurrentSrc(optimizedSrc);
     }
-  }, [loading, priority, optimizedSrc, isLoaded, hasError]);
+  }, [loading, priority, isInView, handleIntersection, optimizedSrc]);
+
+  // Generate blur placeholder
+  const generateBlurDataURL = useCallback((w: number = 10, h: number = 10) => {
+    const canvas = document.createElement('canvas');
+    canvas.width = w;
+    canvas.height = h;
+    const ctx = canvas.getContext('2d');
+    if (ctx) {
+      ctx.fillStyle = '#f3f4f6';
+      ctx.fillRect(0, 0, w, h);
+    }
+    return canvas.toDataURL();
+  }, []);
+
+  const defaultBlurDataURL = useMemo(() => generateBlurDataURL(), [generateBlurDataURL]);
 
   if (hasError) {
     return (
       <div
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        className={`bg-gray-200 dark:bg-gray-700 flex items-center justify-center ${className}`}
         style={{ width, height }}
         role="img"
         aria-label={alt}
       >
-        <svg
-          className="w-8 h-8 text-gray-400"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-          />
-        </svg>
+        <div className="text-center p-4">
+          <svg
+            className="w-8 h-8 text-gray-400 mx-auto mb-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+            />
+          </svg>
+          <p className="text-xs text-gray-500">Failed to load image</p>
+        </div>
       </div>
     );
   }
 
   return (
     <div className={`relative overflow-hidden ${className}`} style={{ width, height }}>
-      {placeholder && !isLoaded && (
+      {/* Blur placeholder */}
+      {(placeholder || blurDataURL || defaultBlurDataURL) && !isLoaded && (
         <div
-          className="absolute inset-0 bg-gray-200 animate-pulse"
-          style={{ backgroundImage: `url(${placeholder})`, backgroundSize: 'cover' }}
+          className="absolute inset-0 bg-gray-200 dark:bg-gray-700 animate-pulse"
+          style={{
+            backgroundImage: `url(${placeholder || blurDataURL || defaultBlurDataURL})`,
+            backgroundSize: 'cover',
+            backgroundPosition: objectPosition,
+            filter: 'blur(5px)',
+            transform: 'scale(1.1)',
+          }}
         />
       )}
+
+      {/* Loading skeleton */}
+      {!isLoaded && !hasError && (
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 animate-pulse" />
+      )}
+
+      {/* Main image */}
       <img
         ref={imgRef}
         src={currentSrc}
@@ -131,16 +203,27 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         height={height}
         sizes={sizes}
         loading={priority ? 'eager' : loading}
+        decoding={decoding}
+        draggable={draggable}
         onLoad={handleLoad}
         onError={handleError}
-        className={`transition-opacity duration-300 ${
+        className={`transition-opacity duration-500 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
         style={{
           width: width ? `${width}px` : '100%',
           height: height ? `${height}px` : 'auto',
+          objectFit,
+          objectPosition,
         }}
       />
+
+      {/* Loading indicator */}
+      {!isLoaded && !hasError && (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-8 h-8 border-2 border-blue-200 border-t-blue-600 rounded-full animate-spin" />
+        </div>
+      )}
     </div>
   );
 };
