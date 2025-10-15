@@ -12,6 +12,7 @@ const Tutorials Page: React.FC = () => {
         <meta name="description" content="Learn with our comprehensive tutorials and guides" />
         <meta name="keywords" content="tutorials, guides, learning, tech education" />
       </Helmet>
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
@@ -19,6 +20,12 @@ const Tutorials Page: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Learn with our comprehensive tutorials and guides
             </p>
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Tutorials</h1>
+>>>>>>> origin/feature/app-improvements-and-merge-conflicts-resolved
             <div className="text-gray-400">
               <p>Tutorials coming soon...</p>
             </div>
