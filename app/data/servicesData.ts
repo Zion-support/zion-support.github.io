@@ -3,7 +3,7 @@ export const servicesData = {
     {
       id: 'ai-development',
       title: 'AI Development Services',
-      description: 'Custom AI solutions tailored to your business needs with cutting-edge machine learning and deep learning technologies',
+      description: 'Custom AI solutions tailored to your business needs with cutting-edge machine learning and deep learning technologies. Our expert team delivers enterprise-grade AI applications that drive real business value.',
       shortDescription: 'Build intelligent applications with our AI expertise',
       icon: '🤖',
       features: [
@@ -16,7 +16,9 @@ export const servicesData = {
         'Deep Learning Implementation',
         'Neural Network Architecture',
         'AI Model Training & Optimization',
-        'Real-time AI Processing'
+        'Real-time AI Processing',
+        'Edge AI Deployment',
+        'AI Model Monitoring'
       ],
       pricing: {
         basic: 5000,
@@ -29,7 +31,9 @@ export const servicesData = {
         'Better customer insights',
         'Reduced operational costs',
         'Enhanced accuracy',
-        'Scalable AI solutions'
+        'Scalable AI solutions',
+        'Competitive advantage',
+        'Future-proof technology'
       ],
       useCases: [
         'Customer service automation',
@@ -37,14 +41,17 @@ export const servicesData = {
         'Fraud detection',
         'Content generation',
         'Image recognition',
-        'Voice assistants'
+        'Voice assistants',
+        'Supply chain optimization',
+        'Quality control automation'
       ],
       marketPrice: '$5,000 - $50,000',
       link: 'https://ziontechgroup.com/ai-development',
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-development'
+        website: 'https://ziontechgroup.com/ai-development',
+        address: '364 E Main St STE 1008, Middletown DE 19709'
       }
     },
     {
