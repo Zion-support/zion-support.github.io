@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Brain, Zap, Shield, BarChart, Users, Globe, Code, Smartphone, Mail, Phone, Cpu, Target, MessageSquare, TrendingUp } from 'lucide-react';
+import { CheckCircle, ArrowRight, Brain, Zap, Shield, BarChart, Users, Globe, Code, Smartphone, Mail, Phone, MapPin, Target, MessageSquare, TrendingUp } from 'lucide-react';
 
 const AISolutionsPage: React.FC = () => {
   const aiServices = [

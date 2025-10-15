@@ -13,13 +13,9 @@ import {
   CheckCircle,
   Star,
   ArrowRight,
-  Target,
   Rocket,
   Users,
-  Clock,
-  DollarSign,
-  Globe,
-  Smartphone
+  Clock
 } from 'lucide-react';
 
 const ITServicesPage: React.FC = () => {

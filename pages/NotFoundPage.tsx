@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { 
   Home, 
   ArrowLeft, 
-  Search, 
   Mail, 
   Phone,
   Zap,

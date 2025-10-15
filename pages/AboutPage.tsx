@@ -4,13 +4,10 @@ import {
   Users, 
   CheckCircle, 
   Brain, 
-  Zap,
   Shield,
   Globe,
-  Heart,
   Lightbulb,
-  Rocket,
-  Target
+  Rocket
 } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
