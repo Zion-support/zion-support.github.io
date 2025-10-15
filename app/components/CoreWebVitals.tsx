@@ -1,7 +1,14 @@
 import React, { useEffect } from 'react';
-import { CoreWebVitalsProps } from 'lucide-react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+
 interface CoreWebVitalsProps {
   children: React.ReactNode;
+}
+
+declare global {
+  interface Window {
+    gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
+  }
 }
 export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
   useEffect(() => {
@@ -13,7 +20,7 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
         (window as any).gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',
           event_label: 'CLS',
-          value: Math.round(metric.value * 1000)
+          value: Math.round(metric.value * 1000),
         });
       }
     });
@@ -23,7 +30,7 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
         (window as any).gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',
           event_label: 'INP',
-          value: Math.round(metric.value)
+          value: Math.round(metric.value),
         });
       }
     });
@@ -33,7 +40,7 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
         (window as any).gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',
           event_label: 'FCP',
-          value: Math.round(metric.value)
+          value: Math.round(metric.value),
         });
       }
     });
@@ -43,7 +50,7 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
         (window as any).gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',
           event_label: 'LCP',
-          value: Math.round(metric.value)
+          value: Math.round(metric.value),
         });
       }
     });
@@ -53,7 +60,7 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
         (window as any).gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',
           event_label: 'TTFB',
-          value: Math.round(metric.value)
+          value: Math.round(metric.value),
         });
       }
     });

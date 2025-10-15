@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 
-// Polyfill for TextEncoder/TextDecoder
+// Mock TextEncoder and TextDecoder
 const { TextEncoder, TextDecoder } = require('util');
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
@@ -22,11 +22,16 @@ Object.defineProperty(window, 'matchMedia', {
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
+  root = null;
+  rootMargin = '';
+  thresholds = [];
+  
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-};
+  takeRecords() { return []; }
+} as any;
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
@@ -35,9 +40,3 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
-
-// Mock scrollTo
-Object.defineProperty(window, 'scrollTo', {
-  value: jest.fn(),
-  writable: true
-});

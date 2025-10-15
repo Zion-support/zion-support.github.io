@@ -1,6 +1,9 @@
-export const utilityFunction = () => {
-  // Utility function implementation
+// usePerformanceMonitor utility function
+export const usePerformanceMonitor = () => {
+  // Placeholder implementation
   return {
-    // Return utility functions or data
+    // Add implementation here
   };
 };
+
+export default usePerformanceMonitor;

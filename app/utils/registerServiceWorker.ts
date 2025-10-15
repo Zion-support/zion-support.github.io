@@ -1,6 +1,9 @@
-export const utilityFunction = () => {
-  // Utility function implementation
+// registerServiceWorker utility function
+export const registerServiceWorker = () => {
+  // Placeholder implementation
   return {
-    // Return utility functions or data
+    // Add implementation here
   };
 };
+
+export default registerServiceWorker;

@@ -6,13 +6,12 @@
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "noEmit": false
+    "noEmit": false,
+    "types": ["node"]
   },
   "include": [
     "vite.config.ts",
     "scripts/**/*",
-    "*.config.js",
-    "*.config.ts",
-    "*.config.cjs"
+    "*.config.*"
   ]
 }

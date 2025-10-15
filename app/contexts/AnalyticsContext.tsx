@@ -1,56 +1,21 @@
-import React, { createContext, useContext, ReactNode, useCallback } from "react";
-import { AnalyticsContextType, AnalyticsProviderProps } from 'lucide-react';
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (page: string) => void;,
-  identifyUser: (userId: string, properties?: Record<string, unknown>) => void;
-  setUser: (userId: string, properties?: Record<string, unknown>) => void;
-}
-export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-interface AnalyticsProviderProps {
-  children: ReactNode;
-}
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = useCallback((eventName: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_ENV === 'development') {
-          }
-    // Add your analytics tracking logic here
-  }, []);
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const trackPageView = useCallback((page: string) => {
-    if (process.env.NODE_ENV === 'development') {
-          }
-    // Add your page view tracking logic here
-  }, []);
-
-const identifyUser = useCallback((userId: string, properties?: Record<string, unknown>) => {
-        // Add your user identification logic here
-  }, []);
-
-const setUser = useCallback((userId: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_ENV === 'development') {
-          }
-    // Add your user setting logic here
-  }, []);
-
-const value: AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-    identifyUser,
-    setUser
-  };
+const AnalyticsContext: React.FC = () => {
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
+    <>
+      <Helmet>
+        <title>AnalyticsContext - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">AnalyticsContext</h1>
+          <p className="text-gray-300 text-center">Coming soon...</p>
+        </div>
+      </div>
+    </>
   );
 };
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
 
-export default NotFoundPage;
+export default AnalyticsContext;

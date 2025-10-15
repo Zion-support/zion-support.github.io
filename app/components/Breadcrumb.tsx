@@ -1,61 +1,20 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Home, ChevronRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const Breadcrumb: React.FC = () => {
-  const location = useLocation();
-  const pathnames = location.pathname.split('/').filter((x) => x);
-
-  const getBreadcrumbName = (path: string) => {
-    const breadcrumbMap: { [key: string]: string } = {
-      'about': 'About',
-      'services': 'Services',
-      'contact': 'Contact',
-      'blog': 'Blog',
-      'ai-services': 'AI Services',
-      'micro-saas': 'Micro SAAS',
-      '5g-solutions': '5G Solutions',
-      'privacy': 'Privacy Policy',
-      'terms': 'Terms of Service',
-      'support': 'Support',
-      'demo': 'Demo',
-      'tutorials': 'Tutorials',
-    };
-    return breadcrumbMap[path] || path.charAt(0).toUpperCase() + path.slice(1);
-  };
-
-  if (pathnames.length === 0) {
-    return null;
-  }
-
   return (
-    <nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
-      <Link to="/" className="hover:text-white transition-colors">
-        <Home className="w-4 h-4" />
-      </Link>
-      {pathnames.map((name, index) => {
-        const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
-        const isLast = index === pathnames.length - 1;
-        
-        return (
-          <React.Fragment key={routeTo}>
-            <ChevronRight className="w-4 h-4" />
-            {isLast ? (
-              <span className="text-white font-medium">
-                {getBreadcrumbName(name)}
-              </span>
-            ) : (
-              <Link
-                to={routeTo}
-                className="hover:text-white transition-colors"
-              >
-                {getBreadcrumbName(name)}
-              </Link>
-            )}
-          </React.Fragment>
-        );
-      })}
-    </nav>
+    <>
+      <Helmet>
+        <title>Breadcrumb - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">Breadcrumb</h1>
+          <p className="text-gray-300 text-center">Coming soon...</p>
+        </div>
+      </div>
+    </>
   );
 };
 

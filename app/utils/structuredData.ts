@@ -1,6 +1,9 @@
-export const utilityFunction = () => {
-  // Utility function implementation
+// structuredData utility function
+export const structuredData = () => {
+  // Placeholder implementation
   return {
-    // Return utility functions or data
+    // Add implementation here
   };
 };
+
+export default structuredData;
