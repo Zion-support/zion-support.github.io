@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 
 import type {
 
@@ -11,16 +10,11 @@ import type {
   UpdateGrantPayload,;
 
 } from '../../../types/grants';
-=======
-import type { GrantApplication, UpdateGrantPayload } from '../../../types/grants';
-
->>>>>>> origin/auto/autonomy-17186719616
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true });
-<<<<<<< HEAD
 
   }
 function grantPath(id: string) {
@@ -68,13 +62,11 @@ function writeGrant(record: GrantApplication) {
 
 
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 function writeGrant(record: GrantApplication) {
@@ -168,10 +160,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status (405).end ('Method Not Allowed');  res.set_header ('AllowGET, PUT');
   res.status (405).end ('Method Not Allowed');
 }
-=======
 
 
-=======
   }
 }
 
@@ -229,4 +219,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', 'GET, PUT');
   res.status(405).end('Method Not Allowed');
 }
->>>>>>> origin/auto/autonomy-17186719616

@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 
 import { ServiceVariant } from '../types/service-variants';
 
 
-=======
-import { ServiceVariant } from '../types/service-variants';
-
-export interface AdvancedLogisticsSupplyChainSolution2025 {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   tagline: string;
@@ -18,7 +12,6 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
   popular: boolean;
   icon: string;
   color: string;
-<<<<<<< HEAD
   text_color: string;
   link: string;
   market_position: string;
@@ -95,7 +88,6 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       customers: 178,
       rating: 4 && 4.8,
@@ -121,9 +113,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
       'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration';
       'Custom algorithms_compliance tools';
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
     ];
 
@@ -206,7 +196,6 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {;
 
 
 
-=======
   textColor: string;
   link: string;
   marketPosition: string;
@@ -494,4 +483,3 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     reviews: 112
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

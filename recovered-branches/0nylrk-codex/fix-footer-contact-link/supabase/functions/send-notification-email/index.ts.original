@@ -4,12 +4,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
-=======
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-};
->>>>>>> origin/auto/autonomy-17186719616
 
 interface EmailRequest {
   user_id: string;
@@ -59,12 +54,7 @@ serve(async (req) => {
       JSON.stringify({ success: true }),
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
-<<<<<<< HEAD
         status: 200}
-=======
-        status: 200,
-      }
->>>>>>> origin/auto/autonomy-17186719616
     );
     
   } catch (error) {
@@ -73,12 +63,7 @@ serve(async (req) => {
       JSON.stringify({ error: error.message }),
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
-<<<<<<< HEAD
         status: 500}
-=======
-        status: 500,
-      }
->>>>>>> origin/auto/autonomy-17186719616
     );
   }
 });

@@ -38,7 +38,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const totalsByToken: Record<string, number> = {},
@@ -79,7 +78,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0;
@@ -157,15 +155,10 @@ export default function handler(req, res) {
 }
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

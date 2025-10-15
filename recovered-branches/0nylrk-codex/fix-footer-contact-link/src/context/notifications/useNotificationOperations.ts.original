@@ -105,10 +105,5 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     markAllAsRead,
     dismissNotification,
     setFilter,
-<<<<<<< HEAD
     fetchNotifications};
-=======
-    fetchNotifications,
-  };
->>>>>>> origin/auto/autonomy-17186719616
 };

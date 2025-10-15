@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 
 import type {
 
@@ -136,15 +135,11 @@ const payload = req.body as StatusUpdatePayload;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-=======
+
 import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
@@ -201,4 +196,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   writeGrant(existing);
   res.status(200).json({ record: existing });
 }
->>>>>>> origin/auto/autonomy-17186719616

@@ -1,18 +1,13 @@
-<<<<<<< HEAD
 
 export interface Attachment {
 export interface Attachment {;
 
-=======
-export interface Attachment {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   filename: string;
   originalName: string;
   mimeType: string;
   size: number;
   url: string;
-<<<<<<< HEAD
 
 
 
@@ -28,29 +23,17 @@ export interface Attachment {
 
 
 
-=======
-  uploadedAt: Date;
-  uploadedBy: string;
-}
-
-export interface SupportTicket {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   title: string;
   description: string;
   status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
   priority: 'low' | 'medium' | 'high' | 'critical';
   category: 'technical' | 'billing' | 'feature_request' | 'bug_report' | 'general';
-<<<<<<< HEAD
   customer_id: string;
-=======
-  customerId: string;
->>>>>>> origin/auto/autonomy-17186719616
   assignedAgentId?: string;
   tags: string[];
   attachments: Attachment[];
   messages: TicketMessage[];
-<<<<<<< HEAD
 
 
   created_at: Date;
@@ -83,32 +66,11 @@ export interface SupportTicket {
 
 
 
-=======
-  createdAt: Date;
-  updatedAt: Date;
-  resolvedAt?: Date;
-  firstResponseTime?: number; // in minutes
-  resolutionTime?: number; // in hours
-}
-
-export interface TicketMessage {
-  id: string;
-  content: string;
-  senderType: 'customer' | 'agent' | 'system';
-  senderId: string;
-  isInternal: boolean;
-  createdAt: Date;
-  attachments: Attachment[];
-}
-
-export interface Customer {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   email: string;
   company?: string;
   plan: 'free' | 'basic' | 'pro' | 'enterprise';
-<<<<<<< HEAD
 
 
   total_tickets: number;
@@ -126,23 +88,11 @@ export interface Customer {
 
 
 
-=======
-  totalTickets: number;
-  resolvedTickets: number;
-  averageResponseTime: number; // in minutes
-  satisfactionScore: number; // 1-5
-  lastContactDate: Date;
-  createdAt: Date;
-}
-
-export interface SupportAgent {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   email: string;
   role: 'tier1' | 'tier2' | 'tier3' | 'supervisor';
   skills: string[];
-<<<<<<< HEAD
 
 
 
@@ -165,60 +115,25 @@ export interface ChatbotSession {
   customer_id: string;
   start_time: Date;
   end_time?: Date;
-=======
-  isAvailable: boolean;
-  currentTickets: number;
-  maxTickets: number;
-  performance: AgentPerformance;
-}
-
-export interface AgentPerformance {
-  ticketsResolved: number;
-  averageResolutionTime: number; // in hours
-  customerSatisfaction: number; // 1-5
-  firstResponseTime: number; // in minutes
-  escalationRate: number; // percentage
-}
-
-export interface ChatbotSession {
-  id: string;
-  customerId: string;
-  startTime: Date;
-  endTime?: Date;
->>>>>>> origin/auto/autonomy-17186719616
   messages: ChatbotMessage[];
   intent: string;
   confidence: number;
   resolved: boolean;
-<<<<<<< HEAD
 
   escalated: boolean,
   satisfaction: number, // 1 - 5;
 
 }
-=======
-  escalated: boolean;
-  satisfaction: number; // 1-5
-}
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface ChatbotMessage {
   id: string;
   content: string;
   sender: 'customer' | 'bot';
   timestamp: Date;
-<<<<<<< HEAD
 
   intent?: string,
   confidence?: number;
 
 }
-=======
-  intent?: string;
-  confidence?: number;
-}
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface KnowledgeBaseArticle {
   id: string;
   title: string;
@@ -227,7 +142,6 @@ export interface KnowledgeBaseArticle {
   tags: string[];
   views: number;
   helpful: number;
-<<<<<<< HEAD
 
   not_helpful: number;
   last_updated: Date,
@@ -523,46 +437,24 @@ export interface AgentPerformance {;
 
 
 export interface SupportAnalytics {;
-=======
-  notHelpful: number;
-  lastUpdated: Date;
-  createdBy: string;
-}
-
-export interface SupportAnalytics {
->>>>>>> origin/auto/autonomy-17186719616
   totalTickets: number;
   openTickets: number;
   resolvedTickets: number;
   averageResolutionTime: number;
   averageFirstResponseTime: number;
   customerSatisfaction: number;
-<<<<<<< HEAD
   chatbotResolutionRate: number,
   topCategories: Array<{ category: string, count: number }>;
   agentPerformance: Array<{ agentId: string, ticketsResolved: number, satisfaction: number }>
 }
 
 export interface AIRecommendation {;
-=======
-  chatbotResolutionRate: number;
-  topCategories: Array<{ category: string; count: number }>;
-  agentPerformance: Array<{ agentId: string; ticketsResolved: number; satisfaction: number }>;
-}
-
-export interface AIRecommendation {
->>>>>>> origin/auto/autonomy-17186719616
   type: 'ticket_prioritization' | 'agent_assignment' | 'knowledge_base' | 'chatbot_improvement';
   title: string;
   description: string;
   impact: 'low' | 'medium' | 'high';
-<<<<<<< HEAD
   confidence: number,
   actionItems: string[]
-=======
-  confidence: number;
-  actionItems: string[];
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 class AICustomerSupportService {
@@ -574,20 +466,14 @@ class AICustomerSupportService {
   private analytics: SupportAnalytics;
 
   constructor() {
-<<<<<<< HEAD
     this.initializeSampleData(),
     this.updateAnalytics()
-=======
-    this.initializeSampleData();
-    this.updateAnalytics();
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   private initializeSampleData() {
     // Initialize sample customers
     this.customers = [
       {
-<<<<<<< HEAD
         id: 'cust_001';
         name: 'John Doe';
         email: 'john.doe@company.com';
@@ -610,30 +496,6 @@ class AICustomerSupportService {
         resolvedTickets: 3;
         averageResponseTime: 25;
         satisfactionScore: 4.0;
-=======
-        id: 'cust_001',
-        name: 'John Doe',
-        email: 'john.doe@company.com',
-        company: 'TechCorp Inc.',
-        plan: 'pro',
-        totalTickets: 5,
-        resolvedTickets: 4,
-        averageResponseTime: 15,
-        satisfactionScore: 4.5,
-        lastContactDate: new Date('2025-01-10'),
-        createdAt: new Date('2024-06-01')
-      },
-      {
-        id: 'cust_002',
-        name: 'Jane Smith',
-        email: 'jane.smith@startup.com',
-        company: 'StartupXYZ',
-        plan: 'basic',
-        totalTickets: 3,
-        resolvedTickets: 3,
-        averageResponseTime: 25,
-        satisfactionScore: 4.0,
->>>>>>> origin/auto/autonomy-17186719616
         lastContactDate: new Date('2025-01-08'),
         createdAt: new Date('2024-08-15')
       }
@@ -642,7 +504,6 @@ class AICustomerSupportService {
     // Initialize sample agents
     this.agents = [
       {
-<<<<<<< HEAD
         id: 'agent_001';
         name: 'Mike Johnson';
         email: 'mike.johnson@ziontech.com';
@@ -672,37 +533,6 @@ class AICustomerSupportService {
           ticketsResolved: 78;
           averageResolutionTime: 1.8;
           customerSatisfaction: 4.4;
-=======
-        id: 'agent_001',
-        name: 'Mike Johnson',
-        email: 'mike.johnson@ziontech.com',
-        role: 'tier2',
-        skills: ['Technical Support', 'API Integration', 'Database Issues'],
-        isAvailable: true,
-        currentTickets: 2,
-        maxTickets: 5,
-        performance: {
-          ticketsResolved: 45,
-          averageResolutionTime: 2.5,
-          customerSatisfaction: 4.6,
-          firstResponseTime: 12,
-          escalationRate: 8
-        }
-      },
-      {
-        id: 'agent_002',
-        name: 'Lisa Chen',
-        email: 'lisa.chen@ziontech.com',
-        role: 'tier1',
-        skills: ['General Support', 'Billing', 'Account Management'],
-        isAvailable: true,
-        currentTickets: 1,
-        maxTickets: 8,
-        performance: {
-          ticketsResolved: 78,
-          averageResolutionTime: 1.8,
-          customerSatisfaction: 4.4,
->>>>>>> origin/auto/autonomy-17186719616
           firstResponseTime: 8,
           escalationRate: 15
         }
@@ -712,7 +542,6 @@ class AICustomerSupportService {
     // Initialize sample tickets
     this.tickets = [
       {
-<<<<<<< HEAD
         id: 'ticket_001';
         title: 'API Integration Issue';
         description: 'Getting 500 error when trying to integrate with our CRM system';
@@ -744,39 +573,6 @@ class AICustomerSupportService {
           }
         ];
         createdAt: new Date('2025-01-10T10:00:00Z');
-=======
-        id: 'ticket_001',
-        title: 'API Integration Issue',
-        description: 'Getting 500 error when trying to integrate with our CRM system',
-        status: 'in_progress',
-        priority: 'high',
-        category: 'technical',
-        customerId: 'cust_001',
-        assignedAgentId: 'agent_001',
-        tags: ['api', 'integration', 'error'],
-        attachments: [],
-        messages: [
-          {
-            id: 'msg_001',
-            content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?',
-            senderType: 'customer',
-            senderId: 'cust_001',
-            isInternal: false,
-            createdAt: new Date('2025-01-10T10:00:00Z'),
-            attachments: []
-          },
-          {
-            id: 'msg_002',
-            content: 'Hi John, I can help you with this API integration issue. Let me investigate the error.',
-            senderType: 'agent',
-            senderId: 'agent_001',
-            isInternal: false,
-            createdAt: new Date('2025-01-10T10:15:00Z'),
-            attachments: []
-          }
-        ],
-        createdAt: new Date('2025-01-10T10:00:00Z'),
->>>>>>> origin/auto/autonomy-17186719616
         updatedAt: new Date('2025-01-10T10:15:00Z'),
         firstResponseTime: 15
       }
@@ -785,7 +581,6 @@ class AICustomerSupportService {
     // Initialize knowledge base
     this.knowledgeBase = [
       {
-<<<<<<< HEAD
         id: 'kb_001';
         title: 'Getting Started with API Integration';
         content: 'Learn how to integrate our API with your existing systems...';
@@ -1064,23 +859,10 @@ class AICustomerSupportService {;
         last_updated: new Date ('2025 - 01 - 05'),
         created_by: 'agent_001';
 
-=======
-        id: 'kb_001',
-        title: 'Getting Started with API Integration',
-        content: 'Learn how to integrate our API with your existing systems...',
-        category: 'API Documentation',
-        tags: ['api', 'integration', 'getting-started'],
-        views: 1250,
-        helpful: 89,
-        notHelpful: 12,
-        lastUpdated: new Date('2025-01-05'),
-        createdBy: 'agent_001'
->>>>>>> origin/auto/autonomy-17186719616
       }
     ];
   }
 
-<<<<<<< HEAD
 
 export interface Attachment {;
 
@@ -1190,13 +972,9 @@ export interface Attachment {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
         }
@@ -1456,7 +1234,6 @@ if ( {) {
   }
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase();
     
@@ -1477,12 +1254,10 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
       return { intent: 'authentication_issue', confidence: 0.9 }
@@ -1627,7 +1402,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   }
@@ -1806,7 +1580,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1820,7 +1593,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     }
     return recommendations
@@ -1829,9 +1601,7 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   private updateAnalytics(): void {
@@ -2009,13 +1779,9 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -2059,11 +1825,9 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export const aiCustomerSupportService = new AICustomerSupportService();
@@ -2073,7 +1837,6 @@ export const aiCustomerSupportService = new AICustomerSupportService();
 export const aiCustomerSupportService = new AICustomerSupportService();
 
 
-=======
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
     const ticket: SupportTicket = {
       id: `ticket_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -2390,4 +2153,3 @@ export const aiCustomerSupportService = new AICustomerSupportService();
 }
 
 export const aiCustomerSupportService = new AICustomerSupportService();
->>>>>>> origin/auto/autonomy-17186719616

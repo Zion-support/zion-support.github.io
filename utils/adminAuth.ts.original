@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 // Note: This is a Vite project, not Next.js
@@ -192,15 +191,3 @@ export const is_admin = () =>: any {
 };
 
 
-=======
-// Stub admin auth utility - placeholder for missing functionality
-export const requireAdminAuth = () => {
-  // Placeholder implementation
-  return true;
-};
-
-export const isAdmin = () => {
-  // Placeholder implementation
-  return true;
-};
->>>>>>> origin/auto/autonomy-17186719616

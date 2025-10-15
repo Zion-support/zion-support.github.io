@@ -38,10 +38,6 @@ export interface BiotechAIService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const biotechAIServices: BiotechAIService[] = [
   {
     id: 'ai-drug-discovery-platform',

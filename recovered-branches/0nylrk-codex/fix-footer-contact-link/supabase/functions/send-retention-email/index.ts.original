@@ -13,12 +13,7 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
-=======
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-};
->>>>>>> origin/auto/autonomy-17186719616
 
 interface EmailData {
   user_id: string;
@@ -77,12 +72,7 @@ serve(async (req) => {
       from: "Zion AI Marketplace <notifications@zion.ai>",
       to: userEmail,
       subject: subject,
-<<<<<<< HEAD
       html: html});
-=======
-      html: html,
-    });
->>>>>>> origin/auto/autonomy-17186719616
 
     if (emailResponse.error) {
       throw new Error(`Failed to send email: ${emailResponse.error.message}`);
@@ -93,12 +83,7 @@ serve(async (req) => {
       .from("scheduled_jobs")
       .update({
         status: "completed",
-<<<<<<< HEAD
         completed_at: new Date().toISOString()})
-=======
-        completed_at: new Date().toISOString(),
-      })
->>>>>>> origin/auto/autonomy-17186719616
       .eq("id", jobId);
 
     // Update email campaign record
@@ -106,12 +91,7 @@ serve(async (req) => {
       .from("email_campaigns")
       .update({
         status: "sent",
-<<<<<<< HEAD
         sent_at: new Date().toISOString()})
-=======
-        sent_at: new Date().toISOString(),
-      })
->>>>>>> origin/auto/autonomy-17186719616
       .eq("user_id", emailData.user_id)
       .eq("campaign_type", emailData.email_type);
 
@@ -119,24 +99,12 @@ serve(async (req) => {
       JSON.stringify({
         success: true,
         message: "Email sent successfully",
-<<<<<<< HEAD
         email: emailResponse}),
       {
         headers: {
           ...corsHeaders,
           "Content-Type": "application/json"},
         status: 200}
-=======
-        email: emailResponse,
-      }),
-      {
-        headers: {
-          ...corsHeaders,
-          "Content-Type": "application/json",
-        },
-        status: 200,
-      }
->>>>>>> origin/auto/autonomy-17186719616
     );
   } catch (error) {
     console.error("Error in send-retention-email function:", error);
@@ -144,24 +112,12 @@ serve(async (req) => {
     return new Response(
       JSON.stringify({
         success: false,
-<<<<<<< HEAD
         error: error.message}),
       {
         headers: {
           ...corsHeaders,
           "Content-Type": "application/json"},
         status: 500}
-=======
-        error: error.message,
-      }),
-      {
-        headers: {
-          ...corsHeaders,
-          "Content-Type": "application/json",
-        },
-        status: 500,
-      }
->>>>>>> origin/auto/autonomy-17186719616
     );
   }
 });
@@ -198,12 +154,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
             <p>If you have any questions, just reply to this email.</p>
             <p>The Zion AI Marketplace Team</p>
           </div>
-<<<<<<< HEAD
         `};
-=======
-        `,
-      };
->>>>>>> origin/auto/autonomy-17186719616
     } else {
       // For clients/employers
       return {
@@ -226,12 +177,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
             <p>If you have any questions, just reply to this email.</p>
             <p>The Zion AI Marketplace Team</p>
           </div>
-<<<<<<< HEAD
         `};
-=======
-        `,
-      };
->>>>>>> origin/auto/autonomy-17186719616
     }
   } else if (email_type === "inactivity_3") {
     // Day 3 incomplete action reminder
@@ -282,12 +228,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
           <p>Need help? Just reply to this email and we'll assist you.</p>
           <p>The Zion AI Marketplace Team</p>
         </div>
-<<<<<<< HEAD
       `};
-=======
-      `,
-    };
->>>>>>> origin/auto/autonomy-17186719616
   } else if (email_type === "inactivity_7") {
     // Day 7+ reactivation
     if (user_type === "jobSeeker" || user_type === "creator") {
@@ -304,12 +245,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
             </div>
             <p>The Zion AI Marketplace Team</p>
           </div>
-<<<<<<< HEAD
         `};
-=======
-        `,
-      };
->>>>>>> origin/auto/autonomy-17186719616
     } else {
       // For clients
       return {
@@ -325,12 +261,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
             </div>
             <p>The Zion AI Marketplace Team</p>
           </div>
-<<<<<<< HEAD
         `};
-=======
-        `,
-      };
->>>>>>> origin/auto/autonomy-17186719616
     }
   } else if (email_type === "inactivity_30") {
     // 30-day reengagement with incentives
@@ -348,12 +279,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
             </div>
             <p>The Zion AI Marketplace Team</p>
           </div>
-<<<<<<< HEAD
         `};
-=======
-        `,
-      };
->>>>>>> origin/auto/autonomy-17186719616
     } else {
       // For clients
       return {
@@ -369,12 +295,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
             </div>
             <p>The Zion AI Marketplace Team</p>
           </div>
-<<<<<<< HEAD
         `};
-=======
-        `,
-      };
->>>>>>> origin/auto/autonomy-17186719616
     }
   } else if (email_type === "no_applications_7_days") {
     // Email for talent not receiving applications
@@ -396,12 +317,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
           </div>
           <p>The Zion AI Marketplace Team</p>
         </div>
-<<<<<<< HEAD
       `};
-=======
-      `,
-    };
->>>>>>> origin/auto/autonomy-17186719616
   } else if (email_type === "unfilled_job_14_days") {
     // Email for clients with unfilled jobs
     return {
@@ -422,12 +338,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
           </div>
           <p>The Zion AI Marketplace Team</p>
         </div>
-<<<<<<< HEAD
       `};
-=======
-      `,
-    };
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   // Default generic email
@@ -448,10 +359,5 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
         </div>
         <p>The Zion AI Marketplace Team</p>
       </div>
-<<<<<<< HEAD
     `};
-=======
-    `,
-  };
->>>>>>> origin/auto/autonomy-17186719616
 }

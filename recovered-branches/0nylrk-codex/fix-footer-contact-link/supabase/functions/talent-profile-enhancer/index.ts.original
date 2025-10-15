@@ -7,12 +7,7 @@ const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY');
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-<<<<<<< HEAD
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
-=======
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
-};
->>>>>>> origin/auto/autonomy-17186719616
 
 interface TalentProfileData {
   name: string;
@@ -39,10 +34,7 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders });
   }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/auto/autonomy-17186719616
   try {
     const { talentData } = await req.json() as { talentData: TalentProfileData };
     
@@ -58,12 +50,7 @@ serve(async (req) => {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${OPENAI_API_KEY}`,
-<<<<<<< HEAD
         'Content-Type': 'application/json'},
-=======
-        'Content-Type': 'application/json',
-      },
->>>>>>> origin/auto/autonomy-17186719616
       body: JSON.stringify({
         model: 'gpt-4o-mini',
         messages: [
@@ -97,12 +84,7 @@ serve(async (req) => {
         ],
         temperature: 0.7,
         response_format: { type: "json_object" }
-<<<<<<< HEAD
       })});
-=======
-      }),
-    });
->>>>>>> origin/auto/autonomy-17186719616
 
     const openAIData = await openAIResponse.json();
     

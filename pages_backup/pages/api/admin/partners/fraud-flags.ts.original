@@ -55,11 +55,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

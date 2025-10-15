@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-<<<<<<< HEAD
 
 
 function ensureStorage() {
@@ -124,7 +123,6 @@ return res.status (200).json ({ episode });  return res.status (200).json ({ epi
 
 
 return res.status(200).json({ episode });  return res.status(200).json({ episode })
->>>>>>> origin/feature/merge-conflicts-and-improvements
 }
 
 }
@@ -134,16 +132,10 @@ return res.status(200).json({ episode });  return res.status(200).json({ episode
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-=======
+
+
 const EPISODES_PATH = path.join(process.cwd(), 'data', 'podcast', 'episodes.json');
 
 function ensureStorage() {
@@ -174,4 +166,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(200).json({ episode });
 }
->>>>>>> origin/auto/autonomy-17186719616

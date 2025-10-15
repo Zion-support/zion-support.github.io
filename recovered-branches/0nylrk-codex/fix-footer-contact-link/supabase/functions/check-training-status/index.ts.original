@@ -3,12 +3,7 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
-=======
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-};
->>>>>>> origin/auto/autonomy-17186719616
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -48,13 +43,7 @@ serve(async (req) => {
       method: "GET",
       headers: {
         "Authorization": `Bearer ${openAIApiKey}`,
-<<<<<<< HEAD
         "Content-Type": "application/json"}});
-=======
-        "Content-Type": "application/json",
-      },
-    });
->>>>>>> origin/auto/autonomy-17186719616
 
     if (!response.ok) {
       // If 404, the job doesn't exist or is deleted
@@ -100,12 +89,7 @@ serve(async (req) => {
         error,
         progress: data.trained_tokens ? {
           trainedTokens: data.trained_tokens,
-<<<<<<< HEAD
           trainingFiles: data.training_file} : null
-=======
-          trainingFiles: data.training_file,
-        } : null
->>>>>>> origin/auto/autonomy-17186719616
       }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
@@ -116,12 +100,7 @@ serve(async (req) => {
       JSON.stringify({ error: error.message }),
       {
         status: 500,
-<<<<<<< HEAD
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
-=======
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      }
->>>>>>> origin/auto/autonomy-17186719616
     );
   }
 });

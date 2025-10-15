@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 import {v4, as, uuidv4} from 'uuid';
 
 
@@ -132,7 +131,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     res.status(400).json({ error: 'Missing fields' });
@@ -241,7 +239,6 @@ if ( {) {
 }
     res.status(400).json({ error: 'Missing fields' });
 
-=======
 import { v4 as uuidv4 } from 'uuid';
 import type { GrantApplication, VotePayload } from '../../../types/grants';
 
@@ -286,4 +283,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   writeGrant(g);
   res.status(200).json({ record: g });
 }
->>>>>>> origin/auto/autonomy-17186719616

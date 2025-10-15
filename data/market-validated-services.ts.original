@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface MarketValidatedService {
 	id: string;
 	name: string;
@@ -25,20 +21,12 @@ export interface MarketValidatedService {
 		website?: string;
 	};
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 const contactInfo = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 };
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const marketValidatedServices: MarketValidatedService[] = [
 	// AI and Assistants
 	{
@@ -107,10 +95,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		setupTime: '2 hours',
 		contactInfo
 	},
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 	// Security and APIs
 	{
 		id: 'api-security-scanner',
@@ -146,10 +130,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		setupTime: '40 minutes',
 		contactInfo
 	},
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 	// Cloud and Infra
 	{
 		id: 'cloud-cost-optimizer-pro',
@@ -202,10 +182,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		setupTime: '1 day',
 		contactInfo
 	},
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 	// Reliability & Monitoring
 	{
 		id: 'uptime-slo-monitor',
@@ -258,10 +234,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		setupTime: '15 minutes',
 		contactInfo
 	},
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 	// Dev & Productivity
 	{
 		id: 'pdf-render-api',
@@ -331,10 +303,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		setupTime: '15 minutes',
 		contactInfo
 	},
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 	// Compliance & Risk
 	{
 		id: 'soc2-evidence-automation',
@@ -370,10 +338,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		setupTime: '2 hours',
 		contactInfo
 	},
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 	// Developer and Ops Utilities
 	{
 		id: 'webhook-relay-replay',
@@ -409,10 +373,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		setupTime: '30 minutes',
 		contactInfo
 	},
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 	// AI Channels
 	{
 		id: 'ai-phone-agent',
@@ -431,10 +391,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		setupTime: '1 hour',
 		contactInfo
 	},
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 	// Search and Knowledge
 	{
 		id: 'vector-search-starter',
@@ -454,7 +410,3 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		contactInfo
 	},
 ];
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616

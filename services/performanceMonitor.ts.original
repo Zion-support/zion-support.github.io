@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 
 export interface PerformanceMetrics {
 export interface PerformanceMetrics {;
 
-=======
-export interface PerformanceMetrics {
->>>>>>> origin/auto/autonomy-17186719616
   url: string;
   timestamp: Date;
   loadTime: number;
@@ -18,7 +14,6 @@ export interface PerformanceMetrics {
   speedIndex: number;
   performanceScore: number;
   accessibilityScore: number;
-<<<<<<< HEAD
 
 
 
@@ -37,20 +32,12 @@ export interface PerformanceMetrics {
 
 
 
-=======
-  bestPracticesScore: number;
-  seoScore: number;
-}
-
-export interface PerformanceAlert {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   url: string;
   type: 'critical' | 'warning' | 'info';
   message: string;
   metric: string;
   threshold: number;
-<<<<<<< HEAD
 
 
   current_value: number;
@@ -228,13 +215,9 @@ export class PerformanceMonitorService {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       }
       return await response.json()
@@ -316,13 +299,9 @@ export class PerformanceMonitorService {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       }
       return await response.json()
@@ -341,7 +320,6 @@ export class PerformanceMonitorService {;
 
 
 
-=======
   currentValue: number;
   timestamp: Date;
   resolved: boolean;
@@ -454,12 +432,10 @@ export class PerformanceMonitorService {
     }
   }
 
->>>>>>> origin/auto/autonomy-17186719616
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
     summary: {
       averageLoadTime: number;
       averagePerformanceScore: number;
-<<<<<<< HEAD
       uptime: number
       alertsCount: number
     }
@@ -624,7 +600,6 @@ export class PerformanceMonitorService {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -917,7 +892,6 @@ export const PERFORMANCE_MONITOR_PRICING = {
         resolved: true;
       }
     ],;
-=======
       uptime: number;
       alertsCount: number;
     };
@@ -1030,12 +1004,10 @@ export const PERFORMANCE_MONITOR_PRICING = {
       }
     ];
 
->>>>>>> origin/auto/autonomy-17186719616
     return url ? alerts.filter(a => a.url === url) : alerts;
   }
 }
 
-<<<<<<< HEAD
 ;
 // Pricing tiers for the Performance Monitor;
 export const PERFORMANCE_MONITOR_PRICING = {;
@@ -1079,7 +1051,6 @@ export const PERFORMANCE_MONITOR_PRICING = {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -1113,7 +1084,6 @@ export const PERFORMANCE_MONITOR_PRICING = {
     period: '/month';
     features: [
       'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support',
-=======
 // Pricing tiers for the Performance Monitor
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
@@ -1157,12 +1127,8 @@ export const PERFORMANCE_MONITOR_PRICING = {
       'Custom dashboards',
       'White-label reporting',
       'Priority support',
->>>>>>> origin/auto/autonomy-17186719616
       'SLA guarantee'
     ]
   }
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/auto/autonomy-17186719616

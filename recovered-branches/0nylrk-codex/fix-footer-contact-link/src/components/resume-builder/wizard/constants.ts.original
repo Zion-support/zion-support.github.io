@@ -5,9 +5,4 @@ export const RESUME_STEPS = [
   { id: 'education', label: 'Education' },
   { id: 'skills', label: 'Skills' },
   { id: 'certifications', label: 'Certifications' },
-<<<<<<< HEAD
   { id: 'preview', label: 'Preview' }];
-=======
-  { id: 'preview', label: 'Preview' },
-];
->>>>>>> origin/auto/autonomy-17186719616

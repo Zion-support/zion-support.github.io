@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 import {v4, as, uuidv4} from 'uuid';
 
 
@@ -51,7 +50,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -183,7 +181,6 @@ if ( {) {
   res.status(405).end('Method Not Allowed')
 }
 
-=======
 import { v4 as uuidv4 } from 'uuid';
 import type { GrantApplication } from '../../../../types/grants';
 
@@ -229,4 +226,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
 }
->>>>>>> origin/auto/autonomy-17186719616

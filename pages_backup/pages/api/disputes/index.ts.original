@@ -24,11 +24,8 @@ export default async function handler(
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   const user = parseUserFromRequest(req);
@@ -120,9 +117,7 @@ if ( {) {
       return res.status (400).json ({ error: "Missing required fields" });
     }
     const id = generateCaseId ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     const dispute: DisputeCase = {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -330,11 +325,9 @@ export default async function handler(req, res) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

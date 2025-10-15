@@ -5,12 +5,7 @@ import { processJobMatching, storeMatchResults } from "./job-matching.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
-=======
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-};
->>>>>>> origin/auto/autonomy-17186719616
 
 // Initialize the Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
@@ -69,10 +64,7 @@ serve(async (req) => {
         message: "Job matching completed", 
         matches: matchedTalents.length 
       }),
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/auto/autonomy-17186719616
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
     

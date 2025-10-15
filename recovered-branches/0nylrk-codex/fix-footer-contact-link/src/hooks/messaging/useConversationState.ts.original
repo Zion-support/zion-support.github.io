@@ -26,10 +26,5 @@ export function useConversationState() {
     activeConversation,
     setActiveConversation,
     isLoading,
-<<<<<<< HEAD
     setIsLoading};
-=======
-    setIsLoading,
-  };
->>>>>>> origin/auto/autonomy-17186719616
 }

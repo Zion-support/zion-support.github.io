@@ -26,13 +26,7 @@ serve(async (req) => {
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
-<<<<<<< HEAD
         'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}});
-=======
-        'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
-      },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   try {
@@ -41,12 +35,7 @@ serve(async (req) => {
     if (!authHeader) {
       return new Response(JSON.stringify({ error: 'Missing authorization header' }), {
         status: 401,
-<<<<<<< HEAD
         headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     // Verify the token with Supabase auth
@@ -56,12 +45,7 @@ serve(async (req) => {
     if (authError || !user) {
       return new Response(JSON.stringify({ error: 'Unauthorized' }), {
         status: 401,
-<<<<<<< HEAD
         headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     // Parse URL to determine action
@@ -91,22 +75,12 @@ serve(async (req) => {
 
     return new Response(JSON.stringify({ error: 'Invalid action' }), {
       status: 400,
-<<<<<<< HEAD
       headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   } catch (error) {
     console.error('Error processing request:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-<<<<<<< HEAD
       headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   }
 });
 
@@ -127,12 +101,7 @@ async function createWebhook(userId: string, name: string, url: string, eventTyp
       console.error('Error creating webhook:', error);
       return new Response(JSON.stringify({ error: 'Failed to create webhook' }), {
         status: 500,
-<<<<<<< HEAD
         headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     return new Response(JSON.stringify({ 
@@ -140,22 +109,12 @@ async function createWebhook(userId: string, name: string, url: string, eventTyp
       message: 'Webhook created successfully'
     }), {
       status: 201,
-<<<<<<< HEAD
       headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   } catch (error) {
     console.error('Error in createWebhook:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-<<<<<<< HEAD
       headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   }
 }
 
@@ -171,32 +130,17 @@ async function getUserWebhooks(userId: string) {
       console.error('Error fetching webhooks:', error);
       return new Response(JSON.stringify({ error: 'Failed to fetch webhooks' }), {
         status: 500,
-<<<<<<< HEAD
         headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     return new Response(JSON.stringify({ webhooks: data }), {
       status: 200,
-<<<<<<< HEAD
       headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   } catch (error) {
     console.error('Error in getUserWebhooks:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-<<<<<<< HEAD
       headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   }
 }
 
@@ -213,12 +157,7 @@ async function toggleWebhook(userId: string, webhookId: string, isActive: boolea
       console.error('Error toggling webhook:', error);
       return new Response(JSON.stringify({ error: 'Failed to update webhook or webhook not found' }), {
         status: error ? 500 : 404,
-<<<<<<< HEAD
         headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     return new Response(JSON.stringify({
@@ -226,22 +165,12 @@ async function toggleWebhook(userId: string, webhookId: string, isActive: boolea
       webhook: data[0]
     }), {
       status: 200,
-<<<<<<< HEAD
       headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   } catch (error) {
     console.error('Error in toggleWebhook:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-<<<<<<< HEAD
       headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   }
 }
 
@@ -258,23 +187,13 @@ async function deleteWebhook(userId: string, webhookId: string) {
       console.error('Error deleting webhook:', error);
       return new Response(JSON.stringify({ error: 'Failed to delete webhook' }), {
         status: 500,
-<<<<<<< HEAD
         headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     if (!data || data.length === 0) {
       return new Response(JSON.stringify({ error: 'Webhook not found' }), {
         status: 404,
-<<<<<<< HEAD
         headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     return new Response(JSON.stringify({
@@ -282,22 +201,12 @@ async function deleteWebhook(userId: string, webhookId: string) {
       id: webhookId
     }), {
       status: 200,
-<<<<<<< HEAD
       headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   } catch (error) {
     console.error('Error in deleteWebhook:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-<<<<<<< HEAD
       headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   }
 }
 
@@ -314,12 +223,7 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
     if (webhookError || !webhook) {
       return new Response(JSON.stringify({ error: 'Webhook not found or access denied' }), {
         status: 404,
-<<<<<<< HEAD
         headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     // Create test payload based on event type
@@ -327,12 +231,7 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
     
     // Add signature if secret is provided
     const headers: Record<string, string> = {
-<<<<<<< HEAD
       'Content-Type': 'application/json'};
-=======
-      'Content-Type': 'application/json',
-    };
->>>>>>> origin/auto/autonomy-17186719616
     
     if (webhook.secret) {
       const signature = await createWebhookSignature(JSON.stringify(testPayload), webhook.secret);
@@ -362,12 +261,7 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
         responseBody: responseText.substring(0, 500) // Limit response body size
       }), {
         status: 200,
-<<<<<<< HEAD
         headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     } catch (fetchError) {
       console.error('Error sending test webhook:', fetchError);
       return new Response(JSON.stringify({ 
@@ -375,23 +269,13 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
         details: fetchError.message 
       }), {
         status: 500,
-<<<<<<< HEAD
         headers: { 'Content-Type': 'application/json' }});
-=======
-        headers: { 'Content-Type': 'application/json' },
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
   } catch (error) {
     console.error('Error in testWebhook:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-<<<<<<< HEAD
       headers: { 'Content-Type': 'application/json' }});
-=======
-      headers: { 'Content-Type': 'application/json' },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   }
 }
 
