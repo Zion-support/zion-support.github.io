@@ -44,7 +44,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-development'
+        website: 'https://ziontechgroup.com/ai-development',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
       },
     },
     {
@@ -91,7 +92,8 @@ export const servicesData = {
       contactInfo: {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-consulting'
+        website: 'https://ziontechgroup.com/ai-consulting',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
       },
     },
     {
