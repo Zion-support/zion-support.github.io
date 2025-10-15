@@ -14,11 +14,44 @@ import {
   Clock,
   Globe,
   Package,
-  Heart
+  Heart,
+  Mail,
+  Video,
+  Code
 } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
   const microSaasProducts = [
+    {
+      id: 'zion-ai-email-assistant',
+      title: 'Zion AI Email Assistant',
+      description: 'AI-powered email management with smart classification, auto-responses, and sentiment analysis.',
+      icon: Mail,
+      features: ['Smart Classification', 'Auto-Response Generation', 'Sentiment Analysis', 'Email Scheduling'],
+      price: '$29/month',
+      popular: true,
+      category: 'Communication',
+    },
+    {
+      id: 'zion-ai-video-generator',
+      title: 'Zion AI Video Generator',
+      description: 'Create professional videos in minutes with AI-powered script writing and voice synthesis.',
+      icon: Video,
+      features: ['AI Script Generation', 'Voice Synthesis', 'Smart Editing', 'Multi-Platform Export'],
+      price: '$39/month',
+      popular: true,
+      category: 'Content Creation',
+    },
+    {
+      id: 'zion-ai-code-reviewer',
+      title: 'Zion AI Code Reviewer',
+      description: 'Automated code analysis with security scanning and performance optimization for developers.',
+      icon: Code,
+      features: ['Automated Analysis', 'Security Scanning', 'Performance Optimization', 'Multi-Language Support'],
+      price: '$49/month',
+      popular: false,
+      category: 'Development',
+    },
     {
       id: 'zion-content-studio',
       title: 'Zion Content Studio',
@@ -26,7 +59,7 @@ const MicroSaasPage: React.FC = () => {
       icon: Package,
       features: ['AI Writing Assistant', 'Content Templates', 'SEO Optimization', 'Multi-platform Publishing'],
       price: '$29/month',
-      popular: true,
+      popular: false,
       category: 'Content Creation',
     },
     {
@@ -81,7 +114,7 @@ const MicroSaasPage: React.FC = () => {
     },
   ];
 
-  const categories = ['All', 'Content Creation', 'CRM & Sales', 'Inventory Management', 'Financial Management', 'HR & Performance', 'Marketing'];
+  const categories = ['All', 'Communication', 'Content Creation', 'Development', 'CRM & Sales', 'Inventory Management', 'Financial Management', 'HR & Performance', 'Marketing'];
 
   const benefits = [
     {

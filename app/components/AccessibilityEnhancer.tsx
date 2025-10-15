@@ -1,27 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 
-<<<<<<< HEAD
-const AccessibilityEnhancer: React.FC = () => {
-  useEffect(() => {
-    // Add skip link functionality
-    const addSkipLink = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    };
-
-    // Focus management for keyboard navigation
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content with Alt + M
-      if (event.altKey && event.key === 'm') {
-        event.preventDefault();
-        const mainContent = document.getElementById('main-content');
-        if (mainContent) {
-          mainContent.focus();
-          mainContent.scrollIntoView({ behavior: 'smooth' });
-=======
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -30,9 +8,29 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ch
   const focusTrapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Add skip link functionality
+    const addSkipLink = () => {
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      skipLink.setAttribute('data-skip-link', 'true');
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    };
+
     // Add keyboard navigation enhancements
     const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content
+      // Skip to main content with Alt + M
+      if (event.altKey && event.key === 'm') {
+        event.preventDefault();
+        const mainContent = document.getElementById('main-content');
+        if (mainContent) {
+          mainContent.focus();
+          mainContent.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+
+      // Skip to main content with Tab + Shift
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
         const skipLink = document.querySelector('[data-skip-link]') as HTMLElement;
         if (skipLink) {
@@ -49,22 +47,45 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ch
           if (closeButton) {
             closeButton.focus();
           }
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
         }
       }
     };
 
-<<<<<<< HEAD
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
+    // Add focus management
+    const handleFocusIn = (event: FocusEvent) => {
+      const target = event.target as HTMLElement;
+      
+      // Ensure focus is visible
+      if (target && target.style) {
+        target.style.outline = '2px solid #06b6d4';
+        target.style.outlineOffset = '2px';
+      }
     };
+
+    const handleFocusOut = (event: FocusEvent) => {
+      const target = event.target as HTMLElement;
+      
+      // Remove focus outline
+      if (target && target.style) {
+        target.style.outline = '';
+        target.style.outlineOffset = '';
+      }
+    };
+
+    // Add ARIA live region for announcements
+    const liveRegion = document.createElement('div');
+    liveRegion.setAttribute('aria-live', 'polite');
+    liveRegion.setAttribute('aria-atomic', 'true');
+    liveRegion.className = 'sr-only';
+    liveRegion.id = 'live-region';
+    document.body.appendChild(liveRegion);
 
     // Add focus styles
     const addFocusStyles = () => {
       const style = document.createElement('style');
       style.textContent = `
         .keyboard-navigation *:focus {
-          outline: 2px solid #3b82f6 !important;
+          outline: 2px solid #06b6d4 !important;
           outline-offset: 2px !important;
         }
         .sr-only {
@@ -96,7 +117,8 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ch
     addSkipLink();
     addFocusStyles();
     document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
+    document.addEventListener('focusin', handleFocusIn);
+    document.addEventListener('focusout', handleFocusOut);
 
     // Add keyboard navigation class on first tab
     const handleFirstTab = (event: KeyboardEvent) => {
@@ -109,50 +131,9 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ch
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-      document.removeEventListener('keydown', handleFirstTab);
-    };
-  }, []);
-
-  return null;
-=======
-    // Add focus management
-    const handleFocusIn = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      
-      // Ensure focus is visible
-      if (target && target.style) {
-        target.style.outline = '2px solid #06b6d4';
-        target.style.outlineOffset = '2px';
-      }
-    };
-
-    const handleFocusOut = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      
-      // Remove focus outline
-      if (target && target.style) {
-        target.style.outline = '';
-        target.style.outlineOffset = '';
-      }
-    };
-
-    // Add ARIA live region for announcements
-    const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
-    liveRegion.id = 'live-region';
-    document.body.appendChild(liveRegion);
-
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut);
+      document.removeEventListener('keydown', handleFirstTab);
       
       const existingLiveRegion = document.getElementById('live-region');
       if (existingLiveRegion) {
@@ -166,7 +147,6 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ch
       {children}
     </div>
   );
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
 };
 
 export default AccessibilityEnhancer;

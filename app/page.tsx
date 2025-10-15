@@ -180,11 +180,12 @@ const HomePage = () => {
       />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden cyber-grid-enhanced particle-bg">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
         
         <ResponsiveContainer className="text-center relative z-10">
@@ -254,7 +255,7 @@ const HomePage = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
+                className="group holographic-card hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer data-stream"
               >
                 <Link
                   to={feature.link}
@@ -301,7 +302,7 @@ const HomePage = () => {
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="group holographic-card hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden neon-border"
               >
                 {saas.featured && (
                   <div className="absolute top-4 right-4">
@@ -358,7 +359,7 @@ const HomePage = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="group holographic-card hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -415,14 +416,14 @@ const HomePage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+              className="cyber-button px-8 py-4 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
               Start Your Journey
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105 neon-border"
             >
               Explore Services
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
