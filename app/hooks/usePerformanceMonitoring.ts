@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from 'react';'
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -10,17 +10,17 @@ interface PerformanceMetrics {
 
 export const usePerformanceMonitoring = () => {
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return;'
 
     const metrics: Partial<PerformanceMetrics> = {};
 
-    // Measure page load time
-    const loadTime = performance.now();
+    // Measure page load time;
+const loadTime = performance.now();
     metrics.loadTime = loadTime;
 
-    // Web Vitals
-    if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+    // Web Vitals;
+if ('web-vitals' in window) {'
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {'
         getCLS((metric) => {
           metrics.cumulativeLayoutShift = metric.value;
         });
@@ -38,17 +38,17 @@ export const usePerformanceMonitoring = () => {
         });
         
         getTTFB((metric) => {
-          console.log('Time to First Byte:', metric.value);
+          console.log('Time to First Byte:', metric.value);'
         });
       });
     }
 
-    // Log performance metrics
-    console.log('Performance Metrics:', metrics);
+    // Log performance metrics;
+console.log('Performance Metrics:', metrics);'
     
     // Send to analytics (in a real app)
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'performance_metrics', metrics);
+    if (typeof window !== 'undefined' && (window as any).gtag) {'
+      (window as any).gtag('event', 'performance_metrics', metrics);'
     }
   }, []);
 };

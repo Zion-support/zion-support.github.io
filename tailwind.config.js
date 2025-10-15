@@ -1,157 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-/** @type {import("tailwindcss").Config} */"
+/** @type {import('tailwindcss').Config} */'"'""
 export default {
   content: [
-    "./index.html","
-    "./src/**/*.{js,ts,jsx,tsx}","
-    "./app/**/*.{js,ts,jsx,tsx}""
-=======
-<<<<<<< HEAD
-/** @type {import("tailwindcss").Config} */";";";
-export default {";";";
-  content: ["
-    "./index.html",";"
-    "./src/**/*.{js,ts,jsx,tsx}",";"
-    "./app/**/*.{js,ts,jsx,tsx}"";
-  ],
-  theme: {";
-    extend: {";";
-      colors: {";";";
-        primary: {",";
-          50: "#f0f9ff",";"
-          500: "#06b6d4",";"
-          600: "#0891b2",";"
-          700: "#0e7490"";";";
-        },";";";
-        secondary: {",";
-          50: "#faf5ff",";"
-          500: "#8b5cf6",";"
-          600: "#7c3aed",";"
-          700: "#6d28d9"";";
-        };";";
-      },";";";
-      fontFamily: {",";
-        sans: ["Inter", "system-ui", "sans-serif"]";
-      };
-    };
-  },";
-  plugins: []";";
-};";";";
-"
-=======
-<<<<<<< HEAD
-/** @type {import('tailwindcss').Config} */'";
-export default {
-  content: [
-    "./index.html","";
-    "./src/**/*.{js,ts,jsx,tsx}","";
-    "./app/**/*.{js,ts,jsx,tsx}","";
-    "./components/**/*.{js,ts,jsx,tsx}","";
-=======
-/** @type {import("tailwindcss").Config} */";";
-export default {
-  content: [
-    "./index.html",";";
-    "./src/**/*.{js,ts,jsx,tsx}",";";
-    "./app/**/*.{js,ts,jsx,tsx}"";";
->>>>>>> main
->>>>>>> main
-=======
-/** @type {import('tailwindcss').Config} */'"'"
-export default {
-  content: [
-    "./index.html","./src/**/*.{js,ts,jsx,tsx}","./app/**/*.{js,ts,jsx,tsx}","./components/**/*.{js,ts,jsx,tsx}",";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+    "./index.html","./src/**/*.{js,ts,jsx,tsx}","./app/**/*.{js,ts,jsx,tsx}","./components/**/*.{js,ts,jsx,tsx}",";"
   ],
   theme: {
     extend= {
       colors: {
         primary: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-          50: "#f0f9ff","
-          500: "#06b6d4","
-          600: "#0891b2","
-          700: "#0e7490""
-        },
-        secondary: {
-          50: "#faf5ff","
-          500: "#8b5cf6","
-          600: "#7c3aed","
-          700: "#6d28d9""
-        }
-      },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"]"
-=======
-<<<<<<< HEAD
-          50: '#f0f9ff',';'";
-          100: '#e0f2fe',';'";
-          200: '#bae6fd',';'";
-          300: '#7dd3fc',';'";
-          400: '#38bdf8',';'";
-          500: '#0ea5e9',';'";
-          600: '#0284c7',';'";
-          700: '#0369a1',';'";
-          800: '#075985',';'";
-          900: '#0c4a6e',';'";
-=======
-          50: '#f0f9ff','"'"
-          100: '#e0f2fe','"'"
-          200: '#bae6fd','"'"
-          300: '#7dd3fc','"'"
-          400: '#38bdf8','"'"
-          500: '#0ea5e9','"'"
-          600: '#0284c7','"'"
-          700: '#0369a1','"'"
-          800: '#075985','"'"
-          900: '#0c4a6e','"'"
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-        },;
-      },;
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],'"'"
-      },
-    },
-  },
+        sans: ['Inter', 'system-ui', 'sans-serif'],'"'""
   plugins: [],
-}
-        sans: ['Inter', 'system-ui', 'sans-serif'],'"'"
-      },;
-    },;
-  },;
+
+        sans: ['Inter', 'system-ui', 'sans-serif'],'"'""
   plugins: [],;
-};
-<<<<<<< HEAD
-=======
-          50: "#f0f9ff",";";
-          500: "#06b6d4",";";
-          600: "#0891b2",";";
-          700: "#0e7490"";";
-        },
-        secondary: {
-          50: "#faf5ff",";";
-          500: "#8b5cf6",";";
-          600: "#7c3aed",";";
-          700: "#6d28d9"";";
-        }
-      },
-      fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"]";";
->>>>>>> main
-      }
-    }
-  },
+
+
   plugins: []
-<<<<<<< HEAD
-}
-=======
-};
->>>>>>> main
 ]
->>>>>>> main
->>>>>>> main
-=======
 ]
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04

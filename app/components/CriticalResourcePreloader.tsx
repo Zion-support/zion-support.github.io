@@ -1,321 +1,64 @@
-<<<<<<< HEAD
-import React from 'react';;';";"
-import SEOHead from './components/SEOHead';";"
-
-const ComponentsPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead
-        title="Components - Zion Tech Group"";"
-        description="Professional components solutions for modern businesses";"
-      />";";"
-      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div  className ="text-center">";"
-          <h1  className ="text-4xl font-bold mb-4">Components</h1>";"
-          <p  className ="text-gray-300">Professional solutions coming soon...</p>;";"
-        </div>
-      </div>
-    </>
-  )
-}
-
-export default ComponentsPage;'";'";"
-=======
-<<<<<<< HEAD
-'use client';
-import { useEffect } from "react;
-const CriticalResourcePreloader = () => {";
-};";
-}useEffect(() => {};";
-}const preloadCriticalResources = () => {";";
-};";";
-}// Critical fonts";";";
-      const criticalFonts  =  []";";";
-        {},;";";";";
-      href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",";";";
-      as: 'style",";";";
-      crossorigin: 'anonymous"
-        };";";
-        {},";";";
-      href: 'https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2",";";";
-      as: 'font",";";";
-      type: 'font/woff2",";";";
-      crossorigin: 'anonymous"
-        };
-      ];";
-      // Critical CSS";";
-      const criticalCSS  =  [];";";";
-        '/styles/critical.css";";";";
-        '/styles/animations.css"
-      ];";
-      // Critical JavaScript";";
-      const criticalJS  =  [];";";";
-        '/scripts/performance.js";";";";
-        '/scripts/analytics.js"
-      ];";
-      // Critical images";";
-      const criticalImages  =  [];";";";
-        '/images/logo.svg";";";";
-        '/images/hero-bg.webp";";";";
-        '/images/cta-bg.webp"
-      ];";
-      // Preload fonts";";
-      criticalFonts.forEach(font => {};)";";";
-}const link  =  document.createElement('link")";";";
-        link.rel = 'preload"
-=======
-
-'use client'";
-import { useEffect } from "react";
-const CriticalResourcePreloader  = () => {};
-}useEffect(() => {};
-}const preloadCriticalResources  = () => {};
-}// Critical fonts
-      const criticalFonts  = []
-        {},;
-      href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap',";
-      as: 'style',";
-      crossorigin: 'anonymous'";
-        };
-        {},
-      href: 'https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2',";
-      as: 'font',";
-      type: 'font/woff2',";
-      crossorigin: 'anonymous'";
-        };
-      ]
-      // Critical CSS
-      const criticalCSS  = []'/styles/critical.css'"'/styles/animations.css'";
-      ]
-      // Critical JavaScript
-      const criticalJS  = []'/scripts/performance.js'"'/scripts/analytics.js'";
-      ]
-      // Critical images
-      const criticalImages  = []'/images/logo.svg'"'/images/hero-bg.webp'"'/images/cta-bg.webp'";
-      ]
-      // Preload fonts
-      criticalFonts.forEach(font => {};)
-}const link  = document.createElement('link')";
-        link.rel = 'preload'";
->>>>>>> main
-        link.href = font.href
-        link.as = font.as
-        if (font.type) link.type = font.type
-        if (font.crossorigin) link.crossOrigin = font.crossorigin
-        document.head.appendChild(link)
-<<<<<<< HEAD
-      })";
-      // Preload CSS;";";
-      criticalCSS.forEach(css => {};)";";";
-}const link  =  document.createElement('link")";";";
-        link.rel = 'preload"
-        link.href = css";";";
-        link.as = 'style"
-        document.head.appendChild(link)
-      })";
-      // Preload JavaScript;";";
-      criticalJS.forEach(js => {};)";";";
-}const link  =  document.createElement('link")";";";
-        link.rel = 'preload"
-        link.href = js";";";
-        link.as = 'script"
-        document.head.appendChild(link)
-      })";
-      // Preload images;";";
-      criticalImages.forEach(img => {};)";";";
-}const link  =  document.createElement('link")";";";
-        link.rel = 'preload"
-        link.href = img";";";
-        link.as = 'image"
-=======
-      })
-      // Preload CSS
-      criticalCSS.forEach(css => {};)
-}const link  = document.createElement('link')";
-        link.rel = 'preload'";
-        link.href = css
-        link.as = 'style'";
-        document.head.appendChild(link)
-      })
-      // Preload JavaScript
-      criticalJS.forEach(js => {};)
-}const link  = document.createElement('link')";
-        link.rel = 'preload'";
-        link.href = js
-        link.as = 'script'";
-        document.head.appendChild(link)
-      })
-      // Preload images
-      criticalImages.forEach(img => {};)
-}const link  = document.createElement('link')";
-        link.rel = 'preload'";
-        link.href = img
-        link.as = 'image'";
->>>>>>> main
+        link.href = font.href;
+link.as = font.as;
+if (font.type) link.type = font.type;
+if (font.crossorigin) link.crossOrigin = font.crossorigin;
+document.head.appendChild(link)
         document.head.appendChild(link)
       });
-    };
     // Preconnect to external domains
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const preconnectDomains = () => {";
-};";";
-}const domains  =  [];";";";
-        'https://fonts.googleapis.com";";";";
-        'https://fonts.gstatic.com";";";";
-        'https://www.google-analytics.com";";";";
-        'https://www.googletagmanager.com";";";";
-        'https://cdn.jsdelivr.net"
-      ]";";
-      domains.forEach(domain => {};)";";";
-}const link  =  document.createElement('link")";";";
-        link.rel = 'preconnect"
-        link.href = domain";";";
-        link.crossOrigin = 'anonymous"
-=======
-    const: preconnectDomains = () => {};
-}const: domains = [];
-        'https://fonts.googleapis.com';";
-        'https://fonts.gstatic.com';";
-        'https://www.google-analytics.com';";
-        'https://www.googletagmanager.com';";
-        'https://cdn.jsdelivr.net'";
-=======
-    const preconnectDomains  = () => {};
-}const domains  = []'https://fonts.googleapis.com'"'https://fonts.gstatic.com'"'https://www.google-analytics.com'"'https://www.googletagmanager.com'"'https://cdn.jsdelivr.net'";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       ]
       domains.forEach(domain => {};)
-}const link  = document.createElement('link')";
-        link.rel = 'preconnect'";
-        link.href = domain
-        link.crossOrigin = 'anonymous'";
->>>>>>> main
+}const link  = document.createElement('link')";"
+        link.rel = 'preconnect'";"
+        link.href = domain;
+link.crossOrigin = 'anonymous'";"
         document.head.appendChild(link)
       });
-    };
     // DNS prefetch for additional domains
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const dnsPrefetchDomains = () => {";
-};";";
-}const domains  =  [];";";";
-        'https://api.ziontechgroup.com";";";";
-        'https://cdn.ziontechgroup.com";";";";
-        'https://analytics.ziontechgroup.com"
-      ]";";
-      domains.forEach(domain => {};)";";";
-}const link  =  document.createElement('link")";";";
-        link.rel = 'dns-prefetch"
-=======
-    const: dnsPrefetchDomains = () => {};
-}const: domains = [];
-        'https://api.ziontechgroup.com';";
-        'https://cdn.ziontechgroup.com';";
-        'https://analytics.ziontechgroup.com'";
-=======
-    const dnsPrefetchDomains  = () => {};
-}const domains  = []'https://api.ziontechgroup.com'"'https://cdn.ziontechgroup.com'"'https://analytics.ziontechgroup.com'";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
       ]
       domains.forEach(domain => {};)
-}const link  = document.createElement('link')";
-        link.rel = 'dns-prefetch'";
->>>>>>> main
-        link.href = domain
-        document.head.appendChild(link)
+}const link  = document.createElement('link')";"
+        link.rel = 'dns-prefetch'";"
+        link.href = domain;
+document.head.appendChild(link)
       });
-    };
-    // Initialize preloading
-    preloadCriticalResources()
+    // Initialize preloading;
+preloadCriticalResources()
     preconnectDomains()
     dnsPrefetchDomains()
-    // Preload next page resources on hover
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const preloadOnHover = () => {
-};
-=======
-    const: preloadOnHover = () => {},;
-      const: links = document.querySelectorAll('a[href^="/"]')";";
-=======
-    const preloadOnHover  = () => {},;
-      const links  = document.querySelectorAll('a[href^="/"]')";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-      
-      links.forEach((link => {},)
-      link.addEventListener('mouseenter', () => {},";
-      const href  = link.getAttribute('href')";
-          if (href && !document.querySelector(`link[href="${href}"]`)) {},";
-      const preloadLink  = document.createElement('link')";
-            preloadLink.rel = 'prefetch'";
-            preloadLink.href = href
-            document.head.appendChild(preloadLink)
->>>>>>> main
-          };
+    // Preload next page resources on hover;
+links.forEach((link => {},)
+      link.addEventListener('mouseenter', () => {},";"
+      const href  = link.getAttribute('href')";"
+          if (href && !document.querySelector(`link[href="${href}"]`)) {},";"
+      const preloadLink  = document.createElement('link')";"
+            preloadLink.rel = 'prefetch'";"
+            preloadLink.href = href;
+document.head.appendChild(preloadLink)
         })
       })
-    };
-    // Initialize hover preloading after a delay
-    setTimeout(preloadOnHover, 2000)
+    // Initialize hover preloading after a delay;
+setTimeout(preloadOnHover, 2000)
   }, [
   ])
-  return null";
-},";";
-      export default CriticalResourcePreloader";";";
-import React from 'react';";";";";
-import SEOHead from './components/SEOHead";
+  return null";"
+},";";"
+      
+import React from 'react';";";";";"
+import SEOHead from './components/SEOHead";"'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const ComponentsPage: React.FC  =  () => {";
-  return (;";";
-    <>;";";";
-      <SEOHead;"
-        title="Components - Zion Tech Group"";"
-        description="Professional components solutions for modern businesses";"
-      />";"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div className ="text-center">";"
-          <h1 className ="text-4xl font-bold mb-4">Components</$1>"
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-export default ComponentsPage;'";'";";";";
-"
-=======
-import React from 'react';;';";
-import SEOHead from './components/SEOHead';";
-=======
-import React from 'react'";
-import SEOHead from './components/SEOHead';
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-;
 const ComponentsPage: React.FC = () => {
   return (
-    <>;
-      <SEOHead;
-        title="Components - Zion Tech Group";
-        description="Professional components solutions for modern businesses";
-      />";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div: className ="text-center">";
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>";
+      <SEOHead;>
+        title="Components - Zion Tech Group";"
+        description="Professional components solutions for modern businesses";"
+      />";"
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div: className ="text-center">";"
+          <h1: className ="text-4xl font-bold mb-4">Components</h1>";"
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>";"
         </div>;
       </div>;
     </>;
   ),
-};
-;
-<<<<<<< HEAD
-export default ComponentsPage;'";'";";";
->>>>>>> main
->>>>>>> main
-=======
-export default ComponentsPage'"'";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+

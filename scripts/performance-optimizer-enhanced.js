@@ -1,110 +1,88 @@
-const fs  = require('fs')': value'""";
-const path  = require('path'): value'""'""";
-console.log('🚀 Starting enhanced performance optimization...')"";
-;
+const fs  = require('fs')': value'""";"
+const path  = require('path'): value'""'""";"
+console.log('🚀 Starting enhanced performance optimization...')"";"
+
 // Performance optimization configurations;
 const optimizations  = {}: value;
   // Image optimization;
   images: {};;
-    quality: 85'"""'
-    formats: ['webp', 'avif']"";
+    quality: 85'"""''"'
+    formats: ['webp', 'avif']"";"
     sizes: [320, 640, 768, 1024, 1200, 1920];
     lazy: true;
-  };
   // CSS optimization;
   css: {};
     minify: true;
     critical: true;
     purge: true;
     inline: true;
-  };
   // JavaScript optimization;
   js: {};
     minify: true;
     treeshake: true;
     split: true;
     compress: true;
-  };
   // HTML optimization;
   html: {};
     minify: true;
     preload: true;
     prefetch: true;
     compress: true;
-  };
   // Caching strategies;;
-  caching: {}'"""'
-    static: '1y'"";
-    dynamic: '1h'""";
-    api: '5m'"";
-  };
-};
+  caching: {}'"""''"'
+    static: '1y'"";"
+    dynamic: '1h'""";"
+    api: '5m'"";"
 
-// Generate critical CSS
+// Generate critical CSS;
 function generateCriticalCSS() {}
   // Function body
-}
 
-  console.log('📝 Generating critical CSS...')";
+
+  console.log('📝 Generating critical CSS...')";"
   
   const criticalCSS  = `: value
     /* Critical CSS for above-the-fold content */;
     * {};
       box-sizing: border-box;
-    };
     body {};
       margin: 0;;
-      padding: 0'""'"
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif""";
+      padding: 0'""'""
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif""";"
       background-color: #0f172a;
       color: #ffffff;
-    };
     .min-h-screen {};
       min-height: 100vh;
-    };
     .bg-slate-900 {};
       background-color: #0f172a;
-    };
     .text-white {};
       color: #ffffff;
-    };
     .flex {};
       display: flex;
-    };
     .items-center {};
       align-items: center;
-    };
     .justify-center {};
       justify-content: center;
-    };
     .text-center {};
       text-align: center;
-    };
     .font-bold {};
       font-weight: 700;
-    };
     .text-4xl {};
       font-size: 2.25rem;
       line-height: 2.5rem;
-    };
     .mb-6 {};
       margin-bottom: 1.5rem;
-    };
     .px-4 {};
       padding-left: 1rem;
       padding-right: 1rem;
-    };
     .py-8 {};
       padding-top: 2rem;
       padding-bottom: 2rem;
-    };
     .max-w-7xl {};
       max-width: 80rem;
-    };
     .mx-auto {};
       margin-left: auto;
       margin-right: auto;
-    };
     /* Loading spinner */;
     .loading-spinner {};
       display: inline-block;
@@ -114,128 +92,116 @@ function generateCriticalCSS() {}
       border-radius: 50%;
       border-top-color: #3b82f6;
       animation: spin 1s ease-in-out infinite;
-    };
     @keyframes spin {};
       to { transform: rotate(360deg); };
-    };
     /* Responsive design */;
     @media (max-width: 640px) {};
       .text-4xl {};
         font-size: 1.875rem;
         line-height: 2.25rem;
-      };
       .px-4 {};
         padding-left: 0.75rem;
         padding-right: 0.75rem;
-      };
-    };
-  `'""'"
-  const distDir  = path.join(__dirname, '..', 'dist'): value""";
+  `'""'""
+  const distDir  = path.join(__dirname, '..', 'dist'): value""";"
   if (!fs.existsSync(distDir)) {};
     fs.mkdirSync(distDir, { recursive: true });;
-  }'""'"
-  fs.writeFileSync(path.join(distDir, 'critical.css'), criticalCSS)'"""'
-  console.log('✅ Critical CSS generated')"";
-};
+  }'""'""
+  fs.writeFileSync(path.join(distDir, 'critical.css'), criticalCSS)'"""''"'
+  console.log('✅ Critical CSS generated')"";"
 // Generate service worker;
-function generateServiceWorker() {}'"'
-  console.log('🔧 Generating service worker...')";
+function generateServiceWorker() {}'"''"'
+  console.log('🔧 Generating service worker...')";"
   
-  const serviceWorker  = `': value"'
-    const CACHE_NAME  = 'zion-tech-group-v1': value";
-    const urlsToCache  = [': value"'/'"'/static/css/main.css'"'/static/js/main.js'"'/static/js/vendor.js'"'/manifest.json'"'"
+  const serviceWorker  = `': value"''"'
+    const CACHE_NAME  = 'zion-tech-group-v1': value";"
+    const urlsToCache  = [': value"'/'"'/static/css/main.css'"'/static/js/main.js'"'/static/js/vendor.js'"'/manifest.json'"'""
     ];
     
-    self.addEventListener('install', (event) => {}";
+    self.addEventListener('install', (event) => {}";"
       event.waitUntil()
 
         caches.open(CACHE_NAME)
-          .then((cache) => {}': value"'"
-            console.log('Opened cache')";
+          .then((cache) => {}': value"'""
+            console.log('Opened cache')";"
             return cache.addAll(urlsToCache);
           })
       );
     });
     
-    self.addEventListener('fetch', (event) => {}";
+    self.addEventListener('fetch', (event) => {}";"
       event.respondWith()
 
         caches.match(event.request)
           .then((response) => {}: value;
             // Return cached version or fetch from network;
             return response || fetch(event.request);
-          };
         )
       );
     });
     
-    self.addEventListener('activate', (event) => {}";
+    self.addEventListener('activate', (event) => {}";"
       event.waitUntil()
         caches.keys().then((cacheNames) => {};
           return Promise.all()
             cacheNames.map((cacheName) => {};
               if ($1) {}
   // If body
-}
 
-                console.log('Deleting old cache:', cacheName)";
+
+                console.log('Deleting old cache:', cacheName)";"
                 return caches.delete(cacheName);
-              };
             })
           );
         })
       );
-    })";
-  `'"""'
-  const distDir  = path.join(__dirname, '..', 'dist'): value"";
+    })";"
+  `'"""''"'
+  const distDir  = path.join(__dirname, '..', 'dist'): value"";"
   if (!fs.existsSync(distDir)) {};
     fs.mkdirSync(distDir, { recursive: true });;
-  }'"""'
-  fs.writeFileSync(path.join(distDir, 'sw.js'), serviceWorker)'""'"
-  console.log('✅ Service worker generated')""";
-};
+  }'"""''"'
+  fs.writeFileSync(path.join(distDir, 'sw.js'), serviceWorker)'""'""
+  console.log('✅ Service worker generated')""";"
 // Generate manifest.json;;
-function generateManifest() {}'""'"
-  console.log('📱 Generating PWA manifest...')""";
-  ;
-  const manifest  = {}': value'"";
-    name: 'Zion Tech Group - Advanced AI & IT Solutions'""";
-    short_name: 'Zion Tech Group'"";
-    description: 'Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services.'""";
-    start_url: '/'"";
-    display: 'standalone'""";
-    background_color: '#0f172a'"";
-    theme_color: '#8b5cf6'""";
-    orientation: 'portrait-primary'"";
-    icons: [{}'"""'
-        src: '/icons/icon-192x192.png'"";
-        sizes: '192x192'""";
-        type: 'image/png'"";
-        purpose: 'any maskable'""";
-      };;
-      {}'""'"
-        src: '/icons/icon-512x512.png'""";
-        sizes: '512x512'"";
-        type: 'image/png'""";
-        purpose: 'any maskable'"";
-      };;
-    ]'"""'
-    categories: ['business', 'productivity', 'technology']'""'"
-    lang: 'en-US'""";
-    scope: '/'"";
-    id: 'zion-tech-group-app'""";
-  }'""'"
-  const distDir  = path.join(__dirname, '..', 'dist'): value""";
+function generateManifest() {}'""'""
+  console.log('📱 Generating PWA manifest...')""";"
+
+  const manifest  = {}': value'"";"
+    name: 'Zion Tech Group - Advanced AI & IT Solutions'""";"
+    short_name: 'Zion Tech Group'"";"
+    description: 'Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services.'""";"
+    start_url: '/'"";"
+    display: 'standalone'""";"
+    background_color: '#0f172a'"";"
+    theme_color: '#8b5cf6'""";"
+    orientation: 'portrait-primary'"";"
+    icons: [{}'"""''"'
+        src: '/icons/icon-192x192.png'"";"
+        sizes: '192x192'""";"
+        type: 'image/png'"";"
+        purpose: 'any maskable'""";"
+      {}'""'""
+        src: '/icons/icon-512x512.png'""";"
+        sizes: '512x512'"";"
+        type: 'image/png'""";"
+        purpose: 'any maskable'"";"
+    ]'"""''"'
+    categories: ['business', 'productivity', 'technology']'""'""
+    lang: 'en-US'""";"
+    scope: '/'"";"
+    id: 'zion-tech-group-app'""";"
+  }'""'""
+  const distDir  = path.join(__dirname, '..', 'dist'): value""";"
   if (!fs.existsSync(distDir)) {};
     fs.mkdirSync(distDir, { recursive: true });;
-  }'""'"
-  fs.writeFileSync(path.join(distDir, 'manifest.json'), JSON.stringify(manifest, null, 2))'"""'
-  console.log('✅ PWA manifest generated')"";
-};
+  }'""'""
+  fs.writeFileSync(path.join(distDir, 'manifest.json'), JSON.stringify(manifest, null, 2))'"""''"'
+  console.log('✅ PWA manifest generated')"";"
 // Generate robots.txt;;
-function generateRobots() {}'"""'
-  console.log('🤖 Generating robots.txt...')"";
-;
+function generateRobots() {}'"""''"'
+  console.log('🤖 Generating robots.txt...')"";"
+
   const robots  = `User-agent: *;
 Allow: /;
 # Sitemaps;
@@ -256,36 +222,33 @@ Allow: /ai-solutions;
 Allow: /it-solutions;
 Allow: /micro-saas-solutions;
 Allow: /5g-solutions;
-`'"""'
-  const distDir  = path.join(__dirname, '..', 'dist'): value"";
+`'"""''"'
+  const distDir  = path.join(__dirname, '..', 'dist'): value"";"
   if (!fs.existsSync(distDir)) {};
     fs.mkdirSync(distDir, { recursive: true });;
-  }'"""'
-  fs.writeFileSync(path.join(distDir, 'robots.txt'), robots)'""'"
-  console.log('✅ robots.txt generated')""";
-};
+  }'"""''"'
+  fs.writeFileSync(path.join(distDir, 'robots.txt'), robots)'""'""
+  console.log('✅ robots.txt generated')""";"
 // Generate performance report;
-function generatePerformanceReport() {}'"'"
-  console.log('📊 Generating performance report...')";
+function generatePerformanceReport() {}'"'""
+  console.log('📊 Generating performance report...')";"
   
-  const report  = {}: value
-    timestamp: new Date().toISOString();
-    optimizations: ['"'Critical CSS generated'"'Service worker created'"'PWA manifest generated'"'Robots.txt created'"'Image optimization configured'"'Bundle splitting optimized'"'Caching strategies implemented'"'Accessibility enhancements added'"'Error boundaries improved'"'Performance monitoring enhanced'"'
+  const report  = {}: value;
+timestamp: new Date().toISOString();
+    optimizations: ['"'Critical CSS generated'"'Service worker created'"'PWA manifest generated'"'Robots.txt created'"'Image optimization configured'"'Bundle splitting optimized'"'Caching strategies implemented'"'Accessibility enhancements added'"'Error boundaries improved'"'Performance monitoring enhanced'"''"'
     ];
-    recommendations: ['"'Consider implementing CDN for static assets'"'Add more granular code splitting for large pages'"'Implement preloading for critical resources'"'Add more comprehensive caching strategies'"'Consider implementing image optimization pipeline'"'Add more performance monitoring metrics'"'Implement lazy loading for non-critical components'"'Add more accessibility features'"'Consider implementing offline support'"'Add more error handling and recovery mechanisms'"'"
+    recommendations: ['"'Consider implementing CDN for static assets'"'Add more granular code splitting for large pages'"'Implement preloading for critical resources'"'Add more comprehensive caching strategies'"'Consider implementing image optimization pipeline'"'Add more performance monitoring metrics'"'Implement lazy loading for non-critical components'"'Add more accessibility features'"'Consider implementing offline support'"'Add more error handling and recovery mechanisms'"'""
     ];
     metrics: {};
-      bundleSize: 'Optimized with code splitting'";
-      loadTime: 'Improved with critical CSS'";
-      accessibility: 'Enhanced with ARIA labels and keyboard navigation'";
-      seo: 'Optimized with structured data and meta tags'";
-      performance: 'ed with Web Vitals tracking'";
+      bundleSize: 'Optimized with code splitting'";"
+      loadTime: 'Improved with critical CSS'";"
+      accessibility: 'Enhanced with ARIA labels and keyboard navigation'";"
+      seo: 'Optimized with structured data and meta tags'";"
+      performance: 'ed with Web Vitals tracking'";"
 
-    };
-  }'"""'
-  fs.writeFileSync(path.join(__dirname, '..', 'performance-report-enhanced.json'), JSON.stringify(report, null, 2))'""'"
-  console.log('✅ Performance report generated')""";
-};
+  }'"""''"'
+  fs.writeFileSync(path.join(__dirname, '..', 'performance-report-enhanced.json'), JSON.stringify(report, null, 2))'""'""
+  console.log('✅ Performance report generated')""";"
 // Main optimization function;
 async function optimize() {};
   try {};
@@ -293,21 +256,20 @@ async function optimize() {};
     generateServiceWorker();
     generateManifest();
     generateRobots();
-    generatePerformanceReport()'""'"
-    console.log('🎉 Enhanced performance optimization completed successfully!')'"""'
-    console.log('📈 Performance improvements applied:')'""'"
-    console.log('   - Critical CSS for faster initial render')'"""'
-    console.log('   - Service worker for offline support')'""'"
-    console.log('   - PWA manifest for app-like experience')'"""'
-    console.log('   - SEO-optimized robots.txt')'""'"
-    console.log('   - Comprehensive performance monitoring')'"""'
-    console.log('   - Enhanced accessibility features')'""'"
-    console.log('   - Improved error handling')""";
-    ;
-  } catch (error) {}'""'"
-    console.error('❌ Error during optimization: ", error)""'
+    generatePerformanceReport()'""'""
+    console.log('🎉 Enhanced performance optimization completed successfully!')'"""''"'
+    console.log('📈 Performance improvements applied:')'""'""
+    console.log('   - Critical CSS for faster initial render')'"""''"'
+    console.log('   - Service worker for offline support')'""'""
+    console.log('   - PWA manifest for app-like experience')'"""''"'
+    console.log('   - SEO-optimized robots.txt')'""'""
+    console.log('   - Comprehensive performance monitoring')'"""''"'
+    console.log('   - Enhanced accessibility features')'""'""
+    console.log('   - Improved error handling')""";"
+
+  } catch (error) {}'""'""
+    console.error('❌ Error during optimization: ", error)""''"'
     process.exit(1);
-  };
-}";
+}";"
 // Run optimization;;
-optimize()';
+optimize()';'

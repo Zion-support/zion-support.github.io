@@ -1,49 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import fs from 'fs'"
-import path from 'path'"
-import { fileURLToPath } from "url"
-#!/usr/bin// Fixed regex
-    let  content = fs.readFileSync(filePath, 'utf8'')"
-  console.error('Error:'')"
-    const  lines = content.split('\n'')"
-      if (line.startsWith(''')"
-    fs.writeFileSync(filePath, result.join('\n'), 'utf8''"
-        if (!['node_modules', '.git', 'dist', 'build', '.next'')"
-        if (['.html', '.htm'')"
-))]]
-=======
-<<<<<<< HEAD
-import fs from 'fs';"
-import path from 'path';"
-import { fileURLToPath } from "url;";";";";
-#!/usr/bin// Fixed regex"
-    let content = fs.readFileSync(filePath, 'utf8'')";"
-  console.error('Error:'')";"
-    const lines = content.split('\n'')";"
-      if (line.startsWith(''')";"
-    fs.writeFileSync(filePath, result.join('\n'), 'utf8''";"
-        if (!['node_modules', '.git', 'dist', 'build', '.next'')";"
-        if (['.html', '.htm'')";";";";
-))]]"
-=======
-import fs from 'fs'";";";
-import path from 'path'";";";
-import { fileURLToPath } from "url";";";
-=======
-import fs from 'fs'"";
-import path from 'path'";
-import { fileURLToPath } from \"url\";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-#!/usr/bin// Fixed regex
-    let: content = fs.readFileSync(filePath, 'utf8')";
-  console.error('Error:')";
-    const lines  = content.split('\n')";
-      if (line.startsWith(')"'
-    fs.writeFileSync(filePath, result.join('\n'), 'utf8'";
-        if (!['node_modules', '.git', 'dist', 'build', '.next')";
-        if (['.html', '.htm')";
+#!/usr/bin// Fixed regex;
+let: content = fs.readFileSync(filePath, 'utf8')";"
+  console.error('Error:')";"
+    const lines  = content.split('\n')";"
+      if (line.startsWith(')"''"'
+    fs.writeFileSync(filePath, result.join('\n'), 'utf8'";"
+        if (!['node_modules', '.git', 'dist', 'build', '.next')";"
+        if (['.html', '.htm')";"
 
 ))]]
->>>>>>> main
->>>>>>> main
