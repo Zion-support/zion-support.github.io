@@ -1,7 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, Phone, Mail, CheckCircle, Star } from "lucide-react";
-
+import { Phone, Mail, CheckCircle, Star } from 'lucide-react';
 interface GenericServicePageProps {
   title: string;
   description: string;
@@ -11,7 +9,6 @@ interface GenericServicePageProps {
   pricing?: string;
   category: "AI" | "IT" | "MicroSAAS" | "Emerging";
 }
-
 const GenericServicePage: React.FC<GenericServicePageProps> = ({
   title,
   description,
@@ -27,10 +24,8 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
     MicroSAAS: "from-green-500 to-emerald-600",
     Emerging: "from-orange-500 to-red-600",
   };
-
   const categoryColor =
     categoryColors[category] || "from-cyan-500 to-purple-600";
-
   return (
     <>
       <Helmet>
@@ -78,7 +73,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               </a>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="py-16">
             <div className="text-center mb-12">
@@ -106,7 +100,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="py-16">
             <div className="text-center mb-12">
@@ -137,7 +130,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               ))}
             </div>
           </section>
-
           {/* Stats Section */}
           <section className="py-16">
             <div className="text-center mb-12">
@@ -169,7 +161,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="py-16 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -201,5 +192,4 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
     </>
   );
 };
-
 export default GenericServicePage;

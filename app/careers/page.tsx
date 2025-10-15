@@ -1,11 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Clock, Users, DollarSign, Shield, MapPin, Briefcase } from 'lucide-react';
-
+import { motion } from 'framer-motion';
+import { CheckCircle, Clock, Users, DollarSign, Shield, MapPin, Briefcase } from 'lucide-react';
 export default function Careers() {
-  const openPositions = [
-    {
+  const features = [
       id: 1,
       title: "Senior AI Engineer",
       department: "AI Solutions",
@@ -69,8 +68,6 @@ export default function Careers() {
       ]
     }
   ];
-
-  const benefits = [
     {
       title: "Competitive Salary",
       description: "Above-market compensation packages",
@@ -102,14 +99,12 @@ export default function Careers() {
       icon: <Users className="w-8 h-8" />
     }
   ];
-
   return (
     <>
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join our team of experts in AI, cloud, and cybersecurity. Explore career opportunities at Zion Tech Group." />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20">
@@ -122,7 +117,6 @@ export default function Careers() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -145,7 +139,6 @@ export default function Careers() {
             </div>
           </div>
         </section>
-
         {/* Open Positions */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -188,9 +181,7 @@ export default function Careers() {
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </div>
-                  
                   <p className="text-gray-300 mb-6">{position.description}</p>
-                  
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <h4 className="text-lg font-semibold text-cyan-400 mb-3">Requirements</h4>
@@ -220,7 +211,6 @@ export default function Careers() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -250,4 +240,4 @@ export default function Careers() {
       </div>
     </>
   );
-}
+}];

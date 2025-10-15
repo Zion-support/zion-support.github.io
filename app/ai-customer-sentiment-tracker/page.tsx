@@ -8,21 +8,18 @@ import {
   Zap, 
   BarChart3, 
   Users, 
-  Clock, 
   CheckCircle,
-  Star,
   ArrowRight,
   Brain,
   Target,
   Globe,
   Smile,
-  Frown,
   AlertCircle
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AICustomerSentimentTrackerPage = () => {
   const features = [
-    {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       title: "Real-time Sentiment Analysis",
       description: "Advanced AI analyzes customer feedback, reviews, and interactions in real-time to provide instant sentiment insights."
@@ -53,9 +50,7 @@ const AICustomerSentimentTrackerPage = () => {
       description: "Share insights across teams, assign tasks, and track resolution progress for better customer experience."
     }
   ];
-
-  const pricingPlans = [
-    {
+  const features = [
       name: "Starter",
       price: "$39",
       period: "/month",
@@ -103,8 +98,6 @@ const AICustomerSentimentTrackerPage = () => {
       popular: false
     }
   ];
-
-  const benefits = [
     {
       icon: <Smile className="w-12 h-12 text-green-400" />,
       title: "Improve Customer Satisfaction",
@@ -126,14 +119,11 @@ const AICustomerSentimentTrackerPage = () => {
       description: "Build stronger customer relationships through better understanding of their needs and emotions."
     }
   ];
-
-  const stats = [
-    { number: "35%", label: "Satisfaction Increase" },
+  const features = [ number: "35%", label: "Satisfaction Increase" },
     { number: "40%", label: "Churn Reduction" },
     { number: "95%", label: "Accuracy Rate" },
     { number: "2.5x", label: "Faster Response" }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -141,7 +131,6 @@ const AICustomerSentimentTrackerPage = () => {
         <meta name="description" content="Monitor and analyze customer sentiment across all channels with AI-powered insights and real-time alerts." />
         <meta name="keywords" content="customer sentiment, sentiment analysis, customer satisfaction, brand monitoring, AI analytics" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -155,17 +144,14 @@ const AICustomerSentimentTrackerPage = () => {
               <Heart className="w-5 h-5 text-cyan-400 mr-2" />
               <span className="text-cyan-300 font-medium">AI-Powered Customer Intelligence</span>
             </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Understand Your
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Customers Better</span>
             </h1>
-            
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Monitor customer sentiment across all channels with AI-powered analysis, real-time alerts, 
               and actionable insights to improve customer satisfaction and loyalty.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -186,7 +172,6 @@ const AICustomerSentimentTrackerPage = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -210,7 +195,6 @@ const AICustomerSentimentTrackerPage = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -227,7 +211,6 @@ const AICustomerSentimentTrackerPage = () => {
               loyalty, and business growth.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -251,7 +234,6 @@ const AICustomerSentimentTrackerPage = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -269,7 +251,6 @@ const AICustomerSentimentTrackerPage = () => {
               across all touchpoints.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -293,7 +274,6 @@ const AICustomerSentimentTrackerPage = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -311,7 +291,6 @@ const AICustomerSentimentTrackerPage = () => {
               with no hidden fees or long-term contracts.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
@@ -332,7 +311,6 @@ const AICustomerSentimentTrackerPage = () => {
                     </div>
                   </div>
                 )}
-
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -341,7 +319,6 @@ const AICustomerSentimentTrackerPage = () => {
                     <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -350,7 +327,6 @@ const AICustomerSentimentTrackerPage = () => {
                     </li>
                   ))}
                 </ul>
-
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -367,7 +343,6 @@ const AICustomerSentimentTrackerPage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -404,7 +379,6 @@ const AICustomerSentimentTrackerPage = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-16 px-4 bg-black/20">
         <div className="max-w-7xl mx-auto text-center">
@@ -427,5 +401,4 @@ const AICustomerSentimentTrackerPage = () => {
     </div>
   );
 };
-
 export default AICustomerSentimentTrackerPage;

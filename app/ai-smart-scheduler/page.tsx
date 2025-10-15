@@ -1,9 +1,6 @@
-import { Link } from "react-router-dom";
-import { Brain, Users, Zap, Globe, Clock, CheckCircle } from "lucide-react";
+import { Users, Zap, Globe, Clock, CheckCircle } from 'lucide-react';
 import Layout from "../layout";
-
 export default function AISmartScheduler() {
-  const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
       title: "AI-Powered Scheduling",
@@ -28,9 +25,7 @@ export default function AISmartScheduler() {
       description: "Works with all major calendar platforms and time zones",
     },
   ];
-
-  const pricingPlans = [
-    {
+  const features = [
       name: "Starter",
       price: "$29",
       period: "/month",
@@ -75,8 +70,6 @@ export default function AISmartScheduler() {
       popular: false,
     },
   ];
-
-  const testimonials = [
     {
       name: "Sarah Chen",
       company: "TechStart Inc.",
@@ -99,7 +92,6 @@ export default function AISmartScheduler() {
       rating: 5,
     },
   ];
-
   return (
     <Layout>
       {/* Hero Section */}
@@ -131,7 +123,6 @@ export default function AISmartScheduler() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
@@ -158,7 +149,6 @@ export default function AISmartScheduler() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4">
@@ -219,7 +209,6 @@ export default function AISmartScheduler() {
           </div>
         </div>
       </section>
-
       {/* Testimonials */}
       <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
@@ -251,7 +240,6 @@ export default function AISmartScheduler() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
@@ -280,4 +268,4 @@ export default function AISmartScheduler() {
       </section>
     </Layout>
   );
-}
+}];

@@ -1,7 +1,4 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
-
 interface EnhancedSEOOptimizerProps {
   title?: string;
   description?: string;
@@ -16,7 +13,6 @@ interface EnhancedSEOOptimizerProps {
   section?: string;
   tags?: string[];
 }
-
 const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. 99.9% uptime SLA, 24/7 support.",
@@ -34,7 +30,6 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
   const location = useLocation();
   const currentUrl = `https://ziontechgroup.com${location.pathname}`;
   const finalCanonical = canonical || currentUrl;
-
   // Generate enhanced structured data
   const generateEnhancedStructuredData = () => {
     const baseStructuredData = {
@@ -175,10 +170,8 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
         ]
       }
     };
-
     // Add page-specific structured data
     const path = location.pathname;
-    
     if (path === '/') {
       return {
         ...baseStructuredData,
@@ -219,7 +212,6 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
         }
       };
     }
-    
     if (path === '/about') {
       return {
         ...baseStructuredData,
@@ -234,7 +226,6 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
         }
       };
     }
-    
     if (path === '/contact') {
       return {
         ...baseStructuredData,
@@ -252,7 +243,6 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
         }
       };
     }
-    
     if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-') || path.startsWith('/5g-')) {
       return {
         ...baseStructuredData,
@@ -292,10 +282,8 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
         }
       };
     }
-    
     return baseStructuredData;
   };
-
   // Generate FAQ structured data
   const generateFAQStructuredData = () => {
     const faqs = [
@@ -320,7 +308,6 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
         answer: "We combine cutting-edge AI technology with proven IT expertise to deliver innovative solutions that drive real business results. Our team of experts provides personalized service and ongoing support."
       }
     ];
-
     return {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -334,7 +321,6 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
       }))
     };
   };
-
   // Generate breadcrumb structured data
   const generateBreadcrumbStructuredData = () => {
     const pathSegments = location.pathname.split('/').filter(Boolean);
@@ -346,7 +332,6 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
         "item": "https://ziontechgroup.com"
       }
     ];
-
     let currentPath = '';
     pathSegments.forEach((segment, index) => {
       currentPath += `/${segment}`;
@@ -354,7 +339,6 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
-      
       breadcrumbs.push({
         "@type": "ListItem",
         "position": index + 2,
@@ -362,18 +346,15 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
         "item": `https://ziontechgroup.com${currentPath}`
       });
     });
-
     return {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": breadcrumbs
     };
   };
-
   const finalStructuredData = structuredData || generateEnhancedStructuredData();
   const faqStructuredData = generateFAQStructuredData();
   const breadcrumbStructuredData = generateBreadcrumbStructuredData();
-
   // Track page views and SEO metrics
   useEffect(() => {
     // Track page view in analytics
@@ -386,7 +367,6 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
         }
       });
     }
-
     // Track SEO performance
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'seo_optimization', {
@@ -396,7 +376,6 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
       });
     }
   }, [title, currentUrl]);
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -406,10 +385,8 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
       <meta name="author" content={author} />
       <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
       <meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow"} />
-      
       {/* Canonical URL */}
       <link rel="canonical" href={finalCanonical} />
-      
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={finalCanonical} />
@@ -426,7 +403,6 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
       {author && <meta property="article:author" content={author} />}
       {section && <meta property="article:section" content={section} />}
       {tags.map(tag => <meta key={tag} property="article:tag" content={tag} />)}
-      
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={finalCanonical} />
@@ -435,7 +411,6 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-      
       {/* Enhanced SEO Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
       <meta name="theme-color" content="#8b5cf6" />
@@ -443,7 +418,6 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
       {/* Additional SEO Meta Tags */}
       <meta name="rating" content="General" />
       <meta name="distribution" content="global" />
@@ -462,45 +436,37 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
       <meta name="msapplication-navbutton-color" content="#8b5cf6" />
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
       <meta name="msapplication-config" content="/browserconfig.xml" />
-      
       {/* Language and Geo Tags */}
       <meta name="language" content="en-US" />
       <meta name="geo.region" content="US-DE" />
       <meta name="geo.placename" content="Middletown" />
       <meta name="geo.position" content="39.4496;-75.7163" />
       <meta name="ICBM" content="39.4496, -75.7163" />
-      
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-      
       {/* FAQ Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(faqStructuredData)}
       </script>
-      
       {/* Breadcrumb Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(breadcrumbStructuredData)}
       </script>
-      
       {/* Preload critical resources */}
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       <link rel="preload" href="/assets/index-Dq8n7JAm.css" as="style" />
       <link rel="preload" href="/assets/index-DApGEc-z.js" as="script" />
-      
       {/* DNS prefetch for performance */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-      
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
     </Helmet>
   );
 };
-
 export default EnhancedSEOOptimizer;

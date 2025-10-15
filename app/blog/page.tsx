@@ -1,19 +1,13 @@
-import { useState } from "react";
-import { ArrowRight, Calendar, User } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
+import { Calendar, User } from 'lucide-react';
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
-
   const categories = [
     { id: "all", name: "All Posts", count: 12 },
     { id: "ai", name: "Artificial Intelligence", count: 5 },
     { id: "technology", name: "Technology", count: 4 },
     { id: "business", name: "Business", count: 3 }
   ];
-
   const posts = [
     {
       id: 1,
@@ -77,24 +71,20 @@ export default function Blog() {
       image: "/images/blog/5g-transforming-industries.jpg"
     }
   ];
-
   const filteredPosts = posts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === "all" || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
-
   const featuredPost = filteredPosts.find(post => post.featured);
   const regularPosts = filteredPosts.filter(post => !post.featured);
-
   return (
     <>
       <Helmet>
         <title>Blog - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends." />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20">
@@ -107,7 +97,6 @@ export default function Blog() {
             </div>
           </div>
         </section>
-
         {/* Search and Filter */}
         <section className="py-8 bg-white/10 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4">
@@ -139,7 +128,6 @@ export default function Blog() {
             </div>
           </div>
         </section>
-
         {/* Featured Posts */}
         {featuredPost && (
           <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -192,7 +180,6 @@ export default function Blog() {
             </div>
           </section>
         )}
-
         {/* Blog Posts Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">

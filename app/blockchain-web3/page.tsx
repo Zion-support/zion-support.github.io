@@ -1,9 +1,6 @@
-import { Link } from "react-router-dom";
-import { Shield, Zap, Globe, Lock, ArrowRight } from "lucide-react";
+import { Zap, Globe, Lock, ArrowRight } from 'lucide-react';
 import Layout from "../layout";
-
 export default function BlockchainWeb3() {
-  const features = [
     {
       icon: <Shield className="w-6 h-6 text-cyan-400" />,
       title: "Decentralized Security",
@@ -29,9 +26,7 @@ export default function BlockchainWeb3() {
         "Custom token development and cryptocurrency integration services",
     },
   ];
-
-  const services = [
-    {
+  const features = [
       category: "Development",
       items: [
         "Smart Contract Development",
@@ -65,7 +60,6 @@ export default function BlockchainWeb3() {
       ],
     },
   ];
-
   return (
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -79,7 +73,6 @@ export default function BlockchainWeb3() {
               and Web3 solutions
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
               <div
@@ -94,7 +87,6 @@ export default function BlockchainWeb3() {
               </div>
             ))}
           </div>
-
           <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">
               Our Services
@@ -120,7 +112,6 @@ export default function BlockchainWeb3() {
               ))}
             </div>
           </div>
-
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-8">
               Ready to Build the Future?
@@ -147,4 +138,4 @@ export default function BlockchainWeb3() {
       </div>
     </Layout>
   );
-}
+}];

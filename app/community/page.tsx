@@ -1,8 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe, Star } from 'lucide-react';
-
+import { Users, MessageCircle, Calendar, Award, Globe, Star } from 'lucide-react';
 export default function Community() {
   const events = [
     {
@@ -30,7 +27,6 @@ export default function Community() {
       attendees: 25
     }
   ];
-
   const initiatives = [
     {
       icon: <Users className="w-8 h-8" />,
@@ -57,14 +53,12 @@ export default function Community() {
       participants: "100+ contributors"
     }
   ];
-
   const stats = [
     { number: "5,000+", label: "Community Members", icon: <Users className="w-6 h-6" /> },
     { number: "50+", label: "Events Hosted", icon: <Calendar className="w-6 h-6" /> },
     { number: "100+", label: "Open Source Projects", icon: <Globe className="w-6 h-6" /> },
     { number: "95%", label: "Member Satisfaction", icon: <Star className="w-6 h-6" /> }
   ];
-
   return (
     <>
       <Helmet>
@@ -78,7 +72,6 @@ export default function Community() {
           content="tech community, developer community, tech events, workshops, mentorship, open source, networking, professional development"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -109,7 +102,6 @@ export default function Community() {
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 px-4 bg-gray-800/30">
           <div className="max-w-7xl mx-auto">
@@ -126,7 +118,6 @@ export default function Community() {
             </div>
           </div>
         </section>
-
         {/* Events Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -136,7 +127,6 @@ export default function Community() {
                 Join our upcoming events and workshops to learn, network, and grow
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {events.map((event, index) => (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
@@ -165,7 +155,6 @@ export default function Community() {
             </div>
           </div>
         </section>
-
         {/* Initiatives Section */}
         <section className="py-20 px-4 bg-gray-800/30">
           <div className="max-w-7xl mx-auto">
@@ -175,7 +164,6 @@ export default function Community() {
                 Get involved in our community programs and make a difference
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {initiatives.map((initiative, index) => (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300 text-center">
@@ -190,7 +178,6 @@ export default function Community() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -211,4 +198,3 @@ export default function Community() {
     </>
   );
 }
-

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import {
   Cloud,
   Shield,
@@ -9,9 +8,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Layout from "../layout";
-
 export default function CloudInfrastructureManagement() {
-  const features = [
     {
       icon: <Cloud className="w-6 h-6 text-cyan-400" />,
       title: "Multi-Cloud Management",
@@ -49,9 +46,7 @@ export default function CloudInfrastructureManagement() {
         "Advanced analytics to optimize infrastructure performance and make data-driven decisions",
     },
   ];
-
-  const managementFeatures = [
-    {
+  const features = [
       category: "Infrastructure Management",
       items: [
         "Server Provisioning",
@@ -96,7 +91,6 @@ export default function CloudInfrastructureManagement() {
       ],
     },
   ];
-
   return (
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -110,7 +104,6 @@ export default function CloudInfrastructureManagement() {
               management solutions
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
               <div
@@ -125,7 +118,6 @@ export default function CloudInfrastructureManagement() {
               </div>
             ))}
           </div>
-
           <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">
               Management Services
@@ -151,7 +143,6 @@ export default function CloudInfrastructureManagement() {
               ))}
             </div>
           </div>
-
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-8">
               Ready to Optimize Your Cloud?
@@ -179,4 +170,4 @@ export default function CloudInfrastructureManagement() {
       </div>
     </Layout>
   );
-}
+}];

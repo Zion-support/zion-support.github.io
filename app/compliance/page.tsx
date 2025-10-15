@@ -1,11 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award, Clock } from 'lucide-react';
-
+import { motion } from 'framer-motion';
+import { Shield, CheckCircle, FileText, Lock, Users, Globe, Award, Clock } from 'lucide-react';
 export default function Compliance() {
-  const complianceFrameworks = [
-    {
+  const features = [
       name: "SOC 2 Type II",
       description: "Security, availability, and confidentiality controls for service organizations",
       status: "Certified",
@@ -42,9 +41,7 @@ export default function Compliance() {
       icon: <Users className="w-8 h-8" />
     }
   ];
-
-  const services = [
-    {
+  const features = [
       title: "Compliance Assessment",
       description: "Comprehensive evaluation of your current compliance posture and gap analysis",
       features: ["Risk Assessment", "Gap Analysis", "Remediation Planning", "Documentation Review"]
@@ -65,14 +62,11 @@ export default function Compliance() {
       features: ["Regular Assessments", "Policy Updates", "Training Programs", "Incident Response"]
     }
   ];
-
-  const benefits = [
     { icon: <Shield className="w-6 h-6" />, title: 'Risk Mitigation', description: 'Reduce regulatory and security risks with comprehensive compliance programs' },
     { icon: <CheckCircle className="w-6 h-6" />, title: 'Audit Readiness', description: 'Stay prepared for audits with ongoing monitoring and documentation' },
     { icon: <Users className="w-6 h-6" />, title: 'Trust & Credibility', description: 'Build customer trust with certified compliance and security measures' },
     { icon: <Clock className="w-6 h-6" />, title: 'Time Savings', description: 'Streamline compliance processes with expert guidance and automation' }
   ];
-
   return (
     <>
       <Helmet>
@@ -86,7 +80,6 @@ export default function Compliance() {
           content="compliance services, SOC 2, ISO 27001, GDPR, HIPAA, PCI DSS, regulatory compliance, security compliance, audit support"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -117,7 +110,6 @@ export default function Compliance() {
             </div>
           </div>
         </section>
-
         {/* Compliance Frameworks Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -127,7 +119,6 @@ export default function Compliance() {
                 We maintain the highest standards of compliance and security across multiple frameworks
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {complianceFrameworks.map((framework, index) => (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
@@ -146,7 +137,6 @@ export default function Compliance() {
             </div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-20 px-4 bg-gray-800/30">
           <div className="max-w-7xl mx-auto">
@@ -156,7 +146,6 @@ export default function Compliance() {
                 Comprehensive compliance solutions tailored to your industry and regulatory requirements
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
@@ -175,7 +164,6 @@ export default function Compliance() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -185,7 +173,6 @@ export default function Compliance() {
                 Partner with experts who understand the complexities of regulatory compliance
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
@@ -199,7 +186,6 @@ export default function Compliance() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gray-800/30">
           <div className="max-w-4xl mx-auto text-center">
@@ -219,5 +205,4 @@ export default function Compliance() {
       </div>
     </>
   );
-}
-
+}];

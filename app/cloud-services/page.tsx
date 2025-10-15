@@ -1,11 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Cloud, Shield, Zap, Globe, Database, Server, CheckCircle, TrendingUp, Clock } from 'lucide-react';
-
+import { motion } from 'framer-motion';
+import { Cloud, Shield, Zap, Globe, Database, Server, CheckCircle, TrendingUp, Clock } from 'lucide-react';
 export default function CloudServices() {
-  const services = [
-    {
+  const features = [
       title: "Cloud Migration",
       description: "Seamlessly migrate your infrastructure to the cloud with minimal downtime and maximum efficiency.",
       icon: <Cloud className="w-8 h-8" />,
@@ -72,8 +71,6 @@ export default function CloudServices() {
       ]
     }
   ];
-
-  const benefits = [
     {
       title: "Scalability",
       description: "Scale your infrastructure up or down based on demand",
@@ -95,7 +92,6 @@ export default function CloudServices() {
       icon: <CheckCircle className="w-8 h-8" />
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -109,7 +105,6 @@ export default function CloudServices() {
           content="cloud services, cloud migration, cloud infrastructure, cloud security, AWS, Azure, Google Cloud, cloud consulting"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -140,7 +135,6 @@ export default function CloudServices() {
             </div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -169,7 +163,6 @@ export default function CloudServices() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
@@ -192,7 +185,6 @@ export default function CloudServices() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -222,4 +214,4 @@ export default function CloudServices() {
       </div>
     </>
   );
-}
+}];

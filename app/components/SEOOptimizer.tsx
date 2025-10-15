@@ -1,7 +1,4 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
-
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
@@ -11,7 +8,6 @@ interface SEOOptimizerProps {
   noIndex?: boolean;
   structuredData?: any;
 }
-
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. 99.9% uptime SLA, 24/7 support.",
@@ -24,7 +20,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   const location = useLocation();
   const currentUrl = `https://ziontechgroup.com${location.pathname}`;
   const finalCanonical = canonical || currentUrl;
-
   // Generate breadcrumb structured data
   const generateBreadcrumbData = () => {
     const pathSegments = location.pathname.split('/').filter(Boolean);
@@ -36,7 +31,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         "item": "https://ziontechgroup.com"
       }
     ];
-
     let currentPath = '';
     pathSegments.forEach((segment, index) => {
       currentPath += `/${segment}`;
@@ -44,7 +38,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
-      
       breadcrumbs.push({
         "@type": "ListItem",
         "position": index + 2,
@@ -52,14 +45,12 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         "item": `https://ziontechgroup.com${currentPath}`
       });
     });
-
     return {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": breadcrumbs
     };
   };
-
   // Default structured data
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -113,11 +104,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       }
     ]
   };
-
   // Page-specific structured data
   const getPageStructuredData = () => {
     const path = location.pathname;
-    
     if (path === '/') {
       return {
         ...defaultStructuredData,
@@ -129,21 +118,18 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         }
       };
     }
-    
     if (path === '/about') {
       return {
         ...defaultStructuredData,
         "@type": "AboutPage"
       };
     }
-    
     if (path === '/contact') {
       return {
         ...defaultStructuredData,
         "@type": "ContactPage"
       };
     }
-    
     if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-')) {
       return {
         ...defaultStructuredData,
@@ -167,13 +153,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         "serviceType": "AI and IT Solutions"
       };
     }
-    
     return defaultStructuredData;
   };
-
   const finalStructuredData = structuredData || getPageStructuredData();
   const breadcrumbData = generateBreadcrumbData();
-
   // Track page views
   useEffect(() => {
     // Track page view in analytics
@@ -184,7 +167,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       });
     }
   }, [title, currentUrl]);
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -194,10 +176,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
       <meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow"} />
-      
       {/* Canonical URL */}
       <link rel="canonical" href={finalCanonical} />
-      
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={finalCanonical} />
@@ -209,7 +189,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta property="og:image:alt" content={`${title} - Zion Tech Group`} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={finalCanonical} />
@@ -218,7 +197,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-      
       {/* Additional SEO Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
       <meta name="theme-color" content="#8b5cf6" />
@@ -226,7 +204,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
       {/* Enhanced SEO Meta Tags */}
       <meta name="rating" content="General" />
       <meta name="distribution" content="global" />
@@ -246,32 +223,26 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="msapplication-navbutton-color" content="#8b5cf6" />
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
       <meta name="msapplication-config" content="/browserconfig.xml" />
-      
       {/* Language and Geo Tags */}
       <meta name="language" content="en-US" />
       <meta name="geo.region" content="US-DE" />
       <meta name="geo.placename" content="Middletown" />
       <meta name="geo.position" content="39.4496;-75.7163" />
       <meta name="ICBM" content="39.4496, -75.7163" />
-      
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-      
       {/* Breadcrumb Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(breadcrumbData)}
       </script>
-      
       {/* Additional Page-specific Meta Tags */}
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="application-name" content="Zion Tech Group" />
-      
       {/* Preload critical resources */}
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      
       {/* DNS prefetch for performance */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -279,5 +250,4 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     </Helmet>
   );
 };
-
 export default SEOOptimizer;

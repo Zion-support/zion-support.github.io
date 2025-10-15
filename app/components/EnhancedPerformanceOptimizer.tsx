@@ -1,7 +1,6 @@
 "use client";
-import { useEffect, useCallback } from "react";
+import { useCallback } from 'react';
 import logger from "../../utils/logger";
-
 // Performance metrics interface for future use
 // interface PerformanceMetrics {
 //   lcp?: number;
@@ -10,7 +9,6 @@ import logger from "../../utils/logger";
 //   fcp?: number;
 //   ttfb?: number;
 // }
-
 export default function EnhancedPerformanceOptimizer() {
   const preloadCriticalResources = useCallback(() => {
     const criticalResources = [
@@ -18,7 +16,6 @@ export default function EnhancedPerformanceOptimizer() {
       { href: "/images/hero-bg.webp", as: "image" },
       { href: "/images/logo.webp", as: "image" },
     ];
-
     criticalResources.forEach((resource) => {
       const link = document.createElement("link");
       link.rel = "preload";
@@ -28,15 +25,11 @@ export default function EnhancedPerformanceOptimizer() {
       if (resource.crossorigin) link.crossOrigin = resource.crossorigin;
       document.head.appendChild(link);
     });
-
     logger.info("Critical resources preloaded");
   }, []);
-
   const optimizeImages = useCallback(() => {
     const images = document.querySelectorAll("img[data-src]");
-    
     if (images.length === 0) return;
-
     const imageObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -54,17 +47,14 @@ export default function EnhancedPerformanceOptimizer() {
       },
       { rootMargin: "50px" }
     );
-
     images.forEach((img) => imageObserver.observe(img));
     logger.info(`Optimizing ${images.length} images`);
   }, []);
-
   const optimizeFonts = useCallback(() => {
     // Preload critical fonts
     const fontPreloads = [
       { href: "/fonts/inter-var.woff2", type: "font/woff2" },
     ];
-
     fontPreloads.forEach((font) => {
       const link = document.createElement("link");
       link.rel = "preload";
@@ -74,7 +64,6 @@ export default function EnhancedPerformanceOptimizer() {
       link.crossOrigin = "anonymous";
       document.head.appendChild(link);
     });
-
     // Add font-display: swap to existing font faces
     const style = document.createElement("style");
     style.textContent = `
@@ -86,7 +75,6 @@ export default function EnhancedPerformanceOptimizer() {
     `;
     document.head.appendChild(style);
   }, []);
-
   const deferNonCriticalScripts = useCallback(() => {
     const scripts = document.querySelectorAll("script[data-defer]");
     scripts.forEach((script) => {
@@ -97,7 +85,6 @@ export default function EnhancedPerformanceOptimizer() {
       script.parentNode?.replaceChild(newScript, script);
     });
   }, []);
-
   const setupPerformanceMonitoring = useCallback(() => {
     // Monitor Core Web Vitals
     import("web-vitals").then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
@@ -119,7 +106,6 @@ export default function EnhancedPerformanceOptimizer() {
     }).catch((error) => {
       logger.error("Failed to load web-vitals:", error);
     });
-
     // Monitor resource loading
     if ("PerformanceObserver" in window) {
       const observer = new PerformanceObserver((list) => {
@@ -137,7 +123,6 @@ export default function EnhancedPerformanceOptimizer() {
       observer.observe({ entryTypes: ["navigation", "resource"] });
     }
   }, []);
-
   const optimizeBundleLoading = useCallback(() => {
     // Preload next likely pages
     const nextPages = ["/about", "/services", "/contact"];
@@ -148,7 +133,6 @@ export default function EnhancedPerformanceOptimizer() {
       document.head.appendChild(link);
     });
   }, []);
-
   const setupServiceWorker = useCallback(() => {
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker
@@ -161,7 +145,6 @@ export default function EnhancedPerformanceOptimizer() {
         });
     }
   }, []);
-
   useEffect(() => {
     // Run optimizations after DOM is ready
     if (document.readyState === "loading") {
@@ -183,7 +166,6 @@ export default function EnhancedPerformanceOptimizer() {
       optimizeBundleLoading();
       setupServiceWorker();
     }
-
     // Cleanup
     return () => {
       // Cleanup if needed
@@ -197,6 +179,5 @@ export default function EnhancedPerformanceOptimizer() {
     optimizeBundleLoading,
     setupServiceWorker,
   ]);
-
   return null;
 }

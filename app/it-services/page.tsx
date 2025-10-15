@@ -1,8 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Server, Shield, Zap, Globe, Database, CheckCircle, TrendingUp, Clock, Users } from 'lucide-react';
-
+import { Server, Shield, Zap, Globe, Database, CheckCircle, TrendingUp, Clock, Users } from 'lucide-react';
 export default function ItServices() {
   const itServices = [
     {
@@ -72,8 +69,6 @@ export default function ItServices() {
       ]
     }
   ];
-
-  const benefits = [
     {
       title: "24/7 Support",
       description: "Round-the-clock technical support and monitoring",
@@ -95,7 +90,6 @@ export default function ItServices() {
       icon: <CheckCircle className="w-8 h-8" />
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -109,7 +103,6 @@ export default function ItServices() {
           content="IT services, IT support, network security, system administration, cloud solutions, IT consulting, infrastructure management"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -140,7 +133,6 @@ export default function ItServices() {
             </div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -169,7 +161,6 @@ export default function ItServices() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
@@ -192,7 +183,6 @@ export default function ItServices() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">

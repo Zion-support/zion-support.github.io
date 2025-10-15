@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
-
+import { ChevronRight, Play, Pause } from 'lucide-react';
 interface ContentItem {
   id: string;
   title: string;
@@ -9,14 +8,12 @@ interface ContentItem {
   category: string;
   featured?: boolean;
 }
-
 interface DynamicContentShowcaseProps {
   items?: ContentItem[];
   autoPlay?: boolean;
   interval?: number;
   className?: string;
 }
-
 const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
   items = [
     {
@@ -51,37 +48,28 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
-
   useEffect(() => {
     if (!isPlaying) return;
-
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
     }, interval);
-
     return () => clearInterval(timer);
   }, [isPlaying, interval, items.length]);
-
   const goToPrevious = () => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + items.length) % items.length,
     );
   };
-
   const goToNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
   };
-
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
-
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
-
   const currentItem = items[currentIndex];
-
   return (
     <div className={`relative ${className}`}>
       <div className="relative overflow-hidden rounded-lg bg-gray-900">
@@ -100,7 +88,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
                     {currentItem.description}
                   </p>
                 </div>
-
                 <div className="flex space-x-4">
                   <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                     Learn More
@@ -110,7 +97,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
                   </button>
                 </div>
               </div>
-
               <div className="relative">
                 <img
                   src={currentItem.image}
@@ -127,7 +113,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
           </div>
         </div>
       </div>
-
       {/* Controls */}
       <div className="flex items-center justify-between mt-6">
         <div className="flex space-x-2">
@@ -154,7 +139,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
-
         {/* Dots indicator */}
         <div className="flex space-x-2">
           {items.map((_, index) => (
@@ -171,5 +155,4 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
     </div>
   );
 };
-
 export default DynamicContentShowcase;

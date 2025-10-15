@@ -1,12 +1,10 @@
 import React from 'react';
-import { Loader2, Brain, Shield, Zap, Globe } from 'lucide-react';
-
+import { Brain, Shield, Zap, Globe } from 'lucide-react';
 interface LoadingPageProps {
   message?: string;
   showProgress?: boolean;
   progress?: number;
 }
-
 export const LoadingPage: React.FC<LoadingPageProps> = ({ 
   message = "Loading...", 
   showProgress = false, 
@@ -21,9 +19,7 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
           </div>
           <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full animate-bounce"></div>
         </div>
-        
         <h2 className="text-2xl font-bold text-white mb-4">{message}</h2>
-        
         {showProgress && (
           <div className="w-64 mx-auto mb-4">
             <div className="bg-gray-700 rounded-full h-2">
@@ -35,7 +31,6 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
             <p className="text-sm text-gray-300 mt-2">{progress}% complete</p>
           </div>
         )}
-        
         <div className="flex justify-center space-x-2">
           <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
           <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
@@ -45,12 +40,10 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
     </div>
   );
 };
-
 interface ServiceLoadingProps {
   serviceType: 'ai' | 'it' | 'saas' | '5g';
   message?: string;
 }
-
 export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ 
   serviceType, 
   message 
@@ -69,10 +62,8 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({
         return <Loader2 className="w-16 h-16 text-white" />;
     }
   };
-
   const getServiceMessage = () => {
     if (message) return message;
-    
     switch (serviceType) {
       case 'ai':
         return "Initializing AI Solutions...";
@@ -86,7 +77,6 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({
         return "Loading...";
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
@@ -98,9 +88,7 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({
           </div>
           <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-cyan-400 animate-spin"></div>
         </div>
-        
         <h2 className="text-3xl font-bold text-white mb-4">{getServiceMessage()}</h2>
-        
         <div className="max-w-md mx-auto">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
             <div className="space-y-3">
@@ -123,12 +111,10 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({
     </div>
   );
 };
-
 interface SkeletonLoadingProps {
   type: 'card' | 'list' | 'text' | 'image';
   count?: number;
 }
-
 export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({ 
   type, 
   count = 1 
@@ -144,7 +130,6 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({
             <div className="h-4 bg-gray-600 rounded w-3/4"></div>
           </div>
         );
-      
       case 'list':
         return (
           <div className="space-y-4">
@@ -159,7 +144,6 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({
             ))}
           </div>
         );
-      
       case 'text':
         return (
           <div className="space-y-3 animate-pulse">
@@ -172,19 +156,16 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({
             ))}
           </div>
         );
-      
       case 'image':
         return (
           <div className="animate-pulse">
             <div className="w-full h-64 bg-gray-600 rounded-lg"></div>
           </div>
         );
-      
       default:
         return <div className="animate-pulse bg-gray-600 rounded h-4"></div>;
     }
   };
-
   return (
     <div className="space-y-4">
       {Array.from({ length: count }).map((_, index) => (
@@ -195,12 +176,10 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({
     </div>
   );
 };
-
 interface ErrorLoadingProps {
   error: string;
   onRetry?: () => void;
 }
-
 export const ErrorLoading: React.FC<ErrorLoadingProps> = ({ 
   error, 
   onRetry 
@@ -211,10 +190,8 @@ export const ErrorLoading: React.FC<ErrorLoadingProps> = ({
         <div className="w-24 h-24 mx-auto mb-8 rounded-full bg-red-500/20 flex items-center justify-center">
           <Loader2 className="w-12 h-12 text-red-400 animate-spin" />
         </div>
-        
         <h2 className="text-2xl font-bold text-white mb-4">Loading Error</h2>
         <p className="text-gray-300 mb-6 max-w-md mx-auto">{error}</p>
-        
         {onRetry && (
           <button
             onClick={onRetry}
@@ -227,13 +204,11 @@ export const ErrorLoading: React.FC<ErrorLoadingProps> = ({
     </div>
   );
 };
-
 interface ProgressLoadingProps {
   progress: number;
   message: string;
   subMessage?: string;
 }
-
 export const ProgressLoading: React.FC<ProgressLoadingProps> = ({ 
   progress, 
   message, 
@@ -251,19 +226,16 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({
             style={{ animationDuration: '2s' }}
           ></div>
         </div>
-        
         <h2 className="text-2xl font-bold text-white mb-4">{message}</h2>
         {subMessage && (
           <p className="text-gray-300 mb-6">{subMessage}</p>
         )}
-        
         <div className="w-full bg-gray-700 rounded-full h-3 mb-4">
           <div 
             className="bg-gradient-to-r from-cyan-500 to-purple-600 h-3 rounded-full transition-all duration-500 ease-out"
             style={{ width: `${progress}%` }}
           ></div>
         </div>
-        
         <div className="flex justify-center space-x-1">
           {Array.from({ length: 10 }).map((_, index) => (
             <div
@@ -279,5 +251,4 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({
     </div>
   );
 };
-
 export default LoadingPage;

@@ -1,9 +1,6 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Cloud, Code, Database, Mail, Users, Clock, DollarSign, Globe, Lock, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { CheckCircle, Star, Brain, Zap, Shield, BarChart3, Cloud, Code, Database, Mail, Users, Clock, DollarSign, Globe, Lock, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from 'lucide-react';
 import SEOOptimizer from "../components/SEOOptimizer";
-
 export default function AIServices() {
   const aiServices = [
     {
@@ -703,7 +700,6 @@ export default function AIServices() {
       featured: false
     }
   ];
-
   const categories = [
     { name: "All", count: aiServices.length, active: true },
     { name: "Analytics", count: aiServices.filter(s => s.category === "Analytics").length, active: false },
@@ -724,15 +720,12 @@ export default function AIServices() {
     { name: "Personalization", count: aiServices.filter(s => s.category === "Personalization").length, active: false },
     { name: "Language Processing", count: aiServices.filter(s => s.category === "Language Processing").length, active: false }
   ];
-
   const stats = [
     { number: "35+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
     { number: "20,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
     { number: "99.9%", label: "Accuracy Rate", icon: <Award className="w-6 h-6" /> },
     { number: "24/7", label: "AI Monitoring", icon: <Monitor className="w-6 h-6" /> }
   ];
-
-  const testimonials = [
     {
       name: "Dr. Sarah Chen",
       company: "Tech Innovations Inc",
@@ -758,7 +751,6 @@ export default function AIServices() {
       avatar: "EW"
     }
   ];
-
   const aiCapabilities = [
     {
       title: "Machine Learning",
@@ -797,7 +789,6 @@ export default function AIServices() {
       color: "from-teal-500 to-cyan-500"
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -815,17 +806,14 @@ export default function AIServices() {
         title="AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions"
         description="Cutting-edge AI services including machine learning, natural language processing, computer vision, and predictive analytics. Transform your business with advanced artificial intelligence."
       />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-        
         {/* Hero Section */}
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
-          
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -837,7 +825,6 @@ export default function AIServices() {
                 Harness the power of artificial intelligence to transform your business. 
                 From machine learning to natural language processing, we provide cutting-edge AI solutions.
               </p>
-              
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
@@ -856,7 +843,6 @@ export default function AIServices() {
                   <span className="text-sm">24/7 AI monitoring</span>
                 </div>
               </div>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -876,7 +862,6 @@ export default function AIServices() {
             </div>
           </div>
         </div>
-
         {/* Stats Section */}
         <div className="py-16 bg-black/20 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -893,7 +878,6 @@ export default function AIServices() {
             </div>
           </div>
         </div>
-
         {/* AI Capabilities */}
         <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -907,7 +891,6 @@ export default function AIServices() {
                 Comprehensive artificial intelligence technologies to power your business transformation
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiCapabilities.map((capability, index) => (
                 <div
@@ -924,7 +907,6 @@ export default function AIServices() {
             </div>
           </div>
         </div>
-
         {/* Categories Filter */}
         <div className="py-8 bg-black/10 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -944,7 +926,6 @@ export default function AIServices() {
             </div>
           </div>
         </div>
-
         {/* Featured Services */}
         <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -958,7 +939,6 @@ export default function AIServices() {
                 Our most advanced AI solutions trusted by leading organizations worldwide
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiServices.filter(service => service.featured).map((service, index) => (
                 <div
@@ -975,14 +955,11 @@ export default function AIServices() {
                       <span className="ml-1 text-xs text-gray-400">({service.reviews})</span>
                     </div>
                   </div>
-
                   <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                   <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-
                   <div className="flex items-center mb-4">
                     <span className="text-2xl font-bold text-white">{service.price}</span>
                   </div>
-
                   <div className="space-y-2 mb-6">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -996,7 +973,6 @@ export default function AIServices() {
                       </div>
                     )}
                   </div>
-
                   <div className="space-y-3">
                     <Link
                       to={service.link}
@@ -1017,7 +993,6 @@ export default function AIServices() {
             </div>
           </div>
         </div>
-
         {/* All Services Grid */}
         <div className="py-16 bg-black/10 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1031,7 +1006,6 @@ export default function AIServices() {
                 Complete artificial intelligence solutions for every business need
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {aiServices.map((service, index) => (
                 <div
@@ -1047,14 +1021,11 @@ export default function AIServices() {
                       <span className="ml-1 text-xs font-medium">{service.rating}</span>
                     </div>
                   </div>
-
                   <h3 className="text-lg font-bold text-white mb-2">{service.name}</h3>
                   <p className="text-gray-300 mb-3 text-sm line-clamp-2">{service.description}</p>
-
                   <div className="flex items-center mb-3">
                     <span className="text-lg font-bold text-white">{service.price}</span>
                   </div>
-
                   <div className="space-y-1 mb-4">
                     {service.features.slice(0, 3).map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-xs text-gray-300">
@@ -1063,7 +1034,6 @@ export default function AIServices() {
                       </div>
                     ))}
                   </div>
-
                   <Link
                     to={service.link}
                     className="w-full inline-flex items-center justify-center px-3 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300"
@@ -1076,7 +1046,6 @@ export default function AIServices() {
             </div>
           </div>
         </div>
-
         {/* Testimonials */}
         <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1090,7 +1059,6 @@ export default function AIServices() {
                 See how our AI solutions have transformed businesses across industries
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
@@ -1106,20 +1074,17 @@ export default function AIServices() {
                       <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                     </div>
                   </div>
-                  
                   <div className="flex items-center mb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  
                   <p className="text-gray-300 italic">"{testimonial.content}"</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="py-16 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1129,7 +1094,6 @@ export default function AIServices() {
             <p className="text-xl text-gray-300 mb-8">
               Transform your business with our advanced AI solutions. Get a free consultation and discover the possibilities.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -1146,7 +1110,6 @@ export default function AIServices() {
                 View Pricing
               </Link>
             </div>
-
             <div className="mt-8 text-sm text-gray-400">
               <p>Questions? Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a> or call <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
               <p className="mt-2">Address: 364 E Main St STE 1008, Middletown DE 19709</p>

@@ -1,9 +1,5 @@
-import { ArrowRight, Brain, Shield, Users, BarChart3, CheckCircle, Star, Sparkles, Mail, Smartphone, Globe } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
+import { Brain, Shield, Users, BarChart3, CheckCircle, Sparkles, Mail, Smartphone, Globe } from 'lucide-react';
 export default function AIHealthcareDiagnostics() {
-  const features = [
     {
       title: "Medical Imaging Analysis",
       description: "Advanced AI algorithms analyze X-rays, MRIs, CT scans, and ultrasounds with 99.2% accuracy",
@@ -29,9 +25,7 @@ export default function AIHealthcareDiagnostics() {
       benefits: ["Prognosis Prediction", "Treatment Optimization", "Risk Assessment", "Resource Planning"]
     }
   ];
-
-  const useCases = [
-    {
+  const features = [
       title: "Radiology Departments",
       description: "Accelerate image analysis and improve diagnostic accuracy in radiology departments",
       impact: "40% faster diagnosis, 30% reduction in misdiagnosis"
@@ -52,8 +46,6 @@ export default function AIHealthcareDiagnostics() {
       impact: "45% improvement in treatment outcomes, 20% cost reduction"
     }
   ];
-
-  const pricing = [
     {
       plan: "Starter",
       price: "$499/month",
@@ -76,7 +68,6 @@ export default function AIHealthcareDiagnostics() {
       popular: false
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -91,14 +82,12 @@ export default function AIHealthcareDiagnostics() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-healthcare-diagnostics" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-rose-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
@@ -106,19 +95,16 @@ export default function AIHealthcareDiagnostics() {
               <Sparkles className="w-4 h-4 text-rose-400 mr-2" />
               <span className="text-rose-400 text-sm font-medium">99.2% Diagnostic Accuracy</span>
             </div>
-            
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               AI Healthcare
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-pink-400 to-purple-400 animate-pulse">
                 {" "}Diagnostics
               </span>
             </h1>
-            
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Revolutionize healthcare with AI-powered medical diagnostics. Advanced image analysis, 
               symptom assessment, and treatment recommendations that improve patient outcomes and reduce costs.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <Link
                 to="/contact"
@@ -137,7 +123,6 @@ export default function AIHealthcareDiagnostics() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -150,7 +135,6 @@ export default function AIHealthcareDiagnostics() {
                 to deliver accurate, fast, and reliable diagnostic support.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <div
@@ -183,7 +167,6 @@ export default function AIHealthcareDiagnostics() {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
@@ -195,7 +178,6 @@ export default function AIHealthcareDiagnostics() {
                 Transform healthcare delivery across different medical settings with our AI-powered diagnostic solutions.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => (
                 <div
@@ -216,7 +198,6 @@ export default function AIHealthcareDiagnostics() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -228,7 +209,6 @@ export default function AIHealthcareDiagnostics() {
                 Choose the plan that fits your healthcare organization's needs and budget.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
                 <div
@@ -246,13 +226,11 @@ export default function AIHealthcareDiagnostics() {
                       </span>
                     </div>
                   )}
-                  
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-semibold text-white mb-2">{plan.plan}</h3>
                     <div className="text-3xl font-bold text-rose-400 mb-2">{plan.price}</div>
                     <p className="text-gray-300 text-sm">{plan.description}</p>
                   </div>
-                  
                   <div className="space-y-3 mb-6">
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-sm text-gray-300">
@@ -261,7 +239,6 @@ export default function AIHealthcareDiagnostics() {
                       </div>
                     ))}
                   </div>
-                  
                   <div className="text-center">
                     <Link
                       to="/contact"
@@ -280,7 +257,6 @@ export default function AIHealthcareDiagnostics() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-rose-900/30 to-pink-900/30">
           <div className="max-w-4xl mx-auto text-center">
@@ -291,7 +267,6 @@ export default function AIHealthcareDiagnostics() {
               Join leading healthcare organizations using our AI diagnostics to improve patient outcomes, 
               reduce costs, and enhance medical decision-making. Start your transformation today.
             </p>
-            
             {/* Contact Information */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
@@ -316,7 +291,6 @@ export default function AIHealthcareDiagnostics() {
                 <p className="text-rose-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -338,4 +312,4 @@ export default function AIHealthcareDiagnostics() {
       </div>
     </>
   );
-}
+}];

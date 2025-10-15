@@ -1,25 +1,20 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   Mail, 
-  TrendingUp, 
   Shield, 
   Zap, 
   BarChart3, 
   Users, 
-  Clock, 
   CheckCircle,
-  Star,
   ArrowRight,
   Brain,
   Target,
   Globe
 } from 'lucide-react';
-
-const AIPoweredEmailAnalyzerPage = () => {
-  const features = [
-    {
+const features = [
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       title: "AI-Powered Sentiment Analysis",
       description: "Advanced machine learning algorithms analyze email tone, sentiment, and emotional context to help you craft perfect responses."
@@ -50,9 +45,7 @@ const AIPoweredEmailAnalyzerPage = () => {
       description: "Share insights across teams, set up approval workflows, and maintain consistent communication standards."
     }
   ];
-
-  const pricingPlans = [
-    {
+  const features = [
       name: "Starter",
       price: "$29",
       period: "/month",
@@ -100,14 +93,11 @@ const AIPoweredEmailAnalyzerPage = () => {
       popular: false
     }
   ];
-
-  const stats = [
-    { number: "95%", label: "Accuracy Rate" },
+  const features = [ number: "95%", label: "Accuracy Rate" },
     { number: "2.5x", label: "Faster Response Time" },
     { number: "40%", label: "Increase in Engagement" },
     { number: "10k+", label: "Happy Customers" }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -115,7 +105,6 @@ const AIPoweredEmailAnalyzerPage = () => {
         <meta name="description" content="Revolutionize your email communication with our AI-powered email analyzer. Get sentiment analysis, smart suggestions, and performance insights." />
         <meta name="keywords" content="AI email analyzer, email sentiment analysis, email automation, business communication, email analytics" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -129,17 +118,14 @@ const AIPoweredEmailAnalyzerPage = () => {
               <Mail className="w-5 h-5 text-cyan-400 mr-2" />
               <span className="text-cyan-300 font-medium">AI-Powered Email Intelligence</span>
             </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Transform Your
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Email Communication</span>
             </h1>
-            
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Leverage advanced AI to analyze, optimize, and enhance your email communications with intelligent insights, 
               sentiment analysis, and smart response suggestions.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -160,7 +146,6 @@ const AIPoweredEmailAnalyzerPage = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -184,7 +169,6 @@ const AIPoweredEmailAnalyzerPage = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -202,7 +186,6 @@ const AIPoweredEmailAnalyzerPage = () => {
               to enhance your communication effectiveness.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -226,7 +209,6 @@ const AIPoweredEmailAnalyzerPage = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -244,7 +226,6 @@ const AIPoweredEmailAnalyzerPage = () => {
               with no hidden fees or long-term contracts.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
@@ -265,7 +246,6 @@ const AIPoweredEmailAnalyzerPage = () => {
                     </div>
                   </div>
                 )}
-
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -274,7 +254,6 @@ const AIPoweredEmailAnalyzerPage = () => {
                     <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -283,7 +262,6 @@ const AIPoweredEmailAnalyzerPage = () => {
                     </li>
                   ))}
                 </ul>
-
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -300,7 +278,6 @@ const AIPoweredEmailAnalyzerPage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -337,7 +314,6 @@ const AIPoweredEmailAnalyzerPage = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-16 px-4 bg-black/20">
         <div className="max-w-7xl mx-auto text-center">
@@ -360,5 +336,4 @@ const AIPoweredEmailAnalyzerPage = () => {
     </div>
   );
 };
-
 export default AIPoweredEmailAnalyzerPage;

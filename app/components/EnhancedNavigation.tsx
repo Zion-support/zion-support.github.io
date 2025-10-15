@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3, Cloud, Sparkles } from 'lucide-react';
-
+import { ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3, Cloud, Sparkles } from 'lucide-react';
 const EnhancedNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   const navigationItems = [
     {
       label: 'AI Services',
@@ -139,14 +136,12 @@ const EnhancedNavigation = () => {
       ]
     }
   ];
-
   const quickLinks = [
     { label: 'Pricing', href: '/pricing' },
     { label: 'Demo', href: '/demo' },
     { label: 'Support', href: '/support' },
     { label: 'Consultation', href: '/consultation' }
   ];
-
   return (
     <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -157,7 +152,6 @@ const EnhancedNavigation = () => {
               Zion Tech Group
             </span>
           </Link>
-
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">
             {navigationItems.map((item) => (
@@ -175,7 +169,6 @@ const EnhancedNavigation = () => {
                   <span>{item.label}</span>
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                 </Link>
-                
                 {/* Dropdown Menu */}
                 {activeDropdown === item.label && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50">
@@ -195,7 +188,6 @@ const EnhancedNavigation = () => {
               </div>
             ))}
           </nav>
-
           {/* Quick Links & CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <div className="hidden lg:flex space-x-4">
@@ -217,7 +209,6 @@ const EnhancedNavigation = () => {
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -226,7 +217,6 @@ const EnhancedNavigation = () => {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden py-4 border-t border-white/10">
@@ -264,7 +254,6 @@ const EnhancedNavigation = () => {
                   </div>
                 </div>
               ))}
-              
               <div className="pt-4 border-t border-white/10">
                 <div className="space-y-2">
                   {quickLinks.map((link) => (
@@ -286,5 +275,4 @@ const EnhancedNavigation = () => {
     </header>
   );
 };
-
 export default EnhancedNavigation;

@@ -1,6 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -14,7 +12,6 @@ interface SEOHeadProps {
   section?: string;
   tags?: string[];
 }
-
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.',
@@ -45,7 +42,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       'https://github.com/ziontechgroup'
     ]
   };
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -53,7 +49,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
-      
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
@@ -61,22 +56,18 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content="Zion Tech Group" />
-      
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={url} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={image} />
-      
       {/* Additional Meta Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
-      
       {/* Article specific meta tags */}
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
@@ -84,7 +75,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {tags.length > 0 && tags.map((tag, index) => (
         <meta key={index} property="article:tag" content={tag} />
       ))}
-      
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}
@@ -92,5 +82,4 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     </Helmet>
   );
 };
-
 export default SEOHead;

@@ -1,7 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { Eye, Volume2, MousePointer, Keyboard, Contrast, ZoomIn } from 'lucide-react';
-
+import { Volume2, MousePointer, Keyboard, Contrast, ZoomIn } from 'lucide-react';
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
@@ -10,7 +9,6 @@ interface AccessibilitySettings {
   reducedMotion: boolean;
   focusIndicator: boolean;
 }
-
 const AdvancedAccessibilityEnhancer: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
@@ -20,9 +18,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
     reducedMotion: false,
     focusIndicator: false
   });
-
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     // Load saved settings from localStorage
     const savedSettings = localStorage.getItem('accessibilitySettings');
@@ -30,50 +26,41 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
       setSettings(JSON.parse(savedSettings));
     }
   }, []);
-
   useEffect(() => {
     // Apply accessibility settings
     applyAccessibilitySettings(settings);
-    
     // Save settings to localStorage
     localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
   }, [settings]);
-
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
-    
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
-    
     if (newSettings.largeText) {
       root.classList.add('large-text');
     } else {
       root.classList.remove('large-text');
     }
-    
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
-    
     if (newSettings.focusIndicator) {
       root.classList.add('enhanced-focus');
     } else {
       root.classList.remove('enhanced-focus');
     }
   };
-
   const toggleSetting = (key: keyof AccessibilitySettings) => {
     setSettings(prev => ({
       ...prev,
       [key]: !prev[key]
     }));
   };
-
   const accessibilityFeatures = [
     {
       key: 'highContrast' as keyof AccessibilitySettings,
@@ -112,7 +99,6 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
       description: 'Enhanced focus indicators for navigation'
     }
   ];
-
   if (!isVisible) {
     return (
       <button
@@ -124,7 +110,6 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
       </button>
     );
   }
-
   return (
     <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6 w-80 z-50">
       <div className="flex items-center justify-between mb-4">
@@ -139,7 +124,6 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
           ×
         </button>
       </div>
-      
       <div className="space-y-4">
         {accessibilityFeatures.map((feature) => {
           const Icon = feature.icon;
@@ -175,7 +159,6 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
           );
         })}
       </div>
-      
       <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
         <button
           onClick={() => {
@@ -196,5 +179,4 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
     </div>
   );
 };
-
 export default AdvancedAccessibilityEnhancer;

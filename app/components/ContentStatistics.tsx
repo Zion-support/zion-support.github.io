@@ -1,18 +1,15 @@
 import React from "react";
-import { TrendingUp, Users, Award, Zap } from "lucide-react";
-
+import { Users, Award, Zap } from 'lucide-react';
 interface StatItem {
   value: string;
   label: string;
   icon: React.ReactNode;
   color: string;
 }
-
 interface ContentStatisticsProps {
   stats?: StatItem[];
   className?: string;
 }
-
 const ContentStatistics: React.FC<ContentStatisticsProps> = ({
   stats = [
     {
@@ -53,7 +50,6 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({
             Our solutions deliver measurable results across all industries
           </p>
         </div>
-
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
@@ -71,5 +67,4 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({
     </div>
   );
 };
-
 export default ContentStatistics;

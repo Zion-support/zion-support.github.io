@@ -1,6 +1,4 @@
 import React from 'react';
-import { cn } from '../lib/utils';
-
 interface ResponsiveGridProps {
   children: React.ReactNode;
   className?: string;
@@ -13,7 +11,6 @@ interface ResponsiveGridProps {
   };
   gap?: 'sm' | 'md' | 'lg' | 'xl';
 }
-
 const ResponsiveGrid = ({ 
   children, 
   className,
@@ -26,7 +23,6 @@ const ResponsiveGrid = ({
     lg: 'gap-6',
     xl: 'gap-8'
   };
-
   const gridColsClasses = {
     1: 'grid-cols-1',
     2: 'grid-cols-2',
@@ -35,7 +31,6 @@ const ResponsiveGrid = ({
     5: 'grid-cols-5',
     6: 'grid-cols-6'
   };
-
   const responsiveClasses = [
     `grid ${gridColsClasses[cols.default]}`,
     cols.sm && `sm:${gridColsClasses[cols.sm]}`,
@@ -44,12 +39,10 @@ const ResponsiveGrid = ({
     cols.xl && `xl:${gridColsClasses[cols.xl]}`,
     gapClasses[gap]
   ].filter(Boolean).join(' ');
-
   return (
     <div className={cn(responsiveClasses, className)}>
       {children}
     </div>
   );
 };
-
 export default ResponsiveGrid;

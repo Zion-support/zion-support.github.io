@@ -1,7 +1,4 @@
-import { ArrowRight, CheckCircle, Zap, Shield, Cloud, Brain, Mail, Smartphone, Globe } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
+import { CheckCircle, Zap, Shield, Cloud, Brain, Mail, Smartphone, Globe } from 'lucide-react';
 export default function Pricing() {
   const aiServicesPricing = [
     {
@@ -53,7 +50,6 @@ export default function Pricing() {
       color: "from-purple-500 to-pink-500"
     }
   ];
-
   const microSaasPricing = [
     {
       name: "Zion Analytics Pro",
@@ -104,7 +100,6 @@ export default function Pricing() {
       color: "from-blue-500 to-cyan-500"
     }
   ];
-
   const enterprisePricing = [
     {
       name: "AI Solutions Suite",
@@ -143,7 +138,6 @@ export default function Pricing() {
       color: "from-indigo-500 to-purple-500"
     }
   ];
-
   const faqs = [
     {
       question: "Do you offer free trials?",
@@ -170,7 +164,6 @@ export default function Pricing() {
       answer: "We'll notify you before you reach your limits and offer options to upgrade or purchase additional capacity."
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -184,12 +177,10 @@ export default function Pricing() {
           content="AI services pricing, micro SAAS pricing, IT solutions pricing, business intelligence pricing, cybersecurity pricing, cloud storage pricing"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-        
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
@@ -225,7 +216,6 @@ export default function Pricing() {
             </div>
           </div>
         </section>
-
         {/* AI Services Pricing */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -290,7 +280,6 @@ export default function Pricing() {
             </div>
           </div>
         </section>
-
         {/* Micro SAAS Pricing */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
@@ -355,7 +344,6 @@ export default function Pricing() {
             </div>
           </div>
         </section>
-
         {/* Enterprise Pricing */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -420,7 +408,6 @@ export default function Pricing() {
             </div>
           </div>
         </section>
-
         {/* FAQ Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
@@ -445,7 +432,6 @@ export default function Pricing() {
             </div>
           </div>
         </section>
-
         {/* Contact CTA */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
@@ -455,7 +441,6 @@ export default function Pricing() {
             <p className="text-xl text-gray-300 mb-8">
               Contact our team to discuss your specific needs and get a custom quote.
             </p>
-            
             {/* Contact Information */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
@@ -480,7 +465,6 @@ export default function Pricing() {
                 <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"

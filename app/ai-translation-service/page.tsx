@@ -1,5 +1,3 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import {
   CheckCircle,
   Globe,
@@ -8,10 +6,7 @@ import {
   Star,
   ArrowRight,
 } from "lucide-react";
-
-const AITranslationServicePage = () => {
-  const features = [
-    {
+const features = [
       icon: Globe,
       title: "100+ Languages",
       description: "Support for over 100 languages with native-level accuracy",
@@ -27,9 +22,7 @@ const AITranslationServicePage = () => {
       description: "Bank-level security for all your translation needs",
     },
   ];
-
-  const pricingPlans = [
-    {
+  const features = [
       name: "Starter",
       price: "$99",
       period: "/month",
@@ -73,8 +66,6 @@ const AITranslationServicePage = () => {
       popular: false,
     },
   ];
-
-  const testimonials = [
     {
       name: "Sarah Johnson",
       role: "Marketing Director",
@@ -92,7 +83,6 @@ const AITranslationServicePage = () => {
       rating: 5,
     },
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -102,7 +92,6 @@ const AITranslationServicePage = () => {
           content="Professional AI-powered translation services with 100+ language support and enterprise-grade security."
         />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -134,7 +123,6 @@ const AITranslationServicePage = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -167,7 +155,6 @@ const AITranslationServicePage = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
@@ -226,7 +213,6 @@ const AITranslationServicePage = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -266,7 +252,6 @@ const AITranslationServicePage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -295,5 +280,4 @@ const AITranslationServicePage = () => {
     </div>
   );
 };
-
 export default AITranslationServicePage;

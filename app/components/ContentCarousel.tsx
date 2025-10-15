@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-
+import { useEffect } from 'react';
+import { ChevronRight } from 'lucide-react';
 interface Slide {
   id: number;
   title: string;
@@ -8,14 +7,12 @@ interface Slide {
   image: string;
   features: string[];
 }
-
 interface ContentCarouselProps {
   slides?: Slide[];
   autoPlay?: boolean;
   interval?: number;
   className?: string;
 }
-
 const defaultSlides: Slide[] = [
   {
     id: 1,
@@ -45,7 +42,6 @@ const defaultSlides: Slide[] = [
     features: ["Threat Detection", "Data Encryption", "Compliance"],
   },
 ];
-
 export default function ContentCarousel({
   slides = defaultSlides,
   autoPlay = true,
@@ -53,29 +49,22 @@ export default function ContentCarousel({
   className = "",
 }: ContentCarouselProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   useEffect(() => {
     if (!autoPlay) return;
-
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, interval);
-
     return () => clearInterval(timer);
   }, [autoPlay, interval, slides.length]);
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
-
   const goToPrevious = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
-
   const goToNext = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
-
   return (
     <div className={`relative w-full ${className}`}>
       {/* Carousel Container */}
@@ -118,7 +107,6 @@ export default function ContentCarousel({
           ))}
         </div>
       </div>
-
       {/* Navigation Arrows */}
       <button
         onClick={goToPrevious}
@@ -127,7 +115,6 @@ export default function ContentCarousel({
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
-
       <button
         onClick={goToNext}
         className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full transition-colors"
@@ -135,7 +122,6 @@ export default function ContentCarousel({
       >
         <ChevronRight className="w-6 h-6" />
       </button>
-
       {/* Dots Indicator */}
       <div className="flex justify-center mt-6 space-x-2">
         {slides.map((_, index) => (

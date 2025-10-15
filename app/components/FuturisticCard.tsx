@@ -1,13 +1,10 @@
 import React from 'react';
-import { cn } from '../lib/utils';
-
 interface FuturisticCardProps {
   children: React.ReactNode;
   className?: string;
   glowColor?: 'cyan' | 'purple' | 'pink' | 'blue' | 'green' | 'orange' | 'red' | 'yellow';
   hover?: boolean;
 }
-
 const FuturisticCard = ({ 
   children, 
   className, 
@@ -24,7 +21,6 @@ const FuturisticCard = ({
     red: 'hover:shadow-red-500/25',
     yellow: 'hover:shadow-yellow-500/25',
   };
-
   return (
     <div
       className={cn(
@@ -42,5 +38,4 @@ const FuturisticCard = ({
     </div>
   );
 };
-
 export default FuturisticCard;

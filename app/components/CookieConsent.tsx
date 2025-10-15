@@ -1,33 +1,26 @@
 import React, { useState, useEffect } from "react";
-import { Cookie, Settings } from "lucide-react";
-
+import { Settings } from 'lucide-react';
 const CookieConsent: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-
   useEffect(() => {
     const consent = localStorage.getItem("cookie-consent");
     if (!consent) {
       setIsVisible(true);
     }
   }, []);
-
   const handleAccept = () => {
     localStorage.setItem("cookie-consent", "accepted");
     setIsVisible(false);
   };
-
   const handleReject = () => {
     localStorage.setItem("cookie-consent", "rejected");
     setIsVisible(false);
   };
-
   const handleSettings = () => {
     setShowSettings(!showSettings);
   };
-
   if (!isVisible) return null;
-
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-gray-900 border-t border-gray-700 p-4">
       <div className="max-w-6xl mx-auto">
@@ -43,7 +36,6 @@ const CookieConsent: React.FC = () => {
                 personalized content, and analyze our traffic. By clicking
                 "Accept All", you consent to our use of cookies.
               </p>
-
               {showSettings && (
                 <div className="bg-gray-800 rounded-lg p-4 mb-4">
                   <h4 className="text-white font-semibold mb-3">
@@ -76,7 +68,6 @@ const CookieConsent: React.FC = () => {
               )}
             </div>
           </div>
-
           <div className="flex flex-col sm:flex-row gap-2 ml-4">
             <button
               onClick={handleSettings}
@@ -103,5 +94,4 @@ const CookieConsent: React.FC = () => {
     </div>
   );
 };
-
 export default CookieConsent;

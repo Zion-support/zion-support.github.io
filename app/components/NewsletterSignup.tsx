@@ -1,16 +1,11 @@
 import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Mail } from "lucide-react";
-
+import { Mail } from 'lucide-react';
 export default function NewsletterSignup() {
   const [email, setEmail] = useState("");
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle newsletter signup
     };
-
   return (
     <>
       <Helmet>

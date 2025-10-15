@@ -1,7 +1,5 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from "lucide-react";
-import { Link } from "react-router-dom";
-
+import { CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 interface EnhancedHeroProps {
   title?: string;
   subtitle?: string;
@@ -18,7 +16,6 @@ interface EnhancedHeroProps {
   backgroundImage?: string;
   className?: string;
 }
-
 const EnhancedHero: React.FC<EnhancedHeroProps> = ({
   title = "Transform Your Business with AI",
   subtitle = "Leading Provider of AI Solutions",
@@ -62,7 +59,6 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
       description: "Schedule a meeting",
     },
   ];
-
   return (
     <div
       className={`relative min-h-screen flex items-center justify-center overflow-hidden ${className}`}
@@ -76,7 +72,6 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
           />
         )}
       </div>
-
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -91,7 +86,6 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
               </p>
               <p className="text-lg text-gray-300 mb-8">{description}</p>
             </div>
-
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -108,7 +102,6 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
                 {secondaryCta.text}
               </Link>
             </div>
-
             {/* Benefits */}
             <div className="grid sm:grid-cols-2 gap-4">
               {benefits.slice(0, 4).map((benefit, index) => (
@@ -119,7 +112,6 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
               ))}
             </div>
           </div>
-
           {/* Right Column - Contact Info */}
           <div className="space-y-6">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
@@ -143,7 +135,6 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
                 ))}
               </div>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center">
@@ -165,5 +156,4 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
     </div>
   );
 };
-
 export default EnhancedHero;

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Clock, Users, DollarSign, Shield } from 'lucide-react';
-
+import { CheckCircle, Clock, Users, DollarSign, Shield } from 'lucide-react';
 export default function Consultation() {
   const [formData, setFormData] = useState({
     name: '',
@@ -13,7 +11,6 @@ export default function Consultation() {
     budget: '',
     message: ''
   });
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -21,13 +18,11 @@ export default function Consultation() {
       [name]: value
     }));
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
     console.log('Form submitted:', formData);
   };
-
   const services = [
     'AI Solutions',
     'Cloud Services',
@@ -36,15 +31,12 @@ export default function Consultation() {
     'Digital Transformation',
     'Custom Development'
   ];
-
   const timelines = [
     'Immediate (1-3 months)',
     'Short-term (3-6 months)',
     'Medium-term (6-12 months)',
     'Long-term (12+ months)'
   ];
-
-  const benefits = [
     {
       title: "Free Consultation",
       description: "No cost initial consultation to understand your needs",
@@ -66,14 +58,12 @@ export default function Consultation() {
       icon: <Shield className="w-8 h-8" />
     }
   ];
-
   return (
     <>
       <Helmet>
         <title>Free Consultation - Zion Tech Group | Get Expert Advice</title>
         <meta name="description" content="Get a free consultation with our experts to discuss your AI, cloud, and cybersecurity needs. No obligation, expert advice." />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20">
@@ -86,7 +76,6 @@ export default function Consultation() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -109,7 +98,6 @@ export default function Consultation() {
             </div>
           </div>
         </section>
-
         {/* Consultation Form */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
@@ -120,7 +108,6 @@ export default function Consultation() {
                   Fill out the form below and we'll get back to you within 24 hours.
                 </p>
               </div>
-
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
@@ -154,7 +141,6 @@ export default function Consultation() {
                     />
                   </div>
                 </div>
-
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
@@ -185,7 +171,6 @@ export default function Consultation() {
                     />
                   </div>
                 </div>
-
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
@@ -227,7 +212,6 @@ export default function Consultation() {
                     </select>
                   </div>
                 </div>
-
                 <div>
                   <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
                     Budget Range
@@ -246,7 +230,6 @@ export default function Consultation() {
                     <option value="100k-plus" className="bg-gray-800">$100,000+</option>
                   </select>
                 </div>
-
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Project Details *
@@ -262,7 +245,6 @@ export default function Consultation() {
                     placeholder="Tell us about your project, challenges, and goals..."
                   />
                 </div>
-
                 <div className="text-center">
                   <button
                     type="submit"

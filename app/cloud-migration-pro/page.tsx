@@ -1,5 +1,3 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import {
   Cloud,
   Shield,
@@ -8,10 +6,7 @@ import {
   ArrowRight,
   Star,
 } from "lucide-react";
-
-const CloudMigrationProPage = () => {
-  const features = [
-    {
+const features = [
       icon: Cloud,
       title: "Seamless Migration",
       description:
@@ -29,9 +24,7 @@ const CloudMigrationProPage = () => {
       description: "Enterprise-grade security throughout the migration process",
     },
   ];
-
-  const pricingPlans = [
-    {
+  const features = [
       name: "Starter",
       price: "$2,999",
       period: "/project",
@@ -76,8 +69,6 @@ const CloudMigrationProPage = () => {
       popular: false,
     },
   ];
-
-  const testimonials = [
     {
       name: "Sarah Johnson",
       role: "CTO",
@@ -95,7 +86,6 @@ const CloudMigrationProPage = () => {
       rating: 5,
     },
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -105,7 +95,6 @@ const CloudMigrationProPage = () => {
           content="Professional cloud migration services with zero downtime, security-first approach, and performance optimization."
         />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -138,7 +127,6 @@ const CloudMigrationProPage = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -171,7 +159,6 @@ const CloudMigrationProPage = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
@@ -230,7 +217,6 @@ const CloudMigrationProPage = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -270,7 +256,6 @@ const CloudMigrationProPage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -300,5 +285,4 @@ const CloudMigrationProPage = () => {
     </div>
   );
 };
-
 export default CloudMigrationProPage;

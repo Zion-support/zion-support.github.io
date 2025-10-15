@@ -7,11 +7,7 @@ import {
   Target,
   BarChart3,
 } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
 export default function AiFinancialAnalyticsProPage() {
-  const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       title: "AI-Powered Insights",
@@ -61,9 +57,7 @@ export default function AiFinancialAnalyticsProPage() {
       ],
     },
   ];
-
-  const analyticsFeatures = [
-    {
+  const features = [
       category: "Financial Analysis",
       items: [
         "Revenue Analysis",
@@ -108,9 +102,7 @@ export default function AiFinancialAnalyticsProPage() {
       ],
     },
   ];
-
-  const pricingPlans = [
-    {
+  const features = [
       name: "Professional",
       price: "$199",
       period: "/month",
@@ -157,8 +149,6 @@ export default function AiFinancialAnalyticsProPage() {
       popular: false,
     },
   ];
-
-  const testimonials = [
     {
       name: "David Chen",
       company: "CFO, TechCorp",
@@ -181,7 +171,6 @@ export default function AiFinancialAnalyticsProPage() {
       rating: 5,
     },
   ];
-
   return (
     <>
       <Helmet>
@@ -191,7 +180,6 @@ export default function AiFinancialAnalyticsProPage() {
           content="Advanced AI-powered financial analytics platform for comprehensive business intelligence and predictive insights."
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-20">
@@ -219,7 +207,6 @@ export default function AiFinancialAnalyticsProPage() {
               </Link>
             </div>
           </div>
-
           {/* Features Section */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {features.map((feature, index) => (
@@ -246,7 +233,6 @@ export default function AiFinancialAnalyticsProPage() {
               </div>
             ))}
           </div>
-
           {/* Analytics Features Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -276,7 +262,6 @@ export default function AiFinancialAnalyticsProPage() {
               ))}
             </div>
           </div>
-
           {/* Pricing Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -332,7 +317,6 @@ export default function AiFinancialAnalyticsProPage() {
               ))}
             </div>
           </div>
-
           {/* Testimonials Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -367,7 +351,6 @@ export default function AiFinancialAnalyticsProPage() {
               ))}
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -397,4 +380,4 @@ export default function AiFinancialAnalyticsProPage() {
       </div>
     </>
   );
-}
+}];

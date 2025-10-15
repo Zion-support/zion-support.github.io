@@ -1,8 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, DollarSign } from 'lucide-react';
-
+import { ExternalLink, CheckCircle, TrendingUp, Users, DollarSign } from 'lucide-react';
 export default function CaseStudies() {
   const caseStudies = [
     {
@@ -54,21 +51,18 @@ export default function CaseStudies() {
       team: "6 specialists"
     }
   ];
-
   const stats = [
     { label: "Projects Completed", value: "150+", icon: <CheckCircle className="w-6 h-6" /> },
     { label: "Client Satisfaction", value: "98%", icon: <TrendingUp className="w-6 h-6" /> },
     { label: "Team Members", value: "50+", icon: <Users className="w-6 h-6" /> },
     { label: "Cost Savings", value: "$2M+", icon: <DollarSign className="w-6 h-6" /> }
   ];
-
   return (
     <>
       <Helmet>
         <title>Case Studies - Zion Tech Group | Success Stories</title>
         <meta name="description" content="Explore our successful projects and case studies showcasing our expertise in AI, cloud, and cybersecurity solutions." />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20">
@@ -81,7 +75,6 @@ export default function CaseStudies() {
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -98,7 +91,6 @@ export default function CaseStudies() {
             </div>
           </div>
         </section>
-
         {/* Case Studies Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -168,7 +160,6 @@ export default function CaseStudies() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">

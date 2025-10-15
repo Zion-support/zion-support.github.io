@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { 
   Brain, 
   Shield, 
@@ -30,11 +30,9 @@ import {
   Cpu,
   Network
 } from 'lucide-react';
-
 interface NavigationProps {
   onSidebarToggle?: () => void;
 }
-
 const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -42,31 +40,24 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const [isItServicesOpen, setIsItServicesOpen] = useState(false);
   const [is5GServicesOpen, setIs5GServicesOpen] = useState(false);
   const location = useLocation();
-  
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen);
   }, [isOpen]);
-
   const toggleServices = useCallback(() => {
     setIsServicesOpen(!isServicesOpen);
   }, [isServicesOpen]);
-
   const toggleMicroSaas = useCallback(() => {
     setIsMicroSaasOpen(!isMicroSaasOpen);
   }, [isMicroSaasOpen]);
-
   const toggleItServices = useCallback(() => {
     setIsItServicesOpen(!isItServicesOpen);
   }, [isItServicesOpen]);
-
   const toggle5GServices = useCallback(() => {
     setIs5GServicesOpen(!is5GServicesOpen);
   }, [is5GServicesOpen]);
-
   const isActive = useCallback((path: string) => {
     return location.pathname === path;
   }, [location.pathname]);
-
   const navigationItems = useMemo(() => [
     {
       name: 'Home',
@@ -174,7 +165,6 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
       icon: <Phone className="w-4 h-4" />
     }
   ], []);
-
   return (
     <nav className="relative z-50 bg-black/20 backdrop-blur-md border-b border-cyan-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -190,7 +180,6 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               </span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
@@ -216,7 +205,6 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                       }`} />
                     )}
                   </Link>
-
                   {/* Dropdown Menu */}
                   {item.hasDropdown && isServicesOpen && (
                     <div className="absolute left-0 mt-2 w-96 bg-black/90 backdrop-blur-md border border-cyan-500/30 rounded-lg shadow-xl z-50">
@@ -249,7 +237,6 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               ))}
             </div>
           </div>
-
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link
@@ -260,7 +247,6 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
             <button
@@ -277,7 +263,6 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             </button>
           </div>
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
@@ -314,7 +299,5 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     </nav>
   );
 });
-
 Navigation.displayName = 'Navigation';
-
 export default Navigation;

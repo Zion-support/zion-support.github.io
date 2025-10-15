@@ -1,6 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
 import { 
   Receipt, 
   TrendingUp, 
@@ -19,9 +17,7 @@ import {
   FileText,
   CreditCard
 } from 'lucide-react';
-
 const SmartExpenseCategorizerPage = () => {
-  const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       title: "AI-Powered Categorization",
@@ -53,7 +49,6 @@ const SmartExpenseCategorizerPage = () => {
       description: "Manage team expenses with role-based permissions, approval workflows, and centralized expense reporting."
     }
   ];
-
   const pricingPlans = [
     {
       name: "Personal",
@@ -103,8 +98,6 @@ const SmartExpenseCategorizerPage = () => {
       popular: false
     }
   ];
-
-  const benefits = [
     {
       icon: <DollarSign className="w-12 h-12 text-green-400" />,
       title: "Save Time & Money",
@@ -126,14 +119,12 @@ const SmartExpenseCategorizerPage = () => {
       description: "Optimize cash flow with better expense visibility and automated reimbursement processes."
     }
   ];
-
   const stats = [
     { number: "80%", label: "Time Saved" },
     { number: "98%", label: "Accuracy Rate" },
     { number: "50%", label: "Error Reduction" },
     { number: "3x", label: "Faster Processing" }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -141,7 +132,6 @@ const SmartExpenseCategorizerPage = () => {
         <meta name="description" content="Automate expense categorization with AI-powered receipt processing, bank integration, and real-time analytics." />
         <meta name="keywords" content="expense management, receipt scanning, expense categorization, financial automation, AI expenses" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -155,17 +145,14 @@ const SmartExpenseCategorizerPage = () => {
               <Receipt className="w-5 h-5 text-cyan-400 mr-2" />
               <span className="text-cyan-300 font-medium">AI-Powered Expense Intelligence</span>
             </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Automate Your
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Expense Management</span>
             </h1>
-            
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your expense management with AI-powered categorization, automated receipt processing, 
               and real-time financial insights that save time and money.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -186,7 +173,6 @@ const SmartExpenseCategorizerPage = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -210,7 +196,6 @@ const SmartExpenseCategorizerPage = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -228,7 +213,6 @@ const SmartExpenseCategorizerPage = () => {
               accuracy, and financial control.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -252,7 +236,6 @@ const SmartExpenseCategorizerPage = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -270,7 +253,6 @@ const SmartExpenseCategorizerPage = () => {
               of your expense management process.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -294,7 +276,6 @@ const SmartExpenseCategorizerPage = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -312,7 +293,6 @@ const SmartExpenseCategorizerPage = () => {
               All plans include our core AI features with no setup fees.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
@@ -333,7 +313,6 @@ const SmartExpenseCategorizerPage = () => {
                     </div>
                   </div>
                 )}
-
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -342,7 +321,6 @@ const SmartExpenseCategorizerPage = () => {
                     <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -351,7 +329,6 @@ const SmartExpenseCategorizerPage = () => {
                     </li>
                   ))}
                 </ul>
-
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -368,7 +345,6 @@ const SmartExpenseCategorizerPage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -405,7 +381,6 @@ const SmartExpenseCategorizerPage = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-16 px-4 bg-black/20">
         <div className="max-w-7xl mx-auto text-center">
@@ -428,5 +403,4 @@ const SmartExpenseCategorizerPage = () => {
     </div>
   );
 };
-
 export default SmartExpenseCategorizerPage;

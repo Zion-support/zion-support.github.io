@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight, Star, Zap } from "lucide-react";
-
+import { Star, Zap } from 'lucide-react';
 interface ContentPromotionBannerProps {
   title?: string;
   description?: string;
@@ -10,7 +8,6 @@ interface ContentPromotionBannerProps {
   variant?: "primary" | "secondary" | "success";
   className?: string;
 }
-
 const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
   title = "Transform Your Business with AI",
   description = "Discover how our cutting-edge AI solutions can revolutionize your operations and drive unprecedented growth.",
@@ -31,7 +28,6 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
         return "bg-gradient-to-r from-cyan-500 to-purple-600";
     }
   };
-
   const getIcon = () => {
     switch (variant) {
       case "primary":
@@ -44,7 +40,6 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
         return <Zap className="w-6 h-6" />;
     }
   };
-
   return (
     <div
       className={`relative overflow-hidden rounded-lg p-8 text-white ${getVariantStyles()} ${className}`}
@@ -65,12 +60,10 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
           </Link>
         </div>
       </div>
-
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
       <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
     </div>
   );
 };
-
 export default ContentPromotionBanner;

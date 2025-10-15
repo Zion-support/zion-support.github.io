@@ -1,8 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Globe, Shield, Zap } from 'lucide-react';
-
+import { CheckCircle, Star, Users, Globe, Shield, Zap } from 'lucide-react';
 export default function Partners() {
   const partners = [
     {
@@ -48,8 +45,6 @@ export default function Partners() {
       tier: "Silver"
     }
   ];
-
-  const benefits = [
     {
       icon: <Users className="w-8 h-8" />,
       title: "Joint Marketing",
@@ -71,7 +66,6 @@ export default function Partners() {
       description: "Joint innovation initiatives and R&D projects"
     }
   ];
-
   const tiers = [
     {
       name: "Platinum",
@@ -92,7 +86,6 @@ export default function Partners() {
       benefits: ["Standard support", "Partner portal access", "Co-marketing opportunities", "Technical documentation"]
     }
   ];
-
   return (
     <>
       <Helmet>

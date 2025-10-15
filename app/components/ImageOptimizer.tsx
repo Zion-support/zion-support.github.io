@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-
 interface ImageOptimizerProps {
   src: string;
   alt: string;
@@ -15,7 +13,6 @@ interface ImageOptimizerProps {
   onLoad?: () => void;
   onError?: () => void;
 }
-
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   src,
   alt,
@@ -32,48 +29,38 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
-
     setIsLoaded(true);
     onLoad?.();
   };
-
   const handleError = () => {
     setHasError(true);
     onError?.();
   };
-
   // Generate optimized src with WebP support
   const getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.startsWith('http') || originalSrc.startsWith('/')) {
       return originalSrc;
     }
-    
     // Add WebP support if supported
     if (typeof window !== 'undefined' && 'WebP' in window) {
       const webpSrc = originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp');
       return webpSrc;
     }
-    
     return originalSrc;
   };
-
   // Generate responsive srcset
   const generateSrcSet = (baseSrc: string) => {
     if (baseSrc.startsWith('http') || baseSrc.startsWith('/')) {
       return baseSrc;
     }
-
     const sizes = [320, 640, 768, 1024, 1280, 1920];
     const srcSet = sizes
       .map(size => `${baseSrc}?w=${size} ${size}w`)
       .join(', ');
-    
     return srcSet;
   };
-
   const optimizedSrc = getOptimizedSrc(src);
   const srcSet = generateSrcSet(src);
-
   if (hasError) {
     return (
       <div 
@@ -84,7 +71,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       </div>
     );
   }
-
   if (priority) {
     return (
       <img
@@ -102,7 +88,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       />
     );
   }
-
   return (
         <div 
           className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
@@ -129,5 +114,4 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     />
   );
 };
-
 export default ImageOptimizer;

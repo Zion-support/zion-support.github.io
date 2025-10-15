@@ -1,9 +1,5 @@
-import { ArrowRight, Globe, BarChart3, Zap, Target, CheckCircle, Star, Sparkles, Mail, Smartphone, TrendingUp } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
+import { Globe, BarChart3, Zap, Target, CheckCircle, Star, Sparkles, Mail, Smartphone, TrendingUp } from 'lucide-react';
 export default function AISupplyChainOptimizer() {
-  const features = [
     {
       title: "Demand Forecasting",
       description: "AI-powered demand prediction with 95% accuracy using machine learning and market analysis",
@@ -29,9 +25,7 @@ export default function AISupplyChainOptimizer() {
       benefits: ["25% Inventory Reduction", "Zero Stockouts", "Waste Elimination", "Cash Flow Optimization"]
     }
   ];
-
-  const industries = [
-    {
+  const features = [
       title: "Manufacturing",
       description: "Optimize production schedules, raw material procurement, and distribution networks",
       impact: "40% cost reduction, 50% faster delivery"
@@ -52,8 +46,6 @@ export default function AISupplyChainOptimizer() {
       impact: "99.9% availability, 100% compliance"
     }
   ];
-
-  const pricing = [
     {
       plan: "Starter",
       price: "$279/month",
@@ -76,8 +68,6 @@ export default function AISupplyChainOptimizer() {
       popular: false
     }
   ];
-
-  const benefits = [
     {
       metric: "30%",
       label: "Cost Reduction",
@@ -99,7 +89,6 @@ export default function AISupplyChainOptimizer() {
       description: "Decrease in excess inventory while maintaining service levels"
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -114,14 +103,12 @@ export default function AISupplyChainOptimizer() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-supply-chain-optimizer" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-slate-500/20 to-gray-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-gray-500/20 to-slate-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
@@ -129,19 +116,16 @@ export default function AISupplyChainOptimizer() {
               <Sparkles className="w-4 h-4 text-slate-400 mr-2" />
               <span className="text-slate-400 text-sm font-medium">30% Cost Reduction Guaranteed</span>
             </div>
-            
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               AI Supply Chain
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-400 via-gray-400 to-slate-400 animate-pulse">
                 {" "}Optimizer
               </span>
             </h1>
-            
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Transform your supply chain with AI-powered optimization. Intelligent demand forecasting, 
               route planning, and inventory management that reduces costs and improves efficiency.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <Link
                 to="/contact"
@@ -158,7 +142,6 @@ export default function AISupplyChainOptimizer() {
                 <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
-
             {/* Benefits Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               {benefits.map((benefit, index) => (
@@ -174,7 +157,6 @@ export default function AISupplyChainOptimizer() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -187,7 +169,6 @@ export default function AISupplyChainOptimizer() {
                 to deliver unprecedented efficiency and cost savings.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <div
@@ -220,7 +201,6 @@ export default function AISupplyChainOptimizer() {
             </div>
           </div>
         </section>
-
         {/* Industries Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
@@ -232,7 +212,6 @@ export default function AISupplyChainOptimizer() {
                 Tailored supply chain optimization solutions for different industries and business models.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {industries.map((industry, index) => (
                 <div
@@ -253,7 +232,6 @@ export default function AISupplyChainOptimizer() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -265,7 +243,6 @@ export default function AISupplyChainOptimizer() {
                 Choose the plan that fits your organization's size and supply chain complexity.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
                 <div
@@ -283,13 +260,11 @@ export default function AISupplyChainOptimizer() {
                       </span>
                     </div>
                   )}
-                  
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-semibold text-white mb-2">{plan.plan}</h3>
                     <div className="text-3xl font-bold text-slate-400 mb-2">{plan.price}</div>
                     <p className="text-gray-300 text-sm">{plan.description}</p>
                   </div>
-                  
                   <div className="space-y-3 mb-6">
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-sm text-gray-300">
@@ -298,7 +273,6 @@ export default function AISupplyChainOptimizer() {
                       </div>
                     ))}
                   </div>
-                  
                   <div className="text-center">
                     <Link
                       to="/contact"
@@ -317,7 +291,6 @@ export default function AISupplyChainOptimizer() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-900/30 to-gray-900/30">
           <div className="max-w-4xl mx-auto text-center">
@@ -328,7 +301,6 @@ export default function AISupplyChainOptimizer() {
               Join leading companies using our AI supply chain optimizer to reduce costs, improve efficiency, 
               and gain competitive advantage. Start your transformation today.
             </p>
-            
             {/* Contact Information */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
@@ -353,7 +325,6 @@ export default function AISupplyChainOptimizer() {
                 <p className="text-slate-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -375,4 +346,4 @@ export default function AISupplyChainOptimizer() {
       </div>
     </>
   );
-}
+}];

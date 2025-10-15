@@ -1,42 +1,33 @@
 'use client'
-import { useEffect, useState } from 'react'
-
+import { useState } from 'react';
     }
-
     // Report metrics to analytics
     const reportMetric = () => {
       // Analytics reporting would go here
     }
-
     measureWebVitals()
     measureMemory()
     measureLoadTime()
-
     </div>
   )
 }
-
     try {
         onCLS((metric: any) => {
           setMetrics(prev => ({ ...prev, cls: metric.value }))
           reportMetric('CLS', metric.value)
         })
-
         onINP((metric: any) => {
           setMetrics(prev => ({ ...prev, fid: metric.value }))
           reportMetric('INP', metric.value)
         })
-
         onFCP((metric: any) => {
           setMetrics(prev => ({ ...prev, fcp: metric.value }))
           reportMetric('FCP', metric.value)
         })
-
         onLCP((metric: any) => {
           setMetrics(prev => ({ ...prev, lcp: metric.value }))
           reportMetric('LCP', metric.value)
         })
-
         onTTFB((metric: any) => {
           setMetrics(prev => ({ ...prev, ttfb: metric.value }))
           reportMetric('TTFB', metric.value)
@@ -44,7 +35,6 @@ import { useEffect, useState } from 'react'
       } catch (error) {
         console.error('Failed to measure web vitals:', error);
       }
-
       // Measure memory usage
       const measureMemory = () => {
         if ('memory' in performance) {
@@ -52,7 +42,6 @@ import { useEffect, useState } from 'react'
           setMetrics(prev => ({ ...prev, memoryUsage: memory.usedJSHeapSize }))
         }
       }
-
       // Measure load time
       const measureLoadTime = () => {
         if (performance.timing) {
@@ -60,10 +49,8 @@ import { useEffect, useState } from 'react'
           setMetrics(prev => ({ ...prev, loadTime }))
         }
       }
-
       // Report metrics to analytics
       const reportMetric = (name: string, value: number) => {
-
       // Send to Google Analytics
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', 'web_vitals', {
@@ -72,7 +59,6 @@ import { useEffect, useState } from 'react'
           metric_delta: Math.round(value)
         })
       }
-
       // Send to custom analytics
       if (typeof window !== 'undefined' && (window as any).analytics) {
         (window as any).analytics.track('Performance Metric', {
@@ -81,18 +67,14 @@ import { useEffect, useState } from 'react'
           timestamp: Date.now()
         })
       }
-
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
         console.log(`Performance Metric: ${name} = ${value}`);
-
       }
-
       measureWebVitals()
       measureMemory()
       measureLoadTime()
     }
-
     // Set up performance observer for additional metrics
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -105,41 +87,33 @@ import { useEffect, useState } from 'react'
       observer.observe({ entryTypes: ['measure'] })
     }
   }, [])
-
   // Calculate performance score
   const calculateScore = () => {
     let score = 100
     let factors = 0
-
     if (metrics.fcp !== null) {
       factors++
       if (metrics.fcp > 1800) score -= 20
       else if (metrics.fcp > 1000) score -= 10
     }
-
     if (metrics.lcp !== null) {
       factors++
       if (metrics.lcp > 2500) score -= 20
       else if (metrics.lcp > 1500) score -= 10
     }
-
     if (metrics.cls !== null) {
       factors++
       if (metrics.cls > 0.25) score -= 20
       else if (metrics.cls > 0.1) score -= 10
     }
-
     if (metrics.fid !== null) {
       factors++
       if (metrics.fid > 300) score -= 20
       else if (metrics.fid > 100) score -= 10
     }
-
     return factors > 0 ? Math.max(0, score) : null
   }
-
   const performanceScore = calculateScore()
-
   // Render performance dashboard in development
   if (process.env.NODE_ENV === 'development') {
     return (
@@ -160,9 +134,6 @@ import { useEffect, useState } from 'react'
       </div>
     )
   }
-
   return null
 }
-
 export default AdvancedPerformanceMonitor
-

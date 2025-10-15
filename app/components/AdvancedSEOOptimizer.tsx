@@ -1,7 +1,6 @@
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
-import { Search, Eye } from 'lucide-react';
-
+import { Eye } from 'lucide-react';
 interface SEOSettings {
   metaTags: boolean;
   structuredData: boolean;
@@ -10,7 +9,6 @@ interface SEOSettings {
   canonicalUrls: boolean;
   altTexts: boolean;
 }
-
 interface SEOMetrics {
   titleLength: number | null;
   descriptionLength: number | null;
@@ -19,7 +17,6 @@ interface SEOMetrics {
   internalLinks: number | null;
   externalLinks: number | null;
 }
-
 const AdvancedSEOOptimizer: React.FC = () => {
   const [settings, setSettings] = useState<SEOSettings>({
     metaTags: false,
@@ -29,7 +26,6 @@ const AdvancedSEOOptimizer: React.FC = () => {
     canonicalUrls: false,
     altTexts: false
   });
-
   const [metrics, setMetrics] = useState<SEOMetrics>({
     titleLength: null,
     descriptionLength: null,
@@ -38,37 +34,29 @@ const AdvancedSEOOptimizer: React.FC = () => {
     internalLinks: null,
     externalLinks: null
   });
-
   const [isVisible, setIsVisible] = useState(false);
   const [isOptimizing, setIsOptimizing] = useState(false);
-
   const analyzeSEO = useCallback(() => {
     if (typeof window === 'undefined') return;
-
     // Analyze title length
     const title = document.title;
     setMetrics(prev => ({ ...prev, titleLength: title.length }));
-
     // Analyze meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     const descriptionLength = metaDescription ? metaDescription.getAttribute('content')?.length || 0 : 0;
     setMetrics(prev => ({ ...prev, descriptionLength }));
-
     // Analyze heading structure
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     const headingStructure = Array.from(headings).map(h => h.tagName).join(' > ');
     setMetrics(prev => ({ ...prev, headingStructure }));
-
     // Count images with alt text
     const images = document.querySelectorAll('img');
     const imagesWithAlt = Array.from(images).filter(img => img.getAttribute('alt'));
     setMetrics(prev => ({ ...prev, imageAltTexts: imagesWithAlt.length }));
-
     // Count internal and external links
     const links = document.querySelectorAll('a[href]');
     let internalLinks = 0;
     let externalLinks = 0;
-    
     links.forEach(link => {
       const href = link.getAttribute('href');
       if (href) {
@@ -79,62 +67,48 @@ const AdvancedSEOOptimizer: React.FC = () => {
         }
       }
     });
-    
     setMetrics(prev => ({ 
       ...prev, 
       internalLinks, 
       externalLinks 
     }));
   }, []);
-
   useEffect(() => {
     analyzeSEO();
   }, [analyzeSEO]);
-
   const optimizeSEO = useCallback(async () => {
     setIsOptimizing(true);
-    
     // Simulate optimization process
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
     // Apply optimizations based on settings
     if (settings.metaTags) {
       // Optimizing meta tags...
     }
-    
     if (settings.structuredData) {
       // Adding structured data...
     }
-    
     if (settings.sitemap) {
       // Generating sitemap...
     }
-    
     if (settings.robotsTxt) {
       // Updating robots.txt...
     }
-    
     if (settings.canonicalUrls) {
       // Setting canonical URLs...
     }
-    
     if (settings.altTexts) {
       // Adding alt texts to images...
     }
-    
     setIsOptimizing(false);
-    
     // Re-analyze SEO after optimization
     setTimeout(analyzeSEO, 1000);
   }, [settings, analyzeSEO]);
-
   const toggleSetting = (key: keyof SEOSettings) => {
     setSettings(prev => ({
       ...prev,
       [key]: !prev[key]
     }));
   };
-
   const seoFeatures = [
     {
       key: 'metaTags' as keyof SEOSettings,
@@ -173,7 +147,6 @@ const AdvancedSEOOptimizer: React.FC = () => {
       impact: 'Medium'
     }
   ];
-
   const getImpactColor = (impact: string) => {
     switch (impact) {
       case 'High': return 'text-red-400';
@@ -182,14 +155,12 @@ const AdvancedSEOOptimizer: React.FC = () => {
       default: return 'text-gray-400';
     }
   };
-
   const getScoreColor = (value: number | null, thresholds: { good: number; poor: number }) => {
     if (value === null) return 'text-gray-400';
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.poor) return 'text-yellow-400';
     return 'text-red-400';
   };
-
   if (!isVisible) {
     return (
       <button
@@ -201,7 +172,6 @@ const AdvancedSEOOptimizer: React.FC = () => {
       </button>
     );
   }
-
   return (
     <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6 w-80 z-50">
       <div className="flex items-center justify-between mb-4">
@@ -217,7 +187,6 @@ const AdvancedSEOOptimizer: React.FC = () => {
           ×
         </button>
       </div>
-      
       {/* SEO Metrics */}
       <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
         <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
@@ -257,7 +226,6 @@ const AdvancedSEOOptimizer: React.FC = () => {
           </div>
         </div>
       </div>
-      
       {/* SEO Settings */}
       <div className="space-y-4">
         <h4 className="text-sm font-semibold text-gray-900 dark:text-white">
@@ -296,7 +264,6 @@ const AdvancedSEOOptimizer: React.FC = () => {
           </div>
         ))}
       </div>
-      
       {/* Optimize Button */}
       <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
         <button
@@ -320,5 +287,4 @@ const AdvancedSEOOptimizer: React.FC = () => {
     </div>
   );
 };
-
 export default AdvancedSEOOptimizer;

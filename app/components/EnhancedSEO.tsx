@@ -1,6 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
 interface EnhancedSEOProps {
   title: string;
   description: string;
@@ -21,7 +19,6 @@ interface EnhancedSEOProps {
   noindex?: boolean;
   nofollow?: boolean;
 }
-
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title,
   description,
@@ -45,16 +42,13 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   const siteName = 'Zion Tech Group';
   const siteUrl = 'https://ziontechgroup.com';
   const defaultImage = 'https://ziontechgroup.com/og-image.jpg';
-  
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullCanonical = canonical ? (canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`) : undefined;
   const fullOgUrl = ogUrl || fullCanonical || siteUrl;
   const fullOgImage = ogImage || defaultImage;
   const fullTwitterImage = twitterImage || fullOgImage;
-  
   const defaultKeywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology, Zion Tech Group';
   const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
-
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -81,9 +75,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       "https://linkedin.com/company/ziontechgroup"
     ]
   };
-
   const mergedStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -95,10 +87,8 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="language" content={lang} />
       <meta name="revisit-after" content="7 days" />
       <meta name="rating" content="general" />
-      
       {/* Canonical URL */}
       {fullCanonical && <link rel="canonical" href={fullCanonical} />}
-      
       {/* Open Graph Meta Tags */}
       <meta property="og:type" content={ogType} />
       <meta property="og:title" content={ogTitle || fullTitle} />
@@ -107,7 +97,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta property="og:url" content={fullOgUrl} />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:locale" content={lang === 'en' ? 'en_US' : lang} />
-      
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={twitterTitle || ogTitle || fullTitle} />
@@ -115,23 +104,19 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="twitter:image" content={fullTwitterImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-      
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="theme-color" content="#00ffff" />
       <meta name="msapplication-TileColor" content="#8b5cf6" />
-      
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(mergedStructuredData)}
       </script>
-      
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
-      
       {/* Favicon and Icons */}
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -139,5 +124,4 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     </Helmet>
   );
 };
-
 export default EnhancedSEO;

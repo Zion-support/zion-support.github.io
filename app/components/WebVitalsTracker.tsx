@@ -1,6 +1,4 @@
-import { useEffect } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-
+import { onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 interface WebVitalsData {
   name: string;
   value: number;
@@ -8,7 +6,6 @@ interface WebVitalsData {
   id: string;
   navigationType: string;
 }
-
 const WebVitalsTracker: React.FC = () => {
   useEffect(() => {
     const sendToAnalytics = (metric: WebVitalsData) => {
@@ -21,7 +18,6 @@ const WebVitalsTracker: React.FC = () => {
           non_interaction: true,
         });
       }
-
       // Send to custom analytics endpoint
       if (process.env.NODE_ENV === 'production') {
         fetch('/api/analytics/web-vitals', {
@@ -32,20 +28,17 @@ const WebVitalsTracker: React.FC = () => {
           body: JSON.stringify(metric),
         }).catch(console.error);
       }
-
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
         console.log('Web Vital:', metric);
       }
     };
-
     // Track Core Web Vitals
     onCLS(sendToAnalytics);
     onINP(sendToAnalytics); // INP replaces FID in newer versions
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);
-
     // Track additional performance metrics
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Track page load time
@@ -62,7 +55,6 @@ const WebVitalsTracker: React.FC = () => {
           });
         }
       });
-
       // Track memory usage (if available)
       if ('memory' in performance) {
         const memory = (performance as any).memory;
@@ -77,8 +69,6 @@ const WebVitalsTracker: React.FC = () => {
       }
     }
   }, []);
-
   return null;
 };
-
 export default WebVitalsTracker;

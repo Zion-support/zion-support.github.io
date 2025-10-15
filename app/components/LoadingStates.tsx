@@ -1,11 +1,9 @@
 import React from 'react';
-import { Loader2, Brain, Shield, Zap, Globe } from 'lucide-react';
-
+import { Brain, Shield, Zap, Globe } from 'lucide-react';
 interface LoadingPageProps {
   message?: string;
   showIcon?: boolean;
 }
-
 export const LoadingPage: React.FC<LoadingPageProps> = ({ 
   message = "Loading...", 
   showIcon = true 
@@ -32,7 +30,6 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
     </div>
   );
 };
-
 export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
   const getServiceIcon = (serviceName: string) => {
     switch (serviceName.toLowerCase()) {
@@ -52,7 +49,6 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
         return <Brain className="w-8 h-8 text-cyan-400" />;
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center max-w-md mx-auto px-4">
@@ -76,7 +72,6 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
     </div>
   );
 };
-
 export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = ({ 
   error = "Something went wrong", 
   onRetry 
@@ -103,7 +98,6 @@ export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = 
     </div>
   );
 };
-
 export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
   return (
     <div className="animate-pulse">
@@ -118,7 +112,6 @@ export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
     </div>
   );
 };
-
 export const CardSkeleton: React.FC = () => {
   return (
     <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
@@ -132,5 +125,4 @@ export const CardSkeleton: React.FC = () => {
     </div>
   );
 };
-
 export default LoadingPage;

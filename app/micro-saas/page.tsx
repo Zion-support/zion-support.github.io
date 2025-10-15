@@ -1,9 +1,6 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Cpu, Wifi, Battery, Camera, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Cpu, Wifi, Battery, Camera, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow } from 'lucide-react';
 import SEOOptimizer from "../components/SEOOptimizer";
-
 export default function MicroSaas() {
   const microSaasServices = [
     {
@@ -999,7 +996,6 @@ export default function MicroSaas() {
       featured: false
     }
   ];
-
   const categories = [
     { name: "All", count: microSaasServices.length, active: true },
     { name: "Analytics", count: microSaasServices.filter(s => s.category === "Analytics").length, active: false },
@@ -1022,15 +1018,12 @@ export default function MicroSaas() {
     { name: "SEO", count: microSaasServices.filter(s => s.category === "SEO").length, active: false },
     { name: "Development", count: microSaasServices.filter(s => s.category === "Development").length, active: false }
   ];
-
   const stats = [
     { number: "25+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
   ];
-
-  const testimonials = [
     {
       name: "Sarah Johnson",
       company: "TechStart Inc.",
@@ -1056,7 +1049,6 @@ export default function MicroSaas() {
       avatar: "ER"
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -1079,13 +1071,11 @@ export default function MicroSaas() {
         title="Micro SAAS Solutions - Zion Tech Group | AI-Powered Business Tools"
         description="Discover our comprehensive collection of micro SAAS solutions. AI-powered analytics, security, content creation, automation, and more. Start your free trial today!"
       />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
-          
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -1097,7 +1087,6 @@ export default function MicroSaas() {
                 Powerful, AI-driven micro SAAS tools designed to transform your business operations. 
                 Choose from 25+ specialized solutions to boost productivity, security, and growth.
               </p>
-              
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
@@ -1116,7 +1105,6 @@ export default function MicroSaas() {
                   <span className="text-sm">24/7 support</span>
                 </div>
               </div>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -1136,7 +1124,6 @@ export default function MicroSaas() {
             </div>
           </div>
         </div>
-
         {/* Stats Section */}
         <div className="py-16 bg-black/20 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1153,7 +1140,6 @@ export default function MicroSaas() {
             </div>
           </div>
         </div>
-
         {/* Categories Filter */}
         <div className="py-8 bg-black/10 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1173,7 +1159,6 @@ export default function MicroSaas() {
             </div>
           </div>
         </div>
-
         {/* Featured Services */}
         <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1187,7 +1172,6 @@ export default function MicroSaas() {
                 Our most popular micro SAAS solutions trusted by thousands of businesses worldwide
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasServices.filter(service => service.featured).map((service, index) => (
                 <div
@@ -1199,7 +1183,6 @@ export default function MicroSaas() {
                       {service.discount}
                     </div>
                   )}
-                  
                   <div className="flex items-center justify-between mb-4">
                     <div className={`p-3 rounded-xl bg-gradient-to-r ${service.color}`}>
                       <div className="text-white">{service.icon}</div>
@@ -1210,17 +1193,14 @@ export default function MicroSaas() {
                       <span className="ml-1 text-xs text-gray-400">({service.reviews})</span>
                     </div>
                   </div>
-
                   <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                   <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-
                   <div className="flex items-center mb-4">
                     <span className="text-2xl font-bold text-white">{service.price}</span>
                     {service.originalPrice && (
                       <span className="ml-2 text-sm text-gray-400 line-through">{service.originalPrice}</span>
                     )}
                   </div>
-
                   <div className="space-y-2 mb-6">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -1234,7 +1214,6 @@ export default function MicroSaas() {
                       </div>
                     )}
                   </div>
-
                   <div className="space-y-3">
                     <Link
                       to={service.link}
@@ -1255,7 +1234,6 @@ export default function MicroSaas() {
             </div>
           </div>
         </div>
-
         {/* All Services Grid */}
         <div className="py-16 bg-black/10 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1269,7 +1247,6 @@ export default function MicroSaas() {
                 Browse our complete collection of micro SAAS solutions
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {microSaasServices.map((service, index) => (
                 <div
@@ -1281,7 +1258,6 @@ export default function MicroSaas() {
                       {service.discount}
                     </div>
                   )}
-                  
                   <div className="flex items-center justify-between mb-3">
                     <div className={`p-2 rounded-lg bg-gradient-to-r ${service.color}`}>
                       <div className="text-white">{service.icon}</div>
@@ -1291,17 +1267,14 @@ export default function MicroSaas() {
                       <span className="ml-1 text-xs font-medium">{service.rating}</span>
                     </div>
                   </div>
-
                   <h3 className="text-lg font-bold text-white mb-2">{service.name}</h3>
                   <p className="text-gray-300 mb-3 text-sm line-clamp-2">{service.description}</p>
-
                   <div className="flex items-center mb-3">
                     <span className="text-lg font-bold text-white">{service.price}</span>
                     {service.originalPrice && (
                       <span className="ml-2 text-xs text-gray-400 line-through">{service.originalPrice}</span>
                     )}
                   </div>
-
                   <div className="space-y-1 mb-4">
                     {service.features.slice(0, 3).map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-xs text-gray-300">
@@ -1310,7 +1283,6 @@ export default function MicroSaas() {
                       </div>
                     ))}
                   </div>
-
                   <Link
                     to={service.link}
                     className="w-full inline-flex items-center justify-center px-3 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300"
@@ -1323,7 +1295,6 @@ export default function MicroSaas() {
             </div>
           </div>
         </div>
-
         {/* Testimonials */}
         <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1337,7 +1308,6 @@ export default function MicroSaas() {
                 Join thousands of satisfied customers who trust our micro SAAS solutions
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
@@ -1353,20 +1323,17 @@ export default function MicroSaas() {
                       <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                     </div>
                   </div>
-                  
                   <div className="flex items-center mb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  
                   <p className="text-gray-300 italic">"{testimonial.content}"</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="py-16 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1376,7 +1343,6 @@ export default function MicroSaas() {
             <p className="text-xl text-gray-300 mb-8">
               Start your free 14-day trial today. No credit card required. Cancel anytime.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -1393,13 +1359,11 @@ export default function MicroSaas() {
                 View Pricing
               </Link>
             </div>
-
             <div className="mt-8 text-sm text-gray-400">
               <p>Questions? Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a> or call <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
             </div>
           </div>
         </div>
-
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
@@ -1407,7 +1371,6 @@ export default function MicroSaas() {
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
               <span className="text-cyan-400 text-sm font-medium">50+ Ready-to-Use Solutions</span>
             </div>
-            
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               Micro
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
@@ -1416,12 +1379,10 @@ export default function MicroSaas() {
               <br />
               Solutions
             </h1>
-            
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Ready-to-use business software solutions that can transform your operations immediately. 
               From analytics to security, CRM to marketing automation - everything you need to grow your business.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <Link
                 to="/contact"
@@ -1438,7 +1399,6 @@ export default function MicroSaas() {
                 <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
-            
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               {stats.map((stat, index) => (
@@ -1453,7 +1413,6 @@ export default function MicroSaas() {
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -1465,7 +1424,6 @@ export default function MicroSaas() {
                 Choose from our comprehensive suite of business software solutions. Each tool is designed to solve specific business challenges with powerful features and intuitive interfaces.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasServices.map((service, index) => (
                 <div
@@ -1479,28 +1437,23 @@ export default function MicroSaas() {
                       </span>
                     </div>
                   )}
-                  
                   <div className="relative z-10">
                     <div
                       className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                     >
                       {service.icon}
                     </div>
-                    
                     <div className="text-center mb-4">
                       <span className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full border border-cyan-500/30">
                         {service.category}
                       </span>
                     </div>
-                    
                     <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-300 transition-colors">
                       {service.title}
                     </h3>
-                    
                     <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm">
                       {service.description}
                     </p>
-                    
                     {/* Pricing */}
                     <div className="text-center mb-4">
                       <div className="flex items-center justify-center space-x-2">
@@ -1508,7 +1461,6 @@ export default function MicroSaas() {
                         <span className="text-gray-500 line-through text-sm">{service.originalPrice}</span>
                       </div>
                     </div>
-                    
                     {/* Features */}
                     <div className="space-y-2 mb-6">
                       {service.features.slice(0, 3).map((feature, idx) => (
@@ -1523,7 +1475,6 @@ export default function MicroSaas() {
                         </div>
                       )}
                     </div>
-                    
                     <div className="text-center">
                       <Link
                         to={service.link}
@@ -1539,7 +1490,6 @@ export default function MicroSaas() {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
@@ -1577,7 +1527,6 @@ export default function MicroSaas() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
@@ -1588,7 +1537,6 @@ export default function MicroSaas() {
               Join thousands of businesses already using our micro SAAS solutions to drive growth and efficiency. 
               Start your free trial today - no credit card required.
             </p>
-            
             {/* Contact Information */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
@@ -1613,7 +1561,6 @@ export default function MicroSaas() {
                 <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"

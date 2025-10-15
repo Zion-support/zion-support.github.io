@@ -1,8 +1,4 @@
 import React, { memo, useMemo } from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-
 interface OptimizedLoadingSpinnerProps {
   size?: "xs" | "sm" | "md" | "lg" | "xl";
   variant?: "dots" | "pulse" | "spinner" | "skeleton" | "bars";
@@ -11,7 +7,6 @@ interface OptimizedLoadingSpinnerProps {
   color?: "blue" | "gray" | "green" | "red" | "purple";
   fullScreen?: boolean;
 }
-
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   ({
     size = "md",
@@ -31,7 +26,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       }),
       [],
     );
-
     const textSizeClasses = useMemo(
       () => ({
         xs: "text-xs",
@@ -42,7 +36,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       }),
       [],
     );
-
     const colorClasses = useMemo(
       () => ({
         blue: "text-blue-500",
@@ -53,7 +46,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       }),
       [],
     );
-
     const renderSpinner = () => {
       switch (variant) {
         case "dots":
@@ -114,11 +106,9 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
           );
       }
     };
-
     const containerClasses = fullScreen
       ? "fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
       : "flex flex-col items-center justify-center space-y-4";
-
     return (
       <>
         <Helmet>
@@ -145,7 +135,5 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
     );
   },
 );
-
 OptimizedLoadingSpinner.displayName = "OptimizedLoadingSpinner";
-
 export default OptimizedLoadingSpinner;
