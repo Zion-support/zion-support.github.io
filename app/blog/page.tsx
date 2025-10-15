@@ -1,10 +1,15 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import SEOHead from '../components/SEOHead';
 
 const BlogPage: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD
+      <SEOHead 
+        title="Blog - Zion Tech Group | AI & IT Solutions"
+        description="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends."
+        keywords="AI blog, technology insights, cybersecurity trends, cloud computing, IT solutions"
+      />
       <Helmet>
         <title>Blog - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends." />
@@ -180,17 +185,6 @@ const BlogPage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
-      <SEOHead 
-        title="blog - Zion Tech Group"
-        description="Zion Tech Group blog service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">blog</h1>
-          <p className="text-gray-300">Coming soon...</p>
-        </div>
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
       </div>
     </>
   );

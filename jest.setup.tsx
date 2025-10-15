@@ -1,4 +1,7 @@
+import React from 'react';
+
 // Mock TextEncoder and TextDecoder for Node.js environment
+import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
@@ -13,8 +16,8 @@ jest.mock('react-router-dom', () => ({
   }),
   useNavigate: () => jest.fn(),
   useParams: () => ({}),
-  Link: ({ children, ...props }) => <a {...props}>{children}</a>,
-  NavLink: ({ children, ...props }) => <a {...props}>{children}</a>,
+  Link: ({ children, ...props }: any) => React.createElement('a', props, children),
+  NavLink: ({ children, ...props }: any) => React.createElement('a', props, children),
   useSearchParams: () => [new URLSearchParams(), jest.fn()],
 }));
 
