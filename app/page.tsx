@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useMemo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from './components/SEOHead';
 import { 
@@ -17,7 +17,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 const HomePage: React.FC = () => {
-  const services = [
+  const services = useMemo(() => [
     {
       icon: CpuChipIcon,
       title: 'AI Solutions',
@@ -82,9 +82,9 @@ const HomePage: React.FC = () => {
       gradient: 'from-pink-500 to-rose-500',
       glow: 'shadow-pink-500/25'
     }
-  ];
+  ], []);
 
-  const features = [
+  const features = useMemo(() => [
     '24/7 Expert Support',
     'Cutting-edge Technology',
     'Scalable Solutions',
@@ -97,16 +97,16 @@ const HomePage: React.FC = () => {
     'Cloud-Native Architecture',
     'Mobile-First Design',
     'API-First Approach'
-  ];
+  ], []);
 
-  const stats = [
+  const stats = useMemo(() => [
     { number: '1000+', label: 'Projects Completed' },
     { number: '200+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' },
     { number: '50+', label: 'AI Models Deployed' },
     { number: '10M+', label: 'API Calls Processed' }
-  ];
+  ], []);
 
   return (
     <>
@@ -407,7 +407,7 @@ const HomePage: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">
-              Let's discuss how our solutions can accelerate your digital transformation and drive growth.";
+              Let's discuss how our solutions can accelerate your digital transformation and drive growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact"

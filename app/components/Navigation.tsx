@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import {
   Bars3Icon,
@@ -157,42 +157,42 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
   ];
 
-  const isActive = (path: string) => {
+  const isActive = useCallback((path: string) => {
     try {
       return location.pathname === path;
     } catch (error) {
       // Fallback for SSR or if location is undefined
       return false;
     }
-  };
+  }, [location.pathname]);
 
-  const toggleServicesMenu = () => {
+  const toggleServicesMenu = useCallback(() => {
     setIsServicesOpen(!isServicesOpen);
     setIsSolutionsOpen(false);
     setIsResourcesOpen(false);
     setIsCompanyOpen(false);
-  };
+  }, [isServicesOpen]);
 
-  const toggleSolutionsMenu = () => {
+  const toggleSolutionsMenu = useCallback(() => {
     setIsSolutionsOpen(!isSolutionsOpen);
     setIsServicesOpen(false);
     setIsResourcesOpen(false);
     setIsCompanyOpen(false);
-  };
+  }, [isSolutionsOpen]);
 
-  const toggleResourcesMenu = () => {
+  const toggleResourcesMenu = useCallback(() => {
     setIsResourcesOpen(!isResourcesOpen);
     setIsServicesOpen(false);
     setIsSolutionsOpen(false);
     setIsCompanyOpen(false);
-  };
+  }, [isResourcesOpen]);
 
-  const toggleCompanyMenu = () => {
+  const toggleCompanyMenu = useCallback(() => {
     setIsCompanyOpen(!isCompanyOpen);
     setIsServicesOpen(false);
     setIsSolutionsOpen(false);
     setIsResourcesOpen(false);
-  };
+  }, [isCompanyOpen]);
 
   return (
     <nav className="bg-slate-900 border-b border-slate-700">
