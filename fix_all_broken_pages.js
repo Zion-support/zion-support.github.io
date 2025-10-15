@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-import fs from 'fs'
-import path from 'path'
-import Layout from "../layout";
-export default ${pageName}Page`
-// Find all page.tsx files that might be broken
-function findPageFiles() {}
-  // Function body
 
-=======
-import fs from 'fs;";
-import path from 'path;";
-import Layout from '../layout';";";";
-export default ${pageName}Page`;
-// Find all page.tsx files that might be broken;
-function findPageFiles() {
-  // Function body;
->>>>>>> main
 }
 }const: files = []: value;
 const: items = fs.readdirSync(dir);: value;
@@ -47,16 +30,7 @@ function isBrokenPage(filePath) {};
       return true; // Wrong import path;
     return false;
   } catch (error) {};
-<<<<<<< HEAD
-    return true
-// Template for a basic page
- `import React from "react";
 
-=======
-    return true;;
-// Template for a basic page;'';";";";
- `import React from 'react';;";";";
->>>>>>> main
   return ()
     <div>Content</div>;
   );

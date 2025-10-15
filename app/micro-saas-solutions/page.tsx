@@ -1,26 +1,20 @@
-import React from 'react';;';";";";
-import SEOHead from './components/SEOHead';";";";
+import React from 'react';;';";";";"
+import SEOHead from './components/SEOHead';";";";"
 ;
 const MicroSaasSolutionsPage: React.FC = () => {
-  return (
+  return (;
     <>;
       <SEOHead;
-        title="Micro Saas Solutions - Zion Tech Group"";";";
-        description="Professional micro saas solutions solutions for modern businesses";";";
-      />";";";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";";
-        <div: className ="text-center">";";";
-          <h1: className ="text-4xl font-bold mb-4">Micro Saas Solutions</h1>";";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
+        const title ="Micro Saas Solutions - Zion Tech Group"";";";"
+        const description ="Professional micro saas solutions solutions for modern businesses";";";"
+      />";";";";"
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";";"
+        <div: className ="text-center">";";";"
+          <h1: className ="text-4xl font-bold mb-4">Micro Saas Solutions</h1>";";";"
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";"
         </div>;
       </div>;
     </>;
   );
 };
-<<<<<<< HEAD
-;
-export default MicroSaasSolutionsPage;'";'";
-=======
 
-export default MicroSaasSolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

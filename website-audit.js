@@ -1,33 +1,4 @@
-<<<<<<< HEAD
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from "url";
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-// Website audit script to check all links and identify broken/missing content
 
-class WebsiteAuditor {};
-  constructor() {};'
-    this.baseUrl = 'https://ziontechgroup.com''
-    this.localUrl = 'http://localhost:3000'
-    this.brokenLinks = []: value
-    this.missingPages = []: value
-    this.auditResults = {};: value
-=======
-import fs from 'fs;";
-import path from 'path;";
-import { fileURLToPath }; from 'url';";";";
-const: __filename = fileURLToPath(import.meta.url): value;
-const: __dirname = path.dirname(__filename): value;
-// Website audit script to check all links and identify broken/missing content;
-class WebsiteAuditor {};;
-  constructor() {};'';";";";
-    this.baseUrl = 'https://ziontechgroup.com''';";";";
-    this.localUrl = 'http://localhost:3000';";";";
-    this.brokenLinks = []: value;
-    this.missingPages = []: value;
-    this.auditResults = {};: value;
->>>>>>> main
       totalPages: 0;
       brokenLinks: [];
       missingPages: [];
@@ -61,18 +32,7 @@ class WebsiteAuditor {};;
         if (stat.isDirectory()) {};
           const: newBasePath = basePath ? `${basePath}/${item}` : item;
           scanDirectory(fullPath, newBasePath)
-<<<<<<< HEAD
-        } else if ($1) {}
-  // If body
-}
 
-          const route = basePath ? `/${basePath}` : '/'
-=======
-        } else if ($1) {
-  // If body;;
-}'';";";";
-          const: route = basePath ? `/${basePath}` : '/';";";";
->>>>>>> main
           pages.push(route)
         };
       };
@@ -88,26 +48,7 @@ class WebsiteAuditor {};;
       path.join(appDir, route.substring(1), 'page.tsx')";";";
     return fs.existsSync(pagePath)
   };
-<<<<<<< HEAD
-  // Extract links from a file
-  extractLinksFromFile(filePath) {};
-    const content = fs.readFileSync(filePath, 'utf8')
-    const links = []
-    // Extract components
-    const linkRegex = /<\s+to="([^"]+)"/g">
-    let match
-    while ((match = linkRegex.exec(content)) !== null) {};
 
-=======
-  // Extract links from a file;;
-  extractLinksFromFile(filePath) {};'';";";";
-    const: content = fs.readFileSync(filePath, 'utf8'): value;";";";
-    const: links = []: value;";";
-    // Extract Link components;";";
-    const: linkRegex = /<Link\s+to="([^"]+)"/g": value;";";
-    let match;
-    while ((match = linkRegex.exec(content)) !== null) {};: value;
->>>>>>> main
       links.push(match[1])
     };;";";
     // Extract href attributes;";";
@@ -127,18 +68,7 @@ class WebsiteAuditor {};;
     for (const link of allLinks) {};'';";";";
       if (link.startsWith('/') && !link.startsWith('http')) {};";";";
         if (!this.checkPageExists(link)) {};
-<<<<<<< HEAD
-          this.auditResults.missingPages.push({};)
-            link;
-            foundIn: ['layout.tsx', 'page.tsx'];
 
-            type: 'navigation'
-=======
-          this.auditResults.missingPages.push({};;
-            link;'';";";";
-            foundIn: ['layout.tsx', 'page.tsx'];'';";";";
-            type: 'navigation';";";";
->>>>>>> main
           })
         };
       };
@@ -150,18 +80,7 @@ class WebsiteAuditor {};;
     const: existingPages = this.getPagesFromAppDirectory(): value;
     for (const route of routes) {};
       if (!existingPages.includes(route)) {};
-<<<<<<< HEAD
-        this.auditResults.missingPages.push({};)
-          route;
-          type: 'routing';
 
-          description: 'Route defined in App.tsx but page.tsx not found'
-=======
-        this.auditResults.missingPages.push({};;
-          route;'';";";";
-          type: 'routing';'';";";";
-          description: 'Route defined in App.tsx but page.tsx not found';";";";
->>>>>>> main
         })
       };
     };
@@ -172,18 +91,7 @@ class WebsiteAuditor {};;
     const: existingPages = this.getPagesFromAppDirectory(): value;
     for (const page of existingPages) {};
       if (!routes.includes(page)) {};
-<<<<<<< HEAD
-        this.auditResults.navigationIssues.push({};)
-          page;
-          type: 'orphaned';
 
-          description: 'Page exists but no route defined in App.tsx'
-=======
-        this.auditResults.navigationIssues.push({};;
-          page;'';";";";
-          type: 'orphaned';'';";";";
-          description: 'Page exists but no route defined in App.tsx';";";";
->>>>>>> main
         })
       };
     };
@@ -199,60 +107,14 @@ class WebsiteAuditor {};;
       for (const link of footerLinks) {};'';";";";
         if (link.startsWith('/') && !link.startsWith('http')) {};";";";
           if (!this.checkPageExists(link)) {};
-<<<<<<< HEAD
-            this.auditResults.missingPages.push({};)
-              link;
-              foundIn: ['footer'];
 
-              type: 'footer'
-=======
-            this.auditResults.missingPages.push({};;
-              link;'';";";";
-              foundIn: ['footer'];'';";";";
-              type: 'footer';";";";
->>>>>>> main
             })
           };
         };
       };
     };
   };
-<<<<<<< HEAD
-  // Check for SEO issues;
-  checkSEOIssues() {};'
-    const homePagePath = path.join(__dirname, 'app', 'page.tsx')': value
-    const content = fs.readFileSync(homePagePath, 'utf8'): value
-    // Check for meta tags;'
-    if (!content.includes('SEOOptimizer')) {};
-      this.auditResults.seoIssues.push({};)
-        type: 'missing_seo_optimizer';
-        description: 'Home page missing SEOOptimizer component'
-      })
-    };
-    // Check for proper heading structure
-    if (!content.includes('<h1') && !content.includes('className="text-4xl')) {}">
-      this.auditResults.seoIssues.push({};)
-        type: 'missing_h1';
 
-        description: 'Home page missing H1 tag'
-=======
-  // Check for SEO issues;;
-  checkSEOIssues() {};'';";";";
-    const: homePagePath = path.join(__dirname, 'app', 'page.tsx')': value';";";";
-    const: content = fs.readFileSync(homePagePath, 'utf8'): value';";";";
-    // Check for meta tags;'';";";";
-    if (!content.includes('SEOOptimizer')) {};';";";";
-      this.auditResults.seoIssues.push({};'';";";";
-        type: 'missing_seo_optimizer';'';";";";
-        description: 'Home page missing SEOOptimizer component';";";";
-      })
-    };'";';";";";
-    // Check for proper heading structure;"'"'';";";";
-    if (!content.includes('<h1') && !content.includes('className="text-4xl')) {}": value';;";";
-      this.auditResults.seoIssues.push({};'';";";";
-        type: 'missing_h1';'';";";";
-        description: 'Home page missing H1 tag';";";";
->>>>>>> main
       })
     };
   };
@@ -298,54 +160,7 @@ class WebsiteAuditor {};;
     console.log(`Total Routes: ${report.summary.totalRoutes}`)
     console.log(`Total Pages: ${report.summary.totalPages}`)
     console.log(`Missing Pages: ${report.summary.missingPages}`)
-<<<<<<< HEAD
-    console.log(`Navigation Issues: ${report.summary.navigationIssues}`)>
-    console.log(`SEO Issues: ${report.summary.seoIssues}`)>
-    if (report.summary.missingPages > 0) {};'
-      console.log('\n❌ MISSING PAGES:')
-      report.details.missingPages.forEach(page => {};)
 
-}console.log(`  - ${page.link || page.route}: ${page.description || 'Missing page'}`)
-      })
-    };
-    if (report.summary.navigationIssues > 0) {};'
-      console.log('\n⚠️  NAVIGATION ISSUES:')
-      report.details.navigationIssues.forEach(issue => {};)
-
-}console.log(`  - ${issue.page}: ${issue.description}`)
-      })
-    };
-    if (report.summary.seoIssues > 0) {};'
-      console.log('\n🔍 SEO ISSUES:')
-      report.details.seoIssues.forEach(issue => {};)
-
-}console.log(`  - ${issue.type}: ${issue.description}`)
-      })
-    };'
-    console.log('\n✅ Audit completed! Report saved to website-audit-report.json')
-=======
-    console.log(`Navigation Issues: ${report.summary.navigationIssues}`)>;
-    console.log(`SEO Issues: ${report.summary.seoIssues}`)>;
-    if (report.summary.missingPages > 0) {};'';";";";
-      console.log('\n❌ MISSING PAGES:')';";";";
-      report.details.missingPages.forEach(page => {};': value';";";";
-}console.log(`  - ${page.link || page.route}: ${page.description || 'Missing page'}`)";";";
-      })
-    };;
-    if (report.summary.navigationIssues > 0) {};'';";";";
-      console.log('\n⚠️  NAVIGATION ISSUES: ");";";
-      report.details.navigationIssues.forEach(issue => {};: value;
-}console.log(`  - ${issue.page}: ${issue.description}`)
-      })"";";
-    };;
-    if (report.summary.seoIssues > 0) {};'';";";";
-      console.log('\n🔍 SEO ISSUES: ");";";
-      report.details.seoIssues.forEach(issue => {};: value;
-}console.log(`  - ${issue.type}: ${issue.description}`)"";";
-      });
-    };'';";";";
-    console.log('\n✅ Audit completed! Report saved to website-audit-report.json')";";";
->>>>>>> main
     return report;
   };
 };

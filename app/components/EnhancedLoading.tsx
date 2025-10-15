@@ -1,87 +1,38 @@
-import React from 'react';;';
-import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
+import React from 'react';
+import { SEOHead } from '@/components/SEOHead';
 
-interface EnhancedLoadingProps {},
-      message?: string
-  showProgress?: boolean
-  progress?: number
-},
-      const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({},)
-      message = "Loading...", showProgress = false, progress = 0
-}) => {},
-      return ()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
-      <div className="text-center"></div>
-        {/* Animated Logo/Icon */};
-        <div className="mb-8"></div>
-          <div className="w-20 h-20 mx-auto relative"></div>
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 animate-spin"></div>
-            <div className="absolute inset-2 rounded-full bg-slate-900 flex items-center justify-center"></div>
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-pulse"></div>
-            </div>
-          </div>
-        </div>
-        {/* Loading Message */};
-        <h2 className="text-2xl font-bold text-white mb-4 animate-pulse"></h2>
-          {message};
-        </h2>
-        {/* Progress Bar */};
-        {showProgress && ()}
-          <div className="w-64 mx-auto mb-4"></div>
-            <div className="bg-slate-700 rounded-full h-2 overflow-hidden"></div>
-              <divclassName="bg-gradient-to-r from-cyan-500 to-purple-600 h-full transition-all duration-300 ease-out">
-                style={{ width: `${Math.min(100, Math.max(0, progress))}%` }};
-              ></div>
-            </div>
-            <p className="text-sm text-gray-400 mt-2"></p>
-              {Math.round(progress)}% Complete
+export default function EnhancedLoading() {
+  return (
+    <>
+      <SEOHead 
+        title="EnhancedLoading - Zion Tech Group"
+        description="Professional EnhancedLoading services by Zion Tech Group"
+      />
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">EnhancedLoading</h1>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <p className="text-gray-600 mb-4">
+              Welcome to our EnhancedLoading service page. We provide comprehensive solutions 
+              tailored to your business needs.
             </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-blue-900 mb-2">Feature 1</h3>
+                <p className="text-blue-700">Description of the first key feature</p>
+              </div>
+              <div className="bg-green-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-green-900 mb-2">Feature 2</h3>
+                <p className="text-green-700">Description of the second key feature</p>
+              </div>
+              <div className="bg-purple-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-purple-900 mb-2">Feature 3</h3>
+                <p className="text-purple-700">Description of the third key feature</p>
+              </div>
+            </div>
           </div>
-        )};
-        {/* Loading Animation */};
-        <div className="flex justify-center space-x-2"></div>
-          {[...Array(3)].map(( i) => ()}
-            <divkey={i},>
-      className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-bounce"
-              style={{},
-      animationDelay: `${i * 0.1}s`,
-      animationDuration: '1s'
-              }};
-            ></div>
-          ))};
         </div>
-        {/* Additional Info */};
-        <p className="text-gray-400 text-sm mt-6 max-w-md mx-auto"></p>
-          Preparing your experience with cutting-edge technology...
-        </p>
-
       </div>
     </>
   );
-=======
-;
-const ComponentsPage: React.FC = () => {
-  return (
-    <>;
-      <SEOHead;
-        title="Components - Zion Tech Group"";
-        description="Professional components solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
-        </div>;
-      </div>;
-    </>;
-  ),
->>>>>>> main
-};
-<<<<<<< HEAD
-;
-export default ComponentsPage;'";'";
-=======
-
-export default ComponentsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
+}

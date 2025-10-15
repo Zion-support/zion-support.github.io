@@ -1,55 +1,38 @@
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async";
-export default function LoadingSkeleton() {}
-  // Function body
-}
-}return ()
-    <div></div>
-      <Helmet></Helmet>
-        <title>Loading Skeleton - Zion Tech Group</title>
-      </Helmet>
-      <div className="loading-skeleton-container"></div>
-        <div className="skeleton"></div>
-          <div className="skeleton-line"></div>
-          <div className="skeleton-line"></div>
-          <div className="skeleton-line"></div>
-        </div>
-        <>
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        ></>
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </>
+import React from 'react';
+import { SEOHead } from '@/components/SEOHead';
 
+export default function LoadingSkeleton() {
+  return (
+    <>
+      <SEOHead 
+        title="LoadingSkeleton - Zion Tech Group"
+        description="Professional LoadingSkeleton services by Zion Tech Group"
+      />
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">LoadingSkeleton</h1>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <p className="text-gray-600 mb-4">
+              Welcome to our LoadingSkeleton service page. We provide comprehensive solutions 
+              tailored to your business needs.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-blue-900 mb-2">Feature 1</h3>
+                <p className="text-blue-700">Description of the first key feature</p>
+              </div>
+              <div className="bg-green-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-green-900 mb-2">Feature 2</h3>
+                <p className="text-green-700">Description of the second key feature</p>
+              </div>
+              <div className="bg-purple-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-purple-900 mb-2">Feature 3</h3>
+                <p className="text-purple-700">Description of the third key feature</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
-=======
-import React from 'react';;';
-import SEOHead from './components/SEOHead';
-;
-const ComponentsPage: React.FC = () => {
-  return (
-    <>;
-      <SEOHead;
-        title="Components - Zion Tech Group"";
-        description="Professional components solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
-        </div>;
-      </div>;
-    </>;
-  ),
->>>>>>> main
-};
-<<<<<<< HEAD
-;
-export default ComponentsPage;'";'";
-=======
-
-export default ComponentsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
+}

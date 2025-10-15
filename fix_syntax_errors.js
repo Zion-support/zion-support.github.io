@@ -1,4 +1,4 @@
-import fs from 'fs'
+import fs from 'fs';
 import path from "path";
 #!/usr/bin/env node
 // Function to fix common syntax errors in TSX files

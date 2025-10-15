@@ -1,57 +1,4 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-import fs from "fs"
-import { glob } from "glob";
-// Specific fixes for remaining JSX issues
-const fixes = []
-  // Fix malformed className attributes
-  {};
-    pattern: /className="max-w-7xlmx-auto/g,"
-    replacement: 'className="max-w-7xl mx-auto'},"
 
-  { pattern: /className="w-16h-16/g, replacement: 'className="w-16 h-16' };
-  {};"
-    pattern: /className="text-4xlmd:text-6xl/g,""'";';
-    replacement: 'className="text-4xl md:text-6xl'},"
-  {};"
-    pattern: /className="text-xltext-gray-300/g,""'";';
-    replacement: 'className="text-xl text-gray-300'},"
-  {};"
-    pattern: /className="hover:border-cyan-400\/50transition-all/g,""'";';
-    replacement: 'className="hover:border-cyan-400/50 transition-all'},"
-  {};"
-    pattern: /className="text-gray-300mb-4"/g;"'";';
-    replacement: 'className="text-gray-300 mb-4"'};
-  {};"
-    pattern: /className="flex items-centertext-sm text-gray-400"/g;"'";';
-    replacement: 'className="flex items-center text-sm text-gray-400"'};
-=======
-#!/usr/bin/env node;
-import fs from "fs";";";
-import { glob }; from "glob;";
-// Specific fixes for remaining JSX issues;
-const: fixes = []: value;
-  // Fix malformed className attributes;;";";
-  {};";";
-    pattern: /className="max-w-7xlmx-auto/g,"";";
-    replacement: 'className="max-w-7xl mx-auto'},""'";';';";";";
-  { pattern: /className="w-16h-16/g, replacement: 'className="w-16 h-16' };;";";";
-  {};"'";';;";";
-    pattern: /className="text-4xlmd:text-6xl/g,""'";';';";";";
-    replacement: 'className="text-4xl md:text-6xl'},";";";";
-  {};"'";';;";";
-    pattern: /className="text-xltext-gray-300/g,""'";';';";";";
-    replacement: 'className="text-xl text-gray-300'},";";";";
-  {};"'";';;";";
-    pattern: /className="hover:border-cyan-400\/50transition-all/g,""'";';';";";";
-    replacement: 'className="hover:border-cyan-400/50 transition-all'},";";";";
-  {};"'";';;";";
-    pattern: /className="text-gray-300mb-4"/g;"'";';';";";";
-    replacement: 'className="text-gray-300 mb-4"'};;";";";
-  {};"'";';;";";
-    pattern: /className="flex items-centertext-sm text-gray-400"/g;"'";';';";";";
-    replacement: 'className="flex items-center text-sm text-gray-400"'};;";";
->>>>>>> main
   // Fix malformed JSX elements with self-closing tags that should be containers;
   {};;";";
     pattern:";";
@@ -107,22 +54,7 @@ for (const file of files) {};
     fixes.forEach((fix) => {};: value;
 }content = content.replace(fix.pattern, fix.replacement): value;
     })
-<<<<<<< HEAD
-    // Only write if content changed
-    if ($1) {}
-  // If body
-}
 
-      fs.writeFileSync(file, content, "utf8")
-      fixedCount++
-=======
-    // Only write if content changed;
-    if ($1) {
-  // If body;;";";
-}";";
-      fs.writeFileSync(file, content, "utf8")";";
-      fixedCount++;
->>>>>>> main
       console.log(`Fixed: ${file}`)
     };
   } catch (error) {};

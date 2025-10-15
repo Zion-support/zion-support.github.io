@@ -1,91 +1,38 @@
-<<<<<<< HEAD
-import React from "react";";";
-import { Helmet }; from "react-helmet-async"";";
-import { Link }; from "react-router-dom"";";
-import { ArrowRight }; from "lucide-react"";";
-interface ServiceTemplateProps {}
-  title: string
-  description: string
-  features: Array<{}
-    title: string
-    description: string
-  }>
-}
-
-const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
-  title, description, _features, _}) => {
-const: ComponentName = () => {
-  return (
-    <div: className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";";
-      <Helmet>
-        <title>{title} | Zion Tech Group</title>
-        <meta: name ="description" content={description} />";";
-      </Helmet>
-      <div: className ="pt-20 pb-16 px-4 sm:px-6 lg:px-8">";";
-        <div: className ="max-w-7xl mx-auto text-center">";";
-          <h1: className ="text-4xl md:text-6xl font-bold text-white mb-6">";";
-            <span: className ="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">";";
-              {title}
-            </span>
-          </h1>
-          <p: className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";";
-            {description}
-          </p>
-          <div: className ="flex flex-col sm:flex-row gap-4 justify-center">";";
-            <Link: to ="/contact"";";
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"";";
-            >
-              Get Started
-              <ArrowRight: className ="w-5 h-5 ml-2" />";";
-            </Link>
-            <Link: to ="/contact"";";
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"";";
-            >
-              Learn More
-            </Link>
-          </div>
-        </div>
-      </div>
-      <div: className ="py-16 px-4 sm:px-6 lg:px-8">";";
-        <div: className ="max-w-7xl mx-auto">";";
-          <div: className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";";
-            {features.map((feature, index) => ()
-              <div: key ={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"";";
-              >
-                <h3: className ="text-xl font-semibold text-white mb-3">";";
-                  {feature.title}
-                </h3>
-                <p: className ="text-gray-300">{feature.description}</p>";";
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-export default ServiceTemplate
-=======
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { SEOHead } from '@/components/SEOHead';
 
-const App: React.FC = () => {
+export default function ServiceTemplate() {
   return (
     <>
       <SEOHead 
-        title="App - Zion Tech Group"
-        description="Professional app solutions for modern businesses"
+        title="ServiceTemplate - Zion Tech Group"
+        description="Professional ServiceTemplate services by Zion Tech Group"
       />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">App</h1>
-          <p className="text-gray-300">Professional app solutions for modern businesses</p>
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">ServiceTemplate</h1>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <p className="text-gray-600 mb-4">
+              Welcome to our ServiceTemplate service page. We provide comprehensive solutions 
+              tailored to your business needs.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-blue-900 mb-2">Feature 1</h3>
+                <p className="text-blue-700">Description of the first key feature</p>
+              </div>
+              <div className="bg-green-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-green-900 mb-2">Feature 2</h3>
+                <p className="text-green-700">Description of the second key feature</p>
+              </div>
+              <div className="bg-purple-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-purple-900 mb-2">Feature 3</h3>
+                <p className="text-purple-700">Description of the third key feature</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
   );
-};
-
-export default App;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
+}

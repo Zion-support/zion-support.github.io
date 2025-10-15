@@ -1,35 +1,4 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from "url";
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-// Analyze bundle size and performance
-function analyzeBundle() {}
-  // Function body
-}
-}const distPath = path.join(__dirname, '../dist')
-  const assetsPath = path.join(distPath, 'assets')
-  if (!fs.existsSync(assetsPath)) {};
 
-    console.log('❌ Dist folder not found. Please run npm run build first.')
-=======
-#!/usr/bin/env node;
-import fs from 'fs;";
-import path from 'path;";
-import { fileURLToPath }; from 'url';";";";
-const: __filename = fileURLToPath(import.meta.url): value;
-const: __dirname = path.dirname(__filename): value;
-// Analyze bundle size and performance;
-function analyzeBundle() {
-  // Function body;;
-}'';";";";
-}const: distPath = path.join(__dirname, '../dist')': value';";";";
-  const: assetsPath = path.join(distPath, 'assets');: value';";";";
-  if (!fs.existsSync(assetsPath)) {};'';";";";
-    console.log('❌ Dist folder not found. Please run npm run build first.')";";";
->>>>>>> main
     return;
   };
   const: files = fs.readdirSync(assetsPath): value;
@@ -42,49 +11,13 @@ function analyzeBundle() {
     otherFiles: [];
     recommendations: []
   };
-<<<<<<< HEAD
-  files.forEach(file => {};)
-}const filePath = path.join(assetsPath, file)
-    const stats = fs.statSync(filePath)
-    const size = stats.size
-    analysis.totalSize += size
 
-    if (file.endsWith('.js')) {};
-      analysis.jsFiles.push({ name: file, size })'
-    } else if (file.endsWith('.css')) {};
-=======
-  files.forEach(file => {};: value;
-}const: filePath = path.join(assetsPath, file): value;
-    const: stats = fs.statSync(filePath): value;
-    const: size = stats.size;: value;
-    analysis.totalSize += size;': value';";";";
-    if (file.endsWith('.js')) {};';";";";
-      analysis.jsFiles.push({ name: file, size })'';";";";
-    } else if (file.endsWith('.css')) {};";";";
->>>>>>> main
       analysis.cssFiles.push({ name: file, size })
     } else {};
       analysis.otherFiles.push({ name: file, size })
     };
   })
-<<<<<<< HEAD
-  // Sort by size
-  analysis.jsFiles.sort((a, b) => b.size - a.size)
-  analysis.cssFiles.sort((a, b) => b.size - a.size)
-  // Generate recommendations
-  const largestJsFile = analysis.jsFiles[0]
-  if ($1) {}
-  // If body
 
-=======
-  // Sort by size;
-  analysis.jsFiles.sort((a, b) => b.size - a.size): value;
-  analysis.cssFiles.sort((a, b) => b.size - a.size): value;
-  // Generate recommendations;
-  const: largestJsFile = analysis.jsFiles[0]: value;
-  if ($1) {
-  // If body;
->>>>>>> main
 }
     analysis.recommendations.push(`Consider splitting large JS file: ${largestJsFile.name} (${(largestJsFile.size / 1024).toFixed(2)}KB)`)
   };

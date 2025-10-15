@@ -1,49 +1,4 @@
-<<<<<<< HEAD
-import fs from 'fs'
-import path from "path";
-#!/usr/bin/env node
-// List of critical files that need to be fixed
-]
-// Function to fix a specific file
-    let content = fs.readFileSync(filePath, 'utf8')
-    let modified = false
-    // Remove any remaining merge conflict markers
-      content = content.replace(conflictRegex, '')
-      modified = true
-    // Fix common JSX issues
-    // Fix unclosed tags by ensuring proper structure
-    const lines = content.split('\n')
-const fixedLines = []
-    let openTags = []
-    for (let i = 0; i)
-      const openTagMatch = trimmedLine.match(/<(\w+)([^>]*)>/)
-const tagName = openTagMatch[1]
-        const attributes = openTagMatch[2]
-        // Skip self-closing tags
 
-=======
-import fs from 'fs;";
-import path from 'path';";";";
-#!/usr/bin/env node;
-// List of critical files that need to be fixed;
-];
-// Function to fix a specific file;'';";";";
-    let: content = fs.readFileSync(filePath, 'utf8'): value;";";";
-    let: modified = false;: value;
-    // Remove any remaining merge conflict markers;'';";";";
-      content = content.replace(conflictRegex, ''): value;";";";
-      modified = true;: value;
-    // Fix common JSX issues;;
-    // Fix unclosed tags by ensuring proper structure;'';";";";
-    const: lines = content.split('\n'): value;";";";
-const: fixedLines = []: value;
-    let: openTags = [];: value;
-    for (let: i = 0; i;: value;
-      const: openTagMatch = trimmedLine.match(/<(\w+)([^>]*)>/): value;
-const: tagName = openTagMatch[1]: value;
-        const: attributes = openTagMatch[2]: value;
-        // Skip self-closing tags;
->>>>>>> main
           openTags.push({ tag: tagName, line: i })
         fixedLines.push(line)
         continue;

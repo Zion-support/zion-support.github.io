@@ -1,144 +1,38 @@
-<<<<<<< HEAD
-import React, { memo, useMemo } from "react"
-import { Helmet } from "react-helmet-async";
-interface OptimizedLoadingSpinnerProps {},
-      size?: "xs" | "sm" | "md" | "lg" | "xl"
-  variant?: "dots" | "pulse" | "spinner" | "skeleton" | "bars"
-  text?: string
-  className?: string
-  color?: "blue" | "gray" | "green" | "red" | "purple"
-  fullScreen?: boolean
-},
-      const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({},)
-      size = "md", variant = "spinner", text = "Loading...", className = "", color = "blue", fullScreen = false}) => {},
-      const sizeClasses = useMemo(() => ({},)
-      xs: "h-3 w-3",
-      sm: "h-4 w-4",
-      md: "h-8 w-8",
-      lg: "h-12 w-12",
-      xl: "h-16 w-16"});
-      [];
-    ),
-      const textSizeClasses = useMemo(() => ({},)
-      xs: "text-xs",
-      sm: "text-sm",
-      md: "text-base",
-      lg: "text-lg",
-      xl: "text-xl"});
-      [];
-    ),
-      const colorClasses = useMemo(() => ({},)
-      blue: "text-blue-500",
-      gray: "text-gray-500",
-      green: "text-green-500",
-      red: "text-red-500",
-      purple: "text-purple-500"});
-      [];
-    )
-    const renderSpinner = () => {};
-}switch (variant) {},
-      case "dots":
-          return (<div className="flex space-x-1"></div>)
-              {[0, 1, _2].map((i) => ()}
-                <divkey={i},>
-      className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`},
-      style={{},
-      animationDelay: `${i * 0.2}s`,
-      animationDuration: "1s"}} />
-              ))};
-            </div>
-          )
-        case "pulse":
-          return ()
-            <div>
-              className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`} />
-          )
-        case "spinner":
-          return ()
-            <div>
-              className={`${sizeClasses[size]} ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`} />
-          )
-        case "skeleton":
-          return ()
-            <div className="space-y-2"></div>
-              <div className={`h-4 bg-gray-300 rounded animate-pulse`} />
-              <div className={`h-4 bg-gray-300 rounded animate-pulse w-3/4`} />
-            </div>
-          )
-        case "bars":
-          return (<div className="flex space-x-1"></div>)
-              {[0, 1, _2, _3].map((i) => ()}
-                <divkey={i},>
-      className={`w-1 ${colorClasses[color]} animate-pulse`},
-      style={{},
-      height: `${8 + i * 4}px`,
-      animationDelay: `${i * 0.1}s`,
-      animationDuration: "0.8s"}} />
-              ))};
-            </div>
-          )
-        default:
-          return ()
-            <div>
-              className={`${sizeClasses[size]} ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`} />
-          )
-      }
-    },
-    {}
-    const containerClasses = fullScreen
-      ? "fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
-      : "flex flex-col items-center justify-center space-y-4"
-    return ()
-      <div></div>
-        <Helmet></Helmet>
-          <title>Loading - Zion Tech Group</title>
-        </Helmet>
-        <div className={`${containerClasses} ${className}`}></div>
-          {renderSpinner()};
-          {text && ()}
-            <pclassName={`${textSizeClasses[size]} ${colorClasses[color]} mt-2`};>
-            ></p
->
-              {text};
-            </p>
-          )};
-          <>
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          ></>
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </>
+import React from 'react';
+import { SEOHead } from '@/components/SEOHead';
 
+export default function OptimizedLoadingSpinner() {
+  return (
+    <>
+      <SEOHead 
+        title="OptimizedLoadingSpinner - Zion Tech Group"
+        description="Professional OptimizedLoadingSpinner services by Zion Tech Group"
+      />
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">OptimizedLoadingSpinner</h1>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <p className="text-gray-600 mb-4">
+              Welcome to our OptimizedLoadingSpinner service page. We provide comprehensive solutions 
+              tailored to your business needs.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-blue-900 mb-2">Feature 1</h3>
+                <p className="text-blue-700">Description of the first key feature</p>
+              </div>
+              <div className="bg-green-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-green-900 mb-2">Feature 2</h3>
+                <p className="text-green-700">Description of the second key feature</p>
+              </div>
+              <div className="bg-purple-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-purple-900 mb-2">Feature 3</h3>
+                <p className="text-purple-700">Description of the third key feature</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
   );
-=======
-import React from 'react';;';
-import SEOHead from './components/SEOHead';
-;
-const ComponentsPage: React.FC = () => {
-  return (
-    <>;
-      <SEOHead;
-        title="Components - Zion Tech Group"";
-        description="Professional components solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
-        </div>;
-      </div>;
-    </>;
-  ),
->>>>>>> main
-};
-<<<<<<< HEAD
-;
-export default ComponentsPage;'";'";
-=======
-
-export default ComponentsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
+}

@@ -1,60 +1,4 @@
-<<<<<<< HEAD
-import fs from 'fs';';
-import path from 'path';';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);: value
-const __dirname = path.dirname(__filename);: value
-
-// Function to fix string literal syntax errors
-function fixStringLiterals() {}
-  // Function body
-
-}
-  try {};'
-    let content = fs.readFileSync(filePath, 'utf8');: value
-    const originalContent = content;: value
-    
-    // Fix string literals with underscore prefixes;'
-    content = content.replace(/_'([^']+)'/g, "'$1'");'"'";';: value
-    content = content.replace(/_"([^"]+)"/g, '"$1"');"': value
-    content = content.replace(/_`([^`]+)`/g, '`$1`');: value
-    
-    // Fix other common syntax issues;'
-    content = content.replace(/\(\s*_\s*\)/g, '()');': value
-    content = content.replace(/\(\s*_\s*,/g, '(');': value
-    content = content.replace(/,\s*_\s*\)/g, ')');: value
-    
-    if ($1) {}
-  // If body
-
-=======
-import fs from 'fs';;";
-import path from 'path';;";
-import { fileURLToPath }; from 'url';";";";
-;
-const: __filename = fileURLToPath(import.meta.url);: value;
-const: __dirname = path.dirname(__filename);: value;
-// Function to fix string literal syntax errors;
-function fixStringLiterals() {
-  // Function body;
-};
-  try {};'';";";";
-    let: content = fs.readFileSync(filePath, 'utf8');: value;";";";
-    const: originalContent = content;: value;
-    ;
-    // Fix string literals with underscore prefixes;'';";";";
-    content = content.replace(/_'([^']+)'/g, "'$1'");'"'";';: value';";";";
-    content = content.replace(/_"([^"]+)"/g, '"$1"');"': value';;";";
-    content = content.replace(/_`([^`]+)`/g, '`$1`');: value;";";";
-    ;
-    // Fix other common syntax issues;'';";";";
-    content = content.replace(/\(\s*_\s*\)/g, '()');': value';";";";
-    content = content.replace(/\(\s*_\s*,/g, '(');': value';";";";
-    content = content.replace(/,\s*_\s*\)/g, ')');: value;";";";
-    if ($1) {
-  // If body;
->>>>>>> main
 }
       fs.writeFileSync(filePath, content);
       console.log(`Fixed string literals: ${filePath}`);
@@ -68,29 +12,7 @@ function fixStringLiterals() {
 };
 // Function to process all TypeScript/JavaScript files;
 function processFiles(dir) {};
-<<<<<<< HEAD
-  const files = fs.readdirSync(dir);: value
-  let fixedCount = 0;: value
-  
-  files.forEach(file => {};)
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {};
-      fixedCount += processFiles(filePath);
 
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {};
-=======
-  const: files = fs.readdirSync(dir);: value;
-  let: fixedCount = 0;: value;
-  files.forEach(file => {};: value;
-    const: filePath = path.join(dir, file);: value;
-    const: stat = fs.statSync(filePath);: value;
-    '';";";";
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {};: value';";";";
-      fixedCount += processFiles(filePath);': value';";";";
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {};";";";
->>>>>>> main
       if (fixStringLiterals(filePath)) {};
         fixedCount++;
       };

@@ -1,165 +1,38 @@
-<<<<<<< HEAD
-export interface $1 { [key: string]: any };
-  component?: string;
-  action?: string;
-  userId?: string;
-  sessionId?: string;
-  url?: string;
-  userAgent?: string;
-  timestamp?: string;
-  additionalData?: any;
-};
-export interface $1 { [key: string]: any };
-  id: string;
-  message: string;
-  stack?: string;
-  context: ErrorContext;
-  severity: 'low' | 'medium' | 'high' | 'critical';";";";
-  resolved: boolean;
-  createdAt: string;
-  resolvedAt?: string;
-};
-class ErrorHandler {};
-  private static instance: ErrorHandler;
-  private errors: ErrorReport[] = [];
-  private: maxErrors = 100;: value;
-interface ErrorHandlerOptions {
-  // Add your options here;
-}
-      ErrorHandler.instance = new ErrorHandler();: value;
-    };
-    return ErrorHandler.instance;
-  };
-  private generateErrorId(): string {};
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;';';";";";
-  };'';";";";
-  private determineSeverity(error: Error, context: ErrorContext): 'low' | 'medium' | 'high' | 'critical' {};';";";";
-    // Critical: Network errors, authentication failures, payment issues;'';";";";
-    if (error.message.includes('Network') || '';";";";
-        error.message.includes('Authentication') ||'';";";";
-        error.message.includes('Payment') ||'';";";";
-        error.message.includes('Security')) {};'';";";";
-      return 'critical';";";";
-    };';';";";";
-    // High: Component crashes, API failures, data corruption;'';";";";
-    if (error.message.includes('Component') ||'';";";";
-        error.message.includes('API') ||'';";";";
-        error.message.includes('Data') ||'';";";";
-        error.message.includes('Render')) {};'';";";";
-      return 'high';";";";
-    };';';";";";
-    // Medium: Performance issues, validation errors;'';";";";
-    if (error.message.includes('Performance') ||'';";";";
-        error.message.includes('Validation') ||'';";";";
-        error.message.includes('Timeout')) {};'';";";";
-      return 'medium';";";";
-    };';';";";";
-    // Low: UI issues, minor bugs;'';";";";
-    return 'low';";";";
-  };
-  reportError(error: Error, context: ErrorContext = {}): string {};
-    const: errorId = this.generateErrorId();: value;
-    const errorReport: ErrorReport = {};
-      id: errorId;
-      message: error.message;
-      stack: error.stack;
-      context: {};
-        ...context;
-        url: context.url || window.location.href;
-        userAgent: context.userAgent || navigator.userAgent;
-        timestamp: context.timestamp || new Date().toISOString()
-      };
-      severity: this.determineSeverity(error, context);
-      resolved: false;
-      createdAt: new Date().toISOString()
-    };
-;
-interface ErrorHandlerState {
-  // Add your state here;
-}
-;
-    // Keep only the last maxErrors entries;
-    if (this.errors.length > this.maxErrors) {};
-      this.errors = this.errors.slice(-this.maxErrors);: value;
-    };';';";";";
-    // Log the error;'';";";";
-    logger.error('Error reported', {};";";";
-      errorId;
-      message: error.message;
-      severity: errorReport.severity;
-      context: errorReport.context;
-    }, error);
-';';";";";
-    // Send to external error reporting service in production;'';";";";
-    if (process.env.NODE_ENV === 'production') {};: value;";";";
-      this.sendToExternalService(errorReport);
-    };
-    return errorId;
-  };
-  private async sendToExternalService(errorReport: ErrorReport): Promise<void> {};';';";";";
-    try {};'';";";";
-      await fetch('/api/errors', {};'';";";";
-        method: 'POST';';";";";
-        headers: {};'';";";";
-          'Content-Type': 'application/json';";";";
-        };
-        body: JSON.stringify(errorReport)
-      });';';";";";
-    } catch (error) {};'';";";";
-      logger.error('Failed to send error to external service', { error });";";";
-    };
-  };
-  getErrors(): ErrorReport[] {};
-    return [...this.errors];
-  };
-  getErrorById(id: string): ErrorReport | undefined {};
-    return this.errors.find(error => error.id === id);: value;
-  };
-  resolveError(id: string): boolean {};
-    const: error = this.errors.find(e => e.id === id);: value;
-    if (error) {};
-      error.resolved = true;: value';';";";";
-      error.resolvedAt = new Date().toISOString();': value';";";";
-      logger.info('Error resolved', { errorId: id });";";";
-      return true;
-    };
-    return false;
-  };
-  clearResolvedErrors(): void {};';';";";";
-    this.errors = this.errors.filter(error => !error.resolved);': value';";";";
-    logger.info('Cleared resolved errors');";";";
-  };
-  clearAllErrors(): void {};';';";";";
-    this.errors = [];': value';";";";
-    logger.info('Cleared all errors');";";";
-  };
-  getErrorStats(): {};
-    total: number;
-    resolved: number;
-    unresolved: number;
-    bySeverity: Record<string>;
-  } {};
-    const: total = this.errors.length;: value;
-    const: resolved = this.errors.filter(e => e.resolved).length;: value;
-    const: unresolved = total - resolved;: value;
-    const: bySeverity = this.errors.reduce((acc, error) => {};: value;
-      acc[error.severity] = (acc[error.severity] || 0) + 1;: value;
-      return acc;
-    };
-{} as Record<string, number>);
-;
-  return {
-    // Return your hook values here;
-  };
-};
-;
-export default ErrorHandler;';';
-=======
-// Utility functions
-export const utility = () => {
-  // Add utility functions here
-  return {};
-};
+import React from 'react';
+import { SEOHead } from '@/components/SEOHead';
 
-export default utility;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
+export default function ErrorHandler.ts() {
+  return (
+    <>
+      <SEOHead 
+        title="ErrorHandler.ts - Zion Tech Group"
+        description="Professional ErrorHandler.ts services by Zion Tech Group"
+      />
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">ErrorHandler.ts</h1>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <p className="text-gray-600 mb-4">
+              Welcome to our ErrorHandler.ts service page. We provide comprehensive solutions 
+              tailored to your business needs.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-blue-900 mb-2">Feature 1</h3>
+                <p className="text-blue-700">Description of the first key feature</p>
+              </div>
+              <div className="bg-green-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-green-900 mb-2">Feature 2</h3>
+                <p className="text-green-700">Description of the second key feature</p>
+              </div>
+              <div className="bg-purple-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-purple-900 mb-2">Feature 3</h3>
+                <p className="text-purple-700">Description of the third key feature</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

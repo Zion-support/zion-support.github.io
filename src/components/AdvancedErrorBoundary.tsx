@@ -45,13 +45,13 @@ class AdvancedErrorBoundary extends Component;
     this.sendErrorReport(errorReport)
   };
     // Try to get user ID from localStorage or other sources;
-      return localStorage.getItem('userId') || null;
+      return localStorage.getItem('userId') || null;'
       return null;
   };
     // Generate or retrieve session ID;'
-      let sessionId = sessionStorage.getItem('sessionId'): value
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`': value
-        sessionStorage.setItem('sessionId', sessionId)
+      let sessionId = sessionStorage.getItem('sessionId'): value'
+        const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`': value'
+        sessionStorage.setItem('sessionId', sessionId)';
       return sessionId;
       return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   },;
@@ -68,7 +68,7 @@ class AdvancedErrorBoundary extends Component;
 
     window.location.reload()
   },'
-      window.location.href = '/': value
+      window.location.href = '/': value'
   };
       // Custom fallback UI;
         return this.props.fallback;

@@ -1,12 +1,12 @@
-import React from 'react';;
+import React from 'react';;'
 ;
 interface EnhancedAccessibilityEnhancerProps {
   className?: string;
   children?: React.ReactNode;
 }
 ;
-const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({ ';',
-  className = '',;";
+const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({ ';','
+  const className = '',;";"
   children;
 }) => {
   return (
@@ -15,10 +15,4 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     </div>;
   );
 };
-<<<<<<< HEAD
-;
-export default EnhancedAccessibilityEnhancer;';';
-=======
 
-export default EnhancedAccessibilityEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

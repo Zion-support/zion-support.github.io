@@ -1,89 +1,38 @@
-import React from 'react';;';
-import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
+import React from 'react';
+import { SEOHead } from '@/components/SEOHead';
 
-interface ContentPromotionBannerProps {},
-      title?: string
-  description?: string
-  ctaText?: string
-  ctaLink?: string
-  variant?: "primary" | "secondary" | "success"
-  className?: string
-},
-      const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({},)
-      title = "Transform Your Business with AI", description = "Discover how our cutting-edge AI solutions can revolutionize your operations and drive unprecedented growth.", ctaText = "Get Started Today", ctaLink = "/contact", variant = "primary", className = ""}) => {},
-      const getVariantStyles = () => {},
-      switch (variant) {},
-      case "primary":
-        return "bg-gradient-to-r from-cyan-500 to-purple-600"
-      case "secondary":
-        return "bg-gradient-to-r from-blue-500 to-indigo-600"
-      case "success":
-        return "bg-gradient-to-r from-green-500 to-emerald-600"
-      default:
-        return "bg-gradient-to-r from-cyan-500 to-purple-600"
-    }
-    },
-    {}
-  const getIcon = () => {};
-}switch (variant) {},
-      case "primary":
-        return <className="w-6 h-6" />
-      case "secondary":
-        return <Star className="w-6 h-6" />
-      case "success":
-        return <Star className="w-6 h-6" />
-      default:
-        return <className="w-6 h-6" />
-    }
-    },
-    {}
-  return ()
-    <divclassName={`relative overflow-hidden rounded-lg p-8 text-white ${getVariantStyles()} ${className}`};>
-    ></div
->
-      <div className="relative z-10"></div>
-        <div className="flex items-center justify-center mb-4">{getIcon()}</div>
-        <h2 className="text-3xl font-bold text-center mb-4">{title}</h2>
-        <p className="text-lg text-center mb-6 opacity-90 max-w-2xl mx-auto"></p>
-          {description};
-        </p>
-        <div className="text-center"></div>
-          <>
-            to={ctaLink},
-      className="inline-flex items-center bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-          ></>
-            {ctaText};
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </>
-
+export default function ContentPromotionBanner() {
+  return (
+    <>
+      <SEOHead 
+        title="ContentPromotionBanner - Zion Tech Group"
+        description="Professional ContentPromotionBanner services by Zion Tech Group"
+      />
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">ContentPromotionBanner</h1>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <p className="text-gray-600 mb-4">
+              Welcome to our ContentPromotionBanner service page. We provide comprehensive solutions 
+              tailored to your business needs.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-blue-900 mb-2">Feature 1</h3>
+                <p className="text-blue-700">Description of the first key feature</p>
+              </div>
+              <div className="bg-green-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-green-900 mb-2">Feature 2</h3>
+                <p className="text-green-700">Description of the second key feature</p>
+              </div>
+              <div className="bg-purple-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-purple-900 mb-2">Feature 3</h3>
+                <p className="text-purple-700">Description of the third key feature</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
   );
-=======
-;
-const ComponentsPage: React.FC = () => {
-  return (
-    <>;
-      <SEOHead;
-        title="Components - Zion Tech Group"";
-        description="Professional components solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
-        </div>;
-      </div>;
-    </>;
-  ),
->>>>>>> main
-};
-<<<<<<< HEAD
-;
-export default ComponentsPage;'";'";
-=======
-
-export default ComponentsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
+}

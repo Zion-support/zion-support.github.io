@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import fs from 'fs'
+import fs from 'fs';
 import path from "path";
 console.log('🔧 Starting comprehensive error fixing process...')
 // Function to find all files with merge conflicts

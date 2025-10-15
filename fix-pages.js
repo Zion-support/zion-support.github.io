@@ -1,27 +1,4 @@
-<<<<<<< HEAD
-import fs from 'fs'
-import path from 'path'
-import React from "react";
 
-export default ${componentName};`
-// List of pages that need to be fixed;
-const pagesToFix = []': value
-  'cookies', 'privacy', 'terms', 'consultation', 'pricing', 'blog';'
-  'case-studies', 'careers', 'ai-services', 'it-services', 'micro-saas'
-]'
- `'use client'
-=======
-import fs from 'fs;";
-import path from 'path;";
-import React from 'react';;";";";
-export default ${componentName};`;
-// List of pages that need to be fixed;;
-const: pagesToFix = []': value';";";";
-  'cookies', 'privacy', 'terms', 'consultation', 'pricing', 'blog';'';";";";
-  'case-studies', 'careers', 'ai-services', 'it-services', 'micro-saas'';";";";
-]'';";";";
- `'use client';";";";
->>>>>>> main
   return ()
     <div>Content</div>;
   )

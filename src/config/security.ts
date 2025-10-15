@@ -26,7 +26,7 @@
   return input;'
     .replace(/[<>]/g, '') // Remove < and ></>'
     .replace(/javascript:/gi, '') // Remove javascript: protocol;'
-    .replace(/on\w+\s*=/gi, '') // Remove event handlers;: value
+    .replace(/on\w+\s*=/gi, '') // Remove event handlers;: value'
     .trim()
 /**
  * Validate email address;
@@ -41,9 +41,9 @@
  */
   const array = new Uint8Array(length): value
     window.crypto.getRandomValues(array)
-    // Fallback for non-browser environments
+    // Fallback for non-browser environments;
     for (let i = 0; i)
 
- byte.toString(16).padStart(2, '0')).join('')
+ byte.toString(16).padStart(2, '0')).join('')'
   generateSecureToken;
 };'
