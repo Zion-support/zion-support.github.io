@@ -7,6 +7,29 @@ import HomePage from './app/page';
 import AboutPage from './app/about/page';
 import ServicesPage from './app/services/page';
 import ContactPage from './app/contact/page';
+import AIServicesPage from './app/ai-services/page';
+import ITServicesPage from './app/it-services/page';
+import CloudInfrastructurePage from './app/cloud-infrastructure/page';
+import FiveGSolutionsPage from './app/5g-solutions/page';
+import TeamPage from './app/team/page';
+import CareersPage from './app/careers/page';
+import HelpPage from './app/help/page';
+import PrivacyPage from './app/privacy/page';
+import TermsPage from './app/terms/page';
+import BlogPage from './app/blog/page';
+import CaseStudiesPage from './app/case-studies/page';
+import PricingPage from './app/pricing/page';
+import PartnershipsPage from './app/partnerships/page';
+import DigitalTransformationPage from './app/digital-transformation/page';
+import DataAnalyticsPage from './app/data-analytics/page';
+import DatabaseManagementPage from './app/database-management/page';
+import MobileDevelopmentPage from './app/mobile-development/page';
+import NetworkInfrastructurePage from './app/network-infrastructure/page';
+import MicroSaasSolutionsPage from './app/micro-saas-solutions/page';
+import WebDevelopmentPage from './app/web-development/page';
+import AccessibilityPage from './app/accessibility/page';
+import APIDocsPage from './app/api-docs/page';
+import CookiesPage from './app/cookies/page';
 
 // Import components
 import Navigation from './app/components/Navigation';
@@ -57,6 +80,39 @@ export default function App() {
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/services" element={<ServicesPage />} />
+                  
+                  {/* Service Pages */}
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                  <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                  <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                  <Route path="/database-management" element={<DatabaseManagementPage />} />
+                  <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                  <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                  <Route path="/micro-saas-solutions" element={<MicroSaasSolutionsPage />} />
+                  <Route path="/web-development" element={<WebDevelopmentPage />} />
+                  
+                  {/* Company Pages */}
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
+                  <Route path="/partnerships" element={<PartnershipsPage />} />
+                  
+                  {/* Content Pages */}
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/case-studies" element={<CaseStudiesPage />} />
+                  <Route path="/pricing" element={<PricingPage />} />
+                  
+                  {/* Support Pages */}
+                  <Route path="/help" element={<HelpPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="/cookies" element={<CookiesPage />} />
+                  <Route path="/accessibility" element={<AccessibilityPage />} />
+                  
+                  {/* Technical Pages */}
+                  <Route path="/api-docs" element={<APIDocsPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
