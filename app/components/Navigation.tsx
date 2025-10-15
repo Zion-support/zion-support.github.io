@@ -7,13 +7,9 @@ import {
   InformationCircleIcon,
   PhoneIcon,
   DocumentTextIcon,
-  AcademicCapIcon,
-  PlayIcon,
   QuestionMarkCircleIcon,
-  CheckIcon,
   CurrencyDollarIcon,
   CogIcon,
-  ChevronDownIcon,
   GlobeAltIcon,
   CloudIcon,
   CpuChipIcon,
@@ -29,21 +25,11 @@ import {
   DevicePhoneMobileIcon,
   UserPlusIcon,
   CheckCircleIcon,
-  RocketLaunchIcon,
-  ServerIcon,
   ShieldCheckIcon
 } from '@heroicons/react/24/outline';
 
-interface NavigationProps {
-  onSidebarToggle?: () => void;
-}
-
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   const location = useLocation();
 
   const navigation = [

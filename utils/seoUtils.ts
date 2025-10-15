@@ -1,33 +1,131 @@
-import { Helmet } from 'react-helmet-async';
-
-export default function utilsPage() {
-  return (
-    <>
-      <Helmet>
-        <title>Utils - Zion Tech Group</title>
-        <meta name="description" content="Utils services and solutions from Zion Tech Group." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Utils
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional Utils services and solutions for your business needs.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
-                Get Started
-              </button>
-              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+export interface SEOData {
+  title: string;
+  description: string;
+  keywords?: string[];
+  canonicalUrl?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  structuredData?: any;
 }
+
+export interface PageSEOProps {
+  title: string;
+  description: string;
+  keywords?: string[];
+  canonicalUrl?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  structuredData?: any;
+}
+
+export class SEOOptimizer {
+  private defaultData: Partial<SEOData>;
+
+  constructor(defaultData: Partial<SEOData> = {}) {
+    this.defaultData = {
+      ogType: 'website',
+      twitterCard: 'summary_large_image',
+      ...defaultData,
+    };
+  }
+
+  generateMetaTags(data: SEOData): Record<string, string> {
+    const metaTags: Record<string, string> = {};
+
+    // Basic meta tags
+    metaTags['title'] = data.title;
+    metaTags['description'] = data.description;
+    
+    if (data.keywords && data.keywords.length > 0) {
+      metaTags['keywords'] = data.keywords.join(', ');
+    }
+
+    if (data.canonicalUrl) {
+      metaTags['canonical'] = data.canonicalUrl;
+    }
+
+    // Open Graph tags
+    metaTags['og:title'] = data.ogTitle || data.title;
+    metaTags['og:description'] = data.ogDescription || data.description;
+    metaTags['og:type'] = data.ogType || 'website';
+    
+    if (data.ogImage) {
+      metaTags['og:image'] = data.ogImage;
+    }
+
+    // Twitter Card tags
+    metaTags['twitter:card'] = data.twitterCard || 'summary_large_image';
+    metaTags['twitter:title'] = data.twitterTitle || data.title;
+    metaTags['twitter:description'] = data.twitterDescription || data.description;
+    
+    if (data.twitterImage) {
+      metaTags['twitter:image'] = data.twitterImage;
+    }
+
+    return metaTags;
+  }
+
+  generateStructuredData(data: SEOData): any {
+    const baseStructuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: data.title,
+      description: data.description,
+    };
+
+    if (data.canonicalUrl) {
+      (baseStructuredData as any)['url'] = data.canonicalUrl;
+    }
+
+    if (data.structuredData) {
+      return {
+        ...baseStructuredData,
+        ...data.structuredData,
+      };
+    }
+
+    return baseStructuredData;
+  }
+
+  generateSitemap(pages: Array<{ url: string; lastModified: Date; changeFrequency: string; priority: number }>): string {
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages.map(page => `  <url>
+    <loc>${page.url}</loc>
+    <lastmod>${page.lastModified.toISOString()}</lastmod>
+    <changefreq>${page.changeFrequency}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+
+    return sitemap;
+  }
+
+  generateRobotsTxt(allowAll: boolean = true, disallowPaths: string[] = []): string {
+    if (allowAll) {
+      return `User-agent: *
+Allow: /
+
+Sitemap: ${this.defaultData.canonicalUrl || 'https://example.com'}/sitemap.xml`;
+    }
+
+    return `User-agent: *
+${disallowPaths.map(path => `Disallow: ${path}`).join('\n')}
+
+Sitemap: ${this.defaultData.canonicalUrl || 'https://example.com'}/sitemap.xml`;
+  }
+}
+
+export const seoOptimizer = new SEOOptimizer();

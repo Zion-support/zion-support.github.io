@@ -1,9 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function ComponentsPage() {
+export default function AccessibilityEnhancer() {
   return (
-    <div className={className}>
+    <div className="accessibility-enhancer">
       <h2>AccessibilityEnhancer</h2>
       <p>This component is under construction.</p>
     </div>
