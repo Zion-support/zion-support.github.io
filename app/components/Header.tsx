@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Mail, MapPin, Zap, Brain, Code, Cloud, Wifi, Users, ChevronDown } from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin, Zap, Brain, Code, Cloud, Wifi, Users, ChevronDown, Sidebar as SidebarIcon } from 'lucide-react';
+import Sidebar from './Sidebar';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
@@ -76,7 +78,12 @@ const Header: React.FC = () => {
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
         { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Customer Insights Pro', href: '/ai-customer-insights-pro' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
+        { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager-pro' },
+        { name: 'AI Email Marketing Pro', href: '/ai-email-marketing-pro' },
+        { name: 'AI Inventory Management Pro', href: '/ai-inventory-management-pro' }
       ]
     },
     {
@@ -89,11 +96,13 @@ const Header: React.FC = () => {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20 shadow-2xl' 
-        : 'bg-transparent'
-    }`}>
+    <>
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20 shadow-2xl' 
+          : 'bg-transparent'
+      }`}>
       {/* Top Contact Bar */}
       <div className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-2 px-4">
         <div className="container mx-auto flex justify-between items-center text-sm">
@@ -186,6 +195,14 @@ const Header: React.FC = () => {
               </button>
             </div>
 
+            {/* Sidebar Toggle */}
+            <button
+              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+              className="hidden lg:block p-2 text-gray-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
+            >
+              <SidebarIcon className="w-6 h-6" />
+            </button>
+
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -243,6 +260,7 @@ const Header: React.FC = () => {
         </div>
       </nav>
     </header>
+    </>
   );
 };
 
