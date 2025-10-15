@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Zap, Shield, BarChart3, Users, Clock, CheckCircle, ArrowRight, Star } from 'lucide-react';
+import { Zap, Shield, BarChart3, Users, Clock, CheckCircle, ArrowRight, Star, Code } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
   const saasProducts = [
@@ -12,7 +12,9 @@ const MicroSaasPage: React.FC = () => {
       popular: true,
       icon: <Zap className="w-8 h-8" />,
       marketPrice: "$99/month",
-      savings: "50% off"
+      savings: "50% off",
+      link: "https://ziontechgroup.com/ai-content-writer-pro",
+      benefits: ["Save 80% content creation time", "Increase SEO rankings by 60%", "Maintain consistent brand voice", "Generate 100+ articles daily"]
     },
     {
       name: "AI Analytics Dashboard Pro",
@@ -22,7 +24,9 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       icon: <BarChart3 className="w-8 h-8" />,
       marketPrice: "$199/month",
-      savings: "50% off"
+      savings: "50% off",
+      link: "https://ziontechgroup.com/ai-analytics-dashboard-pro",
+      benefits: ["Make data-driven decisions 10x faster", "Reduce reporting time by 90%", "Predict trends with 85% accuracy", "Integrate with 100+ data sources"]
     },
     {
       name: "AI Security Shield Pro",
@@ -32,7 +36,9 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       icon: <Shield className="w-8 h-8" />,
       marketPrice: "$299/month",
-      savings: "50% off"
+      savings: "50% off",
+      link: "https://ziontechgroup.com/ai-security-shield-pro",
+      benefits: ["Prevent 99.9% of cyber attacks", "Reduce security incidents by 95%", "Meet SOC 2 compliance", "24/7 automated threat response"]
     },
     {
       name: "AI Project Manager Pro",
@@ -42,7 +48,9 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       icon: <Users className="w-8 h-8" />,
       marketPrice: "$159/month",
-      savings: "50% off"
+      savings: "50% off",
+      link: "https://ziontechgroup.com/ai-project-manager-pro",
+      benefits: ["Increase project success rate by 40%", "Reduce project delays by 60%", "Optimize resource allocation", "Predict and prevent project risks"]
     },
     {
       name: "AI Email Marketing Pro",
@@ -52,7 +60,9 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       icon: <Zap className="w-8 h-8" />,
       marketPrice: "$139/month",
-      savings: "50% off"
+      savings: "50% off",
+      link: "https://ziontechgroup.com/ai-email-marketing-pro",
+      benefits: ["Increase open rates by 45%", "Boost click-through rates by 70%", "Automate 90% of campaigns", "Personalize at scale"]
     },
     {
       name: "AI Customer Support Pro",
@@ -62,7 +72,81 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       icon: <Users className="w-8 h-8" />,
       marketPrice: "$179/month",
-      savings: "50% off"
+      savings: "50% off",
+      link: "https://ziontechgroup.com/ai-customer-support-pro",
+      benefits: ["Handle 80% of queries automatically", "Reduce response time by 90%", "Increase customer satisfaction by 35%", "24/7 multilingual support"]
+    },
+    {
+      name: "AI Code Assistant Pro",
+      description: "Revolutionary AI-powered coding assistant that writes, reviews, and optimizes code with advanced language models.",
+      features: ["Code generation", "Bug detection", "Code review", "Performance optimization", "Documentation generation", "Multi-language support"],
+      price: "$129/month",
+      popular: true,
+      icon: <Code className="w-8 h-8" />,
+      marketPrice: "$249/month",
+      savings: "48% off",
+      link: "https://ziontechgroup.com/ai-code-assistant-pro",
+      benefits: ["Increase coding speed by 300%", "Reduce bugs by 70%", "Generate comprehensive documentation", "Support 50+ programming languages"]
+    },
+    {
+      name: "AI Financial Analytics Pro",
+      description: "Advanced financial intelligence platform with AI-powered forecasting, risk analysis, and investment insights.",
+      features: ["Financial forecasting", "Risk analysis", "Investment insights", "Portfolio optimization", "Market analysis", "Compliance reporting"],
+      price: "$199/month",
+      popular: false,
+      icon: <BarChart3 className="w-8 h-8" />,
+      marketPrice: "$399/month",
+      savings: "50% off",
+      link: "https://ziontechgroup.com/ai-financial-analytics-pro",
+      benefits: ["Improve investment returns by 25%", "Reduce financial risk by 60%", "Automate compliance reporting", "Predict market trends with 80% accuracy"]
+    },
+    {
+      name: "AI HR Management Suite",
+      description: "Comprehensive HR solution with AI-powered recruitment, employee analytics, and performance management.",
+      features: ["AI recruitment", "Employee analytics", "Performance tracking", "Skill assessment", "Retention prediction", "Payroll integration"],
+      price: "$159/month",
+      popular: false,
+      icon: <Users className="w-8 h-8" />,
+      marketPrice: "$299/month",
+      savings: "47% off",
+      link: "https://ziontechgroup.com/ai-hr-management-suite",
+      benefits: ["Reduce hiring time by 50%", "Improve employee retention by 40%", "Predict performance issues", "Automate 70% of HR tasks"]
+    },
+    {
+      name: "AI E-commerce Optimizer",
+      description: "Intelligent e-commerce platform with AI-powered product recommendations, pricing optimization, and inventory management.",
+      features: ["Product recommendations", "Dynamic pricing", "Inventory optimization", "Customer segmentation", "Sales forecasting", "A/B testing"],
+      price: "$179/month",
+      popular: false,
+      icon: <Zap className="w-8 h-8" />,
+      marketPrice: "$349/month",
+      savings: "49% off",
+      link: "https://ziontechgroup.com/ai-ecommerce-optimizer",
+      benefits: ["Increase sales by 35%", "Reduce inventory costs by 30%", "Improve conversion rates by 50%", "Optimize pricing automatically"]
+    },
+    {
+      name: "AI Social Media Manager",
+      description: "Advanced social media management with AI-powered content creation, scheduling, and engagement optimization.",
+      features: ["Content creation", "Post scheduling", "Engagement analysis", "Hashtag optimization", "Influencer matching", "Performance tracking"],
+      price: "$89/month",
+      popular: false,
+      icon: <Zap className="w-8 h-8" />,
+      marketPrice: "$179/month",
+      savings: "50% off",
+      link: "https://ziontechgroup.com/ai-social-media-manager",
+      benefits: ["Increase engagement by 60%", "Save 15 hours per week", "Grow followers by 200%", "Optimize posting times automatically"]
+    },
+    {
+      name: "AI Legal Document Analyzer",
+      description: "Professional legal document analysis tool with AI-powered contract review, compliance checking, and risk assessment.",
+      features: ["Contract analysis", "Compliance checking", "Risk assessment", "Document comparison", "Legal research", "Clause extraction"],
+      price: "$299/month",
+      popular: false,
+      icon: <Shield className="w-8 h-8" />,
+      marketPrice: "$599/month",
+      savings: "50% off",
+      link: "https://ziontechgroup.com/ai-legal-document-analyzer",
+      benefits: ["Reduce contract review time by 80%", "Identify risks with 95% accuracy", "Ensure compliance automatically", "Process 100+ documents daily"]
     }
   ];
 
@@ -153,7 +237,7 @@ const MicroSaasPage: React.FC = () => {
                   <h3 className="text-2xl font-bold text-white mb-4">{product.name}</h3>
                   <p className="text-gray-300 mb-6">{product.description}</p>
                   
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-3 mb-6">
                     {product.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
@@ -161,6 +245,17 @@ const MicroSaasPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Key Benefits:</h4>
+                    <ul className="space-y-2">
+                      {product.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="text-gray-300 text-sm">
+                          • {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                   
                   <div className="mb-4">
                     <div className="flex items-center space-x-2 mb-2">
@@ -171,10 +266,21 @@ const MicroSaasPage: React.FC = () => {
                     <p className="text-sm text-gray-400">Billed monthly • Cancel anytime</p>
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                    Start Free Trial
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
+                  <div className="space-y-3">
+                    <a
+                      href={product.link}
+                      className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                    >
+                      Start Free Trial
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </a>
+                    <a
+                      href="/contact"
+                      className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
+                    >
+                      Get Custom Quote
+                    </a>
+                  </div>
                 </div>
               ))}
             </div>

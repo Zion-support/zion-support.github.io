@@ -93,6 +93,26 @@ export default [
     },
   },
   {
+    files: ['**/*.cjs'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'script',
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+      },
+    },
+    rules: {
+      'no-console': 'off',
+      'no-undef': 'off',
+    },
+  },
+  {
     ignores: [
       'dist/**',
       'node_modules/**',
