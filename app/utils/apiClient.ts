@@ -1,11 +1,26 @@
-// Apiclient utility functions
+import { useEffect, useCallback, useRef } from 'react';
 
-export const Apiclient = {};
-  init: () => {};
-    };
-  process: (data: unknown) => {};
-    return data;
+interface ApiClientOptions {
+  // Add your options here
+}
+
+interface ApiClientState {
+  // Add your state here
+}
+
+export const ApiClient = (options: ApiClientOptions = {}) => {
+  const stateRef = useRef<ApiClientState>({
+    // Initialize your state here
+  });
+
+  // Add your hooks logic here
+  useEffect(() => {
+    // Add your effect logic here
+  }, []);
+
+  return {
+    // Return your hook values here
   };
-  cleanup: () => {};
-} }};
-export default Apiclient
+};
+
+export default ApiClient;

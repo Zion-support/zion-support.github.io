@@ -1,59 +1,59 @@
-import React, { Suspense, lazy } from 'react',
-      import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',
-      import { HelmetProvider } from 'react-helmet-async';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Core components - keep these synchronous for critical path
 import Navigation from './app/components/Navigation';
-    import Sidebar from './app/components/Sidebar';
-    import Footer from './app/components/Footer';
-    import LightweightErrorBoundary from './app/components/LightweightErrorBoundary';
-    import PerformanceMonitor from './app/components/PerformanceMonitor';
-    import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-    import OptimizedLoadingSpinner from './app/components/OptimizedLoadingSpinner';
-    import SEOHead from './app/components/SEOHead';
+import Sidebar from './app/components/Sidebar';
+import Footer from './app/components/Footer';
+import LightweightErrorBoundary from './app/components/LightweightErrorBoundary';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import OptimizedLoadingSpinner from './app/components/OptimizedLoadingSpinner';
+import SEOHead from './app/components/SEOHead';
 
 // Lazy load all page components
 const HomePage = lazy(() => import('./app/page'));
-    const AboutPage = lazy(() => import('./app/pages/AboutPage')),
-      const ContactPage = lazy(() => import('./app/pages/ContactPage')),
-      const ServicesPage = lazy(() => import('./app/pages/ServicesPage')),
-      const BlogPage = lazy(() => import('./app/pages/BlogPage')),
-      const TutorialsPage = lazy(() => import('./app/pages/TutorialsPage')),
-      const DemoPage = lazy(() => import('./app/pages/DemoPage')),
-      const SupportPage = lazy(() => import('./app/pages/SupportPage')),
-      const PrivacyPage = lazy(() => import('./app/pages/PrivacyPage')),
-      const TermsPage = lazy(() => import('./app/pages/TermsPage')),
-      const PricingPage = lazy(() => import('./app/pages/PricingPage')),
-      const SolutionsPage = lazy(() => import('./app/pages/SolutionsPage'));
+const AboutPage = lazy(() => import('./app/pages/AboutPage'));
+const ContactPage = lazy(() => import('./app/pages/ContactPage'));
+const ServicesPage = lazy(() => import('./app/pages/ServicesPage'));
+const BlogPage = lazy(() => import('./app/pages/BlogPage'));
+const TutorialsPage = lazy(() => import('./app/pages/TutorialsPage'));
+const DemoPage = lazy(() => import('./app/pages/DemoPage'));
+const SupportPage = lazy(() => import('./app/pages/SupportPage'));
+const PrivacyPage = lazy(() => import('./app/pages/PrivacyPage'));
+const TermsPage = lazy(() => import('./app/pages/TermsPage'));
+const PricingPage = lazy(() => import('./app/pages/PricingPage'));
+const SolutionsPage = lazy(() => import('./app/pages/SolutionsPage'));
 
 // Service pages
-const AIServicesPage = lazy(() => import('./app/pages/AIServicesPage')),
-      const ITServicesPage = lazy(() => import('./app/pages/ITServicesPage')),
-      const CloudInfrastructurePage = lazy(() => import('./app/pages/CloudInfrastructurePage')),
-      const DigitalTransformationPage = lazy(() => import('./app/pages/DigitalTransformationPage')),
-      const CaseStudiesPage = lazy(() => import('./app/pages/CaseStudiesPage')),
-      const CareersPage = lazy(() => import('./app/pages/CareersPage'));
+const AIServicesPage = lazy(() => import('./app/pages/AIServicesPage'));
+const ITServicesPage = lazy(() => import('./app/pages/ITServicesPage'));
+const CloudInfrastructurePage = lazy(() => import('./app/pages/CloudInfrastructurePage'));
+const DigitalTransformationPage = lazy(() => import('./app/pages/DigitalTransformationPage'));
+const CaseStudiesPage = lazy(() => import('./app/pages/CaseStudiesPage'));
+const CareersPage = lazy(() => import('./app/pages/CareersPage'));
 
 // Additional pages
-const CybersecurityPage = lazy(() => import('./app/pages/CybersecurityPage')),
-      const CloudSolutionsPage = lazy(() => import('./app/pages/CloudSolutionsPage')),
-      const MicroSaaSPage = lazy(() => import('./app/pages/MicroSaaSPage')),
-      const TeamPage = lazy(() => import('./app/pages/TeamPage')),
-      const DocumentationPage = lazy(() => import('./app/pages/DocumentationPage')),
-      const PartnershipsPage = lazy(() => import('./app/pages/PartnershipsPage')),
-      const APIDocsPage = lazy(() => import('./app/pages/APIDocsPage')),
-      const HelpPage = lazy(() => import('./app/pages/HelpPage')),
-      const CommunityPage = lazy(() => import('./app/pages/CommunityPage')),
-      const ChatPage = lazy(() => import('./app/pages/ChatPage')),
-      const StatusPage = lazy(() => import('./app/pages/StatusPage')),
-      const ReportPage = lazy(() => import('./app/pages/ReportPage')),
-      const SoftwareDevelopmentPage = lazy(() => import('./app/pages/SoftwareDevelopmentPage'));
+const CybersecurityPage = lazy(() => import('./app/pages/CybersecurityPage'));
+const CloudSolutionsPage = lazy(() => import('./app/pages/CloudSolutionsPage'));
+const MicroSaaSPage = lazy(() => import('./app/pages/MicroSaaSPage'));
+const TeamPage = lazy(() => import('./app/pages/TeamPage'));
+const DocumentationPage = lazy(() => import('./app/pages/DocumentationPage'));
+const PartnershipsPage = lazy(() => import('./app/pages/PartnershipsPage'));
+const APIDocsPage = lazy(() => import('./app/pages/APIDocsPage'));
+const HelpPage = lazy(() => import('./app/pages/HelpPage'));
+const CommunityPage = lazy(() => import('./app/pages/CommunityPage'));
+const ChatPage = lazy(() => import('./app/pages/ChatPage'));
+const StatusPage = lazy(() => import('./app/pages/StatusPage'));
+const ReportPage = lazy(() => import('./app/pages/ReportPage'));
+const SoftwareDevelopmentPage = lazy(() => import('./app/pages/SoftwareDevelopmentPage'));
 
 // Solution pages - lazy load these separately
-const MicroSaaSSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page')),
-      const AISolutionsPage = lazy(() => import('./app/ai-solutions/page')),
-      const ITSolutionsPage = lazy(() => import('./app/it-solutions/page')),
-      const FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'));
+const MicroSaaSSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
+const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
+const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
+const FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'));
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -80,41 +80,12 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
       </div>
     </div>
   </div>
-<<<<<<< HEAD
-),
-      function App() {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false),
-      const [, setShowPerformanceDashboard] = React.useState(false);
-=======
 );
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
-  const [, setShowPerformanceDashboard] = React.useState(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-
-  // Toggle performance dashboard with keyboard shortcut
-  React.useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
-        event.preventDefault(),
-      setShowPerformanceDashboard(prev => !prev);
-      }
-<<<<<<< HEAD
-    },
-      document.addEventListener('keydown', handleKeyDown),
-      return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []),
-      return (
-=======
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
 
   return (
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
     <LightweightErrorBoundary>
       <HelmetProvider>
         <Router>

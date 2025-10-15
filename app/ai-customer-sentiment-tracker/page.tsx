@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-import React from 'react',
-      import { Helmet } from 'react-helmet-async',
-      import { motion } from 'framer-motion',
-      import { Heart, ArrowRight } from 'lucide-react',
-      const AiCustomerSentimentTrackerPage: React.FC = () => {
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Heart, ArrowRight } from 'lucide-react';
 
-const AiCustomerSentimentTrackerPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
+const AiCustomerSentimentTrackerPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -55,7 +47,6 @@ const AiCustomerSentimentTrackerPage: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
                 className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
               >
                 View Demo
@@ -65,11 +56,7 @@ const AiCustomerSentimentTrackerPage: React.FC = () => {
         </div>
       </section>
     </div>
-  )
-    },
-    {
+  );
+};
 
 export default AiCustomerSentimentTrackerPage;
-=======
-                className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

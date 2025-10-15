@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface ErrorContext {};
   component?: string;
   action?: string;
@@ -16,50 +17,53 @@ export interface ErrorReport {};
   severity: 'low' | 'medium' | 'high' | 'critical';
   resolved: boolean;
   createdAt: string;
-  resolvedAt?: string;
+  resolvedAt?: string
 };
 class ErrorHandler {};
   private static instance: ErrorHandler;
   private errors: ErrorReport[] = [];
-  private maxErrors = 100;
+  private maxErrors = 100;: value
+=======
+import { useEffect, useCallback, useRef } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017
 
-  static getInstance(): ErrorHandler {};
-    if ($1) {
-  // If body
+interface ErrorHandlerOptions {
+  // Add your options here
 }
-      ErrorHandler.instance = new ErrorHandler();
+<<<<<<< HEAD
+      ErrorHandler.instance = new ErrorHandler();: value
     };
     return ErrorHandler.instance;
   };
   private generateErrorId(): string {};
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  };
+  };'
   private determineSeverity(error: Error, context: ErrorContext): 'low' | 'medium' | 'high' | 'critical' {};
-    // Critical: Network errors, authentication failures, payment issues
-    if (error.message.includes('Network') || 
-        error.message.includes('Authentication') ||
-        error.message.includes('Payment') ||
-        error.message.includes('Security')) {};
+    // Critical: Network errors, authentication failures, payment issues;'
+    if (error.message.includes('Network') || '
+        error.message.includes('Authentication') ||'
+        error.message.includes('Payment') ||'
+        error.message.includes('Security')) {};'
       return 'critical';
     };
-    // High: Component crashes, API failures, data corruption
-    if (error.message.includes('Component') ||
-        error.message.includes('API') ||
-        error.message.includes('Data') ||
-        error.message.includes('Render')) {};
+    // High: Component crashes, API failures, data corruption;'
+    if (error.message.includes('Component') ||'
+        error.message.includes('API') ||'
+        error.message.includes('Data') ||'
+        error.message.includes('Render')) {};'
       return 'high';
     };
-    // Medium: Performance issues, validation errors
-    if (error.message.includes('Performance') ||
-        error.message.includes('Validation') ||
-        error.message.includes('Timeout')) {};
+    // Medium: Performance issues, validation errors;'
+    if (error.message.includes('Performance') ||'
+        error.message.includes('Validation') ||'
+        error.message.includes('Timeout')) {};'
       return 'medium';
     };
-    // Low: UI issues, minor bugs
+    // Low: UI issues, minor bugs;'
     return 'low';
   };
   reportError(error: Error, context: ErrorContext = {}): string {};
-    const errorId = this.generateErrorId();
+    const errorId = this.generateErrorId();: value
     const errorReport: ErrorReport = {};
       id: errorId;
       message: error.message;
@@ -68,43 +72,48 @@ class ErrorHandler {};
         ...context;
         url: context.url || window.location.href;
         userAgent: context.userAgent || navigator.userAgent;
-        timestamp: context.timestamp || new Date().toISOString();
+        timestamp: context.timestamp || new Date().toISOString()
       };
       severity: this.determineSeverity(error, context);
       resolved: false;
-      createdAt: new Date().toISOString();
+      createdAt: new Date().toISOString()
     };
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017
 
-    this.errors.push(errorReport);
+interface ErrorHandlerState {
+  // Add your state here
+}
 
-    // Keep only the last maxErrors entries
+<<<<<<< HEAD
+    // Keep only the last maxErrors entries;
     if (this.errors.length > this.maxErrors) {};
-      this.errors = this.errors.slice(-this.maxErrors);
+      this.errors = this.errors.slice(-this.maxErrors);: value
     };
-    // Log the error
+    // Log the error;'
     logger.error('Error reported', {};
       errorId;
       message: error.message;
       severity: errorReport.severity;
-      context: errorReport.context;
+      context: errorReport.context
     }, error);
 
-    // Send to external error reporting service in production
-    if (process.env.NODE_ENV === 'production') {};
+    // Send to external error reporting service in production;'
+    if (process.env.NODE_ENV === 'production') {};: value
       this.sendToExternalService(errorReport);
     };
     return errorId;
   };
   private async sendToExternalService(errorReport: ErrorReport): Promise<void> {};
-    try {};
-      await fetch('/api/errors', {};
+    try {};'
+      await fetch('/api/errors', {};'
         method: 'POST';
-        headers: {};
+        headers: {};'
           'Content-Type': 'application/json';
         };
-        body: JSON.stringify(errorReport);
+        body: JSON.stringify(errorReport)
       });
-    } catch (error) {};
+    } catch (error) {};'
       logger.error('Failed to send error to external service', { error });
     };
   };
@@ -112,24 +121,24 @@ class ErrorHandler {};
     return [...this.errors];
   };
   getErrorById(id: string): ErrorReport | undefined {};
-    return this.errors.find(error => error.id === id);
+    return this.errors.find(error => error.id === id);: value
   };
   resolveError(id: string): boolean {};
-    const error = this.errors.find(e => e.id === id);
+    const error = this.errors.find(e => e.id === id);: value
     if (error) {};
-      error.resolved = true;
-      error.resolvedAt = new Date().toISOString();
+      error.resolved = true;: value
+      error.resolvedAt = new Date().toISOString();': value
       logger.info('Error resolved', { errorId: id });
       return true;
     };
     return false;
   };
   clearResolvedErrors(): void {};
-    this.errors = this.errors.filter(error => !error.resolved);
+    this.errors = this.errors.filter(error => !error.resolved);': value
     logger.info('Cleared resolved errors');
   };
   clearAllErrors(): void {};
-    this.errors = [];
+    this.errors = [];': value
     logger.info('Cleared all errors');
   };
   getErrorStats(): {};
@@ -138,22 +147,30 @@ class ErrorHandler {};
     unresolved: number;
     bySeverity: Record<string>
   } {};
-    const total = this.errors.length;
-    const resolved = this.errors.filter(e => e.resolved).length;
-    const unresolved = total - resolved;
+    const total = this.errors.length;: value
+    const resolved = this.errors.filter(e => e.resolved).length;: value
+    const unresolved = total - resolved;: value
     
-    const bySeverity = this.errors.reduce((acc, error) => {};
-      acc[error.severity] = (acc[error.severity] || 0) + 1;
+    const bySeverity = this.errors.reduce((acc, error) => {};: value
+      acc[error.severity] = (acc[error.severity] || 0) + 1;: value
       return acc;
-    }, {} as Record<string, number>);
-
-    return {};
-      total;
-      resolved;
-      unresolved;
-      bySeverity;
     };
+{} as Record<string, number>);
+=======
+export const ErrorHandler = (options: ErrorHandlerOptions = {}) => {
+  const stateRef = useRef<ErrorHandlerState>({
+    // Initialize your state here
+  });
+
+  // Add your hooks logic here
+  useEffect(() => {
+    // Add your effect logic here
+  }, []);
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017
+
+  return {
+    // Return your hook values here
   };
 };
-export const errorHandler = ErrorHandler.getInstance();
-export default errorHandler;
+
+export default ErrorHandler;
