@@ -1,9 +1,9 @@
-import js from "@eslint/js
-import globals from "globals
-import reactHooks from "eslint-plugin-react-hooks
-import reactRefresh from "eslint-plugin-react-refresh
-import tseslint from "typescript-eslint
->>>>>>> 3e833c3ad2c3ddcb3543c60cbab89bd9bae51a20
+import js from "@eslint/js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import tseslint from "typescript-eslint";
+
 export default tseslint.config(
   {
     ignores: [
@@ -22,8 +22,17 @@ export default tseslint.config(
       "resolve-all-conflicts.js",
       "**/app/**/*.tsx",
       "**/api/**/*.js",
-      "**/__tests__/**/*.tsx"
-      "resolve-all-conflicts.js"
+      "**/__tests__/**/*.tsx",
+      "App-backup.tsx",
+      "App-optimized.tsx",
+      "EnhancedFooter.tsx",
+      "EnhancedHeader.tsx",
+      "backup/**",
+      "cleanup-*.cjs",
+      "cleanup_*.cjs",
+      "fix-*.cjs",
+      "fix_*.cjs",
+      "resolve_*.cjs"
     ]
   },
   {
@@ -44,4 +53,4 @@ export default tseslint.config(
       "@typescript-eslint/no-explicit-any": "off"
     }
   }
-)
+);
