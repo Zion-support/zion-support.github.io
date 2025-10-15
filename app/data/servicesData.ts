@@ -45,6 +45,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-development'
       },
+      link: '/ai-development',
     },
     {
       id: 'ai-consulting',
@@ -91,6 +92,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-consulting'
       },
+      link: '/ai-consulting',
     },
     {
       id: 'ai-content-generator',
@@ -137,6 +139,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-content-generator'
       },
+      link: '/ai-content-generator',
     },
     {
       id: 'ai-customer-support',
@@ -183,6 +186,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-customer-support'
       },
+      link: '/ai-customer-support',
     }
   ],
   microSaas: [
@@ -231,6 +235,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/task-manager'
       },
+      link: '/task-manager',
     },
     {
       id: 'expense-tracker',
@@ -277,6 +282,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/expense-tracker'
       },
+      link: '/expense-tracker',
     },
     {
       id: 'email-marketing',
@@ -323,6 +329,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/email-marketing'
       },
+      link: '/email-marketing',
     },
     {
       id: 'social-scheduler',
@@ -369,6 +376,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/social-scheduler'
       },
+      link: '/social-scheduler',
     },
     {
       id: 'inventory-optimizer',
@@ -415,6 +423,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/inventory-optimizer'
       },
+      link: '/inventory-optimizer',
     },
     {
       id: 'workflow-automator',
@@ -461,6 +470,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/workflow-automator'
       },
+      link: '/workflow-automator',
     }
   ],
   itSolutions: [
@@ -509,6 +519,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/cloud-infrastructure'
       },
+      link: '/cloud-infrastructure',
     },
     {
       id: 'cybersecurity',
@@ -555,6 +566,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/cybersecurity'
       },
+      link: '/cybersecurity',
     },
     {
       id: 'data-analytics',
@@ -601,6 +613,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/data-analytics'
       },
+      link: '/data-analytics',
     },
     {
       id: 'mobile-development',
@@ -647,6 +660,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/mobile-development'
       },
+      link: '/mobile-development',
     },
     {
       id: 'web-development',
@@ -693,6 +707,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/web-development'
       },
+      link: '/web-development',
     },
     {
       id: 'database-management',
@@ -739,6 +754,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/database-management'
       },
+      link: '/database-management',
     }
   ]
 };
