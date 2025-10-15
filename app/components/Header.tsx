@@ -110,11 +110,7 @@ const Header: React.FC = memo(() => {
             </Link>
 
             {/* Desktop Navigation */}
-<<<<<<< HEAD
-            <div className="hidden xl:flex items-center space-x-6">
-=======
             <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-06e6
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
                   {item.dropdown ? (
