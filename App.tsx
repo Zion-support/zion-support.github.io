@@ -13,6 +13,8 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import SEOOptimizer from './app/components/SEOOptimizer';
+import EnhancedAccessibility from './app/components/EnhancedAccessibility';
+import EnhancedPerformanceMonitor from './app/components/EnhancedPerformanceMonitor';
 // Hooks
 import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization';
 
@@ -273,6 +275,8 @@ const App = memo(() => {
                 <PerformanceMonitor />
                 <AccessibilityEnhancer />
                 <SEOOptimizer />
+                <EnhancedAccessibility />
+                <EnhancedPerformanceMonitor />
                 
                 <Suspense fallback={<LoadingFallback />}>
                   <ErrorBoundary>

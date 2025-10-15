@@ -2,10 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 import { 
   CheckCircleIcon, 
-  ClockIcon, 
-  UserGroupIcon, 
   ChartBarIcon,
-  CogIcon,
   SparklesIcon,
   ArrowRightIcon,
   PhoneIcon,
