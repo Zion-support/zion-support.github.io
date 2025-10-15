@@ -4,7 +4,7 @@ export const Performancemetrics = {
   init: () => {
     },
 
-  process: (data: any) => {
+  process: (_data: any) => {
     return data;
   },
 

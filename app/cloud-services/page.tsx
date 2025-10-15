@@ -1,9 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Cloud, Shield, Zap, Globe, Database, Server, CheckCircle, TrendingUp, Clock } from 'lucide-react';
-
-export default function CloudServices() {
+import { ArrowRight, Cloud, Shield, Zap, Globe, Database, Server, CheckCircle, TrendingUp } from 'lucide-react';export default function CloudServices() {
   const services = [
     {
       title: "Cloud Migration",
@@ -96,8 +94,7 @@ export default function CloudServices() {
     }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Cloud Services - Zion Tech Group | Cloud Migration & Infrastructure</title>
         <meta
@@ -106,7 +103,7 @@ export default function CloudServices() {
         />
         <meta
           name="keywords"
-          content="cloud services, cloud migration, cloud infrastructure, cloud security, AWS, Azure, Google Cloud, cloud consulting"
+          content="cloud services, _cloud migration, _cloud infrastructure, _cloud security, _AWS, _Azure, _Google Cloud, cloud consulting"
         />
       </Helmet>
 
@@ -120,8 +117,7 @@ export default function CloudServices() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our comprehensive cloud solutions. From migration to management,
-              we provide end-to-end cloud services that drive growth and efficiency.
+              Transform your business with our comprehensive cloud solutions. From migration to management, we provide end-to-end cloud services that drive growth and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -151,8 +147,7 @@ export default function CloudServices() {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+              {services.map((service, index) => (<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="text-cyan-400 mb-4">{service.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>

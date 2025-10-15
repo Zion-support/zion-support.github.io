@@ -49,7 +49,7 @@ class ErrorHandler extends Component<Props, State> {
     }
   }
 
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+  logErrorToService = (_error: Error, errorInfo: ErrorInfo) => {
     // Example: Send to monitoring service
     try {
       // Replace with your actual error reporting service

@@ -15,8 +15,7 @@ const DefaultFallback = () => (
 );
 
 export const LazyWrapper: React.FC<LazyWrapperProps> = ({ 
-  fallback = <DefaultFallback />, 
-  children 
+  fallback = <DefaultFallback />, children 
 }) => {
   return (
     <Suspense fallback={fallback}>
@@ -28,12 +27,11 @@ export const LazyWrapper: React.FC<LazyWrapperProps> = ({
 LazyWrapper.displayName = 'LazyWrapper';
 
 // Lazy loading helper function
-export const createLazyComponent = <P extends Record<string, unknown>>(
-  importFunc: () => Promise<{ default: React.ComponentType<P> }>
+export const createLazyComponent = <P extends Record<string, unknown>>(_importFunc: () => Promise<{ default: React.ComponentType<P> }>
 ) => {
   const LazyComponent = React.lazy(importFunc);
   
-  const WrappedComponent = (props: P) => (
+  const WrappedComponent = (_props: P) => (
     <LazyWrapper>
       <LazyComponent {...props} />
     </LazyWrapper>

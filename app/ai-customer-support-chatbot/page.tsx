@@ -106,8 +106,7 @@ export default function AICustomerSupportChatbot() {
     },
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>AI Customer Support Chatbot - Zion Tech Group</title>
         <meta
@@ -165,8 +164,7 @@ export default function AICustomerSupportChatbot() {
               Comprehensive Chatbot Features
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {chatbotFeatures.map((category, index) => (
-                <div
+              {chatbotFeatures.map((category, index) => (<div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
@@ -255,7 +253,7 @@ export default function AICustomerSupportChatbot() {
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
                   <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(( i) => (
                       <span key={i} className="text-yellow-400">
                         ★
                       </span>

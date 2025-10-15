@@ -1,18 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  MessageSquare, 
-  Phone, 
-  Mail, 
-  Calendar,
-  Clock,
-  Users,
-  Zap
-} from 'lucide-react';
-
-const ChatPage: React.FC = () => {
+import { MessageSquare } from 'lucide-react';const ChatPage: React.FC = () => {
   return (
     <>
       <Helmet>

@@ -4,7 +4,7 @@ import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (_error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
@@ -56,7 +56,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
     }
   }
 
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+  private logErrorToService = (_error: Error, errorInfo: ErrorInfo) => {
     // In a real app, you would send this to an error reporting service
     // like Sentry, LogRocket, or Bugsnag
     console.error('Production error:', {
@@ -185,13 +185,13 @@ export class GlobalErrorBoundary extends Component<Props, State> {
 export const ErrorBoundary: React.FC<{
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error) => void;
-}> = ({ children, fallback, onError }) => {
+  onError?: (_error: Error) => void;
+}> = ({ children, fallback, _onError }) => {
   const [hasError, setHasError] = React.useState(false);
   const [error, setError] = React.useState<Error | null>(null);
 
   React.useEffect(() => {
-    const handleError = (event: ErrorEvent) => {
+    const handleError = (_event: ErrorEvent) => {
       setHasError(true);
       setError(new Error(event.message));
       if (onError) {

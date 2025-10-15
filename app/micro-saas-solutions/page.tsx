@@ -1,36 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Users, 
-  Shield, 
-  Clock, 
-  TrendingUp,
-  BarChart3,
-  Database,
-  Smartphone,
-  Globe,
-  Target,
-  Lightbulb,
-  Rocket,
-  Award,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Code,
-  Eye,
-  MessageSquare,
-  Cpu,
-  Network,
-  FileText,
-  Settings
-} from 'lucide-react';
-
-const MicroSaaSSolutionsPage: React.FC = () => {
+import { CheckCircle, ArrowRight, TrendingUp, BarChart3, Database, Globe, Target, MessageSquare } from 'lucide-react';const MicroSaaSSolutionsPage: React.FC = () => {
   const microSaasProducts = [
     {
       id: 'task-manager-pro',
@@ -196,8 +167,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Analytics', 'Customer Service', 'Inventory', 'Marketing', 'Finance'];
-
   const pricingTiers = [
     {
       name: 'Starter',
@@ -242,12 +211,11 @@ const MicroSaaSSolutionsPage: React.FC = () => {
     }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Micro SAAS Solutions - Innovative Software for Modern Businesses | Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive micro SAAS solutions designed to streamline business operations. From task management to analytics, find the perfect tools for your business." />
-        <meta name="keywords" content="micro SAAS, business software, productivity tools, analytics, customer support, inventory management, social media scheduling, expense tracking" />
+        <meta name="keywords" content="micro SAAS, business software, _productivity tools, _analytics, _customer support, _inventory management, _social media scheduling, expense tracking" />
         <meta property="og:title" content="Micro SAAS Solutions - Innovative Software for Modern Businesses" />
         <meta property="og:description" content="Discover our comprehensive micro SAAS solutions designed to streamline business operations." />
         <meta property="og:url" content="https://ziontechgroup.com/micro-saas-solutions" />

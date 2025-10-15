@@ -10,13 +10,7 @@ interface AccessibilityManagerProps {
 }
 
 const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
-  enableKeyboardNavigation = true,
-  enableScreenReader = true,
-  enableHighContrast = true,
-  enableFocusManagement = true,
-  enableVoiceNavigation = false,
-  enableReducedMotion = true,
-}) => {
+  enableKeyboardNavigation = true, enableScreenReader = true, enableHighContrast = true, enableFocusManagement = true, enableVoiceNavigation = false, enableReducedMotion = true, }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [fontSize, setFontSize] = useState(16);
@@ -69,7 +63,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
       // Voice navigation started
     };
 
-    recognition.onresult = (event: any) => {
+    recognition.onresult = (_event: any) => {
       const command = event.results[event.results.length - 1][0].transcript.toLowerCase().trim();
       
       // Navigation commands
@@ -95,7 +89,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
       }
     };
 
-    recognition.onerror = (event: any) => {
+    recognition.onerror = (_event: any) => {
       // Speech recognition error handled silently
     };
 
@@ -129,7 +123,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
   const setupKeyboardNavigation = useCallback(() => {
     if (!enableKeyboardNavigation) return;
 
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (_event: KeyboardEvent) => {
       // Skip to main content
       if (event.key === 'Tab' && event.shiftKey && event.altKey) {
         event.preventDefault();
@@ -232,14 +226,14 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
     if (!enableFocusManagement) return () => {};
 
     // Focus trap for modals
-    const trapFocus = (element: HTMLElement) => {
+    const trapFocus = (_element: HTMLElement) => {
       const focusableElements = element.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
       );
       const firstElement = focusableElements[0] as HTMLElement;
       const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-      const handleTabKey = (e: KeyboardEvent) => {
+      const handleTabKey = (_e: KeyboardEvent) => {
         if (e.key === 'Tab') {
           if (e.shiftKey) {
             if (document.activeElement === firstElement) {

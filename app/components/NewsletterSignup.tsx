@@ -6,13 +6,12 @@ import { ArrowRight, Mail } from "lucide-react";
 export default function NewsletterSignup() {
   const [email, setEmail] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (_e: React.FormEvent) => {
     e.preventDefault();
     // Handle newsletter signup
     };
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Newsletter Signup - Zion Tech Group</title>
       </Helmet>

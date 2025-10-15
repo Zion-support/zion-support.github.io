@@ -37,8 +37,7 @@ export default function EnhancedPerformanceOptimizer() {
     
     if (images.length === 0) return;
 
-    const imageObserver = new IntersectionObserver(
-      (entries) => {
+    const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
@@ -98,9 +97,9 @@ export default function EnhancedPerformanceOptimizer() {
     });
   }, []);
 
-  const setupPerformanceMonitoring = useCallback(() => {
+  const setupPerformanceMonitoring = useCallback() => {
     // Monitor Core Web Vitals
-    import("web-vitals").then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
+    import("web-vitals").then(({ onCLS, onINP, onFCP, _onLCP, _onTTFB }) => {
       onCLS((metric: any) => {
         logger.info("CLS:", metric.value);
       });
@@ -162,7 +161,7 @@ export default function EnhancedPerformanceOptimizer() {
     }
   }, []);
 
-  useEffect(() => {
+  useEffect() => {
     // Run optimizations after DOM is ready
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", () => {

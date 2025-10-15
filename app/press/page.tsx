@@ -61,12 +61,11 @@ export default function Press() {
     { number: "99%", label: "Positive Coverage", icon: <TrendingUp className="w-6 h-6" /> }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Press - Zion Tech Group | Media Center & News</title>
         <meta name="description" content="Latest press releases, media kit, and news from Zion Tech Group. Stay updated with our latest announcements and achievements." />
-        <meta name="keywords" content="press, media, news, press releases, Zion Tech Group, AI company, technology news" />
+        <meta name="keywords" content="press, _media, _news, _press releases, _Zion Tech Group, _AI company, technology news" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -79,7 +78,7 @@ export default function Press() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Latest news, press releases, and media resources from Zion Tech Group. 
+              Latest news, _press releases, and media resources from Zion Tech Group. 
               Stay updated with our latest announcements and achievements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

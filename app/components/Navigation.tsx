@@ -79,7 +79,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
   ];
 
-  const isActive = (href: string) => {
+  const isActive = (_href: string) => {
     return location.pathname === href;
   };
 
@@ -106,8 +106,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     setIsResourcesOpen(false);
   };
 
-  return (
-    <nav className="bg-slate-900 border-b border-slate-700">
+  return (<nav className="bg-slate-900 border-b border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo */}
@@ -122,8 +121,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
-            {navigation.map((item) => (
-              <div key={item.name} className="relative group">
+            {navigation.map((item) => (<div key={item.name} className="relative group">
                 <Link
                   to={item.href}
                   className="flex items-center space-x-1 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
@@ -154,8 +152,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     (item.name === 'Company' && isCompanyOpen)
                       ? 'block' : 'hidden'
                   }`}>
-                    {item.submenu.map((subItem) => (
-                      <Link
+                    {item.submenu.map((subItem) => (<Link
                         key={subItem.name}
                         to={subItem.href}
                         className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
@@ -196,8 +193,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         {/* Mobile Navigation */}
         <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700">
-            {navigation.map((item) => (
-              <div key={item.name}>
+            {navigation.map((item) => (<div key={item.name}>
                 {item.submenu ? (
                   <div>
                     <button
@@ -226,8 +222,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       (item.name === 'Company' && isCompanyOpen)
                         ? 'block' : 'hidden'
                     }`}>
-                      {item.submenu.map((subItem) => (
-                        <Link
+                      {item.submenu.map((subItem) => (<Link
                           key={subItem.name}
                           to={subItem.href}
                           className="flex items-center px-3 py-2 rounded-md text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"

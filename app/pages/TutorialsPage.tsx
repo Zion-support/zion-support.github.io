@@ -1,25 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Calendar,
-  Clock,
-  User,
-  Tag,
-  Search,
-  Filter,
-  Play,
-  BookOpen,
-  ExternalLink,
-  Download,
-  Star,
-  Award,
-  Target,
-  Zap
-} from 'lucide-react';
-
-const TutorialsPage: React.FC = () => {
+import { ArrowRight, Clock, Search, Filter, Play, BookOpen, Star, Target } from 'lucide-react';const TutorialsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedLevel, setSelectedLevel] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -157,12 +139,11 @@ const TutorialsPage: React.FC = () => {
   const featuredTutorial = tutorials.find(tutorial => tutorial.featured);
   const regularTutorials = filteredTutorials.filter(tutorial => !tutorial.featured);
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Tutorials - Zion Tech Group | Learn AI & IT Skills</title>
         <meta name="description" content="Master AI and IT skills with our comprehensive tutorials. Learn from industry experts with hands-on projects and real-world examples." />
-        <meta name="keywords" content="tutorials, AI learning, IT skills, programming, web development, mobile development, cloud computing" />
+        <meta name="keywords" content="tutorials, AI learning, _IT skills, _programming, _web development, _mobile development, cloud computing" />
         <link rel="canonical" href="https://ziontechgroup.com/tutorials" />
       </Helmet>
 
@@ -223,8 +204,7 @@ const TutorialsPage: React.FC = () => {
 
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
+                {categories.map((category) => (<button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${
@@ -243,8 +223,7 @@ const TutorialsPage: React.FC = () => {
 
             {/* Level Filter */}
             <div className="flex gap-2">
-              {levels.map((level) => (
-                <button
+              {levels.map((level) => (<button
                   key={level.id}
                   onClick={() => setSelectedLevel(level.id)}
                   className={`px-4 py-2 rounded-lg transition-all duration-300 ${

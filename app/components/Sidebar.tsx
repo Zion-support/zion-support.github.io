@@ -92,12 +92,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { icon: <MapPin className="w-4 h-4" />, text: '364 E Main St STE 1008, Middletown DE 19709' }
   ], [])
 
-  const isActive = (path: string) => location.pathname === path
+  const isActive = (_path: string) => location.pathname === path
 
   if (!isOpen) return null
 
-  return (
-    <>
+  return (<>
       {/* Overlay */}
       <div 
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
@@ -161,8 +160,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               )}
             </button>
             
-            {expandedSections.has('ai-services') && (
-              <div className="ml-6 mt-2 space-y-1">
+            {expandedSections.has('ai-services') && (<div className="ml-6 mt-2 space-y-1">
                 {aiServices.map((service) => (
                   <Link
                     key={service.name}
@@ -199,8 +197,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               )}
             </button>
             
-            {expandedSections.has('it-services') && (
-              <div className="ml-6 mt-2 space-y-1">
+            {expandedSections.has('it-services') && (<div className="ml-6 mt-2 space-y-1">
                 {itServices.map((service) => (
                   <Link
                     key={service.name}
@@ -237,8 +234,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               )}
             </button>
             
-            {expandedSections.has('micro-saas') && (
-              <div className="ml-6 mt-2 space-y-1">
+            {expandedSections.has('micro-saas') && (<div className="ml-6 mt-2 space-y-1">
                 {microSaasServices.map((service) => (
                   <Link
                     key={service.name}

@@ -77,8 +77,7 @@ export default function AIHealthcareDiagnostics() {
     }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>AI Healthcare Diagnostics - Zion Tech Group | Medical AI Solutions</title>
         <meta
@@ -87,7 +86,7 @@ export default function AIHealthcareDiagnostics() {
         />
         <meta
           name="keywords"
-          content="AI healthcare, medical diagnostics, medical imaging, symptom analysis, drug interactions, predictive analytics, healthcare AI, medical AI"
+          content="AI healthcare, _medical diagnostics, _medical imaging, _symptom analysis, _drug interactions, _predictive analytics, _healthcare AI, medical AI"
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-healthcare-diagnostics" />
       </Helmet>
@@ -115,8 +114,7 @@ export default function AIHealthcareDiagnostics() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Revolutionize healthcare with AI-powered medical diagnostics. Advanced image analysis, 
-              symptom assessment, and treatment recommendations that improve patient outcomes and reduce costs.
+              Revolutionize healthcare with AI-powered medical diagnostics. Advanced image analysis, _symptom assessment, and treatment recommendations that improve patient outcomes and reduce costs.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -147,13 +145,12 @@ export default function AIHealthcareDiagnostics() {
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                 Our AI healthcare diagnostics platform combines cutting-edge machine learning with medical expertise 
-                to deliver accurate, fast, and reliable diagnostic support.
+                to deliver accurate, _fast, and reliable diagnostic support.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {features.map((feature, index) => (
-                <div
+              {features.map((feature, index) => (<div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-rose-500/10 relative overflow-hidden"
                 >

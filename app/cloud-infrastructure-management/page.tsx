@@ -97,8 +97,7 @@ export default function CloudInfrastructureManagement() {
     },
   ];
 
-  return (
-    <Layout>
+  return (<Layout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
@@ -131,8 +130,7 @@ export default function CloudInfrastructureManagement() {
               Management Services
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {managementFeatures.map((service, index) => (
-                <div key={index} className="text-center">
+              {managementFeatures.map((service, index) => (<div key={index} className="text-center">
                   <h3 className="text-xl font-semibold text-blue-400 mb-4">
                     {service.category}
                   </h3>

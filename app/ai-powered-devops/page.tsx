@@ -380,7 +380,7 @@ export default function AiPoweredDevops() {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(( i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>

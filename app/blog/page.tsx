@@ -88,11 +88,10 @@ export default function Blog() {
   const featuredPost = filteredPosts.find(post => post.featured);
   const regularPosts = filteredPosts.filter(post => !post.featured);
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Blog - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends." />
+        <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, _cloud computing, and technology trends." />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -102,7 +101,7 @@ export default function Blog() {
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Blog</h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Insights, trends, and expertise from the Zion Tech Group team
+                Insights, _trends, and expertise from the Zion Tech Group team
               </p>
             </div>
           </div>

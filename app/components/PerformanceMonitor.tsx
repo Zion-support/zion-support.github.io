@@ -19,7 +19,7 @@ const PerformanceMonitor: React.FC = () => {
   });
 
   useEffect(() => {
-    const handleMetric = (metric: any) => {
+    const handleMetric = (_metric: any) => {
       setMetrics(prev => ({
         ...prev,
         [metric.name]: metric.value
@@ -48,7 +48,7 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
-            const navEntry = entry as PerformanceNavigationTiming;
+
             // Navigation timing metrics collected
           }
         }

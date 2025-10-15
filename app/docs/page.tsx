@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Book, Code, Shield, Zap, Search, ChevronDown, ChevronRight, ExternalLink } from "lucide-react";
-
-const DocsPage: React.FC = () => {
+import { Book, Code, Shield, Zap, Search, ChevronDown, ChevronRight, ExternalLink } from 'lucide-react';const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
@@ -68,17 +66,15 @@ const DocsPage: React.FC = () => {
     { title: 'Computer Vision Tutorial', category: 'AI Services', readTime: '12 min', views: '4.7k' }
   ];
 
-  const filteredSections = documentationSections.map(section => ({
-    ...section,
-    articles: section.articles?.filter((article: { title: string; description: string }) =>
+  const filteredSections = documentationSections.map((section => ({
+    ...section, articles: section.articles?.filter((article: { title: string; description: string }) =>
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.description.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
   })).filter(section => section.articles?.length > 0);
 
 export default function DocsZionTechGroup() {
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Docs - Zion Tech Group</title>
       </Helmet>
@@ -156,8 +152,7 @@ export default function DocsZionTechGroup() {
             </div>
             
             <div className="max-w-6xl mx-auto space-y-6">
-              {filteredSections.map((section) => (
-                <div key={section.id} className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+              {filteredSections.map((section) => (<div key={section.id} className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
                   <button
                     onClick={() => setExpandedSection(expandedSection === section.id ? null : section.id)}
                     className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
@@ -178,8 +173,7 @@ export default function DocsZionTechGroup() {
                     )}
                   </button>
                   
-                  {expandedSection === section.id && (
-                    <div className="px-8 pb-6">
+                  {expandedSection === section.id && (<div className="px-8 pb-6">
                       <div className="grid md:grid-cols-2 gap-4">
                         {section.articles?.map((article: { title: string; readTime: string; description: string }, articleIndex: number) => (
                           <div key={articleIndex} className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors cursor-pointer group">

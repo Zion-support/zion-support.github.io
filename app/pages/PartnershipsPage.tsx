@@ -1,36 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Shield, 
-  Clock, 
-  TrendingUp,
-  BarChart3,
-  Database,
-  Smartphone,
-  Globe,
-  Target,
-  Lightbulb,
-  Rocket,
-  Award,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Code,
-  Eye,
-  MessageSquare,
-  Cpu,
-  Network,
-  FileText,
-  Settings
-} from 'lucide-react';
-
-const PartnershipsPage: React.FC = () => {
+import { ArrowRight, CheckCircle, Star, Users, Target, MessageSquare, Cpu, Settings } from 'lucide-react';const PartnershipsPage: React.FC = () => {
   const partnershipTypes = [
     {
       title: 'Technology Partners',
@@ -95,12 +66,11 @@ const PartnershipsPage: React.FC = () => {
     'Technical integration support'
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Partnerships - Zion Tech Group | Partner With Us</title>
         <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group. Explore partnership opportunities and benefits." />
-        <meta name="keywords" content="partnerships, partner program, technology partners, channel partners, strategic partnerships" />
+        <meta name="keywords" content="partnerships, partner program, _technology partners, _channel partners, strategic partnerships" />
         <link rel="canonical" href="https://ziontechgroup.com/partnerships" />
       </Helmet>
 
@@ -120,8 +90,7 @@ const PartnershipsPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join our growing ecosystem of partners and unlock new opportunities for growth, 
-              innovation, and mutual success.
+              Join our growing ecosystem of partners and unlock new opportunities for growth, _innovation, and mutual success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
@@ -154,8 +123,7 @@ const PartnershipsPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {partnershipTypes.map((type, index) => (
-              <div key={index} className="bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
+            {partnershipTypes.map((type, index) => (<div key={index} className="bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-6">
                   {type.icon}
                 </div>

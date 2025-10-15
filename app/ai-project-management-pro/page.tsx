@@ -158,8 +158,7 @@ export default function AIProjectManagementPro() {
     },
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>AI Project Management Pro - Zion Tech Group</title>
         <meta
@@ -177,7 +176,7 @@ export default function AIProjectManagementPro() {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional AI project management services with intelligent
-              planning, smart scheduling, and comprehensive analytics for
+              planning, _smart scheduling, and comprehensive analytics for
               optimal project success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -218,8 +217,7 @@ export default function AIProjectManagementPro() {
               Project Management Features
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {projectFeatures.map((category, index) => (
-                <div
+              {projectFeatures.map((category, index) => (<div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
@@ -310,7 +308,7 @@ export default function AIProjectManagementPro() {
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(( i) => (
                       <Star
                         className="w-5 h-5 text-yellow-400 fill-current"
                         key={i}

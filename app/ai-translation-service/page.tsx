@@ -93,8 +93,7 @@ const AITranslationServicePage = () => {
     },
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Translation Service | Zion Tech Group</title>
         <meta
@@ -143,8 +142,7 @@ const AITranslationServicePage = () => {
               Why Choose Our AI Translation Service?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered translation solutions deliver unmatched accuracy,
-              speed, and security.
+              Our AI-powered translation solutions deliver unmatched accuracy, _speed, and security.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -246,7 +244,7 @@ const AITranslationServicePage = () => {
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
               >
                 <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map(( i) => (
                     <Star
                       key={i}
                       className="w-5 h-5 text-yellow-400 fill-current"

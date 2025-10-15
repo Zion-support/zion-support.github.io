@@ -4,7 +4,7 @@ export const Performanceoptimizations = {
   init: () => {
     },
 
-  process: (data: any) => {
+  process: (_data: any) => {
     return data;
   },
 

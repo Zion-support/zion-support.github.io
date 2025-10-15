@@ -13,16 +13,7 @@ interface OptimizedImageProps {
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  className = '',
-  width,
-  height,
-  priority = false,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+',
-  onLoad,
-  onError,
-}) => {
+  src, alt, className = '', _width, _height, priority = false, placeholder = 'data:image/svg+xml;base64, _PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+', _onLoad, _onError, _}) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
@@ -31,8 +22,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   useEffect(() => {
     if (priority) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
+    const observer = new IntersectionObserver(([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
           observer.disconnect();

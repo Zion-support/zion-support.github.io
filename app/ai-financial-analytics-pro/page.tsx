@@ -182,8 +182,7 @@ export default function AiFinancialAnalyticsProPage() {
     },
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>AI Financial Analytics Pro - Zion Tech Group</title>
         <meta
@@ -222,8 +221,7 @@ export default function AiFinancialAnalyticsProPage() {
 
           {/* Features Section */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {features.map((feature, index) => (
-              <div
+            {features.map((feature, index) => (<div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
               >
@@ -253,8 +251,7 @@ export default function AiFinancialAnalyticsProPage() {
               Analytics Features
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {analyticsFeatures.map((category, index) => (
-                <div
+              {analyticsFeatures.map((category, index) => (<div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
@@ -345,7 +342,7 @@ export default function AiFinancialAnalyticsProPage() {
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(( i) => (
                       <Star
                         className="w-5 h-5 text-yellow-400 fill-current"
                         key={i}

@@ -1,8 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Play, Right, Star, BarChart3, Shield } from 'lucide-react';
-
-const DemoPage: React.FC = () => {
+import { Play, BarChart3, Shield } from 'lucide-react';const DemoPage: React.FC = () => {
   const features = [
     {
 icon: BarChart3,
@@ -49,13 +47,6 @@ icon: Play,
       rating: 5
     }
   ];
-<<<<<<< HEAD
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 
 export default function Demo() {
   return (

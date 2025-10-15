@@ -1,20 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  Send,
-  CheckCircle,
-  MessageSquare,
-  Calendar,
-  Headphones,
-  Globe,
-  Zap
-} from 'lucide-react';
-
-const ContactPage: React.FC = () => {
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, Headphones, Zap } from 'lucide-react';const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -27,14 +13,14 @@ const ContactPage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (_e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (_e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -112,12 +98,11 @@ const ContactPage: React.FC = () => {
     'Not sure yet'
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get in touch via phone, email, or our contact form. We're here to help transform your business." />
-        <meta name="keywords" content="contact, get in touch, AI solutions, IT services, consultation, support" />
+        <meta name="keywords" content="contact, _get in touch, _AI solutions, _IT services, _consultation, support" />
         <link rel="canonical" href="https://ziontechgroup.com/contact" />
       </Helmet>
 
@@ -195,8 +180,7 @@ const ContactPage: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent Successfully!</h3>
                 <p className="text-gray-300">Thank you for contacting us. We'll get back to you soon.</p>
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8">
+            ) : (<form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label htmlFor="name" className="block text-white font-medium mb-2">

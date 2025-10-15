@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Code, Database, Users, DollarSign, Globe, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Eye, Heart, Award, Mic, Video, Image, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Code, Database, Users, DollarSign, Globe, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Eye, Heart, Award, Mic, Video, Image, Calculator, Layers } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
@@ -1137,7 +1137,7 @@ export default function AIServices() {
                   </div>
                   
                   <div className="flex items-center mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(( i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>

@@ -1,20 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Clock, 
-  Users, 
-  BarChart3, 
-  CheckCircle, 
-  ArrowRight, 
-  Target, 
-  Zap,
-  Shield,
-  Globe,
-  Database,
-  Calendar,
-  Smartphone
-} from 'lucide-react';
-import FuturisticCard from '../components/FuturisticCard';
+import { Clock, Users, BarChart3, CheckCircle, ArrowRight, Target, Zap, Shield, Globe, Smartphone } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -129,12 +115,11 @@ const EmployeeTimeTrackerPage = () => {
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Employee Time Tracker - Zion Tech Group | Time Tracking & Productivity Software"
-        description="Advanced employee time tracking software with automatic tracking, project management, team analytics, and mobile app. Boost productivity and accurate billing."
-        keywords="employee time tracker, time tracking software, productivity tracking, project time tracking, team management, billable hours"
+        description="Advanced employee time tracking software with automatic tracking, project management, _team analytics, and mobile app. Boost productivity and accurate billing."
+        keywords="employee time tracker, _time tracking software, _productivity tracking, _project time tracking, _team management, billable hours"
         canonical="https://ziontechgroup.com/employee-time-tracker"
       />
 
@@ -148,7 +133,7 @@ const EmployeeTimeTrackerPage = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Track time effortlessly and boost team productivity with our comprehensive time tracking solution. 
-            Automatic tracking, project management, and detailed analytics all in one place.
+            Automatic tracking, _project management, and detailed analytics all in one place.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
@@ -183,8 +168,7 @@ const EmployeeTimeTrackerPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <FuturisticCard key={index} className="h-full">
+            {features.map((feature, index) => (<FuturisticCard key={index} className="h-full">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     {feature.icon}

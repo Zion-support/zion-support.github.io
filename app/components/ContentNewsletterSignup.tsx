@@ -6,13 +6,12 @@ interface ContentNewsletterSignupProps {
 }
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
-  className = "",
-}) => {
+  className = "", }) => {
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (_e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
@@ -43,8 +42,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
     );
   }
 
-  return (
-    <div
+  return (<div
       className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`}
     >
       <div className="text-center mb-6">
