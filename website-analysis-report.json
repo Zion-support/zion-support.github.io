@@ -1,12 +1,18 @@
 {
-  "summary": {
-    "totalLinks": 0,
-    "workingLinks": 1,
-    "brokenLinks": 0,
-    "successRate": "Infinity%"
-  },
-  "brokenLinks": [],
+  "totalLinks": 0,
   "workingLinks": [
+    {
+      "url": "https://ziontechgroup.com",
+      "status": 200,
+      "depth": 0
+    }
+  ],
+  "brokenLinks": [],
+  "missingPages": 0,
+  "externalLinks": [],
+  "analysisDate": "2025-10-13T05:26:09.812Z",
+  "baseUrl": "https://ziontechgroup.com",
+  "visitedPages": [
     "https://ziontechgroup.com"
   ],
   "recommendations": []

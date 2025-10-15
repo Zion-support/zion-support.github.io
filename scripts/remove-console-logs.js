@@ -1,63 +1,77 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Function to remove console.log statements from a file
+/**
+ * Remove console.log statements from production build
+ * This helps reduce bundle size and improve performance
+ */
 function removeConsoleLogs(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Remove console.log, console.warn, console.error, console.info, console.debug
-    const consoleRegex = /console\.(log|warn|error|info|debug)\s*\([^)]*\)\s*;?\s*/g;
+    const content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
-    content = content.replace(consoleRegex, '');
     
-    // Remove empty lines that might be left behind
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    // Remove console.log, console.warn, console.error statements
+    let newContent = content
+      .replace(/console\.log\([^)]*\);?/g, '')
+      .replace(/console\.warn\([^)]*\);?/g, '')
+      .replace(/console\.error\([^)]*\);?/g, '')
+      .replace(/console\.debug\([^)]*\);?/g, '')
+      .replace(/console\.info\([^)]*\);?/g, '');
     
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      modified = true;
-      console.log(`Cleaned console statements from: ${filePath}`);
+    // Clean up empty lines
+    newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    if (newContent !== originalContent) {
+      fs.writeFileSync(filePath, newContent, 'utf8');
+      console.log(`Removed console logs from: ${filePath}`);
+      return true;
     }
     
-    return modified;
+    return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Find all TypeScript and JavaScript files
-const patterns = [
-  'app/**/*.{ts,tsx,js,jsx}',
-  'components/**/*.{ts,tsx,js,jsx}',
-  'utils/**/*.{ts,tsx,js,jsx}',
-  'hooks/**/*.{ts,tsx,js,jsx}',
-  '*.{ts,tsx,js,jsx}'
-];
-
-async function main() {
-  let totalFiles = 0;
-  let modifiedFiles = 0;
-
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { ignore: ['node_modules/**', 'dist/**', '.next/**'] });
+/**
+ * Process all JavaScript files in the dist directory
+ */
+async function processDistFiles() {
+  try {
+    const distPath = path.join(process.cwd(), 'dist');
     
-    for (const file of files) {
-      totalFiles++;
-      if (removeConsoleLogs(file)) {
-        modifiedFiles++;
+    if (!fs.existsSync(distPath)) {
+      console.log('Dist directory not found, skipping console log removal');
+      return;
+    }
+    
+    // Find all JavaScript files
+    const jsFiles = await glob('**/*.js', { cwd: distPath });
+    
+    if (jsFiles.length === 0) {
+      console.log('No JavaScript files found in dist directory');
+      return;
+    }
+    
+    console.log(`Found ${jsFiles.length} JavaScript files to process`);
+    
+    let processedCount = 0;
+    
+    for (const file of jsFiles) {
+      const filePath = path.join(distPath, file);
+      if (removeConsoleLogs(filePath)) {
+        processedCount++;
       }
     }
+    
+    console.log(`Console log removal completed!`);
+    
+  } catch (error) {
+    console.error('Error processing dist files:', error.message);
   }
-
-  console.log(`\nConsole log removal complete!`);
-  console.log(`Total files processed: ${totalFiles}`);
-  console.log(`Files modified: ${modifiedFiles}`);
 }
 
-main().catch(console.error);
+// Run the script
+processDistFiles();

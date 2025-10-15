@@ -1,36 +1,52 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import { resolve } from "path";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+<<<<<<< HEAD
 
-// https://vitejs.dev/config/
+const resolve = path.resolve;
+=======
+>>>>>>> main
+
 export default defineConfig({
   plugins: [
     react({
       // Enable React Fast Refresh
+<<<<<<< HEAD
+      fastRefresh: true
+=======
       fastRefresh: true,
-      // Enable JSX runtime
-      jsxRuntime: "automatic",
-    }),
+      // Optimize JSX runtime
+      jsxRuntime: 'automatic',
+>>>>>>> main
+    })
   ],
   resolve: {
     alias: {
-      "@": resolve(__dirname, "./app"),
-      "@/components": resolve(__dirname, "./app/components"),
-      "@/pages": resolve(__dirname, "./app"),
-      "@/utils": resolve(__dirname, "./utils"),
-      "@/types": resolve(__dirname, "./types"),
-      "@/hooks": resolve(__dirname, "./hooks"),
-      "@/config": resolve(__dirname, "./config"),
-      "@/data": resolve(__dirname, "./data"),
-      "@/content": resolve(__dirname, "./content"),
+      '@': path.resolve(__dirname, './app'),
+<<<<<<< HEAD
+      '@/components': path.resolve(__dirname, './app/components'),
+      '@/utils': path.resolve(__dirname, './app/utils'),
+      '@/hooks': path.resolve(__dirname, './hooks'),
+=======
+      '@components': path.resolve(__dirname, './app/components'),
+      '@pages': path.resolve(__dirname, './app/pages'),
+      '@utils': path.resolve(__dirname, './utils'),
+      '@types': path.resolve(__dirname, './types'),
+>>>>>>> main
     },
   },
   build: {
-    outDir: "dist",
+    outDir: 'dist',
+<<<<<<< HEAD
     sourcemap: false,
-    minify: "esbuild",
-    target: "es2020",
+    minify: 'esbuild',
+    target: 'es2020',
+=======
+    sourcemap: true,
+    minify: 'esbuild',
+    target: 'es2020',
     cssCodeSplit: true,
+<<<<<<< HEAD
     modulePreload: {
       polyfill: false,
     },
@@ -75,13 +91,12 @@ export default defineConfig({
       }
     },
     // Enhanced build optimizations
+=======
+>>>>>>> main
+>>>>>>> main
     rollupOptions: {
-      treeshake: {
-        moduleSideEffects: false,
-        propertyReadSideEffects: false,
-        tryCatchDeoptimization: false,
-      },
       output: {
+<<<<<<< HEAD
         manualChunks: (id) => {
           // Core React libraries
           if (id.includes('react') || id.includes('react-dom')) {
@@ -167,38 +182,61 @@ export default defineConfig({
           }
           // Default chunk for other modules
           return 'vendor'
+=======
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          icons: ['@heroicons/react'],
+          motion: ['framer-motion'],
+          ui: ['clsx', 'tailwind-merge'],
+>>>>>>> main
         },
+<<<<<<< HEAD
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
+      },
+    },
+    // Optimize bundle size
+    treeshake: true,
+  },
+  server: {
+    port: 3000,
+    open: false,
+    host: true,
+  },
+  preview: {
+    port: 4173,
+=======
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Enable tree shaking
-    treeshake: true,
+    // Optimize chunk size
+    chunkSizeWarningLimit: 1000,
   },
   server: {
     port: 3000,
     open: true,
     host: true,
-    // Enable HMR
-    hmr: {
-      overlay: true,
-    },
+    cors: true,
   },
   preview: {
     port: 4173,
     open: true,
+>>>>>>> main
     host: true,
   },
   // Optimize dependencies
   optimizeDeps: {
     include: [
-      "react",
-      "react-dom",
-      "react-router-dom",
-      "react-helmet-async",
-      "framer-motion",
-      "lucide-react",
+      'react',
+      'react-dom',
+      'react-router-dom',
+      '@heroicons/react/24/outline',
+      'framer-motion',
+      'clsx',
+      'tailwind-merge'
     ],
   },
   // CSS optimization

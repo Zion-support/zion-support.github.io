@@ -52,6 +52,8 @@
     "perf:analyze:full": "pnpm run build:analyze && pnpm run perf:monitor",
     "perf:optimize": "node scripts/advanced-performance-optimizer.cjs && pnpm run perf:monitor",
     "optimize:final": "node scripts/final-optimization.cjs",
+    "optimize:comprehensive": "node scripts/comprehensive-optimizer.js",
+    "optimize:bundle": "node scripts/advanced-bundle-optimizer.js",
     "optimize:production": "npm run build:production && npm run analyze:bundle",
     "optimize:performance-final": "node scripts/final-performance-optimizer.js",
     "enhance:performance": "node scripts/performance-enhancer.js",
@@ -101,7 +103,7 @@
     "optimize:performance-enhanced": "node scripts/performance-optimizer-enhanced.cjs",
     "optimize:seo-enhanced": "node scripts/seo-optimizer-enhanced.cjs",
     "lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
-    "postbuild": "npm run generate:sitemap && npm run optimize:performance && echo \"Build completed successfully\"",
+    "postbuild": "npm run generate:sitemap && npm run optimize:performance && node scripts/remove-console-logs.js && npm run optimize:advanced && echo \"Build completed successfully\"",
     "analyze:full": "npm run build && npm run analyze:bundle",
     "debug:performance": "localStorage.setItem('debug-performance', 'true') && npm run dev"
   },

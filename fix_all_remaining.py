@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 """
 Comprehensive script to fix all remaining issues in TSX/TS files
 """
@@ -144,7 +148,11 @@ def fix_file(file_path):
             content = f.read()
         
         original_content = content
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> main
         # Apply fixes
         content = fix_duplicate_imports(content)
         content = fix_unused_imports_and_vars(content)
@@ -166,6 +174,10 @@ def fix_file(file_path):
         return False
 
 def main():
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
     """Main function to fix all files"""
     # Find all TSX and TS files in the app directory
     patterns = [

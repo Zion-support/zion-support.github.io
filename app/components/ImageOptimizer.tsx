@@ -1,126 +1,116 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
-interface ImageOptimizerProps {
-  src: string;
-  alt: string;
-  className?: string;
-  width?: number;
-  height?: number;
-  priority?: boolean;
-  placeholder?: string;
-  effect?: 'blur' | 'opacity' | 'black-and-white';
-  threshold?: number;
-  onLoad?: () => void;
-  onError?: () => void;
+import React, { useState, useRef, useEffect } from 'react',
+      interface ImageOptimizerProps {}
+  src: string,
+      alt: string,
+      className?: string,
+      width?: number,
+      height?: number,
+      priority?: boolean,
+      placeholder?: string;
 }
 
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
-  src,
-  alt,
-  className = '',
-  width,
-  height,
-  priority = false,
-  placeholder,
-  effect = 'blur',
-  threshold = 100,
-  onLoad,
-  onError
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  };
-
-  const handleError = () => {
-    setHasError(true);
-    onError?.();
-  };
-
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({)}
+  src, alt, className = '', width, height, priority = false, placeholder
+}) => {}
+  const [isLoaded, setIsLoaded] = useState(false),
+      const [isInView, setIsInView] = useState(priority),
+      const [hasError, setHasError] = useState(false),
+      const imgRef = useRef<HTMLImageElement>(null),
+      const handleLoad = () => {}
+    setIsLoaded(true)
+    },
+    {}
+  const handleError = () => {}
+    setHasError(true)
+    },
+    {}
   // Generate optimized src with WebP support
-  const getOptimizedSrc = (originalSrc: string) => {
-    if (originalSrc.startsWith('http') || originalSrc.startsWith('/')) {
+  const getOptimizedSrc = (originalSrc: string) => {}
+    if (originalSrc.startsWith('http') || originalSrc.startsWith('/')) {}
       return originalSrc;
     }
     
     // Add WebP support if supported
-    if (typeof window !== 'undefined' && 'WebP' in window) {
-      const webpSrc = originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+    if (typeof window !== 'undefined' && 'WebP' in window) {}
+      const webpSrc = originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp'),
       return webpSrc;
     }
     
-    return originalSrc;
-  };
-
-  // Generate responsive srcset
-  const generateSrcSet = (baseSrc: string) => {
-    if (baseSrc.startsWith('http') || baseSrc.startsWith('/')) {
-      return baseSrc;
+    return originalSrc
+    },
+    {}
+  // Intersection Observer for lazy loading
+  useEffect(() => {}
+    if (priority) return,
+      const observer = new IntersectionObserver()
+      ([entry]) => {}
+        if (entry.isIntersecting) {}
+          setIsInView(true),
+      observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    ),
+      if (imgRef.current) {}
+      observer.observe(imgRef.current);
     }
 
-    const sizes = [320, 640, 768, 1024, 1280, 1920];
-    const srcSet = sizes
-      .map(size => `${baseSrc}?w=${size} ${size}w`)
-      .join(', ');
-    
-    return srcSet;
-  };
-
-  const optimizedSrc = getOptimizedSrc(src);
-  const srcSet = generateSrcSet(src);
-
-  if (hasError) {
-    return (
-      <div 
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width, height }}
-      >
-        <span className="text-gray-500 text-sm">Image failed to load</span>
+    return () => observer.disconnect();
+  }, [priority]),
+      if (hasError) {}
+    return ()
+      <div className={`flex items-center justify-center bg-gray-200 ${className}`} style={{ width, height }}>
+        <span className="text-gray-500">Failed to load image</span>
       </div>
     );
   }
 
-  if (priority) {
-    return (
-      <img
-        ref={imgRef}
-        src={optimizedSrc}
-        srcSet={srcSet}
-        alt={alt}
-        className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
-        width={width}
-        height={height}
-        onLoad={handleLoad}
-        onError={handleError}
-        loading="eager"
-        decoding="async"
+  if (!isInView && !priority) {}
+    return ()
+      <divref={imgRef}>
+        className={`bg-gray-200 animate-pulse ${className}`} 
+        style={{ width, height }}
       />
     );
   }
 
-  return (
-    <LazyLoadImage
-      src={optimizedSrc}
-      srcSet={srcSet}
+  return ()
+    <imgref={imgRef}>
+      src={getOptimizedSrc(src)}
       alt={alt}
-      className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
       width={width}
       height={height}
-      effect={effect}
-      placeholderSrc={placeholder}
-      threshold={threshold}
+      className={className}
+      loading={priority ? "eager" : "lazy"}
+      decoding="async"
       onLoad={handleLoad}
       onError={handleError}
-      loading="lazy"
-      decoding="async"
     />
-  );
-};
-
+  )
+    },
+    {}
 export default ImageOptimizer;
+
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+const ComponentsPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group"";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+};
+;
+export default ComponentsPage;'";'";
+
