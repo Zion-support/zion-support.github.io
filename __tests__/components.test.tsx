@@ -1,17 +1,18 @@
 import { describe, test, expect } from "@jest/globals"
-import {render} from "@testing-library/react"
+import {render, screen} from "@testing-library/react"
+import '@testing-library/jest-dom';
 import { HelmetProvider } from "react-helmet-async"
-import Loading from "../app/components/Loading"
+import LoadingSpinner from "../app/components/LoadingSpinner"
 import SEOHead from "../app/components/SEOHead"
 
 describe("Components", () => {
-  test("Loading component renders", () => {
+  test("LoadingSpinner component renders", () => {
     render(
       <HelmetProvider>
-        <Loading />
+        <LoadingSpinner />
       </HelmetProvider>,
     )
-    expect(screen.getByText("Loading...")).toBeInTheDocument()
+    expect(screen.getByTestId("loading-spinner")).toBeInTheDocument()
   })
   
   test("SEOHead component renders", () => {

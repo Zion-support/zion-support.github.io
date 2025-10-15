@@ -5,19 +5,18 @@
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white"></div>
-        <div className="container mx-auto px-4 py-16"></div>
-          <div className="text-center mb-16"></div>
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"></h1>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Cloud Services
             </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your business with our comprehensive cloud solutions. From migration to optimization, we provide end-to-end cloud services that scale with your needs.
             </p>
-          </div>
-
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
-                <li>• Cloud Architecture Design</li>
-                <li>• Auto-scaling Solutions</li>
+            <ul className="text-sm text-gray-400 space-y-2 mt-4">
+              <li>• Cloud Architecture Design</li>
+              <li>• Auto-scaling Solutions</li>
                 <li>• Performance Optimization</li>
                 <li>• 24/7 Monitoring</li>
               </ul>

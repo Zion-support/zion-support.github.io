@@ -25,6 +25,10 @@ describe('ErrorBoundary', () => {
     expect(screen.getByText('No error')).toBeInTheDocument();
   });
 
+  it('renders error fallback when there is an error', () => {
+    // Suppress console.error for this test
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+    
     render(
       <BrowserRouter>
         <ErrorBoundary>
@@ -33,5 +37,9 @@ describe('ErrorBoundary', () => {
       </BrowserRouter>
     );
     
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();
+    expect(screen.getByText('Try Again')).toBeInTheDocument();
+    
+    consoleSpy.mockRestore();
   });
 });

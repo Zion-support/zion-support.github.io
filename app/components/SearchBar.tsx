@@ -1,41 +1,46 @@
-import React from 'react';
-import SEOHead from './components/SEOHead';
+import React, { useState } from 'react';
 
-<<<<<<< HEAD
-interface SearchBarProps {},
-      children?: React.ReactNode;
+interface SearchBarProps {
+  onSearch?: (query: string) => void;
+  placeholder?: string;
   className?: string;
-  title?: string;
-  description?: string;
-},
-      const SearchBar: React.FC<SearchBarProps> = ({},
-      children, className = "", title, _description, _}) => {}: value,
-      return (
-    <div className={`enhanced-component ${className}`}></div>
-      {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>};
-      {description && <p className="text-gray-600 mb-4">{description}</p>};: value
-      {children};
-    </div>
-  );
-},
-      export default SearchBar;"
-=======
-const ComponentsPage: React.FC = () => {
+}
+
+const SearchBar: React.FC<SearchBarProps> = ({
+  onSearch,
+  placeholder = "Search...",
+  className = ""
+}) => {
+  const [query, setQuery] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (onSearch && query.trim()) {
+      onSearch(query.trim());
+    }
+  };
+
   return (
-    <>
-      <SEOHead
-        title="Components - Zion Tech Group"
-        description="Professional components solutions for modern businesses"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Components</h1>
-          <p className="text-gray-300">Professional solutions coming soon...</p>
-        </div>
+    <form onSubmit={handleSubmit} className={`search-bar ${className}`}>
+      <div className="relative">
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder={placeholder}
+          className="w-full px-4 py-2 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20"
+        />
+        <button
+          type="submit"
+          className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </button>
       </div>
-    </>
+    </form>
   );
 };
 
-export default ComponentsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-7017
+export default SearchBar;
