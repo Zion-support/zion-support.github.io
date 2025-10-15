@@ -19,9 +19,10 @@ const Navigation: React.FC = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Case Studies', path: '/case-studies' },
-    { name: 'Careers', path: '/careers' },
+    { name: 'AI Services', path: '/ai-services' },
+    { name: 'IT Services', path: '/it-services' },
+    { name: '5G Solutions', path: '/5g-solutions' },
+    { name: 'Micro SAAS', path: '/micro-saas' },
     { name: 'Contact', path: '/contact' },
   ];
 
