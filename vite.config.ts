@@ -16,14 +16,33 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: false,
     minify: 'terser',
+    target: 'es2020',
+    cssTarget: 'chrome80',
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['framer-motion', 'lucide-react'],
-          analytics: ['web-vitals'],
-          utils: ['clsx', 'tailwind-merge'],
+        manualChunks: (id) => {
+          // Create chunks based on node_modules
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor';
+            }
+            if (id.includes('react-router')) {
+              return 'router';
+            }
+            if (id.includes('framer-motion') || id.includes('lucide-react')) {
+              return 'ui';
+            }
+            if (id.includes('web-vitals')) {
+              return 'analytics';
+            }
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'utils';
+            }
+            // All other node_modules go to vendor
+            return 'vendor';
+          }
+          // Don't create chunks for empty modules
+          return undefined;
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',

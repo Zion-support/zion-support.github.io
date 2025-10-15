@@ -20,14 +20,15 @@ export const seoUtils = {
     });
     return `https://og-image.vercel.app/${encodeURIComponent(title)}?${params.toString()}`;
   },
-  generateStructuredData: (data: unknown) => { return {
-      '@context': 'https: //schema.org',
+  generateStructuredData: (data: unknown) => {
+    return {
+      '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
       logo: 'https://ziontechgroup.com/logo.png',
-      description: 'Leading technology solutions provider'
-    },
-    ...data
+      description: 'Leading technology solutions provider',
+      ...data
+    };
   }
 }

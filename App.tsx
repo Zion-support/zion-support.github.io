@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './app/components/Header';
 import Footer from './app/components/Footer';
@@ -51,6 +51,22 @@ const App: React.FC = () => {
         <SEOHead />
         
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-x-hidden">
+          {/* Skip Link for Accessibility */}
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50 transition-all duration-200"
+            onClick={(e) => {
+              e.preventDefault();
+              const targetElement = document.getElementById('main-content');
+              if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+                targetElement.focus();
+              }
+            }}
+          >
+            Skip to main content
+          </a>
+          
           {/* Animated background elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse"></div>

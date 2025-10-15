@@ -29,7 +29,9 @@ class ErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to monitoring service
-    console.error('Error caught by boundary:', error, errorInfo);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
   }
 
   handleRetry = () => {

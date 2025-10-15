@@ -9,7 +9,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
   useEffect(() => {
     // Monitor Core Web Vitals
     onCLS((metric) => {
-      console.log('CLS:', metric);
+      if (process.env.NODE_ENV === 'development') {
+        console.log('CLS:', metric);
+      }
       // Send to analytics service
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'web_vitals', {
@@ -21,7 +23,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
     });
 
     onINP((metric) => {
-      console.log('INP:', metric);
+      if (process.env.NODE_ENV === 'development') {
+        console.log('INP:', metric);
+      }
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'web_vitals', {
           event_category: 'Performance',
@@ -32,7 +36,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
     });
 
     onFCP((metric) => {
-      console.log('FCP:', metric);
+      if (process.env.NODE_ENV === 'development') {
+        console.log('FCP:', metric);
+      }
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'web_vitals', {
           event_category: 'Performance',
@@ -43,7 +49,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
     });
 
     onLCP((metric) => {
-      console.log('LCP:', metric);
+      if (process.env.NODE_ENV === 'development') {
+        console.log('LCP:', metric);
+      }
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'web_vitals', {
           event_category: 'Performance',
@@ -54,7 +62,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
     });
 
     onTTFB((metric) => {
-      console.log('TTFB:', metric);
+      if (process.env.NODE_ENV === 'development') {
+        console.log('TTFB:', metric);
+      }
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'web_vitals', {
           event_category: 'Performance',
