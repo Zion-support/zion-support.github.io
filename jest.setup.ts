@@ -3,20 +3,18 @@ import '@testing-library/jest-dom';
 
 // Polyfill fetch and enable fetch mocks
 import 'whatwg-fetch';
-import fetchMock from 'jest-fetch-mock';
-fetchMock.enableMocks();
+// import fetchMock from 'jest-fetch-mock';
+// fetchMock.enableMocks();
 
 // Reset fetch mocks before each test to ensure isolation
-beforeEach(() => {
-  fetchMock.resetMocks();
-});
+// beforeEach(() => {
+//   fetchMock.resetMocks();
+// });
 
 // Polyfill TextEncoder and TextDecoder for JSDOM environment
 import { TextEncoder, TextDecoder } from 'util';
-// @ts-expect-error - Node's TextEncoder might not perfectly match DOM's, but it's usually sufficient for tests
-global.TextEncoder = TextEncoder;
-// @ts-expect-error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests
-global.TextDecoder = TextDecoder;
+global.TextEncoder = TextEncoder as unknown as typeof global.TextEncoder;
+global.TextDecoder = TextDecoder as unknown as typeof global.TextDecoder;
 
 // Set up a mock for Vite environment variables accessed via import.meta.env
 process.env['VITE_REOWN_PROJECT_ID'] = 'test_project_id_from_jest_setup';
@@ -72,9 +70,12 @@ if (typeof window.IntersectionObserver === 'undefined') {
 
 // Polyfill performance.getEntriesByType for JSDOM (used in productionLogger)
 if (typeof performance.getEntriesByType !== 'function') {
+<<<<<<< HEAD
   performance.getEntriesByType = () => [];
+=======
+  (performance as Performance & { getEntriesByType: (type: string) => PerformanceEntry[] }).getEntriesByType = () => [];
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
 }
 
 // Ensure all code paths use the mock implementation
-// @ts-expect-error - Mock implementation for testing
-global.fetch = fetchMock;
+// global.fetch = fetchMock;

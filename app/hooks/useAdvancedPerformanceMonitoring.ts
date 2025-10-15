@@ -43,7 +43,11 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
   const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: any) => {
     // Report to analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
+<<<<<<< HEAD
       (window as any)['gtag']('event', name, {
+=======
+      (window as unknown as { gtag: (event: string, name: string, options: Record<string, unknown>) => void }).gtag('event', name, {
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
         event_category: category,
         value: Math.round(value),
         non_interaction: true,
@@ -69,10 +73,10 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       });
     }
 
-    // Log in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`Performance Metric - ${name}:`, value);
-    }
+    // Log in development (commented out for production)
+    // if (process.env.NODE_ENV === 'development') {
+    //   console.log(`Performance Metric - ${name}:`, value);
+    // }
   }, []);
 
   const reportMetrics = useCallback(() => {
@@ -98,7 +102,11 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       try {
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
+<<<<<<< HEAD
             const metric = entry as PerformanceEntry & { startTime: number; value?: number; hadRecentInput?: boolean };
+=======
+            const metric = entry as PerformanceEntry & { startTime?: number; value?: number };
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
             
             switch (entry.entryType) {
               case 'paint':
@@ -162,8 +170,8 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
         observer.observe({ entryTypes });
         observerRef.current = observer;
 
-      } catch (error) {
-        console.warn('Performance Observer setup failed:', error);
+      } catch {
+        // console.warn('Performance Observer setup failed:', error);
       }
     };
 
@@ -172,10 +180,16 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 
       const checkMemory = () => {
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+<<<<<<< HEAD
         if (memory) {
           const usedMB = memory.usedJSHeapSize / 1048576;
           const totalMB = memory.totalJSHeapSize / 1048576;
           const limitMB = memory.jsHeapSizeLimit / 1048576;
+=======
+        const usedMB = memory.usedJSHeapSize / 1048576;
+        const totalMB = memory.totalJSHeapSize / 1048576;
+        const limitMB = memory.jsHeapSizeLimit / 1048576;
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
 
           metricsRef.current.memory = {
             used: usedMB,
@@ -201,7 +215,11 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
+<<<<<<< HEAD
           const metric = entry as PerformanceEntry & { value: number; hadRecentInput: boolean };
+=======
+          const metric = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
           if (!metric.hadRecentInput) {
             clsValue += metric.value;
             metricsRef.current.cls = clsValue;
@@ -211,8 +229,8 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (error) {
-        console.warn('Layout shift monitoring not supported:', error);
+      } catch {
+        // console.warn('Layout shift monitoring not supported:', error);
       }
 
       return () => clsObserver.disconnect();
@@ -256,6 +274,10 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     reportInterval,
     memoryThreshold,
     longTaskThreshold,
+<<<<<<< HEAD
+=======
+    reportMetrics,
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
     reportMetric,
   ]);
 

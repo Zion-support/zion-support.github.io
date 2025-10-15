@@ -48,7 +48,10 @@ const DocsPage: React.FC = () => {
       title: 'API Reference',
       icon: <Book className="w-6 h-6" />,
       description: 'Complete API documentation and examples',
+<<<<<<< HEAD
       content: 'Detailed API reference with examples and best practices',
+=======
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
       articles: [
         { title: 'Authentication', description: 'API authentication methods', readTime: '5 min' },
         { title: 'Endpoints', description: 'Complete endpoint reference', readTime: '45 min' },
@@ -166,7 +169,11 @@ const DocsPage: React.FC = () => {
                   >
                     <div className="flex items-center">
                       <div className="text-cyan-400 mr-4">
+<<<<<<< HEAD
                         {(section as any).icon || <Book className="w-6 h-6" />}
+=======
+                        {section.icon || <Book className="w-6 h-6" />}
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-white">{section.title}</h3>

@@ -145,7 +145,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Intelligent Learning Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powered by advanced AI algorithms that adapt to each learner's unique needs and learning style
+                Powered by advanced AI algorithms that adapt to each learner&apos;s unique needs and learning style
               </p>
             </div>
             

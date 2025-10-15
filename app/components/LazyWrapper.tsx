@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, ComponentType } from 'react';
+import React, { Suspense } from 'react';
 
 interface LazyWrapperProps {
   fallback?: React.ReactNode;
@@ -27,6 +27,7 @@ export const LazyWrapper: React.FC<LazyWrapperProps> = ({
 
 LazyWrapper.displayName = 'LazyWrapper';
 
+<<<<<<< HEAD
 // Lazy loading helper function
 export const createLazyComponent = <P extends Record<string, unknown>>(
   importFunc: () => Promise<{ default: ComponentType<P> }>
@@ -42,5 +43,9 @@ export const createLazyComponent = <P extends Record<string, unknown>>(
   WrappedComponent.displayName = 'LazyComponent';
   return WrappedComponent;
 };
+=======
+// Re-export from utils
+export { createLazyComponent } from '../utils/lazyLoading';
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
 
 export default LazyWrapper;

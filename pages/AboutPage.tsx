@@ -4,6 +4,10 @@ import {
   Users, 
   CheckCircle, 
   Brain, 
+<<<<<<< HEAD
+=======
+  // Zap,
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
   Shield,
   Globe,
   Lightbulb,
