@@ -1,11 +1,6 @@
 import React from 'react';
 
-interface shipping-ratesProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const shipping-rates: React.FC<shipping-ratesProps> = ({ 
+const ShippingRates = ({ 
   className = '', 
   children 
 }) => {
@@ -16,4 +11,4 @@ const shipping-rates: React.FC<shipping-ratesProps> = ({
   );
 };
 
-export default shipping-rates;
+export default ShippingRates;
