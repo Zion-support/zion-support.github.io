@@ -1,4 +1,18 @@
-import React from 'react';
+const fs = require('fs');
+const path = require('path');
+
+// List of app files that need to be fixed
+const appFiles = [
+  'App.tsx'
+];
+
+console.log(`Fixing ${appFiles.length} app files`);
+
+appFiles.forEach(file => {
+  const filePath = path.join('/workspace', file);
+  
+  // Create a working App component
+  const newContent = `import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const App: React.FC = () => {
@@ -18,4 +32,10 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default App;`;
+
+  fs.writeFileSync(filePath, newContent);
+  console.log(`Fixed ${file}`);
+});
+
+console.log('App files fixed');
