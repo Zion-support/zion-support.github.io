@@ -9,6 +9,7 @@ export default defineConfig({
       jsxRuntime: 'automatic',
     })
   ],
+  publicDir: 'public',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './app'),
@@ -49,6 +50,9 @@ export default defineConfig({
             if (id.includes('react-helmet-async')) {
               return 'seo';
             }
+            if (id.includes('recharts')) {
+              return 'charts';
+            }
             return 'vendor';
           }
           // Split app code by feature
@@ -61,6 +65,9 @@ export default defineConfig({
           if (id.includes('/app/utils/')) {
             return 'utils';
           }
+          if (id.includes('/app/data/')) {
+            return 'data';
+          }
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
@@ -68,8 +75,10 @@ export default defineConfig({
       },
     },
     // Optimize chunk size
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: false,
+    chunkSizeWarningLimit: 1000,
+    reportCompressedSize: true,
+    // Enable tree shaking
+    treeshake: true,
   },
   server: {
     port: 3000,

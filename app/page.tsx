@@ -118,7 +118,7 @@ const HomePage: React.FC = () => {
         keywords="AI solutions, cybersecurity, cloud infrastructure, digital transformation, IT services, machine learning, artificial intelligence"
       />
       
-      <div className="min-h-screen bg-slate-900 text-white">
+      <div className="min-h-screen bg-slate-900 text-white" role="main" aria-label="Zion Tech Group Homepage">
         {/* Hero Section */}
         <section className="relative overflow-hidden min-h-screen flex items-center">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-slate-900 to-cyan-900/30"></div>
@@ -145,13 +145,13 @@ const HomePage: React.FC = () => {
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
             <div className="text-center">
               <div className="relative inline-block mb-6">
-                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold holographic leading-tight neon-text">
+                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold holographic leading-tight neon-text" aria-label="Zion Tech Group - Advanced AI and IT Solutions">
                   Zion Tech Group
                 </h1>
                 <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-lg blur opacity-30 animate-pulse"></div>
                 <div className="absolute -inset-2 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 rounded-lg blur opacity-20 animate-pulse delay-1000"></div>
               </div>
-              <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed px-4">
+              <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed px-4" role="banner" aria-label="Company description">
                 Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services that drive innovation and growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 lg:mb-16 px-4">

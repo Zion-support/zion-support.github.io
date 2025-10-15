@@ -193,9 +193,35 @@ function App() {
         link.href = page;
         document.head.appendChild(link);
       });
+
+      // Add performance hints
+      const performanceHint = document.createElement('meta');
+      performanceHint.name = 'viewport';
+      performanceHint.content = 'width=device-width, initial-scale=1.0, viewport-fit=cover';
+      document.head.appendChild(performanceHint);
     };
 
     preloadCriticalResources();
+
+    // Register service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('SW registered: ', registration);
+          }
+        })
+        .catch((registrationError) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('SW registration failed: ', registrationError);
+          }
+        });
+    }
+
+    // Cleanup function
+    return () => {
+      // Remove any dynamically added elements if needed
+    };
   }, []);
   return (
     <GlobalErrorBoundary>
@@ -280,9 +306,6 @@ function App() {
                     
                     {/* Additional missing pages */}
                     <Route path="/accessibility-page" element={<AccessibilityPagePage />} />
-                    <Route path="/ai-crm-optimizer" element={<AICRMOptimizerPage />} />
-                    <Route path="/ai-data-visualizer" element={<AIDataVisualizerPage />} />
-                    <Route path="/ai-email-optimizer" element={<AIEmailOptimizerPage />} />
                     <Route path="/ai-fraud-detection-pro" element={<AIFraudDetectionProPage />} />
                     <Route path="/ai-image-recognition-pro" element={<AIImageRecognitionProPage />} />
                     <Route path="/ai-lead-scoring-pro" element={<AILeadScoringProPage />} />
@@ -344,13 +367,21 @@ function App() {
                     <Route path="/zion-smart-inventory-manager" element={<ZionSmartInventoryManagerPage />} />
                     
                     {/* Catch all route */}
-                    <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
-                      <div className="text-center">
-                        <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>
-                        <p className="text-gray-600 mb-8">Page not found</p>
-                        <a href="/" className="text-blue-600 hover:text-blue-800">Go back home</a>
+                    <Route path="*" element={
+                      <div className="min-h-screen flex items-center justify-center bg-slate-900">
+                        <div className="text-center">
+                          <h1 className="text-4xl font-bold text-white mb-4">404</h1>
+                          <p className="text-gray-300 mb-8">Page not found</p>
+                          <Link 
+                            to="/" 
+                            className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                            aria-label="Go back to home page"
+                          >
+                            Go back home
+                          </Link>
+                        </div>
                       </div>
-                    </div>} />
+                    } />
                     </Routes>
                   </ErrorBoundary>
                 </Suspense>

@@ -19,7 +19,9 @@ const PerformanceMonitor: React.FC = () => {
           metrics[metric.name.toLowerCase() as keyof PerformanceMetrics] = metric.value;
           
           if (process.env.NODE_ENV === 'development') {
-            console.log(`Performance metric ${metric.name}:`, metric.value);
+            if (process.env.NODE_ENV === 'development') {
+              console.log(`Performance metric ${metric.name}:`, metric.value);
+            }
           }
           
           // Store metrics for analytics
@@ -45,7 +47,9 @@ const PerformanceMonitor: React.FC = () => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
             if (process.env.NODE_ENV === 'development') {
-              console.log('Navigation timing:', entry);
+              if (process.env.NODE_ENV === 'development') {
+                console.log('Navigation timing:', entry);
+              }
             }
           }
         }
