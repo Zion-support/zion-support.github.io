@@ -26,16 +26,20 @@ export const LazyWrapper: React.FC<LazyWrapperProps> = ({
 };
 
 // Lazy loading helper function
-export const createLazyComponent = <P extends object>(
-  importFunc: () => Promise<{ default: ComponentType<P> }>
+export const createLazyComponent = (
+  importFunc: () => Promise<{ default: ComponentType<any> }>
 ) => {
   const LazyComponent = lazy(importFunc);
   
-  return (props: P) => (
+  const LazyComponentWrapper = (props: any) => (
     <LazyWrapper>
       <LazyComponent {...props} />
     </LazyWrapper>
   );
+  
+  LazyComponentWrapper.displayName = 'LazyComponentWrapper';
+  
+  return LazyComponentWrapper;
 };
 
 export default LazyWrapper;

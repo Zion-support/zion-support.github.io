@@ -6,7 +6,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
-import LazyWrapper from './app/components/LazyWrapper';
 import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Lazy loaded page components
@@ -69,7 +68,7 @@ function App() {
           <div className="min-h-screen bg-slate-900">
             <Navigation />
             <main className="relative z-10" id="main-content" role="main">
-              <Suspense fallback={<LoadingSpinner size="xl" text="Loading page..." className="min-h-screen" />}>
+              <Suspense fallback={<LoadingSpinner />}>
                 <Routes>
                   {/* Main Pages */}
                   <Route path="/" element={<HomePage />} />

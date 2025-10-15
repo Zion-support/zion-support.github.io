@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mic, Headphones, Zap, CheckCircle, ArrowRight, Star, Clock, Users, Award, MessageSquare, Globe } from 'lucide-react';
+import { Mic, Headphones, Zap, CheckCircle, ArrowRight, Star, Users, Award, MessageSquare, Globe } from 'lucide-react';
 
 const AiVoiceAssistantPage: React.FC = () => {
   const features = [
