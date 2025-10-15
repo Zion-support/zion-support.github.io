@@ -13,7 +13,7 @@ const Footer: React.FC = memo(() => {
       
       <div className="relative z-10 glass-card">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
             <div className="lg:col-span-2">
               <h3 className="text-2xl font-bold mb-6 holographic-text font-['Orbitron'] cyber-glitch" data-text="ZION TECH GROUP">ZION TECH GROUP</h3>
               <p className="text-gray-300 mb-6 leading-relaxed matrix-text">
@@ -122,13 +122,32 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Micro SaaS Solutions</h4>
+            <h4 className="text-md font-semibold mb-4">Innovative Micro SaaS</h4>
             <ul className="space-y-2">
               <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SaaS Overview</Link></li>
+              <li><Link to="/ai-legal-assistant-pro" className="text-gray-300 hover:text-white">AI Legal Assistant Pro</Link></li>
+              <li><Link to="/ai-medical-diagnosis-pro" className="text-gray-300 hover:text-white">AI Medical Diagnosis Pro</Link></li>
+              <li><Link to="/ai-real-estate-analyzer-pro" className="text-gray-300 hover:text-white">AI Real Estate Analyzer Pro</Link></li>
+              <li><Link to="/ai-supply-chain-optimizer-pro" className="text-gray-300 hover:text-white">AI Supply Chain Optimizer Pro</Link></li>
+              <li><Link to="/ai-education-tutor-pro" className="text-gray-300 hover:text-white">AI Education Tutor Pro</Link></li>
+              <li><Link to="/ai-3d-model-generator-pro" className="text-gray-300 hover:text-white">AI 3D Model Generator Pro</Link></li>
+              <li><Link to="/ai-audio-processor-pro" className="text-gray-300 hover:text-white">AI Audio Processor Pro</Link></li>
+              <li><Link to="/ai-translator-pro" className="text-gray-300 hover:text-white">AI Translator Pro</Link></li>
+              <li><Link to="/ai-code-assistant-pro" className="text-gray-300 hover:text-white">AI Code Assistant Pro</Link></li>
+              <li><Link to="/ai-video-generator-pro" className="text-gray-300 hover:text-white">AI Video Generator Pro</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Smart Solutions</h4>
+            <ul className="space-y-2">
               <li><Link to="/zion-smart-analytics-dashboard" className="text-gray-300 hover:text-white">Smart Analytics Dashboard</Link></li>
               <li><Link to="/zion-smart-crm-automation" className="text-gray-300 hover:text-white">Smart CRM Automation</Link></li>
               <li><Link to="/zion-smart-inventory-manager" className="text-gray-300 hover:text-white">Smart Inventory Manager</Link></li>
               <li><Link to="/zion-smart-expense-tracker" className="text-gray-300 hover:text-white">Smart Expense Tracker</Link></li>
+              <li><Link to="/social-media-scheduler" className="text-gray-300 hover:text-white">Social Media Scheduler</Link></li>
+              <li><Link to="/expense-tracker-pro" className="text-gray-300 hover:text-white">Expense Tracker Pro</Link></li>
+              <li><Link to="/task-manager-pro" className="text-gray-300 hover:text-white">Task Manager Pro</Link></li>
             </ul>
           </div>
           

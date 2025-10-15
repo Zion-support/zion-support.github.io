@@ -87,6 +87,18 @@ const BlockchainSolutionsProPage = lazy(() => import('./app/blockchain-solutions
 const DevOpsAutomationProPage = lazy(() => import('./app/devops-automation-pro/page'));
 const IOTSolutionsProPage = lazy(() => import('./app/iot-solutions-pro/page'));
 
+// New Innovative Micro SAAS Services
+const AILegalAssistantProPage = lazy(() => import('./app/ai-legal-assistant-pro/page'));
+const AIMedicalDiagnosisProPage = lazy(() => import('./app/ai-medical-diagnosis-pro/page'));
+const AIRealEstateAnalyzerProPage = lazy(() => import('./app/ai-real-estate-analyzer-pro/page'));
+const AISupplyChainOptimizerProPage = lazy(() => import('./app/ai-supply-chain-optimizer-pro/page'));
+const AIEducationTutorProPage = lazy(() => import('./app/ai-education-tutor-pro/page'));
+const AI3DModelGeneratorProPage = lazy(() => import('./app/ai-3d-model-generator-pro/page'));
+const AIAudioProcessorProPage = lazy(() => import('./app/ai-audio-processor-pro/page'));
+const AITranslatorProPage = lazy(() => import('./app/ai-translator-pro/page'));
+const AICodeAssistantProPage = lazy(() => import('./app/ai-code-assistant-pro/page'));
+const AIVideoGeneratorProPage = lazy(() => import('./app/ai-video-generator-pro/page'));
+
 // Zion AI Services
 const ZionAIChatbotBuilderPage = lazy(() => import('./app/zion-ai-chatbot-builder/page'));
 const ZionAICodeAssistantPage = lazy(() => import('./app/zion-ai-code-assistant/page'));
@@ -308,6 +320,18 @@ function App() {
                     <Route path="/blockchain-solutions-pro" element={<BlockchainSolutionsProPage />} />
                     <Route path="/devops-automation-pro" element={<DevOpsAutomationProPage />} />
                     <Route path="/iot-solutions-pro" element={<IOTSolutionsProPage />} />
+                    
+                    {/* New Innovative Micro SAAS Services */}
+                    <Route path="/ai-legal-assistant-pro" element={<AILegalAssistantProPage />} />
+                    <Route path="/ai-medical-diagnosis-pro" element={<AIMedicalDiagnosisProPage />} />
+                    <Route path="/ai-real-estate-analyzer-pro" element={<AIRealEstateAnalyzerProPage />} />
+                    <Route path="/ai-supply-chain-optimizer-pro" element={<AISupplyChainOptimizerProPage />} />
+                    <Route path="/ai-education-tutor-pro" element={<AIEducationTutorProPage />} />
+                    <Route path="/ai-3d-model-generator-pro" element={<AI3DModelGeneratorProPage />} />
+                    <Route path="/ai-audio-processor-pro" element={<AIAudioProcessorProPage />} />
+                    <Route path="/ai-translator-pro" element={<AITranslatorProPage />} />
+                    <Route path="/ai-code-assistant-pro" element={<AICodeAssistantProPage />} />
+                    <Route path="/ai-video-generator-pro" element={<AIVideoGeneratorProPage />} />
                     
                     {/* Zion AI Services */}
                     <Route path="/zion-ai-chatbot-builder" element={<ZionAIChatbotBuilderPage />} />

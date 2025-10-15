@@ -227,9 +227,66 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Micro SaaS Pricing */}
+          {/* Innovative Micro SaaS Pricing */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Micro SaaS Solutions Pricing</h2>
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Innovative Micro SaaS Solutions Pricing</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Legal Assistant Pro</h3>
+                <div className="text-2xl font-bold text-blue-600 mb-2">$299<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Advanced AI-powered legal research and document analysis</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Medical Diagnosis Pro</h3>
+                <div className="text-2xl font-bold text-green-600 mb-2">$499<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">AI-powered medical diagnosis and treatment assistance</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Real Estate Analyzer Pro</h3>
+                <div className="text-2xl font-bold text-orange-600 mb-2">$199<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">AI-powered real estate analysis and investment insights</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Supply Chain Optimizer Pro</h3>
+                <div className="text-2xl font-bold text-purple-600 mb-2">$399<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">AI-powered supply chain optimization and logistics</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Education Tutor Pro</h3>
+                <div className="text-2xl font-bold text-cyan-600 mb-2">$99<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">AI-powered personalized education and tutoring</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI 3D Model Generator Pro</h3>
+                <div className="text-2xl font-bold text-pink-600 mb-2">$199<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">AI-powered 3D model generation and asset creation</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Audio Processor Pro</h3>
+                <div className="text-2xl font-bold text-indigo-600 mb-2">$149<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">AI-powered audio processing and enhancement</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Translator Pro</h3>
+                <div className="text-2xl font-bold text-teal-600 mb-2">$99<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">AI-powered translation and language services</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Code Assistant Pro</h3>
+                <div className="text-2xl font-bold text-gray-600 mb-2">$199<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">AI-powered coding assistant and development tool</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Video Generator Pro</h3>
+                <div className="text-2xl font-bold text-red-600 mb-2">$299<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">AI-powered video generation and editing</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Traditional Micro SaaS Pricing */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Traditional Micro SaaS Solutions Pricing</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Task Manager Pro</h3>

@@ -52,6 +52,16 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       submenu: [
         { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon },
         { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
+        { name: 'AI Legal Assistant Pro', href: '/ai-legal-assistant-pro', icon: ShieldCheckIcon },
+        { name: 'AI Medical Diagnosis Pro', href: '/ai-medical-diagnosis-pro', icon: UserGroupIcon },
+        { name: 'AI Real Estate Analyzer Pro', href: '/ai-real-estate-analyzer-pro', icon: ChartBarIcon },
+        { name: 'AI Supply Chain Optimizer Pro', href: '/ai-supply-chain-optimizer-pro', icon: CogIcon },
+        { name: 'AI Education Tutor Pro', href: '/ai-education-tutor-pro', icon: AcademicCapIcon },
+        { name: 'AI 3D Model Generator Pro', href: '/ai-3d-model-generator-pro', icon: EyeIcon },
+        { name: 'AI Audio Processor Pro', href: '/ai-audio-processor-pro', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Translator Pro', href: '/ai-translator-pro', icon: GlobeAltIcon },
+        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro', icon: CodeBracketIcon },
+        { name: 'AI Video Generator Pro', href: '/ai-video-generator-pro', icon: EyeIcon },
         { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: ChatBubbleLeftRightIcon },
         { name: 'AI Document Processor', href: '/ai-document-processor', icon: DocumentTextIcon },
         { name: 'AI Form Builder', href: '/ai-form-builder', icon: DocumentTextIcon },
@@ -81,22 +91,19 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'Smart CRM Automation', href: '/zion-smart-crm-automation', icon: ChatBubbleLeftRightIcon },
         { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager', icon: CircleStackIcon },
         { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker', icon: CurrencyDollarIcon },
-        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
-        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
-        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
-        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },
+        { name: 'AI Legal Assistant Pro', href: '/ai-legal-assistant-pro', icon: ShieldCheckIcon },
+        { name: 'AI Medical Diagnosis Pro', href: '/ai-medical-diagnosis-pro', icon: UserGroupIcon },
+        { name: 'AI Real Estate Analyzer Pro', href: '/ai-real-estate-analyzer-pro', icon: ChartBarIcon },
+        { name: 'AI Supply Chain Optimizer Pro', href: '/ai-supply-chain-optimizer-pro', icon: CogIcon },
+        { name: 'AI Education Tutor Pro', href: '/ai-education-tutor-pro', icon: AcademicCapIcon },
+        { name: 'AI 3D Model Generator Pro', href: '/ai-3d-model-generator-pro', icon: EyeIcon },
+        { name: 'AI Audio Processor Pro', href: '/ai-audio-processor-pro', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Translator Pro', href: '/ai-translator-pro', icon: GlobeAltIcon },
+        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro', icon: CodeBracketIcon },
+        { name: 'AI Video Generator Pro', href: '/ai-video-generator-pro', icon: EyeIcon },
         { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },
         { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon },
-        { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: CodeBracketIcon },
-        { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon },
-        { name: 'AI Video Generator', href: '/ai-video-generator', icon: EyeIcon },
-        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: ChatBubbleLeftRightIcon },
-        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: EyeIcon },
-        { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: ShieldCheckIcon },
-        { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: UserGroupIcon },
-        { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: AcademicCapIcon },
-        { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer', icon: ChartBarIcon },
-        { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: CogIcon }
+        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon }
       ]
     },
     {
@@ -258,7 +265,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 {/* Dropdown Menu */}
                 {item.submenu && (
                   <div 
-                    className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
+                    className={`absolute left-0 mt-2 w-80 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 max-h-96 overflow-y-auto ${
                       (item.name === 'AI Services' && isServicesOpen) ||
                       (item.name === 'Micro SaaS' && isSolutionsOpen) ||
                       (item.name === 'IT Solutions' && isResourcesOpen) ||
@@ -269,17 +276,19 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     role="menu"
                     aria-label={`${item.name} submenu`}
                   >
-                    {item.submenu.map((subItem) => (
-                      <div key={subItem.name} role="none">
-                        <Link
-                          to={subItem.href}
-                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-300 transition-all duration-300 group"
-                        >
-                          <subItem.icon className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span className="group-hover:text-white transition-colors">{subItem.name}</span>
-                        </Link>
-                      </div>
-                    ))}
+                    <div className="grid grid-cols-1 gap-1">
+                      {item.submenu.map((subItem) => (
+                        <div key={subItem.name} role="none">
+                          <Link
+                            to={subItem.href}
+                            className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-300 transition-all duration-300 group"
+                          >
+                            <subItem.icon className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform flex-shrink-0" />
+                            <span className="group-hover:text-white transition-colors truncate">{subItem.name}</span>
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
