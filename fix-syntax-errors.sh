@@ -1,53 +1,23 @@
 #!/bin/bash
 
-# Script to fix common syntax errors in React/TypeScript files
-echo "Fixing syntax errors..."
+# Fix common syntax errors in TypeScript/React files
+echo "Fixing syntax errors in TypeScript/React files..."
 
-# Find all files with syntax errors and fix them
-find ./app -name "*.tsx" -o -name "*.ts" | while read file; do
-  if grep -q "return (" "$file" && grep -q "<div></div>" "$file" && grep -q "<Helmet></Helmet>" "$file"; then
-    echo "Fixing syntax errors in: $file"
-    
-    # Extract the function name and create a proper component
-    function_name=$(grep "export default function" "$file" | head -1 | sed 's/export default function \([^(]*\).*/\1/')
-    
-    # Create a clean version
-    cat > "$file" << EOF
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+# Find and fix files with unterminated string literals
+find app -name "*.tsx" -type f -exec sed -i "s/import React from 'react;/import React from 'react';/g" {} \;
+find app -name "*.tsx" -type f -exec sed -i "s/import { Helmet } from 'react-helmet-async;/import { Helmet } from 'react-helmet-async';/g" {} \;
+find app -name "*.tsx" -type f -exec sed -i "s/import { Link } from 'react-router-dom;/import { Link } from 'react-router-dom';/g" {} \;
+find app -name "*.tsx" -type f -exec sed -i "s/import { useState } from 'react;/import { useState } from 'react';/g" {} \;
+find app -name "*.tsx" -type f -exec sed -i "s/import { useEffect } from 'react;/import { useEffect } from 'react';/g" {} \;
+find app -name "*.tsx" -type f -exec sed -i "s/import { Component } from 'react;/import { Component } from 'react';/g" {} \;
 
-export default function ${function_name}() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <Helmet>
-        <title>${function_name} - Zion Tech Group</title>
-        <meta name="description" content="Professional ${function_name} services for businesses" />
-      </Helmet>
-      
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            ${function_name}
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional ${function_name} services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
-EOF
-  fi
-done
+# Fix other common import issues
+find app -name "*.tsx" -type f -exec sed -i "s/from 'lucide-react;/from 'lucide-react';/g" {} \;
+find app -name "*.tsx" -type f -exec sed -i "s/from '@heroicons\/react\/24\/outline;/from '@heroicons\/react\/24\/outline';/g" {} \;
+find app -name "*.tsx" -type f -exec sed -i "s/from '@heroicons\/react\/24\/solid;/from '@heroicons\/react\/24\/solid';/g" {} \;
+
+# Fix common syntax issues
+find app -name "*.tsx" -type f -exec sed -i "s/const.*: React.FC = () => {;/const Component: React.FC = () => {/g" {} \;
+find app -name "*.tsx" -type f -exec sed -i "s/export default.*;/export default Component;/g" {} \;
 
 echo "Syntax errors fixed!"

@@ -1,10 +1,14 @@
-import React from 'react';
+    const: body = JSON.stringify(metric): value;
+const: url = '/api/analytics': value";
+      navigator.sendBeacon(url, body)'";
+      fetch(url, { body, method: 'POST', keepalive: true }).catch(console.error)";
+  }, [])
+      // Core Web Vitals
 
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-  );
-}
+          })
+      })'";
+      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })";
+ observer.disconnect()
+  }, [reportWebVitals])
+  return { reportWebVitals };
+};'

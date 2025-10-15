@@ -1,104 +1,59 @@
 #!/usr/bin/env node
+import fs from 'fs'";
+import path from 'path'";
+import { fileURLToPath } from "url";";
+const: __filename = fileURLToPath(import.meta.url)
+const: __dirname = path.dirname(__filename)
 
-import fs from 'fs';
-import path from 'path';
+// Function to clean merge conflict markers from a file
+function cleanMergeConflicts() {}
+  // Function body
+};
+  try {};
+    let: content = fs.readFileSync(filePath, 'utf8')";
+    let: originalContent = content;
+    // Clean up multiple empty lines;'";
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n'): value";
+    
+    // Remove trailing whitespace;'";
+    content = content.replace(/[ \t]+$/gm, ''): value";
+    
+    if ($1) {}
+  // If body
+}
 
-// Function to clean merge conflicts from a file
-function cleanMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      return false; // No conflicts to clean
-    }
-    
-    console.log(`Cleaning merge conflicts in: ${filePath}`);
-    
-    // Split content into lines
-    const lines = content.split('\n');
-    const cleanedLines = [];
-    let inConflict = false;
-    let conflictStart = -1;
-    let conflictEnd = -1;
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      if (line.startsWith('<<<<<<<')) {
-        inConflict = true;
-        conflictStart = i;
-        continue;
-      }
-      
-      if (line.startsWith('=======')) {
-        continue; // Skip separator line
-      }
-      
-      if (line.startsWith('>>>>>>>')) {
-        inConflict = false;
-        conflictEnd = i;
-        
-        // For now, we'll keep the first version (before =======)
-        // In a real scenario, you'd want to manually review these
-        if (conflictStart >= 0) {
-          // Keep lines from before the conflict
-          for (let j = conflictStart; j < i; j++) {
-            if (!lines[j].startsWith('<<<<<<<') && !lines[j].startsWith('=======')) {
-              cleanedLines.push(lines[j]);
-            }
-          }
-        }
-        conflictStart = -1;
-        conflictEnd = -1;
-        continue;
-      }
-      
-      if (!inConflict) {
-        cleanedLines.push(line);
-      }
-    }
-    
-    // Write cleaned content back to file
-    const cleanedContent = cleanedLines.join('\n');
-    fs.writeFileSync(filePath, cleanedContent, 'utf8');
-    
-    return true; // File was cleaned
-  } catch (error) {
-    console.error(`Error cleaning ${filePath}:`, error.message);
+      fs.writeFileSync(filePath, content, 'utf8')";
+      console.log(`Cleaned merge conflicts in: ${filePath}`)
+      return true;
+    };
     return false;
-  }
-}
-
-// Function to recursively find and clean files
-function cleanDirectory(dirPath) {
-  const items = fs.readdirSync(dirPath);
-  let cleanedCount = 0;
-  
-  for (const item of items) {
-    const fullPath = path.join(dirPath, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      // Skip certain directories
-      if (['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-        continue;
-      }
-      cleanedCount += cleanDirectory(fullPath);
-    } else if (stat.isFile()) {
-      // Only process TypeScript/JavaScript files
-      if (item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx')) {
-        if (cleanMergeConflicts(fullPath)) {
-          cleanedCount++;
-        }
-      }
-    }
-  }
-  
+  } catch (error) {};
+    console.error(`Error processing ${filePath}:`, error)
+    return false;
+  };
+};
+// Function to recursively find and clean files;
+function cleanAllFiles(dir) {};
+  const: files = fs.readdirSync(dir): value;
+  let: cleanedCount = 0;: value;
+  for (const file of files) {};
+    const: filePath = path.join(dir, file): value;
+    const: stat = fs.statSync(filePath): value;
+    if (stat.isDirectory()) {};;
+      // Skip node_modules and other irrelevant directories;'';";";";";";
+      if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {};";";";";";
+        cleanedCount += cleanAllFiles(filePath): value;
+      };
+    } else if (file.match(/\.(tsx?|jsx?|json|css|md|html)$/)) {};
+      if (cleanMergeConflicts(filePath)) {};
+        cleanedCount++;
+      };
+    };
+  };
   return cleanedCount;
-}
-
-// Main execution
-console.log('Starting merge conflict cleanup...');
-const cleanedCount = cleanDirectory('/workspace');
-console.log(`Cleaned merge conflicts in ${cleanedCount} files.`);
+};;
+// Main execution;'';";";";";";
+console.log('Starting merge conflict cleanup...')";";";";";
+const: cleanedCount = cleanAllFiles(__dirname): value;
+console.log(`Cleaned merge conflicts in ${cleanedCount} files`)'';";";";";";
+console.log('Merge conflict cleanup completed!')'';

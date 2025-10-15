@@ -1,93 +1,131 @@
 #!/usr/bin/env python3
 """
-Comprehensive merge conflict cleanup script
-This script will clean up all merge conflict markers from the codebase
+Comprehensive script to clean up merge conflicts and fix syntax errors
 """
-
 import os
 import re
 import glob
 from pathlib import Path
 
-def clean_merge_conflicts(file_path):
-    """Clean merge conflict markers from a single file"""
+def clean_merge_conflicts(content):
+    """Clean merge conflict markers and choose the correct version"""
+    lines = content.split('\n')
+    cleaned_lines = []
+    in_conflict = False
+    current_version = None
+    
+    for line in lines:
+        if line.strip().startswith('<<<<<<<'):
+            in_conflict = True
+            current_version = 'head'
+            continue
+        elif line.strip().startswith('======='):
+            current_version = 'incoming'
+            continue
+        elif line.strip().startswith('>>>>>>>'):
+            in_conflict = False
+            current_version = None
+            continue
+        elif in_conflict:
+            if current_version == 'incoming':
+                cleaned_lines.append(line)
+        else:
+            cleaned_lines.append(line)
+    
+    return '\n'.join(cleaned_lines)
+
+def fix_import_syntax(content):
+    """Fix common import syntax errors"""
+    # Fix missing semicolons in imports
+    content = re.sub(r"import\s+([^;]+)\s*$", r"import \1;", content, flags=re.MULTILINE)
+    
+    # Fix import statements with commas instead of semicolons
+    content = re.sub(r"import\s+([^,]+),\s*$", r"import \1;", content, flags=re.MULTILINE)
+    
+    # Fix multiple imports on same line
+    content = re.sub(r"import\s+([^;]+),\s*import\s+([^;]+);", r"import \1;\nimport \2;", content)
+    
+    return content
+
+def fix_jsx_syntax(content):
+    """Fix common JSX syntax errors"""
+    # Fix unterminated JSX tags
+    content = re.sub(r'<([^>]+)\s*$', r'<\1>', content, flags=re.MULTILINE)
+    
+    # Fix missing closing tags in fragments
+    content = re.sub(r'<>\s*$', r'<>', content, flags=re.MULTILINE)
+    
+    return content
+
+def fix_typescript_errors(content):
+    """Fix common TypeScript syntax errors"""
+    # Fix missing semicolons
+    content = re.sub(r'(\w+)\s*$', r'\1;', content, flags=re.MULTILINE)
+    
+    # Fix unterminated strings
+    content = re.sub(r'"([^"]*)\s*$', r'"\1"', content, flags=re.MULTILINE)
+    content = re.sub(r"'([^']*)\s*$", r"'\1'", content, flags=re.MULTILINE)
+    
+    return content
+
+def process_file(file_path):
+    """Process a single file to clean up merge conflicts and syntax errors"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-<<<<<<< HEAD
-        # Remove merge conflict markers and keep the HEAD version
-        # Pattern to match merge conflicts and keep the HEAD version
-        pattern = r'.*?\n
-        cleaned_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
+        original_content = content
         
-        # Remove any remaining merge conflict markers
-        cleaned_content = re.sub(r'\n', '', cleaned_content)
-        cleaned_content = re.sub(r'
-=======
-        # Remove merge conflict markers and keep the first version (HEAD)
-        # Pattern to match:         pattern = r'        
-        # Replace with just the HEAD version (first capture group)
-        cleaned_content = re.sub(pattern, r'\1', content, flags=re.DOTALL)
+        # Clean merge conflicts
+        content = clean_merge_conflicts(content)
         
-        # Also handle cases where there might be just         pattern2 = r'        cleaned_content = re.sub(pattern2, r'\1', cleaned_content, flags=re.DOTALL)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+        # Fix import syntax
+        content = fix_import_syntax(content)
         
-        # Remove any remaining conflict markers
-        cleaned_content = re.sub(r'        cleaned_content = re.sub(r'\s*\n?', '', cleaned_content)
-        cleaned_content = re.sub(r'        
-        # Clean up extra whitespace
-        cleaned_content = re.sub(r'\n\s*\n\s*\n', '\n\n', cleaned_content)
+        # Fix JSX syntax
+        content = fix_jsx_syntax(content)
         
-        if cleaned_content != content:
+        # Fix TypeScript errors
+        content = fix_typescript_errors(content)
+        
+        # Only write if content changed
+        if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(cleaned_content)
+                f.write(content)
+            print(f"Fixed: {file_path}")
             return True
+        else:
+            return False
+            
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return False
-    
-    return False
 
 def main():
-    """Main function to clean all merge conflicts"""
-    workspace = Path('/workspace')
+    """Main function to process all files"""
+    # Get all TypeScript and JavaScript files
+    patterns = [
+        '**/*.tsx',
+        '**/*.ts', 
+        '**/*.jsx',
+        '**/*.js'
+    ]
     
-    # File extensions to process
-    extensions = ['*.tsx', '*.ts', '*.js', '*.jsx', '*.json', '*.md', '*.cjs', '*.mjs']
+    files_processed = 0
+    files_fixed = 0
     
-    total_files = 0
-    cleaned_files = 0
-    
-    print("Starting merge conflict cleanup...")
-    
-    for ext in extensions:
-        pattern = workspace / '**' / ext
-        files = glob.glob(str(pattern), recursive=True)
-        
-        for file_path in files:
-<<<<<<< HEAD
-            if os.path.isfile(file_path):
-                # Check if file has merge conflicts
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    if '' in content:
-                        clean_merge_conflicts(file_path)
-=======
-            # Skip node_modules and other directories
-            if any(skip in file_path for skip in ['node_modules', '.git', 'dist', '.next', 'out']):
+    for pattern in patterns:
+        for file_path in glob.glob(pattern, recursive=True):
+            # Skip node_modules and dist directories
+            if 'node_modules' in file_path or 'dist' in file_path:
                 continue
                 
-            total_files += 1
-            
-            if clean_merge_conflicts(file_path):
-                cleaned_files += 1
-                print(f"Cleaned: {file_path}")
+            files_processed += 1
+            if process_file(file_path):
+                files_fixed += 1
     
-    print(f"\nCleanup complete!")
-    print(f"Total files processed: {total_files}")
-    print(f"Files cleaned: {cleaned_files}")
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+    print(f"\nProcessed {files_processed} files")
+    print(f"Fixed {files_fixed} files")
 
 if __name__ == "__main__":
     main()

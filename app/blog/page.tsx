@@ -1,178 +1,207 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
-
-export default function BlogPage() {
-  const blogPosts = [
+<<<<<<< HEAD
+import React from 'react;'
+import { Helmet , Right,  User,  Calendar  } from 'lucide-react;'
+const Page = () => {
+  const features = [
     {
-      id: 1,
-      title: "The Future of AI in Business: Trends and Predictions for 2024",
-      excerpt: "Explore the latest AI trends and how they're transforming business operations across industries.",
-      author: "Sarah Chen",
-      date: "2024-01-15",
-      category: "AI Solutions",
-      readTime: "5 min read",
-      image: "/images/blog/ai-trends.jpg"
+      icon: <CheckCircle className="w-8 h-8" />,""
+      title: 'Advanced Features',''
+      description: 'Cutting-edge technology for maximum efficiency''
     },
     {
-      id: 2,
-      title: "Cybersecurity Best Practices for Modern Enterprises",
-      excerpt: "Learn essential cybersecurity strategies to protect your organization from evolving threats.",
-      author: "Michael Rodriguez",
-      date: "2024-01-10",
-      category: "Cybersecurity",
-      readTime: "7 min read",
-      image: "/images/blog/cybersecurity.jpg"
+      icon: <Shield className="w-8 h-8" />,""
+      title: 'Secure & Reliable',''
+      description: 'Enterprise-grade security and 99.9% uptime''
     },
     {
-      id: 3,
-      title: "5G Technology: Revolutionizing Connectivity and IoT",
-      excerpt: "Discover how 5G is enabling new possibilities in IoT, edge computing, and smart cities.",
-      author: "Emily Johnson",
-      date: "2024-01-05",
-      category: "5G Solutions",
-      readTime: "6 min read",
-      image: "/images/blog/5g-technology.jpg"
-    },
-    {
-      id: 4,
-      title: "Cloud Migration Strategies: A Complete Guide",
-      excerpt: "Everything you need to know about migrating your infrastructure to the cloud successfully.",
-      author: "David Kim",
-      date: "2024-01-01",
-      category: "Cloud Services",
-      readTime: "8 min read",
-      image: "/images/blog/cloud-migration.jpg"
-    },
-    {
-      id: 5,
-      title: "Data Analytics: Turning Information into Insights",
-      excerpt: "Learn how to leverage data analytics to drive business growth and make informed decisions.",
-      author: "Lisa Wang",
-      date: "2023-12-28",
-      category: "Data Analytics",
-      readTime: "6 min read",
-      image: "/images/blog/data-analytics.jpg"
-    },
-    {
-      id: 6,
-      title: "Micro SAAS: The Future of Software Solutions",
-      excerpt: "Explore how micro SAAS platforms are changing the way businesses approach software solutions.",
-      author: "Alex Thompson",
-      date: "2023-12-25",
-      category: "Micro SAAS",
-      readTime: "5 min read",
-      image: "/images/blog/micro-saas.jpg"
+      icon: <Users className="w-8 h-8" />,""
+      title: 'Expert Support',''
+      description: '24/7 support from our team of specialists''
     }
   ];
-
-  const categories = ["All", "AI Solutions", "Cybersecurity", "5G Solutions", "Cloud Services", "Data Analytics", "Micro SAAS"];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud services, and 5G technology from Zion Tech Group experts." />
-      </Helmet>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Our Blog
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Stay informed with the latest insights, trends, and best practices in AI, cybersecurity, cloud services, and 5G technology.
+    <></>
+      <EnhancedSEO
+        title="Page - Zion Tech Group""
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs.""
+        keywords="page, business solutions, technology services, professional services""
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto text-center">""
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
+              Page
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">""
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
+              Professional page services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/demo""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View Demo
+              </Link>
+            </div>
+          </div>
+        </section>
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto">""
+            <div className="text-center mb-16">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
+                Why Choose Our Page Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">""
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">""
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
+                  <p className="text-gray-300">{feature.description}</p>""
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Blog Posts */}
+        <section className="py-20 px-4">""
+          <div className="max-w-7xl mx-auto">""
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">""
+              {blogPosts.map((post) => (}
+                <article key={post.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">""
+                  <div className="text-4xl mb-4">{post.image}</div>""
+                  <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">""
+                    <span className="flex items-center">""
+                      {new Date(post.date).toLocaleDateString()}
+                    </span>
+                    <span className="flex items-center">""
+                      <User className="w-4 h-4 mr-1" />""
+                      {post.author}
+                    </span>
+                  </div>
+                  <h2 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">""
+                    {post.title}
+                  </h2>
+                  <p className="text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>""
+                  <div className="flex items-center justify-between">""
+                    <span className="text-cyan-400 text-sm font-medium">{post.readTime}</span>""
+                    <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">""
+                      Read More
+                      <Right className="w-4 h-4 ml-1" />""
+                    </button>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Newsletter Signup */}
+        <section className="py-20 px-4 bg-slate-800/30">""
+          <div className="max-w-4xl mx-auto text-center">""
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">""
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">""
+              Let's discuss how our page services can help your business succeed.''
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/services""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+        <div className="text-center"></div>
+          <h1>Page</h1>
+          <p className="text-gray-300 text-lg"></p>
+            This page is under construction. Please check back later.
           </p>
         </div>
+      </div>
+    </div>
+  )};
+const page = React.lazy(() => import('./page'));''
+export default page;
+=======
+import React from 'react';;
+import SEOHead from '../components/SEOHead';
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                category === "All"
-                  ? "bg-cyan-500 text-white"
-                  : "bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+const BlogPage: React.FC = () => {}
+import React from 'react',
+      import { Helmet } from 'react-helmet-async',
+      import SEOHead from '../components/SEOHead',
+      const BlogPage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <Helmet>
+        <title>Blog - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends." />
+      </Helmet>
 
-        {/* Blog Posts Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post) => (
-            <article
-              key={post.id}
-              className="group bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-            >
-              <div className="aspect-w-16 aspect-h-9 bg-gradient-to-r from-cyan-500/20 to-purple-500/20">
-                <div className="w-full h-48 bg-gradient-to-r from-cyan-500/30 to-purple-500/30 flex items-center justify-center">
-                  <Tag className="w-12 h-12 text-white/50" />
-                </div>
-              </div>
-              
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full">
-                    {post.category}
-                  </span>
-                  <span className="text-gray-400 text-sm">{post.readTime}</span>
-                </div>
-                
-                <h2 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors line-clamp-2">
-                  {post.title}
-                </h2>
-                
-                <p className="text-gray-300 mb-4 line-clamp-3">
-                  {post.excerpt}
-                </p>
-                
-                <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                  <div className="flex items-center gap-2">
-                    <User className="w-4 h-4" />
-                    <span>{post.author}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>{new Date(post.date).toLocaleDateString()}</span>
-                  </div>
-                </div>
-                
-                <button className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition-colors group-hover:gap-3">
-                  Read More
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </div>
-            </article>
-          ))}
-        </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
 
-        {/* Newsletter Signup */}
-        <div className="mt-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl p-8 border border-white/20">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Updated
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Subscribe to our newsletter and never miss the latest insights on technology trends and best practices.
+  );
+
+const BlogPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead title ="Blog - Zion Tech Group | AI & IT Solutions"",
+        description="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends."";
+        keywords="tech blog, AI insights, cybersecurity news, cloud computing, technology trends, tech articles"";
+      />
+      <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 text-white">";
+        <div className ="min-h-screen flex items-center justify-center">";
+          <div className ="text-center max-w-4xl mx-auto px-4">";
+            <h1 className ="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">";
+              Blog
+            </h1>
+            <p className ="text-xl text-gray-300 mb-8">",
+              Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              />
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Subscribe
+            <div className ="flex flex-col sm: flex-row gap-4 justify-center">";
+              <button className ="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">";
+                Coming Soon
+              </button>
+              <button className ="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">";
+                Learn More
               </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-}
+    </>
+  ),
+
+};
+
+export default BlogPage;
+>>>>>>> main
