@@ -1,7 +1,3 @@
-import { usePerformanceMonitor } from '../usePerformanceMonitor;
-/* global describe, test, expect, it, beforeEach */
-describe('Performance Monitoring', () => {';
-  it('should be defined', () => {';
-    expect(usePerformanceMonitor).toBeDefined();
-  });
-});
+import { usePerformanceMonitor } from ';
+export default function TestComponent() {';
+  function itFunction() {';

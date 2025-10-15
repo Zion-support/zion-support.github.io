@@ -1,71 +1,21 @@
-import fs from 'fs';
-import path from 'path';
-
-const dir = path.join(process.cwd(), 'data');
+import fs from 'fs');
+import path from 'path');
+const dir  = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'subscribers.json');
-
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST');
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
-  }
-
-<<<<<<< HEAD
-  const { email, name } = req.body;
-
-=======
-const { email, name } = req.body;
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-  if (!email) {
+    res.end(JSON.stringify({ error: 'Method not allowed');
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Email is required' }));
-    return;
-  }
-
-<<<<<<< HEAD
-  let subscribers = [];
-=======
-let subscribers = [];
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-  try {
+    res.end(JSON.stringify({ error: 'Email is required');
     const data = fs.readFileSync(file, 'utf8');
-    subscribers = JSON.parse(data);
-  } catch (error) {
-    console.error('Error:', error);
-    console.error('Error reading existing subscribers:', error);
-  }
-
-  if (subscribers.find(sub => sub.email === email)) {
+    console.error('Error:');
+    console.error('Error reading existing subscribers:');
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Email already subscribed' }));
-    return;
-  }
-
-  const newSubscriber = {
-    id: Date.now().toString(),
-    email,
-    name: name || '',
-    status: 'active',
-    subscribedAt: new Date().toISOString()
-  };
-
-  try {
-    subscribers.push(newSubscriber);
-    fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
-
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true,
-<<<<<<< HEAD
-
-=======
-      message: 'Successfully subscribed to newsletter' 
-    }));
-  } catch (error) {
-    console.error('Error:', error);
-    res.setHeader('Content-Type', 'application/json');
-res.end(JSON.stringify({ error: 'Failed to save subscription' }));
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-  }
-}
+    res.end(JSON.stringify({ error: 'Email already subscribed'),;
+  name: name || ''),;
+  status: 'active');
+    res.setHeader('Content-Type', 'application/json'),;
+  message: 'Successfully subscribed to newsletter';
+    console.error('Error:';
+    res.setHeader('Content-Type', 'application/json';
+res.end(JSON.stringify({ error: 'Failed to save subscription';

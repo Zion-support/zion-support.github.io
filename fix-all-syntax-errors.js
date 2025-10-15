@@ -1,9 +1,7 @@
-import fs from 'fs;
-import path from 'path;
-#!/usr/bin// Fixed regex;
-    let content = fs.readFileSync(filePath, 'utf8'';
+import fs from ');
+import path from ');
+    let content  = fs.readFileSync(filePath, 'utf8'');
       if (!match.includes('';
-      if (value.includes('"') && !value.includes("'';
-        if (!value.startsWith('"') || !value.endsWith('';
-      if (expr.includes('"') && !expr.includes("'';
-      if (className.includes('';
+      if (value.includes('"';
+        if (!value.startsWith(';
+      if (expr.includes('"';

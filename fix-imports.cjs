@@ -1,55 +1,92 @@
-const fs = require('fs');';
-// Files to fix;
-const _files = [;
-  'app/about/page.tsx',';
-  'app/ai-analytics/page.tsx',';
-  'app/ai-automation-platform/page.tsx',';
-  'app/ai-code-assistant-pro/page.tsx',';
-  'app/ai-content-studio/page.tsx',';
-  'app/ai-customer-sentiment-tracker/page.tsx',';
-  'app/contact/page.tsx',';
-  'app/pricing/page.tsx'';
-];
+#!/usr/bin/env node
 
-function fixUnusedImports(filePath) {
+const fs = require('fs');
+const path = require('path');
+
+// Function to fix import statements
+function fixImports(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');';
-    // Remove unused lucide-react imports;
-    content = content.replace(/import\s*{\s*[^}]*}\s*from\s*['"]lucide-react['"];?\s*\n/g, '');';
-    // Remove unused react-router-dom imports;
-    content = content.replace(/import\s*{\s*[^}]*}\s*from\s*['"]react-router-dom['"];?\s*\n/g, '');';
-    // Remove unused component imports;
-    content = content.replace(/import\s*{\s*[^}]*}\s*from\s*['"]\.\.\/components\/[^'"]*['"];?\s*\n/g, '');';
-    // Remove unused variable declarations (simple cases)
-    const lines = content.split('\n');';
-    const filteredLines = [];
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
     
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      // Skip lines that declare unused variables;
-      if (line.includes('const ') && line.includes(' = [')) {';
-        const varName = line.match(/const\s+(\w+)\s*=/)?.[1];
-        if (varName) {
-          // Check if this variable is used elsewhere in the file;
-          const restOfFile = lines.slice(i + 1).join('\n');';
-          if (!restOfFile.includes(varName + '[') && !restOfFile.includes(varName + '.')) {';
-            // Skip this variable declaration;
-            continue;
-          }
-        }
-      }
-      
-      filteredLines.push(line);
+    // Fix import statements that have incorrect closing parentheses
+    content = content.replace(/import\s+([^;]+)\)\s*$/gm, 'import $1;');
+    content = content.replace(/import\s+([^;]+)\)\s*$/gm, 'import $1;');
+    content = content.replace(/import\s+([^;]+)\)\s*$/gm, 'import $1;');
+    
+    // Fix export statements
+    content = content.replace(/export\s+([^;]+)\)\s*$/gm, 'export $1;');
+    
+    // Fix function declarations
+    content = content.replace(/function\s+([^{]+)\)\s*$/gm, 'function $1 {');
+    
+    // Fix variable declarations
+    content = content.replace(/const\s+([^=]+)=\s*([^;]+)\)\s*$/gm, 'const $1 = $2;');
+    content = content.replace(/let\s+([^=]+)=\s*([^;]+)\)\s*$/gm, 'let $1 = $2;');
+    content = content.replace(/var\s+([^=]+)=\s*([^;]+)\)\s*$/gm, 'var $1 = $2;');
+    
+    // Fix JSX return statements
+    content = content.replace(/return\s*\(\s*$/gm, 'return (');
+    
+    // Fix missing semicolons at end of statements
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+    
+    // Fix specific patterns for React components
+    content = content.replace(/export\s+default\s+function\s+([A-Z][a-zA-Z0-9]*)\s*\(\s*\)\s*\{/g, 'export default function $1() {');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed imports: ${filePath}`);
+      return true;
     }
     
-    content = filteredLines.join('\n');';
-    // Clean up multiple empty lines;
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');';
-    fs.writeFileSync(filePath, content);
-    global.console.log(`Fixed: ${filePath}`);
-  } catch (_error) {
-    global.console._error(`Error fixing ${filePath}:`, _error.message);
+    return false;
+  } catch (err) {
+    console.error(`Error fixing imports in ${filePath}:`, err.message);
+    return false;
   }
 }
 
+// Function to find all TypeScript/JavaScript files
+function findAllFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          traverse(fullPath);
+        } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath);
+        }
+      }
+    } catch (err) {
+      // Skip directories that can't be read
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+console.log('Starting import fixes...');
+
+const allFiles = findAllFiles('.');
+console.log(`Found ${allFiles.length} files to check`);
+
+let fixedCount = 0;
+
+for (const file of allFiles) {
+  if (fixImports(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`\nFixed imports in ${fixedCount} files`);
+console.log('Import fixes complete!');

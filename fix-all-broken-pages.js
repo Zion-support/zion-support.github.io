@@ -1,6 +1,5 @@
-import fs from 'fs;
-import path from 'path;
-import { execSync } from 'child_process;
+import fs from ');
+import path from ');
+import { execSync } from ';
 import React from 'react';
-#!/usr/bin// Fixed regex;
-const pageTemplate = (pageName, title) => `'use client'';
+const pageTemplate = (pageName, title) => `;

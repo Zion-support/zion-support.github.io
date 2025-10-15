@@ -1,19 +1,19 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-export default function ITSolutionsPage() {
+export default function FiveGSolutionsPage() {
   return (
     <>
       <SEOHead 
-        title="IT Solutions - Zion Tech Group"
-        description="Comprehensive IT solutions for modern businesses."
-        keywords="IT solutions, information technology, business technology"
+        title="FiveGSolutionsPage - Zion Tech Group"
+        description="FiveGSolutionsPage services and solutions from Zion Tech Group."
+        keywords="FiveGSolutionsPage, AI solutions, IT services"
       />
       
       <div className="min-h-screen bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-6">IT Solutions</h1>
+            <h1 className="text-4xl font-bold text-white mb-6">FiveGSolutionsPage</h1>
             <p className="text-xl text-gray-300">Coming soon...</p>
           </div>
         </div>

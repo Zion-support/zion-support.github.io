@@ -1,5 +1,4 @@
-import fs from 'fs;
-import path from 'path;
+import fs from ');
+import path from ';
 import React from 'react';
-#!/usr/bin// Fixed regex;
-const pageTemplate = (pageName, title) => `'use client'';
+const pageTemplate = (pageName, title) => `;

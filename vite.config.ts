@@ -3,14 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-  plugins: [
-    react({
-      // Enable React Fast Refresh
-      fastRefresh: true,
-      // Optimize JSX runtime
-      jsxRuntime: 'automatic',
-    })
-  ],
+  plugins: [react()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './'),
@@ -24,11 +17,9 @@ export default defineConfig({
     target: 'esnext',
     minify: 'esbuild',
     sourcemap: process.env.NODE_ENV === 'development',
-    cssCodeSplit: true,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
@@ -47,8 +38,6 @@ export default defineConfig({
             }
             return 'vendor-other';
           }
-          
-          // Page chunks for better code splitting
           if (id.includes('/app/pages/')) {
             return 'pages';
           }
@@ -56,61 +45,36 @@ export default defineConfig({
             return 'components';
           }
         },
+        chunkFileNames: 'assets/js/[name]-[hash].js',
+        entryFileNames: 'assets/js/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
-          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
-            return `assets/images/[name]-[hash][extname]`;
+          if (/\.(css)$/.test(assetInfo.name)) {
+            return 'assets/css/[name]-[hash].[ext]';
           }
-          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)) {
-            return `assets/fonts/[name]-[hash][extname]`;
-          }
-          return `assets/[name]-[hash][extname]`;
+          return 'assets/[name]-[hash].[ext]';
         },
-        chunkFileNames: 'assets/js/[name]-[hash].js',
-        entryFileNames: 'assets/js/[name]-[hash].js',
       },
     },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: true,
-    // Enable tree shaking
-    treeshake: true,
-  },
-  server: {
-    port: 3000,
-    open: false, // Disable auto-open for CI/CD
-    cors: true,
-    hmr: {
-      overlay: true,
-    },
-  },
-  preview: {
-    port: 4173,
-    open: false,
   },
   optimizeDeps: {
     include: [
-      'react', 
-      'react-dom', 
-      'react-router-dom', 
+      'react',
+      'react-dom',
+      'react-router-dom',
       'react-helmet-async',
       '@heroicons/react/24/outline',
       'lucide-react',
-      'framer-motion'
+      'framer-motion',
     ],
     exclude: ['@vite/client', '@vite/env'],
   },
   esbuild: {
     drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
-    target: 'esnext',
   },
-  // Performance optimizations
-  define: {
-    __VUE_OPTIONS_API__: false,
-    __VUE_PROD_DEVTOOLS__: false,
-  },
-  // CSS optimizations
-  css: {
-    devSourcemap: true,
+  server: {
+    port: 3000,
+    open: true,
   },
 });

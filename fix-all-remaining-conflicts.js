@@ -1,6 +1,5 @@
-import fs from 'fs;
-import path from 'path;
-import { execSync } from 'child_process;
-#!/usr/bin// Fixed regex;
+import fs from ');
+import path from ');
+import { execSync } from ';
 console.log('Starting comprehensive merge conflict resolution...'';
     const output = execSync('';

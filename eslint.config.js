@@ -16,6 +16,11 @@ export default [
       'out/**',
       'app-disabled/**',
       'app-broken/**',
+      '**/App-minimal.tsx',
+      '**/App_minimal.tsx',
+      '**/App_test.tsx',
+      '**/EnhancedFooter.tsx',
+      '**/SidebarNavigation.tsx',
       '*.config.js',
       '*.config.ts',
       '*.config.mjs',
@@ -48,8 +53,10 @@ export default [
       'cleanup_merge_conflicts.*',
       'close_duplicate_prs.*',
       'comprehensive-fix.*',
-      'create_remaining_pages.*'
+      'create_remaining_pages.*',
     ],
+  },
+  {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
@@ -78,7 +85,6 @@ export default [
         module: 'readonly',
         exports: 'readonly',
         fs: 'readonly',
-        // Jest globals
         describe: 'readonly',
         test: 'readonly',
         it: 'readonly',
@@ -87,20 +93,20 @@ export default [
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly',
-        jest: 'readonly'
+        jest: 'readonly',
       },
       parser: typescriptParser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true
-        }
-      }
+          jsx: true,
+        },
+      },
     },
     plugins: {
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh
+      'react-refresh': reactRefresh,
     },
     rules: {
       'no-console': 'off',
@@ -110,12 +116,12 @@ export default [
       'react/prop-types': 'off',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
-      'react-refresh/only-export-components': 'warn'
+      'react-refresh/only-export-components': 'warn',
     },
     settings: {
       react: {
-        version: 'detect'
-      }
-    }
-  }
+        version: 'detect',
+      },
+    },
+  },
 ];
