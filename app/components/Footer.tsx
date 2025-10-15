@@ -12,8 +12,8 @@ const Footer: React.FC = () => {
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
             <div className="text-sm text-gray-400 mb-4">
-              <p>Email: contact@ziontechgroup.com</p>
-              <p>Phone: +1 (555) 123-4567</p>
+              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Phone: +1 (302) 464-0950</p>
             </div>
             <div className="flex space-x-4">
               <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
@@ -33,6 +33,8 @@ const Footer: React.FC = () => {
               <li><Link to="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
               <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-white">Cloud Infrastructure</Link></li>
               <li><Link to="/5g-solutions" className="text-gray-300 hover:text-white">5G Solutions</Link></li>
+              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-white">Digital Transformation</Link></li>
+              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SaaS Solutions</Link></li>
               <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
             </ul>
           </div>
