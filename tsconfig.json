@@ -16,7 +16,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": false,
 >>>>>>> main
     "resolveJsonModule": true,
@@ -38,6 +38,7 @@
 >>>>>>> main
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
 <<<<<<< HEAD
