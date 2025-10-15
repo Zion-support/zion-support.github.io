@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import React, { Suspense, lazy, useEffect } from 'react'
+import React, { Suspense, lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './app/styles/futuristic.css'
