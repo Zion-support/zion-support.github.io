@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-import '@testing-library/jest-dom';
-
-=======
-
 global.TextEncoder = TextEncoder
 global.TextDecoder = TextDecoder
 // Mock window.matchMedia
 Object.defineProperty(window, "matchMedia", {}
 import '@testing-library/jest-dom'
->>>>>>> 4322005aab0ef7243ec1380fa17dedddf01c149e
 // Mock TextEncoder and TextDecoder
 import { TextEncoder, TextDecoder } from 'util'
 global.TextEncoder = TextEncoder
@@ -48,15 +42,9 @@ global.ResizeObserver = class ResizeObserver {}
   unobserve() {}
 }
 // Mock matchMedia
-<<<<<<< HEAD
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest.fn().mockImplementation(query => ({
-=======
 Object.defineProperty(window, 'matchMedia', {}
   writable: true,
   value: jest.fn().mockImplementation((query) => ({}
->>>>>>> 4322005aab0ef7243ec1380fa17dedddf01c149e
     matches: false,
     media: query,
     onchange: null,
@@ -64,51 +52,14 @@ Object.defineProperty(window, 'matchMedia', {}
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-<<<<<<< HEAD
-    dispatchEvent: jest.fn(),
-  })),
-});
-
-// Mock scrollTo
-Object.defineProperty(window, 'scrollTo', {
-  writable: true,
-  value: jest.fn(),
-});
-
-// Suppress console warnings
-const originalError = console.error;
-beforeAll(() => {
-  console.error = (...args) => {
-    if (typeof args[0] === 'string' && args[0].includes('Warning: ReactDOM.render is no longer supported')) {
-      return;
-    }
-    originalError.call(console, ...args);
-  };
-});
-
-=======
-    dispatchEvent: jest.fn()}))})
+dispatchEvent: jest.fn()}))})
 })
->>>>>>> 4322005aab0ef7243ec1380fa17dedddf01c149e
 // Mock localStorage
 const localStorageMock = {}
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
   clear: jest.fn(),
-<<<<<<< HEAD
-};
-global.localStorage = localStorageMock;
-
-// Mock sessionStorage
-const sessionStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
-};
-global.sessionStorage = sessionStorageMock;
-=======
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {}
   constructor() {}
@@ -127,4 +78,3 @@ global.ResizeObserver = class ResizeObserver {}
 global.gtag = jest.fn()
 // Mock window.dataLayer
 global.dataLayer = []
->>>>>>> 4322005aab0ef7243ec1380fa17dedddf01c149e
