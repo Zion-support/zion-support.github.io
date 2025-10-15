@@ -79,11 +79,6 @@ const DemoPage = lazy(() => import('./app/demo/page'));
 const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
 const CloudSolutionsPage = lazy(() => import('./app/cloud-solutions/page'));
 
-// Missing pages
-const TutorialsPage = lazy(() => import('./app/tutorials/page'));
-const DocsPage = lazy(() => import('./app/docs/page'));
-const SupportPage = lazy(() => import('./app/support/page'));
-
 // Micro SaaS pages
 const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
 const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
@@ -94,15 +89,6 @@ const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'
 
 // Missing pages
 const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
-const SupportPage = lazy(() => import('./app/support/page'));
-const TutorialsPage = lazy(() => import('./app/tutorials/page'));
-const DocsPage = lazy(() => import('./app/docs/page'));
-const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
-const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
-const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
-const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
-const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
-const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
 
 // Additional missing pages
 const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
