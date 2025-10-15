@@ -1,3 +1,5 @@
+import React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -22,6 +24,31 @@ export default function ZionSmartExpenseCategorizer() {
             Advanced AI-powered solutions for modern businesses.;
           </p>
         </div>
+=======
+import { Helmet } from 'react-helmet-async';
+import { Brain, Shield, Zap } from 'lucide-react';
+
+export default function PagePage() {
+  const features = [
+    {
+      title: "Advanced Technology",
+      description: "Cutting-edge solutions powered by the latest technology",
+      icon: <Brain className="w-8 h-8" />
+    },
+    {
+      title: "Secure & Reliable",
+      description: "Enterprise-grade security and reliability for your business",
+      icon: <Shield className="w-8 h-8" />
+    },
+    {
+      title: "Fast Implementation",
+      description: "Quick deployment and implementation for immediate results",
+      icon: <Zap className="w-8 h-8" />
+    }
+  ];
+ursor/fix-errors-and-merge-to-main-234b
+=======
+>>>>>>> main
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;""
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">;""
             <h3 className="text-xl font-semibold text-white mb-4">AI-Powered Features</h3>;""
@@ -67,6 +94,7 @@ export default function ZionSmartExpenseCategorizer() {
               Get Started Today;
             </button>
           </div>
+>>>>>>> main
         </div>
       </div>
     </div>
@@ -143,6 +171,9 @@ export default function ZionSmartExpenseCategorizer() {}
     </div>;
 
   );
+<<<<<<< HEAD
+}ursor/fix-errors-and-merge-to-main-234b
+=======
 
 import React from 'react';;';
 import SEOHead from './components/SEOHead';

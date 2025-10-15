@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { Component, ReactNode } from 'react';
+=======
+'use client';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+>>>>>>> main
 
 =======
 <<<<<<< HEAD
@@ -396,6 +402,16 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
           <p className="text-gray-300">This page is under development...</p>
         </div>
+<<<<<<< HEAD
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export default EnhancedErrorBoundary;
+=======
       </div>
             <div className="error-icon">⚠️</div>
             <h1 className="error-title">Something went wrong</h1>

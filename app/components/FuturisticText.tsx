@@ -1,11 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
-import React from 'react';;';
-import SEOHead from './components/SEOHead';
-
+ursor/fix-errors-and-merge-to-main-234b
+      {children}
+    </div>
+  );
+}
+>>>>>>> main
+=======
 interface FuturisticTextProps {},
       children: React.ReactNode,
       variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'gradient' | 'neon','

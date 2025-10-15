@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 =======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
@@ -180,5 +179,16 @@ const ComponentsPage: React.FC = () => {
 
 };
 ;
+<<<<<<< HEADursor/delete-records-a75eursor/fix-errors-and-merge-to-main-234b
+      {children}
+    </div>
+  );
+}
+<<<<<<< HEAD
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-234b
+=======
+>>>>>>> main
 export default ComponentsPage;'";'";
 >>>>>>> main

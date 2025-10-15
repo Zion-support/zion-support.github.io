@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface LoadingStatesProps {
@@ -10,11 +11,40 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({ children }) => {
     <div className="flex items-center justify-center p-8">
       <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
       {children}
+=======
+'use client';
+import React from 'react';
+
+interface LoadingStatesProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export const LoadingPage: React.FC = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-500"></div>
+>>>>>>> main
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default LoadingStates;
+=======
+export const PageLoader: React.FC = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-500"></div>
+    </div>
+  );
+};
+
+export const AppLoadingSpinner: React.FC = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-500"></div>
+>>>>>>> main
 =======
 <<<<<<< HEAD
 import React from 'react;'
@@ -121,6 +151,7 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({};)
           <span className="text-gray-300">Please wait...</span>
         </div>
       </div>
+>>>>>>> main
     </div>
 
   );
@@ -177,6 +208,9 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {}
       </div>
     </div>
   );
+<<<<<<< HEAD
+}
+=======
 }
 };
 

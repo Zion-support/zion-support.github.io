@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 const PerformanceMonitor: React.FC = () => {
@@ -165,4 +166,6 @@ const ComponentsPage: React.FC = () => {
 export default ComponentsPage;'";'";
 
 >>>>>>> main
+>>>>>>> main
+=======
 >>>>>>> main

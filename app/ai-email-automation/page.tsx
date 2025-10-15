@@ -1,3 +1,5 @@
+import React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -16,10 +18,17 @@ const AiEmailAutomation: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">
             This page is under development. Please check back later for updates.
           </p>
+=======
+import { Helmet } from 'react-helmet-async';
+import { Brain, Shield, Zap } from 'lucide-react';
+
+export default function PagePage() {ursor/fix-errors-and-merge-to-main-234b
+>>>>>>> main
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default AiEmailAutomation;
@@ -106,6 +115,10 @@ const Page = () => {
                 View Demo
               </Link>
             </div>
+=======
+}ursor/fix-errors-and-merge-to-main-234b
+=======
+>>>>>>> main
           </div>
         </section>
         {/* Features Section */}

@@ -10,6 +10,11 @@ const resolve = path.resolve;
 export default defineConfig({
   plugins: [
     react({
+<<<<<<< HEAD
+      // Enable JSX runtime
+      jsxRuntime: "automatic",
+    }),
+=======
       // Enable React Fast Refresh
 <<<<<<< HEAD
       fastRefresh: true
@@ -19,6 +24,7 @@ export default defineConfig({
       jsxRuntime: 'automatic',
 >>>>>>> main
     })
+>>>>>>> main
   ],
   resolve: {
     alias: {
@@ -77,8 +83,12 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
+<<<<<<< HEAD
+    // Tree shaking is enabled by default in Vite
+=======
     // Optimize chunk size
     chunkSizeWarningLimit: 1000,
+>>>>>>> main
   },
   server: {
     port: 3000,

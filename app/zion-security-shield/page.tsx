@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -98,142 +99,9 @@ const Page = () => {
                 <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
                 <div className="text-gray-300">Monitoring</div>
 =======
-import React from 'react';;';
-import SEOHead from './components/SEOHead';
-
-  // return statement
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
-          <div className="max-w-7xl mx-auto text-center"></div>
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 mb-6"></div>
-              <className="w-4 h-4 text-red-400 mr-2" />
-              <span className="text-red-400 text-sm font-medium">Enterprise-Grade Security</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400"></span>
-                Zion Security </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
-              Protect your business with the most advanced AI-powered cybersecurity platform. 
-              Real-time threat detection, _automated incident response, and comprehensive compliance management.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
-              <>
-                to="/contact"
-                className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center group"
-              ></>
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </>
-              <>
-                to="/demo"
-                className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
-              ></>
-                Watch Demo
-              </>
-            </div>
-            
-            {/* Stats */};
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"></div>
-              <div className="text-center"></div>
-                <div className="text-3xl font-bold text-red-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Threat Detection Accuracy</div>
-              </div>
-              <div className="text-center"></div>
-                <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
-                <div className="text-gray-300">Security ing</div>
-              </div>
-              <div className="text-center"></div>
-                <div className="text-3xl font-bold text-green-400 mb-2">5, 000+</div>
-                <div className="text-gray-300">Protected Organizations</div>
+ursor/fix-errors-and-merge-to-main-234b
 >>>>>>> main
-              </div>
-            </div>
-          </div>
-        </section>
-<<<<<<< HEAD
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">""
-          <div className="max-w-7xl mx-auto">""
-            <div className="text-center mb-16">""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
-                Why Choose Our Page Services?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">""
-                We deliver exceptional results with cutting-edge technology and expert knowledge.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
-              {features.map((feature, index) => (
-                <div key={index} className="text-center">""
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
-                  <p className="text-gray-300">{feature.description}</p>""
 =======
-
-        {/* Features Section */};
-        <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
-                Comprehensive Security Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-                Everything you need to protect your business from modern cyber threats.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              {features.map((feature, index) => ()}
-                <divkey={index},>
-      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
-                ></div
->
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-red-500 to-orange-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform"></div>
-                    {feature.icon};
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3"></h3>
-                    {feature.title};
-                  </h3>
-                  <p className="text-gray-300"></p>
-                    {feature.description};
-                  </p>
->>>>>>> main
-                </div>
-              ))};
-            </div>
-          </div>
-        </section>
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
-          <div className="max-w-4xl mx-auto text-center">""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">""
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">""
-              Let's discuss how our page services can help your business succeed.''
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <Link
-                to="/contact""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
-              >
-                Contact Us
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
-              </Link>
-              <Link
-                to="/services""
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
-              >
-                View All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
 };
 const page = React.lazy(() => import('./page'));''
 export default page;

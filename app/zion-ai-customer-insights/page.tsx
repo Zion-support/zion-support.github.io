@@ -1,3 +1,5 @@
+import React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -84,6 +86,14 @@ const Page = () => {
                 View Demo
               </Link>
             </div>
+=======
+import { Helmet } from 'react-helmet-async';
+import { Brain, Shield, Zap } from 'lucide-react';
+
+export default function PagePage() {ursor/fix-errors-and-merge-to-main-234b
+        </div>
+=======
+>>>>>>> main
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">""
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">""
@@ -176,9 +186,13 @@ const Page = () => {
             </div>
           </div>
         </section>
+>>>>>>> main
       </div>
     </>
   );
+<<<<<<< HEAD
+}ursor/fix-errors-and-merge-to-main-234b
+=======
 };
 const page = React.lazy(() => import('./page'));''
 export default page;
