@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
+
+interface AccessibilitySettings {
+  enableKeyboard: boolean;
+  enableScreenReader: boolean;
+  enableHighContrast: boolean;
+  enableFocusManagement: boolean;
+  enableLargeText: boolean;
+  enableReducedMotion: boolean;
+}
+
 interface AccessibilityEnhancerProps {
-  isHighContrast?: boolean;
-  isReducedMotion?: boolean;
-  fontSize?: number;
+  children: React.ReactNode;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
@@ -116,7 +123,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           outline: 2px solid #3b82f6 !important;
           outline-offset: 2px !important;
         }
-        .focus\:ring-2:focus {
+        .focus\\:ring-2:focus {
           box-shadow: 0 0 0 2px #3b82f6 !important;
         }
       `;
