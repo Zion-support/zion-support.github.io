@@ -737,9 +737,7 @@
       "zion-ai-data-cleaner",
       "zion-ai-marketing-automation"
     ],
-    "fiveGServices": [
-      "5g-iot-solutions"
-    ],
+    "fiveGServices": ["5g-iot-solutions"],
     "otherPages": [
       "accessibility",
       "accessibility-page",

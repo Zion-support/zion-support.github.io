@@ -1,11 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function ComponentsPage() {
+export default function LoadingSpinner() {
   return (
-    <div className={className}>
-      <h2>LoadingSpinner</h2>
-      <p>This component is under construction.</p>
+    <div className="flex items-center justify-center p-4">
+      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
     </div>
   );
 }

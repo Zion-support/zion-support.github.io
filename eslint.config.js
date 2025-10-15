@@ -20,36 +20,32 @@ export default tseslint.config(
       "identify_missing_pages.js",
       "merge-with-conflict-resolution.js",
       "resolve-all-conflicts.js",
-      "**/app/**/*.tsx",
       "**/api/**/*.js",
-      "**/__tests__/**/*.tsx"
-    ]
+      "**/__tests__/**/*.tsx",
+    ],
   },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
-    files: ['**/*.{ts,tsx}'],
+    files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
     },
     plugins: {
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": [
-        "warn",
-        { allowConstantExport: true },
-      ],
+      "react-refresh/only-export-components": "off",
       "@typescript-eslint/no-unused-vars": "warn",
-      "@typescript-eslint/no-explicit-any": "off"
+      "@typescript-eslint/no-explicit-any": "off",
     },
   },
   {
     ignores: [
-      "dist", 
-      "node_modules", 
+      "dist",
+      "node_modules",
       "*.config.js",
       "backup-*/**",
       "backup-problematic/**",
@@ -292,7 +288,7 @@ export default tseslint.config(
       "fix_remaining_pages.cjs",
       "scripts/**",
       "src/**",
-      "backup/**"
-    ]
-  }
+      "backup/**",
+    ],
+  },
 );

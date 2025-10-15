@@ -1,17 +1,22 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const Services: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive technology services for modern businesses." />
+        <meta
+          name="description"
+          content="Comprehensive technology services for modern businesses."
+        />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Services</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Our Services
+          </h1>
           <p className="text-lg text-gray-600">
             Professional technology services for modern businesses.
           </p>

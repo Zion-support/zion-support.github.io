@@ -1,13 +1,16 @@
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 export default function SpecializedservicesPage() {
   return (
     <>
       <Helmet>
         <title>Specialized Services - Zion Tech Group</title>
-        <meta name="description" content="Specialized Services services and solutions from Zion Tech Group." />
+        <meta
+          name="description"
+          content="Specialized Services services and solutions from Zion Tech Group."
+        />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
@@ -15,7 +18,8 @@ export default function SpecializedservicesPage() {
               Specialized Services
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional Specialized Services services and solutions for your business needs.
+              Professional Specialized Services services and solutions for your
+              business needs.
             </p>
             <div className="flex justify-center space-x-4">
               <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">

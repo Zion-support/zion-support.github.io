@@ -1,26 +1,35 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // Find all corrupted page files
 function findCorruptedPages(dir) {
   const corruptedPages = [];
-  
+
   function scanDirectory(currentDir) {
     const files = fs.readdirSync(currentDir);
-    
-    files.forEach(file => {
+
+    files.forEach((file) => {
       const filePath = path.join(currentDir, file);
       const stat = fs.statSync(filePath);
-      
+
       if (stat.isDirectory()) {
         scanDirectory(filePath);
-      } else if (file.endsWith('.tsx') && file === 'page.tsx') {
+      } else if (file.endsWith(".tsx") && file === "page.tsx") {
         try {
-          const content = fs.readFileSync(filePath, 'utf8');
+          const content = fs.readFileSync(filePath, "utf8");
           // Check if file is corrupted (contains syntax errors)
-          if (content.includes('export default function') && content.includes('return') && content.includes('JSX')) {
+          if (
+            content.includes("export default function") &&
+            content.includes("return") &&
+            content.includes("JSX")
+          ) {
             // File looks good
-          } else if (content.length < 100 || content.includes(';') && content.includes('{') && content.includes('}')) {
+          } else if (
+            content.length < 100 ||
+            (content.includes(";") &&
+              content.includes("{") &&
+              content.includes("}"))
+          ) {
             // File might be corrupted
             corruptedPages.push(filePath);
           }
@@ -30,19 +39,20 @@ function findCorruptedPages(dir) {
       }
     });
   }
-  
+
   scanDirectory(dir);
   return corruptedPages;
 }
 
 // Create a basic page component
 function createBasicPage(filePath) {
-  const relativePath = path.relative('/workspace', filePath);
+  const relativePath = path.relative("/workspace", filePath);
   const pageName = path.basename(path.dirname(relativePath));
-  const title = pageName.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ');
-  
+  const title = pageName
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
   const content = `import { Helmet } from 'react-helmet-async';
 
 export default function ${pageName.charAt(0).toUpperCase() + pageName.slice(1)}Page() {
@@ -76,18 +86,18 @@ export default function ${pageName.charAt(0).toUpperCase() + pageName.slice(1)}P
     </>
   );
 }`;
-  
+
   fs.writeFileSync(filePath, content);
-  console.log('Fixed: ' + filePath);
+  console.log("Fixed: " + filePath);
 }
 
 // Find and fix all corrupted pages
-const corruptedPages = findCorruptedPages('/workspace/app');
+const corruptedPages = findCorruptedPages("/workspace/app");
 
-console.log('Found ' + corruptedPages.length + ' corrupted page files');
+console.log("Found " + corruptedPages.length + " corrupted page files");
 
-corruptedPages.forEach(pagePath => {
+corruptedPages.forEach((pagePath) => {
   createBasicPage(pagePath);
 });
 
-console.log('All corrupted page files have been fixed!');
+console.log("All corrupted page files have been fixed!");

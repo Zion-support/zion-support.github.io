@@ -1,12 +1,8 @@
-import React from 'react';
+import React from "react";
 
-interface PerformanceMonitorProps {
-  className?: string;
-}
-
-export default function PerformanceMonitor({ className }: PerformanceMonitorProps) {
+export default function PerformanceMonitor() {
   return (
-    <div className={className}>
+    <div>
       <h2>PerformanceMonitor</h2>
       <p>This component is under construction.</p>
     </div>

@@ -1,14 +1,3 @@
-/// Comment
-export const: performanceOptimizer = {};: value;
-  init() {};
-    /// Comment
-    if ($1) {}
-  /// Comment
-
-}
-      this.setupPerformanceMonitoring()
-      this.optimizeImages()
-      this.setupLazyLoading()
 export const performanceUtils = {
   // Measure performance
   measure: (name: string, fn: () => void): void => {
@@ -18,37 +7,29 @@ export const performanceUtils = {
     console.log(`${name} took ${end - start} milliseconds`);
   },
 
+  // Measure async performance
+  measureAsync: async (
+    name: string,
+    fn: () => Promise<void>,
+  ): Promise<void> => {
+    const start = performance.now();
+    await fn();
+    const end = performance.now();
+    console.log(`${name} took ${end - start} milliseconds`);
+  },
+
   // Get performance metrics
-  getMetrics: (): PerformanceMetrics => {
-    return {
-      fps: 0,
-      memoryUsage: 0,
-      loadTime: 0
-    };
-  }
-};
+  getMetrics: (): PerformanceEntry[] => {
+    return performance.getEntriesByType("measure");
+  },
 
-    };
-    return null;
-  };
-};
-/// Comment
-export const: cacheOptimizer = {};: value;
-  /// Comment
-  setCacheHeaders: (response: Response) => {};'';";";";";";
-}response.headers.set('Cache-Control', 'public, max-age=31536000, immutable'): value;";";";";";
-    return response;
-  };
-  /// Comment
-  clearCache: () => {};'";
-}if ('caches' in window) {};";
-      caches.keys().then(names => {};)
-}names.forEach(name => {};)
+  // Clear performance marks
+  clearMarks: (): void => {
+    performance.clearMarks();
+  },
 
-}caches.delete(name)
-        })
-      })
-    };
-  };
-};';';";";";";";
-export default performanceOptimizer;'';";
+  // Clear performance measures
+  clearMeasures: (): void => {
+    performance.clearMeasures();
+  },
+};

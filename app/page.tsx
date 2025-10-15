@@ -1,13 +1,16 @@
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 export default function AppPage() {
   return (
     <>
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide. Transform your operations with cutting-edge technology." />
+        <meta
+          name="description"
+          content="Leading provider of AI and IT solutions for businesses worldwide. Transform your operations with cutting-edge technology."
+        />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
@@ -15,7 +18,7 @@ export default function AppPage() {
               Welcome to Zion Tech Group
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leading provider of AI and IT solutions for businesses worldwide. 
+              Leading provider of AI and IT solutions for businesses worldwide.
               Transform your operations with cutting-edge technology.
             </p>
             <div className="flex justify-center space-x-4">

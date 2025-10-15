@@ -1,13 +1,16 @@
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 export default function AivideoeditorPage() {
   return (
     <>
       <Helmet>
         <title>Ai Video Editor - Zion Tech Group</title>
-        <meta name="description" content="Ai Video Editor services and solutions from Zion Tech Group." />
+        <meta
+          name="description"
+          content="Ai Video Editor services and solutions from Zion Tech Group."
+        />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
@@ -15,7 +18,8 @@ export default function AivideoeditorPage() {
               Ai Video Editor
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional Ai Video Editor services and solutions for your business needs.
+              Professional Ai Video Editor services and solutions for your
+              business needs.
             </p>
             <div className="flex justify-center space-x-4">
               <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">

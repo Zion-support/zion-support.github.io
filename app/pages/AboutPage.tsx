@@ -1,14 +1,17 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const AboutPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>AboutPage - Zion Tech Group</title>
-        <meta name="description" content="Professional aboutpage solutions for modern businesses." />
+        <meta
+          name="description"
+          content="Professional aboutpage solutions for modern businesses."
+        />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gray-50 py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">AboutPage</h1>

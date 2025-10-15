@@ -1,13 +1,18 @@
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 export default function Ai2025sept30operationaltrustscorecardsv3Page() {
   return (
     <>
       <Helmet>
-        <title>Ai 2025 Sept 30 Operational Trust Scorecards V3 - Zion Tech Group</title>
-        <meta name="description" content="Ai 2025 Sept 30 Operational Trust Scorecards V3 services and solutions from Zion Tech Group." />
+        <title>
+          Ai 2025 Sept 30 Operational Trust Scorecards V3 - Zion Tech Group
+        </title>
+        <meta
+          name="description"
+          content="Ai 2025 Sept 30 Operational Trust Scorecards V3 services and solutions from Zion Tech Group."
+        />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
@@ -15,7 +20,8 @@ export default function Ai2025sept30operationaltrustscorecardsv3Page() {
               Ai 2025 Sept 30 Operational Trust Scorecards V3
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional Ai 2025 Sept 30 Operational Trust Scorecards V3 services and solutions for your business needs.
+              Professional Ai 2025 Sept 30 Operational Trust Scorecards V3
+              services and solutions for your business needs.
             </p>
             <div className="flex justify-center space-x-4">
               <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
