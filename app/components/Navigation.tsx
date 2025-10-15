@@ -90,10 +90,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: CodeBracketIcon },
         { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon },
         { name: 'AI Video Generator', href: '/ai-video-generator', icon: EyeIcon },
-        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: ChatBubbleLeftRightIcon },
-        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: EyeIcon },
         { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: ShieldCheckIcon },
         { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: UserGroupIcon },
+        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: EyeIcon },
         { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: AcademicCapIcon },
         { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer', icon: ChartBarIcon },
         { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: CogIcon }

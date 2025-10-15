@@ -89,6 +89,13 @@ const BlockchainSolutionsProPage = lazy(() => import('./app/blockchain-solutions
 const DevOpsAutomationProPage = lazy(() => import('./app/devops-automation-pro/page'));
 const IOTSolutionsProPage = lazy(() => import('./app/iot-solutions-pro/page'));
 
+// New Innovative Micro SAAS Services
+const AICodeAssistantPage = lazy(() => import('./app/ai-code-assistant/page'));
+const AITranslatorPage = lazy(() => import('./app/ai-translator/page'));
+const AIVideoGeneratorPage = lazy(() => import('./app/ai-video-generator/page'));
+const AILegalAssistantPage = lazy(() => import('./app/ai-legal-assistant/page'));
+const AIMedicalAssistantPage = lazy(() => import('./app/ai-medical-assistant/page'));
+
 // Zion AI Services
 const ZionAIChatbotBuilderPage = lazy(() => import('./app/zion-ai-chatbot-builder/page'));
 const ZionAICodeAssistantPage = lazy(() => import('./app/zion-ai-code-assistant/page'));
@@ -305,6 +312,13 @@ const App = memo(() => {
                     <Route path="/blockchain-solutions-pro" element={<BlockchainSolutionsProPage />} />
                     <Route path="/devops-automation-pro" element={<DevOpsAutomationProPage />} />
                     <Route path="/iot-solutions-pro" element={<IOTSolutionsProPage />} />
+                    
+                    {/* New Innovative Micro SAAS Services */}
+                    <Route path="/ai-code-assistant" element={<AICodeAssistantPage />} />
+                    <Route path="/ai-translator" element={<AITranslatorPage />} />
+                    <Route path="/ai-video-generator" element={<AIVideoGeneratorPage />} />
+                    <Route path="/ai-legal-assistant" element={<AILegalAssistantPage />} />
+                    <Route path="/ai-medical-assistant" element={<AIMedicalAssistantPage />} />
                     
                     {/* Zion AI Services */}
                     <Route path="/zion-ai-chatbot-builder" element={<ZionAIChatbotBuilderPage />} />
