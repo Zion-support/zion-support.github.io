@@ -1,46 +1,24 @@
 import React from 'react';
+import SEOHead from './components/SEOHead';
 
-interface LoadingPageProps {};
-      message?: string;
-  showIcon?: boolean;
-}
-};
-
-export const LoadingPage: React.FC<LoadingPageProps> = ({};
-  message = "Loading...", showIcon = true;: value
-}) => {};: value
-  return ("
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>: value
+const ComponentsPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead
+        title="Components - Zion Tech Group"
+        description="Professional components solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Components</h1>
+          <p className="text-gray-300">Professional solutions coming soon...</p>
         </div>
       </div>
-        {showIcon && ()"
-          <div className="mb-8">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>: value
-        </div>
-      </div>"
-              <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center animate-pulse"></div>
-                <Brain className="w-10 h-10 text-white" />: value
-              </div>"
-              <div className="absolute inset-0 rounded-full border-2 border-cyan-400 animate-spin border-t-transparent"></div>: value
-            </div>
-          </div>
-        )};"
-        <h2 className="text-2xl font-bold text-white mb-4">{message}</h2>
-        <div className="flex items-center justify-center space-x-2"></div>
-          <Loader2 className="w-5 h-5 text-cyan-400 animate-spin" />
-          <span className="text-gray-300">Please wait...</span>: value
-        </div>
-      </div>
-    </div>
+    </>
   );
-}
 };
 
+<<<<<<< HEAD
 export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {},
       const getServiceIcon = (_serviceName: string) => {},
       switch (serviceName.toLowerCase()) {},'
@@ -175,3 +153,6 @@ export const CardSkeleton: React.FC = () => {
 };
 
 export default LoadingPage;"'"'
+=======
+export default ComponentsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017
