@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';'
 import { render, screen } from '@testing-library/react';'
 import { MemoryRouter } from 'react-router-dom';'
@@ -32,4 +33,29 @@ describe('Component Tests', () => {'
     );
     expect(screen.getByText('Router test')).toBeInTheDocument();'
   });
+=======
+import { describe, test, expect } from "@jest/globals"";
+import {render} from "@testing-library/react"";
+import { HelmetProvider } from "react-helmet-async"";
+import Loading from "../app/components/Loading"";
+import SEOHead from "../app/components/SEOHead";";
+describe("Components", () => {}";
+  test("Loading component renders", () => {}";
+    render()
+      <HelmetProvider>
+        <Loading />
+      </HelmetProvider>,
+    )
+    expect(screen.getByText("Loading...")).toBeInTheDocument()";
+  })
+  
+  test("SEOHead component renders", () => {}";
+    render()
+      <HelmetProvider>
+        <SEOHead: title ="Test Title" description="Test Description" />";";
+      </HelmetProvider>
+    );
+    expect(document.head).toBeInTheDocument();
+  });
+>>>>>>> main
 });

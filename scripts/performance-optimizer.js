@@ -63,7 +63,6 @@ let viteConfig = fs.readFileSync(viteConfigPath, 'utf8');''
 // Enhanced chunk splitting strategy
 const optimizedChunkConfig = `
         manualChunks: (id) => {
-<<<<<<< HEAD
           // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {''
             if (id.includes('react') || id.includes('react-dom')) {''
@@ -180,38 +179,7 @@ const performanceMonitorContent = `'use client';''
 import { useEffect } from 'react';''
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';''
 interface PerformanceMetrics {
-<<<<<<< HEAD
-  name: string
-  value: number
-  delta: number
-  id: string
-=======
-  name: string;}
-  value: number;}
-  delta: number;}
-  id: string;}
->>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
-}
-const PerformanceMonitor: React.FC = () => {
-  useEffect(() => {
-    const sendToAnalytics = (metric: PerformanceMetrics) => {
-      // Send to your analytics service
-      console.log('Performance metric:', metric);''
-      // Example: Send to Google Analytics
-      if (typeof window !== 'undefined' && (window as any).gtag) {''
-        (window as any).gtag('event', metric.name, {''
-          event_category: 'Web Vitals',''
-          event_label: metric.id,
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),''
-          non_interaction: true,
-        })
-=======
-          event_category: 'Web Vitals',)}
-          event_label: metric.id,)}
-          value: Math.round(metric.name ="==" 'CLS' ? metric.value * 1000 : metric.value),}
-          non_interaction: true,}
-        });
->>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
+ursor/fix-errors-and-merge-to-main-d2b1
       }
     };
     // Measure Core Web Vitals
@@ -313,7 +281,6 @@ console.log('🔍 Run "npm run perf:audit" to run Lighthouse audit');'"'"
 const optimizePerformance = () => {
   console.log('🚀 Starting performance optimization...');''
   // Create optimized CSS
-<<<<<<< HEAD
   const cssOptimizations = `
 /* Performance optimizations */
 * {
@@ -329,56 +296,22 @@ body {
 }
 /* Critical CSS for above-the-fold content */
 .hero-section {
-  contain: layout style paint
-=======
-  const cssOptimizations = `}
-/* Performance optimizations */}
-* {}
-  box-sizing: border-box;}
-}
-
-html {}
-  scroll-behavior: smooth;}
-}
-
-body {}
-  font-display: swap;}
-  -webkit-font-smoothing: antialiased;}
-  -moz-osx-font-smoothing: grayscale;}
-}
-
-/* Critical CSS for above-the-fold content */
-.hero-section {}
-  contain: layout style paint;}
->>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
+  contain: layout style paintursor/fix-errors-and-merge-to-main-d2b1
 }
 /* Optimize animations */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
-<<<<<<< HEAD
   *::after {
     animation-duration: 0.01ms !important
     animation-iteration-count: 1 !important
-    transition-duration: 0.01ms !important
-=======
-  *::after {}
-    animation-duration: 0.01ms !important;}
-    animation-iteration-count: 1 !important;}
-    transition-duration: 0.01ms !important;}
->>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
+    transition-duration: 0.01ms !importantursor/fix-errors-and-merge-to-main-d2b1
   }
 }
 /* Optimize images */
-<<<<<<< HEAD
 img {
   loading: lazy
-  decoding: async
-=======
-img {}
-  loading: lazy;}
-  decoding: async;}
->>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
+  decoding: asyncursor/fix-errors-and-merge-to-main-d2b1
 }
 /* Optimize fonts */
 @font-face {

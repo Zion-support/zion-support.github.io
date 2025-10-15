@@ -1,0 +1,1753 @@
+{
+  "totalFiles": 348,
+  "totalSize": 1154567,
+  "files": [
+    {
+      "path": "assets/ui-BBUHZY7e.js",
+      "size": 146575,
+      "sizeFormatted": "143.14 KB"
+    },
+    {
+      "path": "assets/vendor-D3F3s8fL.js",
+      "size": 141723,
+      "sizeFormatted": "138.4 KB"
+    },
+    {
+      "path": "assets/index-Csb3dyK7.js",
+      "size": 113109,
+      "sizeFormatted": "110.46 KB"
+    },
+    {
+      "path": "assets/router-B4p9a6DU.js",
+      "size": 31890,
+      "sizeFormatted": "31.14 KB"
+    },
+    {
+      "path": "assets/helmet-mX0RnS9P.js",
+      "size": 14623,
+      "sizeFormatted": "14.28 KB"
+    },
+    {
+      "path": "assets/page-COX3ZfHJ.js",
+      "size": 14521,
+      "sizeFormatted": "14.18 KB"
+    },
+    {
+      "path": "assets/page-Cn22_X27.js",
+      "size": 14078,
+      "sizeFormatted": "13.75 KB"
+    },
+    {
+      "path": "assets/page-f9ULIowG.js",
+      "size": 14011,
+      "sizeFormatted": "13.68 KB"
+    },
+    {
+      "path": "assets/page-DrQkxnD6.js",
+      "size": 13733,
+      "sizeFormatted": "13.41 KB"
+    },
+    {
+      "path": "assets/page-wwpfpn83.js",
+      "size": 13661,
+      "sizeFormatted": "13.34 KB"
+    },
+    {
+      "path": "assets/page-DMbGw4O3.js",
+      "size": 13545,
+      "sizeFormatted": "13.23 KB"
+    },
+    {
+      "path": "assets/page-CqnURt1p.js",
+      "size": 13321,
+      "sizeFormatted": "13.01 KB"
+    },
+    {
+      "path": "assets/page-o7SRbp8j.js",
+      "size": 13318,
+      "sizeFormatted": "13.01 KB"
+    },
+    {
+      "path": "assets/page-qnYEiyYh.js",
+      "size": 13298,
+      "sizeFormatted": "12.99 KB"
+    },
+    {
+      "path": "assets/page-S781e-wK.js",
+      "size": 12694,
+      "sizeFormatted": "12.4 KB"
+    },
+    {
+      "path": "assets/page-DPLwMj8S.js",
+      "size": 12658,
+      "sizeFormatted": "12.36 KB"
+    },
+    {
+      "path": "assets/page-BIdDrn9D.js",
+      "size": 12505,
+      "sizeFormatted": "12.21 KB"
+    },
+    {
+      "path": "assets/page-IYShbx5m.js",
+      "size": 12505,
+      "sizeFormatted": "12.21 KB"
+    },
+    {
+      "path": "assets/page-BhNQnp-b.js",
+      "size": 10776,
+      "sizeFormatted": "10.52 KB"
+    },
+    {
+      "path": "assets/page-D06u_5mM.js",
+      "size": 10674,
+      "sizeFormatted": "10.42 KB"
+    },
+    {
+      "path": "assets/page-Cew62ZrE.js",
+      "size": 10631,
+      "sizeFormatted": "10.38 KB"
+    },
+    {
+      "path": "assets/page-DXPT9pCZ.js",
+      "size": 10554,
+      "sizeFormatted": "10.31 KB"
+    },
+    {
+      "path": "assets/page-BlM9XTAq.js",
+      "size": 10393,
+      "sizeFormatted": "10.15 KB"
+    },
+    {
+      "path": "assets/page-NaLBPq3i.js",
+      "size": 10151,
+      "sizeFormatted": "9.91 KB"
+    },
+    {
+      "path": "assets/page-CPXlAIID.js",
+      "size": 10109,
+      "sizeFormatted": "9.87 KB"
+    },
+    {
+      "path": "assets/page-xG3RNA9V.js",
+      "size": 9927,
+      "sizeFormatted": "9.69 KB"
+    },
+    {
+      "path": "assets/page-BH1g9oQk.js",
+      "size": 9925,
+      "sizeFormatted": "9.69 KB"
+    },
+    {
+      "path": "assets/page-DM5hCGu9.js",
+      "size": 9755,
+      "sizeFormatted": "9.53 KB"
+    },
+    {
+      "path": "assets/page-Bb3Yr372.js",
+      "size": 9034,
+      "sizeFormatted": "8.82 KB"
+    },
+    {
+      "path": "assets/page-Bj0XZrBV.js",
+      "size": 8223,
+      "sizeFormatted": "8.03 KB"
+    },
+    {
+      "path": "assets/FuturisticButton-C1LVI5hv.js",
+      "size": 8105,
+      "sizeFormatted": "7.92 KB"
+    },
+    {
+      "path": "assets/page-DG2tOxqw.js",
+      "size": 8098,
+      "sizeFormatted": "7.91 KB"
+    },
+    {
+      "path": "assets/layout-C7fLxN4O.js",
+      "size": 5888,
+      "sizeFormatted": "5.75 KB"
+    },
+    {
+      "path": "assets/page-WjldA4Pb.js",
+      "size": 4500,
+      "sizeFormatted": "4.39 KB"
+    },
+    {
+      "path": "assets/page-B0gr1wGn.js",
+      "size": 4120,
+      "sizeFormatted": "4.02 KB"
+    },
+    {
+      "path": "assets/page-BePRgymY.js",
+      "size": 3990,
+      "sizeFormatted": "3.9 KB"
+    },
+    {
+      "path": "assets/page-C1sQlL6K.js",
+      "size": 3575,
+      "sizeFormatted": "3.49 KB"
+    },
+    {
+      "path": "assets/page-CJsu0fwI.js",
+      "size": 3436,
+      "sizeFormatted": "3.36 KB"
+    },
+    {
+      "path": "assets/page-C8Q0e5z4.js",
+      "size": 2944,
+      "sizeFormatted": "2.88 KB"
+    },
+    {
+      "path": "assets/page-C9uAuefl.js",
+      "size": 2919,
+      "sizeFormatted": "2.85 KB"
+    },
+    {
+      "path": "assets/page-D3zK7Bc_.js",
+      "size": 2869,
+      "sizeFormatted": "2.8 KB"
+    },
+    {
+      "path": "assets/page-CtsAtH3m.js",
+      "size": 2725,
+      "sizeFormatted": "2.66 KB"
+    },
+    {
+      "path": "assets/page-DwJFFznp.js",
+      "size": 2690,
+      "sizeFormatted": "2.63 KB"
+    },
+    {
+      "path": "performance.js",
+      "size": 2622,
+      "sizeFormatted": "2.56 KB"
+    },
+    {
+      "path": "assets/page-Bl7Q48FZ.js",
+      "size": 1451,
+      "sizeFormatted": "1.42 KB"
+    },
+    {
+      "path": "assets/page-BFDe9RiN.js",
+      "size": 1225,
+      "sizeFormatted": "1.2 KB"
+    },
+    {
+      "path": "assets/page-BxXw0ztf.js",
+      "size": 1225,
+      "sizeFormatted": "1.2 KB"
+    },
+    {
+      "path": "assets/page-DvSbNtHX.js",
+      "size": 1225,
+      "sizeFormatted": "1.2 KB"
+    },
+    {
+      "path": "assets/page-DIPQjCPU.js",
+      "size": 1221,
+      "sizeFormatted": "1.19 KB"
+    },
+    {
+      "path": "assets/page-ZU1aTi2u.js",
+      "size": 1217,
+      "sizeFormatted": "1.19 KB"
+    },
+    {
+      "path": "assets/page-keku9_IT.js",
+      "size": 1217,
+      "sizeFormatted": "1.19 KB"
+    },
+    {
+      "path": "assets/page-BHtAT1NS.js",
+      "size": 1213,
+      "sizeFormatted": "1.18 KB"
+    },
+    {
+      "path": "assets/page-Bdv-ixf1.js",
+      "size": 1213,
+      "sizeFormatted": "1.18 KB"
+    },
+    {
+      "path": "assets/page-CJNgSVrT.js",
+      "size": 1209,
+      "sizeFormatted": "1.18 KB"
+    },
+    {
+      "path": "assets/page-CMqK9opz.js",
+      "size": 1209,
+      "sizeFormatted": "1.18 KB"
+    },
+    {
+      "path": "assets/page-BF640ufQ.js",
+      "size": 1205,
+      "sizeFormatted": "1.18 KB"
+    },
+    {
+      "path": "assets/page-ByZG3qcE.js",
+      "size": 1205,
+      "sizeFormatted": "1.18 KB"
+    },
+    {
+      "path": "assets/page-BCnunoZr.js",
+      "size": 1201,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-C8WFy7p4.js",
+      "size": 1201,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-Cprd3sOH.js",
+      "size": 1201,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-D5bXQwod.js",
+      "size": 1201,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-DZi8uT6m.js",
+      "size": 1201,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-DjIPxhUq.js",
+      "size": 1201,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-D4Vd6i5m.js",
+      "size": 1200,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-BM0kF2mj.js",
+      "size": 1197,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-BRWyU0sp.js",
+      "size": 1197,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-C4G31l3_.js",
+      "size": 1197,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-C4S6vlLP.js",
+      "size": 1197,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-CFtiEw5v.js",
+      "size": 1197,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-CkGuCsN9.js",
+      "size": 1197,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-CyiqNPvZ.js",
+      "size": 1197,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-DsH6HT12.js",
+      "size": 1197,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-DxrtS4z6.js",
+      "size": 1197,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-YwasUVXv.js",
+      "size": 1197,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-91cvSxZc.js",
+      "size": 1193,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-BCUS2StG.js",
+      "size": 1193,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-BVpuIhFh.js",
+      "size": 1193,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-BfW2w6bb.js",
+      "size": 1193,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-CHahqVdP.js",
+      "size": 1193,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-CI8N9-4a.js",
+      "size": 1193,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-Cgtl2ytt.js",
+      "size": 1193,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-DE6WXhjj.js",
+      "size": 1193,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-Dl6LD4Zl.js",
+      "size": 1193,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-DwQsnnSL.js",
+      "size": 1193,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-E9mOlNF6.js",
+      "size": 1193,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-pKAfsL1j.js",
+      "size": 1193,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-u7tg-d5C.js",
+      "size": 1193,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-xAWFhouu.js",
+      "size": 1193,
+      "sizeFormatted": "1.17 KB"
+    },
+    {
+      "path": "assets/page-B0Upmu_b.js",
+      "size": 1189,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-BCNF-tp1.js",
+      "size": 1189,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-BCyP7YRy.js",
+      "size": 1189,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-BtQ_zo12.js",
+      "size": 1189,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-CfpvMZF3.js",
+      "size": 1189,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-ChepEGim.js",
+      "size": 1189,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-CnqizL0w.js",
+      "size": 1189,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-CrHYyjEY.js",
+      "size": 1189,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-DIZ8n0nI.js",
+      "size": 1189,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-DLDv4v6V.js",
+      "size": 1189,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-DOr1nWE3.js",
+      "size": 1189,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-dw-TiFAX.js",
+      "size": 1189,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-fSZ7sp-d.js",
+      "size": 1189,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-h6CwXQ5l.js",
+      "size": 1189,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-plV_88Jf.js",
+      "size": 1189,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-0z0G9CRN.js",
+      "size": 1185,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-BmRJmY3Q.js",
+      "size": 1185,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-Bns7NTCc.js",
+      "size": 1185,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-Bs4PI7hh.js",
+      "size": 1185,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-BwZt61Hy.js",
+      "size": 1185,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-C03cIBIH.js",
+      "size": 1185,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-Cnol0324.js",
+      "size": 1185,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-CzZ3FlnU.js",
+      "size": 1185,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-D8RQsUSO.js",
+      "size": 1185,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-DET_PtP9.js",
+      "size": 1185,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-DJ8IJR6p.js",
+      "size": 1185,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-DZ-svizy.js",
+      "size": 1185,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-DeDNWhXY.js",
+      "size": 1185,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-DgjdcYL_.js",
+      "size": 1185,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-DmAcLS8-.js",
+      "size": 1185,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-_Eq52E3-.js",
+      "size": 1185,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-uzUWg698.js",
+      "size": 1185,
+      "sizeFormatted": "1.16 KB"
+    },
+    {
+      "path": "assets/page-B7ohbpOn.js",
+      "size": 1181,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-BWGTU-lD.js",
+      "size": 1181,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-BeFTjpmd.js",
+      "size": 1181,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-BmB8WCog.js",
+      "size": 1181,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-CYooOOo5.js",
+      "size": 1181,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-CcSD0CLU.js",
+      "size": 1181,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-DAD3za0H.js",
+      "size": 1181,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-DZF5S6XD.js",
+      "size": 1181,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-Dbd0VrB9.js",
+      "size": 1181,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-Dd6e6HVL.js",
+      "size": 1181,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-DiJEkXBl.js",
+      "size": 1181,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-DjW4_JK3.js",
+      "size": 1181,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-DoTwqUVx.js",
+      "size": 1181,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-Dv-MYaZq.js",
+      "size": 1181,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-ZquU1K4w.js",
+      "size": 1181,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-d0Wz3qQJ.js",
+      "size": 1181,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-9VOXxZXp.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-BEJLuqny.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-BFmZgn1C.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-BRmqS2-c.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-BSXDATXa.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-BTM2HSdj.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-Bbs8ykBd.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-BdzTaTYq.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-BnuNGTMu.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-C4akrSJl.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-CBdd2d8j.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-CJV3QI-G.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-CLhHBZtc.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-CNnBZbG6.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-CgYcK8vb.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-CimT_PSh.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-Cywc16K8.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-DBnA8All.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-DTZW7Znq.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-DsXF8w3d.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-akTkcdYY.js",
+      "size": 1177,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-Bnyxwpt2.js",
+      "size": 1176,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-CvcJ2zLj.js",
+      "size": 1176,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-3ZY-yfwq.js",
+      "size": 1173,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-B4KamBqf.js",
+      "size": 1173,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-BjJR9ssg.js",
+      "size": 1173,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-Byc_7pdZ.js",
+      "size": 1173,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-C64TKI30.js",
+      "size": 1173,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-CKsvkEqn.js",
+      "size": 1173,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-CO4FYFb7.js",
+      "size": 1173,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-CUpICUOa.js",
+      "size": 1173,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-CUrpUQx5.js",
+      "size": 1173,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-Cfx1eDC2.js",
+      "size": 1173,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-CoH1a_bm.js",
+      "size": 1173,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-CpQ9Xuob.js",
+      "size": 1173,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-CxmOsB36.js",
+      "size": 1173,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-DIEeV3zR.js",
+      "size": 1173,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-DOCQsEcQ.js",
+      "size": 1173,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-DXqjZxOk.js",
+      "size": 1173,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-Dg0KLavC.js",
+      "size": 1173,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-hu54breu.js",
+      "size": 1173,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-whaC3j8W.js",
+      "size": 1173,
+      "sizeFormatted": "1.15 KB"
+    },
+    {
+      "path": "assets/page-71ypGdr1.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-7hzG-YnL.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-BBX6_RVY.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-BG7ChI67.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-BIe8_upn.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-BLcbDZvX.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-C9A2o_FC.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-CF7V1bXq.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-CHCF-_IE.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-CZF8KNIv.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-CelpAAXU.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-CmUfD3Vy.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-Cn7R0J6Z.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-CuP4hSeb.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-CvDs_E3Z.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-Cyvx_G1K.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-Czr9AvbD.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-D0EDuOZm.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-Dv7D2sUP.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-H2yevfSB.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-eRcdMV0e.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-ocF8MSwh.js",
+      "size": 1169,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-DW6ZvQOh.js",
+      "size": 1168,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-1WPy2Gvs.js",
+      "size": 1165,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-B7kZVaHW.js",
+      "size": 1165,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-BK1jOcIu.js",
+      "size": 1165,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-BMb_ycLI.js",
+      "size": 1165,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-BbVTcVIV.js",
+      "size": 1165,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-BmyiS2_m.js",
+      "size": 1165,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-BsNfCxAd.js",
+      "size": 1165,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-BxHNyxdd.js",
+      "size": 1165,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-CUDOWgsP.js",
+      "size": 1165,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-CUQ_COcn.js",
+      "size": 1165,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-CYUutdUo.js",
+      "size": 1165,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-DD_kF-u6.js",
+      "size": 1165,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-DMJDB3KW.js",
+      "size": 1165,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-Dc0WRTeM.js",
+      "size": 1165,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-DxQrcS-p.js",
+      "size": 1165,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-NX8PUhn0.js",
+      "size": 1165,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-YH-L1TPT.js",
+      "size": 1165,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-i6pToBsB.js",
+      "size": 1165,
+      "sizeFormatted": "1.14 KB"
+    },
+    {
+      "path": "assets/page-6ll_V28R.js",
+      "size": 1161,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-B-YLFHwq.js",
+      "size": 1161,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-B3jLK4uz.js",
+      "size": 1161,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-BK8FbUKl.js",
+      "size": 1161,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-BZSyCliR.js",
+      "size": 1161,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-Bq8saA2c.js",
+      "size": 1161,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-C0ZuleuC.js",
+      "size": 1161,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-CHUzilrj.js",
+      "size": 1161,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-Cb3IlHOF.js",
+      "size": 1161,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-Cv4wroIV.js",
+      "size": 1161,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-D86SEPjU.js",
+      "size": 1161,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-Dxx84mGm.js",
+      "size": 1161,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-m4Jueu5Z.js",
+      "size": 1161,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-rvnKieW1.js",
+      "size": 1161,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-sSM4TT-Y.js",
+      "size": 1161,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-B0uXOv1c.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-BKKKVNNS.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-BMW_eL0j.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-BQZn1nPK.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-BX096mJx.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-BYsMwmC6.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-BrkjZ0oW.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-ByWBg7B6.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-C3HmARGD.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-CIjLkcUD.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-Cf9tPmZu.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-CpEtk8cw.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-CqOKGFBG.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-D-rE9fYI.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-D7HEs42e.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-DO-dKFN3.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-DSfFDCgR.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-D_UHdwo3.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-DbOPBxDn.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-Deov0rg_.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-DouwdZ5r.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-DqNdxkLQ.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-JQm5nZ4I.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-NFfi2jvo.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-RI2gUJzL.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-cGC0IAy-.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-fMC6Q8a3.js",
+      "size": 1157,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-B6tCxdyg.js",
+      "size": 1153,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-BWVD3Siu.js",
+      "size": 1153,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-BXt7PMzP.js",
+      "size": 1153,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-B__4zqW3.js",
+      "size": 1153,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-BcNwZz2y.js",
+      "size": 1153,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-BtmDlKWt.js",
+      "size": 1153,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-CUFiN4v6.js",
+      "size": 1153,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-DAfnFrS7.js",
+      "size": 1153,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-Dns0G73E.js",
+      "size": 1153,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-FZ5cgx4D.js",
+      "size": 1153,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-RbNsho8w.js",
+      "size": 1153,
+      "sizeFormatted": "1.13 KB"
+    },
+    {
+      "path": "assets/page-BTxCfVb8.js",
+      "size": 1149,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-BinwpFmY.js",
+      "size": 1149,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-BzaL8Iy0.js",
+      "size": 1149,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-CnFOkueC.js",
+      "size": 1149,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-DNwGuxK1.js",
+      "size": 1149,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-DkO12WYc.js",
+      "size": 1149,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-H51R-KiK.js",
+      "size": 1149,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-LaumcWqu.js",
+      "size": 1149,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-_rr8mJNo.js",
+      "size": 1149,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-Ban4nT1z.js",
+      "size": 1145,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-Be9oA8sk.js",
+      "size": 1145,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-BowIAj3D.js",
+      "size": 1145,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-C3WcV2bh.js",
+      "size": 1145,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-CAykETAR.js",
+      "size": 1145,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-DS21s1jT.js",
+      "size": 1145,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-Dh5qsa2_.js",
+      "size": 1145,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-DtJ33vK_.js",
+      "size": 1145,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-Fuq8AnqS.js",
+      "size": 1145,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-T4cbXRPA.js",
+      "size": 1145,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-Vvt0Z_eV.js",
+      "size": 1145,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-ezBDI3ke.js",
+      "size": 1145,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-r6oXxTJC.js",
+      "size": 1145,
+      "sizeFormatted": "1.12 KB"
+    },
+    {
+      "path": "assets/page-B4lvueiJ.js",
+      "size": 1141,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page-Ca-JNtH3.js",
+      "size": 1141,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page-CjDqajc0.js",
+      "size": 1141,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page-Ckpwd9cG.js",
+      "size": 1141,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page-CsAZT-DB.js",
+      "size": 1141,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page-DTrUAspZ.js",
+      "size": 1141,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page-DlgQGf_3.js",
+      "size": 1141,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page-8w64Ap5d.js",
+      "size": 1137,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page-B4EVgrDG.js",
+      "size": 1137,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page-BOJFdEu4.js",
+      "size": 1137,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page-BXsLNQCO.js",
+      "size": 1137,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page-Chulp5Sk.js",
+      "size": 1137,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page-CwnvOTi9.js",
+      "size": 1137,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page-DoAhfOPa.js",
+      "size": 1137,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page-hj1nOyql.js",
+      "size": 1137,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page-478x-Ivn.js",
+      "size": 1133,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page-CX6Ly163.js",
+      "size": 1133,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page-CZOwZoYF.js",
+      "size": 1133,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page-DlGLk8zQ.js",
+      "size": 1133,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page-oHI_Ps-l.js",
+      "size": 1133,
+      "sizeFormatted": "1.11 KB"
+    },
+    {
+      "path": "assets/page--P8qOYtY.js",
+      "size": 1129,
+      "sizeFormatted": "1.1 KB"
+    },
+    {
+      "path": "assets/page-B8YDetKk.js",
+      "size": 1129,
+      "sizeFormatted": "1.1 KB"
+    },
+    {
+      "path": "assets/page-CCmAfTq8.js",
+      "size": 1129,
+      "sizeFormatted": "1.1 KB"
+    },
+    {
+      "path": "assets/page-CJSCAWCB.js",
+      "size": 1129,
+      "sizeFormatted": "1.1 KB"
+    },
+    {
+      "path": "assets/page-CWB1uO9x.js",
+      "size": 1129,
+      "sizeFormatted": "1.1 KB"
+    },
+    {
+      "path": "assets/page-D3hFPN8g.js",
+      "size": 1129,
+      "sizeFormatted": "1.1 KB"
+    },
+    {
+      "path": "assets/page-DEExKA3t.js",
+      "size": 1129,
+      "sizeFormatted": "1.1 KB"
+    },
+    {
+      "path": "assets/page-DOpopPoR.js",
+      "size": 1129,
+      "sizeFormatted": "1.1 KB"
+    },
+    {
+      "path": "assets/page-DwkHdxjk.js",
+      "size": 1129,
+      "sizeFormatted": "1.1 KB"
+    },
+    {
+      "path": "assets/page-EpSlAXOf.js",
+      "size": 1129,
+      "sizeFormatted": "1.1 KB"
+    },
+    {
+      "path": "assets/page-BsEEsEup.js",
+      "size": 1125,
+      "sizeFormatted": "1.1 KB"
+    },
+    {
+      "path": "assets/page-CBNevxyn.js",
+      "size": 1125,
+      "sizeFormatted": "1.1 KB"
+    },
+    {
+      "path": "assets/page-DNF2PJHZ.js",
+      "size": 1125,
+      "sizeFormatted": "1.1 KB"
+    },
+    {
+      "path": "assets/page-DTu8zi4T.js",
+      "size": 1125,
+      "sizeFormatted": "1.1 KB"
+    },
+    {
+      "path": "assets/page-Dz4BRcG0.js",
+      "size": 1125,
+      "sizeFormatted": "1.1 KB"
+    },
+    {
+      "path": "assets/page-B0uDkVhU.js",
+      "size": 1121,
+      "sizeFormatted": "1.09 KB"
+    },
+    {
+      "path": "assets/page-B3MvuzLC.js",
+      "size": 1121,
+      "sizeFormatted": "1.09 KB"
+    },
+    {
+      "path": "assets/page-B3pQRRxj.js",
+      "size": 1121,
+      "sizeFormatted": "1.09 KB"
+    },
+    {
+      "path": "assets/page-CCJoQC34.js",
+      "size": 1121,
+      "sizeFormatted": "1.09 KB"
+    },
+    {
+      "path": "assets/page-DygtGHVw.js",
+      "size": 1121,
+      "sizeFormatted": "1.09 KB"
+    },
+    {
+      "path": "assets/page-E_bgLlk9.js",
+      "size": 1121,
+      "sizeFormatted": "1.09 KB"
+    },
+    {
+      "path": "assets/page-oB9hT5Qw.js",
+      "size": 1121,
+      "sizeFormatted": "1.09 KB"
+    },
+    {
+      "path": "assets/page-BrJFIMJY.js",
+      "size": 1117,
+      "sizeFormatted": "1.09 KB"
+    },
+    {
+      "path": "assets/page-djM_6arm.js",
+      "size": 1117,
+      "sizeFormatted": "1.09 KB"
+    },
+    {
+      "path": "assets/page-BKWXr1Lp.js",
+      "size": 1113,
+      "sizeFormatted": "1.09 KB"
+    },
+    {
+      "path": "assets/page-BMdYt4q3.js",
+      "size": 1113,
+      "sizeFormatted": "1.09 KB"
+    },
+    {
+      "path": "assets/page-D4v3sAJW.js",
+      "size": 1113,
+      "sizeFormatted": "1.09 KB"
+    },
+    {
+      "path": "assets/page-DWWYHJ8V.js",
+      "size": 1113,
+      "sizeFormatted": "1.09 KB"
+    },
+    {
+      "path": "assets/page-H165S7EU.js",
+      "size": 1113,
+      "sizeFormatted": "1.09 KB"
+    },
+    {
+      "path": "assets/page-B83iWIME.js",
+      "size": 1109,
+      "sizeFormatted": "1.08 KB"
+    },
+    {
+      "path": "assets/page-CRLjK7W_.js",
+      "size": 1109,
+      "sizeFormatted": "1.08 KB"
+    },
+    {
+      "path": "assets/page-CaCbiQuk.js",
+      "size": 1109,
+      "sizeFormatted": "1.08 KB"
+    },
+    {
+      "path": "assets/page-CegR0ewj.js",
+      "size": 1109,
+      "sizeFormatted": "1.08 KB"
+    },
+    {
+      "path": "sw.js",
+      "size": 657,
+      "sizeFormatted": "657 Bytes"
+    }
+  ],
+  "recommendations": [
+    "Duplicate chunks detected. Consider optimizing chunk splitting strategy.",
+    "Enable gzip compression on your server to reduce bundle size by ~70%.",
+    "Use dynamic imports for route-based code splitting.",
+    "Consider using a CDN for static assets.",
+    "Implement service worker for caching strategies."
+  ]
+}
