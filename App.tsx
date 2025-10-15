@@ -89,6 +89,28 @@ const BlockchainSolutionsProPage = lazy(() => import('./app/blockchain-solutions
 const DevOpsAutomationProPage = lazy(() => import('./app/devops-automation-pro/page'));
 const IOTSolutionsProPage = lazy(() => import('./app/iot-solutions-pro/page'));
 
+// New AI Services
+const AILegalAssistantPage = lazy(() => import('./app/ai-legal-assistant/page'));
+const AIMedicalAssistantPage = lazy(() => import('./app/ai-medical-assistant/page'));
+const AIEducationTutorPage = lazy(() => import('./app/ai-education-tutor/page'));
+const AIRealEstateAnalyzerPage = lazy(() => import('./app/ai-real-estate-analyzer/page'));
+const AISupplyChainOptimizerPage = lazy(() => import('./app/ai-supply-chain-optimizer/page'));
+const AI3DModelGeneratorPage = lazy(() => import('./app/ai-3d-model-generator/page'));
+
+// IT Solutions
+const EdgeComputingSolutionsPage = lazy(() => import('./app/edge-computing-solutions/page'));
+const AugmentedRealitySolutionsPage = lazy(() => import('./app/augmented-reality-solutions/page'));
+const VirtualRealitySolutionsPage = lazy(() => import('./app/virtual-reality-solutions/page'));
+const RoboticProcessAutomationPage = lazy(() => import('./app/robotic-process-automation/page'));
+const LowCodePlatformPage = lazy(() => import('./app/low-code-platform/page'));
+const ServerlessArchitecturePage = lazy(() => import('./app/serverless-architecture/page'));
+const ContainerOrchestrationPage = lazy(() => import('./app/container-orchestration/page'));
+const AIInfrastructurePage = lazy(() => import('./app/ai-infrastructure/page'));
+const DataLakeSolutionsPage = lazy(() => import('./app/data-lake-solutions/page'));
+
+// Micro SaaS
+const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
+
 // Zion AI Services
 const ZionAIChatbotBuilderPage = lazy(() => import('./app/zion-ai-chatbot-builder/page'));
 const ZionAICodeAssistantPage = lazy(() => import('./app/zion-ai-code-assistant/page'));
@@ -305,9 +327,6 @@ const App = memo(() => {
                     
                     {/* Additional missing pages */}
                     <Route path="/accessibility-page" element={<AccessibilityPagePage />} />
-                    <Route path="/ai-crm-optimizer" element={<AICRMOptimizerPage />} />
-                    <Route path="/ai-data-visualizer" element={<AIDataVisualizerPage />} />
-                    <Route path="/ai-email-optimizer" element={<AIEmailOptimizerPage />} />
                     <Route path="/ai-fraud-detection-pro" element={<AIFraudDetectionProPage />} />
                     <Route path="/ai-image-recognition-pro" element={<AIImageRecognitionProPage />} />
                     <Route path="/ai-lead-scoring-pro" element={<AILeadScoringProPage />} />
@@ -319,6 +338,28 @@ const App = memo(() => {
                     <Route path="/blockchain-solutions-pro" element={<BlockchainSolutionsProPage />} />
                     <Route path="/devops-automation-pro" element={<DevOpsAutomationProPage />} />
                     <Route path="/iot-solutions-pro" element={<IOTSolutionsProPage />} />
+                    
+                    {/* New AI Services */}
+                    <Route path="/ai-legal-assistant" element={<AILegalAssistantPage />} />
+                    <Route path="/ai-medical-assistant" element={<AIMedicalAssistantPage />} />
+                    <Route path="/ai-education-tutor" element={<AIEducationTutorPage />} />
+                    <Route path="/ai-real-estate-analyzer" element={<AIRealEstateAnalyzerPage />} />
+                    <Route path="/ai-supply-chain-optimizer" element={<AISupplyChainOptimizerPage />} />
+                    <Route path="/ai-3d-model-generator" element={<AI3DModelGeneratorPage />} />
+                    
+                    {/* IT Solutions */}
+                    <Route path="/edge-computing-solutions" element={<EdgeComputingSolutionsPage />} />
+                    <Route path="/augmented-reality-solutions" element={<AugmentedRealitySolutionsPage />} />
+                    <Route path="/virtual-reality-solutions" element={<VirtualRealitySolutionsPage />} />
+                    <Route path="/robotic-process-automation" element={<RoboticProcessAutomationPage />} />
+                    <Route path="/low-code-platform" element={<LowCodePlatformPage />} />
+                    <Route path="/serverless-architecture" element={<ServerlessArchitecturePage />} />
+                    <Route path="/container-orchestration" element={<ContainerOrchestrationPage />} />
+                    <Route path="/ai-infrastructure" element={<AIInfrastructurePage />} />
+                    <Route path="/data-lake-solutions" element={<DataLakeSolutionsPage />} />
+                    
+                    {/* Micro SaaS */}
+                    <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
                     
                     {/* Zion AI Services */}
                     <Route path="/zion-ai-chatbot-builder" element={<ZionAIChatbotBuilderPage />} />
