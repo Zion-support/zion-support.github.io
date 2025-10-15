@@ -1,55 +1,24 @@
-import { ArrowRight } from 'lucide-react';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   DollarSign, 
-  Zap, 
   Shield, 
-  Globe, 
   Brain, 
   CheckCircle, 
-  ArrowRight, 
   Star,
   Phone,
   Mail,
-  MapPin,
-  Download,
   Play,
-  Pause,
-  RefreshCw,
-  Settings,
   Eye,
-  Filter,
-  Calendar,
-  Target,
   CreditCard,
   TrendingUp,
-  TrendingDown,
-  Users,
-  Award,
-  Clock,
-  Smartphone,
-  Search,
-  FileText,
   BarChart3,
-  Activity,
-  Lock,
-  Cpu,
-  Database,
-  PieChart,
-  LineChart,
   Calculator,
-  Wallet,
-  Banknote,
-  Receipt,
-  PiggyBank,
-  ChartLine,
-  Coins
+  Receipt
 } from 'lucide-react';
 
 const AiFinancialPlatformPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeTab, setActiveTab] = useState('overview');
 
   useEffect(() => {
     setIsVisible(true);
@@ -443,7 +412,6 @@ const AiFinancialPlatformPage: React.FC = () => {
                       }`}
                     >
                       Get Started
-                      <ArrowRight className="w-4 h-4 ml-2" />
                     </a>
                   </div>
                 ))}

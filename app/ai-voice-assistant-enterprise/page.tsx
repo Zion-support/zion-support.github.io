@@ -1,5 +1,7 @@
-import { ArrowRight } from 'lucide-react';
-import React, { useState, useEffect } from 'react';
+import { 
+  ArrowRight
+} from 'lucide-react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Mic, 
@@ -41,7 +43,6 @@ import {
 
 const AiVoiceAssistantEnterprisePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeTab, setActiveTab] = useState('overview');
 
   useEffect(() => {
     setIsVisible(true);

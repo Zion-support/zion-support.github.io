@@ -1,48 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Shield, 
-  Zap, 
-  Eye, 
-  Globe, 
-  Brain, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  Download,
-  Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Filter,
-  Calendar,
-  Target,
-  Lock,
-  Users,
-  Award,
-  TrendingUp,
-  Cpu,
-  Database,
   BarChart3,
-  Activity,
-  AlertTriangle,
-  FileText,
-  Network,
-  Server,
-  Smartphone,
-  Cloud,
-  Key,
-  Search,
+  Brain,
   Bug,
-  Clock
+  CheckCircle,
+  Eye,
+  Lock,
+  Mail,
+  Network,
+  Phone,
+  Play,
+  Shield,
+  Star,
+  Users
 } from 'lucide-react';
 
 const AiCybersecurityPlatformPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeTab, setActiveTab] = useState('overview');
 
   useEffect(() => {
     setIsVisible(true);
@@ -431,7 +406,6 @@ const AiCybersecurityPlatformPage: React.FC = () => {
                       }`}
                     >
                       Get Started
-                      <ArrowRight className="w-4 h-4 ml-2" />
                     </a>
                   </div>
                 ))}

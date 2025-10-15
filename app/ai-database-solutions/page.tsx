@@ -1,5 +1,14 @@
-import { ArrowRight, BarChart3, CheckCircle, Cloud, Cpu, Database, Shield, Users, Zap } from 'lucide-react';
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
+import { 
+  BarChart3,
+  CheckCircle,
+  Cloud,
+  Cpu,
+  Database,
+  Shield,
+  Users,
+  Zap
+} from 'lucide-react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const AiDatabaseSolutionsPage = () => {
@@ -145,7 +154,6 @@ const AiDatabaseSolutionsPage = () => {
                   
                   <button className="mt-6 w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group">
                     Learn More
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </button>
                 </div>
               ))}

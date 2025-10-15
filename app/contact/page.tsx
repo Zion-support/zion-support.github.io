@@ -1,4 +1,11 @@
-import { Calendar, CheckCircle, Clock, Mail, MapPin, MessageSquare, Phone, Send } from 'lucide-react';
+import { 
+  CheckCircle,
+  Clock,
+  Mail,
+  MapPin,
+  Phone,
+  Send
+} from 'lucide-react';
 import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 

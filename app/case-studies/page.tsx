@@ -1,4 +1,8 @@
-import { ArrowRight, Award, CheckCircle, ExternalLink, TrendingUp, Users } from 'lucide-react';
+import { 
+  ArrowRight,
+  CheckCircle,
+  ExternalLink
+} from 'lucide-react';
 
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
