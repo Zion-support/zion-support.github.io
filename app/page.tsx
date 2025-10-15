@@ -174,18 +174,18 @@ const HomePage: React.FC = () => {
               </div>
               
               {/* Stats */}
-              <div className="grid grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto px-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 lg:gap-6 max-w-6xl mx-auto px-4">
                 {stats.map((stat, index) => (
                   <div key={index} 
-                    className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm hover:bg-slate-700/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group"
+                    className="text-center p-3 sm:p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm hover:bg-slate-700/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group"
                     style={{
                       animationDelay: `${index * 100}ms`
                     }}
                   >
-                    <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-purple-400 mb-1 lg:mb-2 group-hover:text-purple-300 transition-colors">
+                    <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-purple-400 mb-1 lg:mb-2 group-hover:text-purple-300 transition-colors">
                       {stat.number}
                     </div>
-                    <div className="text-gray-300 text-xs sm:text-sm lg:text-base group-hover:text-white transition-colors">
+                    <div className="text-gray-300 text-xs sm:text-sm lg:text-base group-hover:text-white transition-colors leading-tight">
                       {stat.label}
                     </div>
                   </div>
@@ -207,11 +207,11 @@ const HomePage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               {services.map((service, index) => (
                 <Link key={index}
                   to={service.href}
-                  className="group relative bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 overflow-hidden"
+                  className="group relative bg-slate-800/50 p-4 sm:p-6 lg:p-8 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 overflow-hidden"
                   style={{
                     animationDelay: `${index * 100}ms`
                   }}
@@ -223,18 +223,18 @@ const HomePage: React.FC = () => {
                   <div className={`absolute -inset-1 bg-gradient-to-r ${service.gradient} rounded-xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
                   
                   <div className="relative z-10">
-                    <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${service.gradient} rounded-lg flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                      <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                    <div className={`w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-r ${service.gradient} rounded-lg flex items-center justify-center mb-3 sm:mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      <service.icon className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
                     </div>
-                    <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-purple-300 transition-colors">
+                    <h3 className="text-base sm:text-lg lg:text-xl font-semibold mb-2 sm:mb-3 lg:mb-4 text-white group-hover:text-purple-300 transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-gray-400 mb-4 group-hover:text-gray-300 transition-colors text-sm sm:text-base">
+                    <p className="text-gray-400 mb-3 sm:mb-4 group-hover:text-gray-300 transition-colors text-xs sm:text-sm lg:text-base leading-relaxed">
                       {service.description}
                     </p>
-                    <div className="mt-4 flex items-center text-purple-400 group-hover:text-purple-300 transition-colors">
-                      <span className="text-sm font-medium">Learn More</span>
-                      <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <div className="mt-3 sm:mt-4 flex items-center text-purple-400 group-hover:text-purple-300 transition-colors">
+                      <span className="text-xs sm:text-sm font-medium">Learn More</span>
+                      <ArrowRightIcon className="w-3 h-3 sm:w-4 sm:h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
                 </Link>
@@ -270,41 +270,41 @@ const HomePage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               {/* AI Code Assistant */}
-              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
-                    <CpuChipIcon className="w-6 h-6 text-white" />
+              <div className="group holographic-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
+                <div className="flex items-center justify-between mb-3 sm:mb-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <CpuChipIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <span className="text-sm text-blue-400 font-medium neon-text">AI Code</span>
+                  <span className="text-xs sm:text-sm text-blue-400 font-medium neon-text">AI Code</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
                   AI Code Assistant
                 </h3>
-                <p className="text-gray-400 mb-4 text-sm">
+                <p className="text-gray-400 mb-3 sm:mb-4 text-xs sm:text-sm leading-relaxed">
                   Generate, optimize, and collaborate on code in 50+ programming languages with 95% accuracy and real-time assistance.
                 </p>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-blue-400 neon-text">$29/mo</span>
-                  <span className="text-sm text-gray-400 line-through">$99/mo</span>
+                <div className="flex items-center justify-between mb-3 sm:mb-4">
+                  <span className="text-xl sm:text-2xl font-bold text-blue-400 neon-text">$29/mo</span>
+                  <span className="text-xs sm:text-sm text-gray-400 line-through">$99/mo</span>
                 </div>
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                <div className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
+                  <div className="flex items-center text-xs sm:text-sm text-gray-300">
+                    <CheckCircleIcon className="w-3 h-3 sm:w-4 sm:h-4 text-green-400 mr-2" />
                     <span>50+ programming languages</span>
                   </div>
-                  <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                  <div className="flex items-center text-xs sm:text-sm text-gray-300">
+                    <CheckCircleIcon className="w-3 h-3 sm:w-4 sm:h-4 text-green-400 mr-2" />
                     <span>Real-time collaboration</span>
                   </div>
-                  <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                  <div className="flex items-center text-xs sm:text-sm text-gray-300">
+                    <CheckCircleIcon className="w-3 h-3 sm:w-4 sm:h-4 text-green-400 mr-2" />
                     <span>Security scanning</span>
                   </div>
                 </div>
                 <Link to="/ai-code-assistant"
-                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                  className="block w-full cyber-button text-center py-2 sm:py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-xs sm:text-sm"
                 >
                   Try Free Demo
                 </Link>

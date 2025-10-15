@@ -171,6 +171,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Video Generator', href: '/zion-ai-video-generator', icon: EyeIcon }
       ]
     },
+    { name: 'All Services', href: '/services-overview', icon: CogIcon },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Support', href: '/help', icon: QuestionMarkCircleIcon }
   ];

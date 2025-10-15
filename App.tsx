@@ -95,6 +95,7 @@ const AITranslatorPage = lazy(() => import('./app/ai-translator/page'));
 const AIVideoGeneratorPage = lazy(() => import('./app/ai-video-generator/page'));
 const AILegalAssistantPage = lazy(() => import('./app/ai-legal-assistant/page'));
 const AIMedicalAssistantPage = lazy(() => import('./app/ai-medical-assistant/page'));
+const ServicesOverviewPage = lazy(() => import('./app/services-overview/page'));
 
 // Zion AI Services
 const ZionAIChatbotBuilderPage = lazy(() => import('./app/zion-ai-chatbot-builder/page'));
@@ -319,6 +320,7 @@ const App = memo(() => {
                     <Route path="/ai-video-generator" element={<AIVideoGeneratorPage />} />
                     <Route path="/ai-legal-assistant" element={<AILegalAssistantPage />} />
                     <Route path="/ai-medical-assistant" element={<AIMedicalAssistantPage />} />
+                    <Route path="/services-overview" element={<ServicesOverviewPage />} />
                     
                     {/* Zion AI Services */}
                     <Route path="/zion-ai-chatbot-builder" element={<ZionAIChatbotBuilderPage />} />
