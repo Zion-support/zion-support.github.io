@@ -9,7 +9,6 @@ import {
   Zap, 
   Shield, 
   Target,
-  ArrowRight,
   CheckCircle
 } from 'lucide-react';
 

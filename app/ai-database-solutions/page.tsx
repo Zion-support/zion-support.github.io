@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { BarChart3,
+import {
   CheckCircle,
-  Cloud,
-  Cpu,
   Database,
   Shield,
   Users,
