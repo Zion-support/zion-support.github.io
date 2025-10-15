@@ -1,3 +1,4 @@
+// Service Worker for PWA functionality
 const CACHE_NAME = 'zion-tech-group-v1';
 const urlsToCache = [
   '/',
@@ -24,8 +25,7 @@ self.addEventListener('fetch', (event) => {
       .then((response) => {
         // Return cached version or fetch from network
         return response || fetch(event.request);
-      }
-    )
+      })
   );
 });
 

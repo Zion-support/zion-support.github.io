@@ -22,6 +22,26 @@ const PerformanceMonitor: React.FC = () => {
         });
       }
       
+      // Enhanced performance tracking
+      const performanceData = {
+        metric: metric.name,
+        value: metric.value,
+        delta: metric.delta,
+        id: metric.id,
+        navigationType: metric.navigationType,
+        timestamp: Date.now(),
+        url: window.location.href,
+      };
+      
+      // Store performance data
+      try {
+        const existingData = JSON.parse(localStorage.getItem('performanceMetrics') || '[]');
+        existingData.push(performanceData);
+        localStorage.setItem('performanceMetrics', JSON.stringify(existingData.slice(-50))); // Keep last 50 metrics
+      } catch (e) {
+        // Ignore localStorage errors
+      }
+      
       // Also log in development
       if (process.env.NODE_ENV === 'development') {
         console.log(`[Web Vitals] ${metric.name}:`, metric.value);

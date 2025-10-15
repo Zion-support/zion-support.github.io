@@ -75,10 +75,20 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   const preloadResource = useCallback((href: string, as: string) => {
     if (!enablePreloading) return;
 
+    // Check if already preloaded
+    const existingLink = document.querySelector(`link[href="${href}"]`);
+    if (existingLink) return;
+
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = href;
     link.as = as;
+    
+    // Add crossorigin for fonts
+    if (as === 'font') {
+      link.crossOrigin = 'anonymous';
+    }
+    
     document.head.appendChild(link);
   }, [enablePreloading]);
 

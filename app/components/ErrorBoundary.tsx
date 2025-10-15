@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ErrorInfo, ReactNode } from 'react';
 import { handleError, logError } from '../utils/errorHandler';
 
 interface Props {
@@ -58,7 +58,7 @@ class ErrorBoundary extends Component<Props, State> {
                   Reload Page
                 </button>
                 <button
-                  onClick={() => this.setState({ hasError: false, error: undefined })}
+                  onClick={() => this.setState({ hasError: false })}
                   className="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   Try Again

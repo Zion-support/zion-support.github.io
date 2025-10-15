@@ -1,14 +1,14 @@
 // Error handling utilities
 export interface AppError {
   message: string;
-  code?: string;
-  statusCode?: number;
+  code?: string | undefined;
+  statusCode?: number | undefined;
   details?: any;
 }
 
 export class CustomError extends Error {
-  public code?: string;
-  public statusCode?: number;
+  public code?: string | undefined;
+  public statusCode?: number | undefined;
   public details?: any;
 
   constructor(message: string, code?: string, statusCode?: number, details?: any) {
@@ -48,8 +48,48 @@ export const logError = (error: AppError, context?: string) => {
     console.error(`[${context || 'App'}] Error:`, error);
   }
   
-  // In production, you would send this to your error monitoring service
-  // Example: sendToErrorService(error, context);
+  // Enhanced error reporting for production
+  if (process.env.NODE_ENV === 'production') {
+    // Send to error monitoring service
+    sendToErrorService(error, context);
+    
+    // Store in localStorage for debugging
+    try {
+      const errorLog = {
+        ...error,
+        context,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        url: window.location.href,
+      };
+      
+      const existingErrors = JSON.parse(localStorage.getItem('errorLogs') || '[]');
+      existingErrors.push(errorLog);
+      localStorage.setItem('errorLogs', JSON.stringify(existingErrors.slice(-20))); // Keep last 20 errors
+    } catch {
+      // Ignore localStorage errors
+    }
+  }
+};
+
+const sendToErrorService = async (error: AppError, context?: string) => {
+  try {
+    await fetch('/api/error-report', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        ...error,
+        context,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        url: window.location.href,
+      }),
+    });
+  } catch {
+    // Silently fail if error reporting fails
+  }
 };
 
 export const createError = (message: string, code?: string, statusCode?: number, details?: any): CustomError => {
