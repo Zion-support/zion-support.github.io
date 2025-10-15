@@ -1,224 +1,296 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import logger from '../../utils/logger';
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  maxRetries?: number;
-  showDetails?: boolean;
-}
-interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  retryCount: number;
-  isRetrying: boolean;
-}
-class UnifiedErrorBoundary extends Component<Props, State> {
-  private maxRetries: number;
-  private retryTimeoutId: number | null = null;
+import { ArrowRight, CheckCircle, Star, Shield, Award, Brain, Cpu, Target, BarChart, MessageSquare, Phone, Mail, Users, Globe, Zap, TrendingUp, Clock, DollarSign } from 'lucide-react';
 
-constructor(props: Props) {
-    super(props);
-    this.maxRetries = props.maxRetries || 3;
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      retryCount: 0,
-      isRetrying: false,
-    };
-  }
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error,
-    };
-  }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    logger.error('Error caught by UnifiedErrorBoundary:', error, errorInfo);
-    this.setState({
-      error,
-      errorInfo,
-    });
-    if (this.props.onError) {
-      this.props.onError( errorInfo);
+const UnifiedErrorBoundary = () => {
+  const features = [
+    {
+      title: "Advanced AI Integration",
+      description: "Cutting-edge artificial intelligence solutions tailored to your business needs",
+      icon: <Brain className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: "Real-time Analytics",
+      description: "Comprehensive analytics and insights for data-driven decision making",
+      icon: <BarChart className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: "Enterprise Security",
+      description: "Bank-level security with advanced threat protection and compliance",
+      icon: <Shield className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock support from our expert team",
+      icon: <MessageSquare className="w-6 h-6" />,
+      included: true
     }
-    // Send error to analytics
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          error_stack: error.stack,
-          component_stack: errorInfo.componentStack,
-        },
-      });
-    }
-  }
-  handleRetry = () => {
-    if (this.state.retryCount >= this.maxRetries) {
-      logger.warn('Maximum retry attempts reached');
-  return;
-    }
-    this.setState({ isRetrying: true });
-    // Clear any existing timeout
-    if (this.retryTimeoutId) {
-      clearTimeout(this.retryTimeoutId);
-    }
-    // Retry after a short delay
-    this.retryTimeoutId = window.setTimeout(() => {
-      this.setState({
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        retryCount: this.state.retryCount + 1,
-        isRetrying: false,
-      });
-    }, 1000);
-  };
-  handleReset = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      retryCount: 0,
-      isRetrying: false,
-    });
-  };
-  get canRetry(): boolean {
-    return this.state.retryCount < this.maxRetries;
-  }
-  componentWillUnmount() {
-    if (this.retryTimeoutId) {
-      clearTimeout(this.retryTimeoutId);
-    }
-  }
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-      const { error, retryCount, isRetrying } = this.state;
+  ];
 
-const { showDetails = process.env.NODE_ENV === 'development' } = this.props;
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: 29,
+      period: "month",
+      description: "Perfect for small businesses",
+      features: [
+        "Basic features",
+        "Email support",
+        "1 user account",
+        "Standard templates"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: 79,
+      period: "month",
+      description: "Ideal for growing companies",
+      features: [
+        "Advanced features",
+        "Priority support",
+        "Up to 5 user accounts",
+        "Custom templates",
+        "API access"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: 199,
+      period: "month",
+      description: "For large organizations",
+      features: [
+        "All features",
+        "Dedicated support",
+        "Unlimited users",
+        "Custom integrations",
+        "White-label solution"
+      ],
+      popular: false
+    }
+  ];
+
+  const stats = [
+    { number: "10x", label: "Faster Processing", icon: <Zap className="w-6 h-6" /> },
+    { number: "95%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
+    { number: "50+", label: "Integrations", icon: <Globe className="w-6 h-6" /> },
+    { number: "24/7", label: "AI Support", icon: <Brain className="w-6 h-6" /> }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CTO, TechCorp",
+      content: "This solution transformed our business operations completely.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "CEO, DataFlow",
+      content: "The AI integration exceeded our expectations in every way.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "VP Engineering, CloudScale",
+      content: "Outstanding support and incredible results from day one.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   return (
     <>
-          <Helmet>
-            <title>Application Error - Zion Tech Group</title>
-            <meta name="description" content="An error occurred in the application" />
-            <meta name="robots" content="noindex, nofollow" />
-          </Helmet>
-          
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-            
-        <div className="max-w-2xl w-full">
-              
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-                {/* Error Icon */}
-                
-        <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-red-500/20 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-                  </svg>
-                </div>
-                {/* Error Message */}
-                
-          <h1 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                  Oops! Something went wrong
-                </h1>
-                
-          <p className="text-gray-300 mb-6 leading-relaxed">
-                  We're sorry, but something unexpected happened. Our team has been notified and we're working to fix it.
-                </p>
-                {/* Error Details (Development only) */}
-                {showDetails && error && (
-                  
-        <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-6 text-left">
-                    <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
-                    
-          <p className="text-red-300 text-sm font-mono break-all">{error.message}</p>
-                    {error.stack && (
-                      <details className="mt-2">
-                        <summary className="text-red-400 text-sm cursor-pointer">Stack Trace</summary>
-                        <pre className="text-red-300 text-xs mt-2 overflow-auto max-h-32 font-mono">
-                          {error.stack}
-                        </pre>
-                      </details>
-                    )}
-                  </div>
-                )}
-                {/* Retry Count */}
-                {retryCount > 0 && (
-                  
-          <p className="text-yellow-400 text-sm mb-4">
-                    Retry attempt {retryCount} of {this.maxRetries}
-                  </p>
-                )}
-                {/* Action Buttons */}
-                
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  {this.canRetry && (
-                    <button
-                      onClick={this.handleRetry}
-                      disabled={isRetrying}
-                      className="bg-cyan-500 hover:bg-cyan-600 disabled:bg-cyan-500/50 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center gap-2"
-                    >
-                      {isRetrying ? (
-                        <>
-                          
-        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-                          Retrying...
-                        </>
-                      ) : (
-                        'Try Again'
-                      )}
-                    </button>
-                  )}
-                  <button
-                    onClick={this.handleReset}
-                    className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200"
-                  >
-                    Reset
-                  </button>
-                  <button
-                    onClick={() => window.location.href = '/'}
-                    className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-6 py-3 rounded-lg font-semibold transition-all duration-200"
-                  >
-                    Go Home
-                  </button>
-                </div>
-                {/* Contact Information */}
-                
-        <div className="mt-8 pt-6 border-t border-white/10">
-                  
-          <p className="text-gray-400 text-sm mb-2">
-                    If this problem persists, please contact our support team:
-                  </p>
-                  
-        <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
-                    <a
-                      href="mailto:kleber@ziontechgroup.com"
-                      className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
-                      kleber@ziontechgroup.com
-                    </a>
-                    <a
-                      href="tel:+13024640950"
-                      className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
-                      +1 (302) 464-0950
-                    </a>
-                  </div>
-                </div>
+      <Helmet>
+        <title>Unified Error Boundary | Zion Tech Group</title>
+        <meta name="description" content="Advanced Unified Error Boundary solutions powered by AI and cutting-edge technology" />
+        <meta name="keywords" content="ai 3d generation, AI solutions, enterprise software, automation, technology" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Unified Error Boundary
+              </h1>
+              <p className="text-xl text-gray-300 mb-8">
+                Advanced Unified Error Boundary solutions powered by AI and cutting-edge technology
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                  Get Started
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </button>
+                <button className="border border-gray-300 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                  Learn More
+                </button>
               </div>
             </div>
           </div>
-        </>
-      );
-    }
-    return this.props.children;
-  }
-}
+        </section>
+
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Powerful Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Everything you need to succeed
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                  <div className="text-cyan-400 mb-4 flex justify-center">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 lg:py-24 bg-white/5">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-cyan-400 mb-4 flex justify-center">
+                    {stat.icon}
+                  </div>
+                  <div className="text-4xl font-bold text-white mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-300">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Simple Pricing
+              </h2>
+              <p className="text-xl text-gray-300">
+                Choose the plan that's right for you
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+                  {plan.popular && (
+                    <div className="bg-cyan-400 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full text-center mb-4">
+                      Most Popular
+                    </div>
+                  )}
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {plan.name}
+                  </h3>
+                  <p className="text-gray-300 mb-4">
+                    {plan.description}
+                  </p>
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold text-white">
+                      ${plan.price}
+                    </span>
+                    <span className="text-gray-300">
+                      /{plan.period}
+                    </span>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700">
+                    Get Started
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 lg:py-24 bg-white/5">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                What Our Customers Say
+              </h2>
+              <p className="text-xl text-gray-300">
+                Trusted by thousands of businesses worldwide
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4">
+                    "{testimonial.content}"
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-cyan-400 rounded-full flex items-center justify-center text-gray-900 font-semibold mr-3">
+                      {testimonial.avatar}
+                    </div>
+                    <div>
+                      <div className="font-semibold text-white">
+                        {testimonial.name}
+                      </div>
+                      <div className="text-gray-400 text-sm">
+                        {testimonial.role}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl p-8 md:p-12 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-cyan-100 mb-8">
+                Join thousands of businesses already using our solutions
+              </p>
+              <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+                Start Your Free Trial
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
 export default UnifiedErrorBoundary;

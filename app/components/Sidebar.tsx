@@ -1,78 +1,295 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { X,  Home, Brain, Shield, Zap, Globe, BarChart3, Users, Settings } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Shield, Brain, BarChart, MessageSquare, Globe, Zap, Clock } from 'lucide-react';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const navigationItems = [
-    { name: &apos;Home&apos;, href: &apos;/&apos;, icon: Home },
-    { name: &apos;About&apos;, href: &apos;/about&apos;, icon: Users },
-    { name: &apos;AI Services&apos;, href: &apos;/ai-services&apos;, icon: Brain },
-    { name: &apos;IT Services&apos;, href: &apos;/services&apos;, icon: Shield },
-    { name: &apos;Micro SAAS&apos;, href: &apos;/micro-saas&apos;, icon: Zap },
-    { name: &apos;5G Solutions&apos;, href: &apos;/5g-solutions&apos;, icon: Globe },
-    { name: &apos;Portfolio&apos;, href: &apos;/portfolio&apos;, icon: BarChart3 },
-    { name: &apos;Blog&apos;, href: &apos;/blog&apos;, icon: Globe },
-    { name: &apos;Tutorials&apos;, href: &apos;/tutorials&apos;, icon: Settings },
-    { name: &apos;Demo&apos;, href: &apos;/demo&apos;, icon: Settings },
-    { name: &apos;Support&apos;, href: &apos;/support&apos;, icon: Settings },
-    { name: &apos;FAQ&apos;, href: &apos;/faq&apos;, icon: Settings },
-    { name: &apos;Contact&apos;, href: &apos;/contact&apos;, icon: Settings },
+const Sidebar = () => {
+  const features = [
+    {
+      title: "Advanced AI Integration",
+      description: "Cutting-edge artificial intelligence solutions tailored to your business needs",
+      icon: <Brain className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: "Real-time Analytics",
+      description: "Comprehensive analytics and insights for data-driven decision making",
+      icon: <BarChart className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: "Enterprise Security",
+      description: "Bank-level security with advanced threat protection and compliance",
+      icon: <Shield className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock support from our expert team",
+      icon: <MessageSquare className="w-6 h-6" />,
+      included: true
+    }
   ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: 29,
+      period: "month",
+      description: "Perfect for small businesses",
+      features: [
+        "Basic features",
+        "Email support",
+        "1 user account",
+        "Standard templates"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: 79,
+      period: "month",
+      description: "Ideal for growing companies",
+      features: [
+        "Advanced features",
+        "Priority support",
+        "Up to 5 user accounts",
+        "Custom templates",
+        "API access"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: 199,
+      period: "month",
+      description: "For large organizations",
+      features: [
+        "All features",
+        "Dedicated support",
+        "Unlimited users",
+        "Custom integrations",
+        "White-label solution"
+      ],
+      popular: false
+    }
+  ];
+
+  const stats = [
+    { number: "10x", label: "Faster Processing", icon: <Zap className="w-6 h-6" /> },
+    { number: "95%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
+    { number: "50+", label: "Integrations", icon: <Globe className="w-6 h-6" /> },
+    { number: "24/7", label: "AI Support", icon: <Brain className="w-6 h-6" /> }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CTO, TechCorp",
+      content: "This solution transformed our business operations completely.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "CEO, DataFlow",
+      content: "The AI integration exceeded our expectations in every way.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "VP Engineering, CloudScale",
+      content: "Outstanding support and incredible results from day one.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   return (
     <>
-      {/* Overlay */}
-      {isOpen && (
-        <div 
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
-          onClick={onClose}
-        />
-      )}
-      {/* Sidebar */}
-      <div className={`fixed top-0 left-0 h-full w-64 bg-slate-900/95 backdrop-blur-sm border-r border-white/10 z-50 transform transition-transform duration-300 ease-in-out ${
-        isOpen ? 'translate-x-0' : '-translate-x-full'
-      } lg:translate-x-0`}>
-        
-        <div className="flex items-center justify-between p-4 border-b border-white/10">
-          <h2 className="text-xl font-bold text-white">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              Zion Tech Group
-            </span>
-          </h2>
-          <button
-            onClick={onClose}
-            className="lg:hidden text-gray-300 hover:text-white transition-colors"
-          >
-            <X className="w-6 h-6" />
-          </button>
-        </div>
-        <nav className="p-4 space-y-2">
-          {navigationItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.href}
-              onClick={onClose}
-              className="flex items-center space-x-3 px-3 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 rounded-lg transition-colors duration-200"
-            >
-              <item.icon className="w-5 h-5" />
-              <span>{item.name}</span>
-            </Link>
-          ))}
-        </nav>
-        
-        <div className="absolute bottom-4 left-4 right-4">
-          <Link
-            to="/contact"
-            className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-          >
-            Get Started
-          </Link>
-        </div>
+      <Helmet>
+        <title>Sidebar | Zion Tech Group</title>
+        <meta name="description" content="Advanced Sidebar solutions powered by AI and cutting-edge technology" />
+        <meta name="keywords" content="ai 3d generation, AI solutions, enterprise software, automation, technology" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Sidebar
+              </h1>
+              <p className="text-xl text-gray-300 mb-8">
+                Advanced Sidebar solutions powered by AI and cutting-edge technology
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                  Get Started
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </button>
+                <button className="border border-gray-300 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Powerful Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Everything you need to succeed
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                  <div className="text-cyan-400 mb-4 flex justify-center">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 lg:py-24 bg-white/5">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-cyan-400 mb-4 flex justify-center">
+                    {stat.icon}
+                  </div>
+                  <div className="text-4xl font-bold text-white mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-300">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Simple Pricing
+              </h2>
+              <p className="text-xl text-gray-300">
+                Choose the plan that's right for you
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+                  {plan.popular && (
+                    <div className="bg-cyan-400 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full text-center mb-4">
+                      Most Popular
+                    </div>
+                  )}
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {plan.name}
+                  </h3>
+                  <p className="text-gray-300 mb-4">
+                    {plan.description}
+                  </p>
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold text-white">
+                      ${plan.price}
+                    </span>
+                    <span className="text-gray-300">
+                      /{plan.period}
+                    </span>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700">
+                    Get Started
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 lg:py-24 bg-white/5">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                What Our Customers Say
+              </h2>
+              <p className="text-xl text-gray-300">
+                Trusted by thousands of businesses worldwide
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4">
+                    "{testimonial.content}"
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-cyan-400 rounded-full flex items-center justify-center text-gray-900 font-semibold mr-3">
+                      {testimonial.avatar}
+                    </div>
+                    <div>
+                      <div className="font-semibold text-white">
+                        {testimonial.name}
+                      </div>
+                      <div className="text-gray-400 text-sm">
+                        {testimonial.role}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl p-8 md:p-12 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-cyan-100 mb-8">
+                Join thousands of businesses already using our solutions
+              </p>
+              <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+                Start Your Free Trial
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
 };
+
 export default Sidebar;

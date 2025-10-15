@@ -1,318 +1,295 @@
-'use client';
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Shield, Brain, BarChart, MessageSquare, Globe, Zap, Clock } from 'lucide-react';
 
-const DocsPage: React.FC = () => {
-  const documentationSections = [
+const AIService = () => {
+  const features = [
     {
-      title: 'Getting Started',
-      icon: <Zap className="w-6 h-6" />,
-      description: 'Quick start guides and setup instructions for all our services',
-      articles: [
-        { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', readTime: '5 min' },
-        { title: 'Installation Guide', description: 'Step-by-step installation instructions', readTime: '10 min' },
-        { title: 'Configuration', description: 'Configure your services and settings', readTime: '15 min' },
-        { title: 'First Steps', description: 'Your first project with our platform', readTime: '20 min' }
-      ]
+      title: "Advanced AI Integration",
+      description: "Cutting-edge artificial intelligence solutions tailored to your business needs",
+      icon: <Brain className="w-6 h-6" />,
+      included: true
     },
     {
-      title: 'API Documentation',
-      icon: <FileText className="w-6 h-6" />,
-      description: 'Complete API reference and integration guides',
-      articles: [
-        { title: 'API Overview', description: 'Introduction to our REST API', readTime: '10 min' },
-        { title: 'Authentication', description: 'API keys and authentication methods', readTime: '8 min' },
-        { title: 'Rate Limits', description: 'Understanding API rate limits', readTime: '5 min' },
-        { title: 'Error Handling', description: 'Common errors and how to handle them', readTime: '12 min' }
-      ]
+      title: "Real-time Analytics",
+      description: "Comprehensive analytics and insights for data-driven decision making",
+      icon: <BarChart className="w-6 h-6" />,
+      included: true
     },
     {
-      title: 'AI Services',
-      icon: <Code className="w-6 h-6" />,
-      description: 'Documentation for all AI-powered services and features',
-      articles: [
-        { title: 'AI Analytics', description: 'Using our AI analytics platform', readTime: '25 min' },
-        { title: 'Content Generation', description: 'AI-powered content creation tools', readTime: '20 min' },
-        { title: 'Machine Learning', description: 'ML model training and deployment', readTime: '30 min' },
-        { title: 'Natural Language Processing', description: 'NLP services and capabilities', readTime: '18 min' }
-      ]
-    },
-    {
-      title: 'Cloud Services',
-      icon: <Database className="w-6 h-6" />,
-      description: 'Cloud infrastructure and deployment documentation',
-      articles: [
-        { title: 'Cloud Migration', description: 'Migrating to our cloud platform', readTime: '45 min' },
-        { title: 'Container Services', description: 'Docker and Kubernetes deployment', readTime: '35 min' },
-        { title: 'Database Management', description: 'Managing databases in the cloud', readTime: '25 min' },
-        { title: 'Monitoring & Logging', description: 'System monitoring and log analysis', readTime: '20 min' }
-      ]
-    },
-    {
-      title: 'Security',
+      title: "Enterprise Security",
+      description: "Bank-level security with advanced threat protection and compliance",
       icon: <Shield className="w-6 h-6" />,
-      description: 'Security best practices and compliance guidelines',
-      articles: [
-        { title: 'Security Overview', description: 'Our security measures and protocols', readTime: '15 min' },
-        { title: 'Data Protection', description: 'Protecting sensitive data and privacy', readTime: '20 min' },
-        { title: 'Compliance', description: 'SOC 2, GDPR, and other compliance standards', readTime: '30 min' },
-        { title: 'Access Control', description: 'User permissions and access management', readTime: '12 min' }
-      ]
+      included: true
     },
     {
-      title: 'Tutorials',
-      icon: <BookOpen className="w-6 h-6" />,
-      description: 'Step-by-step tutorials and hands-on guides',
-      articles: [
-        { title: 'Building Your First App', description: 'Complete tutorial for beginners', readTime: '60 min' },
-        { title: 'Advanced Features', description: 'Exploring advanced platform features', readTime: '45 min' },
-        { title: 'Integration Examples', description: 'Real-world integration examples', readTime: '40 min' },
-        { title: 'Best Practices', description: 'Industry best practices and tips', readTime: '25 min' }
-      ]
+      title: "24/7 Support",
+      description: "Round-the-clock support from our expert team",
+      icon: <MessageSquare className="w-6 h-6" />,
+      included: true
     }
   ];
 
-const popularArticles = [
-    { title: 'Quick Start Guide', category: 'Getting Started', readTime: '5 min', views: '12.5k' },
-    { title: 'API Authentication', category: 'API Documentation', readTime: '8 min', views: '8.2k' },
-    { title: 'AI Analytics Setup', category: 'AI Services', readTime: '25 min', views: '6.8k' },
-    { title: 'Cloud Migration Guide', category: 'Cloud Services', readTime: '45 min', views: '5.4k' },
-    { title: 'Security Best Practices', category: 'Security', readTime: '20 min', views: '4.9k' }
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: 29,
+      period: "month",
+      description: "Perfect for small businesses",
+      features: [
+        "Basic features",
+        "Email support",
+        "1 user account",
+        "Standard templates"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: 79,
+      period: "month",
+      description: "Ideal for growing companies",
+      features: [
+        "Advanced features",
+        "Priority support",
+        "Up to 5 user accounts",
+        "Custom templates",
+        "API access"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: 199,
+      period: "month",
+      description: "For large organizations",
+      features: [
+        "All features",
+        "Dedicated support",
+        "Unlimited users",
+        "Custom integrations",
+        "White-label solution"
+      ],
+      popular: false
+    }
   ];
 
-const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services', 'Cloud Services', 'Security', 'Tutorials'];
+  const stats = [
+    { number: "10x", label: "Faster Processing", icon: <Zap className="w-6 h-6" /> },
+    { number: "95%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
+    { number: "50+", label: "Integrations", icon: <Globe className="w-6 h-6" /> },
+    { number: "24/7", label: "AI Support", icon: <Brain className="w-6 h-6" /> }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CTO, TechCorp",
+      content: "This solution transformed our business operations completely.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "CEO, DataFlow",
+      content: "The AI integration exceeded our expectations in every way.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "VP Engineering, CloudScale",
+      content: "Outstanding support and incredible results from day one.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   return (
     <>
       <Helmet>
-        <title>Docs - Zion Tech Group</title>
-        <meta name="description" content="Zion Tech Group - Docs page" />
+        <title>A I Service | Zion Tech Group</title>
+        <meta name="description" content="Advanced A I Service solutions powered by AI and cutting-edge technology" />
+        <meta name="keywords" content="ai 3d generation, AI solutions, enterprise software, automation, technology" />
       </Helmet>
       
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20">
-          
-        <div className="container mx-auto px-4">
-            
-        <div className="text-center max-w-4xl mx-auto">
-              
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Documentation</span>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                A I Service
               </h1>
-              
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Complete guides, API references, and tutorials to help you get the most out of our platform.
+              <p className="text-xl text-gray-300 mb-8">
+                Advanced A I Service solutions powered by AI and cutting-edge technology
               </p>
-              {/* Search Bar */}
-              
-        <div className="relative max-w-2xl mx-auto mb-8">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search documentation..."
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-transparent"
-                />
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                  Get Started
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </button>
+                <button className="border border-gray-300 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                  Learn More
+                </button>
               </div>
             </div>
           </div>
         </section>
-        {/* Category Filter */}
-        <section className="py-8 px-4">
-          
-        <div className="max-w-7xl mx-auto">
-            
-        <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
-                    category === 'All'
-                      ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400'
-                  }`}
-                >
-                  {category}
-                </button>
+
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Powerful Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Everything you need to succeed
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                  <div className="text-cyan-400 mb-4 flex justify-center">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300">
+                    {feature.description}
+                  </p>
+                </div>
               ))}
             </div>
           </div>
         </section>
-        {/* Documentation Sections */}
-        <section className="py-16 px-4">
-          
-        <div className="max-w-7xl mx-auto">
-            
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {documentationSections.map((section, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group">
-                  
-        <div className="flex items-center mb-6">
-                    
-        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                      
-        <div className="text-white">{section.icon}</div>
-                    </div>
-                    <h2 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-                      {section.title}
-                    </h2>
+
+        <section className="py-16 lg:py-24 bg-white/5">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-cyan-400 mb-4 flex justify-center">
+                    {stat.icon}
                   </div>
-                  
-          <p className="text-gray-300 mb-6">{section.description}</p>
-                  
-        <div className="space-y-3">
-                    {section.articles.map((article, articleIndex) => (
-                      <a
-                        key={articleIndex}
-                        href={`/docs/${section.title.toLowerCase().replace(/\s+/g, '-')}/${article.title.toLowerCase().replace(/\s+/g, '-')}`}
-                        className="block p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors group"
-                      >
-                        
-        <div className="flex items-center justify-between">
-                          <div>
-                            <h3 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">
-                              {article.title}
-                            </h3>
-                            
-          <p className="text-gray-400 text-sm">{article.description}</p>
-                          </div>
-                          
-        <div className="flex items-center space-x-2 text-gray-400 text-sm">
-                            <span>{article.readTime}</span>
-                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                          </div>
-                        </div>
-                      </a>
-                    ))}
+                  <div className="text-4xl font-bold text-white mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-300">
+                    {stat.label}
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        {/* Popular Articles */}
-        <section className="py-16 px-4 bg-white/5 backdrop-blur-sm">
-          
-        <div className="max-w-7xl mx-auto">
-            
-        <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Popular Articles</h2>
-              
-          <p className="text-xl text-gray-300">Most viewed documentation articles</p>
+
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Simple Pricing
+              </h2>
+              <p className="text-xl text-gray-300">
+                Choose the plan that's right for you
+              </p>
             </div>
-            
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {popularArticles.map((article, index) => (
-                <a
-                  key={index}
-                  href={`/docs/${article.category.toLowerCase().replace(/\s+/g, '-')}/${article.title.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group"
-                >
-                  
-        <div className="flex items-center justify-between mb-3">
-                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
-                      {article.category}
-                    </span>
-                    <span className="text-gray-400 text-sm">{article.readTime}</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {article.title}
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+                  {plan.popular && (
+                    <div className="bg-cyan-400 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full text-center mb-4">
+                      Most Popular
+                    </div>
+                  )}
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {plan.name}
                   </h3>
-                  
-        <div className="flex items-center justify-between">
-                    <span className="text-gray-400 text-sm">{article.views} views</span>
-                    <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  <p className="text-gray-300 mb-4">
+                    {plan.description}
+                  </p>
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold text-white">
+                      ${plan.price}
+                    </span>
+                    <span className="text-gray-300">
+                      /{plan.period}
+                    </span>
                   </div>
-                </a>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700">
+                    Get Started
+                  </button>
+                </div>
               ))}
             </div>
           </div>
         </section>
-        {/* API Reference Quick Access */}
-        <section className="py-16 px-4">
-          
-        <div className="max-w-7xl mx-auto">
-            
-        <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">API Reference</h2>
-              
-          <p className="text-xl text-gray-300">Quick access to our API documentation</p>
+
+        <section className="py-16 lg:py-24 bg-white/5">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                What Our Customers Say
+              </h2>
+              <p className="text-xl text-gray-300">
+                Trusted by thousands of businesses worldwide
+              </p>
             </div>
-            
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 text-center">
-                <FileText className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">REST API</h3>
-                
-          <p className="text-gray-300 mb-6">Complete REST API reference with examples and interactive testing</p>
-                <a
-                  href="/docs/api/rest"
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  View REST API Docs
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
-              </div>
-              
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 text-center">
-                <Code className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">SDKs</h3>
-                
-          <p className="text-gray-300 mb-6">Official SDKs for Python, JavaScript, Java, and more</p>
-                <a
-                  href="/docs/sdks"
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  View SDKs
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
-              </div>
-              
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 text-center">
-                <Zap className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">Postman Collection</h3>
-                
-          <p className="text-gray-300 mb-6">Import our Postman collection for easy API testing</p>
-                <a
-                  href="/docs/postman"
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  Download Collection
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
-              </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4">
+                    "{testimonial.content}"
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-cyan-400 rounded-full flex items-center justify-center text-gray-900 font-semibold mr-3">
+                      {testimonial.avatar}
+                    </div>
+                    <div>
+                      <div className="font-semibold text-white">
+                        {testimonial.name}
+                      </div>
+                      <div className="text-gray-400 text-sm">
+                        {testimonial.role}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
-        {/* Support Section */}
-        <section className="py-16 px-4 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
-          
-        <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Need Help?</h2>
-            
-          <p className="text-xl text-gray-300 mb-8">
-              Can't find what you're looking for? Our support team is here to help.
-            </p>
-            
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/support"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Contact Support
-              </a>
-              <a
-                href="/contact"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Get in Touch
-              </a>
+
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl p-8 md:p-12 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-cyan-100 mb-8">
+                Join thousands of businesses already using our solutions
+              </p>
+              <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+                Start Your Free Trial
+              </button>
             </div>
           </div>
-        </div>
-        <Footer />
+        </section>
       </div>
     </>
   );
 };
-export default DocsPage;
+
+export default AIService;

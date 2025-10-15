@@ -1,5 +1,26 @@
-import { useEffect } from "react"; interface UseSEOProps { title: string; description: string; keywords?: string; } export const useSEO = () => {
-  return;
-} if (metaKeywords && keywords) { metaKeywords.setAttribute('content', keywords); } document.title = title; } }, [title, description, keywords]); };
+import { useState, useEffect } from 'react';
 
-export default NotFoundPage;
+export const usePerformanceMonitor = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Performance monitoring logic here
+    const observer = new PerformanceObserver((list) => {
+      // Handle performance entries
+    });
+
+    observer.observe({ entryTypes: ['measure', 'navigation'] });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  return {
+    isLoading,
+    error,
+    setIsLoading,
+    setError
+  };
+};

@@ -1,185 +1,289 @@
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Database } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Shield, Brain, BarChart, MessageSquare, Globe, Zap, Clock } from 'lucide-react';
 
-const AiDatabaseSolutionsPage = () => {
-  return;
-},
-    { icon: <Shield className="w-8 h-8" />,
-      title: "Advanced Security & Compliance",
-      description: "Enterprise-grade security with automated threat detection, encryption, and compliance management for sensitive data." },
-    { icon: <Zap className="w-8 h-8" />,
+const AIService = () => {
+  const features = [
+    {
+      title: "Advanced AI Integration",
+      description: "Cutting-edge artificial intelligence solutions tailored to your business needs",
+      icon: <Brain className="w-6 h-6" />,
+      included: true
+    },
+    {
       title: "Real-time Analytics",
-      description: "Live data processing and analytics with AI-driven insights for instant decision making and business intelligence." },
-    { icon: <Users className="w-8 h-8" />,
-      title: "Scalable Architecture",
-      description: "Cloud-native database solutions that automatically scale with your business needs and data growth." }
+      description: "Comprehensive analytics and insights for data-driven decision making",
+      icon: <BarChart className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: "Enterprise Security",
+      description: "Bank-level security with advanced threat protection and compliance",
+      icon: <Shield className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock support from our expert team",
+      icon: <MessageSquare className="w-6 h-6" />,
+      included: true
+    }
   ];
 
-const services = [
-    { title: "AI Database Design",
-      description: "Intelligent database architecture design using AI to optimize for your specific use cases and performance requirements.",
-      features: ["Automated Schema Design", "Performance Optimization", "Scalability Planning", "Cost Analysis"] },
-    { title: "Data Migration & Integration",
-      description: "Seamless migration of existing databases with AI-powered data transformation and integration services.",
-      features: ["Zero-Downtime Migration", "Data Validation", "Automated Testing", "Rollback Capabilities"] },
-    { title: "Performance Monitoring",
-      description: "AI-driven database monitoring with predictive analytics to prevent issues before they impact your business.",
-      features: ["Real-time Monitoring", "Predictive Alerts", "Performance Analytics", "Automated Tuning"] },
-    { title: "Backup & Recovery",
-      description: "Intelligent backup strategies with AI-optimized recovery procedures to ensure data protection and business continuity.",
-      features: ["Automated Backups", "Point-in-Time Recovery", "Disaster Recovery", "Data Integrity Checks"] }
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: 29,
+      period: "month",
+      description: "Perfect for small businesses",
+      features: [
+        "Basic features",
+        "Email support",
+        "1 user account",
+        "Standard templates"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: 79,
+      period: "month",
+      description: "Ideal for growing companies",
+      features: [
+        "Advanced features",
+        "Priority support",
+        "Up to 5 user accounts",
+        "Custom templates",
+        "API access"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: 199,
+      period: "month",
+      description: "For large organizations",
+      features: [
+        "All features",
+        "Dedicated support",
+        "Unlimited users",
+        "Custom integrations",
+        "White-label solution"
+      ],
+      popular: false
+    }
   ];
 
-const benefits = [
-    "99.9% Database Uptime Guarantee",
-    "50% Faster Query Performance",
-    "Automated Security Monitoring",
-    "Real-time Performance Analytics",
-    "24/7 AI-Powered Support",
-    "Compliance with Industry Standards"
+  const stats = [
+    { number: "10x", label: "Faster Processing", icon: <Zap className="w-6 h-6" /> },
+    { number: "95%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
+    { number: "50+", label: "Integrations", icon: <Globe className="w-6 h-6" /> },
+    { number: "24/7", label: "AI Support", icon: <Brain className="w-6 h-6" /> }
   ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CTO, TechCorp",
+      content: "This solution transformed our business operations completely.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "CEO, DataFlow",
+      content: "The AI integration exceeded our expectations in every way.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "VP Engineering, CloudScale",
+      content: "Outstanding support and incredible results from day one.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   return (
     <>
       <Helmet>
-        <title>AI Database Solutions - Zion Tech Group | Advanced Database Management</title>
-        <meta name="description" content="Revolutionary AI-powered database solutions with intelligent optimization, security, and analytics. Transform your data management with cutting-edge technology." />
-        <meta name="keywords" content="AI database, database optimization, data analytics, database security, cloud databases, data management, AI solutions" />
-        <meta property="og:title" content="AI Database Solutions - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary AI-powered database solutions for modern businesses." />
-        <meta property="og:type" content="website" />
+        <title>A I Service | Zion Tech Group</title>
+        <meta name="description" content="Advanced A I Service solutions powered by AI and cutting-edge technology" />
+        <meta name="keywords" content="ai 3d generation, AI solutions, enterprise software, automation, technology" />
       </Helmet>
       
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        { /* Hero Section */ }
-        <section className="py-20">
-          
-        <div className="container mx-auto px-4">
-            
-        <div className="text-center max-w-4xl mx-auto">
-              
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Database Solutions</span>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                A I Service
               </h1>
-              
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Revolutionize your data management with AI-powered database solutions that deliver 
-                intelligent optimization, security, and analytics for maximum performance and insights.
+              <p className="text-xl text-gray-300 mb-8">
+                Advanced A I Service solutions powered by AI and cutting-edge technology
               </p>
-              
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                  Get Started Today
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                  Get Started
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
-                <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                  Schedule Demo
+                <button className="border border-gray-300 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                  Learn More
                 </button>
               </div>
             </div>
           </div>
         </section>
-        { /* Features Section */ }
-        <section className="py-20">
-          
-        <div className="container mx-auto px-4">
-            
-        <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Key Features</h2>
-              
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI-powered database solutions provide comprehensive features for modern data management
+
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Powerful Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Everything you need to succeed
               </p>
             </div>
-            
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              { features.map((feature, index) => (
-                <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  
-        <div className="text-cyan-400 mb-4">
-                    { feature.icon }
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                  <div className="text-cyan-400 mb-4 flex justify-center">
+                    {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{ feature.title }</h3>
-                  
-          <p className="text-gray-300">{ feature.description }</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300">
+                    {feature.description}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        { /* Services Section */ }
-        <section className="py-20 bg-white/5">
-          
-        <div className="container mx-auto px-4">
-            
-        <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Our Services</h2>
-              
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive AI database solutions tailored to your business needs
+
+        <section className="py-16 lg:py-24 bg-white/5">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-cyan-400 mb-4 flex justify-center">
+                    {stat.icon}
+                  </div>
+                  <div className="text-4xl font-bold text-white mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-300">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Simple Pricing
+              </h2>
+              <p className="text-xl text-gray-300">
+                Choose the plan that's right for you
               </p>
             </div>
-            
-        <div className="grid lg:grid-cols-2 gap-8">
-              { services.map((service, index) => (
-                <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                  <h3 className="text-2xl font-bold text-white mb-4">{ service.title }</h3>
-                  
-          <p className="text-gray-300 mb-6">{ service.description }</p>
-                  <ul className="space-y-2">
-                    { service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex } className="flex items-center text-gray-300">
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+                  {plan.popular && (
+                    <div className="bg-cyan-400 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full text-center mb-4">
+                      Most Popular
+                    </div>
+                  )}
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {plan.name}
+                  </h3>
+                  <p className="text-gray-300 mb-4">
+                    {plan.description}
+                  </p>
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold text-white">
+                      ${plan.price}
+                    </span>
+                    <span className="text-gray-300">
+                      /{plan.period}
+                    </span>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-                        { feature }
+                        {feature}
                       </li>
                     ))}
                   </ul>
+                  <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700">
+                    Get Started
+                  </button>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        { /* Benefits Section */ }
-        <section className="py-20">
-          
-        <div className="container mx-auto px-4">
-            
-        <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our AI Database Solutions?</h2>
-              
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the power of AI-driven database management
+
+        <section className="py-16 lg:py-24 bg-white/5">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                What Our Customers Say
+              </h2>
+              <p className="text-xl text-gray-300">
+                Trusted by thousands of businesses worldwide
               </p>
             </div>
-            
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              { benefits.map((benefit, index) => (
-                <div key={index } className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                  <CheckCircle className="w-6 h-6 text-cyan-400 mr-4 flex-shrink-0" />
-                  <span className="text-white">{ benefit }</span>
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4">
+                    "{testimonial.content}"
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-cyan-400 rounded-full flex items-center justify-center text-gray-900 font-semibold mr-3">
+                      {testimonial.avatar}
+                    </div>
+                    <div>
+                      <div className="font-semibold text-white">
+                        {testimonial.name}
+                      </div>
+                      <div className="text-gray-400 text-sm">
+                        {testimonial.role}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        { /* CTA Section */ }
-        <section className="py-20">
-          
-        <div className="container mx-auto px-4">
-            
-        <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Database?</h2>
-              
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Get started with our AI-powered database solutions and experience the future of data management.
+
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl p-8 md:p-12 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-cyan-100 mb-8">
+                Join thousands of businesses already using our solutions
               </p>
-              
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-                  Start Free Trial
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
-                  Contact Sales
-                </button>
-              </div>
+              <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+                Start Your Free Trial
+              </button>
             </div>
           </div>
         </section>
@@ -187,4 +291,5 @@ const benefits = [
     </>
   );
 };
-export default AiDatabaseSolutionsPage;
+
+export default AIService;
