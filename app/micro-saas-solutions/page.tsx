@@ -1,6 +1,6 @@
 'use client',
       import React, { useState } from 'react',
-      import { Helmet } from 'react-helmet-async',
+      import { Helmet } from 'react-helmet-async';
       import {CheckCircle, BarChart3, Database, Globe, Target, MessageSquare} from 'lucide-react';
 ,
       const MicroSaaSSolutionsPage: React.FC = () => {",

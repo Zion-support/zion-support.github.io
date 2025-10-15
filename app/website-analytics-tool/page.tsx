@@ -1,9 +1,9 @@
 
-import { BarChart3, Globe, Users, CheckCircle, ArrowRight, Target, Zap, Database, TrendingUp } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard',
-      import FuturisticButton from '../components/FuturisticButton',
-      import ResponsiveContainer from '../components/ResponsiveContainer',
-      import EnhancedSEO from '../components/EnhancedSEO';
-,
+import { BarChart3, Globe, Users, CheckCircle, ArrowRight, Target, Zap, Database, TrendingUp } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
+import ResponsiveContainer from '../components/ResponsiveContainer';
+import EnhancedSEO from '../components/EnhancedSEO';
+;
       const WebsiteAnalyticsToolPage = () => {",
         "
   const features = [",

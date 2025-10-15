@@ -1,7 +1,8 @@
+import React from 'react';
 
-import { ArrowRight, CheckCircle, Star, Users, Brain, TrendingUp, Target, MessageSquare, Heart, Award, Globe, Monitor, Map, Phone, Star as StarIcon } from 'lucide-react';import { Link } from "react-router-dom",
-      import SEOOptimizer from "../../components/SEOOptimizer";
-,
+import { ArrowRight, CheckCircle, Star, Users, Brain, TrendingUp, Target, MessageSquare, Heart, Award, Globe, Monitor, Map, Phone, Star as StarIcon } from 'lucide-react';import { Link } from "react-router-dom";
+import SEOOptimizer from "../../components/SEOOptimizer";
+;
       export default function ZionAiCustomerInsights() {",
         "
   const features = [",

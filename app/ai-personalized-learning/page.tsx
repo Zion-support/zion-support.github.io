@@ -7,7 +7,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
       title: "Adaptive Learning Paths";
       description: "AI creates personalized learning journeys based on individual strengths and weaknesses"
     };
-    {},
+    {};
       icon: <BookOpen className="w-6 h-6" />,
       title: "Multi-Modal Content",
       description: "Interactive videos, simulations, quizzes, and hands-on projects for comprehensive learning"

@@ -1,6 +1,6 @@
 import React, { useState } from 'react',
       import React, { useState } from "react",
-      import { Helmet } from "react-helmet-async",
+      import { Helmet } from "react-helmet-async";
       export default function NewsletterSignup() {},
       const [email, setEmail] = useState(""),
       const handleSubmit = (_e: React.FormEvent) => {},

@@ -579,8 +579,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({},
     {
       `}</style>
     </div>
-  )
-    },
-    {
+  );
+};
 
 export default EnhancedAccessibilityManager;

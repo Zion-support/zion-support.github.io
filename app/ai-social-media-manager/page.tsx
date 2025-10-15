@@ -1,7 +1,7 @@
-import React from 'react',
-      import { Helmet } from 'react-helmet-async',
+import React from 'react';
+      import { Helmet } from 'react-helmet-async';
       import { 
-  CheckCircle, 
+  CheckCircle;
   ArrowRight, 
   TrendingUp,
   Instagram,
@@ -392,8 +392,7 @@ import React from 'react',
         </div>
       </section>
     </>
-  )
-    },
-    {
+  );
+};
 
 export default AISocialMediaManagerPage;

@@ -1,6 +1,7 @@
+import React from 'react';
 
 import { Helmet } from "react-helmet-async"
-interface FuturisticServiceCardProps {},
+interface FuturisticServiceCardProps {};
       title: string
   description: string
   icon: React.ComponentType<any></any>

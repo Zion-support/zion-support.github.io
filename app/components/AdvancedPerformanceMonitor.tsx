@@ -420,8 +420,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({},
     {
       `}</style>
     </div>
-  )
-    },
-    {
+  );
+};
 
 export default AdvancedPerformanceMonitor;

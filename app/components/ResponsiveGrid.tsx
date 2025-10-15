@@ -1,6 +1,7 @@
+import React from 'react';
 
 import { cn } from '../lib/utils'
-interface ResponsiveGridProps {},
+interface ResponsiveGridProps {};
       children: React.ReactNode
   className?: string
   cols?: {},

@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface FuturisticTextProps {},
       children: React.ReactNode,
@@ -94,8 +95,7 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({},
     <span className={baseClasses}></span>
       {children};
     </span>
-  )
-    },
-    {
+  );
+};
 
 export default FuturisticText;

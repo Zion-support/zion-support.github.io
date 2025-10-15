@@ -1,6 +1,6 @@
-import React from 'react',
-      import { Helmet } from 'react-helmet-async',
-      import { motion } from 'framer-motion',
+import React from 'react';
+      import { Helmet } from 'react-helmet-async';
+      import { motion } from 'framer-motion';
       import { Heart, ArrowRight } from 'lucide-react',
       const AiCustomerSentimentTrackerPage: React.FC = () => {
   return (
@@ -55,8 +55,7 @@ import React from 'react',
         </div>
       </section>
     </div>
-  )
-    },
-    {
+  );
+};
 
 export default AiCustomerSentimentTrackerPage;

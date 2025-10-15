@@ -1,6 +1,7 @@
+import React from 'react';
 
 import { Helmet } from "react-helmet-async"
-interface ServiceTemplateProps {},
+interface ServiceTemplateProps {};
       title: string
   description: string
   features: Array<{},

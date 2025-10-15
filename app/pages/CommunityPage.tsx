@@ -1,3 +1,4 @@
+import React from 'react';
 
 import {MessageSquare, BookOpen} from "lucide-react";
 ,

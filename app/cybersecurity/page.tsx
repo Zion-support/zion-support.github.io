@@ -1,6 +1,7 @@
+import React from 'react';
 
-import SEOHead from '../components/SEOHead',
-      import { Link } from 'react-router-dom',
+import SEOHead from '../components/SEOHead';
+      import { Link } from 'react-router-dom';
       import {ArrowRight, Shield} from 'lucide-react';
 ,
       const CybersecurityPage: React.FC = () => {",

@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface ServiceWorkerRegistrationProps {},
       children?: React.ReactNode

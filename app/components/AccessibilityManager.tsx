@@ -199,8 +199,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
         </div>
       )}
     </>
-  )
-    },
-    {
+  );
+};
 
 export default AccessibilityManager;

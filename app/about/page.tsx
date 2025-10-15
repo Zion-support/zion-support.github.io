@@ -1,7 +1,9 @@
-import { Helmet } from "react-helmet-async",
-      import { Link } from "react-router-dom",
-      import { ArrowRight, Brain, Shield, Users, Award } from 'lucide-react',
-      export default function AboutPage() {
+import React from 'react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight, Brain, Shield, Users, Award } from 'lucide-react';
+
+export default function AboutPage() {
   const stats = [
     { number: "500+", label: "Projects Completed" },
     { number: "100+", label: "Happy Clients" },

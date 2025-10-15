@@ -25,48 +25,6 @@ export default async function handler(req, res) {
 }
   
   try {
-<<<<<<< HEAD
-    const { name, email, company, message } = req.body;
-    
-    if (!name || !email || !company || !message) {
-      return res.status(400).json({ error: 'All fields are required' });
-    }
-    
-    // Ensure data directory exists
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-    
-    // Read existing requests
-    let requests = [];
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
-      requests = JSON.parse(data);
-    }
-    
-    // Add new request
-    const newRequest = {
-      id: Date.now().toString(),
-      name,
-      email,
-      company,
-      message,
-      timestamp: new Date().toISOString()
-    };
-    
-    requests.push(newRequest);
-    
-    // Save to file
-    fs.writeFileSync(file, JSON.stringify(requests, null, 2));
-    
-    res.status(200).json({ success: true, message: 'Request submitted successfully' });
-  } catch (error) {
-    console.error('Error saving onsite request:', error);
-    res.status(500).json({ error: 'Failed to save request' });
-  }
-}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f3b2
     const { name, email, company, phone, service, message } = req.body;
 
     if (!name || !email || !service) {

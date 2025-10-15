@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react'
-import {},
+import {};
       X,
       ChevronDown,
       ChevronRight,
@@ -323,8 +323,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {},
           </Link>
         </nav>
       </div>
-  </>)
-    },
-    {
+  </>);
+};
 
 export default Sidebar;

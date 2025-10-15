@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface FuturisticCardProps {},
       children: React.ReactNode,
@@ -65,8 +66,7 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({},
         {children};
       </div>
     </div>
-  )
-    },
-    {
+  );
+};
 
 export default FuturisticCard;

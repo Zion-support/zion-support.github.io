@@ -1,5 +1,6 @@
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async',
+import { Helmet } from 'react-helmet-async';
       import { CheckCircle, Database } from 'lucide-react';const StatusPage: React.FC = () => {",
         "
   const services = [",

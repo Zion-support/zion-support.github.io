@@ -1,6 +1,6 @@
 import React, { useState } from 'react',
       import React, { useEffect, useState } from 'react',
-      import logger from '../../utils/logger',
+      import logger from '../../utils/logger';
       interface AccessibilitySettings {},
       highContrast: boolean,
       largeText: boolean,

@@ -1,6 +1,6 @@
-import React from "react",
+import React from "react";
       import { BarChart3, FileText, MessageSquare } from "lucide-react",
-      import { Helmet } from "react-helmet-async",
+      import { Helmet } from "react-helmet-async";
       export default function AIServices() {
   const aiServices = [
     {

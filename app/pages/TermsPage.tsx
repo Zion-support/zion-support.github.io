@@ -1,5 +1,6 @@
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async',
+import { Helmet } from 'react-helmet-async';
       const TermsPage: React.FC = () => {",
         "
   const lastUpdated = 'January 1, 2024';

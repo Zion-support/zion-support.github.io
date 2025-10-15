@@ -1,5 +1,5 @@
-import React from 'react',
-      import SEOHead from '../components/SEOHead',
+import React from 'react';
+      import SEOHead from '../components/SEOHead';
       const BlockchainWeb3Page: React.FC = () => {
   return (
     <>
@@ -14,8 +14,7 @@ import React from 'react',
         </div>
       </div>
     </>
-  )
-    },
-    {
+  );
+};
 
 export default BlockchainWeb3Page;

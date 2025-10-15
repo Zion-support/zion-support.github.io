@@ -177,8 +177,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {},
         </div>
       </div>
     </div>
-  )
-    },
-    {
+  );
+};
 
 export default AdvancedAccessibilityEnhancer;

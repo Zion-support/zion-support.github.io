@@ -1,6 +1,6 @@
 
-import { Helmet } from 'react-helmet-async',
-      import { motion } from 'framer-motion',
+import { Helmet } from 'react-helmet-async';
+      import { motion } from 'framer-motion';
       const features = [
     {},
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
@@ -22,7 +22,7 @@ import { Helmet } from 'react-helmet-async',
       title: "Bank Integration",
       description: "Securely connect with your bank accounts and credit cards for automatic transaction import and categorization."
     };
-    {},
+    {};
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
       title: "Automated Workflows",
       description: "Set up automated rules for expense approval, reimbursement, and reporting to streamline your financial processes."
@@ -161,8 +161,7 @@ import { Helmet } from 'react-helmet-async',
         </div>
       </div>
     </>
-  )
-    },
-    {
+  );
+};
 
 export default SmartExpenseCategorizerPage;

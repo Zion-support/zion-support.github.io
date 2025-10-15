@@ -1,6 +1,7 @@
+import React from 'react';
 
 import { cn } from '../lib/utils'
-interface ResponsiveTextProps {},
+interface ResponsiveTextProps {};
       children: React.ReactNode
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div'
   size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl'

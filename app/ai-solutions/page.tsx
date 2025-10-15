@@ -1,6 +1,6 @@
-import React from 'react',
-      import { Helmet } from 'react-helmet-async',
-      import { TrendingUp } from "lucide-react",
+import React from 'react';
+      import { Helmet } from 'react-helmet-async';
+      import { TrendingUp } from "lucide-react";
       const AiSolutionsPage: React.FC = () => {
   const aiServices = [
     {
@@ -504,8 +504,7 @@ import React from 'react',
         </div>
       </section>
     </>
-  )
-    },
-    {
+  );
+};
 
 export default AISolutionsPage;

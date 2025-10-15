@@ -1,5 +1,6 @@
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async',
+import { Helmet } from 'react-helmet-async';
       interface SEOHeadProps {},
       title?: string,
       description?: string,
@@ -111,8 +112,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({},
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
     </Helmet>
-  )
-    },
-    {
+  );
+};
 
 export default SEOHead;

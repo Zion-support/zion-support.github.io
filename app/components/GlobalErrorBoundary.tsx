@@ -1,7 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react',
       import {RefreshCw, Home, Bug} from 'lucide-react',
       import { Link } from 'react-router-dom';
-,
+;
       interface Props {",
         "
   children: ReactNode,

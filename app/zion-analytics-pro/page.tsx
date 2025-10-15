@@ -1,7 +1,7 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-export default function ZionAnalyticsPro() {},
+export default function ZionAnalyticsPro() {};
       const features = ["Real-time dashboard analytics",
         "Predictive business insights",
         "Automated report generation",

@@ -1,7 +1,8 @@
+import React from 'react';
 
 import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Video, Calculator, Package, Receipt, ClipboardList, Workflow} from "lucide-react",
       import SEOOptimizer from "../components/SEOOptimizer";
-,
+;
       const MicroSaasPage: React.FC = () => {",
         "
   const microSaasServices = [",

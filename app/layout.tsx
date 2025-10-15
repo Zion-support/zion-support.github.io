@@ -1,13 +1,14 @@
+import React from 'react';
 
-import { BrowserRouter } from "react-router-dom",
-      import { HelmetProvider } from "react-helmet-async",
-      import { AnalyticsProvider } from "./components/AnalyticsProvider";
+import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import { AnalyticsProvider } from "./components/AnalyticsProvider";
 // import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import";"
-import { ErrorBoundary } from "react-error-boundary",
-      import ErrorFallback from "./components/ErrorFallback",
-      import MobileNavigation from "./components/MobileNavigation",
-      import EnhancedNavigation from "./components/EnhancedNavigation";
-,
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorFallback from "./components/ErrorFallback";
+import MobileNavigation from "./components/MobileNavigation";
+import EnhancedNavigation from "./components/EnhancedNavigation";
+;
       interface LayoutProps {",
         "
   children: React.ReactNode

@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface LoadingPageProps {},
+interface LoadingPageProps {};
       message?: string
   showProgress?: boolean
   progress?: number

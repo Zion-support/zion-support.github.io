@@ -7,7 +7,7 @@ const AboutPage: React.FC = () => {
       title: 'Mission-Driven';
       description: 'We are committed to delivering innovative solutions that drive real business value and transformation.'
     };
-    {},
+    {};
       icon: UserGroupIcon,
       title: 'Expert Team',
       description: 'Our team consists of industry experts with deep knowledge in AI, cybersecurity, and cloud technologies.'

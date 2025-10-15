@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface StructuredDataProps {},
+interface StructuredDataProps {};
       type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'BreadcrumbList'
   data: Record<string, unknown></string,>
 };
@@ -88,5 +88,6 @@ export const BreadcrumbStructuredData: React.FC<{ items: Array<{ name: string; u
       position: index + 1,
       name: item.name,
       item: item.url}))}} />
-)
+);
+
 export default StructuredData

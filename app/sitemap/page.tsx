@@ -201,8 +201,7 @@
         </div>
       </div>
     </>
-  )
-    },
-    {
+  );
+};
 
 export default SitemapPage;

@@ -1,6 +1,6 @@
-import { TrendingUp } from "lucide-react",
-      import { Helmet } from "react-helmet-async",
-      import { Link } from "react-router-dom",
+import { TrendingUp } from "lucide-react";
+      import { Helmet } from "react-helmet-async";
+      import { Link } from "react-router-dom";
       export default function AISupplyChainOptimizer() {},
       const features = [
     {},
@@ -376,8 +376,7 @@ import { TrendingUp } from "lucide-react",
         </section>
       </div>
     </>
-  )
-    },
-    {
+  );
+};
 
 export default AiSupplyChainOptimizerPage;

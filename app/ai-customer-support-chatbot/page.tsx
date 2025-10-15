@@ -1,8 +1,8 @@
-import React from 'react',
-      import { Helmet } from 'react-helmet-async',
-      import { Link } from 'react-router-dom',
+import React from 'react';
+      import { Helmet } from 'react-helmet-async';
+      import { Link } from 'react-router-dom';
       import { 
-  CheckCircle, 
+  CheckCircle;
   ArrowRight, 
   MessageSquare, 
   Users, 
@@ -391,8 +391,7 @@ import React from 'react',
         </div>
       </section>
     </>
-  )
-    },
-    {
+  );
+};
 
 export default AiCustomerSupportChatbotPage;

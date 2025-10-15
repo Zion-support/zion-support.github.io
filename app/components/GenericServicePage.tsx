@@ -1,6 +1,7 @@
+import React from 'react';
 
 import { Helmet } from "react-helmet-async"
-interface GenericServicePageProps {},
+interface GenericServicePageProps {};
       title: string
   description: string
   icon: React.ComponentType<any></any>

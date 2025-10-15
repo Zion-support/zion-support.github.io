@@ -185,8 +185,7 @@ import React, { useEffect, useState } from 'react',
     {
       `}</style>
     </section>
-  )
-    },
-    {
+  );
+};
 
 export default FuturisticHero;

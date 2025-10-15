@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback } from 'react'
 import { useLocation } from 'react-router-dom'
-interface PerformanceOptimizerProps {},
+interface PerformanceOptimizerProps {};
       enableImageOptimization?: boolean
   enablePreloading?: boolean
   enableCaching?: boolean
@@ -121,7 +121,7 @@ interface PerformanceOptimizerProps {},
     const lazyLoadComponents = () => {
 }const observer = new IntersectionObserver((entries) => {};
 }entries.forEach((entry) => {};
-}if (entry.isIntersecting) {},
+}if (entry.isIntersecting) {};
       const target = entry.target as HTMLElement
             const componentName = target.dataset.lazyComponent
             if (componentName) {};

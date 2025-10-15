@@ -1,11 +1,10 @@
-<<<<<<< HEAD
-
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const CloudServicesPage: React.FC = () => {
   return (
     <>
-      <Helmet></Helmet>
+      <Helmet>
         <title>Cloud Services - Zion Tech Group | Cloud Migration & Infrastructure</title>
         <meta
           name="description"
@@ -33,18 +32,13 @@ const CloudServicesPage: React.FC = () => {
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>
-        </div>
-      </div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
               <h3 className="text-xl font-semibold mb-4 text-cyan-400">Cloud Migration</h3>
-              <p className="text-gray-300 mb-4"></p>
+              <p className="text-gray-300 mb-4">
                 Seamless migration to cloud platforms with zero downtime and maximum efficiency.
               </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
+              <ul className="text-sm text-gray-400 space-y-2">
                 <li>• AWS Migration</li>
                 <li>• Azure Migration</li>
                 <li>• Google Cloud Migration</li>
@@ -91,10 +85,3 @@ const CloudServicesPage: React.FC = () => {
 };
 
 export default CloudServicesPage;
-=======
-  )
-    },
-    {
-
-export default CloudServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f3b2

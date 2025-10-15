@@ -1,9 +1,9 @@
 
-import { Calendar, Users, BarChart3, CheckCircle, ArrowRight, Clock, Target, Zap, Shield, Globe } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard',
-      import FuturisticButton from '../components/FuturisticButton',
-      import ResponsiveContainer from '../components/ResponsiveContainer',
-      import EnhancedSEO from '../components/EnhancedSEO';
-,
+import { Calendar, Users, BarChart3, CheckCircle, ArrowRight, Clock, Target, Zap, Shield, Globe } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
+import ResponsiveContainer from '../components/ResponsiveContainer';
+import EnhancedSEO from '../components/EnhancedSEO';
+;
       const ProjectManagementToolPage = () => {",
         "
   const features = [",

@@ -1,3 +1,4 @@
+import React from 'react';
 // Next.js type definitions
 declare module "next" {};
   export interface NextPageProps {};

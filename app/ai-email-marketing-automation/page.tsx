@@ -1,7 +1,7 @@
-import React from 'react',
-      import { Helmet } from 'react-helmet-async',
+import React from 'react';
+      import { Helmet } from 'react-helmet-async';
       import { 
-  CheckCircle, 
+  CheckCircle;
   ArrowRight, 
   TrendingUp
 } from 'lucide-react',
@@ -348,8 +348,7 @@ import React from 'react',
         </div>
       </section>
     </>
-  )
-    },
-    {
+  );
+};
 
 export default AIEmailMarketingAutomationPage;

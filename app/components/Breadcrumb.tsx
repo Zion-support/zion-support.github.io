@@ -1,3 +1,4 @@
+import React from 'react';
 "use client"
 
 import { ChevronRight, Home } from "lucide-react"

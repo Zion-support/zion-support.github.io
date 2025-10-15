@@ -250,8 +250,7 @@
         </section>
       </div>
     </>
-  )
-    },
-    {
+  );
+};
 
 export default ZionSecurityShieldPage;

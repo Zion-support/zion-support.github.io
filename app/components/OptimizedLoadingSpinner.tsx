@@ -1,6 +1,6 @@
 import React, { memo, useMemo } from "react"
 import { Helmet } from "react-helmet-async"
-interface OptimizedLoadingSpinnerProps {},
+interface OptimizedLoadingSpinnerProps {};
       size?: "xs" | "sm" | "md" | "lg" | "xl"
   variant?: "dots" | "pulse" | "spinner" | "skeleton" | "bars"
   text?: string

@@ -1,6 +1,6 @@
 
-import { Helmet } from 'react-helmet-async',
-      import { motion } from 'framer-motion',
+import { Helmet } from 'react-helmet-async';
+      import { motion } from 'framer-motion';
       const features = [
     {},
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
@@ -161,8 +161,7 @@ import { Helmet } from 'react-helmet-async',
         </div>
       </div>
     </>
-  )
-    },
-    {
+  );
+};
 
 export default SmartInventoryOptimizerPage;

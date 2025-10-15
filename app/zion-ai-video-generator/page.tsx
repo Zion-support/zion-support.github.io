@@ -1,7 +1,8 @@
+import React from 'react';
 
-import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award, Globe, Target, MessageSquare, Share, Award as AwardIcon, BookOpen, Phone, Star as StarIcon } from 'lucide-react';import { Link } from "react-router-dom",
-      import SEOOptimizer from "../../components/SEOOptimizer";
-,
+import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award, Globe, Target, MessageSquare, Share, Award as AwardIcon, BookOpen, Phone, Star as StarIcon } from 'lucide-react';import { Link } from "react-router-dom";
+import SEOOptimizer from "../../components/SEOOptimizer";
+;
       export default function ZionAiVideoGenerator() {",
         "
   const features = [",

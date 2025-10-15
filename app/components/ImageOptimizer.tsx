@@ -91,8 +91,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       onLoad={handleLoad}
       onError={handleError}
     />
-  )
-    },
-    {
+  );
+};
 
 export default ImageOptimizer;

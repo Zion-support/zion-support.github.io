@@ -1,6 +1,7 @@
+import React from 'react';
 
 import { cn } from '../lib/utils'
-interface FuturisticButtonProps {},
+interface FuturisticButtonProps {};
       children: React.ReactNode
   href?: string
   onClick?: () => void

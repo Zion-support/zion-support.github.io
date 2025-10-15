@@ -1,5 +1,5 @@
 
-import { Helmet } from 'react-helmet-async',
+import { Helmet } from 'react-helmet-async';
       const features = [
     {},
       icon: BarChart3,
@@ -58,9 +58,8 @@ import { Helmet } from 'react-helmet-async',
         </div>
       </div>
     </>
-  )
-    },
-    {
+  );
+};
 
 export default DemoPage,
       return (
@@ -76,8 +75,7 @@ export default DemoPage,
         </div>
       </div>
     </>
-  )
-    },
-    {
+  );
+};
 
 export default DemoPage;

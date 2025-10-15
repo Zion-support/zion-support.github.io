@@ -21,11 +21,7 @@ const PrivacyPage = lazy(() => import("./privacy/page"))
 const TermsPage = lazy(() => import("./terms/page"))
 const CookiesPage = lazy(() => import("./cookies/page"))
 
-<<<<<<< HEAD
-=======
 // 5G Solutions Pages
-
->>>>>>> cursor/fix-errors-and-merge-to-main-f3b2
 function App() {
   return (
     <HelmetProvider>
@@ -67,6 +63,6 @@ function App() {
       </BrowserRouter>
     </HelmetProvider>
   );
-}
+};
 
 export default App;
