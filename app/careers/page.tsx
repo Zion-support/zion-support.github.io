@@ -35,7 +35,7 @@ const CareersPage: React.FC = () => {
       experience: '5+ years',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
       requirements: [
-        'Master\'s degree in Computer Science or related field',
+        'Master&apos;s degree in Computer Science or related field',
         '5+ years experience in AI/ML development',
         'Expertise in Python, TensorFlow, PyTorch',
         'Experience with cloud platforms (AWS, GCP, Azure)',
@@ -60,7 +60,7 @@ const CareersPage: React.FC = () => {
       experience: '3+ years',
       description: 'Build scalable web applications using modern technologies and best practices.',
       requirements: [
-        'Bachelor\'s degree in Computer Science or equivalent',
+        'Bachelor&apos;s degree in Computer Science or equivalent',
         '3+ years full-stack development experience',
         'Proficiency in React, Node.js, TypeScript',
         'Experience with databases (PostgreSQL, MongoDB)',
@@ -85,7 +85,7 @@ const CareersPage: React.FC = () => {
       experience: '4+ years',
       description: 'Create intuitive and beautiful user experiences for our AI-powered products.',
       requirements: [
-        'Bachelor\'s degree in Design or related field',
+        'Bachelor&apos;s degree in Design or related field',
         '4+ years UX/UI design experience',
         'Proficiency in Figma, Sketch, Adobe Creative Suite',
         'Experience with design systems and prototyping',
@@ -110,7 +110,7 @@ const CareersPage: React.FC = () => {
       experience: '5+ years',
       description: 'Drive product strategy and roadmap for our AI and IT services platform.',
       requirements: [
-        'Bachelor\'s degree in Business, Engineering, or related field',
+        'Bachelor&apos;s degree in Business, Engineering, or related field',
         '5+ years product management experience',
         'Experience with AI/ML products preferred',
         'Strong analytical and communication skills',
@@ -135,7 +135,7 @@ const CareersPage: React.FC = () => {
       experience: '4+ years',
       description: 'Build and maintain our cloud infrastructure and deployment pipelines.',
       requirements: [
-        'Bachelor\'s degree in Computer Science or equivalent',
+        'Bachelor&apos;s degree in Computer Science or equivalent',
         '4+ years DevOps/Infrastructure experience',
         'Expertise in AWS, Docker, Kubernetes',
         'Experience with CI/CD pipelines',
@@ -160,7 +160,7 @@ const CareersPage: React.FC = () => {
       experience: '3+ years',
       description: 'Help clients understand and implement our AI and IT solutions.',
       requirements: [
-        'Bachelor\'s degree in Engineering or related field',
+        'Bachelor&apos;s degree in Engineering or related field',
         '3+ years technical sales experience',
         'Strong technical background in AI/ML or IT',
         'Excellent presentation and communication skills',
@@ -282,7 +282,7 @@ const CareersPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold text-white mb-6">Benefits & Perks</h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  We offer comprehensive benefits to support our team's well-being and success
+                  We offer comprehensive benefits to support our team&apos;s well-being and success
                 </p>
               </div>
               
@@ -434,9 +434,9 @@ const CareersPage: React.FC = () => {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-xl p-12 text-center max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-6">Don't See the Right Role?</h2>
+              <h2 className="text-3xl font-bold text-white mb-6">Don&apos;t See the Right Role?</h2>
               <p className="text-xl text-white/90 mb-8">
-                We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute.
+                We&apos;re always looking for talented individuals. Send us your resume and let us know how you&apos;d like to contribute.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">

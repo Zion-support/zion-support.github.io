@@ -9,6 +9,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
   useEffect(() => {
     // Monitor Core Web Vitals
     onCLS((metric) => {
+      // eslint-disable-next-line no-console
       console.log('CLS:', metric);
       // Send to analytics service
       if (typeof window !== 'undefined' && window.gtag) {
@@ -21,6 +22,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
     });
 
     onINP((metric) => {
+      // eslint-disable-next-line no-console
       console.log('INP:', metric);
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'web_vitals', {
@@ -32,6 +34,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
     });
 
     onFCP((metric) => {
+      // eslint-disable-next-line no-console
       console.log('FCP:', metric);
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'web_vitals', {
@@ -43,6 +46,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
     });
 
     onLCP((metric) => {
+      // eslint-disable-next-line no-console
       console.log('LCP:', metric);
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'web_vitals', {
@@ -54,6 +58,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
     });
 
     onTTFB((metric) => {
+      // eslint-disable-next-line no-console
       console.log('TTFB:', metric);
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'web_vitals', {

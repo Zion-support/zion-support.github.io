@@ -186,7 +186,7 @@ const PortfolioPage: React.FC = () => {
     <>
       <Helmet>
         <title>Portfolio - Zion Tech Group | Our Work & Success Stories</title>
-        <meta name="description" content="Explore our portfolio of successful AI and IT projects. See how we've helped businesses transform with cutting-edge technology solutions." />
+        <meta name="description" content="Explore our portfolio of successful AI and IT projects. See how we&apos;ve helped businesses transform with cutting-edge technology solutions." />
         <meta name="keywords" content="portfolio, projects, case studies, ai solutions, it services, web development, mobile apps" />
         <meta property="og:title" content="Portfolio - Zion Tech Group" />
         <meta property="og:description" content="Our successful projects and client success stories" />
@@ -202,7 +202,7 @@ const PortfolioPage: React.FC = () => {
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Portfolio</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Discover our successful projects and see how we've helped businesses transform with cutting-edge technology solutions.
+                Discover our successful projects and see how we&apos;ve helped businesses transform with cutting-edge technology solutions.
               </p>
             </div>
           </div>
@@ -342,7 +342,7 @@ const PortfolioPage: React.FC = () => {
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Start Your Project?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Let's discuss how we can help you achieve similar success with your next project.
+                Let&apos;s discuss how we can help you achieve similar success with your next project.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">

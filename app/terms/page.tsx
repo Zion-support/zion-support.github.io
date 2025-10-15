@@ -50,7 +50,7 @@ const TermsPage: React.FC = () => {
     <>
       <Helmet>
         <title>Terms of Service - Zion Tech Group | Legal Terms & Conditions</title>
-        <meta name="description" content="Read Zion Tech Group's Terms of Service. Understand the legal terms and conditions governing the use of our AI and IT services." />
+        <meta name="description" content="Read Zion Tech Group&apos;s Terms of Service. Understand the legal terms and conditions governing the use of our AI and IT services." />
         <meta name="keywords" content="terms of service, legal terms, conditions, user agreement, service terms, legal compliance" />
         <meta property="og:title" content="Terms of Service - Zion Tech Group" />
         <meta property="og:description" content="Legal terms and conditions for our services" />
@@ -83,7 +83,7 @@ const TermsPage: React.FC = () => {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-8">
                 <h2 className="text-3xl font-bold text-white mb-6">Agreement to Terms</h2>
                 <p className="text-gray-300 mb-4 leading-relaxed">
-                  These Terms of Service ("Terms") govern your use of Zion Tech Group's website and services. 
+                  These Terms of Service (&quot;Terms&quot;) govern your use of Zion Tech Group&apos;s website and services. 
                   By accessing or using our services, you agree to be bound by these Terms and our Privacy Policy.
                 </p>
                 <p className="text-gray-300 leading-relaxed">

@@ -29,6 +29,7 @@ class ErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to monitoring service
+    // eslint-disable-next-line no-console
     console.error('Error caught by boundary:', error, errorInfo);
   }
 
@@ -54,7 +55,7 @@ class ErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.
+              We&apos;re sorry, but something unexpected happened. Please try again or contact support if the problem persists.
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
