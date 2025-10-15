@@ -3,6 +3,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import SEOHead from './components/SEOHead';
+import FuturisticHero from './components/FuturisticHero';
+import FuturisticServiceCard from './components/FuturisticServiceCard';
+import FuturisticBackground from './components/FuturisticBackground';
+import FuturisticText from './components/FuturisticText';
+import FuturisticButton from './components/FuturisticButton';
 import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
@@ -10,34 +15,177 @@ import {
   RocketLaunchIcon,
   CheckCircleIcon,
   ArrowRightIcon,
-  StarIcon
-} from '@heroicons/react/24/outline';
+  StarIcon,
+  Brain,
+  Zap,
+  BarChart3,
+  MessageSquare,
+  Eye,
+  Settings,
+  Network,
+  FileText,
+  Database,
+  Smartphone,
+  Globe,
+  Target,
+  Lightbulb,
+  Award,
+  Phone,
+  Mail,
+  MapPin
+} from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const services = [
     {
-      icon: CpuChipIcon,
-      title: 'AI Solutions',
-      description: 'Advanced artificial intelligence and machine learning solutions to transform your business.',
+      id: 'ai-solutions',
+      name: 'AI Solutions',
+      price: 'From $199/mo',
+      originalPrice: 'From $399/mo',
+      description: 'Advanced artificial intelligence and machine learning solutions to transform your business operations.',
+      features: [
+        'AI Chatbot Enterprise',
+        'Computer Vision Solutions',
+        'Content Generation Pro',
+        'Analytics Dashboard',
+        'Automation Platform',
+        'Blockchain Integration'
+      ],
+      benefits: [
+        'Reduce operational costs by 60%',
+        'Improve efficiency by 80%',
+        '24/7 intelligent automation',
+        'Scalable AI infrastructure'
+      ],
+      category: 'Artificial Intelligence',
+      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      popular: true,
       href: '/ai-solutions'
     },
     {
-      icon: ShieldCheckIcon,
-      title: 'Cybersecurity',
+      id: 'cybersecurity',
+      name: 'Cybersecurity Solutions',
+      price: 'From $1,500/mo',
+      originalPrice: 'From $2,500/mo',
       description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
+      features: [
+        'Threat Detection & Response',
+        'Security Assessment',
+        'Penetration Testing',
+        'Vulnerability Management',
+        'Compliance Management',
+        '24/7 Security Monitoring'
+      ],
+      benefits: [
+        'Protect against cyber threats',
+        'Ensure compliance',
+        'Reduce security risks',
+        'Maintain business continuity'
+      ],
+      category: 'Security',
+      icon: <ShieldCheckIcon className="w-8 h-8 text-green-400" />,
+      popular: true,
       href: '/cybersecurity'
     },
     {
-      icon: CloudIcon,
-      title: 'Cloud Infrastructure',
+      id: 'cloud-infrastructure',
+      name: 'Cloud Infrastructure',
+      price: 'From $2,500/mo',
+      originalPrice: 'From $4,000/mo',
       description: 'Scalable cloud solutions and infrastructure management for modern businesses.',
+      features: [
+        'Multi-cloud Architecture',
+        'Infrastructure as Code',
+        'Auto-scaling & Load Balancing',
+        'Disaster Recovery',
+        'Security & Compliance',
+        'Cost Optimization'
+      ],
+      benefits: [
+        'Reduce infrastructure costs by 40%',
+        'Improve scalability',
+        'Enhance security',
+        'Increase reliability'
+      ],
+      category: 'Infrastructure',
+      icon: <CloudIcon className="w-8 h-8 text-blue-400" />,
+      popular: false,
       href: '/cloud-solutions'
     },
     {
-      icon: RocketLaunchIcon,
-      title: 'Digital Transformation',
-      description: 'Complete digital transformation strategies to modernize your operations.',
-      href: '/digital-transformation'
+      id: 'micro-saas',
+      name: 'Micro SAAS Solutions',
+      price: 'From $29/mo',
+      originalPrice: 'From $59/mo',
+      description: 'Innovative micro SAAS applications designed to solve specific business challenges.',
+      features: [
+        'Task Manager Pro',
+        'Analytics Dashboard',
+        'Customer Support Hub',
+        'Inventory Manager',
+        'Social Media Scheduler',
+        'Expense Tracker Pro'
+      ],
+      benefits: [
+        'Increase productivity by 40%',
+        'Streamline operations',
+        'Reduce manual work',
+        'Scale with business growth'
+      ],
+      category: 'Micro SAAS',
+      icon: <Zap className="w-8 h-8 text-purple-400" />,
+      popular: true,
+      href: '/micro-saas-solutions'
+    },
+    {
+      id: 'it-solutions',
+      name: 'IT Solutions',
+      price: 'From $2,000/mo',
+      originalPrice: 'From $3,500/mo',
+      description: 'Comprehensive technology solutions designed to accelerate your digital transformation.',
+      features: [
+        'Web Development',
+        'Mobile App Development',
+        'Database Management',
+        'Network Infrastructure',
+        'System Integration',
+        'IT Consulting'
+      ],
+      benefits: [
+        'Modernize technology stack',
+        'Improve efficiency',
+        'Enhance security',
+        'Support business growth'
+      ],
+      category: 'IT Services',
+      icon: <Settings className="w-8 h-8 text-orange-400" />,
+      popular: false,
+      href: '/it-solutions'
+    },
+    {
+      id: '5g-solutions',
+      name: '5G Solutions',
+      price: 'From $3,000/mo',
+      originalPrice: 'From $5,000/mo',
+      description: 'Next-generation 5G network solutions for ultra-fast connectivity and IoT applications.',
+      features: [
+        '5G Network Infrastructure',
+        'Edge Computing',
+        'IoT Solutions',
+        'Smart City Applications',
+        'Private Networks',
+        'Mobile Applications'
+      ],
+      benefits: [
+        'Ultra-fast connectivity',
+        'Low latency applications',
+        'Massive IoT support',
+        'Future-ready infrastructure'
+      ],
+      category: '5G Technology',
+      icon: <Globe className="w-8 h-8 text-pink-400" />,
+      popular: false,
+      href: '/5g-solutions'
     }
   ];
 
@@ -47,14 +195,20 @@ const HomePage: React.FC = () => {
     'Scalable Solutions',
     'Industry Expertise',
     'Proven Results',
-    'Custom Implementation'
+    'Custom Implementation',
+    'AI-Powered Solutions',
+    'Real-time Analytics',
+    'Cloud-Native Architecture',
+    'Enterprise Security'
   ];
 
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
+    { number: '1,000+', label: 'Projects Completed' },
+    { number: '500+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' }
+    { number: '24/7', label: 'Support Available' },
+    { number: '50+', label: 'Countries Served' },
+    { number: '10+', label: 'Years Experience' }
   ];
 
   return (
@@ -62,55 +216,25 @@ const HomePage: React.FC = () => {
       <SEOHead 
         title="Zion Tech Group - Advanced AI & IT Solutions"
         description="Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords="AI solutions, cybersecurity, cloud infrastructure, digital transformation, IT services, machine learning, artificial intelligence"
+        keywords="AI solutions, cybersecurity, cloud infrastructure, digital transformation, IT services, machine learning, artificial intelligence, micro SAAS, 5G solutions"
       />
       
-      <div className="min-h-screen bg-slate-900 text-white">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden min-h-screen flex items-center">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
-          <div className="absolute inset-0 opacity-20" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
-            <div className="text-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
-                Zion Tech Group
-              </h1>
-              <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed px-4">
-                Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services that drive innovation and growth.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 lg:mb-16 px-4">
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
-                >
-                  Get Started Today
-                </Link>
-                <Link
-                  to="/about"
-                  className="border-2 border-purple-400 text-purple-300 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 text-sm sm:text-base"
-                >
-                  Learn More
-                </Link>
-              </div>
-              
-              {/* Stats */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4">
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm">
-                    <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-purple-400 mb-1 lg:mb-2">
-                      {stat.number}
-                    </div>
-                    <div className="text-gray-300 text-xs sm:text-sm lg:text-base">
-                      {stat.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+      {/* Hero Section */}
+      <FuturisticHero
+        title="Zion Tech Group"
+        subtitle="Advanced AI & IT Solutions"
+        description="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services that drive innovation and growth."
+        primaryAction={{
+          text: "Get Started Today",
+          href: "/contact"
+        }}
+        secondaryAction={{
+          text: "Learn More",
+          href: "/about"
+        }}
+        stats={stats}
+        features={features}
+      />
 
         {/* Services Section */}
         <section className="py-16 sm:py-20 bg-slate-800/30">
