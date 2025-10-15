@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function contextsPage() {
@@ -32,33 +31,3 @@ export default function contextsPage() {
     </>
   );
 }
-=======
-import React, { createContext, useContext, ReactNode } from 'react';
-
-interface AnalyticsContextContextType {
-  // Context properties
-}
-
-const AnalyticsContextContext = createContext<AnalyticsContextContextType | undefined>(undefined);
-
-export const useAnalyticsContext = () => {
-  const context = useContext(AnalyticsContextContext);
-  if (!context) {
-    throw new Error('useAnalyticsContext must be used within a AnalyticsContextProvider');
-  }
-  return context;
-};
-
-interface AnalyticsContextProviderProps {
-  children: ReactNode;
-}
-
-export const AnalyticsContextProvider = ({ children }: AnalyticsContextProviderProps) => {
-  const value = {};
-  return (
-    <AnalyticsContextContext.Provider value={value}>
-      {children}
-    </AnalyticsContextContext.Provider>
-  );
-};
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624

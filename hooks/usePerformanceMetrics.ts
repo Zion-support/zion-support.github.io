@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect  } from 'lucide-react'";"
     if (typeof: window === 'undefined' || !('PerformanceObserver' in window)) {'"'""
       return;
@@ -31,15 +30,6 @@ import { useState, useEffect  } from 'lucide-react'";"
         }
       });
     }).observe({ entryTypes: ['navigation'] })'"'""
-=======
-import { useState, useEffect } from 'react';
-
-export const UsePerformanceMetrics = () => {
-  const [state, setState] = useState(null);
-
-  useEffect(() => {
-    // Hook implementation
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
   }, []);
 
   return { state, setState };

@@ -1,132 +1,13 @@
-<<<<<<< HEAD
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import {
-  Bars3Icon,
-  XMarkIcon,
-  HomeIcon,
-  InformationCircleIcon,
-  PhoneIcon,
-  DocumentTextIcon,
-  AcademicCapIcon,
-  PlayIcon,
-  QuestionMarkCircleIcon,
-  CheckIcon,
-  CurrencyDollarIcon,
-  CogIcon,
-  ChevronDownIcon,
-  GlobeAltIcon,
-  CloudIcon,
-  CpuChipIcon,
-  SignalIcon,
-  UserGroupIcon,
-  EnvelopeIcon,
-  ShareIcon,
-  ChatBubbleLeftRightIcon,
-  ChartBarIcon,
-  EyeIcon,
-  CircleStackIcon,
-  CodeBracketIcon,
-  DevicePhoneMobileIcon,
-  UserPlusIcon,
-  CheckCircleIcon,
-  RocketLaunchIcon,
-  ServerIcon,
-  ShieldCheckIcon
-} from '@heroicons/react/24/outline';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 interface NavigationProps {
-  onSidebarToggle?: () => void;
+  className?: string;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+export default function Navigation({ className = '' }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-  const location = useLocation();
-
-  const navigation = [
-    { name: 'Home', href: '/', icon: HomeIcon },
-    { name: 'About', href: '/about', icon: InformationCircleIcon },
-    {
-      name: 'AI Services',
-      href: '/ai-services',
-      icon: CpuChipIcon,
-      submenu: [
-        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'AI Content Generator', href: '/ai-content-generator', icon: DocumentTextIcon },
-        { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: EnvelopeIcon },
-        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },
-        { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot', icon: ChatBubbleLeftRightIcon },
-        { name: 'AI Project Management Pro', href: '/ai-project-management-pro', icon: CogIcon },
-        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', icon: ChartBarIcon },
-        { name: 'AI Content Generation', href: '/ai-content-generation-pro', icon: DocumentTextIcon },
-        { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: EyeIcon },
-        { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon }
-      ]
-    },
-    {
-      name: 'Micro SaaS',
-      href: '/micro-saas-solutions',
-      icon: GlobeAltIcon,
-      submenu: [
-        { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
-        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
-        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
-        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
-        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },
-        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },
-        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon }
-      ]
-    },
-    {
-      name: 'IT Solutions',
-      href: '/it-services',
-      icon: CogIcon,
-      submenu: [
-        { name: 'IT Solutions Overview', href: '/it-services', icon: CogIcon },
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-        { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: ShieldCheckIcon },
-        { name: 'Web Development', href: '/web-development', icon: CodeBracketIcon },
-        { name: 'Mobile App Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
-        { name: 'Database Management', href: '/database-management', icon: CircleStackIcon },
-        { name: 'Network Infrastructure', href: '/network-infrastructure', icon: SignalIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
-      ]
-    },
-    {
-      name: 'Resources',
-      href: '#',
-      icon: DocumentTextIcon,
-      submenu: [
-        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
-        { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
-        { name: 'API Documentation', href: '/api-docs', icon: DocumentTextIcon },
-        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }
-      ]
-    },
-    {
-      name: 'Company',
-      href: '#',
-      icon: UserGroupIcon,
-      submenu: [
-        { name: 'Our Team', href: '/team', icon: UserGroupIcon },
-        { name: 'Careers', href: '/careers', icon: UserPlusIcon },
-        { name: 'Partnerships', href: '/partnerships', icon: ShareIcon },
-        { name: 'Contact', href: '/contact', icon: PhoneIcon }
-      ]
-    },
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon }
-  ];
-
-  const isActive = (href: string) => {
-    if (href === '/') {
-      return location.pathname === '/';
-    }
-    return location.pathname.startsWith(href);
-  };
 
   const toggleMobileMenu = () => {
     setIsOpen(!isOpen);
@@ -135,33 +16,89 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const closeMobileMenu = () => {
     setIsOpen(false);
   };
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
 
-export default function ComponentsPage() {
   return (
     <>
       <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional components solutions for modern businesses." />
+        <title>Navigation - Zion Tech Group</title>
+        <meta name="description" content="Professional navigation solutions for modern businesses." />
       </Helmet>
       
-      <div className="min-h-screen bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Components</h1>
-          <p className="text-lg text-gray-600">
-            Professional components solutions for modern businesses.
-          </p>
+      <nav className={`bg-white shadow-lg ${className}`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between h-16">
+            <div className="flex items-center">
+              <Link to="/" className="flex-shrink-0">
+                <h1 className="text-2xl font-bold text-blue-600">Zion Tech Group</h1>
+              </Link>
+            </div>
+            
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
+              <Link to="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+                Home
+              </Link>
+              <Link to="/about" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+                About
+              </Link>
+              <Link to="/services" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+                Services
+              </Link>
+              <Link to="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+                Contact
+              </Link>
+            </div>
+            
+            {/* Mobile menu button */}
+            <div className="md:hidden flex items-center">
+              <button
+                onClick={toggleMobileMenu}
+                className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+              >
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
+        
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+              <Link
+                to="/"
+                className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+                onClick={closeMobileMenu}
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+                onClick={closeMobileMenu}
+              >
+                About
+              </Link>
+              <Link
+                to="/services"
+                className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+                onClick={closeMobileMenu}
+              >
+                Services
+              </Link>
+              <Link
+                to="/contact"
+                className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+                onClick={closeMobileMenu}
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+        )}
+      </nav>
     </>
   );
-<<<<<<< HEAD
-};
-
-export default Navigation;
-=======
 }
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624

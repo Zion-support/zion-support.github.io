@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 export default function componentsPage() {
   return (
     <>
@@ -30,17 +29,5 @@ export default function componentsPage() {
         </div>
       </div>
     </>
-=======
-interface SEOHeadProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function SEOHead({ className = '', children }: SEOHeadProps) {
-  return (
-    <div className={className}>
-      {children}
-    </div>
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
   );
 }
