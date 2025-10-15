@@ -19,18 +19,29 @@ export const LazyWrapper: React.FC<LazyWrapperProps> = ({}
     <Suspense fallback={fallback}>
       {children}
     </Suspense>
-)
-}
-LazyWrapper.displayName = 'LazyWrapper'
+  );
+};
+
+LazyWrapper.displayName = 'LazyWrapper';
+
+// Lazy loading helper function
+export const createLazyComponent = <P extends Record<string, unknown>>(
+  importFunc: () => Promise<{ default: ComponentType<P> }>
+) => {
+  const LazyComponent = lazy(importFunc);
+  
+  const WrappedComponent = (props: P) => (
     <LazyWrapper>
       <LazyComponent {...props} />
     </LazyWrapper>
-  )
-  WrappedComponent.displayName = 'LazyComponent'
-  return WrappedComponent
-}
+  );
+  
+  WrappedComponent.displayName = 'LazyComponent';
+  return WrappedComponent;
+};
 // Re-export from utils
-export { createLazyComponent } from '../utils/lazyLoading'
+export { createLazyComponent } from '../utils/lazyLoading';
 // Re-export the utility function
-export { createLazyComponent } from '../utils/lazyLoading'
-export default LazyWrapperursor/analyze-improve-and-merge-code-4a9f
+export { createLazyComponent } from '../utils/lazyLoading';
+
+export default LazyWrapper;

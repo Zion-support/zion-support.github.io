@@ -1,50 +1,21 @@
-global.TextEncoder = TextEncoder
-global.TextDecoder = TextDecoder
-// Mock window.matchMedia
-Object.defineProperty(window, "matchMedia", {}
-import '@testing-library/jest-dom'
+
+import '@testing-library/jest-dom';
+import React from 'react';
+import { TextEncoder, TextDecoder } from 'util';
+
+// Polyfill for TextEncoder/TextDecoder
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
 // Mock TextEncoder and TextDecoder
-import { TextEncoder, TextDecoder } from 'util'
-global.TextEncoder = TextEncoder
-global.TextDecoder = TextDecoder
-// Mock react-router-dom
-jest.mock('react-router-dom', () => {}
-}const actual = jest.requireActual('react-router-dom')
-  const mockReact = jest.requireActual('react')
-  return {}
-    ...actual,
-    useLocation: () => ({}
-      pathname: '/',
-      search: '',
-      hash: '',
-      state: null,
-      key: 'default'
-    }),
-    useNavigate: () => jest.fn(),
-    Link: ({ to, children, ...props }) => mockReact.createElement('a', { href: to, ...props }, children),
-    NavLink: ({ to, children, ...props }) => mockReact.createElement('a', { href: to, ...props }, children),
-    BrowserRouter: ({ children }) => mockReact.createElement('div', { 'data-testid': 'browser-router' }, children),
-    MemoryRouter: ({ children }) => mockReact.createElement('div', { 'data-testid': 'memory-router' }, children)
-  }
-})
-// Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {}
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-}
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {}
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-}
-// Mock matchMedia
-Object.defineProperty(window, 'matchMedia', {}
+import { TextEncoder, TextDecoder } from 'util';
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+// Mock window.matchMedia
+Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: jest.fn().mockImplementation((query) => ({}
+ursor/fix-errors-and-merge-to-main-5ae7
     matches: false,
     media: query,
     onchange: null,
@@ -52,21 +23,24 @@ Object.defineProperty(window, 'matchMedia', {}
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-dispatchEvent: jest.fn()}))})
-})
+    dispatchEvent: jest.fn(),
+  })),
+});
+
+// Mock window.scrollTo
+Object.defineProperty(window, 'scrollTo', {
+  value: jest.fn(),
+});
+
+ursor/fix-errors-and-merge-to-main-5ae7
 // Mock localStorage
-const localStorageMock = {}
+const localStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
   clear: jest.fn(),
-// Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {}
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-}
+};
+
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {}
   constructor() {}
@@ -78,3 +52,4 @@ global.ResizeObserver = class ResizeObserver {}
 global.gtag = jest.fn()
 // Mock window.dataLayer
 global.dataLayer = []
+ursor/fix-errors-and-merge-to-main-5ae7

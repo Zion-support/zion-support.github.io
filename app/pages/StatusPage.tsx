@@ -1,19 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  AlertTriangle, 
-  XCircle,
-  Clock,
-  Server,
-  Globe,
-  Database,
-  Zap
-} from 'lucide-react';
-
-const StatusPage: React.FC = () => {
+import { CheckCircle, Database } from 'lucide-react';const StatusPage: React.FC = () => {
   const services = [
     { name: 'API Services', status: 'operational', uptime: '99.9%' },
     { name: 'Web Application', status: 'operational', uptime: '99.8%' },
@@ -22,12 +10,11 @@ const StatusPage: React.FC = () => {
     { name: 'Authentication', status: 'operational', uptime: '99.9%' }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>System Status - Zion Tech Group | Service Status</title>
         <meta name="description" content="Check the current status of Zion Tech Group's services and systems. Real-time monitoring and incident reporting." />
-        <meta name="keywords" content="system status, service status, uptime, monitoring, incidents" />
+        <meta name="keywords" content="system status, service status, _uptime, _monitoring, incidents" />
         <link rel="canonical" href="https://ziontechgroup.com/status" />
       </Helmet>
 

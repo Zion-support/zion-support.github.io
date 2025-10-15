@@ -1,36 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Code, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Shield, 
-  Clock, 
-  TrendingUp,
-  BarChart3,
-  Database,
-  Smartphone,
-  Globe,
-  Target,
-  Lightbulb,
-  Rocket,
-  Award,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Eye,
-  MessageSquare,
-  Cpu,
-  Network,
-  FileText,
-  Settings
-} from 'lucide-react';
-
-const SoftwareDevelopmentPage: React.FC = () => {
+import { ArrowRight, CheckCircle, Database, Smartphone, Globe, Network } from 'lucide-react';const SoftwareDevelopmentPage: React.FC = () => {
   const developmentServices = [
     {
       title: 'Custom Web Applications',
@@ -58,12 +29,11 @@ const SoftwareDevelopmentPage: React.FC = () => {
     }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Software Development - Zion Tech Group | Custom Software Solutions</title>
         <meta name="description" content="Professional software development services by Zion Tech Group. Custom web apps, mobile apps, and enterprise solutions." />
-        <meta name="keywords" content="software development, custom software, web development, mobile development, enterprise software" />
+        <meta name="keywords" content="software development, _custom software, _web development, _mobile development, enterprise software" />
         <link rel="canonical" href="https://ziontechgroup.com/software-development" />
       </Helmet>
 
@@ -108,8 +78,7 @@ const SoftwareDevelopmentPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {developmentServices.map((service, index) => (
-              <div key={index} className="bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
+            {developmentServices.map((service, index) => (<div key={index} className="bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-6">
                   {service.icon}
                 </div>

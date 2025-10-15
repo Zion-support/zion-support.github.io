@@ -1,9 +1,11 @@
 // Performanceenhancer utility functions
-export const Performanceenhancer = {}
-  init: () => {}
-} },
-  process: (data: any) => {}
-}return data
+
+export const Performanceenhancer = {
+  init: () => {
+    },
+
+  process: (data: unknown) => {
+    return data;
   },
   cleanup: () => {}
 } }}

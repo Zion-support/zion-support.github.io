@@ -1,8 +1,25 @@
-export default {}
+
+export default {
+  testEnvironment: "jsdom",
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',  },
+  transform: {
+    '^.+\\.(ts|tsx)$': ['ts-jest', { useESM: true }],
+    '^.+\\.(js|jsx)$': 'babel-jest',
   },
-  transform: {}
-    "^.+\\.(ts|tsx)$": "ts-jest",
-    "^.+\\.(js|jsx)$": "babel-jest"},
-  testMatch: []
-  transformIgnorePatterns: []
-}
+  testMatch: [
+    "<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)",
+    "<rootDir>/__tests__/**/*.(test|spec).(ts|tsx|js|jsx)",
+  ],
+  collectCoverageFrom: [
+    "app/**/*.{ts,tsx}",
+    "!app/**/index.{ts,tsx}",
+    "!app/**/*.d.ts",
+  ],
+  testPathIgnorePatterns: ["<rootDir>/out/", "<rootDir>/node_modules/"],
+  transformIgnorePatterns: [
+    'node_modules/(?!(.*\\.mjs$|@testing-library|@heroicons|framer-motion))',
+  ],};
+ursor/fix-errors-and-merge-to-main-5ae7

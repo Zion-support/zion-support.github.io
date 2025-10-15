@@ -4,11 +4,11 @@ interface LoadingPageProps {}
   message?: string
   showIcon?: boolean
 }
-export const LoadingPage: React.FC<LoadingPageProps> = ({}
-  message = "Loading...",
-  showIcon = true
-}) => {}
-}return ()
+
+export const LoadingPage: React.FC<LoadingPageProps> = ({ 
+  message = "Loading...", showIcon = true 
+}) => {
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         {showIcon && ()
@@ -28,11 +28,12 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({}
         </div>
       </div>
     </div>
-  )
-}
-export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {}
-}const getServiceIcon = (serviceName: string) => {}
-}switch (serviceName.toLowerCase()) {}
+  );
+};
+
+export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
+  const getServiceIcon = (_serviceName: string) => {
+    switch (serviceName.toLowerCase()) {
       case 'ai':
       case 'ai services':
         return <Brain className="w-8 h-8 text-cyan-400" />
@@ -70,13 +71,13 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {}
         </div>
       </div>
     </div>
-  )
-}
-export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = ({}
-  error = "Something went wrong",
-  onRetry
-}) => {}
-}return ()
+  );
+};
+
+export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = ({ 
+  error = "Something went wrong", onRetry 
+}) => {
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center max-w-md mx-auto px-4">
         <div className="mb-8">
@@ -101,7 +102,7 @@ export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = 
 export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {}
 }return ()
     <div className="animate-pulse">
-      {Array.from({ length: lines }).map((_, index) => ()
+      {Array.from({ length: lines }).map(( index) => (
         <div
           key={index}
           className={`h-4 bg-gray-700 rounded mb-2 ${}

@@ -1,1 +1,55 @@
-ursor/analyze-improve-and-merge-code-4a9f
+import fs from 'fs';
+import path from 'path';
+
+const dir = path.join(process.cwd(), 'data');
+const file = path.join(dir, 'onsite-requests.json');
+
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
+  }
+
+  const { name, email, company, phone, message, location } = req.body || {};
+
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+
+  let requests = [];
+  try {
+    if (fs.existsSync(file)) {
+      const data = fs.readFileSync(file, 'utf8');
+      requests = JSON.parse(data);
+    }
+  } catch (error) {
+    console.error('Error reading existing requests:', error);
+  }
+
+  const newRequest = {
+    id: Date.now().toString(),
+    name: name || '',
+    email: email || '',
+    company: company || '',
+    phone: phone || '',
+    message: message || '',
+    location: location || '',
+    status: 'pending',
+    createdAt: new Date().toISOString()
+  };
+
+  try {
+    requests.push(newRequest);
+    fs.writeFileSync(file, JSON.stringify(requests, null, 2));
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true,
+      message: 'Onsite request submitted successfully' 
+    }));
+  } catch (error) {
+    console.error('Error saving onsite request:', error);
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to save request' }));
+  }
+}

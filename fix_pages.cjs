@@ -169,7 +169,7 @@ function fixPageFile(filePath) {
 
     // Remove merge conflict markers
     content = content.replace(
-      /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g,
+      /[\s\S]*?>>>>>>> [^\n]*/g,
       "",
     );
 
@@ -206,7 +206,7 @@ function fixPageFile(filePath) {
 
     // Remove any remaining merge conflict markers
     content = content.replace(
-      /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g,
+      /[\s\S]*?>>>>>>> [^\n]*/g,
       "",
     );
 

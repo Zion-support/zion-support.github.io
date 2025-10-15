@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3, Cloud, Sparkles } from 'lucide-react'
-const EnhancedNavigation = () => {}
-}const [isOpen, setIsOpen] = useState(false)
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-  const navigationItems = []
-    {}
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ChevronDown, Menu, X } from "lucide-react";
+
+const EnhancedNavigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const navigationItems = [
+    {
       label: 'AI Services',
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
@@ -39,7 +41,7 @@ const EnhancedNavigation = () => {}
     },
     {}
       label: 'IT Services',
-      href: '/services',
+      href: '/it-services',
       icon: <Shield className="w-4 h-4" />,
       dropdown: []
         { label: 'AI-Powered Business Intelligence Pro', href: '/ai-business-intelligence' },
@@ -141,9 +143,11 @@ const EnhancedNavigation = () => {}
     { label: 'Pricing', href: '/pricing' },
     { label: 'Demo', href: '/demo' },
     { label: 'Support', href: '/support' },
-{ label: 'Consultation', href: '/consultation' }
-  ]
-  return ()ursor/analyze-improve-and-merge-code-4a9f
+    { label: 'Consultation', href: '/consultation' },
+    { label: 'Sitemap', href: '/sitemap' }
+  ];
+
+  return (
     <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -155,7 +159,7 @@ const EnhancedNavigation = () => {}
           </Link>
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">
-            {navigationItems.map((item) => ()
+            {navigationItems.map((item) => (
               <div
                 key={item.label}
                 className="relative group"
@@ -171,7 +175,7 @@ const EnhancedNavigation = () => {}
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                 </Link>
                 {/* Dropdown Menu */}
-                {activeDropdown === item.label && ()
+                {activeDropdown === item.label && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50">
                     <div className="py-2">
                       {item.dropdown.map((dropdownItem) => ()
@@ -219,10 +223,10 @@ const EnhancedNavigation = () => {}
           </button>
         </div>
         {/* Mobile Navigation */}
-        {isOpen && ()
+        {isOpen && (
           <div className="lg:hidden py-4 border-t border-white/10">
             <div className="space-y-4">
-              {navigationItems.map((item) => ()
+              {navigationItems.map((item) => (
                 <div key={item.label}>
                   <Link
                     to={item.href}
@@ -233,7 +237,7 @@ const EnhancedNavigation = () => {}
                     <span className="font-medium">{item.label}</span>
                   </Link>
                   <div className="ml-6 space-y-2">
-                    {item.dropdown.slice(0, 4).map((dropdownItem) => ()
+                    {item.dropdown.slice(0, 4).map((dropdownItem) => (
                       <Link
                         key={dropdownItem.href}
                         to={dropdownItem.href}
@@ -243,7 +247,7 @@ const EnhancedNavigation = () => {}
                         {dropdownItem.label}
                       </Link>
                     ))}
-                    {item.dropdown.length > 4 && ()
+                    {item.dropdown.length > 4 && (
                       <Link
                         to={item.href}
                         className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
@@ -257,7 +261,7 @@ const EnhancedNavigation = () => {}
               ))}
               <div className="pt-4 border-t border-white/10">
                 <div className="space-y-2">
-                  {quickLinks.map((link) => ()
+                  {quickLinks.map((link) => (
                     <Link
                       key={link.href}
                       to={link.href}
