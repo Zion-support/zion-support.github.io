@@ -15,7 +15,7 @@ const PerformanceMonitor: React.FC = () => {
       import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
         const metrics: PerformanceMetrics = {};
         
-        const handleMetric = (metric: any) => {
+        const handleMetric = (metric: { name: string; value: number }) => {
           metrics[metric.name.toLowerCase() as keyof PerformanceMetrics] = metric.value;
           
           if (process.env.NODE_ENV === 'development') {

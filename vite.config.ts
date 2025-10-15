@@ -51,15 +51,41 @@ export default defineConfig({
             }
             return 'vendor';
           }
-          // Split app code by feature
+          
+          // Split app code by feature with better granularity
           if (id.includes('/app/components/')) {
+            if (id.includes('PerformanceMonitor') || id.includes('AccessibilityEnhancer')) {
+              return 'monitoring';
+            }
+            if (id.includes('ErrorBoundary') || id.includes('LoadingSpinner')) {
+              return 'core';
+            }
             return 'components';
           }
+          
           if (id.includes('/app/hooks/')) {
             return 'hooks';
           }
+          
           if (id.includes('/app/utils/')) {
             return 'utils';
+          }
+          
+          if (id.includes('/app/data/')) {
+            return 'data';
+          }
+          
+          // Split pages by category
+          if (id.includes('/app/ai-') || id.includes('/app/zion-ai-')) {
+            return 'ai-pages';
+          }
+          
+          if (id.includes('/app/it-') || id.includes('/app/cloud-') || id.includes('/app/digital-')) {
+            return 'it-pages';
+          }
+          
+          if (id.includes('/app/') && id.includes('/page.tsx')) {
+            return 'pages';
           }
         },
         chunkFileNames: 'assets/[name]-[hash].js',

@@ -1,21 +1,25 @@
-// Service Worker for Zion Tech Group Website
+// Service Worker for better caching and performance
 const CACHE_NAME = 'zion-tech-v1';
 const STATIC_CACHE = 'zion-static-v1';
 const DYNAMIC_CACHE = 'zion-dynamic-v1';
 
-// Assets to cache immediately
-const STATIC_ASSETS = [
+// Files to cache immediately
+const STATIC_FILES = [
   '/',
+  '/index.html',
   '/app/styles/futuristic.css',
-  'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
+  '/app/styles/globals.css'
 ];
 
-// Install event - cache static assets
+// Install event
 self.addEventListener('install', (event) => {
+  console.log('Service Worker installing...');
+  
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        return cache.addAll(STATIC_ASSETS);
+        console.log('Caching static files');
+        return cache.addAll(STATIC_FILES);
       })
       .then(() => {
         return self.skipWaiting();
@@ -23,19 +27,20 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Activate event - clean up old caches
+// Activate event
 self.addEventListener('activate', (event) => {
+  console.log('Service Worker activating...');
+  
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
-          cacheNames
-            .filter((cacheName) => {
-              return cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE;
-            })
-            .map((cacheName) => {
+          cacheNames.map((cacheName) => {
+            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+              console.log('Deleting old cache:', cacheName);
               return caches.delete(cacheName);
-            })
+            }
+          })
         );
       })
       .then(() => {
@@ -44,21 +49,21 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch event - serve from cache, fallback to network
+// Fetch event
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
-
+  
   // Skip non-GET requests
   if (request.method !== 'GET') {
     return;
   }
-
+  
   // Skip chrome-extension and other non-http requests
   if (!url.protocol.startsWith('http')) {
     return;
   }
-
+  
   event.respondWith(
     caches.match(request)
       .then((cachedResponse) => {
@@ -66,73 +71,96 @@ self.addEventListener('fetch', (event) => {
         if (cachedResponse) {
           return cachedResponse;
         }
-
-        // Otherwise fetch from network
-        return fetch(request)
-          .then((response) => {
-            // Don't cache non-successful responses
-            if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
-
-            // Clone the response
-            const responseToCache = response.clone();
-
-            // Cache dynamic content
-            caches.open(DYNAMIC_CACHE)
-              .then((cache) => {
-                cache.put(request, responseToCache);
-              });
-
-            return response;
-          })
+        
+        // For static assets, try cache first
+        if (isStaticAsset(request)) {
+          return fetchAndCache(request, STATIC_CACHE);
+        }
+        
+        // For API calls, try network first
+        if (isApiRequest(request)) {
+          return fetchAndCache(request, DYNAMIC_CACHE);
+        }
+        
+        // For pages, try network first with fallback
+        return fetchAndCache(request, DYNAMIC_CACHE)
           .catch(() => {
-            // Return offline page for navigation requests
-            if (request.mode === 'navigate') {
-              return caches.match('/');
-            }
+            // Fallback to cached version if network fails
+            return caches.match(request);
           });
       })
   );
 });
 
-// Background sync for analytics
+// Helper functions
+function isStaticAsset(request) {
+  const url = new URL(request.url);
+  return url.pathname.match(/\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|otf)$/);
+}
+
+function isApiRequest(request) {
+  const url = new URL(request.url);
+  return url.pathname.startsWith('/api/') || url.hostname !== location.hostname;
+}
+
+function fetchAndCache(request, cacheName) {
+  return fetch(request)
+    .then((response) => {
+      // Don't cache non-successful responses
+      if (!response || response.status !== 200 || response.type !== 'basic') {
+        return response;
+      }
+      
+      // Clone the response
+      const responseToCache = response.clone();
+      
+      caches.open(cacheName)
+        .then((cache) => {
+          cache.put(request, responseToCache);
+        });
+      
+      return response;
+    });
+}
+
+// Background sync for offline actions
 self.addEventListener('sync', (event) => {
-  if (event.tag === 'analytics-sync') {
-    event.waitUntil(
-      // Send queued analytics data
-      sendQueuedAnalytics()
-    );
+  if (event.tag === 'background-sync') {
+    event.waitUntil(doBackgroundSync());
   }
 });
 
-// Push notifications (if needed in future)
+async function doBackgroundSync() {
+  // Handle offline actions when connection is restored
+  console.log('Background sync triggered');
+}
+
+// Push notifications
 self.addEventListener('push', (event) => {
   if (event.data) {
     const data = event.data.json();
     const options = {
       body: data.body,
       icon: '/icon-192x192.png',
-      badge: '/badge-72x72.png',
+      badge: '/icon-192x192.png',
       vibrate: [100, 50, 100],
       data: {
         dateOfArrival: Date.now(),
-        primaryKey: data.primaryKey
+        primaryKey: 1
       }
     };
-
+    
     event.waitUntil(
       self.registration.showNotification(data.title, options)
     );
   }
 });
 
-// Helper function to send queued analytics
-async function sendQueuedAnalytics() {
-  try {
-    // Implementation would depend on your analytics service
-    console.log('Sending queued analytics data...');
-  } catch (error) {
-    console.error('Failed to send analytics data:', error);
-  }
-}
+// Notification click
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  
+  event.waitUntil(
+    clients.openWindow('/')
+  );
+});
