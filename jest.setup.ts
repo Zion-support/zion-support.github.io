@@ -73,8 +73,5 @@ if (typeof performance.getEntriesByType !== 'function') {
   (performance as Performance & { getEntriesByType: (type: string) => PerformanceEntry[] }).getEntriesByType = () => [];
 }
 
-  (performance as Performance & { getEntriesByType: (type: string) => PerformanceEntry[] }).getEntriesByType = () => [];
-}
-
 // Ensure all code paths use the mock implementation
 // global.fetch = fetchMock;
