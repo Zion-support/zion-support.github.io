@@ -2,7 +2,7 @@ export default function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
-
+  
   try {
     const { error, stack, url, userAgent } = req.body;
     console.error('Client Error Report:', { error, stack, url, userAgent });

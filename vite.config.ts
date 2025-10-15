@@ -28,6 +28,30 @@ export default defineConfig({
   build: {
     outDir: "dist",
     sourcemap: false,
+<<<<<<< HEAD
+    minify: 'terser',
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          // Create chunks based on node_modules
+          if (id.includes('node_modules')) {
+            // React and React DOM
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-vendor';
+            }
+            // Lucide React icons
+            if (id.includes('lucide-react')) {
+              return 'icons-vendor';
+            }
+            // Framer Motion
+            if (id.includes('framer-motion')) {
+              return 'animation-vendor';
+            }
+            // Other vendor libraries
+            return 'vendor';
+          }
+        },
+=======
     minify: "esbuild",
     target: "es2020",
     cssCodeSplit: true,
@@ -160,6 +184,7 @@ export default defineConfig({
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash].[ext]',
+>>>>>>> cursor/fix-errors-and-merge-to-main-5ae7
       },
     },
   },
@@ -180,8 +205,11 @@ export default defineConfig({
       'framer-motion',
     ],
   },
+<<<<<<< HEAD
+=======
   // CSS optimization
   css: {
     devSourcemap: true,
   },
+>>>>>>> cursor/fix-errors-and-merge-to-main-5ae7
 });

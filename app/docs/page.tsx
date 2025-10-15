@@ -81,11 +81,6 @@ const DocsPage: React.FC = () => {
       <Helmet>
         <title>Docs - Zion Tech Group</title>
       </Helmet>
-  return (
-    <>
-      <Helmet>
-        <title>Docs - Zion Tech Group</title>
-      </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
