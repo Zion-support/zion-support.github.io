@@ -1,6 +1,62 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const CareersPage: React.FC = () => {
+import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react';
+
+const CareersPage: React.FC = () => {
+  const benefits = [
+    {
+      icon: 'Remote Work',
+      title: 'Remote Work',
+      description: 'Work from anywhere with flexible schedules and remote-first culture.'
+    },
+    {
+      icon: 'Learning',
+      title: 'Learning & Development',
+      description: 'Continuous learning opportunities with access to latest technologies and training.'
+    },
+    {
+      icon: 'Growth',
+      title: 'Career Growth',
+      description: 'Clear career paths and opportunities for advancement and skill development.'
+    },
+    {
+      icon: 'Benefits',
+      title: 'Great Benefits',
+      description: 'Competitive salary, health insurance, and comprehensive benefits package.'
+    }
+  ];
+
+  const openPositions = [
+    {
+      title: 'Senior AI Engineer',
+      type: 'Full-time',
+      location: 'Remote',
+      department: 'Engineering',
+      description: 'Lead AI model development and implementation for enterprise clients.'
+    },
+    {
+      title: 'Cloud Solutions Architect',
+      type: 'Full-time',
+      location: 'Remote',
+      department: 'Engineering',
+      description: 'Design and implement scalable cloud infrastructure solutions.'
+    },
+    {
+      title: 'Cybersecurity Specialist',
+      type: 'Full-time',
+      location: 'Remote',
+      department: 'Security',
+      description: 'Protect client systems and implement security best practices.'
+    },
+    {
+      title: 'Product Manager',
+      type: 'Full-time',
+      location: 'Remote',
+      department: 'Product',
+      description: 'Drive product strategy and roadmap for AI and IT solutions.'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">
       <Helmet>
@@ -19,6 +75,7 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
             Work on cutting-edge projects and make a real impact.;
           </p>
         </div>
+        
         {/* Why Work With Us */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
@@ -93,16 +150,16 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Don't See Your Perfect Role?</h2>';
+            <h2 className="text-2xl font-bold text-white mb-4">Don't See Your Perfect Role?</h2>
             <p className="text-gray-300 mb-6">
-              We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.';
+              We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
             </p>
             <button className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
-              Send Resume;
+              Send Resume
             </button>
           </div>
         </div>
       </div>
-    </div>;  );
+    );
 }
 export default CareersPage;

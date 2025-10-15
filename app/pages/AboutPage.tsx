@@ -13,15 +13,7 @@ import { Helmet } from 'react-helmet-async';import {
   MapPinIcon
 } from '@heroicons/react/24/outline';
 
-export default function AboutPage()    {
-return (    <>
-      <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission and team" />
-      </Helmet>
-    }
-  ];
-
+export default function AboutPage() {
   const stats = [
     { number: '50+', label: 'Projects Completed' },
     { number: '25+', label: 'Happy Clients' },
@@ -29,9 +21,65 @@ return (    <>
     { number: '4+', label: 'Years Experience' }
   ];
 
+  const values = [
+    {
+      icon: 'Innovation',
+      title: 'Innovation',
+      description: 'We constantly push the boundaries of what\'s possible with technology, always seeking new and better ways to solve problems.'
+    },
+    {
+      icon: 'Excellence',
+      title: 'Excellence',
+      description: 'We strive for the highest quality in everything we do, from our code to our customer service.'
+    },
+    {
+      icon: 'Integrity',
+      title: 'Integrity',
+      description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
+    },
+    {
+      icon: 'Collaboration',
+      title: 'Collaboration',
+      description: 'We believe in the power of teamwork and work closely with our clients to achieve shared success.'
+    },
+    {
+      icon: 'Growth',
+      title: 'Growth',
+      description: 'We are committed to continuous learning and development, both personally and professionally.'
+    },
+    {
+      icon: 'Impact',
+      title: 'Impact',
+      description: 'We measure our success by the positive impact we have on our clients\' businesses and communities.'
+    }
+  ];
+
+  const team = [
+    {
+      name: 'John Smith',
+      role: 'CEO & Founder',
+      description: 'Visionary leader with 15+ years in AI and technology innovation.'
+    },
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      description: 'Technical expert specializing in machine learning and cloud architecture.'
+    },
+    {
+      name: 'Mike Chen',
+      role: 'Lead Developer',
+      description: 'Full-stack developer passionate about creating scalable solutions.'
+    },
+    {
+      name: 'Emily Davis',
+      role: 'Head of Design',
+      description: 'UX/UI designer focused on creating intuitive user experiences.'
+    }
+  ];
+
   return (
     <>
-<SEO 
+      <SEO 
         title="About Us - Zion Tech Group"
         description="Learn about Zion Tech Group's mission, values, and team. We're passionate about delivering cutting-edge AI and IT solutions."
         keywords="about us, team, mission, values, AI company, IT solutions"
@@ -64,7 +112,7 @@ Empowering businesses through innovative technology solutions
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-<div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -104,22 +152,20 @@ Empowering businesses through innovative technology solutions
             </p>
           </div>
           
-<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {values.map((value, index) => {
-              const Icon = value.icon;
-              return (
-                <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {values.map((value, index) => (
+              <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <span className="text-2xl font-bold text-white">{value.icon.charAt(0)}</span>
+                </div>
                   <h3 className="text-2xl font-bold text-white mb-4">{value.title}</h3>
                   <p className="text-gray-300 leading-relaxed">
                     {value.description}
                   </p>
                 </div>
-              );
-            })}
-</div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -148,6 +194,11 @@ Empowering businesses through innovative technology solutions
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -159,7 +210,7 @@ Empowering businesses through innovative technology solutions
             </p>
           </div>
           
-<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {team.map((member, index) => (
               <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -212,14 +263,6 @@ Let's discuss how we can help transform your business with our innovative soluti
           </div>
         </div>
       </section>
-      <div className="min-h-screen bg-slate-900 text-white p-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8">About Zion Tech Group</h1>
-          <p className="text-lg text-gray-300">
-            We are a leading technology company specializing in AI solutions, cybersecurity, and digital transformation.
-          </p>
-        </div>
-      </div>
     </>
   );
 }
