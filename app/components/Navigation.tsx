@@ -120,6 +120,24 @@ const Navigation: React.FC = () => {
                         Network Infrastructure
                       </span>
                     </Link>
+                    <Link to="/blockchain-solutions" className="block px-4 py-3 text-sm text-white hover:text-neon-purple hover:bg-black/20 transition-all duration-300">
+                      <span className="flex items-center">
+                        <span className="w-2 h-2 bg-neon-cyan rounded-full mr-3"></span>
+                        Blockchain Solutions
+                      </span>
+                    </Link>
+                    <Link to="/iot-solutions" className="block px-4 py-3 text-sm text-white hover:text-neon-purple hover:bg-black/20 transition-all duration-300">
+                      <span className="flex items-center">
+                        <span className="w-2 h-2 bg-neon-pink rounded-full mr-3"></span>
+                        IoT Solutions
+                      </span>
+                    </Link>
+                    <Link to="/devops-automation" className="block px-4 py-3 text-sm text-white hover:text-neon-purple hover:bg-black/20 transition-all duration-300">
+                      <span className="flex items-center">
+                        <span className="w-2 h-2 bg-neon-green rounded-full mr-3"></span>
+                        DevOps Automation
+                      </span>
+                    </Link>
                     
                     <div className="px-4 py-2 text-xs font-semibold text-neon-green uppercase tracking-wider border-b border-neon-green/30 mt-2">Infrastructure</div>
                     <Link to="/cloud-infrastructure" className="block px-4 py-3 text-sm text-white hover:text-neon-green hover:bg-black/20 transition-all duration-300">

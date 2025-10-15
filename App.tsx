@@ -35,6 +35,11 @@ const DatabaseManagementPage = lazy(() => import('./app/database-management/page
 const NetworkInfrastructurePage = lazy(() => import('./app/network-infrastructure/page'));
 const CookiesPage = lazy(() => import('./app/cookies/page'));
 
+// Additional IT Services
+const BlockchainSolutionsPage = lazy(() => import('./app/blockchain-solutions/page'));
+const IoTSolutionsPage = lazy(() => import('./app/iot-solutions/page'));
+const DevOpsAutomationPage = lazy(() => import('./app/devops-automation/page'));
+
 // AI Tools Pages
 const ZionAIContentModeratorPage = lazy(() => import('./app/zion-ai-content-moderator/page'));
 const ZionAICustomerChurnPredictorPage = lazy(() => import('./app/zion-ai-customer-churn-predictor/page'));
@@ -148,6 +153,11 @@ export default function App() {
                   <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
                   <Route path="/database-management" element={<DatabaseManagementPage />} />
                   <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                  
+                  {/* Additional IT Services */}
+                  <Route path="/blockchain-solutions" element={<BlockchainSolutionsPage />} />
+                  <Route path="/iot-solutions" element={<IoTSolutionsPage />} />
+                  <Route path="/devops-automation" element={<DevOpsAutomationPage />} />
                   
                   {/* Company Pages */}
                   <Route path="/team" element={<TeamPage />} />

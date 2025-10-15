@@ -1,39 +1,250 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '../components/SEOHead';
+import { Link } from 'react-router-dom';
 
 const DevOpsAutomationPage: React.FC = () => {
+  const features = [
+    'CI/CD pipeline automation',
+    'Infrastructure as Code (IaC)',
+    'Container orchestration',
+    'Automated testing frameworks',
+    'Deployment automation',
+    'Monitoring and alerting',
+    'Configuration management',
+    'Security scanning automation',
+    'Performance optimization',
+    'Disaster recovery automation'
+  ];
+
+  const benefits = [
+    'Reduce deployment time by 80%',
+    'Increase deployment frequency by 10x',
+    'Lower failure rate by 50%',
+    'Improve recovery time by 90%',
+    'Enhance team productivity by 60%',
+    'Reduce operational costs by 40%'
+  ];
+
+  const pricing = {
+    basic: { price: 8000, features: ['Basic CI/CD', 'Simple automation', 'Email support'] },
+    professional: { price: 25000, features: ['Advanced automation', 'Full monitoring', 'Priority support'] },
+    enterprise: { price: 75000, features: ['Complete DevOps suite', 'Custom solutions', 'Dedicated team'] }
+  };
+
   return (
     <>
-      <Helmet>
-        <title>DevOps & Automation Services - Zion Tech Group</title>
-        <meta name="description" content="Complete DevOps solutions including CI/CD pipelines, infrastructure automation, monitoring, and deployment strategies." />
-      </Helmet>
+      <SEOHead
+        title="DevOps Automation - Zion Tech Group"
+        description="Accelerate your software delivery with comprehensive DevOps automation. CI/CD pipelines, infrastructure as code, container orchestration, and automated testing solutions."
+        keywords="DevOps automation, CI/CD, infrastructure as code, container orchestration, deployment automation, monitoring, testing automation"
+        canonicalUrl="https://ziontechgroup.com/devops-automation"
+      />
       
-      <div className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">DevOps & Automation Services</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Automate your development workflow with complete DevOps solutions and infrastructure automation
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Features</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>• CI/CD Pipeline Setup</li>
-                <li>• Infrastructure as Code</li>
-                <li>• Container Orchestration</li>
-                <li>• Monitoring & Alerting</li>
-                <li>• Automated Testing</li>
-                <li>• Deployment Automation</li>
-              </ul>
+      <div className="min-h-screen futuristic-bg cyber-grid">
+        {/* Hero Section */}
+        <div className="relative z-10 pt-32 pb-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <div className="text-6xl mb-6 animated-icon">⚙️</div>
+              <h1 className="text-5xl md:text-7xl font-bold holographic-text mb-6">
+                DevOps Automation
+              </h1>
+              <div className="w-32 h-1 bg-gradient-to-r from-neon-cyan to-neon-purple mx-auto mb-8"></div>
+              <p className="text-xl md:text-2xl text-white mb-8 max-w-4xl mx-auto leading-relaxed">
+                Accelerate your software delivery with comprehensive DevOps automation. From CI/CD pipelines to infrastructure as code, 
+                we streamline your development and deployment processes for maximum efficiency.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+                <a href="#demo" className="neon-button text-lg px-10 py-4">
+                  View Demo
+                </a>
+                <a href="#pricing" className="neon-button-purple text-lg px-10 py-4">
+                  See Pricing
+                </a>
+              </div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Pricing</h3>
-              <div className="text-3xl font-bold text-purple-600 mb-2">$2,000 - $25,000/month</div>
-              <p className="text-gray-600">Flexible pricing based on infrastructure complexity and team size</p>
+          </div>
+        </div>
+
+        {/* Features Section */}
+        <div className="relative z-10 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold neon-text mb-6">DevOps Capabilities</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-neon-purple to-neon-pink mx-auto mb-8"></div>
+              <p className="text-xl text-white max-w-3xl mx-auto">
+                Comprehensive DevOps automation services for modern software development
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="futuristic-card glow-effect p-6 group">
+                  <div className="text-3xl mb-4 animated-icon">🔧</div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:neon-text transition-all duration-300">
+                    {feature}
+                  </h3>
+                  <p className="text-gray-300 text-sm">
+                    Advanced DevOps automation solutions for streamlined software delivery.
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Benefits Section */}
+        <div className="relative z-10 py-20 bg-black/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold neon-text-purple mb-6">Performance Impact</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-neon-green to-neon-cyan mx-auto mb-8"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="futuristic-card glow-effect p-8 text-center">
+                  <div className="text-4xl font-bold neon-text-pink mb-4">
+                    {benefit.split(' ')[0]}
+                  </div>
+                  <p className="text-white text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Pipeline Visualization */}
+        <div className="relative z-10 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold neon-text mb-6">Automated CI/CD Pipeline</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-neon-cyan to-neon-purple mx-auto mb-8"></div>
+              <p className="text-xl text-white max-w-3xl mx-auto">
+                Visualize your automated development and deployment pipeline
+              </p>
+            </div>
+            
+            <div className="futuristic-card glow-effect p-8">
+              <div className="cyber-terminal">
+                <div className="text-neon-green mb-4">
+                  <div className="flex items-center mb-2">
+                    <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+                    <span className="text-sm">ZION DEVOPS AUTOMATION PIPELINE v4.1</span>
+                  </div>
+                  <div className="text-xs text-gray-400 mb-4">
+                    Pipeline Status: RUNNING | Last Build: {new Date().toLocaleString()}
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+                  <div className="bg-black/50 p-4 rounded border border-neon-green/30 text-center">
+                    <div className="text-neon-cyan text-sm font-bold mb-2">CODE</div>
+                    <div className="text-lg text-neon-green font-bold">✓</div>
+                    <div className="text-xs text-gray-400">Committed</div>
+                  </div>
+                  
+                  <div className="bg-black/50 p-4 rounded border border-neon-green/30 text-center">
+                    <div className="text-neon-cyan text-sm font-bold mb-2">BUILD</div>
+                    <div className="text-lg text-neon-purple font-bold">⚙️</div>
+                    <div className="text-xs text-gray-400">In Progress</div>
+                  </div>
+                  
+                  <div className="bg-black/50 p-4 rounded border border-neon-green/30 text-center">
+                    <div className="text-neon-cyan text-sm font-bold mb-2">TEST</div>
+                    <div className="text-lg text-neon-pink font-bold">⏳</div>
+                    <div className="text-xs text-gray-400">Pending</div>
+                  </div>
+                  
+                  <div className="bg-black/50 p-4 rounded border border-neon-green/30 text-center">
+                    <div className="text-neon-cyan text-sm font-bold mb-2">DEPLOY</div>
+                    <div className="text-lg text-neon-orange font-bold">⏸️</div>
+                    <div className="text-xs text-gray-400">Waiting</div>
+                  </div>
+                  
+                  <div className="bg-black/50 p-4 rounded border border-neon-green/30 text-center">
+                    <div className="text-neon-cyan text-sm font-bold mb-2">MONITOR</div>
+                    <div className="text-lg text-neon-cyan font-bold">📊</div>
+                    <div className="text-xs text-gray-400">Active</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Pricing Section */}
+        <div id="pricing" className="relative z-10 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold neon-text mb-6">DevOps Solutions</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-neon-cyan to-neon-purple mx-auto mb-8"></div>
+              <p className="text-xl text-white max-w-3xl mx-auto">
+                Choose the DevOps automation solution that fits your team size
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {Object.entries(pricing).map(([plan, details], index) => (
+                <div key={plan} className={`futuristic-card glow-effect p-8 ${
+                  plan === 'professional' ? 'ring-2 ring-neon-cyan' : ''
+                }`}>
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-4 capitalize">{plan}</h3>
+                    <div className="text-4xl font-bold neon-text mb-2">${details.price.toLocaleString()}</div>
+                    <div className="text-gray-400">starting from</div>
+                  </div>
+                  
+                  <ul className="space-y-4 mb-8">
+                    {details.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-white">
+                        <span className="text-neon-cyan mr-3">✓</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <a 
+                    href="/contact" 
+                    className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                      plan === 'professional' 
+                        ? 'neon-button' 
+                        : 'neon-button-purple'
+                    }`}
+                  >
+                    Automate Now
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="relative z-10 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="futuristic-card glow-effect p-12 text-center">
+              <h2 className="text-4xl md:text-5xl font-bold holographic-text mb-6">
+                Automate Your DevOps Today
+              </h2>
+              <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
+                Transform your software delivery with intelligent DevOps automation solutions.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+                <a href="/contact" className="neon-button text-lg px-10 py-4">
+                  Start Automation
+                </a>
+                <a href="tel:+13024640950" className="neon-button-purple text-lg px-10 py-4">
+                  Call +1 302 464 0950
+                </a>
+              </div>
+              
+              <div className="text-sm text-gray-400">
+                <p>Email: kleber@ziontechgroup.com</p>
+                <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+              </div>
             </div>
           </div>
         </div>
