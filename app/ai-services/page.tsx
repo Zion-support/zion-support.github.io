@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { servicesData } from '../data/servicesData';
+import { enhancedAIServices } from '../data/enhancedAIServices';
 
 const AIServicesPage: React.FC = () => {
   return (
@@ -50,7 +51,7 @@ const AIServicesPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {servicesData.aiServices.map((service) => (
+              {[...servicesData.aiServices, ...enhancedAIServices].map((service) => (
                 <div key={service.id} className="card-cyber hover-lift group">
                   <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}

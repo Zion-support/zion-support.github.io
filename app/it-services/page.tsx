@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { servicesData } from '../data/servicesData';
+import { enhancedITServices } from '../data/enhancedITServices';
 
 const ITServicesPage: React.FC = () => {
   return (
@@ -50,7 +51,7 @@ const ITServicesPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {servicesData.itSolutions.map((service) => (
+              {enhancedITServices.map((service) => (
                 <div key={service.id} className="card-cyber hover-lift group">
                   <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
@@ -85,10 +86,10 @@ const ITServicesPage: React.FC = () => {
                   <div className="flex justify-between items-center mb-6">
                     <div>
                       <span className="text-2xl font-bold text-pink-400">${service.pricing.basic}</span>
-                      <span className="text-gray-400 text-sm ml-1">/month</span>
+                      <span className="text-gray-400 text-sm ml-1">/project</span>
                     </div>
                     <a 
-                      href={service.link} 
+                      href={service.contactInfo.website} 
                       className="text-pink-400 hover:text-pink-300 text-sm font-semibold"
                     >
                       Learn More →
