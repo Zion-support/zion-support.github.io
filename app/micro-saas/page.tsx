@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -33,6 +34,11 @@ import {
   Code,
   Key
 } from 'lucide-react';
+=======
+import React from "react";
+import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Video, Calculator, Package, Receipt, ClipboardList, Workflow} from "lucide-react";
+import SEOOptimizer from "../components/SEOOptimizer";
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 <<<<<<< HEAD
 const MicroSaaSPage: React.FC = () => {

@@ -1,6 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {

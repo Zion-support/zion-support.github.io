@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useRef } from 'react'
+import {useEffect, useCallback} from 'react'
 interface PerformanceMetrics {}
   fcp?: number
   lcp?: number

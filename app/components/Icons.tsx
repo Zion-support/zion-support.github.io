@@ -1,5 +1,9 @@
-export const Icon = (_{
-  name, className = "", ...props
+import React from 'react';
+
+export const Icon = ({
+  name,
+  className = "",
+  ...props
 }: {
   name: string;
   className?: string;
@@ -9,6 +13,7 @@ export const Icon = (_{
     <span className={`icon ${className}`} {...props}>
       {name}
     </span>
-  )
-}
-export default Icon
+  );
+};
+
+export default Icon;

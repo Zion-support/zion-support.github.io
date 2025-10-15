@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Star, Brain, Cloud, Target, Github, Search } from "lucide-react";
+import {Star, Target, Github, Search} from "lucide-react";
 
 const PortfolioPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

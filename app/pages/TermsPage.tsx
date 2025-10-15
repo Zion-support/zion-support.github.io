@@ -1,6 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 const TermsPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024';
 

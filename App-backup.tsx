@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
@@ -10,6 +10,11 @@ import LightweightErrorBoundary from './app/components/LightweightErrorBoundary'
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import PerformanceDashboard from './app/components/PerformanceDashboard';
 import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization';
+<<<<<<< HEAD
+=======
+import OptimizedLoadingSpinner from './app/components/OptimizedLoadingSpinner';
+import SEOHead from './app/components/SEOHead';
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 // Page Components - Lazy loaded for better performance
 const HomePage = lazy(() => import('./app/page'));

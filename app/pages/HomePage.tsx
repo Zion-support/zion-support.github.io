@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+=======
+import SEOHead from '../components/SEOHead';
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 export default function HomePage() {
 const structuredData = {

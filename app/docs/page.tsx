@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { Helmet } from "react-helmet-async";
+<<<<<<< HEAD
+=======
+import {Book, Code, Shield, Zap, Search, ChevronDown, ChevronRight, ExternalLink} from "lucide-react";
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');

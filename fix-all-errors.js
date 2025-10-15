@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { execSync } from 'child_process'
 console.log('🔧 Starting comprehensive error fixing process...')
 // Function to find all files with merge conflicts
 function findFilesWithConflicts(dir) {}

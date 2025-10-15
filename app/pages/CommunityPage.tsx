@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+import {MessageSquare, BookOpen} from "lucide-react";
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 const CommunityPage: React.FC = () => {
   const communityFeatures = [
