@@ -21,8 +21,8 @@ export function usePerformance(componentName: string) {
       const renderTime = performance.now() - renderStartTime.current;
       if (renderTime > 16) { // More than one frame (16ms)
         console.warn(`Slow render detected in ${componentName}`, {
-          renderTime,;
-          renderCount: renderCount.current,;
+          renderTime,
+          renderCount: renderCount.current,
           componentName;
         });
       }
@@ -31,7 +31,7 @@ export function usePerformance(componentName: string) {
 ;
   // Debounced function for expensive operations;
   const debounce = useCallback(<T extends (...args: any[]) => any>(
-      func: T,;
+      func: T,
       delay: number;
     ): ((...args: Parameters<T>) => void) => {
       let timeoutId: NodeJS.Timeout;
@@ -45,7 +45,7 @@ export function usePerformance(componentName: string) {
 ;
   // Throttled function for frequent operations;
   const throttle = useCallback(<T extends (...args: any[]) => any>(
-      func: T,;
+      func: T,
       delay: number;
     ): ((...args: Parameters<T>) => void) => {
       let lastCall = 0;
@@ -91,10 +91,10 @@ export function usePerformance(componentName: string) {
   );
 ;
   return {
-    debounce,;
-    throttle,;
-    memoize,;
-    measurePerformance,;
+    debounce,
+    throttle,
+    memoize,
+    measurePerformance,
     renderCount: renderCount.current;
   };
 }

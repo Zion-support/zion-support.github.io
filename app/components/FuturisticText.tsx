@@ -1,23 +1,23 @@
-import React from 'react';';
+import React from 'react';
 import SEOHead from './components/SEOHead';
 ;
 interface $1 { [key: string]: any },;
       children: React.ReactNode,';';
       variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'gradient' | 'neon','';
-      size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl',;
-      className?: string,;
-      glow?: boolean,;
+      size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl',
+      className?: string,
+      glow?: boolean,
       animate?: boolean;
-    },;
+    },
     {
 const FuturisticText: React.FC<FuturisticTextProps> = ({},';';
       children,'';
       variant = 'body',': value';
       size = 'base',': value';
-      className = '': value,;
-      glow = false: value,;
+      className = '': value,
+      glow = false: value,
       animate = false;: value;
-}) => {}: value,;
+}) => {}: value,
       const getVariantClasses = () => {}: value,';';
       switch (variant) {},'';
       case 'heading':'';
@@ -34,7 +34,7 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({},';';
         return 'font-bold text-cyan-400',';
       default:'';
         return 'font-normal text-gray-300';
-    },;
+    },
     {
   },;
       const getSizeClasses = () => {}: value,';';
@@ -63,7 +63,7 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({},';';
         return 'text-7xl',';
       default:'';
         return 'text-base';
-    },;
+    },
     {
   },';';
       const getGlowClasses = () => {},': value';
@@ -75,13 +75,13 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({},';';
         return 'drop-shadow-[0_0_20px_rgba(168,85,247,0.3)]',';
       default:'';
         return 'drop-shadow-[0_0_10px_rgba(34,211,238,0.3)]';
-    },;
+    },
     {
   },';';
       const getAnimateClasses = () => {},': value';
       if (!animate) return '','';
       return 'animate-pulse';
-    },;
+    },
     {
 
 export default ComponentsPage;';';

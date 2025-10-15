@@ -1,4 +1,4 @@
-import React from 'react';';
+import React from 'react';
 import SEOHead from './components/SEOHead';
 ;
 const AiFintechSolutionsPage: React.FC = () => {
@@ -7,15 +7,11 @@ const AiFintechSolutionsPage: React.FC = () => {
       <SEOHead;
         title="Ai Fintech Solutions - Zion Tech Group"";
         description="Professional ai fintech solutions solutions for modern businesses";
-      />";";
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className="text-center">";
-          <h1 className="text-4xl font-bold mb-4">Ai Fintech Solutions</h1>";
-          <p className="text-gray-300">Professional solutions coming soon...</p>;
+      />"<div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"<div className="text-center">"<h1 className="text-4xl font-bold mb-4">Ai Fintech Solutions</h1>"<p className="text-gray-300">Professional solutions coming soon...</p>;
         </div>;
       </div>;
     </>;
   );
 };
 ;
-export default AiFintechSolutionsPage;'";'";
+export default AiFintechSolutionsPage;

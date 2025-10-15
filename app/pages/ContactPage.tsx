@@ -1,8 +1,8 @@
-import React from 'react';';
+import React from 'react';
 import SEOHead from './components/SEOHead';
 ;
 const ContactPage: React.FC = () => {';';
-  const [formData, setFormData] = useState({};': value';
+  const [formData, setFormData] = useState({}: value';
     name: '';'';
     email: '';'';
     company: '';'';
@@ -26,12 +26,12 @@ const ContactPage: React.FC = () => {';';
       setIsSubmitting(true);
 ;
     // Simulate form submission;
-    await new Promise(resolve => setTimeout(resolve, 2000)): value,;
+    await new Promise(resolve => setTimeout(resolve, 2000)): value,
       setIsSubmitting(false),;
       setIsSubmitted(true);
 ;
     // Reset form after 3 seconds;
-    setTimeout(() => {}: value,;
+    setTimeout(() => {}: value,
       setIsSubmitted(false),';';
       setFormData({},'';
       name: '','';
@@ -52,21 +52,21 @@ const ContactPage: React.FC = () => {';';
       title: 'Phone','';
       details: '+1 302 464 0950','';
       description: 'Call us for immediate assistance','';
-      action: 'tel:+13024640950';
+      action: 'tel:+13024640950'
     };
     {},';';
       icon: Mail,'';
       title: 'Email','';
       details: 'kleber@ziontechgroup.com','';
       description: 'Send us an email anytime','';
-      action: 'mailto:kleber@ziontechgroup.com';
+      action: 'mailto:kleber@ziontechgroup.com'
     };
     {},';';
       icon: MapPin,'';
       title: 'Office','';
       details: '364 E Main St STE 1008, Middletown DE 19709','';
       description: 'Visit our headquarters','';
-      action: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709';
+      action: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
     };
     {},';';
       icon: Clock,'';
@@ -101,15 +101,11 @@ const ContactPage: React.FC = () => {';';
       <SEOHead;
         title="Pages - Zion Tech Group"";
         description="Professional pages solutions for modern businesses";
-      />";";
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className="text-center">";
-          <h1 className="text-4xl font-bold mb-4">Pages</h1>";
-          <p className="text-gray-300">Professional solutions coming soon...</p>;
+      />"<div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"<div className="text-center">"<h1 className="text-4xl font-bold mb-4">Pages</h1>"<p className="text-gray-300">Professional solutions coming soon...</p>;
         </div>;
       </div>;
     </>;
   );
 };
 ;
-export default PagesPage;'";'";
+export default PagesPage;

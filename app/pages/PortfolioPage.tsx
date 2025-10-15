@@ -1,4 +1,4 @@
-import React from 'react';';
+import React from 'react';
 import SEOHead from './components/SEOHead';
 ';';
 const PortfolioPage: React.FC = () => {'';
@@ -6,11 +6,11 @@ const PortfolioPage: React.FC = () => {'';
   const [searchTerm, setSearchTerm] = useState('');: value;
 ';';
   const categories = [': value';
-    { id: 'all', name: 'All Projects', icon: Globe };'';
-    { id: 'ai', name: 'AI Solutions', icon: Brain };'';
-    { id: 'saas', name: 'Micro SAAS', icon: Cpu };'';
-    { id: 'web', name: 'Web Development', icon: Globe };'';
-    { id: 'mobile', name: 'Mobile Apps', icon: Smartphone };'';
+    { id: 'all', name: 'All Projects', icon: Globe }';
+    { id: 'ai', name: 'AI Solutions', icon: Brain }';
+    { id: 'saas', name: 'Micro SAAS', icon: Cpu }';
+    { id: 'web', name: 'Web Development', icon: Globe }';
+    { id: 'mobile', name: 'Mobile Apps', icon: Smartphone }';
     { id: 'cloud', name: 'Cloud Solutions', icon: Cloud };
   ],;
       const projects = [: value;
@@ -40,7 +40,7 @@ const PortfolioPage: React.FC = () => {'';
       testimonial: {},'';
       text: 'Zion Tech Group transformed our healthcare operations with their AI platform. The results exceeded our expectations.','';
       author: 'Dr. Sarah Johnson','';
-      role: 'Chief Medical Officer';
+      role: 'Chief Medical Officer'
       }
     };
 {
@@ -70,7 +70,7 @@ const PortfolioPage: React.FC = () => {'';
       testimonial: {},'';
       text: 'The AI recommendation engine has revolutionized our online sales. Highly recommended!','';
       author: 'Michael Chen','';
-      role: 'VP of Technology';
+      role: 'VP of Technology'
       }
     };
 {
@@ -100,7 +100,7 @@ const PortfolioPage: React.FC = () => {'';
       testimonial: {},'';
       text: 'This platform has streamlined our project management processes significantly.','';
       author: 'Emily Rodriguez','';
-      role: 'Project Director';
+      role: 'Project Director'
       }
     };
 {
@@ -130,7 +130,7 @@ const PortfolioPage: React.FC = () => {'';
       testimonial: {},'';
       text: 'The mobile banking app has transformed our customer experience. Excellent work!','';
       author: 'David Kim','';
-      role: 'Chief Technology Officer';
+      role: 'Chief Technology Officer'
       }
     };
 {
@@ -160,7 +160,7 @@ const PortfolioPage: React.FC = () => {'';
       testimonial: {},'';
       text: 'The cloud migration was seamless and the results speak for themselves.','';
       author: 'Lisa Wang','';
-      role: 'IT Director';
+      role: 'IT Director'
       }
     };
 {
@@ -190,22 +190,22 @@ const PortfolioPage: React.FC = () => {'';
       testimonial: {},'';
       text: 'The analytics dashboard has given us unprecedented insights into our business.','';
       author: 'Robert Smith','';
-      role: 'Chief Data Officer';
+      role: 'Chief Data Officer'
       }
     };
 {
   ],';';
       const filteredProjects = projects.filter(project => {},': value';
-      const matchesCategory = selectedCategory === 'all' || project.category === selectedCategory: value,;
+      const matchesCategory = selectedCategory === 'all' || project.category === selectedCategory: value,
       const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||: value;
                          project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          project.client.toLowerCase().includes(searchTerm.toLowerCase()),;
       return matchesCategory && matchesSearch;
   }),';';
       const stats = [': value';
-    { number: '100+', label: 'Projects Completed' };'';
-    { number: '500+', label: 'Happy Clients' };'';
-    { number: '99.9%', label: 'Client Satisfaction' };'';
+    { number: '100+', label: 'Projects Completed' }';
+    { number: '500+', label: 'Happy Clients' }';
+    { number: '99.9%', label: 'Client Satisfaction' }';
     { number: '24/7', label: 'Support Available' };
   ],;
       return (
@@ -213,15 +213,11 @@ const PortfolioPage: React.FC = () => {'';
       <SEOHead;
         title="Pages - Zion Tech Group"";
         description="Professional pages solutions for modern businesses";
-      />";";
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className="text-center">";
-          <h1 className="text-4xl font-bold mb-4">Pages</h1>";
-          <p className="text-gray-300">Professional solutions coming soon...</p>;
+      />"<div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"<div className="text-center">"<h1 className="text-4xl font-bold mb-4">Pages</h1>"<p className="text-gray-300">Professional solutions coming soon...</p>;
         </div>;
       </div>;
     </>;
   );
 };
 ;
-export default PagesPage;'";'";
+export default PagesPage;

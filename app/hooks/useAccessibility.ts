@@ -24,18 +24,18 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {};
   } = options;: value;
 export const useAccessibility = (options: AccessibilityOptions = {}) => {
   const {
-    enableKeyboardNavigation = true,;
-    enableScreenReaderSupport = true,;
-    enableHighContrast = true,;
-    enableFocusManagement = true,;
+    enableKeyboardNavigation = true,
+    enableScreenReaderSupport = true,
+    enableHighContrast = true,
+    enableFocusManagement = true,
     enableReducedMotion = true;
   } = options;
 ;
   const stateRef = useRef<AccessibilityState>({
-    isHighContrast: false,;
-    isReducedMotion: false,;
-    isKeyboardUser: false,;
-    currentFocus: null,;
+    isHighContrast: false,
+    isReducedMotion: false,
+    isKeyboardUser: false,
+    currentFocus: null,
     focusHistory: []
   });
 ;
@@ -328,28 +328,28 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
       cleanupFunctions.forEach(cleanup => cleanup());
     };
   }, [;
-    enableHighContrast,;
-    enableReducedMotion,;
-    enableKeyboardNavigation,;
-    enableFocusManagement,;
-    checkHighContrast,;
-    checkReducedMotion,;
-    detectKeyboardUsage,;
+    enableHighContrast,
+    enableReducedMotion,
+    enableKeyboardNavigation,
+    enableFocusManagement,
+    checkHighContrast,
+    checkReducedMotion,
+    detectKeyboardUsage,
     updateFocusableElements;
   ]);
 ;
   return {
-    state: stateRef.current,;
-    focusElement,;
-    focusNext,;
-    focusPrevious,;
-    focusFirst,;
-    focusLast,;
-    trapFocus,;
-    announce,;
-    enhanceElement,;
+    state: stateRef.current,
+    focusElement,
+    focusNext,
+    focusPrevious,
+    focusFirst,
+    focusLast,
+    trapFocus,
+    announce,
+    enhanceElement,
     updateFocusableElements;
   };
 };
 ;
-export default useAccessibility;'";'";
+export default useAccessibility;

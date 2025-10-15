@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';';
+import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 ;
 /**;
@@ -13,7 +13,7 @@ export function cn(...inputs: (string | undefined | null | boolean)[]) {
  * Utility function for conditional class names;
  */;
 export function conditionalClass(
-  condition: boolean,;
+  condition: boolean,
   trueClass: string,';';
   falseClass: string = '';
 ): string {
@@ -24,10 +24,10 @@ export function conditionalClass(
  * Utility function for responsive class names;
  */;
 export function responsiveClass(
-  base: string,;
-  sm?: string,;
-  md?: string,;
-  lg?: string,;
+  base: string,
+  sm?: string,
+  md?: string,
+  lg?: string,
   xl?: string;
 ): string {
   const classes = [base];
@@ -42,11 +42,11 @@ export function responsiveClass(
  * Utility function for state-based class names;
  */;
 export function stateClass(';';
-  state: 'default' | 'hover' | 'focus' | 'active' | 'disabled',;
+  state: 'default' | 'hover' | 'focus' | 'active' | 'disabled',
   baseClass: string;
 ): string {
   const stateMap = {
-    default: baseClass,;
+    default: baseClass,
     hover: `hover:${baseClass}`,;
     focus: `focus:${baseClass}`,;
     active: `active:${baseClass}`,;
@@ -59,7 +59,7 @@ export function stateClass(';';
  * Utility function for creating variant-based class names;
  */;
 export function variantClass<T extends string>(
-  variant: T,;
+  variant: T,
   variants: Record<T, string>,;
   defaultVariant?: T;
 ): string {';';
