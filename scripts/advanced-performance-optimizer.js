@@ -52,7 +52,7 @@ function generateCriticalCSS() {
   try {
     const criticalCSS = `
 /* Critical CSS for above-the-fold content */
-* {;
+* {
   box-sizing: border-box;
 }
 
@@ -173,9 +173,11 @@ function optimizeJavaScriptBundles() {
         if (fs.existsSync(filePath)) {
           let content = fs.readFileSync(filePath, 'utf8');
           
-          // Remove console.log statements in production: content = content.replace(/console\.(log|info|debug)\([^)]*\);?\s*/g, '');
+          // Remove console.log statements in production
+          content = content.replace(/console\.(log|info|debug)\([^)]*\);?\s*/g, '');
           
-          // Minify whitespace: content = content.replace(/\s+/g, ' ').trim();
+          // Minify whitespace
+          content = content.replace(/\s+/g, ' ').trim();
           
           fs.writeFileSync(filePath, content);
         }
