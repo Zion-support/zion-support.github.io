@@ -1,33 +1,33 @@
-import { Helmet } from 'react-helmet-async';
+export const generateSitemap = () => {
+  const baseUrl = 'https://ziontechgroup.com';
+  
+  const staticPages = [
+    '',
+    '/about',
+    '/services',
+    '/ai-services',
+    '/micro-saas-solutions',
+    '/it-services',
+    '/contact',
+    '/pricing',
+    '/privacy-policy',
+    '/terms-of-service',
+    '/help',
+    '/blog',
+    '/careers',
+    '/partnerships',
+    '/api-docs'
+  ];
 
-export default function appPage() {
-  return (
-    <>
-      <Helmet>
-        <title>App - Zion Tech Group</title>
-        <meta name="description" content="App services and solutions from Zion Tech Group." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              App
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional App services and solutions for your business needs.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
-                Get Started
-              </button>
-              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${staticPages.map(page => `  <url>
+    <loc>${baseUrl}${page}</loc>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>${page === '' ? '1.0' : '0.8'}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+
+  return sitemap;
+};

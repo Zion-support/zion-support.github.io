@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
 import { Helmet } from 'react-helmet-async';
 
 export default function AiinvestmentoptimizerPage() {
@@ -9,7 +5,6 @@ export default function AiinvestmentoptimizerPage() {
     <>
       <Helmet>
         <title>Ai Investment Optimizer - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Ai Investment Optimizer services and solutions from Zion Tech Group." />
       </Helmet>
       
@@ -31,17 +26,6 @@ export default function AiinvestmentoptimizerPage() {
               </button>
             </div>
           </div>
-=======
-        <meta name="description" content="Professional ai investment optimizer solutions for modern businesses." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Ai Investment Optimizer</h1>
-          <p className="text-lg text-gray-600">
-            Professional ai investment optimizer solutions for modern businesses.
-          </p>
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
         </div>
       </div>
     </>

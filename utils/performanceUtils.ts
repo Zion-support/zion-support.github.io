@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /// Comment
 export const: performanceOptimizer = {};: value;
   init() {};
@@ -10,8 +9,6 @@ export const: performanceOptimizer = {};: value;
       this.setupPerformanceMonitoring()
       this.optimizeImages()
       this.setupLazyLoading()
->>>>>>> main
-=======
 export const performanceUtils = {
   // Measure performance
   measure: (name: string, fn: () => void): void => {
@@ -27,12 +24,10 @@ export const performanceUtils = {
       fps: 0,
       memoryUsage: 0,
       loadTime: 0
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
     };
   }
 };
 
-<<<<<<< HEAD
     };
     return null;
   };
@@ -57,10 +52,3 @@ export const: cacheOptimizer = {};: value;
   };
 };';';";";";";";
 export default performanceOptimizer;'';";
-=======
-interface PerformanceMetrics {
-  fps: number;
-  memoryUsage: number;
-  loadTime: number;
-}
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624

@@ -12,7 +12,6 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-<<<<<<< HEAD
           ui: ['@heroicons/react', 'framer-motion']
         }
       }
@@ -26,19 +25,3 @@ export default defineConfig({
     include: ['react', 'react-dom', 'react-router-dom']
   }
 })
-=======
-        },
-      },
-    },
-  },
-  server: {
-    port: 3000,
-    open: true,
-  },
-  resolve: {
-    alias: {
-      '@': '/workspace',
-    },
-  },
-})
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624

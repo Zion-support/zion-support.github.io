@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 import { Suspense, lazy, useEffect } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-=======
-import { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import { ErrorBoundary } from 'react-error-boundary';
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
 
 // Import pages
 import HomePage from './app/pages/HomePage';
@@ -33,7 +26,6 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
 );
 
 function App() {
-<<<<<<< HEAD
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
@@ -125,29 +117,3 @@ function App() {
 }
 
 export default App
-=======
-  return (
-    <Router>
-      <HelmetProvider>
-        <ErrorBoundary FallbackComponent={ErrorFallback}>
-          <Suspense fallback={
-            <div className="min-h-screen flex items-center justify-center">
-              <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
-            </div>
-          }>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="*" element={<NotFoundPage />} />
-            </Routes>
-          </Suspense>
-        </ErrorBoundary>
-      </HelmetProvider>
-    </Router>
-  );
-}
-
-export default App;
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624

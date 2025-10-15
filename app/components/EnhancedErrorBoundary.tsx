@@ -1,56 +1,64 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-export default function componentsPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+}
 
-export default function ComponentsPage() {
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
-  return (
-    <>
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Components services and solutions from Zion Tech Group." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Components
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional Components services and solutions for your business needs.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
-                Get Started
-              </button>
-              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
-                Learn More
-              </button>
+interface State {
+  hasError: boolean;
+  error?: Error;
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center">
+              <div className="flex-shrink-0">
+                <svg className="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-sm font-medium text-gray-800">
+                  Something went wrong
+                </h3>
+                <div className="mt-2 text-sm text-gray-500">
+                  <p>We're sorry, but something unexpected happened. Please try refreshing the page.</p>
+                </div>
+                <div className="mt-4">
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                  >
+                    Refresh Page
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-=======
-        <meta name="description" content="Professional components solutions for modern businesses." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Components</h1>
-          <p className="text-lg text-gray-600">
-            Professional components solutions for modern businesses.
-          </p>
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
         </div>
-      </div>
-    </>
-  );
-<<<<<<< HEAD
+      );
+    }
+
+    return this.props.children;
+  }
 }
-=======
-}
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
+
+export default EnhancedErrorBoundary;

@@ -1,52 +1,39 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-export default function appPage() {
-  return (
-    <>
-      <Helmet>
-        <title>App - Zion Tech Group</title>
-        <meta name="description" content="App services and solutions from Zion Tech Group." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              App
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional App services and solutions for your business needs.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
-                Get Started
-              </button>
-              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
-=======
-export const metadata = {
+export const siteMetadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI and IT solutions for modern businesses',
-  keywords: ['AI', 'IT Solutions', 'Technology', 'Innovation'],
+  description: 'Leading provider of AI solutions, micro SaaS applications, and comprehensive IT services. Transform your business with cutting-edge technology.',
+  keywords: [
+    'AI solutions',
+    'artificial intelligence',
+    'micro SaaS',
+    'IT services',
+    'cloud computing',
+    'cybersecurity',
+    'web development',
+    'mobile development',
+    'data analytics',
+    'machine learning',
+    'automation',
+    'digital transformation'
+  ],
+  author: 'Zion Tech Group',
+  siteUrl: 'https://ziontechgroup.com',
+  social: {
+    twitter: '@ziontechgroup',
+    linkedin: 'zion-tech-group',
+    github: 'ziontechgroup'
+  },
   openGraph: {
-    title: 'Zion Tech Group',
-    description: 'Advanced AI and IT Solutions',
     type: 'website',
-    locale: 'en_US'
+    locale: 'en_US',
+    url: 'https://ziontechgroup.com',
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of AI solutions, micro SaaS applications, and comprehensive IT services.',
+    siteName: 'Zion Tech Group'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group',
-    description: 'Advanced AI and IT Solutions'
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of AI solutions, micro SaaS applications, and comprehensive IT services.',
+    creator: '@ziontechgroup'
   }
 };
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624

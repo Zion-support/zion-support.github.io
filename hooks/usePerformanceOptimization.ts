@@ -1,86 +1,88 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
-<<<<<<< HEAD
-interface interface PerformanceOptimizationOptions {} { id: string; };
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableImageOptimization?: boolean;
-  enableCodeSplitting?: boolean;
-  enableCaching?: boolean;
-};
-}const {};
-    enableLazyLoading = true;
-    enablePreloading = true;
-    enableImageOptimization = true;
-    enableCodeSplitting = true;
-    enableCaching = true} = options;
-const observerRef  = useRef<IntersectionObserver | null>(null)
-  /// Comment
-  const setupLazyLoading  = useCallback(() => {};
-}if (!enableLazyLoading || typeof: window === 'undefined') return";"
-    const images  = document.querySelectorAll('img[data-src]')";"
-    if ($1) {}
-  /// Comment
-};
-      observerRef.current.disconnect()
-      (entries) => {}: value;
-}entries.forEach((entry) => {}: value;
-}if (entry.isIntersecting) {}'""'""
-            const img  = entry.target as HTMLImageElement': value'""";"
-            const src  = img.getAttribute('data-src'): value"";"
-            if (src) {}'"""''
-              img.src = src': value'"";"
-              img.removeAttribute('data-src')'"""''
-              img.classList.add('loaded')"";"
-              observerRef.current?.unobserve(img)
-            }
-          }
-        })
-      }'"""''
-      {}'""'""
-        rootMargin: '50px 0px'""";"
-        threshold: 0.01};
-    )
-}observerRef.current?.observe(img)
-    })
-  }, [])";"
-  /// Comment
-  const addResourceHints  = useCallback(() => {}': value'"";"
-}if (typeof: window === 'undefined') return: value'"""''
-    const hints  = []': value'"";"
-      { rel: 'dns-prefetch', href: '/// Comment
-      { rel: 'dns-prefetch', href: '/// Comment
-      { rel: 'preconnect', href: 'https:/// Comment
-      { rel: 'preconnect', href: 'https:/// Comment
-    hints.forEach((hint) => {}': value'""";"
-}const link  = document.createElement('link'): value'""'""
-      Object.entries(hint).forEach(([key, value]) => {}': value'""";"
-}if (key === 'crossOrigin') {}': value'"";"
-          link.setAttribute('crossorigin', value as string)""";"
-        } else {};
-          link.setAttribute(key, value as string)
+interface OptimizationConfig {
+  enableLazyLoading: boolean;
+  enableImageOptimization: boolean;
+  enableCodeSplitting: boolean;
+  enableCaching: boolean;
+}
+
+export const usePerformanceOptimization = (config: OptimizationConfig) => {
+  const [isOptimized, setIsOptimized] = useState(false);
+  const [optimizationMetrics, setOptimizationMetrics] = useState({
+    bundleSize: 0,
+    loadTime: 0,
+    renderTime: 0,
+  });
+
+  const optimizeImages = useCallback(() => {
+    if (!config.enableImageOptimization) return;
+    
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      if (!img.loading) {
+        img.loading = 'lazy';
+      }
+    });
+  }, [config.enableImageOptimization]);
+
+  const optimizeLazyLoading = useCallback(() => {
+    if (!config.enableLazyLoading) return;
+    
+    const lazyElements = document.querySelectorAll('[data-lazy]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const element = entry.target as HTMLElement;
+          element.classList.add('loaded');
+          observer.unobserve(element);
         }
-      })
-      document.head.appendChild(link)
-    })
-}/// Comment
-    setupLazyLoading()
-    preloadCriticalResources()
-    optimizeImages()
-    registerServiceWorker()
-    setupPerformanceMonitoring()
-    addResourceHints()
-        observerRef.current.disconnect()
-    setupPerformanceMonitoring}'"'""";"
-}"'"'";"
-=======
-export const UsePerformanceOptimization = () => {
-  const [state, setState] = useState(null);
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
+      });
+    });
 
-  useEffect(() => {
-    // Hook implementation
+    lazyElements.forEach((element) => observer.observe(element));
+  }, [config.enableLazyLoading]);
+
+  const measurePerformance = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paintEntries = performance.getEntriesByType('paint');
+    
+    const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+    
+    setOptimizationMetrics({
+      bundleSize: navigation.transferSize || 0,
+      loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+      renderTime: fcp ? fcp.startTime : 0,
+    });
   }, []);
 
-  return { state, setState };
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const runOptimizations = () => {
+      optimizeImages();
+      optimizeLazyLoading();
+      measurePerformance();
+      setIsOptimized(true);
+    };
+
+    if (document.readyState === 'complete') {
+      runOptimizations();
+    } else {
+      window.addEventListener('load', runOptimizations);
+    }
+
+    return () => {
+      window.removeEventListener('load', runOptimizations);
+    };
+  }, [optimizeImages, optimizeLazyLoading, measurePerformance]);
+
+  return {
+    isOptimized,
+    optimizationMetrics,
+    optimizeImages,
+    optimizeLazyLoading,
+  };
 };
