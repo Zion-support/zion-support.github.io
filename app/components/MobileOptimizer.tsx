@@ -1,4 +1,3 @@
-
 export default function MobileOptimizer() {}
   // Function body
 
@@ -27,7 +26,6 @@ export default function MobileOptimizer() {}
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

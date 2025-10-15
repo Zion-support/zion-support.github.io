@@ -1,4 +1,3 @@
-
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -284,7 +283,3 @@ export default EnhancedErrorBoundary;
 
 
 };
-;
-export default ComponentsPage;'";'";";";
-
-

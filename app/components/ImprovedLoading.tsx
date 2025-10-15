@@ -1,4 +1,3 @@
-
             Preparing your experience...
           </p>
         </div>
@@ -10,5 +9,4 @@
       )};
     </div>";
   )";";
-};";";";
 export default ImprovedLoading;"

@@ -1,4 +1,3 @@
-
         </div>
       </div>
     </>
@@ -12,7 +11,6 @@
     {}
 export default Component;
 
-;
 const DemoPage: React.FC = () => {
   return (
     <>;
@@ -28,8 +26,4 @@ const DemoPage: React.FC = () => {
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
-export default DemoPage;'";'";";";";
-"
-

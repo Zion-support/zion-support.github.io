@@ -1,4 +1,3 @@
-
       interface PerformanceMetrics {},
       fcp: number,
       lcp: number,
@@ -48,7 +47,6 @@
       </div>;
     </>;";
   );";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

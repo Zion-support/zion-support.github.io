@@ -1,4 +1,3 @@
-
                     Learn More
                   </button>
                 </div>
@@ -16,6 +15,3 @@
       </section>
     </div>";
   );";";
-}";";";
-"
-

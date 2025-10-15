@@ -1,4 +1,3 @@
-
             style={{},
       left: `${20 + index * 20}%`,
       top: `${30 + index * 15}%`,
@@ -40,10 +39,5 @@
     </section>
   )
     },";"
-    {};";";"
 
-import React from 'react';";";";";"
 import SEOHead from './components/SEOHead";"'
-
-
-

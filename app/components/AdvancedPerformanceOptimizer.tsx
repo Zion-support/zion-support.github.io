@@ -1,4 +1,3 @@
-
   enableImageOptimization?: boolean;
   enablePreloading?: boolean;
   enableCaching?: boolean;
@@ -53,7 +52,6 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps>  =  ({)}
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

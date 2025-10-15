@@ -1,4 +1,3 @@
-
   email: string;
   phone: string;
   company: string;
@@ -25,5 +24,4 @@ interface FormErrors {
       </form>
     </div>";
   );";";
-};";";";
 export default ImprovedContactForm;"

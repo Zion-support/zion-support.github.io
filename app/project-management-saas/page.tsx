@@ -1,4 +1,3 @@
-
                 </FuturisticButton>
               </Link>
             </div>
@@ -6,5 +5,4 @@
         </section>
 };";
   );};";";
-};";";";
 export default ProjectManagementSAAS;"

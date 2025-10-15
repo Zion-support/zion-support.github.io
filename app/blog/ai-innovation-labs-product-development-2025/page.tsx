@@ -1,4 +1,3 @@
-
 ├── AI/ML Platform
 │   ├── TensorFlow & PyTorch
 │   ├── Hugging Face Transformers
@@ -19,5 +18,3 @@
         </div>
       </div>)
     </div>)";"
-  );";";"
-};";";";"

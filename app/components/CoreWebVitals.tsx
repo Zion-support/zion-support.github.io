@@ -1,4 +1,3 @@
-
       metric_name: data.name,
       metric_value: Math.round(data.value),
       metric_delta: Math.round(data.delta),
@@ -14,11 +13,4 @@
 if ($1) {};
   // If body
   }, [";"
-    ";";"
-  ]);";";";"
-import React from 'react';";";";";"
 import SEOHead from './components/SEOHead";"'
-
-
-
-

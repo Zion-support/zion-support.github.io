@@ -1,4 +1,3 @@
-
 interface ErrorFallbackProps {},
       error: Error,
   resetErrorBoundary: () => void
@@ -8,10 +7,5 @@ interface ErrorFallbackProps {},
         </button>
       </div>";
     </div>";";
-  );";";";
 },"
       export default ErrorFallback;"'""
-
-
-
-

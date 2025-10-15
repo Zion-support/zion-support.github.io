@@ -4,16 +4,24 @@ export default function AboutPage() {
   return (
     <>
       <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission to provide cutting-edge AI and IT solutions." />
+        <title>About Us</title>
+        <meta name="description" content="Learn about Zion Tech Group and our mission" />
       </Helmet>
-      
-      <div className="min-h-screen bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group</h1>
-          <p className="text-lg text-gray-600">
-            We are a leading technology company specializing in AI and IT solutions for businesses worldwide.
-          </p>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              About Us
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Learn about Zion Tech Group and our mission
+            </p>
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <p className="text-gray-700">
+                This page is currently under development. Please check back later for more content.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </>

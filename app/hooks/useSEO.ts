@@ -1,4 +1,3 @@
-
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);};
       return () => {};
@@ -10,6 +9,4 @@
     return undefined;
   }, [
     structuredData";"
-  ";";"
-  ]);";";";"
 }"

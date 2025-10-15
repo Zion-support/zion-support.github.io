@@ -1,4 +1,3 @@
-
 export default function LoadingOptimizer() {}
   // Function body
 
@@ -26,7 +25,6 @@ export default function LoadingOptimizer() {}
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

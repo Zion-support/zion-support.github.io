@@ -1,4 +1,3 @@
-
   ]
   const: stats = [;
     { number: '40%', label: 'Productivity Increase', icon: <Zap: className ="w-6 h-6 text-cyan-400" /> },'"'"";";
@@ -184,5 +183,3 @@
         </section>
       </div>
     </>";"
-  )";";"
-};";";";"

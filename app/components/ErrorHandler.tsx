@@ -1,4 +1,3 @@
-
 interface Props {},
       children: ReactNode;
 fallback?: ReactNode
@@ -48,10 +47,5 @@ try {,
       )
       return this.props.children
     },";"
-    {};";";"
 
-import React from 'react';";";";";"
 import SEOHead from './components/SEOHead";"'
-
-
-

@@ -1,4 +1,3 @@
-
       interface Props {},
       children: ReactNode,
       fallback?: ReactNode,
@@ -91,8 +90,3 @@ export const ErrorBoundary: React.FC<{},
     );
   return <>{children}</>
 };";"
-};";";"
-
-
-
-

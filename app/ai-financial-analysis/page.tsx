@@ -1,4 +1,3 @@
-
               >
                 View Pricing
               </FuturisticButton>
@@ -7,5 +6,3 @@
         </ResponsiveContainer>
       </section>
     </div>";"
-  );";";"
-};";";";"

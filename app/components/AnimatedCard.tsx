@@ -1,4 +1,3 @@
-
 interface AnimatedCardProps {}
   children: React.ReactNode
   className?: string
@@ -52,7 +51,6 @@ const AnimatedCard= React.FC<AnimatedCardProps> = ({)}
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

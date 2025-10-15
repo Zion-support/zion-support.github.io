@@ -1,4 +1,3 @@
-
   fcp: number | null;
   lcp: number | null;
   fid: number | null;
@@ -116,7 +115,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps>  =  ({)};
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

@@ -1,5 +1,3 @@
-
-
       interface Props {},
       children: ReactNode,
       fallback?: ReactNode,
@@ -70,7 +68,6 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       window.location.reload()
     },";
     {};";";
-  handleGoHome = () => {},";";";
       window.location.href = '/"
     },
 
@@ -171,4 +168,3 @@ Error Details:;
           </div>
         </div>
       ),
-

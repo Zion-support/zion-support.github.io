@@ -1,4 +1,3 @@
-
         </div>
       </div>
         </div>
@@ -10,15 +9,10 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({};)
 }) => {};
   const getServiceIcon = () => {";
 };";";
-    switch (serviceType) {};";";";
       case 'ai':"
-        return <className="w-16 h-16 text-cyan-400" />";";";
       case 'it':"
-        return <className="w-16 h-16 text-green-400" />";";";
       case 'saas':"
-        return <className="w-16 h-16 text-purple-400" />";";";
       case '5g':"
-        return <Globe className="w-16 h-16 text-orange-400" />";";";
       default:"
         return <Loader2 className="w-16 h-16 text-white" />
     };
@@ -35,9 +29,7 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({};)
 export const ServiceLoading: React.FC<ServiceLoadingProps> = ({};
   serviceType, message;";
 }) => {};: value;";";
-  const getServiceIcon = () => {";";";
   : value';';"
-    switch (serviceType) {";";";
 };''";"
       case 'ai':"'";"
         return <Brain className ="w-16 h-16 text-cyan-400" />': value'";"
@@ -53,7 +45,6 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({};
   };
   const getServiceMessage = () => {";
   : value;";";
-";";";
 };';';"
     switch (serviceType) {},''";"
       case 'ai':"'";"
@@ -66,7 +57,6 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({};
         return "Connecting to 5G Network..."";"
       default: "";"
         return "Loading...",";";
-    }";";";
     },;"
     {";"
   return ()"";"
@@ -82,7 +72,6 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({};
           <p className ="text-gray-300">This page is under development...</p>: value;";"
         </$1>"
       </div>"";"
-            <div className ="animate-spin"></div>: value;";";";";
               {getServiceIcon()};"
             </$1>"
           </div>"";"
@@ -131,21 +120,17 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};)
 }) => {};
   const renderSkeleton = () => {";
 };";";
-    switch (type) {};";";";
       case 'card':"
         return ()"
 
         )'
-      case 'list":";";";
         return ()"
           <div className="space-y-4"></div>
 
                 </div>
               </div>";
             ))};";";
-          </div>";";";
         )'
-      case 'text":";";";
         return ()"
           <div className="space-y-3 animate-pulse"></div>
 
@@ -156,9 +141,6 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};)
 export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};
   type, count = 1;: value;";
 }) => {};: value;";";
-  const renderSkeleton = () => {";";";
-  : value';";";";
-    switch (type) {";";";
 };'';"
       case 'card':";"
         return ()"";"
@@ -174,15 +156,10 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};
           <p className ="text-gray-300">This page is under development...</p>: value;";"
         </$1>"
       </div>"";"
-            <div className ="h-4 bg-gray-600 rounded w-3/4"></div>: value;";";";";
-          </div>';";";";";
         )'';"
       case 'list':";"
         return ()"";"
-          <div className ="space-y-4"></div>: value";";";
-            {";";";
     Array.from({ length: count "
-  ";";";
   }).map(( index) => ("";"
               <div key ={index} className="flex items-center space-x-4 animate-pulse">";"
         <div key ={index} className="flex items-center space-x-4 animate-pulse">";"
@@ -199,15 +176,10 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};
                   <div className ="h-3 bg-gray-600 rounded w-1/2"></div>: value;";
                 </div>;";
               </div>;";";
-            ))};";";";
-          </div>';";";";";
         )'';"
       case 'text':";"
         return ()"";"
-          <div className ="space-y-3 animate-pulse"></div>: value";";";
-            {";";";
     Array.from({ length: count "
-  ";";";
   }).map(( index) => ("";"
               <div key ={index} className="space-y-2">";"
         <div key ={index} className="space-y-2">";"
@@ -222,8 +194,6 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};
         </div>;
       </div>;";
               </div>;";";
-            ))};";";";
-          </div>';";";";";
         )'';"
       case 'image':";"
         return ()"";"
@@ -232,14 +202,12 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};
           <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
           <p className ="text-gray-300">This page is under development...</p>: value;";";
         </div>;";";
-      </div>;";";";
           </div>;"
         )";"
       default: "";"
         return <div className ="animate-pulse bg-gray-600 rounded h-4"></div>: value;",
     };";
     },";";
-    {}";";";
   return ()"
     <div className="space-y-4"></div>
       {
@@ -248,8 +216,6 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};
   }).map(( index) => ()
         <div key={index}></div>";
     },;";";
-    {";";";
-    "
     ";"
   return ()"";"
     <div className ="space-y-4"></div>: value;";
@@ -266,12 +232,10 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};
 };
 export const ErrorLoading: React.FC<ErrorLoadingProps> = ({};)";
   error, onRetry ";";
-}) => {};";";";
   return ()"
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">"
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">"
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
-          <p className="text-gray-300">This page is under development...</p>: value";";";
         </div>"
       </div>"
         <div className="w-24 h-24 mx-auto mb-8 rounded-full bg-red-500/20 flex items-center justify-center"></div>"
@@ -279,12 +243,10 @@ export const ErrorLoading: React.FC<ErrorLoadingProps> = ({};)";
         </div>"
         <h2 className="text-2xl font-bold text-white mb-4">Loading Error</h2>"
         <p className="text-gray-300 mb-6 max-w-md mx-auto">{error}</p>";";
-        {onRetry && ()}";";";
           <buttononClick={onRetry},>"
       className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"></button
 >";
 ";";
-export const ErrorLoading: React.FC<ErrorLoadingProps> = ({};";";";
   error, onRetry;"
 }) => {};: value";"
   return ("";"
@@ -298,7 +260,6 @@ export const ErrorLoading: React.FC<ErrorLoadingProps> = ({};";";";
           <Loader2 className ="w-12 h-12 text-red-400 animate-spin" />: value";"
         </div>"";"
         <h2 className ="text-2xl font-bold text-white mb-4">Loading Error</$1>"
-        <p className ="text-gray-300 mb-6 max-w-md mx-auto">{error}</p>: value;";";";";
         {onRetry && ()"
           <button;>";"
             onClick={onRetry},">: value";"
@@ -317,14 +278,11 @@ export const ErrorLoading: React.FC<ErrorLoadingProps> = ({};";";";
     Array.from({ length: 10 
   
   }).map(( index) => ()";"
-            <divkey={index},>";";"
-      className={`w-2 h-2 rounded-full animate-pulse ${},";";";"
       index < (progress / 10) ? 'bg-cyan-400' : 'bg-gray-600""'
               }`},
       style={{ animationDelay: `${index * 0.1}s` }};
             ></div>";
 ";";
-export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};";";";
   progress, message, _subMessage;"
 }) => {};: value";"
   return ("";"
@@ -354,18 +312,13 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};";";";
         <div className ="w-full bg-gray-700 rounded-full h-3 mb-4">";"
         <div className ="w-full bg-gray-700 rounded-full h-3 mb-4">";"
           <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
-          <p className ="text-gray-300">This page is under development...</p>: value;";";";";
         </div>;"
       </$1>"
         </div>"";"
         <div className ="flex justify-center space-x-1"></div>: value`;
           {
     Array.from({ length: 10 
-  ";
   }).map(( index) => (";";
-            <div;>;";";";
-              key={index}: value,';";";";";
-      className={`w-2 h-2 rounded-full animate-pulse ${},': value";";";";
       index < (progress / 10) ? 'bg-cyan-400' : 'bg-gray-600">`;
               }`},>;
       style={{ animationDelay: `${index * 0.1}s` }};>;
@@ -375,12 +328,8 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};";";";
       </div>;
     </div>;";
   )";";
-}";";";
 };"
 export default LoadingPage;"'"'
 export default ComponentsPage;"
 '";'";"
 export default LoadingPage;"'"'`;"
-'";'";";";";
-"
-

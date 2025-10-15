@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-export default function Navigation() {
-  return (
-    <nav className="bg-gray-900 text-white p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold">
-          Zion Tech Group
-        </Link>
-        <div className="space-x-4">
-          <Link to="/about" className="hover:text-gray-300">About</Link>
-          <Link to="/services" className="hover:text-gray-300">Services</Link>
-          <Link to="/contact" className="hover:text-gray-300">Contact</Link>
-        </div>
-=======
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   Bars3Icon,
@@ -64,48 +47,28 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const location = useLocation();
 
   const navigation = [
-    { name: 'Home', href: '/', icon: HomeIcon },";
-    { name: 'About', href: '/about', icon: InformationCircleIcon },";
+    { name: 'Home', href: '/', icon: HomeIcon },
+    { name: 'About', href: '/about', icon: InformationCircleIcon },
     {
       name: 'AI Services',
       href: '/ai-services',
       icon: CpuChipIcon,
       submenu: [
-        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon },";
-        { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: EnvelopeIcon },";
-        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },";
-        { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot', icon: ChatBubbleLeftRightIcon },";
-        { name: 'AI Project Management Pro', href: '/ai-project-management-pro', icon: CogIcon },";
-        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', icon: ChartBarIcon },";
-        { name: 'AI Content Generation', href: '/ai-content-generation-pro', icon: DocumentTextIcon },";
-        { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: EyeIcon },";
-        { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon }";
+        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon },
+        { name: 'AI Content Generator', href: '/ai-content-generator', icon: DocumentTextIcon },
+        { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: EnvelopeIcon },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },
+        { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro', icon: CogIcon },
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', icon: ChartBarIcon },
+        { name: 'AI Content Generation', href: '/ai-content-generation-pro', icon: DocumentTextIcon },
+        { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: EyeIcon },
+        { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon }
       ]
     },
     {
-<<<<<<< HEAD
-      name: 'About',
-      path: '/about',
-      icon: <Globe className="w-4 h-4" />
-    },
-    {
-      name: 'Services',
-      path: '/services',
-      icon: <Zap className="w-4 h-4" />
-    },
-    {
-      name: 'AI Solutions',
-      path: '/ai-services',
-      icon: <Brain className="w-4 h-4" />
-    },
-    {
-      name: 'Contact',
-      path: '/contact',
-      icon: <Shield className="w-4 h-4" />
-    }
-=======
-      name: 'Micro SaaS',";
-      href: '/micro-saas-solutions',";
+      name: 'Micro SaaS',
+      href: '/micro-saas-solutions',
       icon: GlobeAltIcon,
       submenu: [
         { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
@@ -133,221 +96,152 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       ]
     },
     {
-      name: 'Resources',";
-      href: '#',";
+      name: 'Resources',
+      href: '#',
       icon: DocumentTextIcon,
       submenu: [
-        { name: 'Blog', href: '/blog', icon: DocumentTextIcon },";
-        { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },";
-        { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },";
-        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },";
-        { name: 'API Documentation', href: '/api-docs', icon: CodeBracketIcon },";
-        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }";
+        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
+        { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
+        { name: 'API Documentation', href: '/api-docs', icon: DocumentTextIcon },
+        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }
       ]
     },
     {
-      name: 'Company',";
-      href: '#',";
+      name: 'Company',
+      href: '#',
       icon: UserGroupIcon,
       submenu: [
-        { name: 'About Us', href: '/about', icon: InformationCircleIcon },";
-        { name: 'Our Team', href: '/team', icon: UserGroupIcon },";
-        { name: 'Careers', href: '/careers', icon: UserGroupIcon },";
-        { name: 'Partnerships', href: '/partnerships', icon: UserPlusIcon },";
-        { name: 'Contact', href: '/contact', icon: PhoneIcon }";
+        { name: 'Our Team', href: '/team', icon: UserGroupIcon },
+        { name: 'Careers', href: '/careers', icon: UserPlusIcon },
+        { name: 'Partnerships', href: '/partnerships', icon: ShareIcon },
+        { name: 'Contact', href: '/contact', icon: PhoneIcon }
       ]
     },
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },";
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }";
->>>>>>> main
+    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon }
   ];
 
-  const toggleMobileMenu = useCallback(() => {
-    setIsOpen(prev => !prev);
-  }, []);
-
-  const isActive = (path: string) => {
-    return location.pathname === path,
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(href);
   };
 
-<<<<<<< HEAD
-  return (
-    <nav className="bg-slate-900/90 backdrop-blur-sm border-b border-purple-500/20 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-white hover:text-purple-400 transition-colors">
-              Zion Tech Group
-=======
-  const toggleServicesMenu = () => {
-    setIsServicesOpen(!isServicesOpen);
-    setIsSolutionsOpen(false);
-    setIsResourcesOpen(false);
-    setIsCompanyOpen(false);
+  const toggleMobileMenu = () => {
+    setIsOpen(!isOpen);
   };
 
-  const toggleSolutionsMenu = () => {
-    setIsSolutionsOpen(!isSolutionsOpen);
-    setIsServicesOpen(false);
-    setIsResourcesOpen(false);
-    setIsCompanyOpen(false);
-  };
-
-  const toggleResourcesMenu = () => {
-    setIsResourcesOpen(!isResourcesOpen);
-    setIsServicesOpen(false);
-    setIsSolutionsOpen(false);
-    setIsCompanyOpen(false);
-  };
-
-  const toggleCompanyMenu = () => {
-    setIsCompanyOpen(!isCompanyOpen);
-    setIsServicesOpen(false);
-    setIsSolutionsOpen(false);
-    setIsResourcesOpen(false);
+  const closeMobileMenu = () => {
+    setIsOpen(false);
   };
 
   return (
-    <nav className="bg-slate-900 shadow-lg">
+    <nav className="bg-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <Link to="/" className="flex-shrink-0 flex items-center">
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">Z</span>
-                </div>
-                <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
+              <Link to="/" className="text-2xl font-bold text-blue-600">
+                Zion Tech Group
               </Link>
             </div>
-            {/* Desktop Navigation */}
             <div className="hidden lg:ml-6 lg:flex lg:space-x-8">
               {navigation.map((item) => (
-                <div key={item.name} className="relative">
+                <div key={item.name} className="relative group">
                   <Link
                     to={item.href}
-                    className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                    className={`${
                       isActive(item.href)
-                        ? 'border-blue-500 text-white'
-                        : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white'
-                    }`}
+                        ? 'border-blue-500 text-gray-900'
+                        : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                    } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
                   >
-                    <item.icon className="w-4 h-4" />
-                    <span>{item.name}</span>
-                    {item.submenu && <ChevronDownIcon className="w-4 h-4" />}
+                    <item.icon className="h-4 w-4 mr-1" />
+                    {item.name}
+                    {item.submenu && (
+                      <ChevronDownIcon className="ml-1 h-4 w-4" />
+                    )}
                   </Link>
-                  {/* Dropdown Menu */}
                   {item.submenu && (
-                    <div className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
-                      (item.name === 'AI Services' && isServicesOpen) ||
-                      (item.name === 'Micro SaaS' && isSolutionsOpen) ||
-                      (item.name === 'IT Solutions' && isResourcesOpen) ||
-                      (item.name === 'Resources' && isResourcesOpen) ||
-                      (item.name === 'Company' && isCompanyOpen)
-                        ? 'block' : 'hidden'
-                    }`}>
-                      {item.submenu.map((subItem) => (
-                        <div key={subItem.name}>
+                    <div className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                      <div className="py-1">
+                        {item.submenu.map((subItem) => (
                           <Link
+                            key={subItem.name}
                             to={subItem.href}
-                            className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white"
+                            className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            onClick={closeMobileMenu}
                           >
-                            <subItem.icon className="w-4 h-4 mr-3" />
-                            <span>{subItem.name}</span>
+                            <subItem.icon className="h-4 w-4 mr-3" />
+                            {subItem.name}
                           </Link>
-                        </div>
-                      ))}
+                        ))}
+                      </div>
                     </div>
                   )}
                 </div>
               ))}
             </div>
           </div>
-          {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center">
+          <div className="flex items-center">
             <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              type="button"
+              className="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              onClick={toggleMobileMenu}
             >
-              {sidebarOpen ? (
-                <XMarkIcon className="h-6 w-6" />
+              <span className="sr-only">Open main menu</span>
+              {isOpen ? (
+                <XMarkIcon className="block h-6 w-6" />
               ) : (
-                <Bars3Icon className="h-6 w-6" />
+                <Bars3Icon className="block h-6 w-6" />
               )}
             </button>
           </div>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700 max-h-96 overflow-y-auto">
+      {/* Mobile menu */}
+      {isOpen && (
+        <div className="lg:hidden">
+          <div className="pt-2 pb-3 space-y-1">
             {navigation.map((item) => (
               <div key={item.name}>
-                {item.submenu ? (
-                  <div>
-                    <button
-                      onClick={() => {
-                        if (item.name === 'AI Services') toggleServicesMenu();
-                        else if (item.name === 'Micro SaaS') toggleSolutionsMenu();
-                        else if (item.name === 'IT Solutions') toggleResourcesMenu();
-                        else if (item.name === 'Resources') toggleResourcesMenu();
-                        else if (item.name === 'Company') toggleCompanyMenu();
-                      }}
-                      className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-300 hover:text-white hover:bg-slate-700"
-                    >
-                      <item.icon className="w-5 h-5 mr-3" />
-                      <span>{item.name}</span>
-                      <ChevronDownIcon className="w-4 h-4 ml-auto" />
-                    </button>
-                    {/* Mobile Submenu */}
-                    <div className={`pl-6 ${
-                      (item.name === 'AI Services' && isServicesOpen) ||
-                      (item.name === 'Micro SaaS' && isSolutionsOpen) ||
-                      (item.name === 'IT Solutions' && isResourcesOpen) ||
-                      (item.name === 'Resources' && isResourcesOpen) ||
-                      (item.name === 'Company' && isCompanyOpen)
-                        ? 'block' : 'hidden'
-                    }`}>
-                      {item.submenu.map((subItem) => (
-                        <Link key={subItem.name}
-                          to={subItem.href}
-                          className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-slate-700"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          <subItem.icon className="w-4 h-4 mr-3" />
-                          <span>{subItem.name}</span>
-                        </Link>
-                      ))}
-                    </div>
+                <Link
+                  to={item.href}
+                  className={`${
+                    isActive(item.href)
+                      ? 'bg-blue-50 border-blue-500 text-blue-700'
+                      : 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700'
+                  } block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
+                  onClick={closeMobileMenu}
+                >
+                  <div className="flex items-center">
+                    <item.icon className="h-5 w-5 mr-3" />
+                    {item.name}
                   </div>
-                ) : (
-                  <div>
-                    <Link
-                      to={item.href}
-                      className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                        isActive(item.href) ? 'text-white bg-slate-700' : 'text-gray-300 hover:text-white hover:bg-slate-700'
-                      }`}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <item.icon className="w-5 h-5 mr-3" />
-                      {item.name}
-                    </Link>
+                </Link>
+                {item.submenu && (
+                  <div className="pl-8 space-y-1">
+                    {item.submenu.map((subItem) => (
+                      <Link
+                        key={subItem.name}
+                        to={subItem.href}
+                        className="flex items-center pl-3 pr-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                        onClick={closeMobileMenu}
+                      >
+                        <subItem.icon className="h-4 w-4 mr-3" />
+                        {subItem.name}
+                      </Link>
+                    ))}
                   </div>
                 )}
               </div>
             ))}
           </div>
         </div>
->>>>>>> main
->>>>>>> cursor/fix-errors-and-merge-to-main-6f30
-      </div>
+      )}
     </nav>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default Navigation;
->>>>>>> cursor/fix-errors-and-merge-to-main-6f30

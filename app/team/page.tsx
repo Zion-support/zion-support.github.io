@@ -1,55 +1,29 @@
-<<<<<<< HEAD
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function TeamPage() {
   return (
     <>
       <Helmet>
-        <title>Our Team - Zion Tech Group</title>
-        <meta name="description" content="Meet the talented team behind Zion Tech Group." />
+        <title>Our Team</title>
+        <meta name="description" content="Meet the talented team behind Zion Tech Group" />
       </Helmet>
-      
-      <div className="min-h-screen bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Team</h1>
-          <p className="text-lg text-gray-600">
-            Meet the talented professionals behind our success.
-          </p>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Team
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Meet the talented team behind Zion Tech Group
+            </p>
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <p className="text-gray-700">
+                This page is currently under development. Please check back later for more content.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </>
   );
 }
-=======
-
-<<<<<<< HEAD
-
-export default function TeamPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">Our Team</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Meet the experts behind our solutions.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
-        </div>
-      </div>
-    </>
-  ),
-    },
-    {};
-export default PagePage;";
-  ),";";
-};";";";
-"
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
->>>>>>> cursor/fix-errors-and-merge-to-main-6f30

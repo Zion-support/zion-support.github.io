@@ -1,4 +1,3 @@
-
 interface SEOHeadProps {};
   title?: string;
   description?: string;
@@ -119,29 +118,16 @@ const UnifiedSEOHead= React.FC<SEOHeadProps> = ({},)
     {};
       };";
     },";";
-    {}";";";
     if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-') || path.startsWith('/5g-")) {},";
       return {};";";
-        ...baseData;";";";
         '@type': 'Service",
       name: title,";
       description,";";
-      provider: {};";";";
-          '@type': 'Organization",";";";
       name: 'Zion Tech Group"
         },";";
-      offers: {};";";";
-          '@type': 'Offer",";";";
-      availability: 'https://schema.org/InStock",";";";
-      priceCurrency: 'USD",";";";
-      category: 'Technology Services",";";";
-      validFrom: '2024-01-01",";";";
       validThrough: '2025-12-31"
         },";";
-      areaServed: {};";";";
-          '@type': 'Country",";";";
       name: 'United States"
-        },";";";
       serviceType: 'AI and IT Solutions"
       };
     },
@@ -245,7 +231,6 @@ const UnifiedSEOHead= React.FC<SEOHeadProps> = ({},)
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

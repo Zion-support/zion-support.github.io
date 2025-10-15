@@ -1,5 +1,3 @@
-
-
       interface PerformanceMetrics {},
       loadTime: number,
       firstContentfulPaint: number,
@@ -185,7 +183,6 @@ if ((process.env.NODE_ENV !== 'development' && !showInProduction) || !metrics) {
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

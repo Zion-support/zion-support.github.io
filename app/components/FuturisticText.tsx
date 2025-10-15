@@ -1,4 +1,3 @@
-
       className?: string,
       glow?: boolean,
       animate?: boolean;
@@ -31,7 +30,6 @@ export default FuturisticText;
 
 export default ComponentsPage;
 
-;
 interface $1 { [key: string]: any },;
       children: React.ReactNode,';';
       variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'gradient' | 'neon','';
@@ -69,57 +67,15 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({},';';
     {
   },;";
       const getSizeClasses = () => {";";
-  ";";";
-};";";";";
-      switch (size) {},'";";";";
-      case 'xs':'";";";";
-        return 'text-xs','";";";";
-      case 'sm':'";";";";
-        return 'text-sm','";";";";
-      case 'base':'";";";";
-        return 'text-base','";";";";
-      case 'lg':'";";";";
-        return 'text-lg','";";";";
-      case 'xl':'";";";";
-        return 'text-xl','";";";";
-      case '2xl':'";";";";
-        return 'text-2xl','";";";";
-      case '3xl':'";";";";
-        return 'text-3xl','";";";";
-      case '4xl':'";";";";
-        return 'text-4xl','";";";";
-      case '5xl':'";";";";
-        return 'text-5xl','";";";";
-      case '6xl':'";";";";
-        return 'text-6xl','";";";";
-      case '7xl':'";";";";
-        return 'text-7xl',";";";";
-      default: '";";";";
         return 'text-base",";
     },;";";
-    {";";";
   },';";
       const getGlowClasses = () => {";
   ";";
-};";";";
-      if (!glow) return '',";";";";
-      switch (variant) {},'";";";";
-      case 'neon':'";";";";
-        return 'drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]','";";";";
-      case 'gradient':'";";";";
-        return 'drop-shadow-[0_0_20px_rgba(168,85,247,0.3)]',";";";";
-      default: '",";";";
         return 'drop-shadow-[0_0_10px_rgba(34,211,238,0.3)]";";
     },;";";
-    {";";";
   },';";
       const getAnimateClasses = () => {";
   ";";
-};";";";
-      if (!animate) return '','";";";";
       return 'animate-pulse";";
     },;";";
-    {";";";
-export default ComponentsPage;';";";";";
-"
-

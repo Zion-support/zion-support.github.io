@@ -1,5 +1,3 @@
-
-
 interface StatItem {},
       value: string,
   label: string
@@ -23,7 +21,6 @@ interface StatItem {},
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

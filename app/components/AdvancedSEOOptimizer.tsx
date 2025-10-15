@@ -1,4 +1,3 @@
-
   title: string;
   description: string;
   keywords: string[];
@@ -42,14 +41,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps>  =  ({)};
     seoData, enableStructuredData, enableSocialMeta, enableAdvancedFeatures
   
   ]);";"
-  return ()";";"
-    <Helmet>";";";"
       <title>{seoData.title}</title>""
       <meta name="description" content={seoData.description} />""
       <meta name="keywords" content={seoData.keywords.join(', ")} />";"'
-    </Helmet>";";"
-  );";";";"
-import React from 'react';";";";";"
 import SEOHead from './components/SEOHead";"'
 
 
@@ -65,7 +59,6 @@ import SEOHead from './components/SEOHead";"'
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

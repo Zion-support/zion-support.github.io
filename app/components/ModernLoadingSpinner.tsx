@@ -1,4 +1,3 @@
-
 interface LoadingSpinnerProps {},
       size?: 'sm' | 'md' | 'lg' | 'xl'""
   color?: 'primary' | 'secondary' | 'white'""
@@ -47,7 +46,6 @@ fullScreen?: boolean
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

@@ -1,4 +1,3 @@
-
       interface AccessibilitySettings {}
 
   highContrast: boolean,
@@ -178,6 +177,4 @@ if (newSettings.keyboardNavigation) {}
     </>
   )";
     },";";
-    {}";";";
 export default AccessibilityManager;"
-

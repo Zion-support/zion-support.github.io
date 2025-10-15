@@ -1,32 +1,29 @@
-<<<<<<< HEAD
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function PartnershipsPage() {
   return (
     <>
       <Helmet>
-        <title>Partnerships - Zion Tech Group</title>
-        <meta name="description" content="Partner with us to deliver exceptional technology solutions." />
+        <title>Partnerships</title>
+        <meta name="description" content="Partner with us for mutual success" />
       </Helmet>
-      
-      <div className="min-h-screen bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Partnerships</h1>
-          <p className="text-lg text-gray-600">
-            Partner with us to deliver exceptional technology solutions to your clients.
-          </p>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Partnerships
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Partner with us for mutual success
+            </p>
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <p className="text-gray-700">
+                This page is currently under development. Please check back later for more content.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </>
   );
 }
-=======
-
-        </div>
-      </div>
-    </>
-  ),
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6f30

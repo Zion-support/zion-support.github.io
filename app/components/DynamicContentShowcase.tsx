@@ -1,4 +1,3 @@
-
       interface ContentItem {},
       id: string,
       title: string,
@@ -24,10 +23,5 @@ interface DynamicContentShowcaseProps {},
       </div>
     </div>
   )";"
-},";";"
       
-import React from 'react';";";";";"
 import SEOHead from './components/SEOHead";"'
-
-
-

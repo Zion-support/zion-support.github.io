@@ -1,4 +1,3 @@
-
       (entries) => {};
 }entries.forEach((entry) => {};
 }if ($1) {};
@@ -42,10 +41,4 @@ return () => {};
       optimizeBundleLoading,
       setupServiceWorker])
   return null";"
-};";";"
-};";";";"
-import React from 'react';";";";";"
 import SEOHead from './components/SEOHead";"'
-
-
-

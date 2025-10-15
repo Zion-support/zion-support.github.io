@@ -1,4 +1,3 @@
-
         link.href = font.href
         link.as = font.as
         if (font.type) link.type = font.type
@@ -30,10 +29,5 @@ setTimeout(preloadOnHover, 2000)
   }, [
   ])
   return null";"
-},";";"
       
-import React from 'react';";";";";"
 import SEOHead from './components/SEOHead";"'
-
-
-

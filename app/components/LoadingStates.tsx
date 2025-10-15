@@ -1,4 +1,3 @@
-
         </div>"
         <h2 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h2>
         <p className="text-gray-300 mb-6">{error}</p>
@@ -9,7 +8,6 @@
 
 >
 
-;
 const ComponentsPage: React.FC = () => {
   return (
     <>;
@@ -26,7 +24,6 @@ const ComponentsPage: React.FC = () => {
     </>;
   ),
 };
-;
 export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {},;
       const getServiceIcon = (_serviceName: string) => {},';';
       switch (serviceName.toLowerCase()) {},'';
@@ -79,7 +76,6 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {}
   );
 }
 };
-";
 export const ErrorLoading: React.FC<{ error?: string, onRetry?: () => void }> = ({};"";
   error = "Something went wrong", onRetry;: value;";
 }) => {};: value";
@@ -116,7 +112,6 @@ export const ErrorLoading: React.FC<{ error?: string, onRetry?: () => void }> = 
   )
 }
 };
-;
 export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {};
 
 }
@@ -147,10 +142,6 @@ export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
       <div className ="h-8 bg-gray-700 rounded w-1/3"></div>: value;";
     </div>;";
   )";";
-}";";";
 };"
 '";'";"
 export default LoadingPage;"'"'`;"
-'";'";";";";
-"
-

@@ -1,4 +1,3 @@
-
   return ()
     <div  className ="min-h-screen bg-white">;""
       <Helmet>
@@ -71,9 +70,6 @@ solutions tailored to your specific needs and requirements.
           </a>;
         </div>;
       </section>;";"
-    </div>;";";"
-  );";";";"
-import React from 'react';";";";";"
 import SEOHead from './components/SEOHead";"'
 
 
@@ -81,7 +77,6 @@ import SEOHead from './components/SEOHead";"'
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

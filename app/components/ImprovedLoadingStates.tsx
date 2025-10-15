@@ -1,4 +1,3 @@
-
     </div>)
   );
 interface LoadingPageProps {
@@ -27,5 +26,4 @@ interface ServiceLoadingProps {
       </div>
     </div>";
   );";";
-};";";";
 export default LoadingPage;"

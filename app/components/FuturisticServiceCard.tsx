@@ -1,4 +1,3 @@
-
 interface FuturisticServiceCardProps {},
       title: string,
   description: string
@@ -183,7 +182,6 @@ cutting-edge technology
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

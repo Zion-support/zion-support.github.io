@@ -1,4 +1,3 @@
-
   ];
   const: addOns = [
     {;
@@ -212,10 +211,4 @@ export default PricingPage;
     {};
 ,";
       export default PricingPage;";";
-";";";
-import React from 'react';";";";";
 import SEOHead from './components/SEOHead";
-
-
-
-

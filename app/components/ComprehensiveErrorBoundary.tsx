@@ -1,4 +1,3 @@
-
     };
   };
   static getDerivedStateFromError(error: Error): Partial<State> {
@@ -37,5 +36,4 @@ if (this.props.onError) {
     };
     return this.props.children;";
   };";";
-}";";";
 export default ComprehensiveErrorBoundary;"

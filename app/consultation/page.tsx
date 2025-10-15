@@ -1,4 +1,3 @@
-
     setFormData(prev => ({};)
       ...prev;
       [name]: value
@@ -15,8 +14,3 @@
     </>
   )
     },";"
-    {};";";"
-
-
-
-

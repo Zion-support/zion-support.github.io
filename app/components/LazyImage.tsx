@@ -1,4 +1,3 @@
-
 interface LazyImageProps {};
   src: string;
   alt: string;
@@ -25,10 +24,5 @@ interface LazyImageProps {};
       )};
     </div>
   )";"
-},";";"
       
-import React from 'react';";";";";"
 import SEOHead from './components/SEOHead";"'
-
-
-

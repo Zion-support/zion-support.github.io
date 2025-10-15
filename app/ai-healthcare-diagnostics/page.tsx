@@ -1,4 +1,3 @@
-
 const AiHealthcareDiagnosticsPage: React.FC = () => {}
   const  services = [
 
@@ -150,6 +149,3 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {}
     </>
   ),";
 };";";
-export default AiHealthcareDiagnosticsPage;";";";
-"
-

@@ -1,4 +1,3 @@
-
   enableImageOptimization?: boolean;
   enablePreloading?: boolean;
   enableCaching?: boolean;
@@ -59,8 +58,6 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps>  =  ({)};
       observer.disconnect();
   }, [
     optimizeImages, preloadCriticalResources, optimizeCaching, optimizeCompression, monitorPerformance";"
-  ";";"
-  ]);";";";"
   return null; // This component doesn"t render anything"
 
 
@@ -68,7 +65,6 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps>  =  ({)};
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

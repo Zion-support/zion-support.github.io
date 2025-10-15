@@ -1,4 +1,3 @@
-
   src: string,
       alt: string,
       className?: string,
@@ -47,9 +46,4 @@
   )
     },";
     {};";";
-export default ImageOptimizer;";";";
-import React from 'react';";";";";
 import SEOHead from './components/SEOHead";
-
-
-

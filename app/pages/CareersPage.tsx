@@ -1,4 +1,3 @@
-
 import SEOHead from '../components/SEOHead';";"
 const CareersPage: React.FC = () => {
   return (
@@ -116,5 +115,3 @@ import {
       </section>
     </div>";
   );";";
-}";";";
-"

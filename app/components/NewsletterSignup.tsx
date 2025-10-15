@@ -1,4 +1,3 @@
-
 export default function NewsletterSignup() {}
   // Function body
 }
@@ -36,9 +35,6 @@ export default function NewsletterSignup() {}
 
         </>
       </div>";"
-    </>";";"
-  );";";";"
-import React from 'react';";";";";"
 import SEOHead from './components/SEOHead";"'
 
 
@@ -46,7 +42,6 @@ import SEOHead from './components/SEOHead";"'
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

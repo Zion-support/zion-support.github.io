@@ -1,4 +1,3 @@
-
       interface FormData {},
       name: string,
       email: string,
@@ -28,10 +27,5 @@
       </button>
     </form>
   )";"
-},";";"
       
-import React from 'react';";";";";"
 import SEOHead from './components/SEOHead";"'
-
-
-

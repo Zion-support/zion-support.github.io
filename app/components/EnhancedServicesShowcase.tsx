@@ -1,4 +1,3 @@
-
 import {
   Brain,
   Shield,
@@ -40,6 +39,4 @@ const EnhancedServicesShowcase: React.FC = () => {
       </div>
     </div>";
   );";";
-};";";";
 export default EnhancedServicesShowcase;"
-

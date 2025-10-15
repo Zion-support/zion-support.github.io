@@ -1,4 +1,3 @@
-
 interface OptimizedLoadingSpinnerProps {},
       size?: "xs" | "sm" | "md" | "lg" | "xl"""
   variant?: "dots" | "pulse" | "spinner" | "skeleton" | "bars"""
@@ -110,7 +109,6 @@ color?: "blue" | "gray" | "green" | "red" | "purple"""
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

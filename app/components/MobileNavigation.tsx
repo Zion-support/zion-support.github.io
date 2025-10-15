@@ -1,5 +1,3 @@
-
-
 const ComponentsPage: React.FC = () => {
   return (
     <>
@@ -22,7 +20,6 @@ import React, { useState } from 'react';';";
     {
 const ComponentsPage: React.FC  =  () => {";
   return (;";";
-    <>;";";";
       <SEOHead;"
         title="Components - Zion Tech Group"";"
         description="Professional components solutions for modern businesses";"
@@ -35,7 +32,6 @@ const ComponentsPage: React.FC  =  () => {";
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

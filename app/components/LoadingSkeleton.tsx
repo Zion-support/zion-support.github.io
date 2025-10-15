@@ -1,4 +1,3 @@
-
 export default function LoadingSkeleton() {}
   // Function body
 
@@ -28,7 +27,6 @@ export default function LoadingSkeleton() {}
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

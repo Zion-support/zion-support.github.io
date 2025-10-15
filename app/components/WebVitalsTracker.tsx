@@ -1,4 +1,3 @@
-
 interface WebVitalsData {},
       name: string,
   value: number
@@ -19,11 +18,5 @@ interface WebVitalsData {},
   }, [
   ])
   return null";"
-},";";"
       
-import React from 'react';";";";";"
 import SEOHead from './components/SEOHead";"'
-
-
-
-

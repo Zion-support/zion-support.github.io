@@ -1,4 +1,3 @@
-
 interface LoadingProps {}
   message?: string
 
@@ -14,10 +13,4 @@ interface LoadingProps {}
         </div>
       </div>";
     </>";";
-  );";";";
-import React from 'react';";";";";
 import SEOHead from './components/SEOHead";
-
-
-
-

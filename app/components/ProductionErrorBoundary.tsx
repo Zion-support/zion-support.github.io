@@ -1,4 +1,3 @@
-
 class ProductionErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);,
@@ -36,5 +35,4 @@ const: subject = `Error Report - ${this.state.errorId}`;
     };
     return this.props.children;";
   };";";
-}";";";
 export default ProductionErrorBoundary;"

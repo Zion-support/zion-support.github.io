@@ -1,4 +1,3 @@
-
 interface ServiceTemplateProps {}
 
   title: string,
@@ -27,5 +26,3 @@ interface ServiceTemplateProps {}
         </div>
       </div>
     </div>";"
-  )";";"
-}";";";"

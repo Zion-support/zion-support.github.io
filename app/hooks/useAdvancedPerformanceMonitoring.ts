@@ -75,5 +75,3 @@ return () => clearInterval(interval);
   return {
     metrics: metricsRef.current,";
     reportMetric,";";
-}}}}))";";";
-"

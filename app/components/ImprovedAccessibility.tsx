@@ -1,4 +1,3 @@
-
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
@@ -83,5 +82,4 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps>  =  ({,
     </>
   );";
 };";";
-";";";
 export default ImprovedAccessibility;"

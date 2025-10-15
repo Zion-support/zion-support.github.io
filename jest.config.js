@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-export default {
-  preset: 'ts-jest',
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
-  moduleNameMapping: {
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-  },
-  transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-  },
-  testMatch: [
-    '<rootDir>/__tests__/**/*.(test|spec).(ts|tsx)',
-  ],
-  collectCoverageFrom: [
-    'app/**/*.{ts,tsx}',
-    '!app/**/*.d.ts',
-  ],
-};
-=======
 
   moduleNameMapper: {}
     '^@/(.*)$': '<rootDir>/app/$1',
@@ -51,4 +31,3 @@ export default {
       }
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-6f30

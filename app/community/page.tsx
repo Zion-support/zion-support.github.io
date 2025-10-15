@@ -1,4 +1,3 @@
-
                 Learn More
               </button>
 
@@ -64,6 +63,3 @@
     {};
 export default CommunityPage;";
   ),";";
-};";";";
-"
-

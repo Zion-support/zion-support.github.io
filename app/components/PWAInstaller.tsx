@@ -1,4 +1,3 @@
-
 export default function ComponentsPage() {}
   // Function body
 
@@ -32,7 +31,6 @@ export default function ComponentsPage() {}
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

@@ -1,4 +1,3 @@
-
       interface Slide {},
       id: number,
       title: string,
@@ -12,31 +11,24 @@ interface ContentCarouselProps {},
   className?: string;
 };";
 const defaultSlides: Slide[]  =  [];";";
-  {};";";";
     id: 1;"
-    title: "AI-Powered Solutions";";";";
     description:"
       "Transform your business with cutting-edge artificial intelligence technologies.";"
-    image: "/api/placeholder/600/400";";";";
     features: []"
       "Machine Learning";"
       "Natural Language Processing";"
       "Computer Vision"]};";";
-  {};";";";
     id: 2;"
     title: "Cloud Infrastructure";"
     description: "Scalable and secure cloud solutions for modern businesses.";"
     image: "/api/placeholder/600/400";"
     features: ["Scalable Architecture", "99.9% Uptime", "Global CDN"]};";";
-  {};";";";
     id: 3;"
-    title: "Cybersecurity";";";";
     description:"
       "Protect your digital assets with enterprise-grade security solutions.";"
     image: "/api/placeholder/600/400";"
     features: ["Threat Detection", "Data Encryption", "Compliance"]}];
 export default function ContentCarousel() {
-  ;
 };
 
                     />
@@ -75,6 +67,3 @@ export default function ContentCarousel() {
       aria-label={`Go to slide ${index + 1}`} />
         ))};
       </div>
-
-
-

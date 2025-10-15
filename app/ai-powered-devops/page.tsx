@@ -1,4 +1,3 @@
-
 const AiPoweredDevopsPage: React.FC = () => {}
   const  services = [
 
@@ -150,6 +149,3 @@ const AiPoweredDevopsPage: React.FC = () => {}
     </>
   ),";
 };";";
-export default AiPoweredDevopsPage;";";";
-"
-

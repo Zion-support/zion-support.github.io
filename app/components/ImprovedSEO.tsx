@@ -1,4 +1,3 @@
-
 interface ImprovedSEOProps {
   title?: string;
   description?: string;
@@ -24,5 +23,4 @@ interface ImprovedSEOProps {
       )};
     </Helmet>";
   );";";
-};";";";
 export default ImprovedSEO;"

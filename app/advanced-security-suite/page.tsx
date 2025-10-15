@@ -1,4 +1,3 @@
-
 const AdvancedSecuritySuitePage: React.FC = () => {}
   return ()
     <>{}</>
@@ -21,6 +20,3 @@ const AdvancedSecuritySuitePage: React.FC = () => {}
 
 };";
 ";";
-export default AdvancedSecuritySuitePage;";";";
-"
-

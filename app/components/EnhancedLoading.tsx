@@ -1,4 +1,3 @@
-
 interface EnhancedLoadingProps {},
       message?: string;
 showProgress?: boolean;
@@ -58,7 +57,6 @@ progress?: number
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

@@ -1,4 +1,3 @@
-
 interface AccessibilityOptions {
 
 
@@ -261,7 +260,5 @@ export const  useAccessibility = () => {
   return {
     // Return accessibility utilities";
   };";";
-};";";";
 ;"
 export default useAccessibility;'";'";"
-

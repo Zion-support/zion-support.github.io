@@ -1,5 +1,3 @@
-
-
       interface EnhancedSEOOptimizerProps {},
       title?: string,
       description?: string,
@@ -318,7 +316,6 @@ if (typeof window !== 'undefined' && window.gtag) {},""
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default ComponentsPage;'";'";"

@@ -1,4 +1,3 @@
-
 const Ai3DGenerationPage: React.FC = () => {}
   return ()
     <>{}</>
@@ -18,6 +17,3 @@ export default Ai3DGenerationPage;
 
 };";
 ";";
-export default Ai3DGenerationPage;";";";
-"
-

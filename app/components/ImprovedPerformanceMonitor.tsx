@@ -1,4 +1,3 @@
-
 interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
@@ -42,16 +41,12 @@ loadWebVitals();
     };
     // Monitor memory every 5 seconds";
     const memoryInterval = setInterval(monitorMemory, 5000);";";
-    // Monitor connection changes";";";
     if ('connection' in navigator) {'"
-      const connection = (navigator as any).connection;";";";
       connection.addEventListener('change', monitorConnection);'"
     };
     return () => {";
       observer.disconnect();";";
-      clearInterval(memoryInterval);";";";
       if ('connection' in navigator) {'"
-        const connection = (navigator as any).connection;";";";
         connection.removeEventListener('change', monitorConnection);'"
       };
     };
@@ -81,5 +76,4 @@ const: getPerformanceScore = () => {;
       )};
     </div>";
   );";";
-};";";";
 export default ImprovedPerformanceMonitor;"

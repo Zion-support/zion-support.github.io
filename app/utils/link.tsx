@@ -1,4 +1,3 @@
-
 export default function UtilsPage() {}
   // Function body
 
@@ -32,7 +31,6 @@ export default function UtilsPage() {}
       </div>;
     </>;,";
   ),";";
-};";";";
 ;"
 
 export default UtilsPage;'";'";"

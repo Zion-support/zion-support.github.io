@@ -1,4 +1,3 @@
-
                     Read Full Case Study
                   </button>
                 </div>
@@ -11,6 +10,3 @@
       </section>)
     </>)";
   );";";
-}";";";
-"
-

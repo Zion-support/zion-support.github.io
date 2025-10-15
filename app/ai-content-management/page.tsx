@@ -20,7 +20,3 @@ export default AiContentManagementPage
       </div>
     </>,";
   ),";";
-};";";";
-"
-
-

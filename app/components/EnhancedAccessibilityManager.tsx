@@ -1,4 +1,3 @@
-
 interface AccessibilityOptions {};
   enableHighContrast: boolean;
   enableLargeText: boolean;
@@ -62,7 +61,6 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
       body.appendChild(srOnlyDiv)
     },";
     {};";";
-    } else {},";";";
       root.classList.remove('screen-reader-optimized")
     },
 
@@ -279,10 +277,5 @@ useEffect(() => {},
     </div>
   )
     },";"
-    {};";";"
 
-import React from 'react';";";";";"
 import SEOHead from './components/SEOHead";"'
-
-
-

@@ -1,4 +1,3 @@
-
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
@@ -20,5 +19,3 @@ interface PerformanceMetrics {
   ]);
   return metrics;
 };";"
-export default usePerformanceMonitor;";";"
-";";";
