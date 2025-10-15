@@ -1,78 +1,78 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
   loadTime: number;
+  renderTime: number;
   memoryUsage: number;
-  networkRequests: number;
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null,
-    inp: null,
-    fcp: null,
-    lcp: null,
-    ttfb: null
-  });
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Measure Core Web Vitals
-    onCLS((metric) => {
-      setMetrics(prev => ({ ...prev, cls: metric.value }));
-      console.log('CLS:', metric);
-    });
-
-    onINP((metric) => {
-      setMetrics(prev => ({ ...prev, inp: metric.value }));
-      console.log('INP:', metric);
-    });
-
-    onFCP((metric) => {
-      setMetrics(prev => ({ ...prev, fcp: metric.value }));
-      console.log('FCP:', metric);
-    });
-
-    onLCP((metric) => {
-      setMetrics(prev => ({ ...prev, lcp: metric.value }));
-      console.log('LCP:', metric);
-    });
-
-    onTTFB((metric) => {
-      setMetrics(prev => ({ ...prev, ttfb: metric.value }));
-      console.log('TTFB:', metric);
-    });
-
-    // Monitor performance in development
-    if (process.env.NODE_ENV === 'development') {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          console.log('Performance Entry:', entry);
-        }
-      });
-
-      observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
-
-      return () => observer.disconnect();
+    // Only run in development
+    if (process.env.NODE_ENV !== 'development') {
+      return;
     }
+
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      
+      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+      const renderTime = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+      
+      // Memory usage (if available)
+      const memory = (performance as any).memory;
+      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
+
+      setMetrics({
+        loadTime,
+        renderTime,
+        memoryUsage
+      });
+    };
+
+    // Measure after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+    }
+
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+    };
   }, []);
 
-  // Send metrics to analytics service in production
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'production') {
-      const allMetricsCollected = Object.values(metrics).every(value => value !== null);
-      
-      if (allMetricsCollected) {
-        // Here you would typically send metrics to your analytics service
-        console.log('All performance metrics collected:', metrics);
-      }
-    }
-  }, [metrics]);
+  if (process.env.NODE_ENV !== 'development' || !metrics) {
+    return null;
+  }
 
-  // This component doesn't render anything visible
-  return null;
+  return (
+    <div className="fixed bottom-4 right-4 z-50">
+      <button
+        onClick={() => setIsVisible(!isVisible)}
+        className="bg-purple-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-purple-700 transition-colors"
+      >
+        Performance
+      </button>
+      
+      {isVisible && (
+        <div className="absolute bottom-12 right-0 bg-slate-800 text-white p-4 rounded-lg shadow-lg min-w-64">
+          <h3 className="font-semibold mb-2">Performance Metrics</h3>
+          <div className="space-y-1 text-sm">
+            <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div>
+            <div>Render Time: {metrics.renderTime.toFixed(2)}ms</div>
+            <div>Memory: {metrics.memoryUsage.toFixed(2)}MB</div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default PerformanceMonitor;

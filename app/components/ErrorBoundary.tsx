@@ -1,4 +1,6 @@
-'use client';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
@@ -8,8 +10,8 @@ interface Props {
 }
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
 }
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -32,8 +34,13 @@ class ErrorBoundary extends Component<Props, State> {
       // Here you would typically send the error to a service like Sentry
           }
   }
+
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null
+    });
   };
 
   handleGoHome = () => {
@@ -45,37 +52,23 @@ class ErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
       return (
-        <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white">
-          <div className="max-w-md mx-auto text-center px-4">
-            <div className="mb-8">
-              <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-              <h1 className="text-2xl font-bold text-white mb-2">Something went wrong</h1>
-              <p className="text-gray-300 mb-6">
-                We&apos;re sorry, but something unexpected happened. Please try again or contact support if the problem persists.
-              </p>
+        <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
+          <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
+            <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
-
-            <div className="space-y-4">
-              <button
-                onClick={this.handleRetry}
-                className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2"
-              >
-                <RefreshCw className="w-5 h-5" />
-                <span>Try Again</span>
-              </button>
-
-              <Link
-                to="/"
-                className="w-full bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-all duration-300 flex items-center justify-center space-x-2"
-              >
-                <Home className="w-5 h-5" />
-                <span>Go Home</span>
-              </Link>
-            </div>
+            
+            <h1 className="text-2xl font-bold text-white mb-4">
+              Oops! Something went wrong
+            </h1>
+            
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
+            </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-8 text-left">
-                <summary className="cursor-pointer text-sm text-gray-400 hover:text-white">
+              <details className="mb-6 text-left">
+                <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
                   Error Details (Development Only)
                 </summary>
                 
@@ -95,6 +88,24 @@ class ErrorBoundary extends Component<Props, State> {
                 </div>
               </details>
             )}
+
+            <div className="flex flex-col sm:flex-row gap-3">
+              <button
+                onClick={this.handleRetry}
+                className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+              >
+                <RefreshCw className="w-4 h-4" />
+                Try Again
+              </button>
+              
+              <Link
+                to="/"
+                className="flex items-center justify-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-all duration-300"
+              >
+                <Home className="w-4 h-4" />
+                Go Home
+              </Link>
+            </div>
           </div>
         </div>
       );
@@ -102,4 +113,5 @@ class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
+
 export default ErrorBoundary;

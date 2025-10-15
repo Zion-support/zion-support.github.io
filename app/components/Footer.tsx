@@ -4,145 +4,151 @@ import {
   PhoneIcon, 
   EnvelopeIcon, 
   MapPinIcon,
-  
+  ArrowRightIcon,
   HeartIcon
 } from '@heroicons/react/24/outline';
 
 const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
+  const services = [
+    { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'IT Solutions', href: '/it-solutions' },
+    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
+    { name: 'Digital Transformation', href: '/digital-transformation' },
+  ];
+
+  const company = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Contact', href: '/contact' },
+  ];
+
+  const resources = [
+    { name: 'Documentation', href: '/docs' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Tutorials', href: '/tutorials' },
+    { name: 'Support', href: '/support' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+  ];
+
   return (
-    <footer className="bg-slate-900 border-t border-slate-700">
-      
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        
+    <footer className="bg-slate-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
-              </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Empowering businesses with cutting-edge AI and technology solutions. 
-              We help organizations transform their operations and achieve digital excellence.
+            <h3 className="text-lg font-semibold text-white">Zion Tech Group</h3>
+            <p className="text-gray-300 text-sm">
+              Advanced AI and IT solutions for modern businesses. We help companies 
+              transform their operations with cutting-edge technology.
             </p>
             <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <span className="sr-only">Facebook</span>
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M20 10C20 4.477 15.523 0 10 0S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" clipRule="evenodd" />
+                </svg>
+              </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">Twitter</span>
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
                 </svg>
               </a>
-              
-          <a href="https://twitter.com/ziontechgroup" className="text-purple-400 hover:text-purple-300">
-                <Twitter className="w-5 h-5" />
-              </a>
-              
-          <a href="https://linkedin.com/company/ziontechgroup" className="text-purple-400 hover:text-purple-300">
-                <Linkedin className="w-5 h-5" />
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <span className="sr-only">LinkedIn</span>
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
+                </svg>
               </a>
             </div>
           </div>
           {/* Services */}
-          <div className="space-y-4">
-            <h3 className="text-white font-semibold">Services</h3>
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  AI Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/it-services" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  IT Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/cloud-infrastructure" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Cloud Infrastructure
-                </Link>
-              </li>
-              <li>
-                <Link to="/digital-transformation" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Digital Transformation
-                </Link>
-              </li>
-              <li>
-                <Link to="/micro-saas" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Micro SaaS
-                </Link>
-              </li>
+              {services.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
+                  >
+                    <ArrowRightIcon className="h-3 w-3 mr-2 group-hover:translate-x-1 transition-transform" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           {/* Company */}
-          <div className="space-y-4">
-            <h3 className="text-white font-semibold">Company</h3>
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/about" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/careers" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link to="/case-studies" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link to="/blog" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Contact
-                </Link>
-              </li>
+              {company.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    to={item.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
+                  >
+                    <ArrowRightIcon className="h-3 w-3 mr-2 group-hover:translate-x-1 transition-transform" />
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h3 className="text-white font-semibold">Contact</h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <PhoneIcon className="h-5 w-5 text-gray-400" />
-                <span className="text-gray-400 text-sm">+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <EnvelopeIcon className="h-5 w-5 text-gray-400" />
-                <span className="text-gray-400 text-sm">info@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPinIcon className="h-5 w-5 text-gray-400" />
-                <span className="text-gray-400 text-sm">San Francisco, CA</span>
-              </div>
+          {/* Resources */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Resources</h3>
+            <ul className="space-y-2">
+              {resources.map((resource) => (
+                <li key={resource.name}>
+                  <Link
+                    to={resource.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
+                  >
+                    <ArrowRightIcon className="h-3 w-3 mr-2 group-hover:translate-x-1 transition-transform" />
+                    {resource.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Contact Info */}
+        <div className="mt-8 pt-8 border-t border-gray-700">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-center space-x-3">
+              <PhoneIcon className="h-5 w-5 text-purple-400" />
+              <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <EnvelopeIcon className="h-5 w-5 text-purple-400" />
+              <span className="text-gray-300 text-sm">info@ziontechgroup.com</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <MapPinIcon className="h-5 w-5 text-purple-400" />
+              <span className="text-gray-300 text-sm">San Francisco, CA</span>
             </div>
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="mt-8 pt-8 border-t border-slate-700">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 text-gray-400 text-sm">
-              <span>© 2024 Zion Tech Group. All rights reserved.</span>
-              <HeartIcon className="h-4 w-4 text-red-500" />
-            </div>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Terms of Service
-              </Link>
-            </div>
-          </div>
+        {/* Bottom Bar */}
+        <div className="mt-8 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-400 text-sm">
+            © {currentYear} Zion Tech Group. All rights reserved.
+          </p>
+          <p className="text-gray-400 text-sm flex items-center mt-4 md:mt-0">
+            Made with <HeartIcon className="h-4 w-4 text-red-500 mx-1" /> by Zion Tech Group
+          </p>
         </div>
       </div>
     </footer>
