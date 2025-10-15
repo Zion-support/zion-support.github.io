@@ -4,6 +4,7 @@ import '@testing-library/jest-dom';
 // Mock react-router-dom
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
+  const mockReact = jest.requireActual('react');
   return {
     ...actual,
     useLocation: () => ({
@@ -13,11 +14,11 @@ jest.mock('react-router-dom', () => {
       state: null,
       key: 'default'
     }),
-useNavigate: () => jest.fn(),
-    Link: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
-    NavLink: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
-    BrowserRouter: ({ children }) => React.createElement('div', { 'data-testid': 'browser-router' }, children),
-    MemoryRouter: ({ children }) => React.createElement('div', { 'data-testid': 'memory-router' }, children)
+    useNavigate: () => jest.fn(),
+    Link: ({ to, children, ...props }) => mockReact.createElement('a', { href: to, ...props }, children),
+    NavLink: ({ to, children, ...props }) => mockReact.createElement('a', { href: to, ...props }, children),
+    BrowserRouter: ({ children }) => mockReact.createElement('div', { 'data-testid': 'browser-router' }, children),
+    MemoryRouter: ({ children }) => mockReact.createElement('div', { 'data-testid': 'memory-router' }, children)
   };
 });
 
