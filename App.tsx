@@ -1,6 +1,7 @@
 import { Suspense, useEffect } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import './app/styles/futuristic.css'
 
 // Import pages
 import HomePage from './app/page';
@@ -86,11 +87,11 @@ export default function App() {
     <GlobalErrorBoundary>
       <HelmetProvider>
         <Router>
-          <div className="min-h-screen bg-gray-50">
+          <div className="min-h-screen relative">
             <Navigation />
             <Sidebar />
             
-            <main className="flex-1">
+            <main className="flex-1 pt-20">
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               
