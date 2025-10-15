@@ -29,7 +29,7 @@ function fixFunctionDeclaration(filePath) {
       
       // Add the function declaration
       content = content.replace(
-        /import React from 'react';\nimport { Helmet } from 'react-helmet-async';\n\n  const features = \[/,
+        /import React from 'react';\nimport { Helmet } from 'react-helmet-async';\n\n {2}const features = \[/,
         `import React from 'react';\nimport { Helmet } from 'react-helmet-async';\n\nconst ${componentName}: React.FC = () => {\n  const features = [`
       );
       

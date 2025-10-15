@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useRef } from 'react';
+import { useEffect, useCallback, useRef } from "react";
 
 interface PerformanceMetrics {
   fcp?: number;
@@ -40,18 +40,10 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
   const observerRef = useRef<PerformanceObserver | null>(null);
   const reportIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: any) => {
+  const reportMetric = useCallback((name: string, value: number, category = "Performance", _metadata?: any) => {
     // Report to analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      (window as any)['gtag']('event', name, {
-=======
-      (window as unknown as { gtag: (event: string, name: string, options: Record<string, unknown>) => void }).gtag('event', name, {
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
-=======
-      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', name, {
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+    if (typeof window !== "undefined" && "gtag" in window) {
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.("event", name, {
         event_category: category,
         value: Math.round(value),
         non_interaction: true,
@@ -59,11 +51,11 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     }
 
     // Report to custom analytics endpoint
-    if (process.env.NODE_ENV === 'production') {
-      fetch('/api/analytics/performance', {
-        method: 'POST',
+    if (process.env.NODE_ENV === "production") {
+      fetch("/api/analytics/performance", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           metric: name,
@@ -78,7 +70,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     }
 
     // Log in development (commented out for production)
-    // if (process.env.NODE_ENV === 'development') {
+    // if (process.env.NODE_ENV === "development") {
     //   console.log(`Performance Metric - ${name}:`, value);
     // }
   }, []);
@@ -87,11 +79,11 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     const metrics = metricsRef.current;
     
     Object.entries(metrics).forEach(([key, value]) => {
-      if (typeof value === 'number' && !isNaN(value)) {
+      if (typeof value === "number" && !isNaN(value)) {
         reportMetric(key.toUpperCase(), value);
-      } else if (typeof value === 'object' && value !== null) {
+      } else if (typeof value === "object" && value !== null) {
         Object.entries(value).forEach(([subKey, subValue]) => {
-          if (typeof subValue === 'number' && !isNaN(subValue)) {
+          if (typeof subValue === "number" && !isNaN(subValue)) {
             reportMetric(`${key.toUpperCase()}_${subKey.toUpperCase()}`, subValue);
           }
         });
@@ -100,19 +92,12 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
   }, [reportMetric]);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     const setupPerformanceObserver = () => {
       try {
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            const metric = entry as PerformanceEntry & { startTime: number; value?: number; hadRecentInput?: boolean };
-=======
-            const metric = entry as PerformanceEntry & { startTime?: number; value?: number };
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
-=======
             const metric = entry as PerformanceEntry & { 
               startTime?: number; 
               duration?: number;
@@ -122,128 +107,98 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
               responseStart?: number;
               requestStart?: number;
             };
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
             
             switch (entry.entryType) {
-              case 'paint':
-                if (entry.name === 'first-contentful-paint') {
+              case "paint":
+                if (entry.name === "first-contentful-paint") {
                   metricsRef.current.fcp = metric.startTime;
                 }
                 break;
               
-              case 'largest-contentful-paint':
+              case "largest-contentful-paint":
                 metricsRef.current.lcp = metric.startTime;
                 break;
               
-              case 'first-input':
-<<<<<<< HEAD
-                metricsRef.current.fid = (metric as any).processingStart - metric.startTime;
-                break;
-              
-              case 'layout-shift':
-                if (!metric.hadRecentInput) {
-                  metricsRef.current.cls = (metricsRef.current.cls || 0) + (metric.value || 0);
-=======
+              case "first-input":
                 if (metric.processingStart !== undefined && metric.startTime !== undefined) {
                   metricsRef.current.fid = metric.processingStart - metric.startTime;
                 }
                 break;
               
-              case 'layout-shift':
+              case "layout-shift":
                 if (!metric.hadRecentInput && metric.value !== undefined) {
                   metricsRef.current.cls = (metricsRef.current.cls || 0) + metric.value;
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
                 }
                 break;
               
-              case 'navigation':
-<<<<<<< HEAD
-                metricsRef.current.ttfb = (metric as any).responseStart - (metric as any).requestStart;
-=======
+              case "navigation":
                 if (metric.responseStart !== undefined && metric.requestStart !== undefined) {
                   metricsRef.current.ttfb = metric.responseStart - metric.requestStart;
                 }
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
                 break;
               
-              case 'measure':
-                if (entry.name === 'time-to-interactive') {
+              case "measure":
+                if (entry.name === "time-to-interactive") {
                   metricsRef.current.tti = metric.duration;
                 }
-                if (entry.name === 'first-meaningful-paint') {
+                if (entry.name === "first-meaningful-paint") {
                   metricsRef.current.fmp = metric.startTime;
                 }
                 break;
               
-              case 'longtask':
+              case "longtask":
                 if (metric.duration > longTaskThreshold) {
-                  reportMetric('LONG_TASK', metric.duration, 'Performance');
+                  reportMetric("LONG_TASK", metric.duration, "Performance");
                 }
                 break;
               
-              case 'resource':
+              case "resource":
                 if (enableResourceTiming && metric.duration > 1000) {
-                  reportMetric('SLOW_RESOURCE', metric.duration, 'Performance');
+                  reportMetric("SLOW_RESOURCE", metric.duration, "Performance");
                 }
                 break;
             }
           }
         });
 
-        const entryTypes = ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'];
+        const entryTypes = ["paint", "largest-contentful-paint", "first-input", "layout-shift", "navigation"];
         
         if (enableLongTaskMonitoring) {
-          entryTypes.push('longtask');
+          entryTypes.push("longtask");
         }
         
         if (enableResourceTiming) {
-          entryTypes.push('resource');
+          entryTypes.push("resource");
         }
 
         observer.observe({ entryTypes });
         observerRef.current = observer;
 
-<<<<<<< HEAD
-      } catch {
-        // console.warn('Performance Observer setup failed:', error);
-=======
       } catch (error) {
-        if (process.env.NODE_ENV === 'development') {
-          console.warn('Performance Observer setup failed:', error);
+        if (process.env.NODE_ENV === "development") {
+          console.warn("Performance Observer setup failed:", error);
         }
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
       }
     };
 
     const setupMemoryMonitoring = () => {
-      if (!enableMemoryMonitoring || !('memory' in performance)) return;
+      if (!enableMemoryMonitoring || !("memory" in performance)) return;
 
       const checkMemory = () => {
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (memory) {
-          const usedMB = memory.usedJSHeapSize / 1048576;
-          const totalMB = memory.totalJSHeapSize / 1048576;
-          const limitMB = memory.jsHeapSizeLimit / 1048576;
-=======
-=======
         if (!memory) return;
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
         const usedMB = memory.usedJSHeapSize / 1048576;
         const totalMB = memory.totalJSHeapSize / 1048576;
         const limitMB = memory.jsHeapSizeLimit / 1048576;
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
 
-          metricsRef.current.memory = {
-            used: usedMB,
-            total: totalMB,
-            limit: limitMB,
-          };
-          // Alert if memory usage is high
-          if (usedMB / limitMB > memoryThreshold) {
-            reportMetric('HIGH_MEMORY_USAGE', (usedMB / limitMB) * 100, 'Performance');
-          }
+        metricsRef.current.memory = {
+          used: usedMB,
+          total: totalMB,
+          limit: limitMB,
+        };
+        // Alert if memory usage is high
+        if (usedMB / limitMB > memoryThreshold) {
+          reportMetric("HIGH_MEMORY_USAGE", (usedMB / limitMB) * 100, "Performance");
         }
       };
 
@@ -259,17 +214,8 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-          const metric = entry as PerformanceEntry & { value: number; hadRecentInput: boolean };
-=======
-          const metric = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
-          if (!metric.hadRecentInput) {
-=======
           const metric = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
           if (!metric.hadRecentInput && metric.value !== undefined) {
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
             clsValue += metric.value;
             metricsRef.current.cls = clsValue;
           }
@@ -277,16 +223,11 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       });
 
       try {
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-<<<<<<< HEAD
-      } catch {
-        // console.warn('Layout shift monitoring not supported:', error);
-=======
+        clsObserver.observe({ entryTypes: ["layout-shift"] });
       } catch (error) {
-        if (process.env.NODE_ENV === 'development') {
-          console.warn('Layout shift monitoring not supported:', error);
+        if (process.env.NODE_ENV === "development") {
+          console.warn("Layout shift monitoring not supported:", error);
         }
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
       }
 
       return () => clsObserver.disconnect();
@@ -305,7 +246,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       reportMetrics();
     };
 
-    window.addEventListener('beforeunload', handleBeforeUnload);
+    window.addEventListener("beforeunload", handleBeforeUnload);
 
     return () => {
       if (observerRef.current) {
@@ -320,7 +261,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       if (reportIntervalRef.current) {
         clearInterval(reportIntervalRef.current);
       }
-      window.removeEventListener('beforeunload', handleBeforeUnload);
+      window.removeEventListener("beforeunload", handleBeforeUnload);
     };
   }, [
     enableMemoryMonitoring,
@@ -330,13 +271,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     reportInterval,
     memoryThreshold,
     longTaskThreshold,
-<<<<<<< HEAD
-=======
     reportMetrics,
-<<<<<<< HEAD
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
     reportMetric,
   ]);
 

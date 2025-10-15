@@ -43,15 +43,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
-<<<<<<< HEAD
-    // Log error to console (commented out for production)
-    // console.error('Error caught by boundary:', error, errorInfo);
-=======
     // Log error to console (only in development)
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
     }
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
 
     // Report error to monitoring service
     this.reportError(error, errorInfo);
@@ -82,15 +77,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           },
           body: JSON.stringify(errorReport),
         });
-<<<<<<< HEAD
-      } catch {
-        // console.warn('Failed to report error:', reportingError);
-=======
       } catch (reportingError) {
         if (process.env.NODE_ENV !== 'production') {
           console.warn('Failed to report error:', reportingError);
         }
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
       }
     }
 
@@ -107,24 +97,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (this.state.retryCount < this.maxRetries) {
       this.setState(prevState => ({
         hasError: false,
-<<<<<<< HEAD
-<<<<<<< HEAD
-        error: undefined as Error | undefined,
-        errorInfo: undefined as ErrorInfo | undefined,
-        retryCount: prevState.retryCount + 1
-      }));
-=======
-        error: undefined,
-        errorInfo: undefined,
-        retryCount: this.state.retryCount + 1
-      });
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
-=======
         error: undefined,
         errorInfo: undefined,
         retryCount: prevState.retryCount + 1
       }));
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
     }
   };
 
