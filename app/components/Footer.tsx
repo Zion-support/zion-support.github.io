@@ -59,6 +59,7 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/data-analytics" className="text-gray-300 hover:text-cyan-400 transition-colors group flex items-center"><span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>Data Analytics</Link></li>
               <li><Link to="/web-development" className="text-gray-300 hover:text-cyan-400 transition-colors group flex items-center"><span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>Web Development</Link></li>
               <li><Link to="/mobile-development" className="text-gray-300 hover:text-cyan-400 transition-colors group flex items-center"><span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>Mobile Development</Link></li>
+              <li><Link to="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors group flex items-center"><span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>Cybersecurity</Link></li>
               <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors group flex items-center"><span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>Micro SaaS Solutions</Link></li>
             </ul>
           </div>

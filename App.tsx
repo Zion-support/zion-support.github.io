@@ -74,6 +74,8 @@ const HelpPage = lazy(() => import('./app/help/page'));
 const AccessibilityPage = lazy(() => import('./app/accessibility/page'));
 const APIDocsPage = lazy(() => import('./app/api-docs/page'));
 const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
+const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
+const DemoPage = lazy(() => import('./app/demo/page'));
 
 // Additional missing pages
 const AILegalAssistantPage = lazy(() => import('./app/ai-legal-assistant/page'));
@@ -163,7 +165,6 @@ const AILegalDocumentAnalyzerPage = lazy(() => import('./app/ai-legal-document-a
 
 // New IT Solutions
 const QuantumComputingSolutionsPage = lazy(() => import('./app/quantum-computing-solutions/page'));
-const EdgeComputingSolutionsPage = lazy(() => import('./app/edge-computing-solutions/page'));
 
 // New AI Medical Services
 const AIMedicalDiagnosisAssistantPage = lazy(() => import('./app/ai-medical-diagnosis-assistant/page'));
@@ -333,6 +334,8 @@ const App = memo(() => {
                     <Route path="/accessibility" element={<AccessibilityPage />} />
                     <Route path="/api-docs" element={<APIDocsPage />} />
                     <Route path="/partnerships" element={<PartnershipsPage />} />
+                    <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                    <Route path="/demo" element={<DemoPage />} />
                     
                     {/* Additional missing pages */}
                     <Route path="/ai-legal-assistant" element={<AILegalAssistantPage />} />
@@ -423,7 +426,6 @@ const App = memo(() => {
                     
                     {/* New IT Solutions */}
                     <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
-                    <Route path="/edge-computing-solutions" element={<EdgeComputingSolutionsPage />} />
                     
                     {/* New AI Medical Services */}
                     <Route path="/ai-medical-diagnosis-assistant" element={<AIMedicalDiagnosisAssistantPage />} />

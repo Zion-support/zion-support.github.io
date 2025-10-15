@@ -13,7 +13,8 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Play
 } from "lucide-react";
 
 interface SidebarProps {
@@ -80,7 +81,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'DevOps Automation', href: '/devops-automation', icon: Settings },
         { name: 'Data Engineering', href: '/data-engineering', icon: Settings },
         { name: 'API Development', href: '/api-development', icon: Code },
-        { name: 'Security Audit', href: '/security-audit', icon: Settings }
+        { name: 'Security Audit', href: '/security-audit', icon: Settings },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: Settings }
       ]
     },
     {
@@ -99,6 +101,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Blog', href: '/blog', icon: Code },
         { name: 'Case Studies', href: '/case-studies', icon: Star },
         { name: 'API Documentation', href: '/api-docs', icon: Code },
+        { name: 'Demo', href: '/demo', icon: Play },
         { name: 'Help Center', href: '/help', icon: Settings },
         { name: 'Accessibility', href: '/accessibility', icon: Settings },
         { name: 'Privacy Policy', href: '/privacy', icon: Settings },

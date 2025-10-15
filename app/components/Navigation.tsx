@@ -26,7 +26,8 @@ import {
   CodeBracketIcon,
   DevicePhoneMobileIcon,
   UserPlusIcon,
-  CheckCircleIcon
+  CheckCircleIcon,
+  PlayIcon
 } from '@heroicons/react/24/outline';
 
 interface NavigationProps {
@@ -116,6 +117,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'Data Engineering', href: '/data-engineering', icon: CircleStackIcon },
         { name: 'API Development', href: '/api-development', icon: CodeBracketIcon },
         { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
         { name: 'Quantum Computing', href: '/quantum-computing-solutions', icon: CpuChipIcon },
         { name: 'Edge Computing', href: '/edge-computing-solutions', icon: CloudIcon },
         { name: 'AR Solutions', href: '/augmented-reality-solutions', icon: EyeIcon },
@@ -176,6 +178,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       ]
     },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
+    { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/help', icon: QuestionMarkCircleIcon }
   ];
 
