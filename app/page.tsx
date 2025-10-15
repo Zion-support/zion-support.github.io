@@ -114,7 +114,6 @@ const HomePage: React.FC = memo(() => {
             </div>
             <div className="text-center mt-8">
               <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium">View All Services →</Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-bd72
             </div>
           </div>
         </div>

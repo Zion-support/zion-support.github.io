@@ -2,6 +2,9 @@ import { Suspense, useEffect, lazy } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization'
+import { useAdvancedPerformance } from './app/hooks/useAdvancedPerformance'
+import { useErrorMonitoring } from './app/hooks/useErrorMonitoring'
+import { useAnalytics } from './app/hooks/useAnalytics'
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -76,10 +79,86 @@ export default function App() {
     enableIntersectionObserver: true,
   });
 
+  // Initialize advanced performance monitoring
+  const { mark, measure } = useAdvancedPerformance({
+    enableWebVitals: true,
+    enableResourceTiming: true,
+    enableNavigationTiming: true,
+    enableUserTiming: true,
+    enableMemoryInfo: true,
+    enableNetworkInfo: true,
+    sampleRate: 1.0,
+  });
+
+  // Initialize error monitoring
+  const { reportError } = useErrorMonitoring({
+    enableConsoleErrors: true,
+    enableUnhandledRejections: true,
+    enableResourceErrors: true,
+    enableNetworkErrors: true,
+    enablePerformanceErrors: true,
+    sampleRate: 1.0,
+    maxErrorsPerSession: 50,
+    enableOfflineStorage: true,
+  });
+
+  // Initialize analytics
+  const { trackPageView, trackEvent, trackEngagement } = useAnalytics({
+    enableGoogleAnalytics: true,
+    enableCustomAnalytics: true,
+    enablePageViews: true,
+    enableUserTracking: true,
+    enableEcommerce: true,
+    enablePerformanceTracking: true,
+    sampleRate: 1.0,
+    debugMode: process.env.NODE_ENV === 'development',
+  });
+
   useEffect(() => {
+    // Mark app initialization
+    mark('app-initialization-start');
+    
     // Preload critical resources
     preloadResource('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap', 'style');
-  }, [preloadResource])
+    
+    // Track app initialization
+    trackEvent({
+      action: 'app_initialized',
+      category: 'Application',
+      label: 'App Load',
+    });
+
+    // Mark app initialization complete
+    mark('app-initialization-end');
+    measure('app-initialization', 'app-initialization-start', 'app-initialization-end');
+  }, [preloadResource, mark, measure, trackEvent])
+
+  // Track page views on route changes
+  useEffect(() => {
+    trackPageView();
+  }, [trackPageView]);
+
+  // Track user engagement
+  useEffect(() => {
+    const handleClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (target.matches('a, button, [role="button"]')) {
+        trackEngagement('click', undefined, target.textContent?.trim() || target.tagName);
+      }
+    };
+
+    const handleScroll = () => {
+      trackEngagement('scroll', Math.round(window.scrollY));
+    };
+
+    document.addEventListener('click', handleClick);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      document.removeEventListener('click', handleClick);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [trackEngagement]);
 
   return (
     <GlobalErrorBoundary>

@@ -104,6 +104,7 @@
     "optimize:seo-enhanced": "node scripts/seo-optimizer-enhanced.cjs",
     "lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
     "postbuild": "npm run generate:sitemap && npm run optimize:performance && node scripts/remove-console-logs.cjs && echo \"Build completed successfully\"",
+    "build:staging": "NODE_ENV=staging npm run build",
     "analyze:full": "npm run build && npm run analyze:bundle",
     "debug:performance": "localStorage.setItem('debug-performance', 'true') && npm run dev"
   },
