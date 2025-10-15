@@ -155,8 +155,6 @@ const Navigation: React.FC = () => {
             <Link to="/about" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
               About
             </Link>
-<<<<<<< HEAD
-            <div className="px-3 py-2">
             <div className="space-y-1">
               <div className="text-gray-700 px-3 py-2 text-base font-medium">AI & Machine Learning</div>
               <Link to="/ai-services" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
