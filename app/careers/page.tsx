@@ -17,13 +17,13 @@ const CareersPage: React.FC = () => {
         '5+ years experience in AI/ML',
         'Expertise in Python, TensorFlow, PyTorch',
         'Experience with cloud platforms (AWS, GCP, Azure)']
-        'Strong problem-solving and communication skills']],
+        'Strong problem-solving and communication skills'],
       benefits: [
         'Competitive salary and equity',
         'Health, dental, and vision insurance',
         'Flexible work arrangements',
         'Professional development budget']
-        '401(k) with company matching']]
+        '401(k) with company matching']
     },
     {
       title: 'Full-Stack Developer',
@@ -37,13 +37,13 @@ const CareersPage: React.FC = () => {
         '3+ years full-stack development experience',
         'Proficiency in React, Node.js, TypeScript',
         'Experience with databases (PostgreSQL, MongoDB)']
-        'Knowledge of cloud services and DevOps']],
+        'Knowledge of cloud services and DevOps'],
       benefits: [
         'Competitive salary',
         'Comprehensive health benefits',
         'Remote work flexibility',
         'Learning and development opportunities']
-        'Team building events']]
+        'Team building events']
     },
     {
       title: 'AI Product Manager',
@@ -57,13 +57,13 @@ const CareersPage: React.FC = () => {
         '4+ years product management experience',
         'Experience with AI/ML products',
         'Strong analytical and communication skills']
-        'MBA preferred']],
+        'MBA preferred'],
       benefits: [
         'Competitive salary and bonus',
         'Health and wellness benefits',
         'Flexible PTO policy',
         'Professional development opportunities']
-        'Stock options']]
+        'Stock options']
     },
     {
       title: 'DevOps Engineer',
@@ -77,13 +77,13 @@ const CareersPage: React.FC = () => {
         'Expertise in AWS, Docker, Kubernetes',
         'Experience with CI/CD pipelines',
         'Knowledge of monitoring and logging tools']
-        'Scripting skills (Python, Bash)']],
+        'Scripting skills (Python, Bash)'],
       benefits: [
         'Competitive salary',
         'Health insurance',
         'Remote work options',
         'Certification reimbursement']
-        'Performance bonuses']]
+        'Performance bonuses']
     }
   ];
 
@@ -303,7 +303,7 @@ const CareersPage: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-6">Don't See Your Role?</h2>
               
           <p className="text-xl text-gray-300 mb-8">
-                We're always looking for talented individuals. Send us your resume and let us know how you can contribute to our mission.
+                We&apos;re always looking for talented individuals. Send us your resume and let us know how you can contribute to our mission.
               </p>
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -332,7 +332,7 @@ const CareersPage: React.FC = () => {
             Don't See the Right Role?
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            We're always looking for talented individuals. Send us your resume and let's talk!
+            We&apos;re always looking for talented individuals. Send us your resume and let&apos;s talk!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

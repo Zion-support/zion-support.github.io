@@ -75,7 +75,7 @@ const incidents = [
         {
           time: '2024-01-20T14:30:00Z',
           message: 'We are investigating reports of slow file upload performance.']
-        }]]
+        }]
     },
     {
       id: 2,
@@ -94,7 +94,7 @@ const incidents = [
         {
           time: '2024-01-19T02:00:00Z',
           message: 'Scheduled maintenance started. Database services may be temporarily unavailable.']
-        }]]
+        }]
     }
   ];
 

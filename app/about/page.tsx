@@ -11,7 +11,7 @@ import { Brain, Shield, Users, Award, Zap, Globe, Target } from 'lucide-react';
     description: "We prioritize the security and privacy of our clients' data with enterprise-grade protection measures." },
   { icon: <Users className="w-8 h-8" />,
     title: "Client Success",
-    description: "Our success is measured by our clients' success. We're committed to delivering exceptional results." },
+    description: "Our success is measured by our clients&apos; success. We&apos;re committed to delivering exceptional results." },
   { icon: <Award className="w-8 h-8" />,
     title: "Excellence",
     description: "We maintain the highest standards of quality in everything we do, from code to customer service." }

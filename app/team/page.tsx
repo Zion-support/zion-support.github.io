@@ -205,7 +205,7 @@ const stats = [
               <h2 className="text-4xl font-bold text-white mb-6">Join Our Team</h2>
               
           <p className="text-xl text-gray-300 mb-8">
-                We're always looking for talented individuals who share our passion for innovation and excellence.
+                We&apos;re always looking for talented individuals who share our passion for innovation and excellence.
               </p>
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

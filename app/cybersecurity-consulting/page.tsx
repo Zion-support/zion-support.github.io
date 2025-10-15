@@ -36,7 +36,7 @@ const pricingPlans = [
         "Risk analysis report",
         "Security recommendations",
         "Compliance check"]
-        "Executive summary"]],
+        "Executive summary"],
       popular: false
     },
     {
@@ -50,7 +50,7 @@ const pricingPlans = [
         "Security training sessions",
         "Compliance monitoring",
         "Threat intelligence updates"]
-        "24/7 emergency support"]],
+        "24/7 emergency support"],
       popular: true
     },
     {
@@ -64,7 +64,7 @@ const pricingPlans = [
         "Custom security solutions",
         "Advanced threat protection",
         "Security operations center"]
-        "Ongoing optimization"]],
+        "Ongoing optimization"],
       popular: false
     }
   ];

@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 interface PromotionBanner {
-  id: string;,
-    title: string;,
-    subtitle: string;,
-    ctaText: string;,
-    ctaLink: string;,
-    backgroundColor: string;,
-    textColor: string;,
-    icon: string;
+  id: string;
+  title: string;
+  subtitle: string;
+  ctaText: string;
+  ctaLink: string;
+  backgroundColor: string;
+  textColor: string;
+  icon: string;
   stats?: {
-    value: string;,
+    value: string;
     label: string;
   }[];
 }
@@ -33,7 +33,7 @@ const ContentPromotionBanner: React.FC = () => {
       stats: [
         { value: '$50M+', label: 'Annual Savings' },
         { value: '95%', label: 'Process Automation' }]
-        { value: '300%', label: 'ROI' }]]
+        { value: '300%', label: 'ROI' }]
     },
     {
       id: 'ai-trends-2026',
@@ -47,7 +47,7 @@ const ContentPromotionBanner: React.FC = () => {
       stats: [
         { value: '$100B+', label: 'Market Value' },
         { value: '95%', label: 'Process Automation' }]
-        { value: '10x', label: 'Efficiency Gains' }]]
+        { value: '10x', label: 'Efficiency Gains' }]
     },
     {
       id: 'autonomous-architecture',
@@ -61,7 +61,7 @@ const ContentPromotionBanner: React.FC = () => {
       stats: [
         { value: '99.9%', label: 'Uptime' },
         { value: '90%', label: 'Cost Reduction' }]
-        { value: 'Real-time', label: 'Optimization' }]]
+        { value: 'Real-time', label: 'Optimization' }]
     }
   ];
 

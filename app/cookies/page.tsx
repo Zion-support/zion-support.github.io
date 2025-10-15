@@ -12,7 +12,7 @@ const CookiesPage: React.FC = () => {
         'Authentication cookies',
         'Security cookies',
         'Load balancing cookies']
-        'User interface customization']],
+        'User interface customization'],
       required: true
     },
     {
@@ -23,7 +23,7 @@ const CookiesPage: React.FC = () => {
         'Language preferences',
         'Region settings',
         'User preferences']
-        'Accessibility options']],
+        'Accessibility options'],
       required: false
     },
     {
@@ -34,7 +34,7 @@ const CookiesPage: React.FC = () => {
         'Google Analytics',
         'Page view tracking',
         'User behavior analysis']
-        'Performance monitoring']],
+        'Performance monitoring'],
       required: false
     },
     {
@@ -45,7 +45,7 @@ const CookiesPage: React.FC = () => {
         'Social media tracking',
         'Advertising cookies',
         'Remarketing pixels']
-        'Conversion tracking']],
+        'Conversion tracking'],
       required: false
     }
   ];

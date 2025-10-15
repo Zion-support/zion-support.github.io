@@ -12,7 +12,7 @@ const SitemapPage: React.FC = () => {
         { name: 'Contact', url: '/contact', description: 'Get in touch with us' },
         { name: 'Portfolio', url: '/portfolio', description: 'Our work and projects' },
         { name: 'Blog', url: '/blog', description: 'Latest news and insights' }]
-        { name: 'Demo', url: '/demo', description: 'Schedule a product demo' }]]
+        { name: 'Demo', url: '/demo', description: 'Schedule a product demo' }]
     },
     {
       title: 'AI Services',
@@ -24,7 +24,7 @@ const SitemapPage: React.FC = () => {
         { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data analysis' },
         { name: 'AI Marketing Automation', url: '/ai-marketing-automation', description: 'Automated marketing campaigns' },
         { name: 'AI Voice Assistant', url: '/ai-voice-assistant', description: 'Voice-enabled AI solutions' }]
-        { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Business process automation' }]]
+        { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Business process automation' }]
     },
     {
       title: 'IT Services',
@@ -35,7 +35,7 @@ const SitemapPage: React.FC = () => {
         { name: 'Network Security', url: '/network-security', description: 'Cybersecurity solutions' },
         { name: 'Software Development', url: '/software-development', description: 'Custom software solutions' },
         { name: 'System Integration', url: '/system-integration', description: 'System integration services' }]
-        { name: 'Web Development', url: '/web-development', description: 'Modern web applications' }]]
+        { name: 'Web Development', url: '/web-development', description: 'Modern web applications' }]
     },
     {
       title: 'Micro SAAS',
@@ -47,7 +47,7 @@ const SitemapPage: React.FC = () => {
         { name: 'Zion AI Content Studio', url: '/zion-ai-content-studio', description: 'Content creation suite' },
         { name: 'Zion AI Financial Analytics', url: '/zion-ai-financial-analytics', description: 'Financial data analysis' },
         { name: 'Zion AI Inventory Smart', url: '/zion-inventory-smart', description: 'Smart inventory management' }]
-        { name: 'Zion AI Data Cleaner', url: '/zion-ai-data-cleaner', description: 'Data cleaning and validation' }]]
+        { name: 'Zion AI Data Cleaner', url: '/zion-ai-data-cleaner', description: 'Data cleaning and validation' }]
     },
     {
       title: '5G Solutions',
@@ -57,7 +57,7 @@ const SitemapPage: React.FC = () => {
         { name: '5G IoT Solutions', url: '/5g-iot-solutions', description: 'IoT connectivity solutions' },
         { name: '5G Edge Computing', url: '/5g-edge-computing', description: 'Edge computing services' },
         { name: '5G Private Networks', url: '/5g-private-networks', description: 'Private 5G networks' }]
-        { name: '5G Smart City Solutions', url: '/5g-smart-city-solutions', description: 'Smart city implementations' }]]
+        { name: '5G Smart City Solutions', url: '/5g-smart-city-solutions', description: 'Smart city implementations' }]
     },
     {
       title: 'Resources',
@@ -69,21 +69,21 @@ const SitemapPage: React.FC = () => {
         { name: 'FAQ', url: '/faq', description: 'Frequently asked questions' },
         { name: 'Case Studies', url: '/case-studies', description: 'Success stories and examples' },
         { name: 'News', url: '/news', description: 'Company news and updates' }]
-        { name: 'Status Page', url: '/status', description: 'System status and uptime' }]]
+        { name: 'Status Page', url: '/status', description: 'System status and uptime' }]
     },
     {
       title: 'Company',
       pages: [
         { name: 'Our Team', url: '/team', description: 'Meet our team members' },
         { name: 'Careers', url: '/careers', description: 'Job opportunities' }]
-        { name: 'Partners', url: '/partners', description: 'Partnership information' }]]
+        { name: 'Partners', url: '/partners', description: 'Partnership information' }]
     },
     {
       title: 'Legal',
       pages: [
         { name: 'Privacy Policy', url: '/privacy', description: 'Data protection and privacy' },
         { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions' }]
-        { name: 'Cookie Policy', url: '/cookies', description: 'Cookie usage information' }]]
+        { name: 'Cookie Policy', url: '/cookies', description: 'Cookie usage information' }]
     }
   ];
 
@@ -279,7 +279,7 @@ const quickLinks = [
             <h2 className="text-3xl font-bold text-white mb-6">Can't Find What You're Looking For?</h2>
             
           <p className="text-xl text-gray-300 mb-8">
-              If you can't find the page or information you need, our team is here to help.
+              If you can&apos;t find the page or information you need, our team is here to help.
             </p>
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,21 +1,71 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
-const PerformanceMonitor: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>PerformanceMonitor - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">PerformanceMonitor</h1>
-          <p className="text-gray-300 text-center">Coming soon...</p>
-        </div>
-      </div>
-    </>
-  );
+interface PerformanceMonitorProps {
+  children: React.ReactNode;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
+  useEffect(() => {
+    // Monitor Core Web Vitals
+    onCLS((metric) => {
+      console.log('CLS:', metric);
+      // Send to analytics service
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: 'CLS',
+          value: Math.round(metric.value * 1000),
+        });
+      }
+    });
+
+    onINP((metric) => {
+      console.log('INP:', metric);
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: 'INP',
+          value: Math.round(metric.value),
+        });
+      }
+    });
+
+    onFCP((metric) => {
+      console.log('FCP:', metric);
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: 'FCP',
+          value: Math.round(metric.value),
+        });
+      }
+    });
+
+    onLCP((metric) => {
+      console.log('LCP:', metric);
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: 'LCP',
+          value: Math.round(metric.value),
+        });
+      }
+    });
+
+    onTTFB((metric) => {
+      console.log('TTFB:', metric);
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: 'TTFB',
+          value: Math.round(metric.value),
+        });
+      }
+    });
+  }, []);
+
+  return <>{children}</>;
 };
 
 export default PerformanceMonitor;
