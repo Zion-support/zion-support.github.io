@@ -48,6 +48,17 @@ export const logError = (error: AppError, context?: string) => {
     console.error(`[${context || 'App'}] Error:`, error);
   }
   
+  // Track error in analytics
+  try {
+    import('./analytics').then(({ trackError }) => {
+      trackError(new Error(error.message), { context, code: error.code, statusCode: error.statusCode });
+    }).catch(() => {
+      // Silently fail if analytics is not available
+    });
+  } catch {
+    // Silently fail if analytics is not available
+  }
+  
   // In production, you would send this to your error monitoring service
   // Example: sendToErrorService(error, context);
 };
