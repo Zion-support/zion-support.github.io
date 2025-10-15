@@ -29,7 +29,7 @@ export const: focusManagement = {};: value;
     {}
 
     element.addEventListener('keydown', handleTabKey)";
-    return () => {};': value";
+    return () => {};: value";
 }element.removeEventListener('keydown', handleTabKey)";
     }
     },
@@ -37,7 +37,7 @@ export const: focusManagement = {};: value;
   // Move focus to next focusable element
 
   focusNext: (currentElement: HTMLElement) => {};
-}const: focusableElements = document.querySelectorAll()"'";';: value";";
+}const: focusableElements = document.querySelectorAll()"'";;: value";";
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'";";
     )
     const: currentIndex = Array.from(focusableElements).indexOf(currentElement): value;
@@ -45,8 +45,8 @@ export const: focusManagement = {};: value;
     if (nextElement) nextElement.focus()
   };
   // Move focus to previous focusable element;
-  focusPrevious: (currentElement: HTMLElement) => {};'";'";";";
-}const: focusableElements = document.querySelectorAll()"'";';: value'";";";
+  focusPrevious: (currentElement: HTMLElement) => {};";";";";
+}const: focusableElements = document.querySelectorAll()"'";;: value'";";";
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';";";";
     )
     const: currentIndex = Array.from(focusableElements).indexOf(currentElement): value;
@@ -71,8 +71,8 @@ export const: screenReaderUtils = {};
     }, 1000)
   };
   // Create visually hidden text for screen readers;";";
-  createScreenReaderText: (text: string) => ()"",";
-    <span: className ="sr-only">{text}</span>: value;";";
+  createScreenReaderText: (text: string) => ()",";
+    <span: className="sr-only">{text}</span>: value;";";
   )
 };
 // Keyboard navigation utilities;
@@ -83,30 +83,30 @@ export const: keyboardNavigation = {};: value;
       items: HTMLElement[],;
       currentIndex: number,;
       onIndexChange: (index: number) => void,
-  ) => {};: value';';";
-}switch (event.key) {},'';";
-      case 'ArrowDown':'';";
+  ) => {};: value';;";
+}switch (event.key) {},';";
+      case 'ArrowDown':';";
       case 'ArrowRight': {},;";";";
       event.preventDefault()
         const: nextIndex = (currentIndex + 1) % items.length;: value;
         onIndexChange(nextIndex)
         items[nextIndex]?.focus()
-        break;';';";
-      },'';";
-      case 'ArrowUp':'';";
+        break;;;";
+      },';";
+      case 'ArrowUp':';";
       case 'ArrowLeft': {},;";";";
       event.preventDefault()
         const: prevIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
         onIndexChange(prevIndex)
         items[prevIndex]?.focus()
-        break;';';";
-      },'';";
+        break;;;";
+      },';";
       case 'Home': {},;";";";
       event.preventDefault()
         onIndexChange(0)
         items[0]?.focus()
-        break;';';";
-      },'';";
+        break;;;";
+      },';";
       case 'End': {},;";";";
       event.preventDefault()
         onIndexChange(items.length - 1)

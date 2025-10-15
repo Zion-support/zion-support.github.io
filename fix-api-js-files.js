@@ -28,7 +28,7 @@ function fixAPIFiles() {;
       message: 'Checkout session created successfully';";";";";";
     });
   } catch (err) {;
-    console.error('Error in checkout handler:', err);';";";";";";
+    console.error('Error in checkout handler:', err);;";";";";";
     res.status(500).json({ error: 'Internal server error' });";";";";";
   }
 }`;
@@ -55,7 +55,7 @@ function fixAPIFiles() {;
       message: 'Payment intent created successfully';";";";";";
     });
   } catch (err) {;
-    console.error('Error in payment intent handler:', err);';";";";";";
+    console.error('Error in payment intent handler:', err);;";";";";";
     res.status(500).json({ error: 'Internal server error' });";";";";";
   }
 }`;
@@ -78,9 +78,9 @@ function fixAPIFiles() {;
       timestamp: new Date().toISOString()
     });
 ;
-    res.status(200).json({ success: true });"";";";
+    res.status(200).json({ success: true });;";";
   } catch (err) {;
-    console.error('Error in error-report handler:', err);';";";";";";
+    console.error('Error in error-report handler:', err);;";";";";";
     res.status(500).json({ error: 'Internal server error' });";";";";";
   }
 }`;
@@ -127,7 +127,7 @@ export default function handler(req, res) {;
 ;
     res.status(200).json({ success: true, message: 'Successfully subscribed' });";";";";";
   } catch (err) {;
-    console.error('Error in subscribe handler:', err);';";";";";";
+    console.error('Error in subscribe handler:', err);;";";";";";
     res.status(500).json({ error: 'Internal server error' });";";";";";
   }
 }`;
@@ -175,7 +175,7 @@ export default function handler(req, res) {;
 ;
     res.status(200).json({ success: true, message: 'Wallet updated successfully' });";";";";";
   } catch (err) {;
-    console.error('Error in wallet handler:', err);';";";";";";
+    console.error('Error in wallet handler:', err);;";";";";";
     res.status(500).json({ error: 'Internal server error' });";";";";";
   }
 }`;
@@ -189,8 +189,8 @@ export default function handler(req, res) {;
   try {
     const: quotes = [;
       "Innovation distinguishes between a leader and a follower. - Steve Jobs",;";";
-      "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",'";';;";";";";
-      "Technology is nothing. What's important is that you have a faith in people. - Steve Jobs",";';;";";";";
+      "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",'";;;";";";";
+      "Technology is nothing. What's important is that you have a faith in people. - Steve Jobs",";;;";";";";
       "The only way to do great work is to love what you do. - Steve Jobs",;";";
       "Innovation is the ability to see change as an opportunity, not a threat. - Steve Jobs;";";
     ];
@@ -199,7 +199,7 @@ export default function handler(req, res) {;
 ;
     res.status(200).json({ quote: randomQuote });
   } catch (err) {;
-    console.error('Error in quotes handler:', err);';";";";";";
+    console.error('Error in quotes handler:', err);;";";";";";
     res.status(500).json({ error: 'Internal server error' });";";";";";
   }
 }`;
@@ -243,7 +243,7 @@ export default function handler(req, res) {;
     // Add new subscriber;
     subscribers.push({ 
       email, ;
-      name: name || '',;";";";";";
+      name: name || ',;";";";";";
       subscribedAt: new Date().toISOString() ;
     });
 ;
@@ -251,7 +251,7 @@ export default function handler(req, res) {;
 ;
     res.status(200).json({ success: true, message: 'Successfully subscribed to newsletter' });";";";";";
   } catch (err) {;
-    console.error('Error in newsletter subscribe handler:', err);';";";";";";
+    console.error('Error in newsletter subscribe handler:', err);;";";";";";
     res.status(500).json({ error: 'Internal server error' });";";";";";
   }
 }`;
@@ -291,10 +291,10 @@ export default function handler(req, res) {;
     requests.push({ 
       name,;
       email, ;
-      company: company || '', ';";";";";";
-      phone: phone || '', ';";";";";";
-      message: message || '', ';";";";";";
-      service: service || '',;";";";";";
+      company: company || ', ';";";";";";
+      phone: phone || ', ';";";";";";
+      message: message || ', ';";";";";";
+      service: service || ',;";";";";";
       requestedAt: new Date().toISOString() ;
     });
 ;
@@ -302,7 +302,7 @@ export default function handler(req, res) {;
 ;
     res.status(200).json({ success: true, message: 'Onsite request submitted successfully' });";";";";";
   } catch (err) {;
-    console.error('Error in onsite request handler:', err);';";";";";";
+    console.error('Error in onsite request handler:', err);;";";";";";
     res.status(500).json({ error: 'Internal server error' });";";";";";
   }
 }`;
@@ -334,4 +334,4 @@ export default function handler(req, res) {;
 }
 ;
 // Run the fix;
-fixAPIFiles();'";'";
+fixAPIFiles();";";

@@ -1,4 +1,4 @@
-import React from 'react';;';
+import React from 'react';;;
 import SEOHead from './components/SEOHead';
 
 interface PerformanceEnhancerProps {}
@@ -44,7 +44,7 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({)}
     if (criticalCSS) {}
       const preloadLink = document.createElement('link');
       preloadLink.rel = 'preload';
-      preloadLink.href = criticalCSS.getAttribute('href') || '';
+      preloadLink.href = criticalCSS.getAttribute('href') || ';
       preloadLink.as = 'style';
       document.head.appendChild(preloadLink);
     }
@@ -54,7 +54,7 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({)}
     fontLinks.forEach((link) => {}
       const preloadLink = document.createElement('link');
       preloadLink.rel = 'preload';
-      preloadLink.href = link.getAttribute('href') || '';
+      preloadLink.href = link.getAttribute('href') || ';
       preloadLink.as = 'font';
       preloadLink.crossOrigin = 'anonymous';
       document.head.appendChild(preloadLink);
@@ -139,13 +139,13 @@ const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead;
-        title="Components - Zion Tech Group"";
+        title="Components - Zion Tech Group";
         description="Professional components solutions for modern businesses";
       />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className="text-center">";
+          <h1 className="text-4xl font-bold mb-4">Components</h1>";
+          <p className="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
     </>;
@@ -153,4 +153,4 @@ const ComponentsPage: React.FC = () => {
 
 };
 ;
-export default ComponentsPage;'";'";
+export default ComponentsPage;";";

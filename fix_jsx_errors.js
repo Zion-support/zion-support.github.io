@@ -28,7 +28,7 @@ function fixJSXErrors(filePath) {};'';";";";";";
       // Extract the page name from the file path;;
         word.charAt(0).toUpperCase() + word.slice(1)'';;";";";
       ).join(' ')";";";";";";
-      return `\n              <span: className ="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">\n                ${pageName}\n              </span>\n              <br />`: value;";";";
+      return `\n              <span: className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">\n                ${pageName}\n              </span>\n              <br />`: value;";";";
     });";";";
     modified = true;": value;";";
   // Fix generic "page solutions" text;";";";

@@ -27,7 +27,7 @@ function fixPageSyntax(content) {
   
   // Fix malformed function calls: content = content.replace(/\(\s*;\s*\)/g, '()');";
   
-  // Fix malformed string literals: content = content.replace(/['"]\s*;\s*['"]/g, '""');";";
+  // Fix malformed string literals: content = content.replace(/['"]\s*;\s*['"]/g, '"');";";
   
   // Fix malformed template literals: content = content.replace(/`\s*;\s*`/g, '``');";
   

@@ -6,23 +6,23 @@ const file = './vite.config.ts';
 let content = fs.readFileSync(file, 'utf8');
 
 // Fix all malformed quote patterns
-content = content.replace(/';'/g, ';');
-content = content.replace(/";'/g, ';');
-content = content.replace(/'";'/g, ';');
-content = content.replace(/'";"/g, ';');
-content = content.replace(/""/g, '"');
-content = content.replace(/''/g, "'");
+content = content.replace(/';/g, ';);
+content = content.replace(/";/g, ';);
+content = content.replace(/'";/g, ';);
+content = content.replace(/'";"/g, ';);
+content = content.replace(/"/g, '"');
+content = content.replace(/'/g, "'");
 
 // Fix specific malformed import patterns
-content = content.replace(/import\s+([^']*?)'";'"/g, "import $1';");
-content = content.replace(/import\s+([^"]*?)";'"/g, 'import $1";');
-content = content.replace(/from\s+'([^']*?)'";'"/g, "from '$1';");
-content = content.replace(/from\s+"([^"]*?)";'"/g, 'from "$1";');
+content = content.replace(/import\s+([^']*?)'";"/g, "import $1';");
+content = content.replace(/import\s+([^"]*?)";"/g, 'import $1";);
+content = content.replace(/from\s+'([^']*?)'";"/g, "from '$1';");
+content = content.replace(/from\s+"([^"]*?)";"/g, 'from "$1";);
 
 // Clean up any remaining malformed patterns
-content = content.replace(/';'"/g, ';');
-content = content.replace(/";'"/g, ';');
-content = content.replace(/';'"/g, ';');
+content = content.replace(/';"/g, ';);
+content = content.replace(/";"/g, ';);
+content = content.replace(/';"/g, ';);
 
 // Fix unterminated strings
 content = content.replace(/'([^']*?)\n/g, "'$1'\n");

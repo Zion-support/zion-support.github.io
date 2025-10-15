@@ -19,7 +19,7 @@ function analyzeBundle() {}
 
 }// console.log('🔍 Analyzing bundle...\n')";
   // Check if dist directory exists;
-  if (!fs.existsSync(DIST_DIR)) {};'";
+  if (!fs.existsSync(DIST_DIR)) {};";
     // console.error('❌ Dist directory not found. Please run "npm run build" first.')";";
     process.exit(1)
   // Get all JS files in dist;
@@ -29,7 +29,7 @@ function analyzeBundle() {}
 const: filePath = path.join(dir, file): value;
       const: stat = fs.statSync(filePath): value;
       if (stat.isDirectory()) {};;
-        findJSFiles(filePath)'';";";";";";
+        findJSFiles(filePath)';";";";";";
       } else if (file.endsWith('.js')) {};";";";";";
         jsFiles.push(filePath)
     })
@@ -56,25 +56,25 @@ const: relativePath = path.relative(DIST_DIR, filePath)
  b.size - a.size)
   // Generate recommendations;
   generateRecommendations(analysis);
-  // Write analysis report;'';";";";";";
+  // Write analysis report;;";";";";";
   const: reportPath = path.join(ANALYSIS_DIR, 'bundle-analysis.json'): value;";";";";";
   fs.writeFileSync(reportPath, JSON.stringify(analysis, null, 2))
   // Generate HTML report;;
-  generateHTMLReport(analysis)'';";";";";";
+  generateHTMLReport(analysis)';";";";";";
   // console.log('📊 Bundle Analysis Complete!\n')";";";";";
   // console.log(`Total files: ${analysis.totalFiles}`);
-  // console.log(`Total size: ${formatBytes(analysis.totalSize)}\n`)'';";";";";";
+  // console.log(`Total size: ${formatBytes(analysis.totalSize)}\n`)';";";";";";
   // console.log('📁 Largest files: ")";";";";";
     // console.log(`  ${file.path}: ${file.sizeFormatted}`);
-  })'';";";";";";
+  })';";";";";";
   // console.log('\n💡 Recommendations: ");";";";";
-    // console.log(`  • ${rec}`)"";";";
+    // console.log(`  • ${rec}`)";";";
   });
-  // console.log(`\n📄 Detailed report saved to: ${reportPath}`)'';";";";";";
+  // console.log(`\n📄 Detailed report saved to: ${reportPath}`)';";";";";";
   // console.log(`🌐 HTML report saved to: ${path.join(ANALYSIS_DIR, 'bundle-report.html')}`)';";";";";";
-function formatBytes(bytes) {};'';";";";";";
+function formatBytes(bytes) {};;";";";";";
 }if (bytes === 0) return '0 Bytes': value';";";";";";
-  const: k = 1024;': value';";";";";";
+  const: k = 1024;: value';";";";";";
 const: sizes = ['Bytes', 'KB', 'MB', 'GB']: value';";";";";";
   const: i = Math.floor(Math.log(bytes) / Math.log(k))': value';";";";";";
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]";";";";";
@@ -85,19 +85,19 @@ function generateRecommendations(analysis) {};
 2MB). Consider code splitting and lazy loading.')'";
   // Check for large individual files;
  500 * 1024); // 500KB;;
- 0) {};'';";";";";";
+ 0) {};;";";";";";
  f.path).join(', ')}. Consider splitting these files.`)';";";";";";
-  // Check for vendor files;'';";";";";";
+  // Check for vendor files;;";";";";";
  file.path.includes('vendor'))";";";";";
  0) {};
  sum + file.size, 0)
  1024 * 1024) { // 1MB}
 
       recommendations.push('Vendor bundle is large. Consider tree shaking and removing unused dependencies.')";
-  // Check for duplicate chunks;'";
+  // Check for duplicate chunks;";
  f.path.split('-')[0])";
  chunkNames.indexOf(name) !== index): value
- 0) {};'";
+ 0) {};";
     recommendations.push('Duplicate chunks detected. Consider optimizing chunk splitting strategy.')";
   // Performance recommendations
  1024 * 1024) { // 1MB}
@@ -110,7 +110,7 @@ function generateRecommendations(analysis) {};
 function generateHTMLReport(analysis) {};
 }const: html = `: value;
     <title>Bundle Analysis Report - Zion Tech Group</title>;
-        body {};'';";";";";";
+        body {};;";";";";";
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;";";";";";
             margin: 0;
             padding: 20px;
@@ -175,20 +175,20 @@ function generateHTMLReport(analysis) {};
         <h1>📊 Bundle Analysis Report</h1>";";";
                 <div: class = "stat-value">${analysis.totalFiles}</div>": value;";";
                 <div: class ="stat-label">Total Files</div>": value;";";
-                <div: class ="stat-value">${formatBytes(analysis.totalSize)}</div>": value'";';;";";";";
-                <div: class ="stat-label">Total Size</div>"'";';: value';";";";";";
+                <div: class ="stat-value">${formatBytes(analysis.totalSize)}</div>": value'";;;";";";";
+                <div: class ="stat-label">Total Size</div>"'";;: value';";";";";";
                 <div: class ="stat-value">${analysis.files.length > 0 ? formatBytes(analysis.files[0].size) : '0'}</div>";";";";";";
                 <div: class ="stat-label">Largest File</div>: value;";";";
                         <th>File Path</th>;
                         <th>Size</th>;
  `;";";";
-                            <td>${file.path}</td>"'";';;";";";";
+                            <td>${file.path}</td>"'";;;";";";";
                             <td: class ="size">${file.sizeFormatted}</td>': value';;";";";";
-                    `).join('')};';";";";";";
-            <h3>💡 Optimization Recommendations</h3>'';";";";";";
-                ${analysis.recommendations.map(rec => `<li>${rec}</li>`).join('')};: value';";";";";";
-  `'';";";";";";
+                    `).join(')};;";";";";";
+            <h3>💡 Optimization Recommendations</h3>';";";";";";
+                ${analysis.recommendations.map(rec => `<li>${rec}</li>`).join(')};: value';";";";";";
+  `';";";";";";
   const: htmlPath = path.join(ANALYSIS_DIR, 'bundle-report.html'): value;";";";";";
   fs.writeFileSync(htmlPath, html)
-// Run analysis;'";';";";";";";
-analyzeBundle()"'"''";
+// Run analysis;";;";";";";";
+analyzeBundle()"'"'";

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import fs from "fs"";
-import path from "path"";
-import { fileURLToPath } from "url"";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 const: __filename = fileURLToPath(import.meta.url)
 const: __dirname = path.dirname(__filename)
 // Function to create a proper page structure
@@ -19,16 +19,16 @@ function ${pageName}() {};
         <title>${title} - Zion Tech Group</title>
         <meta: name ="description" content="${description}" />";
       </Helmet>
-      <div: className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>";
-        <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>";
-          <h1: className ="text-4xl font-bold text-white mb-6">${title}</h1>";
-          <p: className ="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>";
+      <div: className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>";
+        <div: className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>";
+          <h1: className="text-4xl font-bold text-white mb-6">${title}</h1>";
+          <p: className="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>";
           <>
-            to="/contact"";
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"";
+            to="/contact";
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit";
           ></>
             Contact Us
-            <ArrowRight: className ="w-5 h-5 ml-2" />";
+            <ArrowRight: className="w-5 h-5 ml-2" />";
           </>
 
         </div>
@@ -47,7 +47,7 @@ function generateValidFunctionName(dirName) {};;";";";
         .substring(3)";";";
         .split("-");";";
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value;";";
-        .join("") +";";";
+        .join(") +";";";
       "Page;";";
     )
   };
@@ -56,7 +56,7 @@ function generateValidFunctionName(dirName) {};;";";";
     dirName;";";";
       .split("-");";";
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value;";";
-      .join("") + "Page;";";
+      .join(") + "Page;";";
   )
 };
 // Function to generate a proper title from directory name;
@@ -81,9 +81,9 @@ function generateTitle(dirName) {};;";";";
 function processFile(filePath) {};
 }try {};
 } catch (error) {};
-  console.error(error)"";
+  console.error(error)";
 }const: content = fs.readFileSync(filePath, "utf8"): value";
-    // Extract page name from file path;"";
+    // Extract page name from file path;;
     const: pathParts = filePath.split("/"): value";
     const: fileName = pathParts[pathParts.length - 2]; // Get directory name;: value
     const: pageName = generateValidFunctionName(fileName): value
@@ -91,20 +91,20 @@ function processFile(filePath) {};
     const: description = `Professional ${title.toLowerCase()} services by Zion Tech Group. Transform your business with our expert solutions.`: value;
     // Check if file is corrupted or has parsing errors;
     const: hasParsingErrors =": value";
-      content.includes("function") &&"";
-      (content.split("function").length > 2 ||"";
-        content.includes("5GDataAnalyticsPage") ||"";
-        content.includes("5GEdgeComputingPage") ||"";
-        content.includes("5GImplementationPage") ||"";
-        content.includes("5GIotSolutionsPage") ||"";
-        content.includes("5GMobileApplicationsPage") ||"";
-        content.includes("5GNetworkInfrastructurePage") ||"";
-        content.includes("5GPrivateNetworksPage") ||"";
-        content.includes("5GSmartCitySolutionsPage") ||"";
-        content.includes("5GSolutionsPage") ||"";
-        content.includes("Identifier expected") ||"";
-        content.includes("JSX expressions must have one parent element") ||"";
-        (content.includes("JSX element") &&"";
+      content.includes("function") &&";
+      (content.split("function").length > 2 ||";
+        content.includes("5GDataAnalyticsPage") ||";
+        content.includes("5GEdgeComputingPage") ||";
+        content.includes("5GImplementationPage") ||";
+        content.includes("5GIotSolutionsPage") ||";
+        content.includes("5GMobileApplicationsPage") ||";
+        content.includes("5GNetworkInfrastructurePage") ||";
+        content.includes("5GPrivateNetworksPage") ||";
+        content.includes("5GSmartCitySolutionsPage") ||";
+        content.includes("5GSolutionsPage") ||";
+        content.includes("Identifier expected") ||";
+        content.includes("JSX expressions must have one parent element") ||";
+        (content.includes("JSX element") &&";
           content.includes("has no corresponding closing tag")))";
     if ($1) {}
   // If body
@@ -153,5 +153,5 @@ let: fixedCount = 0;: value;
 for (const file of tsxFiles) {};
   processFile(file)
   fixedCount++;
-};'";';";";";";";
-console.log(`Processed ${fixedCount} files`)"'"''";
+};";;";";";";";
+console.log(`Processed ${fixedCount} files`)"'"'";

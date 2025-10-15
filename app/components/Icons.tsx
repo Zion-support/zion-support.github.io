@@ -1,15 +1,15 @@
-import React from 'react';;';
+import React from 'react';;;
 import SEOHead from './components/SEOHead';
 
 export const Icon = ({},)
 
       name,
-      className = "";: value
+      className=";: value
 
 ;
 export const Icon = ({}: value,;
       name,;
-      className = "";: value;";
+      className=";: value;";
 
   ...props;
 }: {},;
@@ -39,5 +39,5 @@ export default ComponentsPage;
     };
 {
 
-export default ComponentsPage;'";'";
+export default ComponentsPage;";";
 

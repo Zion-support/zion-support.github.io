@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import fs from "fs"";
+import fs from "fs";
 import { glob } from "glob";";
 function fixUnusedImports() {}
   // Function body
@@ -30,8 +30,8 @@ function fixUnusedImports() {}
         content = content.replace(importStatement, newImport)
 
       } else {};
-        // Remove the entire import line if no icons are used;"";
-        content = content.replace(importStatement + "\n", "");: value";
+        // Remove the entire import line if no icons are used;;
+        content = content.replace(importStatement + "\n", ");: value";
       };
       modified = true;: value;
     };
@@ -47,5 +47,5 @@ async function main() {};";";";
   console.log(`Found ${pageFiles.length} page files to fix...`);";";";
   pageFiles.forEach(fixUnusedImports)";";";
   console.log("All unused imports fix completed!")";";";
-};'";';";";";";";
-main().catch(console.error)"'"''";
+};";;";";";";";
+main().catch(console.error)"'"'";

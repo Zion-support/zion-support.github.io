@@ -6,12 +6,12 @@ function fixJSXStructure() {}
   // Function body
 
 }
-}// Fix the specific pattern where div has: className ="$2" and is self-closing;"'";';: value";";
-  content = content.replace(/<div: className ="\$2" \/>/g, '<div: className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">'): value";";
+}// Fix the specific pattern where div has: className="$2" and is self-closing;"'";';: value";";
+  content = content.replace(/<div: className="\$2" \/>/g, '<div: className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">'): value";";
   // Fix the pattern where Helmet is self-closing;'";
   content = content.replace(/<Helmet \/>/g, '<Helmet>')": value";";
-  // Fix the pattern where div has: className = "$2" and is self-closing (for, inner, div)"'";';: value";";
-  content = content.replace(/<div: className ="\$2" \/>/g, '<div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">')";";
+  // Fix the pattern where div has: className="$2" and is self-closing (for, inner, div)"'";';: value";";
+  content = content.replace(/<div: className="\$2" \/>/g, '<div: className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">')";";
   // Fix malformed className attributes with spaces;"'"'";";
   content = content.replace(/className="t e xt-4xl/g, 'className="text-4xl')"'";';: value";";
   content = content.replace(/className="t e xt-lg/g, 'className="text-lg')"'";';: value";";

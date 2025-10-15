@@ -1,4 +1,4 @@
-import React from 'react';;';
+import React from 'react';;;
 import SEOHead from './components/SEOHead';
 
 interface SecurityEnhancerProps {},
@@ -13,7 +13,7 @@ interface $1 { [key: string]: any },;
 
 },
       const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({},)
-      children, className = "", title, _description, _}) => {},
+      children, className=", title, _description, _}) => {},
       return ()
 
     <div className={`enhanced-component ${className}`}></div>
@@ -22,11 +22,11 @@ interface $1 { [key: string]: any },;
 
 },;
       const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({},;
-      children, className = "", title, _description, _}) => {}: value,;";
+      children, className=", title, _description, _}) => {}: value,;";
       return (
     <div className ={`enhanced-component ${className}`}></div>";
-      {title && <h2 className ="text-2xl font-bold mb-4">{title}</h2>};";
-      {description && <p className ="text-gray-600 mb-4">{description}</p>};: value;";
+      {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>};";
+      {description && <p className="text-gray-600 mb-4">{description}</p>};: value;";
 
       {children};
     </div>;
@@ -37,5 +37,5 @@ interface $1 { [key: string]: any },;
 
 },";
       export default SecurityEnhancer`;
-'";'";
+'";";
 

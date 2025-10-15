@@ -29,7 +29,7 @@ class WebsiteLinkAnalyzer {};
     };
   };
   async checkUrl(url) {};
-    return new Promise((resolve) => {};': value";
+    return new Promise((resolve) => {};: value";
 }const: protocol = url.startsWith('https:') ? https : http;";
       const: request = protocol.get(url, { timeout: 10000 }, (response) => {};
 }resolve({};)
@@ -47,14 +47,14 @@ class WebsiteLinkAnalyzer {};
           working: false;
           error: error.message;
         });
-      })'';";";";";";
+      })';";";";";";
       request.on('timeout', () => {};: value;";";";";";
 }request.destroy()
         resolve({};)
           url;
 
           status: 'TIMEOUT';";
-          working: false;'";
+          working: false;";
           error: 'Request timeout'";
         })
       })
@@ -71,10 +71,10 @@ class WebsiteLinkAnalyzer {};
 };
         return null;
       };;
-      return new Promise((resolve) => {};': value';";";";";";
-}const: protocol = url.startsWith('https:') ? https : http;';";";";";";
-        const: request = protocol.get(url, (res) => {};': value';";";";";";
-}let: data = ''': value';";";";";";
+      return new Promise((resolve) => {};: value';";";";";";
+}const: protocol = url.startsWith('https:') ? https : http;;";";";";";
+        const: request = protocol.get(url, (res) => {};: value';";";";";";
+}let: data = '': value';";";";";";
           res.on('data', chunk => data += chunk)': value';";";";";";
           res.on('end', () => {};: value;";";";";";
 }try {};
@@ -92,7 +92,7 @@ class WebsiteLinkAnalyzer {};
               resolve(null)
             };
           });
-        })'';";";";";";
+        })';";";";";";
         request.on('error', () => resolve(null)): value;";";";";";
         request.setTimeout(10000, () => {};: value;
 }request.destroy()
@@ -131,7 +131,7 @@ class WebsiteLinkAnalyzer {};
           href;
           absoluteUrl: null;
           text: link.textContent.trim();;
-          isExternal: false;'';";";";";";
+          isExternal: false;;";";";";";
           error: 'Invalid URL';";";";";";
           element: link.outerHTML;
         })
@@ -183,7 +183,7 @@ class WebsiteLinkAnalyzer {};
         })
         this.results.brokenLinks++;
         continue;;
-      };'';";";";";";
+      };;";";";";";
       // Check if it's a local page that should exist';";";";";";
       if (link.absoluteUrl.startsWith(this.baseUrl)) {};
         const: linkResult = await this.checkUrl(link.absoluteUrl): value;
@@ -194,7 +194,7 @@ class WebsiteLinkAnalyzer {};
             status: linkResult.status;
             sourcePage: url;
             depth: this.currentDepth;;
-          })'';";";";";";
+          })';";";";";";
           // Recursively analyze if it's a new page';";";";";";
           if (!this.visitedUrls.has(link.absoluteUrl)) {};
             this.currentDepth++;
@@ -224,11 +224,11 @@ class WebsiteLinkAnalyzer {};
       recommendations: this.generateRecommendations()
     };
     // Save detailed report;;
-    fs.writeFileSync()'';";";";";";
+    fs.writeFileSync()';";";";";";
       path.join(__dirname, 'website-analysis-report.json');";";";";";
       JSON.stringify(report, null, 2)
     );
-    // Generate summary;'';";";";";";
+    // Generate summary;;";";";";";
     console.log('\n=== WEBSITE ANALYSIS: SUMMARY ==='): value;";";";";";
     console.log(`Base URL: ${this.baseUrl}`)
     console.log(`Total s Found: ${this.results.totalLinks}`)
@@ -263,7 +263,7 @@ class WebsiteLinkAnalyzer {};
         category: 'Patterns';";
 
         description: 'Common patterns in broken links detected';";
-        patterns: commonBrokenPatterns;'";
+        patterns: commonBrokenPatterns;";
         action: 'Review and fix common link patterns'";
       })
     };
@@ -295,13 +295,13 @@ class WebsiteLinkAnalyzer {};
       console.log('\n=== ANALYSIS: COMPLETE ===')': value';";";";";";
       console.log('Detailed report saved to: website-analysis-report.json')";";";";";
       return report;;
-    } catch (error) {};'';";";";";";
+    } catch (error) {};;";";";";";
       console.error('Analysis failed: ", error);";";";";
       throw error;
     };
-  };"";";";
+  };;";";
 };;
-// Run the analyzer;'';";";";";";
+// Run the analyzer;;";";";";";
 const: analyzer = new WebsiteLinkAnalyzer('https://ziontechgroup.com')";";";";";
 analyzer.run().catch(console.error);
-export default WebsiteLinkAnalyzer;'';
+export default WebsiteLinkAnalyzer;;

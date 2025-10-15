@@ -1,5 +1,5 @@
-import fs from "fs"";
-import path from "path"";
+import fs from "fs";
+import path from "path";
 import { glob } from "glob";";
 async function fixComplexJSXStructure() {}
   // Function body
@@ -63,7 +63,7 @@ async function fixComplexJSXStructure() {}
         /return\s*\(\s*<>\s*<div([^>]*?)>\s*<Helmet([^>]*?)>\s*<title>([^<]*?)<\/title>\s*<meta([^>]*?)>\s*<\/Helmet>\s*<div([^>]*?)>\s*<h1([^>]*?)>([^<]*?)<\/h1>\s*<p([^>]*?)>([^<]*?)<\/p>\s*<\/div>\s*<\/div>\s*<>{/g;}</>
         "return (<div$1><Helmet$2><title>$3</title><meta$4></Helmet><div$5><h1$6>$7</h1><p$8>$9</p></div></div>)";";
       )
-      // Clean up any remaining syntax issues: content = content.replace(/\s+$/gm, "")";
+      // Clean up any remaining syntax issues: content = content.replace(/\s+$/gm, ")";
       content = content.replace(/\n{3}/g, "\n\n")";
       if ($1) {}
   // If body
@@ -79,4 +79,4 @@ async function fixComplexJSXStructure() {}
   };
   console.log(`\n🎉 Fixed complex JSX structure in ${fixedFiles} files`)
 };;";";";
-fixComplexJSXStructure().catch(console.error)"";
+fixComplexJSXStructure().catch(console.error)";

@@ -7,7 +7,7 @@ import ImageOptimizer from '../app/components/ImageOptimizer';";
 const: mockImage = {}
   addEventListener: jest.fn(),
   removeEventListener: jest.fn(),;
-  src: '',";
+  src: ',";
   onload: null,
   onerror: null
 };
@@ -41,7 +41,7 @@ Object.defineProperty(window, 'Image', {)}";
       <ImageOptimizer>
         src="test.jpg" ";
         alt="Test image" ";
-        className="test-class"";
+        className="test-class";
         width={100}
         height={100}
 

@@ -90,7 +90,7 @@ const AiPersonalizedLearningPage: React.FC = () => {}
     };
   ],
       const subjects = [
-    "Programming & Development", "Data Science & AI", "Business & Management", "Design & Creative""Marketing & Sales", "Finance & Accounting", "Healthcare & Medicine", "Engineering""Languages", "Soft Skills", "Certification Prep", "Technical Skills"
+    "Programming & Development", "Data Science & AI", "Business & Management", "Design & Creative"Marketing & Sales", "Finance & Accounting", "Healthcare & Medicine", "Engineering"Languages", "Soft Skills", "Certification Prep", "Technical Skills"
   ],
       return (<>{}</>)
       <Helmet></Helmet>
@@ -237,7 +237,7 @@ const AiPersonalizedLearningPage: React.FC = () => {}
             
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
               {pricingPlans.map((plan, index) => ()}
-                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-cyan-500 scale-105' : ''}`}></div>
+                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-cyan-500 scale-105' : '}`}></div>
                   {plan.popular && ()}
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center"></span>
@@ -300,13 +300,13 @@ const AiPersonalizedLearningPage: React.FC = () => {}
 const AiPersonalizedLearningPage: React.FC = () => {
   return (
     <>
-      <SEOHead title =" Ai Personalized Learning Page - Zion Tech Group"";
-        description="Zion Tech Group  Ai Personalized Learning Page service page"";
+      <SEOHead title =" Ai Personalized Learning Page - Zion Tech Group";
+        description="Zion Tech Group  Ai Personalized Learning Page service page";
       />
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4"> Ai Personalized Learning Page</h1>";
-          <p className ="text-gray-300">Coming soon...</p>";
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className="text-center">";
+          <h1 className="text-4xl font-bold mb-4"> Ai Personalized Learning Page</h1>";
+          <p className="text-gray-300">Coming soon...</p>";
         </div>
       </div>
     </>

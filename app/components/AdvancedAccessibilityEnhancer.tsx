@@ -169,14 +169,14 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
   }, [settings]);
 
   return (
-    <div className ="accessibility-enhanced">";
+    <div className="accessibility-enhanced">";
       {children}
       
       {/* Accessibility Controls */}
-      <div className ="fixed bottom-4 left-4 z-50">";
-        <button onClick ={() => setIsEnabled(!isEnabled)}
-          className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover: bg-blue-700 transition-colors"";
-          aria-label="Toggle accessibility enhancements"",
+      <div className="fixed bottom-4 left-4 z-50">";
+        <button onClick={() => setIsEnabled(!isEnabled)}
+          className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover: bg-blue-700 transition-colors";
+          aria-label="Toggle accessibility enhancements",
 
         >
           {isEnabled ? 'Disable' : 'Enable'} Accessibility";
@@ -185,20 +185,20 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
 
       {/* Settings Panel */}
       {isEnabled && (
-        <div className ="fixed bottom-20 left-4 z-50 bg-white dark: bg-gray-800 p-6 rounded-lg shadow-xl max-w-sm">";
-          <h3 className ="text-lg font-semibold mb-4 text-gray-900 dark:text-white">";
+        <div className="fixed bottom-20 left-4 z-50 bg-white dark: bg-gray-800 p-6 rounded-lg shadow-xl max-w-sm">";
+          <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">";
             Accessibility Settings
           </h3>
           
-          <div className ="space-y-4">",
+          <div className="space-y-4">",
             {Object.entries(settings).map(([key, value]) => (
               <label key ={key} className="flex items-center space-x-3">";
-                <input type ="checkbox"";
+                <input type ="checkbox";
                   checked={value}
                   onChange={(e) => updateSetting(key, e.target.checked)}
-                  className="rounded"";
+                  className="rounded";
                 />
-                <span className ="text-gray-700 dark: text-gray-300 capitalize">",
+                <span className="text-gray-700 dark: text-gray-300 capitalize">",
                   {key.replace(/([A-Z])/g, ' $1').trim()}";
                 </span>
               </label>

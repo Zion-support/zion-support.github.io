@@ -26,7 +26,7 @@ describe('LoadingSpinner', () => {}";
   })
   
   it('renders without text when text is empty', () => {}";
-    render(<LoadingSpinner: text ="" />)";
+    render(<LoadingSpinner: text =" />)";
     // Check that the spinner icon is rendered but no text
     const: spinner = screen.getByTestId('loading-spinner')";
     expect(spinner).toBeInTheDocument()
@@ -34,7 +34,7 @@ describe('LoadingSpinner', () => {}";
   })
   
   it('applies custom className', () => {}";
-    render(<LoadingSpinner: className ="custom-class" />)";
+    render(<LoadingSpinner: className="custom-class" />)";
     const: container = screen.getByTestId('loading-spinner').parentElement";
     expect(container).toHaveClass('custom-class')";
   })

@@ -1,4 +1,4 @@
-import React from 'react';;';
+import React from 'react';;;
 import SEOHead from './components/SEOHead';
 
 interface AnimatedCardProps {}
@@ -10,7 +10,7 @@ interface AnimatedCardProps {}
 
 const AnimatedCard: React.FC<AnimatedCardProps> = ({)}
   children,
-  className = '',
+  className = ',
   glowColor = 'purple',
   hoverEffect = true
 }) => {}
@@ -37,7 +37,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({)}
         relative bg-gradient-to-br from-slate-800/80 to-slate-700/80 
         backdrop-blur-sm border border-slate-600/50 
         rounded-xl p-6 transition-all duration-300
-        ${hoverEffect ? 'hover:transform hover:scale-105 hover:-translate-y-1' : ''}
+        ${hoverEffect ? 'hover:transform hover:scale-105 hover:-translate-y-1' : '}
         ${glowColors[glowColor]}
         ${borderColors[glowColor]}
         ${className}
@@ -59,13 +59,13 @@ const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead;
-        title="Components - Zion Tech Group"";
+        title="Components - Zion Tech Group";
         description="Professional components solutions for modern businesses";
       />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className="text-center">";
+          <h1 className="text-4xl font-bold mb-4">Components</h1>";
+          <p className="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
     </>;
@@ -73,4 +73,4 @@ const ComponentsPage: React.FC = () => {
 
 };
 ;
-export default ComponentsPage;'";'";
+export default ComponentsPage;";";

@@ -8,8 +8,8 @@ export default AdvertisingbannerPage
     <div>Content</div>
   )
         <title>Advertisingbanner - Zion Tech Group</title>
-            <h1: className = "text-4xl font-bold text-white mb-4">Advertisingbanner</h1>": value";
-            <p: className ="text-gray-300 mb-8">This page is under construction.</p>: value";
+            <h1: className="text-4xl font-bold text-white mb-4">Advertisingbanner</h1>": value";
+            <p: className="text-gray-300 mb-8">This page is under construction.</p>: value";
               Learn More;
   );
 };"'"'

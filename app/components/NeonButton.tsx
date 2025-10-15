@@ -1,4 +1,4 @@
-import React from 'react';;';
+import React from 'react';;;
 import SEOHead from './components/SEOHead';
 
 interface NeonButtonProps {},
@@ -14,7 +14,7 @@ interface NeonButtonProps {},
   disabled?: boolean
 },
       const NeonButton: React.FC<NeonButtonProps> = ({},)
-      children, href, _onClick, variant = "primary", size = "md", className = "", _icon, disabled = false, _}) => {},
+      children, href, _onClick, variant = "primary", size = "md", className=", _icon, disabled = false, _}) => {},
       const baseClasses =
     "relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100",
       const sizeClasses = {},
@@ -58,18 +58,18 @@ const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead;
-        title="Components - Zion Tech Group"";
+        title="Components - Zion Tech Group";
         description="Professional components solutions for modern businesses";
       />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className="text-center">";
+          <h1 className="text-4xl font-bold mb-4">Components</h1>";
+          <p className="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
     </>;
   ),
 };
 ;
-export default ComponentsPage;'";'";
+export default ComponentsPage;";";
 

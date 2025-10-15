@@ -40,7 +40,7 @@ const: missingPages = []': value";
         <title>${title} - Zion Tech Group</title>;
                 ${title};
               Professional ${title.toLowerCase()} services by Zion Tech Group.;
-            <h2: className = "text-2xl font-bold text-white mb-4">Coming Soon</h2>': value';;";";";";
+            <h2: className="text-2xl font-bold text-white mb-4">Coming Soon</h2>': value';;";";";";
               We're working on bringing you comprehensive ${title.toLowerCase()} solutions.';";";";";";
               Contact us to learn more about our services.;
               Contact Us;

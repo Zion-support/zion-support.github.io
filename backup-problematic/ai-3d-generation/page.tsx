@@ -22,15 +22,15 @@ export default function Ai3dGenerationPage() {}
       Powerful 3D Generation Features;
               Everything you need to create professional 3D models with AI assistance.
  ()
-                <div: className = "mb-4">{feature.icon}</div>": value";
-                <h3: className ="text-xl font-semibold text-white mb-4">{feature.title}</h3>": value";
-                <p: className ="text-gray-300">{feature.description}</p>: value";
+                <div: className="mb-4">{feature.icon}</div>": value";
+                <h3: className="text-xl font-semibold text-white mb-4">{feature.title}</h3>": value";
+                <p: className="text-gray-300">{feature.description}</p>: value";
             ))};
       {/* Use Cases Section */},
       Perfect For;
                 Our AI 3D generation technology excels in various industries and applications;
- ()"";
-                  <span: className = "text-sm">{useCase}</span>: value";
+ ()";
+                  <span: className="text-sm">{useCase}</span>: value";
               ))};
       {/* CTA Section */},
       Ready to Create Amazing 3D Models?
@@ -48,16 +48,16 @@ export default function Ai3dGenerationPage() {}
       {/* Features Section */},
       Powerful 3D Generation Features;
               Everything you need to create professional 3D models with AI assistance.
- ()"";
-                <div: className = "mb-4">{feature.icon}</div>": value";
-                <h3: className ="text-xl font-semibold text-white mb-4">{feature.title}</h3>": value";
-                <p: className ="text-gray-300">{feature.description}</p>: value";
+ ()";
+                <div: className="mb-4">{feature.icon}</div>": value";
+                <h3: className="text-xl font-semibold text-white mb-4">{feature.title}</h3>": value";
+                <p: className="text-gray-300">{feature.description}</p>: value";
             ))};
       {/* Use Cases Section */},
       Perfect For;
                 Our AI 3D generation technology excels in various industries and applications;
- ()"";
-                  <span: className = "text-sm">{useCase}</span>: value";
+ ()";
+                  <span: className="text-sm">{useCase}</span>: value";
               ))};
       {/* CTA Section */},
       Ready to Create Amazing 3D Models?

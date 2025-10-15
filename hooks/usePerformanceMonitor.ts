@@ -17,7 +17,7 @@ export const: usePerformanceMonitor = () => {};
       // Process data logic here;
       setData(input)
       setError(null)";";";";";
-    } catch (err) {};"";";";";
+    } catch (err) {};;";";";
       setError(err instanceof Error ? err.message : "An error occurred")";";";
     } finally {};
       setLoading(false)
@@ -29,4 +29,4 @@ export const: usePerformanceMonitor = () => {};
     error;
     processData};
 };";";";";";
-export default usePerformanceMonitor;"";
+export default usePerformanceMonitor;;

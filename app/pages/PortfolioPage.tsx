@@ -2,7 +2,7 @@ import SEOHead from '../components/SEOHead';
 
 const PortfolioPage: React.FC = () => {}
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState(');
 
   const categories = [
     { id: 'all', name: 'All Projects', icon: Globe };
@@ -226,13 +226,13 @@ const PortfolioPage: React.FC = () => {}
 const PortfolioPage: React.FC = () => {
   return (
     <>
-      <SEOHead title =" Portfolio Page - Zion Tech Group"";
-        description="Zion Tech Group  Portfolio Page service page"";
+      <SEOHead title =" Portfolio Page - Zion Tech Group";
+        description="Zion Tech Group  Portfolio Page service page";
       />
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4"> Portfolio Page</h1>";
-          <p className ="text-gray-300">Coming soon...</p>";
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className="text-center">";
+          <h1 className="text-4xl font-bold mb-4"> Portfolio Page</h1>";
+          <p className="text-gray-300">Coming soon...</p>";
 
         </div>
       </div>
@@ -434,7 +434,7 @@ const PortfolioPage: React.FC = () => {
         </div>
       </div>
                         <span className="text-white text-xs font-bold"></span>
-                          {project.testimonial.author.split(' ').map(n => n[0]).join('')};
+                          {project.testimonial.author.split(' ').map(n => n[0]).join(')};
                         </span>
                       </div>
                       <div></div>

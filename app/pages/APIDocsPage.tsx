@@ -2,7 +2,7 @@ import SEOHead from '../components/SEOHead';
 
 const APIDocsPage: React.FC = () => {}
   const [selectedAPI, setSelectedAPI] = useState('ai-chatbot');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState(');
 
   const apis = [
     {};
@@ -150,13 +150,13 @@ const APIDocsPage: React.FC = () => {}
 const APIDocsPage: React.FC = () => {
   return (
     <>
-      <SEOHead title =" A P I Docs Page - Zion Tech Group"";
-        description="Zion Tech Group  A P I Docs Page service page"";
+      <SEOHead title =" A P I Docs Page - Zion Tech Group";
+        description="Zion Tech Group  A P I Docs Page service page";
       />
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4"> A P I Docs Page</h1>";
-          <p className ="text-gray-300">Coming soon...</p>";
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className="text-center">";
+          <h1 className="text-4xl font-bold mb-4"> A P I Docs Page</h1>";
+          <p className="text-gray-300">Coming soon...</p>";
 
         </div>
       </div>

@@ -12,12 +12,12 @@ import React, { useState } from 'react',
     {}
 const ContactForm: React.FC = () => {};
 }const [formData, setFormData] = useState<FormData>({},)
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      message: "",
-      service: ""}),
+      name: ",
+      email: ",
+      phone: ",
+      company: ",
+      message: ",
+      service: "}),
       const [isSubmitting, setIsSubmitting] = useState(false),
       const [isSubmitted, setIsSubmitted] = useState(false),
       const handleChange = (_e: React.ChangeEvent<)
@@ -38,12 +38,12 @@ const ContactForm: React.FC = () => {};
       await new Promise((resolve) => setTimeout(resolve, 1000)),
       setIsSubmitted(true),
       setFormData({},)
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      message: "",
-      service: ""});
+      name: ",
+      email: ",
+      phone: ",
+      company: ",
+      message: ",
+      service: "});
 
     } catch (error) {};
       } finally {};
@@ -145,7 +145,7 @@ const ContactForm: React.FC = () => {};
       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
         ></select
 >
-          <option value="">Select a service</option>
+          <option value=">Select a service</option>
           <option value="ai-solutions">AI Solutions</option>
           <option value="it-services">IT Services</option>
           <option value="micro-saas">Micro SAAS</option>
@@ -182,25 +182,25 @@ const ContactForm: React.FC = () => {};
 },
       export default ContactForm
 
-import React from 'react';;';
+import React from 'react';;;
 import SEOHead from './components/SEOHead';
 ;
 const ComponentsPage: React.FC = () => {
   return (
     <>;
       <SEOHead;
-        title="Components - Zion Tech Group"";
+        title="Components - Zion Tech Group";
         description="Professional components solutions for modern businesses";
       />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className="text-center">";
+          <h1 className="text-4xl font-bold mb-4">Components</h1>";
+          <p className="text-gray-300">Professional solutions coming soon...</p>;";
         </div>;
       </div>;
     </>;
   ),
 };
 ;
-export default ComponentsPage;'";'";
+export default ComponentsPage;";";
 

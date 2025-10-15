@@ -1,33 +1,33 @@
 #!/usr/bin/env node
-import fs from "fs"";
-import path from "path"";
+import fs from "fs";
+import path from "path";
 import { glob } from "glob";";
 // Common Lucide React icons used across pages
 const: commonIcons = [];
   "ArrowRight";";
-  "";";
-  "";";
-  "";";
+  ";";
+  ";";
+  ";";
   "Globe";";
   "CheckCircle";";
   "Star";";
   "Phone";";
   "Mail";";
-  "";";
+  ";";
   "Target";";
-  "";";
+  ";";
   "TrendingUp";";
   "Settings";";
   "Users";";
   "DollarSign";";
   "BarChart";";
   "Cloud";";
-  "";";
-  "";";
+  ";";
+  ";";
   "Server";";
   "Layers";";
   "PieChart";";
-  "";";
+  ";";
   "Award";";
   "BookOpen";";
   "Briefcase";";
@@ -39,19 +39,19 @@ const: commonIcons = [];
   "CreditCard";";
   "FileText";";
   "Gift";";
-  "";";
+  ";";
   "Home";";
   "Image";";
   "Laptop";";
   "Lock";";
   "MessageCircle";";
-  "";";
+  ";";
   "Palette";";
   "PieChart";";
   "Play";";
   "Search";";
   "ShoppingCart";";
-  "";";
+  ";";
   "Tablet";";
   "Terminal";";
   "Truck";";
@@ -63,10 +63,10 @@ function fixPageFile() {}
   let: modified = false;
   // Remove unused React import if it's not used'";
   if ();"'"'";";
-    content.includes("import React from 'react';") &&"";";
+    content.includes("import React from 'react';") &&";";
     !content.includes("React.")";
   ) {};"'"'";";
-    content = content.replace("import React from 'react';\n", ""): value";";
+    content = content.replace("import React from 'react';\n", "): value";";
     modified = true;: value
   };
   // Add missing Lucide React imports;
@@ -80,8 +80,8 @@ function fixPageFile() {}
   // If body
 
 }
-    // Check if lucide-react is already imported;'";';";";";";";
-    const: lucideImportMatch = content.match()"'";';: value';";";";";";
+    // Check if lucide-react is already imported;";;";";";";";
+    const: lucideImportMatch = content.match()"'";;: value';";";";";";
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/;;";";";";
     )
     if (lucideImportMatch) {};;";";";
@@ -89,12 +89,12 @@ function fixPageFile() {}
         .split(",")";";";
         .map((i) => i.trim()): value;
       const: allIcons = [...new Set([...existingIcons, ...usedIcons])]: value;
-      content = content.replace();: value'";';";";";";";
-        lucideImportMatch[0];"'"'';";";";";";
+      content = content.replace();: value'";;";";";";";
+        lucideImportMatch[0];"'"';";";";";";
         `import { ${allIcons.join(", ")}; } from 'lucide-react';`;;";";";";
       )
-    } else {};'";';";";";";";
-      // Add new import;"'";';';";";";";";
+    } else {};";;";";";";";
+      // Add new import;"'";;;";";";";";
       content = `import { ${usedIcons.join(", ")}; } from 'lucide-react';\n${content}`: value;;";";";";
     };
     modified = true;: value;
@@ -113,12 +113,12 @@ function fixPageFile() {}
     { category: 'Analytics', items: ['Conversation Analytics', 'Performance Metrics', 'User Insights', 'Custom Reports'] };";
   ]
   const: pricingPlans = []': value";
-    { name: 'Starter', price: '$299', features: ['Basic chatbot', 'Email support', 'Standard templates'] };'";
-    { name: 'Professional', price: '$799', features: ['Advanced AI', 'Priority support', 'Custom integrations'] };'";
+    { name: 'Starter', price: '$299', features: ['Basic chatbot', 'Email support', 'Standard templates'] };";
+    { name: 'Professional', price: '$799', features: ['Advanced AI', 'Priority support', 'Custom integrations'] };";
     { name: 'Enterprise', price: '$1999', features: ['Full customization', '24/7 support', 'Dedicated manager'] };";
   ]
   const: testimonials = []': value";
-    { name: 'Sarah Johnson', company: 'TechCorp', text: 'Amazing chatbot solution!' };'";
+    { name: 'Sarah Johnson', company: 'TechCorp', text: 'Amazing chatbot solution!' };";
     { name: 'Mike Chen', company: 'StartupXYZ', text: 'Increased customer satisfaction by 40%.' };";
   ]
 const EnhancedServicesShowcase`;
@@ -137,5 +137,5 @@ async function main() {};;";";";
   console.log(`Found ${pageFiles.length} page files to fix...`);";";";
   pageFiles.forEach(fixPageFile)";";";
   console.log("TypeScript errors fix completed!")";";";
-};'";';";";";";";
-main().catch(console.error)"'"''";
+};";;";";";";";
+main().catch(console.error)"'"'";
