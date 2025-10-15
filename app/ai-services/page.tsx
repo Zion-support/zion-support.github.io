@@ -57,9 +57,9 @@ const AIServicesPage: React.FC = () => {
                     <button className="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors font-medium">
                       Get Started
                     </button>
-                    {service.link && (
+                    {service.contactInfo.website && (
                       <a 
-                        href={service.link}
+                        href={service.contactInfo.website}
                         className="flex-1 border border-blue-600 text-blue-600 py-3 px-6 rounded-lg hover:bg-blue-50 transition-colors font-medium text-center"
                       >
                         Learn More
