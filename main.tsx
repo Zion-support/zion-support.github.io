@@ -16,11 +16,13 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
+        // Only log in development
         if (process.env.NODE_ENV === 'development') {
           console.log('SW registered: ', registration);
         }
       })
       .catch((registrationError) => {
+        // Only log errors in development
         if (process.env.NODE_ENV === 'development') {
           console.log('SW registration failed: ', registrationError);
         }

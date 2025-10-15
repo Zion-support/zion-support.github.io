@@ -59,6 +59,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="revisit-after" content="7 days" />
       <meta name="distribution" content="global" />
       <meta name="rating" content="general" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="theme-color" content="#3b82f6" />
+      <meta name="msapplication-TileColor" content="#3b82f6" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
       
       {/* Structured Data */}
       {structuredData && (

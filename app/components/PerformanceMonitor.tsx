@@ -22,7 +22,7 @@ const PerformanceMonitor: React.FC = () => {
         });
       }
       
-      // Also log in development
+      // Only log in development mode
       if (process.env.NODE_ENV === 'development') {
         console.log(`[Web Vitals] ${metric.name}:`, metric.value);
       }
@@ -37,6 +37,7 @@ const PerformanceMonitor: React.FC = () => {
         onTTFB(sendToAnalytics);
         onINP(sendToAnalytics);
       }).catch((error) => {
+        // Only log errors in development
         if (process.env.NODE_ENV === 'development') {
           console.warn('Failed to load web-vitals:', error);
         }
@@ -51,6 +52,7 @@ const PerformanceMonitor: React.FC = () => {
           const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
           const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
           
+          // Only log in development
           if (process.env.NODE_ENV === 'development') {
             console.log(`[Performance] Page Load Time: ${loadTime}ms`);
             console.log(`[Performance] DOM Content Loaded: ${domContentLoaded}ms`);

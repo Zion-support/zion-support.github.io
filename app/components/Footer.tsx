@@ -72,7 +72,6 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/help" className="text-gray-300 hover:text-white">Help Center</Link></li>
               <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
               <li><Link to="/accessibility" className="text-gray-300 hover:text-white">Accessibility</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
               <li><Link to="/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
               <li><Link to="/terms" className="text-gray-300 hover:text-white">Terms of Service</Link></li>
               <li><Link to="/cookies" className="text-gray-300 hover:text-white">Cookie Policy</Link></li>
