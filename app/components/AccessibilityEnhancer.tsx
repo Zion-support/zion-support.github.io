@@ -1,19 +1,27 @@
-import { ReactNode } from 'react';
+import React, { useEffect } from 'react';
 
-interface AccessibilityEnhancerProps {
-  children: ReactNode;
-  className?: string;
-}
+const AccessibilityEnhancer: React.FC = () => {
+  useEffect(() => {
+    // Basic accessibility enhancements
+    const enhanceAccessibility = () => {
+      // Add skip links
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
+      document.body.insertBefore(skipLink, document.body.firstChild);
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
-  children, 
-  className = '' 
-}) => {
-  return (
-    <div className={`accessibility-enhancer ${className}`}>
-      {children}
-    </div>
-  );
+      // Add main content landmark
+      const main = document.querySelector('main');
+      if (main && !main.id) {
+        main.id = 'main-content';
+      }
+    };
+
+    enhanceAccessibility();
+  }, []);
+
+  return null;
 };
 
 export default AccessibilityEnhancer;
