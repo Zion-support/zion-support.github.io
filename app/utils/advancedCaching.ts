@@ -17,8 +17,7 @@ export const advancedCaching = { setCache: (key: string, value: unknown, ttl: nu
         localStorage.removeItem(key);
         return null; }
       return parsed.value;
-    } catch (error) { console.error('Error parsing cached item:', error);
-      localStorage.removeItem(key);
+    } catch (error) { localStorage.removeItem(key);
       return null; }
   },
   clearCache: (pattern?: string) => { if (pattern) {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Map, ArrowRight, ExternalLink, Search } from 'lucide-react';
+import { ArrowRight, Cloud, ExternalLink, Map, Search, Video } from 'lucide-react';
 
 const SitemapPage: React.FC = () => {
   const sitemapSections = [

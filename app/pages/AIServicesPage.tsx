@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Brain, Bot, BarChart3, Shield, Zap, Target, ArrowRight, CheckCircle, Phone, Mail, MapPin } from "lucide-react";
+import { ArrowRight, BarChart3, Bot, Brain, CheckCircle, Mail, MapPin, Phone, Shield, Target, Zap } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
   const services = [

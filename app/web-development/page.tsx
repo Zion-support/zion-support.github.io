@@ -1,21 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Code, 
-  Globe, 
-  Smartphone, 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Award,
-  Clock,
-  Users,
-  Settings
-} from 'lucide-react';
+import { ArrowRight, BarChart3, CheckCircle, Clock, Code, Database, Globe, Settings, Shield, Smartphone, Star, User, Zap } from 'lucide-react';
 
 const WebDevelopmentPage: React.FC = () => {
   const webServices = [

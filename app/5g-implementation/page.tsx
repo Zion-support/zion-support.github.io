@@ -1,20 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, 
-  Shield, 
-  Globe, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Phone, 
-  Mail, 
-  Play, 
-  Settings, 
-  Smartphone, 
-  Cloud, 
-  Cpu, 
-  BarChart3, 
-  Activity } from 'lucide-react';
+import { Activity, BarChart3, CheckCircle, Cloud, Cpu, Globe, Settings, Shield, Smartphone, Star, Wifi } from 'lucide-react';
 const FiveGImplementationPage: React.FC = () => { const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     setIsVisible(true); }, []);

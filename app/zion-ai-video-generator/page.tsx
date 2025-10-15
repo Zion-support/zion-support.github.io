@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Play, Download, Share2, Star, Users, Zap, Clock, CheckCircle, ArrowRight, Video, Image, Music, FileText, Sparkles, Award, TrendingUp } from 'lucide-react';
+import { ArrowRight, Award, CheckCircle, Clock, FileText, Image, Music, Play, Share2, Sparkles, Star, TrendingUp, Users, Video } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';

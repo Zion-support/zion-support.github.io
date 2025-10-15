@@ -1,3 +1,4 @@
+import { Database, Cloud } from 'lucide-react';
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Server, Cloud, Shield, Wrench, Monitor, Database } from "lucide-react; const ITServicesPage: React.FC = () => { const services = [ { icon: Server, title: ";Infrastructure Management', description: 'Comprehensive IT infrastructure setup, maintenance, and optimization for maximum performance.', features: ['Server Configuration', 'Network Setup', 'Hardware Maintenance', 'Performance Monitoring'] }, { icon: Cloud, title: 'Cloud Solutions', description: 'Migrate and manage your infrastructure in the cloud with our expert cloud services.', features: ['Cloud Migration', 'Multi-cloud Strategy', 'Cost Optimization', 'Security Management'] }, { icon: Shield, title: 'Cybersecurity', description: 'Protect your business from cyber threats with our comprehensive security solutions.',

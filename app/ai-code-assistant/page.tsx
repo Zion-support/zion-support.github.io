@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Code, Zap, Brain, Shield, Clock, CheckCircle, ArrowRight, Terminal, GitBranch, Bug, FileText, Sparkles, Award, TrendingUp, Users, Globe } from 'lucide-react';
+import { ArrowRight, Award, Brain, Bug, CheckCircle, Code, FileText, Shield, Sparkles, Star, Terminal, User, Users, Zap } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';

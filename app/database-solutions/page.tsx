@@ -2,9 +2,9 @@ import React from 'react';
 import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
-import { ArrowRight, CheckCircle, Database, Server, Shield, Zap } from 'lucide-react';
+import { ArrowRight, CheckCircle, Database, Mail, MapPin, Phone, Server, Shield, Zap } from 'lucide-react';
 =======
-import { ArrowRight, CheckCircle, Database, Server, Shield, Zap, Phone, Mail, MapPin } from 'lucide-react';
+import { Server, Shield } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-14bb
 
 const DatabaseSolutionsPage: React.FC = () => {

@@ -1,3 +1,4 @@
+import { TrendingUp, Clock } from 'lucide-react';
 
               </div>
               <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">95%</div>

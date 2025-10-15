@@ -2,16 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Bot, 
-  Workflow, 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  Settings,
-  ArrowRight,
-  CheckCircle
-} from 'lucide-react';
+import { BarChart3, Bot, CheckCircle, Settings, Shield, Workflow, Zap } from 'lucide-react';
 
 const AiAutomationPlatformPage: React.FC = () => {
   const features = [

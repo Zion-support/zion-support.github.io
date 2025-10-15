@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FileText, Download, Send, DollarSign, Clock, CheckCircle, ArrowRight, Receipt, Calculator, Zap, Sparkles, Award, TrendingUp, Users, Shield } from 'lucide-react';
+import { ArrowRight, Award, Calculator, CheckCircle, Clock, DollarSign, FileText, Receipt, Send, Shield, Sparkles, TrendingUp, Users, X } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Code, Key, Zap, Database, Shield, ArrowRight, Copy, CheckCircle } from 'lucide-react';
+import { ArrowRight, Code, Database, Filter, Key, Shield, X, Zap } from 'lucide-react';
 
 const ApiDocsPage: React.FC = () => {
   const apiEndpoints = [
@@ -117,8 +117,7 @@ client.ai.content.generate({
   type: 'blog',
   tone: 'professional'
 }).then(response => {
-  console.log(response.data.content);
-});`,
+  });`,
       icon: <Code className="w-6 h-6" />
     },
     {

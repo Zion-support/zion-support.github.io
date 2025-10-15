@@ -1,3 +1,4 @@
+import { Video } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -21,7 +22,6 @@ const AISolutionsPage: React.FC = () => {
       description: "Custom machine learning models tailored to your specific business needs with advanced algorithms and real-time processing.",
       icon: CpuChipIcon,
       features: [
-<<<<<<< HEAD
         "Custom algorithm development",
         "Real-time data processing",
         "Predictive analytics",
@@ -32,14 +32,6 @@ const AISolutionsPage: React.FC = () => {
       color: "from-purple-500 to-indigo-500",
       price: "Starting at $2,500/month",
       href: "/machine-learning"
-=======
-        "Custom model development",
-        "Real-time processing",
-        "Data preprocessing",
-        "Model optimization",
-        "Performance monitoring",
-        "Continuous learning"
-      ]
     },
     {
       title: "Natural Language Processing",

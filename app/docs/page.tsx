@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { BookOpen, Code, Api, Database, Shield, Zap, ArrowRight, Search, Filter } from 'lucide-react';
+import { Api, ArrowRight, BookOpen, Cloud, Code, Database, Download, Filter, Search, Shield, User, Zap } from 'lucide-react';
 
 const DocsPage: React.FC = () => {
   const documentationSections = [

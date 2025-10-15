@@ -1,3 +1,4 @@
+import { Target, Clock, MapPin, Users, Zap } from 'lucide-react';
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { MapPin, Clock, Users, Heart, Zap, Target } from "lucide-react;const CareersPage: React.FC = () => { return ( <div className=";min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">

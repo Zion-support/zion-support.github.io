@@ -1,5 +1,5 @@
 import React from "react";
-import { AlertTriangle, RefreshCw, Home } from "lucide-react";
+import { AlertTriangle, Home, RefreshCw } from 'lucide-react';
 import { Helmet } from "react-helmet-async"; interface ErrorFallbackProps { error: Error; resetError: () => void; } const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetError }) => { return ( <> <Helmet> <title>Error - Zion Tech Group</title> <meta name="description" content="An error occurred while loading the page" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="max-w-md w-full mx-auto p-8">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">

@@ -1,20 +1,7 @@
+import { CheckCircle, ArrowRight, Database, Globe, Users, BarChart3 } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Zap,
-  Shield,
-  Globe,
-  Users,
-  BarChart3,
-  Cpu,
-  Database,
-  Cloud,
-  Smartphone
-} from 'lucide-react';
 
 const MicroSaasSolutionsPage: React.FC = () => {
   const solutions = [

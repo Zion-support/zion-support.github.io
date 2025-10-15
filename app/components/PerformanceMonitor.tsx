@@ -1,5 +1,6 @@
+import { Database, Activity, Clock, Zap } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
-import { Activity, Zap, Clock, Database } from 'lucide-react';
+
 
 interface PerformanceMetrics {
   loadTime: number;
