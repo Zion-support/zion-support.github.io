@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-import React from 'react''
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-export default function AiEcommerceOptimizerProPage() {
+const AiEcommerceOptimizerProPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -208,5 +205,6 @@ export default function AiEcommerceOptimizerProPage() {
       </div>
     </>
   );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
+};
+
+export default AiEcommerceOptimizerProPage;

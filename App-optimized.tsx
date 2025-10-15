@@ -1,17 +1,16 @@
 import React, { Suspense, lazy } from 'react';
-import {Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Core components - keep these synchronous for critical path
+import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import LightweightErrorBoundary from './app/components/LightweightErrorBoundary';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-<<<<<<< HEAD
-=======
 import OptimizedLoadingSpinner from './app/components/OptimizedLoadingSpinner';
 import SEOHead from './app/components/SEOHead';
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 // Lazy load all page components
 const HomePage = lazy(() => import('./app/page'));
@@ -85,20 +84,6 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
-  // const [showPerformanceDashboard, setShowPerformanceDashboard] = React.useState(false);
-
-  // Toggle performance dashboard with keyboard shortcut
-  React.useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
-        event.preventDefault();
-        setShowPerformanceDashboard(prev => !prev);
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
 
   return (
     <LightweightErrorBoundary>

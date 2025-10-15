@@ -1,11 +1,6 @@
 import React from "react";
-<<<<<<< HEAD
+import { BarChart3, FileText, MessageSquare } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-=======
-import { ArrowRight, CheckCircle, Brain, Zap, Shield, Cloud, Database, Settings, TrendingUp, Cpu, Monitor, MessageSquare, Eye, Layers, Award, Video } from "lucide-react";
-import { Link } from "react-router-dom";
-import SEOOptimizer from "../components/SEOOptimizer";
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 export default function AIServices() {
   const aiServices = [
