@@ -2,17 +2,29 @@ import { ErrorReport, ErrorContext, ErrorSeverity } from '../types/app.types';
 
 class ErrorHandler {
   private errors: ErrorReport[] = [];
+  private maxErrors = 100; // Limit stored errors
+  private errorCounts = new Map<string, number>(); // Track duplicate errors
+  private readonly duplicateThreshold = 5; // Max duplicates before throttling
 
   reportError(error: Error, context: ErrorContext = {}): string {
     const errorId = this.generateErrorId();
+    const errorKey = this.getErrorKey(error);
+    
+    // Check for duplicate errors
+    const duplicateCount = this.errorCounts.get(errorKey) || 0;
+    if (duplicateCount > this.duplicateThreshold) {
+      // Throttle duplicate errors
+      return errorId;
+    }
+
     const errorReport: ErrorReport = {
       id: errorId,
       message: error.message,
       stack: error.stack,
       context: {
         ...context,
-        url: context.url || window.location.href,
-        userAgent: context.userAgent || navigator.userAgent,
+        url: context.url || (typeof window !== 'undefined' ? window.location.href : ''),
+        userAgent: context.userAgent || (typeof navigator !== 'undefined' ? navigator.userAgent : ''),
         timestamp: context.timestamp || new Date().toISOString()
       },
       severity: this.determineSeverity(error),
@@ -20,9 +32,24 @@ class ErrorHandler {
       createdAt: new Date().toISOString()
     };
 
+    // Update duplicate count
+    this.errorCounts.set(errorKey, duplicateCount + 1);
+
+    // Add error and maintain max limit
     this.errors.push(errorReport);
+    if (this.errors.length > this.maxErrors) {
+      this.errors = this.errors.slice(-this.maxErrors);
+    }
+
     this.logError(errorReport);
     return errorId;
+  }
+
+  private getErrorKey(error: Error): string {
+    // Create a key based on error message and stack trace
+    const stack = error.stack || '';
+    const relevantStack = stack.split('\n').slice(0, 3).join('|');
+    return `${error.name}:${error.message}:${relevantStack}`;
   }
 
   getErrors(): ErrorReport[] {

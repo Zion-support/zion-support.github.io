@@ -59,6 +59,8 @@ import Footer from './app/components/Footer';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import AccessibilityEnhancements from './app/components/AccessibilityEnhancements';
+import AdvancedPerformanceMonitor from './app/components/AdvancedPerformanceMonitor';
 
 // Loading component
 const LoadingFallback = () => (
@@ -92,7 +94,18 @@ export default function App() {
             
             <main className="flex-1">
               <PerformanceMonitor />
+              <AdvancedPerformanceMonitor 
+                enableRealUserMonitoring={true}
+                enableCoreWebVitals={true}
+                enableResourceTiming={true}
+              />
               <AccessibilityEnhancer />
+              <AccessibilityEnhancements 
+                enableSkipLinks={true}
+                enableFocusManagement={true}
+                enableKeyboardNavigation={true}
+                enableScreenReaderSupport={true}
+              />
               
               <Suspense fallback={<LoadingFallback />}>
                 <Routes>
