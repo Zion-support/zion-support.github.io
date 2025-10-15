@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Cloud, Shield, Code, Smartphone, Database, Network, CheckCircle, ArrowRight, Clock, Users, Cpu } from 'lucide-react';
+import { Cloud, Shield, Code, Database, Network, CheckCircle, ArrowRight, Cpu, Smartphone } from 'lucide-react';
 
 const ItServicesPage: React.FC = () => {
   const itServices = [

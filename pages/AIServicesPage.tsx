@@ -17,7 +17,6 @@ import {
   Rocket,
   Users,
   Clock,
-  DollarSign
 } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
@@ -168,7 +167,7 @@ const AIServicesPage: React.FC = () => {
     }
   ];
 
-  const categories = ['All', 'Analytics', 'Content', 'Customer Service', 'Development', 'Computer Vision', 'Security'];
+  // const categories = ['All', 'Analytics', 'Content', 'Customer Service', 'Development', 'Computer Vision', 'Security'];
 
   const stats = [
     { number: '500+', label: 'AI Models Deployed', icon: Brain },

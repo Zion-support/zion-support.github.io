@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Atom, Cpu, Shield, CheckCircle, ArrowRight, Star, Clock, Users, Award, Zap, Lock } from 'lucide-react';
+import { Atom, Cpu, Shield, CheckCircle, ArrowRight, Star, Award, Zap } from 'lucide-react';
 
 const QuantumComputingSolutionsPage: React.FC = () => {
   const features = [

@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { 
   Zap, 
   BarChart3, 
-  Settings, 
   Target, 
   Rocket, 
   Shield, 
@@ -14,10 +13,6 @@ import {
   Star,
   ArrowRight,
   DollarSign,
-  Globe,
-  Smartphone,
-  Database,
-  Code,
   Mail,
   FileText
 } from 'lucide-react';
@@ -170,7 +165,7 @@ const MicroSAASPage: React.FC = () => {
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Development', 'Monitoring', 'Automation', 'Marketing', 'Document Management'];
+  // const categories = ['All', 'Productivity', 'Development', 'Monitoring', 'Automation', 'Marketing', 'Document Management'];
 
   const stats = [
     { number: '200+', label: 'Micro SAAS Solutions', icon: Zap },

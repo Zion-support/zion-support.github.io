@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug, Mail } from 'lucide-react';
 
 interface Props {
@@ -10,8 +10,8 @@ interface Props {
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  error?: Error | undefined;
+  errorInfo?: ErrorInfo | undefined;
   errorId?: string;
   retryCount: number;
 }
@@ -35,14 +35,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
     });
 
-    // Log error to console
-    console.error('Error caught by boundary:', error, errorInfo);
+    // Log error to console (only in development)
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
 
     // Report error to monitoring service
     this.reportError(error, errorInfo);
@@ -64,7 +66,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
 
     // Report to external service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV !== 'development') {
       try {
         await fetch('/api/errors', {
           method: 'POST',
@@ -74,7 +76,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           body: JSON.stringify(errorReport),
         });
       } catch (reportingError) {
-        console.warn('Failed to report error:', reportingError);
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Failed to report error:', reportingError);
+        }
       }
     }
 
@@ -123,7 +127,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     window.open(mailtoLink);
   };
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
@@ -144,7 +148,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-300 mb-6 text-lg">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+              We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
 
             {this.state.errorId && (
