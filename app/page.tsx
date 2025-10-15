@@ -12,16 +12,16 @@ const HomePage: React.FC = memo(() => {
     "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
+      "telephone": "+1 302 464 0950",
       "contactType": "customer service",
-      "email": "contact@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com"
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Tech Street",
-      "addressLocality": "Innovation City",
-      "addressRegion": "IC",
-      "postalCode": "12345",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
       "addressCountry": "US"
     },
     "sameAs": [
@@ -89,8 +89,18 @@ const HomePage: React.FC = memo(() => {
           
           {/* AI Tools Preview */}
           <div className="mt-20">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI-Powered Tools</h2>
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI-Powered Tools & Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI CRM Pro</h3>
+                <p className="text-gray-600 text-sm mb-3">Next-gen AI-powered CRM with predictive analytics</p>
+                <Link to="/ai-crm-pro" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI HR Assistant Pro</h3>
+                <p className="text-gray-600 text-sm mb-3">Intelligent HR management with AI recruitment</p>
+                <Link to="/ai-hr-assistant-pro" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
+              </div>
               <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Content Moderator</h3>
                 <p className="text-gray-600 text-sm mb-3">Automated content moderation using AI</p>
@@ -111,10 +121,19 @@ const HomePage: React.FC = memo(() => {
                 <p className="text-gray-600 text-sm mb-3">AI-powered financial predictions</p>
                 <Link to="/zion-ai-financial-forecaster" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
               </div>
+              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Marketing Pro</h3>
+                <p className="text-gray-600 text-sm mb-3">AI-powered email marketing automation</p>
+                <Link to="/zion-ai-email-marketing-pro" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Social Scheduler Pro</h3>
+                <p className="text-gray-600 text-sm mb-3">AI-powered social media management</p>
+                <Link to="/zion-ai-social-scheduler-pro" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              </div>
             </div>
             <div className="text-center mt-8">
               <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium">View All Services →</Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-bd72
             </div>
           </div>
         </div>

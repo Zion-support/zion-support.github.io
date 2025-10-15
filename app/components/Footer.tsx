@@ -11,7 +11,12 @@ const Footer: React.FC = memo(() => {
             <p className="text-gray-300 mb-4">
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
-            <div className="flex space-x-4">
+            <div className="space-y-2 text-sm text-gray-300">
+              <p><strong>Phone:</strong> +1 302 464 0950</p>
+              <p><strong>Email:</strong> kleber@ziontechgroup.com</p>
+              <p><strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709</p>
+            </div>
+            <div className="flex space-x-4 mt-4">
               <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
                 <span className="sr-only">Website</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -49,6 +54,8 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
               <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">Document Analyzer</Link></li>
               <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
+              <li><Link to="/ai-crm-pro" className="text-gray-300 hover:text-white">AI CRM Pro</Link></li>
+              <li><Link to="/ai-hr-assistant-pro" className="text-gray-300 hover:text-white">AI HR Assistant Pro</Link></li>
               <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
             </ul>
           </div>
@@ -67,7 +74,6 @@ const Footer: React.FC = memo(() => {
           <div>
             <h4 className="text-md font-semibold mb-4">Resources</h4>
             <ul className="space-y-2">
-<<<<<<< HEAD
               <li><Link to="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
               <li><Link to="/api-docs" className="text-gray-300 hover:text-white">API Docs</Link></li>
               <li><Link to="/help" className="text-gray-300 hover:text-white">Help Center</Link></li>
@@ -81,20 +87,11 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
               <li><Link to="/terms" className="text-gray-300 hover:text-white">Terms of Service</Link></li>
               <li><Link to="/cookies" className="text-gray-300 hover:text-white">Cookie Policy</Link></li>
-=======
-              <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
-              <li><Link to="/help" className="text-gray-300 hover:text-white">Help</Link></li>
-              <li><Link to="/api-docs" className="text-gray-300 hover:text-white">API Docs</Link></li>
-              <li><Link to="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
-              <li><Link to="/privacy" className="text-gray-300 hover:text-white">Privacy</Link></li>
-              <li><Link to="/terms" className="text-gray-300 hover:text-white">Terms</Link></li>
->>>>>>> cursor/fix-errors-and-merge-to-main-bd72
             </ul>
           </div>
         </div>
         
         <div className="mt-8 pt-8 border-t border-gray-700">
-<<<<<<< HEAD
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-center md:text-left text-gray-300">
               © 2025 Zion Tech Group. All rights reserved. | <a href="https://ziontechgroup.com" className="hover:text-white">ziontechgroup.com</a>
@@ -104,11 +101,6 @@ const Footer: React.FC = memo(() => {
               <Link to="/terms" className="text-gray-300 hover:text-white text-sm">Terms of Service</Link>
             </div>
           </div>
-=======
-          <p className="text-center text-gray-300">
-            © 2024 Zion Tech Group. All rights reserved.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-bd72
         </div>
       </div>
     </footer>

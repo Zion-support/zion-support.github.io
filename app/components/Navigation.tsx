@@ -111,18 +111,13 @@ const Navigation: React.FC = () => {
                     <Link to="/zion-ai-workflow-automator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Workflow Automator
                     </Link>
+                    <Link to="/ai-crm-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI CRM Pro
+                    </Link>
+                    <Link to="/ai-hr-assistant-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI HR Assistant Pro
+                    </Link>
                   </div>
-=======
-              <div className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div className="py-1">
-                  <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">AI Services</Link>
-                  <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">IT Services</Link>
-                  <Link to="/cloud-infrastructure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cloud Infrastructure</Link>
-                  <Link to="/digital-transformation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Digital Transformation</Link>
-                  <Link to="/data-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Data Analytics</Link>
-                  <Link to="/web-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Web Development</Link>
-                  <Link to="/mobile-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Mobile Development</Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-cc68
                 </div>
               )}
             </div>
@@ -236,24 +231,12 @@ const Navigation: React.FC = () => {
               <Link to="/zion-ai-workflow-automator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Workflow Automator
               </Link>
-=======
-            <div className="px-3 py-2 text-base font-medium text-gray-700">
-              Services
-            </div>
-            <div className="pl-6 space-y-1">
-              <Link to="/ai-services" className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm">AI Services</Link>
-              <Link to="/it-services" className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm">IT Services</Link>
-              <Link to="/cloud-infrastructure" className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm">Cloud Infrastructure</Link>
-              <Link to="/digital-transformation" className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm">Digital Transformation</Link>
-            </div>
-            <div className="px-3 py-2 text-base font-medium text-gray-700">
-              AI Tools
-            </div>
-            <div className="pl-6 space-y-1">
-              <Link to="/zion-ai-content-moderator" className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm">Content Moderator</Link>
-              <Link to="/zion-ai-customer-churn-predictor" className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm">Churn Predictor</Link>
-              <Link to="/zion-ai-sales-predictor" className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm">Sales Predictor</Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-cc68
+              <Link to="/ai-crm-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI CRM Pro
+              </Link>
+              <Link to="/ai-hr-assistant-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI HR Assistant Pro
+              </Link>
             </div>
             <Link to="/pricing" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
               Pricing
