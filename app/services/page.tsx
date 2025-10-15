@@ -1,365 +1,362 @@
-import React from 'react';;';
-import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
-
-const ServicesPage: React.FC = () => {"}
-        "
-  const serviceCategories = [",
-        "
-    {"}
-        "
-      title: 'AI & Machine Learning',",
-        "
-      color: 'text-purple-600',",
-        "
-      bgColor: 'bg-purple-50',",
-        "
-      icon: ChipIcon,",
-        "
-      services: [",
-        "
-        { name: 'AI Consulting & Strategy', price: '$2,500/month', description: 'Comprehensive AI strategy development and implementation planning', features: ['AI Roadmap Development', 'Technology Assessment', 'ROI Analysis', 'Implementation Planning'] },",
-        "
-        { name: 'Machine Learning Solutions', price: '$1,500/month', description: 'Custom ML models for predictive analytics and decision-making', features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model ing'] },",
-        "
-        { name: 'Natural Language Processing', price: '$1,200/month', description: 'Advanced NLP solutions for text analysis and language understanding', features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'] },",
-        "
-        { name: 'Computer Vision', price: '$1,800/month', description: 'Image and video analysis solutions for object detection and recognition', features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition'] },",
-        "
-        { name: 'AI Automation', price: '$1,400/month', description: 'Intelligent process automation with decision-making capabilities', features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'] },",
-        "
-        { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support', features: ['24/7 Support', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard'] };
-      ]
-    },",
-        "
-    {"}
-        "
-      title: 'Cybersecurity',",
-        "
-      color: 'text-red-600',",
-        "
-      bgColor: 'bg-red-50',",
-        "
-      icon: CheckIcon,",
-        "
-      services: [",
-        "
-        { name: 'Security Assessment', price: '$1,200/month', description: 'Comprehensive security evaluation and vulnerability assessment', features: ['Penetration Testing', 'Security Audit', 'Risk Assessment', 'Compliance Check'] },",
-        "
-        { name: 'Managed Security Services', price: '$2,000/month', description: '24/7 security monitoring and incident response', features: ['24/7 ing', 'Incident Response', 'Threat Detection', 'Security Updates'] },",
-        "
-        { name: 'Identity & Access Management', price: '$1,500/month', description: 'Secure user authentication and authorization systems', features: ['Single Sign-On', 'Multi-Factor Auth', 'User Provisioning', 'Access Control'] },",
-        "
-        { name: 'Data Protection', price: '$1,800/month', description: 'Comprehensive data encryption and backup solutions', features: ['Data Encryption', 'Backup Solutions', 'Data Recovery', 'Privacy Compliance'] };
-      ]
-    },",
-        "
-    {"}
-        "
-      title: 'Cloud Infrastructure',",
-        "
-      color: 'text-blue-600',",
-        "
-      bgColor: 'bg-blue-50',",
-        "
-      icon: CloudIcon,",
-        "
-      services: [",
-        "
-        { name: 'Cloud Migration', price: '$3,000/month', description: 'Seamless migration to cloud platforms with minimal downtime', features: ['Migration Planning', 'Data Transfer', 'Application Migration', 'Performance Optimization'] },",
-        "
-        { name: 'Cloud Architecture', price: '$2,500/month', description: 'Scalable and secure cloud infrastructure design', features: ['Architecture Design', 'Scalability Planning', 'Security Implementation', 'Cost Optimization'] },",
-        "
-        { name: 'DevOps & CI/CD', price: '$2,000/month', description: 'Automated deployment and continuous integration pipelines', features: ['CI/CD Setup', 'Automated Testing', 'Deployment Automation', 'ing Setup'] },",
-        "
-        { name: 'Cloud Management', price: '$1,500/month', description: 'Ongoing cloud infrastructure management and optimization', features: ['24/7 ing', 'Performance Tuning', 'Cost Management', 'Security Updates'] };
-      ]
-    },",
-        "
-    {"}
-        "
-      title: 'Digital Transformation',",
-        "
-      color: 'text-green-600',",
-        "
-      bgColor: 'bg-green-50',",
-        "
-      icon: ChartBarIcon,",
-        "
-      services: [",
-        "
-        { name: 'Digital Strategy', price: '$2,500/month', description: 'Comprehensive digital transformation strategy and planning', features: ['Strategy Development', 'Technology Roadmap', 'Change Management', 'Implementation Planning'] },",
-        "
-        { name: 'Process Automation', price: '$1,800/month', description: 'Business process automation and workflow optimization', features: ['Process Analysis', 'Automation Design', 'Workflow Implementation', 'Performance ing'] },",
-        "
-        { name: 'Data Analytics', price: '$2,200/month', description: 'Advanced analytics and business intelligence solutions', features: ['Data Visualization', 'Predictive Analytics', 'Dashboard Development', 'Insight Generation'] },",
-        "
-        { name: 'Mobile Solutions', price: '$1,600/month', description: 'Custom mobile applications and responsive web solutions', features: ['Mobile App Development', 'Responsive Design', 'Cross-Platform Solutions', 'Performance Optimization'] };
-      ]
-    },",
-        "
-    {"}
-        "
-      title: 'Micro SaaS Solutions',",
-        "
-      color: 'text-pink-600',",
-        "
-      bgColor: 'bg-pink-50',",
-        "
-      icon: GlobeAltIcon,",
-        "
-      services: [",
-        "
-        { name: 'Custom SaaS Development', price: '$3,500/month', description: 'Tailored software-as-a-service solutions for specific business needs', features: ['Custom Development', 'API Integration', 'User Management', 'Subscription Billing'] },",
-        "
-        { name: 'SaaS Platform Management', price: '$2,000/month', description: 'Ongoing management and maintenance of SaaS platforms', features: ['Platform Maintenance', 'Feature Updates', 'Performance ing', 'User Support'] },",
-        "
-        { name: 'API Development', price: '$1,500/month', description: 'RESTful and GraphQL API development and management', features: ['API Design', 'Documentation', 'Rate Limiting', 'Analytics'] },",
-        "
-        { name: 'Integration Services', price: '$1,200/month', description: 'Third-party integrations and system connectivity', features: ['System Integration', 'Data Synchronization', 'API Connections', 'Error Handling'] };
-      ]
-    },",
-        "
-    {"}
-        "
-      title: '5G Solutions',",
-        "
-      color: 'text-indigo-600',",
-        "
-      bgColor: 'bg-indigo-50',",
-        "
-      icon: GlobeAltIcon,",
-        "
-      services: [",
-        "
-        { name: '5G Network Planning', price: '$4,000/month', description: 'Comprehensive 5G network design and implementation planning', features: ['Network Design', 'Coverage Planning', 'Capacity Planning', 'Implementation Strategy'] },",
-        "
-        { name: 'IoT Solutions', price: '$2,500/month', description: 'Internet of Things solutions leveraging 5G connectivity', features: ['IoT Architecture', 'Device Management', 'Data Collection', 'Real-time Analytics'] },",
-        "
-        { name: 'Edge Computing', price: '$3,000/month', description: 'Edge computing solutions for ultra-low latency applications', features: ['Edge Infrastructure', 'Data Processing', 'Latency Optimization', 'Scalability'] },",
-        "
-
-        { name: '5G Applications', price: '$2,200/month', description: 'Custom applications designed for 5G networks', features: ['App Development', '5G Optimization', 'Performance Tuning', 'User Experience'] };
-      ]
-    };
-  ];
-,
-      const ServicesPage: React.FC = () => {ursor/analyze-improve-and-merge-code-4a9f"}
-        "
-  return (",)
-        "
-    <>{"}</>
-        "
-      <SEOHead"">
-        title="services - Zion Tech Group",
-      description="Zion Tech Group services service page" />""
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">""
-        <div className="text-center">""
-          <h1 className="text-4xl font-bold mb-4">services</h1>""
-          <p className="text-gray-300">Coming soon...</p>",
-        "
-        </div>",
-        "
-      </div>",
-        "
-    </>",
-        "
-  )
-    },
-    {}
-
-,
-      export default ServicesPage;
-;"'"'
+import React from 'react';
+import SEOHead from '../../components/SEOHead';
+import {
+  CpuChipIcon,
+  GlobeAltIcon,
+  CogIcon,
+  ShieldCheckIcon,
+  CloudIcon,
+  RocketLaunchIcon,
+  ChartBarIcon,
+  UsersIcon,
+  ArrowRightIcon,
+  CheckCircleIcon,
+  StarIcon,
+  PhoneIcon,
+  EnvelopeIcon
+} from '@heroicons/react/24/outline';
 
 const ServicesPage: React.FC = () => {
+  const mainServices = [
+    {
+      title: "AI Solutions",
+      description: "Transform your business with cutting-edge artificial intelligence solutions including machine learning, natural language processing, and computer vision.",
+      icon: CpuChipIcon,
+      href: "/ai-solutions",
+      features: ["Machine Learning", "NLP", "Computer Vision", "Predictive Analytics"],
+      pricing: "Starting at $99/month"
+    },
+    {
+      title: "Micro SaaS Solutions",
+      description: "Specialized software-as-a-service applications designed for specific business needs and workflows.",
+      icon: GlobeAltIcon,
+      href: "/micro-saas-solutions",
+      features: ["Custom Applications", "API Integration", "Scalable Architecture", "Real-time Analytics"],
+      pricing: "Starting at $29/month"
+    },
+    {
+      title: "IT Solutions",
+      description: "Comprehensive IT services including cloud infrastructure, cybersecurity, and digital transformation.",
+      icon: CogIcon,
+      href: "/it-solutions",
+      features: ["Cloud Migration", "Network Security", "System Integration", "24/7 Support"],
+      pricing: "Custom pricing"
+    }
+  ];
+
+  const aiServices = [
+    {
+      name: "AI Email Marketing Automation",
+      description: "Increase open rates by 300% and conversions by 150% with AI-powered email campaigns.",
+      href: "/ai-email-marketing-automation",
+      price: "$99/month"
+    },
+    {
+      name: "AI Social Media Manager",
+      description: "Automate social media posting and engagement with intelligent content generation.",
+      href: "/ai-social-media-manager",
+      price: "$149/month"
+    },
+    {
+      name: "AI Customer Support Chatbot",
+      description: "24/7 customer support with intelligent chatbots that understand context and intent.",
+      href: "/ai-customer-support-chatbot",
+      price: "$199/month"
+    },
+    {
+      name: "AI Analytics Dashboard Pro",
+      description: "Advanced analytics and insights powered by machine learning algorithms.",
+      href: "/ai-analytics-dashboard-pro",
+      price: "$299/month"
+    }
+  ];
+
+  const microSaasServices = [
+    {
+      name: "Task Manager Pro",
+      description: "AI-powered task management that boosts productivity by 40%.",
+      href: "/task-manager-pro",
+      price: "$29/month"
+    },
+    {
+      name: "Analytics Dashboard",
+      description: "Real-time business analytics and reporting for data-driven decisions.",
+      href: "/analytics-dashboard",
+      price: "$49/month"
+    },
+    {
+      name: "Customer Support Hub",
+      description: "Centralized customer support management with ticketing and automation.",
+      href: "/customer-support-hub",
+      price: "$79/month"
+    },
+    {
+      name: "Inventory Manager",
+      description: "Smart inventory tracking with predictive analytics and automated reordering.",
+      href: "/inventory-manager",
+      price: "$99/month"
+    }
+  ];
+
+  const itServices = [
+    {
+      name: "Cloud Infrastructure",
+      description: "Scalable cloud solutions with 99.9% uptime guarantee.",
+      href: "/cloud-infrastructure",
+      price: "Custom pricing"
+    },
+    {
+      name: "Cybersecurity Solutions",
+      description: "Advanced security solutions to protect your business from cyber threats.",
+      href: "/cybersecurity",
+      price: "Custom pricing"
+    },
+    {
+      name: "Digital Transformation",
+      description: "Complete digital transformation services to modernize your business.",
+      href: "/digital-transformation",
+      price: "Custom pricing"
+    },
+    {
+      name: "5G Solutions",
+      description: "Next-generation 5G network solutions for ultra-fast connectivity.",
+      href: "/5g-solutions",
+      price: "Custom pricing"
+    }
+  ];
+
+  const benefits = [
+    {
+      title: "Expert Team",
+      description: "Our experienced professionals bring deep expertise across all technology domains."
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock support to ensure your systems run smoothly at all times."
+    },
+    {
+      title: "Scalable Solutions",
+      description: "Solutions that grow with your business, from startup to enterprise scale."
+    },
+    {
+      title: "Proven Results",
+      description: "Track record of delivering measurable results for 500+ satisfied clients."
+    }
+  ];
+
   return (
     <>
       <SEOHead
-        title="Services - Zion Tech Group"
-        description="Professional services solutions for modern businesses"
+        title="Our Services - AI Solutions, Micro SaaS & IT Services - Zion Tech Group"
+        description="Comprehensive technology services including AI solutions, micro SaaS applications, and IT services. Transform your business with cutting-edge technology."
+        keywords="AI solutions, micro SaaS, IT services, cloud infrastructure, cybersecurity, digital transformation"
       />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Services</h1>
-          <p className="text-gray-300">Professional solutions coming soon...</p>
+      
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Our <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Services</span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Comprehensive technology solutions designed to drive innovation, enhance security, 
+            and accelerate growth for businesses of all sizes.
+          </p>
         </div>
-      </div>
+      </section>
+
+      {/* Main Services */}
+      <section className="py-20 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Core Service Categories
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We specialize in three key areas that are essential for modern business success.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {mainServices.map((service, index) => (
+              <div key={index} className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
+                  <service.icon className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                      <CheckCircleIcon className="h-4 w-4 text-green-400 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <div className="text-purple-400 font-semibold mb-4">{service.pricing}</div>
+                <a
+                  href={service.href}
+                  className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium"
+                >
+                  Learn More
+                  <ArrowRightIcon className="ml-1 h-4 w-4" />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AI Services */}
+      <section className="py-20 bg-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              AI Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Harness the power of artificial intelligence to automate processes and gain valuable insights.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {aiServices.map((service, index) => (
+              <div key={index} className="bg-slate-900 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300">
+                <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-purple-400 font-semibold">{service.price}</span>
+                  <a
+                    href={service.href}
+                    className="text-purple-400 hover:text-purple-300 font-medium"
+                  >
+                    Learn More →
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Micro SaaS Services */}
+      <section className="py-20 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Micro SaaS Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Specialized software applications designed to solve specific business challenges.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {microSaasServices.map((service, index) => (
+              <div key={index} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300">
+                <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-cyan-400 font-semibold">{service.price}</span>
+                  <a
+                    href={service.href}
+                    className="text-cyan-400 hover:text-cyan-300 font-medium"
+                  >
+                    Learn More →
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* IT Services */}
+      <section className="py-20 bg-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              IT Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive IT services to support and enhance your business operations.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {itServices.map((service, index) => (
+              <div key={index} className="bg-slate-900 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300">
+                <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-green-400 font-semibold">{service.price}</span>
+                  <a
+                    href={service.href}
+                    className="text-green-400 hover:text-green-300 font-medium"
+                  >
+                    Learn More →
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Services?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We deliver exceptional value through our expertise, support, and proven track record.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-slate-800 rounded-xl p-6 text-center">
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
+            Let's discuss how our services can help you achieve your business goals. 
+            Get a free consultation with our experts.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
+            >
+              Get Free Consultation
+              <ArrowRightIcon className="ml-2 h-5 w-5" />
+            </a>
+            <a
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
+            >
+              <PhoneIcon className="mr-2 h-5 w-5" />
+              Call: +1 302 464 0950
+            </a>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
 
 export default ServicesPage;
-
-=======
-;
-const ServicesPage: React.FC = () => {","";
-        """;
-  const serviceCategories = [",";
-        """;
-    {","";
-        ""'";';";
-      title: 'AI & Machine Learning',","'";
-        ""''";
-      color: 'text-purple-600',","'";
-        ""''";
-      bgColor: 'bg-purple-50',","";
-        """;
-      icon: CpuChipIcon,","";
-        """;
-      services: [","'";';";
-        ""''";
-        { name: 'AI Consulting & Strategy', price: '$2,500/month', description: 'Comprehensive AI strategy development and implementation planning', features: ['AI Roadmap Development', 'Technology Assessment', 'ROI Analysis', 'Implementation Planning'] },","'";
-        ""''";
-        { name: 'Machine Learning Solutions', price: '$1,500/month', description: 'Custom ML models for predictive analytics and decision-making', features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring'] },","'";
-        ""''";
-        { name: 'Natural Language Processing', price: '$1,200/month', description: 'Advanced NLP solutions for text analysis and language understanding', features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'] },","'";
-        ""''";
-        { name: 'Computer Vision', price: '$1,800/month', description: 'Image and video analysis solutions for object detection and recognition', features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition'] },","'";
-        ""''";
-        { name: 'AI Automation', price: '$1,400/month', description: 'Intelligent process automation with decision-making capabilities', features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'] },","'";
-        "'"'';";
-        { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support', features: ['24/7 Support', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard'] };";
-      ]"";
-    },","";
-        """;
-    {","'";';";
-        ""''";
-      title: 'Cybersecurity',","'";
-        ""''";
-      color: 'text-red-600',","'";
-        ""''";
-      bgColor: 'bg-red-50',","";
-        """;
-      icon: ShieldCheckIcon,","";
-        """;
-      services: [","'";';";
-        ""''";
-        { name: 'Security Assessment', price: '$1,200/month', description: 'Comprehensive security evaluation and vulnerability assessment', features: ['Penetration Testing', 'Security Audit', 'Risk Assessment', 'Compliance Check'] },","'";
-        ""''";
-        { name: 'Managed Security Services', price: '$2,000/month', description: '24/7 security monitoring and incident response', features: ['24/7 Monitoring', 'Incident Response', 'Threat Detection', 'Security Updates'] },","'";
-        ""''";
-        { name: 'Identity & Access Management', price: '$1,500/month', description: 'Secure user authentication and authorization systems', features: ['Single Sign-On', 'Multi-Factor Auth', 'User Provisioning', 'Access Control'] },","'";
-        "'"'';";
-        { name: 'Data Protection', price: '$1,800/month', description: 'Comprehensive data encryption and backup solutions', features: ['Data Encryption', 'Backup Solutions', 'Data Recovery', 'Privacy Compliance'] };";
-      ]"";
-    },","";
-        """;
-    {","'";';";
-        ""''";
-      title: 'Cloud Infrastructure',","'";
-        ""''";
-      color: 'text-blue-600',","'";
-        ""''";
-      bgColor: 'bg-blue-50',","";
-        """;
-      icon: CloudIcon,","";
-        """;
-      services: [","'";';";
-        ""''";
-        { name: 'Cloud Migration', price: '$3,000/month', description: 'Seamless migration to cloud platforms with minimal downtime', features: ['Migration Planning', 'Data Transfer', 'Application Migration', 'Performance Optimization'] },","'";
-        ""''";
-        { name: 'Cloud Architecture', price: '$2,500/month', description: 'Scalable and secure cloud infrastructure design', features: ['Architecture Design', 'Scalability Planning', 'Security Implementation', 'Cost Optimization'] },","'";
-        ""''";
-        { name: 'DevOps & CI/CD', price: '$2,000/month', description: 'Automated deployment and continuous integration pipelines', features: ['CI/CD Setup', 'Automated Testing', 'Deployment Automation', 'Monitoring Setup'] },","'";
-        "'"'';";
-        { name: 'Cloud Management', price: '$1,500/month', description: 'Ongoing cloud infrastructure management and optimization', features: ['24/7 Monitoring', 'Performance Tuning', 'Cost Management', 'Security Updates'] };";
-      ]"";
-    },","";
-        """;
-    {","'";';";
-        ""''";
-      title: 'Digital Transformation',","'";
-        ""''";
-      color: 'text-green-600',","'";
-        ""''";
-      bgColor: 'bg-green-50',","";
-        """;
-      icon: ChartBarIcon,","";
-        """;
-      services: [","'";';";
-        ""''";
-        { name: 'Digital Strategy', price: '$2,500/month', description: 'Comprehensive digital transformation strategy and planning', features: ['Strategy Development', 'Technology Roadmap', 'Change Management', 'Implementation Planning'] },","'";
-        ""''";
-        { name: 'Process Automation', price: '$1,800/month', description: 'Business process automation and workflow optimization', features: ['Process Analysis', 'Automation Design', 'Workflow Implementation', 'Performance Monitoring'] },","'";
-        ""''";
-        { name: 'Data Analytics', price: '$2,200/month', description: 'Advanced analytics and business intelligence solutions', features: ['Data Visualization', 'Predictive Analytics', 'Dashboard Development', 'Insight Generation'] },","'";
-        "'"'';";
-        { name: 'Mobile Solutions', price: '$1,600/month', description: 'Custom mobile applications and responsive web solutions', features: ['Mobile App Development', 'Responsive Design', 'Cross-Platform Solutions', 'Performance Optimization'] };";
-      ]"";
-    },","";
-        """;
-    {","'";';";
-        ""''";
-      title: 'Micro SaaS Solutions',","'";
-        ""''";
-      color: 'text-pink-600',","'";
-        ""''";
-      bgColor: 'bg-pink-50',","";
-        """;
-      icon: GlobeAltIcon,","";
-        """;
-      services: [","'";';";
-        ""''";
-        { name: 'Custom SaaS Development', price: '$3,500/month', description: 'Tailored software-as-a-service solutions for specific business needs', features: ['Custom Development', 'API Integration', 'User Management', 'Subscription Billing'] },","'";
-        ""''";
-        { name: 'SaaS Platform Management', price: '$2,000/month', description: 'Ongoing management and maintenance of SaaS platforms', features: ['Platform Maintenance', 'Feature Updates', 'Performance Monitoring', 'User Support'] },","'";
-        ""''";
-        { name: 'API Development', price: '$1,500/month', description: 'RESTful and GraphQL API development and management', features: ['API Design', 'Documentation', 'Rate Limiting', 'Analytics'] },","'";
-        "'"'';";
-        { name: 'Integration Services', price: '$1,200/month', description: 'Third-party integrations and system connectivity', features: ['System Integration', 'Data Synchronization', 'API Connections', 'Error Handling'] };";
-      ]"";
-    },","";
-        """;
-    {","'";';";
-        ""''";
-      title: '5G Solutions',","'";
-        ""''";
-      color: 'text-indigo-600',","'";
-        ""''";
-      bgColor: 'bg-indigo-50',","";
-        """;
-      icon: GlobeAltIcon,","";
-        """;
-      services: [","'";';";
-        ""''";
-        { name: '5G Network Planning', price: '$4,000/month', description: 'Comprehensive 5G network design and implementation planning', features: ['Network Design', 'Coverage Planning', 'Capacity Planning', 'Implementation Strategy'] },","'";
-        ""''";
-        { name: 'IoT Solutions', price: '$2,500/month', description: 'Internet of Things solutions leveraging 5G connectivity', features: ['IoT Architecture', 'Device Management', 'Data Collection', 'Real-time Analytics'] },","'";
-        ""''";
-        { name: 'Edge Computing', price: '$3,000/month', description: 'Edge computing solutions for ultra-low latency applications', features: ['Edge Infrastructure', 'Data Processing', 'Latency Optimization', 'Scalability'] },","'";
-        "'"'';";
-        { name: '5G Applications', price: '$2,200/month', description: 'Custom applications designed for 5G networks', features: ['App Development', '5G Optimization', 'Performance Tuning', 'User Experience'] };";
-      ]
-    };
-  ];";
-,"";
-      const ServicesPage: React.FC = () => {ursor/analyze-improve-and-merge-code-4a9f","";
-        """;
-  return (","";
-        """;
-    <>","";
-        """;
-      <SEOHead"">"";
-        title="services - Zion Tech Group",>";
-      description="Zion Tech Group services service page" />"";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"";
-        <div className ="text-center">"";
-          <h1 className ="text-4xl font-bold mb-4">services</h1>"";
-          <p className ="text-gray-300">Coming soon...</p>",";
-        """;
-        </div>","";
-        """;
-      </div>","";
-        """;
-    </>","";
-        ";
-  );
-    };
-{
-,;
-      export default ServicesPage;'";'";'"';";
-'";'";
-
-}}
->>>>>>> main

@@ -15,6 +15,9 @@ import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Page Components (lazy loaded below)
+import HomePage from './app/pages/HomePage';
+import AboutPage from './app/about/page';
+import ContactPage from './app/contact/page';
 import BlogPage from './app/pages/BlogPage';
 import TutorialsPage from './app/pages/TutorialsPage';
 import DemoPage from './app/pages/DemoPage';
@@ -30,6 +33,11 @@ import TeamPage from './app/team/page';
 import DocumentationPage from './app/docs/page';
 
 // Service Pages
+import AIEmailMarketingPage from './app/ai-email-marketing-automation/page';
+import TaskManagerProPage from './app/task-manager-pro/page';
+
+// Service Pages
+import ServicesPage from './app/services/page';
 import AIServicesPage from './app/ai-services/page';
 import ITServicesPage from './app/it-services/page';
 import CloudInfrastructurePage from './app/cloud-infrastructure/page';
@@ -115,6 +123,12 @@ function App() {
                       <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
                       <Route path="/micro-saas" element={<MicroSaaSPage />} />
                       <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                      
+                      {/* AI Services */}
+                      <Route path="/ai-email-marketing-automation" element={<AIEmailMarketingPage />} />
+                      
+                      {/* Micro SaaS Services */}
+                      <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
                       
                       {/* Additional Pages */}
                       <Route path="/docs" element={<DocumentationPage />} />
