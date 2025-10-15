@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin// Fixed regex
-
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
-    const content = fs.readFileSync(filePath, 'utf8'
-  console.error('Error:'
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx'
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'
-const appDir = '
-=======
 import fs from 'fs';
 import path from 'path';
 
@@ -56,4 +44,3 @@ const appDir = './app';
 const fixedCount = fixAllMergeConflicts(appDir);
 
 console.log(`Fixed merge conflicts in ${fixedCount} files`);
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56

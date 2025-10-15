@@ -2,16 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Users, 
-  Phone, 
-  Mail, 
   BarChart3, 
   CheckCircle, 
   ArrowRight, 
   Target, 
   Zap,
-  Shield,
   Globe,
-  Database,
   Calendar
 } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';

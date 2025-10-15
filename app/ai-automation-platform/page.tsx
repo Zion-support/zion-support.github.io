@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
 
 const AIAutomationPlatform: React.FC = () => {
@@ -40,22 +38,10 @@ const AIAutomationPlatform: React.FC = () => {
     "Scalable workflows",
     "Cost reduction"
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">Page</h1>
-          <p className="text-gray-300 text-center">Coming soon...</p>
-        </div>
-      </div>    </>
-=======
         <title>AI Automation Platform - Intelligent Process Automation | Zion Tech Group</title>
         <meta name="description" content="Transform your business with our AI automation platform. Automate workflows, optimize processes, and achieve 70% efficiency gains with intelligent automation solutions." />
         <meta name="keywords" content="AI automation, process automation, workflow automation, business intelligence, machine learning, AI platform" />
@@ -144,7 +130,6 @@ const AIAutomationPlatform: React.FC = () => {
         </section>
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
   );
 };
 

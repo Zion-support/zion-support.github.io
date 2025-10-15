@@ -1,17 +1,17 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
+  error?: Error;
+  errorInfo?: ErrorInfo;
   errorId: string;
+  retryCount: number;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
@@ -19,53 +19,22 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = {
       hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
+      errorId: this.generateErrorId(),
+      retryCount: 0
     };
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      error
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    });
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Log error to console (commented out for production)
-    // console.error('Error caught by boundary:', error, errorInfo);
-=======
-    // Log error to console (only in development)
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
-
-    // Report error to monitoring service
-    this.reportError(error, errorInfo);
-
-    // Call custom error handler
-    this.props.onError?.(error, errorInfo);
-=======
-    // Log error to monitoring service
-    this.logErrorToService(error, errorInfo);
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
-  }
-
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     const errorData = {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
+      error: error.toString(),
+      errorInfo: errorInfo.componentStack,
       errorId: this.state.errorId,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
@@ -73,35 +42,30 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       userId: this.getUserId()
     };
 
-<<<<<<< HEAD
-    // Report to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      try {
-        await fetch('/api/errors', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(errorReport),
-        });
-<<<<<<< HEAD
-      } catch {
-        // console.warn('Failed to report error:', reportingError);
-=======
-      } catch (reportingError) {
-        if (process.env.NODE_ENV !== 'production') {
-          console.warn('Failed to report error:', reportingError);
-        }
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+    try {
+      // Send to error monitoring service (Sentry, LogRocket, etc.)
+      console.error('Error caught by boundary:', errorData);
+      // You can integrate with services like Sentry here
+      // Sentry.captureException(error, { extra: errorData });
+    } catch (reportingError) {
+      if (process.env.NODE_ENV !== 'production') {
+        console.warn('Failed to report error:', reportingError);
       }
     }
-=======
-    // Send to error monitoring service (Sentry, LogRocket, etc.)
-    console.error('Error caught by boundary:', errorData);
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
-    // You can integrate with services like Sentry here
-    // Sentry.captureException(error, { extra: errorData });
+    this.setState({
+      error,
+      errorInfo
+    });
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+  }
+
+  generateErrorId = () => {
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   };
 
   getUserId = () => {
@@ -110,44 +74,22 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   handleRetry = () => {
-<<<<<<< HEAD
-    if (this.state.retryCount < this.maxRetries) {
-      this.setState(prevState => ({
-        hasError: false,
-<<<<<<< HEAD
-<<<<<<< HEAD
-        error: undefined as Error | undefined,
-        errorInfo: undefined as ErrorInfo | undefined,
-        retryCount: prevState.retryCount + 1
-      }));
-=======
-        error: undefined,
-        errorInfo: undefined,
-        retryCount: this.state.retryCount + 1
-      });
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
-=======
-        error: undefined,
-        errorInfo: undefined,
-        retryCount: prevState.retryCount + 1
-      }));
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
-    }
+    this.setState(prevState => ({
+      hasError: false,
+      error: undefined,
+      errorInfo: undefined,
+      retryCount: prevState.retryCount + 1
+    }));
   };
 
   handleReset = () => {
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
     this.setState({
       hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
+      error: undefined,
+      errorInfo: undefined,
+      errorId: this.generateErrorId(),
+      retryCount: 0
     });
-  };
-
-  handleReload = () => {
-    window.location.reload();
   };
 
   render() {
@@ -157,90 +99,54 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
+              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
             </div>
-
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-<<<<<<< HEAD
             
-            <p className="text-gray-300 mb-6 text-lg">
-              We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-=======
-
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
-            </p>
-
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="text-cyan-400 cursor-pointer mb-2">
-                  Error Details (Development)
-                </summary>
-                <div className="bg-gray-800/50 rounded p-4 text-sm text-gray-300 overflow-auto max-h-40">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                  <div className="mb-2">
-                    <strong>Stack:</strong>
-                    <pre className="whitespace-pre-wrap text-xs mt-1">
-                      {this.state.error.stack}
-                    </pre>
-                  </div>
-                  {this.state.errorInfo && (
-                    <div>
-                      <strong>Component Stack:</strong>
-                      <pre className="whitespace-pre-wrap text-xs mt-1">
-                        {this.state.errorInfo.componentStack}
-                      </pre>
-                    </div>
-                  )}
-                </div>
-              </details>
-            )}
-
-            <div className="space-y-3">
-              <button
-                onClick={this.handleRetry}
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                <RefreshCw className="w-5 h-5 mr-2" />
-                Try Again
-              </button>
-
-              <button
-                onClick={this.handleReload}
-                className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
-              >
-                <RefreshCw className="w-5 h-5 mr-2" />
-                Reload Page
-              </button>
-
-              <Link
-                to="/"
-                className="w-full border border-gray-400 text-gray-400 px-6 py-3 rounded-lg font-semibold hover:bg-gray-400 hover:text-white transition-all duration-300 flex items-center justify-center"
-              >
-                <Home className="w-5 h-5 mr-2" />
-                Go Home
-              </Link>
-            </div>
-
-            <div className="mt-6 pt-6 border-t border-white/20">
-              <p className="text-sm text-gray-400 mb-2">
-                Still having trouble? Contact our support team.
+            <div className="text-center">
+              <h1 className="text-lg font-medium text-gray-900 mb-2">
+                Something went wrong
+              </h1>
+              <p className="text-sm text-gray-500 mb-6">
+                We're sorry, but something unexpected happened. Please try again.
               </p>
-              <a
-                href="mailto:support@ziontechgroup.com"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm"
-              >
-                <Mail className="w-4 h-4 mr-1" />
-                support@ziontechgroup.com
-              </a>
+              
+              {process.env.NODE_ENV === 'development' && this.state.error && (
+                <details className="mb-4 text-left">
+                  <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2">
+                    Error Details (Development)
+                  </summary>
+                  <pre className="text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
+                    {this.state.error.toString()}
+                    {this.state.errorInfo?.componentStack}
+                  </pre>
+                </details>
+              )}
+              
+              <div className="flex space-x-3">
+                <button
+                  onClick={this.handleRetry}
+                  className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >
+                  Try Again
+                </button>
+                <button
+                  onClick={this.handleReset}
+                  className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+                >
+                  Reset
+                </button>
+              </div>
+              
+              {this.state.retryCount > 0 && (
+                <p className="text-xs text-gray-400 mt-2">
+                  Retry attempt: {this.state.retryCount}
+                </p>
+              )}
             </div>
           </div>
         </div>

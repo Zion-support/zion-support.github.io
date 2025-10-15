@@ -95,7 +95,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
       }
     };
 
-    recognition.onerror = (event: any) => {
+    recognition.onerror = () => {
       // Speech recognition error handled silently
     };
 
@@ -324,7 +324,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
     return () => {
       stopVoiceNavigation();
     };
-  }, []);
+  }, [stopVoiceNavigation]);
 
   // Accessibility controls component
   const AccessibilityControls = () => (

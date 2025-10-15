@@ -4,28 +4,10 @@ import { Helmet } from 'react-helmet-async';
 import { 
   CheckCircle, 
   ArrowRight, 
-  Brain, 
-  Star, 
-  Users, 
-  Shield, 
-  Clock, 
   TrendingUp,
   BarChart3,
-  Database,
-  Smartphone,
-  Globe,
-  Target,
-  Lightbulb,
-  Rocket,
-  Award,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Code,
   Eye,
   MessageSquare,
-  Cpu,
   Network,
   FileText,
   Settings
@@ -215,7 +197,6 @@ const AISolutionsPage: React.FC = () => {
     }
   ];
 
-  const categories = ['All', 'Conversational AI', 'Computer Vision', 'Content Creation', 'Analytics', 'Automation', 'Blockchain'];
 
   const useCases = [
     {

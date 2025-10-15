@@ -9,7 +9,6 @@ import {
   PhoneIcon,
   DocumentTextIcon,
   AcademicCapIcon,
-  PlayIcon,
   QuestionMarkCircleIcon,
   ShieldCheckIcon,
   CurrencyDollarIcon,

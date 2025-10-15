@@ -3,13 +3,9 @@ import { Link } from 'react-router-dom';
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
-  MapPinIcon,
-  ArrowRightIcon
+  MapPinIcon
 } from '@heroicons/react/24/outline';
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
-import { 
-  HeartIcon
-} from '@heroicons/react/24/outline';
+import { Facebook, Twitter, Linkedin, Github } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

@@ -1,14 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { CheckCircle, Brain, Shield, BarChart, Users, Globe, Code, Smartphone, Mail, Phone, Cpu, Target, MessageSquare, TrendingUp, Zap } from 'lucide-react';
-=======
 import { CheckCircle, Brain, Zap, Shield, BarChart, Users, Globe, Code, Smartphone, Mail, Phone, Target, MessageSquare, TrendingUp, Cpu } from 'lucide-react';
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
-=======
 import { CheckCircle, Brain, Zap, Shield, BarChart, Users, Globe, Code, Smartphone, Mail, Phone, Target, MessageSquare, TrendingUp, Cpu } from 'lucide-react';
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
 
 const AISolutionsPage: React.FC = () => {
   const aiServices = [

@@ -1,7 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 import { 
@@ -23,8 +21,8 @@ import NeonButton from '../components/NeonButton';
 import AnimatedCard from '../components/AnimatedCard';
 import { services } from '../data/servicesData';
 
-export default function HomePage() {
-const structuredData = {
+const HomePage: React.FC = () => {
+  const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Zion Tech Group",
@@ -37,8 +35,6 @@ const structuredData = {
     }
   };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
-const HomePage: React.FC = () => {
   return (
     <>
       <Helmet>

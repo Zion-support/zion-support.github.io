@@ -6,13 +6,9 @@ const file = path.join(process.cwd(), 'data', 'subscribers.json');
 
 export default function handler(req, res) {
   if (req.method !== "POST") {
-    return res.status(405).json({ _error: "Method not allowed" });
+    return res.status(405).json({ error: "Method not allowed" });
   }
 
-<<<<<<< HEAD
-  res.status(200).json({ message: "Subscription successful" });
-}
-=======
   const { email, name } = req.body;
 
   if (!email) {
@@ -58,4 +54,3 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ error: 'Failed to save subscription' }));
   }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
