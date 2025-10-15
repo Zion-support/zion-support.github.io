@@ -1,6 +1,8 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code-4a9f
+import { Helmet } from 'react-helmet-async';
+import SEOHead from '../components/SEOHead';
 
+const AIAutomationPlatformPage = () => {
   return (<>
       <Helmet>
         <title>AI Automation Platform - Intelligent Process Automation | Zion Tech Group</title>
@@ -93,4 +95,4 @@ import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code
   );
 };
 
-export default AiAutomationPlatformPage;
+export default AIAutomationPlatformPage;

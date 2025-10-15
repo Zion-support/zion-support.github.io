@@ -163,7 +163,8 @@ const CybersecurityPage: React.FC = () => {
               Schedule Consultation
             </Link>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20">
@@ -191,7 +192,6 @@ const CybersecurityPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
     </>
   );
 };

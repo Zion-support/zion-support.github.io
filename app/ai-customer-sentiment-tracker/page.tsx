@@ -50,9 +50,9 @@ import SEOHead from '../components/SEOHead';
             </div>
           </motion.div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
 
-export default AiCustomerSentimentTrackerPage;
+export default AICustomerSentimentTrackerPage;

@@ -198,6 +198,4 @@ export default function CaseStudies() {
       </div>
     </>
   );
-};
-
-export default CaseStudiesPage;
+  };
