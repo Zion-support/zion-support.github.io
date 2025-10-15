@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Wifi, Shield, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3, Star } from 'lucide-react';
+import { Wifi, CheckCircle, ArrowRight, Network, Cpu, Smartphone, BarChart3 } from 'lucide-react';
+import UnifiedSEOHead from '../components/UnifiedSEOHead';
 
 const FiveGSolutionsPage: React.FC = () => {
   const solutions = [
@@ -71,6 +71,7 @@ const FiveGSolutionsPage: React.FC = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>5G Solutions - Zion Tech Group | Advanced 5G Network Services</title>
         <meta
@@ -129,6 +130,94 @@ const FiveGSolutionsPage: React.FC = () => {
             </button>
           </div>
         </div>
+=======
+      <UnifiedSEOHead 
+        title="5G Solutions - Zion Tech Group"
+        description="Transform your business with cutting-edge 5G solutions including network implementation, IoT connectivity, smart city solutions, and edge computing."
+        keywords="5G solutions, 5G implementation, IoT connectivity, smart city, edge computing, network infrastructure, 5G analytics"
+      />
+      
+      <div className="min-h-screen bg-slate-900 text-white">
+        {/* Hero Section */}
+        <section className="relative py-20 bg-gradient-to-br from-purple-900/20 to-cyan-900/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                5G Solutions
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Transform your business with cutting-edge 5G technology. Ultra-fast connectivity, ultra-low latency, and unlimited possibilities.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Solutions Grid */}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {solutions.map((solution, index) => (
+                <div key={index} className={`bg-slate-800/50 p-6 rounded-xl border ${solution.popular ? 'border-purple-500' : 'border-slate-700'} hover:border-purple-500 transition-all duration-300 relative`}>
+                  {solution.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="text-purple-400 mb-4">
+                    {solution.icon}
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold text-white mb-3">{solution.name}</h3>
+                  <p className="text-gray-300 mb-4">{solution.description}</p>
+                  
+                  <div className="mb-4">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <span className="text-2xl font-bold text-purple-400">{solution.price}</span>
+                      <span className="text-gray-400 line-through">{solution.marketPrice}</span>
+                    </div>
+                    <p className="text-sm text-green-400 font-medium">{solution.benefits}</p>
+                  </div>
+                  
+                  <div className="space-y-2 mb-6">
+                    {solution.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center space-x-2">
+                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                        <span className="text-sm text-gray-300">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2">
+                    <span>Learn More</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Technologies Section */}
+        <section className="py-16 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">5G Technologies We Use</h2>
+              <p className="text-gray-300">Cutting-edge technologies powering our 5G solutions</p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {technologies.map((tech, index) => (
+                <div key={index} className="bg-slate-800/50 p-4 rounded-lg text-center hover:bg-slate-700/50 transition-colors">
+                  <span className="text-white font-medium">{tech}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-5a7b
       </div>
     </>
   );
