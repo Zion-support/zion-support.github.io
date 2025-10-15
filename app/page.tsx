@@ -67,6 +67,46 @@ const HomePage: React.FC = () => {
       price: "$149/month",
       features: ["Multi-language Support", "Advanced NLP", "Integration APIs", "Analytics Dashboard"],
       link: "/ai-chatbot-enterprise"
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Customer Insights Pro",
+      description: "Transform customer data into actionable insights with AI-powered analytics and predictive modeling.",
+      price: "$299/month",
+      features: ["Real-time Analytics", "Predictive Modeling", "Customer Segmentation", "Churn Prevention"],
+      link: "/ai-customer-insights-pro"
+    },
+    {
+      icon: <Code className="w-8 h-8" />,
+      title: "AI Project Management Pro",
+      description: "Intelligent project management with AI-powered task prioritization and resource allocation.",
+      price: "$199/month",
+      features: ["AI Task Prioritization", "Resource Optimization", "Risk Assessment", "Performance Analytics"],
+      link: "/ai-project-management-pro"
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "AI Social Media Manager Pro",
+      description: "AI-powered social media management with automated content generation and optimization.",
+      price: "$149/month",
+      features: ["Content Generation", "Auto Scheduling", "Engagement Optimization", "Multi-platform Management"],
+      link: "/ai-social-media-manager-pro"
+    },
+    {
+      icon: <Wifi className="w-8 h-8" />,
+      title: "AI Email Marketing Pro",
+      description: "Revolutionize email marketing with AI-powered optimization and intelligent automation.",
+      price: "$99/month",
+      features: ["Subject Line Optimization", "Send Time Optimization", "Personalization Engine", "Advanced Analytics"],
+      link: "/ai-email-marketing-pro"
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "AI Inventory Management Pro",
+      description: "Intelligent inventory management with AI-powered forecasting and optimization.",
+      price: "$199/month",
+      features: ["Demand Forecasting", "Automated Reordering", "Cost Optimization", "Real-time Tracking"],
+      link: "/ai-inventory-management-pro"
     }
   ];
 
@@ -176,7 +216,7 @@ const HomePage: React.FC = () => {
                 </p>
               </div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                 {services.map((service, index) => (
                   <div 
                     key={index} 
@@ -243,7 +283,7 @@ const HomePage: React.FC = () => {
                     <Phone className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
+                  <p className="text-gray-300">+1 302 464 0950</p>
                 </div>
                 
                 <div className="flex flex-col items-center">
@@ -251,7 +291,7 @@ const HomePage: React.FC = () => {
                     <Mail className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-                  <p className="text-gray-300">info@ziontech.com</p>
+                  <p className="text-gray-300">kleber@ziontechgroup.com</p>
                 </div>
                 
                 <div className="flex flex-col items-center">
@@ -259,7 +299,7 @@ const HomePage: React.FC = () => {
                     <MapPin className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-                  <p className="text-gray-300">123 Tech Street, Innovation City</p>
+                  <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
             </div>
