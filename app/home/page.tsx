@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Navigation, Phone, Mail, CheckCircle, Brain, Play, Star } from 'lucide-react';
+import { Navigation, Phone, Mail, CheckCircle, Brain, Play, Star, Cpu, Shield, BarChart, Target, MessageSquare, Users, TrendingUp } from 'lucide-react';
 import Footer from '../components/Footer';
 
 const HomePage: React.FC = () => {

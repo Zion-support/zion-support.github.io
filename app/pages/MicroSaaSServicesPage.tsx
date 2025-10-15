@@ -241,140 +241,98 @@ import {
   Shuffle100
 } from 'lucide-react';
 
-const AIServicesPage: React.FC = () => {
-  const aiServices = [
+const MicroSaaSServicesPage: React.FC = () => {
+  const microSaasServices = [
     {
-      id: 'ai-consulting',
-      name: 'AI Strategy Consulting',
-      description: 'Comprehensive AI strategy development and implementation consulting to transform your business with artificial intelligence.',
+      id: 'ai-content-generator',
+      name: 'AI Content Generator Pro',
+      description: 'Advanced AI-powered content creation tool that generates high-quality articles, blogs, social media posts, and marketing copy.',
       icon: Brain,
-      price: '$299/hour',
+      price: '$29/month',
       features: [
-        'AI strategy development',
-        'Technology assessment',
-        'Implementation roadmap',
-        'ROI analysis',
-        'Change management',
-        'Training programs',
-        'Ongoing support',
-        'Performance monitoring'
+        'Generate unlimited content',
+        '50+ content templates',
+        'SEO optimization',
+        'Multi-language support',
+        'Brand voice customization',
+        'Plagiarism detection',
+        'Content scheduling',
+        'Analytics dashboard'
       ],
-      category: 'Consulting',
+      category: 'AI & Content',
       rating: 4.9,
-      clients: '500+',
-      link: 'https://ziontechgroup.com/ai-consulting'
+      users: '10,000+',
+      link: 'https://ziontechgroup.com/ai-content-generator'
     },
     {
-      id: 'machine-learning-models',
-      name: 'Custom ML Model Development',
-      description: 'Bespoke machine learning models tailored to your specific business needs and data requirements.',
-      icon: Cpu,
-      price: '$15,000+',
+      id: 'social-media-manager',
+      name: 'Social Media Manager',
+      description: 'Comprehensive social media management platform with AI-powered scheduling, analytics, and engagement tools.',
+      icon: Share,
+      price: '$49/month',
       features: [
-        'Custom model development',
-        'Data preprocessing',
-        'Model training & validation',
-        'Performance optimization',
-        'API integration',
-        'Documentation',
-        'Maintenance support',
-        'Scalability planning'
+        'Multi-platform posting',
+        'AI content suggestions',
+        'Engagement analytics',
+        'Hashtag optimization',
+        'Competitor analysis',
+        'Auto-responder',
+        'Team collaboration',
+        'White-label options'
       ],
-      category: 'Development',
+      category: 'Social Media',
       rating: 4.8,
-      clients: '200+',
-      link: 'https://ziontechgroup.com/ml-models'
+      users: '15,000+',
+      link: 'https://ziontechgroup.com/social-media-manager'
     },
     {
-      id: 'ai-automation',
-      name: 'AI Process Automation',
-      description: 'Intelligent automation solutions that streamline business processes and reduce manual workload.',
-      icon: Zap,
-      price: '$5,000+',
+      id: 'email-marketing-automation',
+      name: 'Email Marketing Automation',
+      description: 'Powerful email marketing platform with advanced automation, segmentation, and personalization features.',
+      icon: Mail,
+      price: '$39/month',
       features: [
-        'Process analysis',
-        'Automation design',
-        'RPA implementation',
-        'AI integration',
-        'Workflow optimization',
-        'Monitoring & alerts',
-        'Performance analytics',
-        'Continuous improvement'
+        'Drag-and-drop editor',
+        'Advanced automation',
+        'A/B testing',
+        'Behavioral triggers',
+        'List segmentation',
+        'Deliverability optimization',
+        'ROI tracking',
+        'Integration ecosystem'
       ],
-      category: 'Automation',
+      category: 'Marketing',
       rating: 4.7,
-      clients: '300+',
-      link: 'https://ziontechgroup.com/ai-automation'
+      users: '25,000+',
+      link: 'https://ziontechgroup.com/email-marketing'
     },
     {
-      id: 'computer-vision',
-      name: 'Computer Vision Solutions',
-      description: 'Advanced computer vision applications for image recognition, object detection, and visual analysis.',
-      icon: Camera,
-      price: '$8,000+',
+      id: 'project-management-ai',
+      name: 'AI Project Manager',
+      description: 'Intelligent project management tool with AI-powered task allocation, timeline prediction, and resource optimization.',
+      icon: Target,
+      price: '$59/month',
       features: [
-        'Image classification',
-        'Object detection',
-        'Facial recognition',
-        'OCR implementation',
-        'Video analysis',
-        'Real-time processing',
-        'Cloud deployment',
-        'Mobile integration'
-      ],
-      category: 'Computer Vision',
-      rating: 4.9,
-      clients: '150+',
-      link: 'https://ziontechgroup.com/computer-vision'
-    },
-    {
-      id: 'natural-language-processing',
-      name: 'NLP & Text Analytics',
-      description: 'Natural language processing solutions for text analysis, sentiment analysis, and language understanding.',
-      icon: MessageSquare,
-      price: '$6,000+',
-      features: [
-        'Text classification',
-        'Sentiment analysis',
-        'Language translation',
-        'Chatbot development',
-        'Document processing',
-        'Entity extraction',
-        'Topic modeling',
-        'API development'
-      ],
-      category: 'NLP',
-      rating: 4.8,
-      clients: '250+',
-      link: 'https://ziontechgroup.com/nlp-solutions'
-    },
-    {
-      id: 'predictive-analytics',
-      name: 'Predictive Analytics Platform',
-      description: 'Advanced predictive analytics solutions that forecast trends and optimize business decisions.',
-      icon: TrendingUp,
-      price: '$12,000+',
-      features: [
-        'Predictive modeling',
-        'Time series analysis',
+        'AI task prioritization',
+        'Resource optimization',
+        'Timeline prediction',
         'Risk assessment',
-        'Demand forecasting',
-        'Customer analytics',
-        'Real-time predictions',
-        'Dashboard development',
-        'API integration'
+        'Team performance analytics',
+        'Automated reporting',
+        'Integration hub',
+        'Mobile app'
       ],
-      category: 'Analytics',
+      category: 'Productivity',
       rating: 4.9,
-      clients: '180+',
-      link: 'https://ziontechgroup.com/predictive-analytics'
+      users: '8,000+',
+      link: 'https://ziontechgroup.com/ai-project-manager'
     },
     {
-      id: 'ai-chatbots',
-      name: 'AI-Powered Chatbots',
-      description: 'Intelligent chatbot solutions with natural language understanding and seamless human handoff.',
+      id: 'customer-support-chatbot',
+      name: 'AI Customer Support Bot',
+      description: 'Advanced chatbot solution with natural language processing, multi-channel support, and seamless human handoff.',
       icon: MessageSquare,
-      price: '$3,000+',
+      price: '$79/month',
       features: [
         'Natural language processing',
         'Multi-channel support',
@@ -385,150 +343,192 @@ const AIServicesPage: React.FC = () => {
         'Analytics dashboard',
         'API access'
       ],
-      category: 'Chatbots',
-      rating: 4.7,
-      clients: '400+',
-      link: 'https://ziontechgroup.com/ai-chatbots'
+      category: 'Customer Support',
+      rating: 4.8,
+      users: '12,000+',
+      link: 'https://ziontechgroup.com/ai-chatbot'
     },
     {
-      id: 'ai-data-analysis',
-      name: 'AI Data Analysis',
-      description: 'Advanced AI-powered data analysis and insights generation for complex business datasets.',
+      id: 'data-analytics-dashboard',
+      name: 'Business Intelligence Dashboard',
+      description: 'Comprehensive data analytics platform with real-time insights, predictive analytics, and custom reporting.',
       icon: BarChart3,
-      price: '$7,000+',
+      price: '$99/month',
       features: [
-        'Data exploration',
-        'Pattern recognition',
-        'Anomaly detection',
-        'Automated reporting',
-        'Visualization',
-        'Statistical analysis',
-        'Machine learning insights',
-        'Dashboard creation'
+        'Real-time analytics',
+        'Predictive modeling',
+        'Custom dashboards',
+        'Data visualization',
+        'Automated reports',
+        'API integrations',
+        'White-label options',
+        'Advanced security'
       ],
-      category: 'Data Analysis',
-      rating: 4.8,
-      clients: '220+',
-      link: 'https://ziontechgroup.com/ai-data-analysis'
-    },
-    {
-      id: 'ai-content-generation',
-      name: 'AI Content Generation',
-      description: 'Intelligent content generation solutions for marketing, documentation, and creative writing.',
-      icon: FileText,
-      price: '$4,000+',
-      features: [
-        'Content generation',
-        'SEO optimization',
-        'Brand voice training',
-        'Multi-format output',
-        'Quality assurance',
-        'Plagiarism detection',
-        'Content scheduling',
-        'Performance tracking'
-      ],
-      category: 'Content',
-      rating: 4.6,
-      clients: '350+',
-      link: 'https://ziontechgroup.com/ai-content-generation'
-    },
-    {
-      id: 'ai-recommendation-engines',
-      name: 'AI Recommendation Engines',
-      description: 'Personalized recommendation systems that enhance user experience and drive engagement.',
-      icon: Target,
-      price: '$10,000+',
-      features: [
-        'Collaborative filtering',
-        'Content-based filtering',
-        'Hybrid approaches',
-        'Real-time recommendations',
-        'A/B testing',
-        'Performance metrics',
-        'Scalable architecture',
-        'API development'
-      ],
-      category: 'Recommendations',
+      category: 'Analytics',
       rating: 4.9,
-      clients: '120+',
-      link: 'https://ziontechgroup.com/recommendation-engines'
+      users: '5,000+',
+      link: 'https://ziontechgroup.com/business-intelligence'
     },
     {
-      id: 'ai-fraud-detection',
-      name: 'AI Fraud Detection',
-      description: 'Advanced fraud detection systems using machine learning to identify and prevent fraudulent activities.',
-      icon: Shield,
-      price: '$15,000+',
-      features: [
-        'Real-time monitoring',
-        'Pattern recognition',
-        'Risk scoring',
-        'Alert systems',
-        'False positive reduction',
-        'Compliance reporting',
-        'Integration capabilities',
-        'Continuous learning'
-      ],
-      category: 'Security',
-      rating: 4.8,
-      clients: '100+',
-      link: 'https://ziontechgroup.com/ai-fraud-detection'
-    },
-    {
-      id: 'ai-supply-chain',
-      name: 'AI Supply Chain Optimization',
-      description: 'Intelligent supply chain optimization using AI to improve efficiency and reduce costs.',
-      icon: Globe,
-      price: '$20,000+',
+      id: 'inventory-management',
+      name: 'Smart Inventory Manager',
+      description: 'AI-powered inventory management system with demand forecasting, automated reordering, and supply chain optimization.',
+      icon: Package,
+      price: '$69/month',
       features: [
         'Demand forecasting',
-        'Inventory optimization',
-        'Route optimization',
-        'Supplier analysis',
-        'Risk assessment',
-        'Cost optimization',
-        'Real-time monitoring',
-        'Performance analytics'
+        'Automated reordering',
+        'Supply chain optimization',
+        'Multi-location support',
+        'Barcode scanning',
+        'Vendor management',
+        'Cost tracking',
+        'Mobile app'
       ],
-      category: 'Supply Chain',
+      category: 'E-commerce',
+      rating: 4.7,
+      users: '7,000+',
+      link: 'https://ziontechgroup.com/inventory-manager'
+    },
+    {
+      id: 'hr-recruitment-ai',
+      name: 'AI HR & Recruitment',
+      description: 'Intelligent HR platform with AI-powered candidate screening, interview scheduling, and employee analytics.',
+      icon: Users,
+      price: '$89/month',
+      features: [
+        'AI candidate screening',
+        'Interview scheduling',
+        'Employee analytics',
+        'Performance tracking',
+        'Onboarding automation',
+        'Compliance management',
+        'Integration ecosystem',
+        'Mobile accessibility'
+      ],
+      category: 'Human Resources',
+      rating: 4.8,
+      users: '6,000+',
+      link: 'https://ziontechgroup.com/ai-hr-recruitment'
+    },
+    {
+      id: 'financial-forecasting',
+      name: 'AI Financial Forecaster',
+      description: 'Advanced financial planning and forecasting tool with AI-powered predictions and risk analysis.',
+      icon: TrendingUp,
+      price: '$119/month',
+      features: [
+        'Financial forecasting',
+        'Risk analysis',
+        'Scenario planning',
+        'Cash flow optimization',
+        'Investment insights',
+        'Compliance reporting',
+        'Multi-currency support',
+        'API integrations'
+      ],
+      category: 'Finance',
       rating: 4.9,
-      clients: '80+',
-      link: 'https://ziontechgroup.com/ai-supply-chain'
+      users: '4,000+',
+      link: 'https://ziontechgroup.com/financial-forecaster'
+    },
+    {
+      id: 'website-builder-ai',
+      name: 'AI Website Builder',
+      description: 'Intelligent website builder with AI-powered design suggestions, content generation, and SEO optimization.',
+      icon: Globe,
+      price: '$49/month',
+      features: [
+        'AI design suggestions',
+        'Content generation',
+        'SEO optimization',
+        'Mobile responsiveness',
+        'E-commerce integration',
+        'Analytics tracking',
+        'Custom domains',
+        '24/7 support'
+      ],
+      category: 'Web Development',
+      rating: 4.8,
+      users: '20,000+',
+      link: 'https://ziontechgroup.com/ai-website-builder'
+    },
+    {
+      id: 'cybersecurity-monitor',
+      name: 'AI Security Monitor',
+      description: 'Advanced cybersecurity monitoring platform with AI-powered threat detection and automated response.',
+      icon: Shield,
+      price: '$149/month',
+      features: [
+        'Threat detection',
+        'Automated response',
+        'Vulnerability scanning',
+        'Compliance monitoring',
+        'Incident management',
+        'Security analytics',
+        'Integration ecosystem',
+        '24/7 monitoring'
+      ],
+      category: 'Cybersecurity',
+      rating: 4.9,
+      users: '3,000+',
+      link: 'https://ziontechgroup.com/ai-security-monitor'
+    },
+    {
+      id: 'video-editing-ai',
+      name: 'AI Video Editor',
+      description: 'Intelligent video editing platform with AI-powered features, auto-captioning, and content optimization.',
+      icon: Video,
+      price: '$79/month',
+      features: [
+        'AI video editing',
+        'Auto-captioning',
+        'Content optimization',
+        'Multi-format support',
+        'Cloud processing',
+        'Collaboration tools',
+        'Template library',
+        'Export options'
+      ],
+      category: 'Media & Design',
+      rating: 4.7,
+      users: '9,000+',
+      link: 'https://ziontechgroup.com/ai-video-editor'
     }
   ];
 
   const categories = [
     'All',
-    'Consulting',
-    'Development',
-    'Automation',
-    'Computer Vision',
-    'NLP',
+    'AI & Content',
+    'Social Media',
+    'Marketing',
+    'Productivity',
+    'Customer Support',
     'Analytics',
-    'Chatbots',
-    'Data Analysis',
-    'Content',
-    'Recommendations',
-    'Security',
-    'Supply Chain'
+    'E-commerce',
+    'Human Resources',
+    'Finance',
+    'Web Development',
+    'Cybersecurity',
+    'Media & Design'
   ];
 
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
   const filteredServices = selectedCategory === 'All' 
-    ? aiServices 
-    : aiServices.filter(service => service.category === selectedCategory);
+    ? microSaasServices 
+    : microSaasServices.filter(service => service.category === selectedCategory);
 
   return (
     <>
       <Helmet>
-        <title>AI Services & Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI services including machine learning, computer vision, NLP, predictive analytics, and custom AI solutions. Transform your business with artificial intelligence." />
-        <meta name="keywords" content="ai services, machine learning, artificial intelligence, computer vision, nlp, predictive analytics, ai consulting, ai development" />
-        <meta property="og:title" content="AI Services & Solutions - Zion Tech Group" />
-        <meta property="og:description" content="Transform your business with our comprehensive AI services and solutions" />
+        <title>Micro SAAS Services - Zion Tech Group</title>
+        <meta name="description" content="Discover our comprehensive suite of micro SAAS services including AI tools, productivity apps, marketing automation, and business solutions. Start your free trial today." />
+        <meta name="keywords" content="micro saas, saas tools, ai software, business automation, productivity tools, marketing software" />
+        <meta property="og:title" content="Micro SAAS Services - Zion Tech Group" />
+        <meta property="og:description" content="Comprehensive suite of micro SAAS services for modern businesses" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-services" />
+        <meta property="og:url" content="https://ziontechgroup.com/micro-saas-services" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -539,14 +539,14 @@ const AIServicesPage: React.FC = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-6xl mx-auto text-center">
               <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 cyber-text neon-pulse">
-                AI Services & Solutions
+                Micro SAAS Services
                 <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Transform Your Business
+                  Power Your Business
                 </span>
               </h1>
               <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                Harness the power of artificial intelligence with our comprehensive suite of AI services. 
-                From machine learning models to intelligent automation, we help businesses achieve unprecedented efficiency and innovation.
+                Discover our comprehensive suite of micro SAAS services designed to streamline your business operations, 
+                boost productivity, and drive growth with cutting-edge AI and automation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a
@@ -601,7 +601,7 @@ const AIServicesPage: React.FC = () => {
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-white">{service.price}</div>
-                      <div className="text-sm text-gray-400">starting price</div>
+                      <div className="text-sm text-gray-400">per month</div>
                     </div>
                   </div>
                   
@@ -622,7 +622,7 @@ const AIServicesPage: React.FC = () => {
                       </div>
                       <span className="text-sm text-gray-300">{service.rating}</span>
                     </div>
-                    <div className="text-sm text-gray-400">{service.clients} clients</div>
+                    <div className="text-sm text-gray-400">{service.users} users</div>
                   </div>
                   
                   <div className="mb-6">
@@ -647,7 +647,7 @@ const AIServicesPage: React.FC = () => {
                       href={service.link}
                       className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
                     >
-                      Learn More
+                      Try Free
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </a>
                     <a
@@ -667,11 +667,11 @@ const AIServicesPage: React.FC = () => {
         <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business with AI?
+              Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-              Join hundreds of businesses that have already transformed their operations with our AI solutions. 
-              Get started with a free consultation and discover how AI can revolutionize your business.
+              Join thousands of businesses that have already transformed their operations with our micro SAAS services. 
+              Start your free trial today and experience the power of AI-driven automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -696,4 +696,4 @@ const AIServicesPage: React.FC = () => {
   );
 };
 
-export default AIServicesPage;
+export default MicroSaaSServicesPage;

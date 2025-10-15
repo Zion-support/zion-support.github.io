@@ -22,8 +22,9 @@ import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import Sidebar from './app/components/Sidebar';
 
 // Service Pages
-// import AIServicesPage from './app/pages/AIServicesPage';
-// import ITServicesPage from './app/pages/ITServicesPage';
+import AIServicesPage from './app/pages/AIServicesPage';
+import ITServicesPage from './app/pages/ITServicesPage';
+import MicroSaaSServicesPage from './app/pages/MicroSaaSServicesPage';
 // import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
 // import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
 // import CaseStudiesPage from './app/pages/CaseStudiesPage';
@@ -94,8 +95,9 @@ function App() {
                     <Route path="/pricing" element={<PricingPage />} />
                   
                   {/* Service Pages */}
-                  {/* <Route path="/ai-services" element={<AIServicesPage />} /> */}
-                  {/* <Route path="/it-services" element={<ITServicesPage />} /> */}
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/micro-saas-services" element={<MicroSaaSServicesPage />} />
                   {/* <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} /> */}
                   {/* <Route path="/digital-transformation" element={<DigitalTransformationPage />} /> */}
                   {/* <Route path="/case-studies" element={<CaseStudiesPage />} /> */}
