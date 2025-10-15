@@ -10,7 +10,6 @@ import {
   Users, 
   Clock, 
   CheckCircle,
-  Star,
   ArrowRight,
   Brain,
   Target,

@@ -1,12 +1,88 @@
-'use client'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
-    }
+interface PerformanceMetrics {
+  CLS: number | null;
+  INP: number | null;
+  FCP: number | null;
+  LCP: number | null;
+  TTFB: number | null;
+  FID?: number | null;
+  memory?: {
+    usedJSHeapSize: number;
+    totalJSHeapSize: number;
+    jsHeapSizeLimit: number;
+  };
+  navigation?: {
+    loadEventEnd: number;
+    domContentLoadedEventEnd: number;
+    domContentLoadedEventStart: number;
+    loadEventStart: number;
+    domComplete: number;
+    domInteractive: number;
+  };
+}
 
-    // Report metrics to analytics
-    const reportMetric = () => {
-      // Analytics reporting would go here
+interface PerformanceMonitorProps {
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  enableReporting?: boolean;
+  reportEndpoint?: string;
+}
+
+const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  onMetricsUpdate,
+  enableReporting = true,
+  reportEndpoint = '/api/performance'
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    CLS: null,
+    INP: null,
+    FCP: null,
+    LCP: null,
+    TTFB: null,
+  });
+
+  const [isMonitoring, setIsMonitoring] = useState(true);
+
+  const reportMetric = useCallback(async (metric: any) => {
+    if (!enableReporting) return;
+
+    try {
+      const payload = {
+        name: metric.name,
+        value: metric.value,
+        id: metric.id,
+        delta: metric.delta,
+        navigationType: metric.navigationType,
+        timestamp: Date.now(),
+        url: window.location.href,
+        userAgent: navigator.userAgent,
+      };
+
+      // Send to analytics
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          value: Math.round(metric.value),
+          event_label: metric.id,
+          non_interaction: true,
+        });
+      }
+
+      // Send to custom endpoint
+      if (reportEndpoint) {
+        await fetch(reportEndpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        });
+      }
+    } catch (error) {
+      console.warn('Failed to report performance metric:', error);
     }
+  }, [enableReporting, reportEndpoint]);
 
     measureWebVitals()
     measureMemory()
