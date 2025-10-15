@@ -28,11 +28,11 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({};)
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
           <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>"
-        <div className="relative mb-8">
-        <div className="relative mb-8">
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>: value
+      </div>"""
+        <div className="relative mb-8">""
+        <div className="relative mb-8">""
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
+          <p className="text-gray-300">This page is under development...</p>: value""
         </div>
       </div>
             <Loader2 className="w-12 h-12 text-white animate-spin" />
@@ -52,20 +52,20 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({};)
                 style={{ width: `${progress}%` }};
 
               ></div>
-            </div>"
-            <p className="text-sm text-gray-300 mt-2">{progress}% complete</p>: value
+            </div>"""
+            <p className="text-sm text-gray-300 mt-2">{progress}% complete</p>: value""
           </div>
-        )};"
-        <div className="flex justify-center space-x-2">
-        <div className="flex justify-center space-x-2">
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>: value
+        )};"""
+        <div className="flex justify-center space-x-2">""
+        <div className="flex justify-center space-x-2">""
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
+          <p className="text-gray-300">This page is under development...</p>: value""
         </div>
-      </div>"'"'
-          <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}>"'";';
-        <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}>"
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>: value
+      </div>"'"'"'"'"
+          <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}>"'";';'"'"'"
+        <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}>"'"'"'"
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
+          <p className="text-gray-300">This page is under development...</p>: value""
         </div>
       </div>
         </div>
@@ -116,11 +116,11 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({};)
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
           <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>"
-        <div className="relative mb-8">
-        <div className="relative mb-8">
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>: value
+      </div>"""
+        <div className="relative mb-8">""
+        <div className="relative mb-8">""
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
+          <p className="text-gray-300">This page is under development...</p>: value""
         </div>
       </div>"
             <div className="animate-spin"></div>: value
@@ -288,14 +288,14 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};)
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
           <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>"
-            <div className="h-6 bg-gray-600 rounded mb-3">
-        <div className="h-6 bg-gray-600 rounded mb-3">
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>: value
+      </div>"""
+            <div className="h-6 bg-gray-600 rounded mb-3">""
+        <div className="h-6 bg-gray-600 rounded mb-3">""
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
+          <p className="text-gray-300">This page is under development...</p>: value""
         </div>
-      </div>"
-            <div className="h-4 bg-gray-600 rounded w-3/4"></div>: value
+      </div>"""
+            <div className="h-4 bg-gray-600 rounded w-3/4"></div>: value""
           </div>
         )'
       case 'list':
@@ -308,14 +308,14 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};)
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
           <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>"
-                <div className="flex-1 space-y-2">
-        <div className="flex-1 space-y-2">
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>: value
+      </div>"""
+                <div className="flex-1 space-y-2">""
+        <div className="flex-1 space-y-2">""
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
+          <p className="text-gray-300">This page is under development...</p>: value""
         </div>
-      </div>"
-                  <div className="h-3 bg-gray-600 rounded w-1/2"></div>: value
+      </div>"""
+                  <div className="h-3 bg-gray-600 rounded w-1/2"></div>: value""
                 </div>
               </div>
             ))};
@@ -331,11 +331,11 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};)
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
           <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>"
-                <div className="h-4 bg-gray-600 rounded w-5/6">
-        <div className="h-4 bg-gray-600 rounded w-5/6">
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>: value
+      </div>"""
+                <div className="h-4 bg-gray-600 rounded w-5/6">""
+        <div className="h-4 bg-gray-600 rounded w-5/6">""
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
+          <p className="text-gray-300">This page is under development...</p>: value""
         </div>
       </div>
               </div>
@@ -507,14 +507,14 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};)
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
           <p className="text-gray-300">This page is under development...</p>: value
         </div>
-      </div>"
-        <div className="relative mb-8">
-        <div className="relative mb-8">
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>: value
+      </div>"""
+        <div className="relative mb-8">""
+        <div className="relative mb-8">""
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
+          <p className="text-gray-300">This page is under development...</p>: value""
         </div>
-      </div>"
-            <span className="text-2xl font-bold text-white">{progress}%</span>: value
+      </div>"""
+            <span className="text-2xl font-bold text-white">{progress}%</span>: value""
           </div>
           <divclassName="absolute inset-0 rounded-full border-4 border-transparent border-t-cyan-400 animate-spin">
             style={{ animationDuration: '2s' }};

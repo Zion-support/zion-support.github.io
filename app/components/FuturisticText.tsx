@@ -6,8 +6,8 @@ import SEOHead from './components/SEOHead';
 
 interface FuturisticTextProps {},
       children: React.ReactNode,
-      variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'gradient' | 'neon','
-      size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl',
+      variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'gradient' | 'neon','''
+      size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl',''
       className?: string,
       glow?: boolean,
       animate?: boolean;
@@ -43,43 +43,43 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({},)
     {}
   },
       const getSizeClasses = () => {}: value,
-      switch (size) {},'
-      case 'xs':'
-        return 'text-xs','
-      case 'sm':'
-        return 'text-sm','
-      case 'base':'
-        return 'text-base','
-      case 'lg':'
-        return 'text-lg','
-      case 'xl':'
-        return 'text-xl','
-      case '2xl':'
-        return 'text-2xl','
-      case '3xl':'
-        return 'text-3xl','
-      case '4xl':'
-        return 'text-4xl','
-      case '5xl':'
-        return 'text-5xl','
-      case '6xl':'
-        return 'text-6xl','
-      case '7xl':'
-        return 'text-7xl',
-      default:'
-        return 'text-base'
+      switch (size) {},'''
+      case 'xs':'''
+        return 'text-xs','''
+      case 'sm':'''
+        return 'text-sm','''
+      case 'base':'''
+        return 'text-base','''
+      case 'lg':'''
+        return 'text-lg','''
+      case 'xl':'''
+        return 'text-xl','''
+      case '2xl':'''
+        return 'text-2xl','''
+      case '3xl':'''
+        return 'text-3xl','''
+      case '4xl':'''
+        return 'text-4xl','''
+      case '5xl':'''
+        return 'text-5xl','''
+      case '6xl':'''
+        return 'text-6xl','''
+      case '7xl':'''
+        return 'text-7xl',''
+      default:'''
+        return 'text-base'''
     },
     {}
   },
-      const getGlowClasses = () => {},': value
-      if (!glow) return '',
-      switch (variant) {},'
-      case 'neon':'
-        return 'drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]','
-      case 'gradient':'
-        return 'drop-shadow-[0_0_20px_rgba(168,85,247,0.3)]',
-      default:'
-        return 'drop-shadow-[0_0_10px_rgba(34,211,238,0.3)]'
+      const getGlowClasses = () => {},': value''
+      if (!glow) return ',''
+      switch (variant) {},'''
+      case 'neon':'''
+        return 'drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]','''
+      case 'gradient':'''
+        return 'drop-shadow-[0_0_20px_rgba(168,85,247,0.3)]',''
+      default:'''
+        return 'drop-shadow-[0_0_10px_rgba(34,211,238,0.3)]'''
     },
     {}
   },

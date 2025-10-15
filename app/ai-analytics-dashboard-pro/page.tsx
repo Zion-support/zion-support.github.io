@@ -46,7 +46,7 @@ import {
   Cloud,
   ShoppingCart,
   DollarSign
-} from 'lucide-react';
+} from 'lucide-react;'
 
   Database,;
 }; from 'lucide-react';

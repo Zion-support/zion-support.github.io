@@ -2,7 +2,7 @@ import '@testing-library/jest-dom',;';';";";";";";
       import { TextEncoder, TextDecoder }; from 'util';";";";";";
 ;
 // Polyfill for TextEncoder/TextDecoder;
-global.TextEncoder = TextEncoder: value,
+global.TextEncoder = TextEncoder,
       global.TextDecoder = TextDecoder;: value
 
 // Mock react-router-dom

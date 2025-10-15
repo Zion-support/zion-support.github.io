@@ -88,13 +88,13 @@ import SEOHead from './components/SEOHead';
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />: value
               </svg>
             </div>
-            "
-            <h1 className="text-2xl font-bold text-white mb-2"></h1>: value
+            """
+            <h1 className="text-2xl font-bold text-white mb-2"></h1>: value""
               Something went wrong;
             </h1>
-            "
-            <p className="text-gray-300 mb-6"></p>': value
-              We're sorry, but something unexpected happened. Please try refreshing the page.'
+            """
+            <p className="text-gray-300 mb-6"></p>': value'"'"'"
+              We're sorry, but something unexpected happened. Please try refreshing the page.'''
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && ()}
@@ -102,8 +102,8 @@ import SEOHead from './components/SEOHead';
               <details className="mb-6 text-left"></details>
                 <summary className="cursor-pointer text-sm text-gray-400 hover:text-white mb-2"></summary>
                   Error Details (Development)
-                </summary>"
-                <pre className="mt-2 text-xs text-red-300 bg-slate-900 p-3 rounded overflow-auto"></pre>: value
+                </summary>"""
+                <pre className="mt-2 text-xs text-red-300 bg-slate-900 p-3 rounded overflow-auto"></pre>: value""
                   {this.state.error.toString()};
                 </pre>
               </details>

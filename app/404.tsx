@@ -6,7 +6,7 @@ export default function NotFoundPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>404 - Page Not Found | Zion Tech Group</title>
-        <meta name="description" content="The page you're looking for doesn't exist. Return to Zion Tech Group's homepage." />
+        <meta name="description" content="The page you're looking for doesn't exist. Return to Zion Tech Group's homepage." />'"'"'"
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
