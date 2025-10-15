@@ -3,17 +3,27 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-800 text-white">
+    <footer className="bg-gradient-to-t from-gray-900 to-gray-800 text-white border-t border-white/10">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           <div className="lg:col-span-2">
-            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-4">
+            <h3 className="text-2xl font-bold mb-4 gradient-text">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
-            <div className="text-sm text-gray-400 mb-4">
-              <p>Email: contact@ziontechgroup.com</p>
-              <p>Phone: +1 (555) 123-4567</p>
+            <div className="text-sm text-gray-400 mb-6 space-y-2">
+              <p className="flex items-center">
+                <span className="text-cyan-400 mr-2">📧</span>
+                kleber@ziontechgroup.com
+              </p>
+              <p className="flex items-center">
+                <span className="text-cyan-400 mr-2">📞</span>
+                +1 302 464 0950
+              </p>
+              <p className="flex items-center">
+                <span className="text-cyan-400 mr-2">📍</span>
+                364 E Main St STE 1008, Middletown DE 19709
+              </p>
             </div>
             <div className="flex space-x-4">
               <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
