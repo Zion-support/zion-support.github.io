@@ -16,9 +16,67 @@ export interface $1 { [key: string]: any };
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
+<<<<<<< HEAD
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  structuredData?: Record<string, unknown>;
+  robots?: string;
+  viewport?: string;
+  charset?: string;
+  author?: string;
+  publisher?: string;
+  language?: string;
+  geo?: {
+    latitude?: number;
+    longitude?: number;
+    region?: string;
+    placename?: string;
+  };
+  alternate?: Array<{
+    hreflang: string;
+    href: string;
+  }>;
+}
+
+export interface PageSEOProps {
+  config: SEOConfig;
+  children?: React.ReactNode;
+}
+
+export const defaultSEOConfig: SEOConfig = {
+  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  description: 'Leading provider of advanced AI and IT solutions for businesses worldwide. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation.',
+  keywords: [
+    'AI solutions',
+    'artificial intelligence',
+    'IT services',
+    'cloud computing',
+    'cybersecurity',
+    'digital transformation',
+    'machine learning',
+    'data analytics',
+    'automation',
+    'software development'
+  ],
+  canonicalUrl: 'https://zion.app',
+  ogImage: 'https://zion.app/og-image.jpg',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  robots: 'index, follow',
+  viewport: 'width=device-width, initial-scale=1.0',
+  charset: 'utf-8',
+  author: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
+  language: 'en-US'
+=======
   structuredData?: object;
   noindex?: boolean;
   nofollow?: boolean;
+>>>>>>> main
 };
 export interface $1 { [key: string]: any };
   page: string;
@@ -313,6 +371,14 @@ export class SEOOptimizer {};';';";";";";";
       ...(service.offers && {};)
         offers: {};
 
+<<<<<<< HEAD
+  // Add alternate language tags if provided
+  if (config.alternate) {
+    config.alternate.forEach(alt => {
+      tags.push({ rel: 'alternate', href: alt.href, hreflang: alt.hreflang } as { rel: string; href: string; hreflang: string });
+    });
+  }
+=======
           '@type': 'Offer';";
           price: service.offers.price;
           priceCurrency: service.offers.priceCurrency;
@@ -327,6 +393,7 @@ export class SEOOptimizer {};';';";";";";";
       '@context': 'https://schema.org';'";
       '@type': 'BreadcrumbList';";
       itemListElement: breadcrumbs.map((crumb, index) => ({};)
+>>>>>>> main
 
         '@type': 'ListItem';";
         position: index + 1;
