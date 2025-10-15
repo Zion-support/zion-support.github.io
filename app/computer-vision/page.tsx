@@ -1,16 +1,16 @@
 
 import SEOHead from '../components/SEOHead'
 
-const ComputerVisionPage: React.FC = () => {}
+const ComputerVisionPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="computer-vision - Zion Tech Group"""
-        description="Zion Tech Group computer-vision service page""
-      />""
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>""
-        <div className="text-center"></div>""
-          <h1 className="text-4xl font-bold mb-4">computer-vision</h1>""
+        title="computer-vision - Zion Tech Group"
+        description="Zion Tech Group computer-vision service page"
+      />"
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-4xl font-bold mb-4">computer-vision</h1>"
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
@@ -18,4 +18,4 @@ const ComputerVisionPage: React.FC = () => {}
   );
 }
 "
-export default ComputerVisionPage;""
+export default ComputerVisionPage;"

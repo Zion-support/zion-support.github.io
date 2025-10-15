@@ -1,16 +1,16 @@
 
 import SEOHead from '../components/SEOHead'
 
-const QuantumAiPage: React.FC = () => {}
+const QuantumAiPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="quantum-ai - Zion Tech Group"""
-        description="Zion Tech Group quantum-ai service page""
-      />""
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>""
-        <div className="text-center"></div>""
-          <h1 className="text-4xl font-bold mb-4">quantum-ai</h1>""
+        title="quantum-ai - Zion Tech Group"
+        description="Zion Tech Group quantum-ai service page"
+      />"
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-4xl font-bold mb-4">quantum-ai</h1>"
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
@@ -18,4 +18,4 @@ const QuantumAiPage: React.FC = () => {}
   );
 }
 "
-export default QuantumAiPage;""
+export default QuantumAiPage;"

@@ -1,16 +1,16 @@
 
 import SEOHead from '../components/SEOHead'
 
-const ChatPage: React.FC = () => {}
+const ChatPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="chat - Zion Tech Group"""
-        description="Zion Tech Group chat service page""
-      />""
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>""
-        <div className="text-center"></div>""
-          <h1 className="text-4xl font-bold mb-4">chat</h1>""
+        title="chat - Zion Tech Group"
+        description="Zion Tech Group chat service page"
+      />"
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-4xl font-bold mb-4">chat</h1>"
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
@@ -18,4 +18,4 @@ const ChatPage: React.FC = () => {}
   );
 }
 "
-export default ChatPage;""
+export default ChatPage;"

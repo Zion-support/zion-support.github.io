@@ -1,16 +1,16 @@
 
 import SEOHead from '../components/SEOHead'
 
-const AiCybersecurityMonitorPage: React.FC = () => {}
+const AiCybersecurityMonitorPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="ai-cybersecurity-monitor - Zion Tech Group"""
-        description="Zion Tech Group ai-cybersecurity-monitor service page""
-      />""
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>""
-        <div className="text-center"></div>""
-          <h1 className="text-4xl font-bold mb-4">ai-cybersecurity-monitor</h1>""
+        title="ai-cybersecurity-monitor - Zion Tech Group"
+        description="Zion Tech Group ai-cybersecurity-monitor service page"
+      />"
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-4xl font-bold mb-4">ai-cybersecurity-monitor</h1>"
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
@@ -18,4 +18,4 @@ const AiCybersecurityMonitorPage: React.FC = () => {}
   );
 }
 "
-export default AiCybersecurityMonitorPage;""
+export default AiCybersecurityMonitorPage;"

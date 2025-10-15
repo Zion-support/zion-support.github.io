@@ -1,16 +1,16 @@
 
 import SEOHead from '../components/SEOHead'
 
-const MobileAppDevelopmentPage: React.FC = () => {}
+const MobileAppDevelopmentPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="mobile-app-development - Zion Tech Group"""
-        description="Zion Tech Group mobile-app-development service page""
-      />""
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>""
-        <div className="text-center"></div>""
-          <h1 className="text-4xl font-bold mb-4">mobile-app-development</h1>""
+        title="mobile-app-development - Zion Tech Group"
+        description="Zion Tech Group mobile-app-development service page"
+      />"
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-4xl font-bold mb-4">mobile-app-development</h1>"
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
@@ -18,4 +18,4 @@ const MobileAppDevelopmentPage: React.FC = () => {}
   );
 }
 "
-export default MobileAppDevelopmentPage;""
+export default MobileAppDevelopmentPage;"

@@ -1,16 +1,16 @@
 
 import SEOHead from '../components/SEOHead'
 
-const DigitalTransformationPage: React.FC = () => {}
+const DigitalTransformationPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="digital-transformation - Zion Tech Group"""
-        description="Zion Tech Group digital-transformation service page""
-      />""
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>""
-        <div className="text-center"></div>""
-          <h1 className="text-4xl font-bold mb-4">digital-transformation</h1>""
+        title="digital-transformation - Zion Tech Group"
+        description="Zion Tech Group digital-transformation service page"
+      />"
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-4xl font-bold mb-4">digital-transformation</h1>"
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
@@ -18,4 +18,4 @@ const DigitalTransformationPage: React.FC = () => {}
   );
 }
 "
-export default DigitalTransformationPage;""
+export default DigitalTransformationPage;"

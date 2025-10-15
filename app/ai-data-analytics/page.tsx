@@ -1,16 +1,16 @@
 
 import SEOHead from '../components/SEOHead'
 
-const AiDataAnalyticsPage: React.FC = () => {}
+const AiDataAnalyticsPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="ai-data-analytics - Zion Tech Group"""
-        description="Zion Tech Group ai-data-analytics service page""
-      />""
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>""
-        <div className="text-center"></div>""
-          <h1 className="text-4xl font-bold mb-4">ai-data-analytics</h1>""
+        title="ai-data-analytics - Zion Tech Group"
+        description="Zion Tech Group ai-data-analytics service page"
+      />"
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-4xl font-bold mb-4">ai-data-analytics</h1>"
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
@@ -18,4 +18,4 @@ const AiDataAnalyticsPage: React.FC = () => {}
   );
 }
 "
-export default AiDataAnalyticsPage;""
+export default AiDataAnalyticsPage;"

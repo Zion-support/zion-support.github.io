@@ -1,16 +1,16 @@
 
 import SEOHead from '../components/SEOHead'
 
-const AiIntegrationServicesPage: React.FC = () => {}
+const AiIntegrationServicesPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="ai-integration-services - Zion Tech Group"""
-        description="Zion Tech Group ai-integration-services service page""
-      />""
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>""
-        <div className="text-center"></div>""
-          <h1 className="text-4xl font-bold mb-4">ai-integration-services</h1>""
+        title="ai-integration-services - Zion Tech Group"
+        description="Zion Tech Group ai-integration-services service page"
+      />"
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-4xl font-bold mb-4">ai-integration-services</h1>"
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
@@ -18,4 +18,4 @@ const AiIntegrationServicesPage: React.FC = () => {}
   );
 }
 "
-export default AiIntegrationServicesPage;""
+export default AiIntegrationServicesPage;"

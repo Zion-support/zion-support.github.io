@@ -1,16 +1,16 @@
 
 import SEOHead from '../components/SEOHead'
 
-const InventoryManagementPage: React.FC = () => {}
+const InventoryManagementPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="inventory-management - Zion Tech Group"""
-        description="Zion Tech Group inventory-management service page""
-      />""
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>""
-        <div className="text-center"></div>""
-          <h1 className="text-4xl font-bold mb-4">inventory-management</h1>""
+        title="inventory-management - Zion Tech Group"
+        description="Zion Tech Group inventory-management service page"
+      />"
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-4xl font-bold mb-4">inventory-management</h1>"
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
@@ -18,4 +18,4 @@ const InventoryManagementPage: React.FC = () => {}
   );
 }
 "
-export default InventoryManagementPage;""
+export default InventoryManagementPage;"

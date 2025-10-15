@@ -1,16 +1,16 @@
 
 import SEOHead from '../components/SEOHead'
 
-const AiVideoGeneratorPage: React.FC = () => {}
+const AiVideoGeneratorPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="ai-video-generator - Zion Tech Group"""
-        description="Zion Tech Group ai-video-generator service page""
-      />""
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>""
-        <div className="text-center"></div>""
-          <h1 className="text-4xl font-bold mb-4">ai-video-generator</h1>""
+        title="ai-video-generator - Zion Tech Group"
+        description="Zion Tech Group ai-video-generator service page"
+      />"
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-4xl font-bold mb-4">ai-video-generator</h1>"
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
@@ -18,4 +18,4 @@ const AiVideoGeneratorPage: React.FC = () => {}
   );
 }
 "
-export default AiVideoGeneratorPage;""
+export default AiVideoGeneratorPage;"

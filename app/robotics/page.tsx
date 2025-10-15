@@ -1,16 +1,16 @@
 
 import SEOHead from '../components/SEOHead'
 
-const RoboticsPage: React.FC = () => {}
+const RoboticsPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="robotics - Zion Tech Group"""
-        description="Zion Tech Group robotics service page""
-      />""
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>""
-        <div className="text-center"></div>""
-          <h1 className="text-4xl font-bold mb-4">robotics</h1>""
+        title="robotics - Zion Tech Group"
+        description="Zion Tech Group robotics service page"
+      />"
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-4xl font-bold mb-4">robotics</h1>"
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
@@ -18,4 +18,4 @@ const RoboticsPage: React.FC = () => {}
   );
 }
 "
-export default RoboticsPage;""
+export default RoboticsPage;"

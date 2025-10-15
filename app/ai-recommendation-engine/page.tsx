@@ -1,16 +1,16 @@
 
 import SEOHead from '../components/SEOHead'
 
-const AiRecommendationEnginePage: React.FC = () => {}
+const AiRecommendationEnginePage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="ai-recommendation-engine - Zion Tech Group"""
-        description="Zion Tech Group ai-recommendation-engine service page""
-      />""
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>""
-        <div className="text-center"></div>""
-          <h1 className="text-4xl font-bold mb-4">ai-recommendation-engine</h1>""
+        title="ai-recommendation-engine - Zion Tech Group"
+        description="Zion Tech Group ai-recommendation-engine service page"
+      />"
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-4xl font-bold mb-4">ai-recommendation-engine</h1>"
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
@@ -18,4 +18,4 @@ const AiRecommendationEnginePage: React.FC = () => {}
   );
 }
 "
-export default AiRecommendationEnginePage;""
+export default AiRecommendationEnginePage;"

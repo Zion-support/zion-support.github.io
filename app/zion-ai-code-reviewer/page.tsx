@@ -1,16 +1,16 @@
 
 import SEOHead from '../components/SEOHead'
 
-const ZionAiCodeReviewerPage: React.FC = () => {}
+const ZionAiCodeReviewerPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="zion-ai-code-reviewer - Zion Tech Group"""
-        description="Zion Tech Group zion-ai-code-reviewer service page""
-      />""
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>""
-        <div className="text-center"></div>""
-          <h1 className="text-4xl font-bold mb-4">zion-ai-code-reviewer</h1>""
+        title="zion-ai-code-reviewer - Zion Tech Group"
+        description="Zion Tech Group zion-ai-code-reviewer service page"
+      />"
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-4xl font-bold mb-4">zion-ai-code-reviewer</h1>"
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
@@ -18,4 +18,4 @@ const ZionAiCodeReviewerPage: React.FC = () => {}
   );
 }
 "
-export default ZionAiCodeReviewerPage;""
+export default ZionAiCodeReviewerPage;"
