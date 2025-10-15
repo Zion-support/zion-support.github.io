@@ -3,237 +3,175 @@ import { Helmet } from 'react-helmet-async';
 import { servicesData } from '../data/servicesData';
 
 const ITServicesPage: React.FC = () => {
+  const itServices = servicesData.itSolutions;
+
   return (
     <>
       <Helmet>
-        <title>IT Services - Zion Tech Group | Comprehensive Technology Solutions</title>
-        <meta name="description" content="Complete IT services including web development, mobile apps, cloud infrastructure, and data analytics to power your business growth." />
+        <title>IT Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, web development, mobile development, and data analytics solutions." />
+        <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, web development, mobile development, data analytics, database management" />
+        <meta property="og:title" content="IT Services - Zion Tech Group" />
+        <meta property="og:description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, web development, mobile development, and data analytics solutions." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/it-services" />
+        <link rel="canonical" href="https://ziontechgroup.com/it-services" />
       </Helmet>
       
-      <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              IT Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive technology solutions to power your business growth. From web development to cloud infrastructure, we've got you covered.
-            </p>
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-br from-purple-50 to-indigo-100 py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                IT Services
+              </h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                Comprehensive IT solutions to power your business growth. From cloud infrastructure to cybersecurity, we provide the technology foundation your business needs.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contact" className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors">
+                  Get IT Consultation
+                </a>
+                <a href="#services" className="border border-purple-600 text-purple-600 px-8 py-3 rounded-lg hover:bg-purple-50 transition-colors">
+                  Explore Services
+                </a>
+              </div>
+            </div>
           </div>
+        </div>
 
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {servicesData.itSolutions.map((service) => (
-              <div key={service.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="p-8">
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.slice(0, 4).map((feature, index) => (
-                        <li key={index} className="flex items-center text-gray-600">
-                          <span className="text-green-500 mr-2">✓</span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Pricing:</h4>
-                    <div className="flex justify-between items-center">
-                      <span className="text-2xl font-bold text-blue-600">
-                        ${service.pricing.basic.toLocaleString()}
-                      </span>
-                      <span className="text-gray-600">
-                        {service.pricing.basic < 1000 ? '/month' : 'starting from'}
-                      </span>
+        {/* Services Grid */}
+        <div id="services" className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our IT Services</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                End-to-end IT solutions designed to modernize your infrastructure and accelerate your digital transformation.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {itServices.map((service) => (
+                <div key={service.id} className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow">
+                  <div className="p-8">
+                    <div className="text-4xl mb-4">{service.icon}</div>
+                    <h3 className="text-2xl font-semibold text-gray-900 mb-4">{service.title}</h3>
+                    <p className="text-gray-600 mb-6">{service.description}</p>
+                    
+                    <div className="mb-6">
+                      <h4 className="font-medium text-gray-900 mb-3">Key Features:</h4>
+                      <div className="grid grid-cols-2 gap-2">
+                        {service.features.slice(0, 6).map((feature, index) => (
+                          <div key={index} className="text-sm text-gray-600 flex items-center">
+                            <span className="text-purple-600 mr-2">•</span>
+                            {feature}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <h4 className="font-medium text-gray-900 mb-2">Benefits:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {service.benefits.slice(0, 4).map((benefit, index) => (
+                          <span key={index} className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">
+                            {benefit}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <h4 className="font-medium text-gray-900 mb-2">Pricing:</h4>
+                      <div className="text-2xl font-bold text-purple-600">{service.marketPrice}</div>
+                    </div>
+                    
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <a 
+                        href={`/contact?service=${service.id}`}
+                        className="flex-1 bg-purple-600 text-white text-center px-4 py-3 rounded-lg hover:bg-purple-700 transition-colors font-medium"
+                      >
+                        Get Started
+                      </a>
+                      <a 
+                        href={`tel:+13024640950`}
+                        className="flex-1 border border-purple-600 text-purple-600 text-center px-4 py-3 rounded-lg hover:bg-purple-50 transition-colors font-medium"
+                      >
+                        Call +1 302 464 0950
+                      </a>
                     </div>
                   </div>
-
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <button className="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-                      Get Quote
-                    </button>
-                    {service.link && (
-                      <a 
-                        href={service.link}
-                        className="flex-1 border border-blue-600 text-blue-600 py-3 px-6 rounded-lg hover:bg-blue-50 transition-colors font-medium text-center"
-                      >
-                        Learn More
-                      </a>
-                    )}
-                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Technology Stack */}
-          <div className="bg-white rounded-lg shadow-lg p-12 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Technology Stack</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Frontend</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• React & Next.js</li>
-                  <li>• Vue.js & Angular</li>
-                  <li>• TypeScript</li>
-                  <li>• Tailwind CSS</li>
-                  <li>• Progressive Web Apps</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Backend</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Node.js & Python</li>
-                  <li>• Django & FastAPI</li>
-                  <li>• Express.js</li>
-                  <li>• RESTful APIs</li>
-                  <li>• GraphQL</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Cloud & DevOps</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• AWS & Azure</li>
-                  <li>• Docker & Kubernetes</li>
-                  <li>• CI/CD Pipelines</li>
-                  <li>• Infrastructure as Code</li>
-                  <li>• Monitoring & Logging</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Databases</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• PostgreSQL & MySQL</li>
-                  <li>• MongoDB & Redis</li>
-                  <li>• Elasticsearch</li>
-                  <li>• Data Warehousing</li>
-                  <li>• Real-time Analytics</li>
-                </ul>
-              </div>
+              ))}
             </div>
           </div>
+        </div>
 
-          {/* Development Process */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Development Process</h2>
+        {/* IT Capabilities */}
+        <div className="bg-gray-50 py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">IT Capabilities</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Our comprehensive IT expertise covers all aspects of modern technology infrastructure.
+              </p>
+            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-blue-600">1</span>
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">☁️</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Discovery</h3>
-                <p className="text-gray-600">We analyze your requirements and create a detailed project roadmap.</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Cloud Infrastructure</h3>
+                <p className="text-gray-600 text-sm">Scalable cloud solutions and migration services</p>
               </div>
               
               <div className="text-center">
-                <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-blue-600">2</span>
+                <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🔒</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Design</h3>
-                <p className="text-gray-600">Our team creates wireframes, mockups, and user experience designs.</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Cybersecurity</h3>
+                <p className="text-gray-600 text-sm">Advanced security solutions and threat protection</p>
               </div>
               
               <div className="text-center">
-                <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-blue-600">3</span>
+                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🌐</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Development</h3>
-                <p className="text-gray-600">We build your solution using agile methodology with regular updates.</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Web Development</h3>
+                <p className="text-gray-600 text-sm">Modern web applications and responsive design</p>
               </div>
               
               <div className="text-center">
-                <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-blue-600">4</span>
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">📊</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Deployment</h3>
-                <p className="text-gray-600">We deploy your solution and provide ongoing support and maintenance.</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Data Analytics</h3>
+                <p className="text-gray-600 text-sm">Business intelligence and data visualization</p>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Industry Expertise */}
-          <div className="bg-white rounded-lg shadow-lg p-12 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industry Expertise</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🏥</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Healthcare</h3>
-                <p className="text-gray-600">HIPAA-compliant solutions for healthcare providers and medical institutions.</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🏦</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Finance</h3>
-                <p className="text-gray-600">Secure financial applications with compliance and regulatory requirements.</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🛒</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">E-commerce</h3>
-                <p className="text-gray-600">Scalable e-commerce platforms with payment processing and inventory management.</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🏭</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Manufacturing</h3>
-                <p className="text-gray-600">IoT solutions and automation systems for manufacturing operations.</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🎓</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Education</h3>
-                <p className="text-gray-600">Learning management systems and educational technology solutions.</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🏢</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise</h3>
-                <p className="text-gray-600">Custom enterprise solutions for large organizations and corporations.</p>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="bg-blue-600 rounded-lg p-12 text-center text-white">
-            <h2 className="text-3xl font-bold mb-4">Ready to Build Your Next Project?</h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Let's discuss your IT needs and create a solution that drives your business forward.
+        {/* Contact CTA */}
+        <div className="bg-purple-600 py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Modernize Your IT?</h2>
+            <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+              Let's discuss how our IT services can transform your technology infrastructure and drive business growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium"
-              >
-                Get Free Consultation
+              <a href="/contact" className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium">
+                Get Free IT Consultation
               </a>
-              <a 
-                href="tel:+13024640950" 
-                className="border border-white text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-              >
+              <a href="tel:+13024640950" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors">
                 Call +1 302 464 0950
               </a>
+            </div>
+            <div className="mt-8 text-purple-100">
+              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
         </div>
