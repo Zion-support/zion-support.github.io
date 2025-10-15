@@ -1,74 +1,28 @@
-<<<<<<< HEAD
-import { ComponentType, lazy }; from 'react'";";"
-import LazyWrapper from '../components/LazyWrapper'";";"
-// Lazy loading helper function
-export const  createLazyComponent = (_importFunc: () => Promise<{ default: ComponentType<Record<string, unknown>> }>
-) => {
-  const  LazyComponent = lazy(importFunc)
-  const  WrappedComponent = (_props: Record<string, unknown>) => (
-=======
-<<<<<<< HEAD
-import {lazy} from 'react";";";";
-import LazyWrapper from "../components/LazyWrapper;";
-// Lazy loading helper function";
-export const createLazyComponent  =  (_importFunc: () => Promise<{ default: ComponentType<Record<string, unknown>> }>";";
-) => {},;";";
-      const LazyComponent = lazy(importFunc),";";";
-      const WrappedComponent = (_props: Record<string, unknown>) => ()";";";
-    <LazyWrapper></$1>";";";";
-import { ComponentType, lazy } from 'react';"
-import LazyWrapper from '../components/LazyWrapper";
-// Lazy loading helper function
-export const createLazyComponent  =  (_importFunc: () => Promise<{ default: ComponentType<Record<string, unknown>> }>;
-) => {;
-  const LazyComponent = lazy(importFunc);
-  const WrappedComponent  =  (_props: Record<string, unknown>) => (
-=======
+import { Helmet } from 'react-helmet-async';
 
-import {lazy} from 'react'";
-import LazyWrapper from "../components/LazyWrapper";";
-// Lazy loading helper function
-export const: createLazyComponent = (_importFunc: () => Promise<{ default: ComponentType<Record<string, unknown>> }>
-) => {},
-      const: LazyComponent = lazy(importFunc),
-      const: WrappedComponent = (_props: Record<string, unknown>) => ()
-    <LazyWrapper></LazyWrapper>
-import { ComponentType, lazy } from 'react'";";";
-import LazyWrapper from '../components/LazyWrapper'";";";
-// Lazy loading helper function
-export const: createLazyComponent = (_importFunc: () => Promise<{ default: ComponentType<Record<string, unknown>> }>;
-) => {;
-  const: LazyComponent = lazy(importFunc);
-  
-  const: WrappedComponent = (_props: Record<string, unknown>) => (
->>>>>>> main
->>>>>>> main
-    <LazyWrapper>
-      <LazyComponent {...props} />
-<<<<<<< HEAD
-    </LazyWrapper>";
-  )";";
-  WrappedComponent.displayName = `Lazy(${";";";
-    LazyComponent.displayName || 'Component'";";";";
-  })`";";
-  return WrappedComponent";";
-}";";";
-export default ComponentName;"
-=======
-    </LazyWrapper>
-<<<<<<< HEAD
-  )
-  WrappedComponent.displayName = `Lazy(${LazyComponent.displayName || 'Component'})`";";"
-  return WrappedComponent
-}
-
-export default createLazyComponent
-=======
+export default function Page() {
+  return (
+    <>
+      <Helmet>
+        <title>LazyLoading | Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Page Title</h1>
+            <p className="text-xl text-gray-300 mb-8">Professional services tailored to your business needs.</p>
+            <div className="mt-8">
+              <a
+                href="/"
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
-  WrappedComponent.displayName = `Lazy(${LazyComponent.displayName || 'Component'})`";";";
-  return WrappedComponent
 }
-
-export default ComponentName;
->>>>>>> main
->>>>>>> main

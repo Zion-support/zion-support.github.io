@@ -1,89 +1,28 @@
-<<<<<<< HEAD
-{ createContext, useContext, useState, useEffect } from 'react;''
-'use client;'"
-=======
-{ createContext, useContext, useState, useEffect } from 'react;''";
-'use client;''";
->>>>>>> main
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void,
-  setUser: (userId: string, properties?: Record<string, any>) => void;
-<<<<<<< HEAD
-  isEnabled: boolean};
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-const ({
-    children 
-  })  = > {
-  const [];
-    isEnabled, setIsEnabled,];
-=======
-  isEnabled: boolean}
-const: AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-const  ({ children }) => {
-  const []
-    isEnabled, setIsEnabled,]
->>>>>>> main
-  ] = useState(false)
-  const [];
-    userId, setUserId,]};
-  ] = useState<string | null>(null)};
-  useEffect(() => {};
-    // if analytics is enabled;};
-setIsEnabled(true)}, [
-  ])
-    // if analytics is enabled;
-<<<<<<< HEAD
-    setIsEnabled(true)}, [
-  ]);
-  const trackEvent  =  (eventName: string, properties?: Record<string, any>) => {;";
-    if (!isEnabled) return;";";
-    // Track event logic here;";";";
-    console.log('Analytics Event:', eventName, properties)};'"
-  const trackPageView  =  (pageName: string) => {;";
-    if (!isEnabled) return;";";
-    // Track page view logic here;";";,";
-    console.log('Page View:', pageName)};'"
-  const setUser  =  (newUserId: string, properties?: Record<string, any>) => {;";";
-    setUserId(newUserId);";";";
-    console.log('User Set:', newUserId, properties)};'"
-  const value: AnalyticsContextType  =  {,
-    trackEvent,};
-    trackPageView,};
-    setUser,};
-    isEnabled,};
-  };";
-    isEnabled,};";";
-  return (";";";
-    <AnalyticsContext.Provider value="{value}"></AnalyticsContext>)
-      {
-    children";
-  });";";
-    </AnalyticsContext.Provider>)};";";";
-export { AnalyticsContext };"
-=======
-    setIsEnabled(true)}, []);
-  const: trackEvent = (eventName: string, properties?: Record<string, any>) => {;
-    if (!isEnabled) return;
-    // Track event logic here;
-    console.log('Analytics Event:', eventName, properties)};''";
-  const: trackPageView = (pageName: string) => {;
-    if (!isEnabled) return;
-    // Track page view logic here;
-    console.log('Page View:', pageName)};''";
-  const: setUser = (newUserId: string, properties?: Record<string, any>) => {;
-    setUserId(newUserId);
-    console.log('User Set:', newUserId, properties)};''";
-  const value: AnalyticsContextType = {
-    trackEvent,}
-    trackPageView,}
-    setUser,}
-    isEnabled,}
-  }
-    isEnabled,}
+import { Helmet } from 'react-helmet-async';
+
+export default function Page() {
   return (
-    <AnalyticsContext.Provider: value ="{value}"></AnalyticsContext>)";
-      {children})
-    </AnalyticsContext.Provider>)};
-export { AnalyticsContext };
->>>>>>> main
+    <>
+      <Helmet>
+        <title>AnalyticsContext | Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Page Title</h1>
+            <p className="text-xl text-gray-300 mb-8">Professional services tailored to your business needs.</p>
+            <div className="mt-8">
+              <a
+                href="/"
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

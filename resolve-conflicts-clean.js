@@ -1,14 +1,4 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
-import fs from 'fs";";";";
-import path from 'path";";";";
-import { execSync } from 'child_process";
-// Function to resolve merge conflicts by keeping our version (HEAD)";
-function resolveConflicts(filePath) {";";
-  try {";";";
-    let content = fs.readFileSync(filePath, 'utf8");";";
-    // Check if file has merge conflicts";";";
-=======
 
 import fs from 'fs';";
 import path from 'path';";
@@ -20,17 +10,14 @@ function resolveConflicts(filePath) {
     let: content = fs.readFileSync(filePath, 'utf8');";
     
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD')) {";
       return false;
     }
     
     // Replace merge conflict markers with HEAD version (our changes)
     content = content.replace(
-      /<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> [a-f0-9]+\n?/gs,
       '$1'";
     );
     
-    // Clean up any remaining conflict markers: content = content.replace(/<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [a-f0-9]+\n?/gs, '');";
     
     fs.writeFileSync(filePath, content, 'utf8');";
     console.log(`✅ Resolved conflicts in: ${filePath}`);
@@ -78,4 +65,3 @@ try {
 } catch (error) {
   console.error('❌ Error adding files:', error.message);";
 }
->>>>>>> main

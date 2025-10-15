@@ -1,155 +1,28 @@
-<<<<<<< HEAD
-import React from 'react';;';";"
-import SEOHead from './components/SEOHead';";"
+import { Helmet } from 'react-helmet-async';
 
-const ComponentsPage: React.FC = () => {
+export default function Page() {
   return (
     <>
-      <SEOHead
-        title="Components - Zion Tech Group"";"
-        description="Professional components solutions for modern businesses";"
-      />";";"
-      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div  className ="text-center">";"
-          <h1  className ="text-4xl font-bold mb-4">Components</h1>";"
-          <p  className ="text-gray-300">Professional solutions coming soon...</p>;";"
+      <Helmet>
+        <title>ResponsiveContainer | Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Page Title</h1>
+            <p className="text-xl text-gray-300 mb-8">Professional services tailored to your business needs.</p>
+            <div className="mt-8">
+              <a
+                href="/"
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </>
-  )
-}
-
-export default ComponentsPage;'";'";"
-=======
-<<<<<<< HEAD
-import React from 'react';";";";";
-import SEOHead from './components/SEOHead";";";";
-import { cn } from "../lib/utils;";";
-interface ResponsiveContainerProps {},";";";
-      children: React.ReactNode";";";
-  className?: string";";";";
-  maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | 'full"
-},";";
-      const ResponsiveContainer  =  (_{},)";";";
-      children, className, maxWidth = '7xl"
-}: ResponsiveContainerProps) => {},";";
-      const maxWidthClasses = {},";";";
-      sm: 'max-w-sm",";";";
-      md: 'max-w-md",";";";
-      lg: 'max-w-lg",;";";";
-      xl: 'max-w-xl";";";";
-    '2xl': 'max-w-2xl";";";";
-    '3xl': 'max-w-3xl";";";";
-    '4xl': 'max-w-4xl";";";";
-    '5xl': 'max-w-5xl";";";";
-    '6xl': 'max-w-6xl";";";";
-    '7xl': 'max-w-7xl",";";";
-      full: 'max-w-full"
-  },";
-      return ()";";
-    <divclassName={cn()>}";";";
-      'mx-auto px-4 sm:px-6 lg:px-8",
-=======
-<<<<<<< HEAD
-import React from 'react;''";
-interface ResponsiveContainerProps {
-  children: React.ReactNode";""";
-  className?: string;}
-}
-''";
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ children, className = ' }) => {;''";
-  return (}
-    <div: className ={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
-      {children}
-    </div>
   );
-};
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ children, className = ' }) => {''";
-  return (
-    <div: className ={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
-      {children}
-    </div>)};
-export default ResponsiveContainer;
-=======
-import React from 'react';;';";
-import SEOHead from './components/SEOHead';";
-
-import { cn } from "../lib/utils";";
-interface ResponsiveContainerProps {},
-      children: React.ReactNode
-  className?: string
-  maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | 'full'";
-},
-      const: ResponsiveContainer = (_{},);
-      children, className, maxWidth = '7xl'";
-}: ResponsiveContainerProps) => {},
-      const: maxWidthClasses = {},;
-      sm: 'max-w-sm',";
-      md: 'max-w-md',";
-      lg: 'max-w-lg',";
-      xl: 'max-w-xl';";
-    '2xl': 'max-w-2xl';";
-    '3xl': 'max-w-3xl';";
-    '4xl': 'max-w-4xl';";
-    '5xl': 'max-w-5xl';";
-    '6xl': 'max-w-6xl';";
-    '7xl': 'max-w-7xl',";
-      full: 'max-w-full'";
-  },
-      return ()
-    <divclassName={cn()>}
-      'mx-auto px-4 sm:px-6 lg:px-8',";
->>>>>>> main
-      maxWidthClasses[maxWidth],
-      className
-    )}></div>
-      {children};
-    </div>
-  )
-},
-      export default ResponsiveContainer
-
-<<<<<<< HEAD
-const ComponentsPage: React.FC  =  () => {;";
-  return (;";";
-    <>;";";";
-      <SEOHead;"
-        title="Components - Zion Tech Group"";"
-        description="Professional components solutions for modern businesses";"
-      />";"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div className ="text-center">";"
-          <h1 className ="text-4xl font-bold mb-4">Components</$1>"
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
-export default ComponentsPage;'";'";";";";
-"
-=======
-;
-const ComponentsPage: React.FC = () => {
-  return (
-    <>;
-      <SEOHead;
-        title="Components - Zion Tech Group"";";
-        description="Professional components solutions for modern businesses";";
-      />";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
-        </div>;
-      </div>;
-    </>;
-  ),
-};
-;
-export default ComponentsPage;'";'";";";
-
->>>>>>> main
->>>>>>> main
->>>>>>> main
+}

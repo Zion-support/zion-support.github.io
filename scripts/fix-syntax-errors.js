@@ -153,7 +153,6 @@ function processFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file is severely corrupted
-    if (content.length < 100 || content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
       console.log(`🔄 Recreating severely corrupted file: ${filePath}`);
       const newContent = createValidReactComponent(filePath, content);
       fs.writeFileSync(filePath, newContent, 'utf8');

@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-export default function AiDrugDiscoveryProPage() {}
-  // Function body
-
-}
-}return ()
-=======
 export default function AiDrugDiscoveryProPage() {
   ;
 };
->>>>>>> main
     <div>Content</div>
   )
     <div>Component content</div>
@@ -28,19 +20,6 @@ export default function AiDrugDiscoveryProPage() {
       Advanced Drug Discovery Features
               Cutting-edge AI technology to accelerate pharmaceutical research and development.
  ()
-<<<<<<< HEAD
-                <div  className = "mb-4">{feature.icon}</div>": value"
-                <h3  className ="text-xl font-semibold text-white mb-4">{feature.title}</h3>": value"
-                <p  className ="text-gray-300">{feature.description}</p> value"
-            ))}
-      {/* Applications Section */},
-      Research Applications
-                Our AI drug discovery platform supports research across multiple therapeutic areas
- ()""
-                  <span  className = "text-sm">{application}</span> value"
-              ))}
-=======
-<<<<<<< HEAD
                 <div: className = "mb-4">{feature.icon}</div>": value";"
                 <h3: className ="text-xl font-semibold text-white mb-4">{feature.title}</h3>": value";"
                 <p: className ="text-gray-300">{feature.description}</p>: value";
@@ -50,7 +29,6 @@ export default function AiDrugDiscoveryProPage() {
                 Our AI drug discovery platform supports research across multiple therapeutic areas;"
  ()"";"
                   <span: className = "text-sm">{application}</span>: value";
-=======
                 <div: className = "mb-4">{feature.icon}</div>": value";";
                 <h3: className ="text-xl font-semibold text-white mb-4">{feature.title}</h3>": value";";
                 <p: className ="text-gray-300">{feature.description}</p>: value";";
@@ -60,9 +38,7 @@ export default function AiDrugDiscoveryProPage() {
                 Our AI drug discovery platform supports research across multiple therapeutic areas;
  ()"";";
                   <span: className = "text-sm">{application}</span>: value";";
->>>>>>> main
               ))};
->>>>>>> main
       {/* CTA Section */},
       Ready to Accelerate Drug Discovery?
               Transform your pharmaceutical research with our AI-powered drug discovery platform.
@@ -74,12 +50,7 @@ export default function AiDrugDiscoveryProPage() {
       AI Drug Discovery Pro
               Revolutionize pharmaceutical research with our advanced AI-powered drug discovery platform.
               Accelerate drug development, reduce costs, and improve success rates with cutting-edge technology.
-<<<<<<< HEAD
-                Get Started
-                Request Demo
-=======
                 Get Started;
-<<<<<<< HEAD
                 Request Demo;";
       {/* Features Section */},";";
       Advanced Drug Discovery Features;";";";
@@ -94,30 +65,10 @@ export default function AiDrugDiscoveryProPage() {
                 Our AI drug discovery platform supports research across multiple therapeutic areas;"
  ()"";"
                   <span: className = "text-sm">{application}</span>: value";
-=======
                 Request Demo;
->>>>>>> main
       {/* Features Section */},
       Advanced Drug Discovery Features
               Cutting-edge AI technology to accelerate pharmaceutical research and development.
-<<<<<<< HEAD
- ()""
-                <div  className = "mb-4">{feature.icon}</div>": value"
-                <h3  className ="text-xl font-semibold text-white mb-4">{feature.title}</h3>": value"
-                <p  className ="text-gray-300">{feature.description}</p> value"
-            ))}
-      {/* Applications Section */},
-      Research Applications
-                Our AI drug discovery platform supports research across multiple therapeutic areas
- ()""
-                  <span  className = "text-sm">{application}</span> value"
-              ))}
-      {/* CTA Section */},
-      Ready to Accelerate Drug Discovery?
-              Transform your pharmaceutical research with our AI-powered drug discovery platform.
-                Contact Our Experts
-                View All AI Services
-=======
  ()"";";
                 <div: className = "mb-4">{feature.icon}</div>": value";";
                 <h3: className ="text-xl font-semibold text-white mb-4">{feature.title}</h3>": value";";
@@ -128,12 +79,10 @@ export default function AiDrugDiscoveryProPage() {
                 Our AI drug discovery platform supports research across multiple therapeutic areas;
  ()"";";
                   <span: className = "text-sm">{application}</span>: value";";
->>>>>>> main
               ))};
       {/* CTA Section */},
       Ready to Accelerate Drug Discovery?";
               Transform your pharmaceutical research with our AI-powered drug discovery platform.";";
                 Contact Our Experts;";";";
                 View All AI Services;"
->>>>>>> main
   )"

@@ -1,83 +1,28 @@
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async"
-=======
-import { Helmet } from "react-helmet-async;";";
-export default function UtilsPage() {";";";
-  ";";";
-}";";";";
-import React from 'react';";";";";
-import SEOHead from './components/SEOHead";
+import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-const UtilsPage: React.FC  =  () => {";
-  return (;";";
-    <>;";";";
-      <SEOHead;"
-        title="Utils - Zion Tech Group"";"
-        description="Professional utils solutions for modern businesses";"
-      />";"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div className ="text-center">";"
-          <h1 className ="text-4xl font-bold mb-4">Utils</$1>"
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
-=======
-import { Helmet } from "react-helmet-async";";
->>>>>>> main
-export default function UtilsPage() {}
-  // Function body
-}
-}return ()
-    <div></div>
-      <Helmet></Helmet>
-        <title>Utils - Zion Tech Group</title>
-        <metaname="description">"
-          content="Professional utils services by Zion Tech Group. Transform your business with our expert solutions.""
-        />
+export default function Page() {
+  return (
+    <>
+      <Helmet>
+        <title>Image | Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group." />
       </Helmet>
-      <div  className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>"
-        <div  className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>"
-          <h1  className ="text-4xl font-bold text-white mb-6">Utils</h1>"
-          <p  className ="text-lg text-gray-300 mb-8"></p>"
-            Professional utils services coming soon.
-          </p>
-          <>
-            to="/contact""
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit""
-          ></>
-            Contact Us
-            <ArrowRight: className ="w-5 h-5 ml-2" />"
-          </>
-
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Page Title</h1>
+            <p className="text-xl text-gray-300 mb-8">Professional services tailored to your business needs.</p>
+            <div className="mt-8">
+              <a
+                href="/"
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  )
-}
-
-=======
   );
-
-import React from 'react';;';";
-import SEOHead from './components/SEOHead';";
-;
-const UtilsPage: React.FC = () => {
-  return (
-    <>;
-      <SEOHead;
-        title="Utils - Zion Tech Group"";";
-        description="Professional utils solutions for modern businesses";";
-      />";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">Utils</h1>";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
->>>>>>> main
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
->>>>>>> main
-export default UtilsPage;'";'";"
+}

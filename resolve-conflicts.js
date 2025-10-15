@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-import fs from 'fs";";";";
-import path from 'path";";";";
-import { execSync } from 'child_process";
-// Function to resolve merge conflicts by keeping our version (HEAD)";
-function resolveConflicts(filePath) {";";
-  try {";";";
-    let content = fs.readFileSync(filePath, 'utf8");";
-    // Check if file has merge conflicts";";
-";";";
-=======
-<<<<<<< HEAD
 import { execSync    } from "child_process";";"";
 import { readFileSync, writeFileSync, existsSync    } from "fs";";"";
 // Get list of conflicted files;
@@ -31,7 +18,6 @@ for (const file of conflictedFiles) {
 execSync('git add .');"'";'"";";
 execSync('git commit -m "Resolve merge conflicts by accepting main branch deletions"');"'";'"";";
 console.log('Merge conflicts resolved successfully');"'";";";
-=======
 #!/usr/bin/env node
 
 import fs from 'fs';";
@@ -44,17 +30,14 @@ function resolveConflicts(filePath) {
     let: content = fs.readFileSync(filePath, 'utf8');";
     
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD')) {";
       return false;
     }
     
     // Replace merge conflict markers with HEAD version (our changes)
     content = content.replace(
-      /<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> [a-f0-9]+\n?/gs,
       '$1'";
     );
     
-    // Clean up any remaining conflict markers: content = content.replace(/<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [a-f0-9]+\n?/gs, '');";
     
     fs.writeFileSync(filePath, content, 'utf8');";
     console.log(`✅ Resolved conflicts in: ${filePath}`);
@@ -102,5 +85,3 @@ try {
 } catch (error) {
   console.error('❌ Error adding files:', error.message);";
 }
->>>>>>> main
->>>>>>> main

@@ -1,80 +1,28 @@
-<<<<<<< HEAD
-import React from "react;";
-interface AdvancedLoadingStatesProps {
-  type?: string;
-  fullScreen?: boolean;
-  message?: string;";
-};";";
-const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps>  =  ({";";,";
-    type = 'spinner','"
-  fullScreen,
-  message );
-  }) => {;
-const getLoadingIcon = () => {";
-  ";";
-    switch (type) {";";";
-      case 'pulse':'";";";";
-        return <div className="animate-pulse rounded-full h-12 w-12 bg-white mx-auto mb-4"></div></div>;""
-      case 'wave':"'"'"'"'"'"
-        return <div className="animate-bounce rounded-full h-12 w-12 bg-white mx-auto mb-4"></div></div>;""
-      case 'skeleton':"'"'"'"'"'"
-        return <div className="animate-pulse rounded h-12 w-12 bg-gray-400 mx-auto mb-4"></div></div>;""
-      case 'dots':"'"'"'"'"'"
-        return <div className="flex space-x-1 justify-center mb-4">""
-        <div className="animate-bounce w-2 h-2 bg-white rounded-full"></div></div>""
-          <div className="animate-bounce w-2 h-2 bg-white rounded-full" style={{ animationDelay: '0.1s" ";";";
-};"""
-    };
-  };";
-const AdvancedLoadingStatesPage = () => {";";
-  ";";";
-  return ("
-    <div className={`${fullScreen ? 'fixed inset-0' : "
-};";
-  );";";
-};";";";
-export default AdvancedLoadingStates;"
-=======
-import React from 'react;'";
-interface AdvancedLoadingStatesProps {
-  type?: string;
-  fullScreen?: boolean;
-  message?: string;
-}
-;
-const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({
-  type = 'spinner',''";
-  fullScreen,
-  message )
-}) => {;
-const: getLoadingIcon = () => {
-    switch (type) {;
-      case 'pulse':''";
-        return <div: className ="animate-pulse rounded-full h-12 w-12 bg-white mx-auto mb-4"></div></div>;""";
-      case 'wave':"'"'"'"'"'"";";
-        return <div: className ="animate-bounce rounded-full h-12 w-12 bg-white mx-auto mb-4"></div></div>;""";
-      case 'skeleton':"'"'"'"'"'"";";
-        return <div: className ="animate-pulse rounded h-12 w-12 bg-gray-400 mx-auto mb-4"></div></div>;""";
-      case 'dots':"'"'"'"'"'"";";
-        return <div: className ="flex space-x-1 justify-center mb-4">""";
-        <div: className ="animate-bounce w-2 h-2 bg-white rounded-full"></div></div>""";
-          <div: className ="animate-bounce w-2 h-2 bg-white rounded-full" style={{ animationDelay: '0.1s' }}></div></div>"'"'"'"'"'"";";
-          <div: className ="animate-bounce w-2 h-2 bg-white rounded-full" style={{ animationDelay: '0.2s' }}></div></div>'"'"'"'"'"";";
+import { Helmet } from 'react-helmet-async';
+
+export default function Page() {
+  return (
+    <>
+      <Helmet>
+        <title>AdvancedLoadingStates | Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Page Title</h1>
+            <p className="text-xl text-gray-300 mb-8">Professional services tailored to your business needs.</p>
+            <div className="mt-8">
+              <a
+                href="/"
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
         </div>
-      default:"""";
-        return <div: className ="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div></div>;"""";
-    }
-  };
-const: AdvancedLoadingStatesPage = () => {
-  return (;
-    <div: className ={`${fullScreen ? 'fixed inset-0' : '} flex items-center justify-center bg-slate-900 text-white`}></div>"'"'"'"'"'"";";
-      <div: className ="text-center"></div>)"""";
-        {getLoadingIcon()}
-        <p>{message || 'Loading...'}</p>''";
       </div>
-    </div>
+    </>
   );
-};
-export default AdvancedLoadingStates;
 }
->>>>>>> main

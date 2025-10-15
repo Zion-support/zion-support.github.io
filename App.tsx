@@ -1,44 +1,8 @@
-<<<<<<< HEAD
-import React, { Suspense, lazy, useEffect } from 'react'
-import { HelmetProvider } from 'react-helmet-async'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import './app/styles/futuristic.css'
-// Components
-import Navigation from './app/components/Navigation'
-import Sidebar from './app/components/Sidebar'
-import Footer from './app/components/Footer'
-import ErrorBoundary from './app/components/ErrorBoundary'
-import GlobalErrorBoundary from './app/components/GlobalErrorBoundary'
-import PerformanceMonitor from './app/components/PerformanceMonitor'
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
-import LoadingSpinner from './app/components/LoadingSpinner'
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('./app/page'))
-const AboutPage = lazy(() => import('./app/about/page'))
-const ContactPage = lazy(() => import('./app/contact/page'))
-const ServicesPage = lazy(() => import('./app/services/page'))
-const PricingPage = lazy(() => import('./app/pricing/page'))
-const CaseStudiesPage = lazy(() => import('./app/case-studies/page'))
-const BlogPage = lazy(() => import('./app/blog/page'))
-const TeamPage = lazy(() => import('./app/team/page'))
-const CareersPage = lazy(() => import('./app/careers/page'))
-const PrivacyPage = lazy(() => import('./app/privacy/page'))
-const TermsPage = lazy(() => import('./app/terms/page'))
-const CookiesPage = lazy(() => import('./app/cookies/page'))
-// AI Services Pages
-const AIServicesPage = lazy(() => import('./app/ai-services/page'))
-const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'))
-// IT Services Pages
-const ITServicesPage = lazy(() => import('./app/it-services/page'))
-const CloudInfrastructurePage = lazy(() => import('./app/cloud-infrastructure/page'))
-const DigitalTransformationPage = lazy(() => import('./app/digital-transformation/page'))
-// 5G Solutions Pages
-const FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'))
-=======
-import React, { Suspense, lazy, useEffect } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './app/styles/futuristic.css';
+
 // Components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -78,8 +42,6 @@ const FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'));
 // Micro SaaS Solutions Pages
 const MicroSAASSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
 const AIContentGeneratorPage = lazy(() => import('./app/ai-content-generator/page'));
-
->>>>>>> main
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -92,12 +54,8 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
       <div className="mt-4 text-center">
         <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>
         <p className="mt-2 text-sm text-gray-500">{error.message}</p>
-<<<<<<< HEAD
-        <button onClick={resetErrorBoundary}
-=======
         <button
           onClick={resetErrorBoundary}
->>>>>>> main
           className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           Try again
@@ -117,22 +75,6 @@ function App() {
     // Preload critical resources
     const preloadCriticalResources = () => {
       // Preload critical CSS
-<<<<<<< HEAD
-      const criticalCSS = document.createElement('link')
-      criticalCSS.rel = 'preload'
-      criticalCSS.href = '/app/styles/futuristic.css'
-      criticalCSS.as = 'style'
-      document.head.appendChild(criticalCSS)
-      // Preload critical fonts
-      const fontPreload = document.createElement('link')
-      fontPreload.rel = 'preload'
-      fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
-      fontPreload.as = 'style'
-      document.head.appendChild(fontPreload)
-    }
-    preloadCriticalResources()
-  }, [])
-=======
       const criticalCSS = document.createElement('link');
       criticalCSS.rel = 'preload';
       criticalCSS.href = '/app/styles/futuristic.css';
@@ -149,7 +91,6 @@ function App() {
 
     preloadCriticalResources();
   }, []);
->>>>>>> main
   return (
     <GlobalErrorBoundary>
       <HelmetProvider>
@@ -190,13 +131,10 @@ function App() {
                     
                     {/* 5G Solutions */}
                     <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-<<<<<<< HEAD
-=======
                     
                     {/* Micro SaaS Solutions */}
                     <Route path="/micro-saas-solutions" element={<MicroSAASSolutionsPage />} />
                     <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
->>>>>>> main
                     
                     {/* Catch all route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
@@ -216,7 +154,7 @@ function App() {
         </Router>
       </HelmetProvider>
     </GlobalErrorBoundary>
-  )
+  );
 }
 
-export default App
+export default App;

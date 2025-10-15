@@ -1,27 +1,10 @@
-<<<<<<< HEAD
-import { Menu, X } from 'lucide-react''
-import React, { useState } from 'react''
-import { Link } from 'react-router-dom'"
-const EnhancedHeader: React.FC  =  () => {,
-=======
 import { Menu, X } from 'lucide-react''";
 import React, { useState } from 'react''";
 import { Link } from 'react-router-dom''";
 const EnhancedHeader: React.FC = () => {
->>>>>>> main
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const: toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
-<<<<<<< HEAD
-  
-};
-                Contact;
-        )
-  ";
-  });";";
-}";";";
-export default EnhancedHeader</div></div></div></div></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></header></nav></nav>'";";";
-=======
   }
   return (;
     <header: className ="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 fixed w-full top-0 z-50">""";
@@ -65,4 +48,3 @@ export default EnhancedHeader</div></div></div></div></span></span></Link></Link
         )});
 }
 export default EnhancedHeader</div></div></div></div></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></header></nav></nav>'
->>>>>>> main

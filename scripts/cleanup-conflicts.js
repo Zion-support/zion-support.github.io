@@ -10,12 +10,6 @@ console.log('🧹 Starting comprehensive cleanup of merge conflicts and syntax e
 function cleanMergeConflicts(content) {
   // Remove merge conflict markers
   let cleaned = content
-    .replace(/^<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+$/gm, '')
-    .replace(/^<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+$/gm, '')
-    .replace(/^=======[\s\S]*?>>>>>>> [^\n]+$/gm, '')
-    .replace(/^<<<<<<< [^\n]+[\s\S]*?=======$/gm, '')
-    .replace(/^<<<<<<< HEAD$/gm, '')
-    .replace(/^=======$/gm, '')
     .replace(/^>>>>>>> [^\n]+$/gm, '');
   
   return cleaned;

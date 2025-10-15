@@ -1,98 +1,28 @@
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async"
-const  NotFoundPage = () => {}
-=======
-import { Helmet } from "react-helmet-async;";";
-const NotFoundPage = () => {";";";
-  ";";";
-};";";";";
-import React from 'react';";";";";
-import SEOHead from '../../components/SEOHead";
+import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-const AppPage: React.FC  =  () => {";
-  return (;";";
-    <>;";";";
-      <SEOHead;"
-        title="App - Zion Tech Group"";"
-        description="Professional app solutions for modern businesses";"
-      />";"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div className ="text-center">";"
-          <h1 className ="text-4xl font-bold mb-4">App</$1>"
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
-=======
-import { Helmet } from "react-helmet-async";";
-const: NotFoundPage = () => {}
->>>>>>> main
-}
-  return ()
-    <div  className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-      <Helmet></Helmet>
-        <title>Page Not Found | Zion Tech Group</title>
-        <metaname="description">"
-          content="The page you are looking for could not be found""
-        />
+export default function Page() {
+  return (
+    <>
+      <Helmet>
+        <title>Not Found | Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group." />
       </Helmet>
-      <div  className ="pt-20 pb-16 px-4 sm:px-6 lg:px-8">"
-        <div  className ="pt-20 pb-16 px-4 sm:px-6 lg:px-8">"
-          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>"
-          <p  className ="text-gray-300">This page is under development...</p>"
-        </div>
-      </div>
-          <h1  className ="text-4xl md=text-6xl font-bold text-white mb-6"></h1>"
-            <span  className ="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"></span>"
-              Page Not Found
-            </span>
-          </h1>
-          <p  className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>"
-            The page you are looking for could not be found
-          </p>
-          <div  className ="flex flex-col sm:flex-row gap-4 justify-center"></div>"
-            <>
-              to="/contact""
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center""
-            ></>
-              Get Started
-              <ArrowRight: className ="w-5 h-5 ml-2" />"
-            </>
-            <>
-              to="/contact""
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300""
-            ></>
-              Learn More
-            </>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Page Title</h1>
+            <p className="text-xl text-gray-300 mb-8">Professional services tailored to your business needs.</p>
+            <div className="mt-8">
+              <a
+                href="/"
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  )
+    </>
+  );
 }
-
-<<<<<<< HEAD
-}
-
-=======
-import React from 'react';;';";
-import SEOHead from '../../components/SEOHead';";
-;
-const AppPage: React.FC = () => {
-  return (
-    <>;
-      <SEOHead;
-        title="App - Zion Tech Group"";";
-        description="Professional app solutions for modern businesses";";
-      />";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">App</h1>";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
->>>>>>> main
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-};";";";
-;"
->>>>>>> main
-export default AppPage;'";'";"

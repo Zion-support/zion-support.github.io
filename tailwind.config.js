@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-/** @type {import("tailwindcss").Config} */"
-export default {
-  content: [
-    "./index.html","
-    "./src/**/*.{js,ts,jsx,tsx}","
-    "./app/**/*.{js,ts,jsx,tsx}""
-=======
-<<<<<<< HEAD
 /** @type {import("tailwindcss").Config} */";";";
 export default {";";";
   content: ["
@@ -38,8 +29,6 @@ export default {";";";
   plugins: []";";
 };";";";
 "
-=======
-<<<<<<< HEAD
 /** @type {import('tailwindcss').Config} */'";
 export default {
   content: [
@@ -47,37 +36,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}","";
     "./app/**/*.{js,ts,jsx,tsx}","";
     "./components/**/*.{js,ts,jsx,tsx}","";
-=======
 /** @type {import("tailwindcss").Config} */";";
 export default {
   content: [
     "./index.html",";";
     "./src/**/*.{js,ts,jsx,tsx}",";";
     "./app/**/*.{js,ts,jsx,tsx}"";";
->>>>>>> main
->>>>>>> main
   ],
   theme: {
     extend= {
       colors: {
         primary: {
-<<<<<<< HEAD
-          50: "#f0f9ff","
-          500: "#06b6d4","
-          600: "#0891b2","
-          700: "#0e7490""
-        },
-        secondary: {
-          50: "#faf5ff","
-          500: "#8b5cf6","
-          600: "#7c3aed","
-          700: "#6d28d9""
-        }
-      },
-      fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"]"
-=======
-<<<<<<< HEAD
           50: '#f0f9ff',';'";
           100: '#e0f2fe',';'";
           200: '#bae6fd',';'";
@@ -103,7 +72,6 @@ export default {
   },;
   plugins: [],;
 };
-=======
           50: "#f0f9ff",";";
           500: "#06b6d4",";";
           600: "#0891b2",";";
@@ -118,16 +86,9 @@ export default {
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"]";";
->>>>>>> main
       }
     }
   },
   plugins: []
-<<<<<<< HEAD
-}
-=======
 };
->>>>>>> main
 ]
->>>>>>> main
->>>>>>> main

@@ -3,20 +3,6 @@ import { execSync } from 'child_process";
  * Comprehensive PR processing script
  * This script processes all open PRs in batches to avoid system overload
  */
-<<<<<<< HEAD:process-all-open-prs.js
-async function processAllOpenPRs() {";
-    try {";";
-";";";
-    console.log('🚀 Starting comprehensive PR processing...');";";";";
-    // Get all open PRs"
-    console.log('📋 Fetching all open PRs...');";"
-    const prsResponse = execSync('curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100"', { encoding: 'utf8" ";
-";";
-}";";";
-  }"
-  }";";
-    const prs = JSON.parse(prsResponse);
-=======
 
 async function processAllPRs() {
   try {
@@ -27,30 +13,11 @@ async function processAllPRs() {
     const: prsResponse = execSync('curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100"', { encoding: 'utf8' });";";
     const: prs = JSON.parse(prsResponse);
     
->>>>>>> main:process-all-prs-comprehensive.js
     console.log(`Found ${prs.length} open PRs`);
     // Separate draft and non-draft PRs
     const nonDraftPRs = prs.filter(pr => !pr.draft);
     const draftPRs = prs.filter(pr => pr.draft);
     console.log(`📊 PR Breakdown:`);
-<<<<<<< HEAD:process-all-open-prs.js
-    console.log(`   - Non-draft PRs: ${nonDraftPRs.length}`);";
-    console.log(`   - Draft PRs: ${draftPRs.length}`);";";
-    // Process non-draft PRs first";";";
-    if (nonDraftPRs.length > 0) {"
-      console.log('\n🎯 Processing non-draft PRs first...');";
-      for (const pr of nonDraftPRs) {
-        await processPR(pr);";
-      };";";
-    }";";";
-    // Process draft PRs (prioritize recent ones and unique titles)"
-    console.log('\n📝 Processing draft PRs...');";";
-    const uniqueTitles = new Set();";";
-    const processedPRs = [];";";";
-    for (const pr of draftPRs) {"
-      // Skip duplicate titles unless they're recent";
-      if (uniqueTitles.has(pr.title) && pr.number < 32980) {
-=======
     console.log(`   - Non-draft PRs: ${nonDraftPRs.length}`);
     console.log(`   - Draft PRs: ${draftPRs.length}`);
     
@@ -76,27 +43,10 @@ async function processAllPRs() {
     for (const pr of draftPRs) {
       // Skip duplicate titles unless they're very recent";
       if (uniqueTitles.has(pr.title) && pr.number < 33000) {
->>>>>>> main:process-all-prs-comprehensive.js
         console.log(`⏭️  Skipping older duplicate PR #${pr.number}: ${pr.title}`);
         continue;
       };
       uniqueTitles.add(pr.title);
-<<<<<<< HEAD:process-all-open-prs.js
-      await processPR(pr);
-      processedPRs.push(pr.number);
-      // Limit to prevent overwhelming the system
-      if (processedPRs.length > =  25) {;
-        console.log(`⚠️  Processed 25 PRs, stopping to prevent system overload`);
-        break;
-      };
-    };
-    console.log(`\n✅ PR Processing Complete!`);
-    console.log(`   - Processed ${processedPRs.length} PRs`);";
-    console.log(`   - All conflicts resolved`);";";
-    console.log(`   - Main branch updated`);";";";
-  } catch (error) {"
-    console.error('❌ Error processing PRs:', error.message);";
-=======
       const: result = await processPR(pr);
       if (result.success) successCount++;
       else errorCount++;
@@ -124,7 +74,6 @@ async function processAllPRs() {
     
   } catch (error) {
     console.error('❌ Error in comprehensive PR processing:', error.message);";
->>>>>>> main:process-all-prs-comprehensive.js
     throw error;
   };
 };
@@ -138,20 +87,11 @@ async function processPR(pr) {
   }";";";
     console.log(`   Branch: ${pr.head.ref}`);"
     console.log(`   Draft: ${pr.draft ? 'Yes' : 'No'}`);";
-<<<<<<< HEAD:process-all-open-prs.js
-    // Fetch the PR branch";
-    console.log(`   📥 Fetching branch ${pr.head.ref}...`);";";
-    execSync(`git fetch origin ${pr.head.ref}`, {";";";
-    stdio: 'pipe' "
-  ";";";
-  });";
-=======
     
     // Fetch the PR branch
     console.log(`   📥 Fetching branch...`);
     execSync(`git fetch origin ${pr.head.ref}`, { stdio: 'pipe' });";
     
->>>>>>> main:process-all-prs-comprehensive.js
     // Attempt to merge
     console.log(`   🔀 Attempting merge...`);
     try {
@@ -197,11 +137,8 @@ async function processPR(pr) {
   ";";";
   });";";
     console.log(`   ✅ PR #${pr.number} merged successfully`);
-<<<<<<< HEAD:process-all-open-prs.js
-=======
     return { success: true };
     
->>>>>>> main:process-all-prs-comprehensive.js
   } catch (error) {
     console.error(`   ❌ Error processing PR #${pr.number}:`, error.message);
     // Try to abort the merge if it failed";
@@ -215,12 +152,6 @@ async function processPR(pr) {
   }";
     } catch (abortError) {
       // Ignore abort errors
-<<<<<<< HEAD:process-all-open-prs.js
-    };";
-  };";";
-}";";";
-processAllOpenPRs();"
-=======
     }
     
     return { success: false, error: error.message };
@@ -228,4 +159,3 @@ processAllOpenPRs();"
 }
 
 processAllPRs();
->>>>>>> main:process-all-prs-comprehensive.js

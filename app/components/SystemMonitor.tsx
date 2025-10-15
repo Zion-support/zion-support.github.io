@@ -1,94 +1,28 @@
-<<<<<<< HEAD
-import React from 'react';;';";"
-import SEOHead from './components/SEOHead';";"
+import { Helmet } from 'react-helmet-async';
 
-interface $1 { [key: string]: any },
-      children?: React.ReactNode
-  className?: string
-  title?: string
-  description?: string
-},
-      const SystemMonitor: React.FC<SystemMonitorProps> = ({},
-      children, className = "", title, _description, _}) => {}: value,;";"
-      return (
-    <div  className ={`enhanced-component ${className}`}></div>";";"
-      {title && <h2  className ="text-2xl font-bold mb-4">{title}</h2>};";"
-      {description && <p  className ="text-gray-600 mb-4">{description}</p>};: value;";"
-      {children}
-    </div>
-  )
-},";";"
-      export default SystemMonitor;";";"
-'";'";"
-=======
-<<<<<<< HEAD
-import React from 'react';";";";";
-import SEOHead from './components/SEOHead";
-=======
-import React from 'react';;';";
-import SEOHead from './components/SEOHead';";
-
->>>>>>> main
-interface SystemMonitorProps {},
-
-interface $1 { [key: string]: any },;
-      children?: React.ReactNode;
-  className?: string;
-  title?: string;
-<<<<<<< HEAD
-  description?: string;";
-},";";
-      const SystemMonitor: React.FC<SystemMonitorProps>  =  ({},)";";";
-      children, className = "", title, _description, _}) => {},";
-      return ()";";
-    <div className={`enhanced-component ${className}`}></$1>";";";
-      {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>};"
-      {description && <p className="text-gray-600 mb-4">{description}</p>};: value";";
-},;";";";
-      const SystemMonitor: React.FC<SystemMonitorProps> = ({},;"
-      children, className = "", title, _description, _}) => {}: value,;";";";";
-      return ("
-    <div className ={`enhanced-component ${className}`}></$1>"
-      {title && <h2 className ="text-2xl font-bold mb-4">{title}</h2>};";"
-      {description && <p className ="text-gray-600 mb-4">{description}</p>};: value;";
-      {children};";
-    </div>;";";
-  );";";";
-},"
-      export default SystemMonitor;"
-},";";";";
-      export default SystemMonitor`;"
-'";'";";";";
-"
-=======
-  description?: string;
-
-},
-      const SystemMonitor: React.FC<SystemMonitorProps> = ({},)
-      children, className = "", title, _description, _}) => {},";
-      return ()
-
-    <div: className ={`enhanced-component ${className}`}></div>
-      {title && <h2: className ="text-2xl font-bold mb-4">{title}</h2>};";
-      {description && <p: className ="text-gray-600 mb-4">{description}</p>};: value";
-
-},;
-      const SystemMonitor: React.FC<SystemMonitorProps> = ({},;
-      children, className = "", title, _description, _}) => {}: value,;";";
-      return (
-    <div: className ={`enhanced-component ${className}`}></div>";";
-      {title && <h2: className ="text-2xl font-bold mb-4">{title}</h2>};";";
-      {description && <p: className ="text-gray-600 mb-4">{description}</p>};: value;";";
-
-      {children};
-    </div>;
+export default function Page() {
+  return (
+    <>
+      <Helmet>
+        <title>SystemMonitor | Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Page Title</h1>
+            <p className="text-xl text-gray-300 mb-8">Professional services tailored to your business needs.</p>
+            <div className="mt-8">
+              <a
+                href="/"
+                className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
-
-},
-      export default SystemMonitor;"";
-
-},";";
-      export default SystemMonitor`;
-'";'";";";
->>>>>>> main
->>>>>>> main
+}
