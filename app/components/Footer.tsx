@@ -20,21 +20,38 @@ const Footer: React.FC = () => {
     { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Cloud Solutions', href: '/cloud-solutions' },
-    { name: '5G Solutions', href: '/5g-solutions' }
+    { name: '5G Solutions', href: '/5g-solutions' },
+    { name: 'Web Development', href: '/web-development' },
+    { name: 'Mobile App Development', href: '/mobile-app-development' }
+  ];
+
+  const solutions = [
+    { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
+    { name: 'AI Computer Vision', href: '/ai-computer-vision' },
+    { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
+    { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
+    { name: 'AI Automation Platform', href: '/ai-automation-platform' },
+    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
+    { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions' }
   ];
 
   const company = [
     { name: 'About Us', href: '/about' },
     { name: 'Careers', href: '/careers' },
     { name: 'Team', href: '/team' },
-    { name: 'Case Studies', href: '/case-studies' }
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Tutorials', href: '/tutorials' }
   ];
 
   const support = [
     { name: 'Contact', href: '/contact' },
     { name: 'Support', href: '/support' },
     { name: 'Documentation', href: '/docs' },
-    { name: 'Tutorials', href: '/tutorials' }
+    { name: 'Demo', href: '/demo' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'FAQ', href: '/faq' }
   ];
 
   const legal = [
@@ -52,7 +69,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 border-t border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-4">
@@ -62,7 +79,8 @@ const Footer: React.FC = () => {
               <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
             </div>
             <p className="text-gray-400 text-sm mb-4">
-              Leading provider of AI solutions, cybersecurity, and digital transformation services.
+              Leading provider of AI solutions, cybersecurity, and digital transformation services. 
+              Transforming businesses with cutting-edge technology.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -95,6 +113,25 @@ const Footer: React.FC = () => {
                   >
                     {service.name}
                   </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Solutions */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Popular Solutions</h3>
+            <ul className="space-y-2">
+              {solutions.map((solution) => (
+                <li key={solution.name}>
+                  <a
+                    href={`https://ziontechgroup.com${solution.href}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white text-sm transition-colors"
+                  >
+                    {solution.name}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -140,15 +177,15 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="flex items-center text-gray-400 text-sm">
               <PhoneIcon className="w-4 h-4 mr-2" />
-              <span>+1 (555) 123-4567</span>
+              <a href="tel:+13024640950" className="hover:text-white transition-colors">+1 302 464 0950</a>
             </div>
             <div className="flex items-center text-gray-400 text-sm">
               <EnvelopeIcon className="w-4 h-4 mr-2" />
-              <span>info@ziontechgroup.com</span>
+              <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">kleber@ziontechgroup.com</a>
             </div>
             <div className="flex items-center text-gray-400 text-sm">
               <MapPinIcon className="w-4 h-4 mr-2" />
-              <span>San Francisco, CA</span>
+              <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
         </div>

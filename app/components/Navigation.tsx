@@ -41,10 +41,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       icon: BriefcaseIcon,
       submenu: [
         { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
+        { name: 'IT Solutions', href: '/it-solutions', icon: CogIcon },
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon },
         { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
         { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: GlobeAltIcon },
         { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
       ]
     },
@@ -55,7 +56,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       submenu: [
         { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
         { name: 'IT Solutions', href: '/it-solutions', icon: CogIcon },
-        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon }
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon },
+        { name: 'Cloud Solutions', href: '/cloud-solutions', icon: CloudIcon },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
+        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
       ]
     },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
