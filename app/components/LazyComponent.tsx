@@ -1,12 +1,7 @@
 import React, { Suspense, lazy, ComponentType } from "react";
 import { Loader2 } from "lucide-react";
-<<<<<<< HEAD
-interface LazyComponentProps<P = {}> {
-  importFunc: () => Promise<{ default: ComponentType<P> }>;
-=======
 
 interface LazyComponentProps {
->>>>>>> cursor/fix-errors-and-merge-to-main-14bb
   fallback?: React.ReactNode;
   delay?: number;
 }

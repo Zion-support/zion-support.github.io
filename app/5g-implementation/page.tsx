@@ -4,20 +4,14 @@ import { Wifi,
   Shield, 
   Globe, 
   CheckCircle, 
-  ArrowRight, 
   Star, 
-  Phone, 
-  Mail, 
-  Play, 
   Settings, 
   Smartphone, 
   Cloud, 
   Cpu, 
   BarChart3, 
   Activity } from 'lucide-react';
-const FiveGImplementationPage: React.FC = () => { const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    setIsVisible(true); }, []);
+const FiveGImplementationPage: React.FC = () => {
   const features = [
     { icon: <Wifi className="w-6 h-6" />,
       title: "Ultra-Fast 5G Networks",
@@ -123,14 +117,6 @@ const FiveGImplementationPage: React.FC = () => { const [isVisible, setIsVisible
       role: "IT Director",
       content: "The 5G network has revolutionized our telemedicine capabilities. We can now provide remote care with unprecedented quality and speed.",
       rating: 5 }
-  ];
-  const technologies = [
-    { name: "5G NR", description: "New Radio technology" },
-    { name: "Network Slicing", description: "Virtual network segments" },
-    { name: "Edge Computing", description: "Distributed processing" },
-    { name: "IoT Platforms", description: "Device management" },
-    { name: "AI/ML", description: "Intelligent optimization" },
-    { name: "Security", description: "Advanced protection" }
   ];
   return (
     <>
@@ -303,7 +289,7 @@ const FiveGImplementationPage: React.FC = () => { const [isVisible, setIsVisible
                       <Star key={i } className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic">"{ testimonial.content }"</p>
+                  <p className="text-gray-300 mb-4 italic">&ldquo;{ testimonial.content }&rdquo;</p>
                   <div>
                     <div className="font-semibold text-white">{ testimonial.name }</div>
                     <div className="text-cyan-400">{ testimonial.role }</div>

@@ -14,19 +14,19 @@ interface State {
 
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
-<<<<<<< HEAD
-    hasError: false,
-=======
     hasError: false
->>>>>>> cursor/fix-errors-and-merge-to-main-14bb
   };
 
   public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return {
+      hasError: true,
+      error
+    };
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Uncaught error:', error, errorInfo);
+    
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
@@ -48,6 +48,7 @@ class ErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
+
     return this.props.children;
   }
 }
