@@ -60,13 +60,13 @@ const Sidebar: React.FC = () => {
             </Link>
           </div>
           
-          <div className="mb-4">
-            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Company</h3>
+          <div className="space-y-1 mt-6">
+            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Company</div>
             <Link to="/about" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              About Us
+              About
             </Link>
             <Link to="/team" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              Our Team
+              Team
             </Link>
             <Link to="/careers" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Careers
@@ -76,8 +76,8 @@ const Sidebar: React.FC = () => {
             </Link>
           </div>
           
-          <div className="mb-4">
-            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Resources</h3>
+          <div className="space-y-1 mt-6">
+            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Resources</div>
             <Link to="/blog" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Blog
             </Link>
@@ -92,13 +92,13 @@ const Sidebar: React.FC = () => {
             </Link>
           </div>
           
-          <div>
-            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Support</h3>
+          <div className="space-y-1 mt-6">
+            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Support</div>
+            <Link to="/help" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Help
+            </Link>
             <Link to="/contact" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Contact
-            </Link>
-            <Link to="/help" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              Help Center
             </Link>
             <Link to="/accessibility" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Accessibility
