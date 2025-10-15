@@ -1,7 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Cloud, Database, Monitor, Server, Settings, Shield } from 'lucide-react';
+import { ArrowRight, CheckCircle, Cloud, Database, Monitor, Server, Settings, Shield, Phone, Mail } from 'lucide-react';
+import Footer from '../components/Footer';
 
 const ItServicesPage: React.FC = () => { const itServices = [ { icon: <Cloud className="w-8 h-8" />, title: "Cloud Infrastructure", description: "Scalable and secure cloud infrastructure solutions for modern businesses.", href: "/ai-cloud-infrastructure", features: ["Cloud Migration", "Multi-Cloud Management", "Serverless Architecture", "Cost Optimization"] }, { icon: <Shield className="w-8 h-8" />, title: "Advanced Security Suite", description: "Comprehensive cybersecurity solutions to protect your digital assets.", href: "/advanced-security-suite", features: ["Threat Detection", "Data Encryption", "Compliance Management", "Security Auditing"] }, { icon: <Database className="w-8 h-8" />, title: "Database Solutions", description: "Robust database management and optimization services for data-driven businesses.", href: "/database-solutions", features: ["Database Design", "Performance Optimization", "Data Migration", "Backup & Recovery"] }, { icon: <Monitor className="w-8 h-8" />, title: "Performance Monitoring", description: "Real-time monitoring and optimization of your IT infrastructure and applications.", href: "/performance-monitoring", features: ["Real-time Monitoring", "Performance Analytics", "Alert Management", "Capacity Planning"] }, { icon: <Settings className="w-8 h-8" />, title: "DevOps Solutions", description: "Streamlined development and deployment processes with modern DevOps practices.", href: "/devops-solutions", features: ["CI/CD Pipelines", "Infrastructure as Code", "Container Orchestration", "Automated Testing"] }, { icon: <Server className="w-8 h-8" />, title: "API Management", description: "Comprehensive API management and integration solutions for seamless connectivity.", href: "/ai-api-management", features: ["API Gateway", "Rate Limiting", "Authentication", "Analytics & Monitoring"] } ];
   return (
@@ -95,42 +96,42 @@ const ItServicesPage: React.FC = () => { const itServices = [ { icon: <Cloud cla
                   Schedule Demo
                 </Link>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Optimize Your IT Infrastructure?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Our IT experts are ready to help you implement the perfect solution for your business needs. 
-            Get a free consultation and see how we can transform your IT operations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call (302) 464-0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
-            >
-              <Mail className="w-5 h-5 mr-2" />
-              Email Us
-            </a>
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Ready to Optimize Your IT Infrastructure?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Our IT experts are ready to help you implement the perfect solution for your business needs. 
+              Get a free consultation and see how we can transform your IT operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call (302) 464-0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Email Us
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 
