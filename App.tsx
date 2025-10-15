@@ -80,9 +80,6 @@ const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
 const CloudSolutionsPage = lazy(() => import('./app/cloud-solutions/page'));
 
 // Micro SaaS pages
-const AISocialMediaManagerPage = lazy(() => import('./app/ai-social-media-manager/page'));
-const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
-const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
 const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
 const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
 
