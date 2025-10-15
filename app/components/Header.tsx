@@ -26,8 +26,8 @@ const Header: React.FC = memo(() => {
         { name: 'AI Services', path: '/ai-services' },
         { name: 'IT Services', path: '/it-services' },
         { name: '5G Solutions', path: '/5g-solutions' },
-        { name: 'Cloud Services', path: '/cloud-services' },
-        { name: 'Cybersecurity', path: '/cybersecurity' }
+        { name: 'Quantum Computing', path: '/quantum-computing-solutions' },
+        { name: 'Edge Computing', path: '/edge-computing-solutions' }
       ]
     },
     { name: 'About', path: '/about' },
@@ -75,7 +75,7 @@ const Header: React.FC = memo(() => {
         isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg shadow-cyan-500/10' : 'bg-transparent'
       }`}>
       {/* Top Contact Bar */}
-      <div className="bg-slate-800 text-white py-2 px-4 hidden lg:block">
+      <div className="bg-slate-800 text-white py-2 px-4 hidden md:block">
         <div className="container mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
@@ -110,7 +110,11 @@ const Header: React.FC = memo(() => {
             </Link>
 
             {/* Desktop Navigation */}
+<<<<<<< HEAD
             <div className="hidden xl:flex items-center space-x-6">
+=======
+            <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-06e6
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
                   {item.dropdown ? (
@@ -154,7 +158,11 @@ const Header: React.FC = memo(() => {
             </div>
 
             {/* CTA Button */}
+<<<<<<< HEAD
             <div className="hidden xl:flex items-center space-x-4">
+=======
+            <div className="hidden md:flex items-center space-x-4">
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-06e6
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 relative overflow-hidden group"
@@ -166,7 +174,11 @@ const Header: React.FC = memo(() => {
 
             {/* Mobile Menu Button */}
             <button
+<<<<<<< HEAD
               className="xl:hidden text-white p-2"
+=======
+              className="md:hidden text-white p-2"
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-06e6
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMenuOpen}
@@ -181,7 +193,11 @@ const Header: React.FC = memo(() => {
         {isMenuOpen && (
           <div 
             id="mobile-menu"
+<<<<<<< HEAD
             className="xl:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/20"
+=======
+            className="md:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/20"
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-06e6
             role="navigation"
             aria-label="Mobile navigation"
           >

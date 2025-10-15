@@ -26,7 +26,8 @@ export const seoUtils = {
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
       logo: 'https://ziontechgroup.com/logo.png',
-      description: 'Leading technology solutions provider',}
-      ...data }
+      description: 'Leading technology solutions provider'
+    },
+    ...data
   }
 }

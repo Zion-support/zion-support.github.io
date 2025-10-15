@@ -1,7 +1,7 @@
 export const errorHandler = { handle: (error: Error, context?: string) => {
     // Log to external service,
-    if (typeof window !== 'undefined' && (window as, any).gtag) {
-      (window as, any).gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: context ? { context } : {}
@@ -23,8 +23,12 @@ const message = errorWithResponse.response?.data?.message || errorWithResponse.m
       default: return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' };
     }
   },
-  log: (error: Error, context?: Record<string unknown>) => { // Error logging, logic},
-  report: (error: Error, context?: Record<string unknown>) => { // Error reporting, logic}
+  log: (error: Error, context?: Record<string, unknown>) => { // Error logging logic
+    console.error('Error logged:', error, context);
+  },
+  report: (error: Error, context?: Record<string, unknown>) => { // Error reporting logic
+    console.error('Error reported:', error, context);
+  }
 };
 
 export default NotFoundPage;
