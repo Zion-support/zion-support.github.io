@@ -32,6 +32,24 @@ const MobileDevelopmentPage = lazy(() => import('./app/mobile-development/page')
 const DatabaseManagementPage = lazy(() => import('./app/database-management/page'));
 const NetworkInfrastructurePage = lazy(() => import('./app/network-infrastructure/page'));
 const CookiesPage = lazy(() => import('./app/cookies/page'));
+const AIVideoGeneratorProPage = lazy(() => import('./app/ai-video-generator-pro/page'));
+const AICodeAssistantProPage = lazy(() => import('./app/ai-code-assistant-pro/page'));
+const AITranslatorProPage = lazy(() => import('./app/ai-translator-pro/page'));
+const AIDataScientistProPage = lazy(() => import('./app/ai-data-scientist-pro/page'));
+const AICybersecurityProPage = lazy(() => import('./app/ai-cybersecurity-pro/page'));
+const AIHRAssistantProPage = lazy(() => import('./app/ai-hr-assistant-pro/page'));
+const AIVoiceAssistantProPage = lazy(() => import('./app/ai-voice-assistant-pro/page'));
+const AIImageGeneratorProPage = lazy(() => import('./app/ai-image-generator-pro/page'));
+const AIChatbotBuilderProPage = lazy(() => import('./app/ai-chatbot-builder-pro/page'));
+const AISEOOptimizerProPage = lazy(() => import('./app/ai-seo-optimizer-pro/page'));
+const AIEmailAnalyzerProPage = lazy(() => import('./app/ai-email-analyzer-pro/page'));
+const AIProjectManagerProPage = lazy(() => import('./app/ai-project-manager-pro/page'));
+const QuantumComputingPage = lazy(() => import('./app/quantum-computing-solutions/page'));
+const EdgeComputingPage = lazy(() => import('./app/edge-computing-solutions/page'));
+const AugmentedRealityPage = lazy(() => import('./app/augmented-reality-solutions/page'));
+const VirtualRealityPage = lazy(() => import('./app/virtual-reality-solutions/page'));
+const RoboticProcessAutomationPage = lazy(() => import('./app/robotic-process-automation/page'));
+const AIConsultingPage = lazy(() => import('./app/ai-consulting/page'));
 
 // Import components
 import Navigation from './app/components/Navigation';
@@ -118,6 +136,29 @@ export default function App() {
                   <Route path="/partnerships" element={<PartnershipsPage />} />
                   <Route path="/api-docs" element={<APIDocsPage />} />
                   <Route path="/accessibility" element={<AccessibilityPage />} />
+                  
+                  {/* New AI Services */}
+                  <Route path="/ai-video-generator-pro" element={<AIVideoGeneratorProPage />} />
+                  <Route path="/ai-code-assistant-pro" element={<AICodeAssistantProPage />} />
+                  <Route path="/ai-translator-pro" element={<AITranslatorProPage />} />
+                  <Route path="/ai-data-scientist-pro" element={<AIDataScientistProPage />} />
+                  <Route path="/ai-cybersecurity-pro" element={<AICybersecurityProPage />} />
+                  <Route path="/ai-hr-assistant-pro" element={<AIHRAssistantProPage />} />
+                  <Route path="/ai-voice-assistant-pro" element={<AIVoiceAssistantProPage />} />
+                  <Route path="/ai-image-generator-pro" element={<AIImageGeneratorProPage />} />
+                  <Route path="/ai-chatbot-builder-pro" element={<AIChatbotBuilderProPage />} />
+                  <Route path="/ai-seo-optimizer-pro" element={<AISEOOptimizerProPage />} />
+                  <Route path="/ai-email-analyzer-pro" element={<AIEmailAnalyzerProPage />} />
+                  <Route path="/ai-project-manager-pro" element={<AIProjectManagerProPage />} />
+                  
+                  {/* Advanced IT Solutions */}
+                  <Route path="/quantum-computing-solutions" element={<QuantumComputingPage />} />
+                  <Route path="/edge-computing-solutions" element={<EdgeComputingPage />} />
+                  <Route path="/augmented-reality-solutions" element={<AugmentedRealityPage />} />
+                  <Route path="/virtual-reality-solutions" element={<VirtualRealityPage />} />
+                  <Route path="/robotic-process-automation" element={<RoboticProcessAutomationPage />} />
+                  <Route path="/ai-consulting" element={<AIConsultingPage />} />
+                  
                   {/* Catch all route */}
                   <Route path="*" element={
                     <div className="min-h-screen flex items-center justify-center bg-gray-50">

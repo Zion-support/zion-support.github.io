@@ -424,6 +424,93 @@ body {
     --space-xl: 1.5rem;
     --space-2xl: 2rem;
   }
+  
+  .btn-futuristic {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+  
+  .card-futuristic {
+    padding: 16px;
+    border-radius: 16px;
+  }
+  
+  .nav-link-futuristic {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  
+  .gradient-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .btn-futuristic {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+  
+  .card-futuristic {
+    padding: 12px;
+    border-radius: 12px;
+  }
+  
+  .gradient-text {
+    font-size: 2rem;
+  }
+  
+  .glass-effect {
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-futuristic {
+    padding: 6px 16px;
+    font-size: 12px;
+  }
+  
+  .card-futuristic {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .gradient-text {
+    font-size: 1.75rem;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1800px;
+  }
+  
+  .card-futuristic {
+    padding: 32px;
+  }
+  
+  .btn-futuristic {
+    padding: 16px 40px;
+    font-size: 18px;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 2560px) {
+  .container {
+    max-width: 2400px;
+  }
+  
+  .card-futuristic {
+    padding: 40px;
+  }
+  
+  .btn-futuristic {
+    padding: 20px 48px;
+    font-size: 20px;
+  }
 }
 
 /* Print Styles */

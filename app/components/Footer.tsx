@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
       </div>
       
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bold gradient-text mb-4">Zion Tech Group</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -43,49 +43,62 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Services</h4>
-            <ul className="space-y-3">
-              <li><Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">All Services</Link></li>
-              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Services</Link></li>
-              <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">IT Services</Link></li>
-              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Micro SAAS Solutions</Link></li>
-              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Cloud Infrastructure</Link></li>
-              <li><Link to="/5g-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">5G Solutions</Link></li>
-              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Digital Transformation</Link></li>
-              <li><Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Pricing</Link></li>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400">AI Services</h4>
+            <ul className="space-y-2">
+              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">All AI Services</Link></li>
+              <li><Link to="/ai-video-generator-pro" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">🎬 Video Generator</Link></li>
+              <li><Link to="/ai-code-assistant-pro" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">💻 Code Assistant</Link></li>
+              <li><Link to="/ai-translator-pro" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">🌍 Translator</Link></li>
+              <li><Link to="/ai-data-scientist-pro" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">📊 Data Scientist</Link></li>
+              <li><Link to="/ai-cybersecurity-pro" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">🛡️ Cybersecurity</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400">IT Solutions</h4>
+            <ul className="space-y-2">
+              <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">All IT Services</Link></li>
+              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">☁️ Cloud Infrastructure</Link></li>
+              <li><Link to="/quantum-computing-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">⚛️ Quantum Computing</Link></li>
+              <li><Link to="/edge-computing-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">🌐 Edge Computing</Link></li>
+              <li><Link to="/augmented-reality-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">🥽 AR Solutions</Link></li>
+              <li><Link to="/virtual-reality-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">🥽 VR Solutions</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Micro SAAS</h4>
+            <ul className="space-y-2">
+              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">All Micro SAAS</Link></li>
+              <li><Link to="/ai-chatbot-builder-pro" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">🤖 Chatbot Builder</Link></li>
+              <li><Link to="/ai-seo-optimizer-pro" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">🔍 SEO Optimizer</Link></li>
+              <li><Link to="/ai-image-generator-pro" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">🎨 Image Generator</Link></li>
+              <li><Link to="/ai-voice-assistant-pro" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">🎙️ Voice Assistant</Link></li>
+              <li><Link to="/ai-project-manager-pro" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">📋 Project Manager</Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-lg font-semibold mb-4 text-cyan-400">Company</h4>
-            <ul className="space-y-3">
-              <li><Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">About Us</Link></li>
-              <li><Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Our Team</Link></li>
-              <li><Link to="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Careers</Link></li>
-              <li><Link to="/partnerships" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Partnerships</Link></li>
-              <li><Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Case Studies</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Contact</Link></li>
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">About Us</Link></li>
+              <li><Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">Our Team</Link></li>
+              <li><Link to="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">Careers</Link></li>
+              <li><Link to="/partnerships" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">Partnerships</Link></li>
+              <li><Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">Case Studies</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">Contact</Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-lg font-semibold mb-4 text-cyan-400">Resources</h4>
-            <ul className="space-y-3">
-              <li><Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Blog</Link></li>
-              <li><Link to="/api-docs" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">API Docs</Link></li>
-              <li><Link to="/help" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Help Center</Link></li>
-              <li><Link to="/accessibility" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Accessibility</Link></li>
-              <li><Link to="/data-analytics" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Data Analytics</Link></li>
-              <li><Link to="/web-development" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Web Development</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Legal</h4>
-            <ul className="space-y-3">
-              <li><Link to="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Terms of Service</Link></li>
-              <li><Link to="/cookies" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Cookie Policy</Link></li>
+            <ul className="space-y-2">
+              <li><Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">Blog</Link></li>
+              <li><Link to="/api-docs" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">API Docs</Link></li>
+              <li><Link to="/help" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">Help Center</Link></li>
+              <li><Link to="/accessibility" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">Accessibility</Link></li>
+              <li><Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">Pricing</Link></li>
+              <li><Link to="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1 text-sm">Privacy Policy</Link></li>
             </ul>
           </div>
         </div>
