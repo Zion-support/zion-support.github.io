@@ -1,8 +1,205 @@
-import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, Building, Camera, Car, CheckCircle, Home, Mail, Phone, Play, Star, Thermometer, Wind } from 'lucide-react';
+import { ArrowRight, CheckCircle, Mail, Phone, Play, Star } from 'lucide-react';
 
 const AIIoTManagementProPage = () => {
+  const isVisible = true;
+  
+  const deviceTypes = [
+    {
+      name: "Smart Sensors",
+      description: "Environmental monitoring, motion detection, and data collection sensors.",
+      icon: "🌡️",
+      color: "cyan"
+    },
+    {
+      name: "Industrial Equipment",
+      description: "Manufacturing machinery, production lines, and industrial automation systems.",
+      icon: "🏭",
+      color: "blue"
+    },
+    {
+      name: "Smart Buildings",
+      description: "HVAC systems, lighting controls, security systems, and building automation.",
+      icon: "🏢",
+      color: "green"
+    },
+    {
+      name: "Connected Vehicles",
+      description: "Fleet management, telematics, and autonomous vehicle systems.",
+      icon: "🚗",
+      color: "purple"
+    },
+    {
+      name: "Wearable Devices",
+      description: "Health monitors, fitness trackers, and personal IoT devices.",
+      icon: "⌚",
+      color: "pink"
+    },
+    {
+      name: "Agricultural IoT",
+      description: "Soil sensors, weather stations, irrigation systems, and crop monitoring.",
+      icon: "🌾",
+      color: "yellow"
+    }
+  ];
+
+  const features = [
+    {
+      title: "Device Intelligence",
+      description: "AI-powered device monitoring, predictive maintenance, and automated optimization.",
+      icon: "🧠",
+      benefits: ["Predictive maintenance", "Automated optimization", "Device monitoring", "Performance analytics"]
+    },
+    {
+      title: "Edge Computing",
+      description: "Real-time data processing at the device level for faster response times.",
+      icon: "⚡",
+      benefits: ["Real-time processing", "Low latency", "Edge analytics", "Offline capability"]
+    },
+    {
+      title: "Protocol Support",
+      description: "Support for all major IoT protocols including MQTT, CoAP, and HTTP/2.",
+      icon: "🔗",
+      benefits: ["Multi-protocol support", "Seamless integration", "Protocol optimization", "Universal compatibility"]
+    },
+    {
+      title: "Data Analytics",
+      description: "Advanced analytics and machine learning for IoT data insights.",
+      icon: "📊",
+      benefits: ["Data insights", "Machine learning", "Predictive analytics", "Real-time dashboards"]
+    },
+    {
+      title: "Security Management",
+      description: "End-to-end encryption and comprehensive security monitoring.",
+      icon: "🔒",
+      benefits: ["End-to-end encryption", "Security monitoring", "Access control", "Threat detection"]
+    },
+    {
+      title: "Scalability",
+      description: "Handle millions of devices with horizontal scaling and load balancing.",
+      icon: "📈",
+      benefits: ["Horizontal scaling", "Load balancing", "High availability", "Global deployment"]
+    }
+  ];
+
+
+  const metrics = [
+    {
+      name: "Device Uptime",
+      value: "99.9%",
+      description: "Average device connectivity and availability",
+      icon: "📊"
+    },
+    {
+      name: "Data Processing",
+      value: "1M+",
+      description: "Messages processed per second",
+      icon: "⚡"
+    },
+    {
+      name: "Response Time",
+      value: "< 50ms",
+      description: "Average response time for device commands",
+      icon: "🚀"
+    },
+    {
+      name: "Energy Savings",
+      value: "30%",
+      description: "Reduction in energy consumption",
+      icon: "💡"
+    }
+  ];
+
+  const protocols = [
+    {
+      name: "MQTT",
+      description: "Lightweight messaging protocol for IoT devices",
+      features: ["Low bandwidth", "Reliable delivery", "QoS support"]
+    },
+    {
+      name: "CoAP",
+      description: "Constrained Application Protocol for resource-constrained devices",
+      features: ["HTTP-like", "UDP-based", "RESTful"]
+    },
+    {
+      name: "HTTP/2",
+      description: "Modern web protocol with multiplexing and server push",
+      features: ["Binary framing", "Stream multiplexing", "Header compression"]
+    },
+    {
+      name: "WebSocket",
+      description: "Full-duplex communication for real-time applications",
+      features: ["Real-time", "Low latency", "Bidirectional"]
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$149",
+      period: "month",
+      description: "Perfect for small IoT deployments",
+      features: [
+        "Up to 1,000 devices",
+        "Basic monitoring",
+        "Standard protocols",
+        "Email support"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$399",
+      period: "month",
+      description: "Ideal for medium-sized IoT projects",
+      features: [
+        "Up to 10,000 devices",
+        "Advanced analytics",
+        "All protocols",
+        "Priority support",
+        "Custom dashboards"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "Custom",
+      period: "contact",
+      description: "Complete solution for large-scale IoT deployments",
+      features: [
+        "Unlimited devices",
+        "Full AI suite",
+        "White-label options",
+        "Dedicated support",
+        "Custom development",
+        "Advanced security"
+      ],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "John Smith",
+      role: "IoT Director",
+      company: "Smart City Solutions",
+      content: "AI IoT Management Pro has transformed our smart city infrastructure. We can now monitor and manage thousands of devices in real-time.",
+      rating: 5
+    },
+    {
+      name: "Maria Garcia",
+      role: "Manufacturing Engineer",
+      company: "TechCorp",
+      content: "The predictive maintenance features have reduced our equipment downtime by 50% and saved us millions in costs.",
+      rating: 5
+    },
+    {
+      name: "David Chen",
+      role: "CTO",
+      company: "AgriTech Solutions",
+      content: "The agricultural IoT management has revolutionized our farming operations. We can now optimize irrigation and crop yields automatically.",
+      rating: 5
+    }
+  ];
   return (
     <>
       { /* Animated Background */ }
@@ -141,8 +338,8 @@ const AIIoTManagementProPage = () => {
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                       <div className="text-cyan-400">{ metric.icon }</div>
                     </div>
-                    <div className="text-3xl font-bold text-white mb-1">{ metric.number }</div>
-                    <div className="text-gray-400 text-sm">{ metric.label }</div>
+                    <div className="text-3xl font-bold text-white mb-1">{ metric.value }</div>
+                    <div className="text-gray-400 text-sm">{ metric.description }</div>
                   </div>
                 ))}
               </div>
@@ -207,7 +404,7 @@ const AIIoTManagementProPage = () => {
                       <p className="text-gray-300 mb-4">{ plan.description }</p>
                       <div className="flex items-baseline justify-center">
                         <span className="text-5xl font-bold text-cyan-400">{ plan.price }</span>
-                        <span className="text-gray-400 ml-2">/{ plan.period }</span>
+                        <span className="text-gray-400 ml-2">/month</span>
                       </div>
                     </div>
                     <div className="space-y-4 mb-8">
@@ -262,7 +459,6 @@ const AIIoTManagementProPage = () => {
                     <div>
                       <div className="font-semibold text-white">{ testimonial.name }</div>
                       <div className="text-cyan-400">{ testimonial.role }</div>
-                      <div className="text-gray-400 text-sm">{ testimonial.company }</div>
                     </div>
                   </div>
                 ))}
@@ -301,4 +497,4 @@ const AIIoTManagementProPage = () => {
     </>
   );
 };
-export default AiIotManagementProPage;
+export default AIIoTManagementProPage;

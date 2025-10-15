@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Bug, CheckCircle, Cloud, Code, Cpu, Database, FileText, GitBranch, Globe, Star, Terminal } from 'lucide-react';
 

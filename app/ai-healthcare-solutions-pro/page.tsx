@@ -1,8 +1,174 @@
-import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
-import { Ambulance, ArrowRight, Brain, CheckCircle, Heart, Hospital, Mail, Microscope, Phone, Pill, Play, Shield, Shield as ShieldIcon, Star, Stethoscope, UserCheck } from 'lucide-react';
+import { ArrowRight, CheckCircle, Mail, Phone, Play, Star, Shield } from 'lucide-react';
 
 const AIHealthcareSolutionsProPage = () => {
+  const isVisible = true;
+  
+  const features = [
+    {
+      title: "AI-Powered Diagnostics",
+      description: "Advanced machine learning algorithms for accurate medical diagnosis and treatment recommendations.",
+      icon: "🔬",
+      benefits: ["Symptom analysis", "Disease prediction", "Treatment recommendations", "Risk assessment"]
+    },
+    {
+      title: "Telemedicine Platform",
+      description: "Secure video consultations with integrated AI-powered health monitoring tools.",
+      icon: "📱",
+      benefits: ["Video consultations", "Remote monitoring", "Virtual care", "Patient engagement"]
+    },
+    {
+      title: "Predictive Analytics",
+      description: "Early disease detection and risk assessment using patient data and medical history.",
+      icon: "📊",
+      benefits: ["Early detection", "Risk assessment", "Population health", "Outcome prediction"]
+    },
+    {
+      title: "Electronic Health Records",
+      description: "Comprehensive digital patient records with AI-powered insights and recommendations.",
+      icon: "📋",
+      benefits: ["Patient records", "Data analysis", "Automated notes", "Interoperability"]
+    },
+    {
+      title: "Drug Interaction Checker",
+      description: "Real-time medication interaction analysis and dosage optimization.",
+      icon: "💊",
+      benefits: ["Drug interactions", "Dosage optimization", "Allergy checking", "Prescription management"]
+    },
+    {
+      title: "HIPAA Compliance",
+      description: "Enterprise-grade security and privacy protection for all patient data.",
+      icon: "🔒",
+      benefits: ["HIPAA compliance", "Data encryption", "Access controls", "Audit trails"]
+    }
+  ];
+
+
+  const useCases = [
+    {
+      title: "Hospitals & Clinics",
+      description: "Comprehensive AI-powered healthcare management for large medical facilities.",
+      features: ["Patient management", "Diagnostic assistance", "Treatment optimization"],
+      icon: "🏥",
+      benefits: ["Patient management", "Diagnostic assistance", "Treatment optimization"]
+    },
+    {
+      title: "Telemedicine",
+      description: "Remote healthcare services with AI-powered patient monitoring and consultation.",
+      features: ["Video consultations", "Remote monitoring", "Prescription management"],
+      icon: "📱",
+      benefits: ["Video consultations", "Remote monitoring", "Prescription management"]
+    },
+    {
+      title: "Specialized Care",
+      description: "AI tools for specialized medical fields like radiology, pathology, and cardiology.",
+      features: ["Image analysis", "Pattern recognition", "Diagnostic support"],
+      icon: "🔬",
+      benefits: ["Image analysis", "Pattern recognition", "Diagnostic support"]
+    },
+    {
+      title: "Preventive Care",
+      description: "Proactive health management and early disease detection systems.",
+      features: ["Health screening", "Risk assessment", "Lifestyle recommendations"],
+      icon: "🛡️",
+      benefits: ["Health screening", "Risk assessment", "Lifestyle recommendations"]
+    }
+  ];
+
+  const compliance = [
+    {
+      name: "HIPAA Compliant",
+      description: "Full compliance with healthcare privacy regulations"
+    },
+    {
+      name: "SOC 2 Type II Certified",
+      description: "Security and availability controls certification"
+    },
+    {
+      name: "ISO 27001 Certified",
+      description: "Information security management certification"
+    },
+    {
+      name: "GDPR Compliant",
+      description: "European data protection regulation compliance"
+    },
+    {
+      name: "FDA Approved",
+      description: "Medical device and software approval"
+    },
+    {
+      name: "HITRUST Certified",
+      description: "Healthcare industry security framework"
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$199",
+      period: "month",
+      description: "Perfect for small practices and individual practitioners",
+      features: [
+        "Up to 100 patients",
+        "Basic AI diagnostics",
+        "Standard telemedicine",
+        "Email support"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$499",
+      period: "month",
+      description: "Ideal for medium-sized healthcare facilities",
+      features: [
+        "Up to 500 patients",
+        "Advanced AI features",
+        "Full telemedicine suite",
+        "Priority support",
+        "Custom integrations"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "Custom",
+      period: "contact",
+      description: "Complete solution for large healthcare organizations",
+      features: [
+        "Unlimited patients",
+        "Full AI suite",
+        "White-label options",
+        "Dedicated support",
+        "Custom development",
+        "Advanced analytics"
+      ],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Dr. Michael Thompson",
+      role: "Chief Medical Officer",
+      company: "City General Hospital",
+      content: "AI Healthcare Solutions Pro has revolutionized our diagnostic accuracy. We've seen a 40% reduction in misdiagnoses.",
+      rating: 5
+    },
+    {
+      name: "Dr. Sarah Williams",
+      role: "Family Physician",
+      company: "Williams Family Practice",
+      content: "The telemedicine platform has made it so much easier to provide care to my patients, especially during busy periods.",
+      rating: 5
+    },
+    {
+      name: "Dr. James Rodriguez",
+      role: "Radiologist",
+      company: "Medical Imaging Center",
+      content: "The AI-powered image analysis has significantly improved our diagnostic speed and accuracy.",
+      rating: 5
+    }
+  ];
   return (
     <>
       { /* Animated Background */ }
@@ -150,7 +316,7 @@ const AIHealthcareSolutionsProPage = () => {
                     key={index } 
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <ShieldIcon className="w-6 h-6 text-white" />
+                      <Shield className="w-6 h-6 text-white" />
                     </div>
                     <div className="text-white font-semibold mb-2">{ item.name }</div>
                     <div className="text-cyan-400 text-sm">{ item.description }</div>
@@ -286,4 +452,4 @@ const AIHealthcareSolutionsProPage = () => {
     </>
   );
 };
-export default AiHealthcareSolutionsProPage;
+export default AIHealthcareSolutionsProPage;
