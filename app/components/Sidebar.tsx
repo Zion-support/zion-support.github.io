@@ -90,7 +90,42 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard', icon: Settings },
         { name: 'Smart CRM Automation', href: '/zion-smart-crm-automation', icon: Settings },
         { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager', icon: Settings },
-        { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker', icon: Settings }
+        { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker', icon: Settings },
+        { name: 'AI Code Assistant', href: '/zion-ai-code-assistant', icon: Settings },
+        { name: 'AI Content Moderator', href: '/zion-ai-content-moderator', icon: Settings },
+        { name: 'AI Meeting Transcriber', href: '/zion-ai-meeting-transcriber', icon: Settings },
+        { name: 'AI Translation Service', href: '/zion-ai-translation-service', icon: Settings },
+        { name: 'AI Video Generator', href: '/zion-ai-video-generator', icon: Settings },
+        { name: 'AI Voice Synthesis', href: '/zion-ai-voice-synthesis', icon: Settings },
+        { name: 'AI Image Generator', href: '/zion-ai-image-generator', icon: Settings },
+        { name: 'AI Task Scheduler', href: '/zion-ai-task-scheduler', icon: Settings },
+        { name: 'AI Website Analyzer', href: '/zion-ai-website-analyzer', icon: Settings },
+        { name: 'AI Predictive Analytics', href: '/zion-ai-predictive-analytics', icon: Settings },
+        { name: 'AI Document Analyzer', href: '/zion-ai-document-analyzer', icon: Settings },
+        { name: 'AI Customer Sentiment Tracker', href: '/zion-ai-customer-sentiment-tracker', icon: Settings },
+        { name: 'AI Customer Support Pro', href: '/zion-ai-customer-support-pro', icon: Settings },
+        { name: 'AI Email Marketing Pro', href: '/zion-ai-email-marketing-pro', icon: Settings },
+        { name: 'AI Workflow Automator', href: '/zion-ai-workflow-automator', icon: Settings },
+        { name: 'AI Customer Churn Predictor', href: '/zion-ai-customer-churn-predictor', icon: Settings }
+      ]
+    },
+    {
+      title: 'Enterprise Solutions',
+      items: [
+        { name: 'Blockchain Solutions Pro', href: '/zion-blockchain-solutions', icon: Settings },
+        { name: 'DevOps Automation Pro', href: '/zion-devops-automation', icon: Settings },
+        { name: 'IoT Solutions Pro', href: '/zion-iot-solutions', icon: Settings },
+        { name: 'Cybersecurity Audit', href: '/zion-cybersecurity-audit', icon: Settings },
+        { name: 'API Development Pro', href: '/zion-api-development', icon: Code },
+        { name: 'Data Lake Solutions', href: '/data-lake-solutions', icon: Settings },
+        { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: Settings },
+        { name: 'Edge Computing Solutions', href: '/edge-computing-solutions', icon: Settings },
+        { name: 'Augmented Reality Solutions', href: '/augmented-reality-solutions', icon: Settings },
+        { name: 'Virtual Reality Solutions', href: '/virtual-reality-solutions', icon: Settings },
+        { name: 'Robotic Process Automation', href: '/robotic-process-automation', icon: Settings },
+        { name: 'Low-Code Platform', href: '/low-code-platform', icon: Settings },
+        { name: 'Serverless Architecture', href: '/serverless-architecture', icon: Settings },
+        { name: 'Container Orchestration', href: '/container-orchestration', icon: Settings }
       ]
     },
     {

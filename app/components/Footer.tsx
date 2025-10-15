@@ -109,6 +109,7 @@ const Footer: React.FC = memo(() => {
           <div>
             <h4 className="text-md font-semibold mb-4">Zion AI Tools</h4>
             <ul className="space-y-2">
+              <li><Link to="/zion-ai-code-assistant" className="text-gray-300 hover:text-white">AI Code Assistant</Link></li>
               <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">Content Moderator</Link></li>
               <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">Customer Support Pro</Link></li>
               <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-white">Workflow Automator Pro</Link></li>
@@ -120,6 +121,12 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
               <li><Link to="/zion-ai-translation-service" className="text-gray-300 hover:text-white">Translation Service</Link></li>
               <li><Link to="/zion-ai-video-generator" className="text-gray-300 hover:text-white">Video Generator</Link></li>
+              <li><Link to="/zion-ai-voice-synthesis" className="text-gray-300 hover:text-white">Voice Synthesis</Link></li>
+              <li><Link to="/zion-ai-image-generator" className="text-gray-300 hover:text-white">Image Generator</Link></li>
+              <li><Link to="/zion-ai-meeting-transcriber" className="text-gray-300 hover:text-white">Meeting Transcriber</Link></li>
+              <li><Link to="/zion-ai-website-analyzer" className="text-gray-300 hover:text-white">Website Analyzer</Link></li>
+              <li><Link to="/zion-ai-predictive-analytics" className="text-gray-300 hover:text-white">Predictive Analytics</Link></li>
+              <li><Link to="/zion-ai-customer-sentiment-tracker" className="text-gray-300 hover:text-white">Customer Sentiment Tracker</Link></li>
             </ul>
           </div>
           
