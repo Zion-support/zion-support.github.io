@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -9,11 +9,6 @@ import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 
 // Page Components
 import HomePage from './app/page';
@@ -27,10 +22,7 @@ import SupportPage from './app/pages/SupportPage';
 import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
-import SolutionsPage from './app/pages/SolutionsPage';
-import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
 import AISolutionsPage from './app/ai-solutions/page';
-import ITSolutionsPage from './app/it-solutions/page';
 
 // Service Pages
 import AIServicesPage from './app/pages/AIServicesPage';
@@ -40,13 +32,13 @@ import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
 import CaseStudiesPage from './app/pages/CaseStudiesPage';
 import CareersPage from './app/pages/CareersPage';
 
-// Additional Pages
-import CybersecurityPage from './app/pages/CybersecurityPage';
-import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
-import MicroSaaSPage from './app/pages/MicroSaaSPage';
-import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
-import TeamPage from './app/pages/TeamPage';
-import DocumentationPage from './app/pages/DocumentationPage';
+// Additional Pages - commented out until components are created
+// import CybersecurityPage from './app/pages/CybersecurityPage';
+// import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
+// import MicroSaaSPage from './app/pages/MicroSaaSPage';
+// import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
+// import TeamPage from './app/pages/TeamPage';
+// import DocumentationPage from './app/pages/DocumentationPage';
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -94,17 +86,14 @@ function App() {
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
-                  <Route path="/ai-solutions" element={<AISolutionsPage />} />
-                  <Route path="/it-solutions" element={<ITSolutionsPage />} />
+                    <Route path="/ai-solutions" element={<AISolutionsPage />} />
                   <Route path="/blog" element={<BlogPage />} />
                   <Route path="/tutorials" element={<TutorialsPage />} />
                   <Route path="/demo" element={<DemoPage />} />
                   <Route path="/support" element={<SupportPage />} />
                   <Route path="/privacy" element={<PrivacyPage />} />
                   <Route path="/terms" element={<TermsPage />} />
-                  <Route path="/pricing" element={<PricingPage />} />
-                  <Route path="/solutions" element={<SolutionsPage />} />
+                    <Route path="/pricing" element={<PricingPage />} />
                   
                   {/* Service Pages */}
                   <Route path="/ai-services" element={<AIServicesPage />} />
@@ -114,19 +103,6 @@ function App() {
                   <Route path="/case-studies" element={<CaseStudiesPage />} />
                   <Route path="/careers" element={<CareersPage />} />
                   
-<<<<<<< HEAD
-=======
-                  {/* Additional Service Pages */}
-                  <Route path="/cybersecurity" element={<CybersecurityPage />} />
-                  <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
-                  <Route path="/micro-saas" element={<MicroSaaSPage />} />
-                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                  
-                  {/* Additional Pages */}
-                  <Route path="/team" element={<TeamPage />} />
-                  <Route path="/docs" element={<DocumentationPage />} />
-                  
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
                   {/* Catch all route */}
                   <Route path="*" element={
                     <div className="min-h-screen flex items-center justify-center bg-slate-900">
@@ -143,59 +119,16 @@ function App() {
               </ErrorBoundary>
               </main>
               <Footer />
-              <PerformanceMonitor />
-              <AccessibilityEnhancer />
+              <PerformanceMonitor>
+                <AccessibilityEnhancer>
+                  <div></div>
+                </AccessibilityEnhancer>
+              </PerformanceMonitor>
             </div>
           </div>
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
-<<<<<<< HEAD
-=======
-=======
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import LoadingSpinner from './app/components/LoadingSpinner';
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
->>>>>>> origin/main
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
-import LoadingSpinner from './app/components/LoadingSpinner';
-
-// Lazy load pages for better performance
-const Home = React.lazy(() => import('./app/Home'));
-const About = React.lazy(() => import('./app/about'));
-const Services = React.lazy(() => import('./app/services'));
-const Contact = React.lazy(() => import('./app/contact'));
-
-function App() {
-  return (
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-slate-900 text-white">
-          <ErrorBoundary>
-            <PerformanceMonitor>
-              <AccessibilityEnhancer>
-                <Navigation />
-                <main className="flex-1">
-                  <Suspense fallback={<LoadingSpinner />}>
-                    <Routes>
-                      <Route path="/" element={<Home />} />
-                      <Route path="/about" element={<About />} />
-                      <Route path="/services" element={<Services />} />
-                      <Route path="/contact" element={<Contact />} />
-                      <Route path="*" element={<div>404 - Page Not Found</div>} />
-                    </Routes>
-                  </Suspense>
-                </main>
-                <Footer />
-              </AccessibilityEnhancer>
-            </PerformanceMonitor>
-          </ErrorBoundary>
-        </div>
-      </Router>
-    </HelmetProvider>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
   );
 }
 
