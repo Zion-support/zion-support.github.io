@@ -12,6 +12,11 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2,
+      },
+      mangle: {
+        safari10: true,
       },
     },
     rollupOptions: {
@@ -20,11 +25,27 @@ export default defineConfig({
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
           ui: ['@heroicons/react', 'framer-motion', 'lucide-react'],
-          utils: ['clsx', 'tailwind-merge']
-        }
+          utils: ['clsx', 'tailwind-merge'],
+          analytics: ['web-vitals'],
+          helmet: ['react-helmet-async']
+        },
+        chunkFileNames: () => `js/[name]-[hash].js`,
+        entryFileNames: 'js/[name]-[hash].js',
+        assetFileNames: (assetInfo) => {
+          if (!assetInfo.name) return 'assets/[name]-[hash].[ext]';
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/\.(css)$/.test(assetInfo.name)) {
+            return `css/[name]-[hash].${ext}`;
+          }
+          return `assets/[name]-[hash].${ext}`;
+        },
       }
     },
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 800,
+    target: 'es2020',
+    cssCodeSplit: true,
+    reportCompressedSize: true,
   },
   server: {
     port: 3000,
@@ -40,11 +61,15 @@ export default defineConfig({
       'react-router-dom',
       '@heroicons/react',
       'framer-motion',
-      'lucide-react'
-    ]
+      'lucide-react',
+      'react-helmet-async',
+      'web-vitals'
+    ],
+    exclude: ['@vite/client', '@vite/env']
   },
   esbuild: {
     drop: ['console', 'debugger'],
+    pure: ['console.log', 'console.info', 'console.debug'],
   },
   css: {
     devSourcemap: true,

@@ -1,4 +1,4 @@
-import { Suspense, useEffect, lazy } from 'react'
+import { Suspense, useEffect, lazy, memo } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -40,18 +40,20 @@ import Footer from './app/components/Footer';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import EnhancedAccessibility from './app/components/EnhancedAccessibility';
+import EnhancedLoadingSpinner from './app/components/EnhancedLoadingSpinner';
 
-// Enhanced loading component
-const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
-      <p className="text-gray-600 animate-pulse">Loading...</p>
-    </div>
-  </div>
-)
+// Enhanced loading component with better UX
+const LoadingFallback = memo(() => (
+  <EnhancedLoadingSpinner 
+    size="xl" 
+    color="blue" 
+    text="Loading amazing content..." 
+    fullScreen 
+  />
+))
 
-export default function App() {
+const App = memo(() => {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
@@ -61,9 +63,30 @@ export default function App() {
       fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
       fontPreload.as = 'style'
       document.head.appendChild(fontPreload)
+      
+      // Preload critical images
+      const imagePreload = document.createElement('link')
+      imagePreload.rel = 'preload'
+      imagePreload.href = '/og-image.jpg'
+      imagePreload.as = 'image'
+      document.head.appendChild(imagePreload)
+    }
+
+    // Register service worker
+    const registerServiceWorker = () => {
+      if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+        navigator.serviceWorker.register('/sw.js')
+          .then((registration) => {
+            console.log('SW registered: ', registration);
+          })
+          .catch((registrationError) => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      }
     }
 
     preloadCriticalResources()
+    registerServiceWorker()
   }, [])
 
   return (
@@ -74,9 +97,10 @@ export default function App() {
             <Navigation />
             <Sidebar />
             
-            <main className="flex-1">
+            <main id="main-content" className="flex-1">
               <PerformanceMonitor />
               <AccessibilityEnhancer />
+              <EnhancedAccessibility />
               
               <Suspense fallback={<LoadingFallback />}>
                 <Routes>
@@ -160,4 +184,8 @@ export default function App() {
       </HelmetProvider>
     </GlobalErrorBoundary>
   )
-}
+})
+
+App.displayName = 'App'
+
+export default App
