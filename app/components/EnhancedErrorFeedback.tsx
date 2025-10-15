@@ -1,5 +1,6 @@
 import React from 'react';
 import { AlertTriangle, Send } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 interface ErrorFeedbackProps {
   error: Error;
@@ -21,68 +22,60 @@ const EnhancedErrorFeedback: React.FC<ErrorFeedbackProps> = ({
     }
   };
 
-export default function Page() {
   return (
     <>
       <Helmet>
-        <title>EnhancedErrorFeedback - Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedErrorFeedback solutions and services" />
-        <meta name="keywords" content="enhanced_errorfeedback" />
+        <title>Error - Zion Tech Group</title>
+        <meta name="description" content="An error occurred while loading the page" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">EnhancedErrorFeedback</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional EnhancedErrorFeedback solutions and services
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
-              <div className="bg-blue-50 border border-blue-200rounded-lgp-6">
-                <h3 className="text-lg font-semiboldtext-blue-900mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-                </div>
-        </div>
-              <div className="bg-green-50 border border-green-200rounded-lgp-6">
-                <h3 className="text-lg font-semiboldtext-green-900mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-                </div>
-        </div>
-              <div className="bg-purple-50 border border-purple-200rounded-lgp-6">
-                <h3 className="text-lg font-semiboldtext-purple-900mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-                </div>
-        </div>
-              </div>
-        </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="max-w-md w-full mx-auto p-8">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
-        </div>
+            
+            <h1 className="text-xl font-semibold text-white mb-2">
+              Something went wrong
+            </h1>
+            
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Please try again.
+            </p>
+            
+            <div className="flex space-x-3">
+              {onRetry && (
+                <button
+                  onClick={onRetry}
+                  className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-2 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+                >
+                  Try Again
+                </button>
+              )}
+              
+              <button
+                onClick={handleReport}
+                className="flex-1 bg-white/10 text-white py-2 px-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <Send className="w-4 h-4" />
+                Report Issue
+              </button>
+            </div>
+
+            {process.env.NODE_ENV === 'development' && (
+              <details className="mt-6 p-4 bg-gray-800/50 rounded-lg text-left">
+                <summary className="cursor-pointer font-medium text-gray-300 mb-2">
+                  Error Details (Development)
+                </summary>
+                <pre className="text-xs text-gray-400 overflow-auto">
+                  {error.toString()}
+                </pre>
+              </details>
+            )}
           </div>
         </div>
-        
-        {process.env.NODE_ENV === 'development' && (
-          <details className="mt-4 p-4 bg-gray-100 rounded-md">
-            <summary className="cursor-pointer font-medium text-gray-700">
-              Error Details (Development)
-            </summary>
-            <pre className="mt-2 text-xs text-gray-600 overflow-auto">
-              {error.toString()}
-            </pre>
-          </details>
-        )}
       </div>
-</>
+    </>
   );
 };
 

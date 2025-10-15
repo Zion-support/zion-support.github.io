@@ -17,24 +17,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-    },
-  ]
-}
       url: `${baseUrl}/it-solutions`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-      lastModified: newDate(),
-      changeFrequency:'yearly',
-      priority: 1},{
-      url: `${baseUrl}/ai-solutions`,
-      lastModified: newDate(),
-      changeFrequency:'monthly',
-      priority: 0.8},{
-      url: `${baseUrl}/it-solutions`,
-      lastModified: newDate(),
-      changeFrequency:'monthly',
-      priority: 0.8},
+    {
+      url: `${baseUrl}/cloud-solutions`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/cybersecurity`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/about`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    }
   ];
 }

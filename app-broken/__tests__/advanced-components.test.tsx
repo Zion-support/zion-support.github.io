@@ -1,32 +1,37 @@
 import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { HelmetProvider } from 'react-helmet-async';
 
 export default function Page() {
-  
   return (
-    
-<>    <div />
+    <div>
       <h1>Page Under Construction</h1>
       <p>This page is currently being updated.</p>
     </div>
-  )};
+  );
 }
-// Mock components;
-const AdvancedErrorBoundary = () => {
+
+// Mock components
+const AdvancedErrorBoundary = ({ children, onError, enableRetry = true }: { 
+  children: React.ReactNode; 
+  onError?: (error: Error) => void; 
+  enableRetry?: boolean;
+}) => {
   const [hasError, setHasError] = React.useState(false);
   const [error, setError] = React.useState<Error | null>(null);
 
   React.useEffect(() => {
-    const handleError = () => {
+    const handleError = (err: Error) => {
       setHasError(true);
-      setError(_error);
+      setError(err);
       if (onError) {
-        onError(_error);
+        onError(err);
       }
     };
 
-    // Simulate error boundary behavior;
+    // Simulate error boundary behavior
     try {
-      // This will catch unknown errors thrown by children;
+      // This will catch unknown errors thrown by children
     } catch (err) {
       handleError(err as Error);
     }
@@ -34,74 +39,73 @@ const AdvancedErrorBoundary = () => {
 
   if (hasError) {
     return (
-    
-<>      <div data-testid="_error-boundary'>';
+      <div data-testid="error-boundary">
         <h2>Unexpected Application Error!</h2>
         <p>Oops! Something went wrong</p>
-        {_error && (
-          <div />
-<h3 style={{ fontStyle: 'italic',}}>{_error.message}</h3>';
-            <pre style={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)',}}>';
+        {error && (
+          <div>
+            <h3 style={{ fontStyle: 'italic' }}>{error.message}</h3>
+            <pre style={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)' }}>
               {error.stack}
             </pre>
           </div>
         )}
         {enableRetry && (
-          <div />
+          <div>
             <button>Try Again</button>
             <button>Reload Page</button>
           </div>
         )}
       </div>
-    )};
+    );
   }
 
   return <React.Fragment>{children}</React.Fragment>;
 };
 
 const TestComponent = () => <div>Test Component</div>;
-const ErrorComponent = () => {;
-  throw new Error('Test _error');'
+const ErrorComponent = () => {
+  throw new Error('Test error');
 };
 
-describe('Advanced Components', () => {';
-  test('AdvancedErrorBoundary renders children when no _error', () => {';
+describe('Advanced Components', () => {
+  test('AdvancedErrorBoundary renders children when no error', () => {
     render(
-      <AdvancedErrorBoundary />
-        <TestComponent /></TestComponent>
+      <AdvancedErrorBoundary>
+        <TestComponent />
       </AdvancedErrorBoundary>
     );
-    expect(screen.getByText('Test Component')).toBeInTheDocument();'
+    expect(screen.getByText('Test Component')).toBeInTheDocument();
   });
 
-  test('AdvancedErrorBoundary shows _error UI when _error occurs', () => {';
-    const consoleSpy = jest.spyOn(console, '_error').mockImplementation(() => {});';
+  test('AdvancedErrorBoundary shows error UI when error occurs', () => {
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
     
     render(
-      <AdvancedErrorBoundary />
-        <ErrorComponent /></ErrorComponent>
+      <AdvancedErrorBoundary>
+        <ErrorComponent />
       </AdvancedErrorBoundary>
     );
-    ;
-    expect(screen.getByTestId('_error-boundary')).toBeInTheDocument();';
-    expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument();';
+    
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
+    expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument();
     consoleSpy.mockRestore();
   });
 
-  test('SEOEnhancer works with HelmetProvider', () => {';
+  test('SEOEnhancer works with HelmetProvider', () => {
     const SEOEnhancer = () => (
-      <Helmet />
+      <HelmetProvider>
         <title>Test Title</title>
-        <meta name="description" content="Test description' />';
-      </Helmet>
-    );
-;
-    render(
-      <HelmetProvider />
-        <SEOEnhancer /></SEOEnhancer>
+        <meta name="description" content="Test description" />
       </HelmetProvider>
     );
-    ;
-    expect(document.title).toBe('Test Title');'
+    
+    render(
+      <HelmetProvider>
+        <SEOEnhancer />
+      </HelmetProvider>
+    );
+    
+    expect(document.title).toBe('Test Title');
   });
 });

@@ -1,73 +1,37 @@
-require("@testing-library/jest-dom");
-const React = require("react");
+import '@testing-library/jest-dom';
 
-// Polyfill for TextEncoder/TextDecoder
+// Mock TextEncoder and TextDecoder
 const { TextEncoder, TextDecoder } = require('util');
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
-jest.mock('react-router-dom', () => {
-  const actual = jest.requireActual('react-router-dom');
-  const React = require('react');
-
-  return {
-    ...actual,
-    useLocation: () => ({
-      pathname: "/",
-      search: "",
-      hash: "",
-      state: null,
-    }),
-    useParams: () => ({}),
-    Link: ({ children, to, ...props }) => {
-      return React.createElement("a", { href: to, ...props }, children);
-    },
-    NavLink: ({ children, to, ...props }) => {
-      return React.createElement("a", { href: to, ...props }, children);
-    },
-    BrowserRouter: ({ children }) => children,
-    MemoryRouter: ({ children }) => {
-      const { createMemoryRouter, RouterProvider } = actual;
-      const router = createMemoryRouter(
-        [
-          {
-            path: "/",
-            element: children,
-          },
-        ],
-        {
-          initialEntries: ["/"],
-          initialIndex: 0,
-        },
-      );
-      return React.createElement(RouterProvider, { router });
-    },
-    RouterProvider: ({ router }) => null,
-  };
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
 });
 
+// Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
+  disconnect() {}
   observe() {}
   unobserve() {}
-  disconnect() {}
 };
 
-// Suppress console errors in tests
-const originalError = console.error;
-
-beforeAll(() => {
-  console.error = (...args) => {
-    if (
-      typeof args[0] === "string" &&
-      args[0].includes("Warning: ReactDOM.render is no longer supported")
-    ) {
-      return;
-    }
-    originalError.call(console, ...args);
-  };
-});
-
-afterAll(() => {
-  console.error = originalError;
-});
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
