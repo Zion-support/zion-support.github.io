@@ -4,7 +4,10 @@ export const usePerformanceMonitor = () => {
   const [metrics, setMetrics] = useState<Record<string, number>>({});
 
   const trackMetric = (name: string, value: number) => {
-    setMetrics((prev) => ({ ...prev, [name]: value }));
+    setMetrics((prev) => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
   useEffect(() => {
@@ -18,14 +21,13 @@ export const usePerformanceMonitor = () => {
           }));
         }
       });
-      
+
       observer.observe({ entryTypes: ['measure', 'navigation'] });
-      
+
       return () => {
         observer.disconnect();
       };
     }
-    
     return undefined;
   }, []);
 

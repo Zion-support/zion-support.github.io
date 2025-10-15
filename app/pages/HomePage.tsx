@@ -1,15 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import { 
-  ArrowRightIcon, 
-  PhoneIcon, 
-  EnvelopeIcon, 
-  MapPinIcon, 
-  RocketLaunchIcon, 
-  SparklesIcon, 
-  BoltIcon 
-} from '@heroicons/react/24/outline';
+import SEOHead from "../components/SEOHead";
+import FuturisticBackground from "../components/FuturisticBackground";
+import NeonButton from "../components/NeonButton";
+import AnimatedCard from "../components/AnimatedCard";
+import { services } from "../data/servicesData";
+import { ArrowRightIcon, PhoneIcon, EnvelopeIcon, MapPinIcon, RocketLaunchIcon, SparklesIcon, BoltIcon } from '@heroicons/react/24/outline';
 
 export default function HomePage() {
   const structuredData = {
@@ -25,171 +21,105 @@ export default function HomePage() {
     }
   };
 
-  const services = [
-    {
-      title: "AI Solutions",
-      description: "Advanced artificial intelligence solutions for business automation and optimization.",
-      icon: "🤖",
-      link: "/ai-solutions"
-    },
-    {
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets and data.",
-      icon: "🛡️",
-      link: "/cybersecurity"
-    },
-    {
-      title: "Cloud Infrastructure",
-      description: "Scalable and secure cloud solutions for modern businesses.",
-      icon: "☁️",
-      link: "/cloud-infrastructure"
-    },
-    {
-      title: "Digital Transformation",
-      description: "Transform your business with cutting-edge technology solutions.",
-      icon: "🚀",
-      link: "/digital-transformation"
-    }
-  ];
-
   return (
     <>
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide." />
-        <meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions" />
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-          <div className="relative z-10 container mx-auto px-4 text-center">
-            <div className="max-w-5xl mx-auto">
-              {/* Animated Title */}
-              <div className="mb-8">
-                <h1 className="text-7xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent animate-pulse">
-                  Zion Tech Group
-                </h1>
-                <div className="flex items-center justify-center gap-4 mb-4">
-                  <SparklesIcon className="w-8 h-8 text-purple-400 animate-bounce" />
-                  <span className="text-2xl md:text-3xl font-semibold text-white">
-                    Advanced AI & IT Solutions
-                  </span>
-                  <BoltIcon className="w-8 h-8 text-cyan-400 animate-bounce" />
-                </div>
-                <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                  Empowering businesses with cutting-edge technology solutions for the digital age
-                </p>
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Get Started
-                  <ArrowRightIcon className="ml-2 h-5 w-5" />
-                </Link>
-                <Link
-                  to="/about"
-                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
-                >
-                  Learn More
-                </Link>
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">500+</div>
-                  <div className="text-gray-300">Projects Completed</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">50+</div>
-                  <div className="text-gray-300">Happy Clients</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">99.9%</div>
-                  <div className="text-gray-300">Uptime</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
-                  <div className="text-gray-300">Support</div>
-                </div>
+      <SEOHead 
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
+        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
+        structuredData={structuredData}
+      />
+      <FuturisticBackground />
+      
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className="max-w-5xl mx-auto">
+            {/* Animated Title */}
+            <div className="mb-8">
+              <h1 className="text-7xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent animate-pulse">
+                Zion Tech Group
+              </h1>
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <SparklesIcon className="w-8 h-8 text-purple-400 animate-bounce" />
+                <BoltIcon className="w-8 h-8 text-cyan-400 animate-bounce delay-100" />
+                <RocketLaunchIcon className="w-8 h-8 text-pink-400 animate-bounce delay-200" />
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Services</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive technology solutions designed to transform your business and drive growth
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
-                >
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-400 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  <Link
-                    to={service.link}
-                    className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
-                  >
-                    Learn More
-                    <ArrowRightIcon className="ml-2 h-4 w-4" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our technology solutions can help you achieve your business goals
+            <p className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed font-light">
+              Advanced AI and IT Solutions for the Future
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+1234567890"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
+              Empowering businesses with cutting-edge artificial intelligence, cybersecurity, 
+              cloud infrastructure, and digital transformation solutions.
+            </p>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <NeonButton 
+                to="/contact" 
+                className="text-lg px-8 py-4"
               >
-                <PhoneIcon className="mr-2 h-5 w-5" />
-                Call Us
-              </a>
-              <a
-                href="mailto:info@ziontechgroup.com"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
+                Get Started Today
+                <ArrowRightIcon className="w-5 h-5 ml-2" />
+              </NeonButton>
+              <Link 
+                to="/services" 
+                className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
               >
-                <EnvelopeIcon className="mr-2 h-5 w-5" />
-                Email Us
-              </a>
+                Explore Services
+              </Link>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-4 bg-black/50 backdrop-blur-sm">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Our <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Services</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <AnimatedCard key={index} service={service} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-purple-900/20 to-cyan-900/20">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-8">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+            Let's discuss how our AI and IT solutions can help you achieve your goals.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex items-center text-white">
+              <PhoneIcon className="w-6 h-6 mr-3 text-purple-400" />
+              <span>+1 (302) 464-0950</span>
+            </div>
+            <div className="flex items-center text-white">
+              <EnvelopeIcon className="w-6 h-6 mr-3 text-cyan-400" />
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+            <div className="flex items-center text-white">
+              <MapPinIcon className="w-6 h-6 mr-3 text-pink-400" />
+              <span>United States</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

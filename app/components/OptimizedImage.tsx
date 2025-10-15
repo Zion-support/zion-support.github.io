@@ -47,10 +47,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           observer.disconnect();
         }
       },
-      {
-        threshold: 0.1,
-        rootMargin: '50px'
-      }
+      { threshold: 0.1, rootMargin: '50px' }
     );
 
     if (imgRef.current) {
@@ -76,7 +73,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('http')) {
       return originalSrc;
     }
-    
     // For local images, you could implement image optimization here
     // This is a placeholder for actual optimization logic
     return originalSrc;

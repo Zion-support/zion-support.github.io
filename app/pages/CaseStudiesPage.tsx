@@ -113,64 +113,59 @@ const CaseStudiesPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Discover how we've helped businesses across various industries transform their operations 
-              with cutting-edge AI and IT solutions.
+              and achieve remarkable results with our technology solutions.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">
+                Start Your Project
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+                View More Cases
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Case Studies Grid */}
-      <section className="py-20 px-4">
+      <section className="py-16 px-4">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8">
             {caseStudies.map((study, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300"
-              >
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-2xl font-bold text-white">{study.title}</h3>
-                    <span className="text-sm text-gray-300 bg-purple-600 px-3 py-1 rounded-full">
-                      {study.industry}
-                    </span>
-                  </div>
-                  <div className="flex items-center text-gray-300 mb-2">
-                    <Users className="w-4 h-4 mr-2" />
-                    <span className="text-sm">{study.client}</span>
-                  </div>
-                  <div className="flex items-center text-gray-300">
-                    <Clock className="w-4 h-4 mr-2" />
-                    <span className="text-sm">{study.duration}</span>
-                  </div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">
+                    {study.industry}
+                  </span>
+                  <span className="text-gray-400 text-sm">{study.duration}</span>
                 </div>
-
+                
+                <h3 className="text-2xl font-bold text-white mb-2">{study.title}</h3>
+                <p className="text-gray-400 mb-4">{study.client}</p>
+                
                 <div className="mb-6">
-                  <h4 className="text-white font-semibold mb-2">Challenge:</h4>
-                  <p className="text-gray-300 text-sm mb-4">{study.challenge}</p>
+                  <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
+                  <p className="text-gray-300 mb-4">{study.challenge}</p>
                   
-                  <h4 className="text-white font-semibold mb-2">Solution:</h4>
-                  <p className="text-gray-300 text-sm">{study.solution}</p>
+                  <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
+                  <p className="text-gray-300 mb-4">{study.solution}</p>
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="text-white font-semibold mb-3 flex items-center">
-                    <TrendingUp className="w-4 h-4 mr-2" />
-                    Results:
-                  </h4>
-                  <ul className="space-y-2">
+                  <h4 className="text-lg font-semibold text-white mb-3">Results</h4>
+                  <div className="grid grid-cols-2 gap-2">
                     {study.results.map((result, resultIndex) => (
-                      <li key={resultIndex} className="flex items-center text-gray-300 text-sm">
-                        <div className="w-2 h-2 bg-green-400 rounded-full mr-3 flex-shrink-0" />
+                      <div key={resultIndex} className="flex items-center text-sm text-gray-300">
+                        <TrendingUp className="w-4 h-4 text-green-400 mr-2" />
                         {result}
-                      </li>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
 
-                <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center">
+                <button className="w-full bg-gradient-to-r from-purple-500 to-cyan-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-600 transition-all duration-300">
                   Read Full Case Study
-                  <ArrowRight className="w-4 h-4 ml-2" />
                 </button>
               </div>
             ))}
@@ -179,20 +174,18 @@ const CaseStudiesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-900 to-cyan-900">
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-900 to-cyan-900">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Start Your Success Story?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let us help you achieve similar results with our proven AI and IT solutions.
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Start Your Success Story?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let's discuss how we can help transform your business with our proven technology solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-900 font-medium py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
-              Get Started
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Get Started Today
             </button>
-            <button className="border border-white text-white font-medium py-3 px-8 rounded-lg hover:bg-white hover:text-purple-900 transition-colors">
-              View Portfolio
+            <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+              Schedule Consultation
             </button>
           </div>
         </div>
