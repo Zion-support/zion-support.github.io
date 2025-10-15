@@ -60,6 +60,49 @@ const Sidebar: React.FC = () => {
             </Link>
           </div>
           
+          <div className="space-y-1 mt-6">
+            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">AI Tools</div>
+            <Link to="/zion-ai-content-moderator" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Content Moderator
+            </Link>
+            <Link to="/zion-ai-customer-churn-predictor" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Churn Predictor
+            </Link>
+            <Link to="/zion-ai-workflow-automator" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Workflow Automator
+            </Link>
+            <Link to="/zion-ai-financial-forecaster" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Financial Forecaster
+            </Link>
+            <Link to="/zion-ai-sales-predictor" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Sales Predictor
+            </Link>
+            <Link to="/zion-ai-customer-support-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Customer Support Pro
+            </Link>
+            <Link to="/zion-ai-email-marketing-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Email Marketing Pro
+            </Link>
+            <Link to="/zion-ai-social-scheduler-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Social Scheduler Pro
+            </Link>
+            <Link to="/zion-ai-task-scheduler" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Task Scheduler
+            </Link>
+            <Link to="/zion-ai-meeting-transcriber" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Meeting Transcriber
+            </Link>
+            <Link to="/zion-ai-inventory-optimizer-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Inventory Optimizer Pro
+            </Link>
+            <Link to="/zion-customer-satisfaction-monitor" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Satisfaction Monitor
+            </Link>
+            <Link to="/zion-smart-expense-tracker" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Expense Tracker
+            </Link>
+          </div>
+          
           <div className="mb-4">
             <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Company</h3>
             <Link to="/about" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
