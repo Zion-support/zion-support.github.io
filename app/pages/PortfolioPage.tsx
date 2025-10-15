@@ -1,29 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Zap,
-  Brain,
-  Cpu,
-  Cloud,
-  Shield,
-  Smartphone,
-  BarChart3,
-  Target,
-  Rocket,
-  Users,
-  Award,
-  Clock,
-  Globe,
-  Lock,
-  ExternalLink,
-  Github,
-  Filter,
-  Search
-} from 'lucide-react';
+import { Star, Brain, Cloud, Target, Github, Search } from "lucide-react";
 
 const PortfolioPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -282,7 +258,7 @@ const PortfolioPage: React.FC = () => {
       <section className="py-20 bg-slate-800">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat) => (
               <div key={index} className="text-center">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
@@ -382,7 +358,7 @@ const PortfolioPage: React.FC = () => {
                   <div className="mb-4">
                     <h4 className="text-white font-medium mb-2 text-sm">Technologies:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, index) => (
+                      {project.technologies.map((tech) => (
                         <span key={index} className="bg-slate-600 text-gray-300 px-2 py-1 rounded text-xs">
                           {tech}
                         </span>
@@ -394,7 +370,7 @@ const PortfolioPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-white font-medium mb-2 text-sm">Key Results:</h4>
                     <ul className="space-y-1">
-                      {project.results.slice(0, 2).map((result, index) => (
+                      {project.results.slice(0, 2).map((result) => (
                         <li key={index} className="flex items-center text-green-400 text-sm">
                           <CheckCircle className="w-3 h-3 mr-2 flex-shrink-0" />
                           {result}

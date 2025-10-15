@@ -1,42 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Zap, 
-  Brain, 
-  Server, 
-  Globe, 
-  Shield, 
-  Code, 
-  Database, 
-  Smartphone,
-  BarChart3,
-  Users,
-  Settings,
-  Award,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  TrendingUp,
-  Target,
-  Lightbulb,
-  Rocket,
-  Cloud,
-  Lock,
-  Wifi,
-  Monitor,
-  HardDrive,
-  Layers,
-  MessageSquare,
-  Eye,
-  FileText,
-  Network,
-  X
-} from 'lucide-react';
+import { Brain, Server, Star, Target, Cloud, Wifi, Monitor, HardDrive, Layers, MessageSquare, X } from "lucide-react";
 
 const PricingPage: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
@@ -386,7 +349,7 @@ const PricingPage: React.FC = () => {
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {filteredPricing.map((service, index) => (
+            {filteredPricing.map((service) => (
               <div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10 group relative ${
                 service.popular ? 'ring-2 ring-purple-500' : ''
               }`}>

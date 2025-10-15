@@ -1,7 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Shield, CheckCircle, ArrowRight } from 'lucide-react';
+import {  } from "lucide-react";
 
 const CybersecurityPage: React.FC = () => {
   return (

@@ -1,38 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Server, 
-  Shield, 
-  Cloud, 
-  Code, 
-  Database, 
-  Smartphone,
-  BarChart3,
-  Users,
-  Settings,
-  Award,
-  Clock,
-  TrendingUp,
-  Target,
-  Lightbulb,
-  Rocket,
-  Globe,
-  Lock,
-  Wifi,
-  Monitor,
-  HardDrive,
-  Layers,
-  MessageSquare,
-  Eye,
-  FileText,
-  Network,
-  Zap,
-  Cpu,
-  Smartphone as Mobile
-} from 'lucide-react';
+import {  } from "lucide-react";
 
 const ITSolutionsPage: React.FC = () => {
   const itServices = [
@@ -349,7 +316,7 @@ const ITSolutionsPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map((useCase) => (
               <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
                 <div className="mb-4 group-hover:scale-110 transition-transform">
                   {useCase.icon}
@@ -387,7 +354,7 @@ const ITSolutionsPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {itServices.map((service, index) => (
+            {itServices.map((service) => (
               <div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10 group relative ${
                 service.popular ? 'ring-2 ring-blue-500' : ''
               }`}>
@@ -465,7 +432,7 @@ const ITSolutionsPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map((tier) => (
               <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${
                 tier.popular ? 'ring-2 ring-blue-500 bg-slate-700/50' : ''
               }`}>

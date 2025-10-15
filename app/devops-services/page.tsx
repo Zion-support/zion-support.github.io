@@ -1,19 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Code, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  ArrowRight, 
-  CheckCircle, 
-  Users, 
-  BarChart3,
-  Clock,
-  Globe,
-  Database,
-  Cpu
-} from 'lucide-react';
+import {  } from "lucide-react";
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -171,7 +157,7 @@ const DevOpsServicesPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <FuturisticCard key={index} className="h-full">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -215,7 +201,7 @@ const DevOpsServicesPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit) => (
               <div key={index} className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   {benefit.icon}
@@ -240,7 +226,7 @@ const DevOpsServicesPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-            {process.map((step, index) => (
+            {process.map((step) => (
               <div key={index} className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
                   {step.step}
