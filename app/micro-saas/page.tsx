@@ -14,7 +14,8 @@ import {
   Clock,
   Globe,
   Package,
-  Heart
+  Heart,
+  Mail
 } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
@@ -22,66 +23,141 @@ const MicroSaasPage: React.FC = () => {
     {
       id: 'zion-content-studio',
       title: 'Zion Content Studio',
-      description: 'AI-powered content creation platform for blogs, social media, and marketing materials.',
+      description: 'AI-powered content creation platform for blogs, social media, and marketing materials with advanced NLP and SEO optimization.',
       icon: Package,
-      features: ['AI Writing Assistant', 'Content Templates', 'SEO Optimization', 'Multi-platform Publishing'],
+      features: ['AI Writing Assistant', 'Content Templates', 'SEO Optimization', 'Multi-platform Publishing', 'Brand Voice Training', 'Content Calendar', 'Plagiarism Checker', 'Multi-language Support'],
       price: '$29/month',
+      originalPrice: '$49/month',
       popular: true,
       category: 'Content Creation',
+      freeTrial: '14 days',
+      setupTime: '5 minutes',
+      integrations: ['WordPress', 'Shopify', 'HubSpot', 'Mailchimp', 'Social Media APIs'],
+      useCases: ['Blog Management', 'Social Media Content', 'Email Marketing', 'Product Descriptions', 'SEO Content']
     },
     {
       id: 'zion-ai-crm-pro',
       title: 'Zion AI CRM Pro',
-      description: 'Intelligent customer relationship management with AI-powered insights and automation.',
+      description: 'Intelligent customer relationship management with AI-powered insights, automation, and predictive analytics for sales teams.',
       icon: Users,
-      features: ['Lead Scoring', 'Automated Follow-ups', 'Sales Analytics', 'Integration Hub'],
+      features: ['Lead Scoring', 'Automated Follow-ups', 'Sales Analytics', 'Integration Hub', 'Pipeline Management', 'Email Tracking', 'Call Recording', 'Custom Fields'],
       price: '$49/month',
+      originalPrice: '$79/month',
       popular: false,
       category: 'CRM & Sales',
+      freeTrial: '30 days',
+      setupTime: '15 minutes',
+      integrations: ['Gmail', 'Outlook', 'Slack', 'Zoom', 'Calendly', 'Stripe', 'PayPal'],
+      useCases: ['Lead Management', 'Sales Pipeline', 'Customer Support', 'Marketing Automation', 'Revenue Tracking']
     },
     {
       id: 'zion-inventory-smart',
       title: 'Zion Inventory Smart',
-      description: 'Smart inventory management with predictive analytics and automated reordering.',
+      description: 'Smart inventory management with predictive analytics, automated reordering, and real-time tracking across multiple locations.',
       icon: BarChart3,
-      features: ['Predictive Analytics', 'Auto Reordering', 'Multi-location', 'Real-time Tracking'],
+      features: ['Predictive Analytics', 'Auto Reordering', 'Multi-location', 'Real-time Tracking', 'Barcode Scanning', 'Supplier Management', 'Cost Analysis', 'Low Stock Alerts'],
       price: '$39/month',
+      originalPrice: '$59/month',
       popular: false,
       category: 'Inventory Management',
+      freeTrial: '21 days',
+      setupTime: '30 minutes',
+      integrations: ['QuickBooks', 'Xero', 'Shopify', 'WooCommerce', 'Amazon', 'eBay'],
+      useCases: ['Retail Management', 'E-commerce', 'Warehouse Operations', 'Supply Chain', 'Cost Control']
     },
     {
       id: 'ai-financial-analytics-pro',
       title: 'AI Financial Analytics Pro',
-      description: 'Advanced financial reporting and analysis with AI-powered insights and forecasting.',
+      description: 'Advanced financial reporting and analysis with AI-powered insights, forecasting, and automated compliance reporting.',
       icon: BarChart3,
-      features: ['Financial Forecasting', 'Expense Tracking', 'Tax Preparation', 'Investment Analysis'],
+      features: ['Financial Forecasting', 'Expense Tracking', 'Tax Preparation', 'Investment Analysis', 'Cash Flow Management', 'Budget Planning', 'Audit Trail', 'Compliance Reports'],
       price: '$59/month',
+      originalPrice: '$99/month',
       popular: false,
       category: 'Financial Management',
+      freeTrial: '14 days',
+      setupTime: '20 minutes',
+      integrations: ['QuickBooks', 'Xero', 'Stripe', 'PayPal', 'Bank APIs', 'Tax Software'],
+      useCases: ['Financial Planning', 'Tax Preparation', 'Investment Analysis', 'Expense Management', 'Compliance']
     },
     {
       id: 'zion-performance-monitor',
       title: 'Zion Performance Monitor',
-      description: 'Employee performance tracking and analytics with goal setting and progress monitoring.',
+      description: 'Employee performance tracking and analytics with goal setting, progress monitoring, and team collaboration tools.',
       icon: Users,
-      features: ['Goal Setting', 'Performance Analytics', 'Team Collaboration', 'Progress Tracking'],
+      features: ['Goal Setting', 'Performance Analytics', 'Team Collaboration', 'Progress Tracking', '360 Reviews', 'Skill Assessment', 'Training Plans', 'Recognition System'],
       price: '$19/month',
+      originalPrice: '$29/month',
       popular: false,
       category: 'HR & Performance',
+      freeTrial: '30 days',
+      setupTime: '10 minutes',
+      integrations: ['Slack', 'Microsoft Teams', 'Google Workspace', 'Zoom', 'Calendly'],
+      useCases: ['Performance Reviews', 'Goal Tracking', 'Team Management', 'Skill Development', 'Employee Engagement']
     },
     {
       id: 'zion-ai-marketing-automation',
       title: 'Zion AI Marketing Automation',
-      description: 'Comprehensive marketing automation platform with AI-driven campaign optimization.',
+      description: 'Comprehensive marketing automation platform with AI-driven campaign optimization, personalization, and multi-channel orchestration.',
       icon: Zap,
-      features: ['Email Campaigns', 'Social Media Automation', 'Lead Nurturing', 'A/B Testing'],
+      features: ['Email Campaigns', 'Social Media Automation', 'Lead Nurturing', 'A/B Testing', 'Personalization Engine', 'Behavioral Triggers', 'Attribution Tracking', 'ROI Analytics'],
       price: '$79/month',
+      originalPrice: '$129/month',
       popular: false,
       category: 'Marketing',
+      freeTrial: '14 days',
+      setupTime: '25 minutes',
+      integrations: ['Mailchimp', 'HubSpot', 'Salesforce', 'Facebook', 'Google Ads', 'LinkedIn'],
+      useCases: ['Email Marketing', 'Social Media Management', 'Lead Generation', 'Customer Retention', 'Campaign Optimization']
     },
+    {
+      id: 'zion-ai-email-assistant',
+      title: 'Zion AI Email Assistant',
+      description: 'AI-powered email management with smart categorization, automated responses, and intelligent scheduling for improved productivity.',
+      icon: Mail,
+      features: ['Smart Categorization', 'Auto Responses', 'Email Scheduling', 'Priority Detection', 'Template Library', 'Sentiment Analysis', 'Follow-up Reminders', 'Spam Filtering'],
+      price: '$24/month',
+      originalPrice: '$39/month',
+      popular: true,
+      category: 'Productivity',
+      freeTrial: '21 days',
+      setupTime: '5 minutes',
+      integrations: ['Gmail', 'Outlook', 'Apple Mail', 'Thunderbird', 'Slack'],
+      useCases: ['Email Management', 'Customer Support', 'Sales Follow-ups', 'Team Communication', 'Inbox Organization']
+    },
+    {
+      id: 'zion-ai-customer-sentiment-tracker',
+      title: 'Zion AI Customer Sentiment Tracker',
+      description: 'Real-time customer sentiment analysis across all channels with automated alerts and actionable insights for customer success teams.',
+      icon: Heart,
+      features: ['Real-time Analysis', 'Multi-channel Monitoring', 'Sentiment Scoring', 'Alert System', 'Trend Analysis', 'Competitor Tracking', 'Custom Dashboards', 'API Access'],
+      price: '$34/month',
+      originalPrice: '$54/month',
+      popular: false,
+      category: 'Customer Analytics',
+      freeTrial: '14 days',
+      setupTime: '15 minutes',
+      integrations: ['Zendesk', 'Intercom', 'Freshdesk', 'Twitter', 'Facebook', 'Google Reviews'],
+      useCases: ['Customer Feedback', 'Brand Monitoring', 'Competitor Analysis', 'Crisis Management', 'Product Development']
+    },
+    {
+      id: 'zion-ai-financial-crime-detection',
+      title: 'Zion AI Financial Crime Detection',
+      description: 'Advanced fraud detection and financial crime prevention using machine learning algorithms and real-time transaction monitoring.',
+      icon: Shield,
+      features: ['Fraud Detection', 'Transaction Monitoring', 'Risk Scoring', 'Compliance Reporting', 'Real-time Alerts', 'Pattern Recognition', 'Regulatory Updates', 'Audit Trails'],
+      price: '$149/month',
+      originalPrice: '$249/month',
+      popular: false,
+      category: 'Security & Compliance',
+      freeTrial: '30 days',
+      setupTime: '45 minutes',
+      integrations: ['Banking APIs', 'Payment Processors', 'Compliance Tools', 'Reporting Systems'],
+      useCases: ['Fraud Prevention', 'Compliance', 'Risk Management', 'Transaction Monitoring', 'Regulatory Reporting']
+    }
   ];
 
-  const categories = ['All', 'Content Creation', 'CRM & Sales', 'Inventory Management', 'Financial Management', 'HR & Performance', 'Marketing'];
+  const categories = ['All', 'Content Creation', 'CRM & Sales', 'Inventory Management', 'Financial Management', 'HR & Performance', 'Marketing', 'Productivity', 'Customer Analytics', 'Security & Compliance'];
 
   const benefits = [
     {
@@ -198,7 +274,7 @@ const MicroSaasPage: React.FC = () => {
                 return (
                   <div
                     key={product.id}
-                    className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 ${
+                    className={`cyber-card hover:scale-105 transition-all duration-300 ${
                       product.popular 
                         ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' 
                         : 'border-cyan-500/20'
@@ -206,7 +282,7 @@ const MicroSaasPage: React.FC = () => {
                   >
                     {product.popular && (
                       <div className="flex items-center justify-center mb-4">
-                        <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center space-x-1">
+                        <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center space-x-1">
                           <Star className="w-4 h-4" />
                           <span>Most Popular</span>
                         </span>
@@ -214,39 +290,71 @@ const MicroSaasPage: React.FC = () => {
                     )}
                     
                     <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                         <IconComponent className="w-6 h-6 text-cyan-400" />
                       </div>
-                      <span className="px-3 py-1 bg-slate-700 text-gray-300 text-sm rounded-full">
+                      <span className="px-3 py-1 bg-slate-700/50 text-gray-300 text-sm rounded-full border border-cyan-500/20">
                         {product.category}
                       </span>
                     </div>
                     
-                    <h3 className="text-xl font-bold text-white mb-3">{product.title}</h3>
-                    <p className="text-gray-300 mb-6">{product.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-3 holographic-text">{product.title}</h3>
+                    <p className="text-gray-300 mb-6 text-sm leading-relaxed">{product.description}</p>
                     
-                    <ul className="space-y-2 mb-6">
-                      {product.features.map((feature, index) => (
-                        <li key={index} className="flex items-center space-x-2 text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    {/* Pricing */}
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center space-x-2">
+                        <span className="text-2xl font-bold text-cyan-400">{product.price}</span>
+                        {product.originalPrice && (
+                          <span className="text-gray-400 text-sm line-through">{product.originalPrice}</span>
+                        )}
+                      </div>
+                      <div className="text-right">
+                        <div className="text-cyan-400 text-sm font-semibold">{product.freeTrial} Free Trial</div>
+                        <div className="text-gray-400 text-xs">Setup in {product.setupTime}</div>
+                      </div>
+                    </div>
                     
-                    <div className="flex items-center justify-between mb-6">
-                      <span className="text-2xl font-bold text-cyan-400">{product.price}</span>
-                      <div className="flex items-center space-x-1 text-gray-400 text-sm">
-                        <Clock className="w-4 h-4" />
-                        <span>Free Trial</span>
+                    {/* Key Features */}
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features:</h4>
+                      <ul className="space-y-1">
+                        {product.features.slice(0, 4).map((feature, index) => (
+                          <li key={index} className="flex items-center space-x-2 text-gray-300 text-sm">
+                            <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                        {product.features.length > 4 && (
+                          <li className="text-cyan-400 text-sm font-medium">
+                            +{product.features.length - 4} more features
+                          </li>
+                        )}
+                      </ul>
+                    </div>
+                    
+                    {/* Integrations */}
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Integrations:</h4>
+                      <div className="flex flex-wrap gap-1">
+                        {product.integrations.slice(0, 3).map((integration, index) => (
+                          <span key={index} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded border border-cyan-500/20">
+                            {integration}
+                          </span>
+                        ))}
+                        {product.integrations.length > 3 && (
+                          <span className="px-2 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded border border-cyan-500/20">
+                            +{product.integrations.length - 3} more
+                          </span>
+                        )}
                       </div>
                     </div>
                     
                     <Link
                       to={`/${product.id}`}
-                      className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                      className="w-full cyber-button text-center py-3 px-6 text-sm font-semibold flex items-center justify-center space-x-2"
                     >
-                      <span>Try Free</span>
+                      <span>Start Free Trial</span>
                       <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>

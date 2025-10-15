@@ -1,28 +1,60 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowRight, Brain, Shield, Zap, Globe } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
-    services: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'IT Services', href: '/services' },
-      { name: 'Micro SAAS', href: '/micro-saas' },
-      { name: '5G Solutions', href: '/5g-solutions' },
+    aiServices: [
+      { name: 'AI Analytics', href: '/ai-analytics' },
+      { name: 'AI Content Generation', href: '/ai-content-generation' },
+      { name: 'AI Customer Support', href: '/ai-customer-support' },
+      { name: 'AI Cybersecurity', href: '/ai-cybersecurity' },
+      { name: 'AI Data Analytics', href: '/ai-data-analytics' },
+      { name: 'AI Marketing Automation', href: '/ai-marketing-automation' },
+      { name: 'AI Voice Assistant', href: '/ai-voice-assistant' },
+      { name: 'AI Workflow Automation', href: '/ai-workflow-automation' },
+    ],
+    itServices: [
+      { name: 'Cloud Migration', href: '/cloud-migration' },
+      { name: 'DevOps Services', href: '/devops-services' },
+      { name: 'IT Consulting', href: '/it-consulting' },
+      { name: 'Network Security', href: '/network-security' },
+      { name: 'Software Development', href: '/software-development' },
+      { name: 'System Integration', href: '/system-integration' },
+      { name: 'Web Development', href: '/web-development' },
+    ],
+    microSaas: [
+      { name: 'Zion Content Studio', href: '/zion-content-studio' },
+      { name: 'Zion AI CRM Pro', href: '/zion-ai-crm-pro' },
+      { name: 'Zion Inventory Smart', href: '/zion-inventory-smart' },
+      { name: 'AI Financial Analytics', href: '/ai-financial-analytics-pro' },
+      { name: 'Zion Performance Monitor', href: '/zion-performance-monitor' },
+      { name: 'Zion AI Marketing', href: '/zion-ai-marketing-automation' },
+    ],
+    fiveGSolutions: [
+      { name: '5G Network Infrastructure', href: '/5g-network-infrastructure' },
+      { name: '5G Edge Computing', href: '/5g-edge-computing' },
+      { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
+      { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
+      { name: '5G Private Networks', href: '/5g-private-networks' },
+      { name: '5G Mobile Applications', href: '/5g-mobile-applications' },
     ],
     company: [
       { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/team' },
-      { name: 'Careers', href: '/careers' },
+      { name: 'Portfolio', href: '/portfolio' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Support', href: '/support' },
       { name: 'Contact', href: '/contact' },
     ],
     resources: [
-      { name: 'Blog', href: '/blog' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'Support', href: '/support' },
       { name: 'Documentation', href: '/docs' },
+      { name: 'API Reference', href: '/api-docs' },
+      { name: 'Tutorials', href: '/tutorials' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'White Papers', href: '/white-papers' },
+      { name: 'Webinars', href: '/webinars' },
     ],
     legal: [
       { name: 'Privacy Policy', href: '/privacy' },
@@ -35,11 +67,11 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 py-16 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <h3 className="text-2xl font-bold text-white">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 holographic-text">
                 Zion Tech Group
               </span>
             </h3>
@@ -47,7 +79,7 @@ const Footer: React.FC = () => {
               Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology.
             </p>
             <div className="flex space-x-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center cyber-card">
                 <span className="text-white text-sm font-bold">Z</span>
               </div>
               <div className="flex flex-col justify-center">
@@ -57,24 +89,75 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* AI Services */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Services</h4>
-            <div className="space-y-3">
-              {footerLinks.services.map((link) => (
-                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+            <h4 className="text-lg font-semibold text-cyan-400 flex items-center">
+              <Brain className="w-5 h-5 mr-2" />
+              AI Services
+            </h4>
+            <div className="space-y-2">
+              {footerLinks.aiServices.slice(0, 6).map((link) => (
+                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm hover:translate-x-1">
                   {link.name}
                 </Link>
               ))}
             </div>
           </div>
 
+          {/* IT Services */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-cyan-400 flex items-center">
+              <Shield className="w-5 h-5 mr-2" />
+              IT Services
+            </h4>
+            <div className="space-y-2">
+              {footerLinks.itServices.slice(0, 6).map((link) => (
+                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm hover:translate-x-1">
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Micro SAAS */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-cyan-400 flex items-center">
+              <Zap className="w-5 h-5 mr-2" />
+              Micro SAAS
+            </h4>
+            <div className="space-y-2">
+              {footerLinks.microSaas.map((link) => (
+                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm hover:translate-x-1">
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* 5G Solutions */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-cyan-400 flex items-center">
+              <Globe className="w-5 h-5 mr-2" />
+              5G Solutions
+            </h4>
+            <div className="space-y-2">
+              {footerLinks.fiveGSolutions.slice(0, 6).map((link) => (
+                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm hover:translate-x-1">
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Additional Links Row */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Company */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Company</h4>
-            <div className="space-y-3">
+            <div className="space-y-2">
               {footerLinks.company.map((link) => (
-                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm hover:translate-x-1">
                   {link.name}
                 </Link>
               ))}
@@ -84,9 +167,21 @@ const Footer: React.FC = () => {
           {/* Resources */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Resources</h4>
-            <div className="space-y-3">
+            <div className="space-y-2">
               {footerLinks.resources.map((link) => (
-                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm hover:translate-x-1">
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Legal */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white">Legal</h4>
+            <div className="space-y-2">
+              {footerLinks.legal.map((link) => (
+                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm hover:translate-x-1">
                   {link.name}
                 </Link>
               ))}

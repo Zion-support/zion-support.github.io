@@ -4,9 +4,9 @@ import { CheckCircle, Clock, Mail, MapPin, Phone, Send } from 'lucide-react';
 
 // Contact information
 const contactInfo = [
-  { icon: <Phone className="w-6 h-6" />, title: "Phone", details: "+1-302-464-0950", description: "Call us for immediate assistance" },
+  { icon: <Phone className="w-6 h-6" />, title: "Phone", details: "+1 302 464 0950", description: "Call us for immediate assistance" },
   { icon: <Mail className="w-6 h-6" />, title: "Email", details: "kleber@ziontechgroup.com", description: "Send us an email anytime" },
-  { icon: <MapPin className="w-6 h-6" />, title: "Location", details: "Delaware, USA", description: "Serving clients globally" },
+  { icon: <MapPin className="w-6 h-6" />, title: "Address", details: "364 E Main St STE 1008", description: "Middletown DE 19709, USA" },
   { icon: <Clock className="w-6 h-6" />, title: "Business Hours", details: "24/7 Support", description: "We're always here to help" }
 ];
 
