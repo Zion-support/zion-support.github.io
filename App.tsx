@@ -2,6 +2,7 @@ import { Suspense, useEffect, lazy } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization'
+import { useAdvancedPerformanceMonitoring } from './app/hooks/useAdvancedPerformanceMonitoring'
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -69,6 +70,7 @@ import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
@@ -87,25 +89,54 @@ export default function App() {
     enableIntersectionObserver: true,
   });
 
+  const { markPerformance, measurePerformance } = useAdvancedPerformanceMonitoring({
+    enableWebVitals: true,
+    enableNavigationTiming: true,
+    enableResourceTiming: true,
+    enableMemoryMonitoring: true,
+    enableNetworkMonitoring: true,
+    reportInterval: 10000,
+    onMetricsUpdate: (metrics) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Performance Metrics:', metrics);
+      }
+    }
+  });
+
   useEffect(() => {
+    // Mark performance milestones
+    markPerformance('app-start');
+    
     // Preload critical resources
     preloadResource('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap', 'style');
-  }, [preloadResource])
+    
+    // Measure app initialization
+    measurePerformance('app-initialization', 'app-start');
+  }, [preloadResource, markPerformance, measurePerformance])
 
   return (
-    <GlobalErrorBoundary>
-      <HelmetProvider>
-        <Router>
-          <div className="min-h-screen bg-gray-50">
-            <Navigation />
-            <Sidebar />
-            
-            <main className="flex-1">
-              <PerformanceMonitor />
-              <AccessibilityEnhancer />
+    <EnhancedErrorBoundary
+      onError={(error, errorInfo) => {
+        // Log error to monitoring service
+        if (process.env.NODE_ENV === 'production') {
+          // Send to error reporting service
+          console.error('Application Error:', error, errorInfo);
+        }
+      }}
+    >
+      <GlobalErrorBoundary>
+        <HelmetProvider>
+          <Router>
+            <div className="min-h-screen bg-gray-50">
+              <Navigation />
+              <Sidebar />
               
-              <Suspense fallback={<LoadingFallback />}>
-                <Routes>
+              <main className="flex-1">
+                <PerformanceMonitor />
+                <AccessibilityEnhancer />
+                
+                <Suspense fallback={<LoadingFallback />}>
+                  <Routes>
                   {/* Main Pages */}
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
@@ -183,14 +214,15 @@ export default function App() {
                       <a href="/" className="text-blue-600 hover:text-blue-800">Go back home</a>
                     </div>
                   </div>} />
-                </Routes>
-              </Suspense>
-            </main>
-            
-            <Footer />
-          </div>
-        </Router>
-      </HelmetProvider>
-    </GlobalErrorBoundary>
+                  </Routes>
+                </Suspense>
+              </main>
+              
+              <Footer />
+            </div>
+          </Router>
+        </HelmetProvider>
+      </GlobalErrorBoundary>
+    </EnhancedErrorBoundary>
   )
 }
