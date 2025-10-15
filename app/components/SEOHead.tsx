@@ -77,7 +77,7 @@ export default function SEOHead({
           ],
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+1-555-ZION-TECH",
+            "telephone": "+1-302-464-0950",
             "contactType": "customer service"
           }
         })}

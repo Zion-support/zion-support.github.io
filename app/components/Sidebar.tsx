@@ -61,6 +61,22 @@ const Sidebar: React.FC = () => {
           </div>
           
           <div className="space-y-1 mt-6">
+            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Business Solutions</div>
+            <Link to="/data-analytics" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Data Analytics
+            </Link>
+            <Link to="/web-development" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Web Development
+            </Link>
+            <Link to="/mobile-development" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Mobile Development
+            </Link>
+            <Link to="/database-management" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Database Management
+            </Link>
+          </div>
+          
+          <div className="space-y-1 mt-6">
             <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Micro SaaS Tools</div>
             <Link to="/zion-ai-chatbot-builder" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               AI Chatbot Builder
@@ -136,6 +152,22 @@ const Sidebar: React.FC = () => {
             </Link>
             <Link to="/api-docs" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               API Docs
+            </Link>
+          </div>
+          
+          <div className="mb-4">
+            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Quick Access</h3>
+            <Link to="/pricing" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Pricing
+            </Link>
+            <Link to="/blog" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Blog
+            </Link>
+            <Link to="/case-studies" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Case Studies
+            </Link>
+            <Link to="/api-docs" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              API Documentation
             </Link>
           </div>
           
