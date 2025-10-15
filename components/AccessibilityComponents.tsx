@@ -1,151 +1,173 @@
 // Accessibility components
 import React, { useEffect, useRef, useState } from 'react';
+import { Eye, EyeOff, Volume2, MousePointer, Keyboard } from 'lucide-react';
+import { focusManagement, screenReaderUtils, keyboardNavigation } from './accessibilityUtils';
 
-// Type definitions for better type safety
-interface KeyboardEvent extends Event {
-  key: string;
-  shiftKey: boolean;
-  preventDefault(): void;
-}
+// High contrast mode component
+export const HighContrastToggle: React.FC = () => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
 
-// Remove unused interface
+  useEffect(() => {
+    const saved = localStorage.getItem('high-contrast');
+    if (saved) {
+      setIsHighContrast(JSON.parse(saved));
+    }
+  }, []);
 
-// Focus management utilities
-export const focusManagement = {
-  // Trap focus within an element
-  trapFocus: (element: HTMLElement) => {
-    const focusableElements = element.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-    const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+  const toggleHighContrast = () => {
+    const newValue = !isHighContrast;
+    setIsHighContrast(newValue);
+    localStorage.setItem('high-contrast', JSON.stringify(newValue));
+    
+    if (newValue) {
+      document.documentElement.classList.add('high-contrast');
+      screenReaderUtils.announce('High contrast mode enabled');
+    } else {
+      document.documentElement.classList.remove('high-contrast');
+      screenReaderUtils.announce('High contrast mode disabled');
+    }
+  };
 
-    const handleTabKey = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
-        if (e.shiftKey) {
-          if (document.activeElement === firstElement) {
-            lastElement.focus();
-            e.preventDefault();
-          }
-        } else {
-          if (document.activeElement === lastElement) {
-            firstElement.focus();
-            e.preventDefault();
-          }
-        }
-      }
-    };
-
-    element.addEventListener('keydown', handleTabKey);
-    firstElement?.focus();
-
-    return () => {
-      element.removeEventListener('keydown', handleTabKey);
-    };
-  },
-
-  // Move focus to next focusable element
-  moveToNext: (currentElement: HTMLElement) => {
-    const focusableElements = document.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-    const currentIndex = Array.from(focusableElements).indexOf(currentElement);
-    const nextElement = focusableElements[currentIndex + 1] as HTMLElement;
-    nextElement?.focus();
-  },
-
-  // Move focus to previous focusable element
-  moveToPrevious: (currentElement: HTMLElement) => {
-    const focusableElements = document.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-    const currentIndex = Array.from(focusableElements).indexOf(currentElement);
-    const previousElement = focusableElements[currentIndex - 1] as HTMLElement;
-    previousElement?.focus();
-  },
+  return (
+    <button
+      onClick={toggleHighContrast}
+      className="flex items-center space-x-2 px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors"
+      aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
+    >
+      {isHighContrast ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+      <span>High Contrast</span>
+    </button>
+  );
 };
 
-// Skip link component
-export const SkipLink: React.FC<{ target: string; children: React.ReactNode }> = ({
-  target,
-  children,
+// Screen reader announcements component
+export const ScreenReaderAnnouncer: React.FC<{ message: string; priority?: 'polite' | 'assertive' }> = ({ 
+  message, 
+  priority = 'polite' 
 }) => {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  useEffect(() => {
+    if (message) {
+      screenReaderUtils.announce(message, priority);
+    }
+  }, [message, priority]);
+
+  return null;
+};
+
+// Skip to content link
+export const SkipToContent: React.FC<{ targetId: string }> = ({ targetId }) => {
+  const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    const targetElement = document.querySelector(target);
-    if (targetElement) {
-      (targetElement as HTMLElement).focus();
-      targetElement.scrollIntoView({ behavior: 'smooth' });
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.focus();
+      target.scrollIntoView();
     }
   };
 
   return (
     <a
-      href={target}
+      href={`#${targetId}`}
       onClick={handleClick}
-      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50"
     >
-      {children}
+      Skip to main content
     </a>
   );
 };
 
-// Screen reader only text component
-export const ScreenReaderOnly: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <span className="sr-only">{children}</span>;
-};
-
-// Focus trap component
-export const FocusTrap: React.FC<{ children: React.ReactNode; active: boolean }> = ({
-  children,
-  active,
+// Focus trap wrapper
+export const FocusTrap: React.FC<{ children: React.ReactNode; isActive: boolean }> = ({ 
+  children, 
+  isActive 
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (active && containerRef.current) {
-      return focusManagement.trapFocus(containerRef.current);
+    if (isActive && containerRef.current) {
+      const cleanup = focusManagement.trapFocus(containerRef.current);
+      return cleanup;
     }
-    return undefined;
-  }, [active]);
+  }, [isActive]);
 
-  return <div ref={containerRef}>{children}</div>;
+  return (
+    <div ref={containerRef} className={isActive ? 'focus-trap' : ''}>
+      {children}
+    </div>
+  );
 };
 
-// Responsive breakpoint hook
-export const useBreakpoint = (breakpoint: string) => {
-  const [matches, setMatches] = useState(false);
+// Keyboard navigation component
+export const KeyboardNavigator: React.FC<{ 
+  children: React.ReactNode; 
+  onNavigate?: (direction: 'up' | 'down' | 'left' | 'right') => void;
+}> = ({ children, onNavigate }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const itemsRef = useRef<HTMLElement[]>([]);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia(breakpoint);
-    setMatches(mediaQuery.matches);
-
-    const handleChange = (e: MediaQueryListEvent) => {
-      setMatches(e.matches);
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (onNavigate) {
+        switch (e.key) {
+          case 'ArrowUp':
+            onNavigate('up');
+            break;
+          case 'ArrowDown':
+            onNavigate('down');
+            break;
+          case 'ArrowLeft':
+            onNavigate('left');
+            break;
+          case 'ArrowRight':
+            onNavigate('right');
+            break;
+        }
+      } else if (itemsRef.current.length > 0) {
+        const newIndex = keyboardNavigation.handleArrowKeys(e, itemsRef.current, currentIndex);
+        setCurrentIndex(newIndex);
+      }
     };
 
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, [breakpoint]);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [currentIndex, onNavigate]);
 
-  return matches;
+  return (
+    <div className="keyboard-navigator">
+      {children}
+    </div>
+  );
 };
 
-// High contrast mode hook
-export const useHighContrast = () => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
+// Accessibility toolbar
+export const AccessibilityToolbar: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-    setIsHighContrast(mediaQuery.matches);
-
-    const handleChange = (e: MediaQueryListEvent) => {
-      setIsHighContrast(e.matches);
-    };
-
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, []);
-
-  return isHighContrast;
+  return (
+    <div className="fixed top-4 right-4 z-50">
+      <button
+        onClick={() => setIsVisible(!isVisible)}
+        className="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition-colors"
+        aria-label="Toggle accessibility options"
+      >
+        <Keyboard className="w-6 h-6" />
+      </button>
+      
+      {isVisible && (
+        <div className="absolute top-16 right-0 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-4 space-y-2 min-w-48">
+          <HighContrastToggle />
+          <button className="flex items-center space-x-2 w-full px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors">
+            <Volume2 className="w-5 h-5" />
+            <span>Screen Reader</span>
+          </button>
+          <button className="flex items-center space-x-2 w-full px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors">
+            <MousePointer className="w-5 h-5" />
+            <span>Mouse Navigation</span>
+          </button>
+        </div>
+      )}
+    </div>
+  );
 };
+
+export default AccessibilityToolbar;

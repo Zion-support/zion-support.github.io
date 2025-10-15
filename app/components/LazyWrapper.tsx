@@ -27,20 +27,6 @@ export const LazyWrapper: React.FC<LazyWrapperProps> = ({
 
 LazyWrapper.displayName = 'LazyWrapper';
 
-// Lazy loading helper function
-export const createLazyComponent = <P extends Record<string, any>>(
-  importFunc: () => Promise<{ default: ComponentType<P> }>
-) => {
-  const LazyComponent = lazy(importFunc);
-  
-  const WrappedComponent = (props: P) => (
-    <LazyWrapper>
-      <LazyComponent {...(props as any)} />
-    </LazyWrapper>
-  );
-  
-  WrappedComponent.displayName = 'LazyComponent';
-  return WrappedComponent;
-};
+// Lazy loading helper function - moved to separate file to avoid react-refresh warning
 
 export default LazyWrapper;
