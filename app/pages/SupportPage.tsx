@@ -129,7 +129,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
     const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
-  });
+  });;
 
   return (<>
       <Helmet>

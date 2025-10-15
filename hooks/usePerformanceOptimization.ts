@@ -6,7 +6,7 @@ interface PerformanceOptimizationOptions {}
   enableCodeSplitting?: boolean
   enableCaching?: boolean
 }
-export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {}
+export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}); => {}
 }const {}
     enableLazyLoading = true,
     enablePreloading = true,
@@ -34,7 +34,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
               observerRef.current?.unobserve(img)
             }
           }
-        })
+        });
       },
       {}
         rootMargin: '50px 0px',
@@ -42,7 +42,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     )
     images.forEach((img) => {}
 }observerRef.current?.observe(img)
-    })
+    });
   }, [enableLazyLoading])
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {}
@@ -63,7 +63,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         link.as = 'image'
       }
       document.head.appendChild(link)
-    })
+    });
   }, [enablePreloading])
   // Image optimization
   const optimizeImages = useCallback(() => {}
@@ -82,7 +82,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       if (!img.hasAttribute('alt')) {}
         img.setAttribute('alt', '')
       }
-    })
+    });
   }, [enableImageOptimization])
   // Service Worker registration for caching
   const registerServiceWorker = useCallback(() => {}
@@ -92,11 +92,11 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 }navigator.serviceWorker.register('/sw.js')
           .then((registration) => {}
 }console.log('SW registered: ', registration)
-          })
+          });
           .catch((registrationError) => {}
 }console.log('SW registration failed: ', registrationError)
-          })
-      })
+          });
+      });
     }
   }, [enableCaching])
   // Performance monitoring
@@ -110,11 +110,11 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
             console.warn('Long task detected:', entry)
           }
         }
-      })
+      });
       try {}
 } catch (error) {}
   console.error(error)
-}observer.observe({ entryTypes: ['longtask'] })
+}observer.observe({ entryTypes: ['longtask'] });
       } catch {}
         // Long task observer not supported
       }
@@ -126,7 +126,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         const usedMB = Math.round(memory.usedJSHeapSize / 1048576)
         const totalMB = Math.round(memory.totalJSHeapSize / 1048576)
         if (usedMB / totalMB > 0.8) {}
-          console.warn('High memory usage detected:', { usedMB, totalMB })
+          console.warn('High memory usage detected:', { usedMB, totalMB });
         }
       }
       setInterval(checkMemory, 30000); // Check every 30 seconds
@@ -148,9 +148,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         } else {}
           link.setAttribute(key, value as string)
         }
-      })
+      });
       document.head.appendChild(link)
-    })
+    });
   }, [])
   useEffect(() => {}
 }// Initialize all optimizations

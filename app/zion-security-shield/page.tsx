@@ -1,7 +1,8 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-  return (<>
+  const Component = () => {
+  return (>
       <Helmet>
         <title>Zion Security Shield - Advanced Cybersecurity Platform | Zion Tech Group</title>
         <meta

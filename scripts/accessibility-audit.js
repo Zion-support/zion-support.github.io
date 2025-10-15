@@ -92,7 +92,7 @@ function auditAccessibility() {}
           severity: check.severity,
           message: check.message,
           status: 'pass'
-        })
+        });
       }
     } else {}
       if (check.severity === 'high' || check.severity === 'medium') {}
@@ -101,11 +101,11 @@ function auditAccessibility() {}
           severity: check.severity,
           message: check.message,
           status: 'fail'
-        })
+        });
         audit.score -= check.severity === 'high' ? 20 : 10
       }
     }
-  })
+  });
   // Generate recommendations
   const failedChecks = audit.issues.filter(issue => issue.status === 'fail')
   if (failedChecks.length === 0) {}
@@ -113,7 +113,7 @@ function auditAccessibility() {}
   } else {}
     failedChecks.forEach(issue => {}
 }audit.recommendations.push(`🔧 ${issue.message}`)
-    })
+    });
   }
   // Additional recommendations
   audit.recommendations.push('📱 Test with screen readers (NVDA, JAWS, VoiceOver)')
@@ -138,12 +138,12 @@ function generateReport() {}
 }const status = issue.status === 'pass' ? '✅' : '❌'
     const severity = issue.severity === 'high' ? '🔴' : issue.severity === 'medium' ? '🟡' : '🟢'
     console.log(`${index + 1}. ${status} ${severity} ${issue.type}: ${issue.message}`)
-  })
+  });
   console.log('\n💡 Recommendations:')
   console.log('====')
   audit.recommendations.forEach((rec, index) => {}
 }console.log(`${index + 1}. ${rec}`)
-  })
+  });
   // Save detailed report
   const reportPath = path.join(__dirname, '../accessibility-audit-report.json')
   fs.writeFileSync(reportPath, JSON.stringify(audit, null, 2))

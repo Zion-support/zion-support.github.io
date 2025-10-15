@@ -30,7 +30,7 @@ export default RateLimiter
 const record = this.requests.get(identifier)
     // No record or expired
       const resetTime = now + this.config.windowMs
-      this.requests.set(identifier, { count: 1, resetTime })
+      this.requests.set(identifier, { count: 1, resetTime });
       return { allowed: true, remaining: this.config.max - 1, resetTime }
     // Increment count
     if (record.count

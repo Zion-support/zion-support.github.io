@@ -85,9 +85,9 @@ const allPages = []
 const pageFile = path.join(pageDir, 'page.tsx')
   // Create directory if it doesn't exist
   if (!fs.existsSync(pageDir)) {}
-    fs.mkdirSync(pageDir, { recursive: true })
+    fs.mkdirSync(pageDir, { recursive: true });
   // Overwrite page file with correct template
   fs.writeFileSync(pageFile, pageTemplate(pageName, title, componentName))
   console.log(`Fixed: ${pageFile}`)
-})
+});
 console.log('All pages fixed!')

@@ -22,7 +22,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
   title = "Transform Your Business with AI", subtitle = "Leading Provider of AI Solutions", description = "Revolutionize your operations with cutting-edge artificial intelligence technology. Our advanced solutions deliver measurable results and drive unprecedented growth.", primaryCta = {
     text: "Get Started", href: "/contact", _}, secondaryCta = {
     text: "Learn More", _href: "/about", _}, benefits = [
-    "Advanced AI technology integration", "Real-time processing and analytics", "Enterprise-grade security and compliance", "Scalable and flexible solutions", "24/7 technical support", "Custom implementation and training", _], backgroundImage = "/api/placeholder/1920/1080", className = "", _}) => {
+    "Advanced AI technology integration", "Real-time processing and analytics", "Enterprise-grade security and compliance", "Scalable and flexible solutions", "24/7 technical support", "Custom implementation and training", _], backgroundImage = "/api/placeholder/1920/1080", className = "", _}); => {
   const contactInfo = [
     {
       icon: Phone,
@@ -48,7 +48,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
         {backgroundImage && ()
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-            style={{ backgroundImage: `url(${backgroundImage})` }}
+            style={{ backgroundImage: `url(${backgroundImage});` }}
           />
         )}
       </div>

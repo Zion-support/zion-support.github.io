@@ -13,14 +13,14 @@
  entry.name === 'largest-contentful-paint')?.startTime || 0
       // Measure CLS (Cumulative, Layout, Shift)
       let cumulativeLayoutShift = 0
-              cumulativeLayoutShift += (entry as unknown as { value: number }).value
-        })
-        observer.observe({ entryTypes: ['layout-shift'] })
+              cumulativeLayoutShift += (entry as unknown as { value: number });.value
+        });
+        observer.observe({ entryTypes: ['layout-shift'] });
       // Measure FID (First, Input, Delay)
       let firstInputDelay = 0
-                (entry as unknown as { processingStart: number }).processingStart - entry.startTime
-        })
-        observer.observe({ entryTypes: ['first-input'] })
+                (entry as unknown as { processingStart: number });.processingStart - entry.startTime
+        });
+        observer.observe({ entryTypes: ['first-input'] });
         domContentLoaded:
         firstInputDelay
       }

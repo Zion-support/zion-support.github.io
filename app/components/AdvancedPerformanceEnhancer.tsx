@@ -10,7 +10,7 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({}
   enablePreloading = true,
   enableCaching = true,
   enableCompression = true
-}) => {}
+}); => {}
 }// Image optimization
   const optimizeImages = useCallback(() => {}
 }if (!enableImageOptimization) return
@@ -28,7 +28,7 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({}
       if (img.getBoundingClientRect().top < window.innerHeight) {}
         img.setAttribute('fetchpriority', 'high')
       }
-    })
+    });
   }, [enableImageOptimization])
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {}
@@ -61,9 +61,9 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({}
       .then((registration) => {}
 }// Service worker registered successfully
         return registration.update()
-      })
+      });
       .catch((error) => {
-        });
+        });;
   }, [enableCaching]);
 
   // Implement compression for API responses
@@ -71,13 +71,13 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({}
 }if (!enableCompression) return
     // Override fetch to add compression headers
     const originalFetch = window.fetch
-    window.fetch = async (input, init = {}) => {}
+    window.fetch = async (input, init = {}); => {}
 }const headers = new Headers(init.headers)
       headers.set('Accept-Encoding', 'gzip, deflate, br')
       return originalFetch(input, {}
         ...init,
         headers
-      })
+      });
     }
   }, [enableCompression])
   // Intersection Observer for lazy loading
@@ -93,11 +93,11 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({}
             imageObserver.unobserve(img)
           }
         }
-      })
+      });
     }, {}
       rootMargin: '50px 0px',
       threshold: 0.01
-    })
+    });
     // Observe all images with data-src
     const lazyImages = document.querySelectorAll('img[data-src]')
     lazyImages.forEach((img) => imageObserver.observe(img))
@@ -117,7 +117,7 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({}
       link.rel = 'dns-prefetch'
       link.href = `//${domain}`
       document.head.appendChild(link)
-    })
+    });
     // Preconnect to critical domains
     const criticalDomains = []
       'fonts.googleapis.com',
@@ -129,23 +129,23 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({}
       link.href = `https://${domain}`
       link.crossOrigin = 'anonymous'
       document.head.appendChild(link)
-    })
+    });
   }, [])
   // Performance monitoring
   const setupPerformanceMonitoring = useCallback(() => {
     // Monitor Core Web Vitals
-    import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
+    import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }); => {
       onCLS((metric: unknown) => {
-        });
+        });;
       onINP((metric: unknown) => {
-        });
+        });;
       onFCP((metric: unknown) => {
-        });
+        });;
       onLCP((metric: unknown) => {
-        });
+        });;
       onTTFB((metric: unknown) => {
-        });
-    });
+        });;
+    });;
 
     // Monitor memory usage
     if ('memory' in performance) {}
@@ -188,11 +188,11 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({}
   useEffect(() => {}
 }const observer = new MutationObserver(() => {}
 }optimizeImages()
-    })
+    });
     observer.observe(document.body, {}
       childList: true,
       subtree: true
-    })
+    });
     return () => observer.disconnect()
   }, [optimizeImages])
   return null; // This component doesn't render anything

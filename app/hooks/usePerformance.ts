@@ -22,10 +22,10 @@ export function usePerformance(componentName: string) {}
           renderTime,
           renderCount: renderCount.current,
           componentName
-        })
+        });
       }
     }
-  })
+  });
   // Debounced function for expensive operations
   const debounce = useCallback(_<T extends (...args: any[]) => any>(
       func: T,
@@ -66,7 +66,7 @@ export function usePerformance(componentName: string) {}
         const result = func(...args)
         cache.set(key, result)
         return result
-      }) as T
+      }); as T
     },
     []
   )
@@ -78,7 +78,7 @@ export function usePerformance(componentName: string) {}
       const end = performance.now();
       const duration = end - start;
 
-      logger.performance(operation, duration, { componentName });
+      logger.performance(operation, duration, { componentName });;
 
       return duration;
     },
@@ -110,7 +110,7 @@ export function useMemoryMonitor(componentName: string) {}
               total: `${total.toFixed(2)}MB`,
               limit: `${limit.toFixed(2)}MB`,
               percentage: `${((used / limit) * 100).toFixed(2)}%`
-            })
+            });
           }
         }
       }

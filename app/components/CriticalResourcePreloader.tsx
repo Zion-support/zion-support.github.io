@@ -42,7 +42,7 @@ const CriticalResourcePreloader = () => {}
         if (font.type) link.type = font.type
         if (font.crossorigin) link.crossOrigin = font.crossorigin
         document.head.appendChild(link)
-      })
+      });
       // Preload CSS
       criticalCSS.forEach(css => {}
 }const link = document.createElement('link')
@@ -50,7 +50,7 @@ const CriticalResourcePreloader = () => {}
         link.href = css
         link.as = 'style'
         document.head.appendChild(link)
-      })
+      });
       // Preload JavaScript
       criticalJS.forEach(js => {}
 }const link = document.createElement('link')
@@ -58,7 +58,7 @@ const CriticalResourcePreloader = () => {}
         link.href = js
         link.as = 'script'
         document.head.appendChild(link)
-      })
+      });
       // Preload images
       criticalImages.forEach(img => {}
 }const link = document.createElement('link')
@@ -66,7 +66,7 @@ const CriticalResourcePreloader = () => {}
         link.href = img
         link.as = 'image'
         document.head.appendChild(link)
-      })
+      });
     }
     // Preconnect to external domains
     const preconnectDomains = () => {}
@@ -83,7 +83,7 @@ const CriticalResourcePreloader = () => {}
         link.href = domain
         link.crossOrigin = 'anonymous'
         document.head.appendChild(link)
-      })
+      });
     }
     // DNS prefetch for additional domains
     const dnsPrefetchDomains = () => {}
@@ -97,7 +97,7 @@ const CriticalResourcePreloader = () => {}
         link.rel = 'dns-prefetch'
         link.href = domain
         document.head.appendChild(link)
-      })
+      });
     }
     // Initialize preloading
     preloadCriticalResources()
@@ -116,8 +116,8 @@ const CriticalResourcePreloader = () => {}
             preloadLink.href = href
             document.head.appendChild(preloadLink)
           }
-        })
-      })
+        });
+      });
     }
     // Initialize hover preloading after a delay
     setTimeout(preloadOnHover, 2000)

@@ -7,7 +7,7 @@ interface LoadingPageProps {}
 
 export const LoadingPage: React.FC<LoadingPageProps> = ({ 
   message = "Loading...", showIcon = true 
-}) => {
+}); => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
@@ -31,7 +31,7 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
   );
 };
 
-export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
+export const ServiceLoading: React.FC<{ service: string }> = ({ service }); => {
   const getServiceIcon = (_serviceName: string) => {
     switch (serviceName.toLowerCase()) {
       case 'ai':
@@ -76,7 +76,7 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
 
 export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = ({ 
   error = "Something went wrong", onRetry 
-}) => {
+}); => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center max-w-md mx-auto px-4">
@@ -99,10 +99,10 @@ export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = 
     </div>
   )
 }
-export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {}
+export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }); => {}
 }return ()
     <div className="animate-pulse">
-      {Array.from({ length: lines }).map(( index) => (
+      {Array.from({ length: lines });.map(( index) => (
         <div
           key={index}
           className={`h-4 bg-gray-700 rounded mb-2 ${}

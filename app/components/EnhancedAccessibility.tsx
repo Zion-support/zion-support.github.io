@@ -8,12 +8,12 @@ interface AccessibilitySettings {
   reducedMotion: boolean;
   screenReader: boolean;
 }
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {}
+const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }); => {}
 }const [settings, setSettings] = useState<AccessibilitySettings>({}
     highContrast: false,
     largeText: false,
     reducedMotion: false,
-    screenReader: false})
+    screenReader: false});
   useEffect(() => {}
 }// Check for system preferences
     const mediaQueries = {}
@@ -30,14 +30,14 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       highContrast: mediaQueries.highContrast.matches,
       largeText: localStorage.getItem('accessibility-large-text') === 'true',
       reducedMotion: mediaQueries.reducedMotion.matches,
-      screenReader: screenReaderDetected})
+      screenReader: screenReaderDetected});
     // Listen for changes in system preferences
     const handleHighContrastChange = (_e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, highContrast: e.matches }));
+      setSettings(prev => ({ ...prev, highContrast: e.matches }););
     };
 
     const handleReducedMotionChange = (_e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
+      setSettings(prev => ({ ...prev, reducedMotion: e.matches }););
     };
 
     mediaQueries.highContrast.addEventListener('change', handleHighContrastChange);
@@ -59,7 +59,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       body.classList.remove('high-contrast');
     }
     const handleReducedMotionChange = (e: MediaQueryListEvent) => {}
-}setSettings(prev => ({ ...prev, reducedMotion: e.matches }))
+}setSettings(prev => ({ ...prev, reducedMotion: e.matches });)
     }
     mediaQueries.highContrast.addEventListener('change', handleHighContrastChange)
     mediaQueries.reducedMotion.addEventListener('change', handleReducedMotionChange)

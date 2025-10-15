@@ -9,7 +9,7 @@ interface LazyRouteProps {
 const LazyRoute: React.FC<LazyRouteProps> = ({ 
   component, 
   fallback = <OptimizedLoadingSpinner size="lg" text="Loading page..." /> 
-}) => {
+}); => {
   const LazyComponent = lazy(component);
 
   return (

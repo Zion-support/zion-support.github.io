@@ -18,7 +18,7 @@ const ContactForm: React.FC = () => {}
     company: "",
     message: "",
     service: "",
-  });
+  });;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -29,7 +29,7 @@ const ContactForm: React.FC = () => {}
     setFormData((prev) => ({
       ...prev,
       [name]: value,
-    }));
+    }););
   };
 
   const handleSubmit = async (_e: React.FormEvent) => {
@@ -47,7 +47,7 @@ const ContactForm: React.FC = () => {}
         company: "",
         message: "",
         service: "",
-      });
+      });;
 
     } catch (error) {
       } finally {

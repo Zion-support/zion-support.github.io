@@ -36,7 +36,7 @@ function fixFile(filePath) {
     // Apply all fixes
     fixes.forEach(fix => {
       content = content.replace(fix.pattern, fix.replacement);
-    });
+    });;
     
     // Additional specific fixes for common patterns
     content = content.replace(/,\s*}/g, ' }');

@@ -25,7 +25,7 @@ const generateLazyImports = (routes, category) => {}
   routes.forEach(route => {}
 }const componentName = generateComponentName(route)
     result += `const ${componentName} = React.lazy(() => import("./app/${route}/page"));\n`
-  })
+  });
   return result
 }
 // Generate route elements for a category
@@ -35,7 +35,7 @@ const generateRouteElements = (routes) => {}
   routes.forEach(route => {}
 }const componentName = generateComponentName(route)
     result += `                  <Route path="/${route}" element={<${componentName} />} />\n`
-  })
+  });
   return result
 }
 // Generate all lazy imports

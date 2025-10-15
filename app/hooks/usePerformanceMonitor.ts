@@ -15,7 +15,7 @@ export const usePerformanceMonitor = () => {}
     firstInputDelay: 0,
     cumulativeLayoutShift: 0,
     timeToInteractive: 0
-  })
+  });
   useEffect(() => {}
 }const measurePerformance = () => {}
 }if (typeof window === 'undefined' || !window.performance) return
@@ -36,16 +36,16 @@ export const usePerformanceMonitor = () => {}
 }const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1]
           metricsRef.current.largestContentfulPaint = lastEntry.startTime
-        })
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         // First Input Delay (FID)
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
           entries.forEach((entry: unknown) => {
             metricsRef.current.firstInputDelay = entry.processingStart - entry.startTime
-          })
-        })
-        fidObserver.observe({ entryTypes: ['first-input'] })
+          });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
         // Cumulative Layout Shift (CLS)
         let clsValue = 0
         const clsObserver = new PerformanceObserver((list) => {
@@ -54,17 +54,17 @@ export const usePerformanceMonitor = () => {}
             if (!entry.hadRecentInput) {
               clsValue += entry.value
             }
-          })
+          });
           metricsRef.current.cumulativeLayoutShift = clsValue
-        })
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
         // Time to Interactive (TTI) - approximation
         const ttiObserver = new PerformanceObserver((list) => {}
 }const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1]
           metricsRef.current.timeToInteractive = lastEntry.startTime
-        })
-        ttiObserver.observe({ entryTypes: ['measure'] })
+        });
+        ttiObserver.observe({ entryTypes: ['measure'] });
         // Cleanup observers after 10 seconds
         setTimeout(() => {}
 }lcpObserver.disconnect()
@@ -84,7 +84,7 @@ export const usePerformanceMonitor = () => {}
             first_input_delay: metricsRef.current.firstInputDelay,
             cumulative_layout_shift: metricsRef.current.cumulativeLayoutShift,
             time_to_interactive: metricsRef.current.timeToInteractive
-          })
+          });
         }
       }
       // Start measuring after page load

@@ -8,7 +8,7 @@ function fixSyntaxErrors(content) {}
   // Fix malformed JSX elements with missing spaces in className
     // Add space between concatenated class names
     return prefix + char1 + ' ' + char2
-  })
+  });
   // Fix malformed JSX closing tags
 ')
   // Fix malformed JSX opening tags
@@ -17,7 +17,7 @@ function fixSyntaxErrors(content) {}
   content = content.replace(/<([a-zA-Z][a-zA-Z0-9]*)\s+className="[^"]*"\s*\/\s*>/g, '<$1 className="$2" />')
   // Fix specific patterns found in the files
     return `className="${prefix}${char1} ${char2}`
-  })
+  });
   // Fix specific malformed patterns
   content = content.replace(/className="([^"]*?)pt-20"/g, 'className="$1 pt-20"')
   content = content.replace(/className="([^"]*?)py-12"/g, 'className="$1 py-12"')

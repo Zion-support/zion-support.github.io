@@ -12,13 +12,13 @@ export { focusManagement, ariaUtils, keyboardNavigation };
 // Skip link component
 export const SkipLink: React.FC<{ target: string; children: React.ReactNode }> = ({}
   target,
-  children}) => {}
+  children}); => {}
 }const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {}
 }e.preventDefault()
     const targetElement = document.querySelector(target)
     if (targetElement) {}
       (targetElement as HTMLElement).focus()
-      targetElement.scrollIntoView({ behavior: 'smooth' })
+      targetElement.scrollIntoView({ behavior: 'smooth' });
     }
   }
   return ()
@@ -32,13 +32,13 @@ export const SkipLink: React.FC<{ target: string; children: React.ReactNode }> =
   )
 }
 // Screen reader only text component
-export const ScreenReaderOnly: React.FC<{ children: React.ReactNode }> = ({ children }) => {}
+export const ScreenReaderOnly: React.FC<{ children: React.ReactNode }> = ({ children }); => {}
 }return <span className="sr-only">{children}</span>
 }
 // Focus trap component
 export const FocusTrap: React.FC<{ children: React.ReactNode; active: boolean }> = ({}
   children,
-  active}) => {}
+  active}); => {}
 }const containerRef = useRef<HTMLDivElement>(null)
   useEffect(() => {}
 }if (active && containerRef.current) {}

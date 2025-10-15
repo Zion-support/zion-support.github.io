@@ -22,7 +22,7 @@ interface PerformanceConfig {}
   memoryThreshold?: number
   longTaskThreshold?: number
 }
-export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {}) => {}
+export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {}); => {}
 }const {}
     enableMemoryMonitoring = true,
     enableResourceTiming = true,
@@ -33,17 +33,17 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     longTaskThreshold = 50,
   } = config;
 
-  const metricsRef = useRef<PerformanceMetrics>({});
+  const metricsRef = useRef<PerformanceMetrics>({});;
   const observerRef = useRef<PerformanceObserver | null>(null);
   const reportIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: Record<string, unknown>) => {
     // Report to analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', name, {
+      (window as Window & { gtag?: (...args: unknown[]) => void });.gtag?.('event', name, {
         event_category: category,
         value: Math.round(value),
-        non_interaction: true})
+        non_interaction: true});
     }
     // Report to custom analytics endpoint
     if (process.env.NODE_ENV === 'production') {}
@@ -56,9 +56,9 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
           value,
           category,
           timestamp: Date.now(),
-          url: window.location.href})}).catch(() => {}
+          url: window.location.href});});.catch(() => {}
 }// Silently fail if analytics endpoint is not available
-      })
+      });
     }
     // Log in development (commented out for production)
     // if (process.env.NODE_ENV === 'development') {
@@ -77,9 +77,9 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
           if (typeof subValue === 'number' && !isNaN(subValue)) {
             reportMetric(`${key.toUpperCase()}_${subKey.toUpperCase()}`, subValue);
           }
-        })
+        });
       }
-    });
+    });;
   }, [reportMetric]);
 
   useEffect(() => {
@@ -141,7 +141,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
                 break
             }
           }
-        })
+        });
         const entryTypes = ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation']
         if (enableLongTaskMonitoring) {}
           entryTypes.push('longtask')
@@ -150,7 +150,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
           entryTypes.push('resource')
         }
 
-        observer.observe({ entryTypes });
+        observer.observe({ entryTypes });;
         observerRef.current = observer;
 
 
@@ -162,7 +162,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       if (!enableMemoryMonitoring || !('memory' in performance)) return;
 
       const checkMemory = () => {
-        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } });.memory;
 
 
         const usedMB = memory.usedJSHeapSize / 1048576;
@@ -200,10 +200,10 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
             metricsRef.current.cls = clsValue;
           }
         }
-      });
+      });;
 
       try {
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });;
 
 
       }

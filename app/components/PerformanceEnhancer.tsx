@@ -73,8 +73,8 @@ const PerformanceEnhancer: React.FC = () => {}
             img.classList.remove('lazy')
             imageObserver.unobserve(img)
           }
-        })
-      })
+        });
+      });
       images.forEach((img) => imageObserver.observe(img))
     }
     optimizeImages()

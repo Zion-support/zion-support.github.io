@@ -21,7 +21,7 @@ class LightweightErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ error });
+    this.setState({ error });;
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -39,15 +39,15 @@ class LightweightErrorBoundary extends Component<Props, State> {
           stack: error.stack,
           componentStack: errorInfo.componentStack,
           timestamp: new Date().toISOString(),
-        }),
-      }).catch(() => {
+        });,
+      });.catch(() => {
         // Silently fail if error reporting fails
-      });
+      });;
     }
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined });
+    this.setState({ hasError: false, error: undefined });;
   };
 
   render() {

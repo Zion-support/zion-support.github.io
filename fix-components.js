@@ -33,5 +33,5 @@ const lastLine = lines[lines.length - 1]
     // Create component if it doesn't exist
     fs.writeFileSync(componentFile, componentTemplate(componentName))
     // console.log(`Created: ${componentFile}`)
-})
+});
 // console.log('Component fixes completed!')

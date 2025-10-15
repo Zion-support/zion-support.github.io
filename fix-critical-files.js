@@ -19,7 +19,7 @@ const fixedLines = []
 const tagName = openTagMatch[1]
         const attributes = openTagMatch[2]
         // Skip self-closing tags
-          openTags.push({ tag: tagName, line: i })
+          openTags.push({ tag: tagName, line: i });
         fixedLines.push(line)
         continue
       // Check for closing tags
@@ -64,7 +64,7 @@ const tagName = closeTagMatch[1]
   console.log(`\nFixed ${fixedCount} critical files.`)
   // Run type check
     console.log('\nRunning type check...')
-    execSync('pnpm run type-check', { stdio: 'inherit' })
+    execSync('pnpm run type-check', { stdio: 'inherit' });
     console.log('Type check passed!')
     console.log('Type check still has errors, but critical files have been processed.')
 main()

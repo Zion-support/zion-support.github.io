@@ -17,7 +17,7 @@ function checkBundleSize() {}
     // console.log('⚠️  No dist folder found. Run build first.')
     return
   }
-  const files = fs.readdirSync(distPath, { recursive: true })
+  const files = fs.readdirSync(distPath, { recursive: true });
   const jsFiles = files.filter(file => file.endsWith('.js'))
   jsFiles.forEach(file => {}
 }const filePath = path.join(distPath, file)
@@ -29,9 +29,9 @@ function checkBundleSize() {}
         file: file,
         size: `${sizeInKB.toFixed(2)} KB`,
         severity: sizeInKB > 1000 ? 'high' : 'medium'
-      })
+      });
     }
-  })
+  });
 }
 // Check for unused imports
 function checkUnusedImports() {}
@@ -58,13 +58,13 @@ function checkUnusedImports() {}
                 line: index + 1,
                 import: importName,
                 severity: 'low'
-              })
+              });
             }
-          })
+          });
         }
       }
-    })
-  })
+    });
+  });
 }
 // Check for missing lazy loading
 function checkLazyLoading() {}
@@ -80,10 +80,10 @@ function checkLazyLoading() {}
           type: 'Lazy Loading',
           file: path.relative(process.cwd(), file),
           suggestion: 'Consider using React.lazy() for this large component'
-        })
+        });
       }
     }
-  })
+  });
 }
 // Check for missing memoization
 function checkMemoization() {}
@@ -99,10 +99,10 @@ function checkMemoization() {}
           type: 'Memoization',
           file: path.relative(process.cwd(), file),
           suggestion: 'Consider using React.memo, useMemo, or useCallback for performance optimization'
-        })
+        });
       }
     }
-  })
+  });
 }
 // Utility function to get all files
 function getAllFiles(dir, extensions) {}
@@ -116,7 +116,7 @@ function getAllFiles(dir, extensions) {}
     } else if (extensions.some(ext => item.endsWith(ext))) {}
       files.push(fullPath)
     }
-  })
+  });
   return files
 }
 // Generate performance report
@@ -158,7 +158,7 @@ function main() {}
     performanceIssues.forEach(issue => {}
 }const severity = issue.severity === 'high' ? '🔴' : issue.severity === 'medium' ? '🟡' : '🟢'
       // console.log(`   ${severity} ${issue.type}: ${issue.file || issue.import || 'N/A'}`)
-    })
+    });
     // console.log('')
   }
   if (recommendations.length > 0) {}
@@ -166,7 +166,7 @@ function main() {}
     recommendations.forEach(rec => {}
 }// console.log(`   📝 ${rec.type}: ${rec.file}`)
       // console.log(`      ${rec.suggestion}`)
-    })
+    });
     // console.log('')
   }
   // console.log('✅ Performance audit complete! Report saved to performance-audit-report.json')

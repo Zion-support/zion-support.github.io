@@ -15,7 +15,7 @@ function fixImports(content) {}
       .filter(imp => imp.length > 0)
       .join(', ')
     return `import { ${cleanImports} } from '${module}'`
-  })
+  });
   return content
 }
 // Function to fix function declarations
@@ -49,7 +49,7 @@ function fixObjects(content) {}
       .filter(item => item.length > 0)
       .join(',\n    ')
     return `{\n    ${cleanContent}\n  }`
-  })
+  });
   return content
 }
 // Function to fix common syntax errors

@@ -29,7 +29,7 @@ function cleanUnusedImports(filePath) {
           const regex = new RegExp(`\\b${importName}\\b`, 'g');
           const matches = content.match(regex);
           return matches && matches.length > 1; // More than just the import itself
-        });
+        });;
         
         if (usedImports.length === 0) {
           // Remove the entire import line
@@ -39,7 +39,7 @@ function cleanUnusedImports(filePath) {
           const newImport = `import { ${usedImports.join(', ')} } from 'lucide-react';`;
           content = content.replace(importLine, newImport);
         }
-      });
+      });;
     }
     
     // Remove unused variables (simple cases)
@@ -50,7 +50,7 @@ function cleanUnusedImports(filePath) {
         return ''; // Remove unused variable
       }
       return match;
-    });
+    });;
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
@@ -81,7 +81,7 @@ function processFiles(dir) {
         cleanedCount++;
       }
     }
-  });
+  });;
   
   return cleanedCount;
 }

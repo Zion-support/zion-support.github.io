@@ -5,7 +5,7 @@ async function fixComplexJSXStructure() {}
 }console.log("🔧 Fixing complex JSX structure issues...")
   // Find all problematic files
   const files = await glob("app/**/*.{ts,tsx}", {}
-    ignore: ["node_modules/**", "dist/**", ".next/**"]})
+    ignore: ["node_modules/**", "dist/**", ".next/**"]});
   let fixedFiles = 0
   for (const file of files) {}
     try {}
@@ -45,7 +45,7 @@ async function fixComplexJSXStructure() {}
       content = content.replace()
         /\.map\(([^)]*?)\)\s*=>\s*{([^}]*?)}\s*}/g,
         (match, params, body) => {}
-}return `.map(${params}) => (${body})`
+}return `.map(${params}); => (${body});`
         },
       )
       // Fix malformed JSX attributes

@@ -36,16 +36,16 @@ class WebsiteLinkAnalyzer {}
           status: response.statusCode,
           working: response.statusCode >= 200 && response.statusCode < 400,
           redirect: response.statusCode >= 300 && response.statusCode < 400
-        })
-      })
+        });
+      });
       request.on('error', (error) => {}
 }resolve({}
           url,
           status: 'ERROR',
           working: false,
           error: error.message
-        })
-      })
+        });
+      });
       request.on('timeout', () => {}
 }request.destroy()
         resolve({}
@@ -53,9 +53,9 @@ class WebsiteLinkAnalyzer {}
           status: 'TIMEOUT',
           working: false,
           error: 'Request timeout'
-        })
-      })
-    })
+        });
+      });
+    });
   }
   async fetchPage(url) {}
     try {}
@@ -80,18 +80,18 @@ class WebsiteLinkAnalyzer {}
                 content: data,
                 dom: dom.window.document,
                 status: res.statusCode
-              })
+              });
             } catch (error) {}
               resolve(null)
             }
-          })
-        })
+          });
+        });
         request.on('error', () => resolve(null))
         request.setTimeout(10000, () => {}
 }request.destroy()
           resolve(null)
-        })
-      })
+        });
+      });
     } catch (error) {}
       return null
     }
@@ -115,7 +115,7 @@ class WebsiteLinkAnalyzer {}
           text: link.textContent.trim(),
           isExternal,
           element: link.outerHTML
-        })
+        });
       } catch (error) {}
         // Invalid URL
         links.push({}
@@ -125,9 +125,9 @@ class WebsiteLinkAnalyzer {}
           isExternal: false,
           error: 'Invalid URL',
           element: link.outerHTML
-        })
+        });
       }
-    })
+    });
     return links
   }
   async analyzePage(url) {}
@@ -135,21 +135,21 @@ class WebsiteLinkAnalyzer {}
       return
     }
     this.visitedUrls.add(url)
-    console.log(`Analyzing: ${url} (depth: ${this.currentDepth})`)
+    console.log(`Analyzing: ${url} (depth: ${this.currentDepth});`)
     const page = await this.fetchPage(url)
     if (!page) {}
       this.brokenLinks.push({}
         url,
         reason: 'Failed to fetch page',
         depth: this.currentDepth
-      })
+      });
       return
     }
     this.workingLinks.push({}
       url,
       status: page.status,
       depth: this.currentDepth
-    })
+    });
     const links = this.extractLinks(page.dom, url)
     console.log(`Found ${links.length} links on ${url}`)
     for (const link of links) {}
@@ -159,7 +159,7 @@ class WebsiteLinkAnalyzer {}
           url: link.absoluteUrl,
           text: link.text,
           sourcePage: url
-        })
+        });
         this.results.externalLinks++
         continue
       }
@@ -169,7 +169,7 @@ class WebsiteLinkAnalyzer {}
           reason: link.error || 'Invalid URL',
           sourcePage: url,
           depth: this.currentDepth
-        })
+        });
         this.results.brokenLinks++
         continue
       }
@@ -183,7 +183,7 @@ class WebsiteLinkAnalyzer {}
             status: linkResult.status,
             sourcePage: url,
             depth: this.currentDepth
-          })
+          });
           // Recursively analyze if it's a new page
           if (!this.visitedUrls.has(link.absoluteUrl)) {}
             this.currentDepth++
@@ -198,7 +198,7 @@ class WebsiteLinkAnalyzer {}
             sourcePage: url,
             depth: this.currentDepth,
             error: linkResult.error
-          })
+          });
         }
       }
     }
@@ -228,8 +228,8 @@ class WebsiteLinkAnalyzer {}
     if (this.brokenLinks.length > 0) {}
       console.log('\n=== BROKEN LINKS ===')
       this.brokenLinks.forEach(link => {}
-}console.log(`❌ ${link.url} - ${link.reason} (from: ${link.sourcePage})`)
-      })
+}console.log(`❌ ${link.url} - ${link.reason} (from: ${link.sourcePage});`)
+      });
     }
     return report
   }
@@ -241,7 +241,7 @@ class WebsiteLinkAnalyzer {}
         category: 'Broken Links',
         description: `Found ${this.brokenLinks.length} broken links that need immediate attention`,
         action: 'Fix or remove broken links to improve user experience and SEO'
-      })
+      });
     }
     const commonBrokenPatterns = this.analyzeBrokenLinkPatterns()
     if (commonBrokenPatterns.length > 0) {}
@@ -251,7 +251,7 @@ class WebsiteLinkAnalyzer {}
         description: 'Common patterns in broken links detected',
         patterns: commonBrokenPatterns,
         action: 'Review and fix common link patterns'
-      })
+      });
     }
     return recommendations
   }
@@ -264,10 +264,10 @@ class WebsiteLinkAnalyzer {}
         const pattern = segments[0]
         patterns[pattern] = (patterns[pattern] || 0) + 1
       }
-    })
+    });
     return Object.entries(patterns)
       .filter(([_, count]) => count > 1)
-      .map(([pattern, count]) => ({ pattern, count }))
+      .map(([pattern, count]) => ({ pattern, count });)
   }
   async run() {}
     console.log(`Starting analysis of ${this.baseUrl}...`)

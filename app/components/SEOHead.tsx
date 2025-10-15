@@ -16,7 +16,13 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions', description = 'Leading provider of AI-powered micro SAAS solutions, IT services, _and innovative technology solutions.', keywords = 'AI solutions, _micro SAAS, _IT services, _software development, _cloud computing, _cybersecurity, _data analytics', image = 'https://ziontechgroup.com/og-image.jpg', url = 'https://ziontechgroup.com', type = 'website', author = 'Zion Tech Group', _publishedTime, _modifiedTime, _section, tags = [], _canonical, _ogTitle, _ogDescription, _ogImage, _ogUrl, twitterCard = 'summary_large_image', twitterSite = '@ziontechgroup', twitterCreator = '@ziontechgroup', _structuredData, noindex = false, nofollow = false
+  title = 'Zion Tech Group - Advanced AI and IT Solutions', 
+  description = 'Leading provider of AI-powered micro SAAS solutions, IT services, and innovative technology solutions.', 
+  keywords = 'AI solutions, micro SAAS, IT services, software development, cloud computing, cybersecurity, data analytics', 
+  image = 'https://ziontechgroup.com/og-image.jpg', 
+  url = 'https://ziontechgroup.com', 
+  type = 'website', 
+  author = 'Zion Tech Group'
 }) => {
   const structuredData = {
     "@context": "https://schema.org",
@@ -83,12 +89,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:creator" content="@ziontechgroup" />
       
       {/* Article Meta Tags */}
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {section && <meta property="article:section" content={section} />}
-      {tags.map((tag, index) => (
-        <meta key={index} property="article:tag" content={tag} />
-      ))}
+      {/* These would be used if article-specific props were provided */}
       
       {/* Canonical URL */}
       <link rel="canonical" href={url} />

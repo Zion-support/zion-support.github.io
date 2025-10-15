@@ -73,7 +73,7 @@ function fixPageFile(filePath) {}
 }if (content.includes(icon) && !content.includes(`import { ${icon}`)) {}
       usedIcons.push(icon)
     }
-  })
+  });
   if (usedIcons.length > 0) {}
     // Check if lucide-react is already imported
     const lucideImportMatch = content.match()

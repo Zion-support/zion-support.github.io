@@ -17,7 +17,7 @@ const importStatements = missingPages
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join("") + "Page"
     return `import ${componentName} from './app/${page}/page'`
-  })
+  });
   .join("\n")
 // Generate route statements
 const routeStatements = missingPages
@@ -28,7 +28,7 @@ const routeStatements = missingPages
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join("") + "Page"
     return `                  <Route path="/${page}" element={<${componentName} />} />`
-  })
+  });
   .join("\n")
 // Add imports after the last import
 const lastImportIndex = appContent.lastIndexOf("import")

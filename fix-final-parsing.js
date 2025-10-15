@@ -47,10 +47,10 @@ async function main() {}
   // Get all TypeScript/TSX files
   const files = await glob('**/*.{ts,tsx}', {}
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
-  })
+  });
   let fixedCount = 0
     if (processFile(file)) {}
       fixedCount++
-  })
+  });
   console.log(`\nFixed final parsing issues in ${fixedCount} files out of ${files.length} total files.`)
 main().catch(console.error)

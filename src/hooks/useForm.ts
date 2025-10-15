@@ -33,7 +33,7 @@
 const rules = validationSchema[field]
       const result = validateField(fieldValue, rules)
         [field]: result.errors
-      }))
+      });)
     [values, validationSchema]
   )
   // Validate all fields
@@ -50,7 +50,7 @@ const formErrors = getFormErrors(validationResults)
       let fieldValue: unknown = value
         fieldValue = (e.target, as, HTMLInputElement).checked
         [fieldName]: fieldValue
-      }))
+      });)
       // Validate on change if enabled
  validateSingleField(fieldName), 0)
     [validateOnChange, touched, validateSingleField]
@@ -58,7 +58,7 @@ const formErrors = getFormErrors(validationResults)
   // Handle input blur
       const fieldName = e.target.name as keyof T
         [fieldName]: true
-      }))
+      });)
       // Validate on blur if enabled
         validateSingleField(fieldName)
     [validateOnBlur, validateSingleField]
@@ -80,14 +80,14 @@ const formErrors = getFormErrors(validationResults)
     [values, validateAllFields, onSubmit]
   )
   // Set field value programmatically
-    }))
+    });)
  validateSingleField(field), 0)
   }, [validateOnChange, touched, validateSingleField])
   // Set field error programmatically
-    }))
+    });)
   }, [])
   // Set field touched programmatically
-    }))
+    });)
   }, [])
   // Reset form to initial values
     setValues(initialValues)

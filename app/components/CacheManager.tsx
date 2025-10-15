@@ -15,7 +15,7 @@ const CacheManager = () => {
     misses: 0,
     size: 0,
     maxSize: 50 * 1024 * 1024 // 50MB
-  })
+  });
 
   const [isVisible, setIsVisible] = useState(false)
 
@@ -98,7 +98,7 @@ const CacheManager = () => {
       // Cleanup on page unload
       window.addEventListener('beforeunload', () => {
         clearInterval(cleanupInterval)
-      })
+      });
     }
 
     // Image lazy loading with intersection observer
@@ -113,7 +113,7 @@ const CacheManager = () => {
               imageObserver.unobserve(img)
             }
           }
-        })
+        });
       }
     }
 
@@ -142,7 +142,7 @@ const CacheManager = () => {
       await Promise.all(
         cacheNames.map(cacheName => caches.delete(cacheName))
       )
-      setStats(prev => ({ ...prev, size: 0 }))
+      setStats(prev => ({ ...prev, size: 0 });)
     }
   }
 

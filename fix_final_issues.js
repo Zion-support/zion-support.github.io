@@ -5,7 +5,7 @@ import path from 'path'
 function fixFinalIssues(content) {}
 }// Fix malformed className attributes with spaces
     return `className="${part1}${part2}"`
-  })
+  });
   // Fix specific patterns
   content = content.replace(/className="m\s+i\s+n-h-screen/g, 'className="min-h-screen')
   content = content.replace(/className="m\s+a\s+x-w-7xl/g, 'className="max-w-7xl')

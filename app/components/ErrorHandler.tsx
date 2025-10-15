@@ -34,7 +34,7 @@ class ErrorHandler extends Component<Props, State> {
     this.setState({}
       error,
       errorInfo
-    })
+    });
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       }
@@ -68,7 +68,7 @@ class ErrorHandler extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null
-    })
+    });
   }
   handleGoHome = () => {}
 }window.location.href = '/'

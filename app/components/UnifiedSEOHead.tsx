@@ -36,7 +36,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({
   modifiedTime = new Date().toISOString(),
   section = "Technology",
   tags = ["AI", "IT Services", "Technology", "Digital Transformation"]
-}) => {
+}); => {
   const location = useLocation();
   const currentUrl = `https://ziontechgroup.com${location.pathname}`;
   const finalCanonical = canonical || currentUrl;
@@ -109,7 +109,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({
         description: 'Ready-to-use software solutions for immediate deployment and business growth'
       }
     ]
-  });
+  });;
 
   // Generate page-specific structured data
   const generatePageStructuredData = (): StructuredData => {
@@ -225,7 +225,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({
           '@type': 'Answer',
           text: faq.answer
         }
-      }))
+      });)
     };
   };
 
@@ -254,8 +254,8 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({
         position: index + 2,
         name,
         item: `https://ziontechgroup.com${currentPath}`
-      });
-    });
+      });;
+    });;
 
     return {
       '@context': 'https://schema.org',
@@ -272,22 +272,22 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({
   useEffect(() => {
     // Track page view in analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {
+      (window as { gtag: Function });.gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: title,
         page_location: currentUrl,
         custom_map: {
           'custom_parameter_1': 'seo_optimized'
         }
-      });
+      });;
     }
 
     // Track SEO performance
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as { gtag: Function }).gtag('event', 'seo_optimization', {
+      (window as { gtag: Function });.gtag('event', 'seo_optimization', {
         event_category: 'SEO',
         event_label: 'page_loaded',
         value: 1
-      });
+      });;
     }
   }, [title, currentUrl]);
 

@@ -22,7 +22,7 @@ export const useAnalytics = () => {}
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children, }) => {
+  children, }); => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       // Google Analytics
@@ -53,7 +53,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("config", "GA_MEASUREMENT_ID", {
         page_title: pageName,
-        page_location: window.location.href})
+        page_location: window.location.href});
     }
   }
   const value: AnalyticsContextType = {}

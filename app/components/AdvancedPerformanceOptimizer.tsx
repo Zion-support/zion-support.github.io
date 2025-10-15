@@ -8,7 +8,7 @@ interface PerformanceOptimizerProps {}
 }
 
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableImageOptimization = true, enablePreloading = true, enableCaching = true, enableCompression = true, }) => {
+  enableImageOptimization = true, enablePreloading = true, enableCaching = true, enableCompression = true, }); => {
   const location = useLocation();
 
   // Image optimization
@@ -26,7 +26,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if (img.getBoundingClientRect().top <= window.innerHeight) {}
         img.setAttribute('fetchpriority', 'high')
       }
-    })
+    });
   }, [enableImageOptimization])
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {}
@@ -64,11 +64,11 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         .then((registration) => {
           if (process.env.NODE_ENV === 'development') {
             }
-        })
+        });
         .catch((registrationError) => {
           if (process.env.NODE_ENV === 'development') {
             }
-        });
+        });;
     }
     // Set up cache headers for static assets
     const staticAssets = document.querySelectorAll('link[rel="stylesheet"], script[src]')
@@ -80,7 +80,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         cacheMeta.setAttribute('content', 'public, max-age=31536000')
         asset.appendChild(cacheMeta)
       }
-    })
+    });
   }, [enableCaching])
   // Compression optimization
   const setupCompression = useCallback(() => {}
@@ -97,7 +97,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         script.setAttribute('defer', '')
         script.setAttribute('async', '')
       }
-    })
+    });
   }, [enableCompression])
   // Memory management
   const optimizeMemory = useCallback(() => {}
@@ -107,7 +107,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       const oldListeners = document.querySelectorAll('[data-listener-cleanup]')
       oldListeners.forEach((element) => {}
 }element.removeAttribute('data-listener-cleanup')
-      })
+      });
     }
     // Run cleanup every 5 minutes
     const cleanupInterval = setInterval(cleanup, 5 * 60 * 1000)
@@ -128,8 +128,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               observer.unobserve(target)
             }
           }
-        })
-      })
+        });
+      });
       // Observe all elements with lazy-loading data attribute
       const lazyElements = document.querySelectorAll('[data-lazy-component]')
       lazyElements.forEach((element) => observer.observe(element))
@@ -153,9 +153,9 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             optimizeImages()
           }
         }
-      })
-    })
-    observer.observe({ entryTypes: ['largest-contentful-paint'] })
+      });
+    });
+    observer.observe({ entryTypes: ['largest-contentful-paint'] });
     // Monitor memory usage
     if ('memory' in performance) {}
       const checkMemory = () => {}

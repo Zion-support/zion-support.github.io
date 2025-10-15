@@ -27,7 +27,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
     this.setState({}
       error,
-      errorInfo})
+      errorInfo});
     // Call custom error handler if provided
     if (this.props.onError) {}
       this.props.onError(error, errorInfo)
@@ -60,7 +60,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {}
     //   method: 'POST',
     //   headers: { 'Content-Type': 'application/json' },
     //   body: JSON.stringify(errorData)
-    // })
+    // });
     // For now, just log to console
     // Error data logged
   }
@@ -70,7 +70,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {}
       error: undefined,
       errorInfo: undefined,
       errorId: undefined
-    })
+    });
   }
   handleReportError = () => {}
 }const { error, errorId } = this.state

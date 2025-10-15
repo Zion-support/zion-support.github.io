@@ -6,13 +6,13 @@ const file = path.join(process.cwd(), 'data', 'wallets.json');
 
 export default function handler(req, res) {
   if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
+    return res.status(405).json({ error: "Method not allowed" });;
   }
 
   const { action, userId, amount } = req.body;
   
   if (!action || !userId) {
-    return res.status(400).json({ error: "Action and userId are required" });
+    return res.status(400).json({ error: "Action and userId are required" });;
   }
 
   try {
@@ -42,7 +42,7 @@ export default function handler(req, res) {
         type: 'credit',
         amount,
         timestamp: new Date().toISOString()
-      });
+      });;
     } else if (action === 'subtract' && amount) {
       if (wallet.balance >= amount) {
         wallet.balance -= amount;
@@ -50,9 +50,9 @@ export default function handler(req, res) {
           type: 'debit',
           amount,
           timestamp: new Date().toISOString()
-        });
+        });;
       } else {
-        return res.status(400).json({ error: 'Insufficient balance' });
+        return res.status(400).json({ error: 'Insufficient balance' });;
       }
     }
 
@@ -62,9 +62,9 @@ export default function handler(req, res) {
       success: true,
       balance: wallet.balance,
       message: 'Wallet operation completed'
-    });
+    });;
   } catch (error) {
     console.error('Wallet operation error:', error);
-    res.status(500).json({ error: 'Failed to process wallet operation' });
+    res.status(500).json({ error: 'Failed to process wallet operation' });;
   }
 }

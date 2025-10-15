@@ -10,7 +10,7 @@ const ContactPage: React.FC = () => {
     service: '',
     budget: '',
     message: ''
-  });
+  });;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -18,7 +18,7 @@ const ContactPage: React.FC = () => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
+    });;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -42,7 +42,7 @@ const ContactPage: React.FC = () => {
         service: '',
         budget: '',
         message: ''
-      });
+      });;
     }, 3000);
   };
 

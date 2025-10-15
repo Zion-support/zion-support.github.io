@@ -93,7 +93,7 @@ class WebsiteAuditor {}
             link,
             foundIn: ['layout.tsx', 'page.tsx'],
             type: 'navigation'
-          })
+          });
         }
       }
     }
@@ -108,7 +108,7 @@ class WebsiteAuditor {}
           route,
           type: 'routing',
           description: 'Route defined in App.tsx but page.tsx not found'
-        })
+        });
       }
     }
   }
@@ -122,7 +122,7 @@ class WebsiteAuditor {}
           page,
           type: 'orphaned',
           description: 'Page exists but no route defined in App.tsx'
-        })
+        });
       }
     }
   }
@@ -141,7 +141,7 @@ class WebsiteAuditor {}
               link,
               foundIn: ['footer'],
               type: 'footer'
-            })
+            });
           }
         }
       }
@@ -156,14 +156,14 @@ class WebsiteAuditor {}
       this.auditResults.seoIssues.push({}
         type: 'missing_seo_optimizer',
         description: 'Home page missing SEOOptimizer component'
-      })
+      });
     }
     // Check for proper heading structure
     if (!content.includes('<h1') && !content.includes('className="text-4xl')) {}
       this.auditResults.seoIssues.push({}
         type: 'missing_h1',
         description: 'Home page missing H1 tag'
-      })
+      });
     }
   }
   // Generate comprehensive audit report
@@ -214,19 +214,19 @@ class WebsiteAuditor {}
       console.log('\n❌ MISSING PAGES:')
       report.details.missingPages.forEach(page => {}
 }console.log(`  - ${page.link || page.route}: ${page.description || 'Missing page'}`)
-      })
+      });
     }
     if (report.summary.navigationIssues > 0) {}
       console.log('\n⚠️  NAVIGATION ISSUES:')
       report.details.navigationIssues.forEach(issue => {}
 }console.log(`  - ${issue.page}: ${issue.description}`)
-      })
+      });
     }
     if (report.summary.seoIssues > 0) {}
       console.log('\n🔍 SEO ISSUES:')
       report.details.seoIssues.forEach(issue => {}
 }console.log(`  - ${issue.type}: ${issue.description}`)
-      })
+      });
     }
     console.log('\n✅ Audit completed! Report saved to website-audit-report.json')
     return report

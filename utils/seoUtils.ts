@@ -83,7 +83,7 @@ export class SEOOptimizer {}
     const wordCount = new Map<string, number>()
     words.forEach(word => {}
 }wordCount.set(word, (wordCount.get(word) || 0) + 1)
-    })
+    });
     const sortedWords = Array.from(wordCount.entries())
       .sort((a, b) => b[1] - a[1])
       .slice(0, 10)
@@ -174,7 +174,7 @@ export class SEOOptimizer {}
       priceCurrency: string
       availability: string
     }
-  }): object {}
+  });: object {}
     return {}
       '@context': 'https://schema.org',
       '@type': 'Service',
@@ -195,7 +195,7 @@ export class SEOOptimizer {}
           priceCurrency: service.offers.priceCurrency,
           availability: service.offers.availability
         }
-      })
+      });
     }
   }
   // Generate breadcrumb structured data
@@ -208,7 +208,7 @@ export class SEOOptimizer {}
         position: index + 1,
         name: crumb.name,
         item: crumb.url
-      }))
+      });)
     }
   }
   // Generate FAQ structured data
@@ -223,7 +223,7 @@ export class SEOOptimizer {}
           '@type': 'Answer',
           text: faq.answer
         }
-      }))
+      });)
     }
   }
   // Generate sitemap data
@@ -310,7 +310,7 @@ export const generatePageSEO = (pageData: {}
   keywords?: string[]
   noindex?: boolean
   nofollow?: boolean
-}): SEOData => {}
+});: SEOData => {}
 }const seo = seoOptimizer
   return {}
     title: seo.generateTitle(pageData.title),
@@ -327,7 +327,7 @@ export const generateServiceSEO = (serviceData: {}
   path: string
   category: string
   features: string[]
-}): SEOData => {}
+});: SEOData => {}
 }const seo = seoOptimizer
   const content = `${serviceData.description} ${serviceData.features.join(' ')}`
   return {}
@@ -342,6 +342,6 @@ export const generateServiceSEO = (serviceData: {}
       url: seo.generateCanonical(serviceData.path),
       provider: 'Zion Tech Group',
       category: serviceData.category
-    })
+    });
   }
 }

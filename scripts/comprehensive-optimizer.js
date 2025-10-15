@@ -78,14 +78,14 @@ const analyzeBundles = () => {
     bundleAnalysis.files.push({
       file: relativePath,
       size: size.toFixed(2) + ' KB'
-    });
+    });;
 
     if (size > config.maxBundleSize) {
       bundleAnalysis.recommendations.push(
         `Large bundle detected: ${relativePath} (${size.toFixed(2)} KB)`
       );
     }
-  });
+  });;
 
   log(`Total bundle size: ${bundleAnalysis.totalSize.toFixed(2)} KB`, 'info');
   
@@ -116,14 +116,14 @@ const optimizeImages = () => {
     imageAnalysis.files.push({
       file: relativePath,
       size: size.toFixed(2) + ' KB'
-    });
+    });;
 
     if (size > config.maxImageSize) {
       log(`Large image detected: ${relativePath} (${size.toFixed(2)} KB)`, 'warning');
     } else {
       imageAnalysis.optimized++;
     }
-  });
+  });;
 
   log(`Total image size: ${imageAnalysis.totalSize.toFixed(2)} KB`, 'info');
   log(`Optimized images: ${imageAnalysis.optimized}/${imageAnalysis.files.length}`, 'success');
@@ -150,8 +150,8 @@ const optimizeCSS = () => {
     cssAnalysis.files.push({
       file: relativePath,
       size: size.toFixed(2) + ' KB'
-    });
-  });
+    });;
+  });;
 
   log(`Total CSS size: ${cssAnalysis.totalSize.toFixed(2)} KB`, 'info');
 
@@ -215,7 +215,7 @@ const main = () => {
     // Summary
     log('\n📊 Optimization Summary:', 'info');
     log(`Total build size: ${report.build.totalSize.toFixed(2)} KB`, 'info');
-    log(`Performance score: ${report.performance.score.toFixed(1)}/100 (Grade: ${report.performance.grade})`, 'info');
+    log(`Performance score: ${report.performance.score.toFixed(1)}/100 (Grade: ${report.performance.grade});`, 'info');
     log(`Files analyzed: ${bundleAnalysis.files.length + imageAnalysis.files.length + cssAnalysis.files.length}`, 'info');
     
     if (report.recommendations.length > 0) {

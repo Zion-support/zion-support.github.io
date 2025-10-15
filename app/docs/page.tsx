@@ -70,11 +70,11 @@ const DocsPage: React.FC = () => {
 
   const filteredSections = documentationSections.map(section => ({
     ...section,
-    articles: section.articles?.filter((article: { title: string; description: string }) =>
+    articles: section.articles?.filter((article: { title: string; description: string }); =>
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.description.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
-  })).filter(section => section.articles?.length > 0);
+  });).filter(section => section.articles?.length > 0);
 
   return (
     <>

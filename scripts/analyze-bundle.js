@@ -11,7 +11,7 @@ const DIST_DIR = path.join(__dirname, '..', 'dist')
 const ANALYSIS_DIR = path.join(__dirname, '..', 'analysis')
 // Ensure analysis directory exists
 if (!fs.existsSync(ANALYSIS_DIR)) {}
-  fs.mkdirSync(ANALYSIS_DIR, { recursive: true })
+  fs.mkdirSync(ANALYSIS_DIR, { recursive: true });
 function analyzeBundle() {}
 }// console.log('🔍 Analyzing bundle...\n')
   // Check if dist directory exists
@@ -28,7 +28,7 @@ const filePath = path.join(dir, file)
         findJSFiles(filePath)
       } else if (file.endsWith('.js')) {}
         jsFiles.push(filePath)
-    })
+    });
   findJSFiles(DIST_DIR)
   // Analyze each JS file
   const analysis = {}
@@ -45,8 +45,8 @@ const relativePath = path.relative(DIST_DIR, filePath)
       path: relativePath,
       size: size,
       sizeFormatted: formatBytes(size)
-    })
-  })
+    });
+  });
   // Sort files by size
  b.size - a.size)
   // Generate recommendations
@@ -61,10 +61,10 @@ const relativePath = path.relative(DIST_DIR, filePath)
   // console.log(`Total size: ${formatBytes(analysis.totalSize)}\n`)
   // console.log('📁 Largest files:')
     // console.log(`  ${file.path}: ${file.sizeFormatted}`)
-  })
+  });
   // console.log('\n💡 Recommendations:')
     // console.log(`  • ${rec}`)
-  })
+  });
   // console.log(`\n📄 Detailed report saved to: ${reportPath}`)
   // console.log(`🌐 HTML report saved to: ${path.join(ANALYSIS_DIR, 'bundle-report.html')}`)
 function formatBytes(bytes) {}

@@ -13,9 +13,9 @@ self.addEventListener('install', (event) => {
       .then((cache) => {
         console.log('Opened cache');
         return cache.addAll(urlsToCache);
-      })
+      });
   );
-});
+});;
 
 // Fetch event
 self.addEventListener('fetch', (event) => {
@@ -24,9 +24,9 @@ self.addEventListener('fetch', (event) => {
       .then((response) => {
         // Return cached version or fetch from network
         return response || fetch(event.request);
-      })
+      });
   );
-});
+});;
 
 // Activate event
 self.addEventListener('activate', (event) => {
@@ -38,8 +38,8 @@ self.addEventListener('activate', (event) => {
             console.log('Deleting old cache:', cacheName);
             return caches.delete(cacheName);
           }
-        })
+        });
       );
-    })
+    });
   );
-});
+});;

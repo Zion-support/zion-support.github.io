@@ -68,7 +68,7 @@ const performanceScore = calculatePerformanceScore()
           firstInputDelay: 0, // Not available in current metrics
           cumulativeLayoutShift: 0, // Not available in current metrics
             timestamp: error.context.timestamp
-          }))
+          });)
         network: networkInfo
       }
       setMetrics(newMetrics)
@@ -90,7 +90,7 @@ const performanceScore = calculatePerformanceScore()
  clearInterval(interval)
   }, [isMonitoring, refreshInterval, updateMetrics])
   // Get memory information
-      const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
+      const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } });.memory
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
       const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
@@ -109,7 +109,7 @@ const connection = nav.connection
   // Export data
     if (!metrics) return
     }
-    })
+    });
     const url = URL.createObjectURL(blob)
 const a = document.createElement('a')
     a.href = url

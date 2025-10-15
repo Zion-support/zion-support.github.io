@@ -19,7 +19,7 @@ export default useErrorMonitoring
       reportError(error, 'unhandled_promise_rejection')
     }
     // React error boundary handler (if available)
-        (errorInfo as { componentStack?: string })?.componentStack || 'unknown'
+        (errorInfo as { componentStack?: string });?.componentStack || 'unknown'
       reportError(error, `react_error_boundary: ${componentStack}`)
     }
     // Add event listeners
@@ -31,7 +31,7 @@ export default useErrorMonitoring
     // Cleanup
       window.removeEventListener('error', handleError)
       window.removeEventListener('unhandledrejection', handleUnhandledRejection)
-      delete (window as Window & { __REACT_ERROR_HANDLER__?: unknown }).__REACT_ERROR_HANDLER__
+      delete (window as Window & { __REACT_ERROR_HANDLER__?: unknown });.__REACT_ERROR_HANDLER__
     }
   }, [reportError])
     reportError

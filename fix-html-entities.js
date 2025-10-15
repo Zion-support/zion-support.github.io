@@ -25,7 +25,7 @@ function fixHtmlEntities(filePath) {}
         content = content.replace(fix.from, fix.to)
         hasChanges = true
       }
-    })
+    });
     if (hasChanges) {}
       fs.writeFileSync(filePath, content, 'utf8')
       console.log(`Fixed HTML entities in: ${filePath}`)
@@ -63,5 +63,5 @@ files.forEach(file => {}
 }if (fixHtmlEntities(file)) {}
     fixedCount++
   }
-})
+});
 console.log(`Fixed HTML entities in ${fixedCount} files.`)

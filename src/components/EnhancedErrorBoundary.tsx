@@ -17,7 +17,7 @@ export default EnhancedErrorBoundary
       retryCount: 0
     }
       errorInfo
-    })
+    });
     // Log error to console in development
       console.error('Error caught by boundary:', error, errorInfo)
     // Call custom error handler if provided
@@ -36,7 +36,7 @@ export default EnhancedErrorBoundary
       console.log('Error report prepared:', errorReport)
       // Example: Send to error reporting service
       //   body: JSON.stringify(errorReport)
-      // })
+      // });
       console.error('Failed to report error:', reportingError)
   }
     // Get user ID from localStorage, cookies, or context
@@ -47,7 +47,7 @@ export default EnhancedErrorBoundary
       sessionStorage.setItem('sessionId', sessionId)
     return sessionId
   }
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined })
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   }
     window.location.reload()
   }
@@ -61,9 +61,9 @@ const originalText = button.textContent
           button.textContent = 'Copied!'
             button.textContent = originalText
           }, 2000)
-      })
+      });
         console.error('Failed to copy error details:', error)
-      })
+      });
   }
       // Custom fallback UI
         return this.props.fallback

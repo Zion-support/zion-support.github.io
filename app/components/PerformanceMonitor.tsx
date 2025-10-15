@@ -16,14 +16,14 @@ const PerformanceMonitor: React.FC = () => {
     FCP: null,
     LCP: null,
     TTFB: null
-  });
+  });;
 
   useEffect(() => {
     const handleMetric = (metric: any) => {
       setMetrics(prev => ({
         ...prev,
         [metric.name]: metric.value
-      }));
+      }););
 
       // Send to analytics (replace with your analytics service)
       if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -32,7 +32,7 @@ const PerformanceMonitor: React.FC = () => {
           value: Math.round(metric.value),
           event_label: metric.id,
           non_interaction: true,
-        });
+        });;
       }
     };
 
@@ -51,9 +51,9 @@ const PerformanceMonitor: React.FC = () => {
             // Navigation timing metrics collected
           }
         }
-      });
+      });;
 
-      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
+      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });;
     }
 
     // Memory usage monitoring

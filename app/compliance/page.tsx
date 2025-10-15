@@ -1,7 +1,8 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-  return (<>
+  const Component = () => {
+  return (>
       <Helmet>
         <title>Compliance Services - Zion Tech Group | Regulatory Compliance & Security</title>
         <meta

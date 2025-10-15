@@ -14,27 +14,27 @@ jest.mock('react-router-dom', () => ({
     search: '',
     hash: '',
     state: null,
-  }),
+  });,
   useNavigate: () => jest.fn(),
-  useParams: () => ({}),
-  Link: ({ children, ...props }) => <a {...props}>{children}</a>,
-  NavLink: ({ children, ...props }) => <a {...props}>{children}</a>,
+  useParams: () => ({});,
+  Link: ({ children, ...props }); => <a {...props}>{children}</a>,
+  NavLink: ({ children, ...props }); => <a {...props}>{children}</a>,
   useSearchParams: () => [new URLSearchParams(), jest.fn()],
-}));
+}););
 
 // Mock IntersectionObserver
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn(),
-}));
+}););
 
 // Mock ResizeObserver
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn(),
-}));
+}););
 
 // Mock window.matchMedia
 Object.defineProperty(window, "matchMedia", {
@@ -48,13 +48,13 @@ Object.defineProperty(window, "matchMedia", {
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
-  })),
-});
+  });),
+});;
 
 // Mock window.scrollTo
 Object.defineProperty(window, 'scrollTo', {
   value: jest.fn(),
-});
+});;
 
 // Mock localStorage
 const localStorageMock = {
@@ -66,7 +66,7 @@ const localStorageMock = {
 
 Object.defineProperty(window, 'localStorage', {
   value: localStorageMock,
-});
+});;
 
 // Mock sessionStorage
 const sessionStorageMock = {

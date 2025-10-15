@@ -197,7 +197,7 @@ const PortfolioPage: React.FC = () => {
                          project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          project.client.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
-  });
+  });;
 
   const stats = [
     { number: '100+', label: 'Projects Completed' },

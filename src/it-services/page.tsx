@@ -15,7 +15,7 @@ export default ITServicesPage
               (302) 464-0950
         {/* Main Services Grid */}
           <h2 className = "text-3xl font-bold text-white text-center mb-12">Core IT Services</h2>
-                  {React.createElement(service.icon, { className: "w-8 h-8" })}
+                  {React.createElement(service.icon, { className: "w-8 h-8" });}
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
@@ -36,7 +36,7 @@ export default ITServicesPage
             ))}
         {/* Additional Services */}
           <h2 className="text-3xl font-bold text-white text-center mb-12">Additional IT Services</h2>
-                  {React.createElement(service.icon, { className: "w-6 h-6 text-cyan-400 mr-3" })}
+                  {React.createElement(service.icon, { className: "w-6 h-6 text-cyan-400 mr-3" });}
                   <h3 className="text-lg font-bold text-white">{service.title}</h3>
                 <p className="text-gray-300 text-sm mb-3">{service.description}</p>
                 <div className="text-cyan-400 font-bold text-sm">{service.price}</div>

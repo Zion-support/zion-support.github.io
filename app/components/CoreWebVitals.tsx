@@ -16,7 +16,7 @@ const CoreWebVitals: React.FC = () => {}
         metric_delta: Math.round(data.delta),
         metric_id: data.id,
         metric_navigation_type: data.navigationType
-      })
+      });
     }
     // Send to custom analytics
     if (typeof window !== 'undefined' && (window as any).analytics) {}
@@ -25,7 +25,7 @@ const CoreWebVitals: React.FC = () => {}
         value: data.value,
         delta: data.delta,
         id: data.id
-      })
+      });
     }
     // Log in development
     if (process.env.NODE_ENV === 'development') {

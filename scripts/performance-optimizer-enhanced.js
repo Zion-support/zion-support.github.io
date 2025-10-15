@@ -154,7 +154,7 @@ function generateCriticalCSS() {
   
   const distDir = path.join(__dirname, '..', 'dist');
   if (!fs.existsSync(distDir)) {
-    fs.mkdirSync(distDir, { recursive: true });
+    fs.mkdirSync(distDir, { recursive: true });;
   }
   
   fs.writeFileSync(path.join(distDir, 'critical.css'), criticalCSS);
@@ -181,9 +181,9 @@ function generateServiceWorker() {
           .then((cache) => {
             console.log('Opened cache');
             return cache.addAll(urlsToCache);
-          })
+          });
       );
-    });
+    });;
     
     self.addEventListener('fetch', (event) => {
       event.respondWith(
@@ -194,7 +194,7 @@ function generateServiceWorker() {
           }
         )
       );
-    });
+    });;
     
     self.addEventListener('activate', (event) => {
       event.waitUntil(
@@ -205,16 +205,16 @@ function generateServiceWorker() {
                 console.log('Deleting old cache:', cacheName);
                 return caches.delete(cacheName);
               }
-            })
+            });
           );
-        })
+        });
       );
-    });
+    });;
   `;
   
   const distDir = path.join(__dirname, '..', 'dist');
   if (!fs.existsSync(distDir)) {
-    fs.mkdirSync(distDir, { recursive: true });
+    fs.mkdirSync(distDir, { recursive: true });;
   }
   
   fs.writeFileSync(path.join(distDir, 'sw.js'), serviceWorker);
@@ -256,7 +256,7 @@ function generateManifest() {
   
   const distDir = path.join(__dirname, '..', 'dist');
   if (!fs.existsSync(distDir)) {
-    fs.mkdirSync(distDir, { recursive: true });
+    fs.mkdirSync(distDir, { recursive: true });;
   }
   
   fs.writeFileSync(path.join(distDir, 'manifest.json'), JSON.stringify(manifest, null, 2));
@@ -295,7 +295,7 @@ Allow: /5g-solutions
   
   const distDir = path.join(__dirname, '..', 'dist');
   if (!fs.existsSync(distDir)) {
-    fs.mkdirSync(distDir, { recursive: true });
+    fs.mkdirSync(distDir, { recursive: true });;
   }
   
   fs.writeFileSync(path.join(distDir, 'robots.txt'), robots);

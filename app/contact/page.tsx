@@ -10,7 +10,7 @@ const ContactPage: React.FC = () => {
     phone: '',
     service: '',
     message: ''
-  });
+  });;
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -18,7 +18,7 @@ const ContactPage: React.FC = () => {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
+    }););
   };
 
   const handleSubmit = (e: React.FormEvent) => {

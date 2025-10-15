@@ -8,7 +8,7 @@ interface SkeletonProps {}
 }
 
 const Skeleton: React.FC<SkeletonProps> = ({
-  width = "100%", height = "1rem", className = "", rounded = true, animated = true, }) => {
+  width = "100%", height = "1rem", className = "", rounded = true, animated = true, }); => {
   const style = {
     width: typeof width === "number" ? `${width}px` : width,
     height: typeof height === "number" ? `${height}px` : height}
@@ -21,7 +21,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
 }
 
 const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
-  type = "card", count = 1, className = "", }) => {
+  type = "card", count = 1, className = "", }); => {
   const renderSkeleton = () => {
     switch (type) {
       case "card":
@@ -44,7 +44,7 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
       case "list":
         return ()
           <div className="space-y-4">
-            {Array.from({ length: count }).map(( index) => (
+            {Array.from({ length: count });.map(( index) => (
               <div key={index} className="flex items-center space-x-4">
                 <Skeleton width={40} height={40} rounded />
                 <div className="flex-1 space-y-2">
@@ -75,7 +75,7 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
   }
   return ()
     <div className={className}>
-      {Array.from({ length: count }).map(( index) => (
+      {Array.from({ length: count });.map(( index) => (
         <div key={index} className={count > 1 ? "mb-4" : ""}>
           {renderSkeleton()}
         </div>

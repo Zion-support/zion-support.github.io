@@ -1,7 +1,8 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-  return (<>
+  const Component = () => {
+  return (>
       <Helmet>
         <title>Sitemap - Zion Tech Group | Complete Website Directory</title>
         <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our AI services, micro SAAS solutions, _5G technology, and company information." />

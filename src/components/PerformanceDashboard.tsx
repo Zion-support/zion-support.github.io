@@ -9,7 +9,7 @@ export default PerformanceDashboard
   fps: number
   [key: string]: number
     fps: 0
-  })
+  });
   const [isVisible, setIsVisible] = useState(false)
       )[0] as PerformanceNavigationTiming
         : 0
@@ -18,7 +18,7 @@ export default PerformanceDashboard
 const renderTime = performance.now() - renderStart
       // Measure memory usage
       let memoryUsage = 0
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory
+        const memory = (performance as { memory?: { usedJSHeapSize: number } });.memory
         memoryUsage = memory?.usedJSHeapSize || 0
       // Measure FPS (simplified)
       let fps = 0
@@ -32,7 +32,7 @@ const renderTime = performance.now() - renderStart
         }
         requestAnimationFrame(measureFPS)
         fps
-      })
+      });
     }
     updateMetrics()
     // Update metrics every 5 seconds

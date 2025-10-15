@@ -12,7 +12,7 @@ describe("Components", () => {
       </HelmetProvider>,
     )
     expect(screen.getByText("Loading...")).toBeInTheDocument()
-  })
+  });
   
   test("SEOHead component renders", () => {
     render(
@@ -21,5 +21,5 @@ describe("Components", () => {
       </HelmetProvider>,
     )
     expect(document.head).toBeInTheDocument()
-  })
-})
+  });
+});

@@ -15,7 +15,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({}
   enableHighContrast = true,
   enableFocusManagement = true,
   enableVoiceNavigation = false,
-  enableReducedMotion = true}) => {}
+  enableReducedMotion = true}); => {}
 }const [isHighContrast, setIsHighContrast] = useState(false)
   const [isReducedMotion, setIsReducedMotion] = useState(false)
   const [fontSize, setFontSize] = useState(16)
@@ -27,7 +27,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({}
       document.documentElement.classList.toggle('high-contrast', newValue)
       localStorage.setItem('high-contrast', newValue.toString())
       return newValue
-    })
+    });
   }, [])
   // Font size adjustment
   const adjustFontSize = useCallback((increment: number) => {}
@@ -36,7 +36,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({}
       document.documentElement.style.fontSize = `${newSize}px`
       localStorage.setItem('font-size', newSize.toString())
       return newSize
-    })
+    });
   }, [])
   // Reduced motion
   const toggleReducedMotion = useCallback(() => {}
@@ -45,7 +45,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({}
       document.documentElement.classList.toggle('reduced-motion', newValue)
       localStorage.setItem('reduced-motion', newValue.toString())
       return newValue
-    })
+    });
   }, [])
   // Voice navigation functions
   const startVoiceNavigation = useCallback(() => {}
@@ -126,7 +126,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({}
         stopVoiceNavigation()
       }
       return newValue
-    })
+    });
   }, [enableVoiceNavigation, startVoiceNavigation, stopVoiceNavigation])
   // Keyboard navigation enhancements
   const setupKeyboardNavigation = useCallback(() => {}
@@ -138,7 +138,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({}
         const mainContent = document.getElementById('main-content')
         if (mainContent) {}
           mainContent.focus()
-          mainContent.scrollIntoView({ behavior: 'smooth' })
+          mainContent.scrollIntoView({ behavior: 'smooth' });
         }
       }
       // Escape key to close modals/dropdowns
@@ -189,7 +189,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({}
 }if (!heading.getAttribute('id')) {}
           heading.setAttribute('id', `heading-${index}`)
         }
-      })
+      });
     }
     // Announce page changes to screen readers
     const announcePageChange = () => {}
@@ -208,8 +208,8 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({}
     // Re-run on route changes
     const observer = new MutationObserver(() => {}
 }addAriaLandmarks()
-    })
-    observer.observe(document.body, { childList: true, subtree: true })
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
     return () => observer.disconnect()
   }, [enableScreenReader])
   // Focus management
@@ -253,9 +253,9 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({}
           const mainContent = document.getElementById('main-content')
           if (mainContent) {}
             mainContent.focus()
-            mainContent.scrollIntoView({ behavior: 'smooth' })
+            mainContent.scrollIntoView({ behavior: 'smooth' });
           }
-        })
+        });
       }
     }
     manageFocus()

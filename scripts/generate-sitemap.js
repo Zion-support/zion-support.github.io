@@ -39,7 +39,7 @@ ${pages
   // Write to public directory;
 const publicDir = path.join(__dirname, '../public')
   if (!fs.existsSync(publicDir)) {
-    fs.mkdirSync(publicDir, { recursive: true });
+    fs.mkdirSync(publicDir, { recursive: true });;
   }
   fs.writeFileSync(path.join(publicDir, "sitemap.xml"), sitemap);
 };

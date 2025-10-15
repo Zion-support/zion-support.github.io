@@ -17,7 +17,7 @@ interface PerformanceMonitorProps {}
 
 const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
   showInProduction = false 
-}) => {
+}); => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -33,27 +33,27 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         // Get FCP
         onFCP((metric: unknown) => {
           vitals.firstContentfulPaint = metric.value;
-        });
+        });;
 
         // Get LCP
         onLCP((metric: unknown) => {
           vitals.largestContentfulPaint = metric.value;
-        });
+        });;
 
         // Get INP (replaces FID)
         onINP((metric: unknown) => {
           vitals.firstInputDelay = metric.value;
-        });
+        });;
 
         // Get CLS
         onCLS((metric: unknown) => {
           vitals.cumulativeLayoutShift = metric.value;
-        });
+        });;
 
         // Get TTFB
         onTTFB((metric: unknown) => {
           vitals.timeToFirstByte = metric.value;
-        });
+        });;
 
         // Measure additional metrics
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
@@ -88,7 +88,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               'metric_4': finalMetrics.cumulativeLayoutShift,
               'metric_5': finalMetrics.timeToFirstByte
             }
-          })
+          });
         }
       } catch (error) {
         setIsLoading(false);
@@ -109,13 +109,13 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return null
   }
 
-  const getScoreColor = (_value: number, thresholds: { good: number; needsImprovement: number }) => {
+  const getScoreColor = (_value: number, thresholds: { good: number; needsImprovement: number }); => {
     if (value <= thresholds.good) return 'text-green-500';
     if (value <= thresholds.needsImprovement) return 'text-yellow-500';
     return 'text-red-500';
   };
 
-  const getScoreText = (_value: number, thresholds: { good: number; needsImprovement: number }) => {
+  const getScoreText = (_value: number, thresholds: { good: number; needsImprovement: number }); => {
     if (value <= thresholds.good) return 'Good';
     if (value <= thresholds.needsImprovement) return 'Needs Improvement';
     return 'Poor';
@@ -145,60 +145,60 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             <div className="space-y-1">
               <div className="flex justify-between items-center">
                 <span className="text-gray-600 font-medium">LCP (Largest Contentful Paint)</span>
-                <span className={`font-mono font-bold ${getScoreColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}>
+                <span className={`font-mono font-bold ${getScoreColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 });}`}>
                   {metrics.largestContentfulPaint.toFixed(0)}ms
                 </span>
               </div>
               <div className="text-xs text-gray-500">
-                {getScoreText(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}
+                {getScoreText(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 });}
               </div>
             </div>
             {/* FID */}
             <div className="space-y-1">
               <div className="flex justify-between items-center">
                 <span className="text-gray-600 font-medium">FID (First Input Delay)</span>
-                <span className={`font-mono font-bold ${getScoreColor(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}`}>
+                <span className={`font-mono font-bold ${getScoreColor(metrics.firstInputDelay, { good: 100, needsImprovement: 300 });}`}>
                   {metrics.firstInputDelay.toFixed(0)}ms
                 </span>
               </div>
               <div className="text-xs text-gray-500">
-                {getScoreText(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}
+                {getScoreText(metrics.firstInputDelay, { good: 100, needsImprovement: 300 });}
               </div>
             </div>
             {/* CLS */}
             <div className="space-y-1">
               <div className="flex justify-between items-center">
                 <span className="text-gray-600 font-medium">CLS (Cumulative Layout Shift)</span>
-                <span className={`font-mono font-bold ${getScoreColor(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}`}>
+                <span className={`font-mono font-bold ${getScoreColor(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 });}`}>
                   {metrics.cumulativeLayoutShift.toFixed(3)}
                 </span>
               </div>
               <div className="text-xs text-gray-500">
-                {getScoreText(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}
+                {getScoreText(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 });}
               </div>
             </div>
             {/* FCP */}
             <div className="space-y-1">
               <div className="flex justify-between items-center">
                 <span className="text-gray-600 font-medium">FCP (First Contentful Paint)</span>
-                <span className={`font-mono font-bold ${getScoreColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}>
+                <span className={`font-mono font-bold ${getScoreColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 });}`}>
                   {metrics.firstContentfulPaint.toFixed(0)}ms
                 </span>
               </div>
               <div className="text-xs text-gray-500">
-                {getScoreText(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}
+                {getScoreText(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 });}
               </div>
             </div>
             {/* TTFB */}
             <div className="space-y-1">
               <div className="flex justify-between items-center">
                 <span className="text-gray-600 font-medium">TTFB (Time to First Byte)</span>
-                <span className={`font-mono font-bold ${getScoreColor(metrics.timeToFirstByte, { good: 800, needsImprovement: 1800 })}`}>
+                <span className={`font-mono font-bold ${getScoreColor(metrics.timeToFirstByte, { good: 800, needsImprovement: 1800 });}`}>
                   {metrics.timeToFirstByte.toFixed(0)}ms
                 </span>
               </div>
               <div className="text-xs text-gray-500">
-                {getScoreText(metrics.timeToFirstByte, { good: 800, needsImprovement: 1800 })}
+                {getScoreText(metrics.timeToFirstByte, { good: 800, needsImprovement: 1800 });}
               </div>
             </div>
             {/* Additional Metrics */}

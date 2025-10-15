@@ -27,7 +27,7 @@ const AdvancedSEOOptimizer: React.FC = () => {}
     robotsTxt: false,
     canonicalUrls: false,
     altTexts: false
-  })
+  });
   const [metrics, setMetrics] = useState<SEOMetrics>({}
     titleLength: null,
     descriptionLength: null,
@@ -35,26 +35,26 @@ const AdvancedSEOOptimizer: React.FC = () => {}
     imageAltTexts: null,
     internalLinks: null,
     externalLinks: null
-  })
+  });
   const [isVisible, setIsVisible] = useState(false)
   const [isOptimizing, setIsOptimizing] = useState(false)
   const analyzeSEO = useCallback(() => {}
 }if (typeof window === 'undefined') return
     // Analyze title length
     const title = document.title
-    setMetrics(prev => ({ ...prev, titleLength: title.length }))
+    setMetrics(prev => ({ ...prev, titleLength: title.length });)
     // Analyze meta description
     const metaDescription = document.querySelector('meta[name="description"]')
     const descriptionLength = metaDescription ? metaDescription.getAttribute('content')?.length || 0 : 0
-    setMetrics(prev => ({ ...prev, descriptionLength }))
+    setMetrics(prev => ({ ...prev, descriptionLength });)
     // Analyze heading structure
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
     const headingStructure = Array.from(headings).map(h => h.tagName).join(' > ')
-    setMetrics(prev => ({ ...prev, headingStructure }))
+    setMetrics(prev => ({ ...prev, headingStructure });)
     // Count images with alt text
     const images = document.querySelectorAll('img')
     const imagesWithAlt = Array.from(images).filter(img => img.getAttribute('alt'))
-    setMetrics(prev => ({ ...prev, imageAltTexts: imagesWithAlt.length }))
+    setMetrics(prev => ({ ...prev, imageAltTexts: imagesWithAlt.length });)
     // Count internal and external links
     const links = document.querySelectorAll('a[href]')
     let internalLinks = 0
@@ -68,13 +68,13 @@ const AdvancedSEOOptimizer: React.FC = () => {}
           externalLinks++
         }
       }
-    });
+    });;
     
     setMetrics(prev => ({ 
       ...prev, 
       internalLinks, 
       externalLinks 
-    }));
+    }););
   }, []);
 
   useEffect(() => {
@@ -114,7 +114,7 @@ const AdvancedSEOOptimizer: React.FC = () => {}
     setSettings(prev => ({
       ...prev,
       [key]: !prev[key]
-    }))
+    });)
   }
   const seoFeatures = []
     {}
@@ -164,7 +164,7 @@ const AdvancedSEOOptimizer: React.FC = () => {}
     }
   };
 
-  const getScoreColor = (_value: number | null, thresholds: { good: number; poor: number }) => {
+  const getScoreColor = (_value: number | null, thresholds: { good: number; poor: number }); => {
     if (value === null) return 'text-gray-400';
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.poor) return 'text-yellow-400';
@@ -205,13 +205,13 @@ const AdvancedSEOOptimizer: React.FC = () => {}
         <div className="space-y-2 text-xs">
           <div className="flex justify-between">
             <span className="text-gray-600 dark:text-gray-400">Title Length:</span>
-            <span className={getScoreColor(metrics.titleLength, { good: 60, poor: 70 })}>
+            <span className={getScoreColor(metrics.titleLength, { good: 60, poor: 70 });}>
               {metrics.titleLength ? `${metrics.titleLength}/60` : 'N/A'}
             </span>
           </div>
           <div className="flex justify-between">
             <span className="text-gray-600 dark:text-gray-400">Description Length:</span>
-            <span className={getScoreColor(metrics.descriptionLength, { good: 160, poor: 200 })}>
+            <span className={getScoreColor(metrics.descriptionLength, { good: 160, poor: 200 });}>
               {metrics.descriptionLength ? `${metrics.descriptionLength}/160` : 'N/A'}
             </span>
           </div>

@@ -84,7 +84,7 @@ const generateRouteAddition = (routes, category) => {}
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join('') + 'Page'
     result += `  const ${componentName} = React.lazy(() => import("./app/${route}/page"));\n`
-  })
+  });
   return result
 }
 const generateRouteElements = (routes) => {}
@@ -95,7 +95,7 @@ const generateRouteElements = (routes) => {}
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join('') + 'Page'
     result += `                  <Route path="/${route}" element={<${componentName} />} />\n`
-  })
+  });
   return result
 }
 console.log('\nGenerated lazy imports:')

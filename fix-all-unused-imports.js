@@ -19,7 +19,7 @@ function fixUnusedImports(filePath) {}
       // Count matches outside of import statements
       const importMatches = (importStatement.match(iconRegex) || []).length
       return allMatches.length > importMatches
-    })
+    });
     if (usedIcons.length !== importedIcons.length) {}
       if (usedIcons.length > 0) {}
         const newImport = `import { ${usedIcons.join(", ")} } from 'lucide-react';`

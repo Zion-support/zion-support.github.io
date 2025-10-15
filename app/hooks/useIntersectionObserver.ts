@@ -11,7 +11,7 @@ export function useIntersectionObserver()
       threshold: 0.1,
       rootMargin: '50px',
       ...options
-    })
+    });
     observer.observe(element)
     return () => {}
 }observer.unobserve(element)

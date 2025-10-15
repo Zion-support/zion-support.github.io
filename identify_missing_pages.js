@@ -145,11 +145,11 @@ const allLinks = [...new Set([...navigationLinks, ...footerLinks, ...appRoutes])
 // Find missing pages
   const path = link.replace('/', '')
   return !existingPages.includes(path)
-})
+});
 // Find broken links (pages that exist but have, no, route)
   const link = `/${page}`
   return !allLinks.includes(link) && page !== 'page.tsx'
-})
+});
 console.log('=== MISSING PAGES ===')
  console.log(page))
 console.log('\n=== BROKEN LINKS (Pages exist but, no, route) ===')

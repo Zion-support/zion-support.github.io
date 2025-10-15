@@ -11,13 +11,13 @@ export const performanceOptimizer = {}
   setupPerformanceMonitoring() {}
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {}
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {}
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }); => {}
 }getCLS(console.log)
         getFID(console.log)
         getFCP(console.log)
         getLCP(console.log)
         getTTFB(console.log)
-      })
+      });
     }
   },
   optimizeImages() {}
@@ -33,11 +33,11 @@ export const performanceOptimizer = {}
               observer.unobserve(img)
             }
           }
-        })
-      })
+        });
+      });
       document.querySelectorAll('img[data-src]').forEach(img => {}
 }imageObserver.observe(img)
-      })
+      });
     }
   },
   setupLazyLoading() {}
@@ -52,7 +52,7 @@ export const performanceOptimizer = {}
       link.href = resource
       link.as = 'style'
       document.head.appendChild(link)
-    })
+    });
   },
   cleanup() {}
     // Cleanup performance monitoring
@@ -124,8 +124,8 @@ export const cacheOptimizer = {}
       caches.keys().then(names => {}
 }names.forEach(name => {}
 }caches.delete(name)
-        })
-      })
+        });
+      });
     }
   }
 }

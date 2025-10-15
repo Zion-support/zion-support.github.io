@@ -5,7 +5,7 @@ const withErrorLogging = (handler) => {
     } catch (error) {
       console.error('API Error:', error);
       res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Internal server error' }));
+      res.end(JSON.stringify({ error: 'Internal server error' }););
     }
   };
 };
@@ -13,14 +13,14 @@ const withErrorLogging = (handler) => {
 export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    res.end(JSON.stringify({ error: 'Method not allowed' }););
     return;
   }
 
   const { productId } = req.body;
   if (!productId) {
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Product ID is required' }));
+    res.end(JSON.stringify({ error: 'Product ID is required' }););
     return;
   }
 
@@ -35,6 +35,6 @@ export default withErrorLogging(async (req, res) => {
   } catch (error) {
     console.error('Checkout session creation error:', error);
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to create checkout session' }));
+    res.end(JSON.stringify({ error: 'Failed to create checkout session' }););
   }
-});
+});;

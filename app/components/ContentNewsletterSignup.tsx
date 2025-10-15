@@ -7,7 +7,7 @@ interface ContentNewsletterSignupProps {
 }
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
-  className = "", }) => {
+  className = "", }); => {
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);

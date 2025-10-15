@@ -12,7 +12,7 @@ interface ServiceTemplateProps {}
 }
 
 const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
-  title, description, _features, _}) => {
+  title, description, _features, _}); => {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>{title} | Zion Tech Group</title>

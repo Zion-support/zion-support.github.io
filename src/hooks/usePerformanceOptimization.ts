@@ -16,8 +16,8 @@
       const entries = list.getEntries()
 const lastEntry = entries[entries.length - 1]
         metrics.largestContentfulPaint = lastEntry.startTime
-    })
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+    });
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
     // Measure CLS
     let clsValue = 0
           hadRecentInput?: boolean
@@ -25,14 +25,14 @@ const lastEntry = entries[entries.length - 1]
         }
           clsValue += layoutShiftEntry.value || 0
       metrics.cumulativeLayoutShift = clsValue
-    })
-    clsObserver.observe({ entryTypes: ['layout-shift'] })
+    });
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
     // Measure FID
           processingStart?: number
         }
           (fidEntry.processingStart || 0) - entry.startTime
-    })
-    fidObserver.observe({ entryTypes: ['first-input'] })
+    });
+    fidObserver.observe({ entryTypes: ['first-input'] });
     // Cleanup observers after a delay
       lcpObserver.disconnect()
       clsObserver.disconnect()
@@ -45,8 +45,8 @@ const img = entry.target as HTMLImageElement
           img.src = img.dataset.src || ''
           img.classList.remove('lazy')
           imageObserver.unobserve(img)
-      })
-    })
+      });
+    });
  imageObserver.observe(img))
   }, [])
     const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css']
@@ -56,7 +56,7 @@ const link = document.createElement('link')
       link.as = resource.endsWith('.woff2') ? 'font' : 'style'
         link.crossOrigin = 'anonymous'
       document.head.appendChild(link)
-    })
+    });
   }, [])
     // Measure performance after page load
       const metrics = measurePerformance()

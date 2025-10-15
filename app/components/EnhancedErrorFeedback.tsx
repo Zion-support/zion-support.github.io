@@ -34,7 +34,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {}
     this.setState({}
       error,
       errorInfo
-    })
+    });
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       }
@@ -55,7 +55,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {}
     .toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href
-    })
+    });
   }
   private handleRetry = () => {}
 }if (this.state.retryCount < this.maxRetries) {}
@@ -64,7 +64,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {}
         error: null,
         errorInfo: null,
         retryCount: prevState.retryCount + 1
-      }))
+      });)
     }
   }
   private handleGoHome = () => {}
@@ -162,7 +162,7 @@ export const ErrorBoundary: React.FC<{
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (_error: Error) => void;
-}> = ({ children, fallback, _onError }) => {
+}> = ({ children, fallback, _onError }); => {
   const [hasError, setHasError] = React.useState(false);
   const [error, setError] = React.useState<Error | null>(null);
 

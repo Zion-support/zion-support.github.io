@@ -21,7 +21,7 @@ function fixImports(filePath) {
         .filter(imp => imp.length > 0)
         .join(', ');
       return `import { ${cleanImports} } from '${module}'`;
-    });
+    });;
     
     // Fix malformed import statements with empty braces on single line
     content = content.replace(/import\s*\{\s*([^}]+)\s*;\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {
@@ -31,7 +31,7 @@ function fixImports(filePath) {
         .filter(imp => imp.length > 0)
         .join(', ');
       return `import { ${cleanImports} } from '${module}'`;
-    });
+    });;
     
     // Fix interface definitions
     content = content.replace(/interface\s+(\w+)\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}/g, (match, name, props) => {
@@ -44,10 +44,10 @@ function fixImports(filePath) {
             return prop.replace(/;+$/, '');
           }
           return prop;
-        })
+        });
         .join('\n  ');
       return `interface ${name} {\n  ${cleanProps}\n}`;
-    });
+    });;
     
     // Fix class definitions
     content = content.replace(/class\s+(\w+)\s+extends\s+Component<[^>]+>\s*\{\s*\n\s*\}/g, 'class $1 extends Component<Props, State> {');

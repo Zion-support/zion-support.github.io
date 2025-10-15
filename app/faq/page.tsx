@@ -111,7 +111,7 @@ const filteredData = faqData.map(category => ({
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     )
-  })).filter(category => category.questions.length > 0);
+  });).filter(category => category.questions.length > 0);
   return (
     <>
       <SEOHead 
@@ -176,7 +176,7 @@ const filteredData = faqData.map(category => ({
                         )}
                       </div>
                     );
-                  })}
+                  });}
                 </div>
               </div>
             ))}

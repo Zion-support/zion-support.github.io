@@ -17,7 +17,7 @@ const WebVitalsTracker: React.FC = () => {
           event_category: 'Web Vitals',
           event_label: metric.id,
           value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-          non_interaction: true})
+          non_interaction: true});
       }
       // Send to custom analytics endpoint
       if (process.env.NODE_ENV === 'production') {}
@@ -25,7 +25,7 @@ const WebVitalsTracker: React.FC = () => {
           method: 'POST',
           headers: {}
             'Content-Type': 'application/json'},
-          body: JSON.stringify(metric)}).catch(console.error)
+          body: JSON.stringify(metric)});.catch(console.error)
       }
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
@@ -50,9 +50,9 @@ const WebVitalsTracker: React.FC = () => {
             value: loadTime,
             delta: loadTime,
             id: 'load-time',
-            navigationType: navigation.type})
+            navigationType: navigation.type});
         }
-      })
+      });
       // Track memory usage (if available)
       if ('memory' in performance) {}
         const memory = (performance as any).memory
@@ -62,7 +62,7 @@ const WebVitalsTracker: React.FC = () => {
           value: memoryUsage,
           delta: memoryUsage,
           id: 'memory-usage',
-          navigationType: 'reload'})
+          navigationType: 'reload'});
       }
     }
   }, [])

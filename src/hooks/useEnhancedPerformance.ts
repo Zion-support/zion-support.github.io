@@ -29,8 +29,8 @@ const renderCountRef = useRef<number>(0)
       // Many re-renders detected
         renderCountRef.current
       )
-  })
-        })
+  });
+        });
     [component, trackErrors]
   )
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata)

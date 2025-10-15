@@ -56,7 +56,7 @@ class RouteFixer {}
         word.charAt(0).toUpperCase() + word.slice(1)
       ).join('')
       return cleanPart
-    }).join('') + 'Page'
+    });.join('') + 'Page'
   }
   // Generate import statement for a component
   generateImportStatement(route, componentName) {}
@@ -114,7 +114,7 @@ class RouteFixer {}
     console.log(`Added ${this.missingRoutes.length} routes:`)
     this.missingRoutes.forEach(route => {}
 }console.log(`  - ${route}`)
-    })
+    });
   }
 }
 // Run the route fixer

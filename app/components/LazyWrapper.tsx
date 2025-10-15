@@ -17,7 +17,7 @@ const DefaultFallback = () => (
 export const LazyWrapper: React.FC<LazyWrapperProps> = ({
   fallback = <DefaultFallback />,
   children
-}) => {
+}); => {
   return (
     <Suspense fallback={fallback}>
       {children}

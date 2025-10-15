@@ -2,7 +2,7 @@ import React, { useEffect, useCallback } from 'react'
 interface PerformanceOptimizerProps {}
   children: React.ReactNode
 }
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {}
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }); => {}
 }// Preload critical resources
   const preloadCriticalResources = useCallback(() => {}
 }// Preload critical fonts
@@ -16,7 +16,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       link.as = 'style'
       link.crossOrigin = 'anonymous'
       document.head.appendChild(link)
-    })
+    });
     // Preload critical images
     const criticalImages = []
       '/images/hero-bg.jpg',
@@ -29,7 +29,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       link.href = src
       link.as = 'image'
       document.head.appendChild(link)
-    })
+    });
   }, [])
   // Optimize images
   const optimizeImages = useCallback(() => {}
@@ -43,7 +43,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       if (!img.hasAttribute('decoding')) {}
         img.setAttribute('decoding', 'async')
       }
-    })
+    });
   }, [])
   // Optimize third-party scripts
   const optimizeThirdPartyScripts = useCallback(() => {}
@@ -53,19 +53,19 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 }if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {}
         script.setAttribute('defer', 'true')
       }
-    })
+    });
   }, [])
   // Add performance monitoring
   const addPerformanceMonitoring = useCallback() => {
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, _getLCP, _getTTFB }) => {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, _getLCP, _getTTFB }); => {
         getCLS(console.log);
         getFID(console.log);
         getFCP(console.log);
         getLCP(console.log);
         getTTFB(console.log);
-      });
+      });;
     }
     // Monitor resource loading
     if ('PerformanceObserver' in window) {
@@ -74,10 +74,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
           if (entry.entryType === 'navigation') {
             } else if (entry.entryType === 'resource') {
             }
-        });
-      });
+        });;
+      });;
       
-      observer.observe({ entryTypes: ['navigation', 'resource'] });
+      observer.observe({ entryTypes: ['navigation', 'resource'] });;
     }
   }, [])
   // Optimize scroll performance
@@ -89,11 +89,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         requestAnimationFrame(() => {}
 }// Add scroll-based optimizations here
           ticking = false
-        })
+        });
         ticking = true
       }
     }
-    window.addEventListener('scroll', updateScrollPosition, { passive: true })
+    window.addEventListener('scroll', updateScrollPosition, { passive: true });
     return () => {}
 }window.removeEventListener('scroll', updateScrollPosition)
     }
@@ -108,11 +108,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
             element.classList.add('animate-in')
             observer.unobserve(element)
           }
-        })
+        });
       }, {}
         rootMargin: '50px 0px',
         threshold: 0.1
-      })
+      });
       // Observe elements with lazy-load class
       const lazyElements = document.querySelectorAll('.lazy-load')
       lazyElements.forEach(el => observer.observe(el))

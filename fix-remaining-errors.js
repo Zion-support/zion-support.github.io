@@ -82,7 +82,7 @@ async function main() {
   // Run a quick lint check on a few key files
   console.log('🔍 Running quick validation...');
   try {
-    execSync('pnpm run lint --max-warnings 10', { stdio: 'pipe' });
+    execSync('pnpm run lint --max-warnings 10', { stdio: 'pipe' });;
     console.log('✅ Linting improved!');
   } catch (error) {
     console.log('⚠️  Some linting issues remain, but major problems should be resolved');

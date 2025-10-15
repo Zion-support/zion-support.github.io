@@ -26,7 +26,7 @@ function fixNumberedComponents(filePath) {}
         const oldName = numberMatch[1]
 const numberWords = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']
           return numberWords[parseInt(num)] || num
-        })
+        });
         // Replace component name
         content = content.replace(new RegExp(`const ${oldName}Page`, 'g'), `const ${newName}Page`)
         content = content.replace(new RegExp(`export default ${oldName}Page`, 'g'), `export default ${newName}Page`)

@@ -7,7 +7,7 @@ interface LoadingSpinnerProps {}
 }
 
 const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md', color = 'primary', text, fullScreen = false, _}) => {
+  size = 'md', color = 'primary', text, fullScreen = false, _}); => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',

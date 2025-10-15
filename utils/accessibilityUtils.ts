@@ -18,7 +18,7 @@ export const accessibilityManager = {}
         const mainContent = document.getElementById('main-content')
         if (mainContent) {}
           mainContent.focus()
-          mainContent.scrollIntoView({ behavior: 'smooth' })
+          mainContent.scrollIntoView({ behavior: 'smooth' });
         }
       }
       // Escape key to close modals/dropdowns
@@ -28,7 +28,7 @@ export const accessibilityManager = {}
           activeElement.click()
         }
       }
-    })
+    });
   },
   setupScreenReaderSupport() {}
     // Add screen reader announcements
@@ -97,7 +97,7 @@ export const accessibilityManager = {}
             }
           }
         }
-      })
+      });
     }
     (window as any).trapFocus = trapFocus
   },
@@ -157,7 +157,7 @@ export const colorContrast = {}
       const [r, g, b] = rgb.map(c => {}
 }const val = parseInt(c) / 255
         return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4)
-      })
+      });
       return 0.2126 * r + 0.7152 * g + 0.0722 * b
     }
     const lum1 = getLuminance(color1)

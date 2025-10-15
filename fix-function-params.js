@@ -12,7 +12,7 @@ function fixFunctionParams(filePath) {
     const originalContent = content;
     
     // Fix function parameters with underscore prefixes
-    content = content.replace(/\(_\{([^}]+)\}\)/g, '({$1})');
+    content = content.replace(/\(_\{([^}]+)\}\)/g, '({$1});');
     content = content.replace(/\(_\(([^)]+)\)/g, '(($1)');
     
     // Fix destructuring with underscore prefixes
@@ -52,7 +52,7 @@ function processFiles(dir) {
         fixedCount++;
       }
     }
-  });
+  });;
   
   return fixedCount;
 }

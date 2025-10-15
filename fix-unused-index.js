@@ -60,7 +60,7 @@ function processFiles(dir) {
         fixedCount++;
       }
     }
-  });
+  });;
   
   return fixedCount;
 }

@@ -8,7 +8,7 @@ function fixRemainingComprehensive(content) {}
   content = content.replace(/<meta name="([^"]*)" content="([^"]*)" \/>/g, '<meta name="$1" content="$2" />')
   // Fix malformed className attributes with spaces
     return `className="${part1}${part2}"`
-  })
+  });
   // Fix specific patterns
   content = content.replace(/className="min-h-screenbg-gradient-to-br/g, 'className="min-h-screen bg-gradient-to-br')
   content = content.replace(/className="max-w-7xlmx-auto/g, 'className="max-w-7xl mx-auto')

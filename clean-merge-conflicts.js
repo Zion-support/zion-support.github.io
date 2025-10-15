@@ -53,7 +53,7 @@ function processFiles(dir) {
         cleanedCount++;
       }
     }
-  });
+  });;
   
   return cleanedCount;
 }

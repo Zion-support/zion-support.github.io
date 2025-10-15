@@ -107,14 +107,14 @@ class AdvancedPerformanceOptimizer {
           caches.open(CACHE_NAME)
             .then((cache) => cache.addAll(urlsToCache))
         );
-      });
+      });;
 
       self.addEventListener('fetch', (event) => {
         event.respondWith(
           caches.match(event.request)
             .then((response) => response || fetch(event.request))
         );
-      });
+      });;
     `;
     
     fs.writeFileSync(`${this.distPath}/sw.js`, swContent);
@@ -200,12 +200,12 @@ class AdvancedPerformanceOptimizer {
     
     this.optimizations.forEach((optimization, index) => {
       console.log(`${index + 1}. ${optimization}`);
-    });
+    });;
     
     console.log('\n💡 Recommendations:');
     this.recommendations.forEach((recommendation, index) => {
       console.log(`${index + 1}. ${recommendation}`);
-    });
+    });;
     
     console.log('\n🎯 Next Steps:');
     console.log('1. Test the optimized build in different browsers');

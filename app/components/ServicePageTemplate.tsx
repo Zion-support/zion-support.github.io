@@ -28,7 +28,7 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({
   technologies,
   icon,
   popular = false
-}) => {
+}); => {
   return (
     <>
       <Helmet>

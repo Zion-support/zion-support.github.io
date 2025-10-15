@@ -55,7 +55,7 @@ function getAIServiceDirectories() {}
             description: `Advanced ${item
               .split("-")
               .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(" ")} solutions powered by AI.`})
+              .join(" ")} solutions powered by AI.`});
         }
       }
     }

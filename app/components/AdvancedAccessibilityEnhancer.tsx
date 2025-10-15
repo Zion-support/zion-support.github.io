@@ -19,7 +19,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {}
     keyboardNavigation: false,
     reducedMotion: false,
     focusIndicator: false
-  })
+  });
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {}
 }// Load saved settings from localStorage
@@ -64,7 +64,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {}
     setSettings(prev => ({
       ...prev,
       [key]: !prev[key]
-    }))
+    });)
   }
   const accessibilityFeatures = []
     {}
@@ -161,7 +161,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {}
               </button>
             </div>
           )
-        })}
+        });}
       </div>
       <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
         <button
@@ -173,7 +173,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {}
               keyboardNavigation: false,
               reducedMotion: false,
               focusIndicator: false
-            })
+            });
           }}
           className="w-full text-sm text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200"
         >

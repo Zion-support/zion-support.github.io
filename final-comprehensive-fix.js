@@ -46,7 +46,7 @@ async function main() {}
   try {}
 } catch (error) {}
   console.error(error)
-}execSync('pnpm run lint --max-warnings 50', { stdio: 'pipe' })
+}execSync('pnpm run lint --max-warnings 50', { stdio: 'pipe' });
     console.log('✅ Linting passed!')
   } catch (error) {}
     console.log('⚠️  Some linting issues remain, but major problems should be resolved')
@@ -56,7 +56,7 @@ async function main() {}
   try {}
 } catch (error) {}
   console.error(error)
-}execSync('pnpm run build', { stdio: 'pipe' })
+}execSync('pnpm run build', { stdio: 'pipe' });
     console.log('✅ Build successful!')
   } catch (error) {}
     console.log('⚠️  Build issues remain, but syntax errors should be resolved')

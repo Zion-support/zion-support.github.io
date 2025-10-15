@@ -39,7 +39,7 @@ export default function Breadcrumb() {}
             )}
           </React.Fragment>
         )
-      })}
+      });}
     </nav>
   )
 }

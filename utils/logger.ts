@@ -10,7 +10,7 @@ interface LoggerConfig {}
 }
 class Logger {}
   private config: LoggerConfig
-  constructor(config: LoggerConfig = { enableConsole: true, enableRemote: false }) {}
+  constructor(config: LoggerConfig = { enableConsole: true, enableRemote: false }); {}
     this.config = config
   }
   private shouldLog(): boolean {}
@@ -63,7 +63,7 @@ class Logger {}
             args,
             timestamp: new Date().toISOString(),
             url: window.location.href,
-            userAgent: navigator.userAgent})})
+            userAgent: navigator.userAgent});});
       }
     } catch {}
       // Silently fail remote logging
@@ -74,5 +74,5 @@ class Logger {}
 const logger = new Logger({}
   enableConsole: process.env.NODE_ENV === 'development',
   enableRemote: process.env.NODE_ENV === 'production',
-  remoteEndpoint: process.env.REACT_APP_LOGGING_ENDPOINT})
+  remoteEndpoint: process.env.REACT_APP_LOGGING_ENDPOINT});
 export default logger

@@ -11,7 +11,7 @@ function fixAllJSXIssues(content) {}
         <p className="text-lg text-gray-300 mb-8">${paragraph}</p>
           Contact Us
     </div>`
-  })
+  });
   // Fix any remaining self-closing Link elements
   content = content.replace()
     /<Link\s+to="([^"]*)"\s+className="([^"]*)"\s*\/>\s*([^<]+)\s*<ArrowRight[^>]*\/>/g,

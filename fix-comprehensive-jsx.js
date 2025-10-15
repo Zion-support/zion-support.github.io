@@ -67,7 +67,7 @@ for (const file of files) {}
     // Apply fixes
     fixes.forEach((fix) => {}
 }content = content.replace(fix.pattern, fix.replacement)
-    })
+    });
     // Only write if content changed
     if (content !== originalContent) {}
       fs.writeFileSync(file, content, "utf8")

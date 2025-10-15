@@ -26,7 +26,7 @@ interface SidebarProps {
   onClose: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }); => {
   const location = useLocation()
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set())
 
@@ -39,7 +39,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         newSet.add(section)
       }
       return newSet
-    })
+    });
   }, [])
 
   const aiServices = useMemo(() => [

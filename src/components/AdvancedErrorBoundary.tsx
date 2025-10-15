@@ -31,10 +31,10 @@ class AdvancedErrorBoundary extends Component
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
       errorInfo
-    })
+    });
     // Log error to console in development
         errorInfo
-      })
+      });
     // Call custom error handler
       this.props.onError(error, errorInfo)
     // Report error to external service
@@ -60,9 +60,9 @@ class AdvancedErrorBoundary extends Component
       // Send to your error reporting service
           'Content-Type': 'application/json'
         body: JSON.stringify(errorReport)
-      })
+      });
         error: reportError
-      })
+      });
   }
     if (this.retryCount
     window.location.reload()

@@ -11,7 +11,7 @@ interface ContentPromotionBannerProps {}
 }
 
 const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
-  title = "Transform Your Business with AI", description = "Discover how our cutting-edge AI solutions can revolutionize your operations and drive unprecedented growth.", ctaText = "Get Started Today", ctaLink = "/contact", variant = "primary", className = "", }) => {
+  title = "Transform Your Business with AI", description = "Discover how our cutting-edge AI solutions can revolutionize your operations and drive unprecedented growth.", ctaText = "Get Started Today", ctaLink = "/contact", variant = "primary", className = "", }); => {
   const getVariantStyles = () => {
     switch (variant) {
       case "primary":

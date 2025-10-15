@@ -18,7 +18,7 @@ interface UsePerformanceOptimizationOptions {
   enableBundleAnalysis?: boolean;
 }
 
-export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {
+export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}); => {
   const {
     enableMonitoring = true,
     enablePreloading = true,
@@ -40,7 +40,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
       { href: '/images/hero-bg.webp', as: 'image' },
     ];
 
-    criticalResources.forEach(({ href, as, type }) => {
+    criticalResources.forEach(({ href, as, type }); => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = href;
@@ -48,7 +48,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
       if (type) link.type = type;
       link.crossOrigin = 'anonymous';
       document.head.appendChild(link);
-    });
+    });;
 
     logger.info('Critical resources preloaded');
   }, [enablePreloading]);
@@ -79,7 +79,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
       
       // Mark as optimized
       htmlImg.setAttribute('data-optimized', 'true');
-    });
+    });;
 
     logger.info(`Optimized ${images.length} images`);
   }, [enableImageOptimization]);
@@ -118,14 +118,14 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
                 metricsRef.current.cumulativeLayoutShift += clsEntry.value;
               }
             }
-          });
-        });
+          });;
+        });;
 
         observerRef.current.observe({ 
           entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'layout-shift'] 
-        });
+        });;
       } catch (error) {
-        logger.error('Failed to setup performance monitoring', { error });
+        logger.error('Failed to setup performance monitoring', { error });;
       }
     }
 
@@ -150,7 +150,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
             element.classList.add('animate-in');
             observer.unobserve(element);
           }
-        });
+        });;
       },
       {
         rootMargin: '50px 0px',
@@ -185,7 +185,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
         // This is a simplified calculation
         analysis.totalSize += 100; // Approximate KB per script
       }
-    });
+    });;
 
     logger.info('Bundle analysis', analysis);
   }, [enableBundleAnalysis]);

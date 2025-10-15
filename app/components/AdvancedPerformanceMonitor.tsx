@@ -19,29 +19,29 @@ import { useEffect, useState } from 'react'
 
     try {
         onCLS((metric: unknown) => {
-          setMetrics(prev => ({ ...prev, cls: metric.value }))
+          setMetrics(prev => ({ ...prev, cls: metric.value });)
           reportMetric('CLS', metric.value)
-        })
+        });
 
         onINP((metric: unknown) => {
-          setMetrics(prev => ({ ...prev, fid: metric.value }))
+          setMetrics(prev => ({ ...prev, fid: metric.value });)
           reportMetric('INP', metric.value)
-        })
+        });
 
         onFCP((metric: unknown) => {
-          setMetrics(prev => ({ ...prev, fcp: metric.value }))
+          setMetrics(prev => ({ ...prev, fcp: metric.value });)
           reportMetric('FCP', metric.value)
-        })
+        });
 
         onLCP((metric: unknown) => {
-          setMetrics(prev => ({ ...prev, lcp: metric.value }))
+          setMetrics(prev => ({ ...prev, lcp: metric.value });)
           reportMetric('LCP', metric.value)
-        })
+        });
 
         onTTFB((metric: unknown) => {
-          setMetrics(prev => ({ ...prev, ttfb: metric.value }))
+          setMetrics(prev => ({ ...prev, ttfb: metric.value });)
           reportMetric('TTFB', metric.value)
-        })
+        });
       } catch (error) {
         }
 
@@ -49,7 +49,7 @@ import { useEffect, useState } from 'react'
       const measureMemory = () => {
         if ('memory' in performance) {
           const memory = (performance as any).memory
-          setMetrics(prev => ({ ...prev, memoryUsage: memory.usedJSHeapSize }))
+          setMetrics(prev => ({ ...prev, memoryUsage: memory.usedJSHeapSize });)
         }
       }
 
@@ -57,7 +57,7 @@ import { useEffect, useState } from 'react'
       const measureLoadTime = () => {
         if (performance.timing) {
           const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart
-          setMetrics(prev => ({ ...prev, loadTime }))
+          setMetrics(prev => ({ ...prev, loadTime });)
         }
       }
 
@@ -70,7 +70,7 @@ import { useEffect, useState } from 'react'
           metric_name: name,
           metric_value: Math.round(value),
           metric_delta: Math.round(value)
-        })
+        });
       }
 
       // Send to custom analytics
@@ -79,7 +79,7 @@ import { useEffect, useState } from 'react'
           name,
           value: Math.round(value),
           timestamp: Date.now()
-        })
+        });
       }
 
       // Log to console in development
@@ -98,8 +98,8 @@ import { useEffect, useState } from 'react'
           if (entry.entryType === 'measure') {
             }
         }
-      })
-      observer.observe({ entryTypes: ['measure'] })
+      });
+      observer.observe({ entryTypes: ['measure'] });
     }
   }, [])
 

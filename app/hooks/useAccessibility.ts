@@ -16,7 +16,7 @@ interface AccessibilityState {
   focusHistory: HTMLElement[];
 }
 
-export const useAccessibility = (options: AccessibilityOptions = {}) => {
+export const useAccessibility = (options: AccessibilityOptions = {}); => {
   const {
     enableKeyboardNavigation = true,
     enableScreenReaderSupport = true,
@@ -31,7 +31,7 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     isKeyboardUser: false,
     currentFocus: null,
     focusHistory: []
-  });
+  });;
 
   const focusableElements = useRef<HTMLElement[]>([]);
 
@@ -226,7 +226,7 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     expanded?: boolean;
     controls?: string;
     labelledBy?: string;
-  }) => {
+  }); => {
     if (!enableScreenReaderSupport) return;
 
     const { label, description, role, expanded, controls, labelledBy } = options;

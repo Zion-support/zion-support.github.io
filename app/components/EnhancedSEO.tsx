@@ -24,7 +24,7 @@ interface EnhancedSEOProps {
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title, description, _keywords, _canonical, _ogTitle, _ogDescription, ogImage = 'https://ziontechgroup.com/og-image.jpg', _ogUrl, ogType = 'website', twitterCard = 'summary_large_image', _twitterTitle, _twitterDescription, _twitterImage, _structuredData, noIndex = false, noindex = false, nofollow = false, lang = 'en'
-}) => {
+}); => {
   const siteName = 'Zion Tech Group';
   const siteUrl = 'https://ziontechgroup.com';
   const defaultImage = 'https://ziontechgroup.com/og-image.jpg';

@@ -10,7 +10,7 @@ export default defineConfig({
       fastRefresh: true,
       // Enable JSX runtime
       jsxRuntime: "automatic",
-    }),
+    });,
   ],
   resolve: {
     alias: {
@@ -94,4 +94,4 @@ export default defineConfig({
   css: {
     devSourcemap: true,
   },
-});
+});;

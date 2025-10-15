@@ -1542,7 +1542,7 @@ const MicroSaasPage: React.FC = () => {
                       : "bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white"
                   }`}
                 >
-                  {category.name} ({category.count})
+                  {category.name} ({category.count});
                 </button>
               ))}
             </div>
@@ -1582,7 +1582,7 @@ const MicroSaasPage: React.FC = () => {
                     <div className="flex items-center text-yellow-400">
                       <Star className="w-4 h-4 fill-current" />
                       <span className="ml-1 text-sm font-medium">{service.rating}</span>
-                      <span className="ml-1 text-xs text-gray-400">({service.reviews})</span>
+                      <span className="ml-1 text-xs text-gray-400">({service.reviews});</span>
                     </div>
                   </div>
 

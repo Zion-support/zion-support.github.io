@@ -3,7 +3,7 @@ interface StructuredDataProps {}
   type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'BreadcrumbList'
   data: Record<string, unknown>
 }
-const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {}
+const StructuredData: React.FC<StructuredDataProps> = ({ type, data }); => {}
 }const getStructuredData = () => {}
 }const baseData = {}
       '@context': 'https://schema.org',
@@ -69,7 +69,7 @@ export const WebSiteStructuredData: React.FC = () => ()
         'query-input': 'required name=search_term_string'}}}
   />
 )
-export const ServiceStructuredData: React.FC<{ service: Record<string, unknown> }> = ({ service }) => ()
+export const ServiceStructuredData: React.FC<{ service: Record<string, unknown> }> = ({ service }); => ()
   <StructuredData
     type="Service"
     data={{
@@ -88,7 +88,7 @@ export const ServiceStructuredData: React.FC<{ service: Record<string, unknown> 
         availability: 'https://schema.org/InStock'} : undefined}}
   />
 )
-export const BreadcrumbStructuredData: React.FC<{ items: Array<{ name: string; url: string }> }> = ({ items }) => ()
+export const BreadcrumbStructuredData: React.FC<{ items: Array<{ name: string; url: string }> }> = ({ items }); => ()
   <StructuredData
     type="BreadcrumbList"
     data={{}
@@ -96,7 +96,7 @@ export const BreadcrumbStructuredData: React.FC<{ items: Array<{ name: string; u
         '@type': 'ListItem',
         position: index + 1,
         name: item.name,
-        item: item.url}))}}
+        item: item.url});)}}
   />
 )
 export default StructuredData

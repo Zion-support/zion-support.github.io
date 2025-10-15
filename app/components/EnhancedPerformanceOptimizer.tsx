@@ -23,7 +23,7 @@ export default function EnhancedPerformanceOptimizer() {}
       if (resource.type) link.type = resource.type
       if (resource.crossorigin) link.crossOrigin = resource.crossorigin
       document.head.appendChild(link)
-    })
+    });
     logger.info("Critical resources preloaded")
   }, [])
   const optimizeImages = useCallback(() => {}
@@ -42,7 +42,7 @@ export default function EnhancedPerformanceOptimizer() {}
               imageObserver.unobserve(img)
             }
           }
-        })
+        });
       },
       { rootMargin: "50px" }
     )
@@ -61,7 +61,7 @@ export default function EnhancedPerformanceOptimizer() {}
       link.type = font.type
       link.crossOrigin = "anonymous"
       document.head.appendChild(link)
-    })
+    });
     // Add font-display: swap to existing font faces
     const style = document.createElement("style")
     style.textContent = `
@@ -82,30 +82,30 @@ export default function EnhancedPerformanceOptimizer() {}
       newScript.async = true;
       newScript.defer = true;
       script.parentNode?.replaceChild(newScript, script);
-    });
+    });;
   }, []);
 
   const setupPerformanceMonitoring = useCallback(() => {
     // Monitor Core Web Vitals
-    import("web-vitals").then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
+    import("web-vitals").then(({ onCLS, onINP, onFCP, onLCP, onTTFB }); => {
       onCLS((metric: unknown) => {
         logger.info("CLS:", metric.value);
-      });
+      });;
       onINP((metric: unknown) => {
         logger.info("INP:", metric.value);
-      });
+      });;
       onFCP((metric: unknown) => {
         logger.info("FCP:", metric.value);
-      });
+      });;
       onLCP((metric: unknown) => {
         logger.info("LCP:", metric.value);
-      });
+      });;
       onTTFB((metric: unknown) => {
         logger.info("TTFB:", metric.value);
-      });
-    }).catch((error) => {
+      });;
+    });.catch((error) => {
       logger.error("Failed to load web-vitals:", error);
-    });
+    });;
 
     // Monitor resource loading
     if ("PerformanceObserver" in window) {}
@@ -116,11 +116,11 @@ export default function EnhancedPerformanceOptimizer() {}
             logger.info("Navigation timing:", {}
               domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
               loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
-              totalTime: navEntry.loadEventEnd - navEntry.fetchStart})
+              totalTime: navEntry.loadEventEnd - navEntry.fetchStart});
           }
-        })
-      })
-      observer.observe({ entryTypes: ["navigation", "resource"] })
+        });
+      });
+      observer.observe({ entryTypes: ["navigation", "resource"] });
     }
   }, [])
   const optimizeBundleLoading = useCallback(() => {}
@@ -131,7 +131,7 @@ export default function EnhancedPerformanceOptimizer() {}
       link.rel = "prefetch"
       link.href = page
       document.head.appendChild(link)
-    })
+    });
   }, [])
   const setupServiceWorker = useCallback(() => {}
 }if ("serviceWorker" in navigator) {}
@@ -139,10 +139,10 @@ export default function EnhancedPerformanceOptimizer() {}
         .register("/sw.js")
         .then((registration) => {}
 }logger.info("Service Worker registered:", registration)
-        })
+        });
         .catch((error) => {}
 }logger.error("Service Worker registration failed:", error)
-        })
+        });
     }
   }, [])
   useEffect(() => {}
@@ -156,7 +156,7 @@ export default function EnhancedPerformanceOptimizer() {}
         setupPerformanceMonitoring()
         optimizeBundleLoading()
         setupServiceWorker()
-      })
+      });
     } else {}
       preloadCriticalResources()
       optimizeImages()

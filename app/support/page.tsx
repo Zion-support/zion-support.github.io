@@ -10,7 +10,7 @@ const SupportPage: React.FC = () => {
     priority: '',
     category: '',
     description: ''
-  });
+  });;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -96,7 +96,7 @@ const SupportPage: React.FC = () => {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
+    }););
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -119,7 +119,7 @@ const SupportPage: React.FC = () => {
         priority: '',
         category: '',
         description: ''
-      });
+      });;
     }, 3000);
   };
 

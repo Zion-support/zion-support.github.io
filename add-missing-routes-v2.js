@@ -30,7 +30,7 @@ const componentMatches = appContent.match(/const \w+Page = React\.lazy/g) || []
 componentMatches.forEach(match => {}
 }const componentName = match.match(/const (\w+Page)/)[1]
   existingComponents.add(componentName)
-})
+});
 // Filter out routes that would create duplicate component names
 const uniqueRoutes = []
 const usedComponentNames = new Set(existingComponents)
@@ -40,7 +40,7 @@ analysis.missingRoutesList.forEach(route => {}
     uniqueRoutes.push(route)
     usedComponentNames.add(componentName)
   }
-})
+});
 console.log(`Filtered out ${analysis.missingRoutesList.length - uniqueRoutes.length} duplicate component names`)
 console.log(`Adding ${uniqueRoutes.length} unique routes`)
 // Categorize unique routes
@@ -87,7 +87,7 @@ const generateLazyImports = (routes, category) => {}
   routes.forEach(route => {}
 }const componentName = generateComponentName(route)
     result += `const ${componentName} = React.lazy(() => import("./app/${route}/page"));\n`
-  })
+  });
   return result
 }
 // Generate route elements for a category
@@ -97,7 +97,7 @@ const generateRouteElements = (routes) => {}
   routes.forEach(route => {}
 }const componentName = generateComponentName(route)
     result += `                  <Route path="/${route}" element={<${componentName} />} />\n`
-  })
+  });
   return result
 }
 // Generate all lazy imports

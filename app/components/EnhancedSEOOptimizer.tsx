@@ -29,7 +29,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({}
   modifiedTime = new Date().toISOString(),
   section = "Technology",
   tags = ["AI", "IT Services", "Technology", "Digital Transformation"]
-}) => {}
+}); => {}
 }const location = useLocation()
   const currentUrl = `https://ziontechgroup.com${location.pathname}`
   const finalCanonical = canonical || currentUrl
@@ -321,7 +321,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({}
           "@type": "Answer",
           "text": faq.answer
         }
-      }))
+      });)
     }
   }
   // Generate breadcrumb structured data
@@ -347,8 +347,8 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({}
         "position": index + 2,
         "name": name,
         "item": `https://ziontechgroup.com${currentPath}`
-      })
-    })
+      });
+    });
     return {}
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -368,7 +368,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({}
         custom_map: {}
           'custom_parameter_1': 'seo_optimized'
         }
-      })
+      });
     }
     // Track SEO performance
     if (typeof window !== 'undefined' && window.gtag) {}
@@ -376,7 +376,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({}
         event_category: 'SEO',
         event_label: 'page_loaded',
         value: 1
-      })
+      });
     }
   }, [title, currentUrl])
   return ()

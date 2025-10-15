@@ -52,10 +52,10 @@ const missingPages = []
 const pageFile = path.join(pageDir, 'page.tsx')
   // Create directory if it doesn't exist
   if (!fs.existsSync(pageDir)) {}
-    fs.mkdirSync(pageDir, { recursive: true })
+    fs.mkdirSync(pageDir, { recursive: true });
   // Create page file if it doesn't exist
   if (!fs.existsSync(pageFile)) {}
     fs.writeFileSync(pageFile, pageTemplate(pageName, title))
     console.log(`Created: ${pageFile}`)
-})
+});
 console.log('Missing pages creation completed!')

@@ -10,6 +10,6 @@ export const createLazyComponent = (_importFunc: () => Promise<{ default: Compon
       <LazyComponent {...props} />
     </LazyWrapper>
   )
-  WrappedComponent.displayName = `Lazy(${LazyComponent.displayName || 'Component'})`
+  WrappedComponent.displayName = `Lazy(${LazyComponent.displayName || 'Component'});`
   return WrappedComponent
 }

@@ -66,7 +66,7 @@ class ErrorHandler {
     return 'low';
   }
 
-  reportError(error: Error, context: ErrorContext = {}): string {
+  reportError(error: Error, context: ErrorContext = {});: string {
     const errorId = this.generateErrorId();
     const errorReport: ErrorReport = {
       id: errorId,
@@ -114,9 +114,9 @@ class ErrorHandler {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(errorReport),
-      });
+      });;
     } catch (error) {
-      logger.error('Failed to send error to external service', { error });
+      logger.error('Failed to send error to external service', { error });;
     }
   }
 
@@ -133,7 +133,7 @@ class ErrorHandler {
     if (error) {
       error.resolved = true;
       error.resolvedAt = new Date().toISOString();
-      logger.info('Error resolved', { errorId: id });
+      logger.info('Error resolved', { errorId: id });;
       return true;
     }
     return false;

@@ -1,7 +1,8 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-  return (<Layout>
+  const Component = () => {
+  return (Layout>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 min-h-screen flex items-center">
         <div className="container mx-auto px-4 py-20">

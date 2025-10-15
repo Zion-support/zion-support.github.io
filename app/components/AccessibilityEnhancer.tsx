@@ -5,7 +5,7 @@ interface AccessibilityEnhancerProps {
   fontSize?: number;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }); => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     enableKeyboard: true,
     enableScreenReader: true,
@@ -13,7 +13,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     enableFocusManagement: true,
     enableLargeText: false,
     enableReducedMotion: false
-  });
+  });;
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -90,7 +90,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
             element.setAttribute('aria-expanded', 'false');
             element.blur();
           }
-        });
+        });;
       }
     };
 
@@ -103,8 +103,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
             e.preventDefault();
             (button as HTMLElement).click();
           }
-        });
-      });
+        });;
+      });;
     };
 
     // Improve focus indicators
@@ -149,12 +149,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     const observer = new MutationObserver(() => {
       addKeyboardNavigation();
       addAriaLandmarks();
-    });
+    });;
 
     observer.observe(document.body, {
       childList: true,
       subtree: true
-    });
+    });;
 
     document.addEventListener('keydown', handleKeyDown);
 

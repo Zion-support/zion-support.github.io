@@ -49,7 +49,7 @@ const analyzeBundleComposition = () => {
       name: file,
       path: path.join(config.buildDir, 'assets', file),
       size: getFileSize(path.join(config.buildDir, 'assets', file))
-    }))
+    });)
     .sort((a, b) => b.size - a.size);
 
   const analysis = {
@@ -141,7 +141,7 @@ const generateOptimizationRecommendations = (analysis) => {
     if (rec.type === 'lazy-loading' && analysis.totalSize > 300) return true;
     if (rec.type === 'vendor-splitting' && analysis.files.length > 5) return true;
     return false;
-  });
+  });;
 
   return applicableRecommendations;
 };
@@ -268,7 +268,7 @@ const main = () => {
         log(`  [${rec.priority.toUpperCase()}] ${rec.description}`, 'warning');
         log(`    Impact: ${rec.impact}`, 'info');
         log(`    Implementation: ${rec.implementation}`, 'info');
-      });
+      });;
     }
     
     if (budget.recommendations.length > 0) {

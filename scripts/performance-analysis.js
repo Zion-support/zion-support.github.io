@@ -28,13 +28,13 @@ function analyzeBundle() {}
     const size = stats.size
     analysis.totalSize += size
     if (file.endsWith('.js')) {}
-      analysis.jsFiles.push({ name: file, size })
+      analysis.jsFiles.push({ name: file, size });
     } else if (file.endsWith('.css')) {}
-      analysis.cssFiles.push({ name: file, size })
+      analysis.cssFiles.push({ name: file, size });
     } else {}
-      analysis.otherFiles.push({ name: file, size })
+      analysis.otherFiles.push({ name: file, size });
     }
-  })
+  });
   // Sort by size
   analysis.jsFiles.sort((a, b) => b.size - a.size)
   analysis.cssFiles.sort((a, b) => b.size - a.size)
@@ -47,7 +47,7 @@ function analyzeBundle() {}
     analysis.recommendations.push(`Total bundle size is large: ${(analysis.totalSize / 1024).toFixed(2)}KB. Consider code splitting.`)
   }
   if (analysis.jsFiles.length > 20) {}
-    analysis.recommendations.push(`Many JS files (${analysis.jsFiles.length}). Consider consolidating smaller files.`)
+    analysis.recommendations.push(`Many JS files (${analysis.jsFiles.length});. Consider consolidating smaller files.`)
   }
   // Performance metrics
   analysis.performanceMetrics = {}
@@ -83,7 +83,7 @@ function generateReport() {}
   } else {}
     analysis.recommendations.forEach((rec, index) => {}
 }console.log(`${index + 1}. ${rec}`)
-    })
+    });
   }
   // Save detailed report
   const reportPath = path.join(__dirname, '../performance-analysis-report.json')

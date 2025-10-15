@@ -59,7 +59,7 @@ export const ariaUtils = {
   setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>) => {
     Object.entries(attributes).forEach(([key, value]) => {
       element.setAttribute(key, value);
-    });
+    });;
   },
 
   // Announce message to screen readers

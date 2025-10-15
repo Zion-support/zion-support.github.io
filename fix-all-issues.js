@@ -106,14 +106,14 @@ function fixUnusedImports(filePath) {
       const usedImports = importList.filter(imp => {
         const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
         return !unusedImports.includes(cleanImp) && content.includes(cleanImp);
-      });
+      });;
       
       if (usedImports.length !== importList.length) {
         modified = true;
         return `import { ${usedImports.join(', ')} } from "lucide-react"`;
       }
       return match;
-    });
+    });;
 
     // Fix unused imports in heroicons imports
     const heroiconsImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["']@heroicons\/react\/24\/outline["']/g;
@@ -122,14 +122,14 @@ function fixUnusedImports(filePath) {
       const usedImports = importList.filter(imp => {
         const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
         return !unusedImports.includes(cleanImp) && content.includes(cleanImp);
-      });
+      });;
       
       if (usedImports.length !== importList.length) {
         modified = true;
         return `import { ${usedImports.join(', ')} } from "@heroicons/react/24/outline"`;
       }
       return match;
-    });
+    });;
 
     // Remove unused imports
     unusedImports.forEach(importName => {
@@ -138,7 +138,7 @@ function fixUnusedImports(filePath) {
         content = content.replace(importRegex, '');
         modified = true;
       }
-    });
+    });;
 
     // Fix unused variables
     content = content.replace(/const\s+(\w+)\s*=\s*[^;]+;\s*$/gm, (match, varName) => {
@@ -147,7 +147,7 @@ function fixUnusedImports(filePath) {
         return '';
       }
       return match;
-    });
+    });;
 
     // Remove unused parameter names
     content = content.replace(/\(\s*(\w+)\s*:\s*\w+\s*\)\s*=>/g, (match, paramName) => {
@@ -156,13 +156,13 @@ function fixUnusedImports(filePath) {
         return '(_) =>';
       }
       return match;
-    });
+    });;
 
     // Fix unused index parameters in map functions
     content = content.replace(/\.map\(\([^,]+,\s*index\)\s*=>/g, (match) => {
       modified = true;
       return match.replace(/, index/, '');
-    });
+    });;
 
     if (modified) {
       fs.writeFileSync(fullPath, content, 'utf8');

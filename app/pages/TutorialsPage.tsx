@@ -134,7 +134,7 @@ import { ArrowRight, Clock, Search, Filter, Play, BookOpen, Star, Target } from 
                          tutorial.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          tutorial.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesLevel && matchesSearch;
-  });
+  });;
 
   const featuredTutorial = tutorials.find(tutorial => tutorial.featured);
   const regularTutorials = filteredTutorials.filter(tutorial => !tutorial.featured);
@@ -385,7 +385,7 @@ import { ArrowRight, Clock, Search, Filter, Play, BookOpen, Star, Target } from 
                     <div className="flex items-center">
                       <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
                       <span className="text-white font-medium text-sm">{tutorial.rating}</span>
-                      <span className="text-gray-400 text-xs ml-1">({tutorial.students})</span>
+                      <span className="text-gray-400 text-xs ml-1">({tutorial.students});</span>
                     </div>
                   </div>
 

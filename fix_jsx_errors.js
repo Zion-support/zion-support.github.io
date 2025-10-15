@@ -23,7 +23,7 @@ function fixJSXErrors(filePath) {}
         word.charAt(0).toUpperCase() + word.slice(1)
       ).join(' ')
       return `\n              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">\n                ${pageName}\n              </span>\n              <br />`
-    })
+    });
     modified = true
   // Fix generic "page solutions" text
   const pageSolutionsRegex = /Transform your business with our advanced page solutions\./g

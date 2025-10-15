@@ -37,7 +37,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.setState({
       error,
       errorInfo
-    });
+    });;
 
     // Log error to console (commented out for production)
     // // Report error to monitoring service
@@ -70,13 +70,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(errorReport),
-        });
+        });;
       } catch {
         // }
     }
     // Send to error monitoring service (Sentry, LogRocket, etc.)
     // You can integrate with services like Sentry here
-    // Sentry.captureException(error, { extra: errorData });
+    // Sentry.captureException(error, { extra: errorData });;
   };
 
   getUserId = () => {
@@ -91,11 +91,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         error: undefined as Error | undefined,
         errorInfo: undefined as ErrorInfo | undefined,
         retryCount: prevState.retryCount + 1
-      }));
+      }););
         error: undefined,
         errorInfo: undefined,
         retryCount: prevState.retryCount + 1
-      }));
+      }););
     }
   };
 
@@ -105,7 +105,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null,
       errorId: ''
-    });
+    });;
   };
 
   handleReload = () => {
