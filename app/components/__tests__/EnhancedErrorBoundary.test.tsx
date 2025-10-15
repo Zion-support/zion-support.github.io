@@ -1,11 +1,11 @@
 
 import { render, screen, fireEvent, waitFor } from '@testing-library/react',
-      import '@testing-library/jest-dom',
-      import EnhancedErrorBoundary from '../EnhancedErrorBoundary';
+    import '@testing-library/jest-dom',
+    import EnhancedErrorBoundary from '../EnhancedErrorBoundary';
 
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {},
-      if (shouldThrow) {},
+    if (shouldThrow) {},
       throw new Error('Test error')
     },
     {
@@ -26,7 +26,7 @@ global.fetch = jest.fn(),
   }),
       it('renders children when there is no error', () => {},
       render(
-      <EnhancedErrorBoundary></EnhancedErrorBoundary>
+      <EnhancedErrorBoundary>
         <div>Test content</div>
       </EnhancedErrorBoundary>
     ),

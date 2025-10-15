@@ -1,6 +1,6 @@
 import React from 'react',
-      import { render, screen } from '@testing-library/react',
-      import { Helmet, HelmetProvider } from 'react-helmet-async';
+    import { render, screen } from '@testing-library/react',
+    import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 // Mock components
 const AdvancedErrorBoundary = ({ 

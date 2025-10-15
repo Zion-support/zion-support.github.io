@@ -2,24 +2,22 @@ import React, { Suspense, lazy } from 'react',
       import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',
       import { HelmetProvider } from 'react-helmet-async';
 
-;
 // Components
-import Navigation from './app/components/Navigation',
-      import Sidebar from './app/components/Sidebar',
-      import Footer from './app/components/Footer',
-      import ErrorBoundary from './app/components/ErrorBoundary',
-      import LightweightErrorBoundary from './app/components/LightweightErrorBoundary',
-      import PerformanceMonitor from './app/components/PerformanceMonitor',
-      import AccessibilityEnhancer from './app/components/AccessibilityEnhancer',
-      import PerformanceDashboard from './app/components/PerformanceDashboard',
-      import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization',
-      import OptimizedLoadingSpinner from './app/components/OptimizedLoadingSpinner',
-      import SEOHead from './app/components/SEOHead';
+import Navigation from './app/components/Navigation';
+    import Sidebar from './app/components/Sidebar';
+    import Footer from './app/components/Footer';
+    import ErrorBoundary from './app/components/ErrorBoundary';
+    import LightweightErrorBoundary from './app/components/LightweightErrorBoundary';
+    import PerformanceMonitor from './app/components/PerformanceMonitor';
+    import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+    import PerformanceDashboard from './app/components/PerformanceDashboard';
+    import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization';
+    import OptimizedLoadingSpinner from './app/components/OptimizedLoadingSpinner';
+    import SEOHead from './app/components/SEOHead';
 
-;
 // Page Components - Lazy loaded for better performance
-const HomePage = lazy(() => import('./app/page')),
-      const AboutPage = lazy(() => import('./app/pages/AboutPage')),
+const HomePage = lazy(() => import('./app/page'));
+    const AboutPage = lazy(() => import('./app/pages/AboutPage')),
       const ContactPage = lazy(() => import('./app/pages/ContactPage')),
       const ServicesPage = lazy(() => import('./app/pages/ServicesPage')),
       const BlogPage = lazy(() => import('./app/pages/BlogPage')),

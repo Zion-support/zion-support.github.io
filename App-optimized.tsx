@@ -2,21 +2,19 @@ import React, { Suspense, lazy } from 'react',
       import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',
       import { HelmetProvider } from 'react-helmet-async';
 
-;
 // Core components - keep these synchronous for critical path
-import Navigation from './app/components/Navigation',
-      import Sidebar from './app/components/Sidebar',
-      import Footer from './app/components/Footer',
-      import LightweightErrorBoundary from './app/components/LightweightErrorBoundary',
-      import PerformanceMonitor from './app/components/PerformanceMonitor',
-      import AccessibilityEnhancer from './app/components/AccessibilityEnhancer',
-      import OptimizedLoadingSpinner from './app/components/OptimizedLoadingSpinner',
-      import SEOHead from './app/components/SEOHead';
+import Navigation from './app/components/Navigation';
+    import Sidebar from './app/components/Sidebar';
+    import Footer from './app/components/Footer';
+    import LightweightErrorBoundary from './app/components/LightweightErrorBoundary';
+    import PerformanceMonitor from './app/components/PerformanceMonitor';
+    import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+    import OptimizedLoadingSpinner from './app/components/OptimizedLoadingSpinner';
+    import SEOHead from './app/components/SEOHead';
 
-;
 // Lazy load all page components
-const HomePage = lazy(() => import('./app/page')),
-      const AboutPage = lazy(() => import('./app/pages/AboutPage')),
+const HomePage = lazy(() => import('./app/page'));
+    const AboutPage = lazy(() => import('./app/pages/AboutPage')),
       const ContactPage = lazy(() => import('./app/pages/ContactPage')),
       const ServicesPage = lazy(() => import('./app/pages/ServicesPage')),
       const BlogPage = lazy(() => import('./app/pages/BlogPage')),

@@ -1,8 +1,8 @@
 import React from 'react',
-      import { render, screen } from '@testing-library/react',
+    import { render, screen } from '@testing-library/react',
       import '@testing-library/jest-dom',
-      import { BrowserRouter } from 'react-router-dom',
-      import ErrorBoundary from '../app/components/ErrorBoundary';
+    import { BrowserRouter } from 'react-router-dom',
+    import ErrorBoundary from '../app/components/ErrorBoundary';
 
 ;
 // Mock component that throws an error
@@ -11,7 +11,7 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
     throw new Error('Test error');
   }
   return <div>No error</div>
-    },
+    };
     {
 
 describe('ErrorBoundary', () => {
