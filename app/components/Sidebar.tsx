@@ -10,11 +10,12 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Users },
     { name: 'AI Services', href: '/ai-services', icon: Brain },
     { name: 'IT Services', href: '/services', icon: Shield },
     { name: 'Micro SAAS', href: '/micro-saas', icon: Zap },
     { name: '5G Solutions', href: '/5g-solutions', icon: Globe },
-    { name: 'About', href: '/about', icon: Users },
+    { name: 'Resources', href: '/resources', icon: BarChart3 },
     { name: 'Portfolio', href: '/portfolio', icon: BarChart3 },
     { name: 'Blog', href: '/blog', icon: Globe },
     { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },

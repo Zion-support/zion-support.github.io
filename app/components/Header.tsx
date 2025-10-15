@@ -34,25 +34,29 @@ const Header: React.FC = () => {
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
       dropdown: [
-        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
+        { name: 'AI Analytics', href: '/ai-analytics' },
         { name: 'AI Content Generation', href: '/ai-content-generation' },
-        { name: 'AI Automation Platform', href: '/ai-automation-platform' },
-        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
-        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
-        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' }
+        { name: 'AI Customer Support', href: '/ai-customer-support' },
+        { name: 'AI Cybersecurity', href: '/ai-cybersecurity' },
+        { name: 'AI Data Analytics', href: '/ai-data-analytics' },
+        { name: 'AI Marketing Automation', href: '/ai-marketing-automation' },
+        { name: 'AI Predictive Analytics', href: '/ai-predictive-analytics' },
+        { name: 'AI Voice Assistant', href: '/ai-voice-assistant' },
+        { name: 'AI Workflow Automation', href: '/ai-workflow-automation' }
       ]
     },
     {
       name: 'IT Services',
-      href: '/it-services',
+      href: '/services',
       icon: <Code className="w-4 h-4" />,
       dropdown: [
-        { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
-        { name: 'API Management', href: '/ai-api-management' },
-        { name: 'Database Solutions', href: '/database-solutions' },
-        { name: 'Security Suite', href: '/advanced-security-suite' },
-        { name: 'Performance Monitoring', href: '/performance-monitoring' },
-        { name: 'DevOps Solutions', href: '/devops-solutions' }
+        { name: 'Cloud Migration', href: '/cloud-migration' },
+        { name: 'DevOps Services', href: '/devops-services' },
+        { name: 'IT Consulting', href: '/it-consulting' },
+        { name: 'Network Security', href: '/network-security' },
+        { name: 'Software Development', href: '/software-development' },
+        { name: 'System Integration', href: '/system-integration' },
+        { name: 'Web Development', href: '/web-development' }
       ]
     },
     {
@@ -65,7 +69,9 @@ const Header: React.FC = () => {
         { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
         { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
         { name: '5G Edge Computing', href: '/5g-edge-computing' },
-        { name: '5G Private Networks', href: '/5g-private-networks' }
+        { name: '5G Private Networks', href: '/5g-private-networks' },
+        { name: '5G Mobile Applications', href: '/5g-mobile-applications' },
+        { name: '5G Data Analytics', href: '/5g-data-analytics' }
       ]
     },
     {
@@ -73,12 +79,25 @@ const Header: React.FC = () => {
       href: '/micro-saas',
       icon: <Cloud className="w-4 h-4" />,
       dropdown: [
-        { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant' },
-        { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro' },
-        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
-        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
-        { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
+        { name: 'Zion Content Studio', href: '/zion-content-studio' },
+        { name: 'Zion AI CRM Pro', href: '/zion-ai-crm-pro' },
+        { name: 'Zion Inventory Smart', href: '/zion-inventory-smart' },
+        { name: 'AI Financial Analytics Pro', href: '/ai-financial-analytics-pro' },
+        { name: 'Zion Performance Monitor', href: '/zion-performance-monitor' },
+        { name: 'Zion AI Marketing Automation', href: '/zion-ai-marketing-automation' }
+      ]
+    },
+    {
+      name: 'Resources',
+      href: '/resources',
+      icon: <Globe className="w-4 h-4" />,
+      dropdown: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Tutorials', href: '/tutorials' },
+        { name: 'Documentation', href: '/docs' },
+        { name: 'Support', href: '/support' },
+        { name: 'FAQ', href: '/faq' }
       ]
     },
     {
