@@ -9,7 +9,7 @@ import {
   Server, 
   Zap,
   Rocket,
-  Users,
+  // Users,
   Settings
 } from 'lucide-react';
 

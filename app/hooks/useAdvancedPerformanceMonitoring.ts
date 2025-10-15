@@ -43,7 +43,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
   const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: any) => {
     // Report to analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', name, {
+      (window as unknown as { gtag: (event: string, name: string, options: Record<string, unknown>) => void }).gtag('event', name, {
         event_category: category,
         value: Math.round(value),
         non_interaction: true,
@@ -69,10 +69,10 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       });
     }
 
-    // Log in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`Performance Metric - ${name}:`, value);
-    }
+    // Log in development (commented out for production)
+    // if (process.env.NODE_ENV === 'development') {
+    //   console.log(`Performance Metric - ${name}:`, value);
+    // }
   }, []);
 
   const reportMetrics = useCallback(() => {
@@ -98,7 +98,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       try {
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            const metric = entry as any;
+            const metric = entry as PerformanceEntry & { startTime?: number; value?: number };
             
             switch (entry.entryType) {
               case 'paint':
@@ -162,8 +162,8 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
         observer.observe({ entryTypes });
         observerRef.current = observer;
 
-      } catch (error) {
-        console.warn('Performance Observer setup failed:', error);
+      } catch {
+        // console.warn('Performance Observer setup failed:', error);
       }
     };
 
@@ -171,7 +171,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       if (!enableMemoryMonitoring || !('memory' in performance)) return;
 
       const checkMemory = () => {
-        const memory = (performance as any).memory;
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
         const usedMB = memory.usedJSHeapSize / 1048576;
         const totalMB = memory.totalJSHeapSize / 1048576;
         const limitMB = memory.jsHeapSizeLimit / 1048576;
@@ -200,7 +200,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          const metric = entry as any;
+          const metric = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
           if (!metric.hadRecentInput) {
             clsValue += metric.value;
             metricsRef.current.cls = clsValue;
@@ -210,8 +210,8 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (error) {
-        console.warn('Layout shift monitoring not supported:', error);
+      } catch {
+        // console.warn('Layout shift monitoring not supported:', error);
       }
 
       return () => clsObserver.disconnect();
@@ -256,6 +256,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     memoryThreshold,
     longTaskThreshold,
     reportMetrics,
+    reportMetric,
   ]);
 
   return {

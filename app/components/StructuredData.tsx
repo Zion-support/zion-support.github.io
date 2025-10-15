@@ -2,7 +2,7 @@ import React from 'react';
 
 interface StructuredDataProps {
   type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'BreadcrumbList';
-  data: any;
+  data: Record<string, unknown>;
 }
 
 const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
@@ -85,7 +85,7 @@ export const WebSiteStructuredData: React.FC = () => (
   />
 );
 
-export const ServiceStructuredData: React.FC<{ service: any }> = ({ service }) => (
+export const ServiceStructuredData: React.FC<{ service: Record<string, unknown> }> = ({ service }) => (
   <StructuredData
     type="Service"
     data={{

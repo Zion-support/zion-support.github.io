@@ -51,8 +51,8 @@ const NotFoundPage: React.FC = () => {
               Oops! Page Not Found
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              The page you're looking for seems to have vanished into the digital void. 
-              Don't worry, our AI-powered search can help you find what you need!
+              The page you&apos;re looking for seems to have vanished into the digital void. 
+              Don&apos;t worry, our AI-powered search can help you find what you need!
             </p>
           </div>
 
@@ -101,7 +101,7 @@ const NotFoundPage: React.FC = () => {
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20">
             <h2 className="text-2xl font-bold text-white mb-4">Need Help?</h2>
             <p className="text-gray-300 mb-6">
-              Our team is here to help you find what you're looking for. Contact us for immediate assistance.
+              Our team is here to help you find what you&apos;re looking for. Contact us for immediate assistance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -124,7 +124,7 @@ const NotFoundPage: React.FC = () => {
           {/* Fun Fact */}
           <div className="mt-12 text-center">
             <p className="text-gray-400 text-sm">
-              Fun fact: Even our AI gets lost sometimes! 🤖 But don't worry, we always find our way back.
+              Fun fact: Even our AI gets lost sometimes! 🤖 But don&apos;t worry, we always find our way back.
             </p>
           </div>
         </div>
